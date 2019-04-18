@@ -40,3 +40,9 @@ ms.assetid: 44d9fcfb-0cd8-48cc-aace-dd589099dd79
 	    <css path="css/TS_IncrementControl.css" order="1" />
       <resx path="strings/TSIncrementControl.1033.resx" version="1.0.0" />
 ```
+
+### Related topics
+
+[PowerApps Component Framework Manifest Schema Reference](index.md)<br/>
+[PowerApps Component Framework API Reference](../reference/index.md)<br/>
+[PowerApps Component Framework Overview](../overview.md)

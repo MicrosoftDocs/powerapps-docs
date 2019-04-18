@@ -53,3 +53,8 @@ The `of-type` attribute value must be one of the following:
 description-key="myFirstProperty_Desc_Key" of-type="SingleLine.Text" usage="bound" required="true" />
 ```
 
+### Related topics
+
+[PowerApps Component Framework Manifest Schema Reference](index.md)<br/>
+[PowerApps Component Framework API Reference](../reference/index.md)<br/>
+[PowerApps Component Framework Overview](../overview.md)

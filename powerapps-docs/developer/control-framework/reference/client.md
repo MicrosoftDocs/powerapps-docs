@@ -30,3 +30,7 @@ Whether this control should disable its scrolling capabilities
 |[getFormFactor](client/getformfactor.md)|[!INCLUDE [getformfactor-description](client/includes/getformfactor-description.md)]|
 |[isOffline](client/isoffline.md)|[!INCLUDE [isoffline-description](client/includes/isoffline-description.md)]|
 
+### Related topics
+
+[PowerApps Component Framework API Reference](../reference/index.md)<br/>
+[PowerApps Component Framework Overview](../overview.md)

@@ -26,3 +26,7 @@ ms.assetid: e4673628-28d9-432c-92f4-24d1fcb44e21
 |[getFilter](filtering/getfilter.md)|[!INCLUDE [getfilter-description](filtering/includes/getfilter-description.md)]|
 |[setFilter](filtering/setfilter.md)|[!INCLUDE [setfilter-description](filtering/includes/setfilter-description.md)]|
 
+### Related topics
+
+[PowerApps Component Framework API Reference](../reference/index.md)<br/>
+[PowerApps Component Framework Overview](../overview.md)

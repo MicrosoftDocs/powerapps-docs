@@ -24,3 +24,7 @@ ms.assetid: 48dc8649-3a98-4f5e-8319-a6f5e378a9cc
 |[getString](resources/getstring.md)|[!INCLUDE [getstring-description](resources/includes/getstring-description.md)]|
 
 
+### Related topics
+
+[PowerApps Component Framework API Reference](../reference/index.md)<br/>
+[PowerApps Component Framework Overview](../overview.md)

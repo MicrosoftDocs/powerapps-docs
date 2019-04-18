@@ -42,4 +42,6 @@ To disable the telemetry collection, run the command `pac telemetry - -enabled f
 
 ### See also
 
-[Add Controls to entities or fields](add-custom-controls-to-a-field-or-entity.md)
+[Add Controls to entities or fields](add-custom-controls-to-a-field-or-entity.md)<br/>
+[PowerApps Component Framework API Reference](../reference/index.md)<br/>
+[PowerApps Component Framework Overview](../overview.md)

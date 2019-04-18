@@ -29,3 +29,8 @@ ms.assetid: 27a1e54c-71fe-450f-8f84-b4cc125970bf
 |data|`string`|no|Data to be passed into the data parameter.
 
 
+### Related topics
+
+[Navigation](../navigation.md)<br/>
+[PowerApps Component Framework API Reference](../reference/index.md)<br/>
+[PowerApps Component Framework Overview](../overview.md)

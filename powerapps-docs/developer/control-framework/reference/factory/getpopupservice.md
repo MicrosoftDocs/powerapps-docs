@@ -21,3 +21,8 @@ ms.assetid: 878465d9-3e25-44df-ad7b-de50916fd9d2
 `getPopupService()`
 
 
+### Related topics
+
+[Factory](../factory.md)<br/>
+[PowerApps Component Framework API Reference](../reference/index.md)<br/>
+[PowerApps Component Framework Overview](../overview.md)

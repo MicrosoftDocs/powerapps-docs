@@ -43,3 +43,8 @@ The `options` parameter object has the following properties:
 |`maximumAllowedFileSize`|`number`|Maximum size of the files(s) to be selected|
 
 
+### Related topics
+
+[Device](../device.md)<br/>
+[PowerApps Component Framework API Reference](../reference/index.md)<br/>
+[PowerApps Component Framework Overview](../overview.md)

@@ -30,3 +30,8 @@ ms.assetid: c5f482c2-dde2-460b-89a7-39e0efcc5704
 |value|`boolean`|yes|`True` if controls needs to track container size, control will get allocatedWidth/allocatedHeight.|
 
 
+### Related topics
+
+[Mode](../mode.md)<br/>
+[PowerApps Component Framework API Reference](../reference/index.md)<br/>
+[PowerApps Component Framework Overview](../overview.md)

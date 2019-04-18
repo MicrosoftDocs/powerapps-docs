@@ -32,3 +32,8 @@ Type: `number`
 |3|Phone|
 
 
+### Related topics
+
+[Client](../client.md)<br/>
+[PowerApps Component Framework API Reference](../reference/index.md)<br/>
+[PowerApps Component Framework Overview](../overview.md)

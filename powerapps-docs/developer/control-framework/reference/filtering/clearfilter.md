@@ -20,3 +20,8 @@ ms.assetid: 6c306633-14a1-4199-95cb-58000b3cafed
 
 `clearFilter()`
 
+### Related topics
+
+[Filtering](../filtering.md)<br/>
+[PowerApps Component Framework API Reference](../reference/index.md)<br/>
+[PowerApps Component Framework Overview](../overview.md)

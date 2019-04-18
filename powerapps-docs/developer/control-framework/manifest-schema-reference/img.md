@@ -37,3 +37,9 @@ ms.assetid: 0e776647-a4a2-42c9-85e8-62718154052f
 ```XML
 <img path="img/default.png" />
 ```
+
+### Related topics
+
+[PowerApps Component Framework Manifest Schema Reference](index.md)<br/>
+[PowerApps Component Framework API Reference](../reference/index.md)<br/>
+[PowerApps Component Framework Overview](../overview.md)

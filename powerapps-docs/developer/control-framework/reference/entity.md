@@ -13,3 +13,7 @@ ms.topic: "article"
 
 # Entity
 
+### Related topics
+
+[PowerApps Component Framework API Reference](../reference/index.md)<br/>
+[PowerApps Component Framework Overview](../overview.md)

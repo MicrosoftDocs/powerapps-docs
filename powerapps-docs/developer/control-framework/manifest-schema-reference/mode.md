@@ -40,3 +40,8 @@ ms.topic: "article"
 </manifest>
 ```
 
+### Related topics
+
+[PowerApps Component Framework Manifest Schema Reference](index.md)<br/>
+[PowerApps Component Framework API Reference](../reference/index.md)<br/>
+[PowerApps Component Framework Overview](../overview.md)

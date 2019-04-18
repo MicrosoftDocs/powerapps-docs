@@ -31,3 +31,7 @@ ms.assetid: 8f8d46c1-cc61-48c3-8e15-71f36e1cada1
 |[updatePopup](popupservice/updatepopup.md)|[!INCLUDE [updatepopup-description](popupservice/includes/updatepopup-description.md)]|
 
 
+### Related topics
+
+[PowerApps Component Framework API Reference](../reference/index.md)<br/>
+[PowerApps Component Framework Overview](../overview.md)

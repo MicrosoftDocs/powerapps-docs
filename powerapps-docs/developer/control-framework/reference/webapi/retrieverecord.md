@@ -73,3 +73,8 @@ ms.assetid: dddeecc9-5067-420d-8bd7-4c914218e969
 On success, returns a promise containing a JSON object with the retrieved attributes and their values.
 
 
+### Related topics
+
+[Web API](../webapi.md)<br/>
+[PowerApps Component Framework API Reference](../reference/index.md)<br/>
+[PowerApps Component Framework Overview](../overview.md)

@@ -33,3 +33,7 @@ ms.assetid: 058c0319-4d46-40fc-a4f6-e9f722a6b3c7
 |[getWeekOfYear](formatting/getweekofyear.md)|[!INCLUDE [getweekofyear-description](formatting/includes/getweekofyear-description.md)]|
 
 
+### Related topics
+
+[PowerApps Component Framework API Reference](../reference/index.md)<br/>
+[PowerApps Component Framework Overview](../overview.md)

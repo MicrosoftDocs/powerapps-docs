@@ -29,3 +29,7 @@ ms.assetid: af1bf8bb-380f-45db-8bbc-b7d4a18e5623
 |[openWebResource](navigation/openwebresource.md)|[!INCLUDE [openwebresource-description](navigation/includes/openwebresource-description.md)]|
 
 
+### Related topics
+
+[PowerApps Component Framework API Reference](../reference/index.md)<br/>
+[PowerApps Component Framework Overview](../overview.md)

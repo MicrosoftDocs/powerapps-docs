@@ -21,3 +21,8 @@ ms.assetid: 3556c2d7-5ef7-4f5d-b694-006fb5c75130
 `reset()`
 
 
+### Related topics
+
+[Paging](../paging.md)<br/>
+[PowerApps Component Framework API Reference](../reference/index.md)<br/>
+[PowerApps Component Framework Overview](../overview.md)

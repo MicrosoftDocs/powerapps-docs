@@ -19,4 +19,8 @@ ms.assetid: 8a6521c7-a05d-44ff-a007-1bda53d6d73a
 ## Syntax
 `requestRender()`
 
+### Related topics
 
+[Factory](../factory.md)<br/>
+[PowerApps Component Framework API Reference](../reference/index.md)<br/>
+[PowerApps Component Framework Overview](../overview.md)

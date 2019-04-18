@@ -40,3 +40,7 @@ Currently font resource (.tff) is not supported in PCF.
 
 When you add a custom control in the header section of a form, the form editor stops working and sometimes prevent you from removing control.
 
+### Related topics
+
+[PowerApps Component Framework API Reference](../reference/index.md)<br/>
+[PowerApps Component Framework Overview](../overview.md)

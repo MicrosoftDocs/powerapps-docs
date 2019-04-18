@@ -27,3 +27,8 @@ ms.assetid: eae8e529-5aef-4bf0-9f73-f3200aef84ed
 |id|`string`|yes|The string to set as id.|
 
 
+### Related topics
+
+[Popup Service](../popupservice.md)<br/>
+[PowerApps Component Framework API Reference](../reference/index.md)<br/>
+[PowerApps Component Framework Overview](../overview.md)

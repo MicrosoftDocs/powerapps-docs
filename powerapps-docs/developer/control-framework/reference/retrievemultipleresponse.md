@@ -27,3 +27,7 @@ If the number of records being retrieved is more than the value specified in the
 **Type**: `string`
 
 
+### Related topics
+
+[PowerApps Component Framework API Reference](../reference/index.md)<br/>
+[PowerApps Component Framework Overview](../overview.md)

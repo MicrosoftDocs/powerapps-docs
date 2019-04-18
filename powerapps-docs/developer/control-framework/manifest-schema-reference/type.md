@@ -38,3 +38,9 @@ This element contains a `string` with one of the following values:
       <type>Decimal</type>
     </type-group>
 ```
+
+### Related topics
+
+[PowerApps Component Framework Manifest Schema Reference](index.md)<br/>
+[PowerApps Component Framework API Reference](../reference/index.md)<br/>
+[PowerApps Component Framework Overview](../overview.md)

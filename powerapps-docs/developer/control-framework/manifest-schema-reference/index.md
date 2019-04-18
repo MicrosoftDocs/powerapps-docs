@@ -34,3 +34,8 @@ ms.assetid: 045a395b-4475-48dd-8f67-6bc2b33cd89c
 |[types](types.md)|[!INCLUDE [types-description](includes/types-description.md)]|
 
 
+### Related topics
+
+[PowerApps Component Framework Manifest Schema Reference](index.md)<br/>
+[PowerApps Component Framework API Reference](../reference/index.md)<br/>
+[PowerApps Component Framework Overview](../overview.md)

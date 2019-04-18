@@ -28,3 +28,8 @@ ms.assetid: 1052db82-7002-44ca-ad1f-9d3d4c311817
 Type: `boolean`
 
 
+### Related topics
+
+[Mode](../mode.md)<br/>
+[PowerApps Component Framework API Reference](../reference/index.md)<br/>
+[PowerApps Component Framework Overview](../overview.md)

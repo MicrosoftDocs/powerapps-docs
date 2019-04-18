@@ -25,3 +25,8 @@ The object can implement the following methods:
 - [destroy](reference/control/destroy.md) (Required)
 
 These methods control the lifecycle of the custom control.
+
+### Related topics
+
+[PowerApps Component Framework API Reference](../reference/index.md)<br/>
+[PowerApps Component Framework Overview](../overview.md)

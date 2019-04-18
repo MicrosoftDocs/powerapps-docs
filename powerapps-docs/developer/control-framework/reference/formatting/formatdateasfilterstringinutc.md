@@ -32,3 +32,8 @@ ms.assetid: a604fbbf-6d09-450d-b686-7a5cb3f3a2bc
 Type: `string`
 
 
+### Related topics
+
+[Formatting](../formatting.md)<br/>
+[PowerApps Component Framework API Reference](../reference/index.md)<br/>
+[PowerApps Component Framework Overview](../overview.md)

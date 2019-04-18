@@ -14,3 +14,8 @@
 |[type](type.md)|[!INCLUDE [type-description](includes/type-description.md)]|0 or more|
 
 
+### Related topics
+
+[PowerApps Component Framework Manifest Schema Reference](index.md)<br/>
+[PowerApps Component Framework API Reference](../reference/index.md)<br/>
+[PowerApps Component Framework Overview](../overview.md)

@@ -25,3 +25,8 @@ ms.assetid: 52c0cd68-5558-4985-a56c-21dc8a1f55de
 **Type**: `string`
 
 
+### Related topics
+
+[Dataset](../dataset.md)<br/>
+[PowerApps Component Framework API Reference](../reference/index.md)<br/>
+[PowerApps Component Framework Overview](../overview.md)

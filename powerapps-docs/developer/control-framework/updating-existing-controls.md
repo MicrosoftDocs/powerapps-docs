@@ -83,4 +83,6 @@ To use the new typing file:
 
 ### See also
 
-[Limitations of PowerApps Component Framework](limitations.md)
+[Limitations of PowerApps Component Framework](limitations.md)<br/>
+[PowerApps Component Framework API Reference](../reference/index.md)<br/>
+[PowerApps Component Framework Overview](../overview.md)

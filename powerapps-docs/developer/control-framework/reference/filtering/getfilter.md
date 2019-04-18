@@ -25,3 +25,8 @@ ms.assetid: 63c75c11-540f-4181-a68f-5295ecb75a96
 Type: [FilterExpression](../filterexpression.md)
 
 
+### Related topics
+
+[Filtering](../filtering.md)<br/>
+[PowerApps Component Framework API Reference](../reference/index.md)<br/>
+[PowerApps Component Framework Overview](../overview.md)

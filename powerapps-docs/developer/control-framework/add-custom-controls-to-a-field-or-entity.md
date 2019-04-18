@@ -62,4 +62,6 @@ Following the steps in this procedure will change the default label and text box
 
 ### See also
 
-[Implementing controls in TypeScript](implementing-controls-using-typescript.md)
+[Implementing controls in TypeScript](implementing-controls-using-typescript.md)<br/>
+[PowerApps Component Framework API Reference](../reference/index.md)<br/>
+[PowerApps Component Framework Overview](../overview.md)

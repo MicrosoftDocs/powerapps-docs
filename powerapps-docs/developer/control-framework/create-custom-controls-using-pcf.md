@@ -160,4 +160,6 @@ To uninstall the CLI tool please follow below steps:
 ### See also
 
 [Implementing controls in TypeScript](implementing-controls-using-typescript.md)<br/>
-[Updating existing controls into new tools format](updating-existing-controls.md)
+[Updating existing controls into new tools format](updating-existing-controls.md)<br/>
+[PowerApps Component Framework API Reference](../reference/index.md)<br/>
+[PowerApps Component Framework Overview](../overview.md)<br/>

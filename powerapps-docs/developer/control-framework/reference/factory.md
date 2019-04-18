@@ -27,3 +27,7 @@ ms.assetid: 47a15499-c526-4289-a632-49b717ba455f
 |[requestRender](factory/requestrender.md)|[!INCLUDE [requestrender-description](factory/includes/requestrender-description.md)]|
 
 
+### Related topics
+
+[PowerApps Component Framework API Reference](../reference/index.md)<br/>
+[PowerApps Component Framework Overview](../overview.md)

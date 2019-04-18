@@ -23,3 +23,7 @@ ms.author: "nabuthuk"
 |[updateView](control/updateview.md)|[!INCLUDE [updateview-description](control/includes/updateview-description.md)]|
 
 
+### Related topics
+
+[PowerApps Component Framework API Reference](../reference/index.md)<br/>
+[PowerApps Component Framework Overview](../overview.md)

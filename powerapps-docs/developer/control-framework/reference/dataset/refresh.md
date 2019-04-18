@@ -20,3 +20,8 @@ ms.assetid: d8fde7bd-6e69-46cb-a644-d3c527726169
 
 `refresh()`
 
+### Related topics
+
+[Dataset](../dataset.md)<br/>
+[PowerApps Component Framework API Reference](../reference/index.md)<br/>
+[PowerApps Component Framework Overview](../overview.md)

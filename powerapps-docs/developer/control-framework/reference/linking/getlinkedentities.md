@@ -25,3 +25,8 @@ ms.assetid: feb4e449-935f-452e-a67a-d3cf3c2bdcfb
 Type: [ILinkEntityExposedExpression](../ilinkentityexposedexpression.md)
 
 
+### Related topics
+
+[Linking](../linking.md)<br/>
+[PowerApps Component Framework API Reference](../reference/index.md)<br/>
+[PowerApps Component Framework Overview](../overview.md)

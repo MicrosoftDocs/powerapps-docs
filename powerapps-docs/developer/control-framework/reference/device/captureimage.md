@@ -45,3 +45,8 @@ The `options` parameter object has the following properties:
 |`width`|`number`|Width of the image to capture|
 
 
+### Related topics
+
+[Device](../device.md)<br/>
+[PowerApps Component Framework API Reference](../reference/index.md)<br/>
+[PowerApps Component Framework Overview](../overview.md)

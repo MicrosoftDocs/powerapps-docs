@@ -239,4 +239,6 @@ The linear input control’s `init` method creates an input element and sets the
 
 ### See also
 
-[Update existing PCF controls](updating-existing-controls.md)
+[Update existing PCF controls](updating-existing-controls.md)<br/>
+[PowerApps Component Framework API Reference](../reference/index.md)<br/>
+[PowerApps Component Framework Overview](../overview.md)

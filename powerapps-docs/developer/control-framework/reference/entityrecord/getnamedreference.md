@@ -24,3 +24,8 @@ ms.assetid: f879cb97-34d2-49ed-bef3-4df0af972b19
 **Type**: [EntityReference](../entityreference.md)
 
 
+### Related topics
+
+[Entityrecord](../entityrecord.md)<br/>
+[PowerApps Component Framework API Reference](../reference/index.md)<br/>
+[PowerApps Component Framework Overview](../overview.md)

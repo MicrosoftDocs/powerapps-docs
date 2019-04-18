@@ -27,3 +27,7 @@ ms.assetid: f6e1aca7-7415-42a2-8ca2-44c962cdc90a
 |[updateRecord](webapi/updaterecord.md)|[!INCLUDE [updaterecord-description](webapi/includes/updaterecord-description.md)]|
 
 
+### Related topics
+
+[PowerApps Component Framework API Reference](../reference/index.md)<br/>
+[PowerApps Component Framework Overview](../overview.md)

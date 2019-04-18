@@ -40,3 +40,8 @@ ms.assetid: 9ffe8930-b290-4252-98d4-a1195b00205f
  </data-set>
 ```
 
+### Related topics
+
+[PowerApps Component Framework Manifest Schema Reference](index.md)<br/>
+[PowerApps Component Framework API Reference](../reference/index.md)<br/>
+[PowerApps Component Framework Overview](../overview.md)
