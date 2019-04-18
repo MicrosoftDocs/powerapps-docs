@@ -1,0 +1,39 @@
+---
+title: PickFileOptions| Microsoft Docs
+description: 
+keywords: 
+ms.author: nabuthuk
+manager: kvivek
+ms.date: 03/01/2019
+ms.service: "powerapps"
+ms.suite: ""
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+ms.assetid: 9053eee8-2851-427d-88ae-4fc137ca0444
+---
+
+# PickFileOptions
+
+## accept
+
+Image file type to select. Valid values are "audio", "video", or "image".
+
+**Type**: `string`
+
+## allowMultipleFiles
+
+Whether to allow selecting multiple files.
+
+**Type**: `boolean`
+
+## maximumAllowedFileSize
+
+Maximum size of the file(s) ro be selected.
+
+**Type**: `number`
+
+
+### Related topics
+
+[PowerApps Component Framework API Reference](../reference/index.md)<br/>
+[PowerApps Component Framework Overview](../overview.md)
