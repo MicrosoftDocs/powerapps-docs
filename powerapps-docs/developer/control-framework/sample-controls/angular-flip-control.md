@@ -66,27 +66,27 @@ var SampleNamespace = SampleNamespace || {};
 * Constructor of JSAngularJSFlipControl
 *
 */
-SampleNamespace.JSAngularJSFlipControl = function() {
-// Element id of the ng-app div. Type: string
-var _appDivId;
+SampleNamespace.JSAngularJSFlipControl = function () {
+  // Element id of the ng-app div. Type: string
+  var _appDivId;
 
-// ng-app app id. Type: string
-var _appId;
+  // ng-app app id. Type: string
+  var _appId;
 
-// ng-controller. Type: string
-var _controllerId;
+  // ng-controller. Type: string
+  var _controllerId;
 
-// PCF framework delegate which will be assigned to this object which would be called whenever an update happens. Type: function
-var _notifyOutputChanged;
+  // PCF framework delegate which will be assigned to this object which would be called whenever an update happens. Type: function
+  var _notifyOutputChanged;
 
-// Model of the bind field. Type: Bollean
-var _currentValue;
+  // Model of the bind field. Type: Bollean
+  var _currentValue;
 
-// Option Label Text when Option is True. The Text is from attribute customization. Type: string
-var _optionTrueLabel;
+  // Option Label Text when Option is True. The Text is from attribute customization. Type: string
+  var _optionTrueLabel;
 
-// Option Label Text when Option is False. The Text is from attribute customization. Type: string
-var _optionFalseLabel;
+  // Option Label Text when Option is False. The Text is from attribute customization. Type: string
+  var _optionFalseLabel;
 }
 
 /**
@@ -99,65 +99,65 @@ var _optionFalseLabel;
 */
 SampleNamespace.JSAngularJSFlipControl.prototype.init = function (context, notifyOutputChanged, state, container) {
 
-var _this = this;
+  var _this = this;
 
-// We need a random integer from 1-100, so that for a form of multiple fields bind to same attribute, we could differentiate
-var randomInt = Math.floor(Math.floor(100)*Math.random());
-this._appDivId = this.createUniqueId(context, "angularflip_controlid", randomInt);
-this._appId = this.createUniqueId(context, "JSAngularJSFlipControl", randomInt);
-this._controllerId = this.createUniqueId(context, "powerApps.angularui.demo", randomInt);
-this._notifyOutputChanged = notifyOutputChanged;
+  // We need a random integer from 1-100, so that for a form of multiple fields bind to same attribute, we could differentiate
+  var randomInt = Math.floor(Math.floor(100) * Math.random());
+  this._appDivId = this.createUniqueId(context, "angularflip_controlid", randomInt);
+  this._appId = this.createUniqueId(context, "JSAngularJSFlipControl", randomInt);
+  this._controllerId = this.createUniqueId(context, "powerApps.angularui.demo", randomInt);
+  this._notifyOutputChanged = notifyOutputChanged;
 
-// Assign Model the value of the bind attribute
-this._currentValue = context.parameters.flipModel.raw;
+  // Assign Model the value of the bind attribute
+  this._currentValue = context.parameters.flipModel.raw;
 
-// Initialize the True/False Label texts from the attribute metadata
-this.initializeOptionsLabel(context);
+  // Initialize the True/False Label texts from the attribute metadata
+  this.initializeOptionsLabel(context);
 
-// Create HTML structure for the control
-var appDiv = document.createElement('div');
-appDiv.setAttribute("id",this._appDivId);
-appDiv.setAttribute("ng-controller",this._appId);
-appDiv.setAttribute("ng-app",this._controllerId);
+  // Create HTML structure for the control
+  var appDiv = document.createElement('div');
+  appDiv.setAttribute("id", this._appDivId);
+  appDiv.setAttribute("ng-controller", this._appId);
+  appDiv.setAttribute("ng-app", this._controllerId);
 
-// Below sample html are from Angular-UI single toggle sample code
-// https://angular-ui.github.io/bootstrap/
-appDiv.innerHTML="<pre>{{labelModel}}</pre><button type='button' class='btn btn-primary' ng-model='flipButtonModel' uib-btn-checkbox btn-checkbox-true='1' btn-checkbox-false='0'>Flip</button>";
+  // Below sample html are from Angular-UI single toggle sample code
+  // https://angular-ui.github.io/bootstrap/
+  appDiv.innerHTML = "<pre>{{labelModel}}</pre><button type='button' class='btn btn-primary' ng-model='flipButtonModel' uib-btn-checkbox btn-checkbox-true='1' btn-checkbox-false='0'>Flip</button>";
 
-// Container appends the HTML structure
-container.appendChild(appDiv);
+  // Container appends the HTML structure
+  container.appendChild(appDiv);
 
-// Angular code. Angular module/controller initialization.
-angular.module(this._controllerId, ['ngAnimate', 'ngSanitize', 'ui.bootstrap']);
-angular.module(this._controllerId).controller(this._appId, function ($scope){
+  // Angular code. Angular module/controller initialization.
+  angular.module(this._controllerId, ['ngAnimate', 'ngSanitize', 'ui.bootstrap']);
+  angular.module(this._controllerId).controller(this._appId, function ($scope) {
 
-// Initialize 'labelModel'. Assign initial option text to the Angular $scope labelModel. It will be revealed in '<pre>{{labelModel}}</pre>'
-$scope.labelModel = _this._currentValue ? _this._optionTrueLabel : _this._optionFalseLabel;
+    // Initialize 'labelModel'. Assign initial option text to the Angular $scope labelModel. It will be revealed in '<pre>{{labelModel}}</pre>'
+    $scope.labelModel = _this._currentValue ? _this._optionTrueLabel : _this._optionFalseLabel;
 
-// Initialize 'flipButtonModel'. Assign bind attribute value to Angular $scope flipButtonModel. The Flip button also bind to this 'flipButtonModel', so when we click, it will flip
-$scope.flipButtonModel = _this._currentValue ? 1 : 0;
+    // Initialize 'flipButtonModel'. Assign bind attribute value to Angular $scope flipButtonModel. The Flip button also bind to this 'flipButtonModel', so when we click, it will flip
+    $scope.flipButtonModel = _this._currentValue ? 1 : 0;
 
-// Watch the click of the flip button
-$scope.$watchCollection('flipButtonModel', function () {
+    // Watch the click of the flip button
+    $scope.$watchCollection('flipButtonModel', function () {
 
-// Update the label text when Flip Button clicks
-if($scope.flipButtonModel){
-$scope.labelModel =  _this._optionTrueLabel;
-}
-else{
-$scope.labelModel = _this._optionFalseLabel;
-}
+      // Update the label text when Flip Button clicks
+      if ($scope.flipButtonModel) {
+        $scope.labelModel = _this._optionTrueLabel;
+      }
+      else {
+        $scope.labelModel = _this._optionFalseLabel;
+      }
 
-// Call updateOutputIfNeeded and inform PCF framework that bind attribute value need update
-_this.updateOutputIfNeeded($scope.flipButtonModel);
+      // Call updateOutputIfNeeded and inform PCF framework that bind attribute value need update
+      _this.updateOutputIfNeeded($scope.flipButtonModel);
 
-});
-});
+    });
+  });
 
-// Angular code. Create an App based on the new appDivId
-angular.element(document).ready(function() {
-angular.bootstrap(document.getElementById(_this._appDivId),[_this._controllerId]);
-});
+  // Angular code. Create an App based on the new appDivId
+  angular.element(document).ready(function () {
+    angular.bootstrap(document.getElementById(_this._appDivId), [_this._controllerId]);
+  });
 };
 
 /**
@@ -168,7 +168,7 @@ angular.bootstrap(document.getElementById(_this._appDivId),[_this._controllerId]
 * @returns a string of uniqueId includes attribute logicalname + passIn specialized string + random Integer
 */
 SampleNamespace.JSAngularJSFlipControl.prototype.createUniqueId = function (context, passInString, randomInt) {
-return context.parameters.flipModel.attributes.LogicalName + "-" + passInString + randomInt;
+  return context.parameters.flipModel.attributes.LogicalName + "-" + passInString + randomInt;
 }
 
 /**
@@ -176,18 +176,18 @@ return context.parameters.flipModel.attributes.LogicalName + "-" + passInString 
 * @param context The "Input Properties" containing the parameters, control metadata and interface functions.
 */
 SampleNamespace.JSAngularJSFlipControl.prototype.initializeOptionsLabel = function (context) {
-var _this = this;
+  var _this = this;
 
-// Get option label texts from metadata
-var optionsMetadata = context.parameters.flipModel.attributes.Options;
-optionsMetadata.forEach(function(option){
-if(option.Value){
-_this._optionTrueLabel = option.Label;
-}
-else{
-_this._optionFalseLabel = option.Label;
-}
-});
+  // Get option label texts from metadata
+  var optionsMetadata = context.parameters.flipModel.attributes.Options;
+  optionsMetadata.forEach(function (option) {
+    if (option.Value) {
+      _this._optionTrueLabel = option.Label;
+    }
+    else {
+      _this._optionFalseLabel = option.Label;
+    }
+  });
 };
 
 /**
@@ -196,8 +196,8 @@ _this._optionFalseLabel = option.Label;
 */
 SampleNamespace.JSAngularJSFlipControl.prototype.updateView = function (context) {
 
-// An attribute value from Control Framework could be updated even after init cycle, clientAPI, post Save response can update the attribute value and the Flip control should reveal the new value.
-this.updateFlipButtonModelIfNeeded(context.parameters.flipModel.raw);
+  // An attribute value from Control Framework could be updated even after init cycle, clientAPI, post Save response can update the attribute value and the Flip control should reveal the new value.
+  this.updateFlipButtonModelIfNeeded(context.parameters.flipModel.raw);
 };
 
 /**
@@ -205,16 +205,16 @@ this.updateFlipButtonModelIfNeeded(context.parameters.flipModel.raw);
 * @param newValue new value
 */
 SampleNamespace.JSAngularJSFlipControl.prototype.updateFlipButtonModelIfNeeded = function (newValue) {
-if((newValue && !this._currentValue) || (!newValue && this._currentValue)){
-this._currentValue = newValue;
+  if ((newValue && !this._currentValue) || (!newValue && this._currentValue)) {
+    this._currentValue = newValue;
 
-// Angular Code. Update the 'flipButtonModel' value
-var $scope = angular.element(document.getElementById(this._appDivId)).scope();
-$scope.$apply(function() {
-// 'flipButtonModel' value is either 1 or 0
-$scope.flipButtonModel = newValue ? 1:0;
-});
-}
+    // Angular Code. Update the 'flipButtonModel' value
+    var $scope = angular.element(document.getElementById(this._appDivId)).scope();
+    $scope.$apply(function () {
+      // 'flipButtonModel' value is either 1 or 0
+      $scope.flipButtonModel = newValue ? 1 : 0;
+    });
+  }
 };
 
 /**
@@ -222,10 +222,10 @@ $scope.flipButtonModel = newValue ? 1:0;
 * @param newValue new value
 */
 SampleNamespace.JSAngularJSFlipControl.prototype.updateOutputIfNeeded = function (newValue) {
-if((newValue && !this._currentValue) || (!newValue && this._currentValue)){
-this._currentValue = newValue ? true:false;
-this._notifyOutputChanged();
-}
+  if ((newValue && !this._currentValue) || (!newValue && this._currentValue)) {
+    this._currentValue = newValue ? true : false;
+    this._notifyOutputChanged();
+  }
 };
 
 /**
@@ -233,10 +233,10 @@ this._notifyOutputChanged();
 * @returns an object based on nomenclature defined in manifest, expecting object[s] for property marked as “bound” or “output”
 */
 SampleNamespace.JSAngularJSFlipControl.prototype.getOutputs = function () {
-var returnValue = this._currentValue;
-return {
-flipModel: returnValue
-};
+  var returnValue = this._currentValue;
+  return {
+    flipModel: returnValue
+  };
 };
 
 /**
