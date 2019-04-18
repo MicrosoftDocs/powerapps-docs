@@ -23,18 +23,7 @@ search.app:
 ---
 # Discover the URL for your organization using the Web API
 
-> [!NOTE]
-> Global Discovery Service is currently available for Government Community Cloud(GCC) Moderate. This means that it is available for all domains that end with `crm9.dynamics.com` and is expected to be available to use for all domains under `crm.microsoftdynamics.us` by May 2019. The process to provide Global Discovery Service support for all sovereign regions in currently underway and is expected to be completed by October 2019.
->
-> It is recommended that users switch from the legacy Regional discovery service to Global discovery service.
->
-> The table given below lists the Global discovery URL for every sovereign region.
->
-> |Region|Global discovery URL|
-> |------|------|
-> |Commercial|`https://globaldisco.crm.dynamics.com`|
-> |GCC Moderate|`https://globaldisco.crm9.dynamics.com`|
-> |GCC High|`https://globaldisco.crm.microsoftdynamics.us`|
+
 
 [!INCLUDE [cc-discovery-service-description](../includes/cc-discovery-service-description.md)]
 
@@ -52,6 +41,12 @@ GET https://globaldisco.crm.dynamics.com/api/discovery/v1.0/Instances(UniqueName
 ```  
   
 In the above example, the global Discovery service of Common Data Service is used to obtain the organization information of the instance with a unique name of "myorg". More details about this request is expanded upon later in this topic.  
+
+> [!NOTE]
+> It is recommended that users switch from the legacy regional discovery service (`https://disco.crm.dynamics.com`) to global discovery service (`https://globaldisco.crm.dynamics.com`).
+> 
+> For Dynamics 365 US Government users, the global discovery service is available only for the **GCC Moderate** users and the URL is `https://globaldisco.crm9.dynamics.com`. More information: [Dynamics 365 Government URLs](https://docs.microsoft.com/dynamics365/customer-engagement/admin/government/microsoft-dynamics-365-government#dynamics-365-us-government-urls). 
+
   
 ### Scope of the returned information
 
