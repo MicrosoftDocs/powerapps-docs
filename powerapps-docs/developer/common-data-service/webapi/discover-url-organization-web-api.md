@@ -30,7 +30,7 @@ With the Web API discovery service, you can use standard `$filter` and `$select`
 
 ## Global discovery service
 
-In addition to datacenter specific (regional) discovery services that are available on the 2011 (SOAP) endpoint and through the Web API, there is also a Web API only *global* discovery service that spans all operational datacenters. For information about the discovery service on the 2011 endpoint, see [Discovery Service](../org-service/discovery-service.md)
+In addition to datacenter specific (regional) discovery services that are available on the 2011 (SOAP) endpoint and through the Web API, there is also a Web API only *global* discovery service that spans all operational datacenters. For information about the regional discovery services on the 2011 endpoint, see [Regional discovery services](../org-service/discovery-service.md#regional-discovery-services)
 
 > [!NOTE]
 > It is recommended that users switch from the legacy regional discovery service (`https://disco.crm.dynamics.com`) to global discovery service (`https://globaldisco.crm.dynamics.com`).
