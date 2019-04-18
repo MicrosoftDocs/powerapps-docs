@@ -1,0 +1,45 @@
+---
+title: Property | Microsoft Docs
+description: 
+keywords:
+ms.author: nabuthuk
+manager: kvivek
+ms.date: 03/01/2019
+ms.service: "powerapps"
+ms.suite: ""
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+ms.assetid: a118f54f-be47-4f35-9ffb-7afa6c296631
+---
+
+# Property
+
+## error
+
+**Type**: `boolean`
+
+## errorMessage
+
+**type**: `string`
+
+## formatted
+
+**Type**: `string`
+
+## security
+
+**Type**: `SecurityValues`
+
+## raw
+
+**Type**: `any`
+
+## attribute
+
+**Type**: `FieldPropertyMetadata`
+
+
+### Related topics
+
+[PowerApps Component Framework API Reference](../reference/index.md)<br/>
+[PowerApps Component Framework Overview](../overview.md)
