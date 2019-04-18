@@ -3,7 +3,7 @@ title: " Table grid Control| Microsoft Docs"
 description: "Implementing table grid control" 
 ms.custom: ""
 manager: kvivek
-ms.date: 03/01/2019
+ms.date: 04/25/2019
 ms.service: "powerapps"
 ms.topic: "article"
 ms.author: "nabuthuk" 
@@ -77,7 +77,7 @@ type DataSet = ComponentFramework.PropertyTypes.DataSet;
 		 * @param context The entire property bag available to control via Context Object; It contains values as set up by the customizer mapped to property names defined in the manifest, as well as utility functions.
 		 * @param notifyOutputChanged A callback method to alert the framework that the control has new outputs ready to be retrieved asynchronously.
 		 * @param state A piece of data that persists in one session for a single user. Can be set at any point in a controls life cycle by calling 'setControlState' in the Mode interface.
-		 * @param container If a control is marked control-type='starndard', it will receive an empty div element within which it can render its content.
+		 * @param container If control is marked control-type='standard', it receives an empty div element within which it can render its content.
 		 */
 		public init(context: ComponentFramework.Context<IInputs>, notifyOutputChanged: () => void, state: ComponentFramework.Dictionary, container:HTMLDivElement)
 		{
@@ -151,7 +151,7 @@ type DataSet = ComponentFramework.PropertyTypes.DataSet;
 
 		/** 
  		 * Called when the control is to be removed from the DOM tree. Controls should use this call for cleanup.
-		 * i.e. cancelling any pending remote calls, removing listeners, etc.
+		 * i.e. canceling any pending remote calls, removing listeners, etc.
 		 */
 		public destroy(): void
 		{
@@ -503,7 +503,7 @@ type DataSet = ComponentFramework.PropertyTypes.DataSet;
 
 Column Header bind to the View :
 
-View column info lies at `context.parameters.[dataset_property_name].columns`. It’s an array type. 
+View column info lies at `context.parameters.[dataset_property_name].columns`. It’s an array type.
 
 Record binding :
 
@@ -521,3 +521,8 @@ This sample also showcases how the control listens to the container resize.
 The `trackContainerResize` method should be called within [init](../reference/control/init.md) method so that the `mode.allocatedWidth` and `mode.allocatedHeight` will be provided each time [updateView](../reference/control/updateview.md) being called. If this method is not being called initially, then they don't have `allocatedWidth` and `allocatedHeight` provided.
 
 If the allocatedHeight is –1, that means there is no limit on height. The control should adjust its height based on the provided width.
+
+### Related topics
+
+[PowerApps Component Framework API Reference](../index.md)<br/>
+[PowerApps Component Framework Manifest Schema Reference](../manifest-schema-reference/index.md)

@@ -1,10 +1,10 @@
 ---
 title: Control State API  | Microsoft Docs
 description: 
-keywords:
+keywords: PowerApps; PowerApps Component Framework
 ms.author: nabuthuk
 manager: kvivek
-ms.date: 03/01/2019
+ms.date: 04/25/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -14,9 +14,9 @@ ms.assetid: 4a77bf37-8ea0-4fe3-9fe7-2769387167c3
 
 # Overview
 
-The PowerApps Component Framework (PCF) allows you to persist state of a control across multiple renderings of the control within the same session.This provides you with the ability to build controls that can maintain user state throughout the user's session as the user navigates to and from the control.  
+The PowerApps Component Framework (PCF) allows you to persist state of control across multiple renderings of the control within the same session. It provides you with the ability to build controls that can maintain user state throughout the user's session as the user navigates to and from the control.  
 
-For example, if your custom control is a long list that the user can scroll through, you could leverage the ***SetControlState*** functionality to remember the point in the list the user was looking at when they navigated away from the form. You could then add logic on control initialization to check the stored state and render the control's list at the point where the user was previously reading.  
+For example, if your custom control is a long list that the user can scroll through, you could leverage the ***SetControlState*** functionality to remember the point in the list the user is looking at when they navigated away from the form. You could then add logic on control initialization to check the stored state and render the control's list at the point where the user was previously reading.  
 
 > [!div class="mx-imgBorder"]
 > ![Control state API](../media/control-state-api.png "Control state API")
@@ -91,7 +91,7 @@ import {IInputs, IOutputs} from "./generated/ManifestTypes";
 		 * @param context The entire property bag available to control via Context Object; It contains values as set up by the customizer mapped to property names defined in the manifest, as well as utility functions.
 		 * @param notifyOutputChanged A callback method to alert the framework that the control has new outputs ready to be retrieved asynchronously.
 		 * @param state A piece of data that persists in one session for a single user. Can be set at any point in a controls life cycle by calling 'setControlState' in the Mode interface.
-		 * @param container If a control is marked control-type='standard', it will receive an empty div element within which it can render its content.
+		 * @param container If control is marked control-type='standard', it receives an empty div element within which it can render its content.
 		 */
         public init(context: ComponentFramework.Context<IInputs>, notifyOutputChanged: () => void, state: ComponentFramework.Dictionary, container:HTMLDivElement): void
         {
@@ -115,13 +115,13 @@ import {IInputs, IOutputs} from "./generated/ManifestTypes";
                 this._persistedSelectedLabel = state[PERSISTED_SELECTED_Label_KEY_NAME]; 
             }
             
-            // State not perisited in control -- set variable to default values
+            // State not persisted in control -- set variable to default values
             if (!this._persistedSelectedColor)
             {
                 this._persistedSelectedColor = "transparent";
             }
             
-            // State not perisited in control -- set variable to default values
+            // State not persisted in control -- set variable to default values
             if (!this._persistedSelectedLabel)
             {
                 this._persistedSelectedLabel = "none";
@@ -259,7 +259,7 @@ import {IInputs, IOutputs} from "./generated/ManifestTypes";
 
 		/** 
  		 * Called when the control is to be removed from the DOM tree. Controls should use this call for cleanup.
-		 * i.e. cancelling any pending remote calls, removing listeners, etc.
+		 * i.e. canceling any pending remote calls, removing listeners, etc.
 		 */
         public destroy(): void
         {         
@@ -315,3 +315,7 @@ import {IInputs, IOutputs} from "./generated/ManifestTypes";
 }
 ```
 
+### Related topics
+
+[PowerApps Component Framework API Reference](../index.md)<br/>
+[PowerApps Component Framework Manifest Schema Reference](../manifest-schema-reference/index.md)

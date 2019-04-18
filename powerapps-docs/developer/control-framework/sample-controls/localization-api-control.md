@@ -3,16 +3,16 @@ title: " Localization API Control| Microsoft Docs"
 description: "Implementing localization api control" 
 ms.custom: ""
 manager: kvivek
-ms.date: 03/01/2019
+ms.date: 04/25/2019
 ms.service: "powerapps"
 ms.topic: "article"
 ms.author: "nabuthuk" 
 ---
 # Implementing localization API control
 
-This sample showcases how localization can be done for custom controls. In this sample we use the [Increment control](increment-control.md) to localize the text that is displayed on the increment button based on the user’s selected language. 
+This sample showcases how localization is done for custom controls. In this sample, we use the [Increment control](increment-control.md) to localize the text that is displayed on the increment button based on the user’s selected language. 
 
-PowerApps Component Framework uses the concept of implementing String(resx) web resources that can be used to manage localized strings to be shown on any user interface. More information: [String(Resx) Webresources](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/resx-web-resources). 
+PowerApps Component Framework uses the concept of implementing String(resx) web resources that is used to manage the localized strings shown on any user interface. More information: [String(Resx) Webresources](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/resx-web-resources). 
 
 > [!div class="mx-imgBorder"]
 > ![Localization API Control](../media/localization-api-control.png "Localization API Control")
@@ -51,7 +51,7 @@ import {IInputs, IOutputs} from "./generated/ManifestTypes";
 		// Value of the field is stored and used inside the control 
 		private _value: number;
 
-		// PCF framework delegate which will be assigned to this object which would be called whenever any update happens. 
+		// PCF framework delegate which will be assigned to this object which would be called whenever an update happens. 
 		private _notifyOutputChanged: () => void;
 
 		// label element created as part of this control
@@ -78,7 +78,7 @@ import {IInputs, IOutputs} from "./generated/ManifestTypes";
 		 * @param context The entire property bag available to control via Context Object; It contains values as set up by the customizer mapped to property names defined in the manifest, as well as utility functions.
 		 * @param notifyOutputChanged A callback method to alert the framework that the control has new outputs ready to be retrieved asynchronously.
 		 * @param state A piece of data that persists in one session for a single user. Can be set at any point in a controls life cycle by calling 'setControlState' in the Mode interface.
-		 * @param container If a control is marked control-type='starndard', it will receive an empty div element within which it can render its content.
+		 * @param container If control is marked control-type='standard', it receives an empty div element within which it can render its content.
 		 */
 		public init(context: ComponentFramework.Context<IInputs>, notifyOutputChanged: () => void, state: ComponentFramework.Dictionary, container:HTMLDivElement)
 		{
@@ -131,7 +131,7 @@ import {IInputs, IOutputs} from "./generated/ManifestTypes";
 		 */
 		public updateView(context: ComponentFramework.Context<IInputs>): void
 		{
-			// This method would rerender the control with the updated values after we call NotifyOutputChanged
+			// This method would re render the control with the updated values after we call NotifyOutputChanged
 			//set the value of the field control to the raw value from the configured field
 			this._value = context.parameters.value.raw;
 			this.label.value = this._value != null ? this._value.toString(): "";
@@ -161,7 +161,7 @@ import {IInputs, IOutputs} from "./generated/ManifestTypes";
 
 		/** 
  		 * Called when the control is to be removed from the DOM tree. Controls should use this call for cleanup.
-		 * i.e. cancelling any pending remote calls, removing listeners, etc.
+		 * i.e. canceling any pending remote calls, removing listeners, etc.
 		 */
 		public destroy(): void
 		{
@@ -445,13 +445,13 @@ import {IInputs, IOutputs} from "./generated/ManifestTypes";
 
 To localize an existing project, all you need to do is to create additional resource(resx) files, one each for a specific language as mentioned in the string web resources and include them as part of the control’s manifest file under the [resources](../reference/resources.md) node.  
 
-The PCF identifies the user’s language and returns the strings from that language specific resource file when you try to access the string using `context.resources.getString` method.
+PCF identifies the user’s language and returns the strings from that language-specific resource file when you try to access the string using `context.resources.getString` method.
 
-In this sample, two languages `Spanish` and `Finnish` with the language codes 3082 and 1035 respectively are defined. we have made a copy of the `Increment Control` sample and renamed it to `Localization API`. All the corresponding files including the files in the sub folders are renamed accordingly.
+In this sample, two languages `Spanish` and `Finnish` with the language codes 3082 and 1035 respectively defined. We made a copy of the `Increment Control` sample and renamed it to `Localization API`. All the corresponding files including the files in the subfolders are renamed accordingly.
 
-In the strings folder under `TS_LocalizationAPI`, two additional resx files with the suffixes corresponding to Spanish and Finnish as 3082 and 1035 respectively are added. The new files that are created should have their file names ending as {filename}.3082.resx and {filename}.1035.resx because the framework relies on this naming convention to identify which resource file should be picked for reading the strings for the user.
+In the strings folder under `TS_LocalizationAPI`, two additional resx files with the suffixes corresponding to Spanish and Finnish as 3082 and 1035 are added. The new files created should have their file names ending as `{filename}.3082.resx` and `{filename}.1035.resx` because the framework relies on this naming convention to identify which resource file should be picked for reading the strings for the user.
 
-Ensure that the keys used for strings in all these resource files share the same name across all the languages. Now, when the control is being rendered on the UI, we see in the code that we retrieve the value to be displayed on the button using `context.resources.getString("PCF_LocalizationSample_ButtonLabel")`.
+Ensure that the keys used for strings in all these resource files share the same name across all the languages. Now, when the control is rendered on the UI, we see in the code that we retrieve the value to be displayed on the button using `context.resources.getString("PCF_LocalizationSample_ButtonLabel")`.
 
 When this line of code is executed, the PCF automatically identifies the language of the user and picks up the value for the button label using the key provided in the corresponding language file we defined. Below is the text you see for each of the 3 languages we support for this sample control.
   
@@ -460,3 +460,8 @@ When this line of code is executed, the PCF automatically identifies the languag
 |3082 |Incremento |
 |1033 |Increment |
 |1035 |lisäys | 
+
+### Related topics
+
+[PowerApps Component Framework API Reference](../index.md)<br/>
+[PowerApps Component Framework Manifest Schema Reference](../manifest-schema-reference/index.md)

@@ -3,7 +3,7 @@ title: " Navigation API Control| Microsoft Docs"
 description: "Implementing navigation api control" 
 ms.custom: ""
 manager: kvivek
-ms.date: 03/01/2019
+ms.date: 04/25/2019
 ms.service: "powerapps"
 ms.topic: "article"
 ms.author: "nabuthuk" 
@@ -11,9 +11,7 @@ ms.author: "nabuthuk"
 
 # Implementing Navigation API  control
 
-This sample control explores the various methods available as part of the **PowerApps Component Framework** navigation API. 
- 
-In this sample you create a series of input elements of type buttons which calls into the respective methods of the navigation API that matches with the value displayed.  
+This sample control explores the various methods available as part of the **PowerApps Component Framework** navigation API. In this sample, you create a series of input elements of type buttons which calls into the respective methods of the navigation API that matches with the value displayed.  
 
 > [!div class="mx-imgBorder"]
 > ![Navigation API Control](../media/navigation-api-control.png "Navigation API Control")
@@ -46,7 +44,7 @@ import {IInputs, IOutputs} from "./generated/ManifestTypes";
 
     export class TSNavigationAPI implements ComponentFramework.StandardControl<IInputs, IOutputs> {
 
-		// PCF framework delegate which will be assigned to this object which would be called whenever any update happens. 
+		// PCF framework delegate which will be assigned to this object which would be called whenever an update happens. 
         private _notifyOutputChanged: () => void;
 
 		// Reference to the div element that hold together all the HTML elements that we are creating as part of this control
@@ -85,7 +83,7 @@ import {IInputs, IOutputs} from "./generated/ManifestTypes";
 		 * @param context The entire property bag available to control via Context Object; It contains values as set up by the customizer mapped to property names defined in the manifest, as well as utility functions.
 		 * @param notifyOutputChanged A callback method to alert the framework that the control has new outputs ready to be retrieved asynchronously.
 		 * @param state A piece of data that persists in one session for a single user. Can be set at any point in a controls life cycle by calling 'setControlState' in the Mode interface.
-		 * @param container If a control is marked control-type='starndard', it will receive an empty div element within which it can render its content.
+		 * @param container If control is marked control-type='standard', it receives an empty div element within which it can render its content.
 		 */
         public init(context: ComponentFramework.Context<IInputs>, notifyOutputChanged: () => void, state: ComponentFramework.Dictionary, container:HTMLDivElement)
         {
@@ -206,7 +204,7 @@ import {IInputs, IOutputs} from "./generated/ManifestTypes";
 
 		/** 
  		 * Called when the control is to be removed from the DOM tree. Controls should use this call for cleanup.
-		 * i.e. cancelling any pending remote calls, removing listeners, etc.
+		 * i.e. canceling any pending remote calls, removing listeners, etc.
 		 */
         public destroy()
         {
@@ -237,30 +235,35 @@ mpleNamespace\.TSNavigationAPI button{
 }
 ```
 
-The `openAlertDialog` method provides the capability to display an alert dialog containing a message and a button. You can also implement callback methods when the alert dialog is closed or on if an error is encountered when loading the dialog.
+The `openAlertDialog` method provides the capability to display an alert dialog containing a message and a button. You can also implement callback methods when the alert dialog is closed or if an error is encountered when loading the dialog.
   
-In this sample when you click on the `openAlertDialogButton` a alert dialog pops up and sets the value of it to `Alert dialog closed` when the dialog is closed either using the `OK` button or the `X` button.
+In this sample when you click on the `openAlertDialogButton` an alert dialog pops up and sets the value of it to `Alert dialog closed` when the dialog is closed either using the `OK` button or the `X` button.
 
 > [!NOTE]
-> This is similar to calling the Xrm.Navigation.openAlertDialog method in ClientAPI.  
+> This is similar to calling the [Xrm.Navigation.openAlertDialog](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/clientapi/reference/xrm-navigation/openalertdialog) method in ClientAPI.  
 
-The `openConfirmDialog` method provides the ability to display an alert dialog containing a message and two buttons. You can use this method to implement different logics based on the button clicked. You can implement the success callback which is called when the dialog is closed by clicking either of the buttons.
+The `openConfirmDialog` method provides the ability to display an alert dialog containing a message and two buttons. You can use this method to implement different logic based on the button clicked. You can implement the success callback which is called when the dialog is closed by clicking either of the buttons.
   
-This sample shows you a confirm dialog when you click on the `openConfirmDialogButton` and sets the value of it to `Ok` button clicked or `Cancel or X` button clicked depending on the button that was clicked.
+This sample shows you a confirm dialog when you click on the `openConfirmDialogButton` and sets the value of it to `Ok` or `Cancel`, or `X` depending on the button that was clicked.
 
 > [!NOTE]
-> This is similar to calling the Xrm.Navigation.openConfirmDialog method in ClientAPI.
+> This is similar to calling the [Xrm.Navigation.openConfirmDialog](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/clientapi/reference/xrm-navigation/openconfirmdialog) method in ClientAPI.
   
-The openFile method provides the ability to open a file. You’d need to pass in the file object which has the filename, content, mimetype and the filesize. You can also pass in the optional parameter of the mode you want to open the file as 1 or 2, 1 being the default which opens the file in read/open mode.
+The `openFile` method provides the ability to open a file. You’d need to pass in the file object which has the filename, content, mimetype and the filesize. You can also pass in the optional parameter of the mode you want to open the file as 1 or 2, 1 being the default which opens the file in read or open mode.
   
 This sample opens a file named `SampleDemo.txt` in save mode on clicking the `openFileButton`.
 
 > [!NOTE]
-> This is similar to calling the Xrm.Navigation.openFile method in ClientAPI.
+> This is similar to calling the [Xrm.Navigation.openFile](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/clientapi/reference/xrm-navigation/openfile) method in ClientAPI.
 
-The openUrl method provides the ability to open a URL. You’d need to pass the URL as a string to the method and also pass the optional parameters of height, width and openInNewWindow as true if you want the url to be opened in a new window.
+The `openUrl` method provides the ability to open a URL. You need to pass the URL as a string to the method and also pass the optional parameters of height, width and openInNewWindow as true if you want the URL to be opened in a new window.
   
 This sample opens a new window and loads the microsoft.com home page on clicking the `openUrlButton`.
 
 > [!NOTE]
-> This is similar to calling the Xrm.Navigation.openUrl method in ClientAPI.
+> This is similar to calling the [Xrm.Navigation.openUrl](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/clientapi/reference/xrm-navigation/openurl) method in ClientAPI.
+
+### Related topics
+
+[PowerApps Component Framework API Reference](../index.md)<br/>
+[PowerApps Component Framework Manifest Schema Reference](../manifest-schema-reference/index.md)

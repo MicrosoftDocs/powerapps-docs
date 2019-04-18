@@ -3,14 +3,14 @@ title: " Web API Control| Microsoft Docs"
 description: "Implementing Web API control" 
 ms.custom: ""
 manager: kvivek
-ms.date: 03/01/2019
+ms.date: 04/25/2019
 ms.service: "powerapps"
 ms.topic: "article"
 ms.author: "nabuthuk" 
 ---
 # Implementing Web API control
 
-The Web API control is designed to perform basic create, retrieve, update record functions. The control renders four buttons, which can be clicked to invoke a different Web API action. The result of the Web API call is injected into a HTML div element at the bottom of the custom control.  
+The Web API control is designed to perform create, retrieve, update and delete functions. The control renders four buttons, which can be clicked to invoke different Web API actions. The result of the Web API call is injected into a HTML div element at the bottom of the custom control.  
 
 > [!div class="mx-imgBorder"]
 > ![Web API Control](../media/web-api-control.png "Web API Control")
@@ -82,7 +82,7 @@ import {IInputs, IOutputs} from "./generated/ManifestTypes";
 		 * @param context The entire property bag available to control via Context Object; It contains values as set up by the customizer mapped to property names defined in the manifest, as well as utility functions.
 		 * @param notifyOutputChanged A callback method to alert the framework that the control has new outputs ready to be retrieved asynchronously.
 		 * @param state A piece of data that persists in one session for a single user. Can be set at any point in a controls life cycle by calling 'setControlState' in the Mode interface.
-		 * @param container If a control is marked control-type='starndard', it will receive an empty div element within which it can render its content.
+		 * @param container If control is marked control-type='standard', it receives an empty div element within which it can render its content.
 		 */
 		public init(context: ComponentFramework.Context<IInputs>, notifyOutputChanged: () => void, state: ComponentFramework.Dictionary, container:HTMLDivElement)
 		{
@@ -126,7 +126,7 @@ import {IInputs, IOutputs} from "./generated/ManifestTypes";
 
 		/** 
  		 * Called when the control is to be removed from the DOM tree. Controls should use this call for cleanup.
-		 * i.e. cancelling any pending remote calls, removing listeners, etc.
+		 * i.e. canceling any pending remote calls, removing listeners, etc.
 		 */
 		public destroy()
 		{
@@ -635,23 +635,17 @@ To change the default configuration to any entity or field, update the below con
 
 The `createRecord` method renders three buttons, which allows you to create an account record with the revenue field set to different values (100, 200, 300).
 
-When you click one of the create buttons, the button’s `onClick` handler will check the value of the button clicked and use the Web API to create an account record with the revenue field set to the button’s value. The name field of the account record will also be set to ‘Web API Custom Control (Sample)’ with a random `int` appended to the end of the string.
-
-The callback method from the Web API call will inject the result of the Web API call (success or failure) into the custom control’s result div.  
+When you click one of the create buttons, the button’s `onClick` event handler checks the value of the button clicked and use the Web API action to create an account record with the revenue field set to the button’s value. The name field of the account record will be set to `Web API Custom Control (Sample)` with a random `int` appended to the end of the string. The callback method from the Web API call injects the result of the Web API call (success or failure) into the custom control’s result div.  
  
-The `deleteRecord` method renders a button which opens a lookup dialog when clicked. The lookup dialog allows you to select the account record you want to delete. Once an account record is selected from the lookup dialog, it is passed to the `deleteRecord` to delete the record from the database.  
+The `deleteRecord` method renders a button which opens a lookup dialog when clicked. The lookup dialog allows you to select the account record you want to delete. Once an account record is selected from the lookup dialog, it is passed to the `deleteRecord` to delete the record from the database. The callback method from the Web API call injects the result of the Web API call (success or failure) into the custom control’s result div.  
 
-The callback method from the Web API call will inject the result of the Web API call (success or failure) into the custom control’s result div.  
-
-
-The FetchXML `retreiveMultiple` method renders a button in the custom control. `onClick` of this button, FetchXML is generated and passed to the `retrieveMultiple` function to calculate the average value of the revenue field for all the accounts records.
-
-The callback method from the Web API call will inject the result of the Web API call (success or failure) into the custom control’s result div.  
+The FetchXML `retreiveMultiple` method renders a button in the custom control. `onClick` of this button, FetchXML is generated and passed to the `retrieveMultiple` function to calculate the average value of the revenue field for all the accounts records. The callback method from the Web API call injects the result of the Web API call (success or failure) into the custom control’s result div.  
 
 The OData `retrieveMultiple` method renders a button in the custom control. `onClick` of this button, OData string is generated and passed to the `retrieveMultiple` function to retrieve all account records with a name field that is like ‘Custom Control Web API (Sample)’, which is true for all account records created by this custom control example.  
 
-On successful retrieve of the records, the custom control has logic to count how many account records have the revenue field set to 100, 200 or 300, and display this count into an odata status container div on the custom control.  
+On successful retrieve of the records, the custom control has logic to count how many account records have the revenue field set to 100, 200 or 300, and display this count into an odata status container div on the custom control.  The callback method from the Web API call injects the result of the Web API call (success or failure) into the custom control’s result div.  
 
-The callback method from the Web API call will inject the result of the Web API call (success or failure) into the custom control’s result div.  
+### Related topics
 
-
+[PowerApps Component Framework API Reference](../index.md)<br/>
+[PowerApps Component Framework Manifest Schema Reference](../manifest-schema-reference/index.md)

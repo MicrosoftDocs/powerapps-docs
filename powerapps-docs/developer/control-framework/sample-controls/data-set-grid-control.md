@@ -4,7 +4,7 @@ description:
 keywords:
 ms.author: nabuthuk
 manager: kvivek
-ms.date: 03/01/2019
+ms.date: 04/25/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 356561d0-a36b-4b93-8b76-3e1abf9414e9
 ---
 
-This sample shows how to change the user experience of interacting with dataset. For example, by default you only see the home page grid on an entity homepage as a table. You can build your own custom control that can display the data as per your choice. This sample show the records as tiles instead of the regular tabular grid.
+This sample control shows how to change the user experience of interacting with the dataset. For example, you only see the home page grid on an entity homepage as a table. You can build your custom control that can display the data as per your choice. This sample shows the records as tiles instead of the regular tabular grid.
 
 > [!div class="mx-imgBorder"]
 > ![Data Set Grid Control](../media/data-set-grid.png "Data Set Grid Control")
@@ -90,7 +90,7 @@ import {IInputs, IOutputs} from "./generated/ManifestTypes";
 		 * @param context The entire property bag available to control via Context Object; It contains values as set up by the customizer mapped to property names defined in the manifest, as well as utility functions.
 		 * @param notifyOutputChanged A callback method to alert the framework that the control has new outputs ready to be retrieved asynchronously.
 		 * @param state A piece of data that persists in one session for a single user. Can be set at any point in a controls life cycle by calling 'setControlState' in the Mode interface.
-		 * @param container If a control is marked control-type='standard', it will receive an empty div element within which it can render its content.
+		 * @param container If control is marked control-type='standard', it receives an empty div element within which it can render its content.
 		 */
         public init(context: ComponentFramework.Context<IInputs>, notifyOutputChanged: () => void, state: ComponentFramework.Dictionary, container:HTMLDivElement): void
         {
@@ -114,13 +114,13 @@ import {IInputs, IOutputs} from "./generated/ManifestTypes";
                 this._persistedSelectedLabel = state[PERSISTED_SELECTED_Label_KEY_NAME]; 
             }
             
-            // State not perisited in control -- set variable to default values
+            // State not persisted in control -- set variable to default values
             if (!this._persistedSelectedColor)
             {
                 this._persistedSelectedColor = "transparent";
             }
             
-            // State not perisited in control -- set variable to default values
+            // State not persisted in control -- set variable to default values
             if (!this._persistedSelectedLabel)
             {
                 this._persistedSelectedLabel = "none";
@@ -258,7 +258,7 @@ import {IInputs, IOutputs} from "./generated/ManifestTypes";
 
 		/** 
  		 * Called when the control is to be removed from the DOM tree. Controls should use this call for cleanup.
-		 * i.e. cancelling any pending remote calls, removing listeners, etc.
+		 * i.e. canceling any pending remote calls, removing listeners, etc.
 		 */
         public destroy(): void
         {         
@@ -403,19 +403,23 @@ import {IInputs, IOutputs} from "./generated/ManifestTypes";
 </root>
 ```
 
-In this sample we have the input parameter defined in the control Manifest with the data-set tag. This is the input property that gets bound to the control.  
+In this sample, we have the input parameter defined in control manifest file with the data-set tag. This is the input property that gets bound to the control.  
  
-This control has two important containers that are added onto a main div that is added onto the div that is passed onto the control.  The first container holds the tiles that shows the record data from the view and the second container is for the Load More button that shows when there are records that needs more area that can fit in one page. 
+This control has two important containers that are added onto the main div which is added onto the div that is passed onto the control.  The first container holds the tiles that show the record data from the view and the second container is for the `Load More button` that shows when there are records that need more area that can fit in one page. 
  
 Both the containers are generated and refreshed whenever the [updateView](../reference/control/updateview.md) method is called. For the first container, we generate the tiles based on the information in the columns and the number of records. This ensures we display a tile for each record along with its information on it.  
  
 If there exists a following page for the records, the load more button is displayed i.e., the second container is visible and is hidden if there are no more pages in the result set.  
  
-On click of the load more button, we load the next page of records and append it to the existing result set and the logic to hide/show the button remains same as earlier as shown in the code. This is taken care by the ***onLoadMoreButtonClick*** method which is bound to the button. 
+On the click of load more button, we load the next page of records and append it to the existing result set and the logic to hide or show the button remains same as earlier as shown in the code. This is taken care by the ***onLoadMoreButtonClick*** method which is bound to the button.
  
-The ***toggleLoadMoreButtonWhenNeeded*** function takes the input as the data set and checks if the data set has next page and if the button is hidden/visible and respectively hides/shows the button.  
+The ***toggleLoadMoreButtonWhenNeeded*** function takes the input as the data set and checks, whether the data set, has next page, and if the button is hidden or visible and respectively hides or shows the button.  
  
-The ***onRowClick*** function attaches the context of the record using its Guid and invokes the [openForm](../reference/navigation/openform.md) method of the NavigationAPI to open that respective record. This method is bound to each tile that gets generated as part of the ***createGridBody*** method. 
+The ***onRowClick*** function attaches the context of the record using its GUID value and invokes the [openForm](../reference/navigation/openform.md) method of the `NavigationAPI` to open that respective record. This method is bound to each tile that gets generated as part of the ***createGridBody*** method. 
  
 The ***getSortedColumnsOnView*** method returns the list of columns based on the defined order on the view. 
 
+### Related topics
+
+[PowerApps Component Framework API Reference](../index.md)<br/>
+[PowerApps Component Framework Manifest Schema Reference](../manifest-schema-reference/index.md)

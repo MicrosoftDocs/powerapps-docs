@@ -3,7 +3,7 @@ title: " Map Control| Microsoft Docs"
 description: "Implementing map control using Angular JS" 
 ms.custom: ""
 manager: kvivek
-ms.date: 03/01/2019
+ms.date: 04/25/2019
 ms.service: "powerapps"
 ms.topic: "article"
 ms.author: "nabuthuk" 
@@ -41,7 +41,7 @@ import {IInputs, IOutputs} from "./generated/ManifestTypes";
         // HTML IFrame element that will be used to render the map
         private _iFrameElement: HTMLIFrameElement;
 
-        // PCF framework delegate which will be assigned to this object which would be called whenever any update happens. 
+        // PCF framework delegate which will be assigned to this object which would be called whenever an update happens. 
         private _notifyOutputChanged: () => void;
 
         // Reference to ComponentFramework Context object
@@ -64,7 +64,7 @@ import {IInputs, IOutputs} from "./generated/ManifestTypes";
 		 * @param context The entire property bag available to control via Context Object; It contains values as set up by the customizer mapped to property names defined in the manifest, as well as utility functions.
 		 * @param notifyOutputChanged A callback method to alert the framework that the control has new outputs ready to be retrieved asynchronously.
 		 * @param state A piece of data that persists in one session for a single user. Can be set at any point in a controls life cycle by calling 'setControlState' in the Mode interface.
-		 * @param container If a control is marked control-type='starndard', it will receive an empty div element within which it can render its content.
+		 * @param container If control is marked control-type='standard', it receives an empty div element within which it can render its content.
 		 */
         public init(context: ComponentFramework.Context<IInputs>, notifyOutputChanged: () => void, state: ComponentFramework.Dictionary, container:HTMLDivElement)
         {
@@ -77,7 +77,7 @@ import {IInputs, IOutputs} from "./generated/ManifestTypes";
         }
 
         /**
-		 * Checks if the url is not null and sets the value to the iFrame source to be loaded inside it and then notifies the ContorlFramework that the output has changed
+		 * Checks if the url is not null and sets the value to the iFrame source to be loaded inside it and then notifies the ControlFramework that the output has changed
 		 * @param mapUrl : The url for the map that needs to be loaded inside the iFrame.
 		 */
         public renderMap(mapUrl: string)
@@ -132,7 +132,7 @@ import {IInputs, IOutputs} from "./generated/ManifestTypes";
 
 		/** 
  		 * Called when the control is to be removed from the DOM tree. Controls should use this call for cleanup.
-		 * i.e. cancelling any pending remote calls, removing listeners, etc.
+		 * i.e. canceling any pending remote calls, removing listeners, etc.
 		 */
         public destroy()
         {
@@ -156,16 +156,17 @@ import {IInputs, IOutputs} from "./generated/ManifestTypes";
 }
 ```
 
-In the manifest file we defined a property of type `Single line of Text`. We use this to bind it to the address field on the form.  
+In the manifest file, we defined property of type `Single line of Text`. We use this to bind it to the address field on the form.  
+
 > [!NOTE]
 > You can use any of the map API’s that are available in the market. In this example, we are going to show how to do it with the Google Map API. 
-You will need to create an API key for the control to access the Google Map API. Follow the instructions(https://developers.google.com/maps/documentation/embed/get-api-key to generate one).
+You need to create an API key for the control to access the Google Map API. Follow the instructions(https://developers.google.com/maps/documentation/embed/get-api-key to generate one).
 
-Create a variable name `MAPS_API_KEY` that can be accessed in the context of the control. 
-Google Map API allows you to only render the maps inside an `IFRAME`. So, you need to create an `IFRAME` element that is going to render the map using the URL we generate. 
-By default, we are setting the map to be hidden and display it only when the address value exists on the form. 
+Create a variable name `MAPS_API_KEY` that can be accessed in the context of the control.
+Google Map API allows you only to render the maps inside an `IFRAME`. So, you need to create an `IFRAME` element that is going to render the map using the URL we generate. 
+By default, we are setting the map to be hidden and display it only when the address value exists on the form.
 
-`buildMapUrl` and `renderMap`(you can even merge them together into one) takes the address string and embeds it onto the map URL by encoding the address string and then sets the IFRAME element’s src element to the URL respectively. Also, call the **notifyOutputChanged** method to ensure we notify the control that the rendering has changed. 
+`buildMapUrl` and `renderMap` (you can even merge them into one) takes the address string and embeds it onto the map URL by encoding the address string and then sets the IFRAME element’s src element to the URL respectively. Also, call the **notifyOutputChanged** method to ensure we notify the control that the rendering has changed. 
  
 ```TypeScript
 
@@ -196,3 +197,8 @@ public buildMapUrl(addressString :string|undefined):string
 ```
 
 Ensure you call the `renderMap` function inside the [updateView](../reference/control/updateview.md) function to ensure the control is refreshed every time the view is updated. 
+
+### Related topics
+
+[PowerApps Component Framework API Reference](../index.md)<br/>
+[PowerApps Component Framework Manifest Schema Reference](../manifest-schema-reference/index.md)

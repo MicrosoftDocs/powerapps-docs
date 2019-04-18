@@ -56,7 +56,7 @@ import {IInputs, IOutputs} from "./generated/ManifestTypes";
 		 * @param context The entire property bag available to control via Context Object; It contains values as set up by the customizer mapped to property names defined in the manifest, as well as utility functions.
 		 * @param notifyOutputChanged A callback method to alert the framework that the control has new outputs ready to be retrieved asynchronously.
 		 * @param state A piece of data that persists in one session for a single user. Can be set at any point in a controls life cycle by calling 'setControlState' in the Mode interface.
-		 * @param container If a control is marked control-type='starndard', it will receive an empty div element within which it can render its content.
+		 * @param container If control is marked control-type='standard', it receives an empty div element within which it can render its content.
 		 */
         public init(context: ComponentFramework.Context<IInputs>, notifyOutputChanged: () => void, state: ComponentFramework.Dictionary, container:HTMLDivElement)
         {
@@ -133,7 +133,7 @@ import {IInputs, IOutputs} from "./generated/ManifestTypes";
 
 		/** 
  		 * Called when the control is to be removed from the DOM tree. Controls should use this call for cleanup.
-		 * i.e. cancelling any pending remote calls, removing listeners, etc.
+		 * i.e. canceling any pending remote calls, removing listeners, etc.
 		 */
         public destroy()
         {
@@ -153,7 +153,7 @@ import {IInputs, IOutputs} from "./generated/ManifestTypes";
 ```
 
 > [!NOTE]
-> Composite fields are not yet supported by PowerApps Component Framework, so you will not be able to bind this control to the out of the box latitude and longitude address fields. You will need to bind the custom control to different floating-point field.
+> PowerApps Component Framework does not yet support composite fields, so you will not be able to bind this control to the out of the box latitude and longitude address fields. You need to bind the custom control to a different floating-point field.
 
 This sample control renders an `IFRAME` which displays `Bing Maps URL`. The control is bound to two floating point fields on the form, which are passed as parameters to the control and injected into the `IFRAME URL` to update the Bing Map to the latitude and longitude of the provided inputs.  
 
@@ -166,9 +166,9 @@ This change informs the PowerApps Component Framework that these bound fields ne
 <property name="longitudeValue" display-name-key="Bing_Maps_Longitude_Value" description-key="longitude" of-type="FP" usage="bound" required="true" />  
 ```
 
-Additional bound properties may be required or not. This will be enforced during control configuration when the control is being bound to the form. This can be configured by the `required` attribute of the property node in the control Manifest. Set the value to false if you don't want to require the control property be bound to a field. 
+Additional bound properties may be required or not. This will be enforced during the control configuration when the control is being bound to the form. This can be configured by setting the `required` attribute of the property node in the control manifest. Set the value to false if you don't want to require the control property be bound to a field. 
  
-`ControlFramework.d.ts` needs to be updated to add two fields to IInputs interface. This is the format the PCF will pass the field values in. Adding these values to the IInputs interface allows your TypeScript file to reference the values and compile successfully.  
+`ControlFramework.d.ts` needs to be updated to add two fields to `IInputs` interface. This is the format the PCF passes the field values. Adding these values to the `IInputs` interface allows your TypeScript file to reference the values and compile successfully.  
 
 ```TypeScript
     export interface IInputs 
@@ -177,10 +177,9 @@ Additional bound properties may be required or not. This will be enforced during
     }  
  ```
 
-The initial rendering generates an `IFRAME` element and appends it to the controls container. This `IFRAME` is used to display the Bing Map. The URL of the `IFRAME` is set to a `Bing Map URL` and includes the bound fields (latitudeValue and longitudeValue) in the URL to center the map at the provided location. 
+The initial rendering generates an `IFRAME` element and appends it to the controls container. This `IFRAME` is used to display the **Bing Map**. The url of the `IFRAME` is set to a `Bing Map URL` and includes the bound fields (latitudeValue and longitudeValue) in the url to center the map at the provided location. 
 
-The [updateView](../reference/control/updateview.md) method is invoked whenever one of these fields are updated on the form. This method updates the URL of the Bing Map IFRAME to use the new latitude and longitude values passed to the control. 
-To view this control in run time, bind the control to a field on the form like any other custom control.
+The [updateView](../reference/control/updateview.md) method is invoked whenever one of these fields are updated on the form. This method updates the url of the **Bing Map** IFRAME to use the new latitude and longitude values passed to the control. To view this control in run time, bind the control to a field on the form like any other custom control.
 
 ### Related topics
 

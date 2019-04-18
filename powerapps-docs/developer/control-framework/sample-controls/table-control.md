@@ -3,7 +3,7 @@ title: " Table Control| Microsoft Docs"
 description: "Implementing a table control" 
 ms.custom: ""
 manager: kvivek
-ms.date: 03/01/2019
+ms.date: 04/25/2019
 ms.service: "powerapps"
 ms.topic: "article"
 ms.author: "nabuthuk" 
@@ -11,9 +11,7 @@ ms.author: "nabuthuk"
 
 # Implementing Table control
 
-This sample control renders a table with two columns. The left column shows the name of the API method or property being showcased, and the right column shows the value returned by the API.
-
-You can open this control on different type of devices or modify your language or user settings to see the values adjust correctly in the table.
+This sample control renders a table with two columns. The left column shows the name of the API method or property, and the right column shows the value returned by the API. You can open this control on the different type of devices or modify your language or user settings to see the values adjust correctly in the table.
 
 > [!div class="mx-imgBorder"]
 > ![Table Control](../media/table-control.png "Table Control")
@@ -81,7 +79,7 @@ export class TSTableControl implements ComponentFramework.StandardControl<IInput
 		 * @param context The entire property bag available to control via Context Object; It contains values as set up by the customizer mapped to property names defined in the manifest, as well as utility functions.
 		 * @param notifyOutputChanged A callback method to alert the framework that the control has new outputs ready to be retrieved asynchronously.
 		 * @param state A piece of data that persists in one session for a single user. Can be set at any point in a controls life cycle by calling 'setControlState' in the Mode interface.
-		 * @param container If a control is marked control-type='starndard', it will receive an empty div element within which it can render its content.
+		 * @param container If control is marked control-type='standard', it receives an empty div element within which it can render its content.
 		 */
 		public init(context: ComponentFramework.Context<IInputs>, notifyOutputChanged: () => void, state: ComponentFramework.Dictionary, container:HTMLDivElement)
 		{
@@ -389,7 +387,7 @@ export class TSTableControl implements ComponentFramework.StandardControl<IInput
 
 		/** 
  		 * Called when the control is to be removed from the DOM tree. Controls should use this call for cleanup.
-		 * i.e. cancelling any pending remote calls, removing listeners, etc.
+		 * i.e. canceling any pending remote calls, removing listeners, etc.
 		 */
 		public destroy()
 		{
@@ -470,13 +468,15 @@ export class TSTableControl implements ComponentFramework.StandardControl<IInput
 
 This sample provides examples on how to use methods from the `IClient, IUserSettings, IUtility, IFormatting interfaces`.
 
-This control also showcases two utility functions, `setFullScreen` and `lookupObjects`. These functions are invoked by clicking the button rendered as part of the custom control. The `setFullScreen` button will toggle the control in and out of full screen mode. The `lookupObjects` button will open a lookup dialog, and then inject the selected record as text into div in the control.
+This control also showcases two utility functions, `setFullScreen` and `lookupObjects`. These functions are invoked by clicking the button rendered as part of the custom control. The `setFullScreen` button toggles the control in and out of full screen mode. The `lookupObjects` button opens a lookup dialog, and then inject the selected record as text into div.
 
-In this sample, we render an HTML button and attach a JavaScript onClick event handler named `onLookupObjectsButtonClick` to the button. On click of this button, we invoke `context.utils.lookupObjects()` method and pass as a parameter an array of entity names. 
+In this sample, we render an HTML button and attach a JavaScript `onClick` event handler `onLookupObjectsButtonClick` to the button. On click of this button, we invoke `context.utils.lookupObjects()` method and pass as a parameter an array of entity names. 
 
-This method returns a JavaScript Promise object, representing the eventual completion or failure of the call to the lookup dialog.
-If the promise is resolved successfully, the lookup object the user selected is passed as a parameter into the callback method and can be referenced as such data.id, data.name, data.entityType.
+This method returns a JavaScript Promise object, representing the completion or failure of the call to the lookup dialog. If the promise is resolved successfully, the lookup object which the user selected is passed as a parameter into the callback method and can be referenced as data.id, data.name, data.entityType.
 
-The callback method injects this information as HTML into a div rendered on the custom control to showcase the selected results to the user.  
-If the promise is rejected, the error callback method is invoked where your control can handle the error scenario accordingly.
+The callback method injects this information as HTML into a div rendered on the custom control to showcase the selected results to the user. If the promise is rejected, the error callback method is invoked where your control can handle the error scenario accordingly.
 
+### Related topics
+
+[PowerApps Component Framework API Reference](../index.md)<br/>
+[PowerApps Component Framework Manifest Schema Reference](../manifest-schema-reference/index.md)

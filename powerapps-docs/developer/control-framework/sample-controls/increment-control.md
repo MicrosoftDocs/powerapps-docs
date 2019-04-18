@@ -10,11 +10,9 @@ ms.author: "nabuthuk"
 ---
 # Implementing increment control
 
-This sample control shows how to bind data with PowerApps Component Framework, and error handling.
+This sample control shows how to bind data with PowerApps Component Framework and error handling. This control renders as a textbox with an `Increment` button in the runtime. The text box shows the current value and the `Increment` button is clickable. Whenever you click on the button, the value within the textbox is increased by 1. The increment value can be changed to any number you wish.
 
-This control renders as a textbox with a `Increment` button in runtime. The text box shows the current value and the `Increment` button is clickable. Whenever you click on the button, the value within the textbox will be increased by 1. The increment value can be changed to any number you wish.
-
-To implement this control, first you need to define the [Manifest](../manifest-schema-reference/manifest.md)file and them implement the custom logic in TypeScript.
+To implement this control, the first thing you need to define the [Manifest](../manifest-schema-reference/manifest.md)file, and then implement the custom logic in TypeScript.
 
 > [!div class="mx-imgBorder"]
 > ![Increment Control](../media/increment-control.png "Increment Control")
@@ -50,7 +48,7 @@ import {IInputs, IOutputs} from "./generated/ManifestTypes";
 		// Value of the field is stored and used inside the control 
 		private _value: number;
 
-		// PCF framework delegate which will be assigned to this object which would be called whenever any update happens. 
+		// PCF framework delegate which will be assigned to this object which would be called whenever an update happens. 
 		private _notifyOutputChanged: () => void;
 
 		// label element created as part of this control
@@ -77,7 +75,7 @@ import {IInputs, IOutputs} from "./generated/ManifestTypes";
 		 * @param context The entire property bag available to control via Context Object; It contains values as set up by the customizer mapped to property names defined in the manifest, as well as utility functions.
 		 * @param notifyOutputChanged A callback method to alert the framework that the control has new outputs ready to be retrieved asynchronously.
 		 * @param state A piece of data that persists in one session for a single user. Can be set at any point in a controls life cycle by calling 'setControlState' in the Mode interface.
-		 * @param container If a control is marked control-type='starndard', it will receive an empty div element within which it can render its content.
+		 * @param container If control is marked control-type='standard', it receives an empty div element within which it can render its content.
 		 */
 		public init(context: ComponentFramework.Context<IInputs>, notifyOutputChanged: () => void, state: ComponentFramework.Dictionary, container:HTMLDivElement)
 		{
@@ -130,7 +128,7 @@ import {IInputs, IOutputs} from "./generated/ManifestTypes";
 		 */
 		public updateView(context: ComponentFramework.Context<IInputs>): void
 		{
-			// This method would rerender the control with the updated values after we call NotifyOutputChanged
+			// This method would render the control with the updated values after we call NotifyOutputChanged
 			//set the value of the field control to the raw value from the configured field
 			this._value = context.parameters.value.raw;
 			this.label.value = this._value != null ? this._value.toString(): "";
@@ -160,7 +158,7 @@ import {IInputs, IOutputs} from "./generated/ManifestTypes";
 
 		/** 
  		 * Called when the control is to be removed from the DOM tree. Controls should use this call for cleanup.
-		 * i.e. cancelling any pending remote calls, removing listeners, etc.
+		 * i.e. canceling any pending remote calls, removing listeners, etc.
 		 */
 		public destroy(): void
 		{
@@ -258,10 +256,14 @@ import {IInputs, IOutputs} from "./generated/ManifestTypes";
 </root>
 ```
 
-When you click on the button, the value in the text box will be increased by 1. The updated value will flow to PowerApps Component Framework through `notifyOutputChanged`.
+When you click on the button, the value in the text box is increased by 1. The updated value will flow to PowerApps Component Framework through `notifyOutputChanged` method.
 
 > [!NOTE]
-> You can change the increment value when you  are configuring the control to the field on the form.
+> You can change the increment value when you are configuring the control to the field on the form.
 
-Edit the value in the text box, if it is a valid integer, then it will update the value to PowerApps Component Framework. You can continuously click the `Increment` button and update it .If it’s an invalid integer, error message will pop out. 
+Edit the value in the text box, and if it is a valid integer, then it updates the value to PowerApps Component Framework. You can continuously click the `Increment` button and update it. If it’s an invalid integer, an error message pops out.
 
+### Related topics
+
+[PowerApps Component Framework API Reference](../index.md)<br/>
+[PowerApps Component Framework Manifest Schema Reference](../manifest-schema-reference/index.md)

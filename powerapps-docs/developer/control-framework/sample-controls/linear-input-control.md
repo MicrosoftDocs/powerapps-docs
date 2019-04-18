@@ -8,11 +8,12 @@ ms.service: "powerapps"
 ms.topic: "article"
 ms.author: "nabuthuk" 
 ---
+
 # Implementing linear input control
 
 This sample control changes the user experience of interacting with numeric types on the form. Instead of keying in the numbers, the linear input control provides a linear slider using which the value of the attribute can be set on the form.  
 
-To implement this control, first you need to define the [Manifest](../manifest-schema-reference/manifest.md)file and them implement the custom logic in TypeScript
+To implement this control, first you need to define the [Manifest](../manifest-schema-reference/manifest.md)file, and them implement the custom logic in TypeScript
 
 > [!div class="mx-imgBorder"]
 > ![Linear Input Control](../media/linear-input-control.png "Linear Input Control")
@@ -47,7 +48,7 @@ import { IInputs, IOutputs } from "./generated/ManifestTypes";
 		// Value of the field is stored and used inside the control 
 		private _value: number;
 
-		// PCF framework delegate which will be assigned to this object which would be called whenever any update happens. 
+		// PCF framework delegate which will be assigned to this object which would be called whenever an update happens. 
 		private _notifyOutputChanged: () => void;
 
 		// label element created as part of this control
@@ -78,7 +79,7 @@ import { IInputs, IOutputs } from "./generated/ManifestTypes";
 		 * @param context The entire property bag available to control via Context Object; It contains values as set up by the customizer mapped to property names defined in the manifest, as well as utility functions.
 		 * @param notifyOutputChanged A callback method to alert the framework that the control has new outputs ready to be retrieved asynchronously.
 		 * @param state A piece of data that persists in one session for a single user. Can be set at any point in a controls life cycle by calling 'setControlState' in the Mode interface.
-		 * @param container If a control is marked control-type='starndard', it will receive an empty div element within which it can render its content.
+		 * @param container If control is marked control-type='standard', it receives an empty div element within which it can render its content.
 		 */
         public init(context: ComponentFramework.Context<IInputs>, notifyOutputChanged: () => void, state: ComponentFramework.Dictionary, container:HTMLDivElement)
         {
@@ -152,7 +153,7 @@ import { IInputs, IOutputs } from "./generated/ManifestTypes";
 
 		/** 
  		 * Called when the control is to be removed from the DOM tree. Controls should use this call for cleanup.
-		 * i.e. cancelling any pending remote calls, removing listeners, etc.
+		 * i.e. canceling any pending remote calls, removing listeners, etc.
 		 */
         public destroy()
         {
@@ -225,9 +226,9 @@ import { IInputs, IOutputs } from "./generated/ManifestTypes";
 }
 ```
 
-In this sample, a [type -group](../manifest-schema-reference/type-group.md) is defined and named it as `numbers` which includes decimal, whole, floating and currency value types into that group in the manifest. This group  is used to bind the control property.
+In this sample, a [type -group](../manifest-schema-reference/type-group.md) is defined and named it as `numbers` which includes decimal, whole, floating and currency value types into that group in the manifest. This group is used to bind the control property.
 
-An input element of type `range` with `min` and `max` value set to 1 and 1000, respectively is created. A label element is created which shows the value that is relative to the position of the slider. Attach a function `refreshData` to the eventlistener on input of the control.
+An input element of type `range` with `min` and `max` value set to 1 and 1000, respectively is created. A label element is created which shows the value that is relative to the position of the slider. Attach a function `refreshData` to the eventlistener on the input of the control.
 
 Create a local variable for saving the [context](../reference/context.md) and `notifyOutputChanged`. Assign the context and notifyOutputChanged from the parameters that are passed as part of the init function.
 
@@ -254,3 +255,8 @@ public updateView(context: ControlFramework.IPropBag<InputsOutputs.IInputBag>,):
       this.labelElement.innerHTML = context.parameters.controlValue.formatted ? context.parameters.controlValue.formatted : ""; 
     } 
  ```
+
+### Related topics
+
+[PowerApps Component Framework API Reference](../index.md)<br/>
+[PowerApps Component Framework Manifest Schema Reference](../manifest-schema-reference/index.md)
