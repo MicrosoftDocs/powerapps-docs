@@ -2,7 +2,7 @@
 title: "View solution layers | MicrosoftDocs"
 description: "Learn how you can use solution layers"
 keywords: 
-ms.date: 04/10/2019
+ms.date: 04/18/2019
 ms.service: powerapps
 ms.custom: 
 ms.topic: article
@@ -27,11 +27,11 @@ search.app:
 ---
 
 # View solution layers
-Solution layers allows you to view all component changes that occur due to solution changes over time. Within a solution layer, you can drill-down to view the specific changed and unchanged property details for a component. 
+Solution layers allow you to view all component changes that occur due to solution changes over time. Within a solution layer, you can drill-down to view specific changed and unchanged property details for a component. 
 
 Solution layers provide the following benefits: 
--	Let’s you see the order in which a solution changed a component. 
--	Let’s you view all properties of a component within a specific solution including the changes to the component. 
+-	Let you see the order in which a solution changed a component. 
+-	Let you view all properties of a component within a specific solution, including the changes to the component. 
 -	Can be used to troubleshoot dependency or solution layering issues by displaying change details for a component that was introduced by a solution change.
 
 ## View the solution layers for a component
