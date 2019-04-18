@@ -1,5 +1,5 @@
 ---
-title: "Create Many-to-many entity relationships in Common Data Service for Apps using PowerApps portal | MicrosoftDocs"
+title: "Create Many-to-many entity relationships in Common Data Service using PowerApps portal | MicrosoftDocs"
 description: "Learn how to create many-to-may relationships"
 ms.custom: ""
 ms.date: 06/11/2018
@@ -22,13 +22,13 @@ search.app:
   - D365CE
 ---
 
-# Create Many-to-many entity relationships in Common Data Service for Apps using PowerApps portal
+# Create Many-to-many entity relationships in Common Data Service using PowerApps portal
 
-The [PowerApps portal](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) provides an easy way to create and edit Many-to-many entity relationships for Common Data Service for Apps.
+The [PowerApps portal](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) provides an easy way to create and edit Many-to-many entity relationships for Common Data Service.
 
 The portal enables configuring the most common options, but certain options can only be set using solution explorer. More information: 
 - [Create N:N (many-to-many) entity relationships](create-edit-nn-relationships.md)
-- [Create N:N (many-to-many) entity relationships in Common Data Service for Apps using solution explorer](create-edit-nn-relationships-solution-explorer.md)
+- [Create N:N (many-to-many) entity relationships in Common Data Service using solution explorer](create-edit-nn-relationships-solution-explorer.md)
 
 ## View Many-to-many entity relationships
 
@@ -86,4 +86,4 @@ Deleting the Many-to-Many relationship will delete the relationship entity creat
 ### See also
 
 [Create N:N (many-to-many) entity relationships](create-edit-nn-relationships.md)<br />
-[Create N:N (many-to-many) entity relationships in Common Data Service for Apps using solution explorer](create-edit-nn-relationships-solution-explorer.md)
+[Create N:N (many-to-many) entity relationships in Common Data Service using solution explorer](create-edit-nn-relationships-solution-explorer.md)

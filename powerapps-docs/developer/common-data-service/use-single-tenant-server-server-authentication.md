@@ -1,5 +1,5 @@
 ---
-title: "Use Single-Tenant server-to-server authentication (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Use Single-Tenant server-to-server authentication (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Describes how to access D365 data from an application or service without explicit user authentication." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 2/21/2019
@@ -17,9 +17,9 @@ search.app:
 ---
 # Use Single-Tenant server-to-server authentication
 
-The single-tenant server-to-server scenario typically applies for enterprise organizations who have multiple Common Data Service (CDS) for Apps environments using Active Directory Federation Services (AD FS) for authentication. However, it can also be applied by environments when the application won't be distributed to other environments.  
+The single-tenant server-to-server scenario typically applies for enterprise organizations who have multiple Common Data Service environments using Active Directory Federation Services (AD FS) for authentication. However, it can also be applied by environments when the application won't be distributed to other environments.  
   
- An enterprise can create a web application or service to connect to any CDS for Apps environments associated with a single Azure Active Directory (AD) tenant.
+ An enterprise can create a web application or service to connect to any Common Data Service environments associated with a single Azure Active Directory (AD) tenant.
   
 ## Differences from multi-tenant scenario  
  Creating a web application or service for a single-tenant server-to-server authentication is similar to that used for a multi-tenant organization but there are some important differences.  
@@ -36,14 +36,14 @@ In the [See also](#bkmk_seealso) section at the end of this article, there are l
  To create and test a single-tenant application that uses server-to-server (S2S) authentication you will need:  
   
 - An Azure AD tenant to use when registering the provided sample application.
-- A CDS for Apps subscription that is associated with the Azure AD tenant.
+- A Common Data Service subscription that is associated with the Azure AD tenant.
 - Administrator privileges in the Azure AD tenant and D365 organization.
 
 <a name="bkmk_registration"></a>
 ## Azure application registration
 To create an application registration in Azure AD, follow these steps.
 
-1. Navigate to https://portal.office.com and sign in, or from your D365 organization web page select the application launcher in the top left corner.
+1. Navigate to https://admin.microsoft.com and sign in, or from your D365 organization web page select the application launcher in the top left corner.
 2. Choose **Admin** > **Admin centers** > **Azure Active Directory**
 3. From the left panel, choose **Azure Active Directory** > **App registrations (Preview)**
 4. Choose **+ New registration** [[image](#bkmk_app-registration-started)]

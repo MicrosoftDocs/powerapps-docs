@@ -1,5 +1,5 @@
 ---
-title: "Scalable Customization Design: Database Transactions (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Scalable Customization Design: Database Transactions (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "The second in a series of topics. This topic focuses on the impact of database transactions on scalable customization design" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 1/15/2019
@@ -19,12 +19,12 @@ search.app:
 # Scalable Customization Design: Database transactions
 
 > [!NOTE]
-> This is the second in a series of topics about scalable customization design. To start at the beginning, see [Scalable Customization Design in Common Data Service for Apps](overview.md).
+> This is the second in a series of topics about scalable customization design. To start at the beginning, see [Scalable Customization Design in Common Data Service](overview.md).
 
-One of the most fundamental concepts behind many of the challenges faced here is that of the database transaction. In Common Data Service for Apps (CDS for Apps) the database is at the heart of almost all requests to the system and the place data consistency is primarily enforced.
+One of the most fundamental concepts behind many of the challenges faced here is that of the database transaction. In Common Data Service the database is at the heart of almost all requests to the system and the place data consistency is primarily enforced.
 
-- No CDS for Apps data operations, either internal or part of code customizations, work completely in isolation.
-- All CDS for Apps data operations interact with the same database resources, either at a data level or an infrastructure level such as processor, memory, or I/O usage.
+- No Common Data Service data operations, either internal or part of code customizations, work completely in isolation.
+- All Common Data Service data operations interact with the same database resources, either at a data level or an infrastructure level such as processor, memory, or I/O usage.
 - To protect against conflicting changes, each request takes locks on resources to be viewed or changed.
 - Those locks are taken within a transaction and not released until the transaction is committed or aborted.
 
@@ -32,7 +32,7 @@ One of the most fundamental concepts behind many of the challenges faced here is
 
 A common reason that problems can occur in this area is the lack of awareness of how customizations can affect transactions.
 
-Although the details of how this is done is beyond the scope of this topic, the most simple element to consider is that as CDS for Apps interacts with data in its database. SQL Server determines the appropriate locks to be taken by transactions on that data such as:
+Although the details of how this is done is beyond the scope of this topic, the most simple element to consider is that as Common Data Service interacts with data in its database. SQL Server determines the appropriate locks to be taken by transactions on that data such as:
 - When retrieving a particular record, SQL Server takes a read lock on that record.
 - When retrieving a range of records, in some scenarios it can take a read lock on that range of records or the entire table.
 - When creating a record, it generates a write lock against that record.
@@ -53,7 +53,7 @@ Locks aren’t held at a user session level or while information is being shown 
 
 ## Blocking
 
-While the kind of blocking in the previous example can be inconvenient in and of itself, this can also lead to more serious consequences when you consider that CDS for Apps is a platform that can process hundreds of concurrent actions. While holding a lock on an individual account record may have reasonably limited implications, what happens when a resource  is more heavily contested?
+While the kind of blocking in the previous example can be inconvenient in and of itself, this can also lead to more serious consequences when you consider that Common Data Service is a platform that can process hundreds of concurrent actions. While holding a lock on an individual account record may have reasonably limited implications, what happens when a resource  is more heavily contested?
 
 For example, when each account is given a unique reference number it may lead to a single resource that is tracking the used reference numbers being blocked by every account creation process. As described in the [Auto-numbering example](auto-numbering-example.md), if a lot of accounts are generated in parallel, overlapping requests will all need to access that auto-numbering resource and will block it until they complete their action. The longer each account creation process takes, and the more concurrent requests there are, the more blocking occurs.
 
@@ -83,9 +83,9 @@ That is important to realize as debugging a problem often involves stripping the
 
 ## Transaction control
 
-While in most cases the way transactions are used can simply be left to the platform to manage, there are scenarios where the logic needed is complex enough that understanding and influence over transactions is required to achieve the desired results. CDS for Apps offers a number of different customization approaches that impact differently on the way transactions are used.
+While in most cases the way transactions are used can simply be left to the platform to manage, there are scenarios where the logic needed is complex enough that understanding and influence over transactions is required to achieve the desired results. Common Data Service offers a number of different customization approaches that impact differently on the way transactions are used.
 
-When you understand how each type of customization participates in the platform transactions, you can model complex scenarios effectively in CDS for Apps and predict their behavior.
+When you understand how each type of customization participates in the platform transactions, you can model complex scenarios effectively in Common Data Service and predict their behavior.
 
 As mentioned earlier, a transaction is only held during the lifetime of a request to the platform, it is not something that is maintained once the platform step is completed. This avoids transactions being held by an external client for long periods and blocking other platform activities.
 
@@ -230,7 +230,7 @@ When requests are made externally through web services, a pipeline is created an
 
 When multiple requests are made within a plug-in using the same execution context, it is the common execution context that maintains the transaction reference and in synchronous plug-ins ensures each request is made within the same transaction. The ability to maintain an execution context across requests is not available outside of plug-ins and therefore a transaction cannot be maintained across separate requests made externally.
 
-There are two special messages where multiple actions can be passed to the CDS for Apps platform as part of a single web service request.
+There are two special messages where multiple actions can be passed to the Common Data Service platform as part of a single web service request.
 
 |Message|Description|
 |--|--|

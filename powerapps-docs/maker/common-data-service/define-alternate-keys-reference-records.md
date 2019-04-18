@@ -1,6 +1,6 @@
 ---
-title: "Define alternate keys to reference records with Common Data Service for Apps | MicrosoftDocs"
-description: "Learn how to define alternate keys that can be used to reference records in Common Data Service for Apps"
+title: "Define alternate keys to reference records with Common Data Service | MicrosoftDocs"
+description: "Learn how to define alternate keys that can be used to reference records in Common Data Service"
 ms.custom: ""
 ms.date: 06/06/2018
 ms.reviewer: ""
@@ -25,7 +25,7 @@ search.app:
 ---
 # Define alternate keys to reference records
 
-*Alternate keys* provide an efficient and accurate way of integrating data with external systems. It’s essential in cases when an external system doesn’t store the Globally Unique Identifier (GUID) IDs that uniquely identify records in Common Data Service for Apps. 
+*Alternate keys* provide an efficient and accurate way of integrating data with external systems. It’s essential in cases when an external system doesn’t store the Globally Unique Identifier (GUID) IDs that uniquely identify records in Common Data Service. 
 
 A data integration system will use alternate keys to uniquely identify records using one or more entity field values that represent a unique combination. Each alternate key has a unique name. 
 
@@ -62,7 +62,7 @@ Information in this topic will help you choose which designer you can use.
 
 You should use the [PowerApps portal](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) to create alternate keys unless you need to address any of the following requirements:
 
-- Create an alternate key within a solution other than the Common Data Service for Apps default solution
+- Create an alternate key within a solution other than the Common Data Service default solution
 - You want to easily track the system job created that tracks the progress of creating the supporting indexes
 
 

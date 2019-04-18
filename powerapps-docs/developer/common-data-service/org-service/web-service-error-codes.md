@@ -1,5 +1,5 @@
 ---
-title: "Web service error codes (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Web service error codes (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This topic lists the error codes you might encounter when you debug your code. These error codes are also available in the Dynamics 365 SDK package" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
@@ -21,9 +21,9 @@ This topic lists the error codes you might encounter when you debug your code.
 
 <a name="BKMK_CRMErrors"></a>   
 
-## Common Data Service for Apps Errors 
+## Common Data Service Errors 
 
- The following list shows the error codes used in Common Data Service for Apps. For more information, see [Handling Exceptions in Your Code](/dynamics365/customer-engagement/developer/org-service/handle-exceptions-code).  
+ The following list shows the error codes used in Common Data Service. For more information, see [Handling Exceptions in Your Code](/dynamics365/customer-engagement/developer/org-service/handle-exceptions-code).  
 
 > [!div class="mx-tdBreakAll"]  
 > 

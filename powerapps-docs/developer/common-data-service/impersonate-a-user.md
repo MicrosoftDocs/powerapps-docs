@@ -1,5 +1,5 @@
 ---
-title: "Impersonate a user (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Impersonate a user (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to write plug-in code to act on behalf of a specific user."
 ms.custom: ""
 ms.date: 1/24/2019

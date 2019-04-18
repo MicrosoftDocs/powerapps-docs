@@ -1,13 +1,13 @@
 ---
 title: Overview of the SharePoint connection | Microsoft Docs
-description: See the available functions, responses, and examples for SharePoint
+description: See the available functions, responses, and examples for SharePoint.
 author: NickWaggoner
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
-ms.date: 07/12/2017
+ms.date: 04/03/2019
 ms.author: niwaggon
 search.audienceType:
   - maker
@@ -20,6 +20,8 @@ search.app:
 
 Connect to a SharePoint site to generate an app automatically from a custom list, or create a connection before you add data to an existing app or build an app from scratch.
 
+Depending on where your data resides, you can take either or both of these approaches:
+
 - Show data from a custom list in a SharePoint Online site or an on-premises site.
 - Show images and play video or audio files in a library (SharePoint Online only).
 
@@ -28,7 +30,7 @@ Connect to a SharePoint site to generate an app automatically from a custom list
 If you want to manage data in a custom list, PowerApps can [generate a three-screen app for you automatically](../app-from-sharepoint.md). Users can browse the list on the first screen, show details of an item in the second screen, and create or update items in the third screen.
 
 > [!NOTE]
-> If your SharePoint list contains a **Choice**, **Lookup**, or **Person or group** column, see [Show data in a gallery](connection-sharepoint-online.md#show-data-in-a-gallery) later in this topic.
+> If your SharePoint list contains a **Choice**, **Lookup**, or **Person or group** column, see [Show data in a gallery](connection-sharepoint-online.md#show-list-columns-in-a-gallery) later in this topic.
 
 ## Create a connection
 
@@ -90,7 +92,7 @@ If you want to manage data in a custom list, PowerApps can [generate a three-scr
     > [!div class="mx-imgBorder"]
     > ![Under Choose a list, select the check box for Documents or one or more lists that you want to use, and then select Connect](./media/connection-sharepoint-online/select-sp-tables.png)
 
-    Not all types of lists appear by default. PowerApps supports custom lists, not template-based lists.  If the name of the list that you want to use doesn't appear, scroll to the bottom, and then type the name of the list in the box that contains **Enter a custom list name**.
+    Not all types of lists appear by default. PowerApps supports custom lists, not template-based lists. If the name of the list that you want to use doesn't appear, scroll to the bottom, and then type the name of the list in the box that contains **Enter custom table name**.
 
     > [!div class="mx-imgBorder"]
     > ![Type the name of the list in the box that contains Enter a custom list name.](./media/connection-sharepoint-online/custom-list.png)
@@ -105,20 +107,20 @@ Apply the concepts in [Create an app from scratch](../get-started-create-from-bl
 
 If your custom list contains any of these types of columns, show that data in a **Gallery** control by using the formula bar to set the **Text** property of one or more **Label** controls in that gallery:
 
-- For a **Choice** or **Lookup** column, specify **ThisItem.[ColumnName].Value** to show data in that column.
+- For a **Choice** or **Lookup** column, specify **ThisItem.**_ColumnName_**.Value** to show data in that column.
 
     For example, specify **ThisItem.Location.Value** if you have a **Choice** column named **Location**, and specify **ThisItem.PostalCode.Value** if you have a **Lookup** column named **PostalCode**.
 
-- For a **Person or Group** column, specify **ThisItem.[ColumnName].DisplayName** to show the display name of the user or the group.
+- For a **Person or Group** column, specify **ThisItem.**_ColumnName_**.DisplayName** to show the display name of the user or the group.
 
     For example, specify **ThisItem.Manager.DisplayName** to show display names from a **Person or Group** column named **Manager**.
 
-    You can also show different information about users, such as email addresses or job titles. To display a complete list of options, specify **ThisItem.[ColumnName].** (with the trailing period).
+    You can also show different information about users, such as email addresses or job titles. To display a complete list of options, specify **ThisItem.**_ColumnName_**.** (including the trailing period).
 
     > [!NOTE]
     > For a **CreatedBy** column, specify **ThisItem.Author.DisplayName** to show the display names of users who created items in the list. For a **ModifiedBy** column, specify **ThisItem.Editor.DisplayName** to show the display names of users who changed items in the list.
 
-- For a **Managed Metadata** column, specify **ThisItem.[ColumnName].Label** to show data in that column.
+- For a **Managed Metadata** column, specify **ThisItem.**_ColumnName_**.Label** to show data in that column.
 
     For example, specify **ThisItem.Languages.Label** if you have a **Managed Metadata** column named **Languages**.
 

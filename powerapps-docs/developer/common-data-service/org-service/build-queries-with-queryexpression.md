@@ -1,5 +1,5 @@
 ---
-title: "Build queries with QueryExpression (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Build queries with QueryExpression (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Read how you can use the QueryExpression class to programmatically build a query containing data filters and search conditions that define the scope of a database search" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
@@ -17,7 +17,7 @@ search.app:
 ---
 # Build queries with QueryExpression
 
-In Common Data Service for Apps, you can use the <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> class to programmatically build a query containing data filters and search conditions that define the scope of a database search. A query expression is used for single-object searches. For example, you can create a search to return all accounts that match certain search criteria. The <xref:Microsoft.Xrm.Sdk.Query.QueryBase> class is the base class for query expressions. There are two derived classes: <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> and <xref:Microsoft.Xrm.Sdk.Query.QueryByAttribute>. The `QueryExpression` class supports complex queries. The `QueryByAttribute` class is a simple means to search for entities where attributes match specified values.  
+In Common Data Service, you can use the <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> class to programmatically build a query containing data filters and search conditions that define the scope of a database search. A query expression is used for single-object searches. For example, you can create a search to return all accounts that match certain search criteria. The <xref:Microsoft.Xrm.Sdk.Query.QueryBase> class is the base class for query expressions. There are two derived classes: <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> and <xref:Microsoft.Xrm.Sdk.Query.QueryByAttribute>. The `QueryExpression` class supports complex queries. The `QueryByAttribute` class is a simple means to search for entities where attributes match specified values.  
   
  Query expressions are used in methods that retrieve more than one record, such as the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*> method, in messages that perform an operation on a result set specified by a query expression, such as <xref:Microsoft.Crm.Sdk.Messages.BulkDeleteRequest> and when the ID for a specific record is not known.  
   
@@ -26,7 +26,7 @@ In Common Data Service for Apps, you can use the <xref:Microsoft.Xrm.Sdk.Query.Q
 > [!WARNING]
 >  Don’t retrieve all attributes in a query because of the negative effect on performance. This is particularly true if the query is used as a parameter to an update request. In an update, if all attributes are included this sets all field values, even if they are unchanged, and often triggers cascaded updates to child records.  
   
- There are two additional ways to create queries to retrieve records from CDS for Apps. FetchXML, the proprietary CDS for Apps query language, can be used to perform some queries by using XML-based queries. For more information, see [Building Queries with FetchXML](/dynamics365/customer-engagement/developer/org-service/build-queries-fetchxml). You can also use .NET Language-Integrated Query (LINQ) to write queries. More information: [Build Queries with LINQ (.NET Language-Integrated Query)](build-queries-with-linq-net-language-integrated-query.md).  
+ There are two additional ways to create queries to retrieve records from Common Data Service. FetchXML, the proprietary Common Data Service query language, can be used to perform some queries by using XML-based queries. For more information, see [Building Queries with FetchXML](/dynamics365/customer-engagement/developer/org-service/build-queries-fetchxml). You can also use .NET Language-Integrated Query (LINQ) to write queries. More information: [Build Queries with LINQ (.NET Language-Integrated Query)](build-queries-with-linq-net-language-integrated-query.md).  
   
  To save a query, you can convert it to FetchXML by using the <xref:Microsoft.Crm.Sdk.Messages.QueryExpressionToFetchXmlRequest> and save it as a saved view by using the `userquery` entity.  
   

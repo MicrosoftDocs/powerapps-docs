@@ -186,7 +186,7 @@ Familiarity with how to add and configure screens and other controls as you [cre
     ```
 
     > [!NOTE]
-    > Definitions for **\_firstDayOfMonth**, **\_firstDayInView**, and **\_lastDayOfMonth** are nearly identical to those in the [Calendar drop-down](#calendar-dropdown) section of this topic.
+    > Definitions for **\_firstDayOfMonth**, **\_firstDayInView**, and **\_lastDayOfMonth** are nearly identical to those in the [Calendar drop-down](#calendar-drop-down) section of this topic.
 
     The first three lines of the preceding code, which run when the user selects the next-month chevron, set the variables that are necessary to display the proper calendar view. The remaining code runs only if the user hasn't previously selected this month for the selected calendar.
 

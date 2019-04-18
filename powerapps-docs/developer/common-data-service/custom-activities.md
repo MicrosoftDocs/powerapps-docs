@@ -1,5 +1,5 @@
 ---
-title: "Custom activities (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Custom activities (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Custom activities support the communication needs of a business such as instant messaging (IM) and Short Message Service (SMS) in Dynamics 365" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
@@ -17,7 +17,7 @@ search.app:
 ---
 # Custom activities
 
-In Common Data Service for Apps, you can create custom activities to support the communication needs of a business such as instant messaging (IM) and Short Message Service (SMS). To create a custom activity in CDS for Apps, create a custom entity, and specify it as an activity entity using the <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.IsActivity> property.  
+In Common Data Service, you can create custom activities to support the communication needs of a business such as instant messaging (IM) and Short Message Service (SMS). To create a custom activity in Common Data Service, create a custom entity, and specify it as an activity entity using the <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.IsActivity> property.  
   
  However, unlike other custom entities, you can’t specify a primary attribute for a custom activity because, by default, each custom activity must have a primary attribute named ”Subject”.  
   
@@ -27,7 +27,7 @@ In Common Data Service for Apps, you can create custom activities to support the
   
 ## Privileges and access rights 
  
- You require the same set of CDS for Apps privileges and access rights to work with custom activities as those required to work with custom entities. For more information about custom entities, see [Customize Entity Metadata](customize-entity-metadata.md).  
+ You require the same set of Common Data Service privileges and access rights to work with custom activities as those required to work with custom entities. For more information about custom entities, see [Customize Entity Metadata](customize-entity-metadata.md).  
   
 ## Creating a custom activity  
  To create a custom activity entity, set the values of the properties listed in the following table.  

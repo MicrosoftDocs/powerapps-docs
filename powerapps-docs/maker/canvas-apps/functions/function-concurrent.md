@@ -41,7 +41,7 @@ You can use **Concurrent** only in [behavior formulas](../working-with-formulas-
 
 #### Loading data faster
 
-1. Create an app, and add four data sources from Common Data Service for Apps, SQL Server, or SharePoint. 
+1. Create an app, and add four data sources from Common Data Service, SQL Server, or SharePoint. 
 
     This example uses four tables from the [sample Adventure Works database on SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal). After you create the database, connect to it from PowerApps using the fully qualified server name (for example, srvname.database.windows.net):
 
@@ -125,7 +125,7 @@ You can use **Concurrent** only in [behavior formulas](../working-with-formulas-
 
 4. Add a [**Data table**](../controls/control-data-table.md) control, and set its **Items** property to **Results**.
 
-1. On the **Properties** tab of the right pane, select **Results** to open the **Data** pane.
+1. On the **Properties** tab of the right pane, select **Edit fields** to open the **Fields** pane.
 
 1. In the list of fields, select the check box for each field to show them all in the data table.
 

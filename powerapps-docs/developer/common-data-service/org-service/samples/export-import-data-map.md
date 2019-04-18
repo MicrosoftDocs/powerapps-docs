@@ -1,5 +1,5 @@
 ---
-title: "Sample: Export and import data map (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Sample: Export and import data map (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample shows how to create a data map and export it" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
@@ -17,7 +17,7 @@ search.app:
 ---
 # Sample: Export and import a data map
 
-This sample shows how to create an import map (data map) in Common Data Service for Apps, export it as an XML formatted data, import modified mappings, and create a new import map CDS for Apps based on the imported mappings. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/ExportImportDataMap).
+This sample shows how to create an import map (data map) in Common Data Service, export it as an XML formatted data, import modified mappings, and create a new import map Common Data Service based on the imported mappings. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/ExportImportDataMap).
 
 ## How to run this sample
 

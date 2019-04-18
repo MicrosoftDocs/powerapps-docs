@@ -1,5 +1,5 @@
 ---
-title: "Walkthrough: Update a service endpoint imported from a solution (Common Data Service for Apps) | Microsoft Docs"
+title: "Walkthrough: Update a service endpoint imported from a solution (Common Data Service) | Microsoft Docs"
 description: "The walkthrough demonstrates updating a service endpoint imported from a solution."
 keywords: ""
 ms.date: 10/31/2018

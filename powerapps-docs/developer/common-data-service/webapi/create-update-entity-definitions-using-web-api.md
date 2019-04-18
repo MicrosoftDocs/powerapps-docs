@@ -1,5 +1,5 @@
 ---
-title: "Create and update entity definitions using the Web API (Common Data Service for Apps) | Microsoft Docs"
+title: "Create and update entity definitions using the Web API (Common Data Service) | Microsoft Docs"
 description: "Learn about creating and updating entity definitions using the Web API."
 ms.custom: ""
 ms.date: 10/31/2018
@@ -799,7 +799,7 @@ As mentioned in [Update entities](create-update-entity-definitions-using-web-api
   
 ### See also
 
-[Use the Web API with Common Data Service for Apps metadata](use-web-api-metadata.md)<br />
+[Use the Web API with Common Data Service metadata](use-web-api-metadata.md)<br />
 [Query Metadata using the Web API](query-metadata-web-api.md)<br />
 [Retrieve metadata by name or MetadataId](retrieve-metadata-name-metadataid.md)<br />
 [Model entity relationships using the Web API](create-update-entity-relationships-using-web-api.md)<br />

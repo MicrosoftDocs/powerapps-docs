@@ -93,3 +93,13 @@ After the wizard finishes, check your data (for example, list of contacts) to ma
   
 2. Scroll through the contact list. Check that each person is listed and verify the contents of the fields for accuracy.
 
+## Import double-byte characters 
+
+If you are importing data that includes double-byte characters for east asian languages, make sure the file is encoded as UTF-8 BOM. Plain UTF-8 may not be enough.
+
+1. Open the CSV file using Visual Studio Code.
+2. In the bottom bar, click the label **UTF-8** (pop-up opens). 
+3. Select **Save with encoding**. 
+
+You can now pick UTF-8 BOM encoding for that file.
+

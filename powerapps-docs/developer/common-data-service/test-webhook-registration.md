@@ -1,5 +1,5 @@
 ---
-title: "Test webhook registration with request logging site (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Test webhook registration with request logging site (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "To understand the contextual data passed with a web hook it is valuable to use a request logging site to examine the data. This topic will describe how to do this." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
@@ -26,8 +26,8 @@ Before you create or configure a service to consume web hooks, you should test w
     1. Use the URL you copied in step 2 as the **Endpoint URL**. 
     1. Set a name and any authentication properties you want. Webhook Tester will not evaluate these values in the way that an actual site that will process the data should, but you can see how they will be passed through.
 1. Use the plugin registration tool to register a step using the webhook you created in step 4 as described in [Register a step for a webhook](register-web-hook.md#register-a-step-for-a-webhook). 
-    1. Make sure to use an event that you can easily perform by editing data in the CDS for Apps application, such as updating a contact entity.
-1. Use the CDS for Apps app to perform the operation to trigger the event.
+    1. Make sure to use an event that you can easily perform by editing data in the Common Data Service application, such as updating a contact entity.
+1. Use the Common Data Service app to perform the operation to trigger the event.
 1. After you trigger the event, return to the Webhook Tester page from step 2. You should see that the page has been updated to show the data passed in the request:
 
     ![An example of the request logged on the Webhook Tester web site](media/webhook-tester-example.png)

@@ -1,5 +1,5 @@
 ---
-title: "Sample: Import data using complex data map (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Sample: Import data using complex data map (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample shows how to create new records by using data import" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
@@ -28,7 +28,7 @@ This sample shows how to create new records by using data import. The sample use
 
 ## How this sample works
 
-In order to simulate the scenario described in [What this sample does](#what-this-sample-does), the sample will do the following:
+In order to simulate the scenario described above, the sample will do the following:
 
 ### Setup
 

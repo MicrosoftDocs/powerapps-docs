@@ -1,6 +1,6 @@
 ---
-title: "Enhanced quick Start(Common Data Service for Apps)| Microsoft Docs"
-description: "Create a new project in Visual Studio to build a console application that uses Common Data Service for Apps Web API"
+title: "Enhanced quick Start(Common Data Service)| Microsoft Docs"
+description: "Create a new project in Visual Studio to build a console application that uses Common Data Service Web API"
 ms.custom: ""
 ms.date: 02/02/2019
 ms.reviewer: ""
@@ -33,9 +33,9 @@ How you capture user credentials depends on the type of client you are making. F
 
 Enabling this requires three steps:
 
-1. [Add Reference to System.Configuration to the Visual Studio project](#1-add-reference-to-systemconfiguration-to-the-visual-studio-project)
-1. [Edit the application configuration file](#2-edit-the-application-configuration-file)
-1. [Add using statement to Program.cs](#3-add-using-statement-to-programcs)
+1. [Add Reference to System.Configuration to the Visual Studio project](#add-reference-to-systemconfiguration-to-the-visual-studio-project)
+1. [Edit the application configuration file](#edit-the-application-configuration-file)
+1. [Add using statement to Program.cs](#add-using-statement-to-programcs)
 
 
 ### Add Reference to System.Configuration to the Visual Studio project
@@ -74,7 +74,7 @@ Edit the `<configuration>` element to add a the `connectionStrings` node as show
 ```
 This creates a connection string that can be referenced by name, in this case `Connect`, so that you can define more than one connection if you wish.
 
-Edit the connection string `Url`, `Username` and `Password` values in the `connectionString` to match what you need to connect to your CDS environment.
+Edit the connection string `Url`, `Username` and `Password` values in the `connectionString` to match what you need to connect to your Common Data Service environment.
 
 ### Add using statement to Program.cs
 

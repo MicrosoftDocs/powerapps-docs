@@ -32,7 +32,7 @@ At this time, you can't [delegate](../delegation-overview.md) **Choices**. If th
 
 Column references must be direct to the data source. For example, if the data source is **Accounts** and the lookup is **SLA**, the column reference would be **Accounts.SLA**. The reference can't pass through a function, a variable, or a control. Furthering this example, if **Accounts** is fed to a **Gallery** control, use the formula **Gallery.Selected.SLA** to reference the SLA for the selected account. However, this reference has passed through a control, so it can't be passed to the **Columns** function - you must still use **Accounts.SLA**.
 
-At this time, you can use lookup columns only with SharePoint and Common Data Service for Apps.
+At this time, you can use lookup columns only with SharePoint and Common Data Service.
 
 ## Syntax
 **Choices**( *column-reference* )
@@ -43,56 +43,57 @@ At this time, you can use lookup columns only with SharePoint and Common Data Se
 
 #### Choices for a lookup
 
-1. [Create a database](../../../administrator/create-database.md) in Common Data Service for Apps, and select the **Include sample apps and data** box.
+1. [Create a database](../../../administrator/create-database.md) in Common Data Service, and select the **Include sample apps and data** box.
 
     Many entities, such as **Accounts**, are created.
 
     **Note**: Entity names are singular on web.powerapps.com and plural in PowerApps Studio.
 
-	![A partial list of the fields from the Account entity in Commmon Data Service for Apps, highlighting that "Primary Contact" is a lookup field](media/function-choices/entity-account.png)
+    ![A partial list of the fields from the Account entity in Commmon Data Service for Apps, highlighting that "Primary Contact" is a lookup field](media/function-choices/entity-account.png)
 
-	The **Accounts** entity has a **Primary Contact** column, which is a lookup to the **Contacts** entity.  
+    The **Accounts** entity has a **Primary Contact** column, which is a lookup to the **Contacts** entity.  
 
-	![A partial list of the fields from the Contact entity in the Commmon Data Service](media/function-choices/entity-contact.png)
+    ![A partial list of the fields from the Contact entity in the Commmon Data Service](media/function-choices/entity-contact.png)
 
-	For each account, a contact is designated as the primary contact, or the primary contact is *blank*.
+    For each account, a contact is designated as the primary contact, or the primary contact is *blank*.
 
-2. [Generate an app](../data-platform-create-app.md) from the **Accounts** entity.
+1. [Generate an app](../data-platform-create-app.md) from the **Accounts** entity.
 
-3. In the list of screens and controls near the left edge, scroll down until **EditScreen1** appears, and then select **EditForm1** just under it.
+1. In the list of screens and controls near the left edge, scroll down until **EditScreen1** appears, and then select **EditForm1** just under it.
 
-	![In the left navigation bar, select EditForm1 on EditScreen1](media/function-choices/select-editform.png)
+    ![In the left navigation bar, select EditForm1 on EditScreen1](media/function-choices/select-editform.png)
 
-4. On the **Properties** tab of the right pane, select **Accounts**.
+1. On the **Properties** tab of the right pane, select **Edit fields**.
 
-	![Select Accounts to open the Data pane](media/function-choices/open-data-pane.png)
+    ![Open the Data pane](media/function-choices/open-data-pane.png)
 
-5. In the **Data** pane, scroll down to the list of fields.
+1. In the **Fields** pane, select **Add field**.
 
-	![Select Accounts to open the Data pane](media/function-choices/field-list.png)
+1. Search for the **Primary Contact** field, select its check box, and then select **Add**.
 
-6. Find the **Primary Contact** check box, and then select it if it's cleared.
+    ![Select Accounts to open the Data pane](media/function-choices/field-list.png)
 
-7. (optional) Drag the **Primary Contact** field from the bottom to the top of the list of fields.
+    The **Primary Contact** field appears at the bottom of the form. If the field shows an error, select **Data sources** on the **View** tab, select the ellipsis (...) for the **Accounts** data source, and then select **Refresh**.
 
-8. In the card for **Primary Contact**, select the **Combo box** control.
+1. (optional) Drag the **Primary Contact** field from the bottom to the top of the list of fields.
 
-    The **Items** property of that control is set to one of two formulas based on the state of the **Use column display names** check box in advanced settings.
+1. In the card for **Primary Contact**, select the **Combo box** control.
 
-   - If the check box is selected, the property is set to this formula:<br>**Choices( Accounts.'Primary Contact' )**
-   - If the check box is cleared, the property is set to this formula:<br>**Choices( Accounts.primarycontactid )**
+    The **Items** property of that control is set to a formula that identifies the column by either its display name, as in the first example, or its logical name, as in the second example:
 
-     ![A canvas screen with a form control. The **Combo box** control within the **Primary Contact** card is selected, and the Items property with the formula Choices( Accounts.'Primary Contact' ) appears](media/function-choices/accounts-primary-contact.png)
+   - **Choices( Accounts.'Primary Contact' )**
+   - **Choices( Accounts.primarycontactid )**
 
-9. On the **Home** tab, select **New screen**, and then select **Blank**.
+     ![A canvas screen with a form control. The Combo box control within the Primary Contact card is selected, and the Items property with the formula Choices( Accounts.'Primary Contact' ) appears](media/function-choices/accounts-primary-contact.png)
 
-10. On the **Insert** tab, select **Data table**.
+1. On the **Home** tab, select **New screen**, and then select **Blank**.
 
-11. Set the **Items** property of the **Data table** control to one of these formulas:
+1. On the **Insert** tab, select **Data table**.
 
-     - If the **Use column display names** check box in advanced settings is selected, use this formula:<br>**Choices( Accounts.'Primary Contact' )**
-     - Otherwise, use this formula:<br>**Choices( Accounts.primarycontactid )**
+1. Set the **Items** property of the **Data table** control to this formula:
 
-12. Open the **Data** pane, and then select the check boxes for **firstname**, **lastname**, or any other field that you want to show.
+     **Choices( Accounts.'Primary Contact' )**
+
+1. In the middle of the **Data table** control, select the link that starts **Choose the fields...**, and then select the check boxes for the field or fields that you want to show (for example, **firstname** and **lastname**).
 
      ![A canvas screen with a data table control. The Items property is set to the formula Choices( Accounts.'Primary Contact' ), and the table shows the firstname and lastname columns for the first set of records from the Contacts entity](media/function-choices/full-accounts-pc.png)
