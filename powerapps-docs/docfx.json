@@ -62,8 +62,8 @@
         "maker/TOC.yml": "",
         "maker/dev-community-plan.md": "",
         "maker/index.md": "",
-        "maker/signup-for-powerapps.md": "",
-        "developer/control-framework/TOC.yml": ""
+        "developer/control-framework/TOC.yml": "",
+        "maker/signup-for-powerapps.md": ""
       },
       "featureFlags": {
         "**/*.md": [
