@@ -22,11 +22,19 @@ A UI element that contains one or more other controls in an app.
 
 Most apps have multiple **Screen** controls that contain **[Label](control-text-box.md)** controls, **[Button](control-button.md)** controls, and other controls that show data and support navigation. For information about how to add a screen, reorder screens, and configure navigation, review [Add a screen](../add-screen-context-variables.md).
 
-## Key properties
+## Key properties (icons and shapes)
 
 **[BackgroundImage](properties-visual.md)** – The name of an image file that appears in the background of a screen.
 
 **[Fill](properties-color-border.md)** – The background color of a control.
+
+## Key properties (icons only)
+
+**Icon** - The type of icon to display (for example, **ArrowDown** or **ShoppingCart**). 
+
+**Rotation** - The number of degrees to rotate the icon. 
+
+**Color** - The color of the icon by name or RGBA values. 
 
 ## Additional properties
 
