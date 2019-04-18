@@ -1,6 +1,7 @@
 - name: "PowerApps Component Framework"
-  href: overview.md
-  items:
+  items: 
+  - name: Overview
+    href: overview.md
   - name: "What are custom controls"
     href: custom-controls-overview.md
   - name: Create, debug and deploy custom controls using Microsoft PowerApps CLI

@@ -2,7 +2,7 @@
 title: "Limitations of PowerApps Component Framework | MicrosoftDocs"
 description: "Limitations using powerapps Component framework"
 manager: kvivek
-ms.date: 03/01/2019
+ms.date: 04/25/2019
 ms.service: "powerapps"
 ms.topic: "index-page"
 ms.assetid: 18e88d702-3349-4022-a7d8-a9adf52cd34f
@@ -35,10 +35,6 @@ This is not supported yet.
 ### Font Resource
 
 Currently font resource (.tff) is not supported in PCF.
-
-### Custom controls on header section on a form
-
-When you add a custom control in the header section of a form, the form editor stops working and sometimes prevent you from removing control.
 
 ### Related topics
 

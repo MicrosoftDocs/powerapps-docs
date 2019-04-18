@@ -18,10 +18,10 @@ ms.assetid: 41ea27ac-65b6-45a4-ae03-5f8d02dfc67b
 |Value|Description|
 |--|--|
 |`Currency`|Monetary values between -922,337,203,685,477 and 922,337,203,685,477 can be in this field. You can set a level of precision or choose to base the precision on a specific currency or a single standard precision used by the organization.|
-|`DateAndTime.DateAndTime`|Placeholder description for type.DateAndTime.DateAndTime|
-|`DateAndTime.DateOnly`|Placeholder description for type.DateAndTime.DateOnly|
+|`DateAndTime.DateAndTime`|Displays date and time.|
+|`DateAndTime.DateOnly`|Displays date only.|
 |`Decimal`|Up to 10 decimal points of precision can be used for values between -100,000,000,000 and -100,000,000,000 can be in this field. You can specify the level of precision and the maximum and minimum values.|
-|`Enum`|Placeholder description for type.Enum|
+|`Enum`|Enumerated data type.|
 |`FP`|Up to 5 decimal points of precision can be used for values between -100,000,000,000 and -100,000,000,000 can be in this field. You can specify the level of precision and the maximum and minimum values. |
 |`Multiple`|This field can contain up to 1,048,576 text characters. You can set the maximum length to be less than this. When you add this field to a form, you can specify the size of the field.|
 |`OptionSet`|This field provides a set of options. Each option has a number value and label. When added to a form, this field displays a control for users to select only one option. |

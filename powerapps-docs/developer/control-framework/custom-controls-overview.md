@@ -36,10 +36,9 @@ Manifest is the metadata file that defines a control. It is an XML document that
 - The kind of data it can be bound to, either a field or a data-set.
 - Any properties that can be configured in the application when the control is added.
 - A list of web resource files that the control needs. 
-  - One of them must be a JavaScript web resource. This JavaScript must include a function that will instantiate an object. This implements an interface that exposes methods that are required for the control to work. This is called the control implementation library.
-- The name of a JavaScript function in the control implementation library that will return an object that applies the required control interface.
+- The name of a JavaScript or TypeScript function in the control implementation library that will return an object that applies the required control interface.
 
-When someone configures a control in the application, the data in the manifest will filter out available controls so that only valid controls for the context are available for configuration. The properties defined in the manifest for a control are rendered as configuration fields so that the person configuring the control can specify values. These property values are then available to your control function at run time. More information: [Manifest file reference](manifest-schema-reference/index.md)
+When someone configures a control in the application, the data in the manifest filters out available controls so that only valid controls for the context are available for configuration. The properties defined in the manifest for a control are rendered as configuration fields so that the person configuring the control can specify values. These property values are then available to your control function at run time. More information: [Manifest file reference](manifest-schema-reference/index.md)
 
 ## Control implementation library
 
@@ -47,19 +46,19 @@ When someone configures a control in the application, the data in the manifest w
 
 ### Page load
 
-When the page loads, the application requires an object to work with. Using data from the Manifest, the code will get the object by calling
+When the page loads, the application requires an object to work with. Using data from the manifest, the code gets the object by calling
 
 ```js
 var obj =  new ["namespace on manifest"].["constructor on manifest"]();
 ```
 
-If the namespace and constructor values from the manifest were `MyNameSpace` and `LinearInputControl` respectively, the code run to instantiate the object would be this:
+If the namespace and constructor values from the manifest were `MyNameSpace` and `LinearInputControl` respectively, the code to instantiate the object would be this:
 
 ```js
 var controlObj = new MyNameSpace.LinearInputControl();
 ```
 
-When the page is ready, it will initialize the control by calling the init function. The page will call the init function with a set of parameters.
+When the page is ready, it initializes the control by calling the [init](reference/control/init.md) function with a set of parameters.
 
 ```js
 controlObj.init(context,notifyOutputChanged,state,container);
@@ -74,7 +73,7 @@ controlObj.init(context,notifyOutputChanged,state,container);
 
 ### User changes data
 
-After the page loads, your control is just displaying the data until the user interacts with the control to change the data. When this occurs, you can manage it any way you like, but you must call the function passed in as **notifyOutputChanged** parameter in the [init](reference/control/init.md) function. When you use this function, the platform will then respond by calling the [getOutputs](reference/control/getoutputs.md) method that you must implement. The [getOutputs](reference/control/getoutputs.md) methods will return any values that represent changes a user made. For a field control, this would typically be the new value for the control.
+After the page loads, your control is displaying the data until the user interacts with the control to change the data. When this occurs, you can manage it any way you like, but you must call the function passed in as **notifyOutputChanged** parameter in the [init](reference/control/init.md) function. When you use this function, the platform will then respond by calling the [getOutputs](reference/control/getoutputs.md) method that you must implement. The [getOutputs](reference/control/getoutputs.md) methods will return any values that represent changes a user made. For a field control, this would typically be the new value for the control.
 
 ### App changes data
 
@@ -87,7 +86,7 @@ You should define a [destroy](reference/control/destroy.md) method in your objec
 
 ## Resources
 
-Each custom control should have a resource file to construct its visualization. You can define a resource file in the Manifest. The resource node in the Manifest file refers to the webresources that controls require to implement its visualization. More information: [Resources](manifest-schema-reference/resources.md)
+Each custom control should have a resource file to construct its visualization. You can define a resource file in the manifest. The resource node in the manifest file refers to the webresources that controls require to implement its visualization. More information: [Resources](manifest-schema-reference/resources.md)
 
 ### Related topics
 
