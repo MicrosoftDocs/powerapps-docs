@@ -6,7 +6,7 @@ author: Mattp123
 ms.author: matp
 manager: kvivek
 ms.custom: ""
-ms.date: 05/21/2018
+ms.date: 04/19/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -86,7 +86,7 @@ Interactive experience dashboards can be a one-stop workplace for app users, suc
  For a field to appear in the global filter and be included in the data stream sort, you have to set two flags, as shown in the example below for the **IsEscalated** field of the Case entity.  
 
  > [!div class="mx-imgBorder"] 
- > ![Enable a field for global filter and sort](../model-driven-apps/media/global-filter-sort-8.png "Enable a field for global filter and sort")  
+ > ![Enable a field for global filter and sort](../model-driven-apps/media/enable-filter-sort.png "Enable a field for global filter and sort")  
   
 ### Configure global filter fields  
  For a field to appear in the global filter, you have to set the **Appears in global filter in interactive experience** flag for this field. The fields that you configure will appear in the global filter flyout window when the global filter icon is clicked on the dashboard header. In the flyout window, the service reps can select the fields on which they want to filter globally, in charts, and also in streams and tiles that are based on the filter entity. For more information about the filter entity see the “Configure multi-stream interactive dashboard” section later in this topic.  
@@ -200,12 +200,12 @@ The following procedure provides the steps to enable the security roles for the 
   
  Configure the stream for the **Items available to work on** as shown here:  
   
- ![Add a stream of my active cases.](../model-driven-apps/media/interactive-dashboards-add-stream-case.png "Add a stream of my active cases.")  
+ ![Add a stream of my active cases.](../model-driven-apps/media/add-stream-dashboard.png "Add a stream of my active cases.")  
   
  The following illustration is an example of the chart panel, left to right: doughnut chart, tag chart, and bar chart:  
  
  > [!div class="mx-imgBorder"] 
- > ![All interactive charts](../model-driven-apps/media/interactive-dashboards-add-all-charts.png "All interactive charts")  
+ > ![Fully configured dashboard](../model-driven-apps/media/example-stream-visual.png "Fully configured dashboard")  
   
  This illustration is an example of the stream panel with several streams:  
  
@@ -252,7 +252,7 @@ The following procedure provides the steps to enable the security roles for the 
 ### Configure a single-stream dashboard  
  Configuring a single-stream dashboard is similar to the multi-stream dashboard. All UI navigation steps are the same as for the multi-stream dashboard. You can choose a layout that includes tiles or the layout that doesn’t include tiles. If the tiles are included, they are always displayed on the dashboard. To configure a tile, you select the icon in the center of the tile. When the **Add Tile** window opens, fill in the required data. The following illustration is an example of the tile setup.  
   
- ![Add a tile to the single-stream dashboard](../model-driven-apps/media/interactive-dashboard-add-tile-single-stream.png "Add a tile to the single-stream dashboard")  
+ ![Add a tile to the single-stream dashboard](../model-driven-apps/media/add-tile.png "Add a tile to the single-stream dashboard")  
   
 <a name="BKMK_ConfigureColors"></a>   
 ## Configure dashboard colors  
@@ -277,13 +277,17 @@ The following procedure provides the steps to enable the security roles for the 
 In the following example, we’re changing the color for the **IsEscalated** field. Use the **Edit** button to open the **Modify List Value** dialog box:  
  
  > [!div class="mx-imgBorder"] 
- > ![Change color in the dashboard](../model-driven-apps/media/interactive-dashboards-change-color-edit-button.PNG "Change color in the dashboard")  
+ > ![Change color in the dashboard](../model-driven-apps/media/edit-color.png "Change color in the dashboard")  
   
 When the **Modify List Value** dialog box opens, choose the color as shown here:  
   
- ![Modify the dashboard color](../model-driven-apps/media/interactive-dashboards-modify-color-value.png "Modify the dashboard color")  
+ ![Modify the dashboard color](../model-driven-apps/media/modify-color.png "Modify the dashboard color")  
+
+Similarly, if you go to the **Priority** field to modify the colors of the case priority options, choose the color in the **Options** sub-area of the **General** tab, as shown below:
+
+ ![Modify the dashboard color](../model-driven-apps/media/priority-color-modify.png "Change dashboard color for case priority")  
   
-### Next steps  
+### See also  
  
 [Create or edit dashboards](create-edit-dashboards.md)
  
