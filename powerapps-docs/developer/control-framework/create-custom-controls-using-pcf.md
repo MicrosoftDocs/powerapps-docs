@@ -32,8 +32,7 @@ To use PowerApps CLI you will need the following:
    - Option 2: Install .NET Core 2.2 SDK and install Visual Studio Code
 - Install Microsoft PowerApps CLI from [here](http://download.microsoft.com/download/D/B/E/DBE69906-B4DA-471C-8960-092AB955C681/Powerapps_CLI.msi)
 
->[!IMPORTANT]
-
+> [!IMPORTANT]
 > - The Microsoft PowerApps CLI tools are a pre-release version and may be different from the commercially released version.
 > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)] 
 > - If you give feedback about the software to Microsoft, you give to Microsoft, without charge, the right to use, share and commercialize your feedback in any way and for any purpose. 
