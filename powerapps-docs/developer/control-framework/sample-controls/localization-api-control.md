@@ -12,7 +12,7 @@ ms.author: "nabuthuk"
 
 This sample showcases how localization is done for custom controls. In this sample, we use the [Increment control](increment-control.md) to localize the text that is displayed on the increment button based on the user’s selected language. 
 
-PowerApps Component Framework uses the concept of implementing String(resx) web resources that is used to manage the localized strings shown on any user interface. More information: [String(Resx) Webresources](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/resx-web-resources). 
+PowerApps component framework uses the concept of implementing String(resx) web resources that is used to manage the localized strings shown on any user interface. More information: [String(Resx) Webresources](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/resx-web-resources). 
 
 > [!div class="mx-imgBorder"]
 > ![Localization API Control](../media/localization-api-control.png "Localization API Control")
@@ -51,7 +51,7 @@ import {IInputs, IOutputs} from "./generated/ManifestTypes";
 		// Value of the field is stored and used inside the control 
 		private _value: number;
 
-		// PCF framework delegate which will be assigned to this object which would be called whenever an update happens. 
+		// PowerApps component framework framework delegate which will be assigned to this object which would be called whenever an update happens. 
 		private _notifyOutputChanged: () => void;
 
 		// label element created as part of this control
@@ -445,7 +445,7 @@ import {IInputs, IOutputs} from "./generated/ManifestTypes";
 
 To localize an existing project, all you need to do is to create additional resource(resx) files, one each for a specific language as mentioned in the string web resources and include them as part of the control’s manifest file under the [resources](../reference/resources.md) node.  
 
-PCF identifies the user’s language and returns the strings from that language-specific resource file when you try to access the string using `context.resources.getString` method.
+PowerApps component framework identifies the user’s language and returns the strings from that language-specific resource file when you try to access the string using `context.resources.getString` method.
 
 In this sample, two languages `Spanish` and `Finnish` with the language codes 3082 and 1035 respectively defined. We made a copy of the `Increment Control` sample and renamed it to `Localization API`. All the corresponding files including the files in the subfolders are renamed accordingly.
 
@@ -453,7 +453,7 @@ In the strings folder under `TS_LocalizationAPI`, two additional resx files with
 
 Ensure that the keys used for strings in all these resource files share the same name across all the languages. Now, when the control is rendered on the UI, we see in the code that we retrieve the value to be displayed on the button using `context.resources.getString("PCF_LocalizationSample_ButtonLabel")`.
 
-When this line of code is executed, the PCF automatically identifies the language of the user and picks up the value for the button label using the key provided in the corresponding language file we defined. Below is the text you see for each of the 3 languages we support for this sample control.
+When this line of code is executed, the PowerApps component framework automatically identifies the language of the user and picks up the value for the button label using the key provided in the corresponding language file we defined. Below is the text you see for each of the 3 languages we support for this sample control.
   
 |LanguageCode |Value Displayed |
 |---|---|
@@ -463,5 +463,5 @@ When this line of code is executed, the PCF automatically identifies the languag
 
 ### Related topics
 
-[PowerApps Component Framework API Reference](../index.md)<br/>
-[PowerApps Component Framework Manifest Schema Reference](../manifest-schema-reference/index.md)
+[PowerApps component framework API Reference](../index.md)<br/>
+[PowerApps component framework Manifest Schema Reference](../manifest-schema-reference/index.md)

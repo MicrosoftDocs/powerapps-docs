@@ -25,5 +25,5 @@ ms.assetid: 35d94cf8-eab3-4dee-82af-336f6b33b789
 ### Related topics
 
 [Dataset](../dataset.md)<br/>
-[PowerApps Component Framework API Reference](../reference/index.md)<br/>
-[PowerApps Component Framework Overview](../overview.md)
+[PowerApps component framework API Reference](../reference/index.md)<br/>
+[PowerApps component framework Overview](../overview.md)

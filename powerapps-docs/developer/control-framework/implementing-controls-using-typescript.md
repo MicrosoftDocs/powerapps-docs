@@ -20,7 +20,7 @@ To create a new project, follow the steps below:
 1. Open a Developer Command Prompt for VS 2017 window.
 2. Create a new folder for the project using the command `mkdir LinearControl`.
 3. `cd` into the new directory and run the command `cd LinearControl` 
-4. Create the control project using the command `pac pcf init --namespace SampleNamespace --name TSLinearInputControl --template field` 
+4. Create the control project using the command `pac PowerApps component framework init --namespace SampleNamespace --name TSLinearInputControl --template field` 
 5. Install the project build tools using the command `npm install` 
 
 ## Implementing Manifest
@@ -57,7 +57,7 @@ A custom control is defined by the information in the `ControlManifest.Input.xml
 
 ## Implementing control logic
 
-Source for the custom control is implemented in the `index.ts` file. The `index.ts` file includes scaffolding for interface methods that are required by the PowerApps Component Framework. 
+Source for the custom control is implemented in the `index.ts` file. The `index.ts` file includes scaffolding for interface methods that are required by the PowerApps component framework. 
 
 1. Open the `index.ts` file in code editor of your choice.
 2. Update the `TSLinearInputControl` class with the following
@@ -66,7 +66,7 @@ Source for the custom control is implemented in the `index.ts` file. The `index.
 export class TSLinearInputControl implements ComponentFramework.StandardControl<IInputs, IOutputs> {
 // Value of the field is stored and used inside the control 
 private _value: number;
-// PCF framework delegate which will be assigned to this object which would be called whenever any update happens. 
+// PowerApps component framework framework delegate which will be assigned to this object which would be called whenever any update happens. 
 private _notifyOutputChanged: () => void;
 // label element created as part of this control
 private labelElement: HTMLLabelElement;
@@ -239,6 +239,6 @@ The linear input control’s `init` method creates an input element and sets the
 
 ### See also
 
-[Update existing PCF controls](updating-existing-controls.md)<br/>
-[PowerApps Component Framework API Reference](../reference/index.md)<br/>
-[PowerApps Component Framework Overview](../overview.md)
+[Update existing PowerApps component framework controls](updating-existing-controls.md)<br/>
+[PowerApps component framework API Reference](../reference/index.md)<br/>
+[PowerApps component framework Overview](../overview.md)

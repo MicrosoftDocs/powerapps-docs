@@ -62,10 +62,10 @@ import {IInputs, IOutputs} from "./generated/ManifestTypes";
 		// Value of the field is stored and used inside the control 
 		private _value: string | null;
 
-		// PCF framework context, "Input Properties" containing the parameters, control metadata and interface functions.
+		// PowerApps component framework framework context, "Input Properties" containing the parameters, control metadata and interface functions.
 		private _context: ComponentFramework.Context<IInputs>;
 
-		// PCF framework delegate which will be assigned to this object which would be called whenever an update happens. 
+		// PowerApps component framework framework delegate which will be assigned to this object which would be called whenever an update happens. 
 		private _notifyOutputChanged: () => void;
 
 		// Control's container
@@ -425,5 +425,5 @@ The `device.pickFile` method opens a dialog box to select files from your comput
 
 ### Related topics
 
-[PowerApps Component Framework API Reference](../index.md)<br/>
-[PowerApps Component Framework Manifest Schema Reference](../manifest-schema-reference/index.md)
+[PowerApps component framework API Reference](../index.md)<br/>
+[PowerApps component framework Manifest Schema Reference](../manifest-schema-reference/index.md)

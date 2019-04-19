@@ -10,7 +10,7 @@ ms.author: "nabuthuk"
 ---
 # Implementing increment control
 
-This sample control shows how to bind data with PowerApps Component Framework and error handling. This control renders as a textbox with an `Increment` button in the runtime. The text box shows the current value and the `Increment` button is clickable. Whenever you click on the button, the value within the textbox is increased by 1. The increment value can be changed to any number you wish.
+This sample control shows how to bind data with PowerApps component framework and error handling. This control renders as a textbox with an `Increment` button in the runtime. The text box shows the current value and the `Increment` button is clickable. Whenever you click on the button, the value within the textbox is increased by 1. The increment value can be changed to any number you wish.
 
 To implement this control, the first thing you need to define the [Manifest](../manifest-schema-reference/manifest.md)file, and then implement the custom logic in TypeScript.
 
@@ -48,7 +48,7 @@ import {IInputs, IOutputs} from "./generated/ManifestTypes";
 		// Value of the field is stored and used inside the control 
 		private _value: number;
 
-		// PCF framework delegate which will be assigned to this object which would be called whenever an update happens. 
+		// PowerApps component framework framework delegate which will be assigned to this object which would be called whenever an update happens. 
 		private _notifyOutputChanged: () => void;
 
 		// label element created as part of this control
@@ -256,14 +256,14 @@ import {IInputs, IOutputs} from "./generated/ManifestTypes";
 </root>
 ```
 
-When you click on the button, the value in the text box is increased by 1. The updated value will flow to PowerApps Component Framework through `notifyOutputChanged` method.
+When you click on the button, the value in the text box is increased by 1. The updated value will flow to PowerApps component framework through `notifyOutputChanged` method.
 
 > [!NOTE]
 > You can change the increment value when you are configuring the control to the field on the form.
 
-Edit the value in the text box, and if it is a valid integer, then it updates the value to PowerApps Component Framework. You can continuously click the `Increment` button and update it. If it’s an invalid integer, an error message pops out.
+Edit the value in the text box, and if it is a valid integer, then it updates the value to PowerApps component framework. You can continuously click the `Increment` button and update it. If it’s an invalid integer, an error message pops out.
 
 ### Related topics
 
-[PowerApps Component Framework API Reference](../index.md)<br/>
-[PowerApps Component Framework Manifest Schema Reference](../manifest-schema-reference/index.md)
+[PowerApps component framework API Reference](../index.md)<br/>
+[PowerApps component framework Manifest Schema Reference](../manifest-schema-reference/index.md)

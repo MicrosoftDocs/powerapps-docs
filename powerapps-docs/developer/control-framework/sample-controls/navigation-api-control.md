@@ -11,7 +11,7 @@ ms.author: "nabuthuk"
 
 # Implementing Navigation API  control
 
-This sample control explores the various methods available as part of the **PowerApps Component Framework** navigation API. In this sample, you create a series of input elements of type buttons which calls into the respective methods of the navigation API that matches with the value displayed.  
+This sample control explores the various methods available as part of the **PowerApps component framework** navigation API. In this sample, you create a series of input elements of type buttons which calls into the respective methods of the navigation API that matches with the value displayed.  
 
 > [!div class="mx-imgBorder"]
 > ![Navigation API Control](../media/navigation-api-control.png "Navigation API Control")
@@ -44,7 +44,7 @@ import {IInputs, IOutputs} from "./generated/ManifestTypes";
 
     export class TSNavigationAPI implements ComponentFramework.StandardControl<IInputs, IOutputs> {
 
-		// PCF framework delegate which will be assigned to this object which would be called whenever an update happens. 
+		// PowerApps component framework framework delegate which will be assigned to this object which would be called whenever an update happens. 
         private _notifyOutputChanged: () => void;
 
 		// Reference to the div element that hold together all the HTML elements that we are creating as part of this control
@@ -265,5 +265,5 @@ This sample opens a new window and loads the microsoft.com home page on clicking
 
 ### Related topics
 
-[PowerApps Component Framework API Reference](../index.md)<br/>
-[PowerApps Component Framework Manifest Schema Reference](../manifest-schema-reference/index.md)
+[PowerApps component framework API Reference](../index.md)<br/>
+[PowerApps component framework Manifest Schema Reference](../manifest-schema-reference/index.md)

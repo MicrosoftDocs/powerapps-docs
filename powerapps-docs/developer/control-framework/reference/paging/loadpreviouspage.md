@@ -24,5 +24,5 @@ ms.assetid: 93cecfc6-bdce-421f-a410-07d95ea77c37
 ### Related topics
 
 [Paging](../paging.md)<br/>
-[PowerApps Component Framework API Reference](../reference/index.md)<br/>
-[PowerApps Component Framework Overview](../overview.md)
+[PowerApps component framework API Reference](../reference/index.md)<br/>
+[PowerApps component framework Overview](../overview.md)

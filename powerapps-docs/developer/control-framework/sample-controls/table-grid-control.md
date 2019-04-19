@@ -524,5 +524,5 @@ If the allocatedHeight is –1, that means there is no limit on height. The cont
 
 ### Related topics
 
-[PowerApps Component Framework API Reference](../index.md)<br/>
-[PowerApps Component Framework Manifest Schema Reference](../manifest-schema-reference/index.md)
+[PowerApps component framework API Reference](../index.md)<br/>
+[PowerApps component framework Manifest Schema Reference](../manifest-schema-reference/index.md)

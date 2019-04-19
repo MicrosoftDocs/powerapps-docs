@@ -30,5 +30,5 @@ ms.assetid: eb191796-37bf-46a3-b055-ee043375a42c
 ### Related topics
 
 [Popup Service](../popupservice.md)<br/>
-[PowerApps Component Framework API Reference](../reference/index.md)<br/>
-[PowerApps Component Framework Overview](../overview.md)
+[PowerApps component framework API Reference](../reference/index.md)<br/>
+[PowerApps component framework Overview](../overview.md)

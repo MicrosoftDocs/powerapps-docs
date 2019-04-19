@@ -39,6 +39,6 @@ ms.assetid: 996f10e5-8057-40ea-9680-555e4cd682ff
 
 ### Related topics
 
-[PowerApps Component Framework Manifest Schema Reference](index.md)<br/>
-[PowerApps Component Framework API Reference](../reference/index.md)<br/>
-[PowerApps Component Framework Overview](../overview.md)
+[PowerApps component framework Manifest Schema Reference](index.md)<br/>
+[PowerApps component framework API Reference](../reference/index.md)<br/>
+[PowerApps component framework Overview](../overview.md)

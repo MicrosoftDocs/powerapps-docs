@@ -1,6 +1,6 @@
 ---
-title: "Limitations of PowerApps Component Framework | MicrosoftDocs"
-description: "Limitations using powerapps Component framework"
+title: "Limitations of PowerApps component framework | MicrosoftDocs"
+description: "Limitations using PowerApps component framework"
 author: nkrb
 manager: kvivek
 ms.date: 04/25/2019
@@ -10,9 +10,9 @@ ms.assetid: 18e88d702-3349-4022-a7d8-a9adf52cd34f
 ms.author: "nabuthuk"
 ---
 
-# Limitations of PowerApps Component Framework
+# Limitations of PowerApps component framework
 
-With the release of the PowerApps Component Framework, you can now create your own custom controls to improve the user experience in Common Data Service. Even though you can create your own controls, there are some limitations that restrict developers implementing some features in the custom controls.Below are some of the limitations:
+With the release of the PowerApps component framework, you can now create your own custom controls to improve the user experience in Common Data Service. Even though you can create your own controls, there are some limitations that restrict developers implementing some features in the custom controls.Below are some of the limitations:
 
 ### Multiple controls in single manifest file
 
@@ -24,7 +24,7 @@ This is not supported yet. For now you can only call dialog boxes using the [Nav
 
 ### Support for external libraries
 
-The PowerApps Component Framework supports all the external libraries for implementing custom controls. 
+The PowerApps component framework supports all the external libraries for implementing custom controls. 
 
 > [!NOTE]
 > When you use JQuery for implementing the custom controls, at run time, it loads the platform version of the JQuery not the version you used to implement. 
@@ -35,9 +35,9 @@ This is not supported yet.
 
 ### Font Resource
 
-Currently font resource (.tff) is not supported in PCF.
+Currently font resource (.tff) is not supported in PowerApps component framework.
 
 ### Related topics
 
-[PowerApps Component Framework API Reference](../reference/index.md)<br/>
-[PowerApps Component Framework Overview](../overview.md)
+[PowerApps component framework API Reference](../reference/index.md)<br/>
+[PowerApps component framework Overview](../overview.md)

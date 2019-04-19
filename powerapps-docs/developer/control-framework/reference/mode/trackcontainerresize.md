@@ -33,5 +33,5 @@ ms.assetid: c5f482c2-dde2-460b-89a7-39e0efcc5704
 ### Related topics
 
 [Mode](../mode.md)<br/>
-[PowerApps Component Framework API Reference](../reference/index.md)<br/>
-[PowerApps Component Framework Overview](../overview.md)
+[PowerApps component framework API Reference](../reference/index.md)<br/>
+[PowerApps component framework Overview](../overview.md)

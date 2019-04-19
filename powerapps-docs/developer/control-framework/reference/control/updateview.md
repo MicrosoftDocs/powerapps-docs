@@ -38,5 +38,5 @@ Set the value of the field control to the raw value from the configured field
 ### Related topics
 
 [Control](../control.md)<br/>
-[PowerApps Component Framework API Reference](../reference/index.md)<br/>
-[PowerApps Component Framework Overview](../overview.md)
+[PowerApps component framework API Reference](../reference/index.md)<br/>
+[PowerApps component framework Overview](../overview.md)

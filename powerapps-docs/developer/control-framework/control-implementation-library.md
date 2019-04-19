@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 5d100dc3-bd82-4b45-964c-d90eaebc0735
 ---
 
-Implementing the control library is one of the key component when you are developing custom controls using the **PowerApps Component Framework**. Developers can implement control library using JavaScript or TypeScript. You need to transpile into JavaScript if you wish to implement the custom logic in TypeScript and add a reference to it in the manifest file.
+Implementing the control library is one of the key component when you are developing custom controls using the **PowerApps component framework**. Developers can implement control library using JavaScript or TypeScript. You need to transpile into JavaScript if you wish to implement the custom logic in TypeScript and add a reference to it in the manifest file.
 
 Each custom control must have one library that includes the definition of a function which will return an object that implements the methods described in the custom control interface. 
 The object can implement the following methods:
@@ -26,5 +26,5 @@ These methods control the lifecycle of the custom control.
 
 ### Related topics
 
-[PowerApps Component Framework API Reference](../reference/index.md)<br/>
-[PowerApps Component Framework Overview](../overview.md)
+[PowerApps component framework API Reference](../reference/index.md)<br/>
+[PowerApps component framework Overview](../overview.md)

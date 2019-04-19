@@ -38,5 +38,5 @@ ms.assetid: f22723f0-c606-465c-abba-0a8c46a10e32
 ### Related topics
 
 [Utility](../utility.md)<br/>
-[PowerApps Component Framework API Reference](../reference/index.md)<br/>
-[PowerApps Component Framework Overview](../overview.md)
+[PowerApps component framework API Reference](../reference/index.md)<br/>
+[PowerApps component framework Overview](../overview.md)

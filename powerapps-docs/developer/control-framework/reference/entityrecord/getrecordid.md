@@ -28,5 +28,5 @@ ms.assetid: 8d98a8ca-d4e9-405e-bd59-a1207a46020c
 ### Related topics
 
 [Entityrecord](../entityrecord.md)<br/>
-[PowerApps Component Framework API Reference](../reference/index.md)<br/>
-[PowerApps Component Framework Overview](../overview.md)
+[PowerApps component framework API Reference](../reference/index.md)<br/>
+[PowerApps component framework Overview](../overview.md)

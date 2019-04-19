@@ -153,12 +153,12 @@ import {IInputs, IOutputs} from "./generated/ManifestTypes";
 ```
 
 > [!NOTE]
-> PowerApps Component Framework does not yet support composite fields, so you will not be able to bind this control to the out of the box latitude and longitude address fields. You need to bind the custom control to a different floating-point field.
+> PowerApps component framework does not yet support composite fields, so you will not be able to bind this control to the out of the box latitude and longitude address fields. You need to bind the custom control to a different floating-point field.
 
 This sample control renders an `IFRAME` which displays `Bing Maps URL`. The control is bound to two floating point fields on the form, which are passed as parameters to the control and injected into the `IFRAME URL` to update the Bing Map to the latitude and longitude of the provided inputs.  
 
 Update the `Manifest` file to include binding to two additional fields on the form.  
-This change informs the PowerApps Component Framework that these bound fields need to be passed to the control during initialization and whenever one of the values is updated.
+This change informs the PowerApps component framework that these bound fields need to be passed to the control during initialization and whenever one of the values is updated.
   
 ```xml
 
@@ -168,7 +168,7 @@ This change informs the PowerApps Component Framework that these bound fields ne
 
 Additional bound properties may be required or not. This will be enforced during the control configuration when the control is being bound to the form. This can be configured by setting the `required` attribute of the property node in the control manifest. Set the value to false if you don't want to require the control property be bound to a field. 
  
-`ControlFramework.d.ts` needs to be updated to add two fields to `IInputs` interface. This is the format the PCF passes the field values. Adding these values to the `IInputs` interface allows your TypeScript file to reference the values and compile successfully.  
+`ControlFramework.d.ts` needs to be updated to add two fields to `IInputs` interface. This is the format the PowerApps component framework passes the field values. Adding these values to the `IInputs` interface allows your TypeScript file to reference the values and compile successfully.  
 
 ```TypeScript
     export interface IInputs 
@@ -183,6 +183,6 @@ The [updateView](../reference/control/updateview.md) method is invoked whenever 
 
 ### Related topics
 
-[PowerApps Component Framework Manifest Schema Reference](../manifest-schema-reference/index.md)<br />
-[PowerApps Component Framework API Reference](../index.md)<br />
-[PowerApps Component Framework Overview](../overview.md)
+[PowerApps component framework Manifest Schema Reference](../manifest-schema-reference/index.md)<br />
+[PowerApps component framework API Reference](../index.md)<br />
+[PowerApps component framework Overview](../overview.md)

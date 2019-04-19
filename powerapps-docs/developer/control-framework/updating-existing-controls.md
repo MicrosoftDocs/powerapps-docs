@@ -1,7 +1,7 @@
 ---
-title: Update existing custom controls using PowerApps Component Framework Tooling| Microsoft Docs
-description: Update controls using the PowerApps Component Framework Tooling
-keywords: PowerApps Component Framework, Custom Controls, Control Framework
+title: Update existing custom controls using PowerApps component framework Tooling| Microsoft Docs
+description: Update controls using the PowerApps component framework Tooling
+keywords: PowerApps component framework, Custom Controls, Control Framework
 ms.author: nabuthuk
 manager: kvivek
 ms.date: 03/01/2019
@@ -13,7 +13,7 @@ ms.assetid: d2cbf58a-9112-45c2-b823-2c07a310714c
 ---
 # Updating existing custom controls 
 
-If you are a PCF Private Preview participant and have already built a PCF control, you will need to make some minor updates to make it compatible with the new ALM-centric project structures. To use the new PCF build tools with your existing PCF custom control source, a few changes are required.
+If you are a PowerApps component framework Private Preview participant and have already built a PowerApps component framework control, you will need to make some minor updates to make it compatible with the new ALM-centric project structures. To use the new PowerApps component framework build tools with your existing PowerApps component framework custom control source, a few changes are required.
 
 ## Creating an empty project
 
@@ -83,6 +83,6 @@ To use the new typing file:
 
 ### See also
 
-[Limitations of PowerApps Component Framework](limitations.md)<br/>
-[PowerApps Component Framework API Reference](../reference/index.md)<br/>
-[PowerApps Component Framework Overview](../overview.md)
+[Limitations of PowerApps component framework](limitations.md)<br/>
+[PowerApps component framework API Reference](../reference/index.md)<br/>
+[PowerApps component framework Overview](../overview.md)

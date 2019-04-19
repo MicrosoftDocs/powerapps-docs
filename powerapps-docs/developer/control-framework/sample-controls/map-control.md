@@ -41,7 +41,7 @@ import {IInputs, IOutputs} from "./generated/ManifestTypes";
         // HTML IFrame element that will be used to render the map
         private _iFrameElement: HTMLIFrameElement;
 
-        // PCF framework delegate which will be assigned to this object which would be called whenever an update happens. 
+        // PowerApps component framework framework delegate which will be assigned to this object which would be called whenever an update happens. 
         private _notifyOutputChanged: () => void;
 
         // Reference to ComponentFramework Context object
@@ -200,5 +200,5 @@ Ensure you call the `renderMap` function inside the [updateView](../reference/co
 
 ### Related topics
 
-[PowerApps Component Framework API Reference](../index.md)<br/>
-[PowerApps Component Framework Manifest Schema Reference](../manifest-schema-reference/index.md)
+[PowerApps component framework API Reference](../index.md)<br/>
+[PowerApps component framework Manifest Schema Reference](../manifest-schema-reference/index.md)
