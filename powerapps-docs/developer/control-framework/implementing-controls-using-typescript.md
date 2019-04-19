@@ -2,7 +2,7 @@
 title: "Implementing Custom Controls using TypeScript | MicrosoftDocs"
 description: "How to implement a custom control using TypeScript"
 manager: kvivek
-ms.date: 03/01/2019
+ms.date: 04/23/2019
 ms.service: "powerapps"
 ms.topic: "index-page"
 ms.assetid: 18e88d702-3349-4022-a7d8-a9adf52cd34f
@@ -20,7 +20,7 @@ To create a new project, follow the steps below:
 1. Open a Developer Command Prompt for VS 2017 window.
 2. Create a new folder for the project using the command `mkdir LinearControl`.
 3. `cd` into the new directory and run the command `cd LinearControl` 
-4. Create the control project using the command `pac pcf init --namespace SampleNamespace --name TSLinearInputControl --template field` 
+4. Create the control project using the command `pac PowerApps component framework init --namespace SampleNamespace --name TSLinearInputControl --template field` 
 5. Install the project build tools using the command `npm install` 
 
 ## Implementing Manifest
@@ -57,7 +57,7 @@ A custom control is defined by the information in the `ControlManifest.Input.xml
 
 ## Implementing control logic
 
-Source for the custom control is implemented in the `index.ts` file. The `index.ts` file includes scaffolding for interface methods that are required by the PowerApps Component Framework. 
+Source for the custom control is implemented in the `index.ts` file. The `index.ts` file includes scaffolding for interface methods that are required by the PowerApps component framework. 
 
 1. Open the `index.ts` file in code editor of your choice.
 2. Update the `TSLinearInputControl` class with the following
@@ -126,7 +126,7 @@ export class TSLinearInputControl implements ComponentFramework.StandardControl<
     // storing the latest context from the control.
     this._value = context.parameters.sliderValue.raw;
     this._context = context;
-    this.inputElement.setAttribute("value", context.parameters.sliderValue.formatted ? context.parameters.sliderValue.formatted : "");
+    this.inputElement.setAttribute("value",context.parameters.sliderValue.formatted ? context.parameters.sliderValue.formatted : "");
     this.labelElement.innerHTML = context.parameters.sliderValue.formatted ? context.parameters.sliderValue.formatted : "";
   }
 
@@ -242,6 +242,6 @@ The linear input control’s `init` method creates an input element and sets the
 
 ### See also
 
-[Update existing PCF controls](updating-existing-controls.md)<br/>
-[PowerApps Component Framework API Reference](../reference/index.md)<br/>
-[PowerApps Component Framework Overview](../overview.md)
+[Update existing PowerApps component framework controls](updating-existing-controls.md)<br/>
+[PowerApps component framework API Reference](reference/index.md)<br/>
+[PowerApps component framework Overview](overview.md)

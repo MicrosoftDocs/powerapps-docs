@@ -1,10 +1,10 @@
 ---
 title: Control State API  | Microsoft Docs
 description: 
-keywords: PowerApps; PowerApps Component Framework
+keywords: PowerApps; PowerApps component framework
 ms.author: nabuthuk
 manager: kvivek
-ms.date: 04/25/2019
+ms.date: 04/23/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -14,7 +14,7 @@ ms.assetid: 4a77bf37-8ea0-4fe3-9fe7-2769387167c3
 
 # Overview
 
-The PowerApps Component Framework (PCF) allows you to persist state of control across multiple renderings of the control within the same session. It provides you with the ability to build controls that can maintain user state throughout the user's session as the user navigates to and from the control.  
+The PowerApps component framework allows you to persist state of control across multiple renderings of the control within the same session. It provides you with the ability to build controls that can maintain user state throughout the user's session as the user navigates to and from the control.  
 
 For example, if your custom control is a long list that the user can scroll through, you could leverage the ***SetControlState*** functionality to remember the point in the list the user is looking at when they navigated away from the form. You could then add logic on control initialization to check the stored state and render the control's list at the point where the user was previously reading.  
 
@@ -317,5 +317,5 @@ import {IInputs, IOutputs} from "./generated/ManifestTypes";
 
 ### Related topics
 
-[PowerApps Component Framework API Reference](../index.md)<br/>
-[PowerApps Component Framework Manifest Schema Reference](../manifest-schema-reference/index.md)
+[PowerApps component framework API Reference](../index.md)<br/>
+[PowerApps component framework Manifest Schema Reference](../manifest-schema-reference/index.md)

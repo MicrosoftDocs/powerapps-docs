@@ -4,7 +4,7 @@ description:
 keywords:
 ms.author: nabuthuk
 manager: kvivek
-ms.date: 03/01/2019
+ms.date: 04/23/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -32,5 +32,5 @@ ms.assetid: fd98d153-391d-41e6-ac9d-d2350a4791b9
 ### Related topics
 
 [Popup Service](../popupservice.md)<br/>
-[PowerApps Component Framework API Reference](../reference/index.md)<br/>
-[PowerApps Component Framework Overview](../overview.md)
+[PowerApps component framework API Reference](../../reference/index.md)<br/>
+[PowerApps component framework Overview](../../overview.md)

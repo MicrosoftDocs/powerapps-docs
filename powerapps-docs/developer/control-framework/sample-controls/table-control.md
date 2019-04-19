@@ -3,7 +3,7 @@ title: " Table Control| Microsoft Docs"
 description: "Implementing a table control" 
 ms.custom: ""
 manager: kvivek
-ms.date: 04/25/2019
+ms.date: 04/23/2019
 ms.service: "powerapps"
 ms.topic: "article"
 ms.author: "nabuthuk" 
@@ -478,5 +478,5 @@ The callback method injects this information as HTML into a div rendered on the 
 
 ### Related topics
 
-[PowerApps Component Framework API Reference](../index.md)<br/>
-[PowerApps Component Framework Manifest Schema Reference](../manifest-schema-reference/index.md)
+[PowerApps component framework API Reference](../index.md)<br/>
+[PowerApps component framework Manifest Schema Reference](../manifest-schema-reference/index.md)

@@ -2,7 +2,7 @@
 title: "Implementing Custom Controls using TypeScript | MicrosoftDocs"
 description: "How to implement a custom control using TypeScript"
 manager: kvivek
-ms.date: 04/20/2019
+ms.date: 04/23/2019
 ms.service: "powerapps"
 ms.author: "nabuthuk"
 ---
@@ -46,7 +46,7 @@ A custom control is defined by the information in the `Manifest.xml` manifest fi
 
 ## Implementing control logic
 
-Source for the custom control is implemented in the `index.ts` file. The `index.ts` file includes scaffolding for interface methods that are required by the PowerApps Component Framework. 
+Source for the custom control is implemented in the `index.ts` file. The `index.ts` file includes scaffolding for interface methods that are required by the PowerApps component framework. 
 
 1. Open the `index.ts` file in code editor of your choice.
 2. Update the `TSLinearInputControl` class with the following
@@ -55,7 +55,7 @@ Source for the custom control is implemented in the `index.ts` file. The `index.
 export class TSLinearInputControl implements ComponentFramework.StandardControl<IInputs, IOutputs> {
 // Value of the field is stored and used inside the control 
 private _value: number;
-// PCF framework delegate which will be assigned to this object which would be called whenever any update happens. 
+// PowerApps component framework framework delegate which will be assigned to this object which would be called whenever any update happens. 
 private _notifyOutputChanged: () => void;
 // label element created as part of this control
 private labelElement: HTMLLabelElement;
@@ -228,4 +228,4 @@ The linear input control’s `init` method creates an input element and sets the
 
 ### See also
 
-[Update existing PCF controls](updating-existing-controls.md)
+[Update existing PowerApps component framework controls](updating-existing-controls.md)

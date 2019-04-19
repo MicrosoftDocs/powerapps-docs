@@ -4,7 +4,7 @@ description:
 keywords:
 ms.author: nabuthuk
 manager: kvivek
-ms.date: 04/25/2019
+ms.date: 04/23/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 3b875f06-0fd9-49fa-bc34-939d00e17185
 ---
 
-This sample control explores the various methods available as part of the **PowerApps Component Framework** formatting API. In this sample, you create a series of input elements which calls into the respective methods of the formatting API that matches with the value displayed.
+This sample control explores the various methods available as part of the **PowerApps component framework** formatting API. In this sample, you create a series of input elements which calls into the respective methods of the formatting API that matches with the value displayed.
 
 > [!div class="mx-imgBorder"]
 > ![Formatting API Control](../media/formatting-api.png "Formatting API Control")
@@ -39,7 +39,7 @@ import {IInputs, IOutputs} from "./generated/ManifestTypes";
 
 	export class FormattingAPI implements ComponentFramework.StandardControl<IInputs, IOutputs> {
 
-		// PCF framework delegate which will be assigned to this object which would be called whenever an update happens.
+		// PowerApps component framework framework delegate which will be assigned to this object which would be called whenever an update happens.
 		private _notifyOutputChanged: () => void;
 
 		// Reference to the div element that holds together all the HTML elements that we are creating as part of this control
@@ -289,7 +289,7 @@ import {IInputs, IOutputs} from "./generated/ManifestTypes";
 
 ### Related topics
 
-[PowerApps Component Framework API Reference](../index.md)<br/>
-[PowerApps Component Framework Manifest Schema Reference](../manifest-schema-reference/index.md)
+[PowerApps component framework API Reference](../index.md)<br/>
+[PowerApps component framework Manifest Schema Reference](../manifest-schema-reference/index.md)
 
 

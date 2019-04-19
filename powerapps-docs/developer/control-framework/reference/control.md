@@ -1,7 +1,7 @@
 ---
 title: StandardControl | MicrosoftDocs
 manager: kvivek
-ms.date: 03/01/2019
+ms.date: 04/23/2019
 ms.service: "powerapps"
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -25,5 +25,5 @@ ms.author: "nabuthuk"
 
 ### Related topics
 
-[PowerApps Component Framework API Reference](../reference/index.md)<br/>
-[PowerApps Component Framework Overview](../overview.md)
+[PowerApps component framework API Reference](../reference/index.md)<br/>
+[PowerApps component framework Overview](../overview.md)

@@ -1,10 +1,10 @@
 ---
 title: Create custom controls using PowerApp Component Framework Tooling| Microsoft Docs
-description: Start creating controls using the PowerApps Component Framework Tooling
-keywords: PowerApps Component Framework, Custom Controls, Component Framework
+description: Start creating controls using the PowerApps component framework Tooling
+keywords: PowerApps component framework, Custom Controls, Component Framework
 ms.author: nabuthuk
 manager: kvivek
-ms.date: 03/01/2019
+ms.date: 04/23/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -14,9 +14,9 @@ ms.assetid: d2cbf58a-9112-45c2-b823-2c07a310714c
 
 # Create, debug and deploy controls using  Microsoft PowerApps CLI
 
-Use the PowerApps Command Line Interface (CLI) to create, debug and deploy custom PowerApps Component Framework (PCF) controls. The PowerApps CLI will enable developers to quickly create PCF controls and will in the future be expanded to include support for additional development and Application Lifecycle Management (ALM) experiences. 
+Use the PowerApps Command Line Interface (CLI) to create, debug and deploy custom PowerApps component framework controls. The PowerApps CLI will enable developers to quickly create PowerApps component framework controls and will in the future be expanded to include support for additional development and Application Lifecycle Management (ALM) experiences. 
  
-In this private preview, we are enabling developers to use the first version of PowerApps CLI to create PCF custom controls, thus your feedback will help us take this tool to the next level. 
+In this private preview, we are enabling developers to use the first version of PowerApps CLI to create PowerApps component framework custom controls, thus your feedback will help us take this tool to the next level. 
 
 ## What is Microsoft PowerApps CLI 
 
@@ -32,8 +32,7 @@ To use PowerApps CLI you will need the following:
    - Option 2: Install .NET Core 2.2 SDK and install Visual Studio Code
 - Install Microsoft PowerApps CLI from [here](http://download.microsoft.com/download/D/B/E/DBE69906-B4DA-471C-8960-092AB955C681/Powerapps_CLI.msi)
 
->[!IMPORTANT]
-
+> [!IMPORTANT]
 > - The Microsoft PowerApps CLI tools are a pre-release version and may be different from the commercially released version.
 > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)] 
 > - If you give feedback about the software to Microsoft, you give to Microsoft, without charge, the right to use, share and commercialize your feedback in any way and for any purpose. 
@@ -48,14 +47,14 @@ To use PowerApps CLI you will need the following:
 > [!NOTE]
 > Currently PowerApps CLI is supported only on Windows 10.
 
-## Creating a new PCF control
+## Creating a new PowerApps component framework control
 
 To get started, open a new Developer Command Prompt for VS 2017 after installing PowerApps CLI.
 
 1. In the Developer Command Prompt for VS 2017, create a new folder on your local hard drive for example, `C:\Users\<your name>\Documents\My_PCF_Control`.
 2. Go to the newly created folder using the command `cd <specify your new folder path>`.
 3. Run the following command to create a new control project by passing some basic parameters
- `pac pcf init --namespace <specify your namespace here> --name <put control name here> --template <control type>`
+ `pac PowerApps component framework init --namespace <specify your namespace here> --name <put control name here> --template <control type>`
  
    > [!NOTE]
    > Today we offer two types of controls **field** and **dataset**.
@@ -67,7 +66,7 @@ To get started, open a new Developer Command Prompt for VS 2017 after installing
 
 To build your control you can open the folder in Visual Studio Code and use the (Ctrl-Shift-B) command, then select your build options. Alternately, you can build your control quickly using  `npm run build` command in your Developer Command Prompt for VS 2017 window.
 
-## Debugging your PCF control
+## Debugging your PowerApps component framework control
 
 Once you are done implementing your custom control logic, run the following command to start the debugging process
 `npm start`
@@ -114,7 +113,7 @@ You can also interact with the control locally in real time and observe elements
  >    1. Install [Fiddler](https://www.telerik.com/download/fiddler)
  >    2. Follow the steps to configure [AutoResponder](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/streamline-javascript-development-fiddler-autoresponder)
 
-## Deploying your PCF controls
+## Deploying your PowerApps component framework controls
 
 Once the debugging and development is finished, you just have one step remaining - to deploy your new control.  
 
@@ -128,7 +127,7 @@ Follow the steps below to create and import a [solution](https://docs.microsoft.
    > The [publisherName](https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/reference/entities/publisher) and [cutomizationPrefix](https://docs.microsoft.com/en-us/powerapps/maker/common-data-service/change-solution-publisher-prefix) values must be unique to your environment.
  
 3. Once the new solution project is created, you need to refer to the location where the created control is located. You can add the reference by using the command
-`pac solution add-reference --path <path or relative path of your pcf project on disk>`
+`pac solution add-reference --path <path or relative path of your PowerApps component framework project on disk>`
 4. To generate a zip file from your solution project, you will need to `cd` into your solution project directory and build the project using the command `msbuild /t:restore` and `msbuild`
 
     > [!NOTE]
@@ -164,5 +163,5 @@ To uninstall the CLI tool please follow below steps:
 
 [Implementing controls in TypeScript](implementing-controls-using-typescript.md)<br/>
 [Updating existing controls into new tools format](updating-existing-controls.md)<br/>
-[PowerApps Component Framework API Reference](../reference/index.md)<br/>
-[PowerApps Component Framework Overview](../overview.md)<br/>
+[PowerApps component framework API Reference](reference/index.md)<br/>
+[PowerApps component framework Overview](overview.md)<br/>

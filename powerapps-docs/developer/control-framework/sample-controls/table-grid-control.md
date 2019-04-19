@@ -3,7 +3,7 @@ title: " Table grid Control| Microsoft Docs"
 description: "Implementing table grid control" 
 ms.custom: ""
 manager: kvivek
-ms.date: 04/25/2019
+ms.date: 04/23/2019
 ms.service: "powerapps"
 ms.topic: "article"
 ms.author: "nabuthuk" 
@@ -524,5 +524,5 @@ If the allocatedHeight is –1, that means there is no limit on height. The cont
 
 ### Related topics
 
-[PowerApps Component Framework API Reference](../index.md)<br/>
-[PowerApps Component Framework Manifest Schema Reference](../manifest-schema-reference/index.md)
+[PowerApps component framework API Reference](../index.md)<br/>
+[PowerApps component framework Manifest Schema Reference](../manifest-schema-reference/index.md)
