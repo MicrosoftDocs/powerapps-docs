@@ -24,7 +24,7 @@ When you build an app from Common Data Service, you don't need to create a conne
 
 - Before you create an app from scratch, familiarize yourself with PowerApps basics by [generating an app](data-platform-create-app.md) and then customizing that app's [gallery](customize-layout-sharepoint.md), [forms](customize-forms-sharepoint.md), and [cards](customize-card.md).
 - [Switch to an environment](working-with-environments.md) in which a database has been created with sample data. If you have an appropriate license, you can [create an environment](../../administrator/create-environment.md) to meet this need.
-- To create an app, you must be assigned to the [Environment Maker](https://docs.microsoft.com/power-platform/admin/database-security.md#predefined-security-roles) security role.
+- To create an app, you must be assigned to the [Environment Maker](https://docs.microsoft.com/power-platform/admin/database-security#predefined-security-roles) security role.
 
 ## Open a blank app
 
@@ -115,7 +115,7 @@ When you build an app from Common Data Service, you don't need to create a conne
 
     ![Refresh icon](./media/data-platform-create-app-scratch/refresh-icon.png)
 
-1. Set the **OnSelect** property of the the plus icon to this formula:
+1. Set the **OnSelect** property of the plus icon to this formula:
 
     `NewForm(EditForm1); Navigate(FormScreen, ScreenTransition.None)`
 
