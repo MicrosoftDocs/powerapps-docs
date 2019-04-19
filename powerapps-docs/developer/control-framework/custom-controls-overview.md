@@ -2,7 +2,7 @@
 title: "PowerApps component framework Overview | MicrosoftDocs"
 description: "Use the PowerApps component framework to create custom controls to provide enhanced user experience for users to view and work with data in forms, views, and dashboards."
 manager: kvivek
-ms.date: 03/01/2019
+ms.date: 04/23/2019
 ms.service: "powerapps"
 ms.topic: "article"
 ms.assetid: 135481cd-4583-4e49-8f58-02f32a9b054a

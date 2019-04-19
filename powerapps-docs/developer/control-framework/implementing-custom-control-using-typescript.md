@@ -2,7 +2,7 @@
 title: "Implementing Custom Controls using TypeScript | MicrosoftDocs"
 description: "How to implement a custom control using TypeScript"
 manager: kvivek
-ms.date: 04/20/2019
+ms.date: 04/23/2019
 ms.service: "powerapps"
 ms.author: "nabuthuk"
 ---

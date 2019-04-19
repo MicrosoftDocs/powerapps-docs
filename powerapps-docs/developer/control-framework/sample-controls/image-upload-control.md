@@ -3,7 +3,7 @@ title: " Image Upload Control| Microsoft Docs"
 description: "Implementing image upload control using typescript" 
 ms.custom: ""
 manager: kvivek
-ms.date: 03/01/2019
+ms.date: 04/23/2019
 ms.service: "powerapps"
 ms.topic: "article"
 ms.author: "nkrb" 

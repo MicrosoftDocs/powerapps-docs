@@ -3,7 +3,7 @@ title: " Increment Control| Microsoft Docs"
 description: "Implementing a increment control" 
 ms.custom: ""
 manager: kvivek
-ms.date: 03/01/2019
+ms.date: 04/23/2019
 ms.service: "powerapps"
 ms.topic: "article"
 ms.author: "nabuthuk" 

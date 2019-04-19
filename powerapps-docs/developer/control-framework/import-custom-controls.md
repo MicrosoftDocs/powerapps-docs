@@ -4,7 +4,7 @@ description: Process to import custom controls
 keywords:
 ms.author: nabuthuk
 manager: kvivek
-ms.date: 03/01/2019
+ms.date: 04/23/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.topic: "article"
@@ -43,5 +43,5 @@ To disable the telemetry collection, run the command `pac telemetry - -enabled f
 ### See also
 
 [Add Controls to entities or fields](add-custom-controls-to-a-field-or-entity.md)<br/>
-[PowerApps component framework API Reference](../reference/index.md)<br/>
-[PowerApps component framework Overview](../overview.md)
+[PowerApps component framework API Reference](reference/index.md)<br/>
+[PowerApps component framework Overview](overview.md)

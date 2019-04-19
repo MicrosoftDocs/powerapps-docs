@@ -5,7 +5,7 @@
   - name: "What are custom controls"
     href: custom-controls-overview.md
   - name: Create, debug and deploy custom controls using Microsoft PowerApps CLI
-    href: create-custom-controls-using-PowerApps component framework.md
+    href: create-custom-controls-using-pcf.md
   - name: Implementing custom controls in TypeScript
     href: implementing-controls-using-typescript.md
   - name: Updating existing PowerApps component framework controls into the new tools format

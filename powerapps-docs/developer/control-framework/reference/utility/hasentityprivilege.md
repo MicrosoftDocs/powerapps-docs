@@ -4,7 +4,7 @@ description:
 keywords:
 ms.author: nabuthuk
 manager: kvivek
-ms.date: 03/01/2019
+ms.date: 04/23/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -38,5 +38,5 @@ ms.assetid: f22723f0-c606-465c-abba-0a8c46a10e32
 ### Related topics
 
 [Utility](../utility.md)<br/>
-[PowerApps component framework API Reference](../reference/index.md)<br/>
-[PowerApps component framework Overview](../overview.md)
+[PowerApps component framework API Reference](../../reference/index.md)<br/>
+[PowerApps component framework Overview](../../overview.md)

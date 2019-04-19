@@ -3,7 +3,7 @@ title: clearSelectedRecordIds | Microsoft Docs
 description: 
 keywords:
 manager: kvivek
-ms.date: 03/01/2019
+ms.date: 04/23/2019
 ms.service: "powerapps"
 ms.reviewer: ""
 ms.service: "powerapps"
@@ -25,5 +25,5 @@ ms.assetid: 35d94cf8-eab3-4dee-82af-336f6b33b789
 ### Related topics
 
 [Dataset](../dataset.md)<br/>
-[PowerApps component framework API Reference](../reference/index.md)<br/>
-[PowerApps component framework Overview](../overview.md)
+[PowerApps component framework API Reference](../../reference/index.md)<br/>
+[PowerApps component framework Overview](../../overview.md)

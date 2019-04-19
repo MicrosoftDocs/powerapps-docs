@@ -3,7 +3,7 @@ title: " Table Control| Microsoft Docs"
 description: "Implementing a table control" 
 ms.custom: ""
 manager: kvivek
-ms.date: 04/25/2019
+ms.date: 04/23/2019
 ms.service: "powerapps"
 ms.topic: "article"
 ms.author: "nabuthuk" 

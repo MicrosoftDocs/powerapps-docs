@@ -4,7 +4,7 @@ description: "Use the PowerApps component framework to create custom controls to
 keywords: "Component Framework, custom controls, PowerApps controls"
 author: nkrb 
 manager: kvivek
-ms.date: 04/20/2019
+ms.date: 04/23/2019
 ms.service: "powerapps"
 ms.custom:
   - "dyn365-a11y"

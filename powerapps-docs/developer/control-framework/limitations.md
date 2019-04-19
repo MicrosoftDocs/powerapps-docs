@@ -3,7 +3,7 @@ title: "Limitations of PowerApps component framework | MicrosoftDocs"
 description: "Limitations using PowerApps component framework"
 author: nkrb
 manager: kvivek
-ms.date: 04/25/2019
+ms.date: 04/23/2019
 ms.service: "powerapps"
 ms.topic: "index-page"
 ms.assetid: 18e88d702-3349-4022-a7d8-a9adf52cd34f
@@ -16,7 +16,7 @@ With the release of the PowerApps component framework, you can now create your o
 
 ### Multiple controls in single manifest file
 
-It is not possible to define multiple controls in a single manifest file. There is a workaround to achieve this, but it is not recommended until Microsoft releases a generic way.
+It is not possible to define multiple controls in a single manifest file. 
 
 ### Calling Processes/Actions
 
@@ -39,5 +39,5 @@ Currently font resource (.tff) is not supported in PowerApps component framework
 
 ### Related topics
 
-[PowerApps component framework API Reference](../reference/index.md)<br/>
-[PowerApps component framework Overview](../overview.md)
+[PowerApps component framework API Reference](reference/index.md)<br/>
+[PowerApps component framework Overview](overview.md)

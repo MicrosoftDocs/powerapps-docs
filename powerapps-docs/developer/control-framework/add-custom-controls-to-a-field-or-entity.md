@@ -4,7 +4,7 @@ description: Process to import custom controls
 keywords:
 ms.author: nabuthuk
 manager: kvivek
-ms.date: 03/01/2019
+ms.date: 04/23/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -56,6 +56,17 @@ Following the steps in this procedure will change the default label and text box
   
 10. Select **Save and Close** to close the form editor.  
   
+## Add custom control to an entity
+
+To add a custom control like data-set control or simple table control to a grid or view, follow the steps below:
+
+  - Navigate to **Settings > Customizations** and click on **Customize the System**.
+  - Click on the arrow next to **Entities** tab a select the entity you want to add the custom control. 
+  - Click on the **Controls** tab and click on **Add a control**.
+  - On the Add Control page, select the control that you want, such as Simple Table control and then select **Add**.
+  - Choose the client where you want the control to appear.
+
+
 ## See the custom control in action  
 
  Open a record that includes the field with the custom control, such as the Opportunity form from the previous example, and view how the field is changed. The field is now rendered as a slider control instead of the text field.  
@@ -63,5 +74,5 @@ Following the steps in this procedure will change the default label and text box
 ### See also
 
 [Implementing controls in TypeScript](implementing-controls-using-typescript.md)<br/>
-[PowerApps component framework API Reference](../reference/index.md)<br/>
-[PowerApps component framework Overview](../overview.md)
+[PowerApps component framework API Reference](reference/index.md)<br/>
+[PowerApps component framework Overview](overview.md)

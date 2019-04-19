@@ -2,7 +2,7 @@
 title: "Implementing Custom Controls using TypeScript | MicrosoftDocs"
 description: "How to implement a custom control using TypeScript"
 manager: kvivek
-ms.date: 03/01/2019
+ms.date: 04/23/2019
 ms.service: "powerapps"
 ms.topic: "index-page"
 ms.assetid: 18e88d702-3349-4022-a7d8-a9adf52cd34f
@@ -240,5 +240,5 @@ The linear input control’s `init` method creates an input element and sets the
 ### See also
 
 [Update existing PowerApps component framework controls](updating-existing-controls.md)<br/>
-[PowerApps component framework API Reference](../reference/index.md)<br/>
-[PowerApps component framework Overview](../overview.md)
+[PowerApps component framework API Reference](reference/index.md)<br/>
+[PowerApps component framework Overview](overview.md)
