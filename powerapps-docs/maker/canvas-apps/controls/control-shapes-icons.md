@@ -20,10 +20,18 @@ Graphics for which you can configure appearance and behavior properties.
 ## Description
 These controls include arrows, geometric shapes, action icons, and symbols for which you can configure properties such as fill, size, and location. You can also configure their **[OnSelect](properties-core.md)** property so that the app responds if the user selects the control.
 
-## Key properties
+## Key properties (icons and shapes)
 **[Fill](properties-color-border.md)** – The background color of a control.
 
 **[OnSelect](properties-core.md)** – How the app responds when the user selects a control.
+
+## Key properties (icons only)
+
+**Icon** - The type of icon to display (for example, **ArrowDown** or **ShoppingCart**). 
+
+**Rotation** - The number of degrees to rotate the icon. 
+
+**Color** - The color of the icon by name or RGBA values.
 
 ## Additional properties
 **[AccessibleLabel](properties-accessibility.md)** – Label for screen readers.
