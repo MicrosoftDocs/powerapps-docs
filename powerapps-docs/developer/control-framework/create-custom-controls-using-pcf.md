@@ -30,11 +30,12 @@ To use PowerApps CLI you will need the following:
 - If you don’t already have Visual Studio 2017 or later, follow one of the options below:
    - Option 1: Install Visual Studio 2017 or later
    - Option 2: Install .NET Core 2.2 SDK and install Visual Studio Code
-- Install Microsoft CLI using the link below:
-http://download.microsoft.com/download/D/B/E/DBE69906-B4DA-471C-8960-092AB955C681/Powerapps_CLI.msi
+- Install Microsoft PowerApps CLI from [here](http://download.microsoft.com/download/D/B/E/DBE69906-B4DA-471C-8960-092AB955C681/Powerapps_CLI.msi)
 
-> [!NOTE]
-> The software is a pre-release version. It may not operate correctly. It may be different from the commercially released version. If you give feedback about the software to Microsoft, you give to Microsoft, without charge, the right to use, share and commercialize your feedback in any way and for any purpose. 
+[!IMPORTANT]
+> - The software is a pre-release version. It may not operate correctly. It may be different from the commercially released version. If you give feedback about the software to Microsoft, you give to Microsoft, without charge, the right to use, share and commercialize your feedback in any way and for any purpose. 
+> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)] 
+> - [!INCLUDE[cc_preview_features_no_MS_support](../../includes/cc-preview-features-no-ms-support.md)]
 
 > [!NOTE]
 > When you copy paste the above command, some times the space between the New-Object and System.Net.WebClient is removed. Make sure there is a space right after the New-Object.
