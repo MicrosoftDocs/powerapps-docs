@@ -39,9 +39,6 @@ To use PowerApps CLI you will need the following:
 > - Microsoft doesn't provide support for this preview feature. Microsoft Technical Support won’t be able to help you with issues or questions.
 
 > [!NOTE]
-> When you copy paste the above command, some times the space between the New-Object and System.Net.WebClient is removed. Make sure there is a space right after the New-Object.
-
-> [!NOTE]
 > To deploy your custom control, you will need Common Data Service environment with System administrator or System customizer privileges.
 
 > [!NOTE]
