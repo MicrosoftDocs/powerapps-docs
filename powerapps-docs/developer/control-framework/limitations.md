@@ -1,6 +1,7 @@
 ---
 title: "Limitations of PowerApps Component Framework | MicrosoftDocs"
 description: "Limitations using powerapps Component framework"
+author: nkrb
 manager: kvivek
 ms.date: 04/25/2019
 ms.service: "powerapps"
