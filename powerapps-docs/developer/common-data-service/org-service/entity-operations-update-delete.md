@@ -2,7 +2,7 @@
 title: "Update and Delete entities using the Organization Service (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to update and delete entities using the organization service." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 02/23/2019
+ms.date: 04/21/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.topic: "article"
@@ -402,4 +402,3 @@ More information: [Behavior of specialized update operations](../special-update-
 [Create entities using the Organization Service](entity-operations-create.md)<br />
 [Retrieve an entity using the Organization Service](entity-operations-retrieve.md)<br />
 [Associate and disassociate entities using the Organization Service](entity-operations-associate-disassociate.md)<br />
-
