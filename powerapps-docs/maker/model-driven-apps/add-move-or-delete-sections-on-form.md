@@ -81,7 +81,7 @@ To add sections to a form, use the **Layouts** pane.
     - When you select **Paste before**, the section being moved is pasted before the existing section.
     - When you select a tab, the section being moved is added in an available space so as to evenly distribute sections across the tab columns. The **Paste before** action is not applicable and therefore not available in this case.
 6. Repeat steps 2-5 above if you want to move more sections.
-7. In the command bar, select **Save** to save the form, or select **Publish** if you want the save and make your changes visible to end-users. 
+7. In the command bar, select **Save** to save the form, or select **Publish** if you want to save and make your changes visible to end-users. 
 
 ## Delete sections on a form
 1. Open the form designer to create or edit a form. 
