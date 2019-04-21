@@ -103,9 +103,9 @@ To add fields to a form, use the **Fields** pane. The **Fields** pane lets you s
 4. Repeat steps 2-3 above if you want to delete more fields.
 5. In the command bar, select **Save** to save the form, or select **Publish** if you want to save and make your changes visible to end-users. 
 
-    > [!NOTE]
-    >   -  If you delete a field by mistake, in the command bar, select **Undo** to revert the form to its previous state. 
-    >   -  You can't delete a field that is required or locked. 
+     > [!NOTE]
+     >   -  If you delete a field by mistake, in the command bar, select **Undo** to revert the form to its previous state. 
+     >   -  You can't delete a field that is required or locked. 
 
 ## See also
 [Overview of the model-driven form designer](form-designer-overview.md)  
