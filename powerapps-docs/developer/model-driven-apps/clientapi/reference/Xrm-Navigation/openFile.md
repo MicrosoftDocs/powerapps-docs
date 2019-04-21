@@ -1,7 +1,7 @@
 ---
 title: "openFile (Client API reference) in model-driven apps| MicrosoftDocs"
 ms.date: 01/25/2019
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "reference"
 ms.assetid: 6a2497fe-08ad-4953-b3ff-44c72bc25082
 author: "KumarVivek"

@@ -30,7 +30,7 @@ additional connector increases the amount of time that the app needs to start. A
 memory, and network bandwidth when the app requests data from that source. 
 
 You can quickly measure your app’s performance by turning on Developer Tools in [Microsoft Edge](https://docs.microsoft.com/microsoft-edge/devtools-guide/network) or [Google Chrome](https://developers.google.com/web/tools/chrome-devtools/network-performance/) while running the app. Your app is more likely to take longer than 15 seconds to return data if it frequently requests
-data from more than 30 data sources, such as Common Data Service for Apps, Azure SQL, SharePoint, and Excel on OneDrive.  
+data from more than 30 data sources, such as Common Data Service, Azure SQL, SharePoint, and Excel on OneDrive.  
 
 ## Limit the number of controls 
 **Don’t add more than 500 controls to the same app**. PowerApps generates an HTML DOM to render each control. The more controls you add,

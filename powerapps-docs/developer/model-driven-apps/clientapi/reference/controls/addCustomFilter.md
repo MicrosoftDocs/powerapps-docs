@@ -1,7 +1,7 @@
 ---
 title: "addCustomFilter (Client API reference) in model-driven apps| MicrosoftDocs"
 ms.date: 10/31/2018
-ms.service: "crm-online"
+ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: e359b-c4d9-48ac-a57b-367c2e6168c5

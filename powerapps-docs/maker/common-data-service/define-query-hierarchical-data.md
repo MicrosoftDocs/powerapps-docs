@@ -1,10 +1,10 @@
 ---
-title: "Define and query hierarchical data with Common Data Service for Apps | MicrosoftDocs"
+title: "Define and query hierarchical data with Common Data Service | MicrosoftDocs"
 description: "Learn how to define and query hierarchically related data"
 ms.custom: ""
 ms.date: 06/02/2018
 ms.reviewer: ""
-ms.service: "crm-online"
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -35,12 +35,12 @@ Some standard entities already have hierarchies defined. Other entities, includi
 
 ## Define hierarchical data
 
-With Common Data Service for Apps, hierarchical data structures are supported by *self-referential* one-to-many (1:N) relationships of the related records. 
+With Common Data Service, hierarchical data structures are supported by *self-referential* one-to-many (1:N) relationships of the related records. 
 
 > [!NOTE]
 > *Self-referential* means that the entity is related to itself. For example, the account entity has a lookup field to associate it with another account entity record.
 
-When a self-referential one-to-many (1:N) relationship exists, in the relationship definition the **Hierarchcial** option is available to be set to **Yes**.
+When a self-referential one-to-many (1:N) relationship exists, in the relationship definition the **Hierarchical** option is available to be set to **Yes**.
 
 ![Hierarchical setting in relationship definition](media/self-referential-relationship-car-solution-explorer.png)
 

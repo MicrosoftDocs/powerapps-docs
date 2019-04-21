@@ -1,10 +1,10 @@
 ---
-title: "Organize your team to develop solutions (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Organize your team to develop solutions (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This document lists down some strategies to use when multiple developers are working on the same solution" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "shmcarth" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -40,11 +40,11 @@ When multiple developers have to work on the same solution, you may want to crea
 <a name="BKMK_OneOrgPerDev"></a>   
 ### One organization per developer  
 
- Each developer can work on their own organization. To check their changes into CDS for Apps, they must export their solution as an unmanaged solution. The solution from each developer’s organization is then imported into a master solution. Use the master solution to export the managed solution.  
+ Each developer can work on their own organization. To check their changes into Common Data Service, they must export their solution as an unmanaged solution. The solution from each developer’s organization is then imported into a master solution. Use the master solution to export the managed solution.  
   
 <a name="BKMK_DeployingSolutionsFromDevThroughToProduction"></a>   
 ## Deploy solutions from development through test and production environments  
- In development organizations, solutions are deployed into various test and staging environments for analysis before they are deployed into a production environment. The white paper [Deploying Microsoft Dynamics CRM 2011 and CRM Online Solutions from Development through Test and Production Environments](http://go.microsoft.com/fwlink/p/?LinkId=232288) explores how to deploy real-world Dynamics 365 solutions across test and production environments in reliable and repeatable ways by using automation. The paper also highlights specific constraints that exist when you deploy and test solutions in CDS for Apps.  
+ In development organizations, solutions are deployed into various test and staging environments for analysis before they are deployed into a production environment. The white paper [Deploying Microsoft Dynamics CRM 2011 and CRM Online Solutions from Development through Test and Production Environments](http://go.microsoft.com/fwlink/p/?LinkId=232288) explores how to deploy real-world Dynamics 365 solutions across test and production environments in reliable and repeatable ways by using automation. The paper also highlights specific constraints that exist when you deploy and test solutions in Common Data Service.  
   
 ### See also  
  [Planning for Solution Development](/dynamics365/customer-engagement/developer/plan-solution-development)   

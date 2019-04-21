@@ -1,10 +1,10 @@
 ---
 title: "Define alternate keys using solution explorer | MicrosoftDocs"
-description: "Learn how to define alternate keys that can be used to reference records in Common Data Service for Apps using solution explorer"
+description: "Learn how to define alternate keys that can be used to reference records in Common Data Service using solution explorer"
 ms.custom: ""
 ms.date: 05/31/2018
 ms.reviewer: ""
-ms.service: "crm-online"
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -23,7 +23,7 @@ search.app:
 ---
 # Define alternate keys using solution explorer
 
-Solution explorer provides one way to view and create alternate keys for Common Data Service for Apps.
+Solution explorer provides one way to view and create alternate keys for Common Data Service.
 
 The [PowerApps portal](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) enables configuring the most common options, but certain options can only be set using solution explorer. <br />More information: 
 - [Define alternate keys to reference records](define-alternate-keys-reference-records.md)<br />

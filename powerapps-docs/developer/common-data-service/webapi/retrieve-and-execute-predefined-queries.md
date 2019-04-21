@@ -1,10 +1,10 @@
 ---
-title: "Retrieve and execute predefined queries (Common Data Service for Apps)| Microsoft Docs"
-description: "Common Data Service for Apps provides a way for administrators to create system views that are available to all users. Read how you can compose a predefined query and use FetchXML to create a query string to retrieve data"
+title: "Retrieve and execute predefined queries (Common Data Service)| Microsoft Docs"
+description: "Common Data Service provides a way for administrators to create system views that are available to all users. Read how you can compose a predefined query and use FetchXML to create a query string to retrieve data"
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "crm-online"
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -24,13 +24,13 @@ search.app:
 
 # Retrieve and execute predefined queries
 
-Common Data Service (CDS) for Apps provides a way for administrators to create system views that are available to all users. Individual users can save the advanced find queries for re-use in the application. Both of these represent predefined queries you can retrieve and execute using the Web API. You can also compose a query using FetchXml and use that to retrieve data.
+Common Data Service provides a way for administrators to create system views that are available to all users. Individual users can save the advanced find queries for re-use in the application. Both of these represent predefined queries you can retrieve and execute using the Web API. You can also compose a query using FetchXml and use that to retrieve data.
 
 <a name="bkmk_predefinedQueries"></a>
 
 ## Predefined queries
 
-Common Data Service for Apps allows you to define, save, and execute two types of queries as listed here.
+Common Data Service allows you to define, save, and execute two types of queries as listed here.
 
 |Query type|Description|
 |----------------|-----------------|

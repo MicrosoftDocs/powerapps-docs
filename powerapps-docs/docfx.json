@@ -36,6 +36,8 @@
     "globalMetadata": {
       "uhfHeaderId": "MSDocsHeader-MSPowerApps",
       "contributors_to_exclude": [
+        "buck1ey",
+        "bishalgoswami",
         "openpublishingbuild",
         "sudeepku",
         "v-thepet",
@@ -49,7 +51,7 @@
       "titleSuffix": "PowerApps",
       "feedback_system": "GitHub",
       "feedback_github_repo": "MicrosoftDocs/powerapps-docs",
-      "feedback_product_url": "https://powerusers.microsoft.com/t5/PowerApps-Ideas/idb-p/PowerAppsIdeas/",
+      "feedback_product_url": "https://ideas.powerapps.com",
       "search.appverid": "met150"
     },
     "fileMetadata": {
@@ -61,6 +63,16 @@
         "maker/dev-community-plan.md": "",
         "maker/index.md": "",
         "maker/signup-for-powerapps.md": ""
+      },
+      "featureFlags": {
+        "**/*.md": [
+          "show_learn_banner"
+        ]
+      },
+      "learn_banner_products": {
+        "**/*.md": [
+          "powerapps"
+        ]
       }
     },
     "template": [],

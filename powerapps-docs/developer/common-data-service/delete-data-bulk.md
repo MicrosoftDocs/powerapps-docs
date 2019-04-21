@@ -1,10 +1,10 @@
 ---
-title: "Delete data in bulk (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Delete data in bulk (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Deleting data in bulk helps maintain data quality and manage the consumption of system storage by deleting data that is no longer needed." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -17,7 +17,7 @@ search.app:
 ---
 # Delete data in bulk
 
-The *bulk deletion* feature helps you to maintain data quality and manage the consumption of system storage in Common Data Service (CDS) for Apps by deleting data that you no longer need. For example, you can delete the following data in bulk:  
+The *bulk deletion* feature helps you to maintain data quality and manage the consumption of system storage in Common Data Service by deleting data that you no longer need. For example, you can delete the following data in bulk:  
   
 - Stale data.  
   

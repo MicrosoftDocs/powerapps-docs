@@ -1,10 +1,10 @@
 ---
-title: "Solution component file reference (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Solution component file reference (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This topic describes the folder structure and file naming scheme used by the SolutionPackager tool. The tool is used to decompose (unpack) Dynamics 365 solution files into XML files that can be managed by a source code control system." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "shmcarth" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -17,7 +17,7 @@ search.app:
 ---
 # Solution component file reference (SolutionPackager)
 
-This topic describes the folder structure and file naming scheme used by the SolutionPackager tool. The tool is used to decompose (unpack) Common Data Service for Apps solution files into XML files that can be managed by a source code control system. The tool can also compile (pack) these individual XML files into a solution file that can be imported into CDS for Apps. For more information about the SolutionPackager tool, see [SolutionPackager tool](compress-extract-solution-file-solutionpackager.md).  
+This topic describes the folder structure and file naming scheme used by the SolutionPackager tool. The tool is used to decompose (unpack) Common Data Service solution files into XML files that can be managed by a source code control system. The tool can also compile (pack) these individual XML files into a solution file that can be imported into Common Data Service. For more information about the SolutionPackager tool, see [SolutionPackager tool](compress-extract-solution-file-solutionpackager.md).  
   
  The following sections describe the files that will be created for each solution component type, and which of these files are less suited to inclusion in source control. The folders indicated in the sections are all relative to the folder specified in the `/folder` parameter of the **SolutionPackager** command.  
   

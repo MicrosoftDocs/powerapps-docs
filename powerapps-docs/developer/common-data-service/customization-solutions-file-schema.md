@@ -1,10 +1,10 @@
 ---
-title: "Customization solutions file schema (Common Data Service for Apps) | Microsoft Docs"
-description: "The following is the schema definition for an solution customization file from Common Data Service for Apps."
+title: "Customization solutions file schema (Common Data Service) | Microsoft Docs"
+description: "The following is the schema definition for an solution customization file from Common Data Service."
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "crm-online"
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -28,7 +28,7 @@ search.app:
 # Customization solutions file schema
 
 
-The following is the schema definition for an import/export customization file from Common Data Service for Apps. 
+The following is the schema definition for an import/export customization file from Common Data Service. 
 
 You can find schema  in the `Schemas\9.0.0.2090\CustomizationsSolution.xsd` folder when you download the Schemas zip file.
 

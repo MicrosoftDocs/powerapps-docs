@@ -1,10 +1,10 @@
 ---
-title: "Work with Dynamics 365 event data in your Azure Event Hub solution (Common Data Service for Apps) | Microsoft Docs"
+title: "Work with Dynamics 365 event data in your Azure Event Hub solution (Common Data Service) | Microsoft Docs"
 description: "The topic describes working with event data in your Azure Event Hub solution."
 keywords: ""
 ms.date: 10/31/2018
 ms.service:
-  - "powerapps"
+  - powerapps
 ms.custom:
   - ""
 ms.topic: article
@@ -20,7 +20,7 @@ search.app:
   - D365CE
 ---
 
-# Work with Common Data Service for Apps event data in your Azure Event Hub solution
+# Work with Common Data Service event data in your Azure Event Hub solution
 
 Azure Event Hubs is a highly scalable publish-subscribe service that can ingest millions of events per second and stream them into multiple applications. The Dynamics 365-Azure interface enables your Azure Customer Engagement event data to be published to the [!INCLUDEAzure Service Bus and made available to your event hub solution subscribers. The following information describes the general  tasks that must be completed to send Azure event data to an event hub solution.  
   

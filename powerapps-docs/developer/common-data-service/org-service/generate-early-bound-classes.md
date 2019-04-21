@@ -1,10 +1,10 @@
 ---
-title: "Generate early-bound classes for the Organization service (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "CrmSvcUtil.exe is a command-line code generation tool for use with Common Data Service for Apps. This tool generates early-bound .NET Framework  classes that represent the entity data model used by CDS for Apps." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Generate early-bound classes for the Organization service (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "CrmSvcUtil.exe is a command-line code generation tool for use with Common Data Service. This tool generates early-bound .NET Framework  classes that represent the entity data model used by Common Data Service." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "brandonsimons" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -17,7 +17,7 @@ search.app:
 ---
 # Generate early-bound classes for the Organization service
 
-**CrmSvcUtil.exe** is a command-line code generation tool for use with Common Data Service for Apps. This tool generates early-bound .NET Framework  classes that represent the entity data model used by CDS for Apps. The code generation tool (CrmSvcUtil.exe) is distributed as part of the [Microsoft.CrmSdk.CoreTools](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreTools) NuGet package. 
+**CrmSvcUtil.exe** is a command-line code generation tool for use with Common Data Service. This tool generates early-bound .NET Framework  classes that represent the entity data model used by Common Data Service. The code generation tool (CrmSvcUtil.exe) is distributed as part of the [Microsoft.CrmSdk.CoreTools](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreTools) NuGet package. 
 
 > [!NOTE]
 > For information about downloading the code generation tool (CrmSvcUtil.exe), see [Download tools from NuGet](../download-tools-NuGet.md).
@@ -28,11 +28,11 @@ The **CrmSvcUtil.exe** tool creates a Microsoft Visual C# or Visual Basic .NET  
 
 ## Generate an OrganizationServiceContext class
 
-The tool can also be used to generate a class derived from the <xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceContext> class that acts as an entity container in the entity data model. This service context provides the facilities for tracking changes and managing identities, concurrency, and relationships. This class also exposes a <xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceContext.SaveChanges> method that writes inserts, updates, and deletes records in CDS for Apps. For more information, see [Use OrganizationServiceContext](organizationservicecontext.md).  
+The tool can also be used to generate a class derived from the <xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceContext> class that acts as an entity container in the entity data model. This service context provides the facilities for tracking changes and managing identities, concurrency, and relationships. This class also exposes a <xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceContext.SaveChanges> method that writes inserts, updates, and deletes records in Common Data Service. For more information, see [Use OrganizationServiceContext](organizationservicecontext.md).  
 
 ## Use generated classes
 
-The classes created by the code generation tool are designed to be built into a class library that can be referenced by projects that use CDS for Apps. After you have generated the class file using the tool, you should add the file to your Visual Studio project. You must also add references to several assemblies that the generated classes are dependent upon.  
+The classes created by the code generation tool are designed to be built into a class library that can be referenced by projects that use Common Data Service. After you have generated the class file using the tool, you should add the file to your Visual Studio project. You must also add references to several assemblies that the generated classes are dependent upon.  
 
 The following lists assemblies that must be referenced in your project when you use the generated code file.  
 
@@ -49,7 +49,7 @@ The code generation tool takes several parameters that determine the contents of
 
 Run the `CrmSvcUtil.exe` tool from the `Tools\CoreTools` folder created when you downloaded the tools using the script described in [Download tools from NuGet](../download-tools-NuGet.md). If you run the tool from another folder location, make sure that a copy of the `Microsoft.Xrm.Sdk.dll` assembly is in that same folder.  
 
-The following sample shows the format for running the tool from the command line with CDS for Apps. To use the interactive login, you can simply provide these options:
+The following sample shows the format for running the tool from the command line with Common Data Service. To use the interactive login, you can simply provide these options:
 
 ```ms-dos
 CrmSvcUtil.exe /interactivelogin ^
@@ -88,7 +88,7 @@ CrmSvcUtil.exe ^
 > [!NOTE]
 > The examples above uses the carat (`^`) character to break up the list of parameters for readability. You can compose the command parameters with arguments using notepad and then paste it into the command line.
 
-- For the `username` and `password` parameters, type the user name and password that is used to sign in to CDS for Apps. 
+- For the `username` and `password` parameters, type the user name and password that is used to sign in to Common Data Service. 
 - For the `url` parameter, you can look up the correct URL in the web application by selecting **Settings**, navigating to **Customizations**, and then choosing **Developer Resources**. The URL is shown under **Organization Service**.  
 
 To list the supported command-line parameters, use the following command.
@@ -118,8 +118,8 @@ The following table lists the code generation tool parameters and a gives a brie
 |`help`|`?`|Show usage information.|False|
 |`nologo`||Suppress the banner at runtime.|False|
 |`generateActions`||Generate request and response classes for custom actions.|False|
-|`interactivelogin`|`il`|When used, a dialog to log into the CDS for Apps service is displayed. All other connection related parameters specified on the command line are ignored.|False|  
-|`connectionstring`|`connstr`|Contains information, provided as a single string, for connecting to a CDS for Apps organization. All other connection related parameters specified on the command line are ignored. For more information see [Use connection strings in XRM tooling to connect to Common Data Service for Apps](../xrm-tooling/use-connection-strings-xrm-tooling-connect.md).|False|
+|`interactivelogin`|`il`|When used, a dialog to log into the Common Data Service service is displayed. All other connection related parameters specified on the command line are ignored.|False|  
+|`connectionstring`|`connstr`|Contains information, provided as a single string, for connecting to a Common Data Service organization. All other connection related parameters specified on the command line are ignored. For more information see [Use connection strings in XRM tooling to connect to Common Data Service](../xrm-tooling/use-connection-strings-xrm-tooling-connect.md).|False|
 
 
 <a name="bkmk_sampleconfig"></a>

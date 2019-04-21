@@ -14,8 +14,8 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Rich text editor control (experimental) in PowerApps
-An experimental  control that allows end users to format text inside a WYSIWYG editing area.  Output format is HTML.
+# Rich text editor control in PowerApps
+Allows end users to format text inside a WYSIWYG editing area.  Output format is HTML.
 
 ## Description
 The **Rich text editor** control provides the app user a WYSIWYG editing area for formatting text.  Control's input and output format is HTML.
@@ -34,20 +34,10 @@ Currently supported features include:
 
 To use the control inside a form, select the "Edit multi-line text" card, and customize it by inserting the RTE control.
 
-## Limitations
-The current version of the control is experimental due to the following temporary limitations:
-- Control has limited features for formatting text.  
-
-- The control is primarily targeted for use in browsers on large screens.  Using the control on a mobile phone can be a frustrating experience.
-
-- Known issues in the authoring  experience when using the Windows studio or Microsoft Edge browser.  Current recommendation is to use web studio in Chrome.
-
-
 ## Key properties
 **[Default](properties-core.md)** – Input property for the initial text value shown in editor.
 
 **HtmlText** – Output property for the resulting rich text in HTML format.
-
 
 
 ## Additional properties
@@ -66,3 +56,14 @@ The current version of the control is experimental due to the following temporar
 **[X](properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (or screen, if no parent container).
 
 **[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (or screen, if no parent container).
+
+
+## Accessibility guidelines
+### Screen reader support
+* **[AccessibleLabel](properties-accessibility.md)** must be present.
+
+### Keyboard support
+* **[TabIndex](properties-accessibility.md)** must be zero or greater so that keyboard users can navigate to it.
+
+> [!TIP]
+> Use **Alt+0** while the editor is focused to learn about other keyboard shortcuts.

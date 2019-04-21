@@ -4,7 +4,7 @@ description: "The topic contains sample dashboards along with the respective For
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "Kumarvivek" # GitHub ID
 ms.author: "kvivek" # MSFT alias of Microsoft employees only

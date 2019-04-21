@@ -1,10 +1,10 @@
 ---
-title: "Describe a relationship between entities with connection roles (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Describe a relationship between entities with connection roles (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Describing a relationship between entities using create connection roles and connection role categories." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -47,7 +47,7 @@ You can describe the relationship between records through the roles that you ass
   
 - Use the `ConnectionRole.Category` attribute to specify a role category. The possible values for this attribute are defined in the `connectionrole_category` global option set.  
   
-- When you create a connection role, you can specify an entity type that the role will be applied to, such as lead, account, or competitor. If you do not specify a particular entity type, then you can apply a connection role to all CDS for Apps entities. To specify the entity type, use the `ConnectionRoleObjectTypeCode.AssociatedObjectTypeCode` attribute. To link the connection role to a particular entity type, use the `ConnectionRoleObjectTypeCode.ConnectionRoleId` attribute. A connection role record can be referenced by multiple connection role object type code records. If you remove all references to the connection role record, you can apply this connection role to all CDS for Apps entities.  
+- When you create a connection role, you can specify an entity type that the role will be applied to, such as lead, account, or competitor. If you do not specify a particular entity type, then you can apply a connection role to all Common Data Service entities. To specify the entity type, use the `ConnectionRoleObjectTypeCode.AssociatedObjectTypeCode` attribute. To link the connection role to a particular entity type, use the `ConnectionRoleObjectTypeCode.ConnectionRoleId` attribute. A connection role record can be referenced by multiple connection role object type code records. If you remove all references to the connection role record, you can apply this connection role to all Common Data Service entities.  
   
   > [!TIP]
   >  To find the connection roles for an account entity, in the query, specify all roles that are linked to the account entity (Entity Type Code = 1) or to all entities (Entity Type Code = 0).  

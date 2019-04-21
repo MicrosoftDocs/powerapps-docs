@@ -1,10 +1,10 @@
 ---
-title: "Auditing Overview (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Read how the auditing capability of CDS for Apps can be used to record attribute and entity data changes over time for use in analysis and reporting purposes." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Auditing Overview (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Read how the auditing capability of Common Data Service can be used to record attribute and entity data changes over time for use in analysis and reporting purposes." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "paulliew" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -17,12 +17,12 @@ search.app:
 ---
 # Auditing overview
 
-Organizations often need to be in compliance with various regulations to ensure availability of customer interaction history, audit logs, access reports, and security incident tracking reports. Organizations may want to track changes in Common Data Service for Apps data for security and analytical purpose.  
+Organizations often need to be in compliance with various regulations to ensure availability of customer interaction history, audit logs, access reports, and security incident tracking reports. Organizations may want to track changes in Common Data Service data for security and analytical purpose.  
   
- CDS for Apps supports an auditing capability where entity and attribute data changes within an organization can be recorded over time for use in analysis and reporting purposes. Auditing is supported on all custom and most customizable entities and attributes. Auditing is not supported on metadata changes, retrieve operations, export operations, or during authentication. For information on how to configure auditing, see [Configure Entities and Attributes for Auditing](configure-entities-attributes-auditing.md).  
+ Common Data Service supports an auditing capability where entity and attribute data changes within an organization can be recorded over time for use in analysis and reporting purposes. Auditing is supported on all custom and most customizable entities and attributes. Auditing is not supported on metadata changes, retrieve operations, export operations, or during authentication. For information on how to configure auditing, see [Configure Entities and Attributes for Auditing](configure-entities-attributes-auditing.md).  
   
 ## Supported for auditing  
- The following lists auditing capabilities for CDS for Apps:  
+ The following lists auditing capabilities for Common Data Service:  
 <!-- TODO: Jim, I don't think this is online only. Please correct the tokens here. -->
   
 * Audit of customizable entities
@@ -41,7 +41,7 @@ Organizations often need to be in compliance with various regulations to ensure 
 * Auditing APIs for developers
   
 ## Not supported for auditing  
- The following lists what cannot be audited for CDS for Apps:  
+ The following lists what cannot be audited for Common Data Service:  
   
 * Audit of read operations
 * Audit of metadata changes 
@@ -70,7 +70,7 @@ Organizations often need to be in compliance with various regulations to ensure 
   
 -   Deletion of audit logs.  
   
--   When (date/time) a user accesses CDS for Apps data, for how long, and from what client.  
+-   When (date/time) a user accesses Common Data Service data, for how long, and from what client.  
   
  Enabling or disabling of field level security by setting the <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.IsSecured> attribute cannot be audited.  
   

@@ -1,10 +1,10 @@
 ---
-title: "Web API Basic Operations Sample (C#) (Common Data Service for Apps)| Microsoft Docs"
-description: "This sample demonstrates how to perform basic CRUD (Create, Retrieve, Update, and Delete) and association and dissociation operations on Common Data Service for Apps entity instances, using the Common Data Service for Apps Web API"
+title: "Web API Basic Operations Sample (C#) (Common Data Service)| Microsoft Docs"
+description: "This sample demonstrates how to perform basic CRUD (Create, Retrieve, Update, and Delete) and association and dissociation operations on Common Data Service entity instances, using the Common Data Service Web API"
 ms.custom: ""
 ms.date: 1/09/2019
 ms.reviewer: ""
-ms.service: "crm-online"
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -22,16 +22,16 @@ search.app:
 ---
 # Web API Basic Operations Sample (C#)
 
-This sample demonstrates how to perform basic CRUD (Create, Retrieve, Update, and Delete) and association and dissociation operations on Common Data Service for Apps entity instances, using the Common Data Service for Apps Web API.  
+This sample demonstrates how to perform basic CRUD (Create, Retrieve, Update, and Delete) and association and dissociation operations on Common Data Service entity instances, using the Common Data Service Web API.  
   
 > [!NOTE]
-> This sample implements the Common Data Service for Apps operations and console output detailed in [Web API Basic Operations Sample](../web-api-basic-operations-sample.md) and uses the common C# constructs described in [Web API Samples (C#)](../web-api-samples-csharp.md).  
+> This sample implements the Common Data Service operations and console output detailed in [Web API Basic Operations Sample](../web-api-basic-operations-sample.md) and uses the common C# constructs described in [Web API Samples (C#)](../web-api-samples-csharp.md).  
   
 <a name="bkmk_prerequisites"></a>
 
 ## Prerequisites
 
-Prerequisites for all Common Data Service for Apps Web API C# samples are detailed in the [Prerequisites](../web-api-samples-csharp.md#bkmk_prerequisites) section of the parent topic [Web API Samples (C#)](../web-api-samples-csharp.md).  
+Prerequisites for all Common Data Service Web API C# samples are detailed in the [Prerequisites](../web-api-samples-csharp.md#bkmk_prerequisites) section of the parent topic [Web API Samples (C#)](../web-api-samples-csharp.md).  
   
 <a name="bkmk_runSample"></a>
   
@@ -42,7 +42,7 @@ Go to [Web API Basic Operations Sample (C#)](https://github.com/Microsoft/PowerA
 |File|Purpose/Description|  
 |----------|--------------------------|  
 |SampleProgram.cs|Contains the primary source code for this sample.|  
-|App.config|The application configuration file, which contains placeholder Common Data Service for Apps server connection information. This file is shared with all the Web API samples in the repo. If you configure connection information for one sample, you can run the other samples with the same configuration.|  
+|App.config|The application configuration file, which contains placeholder Common Data Service server connection information. This file is shared with all the Web API samples in the repo. If you configure connection information for one sample, you can run the other samples with the same configuration.|  
 |SampleHelper.cs|Contains the helper code to assist perform common tasks, such as application configuration, authentication and `HTTP` response error handling.<br/>This file is shared with all the Web API samples in the repo. It contains helper methods to manage exceptions and the OAuth Token. See the Simple Web API sample for more information about the methods in this file.|  
 |SampleMethod.cs|Contains all the methods that support the source code in the sample. Functions used in SampleProgram.cs can be defined in this file. |
 |BasicOperations.sln <br />BasicOperations.csproj <br />Packages.config <br />AssemblyInfo.cs|The standard Visual Studio 2017 solution, project, NuGet package configuration, and assembly information files for this sample.|  
@@ -50,7 +50,7 @@ Go to [Web API Basic Operations Sample (C#)](https://github.com/Microsoft/PowerA
  Next, use the following procedure to run this sample.  
   
 1. Locate and double-click on the solution file, BasicOperations.sln, to load the solution into Visual Studio. Build the BasicOperations solution. This should automatically download and install all the required NuGet packages that are either missing or need to be updated.
-2. Edit the application configuration file, App.config, to specify connection information for your Common Data Service for Apps server.
+2. Edit the application configuration file, App.config, to specify connection information for your Common Data Service server.
 3. Run the BasicOperations project from within Visual Studio. All sample solutions are configured to run in debug mode by default.
 
 <a name="bkmk_codeListing"></a>
@@ -563,7 +563,7 @@ HttpResponseMessage disassocResponse2 = client.DeleteAsync(dis2Uri).Result;
   
 ### See also
 
-[Use the Common Data Service for Apps Web API](../overview.md)<br />
+[Use the Common Data Service Web API](../overview.md)<br />
 [Create an entity using the Web API](../create-entity-web-api.md)<br />
 [Update and delete entities using the Web API](../update-delete-entities-using-web-api.md)<br />
 [Retrieve an entity using the Web API](../retrieve-entity-using-web-api.md)<br />

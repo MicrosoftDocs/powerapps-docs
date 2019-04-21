@@ -2,7 +2,7 @@
 title: "xmlEncode| MicrosoftDocs"
 description: "The Client API method converts a string to an XML-encoded string."
 ms.date: 10/31/2018
-ms.service: "crm-online"
+ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 909443cd-12b5-4a73-9904-8ae623d22c81

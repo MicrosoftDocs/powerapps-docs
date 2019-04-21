@@ -1,10 +1,10 @@
 ---
-title: "Web API Conditional Operations Sample (C#) (Common Data Service for Apps)| Microsoft Docs"
-description: "This sample demonstrates how to perform conditional operations using Common Data Service for Apps Web API and C#"
+title: "Web API Conditional Operations Sample (C#) (Common Data Service)| Microsoft Docs"
+description: "This sample demonstrates how to perform conditional operations using Common Data Service Web API and C#"
 ms.custom: ""
 ms.date: 1/09/2019
 ms.reviewer: ""
-ms.service: "crm-online"
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -22,16 +22,16 @@ search.app:
 ---
 # Web API Conditional Operations Sample (C#)
 
-This sample demonstrates how to perform conditional operations using CDS for Apps Web API and C#.  
+This sample demonstrates how to perform conditional operations using Common Data Service Web API and C#.  
   
 > [!NOTE]
-> This sample implements the Common Data Service for Apps operations and console output detailed in [Web API Conditional Operations Sample](../web-api-conditional-operations-sample.md) and uses the common C# constructs described in [Web API Samples (C#)](../web-api-samples-csharp.md).  
+> This sample implements the Common Data Service operations and console output detailed in [Web API Conditional Operations Sample](../web-api-conditional-operations-sample.md) and uses the common C# constructs described in [Web API Samples (C#)](../web-api-samples-csharp.md).  
   
 <a name="bkmk_Prereqs"></a>
 
 ## Prerequisites
 
-Prerequisites for all CDS for Apps Web API C# samples are detailed in the [Prerequisites](../web-api-samples-csharp.md#bkmk_prerequisites) section of the parent topic [Web API Samples (C#)](../web-api-samples-csharp.md).  
+Prerequisites for all Common Data Service Web API C# samples are detailed in the [Prerequisites](../web-api-samples-csharp.md#bkmk_prerequisites) section of the parent topic [Web API Samples (C#)](../web-api-samples-csharp.md).  
   
 <a name="bkmk_RunSample"></a>
  
@@ -42,7 +42,7 @@ Go to [Web API Conditional Operations Sample (C#)](https://github.com/Microsoft/
 |File|Description|  
 |----------|-----------------|  
 |SampleProgram.cs|Contains the source code for this sample.|  
-|App.config|The application configuration file, which contains placeholder CDS for Apps server connection information. This file is shared with all the Web API samples in the repo. If you configure connection information for one sample, you can run the other samples with the same configuration.|  
+|App.config|The application configuration file, which contains placeholder Common Data Service server connection information. This file is shared with all the Web API samples in the repo. If you configure connection information for one sample, you can run the other samples with the same configuration.|  
 |SampleHelper.cs|Contains the helper code to assist in performing common tasks, such as configuration, authentication and `HTTP` response error handling. <br/> This file is shared with all the Web API samples in the repo. It contains helper methods to manage exceptions and the OAuth Token. See the Simple Web API sample for more information about the methods in this file.|
 |SampleMethod.cs|Contains all the methods that support the source code in the sample. Functions used in SampleProgram.cs can be defined in this file. |
 |ConditionalOperations.sln<br /> ConditionalOperations.csproj<br /> Packages.config<br /> AssemblyInfo.cs|The standard Visual Studio 2017 solution, project, NuGet package, and assembly information files for this sample.|  
@@ -51,7 +51,7 @@ Go to [Web API Conditional Operations Sample (C#)](https://github.com/Microsoft/
   
 1. Build the solution (**Build** > **Build Solution**). This should automatically download and update all the required NuGet packages.  
   
-1. Edit the App.Config file in your solution to specify your CDS for Apps server instance against which you want this sample to run.  
+1. Edit the App.Config file in your solution to specify your Common Data Service server instance against which you want this sample to run.  
   
 1. Run the project.  All sample projects are configured to run in debug mode by default.  
   
@@ -402,7 +402,7 @@ namespace PowerApps.Samples
   
 ### See also
 
-[Use the Common Data Service for Apps Web API](../overview.md)<br />
+[Use the Common Data Service Web API](../overview.md)<br />
 [Perform conditional operations using the Web API](../perform-conditional-operations-using-web-api.md)<br />
 [Web API Samples](../web-api-samples.md)<br />
 [Web API Conditional Operations Sample](../web-api-conditional-operations-sample.md)

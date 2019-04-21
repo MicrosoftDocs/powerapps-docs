@@ -1,10 +1,10 @@
 ---
-title: " Event Framework (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: " Event Framework (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Describes the event framework and information developers should know when working with it." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "brandonsimons" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -34,7 +34,7 @@ https://docs.microsoft.com/dynamics365/customer-engagement/developer/org-service
 
 -->
 
-The capability to extend the default behavior of Common Data Service for apps depends on detecting when events occur on the server. The *Event Framework* provides the capability to register custom code to be run in response to specific events. 
+The capability to extend the default behavior of Common Data Service depends on detecting when events occur on the server. The *Event Framework* provides the capability to register custom code to be run in response to specific events. 
 
 All capabilities to extend the default behavior of the platform depend on the event framework. When you configure a workflow to respond to an event using the workflow designer without writing code, that event is provided by the event framework. 
 
@@ -50,7 +50,7 @@ To leverage the event framework for your custom extensions you must understand:
 
 ## Available events
 
-As described in [Use messages with the Organization service](org-service/use-messages.md), data operations in the CDS for Apps platform are based on messages and every message has a name. There are `Create`, `Retrieve`, `RetrieveMultiple`, `Update`, `Delete`, `Associate` and `Disassociate` messages that cover the basic data operations that happen with entities. There are also specialized messages for more complex operations. Custom actions add new messages.
+As described in [Use messages with the Organization service](org-service/use-messages.md), data operations in the Common Data Service platform are based on messages and every message has a name. There are `Create`, `Retrieve`, `RetrieveMultiple`, `Update`, `Delete`, `Associate` and `Disassociate` messages that cover the basic data operations that happen with entities. There are also specialized messages for more complex operations. Custom actions add new messages.
 
 When you use the Plug-in registration tool to associate an extension with a particular message, you will register it as a *step*. The screenshot below is the **Register New Step** dialog used when registering a plug-in.
 

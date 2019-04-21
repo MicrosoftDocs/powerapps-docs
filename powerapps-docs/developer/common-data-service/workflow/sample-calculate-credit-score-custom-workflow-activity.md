@@ -1,10 +1,10 @@
 ---
-title: "Sample: Calculate a credit score with a custom workflow activity (Common Data Service for Apps) | Microsoft Docs"
+title: "Sample: Calculate a credit score with a custom workflow activity (Common Data Service) | Microsoft Docs"
 description: "The sample demonstrates workflow activity calculates the credit score based on the Social Security Number (SSN) and name."
 ms.custom: ""
 ms.date: 12/03/2018
 ms.reviewer: ""
-ms.service: "crm-online"
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "samples"
@@ -23,7 +23,7 @@ search.app:
 ---
 # Sample: Calculate a credit score with a custom workflow activity
 
-This sample code is for Common Data Service for Apps. Download the complete sample here [Custom workflow activities samples](https://code.msdn.microsoft.com/Custom-Workflow-Activities-eee57285).
+This sample code is for Common Data Service. Download the complete sample here [Custom workflow activities samples](https://code.msdn.microsoft.com/Custom-Workflow-Activities-eee57285).
 
 ## Prerequisites
 

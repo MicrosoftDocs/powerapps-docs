@@ -1,7 +1,7 @@
 ---
 title: "setDefaultView (Client API reference) in model-driven apps| MicrosoftDocs"
 ms.date: 10/31/2018
-ms.service: "crm-online"
+ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 8c918cd4-d0ce-45e5-91a3-1addf11258c7

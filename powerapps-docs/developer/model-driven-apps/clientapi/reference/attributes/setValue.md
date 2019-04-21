@@ -1,7 +1,7 @@
 ---
 title: "setValue (Client API reference)| MicrosoftDocs"
 ms.date: 10/31/2018
-ms.service: "crm-online"
+ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 1324b465-6012-47d4-bf35-837df82014cb

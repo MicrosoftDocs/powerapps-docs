@@ -1,10 +1,10 @@
 ---
-title: "Create patches to simplify solution updates (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Create patches to simplify solution updates (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Patches help you manage entities and all of its related assets when you add an entity to a solution and export that solution" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "shmcarth" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -19,12 +19,12 @@ search.app:
 
 If you add an entity to a solution and export the solution, the entity and all of its related assets are exported in that solution. These assets include attributes, forms, views, relationships, and visualizations, and any other assets that are packaged with the entity. Exporting all objects means that you can unintentionally modify objects on the target deployment, or carry over unintended dependencies.  
   
- To address this, you can create and publish solution patches that contain subcomponents of entities rather than publishing the entire entity and all of its assets.  The original solution and one or more related patches can be rolled up (merged) at a later time into an updated version of the solution, which then can replace the original solution in the target Common Data Service for Apps organization.  
+ To address this, you can create and publish solution patches that contain subcomponents of entities rather than publishing the entire entity and all of its assets.  The original solution and one or more related patches can be rolled up (merged) at a later time into an updated version of the solution, which then can replace the original solution in the target Common Data Service organization.  
   
 ## Patches  
  You can apply patches to either managed or unmanaged solutions and include only changes to entities and related entity assets. Patches do not contain any non-customized system components or relationships that it dependents upon because these components already exist in the deployed-to organization. At some point in your development cycle, you can roll up all the patches into a new solution version to replace the original solution that the patches were created from.  
   
- Patches are stored in the CDS for Apps database as `Solution` entity records. A non-null `ParentSolutionId` attribute indicates that the solution is a patch. Patches can be created and managed through the Organization Service or Web APIs, which are useful for developing automation such as a product install script. However, the CDS for Apps web application provides various web forms that enable you to interactively create and manage patches.  
+ Patches are stored in the Common Data Service database as `Solution` entity records. A non-null `ParentSolutionId` attribute indicates that the solution is a patch. Patches can be created and managed through the Organization Service or Web APIs, which are useful for developing automation such as a product install script. However, the Common Data Service web application provides various web forms that enable you to interactively create and manage patches.  
   
 - Patches can only be created from a parent solution using <xref:Microsoft.Crm.Sdk.Messages.CloneAsPatchRequest> or <xref href="Microsoft.Dynamics.CRM.CloneAsPatch?text=CloneAsPatch Action" />.  
   
@@ -48,7 +48,7 @@ If you add an entity to a solution and export the solution, the entity and all o
   
 - Don’t use unmanaged patches for production purposes.  
   
-- Patches are only supported in CDS for Apps organizations of version 8.0 or later.  
+- Patches are only supported in Common Data Service organizations of version 8.0 or later.  
   
   The SolutionPackager and PackageDeployer tools in this release support solution patches. Refer to the tool's online help for any command-line options that are related to patches.  
   
@@ -99,7 +99,7 @@ If you add an entity to a solution and export the solution, the entity and all o
   
  For an unmanaged solution, you must uninstall all patches to the base solution first, in reverse version order that they were created, before uninstalling the base solution.  
   
- For a managed solution, you simply uninstall the base solution. The CDS for Apps system automatically uninstalls the patches in reverse version order before uninstalling the base solution. You can also just uninstall a single patch.  
+ For a managed solution, you simply uninstall the base solution. The Common Data Service system automatically uninstalls the patches in reverse version order before uninstalling the base solution. You can also just uninstall a single patch.  
   
 ## Update a solution  
  Updating a solution involves rolling up (merging) all patches to that solution into a new version of the solution. Afterwards, that solution becomes unlocked and can once again be modified (unmanaged solution only) or exported. For a managed solution, no further modifications of the solution are allowed except for creating patches from the newly updated solution. To rollup patches into an unmanaged solution, use <xref:Microsoft.Crm.Sdk.Messages.CloneAsSolutionRequest> or the <xref href="Microsoft.Dynamics.CRM.CloneAsSolution?text=CloneAsSolution Action" />. Cloning a solution creates a new version of the unmanaged solution, incorporating all its patches, with a higher *major.minor* version number, the same unique name, and a display name.  

@@ -1,8 +1,8 @@
 ---
-title: "Custom virtual entity data providers (Common Data Service for Apps) | Microsoft Docs"
-description: "Using the CDS for Apps Data SDK, .NET Developers have the option of creating custom virtual entity data providers to help integrate external data source types that are not supported by an existing data provider."
+title: "Custom virtual entity data providers (Common Data Service) | Microsoft Docs"
+description: "Using the Common Data Service Data SDK, .NET Developers have the option of creating custom virtual entity data providers to help integrate external data source types that are not supported by an existing data provider."
 ms.date: 10/31/2018
-ms.service: "crm-online"
+ms.service: powerapps
 ms.topic: "article"
 applies_to: 
   - "Dynamics 365 (online)"
@@ -19,7 +19,7 @@ search.app:
 
 # Custom virtual entity data providers
 
-Using the CDS for Apps Data SDK, .NET Developers have the option of creating custom virtual entity data providers to help integrate external data source types that are not supported by an existing data provider. Each data provider is composed of a reusable set of CDS for Apps plug-ins that implement the supported CRUD operations. (The initial release is limited to the **Retrieve** and **RetrieveMultiple** read operations.)  This section provides fundamental information about data providers and approaches to developing custom providers, including example code.
+Using the Common Data Service Data SDK, .NET Developers have the option of creating custom virtual entity data providers to help integrate external data source types that are not supported by an existing data provider. Each data provider is composed of a reusable set of Common Data Service plug-ins that implement the supported CRUD operations. (The initial release is limited to the **Retrieve** and **RetrieveMultiple** read operations.)  This section provides fundamental information about data providers and approaches to developing custom providers, including example code.
 
 > [!NOTE]
 > As an alternative to creating a custom data source provider, you should consider adapting your data source to an existing data provider. For example, if you create an OData v4 interface to your external data source, then you can directly access it with the supplied standard OData v4 Data Provider. The mechanism of adding this REST interface varies with the underlying data service technology, for example see [WCF Data Services 4.5](https://docs.microsoft.com/dotnet/framework/data/wcf/). OData has broad industry support, with a wide range of dedicated tools and compatible technologies.
@@ -33,9 +33,9 @@ Custom data providers require substantial development resources to create and ma
 
 
 <!-- TODO:
-- CDS for Apps metadata schema: More information: [The metadata and data models in Microsoft Dynamics 365](../metadata-data-models.md).
-- CDS for Apps event system: More information: [Introduction to the event framework](../introduction-event-framework.md). 
-- CDS for Apps plug-in architecture and development: More information: [Plug-in development](../plugin-development.md). -->
+- Common Data Service metadata schema: More information: [The metadata and data models in Microsoft Dynamics 365](../metadata-data-models.md).
+- Common Data Service event system: More information: [Introduction to the event framework](../introduction-event-framework.md). 
+- Common Data Service plug-in architecture and development: More information: [Plug-in development](../plugin-development.md). -->
 
 The `Microsoft.Xrm.Sdk.Data.dll` assembly is available as a NuGet package: [Microsoft.CrmSdk.Data](https://www.nuget.org/packages/Microsoft.CrmSdk.Data/)
 
@@ -56,10 +56,10 @@ The standard Odata v4 Data Provider and the Cosmos DB Data Provider are examples
 
 ## Steps to use a custom data provider
 
-There are several steps that are required to create a virtual entity data provider solution that can be imported into your CDS for Apps applications:
+There are several steps that are required to create a virtual entity data provider solution that can be imported into your Common Data Service applications:
 
 1. Develop the custom data provider plug-in DLL (or set of DLLs).
-2. Register the custom data provider with your CDS for Apps service using the Plug-in Registration Tool (PRT).
+2. Register the custom data provider with your Common Data Service service using the Plug-in Registration Tool (PRT).
 3. Create a data provider solution.
 4. Customize the data source entity to reflect your data type or specific instance.
 5. Export the custom data provider solution.
@@ -78,9 +78,9 @@ For both events, you must :
 
 1. Convert the respective information in the execution context into a query that will work for your external data source.
 2. Retrieve the data from the external system.
-3. For **Retrieve**, convert the data into an <xref:Microsoft.Xrm.Sdk.Entity>; otherwise, for **RetrieveMultiple**, convert it to an <xref:Microsoft.Xrm.Sdk.EntityCollection>. This result is returned through the CDS for Apps platform to the user executing the query. 
+3. For **Retrieve**, convert the data into an <xref:Microsoft.Xrm.Sdk.Entity>; otherwise, for **RetrieveMultiple**, convert it to an <xref:Microsoft.Xrm.Sdk.EntityCollection>. This result is returned through the Common Data Service platform to the user executing the query. 
 
-The classes in the <xref:Microsoft.Xrm.Sdk.Data> namespace provide a framework to assist in mapping the CDS for Apps query information from the execution context into a query in the format appropriate for your external data source. This framework will help you convert the data returned in to the appropriate <xref:Microsoft.Xrm.Sdk.Entity> or <xref:Microsoft.Xrm.Sdk.EntityCollection> types expected by the CDS for Apps platform. 
+The classes in the <xref:Microsoft.Xrm.Sdk.Data> namespace provide a framework to assist in mapping the Common Data Service query information from the execution context into a query in the format appropriate for your external data source. This framework will help you convert the data returned in to the appropriate <xref:Microsoft.Xrm.Sdk.Entity> or <xref:Microsoft.Xrm.Sdk.EntityCollection> types expected by the Common Data Service platform. 
 
 #### Data provider exceptions
 

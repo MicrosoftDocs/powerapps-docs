@@ -1,1 +1,1 @@
-Browse to the [Office 365 admin center](https://portal.office.com) and sign in using Office 365 Global administrator credentials.
+Browse to the [Microsoft 365 admin center](https://admin.microsoft.com) and sign in using Office 365 Global administrator credentials.

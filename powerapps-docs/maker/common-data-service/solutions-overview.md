@@ -4,7 +4,7 @@ description: "Learn how solutions are distributed"
 ms.custom: ""
 ms.date: 01/28/2019
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -31,7 +31,7 @@ search.app:
 More information: [Whitepaper: Solution Lifecycle Management](https://www.microsoft.com/en-us/download/details.aspx?id=57777)  
   
 > [!NOTE]
->  If you’re an ISV creating an app that you will distribute, you’ll need to use solutions. For more information about using solutions, see [Package and distribute extensions using solutions](https://msdn.microsoft.com/library/gg334530.aspx).  
+>  If you’re an ISV creating an app that you will distribute, you’ll need to use solutions. For more information about using solutions, see [Developer Guide: Introduction to solutions](/powerapps/developer/common-data-service/introduction-solutions).  
   
  If you are interested in creating PowerApps apps for organizational use or customizing Dynamics 365 for Customer Engagement apps, here is what you need to know about solutions:  
   

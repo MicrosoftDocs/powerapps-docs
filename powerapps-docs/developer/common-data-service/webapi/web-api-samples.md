@@ -1,10 +1,10 @@
 ---
-title: "Web API Data operations Samples (Common Data Service for Apps) | Microsoft Docs"
-description: "The Common Data Service for Apps SDK provides a matrix of samples demonstrating how to use the Web API in a number of different ways. Find here the C# and JavaScript implementations of Basic Operations, Query Data, Conditional Operations and Functions and Actions sample"
+title: "Web API Data operations Samples (Common Data Service) | Microsoft Docs"
+description: "The Common Data Service SDK provides a matrix of samples demonstrating how to use the Web API in a number of different ways. Find here the C# and JavaScript implementations of Basic Operations, Query Data, Conditional Operations and Functions and Actions sample"
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "crm-online"
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -22,7 +22,7 @@ search.app:
 ---
 # Web API Data operations Samples
 
-You can use the Common Data Service for Apps Web API with a wide variety of programming languages or libraries. This guide provides a matrix of samples demonstrating how to use the Web API in a number of different ways. This topic introduces the samples available for each group of operations and how to perform these operations using different languages or libraries.
+You can use the Common Data Service Web API with a wide variety of programming languages or libraries. This guide provides a matrix of samples demonstrating how to use the Web API in a number of different ways. This topic introduces the samples available for each group of operations and how to perform these operations using different languages or libraries.
 
 <!-- TODO:
 > [!NOTE]
@@ -30,7 +30,7 @@ You can use the Common Data Service for Apps Web API with a wide variety of prog
   
 ## Web API Sample Matrix
 
-The following table describes the Common Data Service for Apps Web API samples and their language-specific implementations.  
+The following table describes the Common Data Service Web API samples and their language-specific implementations.  
   
 |Language-neutral description|C# implementation|Client-side JavaScript implementation|  
 |-----------------------------------|------------------------|--------------------------------------------|  
@@ -65,7 +65,7 @@ The following table lists the topics that cover the common language- or library-
   
 ### See also
 
-[Use the Common Data Service for Apps Web API](overview.md)<br />
+[Use the Common Data Service Web API](overview.md)<br />
 [Web API Basic Operations Sample](web-api-basic-operations-sample.md)<br />
 [Web API Query Data Sample](web-api-query-data-sample.md)<br />
 [Web API Conditional Operations Sample](web-api-conditional-operations-sample.md)<br />

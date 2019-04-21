@@ -1,10 +1,10 @@
 ---
-title: "Impersonate another user using the Web API (Common Data Service for Apps)| Microsoft Docs"
-description: "Impersonation is used to execute business logic(code) on behalf of another Common Data Service for Apps user to provide a desired feature or service using the appropriate role and object-based security of that impersonated user. Read how you can impersonate another user in Common Data Service for Apps using the Web API"
+title: "Impersonate another user using the Web API (Common Data Service)| Microsoft Docs"
+description: "Impersonation is used to execute business logic(code) on behalf of another Common Data Service user to provide a desired feature or service using the appropriate role and object-based security of that impersonated user. Read how you can impersonate another user in Common Data Service using the Web API"
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 03/18/2019
 ms.reviewer: ""
-ms.service: "crm-online"
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -34,7 +34,7 @@ There are times when your code will need to perform operations on behalf of anot
 
 ## Requirements for impersonation
 
-Impersonation is used to execute business logic (code) on behalf of another Common Data Service for Apps user to provide a desired feature or service using the appropriate role and object-based security of that impersonated user. This is necessary because the Common Data Service for Apps Web services can be called by various clients and services on behalf of a CDS for Apps user, for example, in a workflow or custom ISV solution. Impersonation involves two different user accounts: one user account (A) is used when executing code to perform some task on behalf of another user (B).  
+Impersonation is used to execute business logic (code) on behalf of another Common Data Service user to provide a desired feature or service using the appropriate role and object-based security of that impersonated user. This is necessary because the Common Data Service Web services can be called by various clients and services on behalf of a Common Data Service user, for example, in a workflow or custom ISV solution. Impersonation involves two different user accounts: one user account (A) is used when executing code to perform some task on behalf of another user (B).  
   
 User account (A) needs the `prvActOnBehalfOfAnotherUser` privilege, which is included in the Delegate security role. The actual set of privileges that is used to modify data is the intersection of the privileges that the Delegate role user possesses with that of the user who is being impersonated. In other words, user (A) is allowed to do something if and only if user (A) and the impersonated user (B) have the privilege necessary for the action.  
   
@@ -42,12 +42,17 @@ User account (A) needs the `prvActOnBehalfOfAnotherUser` privilege, which is inc
 
 ## How to impersonate a user
 
-To impersonate a user, add a request header named MSCRMCallerID with a GUID value equal to the impersonated user’s systemuserid before sending the request to the web service. In this example, a new account entity is created on behalf of the user with systemuserid 00000000-0000-0000-000000000002.  
+There are two ways you can impersonate a user, both of which are made possible by passing in a header with the corresponding user id.
+
+ 1. **Preferred:** Impersonate a user based on their Azure Active Directory (AAD) object id by passing that value along with the header `CallerObjectId`.
+2. **Legacy:** To impersonate a user based on their systemuserid you can leverage `MSCRMCallerID` with the corresponding guid value.
+
+ In this example, a new account entity is created on behalf of the user with an Azure Active Directory object id `e39c5d16-675b-48d1-8e67-667427e9c084`.   
   
  **Request**  
 ```http 
 POST [Organization URI]/api/data/v9.0/accounts HTTP/1.1  
-MSCRMCallerID: 00000000-0000-0000-000000000002  
+CallerObjectId: e39c5d16-675b-48d1-8e67-667427e9c084  
 Accept: application/json  
 Content-Type: application/json; charset=utf-8  
 OData-MaxVersion: 4.0  
@@ -84,30 +89,33 @@ HTTP/1.1 200 OK
 Content-Type: application/json; odata.metadata=minimal  
 ETag: W/"506868"  
   
-{  
-    "@odata.context": "[Organization URI]/api/data/v9.0/$metadata#accounts(name,createdby,createdonbehalfby,owninguser,createdby(fullname),createdonbehalfby(fullname),owninguser(fullname))/$entity",  
-    "@odata.etag": "W/\"506868\"",  
-    "name": "Sample Account created using impersonation",  
-    "accountid": "00000000-0000-0000-000000000003",  
-    "createdby": {  
-        "@odata.etag": "W/\"506834\"",  
-        "fullname": "Impersonated User",  
-        "systemuserid": "00000000-0000-0000-000000000002",  
-        "ownerid": "00000000-0000-0000-000000000002"  
-    },  
-    "createdonbehalfby": {  
-        "@odata.etag": "W/\"320678\"",  
-        "fullname": "Actual User",  
-        "systemuserid": "00000000-0000-0000-000000000001",  
-        "ownerid": "00000000-0000-0000-000000000001"  
-    },  
-    "owninguser": {  
-        "@odata.etag": "W/\"506834\"",  
-        "fullname": "Impersonated User",  
-        "systemuserid": "00000000-0000-0000-000000000002",  
-        "ownerid": "00000000-0000-0000-000000000002"  
-    }  
-}  
+{
+  "@odata.context": "[Organization URI]/api/data/v9.0/$metadata#accounts(name,createdby(fullname,azureactivedirectoryobjectid),createdonbehalfby(fullname,azureactivedirectoryobjectid),owninguser(fullname,azureactivedirectoryobjectid))/$entity",
+  "@odata.etag": "W/\"2751197\"",
+  "name": "Sample Account created using impersonation",
+  "accountid": "00000000-0000-0000-000000000003",
+  "createdby": {
+    "@odata.etag": "W/\"2632435\"",
+    "fullname": "Impersonated User",
+    "azureactivedirectoryobjectid": "e39c5d16-675b-48d1-8e67-667427e9c084",
+    "systemuserid": "75df116d-d9da-e711-a94b-000d3a34ed47",
+    "ownerid": "75df116d-d9da-e711-a94b-000d3a34ed47"
+  },
+  "createdonbehalfby": {
+    "@odata.etag": "W/\"2632445\"",
+    "fullname": "Actual User",
+    "azureactivedirectoryobjectid": "3d8bed3e-79a3-47c8-80cf-269869b2e9f0",
+    "systemuserid": "278742b0-1e61-4fb5-84ef-c7de308c19e2",
+    "ownerid": "278742b0-1e61-4fb5-84ef-c7de308c19e2"
+  },
+  "owninguser": {
+    "@odata.etag": "W/\"2632435\"",
+    "fullname": "Impersonated User",
+    "azureactivedirectoryobjectid": "e39c5d16-675b-48d1-8e67-667427e9c084",
+    "systemuserid": "75df116d-d9da-e711-a94b-000d3a34ed47",
+    "ownerid": "75df116d-d9da-e711-a94b-000d3a34ed47"
+  }
+}
 ```  
   
 ### See also

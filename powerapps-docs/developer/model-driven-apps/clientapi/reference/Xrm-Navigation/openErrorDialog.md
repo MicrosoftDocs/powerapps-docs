@@ -1,7 +1,7 @@
 ---
 title: "openErrorDialog (Client API reference) in model-driven apps| MicrosoftDocs"
 ms.date: 10/31/2018
-ms.service: "crm-online"
+ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 9749143d-c159-4833-aff9-d8bc2c3395f3

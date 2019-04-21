@@ -3,7 +3,7 @@ title: "Share an embedded canvas app | MicrosoftDocs"
 ms.custom: ""
 ms.date: 01/07/2019
 ms.reviewer: ""
-ms.service: "crm-online"
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
@@ -42,4 +42,5 @@ Embedded canvas apps are also solution aware. By default embedded canvas apps ar
 [Embed a canvas app in a model-driven form](embed-canvas-app-in-form.md) <br />
 [Pass the current record as data context to an embedded canvas app](pass-current-embedded-canvas-app.md) <br />
 [Pass a list of related records as data context to an embedded canvas app](pass-related-embedded-canvas-app.md) <br />
+[Perform predefined actions on the host form from within an embedded canvas app](embedded-canvas-app-actions.md) <br />
 [Guidelines on working with embedded canvas apps](embedded-canvas-app-guidelines.md)

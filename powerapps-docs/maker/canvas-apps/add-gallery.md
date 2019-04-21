@@ -20,64 +20,60 @@ Show a list of items from any data source by adding a **[Gallery](controls/contr
 
 ## Prerequisites
 
-* Learn how to [add and configure a control](add-configure-controls.md) in PowerApps.
+- Learn how to [add and configure a control](add-configure-controls.md) in PowerApps.
 
-* Set up the sample data:
+- Set up the sample data:
     1. Download [this Excel file](https://az787822.vo.msecnd.net/documentation/get-started-from-data/FlooringEstimates.xlsx), which contains sample data for this tutorial.
 
     2. Upload the Excel file to a [cloud-storage account](connections/cloud-storage-blob-connections.md), such as OneDrive for Business.
 
-## Add a Gallery control
-1. Open PowerApps, and then click or tap **New** near the left edge.
+- Open a blank app:
+    1. [Sign in to PowerApps](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
-2. On the **Blank app** tile, click or tap **Phone layout**.
+    1. Under **Make your own app**, select **Canvas app from blank**.
 
-3. In the **Welcome to PowerApps Studio** dialog box, click or tap **Skip**.
+    1. Specify a name for your app, select **Phone**, and then select **Create**.
 
-4. [Add a connection](add-data-connection.md) to the **FlooringEstimates** table in the Excel file.
+    1. If the **Welcome to PowerApps Studio** dialog box appears, select **Skip**.
 
-5. (optional) Add a **Gallery** control to the default screen by clicking or tapping the **Insert** tab, clicking or tapping **Gallery**, and then clicking or tapping a **Gallery** control that's empty (blank) or that contains a default set of controls.
+    1. [Add a connection](add-data-connection.md) to the **FlooringEstimates** table in the Excel file.
 
-    These options include **Gallery** controls that scroll horizontally or vertically. You can also add a **Gallery** control that automatically bases its size on the amount of content in each item.
+## Add a gallery to a blank screen
 
-    ![Add gallery](./media/add-gallery/gallery-dropdown.png)
+1. On the **Insert** tab, select **Gallery**, and then select **Vertical**.
 
-6. On the **Home** tab, click or tap **New screen**.
+    ![Add vertical gallery](./media/add-gallery/gallery-dropdown.png)
 
-    You can add a screen that's empty, that scrolls, that contains a **Gallery** control, or that contains a form.
+1. On the **Properties** tab of the right-hand pane, open the **Items** list, and then select **Flooring Estimates**.
 
-7. Click or tap **List screen** to add a screen that contains a **Gallery** control and other controls such as a search bar.
+    ![Flooring estimates](./media/add-gallery/select-layout.png)
 
-    > [!NOTE]
-   > Whether you add a **Gallery** control to a new screen or an existing one, you can click or tap near the bottom of the **Gallery** control to select it, click or tap **Flooring Estimates** in the right-hand pane, and then click or tap a different layout in the **Data** pane. For this tutorial, leave the default layout.
+1. (optional) In the **Layout** list, select a different option.
 
-    ![Choose gallery layout](./media/add-gallery/select-layout.png)
+## Add a gallery in a screen
 
-8. Click or tap the **Gallery** control in the screen that you just added.
+1. On the **Home** tab, select **New screen** > **List screen**.
 
-9. On the **Properties** tab of the right-hand pane, click or tap **CustomGallerySample**.
+    A screen that contains a **Gallery** control and other controls, such as a search bar, appears.
 
-10. In the **Data** pane, click or tap **CustomGallerySample**, and then click or tap **FlooringEstimates**.
-
-    ![Select datasource](./media/add-gallery/choose-data.png)
+1. Set the gallery's **Items** property to `FlooringEstimates`.
 
     The **Gallery** control shows the sample data.
 
     ![Show data](./media/add-gallery/show-data-default.png)
 
-    You'll configure sort and search later in this topic.
-
 ## Add a control to the Gallery control
-Before you do any customization, decide on a **Gallery** control layout. The first set of controls in a **Gallery** control is the template, which determines how all data in the **Gallery** control appears.
+Before you do any other customization, ensure that the layout for your **Gallery** control most closely matches what you want. From there, you can further modify the **Gallery** template, which determines how all data in the **Gallery** control appears.
 
-1. Select the template by clicking or tapping near the bottom of the **Gallery** control and then clicking or tapping the pencil icon in the upper-left corner.
+1. Select the template by clicking or tapping near the bottom of the **Gallery** control and then selecting the pencil icon in its upper-left corner.
 
     ![Edit gallery template](./media/add-gallery/edit-item.png)
 
 2. With the template still selected, add a **[Label](controls/control-text-box.md)** control, and then move and resize it so that it doesn't overlap with other controls in the template.
 
     ![Add label](./media/add-gallery/add-text-box.png)
-3. Open the **Data** pane by selecting the template and then clicking or tapping **Flooring Estimates** in the right-hand pane.
+
+3. Select the gallery, and then select **Edit** next to **Fields** on the **Properties** tab of the right-hand pane.
 
 4. Select the label that you added earlier in this procedure, and then open the highlighted list in the **Data** pane.
 
@@ -85,55 +81,53 @@ Before you do any customization, decide on a **Gallery** control layout. The fir
 
 5. In that list, click or tap **Price**.
 
-    ![Change label binding](./media/add-gallery/change-binding.png)
-
     The **Gallery** control shows the new values.
 
     ![Final Gallery](./media/add-gallery/final-gallery.png)
 
-## Filter the Gallery control
-The **[Items](controls/properties-core.md)** property of a **Gallery** control determines which items it shows. In this procedure, you configure that property so that the **Gallery** control shows only those items for which the product name contains the text in **TextSearchBox1**.
+## Filter and sort a gallery
+The **[Items](controls/properties-core.md)** property of a **Gallery** control determines which items it shows. In this procedure, you configure that property so that it also determines which records appear based on filter criteria and in what order.
 
-![Text search box](./media/add-gallery/text-search-box.png)
-
-1. Select the **Gallery** control by clicking or tapping near the bottom of that control.
-
-2. On the **Advanced** tab, set the **[Items](controls/properties-core.md)** property of the **Gallery** control to this formula:
-
-    **If(IsBlank(TextSearchBox1.Text), FlooringEstimates, Filter(FlooringEstimates, TextSearchBox1.Text in Text(Name)))**
-
-    For more information about the functions in this formula, see the [formula reference](formula-reference.md).
-
-3. Type part or all of a product name in the search box.
-
-    The **Gallery** control shows only those items that meet the filter criterion.
-
-## Sort the Gallery control
-The **[Items](controls/properties-core.md)** property of a **Gallery** control determines the order in which it shows items. In this procedure, you configure that property so that the **Gallery** control shows the order of items as set by **ImageSortUpDown1**.
-
-![Image for sorting](./media/add-gallery/image-sorting.png)
+![Search box and sort icon](./media/add-gallery/text-search-box.png)
 
 1. Set the **[Items](controls/properties-core.md)** property of the **Gallery** control to this formula:
 
-    **Sort(If(IsBlank(TextSearchBox1.Text), FlooringEstimates, Filter(FlooringEstimates, TextSearchBox1.Text in Text(Name))), Name, If(SortDescending1, SortOrder.Descending, SortOrder.Ascending))**
+    ```powerapps-dot
+    Sort
+        (If
+            (IsBlank(TextSearchBox1.Text),
+            FlooringEstimates,
+            Filter(
+                FlooringEstimates,
+                TextSearchBox1.Text in Text(Name)
+            )
+        ),
+        Name,
+        If(
+            SortDescending1,
+            SortOrder.Descending,
+            SortOrder.Ascending
+        )
+    )
+    ```
 
-2. Select the sort icon to change the sorting order of the **Gallery** control by the names of the products.
+    For more information about the functions in this formula, see the [formula reference](formula-reference.md).
 
-To sort *and* filter your **Gallery** control:
+1. Double-click the search box, and then type part or all of a product name in it.
 
-* Replace both instances of *DataSource* in this formula with the name of your data source.
+    Only those items that meet the filter criterion appear.
 
-* Replace both instances of *ColumnName* with the name of the column by which you want to sort and filter.
+1. While pressing the Alt key, select the sort icon one or more times to switch the sort order.
 
-**Sort(If(IsBlank(TextSearchBox1.Text),** *DataSource*, **Filter(** *DataSource*, **TextSearchBox1.Text in Text(** *ColumnName* **))),** *ColumnName*, **If(SortDescending1, SortOrder.Descending, SortOrder.Ascending))**
+    The records toggle between ascending and descending alphabetical order based on the product name.
 
 ## Highlight the selected item
-Set the **Gallery** control's **TemplateFill** property to a formula that's similar to this example:
+Set the **Gallery** control's **TemplateFill** property to a formula that's similar to this example, but you can specify different colors if you want:
 
 **If(ThisItem.IsSelected, LightCyan, White)**
 
 ## Change the default selection
-Set the **Gallery** control's **Default** property to the record that you want to select by default. For example, specify the fifth item in the **FlooringEstimates** data source:
+Set the **Gallery** control's **Default** property to the record that you want to select by default. For example, you can specify the fifth item in the **FlooringEstimates** data source:
 
 **Last(FirstN(FlooringEstimates, 5))**
 

@@ -1,10 +1,10 @@
 ---
-title: "Use LINQ to construct a query (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Use LINQ to construct a query (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Discusses how to use .NET Language-Integrated Query(LINQ) query provider in Dynamics 365 to construct a query" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "brandonsimons" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -17,19 +17,19 @@ search.app:
 ---
 # Use LINQ to construct a query
 
-The .NET Language-Integrated Query(LINQ) query provider in Common Data Service for Apps uses standard LINQ syntax. The first step in creating a LINQ query is to identify the relevant entity types and the relationships between them. You can then specify the data source and the other query parameters.  
+The .NET Language-Integrated Query(LINQ) query provider in Common Data Service uses standard LINQ syntax. The first step in creating a LINQ query is to identify the relevant entity types and the relationships between them. You can then specify the data source and the other query parameters.  
 
  The `from` clause is used to return a single “root” entity. The query provider can only return entities of a single entity type. The `orderby` and `select` clauses must reference this root entity. You can use `join` clauses to add entities with a relationship to the “root” entity.  
 
 <a name="bkmk_operators"></a>   
 
 ## LINQ operators  
- All LINQ query expressions have a similar format. The following table shows the most common clauses in a LINQ query expression when using the CDS for Apps LINQ query provider.  
+ All LINQ query expressions have a similar format. The following table shows the most common clauses in a LINQ query expression when using the Common Data Service LINQ query provider.  
 
 ### from  
  When using the generated service context and early binding, use the `IQueryable` entity set, such as `AccountSet`, in the generated context.  
 
- When not using the generated context, the `CreateQuery` method on the organization service context object gives you access to CDS for Apps entities.  
+ When not using the generated context, the `CreateQuery` method on the organization service context object gives you access to Common Data Service entities.  
 
  Example:  
 
@@ -120,7 +120,7 @@ select new Contact
 
 ## Filter multiple entities  
 
- You can create complex .NET Language Integrated Query(LINQ) queries in CDS for Apps. You use multiple `Join` clauses with filter clauses to create a result that is filtered on attributes from several entities.  
+ You can create complex .NET Language Integrated Query(LINQ) queries in Common Data Service. You use multiple `Join` clauses with filter clauses to create a result that is filtered on attributes from several entities.  
 
  The following sample shows how to create a LINQ query that works with two entities and filters the result based on values from each of the entities.  
 

@@ -1,7 +1,7 @@
 ---
 title: "Xrm.WebApi (Client API reference) in model-driven apps| MicrosoftDocs"
 ms.date: 10/31/2018
-ms.service: "crm-online"
+ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: a6646fc8-c2e4-43fe-95f1-51483de38688
@@ -42,6 +42,6 @@ Provides properties and methods to use Web API to create and manage records and 
 
 ### Related topics
 
-[Use the Common Data Service for Apps Web API](../../../common-data-service/webapi/overview.md)
+[Use the Common Data Service Web API](../../../common-data-service/webapi/overview.md)
 
 [Client API Xrm object](../clientapi-xrm.md)

@@ -1,7 +1,7 @@
 ---
 title: "addOnSelection (Client API reference) in model-driven apps| MicrosoftDocs"
 ms.date: 10/31/2018
-ms.service: "crm-online"
+ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 66cfb2ff-4d78-4bb9-8dc0-e214ae1d2880

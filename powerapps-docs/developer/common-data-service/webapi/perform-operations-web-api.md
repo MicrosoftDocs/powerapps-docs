@@ -1,15 +1,15 @@
 ---
-title: "Perform operations using the Web API (Common Data Service for Apps)| Microsoft Docs"
-description: "Common Data Service for Apps Web API provides a modern, RESTful web service that you can use to interact with data in Common Data Service for Apps using a wide variety of platforms, programming languages and devices. Read about the operations that can be performed using the Web API"
+title: "Perform operations using the Web API (Common Data Service)| Microsoft Docs"
+description: "Common Data Service Web API provides a modern, RESTful web service that you can use to interact with data in Common Data Service using a wide variety of platforms, programming languages and devices. Read about the operations that can be performed using the Web API"
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "crm-online"
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to: 
-- "CDS for Apps (online)"
+- "Common Data Service (online)"
 ms.assetid: b7ae4dd3-e9ee-45cc-a345-2fb7be5eddc6
 caps.latest.revision: 12
 author: "brandonsimons" # GitHub ID
@@ -23,7 +23,7 @@ search.app:
 ---
 # Perform operations using the Web API
 
-The Web API provides a modern, RESTful web service you can use to interact with data in Common Data Service for Apps using a wide variety of platforms, programming languages and devices.
+The Web API provides a modern, RESTful web service you can use to interact with data in Common Data Service using a wide variety of platforms, programming languages and devices.
 
 ## In this section
 
@@ -43,6 +43,6 @@ The Web API provides a modern, RESTful web service you can use to interact with 
 
 ### See also
 
-[Use the Common Data Service for Apps Web API](overview.md)<br />
-[Authenticate to Common Data Service for Apps with the Web API](authenticate-web-api.md)<br />
+[Use the Common Data Service Web API](overview.md)<br />
+[Authenticate to Common Data Service with the Web API](authenticate-web-api.md)<br />
 [Web API types, functions and actions](web-api-types-operations.md)

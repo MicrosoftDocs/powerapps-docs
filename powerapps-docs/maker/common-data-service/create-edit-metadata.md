@@ -1,10 +1,10 @@
 ---
-title: "Entities and metadata in Common Data Service for Apps | MicrosoftDocs"
-description: "Learn about entities and metadata in Common Data Service for Apps"
+title: "Entities and metadata in Common Data Service | MicrosoftDocs"
+description: "Learn about entities and metadata in Common Data Service"
 ms.custom: ""
 ms.date: 05/30/2018
 ms.reviewer: ""
-ms.service: "crm-online"
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -24,15 +24,15 @@ search.app:
   - D365CE
 ---
 
-# Entities and metadata in Common Data Service for Apps
+# Entities and metadata in Common Data Service
 
-Common Data Service for Apps is designed so that you can quickly and easily create a data model for your application. Normally, you shouldn't have to concern yourself with some of the details about metadata that this topic will introduce. But if you want to develop a deeper understanding about how apps that use CDS for Apps work or you are evaluating what is possible, understanding the metadata used by CDS for Apps may provide you insight.
+Common Data Service is designed so that you can quickly and easily create a data model for your application. Normally, you shouldn't have to concern yourself with some of the details about metadata that this topic will introduce. But if you want to develop a deeper understanding about how apps that use Common Data Service work or you are evaluating what is possible, understanding the metadata used by Common Data Service may provide you insight.
 
-*Metadata* means data about data. CDS for Apps provides a flexible platform for you because it is relatively easy to edit the definitions of the data that the environment will use. In CDS for Apps, the metadata is a collection of entities. Entities describe the kinds of data which is stored in the database.  Each entity corresponds to a database table and each field (also known as attribute) within an entity represents a column in that table. Entity metadata is what controls the kinds of records you can create and what kind of actions can be performed on them. When you use the customization tools to create or edit entities, fields, and entity relationships, you are editing this metadata. 
+*Metadata* means data about data. Common Data Service provides a flexible platform for you because it is relatively easy to edit the definitions of the data that the environment will use. In Common Data Service, the metadata is a collection of entities. Entities describe the kinds of data which is stored in the database.  Each entity corresponds to a database table and each field (also known as attribute) within an entity represents a column in that table. Entity metadata is what controls the kinds of records you can create and what kind of actions can be performed on them. When you use the customization tools to create or edit entities, fields, and entity relationships, you are editing this metadata. 
   
 Different clients people use to interact with the data in your environment depend on the entity metadata and adapt as you customize the metadata. But these clients also depend on other data to control what visual elements to display, any custom logic to apply, and how to apply security. This system data is also stored within entities but the entities themselves are not available for customization.
 
-You can learn about standard entities, attributes, and entity relationships included by default in CDS for Apps by reviewing the [Entity Reference](/powerapps/developer/common-data-service/reference/about-entity-reference).
+You can learn about standard entities, attributes, and entity relationships included by default in Common Data Service by reviewing the [Entity Reference](/powerapps/developer/common-data-service/reference/about-entity-reference).
 
 > [!TIP]
 > The designers available to edit metadata cannot show all the details found in the metadata. You can install a model-driven app called the **Metadata Browser** which will allow you to view all the entities and metadata properties that are found in the system. More information: [Browse the metadata for your environment](https://docs.microsoft.com/dynamics365/customer-engagement/developer/browse-your-metadata).
@@ -41,7 +41,7 @@ You can learn about standard entities, attributes, and entity relationships incl
 
 ## Create new metadata or use existing metadata?
 
-CDS for Apps comes with a number of standard entities that support core business application capabilities. For example, data about your customers or potential customers is intended to be stored using the account or contact entities.  
+Common Data Service comes with a number of standard entities that support core business application capabilities. For example, data about your customers or potential customers is intended to be stored using the account or contact entities.  
   
 Each of these entities also contain a number of fields that represent common data that the system may need to store for the respective entity.  
   

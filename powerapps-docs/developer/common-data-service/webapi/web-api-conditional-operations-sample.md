@@ -1,10 +1,10 @@
 ---
-title: "Web API Conditional Operations Sample (Common Data Service for Apps)| Microsoft Docs"
-description: "This group of samples demonstrate how to perform operations that are conditionally based upon the version of the entity record contained on the Common Data Service for Apps server and/or currently maintained by the client"
+title: "Web API Conditional Operations Sample (Common Data Service)| Microsoft Docs"
+description: "This group of samples demonstrate how to perform operations that are conditionally based upon the version of the entity record contained on the Common Data Service server and/or currently maintained by the client"
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "crm-online"
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -22,11 +22,11 @@ search.app:
 ---
 # Web API Conditional Operations Sample
 
-This group of samples demonstrate how to perform operations that are conditionally based upon the version of the entity record contained on the Common Data Service for Apps server and/or currently maintained by the client. For more information, see [Perform conditional operations using the Web API](perform-conditional-operations-using-web-api.md). This sample is implemented as a separate project for the following languages:  
+This group of samples demonstrate how to perform operations that are conditionally based upon the version of the entity record contained on the Common Data Service server and/or currently maintained by the client. For more information, see [Perform conditional operations using the Web API](perform-conditional-operations-using-web-api.md). This sample is implemented as a separate project for the following languages:  
   
  [Web API Conditional Operations Sample (C#)](samples/conditional-operations-csharp.md)  
  
- The Common Data Service for Apps Web API follows the conventions of the [OData v4.0](http://www.odata.org/documentation/) protocol, which uses [ETags](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752236) to implement resource version control. Web API conditional operations depend upon this versioning  mechanism.  
+ The Common Data Service Web API follows the conventions of the [OData v4.0](http://www.odata.org/documentation/) protocol, which uses [ETags](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752236) to implement resource version control. Web API conditional operations depend upon this versioning  mechanism.  
   
  This topic explains the structure and content of the samples at a higher, language-neutral level. It details the HTTP requests and responses, and the associated program output, where applicable. Review the linked sample topics above to obtain language-specific implementations and related details about how to perform the operations described in this topic.  
   
@@ -40,7 +40,7 @@ This group of samples demonstrate how to perform operations that are conditional
 |[Optimistic concurrency on delete and update](#bkmk_optimisiticConcurrency)|[Apply optimistic concurrency](perform-conditional-operations-using-web-api.md#bkmk_Applyoptimisticconcurrency)|  
 |[Controlling upsert operations](#bkmk_controllingUpsert)|[Limit upsert operations](perform-conditional-operations-using-web-api.md#bkmk_limitUpsertOperations)|  
   
- The following sections contain a brief discussion of the Common Data Service for Apps Web API operations performed, along with the corresponding HTTP messages and associated console output which is the same for each language implementation. For brevity, less pertinent HTTP headers have been omitted. The URIs of the records will vary with the base organization address and the ID of the record assigned by your Common Data Service for Apps server.  
+ The following sections contain a brief discussion of the Common Data Service Web API operations performed, along with the corresponding HTTP messages and associated console output which is the same for each language implementation. For brevity, less pertinent HTTP headers have been omitted. The URIs of the records will vary with the base organization address and the ID of the record assigned by your Common Data Service server.  
   
 <a name="bkmk_sampleData"></a>
    
@@ -488,6 +488,6 @@ This group of samples demonstrate how to perform operations that are conditional
   
 ### See also
 
-[Use the Common Data Service for Apps Web API](overview.md)<br />
+[Use the Common Data Service Web API](overview.md)<br />
 [Perform conditional operations using the Web API](perform-conditional-operations-using-web-api.md)<br />
 [Web API Conditional Operations Sample (C#)](samples/conditional-operations-csharp.md)   

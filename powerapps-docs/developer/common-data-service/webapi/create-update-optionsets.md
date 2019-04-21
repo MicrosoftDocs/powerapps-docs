@@ -1,10 +1,10 @@
 ---
-title: "Create and update option sets using the Web API (Common Data Service for Apps) | Microsoft Docs"
-description: "Learn about creating and updating entity Common Data Service for Apps uses a metadata driven architecture to provide the flexibility to create custom entities and additional system entity attributes."
+title: "Create and update option sets using the Web API (Common Data Service) | Microsoft Docs"
+description: "Learn about creating and updating entity Common Data Service uses a metadata driven architecture to provide the flexibility to create custom entities and additional system entity attributes."
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "crm-online"
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
