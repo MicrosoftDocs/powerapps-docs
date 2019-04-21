@@ -36,7 +36,7 @@ Use the new form designer to create and design forms for model-driven apps.
 2. On the left navigation pane, expand **Data**, and then select **Entities**. 
 3. Select an entity, such as the account entity, and then select the **Forms** tab. 
 4. Select **Add form**, and then select one of the following
-    - **Main form (preview)**.     
+    - **Main form (preview)**  
     The contents of the new form are filled using the existing main form definition. If multiple main forms exist, the form at the top of the list in the form order is used to fill the new form. 
     - **Quick create form (preview)**
     - **Quick view form (preview)**
