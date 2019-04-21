@@ -28,6 +28,9 @@ search.app:
 
 ## Add tabs to a form
 To add tabs to a form, use the **Layouts** pane.  
+    
+  > [!NOTE]
+  >   - Tabs can only be added on main forms. More information: [Form types](types-forms.md)
 
 ### Add tabs to a form using drag and drop
 
@@ -90,6 +93,7 @@ To add tabs to a form, use the **Layouts** pane.
 4. In the command bar, select **Save** to save the form, or select **Publish** if you want to save and make your changes visible to end-users. 
 
     > [!NOTE]
+    >   - Tabs can only be deleted on main forms. More information: [Form types](types-forms.md)
     >   - If you delete a tab by mistake, in the command bar, select **Undo** to revert the form to its previous state. 
     >   - You can't delete a tab that contains sections with required or locked fields. 
     >   - You can't delete a tab that has locked sections. 
