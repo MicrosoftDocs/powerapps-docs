@@ -29,7 +29,7 @@ search.app:
 Use the new form designer to create and design forms for model-driven apps.
 
 > [!IMPORTANT]
-> The new model-driven form designer does not yet support editing card forms. More information: [Form types](types-forms.md)
+> The new model-driven form designer does not currently support editing card forms. More information: [Form types](types-forms.md)
 
 ## Create a form 
 1. Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). 
