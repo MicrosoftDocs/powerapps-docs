@@ -51,11 +51,11 @@ To add fields to a form, use the **Fields** pane. The **Fields** pane lets you s
     - When you select an existing field, the new field is added after the existing field. 
     - When you select a section, the new field is added in an available space so as to evenly distribute fields across the section columns. 
 3. In the command bar, select **Add field**, or in the left pane, select **Fields**.  
-   The **Fields** pane is open by default when the form designer is opened. 
+    - The **Fields** pane is open by default when the form designer is opened. 
 4. In the **Fields** pane, search, filter, or scroll to find the field you want to add. 
-   If you can't find a field, it might already be on the form. Clear **Show only unused fields** to view all fields, including those already added to the form. 
+    - If you can't find a field, it might already be on the form. Clear **Show only unused fields** to view all fields, including those already added to the form. 
 5. In the **Fields** pane, select a field to add it to the form. 
-   Alternatively, select **...** next to the field you want, and then select **Add to selected section**. 
+    - Alternatively, select **...** next to the field you want, and then select **Add to selected section**. 
 6. Repeat steps 4-5 above if you want to add more fields.
 7. In the command bar, select **Save** to save the form, or select **Publish** if you want the save and make your changes visible to end-users. 
 
