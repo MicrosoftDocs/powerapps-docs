@@ -51,19 +51,6 @@ Use the new form designer to create and design forms for model-driven apps.
     - Another alternative is to select **...** next to the form name, and then in the menu, select **Edit form (preview)**. 
 5. Select **Save** to save the form, or select **Publish** if you want to save and make your changes visible to app users. 
 
-## Use the tree view 
-The **Tree View** pane displays a visual hierarchy of the controls and fields on the form. The icons in the tree view help you quickly identify the type of field or control. 
-
-You can also use the tree view to select fields and controls present on the form. The tree view is helpful when you want to select hidden elements that are not visible on the form preview. 
-
-You can expand or collapse nodes in the tree view to see or hide the elements within a node. When you select an element in the tree view, it becomes highlighted in the form preview, and the property pane displays the properties for the element. 
-
-   ![Tree view](media/tree-view.png)
-
-### Open the tree view 
-1. Open the form designer to create or edit a form. More information: [Create a form](#create-a-form) and [Edit a form](#edit-a-form)  
-2. In the left pane, select **Tree View**.
-
 ## See also
 [Overview of the model-driven form designer](form-designer-overview.md)  
 [Add, move or delete fields on a form using form designer](add-move-or-delete-fields-on-form.md)  
