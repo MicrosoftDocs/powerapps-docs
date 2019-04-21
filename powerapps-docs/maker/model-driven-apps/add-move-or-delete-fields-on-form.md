@@ -26,10 +26,10 @@ search.app:
 # Add, move or delete fields on a form using the model-driven form designer 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-## Add a field to a form
+## Add fields to a form
 To add fields to a form, use the **Fields** pane. The **Fields** pane lets you search and filter to help you quickly find fields. It also includes the option to show only unused fields. 
 
-### Add a field to a form using drag and drop
+### Add fields to a form using drag and drop
 
 1. Open the form designer to create or edit a form. More information: [Create a form](create-and-edit-forms.md#create-a-form) and [Edit a form](create-and-edit-forms.md#edit-a-form)
 2. In the command bar, select **Add field**, or in the left pane, select **Fields**. 
@@ -44,7 +44,7 @@ To add fields to a form, use the **Fields** pane. The **Fields** pane lets you s
 6. Repeat steps 3-5 above if you want to add more fields.
 7. In the command bar, select **Save** to save the form, or select **Publish** if you want the save and make your changes visible to end-users. 
 
-### Add a field to a form using selection 
+### Add fields to a form using selection 
 
 1. Open the form designer to create or edit a form. More information: [Create a form](create-and-edit-forms.md#create-a-form) and [Edit a form](create-and-edit-forms.md#edit-a-form)
 2. In the form preview, select another existing field or a section. 
@@ -59,9 +59,9 @@ To add fields to a form, use the **Fields** pane. The **Fields** pane lets you s
 6. Repeat steps 4-5 above if you want to add more fields.
 7. In the command bar, select **Save** to save the form, or select **Publish** if you want the save and make your changes visible to end-users. 
 
-## Move a field on a form
+## Move fields on a form
 
-### Move a field on a form using drag and drop
+### Move fields on a form using drag and drop
 
 1. Open the form designer to create or edit a form. More information: [Create a form](create-and-edit-forms.md#create-a-form) and [Edit a form](create-and-edit-forms.md#edit-a-form)
 2. In the form preview, select the field that you want to move and drag it. As you drag the field on the form preview, you will see drop targets where you can move the field. 
@@ -72,7 +72,7 @@ To add fields to a form, use the **Fields** pane. The **Fields** pane lets you s
 4. Repeat steps 2-3 above if you want to move more fields.
 5. In the command bar, select **Save** to save the form, or select **Publish** if you want the save and make your changes visible to end-users. 
 
-### Move a field on a form using cut and paste
+### Move fields on a form using cut and paste
 
 1. Open the form designer to create or edit a form. More information: [Create a form](create-and-edit-forms.md#create-a-form) and [Edit a form](create-and-edit-forms.md#edit-a-form)
 2. In the form preview, select the field that you want to move.
@@ -85,7 +85,7 @@ To add fields to a form, use the **Fields** pane. The **Fields** pane lets you s
 6. Repeat steps 2-5 above if you want to move more fields.
 7. In the command bar, select **Save** to save the form, or select **Publish** if you want the save and make your changes visible to end-users. 
 
-## Remove a field on a form
+## Remove fields on a form
 1. Open the form designer to create or edit a form. More information: [Create a form](#create-a-form) and [Edit a form](#edit-a-form)
 2. In the form preview, select the field that you want to remove from the form. 
 3. In the command bar, select **Delete**. <br />
