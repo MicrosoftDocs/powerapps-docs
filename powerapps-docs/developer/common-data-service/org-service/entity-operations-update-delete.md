@@ -17,16 +17,6 @@ search.app:
 ---
 # Update and Delete entities using the Organization Service
 
-<!-- 
-Adding parity with Web API topics
-
-include information from https://docs.microsoft.com/dynamics365/customer-engagement/developer/org-service/perform-specialized-operations-using-update 
-
-https://docs.microsoft.com/dynamics365/customer-engagement/developer/org-service/use-early-bound-entity-classes-create-update-delete
-https://docs.microsoft.com/dynamics365/customer-engagement/developer/org-service/manage-duplicate-detection-create-update
-
--->
-
 This topic will include examples using both late-bound and early-bound programming styles. More information: [Early-bound and Late-bound programming using the Organization service](early-bound-programming.md)
 
 Each of the examples uses a `svc` variable that represents an instance of a class that implements the methods in the <xref:Microsoft.Xrm.Sdk.IOrganizationService> interface. For information about the classes that support this interface see [IOrganizationService Interface](iorganizationservice-interface.md).
