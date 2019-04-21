@@ -29,22 +29,26 @@ search.app:
 Use the new form designer to create and design forms for model-driven apps.
 
 > [!IMPORTANT]
-> The new model-driven form designer currently supports creating and editing main forms only. More information: [Form types](types-forms.md)
+> The new model-driven form designer currently supports creating and editing main forms, quick create forms and quick view forms. More information: [Form types](types-forms.md)
 
 ## Create a form 
 1. Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). 
 2. On the left navigation pane, expand **Data**, and then select **Entities**. 
 3. Select an entity, such as the account entity, and then select the **Forms** tab. 
-4. Select **Add form**, and then select **Main form (preview)**.     
+4. Select **Add form**, and then select one of the following
+    - **Main form (preview)**.     
     The contents of the new form are filled using the existing main form definition. If multiple main forms exist, the form at the top of the list in the form order is used to fill the new form. 
+    - **Quick create form (preview)**
+    - **Quick view form (preview)**
 5. Select **Save** to save the form, or select **Publish** if you want to save and make your changes visible to app users.  
 
 ## Edit a form 
 1. Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). 
 2. On the left navigation pane, expand **Data**, and then select **Entities**. 
 3. Select an entity, such as the account entity, and then select the **Forms** tab.
-4. Select the form that you want to edit, and then select **Edit form (preview)**.  
-   Alternatively, select **...** next to the form you want, and then select **Edit form (preview)**. 
+4. Select the form name that you want to edit.  
+    - You can also select the row for a form, and then in the command bar, select **Edit form (preview)**
+    - Another alternative is to select **...** next to the form name, and then in the menu, select **Edit form (preview)**. 
 5. Select **Save** to save the form, or select **Publish** if you want to save and make your changes visible to app users. 
 
 ## Use the tree view 
