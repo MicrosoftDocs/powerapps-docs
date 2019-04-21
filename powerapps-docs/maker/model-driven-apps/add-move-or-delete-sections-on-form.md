@@ -40,7 +40,7 @@ To add sections to a form, use the **Layouts** pane.
     - Sections can also be dropped in the empty area within a tab. In this case the section will be added in an available space so as to evenly distribute sections across the tab columns.
     - Hovering over a tab header when dragging a section changes the currently selected tab, allowing you to add the section to a different tab.   
 5. Repeat steps 3-4 above if you want to add more sections.
-6. In the command bar, select **Save** to save the form, or select **Publish** if you want the save and make your changes visible to end-users. 
+6. In the command bar, select **Save** to save the form, or select **Publish** if you want to save and make your changes visible to end-users. 
 
 ### Add sections to a form using selection 
 
@@ -52,8 +52,8 @@ To add sections to a form, use the **Layouts** pane.
 3. In the command bar, select **Add control**, or in the left pane, select **Layouts**.  
 4. In the **Layouts** pane, select a section control to add it to the form. 
     - Alternatively, select **...** next to the section control you want, and then select **Add to selected tab**. 
-6. Repeat steps 4-5 above if you want to add more sections.
-7. In the command bar, select **Save** to save the form, or select **Publish** if you want the save and make your changes visible to end-users. 
+5. Repeat steps 2-4 above if you want to add more sections.
+6. In the command bar, select **Save** to save the form, or select **Publish** if you want to save and make your changes visible to end-users. 
 
 ## Move sections on a form
 
@@ -67,7 +67,7 @@ To add sections to a form, use the **Layouts** pane.
     - Sections can also be dropped in the empty area within a tab. In this case the section will be added in an available space so as to evenly distribute sections across the tab columns.
     - Hovering over a tab header when dragging a section changes the currently selected tab, allowing you to add the section to a different tab.   
 4. Repeat steps 2-3 above if you want to move more sections.
-5. In the command bar, select **Save** to save the form, or select **Publish** if you want the save and make your changes visible to end-users. 
+5. In the command bar, select **Save** to save the form, or select **Publish** if you want to save and make your changes visible to end-users. 
 
 ### Move sections on a form using cut and paste
 
@@ -89,7 +89,7 @@ To add sections to a form, use the **Layouts** pane.
 2. In the form preview, select the section that you want to delete from the form. 
 3. In the command bar, select **Delete**.
 4. Repeat steps 2-3 above if you want to delete more sections.
-4. In the command bar, select **Save** to save the form, or select **Publish** if you want the save and make your changes visible to end-users. 
+4. In the command bar, select **Save** to save the form, or select **Publish** if you want to save and make your changes visible to end-users. 
 
     > [!NOTE]
     >   -  If you delete a section by mistake, in the command bar, select **Undo** to revert the form to its previous state. 
@@ -99,4 +99,5 @@ To add sections to a form, use the **Layouts** pane.
 [Overview of the model-driven form designer](form-designer-overview.md)  
 [Create and edit forms using the form designer](create-and-edit-forms.md)  
 [Add, move or delete fields on a form using form designer](add-move-or-delete-fields-on-form.md)  
+[Add, move or delete tabs on a form using form designer](add-move-or-delete-tabs-on-form.md)  
 [Create and edit fields](../common-data-service/create-edit-field-portal.md)
