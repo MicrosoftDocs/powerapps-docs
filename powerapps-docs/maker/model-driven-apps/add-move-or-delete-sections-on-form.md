@@ -34,14 +34,13 @@ To add sections to a form, use the **Layouts** pane.
 1. Open the form designer to create or edit a form. 
     - More information: [Create a form](create-and-edit-forms.md#create-a-form) or [Edit a form](create-and-edit-forms.md#edit-a-form)
 2. In the command bar, select **Add control**, or in the left pane, select **Layouts**. 
-3. In the **Layouts** pane, , select a section control to add it to the form.  
-4. In the **Layouts** pane, select a section control and drag it onto the form preview. As you drag the section on the form preview, you will see drop targets where you can add the section. 
-5. Drop the section in the location you want.
+3. In the **Layouts** pane, select a section control and drag it onto the form preview. As you drag the section on the form preview, you will see drop targets where you can add the section. 
+4. Drop the section in the location you want.
     - Sections can be dropped before or after any existing section.
     - Sections can also be dropped in the empty area within a tab. In this case the section will be added in an available space so as to evenly distribute sections across the tab columns.
     - Hovering over a tab header when dragging a section changes the currently selected tab, allowing you to add the section to a different tab.   
-6. Repeat steps 3-5 above if you want to add more sections.
-7. In the command bar, select **Save** to save the form, or select **Publish** if you want the save and make your changes visible to end-users. 
+5. Repeat steps 3-4 above if you want to add more sections.
+6. In the command bar, select **Save** to save the form, or select **Publish** if you want the save and make your changes visible to end-users. 
 
 ### Add sections to a form using selection 
 
