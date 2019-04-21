@@ -1,7 +1,7 @@
 ---
 title: "Create and edit forms using the model-driven form designer | MicrosoftDocs"
 ms.custom: ""
-ms.date: 01/07/2019
+ms.date: 04/21/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -69,4 +69,5 @@ You can expand or collapse nodes in the tree view to see or hide the elements wi
 [Add, move or delete fields on a form using form designer](add-move-or-delete-fields-on-form.md)  
 [Add, move or delete sections on a form using form designer](add-move-or-delete-sections-on-form.md)  
 [Add, move or delete tabs on a form using form designer](add-move-or-delete-tabs-on-form.md)  
+[Using the tree view in the form designer](using-tree-view-on-form.md)  
 [Create and edit fields](../common-data-service/create-edit-field-portal.md)
