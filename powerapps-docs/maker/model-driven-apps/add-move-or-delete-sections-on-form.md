@@ -92,8 +92,10 @@ To add sections to a form, use the **Layouts** pane.
 4. In the command bar, select **Save** to save the form, or select **Publish** if you want to save and make your changes visible to end-users. 
 
     > [!NOTE]
-    >   -  If you delete a section by mistake, in the command bar, select **Undo** to revert the form to its previous state. 
-    >   -  You can't delete a section that contains a field that is required or locked. 
+    >   - If you delete a section by mistake, in the command bar, select **Undo** to revert the form to its previous state. 
+    >   - You can't delete a section that contains a field that is required or locked. 
+    >   - You can't delete a section that is locked. 
+    >   - A tab needs to have at least one section in each tab column. If you delete the last remaining section in a tab columm a new section will be automatically added. 
 
 ## See also
 [Overview of the model-driven form designer](form-designer-overview.md)  
