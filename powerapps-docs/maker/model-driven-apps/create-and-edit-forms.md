@@ -47,78 +47,6 @@ Use the new form designer to create and design forms for model-driven apps.
    Alternatively, select **...** next to the form you want, and then select **Edit form (preview)**. 
 5. Select **Save** to save the form, or select **Publish** if you want to save and make your changes visible to app users. 
 
-## Add and remove fields 
-To add or remove fields from a form, use the **Fields** pane. The **Fields** pane lets you search and filter to help you quickly find fields. It also includes the option to show only unused fields. 
-
-### Add a field
-1. Open the form designer to create or edit a form. More information: [Create a form](#create-a-form) and [Edit a form](#edit-a-form)
-2. On the form preview, select another existing field or a section. 
-    - When you select an existing field, the new field is added below the existing field. 
-    - When you select a section, the new field is added in an available space so as to evenly distribute fields across the columns. 
-3. Select **Add field**, or in the left pane, select **Fields**.  
-   The **Fields** pane is open by default when the form designer is opened. 
-4. In the **Fields** pane, search, filter, or scroll to find the field you want to add. 
-   If you can't find a field, it might already be on the form. Clear **Show only unused fields** to view all fields, including those already added to the form. 
-5. In the **Fields** pane, select a field to add it to the form. <br />
-   Alternatively, select **...** next to the field you want, and then select **Add to selected section**. 
-6. Select **Save** to save the form, or select **Publish** if you want the save and make your changes visible to end-users. 
-
-### Remove a field
-1. Open the form designer to create or edit a form. More information: [Create a form](#create-a-form) and [Edit a form](#edit-a-form)
-2. On the form preview, select the field that you want to remove from the form. 
-3. Select **Delete**. <br />
-4. Select **Save**. 
-
-    > [!NOTE]
-    >   -  If you remove a field by mistake, select **Undo** to revert the form to its previous state. 
-    >   -  You can't remove a field that is required or locked. 
-
-## Add and remove tabs and sections 
-To add or remove a tab or section on a form, use the **Layouts** pane. 
-
-### Add a tab
-1. Open the form designer to create or edit a form. More information: [Create a form](#create-a-form) and [Edit a form](#edit-a-form) 
-2. On the form preview, select another existing tab or the form. 
-    - When you select an existing tab, the new tab will be added to the right of the existing tab. 
-    - When you select the form, the new tab will be added as the right-most tab on the form. 
-3. Select **Add control**, or in the left pane, select **Layouts**.  
-4. In the **Layouts** pane, select a tab control, such as **2-column tab**, to add it to the form. <br />
-   Alternatively, select **...** next to the tab control you want, and then select **Add to form**.  
-5. Select **Save**. 
-
-
-### Remove a tab
-1. Open the form designer to create or edit a form. More information: [Create a form](#create-a-form) and [Edit a form](#edit-a-form)
-2. In the form preview, select the tab that you want to delete, and then select **Delete**. 
-3. Select **Save**. 
-    > [!NOTE]
-    >    - When you delete a tab by mistake, select **Undo** to revert the form to its previous state. 
-    >     - A form must have at least one tab. You can't delete a tab that is the only tab on the form. 
-    >    - You can't delete a tab that has locked sections. 
-    >    - You can't delete a tab that has sections with required or locked fields. 
-
-### Add a section 
-1. Open the form designer to create or edit a form. More information: [Create a form](#create-a-form) and [Edit a form](#edit-a-form)
-2. In the form preview, select another existing section or a tab. 
-    - If you select an existing section, the new section is added below the existing section. 
-    - If you select a tab, the new section is added at the bottom of the first column of the tab. 
-3. Select **Add control**, or in the left pane, select **Layouts**.
-4. In the **Layouts** pane, select a section control to add it to the form. <br />
-   Alternatively, select **...** next to the section control you want, and then select **Add to selected tab**.      
-5. Select **Save**. 
- 
-
-### Delete a section 
-1. Open the form designer to create or edit a form. More information: [Create a form](#create-a-form) and [Edit a form](#edit-a-form) 
-2. In the form preview, select the section that you want to delete, and then select **Delete**.  
-3. Select **Save**. 
-    > [!NOTE]
-    >    - If you delete a section by mistake, select **Undo** to revert the form to its previous state. 
-    >    - A tab needs to have at least one section in each column.  
-    >    - You can't delete a section if it is the only one in the tab column. 
-    >    - You can't delete a section that is locked. 
-    >    - You can't delete a section that has required or locked fields. 
- 
 ## Use the tree view 
 The **Tree View** pane displays a visual hierarchy of the controls and fields on the form. The icons in the tree view help you quickly identify the type of field or control. 
 
@@ -133,5 +61,8 @@ You can expand or collapse nodes in the tree view to see or hide the elements wi
 2. In the left pane, select **Tree View**.
 
 ## See also
-[Overview of the model-driven form designer](form-designer-overview.md) <br />
+[Overview of the model-driven form designer](form-designer-overview.md)  
+[Add, move or delete fields on a form using form designer](add-move-or-delete-fields-on-form.md)  
+[Add, move or delete sections on a form using form designer](add-move-or-delete-sections-on-form.md)  
+[Add, move or delete tabs on a form using form designer](add-move-or-delete-tabs-on-form.md)  
 [Create and edit fields](../common-data-service/create-edit-field-portal.md)
