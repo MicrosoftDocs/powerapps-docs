@@ -27,7 +27,7 @@ search.app:
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 ## Add a field
-To add fields from a form, use the **Fields** pane. The **Fields** pane lets you search and filter to help you quickly find fields. It also includes the option to show only unused fields. 
+To add fields to a form, use the **Fields** pane. The **Fields** pane lets you search and filter to help you quickly find fields. It also includes the option to show only unused fields. 
 
 ### Add a field using drag and drop
 
@@ -69,7 +69,7 @@ To add fields from a form, use the **Fields** pane. The **Fields** pane lets you
     - Fields can be dropped before or after any existing field.
     - Fields can also be dropped in the empty area within a section. In this case the field will be added in an available space so as to evenly distribute fields across the columns.
     - Hovering over a tab header when dragging a field changes the currently selected tab, allowing you to add the field to a different tab.   
-4. Repeat steps 3-5 above if you want to move more fields.
+4. Repeat steps 2-3 above if you want to move more fields.
 5. In the command bar, select **Save** to save the form, or select **Publish** if you want the save and make your changes visible to end-users. 
 
 ### Move a field using cut and paste
@@ -79,9 +79,9 @@ To add fields from a form, use the **Fields** pane. The **Fields** pane lets you
 3. In the command bar, select **Cut**.
 4. In the form preview, select another existing field or a section. You can also switch to a different tab if needed.
 5. In the command bar, select **Paste** or click on the chevron and then select **Paste before**.
-    - When you select **Paste**, the new field is pasted after the existing field. 
-    - When you select **Paste before**, the new field is pasted before the existing field.
-    - When you select a section, the new field is added in an available space so as to evenly distribute fields across the columns. The **Paste before** action is not applicable and therefore not available in this case.
+    - When you select **Paste**, the field being moved is pasted after the existing field. 
+    - When you select **Paste before**, the field being moved is pasted before the existing field.
+    - When you select a section, the field being moved is added in an available space so as to evenly distribute fields across the columns. The **Paste before** action is not applicable and therefore not available in this case.
 6. Repeat steps 2-5 above if you want to move more fields.
 7. In the command bar, select **Save** to save the form, or select **Publish** if you want the save and make your changes visible to end-users. 
 
@@ -89,7 +89,7 @@ To add fields from a form, use the **Fields** pane. The **Fields** pane lets you
 1. Open the form designer to create or edit a form. More information: [Create a form](#create-a-form) and [Edit a form](#edit-a-form)
 2. In the form preview, select the field that you want to remove from the form. 
 3. In the command bar, select **Delete**. <br />
-4. In the command bar, select **Save**. 
+4. In the command bar, select **Save** to save the form, or select **Publish** if you want the save and make your changes visible to end-users. 
 
     > [!NOTE]
     >   -  If you remove a field by mistake, in the command bar, select **Undo** to revert the form to its previous state. 
