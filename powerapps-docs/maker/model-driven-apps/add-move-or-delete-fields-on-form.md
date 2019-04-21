@@ -1,5 +1,5 @@
 ---
-title: "Add, move or delete fields on a form using the model-driven form designer | MicrosoftDocs"
+title: "Add, move or delete fields on a form using the form designer | MicrosoftDocs"
 ms.custom: ""
 ms.date: 04/21/2019
 ms.reviewer: ""
@@ -23,7 +23,7 @@ search.app:
   - D365CE
 ---
 
-# Add, move or delete fields on a form using the model-driven form designer 
+# Add, move or delete fields on a form using the form designer 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 ## Add fields to a form
@@ -93,14 +93,16 @@ To add fields to a form, use the **Fields** pane. The **Fields** pane lets you s
 1. Open the form designer to create or edit a form. 
     - More information: [Create a form](create-and-edit-forms.md#create-a-form) or [Edit a form](create-and-edit-forms.md#edit-a-form)
 2. In the form preview, select the field that you want to delete from the form. 
-3. In the command bar, select **Delete**. <br />
-4. In the command bar, select **Save** to save the form, or select **Publish** if you want the save and make your changes visible to end-users. 
+3. In the command bar, select **Delete**. 
+4. Repeat steps 2-3 above if you want to delete more fields.
+5. In the command bar, select **Save** to save the form, or select **Publish** if you want the save and make your changes visible to end-users. 
 
     > [!NOTE]
     >   -  If you delete a field by mistake, in the command bar, select **Undo** to revert the form to its previous state. 
     >   -  You can't delete a field that is required or locked. 
 
 ## See also
-[Overview of the model-driven form designer](form-designer-overview.md) <br />
-[Create and edit forms using the form designer](create-and-edit-forms.md) <br />
+[Overview of the model-driven form designer](form-designer-overview.md)  
+[Create and edit forms using the form designer](create-and-edit-forms.md)  
+[Add, move or delete sections on a form using form designer](add-move-or-delete-sections-on-form.md)  
 [Create and edit fields](../common-data-service/create-edit-field-portal.md)
