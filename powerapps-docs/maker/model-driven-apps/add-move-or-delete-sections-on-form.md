@@ -27,7 +27,10 @@ search.app:
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 ## Add sections to a form
-To add sections to a form, use the **Layouts** pane.  
+To add sections to a form, use the **Layouts** pane. 
+
+  > [!NOTE]
+  >   - Sections can only be added on main forms and quick view forms. More information: [Form types](types-forms.md)
 
 ### Add sections to a form using drag and drop
 
@@ -92,6 +95,7 @@ To add sections to a form, use the **Layouts** pane.
 4. In the command bar, select **Save** to save the form, or select **Publish** if you want to save and make your changes visible to end-users. 
 
     > [!NOTE]
+    >   - Sections can only be deleted on main forms and quick view forms. More information: [Form types](types-forms.md)
     >   - If you delete a section by mistake, in the command bar, select **Undo** to revert the form to its previous state. 
     >   - You can't delete a section that contains a field that is required or locked. 
     >   - You can't delete a section that is locked. 
