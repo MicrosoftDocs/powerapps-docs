@@ -106,5 +106,6 @@ To add sections to a form, use the **Layouts** pane.
 [Create and edit forms using the form designer](create-and-edit-forms.md)  
 [Add, move or delete fields on a form using form designer](add-move-or-delete-fields-on-form.md)  
 [Add, move or delete tabs on a form using form designer](add-move-or-delete-tabs-on-form.md)  
+[Properties available in the form designer](form-designer-properties.md)  
 [Using the tree view in the form designer](using-tree-view-on-form.md)  
 [Create and edit fields](../common-data-service/create-edit-field-portal.md) 
