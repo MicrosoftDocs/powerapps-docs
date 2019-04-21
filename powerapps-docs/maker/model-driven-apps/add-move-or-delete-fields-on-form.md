@@ -45,6 +45,9 @@ To add fields to a form, use the **Fields** pane. The **Fields** pane lets you s
 6. Repeat steps 3-5 above if you want to add more fields.
 7. In the command bar, select **Save** to save the form, or select **Publish** if you want to save and make your changes visible to end-users. 
 
+    > [!NOTE]
+    >   -  Adding fields to the header and footer using drag and drop is not yet supported. 
+
 ### Add fields to a form using selection 
 
 1. Open the form designer to create or edit a form. 
@@ -74,6 +77,9 @@ To add fields to a form, use the **Fields** pane. The **Fields** pane lets you s
     - Hovering over a tab header when dragging a field changes the currently selected tab, allowing you to add the field to a different tab.   
 4. Repeat steps 2-3 above if you want to move more fields.
 5. In the command bar, select **Save** to save the form, or select **Publish** if you want to save and make your changes visible to end-users. 
+
+    > [!NOTE]
+    >   -  Moving fields in the header and footer using drag and drop is not yet supported. 
 
 ### Move fields on a form using cut and paste
 
