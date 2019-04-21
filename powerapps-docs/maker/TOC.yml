@@ -776,7 +776,7 @@
           - name: "Properties in the form designer"
             href: ./model-driven-apps/form-designer-properties.md 
           - name: "Using the tree view"
-            href: ./model-driven-apps/using-tree-view-on-form.md.md    
+            href: ./model-driven-apps/using-tree-view-on-form.md  
         - name: Type of forms
           href: ./model-driven-apps/types-forms.md
           items:
