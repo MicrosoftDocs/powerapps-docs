@@ -13,7 +13,7 @@ ms.author: "nabuthuk"
 
 Custom components are a type of solution component, which means they can be included in a solution and installed in different environments. More information: [Package and distribute extensions using solutions](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/package-distribute-extensions-use-solutions).
 
-You add custom components by including them in a solution and then importing it into the system. Once they are in the system, admin and system customizers can configure form fields, sub-grids, views, and dashboard sub-grids to use them in place of default controls.
+You add custom components by including them in a solution and then importing it into the system. Once they are in the system, admin and system customizers can configure form fields, sub-grids, views, and dashboard sub-grids to use them in place of default component.
 
 In Common Data Service, data about custom components is stored in the `CustomControl` and `CustomControlResource` entities.
 The `CustomControl` entity has the following important attributes:
@@ -36,7 +36,7 @@ Manifest is the metadata file that defines a component. It is an XML document th
 - A list of web resource files that the component needs. 
 - The name of a JavaScript or TypeScript function in the component implementation library that will return an object that applies the required component interface.
 
-When someone configures a component in the application, the data in the manifest filters out available controls so that only valid controls for the context are available for configuration. The properties defined in the manifest for a component are rendered as configuration fields so that the person configuring the component can specify values. These property values are then available to your component function at run time. More information: [Manifest file reference](manifest-schema-reference/index.md)
+When someone configures a component in the application, the data in the manifest filters out available component so that only valid component for the context are available for configuration. The properties defined in the manifest for a component are rendered as configuration fields so that the person configuring the component can specify values. These property values are then available to your component function at run time. More information: [Manifest file reference](manifest-schema-reference/index.md)
 
 ## component implementation library
 
@@ -84,7 +84,7 @@ You should define a [destroy](reference/control/destroy.md) method in your objec
 
 ## Resources
 
-Each custom component should have a resource file to construct its visualization. You can define a resource file in the manifest. The resource node in the manifest file refers to the webresources that controls require to implement its visualization. More information: [Resources](manifest-schema-reference/resources.md)
+Each custom component should have a resource file to construct its visualization. You can define a resource file in the manifest. The resource node in the manifest file refers to the webresources that component require to implement its visualization. More information: [Resources](manifest-schema-reference/resources.md)
 
 ### Related topics
 
