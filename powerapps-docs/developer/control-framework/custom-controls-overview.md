@@ -13,7 +13,7 @@ ms.author: "nabuthuk"
 
 Custom controls are a type of solution component, which means they can be included in a solution and installed in different environments. More information: [Package and distribute extensions using solutions](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/package-distribute-extensions-use-solutions).
 
-Custom controls created using the **PowerApps component framework** enables a developer to add custom visualization and logic for various UI elements. You can view custom controls in the solution explorer, but there is no way to add or edit them in the application.
+Custom controls created using the PowerApps component framework enables a developer to add custom visualization and logic for various UI elements. You can view custom controls in the solution explorer, but there is no way to add or edit them in the application.
 
 You add custom controls by including them in a solution and then importing it into the system. Once they are in the system, admin and system customizers can configure form fields, sub-grids, views, and dashboard sub-grids to use them in place of default controls.
 

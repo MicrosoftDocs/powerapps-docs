@@ -11,7 +11,7 @@ ms.author: "nabuthuk"
 
 # Implementing Navigation API  control
 
-This sample control explores the various methods available as part of the **PowerApps component framework** navigation API. In this sample, you create a series of input elements of type buttons which calls into the respective methods of the navigation API that matches with the value displayed.  
+This sample control explores the various methods available as part of the PowerApps component framework navigation API. In this sample, you create a series of input elements of type buttons which calls into the respective methods of the navigation API that matches with the value displayed.  
 
 > [!div class="mx-imgBorder"]
 > ![Navigation API Control](../media/navigation-api-control.png "Navigation API Control")
