@@ -38,9 +38,9 @@ To add tabs to a form, use the **Layouts** pane.
     - More information: [Create a form](create-and-edit-forms.md#create-a-form) or [Edit a form](create-and-edit-forms.md#edit-a-form)
 2. In the command bar, select **Add control**, or in the left pane, select **Layouts**. 
 3. In the **Layouts** pane, select a tab control and drag it onto the form preview. As you drag the tab on the form preview, you will see drop targets where you can add the tab. 
+4. Drop the tab in the location you want.
     - Tabs can be dropped before or after any existing tabs by hovering over the tab headers.
     - Tabs can also be dropped before or after the current tab by hovering over the left or right edge of the current tab.
-4. Drop the tab in the location you want.
 5. Repeat steps 3-4 above if you want to add more tabs.
 6. In the command bar, select **Save** to save the form, or select **Publish** if you want to save and make your changes visible to end-users. 
 
@@ -63,10 +63,10 @@ To add tabs to a form, use the **Layouts** pane.
 
 1. Open the form designer to create or edit a form. 
     - More information: [Create a form](create-and-edit-forms.md#create-a-form) or [Edit a form](create-and-edit-forms.md#edit-a-form)
-2. In the form preview, select the tab that you want to move and drag it. As you drag the tab on the form preview, you will see drop targets where you can move the tab to. 
+2. In the form preview, click on the tab header of the tab that you want to move and initiate the drag action. As you drag the tab on the form preview, you will see drop targets where you can move the tab to. 
+3. Drop the tab in the location you want.
     - Tabs can be dropped before or after any existing tabs by hovering over the tab headers.
     - Tabs can also be dropped before or after the current tab by hovering over the left or right edge of the current tab.
-3. Drop the tab in the location you want.
 4. Repeat steps 2-3 above if you want to move more tabs.
 5. In the command bar, select **Save** to save the form, or select **Publish** if you want to save and make your changes visible to end-users. 
 
