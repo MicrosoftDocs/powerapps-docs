@@ -26,6 +26,9 @@ search.app:
 # Add, move or delete sections on a form using the form designer 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
+> [!NOTE]
+> When adding or moving sections using drag and drop be aware that the form preview is responsive and may be rendering multiple tab columns as stacked. To ensure that the section being added or moved is in the correct tab column, drop or paste it anchored to another section that is already in that tab column.
+
 ## Add sections to a form
 To add sections to a form, use the **Layouts** pane. 
 
