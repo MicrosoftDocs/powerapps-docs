@@ -142,7 +142,7 @@ To add a custom control like data-set control or simple table control to a grid 
 
 ## Telemetry
 
-The feature team is aggregating anonymized telemetry in order to understand which features or capabilities in the PowerApps CLI tool are most often used by the developers. The aggregated data allows to provide the best experience to the customers by focusing on what’s truly is important.
+The feature team is aggregating anonymized telemetry in order to understand which features or capabilities in the PowerApps CLI tool are most often used by the developers. The aggregated data allows us to provide the best experience to the customers by focusing on what’s truly is important.
 
 > [!NOTE]
 > To disable the telemetry collection, run the command `pac telemetry --enable false`. To turn the telemetry back, use the command `pac telemetry --enable true`.
@@ -155,6 +155,15 @@ To uninstall the CLI tool please follow below steps:
 1. Double-click on 'Path' under 'User variable for...' section
 1. Select the row containing PowerAppsCLI path and click the Delete button on the right-hand side
 1. Click OK twice
+
+## Known Configuration Issues and Workarounds
+** Msbuild error MSB4036 ** - "1.) The name of the task in the project file is the same as the name of the task class. 2.) The task calss is public and implements the Microsoft.Build.Framework.ITask interface. 3.) The task is correctly declared with <UsingTask> in the project file, or in the *.tasks files located in the <path> directory"
+
+**Resolution:**
+1. Open Visual Studio Installer 
+1. For VS 2017, click on modify 
+1. Click on Individual Components
+1. Under Code Tools, check "NuGet targets & Build Tasks"
 
 ### See also
 
