@@ -157,7 +157,7 @@ To uninstall the CLI tool please follow below steps:
 1. Click OK twice
 
 ## Known Configuration Issues and Workarounds
-** Msbuild error MSB4036: ** 
+**Msbuild error MSB4036:** 
 "1.) The name of the task in the project file is the same as the name of the task class. 2.) The task calss is public and implements the Microsoft.Build.Framework.ITask interface. 3.) The task is correctly declared with <UsingTask> in the project file, or in the *.tasks files located in the <path> directory"
 
 **Resolution:**
