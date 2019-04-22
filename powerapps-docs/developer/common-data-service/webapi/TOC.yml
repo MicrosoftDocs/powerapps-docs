@@ -20,7 +20,7 @@
   href: web-api-types-operations.md
 - name: Perform operations
   items:
-  - name: Get started
+  - name: Get started with performing operations
     href: perform-operations-web-api.md
   - name: Compose HTTP requests and handle errors
     href: compose-http-requests-handle-errors.md
