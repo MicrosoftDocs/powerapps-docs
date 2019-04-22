@@ -2,19 +2,15 @@
 title: "Use the Web API with metadata (Common Data Service) | Microsoft Docs"
 description: "The section provides guidance about how to use the Web API with the entity types included in Web API Metadata EntityType Reference."
 ms.custom: ""
-ms.date: 11/04/2018
+ms.date: 04/22/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-applies_to: 
-  - "Dynamics 365 (online)"
-ms.assetid: a0edc029-c6db-48ac-9538-b0270fe94440
-caps.latest.revision: 10
 author: "brandonsimons" # GitHub ID
-ms.author: "jdaly"
-manager: "amyla"
+ms.author: "susikka"
+manager: "shujoshi"
 search.audienceType: 
   - developer
 search.app: 
@@ -24,7 +20,9 @@ search.app:
 # Use the Web API with metadata
 
 You can perform any of the metadata operations with the Web API that you can perform using the organization service. This section provides guidance about how to use the Web API with the entity types included in <xref:Microsoft.Dynamics.CRM.MetadataEntityTypeIndex>.  
-  
+> [!NOTE]
+> Information under this section is also applicable to the Dynamics 365 for Customer Engagement apps users (online and on-premises).
+
  There are four entity set paths exposed to perform operations with metadata entities as described in the following table.  
   
 |Entity Set Path|Description|  
