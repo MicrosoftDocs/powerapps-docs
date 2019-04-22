@@ -104,6 +104,8 @@
     href: metadata-retrieve-detect-changes.md
   - name: Retrieve, update, and delete entities
     href: metadata-retrieve-update-delete-entities.md 
+  - name: Create an entity to send email activities
+    href: create-update-entity-emailed.md
 - name: Import data
   href: ../import-data.md #Topic is for both Web API and Organization service
 - name: Sample data
