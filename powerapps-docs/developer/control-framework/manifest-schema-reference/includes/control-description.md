@@ -15,4 +15,4 @@ applies_to:
 ms.assetid: 3768fd84-8ea1-4936-aeee-6eb7837966e7
 ---
 
-Defines the control's namespace, version and display information.
+Defines the component's namespace, version and display information.
