@@ -86,7 +86,8 @@ The Discovery service Web API supports the CORS standard for cross-origin access
   
 -   Get the details of a specific instance. If you leave out the GUID, all instances that the authenticated user has access to are returned.  
   
-    ```http  
+    ```http      
+    GET https://globaldisco.crm.dynamics.com/api/discovery/v1.0/Instances(<guid>)
     GET https://disco.crm.dynamics.com/api/discovery/v9.0/Instances(<guid>)  
     ```  
   
