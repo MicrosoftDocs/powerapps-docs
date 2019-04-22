@@ -27,6 +27,9 @@ You can use Postman to connect to your Common Data Service instance and to compo
 
 You can use a Postman environment to save a set of variables that you use to connect. These values can be accessed within Postman by using this syntax: `{{name}}`. For more information with Postman variables, see [Postman Documentation > Variables](https://www.getpostman.com/docs/v6/postman/environments_and_globals/variables).
 
+> [!NOTE]
+> [!INCLUDE[cc-d365ce-note-topic](../includes/cc-d365ce-note-topic.md)] [Set up a Postman environment (Customer Engagement)](/dynamics365/customer-engagement/developer/webapi/setup-postman-environment)
+
 ## Prerequisites
 
 * Have a PowerApps Common Data Service environment that you can connect to. 
@@ -36,12 +39,11 @@ You can use a Postman environment to save a set of variables that you use to con
 
 ## Connect with your Common Data Service environment
 
-> [!NOTE]
-> This environment uses a client ID for an application that is registered for all Common Data Service environments. 
-> 
-> You can use the `clientid` and `callback` values supplied in these instructions.  However, when building your own application, you should register your own AAD application.
-> 
-> To register your own AAD application, see the steps described in [Walkthrough: Register a Common Data Service app with Azure Active Directory](../walkthrough-register-app-azure-active-directory.md).
+This environment uses a client ID for an application that is registered for all Common Data Service environments. 
+ 
+You can use the `clientid` and `callback` values supplied in these instructions.  However, when building your own application, you should register your own Azure Active Directory (Azure AD) application.
+ 
+To register your own Azure AD application, see the steps described in [Walkthrough: Register a Common Data Service app with Azure Active Directory](../walkthrough-register-app-azure-active-directory.md).
 
 Use these steps to create a Postman environment that you can use to connect with your Common Data Service instance:
 
