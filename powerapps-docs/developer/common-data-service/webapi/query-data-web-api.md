@@ -14,6 +14,7 @@ ms.assetid: fc3ade34-9c4e-4c33-88a4-aa3842c5eee1
 caps.latest.revision: 78
 author: "brandonsimons"
 ms.author: "jdaly"
+ms.reviewer: "susikka"
 manager: "annbe"
 search.audienceType: 
   - developer

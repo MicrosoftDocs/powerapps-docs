@@ -14,6 +14,7 @@ ms.assetid: 8105ff3d-4c8e-4f86-bbb9-e37bdb4c272e
 caps.latest.revision: 14
 author: "brandonsimons" # GitHub ID
 ms.author: "jdaly"
+ms.reviewer: "susikka"
 manager: "kvivek"
 search.audienceType: 
   - developer

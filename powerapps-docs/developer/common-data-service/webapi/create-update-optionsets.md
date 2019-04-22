@@ -13,6 +13,7 @@ applies_to:
 caps.latest.revision: 15
 author: "brandonsimons" # GitHub ID
 ms.author: "jdaly"
+ms.reviewer: "susikka"
 manager: "ryjones"
 search.audienceType: 
   - developer

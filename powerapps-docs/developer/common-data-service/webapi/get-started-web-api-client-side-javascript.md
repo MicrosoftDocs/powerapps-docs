@@ -11,6 +11,7 @@ ms.topic: "get-started-article"
 ms.assetid: get-started-dynamics-365-web-api-client-side-JavaScript
 author: "brandonsimons" # GitHub ID
 ms.author: "kvivek"
+ms.reviewer: "susikka"
 manager: "annbe"
 search.audienceType: 
   - developer
