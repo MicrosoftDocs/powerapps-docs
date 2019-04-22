@@ -40,11 +40,6 @@ The `of-type` attribute value must be one of the following:
 |--|--|
 |[manifest](manifest.md)|[!INCLUDE [manifest-description](includes/manifest-description.md)]|
 
-## Child Elements
-
-|Element|Description|Occurrences|
-|--|--|--|
-|[manifest](manifest.md)|[!INCLUDE [manifest-description](includes/manifest-description.md)]|0 or more|
 
 ## Example
 
