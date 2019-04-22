@@ -93,9 +93,7 @@ export class TSIncrementControl implements ComponentFramework.StandardControl<II
 	 * Button Event handler for the button created as part of this control
 	 * @param event
 	 */
-	private onButtonClick(event: Event): void {
-		this._value = this._value + 1;
-		this._notifyOutputChanged();
+	private onButtonClick(event: Event): void {this._value = this._value + 1; this._notifyOutputChanged();
 	}
 	/**
 	 * Input Blur Event handler for the input created as part of this control

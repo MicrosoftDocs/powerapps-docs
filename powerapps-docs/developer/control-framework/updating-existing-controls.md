@@ -1,6 +1,6 @@
 ---
-title: Update existing custom controls using PowerApps component framework Tooling| Microsoft Docs
-description: Update controls using the PowerApps component framework Tooling
+title: Update existing custom components using PowerApps component framework Tooling| Microsoft Docs
+description: Update components using the PowerApps component framework Tooling
 keywords: PowerApps component framework, Custom component, component Framework
 ms.author: nabuthuk
 manager: kvivek
@@ -17,7 +17,7 @@ If you are a PowerApps component framework Private Preview participant and have 
 
 ## Creating an empty project
 
-Use the PowerApps CLI to create a new empty project for your custom component. More information [Create Controls using tooling](create-custom-controls-using-pcf.md).
+Use the PowerApps CLI to create a new empty project for your custom component. More information [Create components using tooling](create-custom-controls-using-pcf.md).
 Once the project has been created migrate your custom component source to the new project:
 
 1. Copy or replace the component source from the old source file into **index.ts**.

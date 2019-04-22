@@ -141,7 +141,8 @@ Follow the steps below to create and import a [solution](https://docs.microsoft.
            </PropertyGroup>
       ```
 
-  > You can also enable additional solution packaging [capabilities](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/compress-extract-solution-file-solutionpackager) by adding any of the property group elements below:
+    > [!NOTE]
+    > You can also enable additional solution packaging [capabilities](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/compress-extract-solution-file-solutionpackager) by adding any of the property group elements below:
 
      ```XML
        <PropertyGroup>
