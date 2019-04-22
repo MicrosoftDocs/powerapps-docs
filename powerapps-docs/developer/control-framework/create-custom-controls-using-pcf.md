@@ -139,14 +139,14 @@ If you would like your project build to emit a managed solution or both managed 
   </PropertyGroup>'
   
 You can also enable additional solution packaging [capabilities] (https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/compress-extract-solution-file-solutionpackager) by adding any of the property group elements below:
- '<PropertyGroup>'
-'   <SolutionPackageErrorLevel />'
-'   <SolutionPackageEnableLocalization />'
-'   <SolutionPackagerWorkingDirectory />'
-'   <SolutionPackageLogFilePath />'
-'    <SolutionPackageZipFilePath />'
-'    <SolutionPackageMapFilePath />'
-'  </PropertyGroup>'
+<PropertyGroup>
+   <SolutionPackageErrorLevel />
+   <SolutionPackageEnableLocalization />
+   <SolutionPackagerWorkingDirectory />
+   <SolutionPackageLogFilePath />
+   <SolutionPackageZipFilePath />
+   <SolutionPackageMapFilePath />
+</PropertyGroup>
 
 5. The generated solution zip file is located in `\bin\debug\`.
 6. You should manually [import the solution](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/customize/import-update-export-solutions) using the web portal once the zip file is ready.
