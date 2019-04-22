@@ -228,7 +228,7 @@
           href: reference/webapi/retrieverecord.md
         - name: updateRecord
           href: reference/webapi/updaterecord.md
-    - name: Manifest Schema 
+    - name: Manifest schema reference
       href: manifest-schema-reference/index.md
       items:
       - name: code

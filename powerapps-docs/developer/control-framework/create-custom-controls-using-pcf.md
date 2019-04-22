@@ -54,12 +54,12 @@ To get started, open a new Developer Command Prompt for VS 2017 after installing
  `pac pcf init --namespace <specify your namespace here> --name <put component name here> --template <component type>`
  
    > [!NOTE]
-   > Today we offer two types of controls **field** and **dataset**.
+   > Today we offer two types of components **field** and **dataset**.
 
 4. To retrieve all the required project dependencies, run the command `npm install`.
 5. Open your project folder (`C:\Users\<your name>\Documents\My_PCF_Control\<component name>`) in any developer environment of your choice and get started with your custom component development. If you would like a to follow a step-by-step tutorial please scroll down see how a sample linear component is implemented.
 
-## Building your controls
+## Building your components
 
 To build your component you can open the folder in Visual Studio Code and use the (Ctrl-Shift-B) command, then select your build options. Alternately, you can build your control quickly using  `npm run build` command in your Developer Command Prompt for VS 2017 window.
 
