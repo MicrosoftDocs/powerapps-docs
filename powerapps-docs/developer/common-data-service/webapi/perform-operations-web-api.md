@@ -25,6 +25,10 @@ search.app:
 
 The Web API provides a modern, RESTful web service you can use to interact with data in Common Data Service using a wide variety of platforms, programming languages and devices.
 
+> [!NOTE]
+> Information under this section is also applicable to the Dynamics 365 for Customer Engagement apps users (online and on-premises). 
+
+
 ## In this section
 
 [Compose Http requests and handle errors](compose-http-requests-handle-errors.md)<br />
