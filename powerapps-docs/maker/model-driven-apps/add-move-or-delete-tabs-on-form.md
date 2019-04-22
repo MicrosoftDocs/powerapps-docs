@@ -101,7 +101,7 @@ To add tabs to a form, use the **Layouts** pane.
 
 ## See also
 [Overview of the model-driven form designer](form-designer-overview.md)  
-[Create and edit forms using the form designer](create-and-edit-forms.md)  
+[Create or edit forms using the form designer](create-and-edit-forms.md)  
 [Add, move or delete fields on a form using form designer](add-move-or-delete-fields-on-form.md)  
 [Add, move or delete sections on a form using form designer](add-move-or-delete-sections-on-form.md)  
 [Properties available in the form designer](form-designer-properties.md)  
