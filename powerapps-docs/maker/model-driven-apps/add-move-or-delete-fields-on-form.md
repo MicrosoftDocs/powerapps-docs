@@ -70,7 +70,7 @@ To add fields to a form, use the **Fields** pane. The **Fields** pane lets you s
 
 1. Open the form designer to create or edit a form. 
     - More information: [Create a form](create-and-edit-forms.md#create-a-form) or [Edit a form](create-and-edit-forms.md#edit-a-form)
-2. In the form preview, select the field that you want to move and drag it. As you drag the field on the form preview, you will see drop targets where you can move the field to. 
+2. In the form preview, click on the field that you want to move and initiate the drag action. As you drag the field on the form preview, you will see drop targets where you can move the field to. 
 3. Drop the field in the location you want.
     - Fields can be dropped before or after any existing field.
     - Fields can also be dropped in the empty area within a section. In this case the field will be added in an available space so as to evenly distribute fields across the section columns.
