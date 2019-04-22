@@ -139,7 +139,7 @@ If you would like your project build to emit a managed solution or both managed 
   </PropertyGroup>'
   
 You can also enable additional solution packaging [capabilities] (https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/compress-extract-solution-file-solutionpackager) by adding any of the property group elements below:
-'''CDSPROJ
+'''XML
 <PropertyGroup>
    <SolutionPackageErrorLevel />
    <SolutionPackageEnableLocalization />
