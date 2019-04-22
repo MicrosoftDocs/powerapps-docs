@@ -64,7 +64,7 @@ To add sections to a form, use the **Layouts** pane.
 
 1. Open the form designer to create or edit a form. 
     - More information: [Create a form](create-and-edit-forms.md#create-a-form) or [Edit a form](create-and-edit-forms.md#edit-a-form)
-2. In the form preview, select the section that you want to move and drag it. As you drag the section on the form preview, you will see drop targets where you can move the section to. 
+2. In the form preview, click on the section label or empty white-space within the section that you want to move and initiate the drag action. As you drag the section on the form preview, you will see drop targets where you can move the section to. 
 3. Drop the section in the location you want.
     - Sections can be dropped before or after any existing section.
     - Sections can also be dropped in the empty area within a tab. In this case the section will be added in an available space so as to evenly distribute sections across the tab columns.
