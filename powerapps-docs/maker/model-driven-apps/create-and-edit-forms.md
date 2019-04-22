@@ -26,7 +26,7 @@ search.app:
 # Create or edit forms using the form designer 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-Use the new form designer to create or edit forms for model-driven apps.
+Use the new form designer to create or edit forms for model-driven apps. 
 
 > [!IMPORTANT]
 > The new model-driven form designer does not currently support editing card forms. More information: [Form types](types-forms.md)
