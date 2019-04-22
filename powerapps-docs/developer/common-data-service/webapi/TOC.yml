@@ -5,8 +5,9 @@
 - name: Get started
   items:
   - name: (C#)
-    href: get-started-dynamics-365-web-api-csharp.md
     items:
+    - name: Get started with using Web API (C#)
+      href: get-started-dynamics-365-web-api-csharp.md
     - name: 'Quick Start: Web API sample (C#)'
       href: quick-start-console-app-csharp.md
     - name: Enhanced quick start (C#)
@@ -49,8 +50,9 @@
   - name: Detect duplicate data
     href: manage-duplicate-detection-create-update.md
 - name: Work with metadata
-  href: use-web-api-metadata.md
   items:
+  - name: Get started with using metadata
+    href: use-web-api-metadata.md
   - name: Query metadata
     href: query-metadata-web-api.md
   - name: Retrieve metadata by name or MetadataId
@@ -62,8 +64,9 @@
   - name: Work with Option sets
     href: create-update-optionsets.md
 - name: Use Postman with Web API
-  href: use-postman-web-api.md
   items:
+  - name: Get started with Postman
+    href: use-postman-web-api.md
   - name: Setup a Postman environment
     href: setup-postman-environment.md
   - name: Use Postman to perform operations
