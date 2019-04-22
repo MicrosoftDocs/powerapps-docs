@@ -26,6 +26,9 @@ search.app:
 # Add, move or delete fields on a form using the form designer 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
+> [!NOTE]
+> When adding or moving fields using drag and drop be aware that the form preview is responsive and may be rendering multiple columns as stacked. To ensure that the field being added or moved is in the correct column, drop or paste it anchored to another field that is already in that column.
+
 ## Add fields to a form
 To add fields to a form, use the **Fields** pane. The **Fields** pane lets you search and filter to help you quickly find fields. It also includes the option to show only unused fields. 
 
@@ -44,9 +47,6 @@ To add fields to a form, use the **Fields** pane. The **Fields** pane lets you s
     - Hovering over a tab header when dragging a field changes the currently selected tab, allowing you to add the field to a different tab.   
 6. Repeat steps 3-5 above if you want to add more fields.
 7. In the command bar, select **Save** to save the form, or select **Publish** if you want to save and make your changes visible to end-users. 
-
-    > [!NOTE]
-    >   -  Adding fields to the header and footer using drag and drop is not yet supported. 
 
 ### Add fields to a form using selection 
 
