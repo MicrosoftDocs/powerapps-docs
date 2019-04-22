@@ -20,7 +20,7 @@ ms.assetid: 38acfda3-4adc-4aa2-bb8b-f29ba572a6e5
 
 |Name|Description|Type|Required|
 |--|--|--|--|
-|`path`|Place where resx files are located|`string`|Yes|
+|`path`|Relative path w.r.t manifest where resx files are located|`string`|Yes|
 |`version`|The current version of the resx file|`string`|Yes|
 
 ## Parent Elements

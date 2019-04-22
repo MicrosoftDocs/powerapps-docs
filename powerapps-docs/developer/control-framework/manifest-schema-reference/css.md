@@ -23,8 +23,8 @@ ms.assetid: b6119424-c0a4-4412-b25c-8239da6cbe36
 
 |Name|Description|Type|Required|
 |--|--|--|--|
-|`path`|Place where CSS files are located|`string`|Yes|
-|`order`|The order in which the webresource must load|`Positive integer`|Optional|
+|`path`|Relative path w.r.t manifest where CSS files are located|`string`|Yes|
+|`order`|The order in which the files must load|`Positive integer`|Optional|
 
 ## Parent Elements
 

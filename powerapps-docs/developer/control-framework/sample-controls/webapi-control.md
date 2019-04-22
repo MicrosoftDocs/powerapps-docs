@@ -566,7 +566,7 @@ When you click one of the create buttons, the button’s `onClick` event handler
  
 The `deleteRecord` method renders a button which opens a lookup dialog when clicked. The lookup dialog allows you to select the account record you want to delete. Once an account record is selected from the lookup dialog, it is passed to the `deleteRecord` to delete the record from the database. The callback method from the Web API call injects the result of the Web API call (success or failure) into the custom control’s result div.  
 
-The FetchXML `retreiveMultiple` method renders a button in the custom component. `onClick` of this button, FetchXML is generated and passed to the `retrieveMultiple` function to calculate the average value of the revenue field for all the accounts records. The callback method from the Web API call injects the result of the Web API call (success or failure) into the custom control’s result div.  
+The FetchXML `retrieveMultiple` method renders a button in the custom component. `onClick` of this button, FetchXML is generated and passed to the `retrieveMultiple` function to calculate the average value of the revenue field for all the accounts records. The callback method from the Web API call injects the result of the Web API call (success or failure) into the custom control’s result div.  
 
 The OData `retrieveMultiple` method renders a button in the custom component. `onClick` of this button, OData string is generated and passed to the `retrieveMultiple` function to retrieve all account records with a name field that is like ‘Custom component Web API (Sample)’, which is true for all account records created by this custom component example.  
 
@@ -574,5 +574,6 @@ On successful retrieve of the records, the custom component has logic to count h
 
 ### Related topics
 
+[Download sample components](https://go.microsoft.com/fwlink/?linkid=2088525)<br/>
 [PowerApps component framework API Reference](../index.md)<br/>
 [PowerApps component framework Manifest Schema Reference](../manifest-schema-reference/index.md)

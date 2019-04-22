@@ -24,7 +24,7 @@ ms.assetid: dcb8e71d-9a2f-4789-9a84-34673ccfd5c1
 
 |Name|Description|Type|Required|
 |--|--|--|--|
-|`path`|Place where HTML files are located|`string`|Yes|
+|`path`|Relative path w.r.t manifest where HTML files are located|`string`|Yes|
 |`order`|The order in which HTML files must load|`Positive integer`|Optional|
 
 ## Parent Elements

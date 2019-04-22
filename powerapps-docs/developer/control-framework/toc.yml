@@ -243,12 +243,8 @@
         href: manifest-schema-reference/html.md
       - name: img
         href: manifest-schema-reference/img.md
-      - name: library
-        href: manifest-schema-reference/library.md
       - name: manifest
         href: manifest-schema-reference/manifest.md
-      - name: packaged_library
-        href: manifest-schema-reference/packaged_library.md
       - name: property
         href: manifest-schema-reference/property.md
       - name: property-set
@@ -261,6 +257,5 @@
         href: manifest-schema-reference/type.md
       - name: type-group
         href: manifest-schema-reference/type-group.md
-      - name: types
-        href: manifest-schema-reference/types.md
+      
         

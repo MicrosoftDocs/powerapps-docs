@@ -22,16 +22,14 @@ ms.assetid: 045a395b-4475-48dd-8f67-6bc2b33cd89c
 |[data-set](data-set.md)|[!INCLUDE [data-set-description](includes/data-set-description.md)]|
 |[html](html.md)|[!INCLUDE [html-description](includes/html-description.md)]|
 |[img](img.md)|[!INCLUDE [img-description](includes/img-description.md)]|
-|[library](library.md)|[!INCLUDE [library-description](includes/library-description.md)]|
 |[manifest](manifest.md)|Manifest is the metadata file that defines a component. It is an XML document that describes<br/> - The namespace of the component.<br/> - The kind of data it can be bound to, either a field or a data-set.<br/> - Any properties that can be configured in the application when the component is added.<br/> - A list of web resource files that the component needs.<br/> - One of them must be a JavaScript web resource. This JavaScript must include a function that will instantiate an object. This implements an interface that exposes methods that are required for the component to work. This is called the component implementation library.<br/> - The name of a JavaScript function in the component implementation library that will return an object that applies the required control interface.<br/> When someone configures a component in the application, the data in the manifest filters out the available components so that only valid components for the context are available for configuration. The properties defined in the manifest for a component are rendered as configuration fields so that the person configuring the control can specify values. These property values are then available to your component function at run time.|
-|[packaged_library](packaged_library.md)|[!INCLUDE [packaged_library-description](includes/packaged_library-description.md)]|
 |[property](property.md)|[!INCLUDE [property-description](includes/property-description.md)]|
 |[property-set](property-set.md)|[!INCLUDE [property-set-description](includes/property-set-description.md)]|
 |[resources](resources.md)|[!INCLUDE [resources-description](includes/resources-description.md)]|
 |[resx](resx.md)|[!INCLUDE [resx-description](includes/resx-description.md)]|
 |[type](type.md)|[!INCLUDE [type-description](includes/type-description.md)]|
 |[type-group](type-group.md)|[!INCLUDE [type-group-description](includes/type-group-description.md)]|
-|[types](types.md)|[!INCLUDE [types-description](includes/types-description.md)]|
+
 
 
 ### Related topics

@@ -29,7 +29,7 @@ ms.assetid: 4dacd337-c9df-458e-86f3-bfb3ab543ea7
 |`description-key`|Used in the customization screens as localized strings that describes the description of the property.|`string`|no|
 |`display-name-key`|Used in the customization screens as localized strings that describes the name of the property.|`string`|yes|
 |`preview-image`|Image that will be used on the customization screens to show a preview of the component to the customizer|`string`|no|
-|`version`|Defines the version of the component|`string`|yes|
+|`version`|Defines the version of the component defined in [Semantic Versioning](https://semver.org)|`string`|yes|
 |`hidden`|Defines whether the component should be hidden or not|[!INCLUDE [booleantype-description](includes/booleantype-description.md)]| no|
 
 ## Parent Elements

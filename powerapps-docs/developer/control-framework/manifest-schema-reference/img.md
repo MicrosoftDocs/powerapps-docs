@@ -23,7 +23,7 @@ ms.assetid: 0e776647-a4a2-42c9-85e8-62718154052f
 
 |Name|Description|Type|Required|
 |--|--|--|--|
-|`path`|Place where image files are located|`string`|Yes|
+|`path`|Relative path w.r.t manifest where image files are located|`string`|Yes|
 
 ## Parent Elements
 

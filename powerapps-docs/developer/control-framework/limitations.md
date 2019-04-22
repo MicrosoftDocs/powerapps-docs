@@ -29,7 +29,7 @@ The PowerApps component framework supports all the external libraries for implem
 > [!NOTE]
 > When you use JQuery for implementing the custom components, at run time, it loads the platform version of the JQuery not the version you used to implement. 
 
-### Calling controls within another component
+### Calling components within another component
 
 This is not supported yet.
 
