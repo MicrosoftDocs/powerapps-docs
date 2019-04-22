@@ -2,7 +2,7 @@
 title: "Discover the URL for your organization using the Web API (Common Data Service)| Microsoft Docs"
 description: "Learn how you can use the Web API to discover at runtime the organizations, or instances that the logged-on user belongs to"
 ms.custom: ""
-ms.date: 04/16/2019
+ms.date: 04/17/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -27,7 +27,15 @@ search.app:
 
 With the Web API discovery service, you can use standard `$filter` and `$select` parameters to a Web API service request to customize the returned list of instance data.
 <!-- TODO should only talk about the global discovery service -->
+
+## Global discovery service
+
 In addition to datacenter specific Discovery services, that are available on the 2011 (SOAP) endpoint and through the Web API, there is also a Web API only Global Discovery service that spans all operational datacenters. For more information about the Discovery service on the 2011 endpoint see [Discovery Service](../org-service/discovery-service.md)
+
+> [!NOTE]
+> It is recommended that users switch from the legacy regional discovery service (`https://disco.crm.dynamics.com`) to global discovery service (`https://globaldisco.crm.dynamics.com`).
+> 
+> For Dynamics 365 US Government users, the global discovery service is available only for the **GCC** users and the URL is `https://globaldisco.crm9.dynamics.com`. More information: [Dynamics 365 Government URLs](https://docs.microsoft.com/dynamics365/customer-engagement/admin/government/microsoft-dynamics-365-government#dynamics-365-us-government-urls).
 
   
 ## Information provided by the Discovery service 
@@ -39,6 +47,9 @@ GET https://globaldisco.crm.dynamics.com/api/discovery/v1.0/Instances(UniqueName
 ```  
   
 In the above example, the global Discovery service of Common Data Service is used to obtain the organization information of the instance with a unique name of "myorg". More details about this request is expanded upon later in this topic.  
+
+ 
+
   
 ### Scope of the returned information
 
@@ -100,3 +111,4 @@ The Discovery service Web API supports the CORS standard for cross-origin access
 ## See also
 
 [Web API Global Discovery Service sample (C#)](samples/global-discovery-service-csharp.md)
+

@@ -89,6 +89,8 @@
       href: logging-tracing.md
     - name: Analyze performance
       href: analyze-performance.md
+    - name: Troubleshoot plug-ins
+      href: troubleshoot-plug-in.md
     - name: Access external web resources
       href: access-web-services.md
     - name: Tutorials

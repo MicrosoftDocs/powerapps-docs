@@ -37,7 +37,7 @@ For some entities, such as account and user, the visualizations are provided out
   
 <a name="BKMK_Querydata"></a>   
 ## Query hierarchical data  
- With Common Data Service, hierarchical data structures are supported by self-referential one-to-many (1:N) relationships of the related records. In the past, to view hierarchical data, you had to iteratively query for the related records. Presently, you can query the related data as a hierarchy, in one step. You’ll be able to query records using the **Under** and **Not Under** logic. The **Under** and **Not Under** hierarchical operators are exposed in Advanced Find and the workflow editor. For more information about how to use these operators, see [Configure workflow steps](/flow/configure-workflow-steps). For more information about Advanced Find, see [Create, edit, or save an Advanced Find search](https://docs.microsoft.com/dynamics365/customer-engagement/basics/save-advanced-find-search)  
+ With Common Data Service, hierarchical data structures are supported by self-referential relationships of the related records. In the past, to view hierarchical data, you had to iteratively query for the related records. Presently, you can query the related data as a hierarchy, in one step. You’ll be able to query records using the **Under** and **Not Under** logic. The **Under** and **Not Under** hierarchical operators are exposed in Advanced Find and the workflow editor. For more information about how to use these operators, see [Configure workflow steps](/flow/configure-workflow-steps). For more information about Advanced Find, see [Create, edit, or save an Advanced Find search](https://docs.microsoft.com/dynamics365/customer-engagement/basics/save-advanced-find-search)  
   
  The following examples illustrate various scenarios for querying hierarchies:  
   
@@ -53,17 +53,22 @@ For some entities, such as account and user, the visualizations are provided out
   
  ![Query account's related opportunities](media/query-account-related-opportunities.png "Query account's related opportunities")  
   
- To query the data as a hierarchy, you must set one of the entity’s one-to-many (1:N) self-referential relationships as hierarchical. To turn the hierarchy on:  
+ To query the data as a hierarchy, you must set one of the entity’s one-to-many or many-to-one self-referential relationships as hierarchical. To turn the hierarchy on:  
   
-1.  Open [solution explorer](../model-driven-apps/advanced-navigation.md#solution-explorer). 
-  
-2.  Select the entity you want, select **1:N Relationships**, and then select a (1:N) relationship. 
 
-3.  In the **Relationship definition**, set **Hierarchical** to **Yes**.  
+1. On [powerapps.com](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand the **Data** section and click or tap **Entities** in the left navigation pane.
+
+2. Click or tap an existing entity, or [Create a new entity](data-platform-create-entity.md)
+
+3. Click **Relationships**
+
+4.  Select a self-referential relationship.
+
+5.  In the relationship details panel, check **Hierarchical**.  
   
 > [!NOTE]
-> - Some of the out-of the-box (1:N) relationships can’t be customized. This will prevent you from setting those relationships as hierarchical.  
-> - You can specify a hierarchical relationship for the system self-referential relationships. This includes the 1:N self-referential relationships of system type,  such as the "contact_master_contact" relationship.  
+> - Some of the out-of the-box relationships can’t be customized. This will prevent you from setting those relationships as hierarchical.  
+> - You can specify a hierarchical relationship for the system self-referential relationships. This includes self-referential relationships of system type,  such as the "contact_master_contact" relationship.  
   
 <a name="BKMK_Visualizedata"></a>   
 ## Visualize hierarchical data  
@@ -85,18 +90,19 @@ For some entities, such as account and user, the visualizations are provided out
   
  Important things to remember when you create visualizations:  
   
--   Only one (1: N) self-referential relationship per entity can be set as hierarchical. In this relationship the primary entity and the related entity must be of the same type, such as account_parent_account or new_new_widget_new_widget.  
+-   Only one (1: N) self-referential relationship per entity can be set as hierarchical. In this relationship the primary entity and the related entity must be of the same type, such as account_parent_account or Widget_new_Widget_new_Widget.  
   
 -   Presently, a hierarchy or visualization is based on one entity only. You can depict the account hierarchy showing accounts at multiple levels, but you can’t show accounts and contacts in the same hierarchy visualization.  
   
 -   Maximum number of fields that can be displayed in a tile is four. If you add more fields to the Quick Form that is used for the tile view, only the first four fields will be displayed.  
   
 ### Visualization example  
- Let’s look at an example of creating the visualization for a custom entity. We created a custom entity called new_Widget, created a (1:N) self-referential relationship **new_new_widget_new_widget** and marked it as hierarchical, as shown here.  
-  
- ![Widget relationship definition](media/widget-relationship-definition.png "Widget relationship definition")  
-  
- Next, in the **Hierarchy Settings** grid view, we selected the **new_new_widget_new_widget** hierarchical relationship. In the form, we filled in the required fields. If you haven’t yet marked the (1:N) relationship as hierarchical, the link on the form will take you back to the relationship definition form, where you can mark the relationship as hierarchical.  
+ Let’s look at an example of creating the visualization for a custom entity. We created a custom entity called new_Widget, created a self-referential relationship and marked it as hierarchical, as shown here.  
+ 
+> [!div class="mx-imgBorder"] 
+> ![Widget relationship definition](media/widget-relationship-definition.png "Widget relationship definition")  
+   
+ Next, in the **Hierarchy Settings** grid view, we selected the **Widget_new_Widget_new_Widget** hierarchical relationship. In the form, we filled in the required fields. If you haven’t yet marked the relationship as hierarchical, the link on the form will take you to the classic entity editor, where you can also mark the relationship as hierarchical.  
   
  For the **Quick View Form**, we created a Quick Form called **Widget Hierarchy Tile Form**. In this form, we added four fields to display in each tile.  
   
