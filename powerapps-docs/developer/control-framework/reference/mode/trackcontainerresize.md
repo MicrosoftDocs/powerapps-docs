@@ -27,7 +27,7 @@ ms.assetid: c5f482c2-dde2-460b-89a7-39e0efcc5704
 
 | Parameter Name|Type|Required|Description|
 | ------------- |----|--------|-----------|
-|value|`boolean`|yes|`True` if controls needs to track container size, control will get allocatedWidth/allocatedHeight.|
+|value|`boolean`|yes|`True` if controls needs to track container size, component will get allocatedWidth/allocatedHeight.|
 
 
 ### Related topics

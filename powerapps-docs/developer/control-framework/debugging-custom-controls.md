@@ -1,5 +1,5 @@
 ---
-title: "Debugging Custom Controls | MicrosoftDocs"
+title: "Debugging Custom Components | MicrosoftDocs"
 description: "How to debug a custom control using Fiddler and Native debugging"
 manager: kvivek
 ms.date: 04/23/2019
@@ -8,7 +8,7 @@ ms.topic: "index-page"
 ms.assetid: 18e88d702-3349-4022-a7d8-a9adf52cd34f
 ms.author: "nabuthuk"
 ---
-# Debugging Custom Controls
+# Debugging csutom components
 
 Once you are done implementing your custom control logic, run the following command to start the debugging process
 `npm start`
@@ -51,7 +51,7 @@ You can also interact with the control locally in real time and observe elements
 
 ## Fiddler AutoResponder
 
-Use the Fiddler AutoResponder to quickly debug your custom controls. Install [Fiddler](https://www.telerik.com/download/fiddler) and follow the steps to configure [AutoResponder](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/streamline-javascript-development-fiddler-autoresponder)
+Use the Fiddler AutoResponder to quickly debug your custom components. Install [Fiddler](https://www.telerik.com/download/fiddler) and follow the steps to configure [AutoResponder](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/streamline-javascript-development-fiddler-autoresponder)
 
 ### Related topics
 

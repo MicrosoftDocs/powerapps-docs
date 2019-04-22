@@ -23,14 +23,14 @@ ms.assetid: 4dacd337-c9df-458e-86f3-bfb3ab543ea7
 
 |Name|Description|Type|Required|
 |--|--|--|--|
-|`namespace`|Defines the object prototype of the control|[!INCLUDE [alphanumerictype-description](includes/alphanumerictype-description.md)]|yes|
+|`namespace`|Defines the object prototype of the component|[!INCLUDE [alphanumerictype-description](includes/alphanumerictype-description.md)]|yes|
 |`constructor`|A method for initializing the object|[!INCLUDE [alphanumerictype-description](includes/alphanumerictype-description.md)]|yes|
 |`control-type`|Standard|[!INCLUDE [controltype-description](includes/controltype-description.md)]|no|
 |`description-key`|Used in the customization screens as localized strings that describes the description of the property.|`string`|no|
 |`display-name-key`|Used in the customization screens as localized strings that describes the name of the property.|`string`|yes|
-|`preview-image`|Image that will be used on the customization screens to show a preview of the control to the customizer|`string`|no|
-|`version`|Defines the version of the control|`string`|yes|
-|`hidden`|Defines whether the control should be hidden or not|[!INCLUDE [booleantype-description](includes/booleantype-description.md)]| no|
+|`preview-image`|Image that will be used on the customization screens to show a preview of the component to the customizer|`string`|no|
+|`version`|Defines the version of the component|`string`|yes|
+|`hidden`|Defines whether the component should be hidden or not|[!INCLUDE [booleantype-description](includes/booleantype-description.md)]| no|
 
 ## Parent Elements
 

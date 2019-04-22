@@ -1,6 +1,6 @@
 ---
-title: " Map Control| Microsoft Docs" 
-description: "Implementing map control using Angular JS" 
+title: " Map component| Microsoft Docs" 
+description: "Implementing map component using Angular JS" 
 ms.custom: ""
 manager: kvivek
 ms.date: 04/23/2019
@@ -9,12 +9,12 @@ ms.topic: "article"
 ms.author: "nabuthuk" 
 ---
 
-# Implementing map control
+# Implementing map component
 
-This sample control changes the user experience of interacting with address fields on the form. Along with the text values of the address, this control provides the ability to visually identify a particular address on a map without navigating to another tab or screen. 
+This sample component changes the user experience of interacting with address fields on the form. Along with the text values of the address, this component provides the ability to visually identify a particular address on a map without navigating to another tab or screen. 
 
 > [!div class="mx-imgBorder"]
-> ![Map Control](../media/map-control.png "Map Control")
+> ![Map component](../media/map-control.png "Map component")
 
 ## Manifest
 
@@ -146,13 +146,13 @@ In the manifest file, we defined property of type `Single line of Text`. We use 
 
 > [!NOTE]
 > You can use any of the map API’s that are available in the market. In this example, we are going to show how to do it with the Google Map API. 
-You need to create an API key for the control to access the Google Map API. Follow the instructions(https://developers.google.com/maps/documentation/embed/get-api-key to generate one).
+You need to create an API key for the component to access the Google Map API. Follow the instructions(https://developers.google.com/maps/documentation/embed/get-api-key to generate one).
 
-Create a variable name `MAPS_API_KEY` that can be accessed in the context of the control.
+Create a variable name `MAPS_API_KEY` that can be accessed in the context of the component.
 Google Map API allows you only to render the maps inside an `IFRAME`. So, you need to create an `IFRAME` element that is going to render the map using the URL we generate. 
 By default, we are setting the map to be hidden and display it only when the address value exists on the form.
 
-`buildMapUrl` and `renderMap` (you can even merge them into one) takes the address string and embeds it onto the map URL by encoding the address string and then sets the IFRAME element’s src element to the URL respectively. Also, call the **notifyOutputChanged** method to ensure we notify the control that the rendering has changed. 
+`buildMapUrl` and `renderMap` (you can even merge them into one) takes the address string and embeds it onto the map URL by encoding the address string and then sets the IFRAME element’s src element to the URL respectively. Also, call the **notifyOutputChanged** method to ensure we notify the component that the rendering has changed. 
  
 ```TypeScript
 

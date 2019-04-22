@@ -24,7 +24,7 @@ ms.assetid: f28117a1-5d88-4c52-999c-1e07b09c0fe0
 
 | Parameter Name|Type|Required|Description|
 | ------------- |----|--------|-----------|
-|id|`string`|yes|Name of the resource in the control manifest.|
+|id|`string`|yes|Name of the resource in the component manifest.|
 
 ## Return Value
 

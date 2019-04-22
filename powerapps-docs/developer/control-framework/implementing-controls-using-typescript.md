@@ -1,6 +1,6 @@
 ---
-title: "Implementing Custom Controls using TypeScript | MicrosoftDocs"
-description: "How to implement a custom control using TypeScript"
+title: "Implementing Custom Components using TypeScript | MicrosoftDocs"
+description: "How to implement a custom components using TypeScript"
 manager: kvivek
 ms.date: 04/23/2019
 ms.service: "powerapps"
@@ -11,23 +11,23 @@ ms.author: "nabuthuk"
 
 # Implement controls using TypeScript
 
-This tutorial will walk you through creating a new custom control in Typescript. The sample control is a linear input control.  The linear input control enables users to enter numeric values using a visual slider instead of directly keying in values. 
+This tutorial will walk you through creating a new custom component in Typescript. The sample component is a linear input component.  The linear input component enables users to enter numeric values using a visual slider instead of directly keying in values. 
 
-## Creating a new control project
+## Creating a new component project
 
 To create a new project, follow the steps below:
 
 1. Open a Developer Command Prompt for VS 2017 window.
 2. Create a new folder for the project using the command `mkdir LinearControl`.
 3. `cd` into the new directory and run the command `cd LinearControl` 
-4. Create the control project using the command `pac PowerApps component framework init --namespace SampleNamespace --name TSLinearInputControl --template field` 
+4. Create the component project using the command `pac PowerApps component framework init --namespace SampleNamespace --name TSLinearInputControl --template field` 
 5. Install the project build tools using the command `npm install` 
 
 ## Implementing Manifest
 
-A custom control is defined by the information in the `ControlManifest.Input.xml` manifest file.  In this walkthrough, this file is created under the `<Your Control Name>` sub folder. For the linear input control, a property will be defined to store the numeric value of the slider input.
+A custom component is defined by the information in the `ControlManifest.Input.xml` manifest file.  In this walkthrough, this file is created under the `<Your component Name>` sub folder. For the linear input component, a property will be defined to store the numeric value of the slider input.
 
-1. Open the `ControlManifest.Input.xml` file in the code editor (Visual Studio Code). The `ControlManifest.Input.xml` file defines an initial control property called `sampleProperty`.
+1. Open the `ControlManifest.Input.xml` file in the code editor (Visual Studio Code). The `ControlManifest.Input.xml` file defines an initial component property called `sampleProperty`.
 
     ```XML
     <property name="sampleProperty" display-name-key="Property_Display_Key" description-key="Property_Desc_Key" of-type="SingleLine.Text" usage="bound" required="true" /> 
@@ -39,7 +39,7 @@ A custom control is defined by the information in the `ControlManifest.Input.xml
     <property name="sliderValue" display-name-key=" sliderValue _Display_Key" description-key=" sliderValue_Desc_Key" of-type-group="numbers" usage="bound" required="true" /> 
     ```
 
-3. The of-type-group attribute references a group of allowable numbers. Add the following type-group element as a sibling to the <property> element in the manifest. The type-group specifies the control value and can contain whole, currency, floating point, or decimal values.
+3. The of-type-group attribute references a group of allowable numbers. Add the following type-group element as a sibling to the <property> element in the manifest. The type-group specifies the component value and can contain whole, currency, floating point, or decimal values.
 
     ```XML
     <type-group name="numbers"> 
@@ -50,14 +50,13 @@ A custom control is defined by the information in the `ControlManifest.Input.xml
      </type-group> 
     ```
 
-
 4. Save the changes to the `ControlManifest.Input.xml` file.
-5. Build the control project using the command `npm run build`.
-6. The build generates an updated Typescript type declaration file under `TSLinearInputControl/generated folder`.  The `ManifestTypes.d.ts` file defines the properties that your control will have access to Typescript source code.
+5. Build the component project using the command `npm run build`.
+6. The build generates an updated Typescript type declaration file under `TSLinearInputControl/generated folder`.  The `ManifestTypes.d.ts` file defines the properties that your component will have access to Typescript source code.
 
-## Implementing control logic
+## Implementing component logic
 
-Source for the custom control is implemented in the `index.ts` file. The `index.ts` file includes scaffolding for interface methods that are required by the PowerApps component framework. 
+Source for the custom component is implemented in the `index.ts` file. The `index.ts` file includes scaffolding for interface methods that are required by the PowerApps component framework. 
 
 1. Open the `index.ts` file in code editor of your choice.
 2. Update the `TSLinearInputControl` class with the following
@@ -144,14 +143,14 @@ export class TSLinearInputControl implements ComponentFramework.StandardControl<
 
 3. Rebuild the project using the command `npm run build` 
  
-4. The control is compiled into the `/out/controls/TSLinearInputControl` folder. The build artifacts includes:
+4. The component is compiled into the `/out/controls/TSLinearInputControl` folder. The build artifacts includes:
 
-   - bundle.js – Bundled control source code 
-   - ControlManifest.xml – Actual control manifest file that will be uploaded to Common Data Service organization.
+   - bundle.js – Bundled component source code 
+   - ControlManifest.xml – Actual component manifest file that will be uploaded to Common Data Service organization.
 
-## Adding Style to the custom control
+## Adding Style to the custom component
 
-The linear input control’s `init` method creates an input element and sets the class attribute to `linearslider`. The style for the `linearslider` class is defined in a separate `css` file. Additional control resources like `css` files can be included with the custom control to support further customizations.
+The linear input control’s `init` method creates an input element and sets the class attribute to `linearslider`. The style for the `linearslider` class is defined in a separate `css` file. Additional component resources like `css` files can be included with the custom component to support further customizations.
 
 1. Edit the `ControlManifest.Input.xml` file to include an additional `css` resource inside the <resources> element
  
@@ -239,9 +238,9 @@ The linear input control’s `init` method creates an input element and sets the
 6. Rebuild the project using the command `npm run build `.
 7. Inspect the build output under `./out/controls/TSLinearInputControl` and observe that the `TS_LinearInputControl.css` file is now included with the compiled build artifacts. 
 
-
 ### See also
 
+[Download sample components](https://go.microsoft.com/fwlink/?linkid=2088525)<br/>
 [Update existing PowerApps component framework controls](updating-existing-controls.md)<br/>
 [PowerApps component framework API Reference](reference/index.md)<br/>
 [PowerApps component framework Overview](overview.md)

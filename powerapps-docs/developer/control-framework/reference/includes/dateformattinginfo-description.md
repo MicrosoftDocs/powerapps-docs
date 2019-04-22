@@ -14,4 +14,4 @@ applies_to:
   - "Dynamics 365 Version 9.x"
 ms.assetid: d9f8052d-0ff1-481b-a1ae-f807a85f047b
 ---
-The interface for Organization Date Format info exposed to a custom control
+The interface for Organization Date Format info exposed to a custom component

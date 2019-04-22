@@ -30,7 +30,7 @@ Static DOM element to be inserted.
 
 ## id
 
-The id to be set to the anchor control if any.
+The id to be set to the anchor component if any.
 
 **Type**: `string`
 

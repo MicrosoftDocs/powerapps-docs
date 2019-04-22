@@ -1,5 +1,5 @@
 ---
-title: Formatting API Control | Microsoft Docs
+title: Formatting API component | Microsoft Docs
 description: 
 keywords:
 ms.author: nabuthuk
@@ -12,10 +12,10 @@ ms.topic: "article"
 ms.assetid: 3b875f06-0fd9-49fa-bc34-939d00e17185
 ---
 
-This sample control explores the various methods available as part of the PowerApps component framework formatting API. In this sample, you create a series of input elements which calls into the respective methods of the formatting API that matches with the value displayed.
+This sample component explores the various methods available as part of the PowerApps component framework formatting API. In this sample, you create a series of input elements which calls into the respective methods of the formatting API that matches with the value displayed.
 
 > [!div class="mx-imgBorder"]
-> ![Formatting API Control](../media/formatting-api.png "Formatting API Control")
+> ![Formatting API component](../media/formatting-api.png "Formatting API component")
 
 ## Manifest
 

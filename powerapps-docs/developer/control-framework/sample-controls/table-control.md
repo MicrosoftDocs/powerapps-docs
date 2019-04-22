@@ -1,6 +1,6 @@
 ---
-title: " Table Control| Microsoft Docs" 
-description: "Implementing a table control" 
+title: " Table component| Microsoft Docs" 
+description: "Implementing a table component" 
 ms.custom: ""
 manager: kvivek
 ms.date: 04/23/2019
@@ -9,12 +9,12 @@ ms.topic: "article"
 ms.author: "nabuthuk" 
 ---
 
-# Implementing Table control
+# Implementing Table component
 
-This sample control renders a table with two columns. The left column shows the name of the API method or property, and the right column shows the value returned by the API. You can open this control on the different type of devices or modify your language or user settings to see the values adjust correctly in the table.
+This sample component renders a table with two columns. The left column shows the name of the API method or property, and the right column shows the value returned by the API. You can open this component on the different type of devices or modify your language or user settings to see the values adjust correctly in the table.
 
 > [!div class="mx-imgBorder"]
-> ![Table Control](../media/table-control.png "Table Control")
+> ![Table component](../media/table-control.png "Table component")
 
 ## Manifest
 
@@ -406,13 +406,13 @@ color: #1160B7;
 
 This sample provides examples on how to use methods from the `IClient, IUserSettings, IUtility, IFormatting interfaces`.
 
-This control also showcases two utility functions, `setFullScreen` and `lookupObjects`. These functions are invoked by clicking the button rendered as part of the custom control. The `setFullScreen` button toggles the control in and out of full screen mode. The `lookupObjects` button opens a lookup dialog, and then inject the selected record as text into div.
+This component also showcases two utility functions, `setFullScreen` and `lookupObjects`. These functions are invoked by clicking the button rendered as part of the custom component. The `setFullScreen` button toggles the component in and out of full screen mode. The `lookupObjects` button opens a lookup dialog, and then inject the selected record as text into div.
 
 In this sample, we render an HTML button and attach a JavaScript `onClick` event handler `onLookupObjectsButtonClick` to the button. On click of this button, we invoke `context.utils.lookupObjects()` method and pass as a parameter an array of entity names. 
 
 This method returns a JavaScript Promise object, representing the completion or failure of the call to the lookup dialog. If the promise is resolved successfully, the lookup object which the user selected is passed as a parameter into the callback method and can be referenced as data.id, data.name, data.entityType.
 
-The callback method injects this information as HTML into a div rendered on the custom control to showcase the selected results to the user. If the promise is rejected, the error callback method is invoked where your control can handle the error scenario accordingly.
+The callback method injects this information as HTML into a div rendered on the custom component to showcase the selected results to the user. If the promise is rejected, the error callback method is invoked where your component can handle the error scenario accordingly.
 
 ### Related topics
 

@@ -18,7 +18,7 @@ ms.assetid: 4ce41c82-bf4a-4d34-9344-5311c24d76de
 
 ## disableScroll
 
-Whether this control should disable its scrolling capabilities
+Whether this component should disable its scrolling capabilities
 
 **Type**: `boolean`
 

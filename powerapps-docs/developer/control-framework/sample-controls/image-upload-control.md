@@ -1,6 +1,6 @@
 ---
-title: " Image Upload Control| Microsoft Docs" 
-description: "Implementing image upload control using typescript" 
+title: " Image Upload component| Microsoft Docs" 
+description: "Implementing image upload component using typescript" 
 ms.custom: ""
 manager: kvivek
 ms.date: 04/23/2019
@@ -9,14 +9,14 @@ ms.topic: "article"
 ms.author: "nkrb" 
 ---
 
-# Implementing an image upload control
+# Implementing an image upload component
 
-This sample control renders as an `Upload` button to upload the image and a default image when the control loads for the first time. When you click on the `Upload`, a file explorer pops up to pick an image.
+This sample component renders as an `Upload` button to upload the image and a default image when the component loads for the first time. When you click on the `Upload`, a file explorer pops up to pick an image.
  
-The selected image renders within the control. Meanwhile, the `Remove` button is shown if we need to reset. When you click on the `Remove` button, the default image is displayed.  
+The selected image renders within the component. Meanwhile, the `Remove` button is shown if we need to reset. When you click on the `Remove` button, the default image is displayed.  
 
 > [!div class="mx-imgBorder"]
-> ![Image Upload Control](../media/image-upload-control.png "Image Upload Control")
+> ![Image Upload component](../media/image-upload-control.png "Image Upload component")
 
 ## Manifest
 
@@ -360,7 +360,7 @@ color: red;
 
 This sample shows how to create an image picker and showcases the device API and resources API to load the image defined in manifest. Image content is stored in base64 encoding and could be saved and revisited.  
 
-The  `resources.getResource` method takes the input as the webresource name defined in the control manifest and loads that webresource. The control renders an `Upload` button and the default image for initial rendering. Images are defined in the manifest’s [resource](../reference/resources.md) node.  
+The  `resources.getResource` method takes the input as the webresource name defined in the component manifest and loads that webresource. The component renders an `Upload` button and the default image for initial rendering. Images are defined in the manifest’s [resource](../reference/resources.md) node.  
 
 ```xml
     <resources>
@@ -376,7 +376,7 @@ The `successCallback` will be triggered and the resource content injects in the 
 The `device.pickFile` method opens a dialog box to select files from your computer (web client) or mobile device (mobile clients). For desktop, it opens the file explorer, for the mobile client, it opens the library of the photo. When you click on the `upload` button, the device API `pickFile` triggers and the user picks up the file. Once the file is successfully picked, the file's filename, file content will be injected in the `successCallback`. 
 
 > [!NOTE]
-> If the same form or entity is used on the legacy web client, then the field will show out-of-box text control on legacy web client, where there might have UX issues.  To make it hidden on the legacy web client, we could uncheck the **Visibility** checkbox and check **Hide Default Control** checkbox together. 
+> If the same form or entity is used on the legacy web client, then the field will show out-of-box text component on legacy web client, where there might have UX issues.  To make it hidden on the legacy web client, we could uncheck the **Visibility** checkbox and check **Hide Default Control** checkbox together. 
 
 ### Related topics
 

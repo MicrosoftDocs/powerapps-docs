@@ -15,4 +15,4 @@ applies_to:
 ms.assetid: 119dbcef-546c-4d65-81f4-48975ee8e430
 ---
 
-Set control state so that it will be stored in one session.
+Set component state so that it will be stored in one session.

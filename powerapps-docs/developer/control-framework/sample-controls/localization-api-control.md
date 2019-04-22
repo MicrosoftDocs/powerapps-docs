@@ -1,6 +1,6 @@
 ---
-title: " Localization API Control| Microsoft Docs" 
-description: "Implementing localization api control" 
+title: " Localization API component| Microsoft Docs" 
+description: "Implementing localization api component" 
 ms.custom: ""
 manager: kvivek
 ms.date: 04/23/2019
@@ -8,14 +8,14 @@ ms.service: "powerapps"
 ms.topic: "article"
 ms.author: "nabuthuk" 
 ---
-# Implementing localization API control
+# Implementing localization API component
 
-This sample showcases how localization is done for custom controls. In this sample, we use the [Increment control](increment-control.md) to localize the text that is displayed on the increment button based on the user’s selected language. 
+This sample showcases how localization is done for custom controls. In this sample, we use the [Increment component](increment-control.md) to localize the text that is displayed on the increment button based on the user’s selected language. 
 
 PowerApps component framework uses the concept of implementing String(resx) web resources that is used to manage the localized strings shown on any user interface. More information: [String(Resx) Webresources](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/resx-web-resources). 
 
 > [!div class="mx-imgBorder"]
-> ![Localization API Control](../media/localization-api-control.png "Localization API Control")
+> ![Localization API component](../media/localization-api-control.png "Localization API component")
 
 ## Manifest 
 
@@ -427,13 +427,13 @@ To localize an existing project, all you need to do is to create additional reso
 
 PowerApps component framework identifies the user’s language and returns the strings from that language-specific resource file when you try to access the string using `context.resources.getString` method.
 
-In this sample, two languages `Spanish` and `Finnish` with the language codes 3082 and 1035 respectively defined. We made a copy of the `Increment Control` sample and renamed it to `Localization API`. All the corresponding files including the files in the subfolders are renamed accordingly.
+In this sample, two languages `Spanish` and `Finnish` with the language codes 3082 and 1035 respectively defined. We made a copy of the `Increment component` sample and renamed it to `Localization API`. All the corresponding files including the files in the subfolders are renamed accordingly.
 
 In the strings folder under `TS_LocalizationAPI`, two additional resx files with the suffixes corresponding to Spanish and Finnish as 3082 and 1035 are added. The new files created should have their file names ending as `{filename}.3082.resx` and `{filename}.1035.resx` because the framework relies on this naming convention to identify which resource file should be picked for reading the strings for the user.
 
-Ensure that the keys used for strings in all these resource files share the same name across all the languages. Now, when the control is rendered on the UI, we see in the code that we retrieve the value to be displayed on the button using `context.resources.getString("PCF_LocalizationSample_ButtonLabel")`.
+Ensure that the keys used for strings in all these resource files share the same name across all the languages. Now, when the component is rendered on the UI, we see in the code that we retrieve the value to be displayed on the button using `context.resources.getString("PCF_LocalizationSample_ButtonLabel")`.
 
-When this line of code is executed, the PowerApps component framework automatically identifies the language of the user and picks up the value for the button label using the key provided in the corresponding language file we defined. Below is the text you see for each of the 3 languages we support for this sample control.
+When this line of code is executed, the PowerApps component framework automatically identifies the language of the user and picks up the value for the button label using the key provided in the corresponding language file we defined. Below is the text you see for each of the 3 languages we support for this sample component.
   
 |LanguageCode |Value Displayed |
 |---|---|

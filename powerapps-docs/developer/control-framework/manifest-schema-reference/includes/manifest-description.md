@@ -17,9 +17,9 @@ ms.assetid: 31af2963-b4ca-4347-98f6-4a3f6277f43a
 ---
 Manifest is the metadata file that defines a control. It is an `XML` document that describes:
 
-- The namespace of the control.
+- The namespace of the component.
 - The kind of data it can be bound to, either a field or a data-set.
-- Any properties that can be configured in the application when the control is added.
+- Any properties that can be configured in the application when the component is added.
 - A list of web resource files that the control needs. 
   - One of them must be a JavaScript web resource. This JavaScript must include a function that will instantiate an object. This implements an interface that exposes methods that are required for the control to work. This is called the control implementation library.
 - The name of a JavaScript function in the control implementation library that will return an object that applies the required control interface.

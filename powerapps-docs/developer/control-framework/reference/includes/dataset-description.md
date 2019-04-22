@@ -14,4 +14,4 @@ applies_to:
   - "Dynamics 365 Version 9.x"
 ms.assetid: 4e0553cb-45e2-4b16-87d7-f2914e449b2a
 ---
-The structure of a dataset property as it would be passed to a control
+The structure of a dataset property as it would be passed to a component

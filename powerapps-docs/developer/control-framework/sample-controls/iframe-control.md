@@ -1,6 +1,6 @@
 ---
-title: " Flip Control| Microsoft Docs" 
-description: "Implementing IFRAME control" 
+title: " IFRAME component| Microsoft Docs" 
+description: "Implementing IFRAME component" 
 ms.custom: ""
 manager: kvivek
 ms.date: 04/23/2019
@@ -8,12 +8,12 @@ ms.service: "powerapps"
 ms.topic: "article"
 ms.author: "nabuthuk" 
 ---
-# Implementing a IFRAME control
+# Implementing a IFRAME component
 
-This sample describes how to bind a custom control to different fields on the form and use the value of these fields as input properties to the control.  
+This sample describes how to bind a custom component to different fields on the form and use the value of these fields as input properties to the component.  
 
 > [!div class="mx-imgBorder"]
-> ![IFRAME Control](../media/iframe-control.png "IFRAME Control")
+> ![IFRAME component](../media/iframe-control.png "IFRAME component")
 
 ## Manifest
 
@@ -139,12 +139,12 @@ export class TSIFrameControl implements ComponentFramework.StandardControl<IInpu
 ```
 
 > [!NOTE]
-> PowerApps component framework does not yet support composite fields, so you will not be able to bind this control to the out of the box latitude and longitude address fields. You need to bind the custom control to a different floating-point field.
+> PowerApps component framework does not yet support composite fields, so you will not be able to bind this component to the out of the box latitude and longitude address fields. You need to bind the custom component to a different floating-point field.
 
-This sample control renders an `IFRAME` which displays `Bing Maps URL`. The control is bound to two floating point fields on the form, which are passed as parameters to the control and injected into the `IFRAME URL` to update the Bing Map to the latitude and longitude of the provided inputs.  
+This sample component renders an `IFRAME` which displays `Bing Maps URL`. The component is bound to two floating point fields on the form, which are passed as parameters to the component and injected into the `IFRAME URL` to update the Bing Map to the latitude and longitude of the provided inputs.  
 
 Update the `Manifest` file to include binding to two additional fields on the form.  
-This change informs the PowerApps component framework that these bound fields need to be passed to the control during initialization and whenever one of the values is updated.
+This change informs the PowerApps component framework that these bound fields need to be passed to the component during initialization and whenever one of the values is updated.
   
 ```xml
 
@@ -152,7 +152,7 @@ This change informs the PowerApps component framework that these bound fields ne
 <property name="longitudeValue" display-name-key="Bing_Maps_Longitude_Value" description-key="longitude" of-type="FP" usage="bound" required="true" />  
 ```
 
-Additional bound properties may be required or not. This will be enforced during the control configuration when the control is being bound to the form. This can be configured by setting the `required` attribute of the property node in the control manifest. Set the value to false if you don't want to require the control property be bound to a field. 
+Additional bound properties may be required or not. This will be enforced during the component configuration when the component is being bound to the form. This can be configured by setting the `required` attribute of the property node in the component manifest. Set the value to false if you don't want to require the component property be bound to a field. 
  
 `ControlFramework.d.ts` needs to be updated to add two fields to `IInputs` interface. This is the format the PowerApps component framework passes the field values. Adding these values to the `IInputs` interface allows your TypeScript file to reference the values and compile successfully.  
 
@@ -165,7 +165,7 @@ Additional bound properties may be required or not. This will be enforced during
 
 The initial rendering generates an `IFRAME` element and appends it to the controls container. This `IFRAME` is used to display the **Bing Map**. The url of the `IFRAME` is set to a `Bing Map URL` and includes the bound fields (latitudeValue and longitudeValue) in the url to center the map at the provided location. 
 
-The [updateView](../reference/control/updateview.md) method is invoked whenever one of these fields are updated on the form. This method updates the url of the **Bing Map** IFRAME to use the new latitude and longitude values passed to the control. To view this control in run time, bind the control to a field on the form like any other custom control.
+The [updateView](../reference/control/updateview.md) method is invoked whenever one of these fields are updated on the form. This method updates the url of the **Bing Map** IFRAME to use the new latitude and longitude values passed to the component. To view this component in run time, bind the component to a field on the form like any other custom component.
 
 ### Related topics
 

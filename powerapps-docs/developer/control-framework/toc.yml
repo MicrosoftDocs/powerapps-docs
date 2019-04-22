@@ -2,45 +2,45 @@
   items: 
   - name: Overview
     href: overview.md
-  - name: "What are custom controls"
+  - name: "What are custom components"
     href: custom-controls-overview.md
-  - name: Create, debug and deploy custom controls using Microsoft PowerApps CLI
+  - name: Create, debug and deploy custom components using Microsoft PowerApps CLI
     href: create-custom-controls-using-pcf.md
-  - name: Implementing custom controls in TypeScript
+  - name: Implementing custom components in TypeScript
     href: implementing-controls-using-typescript.md
-  - name: Updating existing PowerApps component framework controls into the new tools format
+  - name: Updating existing PowerApps component framework components into the new tools format
     href: updating-existing-controls.md
   - name: Limitations of PowerApps component framework
     href: limitations.md
-  - name: Sample Controls
+  - name: Sample Components
     items: 
-    - name: Increment control
+    - name: Increment component
       href: sample-controls/increment-control.md
-    - name: Linear input control
+    - name: Linear input component
       href: sample-controls/linear-input-control.md
-    - name: Localization API control
+    - name: Localization API component
       href: sample-controls/localization-api-control.md
-    - name: Angular Flip control
+    - name: Angular Flip component
       href: sample-controls/angular-flip-control.md
-    - name: Control State API control
+    - name: Control State API component
       href: sample-controls/control-state-api.md
-    - name: Data Set Grid control
+    - name: Data Set Grid component
       href: sample-controls/data-set-grid-control.md
-    - name: Formatting API control
+    - name: Formatting API component
       href: sample-controls/formatting-api-control.md
-    - name: IFRAME control
+    - name: IFRAME contcomponentrol
       href: sample-controls/iframe-control.md
-    - name: Image upload control
+    - name: Image upload component
       href: sample-controls/image-upload-control.md
-    - name: Map control
+    - name: Map component
       href: sample-controls/map-control.md
-    - name: Navigation API control
+    - name: Navigation API component
       href: sample-controls/navigation-api-control.md
-    - name: Table control
+    - name: Table component
       href: sample-controls/table-control.md
-    - name: Table grid control
+    - name: Table grid component
       href: sample-controls/table-grid-control.md
-    - name: Web API control
+    - name: Web API component
       href: sample-controls/webapi-control.md
   - name: Reference
     items:

@@ -1,6 +1,6 @@
 ---
-title: " Table grid Control| Microsoft Docs" 
-description: "Implementing table grid control" 
+title: " Table grid component| Microsoft Docs" 
+description: "Implementing table grid component" 
 ms.custom: ""
 manager: kvivek
 ms.date: 04/23/2019
@@ -9,13 +9,13 @@ ms.topic: "article"
 ms.author: "nabuthuk" 
 ---
 
-# Implementing Table Grid control
+# Implementing Table Grid component
 
-This sample showcases how to create a simple dataset control, view’s column metadata binding, record binding, more records from paging and record navigation to form.
-The control header columns and internal record values are bound to the existing views.
+This sample showcases how to create a simple dataset component, view’s column metadata binding, record binding, more records from paging and record navigation to form.
+The component header columns and internal record values are bound to the existing views.
 
 > [!div class="mx-imgBorder"]
-> ![Table Grid Control](../media/table-grid-control.png "Table Grid Control")
+> ![Table Grid component](../media/table-grid-control.png "Table Grid component")
 
 ## Manifest 
 
@@ -443,11 +443,11 @@ Load more page of data if needed :
 
 `context.parameters.[dataset_property_name].paging` will provide paging functionality like `hasNextPage` and `loadNextPage` data. The `Load More` button is shown if it has next page data.
 
-This sample also showcases how the control listens to the container resize. 
+This sample also showcases how the component listens to the container resize. 
 
 The `trackContainerResize` method should be called within [init](../reference/control/init.md) method so that the `mode.allocatedWidth` and `mode.allocatedHeight` will be provided each time [updateView](../reference/control/updateview.md) being called. If this method is not being called initially, then they don't have `allocatedWidth` and `allocatedHeight` provided.
 
-If the allocatedHeight is –1, that means there is no limit on height. The control should adjust its height based on the provided width.
+If the allocatedHeight is –1, that means there is no limit on height. The component should adjust its height based on the provided width.
 
 ### Related topics
 

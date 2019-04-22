@@ -1,6 +1,6 @@
 ---
-title: Control implementation library | Microsoft Docs
-description: Create custom controls using JavaScript or TypeScript
+title: Component implementation library | Microsoft Docs
+description: Create custom components using JavaScript or TypeScript
 keywords:
 ms.author: nabuthuk
 manager: kvivek
@@ -12,9 +12,9 @@ ms.topic: "article"
 ms.assetid: 5d100dc3-bd82-4b45-964c-d90eaebc0735
 ---
 
-Implementing the control library is one of the key component when you are developing custom controls using the PowerApps component framework. Developers can implement control library using JavaScript or TypeScript. You need to transpile into JavaScript if you wish to implement the custom logic in TypeScript and add a reference to it in the manifest file.
+Implementing the component library is one of the key component when you are developing custom components using the PowerApps component framework. Developers can implement component library using JavaScript or TypeScript. You need to transpile into JavaScript if you wish to implement the custom logic in TypeScript and add a reference to it in the manifest file.
 
-Each custom control must have one library that includes the definition of a function which will return an object that implements the methods described in the custom control interface. 
+Each custom component must have one library that includes the definition of a function which will return an object that implements the methods described in the custom component interface. 
 The object can implement the following methods:
 
 - [init](reference/control/init.md) (Required)
@@ -22,7 +22,7 @@ The object can implement the following methods:
 - [getOutputs](reference/control/getoutputs.md) (Optional)
 - [destroy](reference/control/destroy.md) (Required)
 
-These methods control the lifecycle of the custom control.
+These methods component the lifecycle of the custom component.
 
 ### Related topics
 

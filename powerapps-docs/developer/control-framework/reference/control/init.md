@@ -20,9 +20,9 @@ ms.author: "nabuthuk"
 
 | Parameter Name|Type|Required|Description|
 | ------------- |----|--------|-----------|
-|context|[Context](../context.md)|yes|The *Input Properties* containing the parameters, control metadata and interface functions.|
+|context|[Context](../context.md)|yes|The *Input Properties* containing the parameters, component metadata and interface functions.|
 |notifyOutputChanged|`function`|no|The method to notify the framework that it has new outputs|
-|state|`Dictionary`|no|The control state that is saved from *setControlState* in the last session|
+|state|`Dictionary`|no|The component state that is saved from *setControlState* in the last session|
 |container|[HTMLDivElement](https://developer.mozilla.org/docs/Web/API/HTMLDivElement)|no|The div element to render|
 
 ## Example

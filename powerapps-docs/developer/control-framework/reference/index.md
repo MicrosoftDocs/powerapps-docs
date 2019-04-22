@@ -1,6 +1,6 @@
 ---
-title: "PowerApps Control Framework API Reference | MicrosoftDocs"
-description: "The topic provides PowerApps Control Framework API reference."
+title: "PowerApps component framework API Reference | MicrosoftDocs"
+description: "The topic provides PowerApps component framework API reference."
 ms.date: 01/12/2018
 ms.service: "powerapps"
 ms.topic: "index-page"
@@ -10,9 +10,9 @@ author: "nkrb"
 ms.author: "nabuthuk"
 manager: "Jdaly"
 ---
-# PowerApps Control Framework API Reference
+# PowerApps component Framework API Reference
 
-This section contains reference documentation for creating custom controls using the PowerApps Control Framework.
+This section contains reference documentation for creating custom controls using the PowerApps component framework.
 
 |Name|Description|
 |----|-----------|

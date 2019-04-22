@@ -18,31 +18,31 @@ ms.assetid: 8b51654c-ee67-40f8-ae5b-be684dad3520
 
 ## allocatedHeight
 
-Height in pixels allocated to the control.
+Height in pixels allocated to the component.
 
 **Type**: `number`
 
 ## allocatedWidth
 
-Width in pixels allocated to the control.
+Width in pixels allocated to the component.
 
 **Type**: `number`
 
 ## isControlDisabled
 
-Whether the control is disabled.
+Whether the component is disabled.
 
 **Type**: `string`
 
 ## isVisible
 
-Whether the control is visible on the page.
+Whether the component is visible on the page.
 
 **Type**: `boolean`
 
 ## label
 
-The defined control label.
+The defined component label.
 
 **Type**: `string`
 

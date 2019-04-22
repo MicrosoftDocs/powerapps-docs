@@ -15,4 +15,4 @@ applies_to:
 ms.assetid: a941226e-d052-4b7f-92b8-a3a04d65ddf8
 ---
 
-Requests re-rendering of the control with updated data.
+Requests re-rendering of the component with the updated data.

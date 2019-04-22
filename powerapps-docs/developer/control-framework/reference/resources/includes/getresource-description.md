@@ -15,4 +15,4 @@ applies_to:
 ms.assetid: 1589a95b-baa6-4f22-b7be-9b219409baba
 ---
 
-Gets a resource from within the control manifest.
+Gets a resource from within the component manifest.

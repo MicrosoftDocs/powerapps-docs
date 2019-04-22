@@ -12,11 +12,11 @@ ms.author: "nabuthuk"
 
 # Limitations of PowerApps component framework
 
-With the release of the PowerApps component framework, you can now create your own custom controls to improve the user experience in Common Data Service. Even though you can create your own controls, there are some limitations that restrict developers implementing some features in the custom controls.Below are some of the limitations:
+With the release of the PowerApps component framework, you can now create your own custom components to improve the user experience in Common Data Service. Even though you can create your own components, there are some limitations that restrict developers implementing some features in the custom components. Below are some of the limitations:
 
-### Multiple controls in single manifest file
+### Multiple components in single manifest file
 
-It is not possible to define multiple controls in a single manifest file. 
+It is not possible to define multiple components in a single manifest file. 
 
 ### Calling Processes/Actions
 
@@ -24,12 +24,12 @@ This is not supported yet. For now you can only call dialog boxes using the [Nav
 
 ### Support for external libraries
 
-The PowerApps component framework supports all the external libraries for implementing custom controls. 
+The PowerApps component framework supports all the external libraries for implementing custom components. 
 
 > [!NOTE]
-> When you use JQuery for implementing the custom controls, at run time, it loads the platform version of the JQuery not the version you used to implement. 
+> When you use JQuery for implementing the custom components, at run time, it loads the platform version of the JQuery not the version you used to implement. 
 
-### Calling controls within another control
+### Calling controls within another component
 
 This is not supported yet.
 

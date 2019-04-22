@@ -1,5 +1,5 @@
 ---
-title: DataSet Grid Control | Microsoft Docs
+title: DataSet Grid component | Microsoft Docs
 description: 
 keywords:
 ms.author: nabuthuk
@@ -12,10 +12,10 @@ ms.topic: "article"
 ms.assetid: 356561d0-a36b-4b93-8b76-3e1abf9414e9
 ---
 
-This sample control shows how to change the user experience of interacting with the dataset. For example, you only see the home page grid on an entity homepage as a table. You can build your custom control that can display the data as per your choice. This sample shows the records as tiles instead of the regular tabular grid.
+This sample component shows how to change the user experience of interacting with the dataset. For example, you only see the home page grid on an entity homepage as a table. You can build your custom component that can display the data as per your choice. This sample shows the records as tiles instead of the regular tabular grid.
 
 > [!div class="mx-imgBorder"]
-> ![Data Set Grid Control](../media/data-set-grid.png "Data Set Grid Control")
+> ![Data Set Grid component](../media/data-set-grid.png "Data Set Grid component")
 
 ## Manifest 
 
@@ -366,9 +366,9 @@ export class TSControlStateAPI implements ComponentFramework.StandardControl<IIn
 </root>
 ```
 
-In this sample, we have the input parameter defined in control manifest file with the data-set tag. This is the input property that gets bound to the control.  
+In this sample, we have the input parameter defined in component manifest file with the data-set tag. This is the input property that gets bound to the component.  
  
-This control has two important containers that are added onto the main div which is added onto the div that is passed onto the control.  The first container holds the tiles that show the record data from the view and the second container is for the `Load More button` that shows when there are records that need more area that can fit in one page. 
+This component has two important containers that are added onto the main div which is added onto the div that is passed onto the component.  The first container holds the tiles that show the record data from the view and the second container is for the `Load More button` that shows when there are records that need more area that can fit in one page. 
  
 Both the containers are generated and refreshed whenever the [updateView](../reference/control/updateview.md) method is called. For the first container, we generate the tiles based on the information in the columns and the number of records. This ensures we display a tile for each record along with its information on it.  
  
@@ -378,9 +378,9 @@ On the click of load more button, we load the next page of records and append it
  
 The ***toggleLoadMoreButtonWhenNeeded*** function takes the input as the data set and checks, whether the data set, has next page, and if the button is hidden or visible and respectively hides or shows the button.  
  
-The ***onRowClick*** function attaches the context of the record using its GUID value and invokes the [openForm](../reference/navigation/openform.md) method of the `NavigationAPI` to open that respective record. This method is bound to each tile that gets generated as part of the ***createGridBody*** method. 
+The ***onRowClick*** function attaches the context of the record using its GUID value and invokes the [openForm](../reference/navigation/openform.md) method of the `NavigationAPI` to open that respective record. This method is bound to each tile that gets generated as part of the ***createGridBody*** method.
  
-The ***getSortedColumnsOnView*** method returns the list of columns based on the defined order on the view. 
+The ***getSortedColumnsOnView*** method returns the list of columns based on the defined order on the view.
 
 ### Related topics
 

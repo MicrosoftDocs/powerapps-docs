@@ -1,6 +1,6 @@
 ---
-title: Add Custom Controls to a field or entity | Microsoft Docs
-description: Process to import custom controls
+title: Add Custom Components to a field or entity | Microsoft Docs
+description: Process to import custom components
 keywords:
 ms.author: nabuthuk
 manager: kvivek
@@ -11,31 +11,31 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ---
 
-# Add Custom Controls to a field or entity
+# Add custom components to a field or entity
 
-Custom controls let you transform fields that traditionally contain text into visualizations. Similarly, you can use custom controls to transform datasets, such as a view, to display in a more visual rendering rather than a list of records. Custom controls can appear as visualizations on forms, dashboards, views, and homepage grids. 
+Custom components let you transform fields that traditionally contain text into visualizations. Similarly, you can use custom components to transform datasets, such as a view, to display in a more visual rendering rather than a list of records. Custom components can appear as visualizations on forms, dashboards, views, and homepage grids. 
 
-## Add a custom control to a field
+## Add a custom component to a field
 
-Following the steps in this procedure will change the default label and text box field of the **Budget Amount** field to the slider custom control on the Opportunity entity. You can use similar steps to replace an existing field with a custom control or configure a custom control for a custom field.
+Following the steps in this procedure will change the default label and text box field of the **Budget Amount** field to the slider custom component on the Opportunity entity. You can use similar steps to replace an existing field with a custom component or configure a custom component for a custom field.
 
 1. Open solution explorer.
 
 2. Expand **Entities**, expand the entity that you want, such as the **Opportunity** entity, select **Forms**, and then open a form such as the **Main** form.
 
-3. In the form editor, double-click the field where you want to add a custom control, such as the **Budget Amount** field on the opportunity main form. Alternatively, you can create a custom field.
+3. In the form editor, double-click the field where you want to add a custom component, such as the **Budget Amount** field on the opportunity main form. Alternatively, you can create a custom field.
 
 4. On the **Field Properties** page, select the **Controls** tab, and then select **Add Control**.
 
-5. On the Add Control page, select the control that you want, such as the **Linear Slider** control, and then select **Add**.
+5. On the Add Control page, select the component that you want, such as the **Linear Slider** component, and then select **Add**.
 
-6. Choose the client where you want the control to appear.
+6. Choose the client where you want the component to appear.
 
-   - **Web**. To make the custom control available from any web browser, select the Web option next to the control. Notice that setting the Web option includes rendering the control in web browsers on PCs, Macs, and mobile devices.
+   - **Web**. To make the custom component available from any web browser, select the Web option next to the component. Notice that setting the Web option includes rendering the component in web browsers on PCs, Macs, and mobile devices.
 
-   - **Phone**. To make the custom control available on phones running Dynamics 365 for phones, select the Phone option next to the control.
+   - **Phone**. To make the custom component available on phones running Dynamics 365 for phones, select the Phone option next to the component.
 
-   - **Tablet**. To make the custom control available on tablet devices running Dynamics 365 for tablets, select the Tablet option next to the control.
+   - **Tablet**. To make the custom component available on tablet devices running Dynamics 365 for tablets, select the Tablet option next to the component.
 7. Select the pencil icon next to **Min**, **Max**, and **Step**, set the property option, and then select **OK**.  
   
    - **Min**. Set the minimum accepted value. You can bind a static value that you enter or bind the value to an existing field. In this example **Bind to static value** is **Currency** and the minimum value that can be entered is *zero*.  
@@ -48,7 +48,7 @@ Following the steps in this procedure will change the default label and text box
   
    - **Step**. This represents the unit to increment or decrement when adding to or subtracting from  the current value. For example, for budget amount you can select 100 dollar increments\decrements.  
   
-   - **Hide Default Control**. Selecting this option hides the control so neither the control or the data is displayed in any of the clients that don't support the custom control.   
+   - **Hide Default Control**. Selecting this option hides the component so neither the component or the data is displayed in any of the clients that don't support the custom component.   
   
 8. Select **OK**, to close the Field Properties page.  
   
@@ -56,23 +56,23 @@ Following the steps in this procedure will change the default label and text box
   
 10. Select **Save and Close** to close the form editor.  
   
-## Add custom control to an entity
+## Add custom component to an entity
 
-To add a custom control like data-set control or simple table control to a grid or view, follow the steps below:
+To add a custom component like data-set component or simple table component to a grid or view, follow the steps below:
 
   - Navigate to **Settings > Customizations** and click on **Customize the System**.
-  - Click on the arrow next to **Entities** tab a select the entity you want to add the custom control. 
+  - Click on the arrow next to **Entities** tab a select the entity you want to add the custom component. 
   - Click on the **Controls** tab and click on **Add a control**.
-  - On the Add Control page, select the control that you want, such as Simple Table control and then select **Add**.
-  - Choose the client where you want the control to appear.
+  - On the Add Control page, select the component that you want, such as Simple Table component and then select **Add**.
+  - Choose the client where you want the component to appear.
 
 
-## See the custom control in action  
+## See the custom component in action  
 
- Open a record that includes the field with the custom control, such as the Opportunity form from the previous example, and view how the field is changed. The field is now rendered as a slider control instead of the text field.  
+ Open a record that includes the field with the custom component, such as the Opportunity form from the previous example, and view how the field is changed. The field is now rendered as a slider component instead of the text field.  
 
 ### See also
 
-[Implementing controls in TypeScript](implementing-controls-using-typescript.md)<br/>
+[Implementing components in TypeScript](implementing-controls-using-typescript.md)<br/>
 [PowerApps component framework API Reference](reference/index.md)<br/>
 [PowerApps component framework Overview](overview.md)

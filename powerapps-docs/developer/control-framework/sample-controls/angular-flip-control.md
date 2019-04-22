@@ -1,6 +1,6 @@
 ---
-title: " Flip Control| Microsoft Docs" 
-description: "Implementing a Flip control using Angular JS" 
+title: " Flip component| Microsoft Docs" 
+description: "Implementing a Flip component using Angular JS" 
 ms.custom: ""
 manager: kvivek
 ms.date: 04/23/2019
@@ -8,9 +8,9 @@ ms.service: "powerapps"
 ms.topic: "article"
 ms.author: "nabuthuk" 
 ---
-# Implementing Flip Control
+# Implementing Flip component
 
-This sample shows how to use third-party libraries to create controls in PowerApps component framework.  The flip sample control is implemented based on angular.js, angular-ui, angular-animate, angular-sanitize, bootstrap. The code may not reveal the best practices for the mentioned third-party libraries.
+This sample shows how to use third-party libraries to create controls in PowerApps component framework.  The flip sample component is implemented based on angular.js, angular-ui, angular-animate, angular-sanitize, bootstrap. The code may not reveal the best practices for the mentioned third-party libraries.
 
 > [!div class="mx-imgBorder"]
 > ![Angular Flip](../media/angular-flip.png "Angular Flip")
@@ -44,14 +44,14 @@ This sample shows how to use third-party libraries to create controls in PowerAp
 
 ## Overview
 
-This sample provides examples on how to add dependencies for third-party libraries, showcasing how to perform data-binding between PowerApps component framework, control model and third-party inner data model in bi-direction.
+This sample provides examples on how to add dependencies for third-party libraries, showcasing how to perform data-binding between PowerApps component framework, component model and third-party inner data model in bi-direction.
 
-The flip control sample consists of a label and a button. When you click on the button, the text on the label toggles.
+The flip component sample consists of a label and a button. When you click on the button, the text on the label toggles.
 
-- When the control is loaded, the label shows the text based on the bind attribute value. The `context.parameters.[property_name].attributes` contains the associated metadata.
+- When the component is loaded, the label shows the text based on the bind attribute value. The `context.parameters.[property_name].attributes` contains the associated metadata.
 - For TwoOptions fields, `context.parameters.[property_name].Options` will include both true and false value option. 
 - Clicking on the Flip button, the label will update value using **notifyOutputEvents** method, [getOutputs](../reference/control/getoutputs.md) method will be called asynchronously and will flow to PowerApps component framework. 
-- ClientAPI updates the bind attribute value, and the updated value flows to the control label. You can also use `ClientAPI` to update an attribute value to trigger control’s [updateView](../reference/control/updateview.md) method. The control then updates the third-party model and the label gets updated.
+- ClientAPI updates the bind attribute value, and the updated value flows to the component label. You can also use `ClientAPI` to update an attribute value to trigger control’s [updateView](../reference/control/updateview.md) method. The component then updates the third-party model and the label gets updated.
 
 
 ## Code

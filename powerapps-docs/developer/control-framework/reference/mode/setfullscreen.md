@@ -27,7 +27,7 @@ ms.assetid: 1faf3e79-969e-4c1e-ac01-8e2155c609fa
 
 | Parameter Name|Type|Required|Description|
 | ------------- |----|--------|-----------|
-|value|`boolean`|yes|`True` if control needs to auto size to full screen. `False` if control needs to auto size to allocated width.|
+|value|`boolean`|yes|`True` if component needs to auto size to full screen. `False` if component needs to auto size to allocated width.|
 
 
 ### Related topics

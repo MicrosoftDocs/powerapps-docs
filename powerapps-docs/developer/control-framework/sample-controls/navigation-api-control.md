@@ -1,6 +1,6 @@
 ---
-title: " Navigation API Control| Microsoft Docs" 
-description: "Implementing navigation api control" 
+title: " Navigation API component| Microsoft Docs" 
+description: "Implementing navigation api component" 
 ms.custom: ""
 manager: kvivek
 ms.date: 04/23/2019
@@ -9,12 +9,12 @@ ms.topic: "article"
 ms.author: "nabuthuk" 
 ---
 
-# Implementing Navigation API  control
+# Implementing Navigation API  component
 
-This sample control explores the various methods available as part of the PowerApps component framework navigation API. In this sample, you create a series of input elements of type buttons which calls into the respective methods of the navigation API that matches with the value displayed.  
+This sample component explores the various methods available as part of the PowerApps component framework navigation API. In this sample, you create a series of input elements of type buttons which calls into the respective methods of the navigation API that matches with the value displayed.  
 
 > [!div class="mx-imgBorder"]
-> ![Navigation API Control](../media/navigation-api-control.png "Navigation API Control")
+> ![Navigation API component](../media/navigation-api-control.png "Navigation API component")
 
 ## Manifest
 
