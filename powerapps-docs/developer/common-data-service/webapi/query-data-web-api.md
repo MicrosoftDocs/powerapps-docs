@@ -3,7 +3,6 @@ title: "Query Data using the Web API (Common Data Service)| Microsoft Docs"
 description: "Read about the various ways to query Common Data Service data using the Common Data Service Web API and various system query options that can be applied in these queries"
 ms.custom: ""
 ms.date: 02/06/2019
-ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""

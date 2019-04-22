@@ -3,7 +3,6 @@ title: "Perform operations using the Web API (Common Data Service)| Microsoft Do
 description: "Common Data Service Web API provides a modern, RESTful web service that you can use to interact with data in Common Data Service using a wide variety of platforms, programming languages and devices. Read about the operations that can be performed using the Web API"
 ms.custom: ""
 ms.date: 04/22/2019
-ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""

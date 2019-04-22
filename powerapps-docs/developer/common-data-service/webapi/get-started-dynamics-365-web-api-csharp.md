@@ -3,7 +3,6 @@ title: "Get started with Common Data Service Web API (C#) (Common Data Service)|
 description: "Learn how to access the Common Data Service Web API using the Microsoft Visual C# programming language"
 ms.custom: ""
 ms.date: 1/09/2019
-ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""

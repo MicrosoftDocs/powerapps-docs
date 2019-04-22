@@ -3,7 +3,6 @@ title: "Detect Duplicate Data using the Web API (Common Data Service) | Microsof
 description: "<Description>" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
 ms.service: powerapps
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID

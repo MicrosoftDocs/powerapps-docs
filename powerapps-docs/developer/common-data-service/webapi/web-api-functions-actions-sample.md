@@ -3,7 +3,6 @@ title: "Web API Functions and Actions Sample (Common Data Service)| Microsoft Do
 description: "This group of samples demonstrates how to perform bound and unbound functions and actions, including custom actions, using the Common Data Service Web API. These are implemented using Client-side JavaScript and C#"
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""

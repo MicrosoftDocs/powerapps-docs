@@ -3,7 +3,6 @@ title: "Impersonate another user using the Web API (Common Data Service)| Micros
 description: "Impersonation is used to execute business logic(code) on behalf of another Common Data Service user to provide a desired feature or service using the appropriate role and object-based security of that impersonated user. Read how you can impersonate another user in Common Data Service using the Web API"
 ms.custom: ""
 ms.date: 03/18/2019
-ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""

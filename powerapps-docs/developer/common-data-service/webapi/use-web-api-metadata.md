@@ -3,7 +3,6 @@ title: "Use the Web API with metadata (Common Data Service) | Microsoft Docs"
 description: "The section provides guidance about how to use the Web API with the entity types included in Web API Metadata EntityType Reference."
 ms.custom: ""
 ms.date: 04/22/2019
-ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""

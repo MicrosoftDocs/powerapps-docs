@@ -3,7 +3,6 @@ title: "Associate and disassociate entities using the Web API (Common Data Servi
 description: "Read how to add  reference to a collection-valued navigation property, remove a reference and change an existing reference using the Web API"
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""

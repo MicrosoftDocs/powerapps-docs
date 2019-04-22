@@ -3,7 +3,6 @@ title: "Use the Common Data Service Web API (Common Data Service)| Microsoft Doc
 description: "The Common Data Service Web API implements OData v4 and provides a development experience that can be used across a wide variety of programming languages, platforms, and devices"
 ms.custom: ""
 ms.date: 04/22/2019
-ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -14,6 +13,7 @@ ms.assetid: 15c4039e-a3ca-4116-ba1d-3ac88cba3ae1
 caps.latest.revision: 15
 author: "brandonsimons" # GitHub ID
 ms.author: "susikka"
+ms.reviewer: "susikka"
 manager: "shujoshi"
 search.audienceType: 
   - developer

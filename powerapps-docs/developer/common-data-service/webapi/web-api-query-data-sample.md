@@ -3,7 +3,6 @@ title: "Web API Query Data Sample (Common Data Service)| Microsoft Docs"
 description: "This group of samples shows how to query data using the Web API. These are implemented using Client-side JavaScript and C#"
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""

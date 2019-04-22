@@ -3,7 +3,6 @@ title: "Web API Basic Operations Sample (Common Data Service)| Microsoft Docs"
 description: "This group of sample demonstrates how to perform CRUD (Create, Retrieve, Update and Delete) operations using the Web API. These are implemented using Client-side JavaScript and C#"
 ms.custom: ""
 ms.date: 03/22/2019
-ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""

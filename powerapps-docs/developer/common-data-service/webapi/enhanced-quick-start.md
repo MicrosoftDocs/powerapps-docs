@@ -3,7 +3,6 @@ title: "Enhanced quick Start(Common Data Service)| Microsoft Docs"
 description: "Create a new project in Visual Studio to build a console application that uses Common Data Service Web API"
 ms.custom: ""
 ms.date: 02/02/2019
-ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""

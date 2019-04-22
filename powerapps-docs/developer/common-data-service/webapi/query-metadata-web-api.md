@@ -3,7 +3,6 @@ title: "Query metadata using the Web API (Common Data Service) | Microsoft Docs"
 description: "The capability to query system metadata is available using the Web API as well as using the organization service by using RetrieveMetadataChangesRequest"
 ms.custom: ""
 ms.date: 11/04/2018
-ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
