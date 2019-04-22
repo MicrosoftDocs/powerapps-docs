@@ -2,7 +2,7 @@
 title: "Start a Dynamics 365 for Customer Engagement Web API project in Visual Studio (C#) (Common Data Service)| MicrosoftDocs"
 description: "Create a new project in Visual Studio to build a console application that uses Common Data Service Web API"
 ms.custom: 
-ms.date: 04/01/2019
+ms.date: 04/22/2019
 ms.reviewer: 
 ms.service: powerapps
 ms.suite: 
@@ -35,7 +35,7 @@ This topic demonstrates how to create a new project in Visual Studio 2017 that b
 <a name="bkmk_createProject"></a>   
 
 ## Create a project  
-The following procedure demonstrates how to create a console application project in C# that uses the Microsoft .NET Framework. For more information on supported versions of the .NET Framework, see [Supported extensions](../supported-extensions.md).  
+The following procedure demonstrates how to create a console application project in C# that uses the Microsoft .NET Framework.
   
 <a name="bkmk_newProject"></a> 
 
@@ -69,7 +69,7 @@ install-package System.Net.Http
   
 4. If you have additional functionality that you routinely use in your applications, you can add the associated references to the required assemblies now. For more information, see [How to: Add or Remove References by Using the Add Reference Dialog Box](https://msdn.microsoft.com/library/wkze6zky.aspx).  
   
-   Because the Common Data Service Web API is based on REST principles, it does not require client-side assemblies to access.  However, other APIs supported by Common Data Service apps do require these; for more information, see [Assemblies included in Common Data Service SDK](../org-service/assemblies-included-sdk.md).  
+   Because the Common Data Service Web API is based on REST principles, it does not require client-side assemblies to access.  However, other APIs supported by Common Data Service apps do require these.
   
 #### Add typical using statements  
   
