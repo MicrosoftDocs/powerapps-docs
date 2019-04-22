@@ -40,7 +40,7 @@ Use the new form designer to create and design forms for model-driven apps.
     The contents of the new form are filled using the existing main form definition. If multiple main forms exist, the form at the top of the list in the form order is used to fill the new form. 
     - **Quick create form (preview)**
     - **Quick view form (preview)**
-5. Select **Save** to save the form, or select **Publish** if you want to save and make your changes visible to app users.  
+5. When you are done making changes to the form, select **Save** to save the form, or select **Publish** if you want to save and make your changes visible to app users.  
 
 ## Edit a form 
 1. Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). 
@@ -49,7 +49,7 @@ Use the new form designer to create and design forms for model-driven apps.
 4. Select the form name that you want to edit.  
     - You can also select the row for a form, and then in the command bar, select **Edit form (preview)**
     - Another alternative is to select **...** next to the form name, and then in the menu, select **Edit form (preview)**. 
-5. Select **Save** to save the form, or select **Publish** if you want to save and make your changes visible to app users. 
+5. When you are done making changes to the form, select **Save** to save the form, or select **Publish** if you want to save and make your changes visible to app users. 
 
 ## See also
 [Overview of the model-driven form designer](form-designer-overview.md)  
