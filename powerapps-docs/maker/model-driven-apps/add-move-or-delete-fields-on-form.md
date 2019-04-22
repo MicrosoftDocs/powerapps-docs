@@ -27,7 +27,7 @@ search.app:
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 > [!NOTE]
-> When adding or moving fields using drag and drop be aware that the form preview is responsive and may be rendering multiple columns as stacked. To ensure that the field being added or moved is in the correct column, drop or paste it anchored to another field that is already in that column.
+> When adding or moving fields using drag and drop be aware that the form preview is responsive and may be rendering multiple section columns as stacked. To ensure that the field being added or moved is in the correct section column, drop or paste it anchored to another field that is already in that section column.
 
 ## Add fields to a form
 To add fields to a form, use the **Fields** pane. The **Fields** pane lets you search and filter to help you quickly find fields. It also includes the option to show only unused fields. 
