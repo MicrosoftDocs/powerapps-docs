@@ -80,15 +80,19 @@ To use **Combo box** as a people picker, choose the **Person** template from the
 ## Example
 1. On the **Insert** tab, open the **Controls** menu, and then select **Combo box**.  
 
-1. Set the control's **Items** property to this expression, replacing **DataSource** with the name of your data source and **ColumnName** with the name of a column in that source:
+1. On the **Properties** tab of the right-hand pane, open the **Select a data source** list (next to **Items**), and then add or select a data source.
 
-    `DataSource.ColumnName`
+1. On the same tab, select **Edit** (next to **Fields**).
+
+1. In the **Data** pane, open the **Primary text** list, and then select the column that you want to show in the **Combo box** control.
+
+1. While holding down the Alt key, select the down arrow to open the **Combo box** control.
+
+    The control shows the data from the column that you specified in the data source that you specified.
     
-1. Set the **DefaultSelectedItems** property to this expression, replacing *DataSource* with the name of your data source:
+1. (optional) To show the first record by default, set the **DefaultSelectedItems** property to this expression, replacing *DataSource* with the name of your data source:
 
     `First(DataSource)`
-    
-The **Combo box** control shows the data from the column that you specified in the first record of your data source.
 
 ## Accessibility guidelines
 ### Color contrast
