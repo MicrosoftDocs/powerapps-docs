@@ -171,7 +171,7 @@ The feature team is aggregating anonymized telemetry in order to understand whic
 
 ## How to Uninstall the Microsoft PowerApps CLI
 
-To uninstall the CLI tool please follow below steps:
+To uninstall the CLI tool please run the MSI from [here](http://download.microsoft.com/download/D/B/E/DBE69906-B4DA-471C-8960-092AB955C681/powerapps-cli-0.1.51.msi). If you are Private Preview Participant and have an older version of CLI, please follow below manual steps:
 
 1. To find out where PowerApps CLI is installed, open a command prompt and type `where pac`
 1. Delete the PowerAppsCLI folder.
