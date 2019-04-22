@@ -80,13 +80,15 @@ To use **Combo box** as a people picker, choose the **Person** template from the
 ## Example
 1. On the **Insert** tab, open the **Controls** menu, and then select **Combo box**.  
 
-1. In the **Properties** tab of the right-hand pane, open the list next to **Items**, and then add or select a data source.
+1. Set the control's **Items** property to this expression, replacing **DataSource** with the name of your data source and **ColumnName** with the name of a column in that source:
+
+    `DataSource.ColumnName`
     
 1. Set the **DefaultSelectedItems** property to this expression, replacing *DataSource* with the name of your data source:
 
     `First(DataSource)`
     
-A functional **Combo box** control appears in your app.
+The **Combo box** control shows the data from the column that you specified in the first record of your data source.
 
 ## Accessibility guidelines
 ### Color contrast
