@@ -125,7 +125,7 @@ You can use **Concurrent** only in [behavior formulas](../working-with-formulas-
 
 4. Add a [**Data table**](../controls/control-data-table.md) control, and set its **Items** property to **Results**.
 
-1. On the **Properties** tab of the right pane, select **Results** to open the **Data** pane.
+1. On the **Properties** tab of the right pane, select **Edit fields** to open the **Fields** pane.
 
 1. In the list of fields, select the check box for each field to show them all in the data table.
 

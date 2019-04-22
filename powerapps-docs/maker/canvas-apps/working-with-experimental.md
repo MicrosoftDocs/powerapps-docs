@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: anneta
-ms.date: 07/16/2018
+ms.date: 03/20/2019
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -44,7 +44,9 @@ This table may help you decide when you should jump in:
 | **Preview** | New apps automatically include this feature.  Start enabling and testing in existing apps because this feature will be eventually turned on for them too. | Yes. This feature is on track to become a permanent part of the product.  | Yes. You may want to turn it off if you run into a problem.  Please report issues; this is the main reason the feature is in Preview. | 
 | **Shipped** (no longer appears in **Advanced settings**) | All apps have this feature. | Yes. | Yes.  Most can't be disabled.  |  
 
-Toward the end of Preview, we might enable the feature for all apps one time, and we mark it as being in **final validation**.  This change gives the most people a last chance to try out the feature while they can still turn it off. Timely feedback is critical in this period because, in the next stage, the feature is fully shipped, and you can't turn it off.  
+Toward the end of Preview, we might enable the feature for all apps one time, and we mark it as being in **final validation**.  This change gives the most people a last chance to try out the feature while they can still turn it off. Timely feedback is critical in this period because, in the next stage, the feature is fully shipped, and you can't turn it off.
+
+In the final transition to **Shipped**, we may remove the Preview switch in apps for which the feature is already turned on, effectively turning the feature on permanently. This change will apply to most apps because the feature will have been on by default before that point. For apps where the feature is turned off, the Preview switch will still be available for you to turn on, test with the feature, and turn off within the same session of PowerApps Studio. However, if you save the app when the switch is turned on, it won't be available when the app is reloaded, so you can't turn the feature off again. At that point, you can [restore the app to a previous version](restore-an-app.md) to return the app to a state before the feature was turned on.
 
 ## Documentation
 
