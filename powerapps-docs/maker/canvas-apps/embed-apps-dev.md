@@ -32,14 +32,14 @@ You can also integrate canvas apps into SharePoint Online without using an ifram
 If you have an app you want to embed, the first step is to set parameters for the Uniform Resource Identifier (URI), so that the iframe knows where to find the app. The URI is in the following form:
 
 ```
-https://app.powerapps.com/player/iframeapp?source=iframe
-&appId=/providers/Microsoft.PowerApps/apps/[AppID]
+https://apps.powerapps.com/play/iframeapp?source=iframe
+&appGuid=[AppID]
 ```
 
 > [!NOTE]
 > We added a line break so the URI displays better on the page.
 >
-> The URI format has changed from https://web.powerapps.com/webplayer to https://app.powerapps.com/player as of May 2019. Please update any embedded ifrmaes to use the new URI format. References to the previous format will be redirected to the new URI to ensure compatibility. 
+> The URI format has changed from https://web.powerapps.com/webplayer to https://apps.powerapps.com/play as of May 2019. Please update any embedded ifrmaes to use the new URI format. References to the previous format will be redirected to the new URI to ensure compatibility. 
 
 The only thing you have to do is substitute the ID of your app for [AppID] in the URI (including '[' & ']'). We'll show you how to get that value shortly, but first here are all the parameters available in the URI:
 
@@ -60,14 +60,14 @@ The app ID is available on powerapps.com. For the app you want to embed:
 1. Substitute the `[AppID]` value in the URI. For our Asset Ordering app, the URI looks like this:
    
     ```
-    https://app.powerapps.com/player/iframeapp?source=iframe&appId=/providers/Microsoft.PowerApps/apps/76897698-91a8-b2de-756e-fe2774f114f2
+    https://apps.powerapps.com/play/iframeapp?source=iframe&appGuid=76897698-91a8-b2de-756e-fe2774f114f2
     ```
 
 ## Embed your app in a website
 Embedding your app is now as simple as adding the iframe to the HTML code for your site (or any other service that supports iframes, such as Power BI or SharePoint):
 
 ```
-<iframe width="[W]" height="[H]" src="https://app.powerapps.com/player/iframeapp?source=website&screenColor=rgba(165,34,55,1)&appId=/providers/Microsoft.PowerApps/apps/[AppID]" allow="geolocation; microphone; camera"/>
+<iframe width="[W]" height="[H]" src="https://apps.powerapps.com/play/iframeapp?source=website&screenColor=rgba(165,34,55,1)&appGuid=[AppID]" allow="geolocation; microphone; camera"/>
 ```
 
 Specify values for the iframe width and height, and substitute the ID of your app for `[AppID]`.
