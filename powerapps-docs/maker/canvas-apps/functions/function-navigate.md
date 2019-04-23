@@ -38,7 +38,7 @@ In the first argument, specify the name of the screen to display.
 | **ScreenTransition.Cover** |The new screen slides into view covering the current screen, moving right to left. | ![screen transition cover animation](media/function-navigate/cover.gif) |
 | **ScreenTransition.CoverRight** |The new screen slides into view covering the current screen, moving left to right. | ![screen transition cover right animation](media/function-navigate/coverright.gif) |
 | **ScreenTransition.Fade** |The current screen fades away to reveal the new screen. | ![screen transition fade animation](media/function-navigate/fade.gif) |
-| **ScreenTransition.None** |The current screen is quickly replaced with the new screen. | ![screen transition none animation](media/function-navigate/none.gif) |
+| **ScreenTransition.None** (Default) |The current screen is quickly replaced with the new screen. | ![screen transition none animation](media/function-navigate/none.gif) |
 | **ScreenTransition.UnCover** | The current screen slides out of view to uncover the new screen, moving right to left. | ![screen transition uncover animation](media/function-navigate/uncover.gif) |
 | **ScreenTransition.UnCoverRight** | The current screen slides out of view to uncover the new screen, moving left to right. | ![screen transition uncover right animation](media/function-navigate/uncoverright.gif) |
 
@@ -73,7 +73,7 @@ You can use these functions only within a [behavior formula](../working-with-for
 2. Add a screen, and name it **AddlScreen**.
 3. Add a label to **AddlScreen**, and set the **[Text](../controls/properties-core.md)** property of the label so that it shows **Addl**.
 4. Add a button to **AddlScreen**, and set its **[OnSelect](../controls/properties-core.md)** property to this function:<br>**Navigate(DefaultScreen, ScreenTransition.Fade)**
-5. From the **AddlScreen**, press F5, and then select the button.<br>**DefaultScreen** appears.
+5. From the **AddlScreen**, press F5, and then select the button.<br>**DefaultScreen** appears through a fade transition.
 
 [Another example](../add-screen-context-variables.md)
 
