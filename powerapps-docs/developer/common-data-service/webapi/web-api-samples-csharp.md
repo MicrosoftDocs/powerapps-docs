@@ -3,7 +3,6 @@ title: "Web API  Data operations  Samples (C#) (Common Data Service)| Microsoft 
 description: "This topic provides a description of various Web API samples that are implemented using C#"
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -14,6 +13,7 @@ ms.assetid: 66e26684-819e-45f7-bec4-c250be4d6fed
 caps.latest.revision: 14
 author: "brandonsimons" # GitHub ID
 ms.author: "jdaly"
+ms.reviewer: "susikka"
 search.audienceType: 
   - developer
 search.app: 

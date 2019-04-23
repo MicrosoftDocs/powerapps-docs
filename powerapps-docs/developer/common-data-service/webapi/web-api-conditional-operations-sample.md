@@ -3,7 +3,6 @@ title: "Web API Conditional Operations Sample (Common Data Service)| Microsoft D
 description: "This group of samples demonstrate how to perform operations that are conditionally based upon the version of the entity record contained on the Common Data Service server and/or currently maintained by the client"
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -14,6 +13,7 @@ ms.assetid: f2e5d22b-93fe-43b7-af15-3e281f3b3084
 caps.latest.revision: 13
 author: "brandonsimons" # GitHub ID
 ms.author: "jdaly"
+ms.reviewer: "susikka"
 search.audienceType: 
   - developer
 search.app: 
