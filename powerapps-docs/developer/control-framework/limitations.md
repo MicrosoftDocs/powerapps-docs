@@ -14,30 +14,11 @@ ms.author: "nabuthuk"
 
 With the release of the PowerApps component framework, you can now create your own custom components to improve the user experience in Common Data Service. Even though you can create your own components, there are some limitations that restrict developers implementing some features in the custom components. Below are some of the limitations:
 
-### Multiple components in single manifest file
+## Support for external libraries
 
-It is not possible to define multiple components in a single manifest file. 
+For public preview, components should bundle all code including external library content into the primary code bundle. To see an example of how the PowerApps command line interface can help with bundling your external library content into a component-specific bundle, see our [Angular flip component](sample-controls/angular-flip-control.md) example.
 
-### Calling Processes/Actions
-
-This is not supported yet. For now you can only call dialog boxes using the [Navigation](reference/navigation.md) method.
-
-### Support for external libraries
-
-The PowerApps component framework supports all the external libraries for implementing custom components. 
-
-> [!NOTE]
-> When you use JQuery for implementing the custom components, at run time, it loads the platform version of the JQuery not the version you used to implement. 
-
-### Calling components within another component
-
-This is not supported yet.
-
-### Font Resource
-
-Currently font resource (.tff) is not supported in PowerApps component framework.
-
-### Related topics
+## Related topics
 
 [PowerApps component framework API Reference](reference/index.md)<br/>
 [PowerApps component framework Overview](overview.md)

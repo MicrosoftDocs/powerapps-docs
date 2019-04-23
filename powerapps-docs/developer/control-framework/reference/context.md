@@ -55,7 +55,7 @@ The interface for `context.navigation`
 
 Placeholder description: PropBag.parameters
 
-**Type**: `string[]`
+**Type**: `TInputs`
 
 ## resources
 

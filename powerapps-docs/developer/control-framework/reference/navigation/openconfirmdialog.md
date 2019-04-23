@@ -31,6 +31,8 @@ ms.assetid: 83f2c208-696c-48b1-b65c-2ba7374d6cfc
 
 Type: `Promise<ConfirmDialogResponse>`
 
+Returns promise, defining success or failure of the operation. The success case returns a boolean specifying whether yes or no button was pressed
+
 ## Remarks
 
 See [Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise) and [File](https://developer.mozilla.org/docs/Web/API/File)

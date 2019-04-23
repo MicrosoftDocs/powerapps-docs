@@ -39,6 +39,11 @@ ms.assetid: 996f10e5-8057-40ea-9680-555e4cd682ff
 |--|--|--|
 |[types](types.md)||0 or more|
 
+### Remarks
+
+The `of-type` attribute value must be one of the following:
+
+[!INCLUDE [type-table](includes/type-table.md)]
 
 ### Related topics
 
