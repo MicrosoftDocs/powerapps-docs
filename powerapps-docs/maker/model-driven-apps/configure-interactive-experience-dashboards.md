@@ -46,34 +46,34 @@ Interactive experience dashboards can be a one-stop workplace for app users, suc
 ### Multi-stream dashboard standard view  
  In the multi-stream dashboard, you see a row of visual filters at the top with the data streams below them.  
  
-![Multi-stream interactive dashboard](../model-driven-apps/media/interactive-dashboards-multi-stream.png) 
+![Multi-stream interactive dashboard](media/interactive-dashboards-multi-stream.png) 
    
 ### Multi-stream dashboard tile view  
  The same dashboard, only in the tile view.  
   
- ![Multi-stream dashboard tile view](../model-driven-apps/media/interactive-dashboards-multi-stream-tiles.png "Multi-stream dashboard tile view")  
+ ![Multi-stream dashboard tile view](media/interactive-dashboards-multi-stream-tiles.png "Multi-stream dashboard tile view")  
   
 ### Multi-stream dashboard layouts  
  For multi-stream dashboards, you can choose from four different layouts.  
 
  > [!div class="mx-imgBorder"] 
- > ![Multi-stream dashboard layouts](../model-driven-apps/media/interactive-dashboards-multi-stream-layout.png "Multi-stream dashboard layouts")  
+ > ![Multi-stream dashboard layouts](media/interactive-dashboards-multi-stream-layout.png "Multi-stream dashboard layouts")  
   
 ### Multi-stream entity-specific dashboard  
  The entity-specific dashboard for the case entity is shown here.  
   
- ![Open cases dashboard](../model-driven-apps/media/interactive-dashboard-cases-dashboard.png "Open cases dashboard")  
+ ![Open cases dashboard](media/interactive-dashboard-cases-dashboard.png "Open cases dashboard")  
   
 ### Single-stream dashboard  
  The single-stream dashboard contains the data stream on the left and visual filters and tiles on the right.  
   
- ![Single-stream interactive service hub dashboard](../model-driven-apps/media/interactive-dashboards-single-stream.png "Single-stream interactive service hub dashboard")  
+ ![Single-stream interactive service hub dashboard](media/interactive-dashboards-single-stream.png "Single-stream interactive service hub dashboard")  
   
 ### Single-stream dashboard layouts  
  For single-stream dashboards, you can choose from four different layouts.  
  
  > [!div class="mx-imgBorder"] 
- > ![Single-stream dashboard layouts.](../model-driven-apps/media/interactive-dashboards-single-stream-layout.png "Single-stream dashboard layouts.")  
+ > ![Single-stream dashboard layouts.](media/interactive-dashboards-single-stream-layout.png "Single-stream dashboard layouts.")  
   
 <a name="BKMK_Enable"></a>   
 ## Configure fiter fields, and security roles for the interactive dashboards  
@@ -88,7 +88,7 @@ Interactive experience dashboards can be a one-stop workplace for app users, suc
 In this example there are two interactive dashboard options available in the Case entity for the **IsEscalated** field.  
 
  > [!div class="mx-imgBorder"] 
- > ![Enable a field for global filter and sort](../model-driven-apps/media/enable-filter-sort.png "Enable a field for global filter and sort")  
+ > ![Enable a field for global filter and sort](media/enable-filter-sort.png "Enable a field for global filter and sort")  
   
 ### Configure the 'Appears in global filter in interactive experience' option
 
@@ -155,7 +155,7 @@ The following illustration shows the flyout dialog with the list of the availabl
 5.  When the dashboard form opens, fill in the filtering information at the top of form, as shown here.  
  
  > [!div class="mx-imgBorder"] 
- > ![Add visual filters](../model-driven-apps/media/interactive-dashboards-add-visual-filters.png "Add visual filters")  
+ > ![Add visual filters](media/interactive-dashboards-add-visual-filters.png "Add visual filters")  
   
    - **Filter Entity**: The visual filters and global filter attributes are based on this entity.  
       
@@ -170,7 +170,7 @@ The following illustration shows the flyout dialog with the list of the availabl
  Add the **Cases By Priority** doughnut chart.
   
  > [!div class="mx-imgBorder"] 
- > ![Add a doughnut chart component.](../model-driven-apps/media/interactive-dashboards-add-chart-circle.png "Add a doughnut chart component.")  
+ > ![Add a doughnut chart component.](media/interactive-dashboards-add-chart-circle.png "Add a doughnut chart component.")  
   
  Some charts, such as bar charts or pie charts, render showing the data stored in the system. The doughnut charts and tag charts load as static images and don’t show the preview of the actual data.  
   
@@ -178,13 +178,13 @@ The following illustration shows the flyout dialog with the list of the availabl
 >  The charts configured for the visual filters can use the fields of the **Filter** entity as well as related entities. When you use charts based on related entity fields, the customer service representatives can filter charts using these related entity fields. The fields that are based on the related entity usually have the following format in the chart configuration window: “field name (entity name)”, such as the **Modified By (Delegate)** field. To create multi-entity charts, you must add  fields of a related entity to any of the views, and then use these fields while creating charts.  
  
  > [!div class="mx-imgBorder"] 
- > ![Creating charts for visual filters](../model-driven-apps/media/interactive-dashboard-visual-charts-x-y-axes.PNG "Creating charts for visual filters")  
+ > ![Creating charts for visual filters](media/interactive-dashboard-visual-charts-x-y-axes.PNG "Creating charts for visual filters")  
   
  Next, configure the streams. Just like with adding components in the charts, select the element inside the stream panel. When the dialog appears, select **View** or **Queue** depending on what element you want the stream to use. Enter the required information, as shown in the following illustration.  
   
  Configure the stream for the **Items available to work on** as shown here:  
   
- ![Add a stream of my active cases.](../model-driven-apps/media/add-stream-dashboard.png "Add a stream of my active cases.")  
+ ![Add a stream of my active cases.](media/add-stream-dashboard.png "Add a stream of my active cases.")  
 
 > [!NOTE]
 >  The **Queue** option is available in the dialog box only for queue-enabled entities. For entity dashboards, if the entity is not queue enabled, you won't see the **Queue** option in the dialog box. You can only use the **View option** in the stream of dashboards for entities that are not queue enabled.    
@@ -192,7 +192,7 @@ The following illustration shows the flyout dialog with the list of the availabl
 The following illustration is an example of a fully configured chart panel and stream panel:  
  
  > [!div class="mx-imgBorder"] 
- > ![Fully configured dashboard](../model-driven-apps/media/example-stream-visual.png "Fully configured dashboard")  
+ > ![Fully configured dashboard](media/example-stream-visual.png "Fully configured dashboard")  
   
  After you have completed configuring the dashboard, save it and publish the customizations for your changes to take effect.   
   
@@ -235,7 +235,7 @@ For example, instead of selecting an entity, some fields in the entity-specific 
 ### Configure a single-stream dashboard  
  Configuring a single-stream dashboard is similar to the multi-stream dashboard. All UI navigation steps are the same as for the multi-stream dashboard. You can choose a layout that includes tiles or the layout that doesn’t include tiles. If the tiles are included, they are always displayed on the dashboard. To configure a tile, you select the icon in the center of the tile. When the **Add Tile** window opens, fill in the required data. The following illustration is an example of the tile setup.  
   
- ![Add a tile to the single-stream dashboard](../model-driven-apps/media/add-tile.png "Add a tile to the single-stream dashboard")  
+ ![Add a tile to the single-stream dashboard](media/add-tile.png "Add a tile to the single-stream dashboard")  
   
 <a name="BKMK_ConfigureColors"></a>   
 ## Configure dashboard colors  
@@ -260,15 +260,15 @@ For example, instead of selecting an entity, some fields in the entity-specific 
 In the following example, we’re changing the color for the **IsEscalated** field. Use the **Edit** button to open the **Modify List Value** dialog box:  
  
  > [!div class="mx-imgBorder"] 
- > ![Change color in the dashboard](../model-driven-apps/media/edit-color.png "Change color in the dashboard")  
+ > ![Change color in the dashboard](media/edit-color.png "Change color in the dashboard")  
   
 When the **Modify List Value** dialog box opens, choose the color as shown here:  
   
- ![Modify the dashboard color](../model-driven-apps/media/modify-color.png "Modify the dashboard color")  
+ ![Modify the dashboard color](media/modify-color.png "Modify the dashboard color")  
 
 Similarly, if you go to the **Priority** field to modify the colors of the case priority options, choose the color in the **Options** sub-area of the **General** tab, as shown below:
 
- ![Modify the dashboard color](../model-driven-apps/media/priority-color-modify.png "Change dashboard color for case priority")  
+ ![Modify the dashboard color](media/priority-color-modify.png "Change dashboard color for case priority")  
   
 ### See also  
  
