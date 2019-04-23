@@ -62,7 +62,7 @@ Interactive experience dashboards can be a one-stop workplace for app users, suc
 ### Multi-stream entity-specific dashboard  
  The entity-specific dashboard for the `Case` entity is shown here.  
   
- ![Open cases dashboard](../model-driven-apps/media/interactive-dashboard-cases-dashboard.PNG "Open cases dashboard")  
+ ![Open cases dashboard](../model-driven-apps/media/interactive-dashboard-cases-dashboard.png "Open cases dashboard")  
   
 ### Single-stream dashboard  
  The single-stream dashboard contains the data stream on the left and visual filters and tiles on the right.  
