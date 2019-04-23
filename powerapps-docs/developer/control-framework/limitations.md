@@ -25,6 +25,9 @@ With the release of PowerApps component framework, you can now create your own c
 
 For public preview, components should bundle all code including external library content into the primary code bundle. To see an example of how the PowerApps command line interface can help with bundling your external library content into a component-specific bundle, see [Angular flip component](sample-controls/angular-flip-control.md) example.
 
+> [!NOTE]
+> Support for shared libraries across components using library nodes in component manifest is not supported for Public preview. We are reviewing this and will be adding this capability in future release.
+
 ## Related topics
 
 [PowerApps component framework API Reference](reference/index.md)<br/>

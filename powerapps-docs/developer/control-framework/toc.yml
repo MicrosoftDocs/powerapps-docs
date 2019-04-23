@@ -12,6 +12,8 @@
     href: updating-existing-controls.md
   - name: Limitations of PowerApps component framework
     href: limitations.md
+  - name: FAQ
+    href: faq.md
   - name: Sample Components
     items: 
     - name: Increment component
@@ -255,7 +257,6 @@
         href: manifest-schema-reference/type.md
       - name: type-group
         href: manifest-schema-reference/type-group.md
-    - name: FAQ
-      href: faq.md
+    
       
         
