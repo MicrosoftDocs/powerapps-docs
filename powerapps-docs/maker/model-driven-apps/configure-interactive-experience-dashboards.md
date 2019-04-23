@@ -76,80 +76,71 @@ Interactive experience dashboards can be a one-stop workplace for app users, suc
  > ![Single-stream dashboard layouts.](../model-driven-apps/media/interactive-dashboards-single-stream-layout.png "Single-stream dashboard layouts.")  
   
 <a name="BKMK_Enable"></a>   
-## Configure entities, fields, and security roles for the interactive dashboards  
- When you configure interactive dashboards, your first task is to enable entities, fields, and security roles for the interactive experience.  
+## Configure fiter fields, and security roles for the interactive dashboards  
+ When you configure interactive dashboards, your first task is to enable filter fields and security roles, so that interactive dashboards can be configured for them. Notice that interactive dashboards are enabled for all entities and custom entities by default. 
   
-### Entities enabled for interactive experience
- All entities supported in the Unified Interface are enabled for the interactive experience dashboards.
-  
-### Configure fields  
- For a field to appear in the global filter and be included in the data stream sort, you have to set two flags, as shown in the example below for the **IsEscalated** field of the Case entity.  
+### Configure filter fields  
+ For a field to appear in the global filter and be included in the data stream sort, you must set two flags:
+
+- Appears in global filter in interactive experience
+- Sortable in interactive experience dashboard
+
+In this example there are two flags enabled in the Case entity for the **IsEscalated** field.  
 
  > [!div class="mx-imgBorder"] 
  > ![Enable a field for global filter and sort](../model-driven-apps/media/enable-filter-sort.png "Enable a field for global filter and sort")  
   
-### Configure global filter fields  
- For a field to appear in the global filter, you have to set the **Appears in global filter in interactive experience** flag for this field. The fields that you configure will appear in the global filter flyout window when the global filter icon is clicked on the dashboard header. In the flyout window, the service reps can select the fields on which they want to filter globally, in charts, and also in streams and tiles that are based on the filter entity. For more information about the filter entity see the “Configure multi-stream interactive dashboard” section later in this topic.  
+### Configure the 'Appears in global filter in interactive experience' option
+
+1. Go to **Settings** > **Customizations**.
+2. Select **Customize the System**.
+3. Under **Components**, expand **Entities**, and then expand the entity you want.
+4. In the navigation pane, select **Fields** and in the grid, double-click the field you want to enable.
+5. In the **General** tab, select the **Appears in global filter in interactive experience** check box. Select **Save and Close**.
+6. Select **Publish All Customizations** for your changes to take effect.
+  
+ The fields that you enable for **Appears in global filter in interactive experience** appear in the global filter flyout window when the global filter icon is clicked on the dashboard header. In the flyout window, the service reps can select the fields on which they want to filter globally, in charts, and also in streams and tiles that are based on the filter entity.   
   
  The global filter flyout window is shown here:  
   
- ![Add two global filter fields](../model-driven-apps/media/interactive-dashboards-global-filter-two-fields.png "Add two global filter fields")  
+ ![Add two global filter fields](media/global-filter-escalated.png "Global filter fields")  
   
-> [!NOTE]
->  When you configure a visual filter (interactive chart) based on the fields like priority or status, a best practice is to also enable these fields (priority, status) to appear in the global filter.  
+> [!TIP]
+>  When you configure a visual filter based on the fields like priority or status, a best practice is to also enable these fields (priority, status) to appear in the global filter.  
   
-The following procedure provides the steps for setting the global filter flag:
+### Configure the 'Sortable in interactive experience dashboard' option
   
-1. Open [solution explorer](advanced-navigation.md#solution-explorer).  
+1. Go to **Settings** > **Customizations**.
+2. Select **Customize the System**.
+3. Under **Components**, expand **Entities**, and then expand the entity you want.
+4. In the navigation pane, select Fields and in the grid, double-click the field you want to enable.
+5. In the **General** tab, select the **Sortable in interactive experience dashboard** check box. Select **Save and Close**.
+6. Select **Publish All Customizations** for your changes to take effect.
   
-2. Under **Components**, expand **Entities**, and then expand the entity you want. If the entity you want isn't displayed select **Add Existing** to add it.  
+The fields that you configure for sorting appear in the drop-down list on the stream header. 
+
+The following illustration shows the flyout dialog with the list of the available fields for sorting, in the drop-down list. The default sort is always set on the **Modified On** field.  
   
-3.  In the navigation pane, select **Fields** and in the grid, double-click the field you want to enable.  
-  
-4.  In the **General** tab, select the **Appears in global filter in interactive experience** check box. Select **Save and Close**.  
-  
-5.  Select **Publish** for your changes to take effect.  
-  
-6.  Select **Prepare Client Customizations**.  
-  
-### Configure sortable fields  
- For a field to be used in sorting stream data, you have to set the **Sortable in interactive experience dashboard** flag for this field. The fields that you configure for sorting will appear in the drop-down list in the **Edit Property** flyout dialog when the user selects **More (…)** on the stream header. The following illustration shows the flyout dialog with the list of the available fields for sorting, in the **Sort By** drop-down list. The default sort is always set on the **Modified On** field.  
-  
- ![Sort by drop-down list](../model-driven-apps/media/interactive-dashboard-sortable-fields-dropdown.png "Sort by drop-down list")  
-  
-The following procedure provides the steps for setting the sort flag:
-  
-1. Open [solution explorer](advanced-navigation.md#solution-explorer).   
-2. Under **Components**, expand **Entities**, and then expand the entity you want. If the standard entity you want isn't displayed select **Add Existing** to add it.  
-  
-3.  In the navigation pane, select **Fields** and in the grid, double-click the field you want to enable.  
-  
-4.  In the **General** tab, select the **Sortable in interactive experience dashboard** check box. Select **Save and Close**.  
-  
-5.  Select **Publish** for your changes to take effect.  
-  
-6.  Select **Prepare Client Customizations**.  
-  
+ ![Sort by drop-down list](media/sort-field.png "Sort by drop-down list")    
+    
 ### Enable security roles  
  Select and enable security roles that will be able to view the interactive dashboards.  
   
-The following procedure provides the steps to enable the security roles for the interactive experience:
+#### Enable security roles for interactive dashboards
+
+1. Go to **Settings** > **Customizations**.
+
+2. Select **Customize the System**.  
   
-1. Open [solution explorer](advanced-navigation.md#solution-explorer).  
-  
-2. Under **Components**, select **Dashboards**.  
+3. Under **Components**, select **Dashboards**.  
   
 4.  In the grid, select the interactive dashboard you want and select **Enable Security Roles** on the task bar.  
   
 5.  In the **Assign Security Roles** dialog, select the **Display only to these selected security roles** option and select the roles that you want to enable. Select **OK**.  
   
-6.  Select **Publish** for your changes to take effect.  
+6.  Select **Publish All Customizations** for your changes to take effect.    
   
-7.  Select **Prepare Client Customizations**.  
-  
- ![Enable security roles](../model-driven-apps/media/interactive-dashboards-enable-security-roles.png "Enable security roles")  
-  
- ![Assign security roles](../model-driven-apps/media/interactive-dashboards-assign-security-roles.png "Assign security roles")  
+ ![Enable security roles](media/security-roles.png "Enable security roles")    
   
 <a name="BKMK_Configure"></a>   
 ## Configure interactive experience dashboards  
@@ -161,7 +152,7 @@ The following procedure provides the steps to enable the security roles for the 
   
 2.  Select **Data** > **Entities** > select the entity you want. 
 
-3.  Select the **Dashboards** tab, and then on the toolbar select **Add dashboard**.  
+3.  Select the **Dashboards** tab, and then on the toolbar select **Add dashboard**. 
   
 4.  Choose the layout, either 2, 3, or 4 column width.  
   
@@ -170,15 +161,15 @@ The following procedure provides the steps to enable the security roles for the 
  > [!div class="mx-imgBorder"] 
  > ![Add visual filters](../model-driven-apps/media/interactive-dashboards-add-visual-filters.png "Add visual filters")  
   
-   - **Filter Entity**: The visual filters (interactive charts) and global filter attributes are based on this entity.  
+   - **Filter Entity**: The visual filters and global filter attributes are based on this entity.  
       
-    - **Entity View**: The visual filters (interactive charts) are based on this view.  
+    - **Entity View**: The visual filters are based on this view.  
       
     - **Filter By**: The field that the time frame filter applies to.  
       
     - **Time Frame**: The default time frame filter value for the **Filter By** field.  
       
- After you  have specified the filtering information, start adding components for the charts and the data streams. To add a component, simply select the element in the center of the chart or stream, and when the dialog appears, enter the required information, as shown in the following illustrations.  
+ After you  have specified the filtering information, start adding components for the charts and the data streams. To add a component, simply select the element in the center of the chart or stream, and when the dialog appears, select the required information from the drop-down list, as shown in the following illustrations.  
   
  Add the **Cases By Priority** doughnut chart.
   
