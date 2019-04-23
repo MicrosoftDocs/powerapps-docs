@@ -10,11 +10,18 @@ ms.author: "nabuthuk"
 ---
 # Implementing Web API component
 
+[!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+
 The Web API component is designed to perform create, retrieve, update and delete functions. The component renders four buttons, which can be clicked to invoke different Web API actions. The result of the Web API call is injected into a HTML div element at the bottom of the custom component.  
 
 > [!div class="mx-imgBorder"]
 > ![Web API component](../media/web-api-control.png "Web API component")
- 
+
+> [!IMPORTANT]
+> - PowerApps component framework is a preview feature.
+> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)] 
+> - [!INCLUDE[cc_preview_features_no_MS_support](../../includes/cc-preview-features-no-ms-support.md)]
+
  ## Manifest
 
  ```xml

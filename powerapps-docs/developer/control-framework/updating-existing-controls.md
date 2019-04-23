@@ -13,7 +13,15 @@ ms.assetid: d2cbf58a-9112-45c2-b823-2c07a310714c
 ---
 # Updating existing custom controls 
 
+[!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+
 If you are a PowerApps component framework Private Preview participant and have already built custom components, you will need to make some minor updates to make it compatible with the new ALM-centric project structures. To use the new PowerApps component framework build tools with your existing PowerApps component framework custom component source, a few changes are required.
+
+> [!IMPORTANT]
+> - Microsoft PowerApps CLI tools are a pre-release version and may be different from the commercially released version.
+> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)] 
+> - If you give feedback about the software to Microsoft, you give to Microsoft, without charge, the right to use, share and commercialize your feedback in any way and for any purpose. 
+> - Microsoft doesn't provide support for this preview feature. Microsoft Technical Support won’t be able to help you with issues or questions.
 
 ## Creating an empty project
 

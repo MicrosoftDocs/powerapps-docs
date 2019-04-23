@@ -10,10 +10,17 @@ ms.author: "nabuthuk"
 ---
 # Implementing a IFRAME component
 
+[!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+
 This sample describes how to bind a custom component to different fields on the form and use the value of these fields as input properties to the component.  
 
 > [!div class="mx-imgBorder"]
 > ![IFRAME component](../media/iframe-control.png "IFRAME component")
+
+> [!IMPORTANT]
+> - PowerApps component framework is a preview feature.
+> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)] 
+> - [!INCLUDE[cc_preview_features_no_MS_support](../../includes/cc-preview-features-no-ms-support.md)]
 
 ## Manifest
 

@@ -10,12 +10,19 @@ ms.author: "nabuthuk"
 ---
 # Implementing increment component
 
+[!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+
 This sample component shows how to bind data with PowerApps component framework and error handling. This component renders as a textbox with an `Increment` button in the runtime. The text box shows the current value and the `Increment` button is clickable. Whenever you click on the button, the value within the textbox is increased by 1. The increment value can be changed to any number you wish.
 
 To implement this component, the first thing you need to define the [Manifest](../manifest-schema-reference/manifest.md)file, and then implement the custom logic in TypeScript.
 
 > [!div class="mx-imgBorder"]
 > ![Increment component](../media/increment-control.png "Increment component")
+
+> [!IMPORTANT]
+> - PowerApps component framework is a preview feature.
+> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)] 
+> - [!INCLUDE[cc_preview_features_no_MS_support](../../includes/cc-preview-features-no-ms-support.md)]
 
 ## Manifest
 

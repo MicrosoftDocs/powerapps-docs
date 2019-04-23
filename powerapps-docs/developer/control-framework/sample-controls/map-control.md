@@ -11,10 +11,17 @@ ms.author: "nabuthuk"
 
 # Implementing map component
 
+[!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+
 This sample component changes the user experience of interacting with address fields on the form. Along with the text values of the address, this component provides the ability to visually identify a particular address on a map without navigating to another tab or screen. 
 
 > [!div class="mx-imgBorder"]
 > ![Map component](../media/map-control.png "Map component")
+
+> [!IMPORTANT]
+> - PowerApps component framework is a preview feature.
+> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)] 
+> - [!INCLUDE[cc_preview_features_no_MS_support](../../includes/cc-preview-features-no-ms-support.md)]
 
 ## Manifest
 

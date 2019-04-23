@@ -9,12 +9,19 @@ ms.topic: "article"
 ms.author: "nabuthuk" 
 ---
 
-# Implementing Navigation API  component
+# Implementing Navigation API component
+
+[!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 This sample component explores the various methods available as part of the PowerApps component framework navigation API. In this sample, you create a series of input elements of type buttons which calls into the respective methods of the navigation API that matches with the value displayed.  
 
 > [!div class="mx-imgBorder"]
 > ![Navigation API component](../media/navigation-api-control.png "Navigation API component")
+
+> [!IMPORTANT]
+> - PowerApps component framework is a preview feature.
+> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)] 
+> - [!INCLUDE[cc_preview_features_no_MS_support](../../includes/cc-preview-features-no-ms-support.md)]
 
 ## Manifest
 

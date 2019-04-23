@@ -9,13 +9,20 @@ ms.topic: "article"
 ms.author: "nabuthuk" 
 ---
 
-# Implementing Table Grid component
+# Implementing table grid component
+
+[!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 This sample showcases how to create a simple dataset component, view’s column metadata binding, record binding, more records from paging and record navigation to form.
 The component header columns and internal record values are bound to the existing views.
 
 > [!div class="mx-imgBorder"]
 > ![Table Grid component](../media/table-grid-control.png "Table Grid component")
+
+> [!IMPORTANT]
+> - PowerApps component framework is a preview feature.
+> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)] 
+> - [!INCLUDE[cc_preview_features_no_MS_support](../../includes/cc-preview-features-no-ms-support.md)]
 
 ## Manifest 
 

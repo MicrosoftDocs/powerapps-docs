@@ -12,10 +12,19 @@ ms.topic: "article"
 ms.assetid: 3b875f06-0fd9-49fa-bc34-939d00e17185
 ---
 
+# Implementing formatting API component
+
+[!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+
 This sample component explores the various methods available as part of the PowerApps component framework formatting API. In this sample, you create a series of input elements which calls into the respective methods of the formatting API that matches with the value displayed.
 
 > [!div class="mx-imgBorder"]
 > ![Formatting API component](../media/formatting-api.png "Formatting API component")
+
+> [!IMPORTANT]
+> - PowerApps component framework is a preview feature.
+> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)] 
+> - [!INCLUDE[cc_preview_features_no_MS_support](../../includes/cc-preview-features-no-ms-support.md)]
 
 ## Manifest
 

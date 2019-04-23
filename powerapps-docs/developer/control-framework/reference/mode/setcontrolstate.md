@@ -27,7 +27,7 @@ ms.assetid: 1052db82-7002-44ca-ad1f-9d3d4c311817
 
 | Parameter Name|Type|Required|Description|
 | ------------- |----|--------|-----------|
-|state|`Dictionary`|Yes||
+|state|`Dictionary`|Yes|Data that persists in one session for a single user.|
 
 ## Return Value
 

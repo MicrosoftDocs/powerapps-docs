@@ -12,7 +12,9 @@ ms.topic: "article"
 ms.assetid: 4a77bf37-8ea0-4fe3-9fe7-2769387167c3
 ---
 
-# Overview
+# Implementing control state API component
+
+[!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 The PowerApps component framework allows you to persist state of component across multiple renderings of the component within the same session. It provides you with the ability to build controls that can maintain user state throughout the user's session as the user navigates to and from the component.  
 
@@ -20,6 +22,11 @@ For example, if your custom component is a long list that the user can scroll th
 
 > [!div class="mx-imgBorder"]
 > ![Control state API](../media/control-state-api.png "Control state API")
+
+> [!IMPORTANT]
+> - PowerApps component framework is a preview feature.
+> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)] 
+> - [!INCLUDE[cc_preview_features_no_MS_support](../../includes/cc-preview-features-no-ms-support.md)]
 
 ## Manifest
 
