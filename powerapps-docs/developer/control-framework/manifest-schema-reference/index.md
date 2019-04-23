@@ -15,14 +15,14 @@ ms.assetid: 045a395b-4475-48dd-8f67-6bc2b33cd89c
 
 # Manifest schema reference
 
-[!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+[!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
 
 This section contains reference documentation for manifest schema generated using the PowerApps CLI.
 
 > [!IMPORTANT]
 > - PowerApps component framework is a preview feature.
-> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)] 
-> - [!INCLUDE[cc_preview_features_no_MS_support](../../includes/cc-preview-features-no-ms-support.md)]
+> - [!INCLUDE[cc_preview_features_definition](../../../includes/cc-preview-features-definition.md)] 
+> - [!INCLUDE[cc_preview_features_no_MS_support](../../../includes/cc-preview-features-no-ms-support.md)]
 
 |Element|Description|
 |----|-----------|
