@@ -81,5 +81,6 @@ This topic showed you how to get started with the embedding a canvas app in a mo
 ## See also
 [Embed a canvas app on a model-driven form](embed-canvas-app-in-form.md) <br />
 [Pass the current record as data context to an embedded canvas app](pass-current-embedded-canvas-app.md) <br />
+[Perform predefined actions on the host form from within an embedded canvas app](embedded-canvas-app-actions.md) <br />
 [Share an embedded canvas app](share-embedded-canvas-app.md) <br />
 [Guidelines on working with embedded canvas apps](embedded-canvas-app-guidelines.md)

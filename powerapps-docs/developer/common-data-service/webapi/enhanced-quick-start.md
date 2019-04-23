@@ -3,7 +3,6 @@ title: "Enhanced quick Start(Common Data Service)| Microsoft Docs"
 description: "Create a new project in Visual Studio to build a console application that uses Common Data Service Web API"
 ms.custom: ""
 ms.date: 02/02/2019
-ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -14,7 +13,8 @@ ms.assetid: 08377156-32c7-492a-8e66-50a47a330dc6
 caps.latest.revision: 14
 author: "brandonsimons" # GitHub ID
 ms.author: "jdaly"
-manager: ""
+ms.reviewer: "susikka"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
@@ -33,9 +33,9 @@ How you capture user credentials depends on the type of client you are making. F
 
 Enabling this requires three steps:
 
-1. [Add Reference to System.Configuration to the Visual Studio project](#1-add-reference-to-systemconfiguration-to-the-visual-studio-project)
-1. [Edit the application configuration file](#2-edit-the-application-configuration-file)
-1. [Add using statement to Program.cs](#3-add-using-statement-to-programcs)
+1. [Add Reference to System.Configuration to the Visual Studio project](#add-reference-to-systemconfiguration-to-the-visual-studio-project)
+1. [Edit the application configuration file](#edit-the-application-configuration-file)
+1. [Add using statement to Program.cs](#add-using-statement-to-programcs)
 
 
 ### Add Reference to System.Configuration to the Visual Studio project

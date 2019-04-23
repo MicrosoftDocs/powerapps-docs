@@ -3,7 +3,6 @@ title: "Update and delete entities using the Web API (Common Data Service)| Micr
 description: "Read how to perform update and delete operations on entities using the Web API"
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -14,7 +13,8 @@ ms.assetid: 694889fd-2b85-43a0-97bc-1e760695db31
 caps.latest.revision: 17
 author: "brandonsimons" # GitHub ID
 ms.author: "jdaly"
-manager: "amyla"
+ms.reviewer: "susikka"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
