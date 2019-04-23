@@ -3,7 +3,6 @@ title: "Web API Functions and Actions Sample (Client-side JavaScript) (Common Da
 description: "This sample demonstrates how to perform bound and unbound functions and actions, including custom actions, using the Common Data Service Web API and client-side JavaScript"
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -14,6 +13,7 @@ ms.assetid: 337f5d15-66be-46db-a96a-309951a37a2a
 caps.latest.revision: 20
 author: "brandonsimons" # GitHub ID
 ms.author: "jdaly"
+ms.reviewer: "susikka"
 search.audienceType: 
   - developer
 search.app: 

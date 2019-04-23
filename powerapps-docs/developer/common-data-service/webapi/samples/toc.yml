@@ -1,6 +1,7 @@
 - name: (C#)  Data operations Samples
-  href: ../web-api-samples-csharp.md
   items:
+    - name: Get started with C# samples
+      href: ../web-api-samples-csharp.md
     - name: Basic Operations
       href: basic-operations-csharp.md
     - name: Query Data
@@ -10,8 +11,9 @@
     - name: Functions and Actions
       href: functions-actions-csharp.md
 - name: Client-side JavaScript  Data operations Samples
-  href: ../web-api-samples-client-side-javascript.md
   items:
+  - name: Get started with Client-side JavaScript samples
+    href: ../web-api-samples-client-side-javascript.md
   - name: Basic Operations
     href: basic-operations-client-side-javascript.md
   - name: Query Data
