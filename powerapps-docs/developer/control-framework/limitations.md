@@ -12,11 +12,11 @@ ms.author: "nabuthuk"
 
 # Limitations of PowerApps component framework
 
-With the release of the PowerApps component framework, you can now create your own custom components to improve the user experience in Common Data Service. Even though you can create your own components, there are some limitations that restrict developers implementing some features in the custom components. Below are some of the limitations:
+With the release of PowerApps component framework, you can now create your own custom components to improve the user experience in model-driven apps. Even though you can create your own components, there are some limitations that restrict developers implementing some features in the custom components. Below are some of the limitations:
 
 ## Support for external libraries
 
-For public preview, components should bundle all code including external library content into the primary code bundle. To see an example of how the PowerApps command line interface can help with bundling your external library content into a component-specific bundle, see our [Angular flip component](sample-controls/angular-flip-control.md) example.
+For public preview, components should bundle all code including external library content into the primary code bundle. To see an example of how the PowerApps command line interface can help with bundling your external library content into a component-specific bundle, see [Angular flip component](sample-controls/angular-flip-control.md) example.
 
 ## Related topics
 

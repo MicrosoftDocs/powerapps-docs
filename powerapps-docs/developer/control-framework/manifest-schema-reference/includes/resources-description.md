@@ -15,4 +15,4 @@ applies_to:
 ms.assetid: cc323973-f0c3-474a-921e-68135593d4b2
 ---
 
-The resources node in the component manifest refers to the webresources that components require to implement it's visualization.
+The resources node in the component manifest refers to the resource file that components require to implement it's visualization.
