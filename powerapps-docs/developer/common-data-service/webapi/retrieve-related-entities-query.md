@@ -3,7 +3,6 @@ title: "Retrieve related entities with a query (Common Data Service)| Microsoft 
 description: "ead how you can retrieve related entities by expanding the navigation properties."
 ms.custom: ""
 ms.date: 02/06/2019
-ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
