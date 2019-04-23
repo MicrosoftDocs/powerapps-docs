@@ -12,14 +12,7 @@ ms.topic: "article"
 ms.assetid: 5d100dc3-bd82-4b45-964c-d90eaebc0735
 ---
 
-[!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
-
 Implementing the component library is one of the key step when you are developing custom components using PowerApps component framework. Developers can implement component library using TypeScript. Each custom component must have a library that includes the definition of a function which returns an object that implements the methods described in the custom component interface. 
-
-> [!IMPORTANT]
-> - PowerApps component framework is a preview feature.
-> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)] 
-> - [!INCLUDE[cc_preview_features_no_MS_support](../../includes/cc-preview-features-no-ms-support.md)]
 
 The object implements the following methods:
 

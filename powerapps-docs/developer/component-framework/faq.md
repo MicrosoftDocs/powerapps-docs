@@ -9,7 +9,7 @@ ms.assetid: 9f940264-d7d5-4930-8052-1bd582445d37
 ms.author: "nabuthuk"
 ---
 
-# FAQs
+# FAQ
 
 [!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
