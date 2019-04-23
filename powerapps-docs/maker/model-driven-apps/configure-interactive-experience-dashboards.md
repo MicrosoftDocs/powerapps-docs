@@ -184,26 +184,21 @@ The following illustration shows the flyout dialog with the list of the availabl
  > [!div class="mx-imgBorder"] 
  > ![Creating charts for visual filters](../model-driven-apps/media/interactive-dashboard-visual-charts-x-y-axes.PNG "Creating charts for visual filters")  
   
- Next, configure the streams. Just like with adding components in the charts, select the element inside the stream panel. When the dialog appears, select **View** or **Queue** depending on what element you want the stream to use. Enter the required information, as shown in the following illustrations.  
-  
-> [!NOTE]
->  The **Queue** option is available in the dialog box only for queue-enabled entities. For entity dashboards, if the entity is not queue enabled, you won't see the **Queue** option in the dialog box. You can only use the **View option** in the stream of dashboards for entities that are not queue enabled.  
+ Next, configure the streams. Just like with adding components in the charts, select the element inside the stream panel. When the dialog appears, select **View** or **Queue** depending on what element you want the stream to use. Enter the required information, as shown in the following illustration.  
   
  Configure the stream for the **Items available to work on** as shown here:  
   
  ![Add a stream of my active cases.](../model-driven-apps/media/add-stream-dashboard.png "Add a stream of my active cases.")  
-  
- The following illustration is an example of the chart panel, left to right: doughnut chart, tag chart, and bar chart:  
+
+> [!NOTE]
+>  The **Queue** option is available in the dialog box only for queue-enabled entities. For entity dashboards, if the entity is not queue enabled, you won't see the **Queue** option in the dialog box. You can only use the **View option** in the stream of dashboards for entities that are not queue enabled.    
+ 
+The following illustration is an example of a fully configured chart panel and stream panel:  
  
  > [!div class="mx-imgBorder"] 
  > ![Fully configured dashboard](../model-driven-apps/media/example-stream-visual.png "Fully configured dashboard")  
   
- This illustration is an example of the stream panel with several streams:  
- 
- > [!div class="mx-imgBorder"] 
- > ![Add all streams](../model-driven-apps/media/interactive-dashboards-add-all-streams.png "Add all streams")  
-  
- After you have completed configuring the dashboard, save it and publish the customizations for your changes to take effect. Also, make sure to select **Prepare Client Customizations**.  
+ After you have completed configuring the dashboard, save it and publish the customizations for your changes to take effect.   
   
 #### Edit or delete individual streams of an existing dashboard  
   
@@ -226,14 +221,15 @@ The following illustration shows the flyout dialog with the list of the availabl
  You can also delete an individual stream from a dashboard. To do this, select the stream, and then on the command bar, select **Delete**.  
   
 ### Configure an entity-specific dashboard  
- An entity-specific dashboard is a multi-stream dashboard. Configuring this dashboard is similar to configuring a home page multi-stream dashboard, but you do it in the different place in the UI and there are other minor differences. For example, instead of selecting an entity, some fields in the entity-specific dashboard are preset to the entity for which you are creating the dashboard.  
+ An entity-specific dashboard is a multi-stream dashboard. Configuring this dashboard is similar to configuring a home page multi-stream dashboard, but you do it in the different place in the UI and there are other minor differences. 
+
+For example, instead of selecting an entity, some fields in the entity-specific dashboard are preset to the entity for which you are creating the dashboard.  
   
 1.	Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
 2.  Select **Data** > **Entities** > select the entity you want. 
 
 3.  Select the **Dashboards** tab, and then on the toolbar select **Add dashboard**.  
-  
 4.  Choose the layout, either 2, 3, or 4 column width.    
   
 5.  When the dashboard form opens, the **Filter Entity** is preset to the entity for which you are creating the dashboard. The **Entity View** drop-down list contains the available views for the entity. Select the view and fill in the rest of the required information on the page.  
