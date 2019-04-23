@@ -27,7 +27,7 @@ ms.assetid: 1052db82-7002-44ca-ad1f-9d3d4c311817
 
 | Parameter Name|Type|Required|Description|
 | ------------- |----|--------|-----------|
-|value|`boolean`|yes|`True` if component needs to auto size to full screen. `False` if component needs to auto size to allocated width.|
+|state|`Dictionary`|Yes||
 
 ## Return Value
 

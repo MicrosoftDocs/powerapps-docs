@@ -79,7 +79,7 @@ You should define a [destroy](reference/control/destroy.md) method in your objec
 
 ## Resources
 
-Each custom component should have a resource file to construct its visualization. You can define a resource file in the manifest. The resource node in the manifest file refers to the webresources that component require to implement its visualization. More information: [Resources](manifest-schema-reference/resources.md)
+Each custom component should have a resource file to construct its visualization. You can define a resource file in the manifest. The resource node in the manifest file refers to the resources that component require to implement its visualization. More information: [Resources](manifest-schema-reference/resources.md)
 
 ### Related topics
 

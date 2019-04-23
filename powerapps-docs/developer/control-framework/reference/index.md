@@ -23,7 +23,6 @@ This section contains reference documentation for creating custom controls using
 |[Control](control.md)|[!INCLUDE [control-description](includes/control-description.md)]|
 |[DataSet](dataset.md)|[!INCLUDE [dataset-description](includes/dataset-description.md)]|
 |[DateFormattingInfo](dateformattinginfo.md)|[!INCLUDE [dateformattinginfo-description](includes/dateformattinginfo-description.md)]|
-|[Entity](entity.md)|[!INCLUDE [entity-description](includes/entity-description.md)]|
 |[EntityReference](entityreference.md)|[!INCLUDE [entityreference-description](includes/entityreference-description.md)]|
 |[Factory](factory.md)|[!INCLUDE [factory-description](includes/factory-description.md)]|
 |[Linking](linking.md)|[!INCLUDE [linking-description](includes/linking-description.md)]|

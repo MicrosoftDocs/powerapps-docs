@@ -94,8 +94,6 @@
           href: reference/dataset/setselectedrecordids.md
       - name: DateFormattingInfo
         href: reference/dateformattinginfo.md
-      - name: Entity
-        href: reference/entity.md
       - name: EntityReference
         href: reference/entityreference.md
       - name: Factory
@@ -215,7 +213,7 @@
           href: reference/utility/hasentityprivilege.md
         - name: lookupObjects
           href: reference/utility/lookupobjects.md
-      - name: webApi
+      - name: WebApi
         href: reference/webapi.md
         items:
         - name: createRecord
