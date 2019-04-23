@@ -39,10 +39,9 @@ https://apps.powerapps.com/play/[AppID]?source=iframe
 > The URI format has changed from https://web.powerapps.com/webplayer to https://apps.powerapps.com/play as of May 2019. Please update any embedded ifrmaes to use the new URI format. References to the previous format will be redirected to the new URI to ensure compatibility.
 >
 >Previous format: 
-```
+
 >https://web.powerapps.com/webplayer/iframeapp?source=iframe
 >&appId=/providers/Microsoft.PowerApps/apps/[AppID]
-```
 
 The only thing you have to do is substitute the ID of your app for [AppID] in the URI (including '[' & ']'). We'll show you how to get that value shortly, but first here are all the parameters available in the URI:
 
