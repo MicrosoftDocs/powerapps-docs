@@ -85,19 +85,18 @@ Interactive experience dashboards can be a one-stop workplace for app users, suc
 - Appears in global filter in interactive experience
 - Sortable in interactive experience dashboard
 
-In this example there are two flags enabled in the Case entity for the **IsEscalated** field.  
+In this example there are two interactive dashboard options available in the Case entity for the **IsEscalated** field.  
 
  > [!div class="mx-imgBorder"] 
  > ![Enable a field for global filter and sort](../model-driven-apps/media/enable-filter-sort.png "Enable a field for global filter and sort")  
   
 ### Configure the 'Appears in global filter in interactive experience' option
 
-1. Go to **Settings** > **Customizations**.
-2. Select **Customize the System**.
-3. Under **Components**, expand **Entities**, and then expand the entity you want.
-4. In the navigation pane, select **Fields** and in the grid, double-click the field you want to enable.
-5. In the **General** tab, select the **Appears in global filter in interactive experience** check box. Select **Save and Close**.
-6. Select **Publish All Customizations** for your changes to take effect.
+1. Open [solution explorer](advanced-navigation.md#solution-explorer).  
+2. Under **Components**, expand **Entities**, and then expand the entity you want.
+3. In the navigation pane, select **Fields** and in the grid, double-click the field you want to enable.
+4. In the **General** tab, select the **Appears in global filter in interactive experience** check box. Select **Save and Close**.
+5. Select **Publish All Customizations** for your changes to take effect.
   
  The fields that you enable for **Appears in global filter in interactive experience** appear in the global filter flyout window when the global filter icon is clicked on the dashboard header. In the flyout window, the service reps can select the fields on which they want to filter globally, in charts, and also in streams and tiles that are based on the filter entity.   
   
@@ -110,12 +109,11 @@ In this example there are two flags enabled in the Case entity for the **IsEscal
   
 ### Configure the 'Sortable in interactive experience dashboard' option
   
-1. Go to **Settings** > **Customizations**.
-2. Select **Customize the System**.
-3. Under **Components**, expand **Entities**, and then expand the entity you want.
-4. In the navigation pane, select Fields and in the grid, double-click the field you want to enable.
-5. In the **General** tab, select the **Sortable in interactive experience dashboard** check box. Select **Save and Close**.
-6. Select **Publish All Customizations** for your changes to take effect.
+1. Open [solution explorer](advanced-navigation.md#solution-explorer).  
+2. Under **Components**, expand **Entities**, and then expand the entity you want.
+3. In the navigation pane, select Fields and in the grid, double-click the field you want to enable.
+4. In the **General** tab, select the **Sortable in interactive experience dashboard** check box. Select **Save and Close**.
+5. Select **Publish All Customizations** for your changes to take effect.
   
 The fields that you configure for sorting appear in the drop-down list on the stream header. 
 
@@ -128,17 +126,15 @@ The following illustration shows the flyout dialog with the list of the availabl
   
 #### Enable security roles for interactive dashboards
 
-1. Go to **Settings** > **Customizations**.
-
-2. Select **Customize the System**.  
+1. Open [solution explorer](advanced-navigation.md#solution-explorer).  
   
-3. Under **Components**, select **Dashboards**.  
+2. Under **Components**, select **Dashboards**.  
   
-4.  In the grid, select the interactive dashboard you want and select **Enable Security Roles** on the task bar.  
+3.  In the grid, select the interactive dashboard you want and select **Enable Security Roles** on the task bar.  
   
-5.  In the **Assign Security Roles** dialog, select the **Display only to these selected security roles** option and select the roles that you want to enable. Select **OK**.  
+4.  In the **Assign Security Roles** dialog, select the **Display only to these selected security roles** option and select the roles that you want to enable. Select **OK**.  
   
-6.  Select **Publish All Customizations** for your changes to take effect.    
+5.  Select **Publish All Customizations** for your changes to take effect.    
   
  ![Enable security roles](media/security-roles.png "Enable security roles")    
   
@@ -243,7 +239,7 @@ For example, instead of selecting an entity, some fields in the entity-specific 
   
 <a name="BKMK_ConfigureColors"></a>   
 ## Configure dashboard colors  
- For all **Option Set** and **Two Options** type fields, such as the **Case Type**, **IsEscalated** or **Priority** of the `Case` entity, you can configure a particular color that will appear in the charts and streams for specific field values. For example, high priority cases can be shown in red, medium priority cases in blue, and low priority cases in green in the interactive charts. In the streams, there will be a thin vertical line in color next to the work item description.  
+ For all **Option Set** and **Two Options** type fields, such as the **Case Type**, **IsEscalated** or **Priority** of the **Case** entity, you can configure a particular color that will appear in the charts and streams for specific field values. For example, high priority cases can be shown in red, medium priority cases in blue, and low priority cases in green in the interactive charts. In the streams, there will be a thin vertical line in color next to the work item description.  
   
 > [!NOTE]
 >  The color coding isn’t available for the tag charts and doughnut charts. These charts appear on the dashboard in white, gray, and black shades.  
