@@ -42,8 +42,6 @@ ms.assetid: 4e7d43fb-b6b7-4f1d-89e3-0b8157c9d2d9
 
 ## calendar
 
-Placeholder description: DateFormattingInfo.calendar
-
 **Type**: `object`
 
 The `calendar` object contains the following properties:
@@ -76,14 +74,7 @@ The `calendar` object contains the following properties:
 
 ## firstDayOfWeek
 
-Placeholder description: DateFormattingInfo.firstDayOfWeek
-
 **Type**: `number`
-
-<!-- 
-The CrmFramework.DayOfWeek enum is not defined in CustomControlExposedInterfaces
-So assuming that this must be a number.
- -->
 
 The `firstDayOfWeek` property can be set to one of the following values:
 

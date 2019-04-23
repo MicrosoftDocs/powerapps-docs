@@ -11,6 +11,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 6e066350-9d22-4078-b497-26be7d2fa374
 ---
+
 # Context
 
 [!INCLUDE [context-description](includes/context-description.md)]
@@ -53,7 +54,7 @@ The interface for `context.navigation`
 
 ## parameters
 
-Placeholder description: PropBag.parameters
+The data provided to the control. Structure defined by the component’s manifest, corresponding to parameter and data-set nodes
 
 **Type**: `TInputs`
 
@@ -65,7 +66,7 @@ The resource interface of `context.resource`
 
 ## updatedProperties
 
-Placeholder description: PropBag.updatedProperties
+An array of strings indicated which values have changed on the context object since the last time it was passed to this control
 
 **Type**: `string[]`
 
