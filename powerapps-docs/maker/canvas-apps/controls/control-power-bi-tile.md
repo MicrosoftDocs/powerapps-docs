@@ -42,7 +42,7 @@ To pass a single filter value, modify the value of the **TileURL** property, whi
 
 To that value, append this syntax:
 
-```&$filter=<TableName>/<ColumnName> eq "<Value>" ```
+```&$filter=<TableName>/<ColumnName> eq '<Value>' ```
 
 The parameter will filter a value in the dataset of the report where the tile originates.
 

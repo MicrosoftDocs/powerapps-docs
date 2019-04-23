@@ -3,7 +3,6 @@ title: "Web API Functions and Actions Sample (C#) (Common Data Service)| Microso
 description: "This sample demonstrates how to call bound and unbound functions and actions, including custom actions, using the Common Data Service Web API and C#"
 ms.custom: ""
 ms.date: 1/09/2019
-ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -14,6 +13,7 @@ ms.assetid: b14a8bff-bf05-412c-89f6-ba7b503dcb51
 caps.latest.revision: 13
 author: "brandonsimons" # GitHub ID
 ms.author: "jdaly"
+ms.reviewer: "susikka"
 search.audienceType: 
   - developer
 search.app: 

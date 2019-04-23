@@ -3,7 +3,6 @@ title: "Web API Conditional Operations Sample (C#) (Common Data Service)| Micros
 description: "This sample demonstrates how to perform conditional operations using Common Data Service Web API and C#"
 ms.custom: ""
 ms.date: 1/09/2019
-ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -14,6 +13,7 @@ ms.assetid: 48a6322c-51f3-4368-ae7b-748d0c771a82
 caps.latest.revision: 17
 author: "KumarVivek"
 ms.author: "kvivek"
+ms.reviewer: "susikka"
 search.audienceType: 
   - developer
 search.app: 

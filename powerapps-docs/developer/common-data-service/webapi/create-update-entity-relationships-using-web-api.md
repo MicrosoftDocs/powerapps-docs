@@ -3,7 +3,6 @@ title: "Create and update entity relationships using the Web API (Common Data Se
 description: "Learn about creating and updating entity Common Data Service uses a metadata driven architecture to provide the flexibility to create custom entities and additional system entity attributes."
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -14,7 +13,8 @@ ms.assetid: 923538e2-15fe-4718-8eae-d939c5d200cd
 caps.latest.revision: 15
 author: "brandonsimons" # GitHub ID
 ms.author: "jdaly"
-manager: "amyla"
+ms.reviewer: "susikka"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
