@@ -26,8 +26,8 @@ ms.assetid: ec7c1ad4-b834-4755-8a04-2c8940f75674
 
 |Element|Description|
 |--|--|
-|[manifest](manifest.md)|[!INCLUDE [manifest-description](includes/manifest-description.md)]|
 |[control](control.md)|[!INCLUDE [control-description](includes/control-description.md)]|
+
 
 ## Child Elements
 

@@ -101,9 +101,9 @@
       - name: Factory
         href: reference/factory.md
         items:
-        - name: getpopupService
+        - name: getPopupService
           href: reference/factory/getpopupservice.md
-        - name: requestrender
+        - name: requestRender
           href: reference/factory/requestrender.md
       - name: Linking
         href: reference/linking.md

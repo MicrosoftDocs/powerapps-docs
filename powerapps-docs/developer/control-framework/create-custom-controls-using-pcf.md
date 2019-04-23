@@ -14,7 +14,7 @@ ms.assetid: d2cbf58a-9112-45c2-b823-2c07a310714c
 
 # Create, debug and deploy a component using  Microsoft PowerApps CLI
 
-Use PowerApps Command Line Interface (CLI) to create, debug and deploy custom PowerApps component framework component. PowerApps CLI will enable developers to quickly create PowerApps component framework component and will in the future be expanded to include support for additional development and Application Lifecycle Management (ALM) experiences. 
+Use PowerApps Command Line Interface (CLI) to create, debug and deploy custom PowerApps component framework components. PowerApps CLI will enable developers to quickly create PowerApps component framework components and will in the future be expanded to include support for additional development and Application Lifecycle Management (ALM) experiences. 
 
 ## What is Microsoft PowerApps CLI 
 

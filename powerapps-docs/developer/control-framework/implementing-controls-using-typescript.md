@@ -25,7 +25,7 @@ To create a new project, follow the steps below:
 
 ## Implementing Manifest
 
-A custom component is defined by the information in the `ControlManifest.Input.xml` manifest file.  In this walkthrough, this file is created under the `<Your component Name>` sub folder. For the linear input component, a property will be defined to store the numeric value of the slider input.
+A custom component is defined by the information in the `ControlManifest.Input.xml` manifest file. In this walkthrough, this file is created under the `<Your component Name>` sub folder. For the linear input component, a property will be defined to store the numeric value of the slider input.
 
 1. Open the `ControlManifest.Input.xml` file in the code editor (Visual Studio Code). The `ControlManifest.Input.xml` file defines an initial component property called `sampleProperty`.
 
@@ -36,7 +36,7 @@ A custom component is defined by the information in the `ControlManifest.Input.x
 2. Rename the `sampleProperty` and change the property type
 
     ```XML
-    <property name="sliderValue" display-name-key=" sliderValue _Display_Key" description-key=" sliderValue_Desc_Key" of-type-group="numbers" usage="bound" required="true" /> 
+    <property name="sliderValue" display-name-key="sliderValue _Display_Key" description-key=" sliderValue_Desc_Key" of-type-group="numbers" usage="bound" required="true" /> 
     ```
 
 3. The of-type-group attribute references a group of allowable numbers. Add the following type-group element as a sibling to the <property> element in the manifest. The type-group specifies the component value and can contain whole, currency, floating point, or decimal values.
@@ -143,7 +143,7 @@ export class TSLinearInputControl implements ComponentFramework.StandardControl<
 
 3. Rebuild the project using the command `npm run build` 
  
-4. The component is compiled into the `/out/controls/TSLinearInputControl` folder. The build artifacts includes:
+4. The component is compiled into the `out/controls/TSLinearInputControl` folder. The build artifacts includes:
 
    - bundle.js – Bundled component source code 
    - ControlManifest.xml – Actual component manifest file that will be uploaded to Common Data Service organization.

@@ -26,10 +26,10 @@ Custom components are comprised into three components:
 Manifest is the metadata file that defines a component. It is an XML document that describes:
 
 - The namespace and name of the component.
-- The kind of data it can be bound to, either a field or a data-set.
+- The kind of data it can be configured, either a field or a data-set.
 - Any properties that can be configured in the application when the component is added.
-- A list of web resource files that the component needs. 
-- The name of a JavaScript or TypeScript function in the component implementation library that will return an object that applies the required component interface.
+- A list of resource files that the component needs. 
+- The name of a TypeScript function in the component implementation library that will return an object that applies the required component interface.
 
 When someone configures a component in the application, the data in the manifest filters out available component so that only valid component for the context are available for configuration. The properties defined in the manifest for a component are rendered as configuration fields so that the person configuring the component can specify values. These property values are then available to your component function at run time. More information: [Manifest file reference](manifest-schema-reference/index.md)
 
@@ -59,10 +59,10 @@ controlObj.init(context,notifyOutputChanged,state,container);
 
 |Parameter|Description|
 |---|---|
-|context| Contains all the information about how the component is configured and all the parameters that can be used within the component. For example, the `context.parameters.["property name from manifest"]` can be used to access the input property.|
-|notifyOutputChanged |Function that alerts the framework that the component has new outputs ready to be retrieved asynchronously. You must implement this within the [init](reference/control/init.md) function.|
-|state|Contains component data from the previous page load in the current session.|
-|container|An HTML div element to which you will append the HTML elements for the UI that defines your component. To display the value in the UI, you must get the data from `context.parameters.controlValue object`. You must implement this in the [init](reference/control/init.md) function.|
+|context| Contains all the information about how the component is configured and all the parameters that can be used within the component along with the [framework APIs](reference/index.md). For example, the `context.parameters.["property name from manifest"]` can be used to access the input property.|
+|notifyOutputChanged |Function that alerts the framework that the component has new outputs ready to be retrieved asynchronously.|
+|state|Contains component data from the previous page load in the current session if control explicitly stored it earlier using `setControlState API`.|
+|container|An HTML div element to which you will append the HTML elements for the UI that defines your component. To display the value in the UI, you must get the data from `context.parameters.controlValue object`.|
 
 ### User changes data
 

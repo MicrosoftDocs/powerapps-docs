@@ -26,6 +26,13 @@ ms.assetid: 4b7c18f8-cd00-4f39-8f88-ed9306d6a055
 
 Type: `string`
 
+Returns a value to indicate in which client the script is executing.
+
+Web: Web application, or Unified Interface
+Outlook: Outlook
+Mobile: Mobile app
+
+
 ### Related topics
 
 [Client](../client.md)<br/>

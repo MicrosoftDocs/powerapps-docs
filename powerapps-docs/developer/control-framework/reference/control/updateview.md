@@ -20,7 +20,7 @@ ms.author: "nabuthuk"
 
 | Parameter Name|Type|Required|Description|
 | ------------- |----|--------|-----------|
-|context|`Inputs`|yes|Contains values as set up by the customizer mapped to the name defined in the manifest, as well as in the utility functions|
+|context|`context`|yes|Contains values as set up by the customizer mapped to the name defined in the manifest, as well as in the utility functions|
 
 ## Example
 
