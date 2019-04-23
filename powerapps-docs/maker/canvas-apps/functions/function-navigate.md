@@ -25,8 +25,6 @@ Most apps contain multiple screens.  Use the **Back** and **Navigate** function 
 [Context variables](../working-with-variables.md#use-a-context-variable) are also preserved when a user navigates between screens. You can use **Navigate** to set one or more context variables for the screen that the formula will display, which is the only way to set a context variable from outside the screen. You can use this approach to pass parameters to a screen. If you've used another programming tool, this approach is similar to passing parameters to procedures.
 
 ## Description
-### Back
-The **Back** function displays the screen that was most recently displayed. You don't specify any arguments for this function.
 
 ### Navigate
 In the first argument, specify the name of the screen to display.  
@@ -46,12 +44,25 @@ You can use **Navigate** to create or update context variables of the new screen
 
 Set the **[OnHidden](../controls/control-screen.md)** property of the old screen, the **[OnVisible](../controls/control-screen.md)** property of the new screen, or both to make additional changes during the transition. The **App.ActiveScreen** property will be updated to reflect the change.
 
+### Back
+The **Back** function returns to the screen that was most recently displayed. 
+
+For each **Navigate**, a stack of screen transitions is recorded within the running app.  You can use successive **Back** calls to return all the way to the first screen that was displayed when the app was started.  
+
+The screen transition is also recorded.  When going back, by default the inverse transition is used.  For example, if **CoverRight** was used to navigate to a screen, then **Back** will use **UnCover** to return (which is to the left).  **Fade** and **None** use themselves as their inverse.    
+
+Pass an optional argument to **Back** to force a specific transition.
+
+### Other details
+
 **Back** normally returns **true** but returns **false** if the user is on the first screen shown and there is no previous screen.  **Navigate** normally returns **true** but returns **false** if there is a problem with one of its arguments.
 
 You can use these functions only within a [behavior formula](../working-with-formulas-in-depth.md).
 
 ## Syntax
-**Back**()
+**Back**( [ *Transition* ] )
+
+* *Transition* - Optional.  The visual transition to use between the current screen and the previous screen. See the list of valid values for this argument earlier in this topic.  By default, the inverse of the transition that was used to reach the current screen is used for the return back. 
 
 **Navigate**( *Screen* [, *Transition* [, *UpdateContextRecord* ] ] )
 
