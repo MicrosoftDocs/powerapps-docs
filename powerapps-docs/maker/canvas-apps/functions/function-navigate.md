@@ -35,12 +35,12 @@ In the first argument, specify the name of the screen to display.
 
 | Transition Argument | Description | Demonstration |
 | --- | --- | --- |
-| **ScreenTransition.Cover** |The new screen slides into view covering the current screen, moving right to left. | ![screen transition cover animation](media/function-navigate/cover.gif) |
-| **ScreenTransition.CoverRight** |The new screen slides into view covering the current screen, moving left to right. | ![screen transition cover right animation](media/function-navigate/coverright.gif) |
+| **ScreenTransition.Cover** |The new screen slides into view, moving right to left, to cover the current screen. | ![screen transition cover animation](media/function-navigate/cover.gif) |
+| **ScreenTransition.CoverRight** |The new screen slides into view, moving left to right, to cover the current screen. | ![screen transition cover right animation](media/function-navigate/coverright.gif) |
 | **ScreenTransition.Fade** |The current screen fades away to reveal the new screen. | ![screen transition fade animation](media/function-navigate/fade.gif) |
-| **ScreenTransition.None** (Default) |The current screen is quickly replaced with the new screen. | ![screen transition none animation](media/function-navigate/none.gif) |
-| **ScreenTransition.UnCover** | The current screen slides out of view to uncover the new screen, moving right to left. | ![screen transition uncover animation](media/function-navigate/uncover.gif) |
-| **ScreenTransition.UnCoverRight** | The current screen slides out of view to uncover the new screen, moving left to right. | ![screen transition uncover right animation](media/function-navigate/uncoverright.gif) |
+| **ScreenTransition.None** (Default) |The new screen quickly replaces the current screen. | ![screen transition none animation](media/function-navigate/none.gif) |
+| **ScreenTransition.UnCover** | The current screen slides out of view, moving right to left, to uncover the new screen. | ![screen transition uncover animation](media/function-navigate/uncover.gif) |
+| **ScreenTransition.UnCoverRight** | The current screen slides out of view, moving left to right, to uncover the new screen. | ![screen transition uncover right animation](media/function-navigate/uncoverright.gif) |
 
 You can use **Navigate** to create or update context variables of the new screen. As an optional third argument, pass a [record](../working-with-tables.md#records) that contains the context-variable name as a [column](../working-with-tables.md#columns) name and the new value for the context variable.  This record is the same as the record that you use with the **[UpdateContext](function-updatecontext.md)** function.
 
@@ -56,7 +56,7 @@ You can use these functions only within a [behavior formula](../working-with-for
 **Navigate**( *Screen* [, *Transition* [, *UpdateContextRecord* ] ] )
 
 * *Screen* - Required. The screen to display.
-* *Transition* - Optional.  The visual transition to use between the current screen and the next screen. See the list of valid values for this argument earlier in this topic.  Default is **None**.
+* *Transition* - Optional.  The visual transition to use between the current screen and the next screen. See the list of valid values for this argument earlier in this topic. The default value is **None**.
 * *UpdateContextRecord* - Optional.  A record that contains the name of at least one column and a value for each column. This record updates the context variables of the new screen as if passed to the **[UpdateContext](function-updatecontext.md)** function.
 
 ## Examples
