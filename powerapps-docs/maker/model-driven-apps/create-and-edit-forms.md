@@ -1,11 +1,7 @@
 ---
 title: "Create or edit forms using the model-driven form designer | MicrosoftDocs"
 ms.custom: ""
-<<<<<<< HEAD
-ms.date: 02/19/2019
-=======
 ms.date: 04/21/2019
->>>>>>> 7ac409c75b4d0c4953da373b9d1eb1e92cb61d8c
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
