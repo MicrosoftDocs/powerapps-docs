@@ -38,4 +38,6 @@ Component developers can utilize modern web practices and also harness the power
 ## Related topics
 
 [What are custom components?](custom-controls-overview.md)<br/>
-[Create custom components](create-custom-controls-using-pcf.md)
+[Create custom components](create-custom-controls-using-pcf.md)<br/>
+[PowerApps for developers](https://docs.microsoft.com/powerapps/#pivot=home&panel=developer)
+
