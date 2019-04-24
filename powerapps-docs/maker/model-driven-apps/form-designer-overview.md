@@ -45,4 +45,4 @@ The form designer interface has the following areas:
    ![Form designer layout](media/form-designer.png)
 
 ## See also
-[Create and edit forms using the form designer](create-and-edit-forms.md)
+[Create or edit forms using the form designer](create-and-edit-forms.md)
