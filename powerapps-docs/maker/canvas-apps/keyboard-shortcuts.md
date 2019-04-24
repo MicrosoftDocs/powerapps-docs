@@ -40,50 +40,49 @@ search.app:
 
 | Shortcut | Action |
 |--|--|
-| Ctrl+A | Select all |
-| Ctrl+X | Cut |
-| Ctrl+C | Copy |
-| Ctrl+V | Paste |
-| Ctrl+Z | Undo |
-| Ctrl+Y | Redo |
-| Ctrl+M | New screen |
-| Ctrl+= or Ctrl+Shift+= | Zoom in |
-| Ctrl+- or Ctrl+Shift+- | Zoom out |
-| Ctrl+0 | Fit canvas to page |
+| Ctrl+A | Select all. |
+| Ctrl+X | Cut. |
+| Ctrl+C | Copy. |
+| Ctrl+V | Paste. |
+| Ctrl+Z | Undo command. |
+| Ctrl+Y | Redo command. |
+| Ctrl+M | Add a screen. |
+| Ctrl+= or Ctrl+Shift+= | Zoom in. |
+| Ctrl+- or Ctrl+Shift+- | Zoom out. |
+| Ctrl+0 | Fit canvas to page. |
 
 ## Preview
 
 | Shortcut | Action |
 |--|--|
-| F5 | Open Preview mode |
-| Esc | Close Preview mode, dialog box, or flyout |
+| F5 | Open Preview mode. |
+| Esc | Close Preview mode, a dialog box, or a flyout pane.|
 
 ## Canvas
 
 | Shortcut | Action |
 |--|--|
-| Alt+Click | Interact with the app as though it's in Preview mode |
-| Ctrl+G | Group |
-| Ctrl+Shift+G | Ungroup |
-| *Tab* | *Move through placeholders* |
-| Ctrl+Click or Shift+Click | Select multiple objects |
-| Right arrow | Nudge the selected control to the right |
-| Left arrow | Nudge the selected control to the left |
-| Up arrow | Nudge the selected control up |
-| Down arrow | Nudge the selected control down |
+| Ctrl+G | Group multiple controls. |
+| Ctrl+Shift+G | Ungroup a group of controls. |
+| *Tab* | *Move through placeholders.* |
+| Ctrl+Click or Shift+Click | Select multiple objects at once. |
+| Right arrow | Nudge the selected control to the right. |
+| Left arrow | Nudge the selected control to the left. |
+| Up arrow | Nudge the selected control up. |
+| Down arrow | Nudge the selected control down. |
 
 ## Resize
 
 | Shortcut | Action |
 |--|--|
-| Shift+Left Arrow | Decrease width |
-| Ctrl+Shift+Left Arrow | Decrease width slightly |
-| Shift+Right Arrow | Increase width |
-| Ctrl+Shift+Right Arrow | Increase width slightly |
-| Shift+Down Arrow | Decrease height |
-| Ctrl+Shift+Down Arrow | Decrease height slightly |
-| Shift+Up Arrow | Increase height |
-| Ctrl+Shift+Up Arrow | Increase height slightly |
+| Shift+Left Arrow | Decrease width. |
+| Ctrl+Shift+Left Arrow | Decrease width slightly. |
+| Shift+Down Arrow | Decrease height. |
+| Ctrl+Shift+Down Arrow | Decrease height slightly. |
+| Shift+Right Arrow | Increase width. |
+| Ctrl+Shift+Right Arrow | Increase width slightly. |
+| Shift+Up Arrow | Increase height. |
+| Ctrl+Shift+Up Arrow | Increase height slightly. |
 
 ## Text format
 
@@ -98,5 +97,5 @@ search.app:
 | Shortcut | Action |
 |--|--|
 | F1 | Open documentation. |
-| Shift+F10 | Open a shortcut menu in, for example, **Tree view** |
-| Alt or Ctrl+Shift | Hide authoring/adorner layer to interact with app underneath |
+| Shift+F10 | Open a shortcut menu in, for example, **Tree view**. |
+| Alt or Ctrl+Shift | Hide authoring/adorner layer to interact with app underneath. |
