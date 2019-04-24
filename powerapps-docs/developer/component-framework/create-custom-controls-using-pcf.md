@@ -18,9 +18,15 @@ ms.assetid: d2cbf58a-9112-45c2-b823-2c07a310714c
 
 Use PowerApps Command Line Interface (CLI) to create, debug and deploy custom PowerApps component framework components. PowerApps CLI will enable developers to quickly create PowerApps component framework components and will in the future be expanded to include support for additional development and Application Lifecycle Management (ALM) experiences. 
 
-## What is Microsoft PowerApps CLI 
+## What is Microsoft PowerApps CLI? 
 
 Microsoft PowerApps CLI is a simple, single-stop developer command line interface enabling you to create custom component. PowerApps CLI is also the first step towards a comprehensive ALM story where enterprise developers and ISVs can create, build, debug and publish their PowerApps and Dynamics 365 for Customer Engagement apps extensions and customizations quickly and efficiently.  
+
+> [!IMPORTANT]
+> - Microsoft PowerApps CLI tools are a pre-release version and may be different from the commercially released version.
+> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)] 
+> - If you give feedback about the software to Microsoft, you give to Microsoft, without charge, the right to use, share and commercialize your feedback in any way and for any purpose. 
+> - Microsoft doesn't provide support for this preview feature. Microsoft Technical Support won’t be able to help you with issues or questions.
 
 ## Prerequisites to use PowerApps CLI
 
@@ -32,11 +38,7 @@ To use PowerApps CLI you will need the following:
    - Option 2: Install .NET Core 2.2 SDK and install Visual Studio Code
 - Install Microsoft PowerApps CLI from [here](http://download.microsoft.com/download/D/B/E/DBE69906-B4DA-471C-8960-092AB955C681/powerapps-cli-0.1.51.msi)
 
-> [!IMPORTANT]
-> - Microsoft PowerApps CLI tools are a pre-release version and may be different from the commercially released version.
-> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)] 
-> - If you give feedback about the software to Microsoft, you give to Microsoft, without charge, the right to use, share and commercialize your feedback in any way and for any purpose. 
-> - Microsoft doesn't provide support for this preview feature. Microsoft Technical Support won’t be able to help you with issues or questions.
+
 
 > [!NOTE]
 > To deploy your custom component, you will need Common Data Service environment with System administrator or System customizer privileges.
