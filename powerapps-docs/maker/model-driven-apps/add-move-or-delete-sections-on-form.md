@@ -34,7 +34,8 @@ Add, move, or delete sections on a form using the form designer.
 ## Add sections to a form
 To add sections to a form, use the **Layouts** pane. 
 
-![Layouts pane](media/layouts-pane.png)
+> [!div class="mx-imgBorder"] 
+> ![](media/layouts-pane.png "Layouts pane")
 
   > [!NOTE]
   >   Sections can only be added on main forms and quick view forms. More information: [Form types](types-forms.md)

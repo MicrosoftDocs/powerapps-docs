@@ -31,7 +31,8 @@ Add, move, or delete tabs on a form using the form designer.
 ## Add tabs to a form
 To add tabs to a form, use the **Layouts** pane.  
 
-![Layouts pane](media/layouts-pane.png)
+> [!div class="mx-imgBorder"] 
+> ![](media/layouts-pane.png "Layouts pane")
    
   > [!NOTE]
   >  Tabs can only be added on main forms. More information: [Form types](types-forms.md)
