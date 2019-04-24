@@ -15,12 +15,6 @@ ms.author: "nabuthuk"
 
 This tutorial will walk you through creating a new custom component in Typescript. The sample component is a linear input component.  The linear input component enables users to enter numeric values using a visual slider instead of directly keying in values. 
 
-> [!IMPORTANT]
-> - Microsoft PowerApps CLI tools are a pre-release version and may be different from the commercially released version.
-> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)] 
-> - If you give feedback about the software to Microsoft, you give to Microsoft, without charge, the right to use, share and commercialize your feedback in any way and for any purpose. 
-> - Microsoft doesn't provide support for this preview feature. Microsoft Technical Support won’t be able to help you with issues or questions.
-
 ## Creating a new component project
 
 To create a new project, follow the steps below:
