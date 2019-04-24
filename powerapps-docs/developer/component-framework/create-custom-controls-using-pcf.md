@@ -14,6 +14,8 @@ ms.assetid: d2cbf58a-9112-45c2-b823-2c07a310714c
 
 # Create, debug and deploy a component using  Microsoft PowerApps CLI
 
+[!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+
 Use PowerApps Command Line Interface (CLI) to create, debug and deploy custom PowerApps component framework components. PowerApps CLI will enable developers to quickly create PowerApps component framework components and will in the future be expanded to include support for additional development and Application Lifecycle Management (ALM) experiences. 
 
 ## What is Microsoft PowerApps CLI 
@@ -46,8 +48,8 @@ To use PowerApps CLI you will need the following:
 
 To get started, open a new Developer Command Prompt for VS 2017 after installing PowerApps CLI.
 
-1. In the Developer Command Prompt for VS 2017, create a new folder on your local hard drive for example, `C:\Users\<your name>\Documents\My_PCF_Control`.
-2. Go to the newly created folder using the command `cd <specify your new folder path>`.
+1. In the Developer Command Prompt for VS 2017, create a new folder on your local hard drive for example, *C:\Users\<your name>\Documents\My_PCF_Control*
+2. Go to the newly created folder using the command `cd <specify your new folder path>`
 3. Run the following command to create a new component project by passing some basic parameters
  `pac pcf init --namespace <specify your namespace here> --name <put component name here> --template <component type>`
  
