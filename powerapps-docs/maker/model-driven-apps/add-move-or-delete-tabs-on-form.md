@@ -30,7 +30,7 @@ search.app:
 To add tabs to a form, use the **Layouts** pane.  
     
   > [!NOTE]
-  >   - Tabs can only be added on main forms. More information: [Form types](types-forms.md)
+  >  Tabs can only be added on main forms. More information: [Form types](types-forms.md)
 
 ### Add tabs to a form using drag and drop
 
