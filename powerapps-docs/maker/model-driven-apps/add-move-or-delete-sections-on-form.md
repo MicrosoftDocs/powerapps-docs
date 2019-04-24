@@ -23,7 +23,7 @@ search.app:
   - D365CE
 ---
 
-# Add, move or delete sections on a form 
+# Add, move, or delete sections on a form 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 Add, move, or delete sections on a form using the form designer. 
