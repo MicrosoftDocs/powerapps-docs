@@ -47,7 +47,7 @@ To add fields to a form, use the **Fields** pane. The **Fields** pane lets you s
     - Fields can also be dropped in the empty area within a section. In this case the field will be added in an available space so as to evenly distribute fields across the section columns.
     - Hovering over a tab header when dragging a field changes the currently selected tab, allowing you to add the field to a different tab.   
 6. Repeat steps 3-5 above if you want to add more fields.
-7. In the command bar, select **Save** to save the form, or select **Publish** if you want to save and make your changes visible to end-users. 
+7. In the command bar, select **Save** to save the form, or select **Publish** if you want to save and make your changes visible to users. 
 
 ### Add fields to a form using selection 
 
@@ -59,7 +59,7 @@ To add fields to a form, use the **Fields** pane. The **Fields** pane lets you s
 4. In the **Fields** pane, search, filter, or scroll to find the field you want to add. If you can't find a field, it might already be on the form. Clear **Show only unused fields** to view all fields, including those already added to the form. 
 5. In the **Fields** pane, select a field to add it to the form. Alternatively, select **...** next to the field you want, and then select **Add to selected section**. 
 6. Repeat steps 2-5 above if you want to add more fields.
-7. In the command bar, select **Save** to save the form, or select **Publish** if you want to save and make your changes visible to end-users. 
+7. In the command bar, select **Save** to save the form, or select **Publish** if you want to save and make your changes visible to users. 
 
 ## Move fields on a form
 
@@ -72,7 +72,7 @@ To add fields to a form, use the **Fields** pane. The **Fields** pane lets you s
     - Fields can also be dropped in the empty area within a section. In this case the field will be added in an available space so as to evenly distribute fields across the section columns.
     - Hovering over a tab header when dragging a field changes the currently selected tab, allowing you to add the field to a different tab.   
 4. Repeat steps 2-3 above if you want to move more fields.
-5. In the command bar, select **Save** to save the form, or select **Publish** if you want to save and make your changes visible to end-users. 
+5. In the command bar, select **Save** to save the form, or select **Publish** if you want to save and make your changes visible to users. 
 
     > [!NOTE]
     >   Moving fields in the header and footer using drag and drop is not yet supported. 
@@ -88,14 +88,14 @@ To add fields to a form, use the **Fields** pane. The **Fields** pane lets you s
     - When you select **Paste before**, the field being moved is pasted before the existing field.
     - When you select a section, the field being moved is added in an available space so as to evenly distribute fields across the section columns. The **Paste before** action is not applicable and therefore not available in this case.
 6. Repeat steps 2-5 above if you want to move more fields.
-7. In the command bar, select **Save** to save the form, or select **Publish** if you want to save and make your changes visible to end-users. 
+7. In the command bar, select **Save** to save the form, or select **Publish** if you want to save and make your changes visible to users. 
 
 ## Delete fields on a form
 1. Open the form designer to create or edit a form. More information: [Create a form](create-and-edit-forms.md#create-a-form) or [Edit a form](create-and-edit-forms.md#edit-a-form)
 2. In the form preview, select the field that you want to delete from the form. 
 3. In the command bar, select **Delete**. 
 4. Repeat steps 2-3 above if you want to delete more fields.
-5. In the command bar, select **Save** to save the form, or select **Publish** if you want to save and make your changes visible to end-users. 
+5. In the command bar, select **Save** to save the form, or select **Publish** if you want to save and make your changes visible to users. 
 
      > [!NOTE]
      >   -  If you delete a field by mistake, in the command bar, select **Undo** to revert the form to its previous state. 
