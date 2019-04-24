@@ -63,8 +63,8 @@ To add tabs to a form, use the **Layouts** pane.
 ### Move tabs on a form using drag and drop
 
 1. Open the form designer to create or edit a form. More information: [Create a form](create-and-edit-forms.md#create-a-form) or [Edit a form](create-and-edit-forms.md#edit-a-form)
-2. In the form preview, select the tab header of the tab that you want to move and initiate the drag action. As you drag the tab on the form preview, you will see drop targets where you can move the tab. Note the following: 
-3. Drop the tab in the location you want.
+2. In the form preview, select the tab header of the tab that you want to move and initiate the drag action. As you drag the tab on the form preview, you will see drop targets where you can move the tab.  
+3. Drop the tab in the location you want. Note the following:
     - Tabs can be dropped before or after any existing tabs by hovering over the tab headers.
     - Tabs can also be dropped before or after the current tab by hovering over the left or right edge of the current tab.
 4. Repeat steps 2-3 above if you want to move more tabs.
