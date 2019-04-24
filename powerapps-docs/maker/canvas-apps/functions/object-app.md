@@ -46,6 +46,8 @@ After you change the **OnStart** property, you can test it by hovering over the 
 
 Nobody wants to lose unsaved changes.  Use the **ConfirmExit** and **ConfirmExitMessage** properties to warn the user before they close your app.
 
+Note: this facility does not work in embedded scenarios such as Power BI or SharePoint.
+
 ### ConfirmExit
 
 **ConfirmExit** is a Boolean property that if *true* causes a confirmation dialog to be shown before closing the app.  The default for this property is *false* and no confirmation dialog is shown.
