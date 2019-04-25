@@ -42,7 +42,7 @@ Each solution history record is read-only and includes the following properties:
 - **Suboperation**: Denotes the type of operation, such as a new solution import or an update to an existing solution. 
 - **Status**. The status of the operation, such as **Completed** or **Not completed**. 
 - **Result**. The result of the operation, such as **Success** or **Failure**. 
-- **Error Code**: Error code returned from the event. An error code of 0 means the operation was successfully completed. 
+- **Error Code**: Error code returned from the operation. An error code of 0 means the operation was successfully completed. 
 
 ## View solution history
 1.	From a PowerApps model-driven app, select **Settings** ![Settings](../model-driven-apps/media/powerapps-gear.png) on the app toolbar, and then select **Advanced Settings**. 
