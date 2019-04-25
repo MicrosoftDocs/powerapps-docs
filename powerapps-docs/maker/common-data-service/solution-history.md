@@ -28,7 +28,7 @@ search.app:
 
 # View the history of a solution
 
-You can view details about a system (internal) or custom solution operation from the Solutions area of a model-driven app. An operation can be either a solution import or delete. The solution history displays information such as solution version, solution publisher, type of operation, operation start and end time, and operation status.
+You can view details about a system (internal) or custom solution operation from the **Solutions** area of a model-driven app. An operation can be a solution import, export, or delete. The solution history displays information such as solution version, solution publisher, type of operation, operation start and end time, and operation status.
 
 > [!div class="mx-imgBorder"] 
 > ![](media/solutions-history-custom-view.png "Solutions history custom view")
