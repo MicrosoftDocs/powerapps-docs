@@ -17,11 +17,6 @@ Custom components are a type of solution component, which means they can be incl
 
 You add custom components by including them in a solution and then importing it into the system. Once they are in the system, admin and system customizers can configure form fields, sub-grids, views, and dashboard sub-grids to use them in place of default component.
 
-> [!IMPORTANT]
-> - PowerApps component framework is a preview feature.
-> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)] 
-> - [!INCLUDE[cc_preview_features_no_MS_support](../../includes/cc-preview-features-no-ms-support.md)]
-
 Custom components are comprised into three components:
 
 1. Manifest

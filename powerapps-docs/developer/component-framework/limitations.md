@@ -16,11 +16,6 @@ ms.author: "nabuthuk"
 
 With the release of PowerApps component framework, you can now create your own custom components to improve the user experience in model-driven apps. Even though you can create your own components, there are some limitations that restrict developers implementing some features in the custom components. Below are some of the limitations:
 
-> [!IMPORTANT]
-> - PowerApps component framework is a preview feature.
-> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)] 
-> - [!INCLUDE[cc_preview_features_no_MS_support](../../includes/cc-preview-features-no-ms-support.md)]
-
 ## Support for external libraries
 
 For public preview, components should bundle all code including external library content into the primary code bundle. To see an example of how the PowerApps command line interface can help with bundling your external library content into a component-specific bundle, see [Angular flip component](sample-controls/angular-flip-control.md) example.
