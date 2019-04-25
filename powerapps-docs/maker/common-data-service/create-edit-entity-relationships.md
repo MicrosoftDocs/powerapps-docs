@@ -37,7 +37,6 @@ Beyond simply defining how records can be related to other records, 1:N entity r
 <a name="BKMK_Connections"></a>
 
 ## Decide whether to use entity relationships or connections 
- 
 Entity relationships are metadata that make changes to the database. These relationships allow for queries to retrieve related data very efficiently. Use entity relationships to define formal relationships that define the entity or that most records can use. For example, an opportunity without a potential customer wouldn’t be very useful. The Opportunity entity also has a N:N relationship with the Competitor entity. This allows for multiple competitors to be added to the opportunity. You may want to capture this data and create a report that shows the competitors.  
   
 There are other less formal kinds of relationships between records that are called *connections*. For example, it may be useful to know if two contacts are married, or perhaps they are friends outside of work, or perhaps a contact used to work for another account. Most businesses won’t generate reports using this kind of information or require that it is entered, so it’s probably not worthwhile to create entity relationships. More information: [Configure connection roles](configure-connection-roles.md)
@@ -46,7 +45,6 @@ There are other less formal kinds of relationships between records that are call
 <a name="BKMK_TypesOfRelationships"></a>
  
 ## Types of entity relationships
-
 When you look at the solution explorer you might think that there are three types of entity relationships. Actually there are only two, as shown in the following table.  
   
 |Relationship Type|Description|  
@@ -57,11 +55,9 @@ When you look at the solution explorer you might think that there are three type
 The **N:1 (many-to-one)** relationship type exists in the user interface because the designer shows you a view grouped by entities. 1:N relationships actually exist *between* entities and refer to each entity as either a **Primary Entity** or **Related Entity**. The related entity, sometimes called the *child* entity, has a lookup field that allows storing a reference to a record from the primary entity, sometimes called the *parent* entity. A N:1 relationship is just a 1:N relationship viewed from the related entity.  
  
 ## Entity relationship behavior
-
 Behaviors  for related entities is important because it helps ensure data integrity and can automate business processes for your company.
 
 ### Preserve data integrity
-
 Some entities exist to support other entities. They don't make sense on their own. They will typically have a required lookup field to link to the primary entity they support. What should happen when the primary record is deleted?
 
 You can use the relationship behavior to define this according to the rules for your business. Two options are:
@@ -72,7 +68,6 @@ You can use the relationship behavior to define this according to the rules for 
 If the related entity doesn't support a primary entity, you can allow the primary entity to be deleted and the value of the lookup will be cleared.
 
 ### Automate business processes
-  
 Let’s say that you have a new salesperson and you want to assign them a number of existing accounts currently assigned to another salesperson. Each account record may have a number of task activities associated with it. You can easily locate the active accounts you want to reassign and assign them to the new salesperson. But what should happen for any of the task activities that are associated with the accounts? Do you want to open each task and decide whether they should also be assigned to the new salesperson? Probably not. Instead, you can let the relationship apply some standard rules for you automatically. These rules only apply to task records associated to the accounts you are reassigning. Your options are:  
   
 - Reassign all active tasks.  
@@ -83,7 +78,6 @@ Let’s say that you have a new salesperson and you want to assign them a number
 The relationship can control how actions performed on a record for the primary entity record cascade down to any related entity records.  
 
 ### Behaviors
-
 There are several kinds of behaviors that can be applied when certain actions occur.
 
 |Behavior|Description|
@@ -96,7 +90,6 @@ There are several kinds of behaviors that can be applied when certain actions oc
 |**Cascade User Owned**|Perform the action on all related entity records owned by the same user as the primary entity record.|
 
 ### Actions
-
 These are the actions that can trigger certain behaviors:
 
 |Field|Description|Options|
@@ -111,7 +104,6 @@ These are the actions that can trigger certain behaviors:
 
 
 ### Parental entity relationships
-
 Each pair of entities that are eligible to have a 1:N relationship can have multiple 1:N relationships between them. Yet usually only one of those relationships can be considered a parental entity relationship.
 
 A parental entity relationship is any 1:N entity relationship where one of the cascading options in the **Parental** column of the following table is true.
@@ -135,14 +127,12 @@ Any activity entity has a similar set of parental entity relationships for entit
 <a name="BKMK_RelationshipBehaviorLimitations"></a>   
 
 ### Limitations on behaviors you can set
-  
 Because of parental relationships there are some limitations you should keep in mind when you define entity relationships.  
   
 - A custom entity can’t be the primary entity in a relationship with a related system entity that cascades. This means you can’t have a relationship with any action set to **Cascade All**, **Cascade Active**, or **Cascade User-Owned** between a primary custom entity and a related system entity.  
 - No new relationship can have any action set to **Cascade All**, **Cascade Active**, or **Cascade User-Owned** if the related entity in that relationship already exists as a related entity in another relationship that has any action set to **Cascade All**, **Cascade Active**, or **Cascade User-Owned**. This prevents relationships that create a multi-parent relationship.  
 
 ### See also
-
 [Entities and metadata overview](create-edit-metadata.md)<br />
 [Create and edit 1:N (one-to-many) or N:1 (many-to-one) relationships](create-edit-1n-relationships.md)<br />
 [Create Many-to-many (N:N) entity relationships](create-edit-nn-relationships.md)
