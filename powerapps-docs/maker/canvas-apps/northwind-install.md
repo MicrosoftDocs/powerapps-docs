@@ -16,7 +16,7 @@ search.app:
 ---
 # Install Northwind Traders database and apps
 
-Learn how to build business apps over relational data in Common Data Service by downloading and exploring the Northwind Traders sample database and two apps that you can use to manage that data. By following the steps in this topic, install this database in your own environment, and discover concepts behind canvas and model-driven apps, relationships between entities, and option sets.
+Learn how to build business apps over relational data in Common Data Service by downloading and exploring a sample database and two apps that you can use to manage it. By following the steps in this topic, install the Northwind Traders database in your own environment, and discover concepts behind canvas and model-driven apps, relationships between entities, and option sets.
 
 Northwind Traders is a fictitious organization that manages orders, products, customers, suppliers, and many other aspects of a small business. This sample appeared with the first versions of Microsoft Access and is still available as an Access template.
 
@@ -27,7 +27,7 @@ Northwind Traders is a fictitious organization that manages orders, products, cu
 
 ## Install the solution
 
-As the first step of installing the database and the apps, download the [**Northwind Traders Solution File**](https://pwrappssamples.blob.core.windows.net/samples/NorthwindTraders_1_0_0_1.zip)  (.zip), which contains the definitions of entities, option sets, and business processes. This [solution](../../developer/common-data-service/introduction-solutions) file also contains the canvas and model-driven apps, as well as any other pieces that are used together.
+As the first step of installing the database and the apps, download the [**Northwind Traders Solution File**](https://pwrappssamples.blob.core.windows.net/samples/NorthwindTraders_1_0_0_1.zip)  (.zip), which contains the definitions of entities, option sets, and business processes. This [solution](../../developer/common-data-service/introduction-solutions.md) file also contains the canvas and model-driven apps, as well as any other pieces that are used together.
 
 To install the solution, select **Solutions** in the left navigation pane, and then select **Import** in the toolbar near the top of the screen: 
 
