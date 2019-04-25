@@ -192,17 +192,12 @@ When Power BI Desktop brought the lists in, it created a relationship between th
     ![New Column](./media/sharepoint-scenario-build-report/05-02-00-modeling-column.png)
 2. Enter this formula into the formula bar:
    
-    ```
+    ```dax
     ApprovedStartDiff = CALCULATE(SUM(Dates[IsWeekday]),
-   
        DATESBETWEEN(Dates[Date],
-   
           'Project Details'[ApprovedDate],
-   
           'Project Details'[ProjectedStartDate]
-   
       )
-   
     )
     ```
    
@@ -217,17 +212,12 @@ When Power BI Desktop brought the lists in, it created a relationship between th
     ![New Column](./media/sharepoint-scenario-build-report/05-02-00-modeling-column.png)
 2. Enter this formula into the formula bar:
    
-    ```
+    ```dax
     RequestDateAge = CALCULATE(SUM(Dates[IsWeekday]),
-   
        DATESBETWEEN(Dates[Date],
-   
           'Project Requests'[RequestDate],
-   
           NOW()
-   
        )
-   
     )
     ```
    
@@ -242,13 +232,10 @@ When Power BI Desktop brought the lists in, it created a relationship between th
     ![New Measure](./media/sharepoint-scenario-build-report/05-02-00-modeling-measure.png)
 2. Enter this formula into the formula bar:
    
-    ```
+    ```dax
     VarProjectedActual = DIVIDE(
-   
         SUM('Project Details'[ActualDays]) - SUM('Project Details'[ProjectedDays]),
-   
         SUM('Project Details'[ProjectedDays])
-   
     )
     ```
    
@@ -263,13 +250,10 @@ When Power BI Desktop brought the lists in, it created a relationship between th
     ![New Measure](./media/sharepoint-scenario-build-report/05-02-00-modeling-measure.png)
 2. Enter this formula into the formula bar:
    
-    ```
+    ```dax
     MaxDaysPending = MAXX(
-   
         FILTER('Project Requests', 'Project Requests'[Approved]="Pending"),
-   
         'Project Requests'[RequestDateAge]
-   
     )
     ```
    
