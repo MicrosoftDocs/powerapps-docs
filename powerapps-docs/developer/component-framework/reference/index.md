@@ -16,11 +16,6 @@ manager: "Jdaly"
 
 This section contains reference documentation for creating custom controls using the PowerApps component framework.
 
-> [!IMPORTANT]
-> - PowerApps component framework is a preview feature.
-> - [!INCLUDE[cc_preview_features_definition](../../../includes/cc-preview-features-definition.md)] 
-> - [!INCLUDE[cc_preview_features_no_MS_support](../../../includes/cc-preview-features-no-ms-support.md)]
-
 |Name|Description|
 |----|-----------|
 |[Client](client.md)|[!INCLUDE [client-description](includes/client-description.md)]|
