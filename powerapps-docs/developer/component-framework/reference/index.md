@@ -14,7 +14,7 @@ manager: "Jdaly"
 
 [!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
 
-This section contains reference documentation for creating custom controls using the PowerApps component framework.
+This section contains reference documentation for creating custom components using the PowerApps component framework.
 
 |Name|Description|
 |----|-----------|
