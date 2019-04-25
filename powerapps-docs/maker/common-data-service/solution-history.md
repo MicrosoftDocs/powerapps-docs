@@ -30,7 +30,8 @@ search.app:
 
 You can view details about a system (internal) or custom solution operation from the Solutions area of a model-driven app. An operation can be either a solution import or delete. The solution history displays information such as solution version, solution publisher, type of operation, operation start and end time, and operation status.
 
-![solutions history custom view](media/solutions-history-custom-view.png)
+> [!div class="mx-imgBorder"] 
+> ![](media/solutions-history-custom-view.pngg "Solutions history custom view")
 
 Each solution history record is read-only and includes the following properties: 
 - **Start Time**. The time in which the operation started. 
@@ -45,7 +46,9 @@ Each solution history record is read-only and includes the following properties:
 ## View solution history
 1.	From a PowerApps model-driven app, select Settings ![Settings](../model-driven-apps/media/powerapps-gear.png) on the actions toolbar and then select **Advanced Settings**. 
 2.	Select **Settings**, and then select **Solutions History**.
-![Solution History area](media/solution-history-sitemap.png)
+
+> [!div class="mx-imgBorder"] 
+> ![](media/solution-history-sitemap.png "Solution History area")
 
 The following views are available from the **Solutions** area. 
 - **All Solutions History**. Displays both system and custom solutions. 
