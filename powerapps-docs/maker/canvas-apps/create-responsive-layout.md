@@ -233,7 +233,7 @@ This formula evaluates to **true** when the size is medium or larger and **false
 
 If you want a control to occupy a different fraction of the screen width based on the screen size, set the control's **Width** property to this formula:
 
-```
+```powerapps-dot
 Parent.Width *  
     Switch(Parent.Size,  
         ScreenSize.Small, 0.5,  
