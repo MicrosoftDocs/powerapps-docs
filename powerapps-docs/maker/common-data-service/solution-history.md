@@ -56,6 +56,6 @@ The following views are available from the **Solutions** area.
 - **Internal Solutions History**. Displays only system customizations. 
 
 ### See also
-[Solutions overview](solutions-overview.md)
+[Solutions overview](solutions-overview.md) < br/>
 [View solution layers](solution-layers.md)
 
