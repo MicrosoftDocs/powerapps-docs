@@ -44,11 +44,11 @@ Each solution history record is read-only and includes the following properties:
 - **Result**. The result of the operation, such as Success or Failure. 
 
 ## View solution history
-1.	From a PowerApps model-driven app, select Settings ![Settings](../model-driven-apps/media/powerapps-gear.png) on the actions toolbar and then select **Advanced Settings**. 
+1.	From a PowerApps model-driven app, select **Settings** ![Settings](../model-driven-apps/media/powerapps-gear.png) on the app toolbar, and then select **Advanced Settings**. 
 2.	Select **Settings**, and then select **Solutions History**.
 
-> [!div class="mx-imgBorder"] 
-> ![](media/solution-history-sitemap.png "Solution History area")
+   > [!div class="mx-imgBorder"] 
+   > ![](media/solution-history-sitemap.png "Solution History area")
 
 The following views are available from the **Solutions** area. 
 - **All Solutions History**. Displays both system and custom solutions. 

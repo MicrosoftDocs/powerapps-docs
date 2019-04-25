@@ -1079,6 +1079,8 @@
       href: ./common-data-service/create-solution.md
     - name: View solution layers
       href: ./common-data-service/solution-layers.md
+    - name: View solution history
+      href: ./common-data-service/solution-history.md      
     - name: Use solution checker
       href: ./common-data-service/use-powerapps-checker.md
     - name: Use segmented solutions
