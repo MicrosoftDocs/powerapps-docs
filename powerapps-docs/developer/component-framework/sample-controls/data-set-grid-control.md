@@ -21,11 +21,6 @@ This sample component shows how to change the user experience of interacting wit
 > [!div class="mx-imgBorder"]
 > ![Data Set Grid component](../media/data-set-grid.png "Data Set Grid component")
 
-> [!IMPORTANT]
-> - PowerApps component framework is a preview feature.
-> - [!INCLUDE[cc_preview_features_definition](../../../includes/cc-preview-features-definition.md)] 
-> - [!INCLUDE[cc_preview_features_no_MS_support](../../../includes/cc-preview-features-no-ms-support.md)]
-
 ## Manifest 
 
 ```xml

@@ -14,6 +14,8 @@ ms.assetid: 89807b09-92ee-43cf-8db5-8da838131923
 
 # LookupOptions
 
+[!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
+
 ## allowMultiSelect
 
 Whether the lookup allows more than one item to be selected.

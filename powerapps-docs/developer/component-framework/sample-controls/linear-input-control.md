@@ -20,11 +20,6 @@ To implement this component, first you need to define the [Manifest](../manifest
 > [!div class="mx-imgBorder"]
 > ![Linear Input Concomponenttrol](../media/linear-input-control.png "Linear Input component")
 
-> [!IMPORTANT]
-> - PowerApps component framework is a preview feature.
-> - [!INCLUDE[cc_preview_features_definition](../../../includes/cc-preview-features-definition.md)] 
-> - [!INCLUDE[cc_preview_features_no_MS_support](../../../includes/cc-preview-features-no-ms-support.md)]
-
 ## Manifest
 
 ```xml

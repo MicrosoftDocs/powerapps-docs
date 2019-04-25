@@ -23,10 +23,6 @@ For example, if your custom component is a long list that the user can scroll th
 > [!div class="mx-imgBorder"]
 > ![Control state API](../media/control-state-api.png "Control state API")
 
-> [!IMPORTANT]
-> - PowerApps component framework is a preview feature.
-> - [!INCLUDE[cc_preview_features_definition](../../../includes/cc-preview-features-definition.md)] 
-> - [!INCLUDE[cc_preview_features_no_MS_support](../../../includes/cc-preview-features-no-ms-support.md)]
 
 ## Manifest
 
