@@ -51,7 +51,7 @@ There are four parts:
 
 	![](media/northwind-orders-canvas-part1/blank-app.png)
 
-1. Before moving on, let's enable a useful feature for seeing the results of formulas directly from the formula bar.On the **File** menu, select **App settings**, select **Advanced settings**, scroll to the very bottom of the list, and then turn on **Enable formula bar result view**:
+1. Before moving on, let's enable a useful feature for seeing the results of formulas directly from the formula bar. On the **File** menu, select **App settings**, select **Advanced settings**, scroll to the very bottom of the list, and then turn on **Enable formula bar result view**:
 
 	![](media/northwind-orders-canvas-part1/enable-result-view.png)
 
