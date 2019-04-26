@@ -1,5 +1,5 @@
 ---
-title: Build Northwind Orders (Canvas): Part 1, Orders list | Microsoft Docs
+title: 'Build Northwind Orders (Canvas): Part 1, Orders list | Microsoft Docs'
 description: Build the Canvas version of Northwind Orders
 author: gregli-msft
 manager: kvivek
