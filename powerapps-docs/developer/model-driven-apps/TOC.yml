@@ -1,4 +1,3 @@
-# This TOC is a work in progress. The specific location of items is not locked down
 - name: Model-driven apps
   href: ../../maker/model-driven-apps/model-driven-app-overview.md
 - name: Developer overview
@@ -27,6 +26,8 @@
     href: use-editable-grids.md
   - name: Query and edit an organization theme
     href: query-and-edit-an-organization-theme.md
+  - name: Build custom controls using PowerApps Component Framework
+    href: /powerapps/developer/control-framework/overview
 - name: Apply data visualizations using code
   href: customize-visualizations-dashboards.md
   items:

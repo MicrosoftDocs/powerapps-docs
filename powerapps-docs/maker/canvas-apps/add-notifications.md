@@ -108,25 +108,25 @@ You can set your app to open, for example, the **Case details** page as soon as 
 ### Sample formulas
 Send a basic notification.
 
-```
+```powerapps-dot
 PowerAppsNotification.SendPushNotification(
-{
-  recipients: [""f60ccf6f-7579-4f92-967c-2920473c966b", 72f988bf-86f1-41af-91ab-2d7cd011db47],
-  message: "A new case was assigned to you."
- }
+	{
+		recipients: ["f60ccf6f-7579-4f92-967c-2920473c966b", "72f988bf-86f1-41af-91ab-2d7cd011db47"],
+		message: "A new case was assigned to you."
+	}
 )
 ```
 
 Send a notification that opens an app and passes along specific parameters.
 
-```
+```powerapps-dot
 PowerAppsNotification.SendPushNotification(
-{
-  recipients:["email1@contoso.com", "email2@contoso.com"],
-  message:"message in the notif toast",
-  params:Table({key:"notificationKey", value:"The value for notificationKey"}),
-  openApp:true
- }
+	{
+		recipients: ["email1@contoso.com", "email2@contoso.com"],
+		message: "message in the notif toast",
+		params: Table({key:"notificationKey", value:"The value for notificationKey"}),
+		openApp: true
+ 	}
 )
 ```
 

@@ -3,7 +3,6 @@ title: "Perform conditional operations using the Web API (Common Data Service)| 
 description: "Read how to create conditions that decide whether and how to perform certain operations using the Web API"
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -14,7 +13,8 @@ ms.assetid: 771002b0-825a-462d-bbf0-1aeba4b726c8
 caps.latest.revision: 16
 author: "brandonsimons" # GitHub ID
 ms.author: "jdaly"
-manager: "amyla"
+ms.reviewer: "susikka"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 

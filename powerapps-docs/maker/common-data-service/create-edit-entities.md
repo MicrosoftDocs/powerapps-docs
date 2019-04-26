@@ -2,7 +2,7 @@
 title: "Create and edit entities in Common Data Service | MicrosoftDocs"
 description: "Learn how to create and edit entities"
 ms.custom: ""
-ms.date: 05/11/2018
+ms.date: 04/16/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -65,13 +65,6 @@ Information in this topic will help you choose which designer you can use. You c
   [!INCLUDE [cc_entity-set-once-options-table](../../includes/cc_entity-set-once-options-table.md)]
 
 - Change any of the following properties:
-
-  <!-- Based on ../../includes/cc_entity-changeable-options-table.md 
-Removed these:
-
-  /|**Description**/|Provide a meaningful description of the purpose of the entity./|
-
-  /|**Primary Image**/|System entities that support images will already have an **Image** field. You can choose whether to display data in this field as the image for the record by setting this field to **[None]** or **Default Image**.<br /><br /> For custom entities you must first create an image field. Each entity can have only one image field. After you create one, you can change this setting to set the primary image. More information: [Image fields](../maker/common-data-service/types-of-fields.md#image-fields) /|-->
 
   |Option   |Description  |
   |---------|---------|

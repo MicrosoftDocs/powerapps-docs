@@ -767,8 +767,16 @@
           items:
           - name: "Create or edit forms"
             href: ./model-driven-apps/create-and-edit-forms.md
+          - name: "Add, move or delete fields"
+            href: ./model-driven-apps/add-move-or-delete-fields-on-form.md
+          - name: "Add, move or delete sections"
+            href: ./model-driven-apps/add-move-or-delete-sections-on-form.md
+          - name: "Add, move or delete tabs"
+            href: ./model-driven-apps/add-move-or-delete-tabs-on-form.md            
           - name: "Properties in the form designer"
             href: ./model-driven-apps/form-designer-properties.md 
+          - name: "Using the tree view"
+            href: ./model-driven-apps/using-tree-view-on-form.md  
         - name: Type of forms
           href: ./model-driven-apps/types-forms.md
           items:
@@ -831,6 +839,8 @@
           href: ./model-driven-apps/pass-current-embedded-canvas-app.md
         - name: "Pass related records to an embedded canvas app"
           href:  ./model-driven-apps/pass-related-embedded-canvas-app.md
+        - name: "Perform predefined actions on the host form"
+          href:  ./model-driven-apps/embedded-canvas-app-actions.md
         - name: "Share an embedded canvas app"
           href:  ./model-driven-apps/share-embedded-canvas-app.md
         - name: "Embedded canvas app guidelines"
@@ -1067,6 +1077,8 @@
       href: ./common-data-service/navigate-specific-solution.md
     - name: Create a solution
       href: ./common-data-service/create-solution.md
+    - name: View solution layers
+      href: ./common-data-service/solution-layers.md
     - name: Use solution checker
       href: ./common-data-service/use-powerapps-checker.md
     - name: Use segmented solutions

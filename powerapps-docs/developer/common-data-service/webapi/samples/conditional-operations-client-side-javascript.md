@@ -3,7 +3,6 @@ title: "Web API Conditional Operations Sample (Client-side JavaScript) (Common D
 description: "This sample demonstrates how to perform conditional operations using Common Data Service Web API and client-side JavaScript"
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -14,6 +13,7 @@ author: "brandonsimons" # GitHub ID
 ms.assetid: 7f097d9f-8fe7-428a-9ef7-ca79ec501d81
 caps.latest.revision: 23
 ms.author: "jdaly"
+ms.reviewer: "susikka"
 manager: "amyla"
 search.audienceType: 
   - developer

@@ -85,7 +85,17 @@ if (pam != null)
     Task firstTask = pam.Contact_Tasks.FirstOrDefault();  
 }  
 ```  
+### Use the AddLink method  
+ You can use the <xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceContext.AddLink(Microsoft.Xrm.Sdk.Entity,Microsoft.Xrm.Sdk.Relationship,Microsoft.Xrm.Sdk.Entity)> method to create associations. You must call the <xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceContext.SaveChanges> method before the server is updated with the new link information.  
   
+ The following code example shows how to create an association between a contact and an account.  
+  
+```csharp  
+Relationship relationship = new Relationship("account_primary_contact");  
+context.AddLink(contact, relationship, account);  
+context.SaveChanges();  
+```  
+
 <a name="save_changes"></a>
 
 ## Save changes

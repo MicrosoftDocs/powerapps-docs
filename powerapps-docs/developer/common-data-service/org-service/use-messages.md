@@ -103,8 +103,8 @@ CreateResponse response = (CreateResponse)svc.Execute(req);
 ### See also
 
 [Entity Operations using the Organization service](entity-operations.md)<br />
-[Use ExecuteAsync](use-executeAsync.md)<br />
-[Use ExecuteTransaction](use-executetransaction.md)<br />
+[Use ExecuteAsync to execute messages asynchronously](use-executeAsync.md)<br />
+[Execute messages in a single database transaction](use-executetransaction.md)<br />
 [Execute multiple requests using the Organization service](execute-multiple-requests.md)
 
 
