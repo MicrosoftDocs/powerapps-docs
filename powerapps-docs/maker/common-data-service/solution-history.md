@@ -28,7 +28,7 @@ search.app:
 
 # View the history of a solution
 
-You can view details about a system (internal) or custom solution operation from the **Solutions** area of a model-driven app. An operation can be a solution import, export, or delete. The solution history displays information such as solution version, solution publisher, type of operation, operation start and end time, and operation status.
+You can view details about solution operations from the **Solutions** area of a model-driven app. An operation can be a solution import, export, or delete. The solution history displays information such as solution version, solution publisher, type of operation, operation start and end time, and operation status.
 
 > [!div class="mx-imgBorder"] 
 > ![](media/solutions-history-custom-view.png "Solutions history custom view")
@@ -40,7 +40,7 @@ Each solution history record is read-only and includes the following properties:
 - **Publisher Name**. The name of the publisher that is associated with the operation. More information: [Change the solution publisher prefix](change-solution-publisher-prefix.md)  
 - **Operation**. The operation, such as import, export, or delete. More information: [Import, update, and export solutions](import-update-export-solutions.md)
 - **Suboperation**: Denotes the type of operation, such as a new solution import or an update to an existing solution. 
-- **Status**. The status of the operation, such as **Completed** or **Not completed**. 
+- **Status**. The current status of the operation, such as **Completed** or **Not completed**. 
 - **Result**. The result of the operation, such as **Success** or **Failure**. 
 - **Error Code**: Error code returned from the operation. An error code of 0 means the operation was successfully completed. 
 
