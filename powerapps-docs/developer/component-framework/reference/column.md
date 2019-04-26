@@ -14,6 +14,8 @@ ms.assetid: db4be085-c31e-4045-8834-b0f45c569964
 
 # Column
 
+[!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
+
 [!INCLUDE [column-description](includes/column-description.md)]
 
 ## alias

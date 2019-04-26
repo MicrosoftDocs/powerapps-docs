@@ -14,6 +14,8 @@ ms.assetid: d9fb178c-6cc6-48cc-99c0-9972e37dec3e
 
 # type
 
+[!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
+
 [!INCLUDE [type-description](includes/type-description.md)]
 
 ## Parent Elements

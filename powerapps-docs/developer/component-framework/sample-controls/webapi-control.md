@@ -17,11 +17,6 @@ The Web API component is designed to perform create, retrieve, update and delete
 > [!div class="mx-imgBorder"]
 > ![Web API component](../media/web-api-control.png "Web API component")
 
-> [!IMPORTANT]
-> - PowerApps component framework is a preview feature.
-> - [!INCLUDE[cc_preview_features_definition](../../../includes/cc-preview-features-definition.md)] 
-> - [!INCLUDE[cc_preview_features_no_MS_support](../../../includes/cc-preview-features-no-ms-support.md)]
-
  ## Manifest
 
  ```xml
