@@ -74,7 +74,7 @@ TODO: Add content that shows how to do this -->
 ## Error: Message size exceeded when sending context to Sandbox
 
 Error Code: `-TODO`<br />
-Error Message: `Sql error: 'Message size exceeded when sending context to Sandbox. Message size: ### Mb'`
+Error Message: `Message size exceeded when sending context to Sandbox. Message size: ### Mb`
 
 This error occurs when a message payload is greater than `TODO` MB **AND** a plug-in is registered for the message. The error message will include the size of the payload that caused this error.
  
