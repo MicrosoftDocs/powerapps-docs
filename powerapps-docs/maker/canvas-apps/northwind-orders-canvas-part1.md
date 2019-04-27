@@ -1,5 +1,5 @@
 ---
-title: Build Northwind Orders (Canvas): Part 1, Orders list | Microsoft Docs
+title: 'Build Northwind Orders (Canvas): Part 1, Orders list | Microsoft Docs'
 description: Build the Canvas version of Northwind Orders
 author: gregli-msft
 manager: kvivek
@@ -16,11 +16,12 @@ search.app:
 ---
 # Build Northwind Orders (Canvas): Part 1, Orders list
 
-This series of articles will build a simple order management Canvas app step-by-step.  It will showcase how to use:
-- Many-to-One relationships.  Many Orders can be related to the same Customer.  But each Order can be related to only one Customer.
-- One-to-Many relationships.  Each Order can be related to many Order Details (or line items).  But each Order Detail is related to only one Order.
-- Many-to-Many relationships.  Each Product can be related to many Product Categories.  And each Product Category can be related to many Products. 
-- Option sets.  
+This series of articles will build a simple order management Canvas app step-by-step. It will showcase how to use:
+
+- Many-to-One relationships. Many Orders can be related to the same Customer. Each Order can be related to only one Customer.
+- One-to-Many relationships. Each Order can be related to many Order Details (or line items). Each Order Detail is related to only one Order.
+- Many-to-Many relationships. Each Product can be related to many Product Categories. Each Product Category can be related to many Products. 
+- Option sets.
 
 The completed app will look like this:
 
@@ -34,27 +35,27 @@ There are four parts:
 
 ## Getting started
 
-1. Login to the PowerApps portal.  
+1. Sign in to PowerApps.
 
 1. [Install the Northwind Traders sample database and apps](northwind-install.md).  This will install all the entities that we need and a completed version of the app we are about to build.
 
-1. Create your own blank Tablet app:
+1. Create your own blank tablet app:
 
 	![](media/northwind-orders-canvas-part1/create-app.png)
 
-	Name your app whatever you like and select "Create":
+	Name your app whatever you like, and then select **Create**:
 
 	![](media/northwind-orders-canvas-part1/name-app.png)
 
-1. You are now in the PowerApps Studio, ready to add data sources and controls to your app:
+1. You are now in PowerApps Studio, ready to add data sources and controls to your app:
 
 	![](media/northwind-orders-canvas-part1/blank-app.png)
 
-1. Before moving on, let's enable a useful feature for seeing the results of formulas directly from the formula bar.  Select the **File** menu, **App settings**, **Advanced settings**, scroll to the very bottom of the list, and turn on **Enable formula bar result view**:
+1. Before moving on, let's enable a useful feature for seeing the results of formulas directly from the formula bar. On the **File** menu, select **App settings**, select **Advanced settings**, scroll to the very bottom of the list, and then turn on **Enable formula bar result view**:
 
 	![](media/northwind-orders-canvas-part1/enable-result-view.png)
 
-	This is an experimental feature that will be turned on by default soon.
+	This experimental feature will be turned on by default soon.
 
 ## Adding the Orders data source
 
