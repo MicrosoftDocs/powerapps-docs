@@ -1,5 +1,5 @@
 ---
-title: 'Build Northwind Orders (Canvas): Part 1, Orders list | Microsoft Docs'
+title: 'Build Northwind Orders (Canvas): Part 2, Order form | Microsoft Docs'
 description: Build the Canvas version of Northwind Orders
 author: gregli-msft
 manager: kvivek
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Build Northwind Orders (Canvas): Part 1, Orders list
+# Build Northwind Orders (Canvas): Part 2, Order form
 
 This series of articles will build a simple order management Canvas app step-by-step.  It will showcase how to use:
 - Many-to-One relationships.  Many Orders can be related to the same Customer.  But each Order can be related to only one Customer.
@@ -62,7 +62,7 @@ If you have not already done so, work through part 1.  Or take a shortcut by ope
 
 	![](media/northwind-orders-canvas-part2/titlebar-text-format.png)
 
-## Edit and display Order information
+## Display more Order information
 
 1. From the **Insert** ribbon, insert an [**Edit form** control](controls/control-form-detail.md):
 
@@ -92,7 +92,11 @@ If you have not already done so, work through part 1.  Or take a shortcut by ope
 
 	![](media/northwind-orders-canvas-part2/form-fields-add.png)
 
-1. Add and remove fields to get to the list we want.  The order of fields in the pane and in the form doesn't matter, we'll rearrange them on the form shortly.  To follow along with these instructions, you'll want these fields:
+1. Add and remove fields to get to the list we want.  The order of fields in the pane and in the form doesn't matter, we'll rearrange them on the form shortly:  
+
+	![](media/northwind-orders-canvas-part2/form-fields-our-set.png)
+
+	To follow along with these directions, you'll want these fields:
 
 	- **Order Number**
 	- **Order Status**
@@ -102,13 +106,108 @@ If you have not already done so, work through part 1.  Or take a shortcut by ope
 	- **Employee**
 	- **Notes**
 
-	![](media/northwind-orders-canvas-part2/form-fields-our-set.png)
+1. In the **Properties** panel, change the number of columns from 3 to 12.  This will give us more flexibility in laying out the fields: 
 
-1. 
+	![](media/northwind-orders-canvas-part2/form-columns-3.png)
+
+	Although we said 12, that would make for some very small fields if the form control took us literally.  When switching the number of columns, the form control will keep the fields at least 3 columns wide, but we do have 12 snap points across to work with:
+
+	![](media/northwind-orders-canvas-part2/form-columns-12.png)
+
+1. Reposition the fields within the form by drag-and-drop of their drag handles and resize them as you would any control:
+
+	![](media/northwind-orders-canvas-part2/form-rearrange.gif)
+
+	For more information on working with form layout, see the article [understand data-form layout for canvas apps](working-with-form-layout).
+
+1. For the date fields we don't want to show the time portions.  It is tempting to just select the time controls and delete them, but that can cause problems if they are a part of the formulas for updating data values or the positioning of other controsl.  
+
+	The best way to accomplish our goal is to set the **Visible** property of the hour, minutes, and colon controls to *false* and resize the **Date picker** control to fill the width of the data card.  
+ 
+	To do this, we will need to first unlock the data card:
+
+	![](media/northwind-orders-canvas-part2/form-unlock-date.png)
+
+	Then multi-select the three controls by holding down the Shift key while selecting each.  Zooming in with the slider control at the very bottom of the Studio makes this easier.  You can also multi-select with the Tree View in the left hand pane:
+
+	![](media/northwind-orders-canvas-part2/form-visible-date.png)
+
+	Then set **Visible** to *false* which will be done for all three at once since they are multi-selected:
+
+	![](media/northwind-orders-canvas-part2/form-invisible-date.png)
+
+	And now we can resize the date picker to show all of the date:
+
+	![](media/northwind-orders-canvas-part2/form-wide-date.png)
+
+1. Repeat the last step for the **Paid Date** field:
+
+	![](media/northwind-orders-canvas-part2/form-both-dates.png)
+
+1. Let's connect this form to the selected Order in our Orders list.  Set the **Item** property of the form control to:
+
+	```powerapps-dot
+	Gallery1.Selected
+	```
+
+	![](media/northwind-orders-canvas-part2/form-item.png)
+
+	As you change selection in the gallery, the form will update to reflect the information for that order.
+
+## Choices and Many-to-One relationships
+
+1. In form contains there [**Combo box** controls](controls/control-combo-box.md).  The first combo box is for **Order Status**.  This is an option set as we saw when building the Orders list.
+
+	If we select the combo box control within the data card, which requires selecting the data card first, we'll see that it's **Items** property is set to `Choices( 'Orders Status' )`:
+
+	![](media/northwind-orders-canvas-part2/choices-status.png)
+
+	The [**Choices** function](functions/function-choices.md) returns all the possilbe values for the option set which are displayed if we pull down on the combo box:
+
+	![](media/northwind-orders-canvas-part2/choices-status-open.png)
+
+	There is nothing to change in our app for this step, we were just exploring how it worked.
+
+1. Something similar happens for Many-to-One relationships.  If we select the control in the **Employee** field:
+
+	![](media/northwind-orders-canvas-part2/choices-employee.png)
+
+	It is set to `Choices(Orders.nwind_EmployeeID)`.  This is the logical name for the lookup field from **Orders** to the **Employees** entity.
+
+	As we saw with the Orders list, we could reference the **Company** field of the **Customer** lookup as if the entire **Customer** record wsa available to us for each **Order**.  The same is true here - the complete record for the employee is available through the combo box control's **Selected** property.
+
+	Likewise the **Choices** function returns the entire record for each employee in a table to feed the combo box.  The copmlete record is used to select a different employee if the app's user decides to change the employee for an order.
+
+	![](media/northwind-orders-canvas-part2/choices-employee-resultview.png)
+
+	Again nothing to change in our app for this step, we are continuing our exploration.
+
+1. Now it is time to act.  Unlock the **Employees** card:
+
+	![](media/northwind-orders-canvas-part2/choices-employee-unlock.png)
+
+1. Resize the combo box control to make room for the employee picture:
+
+	![](media/northwind-orders-canvas-part2/choices-employee-resize.png)
 
 
+![](media/northwind-orders-canvas-part2/choices-employee-insert-picture.png)
+
+![](media/northwind-orders-canvas-part2/choices-employee-insert-card.png)
 
 
+![](media/northwind-orders-canvas-part2/choices-employee-empty-picture.png)
+
+
+![](media/northwind-orders-canvas-part2/choices-employee-picture.png)
+
+![](media/northwind-orders-canvas-part2/ordernumber-open.png)
+
+![](media/northwind-orders-canvas-part2/ordernumber-change.png)
+
+![](media/northwind-orders-canvas-part2/ordernumber-done.png)
+
+![](media/northwind-orders-canvas-part2/ordernumber-bigger.png)
 
 
 
