@@ -45,7 +45,7 @@ If you have not already done so, work through [part 1](northwind-orders-canvas-p
 
 	![](media/northwind-orders-canvas-part2/titlebar-01.png)
 
-1. From the **Insert** ribbon, insert a [**Label** control](controls/control-text-box.md) control:
+1. From the **Insert** ribbon, insert a [**Label** control](controls/control-text-box.md):
 
 	![](media/northwind-orders-canvas-part2/titlebar-02.png)
 
@@ -55,26 +55,28 @@ If you have not already done so, work through [part 1](northwind-orders-canvas-p
 
 	![](media/northwind-orders-canvas-part2/titlebar-03.png)
 
-1. Double click into the control to edit the text for the control and enter Northwind Orders.  You can also modify the **Text** property in the formula bar, both methods modify the same thing:
+1. Double click into the control to edit the text for the control and enter **Northwind Orders**.  Alternatively, you can modify the **Text** property in the formula bar, both methods do the same thing:
 
 	![](media/northwind-orders-canvas-part2/titlebar-04.png)
 
 1. Using the **Home** ribbon, use the formatting buttons to format the label control:
+    - increase the font size to 24 points
+    - use a bold font
+    - use white for the text color
     - center the text
     - fill the background with dark blue
-    - use white for the text color
-    - use a bold font
-    - increase the font size to 24 points
 
     ![](media/northwind-orders-canvas-part2/titlebar-05.png)
 
 ## Display more Order information in a form
 
-1. Let's display more of the columns from the currently selected order.  From the **Insert** ribbon, insert an [**Edit form** control](controls/control-form-detail.md):
+1. Let's display more of the columns from the currently selected order.  
+
+    From the **Insert** ribbon, insert an [**Edit form** control](controls/control-form-detail.md):
 
 	![](media/northwind-orders-canvas-part2/form-01.png)
 
-	The control will overlay the other controls on the screen in the top left corner:
+	The control will overlay the other controls on the screen in the top left corner and may difficult to see:
 
 	![](media/northwind-orders-canvas-part2/form-02.png)
 
@@ -96,7 +98,7 @@ If you have not already done so, work through [part 1](northwind-orders-canvas-p
 
 	![](media/northwind-orders-canvas-part2/form-05.png)
 
-1. Select **+ Add fields** and place a check mark next to these fields:
+1. Select **+ Add field** and place a check mark next to these fields:
 
 	- **Customer**
 	- **Employee**
@@ -125,7 +127,7 @@ If you have not already done so, work through [part 1](northwind-orders-canvas-p
 
 	![](media/northwind-orders-canvas-part2/form-08b.png)
 
-    Using a 12 column layout is common in UI design as spans can evenly accomodate rows of 1, 2, 3, 4, 6, and 12 controls.  We'll use this for a mix of 1, 2, and 4 controls in each row.
+    Using a 12 column layout is common in UI design as spans of 12 columns can evenly accomodate rows of 1, 2, 3, 4, 6, and 12 controls.  We'll use this for a mix of 1, 2, and 4 controls in each row.
 
 1. Re-position the fields within the form by drag-and-drop of their drag handles and re-size them as you would any control:
 
@@ -133,7 +135,9 @@ If you have not already done so, work through [part 1](northwind-orders-canvas-p
 
 	For more information on working with form layout, see [understand data-form layout for canvas apps](working-with-form-layout.md).
 
-1. For the date fields we don't want to show the time portions.  It is tempting to just select the time controls and delete them, but that can cause problems if they are a part of the formulas for updating data values or the positioning of other controls within the data card.  
+1. Let's not show the time portions of the date fields, that level of granularity is not needed.  
+
+    It is tempting to just select the time controls and delete them, but that can cause problems if they are a part of the formulas for updating data values or the positioning of other controls within the data card.  
 
 	The best way to accomplish our goal is to set the **Visible** property of the hour, minutes, and colon separator controls to *false* and resize the [**Date picker** control](controls/control-date-picker.md) to fill the width of the data card.  
  
@@ -161,7 +165,9 @@ If you have not already done so, work through [part 1](northwind-orders-canvas-p
 
 	![](media/northwind-orders-canvas-part2/form-14.png)	
 
-1. Finally, let's connect the selected item in Orders list to the Order form.  Select the form control in the navigation pane.  Set the **Item** property of the form control to:
+1. Finally, let's connect the selected item in our Orders list to the Order form.  
+ 
+    Select the form control in the navigation pane.  Set the **Item** property of the form control to:
 
 	```powerapps-dot
 	Gallery1.Selected
@@ -249,13 +255,13 @@ If you have not already done so, work through [part 1](northwind-orders-canvas-p
 
 ## Saving changes
 
-1. Let's add a button to save changes to the form.  
+1. Let's add a button to save the changes that app users make in the form.  
 
     Select **Screen1** in the navigation pane, to ensure we don't add a control to a data card.  From the **Insert** ribbon, insert a check mark **Icon** control: 
 
 	![](media/northwind-orders-canvas-part2/save-01.png)
 
-    The inserted icon will overlap other controls in the left upper corner of the screen and may be difficult to see. 
+    The inserted icon will overlap other controls in the left upper corner of the screen and may be difficult to see: 
 
 	![](media/northwind-orders-canvas-part2/save-02.png)
 
@@ -295,7 +301,7 @@ If you have not already done so, work through [part 1](northwind-orders-canvas-p
 
 	![](media/northwind-orders-canvas-part2/save-submit.gif)
 
-1. Let's add a button to cancel changes we've made to a form. 
+1. Let's add a button to cancel changes made to the data in a form, in case an app user changes their mind. 
 
     From the **Insert** ribbon, insert a cancel **Icon** control: 
 
@@ -345,7 +351,7 @@ If you have not already done so, work through [part 1](northwind-orders-canvas-p
 
 	![](media/northwind-orders-canvas-part2/save-13.png)
 
-    The inserted icon will overlap other controls in the left upper corner of the screen and may be difficult to see. 
+    The inserted icon will overlap other controls in the left upper corner of the screen and may be difficult to see:
 
 	![](media/northwind-orders-canvas-part2/save-14.png)
 
@@ -405,7 +411,7 @@ If you have not already done so, work through [part 1](northwind-orders-canvas-p
 
 	![](media/northwind-orders-canvas-part2/save-21.png)
 
-    The [**Remove** function](functions/function-remove.md) is not a form control function.  But we are grouping it here since the app's user would see that the currently selected record, which is showing in the form, is the one to be deleted.  Rather than working through the form control, we use the **Remove** function which directly removes a record form a data source.
+    The [**Remove** function](functions/function-remove-removeif.md) is not a form control function.  But we are grouping it here since the app's user would see that the currently selected record, which is showing in the form, is the one to be deleted.  Rather than working through the form control, we use the **Remove** function which directly removes a record form a data source.
 
 1. Set the **DisplayMode** property to the formula:
 
@@ -432,10 +438,10 @@ If you have not already done so, work through [part 1](northwind-orders-canvas-p
 ## On to Part 3
 
 To recap, we just added a form to our app which allows us to see and edit more information about each order.  We used:
-- A form for Orders: DataSource = `Orders`
-- A connection between the Orders list and the form: Item = `Gallery1.Selected`
-- An alternate data card for Order number 
-- A Many-to-One relationship to show the employee's picture in the employee data card
+- A form for Orders: **DataSource =** `Orders`
+- A connection between the Orders list and the form: **Item =** `Gallery1.Selected`
+- An alternate data card for Order number: **View text**
+- A Many-to-One relationship to show the employee's picture in the employee data card: `DataCardValue1.Selected.Picture`
 - Icon to save changes to an Order: `SubmitForm( Form1 )`
 - Icon to cancel changes to an Order: `ResetForm( Form1 )`
 - Icon to create a new Order: `NewForm( Form1 )`
