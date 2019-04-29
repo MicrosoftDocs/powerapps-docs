@@ -31,8 +31,8 @@ The instructions for building the app are broken into three parts:
 
 ![](media/northwind-orders-canvas-part1/orders-parts.png)
 
-- **Part 1, Orders list**:  Displays the list of orders.  Selection in this list determines which order is being edited on the rest of the screen.
-- [**Part 2, Order form**](northwind-orders-canvas-part2.md):  View and edit information about the order.  Here new orders can be created and orders deleted.
+- **Part 1, Orders list**:  Displays the list of orders.  Selection in this list determines which order is being edited on the rest of the screen.  You are here.
+- [**Part 2, Order form**](northwind-orders-canvas-part2.md):  View and edit information about the order.  Here new orders can be created and existing orders deleted.
 - [**Part 3, Order details**](northwind-orders-canvas-part3.md):  View and edit the product line items that are associated with the order.  
 
 ## Getting started
@@ -60,7 +60,6 @@ The instructions for building the app are broken into three parts:
 	This experimental feature will be turned on by default soon.
 
 ## Adding the Orders data source
-
 1. Let's add the **Orders** entity as a data source.  Select **View**, then **Data sources**, and then **+ Add data source**:
  
 	![](media/northwind-orders-canvas-part1/datasource-01.png)
@@ -84,8 +83,7 @@ The instructions for building the app are broken into three parts:
 	Note that there are two names shown for each column the **Display name** and the **Name** which we sometimes call the "Logical name."  Both names refer to the same thing.  In general, we use the **Display name** when building apps, but in some cases the more cryptic **Name** will be shown and required.  Long term, we are moving all parts of PowerApps to use display names.
 
 ## Displaying the list of Orders with a Many-to-One relationship
-
-1. Let's add a [**Gallery**](controls/control-gallery.md) control to view the list of **Orders**.  Select **Insert**, then **Gallery**, and then **Blank vertical**:
+1. Let's add a [**Gallery** control](controls/control-gallery.md) to view the list of **Orders**.  Select **Insert**, then **Gallery**, and then **Blank vertical**:
 
 	![](media/northwind-orders-canvas-part1/orders-01.png)
 
@@ -107,7 +105,7 @@ The instructions for building the app are broken into three parts:
 
 	![](media/northwind-orders-canvas-part1/orders-04.png)
 
-	This will insert two label controls into the gallery's template.  These controls will default to two columns of the **Orders** entity which we will now change.  The gallery's template is replicated vertically for each **Order**.
+	This will insert two label controls into the gallery's template.  These controls will default to two columns of the **Orders** entity which we will change next.  The gallery's template is replicated vertically for each **Order**.
 
 1. In the Data panel select **Title1** or select the upper control in the gallery's template:
 
@@ -143,7 +141,7 @@ The instructions for building the app are broken into three parts:
 
 	![](media/northwind-orders-canvas-part1/orders-09.png)
 
-## Using Option sets to display each Order's status
+## Using option sets to display each Order's status
 
 1. Let's make some space to include more information about each order in the gallery.  Select the first label control, **Title1**, in the gallery's template and re-size it to be narrower:
 
@@ -177,7 +175,7 @@ The instructions for building the app are broken into three parts:
 
 	**'Order Status'** is like any other name in PowerApps, such as **Customer** or **Copmany**.  The single quotes are required here because of the space in the name. 
 
-1. Let's use the Option set to conditionally color the status text.  Using the **Home** ribbon, increase the font size of the label to 20 points and right align the text:
+1. Let's use the option set's value to conditionally color the status text.  Using the **Home** ribbon, increase the font size of the label to 20 points and right align the text:
 
 	![](media/northwind-orders-canvas-part1/status-07.png)
 
@@ -185,16 +183,16 @@ The instructions for building the app are broken into three parts:
 
 	```powerapps-dot
 	Switch( ThisItem.'Order Status', 
-    	'Orders Status'.Closed, Green, 
-	    'Orders Status'.New, Black, 
-    	'Orders Status'.Invoiced, Blue, 
-    	'Orders Status'.Shipped, Purple 
+        'Orders Status'.Closed, Green, 
+        'Orders Status'.New, Black, 
+        'Orders Status'.Invoiced, Blue, 
+        'Orders Status'.Shipped, Purple 
 	)
 	```
 
 	![](media/northwind-orders-canvas-part1/status-08.png)
 
-	Note that we did not compare **ThisItem.'Order Status'** to a text string, instead we used **'Orders Status'** enumeration.  This is important as the label can change depending on the language of the app user, while the numetical values of the enumeration will always be the same.
+	Note that we did not compare **ThisItem.'Order Status'** to a text string, instead we used **'Orders Status'** enumeration.  In fact text string comparisons are disallowed.  Using the enumeration is important as the label can change depending on the language of the app user while the numetical values of the enumeration will always be the same.
 
 	With this formula in place, we can see how different status values are colored in the bottom of the portion of the gallery pictured above.
 
@@ -220,7 +218,7 @@ The instructions for building the app are broken into three parts:
 
 	![](media/northwind-orders-canvas-part1/aggregate-04.png)
 
-	This formula is using the [**Sum** function](function/function-aggregates.md) to add up the records in the **Order Details** entity that are associated with each **Order** through a One-to-Many relationship.  These are the line items of products that make up each order.  We'll us this same One-to-Many relationship to show and edit the line items in Part 3.  
+	This formula is using the [**Sum** function](functions/function-aggregates.md) to add up the records in the **Order Details** entity that are associated with each **Order** through a One-to-Many relationship.  These are the line items of products that make up each order.  We'll us this same One-to-Many relationship to show and edit the line items in Part 3.  
 	
 	You will notice that there is a blue underline and a delegation warning on this formula.  Aggregate functions currenctly cannot be delegated to CDS if they are complex, in this case the sum of a multiplication.  This is OK for our app, we do not expect any single Order to have more than 500 items and this number can be increased in the App settings if necessary.  
 

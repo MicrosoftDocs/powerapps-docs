@@ -16,24 +16,28 @@ search.app:
 ---
 # Build Northwind Orders (Canvas): Part 2, Order form
 
-This series of articles will build a simple order management Canvas app step-by-step.  It will showcase how to use:
-- Many-to-One relationships.  Many Orders can be related to the same Customer.  But each Order can be related to only one Customer.
-- One-to-Many relationships.  Each Order can be related to many Order Details (or line items).  But each Order Detail is related to only one Order.
-- Many-to-Many relationships.  Each Product can be related to many Product Categories.  And each Product Category can be related to many Products. 
-- Option sets.  
-
-The completed app will look like this:
+Let's continue building a simple order management canvas app over data in the Common Data Service, step-by-step.  When we are done we will have a single screen master-detail app:
 
 ![](media/northwind-orders-canvas-part1/orders-finished.png)
 
-There are four parts:
-- [Part 1, Orders list](northwind-orders-canvas-part1.md)
-- Part 2, Order details form (this part)
-- [Part 3, Order line items](northwind-orders-canvas-part3.md)
+This app will showcase:
 
-If you have not already done so, work through part 1.  Or take a shortcut by opening the **Northwind Orders (Canvas), Building Part 1** app after [installing the Northwind Traders sample database and apps](northwind-install.md)
+- **Many-to-One relationships.** Many Orders can be related to the same Customer. Each Order can be related to only one Customer.  All of the columns of the foreign entity are available to use.
+- **One-to-Many relationships.** Each Order can be related to many Order Details (or line items). Each Order Detail is related to only one Order.
+- **Option sets.**  A set of named choices defined in the database and shared across apps.  
+- **Gallery and form interactions.**  The gallery provides the list of Orders to choose from, and the rest of the app responds to changes in the gallery's selection.      
 
-## A title bar for later
+The instructions for building the app are broken into three parts:
+
+![](media/northwind-orders-canvas-part1/orders-parts.png)
+
+- [**Part 1, Orders list**](northwind-orders-canvas-part1.md):  Displays the list of orders.  Selection in this list determines which order is being edited on the rest of the screen.
+- **Part 2, Order form**:  View and edit information about the order.  Here new orders can be created and existing orders deleted.  You are here.
+- [**Part 3, Order details**](northwind-orders-canvas-part3.md):  View and edit the product line items that are associated with the order.  
+
+If you have not already done so, work through [part 1](northwind-orders-canvas-part1.md).  Or take a shortcut by opening the **Northwind Orders (Canvas), Start Part 2** app after [installing the Northwind Traders sample database and apps](northwind-install.md)
+
+## An app title bar
 
 1. Let's create a title bar across the top of the app where we can place additional buttons that will be helpful as we continue building our app.
 
@@ -116,7 +120,7 @@ If you have not already done so, work through part 1.  Or take a shortcut by ope
 
 	![](media/northwind-orders-canvas-part2/form-rearrange.gif)
 
-	For more information on working with form layout, see [understand data-form layout for canvas apps](working-with-form-layout).
+	For more information on working with form layout, see [understand data-form layout for canvas apps](working-with-form-layout.md).
 
 1. For the date fields we don't want to show the time portions.  It is tempting to just select the time controls and delete them, but that can cause problems if they are a part of the formulas for updating data values or the positioning of other controls.  
 
