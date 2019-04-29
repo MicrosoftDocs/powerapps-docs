@@ -22,17 +22,17 @@ With PowerApps, you can work in different environments and easily switch among t
 - how to view an app in the right environment
 
 ## Switch the environment
-When you sign up and first sign in to powerapps.com, you will likely land in a default environment. You can verify this by looking at the upper-right corner of the page.
+When you sign up and first sign in to PowerApps, it opens in a default environment, which you can identify in the upper-right corner of the page.
 
 > [!div class="mx-imgBorder"]
 > ![Default environment](./media/working-with-environments/env-dropdown.png)
 
-The *Default environment* is accessible to everyone. You can start creating apps in this environment and share your apps with other users. You may also have access to other environments, such as those you [create yourself](../../administrator/environments-administration.md) or those created by others but you have access to. You can switch environments by clicking the environment dropdown in the upper-right corner and selecting a different environment. This example shows switching from *Default environment* to *Environment 1*.
+Everyone in your organization can access the default environment. You can create apps in this environment and share your apps with other users. You may also have access to other environments, whether [you create them](../../administrator/environments-administration.md) or others do. You can switch environments by opening the environment list in the upper-right corner and then selecting a different environment. This example shows switching from **Microsoft** to **MyOwnEnv**.
 
 > [!div class="mx-imgBorder"]
 > ![Switch environment](./media/working-with-environments/switch-environment.png)
 
-Once you switch to a different environment (such as Environment 1), you will see all the apps you created or have access to in this new environment.
+After you switch environments, the new environment shows all the apps to which you have access in that environment.
 
 ## Create apps in the right environment
 You can create apps in an environment that you create or for which you've been given access. Creating your own environment, however, requires a [specific plan](../../administrator/pricing-billing-skus.md). Before you create an app, always **make sure you select the environment you want to app to be in**. Otherwise, you will have to deal with moving apps between environments.
