@@ -645,7 +645,7 @@
         href: /canvas-apps/northwind-install.md
         items:
           - name: Install the data
-            href: /canvas-apps/northwind-install.md
+            href: ./canvas-apps/northwind-install.md
           - name: Canvas, primero
             href: ./canvas-apps/northwind-orders-canvas-part1.md
           - name: Canvas, segundo
