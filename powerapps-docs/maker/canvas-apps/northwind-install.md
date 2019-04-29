@@ -108,7 +108,7 @@ Northwind Traders is a fictitious organization that manages orders, products, cu
 
 ## Orders app
 
-This solution includes two apps for interacting with this data:
+The Northwind solution includes these apps for interacting with this data:
 
 - Northwind Orders (Canvas)
 - Northwind Orders (Model-driven)
