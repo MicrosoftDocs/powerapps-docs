@@ -2,7 +2,7 @@
 title: "Troubleshoot plug-ins (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Contains information on errors that can occur due to plug-ins and how to fix them." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 04/21/2019
+ms.date: 04/26/2019
 ms.reviewer: ""
 ms.service: "powerapps"
 ms.topic: "article"
@@ -25,7 +25,9 @@ Error Code: `-2147220911`<br />
 Error Message: `There is no active transaction. This error is usually caused by custom plug-ins that ignore errors from service calls and continue processing.`
 
 This can be a difficult error to address because the cause can be in someone else's code. To understand the message, you need to appreciate that any time an error related to a data operation occurs within a synchronous plug-in the transaction for the entire operation will be ended.
-[Scalable Customization Design in Common Data Service](scalable-customization-design/overview.md)
+
+More information: [Scalable Customization Design in Common Data Service](scalable-customization-design/overview.md)
+
 The most common cause is simply that a developer might believe they can attempt to perform an operation that *might* succeed so they wrap that operation in a try/catch block and attempt to swallow the error if it fails.
 
 While this may work for a client application, within the execution of a plug-in any data operation failure will result in rolling back the entire transaction. You can't swallow the error, so you must make sure to always return an <xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException>.

@@ -17,6 +17,8 @@ ms.assetid: 0e776647-a4a2-42c9-85e8-62718154052f
 
 # img element
 
+[!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
+
 [!INCLUDE [img-description](includes/img-description.md)]
 
 ## Attributes

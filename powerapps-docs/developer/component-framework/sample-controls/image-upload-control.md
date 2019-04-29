@@ -20,11 +20,6 @@ The selected image renders within the component. Meanwhile, the `Remove` button 
 > [!div class="mx-imgBorder"]
 > ![Image Upload component](../media/image-upload-control.png "Image Upload component")
 
-> [!IMPORTANT]
-> - PowerApps component framework is a preview feature.
-> - [!INCLUDE[cc_preview_features_definition]../(../../includes/cc-preview-features-definition.md)] 
-> - [!INCLUDE[cc_preview_features_no_MS_support](../../../includes/cc-preview-features-no-ms-support.md)]
-
 ## Manifest
 
 ```xml

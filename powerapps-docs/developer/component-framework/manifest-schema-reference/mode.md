@@ -13,6 +13,8 @@ ms.topic: "article"
 
 # Manifest element
 
+[!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
+
 [!INCLUDE [mode-description](includes/mode-description.md)]
 
 ## Child Elements

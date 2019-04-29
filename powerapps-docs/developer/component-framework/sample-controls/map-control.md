@@ -18,11 +18,6 @@ This sample component changes the user experience of interacting with address fi
 > [!div class="mx-imgBorder"]
 > ![Map component](../media/map-control.png "Map component")
 
-> [!IMPORTANT]
-> - PowerApps component framework is a preview feature.
-> - [!INCLUDE[cc_preview_features_definition](../../../includes/cc-preview-features-definition.md)] 
-> - [!INCLUDE[cc_preview_features_no_MS_support](../../../includes/cc-preview-features-no-ms-support.md)]
-
 ## Manifest
 
 ```xml

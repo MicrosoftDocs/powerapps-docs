@@ -19,11 +19,6 @@ To implement this component, the first thing you need to define the [Manifest](.
 > [!div class="mx-imgBorder"]
 > ![Increment component](../media/increment-control.png "Increment component")
 
-> [!IMPORTANT]
-> - PowerApps component framework is a preview feature.
-> - [!INCLUDE[cc_preview_features_definition](../../../includes/cc-preview-features-definition.md)] 
-> - [!INCLUDE[cc_preview_features_no_MS_support](../../../includes/cc-preview-features-no-ms-support.md)]
-
 ## Manifest
 
 ```xml
