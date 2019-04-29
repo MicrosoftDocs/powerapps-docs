@@ -39,9 +39,9 @@ If you have not already done so, work through [part 1](northwind-orders-canvas-p
 
 ## An app title bar
 
-1. Let's create a title bar across the top of the app where we can place additional buttons that will be helpful as we continue building our app.
+1. Let's create a title bar across the top of the app.  We'll use this space to hold action buttons later.
 
-	Select **Screen1** in the Navigation pane.  This ensures that we don't accidentally add controls to the gallery:
+	Select **Screen1** in the Navigation pane.  This ensures that we don't accidentally add controls to the orders list gallery:
 
 	![](media/northwind-orders-canvas-part2/titlebar-01.png)
 
@@ -49,21 +49,24 @@ If you have not already done so, work through [part 1](northwind-orders-canvas-p
 
 	![](media/northwind-orders-canvas-part2/titlebar-02.png)
 
-	This control should appear only once, over the top of the gallery.  If it is replicated for each item in the gallery, remove it and ensure the screen is selected in the last step before inserting it again.
+	This control should appear only once, over the top of the gallery.  If it is replicated for each item in the gallery, delete it and ensure the screen is selected (see previous step) before inserting it again.
 
-1. Resize and reposition the control to span the top of the app:
+1. Re-size and re-position the control to span the top of the screen:
 
 	![](media/northwind-orders-canvas-part2/titlebar-03.png)
 
-1. Double click into the control to edit the text for the control and enter Northwind Orders:
+1. Double click into the control to edit the text for the control and enter Northwind Orders.  You can also modify the **Text** property in the formula bar, both methods modify the same thing:
 
 	![](media/northwind-orders-canvas-part2/titlebar-04.png)
 
-	Notice that the **Text** property is being updated in the formula bar as you type. 
+1. Using the **Home** ribbon, use the formatting buttons to format the label control:
+    - center the text
+    - fill the background with dark blue
+    - use white for the text color
+    - use a bold font
+    - increase the font size to 24 points
 
-1. From the **Home** ribbon, format the control to center the text, fill the background with dark blue, use white for the text color, use a bold font, and increase the font size to 24 points:
-
-	![](media/northwind-orders-canvas-part2/titlebar-05.png)
+    ![](media/northwind-orders-canvas-part2/titlebar-05.png)
 
 ## Display more Order information
 
