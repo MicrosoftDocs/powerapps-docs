@@ -31,7 +31,6 @@ There are four parts:
 - Part 1, Orders list
 - Part 2, Order details form
 - Part 3, Order line items
-- Part 4, Order categories 
 
 ## Getting started
 
@@ -41,19 +40,19 @@ There are four parts:
 
 1. Create your own blank tablet app:
 
-	![](media/northwind-orders-canvas-part1/create-app.png)
+	![](media/northwind-orders-canvas-part1/start-01.png)
 
 	Name your app whatever you like, and then select **Create**:
 
-	![](media/northwind-orders-canvas-part1/name-app.png)
+	![](media/northwind-orders-canvas-part1/start-02.png)
 
 1. You are now in PowerApps Studio, ready to add data sources and controls to your app:
 
-	![](media/northwind-orders-canvas-part1/blank-app.png)
+	![](media/northwind-orders-canvas-part1/start-03.png)
 
 1. Before moving on, let's enable a useful feature for seeing the results of formulas directly from the formula bar. On the **File** menu, select **App settings**, select **Advanced settings**, scroll to the very bottom of the list, and then turn on **Enable formula bar result view**:
 
-	![](media/northwind-orders-canvas-part1/enable-result-view.png)
+	![](media/northwind-orders-canvas-part1/start-04.png)
 
 	This experimental feature will be turned on by default soon.
 
@@ -61,23 +60,23 @@ There are four parts:
 
 1. Let's add the **Orders** entity as a data source.  Select **View**, **Data sources**, and then **+ Add data source**:
  
-	![](media/northwind-orders-canvas-part1/add-data-source.png)
+	![](media/northwind-orders-canvas-part1/datasource-01.png)
 
 1. Select **Common Data Service**.  If **Common Data Service** does not already exist as a connection, select **+ New connection** and add it.
 
-	![](media/northwind-orders-canvas-part1/add-cds.png)
+	![](media/northwind-orders-canvas-part1/datasource-02.png)
 
 1. Type **Orders** in the entity search box, check the **Orders** entity, and select **Connect**:
 
-	![](media/northwind-orders-canvas-part1/add-orders.png)
+	![](media/northwind-orders-canvas-part1/datasource-03.png)
 
 1. You have now added the **Orders** data source:
 
-	![](media/northwind-orders-canvas-part1/added-orders.png)
+	![](media/northwind-orders-canvas-part1/datasource-04.png)
 
 1. If we return the PowerApps portal, we can see the columns of the **Orders** entity:
 
-	![](media/northwind-orders-canvas-part1/entities-orders.png)
+	![](media/northwind-orders-canvas-part1/datasource-05.png)
 
 	Note that there are two names shown for each column the **Display name** and the **Name**.  In general, we use the **Display name** when creating our app, but in some cases the more cryptic **Name** will be used.  Both names refer to the same thing.
 
@@ -85,37 +84,45 @@ There are four parts:
 
 1. Let's add a [**Gallery**](controls/control-gallery.md) control to view the list of **Orders**.  Select **Insert**, **Gallery**, and then **Blank vertical**:
 
-	![](media/northwind-orders-canvas-part1/add-orders-gallery.png)
+	![](media/northwind-orders-canvas-part1/orders-01.png)
 
-1. In the Properties pane, pull down the **Items** and select the **Orders** data source:
+1. In the formula bar, set the **Items** property to:
 
-	![](media/northwind-orders-canvas-part1/orders-gallery-datasource.png)
+	```powerapps-dot
+	Sort( Orders, 'Order Number', Descending )
+	```
+
+	TODO: Reverse order
+
+	![](media/northwind-orders-canvas-part1/orders-02.png)
 
 1. Pull down the **Layout**:
 
-	![](media/northwind-orders-canvas-part1/orders-gallery-layout1.png)
+	![](media/northwind-orders-canvas-part1/orders-03.png)
 
 	and select **Title and subtitle**:
 
-	![](media/northwind-orders-canvas-part1/orders-gallery-layout2.png)
+	![](media/northwind-orders-canvas-part1/orders-04.png)
 
 1. Select **Title1** in the Data pane:
 
-	![](media/northwind-orders-canvas-part1/orders-gallery-title.png)
+	TODO: or select control in gallery
+
+	![](media/northwind-orders-canvas-part1/orders-05.png)
 
 1. In the formula bar, enter this formula for the **Text** property:
 
 	```powerapps-dot
-	"Order" & ThisItem.'Order Number'
+	"Order " & ThisItem.'Order Number'
 	```
 
-	![](media/northwind-orders-canvas-part1/orders-gallery-ordernumber.png)
+	![](media/northwind-orders-canvas-part1/orders-06.png)
 
 	This will display the Order number at the top of each gallery item.
 
 1. Select **Subtitle11** in the Data pane:
 
-	![](media/northwind-orders-canvas-part1/orders-gallery-subtitle.png)
+	![](media/northwind-orders-canvas-part1/orders-07.png)
 
 1. In the formula bar, enter this formula for the **Text** property:
 
@@ -123,48 +130,50 @@ There are four parts:
 	ThisItem.Customer.Company
 	```
 
-	![](media/northwind-orders-canvas-part1/orders-gallery-company.png)
+	![](media/northwind-orders-canvas-part1/orders-08.png)
+
+	TODO: May show red squiggly
 
 	With **ThisItem.Customer** this formula is walking across a Many-to-One relationship between the **Orders** entity and the **Csutomers** entity,  retrieving the **Customer** record that is associated with each **Order** in the gallery.  From this record, we are extracting the **Company** column to display.  
 
 	If we look in the PowerApps portal we will see all the relationships from **Orders** to other entities, including the **Customer** entity:
 
-	![](media/northwind-orders-canvas-part1/entity-orders-customers.png)
+	![](media/northwind-orders-canvas-part1/orders-09.png)
 
 ## Using Option sets to display each Order's status
 
 1. Let's make some space to include more information in the gallery.  Select the first label control, **Title1**, in the gallery and resize it to be narrower:
 
-	![](media/northwind-orders-canvas-part1/orders-gallery-resize1.png)
+	![](media/northwind-orders-canvas-part1/status-01.png)
 
 1. Do the same with the second label control, **Subtitle1**:
 
-	![](media/northwind-orders-canvas-part1/orders-gallery-resize2.png)
+	![](media/northwind-orders-canvas-part1/status-02.png)
 
 1. Using the **Insert** ribbon, insert a new **Label** control:
 
-	![](media/northwind-orders-canvas-part1/orders-gallery-insert-status.png)
+	![](media/northwind-orders-canvas-part1/status-03.png)
 
 1. Resize and reposition this control pacing it to the right of the **Title1** label:
 
-	![](media/northwind-orders-canvas-part1/orders-gallery-resize-status.png)
+	![](media/northwind-orders-canvas-part1/status-04.png)
 
 1. Set the **Text** property to the formula: 
 
 	```powerapps-dot
 	ThisItem.'Order Status'
 	```
-	![](media/northwind-orders-canvas-part1/orders-gallery-show-status.png)
+	![](media/northwind-orders-canvas-part1/status-05.png)
 
 	'Order Status' is an Option set.  It has a fixed set of "options" that are defined in the database:
 
-	![](media/northwind-orders-canvas-part1/optionset-ordersstatus.png)
+	![](media/northwind-orders-canvas-part1/status-06.png)
 
 	We can view the Option set's label by using it in a string context, as we did by referencing it from the label's text property.  Option set labels can be localized so these strings may be different dependeing on the language of the app user.
 
 1. Let's use the Option set to conditionally color the status text.  Using the **Home** ribbon, increase the font size of the label to 20 points and right align the text:
 
-	![](media/northwind-orders-canvas-part1/orders-gallery-fontsize-status.png)
+	![](media/northwind-orders-canvas-part1/status-07.png)
 
 1. Set the **Color** property of the label control to this formula:
 
@@ -177,23 +186,25 @@ There are four parts:
 	)
 	```
 
-	![](media/northwind-orders-canvas-part1/orders-gallery-color-status1.png)
+	![](media/northwind-orders-canvas-part1/status-08.png)
 
 	Note that we did not compare **ThisItem.'Order Status'** to the label strings, instead we used the 'Orders Status' enumeration.  This is important as the label can change depending on the language of the app user.  The enumeration values will always be the same.
 
-	With this in place, scroll down the list of orders and see how different status values are colored:
-
-	![](media/northwind-orders-canvas-part1/orders-gallery-color-status2.png)
+	With this formula in place, we can see how different status values are colored in the bottom of the portion of the gallery pictures above.
 
 ## Use aggregate functions to display each Order's total
 
 1. Let's display each Order's total in the gallery. Scroll back to the top of the gallery and select the first item which is the gallery's template:
 
-	![](media/northwind-orders-canvas-part1/orders-gallery-sum-select.png)
+	![](media/northwind-orders-canvas-part1/aggregate-01.png)
 
-1. Use the **Insert** ribbon to add one more label control.  Resize and position this control to the right of the customer label:
+1. Use the **Insert** ribbon to add one more label control.  
 
-	![](media/northwind-orders-canvas-part1/orders-gallery-sum-position.png)
+	![](media/northwind-orders-canvas-part1/aggregate-02.png)
+
+1. Resize and position this control to the right of the customer label:
+
+	![](media/northwind-orders-canvas-part1/aggregate-03.png)
 
 1. Set the **Text** property to this formula in the formula bar:
 
@@ -202,21 +213,19 @@ There are four parts:
 	```
 	The **$** in the format will be translated to the curency symbol of the app user. 
 
-	![](media/northwind-orders-canvas-part1/orders-gallery-sum-formula.png)
-
 	This formula is performing an aggregate sum of the 'Order Details' records related to each Order, adding up the result of Quantity * 'Unit Price'.
 
 	You will notice that there is a blue underline and a delegation warning on this formula.  Aggregate functions currenctly cannot be delegated to CDS if they are complex, in this case the sum of a multiplication.  This is OK for our app, we do not expect any single Order to have more than 500 items and this number can be increased in the App settings if necessary.  
 
-	![](media/northwind-orders-canvas-part1/orders-gallery-sum-delegation.png)
+	![](media/northwind-orders-canvas-part1/aggregate-04.png)
 
 1. Using the **Home** ribbon, change the font size to 20 points and right justify the label:
 	
-	![](media/northwind-orders-canvas-part1/orders-gallery-sum-formatted.png)
+	![](media/northwind-orders-canvas-part1/aggregate-05.png)
 
 1. Resize the width of the gallery to close up some space, and move and resize the height of the gallery to fill the left hand side of the screen, with a small buffer at the top for our next part:
 
-	![](media/northwind-orders-canvas-part1/orders-gallery-inplace.png)
+	![](media/northwind-orders-canvas-part1/aggregate-06.png)
 
 ## On to Part 2
 
