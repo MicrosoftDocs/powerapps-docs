@@ -39,7 +39,7 @@ Northwind Traders is a fictitious organization that manages orders, products, cu
     > [!div class="mx-imgBorder"]
     > ![Solutions view and import-solution entry point](media/northwind-install/solution-import.png)
 
-1. In the **Select Solution Package** page, select **Choose File**, navigate to and select the file that you downloaded, and then select **Next**.
+1. In the **Select Solution Package** page, select **Browse**, find and select the file that you downloaded, and then select **Next**.
 
     Unless you selected a different location, the file will be in your Downloads folder.
 
@@ -108,7 +108,12 @@ Northwind Traders is a fictitious organization that manages orders, products, cu
 
 ## Orders app
 
-This solution includes two apps for interacting with this data. You can open each app by selecting **Apps** in the left navigation bar and then selecting either **Northwind Orders (Canvas)** or **Northwind Orders (Model-driven)**.
+This solution includes two apps for interacting with this data:
+
+- Northwind Orders (Canvas)
+- Northwind Orders (Model-driven)
+
+You open these apps the same way that you opened the app in the previous procedure.
 
 ### Canvas
 
