@@ -89,10 +89,10 @@ This list identifies all services to which PowerApps Studio talks and their usag
 | login.microsoft.com<br>login.windows.net<br>login.microsoftonline.com<br>secure.aadcdn.microsoftonline-p.com |https |ADAL |
 | graph.microsoft.com<br>graph.windows.net |https |Azure Graph - For getting user info (e.g. profile photo) |
 | gallery.azure.com |https |Sample and Template apps |
-| *.azure-apim.net |https |Api Hubs - Different sub-domains for each locale |
-| *.powerapps.com |https |WebAuth + Portal |
-| *.azureedge.net |https |WebAuth |
-| *.blob.core.windows.net |https |Blob storage |
+| \*.azure-apim.net |https |Api Hubs - Different sub-domains for each locale |
+| \*.powerapps.com |https |WebAuth + Portal |
+| \*.azureedge.net |https |WebAuth |
+| \*.blob.core.windows.net |https |Blob storage |
 | vortex.data.microsoft.com |https |Telemetry |
 
 > [!NOTE]
