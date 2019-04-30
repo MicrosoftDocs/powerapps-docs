@@ -18,7 +18,7 @@ search.app:
 
 Let's continue building a simple order management canvas app over data in the Common Data Service, step-by-step.  When we are done we will have a single screen master-detail app:
 
-![](media/northwind-orders-canvas-part1/orders-finished.png)
+![](media/northwind-orders-canvas-part3/orders-finished.png)
 
 This app will showcase:
 
@@ -29,10 +29,10 @@ This app will showcase:
 
 The instructions for building the app are broken into three parts:
 
-![](media/northwind-orders-canvas-part1/orders-parts.png)
+![](media/northwind-orders-canvas-part3/orders-parts.png)
 
 - [**Part 1, Orders list**](northwind-orders-canvas-part1.md):  Displays the list of orders.  Selection in this list determines which order is being edited on the rest of the screen.
-- [**Part 2, Order form**](northwind-orders-canvas-part2.md):  View and edit information about the order.  Here new orders can be created and existing orders deleted.  You are here.
+- [**Part 2, Order form**](northwind-orders-canvas-part2.md):  View and edit information about the order.  Here new orders can be created and existing orders deleted.
 - **Part 3, Order details**:  View and edit the product line items that are associated with the order.  You are here.
 
 If you have not already done so, work through [part 2](northwind-orders-canvas-part2.md).  Or take a shortcut by opening the **Northwind Orders (Canvas), Start Part 3** app after [installing the Northwind Traders sample database and apps](northwind-install.md)
@@ -43,7 +43,7 @@ If you have not already done so, work through [part 2](northwind-orders-canvas-p
 
 	![](media/northwind-orders-canvas-part3/details-01.png)
 
-1. Re-size and re-position the copy to just below the form control.  Double click into the control and backspace over the text to remove it (you can also set the Text property to an empty string or **""**):
+1. Resize and move the copy to just below the form control.  Double click into the control and backspace over the text to remove it (you can also set the Text property to an empty string or **""**):
 
 	![](media/northwind-orders-canvas-part3/details-02.png)
 
@@ -55,7 +55,7 @@ If you have not already done so, work through [part 2](northwind-orders-canvas-p
  
 	![](media/northwind-orders-canvas-part3/details-04.png)
 
-1. Close the Data pane.  Re-size and re-position the control below our new title bar:
+1. Close the Data pane.  Resize and move the control below our new title bar:
 
 	![](media/northwind-orders-canvas-part3/details-05.png)
 
@@ -103,7 +103,7 @@ If you have not already done so, work through [part 2](northwind-orders-canvas-p
 
 	![](media/northwind-orders-canvas-part3/details-10.png)
 
-1. Re-size and re-position the image and label controls to be side by side.  
+1. Resize and move the image and label controls to be side by side.  
 
     For fine grained control over size and position, start to resize or move the control without the Alt key pressed, and then after starting hold down the Alt key:
 
@@ -122,7 +122,7 @@ If you have not already done so, work through [part 2](northwind-orders-canvas-p
  
 	![](media/northwind-orders-canvas-part3/details-13.png)
 
-1. From the **Insert** ribbon, insert another **Label** control into the gallery.  Re-size and re-position it to the right of the product information.  Set it's **Text** Property to the formula:
+1. From the **Insert** ribbon, insert another **Label** control into the gallery.  Resize and move it to the right of the product information.  Set it's **Text** Property to the formula:
 
 	```powerapps-dot
 	ThisItem.Quantity
@@ -136,7 +136,7 @@ If you have not already done so, work through [part 2](northwind-orders-canvas-p
 
 	![](media/northwind-orders-canvas-part3/details-14.png)
 
-1. From the **Insert** ribbon, insert another **Label** control into the gallery.  Re-size and re-position it to the right of the quantity.  Set it's **Text** Property to the formula:
+1. From the **Insert** ribbon, insert another **Label** control into the gallery.  Resize and move it to the right of the quantity.  Set it's **Text** Property to the formula:
 
 	```powerapps-dot
 	Text( ThisItem.'Unit Price', "[$-en-US]$ #,###.00" )
@@ -150,7 +150,7 @@ If you have not already done so, work through [part 2](northwind-orders-canvas-p
 
 	![](media/northwind-orders-canvas-part3/details-16.png)
 
-1. From the **Insert** ribbon, insert another **Label** control into the gallery.  Re-size and re-position it to the right of the unit price.  Set it's **Text** Property to the formula:
+1. From the **Insert** ribbon, insert another **Label** control into the gallery.  Resize and move it to the right of the unit price.  Set it's **Text** Property to the formula:
 
 	```powerapps-dot
 	Text( ThisItem.Quantity * ThisItem.'Unit Price', "[$-en-US]$ #,###.00" )
@@ -170,29 +170,29 @@ If you have not already done so, work through [part 2](northwind-orders-canvas-p
 
 	![](media/northwind-orders-canvas-part3/details-19.png)
 
-1. Re-size and re-position this control on top of the second title bar above the picture of the products.  Change the text's color to white with the **Home** ribbon:
+1. Resize and move this control on top of the second title bar above the picture of the products.  Change the text's color to white with the **Home** ribbon:
 
 	![](media/northwind-orders-canvas-part3/details-20.png)
 
-1. Copy and paste this control.  Re-size and re-position above the quantity column.  Double click into the control and type **Quantity**:
+1. Copy and paste this control.  Resize and move above the quantity column.  Double click into the control and type **Quantity**:
 
 	![](media/northwind-orders-canvas-part3/details-21.png)
 
-1. Copy and paste this control.  Re-size and re-position above the unit price column.  Double click into the control and type **Unit Price**:
+1. Copy and paste this control.  Resize and move above the unit price column.  Double click into the control and type **Unit Price**:
 
 	![](media/northwind-orders-canvas-part3/details-22.png)
 
-1. Copy and paste this control.  Re-size and re-position above the extended price column.  Double click into the control and type **Extended**:
+1. Copy and paste this control.  Resize and move above the extended price column.  Double click into the control and type **Extended**:
 
 	![](media/northwind-orders-canvas-part3/details-23.png)
 
 ## Display Order totals
 
-1. Re-size the height of the gallery to make room to display the order totals at the bottom of the screen:
+1. Resize the height of the gallery to make room to display the order totals at the bottom of the screen:
 
 	![](media/northwind-orders-canvas-part3/sum-01.png)
 
-1. Copy and paste the title bar in the middle of the screen and re-position it at the bottom of the screen:
+1. Copy and paste the title bar in the middle of the screen and move it at the bottom of the screen:
 
 	![](media/northwind-orders-canvas-part3/sum-02.png)
 
@@ -200,7 +200,7 @@ If you have not already done so, work through [part 2](northwind-orders-canvas-p
 
 	![](media/northwind-orders-canvas-part3/sum-03.png)
 
-1. Copy and paste this label control.  Re-size and re-position this control to the right of the **Order Totals:** label.  Set the **Text** property to this formula:
+1. Copy and paste this label control.  Resize and move this control to the right of the **Order Totals:** label.  Set the **Text** property to this formula:
 
 	```powerapps-dot
 	Sum( Gallery1.Selected.'Order Details', Quantity )
@@ -212,7 +212,7 @@ If you have not already done so, work through [part 2](northwind-orders-canvas-p
 
 	![](media/northwind-orders-canvas-part3/sum-04.png)
 
-1. Copy and paste this label control.  Re-size and re-position this control below the **Extended** column.  Set the **Text** property to this formula:
+1. Copy and paste this label control.  Resize and move this control below the **Extended** column.  Set the **Text** property to this formula:
 
 	```powerapps-dot
 	Text( Sum( Gallery1.Selected.'Order Details', Quantity * 'Unit Price' ), "[$-en-US]$ #,###.00" )
@@ -230,7 +230,7 @@ If you have not already done so, work through [part 2](northwind-orders-canvas-p
 
 	![](media/northwind-orders-canvas-part3/add-details-01.png)
 
-1. From the **Insert** ribbon, insert a **Label** control and re-size and re-position it below the gallery.  
+1. From the **Insert** ribbon, insert a **Label** control and resize and move it below the gallery.  
 
 	![](media/northwind-orders-canvas-part3/add-details-02.png)
 
@@ -268,8 +268,7 @@ If you have not already done so, work through [part 2](northwind-orders-canvas-p
 
 	![](media/northwind-orders-canvas-part3/add-details-09.png)
 
-
-    The [**Choices** function] returns a table of the possible values for the field **'Order Details'.Product**.  Since this field is a lookup in a Many-to-One relationship, **Choices** returns all the records in the **Order Products** entity. 
+    The [**Choices** function](functions/function-choices.md) returns a table of all the possible values for the field **Product** in the **Order Details** entity.  Since this field is a lookup in a Many-to-One relationship, **Choices** returns all the records in the **Order Products** entity. 
 
     **Choices** can also be used with option sets to return the table of all the different options which was used behind the scenes in Part 2 to provide a combo box for **Order Status** in the form.
 
@@ -285,7 +284,7 @@ If you have not already done so, work through [part 2](northwind-orders-canvas-p
 
 	![](media/northwind-orders-canvas-part3/add-details-12.png)
 
-1. Re-size and re-position the combo box on top of our light blue area, in the same column as the product names shown above it in the gallery:
+1. Resize and move the combo box on top of our light blue area, in the same column as the product names shown above it in the gallery:
 
 	![](media/northwind-orders-canvas-part3/add-details-13.png)
 
@@ -305,7 +304,7 @@ If you have not already done so, work through [part 2](northwind-orders-canvas-p
 
 	![](media/northwind-orders-canvas-part3/add-details-16.png)
 
-1. Re-size and re-position this control under the other product images next to the combo box control in the light blue area.  Set the **Image** property of this control to:
+1. Resize and move this control under the other product images next to the combo box control in the light blue area.  Set the **Image** property of this control to:
 
 	```powerapps-dot
 	ComboBox1.Selected.Picture
@@ -323,7 +322,7 @@ If you have not already done so, work through [part 2](northwind-orders-canvas-p
 
 	![](media/northwind-orders-canvas-part3/add-details-19.png)
 
-1. Re-size and re-position this control to the right of the combo box control, under the quantity column of the gallery above:
+1. Resize and move this control to the right of the combo box control, under the quantity column of the gallery above:
 
 	![](media/northwind-orders-canvas-part3/add-details-20.png)
 
@@ -341,7 +340,7 @@ If you have not already done so, work through [part 2](northwind-orders-canvas-p
 
 	![](media/northwind-orders-canvas-part3/add-details-23.png)
 
-1. Re-size and re-position this control to the right of the text input control.  Set its **Text** property to the formula:
+1. Resize and move this control to the right of the text input control.  Set its **Text** property to the formula:
 
 	```powerapps-dot
 	Text( ComboBox1.Selected.'List Price', "[$-en-US]$ #,###.00" )
@@ -355,7 +354,7 @@ If you have not already done so, work through [part 2](northwind-orders-canvas-p
 
 	![](media/northwind-orders-canvas-part3/add-details-25.png)
 
-1. Cut and paste a copy of this control.  Re-size and re-position it to the right of the **List price** label.  Set its **Text** property to the formula:
+1. Cut and paste a copy of this control.  Resize and move it to the right of the **List price** label.  Set its **Text** property to the formula:
 
 	```powerapps-dot
 	Text( Value(TextInput1.Text) * ComboBox1.Selected.'List Price', "[$-en-US]$ #,###.00" )
@@ -377,7 +376,7 @@ If you have not already done so, work through [part 2](northwind-orders-canvas-p
 
 	![](media/northwind-orders-canvas-part3/add-details-30.png)
 
-1.  Re-size and re-position this icon to the right of the other controls in the light blue area.  Set its **OnSelect** property to the formula:
+1.  Resize and move this icon to the right of the other controls in the light blue area.  Set its **OnSelect** property to the formula:
 
 	```powerapps-dot
 	Patch( 'Order Details', 
@@ -426,7 +425,7 @@ If you have not already done so, work through [part 2](northwind-orders-canvas-p
 
 	![](media/northwind-orders-canvas-part3/remove-details-03.png)
 
-1. Re-size and re-position this icon control to the right side of the gallery's template.  Set its **OnSelect** property to the formula:
+1. Resize and move this icon control to the right side of the gallery's template.  Set its **OnSelect** property to the formula:
 
 	```powerapps-dot
 	Remove( 'Order Details', ThisItem ); Refresh( Orders )
@@ -452,7 +451,7 @@ To recap, we just added another gallery to our app to show **Order Details** and
 - The **Patch** function to create a new **Order Details** record: `Patch( 'Order Details', Defautls( 'Order Details' ), ... )`
 - The **Remove** function to delete an **Order Details** record: `Remove( 'Order Details', ThisItem )`
 
-This has been a quick walk through of using Common Data Service relationships and option sets in a canvas app.      
+This has been a quick walk through of using Common Data Service relationships and option sets in a canvas app for educational purposes.  There are many other aspects of this app to considered before it is ready for production use, such as field validation and error handling.
 
 
 	
