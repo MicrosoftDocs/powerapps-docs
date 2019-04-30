@@ -39,11 +39,11 @@ If you have not already done so, work through [part 2](northwind-orders-canvas-p
 
 ## Display Order Details
 
-1. Let's display the line items that make up this order.  Copy (with Ctrl-C) and Paste (with Ctrl-V) the title bar label at the top of the screen:
+1. Let's display the product line items that make up this order.  Copy (with Ctrl-C) and Paste (with Ctrl-V) the title bar label at the top of the screen:
 
 	![](media/northwind-orders-canvas-part3/details-01.png)
 
-1. Resize and move the copy to just below the form control.  Double click into the control and backspace over the text to remove it (you can also set the Text property to an empty string or **""**):
+1. Resize and move the copy to just below the form control from Part 2.  Double click into the control and backspace over the text to remove it (you can also set the Text property to an empty string or **""**):
 
 	![](media/northwind-orders-canvas-part3/details-02.png)
 
@@ -55,11 +55,11 @@ If you have not already done so, work through [part 2](northwind-orders-canvas-p
  
 	![](media/northwind-orders-canvas-part3/details-04.png)
 
-1. Close the Data pane.  Resize and move the control below our new title bar:
+1. Close the **Data** pane.  Resize and move the control below our new title bar:
 
 	![](media/northwind-orders-canvas-part3/details-05.png)
 
-1. Set the **Items** property of the gallery to this formula:
+1. Set the **Items** property of the new gallery to this formula:
 
 	```powerapps-dot
 	Gallery1.Selected.'Order Details'
@@ -67,7 +67,7 @@ If you have not already done so, work through [part 2](northwind-orders-canvas-p
 
 	![](media/northwind-orders-canvas-part3/details-06.png)
 
-    Your gallery may be named something different than **Gallery1**.  Check the navigation pane to find the name of your form if you experience problems.  
+    Your gallery may be named something different than **Gallery1**.  Check the name in the **Tree view** pane on the left of your screen if you encounter problems.  
 
     We have just linked the two galleries on your screen: the new gallery wiill display the **Order Details** for the selected **Order** in the orders list gallery.  Here we are traversing the One-to-Many relationship between the **Order Details** and **Orders** entities, as seen in the PowerApps portal:
 
@@ -256,7 +256,7 @@ If you have not already done so, work through [part 2](northwind-orders-canvas-p
 
     We need to add this data source since although we can read through a One-to-Many relationship we cannot yet write back changes.  We must make changes directly with the related entity.
 
-1. Close the Data panel.  From the **Insert** ribbon, select **Controls** and then select **Combo box**:
+1. Close the **Data** pane.  From the **Insert** ribbon, select **Controls** and then select **Combo box**:
 
 	![](media/northwind-orders-canvas-part3/add-details-08.png)
 
@@ -272,15 +272,15 @@ If you have not already done so, work through [part 2](northwind-orders-canvas-p
 
     **Choices** can also be used with option sets to return the table of all the different options which was used behind the scenes in Part 2 to provide a combo box for **Order Status** in the form.
 
-1. In the Data panel, set the **Primary text** to **nwind_productname**.  This is a logical name as the Data panel does not support display names in this case yet:
+1. In the **Data** pane, set the **Primary text** to **nwind_productname**.  This is a logical name as the **Data** pane does not support display names in this case yet:
 
 	![](media/northwind-orders-canvas-part3/add-details-10.png)
 
-1. In the Data panel, set the **SearchField** to **nwind_productname**:
+1. In the **Data** pane, set the **SearchField** to **nwind_productname**:
 
 	![](media/northwind-orders-canvas-part3/add-details-11.png)
 
-1. Close the Data panel.  Scroll down in the Properties panel and turn off **Allow multiple selection** and turn on **Allow searching**:
+1. Close the **Data** pane.  Scroll down in the **Properties** tab of the right-hand pane and turn off **Allow multiple selection** and turn on **Allow searching**:
 
 	![](media/northwind-orders-canvas-part3/add-details-12.png)
 
