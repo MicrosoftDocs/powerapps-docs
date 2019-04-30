@@ -642,14 +642,15 @@
       - name: Create an app in a solution
         href: ./canvas-apps/add-app-solution.md
       - name: Create an app with relational data
-        href: /canvas-apps/northwind-install.md
         items:
           - name: Install the data
             href: ./canvas-apps/northwind-install.md
-          - name: Canvas, primero
+          - name: Create the order list
             href: ./canvas-apps/northwind-orders-canvas-part1.md
-          - name: Canvas, segundo
+          - name: Create the order form
             href: ./canvas-apps/northwind-orders-canvas-part2.md
+          - name: Create the order details
+            href: ./canvas-apps/northwind-orders-canvas-part3.md
       - name: Build a global app
         href: ./canvas-apps/global-apps.md
       - name: Make an app accessible
