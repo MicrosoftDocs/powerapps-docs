@@ -59,7 +59,7 @@ To get started, open a new Developer Command Prompt for VS 2017 after installing
    > Today we offer two types of components **field** and **dataset**.
 
 4. To retrieve all the required project dependencies, run the command `npm install`.
-5. Open your project folder (`C:\Users\<your name>\Documents\My_PCF_Control\<component name>`) in any developer environment of your choice and get started with your custom component development. If you would like a to follow a step-by-step tutorial, see [Implementing components in TypeScript](implementing-controls-using-typescript.md).
+5. Open your project folder (`C:\Users\<your name>\Documents\My_PCF_Control\<component name>`) in any developer environment of your choice and get started with your custom component development. If you would like to follow a step-by-step tutorial, see [Implementing components in TypeScript](implementing-controls-using-typescript.md).
 
 ## Building your components
 
