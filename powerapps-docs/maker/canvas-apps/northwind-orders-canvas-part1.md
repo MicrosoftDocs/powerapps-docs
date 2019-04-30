@@ -1,6 +1,6 @@
 ---
-title: 'Build Northwind Orders (Canvas): Part 1, Orders list | Microsoft Docs'
-description: Build the Canvas version of Northwind Orders
+title: 'Create a list of orders in a canvas app | Microsoft Docs'
+description: Create a list of orders in a canvas app to manage data for Northwind Traders
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -9,23 +9,25 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 04/25/2019
 ms.author: gregli
-search.audienceType: 
+search.audienceType:
   - maker
-search.app: 
+search.app:
   - PowerApps
 ---
-# Build Northwind Orders (Canvas): Part 1, Orders list
+# Create a list of orders in a canvas app
 
-Let's build a simple order management canvas app over data in the Common Data Service, step-by-step.  When we are done we will have a single screen master-detail app:
+Follow the steps in this topic to create a list of orders in a canvas app based on sample data in Common Data Service. The sample data is for a fictitious organization named Northwind Traders, and the app shows the types, quantities, and prices of various products that Northwind sells and ships to other fictitious companies.
 
-![](media/northwind-orders-canvas-part1/orders-finished.png)
+This single-screen app is designed to run on tablets. In other topics, you'll add more UI until the app resembles this graphic:
 
-This app will showcase:
+![Complete canvas app](media/northwind-orders-canvas-part1/orders-finished.png)
 
-- **Many-to-One relationships.** Many Orders can be related to the same Customer. Each Order can be related to only one Customer.  All of the columns of the foreign entity are available to use.
-- **One-to-Many relationships.** Each Order can be related to many Order Details (or line items). Each Order Detail is related to only one Order.
-- **Option sets.**  A set of named choices defined in the database and shared across apps.  
-- **Gallery and form interactions.**  The gallery provides the list of Orders to choose from, and the rest of the app responds to changes in the gallery's selection.      
+This app will showcase these concepts:
+
+- **Many-to-one relationships.** Each customer can place multiple orders, but each order is placed by only one customer. In the database, the **Orders** entity is related to the **Customers** entity so that the list can show which customer placed each order. The list shows the name of the customer, but it could show data from any column in the **Customers** entity.
+- **One-to-many relationships.** Each order can contain multiple products, which appear as line items in the Order Details list. Each order detail is contained in only one order.
+- **Option sets.**  A set of named choices defined in the database and shared across apps. 
+- **Gallery and form interactions.**  The gallery provides the list of orders to choose from, and the rest of the app responds to changes in the gallery's selection.
 
 The instructions for building the app are broken into three parts:
 
