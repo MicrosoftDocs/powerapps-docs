@@ -79,7 +79,7 @@
       href: write-plug-in.md
     - name: Handle exceptions
       href: handle-exceptions.md
-    - name: Inpersonate a user
+    - name: Impersonate a user
       href: impersonate-a-user.md
     - name: Register a plug-in
       href: register-plug-in.md
