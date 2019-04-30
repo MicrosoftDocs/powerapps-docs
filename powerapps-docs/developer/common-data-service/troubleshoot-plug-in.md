@@ -73,14 +73,15 @@ TODO: Add content that shows how to do this -->
 
 ## Error: Message size exceeded when sending context to Sandbox
 
-Error Code: `-TODO`<br />
+<!-- This is the error code for an unexpected error we should be providing a specific error code -->
+Error Code: `-2147220970`<br />
 Error Message: `Message size exceeded when sending context to Sandbox. Message size: ### Mb`
 
-This error occurs when a message payload is greater than `TODO` MB **AND** a plug-in is registered for the message. The error message will include the size of the payload that caused this error.
+This error occurs when a message payload is greater than 116.85 MB **AND** a plug-in is registered for the message. The error message will include the size of the payload that caused this error.
  
 The limit will help ensure that users running applications cannot interfere with each other based on resource constraints. The limit will help provide a level of protection from unusually large message payloads that threaten the availability and performance characteristics of the Common Data Service platform.
  
-`TODO` MB is large enough that it should be rare to encounter this case. The most likely situation where this case might occur is when you retrieve a record with multiple related records which include large binary files.
+116.85 MB is large enough that it should be rare to encounter this case. The most likely situation where this case might occur is when you retrieve a record with multiple related records which include large binary files.
  
 If you encounter this error you can:
 
