@@ -25,7 +25,13 @@ This app will showcase:
 - **Many-to-One relationships.** Many Orders can be related to the same Customer. Each Order can be related to only one Customer.  All of the columns of the foreign entity are available to use.
 - **One-to-Many relationships.** Each Order can be related to many Order Details (or line items). Each Order Detail is related to only one Order.
 - **Option sets.**  A set of named choices defined in the database and shared across apps.  
-- **Gallery and form interactions.**  The gallery provides the list of Orders to choose from, and the rest of the app responds to changes in the gallery's selection.      
+- **Gallery and form interactions.**  The gallery provides the list of Orders to choose from, and the rest of the app responds to changes in the gallery's selection.  
+ 
+In terms of relationships, this app uses six different entities and option sets.  
+
+![](media/northwind-orders-canvas-part3/orders-entities.png)   
+
+Most of these start as references from the **Orders** entity with the help of the [**Gallery**](controls/control-gallery.md) and [**Edit form**](controls/control-form-detail.md) controls to provide a "current" order from which to work.  For example, **ThisItem** in the left most gallery provides a single **Order**, from which we can walk the Many-to-One relationships to **Customers** and retrieve the company name with the simple dot notation **ThisItem.Customer.Company**.  Likewise we can walk the One-to-Many relationship from **ThisItem** to **Order Details** to retrieve the list of products in this order with **ThisItem.'Order Details'**.   
 
 The instructions for building the app are broken into three parts:
 
