@@ -24,126 +24,133 @@ This single-screen app is designed to run on tablets. In other topics, you'll ad
 
 This app will showcase these concepts:
 
-- **Many-to-one relationships.** Each customer can place multiple orders, but each order is placed by only one customer. In the database, the **Orders** entity is related to the **Customers** entity so that the list can show which customer placed each order. The list shows the name of the customer, but it could show data from any column in the **Customers** entity.
-- **One-to-many relationships.** Each order can contain multiple products, which appear as line items in the Order Details list. Each order detail is contained in only one order.
-- **Option sets.**  A set of named choices defined in the database and shared across apps. 
-- **Gallery and form interactions.**  The gallery provides the list of orders to choose from, and the rest of the app responds to changes in the gallery's selection.
+- **Many-to-one relationships.** Each customer can place multiple orders, but each order is placed by only one customer. The **Orders** entity is related to the **Customers** entity so that the list near the left edge can show which customer placed each order. The list shows the name of the customer, but it could show data from any column in the **Customers** entity.
+- **One-to-many relationships.** Each order contains one or more line items, each of which appears as a record in the **Order Details** entity. Each order detail is contained in only one order.
+- **Option sets.** Each order has a status, such as **New**, **Shipped**, **Invoiced**, or **Closed**. Sets of values such as these are defined as option sets in the database and can be shared across apps.
+- **Gallery and form interactions.**  The gallery provides the list of orders, a user can select an order, and the rest of the app responds to the user's selection.
 
-The instructions for building the app are broken into three parts:
+To build this app, follow the steps in these topics:
 
-![](media/northwind-orders-canvas-part1/orders-parts.png)
+![Definition of screen areas](media/northwind-orders-canvas-part1/orders-parts.png)
 
-- **Part 1, Orders list**:  Displays the list of orders.  Selection in this list determines which order is being edited on the rest of the screen.  You are here.
-- [**Part 2, Order form**](northwind-orders-canvas-part2.md):  View and edit information about the order.  Here new orders can be created and existing orders deleted.
-- [**Part 3, Order details**](northwind-orders-canvas-part3.md):  View and edit the product line items that are associated with the order.  
+- **Part 1, Orders list**: As this topic describes, show each order's number, customer name, status, and total amount in a list. Select an order that you want to edit or delete in the other parts of the screen.
+- [**Part 2, Order form**](northwind-orders-canvas-part2.md): Show and edit an overview of the order, delete the order, or create another order.
+- [**Part 3, Order details**](northwind-orders-canvas-part3.md): Show and edit the line items, called order details, that are associated with the order.
 
-## Getting started
+## Create a blank app
 
-1. Sign in to PowerApps.
+1. [Sign in to PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
-1. [Install the Northwind Traders sample database and apps](northwind-install.md).  This will install all the entities that we need and a completed version of the app we are about to build.
+1. [Install the Northwind Traders sample database and apps](northwind-install.md).
+
+    This step installs all the entities that you need, as well as a completed version of the app that you're about to build.
 
 1. Create a blank tablet app:
 
-	![](media/northwind-orders-canvas-part1/start-01.png)
+    ![Canvas app from blank tile](media/northwind-orders-canvas-part1/start-01.png)
 
-	Name your app whatever you like, and then select **Create**:
+1. Name your app whatever you like, and then select **Create**:
 
-	![](media/northwind-orders-canvas-part1/start-02.png)
+    ![Canvas app from blank dialog box](media/northwind-orders-canvas-part1/start-02.png)
 
-1. You are now in PowerApps Studio, ready to add data sources and controls to your app:
+    PowerApps Studio opens so that you can add data sources and controls to your app:
 
-	![](media/northwind-orders-canvas-part1/start-03.png)
+    ![PowerApps Studio](media/northwind-orders-canvas-part1/start-03.png)
 
-1. Before moving on, let's enable a useful feature for seeing the results of formulas directly from the formula bar. On the **File** menu, select **App settings**, then select **Advanced settings**, scroll to the very bottom of the list on the right of the screen, and then turn on **Enable formula bar result view**:
+1. Enable an [experimental feature](working-with-experimental.md) for showing the result of a formula directly from the formula bar.
 
-	![](media/northwind-orders-canvas-part1/start-04.png)
+    1. On the **File** menu, select **App settings**, and then select **Advanced settings**.
+    1. Scroll to the bottom of the list of features, and then turn on **Enable formula bar result view**:
 
-	This experimental feature will be turned on by default soon.
+        ![List of experimental features](media/northwind-orders-canvas-part1/start-04.png)
 
-## Adding the Orders data source
-1. Let's add the **Orders** entity as a data source.  Select **View**, then **Data sources**, and then **+ Add data source**:
- 
-	![](media/northwind-orders-canvas-part1/datasource-01.png)
+## Add the data
 
-1. Select **Common Data Service**.  If **Common Data Service** does not already exist as a connection, select **+ New connection** and add it.
+1. On the **View** tab, select **Data sources**, and then select **Add data source** in the **Data** pane:
 
-	![](media/northwind-orders-canvas-part1/datasource-02.png)
+    ![Select View, Data sources, Add data source](media/northwind-orders-canvas-part1/datasource-01.png)
 
-1. Type **orders** in the entity search box, check the **Orders** entity, and select **Connect**:
+1. Select **Common Data Service**.
 
-	![](media/northwind-orders-canvas-part1/datasource-03.png)
+    If **Common Data Service** doesn't appear in the list of connections, select **New connection**, and then add it.
 
-1. You have now added the **Orders** data source to your app:
+    ![List of connections](media/northwind-orders-canvas-part1/datasource-02.png)
 
-	![](media/northwind-orders-canvas-part1/datasource-04.png)
+1. Under **Choose an entity**, type **Orders**, select the **Orders** checkbox, and then select **Connect**:
 
-1. We can see the columns of the **Orders** entity in the PowerApps portal:
+    ![List of entities](media/northwind-orders-canvas-part1/datasource-03.png)
 
-	![](media/northwind-orders-canvas-part1/datasource-05.png)
+    You've added the **Orders** data source to your app:
 
-	Note that there are two names shown for each column the **Display name** and the **Name** which we sometimes call the "Logical name."  Both names refer to the same thing.  In general, we use the **Display name** when building apps, but in some cases the more cryptic **Name** will be shown and required.  Long term, we are moving all parts of PowerApps to use display names.
+    ![Data pane](media/northwind-orders-canvas-part1/datasource-04.png)
 
-## Displaying the list of Orders with a Many-to-One relationship
-1. Let's add a [**Gallery** control](controls/control-gallery.md) to view the list of **Orders**.  Select **Insert**, then **Gallery**, and then **Blank vertical**:
+    The **Orders** entity contains many fields of various types:
 
-	![](media/northwind-orders-canvas-part1/orders-01.png)
+    ![List of fields in the Orders entity](media/northwind-orders-canvas-part1/datasource-05.png)
 
-1. In the formula bar, set the **Items** property to:
+    Each column has a **Display name** and a **Name**, which is sometimes called the logical name. Both names refer to the same thing. In general, you'll use the display name when you build an app, but some cases require the more cryptic **Name**, as noted in a procedure.
 
-	```powerapps-dot
-	Sort( Orders, 'Order Number', Descending )
-	```
+## Display the list of orders
 
-	We are using the [**Sort** function](functions/function-sort.md) to display the list of **Orders** with the most recently added order first (highest **Order number**).
+1. On the **Insert** tab, select **Gallery** > **Blank vertical** to add a [**Gallery** control](controls/control-gallery.md) in which the list of orders will appear.
 
-	![](media/northwind-orders-canvas-part1/orders-02.png)
+    ![Insert, Gallery, Blank vertical](media/northwind-orders-canvas-part1/orders-01.png)
 
-1. In the Properties panel, pull down the **Layout**:
+1. In the formula bar, set the gallery's **Items** property to this formula:
 
-	![](media/northwind-orders-canvas-part1/orders-03.png)
+    ```powerapps-dot
+    Sort( Orders, 'Order Number', Descending )
+    ```
 
-	and select **Title and subtitle**:
+    The [**Sort** function](functions/function-sort.md) orders the list so that the newest order (which has the highest order number) appears first.
 
-	![](media/northwind-orders-canvas-part1/orders-04.png)
+    ![Set Items property of the gallery](media/northwind-orders-canvas-part1/orders-02.png)
 
-	This will insert two label controls into the gallery's template.  These controls will default to two columns of the **Orders** entity which we will change next.  The gallery's template is replicated vertically for each **Order**.
+1. In the **Properties** tab of the right-hand pane, open the **Layout** list:
 
-1. In the Data panel select **Title1** or select the upper control in the gallery's template:
+    ![List of layout options](media/northwind-orders-canvas-part1/orders-03.png)
 
-	![](media/northwind-orders-canvas-part1/orders-05.png)
+1. In the list of options, select **Title and subtitle**:
 
-1. Using the formula bar, set the **Text** property to this formula:
+    ![Select a layout](media/northwind-orders-canvas-part1/orders-04.png)
 
-	```powerapps-dot
-	"Order " & ThisItem.'Order Number'
-	```
+    Two label controls are added in the gallery's template. By default, these controls show two columns of the **Orders** entity, which you'll change next. The gallery's template is replicated vertically for each record in the entity.
 
-	![](media/northwind-orders-canvas-part1/orders-06.png)
+1. In the **Data** pane, select **Title1** (or select the upper label in the gallery's template):
 
-	This will display the Order number at the top of each gallery item.  **ThisItem** gives us access to all the columns of each **Order** within the template of the gallery.
+    ![Select title label](media/northwind-orders-canvas-part1/orders-05.png)
 
-1. In the Data panel select **Subtitle1** or select the lower control in the gallery's template:
+1. In the formula bar, set the label's **Text** property to this expression:
 
-	![](media/northwind-orders-canvas-part1/orders-07.png)
+    ```powerapps-dot
+    "Order " & ThisItem.'Order Number'
+    ```
 
-1. Using the formula bar, set the **Text** property to this formula:
+    ![Set title label's Text property](media/northwind-orders-canvas-part1/orders-06.png)
 
-	```powerapps-dot
-	ThisItem.Customer.Company
-	```
+    The order number appears at the top of each gallery item. In the gallery template, **ThisItem** grants access to all columns in the **Order** entity.
 
-	![](media/northwind-orders-canvas-part1/orders-08.png)
+1. In the **Data** pane, select **Subtitle1** (or select the lower label in the gallery's template):
 
-	After entering this formula, it may show a red squiggly error for a moment.  If you leave the formula bar and return it should clear.  If the error persists or you don't see a value, from the **View** ribbon, select **Data sources**, and refresh the **Orders** entity with the three elipses to the right of the data source name.  This is a short term bug with how we dynamncally fetch entity metadata.
+    ![Select subtitle label](media/northwind-orders-canvas-part1/orders-07.png)
 
-	With **ThisItem.Customer** we are walking across a Many-to-One relationship between the **Orders** entity and the **Csutomers** entity,  retrieving the **Customer** record that is associated with each **Order**.  From this record, we are extracting the **Company** column to display.  
+1. In the formula bar, set the label's **Text** property to this expression:
 
-	If we look in the PowerApps portal we will see all the relationships from **Orders** to other entities, including the **Customer** entity:
+    ```powerapps-dot
+    ThisItem.Customer.Company
+    ```
 
-	![](media/northwind-orders-canvas-part1/orders-09.png)
+    ![Set subtitle label's Text property](media/northwind-orders-canvas-part1/orders-08.png)
 
-## Using option sets to display each Order's status
+    After you enter this formula, it may show a red squiggly error for a moment. If you select anything outside the formula bar and then return the cursor to the formula bar, it should clear. If the error persists or you don't see a value, select the **View** tab, select **Data sources**, and then refresh the **Orders** entity with the ellipsis (...) to the right of the data-source name.
+
+    When you specify **ThisItem.Customer**, you're leveraging a many-to-one relationship between the **Orders** and **Customers** entities and retrieving the customer record that's associated with each order. From the customer record, you're extracting data in the **Company** column for display.
+
+    You can show all the relationships from the **Orders** entity to other entities, including the **Customer** entity:
+
+    ![List of relationships](media/northwind-orders-canvas-part1/orders-09.png)
+
+## Show each order's status
 
 1. Let's make some space to include more information about each order in the gallery.  Select the first label control, **Title1**, in the gallery's template and re-size it to be narrower:
 
