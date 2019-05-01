@@ -26,7 +26,6 @@ Use PowerApps component framework to create custom components in model-driven ap
 > [!IMPORTANT]
 > - PowerApps component framework is a preview feature.
 > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)] 
-> - [!INCLUDE[cc_preview_features_no_MS_support](../../includes/cc-preview-features-no-ms-support.md)]
 
 > [!NOTE]
 > Custom components are supported only on Unified Interface for [model-driven apps](/powerapps/maker/model-driven-apps/model-driven-app-overview) version 9.1.0.3842 or later.

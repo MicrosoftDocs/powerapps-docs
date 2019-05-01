@@ -24,6 +24,7 @@ To create a new project, follow the steps below:
 3. `cd` into the new directory and run the command `cd LinearControl` 
 4. Create the component project using the command `pac pcf init --namespace SampleNamespace --name TSLinearInputControl --template field` 
 5. Install the project build tools using the command `npm install` 
+6. Open your project in any developer environment of your choice and start implementing your custom component.
 
 ## Implementing Manifest
 
