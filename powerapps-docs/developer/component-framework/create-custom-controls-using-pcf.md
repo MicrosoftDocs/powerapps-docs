@@ -114,11 +114,11 @@ You can also interact with the component locally in real time and observe elemen
 
 ## Deploying your PowerApps component framework components
 
-Once the debugging and development is finished, you just have one step remaining - to deploy your new component.  
+Once the debugging and development is finished, you just have one step remaining to deploy your new component.  
 
 Follow the steps below to create and import a [solution](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/customize/solutions-overview) file:
 
-1. Create a new directory and go to it 'cd <new directory name>'
+1. Create a new directory and go to it `cd <new directory name>`
 2. Create a new solution project in the directory of your choice by using the command 
  `pac solution init --publisherName <enter your publisher name> --customizationPrefix <enter your publisher name>` after `cd <your new folder>`.
 
