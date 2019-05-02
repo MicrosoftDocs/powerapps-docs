@@ -1,5 +1,5 @@
 ---
-title: Create an order overview in a canvas app | Microsoft Docs
+title: Create an order summary in a canvas app | Microsoft Docs
 description: Create an order overview in a canvas app to manage data for Northwind Traders
 author: gregli-msft
 manager: kvivek
@@ -14,9 +14,9 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Create an order overview in a canvas app
+# Create an order summary in a canvas app
 
-Follow the steps in this topic to create a list of orders in a canvas app based on sample data in Common Data Service. As in the [previous topic in this series](northwind-orders-canvas-part1.md), the sample data is for a fictitious organization named Northwind Traders, and this single-screen app is designed to run on tablets.
+Follow the steps in this topic to create an order summary in a canvas app based on fictitious data in Common Data Service. As in the [previous topic in this series](northwind-orders-canvas-part1.md), this single-screen app is designed to help the user show, update, create, and delete orders on a tablet device.
 
 > [!div class="mx-imgBorder"]
 > ![Complete canvas app](media/northwind-orders-canvas-part1/orders-finished.png)
@@ -25,7 +25,7 @@ As you build the app, you'll discover and explore these concepts:
 
 - **Many-to-one relationships.** Each customer can place one or more orders, but only one customer can place each order. The **Orders** entity is related to the **Customers** entity so that the list near the left edge can show which customer placed each order. The list shows the name of the customer, but it could show data from any column in the **Customers** entity.
 - **One-to-many relationships.** Each order contains one or more line items, each of which appears as a record in the **Order Details** entity. Each order detail is contained in only one order.
-- **Option sets.** Each order has a status, such as **New**, **Shipped**, **Invoiced**, or **Closed**. Sets of values such as these are defined as option sets in the database and can be shared across apps.
+- **Option sets.** Each order has a status, such as **New**, **Shipped**, **Invoiced**, or **Closed**. These values are defined as option sets in the database and can be shared across apps.
 - **Gallery and form interactions.** The gallery lists all orders, a user can select an order, and the rest of the app responds to the user's selection.
 
 To build this app, follow the steps in these topics
@@ -34,19 +34,19 @@ To build this app, follow the steps in these topics
 > ![Definition of screen areas](media/northwind-orders-canvas-part1/orders-parts.png)
 
 - [**Part 1, Orders list**](northwind-orders-canvas-part1.md): Show each order's number, customer name, status, and total amount in a list. Select an order that you want to edit or delete elsewhere in the screen.
-- **Part 2, Order form**: As this topic describes, show and edit an overview of the order, delete the order, or create another order.
+- **Part 2, Order form**: As this topic describes, show and edit a summary of the order, delete the order, or create another order.
 - [**Part 3, Order details**](northwind-orders-canvas-part3.md): Show and edit the line items, called order details, that are associated with each order.
 
 If you haven't already done so, [install the Northwind Traders sample database and apps](northwind-install.md), and then take either of these approaches:
 
 - Build the first part of the app yourself by [creating the list of orders](northwind-orders-canvas-part1.md).
-- Take a shortcut by opening the **Northwind Orders (Canvas), Start Part 2** app.
+- Take a shortcut by opening the **Northwind Orders (Canvas), Start Part 2** app, which already contains the list of orders.
 
 ## Add a title bar
 
-Across the top of the app, create a title bar that will hold action buttons later.
+Across the top of the app, create a title bar, which will hold action buttons by the end of this topic.
 
-1. In the **Tree view** pane, select **Screen1** to ensure that you don't accidentally add controls to the orders-list gallery:
+1. In the **Tree view** pane, select **Screen1** to ensure that you don't accidentally add a control to the orders-list gallery:
 
     > [!div class="mx-imgBorder"]
     > ![Select Screen1 in the tree view](media/northwind-orders-canvas-part2/titlebar-01.png)
@@ -56,14 +56,14 @@ Across the top of the app, create a title bar that will hold action buttons late
     > [!div class="mx-imgBorder"]
     > ![Insert a label](media/northwind-orders-canvas-part2/titlebar-02.png)
 
-    This control should appear only once, above the gallery. If it appears in each item of the gallery, delete the first instance of the label, ensure that the screen is selected (see previous step), and then insert the label again.
+    This control should appear only once, above the gallery. If it appears in each item of the gallery, delete the first instance of the label, ensure that the screen is selected (as the previous step describes), and then insert the label again.
 
-1. Move the control and resize it to span the top of the screen:
+1. Move and resize the control to span the top of the screen:
 
     > [!div class="mx-imgBorder"]
     > ![Move and resize the label](media/northwind-orders-canvas-part2/titlebar-03.png)
 
-1. Double click into the control to edit its text, and then enter **Northwind Orders**.
+1. Double-click into the control to edit its text, and then enter **Northwind Orders**.
 
     As an alternative, modify the **Text** property in the formula bar, which has the same result:
 
@@ -82,7 +82,7 @@ Across the top of the app, create a title bar that will hold action buttons late
 
 ## Add an Edit form control
 
-In this section, you'll add controls to show more information about the currently selected order.
+In this section, you'll add controls to show a summary of any order that the user selects in the gallery.
 
 1. On the **Insert** tab, insert an [**Edit form**](controls/control-form-detail.md) control:
 
@@ -99,7 +99,7 @@ In this section, you'll add controls to show more information about the currentl
     > [!div class="mx-imgBorder"]
     > ![Move and resize the Edit form control](media/northwind-orders-canvas-part2/form-03.png)
 
-1. In the formula bar, set the **DataSource** property of the control to this formula:
+1. In the formula bar, set the **DataSource** property of the control to this value:
 
     ```powerapps-dot
     Orders
@@ -108,7 +108,7 @@ In this section, you'll add controls to show more information about the currentl
     > [!div class="mx-imgBorder"]
     > ![Set the DataSource property of the Edit form control](media/northwind-orders-canvas-part2/form-04.png)
 
-    You can set the same property in the **Properties** tab of the right-hand pane, but this approach adds fields to the form that we don't need. If you use the formula bar, the form remains empty.
+    You can set the same property in the **Properties** tab of the right-hand pane, but that approach adds fields to the form that you don't need. If you use the formula bar, the form remains empty.
 
 ## Add and arrange fields
 
@@ -140,7 +140,11 @@ In this section, you'll add controls to show more information about the currentl
     > [!div class="mx-imgBorder"]
     > ![Edit form control shows seven fields](media/northwind-orders-canvas-part2/form-08.png)
 
-    If any field shows a red error icon, a problem might have occurred when data was pulled from the source. To resolve the error, select **Data sources** on the **View** tab, select **Data sources** in the **Data** pane, select the ellipsis (...) next to **Orders**, and then select **Refresh**.
+    If any field shows a red error icon, a problem might have occurred when data was pulled from the source. To resolve the error, refresh the data:
+
+    1. On the **View** tab, select **Data sources**.
+    1. In the **Data** pane, select **Data sources**.
+    1. Next to **Orders**, select the ellipsis (...), and then select **Refresh**.
 
 1. In the **Properties** tab of the right-hand pane, change the number of columns in the form from 3 to 12.
 
@@ -149,7 +153,7 @@ In this section, you'll add controls to show more information about the currentl
     > [!div class="mx-imgBorder"]
     > ![Change then number of columns in the Edit form control](media/northwind-orders-canvas-part2/form-08b.png)
 
-    Many UI designs rely on 12-column layouts because they can evenly accommodate rows of 1, 2, 3, 4, 6, and 12 controls. You'll create rows that contain 1, 2, or 4 controls.
+    Many UI designs rely on 12-column layouts because they can evenly accommodate rows of 1, 2, 3, 4, 6, and 12 controls. In this topic, you'll create rows that contain 1, 2, or 4 controls.
 
 1. Move and resize the fields by dragging their handles, just as you would any other control:
 
@@ -195,7 +199,7 @@ In this example, you don't need the time portions of the date fields because tha
     > [!div class="mx-imgBorder"]
     > ![Set Visible property to false.](media/northwind-orders-canvas-part2/form-13.png)
 
-1. Resize the **Date picker** control:
+1. Resize the **Date picker** control in the **Date Paid** card:
 
     > [!div class="mx-imgBorder"]
     > ![Resize the Date picker control](media/northwind-orders-canvas-part2/form-14.png)
@@ -204,7 +208,7 @@ In this example, you don't need the time portions of the date fields because tha
 
 1. In the **Tree view** pane, find the name of the gallery that contains the list of orders.
 
-    If you followed the steps in the previous topic exactly, the gallery is named Gallery1. Otherwise, the name might end in a different number, or you might have renamed the gallery yourself.
+    If you followed the steps in the previous topic exactly, the gallery is named **Gallery1**. Otherwise, the name might end in a different number, or you might have renamed the gallery yourself.
 
 1. Set the form control's **Item** property to this expression, replacing the name of the gallery if necessary:
 
@@ -215,7 +219,7 @@ In this example, you don't need the time portions of the date fields because tha
     > [!div class="mx-imgBorder"]
     > ![Set Item property of the form control](media/northwind-orders-canvas-part2/form-15.png)
 
-    The form shows an overview of whatever order you select in the list.
+    The form shows an summary of whatever order the user selects in the list.
 
     > [!div class="mx-imgBorder"]
     > ![Select an order in the list to show its overview in the form](media/northwind-orders-canvas-part2/form-select.gif)
@@ -224,7 +228,7 @@ In this example, you don't need the time portions of the date fields because tha
 
 **Order number** is an auto-number field that Common Data Service assigns when you create a record. This field has a **Text input** control by default, but you'll replace it with a **Label** control so that users can't edit this field.
 
-1. Select the form control, select **Edit fields** in the **Properties** tab of the right-hand pane, and then select the **Order number** field:
+1. Select the form control, select **Edit fields** in the **Properties** tab of the right-hand pane, and then select the **Order number** field in the list of fields:
 
     > [!div class="mx-imgBorder"]
     > ![Select the Order number field](media/northwind-orders-canvas-part2/alt-01.png)
@@ -241,7 +245,7 @@ In this example, you don't need the time portions of the date fields because tha
 
 1. Close the **Data** pane.
 
-    The order number appears, but the user can't change it:
+    The user can't change the order number:
 
     > [!div class="mx-imgBorder"]
     > ![Order number is read-only](media/northwind-orders-canvas-part2/alt-03.png)
@@ -402,7 +406,7 @@ The **Orders** entity has a many-to-one relationship with the **Employees** enti
     > [!div class="mx-imgBorder"]
     > ![Set the Cancel icon's DisplayMode property](media/northwind-orders-canvas-part2/save-11.png)
 
-    This formula differs slightly from the one for the **Check** icon. The **Cancel** icon is disabled if all changes have been saved or the form is in **New** mode, which you'll enable next. In that case, **ResetForm** will discard the new record.
+    This formula differs slightly from the one for the **Check** icon. The **Cancel** icon is disabled if all changes have been saved or the form is in **New** mode, which you'll enable next. In that case, **ResetForm** discards the new record.
 
 1. Set the **Cancel** icon's **DisabledColor** property to this value:
 
@@ -511,7 +515,7 @@ The **Orders** entity has a many-to-one relationship with the **Employees** enti
     > [!div class="mx-imgBorder"]
     > ![Set the Trash icon's DisplayMode property](media/northwind-orders-canvas-part2/save-22.png)
 
-    this formula disables the **Trash** icon if the user is creating a record. If the user hasn't saved any changes, the data source has no record to delete.
+    This formula disables the **Trash** icon if the user is creating a record. Until the user saves the record, the **Remove** function has no record to delete.
 
 1. Set the **Trash** icon's **DisabledColor** property to this value:
 
@@ -529,7 +533,7 @@ The **Orders** entity has a many-to-one relationship with the **Employees** enti
 
 ## On to Part 3
 
-To recap, you added a form in which the user can find and edit more information about each order. In the process, you used these elements:
+To recap, you added a form in which the user can show and edit a summary of each order, and you used these elements:
 
 - A form that shows data from the **Orders** entity: **Form1.DataSource =** `Orders`
 - A connection between the form and the list of orders in the gallery: **Form1.Item =** `Gallery1.Selected`
