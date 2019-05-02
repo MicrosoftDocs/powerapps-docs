@@ -24,7 +24,6 @@ Now more than ever, businesses and organizations have embraced the value of usin
 3. Sometimes there is no *app for that* and creating a custom app that perfectly fits into your customers workflows are required to get the benefits of the last mile of digital transformation. 
 
 > [!IMPORTANT]
-
 > - This is a preview feature.
 > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)] 
  
