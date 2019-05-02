@@ -1,5 +1,5 @@
 ---
-title: Embedding SDKcanvas apps | Microsoft Docs
+title: Embedding SDK canvas apps | Microsoft Docs
 description: How to embed canvas app using the SDK in PowerApps
 manager: kvivek
 ms.service: powerapps
