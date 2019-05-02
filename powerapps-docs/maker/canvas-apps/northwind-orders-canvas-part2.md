@@ -16,7 +16,7 @@ search.app:
 ---
 # Create an order overview in a canvas app
 
-Follow the steps in this topic to create a list of orders in a canvas app based on sample data in Common Data Service. As in the [previous topic in this series](orthwind-orders-canvas-part1.md), the sample data is for a fictitious organization named Northwind Traders, and this single-screen app is designed to run on tablets.
+Follow the steps in this topic to create a list of orders in a canvas app based on sample data in Common Data Service. As in the [previous topic in this series](northwind-orders-canvas-part1.md), the sample data is for a fictitious organization named Northwind Traders, and this single-screen app is designed to run on tablets.
 
 > [!div class="mx-imgBorder"]
 > ![Complete canvas app](media/northwind-orders-canvas-part1/orders-finished.png)
