@@ -1,6 +1,6 @@
 ---
-title: 'Build Northwind Orders (Canvas): Part 2, Order form | Microsoft Docs'
-description: Build the Canvas version of Northwind Orders
+title: Create an order overview in a canvas app | Microsoft Docs
+description: Create an order overview in a canvas app to manage data for Northwind Traders
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -14,75 +14,90 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Build Northwind Orders (Canvas): Part 2, Order form
+# Create an order overview in a canvas app
 
-Let's continue building a simple order management canvas app over data in the Common Data Service, step-by-step.  When we are done we will have a single screen master-detail app:
+Follow the steps in this topic to create a list of orders in a canvas app based on sample data in Common Data Service. As in the [previous topic in this series](orthwind-orders-canvas-part1.md), the sample data is for a fictitious organization named Northwind Traders, and this single-screen app is designed to run on tablets.
 
-![](media/northwind-orders-canvas-part1/orders-finished.png)
+> [!div class="mx-imgBorder"]
+> ![Complete canvas app](media/northwind-orders-canvas-part1/orders-finished.png)
 
-This app will showcase:
+As you build the app, you'll discover and explore these concepts:
 
-- **Many-to-One relationships.** Many Orders can be related to the same Customer. Each Order can be related to only one Customer.  All of the columns of the foreign entity are available to use.
-- **One-to-Many relationships.** Each Order can be related to many Order Details (or line items). Each Order Detail is related to only one Order.
-- **Option sets.**  A set of named choices defined in the database and shared across apps.  
-- **Gallery and form interactions.**  The gallery provides the list of Orders to choose from, and the rest of the app responds to changes in the gallery's selection.      
+- **Many-to-one relationships.** Each customer can place one or more orders, but only one customer can place each order. The **Orders** entity is related to the **Customers** entity so that the list near the left edge can show which customer placed each order. The list shows the name of the customer, but it could show data from any column in the **Customers** entity.
+- **One-to-many relationships.** Each order contains one or more line items, each of which appears as a record in the **Order Details** entity. Each order detail is contained in only one order.
+- **Option sets.** Each order has a status, such as **New**, **Shipped**, **Invoiced**, or **Closed**. Sets of values such as these are defined as option sets in the database and can be shared across apps.
+- **Gallery and form interactions.** The gallery lists all orders, a user can select an order, and the rest of the app responds to the user's selection.
 
-The instructions for building the app are broken into three parts:
+To build this app, follow the steps in these topics
 
-![](media/northwind-orders-canvas-part1/orders-parts.png)
+> [!div class="mx-imgBorder"]
+> ![Definition of screen areas](media/northwind-orders-canvas-part1/orders-parts.png)
 
-- [**Part 1, Orders list**](northwind-orders-canvas-part1.md):  Displays the list of orders.  Selection in this list determines which order is being edited on the rest of the screen.
-- **Part 2, Order form**:  View and edit information about the order.  Here new orders can be created and existing orders deleted.  You are here.
-- [**Part 3, Order details**](northwind-orders-canvas-part3.md):  View and edit the product line items that are associated with the order.  
+- [**Part 1, Orders list**](northwind-orders-canvas-part1.md): Show each order's number, customer name, status, and total amount in a list. Select an order that you want to edit or delete elsewhere in the screen.
+- **Part 2, Order form**: As this topic describes, show and edit an overview of the order, delete the order, or create another order.
+- [**Part 3, Order details**](northwind-orders-canvas-part3.md): Show and edit the line items, called order details, that are associated with each order.
 
-If you have not already done so, work through [part 1](northwind-orders-canvas-part1.md).  Or take a shortcut by opening the **Northwind Orders (Canvas), Start Part 2** app after [installing the Northwind Traders sample database and apps](northwind-install.md)
+If you haven't already done so, [install the Northwind Traders sample database and apps](northwind-install.md), and then take either of these approaches:
 
-## An app title bar
+- Build the first part of the app yourself by [creating the list of orders](northwind-orders-canvas-part1.md).
+- Take a shortcut by opening the **Northwind Orders (Canvas), Start Part 2** app.
 
-1. Let's create a title bar across the top of the app.  We'll use this space to hold action buttons later.
+## Add a title bar
 
-	Select **Screen1** in the Navigation pane.  This ensures that we don't accidentally add controls to the orders list gallery:
+Across the top of the app, create a title bar that will hold action buttons later.
 
-	![](media/northwind-orders-canvas-part2/titlebar-01.png)
+1. In the **Tree view** pane, select **Screen1** to ensure that you don't accidentally add controls to the orders-list gallery:
 
-1. From the **Insert** ribbon, insert a [**Label** control](controls/control-text-box.md):
+    > [!div class="mx-imgBorder"]
+    > ![Select Screen1 in the tree view](media/northwind-orders-canvas-part2/titlebar-01.png)
 
-	![](media/northwind-orders-canvas-part2/titlebar-02.png)
+1. On the **Insert** tab, select **Label** to insert a [**Label**](controls/control-text-box.md) control:
 
-	This control should appear only once, over the top of the gallery.  If it is replicated for each item in the gallery, delete it and ensure the screen is selected (see previous step) before inserting it again.
+    > [!div class="mx-imgBorder"]
+    > ![Insert a label](media/northwind-orders-canvas-part2/titlebar-02.png)
 
-1. Re-size and re-position the control to span the top of the screen:
+    This control should appear only once, above the gallery. If it appears in each item of the gallery, delete the first instance of the label, ensure that the screen is selected (see previous step), and then insert the label again.
 
-	![](media/northwind-orders-canvas-part2/titlebar-03.png)
+1. Move the control and resize it to span the top of the screen:
 
-1. Double click into the control to edit the text for the control and enter **Northwind Orders**.  Alternatively, you can modify the **Text** property in the formula bar, both methods do the same thing:
+    > [!div class="mx-imgBorder"]
+    > ![Move and resize the label](media/northwind-orders-canvas-part2/titlebar-03.png)
 
-	![](media/northwind-orders-canvas-part2/titlebar-04.png)
+1. Double click into the control to edit its text, and then enter **Northwind Orders**.
 
-1. Using the **Home** ribbon, use the formatting buttons to format the label control:
-    - increase the font size to 24 points
-    - use a bold font
-    - use white for the text color
-    - center the text
-    - fill the background with dark blue
+    As an alternative, modify the **Text** property in the formula bar, which has the same result:
 
-    ![](media/northwind-orders-canvas-part2/titlebar-05.png)
+    > [!div class="mx-imgBorder"]
+    > ![Change the text in the title bar](media/northwind-orders-canvas-part2/titlebar-04.png)
 
-## Display more Order information in a form
+1. On the **Home** tab, format the label control:
+    - Increase the font size to 24 points.
+    - Make the text bold.
+    - Make the text white.
+    - Center the text.
+    - Add a dark-blue fill to the background.
 
-1. Let's display more of the columns from the currently selected order.  
+    > [!div class="mx-imgBorder"]
+    > ![Formatting options on the Home tab](media/northwind-orders-canvas-part2/titlebar-05.png)
 
-    From the **Insert** ribbon, insert an [**Edit form** control](controls/control-form-detail.md):
+## Show an order overview
 
-	![](media/northwind-orders-canvas-part2/form-01.png)
+In this section, you'll add controls to show more information about the currently selected order.
 
-	The control will overlay the other controls on the screen in the top left corner and may difficult to see:
+1. On the **Insert** tab, insert an [**Edit form**](controls/control-form-detail.md) control:
 
-	![](media/northwind-orders-canvas-part2/form-02.png)
+    > [!div class="mx-imgBorder"]
+    > ![Add an Edit form control](media/northwind-orders-canvas-part2/form-01.png)
 
-1. Re-size and re-position this control under the title bar in the upper right corner of the screen:
+    By default, the control appears in the upper-left corner, where other controls might make it difficult to find:
 
-	![](media/northwind-orders-canvas-part2/form-03.png)
+    > [!div class="mx-imgBorder"]
+    > ![Edit form control in default location](media/northwind-orders-canvas-part2/form-02.png)
+
+1. Move this control under the title bar, and resize the form to cover the upper-right corner of the screen:
+
+    > [!div class="mx-imgBorder"]
+    > ![Move and resize the Edit form control](media/northwind-orders-canvas-part2/form-03.png)
 
 1. In the formula bar, set the **DataSource** property of the control to this formula:
 
@@ -90,52 +105,58 @@ If you have not already done so, work through [part 1](northwind-orders-canvas-p
     Orders
     ```
 
-	![](media/northwind-orders-canvas-part2/form-04.png)
+    > [!div class="mx-imgBorder"]
+    > ![Set the DataSource property of the Edit form control](media/northwind-orders-canvas-part2/form-04.png)
 
-    We could have also used the Properties panel to set the data source but this would have added fields to the form that we don't need.  By setting the data source in the formula bar the form remains empty. 
+    You can set the same property in the **Properties** tab of the right-hand pane, but this approach adds fields to the form that we don't need. If you use the formula bar, the form remains empty.
 
-1. In the Properties panel, select **Edit fields** which will open the **Fields** panel:  
+1. In the **Properties** tab of the right-hand pane, select **Edit fields** to open the **Fields** pane:
 
-	![](media/northwind-orders-canvas-part2/form-05.png)
+    > [!div class="mx-imgBorder"]
+    > ![Open the Fields pane](media/northwind-orders-canvas-part2/form-05.png)
 
-1. Select **+ Add field** and place a check mark next to these fields:
+1. In the **Fields** pane, select **Add field**, and then select the check boxes for the **Customer** and **Employee** fields.
 
-	- **Customer**
-	- **Employee**
+    > [!div class="mx-imgBorder"]
+    > ![Add the Customer and Employee fields to the Edit form control](media/northwind-orders-canvas-part2/form-06.png)
 
-	![](media/northwind-orders-canvas-part2/form-06.png)
+1. Scroll down until  these fields appear, and then select their check boxes:
 
-	Scroll down and place a check mark next to these fields:
+    - **Notes**
+    - **Order Date**
+    - **Order Number**
+    - **Order Status**
+    - **Paid Date**
 
-	- **Notes**
-	- **Order Date** 
-	- **Order Number**
-	- **Order Status**
-	- **Paid Date**
+    > [!div class="mx-imgBorder"]
+    > ![Add five more fields to the Edit form control](media/northwind-orders-canvas-part2/form-07.png)
 
-	![](media/northwind-orders-canvas-part2/form-07.png)
+1. At the bottom of the **Fields** pane, select **Add**.
 
-	Finally, select the **Add** button at the bottom of the Fields panel.
+    The form shows seven fields:
 
-	We now see seven fields in our form:
+    > [!div class="mx-imgBorder"]
+    > ![Edit form control shows seven fields](media/northwind-orders-canvas-part2/form-08.png)
 
-	![](media/northwind-orders-canvas-part2/form-08.png)
+    If any field shows a red error icon, a problem might have occurred when data was pulled from the source. To resolve the error, select **Data sources** on the **View** tab, select **Data sources** in the **Data** pane, select the ellipsis (...) next to **Orders**, and then select **Refresh**.
 
-    If any of these fields show a red error there may be a problem with metadata fetch.  Using the **View** ribbon, select **Data sources**, select the three elipses to the right of **Orders** and **Refresh** the data source.
+1. In the **Properties** tab of the right-hand pane, change the number of columns in the form from 3 to 12.
 
-1. In the **Properties** panel, change the number of columns from 3 to 12.  This will give us more flexibility in laying out the fields:
+    This step adds flexibility as you arrange the fields:
 
-	![](media/northwind-orders-canvas-part2/form-08b.png)
+    > [!div class="mx-imgBorder"]
+    > ![Change then number of columns in the Edit form control](media/northwind-orders-canvas-part2/form-08b.png)
 
-    Using a 12 column layout is common in UI design as spans of 12 columns can evenly accomodate rows of 1, 2, 3, 4, 6, and 12 controls.  We'll use this for a mix of 1, 2, and 4 controls in each row.
+    Many UI designs rely on 12-column layouts because they can evenly accommodate rows of 1, 2, 3, 4, 6, and 12 controls. You'll create rows that contain 1, 2, or 4 controls.
 
-1. Re-position the fields within the form by drag-and-drop of their drag handles and re-size them as you would any control:
+1. Move and resize the fields by dragging their handles, just as you would any other control:
 
-	![](media/northwind-orders-canvas-part2/form-rearrange.gif)
+    > [!div class="mx-imgBorder"]
+    > ![Move and resize fields](media/northwind-orders-canvas-part2/form-rearrange.gif)
 
-	For more information on working with form layout, see [understand data-form layout for canvas apps](working-with-form-layout.md).
+    For more information about how to arrange fields in a form, see [Understand data-form layout for canvas apps](working-with-form-layout.md).
 
-1. Let's not show the time portions of the date fields, that level of granularity is not needed.  
+1. Let's not show the time portions of the date fields; that level of granularity is not needed.
 
     It is tempting to just select the time controls and delete them, but that can cause problems if they are a part of the formulas for updating data values or the positioning of other controls within the data card.  
 
