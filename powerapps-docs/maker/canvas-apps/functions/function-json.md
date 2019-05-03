@@ -42,21 +42,21 @@ Use the optional *Format* argument to control the readability of the result and 
 
 Use the [**ShowColumns**, **HideColumns**, **RenameColumns**, and **AddColumns** functions](function-table-shaping.md) to shape the data structure before passing it to **JSON** in order to control what data is included in the result and to avoid unsupported data types.
 
-Details of how each data type is serialized:
+The following data types are supported:
 
 | Data Type | Description | Example |
 |-----------|-------------|---------| 
-| String | Double quoted string.  Embedded double quote characters are escaped with a backslash, newlines are replaced with "\n", and other standard JavaScript replacements. | `"This is a string."` | 
-| Number | Number using dot decimal separator independent of the user's language.  Scientific notation is used if needed. | `1.345` |
 | Boolean | *true* or *false*. | `true` |
+| Color | String containing the 8-digit hexadecimal representation for the color in the format "#rrggbbaa" with *rr* is the red component, *gg* is green, *bb* is blue, and *aa* is the alpha channel where *00* is fully transparent and *ff* is fully opaque. The string can be passed to the [**ColorValue** function](function-colors.md).  | `"#102030ff"` |
 | Date | String containing the date in ISO 8601 **yyyy-mm-dd** format. | `"2019-03-31"` |
-| Color | Number containing the RGBA value
 | Date/Time | String containing an ISO 8601 date/time. Date/time values are time zone agnostic and will be saved with a "Z" indicating UTC.  | `"2019-03-31T22:32:06.822Z"`  |
-| Time | String containing an ISO 8601 **HH:mm:ss.fff** format.  | `"23:12:49"` |
-| Option&nbsp;set | The numeric value of the option set, not the label used for display. These values are language independent.  | `1001` |
-| Two&nbsp;option | *true* or *false*, not the label used for display. | `false` |
 | GUID | String containing the GUID value.  Alphabetic characters will be lowercase. | `"751b58ac-380e-4a04-a925-9f375995cc40"`
 | Media | If **IncludeBinaryData** is specified, media files are encoded in a string.  Web references using the http: and https: URL schemes are not modified.  References to in memory binary data, such as captured with the [**Camera**](../controls/control-camera.md) control and any other references with the appres: and blob: URL schemes will be encoded with the ["data:*mimetype*;base64,..."](https://en.wikipedia.org/wiki/Data_URI_scheme) format. | `"data:image/jpeg;base64,/9j/4AA..."` |
+| Number | Number using a dot decimal separator that is independent of the user's language.  Scientific notation is used if needed. | `1.345` |
+| Option&nbsp;set | The numeric value of the option set, not the label used for display. The numeric value is used because it is language independent.  | `1001` |
+| Time | String containing an ISO 8601 **HH:mm:ss.fff** format.  | `"23:12:49"` |
+| Two&nbsp;option | *true* or *false*, not the label used for display. | `false` |
+| Text | Double quoted string.  Embedded double quote characters are escaped with a backslash, newlines are replaced with "\n", and other standard JavaScript replacements. | `"This is a string."` | 
 
 For columns that have both a display name and a logical name, the logical name will be used in the result.  Display names are dependent on the language of the app user and are therefore inappropriate for data transfers to a common service.
 
@@ -149,7 +149,7 @@ Resulting in this output:
 
 1. Add an [**Image** control](../controls/control-image.md) to a screen.
 
-    This control brings with it a sample image.
+    This control brings with it **SampleImage**.
 
 2. Add a [**Button** control](../controls/control-button.md) and set its **OnSelect** property to the formula:
 
@@ -165,7 +165,7 @@ Resulting in this output:
     ImageJSON
     ```
 
-1. Resize the control and reduce the font size as needed to see more of the result.  You will see the text string that was captured from calling the **JSON** function:
+1. Resize the control and reduce the font size as needed to see most of the result.  You will see the text string that was captured from calling the **JSON** function:
 
     ```json
     "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjxzdmcgdmVyc2lvbj0iMS4xIg0KCSB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4bWxuczphPSJodHRwOi8vbnMuYWRvYmUuY29tL0Fkb2JlU1ZHVmlld2VyRXh0ZW5zaW9ucy8zLjAvIg0KCSB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjI3MHB4IiBoZWlnaHQ9IjI3MHB4IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAyNzAgMjcwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCgk8ZyBjbGFzcz0ic3QwIj4NCgkJPHJlY3QgeT0iMC43IiBmaWxsPSIjRTlFOUU5IiB3aWR0aD0iMjY5IiBoZWlnaHQ9IjI2OS4zIi8+DQoJCTxwb2x5Z29uIGZpbGw9IiNDQkNCQ0EiIHBvaW50cz0iMjc3LjksMTg3LjEgMjQ1LDE0My40IDE4OC42LDIwMi44IDc1LDgwLjUgLTQuMSwxNjUuMyAtNC4xLDI3MiAyNzcuOSwyNzIiLz4NCgkJPGVsbGlwc2UgZmlsbD0iI0NCQ0JDQSIgY3g9IjIwMi40IiBjeT0iODQuMSIgcng9IjI0LjQiIHJ5PSIyNC4zIi8+DQoJPC9nPg0KPC9zdmc+"
