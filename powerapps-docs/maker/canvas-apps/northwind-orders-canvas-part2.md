@@ -94,7 +94,7 @@ In this section, you'll add controls to show a summary of any order that the use
     > [!div class="mx-imgBorder"]
     > ![Edit form control in default location](media/northwind-orders-canvas-part2/form-02.png)
 
-1. Move this control under the title bar, and resize the form to cover the upper-right corner of the screen:
+1. Move and resize the form to cover the upper-right corner of the screen under the title bar:
 
     > [!div class="mx-imgBorder"]
     > ![Move and resize the Edit form control](media/northwind-orders-canvas-part2/form-03.png)
@@ -155,7 +155,14 @@ In this section, you'll add controls to show a summary of any order that the use
 
     Many UI designs rely on 12-column layouts because they can evenly accommodate rows of 1, 2, 3, 4, 6, and 12 controls. In this topic, you'll create rows that contain 1, 2, or 4 controls.
 
-1. Move and resize the fields by dragging their handles, just as you would any other control:
+1. Move and resize the fields by dragging their handles, just as you would any other control, so that each row contains these data cards in the specified order:
+
+    - First row: **Order Number**, **Order Status**, **Order Date**, and **Paid Date**
+    - Second row: **Customer** and **Employee**
+    - Third row: **Notes**
+
+    > [!NOTE]
+    > You might find it easier to resize the data cards before you arrange them.
 
     > [!div class="mx-imgBorder"]
     > ![Move and resize fields](media/northwind-orders-canvas-part2/form-rearrange.gif)
@@ -166,11 +173,11 @@ In this section, you'll add controls to show a summary of any order that the use
 
 In this example, you don't need the time portions of the date fields because that level of granularity can be distracting. If you delete them, you might cause problems in formulas that rely on those controls to update date values or determine the position of another control in the data card. Instead, you'll hide the time controls by setting their **Visible** property.
 
-1. In the **Tree view** pane, find the **Order Date** data card.
+1. In the **Tree view** pane, select the **Order Date** data card.
 
     The card might have a different name, but it contains **Order Date**.
 
-1. While holding down the Shift key, select the hour, minute, and colon-separator controls.
+1. While holding down the Shift key, select the hour, minute, and colon-separator controls in the **Order Date** data card.
 
     > [!div class="mx-imgBorder"]
     > ![Select the time controls in Order Date card](media/northwind-orders-canvas-part2/form-09.png)
@@ -206,7 +213,7 @@ In this example, you don't need the time portions of the date fields because tha
 
 ## Connect the list of orders
 
-1. In the **Tree view** pane, find the name of the gallery that contains the list of orders.
+1. In the **Tree view** pane, select the form control to more easily find the name of the gallery that contains the list of orders.
 
     If you followed the steps in the previous topic exactly, the gallery is named **Gallery1**. Otherwise, the name might end in a different number, or you might have renamed the gallery yourself.
 
@@ -300,7 +307,7 @@ The **Orders** entity has a many-to-one relationship with the **Employees** enti
     > [!div class="mx-imgBorder"]
     > ![Move and resize the image control](media/northwind-orders-canvas-part2/employee-06.png)
 
-1. Set the **Image** property of the **Image** control to this formula:
+1. Set the **Image** property of the **Image** control to this formula, replacing the number at the end of DataCardValue if necessary:
 
     ```powerapps-dot
     DataCardValue1.Selected.Picture
@@ -311,7 +318,7 @@ The **Orders** entity has a many-to-one relationship with the **Employees** enti
 
     The picture of the selected employee appears.
 
-1. In the **Combo box**, select a different employee to confirm that the picture also changes.
+1. While holding down the Alt key, select a different employee in the **Combo box** to confirm that the picture also changes.
 
     > [!div class="mx-imgBorder"]
     > ![Select an employee to see that employee's picture](media/northwind-orders-canvas-part2/employee-select.gif)
@@ -478,6 +485,9 @@ The **Orders** entity has a many-to-one relationship with the **Employees** enti
     > [!div class="mx-imgBorder"]
     > ![Create an order](media/northwind-orders-canvas-part2/save-new.gif)
 
+> [!NOTE]
+> If you create and save an order, you might need to scroll down in the gallery list to show your new order. It won't have a total price because you haven't added any order details yet.
+
 ## Add a Trash icon
 
 1. On the **Insert** tab, select **Icons** > **Trash**.
@@ -519,7 +529,7 @@ The **Orders** entity has a many-to-one relationship with the **Employees** enti
 
 1. Set the **Trash** icon's **DisabledColor** property to this value:
 
-    ```powerappd-dot
+    ```powerapps-dot
     Gray
     ```
 
