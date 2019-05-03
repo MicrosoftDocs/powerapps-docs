@@ -655,7 +655,7 @@
           - name: Announce dynamic changes with live regions
             href: ./canvas-apps/accessible-apps-live-regions.md
       - name: Experimental and preview features
-        href: ./canvas-apps/working-with-experimental.md
+        href: ./canvas-apps/working-with-experimental-preview.md
   - name: Save and publish an app
     href: ./canvas-apps/save-publish-app.md
   - name: Share an app
