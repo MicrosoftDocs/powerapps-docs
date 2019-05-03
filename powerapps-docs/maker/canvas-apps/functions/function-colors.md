@@ -21,9 +21,9 @@ Using built in color values, defining custom colors, and using alpha channel.
 The **Color** enumeration is an easy way to access the colors defined by HTML's Cascading Style Sheets (CSS).  For example, **Color.Red** returns a pure red color.  The list of these colors is included at the end of this article.   
 
 The **ColorValue** function returns a color based on a CSS color string.  The string can be in one of three forms:
-- **CSS color name**.  For example **"RoxyBrown"** or **"OliveDrab"**.  Spaces are omitted.  See the list of supported colors below.
-- **6 digit hex value**. For example **"#ffd700"** (which is the same as **"Gold"**).  The string is in the format "#rrggbb" where *rr* is the two hexadecimal digit red portion, *gg* the green, and *bb* the blue.  
-- **8 digit hex value**. For example **"#ff7f5080"** (which is the same as **"Coral"** with a 50% alpha channel).  The string is in the format "#rrggbbaa" where *rr*, *gg*, and *bb* are identical to the 6 digit form.  Alpha channel is represented by *aa* with "00" representing fully transparent and *ff* representing fully opaque.   
+- **CSS color name:**  For example **"RoxyBrown"** or **"OliveDrab"**.  Spaces are omitted.  See the list of supported colors below.
+- **6 digit hex value:** For example **"#ffd700"** (which is the same as **"Gold"**).  The string is in the format "#*rrggbb*" where *rr* is the two hexadecimal digit red portion, *gg* the green, and *bb* the blue.  
+- **8 digit hex value:** For example **"#ff7f5080"** (which is the same as **"Coral"** with a 50% alpha channel).  The string is in the format "#*rrggbbaa*" where *rr*, *gg*, and *bb* are identical to the 6 digit form.  Alpha channel is represented by *aa* with "00" representing fully transparent and *ff* representing fully opaque.   
 
 The **RGBA** function returns a color based on Red, Green, and Blue color components.  It also includes an alpha channel used for mixing colors of objects layered on top of one another.  Alpha varies from 0 or 0% which is fully transparent and invisible to 1 or 100% which is fully opaque and completely blocks out layers below.
 
