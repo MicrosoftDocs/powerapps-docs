@@ -44,22 +44,22 @@ You can access solution layers from the **Components** list or from the **Depend
 1. To view solution layers from the **Components** list, open [solution explorer](../model-driven-apps/advanced-navigation.md#solution-explorer). In the **Components** list, select a component, such as **Account**, and then select **Solution Layers** on the toolbar. 
 
    > [!div class="mx-imgBorder"] 
-   > ![](media/solution-layers-toolbar.png "Solution layers button")
+   > ![Solution layers button](media/solution-layers-toolbar.png "Solution layers button")
 
 2. The solution layer page appears. It displays each layer for the component, such as the **Account** entity displayed here, with the most recent layer at the top. To view the details for a solution layer, select it. 
 
    > [!div class="mx-imgBorder"] 
-   > ![](media/solution-layers-list.png "Solution layers list")
+   > ![Solution layers list](media/solution-layers-list.png "Solution layers list")
 
 3. In the **Solution Layer** dialog box, the **Changed Properties** tab displays only those properties that were modified as part of the specific solution layer. 
 
    > [!div class="mx-imgBorder"] 
-   > ![](media/solution-layers-change-prop.png "Solution layer changed properties")
+   > ![Solution layer changed properties](media/solution-layers-change-prop.png "Solution layer changed properties")
 
 4. Select the **All Properties** tab to view all properties, including changed and unchanged properties, for the solution layer. 
 
    > [!div class="mx-imgBorder"] 
-   > ![](media/solution-layers-all-prop.png "Solution layer all properties")
+   > ![Solution layer all properties](media/solution-layers-all-prop.png "Solution layer all properties")
 
 ### See also
 [Solutions overview](solutions-overview.md)
