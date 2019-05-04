@@ -3,7 +3,7 @@ title: "View or download developer resources | MicrosoftDocs"
 description: "Find developer resources and service endpoint URLs"
 keywords: ""
 ms.date: 06/06/2018
-ms.service: crm-online
+ms.service: powerapps
 ms.custom: 
 ms.topic: article
 applies_to: 
@@ -54,9 +54,9 @@ This section provides links for developers to find resources. The following reso
 <!-- TODO update 512122 to go to https://docs.microsoft.com/dynamics365/customer-engagement/developer/download-tools-nuget -->
 
 
-## Connect your apps to this instance of Common Data Service for Apps
+## Connect your apps to this instance of Common Data Service
 
-This section provides information you need to connect to your Common Data Service for Apps instance.
+This section provides information you need to connect to your Common Data Service instance.
 
 ### Instance Web API
 
@@ -75,9 +75,9 @@ This information uniquely describes your instance. There is a GUID **ID** and a 
 This information is needed when you use Azure extensions with your instance.
 More information: [Developer Documentation: Azure extensions for Dynamics 365 Customer Engagement](/dynamics365/customer-engagement/developer/azure-extensions)
 
-## Connect your apps to the Common Data Service for Apps Discovery Service
+## Connect your apps to the Common Data Service Discovery Service
 
-Because people may have access to multiple CDS for apps environments, the discovery services allow for retrieving the available environments that a person can access based on their user credentials.
+Because people may have access to multiple Common Data Service environments, the discovery services allow for retrieving the available environments that a person can access based on their user credentials.
 
 ### Discovery Web API
 

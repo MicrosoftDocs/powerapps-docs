@@ -1,10 +1,9 @@
 ---
-title: "Web API Query Data Sample (Common Data Service for Apps)| Microsoft Docs"
+title: "Web API Query Data Sample (Common Data Service)| Microsoft Docs"
 description: "This group of samples shows how to query data using the Web API. These are implemented using Client-side JavaScript and C#"
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
-ms.service: "crm-online"
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -14,7 +13,8 @@ ms.assetid: 9457ce4f-0ef6-4085-8346-fe3134ec7106
 caps.latest.revision: 18
 author: "brandonsimons" # GitHub ID
 ms.author: "jdaly"
-manager: "amyla"
+ms.reviewer: "susikka"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
@@ -23,7 +23,7 @@ search.app:
 ---
 # Web API Query Data Sample
 
-This group of  samples demonstrate how to query data using the Common Data Service for Apps Web API. This sample is implemented as a separate project for the following languages:
+This group of  samples demonstrate how to query data using the Common Data Service Web API. This sample is implemented as a separate project for the following languages:
 
 - [Web API Query Data Sample (Client-side JavaScript)](samples/query-data-client-side-javascript.md)
 
@@ -49,7 +49,7 @@ This sample is divided into the following principal sections, containing Web API
 |[FetchXML queries](#bkmk_fetchxml)|[FetchXML schema](../org-service/fetchxml-schema.md)<br /><br /> [Page large result sets with FetchXML](../org-service/page-large-result-sets-with-fetchxml.md)<br /><br /> [Use custom FetchXML](retrieve-and-execute-predefined-queries.md#bkmk_useFetchXML)| -->
 |[Predefined queries](#bkmk_predefinedqueries)|[Retrieve and execute predefined queries](retrieve-and-execute-predefined-queries.md)<br /><br /> <xref href="Microsoft.Dynamics.CRM.userquery?text=userquery EntityType" /><br /><br /> <xref href="Microsoft.Dynamics.CRM.savedquery?text=savedquery EntityType" />|
 
-The following sections contain a brief discussion of the CDS for Apps Web API operations performed, along with the corresponding HTTP messages and associated console output.
+The following sections contain a brief discussion of the Common Data Service Web API operations performed, along with the corresponding HTTP messages and associated console output.
 
 <a name="bkmk_sampleData"></a>
 
@@ -211,11 +211,11 @@ Contact basic info:
  
 Use filter options to set criteria for the results you want. You can  build simple to complex filters using a combination of query functions, comparison operators, and logical operators. More information:[Filter results](query-data-web-api.md#bkmk_filter).  
   
-Query functions are functions that can be used as a filter criteria in a query. There are standard query functions and CDS for Apps specific query functions. These functions accept parameters and return a `Boolean` value. This sample illustrates how to create a query for each type.  
+Query functions are functions that can be used as a filter criteria in a query. There are standard query functions and Common Data Service specific query functions. These functions accept parameters and return a `Boolean` value. This sample illustrates how to create a query for each type.  
   
 ### Standard query functions
 
-CDS for Apps supports a small subset of OData built-in query functions, specifically: `contains`, `endswith`, and `startswith`. For example, the `contains` standard query function allows us to filter for properties matching a string. In this operation, we are querying for all contacts with `fullname` containing the string `(sample)`. More information:[Standard query functions](query-data-web-api.md#bkmk_buildInQueryFunctions).  
+Common Data Service supports a small subset of OData built-in query functions, specifically: `contains`, `endswith`, and `startswith`. For example, the `contains` standard query function allows us to filter for properties matching a string. In this operation, we are querying for all contacts with `fullname` containing the string `(sample)`. More information:[Standard query functions](query-data-web-api.md#bkmk_buildInQueryFunctions).  
   
  **HTTP Request**  
   
@@ -361,11 +361,11 @@ Contacts filtered by fullname containing '(sample)':
   
 ```  
   
-### Common Data Service for Apps query functions
+### Common Data Service query functions
 
-CDS for Apps query functions provide a large number of options to build queries which are relevant for CDS for Apps. For a complete list of these functions, see <xref:Microsoft.Dynamics.CRM.QueryFunctionIndex>. More information:[Compose a query with functions](use-web-api-functions.md#bkmk_composeQueryWithFunctions)  
+Common Data Service query functions provide a large number of options to build queries which are relevant for Common Data Service. For a complete list of these functions, see <xref:Microsoft.Dynamics.CRM.QueryFunctionIndex>. More information:[Compose a query with functions](use-web-api-functions.md#bkmk_composeQueryWithFunctions)  
   
-You will use these query functions in a manner similar to the standard query functions. The main difference is, when using CDS for Apps query functions, you must provide the full name of the function including the parameter name(s). For example, to get a list of contacts created in the last hour, you can construct a query using the <xref href="Microsoft.Dynamics.CRM.LastXHours?text=LastXHours Function" />.  
+You will use these query functions in a manner similar to the standard query functions. The main difference is, when using Common Data Service query functions, you must provide the full name of the function including the parameter name(s). For example, to get a list of contacts created in the last hour, you can construct a query using the <xref href="Microsoft.Dynamics.CRM.LastXHours?text=LastXHours Function" />.  
   
  **HTTP Request**  
   
@@ -1091,7 +1091,7 @@ Contacts top 5 results:
 
 ### Result count
 
-You can get just the count of records from a collection-valued property or a count of matched entities in a filter. Getting a count tells us the number of possible entities in our result. However, the CDS for Apps server will return 5000 as the maximum count even if the result may have more. In this example, we constructed a filter with `jobtitle` containing either `Senior` or `Manager` and we also requested a `$count` of the result. The response contains the count in the `@odata.count` property as well as the results of the query. More information:[Retrieve a count of entities](query-data-web-api.md#bkmk_retrieveCount).  
+You can get just the count of records from a collection-valued property or a count of matched entities in a filter. Getting a count tells us the number of possible entities in our result. However, the Common Data Service server will return 5000 as the maximum count even if the result may have more. In this example, we constructed a filter with `jobtitle` containing either `Senior` or `Manager` and we also requested a `$count` of the result. The response contains the count in the `@odata.count` property as well as the results of the query. More information:[Retrieve a count of entities](query-data-web-api.md#bkmk_retrieveCount).  
   
  **HTTP Request**  
   
@@ -2233,7 +2233,7 @@ Saved User Query:
   
 ### See also
 
-[Use the Common Data Service for Apps Web API](overview.md)<br />
+[Use the Common Data Service Web API](overview.md)<br />
 [Query Data using the Web API](query-data-web-api.md)<br />
 [Retrieve and execute predefined queries](retrieve-and-execute-predefined-queries.md)<br />
 [Web API Query Data Sample (C#)](samples/query-data-csharp.md)<br />

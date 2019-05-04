@@ -1,10 +1,10 @@
 ---
-title: "Order results using entity attributes with LINQ (Common Data Service for Apps) | Microsoft Docs" 
+title: "Order results using entity attributes with LINQ (Common Data Service) | Microsoft Docs" 
 description: "Read how you can use lookup or OptionSet (Picklist) attributes to order results within a LINQ query"
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "brandonsimons" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -17,7 +17,7 @@ search.app:
 ---
 # Order results using entity attributes with LINQ
 
-In Common Data Service(CDS) for Apps, you can use lookup or OptionSet (Picklist) attributes to order results within a LINQ query. This topic shows several examples of this type of query.  
+In Common Data Service(Common Data Service) for Apps, you can use lookup or OptionSet (Picklist) attributes to order results within a LINQ query. This topic shows several examples of this type of query.  
   
 ## Using a Lookup Value to Order By  
 

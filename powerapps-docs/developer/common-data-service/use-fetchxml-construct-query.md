@@ -1,10 +1,10 @@
 ---
-title: "Use FetchXML to query data (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "FetchXML is a proprietary query language that is used in Common Data Service (CDS) for Apps. It’s based on a schema that describes the capabilities of the language." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Use FetchXML to query data (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "FetchXML is a proprietary query language that is used in Common Data Service. It’s based on a schema that describes the capabilities of the language." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "brandonsimons" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -18,7 +18,7 @@ search.app:
 
 # Use FetchXML to construct a query
 
-FetchXML is a proprietary query language that is used in Common Data Service (CDS) for Apps. It’s based on a schema that describes the capabilities of the language. The FetchXML language supports similar query capabilities as query expressions. In addition, it’s used as a serialized form of query, used to save a query as a user-owned saved view in the [UserQuery Entity](reference/entities/userquery.md) and as an organization-owned saved view in the [SavedQuery Entity](reference/entities/savedquery.md).  
+FetchXML is a proprietary query language that is used in Common Data Service. It’s based on a schema that describes the capabilities of the language. The FetchXML language supports similar query capabilities as query expressions. In addition, it’s used as a serialized form of query, used to save a query as a user-owned saved view in the [UserQuery Entity](reference/entities/userquery.md) and as an organization-owned saved view in the [SavedQuery Entity](reference/entities/savedquery.md).  
   
 A FetchXML query can be executed by using either the **Web API** or the **Organization service**.
 
@@ -44,7 +44,7 @@ In the following example, the **FetchXML** statement retrieves all accounts:
    <entity name='account'>  
       <attribute name='accountid'/>   
       <attribute name='name'/>   
-</entity>  
+   </entity>  
 </fetch>  
   
 ```  
@@ -73,7 +73,8 @@ In the following example, the **FetchXML** statement retrieves all accounts:
 <fetch mapping='logical' count='3'>  
   <entity name='account'>  
    <attribute name='name' alias='name'/>  
-  </entity></fetch>  
+  </entity>
+</fetch>  
 ```  
   
 This example shows an inner join between EntityMap and AttributeMap where the EntityMapID matches.  

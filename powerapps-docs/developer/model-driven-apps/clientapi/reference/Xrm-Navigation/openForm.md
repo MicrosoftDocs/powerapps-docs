@@ -1,9 +1,8 @@
 ---
 title: "openForm (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 11/09/2018
-ms.service: "crm-online"
+ms.date: 03/10/2019
+ms.service: powerapps
 ms.topic: "reference"
-applies_to: "Dynamics 365 (online)"
 ms.assetid: 0206c43b-b1fc-490d-a867-1d75331885a8
 author: "KumarVivek"
 ms.author: "kvivek"
@@ -15,8 +14,6 @@ search.app:
   - D365CE
 ---
 # openForm (Client API reference)
-
-
 
 [!INCLUDE[./includes/openForm-description.md](./includes/openForm-description.md)]
 
@@ -95,17 +92,14 @@ search.app:
 <td>formParameters</td>
 <td>Object</td>
 <td>No</td>
-<td>A dictionary object that passes extra parameters to the form. Invalid parameters will cause an error.<br/><br/>For information about passing parameters to a form, see [Set field values using parameters passed to a form](../../../set-field-values-using-parameters-passed-form.md) and [Configure a form to accept custom querystring parameters](../../../configure-form-accept-custom-querystring-parameters.md) </td>
+<td>A dictionary object that passes extra parameters to the form. Invalid parameters will cause an error.<br/><br/>For information about passing parameters to a form, see <a href="https://docs.microsoft.com/powerapps/developer/model-driven-apps/set-field-values-using-parameters-passed-form
+">Set field values using parameters passed to a form</a> and <a href="https://docs.microsoft.com/powerapps/developer/model-driven-apps/configure-form-accept-custom-querystring-parameters">Configure a form to accept custom querystring parameters</a></td>
 </tr>
 <tr>
 <td>successCallback</td>
 <td>Function</td>
 <td>No</td>
-<td>A function to execute when:
-<ul>
-<li>The record is saved in the quick create form.</li>
-<li>The record is saved in the quick create form for a new record created using <b>Save & New</b>. This only applies to <a href="/dynamics365/customer-engagement/admin/about-unified-interface" data-raw-source="[Unified Interface](/dynamics365/customer-engagement/admin/about-unified-interface)">Unified Interface</a>.</li>
-</ul>
+<td>A function to execute when the record is saved in the quick create form.
 
 This function is passed an object as a parameter. The object has a <b>savedEntityReference</b> array with the following properties to identify the record(s) displayed or created:
 <ul>
@@ -114,20 +108,10 @@ This function is passed an object as a parameter. The object has a <b>savedEntit
 <li><b>name</b>: The primary attribute value of the record displayed or created.</li></ul>
 
 <b>NOTE</b>:
-<ul>
-<li>On web client:
   <ul>
     <li>The <b>successCallback</b> function is not executed when you open a form for an existing or new record.</li>
-    <li>The <b>successCallback</b> function is executed only when you save a record in a quick create form that was opened using the <strong>openForm</strong> method.</li>
-    <li>When you open a quick create form and create a record, the <b>savedEntityReference</b> array will contain a single item.</li>
+    <li>The <b>successCallback</b> function is executed only when you save a record in a quick create form that was opened using the <strong>openForm</strong> method.</li>    
   </ul>
-</li>
-<li>On <a href="/dynamics365/customer-engagement/admin/about-unified-interface" data-raw-source="[Unified Interface](/dynamics365/customer-engagement/admin/about-unified-interface)">Unified Interface</a>:
-<ul>
-    <li>The <b>successCallback</b> function is not executed when you open a form for an existing or new record.</li>
-<li>The <b>successCallback</b> function is executed only when you save a record in a quick create form that was opened using the <strong>openForm</strong> method.</li>
-    <li>When you open a quick create form and create a record, the <b>savedEntityReference</b> array will contain a single item.</li>
-<li>When you open a quick create form, and create multiple records by clicking <b>Save & New</b>, the <b>savedEntityReference</b> array will contain multiple items, each item representing the record created using the quick create form.</li>
 </td>
 </tr>
 <tr>

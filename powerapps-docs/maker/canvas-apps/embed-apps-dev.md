@@ -15,7 +15,7 @@ search.app:
   - PowerApps
 ---
 # Integrate canvas apps into websites and other services
-The apps you build are often most useful when they're available right where people are doing their work. PowerApps enables you to embed canvas apps in an iframe so that you can integrate those apps into websites and other services, such as Power BI or SharePoint.
+The apps that you build are often most useful when they're available right where people do their work. By embedding canvas apps in an iframe, you can integrate those apps into websites and other services, such as Power BI or SharePoint.
 
 In this topic, we'll show you how to set parameters for app embedding; then we'll embed our Asset Ordering app in a website.
 
@@ -23,17 +23,16 @@ In this topic, we'll show you how to set parameters for app embedding; then we'l
 
 Keep the following restrictions in mind:
 
-* Only PowerApps users in the same tenant can access the embedded app.
-* To access PowerApps using Internet Explorer 11, you must turn off Compatibility View.
+- Only PowerApps users in the same tenant can access the embedded app.
+- To access PowerApps using Internet Explorer 11, you must turn off Compatibility View.
 
-You can also integrate PowerApps into SharePoint Online (without using an iframe). For more information, see [Generate an app from within SharePoint using PowerApps](app-from-sharepoint.md#generate-an-app-from-within-sharepoint-online).
+You can also integrate canvas apps into SharePoint Online without using an iframe. More information: [Use the PowerApps web part](https://support.office.com/article/use-the-powerapps-web-part-6285f05e-e441-408a-99d7-aa688195cd1c).
 
 ## Set URI parameters for your app
 If you have an app you want to embed, the first step is to set parameters for the Uniform Resource Identifier (URI), so that the iframe knows where to find the app. The URI is in the following form:
 
 ```
-https://web.powerapps.com/webplayer/iframeapp?source=iframe
-&appId=/providers/Microsoft.PowerApps/apps/[AppID]
+https://web.powerapps.com/webplayer/iframeapp?source=iframe&appId=/providers/Microsoft.PowerApps/apps/[AppID]
 ```
 
 > [!NOTE]
@@ -52,10 +51,10 @@ The app ID is available on powerapps.com. For the app you want to embed:
 1. In [powerapps.com](https://powerapps.microsoft.com), on the **Apps** tab, click or tap the ellipsis ( **. . .** ), then **Details**.
    
     ![Go to app details](./media/embed-apps-dev/details.png)
-2. Copy the **App ID**.
+1. Copy the **App ID**.
    
     ![Copy app ID from details](./media/embed-apps-dev/app-id.png)
-3. Substitute the `[AppID]` value in the URI. For our Asset Ordering app, the URI looks like this:
+1. Substitute the `[AppID]` value in the URI. For our Asset Ordering app, the URI looks like this:
    
     ```
     https://web.powerapps.com/webplayer/iframeapp?source=iframe&appId=/providers/Microsoft.PowerApps/apps/76897698-91a8-b2de-756e-fe2774f114f2
@@ -64,7 +63,7 @@ The app ID is available on powerapps.com. For the app you want to embed:
 ## Embed your app in a website
 Embedding your app is now as simple as adding the iframe to the HTML code for your site (or any other service that supports iframes, such as Power BI or SharePoint):
 
-```
+```html
 <iframe width="[W]" height="[H]" src="https://web.powerapps.com/webplayer/iframeapp?source=website&screenColor=rgba(165,34,55,1)&appId=/providers/Microsoft.PowerApps/apps/[AppID]" allow="geolocation; microphone; camera"/>
 ```
 
@@ -79,8 +78,7 @@ The following image shows the Asset Ordering app embedded in a Contoso sample we
 
 Keep the following points in mind for authenticating users of your app:
 
-* If your website uses Azure Active Directory (AAD) based authentication, no additional sign-in is required.
-* If your website uses any other sign-in mechanism or is not authenticated, your users see a sign-in prompt on the iframe. After they sign-in, they will be able to run the app as long as the author of the app has shared it with them.
+- If your website uses Azure Active Directory (AAD) based authentication, no additional sign-in is required.
+- If your website uses any other sign-in mechanism or is not authenticated, your users see a sign-in prompt on the iframe. After they sign-in, they will be able to run the app as long as the author of the app has shared it with them.
 
 As you can see, embedding apps is simple and powerful. Embedding enables you to bring apps right to the places you and your customers work – websites, Power BI dashboards, SharePoint pages, and more.
-

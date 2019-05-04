@@ -1,10 +1,9 @@
 ---
-title: "Web API types and operations (Common Data Service for Apps)| Microsoft Docs"
+title: "Web API types and operations (Common Data Service)| Microsoft Docs"
 description: "This topic describes what is available for you to use vis-a-vis the Web API and will introduce important topics and how you can find information you need from the documentation generated from the service and metadata documents as well as the documentation of the system entity types, functions, and actions"
 ms.custom: ""
-ms.date: 02/05/2019
-ms.reviewer: ""
-ms.service: "crm-online"
+ms.date: 04/30/2019
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -13,8 +12,8 @@ applies_to:
 ms.assetid: d80cfb87-d4f1-4c75-bcc8-4f54d1351e26
 caps.latest.revision: 27
 author: "brandonsimons" # GitHub ID
-ms.author: "jdaly"
-manager: "amyla"
+ms.author: "susikka"
+manager: "shujoshi"
 search.audienceType: 
   - developer
 search.app: 
@@ -23,7 +22,10 @@ search.app:
 ---
 # Web API types and operations
 
-In order to use the Web API you need to find information about what is available for you to use. The service describes itself via service and metadata documents that you can access. This topic will introduce important concepts and describe how you can find the information you need using documentation generated from the service and metadata documents as well as the documentation of the system entity types, functions, and actions.  
+In order to use the Web API you need to find information about what is available for you to use. The service describes itself via service and metadata documents that you can access. This topic will introduce important concepts and describe how you can find the information you need using documentation generated from the service and metadata documents as well as the documentation of the system entity types, functions, and actions. 
+
+> [!NOTE]
+> Information in this topic is also applicable to the Dynamics 365 for Customer Engagement apps users (online and on-premises).
   
 <a name="bkmk_terminology"></a>
   
@@ -127,7 +129,7 @@ Each `Annotation` element includes a `Term` attribute that describes the type of
 
 ## Entity types
 
-The <xref:Microsoft.Dynamics.CRM.EntityTypeIndex> lists each of the system entity types exposed through the web API which store business data. An entity type is a named structured type with a key. It defines the named properties and relationships of an entity. Entity types may derive by single inheritance from other entity types. <xref:Microsoft.Dynamics.CRM.MetadataEntityTypeIndex> lists each of the entity types used to manage system metadata. Both are entity types but the way you work with them is different. See [Use the Web API with Common Data Service for Apps metadata](use-web-api-metadata.md) for information about using model entities. Each entity type is included within an `EntityType` element in the `$metadata`. The following is the definition of the <xref href="Microsoft.Dynamics.CRM.account?text=account EntityType" /> from the `$metadata` with properties and navigation properties removed.  
+The <xref:Microsoft.Dynamics.CRM.EntityTypeIndex> lists each of the system entity types exposed through the web API which store business data. An entity type is a named structured type with a key. It defines the named properties and relationships of an entity. Entity types may derive by single inheritance from other entity types. <xref:Microsoft.Dynamics.CRM.MetadataEntityTypeIndex> lists each of the entity types used to manage system metadata. Both are entity types but the way you work with them is different. See [Use the Web API with Common Data Service metadata](use-web-api-metadata.md) for information about using model entities. Each entity type is included within an `EntityType` element in the `$metadata`. The following is the definition of the <xref href="Microsoft.Dynamics.CRM.account?text=account EntityType" /> from the `$metadata` with properties and navigation properties removed.  
   
 ```xml  
 <EntityType Name="account" BaseType="mscrm.crmbaseentity">  
@@ -166,7 +168,7 @@ By default, the entity set name matches the <xref href="Microsoft.Dynamics.CRM.E
 
 ### Alternate keys
 
-Although Common Data Service for Apps allows for creating alternate keys, only the primary key will be found in the default entities.  
+Although Common Data Service allows for creating alternate keys, only the primary key will be found in the default entities.  
   
  None of the system entities have alternate keys defined. If you define alternate keys for an entity, they will be included in the `$metadata` `EntityType` element as an `Annotation` like the following:  
   
@@ -233,7 +235,7 @@ Each property may also have limitations on whether it may be updated. This is de
 
 ### Primitive types
  
-OData supports a wide range of data types but Common Data Service for Apps doesn’t use all of them. The following table describes how CDS for Apps Organization service types are mapped to OData primitive types.  
+OData supports a wide range of data types but Common Data Service doesn’t use all of them. The following table describes how Common Data Service Organization service types are mapped to OData primitive types.  
   
 |Organization Service Type|Web API Type|Description|  
 |-------------------------------|------------------|-----------------|  
@@ -265,7 +267,7 @@ OData supports a wide range of data types but Common Data Service for Apps doesn
  
 ### Lookup properties
 
-For most single-valued navigation properties you will find a computed, read-only property that uses the following naming convention: `_<name>_value` where the `<name>` matches the name of the single-valued navigation property. The exception to this pattern is when a lookup attribute of the entity can accept multiple types of entity references. A common example is how the `incident` entity `customerid` attribute may be set to a reference that is either a `contact` or `account` entity. In the <xref href="Microsoft.Dynamics.CRM.incident?text=incident EntityType" /> [Single-valued navigation properties](/dynamics365/customer-engagement/web-api/incident?view=dynamics-ce-odata-9#Single-valued_navigation_properties) you will find `customerid_account` and `customerid_contact` as separate single-valued navigation properties to reflect the customer associated with an opportunity. If you set one of these single-valued navigation properties, the other will be set to null because they are both bound to the `customerid` attribute. In the [<xref href="Microsoft.Dynamics.CRM.incident?text=incident EntityType" /> [Properties](/dynamics365/customer-engagement/web-api/incident?view=dynamics-ce-odata-9#Properties) you’ll find a `_customerid_value` lookup property that contains the same value that is set for whichever of the single-valued navigation properties contain a value.  
+For most single-valued navigation properties you will find a computed, read-only property that uses the following naming convention: `_<name>_value` where the `<name>` matches the name of the single-valued navigation property. The exception to this pattern is when a lookup attribute of the entity can accept multiple types of entity references. A common example is how the `incident` entity `customerid` attribute may be set to a reference that is either a `contact` or `account` entity. In the <xref href="Microsoft.Dynamics.CRM.incident?text=incident EntityType" /> [Single-valued navigation properties](/dynamics365/customer-engagement/web-api/incident?view=dynamics-ce-odata-9#Single-valued_navigation_properties) you will find `customerid_account` and `customerid_contact` as separate single-valued navigation properties to reflect the customer associated with an opportunity. If you set one of these single-valued navigation properties, the other will be set to null because they are both bound to the `customerid` attribute. In the <xref href="Microsoft.Dynamics.CRM.incident?text=incident EntityType" /> [Properties](/dynamics365/customer-engagement/web-api/incident?view=dynamics-ce-odata-9#Properties) you’ll find a `_customerid_value` lookup property that contains the same value that is set for whichever of the single-valued navigation properties contain a value.  
   
 Generally, you should avoid using lookup properties and use the corresponding single-valued navigation properties instead. These properties have been included because they may be useful for certain integration scenarios. These properties are read-only and computed because they will simply reflect the changes applied using the corresponding single-valued navigation property.  
   
@@ -373,6 +375,7 @@ An ordinary intersect entity has only the four basic properties required to main
   
 ### See also  
 
-[Use the Common Data Service for Apps Web API](overview.md)<br />
-[Authenticate to Common Data Service for Apps with the Web API](authenticate-web-api.md)<br />
-[Perform operations using the Web API](perform-operations-web-api.md)
+[Use the Common Data Service Web API](overview.md)<br />
+[Authenticate to Common Data Service with the Web API](authenticate-web-api.md)<br />
+[Perform operations using the Web API](perform-operations-web-api.md)<br/>
+[Developer Guide for Dynamics 365 for Customer Engagement apps](/dynamics365/customer-engagement/developer/developer-guide)

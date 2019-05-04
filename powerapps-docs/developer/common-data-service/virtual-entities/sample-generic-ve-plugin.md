@@ -1,10 +1,10 @@
 ---
-title: "Sample: Generic virtual entity data provider plug-in (Common Data Service for Apps) | Microsoft Docs"
+title: "Sample: Generic virtual entity data provider plug-in (Common Data Service) | Microsoft Docs"
 description: "Sample demonstrates how to implement a generic custom Dynamics 365 virtual entity plug-in."
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "crm-online"
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "samples"
@@ -25,7 +25,7 @@ search.app:
 
 ## Demonstrates
 
-This sample shows a minimal implementation for a generic CDS for Apps virtual entity data provider plug-in, **DropboxRetrieveMultiplePlugin**, for the [Dropbox](https://www.dropbox.com/) file-sharing service. It uses the "bare metal" approach, translating the <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> through the creation of the custom visitor class, **DropBoxExpressionVisitor**. It returns a collection of the files that satisfy the search criteria as an <xref:Microsoft.Xrm.Sdk.EntityCollection>. 
+This sample shows a minimal implementation for a generic Common Data Service virtual entity data provider plug-in, **DropboxRetrieveMultiplePlugin**, for the [Dropbox](https://www.dropbox.com/) file-sharing service. It uses the "bare metal" approach, translating the <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> through the creation of the custom visitor class, **DropBoxExpressionVisitor**. It returns a collection of the files that satisfy the search criteria as an <xref:Microsoft.Xrm.Sdk.EntityCollection>. 
 
 ## Getting started
 

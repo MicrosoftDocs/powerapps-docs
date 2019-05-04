@@ -1,10 +1,10 @@
 ---
-title: "Source control with solution files (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Source control with solution files (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "The SolutionPackager tool can be used with any source control system. After a solution .zip file has been extracted to a folder, simply add and submit the files to your source control system. These files can then be synchronized on another computer where they can be packed into a new identical solution .zip file." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "shmcarth" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -24,7 +24,7 @@ The SolutionPackager tool can be used with any source control system. After a so
  As further customizations and changes are necessary for the solution, developers should edit or customize components through existing means, export again to create a .zip file, and extract the compressed solution file into the same folder.  
   
 > [!IMPORTANT]
->  Except for the sections described in [When to edit the customizations file](/model-driven-apps/when-edit-customization-file.md), manual editing of extracted component files and .zip files is not supported.  
+>  Except for the sections described in [When to edit the customizations file](../model-driven-apps/when-edit-customization-file.md), manual editing of extracted component files and .zip files is not supported.  
   
  When the SolutionPackager tool extracts the component files it will not overwrite existing component files of the same name if the file contents are identical. In addition, the tool honors the read-only attribute on component files producing a warning in the console window that particular files were not written. This enables the user to check out, from source control, the minimal set of files that are changing. The `/clobber` parameter can be used to override and cause read-only files to be written or deleted. The `/allowWrite` parameter can be used to assess what impact an extract operation has without actually causing any files to be written or deleted. Use of the `/allowWrite` parameter with verbose logging is effective.  
   
@@ -36,7 +36,7 @@ The SolutionPackager tool can be used with any source control system. After a so
   
 1. Developer A and B are both working on the same solution.  
   
-2. On independent computers, they both get the latest sources of the solution from source control, pack, and import an unmanaged solution .zip file into independent CDS for Apps organizations.  
+2. On independent computers, they both get the latest sources of the solution from source control, pack, and import an unmanaged solution .zip file into independent Common Data Service organizations.  
   
 3. Developer A customizes the “Active Contacts” system view and the main form for the Contact entity.  
   
@@ -88,7 +88,7 @@ The SolutionPackager tool can be used with any source control system. After a so
   
         3.  If the prior change can be deemed unnecessary, developer B allows his copy of the file to overwrite the version in source control and submits.  
   
-    Whether working on a shared organization or independent organizations, team development of CDS for Apps solutions requires those actively working on a common solution to be aware of the work of others. The SolutionPackager tool does not fully remove this need but it does enable easy merging of non-conflicting changes at the source control level, and it proactively highlights the concise components where conflicts have arisen.  
+    Whether working on a shared organization or independent organizations, team development of Common Data Service solutions requires those actively working on a common solution to be aware of the work of others. The SolutionPackager tool does not fully remove this need but it does enable easy merging of non-conflicting changes at the source control level, and it proactively highlights the concise components where conflicts have arisen.  
   
     The next sections are the generic processes to effectively use the SolutionPackager tool in source control when developing with teams. These work equally with independent organizations or shared development organizations, though with shared organizations the export and extract will naturally include all changes present within the solution, not just those made by the developer performing the export. Similarly, when importing a solution .zip file the natural behavior to overwrite all components will occur.  
   
@@ -96,7 +96,7 @@ The SolutionPackager tool can be used with any source control system. After a so
 ## Create a solution  
  The following procedure identifies the typical steps used when first creating a solution.  
   
-1. In a clean organization, create a solution on CDS for Apps server, and then add or create components as necessary.  
+1. In a clean organization, create a solution on Common Data Service server, and then add or create components as necessary.  
   
 2. When you are ready to check in, do the following.  
   

@@ -4,7 +4,7 @@ description: "Learn how to create one-to-many or many-to-one entity relationship
 ms.custom: ""
 ms.date: 06/11/2018
 ms.reviewer: ""
-ms.service: "crm-online"
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -23,7 +23,7 @@ search.app:
 ---
 # Create and edit One-to-many or Many-to-one entity relationships using PowerApps portal
 
-The [PowerApps portal](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) provides an easy way to create and edit 1:N (one-to-many) or N:1 (many-to-one) relationships for  Common Data Service for Apps.
+The [PowerApps portal](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) provides an easy way to create and edit 1:N (one-to-many) or N:1 (many-to-one) relationships for  Common Data Service.
 
 The portal enables configuring the most common options, but certain options can only be set using solution explorer. More information: 
 - [Create and edit 1:N (one-to-many) or N:1 (many-to-one) relationships](create-edit-1n-relationships.md)

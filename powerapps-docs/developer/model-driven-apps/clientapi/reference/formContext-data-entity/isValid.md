@@ -1,7 +1,7 @@
 ---
 title: "isValid (Client API reference) in model-driven apps| MicrosoftDocs"
 ms.date: 10/31/2018
-ms.service: "crm-online"
+ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 93eba632-5e40-4515-bb4b-4e8cd8303322

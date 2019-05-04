@@ -2,7 +2,7 @@
 title: "formContext.ui.navigation item (Client API reference) in model-driven apps| MicrosoftDocs"
 description: "Learn about working with processes in model-driven apps using client API."
 ms.date: 10/31/2018
-ms.service: "crm-online"
+ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 661d084d-744b-44b0-be82-abde6f6e7e90

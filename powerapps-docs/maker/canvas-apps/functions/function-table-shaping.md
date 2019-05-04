@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
-ms.date: 08/24/2018
+ms.date: 04/04/2019
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -43,9 +43,20 @@ Use the **RenameColumns** function to rename one or more columns of a table by p
 
 The **ShowColumns** function includes columns of a table and drops all other columns. You can use **ShowColumns** to create a single-column table from a multi-column table.  **ShowColumns** includes columns, and **DropColumns** excludes columns.  
 
-For all these functions, the result is a new table with the transform applied.  The original table isn't modified.
+For all these functions, the result is a new table with the transform applied. The original table isn't modified. You can't modify an existing table with a formula. SharePoint, Common Data Service, SQL Server, and other data sources provide tools for modifying the columns of lists, entities, and tables, which are often referred to as the schema. The functions in this topic only transform an input table, without modifying the original, into an output table for further use.
 
-[!INCLUDE [delegation-no](../../../includes/delegation-no.md)]
+The arguments to these functions support delegation. For example, a **Filter** function used as an argument to pull in related records searches through all listings, even if the **'[dbo].[AllListings]'** data source contains a million rows:
+
+```powerapps-dot
+AddColumns( RealEstateAgents, 
+	"Listings",  
+	Filter(  '[dbo].[AllListings]', ListingAgentName = AgentName ) 
+)
+```
+
+However, the output of these functions is subject to the [non-delegation record limit](../delegation-overview.md#non-delegable-limits).  In this example, only 500 records are returned even if the **RealEstateAgents** data source has 501 or more records.
+
+If you use **AddColumns** in this manner, **Filter** must make separate calls to the data source for each of those first records in **RealEstateAgents**, which causes a lot of network chatter. If **[dbo].[AllListings]** is small enough and doesn't change often, you could call the **Collect** function in [**OnStart**](signals.md#app) to cache the data source in your app when it starts. As an alternative, you could restructure your app so that you pull in the related records only when the user asks for them.  
 
 ## Syntax
 **AddColumns**( *Table*, *ColumnName1*, *Formula1* [, *ColumnName2*, *Formula2*, ... ] )
@@ -87,11 +98,38 @@ None of these examples modify the **IceCreamSales** data source. Each function t
 | **DropColumns(<br>RenameColumns(<br>AddColumns( IceCreamSales, "Revenue",<br>UnitPrice * QuantitySold ),<br>"UnitPrice", "Price" ),<br>"Quantity" )** |Performs the following table transforms in order, starting from the inside of the formula: <ol><li>Adds a **Revenue** column based on the per-record calculation of **UnitPrice * Quantity**.<li>Renames **UnitPrice** to **Price**.<li>Excludes the **Quantity** column.</ol>  Note that order is important. For example, we can't calculate with **UnitPrice** after it has been renamed. |![](media/function-table-shaping/icecream-all-transforms.png) |
 
 ### Step by step
-1. Import or create a collection named **Inventory** as the first subprocedure in [Show text and images in a gallery](../show-images-text-gallery-sort-filter.md) describes.
-2. Add a button, and set its **[OnSelect](../controls/properties-core.md)** property to this formula:
-   
-    **ClearCollect(Inventory2, RenameColumns(Inventory, "ProductName", "JacketID"))**
-3. Press F5, select the button that you just created, and then press Esc to return to the design workspace.
-4. On the **File** menu, select **Collections**.
-5. Confirm that you've created a collection, named **Inventory2**. The new collection contains the same information as **Inventory** except that the column named **ProductName** in **Inventory** is named **JacketID** in **Inventory2**.
 
+Let's try some of the examples from earlier in this topic.  
+
+1. Create a collection by adding a **[Button](../controls/control-button.md)** control and setting its **OnSelect** property to this formula:
+
+	```powerapps-dot
+	ClearCollect( IceCreamSales, 
+		Table(
+        	{ Flavor: "Strawberry", UnitPrice: 1.99, QuantitySold: 20 }, 
+        	{ Flavor: "Chocolate", UnitPrice: 2.99, QuantitySold: 45 },
+        	{ Flavor: "Vanilla", UnitPrice: 1.50, QuantitySold: 35 }
+		)
+	)
+	```
+
+1. Run the formula by selecting the button while holding down the Alt key.
+
+1. Add a second **Button** control, set its **OnSelect** property to this formula, and then run it:
+
+	```powerapps-dot
+	ClearCollect( FirstExample, 
+		AddColumns( IceCreamSales, "Revenue", UnitPrice * QuantitySold )
+	) 
+	```
+1. On the **File** menu, select **Collections**, and then select **IceCreamSales** to show that collection.
+ 
+	As this graphic shows, the second formula didn't modify this collection. The **AddColumns** function used **IceCreamSales** as a read-only argument; the function didn't modify the table to which that argument refers.
+	
+	![Collection viewer showing three records of the Ice Cream Sales collection that doesn't include a Revenue column](media/function-table-shaping/ice-cream-sales-collection.png)
+
+1. Select **FirstExample**.
+
+	As this graphic shows, the second formula returned a new table with the added column. The **ClearCollect** function captured the new table in the **FirstExample** collection, adding something to the original table as it flowed through the function without modifying the source:
+
+	![Collection viewer showing three records of the First Example collection that includes a new Revenue column](media/function-table-shaping/first-example-collection.png)

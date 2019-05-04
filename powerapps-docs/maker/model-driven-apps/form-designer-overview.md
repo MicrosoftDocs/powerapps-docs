@@ -3,7 +3,7 @@ title: "Overview of the model-driven form designer | MicrosoftDocs"
 ms.custom: ""
 ms.date: 01/07/2019
 ms.reviewer: ""
-ms.service: "crm-online"
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
@@ -45,4 +45,4 @@ The form designer interface has the following areas:
    ![Form designer layout](media/form-designer.png)
 
 ## See also
-[Create and edit forms using the form designer](create-and-edit-forms.md)
+[Create or edit forms using the form designer](create-and-edit-forms.md)

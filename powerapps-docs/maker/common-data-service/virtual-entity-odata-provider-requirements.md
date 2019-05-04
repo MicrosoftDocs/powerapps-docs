@@ -1,9 +1,9 @@
 ---
-title: "Use the Virtual Entity OData v4 Data Provider with Common Data Service for Apps | MicrosoftDocs"
+title: "Use the Virtual Entity OData v4 Data Provider with Common Data Service | MicrosoftDocs"
 ms.custom: ""
 ms.date: 06/04/2018
 ms.reviewer: ""
-ms.service: "crm-online"
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -28,16 +28,16 @@ This topic describes how to configure the OData v4 Data Provider as well as the 
 
 ## OData v4 data provider best practices
 
-- Common Data Service for Apps requires that all entities have an ID attribute, this ID is known as a unique identifier and the value must be a guid.  You can only map ID fields to external fields with the `Edm.Guid` data type.  You can’t map an `Edm.Int32` data type to a Unique Identifier data type field in CDS for Apps.
--  OData entities with nullable properties must be set to match the mapped field in the virtual entity. For example, an OData entity property with Nullable=False must have the mapped field in CDS for Apps **Field Requirement** attribute set to **Business Required**. 
+- Common Data Service requires that all entities have an ID attribute, this ID is known as a unique identifier and the value must be a guid.  You can only map ID fields to external fields with the `Edm.Guid` data type.  You can’t map an `Edm.Int32` data type to a Unique Identifier data type field in Common Data Service.
+-  OData entities with nullable properties must be set to match the mapped field in the virtual entity. For example, an OData entity property with Nullable=False must have the mapped field in Common Data Service **Field Requirement** attribute set to **Business Required**. 
 - For retrieve multiple queries, such as when you load data in to a grid, control the size of the dataset returned from the external data source by using the select and filter query parameters.
 - If not already enabled, system administrators should enable plug-in tracing. Once enabled, all errors from the OData endpoint are captured in the plug-in trace log. More information:  [Administrator Guide: System Settings dialog box - Customization tab](/dynamics365/customer-engagement/admin/system-settings-dialog-box-customization-tab) 
 
 ## Data type mapping
 
-The following table lists the OData Entity Data Model (EDM) data type mappings with CDS for Apps data types. 
+The following table lists the OData Entity Data Model (EDM) data type mappings with Common Data Service data types. 
 
-|OData Data Type|CDS for Apps Data Type  |
+|OData Data Type|Common Data Service Data Type  |
 |---------|---------|
 |`Edm.Boolean`|Two Options|
 |`Edm.DateTime`|Date and Time|
@@ -69,7 +69,7 @@ This procedure shows you how to use the out-of-box OData Data Provider to use as
 1. On the actions toolbar, click **New**.  
 1. On the **Select Data Provider** dialog box, select from the following data sources, and then click **OK**.  
   
-    - **OData v4 Data Provider**. CDS for Apps includes an Odata v4 data provider that can be used to connect to data sources that support the OData v4 open standard.  
+    - **OData v4 Data Provider**. Common Data Service includes an Odata v4 data provider that can be used to connect to data sources that support the OData v4 open standard.  
     - *Custom data provider*. If you've imported a data  provider plug-in, the data provider will appear here. More information:  [Developer Documentation: Get started with virtual entities](/dynamics365/customer-engagement/developer/virtual-entities/get-started-ve)  
     
 1. On the **New Data Source** properties page, complete the following fields, and then save the record.  

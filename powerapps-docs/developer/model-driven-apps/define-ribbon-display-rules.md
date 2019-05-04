@@ -4,7 +4,7 @@ description: "Learn about defining specific rules to control when the ribbon ele
 keywords: ""
 ms.date: 10/31/2018
 ms.service:
-  - "powerapps"
+  - powerapps
 ms.custom:
   - ""
 ms.topic: article
@@ -183,7 +183,7 @@ When configuring ribbon elements, you can define specific rules to control when 
 - NoRelationship  
 
   `<SkuRule>`  
-  Use this kind of rule to display a ribbon element for a specific SKU version of Common Data Service for Apps, as follows:  
+  Use this kind of rule to display a ribbon element for a specific SKU version of Common Data Service, as follows:  
 
 - OnPremise  
 

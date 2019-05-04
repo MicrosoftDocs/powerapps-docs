@@ -1,6 +1,6 @@
 ---
-title: Configure entity relationship cascading behavior (Common Data Service for Apps) | Microsoft Docs
-description: Configure cascading behaviors for a one-to-many entity relationship in Common Data Service for Apps to preserve data integrity and automate business processes.
+title: Configure entity relationship cascading behavior (Common Data Service) | Microsoft Docs
+description: Configure cascading behaviors for a one-to-many entity relationship in Common Data Service to preserve data integrity and automate business processes.
 services: ''
 suite: powerapps
 documentationcenter: na

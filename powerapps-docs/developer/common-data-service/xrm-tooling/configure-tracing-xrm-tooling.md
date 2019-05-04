@@ -1,10 +1,10 @@
 ---
-title: "Configure tracing for XRM tooling (Common Data Service for Apps)| Microsoft Docs"
+title: "Configure tracing for XRM tooling (Common Data Service)| Microsoft Docs"
 description: "Learn how you can configure tracing for components such as operation calls, warnings, exceptions, and other significant events in XRM Tooling"
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 03/27/2019
 ms.reviewer: ""
-ms.service: "crm-online"
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -13,7 +13,7 @@ applies_to:
 ms.assetid: d7586a5a-40da-427e-bbeb-4f8a371a8dcf
 caps.latest.revision: 8
 author: "MattB-msft"
-ms.author: "kvivek"
+ms.author: "nabuthuk"
 manager: "kvivek"
 search.audienceType: 
   - developer
@@ -28,8 +28,7 @@ You can enable tracing to record data related to process milestones across all c
 - A trace source  
 - A trace listener  
 - A trace level other than **Off**. These are the other values that you can specify: **Error**, **Warning**, **Info**, and **Verbose**.  
-  
- Here is the configuration for enabling tracing for a component in XRM tooling. For example, the following configuration only enables tracing for the Microsoft.Xrm.Tooling.CrmConnectControl component:  
+Here is the configuration for enabling tracing for a component in XRM tooling. For example, the following configuration only enables tracing for the Microsoft.Xrm.Tooling.CrmConnectControl component:  
   
 ```xml  
 </configuration>  

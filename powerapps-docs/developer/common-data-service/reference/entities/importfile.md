@@ -1,20 +1,13 @@
 ---
-title: "ImportFile Entity Reference (Common Data Service for Apps)| Microsoft Docs"
+title: "ImportFile Entity Reference (Common Data Service)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the ImportFile entity."
-services: ''
-suite: powerapps
-documentationcenter: na
-author: JimDaly
-manager: kvivek
-editor: ''
-tags: ''
-ms.service: powerapps
-ms.devlang: na
-ms.topic: reference
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.date: 10/31/2018
-ms.author: jdaly
+ms.date: 04/01/2019
+ms.service: "powerapps"
+ms.topic: "reference"
+ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
+author: "KumarVivek"
+ms.author: "kvivek"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
@@ -25,19 +18,42 @@ search.app:
 
 File name of file used for import.
 
+
+## Messages
+
+|Message|Web API Operation|SDK Assembly|
+|-|-|-|
+|Assign|PATCH [*org URI*]/api/data/v9.0/importfiles(*importfileid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+|Create|POST [*org URI*]/api/data/v9.0/importfiles<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Delete|DELETE [*org URI*]/api/data/v9.0/importfiles(*importfileid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|GetDistinctValuesImportFile|<xref href="Microsoft.Dynamics.CRM.GetDistinctValuesImportFile?text=GetDistinctValuesImportFile Function" />|<xref:Microsoft.Crm.Sdk.Messages.GetDistinctValuesImportFileRequest>|
+|GetHeaderColumnsImportFile|<xref href="Microsoft.Dynamics.CRM.GetHeaderColumnsImportFile?text=GetHeaderColumnsImportFile Function" />|<xref:Microsoft.Crm.Sdk.Messages.GetHeaderColumnsImportFileRequest>|
+|GrantAccess|<xref href="Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
+|ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
+|Retrieve|GET [*org URI*]/api/data/v9.0/importfiles(*importfileid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/importfiles<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|RetrieveParsedDataImportFile|<xref href="Microsoft.Dynamics.CRM.RetrieveParsedDataImportFile?text=RetrieveParsedDataImportFile Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveParsedDataImportFileRequest>|
+|RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
+|RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
+|RevokeAccess|<xref href="Microsoft.Dynamics.CRM.RevokeAccess?text=RevokeAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
+|Update|PATCH [*org URI*]/api/data/v9.0/importfiles(*importfileid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+
 ## Entity Properties
 
-**DisplayName**: Import Source File<br />
-**DisplayCollectionName**: Imports<br />
-**SchemaName**: ImportFile<br />
-**CollectionSchemaName**: ImportFiles<br />
-**LogicalName**: importfile<br />
-**LogicalCollectionName**: importfiles<br />
-**EntitySetName**: importfiles<br />
-**PrimaryIdAttribute**: importfileid<br />
-**PrimaryNameAttribute**: name<br />
-**OwnershipType**: UserOwned<br />
-**IsBPFEntity**: False<br />
+|Property|Value|
+|--------|-----|
+|CollectionSchemaName|ImportFiles|
+|DisplayCollectionName|Imports|
+|DisplayName|Import Source File|
+|EntitySetName|importfiles|
+|IsBPFEntity|False|
+|LogicalCollectionName|importfiles|
+|LogicalName|importfile|
+|OwnershipType|UserOwned|
+|PrimaryIdAttribute|importfileid|
+|PrimaryNameAttribute|name|
+|SchemaName|ImportFile|
+
 <a name="writable-attributes"></a>
 
 ## Writable attributes
@@ -75,399 +91,488 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 ### <a name="BKMK_Content"></a> Content
 
-**Description**: Stores the content of the import file, stored as comma-separated values.<br />
-**DisplayName**: <br />
-**LogicalName**: content<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 1073741823
+|Property|Value|
+|--------|-----|
+|Description|Stores the content of the import file, stored as comma-separated values.|
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|content|
+|MaxLength|1073741823|
+|RequiredLevel|SystemRequired|
+|Type|String|
 
 
 ### <a name="BKMK_DataDelimiterCode"></a> DataDelimiterCode
 
-**Description**: Select the single-character data delimiter used in the import file. This is typically a single or double quotation mark.<br />
-**DisplayName**: Data Delimiter<br />
-**LogicalName**: datadelimitercode<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**Type**: Picklist<br />
-**Options**:
+|Property|Value|
+|--------|-----|
+|Description|Select the single-character data delimiter used in the import file. This is typically a single or double quotation mark.|
+|DisplayName|Data Delimiter|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|datadelimitercode|
+|RequiredLevel|SystemRequired|
+|Type|Picklist|
 
-- **Value**: 1 **Label**: DoubleQuote
-- **Value**: 2 **Label**: None
-- **Value**: 3 **Label**: SingleQuote
+#### DataDelimiterCode Options
+
+|Value|Label|
+|-----|-----|
+|1|DoubleQuote|
+|2|None|
+|3|SingleQuote|
 
 
 
 ### <a name="BKMK_EnableDuplicateDetection"></a> EnableDuplicateDetection
 
-**Description**: Select whether duplicate-detection rules should be run against the import job.<br />
-**DisplayName**: Enable Duplicate Detection<br />
-**LogicalName**: enableduplicatedetection<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Boolean<br />
-**Options**:
+|Property|Value|
+|--------|-----|
+|Description|Select whether duplicate-detection rules should be run against the import job.|
+|DisplayName|Enable Duplicate Detection|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|enableduplicatedetection|
+|RequiredLevel|None|
+|Type|Boolean|
 
-- **TrueOption Value**: 1 **Label**: Yes
-- **FalseOption Value**: 0 **Label**: No
+#### EnableDuplicateDetection Options
+
+|Value|Label|
+|-----|-----|
+|1|Yes|
+|0|No|
 
 **DefaultValue**: False
 
 
+
 ### <a name="BKMK_EntityKeyId"></a> EntityKeyId
 
-**Description**: Unique identifier of the Alternate key Id<br />
-**DisplayName**: Entity Key ID<br />
-**LogicalName**: entitykeyid<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Uniqueidentifier<br />
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier of the Alternate key Id|
+|DisplayName|Entity Key ID|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|entitykeyid|
+|RequiredLevel|None|
+|Type|Uniqueidentifier|
 
 
 ### <a name="BKMK_FieldDelimiterCode"></a> FieldDelimiterCode
 
-**Description**: Select the character that is used to separate each field in the import file. Typically, it is a comma.<br />
-**DisplayName**: Field Delimiter<br />
-**LogicalName**: fielddelimitercode<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**Type**: Picklist<br />
-**Options**:
+|Property|Value|
+|--------|-----|
+|Description|Select the character that is used to separate each field in the import file. Typically, it is a comma.|
+|DisplayName|Field Delimiter|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|fielddelimitercode|
+|RequiredLevel|SystemRequired|
+|Type|Picklist|
 
-- **Value**: 1 **Label**: Colon
-- **Value**: 2 **Label**: Comma
-- **Value**: 3 **Label**: Tab
-- **Value**: 4 **Label**: Semicolon
+#### FieldDelimiterCode Options
+
+|Value|Label|
+|-----|-----|
+|1|Colon|
+|2|Comma|
+|3|Tab|
+|4|Semicolon|
 
 
 
 ### <a name="BKMK_FileTypeCode"></a> FileTypeCode
 
-**Description**: Shows the type of source file that is uploaded for import.<br />
-**DisplayName**: File Type<br />
-**LogicalName**: filetypecode<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**Type**: Picklist<br />
-**Options**:
+|Property|Value|
+|--------|-----|
+|Description|Shows the type of source file that is uploaded for import.|
+|DisplayName|File Type|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|filetypecode|
+|RequiredLevel|SystemRequired|
+|Type|Picklist|
 
-- **Value**: 0 **Label**: CSV
-- **Value**: 1 **Label**: XML Spreadsheet 2003
-- **Value**: 2 **Label**: Attachment
-- **Value**: 3 **Label**: XLSX
+#### FileTypeCode Options
+
+|Value|Label|
+|-----|-----|
+|0|CSV|
+|1|XML Spreadsheet 2003|
+|2|Attachment|
+|3|XLSX|
 
 
 
 ### <a name="BKMK_ImportFileId"></a> ImportFileId
 
-**Description**: Unique identifier of the import file.<br />
-**DisplayName**: Import<br />
-**LogicalName**: importfileid<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**IsValidForUpdate**: False<br />
-**Type**: Uniqueidentifier<br />
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier of the import file.|
+|DisplayName|Import|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|IsValidForUpdate|False|
+|LogicalName|importfileid|
+|RequiredLevel|SystemRequired|
+|Type|Uniqueidentifier|
 
 
 ### <a name="BKMK_ImportId"></a> ImportId
 
-**Description**: Choose the import job that the file was uploaded for.<br />
-**DisplayName**: Import Job ID<br />
-**LogicalName**: importid<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**Type**: Lookup<br />
-**Targets**: import
+|Property|Value|
+|--------|-----|
+|Description|Choose the import job that the file was uploaded for.|
+|DisplayName|Import Job ID|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|importid|
+|RequiredLevel|SystemRequired|
+|Targets|import|
+|Type|Lookup|
 
 
 ### <a name="BKMK_ImportMapId"></a> ImportMapId
 
-**Description**: Choose a data map to match the import file and its column headers with the record types and fields in Microsoft Dynamics 365. If the column headers in the file match the display names of the target fields in Microsoft Dynamics 365, we import the data automatically. If not, you can manually define matches during import.<br />
-**DisplayName**: Data Map<br />
-**LogicalName**: importmapid<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Lookup<br />
-**Targets**: importmap
+|Property|Value|
+|--------|-----|
+|Description|Choose a data map to match the import file and its column headers with the record types and fields in Microsoft Dynamics 365. If the column headers in the file match the display names of the target fields in Microsoft Dynamics 365, we import the data automatically. If not, you can manually define matches during import.|
+|DisplayName|Data Map|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|importmapid|
+|RequiredLevel|None|
+|Targets|importmap|
+|Type|Lookup|
 
 
 ### <a name="BKMK_IsFirstRowHeader"></a> IsFirstRowHeader
 
-**Description**: Select whether the first row of the import file contains column headings, which are used for data mapping during the import job.<br />
-**DisplayName**: Is First Row Header<br />
-**LogicalName**: isfirstrowheader<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**Type**: Boolean<br />
-**Options**:
+|Property|Value|
+|--------|-----|
+|Description|Select whether the first row of the import file contains column headings, which are used for data mapping during the import job.|
+|DisplayName|Is First Row Header|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|isfirstrowheader|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
 
-- **TrueOption Value**: 1 **Label**: Yes
-- **FalseOption Value**: 0 **Label**: No
+#### IsFirstRowHeader Options
+
+|Value|Label|
+|-----|-----|
+|1|Yes|
+|0|No|
 
 **DefaultValue**: False
 
 
+
 ### <a name="BKMK_Name"></a> Name
 
-**Description**: Shows the name of the import file. This name is based on the name of the uploaded file.<br />
-**DisplayName**: Import Name<br />
-**LogicalName**: name<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 256
+|Property|Value|
+|--------|-----|
+|Description|Shows the name of the import file. This name is based on the name of the uploaded file.|
+|DisplayName|Import Name|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|name|
+|MaxLength|256|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_OwnerId"></a> OwnerId
 
-**Description**: Enter the user who is assigned to follow up with or manage the import file. This field is updated every time the import file is assigned to a different user.<br />
-**DisplayName**: Owner<br />
-**LogicalName**: ownerid<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**Type**: Owner<br />
-**Targets**: systemuser,team
+|Property|Value|
+|--------|-----|
+|Description|Enter the user who is assigned to follow up with or manage the import file. This field is updated every time the import file is assigned to a different user.|
+|DisplayName|Owner|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|ownerid|
+|RequiredLevel|SystemRequired|
+|Targets|systemuser,team|
+|Type|Owner|
 
 
 ### <a name="BKMK_OwnerIdType"></a> OwnerIdType
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: owneridtype<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**Type**: EntityName<br />
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owneridtype|
+|RequiredLevel|SystemRequired|
+|Type|EntityName|
 
 
 ### <a name="BKMK_ProcessCode"></a> ProcessCode
 
-**Description**: Tells whether the import file should be ignored or processed during the import.<br />
-**DisplayName**: Process Code<br />
-**LogicalName**: processcode<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**Type**: Picklist<br />
-**Options**:
+|Property|Value|
+|--------|-----|
+|Description|Tells whether the import file should be ignored or processed during the import.|
+|DisplayName|Process Code|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|processcode|
+|RequiredLevel|SystemRequired|
+|Type|Picklist|
 
-- **Value**: 1 **Label**: Process
-- **Value**: 2 **Label**: Ignore
-- **Value**: 3 **Label**: Internal
+#### ProcessCode Options
+
+|Value|Label|
+|-----|-----|
+|1|Process|
+|2|Ignore|
+|3|Internal|
 
 
 
 ### <a name="BKMK_RecordsOwnerId"></a> RecordsOwnerId
 
-**Description**: Choose the user that the records created during the import job should be assigned to.<br />
-**DisplayName**: Records Owner<br />
-**LogicalName**: recordsownerid<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Lookup<br />
-**Targets**: systemuser,team
+|Property|Value|
+|--------|-----|
+|Description|Choose the user that the records created during the import job should be assigned to.|
+|DisplayName|Records Owner|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|recordsownerid|
+|RequiredLevel|None|
+|Targets|systemuser,team|
+|Type|Lookup|
 
 
 ### <a name="BKMK_RecordsOwnerIdType"></a> RecordsOwnerIdType
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: recordsowneridtype<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**Type**: EntityName<br />
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|recordsowneridtype|
+|RequiredLevel|SystemRequired|
+|Type|EntityName|
 
 
 ### <a name="BKMK_RelatedEntityColumns"></a> RelatedEntityColumns
 
-**Description**: Shows the columns that are mapped to a related record type (entity) of the primary record type (entity) included in the import file.<br />
-**DisplayName**: <br />
-**LogicalName**: relatedentitycolumns<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 1073741823
+|Property|Value|
+|--------|-----|
+|Description|Shows the columns that are mapped to a related record type (entity) of the primary record type (entity) included in the import file.|
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|relatedentitycolumns|
+|MaxLength|1073741823|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_Size"></a> Size
 
-**Description**: Shows the size of the import file, in kilobytes.<br />
-**DisplayName**: Size<br />
-**LogicalName**: size<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**IsValidForUpdate**: False<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 160
+|Property|Value|
+|--------|-----|
+|Description|Shows the size of the import file, in kilobytes.|
+|DisplayName|Size|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|IsValidForUpdate|False|
+|LogicalName|size|
+|MaxLength|160|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_Source"></a> Source
 
-**Description**: Shows the name of the data source file uploaded in the import job.<br />
-**DisplayName**: Source<br />
-**LogicalName**: source<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 256
+|Property|Value|
+|--------|-----|
+|Description|Shows the name of the data source file uploaded in the import job.|
+|DisplayName|Source|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|source|
+|MaxLength|256|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_SourceEntityName"></a> SourceEntityName
 
-**Description**: Shows the record type (entity) of the source data.<br />
-**DisplayName**: Source Entity<br />
-**LogicalName**: sourceentityname<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 160
+|Property|Value|
+|--------|-----|
+|Description|Shows the record type (entity) of the source data.|
+|DisplayName|Source Entity|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|sourceentityname|
+|MaxLength|160|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_StateCode"></a> StateCode
 
-**Description**: Shows the status of the import file record. By default, all records are active and can't be deactivated.<br />
-**DisplayName**: Status<br />
-**LogicalName**: statecode<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**IsValidForCreate**: False<br />
-**Type**: State<br />
-**Options**:
+|Property|Value|
+|--------|-----|
+|Description|Shows the status of the import file record. By default, all records are active and can't be deactivated.|
+|DisplayName|Status|
+|IsValidForCreate|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|statecode|
+|RequiredLevel|SystemRequired|
+|Type|State|
 
-- **Value**: 0 **Label**: Active **DefaultStatus**: 0 **InvariantName**: Active
+#### StateCode Options
+
+|Value|Label|DefaultStatus|InvariantName|
+|-----|-----|-------------|-------------|
+|0|Active|0|Active|
 
 
 
 ### <a name="BKMK_StatusCode"></a> StatusCode
 
-**Description**: Shows the reason code that explains the import file's status to identify the stage of the import process, from parsing the data to completed.<br />
-**DisplayName**: Status Reason<br />
-**LogicalName**: statuscode<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Status<br />
-**Options**:
+|Property|Value|
+|--------|-----|
+|Description|Shows the reason code that explains the import file's status to identify the stage of the import process, from parsing the data to completed.|
+|DisplayName|Status Reason|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|statuscode|
+|RequiredLevel|None|
+|Type|Status|
 
-- **Value**: 0 **Label**: Submitted **State**: 0
-- **Value**: 1 **Label**: Parsing **State**: 0
-- **Value**: 2 **Label**: Transforming **State**: 0
-- **Value**: 3 **Label**: Importing **State**: 0
-- **Value**: 4 **Label**: Completed **State**: 0
-- **Value**: 5 **Label**: Failed **State**: 0
+#### StatusCode Options
+
+|Value|Label|State|
+|-----|-----|-----|
+|0|Submitted|0|
+|1|Parsing|0|
+|2|Transforming|0|
+|3|Importing|0|
+|4|Completed|0|
+|5|Failed|0|
 
 
 
 ### <a name="BKMK_TargetEntityName"></a> TargetEntityName
 
-**Description**: Select the target record type (entity) for the records that will be created during the import job.<br />
-**DisplayName**: Target Entity<br />
-**LogicalName**: targetentityname<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 160
+|Property|Value|
+|--------|-----|
+|Description|Select the target record type (entity) for the records that will be created during the import job.|
+|DisplayName|Target Entity|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|targetentityname|
+|MaxLength|160|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_TimeZoneRuleVersionNumber"></a> TimeZoneRuleVersionNumber
 
-**Description**: For internal use only.<br />
-**DisplayName**: <br />
-**LogicalName**: timezoneruleversionnumber<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Integer<br />
-**Format**: None<br />
-**MaxValue**: 2147483647<br />
-**MinValue**: -1
+|Property|Value|
+|--------|-----|
+|Description|For internal use only.|
+|DisplayName||
+|Format|None|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|timezoneruleversionnumber|
+|MaxValue|2147483647|
+|MinValue|-1|
+|RequiredLevel|None|
+|Type|Integer|
 
 
 ### <a name="BKMK_UpsertModeCode"></a> UpsertModeCode
 
-**Description**: Select the value which is used for identify the upsert mode. By Default, it is a Create.<br />
-**DisplayName**: Upsert Mode<br />
-**LogicalName**: upsertmodecode<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Picklist<br />
-**Options**:
+|Property|Value|
+|--------|-----|
+|Description|Select the value which is used for identify the upsert mode. By Default, it is a Create.|
+|DisplayName|Upsert Mode|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|upsertmodecode|
+|RequiredLevel|None|
+|Type|Picklist|
 
-- **Value**: 0 **Label**: Create
-- **Value**: 1 **Label**: Update
-- **Value**: 2 **Label**: Ignore
+#### UpsertModeCode Options
+
+|Value|Label|
+|-----|-----|
+|0|Create|
+|1|Update|
+|2|Ignore|
 
 
 
 ### <a name="BKMK_UseSystemMap"></a> UseSystemMap
 
-**Description**: Tells whether an automatic system map was applied to the import file, which automatically maps the import data to the target entity in Microsoft Dynamics 365.<br />
-**DisplayName**: Use System Map<br />
-**LogicalName**: usesystemmap<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**Type**: Boolean<br />
-**Options**:
+|Property|Value|
+|--------|-----|
+|Description|Tells whether an automatic system map was applied to the import file, which automatically maps the import data to the target entity in Microsoft Dynamics 365.|
+|DisplayName|Use System Map|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|usesystemmap|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
 
-- **TrueOption Value**: 1 **Label**: Yes
-- **FalseOption Value**: 0 **Label**: No
+#### UseSystemMap Options
+
+|Value|Label|
+|-----|-----|
+|1|Yes|
+|0|No|
 
 **DefaultValue**: False
 
 
+
 ### <a name="BKMK_UTCConversionTimeZoneCode"></a> UTCConversionTimeZoneCode
 
-**Description**: Time zone code that was in use when the record was created.<br />
-**DisplayName**: <br />
-**LogicalName**: utcconversiontimezonecode<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Integer<br />
-**Format**: None<br />
-**MaxValue**: 2147483647<br />
-**MinValue**: -1
+|Property|Value|
+|--------|-----|
+|Description|Time zone code that was in use when the record was created.|
+|DisplayName||
+|Format|None|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|utcconversiontimezonecode|
+|MaxValue|2147483647|
+|MinValue|-1|
+|RequiredLevel|None|
+|Type|Integer|
 
 <a name="read-only-attributes"></a>
+
 ## Read-only attributes
+
 These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [AdditionalHeaderRow](#BKMK_AdditionalHeaderRow)
@@ -508,473 +613,544 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 
 ### <a name="BKMK_AdditionalHeaderRow"></a> AdditionalHeaderRow
 
-**Description**: Shows the secondary column headers. The additional headers are used during the process of transforming the import file into import data records.<br />
-**DisplayName**: Additional Header<br />
-**LogicalName**: additionalheaderrow<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 100000
+|Property|Value|
+|--------|-----|
+|Description|Shows the secondary column headers. The additional headers are used during the process of transforming the import file into import data records.|
+|DisplayName|Additional Header|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|additionalheaderrow|
+|MaxLength|100000|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_CompletedOn"></a> CompletedOn
 
-**Description**: Shows the date and time when the import associated with the import file was completed.<br />
-**DisplayName**: Completed On<br />
-**LogicalName**: completedon<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: DateTime<br />
-**DateTimeBehavior**: UserLocal<br />
-**Format**: DateOnly
+|Property|Value|
+|--------|-----|
+|DateTimeBehavior|UserLocal|
+|Description|Shows the date and time when the import associated with the import file was completed.|
+|DisplayName|Completed On|
+|Format|DateOnly|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|completedon|
+|RequiredLevel|None|
+|Type|DateTime|
 
 
 ### <a name="BKMK_CreatedBy"></a> CreatedBy
 
-**Description**: Shows who created the record.<br />
-**DisplayName**: Created By<br />
-**LogicalName**: createdby<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Lookup<br />
-**Targets**: systemuser
+|Property|Value|
+|--------|-----|
+|Description|Shows who created the record.|
+|DisplayName|Created By|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|createdby|
+|RequiredLevel|None|
+|Targets|systemuser|
+|Type|Lookup|
 
 
 ### <a name="BKMK_CreatedByName"></a> CreatedByName
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: createdbyname<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 100
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|createdbyname|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_CreatedByYomiName"></a> CreatedByYomiName
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: createdbyyominame<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 100
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|createdbyyominame|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_CreatedOn"></a> CreatedOn
 
-**Description**: Shows the date and time when the record was created. The date and time are displayed in the time zone selected in Microsoft Dynamics 365 options.<br />
-**DisplayName**: Created On<br />
-**LogicalName**: createdon<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: DateTime<br />
-**DateTimeBehavior**: UserLocal<br />
-**Format**: DateAndTime
+|Property|Value|
+|--------|-----|
+|DateTimeBehavior|UserLocal|
+|Description|Shows the date and time when the record was created. The date and time are displayed in the time zone selected in Microsoft Dynamics 365 options.|
+|DisplayName|Created On|
+|Format|DateAndTime|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|createdon|
+|RequiredLevel|None|
+|Type|DateTime|
 
 
 ### <a name="BKMK_CreatedOnBehalfBy"></a> CreatedOnBehalfBy
 
-**Description**: Shows who created the record on behalf of another user.<br />
-**DisplayName**: Created By (Delegate)<br />
-**LogicalName**: createdonbehalfby<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Lookup<br />
-**Targets**: systemuser
+|Property|Value|
+|--------|-----|
+|Description|Shows who created the record on behalf of another user.|
+|DisplayName|Created By (Delegate)|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|createdonbehalfby|
+|RequiredLevel|None|
+|Targets|systemuser|
+|Type|Lookup|
 
 
 ### <a name="BKMK_CreatedOnBehalfByName"></a> CreatedOnBehalfByName
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: createdonbehalfbyname<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 100
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|createdonbehalfbyname|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_CreatedOnBehalfByYomiName"></a> CreatedOnBehalfByYomiName
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: createdonbehalfbyyominame<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 100
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|createdonbehalfbyyominame|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_FailureCount"></a> FailureCount
 
-**Description**: Shows the number of records in the import file that cannot be imported.<br />
-**DisplayName**: Errors<br />
-**LogicalName**: failurecount<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Integer<br />
-**Format**: None<br />
-**MaxValue**: 1000000000<br />
-**MinValue**: 0
+|Property|Value|
+|--------|-----|
+|Description|Shows the number of records in the import file that cannot be imported.|
+|DisplayName|Errors|
+|Format|None|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|failurecount|
+|MaxValue|1000000000|
+|MinValue|0|
+|RequiredLevel|None|
+|Type|Integer|
 
 
 ### <a name="BKMK_HeaderRow"></a> HeaderRow
 
-**Description**: Shows a list of each column header in the import file separated by a comma. The header is used for parsing the file during the import job.<br />
-**DisplayName**: Header<br />
-**LogicalName**: headerrow<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 1073741823
+|Property|Value|
+|--------|-----|
+|Description|Shows a list of each column header in the import file separated by a comma. The header is used for parsing the file during the import job.|
+|DisplayName|Header|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|headerrow|
+|MaxLength|1073741823|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_ImportIdName"></a> ImportIdName
 
-**Description**: Name of the import.<br />
-**DisplayName**: <br />
-**LogicalName**: importidname<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 100
+|Property|Value|
+|--------|-----|
+|Description|Name of the import.|
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|importidname|
+|MaxLength|100|
+|RequiredLevel|SystemRequired|
+|Type|String|
 
 
 ### <a name="BKMK_ImportMapIdName"></a> ImportMapIdName
 
-**Description**: Name of the import map.<br />
-**DisplayName**: <br />
-**LogicalName**: importmapidname<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 100
+|Property|Value|
+|--------|-----|
+|Description|Name of the import map.|
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|importmapidname|
+|MaxLength|100|
+|RequiredLevel|SystemRequired|
+|Type|String|
 
 
 ### <a name="BKMK_ModifiedBy"></a> ModifiedBy
 
-**Description**: Shows who last updated the record.<br />
-**DisplayName**: Modified By<br />
-**LogicalName**: modifiedby<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Lookup<br />
-**Targets**: systemuser
+|Property|Value|
+|--------|-----|
+|Description|Shows who last updated the record.|
+|DisplayName|Modified By|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|modifiedby|
+|RequiredLevel|None|
+|Targets|systemuser|
+|Type|Lookup|
 
 
 ### <a name="BKMK_ModifiedByName"></a> ModifiedByName
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: modifiedbyname<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 100
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|modifiedbyname|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_ModifiedByYomiName"></a> ModifiedByYomiName
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: modifiedbyyominame<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 100
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|modifiedbyyominame|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_ModifiedOn"></a> ModifiedOn
 
-**Description**: Shows the date and time when the record was last updated. The date and time are displayed in the time zone selected in Microsoft Dynamics 365 options.<br />
-**DisplayName**: Modified On<br />
-**LogicalName**: modifiedon<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**Type**: DateTime<br />
-**DateTimeBehavior**: UserLocal<br />
-**Format**: DateAndTime
+|Property|Value|
+|--------|-----|
+|DateTimeBehavior|UserLocal|
+|Description|Shows the date and time when the record was last updated. The date and time are displayed in the time zone selected in Microsoft Dynamics 365 options.|
+|DisplayName|Modified On|
+|Format|DateAndTime|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|modifiedon|
+|RequiredLevel|SystemRequired|
+|Type|DateTime|
 
 
 ### <a name="BKMK_ModifiedOnBehalfBy"></a> ModifiedOnBehalfBy
 
-**Description**: Shows who created the record on behalf of another user.<br />
-**DisplayName**: Modified By (Delegate)<br />
-**LogicalName**: modifiedonbehalfby<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Lookup<br />
-**Targets**: systemuser
+|Property|Value|
+|--------|-----|
+|Description|Shows who created the record on behalf of another user.|
+|DisplayName|Modified By (Delegate)|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|modifiedonbehalfby|
+|RequiredLevel|None|
+|Targets|systemuser|
+|Type|Lookup|
 
 
 ### <a name="BKMK_ModifiedOnBehalfByName"></a> ModifiedOnBehalfByName
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: modifiedonbehalfbyname<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 100
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|modifiedonbehalfbyname|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_ModifiedOnBehalfByYomiName"></a> ModifiedOnBehalfByYomiName
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: modifiedonbehalfbyyominame<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 100
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|modifiedonbehalfbyyominame|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_OwnerIdName"></a> OwnerIdName
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: owneridname<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 100
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owneridname|
+|MaxLength|100|
+|RequiredLevel|SystemRequired|
+|Type|String|
 
 
 ### <a name="BKMK_OwnerIdYomiName"></a> OwnerIdYomiName
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: owneridyominame<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 100
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owneridyominame|
+|MaxLength|100|
+|RequiredLevel|SystemRequired|
+|Type|String|
 
 
 ### <a name="BKMK_OwningBusinessUnit"></a> OwningBusinessUnit
 
-**Description**: Shows the business unit that the record owner belongs to.<br />
-**DisplayName**: <br />
-**LogicalName**: owningbusinessunit<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Lookup<br />
-**Targets**: businessunit
+|Property|Value|
+|--------|-----|
+|Description|Shows the business unit that the record owner belongs to.|
+|DisplayName||
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owningbusinessunit|
+|RequiredLevel|None|
+|Targets|businessunit|
+|Type|Lookup|
 
 
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
 
-**Description**: Unique identifier of the team who owns the import file.<br />
-**DisplayName**: Owning Team<br />
-**LogicalName**: owningteam<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Lookup<br />
-**Targets**: team
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier of the team who owns the import file.|
+|DisplayName|Owning Team|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owningteam|
+|RequiredLevel|None|
+|Targets|team|
+|Type|Lookup|
 
 
 ### <a name="BKMK_OwningUser"></a> OwningUser
 
-**Description**: Unique identifier of the user who owns the import file.<br />
-**DisplayName**: Owning User<br />
-**LogicalName**: owninguser<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Lookup<br />
-**Targets**: systemuser
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier of the user who owns the import file.|
+|DisplayName|Owning User|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owninguser|
+|RequiredLevel|None|
+|Targets|systemuser|
+|Type|Lookup|
 
 
 ### <a name="BKMK_ParsedTableColumnPrefix"></a> ParsedTableColumnPrefix
 
-**Description**: Shows the prefix applied to each column after the import file is parsed.<br />
-**DisplayName**: Parse Table Column Prefix<br />
-**LogicalName**: parsedtablecolumnprefix<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 160
+|Property|Value|
+|--------|-----|
+|Description|Shows the prefix applied to each column after the import file is parsed.|
+|DisplayName|Parse Table Column Prefix|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|parsedtablecolumnprefix|
+|MaxLength|160|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_ParsedTableColumnsNumber"></a> ParsedTableColumnsNumber
 
-**Description**: Shows the number of columns included in the parsed import file.<br />
-**DisplayName**: Parse Table Column Number<br />
-**LogicalName**: parsedtablecolumnsnumber<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Integer<br />
-**Format**: None<br />
-**MaxValue**: 2147483647<br />
-**MinValue**: -2147483648
+|Property|Value|
+|--------|-----|
+|Description|Shows the number of columns included in the parsed import file.|
+|DisplayName|Parse Table Column Number|
+|Format|None|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|parsedtablecolumnsnumber|
+|MaxValue|2147483647|
+|MinValue|-2147483648|
+|RequiredLevel|None|
+|Type|Integer|
 
 
 ### <a name="BKMK_ParsedTableName"></a> ParsedTableName
 
-**Description**: Shows the name of the table that contains the parsed data from the import file.<br />
-**DisplayName**: Parse Table<br />
-**LogicalName**: parsedtablename<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 160
+|Property|Value|
+|--------|-----|
+|Description|Shows the name of the table that contains the parsed data from the import file.|
+|DisplayName|Parse Table|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|parsedtablename|
+|MaxLength|160|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_PartialFailureCount"></a> PartialFailureCount
 
-**Description**: Shows the number of records in this file that had failures during the import.<br />
-**DisplayName**: Partial Failures<br />
-**LogicalName**: partialfailurecount<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Integer<br />
-**Format**: None<br />
-**MaxValue**: 1000000000<br />
-**MinValue**: 0
+|Property|Value|
+|--------|-----|
+|Description|Shows the number of records in this file that had failures during the import.|
+|DisplayName|Partial Failures|
+|Format|None|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|partialfailurecount|
+|MaxValue|1000000000|
+|MinValue|0|
+|RequiredLevel|None|
+|Type|Integer|
 
 
 ### <a name="BKMK_ProcessingStatus"></a> ProcessingStatus
 
-**Description**: Shows the import file's processing status code. This indicates whether the data in the import file has been parsed, transformed, or imported.<br />
-**DisplayName**: Processing Status<br />
-**LogicalName**: processingstatus<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**Type**: Picklist<br />
-**Options**:
+|Property|Value|
+|--------|-----|
+|Description|Shows the import file's processing status code. This indicates whether the data in the import file has been parsed, transformed, or imported.|
+|DisplayName|Processing Status|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|processingstatus|
+|RequiredLevel|SystemRequired|
+|Type|Picklist|
 
-- **Value**: 1 **Label**: Not Started
-- **Value**: 2 **Label**: Parsing
-- **Value**: 3 **Label**: Parsing Complete
-- **Value**: 4 **Label**: Complex Transformation
-- **Value**: 5 **Label**: Lookup Transformation
-- **Value**: 6 **Label**: Picklist Transformation
-- **Value**: 7 **Label**: Owner Transformation
-- **Value**: 8 **Label**: Transformation Complete
-- **Value**: 9 **Label**: Import Pass 1
-- **Value**: 10 **Label**: Import Pass 2
-- **Value**: 11 **Label**: Import Complete
-- **Value**: 12 **Label**: Primary Key Transformation
+#### ProcessingStatus Options
+
+|Value|Label|
+|-----|-----|
+|1|Not Started|
+|2|Parsing|
+|3|Parsing Complete|
+|4|Complex Transformation|
+|5|Lookup Transformation|
+|6|Picklist Transformation|
+|7|Owner Transformation|
+|8|Transformation Complete|
+|9|Import Pass 1|
+|10|Import Pass 2|
+|11|Import Complete|
+|12|Primary Key Transformation|
 
 
 
 ### <a name="BKMK_ProgressCounter"></a> ProgressCounter
 
-**Description**: Shows the progress code for the processing of the import file. This field is used when a paused import job is resumed.<br />
-**DisplayName**: Progress Counter<br />
-**LogicalName**: progresscounter<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Integer<br />
-**Format**: None<br />
-**MaxValue**: 2147483647<br />
-**MinValue**: 0
+|Property|Value|
+|--------|-----|
+|Description|Shows the progress code for the processing of the import file. This field is used when a paused import job is resumed.|
+|DisplayName|Progress Counter|
+|Format|None|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|progresscounter|
+|MaxValue|2147483647|
+|MinValue|0|
+|RequiredLevel|None|
+|Type|Integer|
 
 
 ### <a name="BKMK_RecordsOwnerIdName"></a> RecordsOwnerIdName
 
-**Description**: Name of the record owner.<br />
-**DisplayName**: <br />
-**LogicalName**: recordsowneridname<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 160
+|Property|Value|
+|--------|-----|
+|Description|Name of the record owner.|
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|recordsowneridname|
+|MaxLength|160|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_SuccessCount"></a> SuccessCount
 
-**Description**: Shows the number of records in the import file that are imported successfully.<br />
-**DisplayName**: Successes<br />
-**LogicalName**: successcount<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Integer<br />
-**Format**: None<br />
-**MaxValue**: 1000000000<br />
-**MinValue**: 0
+|Property|Value|
+|--------|-----|
+|Description|Shows the number of records in the import file that are imported successfully.|
+|DisplayName|Successes|
+|Format|None|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|successcount|
+|MaxValue|1000000000|
+|MinValue|0|
+|RequiredLevel|None|
+|Type|Integer|
 
 
 ### <a name="BKMK_TotalCount"></a> TotalCount
 
-**Description**: Shows the total number of records in the import file.<br />
-**DisplayName**: Total Processed<br />
-**LogicalName**: totalcount<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Integer<br />
-**Format**: None<br />
-**MaxValue**: 1000000000<br />
-**MinValue**: 0
+|Property|Value|
+|--------|-----|
+|Description|Shows the total number of records in the import file.|
+|DisplayName|Total Processed|
+|Format|None|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|totalcount|
+|MaxValue|1000000000|
+|MinValue|0|
+|RequiredLevel|None|
+|Type|Integer|
 
 <a name="onetomany"></a>
 
@@ -982,114 +1158,54 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 
 Listed by **SchemaName**.
 
-- [userentityinstancedata_importfile](#BKMK_userentityinstancedata_importfile)
 - [ImportFile_BulkDeleteFailures](#BKMK_ImportFile_BulkDeleteFailures)
 - [ImportLog_ImportFile](#BKMK_ImportLog_ImportFile)
 - [ImportFile_AsyncOperations](#BKMK_ImportFile_AsyncOperations)
-
-
-### <a name="BKMK_userentityinstancedata_importfile"></a> userentityinstancedata_importfile
-
-Same as userentityinstancedata entity [userentityinstancedata_importfile](userentityinstancedata.md#BKMK_userentityinstancedata_importfile) Many-To-One relationship.
-
-**ReferencingEntity**: userentityinstancedata<br />
-**ReferencingAttribute**: objectid<br />
-**IsHierarchical**: False<br />
-**IsCustomizable**: False<br />
-**ReferencedEntityNavigationPropertyName**: userentityinstancedata_importfile<br />
-**AssociatedMenuConfiguration**:
-
-- **Behavior**: DoNotDisplay
-- **Group**: Details
-- **Label**: 
-- **Order**: 
-
-**CascadeConfiguration**:
-
-- **Assign**: NoCascade
-- **Delete**: Cascade
-- **Merge**: NoCascade
-- **Reparent**: NoCascade
-- **Share**: NoCascade
-- **Unshare**: NoCascade
 
 
 ### <a name="BKMK_ImportFile_BulkDeleteFailures"></a> ImportFile_BulkDeleteFailures
 
 Same as bulkdeletefailure entity [ImportFile_BulkDeleteFailures](bulkdeletefailure.md#BKMK_ImportFile_BulkDeleteFailures) Many-To-One relationship.
 
-**ReferencingEntity**: bulkdeletefailure<br />
-**ReferencingAttribute**: regardingobjectid<br />
-**IsHierarchical**: False<br />
-**IsCustomizable**: False<br />
-**ReferencedEntityNavigationPropertyName**: ImportFile_BulkDeleteFailures<br />
-**AssociatedMenuConfiguration**:
-
-- **Behavior**: DoNotDisplay
-- **Group**: Details
-- **Label**: 
-- **Order**: 
-
-**CascadeConfiguration**:
-
-- **Assign**: NoCascade
-- **Delete**: Cascade
-- **Merge**: NoCascade
-- **Reparent**: NoCascade
-- **Share**: NoCascade
-- **Unshare**: NoCascade
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|bulkdeletefailure|
+|ReferencingAttribute|regardingobjectid|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|ImportFile_BulkDeleteFailures|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_ImportLog_ImportFile"></a> ImportLog_ImportFile
 
 Same as importlog entity [ImportLog_ImportFile](importlog.md#BKMK_ImportLog_ImportFile) Many-To-One relationship.
 
-**ReferencingEntity**: importlog<br />
-**ReferencingAttribute**: importfileid<br />
-**IsHierarchical**: False<br />
-**IsCustomizable**: False<br />
-**ReferencedEntityNavigationPropertyName**: ImportLog_ImportFile<br />
-**AssociatedMenuConfiguration**:
-
-- **Behavior**: DoNotDisplay
-- **Group**: Details
-- **Label**: 
-- **Order**: 
-
-**CascadeConfiguration**:
-
-- **Assign**: NoCascade
-- **Delete**: Cascade
-- **Merge**: NoCascade
-- **Reparent**: NoCascade
-- **Share**: NoCascade
-- **Unshare**: NoCascade
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|importlog|
+|ReferencingAttribute|importfileid|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|ImportLog_ImportFile|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_ImportFile_AsyncOperations"></a> ImportFile_AsyncOperations
 
 Same as asyncoperation entity [ImportFile_AsyncOperations](asyncoperation.md#BKMK_ImportFile_AsyncOperations) Many-To-One relationship.
 
-**ReferencingEntity**: asyncoperation<br />
-**ReferencingAttribute**: regardingobjectid<br />
-**IsHierarchical**: False<br />
-**IsCustomizable**: False<br />
-**ReferencedEntityNavigationPropertyName**: ImportFile_AsyncOperations<br />
-**AssociatedMenuConfiguration**:
-
-- **Behavior**: DoNotDisplay
-- **Group**: Details
-- **Label**: 
-- **Order**: 
-
-**CascadeConfiguration**:
-
-- **Assign**: NoCascade
-- **Delete**: NoCascade
-- **Merge**: NoCascade
-- **Reparent**: NoCascade
-- **Share**: NoCascade
-- **Unshare**: NoCascade
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|asyncoperation|
+|ReferencingAttribute|regardingobjectid|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|ImportFile_AsyncOperations|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 <a name="manytoone"></a>
 
@@ -1153,5 +1269,9 @@ See systemuser Entity [lk_importfilebase_modifiedby](systemuser.md#BKMK_lk_impor
 ### <a name="BKMK_BusinessUnit_ImportFiles"></a> BusinessUnit_ImportFiles
 
 See businessunit Entity [BusinessUnit_ImportFiles](businessunit.md#BKMK_BusinessUnit_ImportFiles) One-To-Many relationship.
-importfile
 
+### See also
+
+[About the Entity Reference](../about-entity-reference.md)<br />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+<xref href="Microsoft.Dynamics.CRM.importfile?text=importfile EntityType" />

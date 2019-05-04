@@ -3,7 +3,7 @@ title: "Choose and configure columns in model-driven app views in PowerApps | Mi
 description: "Learn how to select and configure views for your app"
 keywords: ""
 ms.date: 11/27/2018
-ms.service: crm-online
+ms.service: powerapps
 ms.custom: 
 ms.topic: article
 applies_to: 
@@ -46,7 +46,7 @@ search.app:
   > The latest version of the view designer is currently in preview. Some features like enabling or disabling presence for a column and adding a find column are not yet supported. To accomplish these tasks, [open the view in the classic view designer](/dynamics365/customer-engagement/customize/create-and-edit-views#open-the-classic-view-designer).
   >  -   [Enable or disable presence for a column](/dynamics365/customer-engagement/customize/choose-and-configure-columns#BKMK_EnableOrDisablePresence)  
   >
-  >  -   [Add find columns](choose-and-configure-columns.md#BKMK_AddFindColumns)  
+  >  -   [Add find columns](/dynamics365/customer-engagement/customize/choose-and-configure-columns#BKMK_AddFindColumns) 
 
 
 
@@ -111,6 +111,8 @@ Click and drag the column header to the correct position.
   
 > [!TIP]
 >   You can also select the header of the column you want to move and from the dropdown select **Move Right** or **Move Left**.  
+
+
   
 ## Next steps
 [Create or edit views](create-edit-views.md)

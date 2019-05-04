@@ -1,10 +1,10 @@
 ---
-title: "Customize labels to support multiple languages (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Customize labels to support multiple languages (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about customizing labels to support multiple languages." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -17,7 +17,7 @@ search.app:
 ---
 # Customize labels to support multiple languages
 
-When you create customizations in Common Data Service for Apps, you can support multiple languages by using labels.  
+When you create customizations in Common Data Service, you can support multiple languages by using labels.  
 
 <a name="BKMK_UsingLabels"></a>   
 
@@ -28,7 +28,7 @@ When you create customizations in Common Data Service for Apps, you can support 
 |<xref:Microsoft.Xrm.Sdk.Label> class|<xref href="Microsoft.Dynamics.CRM.Label?text=Label ComplexType" />|
 |<xref:Microsoft.Xrm.Sdk.LocalizedLabel> class|<xref href="Microsoft.Dynamics.CRM.LocalizedLabel?text=LocalizedLabel ComplexType" />|
 
- Labels are localized strings displayed to users in the client applications. They are implemented by using `Label` (<xref href="Microsoft.Dynamics.CRM.Label?text=Label ComplexType" /> or <xref:Microsoft.Xrm.Sdk.Label> class), which supports language packs. Strings that are displayed to users, such as entity display names or options in an option set, can be stored in multiple languages. Users can select which language they want displayed in forms and views in CDS for Apps.  
+ Labels are localized strings displayed to users in the client applications. They are implemented by using `Label` (<xref href="Microsoft.Dynamics.CRM.Label?text=Label ComplexType" /> or <xref:Microsoft.Xrm.Sdk.Label> class), which supports language packs. Strings that are displayed to users, such as entity display names or options in an option set, can be stored in multiple languages. Users can select which language they want displayed in forms and views in Common Data Service.  
 
  The following table lists all of the metadata that uses the `Label`.  
 
@@ -83,14 +83,14 @@ When you create customizations in Common Data Service for Apps, you can support 
  After you import the completed translations, customized text appears for users who work in the languages that you had the text translated into.  
 
 > [!NOTE]
-> CDS for Apps cannot import translated text that is over 500 characters long. If any of the items in your translation file are longer than 500 characters, the import process will fail. If the import process fails, review the line in the file that caused the failure, reduce the number of characters, and try to import again.  
+> Common Data Service cannot import translated text that is over 500 characters long. If any of the items in your translation file are longer than 500 characters, the import process will fail. If the import process fails, review the line in the file that caused the failure, reduce the number of characters, and try to import again.  
 
- Because customization is supported only in the base language, you may be working in CDS for Apps with the base language set as your language preference. To verify that the translated text appears, you must change your language preference for the CDS for Apps user interface. To perform additional customization work, you must change back to the base language.  
+ Because customization is supported only in the base language, you may be working in Common Data Service with the base language set as your language preference. To verify that the translated text appears, you must change your language preference for the Common Data Service user interface. To perform additional customization work, you must change back to the base language.  
 
 <a name="BKMK_ManagingLanguages"></a>   
 
 ## Manage languages for your organization  
- CDS for Apps enables you to install multiple language packs on a server and allows the user to select a language pack. For more information about how to install language packs, see [Enable Languages](/dynamics365/customer-engagement/admin/enable-languages). This section contains information about messages used to manage languages installed for your organization.  
+ Common Data Service enables you to install multiple language packs on a server and allows the user to select a language pack. For more information about how to install language packs, see [Enable Languages](/dynamics365/customer-engagement/admin/enable-languages). This section contains information about messages used to manage languages installed for your organization.  
 
  The following table lists the messages that you use to work with language packs. Use these messages with the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*> method.  
 

@@ -3,7 +3,7 @@ title: "Pass a list of related records as data context with an embedded canvas a
 ms.custom: ""
 ms.date: 12/17/2018
 ms.reviewer: ""
-ms.service: "crm-online"
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
@@ -81,5 +81,6 @@ This topic showed you how to get started with the embedding a canvas app in a mo
 ## See also
 [Embed a canvas app on a model-driven form](embed-canvas-app-in-form.md) <br />
 [Pass the current record as data context to an embedded canvas app](pass-current-embedded-canvas-app.md) <br />
+[Perform predefined actions on the host form from within an embedded canvas app](embedded-canvas-app-actions.md) <br />
 [Share an embedded canvas app](share-embedded-canvas-app.md) <br />
 [Guidelines on working with embedded canvas apps](embedded-canvas-app-guidelines.md)

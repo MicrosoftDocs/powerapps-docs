@@ -1,10 +1,10 @@
 ---
-title: "Understand the execution context (Common Data Service for Apps) | Microsoft Docs" 
+title: "Understand the execution context (Common Data Service) | Microsoft Docs" 
 description: "Learn about the data that is passed to your plug-ins when it is executed." 
 ms.custom: ""
 ms.date: 1/23/2019
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: phecke
 ms.author: pehecke
@@ -55,7 +55,7 @@ As described in [Use messages with the Organization service](org-service/use-mes
 
 As described in [Event Framework](event-framework.md), operations go through a series of stages and you can register your plug-in on stages that occur before the data is written to the database. Within the **PreValidation** and **PreOperation** stages, you can read and change the values of the `InputParameters` so that you can control the expected outcome of the data operation.
 
-If you find that the values in the `InputParameters` collection represent a condition that you cannot allow, you can throw an <xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException> (preferably in the **PreValidation** stage) that will cancel the operation and display an error to the user with a synchronous plug-in, or log the error if the plug-in is asynchronous. More information: [Cancelling an operation](#cancelling-an-operation)
+If you find that the values in the `InputParameters` collection represent a condition that you cannot allow, you can throw an <xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException> (preferably in the **PreValidation** stage) that will cancel the operation and display an error to the user with a synchronous plug-in, or log the error if the plug-in is asynchronous. More information: [Cancelling an operation](handle-exceptions.md#cancelling-an-operation)
 
 ## OutputParameters
 

@@ -1,10 +1,10 @@
 ---
-title: "Offline and Outlook filters and templates (Common Data Service for Apps)| Microsoft Docs"
-description: "Data that should be synchronized between the Common Data Service for Apps and Dynamics 365 for Outlook is determined by Data Filters for Office Outlook"
+title: "Offline and Outlook filters and templates (Common Data Service)| Microsoft Docs"
+description: "Data that should be synchronized between the Common Data Service and Dynamics 365 for Outlook is determined by Data Filters for Office Outlook"
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "sriharibs" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -17,8 +17,8 @@ search.app:
 ---
 # Offline and Outlook filters and templates
 
-Data filters for Office Outlook  determine what data should be synchronized between the Common Data Service for Apps and Dynamics 365 for Outlook. CDS for Apps supports the ability to change the default filter using the SDK and push these changes to any or all users.  
-You can write code that allows administrators to create and publish filter templates. This allows a CDS for Apps administrator to create common or desirable filters that can be published to users for synchronizing with the Outlook Store and offline database. This also provides a way to customize the default filter template that will be applied for users who are added to the system after the templates are originally published. The administrator also has the ability to update or delete user filters after they are published.  
+Data filters for Office Outlook  determine what data should be synchronized between the Common Data Service and Dynamics 365 for Outlook. Common Data Service supports the ability to change the default filter using the SDK and push these changes to any or all users.  
+You can write code that allows administrators to create and publish filter templates. This allows a Common Data Service administrator to create common or desirable filters that can be published to users for synchronizing with the Outlook Store and offline database. This also provides a way to customize the default filter template that will be applied for users who are added to the system after the templates are originally published. The administrator also has the ability to update or delete user filters after they are published.  
 To support these customizations, there are four new query types for saved query (view). When you create a saved query (view) record, specify one of these types in the `SavedQuery.QueryType` attribute, using the <xref:Microsoft.Crm.Sdk.SavedQueryQueryType> enumeration. These are only accessible by using the methods described here; there is no UI available to change them. You can specify different filters so that you can avoid synchronizing everything to Outlook for your mobile phone. Filter templates are solution aware so they can be exported along with a solution.  
   
  The following table lists the new query types used for filters and filter templates.  
@@ -40,7 +40,7 @@ New users automatically are given the filters from the filter templates that are
 
 There is a new type of filter that administrators can define, called system filters. These filters are defined as `SavedQuery` records with the query type of <xref:Microsoft.Crm.Sdk.SavedQueryQueryType.OutlookFilters> or <xref:Microsoft.Crm.Sdk.SavedQueryQueryType.OfflineFilters>. System filters automatically apply to all users, and cannot be modified by the users.  
 
-There is a limit on the number of filters you can add. This setting is controlled by the CDS for Apps deployment administrator to prevent users or administrators from creating too many filters, which affects server performance. The same limit setting is applied to all entities.  
+There is a limit on the number of filters you can add. This setting is controlled by the Common Data Service deployment administrator to prevent users or administrators from creating too many filters, which affects server performance. The same limit setting is applied to all entities.  
 
 By default, there are unlimited settings for both system filters and user filters.  
 

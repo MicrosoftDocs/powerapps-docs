@@ -2,9 +2,9 @@
 title: "Control access to model-driven app forms in PowerApps | MicrosoftDocs"
 description: "Learn how to control acces to main forms"
 ms.custom: ""
-ms.date: 06/27/2018
+ms.date: 03/07/2019
 ms.reviewer: ""
-ms.service: "crm-online"
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -40,14 +40,14 @@ search.app:
   
  For step-by-step procedures, see [Assign security roles to forms](https://docs.microsoft.com/dynamics365/customer-engagement/admin/assign-security-roles-form).  
   
- When you have more than one main or mobile form defined for an entity, you can select which forms users will be able to use based on their security roles. Because each entity must be able to display a form for any user, at least one form must be designated as a ”fallback” form – a form visible to users whose security roles do not have any forms explicitly assigned to them.  
+ When you have more than one main or other form type defined for an entity, you can select which forms users will be able to use based on their security roles. Because each entity must be able to display a form for any user, at least one form must be designated as a ”fallback” form – a form visible to users whose security roles do not have any forms explicitly assigned to them.  
   
 > [!NOTE]
->  Quick Create and Quick View forms cannot be assigned to security roles.  
+>  Quick Create, Quick View, and Card forms can't be assigned to security roles.  
   
- Within the form editor or from the forms grid you can assign security roles to a form. However, if there is only one form for the entity, you will not be able to clear the **Enabled for fallback** option in the **Assign Security Roles** dialog box. In this case, even though you have assigned security roles to the form, anyone associated with a security role you did not include will still be able to view the form because it is enabled for fallback.  
+ Within the form editor or from the forms grid you can assign security roles to a main form. However, if there is only one form for the entity, you will not be able to clear the **Enabled for fallback** option in the **Assign Security Roles** dialog box. In this case, even though you have assigned security roles to the form, anyone associated with a security role you did not include will still be able to view the form because it is enabled for fallback.  
   
- After you create a second main or mobile form for the entity, you will be able to clear the **Enabled for fallback** option for one of them. The system will always make sure that at least one form is enabled for fallback.  
+ After you create a second main form for the entity, you will be able to clear the **Enabled for fallback** option for one of them. The system will always make sure that at least one form is enabled for fallback.  
   
  When you have more than one main form, you can specify a form order that will control which of the forms a person is allowed to see will be the one they see by default. If there is more than one form they can use, they can change forms and the form they choose will be their default form until they choose a different one. This preference is stored in their browser. If they use a different computer or browser they will see the original default form.  
   

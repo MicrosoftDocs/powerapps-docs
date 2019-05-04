@@ -1,10 +1,10 @@
 ---
-title: "Recurring appointment partial expansion model (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Recurring appointment partial expansion model (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "The partial expansion model is an asynchronous job that runs at pre-specified intervals, defined at the organization level, and used to create recurring appointment instances." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -17,18 +17,18 @@ search.app:
 ---
 # Recurring appointment partial expansion model
 
-Common Data Service for Apps implements a partial expansion model to create recurring appointment instances in the database. The recurrence information, specified when you create a `RecurringAppointmentMaster` record, is used to create or synchronize individual instances in a phased manner. This controls the creation of a large number of appointment records in CDS for Apps due to the creation or synchronization of recurring appointments that have a large or infinite (no end date) recurrence range.  
+Common Data Service implements a partial expansion model to create recurring appointment instances in the database. The recurrence information, specified when you create a `RecurringAppointmentMaster` record, is used to create or synchronize individual instances in a phased manner. This controls the creation of a large number of appointment records in Common Data Service due to the creation or synchronization of recurring appointments that have a large or infinite (no end date) recurrence range.  
 
- The partial expansion model is an asynchronous job in CDS for Apps that runs at pre-specified intervals, and is defined at the organization level using the `Organization.RecurrenceExpansionJobBatchInterval` attribute. Moreover, the instance expansion model depends on an organization-level parameter, for example, “N,” where “N” stands for the maximum number of instances that can be created synchronously. You can specify an appropriate value for this variable using the `Organization.RecurrenceExpansionSynchCreateMax` attribute. These properties are covered in detail in the [Parameters for the partial expansion job](#Parameter) section later.  
+ The partial expansion model is an asynchronous job in Common Data Service that runs at pre-specified intervals, and is defined at the organization level using the `Organization.RecurrenceExpansionJobBatchInterval` attribute. Moreover, the instance expansion model depends on an organization-level parameter, for example, “N,” where “N” stands for the maximum number of instances that can be created synchronously. You can specify an appropriate value for this variable using the `Organization.RecurrenceExpansionSynchCreateMax` attribute. These properties are covered in detail in the [Parameters for the partial expansion job](#Parameter) section later.  
 
 <a name="Scenario1"></a>   
 ## When the recurring appointment instances are less than or equal to “N”  
- If the number of instances to be generated because of the recurrence information is less than or equal to “N”, the actual number of instances are created synchronously from the effective start date of the appointment. Each instance is stored as an appointment record in CDS for Apps.  
+ If the number of instances to be generated because of the recurrence information is less than or equal to “N”, the actual number of instances are created synchronously from the effective start date of the appointment. Each instance is stored as an appointment record in Common Data Service.  
 
 <a name="Scenario2"></a>   
 
 ## When the recurring appointment instances are more than “N”  
- For each recurring appointment created in CDS for Apps, an asynchronous expansion job is created. The instances of the recurring appointment are expanded in the following phases:  
+ For each recurring appointment created in Common Data Service, an asynchronous expansion job is created. The instances of the recurring appointment are expanded in the following phases:  
 
 1. **Synchronous expansion**: The first “N” instances of the recurring appointment are created synchronously from the effective start date. Each instance is stored as an appointment record with the `Appointment.InstanceTypeCode` attribute set to “2” (Recurring Instance). The expansion of the rest of the instances is passed on to an asynchronous job. The effective start date is the date from which the recurring appointment series has to be expanded.  
 

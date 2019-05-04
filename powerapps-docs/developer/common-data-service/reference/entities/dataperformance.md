@@ -1,20 +1,13 @@
 ---
-title: "DataPerformance Entity Reference (Common Data Service for Apps)| Microsoft Docs"
+title: "DataPerformance Entity Reference (Common Data Service)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the DataPerformance entity."
-services: ''
-suite: powerapps
-documentationcenter: na
-author: JimDaly
-manager: kvivek
-editor: ''
-tags: ''
-ms.service: powerapps
-ms.devlang: na
-ms.topic: reference
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.date: 10/31/2018
-ms.author: jdaly
+ms.date: 04/01/2019
+ms.service: "powerapps"
+ms.topic: "reference"
+ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
+author: "KumarVivek"
+ms.author: "kvivek"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
@@ -25,19 +18,30 @@ search.app:
 
 Data Performance Dashboard.
 
+
+## Messages
+
+|Message|Web API Operation|SDK Assembly|
+|-|-|-|
+|Retrieve|GET [*org URI*]/api/data/v9.0/dataperformances(*dataperformanceid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/dataperformances<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+
 ## Entity Properties
 
-**DisplayName**: Data Performance Dashboard<br />
-**DisplayCollectionName**: Data Performance Collection<br />
-**SchemaName**: DataPerformance<br />
-**CollectionSchemaName**: DataPerformances<br />
-**LogicalName**: dataperformance<br />
-**LogicalCollectionName**: dataperformances<br />
-**EntitySetName**: dataperformances<br />
-**PrimaryIdAttribute**: dataperformanceid<br />
-**PrimaryNameAttribute**: <br />
-**OwnershipType**: OrganizationOwned<br />
-**IsBPFEntity**: False<br />
+|Property|Value|
+|--------|-----|
+|CollectionSchemaName|DataPerformances|
+|DisplayCollectionName|Data Performance Collection|
+|DisplayName|Data Performance Dashboard|
+|EntitySetName|dataperformances|
+|IsBPFEntity|False|
+|LogicalCollectionName|dataperformances|
+|LogicalName|dataperformance|
+|OwnershipType|OrganizationOwned|
+|PrimaryIdAttribute|dataperformanceid|
+|PrimaryNameAttribute||
+|SchemaName|DataPerformance|
+
 <a name="writable-attributes"></a>
 
 ## Writable attributes
@@ -47,17 +51,21 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 ### <a name="BKMK_DataPerformanceId"></a> DataPerformanceId
 
-**Description**: Unique identifier of the performance suggestion.<br />
-**DisplayName**: Id<br />
-**LogicalName**: dataperformanceid<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**IsValidForUpdate**: False<br />
-**Type**: Uniqueidentifier<br />
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier of the performance suggestion.|
+|DisplayName|Id|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|IsValidForUpdate|False|
+|LogicalName|dataperformanceid|
+|RequiredLevel|SystemRequired|
+|Type|Uniqueidentifier|
 
 <a name="read-only-attributes"></a>
+
 ## Read-only attributes
+
 These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [AnyOptimizationApplied](#BKMK_AnyOptimizationApplied)
@@ -83,271 +91,317 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 
 ### <a name="BKMK_AnyOptimizationApplied"></a> AnyOptimizationApplied
 
-**Description**: An internal state which indicates whether at least one optimization is applied.<br />
-**DisplayName**: Any Optimization Applied<br />
-**LogicalName**: anyoptimizationapplied<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Boolean<br />
-**Options**:
+|Property|Value|
+|--------|-----|
+|Description|An internal state which indicates whether at least one optimization is applied.|
+|DisplayName|Any Optimization Applied|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|anyoptimizationapplied|
+|RequiredLevel|None|
+|Type|Boolean|
 
-- **TrueOption Value**: 1 **Label**: Yes
-- **FalseOption Value**: 0 **Label**: No
+#### AnyOptimizationApplied Options
+
+|Value|Label|
+|-----|-----|
+|1|Yes|
+|0|No|
 
 **DefaultValue**: False
+
 
 
 ### <a name="BKMK_AnyOptimizationAvailable"></a> AnyOptimizationAvailable
 
-**Description**: An internal state which indicates whether at least one optimization is available for this record.<br />
-**DisplayName**: Any Optimization Available<br />
-**LogicalName**: anyoptimizationavailable<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Boolean<br />
-**Options**:
+|Property|Value|
+|--------|-----|
+|Description|An internal state which indicates whether at least one optimization is available for this record.|
+|DisplayName|Any Optimization Available|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|anyoptimizationavailable|
+|RequiredLevel|None|
+|Type|Boolean|
 
-- **TrueOption Value**: 1 **Label**: Yes
-- **FalseOption Value**: 0 **Label**: No
+#### AnyOptimizationAvailable Options
+
+|Value|Label|
+|-----|-----|
+|1|Yes|
+|0|No|
 
 **DefaultValue**: False
 
 
+
 ### <a name="BKMK_Component"></a> Component
 
-**Description**: Name of the component<br />
-**DisplayName**: Component<br />
-**LogicalName**: component<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 100000
+|Property|Value|
+|--------|-----|
+|Description|Name of the component|
+|DisplayName|Component|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|component|
+|MaxLength|100000|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_Count"></a> Count
 
-**Description**: Number of times a queries were executed (Aggregated)<br />
-**DisplayName**: Count<br />
-**LogicalName**: count<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Integer<br />
-**Format**: None<br />
-**MaxValue**: 2147483647<br />
-**MinValue**: -2147483648
+|Property|Value|
+|--------|-----|
+|Description|Number of times a queries were executed (Aggregated)|
+|DisplayName|Count|
+|Format|None|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|count|
+|MaxValue|2147483647|
+|MinValue|-2147483648|
+|RequiredLevel|None|
+|Type|Integer|
 
 
 ### <a name="BKMK_Entity"></a> Entity
 
-**Description**: Primary entity<br />
-**DisplayName**: Entity<br />
-**LogicalName**: entity<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 100000
+|Property|Value|
+|--------|-----|
+|Description|Primary entity|
+|DisplayName|Entity|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|entity|
+|MaxLength|100000|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_EstimatedOptimizationImpact"></a> EstimatedOptimizationImpact
 
-**Description**: The expected average cost benefit of an optimization.<br />
-**DisplayName**: Estimated Optimization Impact<br />
-**LogicalName**: estimatedoptimizationimpact<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Decimal<br />
-**MaxValue**: 1000000000<br />
-**MinValue**: 0<br />
-**Precision**: 2
+|Property|Value|
+|--------|-----|
+|Description|The expected average cost benefit of an optimization.|
+|DisplayName|Estimated Optimization Impact|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|estimatedoptimizationimpact|
+|MaxValue|1000000000|
+|MinValue|0|
+|Precision|2|
+|RequiredLevel|None|
+|Type|Decimal|
 
 
 ### <a name="BKMK_ExecutionPeriod"></a> ExecutionPeriod
 
-**Description**: The execution period for which the performance metrics are calculated.<br />
-**DisplayName**: Execution Period<br />
-**LogicalName**: executionperiod<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 50
+|Property|Value|
+|--------|-----|
+|Description|The execution period for which the performance metrics are calculated.|
+|DisplayName|Execution Period|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|executionperiod|
+|MaxLength|50|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_LastActionResult"></a> LastActionResult
 
-**Description**: An internal state which shows the result of the last action that was taken on this record.<br />
-**DisplayName**: Last Action Result<br />
-**LogicalName**: lastactionresult<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 50
+|Property|Value|
+|--------|-----|
+|Description|An internal state which shows the result of the last action that was taken on this record.|
+|DisplayName|Last Action Result|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|lastactionresult|
+|MaxLength|50|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_LastOptimizationDate"></a> LastOptimizationDate
 
-**Description**: Last time an optimization was applied.<br />
-**DisplayName**: Last Optimization Date<br />
-**LogicalName**: lastoptimizationdate<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: DateTime<br />
-**DateTimeBehavior**: UserLocal<br />
-**Format**: DateAndTime
+|Property|Value|
+|--------|-----|
+|DateTimeBehavior|UserLocal|
+|Description|Last time an optimization was applied.|
+|DisplayName|Last Optimization Date|
+|Format|DateAndTime|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|lastoptimizationdate|
+|RequiredLevel|None|
+|Type|DateTime|
 
 
 ### <a name="BKMK_MaxTime"></a> MaxTime
 
-**Description**: Maximum execution time in seconds. (Aggregated)<br />
-**DisplayName**: Max Time<br />
-**LogicalName**: maxtime<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Decimal<br />
-**MaxValue**: 1000000000<br />
-**MinValue**: 0<br />
-**Precision**: 2
+|Property|Value|
+|--------|-----|
+|Description|Maximum execution time in seconds. (Aggregated)|
+|DisplayName|Max Time|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|maxtime|
+|MaxValue|1000000000|
+|MinValue|0|
+|Precision|2|
+|RequiredLevel|None|
+|Type|Decimal|
 
 
 ### <a name="BKMK_MedianTime"></a> MedianTime
 
-**Description**: Average execution time in seconds. (Aggregated)<br />
-**DisplayName**: Median Time<br />
-**LogicalName**: mediantime<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Decimal<br />
-**MaxValue**: 1000000000<br />
-**MinValue**: 0<br />
-**Precision**: 2
+|Property|Value|
+|--------|-----|
+|Description|Average execution time in seconds. (Aggregated)|
+|DisplayName|Median Time|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|mediantime|
+|MaxValue|1000000000|
+|MinValue|0|
+|Precision|2|
+|RequiredLevel|None|
+|Type|Decimal|
 
 
 ### <a name="BKMK_MinTime"></a> MinTime
 
-**Description**: Minimum execution time in seconds. (Aggregated)<br />
-**DisplayName**: Min Time<br />
-**LogicalName**: mintime<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Decimal<br />
-**MaxValue**: 1000000000<br />
-**MinValue**: 0<br />
-**Precision**: 2
+|Property|Value|
+|--------|-----|
+|Description|Minimum execution time in seconds. (Aggregated)|
+|DisplayName|Min Time|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|mintime|
+|MaxValue|1000000000|
+|MinValue|0|
+|Precision|2|
+|RequiredLevel|None|
+|Type|Decimal|
 
 
 ### <a name="BKMK_Operation"></a> Operation
 
-**Description**: Data operation that triggered the query (Retrieve Multiple, etc.)<br />
-**DisplayName**: Operation<br />
-**LogicalName**: operation<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 100000
+|Property|Value|
+|--------|-----|
+|Description|Data operation that triggered the query (Retrieve Multiple, etc.)|
+|DisplayName|Operation|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|operation|
+|MaxLength|100000|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_OptimizationStatus"></a> OptimizationStatus
 
-**Description**: Current optimization status of the record, showed to the customer.<br />
-**DisplayName**: Optimization Status<br />
-**LogicalName**: optimizationstatus<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 50
+|Property|Value|
+|--------|-----|
+|Description|Current optimization status of the record, showed to the customer.|
+|DisplayName|Optimization Status|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|optimizationstatus|
+|MaxLength|50|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_OptimizationStorage"></a> OptimizationStorage
 
-**Description**: Storage consumed by the optimization. (MB)<br />
-**DisplayName**: Optimization Storage<br />
-**LogicalName**: optimizationstorage<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Decimal<br />
-**MaxValue**: 1000000000<br />
-**MinValue**: 0<br />
-**Precision**: 2
+|Property|Value|
+|--------|-----|
+|Description|Storage consumed by the optimization. (MB)|
+|DisplayName|Optimization Storage|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|optimizationstorage|
+|MaxValue|1000000000|
+|MinValue|0|
+|Precision|2|
+|RequiredLevel|None|
+|Type|Decimal|
 
 
 ### <a name="BKMK_OrganizationId"></a> OrganizationId
 
-**Description**: Unique identifier of the organization associated.<br />
-**DisplayName**: <br />
-**LogicalName**: organizationid<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**Type**: Lookup<br />
-**Targets**: organization
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier of the organization associated.|
+|DisplayName||
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|organizationid|
+|RequiredLevel|SystemRequired|
+|Targets|organization|
+|Type|Lookup|
 
 
 ### <a name="BKMK_RealizedOptimizationImpact"></a> RealizedOptimizationImpact
 
-**Description**: Actual performance change after taking an optimization action on the record.<br />
-**DisplayName**: Optimization Impact (%)<br />
-**LogicalName**: realizedoptimizationimpact<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 50
+|Property|Value|
+|--------|-----|
+|Description|Actual performance change after taking an optimization action on the record.|
+|DisplayName|Optimization Impact (%)|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|realizedoptimizationimpact|
+|MaxLength|50|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_Solution"></a> Solution
 
-**Description**: Name of the solution that owns the component<br />
-**DisplayName**: Solution<br />
-**LogicalName**: solution<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 100000
+|Property|Value|
+|--------|-----|
+|Description|Name of the solution that owns the component|
+|DisplayName|Solution|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|solution|
+|MaxLength|100000|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_Weight"></a> Weight
 
-**Description**: Query Weight of the component. Factored with the Optimization Impact to determine the overall importance of applying an optimization. (P2)<br />
-**DisplayName**: Weight<br />
-**LogicalName**: weight<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Decimal<br />
-**MaxValue**: 1000000000<br />
-**MinValue**: 0<br />
-**Precision**: 2
+|Property|Value|
+|--------|-----|
+|Description|Query Weight of the component. Factored with the Optimization Impact to determine the overall importance of applying an optimization. (P2)|
+|DisplayName|Weight|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|weight|
+|MaxValue|1000000000|
+|MinValue|0|
+|Precision|2|
+|RequiredLevel|None|
+|Type|Decimal|
 
 <a name="manytoone"></a>
 
@@ -359,5 +413,9 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 ### <a name="BKMK_lk_dataperformance_organizationid"></a> lk_dataperformance_organizationid
 
 See organization Entity [lk_dataperformance_organizationid](organization.md#BKMK_lk_dataperformance_organizationid) One-To-Many relationship.
-dataperformance
 
+### See also
+
+[About the Entity Reference](../about-entity-reference.md)<br />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+<xref href="Microsoft.Dynamics.CRM.dataperformance?text=dataperformance EntityType" />

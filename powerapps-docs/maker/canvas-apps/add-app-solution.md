@@ -22,7 +22,7 @@ Solutions are built on the same platform as Dynamics 365 for Customer Engagement
 
 ## Prerequisite
 
-To follow the steps in this topic, you must switch to an environment that contains a Common Data Service (CDS) for Apps database.
+To follow the steps in this topic, you must switch to an environment that contains a Common Data Service database.
 
 ## Create a solution
 
@@ -30,7 +30,7 @@ You can skip this procedure if you already have a solution in which you want to 
 
 1. [Sign in](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) to PowerApps, and then (if necessary) switch to the appropriate environment:
 
-    - If you want to create an app from within a solution, switch to any environment that contains a CDS for Apps database.
+    - If you want to create an app from within a solution, switch to any environment that contains a Common Data Service database.
     - If you want to link an existing app to a solution, switch to the environment that contains that app.
 
 1. In the left navigation bar, select **Solutions**.

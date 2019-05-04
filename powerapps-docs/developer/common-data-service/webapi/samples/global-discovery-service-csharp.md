@@ -1,13 +1,13 @@
 ---
-title: "Web API Global Discovery Service Sample (C#) (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Web API Global Discovery Service Sample (C#) (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample shows how to use the Web API global discovery service" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "brandonsimons" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
+ms.reviewer: "susikka"
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
@@ -25,7 +25,7 @@ This sample is available on Github at [https://github.com/Microsoft/PowerApps-Sa
 
 ## What this sample does
 
-This sample returns the available Common Data Service for Apps instances for a given user credential.
+This sample returns the available Common Data Service instances for a given user credential.
 
 ## How this sample works
 

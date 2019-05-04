@@ -19,7 +19,7 @@ search.app:
 Converts a GUID ([Globally Unique Identifier](https://en.wikipedia.org/wiki/Universally_unique_identifier)) string to a GUID value or creates a new GUID value.
 
 ## Description
-Use the **GUID** function to convert a string that contains the hexadecimal representation of a GUID into a GUID value that can be passed to a database. GUID values are used as keys by database systems such as Common Data Service for Apps and SQL Server.
+Use the **GUID** function to convert a string that contains the hexadecimal representation of a GUID into a GUID value that can be passed to a database. GUID values are used as keys by database systems such as Common Data Service and SQL Server.
 
 The string passed can contain uppercase or lowercase letters, but it must be 32 hexadecimal digits in either of these formats:
 
@@ -30,9 +30,7 @@ If you don't specify an argument, this function creates a new GUID.
 
 To convert a GUID value to a string, simply use it in a string context. The GUID value will be converted to a hexadecimal representation string with hyphens and lowercase letters. 
 
-> [!NOTE]
-> GUID values are currently blocked from being directly coerced to text values in function and operator contexts. You can directly coerce a GUID value to a text property of a control.  For now, use the [**Text** function](function-text.md) to convert values explicitly, as in this example:<br>
-> **Text( GUID() )**
+When generating a new GUID, this function uses pseudo-random numbers to create a version 4 [IETF RFC 4122](https://www.ietf.org/rfc/rfc4122.txt) GUID. When converting a string to a GUID, this function supports any GUID version by accepting any string of 32 hexadecimal digits.
 
 ## Volatile functions
 **GUID** is a volatile function when used without an argument. Each time the function is evaluated, it returns a different value.  

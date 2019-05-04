@@ -1,8 +1,8 @@
 ---
-title: "Get started with virtual entities (Common Data Service for Apps) | Microsoft Docs"
-description: "Virtual entities enable the integration of data residing in external systems by seamlessly representing that data as entities in Common Data Service for Apps, without replication of data and often without custom coding."
+title: "Get started with virtual entities (Common Data Service) | Microsoft Docs"
+description: "Virtual entities enable the integration of data residing in external systems by seamlessly representing that data as entities in Common Data Service, without replication of data and often without custom coding."
 ms.date: 10/31/2018
-ms.service: "crm-online"
+ms.service: powerapps
 ms.topic: "get-started-article"
 applies_to: 
   - "Dynamics 365 (online)"
@@ -19,7 +19,7 @@ search.app:
 
 # Get started with virtual entities
 
-Virtual entities enable the integration of data residing in external systems by seamlessly representing that data as entities in Common Data Service for Apps, without replication of data and often without custom coding. The initial implementation of this feature provides just read-only support for such entities, and has a number of other limitations described in the section [Limitations of Virtual Entities](#limitations-of-virtual-entities) below. Besides these limitations, virtual entities behave the same as other custom entities. 
+Virtual entities enable the integration of data residing in external systems by seamlessly representing that data as entities in Common Data Service, without replication of data and often without custom coding. The initial implementation of this feature provides just read-only support for such entities, and has a number of other limitations described in the section [Limitations of Virtual Entities](#limitations-of-virtual-entities) below. Besides these limitations, virtual entities behave the same as other custom entities. 
 
 Virtual entities replace previous client-side and server-side approaches to integrating external data, which required customized code and suffered from numerous limitations, including imperfect integration, data duplication, or extensive commitment of development resources.  In addition, for administrators and system customizers, the use of virtual entities greatly simplifies administration and configuration.
 
@@ -28,12 +28,12 @@ Virtual entities replace previous client-side and server-side approaches to inte
 
 ## Virtual entities, data providers and data sources
 
-A virtual entity is a definition of an entity in the CDS for Apps platform metadata without the associated physical tables for entity instances created in the CDS for Apps database. Instead during runtime, when an entity instance is required, its state is dynamically retrieved from the associated external system. Each virtual entity type is associated with a *virtual entity data provider* and (optionally) some configuration information from an associated *virtual entity data source*. 
+A virtual entity is a definition of an entity in the Common Data Service platform metadata without the associated physical tables for entity instances created in the Common Data Service database. Instead during runtime, when an entity instance is required, its state is dynamically retrieved from the associated external system. Each virtual entity type is associated with a *virtual entity data provider* and (optionally) some configuration information from an associated *virtual entity data source*. 
 
 <!-- TODO:
-A data provider is a particular type of CDS for Apps plug-in, which is registered against CRUD events that occur in the platform. This initial release only supports READ operations. More information: [Write a plug-in](../write-plugin.md) -->
+A data provider is a particular type of Common Data Service plug-in, which is registered against CRUD events that occur in the platform. This initial release only supports READ operations. More information: [Write a plug-in](../write-plugin.md) -->
 
-The following data providers ship with Common Data Service for Apps:
+The following data providers ship with Common Data Service:
 - An [OData v4](http://www.odata.org/documentation/) provider is included with the service and is installed by default.
 - An [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db) (formerly *Microsoft Document DB*) provider is available from [AppSource](https://appsource.microsoft.com).
 
@@ -48,12 +48,12 @@ In this example, a corresponding virtual entity data source would also be provid
 ## Limitations of Virtual Entities
 
 In this release, there are some limitations to virtual entities that you need to be aware of when evaluating whether you can use virtual entities with your external data.
-- Data is read-only. The virtual entity feature doesn’t support pushing changes made in CDS for Apps back to the external system.
+- Data is read-only. The virtual entity feature doesn’t support pushing changes made in Common Data Service back to the external system.
 - Only organization-owned entities are supported. The security filtering applied to user-owned entities is not supported. Access to the virtual entity data can be turned on or off for individual users based on their security role. Field-level security is not supported.
-- It must be possible to model the external data as a CDS for Apps entity. This means:
+- It must be possible to model the external data as a Common Data Service entity. This means:
     - All entities in the external data source must have an associated GUID primary key.  
-    - All entity properties must be represented as CDS for Apps attributes. You can use simple types representing text, numbers, optionsets, dates, images, and lookups. 
-    - You must be able to model any entity relationships in CDS for Apps.
+    - All entity properties must be represented as Common Data Service attributes. You can use simple types representing text, numbers, optionsets, dates, images, and lookups. 
+    - You must be able to model any entity relationships in Common Data Service.
     - An attribute on a virtual entity cannot be calculated or rollup.  Any desired calculations must be done on the external side, possibly within or directed by the data provider.
 - Auditing and change tracking is not supported.  These may be implemented within the external data store.
 - Virtual entities cannot be enabled for queues.
@@ -63,7 +63,7 @@ In this release, there are some limitations to virtual entities that you need to
 
 <!-- TODO: Make bulleted list into table?  Make more complete by reviewing API modification tables. -->
 
-For more information about how these limitations are reflected in the CDS for Apps API, see [API considerations of virtual entities](api-considerations-ve.md). 
+For more information about how these limitations are reflected in the Common Data Service API, see [API considerations of virtual entities](api-considerations-ve.md). 
 
 ### See also
 

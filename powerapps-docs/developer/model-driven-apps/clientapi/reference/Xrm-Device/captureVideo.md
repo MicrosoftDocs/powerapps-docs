@@ -1,7 +1,7 @@
 ---
 title: "captureVideo| MicrosoftDocs"
 ms.date: 10/31/2018
-ms.service: "crm-online"
+ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 9580d05a-a91f-4126-b94b-4d1068da35fa

@@ -1,10 +1,10 @@
 ---
-title: "Detect duplicate data using the Organization service (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Organization service allows you to detect duplicate records in Common Data Service (CDS) for Apps to maintain integrity of data" # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Detect duplicate data using the Organization service (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Organization service allows you to detect duplicate records in Common Data Service to maintain integrity of data" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -17,10 +17,10 @@ search.app:
 ---
 # Detect duplicate data using the Organization service
 
-The Common Data Service(CDS) for Apps Organization service allows you to detect duplicate records to maintain integrity of data. For detailed information about detecting duplicate data using code, see [Detect duplicate data using code](../detect-duplicate-data-with-code.md). 
+The Common Data Service Organization service allows you to detect duplicate records to maintain integrity of data. For detailed information about detecting duplicate data using code, see [Detect duplicate data using code](../detect-duplicate-data-with-code.md). 
 
 > [!NOTE]
-> Make sure there are appropriate duplicate detection rules in place. CDS for Apps includes default duplicate detection rules for accounts, contacts, and leads, but not for other types of records. If you want the system to detect duplicates for other record types, you’ll need to create a new rule. <br/>- For information on how to create a duplicate detection rule using the UI, see [Set up duplicate detection rules to keep your data clean](/dynamics365/customer-engagement/admin/set-up-duplicate-detection-rules-keep-data-clean).<br/>- For information on creating duplicate detection rules using code, see [Duplicate rule entities](../duplicaterule-entities.md)
+> Make sure there are appropriate duplicate detection rules in place. Common Data Service includes default duplicate detection rules for accounts, contacts, and leads, but not for other types of records. If you want the system to detect duplicates for other record types, you’ll need to create a new rule. <br/>- For information on how to create a duplicate detection rule using the UI, see [Set up duplicate detection rules to keep your data clean](/dynamics365/customer-engagement/admin/set-up-duplicate-detection-rules-keep-data-clean).<br/>- For information on creating duplicate detection rules using code, see [Duplicate rule entities](../duplicaterule-entities.md)
 
 
 ## Use RetrieveDuplicatesRequest message to detect duplicates before you create or update record

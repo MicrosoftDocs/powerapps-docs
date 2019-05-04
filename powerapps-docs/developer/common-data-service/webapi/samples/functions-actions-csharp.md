@@ -1,10 +1,9 @@
 ---
-title: "Web API Functions and Actions Sample (C#) (Common Data Service for Apps)| Microsoft Docs"
-description: "This sample demonstrates how to call bound and unbound functions and actions, including custom actions, using the Common Data Service for Apps Web API and C#"
+title: "Web API Functions and Actions Sample (C#) (Common Data Service)| Microsoft Docs"
+description: "This sample demonstrates how to call bound and unbound functions and actions, including custom actions, using the Common Data Service Web API and C#"
 ms.custom: ""
 ms.date: 1/09/2019
-ms.reviewer: ""
-ms.service: "crm-online"
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -14,6 +13,7 @@ ms.assetid: b14a8bff-bf05-412c-89f6-ba7b503dcb51
 caps.latest.revision: 13
 author: "brandonsimons" # GitHub ID
 ms.author: "jdaly"
+ms.reviewer: "susikka"
 search.audienceType: 
   - developer
 search.app: 
@@ -22,7 +22,7 @@ search.app:
 ---
 # Web API Functions and Actions Sample (C#)
 
-This sample demonstrates how to call bound and unbound functions and actions, including custom actions, using the Common Data Service for Apps Web API.  
+This sample demonstrates how to call bound and unbound functions and actions, including custom actions, using the Common Data Service Web API.  
   
 > [!NOTE]
 > This sample implements the operations detailed in the [Web API Functions and Actions Sample](../web-api-functions-actions-sample.md) and uses the common client-side C# constructs described in [Web API Samples (C#)](../web-api-samples-csharp.md).  
@@ -31,7 +31,7 @@ This sample demonstrates how to call bound and unbound functions and actions, in
 
 ## Prerequisites
 
-Prerequisites for all Common Data Service for Apps Web API C# samples are detailed in the [Prerequisites](../web-api-samples-csharp.md#bkmk_prerequisites) section of the parent topic [Web API Samples (C#)](../web-api-samples-csharp.md).  
+Prerequisites for all Common Data Service Web API C# samples are detailed in the [Prerequisites](../web-api-samples-csharp.md#bkmk_prerequisites) section of the parent topic [Web API Samples (C#)](../web-api-samples-csharp.md).  
   
 <a name="bkmk_runSample"></a>
 
@@ -42,7 +42,7 @@ Go to [Web API Functions and Actions Sample (C#)](https://github.com/Microsoft/P
 |File|Purpose/Description|  
 |----------|--------------------------|  
 |SampleProgram.cs|Contains the primary source code for this sample.|  
-|App.config|The application configuration file, which contains placeholder Common Data Service for Apps server connection information. This file is shared with all the Web API samples in the repo. If you configure connection information for one sample, you can run the other samples with the same configuration.|  
+|App.config|The application configuration file, which contains placeholder Common Data Service server connection information. This file is shared with all the Web API samples in the repo. If you configure connection information for one sample, you can run the other samples with the same configuration.|  
 |SampleHelper.cs|Contains the helper code to assist in performing common tasks, such as configuration, authentication and `HTTP` response error handling.<br/> This file is shared with all the Web API samples in the repo. It contains helper methods to manage exceptions and the OAuth Token. See the Simple Web API sample for more information about the methods in this file.|
 |SampleMethod.cs|Contains all the methods that support the source code in the sample. Functions used in `SampleProgram.cs` can be defined in this file. |
 |FunctionsAndActions.sln <br />FunctionsAndActions.csproj <br />Packages.config <br />AssemblyInfo.cs|The standard Visual Studio 2017 solution, project, NuGet package configuration, and assembly information files for this sample.|  
@@ -52,7 +52,7 @@ Next, use the following procedure to run this sample.
   
 1. Locate and double-click on the solution file, FunctionsAndActions.sln, to load the solution into Visual Studio. Build the **FunctionsAndActions** solution.  This should automatically download and install all the required NuGet packages that are either missing or need to be updated.  
   
-2. Edit the application configuration file, App.config, to specify connection information for your Common Data Service for Apps server.  
+2. Edit the application configuration file, App.config, to specify connection information for your Common Data Service server.  
   
 3. Run the **FunctionsAndActions** project from within Visual Studio.  All sample solutions are configured to run in debug mode by default.  
   
@@ -443,7 +443,7 @@ namespace PowerApps.Samples
   
 ### See also
 
-[Use the Common Data Service for Apps Web API](../overview.md)<br />
+[Use the Common Data Service Web API](../overview.md)<br />
 [Use Web API functions](../use-web-api-functions.md)<br />
 [Use Web API actions](../use-web-api-actions.md)<br />
 [Web API Samples](../web-api-samples.md)<br />

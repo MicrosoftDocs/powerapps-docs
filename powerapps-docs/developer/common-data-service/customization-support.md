@@ -1,9 +1,9 @@
 ---
-title: "Common Data Service for Apps app building practices | MicrosoftDocs"
+title: "Common Data Service app building practices | MicrosoftDocs"
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "crm-online"
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -23,7 +23,7 @@ search.app:
   - D365CE
 ---
 
-# Common Data Service for Apps supported and unsupported app building practices
+# Common Data Service supported and unsupported app building practices
 
 <!--
 The way your organization works is unique. Some organizations have well-defined business processes that they apply using PowerApps apps. Others aren’t happy with their current business processes and use PowerApps to apply new data and processes to their business. Whatever situation you find yourself in, you’ll find a lot of customization capabilities in PowerApps so that it can work for your organization.  
@@ -33,17 +33,17 @@ The way your organization works is unique. Some organizations have well-defined 
 ## What is metadata and why should you care?  
  In the past, you may have customized business applications by editing the source code. This created complications because each organization had unique changes and it was very difficult, or extremely expensive, to upgrade. Then application developers started exposing application programming interfaces (APIs) so that other developers could interact with the application and add their own logic without touching the source code. This was moderately better because it means developers can extend the application without changing it. But it still requires a developer to write code.  -->
   
- Modern business applications use a metadata-driven architecture so that people can create apps without writing code. Metadata means “data about data” and it defines the structure of the data stored in Common Data Service for Apps. With this metadata, an application knows about any changes to the data structure and this enables the application to adapt as the data structure changes. Since the metadata is known, additional capabilities can be included that are tied to the metadata.  
+ Modern business applications use a metadata-driven architecture so that people can create apps without writing code. Metadata means “data about data” and it defines the structure of the data stored in Common Data Service. With this metadata, an application knows about any changes to the data structure and this enables the application to adapt as the data structure changes. Since the metadata is known, additional capabilities can be included that are tied to the metadata.  
 
-Changing the Common Data Service for Apps components, such as entities, views, fields, charts, and dashboards to build apps that work the way you want is called *customization*.  
+Changing the Common Data Service components, such as entities, views, fields, charts, and dashboards to build apps that work the way you want is called *customization*.  
  
-When you build and customize your apps using the tools in PowerApps, you’re adding or updating the metadata or data used by features that depend on the metadata. Because we know the kinds of data used to create apps, we can take this data into account and add new features to your Common Data Service for Apps environment without breaking your apps. <!-- This way you should always be able to apply an update rollup or upgrade to the latest version and enjoy the best new features.  -->
+When you build and customize your apps using the tools in PowerApps, you’re adding or updating the metadata or data used by features that depend on the metadata. Because we know the kinds of data used to create apps, we can take this data into account and add new features to your Common Data Service environment without breaking your apps. <!-- This way you should always be able to apply an update rollup or upgrade to the latest version and enjoy the best new features.  -->
 
 <!--  
 > **Customize or Configure?**   
 > Most people say they want to customize the application, so we use the word “customize” to describe changing the system to make it work the way you want. Some people prefer to use the word “configure” because it suggests that no code was required to make changes. Call it whatever you like, we just want to make it clear that you don’t need to be a developer to customize or create PowerApps apps.  -->
   
-You don’t need to be a developer to build and customize PowerApps apps. However, PowerApps provides a set of web services and APIs that allow developers to write code. When code is written using supported methods you can expect that it will continue to work when your Common Data Service for Apps environment is updated.  
+You don’t need to be a developer to build and customize PowerApps apps. However, PowerApps provides a set of web services and APIs that allow developers to write code. When code is written using supported methods you can expect that it will continue to work when your Common Data Service environment is updated.  
   
 <a name="BKMK_SupportedCust"></a>   
 ## What kinds of customizations are supported?  
@@ -51,15 +51,15 @@ You don’t need to be a developer to build and customize PowerApps apps. Howeve
   
  Developers who extend PowerApps apps have a responsibility to follow rules and best practices documented in the SDK: [Best practices for developing with Dynamics 365 Customer Engagement](https://docs.microsoft.com/dynamics365/customer-engagement/developer/best-practices-sdk). The SDK documents the APIs available to developers and provides guidance about how to best use them. Microsoft supports only the APIs and practices that are documented in the SDK. You may find something on the Internet that describes how you can solve a problem, but if it doesn’t leverage APIs documented in the SDK, it isn’t supported by Microsoft. Before you have a developer apply a change you should verify whether it uses supported methods.  
   
- If developers use the APIs and best practices described in the SDK we can be sure to test whether any of the changes we make to Common Data Service for Apps has the potential to break existing customizations. Our goal is that code customizations written using supported methods will continue to work when new versions or updates to Common Data Service for Apps are released. You benefit because you can upgrade to new versions with improved features without having developers change their code each time.  
+ If developers use the APIs and best practices described in the SDK we can be sure to test whether any of the changes we make to Common Data Service has the potential to break existing customizations. Our goal is that code customizations written using supported methods will continue to work when new versions or updates to Common Data Service are released. You benefit because you can upgrade to new versions with improved features without having developers change their code each time.  
   
- If we detect that a change in a new version of Common Data Service for Apps will cause a supported customization to break, we will document what is affected and how people can change their code to fix it.  
+ If we detect that a change in a new version of Common Data Service will cause a supported customization to break, we will document what is affected and how people can change their code to fix it.  
   
 <a name="BKMK_Unsupported"></a>   
 ## What kinds of customizations aren’t supported?  
  Just because certain APIs and programming practices aren’t supported by Microsoft doesn’t mean that they don’t work. <!--  “Unsupported by Microsoft” means exactly what it says: you can’t get support about these APIs or programming practices from Microsoft. We don’t test them and we don’t know if something we change will break them. We can’t predict what will happen if someone changes code in our application.  -->  The developer who uses unsupported APIs and programming practices assumes the responsibility to support their code. They will need to test their code to make sure it works.  
   
- If you choose to use unsupported customizations in your Common Data Service for Apps environment you should be sure to document what was done and have a strategy to remove those customizations before you contact Microsoft Technical Support. If you need help with unsupported customizations, contact the developer or organization who prepared the customizations.  
+ If you choose to use unsupported customizations in your Common Data Service environment you should be sure to document what was done and have a strategy to remove those customizations before you contact Microsoft Technical Support. If you need help with unsupported customizations, contact the developer or organization who prepared the customizations.  
   
 <a name="BKMK_CommonUnsupportedCustomizations"></a>   
 ### Common unsupported customization practices  
@@ -68,10 +68,10 @@ You don’t need to be a developer to build and customize PowerApps apps. Howeve
 **Interacting with the web application Document Object Model (DOM) elements using JavaScript**  
  Any JavaScript libraries used anywhere in the application must only interact with the documented APIs. When JavaScript developers work with applications they frequently access DOM elements using specific names. Because PowerApps apps are web applications these techniques work, but they are likely to break during an update because the names of the elements they reference are subject to change at any time. We reserve the right to make any changes necessary in the application and this frequently means changing how the page is constructed. Adding any changes that depend on the current structure of the page means that you’ll need to invest in testing and perhaps changing the custom code in these scripts each time you apply an update to your application.  
   
- jQuery is a very common library used by JavaScript developers. Most of the benefit of using jQuery is that it simplifies a developer’s ability to access and create DOM elements, which is exactly what we do not support in the Common Data Service for Apps application pages. jQuery is recommended when developers are creating custom user interfaces with HTML web resources, but within the PowerApps application pages, the supported APIs do not require jQuery to be used.  
+ jQuery is a very common library used by JavaScript developers. Most of the benefit of using jQuery is that it simplifies a developer’s ability to access and create DOM elements, which is exactly what we do not support in the Common Data Service application pages. jQuery is recommended when developers are creating custom user interfaces with HTML web resources, but within the PowerApps application pages, the supported APIs do not require jQuery to be used.  
   
  **Using any undocumented internal objects or methods using JavaScript**  
-The Common Data Service for Apps uses many JavaScript objects within pages. A JavaScript developer can discover these objects by debugging a page and then access and reuse these objects. We reserve the right to make any changes necessary to these objects, including removing them or changing the names of the methods. If a script references these objects, the script will break if they are not found.  <a name="BKMK_Metadata"></a>   
+The Common Data Service uses many JavaScript objects within pages. A JavaScript developer can discover these objects by debugging a page and then access and reuse these objects. We reserve the right to make any changes necessary to these objects, including removing them or changing the names of the methods. If a script references these objects, the script will break if they are not found.  <a name="BKMK_Metadata"></a>   
  
 <a name="BKMK_CombineCustomizations"></a>   
 ## Combine customization capabilities  
@@ -82,8 +82,8 @@ The Common Data Service for Apps uses many JavaScript objects within pages. A Ja
  With all the different customization capabilities available in PowerApps it’s easy to become familiar with one of them and seek to use it to solve every problem. As you evaluate the business problems you want to solve, think about the end result you want to achieve and then work backwards to how you can get there.  
  
 <a name="BKMK_changesinperformance"></a>   
-## Changes that affect Common Data Service for Apps environment performance  
- Importing solutions and applying customizations that change metadata can affect Common Data Service for Apps environment performance. Actions that can interfere with normal system operation include:  
+## Changes that affect Common Data Service environment performance  
+ Importing solutions and applying customizations that change metadata can affect Common Data Service environment performance. Actions that can interfere with normal system operation include:  
   
 -   Add, remove, or change entities, alternate keys, attributes, or relationships.   
 -   Import solutions

@@ -26,8 +26,6 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Audio](controls/control-audio-video.md)** – Play an audio clip or the audio portion of a video clip.
 
-**[Barcode scanner (experimental)](controls/control-barcodescanner.md)** – Scans codes in a web browser (legacy/obsolete).
-
 **[Barcode scanner](controls/control-new-barcode-scanner.md)** – Scans barcodes, QR codes, and data-matrix codes on an Android or iOS device.
 
 **[Button](controls/control-button.md)** – Interact with the app by clicking or tapping.
@@ -86,7 +84,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Rating](controls/control-rating.md)** – Indicate a value between 1 and a specified number.
 
-**[Rich text editor (experimental)](controls/control-richtexteditor.md)** – Allows rich text formatting by app users.
+**[Rich text editor](controls/control-richtexteditor.md)** – Allows rich text formatting by app users.
 
 **[Screen](controls/control-screen.md)** – Show and update data about a specific task.
 

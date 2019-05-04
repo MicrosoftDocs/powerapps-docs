@@ -1,7 +1,7 @@
 ---
 title: "refreshRibbon (Client API reference) in model-driven apps| MicrosoftDocs"
 ms.date: 10/31/2018
-ms.service: "crm-online"
+ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: dbd43d7b-c9b0-4ca5-943d-dd813d3bb049
