@@ -27,4 +27,7 @@ The new canvas apps embedding SDK enables you to embed canvas apps in your appli
 
 ## Using the canvas apps embedding SDK and documentation
 
-The new canvas app embedding SDK is a preview feature that requires you to sign up before you can use it. To sign up for the feature and view the documentation, go [here](https://go.microsoft.com/fwlink/?linkid=2091411).
+The new canvas app embedding SDK is a preview feature that requires you to sign up as an insider before you can use it. To sign up for the feature and view the documentation:
+
+1. Join as an insider by visiting <https://experience.dynamics.com/insider>.
+2. Search for the program: **PowerApps Embedding SDK Preview**.
