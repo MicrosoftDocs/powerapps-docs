@@ -15,15 +15,17 @@ search.app:
   - PowerApps
 ---
 # AsType and IsType functions in PowerApps
-Tests the type and casts to a specific type for Common Data Service polymorphic values.  
+Tests the type and casts to a specific type for record references.  
 
 ## Description
 
 ### Owner and Customer lookups
 
-Normally a Many-to-One lookup field can refer to records of only one other entity.  For example, the **'Primary Contact'** field of an Account record can refer to only records in the **Contacts** entity.  The Common Data Service supports *polymorphic* lookups: a lookup that can refer to a record from a set of other entities.  For example, the **Owner** field of an **Account** record can refer to a record in the **Users** entity or the **Teams** entity.  
+Normally a Many-to-One lookup field can refer to records of only one other entity.  For example, the **'Primary Contact'** field of an Account record can refer to only records in the **Contacts** entity.  
 
-As each polymorphic lookup can refer to records in different entities, the type of the lookup cannot be established at authoring time.  You will need to test and establish the specific type of the lookup in your formulas.  Use the **IsType** function to test which entity a polymorphic lookup refers to and then use the **AsType** function to reference the fields using a specific type.  A common pattern to display the name of a user or a team:
+The Common Data Service also supports *polymorphic* lookup fields.  These lookups can refer to records in more than one entity.  When used with a Canvas app, these lookups become *Record References*.  For example, the **Owner** field of an **Account** record can refer to a record in the **Users** entity or the **Teams** entity.  Inside a Canvas app, the **Owner** field is of type **Record Reference*.  
+
+As each record reference can refer to records in different entities, the type of the lookup cannot be established at authoring time.  You will need to test and establish the specific type of the lookup in your formulas.  Use the **IsType** function to test which entity a polymorphic lookup refers to and then use the **AsType** function to reference the fields using a specific type.  A common pattern to display the name of a user or a team:
 
 ```powerapps-dot
 If( IsType( First(Accounts).Owner, Users ), 
@@ -32,7 +34,7 @@ If( IsType( First(Accounts).Owner, Users ),
 )
 ```
 
-The CDS data types that can be polymorphic are:
+The CDS data types that are record references in a Canvas app:
 
 | CDS Data Type | Possible entities |
 |---------------|-------------------|
@@ -41,7 +43,7 @@ The CDS data types that can be polymorphic are:
 
 ### Regarding lookups
 
-Many entities in the Common Data Service include a polymorphic lookup column **Regarding** that can refer to any entity.  They are often used with activity entities where, for example, a record in the **'Phone Calls'** entity can refer to a record in the **Accounts**, **Contacts**, **Knowledge Base Records**, and **Knowledge Articles** entities.  View the relationships for the entity and search for the **Regarding** Many-to-one relationships to see the possible entities that can be referred to:  
+Many entities in the Common Data Service include the lookup column **Regarding** that can refer to many different entity.  They are used with activity entities where, for example, by default a record in the **'Phone Calls'** entity can refer to a record in the **Accounts**, **Contacts**, **Knowledge Base Records**, and **Knowledge Articles** entities.  View the relationships for the entity and search for the **Regarding** Many-to-one relationships to see the possible entities that can be referred to:  
 ![](media/function-astype-istype/regarding-relationships.png)
 
 The **IsType** and **AsType** functions are used to test the type of the regarding entity and to access its information:
@@ -53,7 +55,7 @@ If( IsType( First('Phone Calls').Regarding, Accounts ),
 
 ### Activities entity 
 
-Records of the **Activities** entity are also polymorphic: an activity record can be of type **'Phone Calls'**, **Tasks**, **Faxes**, etc.  **Activities** share a common set of columns, such as **Subject**, that is available for all records and can be accessed in the same manner as a non-polymorphic entity directly through a dot reference.  In addition each record may have have type specific columns that can only be accessed through the **AsType** function, such as **'Phone Number'** for **'Phone Calls'**.  For example, this formula will display the **Subject** for any activity type and in addition will add the phone number if the activity was a phone call.
+Records of the **Activities** entity are polymorphic: an activity record can be of type **'Phone Calls'**, **Tasks**, **Faxes**, etc.  **Activities** share a common set of columns, such as **Subject**, that is available for all records and can be accessed in the same manner as a non-polymorphic entity directly through a dot reference.  In addition each record may have have type specific columns that can only be accessed through the **AsType** function, such as **'Phone Number'** for **'Phone Calls'**.  For example, this formula will display the **Subject** for any activity type and in addition will add the phone number if the activity was a phone call.
 
 ```powerapps-dot
 First(Activities).Subject &
@@ -74,14 +76,14 @@ The **IsType** function returns a Boolean value: true if the polymorphic value i
 The **AsType** function returns the polymorphic value as a record of the specified type.  The function will return an error if the value is not of the specified type.  A *blank* record is returned if the polymorphic value is *blank*.
 
 ## Syntax
-**AsType**( *PolymorphicValue*, *EntityType* )
+**AsType**( *RecordReference*, *EntityType* )
 
-* *PolymorphicValue* - Required. The lookup field of a Many-to-one polymorphic relationship.
+* *RecordReference* - Required. A record reference, often a lookup field that can be related to records in more than one entity.
 * *EntityType* - Required. The specific entity to test for. 
 
-**IsType**( *PolymorphicValue*, *EntityType* )
+**IsType**( *RecordReference*, *EntityType* )
 
-* *PolymorphicValue* - Required. The lookup field of a Many-to-one polymorphic relationship.
+* *RecordReference* - Required. A record reference, often a lookup field that can be related to records in more than one entity.
 * *EntityType* - Required. The specific entity to cast to.
 
 ## Example
