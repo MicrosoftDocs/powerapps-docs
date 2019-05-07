@@ -54,8 +54,10 @@ A custom component is defined by the information in the `ControlManifest.Input.x
     ```
 
 4. Save the changes to the `ControlManifest.Input.xml` file.
-5. Build the component project using the command `npm run build`.
-6. The build generates an updated Typescript type declaration file under `TSLinearInputControl/generated folder`.  The `ManifestTypes.d.ts` file defines the properties that your component will have access to Typescript source code.
+5. Now, create a new folder inside the LinearControl folder and name it as css.
+6. Create a css file to [add styling to the custom component](#adding-style-to-the-custom-component)
+7. Build the component project using the command `npm run build`.
+8. The build generates an updated Typescript type declaration file under `TSLinearInputControl/generated folder`.  The `ManifestTypes.d.ts` file defines the properties that your component will have access to Typescript source code.
 
 ## Implementing component logic
 
