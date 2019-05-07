@@ -59,7 +59,7 @@ private inputElement: HTMLInputElement;
 private _container: HTMLDivElement;
 // Reference to ComponentFramework Context object
 private _context: ComponentFramework.Context<IInputs>;
-// Event Handelr 'refreshData' reference
+// Event Handler 'refreshData' reference
 private _refreshData: EventListenerOrEventListenerObject;
 /**
 * Empty constructor.
