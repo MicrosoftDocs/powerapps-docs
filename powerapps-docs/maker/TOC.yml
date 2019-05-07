@@ -728,6 +728,8 @@
       href: ./canvas-apps/dev-appsource-test-drive.md
     - name: Create a component
       href: ./canvas-apps/create-component.md
+    - name: Embed canvas apps in your applications
+      href: ./canvas-apps/embedding-sdk.md
 - name: Model-driven apps
   href: ./model-driven-apps/model-driven-app-overview.md
   items:
