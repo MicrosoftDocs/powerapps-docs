@@ -98,25 +98,31 @@ No **IsType** or **AsType** is required here because we are doing a record to re
 Note that there is no delegation warning on this **Filter**.  This query is delegated to CDS.
 
 Let's get a little fancier and support filtering by either a user or a team.  
+
 1. Open up some space at the top of the screen and insert a **Radio** control.  
+
 1. Set these properties on this new control:
     - Items: `[ "All", "Users", "Teams" ]`
     - Layout: `Layout.Horizontal`
+
 1. On the existing combo box control, set this property:
-    - Visible: `Radio1.Selected.Value = "Users"`
-If the control disappears, select *Users* in the radio control.
-1. Copy and paste the combo box control, positioning it directly above the original. 
+    - Visible: `Radio1.Selected.Value = "Users"
+    If the control disappears, select *Users* in the radio control.
+
+1. Copy and paste the combo box control, positioning it directly above the original.
+ 
 2. Change these properties on the copy:
     - Items: `Teams`
     - Visible: `Radio1.Selected.Value = "Teams"`
+
 1. Finally, set the **Items** property of the gallery control to this formula:
-```powerapps-dot
-Filter( Accounts, 
-    Radio1.Selected.Value = "All"
-    Or (Radio1.Selected.Value = "Users" And Owner = ComboBox1.Selected) 
-    Or (Radio1.Selected.Value = "Teams" And Owner = ComboBox1_1.Selected) 
-)
-```
+    ```powerapps-dot
+    Filter( Accounts, 
+        Radio1.Selected.Value = "All"
+        Or (Radio1.Selected.Value = "Users" And Owner = ComboBox1.Selected) 
+        Or (Radio1.Selected.Value = "Teams" And Owner = ComboBox1_1.Selected) 
+    )
+    ```
 ![](media/working-with-references/filter-combobox.png)
 
 With our changes we can show all records or filter on either a user or a team:
@@ -168,6 +174,7 @@ Let's use this capability in our app:
     ```
 
     ![](media/working-with-references/patch-default-users.png) 
+
 1. Select **Teams** in the radio control so that the teams combo box control is visible.
 
 1. Select the radio control, to take selection away from the now invisible combo box control for users, and then select the visible combo box control for teams.  Set the **DefaultSelectedItems** property to this formula:
@@ -270,6 +277,7 @@ If( IsBlank( ThisItem.'Company Name' ), "",
     "Contact: " & AsType( ThisItem.'Company Name', [@Contacts] ).'Full Name' 
 )
 ```
+
 ![](media/working-with-references/customer-update.png)
 
 With these changes, we can now look at and change the **Company Name** field on the **Contacts** entity:
@@ -305,6 +313,7 @@ If( IsBlank( ThisItem.Regarding ), "",
     "" 
 )
 ```
+
 ![](media/working-with-references/regarding-label.png)
 
 With these changes we work with the **Regarding** lookup just as we did the **Owner** and **Customer** lookups:
