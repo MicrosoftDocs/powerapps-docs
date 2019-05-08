@@ -16,35 +16,69 @@ search.app:
 ---
 # Create a list of order details in a canvas app
 
-Follow the steps in this topic to create a list of order details in a canvas app based on fictitious data in Common Data Service. As in the [previous topic in this series](northwind-orders-canvas-part2.md), this single-screen app is designed to help the user show, update, create, and delete orders on a tablet device.
+Follow the steps in this topic to create a list of order details in a canvas app based on fictitious data in Common Data Service. This topic finishes a series that describes how to build this single-screen app that helps the user show, update, create, and delete orders on a tablet device.
 
 > [!div class="mx-imgBorder"]
 > ![Complete canvas app](media/northwind-orders-canvas-part1/orders-finished.png)
 
-As you build the app, you'll discover and explore these concepts:
+## Explore the user interface
 
-- **Many-to-one relationships.** Each customer can place one or more orders, but only one customer can place each order. The **Orders** entity is related to the **Customers** entity so that the list near the left edge can show which customer placed each order. The list shows the name of the customer, but it could show data from any column in the **Customers** entity.
-- **One-to-many relationships.** Each order contains one or more line items, each of which appears as a record in the **Order Details** entity. Each order detail is contained in only one order.
-- **Option sets.** Each order has a status, such as **New**, **Shipped**, **Invoiced**, or **Closed**. These values are defined as option sets in the database and can be shared across apps.
-- **Gallery and form interactions.** The gallery lists all orders, a user can select an order, and the rest of the app responds to the user's selection.
- 
-In terms of relationships, this app uses six entities and option sets.
+### List of orders
 
-> [!div class="mx-imgBorder"]
-> ![](media/northwind-orders-canvas-part3/orders-entities.png)
+On the left edge of the app, a gallery shows a list of orders, including the order number, the status, the name of the customer, and the total cost. The user can scroll through the list to find an order and then select it by selecting the arrow for that order. [Create a list of orders.](northwind-orders-canvas-part1.md)
 
-Most of these start as references from the **Orders** entity with the help of the [**Gallery**](controls/control-gallery.md) and [**Edit form**](controls/control-form-detail.md) controls to provide a "current" order from which to work. For example, **ThisItem** in the gallery near the left edge provides a single order, from which you can walk the many-to-one relationship to the **Customers** entity and retrieve the company name with the simple dot notation **ThisItem.Customer.Company**. Likewise, you can walk the one-to-many relationship from **ThisItem** to the **Order Details** entity to retrieve the list of products in this order with **ThisItem.'Order Details'**.
+### Order summary
 
-To build this app, follow the steps in these topics
+In the upper-right corner, a form summarizes whatever order the user selected in the list. The summary includes much of the same information in the list of orders, but it also shows the dates when the order was created and paid, as well as the name and picture of the employee who managed the order. The user can change the data in the form, save those changes, cancel them, or delete the order by selecting an icon near the right edge of the title bar. [Create an order summary](northwind-orders-canvas-part1.md).
+
+### Order details
+
+Near the lower-right corner, another gallery shows information about which products the selected order contains and in what quantities. The user can delete any item in that gallery and add another item by using the controls under the gallery. This topic describes how to add and configure that gallery and those controls.
 
 > [!div class="mx-imgBorder"]
 > ![Definition of screen areas](media/northwind-orders-canvas-part1/orders-parts.png)
 
-- [**Part 1, Orders list**](northwind-orders-canvas-part1.md): Show each order's number, customer name, status, and total amount in a list. Select an order that you want to edit or delete elsewhere in the screen.
-- [**Part 2, Order form**](northwind-orders-canvas-part2.md): Show and edit a summary of the order, delete the order, or create another order.
-- **Part 3, Order details**: As this topic describes, show and edit the line items, called order details, that are associated with each order.
+## Explore the data sources
 
-If you haven't already done so, work through [part 2](northwind-orders-canvas-part2.md). Or take a shortcut by opening the **Northwind Orders (Canvas), Start Part 3** app after you [install the Northwind Traders sample database and apps](northwind-install.md)
+To create this app, you'll show data from five entities and an option set. In fact, most areas of this app shows data from multiple entities. For example, the list of orders contains this information:
+
+- The order number is a field in the **Orders** entity.
+- The status is an option in the **Orders Status** option set.
+- The customer name is a field in the **Customers** entity.
+- The total cost is calculated based on records in the **Order Details** entity.
+
+The summary contains some of the same information as the list of orders, but it also contains the name and the picture of the employee who managed the order. That information is pulled from fields in the **Employees** entity. The list of order details shows records in the **Order Details** entity, and each product in those details is a record in the **Order Products** entity.
+
+> [!div class="mx-imgBorder"]
+> ![Where each entity and option set appears in the app](media/northwind-orders-canvas-part3/orders-entities.png)
+
+## Explore the relationships
+
+You can show data from different sources (for example, entities) in the same gallery or form because those entities have relationships that were created for you in the database. 
+
+### Many-to-one relationships
+
+For example, information about the customer and the employee for each order resides in the **Customers** and **Employees** entities. Therefore, the **Orders** entity has many-to-one relationships with those entities because of these requirements:
+
+- Each customer can place more than one order, but each order can be placed by only one customer.
+- Each employee can manage more than one order, but each order can be managed by only one employee.
+
+Each order also has one or more line items that represent the products that the order contains and their quantities. Each line item is a record in the **Order Details** entity, which pulls information about each product from the **Order Products** entity. Each detail identifies only one product, but each product can appear in multiple details. Therefore, the **Order Details** entity has a many-to-one relationship with the **Order Products** entity.
+
+### One-to-many relationships
+Each order can contain multiple line items, but each line item relates to only one order. Therefore, the **Orders** entity has a one-to-many relationship with the **Order Details** entity.
+
+### Dot notation
+
+To show data based on a relationship between entities, you create a formula that uses dot notation in a practice that's known as "walking the relationship." For example, each record in the **Orders** entity pulls information from the **Customers** entity so that the list of orders can show the customer name. In the list of orders, you configure this behavior by setting the **Text** property of a label to this expression:<br>`ThisItem.Customer.Company`
+
+**ThisItem** specifies a record in the **Orders** entity and information from the **Customers** entity about the customer who placed the order. In this case, the expression specifies that the customer's company name appears. However, the entire record for that customer is pulled, so you could just as easily show, for example, the email address for the customer's primary contact instead.
+
+As another example of "walking a relationship," you can specify that a gallery should show records in one entity based on a record that the user selected in another gallery and that's in another entity. To show the order details, you'll set a gallery's **Items** property to this expression:<br>`Gallery1.Selected.'Order Details'`
+
+In this case, **Gallery1.Selected** specifies a record in the **Orders** entity, just as **ThisItem** did in the previous example. However, this expression doesn't pull a record as the previous expression did. Instead, it pulls an entire table of records to show the name and per-unit cost of each product (as reflected in the **Order Products** entity) and the quantity (as reflected in the **Order Details** entity).
+
+## Prerequisites
 
 If you haven't already done so, [install the Northwind Traders sample database and apps](northwind-install.md), and then take either of these approaches:
 
@@ -53,79 +87,88 @@ If you haven't already done so, [install the Northwind Traders sample database a
 
 ## Display order details
 
-1. Let's display the product line items that make up this order. Copy (with Ctrl-C) and Paste (with Ctrl-V) the title bar label at the top of the screen:
+Let's display the product line items that make up this order.
+
+1. At the top of the screen, select the label that acts as a title bar, copy it by pressing Ctrl-C, and then paste it by pressing Ctrl-V:
 
     > [!div class="mx-imgBorder"]
-    > ![](media/northwind-orders-canvas-part3/details-01.png)
+    > ![Copy and paste title bar](media/northwind-orders-canvas-part3/details-01.png)
 
-1. Resize and move the copy to just below the form control from Part 2.   Double-click   into the control and backspace over the text to remove it (you can also set the **Text** property to an empty string or **""**):
+1. Resize and move the copy so that it appears just under the order summary, and then remove the text from the title-bar copy.
 
-    > [!div class="mx-imgBorder"]
-    > ![](media/northwind-orders-canvas-part3/details-02.png)
+    You can remove the text in either of these ways:
 
-1. Insert a [**Gallery** control](controls/control-gallery.md) with a **Blank vertical** layout:
-
-    > [!div class="mx-imgBorder"]
-    > ![](media/northwind-orders-canvas-part3/details-03.png)
-
-    The newly inserted control will overlay the existing controls on the left hand side of the screen:
+    - Select the text by double-clicking it, and then press the Del key.
+    - Set the control's **Text** property to an empty string (**""**).
 
     > [!div class="mx-imgBorder"]
-    > ![](media/northwind-orders-canvas-part3/details-04.png)
+    > ![Remove the text from the title-bar copy](media/northwind-orders-canvas-part3/details-02.png)
 
-1. Close the **Data** pane, and then resize and move the control below the new title bar:
+1. Insert a [**Gallery**](controls/control-gallery.md) control with a **Blank vertical** layout:
 
     > [!div class="mx-imgBorder"]
-    > ![](media/northwind-orders-canvas-part3/details-05.png)
+    > ![Add a blank vertical gallery](media/northwind-orders-canvas-part3/details-03.png)
 
-1. Set the **Items** property of the new gallery to this formula:
+    The new control, which will show order details, appears over the existing controls in the upper-left corner:
+
+    > [!div class="mx-imgBorder"]
+    > ![Default location of order-details gallery](media/northwind-orders-canvas-part3/details-04.png)
+
+1. Close the **Data** pane, and then resize and move the order-details gallery to the lower-right corner, below the new title bar:
+
+    > [!div class="mx-imgBorder"]
+    > ![Final location of order-details gallery](media/northwind-orders-canvas-part3/details-05.png)
+
+1. Set the **Items** property of the order-details gallery to this formula:
 
     ```powerapps-dot
     Gallery1.Selected.'Order Details'
     ```
 
     > [!div class="mx-imgBorder"]
-    > ![](media/northwind-orders-canvas-part3/details-06.png)
+    > ![Set the Items property of the order-details galley](media/northwind-orders-canvas-part3/details-06.png)
 
-    Your gallery may be named something different than **Gallery1**. Check the name in the **Tree view** pane on the left of your screen if you encounter problems.
+    If an error appears, confirm that the order-list gallery is named **Gallery1** (in the **Tree view** pane near the left edge). If the gallery has a different name, rename it to **Gallery1**.
 
-    You've just linked the two galleries on your screen: the new gallery will display the **Order Details** for the selected **Order** in the orders-list gallery. Here we are traversing the one-to-many relationship between the **Order Details** and **Orders** entities, as seen in the PowerApps portal:
-
-    > [!div class="mx-imgBorder"]
-    > ![](media/northwind-orders-canvas-part3/schema-orders-rel.png) 
-
-1. Select **Add an item from the insert tab** inside the gallery to select the template for the gallery. You can tell the difference from selecting the gallery itself because the bounding box is slightly inside the gallery's boundary and is usually shorter than the gallery's height. As you insert controls into this template, they will be repeated for each item:
+    You've just linked the two galleries on your screen. When the user selects an order in the order list, that selection identifies a record in the **Orders** entity. If that order contains one or more line items, the record is linked to one or more records in the **Order details** entity, and data from those records appear in the new gallery. This behavior reflects the one-to-many relationship that was created for you between the **Order Details** and **Orders** entities, and the formula that you specified "walks" that relationship by using dot notation:
 
     > [!div class="mx-imgBorder"]
-    > ![](media/northwind-orders-canvas-part3/details-07.png)
+    > ![One-to-many relationship between the Orders entity and the Order Details entity](media/northwind-orders-canvas-part3/schema-orders-rel.png) 
+
+1. Select the gallery template by selecting **Add an item from the insert tab** inside the gallery.
+
+    Ensure that you've selected the gallery template instead of the gallery itself. The bounding box should be slightly inside the gallery's boundary and probably shorter than the gallery's height. As you insert controls into this template, they are repeated for each item in the gallery:
+
+    > [!div class="mx-imgBorder"]
+    > ![Select the template for the order-details gallery](media/northwind-orders-canvas-part3/details-07.png)
 
 1. On the **Insert** tab, insert a [**Label** control](controls/control-text-box.md).
 
     The label should appear within the gallery; if it doesn't, try again, but make sure to select the gallery's template before you insert the label.
 
     > [!div class="mx-imgBorder"]
-    > ![](media/northwind-orders-canvas-part3/details-08.png)
+    > ![Add a label to the order-details gallery](media/northwind-orders-canvas-part3/details-08.png)
 
-1. Set the label's **Text** property to this formula:
+1. Set the new label's **Text** property to this formula:
 
     ```powerapps-dot
     ThisItem.Product.'Product Name'
     ```
 
-1. Resize the Label control so that the full text appears:
+1. Resize the **Label** control so that the full text appears:
 
     > [!div class="mx-imgBorder"]
     > ![](media/northwind-orders-canvas-part3/details-09.png)
 
-    With this formula, you're walking from a record in the **Order Details** entity. The record is held in **ThisItem** over to the **Order Products** entity through a many-to-one relationship:
+    This formula walks from a record in the **Order Details** entity. The record is held in **ThisItem** over to the **Order Products** entity through a many-to-one relationship:
 
     > [!div class="mx-imgBorder"]
-    > ![](media/northwind-orders-canvas-part3/schema-orderdetails-rel.png)
+    > ![Many-to-one relationship between the Order Details entity and the Order Product entity](media/northwind-orders-canvas-part3/schema-orderdetails-rel.png)
 
-    And extracting the **Product Name** field (other fields you're about to use are also highlighted):
+    The **Product Name** field (and other fields you're about to use) is extracted:
 
     > [!div class="mx-imgBorder"]
-    > ![](media/northwind-orders-canvas-part3/schema-products-fields.png)
+    > ![Fields in the Order Products entity](media/northwind-orders-canvas-part3/schema-products-fields.png)
 
 1. On the **Insert** tab, insert an [**Image**](controls/control-image.md) control into the gallery:
 
