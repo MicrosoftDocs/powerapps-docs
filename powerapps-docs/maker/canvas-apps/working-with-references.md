@@ -142,17 +142,23 @@ This isn't any different form a normal lookup because we know the type of **Firs
 Let's use this capability in our app:
 
 1. Using the Tree view, multi-select the radio control and our two combo box controls.
+
 1. On the elipses menu, select **Copy these items**:
     ![](media/working-with-references/patch-copy.png)
+
 1. On the same elipses menu, select **Paste**:
     ![](media/working-with-references/patch-paste.png)
+
 1. Move the controls to the right of the gallery:
-    ![](media/working-with-references/patch-position.png) 
+    ![](media/working-with-references/patch-position.png)
+ 
 1. Select the copied radio control and change these properties:
     - Items: `[ "Users", "Teams" ]`
     - Default:` If( IsType( Gallery1.Selected.Owner, Users ), "Users", "Teams" )`
     ![](media/working-with-references/patch-noall.png) 
+
 1. Select **Users** in the radio control so that the users combo box control is visible.
+
 1. Select the visible combo box control.  Set the **DefaultSelectedItems** property to this formula:
     ```powerapps-dot
     If( IsType( Gallery1.Selected.Owner, Users ),
@@ -160,8 +166,10 @@ Let's use this capability in our app:
         Blank() 
     )
     ```
+
     ![](media/working-with-references/patch-default-users.png) 
 1. Select **Teams** in the radio control so that the teams combo box control is visible.
+
 1. Select the radio control, to take selection away from the now invisible combo box control for users, and then select the visible combo box control for teams.  Set the **DefaultSelectedItems** property to this formula:
     ```powerapps-dot
     If( IsType( Gallery1.Selected.Owner, Teams ),
@@ -169,8 +177,11 @@ Let's use this capability in our app:
         Blank() 
     )
     ```
+
     ![](media/working-with-references/patch-default-teams.png) 
+
 1. Insert a **Button** control below our combo box and set it's **Text** property to **"Patch Owner"**.
+
 2. Set the **OnSelect** property of our button to this formula:
     ```powerapps-dot
     Patch( Accounts, Gallery1.Selected,
@@ -178,6 +189,7 @@ Let's use this capability in our app:
                 ComboBox1_2.Selected, 
                 ComboBox1_3.Selected ) } )
     ```
+
     ![](media/working-with-references/patch-button.png)
 
 Our copied radio button and combo boxes will show the owner for the currently selected account in the gallery.  And with these same controls, we can set the owner of the account to any team or user by pressing our button:
@@ -192,18 +204,23 @@ You can show the owner field inside a form with a custom card.
 
 1. Insert an **Edit form** control.  Resize and move this form control to the bottom right of the screen.  Select **Accounts** in the property pane for **Data source**:
     ![](media/working-with-references/form-insert.png)  
+
 1. Set the **Item** property to **Gallery1.Selected**:
     ![](media/working-with-references/form-item.png)
+
 1. Select **Edit fields** in the property pane.  Using the ellipses, select **Add a custom card**:
     ![](media/working-with-references/form-customcard.png)
+
 1. The new custom card will be inserted at the bottom of the form control.  Resize it as needed to fully see it:
     ![](media/working-with-references/form-inserted-customcard.png)
+
 1. Insert a **Label** control into the custom card.  Set it's **Text** property to the formula we used in the gallery:
     ```powerapps-dot
     If( IsType( ThisItem.Owner, Teams ),
         "Team: " & AsType( ThisItem.Owner, Teams ).'Team Name',
         "User: " & AsType( ThisItem.Owner, Users ).'Full Name' )
     ```
+
     ![](media/working-with-references/form-displayowner.png)
 
 Now as we change selection in the gallery, we can see more fields of the account in the form including the owner.  If we change the owner field with our **Patch** button, that change is also shown in the form control.
@@ -324,14 +341,19 @@ What does it all mean?
 - There is a one-to-many relationship between activity tasks and activities. We can easily ask for the faxes that are related to an account.
 
 Let's explore this with an app:
+
 1. Add another screen to your app:
 ![](media/working-with-references/activitypointer-newscreen.png) 
+
 1. Insert a gallery control. In the property pane, set the gallery's items to **Accounts**.  Resize and move the gallery to the left side of the screen:
 ![](media/working-with-references/activitypointer-accounts.png) 
+
 2. Set the layout to **Title**.  Edit the fields to show the **Account Name** field:
 ![](media/working-with-references/activitypointer-account-name.png) 
+
 1. Add a second gallery.  Resize and move the second gallery to the right side of the screen.  Set the **Item** property to **Gallery2.Selected.Faxes**, this will return the filtered list of faxes for a given account.
 ![](media/working-with-references/activitypointer-account-name.png) 
+
 1. Set the layout to **Title** and **Subtitle**.  Edit the fields to show the **Subject** field (which may be lowercase **subject**):
 ![](media/working-with-references/activitypointer-account-name.png)  
 
@@ -408,13 +430,4 @@ Other than this difference, the **Regarding** lookup is used in the same manner 
 ## Activity Parties
 
 At this time, Activity Parties are not supported.
-
-
-
-
-
-
-
-  
-
  
