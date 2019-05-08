@@ -19,13 +19,15 @@ Tests the type and casts to a specific type for record references.
 
 ## Description
 
+See [understand record references and polymorphic lookups](../working-with-references.md) for an introduction and more details.
+
 ### Owner and Customer lookups
 
 Normally a Many-to-One lookup field can refer to records of only one other entity.  For example, the **'Primary Contact'** field of an Account record can refer to only records in the **Contacts** entity.  
 
-The Common Data Service also supports *polymorphic* lookup fields.  These lookups can refer to records in more than one entity.  When used with a Canvas app, these lookups become *Record References*.  For example, the **Owner** field of an **Account** record can refer to a record in the **Users** entity or the **Teams** entity.  Inside a Canvas app, the **Owner** field is of type **Record Reference*.  
+The Common Data Service also supports *polymorphic* lookup fields.  These lookups can refer to records from a set of entities.  When used with a Canvas app, these lookups become *Record References*.  For example, the **Owner** field of an **Account** record can refer to a record in the **Users** entity or the **Teams** entity.  Inside a Canvas app, the **Owner** field is of type **Record Reference**.  
 
-As each record reference can refer to records in different entities, the type of the lookup cannot be established at authoring time.  You will need to test and establish the specific type of the lookup in your formulas.  Use the **IsType** function to test which entity a polymorphic lookup refers to and then use the **AsType** function to reference the fields using a specific type.  A common pattern to display the name of a user or a team:
+As each record reference can refer to records in different entities, the type of the lookup cannot be established at authoring time.  When comparing and setting lookup values you may not need to know the type or it may be inferred.  To pull fields from the record you will need to test and establish the specific type of the lookup in your formulas.  Use the **IsType** function to test which entity a polymorphic lookup refers to and then use the **AsType** function to reference the fields using a specific type.  For example, a common pattern to display the name of a user or a team:
 
 ```powerapps-dot
 If( IsType( First(Accounts).Owner, Users ), 
