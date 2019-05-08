@@ -65,7 +65,7 @@ If( IsType( First(Activities), 'Phone Calls' ),
     ", Phone Number: " & AsType( First(Activities), 'Phone Calls' ).'Phone Number' 
 )
 ```   
-If used in a record context, such as in a [**Gallery**](../controls/control-gallery.md) control, use the [global disambiguation operator](operators.md#disamgiuation-operator) to reference the entity.  In the example above, use **[@'Phone Calls']** instead of **'Phone Calls'**.
+If used in a record context, such as in a [**Gallery**](../controls/control-gallery.md) control, use the [global disambiguation operator](operators.md#disambiguation-operator) to reference the entity.  In the example above, use **[@'Phone Calls']** instead of **'Phone Calls'**.
 
 At this time there is no support for the **Activity Party** data type.
 

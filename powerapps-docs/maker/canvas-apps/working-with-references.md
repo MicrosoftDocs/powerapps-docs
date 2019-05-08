@@ -81,8 +81,8 @@ Finally, note that the **IsType** and **AsType** functions require the second ar
 Congratulations, you're through the hardest aspect of working with a record reference.  Other use cases are more straightforward as we know the entity types being used with it.
 
 Case in point: filtering.  Let's add a **Combo box** control above our gallery and set these properties:
-- Items: `Users`
-- SelectMultiple: `false`
+- **Items**: `Users`
+- **SelectMultiple**: `false`
 
 ![](media/working-with-references/filter-insert-combobox.png)
 
@@ -102,8 +102,8 @@ Let's get a little fancier and support filtering by either a user or a team.
 1. Open up some space at the top of the screen and insert a **Radio** control.  
 
 1. Set these properties on this new control:
-    - Items: `[ "All", "Users", "Teams" ]`
-    - Layout: `Layout.Horizontal`
+    - **Items**: `[ "All", "Users", "Teams" ]`
+    - **Layout**: `Layout.Horizontal`
 
 1. On the existing combo box control, set this property:
     - Visible: `Radio1.Selected.Value = "Users"
@@ -112,8 +112,8 @@ Let's get a little fancier and support filtering by either a user or a team.
 1. Copy and paste the combo box control, positioning it directly above the original.
  
 2. Change these properties on the copy:
-    - Items: `Teams`
-    - Visible: `Radio1.Selected.Value = "Teams"`
+    - **Items**: `Teams`
+    - **Visible**: `Radio1.Selected.Value = "Teams"`
 
 1. Finally, set the **Items** property of the gallery control to this formula:
     ```powerapps-dot
@@ -123,7 +123,7 @@ Let's get a little fancier and support filtering by either a user or a team.
         Or (Radio1.Selected.Value = "Teams" And Owner = ComboBox1_1.Selected) 
     )
     ```
-![](media/working-with-references/filter-combobox.png)
+    ![](media/working-with-references/filter-combobox.png)
 
 With our changes we can show all records or filter on either a user or a team:
 
@@ -149,23 +149,28 @@ Let's use this capability in our app:
 
 1. Using the Tree view, multi-select the radio control and our two combo box controls.
 
-1. On the elipses menu, select **Copy these items**:
+1. On the ellipses menu, select **Copy these items**:
+
     ![](media/working-with-references/patch-copy.png)
 
-1. On the same elipses menu, select **Paste**:
+1. On the same ellipses menu, select **Paste**:
+
     ![](media/working-with-references/patch-paste.png)
 
-1. Move the controls to the right of the gallery:
+1. Move the copied controls to the right of the gallery:
+
     ![](media/working-with-references/patch-position.png)
  
 1. Select the copied radio control and change these properties:
     - Items: `[ "Users", "Teams" ]`
     - Default:` If( IsType( Gallery1.Selected.Owner, Users ), "Users", "Teams" )`
+
     ![](media/working-with-references/patch-noall.png) 
 
 1. Select **Users** in the radio control so that the users combo box control is visible.
 
 1. Select the visible combo box control.  Set the **DefaultSelectedItems** property to this formula:
+
     ```powerapps-dot
     If( IsType( Gallery1.Selected.Owner, Users ),
         AsType( Gallery1.Selected.Owner, Users ), 
@@ -210,15 +215,19 @@ Unfortunately, this it not yet supported but is coming soon.
 You can show the owner field inside a form with a custom card.  
 
 1. Insert an **Edit form** control.  Resize and move this form control to the bottom right of the screen.  Select **Accounts** in the property pane for **Data source**:
+
     ![](media/working-with-references/form-insert.png)  
 
 1. Set the **Item** property to **Gallery1.Selected**:
+
     ![](media/working-with-references/form-item.png)
 
 1. Select **Edit fields** in the property pane.  Using the ellipses, select **Add a custom card**:
+
     ![](media/working-with-references/form-customcard.png)
 
 1. The new custom card will be inserted at the bottom of the form control.  Resize it as needed to fully see it:
+
     ![](media/working-with-references/form-inserted-customcard.png)
 
 1. Insert a **Label** control into the custom card.  Set it's **Text** property to the formula we used in the gallery:
@@ -258,7 +267,7 @@ The treatment of **Customer** and **Owner** are so similar that we can literally
 | Gallery's **Items** property | **Accounts** | **Contacts** |
 | Form's **Items** property | **Accounts** | **Contacts** |
 | Button's **OnSelect**, first argument of **Patch** | **Accounts** | **Contacts** |
-| Filter radio's **Items** property | **[ "All", "Users", "Teams" ]** | **[ "All", "Accounts", "Contacts" ]** |
+| Filter radio's **Items** property | **[&nbsp;"All",&nbsp;"Users",&nbsp;"Teams"&nbsp;]** | **[ "All", "Accounts", "Contacts" ]** |
 | Patch radio's **Items** property | **[ "Users", "Teams" ]** | **[ "Accounts", "Contacts" ]** |
 | Combo box **Visible** property | **"Users"** and **"Teams"** | **"Accounts"** and **"Contacts"** |
 
@@ -266,7 +275,9 @@ For example, here is how the new **Items** property looks on the gallery:
 ![](media/working-with-references/customer-simple-update.png)
 
 There are two important difference between **Customer** and **Owner** that will require an update to the formulas inside the gallery and form:
+
 1. There are one-to-many relationships between **Accounts** and **Contacts** that will take precedence when referring to these entity types by name.  Instead of **Accounts** we must use **[@Accounts]** and instead of **Contacts** we must use **[@Contacts]**.  By using the [global disambiguation operator](functions/operators.md#disambiguation-operator) we ensure we are referring to the entity type in the **IsType** and **AsType** calls.  This is only a problem in the record context of the gallery and form controls.
+
 2. **Owner** is a required field which must have a value, while **Customer** fields can be *blank*.  To show the correct result without a type name, we need to test for this case and show an empty text string instead.
 
 Both of these changes are in the same formula, the **Text** property of the label control in the gallery and our custom card in the form:
@@ -284,7 +295,7 @@ With these changes, we can now look at and change the **Company Name** field on 
 
 ![](media/working-with-references/customer-allthree.gif)
 
-> ![NOTE]
+> [!NOTE]
 > At first release, there are some limitations when working with **Customer** lookups:
 > - Filtering on a specific **Contact** or **Account** is not yet implemented.  The filter radio button control in the above example will not work.
 > - The only customer field that is working is the system defined **'Company Name'** on the **Contacts** entity which was used above in the example.  Adding a custom customer field is not yet supported.  
@@ -320,7 +331,7 @@ With these changes we work with the **Regarding** lookup just as we did the **Ow
 
 ![](media/working-with-references/regarding-allthree.gif)
 
-> ![NOTE]
+> [!NOTE]
 > At first release, there are some limitations when working with **Regarding** lookups:
 > - Filtering on a specific **Account**, **Contact**, or other record is not yet implemented.  The filter radio button control in the above example will not work.
 > - The regarding field cannot be cleared by setting it to *blank* with **Patch**.
@@ -352,19 +363,24 @@ What does it all mean?
 Let's explore this with an app:
 
 1. Add another screen to your app:
-![](media/working-with-references/activitypointer-newscreen.png) 
+
+    ![](media/working-with-references/activitypointer-newscreen.png) 
 
 1. Insert a gallery control. In the property pane, set the gallery's items to **Accounts**.  Resize and move the gallery to the left side of the screen:
-![](media/working-with-references/activitypointer-accounts.png) 
+
+    ![](media/working-with-references/activitypointer-accounts.png) 
 
 2. Set the layout to **Title**.  Edit the fields to show the **Account Name** field:
-![](media/working-with-references/activitypointer-account-name.png) 
 
-1. Add a second gallery.  Resize and move the second gallery to the right side of the screen.  Set the **Item** property to **Gallery2.Selected.Faxes**, this will return the filtered list of faxes for a given account.
-![](media/working-with-references/activitypointer-account-name.png) 
+    ![](media/working-with-references/activitypointer-account-name.png) 
+
+1. Add a second gallery.  Resize and move the second gallery to the right side of the screen.  Set the **Item** property to **Gallery2.Selected.Faxes**, this will return the filtered list of faxes for a given account:
+
+    ![](media/working-with-references/activitypointer-account-name.png) 
 
 1. Set the layout to **Title** and **Subtitle**.  Edit the fields to show the **Subject** field (which may be lowercase **subject**):
-![](media/working-with-references/activitypointer-account-name.png)  
+
+    ![](media/working-with-references/activitypointer-account-name.png)  
 
 As we select different accounts on the left, the faxes that are related to those accounts will display on the right.
 
@@ -431,7 +447,7 @@ Selecting this box will create a **Regarding** relationship with the **Notes** e
 
 Other than this difference, the **Regarding** lookup is used in the same manner that it is for activities.  Entity's that are enabled for attachments have a one-to-many relationship to **Notes**, for example **First( Accounts ).Notes**.
 
-> ![NOTE]
+> [!NOTE]
 > At first release, the **Regarding** lookup is not available for the **Notes** entity.  It is not possible to read or filter based on the **Regarding** field, nor is it possible to set the field with **Patch**.
 > 
 > However, the reverse **Notes** one-to-many relationship is available so it is possible to obtain a filtered list of notes for a record that is enabled for attachments.  You can also use the [**Relate** function](functions/function-relate-unrelate.md) to add a note to a record's **Notes** table.  The **Note** must be created first.  For example, **Relate( ThisItem.Notes, Patch( Notes, Defaults( Notes ), { Title: "A new note" } ) )**.       
