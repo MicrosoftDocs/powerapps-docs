@@ -2,11 +2,12 @@
 title: What is Common Data Service? | Microsoft Docs
 description: Introduction to Common Data Service, entities, and server-side logic.
 author: clwesene
-manager: kfile
+manager: kvivek
 ms.service: powerapps
 ms.topic: overview
 ms.component: cds
-ms.date: 05/01/2018
+ms.date: 05/08/2019
+ms.reviewer: matp
 ms.author: matp
 search.audienceType: 
   - maker
