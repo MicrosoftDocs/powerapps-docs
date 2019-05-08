@@ -47,18 +47,20 @@ Let's look at a simple gallery of **Accounts**:
 To show the owner of each account in the gallery, we are tempted to use the formula **ThisItem.Owner.Name**.  But there's a problem with this approach: the name field on a **Team** is **Team Name** while the name field on a **User** is **Full Name**.  We won't know which type of lookup we are working with until we run the app and it can vary between **Account** records.  We need to use a formula that can adapt: 
 
 ```powerapps-dot
-If( IsType( ThisItem.Owner, Teams ),
-    "Team: " & AsType( ThisItem.Owner, Teams ).'Team Name',
-    "User: " & AsType( ThisItem.Owner, Users ).'Full Name' )
+If( IsType( ThisItem.Owner, [@Teams] ),
+    "Team: " & AsType( ThisItem.Owner, [@Teams] ).'Team Name',
+    "User: " & AsType( ThisItem.Owner, [@Users] ).'Full Name' )
 ```
 
 ![](media/working-with-references/accounts-displayowner.png)
 
 Let's unpack what this formula is doing.  The **IsType** function is used to test the **Owner** field against **Teams** entity.  If it is of that entity type, then the **AsType** function is used to cast it to a **Team** record.  From here we can access all the fields of the **Team** including the 'Team Name'.  If **IsType** determines that the **Owner** is not a **Team**, the only other options is that it is a **User** as the **Owner** field is a required field that cannot be *blank*.
 
+We are using the [global disambiguation operator](functions/operators.md#disambiguation-operator) for **[@Teams]** and **[@Users]** to ensure we are using the global entity type.  It isn't needed in this case but it is a good habit to get into.  Often there will be conflicting one-to-many relationships in the gallery's record scope and this avoids that confusion.     
+
 To use any fields of a record reference we must first use the **AsType** function to cast it to a specific entity type.  Direct access to fields from the **Owner** field is not possible as the system doesn't know what entity type you would like to use.
 
-Since the **AsError** function will return an error if the **Owner** field does not match the entity type being requseted, you can use the **IfError** function to simplify this formula.  First turn on the experimental feature "Formula-level error management":
+Since the **AsType** function will return an error if the **Owner** field does not match the entity type being requseted, you can use the **IfError** function to simplify this formula.  First turn on the experimental feature "Formula-level error management":
 
 ![](media/working-with-references/accounts-iferror.png)
 
@@ -66,8 +68,8 @@ And then replace the formula above with:
 
 ```powerapps-dot
 IfError( 
-    "Team: " & AsType( ThisItem.Owner, Teams ).'Team Name',
-    "User: " & AsType( ThisItem.Owner, Users ).'Full Name' )
+    "Team: " & AsType( ThisItem.Owner, [@Teams] ).'Team Name',
+    "User: " & AsType( ThisItem.Owner, [@Users] ).'Full Name' )
 ```
 
 Finally, note that the **IsType** and **AsType** functions require the second argument's entity to be added as a data source.  In our simple example app, we have three data sources:
@@ -82,9 +84,7 @@ Case in point: filtering.  Let's add a **Combo box** control above our gallery a
 - Items: `Users`
 - SelectMultiple: `false`
 
-with its **Items** property set to **Users**:
-
-![](media/working-with-references/filter-combobox.png)
+![](media/working-with-references/filter-insert-combobox.png)
 
 If we want to filter our **Accounts** gallery by a specific **User** selected from this combo box, we can do so with a simple **Filter** formula.  
 
@@ -117,7 +117,7 @@ Filter( Accounts,
     Or (Radio1.Selected.Value = "Teams" And Owner = ComboBox1_1.Selected) 
 )
 ```
-![](media/working-with-references/filter-radio.png)
+![](media/working-with-references/filter-combobox.png)
 
 With our changes we can show all records or filter on either a user or a team:
 
@@ -145,7 +145,7 @@ Let's use this capability in our app:
 1. On the elipses menu, select **Copy these items**:
     ![](media/working-with-references/patch-copy.png)
 1. On the same elipses menu, select **Paste**:
-    ![](media/working-with-references/patch-copy.png)
+    ![](media/working-with-references/patch-paste.png)
 1. Move the controls to the right of the gallery:
     ![](media/working-with-references/patch-position.png) 
 1. Select the copied radio control and change these properties:
@@ -208,7 +208,7 @@ You can show the owner field inside a form with a custom card.
 
 Now as we change selection in the gallery, we can see more fields of the account in the form including the owner.  If we change the owner field with our **Patch** button, that change is also shown in the form control.
 
-![](media/working-with-references/form-allthree.png)
+![](media/working-with-references/form-allthree.gif)
 
 ## Customer lookup
 
@@ -242,7 +242,7 @@ For example, here is how the new **Items** property looks on the gallery:
 ![](media/working-with-references/customer-simple-update.png)
 
 There are two important difference between **Customer** and **Owner** that will require an update to the formulas inside the gallery and form:
-1. There are one-to-many relationships between **Accounts** and **Contacts** that will take precedence when referring to these entity types by name.  Instead of **Accounts** we must use **[@Accounts]** and instead of **Contacts** we must use **[@Contacts]**.  By using the [global disambiguation operator](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/functions/operators#disambiguation-operator) we ensure we are referring to the entity type in the **IsType** and **AsType** calls.  This is only a problem in the record context of the gallery and form controls.
+1. There are one-to-many relationships between **Accounts** and **Contacts** that will take precedence when referring to these entity types by name.  Instead of **Accounts** we must use **[@Accounts]** and instead of **Contacts** we must use **[@Contacts]**.  By using the [global disambiguation operator](functions/operators.md#disambiguation-operator) we ensure we are referring to the entity type in the **IsType** and **AsType** calls.  This is only a problem in the record context of the gallery and form controls.
 2. **Owner** is a required field which must have a value, while **Customer** fields can be *blank*.  To show the correct result without a type name, we need to test for this case and show an empty text string instead.
 
 Both of these changes are in the same formula, the **Text** property of the label control in the gallery and our custom card in the form:
@@ -385,6 +385,25 @@ If( IsType( ThisItem, [@Faxes] ), "Fax",
 The result is a complete list of activities.  The **Subject** field will be shown for all activities, whether our formulas take them into account or not.  But for activity types we know about, we can show their type by name and detailed information about each that is type specific:
 
 ![](media/working-with-references/activitypointer-complete.png)
+
+## Notes entity
+
+All of the **Regarding** examples so far have been based on activities.  There is another case: the **Notes** entity.  
+
+When you create an entity, you have an option to enable attachments:
+
+![](media/working-with-references/notes-entity.png)
+    
+Selecting this box will create a **Regarding** relationship with the **Notes** entity, shown here for the **Accounts** entity:
+
+![](media/working-with-references/notes-relationships.png)
+
+Other than this difference, the **Regarding** lookup is used in the same manner that it is for activities.  Entity's that are enabled for attachments have a one-to-many relationship to **Notes**, for example **First( Accounts ).Notes**.
+
+> ![NOTE]
+> At first release, the **Regarding** lookup is not available for the **Notes** entity.  It is not possible to read or filter based on the **Regarding** field, nor is it possible to set the field with **Patch**.
+> 
+> However, the reverse **Notes** one-to-many relationship is available so it is possible to obtain a filtered list of notes for a record that is enabled for attachments.  You can also use the [**Relate** function](functions/function-relate-unrelate.md) to add a note to a record's **Notes** table.  The **Note** must be created first.  For example, **Relate( ThisItem.Notes, Patch( Notes, Defaults( Notes ), { Title: "A new note" } ) )**.       
 
 ## Activity Parties
 
