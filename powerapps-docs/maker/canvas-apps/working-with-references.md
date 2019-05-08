@@ -1,5 +1,5 @@
 ---
-title: Understand Record References and Polymorphic Lookups | Microsoft Docs
+title: Understand record references and polymorphic lookups | Microsoft Docs
 description: Work with record references and polymorphic lookups in canvas apps
 author: gregli-msft
 manager: kvivek
@@ -14,37 +14,38 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Understand Record References and Polymorphic Lookups in Canvas apps
 
-When you wrote a research paper in school you probably provided a list of your references at the end.  You didn't include a copy of the actual background material you used, but rather a web link, book title and author, or other information so someone could track down the original source.  You mixed different kinds of sources in a single list, newspaper articles next to audio recordings, each with their own specific details for a proper citation.  For example, Wikipedia articles often include a [long list of references](https://en.wikipedia.org/wiki/Microsoft#References).
+# Understand record references and polymorphic lookups in canvas apps
 
-In Canvas apps, we often work with copies of records downloaded from data sources.  We use the [**LookUp** and **Filter** functions](functions/function-filter-lookup.md) and the [**Gallery** control's](controls/control-gallery.md) **Selected** property to identify the specific record we want.  All the records from **Filter** or **Selected** will be of the same entity type, making it possible to use fields with a simple *.field* notation.  These copies often include reference information so we can use the [**Patch** function](functions/function-patch.md) to make a change in the original. 
+When you wrote a research paper in school, you probably provided a list of your references at the end. You didn't include a copy of the actual background material you used, but rather a web link, book title and author, or other information so that someone could track down the original source. You mixed different kinds of sources in a single list, newspaper articles next to audio recordings, each with their own specific details for a proper citation. For example, Wikipedia articles often include a [long list of references](https://en.wikipedia.org/wiki/Microsoft#References).
 
-Canvas apps also support *Record References*.  Much like a research paper reference, record references refer to a record without including a complete copy of the record.  Record references can refer to a record in *any* entity allowing us to mix records from the **Users** and **Teams** entities in a single **Owner** column.  They were designed for working with the polymorphic lookup fields of the Common Data Service but are not limited to CDS.
+In canvas apps, we often work with copies of records downloaded from data sources. We use the [**LookUp**](functions/function-filter-lookup.md) and [**Filter**](functions/function-filter-lookup.md) functions and the [**Gallery**](controls/control-gallery.md) control's **Selected** property to identify the specific record that we want. All the records from **Filter** or **Selected** will be of the same entity type, which makes it possible to use fields with a simple .*Field* notation. These copies often include reference information so that we can use the [**Patch**](functions/function-patch.md) function to update the original source.
 
-When setting and comparing records, record references can be used just like any normal record.  But since record references can refer to a record in any entity, we can't use the simple *.field* notation directly, first we must pin down the entity type with the **IsType** and **AsType** functions before we can pull fields from it.
+Canvas apps also support *record references*. Much like a research-paper reference, record references refer to a record without including a complete copy of the record. Record references can refer to a record in *any* entity, so that you can to mix records from the **Users** and **Teams** entities in a single **Owner** column. They were designed for working with the polymorphic lookup fields of Common Data Service but are not limited to those data sources.
+
+When setting and comparing records, record references can be used just like any normal record. But since record references can refer to a record in any entity, we can't use the simple .*Field* notation directly. First we must pin down the entity type with the **IsType** and **AsType** functions before we can pull fields from it.
 
 ## Polymorphic lookups
 
-The Common Data Service supports relationships between records.  Each **Account** record has a **Primary Contact** lookup field to a record in the **Contacts** entity.  The lookup can only refer to a record in **Contacts** and can't refer to a record in say the **Teams** entity.  That last detail is important because we always know what fields will be available for the lookup.
+Common Data Service supports relationships between records. Each **Account** record has a **Primary Contact** lookup field to a record in the **Contacts** entity.  The lookup can only refer to a record in **Contacts** and can't refer to a record in, say, the **Teams** entity.  That last detail is important because we always know what fields will be available for the lookup.
 
-CDS also supports *polymorphic* lookups that can refer to a record from a set of entities.  For example, the **Owner** field can refer to a record in the **Users** entity or the **Teams** entity.  Each record's lookup field could refer to records in different entities.  Here we don't always know the fields that will be available.
+Common Data Service also supports polymorphic lookups, which can refer to a record from a set of entities.  For example, the **Owner** field can refer to a record in the **Users** entity or the **Teams** entity. Each record's lookup field could refer to records in different entities. Here we don't always know what fields will be available.
 
-In Canvas app, record references are used to work with polymorphic lookups.  Let's start by looking at how to work with the **Owner** lookup.
+In a canvas app, record references are used to work with polymorphic lookups. Let's start by looking at how to work with the **Owner** lookup.
 
-## Displaying fields of an Owner  
+## Displaying fields of an Owner
 
-Every entity includes one **Owner** field that cannot be removed and another cannot be added.  Here is the field as shown on the **Account** entity in the maker portal.
+Every entity includes one **Owner** field that can't be removed and another can't be added. Here is the field as shown on the **Account** entity.
 
 ![](media/working-with-references/owner-field.png)
 
-An **Owner** lookup can refer to a record from either the **Teams** or **Users** entities.  Not all records in these entities have permissions to be an **Owner**, check the supported roles if you run into a problem.
+An **Owner** lookup can refer to a record from either the **Teams** or **Users** entities. Not all records in these entities have permissions to be an **Owner**; check the supported roles if you run into a problem.
 
 Let's look at a simple gallery of **Accounts**:
 
 ![](media/working-with-references/accounts-gallery.png)
 
-To show the owner of each account in the gallery, we are tempted to use the formula **ThisItem.Owner.Name**.  But there's a problem with this approach: the name field on a **Team** is **Team Name** while the name field on a **User** is **Full Name**.  We won't know which type of lookup we are working with until we run the app and it can vary between **Account** records.  We need to use a formula that can adapt: 
+To show the owner of each account in the gallery, we are tempted to use the formula **ThisItem.Owner.Name**.  But there's a problem with this approach: the name field on a **Team** is **Team Name** while the name field on a **User** is **Full Name**.  We won't know which type of lookup we are working with until we run the app ,and it can vary between **Account** records.  We need to use a formula that can adapt:
 
 ```powerapps-dot
 If( IsType( ThisItem.Owner, [@Teams] ),

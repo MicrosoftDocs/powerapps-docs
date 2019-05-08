@@ -1,3 +1,9 @@
+- name: Understand references
+  href: ./canvas-apps/working-with-references.md
+- name: AsType
+  href: ./canvas-apps/functions/function-astype-istype.md
+- name: Data types
+  href: ./canvas-apps/data-types.md
 - name: "Get started: What is PowerApps?"
   href: ../powerapps-overview.md
   items:
