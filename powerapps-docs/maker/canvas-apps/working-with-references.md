@@ -17,35 +17,35 @@ search.app:
 
 # Understand record references and polymorphic lookups in canvas apps
 
-When you wrote a research paper in school, you probably provided a list of your references at the end. You didn't include a copy of the actual background material you used, but rather a web link, book title and author, or other information so that someone could track down the original source. You mixed different kinds of sources in a single list, newspaper articles next to audio recordings, each with their own specific details for a proper citation. For example, Wikipedia articles often include a [long list of references](https://en.wikipedia.org/wiki/Microsoft#References).
+When you wrote a research paper in school, you probably provided a list of your references at the end. You didn't include a copy of the actual background material you used but rather a web link, book title and author, or other information so that someone could track down the original source. You mixed different kinds of sources in a single list, newspaper articles next to audio recordings, each with their own specific details for a proper citation. For example, Wikipedia articles often include a [long list of references](https://en.wikipedia.org/wiki/Microsoft#References).
 
-In canvas apps, we often work with copies of records downloaded from data sources. We use the [**LookUp**](functions/function-filter-lookup.md) and [**Filter**](functions/function-filter-lookup.md) functions and the [**Gallery**](controls/control-gallery.md) control's **Selected** property to identify the specific record that we want. All the records from **Filter** or **Selected** will be of the same entity type, which makes it possible to use fields with a simple .*Field* notation. These copies often include reference information so that we can use the [**Patch**](functions/function-patch.md) function to update the original source.
+In canvas apps, we often work with copies of records downloaded from data sources. We use the [**LookUp**](functions/function-filter-lookup.md) and [**Filter**](functions/function-filter-lookup.md) functions and the [**Gallery**](controls/control-gallery.md) control's **Selected** property to identify the specific record that we want. All the records from **Filter** or **Selected** will be of the same entity type, so you can use fields with a simple .*Field* notation. These copies often include reference information so you can use the [**Patch**](functions/function-patch.md) function to update the original source.
 
-Canvas apps also support *record references*. Much like a research-paper reference, record references refer to a record without including a complete copy of the record. Record references can refer to a record in *any* entity, so that you can to mix records from the **Users** and **Teams** entities in a single **Owner** column. They were designed for working with the polymorphic lookup fields of Common Data Service but are not limited to those data sources.
+Canvas apps also support *record references*. Much like a research-paper reference, a record reference refers to a record without including a complete copy of the record. Such a reference can refer to a record in *any* entity, so that you can mix records from the **Users** and **Teams** entities in a single **Owner** column. They were designed for working with the polymorphic lookup fields of Common Data Service but aren't limited to those data sources.
 
-When setting and comparing records, record references can be used just like any normal record. But since record references can refer to a record in any entity, we can't use the simple .*Field* notation directly. First we must pin down the entity type with the **IsType** and **AsType** functions before we can pull fields from it.
+When you set and compare records, you can use record references just like any normal record. However, record references can refer to a record in any entity, so you can't use the simple .*Field* notation directly. You must first pin down the entity type by using the **IsType** and **AsType** functions before you can pull fields from it.
 
 ## Polymorphic lookups
 
-Common Data Service supports relationships between records. Each **Account** record has a **Primary Contact** lookup field to a record in the **Contacts** entity.  The lookup can only refer to a record in **Contacts** and can't refer to a record in, say, the **Teams** entity.  That last detail is important because we always know what fields will be available for the lookup.
+Common Data Service supports relationships between records. Each **Account** record has a **Primary Contact** lookup field to a record in the **Contacts** entity. The lookup can only refer to a record in **Contacts** and can't refer to a record in, say, the **Teams** entity. That last detail is important because you always know what fields will be available for the lookup.
 
-Common Data Service also supports polymorphic lookups, which can refer to a record from a set of entities.  For example, the **Owner** field can refer to a record in the **Users** entity or the **Teams** entity. Each record's lookup field could refer to records in different entities. Here we don't always know what fields will be available.
+Common Data Service also supports polymorphic lookups, which can refer to a record from any entity in a set. For example, the **Owner** field can refer to a record in the **Users** entity or the **Teams** entity. Each record's lookup field could refer to a record in different entities. In this case, you don't always know what fields will be available.
 
 In a canvas app, record references are used to work with polymorphic lookups. Let's start by looking at how to work with the **Owner** lookup.
 
 ## Displaying fields of an Owner
 
-Every entity includes one **Owner** field that can't be removed and another can't be added. Here is the field as shown on the **Account** entity.
+Every entity includes an **Owner** field that you can't remove, and you can't add another. This graphic shows that field in the **Account** entity.
 
 ![](media/working-with-references/owner-field.png)
 
 An **Owner** lookup can refer to a record from either the **Teams** or **Users** entities. Not all records in these entities have permissions to be an **Owner**; check the supported roles if you run into a problem.
 
-Let's look at a simple gallery of **Accounts**:
+This graphic shows a simple gallery of **Accounts**:
 
 ![](media/working-with-references/accounts-gallery.png)
 
-To show the owner of each account in the gallery, we are tempted to use the formula **ThisItem.Owner.Name**.  But there's a problem with this approach: the name field on a **Team** is **Team Name** while the name field on a **User** is **Full Name**.  We won't know which type of lookup we are working with until we run the app ,and it can vary between **Account** records.  We need to use a formula that can adapt:
+To show the owner of each account in the gallery, you might be tempted to use the formula **ThisItem.Owner.Name**.  But there's a problem with this approach: the name field in the **Team** entity is **Team Name**, but the name field in the **User** entity is **Full Name**. You can't know which type of lookup you're working with until you run the app, and it can vary between **Account** records. On the other hand, this formula can adapt:
 
 ```powerapps-dot
 If( IsType( ThisItem.Owner, [@Teams] ),
@@ -55,17 +55,17 @@ If( IsType( ThisItem.Owner, [@Teams] ),
 
 ![](media/working-with-references/accounts-displayowner.png)
 
-Let's unpack what this formula is doing.  The **IsType** function is used to test the **Owner** field against **Teams** entity.  If it is of that entity type, then the **AsType** function is used to cast it to a **Team** record.  From here we can access all the fields of the **Team** including the 'Team Name'.  If **IsType** determines that the **Owner** is not a **Team**, the only other options is that it is a **User** as the **Owner** field is a required field that cannot be *blank*.
+Let's unpack what this formula is doing. The **IsType** function tests the **Owner** field against the **Teams** entity. If it's of that entity type, the **AsType** function casts it to a **Team** record. At this point, you can access all the fields of the **Team** entity, including the 'Team Name'. If **IsType** determines that the **Owner** isn't a **Team**, that field must be a **User** because the **Owner** field is required and can't be *blank*.
 
-We are using the [global disambiguation operator](functions/operators.md#disambiguation-operator) for **[@Teams]** and **[@Users]** to ensure we are using the global entity type.  It isn't needed in this case but it is a good habit to get into.  Often there will be conflicting one-to-many relationships in the gallery's record scope and this avoids that confusion.     
+You're using the [global disambiguation operator](functions/operators.md#disambiguation-operator) for **[@Teams]** and **[@Users]** to ensure that you're using the global entity type. You don't need it in this case, but it's a good habit to form. One-to-many relationships often conflict in the gallery's record scope, and this practice avoids that confusion.
 
-To use any fields of a record reference we must first use the **AsType** function to cast it to a specific entity type.  Direct access to fields from the **Owner** field is not possible as the system doesn't know what entity type you would like to use.
+To use any fields of a record reference, you must first use the **AsType** function to cast it to a specific entity type. You can't access fields directly from the **Owner** field because the system doesn't know what entity type you want to use.
 
-Since the **AsType** function will return an error if the **Owner** field does not match the entity type being requseted, you can use the **IfError** function to simplify this formula.  First turn on the experimental feature "Formula-level error management":
+The **AsType** function returns an error if the **Owner** field doesn't match the entity type being requested, so you can use the **IfError** function to simplify this formula. First, turn on the experimental feature **Formula-level error management**:
 
 ![](media/working-with-references/accounts-iferror.png)
 
-And then replace the formula above with:
+And then replace the previous formula with this one:
 
 ```powerapps-dot
 IfError( 
@@ -73,50 +73,49 @@ IfError(
     "User: " & AsType( ThisItem.Owner, [@Users] ).'Full Name' )
 ```
 
-Finally, note that the **IsType** and **AsType** functions require the second argument's entity to be added as a data source.  In our simple example app, we have three data sources:
+Finally, note that the **IsType** and **AsType** functions require you to add the second argument's entity as a data source. This example app has three data sources:
 
 ![](media/working-with-references/accounts-datasources.png)
 
 ## Filtering based on an Owner
 
-Congratulations, you're through the hardest aspect of working with a record reference.  Other use cases are more straightforward as we know the entity types being used with it.
+Congratulations: you're through the hardest aspect of working with a record reference. Other use cases are more straightforward because you know which entity types are used.
 
-Case in point: filtering.  Let's add a **Combo box** control above our gallery and set these properties:
+Case in point: filtering. Add a **Combo box** control above the gallery, and set these properties:
 - **Items**: `Users`
 - **SelectMultiple**: `false`
 
 ![](media/working-with-references/filter-insert-combobox.png)
 
-If we want to filter our **Accounts** gallery by a specific **User** selected from this combo box, we can do so with a simple **Filter** formula.  
+To filter the **Accounts** gallery by a specific **User** selected from this combo box, add this simple **Filter** formula.  
 
 ```powerapps-dot
 Filter( Accounts, Owner = ComboBox1.Selected )
 ```
 ![](media/working-with-references/filter-accounts.png)
 
-No **IsType** or **AsType** is required here because we are doing a record to record comparison.  We know the entity type of **ComboBox1.Selected** because it is derived from the **Users** entity.  Accounts for which the owner is a team will not match the filter criteria.
+You don't need to use **IsType** or **AsType** because you're comparing two records. You know the entity type of **ComboBox1.Selected** because it's derived from the **Users** entity. Accounts for which the owner is a team won't match the filter criterion.
 
-Note that there is no delegation warning on this **Filter**.  This query is delegated to CDS.
+This formula doesn't have a delegation warning because the query is delegated to Common Data Service.
 
-Let's get a little fancier and support filtering by either a user or a team.  
+You can get a little fancier if you support filtering by either a user or a team.
 
-1. Open up some space at the top of the screen and insert a **Radio** control.  
+1. Make some space at the top of the screen, insert a **Radio** control, and then set these properties on the new control:
 
-1. Set these properties on this new control:
     - **Items**: `[ "All", "Users", "Teams" ]`
     - **Layout**: `Layout.Horizontal`
 
-1. On the existing combo box control, set this property:
-    - Visible: `Radio1.Selected.Value = "Users"
-    If the control disappears, select *Users* in the radio control.
+1. On the existing **Combo box** control, set this property:
+    - **Visible**: `Radio1.Selected.Value = "Users"
+    If this control disappears, select **Users** in the radio control.
 
-1. Copy and paste the combo box control, positioning it directly above the original.
- 
-2. Change these properties on the copy:
+1. Copy and paste the **Combo box** control, move the copy directly above the original, and then set these properties on the copy:
+
     - **Items**: `Teams`
     - **Visible**: `Radio1.Selected.Value = "Teams"`
 
-1. Finally, set the **Items** property of the gallery control to this formula:
+1. Finally, set the **Items** property of the **Gallery** control to this formula:
+
     ```powerapps-dot
     Filter( Accounts, 
         Radio1.Selected.Value = "All"
@@ -126,35 +125,35 @@ Let's get a little fancier and support filtering by either a user or a team.
     ```
     ![](media/working-with-references/filter-combobox.png)
 
-With our changes we can show all records or filter on either a user or a team:
+With these changes, you can show all records or filter on either a user or a team:
 
 ![](media/working-with-references/filter-allthree.gif)
 
-Note that our formula is still fully delegable.  The portion that is comparing the radio button values is a constant across all records is evaluated before sending the rest of the filter to CDS.
+The formula is still fully delegable. The portion that's comparing the radio-button values is a constant across all records and is evaluated before the rest of the filter is sent to Common Data Service.
 
-If we want to filter on the type of the owner, we can do so with the **IsType** function but it is not yet delegable:
+If you want to filter on the type of the owner, you can use the **IsType** function, but it's not yet delegable:
 
 ![](media/working-with-references/filter-bytype.png)
 
 ## Updating the Owner with Patch
 
-Updating the **Owner** field is done in the same manner as any other lookup.  To set the currently selected account's owner to the first team:
+You can update the **Owner** field in the same manner as any other lookup. To set the currently selected account's owner to the first team:
 
 ```powerapps-dot
 Patch( Accounts, Gallery1.Selected, { Owner: First( Teams ) } )
 ```
 
-This isn't any different form a normal lookup because we know the type of **First( Teams )**.  If we wanted the first user instead, simply replace that portion with **First( Users )**.  The **Patch** function knows that the **Owner** field can be set to either of these two entity types.
+This approach doesn't differ from a normal lookup because you know the type of **First( Teams )**.  If you want the first user instead, simply replace that portion with **First( Users )**. The **Patch** function knows that the **Owner** field can be set to either of these two entity types.
 
-Let's use this capability in our app:
+To add this capability to the app:
 
-1. Using the Tree view, multi-select the radio control and our two combo box controls.
+1. In the **Tree view** pane, select the **Radio** control and the two **Combo box** controls at the same time.
 
-1. On the ellipses menu, select **Copy these items**:
+1. On the ellipsis menu, select **Copy these items**:
 
     ![](media/working-with-references/patch-copy.png)
 
-1. On the same ellipses menu, select **Paste**:
+1. On the same menu, select **Paste**:
 
     ![](media/working-with-references/patch-paste.png)
 
@@ -162,15 +161,16 @@ Let's use this capability in our app:
 
     ![](media/working-with-references/patch-position.png)
  
-1. Select the copied radio control and change these properties:
+1. Select the copied **Radio** control, and then change these properties:
+
     - Items: `[ "Users", "Teams" ]`
-    - Default:` If( IsType( Gallery1.Selected.Owner, Users ), "Users", "Teams" )`
+    - Default: `If( IsType( Gallery1.Selected.Owner, Users ), "Users", "Teams" )`
 
     ![](media/working-with-references/patch-noall.png) 
 
-1. Select **Users** in the radio control so that the users combo box control is visible.
+1. In the **Radio** control, select **Users** so that the **Combo box** control that lists users is visible.
 
-1. Select the visible combo box control.  Set the **DefaultSelectedItems** property to this formula:
+1. Select the visible **Combo box** control, and then set the **DefaultSelectedItems** property to this formula:
 
     ```powerapps-dot
     If( IsType( Gallery1.Selected.Owner, Users ),
@@ -181,9 +181,12 @@ Let's use this capability in our app:
 
     ![](media/working-with-references/patch-default-users.png) 
 
-1. Select **Teams** in the radio control so that the teams combo box control is visible.
+1. In the **Radio** control, select **Teams** so that the **Combo box** control that lists teams is visible.
 
-1. Select the radio control, to take selection away from the now invisible combo box control for users, and then select the visible combo box control for teams.  Set the **DefaultSelectedItems** property to this formula:
+1. Select the **Radio** control to take selection away from the now-invisible **Combo box** control for users.
+
+1. Select the visible **Combo box** control for teams, and then set its **DefaultSelectedItems** property to this formula:
+
     ```powerapps-dot
     If( IsType( Gallery1.Selected.Owner, Teams ),
         AsType( Gallery1.Selected.Owner, Teams ), 
@@ -193,9 +196,10 @@ Let's use this capability in our app:
 
     ![](media/working-with-references/patch-default-teams.png) 
 
-1. Insert a **Button** control below our combo box and set it's **Text** property to **"Patch Owner"**.
+1. Insert a **Button** control, move it under the **Combo box** control, and then set the button's **Text** property to **"Patch Owner"**.
 
-2. Set the **OnSelect** property of our button to this formula:
+1. Set the **OnSelect** property of the button to this formula:
+
     ```powerapps-dot
     Patch( Accounts, Gallery1.Selected,
         { Owner: If( Radio1_1.Selected.Value = "Users", 
@@ -205,33 +209,37 @@ Let's use this capability in our app:
 
     ![](media/working-with-references/patch-button.png)
 
-Our copied radio button and combo boxes will show the owner for the currently selected account in the gallery.  And with these same controls, we can set the owner of the account to any team or user by pressing our button:
+The copied **Radio** and **Combo box** controls show the owner for the currently selected account in the gallery. With the same controls, you can set the owner of the account to any team or user by selecting the button:
 
 ![](media/working-with-references/patch-allthree.gif)
 
 ## Updating the Owner with the Edit form control
 
-Unfortunately, this it not yet supported but is coming soon. 
+Unfortunately, this functionality isn't yet supported.
 
-You can show the owner field inside a form with a custom card.  
+You can show the owner field inside a form by adding a custom card.
 
-1. Insert an **Edit form** control.  Resize and move this form control to the bottom right of the screen.  Select **Accounts** in the property pane for **Data source**:
+1. Insert an **Edit form** control, and then resize and move it to the lower-right corner
+
+1. On the **Properties** tab of the right-hand pane, open the **Data source** list, and then select **Accounts**:
 
     ![](media/working-with-references/form-insert.png)  
 
-1. Set the **Item** property to **Gallery1.Selected**:
+1. Set the form's **Item** property to **Gallery1.Selected**:
 
     ![](media/working-with-references/form-item.png)
 
-1. Select **Edit fields** in the property pane.  Using the ellipses, select **Add a custom card**:
+1. On the **Properties** tab of the right-hand pane, select **Edit fields**.
+
+1. In the **Fields** pane, select the ellipsis, and then select **Add a custom card**:
 
     ![](media/working-with-references/form-customcard.png)
 
-1. The new custom card will be inserted at the bottom of the form control.  Resize it as needed to fully see it:
+1. After the new card appears at the bottom of the form control, resize the card as needed to show all the text:
 
     ![](media/working-with-references/form-inserted-customcard.png)
 
-1. Insert a **Label** control into the custom card.  Set it's **Text** property to the formula we used in the gallery:
+1. Insert a **Label** control into the custom card, and then set the label's **Text** property to the formula that you used in the gallery:
     ```powerapps-dot
     If( IsType( ThisItem.Owner, Teams ),
         "Team: " & AsType( ThisItem.Owner, Teams ).'Team Name',
@@ -240,48 +248,49 @@ You can show the owner field inside a form with a custom card.
 
     ![](media/working-with-references/form-displayowner.png)
 
-Now as we change selection in the gallery, we can see more fields of the account in the form including the owner.  If we change the owner field with our **Patch** button, that change is also shown in the form control.
+For each selection in the gallery, more fields of the account, including its owner, appear in the form. If you change the owner field with the **Patch** button, the form control also shows that change.
 
 ![](media/working-with-references/form-allthree.gif)
 
 ## Customer lookup
 
-Shifting gears, let's turn our attention to another polymorphic lookup in CDS that is very similar to owner: the **Customer** lookup.
+The **Customer** lookup is another polymorphic lookup in Common Data Service that's very similar to **Owner**.
 
-Unlike **Owner** which is limited to one per entity, entities can include zero, one, or more **Customer** lookups.  The system **Contacts** entity includes the **Company Name** field which is a **Customer** lookup:
+**Owner** is limited to one per entity, but entities can include zero, one, or more **Customer** lookups. The **Contacts** system entity includes the **Company Name** field, which is a **Customer** lookup:
 
 ![](media/working-with-references/customer-companyname.png)
 
-You can add additional **Customer** lookups to an entity by selecting the **Customer** data type for a new field:
+You can add more **Customer** lookups to an entity by selecting the **Customer** data type for a new field:
 
 ![](media/working-with-references/customer-datatype.png)
 
-A **Csutomer** lookup can refer to a record from either the **Accounts** or **Contacts** entities.
+A **Customer** lookup can refer to a record from either the **Accounts** entity or the **Contacts** entity.
 
-The treatment of **Customer** and **Owner** are so similar that we can literally make a copy of our app and make these simple replacements:
+The treatment of **Customer** and **Owner** are so similar that you can literally copy the app and make these simple replacements:
 
 | Location | **Owner** sample | **Customer** sample |
 |----------|-----------|------------------|
-| Throughout | **Owner** | **'Customer Name'**<br>For example **Gallery1.Selected.'Customer Name'** |
+| Throughout | **Owner** | **'Customer Name'**<br>For example, **Gallery1.Selected.'Customer Name'** |
 | Throughout | **Users** | **Accounts** |
 | Throughout | **Teams** | **Contacts** |
 | Gallery's **Items** property | **Accounts** | **Contacts** |
 | Form's **Items** property | **Accounts** | **Contacts** |
-| Button's **OnSelect**, first argument of **Patch** | **Accounts** | **Contacts** |
+| The first argument of **Patch** in the button's **OnSelect** property | **Accounts** | **Contacts** |
 | Filter radio's **Items** property | **[&nbsp;"All",&nbsp;"Users",&nbsp;"Teams"&nbsp;]** | **[ "All", "Accounts", "Contacts" ]** |
 | Patch radio's **Items** property | **[ "Users", "Teams" ]** | **[ "Accounts", "Contacts" ]** |
-| Combo box **Visible** property | **"Users"** and **"Teams"** | **"Accounts"** and **"Contacts"** |
+| Combo box's **Visible** property | **"Users"** and **"Teams"** | **"Accounts"** and **"Contacts"** |
 
-For example, here is how the new **Items** property looks on the gallery:
+For example, the new gallery should have this **Items** property:
 ![](media/working-with-references/customer-simple-update.png)
 
-There are two important difference between **Customer** and **Owner** that will require an update to the formulas inside the gallery and form:
+Two important differences between **Customer** and **Owner** require an update to the formulas inside the gallery and the form:
 
-1. There are one-to-many relationships between **Accounts** and **Contacts** that will take precedence when referring to these entity types by name.  Instead of **Accounts** we must use **[@Accounts]** and instead of **Contacts** we must use **[@Contacts]**.  By using the [global disambiguation operator](functions/operators.md#disambiguation-operator) we ensure we are referring to the entity type in the **IsType** and **AsType** calls.  This is only a problem in the record context of the gallery and form controls.
+1. One-to-many relationships between **Accounts** and **Contacts** will take precedence when you refer to these entity types by name. Instead of **Accounts**, use **[@Accounts]**; instead of **Contacts**, use **[@Contacts]**. By using the [global disambiguation operator](functions/operators.md#disambiguation-operator), you ensure that you're referring to the entity type in the **IsType** and **AsType** calls. This problem exists only in the record context of the gallery and form controls.
 
-2. **Owner** is a required field which must have a value, while **Customer** fields can be *blank*.  To show the correct result without a type name, we need to test for this case and show an empty text string instead.
+1. The **Owner** must have a value, while **Customer** fields can be *blank*. To show the correct result without a type name, test for this case, and show an empty text string instead.
 
-Both of these changes are in the same formula, the **Text** property of the label control in the gallery and our custom card in the form:
+Both of these changes are in the same formula, which appears in the custom card in the form, as well as the **Text** property of the gallery's label control:
+
 ```powerapps-dot
 If( IsBlank( ThisItem.'Company Name' ), "",
     IsType( ThisItem.'Company Name', [@Accounts] ), 
@@ -292,30 +301,32 @@ If( IsBlank( ThisItem.'Company Name' ), "",
 
 ![](media/working-with-references/customer-update.png)
 
-With these changes, we can now look at and change the **Company Name** field on the **Contacts** entity:
+With these changes, you can view and change the **Company Name** field on the **Contacts** entity:
 
 ![](media/working-with-references/customer-allthree.gif)
 
 > [!NOTE]
-> At first release, there are some limitations when working with **Customer** lookups:
-> - Filtering on a specific **Contact** or **Account** is not yet implemented.  The filter radio button control in the above example will not work.
-> - The only customer field that is working is the system defined **'Company Name'** on the **Contacts** entity which was used above in the example.  Adding a custom customer field is not yet supported.  
-> - The customer field cannot be cleared by setting it to *blank* with **Patch**.
+> As of this writing, **Customer** lookups have these limitations:
+
+> - Filtering on a specific **Contact** or **Account** isn't yet implemented. The filter radio button control in the previous example won't work.
+> - The only customer field that's working is the system defined **'Company Name'** on the **Contacts** entity, which was used in the previous example. Adding a custom customer field isn't yet supported.
+> - You can't clear the customer field by using **Patch** to set it to *blank*.
 
 ## Regarding lookup
 
-Now for something a little different: **Regarding** and **Activities**.  We'll start by applying the patterns we have already seen and then learn some new tricks.
+Now for something a little different: **Regarding** and **Activities**. You'll start by applying the patterns that this topic describes earlier, and then you'll learn other tricks.
 
-To begin, let's start simple.  The **Faxes** entity has a polymorphic **Regarding** lookup field that can refer to **Accounts**, **Contacts**, and a few other entities.  We can take our last app for **Customers** and apply it to this **Faxes** with these modifications:
+To begin, let's start simple. The **Faxes** entity has a polymorphic **Regarding** lookup field, which can refer to **Accounts**, **Contacts**, and a few other entities. You can take the app for **Customers** and modify it for **Faxes**:
 
 | Location | **Customer** sample | **Faxes** sample |
 |----------|-----------|------------------|
-| Throughout | **'Customer Name'** | **Regarding**<br>For example **Gallery1.Selected.Regarding** |
+| Throughout | **'Customer Name'** | **Regarding**<br>For example, **Gallery1.Selected.Regarding** |
 | Gallery's **Items** property | **Contacts** | **Faxes** |
 | Form's **Items** property | **Contacts** | **Faxes** |
-| Button's **OnSelect**, first argument of **Patch** | **Contacts** | **Faxes** |
+| The first argument of **Patch**<br> in the button's **OnSelect** property | **Contacts** | **Faxes** |
 
-An important difference for **Regarding** is that it is not limited to **Accounts** and **Contacts**.  In fact the list of entities is extensible with custom entities.  The bulk of our app doesn't need to do anything different to take this into account, but the formula for the label in the gallery and form will need an update:
+An important difference for **Regarding** is that it isn't limited to **Accounts** and **Contacts**. In fact, the list of entities is extensible with custom entities. The bulk of the app doesn't need to do anything different to take this into account, but the formula for the label in the gallery and the form need an update:
+
 ```powerapps-dot
 If( IsBlank( ThisItem.Regarding ), "",
     IsType( ThisItem.Regarding, [@Accounts] ), 
@@ -328,80 +339,87 @@ If( IsBlank( ThisItem.Regarding ), "",
 
 ![](media/working-with-references/regarding-label.png)
 
-With these changes we work with the **Regarding** lookup just as we did the **Owner** and **Customer** lookups:
+With these changes, you work with the **Regarding** lookup just as you did the **Owner** and **Customer** lookups:
 
 ![](media/working-with-references/regarding-allthree.gif)
 
 > [!NOTE]
-> At first release, there are some limitations when working with **Regarding** lookups:
-> - Filtering on a specific **Account**, **Contact**, or other record is not yet implemented.  The filter radio button control in the above example will not work.
-> - The regarding field cannot be cleared by setting it to *blank* with **Patch**.
+> As of this writing, **Regarding** lookups have these limitations:
+
+> - Filtering on a specific **Account**, **Contact**, or other record isn't yet implemented. The filter radio button control in the previous example won't work.
+> - You can't clear the regarding field by using **Patch** to set it to *blank*.
 
 ## Regarding relationships 
 
-**Regarding** is different from **Owner** and **Customer** lookups because there is a many-to-one relationships involved.  Which also means there is a reverse one-to-many relationship, allowing you to write **First( Accounts ).Faxes**. 
+**Regarding** lookups differ from **Owner** and **Customer** lookups because the former involves a many-to-one relationship. By definition, a reverse, one-to-many relationship allows you to write **First( Accounts ).Faxes**.
 
-Let's backup and look at the entity definitions.  Entities in CDS can be designated as [*activities*](https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/activity-entities).  The standard entities **Faxes**, **Tasks**, **Emails**, **Notes**, **Phone Calls**, **Letters**, and **Chats** are designated as activities.  You can also create your own [custom activity entities](https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/custom-activities).  When viewing or creating an activity entity, the settings for the entity will show (under More settings):
+Let's back up and look at the entity definitions. Entities such as **Faxes**, **Tasks**, **Emails**, **Notes**, **Phone Calls**, **Letters**, and **Chats** in Common Data Service are designated as [*activities*](../../developer/common-data-service/activity-entities.md). You can also create your own [custom activity entities](../../developer/common-data-service/custom-activities.md). When you view or create an activity entity, its settings appear under **More settings**:
 
 ![](media/working-with-references/activity-entitytype.png)
 
-Other entities can be related to an activity entity if they are enabled as an *activity task* in the entity's settings.  The standard entities **Accounts**, **Contacts**, and many others are so designated (again under More settings):
+Other entities can be related to an activity entity if they're enabled as an *activity task* in the entity's settings. The standard entities **Accounts**, **Contacts**, and many others are so designated (again, under **More settings**):
 
 ![](media/working-with-references/activity-entityuse.png)
 
-There is an implied relationship between all activities entities and activity task entities.  If we look at the relationships for **Faxes** (changing the filter to **All** at the top of the screen), we see all the entities that can be a target of the **Regarding** lookup: 
+All activities entities and activity task entities have an implied relationship. If you change the filter to **All** at the top of the screen, select the **Faxes** entity, and then select the **Relationships** tab, all the entities that can be a target of a **Regarding** lookup appear: 
 
 ![](media/working-with-references/activity-manytoone.png)
 
-Conversely, if we look at the relationships for **Accounts** (again changing the filter to **All** at the to  of the screen), we see all the entities that can be :
+If you show the relationships for the **Accounts** entity, all the entities that can be a source of a **Regarding** lookup appear:
 
 ![](media/working-with-references/activity-onetomany.png)
 
 What does it all mean?
-- There list of activity entities is not fixed.  You can create your own.  When writing formulas we need to take this into account and do something reasonable if we encounter an activity entity we didn't expect.
-- There is a one-to-many relationship between activity tasks and activities. We can easily ask for the faxes that are related to an account.
+- The list of activity entities isn't fixed. You can create your own. When you write formulas, you must take this into account and do something reasonable if you encounter an activity entity you didn't expect.
+- Activity tasks and activities have a one-to-many relationship. You can easily ask for the faxes that relate to an account.
 
-Let's explore this with an app:
+To explore this concept in the app:
 
-1. Add another screen to your app:
+1. Add another screen:
 
     ![](media/working-with-references/activitypointer-newscreen.png) 
 
-1. Insert a gallery control. In the property pane, set the gallery's items to **Accounts**.  Resize and move the gallery to the left side of the screen:
+1. Insert a gallery control, resize it, and then move it to the left side of the screen.
+
+1. On the **Properties** tab of the right-hand pane, set the gallery's **Items** property to **Accounts**:
 
     ![](media/working-with-references/activitypointer-accounts.png) 
 
-2. Set the layout to **Title**.  Edit the fields to show the **Account Name** field:
+2. Set the gallery's layout to **Title**, and then set the title field to **Account Name**:
 
-    ![](media/working-with-references/activitypointer-account-name.png) 
+    ![](media/working-with-references/activitypointer-account-name.png)
 
-1. Add a second gallery.  Resize and move the second gallery to the right side of the screen.  Set the **Item** property to **Gallery2.Selected.Faxes**, this will return the filtered list of faxes for a given account:
+1. Add a second gallery, resize it, and then move it to the right side of the screen.
 
-    ![](media/working-with-references/activitypointer-account-name.png) 
+1. Set the new gallery's **Items** property to **Gallery2.Selected.Faxes**.
 
-1. Set the layout to **Title** and **Subtitle**.  Edit the fields to show the **Subject** field (which may be lowercase **subject**):
+    This step returns the filtered list of faxes for a given account:
 
-    ![](media/working-with-references/activitypointer-account-name.png)  
+    ![](media/working-with-references/activitypointer-account-name.png)
 
-As we select different accounts on the left, the faxes that are related to those accounts will display on the right.
+1. Set the gallery's layout to **Title**, and then set the title field to show the **Subject** field (which may be lowercase **subject**):
 
-![](media/working-with-references/activitypointer-allthree.gif)  
+    ![](media/working-with-references/activitypointer-account-name.png)
+
+As you select an item in the list of accounts, the list of faxes shows faxes for only that account.
+
+![](media/working-with-references/activitypointer-allthree.gif)
 
 ## Activity entity
 
-Of course it's very helpful to see all the faxes for an account.  But what if you want a list of all the activities for an account, be they a fax, email, phone call, or some other interaction.
+As the previous section describes, you can show all the faxes for an account. However, you can also show all the activities for an account, including faxes, email messages, phone calls, and other interactions.
 
-There's a special entity for that.  Go to your entities list and turn on **All** in the upper right hand corner.  You'll see the **Activity** entity:   
+For the latter scenario, you use the **Activity** entity, which appears if you remove the filter from the list of entities by turning on **All** in the upper-right corner:
 
 ![](media/working-with-references/activitypointer-entity.png)
 
-This entity is special.  Any time you add a record to the **Faxes** entity, a record is effectively created here as well with the fields that are common across all activity entities.  One of the most interesting common fields is **Subject**.  
+The **Activity** entity is special. Whenever you add a record to the **Faxes** entity, you also create record in the **Activity** entity with the fields that are common across all activity entities. Of those fields, **Subject** is one of the most interesting.
 
-Let's modify our last example to show all activities with a one line change. **Gallery2.Selected.Faxes** becomes **Gallery2.Selected.Activities**: 
+To show all activities, change only one line in the previous example: replace **Gallery2.Selected.Faxes** with **Gallery2.Selected.Activities**:
 
 ![](media/working-with-references/activitypointer-gallery.png)
 
-Even though records are coming from the **Activity** entity, we can still test to see which kind of activity they are with the **IsType** function.  We can use this information to show the type in the gallery per record in a label control within the gallery using this formula:
+Records are coming from the **Activity** entity, but you can nevertheless use the **IsType** function to identify which kind of activity they are. By using this formula, you can show the record type in a label control within the gallery:
 
 ```powerapps-dot
 If( IsType( ThisItem, [@Faxes] ), "Fax", 
@@ -414,7 +432,7 @@ If( IsType( ThisItem, [@Faxes] ), "Fax",
 
 ![](media/working-with-references/activitypointer-type.png)
 
-We can also use **AsType** to get to the fields of the specific type.  For example, here we are showing the phone number and call direction from the **Phone Numbers** entity, but only if it is a phone call since these fields do not exist on a Chat:
+You can also use **AsType** to access the fields of the specific type. For example, this formula determines the type of each activity and, for phone calls, shows the phone number and call direction from the **Phone Numbers** entity:
 
 ```powerapps-dot
 If( IsType( ThisItem, [@Faxes] ), "Fax", 
@@ -430,30 +448,33 @@ If( IsType( ThisItem, [@Faxes] ), "Fax",
 
 ![](media/working-with-references/activitypointer-phonecall.png)
 
-The result is a complete list of activities.  The **Subject** field will be shown for all activities, whether our formulas take them into account or not.  But for activity types we know about, we can show their type by name and detailed information about each that is type specific:
+As a result, the app shows a complete list of activities. The **Subject** field appears for all types of activities, whether the formulas take them into account or not. For types of activities that you know about, you can show their type names and type-specific information about each activity:
 
 ![](media/working-with-references/activitypointer-complete.png)
 
 ## Notes entity
 
-All of the **Regarding** examples so far have been based on activities.  There is another case: the **Notes** entity.  
+So far, all of the **Regarding** examples have been based on activities, but the **Notes** entity represents another case.
 
-When you create an entity, you have an option to enable attachments:
+When you create an entity, you can enable attachments:
 
 ![](media/working-with-references/notes-entity.png)
-    
-Selecting this box will create a **Regarding** relationship with the **Notes** entity, shown here for the **Accounts** entity:
+
+If you select this check box, you'll create a **Regarding** relationship with the **Notes** entity, as this graphic shows for the **Accounts** entity:
 
 ![](media/working-with-references/notes-relationships.png)
 
-Other than this difference, the **Regarding** lookup is used in the same manner that it is for activities.  Entity's that are enabled for attachments have a one-to-many relationship to **Notes**, for example **First( Accounts ).Notes**.
+Other than this difference, you use the **Regarding** lookup in the same manner in which you use activities. Entities that are enabled for attachments have a one-to-many relationship to **Notes**, as in this example:
+
+`First( Accounts ).Notes`
 
 > [!NOTE]
-> At first release, the **Regarding** lookup is not available for the **Notes** entity.  It is not possible to read or filter based on the **Regarding** field, nor is it possible to set the field with **Patch**.
-> 
-> However, the reverse **Notes** one-to-many relationship is available so it is possible to obtain a filtered list of notes for a record that is enabled for attachments.  You can also use the [**Relate** function](functions/function-relate-unrelate.md) to add a note to a record's **Notes** table.  The **Note** must be created first.  For example, **Relate( ThisItem.Notes, Patch( Notes, Defaults( Notes ), { Title: "A new note" } ) )**.       
+> As of this writing, the **Regarding** lookup isn't available for the **Notes** entity. You can't read or filter based on the **Regarding** field, and you can't set the field by using **Patch**.
+>
+> However, the reverse **Notes** one-to-many relationship is available, so you can filter a list of notes for a record that's enabled for attachments. You can also use the [**Relate**](functions/function-relate-unrelate.md) function to add a note to a record's **Notes** table, but the **Note** must be created first, as in this example:
+>
+>`Relate( ThisItem.Notes, Patch( Notes, Defaults( Notes ), { Title: "A new note" } ) )`
 
-## Activity Parties
+## Activity parties
 
-At this time, Activity Parties are not supported.
- 
+As of this writing, canvas apps don't support activity parties.
