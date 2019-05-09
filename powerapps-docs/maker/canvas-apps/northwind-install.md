@@ -28,7 +28,7 @@ Northwind Traders is a fictitious organization that manages orders, products, cu
 
 ## Install the solution
 
-1. Download the [**Northwind Traders Solution File**](https://pwrappssamples.blob.core.windows.net/samples/NorthwindTraders_1_0_0_1.zip).
+1. [![download](media/northwind-install/download.png) Download the **Northwind Traders Solution File**](https://pwrappssamples.blob.core.windows.net/samples/NorthwindTraders_1_0_0_1.zip).
 
     This [solution](../../developer/common-data-service/introduction-solutions.md) file (.zip) contains the definitions of entities, option sets, and business processes; the canvas and model-driven apps; and any other pieces that are used together.
 
