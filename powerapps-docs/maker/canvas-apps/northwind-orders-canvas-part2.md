@@ -37,6 +37,8 @@ To build this app, follow the steps in these topics
 - **Part 2, Order form**: As this topic describes, show and edit a summary of the order, delete the order, or create another order.
 - [**Part 3, Order details**](northwind-orders-canvas-part3.md): Show and edit the line items, called order details, that are associated with each order.
 
+## Prerequisites
+
 If you haven't already done so, [install the Northwind Traders sample database and apps](northwind-install.md), and then take either of these approaches:
 
 - Build the first part of the app yourself by [creating the list of orders](northwind-orders-canvas-part1.md).
