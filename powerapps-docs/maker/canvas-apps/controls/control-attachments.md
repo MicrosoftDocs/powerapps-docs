@@ -21,7 +21,7 @@ A control that allows users to download files to their device, as well as upload
 The attachment control has these limitations:
 1. Attachments are supported with SharePoint lists and Common Data Service entities.
 
-1. Upload and delete functionality only work inside a form.  Attachment control will look disabled when in Edit mode and not inside a form. Note that in order to save the file additions and deletions to the back end, the end user must save the form.
+1. Upload and delete functionality only work inside a form.  Attachment control will look disabled when in Edit mode and not inside a form. Note that in order to save the file additions and deletions to the back end, the end user must save the form.  Because of this limitation, the Attachment control is not available from the Insert menu but appears in the form when the Attachment form field is enabled in a SharePoint or CDS form.
 
 1. You can only upload files up to 10 MB in size.  
 
