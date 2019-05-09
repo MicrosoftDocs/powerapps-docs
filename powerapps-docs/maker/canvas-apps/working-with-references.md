@@ -21,31 +21,41 @@ When you wrote a research paper in school, you probably provided a list of your 
 
 In canvas apps, you often work with copies of records downloaded from data sources. You use the [**LookUp**](functions/function-filter-lookup.md) and [**Filter**](functions/function-filter-lookup.md) functions and the [**Gallery**](controls/control-gallery.md) control's **Selected** property to identify the specific record that you want. All the records from **Filter** or **Selected** will be of the same entity type, so you can use fields with a simple .*Field* notation. These copies often include reference information so you can use the [**Patch**](functions/function-patch.md) function to update the original source.
 
-Canvas apps also support *record references*. Much like a research-paper reference, a record reference refers to a record without including a complete copy of it. Such a reference can refer to a record in any entity; you can mix records from the **Users** and **Teams** entities in a single **Owner** column. Reference records were designed for working with the polymorphic-lookup fields of Common Data Service but aren't limited to those data sources.
+Canvas apps also support *record references*. Much like a research-paper reference, a record reference refers to a record without including a complete copy of it. Such a reference can refer to a record in any entity.  Also like research-paper references, you can mix records from different entities in a single column. 
 
-When you set and compare records, you can use record references just like any normal record. Because record references can refer to a record in any entity, you can't use the simple .*Field* notation directly. You must first pin down the entity type by using the **IsType** and **AsType** functions before you can pull fields from that entity.
+Many operations on record references are identical to working with records.  You can compare record references to each other and to full records.  You can set a record references value with the **Patch** function just like you would a lookup with a full record.  
+
+There is one important usage difference: you can't directly access the fields of a record reference without first establishing which entity it is referring to.  This is because canvas apps require that all types be known when writing formulas.  Since we don't know the type of a record reference until we are running the app, you can't use the simple .*Field* notation directly. You must first dynamically determine the entity type with the[**IsType** function](functions/function-astype-istype.md) and then use .*Field* notation on the result of the [**AsType** function](functions/function-astype-istype.md).
 
 ## Polymorphic lookups
 
 Common Data Service supports relationships between records. Each record in the **Accounts** entity has a **Primary Contact** lookup field to a record in the **Contacts** entity. The lookup can only refer to a record in **Contacts** and can't refer to a record in, say, the **Teams** entity. That last detail is important because you always know what fields will be available for the lookup.
 
-Common Data Service also supports polymorphic lookups, which can refer to a record from any entity in a set. For example, the **Owner** field can refer to a record in the **Users** entity or the **Teams** entity. The same lookup field in different records could refer to records in different entities. In this case, you don't always know what fields will be available.
+Common Data Service also supports polymorphic lookups, which can refer to a record from any entity in a set. For example, the **Owner** field can refer to a record in the **Users** entity or the **Teams** entity. The same lookup field in different records could refer to records in different entities. In this case, you don't always know what fields will be available.  
 
-In a canvas app, record references are used to work with polymorphic lookups. In the next section, you'll start to explore these concepts by working with the **Owner** lookup.
+Canvas record references were designed for working with Common Data Service polymorphic lookups.  Record references can also be used outside of this context which is why the two concepts aren't one and the same.
+
+In the next section, you'll start to explore these concepts by working with the **Owner** lookup.
 
 ## Show the fields of a record owner
 
-Every entity includes an **Owner** field that you can't remove, and you can't add another. This graphic shows that field in the **Account** entity.
+Every Common Data Service entity includes an **Owner** field.  This field can't be removed, you can't add another, and it always requires a value. This graphic shows that field in the **Account** entity.
 
 ![](media/working-with-references/owner-field.png)
 
 This lookup field can refer to a record from either the **Teams** entity or the **Users** entity. Not every record in these entities have permissions to be an **Owner**; check the supported roles if you run into a problem.
 
-This graphic shows a simple gallery of **Accounts**:
+This graphic shows a simple gallery of **Accounts**, where the **Accounts** entity has been added to the app as a data source:
 
 ![](media/working-with-references/accounts-gallery.png)
 
-To show the owner of each account in the gallery, you might be tempted to use the formula **ThisItem.Owner.Name**. But there's a problem with this approach: the name field in the **Team** entity is **Team Name**, but the name field in the **User** entity is **Full Name**. You can't know which type of lookup you're working with until you run the app, and it can vary between records in the **Accounts** entity. On the other hand, this formula adapts to that variance:
+To show the owner of each account in the gallery, you might be tempted to use the formula **ThisItem.Owner.Name**. But there's a problem with this approach: the name field in the **Team** entity is **Team Name**, but the name field in the **User** entity is **Full Name**. The canvas app can't know which type of lookup you're working with until you run the app, and it can vary between records in the **Accounts** entity. 
+
+You will need a formula that can adapt to this variance.  But before writing it, add the data sources for the entity types that **Owner** could be, in this case **Users** and **Teams**.  You should have three data sources in your app:
+
+![](media/working-with-references/accounts-datasources.png)
+
+With these data sources in place, use this formula to display the name of either a user or a team:   
 
 ```powerapps-dot
 If( IsType( ThisItem.Owner, [@Teams] ),
@@ -55,7 +65,7 @@ If( IsType( ThisItem.Owner, [@Teams] ),
 
 ![](media/working-with-references/accounts-displayowner.png)
 
-In this formula, the **IsType** function tests the **Owner** field against the **Teams** entity. If it's of that entity type, the **AsType** function casts it to a **Team** record. At this point, you can access all the fields of the **Teams** entity, including the 'Team Name'. If **IsType** determines that the **Owner** isn't a record in the **Teams** entity, that field must be a record in the **Users** entity because the **Owner** field is required (can't be *blank*).
+In this formula, the **IsType** function tests the **Owner** field against the **Teams** entity. If it's of that entity type, the **AsType** function casts it to a **Team** record. At this point, you can access all the fields of the **Teams** entity, including the **'Team Name'**. If **IsType** determines that the **Owner** isn't a record in the **Teams** entity, that field must be a record in the **Users** entity because the **Owner** field is required (can't be *blank*).
 
 You're using the [global disambiguation operator](functions/operators.md#disambiguation-operator) for **[@Teams]** and **[@Users]** to ensure that you're using the global entity type. You don't need it in this case, but it's a good habit to form. One-to-many relationships often conflict in the gallery's record scope, and this practice avoids that confusion.
 
@@ -73,13 +83,10 @@ IfError(
     "User: " & AsType( ThisItem.Owner, [@Users] ).'Full Name' )
 ```
 
-Finally, note that the **IsType** and **AsType** functions require you to add the second argument's entity as a data source. This example app has three data sources:
-
-![](media/working-with-references/accounts-datasources.png)
 
 ## Filter based on an owner
 
-Congratulations: you've finished the hardest aspect of working with a record reference. Other use cases are more straightforward because you know which entity types are used. As a case in point, take filtering, which you'll explore in this section.
+Congratulations: you've finished the hardest aspect of working with a record reference. Other use cases are more straightforward because they don't access fields of the record. As a case in point, take filtering, which you'll explore in this section.
 
 Add a **Combo box** control above the gallery, and set these properties of the new control:
 
@@ -96,10 +103,7 @@ Filter( Accounts, Owner = ComboBox1.Selected )
 
 ![](media/working-with-references/filter-accounts.png)
 
-You don't need to use **IsType** or **AsType** because you're comparing two records. You know the entity type of **ComboBox1.Selected** because it's derived from the **Users** entity. Accounts for which the owner is a team won't match the filter criterion.
-
-> [!NOTE]
-> This formula doesn't have a delegation warning because the query is delegated to Common Data Service.
+You don't need to use **IsType** or **AsType** because you're comparing record references with other record references or full records. The canvas app knows the entity type of **ComboBox1.Selected** because it's derived from the **Users** entity. Accounts for which the owner is a team won't match the filter criterion.
 
 You can get a little fancier if you support filtering by either a user or a team.
 
@@ -108,14 +112,16 @@ You can get a little fancier if you support filtering by either a user or a team
     - **Items**: `[ "All", "Users", "Teams" ]`
     - **Layout**: `Layout.Horizontal`
 
-1. For the **Combo box** control, set this property:
-    - **Visible**: `Radio1.Selected.Value = "Users"
-    If this control disappears, select **Users** in the radio control.
+1. For the **Combo box** control, set this property (if the control disappears, select **Users** in the radio control):
+
+    - **Visible**: `Radio1.Selected.Value = "Users"` 
 
 1. Copy and paste the **Combo box** control, move the copy directly above the original, and then set these properties for the copy:
 
     - **Items**: `Teams`
     - **Visible**: `Radio1.Selected.Value = "Teams"`
+
+    The app will only display one combo box control at a time, dependending on the state of the radio control.  Because they are directly above one another it will appear that they are the same control that changes its contents.
 
 1. Finally, set the **Items** property of the **Gallery** control to this formula:
 
@@ -133,7 +139,7 @@ With these changes, you can show all records or filter them based on either a us
 
 ![](media/working-with-references/filter-allthree.gif)
 
-The formula is still fully delegable. The portion that's comparing the radio-button values is a constant across all records and is evaluated before the rest of the filter is sent to Common Data Service.
+The formula is fully delegable. The portion that's comparing the radio-button values is a constant across all records and is evaluated before the rest of the filter is sent to Common Data Service.
 
 If you want to filter on the type of the owner, you can use the **IsType** function, but it's not yet delegable:
 
@@ -147,7 +153,7 @@ You can update the **Owner** field in the same manner as any other lookup. To se
 Patch( Accounts, Gallery1.Selected, { Owner: First( Teams ) } )
 ```
 
-This approach doesn't differ from a normal lookup because you know the type of **First( Teams )**. If you want the first user instead, replace that portion with **First( Users )**. The **Patch** function knows that the **Owner** field can be set to either of these two entity types.
+This approach doesn't differ from a normal lookup because the app knows the type of **First( Teams )**. If you want the first user instead, replace that portion with **First( Users )**. The **Patch** function knows that the **Owner** field can be set to either of these two entity types.
 
 To add this capability to the app:
 
@@ -221,7 +227,7 @@ The copied **Radio** and **Combo box** controls show the owner for the currently
 
 Unfortunately, this functionality isn't yet supported.
 
-You can show an **Owner** field inside a form by adding a custom card.
+You can show, but not edit, an **Owner** field inside a form by adding a custom card.
 
 1. Insert an **Edit form** control, and then resize and move it to the lower-right corner.
 
@@ -273,7 +279,7 @@ You can add more **Customer** lookup fields to an entity by selecting the **Cust
 
 A **Customer** lookup field can refer to a record from either the **Accounts** entity or the **Contacts** entity.
 
-The treatment of the **Customer** and **Owner** fields are so similar that you can literally copy the app and make these simple replacements:
+The treatment of the **Customer** and **Owner** fields are so similar that you can literally copy the app (use **Save as** from the **File** menu with a different name) and make these simple replacements:
 
 | Location | **Owner** sample | **Customer** sample |
 |----------|-----------|------------------|
@@ -283,16 +289,17 @@ The treatment of the **Customer** and **Owner** fields are so similar that you c
 | Gallery's **Items** property | **Accounts** | **Contacts** |
 | Form's **Items** property | **Accounts** | **Contacts** |
 | The first argument of **Patch** in the button's **OnSelect** property | **Accounts** | **Contacts** |
-| Filter radio's **Items** property | **[&nbsp;"All",&nbsp;"Users",&nbsp;"Teams"&nbsp;]** | **[ "All", "Accounts", "Contacts" ]** |
+| Filter radio's **Items** property | **[&nbsp;"All",&nbsp;"Users",&nbsp;"Teams"&nbsp;]** | **[&nbsp;"All",&nbsp;"Accounts",&nbsp;"Contacts"&nbsp;]** |
 | Patch radio's **Items** property | **[ "Users", "Teams" ]** | **[ "Accounts", "Contacts" ]** |
 | Combo box's **Visible** property | **"Users"** and **"Teams"** | **"Accounts"** and **"Contacts"** |
 
 For example, the new gallery should have this **Items** property:
+
 ![](media/working-with-references/customer-simple-update.png)
 
 Two important differences between **Customer** and **Owner** require an update to the formulas inside the gallery and the form:
 
-1. One-to-many relationships between **Accounts** and **Contacts** take precedence when you refer to these entity types by name. Instead of **Accounts**, use **\[\@Accounts]**; instead of **Contacts**, use **\[\@Contacts]**. By using the [global disambiguation operator](functions/operators.md#disambiguation-operator), you ensure that you're referring to the entity type in the **IsType** and **AsType** calls. This problem exists only in the record context of the gallery and form controls.
+1. One-to-many relationships between **Accounts** and **Contacts** take precedence when you refer to these entity types by name. Instead of **Accounts**, use **\[\@Accounts]**; instead of **Contacts**, use **\[\@Contacts]**. By using the [global disambiguation operator](functions/operators.md#disambiguation-operator) you ensure that you're referring to the entity type in **IsType** and **AsType**. This problem exists only in the record context of the gallery and form controls.
 
 1. The **Owner** field must have a value, but **Customer** fields can be *blank*. To show the correct result without a type name, test for this case, and show an empty text string instead.
 
@@ -321,9 +328,9 @@ With these changes, you can view and change the **Company Name** field in the **
 
 ## Understand Regarding lookup fields
 
-The **Regarding** and **Activities** lookup fields differ a little from those that you've already worked with in this topic. You'll start by applying the patterns that this topic described earlier, and then you'll learn other tricks.
+The **Regarding** lookup field differs a little from those that you've already worked with in this topic. You'll start by applying the patterns that this topic described earlier, and then you'll learn other tricks.
 
-You can start simply with the **Faxes** entity. This entity has a polymorphic **Regarding** lookup field, which can refer to **Accounts**, **Contacts**, and a few other entities. You can take the app for **Customers** and modify it for **Faxes**:
+You can start simply with the **Faxes** entity. This entity has a polymorphic **Regarding** lookup field, which can refer to **Accounts**, **Contacts**, and more. You can take the app for **Customers** and modify it for **Faxes**:
 
 | Location | **Customer** sample | **Faxes** sample |
 |----------|-----------|------------------|
@@ -358,7 +365,7 @@ After you make these changes, you work with the **Regarding** lookup just as you
 
 ## Understand Regarding relationships
 
-**Regarding** lookup fields differ from **Owner** and **Customer** lookup fields because the former involves a many-to-one relationship. By definition, a reverse, one-to-many relationship allows you to write **First( Accounts ).Faxes**.
+**Regarding** differes from **Owner** and **Customer** because the former involves a many-to-one relationship. By definition, a reverse, one-to-many relationship allows you to write **First( Accounts ).Faxes**.
 
 Let's back up and look at the entity definitions. In Common Data Service, entities such as **Faxes**, **Tasks**, **Emails**, **Notes**, **Phone Calls**, **Letters**, and **Chats** are designated as [*activities*](../../developer/common-data-service/activity-entities.md). You can also create your own [custom activity entities](../../developer/common-data-service/custom-activities.md). When you view or create an activity entity, its settings appear under **More settings**:
 
@@ -403,11 +410,11 @@ To explore this concept in the app:
 
     This step returns the filtered list of faxes for a given account:
 
-    ![](media/working-with-references/activitypointer-account-name.png)
+    ![](media/working-with-references/activitypointer-faxes.png)
 
-1. Set the gallery's layout to **Title**, and then set the title field to show the **Subject** field (which might be lowercase **subject**):
+1. Set the gallery's layout to **Title and subtitle**, and then set the title field to show the **Subject** field (which might be lowercase **subject**):
 
-    ![](media/working-with-references/activitypointer-account-name.png)
+    ![](media/working-with-references/activitypointer-subject.png)
 
 As you select an item in the list of accounts, the list of faxes shows faxes for only that account.
 

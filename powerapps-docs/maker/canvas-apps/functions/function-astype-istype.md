@@ -46,7 +46,7 @@ If( IsType( First( Accounts ).Owner, Users ),
 )
 ```
 
-These functions are not required if you are not accessing the fields of a record reference.  For example, record references can be used in the [**Filter** function](function-filter.md) function directly:
+These functions are not required if you are not accessing the fields of a record reference.  For example, record references can be used in the [**Filter** function](function-filter-lookup.md) function directly:
 
 ```powerapps-dot
 Filter( Accounts, Owner = First( Users ) )
