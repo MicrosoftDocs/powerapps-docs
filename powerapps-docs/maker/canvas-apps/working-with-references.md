@@ -292,7 +292,7 @@ For example, the new gallery should have this **Items** property:
 
 Two important differences between **Customer** and **Owner** require an update to the formulas inside the gallery and the form:
 
-1. One-to-many relationships between **Accounts** and **Contacts** take precedence when you refer to these entity types by name. Instead of **Accounts**, use **/[@Accounts]**; instead of **Contacts**, use **/[@Contacts]**. By using the [global disambiguation operator](functions/operators.md#disambiguation-operator), you ensure that you're referring to the entity type in the **IsType** and **AsType** calls. This problem exists only in the record context of the gallery and form controls.
+1. One-to-many relationships between **Accounts** and **Contacts** take precedence when you refer to these entity types by name. Instead of **Accounts**, use **\[@Accounts]**; instead of **Contacts**, use **\[@Contacts]**. By using the [global disambiguation operator](functions/operators.md#disambiguation-operator), you ensure that you're referring to the entity type in the **IsType** and **AsType** calls. This problem exists only in the record context of the gallery and form controls.
 
 1. The **Owner** field must have a value, but **Customer** fields can be *blank*. To show the correct result without a type name, test for this case, and show an empty text string instead.
 
