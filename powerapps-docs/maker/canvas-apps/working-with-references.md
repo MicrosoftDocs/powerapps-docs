@@ -168,7 +168,7 @@ The formula is fully delegable. The portion that's comparing the radio-button va
 If you want to filter on the type of the owner, you can use the **IsType** function, but it's not yet delegable:
 
 > [!div class="mx-imgBorder"]
-> ![](media/working-with-references/filter-bytype.png)
+> ![Filter by owner type by using IsType](media/working-with-references/filter-bytype.png)
 
 ## Update the owner by using Patch
 
@@ -270,7 +270,7 @@ You can show an **Owner** field inside a form by adding a custom card. As of thi
 1. Set the form's **Item** property to `Gallery1.Selected`:
 
     > [!div class="mx-imgBorder"]
-    > ![Form control showing additional fields populated from the selected item in teh gallery](media/working-with-references/form-item.png)
+    > ![Form control showing additional fields populated from the selected item in the gallery](media/working-with-references/form-item.png)
 
 1. On the **Properties** tab of the right-hand pane, select **Edit fields**.
 
@@ -309,13 +309,13 @@ In Common Data Service, the **Customer** lookup field is another polymorphic loo
 **Owner** is limited to one per entity, but entities can include zero, one, or more **Customer** lookup fields. The **Contacts** system entity includes the **Company Name** field, which is a **Customer** lookup field:
 
 > [!div class="mx-imgBorder"]
-> ![Contact entity showing Company Name field as a Customer data type that is not required](media/working-with-references/customer-companyname.png)
+> ![Contact entity showing Company Name field as a Customer data type that isn't required](media/working-with-references/customer-companyname.png)
 
 You can add more **Customer** lookup fields to an entity by selecting the **Customer** data type for a new field:
 
 ![Customer data type from the list of data types when creating a field](media/working-with-references/customer-datatype.png)
 
-A **Customer** lookup field can refer to a record from either the **Accounts** entity or the **Contacts** entity.  You will be using the **IsType** and **AsType** functions with these entities so now is a good time to add them as data sources (you can leave **Teams** and **Users** in place):
+A **Customer** lookup field can refer to a record from either the **Accounts** entity or the **Contacts** entity. You'll use the **IsType** and **AsType** functions with these entities, so now is a good time to add them as data sources (you can leave **Teams** and **Users** in place):
 
 > [!div class="mx-imgBorder"]
 > ![Accounts, Teams, Users, and Contacts entities in the Data pane](media/working-with-references/customer-datasources.png)
@@ -391,7 +391,7 @@ You can start simply with the **Faxes** entity. This entity has a polymorphic **
 | Form's **Items** property | **Contacts** | **Faxes** |
 | The first argument of **Patch**<br> in the button's **OnSelect** property | **Contacts** | **Faxes** |
 
-Again we will need to add a data source this time for **Faxes** using the **View** tab and then select **Data sources**:
+Again, you'll need to add a data source: this time for **Faxes**. On the **View** tab, select **Data sources**:
 
 > [!div class="mx-imgBorder"]
 > ![Data pane showing Accounts, Teams, Users, Contacts, and Faxes entities](media/working-with-references/faxes-datasources.png)
@@ -503,7 +503,7 @@ You can show all activities by changing only one line in the previous example. R
 > [!div class="mx-imgBorder"]
 > ![Change of items property for the second gallery, changing from faxes to activities](media/working-with-references/activitypointer-gallery.png)
 
-Records are coming from the **Activity** entity, but you can nevertheless use the **IsType** function to identify which kind of activity they are.  But again before you use **IsType** with an entity type, you will need to add the data source:
+Records are coming from the **Activity** entity, but you can nevertheless use the **IsType** function to identify which kind of activity they are. Again, before you use **IsType** with an entity type, you must add the data source:
 
 > [!div class="mx-imgBorder"]
 > ![Data pane showing all the entities required for the IsType function](media/working-with-references/activity-datasources.png)
