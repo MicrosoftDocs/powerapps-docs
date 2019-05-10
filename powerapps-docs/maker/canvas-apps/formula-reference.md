@@ -44,6 +44,8 @@ Other elements include:
 
 **[Asin](functions/function-trig.md)** – Returns the arcsine of a number, in radians.
 
+**[AsType](functions/function-astype-istype.md)** – Treats a record reference as a specific entity type.
+
 **[Atan](functions/function-trig.md)** – Returns the arctangent of a number, in radians.
 
 **[Atan2](functions/function-trig.md)** – Returns the arctangent based on an (*x*,*y*) coordinate, in radians.
@@ -177,6 +179,8 @@ Other elements include:
 **[IsNumeric](functions/function-isnumeric.md)** – Checks for a numeric value.
 
 **[IsToday](functions/function-now-today-istoday.md)** – Checks whether a date/time value is sometime today.
+
+**[IsType](functions/function-astype-istype.md)** – Checks whether a record reference  refers to a specific entity type.  
 
 ## L
 **[Language](functions/function-language.md)** – Returns the language tag of the current user.

@@ -165,6 +165,8 @@
           href: ./canvas-apps/working-with-data-sources.md
         - name: Understand tables and records
           href: ./canvas-apps/working-with-tables.md
+        - name: Understand references
+          href: ./canvas-apps/working-with-references.md
       - name: Design the interface
         href: ./canvas-apps/add-configure-controls.md
         items:
@@ -337,6 +339,8 @@
             href: ./canvas-apps/functions/signals.md
           - name: Asin
             href: ./canvas-apps/functions/function-trig.md
+          - name: AsType
+            href: ./canvas-apps/functions/function-astype-istype.md
           - name: Atan
             href: ./canvas-apps/functions/function-trig.md
           - name: Atan2
@@ -463,6 +467,8 @@
             href: ./canvas-apps/functions/function-isnumeric.md
           - name: IsToday
             href: ./canvas-apps/functions/function-now-today-istoday.md
+          - name: IsType
+            href: ./canvas-apps/functions/function-astype-istype.md
           - name: Language
             href: ./canvas-apps/functions/function-language.md
           - name: Last
