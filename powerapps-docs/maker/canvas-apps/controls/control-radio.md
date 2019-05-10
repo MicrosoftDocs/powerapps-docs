@@ -34,7 +34,7 @@ The control can have a horizontal or vertical layout.
 
 **[Value](properties-core.md)** – The value of an input control.
 
-**Selected** – The data record representing the selected item.
+**Selected** – The data record that represents the selected item.
 
 ## All properties
 
@@ -102,7 +102,7 @@ The control can have a horizontal or vertical layout.
 
 **[Reset](properties-core.md)** – Whether a control reverts to its default value.
 
-**SelectedText (Deprecated)** – String value representing the selected item.
+**SelectedText (Deprecated)** – A string value that represents the selected item.
 
 **[Size](properties-text.md)** – The font size of the text that appears on a control.
 
