@@ -27,7 +27,7 @@ A **Drop down** control conserves screen real estate, especially when the list c
   
 **Value** – The column of data that you want to show in the control (for example, if a data source has multiple columns).
 
-**Selected** – The data record representing the selected item.
+**Selected** – The data record that represents the selected item.
 
 ## Additional properties
 **[AccessibleLabel](properties-accessibility.md)** – Label for screen readers.
@@ -92,7 +92,7 @@ A **Drop down** control conserves screen real estate, especially when the list c
 
 **[Reset](properties-core.md)** – Whether a control reverts to its default value.
 
-**SelectedText (Deprecated)** – String value representing the selected item.
+**SelectedText (Deprecated)** – A string value that represents the selected item.
 
 **[SelectionColor](properties-color-border.md)** – The text color of a selected item or items in a list or the color of the selection tool in a pen control.
 
