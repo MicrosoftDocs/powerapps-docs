@@ -26,8 +26,7 @@ This topic lists the error codes you might encounter when you debug your code.
 
  The following list shows the error codes used in Common Data Service. For more information, see [Handle exceptions in your code](handle-exceptions-code.md).  
 
-> [!div class="mx-tdBreakAll"]  
-
+> [!div class="mx-tdBreakAll"]
 |Error|Message|
 |---|---|
 |Name: AccessDenied<br /><br /> Hex: 80048405<br /><br /> Number: -2147187707|Access is denied.|
