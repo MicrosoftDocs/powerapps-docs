@@ -27,7 +27,7 @@ Many operations on record references are identical to working with records. You 
 
 There is one important usage difference: you can't directly access the fields of a record reference without first establishing to which entity it refers. This is because canvas apps require that all types be known when you write formulas. Because you don't know the type of a record reference until the app is running, you can't use the simple .*Field* notation directly. You must first dynamically determine the entity type with the [**IsType**](functions/function-astype-istype.md) function and then use .*Field* notation on the result of the [**AsType**](functions/function-astype-istype.md) function.
 
-*Entity type* refers to the schema of each record in an entity.  Each entity has its unique set of fields with different names and data types.  Each record of the entity inherits that structure; two records have the same entity type if they come from the same entity.
+*Entity type* refers to the schema of each record in an entity. Each entity has a unique set of fields with different names and data types. Each record of the entity inherits that structure; two records have the same entity type if they come from the same entity.
 
 ## Polymorphic lookups
 
