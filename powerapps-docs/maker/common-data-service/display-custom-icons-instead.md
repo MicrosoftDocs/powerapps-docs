@@ -104,7 +104,7 @@ search.app:
 > [!IMPORTANT]
 > This sample requires the opportunity entity, which is available with Dynamics 365 for Customer Engagement apps.
   
-```  
+```javascript
 function displayIconTooltip(rowData, userLCID) {      
     var str = JSON.parse(rowData);  
     var coldata = str.opportunityratingcode_Value;  

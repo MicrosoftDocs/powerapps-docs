@@ -14,6 +14,8 @@ ms.assetid: 4e7d43fb-b6b7-4f1d-89e3-0b8157c9d2d9
 
 # DateFormattingInfo
 
+[!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
+
 [!INCLUDE [context-description](includes/dateformattinginfo-description.md)]
 
 ## abbreviatedDayNames

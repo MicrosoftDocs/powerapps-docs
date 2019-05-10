@@ -9,7 +9,10 @@ ms.assetid: 0b589cb1-fe63-4152-a9ad-7bde9d75de62
 author: ""
 ms.author: "nabuthuk"
 ---
+
 # StandardControl
+
+[!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
 
 [!INCLUDE [control-description](includes/control-description.md)]
 

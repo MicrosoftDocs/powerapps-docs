@@ -14,6 +14,8 @@ ms.assetid: ec7c1ad4-b834-4755-8a04-2c8940f75674
 
 # type-group element
 
+[!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
+
 [!INCLUDE [type-group-description](includes/type-group-description.md)]
 
 ## Attributes

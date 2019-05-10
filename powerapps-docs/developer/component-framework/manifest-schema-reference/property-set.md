@@ -14,6 +14,8 @@ ms.assetid: 996f10e5-8057-40ea-9680-555e4cd682ff
 
 # property-set element
 
+[!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
+
 [!INCLUDE [property-set-description](includes/property-set-description.md)]
 
 ## Attributes
