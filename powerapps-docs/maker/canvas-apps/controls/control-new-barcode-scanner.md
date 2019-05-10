@@ -55,7 +55,7 @@ The control supports QR codes, data-matrix codes, and these types of barcodes:
 
 **[Height](properties-size-location.md)** – The height of the button that activates the scanner.
 
-**PreferFrontCamera** - Whether the front-facing camera is used for scanning, when available.
+**PreferFrontCamera** - Whether the front-facing camera, when available, is used for scanning.
 
 **[Tooltip](properties-core.md)** – Explanatory text that appears when the user hovers over a control.
 
