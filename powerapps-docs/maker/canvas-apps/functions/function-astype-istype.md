@@ -17,7 +17,7 @@ search.app:
 
 # AsType and IsType functions in canvas apps
 
-Tests a record reference against an entity type and casts the reference to a specific type.
+Checks a record reference for a specific entity type and treats the reference as a specific type.
 
 ## Description
 
@@ -31,15 +31,15 @@ Common Data Service also supports polymorphic lookup fields, which can refer to 
 |--------------|--------------|
 | **Owner** | **Users** or **Teams** |
 | **Customer** | **Accounts** or **Contacts** |
-| **Regarding** | **Accounts**, **Contacts**, etc. |
+| **Regarding** | **Accounts**, **Contacts**, **Knowledge Articles**, etc. |
 
-In canvas-app formulas, you can use record references to work with polymorphic lookups. Because a record reference can refer to different entities, you don't know which fields will be available when you write a formula. The dot notation isn't available. Those formulas must adapt to the records that the app encounters when it runs.
+In canvas-app formulas, you can use record references to work with polymorphic lookups. Because a record reference can refer to different entities, you don't know which fields will be available when you write a formula. The *.Field* notation isn't available. Those formulas must adapt to the records that the app encounters when it runs.
 
 The **IsType** function tests whether a record reference refers to a specific entity type. The function returns a Boolean *true* or *false*.
 
-The **AsType** function casts a record reference to a specific entity type. You can use the result as if it were a record of the entity and, again, use dot notation to access all of the fields of that record. An error occurs if the reference isn't of the specific type.
+The **AsType** function treats a record reference as a specific entity type, sometimes referred to as *casting*. You can use the result as if it were a record of the entity and, again, use *.Field* notation to access all of the fields of that record. An error occurs if the reference isn't of the specific type.
 
-Use these functions together to first test the entity type of a record and then to cast it so that the fields are available:
+Use these functions together to first test the entity type of a record and then treat it as a record of that type so that the fields are available:
 
 ```powerapps-dot
 If( IsType( First( Accounts ).Owner, Users ),

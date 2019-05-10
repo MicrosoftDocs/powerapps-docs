@@ -27,6 +27,8 @@ Many operations on record references are identical to working with records. You 
 
 There is one important usage difference: you can't directly access the fields of a record reference without first establishing to which entity it refers. This is because canvas apps require that all types be known when you write formulas. Because you don't know the type of a record reference until the app is running, you can't use the simple .*Field* notation directly. You must first dynamically determine the entity type with the [**IsType**](functions/function-astype-istype.md) function and then use .*Field* notation on the result of the [**AsType**](functions/function-astype-istype.md) function.
 
+*Entity type* refers to the schema of each record in an entity.  Each entity has its unique set of fields with different names and data types.  Each record of the entity inherits that structure; two records have the same entity type if they come from the same entity.
+
 ## Polymorphic lookups
 
 Common Data Service supports relationships between records. Each record in the **Accounts** entity has a **Primary Contact** lookup field to a record in the **Contacts** entity. The lookup can only refer to a record in **Contacts** and can't refer to a record in, say, the **Teams** entity. That last detail is important because you always know what fields will be available for the lookup.
@@ -62,9 +64,9 @@ This graphic shows a simple gallery of **Accounts**, where the **Accounts** enti
 > [!IMPORTANT]
 > Throughout this topic, the graphics show some names and other values that aren't part of the sample data that ships with Common Data Service. The steps accurately demonstrate how to configure controls for a particular result, but your experience will vary based on the data for your organization.
 
-To show the owner of each account in the gallery, you might be tempted to use the formula **ThisItem.Owner.Name**. However, the name field in the **Team** entity is **Team Name**, and the name field in the **User** entity is **Full Name**. The canvas app can't know which type of lookup you're working with until you run the app, and it can vary between records in the **Accounts** entity.
+To show the owner of each account in the gallery, you might be tempted to use the formula **ThisItem.Owner.Name**. However, the name field in the **Team** entity is **Team Name**, and the name field in the **User** entity is **Full Name**. The app can't know which type of lookup you're working with until you run the app, and it can vary between records in the **Accounts** entity.
 
-You need a formula that can adapt to this variance. You also need to add the data sources for the entity types that **Owner** could be (in this case, **Users** and **Teams**). You should have these three data sources in your app:
+You need a formula that can adapt to this variance. You also need to add the data sources for the entity types that **Owner** could be (in this case, **Users** and **Teams**). Add these three data sources to your app:
 
 > [!div class="mx-imgBorder"]
 > ![Accounts, Teams, and Users entities in the Data pane](media/working-with-references/accounts-datasources.png)
@@ -80,7 +82,7 @@ If( IsType( ThisItem.Owner, [@Teams] ),
 > [!div class="mx-imgBorder"]
 > ![Accounts shown in a Gallery control with Owner field displayed](media/working-with-references/accounts-displayowner.png)
 
-In this formula, the **IsType** function tests the **Owner** field against the **Teams** entity. If it's of that entity type, the **AsType** function casts it to a **Team** record. At this point, you can access all the fields of the **Teams** entity, including **Team Name**. If **IsType** determines that the **Owner** isn't a record in the **Teams** entity, that field must be a record in the **Users** entity because the **Owner** field is required (can't be *blank*).
+In this formula, the **IsType** function tests the **Owner** field against the **Teams** entity. If it's of that entity type, the **AsType** function casts it to a **Team** record. At this point, you can access all the fields of the **Teams** entity, including **Team Name**, by using *.Field* notation. If **IsType** determines that the **Owner** isn't a record in the **Teams** entity, that field must be a record in the **Users** entity because the **Owner** field is required (can't be *blank*).
 
 You're using the [global disambiguation operator](functions/operators.md#disambiguation-operator) for **[@Teams]** and **[@Users]** to ensure that you're using the global entity type. You don't need it in this case, but it's a good habit to form. One-to-many relationships often conflict in the gallery's record scope, and this practice avoids that confusion.
 
@@ -125,9 +127,9 @@ Filter( Accounts, Owner = ComboBox1.Selected )
 
 You don't need to use **IsType** or **AsType** because you're comparing record references to other record references or to full records. The app knows the entity type of **ComboBox1.Selected** because it's derived from the **Users** entity. Accounts for which the owner is a team won't match the filter criterion.
 
-You can get a little fancier if you support filtering by either a user or a team.
+You can get a little fancier by supporting filtering by either a user or a team.
 
-1. Make some space near the top of the screen by resizing the gallery, insert a **Radio** control above the gallery, and then set these properties for the new control:
+1. Make some space near the top of the screen by resizing the gallery and moving the combo box, insert a [**Radio** control](controls/control-radio.md) above the gallery, and then set these properties for the new control:
 
     - **Items**: `[ "All", "Users", "Teams" ]`
     - **Layout**: `Layout.Horizontal`
@@ -235,7 +237,7 @@ To add this capability to the app:
     > [!div class="mx-imgBorder"]
     > ![Default property set for the Teams combo box](media/working-with-references/patch-default-teams.png)
 
-1. Insert a **Button** control, move it under the **Combo box** control, and then set the button's **Text** property to **"Patch Owner"**.
+1. Insert a **Button** control, move it under the **Combo box** control, and then set the button's **Text** property to `"Patch Owner"`.
 
 1. Set the **OnSelect** property of the button to this formula:
 
@@ -256,7 +258,7 @@ The copied **Radio** and **Combo box** controls show the owner for the currently
 
 ## Show the owner by using a form
 
-You can show an **Owner** field inside a form by adding a custom card. As of this writing, you can't edit that field by using that card.
+You can show an **Owner** field inside a form by adding a custom card. As of this writing, you can't change the value of the field with a form control.
 
 1. Insert an **Edit form** control, and then resize and move it to the lower-right corner.
 
@@ -265,7 +267,7 @@ You can show an **Owner** field inside a form by adding a custom card. As of thi
     > [!div class="mx-imgBorder"]
     > ![Form control showing additional fields with blank values](media/working-with-references/form-insert.png)  
 
-1. Set the form's **Item** property to **Gallery1.Selected**:
+1. Set the form's **Item** property to `Gallery1.Selected`:
 
     > [!div class="mx-imgBorder"]
     > ![Form control showing additional fields populated from the selected item in teh gallery](media/working-with-references/form-item.png)
@@ -322,7 +324,7 @@ The treatment of the **Customer** and **Owner** fields are so similar that you c
 
 | Location | **Owner** sample | **Customer** sample |
 |----------|-----------|------------------|
-| Throughout | **Owner** | **'Customer Name'**<br><br>For example:<br>**Gallery1.Selected.'Customer Name'** |
+| Throughout | **Owner** | **'Customer Name'** |
 | Throughout | **Users** | **Accounts** |
 | Throughout | **Teams** | **Contacts** |
 | Gallery's **Items** property | **Accounts** | **Contacts** |
@@ -349,7 +351,7 @@ Two important differences between **Customer** and **Owner** require an update t
 
 1. One-to-many relationships between **Accounts** and **Contacts** take precedence when you refer to these entity types by name. Instead of **Accounts**, use **\[\@Accounts]**; instead of **Contacts**, use **\[\@Contacts]**. By using the [global disambiguation operator](functions/operators.md#disambiguation-operator) you ensure that you're referring to the entity type in **IsType** and **AsType**. This problem exists only in the record context of the gallery and form controls.
 
-1. The **Owner** field must have a value, but **Customer** fields can be *blank*. To show the correct result without a type name, test for this case, and show an empty text string instead.
+1. The **Owner** field must have a value, but **Customer** fields can be *blank*. To show the correct result without a type name, test for this case with the [**IsBlank** function](functions/function-isblank-isempty.md), and show an empty text string instead.
 
 Both of these changes are in the same formula, which appears in the custom card in the form, as well as the **Text** property of the gallery's label control:
 
@@ -384,7 +386,7 @@ You can start simply with the **Faxes** entity. This entity has a polymorphic **
 
 | Location | **Customer** sample | **Faxes** sample |
 |----------|-----------|------------------|
-| Throughout | **'Customer Name'** | **Regarding**<br><br>For example:<br>**Gallery1.Selected.Regarding** |
+| Throughout | **'Customer Name'** | **Regarding** |
 | Gallery's **Items** property | **Contacts** | **Faxes** |
 | Form's **Items** property | **Contacts** | **Faxes** |
 | The first argument of **Patch**<br> in the button's **OnSelect** property | **Contacts** | **Faxes** |
@@ -456,7 +458,7 @@ To explore this concept in the app:
 
 1. Insert a gallery control, resize it, and then move it to the left side of the screen.
 
-1. On the **Properties** tab of the right-hand pane, set the gallery's **Items** property to **Accounts**:
+1. On the **Properties** tab of the right-hand pane, set the gallery's **Items** to **Accounts**:
 
     > [!div class="mx-imgBorder"]
     > ![Set items to accounts in property pane](media/working-with-references/activitypointer-accounts.png)
@@ -468,7 +470,7 @@ To explore this concept in the app:
 
 1. Add a second gallery, resize it, and then move it to the right side of the screen.
 
-1. Set the new gallery's **Items** property to **Gallery2.Selected.Faxes**.
+1. Set the new gallery's **Items** property to `Gallery2.Selected.Faxes`.
 
     This step returns the filtered list of faxes for a given account:
 
@@ -494,9 +496,9 @@ For the latter scenario, you use the **Activity** entity. You can show this enti
 > [!div class="mx-imgBorder"]
 > ![List of entities showing the Activity entity](media/working-with-references/activitypointer-entity.png)
 
-The **Activity** entity is special. Whenever you add a record to the **Faxes** entity, you also create a record in the **Activity** entity with the fields that are common across all activity entities. Of those fields, **Subject** is one of the most interesting.
+The **Activity** entity is special. Whenever you add a record to the **Faxes** entity, the system also creates a record in the **Activity** entity with the fields that are common across all activity entities. Of those fields, **Subject** is one of the most interesting.
 
-You can show all activities by changing only one line in the previous example. Replace **Gallery2.Selected.Faxes** with **Gallery2.Selected.Activities**:
+You can show all activities by changing only one line in the previous example. Replace `Gallery2.Selected.Faxes` with `Gallery2.Selected.Activities`:
 
 > [!div class="mx-imgBorder"]
 > ![Change of items property for the second gallery, changing from faxes to activities](media/working-with-references/activitypointer-gallery.png)
