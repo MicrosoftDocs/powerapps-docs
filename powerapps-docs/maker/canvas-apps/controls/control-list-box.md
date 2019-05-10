@@ -92,7 +92,7 @@ When you add a gallery, a list, or a chart, the property list shows **Items** by
 
 **[Reset](properties-core.md)** – Whether a control reverts to its default value.
 
-**SelectedText (Deprecated)** – String value representing the selected item.
+**SelectedText (Deprecated)** – A string value that represents the selected item.
 
 **[SelectionColor](properties-color-border.md)** – The text color of a selected item or items in a list or the color of the selection tool in a pen control.
 
