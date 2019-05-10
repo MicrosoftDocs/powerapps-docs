@@ -9,11 +9,11 @@ ms.assetid: 18e88d702-3349-4022-a7d8-a9adf52cd34f
 ms.author: "nabuthuk"
 ---
 
-# Implement controls using TypeScript
+# Implement components using TypeScript
 
 [!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-This tutorial will walk you through creating a new custom component in Typescript. The sample component is a linear input component.  The linear input component enables users to enter numeric values using a visual slider instead of directly keying in values. 
+This tutorial will walk you through creating a new custom component in Typescript. The sample component is a linear input component. The linear input component enables users to enter numeric values using a visual slider instead of directly keying in values. 
 
 ## Creating a new component project
 
