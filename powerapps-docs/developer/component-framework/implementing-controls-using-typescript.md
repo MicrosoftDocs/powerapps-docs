@@ -9,21 +9,33 @@ ms.assetid: 18e88d702-3349-4022-a7d8-a9adf52cd34f
 ms.author: "nabuthuk"
 ---
 
-# Implement controls using TypeScript
+# Implement components using TypeScript
 
 [!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-This tutorial will walk you through creating a new custom component in Typescript. The sample component is a linear input component.  The linear input component enables users to enter numeric values using a visual slider instead of directly keying in values. 
+This tutorial will walk you through creating a new custom component in Typescript. The sample component is a linear input component. The linear input component enables users to enter numeric values using a visual slider instead of directly keying in values. 
 
 ## Creating a new component project
 
 To create a new project, follow the steps below:
 
-1. Open a Developer Command Prompt for VS 2017 window.
-2. Create a new folder for the project using the command `mkdir LinearControl`.
-3. `cd` into the new directory and run the command `cd LinearControl` 
-4. Create the component project using the command `pac pcf init --namespace SampleNamespace --name TSLinearInputControl --template field` 
-5. Install the project build tools using the command `npm install` 
+1. Open a **Developer Command Prompt for VS 2017** window.
+2. Create a new folder for the project using the command 
+   ```CLI
+   mkdir LinearControl
+   ```
+3. Navigate into the new directory using the command 
+   ```CLI
+    cd LinearControl
+   ```
+4. Create the component project using the command 
+   ```CLI
+    pac pcf init --namespace SampleNamespace --name TSLinearInputControl --template field
+   ```
+4. Install the project build tools using the command 
+    ```CLI
+    npm install
+    ```
 
 ## Implementing Manifest
 
@@ -53,7 +65,10 @@ A custom component is defined by the information in the `ControlManifest.Input.x
     ```
 
 4. Save the changes to the `ControlManifest.Input.xml` file.
-5. Build the component project using the command `npm run build`.
+5. Build the component project using the command 
+   ```CLI
+   npm run build
+   ```
 6. The build generates an updated Typescript type declaration file under `TSLinearInputControl/generated folder`.  The `ManifestTypes.d.ts` file defines the properties that your component will have access to Typescript source code.
 
 ## Implementing component logic
@@ -143,7 +158,10 @@ export class TSLinearInputControl implements ComponentFramework.StandardControl<
 }
 ```
 
-3. Rebuild the project using the command `npm run build` 
+3. Rebuild the project using the command 
+   ```CLI
+   npm run build
+   ```
  
 4. The component is compiled into the `out/controls/TSLinearInputControl` folder. The build artifacts includes:
 
@@ -237,7 +255,10 @@ The linear input control’s `init` method creates an input element and sets the
     ```
 
 5. Save the `TS_LinearInputControl.css` 
-6. Rebuild the project using the command `npm run build `.
+6. Rebuild the project using the command 
+   ```CLI
+   npm run build
+   ```
 7. Inspect the build output under `./out/controls/TSLinearInputControl` and observe that the `TS_LinearInputControl.css` file is now included with the compiled build artifacts. 
 
 ### See also

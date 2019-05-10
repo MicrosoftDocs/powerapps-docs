@@ -46,7 +46,7 @@ To use PowerApps CLI you will need the following:
 > [!NOTE]
 > Currently PowerApps CLI is supported only on Windows 10.
 
-## Creating a new PowerApps component framework component
+## Creating a new custom component
 
 To get started, open a new Developer Command Prompt for VS 2017 after installing PowerApps CLI.
 
@@ -71,7 +71,7 @@ To get started, open a new Developer Command Prompt for VS 2017 after installing
     ````
 5. Open your project folder (`C:\Users\<your name>\Documents\My_PCF_Control\<component name>`) in any developer environment of your choice and get started with your custom component development. If you would like a to follow a step-by-step tutorial please scroll down see how a sample linear component is implemented.
 
-## Building your components
+## Building your custom components
 
 To build your component you can open the folder in Visual Studio Code and use the (Ctrl-Shift-B) command, then select your build options. Alternately, you can build your control quickly using the  command in your Developer Command Prompt for VS 2017 window.
 
@@ -137,13 +137,20 @@ Follow the steps below to create and import a [solution](https://docs.microsoft.
 
 1. Create a new directory and go to it 'cd <new directory name>'
 2. Create a new solution project in the directory of your choice by using the command 
- `pac solution init --publisherName <enter your publisher name> --customizationPrefix <enter your publisher name>` after `cd <your new folder>`.
+ 
+    ```CLI
+     pac solution init --publisherName <enter your publisher name> --customizationPrefix <enter your publisher name>` after `cd <your new folder>
+    ```
 
    > [!NOTE]
    > The [publisherName](https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/reference/entities/publisher) and [cutomizationPrefix](https://docs.microsoft.com/en-us/powerapps/maker/common-data-service/change-solution-publisher-prefix) values must be unique to your environment.
  
 3. Once the new solution project is created, you need to refer to the location where the created component is located. You can add the reference by using the command
-`pac solution add-reference --path <path or relative path of your PowerApps component framework project on disk>`
+
+    ```CLI
+     pac solution add-reference --path <path or relative path of your PowerApps component framework project on disk>
+    ```
+
 4. To generate a zip file from your solution project, you will need to `cd` into your solution project directory and build the project using the command `msbuild /t:restore` then `msbuild`
 
     > [!NOTE]
@@ -177,9 +184,9 @@ Follow the steps below to create and import a [solution](https://docs.microsoft.
 5. The generated solution zip file is located in `\bin\debug\`.
 6. You should manually [import the solution](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/customize/import-update-export-solutions) using the web portal once the zip file is ready.
 
-## Adding custom controls to entity or a field
+## Adding custom components to a field or an entity
 
-To add a custom component like data-set component or simple table component to a grid or view, follow the steps mentioned in the topic [Add controls to fields and entities](add-custom-controls-to-a-field-or-entity.md). 
+To add a custom component like data-set component or simple table component to a grid or view, follow the steps mentioned in the topic [Add components to fields and entities](add-custom-controls-to-a-field-or-entity.md). 
 
 ## Telemetry
 
@@ -195,23 +202,23 @@ To uninstall the CLI tool please run the MSI from [here](http://download.microso
 1. To find out where PowerApps CLI is installed, open a command prompt and type `where pac`
 1. Delete the PowerAppsCLI folder.
 1. Open Environment Variables tool by running command `rundll32 sysdm.cpl,EditEnvironmentVariables` in the command prompt
-1. Double-click on `Path` under `User variable for...` section
-1. Select the row containing PowerAppsCLI path and click the Delete button on the right-hand side
+1. Double-click on **Path** under **User variable for...** section
+1. Select the row containing PowerAppsCLI path and click the **Delete** button on the right-hand side
 1. Click OK twice
 
-## Known Configuration Issues and Workarounds
+## Known configuration issues and workarounds
 
 **Msbuild error MSB4036:**
 
-1. The name of the task in the project file is the same as the name of the task class.
+1. The name of the task in the project file is same as the name of the task class.
 2. The task class is public and implements the Microsoft.Build.Framework.ITask interface.
 3. The task is correctly declared with <UsingTask> in the project file or in the *.tasks files located in the <path> directory
 
 **Resolution:**
 
-1. Open Visual Studio Installer 
-1. For VS 2017, click on modify 
-1. Click on Individual Components
+1. Open **Visual Studio Installer** 
+1. For VS 2017, click on **Modify** 
+1. Click on **Individual Components** tab
 1. Under Code Tools, check **NuGet targets & Build Tasks**
 
 ### See also

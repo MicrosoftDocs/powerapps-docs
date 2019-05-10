@@ -81,7 +81,10 @@ To use the new typing file:
     import { IInputs, IOutputs } from `./generated/ManifestTypes`.
 2. Rename all references of **InputsOutputs.IInputBag** to **IInputs**.
 3. Rename all references of **InputsOutputs.IOutputBag** to IOutputs**.
-4. Build the project to generate a new **ManifestTypes.d.ts** file using the command `npm run build`.
+4. Build the project to generate a new **ManifestTypes.d.ts** file using the command 
+   ```CLI
+    npm run build
+   ```
 
 ### See also
 
