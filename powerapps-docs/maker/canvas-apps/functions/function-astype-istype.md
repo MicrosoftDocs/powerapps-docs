@@ -1,6 +1,6 @@
 ---
-title: AsType and IsType functions | Microsoft Docs
-description: Reference information, including syntax and an example, for the AsType and IsType functions in PowerApps
+title: AsType and IsType functions in canvas apps | Microsoft Docs
+description: Reference information, including syntax and an example, for the AsType and IsType functions in canvas apps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -14,121 +14,122 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# AsType and IsType functions in PowerApps
-Tests the type and casts to a specific type for record references.  
+
+# AsType and IsType functions in canvas apps
+
+Tests a record reference against an entity type and casts the reference to a specific type.
 
 ## Description
 
 Read [understand record references and polymorphic lookups](../working-with-references.md) for a broader introduction and more details.
 
-Normally a lookup field can only refer to records of one entity.  Because the entity type is well established, access to the fields of the lookup is possible through a simple dot notation.  For example, **First( Accounts ).'Primary Contact'.'Full Name'** walks from the **Accounts** entity to the **'Primary Contact'** record int the **Contacts** entity and extracts the **'Full Name'** field.    
+A lookup field usually refers to records in a particular entity. Because the entity type is well established, you can access the fields of the lookup by using a simple dot notation. For example, **First( Accounts ).'Primary Contact'.'Full Name'** walks from the **Accounts** entity to the **Primary Contact** record in the **Contacts** entity and extracts the **Full Name** field.
 
-Common Data Service also supports polymorphic lookup fields that can refer to records from a set of entities.  Examples include:
+Common Data Service also supports polymorphic lookup fields, which can refer to records from a set of entities, as in these examples:
 
 | Lookup field | Can refer to |
-|--------------|--------------| 
+|--------------|--------------|
 | **Owner** | **Users** or **Teams** |
 | **Customer** | **Accounts** or **Contacts** |
 | **Regarding** | **Accounts**, **Contacts**, etc. |
 
-Record references are used in canvas app formulas to work with polymorphic lookups.  Because a record reference can refer to different entities, we don't know when writing a formula which fields will be available.  The dot notation is not available.  Our formulas need to be adaptive to the records we encounter in a running app.  
+In canvas-app formulas, you can use record references to work with polymorphic lookups. Because a record reference can refer to different entities, you don't know which fields will be available when you write a formula. The dot notation isn't available. Those formulas must adapt to the records that the app encounters when it runs.
 
-The **IsType** function tests if a record reference refers to a specific entity type, returning a Boolean *true* or *false*.
+The **IsType** function tests whether a record reference refers to a specific entity type. The function returns a Boolean *true* or *false*.
 
-The **AsType** function casts a record reference to a specific entity type.  The result can be used as if it were a record of the entity and again dot notation can be used to access all the fields of the record.  An error occurs if the reference is not of the specific type.
+The **AsType** function casts a record reference to a specific entity type. You can use the result as if it were a record of the entity and, again, use dot notation to access all of the fields of that record. An error occurs if the reference isn't of the specific type.
 
-Use them together to first test the entity type of a record and then cast it to make the fields available:
+Use these functions together to first test the entity type of a record and then to cast it so that the fields are available:
 
 ```powerapps-dot
-If( IsType( First( Accounts ).Owner, Users ), 
+If( IsType( First( Accounts ).Owner, Users ),
     AsType( First( Accounts ).Owner, Users ).'Full Name',
-    AsType( First( Acoounts ).Owner, Teams ).'Team Name' 
+    AsType( First( Accounts ).Owner, Teams ).'Team Name'
 )
 ```
 
-These functions are not required if you are not accessing the fields of a record reference.  For example, record references can be used in the [**Filter** function](function-filter-lookup.md) function directly:
+You need these functions only if you're accessing the fields of a record reference. For example, you can use record references in the [**Filter**](function-filter-lookup.md) function without **IsType** or **AsType**:
 
 ```powerapps-dot
 Filter( Accounts, Owner = First( Users ) )
 ```
 
-They can also be used directly with the [**Patch** function](function-patch.md):
+Similarly, you can use record references with the [**Patch**](function-patch.md) function:
 
 ```powerapps-dot
 Patch( Accounts, First( Accounts ), { Owner: First( Teams ) } )
 ```  
 
-If used in a record context, such as within a [**Gallery**](../controls/control-gallery.md) or [**Edit form**](../controls/control-form-detail.md) control, it is sometimes required to use the [global disambiguation operator](operators.md#disambiguation-operator) to reference the entity type.  For example, this formula would be effective for a gallery that is displaying a list of contacts where **'Company Name'** is a **Customer** lookup.
+If used in a record context, such as within a [**Gallery**](../controls/control-gallery.md) or [**Edit form**](../controls/control-form-detail.md) control, you might need to use the [global disambiguation operator](operators.md#disambiguation-operator) to reference the entity type. For example, this formula would be effective for a gallery that's displaying a list of contacts where **Company Name** is a **Customer** lookup.
 
 ```powerapps-dot
-If( IsType( ThisItem.'Company Name', [@Accounts] ), 
+If( IsType( ThisItem.'Company Name', [@Accounts] ),
     AsType( ThisItem.'Company Name', [@Accounts] ).'Account Name',
-    AsType( ThisItem.'Company Name', [@Contacts] ).'Full Name' 
+    AsType( ThisItem.'Company Name', [@Contacts] ).'Full Name'
 )
 ```
 
-For both functions, the type is specified through the name of the data source connected to the entity.  This requires creating a data source for any types that you wish to test or cast.  For example, in order to use **IsType** and **AsType** with an **Owner** lookup and records from the **Users** entity, you must add the **Users** entity as a data source.  You only need to add the data sources that you actually use in your app, you do not need to add all the entities that a lookup could reference.
+For both functions, you specify the type through the name of the data source that's connected to the entity. For the formula to work, you must also add a data source to the app for any types that you want to test or cast. For example, you must add the **Users** entity as a data source if you want to use **IsType** and **AsType** with an **Owner** lookup and records from that entity. You can add only the data sources that you actually use in your app; you don't need to add all the entities that a lookup could reference.
 
-If the record reference is *blank*, **IsType** will return *false* and **AsType** will return *blank*.  The fields of a *blank* record will all be *blank*.
+If the record reference is *blank*, **IsType** returns *false*, and **AsType** returns *blank*. All fields of a *blank* record will be *blank*.
 
 ## Syntax
 
 **AsType**( *RecordReference*, *EntityType* )
 
-* *RecordReference* - Required. A record reference, often a lookup field that can refer to records in more than one entity.
-* *EntityType* - Required. The specific entity to test for. 
+- *RecordReference* - Required. A record reference, often a lookup field that can refer to a record in any of multiple entities.
+- *EntityType* - Required. The specific entity for which to test.
 
 **IsType**( *RecordReference*, *EntityType* )
 
-* *RecordReference* - Required. A record reference, often a lookup field that can refer to records in more than one entity.
-* *EntityType* - Required. The specific entity to cast to.
+- *RecordReference* - Required. A record reference, often a lookup field that can refer to a record in any of multiple entities.
+- *EntityType* - Required. The specific entity to which to cast.
 
 ## Example
 
-There are extensive examples in [understand record references and polymorphic lookups](../working-with-references.md).
+[Understand record references and polymorphic lookups](../working-with-references.md) contains extensive examples.
 
-1. Create a blank tablet canvas app.
+1. Create a blank canvas app for tablets.
 
-1. Using the **View** tab, and then **Data sources**, add the **Contacts** and **Accounts** entities as data sources.
+1. On the **View** tab, select **Data sources**, and then add the **Contacts** and **Accounts** entities as data sources.
 
     ![](media/function-astype-istype/contacts-add-datasources.png)
 
 1. Insert a **Gallery** control with a **Blank vertical** orientation:
- 
+
     ![](media/function-astype-istype/contacts-customer-gallery.png)
 
-3. Set the **Items** in the Property pane to **Contacts**.
+1. On the **Properties** tab of the right-hand pane, set the gallery's **Items** property to **Contacts**.
 
     ![](media/function-astype-istype/contacts-customer-datasource.png)
 
-4. Select the **Title and subtitle** layout in the Property pane.
+1. Set the gallery's layout to **Title and subtitle**.
 
     ![](media/function-astype-istype/contacts-customer-layout.png)
 
-1. Change the **Title1** property to **Full Name**:
+1. In the **Data** pane, open the **Title1** list, and then select **Full Name**:
 
     ![](media/function-astype-istype/contacts-customer-title.png)
 
-1. Select the **Subititle1** label control:
+1. Select the **Subtitle1** label control:
 
     ![](media/function-astype-istype/contacts-customer-subtitle.png)
 
-3. Set the **Text** property to the formula:
+1. Set the **Text** property of **Subtitle1** to this formula:
 
     ```powerapps-dot
     If( IsBlank( ThisItem.'Company Name' ), "--",
-        IsType( ThisItem.'Company Name', [@Accounts] ), 
+        IsType( ThisItem.'Company Name', [@Accounts] ),
             "Account: " & AsType( ThisItem.'Company Name', [@Accounts] ).'Account Name',
-        "Contact: " & AsType( ThisItem.'Company Name', [@Contacts] ).'Full Name' 
+        "Contact: " & AsType( ThisItem.'Company Name', [@Contacts] ).'Full Name'
     )
     ```
 
     ![](media/function-astype-istype/contacts-customer-complete.png)
 
-    The subtitle in the gallery is now showing:
+    The subtitle in the gallery shows these values:
     - "--" if the **'Company Name'** is *blank*.
-    - "Account: " and then the **Account Name** field from the **Accounts** entity if the **'Company Name'** refers to an account.
-    - "Contact: " and then the **Full Name** field from the **Contacts** entity if the **'Company Name'** refers to a contact.
+    - "Account: " and then the **Account Name** field from the **Accounts** entity if the **Company Name** field refers to an account.
+    - "Contact: " and then the **Full Name** field from the **Contacts** entity if the **Company Name** field refers to a contact.
 
-    Your results may appear different than the above, the sample data used here has been modified to show additional types of results.
-    
+    Your results might differ from those in this topic because it uses sample data that was modified to show additional types of results.
