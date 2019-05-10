@@ -92,28 +92,36 @@ If the record reference is *blank*, **IsType** returns *false*, and **AsType** r
 1. Create a blank canvas app for tablets.
 
 1. On the **View** tab, select **Data sources**, and then add the **Contacts** and **Accounts** entities as data sources.
-
-    ![](media/function-astype-istype/contacts-add-datasources.png)
+    > [!div class="mx-imgBorder"]
+    > ![Blank app with two data sources: accounts and contacts](media/function-astype-istype/contacts-add-datasources.png)
 
 1. Insert a **Gallery** control with a **Blank vertical** orientation:
 
-    ![](media/function-astype-istype/contacts-customer-gallery.png)
+    > [!div class="mx-imgBorder"]
+    > ![Insert a gallery control with a blank vertical layout](media/function-astype-istype/contacts-customer-gallery.png)
 
 1. On the **Properties** tab of the right-hand pane, set the gallery's **Items** property to **Contacts**.
 
-    ![](media/function-astype-istype/contacts-customer-datasource.png)
+    > [!div class="mx-imgBorder"]
+    > ![Set items to Contacts in the properties pane](media/function-astype-istype/contacts-customer-datasource.png)
 
 1. Set the gallery's layout to **Title and subtitle**.
 
-    ![](media/function-astype-istype/contacts-customer-layout.png)
+    > [!div class="mx-imgBorder"]
+    > ![Open the layout picker from the properties pane](media/function-astype-istype/contacts-customer-layout.png)
+
+    > [!div class="mx-imgBorder"]
+    > ![Set layout to Title and subtitle](media/function-astype-istype/contacts-customer-flyout.png)
 
 1. In the **Data** pane, open the **Title1** list, and then select **Full Name**:
 
-    ![](media/function-astype-istype/contacts-customer-title.png)
+    > [!div class="mx-imgBorder"]
+    > ![Set title value](media/function-astype-istype/contacts-customer-title.png)
 
 1. Select the **Subtitle1** label control:
 
-    ![](media/function-astype-istype/contacts-customer-subtitle.png)
+    > [!div class="mx-imgBorder"]
+    > ![Set subtitle value](media/function-astype-istype/contacts-customer-subtitle.png)
 
 1. Set the **Text** property of **Subtitle1** to this formula:
 
@@ -125,7 +133,8 @@ If the record reference is *blank*, **IsType** returns *false*, and **AsType** r
     )
     ```
 
-    ![](media/function-astype-istype/contacts-customer-complete.png)
+    > [!div class="mx-imgBorder"]
+    > ![Screen is now complete showing accounts and contacts intermixed in the gallery](media/function-astype-istype/contacts-customer-complete.png)
 
     The subtitle in the gallery shows these values:
     - "--" if the **'Company Name'** is *blank*.
