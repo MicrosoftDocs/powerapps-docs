@@ -29,6 +29,8 @@ A **Drop down** control conserves screen real estate, especially when the list c
 
 **Selected** – The selected item.
 
+**AllowEmptySelection** – Whether the control shows an empty selection if no item has been selected. App users can also clear their choices by selecting the blank item.
+
 ## Additional properties
 **[AccessibleLabel](properties-accessibility.md)** – Label for screen readers.
 
