@@ -165,7 +165,7 @@
           href: ./canvas-apps/working-with-data-sources.md
         - name: Understand tables and records
           href: ./canvas-apps/working-with-tables.md
-        - name: Understand references
+        - name: Understand record references
           href: ./canvas-apps/working-with-references.md
       - name: Design the interface
         href: ./canvas-apps/add-configure-controls.md
