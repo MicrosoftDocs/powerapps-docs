@@ -51,24 +51,41 @@ To use PowerApps CLI you will need the following:
 To get started, open a new Developer Command Prompt for VS 2017 after installing PowerApps CLI.
 
 1. In the Developer Command Prompt for VS 2017, create a new folder on your local hard drive for example, *C:\Users\<your name>\Documents\My_PCF_Control*
-2. Go to the newly created folder using the command `cd <specify your new folder path>`
+2. Go to the newly created folder using the command 
+
+    ```CLI
+    cd <specify your new folder path>
+    ```
 3. Run the following command to create a new component project by passing some basic parameters
- `pac pcf init --namespace <specify your namespace here> --name <put component name here> --template <component type>`
+
+    ```
+    pac pcf init --namespace <specify your namespace here> --name <put component name here> --template <component type>
+    ```
  
    > [!NOTE]
    > Today we offer two types of components **field** and **dataset**.
 
-4. To retrieve all the required project dependencies, run the command `npm install`.
+4. To retrieve all the required project dependencies, run the command 
+    ```CLI
+    npm install
+    ````
 5. Open your project folder (`C:\Users\<your name>\Documents\My_PCF_Control\<component name>`) in any developer environment of your choice and get started with your custom component development. If you would like a to follow a step-by-step tutorial please scroll down see how a sample linear component is implemented.
 
 ## Building your components
 
-To build your component you can open the folder in Visual Studio Code and use the (Ctrl-Shift-B) command, then select your build options. Alternately, you can build your control quickly using  `npm run build` command in your Developer Command Prompt for VS 2017 window.
+To build your component you can open the folder in Visual Studio Code and use the (Ctrl-Shift-B) command, then select your build options. Alternately, you can build your control quickly using the  command in your Developer Command Prompt for VS 2017 window.
 
-## Debugging your PowerApps component framework component
+```CLI
+ npm run build
+```
+
+## Debugging your custom component
 
 Once you are done implementing your custom component logic, run the following command to start the debugging process
-`npm start`
+
+```CLI
+npm start
+```
 
 > [!NOTE]
 > Today you can only visualize your field component, but dataset support is coming soon. Below image shows a sample component implemented in the tutorial below just as an example. 
@@ -112,7 +129,7 @@ You can also interact with the component locally in real time and observe elemen
  >    1. Install [Fiddler](https://www.telerik.com/download/fiddler)
  >    2. Follow the steps to configure [AutoResponder](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/streamline-javascript-development-fiddler-autoresponder)
 
-## Deploying your PowerApps component framework components
+## Deploying your custom components
 
 Once the debugging and development is finished, you just have one step remaining - to deploy your new component.  
 
