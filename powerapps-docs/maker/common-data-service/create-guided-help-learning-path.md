@@ -42,7 +42,7 @@ Use Learning Path to give your users a custom, in-app Help experience that is ta
 
 - Have opted in for Learning Path. This setting is on by default, but it might have been turned off.  
 
-   To ensure that Learning Path is on: On the nav bar, go to **Settings** ![Settings icon](../customize/media/optionsbutton.png "Settings icon") > **Opt in for Learning Path**.  
+   To ensure that Learning Path is on: On the nav bar, go to **Settings** ![Settings icon](media/optionsbutton.png "Settings icon") > **Opt in for Learning Path**.  
 
    More information: [On-off switch for Learning Path (guided help)](../admin/on-off-switch-for-learning-path-guided-help.md)  
 
@@ -68,7 +68,7 @@ Use Learning Path to give your users a custom, in-app Help experience that is ta
 
     You can enable Learning Path or customizable Help, but not both at the same time. Confirm that **Use custom Help for customizable entities** and **Append parameters to URL** are set to **No**.  
 
-     ![System Settings dialog showing the options to select to enable Learning Path authoring](../customize/media/lp-system-settings.png "System Settings dialog box showing the options to select to enable Learning Path authoring")  
+     ![System Settings dialog showing the options to select to enable Learning Path authoring](media/lp-system-settings.png "System Settings dialog box showing the options to select to enable Learning Path authoring")  
 
 5. Select **OK**.  
 
@@ -76,7 +76,7 @@ Use Learning Path to give your users a custom, in-app Help experience that is ta
 ## Add a user to the Office 365 Learning Path Authors security group  
  If you're not a member of the [!INCLUDE[pn_Office_365](../../includes/pn-office-365.md)] Learning Path Authors security group, you'll see the following error message when you open the Learning Path Content Library.  
 
- ![Error message indicating that you are not a member of the Learning Path security group](../customize/media/lp-o365-security-group.png "Error message indicating that you are not a member of the Learning Path security group")  
+ ![Error message indicating that you are not a member of the Learning Path security group](media/lp-o365-security-group.png "Error message indicating that you are not a member of the Learning Path security group")  
 
 #### Add a user  
 
@@ -148,7 +148,7 @@ Use Learning Path to give your users a custom, in-app Help experience that is ta
 8. Select **Back** to return to the Content Library.  
 
 <a name="MobileApp"></a>   
-## Create Learning Path controls for [!INCLUDE[pn_dyn_365_tablets](../includes/pn-dyn-365-tablets.md)]  
+## Create Learning Path controls for [!INCLUDE[pn_dyn_365_tablets](../../includes/pn-dyn-365-tablets.md)]  
  You can create Learning Path controls for [!INCLUDE[pn_dyn_365_tablets](../../includes/pn-dyn-365-tablets.md)] the same way you create controls for the web client. To do this you must use the mobile app simulator in a web browser so that you have access to the mobile UI for pinning your Learning Path controls. This simulator is to be used only for this purpose.  
 
 
@@ -162,7 +162,7 @@ Use Learning Path to give your users a custom, in-app Help experience that is ta
 
 3. Determine the unique name for the org (also called instance) you want to create Learning Path controls for. To get the unique  name, on the site map, select **Settings** > **Customizations**, and then on the **Customization** page, select **Developer Resources**. Copy the value for the **Unique Name** field displayed in the **Instance Reference** section.  
 
-   ![Dynamics org name displayed in the user info pane](../customize/media/lp-org-name.png "Dynamics org name displayed in the user info pane")  
+   ![Dynamics org name displayed in the user info pane](media/lp-org-name.png "Dynamics org name displayed in the user info pane")  
 
 4. Append the following to the first part of the URL for your org, replacing \<org name> with the unique name for your org determined in the previous step:  
 
@@ -194,21 +194,21 @@ Use Learning Path to give your users a custom, in-app Help experience that is ta
 
 -   On a sidebar, select the **Content Library** button.  
 
-     ![The Content Library icon displayed on a Leaning Path sidebar](../customize/media/lp-sidebar-cl-icon.png "The Content Library icon displayed on a Learning Path sidebar")  
+     ![The Content Library icon displayed on a Leaning Path sidebar](media/lp-sidebar-cl-icon.png "The Content Library icon displayed on a Learning Path sidebar")  
 
 -   Select the **training** tile on the site map, and then select **Content Library**.  
 
-     ![Content Library icon on the Dynamics 365 for Customer Engagement sitemap](../customize/media/lp-sitemap-content-library.png "Content Library icon on the Dynamics 365 for Customer Engagement apps site map")  
+     ![Content Library icon on the Dynamics 365 for Customer Engagement sitemap](media/lp-sitemap-content-library.png "Content Library icon on the Dynamics 365 for Customer Engagement apps site map")  
 
 **To open the Content Library from the mobile app interface simulator:**  
 
 1.  Select the ellipsis button inside a circle (...) on the lower-right corner of the screen.  
 
-    ![Ellipses button to display Learning Path icons](../customize/media/lp-cl-ellipses.png "Ellipsis button to display Learning Path icons")  
+    ![Ellipses button to display Learning Path icons](media/lp-cl-ellipses.png "Ellipsis button to display Learning Path icons")  
 
 2.  Select **Learning Path Content Library**.  
 
-    ![Learning Path buttons displayed in the mobile app interface](../customize/media/lp-mobile-lp-button.png "Learning Path buttons displayed in the mobile app interface")  
+    ![Learning Path buttons displayed in the mobile app interface](media/lp-mobile-lp-button.png "Learning Path buttons displayed in the mobile app interface")  
 
 
 
@@ -219,7 +219,7 @@ Use Learning Path to give your users a custom, in-app Help experience that is ta
 
 |Column|Description|  
 |------------|-----------------|  
-|**Name**|The name you used when you created the Guided Task or Sidebar. A red lock symbol next to the name indicates that the content is currently checked out. You can hover over the icon to see which user has the content checked out.<br /><br /> ![Red lock icon indicates that the content is checked out.](../customize/media/lp-cl-checked-out.png "Red lock icon indicates that the content is checked out.")<br /><br /> A red asterisk next to the name indicates newly checked-in content.<br /><br /> ![Red asterisk indicating newly checked in content](../customize/media/lp-cl-new-check-in.png "Red asterisk indicating newly checked in content")|  
+|**Name**|The name you used when you created the Guided Task or Sidebar. A red lock symbol next to the name indicates that the content is currently checked out. You can hover over the icon to see which user has the content checked out.<br /><br /> ![Red lock icon indicates that the content is checked out.](media/lp-cl-checked-out.png "Red lock icon indicates that the content is checked out.")<br /><br /> A red asterisk next to the name indicates newly checked-in content.<br /><br /> ![Red asterisk indicating newly checked in content](media/lp-cl-new-check-in.png "Red asterisk indicating newly checked in content")|  
 |**Title**|The title you provided when you added content to the Guided Task or Sidebar. Titles for Sidebars and Guided Tasks are displayed on Sidebars when they are added as links, or when they are returned as search results.|  
 |**Type**|A symbol that indicates the type of content: Sidebar or Guided Task|  
 |**Form Factor**|Symbols that represent the form factor  selected for this content when it was created, either **Desktop** or **Tablet**.<br /><br /> The **Form Factor** column is not displayed when you are using the Content Library when connected to the mobile app interface simulator or the Interactive Service Hub.|  
@@ -266,7 +266,7 @@ Use Learning Path to give your users a custom, in-app Help experience that is ta
 
 3. In the Content Library, select **Guided Task**.  
 
-    ![Link to create a new Guided Task in Learning Path Content Library](../customize/media/lp-content-library-gt.png "Link to create a new Guided Task in Learning Path Content Library")  
+    ![Link to create a new Guided Task in Learning Path Content Library](media/lp-content-library-gt.png "Link to create a new Guided Task in Learning Path Content Library")  
 
 4. Enter a name, and select the other settings for the Guided Task. Use this table for reference.  
 
@@ -310,11 +310,11 @@ Use Learning Path to give your users a custom, in-app Help experience that is ta
    > [!NOTE]
    >  You can hold the tile for up to 15 seconds. If you don't pin it within 15 seconds, the tile will remain unpinned and the mouse pointer will change back to a normal cursor.  
 
-   ![Guided task flow editor](../customize/media/lp-gt-flow-editor.png "Guided task flow editor")  
+   ![Guided task flow editor](media/lp-gt-flow-editor.png "Guided task flow editor")  
 
 5. When you've positioned the step where you want it, release the mouse button to pin it to the control. The step will appear in the location you selected. To move the step, use the **Drag me** button on the panel next to the step.  
 
-   ![Drag me icon on a guided task bubble](../customize/media/lp-gt-bubble-drag-me.png "Drag me icon on a guided task bubble")  
+   ![Drag me icon on a guided task bubble](media/lp-gt-bubble-drag-me.png "Drag me icon on a guided task bubble")  
 
 6. Add content to the step by using the controls displayed next to it. The following settings are available:  
 
@@ -329,7 +329,7 @@ Use Learning Path to give your users a custom, in-app Help experience that is ta
    > [!NOTE]
    >  You can always edit the step later, so don't worry if you accidentally close it before you have it just how you want it.  
 
-8. To add or edit the next step in your Guided Task, select the right arrow ![Chevron icon to return to the flow editor](../customize/media/lp-chevron.png "Chevron icon to return to the flow editor") in the upper-left corner of the screen to display the Flow Editor.  
+8. To add or edit the next step in your Guided Task, select the right arrow ![Chevron icon to return to the flow editor](media/lp-chevron.png "Chevron icon to return to the flow editor") in the upper-left corner of the screen to display the Flow Editor.  
 
 9. Add any additional steps you want to include in your Guided Task, making sure to save each step when you're finished adding content.  
 
@@ -362,7 +362,7 @@ Use Learning Path to give your users a custom, in-app Help experience that is ta
 
 3. In the Content Library, select **Sidebar**.  
 
-   ![Link to create a new Sidebar in Learning Path Content Library](../customize/media/lp-content-library-sb.png "Link to create a new Sidebar in Learning Path Content Library")  
+   ![Link to create a new Sidebar in Learning Path Content Library](media/lp-content-library-sb.png "Link to create a new Sidebar in Learning Path Content Library")  
 
 4. Enter a name, and then select the other settings for the Sidebar. Use this table for reference.  
 
@@ -408,11 +408,11 @@ Use Learning Path to give your users a custom, in-app Help experience that is ta
 
 1. In the section you want to add links to, select the **List Of Links** icon.  
 
-   ![List of Links icon selected on a Learning Path Sidebar](../customize/media/lp-sidebar-links.png "List of Links icon selected on a Learning Path Sidebar")  
+   ![List of Links icon selected on a Learning Path Sidebar](media/lp-sidebar-links.png "List of Links icon selected on a Learning Path Sidebar")  
 
 2. Add a section title, and then select **+ Add Link**.  
 
-   ![Add Link box highlighted in a section of a Learning Path Sidebar](../customize/media/lp-sidebar-addlink.png "Add Link box highlighted in a section of a Learning Path Sidebar")  
+   ![Add Link box highlighted in a section of a Learning Path Sidebar](media/lp-sidebar-addlink.png "Add Link box highlighted in a section of a Learning Path Sidebar")  
 
 3. Select the type of link you want to add, and then select **Next**. You can choose from the following options:  
 
@@ -512,7 +512,7 @@ More information about using YouTube: [YouTube Help Center](https://go.microsoft
 
 2.  Select **Localize**, and then select **Export**.  
 
-    ![Export button on the Learning Path Localization menu](../customize/media/lp-localize-export.png "Export button on the Learning Path Localization menu")  
+    ![Export button on the Learning Path Localization menu](media/lp-localize-export.png "Export button on the Learning Path Localization menu")  
 
 3.  Select the option you want to use for saving the generated .zip file, and then select a file name and location.  
 
