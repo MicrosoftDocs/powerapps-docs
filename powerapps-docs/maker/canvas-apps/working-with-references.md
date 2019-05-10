@@ -311,8 +311,7 @@ In Common Data Service, the **Customer** lookup field is another polymorphic loo
 
 You can add more **Customer** lookup fields to an entity by selecting the **Customer** data type for a new field:
 
-> [!div class="mx-imgBorder"]
-> ![Customer data type from the list of data types when creating a field](media/working-with-references/customer-datatype.png)
+![Customer data type from the list of data types when creating a field](media/working-with-references/customer-datatype.png)
 
 A **Customer** lookup field can refer to a record from either the **Accounts** entity or the **Contacts** entity.  You will be using the **IsType** and **AsType** functions with these entities so now is a good time to add them as data sources (you can leave **Teams** and **Users** in place):
 
@@ -427,13 +426,11 @@ After you make these changes, you work with the **Regarding** lookup just as you
 
 Let's back up and look at the entity definitions. In Common Data Service, entities such as **Faxes**, **Tasks**, **Emails**, **Notes**, **Phone Calls**, **Letters**, and **Chats** are designated as [*activities*](../../developer/common-data-service/activity-entities.md). You can also create your own [custom activity entities](../../developer/common-data-service/custom-activities.md). When you view or create an activity entity, its settings appear under **More settings**:
 
-> [!div class="mx-imgBorder"]
-> ![Activity entity setting when creating an entity](media/working-with-references/activity-entitytype.png)
+![Activity entity setting when creating an entity](media/working-with-references/activity-entitytype.png)
 
 Other entities can be related to an activity entity if they're enabled as an *activity task* in the entity's settings. **Accounts**, **Contacts**, and many other standard entities are so designated (again, under **More settings**):
 
-> [!div class="mx-imgBorder"]
-> ![Activity task setting when creating an entity](media/working-with-references/activity-entityuse.png)
+![Activity task setting when creating an entity](media/working-with-references/activity-entityuse.png)
 
 All activity entities and activity-task entities have an implied relationship. If you change the filter to **All** at the top of the screen, select the **Faxes** entity, and then select the **Relationships** tab, all entities that can be a target of a **Regarding** lookup appear:
 
@@ -551,8 +548,7 @@ So far, all of the **Regarding** examples have been based on activities, but the
 
 When you create an entity, you can enable attachments:
 
-> [!div class="mx-imgBorder"]
-> ![Enabling attachments and notes when creating an entity](media/working-with-references/notes-entity.png)
+![Enabling attachments and notes when creating an entity](media/working-with-references/notes-entity.png)
 
 If you select this check box, you'll create a **Regarding** relationship with the **Notes** entity, as this graphic shows for the **Accounts** entity:
 
