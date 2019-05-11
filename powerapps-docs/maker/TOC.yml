@@ -697,9 +697,10 @@
       href: ./canvas-apps/restore-an-app.md
     - name: Change app name and tile
       href: ./canvas-apps/set-name-tile.md
-    - name: Change screen size and orientation
-      href: ./canvas-apps/set-aspect-ratio-portrait-landscape.md
+    - name: Manage screens
       items:
+        - name: Change screen size and orientation
+          href: ./canvas-apps/set-aspect-ratio-portrait-landscape.md
         - name: Create responsive layout
           href: ./canvas-apps/create-responsive-layout.md
   - name: Customize a SharePoint list form
@@ -712,7 +713,7 @@
     items:
     - name: SharePoint Online
       items:
-      - name: SharePoint Online integration overview
+      - name: Overview
         href: ./canvas-apps/sharepoint-scenario-intro.md
       - name: Set up SharePoint Online lists
         href: ./canvas-apps/sharepoint-scenario-setup.md
