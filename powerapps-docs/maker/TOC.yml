@@ -82,18 +82,21 @@
       - name: Use flows
         href: ../user/use-flows.md
 - name: Create apps
-  href: index.md
   items:
+  - name: Overview
+    href: index.md
   - name: Sign in to PowerApps
     href: ./canvas-apps/intro-maker-portal.md
 - name: Canvas apps
-  href: ./canvas-apps/getting-started.md
   items:
+  - name: What are canvas apps?
+    href: ./canvas-apps/getting-started.md
   - name: "System requirements, limits, and configuration"
     href: ./canvas-apps/limits-and-config.md
   - name: Explore sample apps
-    href: ./canvas-apps/open-and-run-a-sample-app.md
     items:
+    - name: Create a canvas app from a sample
+      href: ./canvas-apps/open-and-run-a-sample-app.md
     - name: Expense Report app
       href: ./canvas-apps/expense-report-install.md
     - name: Help Desk app
@@ -129,8 +132,9 @@
   - name: Design and build an app
     items:
       - name: Connect to data
-        href: ./canvas-apps/connections-list.md
         items:
+        - name: List of connections
+          href: ./canvas-apps/connections-list.md
         - name: Popular connectors
           items:
             - name: Common Data Service
@@ -168,11 +172,15 @@
         - name: Understand record references
           href: ./canvas-apps/working-with-references.md
       - name: Design the interface
-        href: ./canvas-apps/add-configure-controls.md
         items:
-          - name: Add a screen
-            href: ./canvas-apps/add-screen-context-variables.md
+          - name: Add and configure controls
+            href: ./canvas-apps/add-configure-controls.md
+          - name: Add and configure a screen
             items:
+              - name: Add a screen
+                href: ./canvas-apps/add-screen-context-variables.md
+              - name: Add a scrolling screen
+                href: ./canvas-apps/add-scrolling-screen.md
               - name: Configure Office 365 screens
                 items:
                   - name: Calendar-screen overview
@@ -191,16 +199,16 @@
                     href: ./canvas-apps/screen-templates/people-screen-overview.md
                   - name: People-screen reference
                     href: ./canvas-apps/screen-templates/people-screen-reference.md
-              - name: Add a scrolling screen
-                href: ./canvas-apps/add-scrolling-screen.md
           - name: Show a table of items
-            href: ./canvas-apps/add-gallery.md
             items:
-            - name: Show items of different heights
+            - name: Add a gallery
+              href: ./canvas-apps/add-gallery.md
+            - name: Add a variable-height gallery
               href: ./canvas-apps/gallery-dynamic-sizing.md
-          - name: Add a form
-            href: ./canvas-apps/add-form.md
+          - name: Add and configure a form
             items:
+            - name: Add a form
+              href: ./canvas-apps/add-form.md
             - name: Understand forms
               href: ./canvas-apps/working-with-forms.md
             - name: Understand form layout
@@ -208,8 +216,9 @@
             - name: Understand cards
               href: ./canvas-apps/working-with-cards.md
           - name: Add a list
-            href: ./canvas-apps/add-list-box-drop-down-list-radio-button.md
             items:
+            - name: Add a list box, a drop-down list, or radio buttons
+              href: ./canvas-apps/add-list-box-drop-down-list-radio-button.md
             - name: Create dependent drop-down lists
               href: ./canvas-apps/dependent-drop-down-lists.md
           - name: Add a chart
@@ -219,8 +228,9 @@
           - name: Add Power BI data
             href: ./canvas-apps/powerapps-custom-visual.md
           - name: Control reference
-            href: ./canvas-apps/reference-properties.md
             items:
+            - name: List of controls and properties
+              href: ./canvas-apps/reference-properties.md
             - name: Add picture
               href: ./canvas-apps/controls/control-add-picture.md
             - name: Attachments
@@ -304,8 +314,9 @@
             - name: Web barcode scanner (experimental)
               href: ./canvas-apps/controls/control-barcodescanner.md
       - name: Configure app functionality
-        href: ./canvas-apps/working-with-formulas.md
         items:
+        - name: Get started with formulas
+          href: ./canvas-apps/working-with-formulas.md
         - name: Understand variables
           href: ./canvas-apps/working-with-variables.md
         - name: Understand behavior formulas
@@ -321,8 +332,9 @@
         - name: Add a flow
           href: ./canvas-apps/using-logic-flows.md
         - name: Formula reference
-          href: ./canvas-apps/formula-reference.md
           items:
+          - name: Functions, signals, operators, and enumerations
+            href: ./canvas-apps/formula-reference.md
           - name: Abs
             href: ./canvas-apps/functions/function-numericals.md
           - name: Acceleration
@@ -650,8 +662,9 @@
       - name: Build a global app
         href: ./canvas-apps/global-apps.md
       - name: Make an app accessible
-        href: ./canvas-apps/accessible-apps.md
         items:
+          - name: Create an accessible app
+            href: ./canvas-apps/accessible-apps.md
           - name: Find accessibility issues
             href: ./canvas-apps/accessibility-checker.md
           - name: Use color for accessibility
@@ -664,9 +677,10 @@
         href: ./canvas-apps/working-with-experimental-preview.md
   - name: Save and publish an app
     href: ./canvas-apps/save-publish-app.md
-  - name: Share an app
-    href: ./canvas-apps/share-app.md
+  - name: Share an app and its dependencies
     items:
+    - name: Share an app
+      href: ./canvas-apps/share-app.md
     - name: Share Excel data
       href: ./canvas-apps/share-app-data.md
     - name: Share app resources
@@ -689,8 +703,9 @@
         - name: Create responsive layout
           href: ./canvas-apps/create-responsive-layout.md
   - name: Customize a SharePoint list form
-    href: ./canvas-apps/customize-list-form.md
     items:
+      - name: Make basic changes
+        href: ./canvas-apps/customize-list-form.md
       - name: Understand SharePoint forms integration
         href: ./canvas-apps/sharepoint-form-integration.md
   - name: Integrate with other technologies
@@ -722,8 +737,9 @@
     - name: Transform your InfoPath forms to PowerApps
       href: ./canvas-apps/transform-infopath.md
   - name: For developers
-    href: ./canvas-apps/dev-enterprise-intro.md
     items:
+    - name: Canvas apps for enterprise developers, partners, and ISVs
+      href: ./canvas-apps/dev-enterprise-intro.md
     - name: Build and certify custom connectors
       href: ./canvas-apps/register-custom-api.md
     - name: Integrate with websites and other technologies
