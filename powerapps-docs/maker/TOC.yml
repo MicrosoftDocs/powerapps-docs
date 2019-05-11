@@ -333,7 +333,7 @@
           href: ./canvas-apps/using-logic-flows.md
         - name: Formula reference
           items:
-          - name: Functions, signals, operators, and enumerations
+          - name: Overview
             href: ./canvas-apps/formula-reference.md
           - name: Abs
             href: ./canvas-apps/functions/function-numericals.md
