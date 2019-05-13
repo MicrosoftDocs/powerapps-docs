@@ -103,7 +103,7 @@ Finally, a GET request is included outside the change set to return all six task
  **Request**
 
 ```http 
-POST[Organization URI]/api/data/v9.0/$batch HTTP/1.1  
+POST[Organization URI]/api/data/v9.1/$batch HTTP/1.1  
 Content-Type: multipart/mixed;boundary=batch_AAA123  
 Accept: application/json  
 OData-MaxVersion: 4.0  
@@ -117,26 +117,26 @@ Content-Type: application/http
 Content-Transfer-Encoding:binary  
 Content-ID: 1  
   
-POST[Organization URI]/api/data/v9.0/tasks HTTP/1.1  
+POST[Organization URI]/api/data/v9.1/tasks HTTP/1.1  
 Content-Type: application/json;type=entry  
   
-{"subject":"Task 1 in batch","regardingobjectid_account_task@odata.bind":"[Organization URI]/api/data/v9.0/accounts(00000000-0000-0000-000000000001)"}  
+{"subject":"Task 1 in batch","regardingobjectid_account_task@odata.bind":"[Organization URI]/api/data/v9.1/accounts(00000000-0000-0000-000000000001)"}  
 --changeset_BBB456  
 Content-Type: application/http  
 Content-Transfer-Encoding:binary  
 Content-ID: 2  
   
-POST[Organization URI]/api/data/v9.0/tasks HTTP/1.1  
+POST[Organization URI]/api/data/v9.1/tasks HTTP/1.1  
 Content-Type: application/json;type=entry  
   
-{"subject":"Task 2 in batch","regardingobjectid_account_task@odata.bind":"[Organization URI]/api/data/v9.0/accounts(00000000-0000-0000-000000000001)"}  
+{"subject":"Task 2 in batch","regardingobjectid_account_task@odata.bind":"[Organization URI]/api/data/v9.1/accounts(00000000-0000-0000-000000000001)"}  
 --changeset_BBB456--  
   
 --batch_AAA123  
 Content-Type: application/http  
 Content-Transfer-Encoding:binary  
   
-GET[Organization URI]/api/data/v9.0/accounts(00000000-0000-0000-000000000001)/Account_Tasks?$select=subject HTTP/1.1  
+GET[Organization URI]/api/data/v9.1/accounts(00000000-0000-0000-000000000001)/Account_Tasks?$select=subject HTTP/1.1  
 Accept: application/json  
   
 --batch_AAA123--  
@@ -155,8 +155,8 @@ Content-ID: 1
   
 HTTP/1.1 204 No Content  
 OData-Version: 4.0  
-Location:[Organization URI]/api/data/v9.0/tasks(a59c24f3-fafc-e411-80dd-00155d2a68cb)  
-OData-EntityId:[Organization URI]/api/data/v9.0/tasks(a59c24f3-fafc-e411-80dd-00155d2a68cb)  
+Location:[Organization URI]/api/data/v9.1/tasks(a59c24f3-fafc-e411-80dd-00155d2a68cb)  
+OData-EntityId:[Organization URI]/api/data/v9.1/tasks(a59c24f3-fafc-e411-80dd-00155d2a68cb)  
   
 --changesetresponse_ff83b4f1-ab48-430c-b81c-926a2c596abc  
 Content-Type: application/http  
@@ -165,8 +165,8 @@ Content-ID: 2
   
 HTTP/1.1 204 No Content  
 OData-Version: 4.0  
-Location:[Organization URI]/api/data/v9.0/tasks(a69c24f3-fafc-e411-80dd-00155d2a68cb)  
-OData-EntityId:[Organization URI]/api/data/v9.0/tasks(a69c24f3-fafc-e411-80dd-00155d2a68cb)  
+Location:[Organization URI]/api/data/v9.1/tasks(a69c24f3-fafc-e411-80dd-00155d2a68cb)  
+OData-EntityId:[Organization URI]/api/data/v9.1/tasks(a69c24f3-fafc-e411-80dd-00155d2a68cb)  
   
 --changesetresponse_ff83b4f1-ab48-430c-b81c-926a2c596abc--  
 --batchresponse_c1bd45c1-dd81-470d-b897-e965846aad2f  
@@ -178,7 +178,7 @@ Content-Type: application/json; odata.metadata=minimal
 OData-Version: 4.0  
   
 {  
-  "@odata.context":"[Organization URI]/api/data/v9.0/$metadata#tasks(subject)","value":[  
+  "@odata.context":"[Organization URI]/api/data/v9.1/$metadata#tasks(subject)","value":[  
     {  
       "@odata.etag":"W/\"474122\"","subject":"Task Created with Test Account","activityid":"919c24f3-fafc-e411-80dd-00155d2a68cb"  
     },{  
@@ -203,7 +203,7 @@ Include `odata.include-annotations` preference header with the `GET` requests an
 Content-Type: application/http  
 Content-Transfer-Encoding:binary  
   
-GET[Organization URI]/api/data/v9.0/accounts(00000000-0000-0000-000000000001)?$select=name,telephone1,emailaddress1,shippingmethodcode,customersizecode,accountratingcode,followemail,donotemail,donotphone,statuscode HTTP/1.1  
+GET[Organization URI]/api/data/v9.1/accounts(00000000-0000-0000-000000000001)?$select=name,telephone1,emailaddress1,shippingmethodcode,customersizecode,accountratingcode,followemail,donotemail,donotphone,statuscode HTTP/1.1  
 Accept: application/json  
 Prefer: odata.include-annotations="*"
   
@@ -236,7 +236,7 @@ Content-Type: application/http
 Content-Transfer-Encoding: binary
 Content-ID: 1
 
-POST [Organization URI]/api/data/v9.0/leads HTTP/1.1
+POST [Organization URI]/api/data/v9.1/leads HTTP/1.1
 Content-Type: application/json
 
 {
@@ -249,7 +249,7 @@ Content-Type: application/http
 Content-Transfer-Encoding: binary
 Content-ID: 2
 
-POST [Organization URI]/api/data/v9.0/contacts HTTP/1.1
+POST [Organization URI]/api/data/v9.1/contacts HTTP/1.1
 Content-Type: application/json
 
 {"@odata.type":"Microsoft.Dynamics.CRM.contact","firstname":"Oncall Contact-1111"}
@@ -259,7 +259,7 @@ Content-Type: application/http
 Content-Transfer-Encoding: binary
 Content-ID: 3
 
-POST [Organization URI]/api/data/v9.0/accounts HTTP/1.1
+POST [Organization URI]/api/data/v9.1/accounts HTTP/1.1
 Content-Type: application/json
 
 {
@@ -276,9 +276,47 @@ Content-Type: application/json
 
 ```http
 200 OK
+
+--batchresponse_3cace264-86ea-40fe-83d3-954b336c0f4a
+Content-Type: multipart/mixed; boundary=changesetresponse_1a5db8a1-ec98-42c4-81f6-6bc6adcfa4bc
+
+--changesetresponse_1a5db8a1-ec98-42c4-81f6-6bc6adcfa4bc
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+Content-ID: 1
+
+HTTP/1.1 204 No Content
+OData-Version: 4.0
+Location: [Organization URI]/api/data/v9.1/leads(425195a4-7a75-e911-a97a-000d3a34a1bd)
+OData-EntityId: [Organization URI]/api/data/v9.1/leads(425195a4-7a75-e911-a97a-000d3a34a1bd)
+
+--changesetresponse_1a5db8a1-ec98-42c4-81f6-6bc6adcfa4bc
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+Content-ID: 2
+
+HTTP/1.1 204 No Content
+OData-Version: 4.0
+Location: [Organization URI]/api/data/v9.1/contacts(495195a4-7a75-e911-a97a-000d3a34a1bd)
+OData-EntityId: [Organization URI]/api/data/v9.1/contacts(495195a4-7a75-e911-a97a-000d3a34a1bd)
+
+--changesetresponse_1a5db8a1-ec98-42c4-81f6-6bc6adcfa4bc
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+Content-ID: 3
+
+HTTP/1.1 204 No Content
+OData-Version: 4.0
+Location: [Organization URI]/api/data/v9.1/accounts(4f5195a4-7a75-e911-a97a-000d3a34a1bd)
+OData-EntityId: [Organization URI]/api/data/v9.1/accounts(4f5195a4-7a75-e911-a97a-000d3a34a1bd)
+
+--changesetresponse_1a5db8a1-ec98-42c4-81f6-6bc6adcfa4bc--
+--batchresponse_3cace264-86ea-40fe-83d3-954b336c0f4a--
 ```
 
 ### Reference URI in request URL
+
+**Request**
 
 ```http
 POST [Organization URI]/api/data/v9.1/$batch HTTP/1.1
@@ -295,7 +333,7 @@ Content-Type: application/http
 Content-Transfer-Encoding: binary
 Content-ID: 1
 
-POST [Organization URI]/api/data/v9.0/contacts HTTP/1.1
+POST [Organization URI]/api/data/v9.1/contacts HTTP/1.1
 Content-Type: application/json
 
 {
@@ -320,7 +358,11 @@ Content-Type: application/json
 --batch_AAA123--
 ```
 
+**Response**
+
 ### Reference URIs in URL and request body using @odata.id
+
+**Request**
 
 ```http
 POST [Organization URI]/api/data/v9.1/$batch HTTP/1.1
@@ -347,7 +389,7 @@ Content-Type:application/http
 Content-Transfer-Encoding:binary
 Content-ID:2
 
-POST [Organization URI]/api/data/v9.0/contacts HTTP/1.1
+POST [Organization URI]/api/data/v9.1/contacts HTTP/1.1
 Content-Type:application/json
 
 {"@odata.type":"Microsoft.Dynamics.CRM.contact","firstname":"Oncall Contact"}
@@ -366,7 +408,11 @@ Content-Type:application/json
 --batch_AAA123--
 ```
 
+**Response**
+
 ### Reference URIs in URL and navigation properties
+
+**Request**
 
 ```http
 POST [Organization URI]/api/data/v9.1/$batch HTTP/1.1
@@ -393,7 +439,7 @@ Content-Type: application/http
 Content-Transfer-Encoding: binary
 Content-ID: 2
 
-POST [Organization URI]/api/data/v9.0/contacts HTTP/1.1
+POST [Organization URI]/api/data/v9.1/contacts HTTP/1.1
 Content-Type: application/json
 
 {
@@ -416,6 +462,48 @@ Content-Type: application/json
 --changeset_dd81ccab-11ce-4d57-b91d-12c4e25c3cab--
 --batch_AAA123--
 ```
+**Response**
+
+```http
+200 OK
+
+--batchresponse_9595d3ae-48f6-414f-a3aa-a3a33559859e
+Content-Type: multipart/mixed; boundary=changesetresponse_0c1567a5-ad0d-48fa-b81d-e6db05cad01c
+
+--changesetresponse_0c1567a5-ad0d-48fa-b81d-e6db05cad01c
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+Content-ID: 1
+
+HTTP/1.1 204 No Content
+OData-Version: 4.0
+Location: [Organization URI]/api/data/v9.1/accounts(6cd81853-7b75-e911-a97a-000d3a34a1bd)
+OData-EntityId: [Organization URI]/api/data/v9.1/accounts(6cd81853-7b75-e911-a97a-000d3a34a1bd)
+
+--changesetresponse_0c1567a5-ad0d-48fa-b81d-e6db05cad01c
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+Content-ID: 2
+
+HTTP/1.1 204 No Content
+OData-Version: 4.0
+Location: [Organization URI]/api/data/v9.1/contacts(6ed81853-7b75-e911-a97a-000d3a34a1bd)
+OData-EntityId: [Organization URI]/api/data/v9.1/contacts(6ed81853-7b75-e911-a97a-000d3a34a1bd)
+
+
+--changesetresponse_0c1567a5-ad0d-48fa-b81d-e6db05cad01c
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+Content-ID: 3
+
+HTTP/1.1 204 No Content
+OData-Version: 4.0
+Location: [Organization URI]/api/data/v9.1/accounts(6cd81853-7b75-e911-a97a-000d3a34a1bd)
+OData-EntityId: [Organization URI]/api/data/v9.1/accounts(6cd81853-7b75-e911-a97a-000d3a34a1bd)
+
+--changesetresponse_0c1567a5-ad0d-48fa-b81d-e6db05cad01c--
+--batchresponse_9595d3ae-48f6-414f-a3aa-a3a33559859e--
+```
 
 > [!NOTE]
 > Referencing a Content-ID before it has been declared in the request body will return the error **HTTP 400** Bad request.
@@ -433,7 +521,7 @@ Content-Type: application/json
 > Content-Transfer-Encoding:binary
 > Content-ID: 2
 > 
-> POST http://onefarm4322.onefarm4322dom.extest.microsoft.com/CITTest/api/data/v9.0/phonecalls HTTP/1.1
+> POST [Organization URI]/api/data/v9.1/phonecalls HTTP/1.1
 > Content-Type: application/json;type=entry
 > 
 > {
@@ -446,7 +534,7 @@ Content-Type: application/json
 > Content-Transfer-Encoding:binary
 > Content-ID: 1
 > 
-> POST http://onefarm4322.onefarm4322dom.extest.microsoft.com/CITTest/api/data/v9.0/accounts HTTP/1.1
+> POST [Organization URI]/api/data/v9.1/accounts HTTP/1.1
 > Content-Type: application/json;type=entry
 > 
 > {
