@@ -9,45 +9,51 @@ ms.assetid: 18e88d702-3349-4022-a7d8-a9adf52cd34f
 ms.author: "nabuthuk"
 ---
 
-# Implement components using TypeScript
+# Create, debug, and deploy custom components
 
 [!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-This tutorial will walk you through creating a new custom component in Typescript. The sample component is a linear input component. The linear input component enables users to enter numeric values using a visual slider instead of directly keying in values. 
+This tutorial showcases how to create a new custom component in Typescript, debug and deploy components using the PowerApps CLI. In this tutorial we are going to create a linear input component. The linear input component enables users to enter numeric values using a visual slider instead of directly typing values in the number fields. 
 
 ## Creating a new component project
 
 To create a new project, follow the steps below:
 
-1. Open a **Developer Command Prompt for VS 2017** window.
+1. Open **Developer command prompt for VS 2017**
 2. Create a new folder for the project using the command 
    ```CLI
-   mkdir LinearControl
+   mkdir LinearComponent
    ```
 3. Navigate into the new directory using the command 
    ```CLI
-    cd LinearControl
+    cd LinearComponent
    ```
 4. Create the component project using the command 
    ```CLI
     pac pcf init --namespace SampleNamespace --name TSLinearInputControl --template field
    ```
-4. Install the project build tools using the command 
+5. Install the project build tools using the command 
     ```CLI
     npm install
     ```
+6. Open the project in any developer environment of your choice.
 
-## Implementing Manifest
+When you open the project folder, you see the following items:
 
-A custom component is defined by the information in the `ControlManifest.Input.xml` manifest file. In this walkthrough, this file is created under the `<Your component Name>` sub folder. For the linear input component, a property will be defined to store the numeric value of the slider input.
+- A **TSLinearInputControl** folder, which has the **ControlManifest.xml** and the **index.ts** files.
+- Inside the **TSLinearInputControl** folder you will see a **generated** folder, which has the **ManifestTypes.d.ts** file. The `ManifestTypes.d.ts` file defines the properties that your component will have access to Typescript source code.
 
-1. Open the `ControlManifest.Input.xml` file in the code editor (Visual Studio Code). The `ControlManifest.Input.xml` file defines an initial component property called `sampleProperty`.
+## Implementing Manifest file
+
+A custom component is defined by the information in the `ControlManifest.Input.xml` manifest file. To define properties in the manifest file:
+
+1. Open the `ControlManifest.Input.xml` file in the code editor. The `ControlManifest.Input.xml` file defines an initial component property called `sampleProperty`.
 
     ```XML
     <property name="sampleProperty" display-name-key="Property_Display_Key" description-key="Property_Desc_Key" of-type="SingleLine.Text" usage="bound" required="true" /> 
     ```
 
-2. Rename the `sampleProperty` and change the property type
+2. Rename the `sampleProperty` and change the property type to the following
 
     ```XML
     <property name="sliderValue" display-name-key="sliderValue_Display_Key" description-key="sliderValue_Desc_Key" of-type-group="numbers" usage="bound" required="true" /> 
@@ -65,20 +71,27 @@ A custom component is defined by the information in the `ControlManifest.Input.x
     ```
 
 4. Save the changes to the `ControlManifest.Input.xml` file.
-5. Build the component project using the command 
+5. Create a new folder inside the **LinearInput** folder and name it as **css**.
+6. Create a css file to [add styling to the component](adding-style-to-the-custom-component)
+7. Add a reference to this css file in the **ControlManifest.xml** file under the <resources> node as shown below
+   ```XML
+    <css path="css/TS_LinearInputControl.css" order="1" />
+   ```
+8. Build the component project using the command 
    ```CLI
    npm run build
    ```
-6. The build generates an updated Typescript type declaration file under `TSLinearInputControl/generated folder`.  The `ManifestTypes.d.ts` file defines the properties that your component will have access to Typescript source code.
+9. The build generates an updated Typescript type declaration file under **TSLinearInputControl/generated folder** and also an **Out** folder. 
 
 ## Implementing component logic
 
 Source for the custom component is implemented in the `index.ts` file. The `index.ts` file includes scaffolding for interface methods that are required by the PowerApps component framework. 
 
 1. Open the `index.ts` file in code editor of your choice.
-2. Update the `TSLinearInputControl` class with the following
+2. Update the code with the following
 
 ```TypeScript
+import {IInputs, IOutputs} from "./generated/ManifestTypes";
 export class TSLinearInputControl implements ComponentFramework.StandardControl<IInputs, IOutputs> {
   // Value of the field is stored and used inside the control 
   private _value: number;
@@ -166,24 +179,15 @@ export class TSLinearInputControl implements ComponentFramework.StandardControl<
 4. The component is compiled into the `out/controls/TSLinearInputControl` folder. The build artifacts includes:
 
    - bundle.js – Bundled component source code 
-   - ControlManifest.xml – Actual component manifest file that will be uploaded to Common Data Service organization.
+   - ControlManifest.xml – Actual component manifest file that will be imported into model-driven apps.
 
 ## Adding Style to the custom component
 
 The linear input control’s `init` method creates an input element and sets the class attribute to `linearslider`. The style for the `linearslider` class is defined in a separate `css` file. Additional component resources like `css` files can be included with the custom component to support further customizations.
 
-1. Edit the `ControlManifest.Input.xml` file to include an additional `css` resource inside the <resources> element
+1. Open the **TS_LinearInputComponent.css** file 
  
-    ```XML
-    <resources> 
-      <code path="index.ts" order="1"/> 
-      <css path="css/TS_LinearInputControl.css" order="1"/> 
-    </resources> 
-     ```
-
-2. Create a new `css` sub folder under the `TSLinearInputControl` folder. 
-3. Create a new `TS_LinearInputControl.css` file inside the `css` sub folder. 
-4. Add the following style content to `TS_LinearInputControl.css` file
+2. Add the following code to **TS_LinearInputControl.css** file
 
     ```CSS
     .SampleNamespace\.TSLinearInputControl input[type=range].linearslider {
@@ -254,12 +258,12 @@ The linear input control’s `init` method creates an input element and sets the
     }
     ```
 
-5. Save the `TS_LinearInputControl.css` 
-6. Rebuild the project using the command 
+3. Save the `TS_LinearInputControl.css` 
+4. Rebuild the project using the command 
    ```CLI
    npm run build
    ```
-7. Inspect the build output under `./out/controls/TSLinearInputControl` and observe that the `TS_LinearInputControl.css` file is now included with the compiled build artifacts. 
+5. Inspect the build output under the **./out/controls/TSLinearInputControl** and observe that the **TS_LinearInputControl.css** file is now included with the compiled build artifacts. 
 
 ## Debugging your custom component
 
@@ -269,59 +273,15 @@ Once you are done implementing your custom component logic, run the following co
 npm start
 ```
 
-> [!NOTE]
-> Today you can only visualize your field component, but dataset support is coming soon. Below image shows a sample component implemented in the tutorial below just as an example. 
-
-> [!div class="mx-imgBorder"]
-> ![local-host](media/local-host.png "local host")
-
-As shown in the image above, the browse window will open with 3 sections. Your component will be rendered in the left pane while the right pane consists of **Inputs** and **Outputs** sections
-
-  - **Inputs** section is an interactive UI that displays all properties and their types or type-groups defined in the manifest file. It allows you to key in mock data for each property. 
-  - **Outputs** section renders the output whenever a component's `getOutputs` method gets called.  
- 
-> [!NOTE]
-> If you want to modify the manifest file or create additional properties, you will need to restart the debug process before they appear in the inputs section.
-
-As you are inputting mock data, you can use the browser’s debugging capabilities to observe the component behavior. Each browser provides you with a debugging tool to help you debug your code natively in the browser. Typically, you can activate debugging in your browser by pressing the **F12** key to display the native developer tool used for debugging. Today both Chrome and Edge browsers are supported.
-
-For example, on **Microsoft Edge**,
-
-- Press **F12** to open inspector.
-- Click on your component
-- On top bar, go to **Debugger**, and then start searching for the component name described in the Manifest file in the search bar. For example, type your component name like `Hello World component`.
-
-     > [!div class="mx-imgBorder"]
-     > ![debug-component](media/debug-control.png "Debug component")
-
-> [!NOTE]
-> It is always a good practice to set breakpoints on the component's life cycle methods like `init` and `updateView`
-
-You can also interact with the component locally in real time and observe elements in the DOM by setting a breakpoint in the sources tab as follows:
-
-> [!div class="mx-imgBorder"]
-> ![local-host](media/local-host.png "local host")
-
-> [!div class="mx-imgBorder"]
-> ![debug-component](media/debug-control-1.png "Debug component 1")
-
-
- > [!NOTE]
- > You can also use the following steps to perform outer loop debugging using fiddler.
- >    1. Install [Fiddler](https://www.telerik.com/download/fiddler)
- >    2. Follow the steps to configure [AutoResponder](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/streamline-javascript-development-fiddler-autoresponder)
-
 ## Deploying your custom components
-
-Once the development and debugging is finished, you just have one step remaining to deploy your new component.  
 
 Follow the steps below to create and import a [solution](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/customize/solutions-overview) file:
 
-1. Create a new directory and go to it 'cd <new directory name>'
-2. Create a new solution project in the directory of your choice by using the command 
+1. Create a new directory inside the **LinearComponent** folder. 
+2. Create a new solution project in the **LinearComponent** folder using the command 
  
     ```CLI
-     pac solution init --publisherName <enter your publisher name> --customizationPrefix <enter your publisher name>` after `cd <your new folder>
+     pac solution init --publisherName developer --customizationPrefix dev 
     ```
 
    > [!NOTE]
@@ -330,41 +290,29 @@ Follow the steps below to create and import a [solution](https://docs.microsoft.
 3. Once the new solution project is created, you need to refer to the location where the created component is located. You can add the reference by using the command
 
     ```CLI
-     pac solution add-reference --path <path or relative path of your PowerApps component framework project on disk>
+     pac solution add-reference --path c:\users\LinearComponent
     ```
 
-4. To generate a zip file from your solution project, you will need to `cd` into your solution project directory and build the project using the command `msbuild /t:restore` then `msbuild`
+4. To generate a zip file from your solution project, you will need to `cd` into your solution project directory and build the project using the command 
+
+    ```CLI
+     msbuild /t:restore
+    ```
+
+5. Again run the following command 
+    ```CLI
+     msbuild
+    ```
 
     > [!NOTE]
-    > If msbuild 15 is not in the path, open Developer Command Prompt for Vs 2017 to run the `msbuild` commands.
+    > Make sure that the **NuGet targets & Build Tasks** is checked. To enable it
+    > - Open **Visual Studio Installer**
+    > - For VS 2017, click on **Modify**
+    > - Click on **Individual Components**
+    > - Under **Code Tools**, check **NuGet targets & Build Tasks**
 
-    > [!NOTE]
-    > Building the solution in the debug configuration, generates an unmanaged solution package. A managed solution package is generated by building the solution in release configuration. These settings can be overridden by specifying SolutionPackageType property in `cdsproj` file.
-    
-    > [!NOTE]
-    > If you would like your project build to emit a managed solution or both managed and unmanaged, open the folder where you created your solution project, edit the `cdsproj` file and uncomment the below property group:
-      ```XML
-         <PropertyGroup>
-          <SolutionPackageType>Managed</SolutionPackageType>
-           </PropertyGroup>
-      ```
-
-    > [!NOTE]
-    > You can also enable additional solution packaging [capabilities](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/compress-extract-solution-file-solutionpackager) by adding any of the property group elements below:
-
-     ```XML
-       <PropertyGroup>
-         <SolutionPackageErrorLevel />
-         <SolutionPackageEnableLocalization />
-        <SolutionPackagerWorkingDirectory />
-        <SolutionPackageLogFilePath />
-        <SolutionPackageZipFilePath />
-        <SolutionPackageMapFilePath />
-       </PropertyGroup>
-     ```
-
-5. The generated solution zip file is located in `\bin\debug\`.
-6. You should manually [import the solution](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/customize/import-update-export-solutions) using the web portal once the zip file is ready.
+6. The generated solution zip file is located in `\bin\debug\`.
+7. You should manually [import the solution](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/customize/import-update-export-solutions) using the web portal once the zip file is ready.
 
 ## Adding custom components to a field or an entity
 
