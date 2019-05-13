@@ -39,7 +39,7 @@ You can view details about solution operations from the **Solutions** area of a 
      > [!div class="mx-imgBorder"] 
      > ![](media/solution-history-sitemap.png "Solution History area")
 
-The following views are available from the **Solutions** area. 
+The following views are available from the **Solutions History** area. 
 - **All Solutions History**. Displays both system and custom solutions. 
 - **Custom Solutions History**. Displays only custom solutions. 
 - **Internal Solutions History**. Displays only system customizations. 
@@ -57,7 +57,9 @@ Each solution history record is read-only and includes the following properties:
 
 ### View solution operation error details 
 When a solution operation includes a failure you can select it to display a page with additional error details. 
-![Solution history with operation error](media/solution-history-with-failure.png)
+
+> [!div class="mx-imgBorder"] 
+> ![](media/solution-history-with-failure.png "Solution history with operation error")
 
 The details page contains information including the **Exception Message** that can help diagnose the underlying cause for the operation failure. Some errors, including solution dependency errors, may also include links to **solution layers** to make it easier for you to diagnose the issue. The **Activity Id** can be useful in cases where you need to contact Microsoft Customer Support. 
 
