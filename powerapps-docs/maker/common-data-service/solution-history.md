@@ -2,7 +2,7 @@
 title: "View the history of a solution | MicrosoftDocs"
 description: "Learn how to view the history of a solution"
 keywords: 
-ms.date: 04/25/2019
+ms.date: 05/13/2019
 ms.service: powerapps
 ms.custom: 
 ms.topic: article
@@ -33,17 +33,6 @@ You can view details about solution operations from the **Solutions** area of a 
 > [!div class="mx-imgBorder"] 
 > ![](media/solutions-history-custom-view.png "Solutions history custom view")
 
-Each solution history record is read-only and includes the following properties: 
-- **Start Time**. The time in which the operation started. 
-- **End Time**: The time in which the operation ended. 
-- **Solution Version**. The version of the solution. 
-- **Publisher Name**. The name of the publisher that is associated with the operation. More information: [Change the solution publisher prefix](change-solution-publisher-prefix.md)  
-- **Operation**. The operation, such as import, export, or delete. More information: [Import, update, and export solutions](import-update-export-solutions.md)
-- **Suboperation**: Denotes the type of operation, such as a new solution import or an update to an existing solution. 
-- **Status**. The current status of the operation, such as **Completed** or **Not completed**. 
-- **Result**. The result of the operation, such as **Success** or **Failure**. 
-- **Error Code**: Error code returned from the operation. An error code of 0 means the operation was successfully completed. 
-
 ## View solution history
 1.	From a PowerApps model-driven app, select **Settings** ![Settings](../model-driven-apps/media/powerapps-gear.png) on the app toolbar, and then select **Advanced Settings**. 
 2.	Select **Settings**, and then select **Solutions History**.
@@ -56,7 +45,25 @@ The following views are available from the **Solutions** area.
 - **Custom Solutions History**. Displays only custom solutions. 
 - **Internal Solutions History**. Displays only system customizations. 
 
+Each solution history record is read-only and includes the following properties: 
+- **Start Time**. The time in which the operation started. 
+- **End Time**: The time in which the operation ended. 
+- **Solution Version**. The version of the solution. 
+- **Publisher Name**. The name of the publisher that is associated with the operation. More information: [Change the solution publisher prefix](change-solution-publisher-prefix.md)  
+- **Operation**. The operation, such as import, export, or delete. More information: [Import, update, and export solutions](import-update-export-solutions.md)
+- **Suboperation**: Denotes the type of operation, such as a new solution import or an update to an existing solution. 
+- **Status**. The current status of the operation, such as **Completed** or **Not completed**. 
+- **Result**. The result of the operation, such as **Success** or **Failure**. 
+- **Error Code**: Error code returned from the operation. An error code of 0 means the operation was successfully completed. 
+
+### View solution operation error details 
+Double-click a solution event to display a page with additional error details including the exception message.  Use this information to diagnose the underlying cause for the event failure. Some errors, including solution dependency errors, may also include links to solution layers to make it easier for you to diagnose the issue. The **Activity Id** can be useful in cases where you need to contact Microsoft Customer Support. 
+
+> [!div class="mx-imgBorder"] 
+> ![](media/solution-history-error-details.png "Solution operation error details")
+
 ### See also
-[Solutions overview](solutions-overview.md) <br />
-[View solution layers](solution-layers.md)
+[View solution layers](solution-layers.md)  <br />
+[Solutions overview](solutions-overview.md) 
+
 
