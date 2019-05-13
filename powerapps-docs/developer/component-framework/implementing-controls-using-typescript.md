@@ -72,7 +72,7 @@ A custom component is defined by the information in the `ControlManifest.Input.x
 
 4. Save the changes to the `ControlManifest.Input.xml` file.
 5. Create a new folder inside the **LinearInput** folder and name it as **css**.
-6. Create a css file to [add styling to the component](adding-style-to-the-custom-component)
+6. Create a css file to [add styling to the component](#adding-style-to-the-custom-component)
 7. Add a reference to this css file in the **ControlManifest.xml** file under the <resources> node as shown below
    ```XML
     <css path="css/TS_LinearInputControl.css" order="1" />

@@ -19,11 +19,11 @@ Use Microsoft PowerApps CLI tool to create your custom components. To create a n
 1. Open **Developer command prompt for VS 2017** .
 2. Create a new folder for the project using the command 
    ```CLI
-   mkdir Sample Component
+   mkdir <Name of the folder>
    ```
 3. Navigate into the new directory using the command 
    ```CLI
-    cd Sample Component
+    cd <Name of the folder>
    ```
 4. Create the component project using the command 
    ```CLI
@@ -44,7 +44,5 @@ Use Microsoft PowerApps CLI tool to create your custom components. To create a n
 
 ## See also
 
-[Implement custom components](implementing-controls-using-typescript.md)<br />
-[PowerApps component framework API Reference](reference/index.md)<br/>
-[PowerApps component framework Overview](overview.md)
+[Debug custom components](debugging-custom-controls.md)
 

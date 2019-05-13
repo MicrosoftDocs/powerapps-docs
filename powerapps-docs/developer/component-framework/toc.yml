@@ -14,9 +14,11 @@
       href: debugging-custom-controls.md
     - name: Import custom components
       href: import-custom-controls.md
+    - name: Configuring custom components
+      href: add-custom-controls-to-a-field-or-entity.md
     - name: Update existing custom components
       href: updating-existing-controls.md
-  - name: Create, debug and deploy custom components 
+  - name: Tutorial to create, debug and deploy custom components 
     href: implementing-controls-using-typescript.md
   - name: Limitations
     href: limitations.md

@@ -11,7 +11,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: d2cbf58a-9112-45c2-b823-2c07a310714c
 ---
-# Updating existing custom controls 
+# Updating existing custom components 
 
 [!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
@@ -88,6 +88,7 @@ To use the new typing file:
 
 ### See also
 
+[Create, debug and deploy custom components](implementing-controls-using-typescript.md)
 [Limitations of PowerApps component framework](limitations.md)<br/>
 [PowerApps component framework API Reference](reference/index.md)<br/>
 [PowerApps component framework Overview](overview.md)

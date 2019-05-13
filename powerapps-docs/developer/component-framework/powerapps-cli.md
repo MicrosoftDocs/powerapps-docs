@@ -41,7 +41,7 @@ To use PowerApps CLI you will need the following:
 
 ## Creating custom components
 
-To create, debug and deploy your custom components using Microsoft PowerApps CLI, see [Creating components using PowerApps CLI](implementing-controls-using-typescript)
+To create, debug and deploy your custom components using Microsoft PowerApps CLI, see [Creating components using PowerApps CLI](implementing-controls-using-typescript.md)
 
 ## Telemetry
 
@@ -52,14 +52,20 @@ The feature team is aggregating anonymized telemetry in order to understand whic
 
 ## How to uninstall Microsoft PowerApps CLI
 
-To uninstall the CLI tool please run the MSI from [here](http://download.microsoft.com/download/D/B/E/DBE69906-B4DA-471C-8960-092AB955C681/powerapps-cli-0.1.51.msi). If you are Private Preview Participant and have an older version of CLI, please follow below manual steps:
+To uninstall the CLI tool please run the MSI from [here](http://download.microsoft.com/download/D/B/E/DBE69906-B4DA-471C-8960-092AB955C681/powerapps-cli-0.1.51.msi). If you are **Private Preview** participant and have an older version of CLI, follow the steps:
 
-1. To find out where PowerApps CLI is installed, open a command prompt and type `where pac`
-1. Delete the PowerAppsCLI folder.
-1. Open Environment Variables tool by running command `rundll32 sysdm.cpl,EditEnvironmentVariables` in the command prompt
-1. Double-click on **Path** under **User variable for...** section
-1. Select the row containing PowerAppsCLI path and click the **Delete** button on the right-hand side
-1. Click OK twice
+1. To find out where PowerApps CLI is installed, open command prompt and run the command
+    ```CLI
+    where pac
+    ```
+2. Delete the PowerAppsCLI folder.
+3. Open Environment Variables tool by running command 
+   ```CLI
+    rundll32 sysdm.cpl,EditEnvironmentVariables
+   ```
+4. Double-click on **Path** under **User variable for...** section
+5. Select the row containing PowerAppsCLI path and click the **Delete** button on the right-hand side
+6. Click OK twice
 
 ## Known configuration issues and workarounds
 

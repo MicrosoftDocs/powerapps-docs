@@ -58,7 +58,6 @@ You can also interact with the component locally in real time and observe elemen
  >    1. Install [Fiddler](https://www.telerik.com/download/fiddler)
  >    2. Follow the steps to configure [AutoResponder](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/streamline-javascript-development-fiddler-autoresponder)
 
-### Related topics
+### See also
 
-[PowerApps component framework API Reference](reference/index.md)<br/>
-[PowerApps component framework Overview](overview.md)
+[Import custom components](import-custom-controls.md)

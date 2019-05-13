@@ -73,6 +73,5 @@ To add a custom component like data-set component or simple table component to a
 
 ### See also
 
-[Implementing components in TypeScript](implementing-controls-using-typescript.md)<br/>
-[PowerApps component framework API Reference](reference/index.md)<br/>
-[PowerApps component framework Overview](overview.md)
+[Update existing custom components](updating-existing-controls.md)
+

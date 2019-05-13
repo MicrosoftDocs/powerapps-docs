@@ -71,6 +71,4 @@ Follow the steps below to create and import a [solution](https://docs.microsoft.
 
 ### See also
 
-[Add Components to entities or fields](add-custom-controls-to-a-field-or-entity.md)<br/>
-[PowerApps component framework API Reference](reference/index.md)<br/>
-[PowerApps component framework Overview](overview.md)
+[Add components to entities or fields](add-custom-controls-to-a-field-or-entity.md)
