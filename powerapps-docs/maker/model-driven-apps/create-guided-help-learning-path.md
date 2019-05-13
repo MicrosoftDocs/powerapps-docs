@@ -27,7 +27,7 @@ Use Learning Path to give your users a custom, in-app Help experience that is ta
 ## How is Learning Path different from customizable Help?  
  Customizable Help allows you to override the default [!INCLUDE[pn_crm_shortest](../../includes/pn-crm-shortest.md)] apps Help and point users in your organization to a different URL for Help. Or you can override the Help for a highly customized entity so that you can better describe your workflow. 
 
- Learning Path lets you add customizable Help that users see in [!INCLUDE[pn_crm_shortest](../../includes/pn-crm-shortest.md)] when they open a page, perform an action, or select the Help button (?). Learning Path is available only for [!INCLUDE[pn_crm_online_shortest](../../includes/pn-crm-online-shortest.md)].  
+ Learning Path lets you add customizable Help that users see in [!INCLUDE[pn_crm_shortest](../../includes/pn-crm-shortest.md)] when they open a page, perform an action, or select the Help button (?).   
 
  For more information about customizable Help, see [Customize the Help experience](https://technet.microsoft.com/library/dn832079.aspx).  
 
@@ -36,9 +36,7 @@ Use Learning Path to give your users a custom, in-app Help experience that is ta
 
  To create Learning Path content, you must:  
 
-- Be using [!INCLUDE[pn_crm_online_shortest](../../includes/pn-crm-online-shortest.md)].  
-
-- Have [!INCLUDE[pn_crm_8_2_0_online](../../includes/pn-crm-8-2-0-online.md)] or later. Note that users can view the Learning Path content created by Microsoft if they have [!INCLUDE[pn_crm_8_1_0_online_subsequent](../../includes/pn-crm-8-1-0-online-subsequent.md)] or later, but you must have [!INCLUDE[pn_crm_8_2_0_online](../../includes/pn-crm-8-2-0-online.md)] or later to author Learning Path content.  
+- Be using PowerApps or [!INCLUDE[pn_crm_online_shortest](../../includes/pn-crm-online-shortest.md)].  
 
 - Have opted in for Learning Path. This setting is on by default, but it might have been turned off.  
 
