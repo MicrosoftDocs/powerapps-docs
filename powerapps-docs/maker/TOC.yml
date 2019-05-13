@@ -950,7 +950,9 @@
     - name: Change custom entity icons
       href: ./model-driven-apps/change-custom-entity-icons.md
     - name: Distribute an app using solutions
-      href: ./model-driven-apps/distribute-model-driven-app.md
+      href: ./model-driven-apps/create-guided-help-learning-path.md
+    - name: Create your own guided help
+      href: ./model-driven-apps/distribute-model-driven-app.md      
   - name: Accessibility in PowerApps app designer
     href: ./model-driven-apps/Accessibility-app-designer-site-map-designer-my-apps-page.md
   - name: For developers
