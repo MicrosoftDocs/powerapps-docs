@@ -19,9 +19,9 @@ You add custom components by including them in a solution and then importing it 
 
 Custom components are comprised into three components:
 
-1. Manifest
-2. Component implementation library
-3. Resources
+1. [Manifest](#manifest)
+2. [Component implementation library](#component-implementation-library)
+3. [Resources](#resources)
 
 ## Manifest
 
@@ -83,6 +83,6 @@ You should define a [destroy](reference/control/destroy.md) method in your objec
 
 Each custom component should have a resource file to construct its visualization. You can define a resource file in the manifest. The resource node in the manifest file refers to the resources that component require to implement its visualization. More information: [Resources](manifest-schema-reference/resources.md)
 
-### Related topics
+### See also
 
 [Create custom components](create-custom-controls-using-pcf.md)

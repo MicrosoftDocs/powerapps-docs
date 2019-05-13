@@ -88,7 +88,7 @@ To use the new typing file:
 
 ### See also
 
-[Create, debug and deploy custom components](implementing-controls-using-typescript.md)
+[Create, debug and deploy custom components](implementing-controls-using-typescript.md)<br/>
 [Limitations of PowerApps component framework](limitations.md)<br/>
 [PowerApps component framework API Reference](reference/index.md)<br/>
 [PowerApps component framework Overview](overview.md)
