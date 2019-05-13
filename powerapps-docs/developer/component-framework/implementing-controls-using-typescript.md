@@ -273,7 +273,7 @@ Once you are done implementing your custom component logic, run the following co
 npm start
 ```
 
-## Packaging your custom components
+## Packaging a custom component
 
 Follow the steps below to create and import a [solution](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/customize/solutions-overview) file:
 
