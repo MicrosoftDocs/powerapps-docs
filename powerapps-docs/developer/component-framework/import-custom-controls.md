@@ -34,12 +34,6 @@ Follow the steps below to create and import a solution file:
 4. The generated solution files are located in `\bin\debug\`.
 5. You should manually import the solution using the web portal.
 
-## Telemetry
-
-The feature team is aggregating anonymized telemetry in order to understand which features or capabilities in the PowerApps CLI tool are most often used by the developers. The aggregated data allows to provide the best experience to the customers by focusing on what’s truly is important.
-
-To disable the telemetry collection, run the command `pac telemetry - -enabled false`. To turn the telemetry back, use the command `pac telemetry- -enabled true`.
-
 ### See also
 
 [Add Controls to entities or fields](add-custom-controls-to-a-field-or-entity.md)<br/>

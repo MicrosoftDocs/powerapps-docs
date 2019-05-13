@@ -50,7 +50,7 @@ A custom component is defined by the information in the `ControlManifest.Input.x
 2. Rename the `sampleProperty` and change the property type
 
     ```XML
-    <property name="sliderValue" display-name-key="sliderValue _Display_Key" description-key=" sliderValue_Desc_Key" of-type-group="numbers" usage="bound" required="true" /> 
+    <property name="sliderValue" display-name-key="sliderValue_Display_Key" description-key="sliderValue_Desc_Key" of-type-group="numbers" usage="bound" required="true" /> 
     ```
 
 3. The of-type-group attribute references a group of allowable numbers. Add the following type-group element as a sibling to the <property> element in the manifest. The type-group specifies the component value and can contain whole, currency, floating point, or decimal values.
@@ -260,6 +260,116 @@ The linear input control’s `init` method creates an input element and sets the
    npm run build
    ```
 7. Inspect the build output under `./out/controls/TSLinearInputControl` and observe that the `TS_LinearInputControl.css` file is now included with the compiled build artifacts. 
+
+## Debugging your custom component
+
+Once you are done implementing your custom component logic, run the following command to start the debugging process
+
+```CLI
+npm start
+```
+
+> [!NOTE]
+> Today you can only visualize your field component, but dataset support is coming soon. Below image shows a sample component implemented in the tutorial below just as an example. 
+
+> [!div class="mx-imgBorder"]
+> ![local-host](media/local-host.png "local host")
+
+As shown in the image above, the browse window will open with 3 sections. Your component will be rendered in the left pane while the right pane consists of **Inputs** and **Outputs** sections
+
+  - **Inputs** section is an interactive UI that displays all properties and their types or type-groups defined in the manifest file. It allows you to key in mock data for each property. 
+  - **Outputs** section renders the output whenever a component's `getOutputs` method gets called.  
+ 
+> [!NOTE]
+> If you want to modify the manifest file or create additional properties, you will need to restart the debug process before they appear in the inputs section.
+
+As you are inputting mock data, you can use the browser’s debugging capabilities to observe the component behavior. Each browser provides you with a debugging tool to help you debug your code natively in the browser. Typically, you can activate debugging in your browser by pressing the **F12** key to display the native developer tool used for debugging. Today both Chrome and Edge browsers are supported.
+
+For example, on **Microsoft Edge**,
+
+- Press **F12** to open inspector.
+- Click on your component
+- On top bar, go to **Debugger**, and then start searching for the component name described in the Manifest file in the search bar. For example, type your component name like `Hello World component`.
+
+     > [!div class="mx-imgBorder"]
+     > ![debug-component](media/debug-control.png "Debug component")
+
+> [!NOTE]
+> It is always a good practice to set breakpoints on the component's life cycle methods like `init` and `updateView`
+
+You can also interact with the component locally in real time and observe elements in the DOM by setting a breakpoint in the sources tab as follows:
+
+> [!div class="mx-imgBorder"]
+> ![local-host](media/local-host.png "local host")
+
+> [!div class="mx-imgBorder"]
+> ![debug-component](media/debug-control-1.png "Debug component 1")
+
+
+ > [!NOTE]
+ > You can also use the following steps to perform outer loop debugging using fiddler.
+ >    1. Install [Fiddler](https://www.telerik.com/download/fiddler)
+ >    2. Follow the steps to configure [AutoResponder](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/streamline-javascript-development-fiddler-autoresponder)
+
+## Deploying your custom components
+
+Once the development and debugging is finished, you just have one step remaining to deploy your new component.  
+
+Follow the steps below to create and import a [solution](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/customize/solutions-overview) file:
+
+1. Create a new directory and go to it 'cd <new directory name>'
+2. Create a new solution project in the directory of your choice by using the command 
+ 
+    ```CLI
+     pac solution init --publisherName <enter your publisher name> --customizationPrefix <enter your publisher name>` after `cd <your new folder>
+    ```
+
+   > [!NOTE]
+   > The [publisherName](https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/reference/entities/publisher) and [cutomizationPrefix](https://docs.microsoft.com/en-us/powerapps/maker/common-data-service/change-solution-publisher-prefix) values must be unique to your environment.
+ 
+3. Once the new solution project is created, you need to refer to the location where the created component is located. You can add the reference by using the command
+
+    ```CLI
+     pac solution add-reference --path <path or relative path of your PowerApps component framework project on disk>
+    ```
+
+4. To generate a zip file from your solution project, you will need to `cd` into your solution project directory and build the project using the command `msbuild /t:restore` then `msbuild`
+
+    > [!NOTE]
+    > If msbuild 15 is not in the path, open Developer Command Prompt for Vs 2017 to run the `msbuild` commands.
+
+    > [!NOTE]
+    > Building the solution in the debug configuration, generates an unmanaged solution package. A managed solution package is generated by building the solution in release configuration. These settings can be overridden by specifying SolutionPackageType property in `cdsproj` file.
+    
+    > [!NOTE]
+    > If you would like your project build to emit a managed solution or both managed and unmanaged, open the folder where you created your solution project, edit the `cdsproj` file and uncomment the below property group:
+      ```XML
+         <PropertyGroup>
+          <SolutionPackageType>Managed</SolutionPackageType>
+           </PropertyGroup>
+      ```
+
+    > [!NOTE]
+    > You can also enable additional solution packaging [capabilities](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/compress-extract-solution-file-solutionpackager) by adding any of the property group elements below:
+
+     ```XML
+       <PropertyGroup>
+         <SolutionPackageErrorLevel />
+         <SolutionPackageEnableLocalization />
+        <SolutionPackagerWorkingDirectory />
+        <SolutionPackageLogFilePath />
+        <SolutionPackageZipFilePath />
+        <SolutionPackageMapFilePath />
+       </PropertyGroup>
+     ```
+
+5. The generated solution zip file is located in `\bin\debug\`.
+6. You should manually [import the solution](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/customize/import-update-export-solutions) using the web portal once the zip file is ready.
+
+## Adding custom components to a field or an entity
+
+To add a custom component like data-set component or simple table component to a grid or view, follow the steps mentioned in the topic [Add components to fields and entities](add-custom-controls-to-a-field-or-entity.md).
+
 
 ### See also
 
