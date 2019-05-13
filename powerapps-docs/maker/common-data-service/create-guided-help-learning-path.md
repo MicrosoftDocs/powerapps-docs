@@ -553,4 +553,4 @@ The following table lists the [!INCLUDE[pn_crm_shortest](../../includes/pn-crm-s
 [!INCLUDE[cc_privacy_learning_path_authoring](../../includes/cc-privacy-learning-path-authoring.md)]
 
 ### See also  
- [On-off switch for Learning Path (guided help)](../admin/on-off-switch-for-learning-path-guided-help.md)
+ [On-off switch for Learning Path (guided help)](/dynamics365/customer-engagement/admin/on-off-switch-for-learning-path-guided-help)
