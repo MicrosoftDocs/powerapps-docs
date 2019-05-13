@@ -360,6 +360,36 @@ Content-Type: application/json
 
 **Response**
 
+```http
+200 OK
+
+--batchresponse_2cb48f48-39a8-41ea-aa52-132fa8ab3c2d
+Content-Type: multipart/mixed; boundary=changesetresponse_d7528170-3ef3-41bd-be8e-eac971a8d9d4
+
+--changesetresponse_d7528170-3ef3-41bd-be8e-eac971a8d9d4
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+Content-ID: 1
+
+HTTP/1.1 204 No Content
+OData-Version: 4.0
+Location:[Organization URI]/api/data/v9.1/contacts(f8ea5d2c-8c75-e911-a97a-000d3a34a1bd)
+OData-EntityId:[Organization URI]/api/data/v9.1/contacts(f8ea5d2c-8c75-e911-a97a-000d3a34a1bd)
+
+
+--changesetresponse_d7528170-3ef3-41bd-be8e-eac971a8d9d4
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+Content-ID: 2
+
+HTTP/1.1 204 No Content
+OData-Version: 4.0
+
+
+--changesetresponse_d7528170-3ef3-41bd-be8e-eac971a8d9d4--
+--batchresponse_2cb48f48-39a8-41ea-aa52-132fa8ab3c2d--
+```
+
 ### Reference URIs in URL and request body using @odata.id
 
 **Request**
@@ -409,6 +439,44 @@ Content-Type:application/json
 ```
 
 **Response**
+
+```http
+200 OK
+
+--batchresponse_0740a25c-d8e1-41a5-9202-1b50a297864c
+Content-Type: multipart/mixed; boundary=changesetresponse_19ca0da8-d8bb-4273-a3f7-fe0d0fadfe5f
+
+--changesetresponse_19ca0da8-d8bb-4273-a3f7-fe0d0fadfe5f
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+Content-ID: 1
+
+HTTP/1.1 204 No Content
+OData-Version: 4.0
+Location:[Organization URI]/api/data/v9.1/accounts(3dcf8c02-8c75-e911-a97a-000d3a34a1bd)
+OData-EntityId:[Organization URI]/api/data/v9.1/accounts(3dcf8c02-8c75-e911-a97a-000d3a34a1bd)
+
+--changesetresponse_19ca0da8-d8bb-4273-a3f7-fe0d0fadfe5f
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+Content-ID: 2
+
+HTTP/1.1 204 No Content
+OData-Version: 4.0
+Location:[Organization URI]/api/data/v9.1/contacts(43cf8c02-8c75-e911-a97a-000d3a34a1bd)
+OData-EntityId:[Organization URI]/api/data/v9.1/contacts(43cf8c02-8c75-e911-a97a-000d3a34a1bd)
+
+--changesetresponse_19ca0da8-d8bb-4273-a3f7-fe0d0fadfe5f
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+Content-ID: 3
+
+HTTP/1.1 204 No Content
+OData-Version: 4.0
+
+--changesetresponse_19ca0da8-d8bb-4273-a3f7-fe0d0fadfe5f--
+--batchresponse_0740a25c-d8e1-41a5-9202-1b50a297864c--
+```
 
 ### Reference URIs in URL and navigation properties
 
@@ -489,7 +557,6 @@ HTTP/1.1 204 No Content
 OData-Version: 4.0
 Location: [Organization URI]/api/data/v9.1/contacts(6ed81853-7b75-e911-a97a-000d3a34a1bd)
 OData-EntityId: [Organization URI]/api/data/v9.1/contacts(6ed81853-7b75-e911-a97a-000d3a34a1bd)
-
 
 --changesetresponse_0c1567a5-ad0d-48fa-b81d-e6db05cad01c
 Content-Type: application/http
