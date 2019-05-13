@@ -2,7 +2,7 @@
 title: "Execute batch operations using the Web API (Common Data Service)| Microsoft Docs"
 description: "Batch operation lets you group multiple operations in a single HTTP request. Read how to execute batch operations using the Web API"
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 05/13/2019
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -209,7 +209,104 @@ Prefer: odata.include-annotations="*"
   
 --batch_AAA123-- 
 ```
-For more information about preference headers, see[Header Prefer](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752234).
+For more information about preference headers, see [Header Prefer](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752234).
+
+## Using $Parameter to manipulate related entities
+
+### Reference URIs in request body
+
+```http
+POST [Organization URI]/api/data/v9.1/$batch HTTP/1.1
+Content-Type:  multipart/mixed;boundary=batch_AAA123
+Accept:  application/json
+OData-MaxVersion:  4.0
+OData-Version:  4.0
+
+--batch_AAA123
+Content-Type: multipart/mixed; boundary=changeset_dd81ccab-11ce-4d57-b91d-12c4e25c3cab
+
+--changeset_dd81ccab-11ce-4d57-b91d-12c4e25c3cab
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+Content-ID: 1
+
+POST [Organization URI]/api/data/v9.0/leads HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstname":"aaa",
+    "lastname":"bbb"
+}
+
+--changeset_dd81ccab-11ce-4d57-b91d-12c4e25c3cab
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+Content-ID: 2
+
+POST [Organization URI]/api/data/v9.0/contacts HTTP/1.1
+Content-Type: application/json
+
+{"@odata.type":"Microsoft.Dynamics.CRM.contact","firstname":"Oncall Contact-1111"}
+
+--changeset_dd81ccab-11ce-4d57-b91d-12c4e25c3cab
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+Content-ID: 3
+
+POST [Organization URI]/api/data/v9.0/accounts HTTP/1.1
+Content-Type: application/json
+
+{
+    "name":"IcM Account",
+    "originatingleadid@odata.bind":"$1",
+    "primarycontactid@odata.bind":"$2"
+}
+
+--changeset_dd81ccab-11ce-4d57-b91d-12c4e25c3cab--
+--batch_AAA123--
+```
+
+### Reference URI in request URL
+
+```http
+POST [Organization URI]/api/data/v9.1/$batch HTTP/1.1
+Content-Type:  multipart/mixed;boundary=batch_AAA123
+Accept:  application/json
+OData-MaxVersion:  4.0
+OData-Version:  4.0
+
+--batch_AAA123
+Content-Type: multipart/mixed; boundary=changeset_dd81ccab-11ce-4d57-b91d-12c4e25c3cab
+
+--changeset_dd81ccab-11ce-4d57-b91d-12c4e25c3cab
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+Content-ID: 1
+
+POST [Organization URI]/api/data/v9.0/contacts HTTP/1.1
+Content-Type: application/json
+
+{
+  "@odata.type":"Microsoft.Dynamics.CRM.contact",
+  "firstname":"Contact",
+  "lastname":"AAAAAA"
+}
+
+--changeset_dd81ccab-11ce-4d57-b91d-12c4e25c3cab
+Content-Transfer-Encoding: binary
+Content-Type: application/http
+Content-ID: 2
+
+PUT $1/lastname HTTP/1.1
+Content-Type: application/json
+
+{
+  "value":"BBBBB"
+}
+
+--changeset_dd81ccab-11ce-4d57-b91d-12c4e25c3cab--
+--batch_AAA123--
+```
 
 ### See also
 
