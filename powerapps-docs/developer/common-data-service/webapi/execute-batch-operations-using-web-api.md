@@ -211,9 +211,15 @@ Prefer: odata.include-annotations="*"
 ```
 For more information about preference headers, see [Header Prefer](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752234).
 
-## Using $Parameter to manipulate related entities
+## Using $parameter to manipulate related entities
+
+You can use `$parameter` such as `$1`, `$2`, etc to reference URIs used in an earlier changeset in a batch request. This section shows various examples on how `$parameter` can be used in the request body of a batch operation to reference URIs.
 
 ### Reference URIs in request body
+
+The below example shows how two URI references can be used in a single operation.
+
+**Request**
 
 ```http
 POST [Organization URI]/api/data/v9.1/$batch HTTP/1.1
@@ -264,6 +270,12 @@ Content-Type: application/json
 
 --changeset_dd81ccab-11ce-4d57-b91d-12c4e25c3cab--
 --batch_AAA123--
+```
+
+**Response**
+
+```http
+200 OK
 ```
 
 ### Reference URI in request URL
