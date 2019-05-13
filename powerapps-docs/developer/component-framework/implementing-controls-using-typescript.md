@@ -9,7 +9,7 @@ ms.assetid: 18e88d702-3349-4022-a7d8-a9adf52cd34f
 ms.author: "nabuthuk"
 ---
 
-# Create, debug, and deploy custom components
+# Sample component end-to-end tutorial
 
 [!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
@@ -273,7 +273,7 @@ Once you are done implementing your custom component logic, run the following co
 npm start
 ```
 
-## Packaging a custom component
+## Packaging your custom components
 
 Follow the steps below to create and import a [solution](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/customize/solutions-overview) file:
 

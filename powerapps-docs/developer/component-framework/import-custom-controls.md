@@ -71,4 +71,5 @@ Follow the steps below to create and import a [solution](https://docs.microsoft.
 
 ### See also
 
-[Add components to entities or fields](add-custom-controls-to-a-field-or-entity.md)
+[Add components to entities or fields](add-custom-controls-to-a-field-or-entity.md)<br />
+[Publish custom components on AppSource](https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/publish-app-appsource)
