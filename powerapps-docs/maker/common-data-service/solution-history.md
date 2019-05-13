@@ -27,7 +27,6 @@ search.app:
 ---
 
 # View the history of a solution
-
 You can view details about solution operations from the **Solutions** area of a model-driven app. An operation can be a solution import, export, or delete. The solution history displays information such as solution version, solution publisher, type of operation, operation start and end time, and operation status.
 
 > [!div class="mx-imgBorder"] 
@@ -57,7 +56,10 @@ Each solution history record is read-only and includes the following properties:
 - **Error Code**: Error code returned from the operation. An error code of 0 means the operation was successfully completed. 
 
 ### View solution operation error details 
-Double-click a solution event to display a page with additional error details including the exception message.  Use this information to diagnose the underlying cause for the event failure. Some errors, including solution dependency errors, may also include links to solution layers to make it easier for you to diagnose the issue. The **Activity Id** can be useful in cases where you need to contact Microsoft Customer Support. 
+When a solution operation includes a failure you can select it to display a page with additional error details. 
+![Solution history with operation error](media/solution-history-with-failure.png)
+
+The details page contains information including the **Exception Message** that can help diagnose the underlying cause for the operation failure. Some errors, including solution dependency errors, may also include links to **solution layers** to make it easier for you to diagnose the issue. The **Activity Id** can be useful in cases where you need to contact Microsoft Customer Support. 
 
 > [!div class="mx-imgBorder"] 
 > ![](media/solution-history-error-details.png "Solution operation error details")
