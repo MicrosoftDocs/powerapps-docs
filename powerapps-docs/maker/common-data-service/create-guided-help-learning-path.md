@@ -246,7 +246,7 @@ Use Learning Path to give your users a custom, in-app Help experience that is ta
 ### Sidebars  
  A Sidebar is displayed when a user selects the Help button, navigates to a page, or selects a link or button on a page for which you have created content. You can also create Home Sidebars that are displayed when the user opens the page or screen, or selects the Home icon on a Sidebar.  
 
- ![Home icon on a sidebar](../customize/media/sidebar-home.png "Home icon on a sidebar")  
+ ![Home icon on a sidebar](media/sidebar-home.png "Home icon on a sidebar")  
 
  You can also define Error Sidebars that appear when there is a problem displaying the intended sidebar. You can include links, videos, and other information in sidebars to help your users become familiar with and learn more about the page or form displayed, or actions they can take on the page or form.  
 
