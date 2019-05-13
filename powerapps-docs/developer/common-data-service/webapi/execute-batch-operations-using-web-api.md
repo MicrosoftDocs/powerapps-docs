@@ -480,6 +480,8 @@ OData-Version: 4.0
 
 ### Reference URIs in URL and navigation properties
 
+The example given below shows how to use the Organization URI of a Contact record and link it to an Account record using the `primarycontactid` single-valued navigation property. The URIs of both the records are referenced as `$1` and `$2` in the `PATCH` request.
+
 **Request**
 
 ```http
@@ -615,7 +617,10 @@ OData-EntityId: [Organization URI]/api/data/v9.1/accounts(6cd81853-7b75-e911-a97
 >
 > **Response**
 > 
-> **HTTP 400** Bad Request. `Content-ID Reference: '$1' does not exist in the batch context`.
+> ```http
+> HTTP 400 Bad Request
+> Content-ID Reference: '$1' does not exist in the batch context.
+> ```
 
 ### See also
 
