@@ -44,7 +44,8 @@ Use Learning Path to give your users a custom, in-app Help experience that is ta
 
    To ensure that Learning Path is on: On the nav bar, go to **Settings** ![Settings icon](media/optionsbutton.png "Settings icon") > **Opt in for Learning Path**.  
 
-   More information: [On-off switch for Learning Path (guided help)](../admin/on-off-switch-for-learning-path-guided-help.md)  
+   More information: [On-off switch for Learning Path (guided help)](/dynamics365/customer-engagement/admin/on-off-switch-for-learning-path-guided-help
+)  
 
 - Have the System Customizer or System Administrator Role, or another role that has the Learning Path Authoring privilege.  
 
@@ -109,7 +110,7 @@ Use Learning Path to give your users a custom, in-app Help experience that is ta
 
  If your organization has multiple business units, security roles can have parent/child relationships. Only the security roles in the root business unit are synchronized.  
 
- More information about security roles: [Security roles and privileges](../admin/security-roles-privileges.md)  
+ More information about security roles: [Security roles and privileges](/dynamics365/customer-engagement/admin/security-roles-privileges)  
 
 <a name="Precedence"></a>   
 ### Learning Path role precedence  
