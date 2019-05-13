@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: bc960df3-5418-45b2-9a25-3424ba40b8b4
 ---
 
-# Microsoft PowerApps CLI
+# Get the tooling
 
 [!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 

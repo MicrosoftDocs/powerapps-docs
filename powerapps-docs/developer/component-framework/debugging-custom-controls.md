@@ -8,7 +8,7 @@ ms.topic: "index-page"
 ms.assetid: 18e88d702-3349-4022-a7d8-a9adf52cd34f
 ms.author: "nabuthuk"
 ---
-# Debugging csutom components
+# Debugging custom components
 
 Once you are done implementing your custom control logic, run the following command to start the debugging process
 
@@ -60,4 +60,4 @@ You can also interact with the component locally in real time and observe elemen
 
 ### See also
 
-[Import custom components](import-custom-controls.md)
+[Packaging custom components](import-custom-controls.md)

@@ -10,7 +10,7 @@ ms.suite: ""
 ms.topic: "article"
 ---
 
-# Deploying componentss into model-driven apps
+# Packaging a custom component
 
 This topic demonstrates how to import custom components into model-driven apps. After developing your custom components using the PowerApps CLI, the next step is to import those components, so that you can see the components in runtime.
 
@@ -67,7 +67,7 @@ Follow the steps below to create and import a [solution](https://docs.microsoft.
      ```
 
 5. The generated solution files are located in `\bin\debug\`.
-6. You should manually import the solution using the web portal.
+6. You should manually [import the solution](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/customize/import-update-export-solutions) using the web portal once the zip file is ready.
 
 ### See also
 

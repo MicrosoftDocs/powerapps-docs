@@ -14,7 +14,7 @@ ms.assetid: 7923e36d-3640-49f7-9f2f-c97358a632db
 ms.author: nabuthuk
 ---
 
-# PowerApps component framework
+# PowerApps component framework Overview
 
 [!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
