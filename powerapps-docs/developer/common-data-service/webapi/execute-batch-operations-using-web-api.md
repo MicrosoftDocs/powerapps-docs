@@ -308,6 +308,148 @@ Content-Type: application/json
 --batch_AAA123--
 ```
 
+### Reference URIs in URL and request body using @odata.id
+
+```http
+POST [Organization URI]/api/data/v9.1/$batch HTTP/1.1
+Content-Type:multipart/mixed;boundary=batch_AAA123
+Accept:application/json
+OData-MaxVersion:4.0
+OData-Version:4.0
+
+--batch_AAA123
+Content-Type: multipart/mixed; boundary=changeset_dd81ccab-11ce-4d57-b91d-12c4e25c3cab
+
+--changeset_dd81ccab-11ce-4d57-b91d-12c4e25c3cab
+Content-Type:application/http
+Content-Transfer-Encoding:binary
+Content-ID:1
+
+POST [Organization URI]/api/data/v9.1/accounts HTTP/1.1
+Content-Type: application/json
+
+{"@odata.type":"Microsoft.Dynamics.CRM.account","name":"IcM Account"}
+
+--changeset_dd81ccab-11ce-4d57-b91d-12c4e25c3cab
+Content-Type:application/http
+Content-Transfer-Encoding:binary
+Content-ID:2
+
+POST [Organization URI]/api/data/v9.0/contacts HTTP/1.1
+Content-Type:application/json
+
+{"@odata.type":"Microsoft.Dynamics.CRM.contact","firstname":"Oncall Contact"}
+
+--changeset_dd81ccab-11ce-4d57-b91d-12c4e25c3cab
+Content-Type:application/http
+Content-Transfer-Encoding:binary
+Content-ID:3
+
+PUT $1/primarycontactid/$ref HTTP/1.1
+Content-Type:application/json
+
+{"@odata.id":"$2"}
+
+--changeset_dd81ccab-11ce-4d57-b91d-12c4e25c3cab--
+--batch_AAA123--
+```
+
+### Reference URIs in URL and navigation properties
+
+```http
+POST [Organization URI]/api/data/v9.1/$batch HTTP/1.1
+Content-Type:multipart/mixed;boundary=batch_AAA123
+Accept:application/json
+OData-MaxVersion:4.0
+OData-Version:4.0
+
+--batch_AAA123
+Content-Type: multipart/mixed; boundary=changeset_dd81ccab-11ce-4d57-b91d-12c4e25c3cab
+
+--changeset_dd81ccab-11ce-4d57-b91d-12c4e25c3cab
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+Content-ID: 1
+
+POST [Organization URI]/api/data/v9.1/accounts HTTP/1.1
+Content-Type: application/json
+
+{"@odata.type":"Microsoft.Dynamics.CRM.account","name":"IcM Account"}
+
+--changeset_dd81ccab-11ce-4d57-b91d-12c4e25c3cab
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+Content-ID: 2
+
+POST [Organization URI]/api/data/v9.0/contacts HTTP/1.1
+Content-Type: application/json
+
+{
+  "@odata.type":"Microsoft.Dynamics.CRM.contact",
+  "firstname":"Oncall Contact"
+}
+
+--changeset_dd81ccab-11ce-4d57-b91d-12c4e25c3cab
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+Content-ID: 3
+
+PATCH $1 HTTP/1.1
+Content-Type: application/json
+
+{
+  "primarycontactid@odata.bind":"$2"
+}
+
+--changeset_dd81ccab-11ce-4d57-b91d-12c4e25c3cab--
+--batch_AAA123--
+```
+
+> [!NOTE]
+> Referencing a Content-ID before it has been declared in the request body will return the error **HTTP 400** Bad request.
+>
+> The example given below illustrates the request body that may cause to this error.
+> 
+> **Request body**
+> 
+> ```http
+> --batch_AAA123
+> Content-Type: multipart/mixed; boundary=changeset_BBB456
+> 
+> --changeset_BBB456
+> Content-Type: application/http
+> Content-Transfer-Encoding:binary
+> Content-ID: 2
+> 
+> POST http://onefarm4322.onefarm4322dom.extest.microsoft.com/CITTest/api/data/v9.0/phonecalls HTTP/1.1
+> Content-Type: application/json;type=entry
+> 
+> {
+>     "phonenumber":"911",
+>     "regardingobjectid_account_phonecall@odata.bind" : "$1"
+> }
+> 
+> --changeset_BBB456
+> Content-Type: application/http
+> Content-Transfer-Encoding:binary
+> Content-ID: 1
+> 
+> POST http://onefarm4322.onefarm4322dom.extest.microsoft.com/CITTest/api/data/v9.0/accounts HTTP/1.1
+> Content-Type: application/json;type=entry
+> 
+> {
+>     "name":"QQQQ",
+>     "revenue": 1.50
+> }
+> 
+> --changeset_BBB456--
+> --batch_AAA123--
+> ```
+>
+> **Response**
+> 
+> **HTTP 400** Bad Request. `Content-ID Reference: '$1' does not exist in the batch context`.
+
 ### See also
 
 [Perform operations using the Web API](perform-operations-web-api.md)<br />
