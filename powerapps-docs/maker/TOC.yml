@@ -951,7 +951,7 @@
       href: ./model-driven-apps/change-custom-entity-icons.md
     - name: Distribute an app using solutions
       href: ./model-driven-apps/create-guided-help-learning-path.md
-    - name: Create your own guided help
+    - name: Create guided help
       href: ./model-driven-apps/create-guided-help-learning-path.md      
   - name: Accessibility in PowerApps app designer
     href: ./model-driven-apps/Accessibility-app-designer-site-map-designer-my-apps-page.md
