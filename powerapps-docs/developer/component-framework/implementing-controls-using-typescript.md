@@ -59,7 +59,7 @@ A custom component is defined by the information in the `ControlManifest.Input.x
     <property name="sliderValue" display-name-key="sliderValue_Display_Key" description-key="sliderValue_Desc_Key" of-type-group="numbers" usage="bound" required="true" /> 
     ```
 
-3. The of-type-group attribute references a group of allowable numbers. Add the following type-group element as a sibling to the <property> element in the manifest. The type-group specifies the component value and can contain whole, currency, floating point, or decimal values.
+3. The of-type-group attribute references a group of allowable numbers. Add the following type-group element as a sibling to the `property` element in the manifest. The type-group specifies the component value and can contain whole, currency, floating point, or decimal values.
 
     ```XML
     <type-group name="numbers"> 
@@ -73,7 +73,7 @@ A custom component is defined by the information in the `ControlManifest.Input.x
 4. Save the changes to the `ControlManifest.Input.xml` file.
 5. Create a new folder inside the **LinearInput** folder and name it as **css**.
 6. Create a css file to [add styling to the component](#adding-style-to-the-custom-component)
-7. Add a reference to this css file in the **ControlManifest.xml** file under the <resources> node as shown below
+7. Add a reference to this css file in the **ControlManifest.xml** file under the `resources` node as shown below
    ```XML
     <css path="css/TS_LinearInputControl.css" order="1" />
    ```

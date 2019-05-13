@@ -73,7 +73,7 @@ To uninstall the CLI tool please run the MSI from [here](http://download.microso
 
 1. The name of the task in the project file is same as the name of the task class.
 2. The task class is public and implements the Microsoft.Build.Framework.ITask interface.
-3. The task is correctly declared with <UsingTask> in the project file or in the *.tasks files located in the <path> directory
+3. The task is correctly declared with <UsingTask> in the project file or in the *.tasks files located in the path directory
 
 **Resolution:**
 

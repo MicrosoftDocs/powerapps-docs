@@ -42,7 +42,7 @@ For example, on **Microsoft Edge**,
      > ![debug-component](media/debug-control.png "Debug component")
 
 > [!NOTE]
-> It is always a good practice to set breakpoints on the component's life cycle methods like `init` and `updateView`
+> It is always a good practice to set breakpoints on the component's life cycle methods like [init](reference/control/init.md) and [updateView](reference/control/updateview.md)
 
 You can also interact with the component locally in real time and observe elements in the DOM by setting a breakpoint in the sources tab as follows:
 
