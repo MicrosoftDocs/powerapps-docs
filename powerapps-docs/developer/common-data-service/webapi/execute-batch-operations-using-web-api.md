@@ -581,7 +581,7 @@ OData-EntityId: [Organization URI]/api/data/v9.1/accounts(6cd81853-7b75-e911-a97
 > [!NOTE]
 > Referencing a Content-ID before it has been declared in the request body will return the error **HTTP 400** Bad request.
 >
-> The example given below illustrates the request body that may cause to this error.
+> The example given below shows a request body that can cause this error.
 > 
 > **Request body**
 > 
