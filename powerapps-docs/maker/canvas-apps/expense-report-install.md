@@ -1,14 +1,14 @@
 ---
 title: Install and configure the Expense Report sample for canvas apps | Microsoft Docs
 description: Step-by-step instructions for, in PowerApps, installing and configuring the Expense Report sample for canvas apps.
-author: mr-dang-msft
+author: yijw2017
 manager: kvivek
 ms.service: powerapps
 ms.topic: sample
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 04/08/2018
-ms.author: brdang
+ms.author: yijw
 search.audienceType: 
   - maker
 search.app: 
