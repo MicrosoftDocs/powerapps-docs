@@ -64,7 +64,7 @@ Some [separators and operators](functions/operators.md) will shift based on the 
 | **.** (dot or period) |**.** (dot or period) |**,** (comma) |**;** (semi-colon) |
 | **,** (comma) |**,** (comma) |**;** (semi-colon) |**;;** (double semi-colon) |
 
-The change in the PowerApps list separator is consistent with that happens to the Excel list separator.  It impacts:
+The change in the PowerApps list separator is consistent with what happens to the Excel list separator.  It impacts:
 
 * Arguments in function calls.
 * Fields in a [record](working-with-tables.md#elements-of-a-table).

@@ -1,6 +1,6 @@
 ---
 title: "Use change tracking to synchronize data with external systems (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "The change tracking feature in Dynamics 365 Customer Engagement provides a way to keep the data synchronized in a performant way by detecting what data has changed since the data was initially extracted or last synchronized" # 115-145 characters including spaces. This abstract displays in the search result.
+description: "The change tracking feature in Dynamics 365 Customer Engagement provides a way to keep the data synchronized in an efficient manner by detecting what data has changed since the data was initially extracted or last synchronized" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
@@ -17,7 +17,7 @@ search.app:
 ---
 # Use change tracking to synchronize data with external systems
 
-The change tracking feature in Common Data Service provides a way to keep the data synchronized in a performant way by detecting what data has changed since the data was initially extracted or last synchronized. Previously, without this new feature, it was difficult to build a reliable and efficient mechanism to determine what records had changed in Common Data Service. This topic discusses how to retrieve changes for an entity.  
+The change tracking feature in Common Data Service provides a way to keep the data synchronized in an efficient manner by detecting what data has changed since the data was initially extracted or last synchronized. Previously, without this new feature, it was difficult to build a reliable and efficient mechanism to determine what records had changed in Common Data Service. This topic discusses how to retrieve changes for an entity.  
   
 <a name="BKMK_enable"></a>   
 ## Enable change tracking for an entity  

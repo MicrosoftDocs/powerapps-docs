@@ -14,7 +14,7 @@ ms.assetid: 19ad54b8-e044-4f07-a18e-b00d26b75832
 
 # FilterExpression
 
-<!-- IExposedFilterExpression -->
+[!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
 
 [!INCLUDE [filterexpression-description](includes/filterexpression-description.md)]
 

@@ -2,7 +2,7 @@
 title: "Troubleshoot plug-ins (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Contains information on errors that can occur due to plug-ins and how to fix them." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 04/21/2019
+ms.date: 04/26/2019
 ms.reviewer: ""
 ms.service: "powerapps"
 ms.topic: "article"
@@ -25,7 +25,9 @@ Error Code: `-2147220911`<br />
 Error Message: `There is no active transaction. This error is usually caused by custom plug-ins that ignore errors from service calls and continue processing.`
 
 This can be a difficult error to address because the cause can be in someone else's code. To understand the message, you need to appreciate that any time an error related to a data operation occurs within a synchronous plug-in the transaction for the entire operation will be ended.
-[Scalable Customization Design in Common Data Service](scalable-customization-design/overview.md)
+
+More information: [Scalable Customization Design in Common Data Service](scalable-customization-design/overview.md)
+
 The most common cause is simply that a developer might believe they can attempt to perform an operation that *might* succeed so they wrap that operation in a try/catch block and attempt to swallow the error if it fails.
 
 While this may work for a client application, within the execution of a plug-in any data operation failure will result in rolling back the entire transaction. You can't swallow the error, so you must make sure to always return an <xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException>.
@@ -68,3 +70,20 @@ You can register the plug-in to run in the context of a user known to have the c
 <!-- But if you prefer that the logic in your plug-in adapt to the privileges that the calling user has, you really need to verify the user's privileges in your code.
 
 TODO: Add content that shows how to do this -->
+
+## Error: Message size exceeded when sending context to Sandbox
+
+<!-- This is the error code for an unexpected error we should be providing a specific error code -->
+Error Code: `-2147220970`<br />
+Error Message: `Message size exceeded when sending context to Sandbox. Message size: ### Mb`
+
+This error occurs when a message payload is greater than 116.85 MB **AND** a plug-in is registered for the message. The error message will include the size of the payload that caused this error.
+ 
+The limit will help ensure that users running applications cannot interfere with each other based on resource constraints. The limit will help provide a level of protection from unusually large message payloads that threaten the availability and performance characteristics of the Common Data Service platform.
+ 
+116.85 MB is large enough that it should be rare to encounter this case. The most likely situation where this case might occur is when you retrieve a record with multiple related records which include large binary files.
+ 
+If you encounter this error you can:
+
+1.	Remove the plug-in for the message. If there are no plug-ins registered for the message, the operation will complete without an error.
+2.	If the error is occurring in a custom client, you can modify your code so that it doesn't attempt to perform the work in a single operation. Instead, write code to retrieve the data in smaller parts.

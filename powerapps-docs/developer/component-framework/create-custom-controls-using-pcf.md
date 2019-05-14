@@ -14,11 +14,19 @@ ms.assetid: d2cbf58a-9112-45c2-b823-2c07a310714c
 
 # Create, debug and deploy a component using  Microsoft PowerApps CLI
 
+[!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+
 Use PowerApps Command Line Interface (CLI) to create, debug and deploy custom PowerApps component framework components. PowerApps CLI will enable developers to quickly create PowerApps component framework components and will in the future be expanded to include support for additional development and Application Lifecycle Management (ALM) experiences. 
 
-## What is Microsoft PowerApps CLI 
+## What is Microsoft PowerApps CLI? 
 
 Microsoft PowerApps CLI is a simple, single-stop developer command line interface enabling you to create custom component. PowerApps CLI is also the first step towards a comprehensive ALM story where enterprise developers and ISVs can create, build, debug and publish their PowerApps and Dynamics 365 for Customer Engagement apps extensions and customizations quickly and efficiently.  
+
+> [!IMPORTANT]
+> - Microsoft PowerApps CLI tools are a pre-release version and may be different from the commercially released version.
+> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)] 
+> - If you give feedback about the software to Microsoft, you give to Microsoft, without charge, the right to use, share and commercialize your feedback in any way and for any purpose. 
+> - Microsoft doesn't provide support for this preview feature. Microsoft Technical Support won’t be able to help you with issues or questions.
 
 ## Prerequisites to use PowerApps CLI
 
@@ -30,11 +38,7 @@ To use PowerApps CLI you will need the following:
    - Option 2: Install .NET Core 2.2 SDK and install Visual Studio Code
 - Install Microsoft PowerApps CLI from [here](http://download.microsoft.com/download/D/B/E/DBE69906-B4DA-471C-8960-092AB955C681/powerapps-cli-0.1.51.msi)
 
-> [!IMPORTANT]
-> - Microsoft PowerApps CLI tools are a pre-release version and may be different from the commercially released version.
-> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)] 
-> - If you give feedback about the software to Microsoft, you give to Microsoft, without charge, the right to use, share and commercialize your feedback in any way and for any purpose. 
-> - Microsoft doesn't provide support for this preview feature. Microsoft Technical Support won’t be able to help you with issues or questions.
+
 
 > [!NOTE]
 > To deploy your custom component, you will need Common Data Service environment with System administrator or System customizer privileges.
@@ -46,8 +50,8 @@ To use PowerApps CLI you will need the following:
 
 To get started, open a new Developer Command Prompt for VS 2017 after installing PowerApps CLI.
 
-1. In the Developer Command Prompt for VS 2017, create a new folder on your local hard drive for example, `C:\Users\<your name>\Documents\My_PCF_Control`.
-2. Go to the newly created folder using the command `cd <specify your new folder path>`.
+1. In the Developer Command Prompt for VS 2017, create a new folder on your local hard drive for example, *C:\Users\<your name>\Documents\My_PCF_Control*
+2. Go to the newly created folder using the command `cd <specify your new folder path>`
 3. Run the following command to create a new component project by passing some basic parameters
  `pac pcf init --namespace <specify your namespace here> --name <put component name here> --template <component type>`
  
@@ -55,7 +59,7 @@ To get started, open a new Developer Command Prompt for VS 2017 after installing
    > Today we offer two types of components **field** and **dataset**.
 
 4. To retrieve all the required project dependencies, run the command `npm install`.
-5. Open your project folder (`C:\Users\<your name>\Documents\My_PCF_Control\<component name>`) in any developer environment of your choice and get started with your custom component development. If you would like a to follow a step-by-step tutorial please scroll down see how a sample linear component is implemented.
+5. Open your project folder (`C:\Users\<your name>\Documents\My_PCF_Control\<component name>`) in any developer environment of your choice and get started with your custom component development.
 
 ## Building your components
 
@@ -108,13 +112,13 @@ You can also interact with the component locally in real time and observe elemen
  >    1. Install [Fiddler](https://www.telerik.com/download/fiddler)
  >    2. Follow the steps to configure [AutoResponder](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/streamline-javascript-development-fiddler-autoresponder)
 
-## Deploying your PowerApps component framework components
+## Deploying your components
 
-Once the debugging and development is finished, you just have one step remaining - to deploy your new component.  
+Once the debugging and development is finished, you just have one step remaining to deploy your new component.  
 
 Follow the steps below to create and import a [solution](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/customize/solutions-overview) file:
 
-1. Create a new directory and go to it 'cd <new directory name>'
+1. Create a new directory and go to it `cd <new directory name>`
 2. Create a new solution project in the directory of your choice by using the command 
  `pac solution init --publisherName <enter your publisher name> --customizationPrefix <enter your publisher name>` after `cd <your new folder>`.
 
@@ -156,7 +160,7 @@ Follow the steps below to create and import a [solution](https://docs.microsoft.
 5. The generated solution zip file is located in `\bin\debug\`.
 6. You should manually [import the solution](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/customize/import-update-export-solutions) using the web portal once the zip file is ready.
 
-## Adding custom controls to entity or a field
+## Adding custom components to an entity or a field
 
 To add a custom component like data-set component or simple table component to a grid or view, follow the steps mentioned in the topic [Add controls to fields and entities](add-custom-controls-to-a-field-or-entity.md). 
 
@@ -178,7 +182,7 @@ To uninstall the CLI tool please run the MSI from [here](http://download.microso
 1. Select the row containing PowerAppsCLI path and click the Delete button on the right-hand side
 1. Click OK twice
 
-## Known Configuration Issues and Workarounds
+## Known Configuration issues and Workarounds
 
 **Msbuild error MSB4036:**
 

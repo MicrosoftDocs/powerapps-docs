@@ -20,11 +20,6 @@ The selected image renders within the component. Meanwhile, the `Remove` button 
 > [!div class="mx-imgBorder"]
 > ![Image Upload component](../media/image-upload-control.png "Image Upload component")
 
-> [!IMPORTANT]
-> - PowerApps component framework is a preview feature.
-> - [!INCLUDE[cc_preview_features_definition]../(../../includes/cc-preview-features-definition.md)] 
-> - [!INCLUDE[cc_preview_features_no_MS_support](../../../includes/cc-preview-features-no-ms-support.md)]
-
 ## Manifest
 
 ```xml
@@ -388,5 +383,5 @@ The `device.pickFile` method opens a dialog box to select files from your comput
 ### Related topics
 
 [Download sample components](https://go.microsoft.com/fwlink/?linkid=2088525)<br/>
-[PowerApps component framework API Reference](../index.md)<br/>
+[PowerApps component framework API Reference](../reference/index.md)<br/>
 [PowerApps component framework Manifest Schema Reference](../manifest-schema-reference/index.md)

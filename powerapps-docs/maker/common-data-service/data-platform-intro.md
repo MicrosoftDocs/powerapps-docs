@@ -2,11 +2,12 @@
 title: What is Common Data Service? | Microsoft Docs
 description: Introduction to Common Data Service, entities, and server-side logic.
 author: clwesene
-manager: kfile
+manager: kvivek
 ms.service: powerapps
 ms.topic: overview
 ms.component: cds
-ms.date: 05/01/2018
+ms.date: 05/08/2019
+ms.reviewer: matp
 ms.author: matp
 search.audienceType: 
   - maker
@@ -37,7 +38,7 @@ Standard and custom entities within Common Data Service provide a secure and clo
 Dynamics 365 applications, like Dynamics 365 for Sales, Service or Talent also use the Common Data Service to store and secure data used by the applications. This enables you to build apps using PowerApps and the Common Data Service directly against your core business data already used within Dynamics 365 without the need for integration.
 
 * **Build Apps against your Dynamics 365 Data** &ndash; Build apps quickly against your business data within PowerApps or using the Pro Developer SDK.
-* **Manage reusable Business logic and rules** &ndash; Business Rules and logic already defined in on your Dynamics 365 entities are applied to your PowerApps to ensure data consistency regardless of how your users are accessing the data or through which app.
+* **Manage reusable Business logic and rules** &ndash; Business Rules and logic already defined in your Dynamics 365 entities are applied to your PowerApps to ensure data consistency regardless of how your users are accessing the data or through which app.
 * **Reusable skills across Dynamics 365 and PowerApps** &ndash; Users with skills previously in PowerApps or Dynamics 365 can now leverage those skills across the new Common Data Service Platform. Creating entities, forms, charts, etc are now common across your applications.
 
     > [!NOTE]
