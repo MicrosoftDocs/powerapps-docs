@@ -383,5 +383,5 @@ The `device.pickFile` method opens a dialog box to select files from your comput
 ### Related topics
 
 [Download sample components](https://go.microsoft.com/fwlink/?linkid=2088525)<br/>
-[PowerApps component framework API Reference](../index.md)<br/>
+[PowerApps component framework API Reference](../reference/index.md)<br/>
 [PowerApps component framework Manifest Schema Reference](../manifest-schema-reference/index.md)

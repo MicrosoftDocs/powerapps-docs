@@ -20,9 +20,7 @@ In PowerApps, an *entity* defines information that you want to track in the form
 In this topic, you'll learn how to create a custom entity called Product Review that you can use to create an app that displays ratings and comments for products that your company sells.
 
 ## Prerequisites
-To follow this procedure, the following items are required:
-* Either a PowerApps Plan 2 or Microsoft Flow Plan 2 license. Alternatively, you can sign up for a [free PowerApps Plan 2 trial](https://web.powerapps.com/signup?redirect=marketing&email=).
-* Either a System Administrator or System Customizer security role within Common Data Service.
+To follow this procedure, you must have either a System Administrator or System Customizer security role within Common Data Service.
 
 ## Sign in to PowerApps
 Sign in to PowerApps at [https://web.powerapps.com](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).

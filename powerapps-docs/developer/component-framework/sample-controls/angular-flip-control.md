@@ -293,5 +293,5 @@ border-radius : 4px
 ### Related topics
 
 [PowerApps component framework Manifest Schema Reference](../manifest-schema-reference/index.md)<br />
-[PowerApps component framework API Reference](../index.md)<br />
+[PowerApps component framework API Reference](../reference/index.md)<br />
 [PowerApps component framework Overview](../overview.md)
