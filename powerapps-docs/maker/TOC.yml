@@ -950,7 +950,9 @@
     - name: Change custom entity icons
       href: ./model-driven-apps/change-custom-entity-icons.md
     - name: Distribute an app using solutions
-      href: ./model-driven-apps/distribute-model-driven-app.md
+      href: ./model-driven-apps/create-guided-help-learning-path.md
+    - name: Create guided help
+      href: ./model-driven-apps/create-guided-help-learning-path.md      
   - name: Accessibility in PowerApps app designer
     href: ./model-driven-apps/Accessibility-app-designer-site-map-designer-my-apps-page.md
   - name: For developers
@@ -1104,6 +1106,8 @@
       href: ./common-data-service/create-solution.md
     - name: View solution layers
       href: ./common-data-service/solution-layers.md
+    - name: View solution history
+      href: ./common-data-service/solution-history.md      
     - name: Use solution checker
       href: ./common-data-service/use-powerapps-checker.md
     - name: Use segmented solutions
