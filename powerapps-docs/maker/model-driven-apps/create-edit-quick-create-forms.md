@@ -115,8 +115,6 @@ Introduced in the 9.1.0.2007 update, the **Allow Quick Create** property can be 
 > [!div class="mx-imgBorder"] 
 > ![](media/allow-quick-create.png "Allow Quick Create property on appointment entity")
 
-> [!NOTE]
-> This feature is only available with [!INCLUDE [pn-crm-online](../../includes/pn-crm-online.md)] apps (online).
 
 ### Unified interface client form display behavior
 The following table indicates what form is displayed by default when the **Allow Quick Create** property is *enabled* in the unified interface client.
