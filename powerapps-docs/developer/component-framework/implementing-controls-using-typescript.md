@@ -285,7 +285,7 @@ npm start
 
 Follow the steps below to create and import a [solution](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/customize/solutions-overview) file:
 
-1. Create a new directory inside the **LinearComponent** folder. 
+1. Create a new directory inside the **LinearComponent** folder and navigate to the created folder.. 
 2. Create a new solution project in the **LinearComponent** folder using the command 
  
     ```CLI

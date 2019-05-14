@@ -60,4 +60,4 @@ You can also interact with the component locally in real time and observe elemen
 
 ### See also
 
-[Packaging custom components](import-custom-controls.md)
+[Packaging your custom components](import-custom-controls.md)
