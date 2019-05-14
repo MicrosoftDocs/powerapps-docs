@@ -64,7 +64,7 @@ Before you share an app, you must save it to the cloud (not locally) and then pu
 
     For example, your app might connect to an entity in a Common Data Service database. When you share such an app, the sharing panel prompts you to manage security for that entity.
 
-    ![Assign_Security_Role](./media/share-app/cds-assign-security-role.png)
+    ![Assign_Security_Role](media/share-app/cds-assign-security-role.png)
 
     For more information about managing security for an entity, see [Manage entity permissions](share-app.md#manage-entity-permissions) later in this topic.
 
@@ -110,7 +110,7 @@ To perform the next procedure, you must have **System administrator** permission
 
 1. Select the Common Data Service role(s) you want assigned to the user or Azure AD security group the PowerApp is being shared with. 
 
-    ![Security_Role_List](./media/share-app/cds-assign-security-role-list.png)
+    ![Security_Role_List](media/share-app/cds-assign-security-role-list.png)
 
 ### Common Data Service (previous version)
 
