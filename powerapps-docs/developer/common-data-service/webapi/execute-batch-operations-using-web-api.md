@@ -2,7 +2,7 @@
 title: "Execute batch operations using the Web API (Common Data Service)| Microsoft Docs"
 description: "Batch operation lets you group multiple operations in a single HTTP request. Read how to execute batch operations using the Web API"
 ms.custom: ""
-ms.date: 05/13/2019
+ms.date: 05/15/2019
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -316,6 +316,8 @@ OData-EntityId: [Organization URI]/api/data/v9.1/accounts(4f5195a4-7a75-e911-a97
 
 ### Reference URI in request URL
 
+The example given below shows how you can reference a URI using `$1` in the URL of a subsequent request.
+
 **Request**
 
 ```http
@@ -391,6 +393,8 @@ OData-Version: 4.0
 ```
 
 ### Reference URIs in URL and request body using @odata.id
+
+The example given below shows how to reference a Contact entity record to an Account entity record. The URI of Account entity record is referenced as `$1` and URI of Contact entity record is referenced as `$2`.
 
 **Request**
 
@@ -480,7 +484,7 @@ OData-Version: 4.0
 
 ### Reference URIs in URL and navigation properties
 
-The example given below shows how to use the Organization URI of a Contact record and link it to an Account record using the `primarycontactid` single-valued navigation property. The URIs of both the records are referenced as `$1` and `$2` in the `PATCH` request.
+The example given below shows how to use the Organization URI of a Contact record and link it to an Account record using the `primarycontactid` single-valued navigation property. The URI of the Account entity record is referenced as `$1` and the URI of Contact entity record is referenced as `$2` in the `PATCH` request.
 
 **Request**
 
