@@ -14,6 +14,8 @@ ms.assetid: 612ad678-bc0d-4d33-b673-7d84e09c34d1
 
 # Publish custom components on AppSource
 
+[!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+
 Publish your custom components on [Microsoft AppSource](https://appsource.microsoft.com) so that everyone can find it, try it and buy it. The custom components you build and publish can be used in model-driven apps on Unified Interface. More information: [Publish components on AppSource](https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/publish-app-appsource
 )
 

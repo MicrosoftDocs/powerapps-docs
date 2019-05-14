@@ -1,5 +1,5 @@
 ---
-title: Import Components  | Microsoft Docs
+title: Packaging custom components  | Microsoft Docs
 description: Process to import custom components
 keywords:
 ms.author: nabuthuk
@@ -11,6 +11,8 @@ ms.topic: "article"
 ---
 
 # Packaging a custom component
+
+[!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 This topic demonstrates how to import custom components into model-driven apps. After developing your custom components using the PowerApps CLI, the next step is to import those components, so that you can see the components in runtime.
 

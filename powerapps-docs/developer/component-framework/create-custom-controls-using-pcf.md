@@ -12,7 +12,9 @@ ms.topic: "article"
 ms.assetid: d2cbf58a-9112-45c2-b823-2c07a310714c
 ---
 
-## Creating a new component project
+## Creating a new custom component 
+
+[!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 Use Microsoft PowerApps CLI tool to create your custom components. To create a new project for your custom component, follow the steps below:
 

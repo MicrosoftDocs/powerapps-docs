@@ -1,6 +1,6 @@
 ---
-title: "Debugging Custom Components | MicrosoftDocs"
-description: "How to debug a custom control using Fiddler and Native debugging"
+title: "Debug custom components | MicrosoftDocs"
+description: "How to debug a custom components using Fiddler and native debugging"
 manager: kvivek
 ms.date: 04/23/2019
 ms.service: "powerapps"
@@ -8,7 +8,9 @@ ms.topic: "index-page"
 ms.assetid: 18e88d702-3349-4022-a7d8-a9adf52cd34f
 ms.author: "nabuthuk"
 ---
-# Debugging custom components
+# Debug custom components
+
+[!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 Once you are done implementing your custom control logic, run the following command to start the debugging process
 
