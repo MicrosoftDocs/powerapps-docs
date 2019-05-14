@@ -211,7 +211,7 @@ Prefer: odata.include-annotations="*"
 ```
 For more information about preference headers, see [Header Prefer](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752234).
 
-## Using $parameter to manipulate related entities
+## Reference URIs in an operation
 
 You can use `$parameter` such as `$1`, `$2`, etc to reference URIs used in an earlier changeset in a batch request. This section shows various examples on how `$parameter` can be used in the request body of a batch operation to reference URIs.
 
@@ -394,7 +394,7 @@ OData-Version: 4.0
 
 ### Reference URIs in URL and request body using @odata.id
 
-The example given below shows how to reference a Contact entity record to an Account entity record. The URI of Account entity record is referenced as `$1` and URI of Contact entity record is referenced as `$2`.
+The example given below shows how to link a Contact entity record to an Account entity record. The URI of Account entity record is referenced as `$1` and URI of Contact entity record is referenced as `$2`.
 
 **Request**
 
