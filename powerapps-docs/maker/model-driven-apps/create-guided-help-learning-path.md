@@ -27,7 +27,7 @@ Use Learning Path to give your users a custom, in-app Help experience that is ta
 ## How is Learning Path different from customizable Help?  
  Customizable Help allows you to override the default [!INCLUDE[pn_crm_shortest](../../includes/pn-crm-shortest.md)] apps Help and point users in your organization to a different URL for Help. Or you can override the Help for a highly customized entity so that you can better describe your workflow. 
 
- Learning Path lets you add customizable Help that users see in [!INCLUDE[pn_crm_shortest](../../includes/pn-crm-shortest.md)] when they open a page, perform an action, or select the Help button (?).   
+ Learning Path lets you add customizable Help that users see in the app when they open a page, perform an action, or select the Help button (?).   
 
  For more information about customizable Help, see [Customize the Help experience](https://technet.microsoft.com/library/dn832079.aspx).  
 
