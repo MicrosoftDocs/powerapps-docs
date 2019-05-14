@@ -10,7 +10,7 @@ author: "nkrb"
 ms.author: "nabuthuk"
 manager: "Jdaly"
 ---
-# PowerApps component framework API reference
+# PowerApps component Framework API Reference
 
 [!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
 
