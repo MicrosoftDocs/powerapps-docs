@@ -2,7 +2,7 @@
 title: "Create or edit model-driven app quick create forms in PowerApps | MicrosoftDocs"
 description: "Learn how to create or edit a quick create form"
 ms.custom: ""
-ms.date: 01/25/2019
+ms.date: 05/14/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
