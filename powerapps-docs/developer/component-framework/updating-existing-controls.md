@@ -81,10 +81,14 @@ To use the new typing file:
     import { IInputs, IOutputs } from `./generated/ManifestTypes`.
 2. Rename all references of **InputsOutputs.IInputBag** to **IInputs**.
 3. Rename all references of **InputsOutputs.IOutputBag** to IOutputs**.
-4. Build the project to generate a new **ManifestTypes.d.ts** file using the command `npm run build`.
+4. Build the project to generate a new **ManifestTypes.d.ts** file using the command 
+   ```CLI
+    npm run build
+   ```
 
 ### See also
 
+[Create, debug and deploy custom components](implementing-controls-using-typescript.md)<br/>
 [Limitations of PowerApps component framework](limitations.md)<br/>
 [PowerApps component framework API Reference](reference/index.md)<br/>
 [PowerApps component framework Overview](overview.md)
