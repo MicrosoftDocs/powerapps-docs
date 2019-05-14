@@ -2,7 +2,7 @@
 title: "Quick Start: Organization service sample (C#) (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This quick start will show you how to connect to the organization service of the Common Data Service" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 04/25/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.topic: "article"
@@ -66,7 +66,7 @@ You will use the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.X
     using Microsoft.Xrm.Tooling.Connector;
     ```
 
-1. Replace the `Main` method with the following code:
+1. Replace the `Main` method with the following code. The supported values for *AuthType* are listed in [Connection string paramters](/dynamics365/customer-engagement/developer/xrm-tooling/use-connection-strings-xrm-tooling-connect#connection-string-parameters).
 
     ```csharp
     static void Main(string[] args)
@@ -75,7 +75,7 @@ You will use the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.X
         string url = "<your environment url>";
         // e.g. you@yourorg.onmicrosoft.com
         string userName = "<your user name>";
-        // e.g. y0urp455w0rd
+        // e.g. y0urp455w0rd 
         string password = "<your password>";
 
         string conn = $@"
@@ -100,7 +100,7 @@ You will use the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.X
     }
     ```
 
-1. Edit the following values to add information for your environment:
+1. Edit the following values to add information for your environment. You can find your environment URL in the Web application under **Settings > Customization > Developer Resources**.
 
     ```csharp
     // e.g. https://yourorg.crm.dynamics.com

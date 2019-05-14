@@ -40,6 +40,14 @@ To create a new project, follow the steps below:
 
 When you open the project folder, you see the following items:
 
+1. Open a Developer Command Prompt for VS 2017 window.
+2. Create a new folder for the project using the command `mkdir LinearControl`.
+3. `cd` into the new directory and run the command `cd LinearControl` 
+4. Create the component project using the command `pac pcf init --namespace SampleNamespace --name TSLinearInputControl --template field` 
+5. Install the project build tools using the command `npm install` 
+6. Open your project in any developer environment of your choice and start implementing your custom component.
+
+
 - A **TSLinearInputControl** folder, which has the **ControlManifest.xml** and the **index.ts** files.
 - Inside the **TSLinearInputControl** folder you will see a **generated** folder, which has the **ManifestTypes.d.ts** file. The `ManifestTypes.d.ts` file defines the properties that your component will have access to Typescript source code.
 
