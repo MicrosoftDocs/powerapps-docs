@@ -29,7 +29,7 @@ This is not supported.
 
 Currently font resource (.tff) is not supported in PowerApps component framework.
 
-## See also
+## Related topics
 
 [PowerApps component framework API Reference](reference/index.md)<br/>
 [PowerApps component framework Overview](overview.md)
