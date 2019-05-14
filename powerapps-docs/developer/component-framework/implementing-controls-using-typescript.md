@@ -285,7 +285,7 @@ npm start
 
 Follow the steps below to create and import a [solution](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/customize/solutions-overview) file:
 
-1. Create a new directory inside the **LinearComponent** folder and navigate to the created folder.. 
+1. Create a new directory inside the **LinearComponent** folder and navigate to the created folder. 
 2. Create a new solution project in the **LinearComponent** folder using the command 
  
     ```CLI
@@ -329,6 +329,6 @@ To add a custom component like data-set component or simple table component to a
 ### See also
 
 [Download sample components](https://go.microsoft.com/fwlink/?linkid=2088525)<br/>
-[Update existing PowerApps component framework controls](updating-existing-controls.md)<br/>
+[Update existing PowerApps component framework components](updating-existing-controls.md)<br/>
 [PowerApps component framework API Reference](reference/index.md)<br/>
 [PowerApps component framework Overview](overview.md)

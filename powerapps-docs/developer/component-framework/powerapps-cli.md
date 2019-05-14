@@ -84,7 +84,7 @@ To uninstall the CLI tool please run the MSI from [here](http://download.microso
 
 ### See also
 
-[Implementing components using PowerApps CLI](implementing-controls-using-typescript.md)<br/>
+[Sample component end-to-end tutorial](implementing-controls-using-typescript.md)<br/>
 [Updating existing components into new tools format](updating-existing-controls.md)<br/>
 [PowerApps component framework API Reference](reference/index.md)<br/>
 [PowerApps component framework Overview](overview.md)

@@ -20,6 +20,6 @@ Publish your custom components on [Microsoft AppSource](https://appsource.micros
 ### See also
 
 [Download sample components](https://go.microsoft.com/fwlink/?linkid=2088525)<br/>
-[Update existing PowerApps component framework controls](updating-existing-controls.md)<br/>
+[Update existing PowerApps component framework components](updating-existing-controls.md)<br/>
 [PowerApps component framework API Reference](reference/index.md)<br/>
 [PowerApps component framework Overview](overview.md)
