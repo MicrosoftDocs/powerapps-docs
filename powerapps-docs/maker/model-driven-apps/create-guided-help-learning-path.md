@@ -27,7 +27,7 @@ Use Learning Path to give your users a custom, in-app Help experience that is ta
 ## How is Learning Path different from customizable Help?  
  Customizable Help allows you to override the default [!INCLUDE[pn_crm_shortest](../../includes/pn-crm-shortest.md)] apps Help and point users in your organization to a different URL for Help. Or you can override the Help for a highly customized entity so that you can better describe your workflow. 
 
- Learning Path lets you add customizable Help that users see in [!INCLUDE[pn_crm_shortest](../../includes/pn-crm-shortest.md)] when they open a page, perform an action, or select the Help button (?).   
+ Learning Path lets you add customizable Help that users see in the app when they open a page, perform an action, or select the Help button (?).   
 
  For more information about customizable Help, see [Customize the Help experience](https://technet.microsoft.com/library/dn832079.aspx).  
 
@@ -56,9 +56,9 @@ Use Learning Path to give your users a custom, in-app Help experience that is ta
 ## Turn on Learning Path for your organization  
  Learning Path is an optional feature that can be turned on or off for your organization. You can display Learning Path content included with [!INCLUDE[pn_crm_shortest](../../includes/pn-crm-shortest.md)], create your own Learning Path content for your users, or both.  
 
-1. Sign in to [!INCLUDE[pn_crm_shortest](../../includes/pn-crm-shortest.md)] with an admin account.  
+1. Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) or [!INCLUDE[pn_crm_shortest](../../includes/pn-crm-shortest.md)] with an admin account.  
 
-2. Go to **Settings**, and then select **Administration** under **System**. More information: [Settings](/powerapps/maker/model-driven-apps/advanced-navigation)
+2. Go to **Settings**, and then select **Administration** under **System**. More information: [Settings](/powerapps/maker/model-driven-apps/advanced-navigation#settings)
 
 3. On the **Administration** page, select **System Settings**.  
 
