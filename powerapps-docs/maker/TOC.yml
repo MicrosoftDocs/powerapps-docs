@@ -661,15 +661,15 @@
         href: ./canvas-apps/add-app-solution.md
       - name: Create an app with relational data
         items:
-          - name: 1 - Install the data
+          - name: Install the data
             href: ./canvas-apps/northwind-install.md
-          - name: 2 - Overview of the canvas app
+          - name: Overview of the canvas app
             href: ./canvas-apps/northwind-orders-canvas-overview.md
-          - name: 3 - Create the order gallery
+          - name: 1 - Create the order gallery
             href: ./canvas-apps/northwind-orders-canvas-part1.md
-          - name: 4 - Create the summary form
+          - name: 2 - Create the summary form
             href: ./canvas-apps/northwind-orders-canvas-part2.md
-          - name: 5 - Create the detail gallery
+          - name: 3 - Create the detail gallery
             href: ./canvas-apps/northwind-orders-canvas-part3.md
       - name: Build a global app
         href: ./canvas-apps/global-apps.md
