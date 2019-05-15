@@ -47,7 +47,7 @@ Before you share an app, you must save it to the cloud (not locally) and then pu
 
     - To allow your entire organization to run the app (but not modify or share it), type **Everyone** in the sharing panel.
     - You can share an app with a list of aliases, friendly names, or a combination of those (for example, **Jane Doe &lt;jane.doe@contoso.com>**) if the items are separated by semi-colons. If more than one person has the same name but different aliases, the first person found will be added to the list. A tooltip appears if a name or alias already has permission or can't be resolved. 
-    
+
     ![Specify users and co-owners](./media/share-app/share-everyone.png)
 
     > [!NOTE]
@@ -56,7 +56,7 @@ Before you share an app, you must save it to the cloud (not locally) and then pu
 1. If you want to allow those with whom you're sharing the app to edit and share it (in addition to running it), select the **Co-owner** check box.
 
     You can't grant **Co-owner** permission to a security group if you [created the app from within a solution](add-app-solution.md).
-    
+
     > [!NOTE]
     > Regardless of permissions, no two people can edit an app at the same time. If one person opens the app for editing, other people can run it but not edit it.
 
@@ -64,7 +64,8 @@ Before you share an app, you must save it to the cloud (not locally) and then pu
 
     For example, your app might connect to an entity in a Common Data Service database. When you share such an app, the sharing panel prompts you to manage security for that entity.
 
-    ![Assign_Security_Role](media/share-app/cds-assign-security-role.png)
+    > [!div class="mx-imgBorder"]
+    > ![Assign a security role](media/share-app/cds-assign-security-role.png)
 
     For more information about managing security for an entity, see [Manage entity permissions](share-app.md#manage-entity-permissions) later in this topic.
 
@@ -98,19 +99,19 @@ You can change permissions for a user or a security group by selecting their nam
 If you create an app based on Common Data Service, you must also ensure that the users with whom you share the app have the appropriate permissions for the entity or entities on which the app relies. Specifically, those users must belong to a security role that can perform tasks such as creating, reading, writing, and deleting relevant records. In many cases, you'll want to create one or more custom security roles with the exact permissions that users need to run the app. You can then assign a role to each user as appropriate.
 
 > [!NOTE]
-> As of this writing, you can assign security roles to individual users and Azure AD security groups but not to Office groups.
+> As of this writing, you can assign security roles to individual users and security groups in Azure Active Directory but not to Office groups.
 
 #### Prerequisite
 
-To perform the next procedure, you must have **System administrator** permissions for a Common Data Service database.
+To assign a role, you must have **System administrator** permissions for a Common Data Service database.
 
-#### Assign an Azure AD security group to a role
+#### Assign a security group in Azure AD to a role
 
-1. In the sharing panel, select Assign a security role under Data permissions.
+1. In the sharing panel, select **Assign a security role** under **Data permissions**.
 
-1. Select the Common Data Service role(s) you want assigned to the user or Azure AD security group the PowerApp is being shared with. 
+1. Select the role or roles in Common Data Service that you want to assign to the user or the security group in Azure AD with which you want to share the app.
 
-    ![Security_Role_List](media/share-app/cds-assign-security-role-list.png)
+    ![Security role list](media/share-app/cds-assign-security-role-list.png)
 
 ### Common Data Service (previous version)
 
