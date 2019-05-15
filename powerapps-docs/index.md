@@ -462,7 +462,7 @@ ms.custom:
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/model-driven-apps/customize-visualizations-dashboards">Customize visualizations and dashboards</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/model-driven-apps/client-scripting">Apply business logic using client scripting</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/model-driven-apps/customize-commands-ribbon">Customize commands and ribbon</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/component-framework/overview">Build custom controls</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/component-framework/overview">Build custom components (PowerApps component framework)</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/model-driven-apps/create-manage-model-driven-apps-using-code">Create, manage, and publish app</a></p>
                                  </div>
                               </div>

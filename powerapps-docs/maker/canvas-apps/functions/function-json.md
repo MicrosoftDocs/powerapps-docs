@@ -22,9 +22,9 @@ The **JSON** function returns the JSON (JavaScript Object Notation) text string 
 
 The data structure can consist of primitive values, records, or tables that are arbitrarily nested.  Text strings, numbers, dates, Booleans, and most other primitive data types are supported.  References to controls or other objects are not permitted and will result in an error.  
 
-By default, binary data such as images, videos, audio clips, and attachments are not included to avoid large amounts of data from being stored or transmitted. This block can be overridden by using the **IncludeBinaryData** format enumeration; use with care.  
+By default, binary data such as images, videos, and audio clips are not included to avoid large amounts of data from being stored or transmitted. This block can be overridden by using the **IncludeBinaryData** format enumeration; use with care.  
 
-To aid in debugging missing fields, by default, errors are produced when binary data and unsupported data types are encountered.  These errors can be avoided by using the **IgnoreBinaryData** and **IgnoreUnsupportedTypes** format enumerations, respectively.  Binary data includes images, videos, audio clips, and attachments.  
+To aid in debugging missing fields, by default, errors are produced when binary data and unsupported data types are encountered.  These errors can be avoided by using the **IgnoreBinaryData** and **IgnoreUnsupportedTypes** format enumerations, respectively.  Binary data includes images, videos, and audio clips.  
 
 If you wish to not just ignore but include binary data in the result use **IncludeBinaryData**.  Care should be taken with using this setting as the result can be very large and degrade the performance of your app.  
 
@@ -36,20 +36,20 @@ Use the optional *Format* argument to control the readability of the result and 
 |-----------------|-------------|
 | **Compact** | Default.  The output will be as compact as possible with no added spaces or newlines. | 
 | **IndentFour** | To improve readability, the output will add a newline for each column and nesting level and use four space characters for each indentation level. |
-| **IncludeBinaryData** | Images, videos, audio clips, and attachments columns are included in the result.  Including binary data can dramatically increase the size of the result and  impact performance of your app; use with care.  |
-| **IgnoreBinaryData** | Images, videos, audio clips, and attachments columns are included in the result. Without either **IncludeBinaryData** or **IgnoreBinaryData** the function will produce an error if it encounters binary data. |
+| **IncludeBinaryData** | Images, videos, and audio clips columns are included in the result.  Including binary data can dramatically increase the size of the result and  impact performance of your app; use with care.  |
+| **IgnoreBinaryData** | Images, videos, and audio clips columns are included in the result. Without either **IncludeBinaryData** or **IgnoreBinaryData** the function will produce an error if it encounters binary data. |
 | **IgnoreUnsupportedTYpes** | Unsupported data types are allowed but will not be included in the result.  By default unsupported data types produce an error. |  
 
 Use the [**ShowColumns**, **HideColumns**, **RenameColumns**, and **AddColumns** functions](function-table-shaping.md) to shape the data structure before passing it to **JSON** in order to control what data is included in the result and to avoid unsupported data types.
 
 The following data types are supported:
 
-| Data Type | Description | Example |
+| Data Type | Description | Result example |
 |-----------|-------------|---------| 
 | Boolean | *true* or *false*. | `true` |
 | Color | String containing the 8-digit hexadecimal representation for the color in the format "#rrggbbaa" with *rr* is the red component, *gg* is green, *bb* is blue, and *aa* is the alpha channel where *00* is fully transparent and *ff* is fully opaque. The string can be passed to the [**ColorValue** function](function-colors.md).  | `"#102030ff"` |
 | Date | String containing the date in ISO 8601 **yyyy-mm-dd** format. | `"2019-03-31"` |
-| Date/Time | String containing an ISO 8601 date/time. Date/time values are time zone agnostic and will be saved with a "Z" indicating UTC.  | `"2019-03-31T22:32:06.822Z"`  |
+| DateTime | String containing an ISO 8601 date/time. Date/time values are time zone agnostic and will be saved with a "Z" indicating UTC.  | `"2019-03-31T22:32:06.822Z"`  |
 | GUID | String containing the GUID value.  Alphabetic characters will be lowercase. | `"751b58ac-380e-4a04-a925-9f375995cc40"`
 | Media | If **IncludeBinaryData** is specified, media files are encoded in a string.  Web references using the http: and https: URL schemes are not modified.  References to in memory binary data, such as captured with the [**Camera**](../controls/control-camera.md) control and any other references with the appres: and blob: URL schemes will be encoded with the ["data:*mimetype*;base64,..."](https://en.wikipedia.org/wiki/Data_URI_scheme) format. | `"data:image/jpeg;base64,/9j/4AA..."` |
 | Number | Number using a dot decimal separator that is independent of the user's language.  Scientific notation is used if needed. | `1.345` |

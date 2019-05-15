@@ -1,5 +1,4 @@
 ---
-redirect_url: working-with-experimental-preview
 title: Understand preview and experimental features | Microsoft Docs
 description: Test and start to adopt new features.
 author: gregli-msft
