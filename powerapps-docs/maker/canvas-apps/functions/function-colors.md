@@ -204,6 +204,7 @@ All the **Color** enumeration values and the **ColorValue** function when used w
 | **Color.Teal** |**ColorValue( "#008080"&nbsp;)**<br>**ColorValue( "Teal"&nbsp;)** |**RGBA(&nbsp;0,&nbsp;128,&nbsp;128,&nbsp;1&nbsp;)** |![teal](./media/function-colors/color-teal.png) |
 | **Color.Thistle** |**ColorValue( "#d8bfd8"&nbsp;)**<br>**ColorValue( "THISTLE"&nbsp;)** |**RGBA(&nbsp;216,&nbsp;191,&nbsp;216,&nbsp;1&nbsp;)** |![thistle](./media/function-colors/color-thistle.png) |
 | **Color.Tomato** |**ColorValue( "#ff6347"&nbsp;)**<br>**ColorValue( "Tomato"&nbsp;)** |**RGBA(&nbsp;255,&nbsp;99,&nbsp;71,&nbsp;1&nbsp;)** |![tomato](./media/function-colors/color-tomato.png) |
+| **Color.Transparent** |**ColorValue( "#00000000"&nbsp;)**<br>**ColorValue( "Transparent"&nbsp;)** |**RGBA(&nbsp;0,&nbsp;0,&nbsp;0,&nbsp;0&nbsp;)** |![transparent](./media/function-colors/color-transparent.png) |
 | **Color.Turquoise** |**ColorValue( "#40e0d0"&nbsp;)**<br>**ColorValue( "turquoise"&nbsp;)** |**RGBA(&nbsp;64,&nbsp;224,&nbsp;208,&nbsp;1&nbsp;)** |![turquoise](./media/function-colors/color-turquoise.png) |
 | **Color.Violet** |**ColorValue( "#ee82ee"&nbsp;)**<br>**ColorValue( "Violet"&nbsp;)** |**RGBA(&nbsp;238,&nbsp;130,&nbsp;238,&nbsp;1&nbsp;)** |![violet](./media/function-colors/color-violet.png) |
 | **Color.Wheat** |**ColorValue( "#f5deb3"&nbsp;)**<br>**ColorValue( "WHEAT"&nbsp;)** |**RGBA(&nbsp;245,&nbsp;222,&nbsp;179,&nbsp;1&nbsp;)** |![wheat](./media/function-colors/color-wheat.png) |
