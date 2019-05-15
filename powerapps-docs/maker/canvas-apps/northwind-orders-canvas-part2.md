@@ -1,6 +1,6 @@
 ---
-title: Create an order summary in a canvas app | Microsoft Docs
-description: Create an order overview in a canvas app to manage data for Northwind Traders
+title: Create a summary form in a canvas app | Microsoft Docs
+description: Create an summary form in a canvas app to manage data for Northwind Traders
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -14,65 +14,53 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Create an order summary in a canvas app
 
-Follow the steps in this topic to create an order summary in a canvas app based on fictitious data in Common Data Service. As in the [previous topic in this series](northwind-orders-canvas-part1.md), this single-screen app is designed to help the user show, update, create, and delete orders on a tablet device.
+# Create a summary form in a canvas app
 
-> [!div class="mx-imgBorder"]
-> ![Complete canvas app](media/northwind-orders-canvas-part1/orders-finished.png)
+Follow step-by-step instructions to create a summary form in a canvas app for managing fictitious data in the Northwind Traders database. This topic is part of a series that explains how to build a business app on relational data in Common Data Service. For best results, explore these topics in this sequence:
 
-As you build the app, you'll discover and explore these concepts:
-
-- **Many-to-one relationships.** Each customer can place one or more orders, but only one customer can place each order. The **Orders** entity is related to the **Customers** entity so that the list near the left edge can show which customer placed each order. The list shows the name of the customer, but it could show data from any column in the **Customers** entity.
-- **One-to-many relationships.** Each order contains one or more line items, each of which appears as a record in the **Order Details** entity. Each order detail is contained in only one order.
-- **Option sets.** Each order has a status, such as **New**, **Shipped**, **Invoiced**, or **Closed**. These values are defined as option sets in the database and can be shared across apps.
-- **Gallery and form interactions.** The gallery lists all orders, a user can select an order, and the rest of the app responds to the user's selection.
-
-To build this app, follow the steps in these topics
+1. [Install Northwind Traders database and apps](northwind-install.md).
+1. [Overview of the canvas app for Northwind Traders](northwind-orders-canvas-overview.md).
+1. [Create an order gallery in a canvas app](northwind-orders-canvas-part1.md).
+1. Create a summary form in a canvas app (**this topic**).
+1. [Create a details gallery in a canvas app](northwind-orders-canvas-part3.md).
 
 > [!div class="mx-imgBorder"]
 > ![Definition of screen areas](media/northwind-orders-canvas-part1/orders-parts.png)
 
-- [**Part 1, Orders list**](northwind-orders-canvas-part1.md): Show each order's number, customer name, status, and total amount in a list. Select an order that you want to edit or delete elsewhere in the screen.
-- **Part 2, Order form**: As this topic describes, show and edit a summary of the order, delete the order, or create another order.
-- [**Part 3, Order details**](northwind-orders-canvas-part3.md): Show and edit the line items, called order details, that are associated with each order.
-
 ## Prerequisites
 
-If you haven't already done so, [install the Northwind Traders sample database and apps](northwind-install.md), and then take either of these approaches:
-
-- Build the first part of the app yourself by [creating the list of orders](northwind-orders-canvas-part1.md).
-- Take a shortcut by opening the **Northwind Orders (Canvas), Start Part 2** app, which already contains the list of orders.
+Before you start this topic, you must install the database as described earlier in this topic. You must then either create the order gallery or open the **Northwind Orders (Canvas), Start Part 2** app, which already contains that gallery.
 
 ## Add a title bar
 
 Across the top of the app, create a title bar, which will hold action buttons by the end of this topic.
 
-1. In the **Tree view** pane, select **Screen1** to ensure that you don't accidentally add a control to the orders-list gallery:
+1. In the **Tree view** pane, select **Screen1** to ensure that you don't accidentally add a control to the order gallery:
 
     > [!div class="mx-imgBorder"]
-    > ![Select Screen1 in the tree view](media/northwind-orders-canvas-part2/titlebar-01.png)
+    > ![Select Screen1 in the Tree view pane](media/northwind-orders-canvas-part2/titlebar-01.png)
 
 1. On the **Insert** tab, select **Label** to insert a [**Label**](controls/control-text-box.md) control:
 
     > [!div class="mx-imgBorder"]
     > ![Insert a label](media/northwind-orders-canvas-part2/titlebar-02.png)
 
-    This control should appear only once, above the gallery. If it appears in each item of the gallery, delete the first instance of the label, ensure that the screen is selected (as the previous step describes), and then insert the label again.
+    The new label should appear only once, above the gallery. If it appears in each item of the gallery, delete the first instance of the label, ensure that the screen is selected (as the previous step describes), and then insert the label again.
 
-1. Move and resize the control to span the top of the screen:
+1. Move and resize the new label to span the top of the screen:
 
     > [!div class="mx-imgBorder"]
     > ![Move and resize the label](media/northwind-orders-canvas-part2/titlebar-03.png)
 
-1. Double-click into the control to edit its text, and then enter **Northwind Orders**.
+1. Double-click the text of the label, and then type **Northwind Orders**.
 
     As an alternative, modify the **Text** property in the formula bar, which has the same result:
 
     > [!div class="mx-imgBorder"]
     > ![Change the text in the title bar](media/northwind-orders-canvas-part2/titlebar-04.png)
 
-1. On the **Home** tab, format the label control:
+1. On the **Home** tab, format the label:
     - Increase the font size to 24 points.
     - Make the text bold.
     - Make the text white.
@@ -91,7 +79,7 @@ In this section, you'll add controls to show a summary of any order that the use
     > [!div class="mx-imgBorder"]
     > ![Add an Edit form control](media/northwind-orders-canvas-part2/form-01.png)
 
-    By default, the control appears in the upper-left corner, where other controls might make it difficult to find:
+    By default, the form appears in the upper-left corner, where other controls might make it difficult to find:
 
     > [!div class="mx-imgBorder"]
     > ![Edit form control in default location](media/northwind-orders-canvas-part2/form-02.png)
@@ -101,7 +89,7 @@ In this section, you'll add controls to show a summary of any order that the use
     > [!div class="mx-imgBorder"]
     > ![Move and resize the Edit form control](media/northwind-orders-canvas-part2/form-03.png)
 
-1. In the formula bar, set the **DataSource** property of the control to this value:
+1. In the formula bar, set the **DataSource** property of the form to this value:
 
     ```powerapps-dot
     Orders
@@ -110,7 +98,7 @@ In this section, you'll add controls to show a summary of any order that the use
     > [!div class="mx-imgBorder"]
     > ![Set the DataSource property of the Edit form control](media/northwind-orders-canvas-part2/form-04.png)
 
-    You can set the same property in the **Properties** tab of the right-hand pane, but that approach adds fields to the form that you don't need. If you use the formula bar, the form remains empty.
+    You can set the same property in the **Properties** tab of the right-hand pane, but that approach adds fields that you don't need to the form. If you use the formula bar, the form remains empty.
 
 ## Add and arrange fields
 
@@ -169,7 +157,7 @@ In this section, you'll add controls to show a summary of any order that the use
     > [!div class="mx-imgBorder"]
     > ![Move and resize fields](media/northwind-orders-canvas-part2/form-rearrange.gif)
 
-    For more information about how to arrange fields in a form, see [Understand data-form layout for canvas apps](working-with-form-layout.md).
+    More information about how to arrange fields in a form: [Understand data-form layout for canvas apps](working-with-form-layout.md).
 
 ## Hide time controls
 
@@ -208,36 +196,36 @@ In this example, you don't need the time portions of the date fields because tha
     > [!div class="mx-imgBorder"]
     > ![Set Visible property to false.](media/northwind-orders-canvas-part2/form-13.png)
 
-1. Resize the **Date picker** control in the **Date Paid** card:
+1. Resize the date picker in the **Date Paid** card:
 
     > [!div class="mx-imgBorder"]
     > ![Resize the Date picker control](media/northwind-orders-canvas-part2/form-14.png)
 
 ## Connect the list of orders
 
-1. In the **Tree view** pane, select the form control to more easily find the name of the gallery that contains the list of orders.
+1. In the **Tree view** pane, select the form to more easily find the name of the order gallery.
 
     If you followed the steps in the previous topic exactly, the gallery is named **Gallery1**. Otherwise, the name might end in a different number, or you might have renamed the gallery yourself.
 
-1. Set the form control's **Item** property to this expression, replacing the name of the gallery if necessary:
+1. Set the form's **Item** property to this expression, replacing the name of the gallery if necessary:
 
     ```powerapps-dot
     Gallery1.Selected
     ```
 
     > [!div class="mx-imgBorder"]
-    > ![Set Item property of the form control](media/northwind-orders-canvas-part2/form-15.png)
+    > ![Set Item property of the form](media/northwind-orders-canvas-part2/form-15.png)
 
-    The form shows an summary of whatever order the user selects in the list.
+    The form shows an summary of whatever order the app user selects in the list.
 
     > [!div class="mx-imgBorder"]
     > ![Select an order in the list to show its overview in the form](media/northwind-orders-canvas-part2/form-select.gif)
 
 ## Replace a control
 
-**Order number** is an auto-number field that Common Data Service assigns when you create a record. This field has a **Text input** control by default, but you'll replace it with a **Label** control so that users can't edit this field.
+**Order number** is an identifier that Common Data Service assigns automatically when you create a record. This field has a [**Text input**](controls/control-text-input.md) control by default, but you'll replace it with a label so that users can't edit this field.
 
-1. Select the form control, select **Edit fields** in the **Properties** tab of the right-hand pane, and then select the **Order number** field in the list of fields:
+1. Select the form, select **Edit fields** in the **Properties** tab of the right-hand pane, and then select the **Order number** field in the list of fields:
 
     > [!div class="mx-imgBorder"]
     > ![Select the Order number field](media/northwind-orders-canvas-part2/alt-01.png)
@@ -268,7 +256,7 @@ In this example, you don't need the time portions of the date fields because tha
 
 ## Use a many-to-one relationship
 
-The **Orders** entity has a many-to-one relationship with the **Employees** entity: each employee can create many orders, but each order can be assigned to only one employee. When the user selects an employee in the **Combo box** control, its **Selected** property provides that employee's entire record from the **Employees** entity. As a result, you can configure an **Image** control to show the picture of whatever employee the user selects in the **Combo box** control.
+The **Orders** entity has a many-to-one relationship with the **Employees** entity: each employee can create many orders, but each order can be assigned to only one employee. When the user selects an employee in the [**Combo box**](controls/control-combo-box.md) control, its **Selected** property provides that employee's entire record from the **Employees** entity. As a result, you can configure an [**Image**](controls/control-image.md) control to show the picture of whatever employee the user selects in the combo box.
 
 1. Select the **Employee** data card:
 
@@ -285,12 +273,12 @@ The **Orders** entity has a many-to-one relationship with the **Employees** enti
     > [!div class="mx-imgBorder"]
     > ![Write access to formulas](media/northwind-orders-canvas-part2/employee-03.png)
 
-1. Resize the **Combo box** control within the data card to make room for the employee picture:
+1. Resize the combo box within the data card to make room for the employee picture:
 
     > [!div class="mx-imgBorder"]
     > ![Resize the combo-box control](media/northwind-orders-canvas-part2/employee-03b.png)
 
-1. In the **Tree view** pane, confirm the name of the **Combo box** control.
+1. In the **Tree view** pane, confirm the name of the combo box.
 
     If you followed the steps in this topic exactly, the control is named **ComboBox1**. Otherwise, the name might end with a different number, or you might have renamed the control.
 
@@ -299,31 +287,31 @@ The **Orders** entity has a many-to-one relationship with the **Employees** enti
     > [!div class="mx-imgBorder"]
     > ![Insert an image](media/northwind-orders-canvas-part2/employee-04.png)
 
-    An [**Image**](controls/control-image.md) control appears in the data card, which expands to accommodate it:
+    An image appears in the data card, which expands to accommodate it:
 
     > [!div class="mx-imgBorder"]
     > ![Employee data card with Image control](media/northwind-orders-canvas-part2/employee-05.png)
 
-1. Resize the **Image** control, and move it to the right of the **Combo box** control:
+1. Resize the image, and move it to the right of the combo box:
 
     > [!div class="mx-imgBorder"]
     > ![Move and resize the image control](media/northwind-orders-canvas-part2/employee-06.png)
 
-1. Set the **Image** property of the **Image** control to this formula, replacing the number at the end of DataCardValue if necessary:
+1. Set the **Image** property of the image to this formula, replacing the number at the end of DataCardValue if necessary:
 
     ```powerapps-dot
     DataCardValue1.Selected.Picture
     ```
 
     > [!div class="mx-imgBorder"]
-    > ![Set the Image property of the Image control](media/northwind-orders-canvas-part2/employee-07.png)
+    > ![Set the Image property of the image](media/northwind-orders-canvas-part2/employee-07.png)
 
     The picture of the selected employee appears.
 
-1. While holding down the Alt key, select a different employee in the **Combo box** to confirm that the picture also changes.
+1. While holding down the Alt key, select a different employee in the combo box to confirm that the picture also changes.
 
     > [!div class="mx-imgBorder"]
-    > ![Select an employee to see that employee's picture](media/northwind-orders-canvas-part2/employee-select.gif)
+    > ![Select an employee to show that employee's picture](media/northwind-orders-canvas-part2/employee-select.gif)
 
 ## Add a Save icon
 
@@ -332,17 +320,17 @@ The **Orders** entity has a many-to-one relationship with the **Employees** enti
     > [!div class="mx-imgBorder"]
     > ![Insert check-mark icon](media/northwind-orders-canvas-part2/save-01.png)
 
-    The **Check** icon appears in the upper-left corner by default, where other controls might make the icon difficult to find:
+    The [**Check**](controls/control-shapes-icons.md) icon appears in the upper-left corner by default, where other controls might make the icon difficult to find:
 
     > [!div class="mx-imgBorder"]
     > ![Icon in default location](media/northwind-orders-canvas-part2/save-02.png)
 
-1. On the **Home** tab, change the **Color** property of the **Check** icon to white, resize the icon, and move it near the right edge of the title bar:
+1. On the **Home** tab, change the **Color** property of the icon to white, resize the icon, and move it near the right edge of the title bar:
 
     > [!div class="mx-imgBorder"]
     > ![Configure the color, size, and location of the save icon](media/northwind-orders-canvas-part2/save-03.png)
 
-1. In the **Tree view** pane, confirm that the form's name is **Form1**, and then set the **Check** icon's **OnSelect** property to this formula:
+1. In the **Tree view** pane, confirm that the form's name is **Form1**, and then set the icon's **OnSelect** property to this formula:
 
     ```powerapps-dot
     SubmitForm( Form1 )
@@ -351,9 +339,9 @@ The **Orders** entity has a many-to-one relationship with the **Employees** enti
     > [!div class="mx-imgBorder"]
     > ![Set the save icon's OnSelect property](media/northwind-orders-canvas-part2/save-04.png)
 
-    When the user selects the **Check** icon, the [**SubmitForm**](functions/function-form.md) function gathers any changed values in the form and submits them to the data source. Dots march across the top of the screen as the data is submitted, and the **Gallery** control reflects the changes after the process finishes.
+    When the user selects the icon, the [**SubmitForm**](functions/function-form.md) function gathers any changed values in the form and submits them to the data source. Dots march across the top of the screen as the data is submitted, and the order gallery reflects the changes after the process finishes.
 
-1. Set the **Check** icon's **DisplayMode** property to this formula:
+1. Set the icon's **DisplayMode** property to this formula:
 
     ```powerapps-dot
     If( Form1.Unsaved, DisplayMode.Edit, DisplayMode.Disabled )
@@ -362,9 +350,9 @@ The **Orders** entity has a many-to-one relationship with the **Employees** enti
     > [!div class="mx-imgBorder"]
     > ![Set the icon's DisplayMode property](media/northwind-orders-canvas-part2/save-05.png)
 
-    If all changes in the form have been saved, the **Check** icon is disabled and appears in the **DisabledColor**, which you'll set next.
+    If all changes in the form have been saved, the icon is disabled and appears in the **DisabledColor**, which you'll set next.
 
-1. Set the **Check** icon's **DisabledColor** property to this value:
+1. Set the icon's **DisabledColor** property to this value:
 
     ```powerapps-dot
     Gray
@@ -373,7 +361,7 @@ The **Orders** entity has a many-to-one relationship with the **Employees** enti
     > [!div class="mx-imgBorder"]
     > ![Set the icon's DisabledColor property](media/northwind-orders-canvas-part2/save-06.png)
 
-    The user can save changes to an order by selecting the **Check** icon, which is then disabled and dimmed until the user makes another change:
+    The user can save changes to an order by selecting the Check icon, which is then disabled and dimmed until the user makes another change:
 
     > [!div class="mx-imgBorder"]
     > ![saving changes](media/northwind-orders-canvas-part2/save-submit.gif)
@@ -385,17 +373,17 @@ The **Orders** entity has a many-to-one relationship with the **Employees** enti
     > [!div class="mx-imgBorder"]
     > ![Add cancel icon](media/northwind-orders-canvas-part2/save-07.png)
 
-    The **Cancel** icon appears in the upper-left corner by default, where other controls might make the icon difficult to find:
+    The icon appears in the upper-left corner by default, where other controls might make the icon difficult to find:
 
     > [!div class="mx-imgBorder"]
     > ![Cancel icon in default location](media/northwind-orders-canvas-part2/save-08.png)
 
-1. On the **Home** tab, change the **Cancel** icon's **Color** property to white, resize the icon, and move it to the left of the **Check** icon:
+1. On the **Home** tab, change the icon's **Color** property to white, resize the icon, and move it to the left of the Check icon:
 
     > [!div class="mx-imgBorder"]
     > ![Change the color, size, and location of the Cancel icon](media/northwind-orders-canvas-part2/save-09.png)
 
-1. Set the **Cancel** icon's **OnSelect** property to this formula:
+1. Set the Cancel icon's **OnSelect** property to this formula:
 
     ```powerapps-dot
     ResetForm( Form1 )
@@ -406,7 +394,7 @@ The **Orders** entity has a many-to-one relationship with the **Employees** enti
 
     The [**ResetForm**](functions/function-form.md) function discards all changes in the form, which returns it to its original state.
 
-1. Set the **Cancel** icon's **DisplayMode** property to this formula:
+1. Set the Cancel icon's **DisplayMode** property to this formula:
 
     ```powerapps-dot
     If( Form1.Unsaved Or Form1.Mode = FormMode.New, DisplayMode.Edit, DisplayMode.Disabled )
@@ -415,9 +403,9 @@ The **Orders** entity has a many-to-one relationship with the **Employees** enti
     > [!div class="mx-imgBorder"]
     > ![Set the Cancel icon's DisplayMode property](media/northwind-orders-canvas-part2/save-11.png)
 
-    This formula differs slightly from the one for the **Check** icon. The **Cancel** icon is disabled if all changes have been saved or the form is in **New** mode, which you'll enable next. In that case, **ResetForm** discards the new record.
+    This formula differs slightly from the one for the Check icon. The Cancel icon is disabled if all changes have been saved or the form is in **New** mode, which you'll enable next. In that case, **ResetForm** discards the new record.
 
-1. Set the **Cancel** icon's **DisabledColor** property to this value:
+1. Set the Cancel icon's **DisabledColor** property to this value:
 
     ```powerapps-dot
     Gray
@@ -426,7 +414,7 @@ The **Orders** entity has a many-to-one relationship with the **Employees** enti
     > [!div class="mx-imgBorder"]
     > ![Set the Cancel icon's DisabledColor property](media/northwind-orders-canvas-part2/save-12.png)
 
-    The user can cancel changes to an order, and the **Check** and **Cancel** icons are disabled and dimmed if all changes have been saved:
+    The user can cancel changes to an order, and the Check and Cancel icons are disabled and dimmed if all changes have been saved:
 
     > [!div class="mx-imgBorder"]
     > ![Saving and cancelling changes](media/northwind-orders-canvas-part2/save-cancel.gif)
@@ -443,12 +431,12 @@ The **Orders** entity has a many-to-one relationship with the **Employees** enti
     > [!div class="mx-imgBorder"]
     > ![Default location of Add icon](media/northwind-orders-canvas-part2/save-14.png)
 
-1. On the **Home** tab, set the **Color** property of the **Add** icon to white, resize the icon, and move it to the left of the **Cancel** icon:
+1. On the **Home** tab, set the **Color** property of the Add icon to white, resize the icon, and move it to the left of the Cancel icon:
 
     > [!div class="mx-imgBorder"]
     > ![Change the color, size, and location of the Add icon](media/northwind-orders-canvas-part2/save-15.png)
 
-1. Set the **Add** icon's **OnSelect** property to this formula:
+1. Set the Add icon's **OnSelect** property to this formula:
 
     ```powerapps-dot
     NewForm( Form1 )
@@ -459,7 +447,7 @@ The **Orders** entity has a many-to-one relationship with the **Employees** enti
 
     The [**NewForm**](functions/function-form.md) function shows a blank record in the form.  
 
-1. Set the **Add** icon's **DisplayMode** property to this formula:
+1. Set the Add icon's **DisplayMode** property to this formula:
 
     ```powerapps-dot
     If( Form1.Unsaved Or Form1.Mode = FormMode.New, DisplayMode.Disabled, DisplayMode.Edit )
@@ -468,12 +456,12 @@ The **Orders** entity has a many-to-one relationship with the **Employees** enti
     > [!div class="mx-imgBorder"]
     > ![Set the Add icon's DisplayMode property](media/northwind-orders-canvas-part2/save-16.png)
 
-    The formula disables the **Add** icon under these conditions:
+    The formula disables the Add icon under these conditions:
 
-    - The user makes changes but doesn't save or cancel them, which is the opposite behavior from the **Check** and **Cancel** icons.
-    - The user selects the **Add** icon but makes no changes.
+    - The user makes changes but doesn't save or cancel them, which is the opposite behavior from the Check and Cancel icons.
+    - The user selects the Add icon but makes no changes.
 
-1. Set the **Add** icon's **DisabledColor** property to this value:
+1. Set the Add icon's **DisabledColor** property to this value:
 
     ```powerapps-dot
     Gray
@@ -482,7 +470,7 @@ The **Orders** entity has a many-to-one relationship with the **Employees** enti
     > [!div class="mx-imgBorder"]
     > ![Set the Add icon's DisabledColor property](media/northwind-orders-canvas-part2/save-17.png)
 
-    The user can create an order if they have saved or canceled all changes to an existing order (and they haven't selected the **Add** icon but made no changes):
+    The user can create an order if they have saved or canceled all changes to an existing order (and they haven't selected the Add icon but made no changes):
 
     > [!div class="mx-imgBorder"]
     > ![Create an order](media/northwind-orders-canvas-part2/save-new.gif)
@@ -502,12 +490,12 @@ The **Orders** entity has a many-to-one relationship with the **Employees** enti
     > [!div class="mx-imgBorder"]
     > ![Default location of the Trash icon](media/northwind-orders-canvas-part2/save-19.png)
 
-1. On the **Home** tab, change the **Trash** icon's **Color** property to white, resize the icon, and move it to the left of the **Add** icon:
+1. On the **Home** tab, change the Trash icon's **Color** property to white, resize the icon, and move it to the left of the Add icon:
 
     > [!div class="mx-imgBorder"]
     > ![Change the color, size, and location of the Trash icon](media/northwind-orders-canvas-part2/save-20.png)
 
-1. Set the **Trash** icon's **OnSelect** property to this formula:
+1. Set the Trash icon's **OnSelect** property to this formula:
 
     ```powerapps-dot
     Remove( Orders, Gallery1.Selected )
@@ -516,9 +504,9 @@ The **Orders** entity has a many-to-one relationship with the **Employees** enti
     > [!div class="mx-imgBorder"]
     > ![Set the Trash icon's OnSelect property](media/northwind-orders-canvas-part2/save-21.png)
 
-    The [**Remove**](functions/function-remove-removeif.md) function removes a record from a data source. In this formula, the function removes the record that's selected in the gallery. The **Trash** icon appears near the form (not the gallery) because the form shows more details about the record, so the user can more easily identify the record that the formula will delete.
+    The [**Remove**](functions/function-remove-removeif.md) function removes a record from a data source. In this formula, the function removes the record that's selected in the gallery. The Trash icon appears near the form (not the gallery) because the form shows more details about the record, so the user can more easily identify the record that the formula will delete.
 
-1. Set the **Trash** icon's **DisplayMode** property to this formula:
+1. Set the Trash icon's **DisplayMode** property to this formula:
 
     ```powerapps-dot
     If( Form1.Mode = FormMode.New, DisplayMode.Disabled, DisplayMode.Edit )
@@ -527,9 +515,9 @@ The **Orders** entity has a many-to-one relationship with the **Employees** enti
     > [!div class="mx-imgBorder"]
     > ![Set the Trash icon's DisplayMode property](media/northwind-orders-canvas-part2/save-22.png)
 
-    This formula disables the **Trash** icon if the user is creating a record. Until the user saves the record, the **Remove** function has no record to delete.
+    This formula disables the Trash icon if the user is creating a record. Until the user saves the record, the **Remove** function has no record to delete.
 
-1. Set the **Trash** icon's **DisabledColor** property to this value:
+1. Set the Trash icon's **DisabledColor** property to this value:
 
     ```powerapps-dot
     Gray
@@ -548,7 +536,7 @@ The **Orders** entity has a many-to-one relationship with the **Employees** enti
 To recap, you added a form in which the user can show and edit a summary of each order, and you used these elements:
 
 - A form that shows data from the **Orders** entity: **Form1.DataSource =** `Orders`
-- A connection between the form and the list of orders in the gallery: **Form1.Item =** `Gallery1.Selected`
+- A connection between the form and the order gallery: **Form1.Item =** `Gallery1.Selected`
 - An alternate control for the **Order number** field: **View text**
 - A many-to-one relationship to show the employee's picture in the **Employee** data card: `DataCardValue1.Selected.Picture`
 - Icon to save changes to an order: `SubmitForm( Form1 )`
@@ -556,4 +544,9 @@ To recap, you added a form in which the user can show and edit a summary of each
 - Icon to create an order: `NewForm( Form1 )`
 - Icon to delete an order: `Remove( Orders, Gallery1.Selected )`
 
-In the next part, you'll add another **Gallery** control to display the list of products in each order, and you'll change that list by using the [**Patch**](functions/function-patch.md) function.
+## Next step
+
+In the next topic, you'll add another gallery to show the list of products in each order, and you'll change that list by using the [**Patch**](functions/function-patch.md) function.
+
+> [!div class="nextstepaction"]
+> [Create the detail gallery](northwind-orders-canvas-part1.md)

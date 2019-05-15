@@ -1,6 +1,6 @@
 ---
-title: Create a list of orders in a canvas app | Microsoft Docs
-description: Create a list of orders in a canvas app to manage data for Northwind Traders
+title: Create an order gallery in a canvas app | Microsoft Docs
+description: Create an order gallery in a canvas app to manage data for Northwind Traders
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -14,40 +14,26 @@ search.audienceType:
 search.app:
   - PowerApps
 ---
-# Create a list of orders in a canvas app
+# Create an order gallery in a canvas app
 
-Follow the steps in this topic to create a list of orders in a canvas app based on sample data in Common Data Service. The sample data is for a fictitious organization named Northwind Traders, and the app shows the types, quantities, and prices of various products that Northwind sells and ships to other fictitious companies.
+Follow step-by-step instructions to create an order gallery in a canvas app for managing fictitious data in the Northwind Traders database. This topic is part of a series that explains how to build a business app on relational data in Common Data Service. For best results, explore these topics in this sequence:
 
-This single-screen app is designed to run on tablets. In this and other topics, you'll add and configure UI components until the app resembles this graphic:
-
-> [!div class="mx-imgBorder"]
-> ![Complete canvas app](media/northwind-orders-canvas-part1/orders-finished.png)
-
-As you build the app, you'll discover and explore these concepts:
-
-- **Many-to-one relationships.** Each customer can place one or more orders, but only one customer can place each order. The **Orders** entity is related to the **Customers** entity so that the list near the left edge can show which customer placed each order. The list shows the name of the customer, but it could show data from any column in the **Customers** entity.
-- **One-to-many relationships.** Each order contains one or more line items, each of which appears as a record in the **Order Details** entity. Each order detail is contained in only one order.
-- **Option sets.** Each order has a status, such as **New**, **Shipped**, **Invoiced**, or **Closed**. Sets of values such as these are defined as option sets in the database and can be shared across apps.
-- **Gallery and form interactions.** The gallery lists all orders, a user can select an order, and the rest of the app responds to the user's selection.
-
-To build this app, follow the steps in these topics:
+1. [Install Northwind Traders database and apps](northwind-install.md).
+1. [Overview of the canvas app for Northwind Traders](northwind-orders-canvas-overview.md).
+1. Create an order gallery in a canvas app (**this topic**).
+1. [Create a summary form in a canvas app](northwind-orders-canvas-part2.md).
+1. [Create a details gallery in a canvas app](northwind-orders-canvas-part3.md).
 
 > [!div class="mx-imgBorder"]
 > ![Definition of screen areas](media/northwind-orders-canvas-part1/orders-parts.png)
 
-- **Part 1, Orders list**: As this topic describes, show each order's number, customer name, status, and total amount in a list. Select an order that you want to edit or delete elsewhere in the screen.
-- [**Part 2, Order form**](northwind-orders-canvas-part2.md): Show and edit an overview of the order, delete the order, or create another order.
-- [**Part 3, Order details**](northwind-orders-canvas-part3.md): Show and edit the line items, called order details, that are associated with each order.
+## Prerequisite
+
+Before you start this topic, you must install the database as this topic described earlier.
 
 ## Create a blank app
 
-1. [Sign in to PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-
-1. [Install the Northwind Traders sample database and apps](northwind-install.md).
-
-    This step installs all the entities that you need, as well as a completed version of the app that you're about to build.
-
-1. Create a blank tablet app:
+1. [Sign in to PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then create a blank tablet app:
 
     > [!div class="mx-imgBorder"]
     > ![Canvas app from blank tile](media/northwind-orders-canvas-part1/start-01.png)
@@ -99,11 +85,11 @@ To build this app, follow the steps in these topics:
     > [!div class="mx-imgBorder"]
     > ![List of fields in the Orders entity](media/northwind-orders-canvas-part1/datasource-05.png)
 
-    Each column has a **Display name** and a **Name**, which is sometimes called the logical name. Both names refer to the same thing. In general, you'll use the display name when you build an app, but some cases require the more cryptic **Name**, as noted in a procedure.
+    Each field has a **Display name** and a **Name**, which is sometimes called the logical name. Both names refer to the same thing. In general, you'll use the display name when you build an app, but some cases require the more cryptic **Name**, as noted in a procedure.
 
 ## Display the list of orders
 
-1. On the **Insert** tab, select **Gallery** > **Blank vertical** to add a [**Gallery** control](controls/control-gallery.md) in which the list of orders will appear.
+1. On the **Insert** tab, select **Gallery** > **Blank vertical** to add a [**Gallery**](controls/control-gallery.md) control in which the list of orders will appear.
 
     > [!div class="mx-imgBorder"]
     > ![Insert, Gallery, Blank vertical](media/northwind-orders-canvas-part1/orders-01.png)
@@ -129,7 +115,7 @@ To build this app, follow the steps in these topics:
     > [!div class="mx-imgBorder"]
     > ![Select a layout](media/northwind-orders-canvas-part1/orders-04.png)
 
-    Two label controls are added in the gallery's template. By default, these controls show two columns of the **Orders** entity, which you'll change next. The gallery's template is replicated vertically for each record in the entity.
+    Two [**Label**](controls/control-text-box.md) controls are added in the gallery's template. By default, these controls show two columns of the **Orders** entity, which you'll change next. The gallery's template is replicated vertically for each record in the entity.
 
 1. In the **Data** pane, select **Title1** (or select the upper label in the gallery's template):
 
@@ -145,7 +131,7 @@ To build this app, follow the steps in these topics:
     > [!div class="mx-imgBorder"]
     > ![Set title label's Text property](media/northwind-orders-canvas-part1/orders-06.png)
 
-    The order number appears at the top of each gallery item. In the gallery template, **ThisItem** grants access to all columns in the **Order** entity.
+    The order number appears at the top of each gallery item. In the gallery template, **ThisItem** grants access to all fields in the **Order** entity.
 
 1. In the **Data** pane, select **Subtitle1** (or select the lower label in the gallery's template):
 
@@ -172,14 +158,14 @@ To build this app, follow the steps in these topics:
 
 ## Show each order's status
 
-In this procedure, you'll add space in the gallery for a label control and configure it to show each order's status in a different color based on the data.
+In this procedure, you'll add space in the gallery for a label and configure it to show each order's status in a different color based on the data.
 
-1. In the gallery's template, reduce the width of the first label control, **Title1**:
+1. In the gallery's template, reduce the width of the first label, **Title1**:
 
     > [!div class="mx-imgBorder"]
     > ![Title1 in the gallery's template](media/northwind-orders-canvas-part1/status-01.png)
 
-1. Repeat the previous step with the second label control, **Subtitle1**:
+1. Repeat the previous step with the second label, **Subtitle1**:
 
     > [!div class="mx-imgBorder"]
     > ![Subtitle1 in the gallery's template](media/northwind-orders-canvas-part1/status-02.png)
@@ -203,12 +189,12 @@ In this procedure, you'll add space in the gallery for a label control and confi
     > [!div class="mx-imgBorder"]
     > ![Set the Text property](media/northwind-orders-canvas-part1/status-05.png)
 
-    In the **Orders** entity, the **'Order Status'** column holds a value from the **Orders Status** option set. An option set is similar to an enumeration in other programming tools. Each set of options is defined in the database, so users can't specify an option that isn't part of the set. The **Orders Status** option set is also global, not local, so it can be used in other entities:
+    In the **Orders** entity, the **'Order Status'** field holds a value from the **Orders Status** option set. An option set is similar to an enumeration in other programming tools. Each set of options is defined in the database, so users can't specify an option that isn't part of the set. The **Orders Status** option set is also global, not local, so it can be used in other entities:
 
     > [!div class="mx-imgBorder"]
     > ![Orders Status option set](media/northwind-orders-canvas-part1/status-06.png)
 
-    Each option in a set has a name that appears if you show it in a label. These names can be localized, and the app recognizes the same option whether an English user selects **Apple**, a French user selects **Pomme**, or a Spanish user selects **Manzana**. For this reason, you can't create a formula that relies on a hard-coded name for an option, as this topic demonstrates later.
+    Each option in a set has a name that appears if you show it in a label. These names can be localized, and the app recognizes the same option whether an English user selects **Apple**, a French user selects **Pomme**, or a Spanish user selects **Manzana**. For this reason, you can't create a formula that relies on a hard-coded string for an option, as this topic demonstrates later.
 
     In formulas, you must surround **'Order Status'** with single quotes because it contains a space. However, that name functions the same way as any other name in PowerApps, such as **Customer** or **Company**, does.
 
@@ -231,7 +217,7 @@ In this procedure, you'll add space in the gallery for a label control and confi
     > [!div class="mx-imgBorder"]
     > ![Set the Color property of the status label](media/northwind-orders-canvas-part1/status-08.png)
 
-    PowerApps prevents you from creating a formula that relies on a hard-coded name for each option in a set because such formulas could produce inappropriate results if the option names are localized. Instead, the **Switch** function determines the color based on whatever name appears in the label based on the user's settings.
+    PowerApps prevents you from creating a formula that relies on a hard-coded string for each option in a set because such formulas could produce inappropriate results if the option names are localized. Instead, the **Switch** function determines the color based on whatever string appears in the label based on the user's settings.
 
     With this formula in place, different status values appear in different colors, as the previous graphic shows.
 
@@ -242,7 +228,7 @@ In this procedure, you'll add space in the gallery for a label control and confi
     > [!div class="mx-imgBorder"]
     > ![Select the gallery template](media/northwind-orders-canvas-part1/aggregate-01.png)
 
-1. On the **Insert** tab, select **Label** to add another label control:
+1. On the **Insert** tab, select **Label** to add another label:
 
     > [!div class="mx-imgBorder"]
     > ![Add a label](media/northwind-orders-canvas-part1/aggregate-02.png)
@@ -261,9 +247,9 @@ In this procedure, you'll add space in the gallery for a label control and confi
     > [!div class="mx-imgBorder"]
     > ![Formula for calculating an order's total cost](media/northwind-orders-canvas-part1/aggregate-04.png)
 
-    In this formula, the [**Sum**](functions/function-aggregates.md)  function adds up the records in the **Order Details** entity that are associated with each record in the **Order** entity through a one-to-many relationship. These line items make up each order, and you'll use the same one-to-many relationship in Part 3 to show and edit the line items in the lower-right area of the screen.
+    In this formula, the [**Sum**](functions/function-aggregates.md)  function adds up the records in the **Order Details** entity that are associated with each record in the **Order** entity through a one-to-many relationship. These line items make up each order, and you'll use the same one-to-many relationship to show and edit the line items in the lower-right area of the screen.
 
-    This formula shows a blue underline and a [delegation warning](delegation-overview.md) because complex aggregate functions (for example, the sum of a multiplication) can't be delegated to Common Data Service. You can ignore this information because no order in this example will have more than 500 line items. If necessary for a different app, you can increase that limit in the **App settings**.
+    This formula shows a blue underline and a [delegation warning](delegation-overview.md) because complex aggregate functions (for example, the sum of a multiplication) can't be delegated to Common Data Service. You can ignore this information because no order in this example will have contain than 500 line items. If necessary for a different app, you can increase that limit in the **App settings**.
 
     The [**Text**](functions/function-text.md) function in this formula adds a currency symbol and formats the result with thousands and decimal separators. As written, the formula includes the language tag for U.S. English (**[$-en-US]**) and a dollar symbol (**$**). If you remove the language tag, it will be replaced with one based on your language settings, and the label will show the appropriate formats for that tag. If you leave the dollar symbol, the label will show the appropriate currency symbol based on the user's settings. However, you can force a different symbol to appear by replacing the dollar symbol with the one that you prefer.
 
@@ -279,9 +265,9 @@ In this procedure, you'll add space in the gallery for a label control and confi
     > [!div class="mx-imgBorder"]
     > ![Move and resize the gallery](media/northwind-orders-canvas-part1/aggregate-06.png)
 
-## On to Part 2
+## Summary
 
-To recap, you just built a single-screen canvas app that shows the list of orders, which includes these elements:
+To recap, you started to build a single-screen canvas app by adding the order gallery, which includes these elements:
 
 - A formula to show the order number: `"Orders " & ThisItem.OrderNumber`
 - A field in a many-to-one relationship: `ThisItem.Customer.Company`
@@ -289,4 +275,9 @@ To recap, you just built a single-screen canvas app that shows the list of order
 - A label that changes format based on which option in a set appears in that label: `Switch( ThisItem.'Order Status', 'Orders Status'.Closed, Green, ...`
 - A complex aggregate function over a one-to-many relationship: `Sum( ThisItem.'Order Details', Quantity * 'Unit Price' )`
 
-In the [next part](northwind-orders-canvas-part2.md), you'll add an [**Edit form**](controls/control-form-detail.md)  control to display and edit an overview of whatever order the user selects.
+## Next topic
+
+In the next topic, you'll add an [**Edit form**](controls/control-form-detail.md) control to display and edit an summary of whatever order the user selects in the gallery that you just created.
+
+> [!div class="nextstepaction"]
+> [Create the summary form](northwind-orders-canvas-part2.md)

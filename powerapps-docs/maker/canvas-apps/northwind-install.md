@@ -17,7 +17,7 @@ search.app:
 
 # Install Northwind Traders database and apps
 
-Learn how to build business apps over relational data in Common Data Service by downloading and exploring a sample database and two apps that you can use to manage it. By following the steps in this topic, install the Northwind Traders database in your own environment, and discover concepts behind canvas and model-driven apps, relationships between entities, and option sets.
+By following the steps in this series of topics, you can discover concepts about relational data as implemented in a sample database in Common Data Service. You can also explore sample business apps, both canvas and model-driven, for managing that data and earn practical experience by creating such an app. This first topic explains how to install the Northwind Traders database in your own environment and gain access to the sample apps, which you can open for editing to reveal how they were built.
 
 Northwind Traders is a fictitious organization that manages orders, products, customers, suppliers, and many other aspects of a small business. This sample appeared with the first versions of Microsoft Access and is still available as an Access template.
 
@@ -106,7 +106,7 @@ Northwind Traders is a fictitious organization that manages orders, products, cu
     > [!div class="mx-imgBorder"]
     > ![Sample Data Manager after data is loaded](media/northwind-install/sample-data-complete.png)
 
-## Orders app
+## Sample apps
 
 The Northwind solution includes these apps for interacting with this data:
 
@@ -117,19 +117,19 @@ You open these apps the same way that you opened the app in the previous procedu
 
 ### Canvas
 
-This app is a simple master-detail view of the **Orders** entity, where you can view and edit details of the order and the line items for an order. A list of orders appears near the left edge, and you can select an arrow in that list to show the details of that order.
+This single-screen app offers a simple master-detail view of the **Orders** entity, where you can view and edit a summary of the order and each line item for an order. A list of orders appears near the left edge, and you can select an arrow in that list to show a summary and the details of that order. More information: [Overview of the canvas app for Northwind Traders](northwind-orders-canvas-overview.md).
 
 > [!div class="mx-imgBorder"]
 > ![List of orders and details in Northwind canvas app](media/northwind-install/orders-canvas.png)
 
 ### Model-driven
 
-This app operates on the same data (in the **Orders** entity) as the canvas app. In the list of orders, show details about an order by selecting its number:
+This app operates on the same data (in the **Orders** entity) as the canvas app. In the list of orders, show more information about an order by selecting its number:
 
 > [!div class="mx-imgBorder"]
 > ![list of orders in Northwind model-driven app](media/northwind-install/orders-model.png)
 
-The details appear on a separate form:
+A summary of the order appears on a separate form:
 
 > [!div class="mx-imgBorder"]
 > ![order details in model-driven app](media/northwind-install/orders-model-2.png)
