@@ -64,7 +64,7 @@ Before you share an app, you must save it to the cloud (not locally) and then pu
 
     For example, your app might connect to an entity in a Common Data Service database. When you share such an app, the sharing panel prompts you to manage security for that entity.
 
-    ![Set permissions](./media/share-app/set-permissions.png)
+    ![Assign_Security_Role](media/share-app/cds-assign-security-role.png)
 
     For more information about managing security for an entity, see [Manage entity permissions](share-app.md#manage-entity-permissions) later in this topic.
 
@@ -98,47 +98,19 @@ You can change permissions for a user or a security group by selecting their nam
 If you create an app based on Common Data Service, you must also ensure that the users with whom you share the app have the appropriate permissions for the entity or entities on which the app relies. Specifically, those users must belong to a security role that can perform tasks such as creating, reading, writing, and deleting relevant records. In many cases, you'll want to create one or more custom security roles with the exact permissions that users need to run the app. You can then assign a role to each user as appropriate.
 
 > [!NOTE]
-> As of this writing, you can assign security roles to individual users but not to security groups.
+> As of this writing, you can assign security roles to individual users and Azure AD security groups but not to Office groups.
 
 #### Prerequisite
 
-To perform the next two procedures, you must have **System administrator** permissions for a Common Data Service database.
+To perform the next procedure, you must have **System administrator** permissions for a Common Data Service database.
 
-#### Create a security role
+#### Assign an Azure AD security group to a role
 
-1. In the sharing panel, select **Set permissions** under **Data permissions**, and then select the **Security Roles** link.
+1. In the sharing panel, select Assign a security role under Data permissions.
 
-    ![Open security roles](media/share-app/security-roles.png)
+1. Select the Common Data Service role(s) you want assigned to the user or Azure AD security group the PowerApp is being shared with. 
 
-1. Under **All Roles**, select **New**, and then type or paste a name for the role that you're creating.
-
-    ![Create security role](media/share-app/new-role.png)
-
-1. Select one or more tabs to find the entity or entities that your app uses, and then select the permissions that you want to grant the security role.
-
-    For example, this graphic shows that the **Core records** tab contains the **Accounts** entity, and users to which this security role has been assigned can create, read, write, and delete records in that entity.
-
-    ![Specify permissions](media/share-app/grant-access.png)
-
-1. Select **Save and Close**.
-
-#### Assign a user to a role
-
-1. In the sharing panel, select **Set permissions** under **Data permissions**, and then select the **Users** link.
-
-    ![Users link](media/share-app/open-users.png)
-
-1. In the upper-right corner, type or paste the name of the user whom you want to assign to the role, and then select the search icon.
-
-    ![Search for users](media/share-app/search-users.png)
-
-1. In the search results, point to the result that you want, and then select the check box that appears.
-
-1. In the top banner, select **Manage roles**.
-
-1. In the dialog box that appears, select the check boxes for **Common Data Service User** and the role that the user needs for your app, and then select **OK.**
-
-    ![Assign a user to a role](media/share-app/assign-users.png)
+    ![Security_Role_List](media/share-app/cds-assign-security-role-list.png)
 
 ### Common Data Service (previous version)
 
