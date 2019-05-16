@@ -2,13 +2,13 @@
 title: "Sample charts (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "The topic contains sample charts along with the respective data description and presentation XML strings." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
-ms.reviewer: ""
+ms.date: 01/17/2019
+ms.reviewer: "kvivek"
 ms.service: powerapps
 ms.topic: "article"
 author: "KumarVivek" # GitHub ID
 ms.author: "kvivek" # MSFT alias of Microsoft employees only
-manager: "shilpas" # MSFT alias of manager or PM counterpart
+manager: 
 search.audienceType: 
   - developer
 search.app: 
@@ -586,5 +586,5 @@ This topic contains sample charts along with the respective data description and
  [Visualization Data Description Schema](visualization-data-description-schema.md)   
  [Create a Chart](create-visualization-chart.md)   
  [View Data with Visualizations (Charts)](view-data-with-visualizations-charts.md)   
- [Sample Code for Charts (Visualizations)](/dynamics365/customer-engagement/developer/customize-dev/sample-code-charts-visualizations)
+ 
 
