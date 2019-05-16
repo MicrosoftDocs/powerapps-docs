@@ -110,6 +110,6 @@ When the **Back** function runs, the inverse transition is used by default. For 
 
     The second screen appears with a gray background through a transition that uncovers to the right (the inverse of **Cover**).
 
-1. Select the buttons on each screen repeatedly to bounce back and forth.
+1. Select the button on each screen repeatedly to bounce back and forth.
 
 [Another example](../add-screen-context-variables.md)
