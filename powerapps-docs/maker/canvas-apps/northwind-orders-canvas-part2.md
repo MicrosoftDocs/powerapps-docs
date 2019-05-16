@@ -19,18 +19,18 @@ search.app:
 
 Follow step-by-step instructions to create a summary form in a canvas app for managing fictitious data in the Northwind Traders database. This topic is part of a series that explains how to build a business app on relational data in Common Data Service. For best results, explore these topics in this sequence:
 
-1. [Install Northwind Traders database and apps](northwind-install.md).
-1. [Overview of the canvas app for Northwind Traders](northwind-orders-canvas-overview.md).
-1. [Create an order gallery in a canvas app](northwind-orders-canvas-part1.md).
-1. Create a summary form in a canvas app (**this topic**).
-1. [Create a details gallery in a canvas app](northwind-orders-canvas-part3.md).
+1. [Create an order gallery](northwind-orders-canvas-part1.md).
+2. Create a summary form (**this topic**).
+3. [Create a details gallery](northwind-orders-canvas-part3.md).
 
 > [!div class="mx-imgBorder"]
 > ![Definition of screen areas](media/northwind-orders-canvas-part1/orders-parts.png)
 
 ## Prerequisites
 
-Before you start this topic, you must install the database as described earlier in this topic. You must then either create the order gallery or open the **Northwind Orders (Canvas), Start Part 2** app, which already contains that gallery.
+1. [Install the Northwind Traders database and apps](northwind-install.md).
+1. Take a moment to review the [overview of the canvas app for Northwind Traders](northwind-orders-canvas-overview.md).
+1. [Create the order gallery](northwind-orders-canvas-part1.md) yourself, or open the **Northwind Orders (Canvas), Start Part 2** app, which already contains that gallery.
 
 ## Add a title bar
 
@@ -123,7 +123,7 @@ In this section, you'll add controls to show a summary of any order that the use
     > [!div class="mx-imgBorder"]
     > ![Add five more fields to the Edit form control](media/northwind-orders-canvas-part2/form-07.png)
 
-1. At the bottom of the **Fields** pane, select **Add**.
+1. At the bottom of the **Fields** pane, select **Add**, and then close the **Fields** pane.
 
     The form shows seven fields:
 
@@ -134,9 +134,9 @@ In this section, you'll add controls to show a summary of any order that the use
 
     1. On the **View** tab, select **Data sources**.
     1. In the **Data** pane, select **Data sources**.
-    1. Next to **Orders**, select the ellipsis (...), and then select **Refresh**.
+    1. Next to **Orders**, select the ellipsis (...), select **Refresh**, and then close the **Data** pane.
 
-1. In the **Properties** tab of the right-hand pane, change the number of columns in the form from 3 to 12.
+1. With the form selected, change the number of columns in the form from 3 to 12 in the **Properties** tab of the right-hand pane.
 
     This step adds flexibility as you arrange the fields:
 
@@ -152,7 +152,7 @@ In this section, you'll add controls to show a summary of any order that the use
     - Third row: **Notes**
 
     > [!NOTE]
-    > You might find it easier to resize the data cards before you arrange them.
+    > You might find it easier to resize the **Notes**, **Customer**, and **Employee** data cards before you arrange them.
 
     > [!div class="mx-imgBorder"]
     > ![Move and resize fields](media/northwind-orders-canvas-part2/form-rearrange.gif)
@@ -203,11 +203,9 @@ In this example, you don't need the time portions of the date fields because tha
 
 ## Connect the list of orders
 
-1. In the **Tree view** pane, select the form to more easily find the name of the order gallery.
+1. In the **Tree view** pane, collapse the form to more easily find the name of the order gallery, and then, if necessary, rename it to **Gallery1**.
 
-    If you followed the steps in the previous topic exactly, the gallery is named **Gallery1**. Otherwise, the name might end in a different number, or you might have renamed the gallery yourself.
-
-1. Set the form's **Item** property to this expression, replacing the name of the gallery if necessary:
+1. Set the form's **Item** property to this expression:
 
     ```powerapps-dot
     Gallery1.Selected
@@ -225,7 +223,7 @@ In this example, you don't need the time portions of the date fields because tha
 
 **Order number** is an identifier that Common Data Service assigns automatically when you create a record. This field has a [**Text input**](controls/control-text-input.md) control by default, but you'll replace it with a label so that users can't edit this field.
 
-1. Select the form, select **Edit fields** in the **Properties** tab of the right-hand pane, and then select the **Order number** field in the list of fields:
+1. Select the form, select **Edit fields** in the **Properties** tab of the right-hand pane, and then select the **Order number** field:
 
     > [!div class="mx-imgBorder"]
     > ![Select the Order number field](media/northwind-orders-canvas-part2/alt-01.png)
@@ -240,19 +238,17 @@ In this example, you don't need the time portions of the date fields because tha
     > [!div class="mx-imgBorder"]
     > ![Select the **View text** data card](media/northwind-orders-canvas-part2/alt-02b.png)
 
-1. Close the **Data** pane.
+1. Close the **Fields** pane.
 
     The user can't change the order number:
 
     > [!div class="mx-imgBorder"]
     > ![Order number is read-only](media/northwind-orders-canvas-part2/alt-03.png)
 
-1. On the **Home** tab, change the order number's font size to 20 points.
-
-    The order number is more prominent:
+1. On the **Home** tab, change the order number's font size to 20 points so that the field is easier to find:
 
     > [!div class="mx-imgBorder"]
-    > ![Order number is more prominent](media/northwind-orders-canvas-part2/alt-04.png)
+    > ![Change the order number's font size](media/northwind-orders-canvas-part2/alt-04.png)
 
 ## Use a many-to-one relationship
 
@@ -263,24 +259,15 @@ The **Orders** entity has a many-to-one relationship with the **Employees** enti
     > [!div class="mx-imgBorder"]
     > ![Select the Employee data card](media/northwind-orders-canvas-part2/employee-01.png)
 
-1. In the **Advanced** tab of the right-hand pane, unlock the card:
+1. In the **Advanced** tab of the right-hand pane, unlock the data card so that you can edit formulas that were previously read-only:
 
     > [!div class="mx-imgBorder"]
     > ![Unlock the Employee data card](media/northwind-orders-canvas-part2/employee-02.png)
 
-    You can edit formulas that were previously read-only:
-
-    > [!div class="mx-imgBorder"]
-    > ![Write access to formulas](media/northwind-orders-canvas-part2/employee-03.png)
-
-1. Resize the combo box within the data card to make room for the employee picture:
+1. In the data card, reduce the width of the combo box to make room for the employee picture:
 
     > [!div class="mx-imgBorder"]
     > ![Resize the combo-box control](media/northwind-orders-canvas-part2/employee-03b.png)
-
-1. In the **Tree view** pane, confirm the name of the combo box.
-
-    If you followed the steps in this topic exactly, the control is named **ComboBox1**. Otherwise, the name might end with a different number, or you might have renamed the control.
 
 1. On the **Insert** tab, select **Media** > **Image**:
 
@@ -300,7 +287,7 @@ The **Orders** entity has a many-to-one relationship with the **Employees** enti
 1. Set the **Image** property of the image to this formula, replacing the number at the end of DataCardValue if necessary:
 
     ```powerapps-dot
-    DataCardValue1.Selected.Picture
+    DataCardValue7.Selected.Picture
     ```
 
     > [!div class="mx-imgBorder"]
@@ -366,7 +353,7 @@ The **Orders** entity has a many-to-one relationship with the **Employees** enti
     > [!div class="mx-imgBorder"]
     > ![saving changes](media/northwind-orders-canvas-part2/save-submit.gif)
 
-## Add a cancel icon
+## Add a Cancel icon
 
 1. On the **Insert** tab, select **Icons** > **Cancel**:
 
@@ -470,7 +457,7 @@ The **Orders** entity has a many-to-one relationship with the **Employees** enti
     > [!div class="mx-imgBorder"]
     > ![Set the Add icon's DisabledColor property](media/northwind-orders-canvas-part2/save-17.png)
 
-    The user can create an order if they have saved or canceled all changes to an existing order (and they haven't selected the Add icon but made no changes):
+    The user can create an order if they make no changes or they save or cancel any changes they've made. (If the user selects this icon, they can't select it again until they make one or more changes and then save or cancel those changes):
 
     > [!div class="mx-imgBorder"]
     > ![Create an order](media/northwind-orders-canvas-part2/save-new.gif)

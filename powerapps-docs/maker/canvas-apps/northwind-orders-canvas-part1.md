@@ -18,18 +18,17 @@ search.app:
 
 Follow step-by-step instructions to create an order gallery in a canvas app for managing fictitious data in the Northwind Traders database. This topic is part of a series that explains how to build a business app on relational data in Common Data Service. For best results, explore these topics in this sequence:
 
-1. Create an order gallery in a canvas app (**this topic**).
-1. [Create a summary form in a canvas app](northwind-orders-canvas-part2.md).
-1. [Create a details gallery in a canvas app](northwind-orders-canvas-part3.md).
+1. Create an order gallery (**this topic**).
+1. [Create a summary form](northwind-orders-canvas-part2.md).
+1. [Create a details gallery](northwind-orders-canvas-part3.md).
 
 > [!div class="mx-imgBorder"]
 > ![Definition of screen areas](media/northwind-orders-canvas-part1/orders-parts.png)
 
 ## Prerequisites
 
-Before you start this topic, you must [install the Northwind Traders database and apps](northwind-install.md).
-
-Take a moment to read through the [overview of the canvas app for Northwind Traders](northwind-orders-canvas-overview.md)
+1. [Install the Northwind Traders database and apps](northwind-install.md).
+1. Take a moment to read through the [overview of the canvas app for Northwind Traders](northwind-orders-canvas-overview.md).
 
 ## Create a blank app
 
@@ -55,6 +54,8 @@ Take a moment to read through the [overview of the canvas app for Northwind Trad
 
         > [!div class="mx-imgBorder"]
         > ![List of experimental features](media/northwind-orders-canvas-part1/start-04.png)
+
+1. In the upper-left corner, select the back arrow to return to the blank canvas.
 
 ## Add the data
 
@@ -87,6 +88,8 @@ Take a moment to read through the [overview of the canvas app for Northwind Trad
 
     Each field has a **Display name** and a **Name**, which is sometimes called the logical name. Both names refer to the same thing. In general, you'll use the display name when you build an app, but some cases require the more cryptic **Name**, as noted in a procedure.
 
+1. In PowerApps Studio, close the **Data** pane by selecting the close icon (x) in its upper-right corner.
+
 ## Display the list of orders
 
 1. On the **Insert** tab, select **Gallery** > **Blank vertical** to add a [**Gallery**](controls/control-gallery.md) control in which the list of orders will appear.
@@ -117,10 +120,9 @@ Take a moment to read through the [overview of the canvas app for Northwind Trad
 
     Two [**Label**](controls/control-text-box.md) controls are added in the gallery's template. By default, these controls show two columns of the **Orders** entity, which you'll change next. The gallery's template is replicated vertically for each record in the entity.
 
-1. In the **Data** pane, select **Title1** (or select the upper label in the gallery's template):
+1. On the **Properties** tab of the right-hand pane, select **Edit** (next to **Fields**) to open the **Data** pane.
 
-    > [!div class="mx-imgBorder"]
-    > ![Select title label](media/northwind-orders-canvas-part1/orders-05.png)
+1. In the **Data** pane, select **Title1** (or select the upper label in the gallery's template).
 
 1. In the formula bar, set the label's **Text** property to this expression:
 
@@ -156,6 +158,8 @@ Take a moment to read through the [overview of the canvas app for Northwind Trad
     > [!div class="mx-imgBorder"]
     > ![List of relationships](media/northwind-orders-canvas-part1/orders-09.png)
 
+1. Close the **Data** pane by selecting the close icon (x) in its upper-right corner.
+
 ## Show each order's status
 
 In this procedure, you'll add space in the gallery for a label and configure it to show each order's status in a different color based on the data.
@@ -175,7 +179,7 @@ In this procedure, you'll add space in the gallery for a label and configure it 
     > [!div class="mx-imgBorder"]
     > ![Add a label](media/northwind-orders-canvas-part1/status-03.png)
 
-1. Resize the new control, and move it to the right of the **Title1** label:
+1. Move the new label to the right of the **Title1** label:
 
     > [!div class="mx-imgBorder"]
     > ![Move and resize a label](media/northwind-orders-canvas-part1/status-04.png)
@@ -189,14 +193,14 @@ In this procedure, you'll add space in the gallery for a label and configure it 
     > [!div class="mx-imgBorder"]
     > ![Set the Text property](media/northwind-orders-canvas-part1/status-05.png)
 
-    In the **Orders** entity, the **'Order Status'** field holds a value from the **Orders Status** option set. An option set is similar to an enumeration in other programming tools. Each set of options is defined in the database, so users can't specify an option that isn't part of the set. The **Orders Status** option set is also global, not local, so it can be used in other entities:
+    In the **Orders** entity, the **Order Status** field holds a value from the **Orders Status** option set. An option set is similar to an enumeration in other programming tools. Each set of options is defined in the database, so users can specify only those options that are in the set. The **Orders Status** option set is also global, not local, so you can use it in other entities:
 
     > [!div class="mx-imgBorder"]
     > ![Orders Status option set](media/northwind-orders-canvas-part1/status-06.png)
 
     Each option in a set has a name that appears if you show it in a label. These names can be localized, and the app recognizes the same option whether an English user selects **Apple**, a French user selects **Pomme**, or a Spanish user selects **Manzana**. For this reason, you can't create a formula that relies on a hard-coded string for an option, as this topic demonstrates later.
 
-    In formulas, you must surround **'Order Status'** with single quotes because it contains a space. However, that name functions the same way as any other name in PowerApps, such as **Customer** or **Company**, does.
+    In formulas, you must surround **Order Status** with single quotes because it contains a space. However, that name functions the same way as any other name in PowerApps, such as **Customer** or **Company**, does.
 
 1. On the **Home** tab, increase the font size of the status label to 20 points, and right align the text:
 
@@ -233,7 +237,7 @@ In this procedure, you'll add space in the gallery for a label and configure it 
     > [!div class="mx-imgBorder"]
     > ![Add a label](media/northwind-orders-canvas-part1/aggregate-02.png)
 
-1. Resize the new label, and move it to the right of the customer label:
+1. Move the new label so it appears under the status label:
 
     > [!div class="mx-imgBorder"]
     > ![Resize and move the new label](media/northwind-orders-canvas-part1/aggregate-03.png)
@@ -260,7 +264,7 @@ In this procedure, you'll add space in the gallery for a label and configure it 
 
 1. Move the gallery to the left edge of the screen, and decrease the gallery's width to close up some space.
 
-1. Increase the gallery's height so that it's almost as tall as the screen, but leave a small buffer at the top for a title bar, which you'll add at the start of the next topic:
+1. Increase the gallery's height so that it's almost as tall as the screen, but leave a little room at the top for a title bar, which you'll add at the start of the next topic:
 
     > [!div class="mx-imgBorder"]
     > ![Move and resize the gallery](media/northwind-orders-canvas-part1/aggregate-06.png)
