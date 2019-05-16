@@ -18,8 +18,6 @@ search.app:
 
 Follow step-by-step instructions to create an order gallery in a canvas app for managing fictitious data in the Northwind Traders database. This topic is part of a series that explains how to build a business app on relational data in Common Data Service. For best results, explore these topics in this sequence:
 
-1. [Install Northwind Traders database and apps](northwind-install.md).
-1. [Overview of the canvas app for Northwind Traders](northwind-orders-canvas-overview.md).
 1. Create an order gallery in a canvas app (**this topic**).
 1. [Create a summary form in a canvas app](northwind-orders-canvas-part2.md).
 1. [Create a details gallery in a canvas app](northwind-orders-canvas-part3.md).
@@ -27,9 +25,11 @@ Follow step-by-step instructions to create an order gallery in a canvas app for 
 > [!div class="mx-imgBorder"]
 > ![Definition of screen areas](media/northwind-orders-canvas-part1/orders-parts.png)
 
-## Prerequisite
+## Prerequisites
 
-Before you start this topic, you must install the database as this topic described earlier.
+Before you start this topic, you must [install the Northwind Traders database and apps](northwind-install.md).
+
+Take a moment to read through the [overview of the canvas app for Northwind Traders](northwind-orders-canvas-overview.md)
 
 ## Create a blank app
 

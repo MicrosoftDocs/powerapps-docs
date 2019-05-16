@@ -16,9 +16,14 @@ search.app:
 ---
 # Overview of the canvas app for Northwind Traders
 
-Learn about the canvas app for managing relational data in the Northwind Traders database that you [installed in your environment](northwind-install.md). In this topic, discover how an app user shows and manages data in the app, which types of data drive the app, and what relationships between those types of data were created for you to demonstrate fundamental concepts. As the next section describes, follow step-by-step instructions in other topics to build this app from scratch, thereby gaining hands-on experience to reinforce the underlying principles.
+Learn about the canvas app for managing relational data in the Northwind Traders database that you [installed in your environment](northwind-install.md).  Then follow step-by-step instructions in subsequent topics to build this app from scratch, thereby gaining hands-on experience working with relational data.
 
-In a single screen, the app user can show, update, create, and delete orders on a tablet device.
+In this topic:
+- Discover how an app user shows and manages relational data in the app
+- Which types of data drive the app 
+- How relationships between those types of data were created
+
+In a single screen, the app user can show, update, create, and delete orders.
 
 > [!div class="mx-imgBorder"]
 > ![Complete canvas app](media/northwind-orders-canvas-part1/orders-finished.png)
@@ -31,7 +36,7 @@ On the left edge of the app, a gallery shows a list of orders, including the ord
 
 ### Summary form
 
-In the upper-right corner, a form summarizes whatever order the user selected in the order gallery. The summary includes much of the same information as that gallery does, but the summary also shows the dates when the order was created and paid, as well as the name and the picture of the employee who managed the order. The user can change the data in the form, save those changes, cancel them, or delete the order by selecting an icon near the right edge of the title bar. More information: [Create the summary form](northwind-orders-canvas-part2.md).
+In the upper-right corner, a form summarizes the order the user selected in the order gallery. The summary includes much of the same information as that gallery does, but the summary also shows the dates when the order was created and paid, as well as the name and the picture of the employee who managed the order. The user can change the data in the form, save those changes, cancel them, or delete the order by selecting an icon near the right edge of the title bar. More information: [Create the summary form](northwind-orders-canvas-part2.md).
 
 ### Details gallery
 
@@ -45,7 +50,7 @@ In the lower-right corner, another gallery shows information about which product
 To create this app, you'll show data from five entities and an option set. In fact, most areas of this app show data from multiple entities. For example, the orders gallery contains this information:
 
 - The order number is a field in the **Orders** entity.
-- The status is an option in the **Orders Status** option set.
+- The status is another field in the **Orders** entity, an option from the **Orders Status** option set.
 - The customer name is a field in the **Customers** entity.
 - The total cost is calculated based on data in the **Order Details** entity.
 
@@ -62,8 +67,8 @@ You can show data from different sources (for example, entities) in the same gal
 
 For example, information about the customer and the employee for each order resides in the **Customers** and **Employees** entities. Therefore, the **Orders** entity has many-to-one relationships with those entities because of these requirements:
 
-- Each customer can place more than one order, but each order can be placed by only one customer.
-- Each employee can manage more than one order, but each order can be managed by only one employee.
+- There are many orders, each of which can be placed by a single customer.
+- There are many orders, each of which can be managed by a single employee. 
 
 Each order also has one or more line items that represent the products that the order contains and their quantities. Each line item is a record in the **Order Details** entity, which pulls information about each product from the **Order Products** entity. Each detail identifies only one product, but each product can appear in multiple details. Therefore, the **Order Details** entity has a many-to-one relationship with the **Order Products** entity.
 
@@ -71,13 +76,13 @@ Each order also has one or more line items that represent the products that the 
 
 Each order can contain multiple line items, but each line item relates to only one order. Therefore, the **Orders** entity has a one-to-many relationship with the **Order Details** entity.
 
-### Dot notation
+### Dot notation for relationships 
 
-To show data based on a relationship between entities, you create a formula that uses dot notation in a practice that's known as "walking the relationship." For example, each record in the **Orders** entity pulls information from the **Customers** entity so that the list of orders can show the customer names. In the list of orders, you configure this behavior by setting the **Text** property of a label to this expression:<br>`ThisItem.Customer.Company`
+To show data based on a relationship between entities, you can use the dot property selector to walk across a relationship from one entity to another.  For example, each record in the **Orders** entity pulls information from the **Customers** entity so that the list of orders can show the customer names. In the list of orders, you configure this behavior by setting the **Text** property of a label to this expression:<br>`ThisItem.Customer.Company`
 
 **ThisItem** specifies a record in the **Orders** entity and pulls information from the **Customers** entity about the customer who placed the order. In this case, the expression specifies that the customer's company name appears. However, the entire record for that customer is pulled, so you could just as easily show, for example, an email address for that customer instead.
 
-As another example of "walking a relationship," you can specify that a gallery should show records in one entity based on a record that the user selected in another gallery and that's in another entity. To show the order details, you'll set a gallery's **Items** property to this expression:<br>`Gallery1.Selected.'Order Details'`
+As another example of walking from one entity to another, you can specify that a gallery should show records in one entity based on a record that the user selected in another gallery and that's in another entity. To show the order details, you'll set a gallery's **Items** property to this expression:<br>`Gallery1.Selected.'Order Details'`
 
 In this case, **Gallery1.Selected** specifies a record in the **Orders** entity, just as **ThisItem** did in the previous example. However, this expression doesn't pull just one record as the previous expression did. Instead, it pulls an entire table of records to show the name and per-unit cost of each product (as reflected in the **Order Products** entity) and the quantity (as reflected in the **Order Details** entity).
 
