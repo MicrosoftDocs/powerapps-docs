@@ -82,7 +82,7 @@ When going back, the inverse transition is used by default.  For example, if **C
 
 1. Add a second screen.  
 
-1. Set the **Fill** property of the second screen to the formula `**Gray**`. 
+1. Set the **Fill** property of the second screen to the formula `Gray`. 
 
 4. Add a button and set its **[OnSelect](../controls/properties-core.md)** property to this formula:
 
@@ -90,7 +90,9 @@ When going back, the inverse transition is used by default.  For example, if **C
     Navigate( Screen1, ScreenTransition.Cover )
     ```
 
-5. Hold down the **Alt** key and select the button.<br>**Screen1** appears with a white background through a cover to the left transition.
+5. Hold down the **Alt** key and select the button.
+
+    **Screen1** appears with a white background through a cover to the left transition.
 
 6. Add a button to **Screen1**, and set its **OnSelect** property to this formula:
 
@@ -98,7 +100,9 @@ When going back, the inverse transition is used by default.  For example, if **C
     Back()
     ```
 
-7. Hold down the **Alt** key and select the button.<br>The second screen appears with a gray background through an uncover to the right transition, the inverse of **Cover**.  
+7. Hold down the **Alt** key and select the button.
+ 
+    The second screen appears with a gray background through an uncover to the right transition, the inverse of **Cover**.  
 
 8. Press the button either screen to repeatedly bounce back and fourth.
 
