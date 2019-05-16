@@ -48,7 +48,7 @@
       - name: Actions on visualizations (charts)
         href: actions-visualizations-charts.md
       - name: Create a visualization (chart)
-        href: create-visualization-chart.md
+        href: create-visualization-chart.md      
 - name: Apply business logic using client scripting
   href: client-scripting.md
   items:
