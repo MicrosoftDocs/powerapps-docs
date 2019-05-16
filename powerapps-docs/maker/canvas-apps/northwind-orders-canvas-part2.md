@@ -19,18 +19,18 @@ search.app:
 
 Follow step-by-step instructions to create a summary form in a canvas app for managing fictitious data in the Northwind Traders database. This topic is part of a series that explains how to build a business app on relational data in Common Data Service. For best results, explore these topics in this sequence:
 
-1. [Install Northwind Traders database and apps](northwind-install.md).
-1. [Overview of the canvas app for Northwind Traders](northwind-orders-canvas-overview.md).
-1. [Create an order gallery in a canvas app](northwind-orders-canvas-part1.md).
-1. Create a summary form in a canvas app (**this topic**).
-1. [Create a details gallery in a canvas app](northwind-orders-canvas-part3.md).
+1. [Create an order gallery](northwind-orders-canvas-part1.md).
+2. Create a summary form (**this topic**).
+3. [Create a details gallery](northwind-orders-canvas-part3.md).
 
 > [!div class="mx-imgBorder"]
 > ![Definition of screen areas](media/northwind-orders-canvas-part1/orders-parts.png)
 
 ## Prerequisites
 
-Before you start this topic, you must install the database as described earlier in this topic. You must then either create the order gallery or open the **Northwind Orders (Canvas), Start Part 2** app, which already contains that gallery.
+1. [Install the Northwind Traders database and apps](northwind-install.md).
+1. Take a moment to review the [overview of the canvas app for Northwind Traders](northwind-orders-canvas-overview.md).
+1. [Create the order gallery](northwind-orders-canvas-part1.md) yourself, or open the **Northwind Orders (Canvas), Start Part 2** app, which already contains that gallery.
 
 ## Add a title bar
 
@@ -123,7 +123,7 @@ In this section, you'll add controls to show a summary of any order that the use
     > [!div class="mx-imgBorder"]
     > ![Add five more fields to the Edit form control](media/northwind-orders-canvas-part2/form-07.png)
 
-1. At the bottom of the **Fields** pane, select **Add**.
+1. At the bottom of the **Fields** pane, select **Add**, and then close the **Fields** pane.
 
     The form shows seven fields:
 
@@ -134,9 +134,9 @@ In this section, you'll add controls to show a summary of any order that the use
 
     1. On the **View** tab, select **Data sources**.
     1. In the **Data** pane, select **Data sources**.
-    1. Next to **Orders**, select the ellipsis (...), and then select **Refresh**.
+    1. Next to **Orders**, select the ellipsis (...), select **Refresh**, and then close the **Data** pane.
 
-1. In the **Properties** tab of the right-hand pane, change the number of columns in the form from 3 to 12.
+1. With the form selected, change the number of columns in the form from 3 to 12 in the **Properties** tab of the right-hand pane.
 
     This step adds flexibility as you arrange the fields:
 
@@ -203,9 +203,7 @@ In this example, you don't need the time portions of the date fields because tha
 
 ## Connect the list of orders
 
-1. In the **Tree view** pane, select the form to more easily find the name of the order gallery.
-
-    If you followed the steps in the previous topic exactly, the gallery is named **Gallery1**. Otherwise, the name might end in a different number, or you might have renamed the gallery yourself.
+1. In the **Tree view** pane, select the form to more easily find the name of the order gallery, and ensure than the order gallery is named **Gallery1** (renaming it if necessary).
 
 1. Set the form's **Item** property to this expression, replacing the name of the gallery if necessary:
 

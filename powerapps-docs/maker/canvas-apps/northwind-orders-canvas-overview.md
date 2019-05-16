@@ -16,12 +16,13 @@ search.app:
 ---
 # Overview of the canvas app for Northwind Traders
 
-Learn about the canvas app for managing relational data in the Northwind Traders database that you [installed in your environment](northwind-install.md).  Then follow step-by-step instructions in subsequent topics to build this app from scratch, thereby gaining hands-on experience working with relational data.
+Learn about the canvas app for managing relational data in the Northwind Traders database that you [installed in your environment](northwind-install.md). Then follow step-by-step instructions in subsequent topics to build this app from scratch, thereby gaining hands-on experience working with relational data.
 
-In this topic:
-- Discover how an app user shows and manages relational data in the app
-- Which types of data drive the app 
-- How relationships between those types of data were created
+In this topic, discover:
+
+- How an app user shows and manages relational data in the app.
+- Which types of data drive the app.
+- How relationships between those types of data were created.
 
 In a single screen, the app user can show, update, create, and delete orders.
 
@@ -36,7 +37,7 @@ On the left edge of the app, a gallery shows a list of orders, including the ord
 
 ### Summary form
 
-In the upper-right corner, a form summarizes the order the user selected in the order gallery. The summary includes much of the same information as that gallery does, but the summary also shows the dates when the order was created and paid, as well as the name and the picture of the employee who managed the order. The user can change the data in the form, save those changes, cancel them, or delete the order by selecting an icon near the right edge of the title bar. More information: [Create the summary form](northwind-orders-canvas-part2.md).
+In the upper-right corner, a form summarizes the order that the user selected in the order gallery. The summary includes much of the same information as that gallery does, but the summary also shows the dates when the order was created and paid, as well as the name and the picture of the employee who managed the order. The user can change the data in the form, save those changes, cancel them, or delete the order by selecting an icon near the right edge of the title bar. More information: [Create the summary form](northwind-orders-canvas-part2.md).
 
 ### Details gallery
 
