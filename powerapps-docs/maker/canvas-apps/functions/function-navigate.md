@@ -24,9 +24,9 @@ Most apps contain multiple screens.  Use the **Back** and **Navigate** function 
 
 [Context variables](../working-with-variables.md#use-a-context-variable) are also preserved when a user navigates between screens. You can use **Navigate** to set one or more context variables for the screen that the formula will display, which is the only way to set a context variable from outside the screen. You can use this approach to pass parameters to a screen. If you've used another programming tool, this approach is similar to passing parameters to procedures.
 
-## Description
+Both functions can only be used within a [behavior formula](../working-with-formulas-in-depth.md).
 
-### Navigate
+## Navigate
 In the first argument, specify the name of the screen to display.  
 
  In the second argument, specify how the old screen changes to the new screen:
@@ -44,20 +44,16 @@ You can use **Navigate** to create or update context variables of the new screen
 
 Set the **[OnHidden](../controls/control-screen.md)** property of the old screen, the **[OnVisible](../controls/control-screen.md)** property of the new screen, or both to make additional changes during the transition. The **App.ActiveScreen** property will be updated to reflect the change.
 
-### Back
+**Navigate** normally returns **true** but returns **false** if there is a problem with one of its arguments.
+
+## Back
 The **Back** function returns to the screen that was most recently displayed. 
 
-For each **Navigate**, a stack of screen transitions is recorded within the running app.  You can use successive **Back** calls to return all the way to the first screen that was displayed when the app was started.  
+For each **Navigate**, a record of the screens displayed and their transitions is kept within the running app.  You can use successive **Back** calls to return all the way to the first screen that was displayed when the app was started.  
 
-The screen transition is also recorded.  When going back, by default the inverse transition is used.  For example, if **CoverRight** was used to navigate to a screen, then **Back** will use **UnCover** to return (which is to the left).  **Fade** and **None** use themselves as their inverse.    
+When going back, the inverse transition is used by default.  For example, if **CoverRight** was used to navigate to a screen, then **Back** will use **UnCover** to return (which is to the left).  **Fade** and **None** are their own inverses.  Pass an optional argument to **Back** to force a specific transition.
 
-Pass an optional argument to **Back** to force a specific transition.
-
-### Other details
-
-**Back** normally returns **true** but returns **false** if the user is on the first screen shown and there is no previous screen.  **Navigate** normally returns **true** but returns **false** if there is a problem with one of its arguments.
-
-You can use these functions only within a [behavior formula](../working-with-formulas-in-depth.md).
+**Back** normally returns **true** but returns **false** if the user is on the first screen shown and there is no previous screen.  
 
 ## Syntax
 **Back**( [ *Transition* ] )
@@ -78,6 +74,8 @@ You can use these functions only within a [behavior formula](../working-with-for
 | **Navigate( Details, ScreenTransition.Fade )** |Displays the **Details** screen with a **Fade** transition.  No value of a context variable is changed. |The current screen fades away to show the **Details** screen. |
 | **Navigate( Details, ScreenTransition.Fade, {&nbsp;ID:&nbsp;12&nbsp;} )** |Displays the **Details** screen with a **Fade** transition, and updates the value of the **ID** context variable to **12**. |The current screen fades away to show the **Details** screen, and the context variable **ID** on that screen is set to **12**. |
 | **Navigate( Details, ScreenTransition.Fade, {&nbsp;ID:&nbsp;12&nbsp;,&nbsp;Shade:&nbsp;Color.Red&nbsp;} )** |Displays the **Details** screen with a **Fade** transition. Updates the value of the **ID** context variable to **12**, and updates the value of the **Shade** context variable to **Color.Red**. |The current screen fades away to show the **Details** screen. The context variable **ID** on the **Details** screen is set to **12**, and the context variable **Shade** is set to **Color.Red**. If you set the **Fill** property of a control on the **Details** screen to **Shade**, that control would display as red. |
+| **Back()** | Displays the previous screen with the default return transition. | Displays the previous screen.  The transition used is the inverse of the transition used to display the current screen. |
+| **Back( ScreenTransition.Cover )** |  Displays the previous screen with the **Cover** transition. | Displays the previous screen.  The transition used to display the current screen is ignored and the **Cover** transition is used instead. |
 
 ### Step-by-step
 1. Name the default screen **DefaultScreen**, add a label to it, and set the **[Text](../controls/properties-core.md)** property of that label so that it shows **Default**.
