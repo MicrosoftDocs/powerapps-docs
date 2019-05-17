@@ -111,7 +111,7 @@ Add a **Combo box** control above the gallery, and set these properties of the n
 - **SelectMultiple**: `false`
 
 > [!div class="mx-imgBorder"]
-> ![Added combo box control above gallery with Items property set to Users](media/working-with-references/filter-insert-combobox.png)
+> ![Added combo-box control above gallery with Items property set to Users](media/working-with-references/filter-insert-combobox.png)
 
 To filter the gallery by a specific user selected from this combo box, set the gallery's **Items** property to this formula.
 
@@ -120,7 +120,7 @@ Filter( Accounts, Owner = ComboBox1.Selected )
 ```
 
 > [!div class="mx-imgBorder"]
-> ![Filtered gallery based on value set in the combo box control](media/working-with-references/filter-accounts.png)
+> ![Filtered gallery based on value set in the combo-box control](media/working-with-references/filter-accounts.png)
 
 > [!IMPORTANT]
 > The instructions in this topic are accurate if you follow the steps exactly. However, any formula that refers to a control by its name fails if the control has a different name. If you delete and add a control of the same type, the number at the end of the control's name changes. For any formula that shows an error, confirm that it contains the correct names of all controls.
@@ -156,7 +156,7 @@ You can get a little fancier by supporting filtering by either a user or a team.
     ```
 
     > [!div class="mx-imgBorder"]
-    > ![filtered gallery showing all records or a specific user or team](media/working-with-references/filter-combobox.png)
+    > ![Filtered gallery showing all records or a specific user or team](media/working-with-references/filter-combobox.png)
 
 With these changes, you can show all records or filter them based on either a user or a team:
 
@@ -369,7 +369,7 @@ If( IsBlank( ThisItem.'Company Name' ), "",
 With these changes, you can view and change the **Company Name** field in the **Contacts** entity:
 
 > [!div class="mx-imgBorder"]
-> ![Animation showing changing selection in the Contacts based gallery control driving changes in the other controls and form](media/working-with-references/customer-allthree.gif)
+> ![Animation showing changing selection in the Contacts-based gallery control driving changes in the other controls and form](media/working-with-references/customer-allthree.gif)
 
 > [!NOTE]
 > As of this writing, **Customer** lookups have these limitations:
@@ -382,7 +382,7 @@ With these changes, you can view and change the **Company Name** field in the **
 
 The **Regarding** lookup field differs a little from those that you've already worked with in this topic. You'll start by applying the patterns that this topic described earlier, and then you'll learn other tricks.
 
-You can start simply with the **Faxes** entity. This entity has a polymorphic **Regarding** lookup field, which can refer to **Accounts**, **Contacts**, and other entities. You can take the app for **Customers** and modify it for **Faxes**:
+You can start simply with the **Faxes** entity. This entity has a polymorphic **Regarding** lookup field, which can refer to **Accounts**, **Contacts**, and other entities. You can take the app for **Customers** and modify it for **Faxes**.
 
 | Location | **Customer** sample | **Faxes** sample |
 |----------|-----------|------------------|
@@ -414,7 +414,7 @@ If( IsBlank( ThisItem.Regarding ), "",
 After you make these changes, you work with the **Regarding** lookup just as you did the **Owner** and **Customer** lookups:
 
 > [!div class="mx-imgBorder"]
-> ![Animation showing changes in the Faxes based gallery control driving updates to the other controls and form](media/working-with-references/regarding-allthree.gif)
+> ![Animation showing changes in the Faxes-based gallery control driving updates to the other controls and form](media/working-with-references/regarding-allthree.gif)
 
 > [!NOTE]
 > As of this writing, **Regarding** lookups have these limitations:
@@ -461,7 +461,7 @@ To explore this concept in the app:
 1. On the **Properties** tab of the right-hand pane, set the gallery's **Items** to **Accounts**:
 
     > [!div class="mx-imgBorder"]
-    > ![Set items to accounts in property pane](media/working-with-references/activitypointer-accounts.png)
+    > ![Set Items to Accounts in property pane](media/working-with-references/activitypointer-accounts.png)
 
 1. Set the gallery's layout to **Title**, and then set the title field to **Account Name**:
 
@@ -475,7 +475,7 @@ To explore this concept in the app:
     This step returns the filtered list of faxes for a given account:
 
     > [!div class="mx-imgBorder"]
-    > ![Set items property for the faxes based gallery control](media/working-with-references/activitypointer-faxes.png)
+    > ![Set items property for the faxes-based gallery control](media/working-with-references/activitypointer-faxes.png)
 
 1. Set the gallery's layout to **Title and subtitle**, and then set the title field to show the **Subject** field (which might be lowercase **subject**):
 
@@ -501,9 +501,9 @@ The **Activity** entity is special. Whenever you add a record to the **Faxes** e
 You can show all activities by changing only one line in the previous example. Replace `Gallery2.Selected.Faxes` with `Gallery2.Selected.Activities`:
 
 > [!div class="mx-imgBorder"]
-> ![Change of items property for the second gallery, changing from faxes to activities](media/working-with-references/activitypointer-gallery.png)
+> ![Change of Items property for the second gallery, changing from faxes to activities](media/working-with-references/activitypointer-gallery.png)
 
-Records are coming from the **Activity** entity, but you can nevertheless use the **IsType** function to identify which kind of activity they are. Again, before you use **IsType** with an entity type, you must add the data source:
+Records are coming from the **Activity** entity, but you can nevertheless use the **IsType** function to identify which kind of activities they are. Again, before you use **IsType** with an entity type, you must add the data source:
 
 > [!div class="mx-imgBorder"]
 > ![Data pane showing all the entities required for the IsType function](media/working-with-references/activity-datasources.png)
