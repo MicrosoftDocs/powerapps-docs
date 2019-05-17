@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: anneta
-ms.date: 05/05/2019
+ms.date: 05/17/2019
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -21,7 +21,7 @@ When you wrote a research paper in school, you probably provided a list of your 
 
 In canvas apps, you often work with copies of records downloaded from data sources. You use the [**LookUp**](functions/function-filter-lookup.md) and [**Filter**](functions/function-filter-lookup.md) functions and the [**Gallery**](controls/control-gallery.md) control's **Selected** property to identify the specific record that you want. All the records from **Filter** or **Selected** will be of the same entity type, so you can use fields with a simple .*Field* notation. These copies often include reference information so you can use the [**Patch**](functions/function-patch.md) function to update the original source.
 
-Canvas apps also support *record references*. Much like a research-paper reference, a record reference refers to a record without including a complete copy of it. Such a reference can refer to a record in any entity.  Also like research-paper references, you can mix records from different entities in a single column.
+Canvas apps also support *record references*. Much like a research-paper reference, a record reference refers to a record without including a complete copy of it. Such a reference can refer to a record in any entity. Also like research-paper references, you can mix records from different entities in a single column.
 
 Many operations on record references are identical to working with records. You can compare record references to each other and to full records. You can set a record reference's value with the **Patch** function just as you would a lookup with a full record.
 
@@ -45,7 +45,7 @@ Every entity in Common Data Service includes an **Owner** field. This field can'
 
 To show that field in the **Account** entity:
 
-1. Open [this site](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1. Open [this PowerApps site](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 1. In the left navigation bar, select **Data** > **Entities**.
 1. In the list of entities, select **Account**.
 1. In the upper-right corner, open the filter list (which is set to **Default** by default), and then select **All**.
@@ -54,7 +54,7 @@ To show that field in the **Account** entity:
 > [!div class="mx-imgBorder"]
 > ![Owner field on Account entity](media/working-with-references/owner-field.png)
 
-This lookup field can refer to a record from either the **Teams** entity or the **Users** entity. Not every record in these entities have permissions to be an **Owner**; check the supported roles if you run into a problem.
+This lookup field can refer to a record from either the **Teams** entity or the **Users** entity. Not every record in these entities has permissions to be an **Owner**; check the supported roles if you run into a problem.
 
 This graphic shows a simple gallery of **Accounts**, where the **Accounts** entity has been added to the app as a data source:
 
@@ -82,7 +82,7 @@ If( IsType( ThisItem.Owner, [@Teams] ),
 > [!div class="mx-imgBorder"]
 > ![Accounts shown in a Gallery control with Owner field displayed](media/working-with-references/accounts-displayowner.png)
 
-In this formula, the **IsType** function tests the **Owner** field against the **Teams** entity. If it's of that entity type, the **AsType** function casts it to a **Team** record. At this point, you can access all the fields of the **Teams** entity, including **Team Name**, by using *.Field* notation. If **IsType** determines that the **Owner** isn't a record in the **Teams** entity, that field must be a record in the **Users** entity because the **Owner** field is required (can't be *blank*).
+In this formula, the **IsType** function tests the **Owner** field against the **Teams** entity. If it's of that entity type, the **AsType** function casts it to a **Team** record. At this point, you can access all the fields of the **Teams** entity, including **Team Name**, by using *.Field* notation. If **IsType** determines that **Owner** isn't a record in the **Teams** entity, that field must be a record in the **Users** entity because the **Owner** field is required (can't be *blank*).
 
 You're using the [global disambiguation operator](functions/operators.md#disambiguation-operator) for **[@Teams]** and **[@Users]** to ensure that you're using the global entity type. You don't need it in this case, but it's a good habit to form. One-to-many relationships often conflict in the gallery's record scope, and this practice avoids that confusion.
 
@@ -103,7 +103,7 @@ IfError(
 
 ## Filter based on an owner
 
-Congratulations: you've finished the hardest aspect of working with a record reference. Other use cases are more straightforward because they don't access fields of the record. As a case in point, take filtering, which you'll explore in this section.
+Congratulations—you've finished the hardest aspect of working with a record reference. Other use cases are more straightforward because they don't access fields of the record. As a case in point, take filtering, which you'll explore in this section.
 
 Add a **Combo box** control above the gallery, and set these properties of the new control:
 
@@ -143,7 +143,7 @@ You can get a little fancier by supporting filtering by either a user or a team.
     - **Items**: `Teams`
     - **Visible**: `Radio1.Selected.Value = "Teams"`
 
-    The app will display only one combo box at a time, dependending on the state of the radio control. Because they're directly above one another, they'll appear to be the same control that changes its contents.
+    The app displays only one combo box at a time, depending on the state of the radio control. Because they're directly above one another, they'll appear to be the same control that changes its contents.
 
 1. Finally, set the **Items** property of the **Gallery** control to this formula:
 
@@ -320,7 +320,7 @@ A **Customer** lookup field can refer to a record from either the **Accounts** e
 > [!div class="mx-imgBorder"]
 > ![Accounts, Teams, Users, and Contacts entities in the Data pane](media/working-with-references/customer-datasources.png)
 
-The treatment of the **Customer** and **Owner** fields are so similar that you can literally copy the app (**File** > **Save as**, and then specify a different name) and make these simple replacements:
+The treatment of the **Customer** and **Owner** fields is so similar that you can literally copy the app (**File** > **Save as**, and then specify a different name) and make these simple replacements:
 
 | Location | **Owner** sample | **Customer** sample |
 |----------|-----------|------------------|
@@ -349,11 +349,11 @@ Filter( Contacts,
 
 Two important differences between **Customer** and **Owner** require an update to the formulas inside the gallery and the form:
 
-1. One-to-many relationships between **Accounts** and **Contacts** take precedence when you refer to these entity types by name. Instead of **Accounts**, use **\[\@Accounts]**; instead of **Contacts**, use **\[\@Contacts]**. By using the [global disambiguation operator](functions/operators.md#disambiguation-operator) you ensure that you're referring to the entity type in **IsType** and **AsType**. This problem exists only in the record context of the gallery and form controls.
+1. One-to-many relationships between **Accounts** and **Contacts** take precedence when you refer to these entity types by name. Instead of **Accounts**, use **\[\@Accounts]**; instead of **Contacts**, use **\[\@Contacts]**. By using the [global disambiguation operator](functions/operators.md#disambiguation-operator), you ensure that you're referring to the entity type in **IsType** and **AsType**. This problem exists only in the record context of the gallery and form controls.
 
 1. The **Owner** field must have a value, but **Customer** fields can be *blank*. To show the correct result without a type name, test for this case with the [**IsBlank** function](functions/function-isblank-isempty.md), and show an empty text string instead.
 
-Both of these changes are in the same formula, which appears in the custom card in the form, as well as the **Text** property of the gallery's label control:
+Both of these changes are in the same formula, which appears in the custom card in the form, as well as in the **Text** property of the gallery's label control:
 
 ```powerapps-dot
 If( IsBlank( ThisItem.'Company Name' ), "",
