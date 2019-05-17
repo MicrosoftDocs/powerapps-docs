@@ -25,15 +25,17 @@ This article provides details for the data types that canvas apps support. When 
 | **Boolean** | A *true* or *false* value.  Can be used directly in **If**, **Filter** and other functions without a comparison.  | *true* |
 | **Hyperlink** | A text string that holds a hyperlink. | **"http://powerapps.microsoft.com"** |
 | **Currency** | A currency value stored in a floating-point number. Currency values are the same as number values with currency-formatting options.  | **123**<br>**4.56** |
-| **Image** | A [Universal Resource Identifier (URI)](https://en.wikipedia.org/wiki/Uniform_Resource_Identifier)  text string to an image in .jpeg, .png, .svg, .gif, and other common web image formats. | **"appres://blobmanager/7b12ffa2..."** |
+| **Image** | A [Universal Resource Identifier (URI)](https://en.wikipedia.org/wiki/Uniform_Resource_Identifier)  text string to an image in .jpeg, .png, .svg, .gif, and other common web image formats. | **MyImage** added as an app resource<br>**"https://northwindtraders.com/logo.jpg"**<br>**"appres://blobmanager/7b12ffa2..."** |
 | **Color** | A color specification, including an alpha channel. | **Color.Red**<br>**ColorValue( "#102030" )**<br>**RGBA( 255, 128, 0, 0.5 )** | 
 | **Date** | A date without a time, in the time zone of the app's user. | **Date( 2019, 5, 16 )** |
 | **DateTime** | A date with a time, in the time zone of the app's user. | **DateTimeValue( "May 16, 2019 1:23:09 PM" )** |
 | **GUID** | A [Globally Unique Identifier](https://en.wikipedia.org/wiki/Universally_unique_identifier). | **GUID()**<br>**GUID( "123e4567-e89b-12d3-a456-426655440000" )** |
-| **Media** | A URI text string to a video or audio recording. | **"appres://blobmanager/3ba411c..."** |
+| **Media** | A URI text string to a video or audio recording. | **MyVideo** added as an app resource<br>**"https://northwindtraders.com/intro.mp4"**<br>**"appres://blobmanager/3ba411c..."** |
 | **Number** | A floating-point number. | **123**<br>**-4.567**<br>**8.903e121** |
 | **Option set** | A choice from a set of options, backed by a number. This data type combines a numeric value that's stored and used for comparisons with a localizable text label that the app shows. | **ThisItem.OrderStatus** |
-| **Record reference** | A reference to a record in an entity, often used with polymorphic lookups. | **First(Accounts).Owner** |  
+| **Record** | A record of data values. | **{ Company: "Northwind Traders",<br>Staff: 35, <br>NonProfit: false }** |
+| **Record reference** | A reference to a record in an entity, often used with polymorphic lookups. | **First(Accounts).Owner** |
+| **Table** | A table of records.  All of the records must have the same names for their fields with the same data types, with omitted fields being treated as *blank*.  | **Table( { FirstName: "Sidney",<br>LastName: "Higa" }, <br>{ FirstName: "Nancy",<br>LastName: "Anderson" } )**
 | **Time** | A time without a date, in the time zone of the app's user. | **Time( 11, 23, 45 )** |
 | **Text** | A Unicode text string. | **"Hello, World"** |
 | **Two option** | A choice from a set of two options, backed by a Boolean. This data type combines a boolean value that's stored and used for comparisons with a localizable text label that the app shows.  | **ThisItem.Taxable** |
@@ -62,9 +64,25 @@ The underlying JavaScript implementation in your browser or on your device may i
 
 The amount of available memory on your device may impose another limit that's likely lower than 100 MB. To determine whether your app will run within these limits, test common scenarios on all devices on which it should run.
 
+### Image and Media resources
+
+Through the file menu, you can add image, video, and audio files as app resources.  The name of the imported file becomes the resource name in the app.  For example, here we have added the Northwind Traders logo to the app, which is named **nwindlogo**:
+
+![](media/data-types/nwind-resource.png)
+
+And then we can use it in our app by feeding this resource into the [**Image** control's](../controls/control-image.md) **Image** property:
+
+![](media/data-types/nwind-image.png)
+
 ### Images and Media URIs
 
-Images and media are references by a URI text string. For example, the **Image** property of the [**Image**](../controls/control-image.md) control accepts links to images on the web, such as **"https://northwindtraders.com/logo.jpg"**. The property also accepts inline images that use the [data URI scheme](https://en.wikipedia.org/wiki/Data_URI_scheme), as in this example:
+Let's dig a little deeper into that last example.  If we feed **nwindlogo** to a [**Label** contro](../controls/control-text-box.md) we see that it contains a text string:
+
+![](media/data-types/nwind-text.png)
+
+All images and media are referenced by a URI text string, including those for app resources. 
+
+For example, the **Image** property of the **Image** control accepts not only app resources but also links to images on the web, such as **"https://northwindtraders.com/logo.jpg"**. The property also accepts inline images that use the [data URI scheme](https://en.wikipedia.org/wiki/Data_URI_scheme), as in this example:
 
 ```powerapps-dot
 "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAFAQMAAACtnVQoAAAABlBMVEUAAAB0J3UMNU6VAAAAAXRSTlMAQObYZgAAABRJREFUCNdjUGJgCGVg6GgAkkA2AA8/AffqCEBsAAAAAElFTkSuQmCC"
@@ -74,9 +92,11 @@ That URI displays a scaled-up version of two purple diamonds:
 
 ![](media/data-types/double-diamonds.png)
 
-The same is true if you take a picture with the [**Camera**](../controls/control-camera.md) control. The image is held in memory, and the **Photo** property of the control returns a URI to reference the image. For example, you might take a picture, and the camera's **Photo** property might return **"appres://blobmanager/7b12ffa2ea4547e5b3812cb1c7b0a2a0/1"**. You can feed this text string directly to the **Image** property of an image to display the photo that you took.
+The same is true when working with the [**Camera**](../controls/control-camera.md) control.  You can feed an **Image** control directly with the **Photo** property of the **Camera** control and see the last image captured.  Behind the scenes, the image is held in memory, and the **Photo** property of the control returns a URI reference to the image. For example, you might take a picture, and the camera's **Photo** property returns **"appres://blobmanager/7b12ffa2ea4547e5b3812cb1c7b0a2a0/1"**. 
 
 The app might not retrieve images and files stored in databases until it needs to display that information. You can implement that behavior if you reference the image in this form **"appres://datasources/Contacts/table/..."** As in the camera example, you can show this image by feeding this reference to the **Image** property of the image control.
+
+When you save an image or media data type to a database, the actual image or media data is sent in place of the URI reference.  
 
 ## Numbers and Currency
 
@@ -96,7 +116,7 @@ These three data types hold the same information about dates and times. A **Date
 
 Canvas apps express all dates and times in the time zone of the app's user. If necessary, these apps translate dates and times in and out of this time zone when storing and retrieving them.
 
-Canvas apps use the time zone of the browser instead of the user's setting in Common Data Service, as model-driven apps do. These settings typically match, but results will differ if these settings differ.
+Canvas apps use the time zone of the browser or device instead of the user's setting in Common Data Service, as model-driven apps do. These settings typically match, but results will differ if these settings differ.
 
 ### UTC and Time-zone independent
 
@@ -120,7 +140,7 @@ Unix times are the number of seconds since January 1, 1970 00:00:00 UTC, which i
 
 For example, Unix time hit 1,000,000,000 on September 9, 2001, at 01:46:40 UTC. To display 1,000,000,000 as a date/time, multiply it by 1,000 to convert it to milliseconds, and then feed to the [**Text**](function-text.md) function. The formula **Text( 1000000000 * 1000, DateTimeFormat.UTC )** returns the string **2001-09-09T01:46:40.000Z**.
 
-However, the function returns **Saturday, September 8, 2001 18:46:40** if you use the **DateTimeFormat.LongDateTime24** format in a time zone that's eight hours offset from UTC. This result shows the DateTime value correctly based on the local time zone.
+However, the function returns **Saturday, September 8, 2001 18:46:40** if you use the **DateTimeFormat.LongDateTime24** format in a time zone that's -7 hours offset from UTC (7 hours west of UTC). This result shows the DateTime value correctly based on the local time zone.
 
 ### Time values in SQL Server
 
@@ -143,11 +163,11 @@ Both of these data types show their labels in a text-string context. For example
 
 When an app user selects an option and saves that change, the app transmits the data to the database, which stores that data in a representation that's independent of language instead of a label. An option in an option set is transmitted and stored as a number, and an option in a two-option type is transmitted and stored as a Boolean.
 
-The labels are for display purposes only. You can't perform direct comparisons with the labels because they're specific to a language. Instead, each option set has an enumeration that works with the underlying number or Boolean. For example, you can use this formula:
+The labels are for display purposes only. You can't perform direct comparisons with the labels because they're specific to a language. Instead, each option set has an enumeration that works with the underlying number or Boolean. For example, you can't use this formula:
 
-`If( ThisItem.OrderStatus = "Active"...`
+`If( ThisItem.OrderStatus = "Active", ...`
 
-You can't use this formula:
+But you can use this formula:
 
 `If( ThisItem.OrderStatus = OrderStatus.Active, ...`
 
@@ -158,6 +178,10 @@ In addition, two-option values can also behave as Boolean values. For example, a
 You can also use this equivalent formula:
 
 `If( ThisItem.Taxable, ...`
+
+## Records and Tables
+
+The data types described here are the building blocks for **Record** and **Table** compound data types.  More information: [Working with tables](../working-with-tabless.md).
 
 ## Record references
 
