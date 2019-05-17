@@ -15,18 +15,21 @@ search.app:
   - PowerApps
 ---
 # Back and Navigate functions in PowerApps
+
 Changes which screen is displayed.
 
 ## Overview
+
 Most apps contain multiple screens.  Use the **Back** and **Navigate** function to change which screen is displayed. For example, set the **[OnSelect](../controls/properties-core.md)** property of a button to a formula that includes a **Navigate** function if you want to show a different screen when a user selects that button. In that formula, you can specify a visual transition, such as **Fade**, to control how one screen changes to another.  
 
-**Back** and **Navigate** change only which screen is displayed. Screens that aren't currently displayed continue to operate behind the scenes. You can build formulas that refer to properties of controls on another screen. For example, a user can change the value of a slider on one screen, navigate to a different screen that uses that value in a formula, and see how it affects what happens in the new screen.  The user can then navigate back to the original screen and see that the slider has retained its value.
+**Back** and **Navigate** change only which screen is displayed. Screens that aren't currently displayed continue to operate behind the scenes. You can build formulas that refer to properties of controls on other screens. For example, a user can change the value of a slider on one screen, navigate to a different screen that uses that value in a formula, and ascertain how it affects what happens in the new screen. The user can then navigate back to the original screen and confirm that the slider has retained its value.
 
 [Context variables](../working-with-variables.md#use-a-context-variable) are also preserved when a user navigates between screens. You can use **Navigate** to set one or more context variables for the screen that the formula will display, which is the only way to set a context variable from outside the screen. You can use this approach to pass parameters to a screen. If you've used another programming tool, this approach is similar to passing parameters to procedures.
 
-Both functions can only be used within a [behavior formula](../working-with-formulas-in-depth.md).
+You can use either function only within a [behavior formula](../working-with-formulas-in-depth.md).
 
 ## Navigate
+
 In the first argument, specify the name of the screen to display.  
 
  In the second argument, specify how the old screen changes to the new screen:
@@ -44,21 +47,23 @@ You can use **Navigate** to create or update context variables of the new screen
 
 Set the **[OnHidden](../controls/control-screen.md)** property of the old screen, the **[OnVisible](../controls/control-screen.md)** property of the new screen, or both to make additional changes during the transition. The **App.ActiveScreen** property will be updated to reflect the change.
 
-**Navigate** normally returns **true** but returns **false** if there is a problem with one of its arguments.
+**Navigate** normally returns **true** but returns **false** if one of its arguments causes a problem.
 
 ## Back
-The **Back** function returns to the screen that was most recently displayed. 
 
-For each **Navigate**, a record of the screens displayed and their transitions is kept within the running app.  You can use successive **Back** calls to return all the way to the first screen that was displayed when the app was started.  
+The **Back** function returns to the screen that was most recently displayed.
 
-When going back, the inverse transition is used by default.  For example, if **CoverRight** was used to navigate to a screen, then **Back** will use **UnCover** to return (which is to the left).  **Fade** and **None** are their own inverses.  Pass an optional argument to **Back** to force a specific transition.
+For each **Navigate** call, the app tracks the screen that appeared and the transition. You can use successive **Back** calls to return all the way to the screen that appeared when the user started the app.
 
-**Back** normally returns **true** but returns **false** if the user is on the first screen shown and there is no previous screen.  
+When the **Back** function runs, the inverse transition is used by default. For example, if a screen appeared through the **CoverRight** transition, **Back** uses **UnCover** (which is to the left) to return.  **Fade** and **None** are their own inverses. Pass an optional argument to **Back** to force a specific transition.
+
+**Back** normally returns **true** but returns **false** if the user hasn't navigated to another screen since starting the app.
 
 ## Syntax
+
 **Back**( [ *Transition* ] )
 
-* *Transition* - Optional.  The visual transition to use between the current screen and the previous screen. See the list of valid values for this argument earlier in this topic.  By default, the inverse of the transition that was used to reach the current screen is used for the return back. 
+* *Transition* - Optional. The visual transition to use between the current screen and the previous screen. Refer to the list of valid values for this argument earlier in this topic. By default, the transition through which a screen returns is the inverse of the transition through which it appeared.
 
 **Navigate**( *Screen* [, *Transition* [, *UpdateContextRecord* ] ] )
 
@@ -74,37 +79,37 @@ When going back, the inverse transition is used by default.  For example, if **C
 | **Navigate( Details, ScreenTransition.Fade )** |Displays the **Details** screen with a **Fade** transition.  No value of a context variable is changed. |The current screen fades away to show the **Details** screen. |
 | **Navigate( Details, ScreenTransition.Fade, {&nbsp;ID:&nbsp;12&nbsp;} )** |Displays the **Details** screen with a **Fade** transition, and updates the value of the **ID** context variable to **12**. |The current screen fades away to show the **Details** screen, and the context variable **ID** on that screen is set to **12**. |
 | **Navigate( Details, ScreenTransition.Fade, {&nbsp;ID:&nbsp;12&nbsp;,&nbsp;Shade:&nbsp;Color.Red&nbsp;} )** |Displays the **Details** screen with a **Fade** transition. Updates the value of the **ID** context variable to **12**, and updates the value of the **Shade** context variable to **Color.Red**. |The current screen fades away to show the **Details** screen. The context variable **ID** on the **Details** screen is set to **12**, and the context variable **Shade** is set to **Color.Red**. If you set the **Fill** property of a control on the **Details** screen to **Shade**, that control would display as red. |
-| **Back()** | Displays the previous screen with the default return transition. | Displays the previous screen.  The transition used is the inverse of the transition used to display the current screen. |
-| **Back( ScreenTransition.Cover )** |  Displays the previous screen with the **Cover** transition. | Displays the previous screen.  The transition used to display the current screen is ignored and the **Cover** transition is used instead. |
+| **Back()** | Displays the previous screen with the default return transition. | Displays the previous screen through the inverse transition of the transition through which the current screen appeared. |
+| **Back( ScreenTransition.Cover )** |  Displays the previous screen with the **Cover** transition. | Displays the previous screen through the **Cover** transition, regardless of the transition through which the current screen appeared. |
 
 ### Step-by-step
-1. Create a new app.  It will include a blank screen named **Screen1**.
 
-1. Add a second screen.  
+1. Create a blank app, and then add a screen to it.
 
-1. Set the **Fill** property of the second screen to the formula `Gray`. 
+    The app contains two blank screens: **Screen1** and **Screen2**.
 
-4. Add a button and set its **[OnSelect](../controls/properties-core.md)** property to this formula:
+1. Set the **Fill** property of **Screen2** to the value `Gray`.
+
+1. On **Screen2**, add a button, and set its **[OnSelect](../controls/properties-core.md)** property to this formula:
 
     ```powerapps-dot
     Navigate( Screen1, ScreenTransition.Cover )
     ```
 
-5. Hold down the **Alt** key and select the button.
+1. While holding down the **Alt** key, select the button.
 
-    **Screen1** appears with a white background through a cover to the left transition.
+    **Screen1** appears with a white background through a transition that covers to the left.
 
-6. Add a button to **Screen1**, and set its **OnSelect** property to this formula:
+1. On **Screen1**, add a button, and set its **OnSelect** property to this formula:
 
     ```powerapps-dot
     Back()
     ```
 
-7. Hold down the **Alt** key and select the button.
- 
-    The second screen appears with a gray background through an uncover to the right transition, the inverse of **Cover**.  
+1. While holding down the **Alt** key, select the button.
 
-8. Press the button either screen to repeatedly bounce back and fourth.
+    The second screen appears with a gray background through a transition that uncovers to the right (the inverse of **Cover**).
+
+1. Select the button on each screen repeatedly to bounce back and forth.
 
 [Another example](../add-screen-context-variables.md)
-
