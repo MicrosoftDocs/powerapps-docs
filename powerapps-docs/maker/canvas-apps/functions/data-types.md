@@ -20,8 +20,6 @@ Information flows through an app in small, discrete pieces.  For example, a **Bi
 
 This article provides details for the data types supported by canvas apps.  When connecting to external data sources, all the data types of the data source are are mapped to canvas data types.
 
-## Data type list
-
 | Data type | Description | Examples |
 |-----------|-------------|---------|
 | **Boolean** | A *true* or *false* value.  Can be used directly in **If**, **Filter** and other functions without a comparison.  | *true* |
@@ -70,9 +68,9 @@ Because floating point arithmetic is approximate it can sometimes give unexpecte
 
 Currencies are often stored and calculations performed using decimal math, with a smaller range but greater control over the precision.  By default, currencies will be mapped in and out of floating point values when used in a Canvas app and therefore the result may be different than calculations that are done in a native decimal data type.  As with large integers, if this will cause problems, you may want to use a Text data type to work with these values.
 
-## Dates and times
+## Dates and Times
 
-Date only, time only, and date time values are supported.  Under the covers they all hold the same date and time information, the distinction between them is used for default formatting and control selection.
+Canvas apps have three different types that hold dates and times.  Under the covers they all hold the same date and time information, the distinction between them is used for default formatting and control selection.
 
 ### Time zones
 
