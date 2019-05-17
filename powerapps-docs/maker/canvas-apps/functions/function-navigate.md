@@ -84,7 +84,9 @@ When the **Back** function runs, the inverse transition is used by default. For 
 
 ### Step-by-step
 
-1. Create a blank app, and then add a screen to it.
+1. Create a blank app.
+
+1. Add a second screen to it.
 
     The app contains two blank screens: **Screen1** and **Screen2**.
 
