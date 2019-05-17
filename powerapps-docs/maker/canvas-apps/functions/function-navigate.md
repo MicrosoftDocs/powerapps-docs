@@ -47,7 +47,7 @@ You can use **Navigate** to create or update context variables of the new screen
 
 Set the **[OnHidden](../controls/control-screen.md)** property of the old screen, the **[OnVisible](../controls/control-screen.md)** property of the new screen, or both to make additional changes during the transition. The **App.ActiveScreen** property will be updated to reflect the change.
 
-**Navigate** normally returns **true** but returns **false** if one of its arguments causes a problem.
+**Navigate** normally returns **true** but will return **false** if an error is encountered.
 
 ## Back
 
