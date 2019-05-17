@@ -46,7 +46,7 @@ All data types can have a value of *blank*, in other words no value.  The term "
 
 Use the **Blank** function with **Set** or **Patch** to set a variable or field to *blank*.  For example, **Set( x, Blank() )** removes any value in the global variable **x**.  
 
-Use the [**IsBlank** function](functions/function-isblank-isempty.md) to test for a *blank* value.  Use the [**Coalesce** function](functions/function-isblank-isempty.md) function to replace possible *blank* values with a non-*blank* value. 
+Use the [**IsBlank** function](function-isblank-isempty.md) to test for a *blank* value.  Use the [**Coalesce** function](function-isblank-isempty.md) function to replace possible *blank* values with a non-*blank* value. 
 
 Because all data types support *blank*, the Boolean and Two option data types effectively have three possible values.
 
@@ -106,11 +106,11 @@ SQL Server has **Datetime2** and other date/time data types that do not include 
 
 ### Numeric equivalents
 
-Under the covers, all date times values hold the number of milliseconds since January 1, 1970 00:00:00 UTC in your local time zone. Use the [**Value** function](functions/function-value.md) to retrieve this numerical value. Under the covers, the JavaScript data object is used to hold the values.  
+Under the covers, all date times values hold the number of milliseconds since January 1, 1970 00:00:00 UTC in your local time zone. Use the [**Value** function](function-value.md) to retrieve this numerical value. Under the covers, the JavaScript data object is used to hold the values.  
 
 Because it is in your local time zone, for most parts of the world the formula **Value( Date( 1970, 1, 1 ) )** will not return zero.  For example, in a time zone that is offset by 8 hours from UTC, this number will be 28,800,000 milliseconds, the equivalent of 8 hours.
 
-Direct adding and subtracting of date and time values should be avoided because of the impact of time zones.  Either use the **Value** function first to convert to milliseconds first or use the [**DateAdd**](functions/function-dateadd-datediff.md) and [**DateDiff**](functions/function-dateadd-datediff.md) functions to add or subtract from one of these values.
+Direct adding and subtracting of date and time values should be avoided because of the impact of time zones.  Either use the **Value** function first to convert to milliseconds first or use the [**DateAdd**](function-dateadd-datediff.md) and [**DateDiff**](function-dateadd-datediff.md) functions to add or subtract from one of these values.
 
 ### Converting Unix times
 
