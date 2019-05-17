@@ -51,8 +51,8 @@ To show that field in the **Account** entity:
 1. In the upper-right corner, open the filter list (which is set to **Default** by default), and then select **All**.
 1. Scroll down until the **Owner** field appears.
 
-> [!div class="mx-imgBorder"]
-> ![Owner field on Account entity](media/working-with-references/owner-field.png)
+ > [!div class="mx-imgBorder"]
+ > ![Owner field on Account entity](media/working-with-references/owner-field.png)
 
 This lookup field can refer to a record from either the **Teams** entity or the **Users** entity. Not every record in these entities has permissions to be an **Owner**; check the supported roles if you run into a problem.
 
@@ -181,6 +181,9 @@ Patch( Accounts, Gallery1.Selected, { Owner: First( Teams ) } )
 This approach doesn't differ from a normal lookup because the app knows the type of **First( Teams )**. If you want the first user instead, replace that portion with **First( Users )**. The **Patch** function knows that the **Owner** field can be set to either of these two entity types.
 
 To add this capability to the app:
+
+<!--note from editor: In Step 2, if there is a Tooltip for the ellipsis, use that in the sentence. For example, if Tooltip is "More options": "On the More options (...) menu, select....." or "Select the More options (...) button..."   -->
+
 
 1. In the **Tree view** pane, select the **Radio** control and the two **Combo box** controls at the same time.
 
