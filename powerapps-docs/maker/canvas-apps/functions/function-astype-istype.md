@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
-ms.date: 05/06/2019
+ms.date: 05/17/2019
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -21,11 +21,11 @@ Checks a record reference for a specific entity type and treats the reference as
 
 ## Description
 
-Read [understand record references and polymorphic lookups](../working-with-references.md) for a broader introduction and more details.
+Read [Understand record references and polymorphic lookups](../working-with-references.md) for a broader introduction and more details.
 
 A lookup field usually refers to records in a particular entity. Because the entity type is well established, you can access the fields of the lookup by using a simple dot notation. For example, **First( Accounts ).'Primary Contact'.'Full Name'** walks from the **Accounts** entity to the **Primary Contact** record in the **Contacts** entity and extracts the **Full Name** field.
 
-Common Data Service also supports polymorphic lookup fields, which can refer to records from a set of entities, as in these examples:
+Common Data Service also supports polymorphic lookup fields, which can refer to records from a set of entities, as in these examples.
 
 | Lookup field | Can refer to |
 |--------------|--------------|
@@ -33,9 +33,11 @@ Common Data Service also supports polymorphic lookup fields, which can refer to 
 | **Customer** | **Accounts** or **Contacts** |
 | **Regarding** | **Accounts**, **Contacts**, **Knowledge Articles**, etc. |
 
+<!--note from editor: Change "Knowledge Articles" to "Knowledge Base articles" if that is what is being referenced.   -->
+
 In canvas-app formulas, you can use record references to work with polymorphic lookups. Because a record reference can refer to different entities, you don't know which fields will be available when you write a formula. The *.Field* notation isn't available. Those formulas must adapt to the records that the app encounters when it runs.
 
-The **IsType** function tests whether a record reference refers to a specific entity type. The function returns a Boolean *true* or *false*.
+The **IsType** function tests whether a record reference refers to a specific entity type. The function returns a Boolean TRUE or FALSE.
 
 The **AsType** function treats a record reference as a specific entity type, sometimes referred to as *casting*. You can use the result as if it were a record of the entity and, again, use *.Field* notation to access all of the fields of that record. An error occurs if the reference isn't of the specific type.
 
@@ -71,7 +73,7 @@ If( IsType( ThisItem.'Company Name', [@Accounts] ),
 
 For both functions, you specify the type through the name of the data source that's connected to the entity. For the formula to work, you must also add a data source to the app for any types that you want to test or cast. For example, you must add the **Users** entity as a data source if you want to use **IsType** and **AsType** with an **Owner** lookup and records from that entity. You can add only the data sources that you actually use in your app; you don't need to add all the entities that a lookup could reference.
 
-If the record reference is *blank*, **IsType** returns *false*, and **AsType** returns *blank*. All fields of a *blank* record will be *blank*.
+If the record reference is *blank*, **IsType** returns FALSE, and **AsType** returns *blank*. All fields of a *blank* record will be *blank*.
 
 ## Syntax
 
