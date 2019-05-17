@@ -59,7 +59,7 @@ Your [next step](#next-steps) after this article is to display and manage data f
 
 1. Select **Create** to both create the connection and add it to your app.
 
-    Some connectors, such as **Office 365 Outlook**, require no additional steps, and you can show data from them immediately. Other connectors prompt you to provide credentials, specify a particular set of data, or perform other steps. For example, [SharePoint](connections/connection-sharepoint-online.md) and [SQL Server](connections/connection-azure-sqldatabase.md) require additional information before you can use them.  With [Common Data Service](connections/connection-common-data-service.md) the environment can be changed before the entities are selected.
+    Some connectors, such as **Office 365 Outlook**, require no additional steps, and you can show data from them immediately. Other connectors prompt you to provide credentials, specify a particular set of data, or perform other steps. For example, [SharePoint](connections/connection-sharepoint-online.md) and [SQL Server](connections/connection-azure-sqldatabase.md) require additional information before you can use them. With [Common Data Service](connections/connection-common-data-service.md), you can change the environment before you select an entity.
 
 ## Identify or change a data source
 If you're updating an app, you might need to identify or change the source of data that appears in a gallery, a form, or another control. For example, you might need to identify a data source as you update an app that someone else created or that you created long ago.
