@@ -33,11 +33,11 @@ This article provides details for the data types that canvas apps support. When 
 | **Media** | A URI text string to a video or audio recording. | **MyVideo** added as an app resource<br>**"https://northwindtraders.com/intro.mp4"**<br>**"appres://blobmanager/3ba411c..."** |
 | **Number** | A floating-point number. | **123**<br>**-4.567**<br>**8.903e121** |
 | **Option set** | A choice from a set of options, backed by a number. This data type combines a numeric value that's stored and used for comparisons with a localizable text label that the app shows. | **ThisItem.OrderStatus** |
-| **Record** | A record of data values. | **{ Company: "Northwind Traders",<br>Staff: 35, <br>NonProfit: false }** |
-| **Record reference** | A reference to a record in an entity, often used with polymorphic lookups. | **First(Accounts).Owner** |
-| **Table** | A table of records.  All of the records must have the same names for their fields with the same data types, with omitted fields being treated as *blank*.  | **Table( { FirstName: "Sidney",<br>LastName: "Higa" }, <br>{ FirstName: "Nancy",<br>LastName: "Anderson" } )**
-| **Time** | A time without a date, in the time zone of the app's user. | **Time( 11, 23, 45 )** |
+| **Record** | A record of data values. More information: [Working with tables](../working-with-tabless.md). | **{ Company: "Northwind Traders",<br>Staff: 35, <br>NonProfit: false }** |
+| **Record reference** | A reference to a record in an entity, often used with polymorphic lookups. More information: [Working with references](../working-with-references.md).| **First(Accounts).Owner** |
+| **Table** | A table of records.  All of the records must have the same names for their fields with the same data types, with omitted fields being treated as *blank*. More information: [Working with tables](../working-with-tabless.md). | **Table( { FirstName: "Sidney",<br>LastName: "Higa" }, <br>{ FirstName: "Nancy",<br>LastName: "Anderson" } )**
 | **Text** | A Unicode text string. | **"Hello, World"** |
+| **Time** | A time without a date, in the time zone of the app's user. | **Time( 11, 23, 45 )** |
 | **Two option** | A choice from a set of two options, backed by a Boolean. This data type combines a boolean value that's stored and used for comparisons with a localizable text label that the app shows.  | **ThisItem.Taxable** |
 
 Many of these data types are similar and have the same underlying representation, such as a **Hyperlink** field being treated as **Text**.  The additional data types allow for better default experiences in forms and other controls.
@@ -178,11 +178,3 @@ In addition, two-option values can also behave as Boolean values. For example, a
 You can also use this equivalent formula:
 
 `If( ThisItem.Taxable, ...`
-
-## Records and Tables
-
-The data types described here are the building blocks for **Record** and **Table** compound data types.  More information: [Working with tables](../working-with-tabless.md).
-
-## Record references
-
-Record references hold references or pointers to specific records in an entity. More information: [Working with references](../working-with-references.md).
