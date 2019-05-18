@@ -33,9 +33,9 @@ This article provides details for the data types that canvas apps support. When 
 | **Media** | A URI text string to a video or audio recording. | **MyVideo** added as an app resource<br>**"https://northwindtraders.com/intro.mp4"**<br>**"appres://blobmanager/3ba411c..."** |
 | **Number** | A floating-point number. | **123**<br>**-4.567**<br>**8.903e121** |
 | **Option set** | A choice from a set of options, backed by a number. This data type combines a numeric value that's stored and used for comparisons with a localizable text label that the app shows. | **ThisItem.OrderStatus** |
-| **Record** | A record of data values. More information: [Working with tables](../working-with-tabless.md). | **{ Company: "Northwind Traders",<br>Staff: 35, <br>NonProfit: false }** |
+| **Record** | A record of data values. More information: [Working with tables](../working-with-tables.md). | **{ Company: "Northwind Traders",<br>Staff: 35, <br>NonProfit: false }** |
 | **Record reference** | A reference to a record in an entity, often used with polymorphic lookups. More information: [Working with references](../working-with-references.md).| **First(Accounts).Owner** |
-| **Table** | A table of records.  All of the records must have the same names for their fields with the same data types, with omitted fields being treated as *blank*. More information: [Working with tables](../working-with-tabless.md). | **Table( { FirstName: "Sidney",<br>LastName: "Higa" }, <br>{ FirstName: "Nancy",<br>LastName: "Anderson" } )**
+| **Table** | A table of records.  All of the records must have the same names for their fields with the same data types, with omitted fields being treated as *blank*. More information: [Working with tables](../working-with-tables.md). | **Table( { FirstName: "Sidney",<br>LastName: "Higa" }, <br>{ FirstName: "Nancy",<br>LastName: "Anderson" } )**
 | **Text** | A Unicode text string. | **"Hello, World"** |
 | **Time** | A time without a date, in the time zone of the app's user. | **Time( 11, 23, 45 )** |
 | **Two option** | A choice from a set of two options, backed by a Boolean. This data type combines a boolean value that's stored and used for comparisons with a localizable text label that the app shows.  | **ThisItem.Taxable** |
