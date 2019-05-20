@@ -123,16 +123,9 @@ For example:
 | User local | Sunday, May 19, 2019<br>4:00 AM | Saturday, May 18, 2019<br>9:00 PM | Sunday, May 19, 2019<br>8:00 AM |
 | Time zone independent | Sunday, May 19, 2019<br>4:00 AM | Sunday, May 19, 2019<br>4:00 AM |  Sunday, May 19, 2019<br>4:00 AM | 
 
-SQL Server has [**Datetime**, **Datetime2**, and other date/time data types](https://docs.microsoft.com/en-us/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql?view=sql-server-2017) that don't include a time-zone offset. Canvas apps assume these values are stored in UTC and treated as **User local** because the database doesn't indicate how to interpret them. If the values are meant to be time-zone independent, correct for the UTC translations by using the [**TimeZoneOffset**](function-dateadd-datediff.md#converting-to-utc) function.
+SQL Server has [**Datetime**, **Datetime2**, and other date/time data types](https://docs.microsoft.com/en-us/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql?view=sql-server-2017) that don't include a time-zone offset and don't indicate which time zone they are in. Canvas apps assume these values are stored in UTC and treated as **User local**. If the values are meant to be time-zone independent, correct for the UTC translations by using the [**TimeZoneOffset**](function-dateadd-datediff.md#converting-to-utc) function.  Canvas apps will strip the time zone information included with **Datetimeoffset** fields and replace it with UTC. 
 
 For **User local** date/times, canvas apps use the time zone of the browser or device, but model-driven apps use the user's setting in Common Data Service. These settings typically match, but results will differ if these settings differ.
-
-### UTC and Time-zone independent
-
-Common Data Service stores **User local** date/time values in [UTC (Coordinated Universal Time)](https://en.wikipedia.org/wiki/Coordinated_Universal_Time). No translation is required for these values as they flow in and out of a canvas app.  
-
-Common Data Service also has **Time zone independent** date/time values.  These values are translated in and out of UTC with the inverse of the app user's time zone offset, compensating for the time zone offset applied when displayed or entered.  
-
 
 ### Numeric equivalents
 
