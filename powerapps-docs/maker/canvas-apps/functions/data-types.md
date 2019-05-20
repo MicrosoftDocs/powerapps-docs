@@ -114,14 +114,14 @@ Database systems often store currencies and perform calculations by using decima
 
 Date/times come in two main flavors:
 - **User local**: The date/time is displayed and entered in the time zone of the app's user.  These values are stored in [UTC (Coordinated Universal Time)](https://en.wikipedia.org/wiki/Coordinated_Universal_Time) and then adjusted for display and entry by the app.  A user in Canada will see a different date/time than a user in Japan although both describe the same moment in time; for both users the displayed value will have been adjusted for their individual time zones.
-- **Time zone independent**: The date/time is displayed and entered is the same for all users, no matter which time zone they are in.   A user in Canada sees the same value as a user in Japan.  This is often used because it is simpler overall and the app author does not expect the app to be used in different time zones.
+- **Time zone independent**: The date/time is displayed and entered with the same value for all users, no matter which time zone they are in.   A user in Canada sees the same value as a user in Japan.  This is often used because it is simpler overall and the app author does not expect the app to be used in different time zones.
 
 For example:
 
 | Date/time type | Value stored in the database | Value displayed and entered 7 hours west of UTC | Value displayed and entered 4 hours east of UTC | 
 |--------------------------|------------------------------|------------------------------|
-| User local | Sunday, May 19, 2019 4:00 AM | Saturday, May 18, 2019 9:00 PM | Sunday, May 19, 2019 8:00 AM |
-| Time zone independent | Sunday, May 19, 2019 4:00 AM | Sunday, May 19, 2019 4:00 AM |  Sunday, May 19, 2019 4:00 AM | 
+| User local | Sunday, May 19, 2019<br>4:00 AM | Saturday, May 18, 2019<br>9:00 PM | Sunday, May 19, 2019<br>8:00 AM |
+| Time zone independent | Sunday, May 19, 2019<br>4:00 AM | Sunday, May 19, 2019<br>4:00 AM |  Sunday, May 19, 2019<br>4:00 AM | 
 
 SQL Server has [**Datetime**, **Datetime2**, and other date/time data types](https://docs.microsoft.com/en-us/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql?view=sql-server-2017) that don't include a time-zone offset. Canvas apps assume these values are stored in UTC and treated as **User local** because the database doesn't indicate how to interpret them. If the values are meant to be time-zone independent, correct for the UTC translations by using the [**TimeZoneOffset**](function-dateadd-datediff.md#converting-to-utc) function.
 
@@ -148,8 +148,8 @@ Returning to our example from above:
 
 | Date/time type | Value stored in the database |  Value displayed and entered 7 hours west of UTC | **Value** function returns |
 |--------------------------|------------------------------|------------------------------|
-| User local | Sunday, May 19, 2019 4:00 AM | Saturday, May 18, 2019 9:00 PM | 1,558,238,400,000<br> (Sunday, May 19, 2019 4:00 AM UTC) |
-| Time zone independent | Sunday, May 19, 2019 4:00 AM | Sunday, May 19, 2019 4:00 AM |1,558,263,600,000<br> (Sunday, May 19, 2019 11:00 AM UTC) |
+| User local | Sunday, May 19, 2019<br>4:00 AM | Saturday, May 18, 2019<br>9:00 PM | 1,558,238,400,000<br> (Sunday, May 19, 2019<br>4:00 AM UTC) |
+| Time zone independent | Sunday, May 19, 2019<br>4:00 AM | Sunday, May 19, 2019<br>4:00 AM |1,558,263,600,000<br> (Sunday, May 19, 2019<br>11:00 AM UTC) |
 
 ### Converting Unix times
 
