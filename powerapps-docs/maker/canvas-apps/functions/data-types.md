@@ -120,10 +120,8 @@ For example:
 
 | Date/time type | Value stored in the database | Value displayed and entered 7 hours west of UTC | Value displayed and entered 4 hours east of UTC | 
 |--------------------------|------------------------------|------------------------------|
-| User local | Sunday, May 19, 2019<br>4:00 AM | Saturday, May 18, 2019<br>9:00 PM | Sunday, May 19, 2019<br>8:00 AM |
-| Time zone independent | Sunday, May 19, 2019<br>4:00 AM | Sunday, May 19, 2019<br>4:00 AM |  Sunday, May 19, 2019<br>4:00 AM | 
-
-SQL Server has [**Datetime**, **Datetime2**, and other date/time data types](https://docs.microsoft.com/en-us/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql?view=sql-server-2017) that don't include a time-zone offset and don't indicate which time zone they are in. Canvas apps assume these values are stored in UTC and treated as **User local**. If the values are meant to be time-zone independent, correct for the UTC translations by using the [**TimeZoneOffset**](function-dateadd-datediff.md#converting-to-utc) function.  Canvas apps will strip the time zone information included with **Datetimeoffset** fields and replace it with UTC. 
+| User local | Sunday,&nbsp;May&nbsp;19,&nbsp;2019<br>4:00 AM | Saturday,&nbsp;May&nbsp;18,&nbsp;2019<br>9:00 PM | Sunday,&nbsp;May&nbsp;19,&nbsp;2019<br>8:00 AM |
+| Time zone independent | Sunday,&nbsp;May&nbsp;19,&nbsp;2019<br>4:00 AM | Sunday,&nbsp;May&nbsp;19,&nbsp;2019<br>4:00 AM | Sunday,&nbsp;May&nbsp;19,&nbsp;2019<br>4:00 AM | 
 
 For **User local** date/times, canvas apps use the time zone of the browser or device, but model-driven apps use the user's setting in Common Data Service. These settings typically match, but results will differ if these settings differ.
 
@@ -141,8 +139,8 @@ Returning to our example from above:
 
 | Date/time type | Value stored in the database |  Value displayed and entered 7 hours west of UTC | **Value** function returns |
 |--------------------------|------------------------------|------------------------------|
-| User local | Sunday, May 19, 2019<br>4:00 AM | Saturday, May 18, 2019<br>9:00 PM | 1,558,238,400,000<br> (Sunday, May 19, 2019<br>4:00 AM UTC) |
-| Time zone independent | Sunday, May 19, 2019<br>4:00 AM | Sunday, May 19, 2019<br>4:00 AM |1,558,263,600,000<br> (Sunday, May 19, 2019<br>11:00 AM UTC) |
+| User local | Sunday,&nbsp;May&nbsp;19,&nbsp;2019<br>4:00 AM | Saturday,&nbsp;May&nbsp;18,&nbsp;2019<br>9:00 PM | 1,558,238,400,000<br> (Sunday,&nbsp;May&nbsp;19,&nbsp;2019<br>4:00 AM UTC) |
+| Time zone independent | Sunday,&nbsp;May&nbsp;19,&nbsp;2019<br>4:00 AM | Sunday,&nbsp;May&nbsp;19,&nbsp;2019<br>4:00 AM |1,558,263,600,000<br> (Sunday,&nbsp;May&nbsp;19,&nbsp;2019<br>11:00 AM UTC) |
 
 ### Converting Unix times
 
@@ -152,7 +150,11 @@ For example, Unix time shows September 9, 2001, at 01:46:40 UTC as 1,000,000,000
 
 However, that function returns **Saturday, September 8, 2001 18:46:40** if you use the **DateTimeFormat.LongDateTime24** format in a time zone that's -7 hours offset from UTC (7 hours west of UTC). This result shows the DateTime value correctly based on the local time zone.
 
-### Time values in SQL Server
+### SQL Server
+
+SQL Server has [**Datetime**, **Datetime2**, and other date/time data types](https://docs.microsoft.com/en-us/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql?view=sql-server-2017) that don't include a time-zone offset and don't indicate which time zone they are in. Canvas apps assume these values are stored in UTC and treated as **User local**. If the values are meant to be time-zone independent, correct for the UTC translations by using the [**TimeZoneOffset**](function-dateadd-datediff.md#converting-to-utc) function.  
+
+When reading **Datetimeoffset** fields, the included time zone information will be used when converting to the app's internal UTC representation.  When writing data, the app will always use UTC as the time zone (zero time zone offset).
 
 Canvas apps read and write values of the [**Time**](https://docs.microsoft.com/en-us/sql/t-sql/data-types/time-transact-sql) data type in SQL Server as text strings in the [ISO 8601 duration format](https://en.wikipedia.org/wiki/ISO_8601#Durations). For example, you must parse this string format and use the [**Time**](function-date-time.md) function to convert the text string **"PT2H1M39S"** to a **Time** value:
 
@@ -164,6 +166,7 @@ First(
     )
 ).Value
 ```
+
 ### Mixing date and time information
 
 Despite their different names, **Date**, **Time**, and **DateTime** all hold the same information about dates and times. 
@@ -179,7 +182,6 @@ Option sets and two-option data types provide a two or more choices for an end u
 Both of these data types show their labels in a text-string context. For example, a label control shows one of the order-status options if the control's **Text** property is set to a formula that references that option set. Option labels might be localized for app users in different locations.
 
 When an app user selects an option and saves that change, the app transmits the data to the database, which stores that data in a representation that's independent of language. An option in an option set is transmitted and stored as a number, and an option in a two-option type is transmitted and stored as a Boolean.
-
 The labels are for display purposes only. You can't perform direct comparisons with the labels because they're specific to a language. Instead, each option set has an enumeration that works with the underlying number or Boolean. For example, you can't use this formula:
 
 `If( ThisItem.OrderStatus = "Active", ...`
