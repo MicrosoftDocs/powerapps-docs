@@ -407,6 +407,8 @@
             href: ./canvas-apps/functions/function-table-counts.md
           - name: CountRows
             href: ./canvas-apps/functions/function-table-counts.md
+          - name: Data types
+            href: ./canvas-apps/functions/data-types.md	    
           - name: DataSourceInfo
             href: ./canvas-apps/functions/function-datasourceinfo.md
           - name: Date
