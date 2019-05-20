@@ -64,7 +64,7 @@ search.app:
 |--|--|
 | Ctrl+G | Group multiple controls. |
 | Ctrl+Shift+G | Ungroup a group of controls. |
-| *Tab* | *Move through placeholders.* |
+| *Tab* | Select the next control. |
 | Ctrl+Click or Shift+Click | Select multiple objects at once. |
 | Right arrow | Nudge the selected control to the right. |
 | Left arrow | Nudge the selected control to the left. |
@@ -75,14 +75,14 @@ search.app:
 
 | Shortcut | Action |
 |--|--|
-| Shift+Left Arrow | Decrease width. |
-| Ctrl+Shift+Left Arrow | Decrease width slightly. |
-| Shift+Down Arrow | Decrease height. |
-| Ctrl+Shift+Down Arrow | Decrease height slightly. |
-| Shift+Right Arrow | Increase width. |
-| Ctrl+Shift+Right Arrow | Increase width slightly. |
-| Shift+Up Arrow | Increase height. |
-| Ctrl+Shift+Up Arrow | Increase height slightly. |
+| Shift+Left arrow | Decrease width. |
+| Ctrl+Shift+Left arrow | Decrease width slightly. |
+| Shift+Down arrow | Decrease height. |
+| Ctrl+Shift+Down arrow | Decrease height slightly. |
+| Shift+Right arrow | Increase width. |
+| Ctrl+Shift+Right arrow | Increase width slightly. |
+| Shift+Up arrow | Increase height. |
+| Ctrl+Shift+Up arrow | Increase height slightly. |
 
 ## Text format
 
@@ -98,4 +98,4 @@ search.app:
 |--|--|
 | F1 | Open documentation. |
 | Shift+F10 | Open a shortcut menu in, for example, **Tree view**. |
-| Alt or Ctrl+Shift | Hide authoring/adorner layer to interact with app underneath. |
+| Alt or Ctrl+Shift | Hide design elements so that you can interact with controls as if the app were running. |

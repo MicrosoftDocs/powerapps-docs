@@ -91,8 +91,10 @@
   items:
   - name: What are canvas apps?
     href: ./canvas-apps/getting-started.md
-  - name: "System requirements, limits, and configuration"
+  - name: System requirements, limits, and configuration
     href: ./canvas-apps/limits-and-config.md
+  - name: Keyboard shortcuts
+    href: ./canvas-apps/keyboard-shortcuts.md
   - name: Explore sample apps
     items:
     - name: Create a canvas app from a sample
