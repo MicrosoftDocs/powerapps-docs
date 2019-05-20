@@ -94,7 +94,7 @@ That URI displays a scaled-up version of two purple diamonds:
 
 The same is true with the [**Camera**](../controls/control-camera.md) control. You can show the last image captured if you set the **Image** property of an **Image** control to the **Photo** property of a **Camera** control. The app holds the image in memory, and the **Photo** property of the camera returns a URI reference to the image. For example, you might take a picture, and the camera's **Photo** property could return **"appres://blobmanager/7b12ffa2ea4547e5b3812cb1c7b0a2a0/1"**.
 
-You might not want the app to retrieve images and files stored in databases until it needs to display that information. To implement that behavior, reference the image in this form **"appres://datasources/Contacts/table/..."** As in the camera example, you can show this image by setting the **Image** property of the image control to this reference.
+Images and media stored in databases is referenced by URI.  This avoids retrieving the actual data until actually needed.  For example, an attachment of a Common Data Service entity might return **"appres://datasources/Contacts/table/..."** As in the camera example, you can display this image by setting the **Image** property of the image control to this reference which will retrieve the binary data.
 
 When you save an image or another media data type to a database, the app sends the actual image or media data, not the URI reference.
 
@@ -102,37 +102,54 @@ When you save an image or another media data type to a database, the app sends t
 
 **Number** and **Currency** data types use the [IEEE 754 double precision floating point standard](https://en.wikipedia.org/wiki/IEEE_754). This standard provides a very large range of numbers in which to work, from –1.79769 x 10<sup>308</sup> to 1.79769 x 10<sup>308</sup>.  The smallest representable value is 5 x 10<sup>–324</sup>.
 
-Canvas apps can exactly represent whole numbers (or integers) between –9,007,199,254,740,991 (–(2<sup>53</sup> – 1)) and 9,007,199,254,740,991 (2<sup>53</sup> – 1), inclusive. This range is larger than the 32-bit (or 4-byte) integer data types that databases commonly use. However, canvas apps can't represent 64-bit (or 8-byte) integer data types; you might want to use the **Text** data type instead to hold, display, and enter these values, as well as comparing them to determine whether they're equal. However, you can't perform numerical calculations on them in this form.
+Canvas apps can exactly represent whole numbers (or integers) between –9,007,199,254,740,991 (–(2<sup>53</sup> – 1)) and 9,007,199,254,740,991 (2<sup>53</sup> – 1), inclusive. This range is larger than the 32-bit (or 4-byte) integer data types that databases commonly use. However, canvas apps can't represent 64-bit (or 8-byte) integer data types; you might want to store the number in a text field or use a calculated column to make a copy of the number in a text field, so that it is mapped into a  **Text** data type in the canvas app.  In this manner, you can hold, display, and enter these values, as well as comparing them to determine whether they're equal; however, you can't perform numerical calculations on them in this form.
 
-Floating-point arithmetic is approximate, so it can sometimes give unexpected results with many documented examples. You might expect the formula **55 / 100 * 100** to return exactly 55 and **(55 / 100 * 100) - 55** to return exactly zero. However, the latter formula returns 7.1054 x 10<sup>–15</sup>, which is very small. That tiny difference will normally not cause a problem, and the app will round it away when showing the result. However, small differences can compound in subsequent calculations and appear to give the wrong answer.
+Floating-point arithmetic is approximate, so it can sometimes give unexpected results with many documented examples. You might expect the formula **55 / 100 * 100** to return exactly 55 and **(55 / 100 * 100) - 55** to return exactly zero. However, the latter formula returns 7.1054 x 10<sup>–15</sup>, which is very small but not zero. That tiny difference will normally not cause a problem, and the app will round it away when showing the result. However, small differences can compound in subsequent calculations and appear to give the wrong answer.
 
-Database systems often store currencies and perform calculations by using decimal math, with a smaller range but greater control over the precision. By default, canvas apps map currencies in and out of floating-point values; therefore, the result might differ from calculations that are done in a native decimal data type. If this type of discrepancy will cause problems, you might want to work with these values as **Text**, just as you might with large integers.
+Database systems often store currencies and perform calculations by using decimal math, with a smaller range but greater control over the precision. By default, canvas apps map currencies in and out of floating-point values; therefore, the result might differ from calculations that are done in a native decimal data type. If this type of discrepancy will cause problems, you might want to work with these values as **Text**, just as you might with large integers described above.
 
 ## Date, Time, and DateTime
 
-These three data types hold the same information about dates and times. A **Date** value can include time information with it, which is usually midnight. A **Time** value can carry date information, which is usually January 1, 1970. Canvas apps sometimes distinguish between these data types to determine default formats and controls.
-
 ### Time zones
 
-Canvas apps express all dates and times in the time zone of the app's user. If necessary, these apps translate dates and times between this time zone and UTC when storing and retrieving them.
+Date/times come in two main flavors:
+- **User local**: The date/time is displayed and entered in the time zone of the app's user.  These values are stored in [UTC (Coordinated Universal Time)](https://en.wikipedia.org/wiki/Coordinated_Universal_Time) and then adjusted for display and entry by the app.  A user in Canada will see a different date/time than a user in Japan although both describe the same moment in time; for both users the displayed value will have been adjusted for their individual time zones.
+- **Time zone independent**: The date/time is displayed and entered is the same for all users, no matter which time zone they are in.   A user in Canada sees the same value as a user in Japan.  This is often used because it is simpler overall and the app author does not expect the app to be used in different time zones.
 
-Canvas apps use the time zone of the browser or device, but model-driven apps use the user's setting in Common Data Service. These settings typically match, but results will differ if these settings differ.
+For example:
+
+| Date/time type | Value stored in the database | Value displayed and entered 7 hours west of UTC | Value displayed and entered 4 hours east of UTC | 
+|--------------------------|------------------------------|------------------------------|
+| User local | Sunday, May 19, 2019 4:00 AM | Saturday, May 18, 2019 9:00 PM | Sunday, May 19, 2019 8:00 AM |
+| Time zone independent | Sunday, May 19, 2019 4:00 AM | Sunday, May 19, 2019 4:00 AM |  Sunday, May 19, 2019 4:00 AM | 
+
+SQL Server has [**Datetime**, **Datetime2**, and other date/time data types](https://docs.microsoft.com/en-us/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql?view=sql-server-2017) that don't include a time-zone offset. Canvas apps assume these values are stored in UTC and treated as **User local** because the database doesn't indicate how to interpret them. If the values are meant to be time-zone independent, correct for the UTC translations by using the [**TimeZoneOffset**](function-dateadd-datediff.md#converting-to-utc) function.
+
+For **User local** date/times, canvas apps use the time zone of the browser or device, but model-driven apps use the user's setting in Common Data Service. These settings typically match, but results will differ if these settings differ.
 
 ### UTC and Time-zone independent
 
-Common Data Service stores **User local** date/time values in [UTC (Coordinated Universal Time)](https://en.wikipedia.org/wiki/Coordinated_Universal_Time). When a canvas app pulls these values from the database, the app translates them from UTC to the time zone of the app's user. The app translates the values back into UTC when pushing them back to the database. Date/time values in SharePoint undergo similar translations.
+Common Data Service stores **User local** date/time values in [UTC (Coordinated Universal Time)](https://en.wikipedia.org/wiki/Coordinated_Universal_Time). No translation is required for these values as they flow in and out of a canvas app.  
 
-Common Data Service also has **Time zone independent** date/time values, which the app doesn't translate. The same value appears to all app users, no matter what time zone they're in.
+Common Data Service also has **Time zone independent** date/time values.  These values are translated in and out of UTC with the inverse of the app user's time zone offset, compensating for the time zone offset applied when displayed or entered.  
 
-SQL Server has **Datetime2** and other date/time data types that don't include a time-zone offset. Canvas apps assume these values are stored in UTC because the database doesn't indicate how to interpret them. If the values are meant to be time-zone independent, correct for the UTC translations by using the [**TimeZoneOffset**](function-dateadd-datediff.md#converting-to-utc) function.
 
 ### Numeric equivalents
 
-To show any date/time value more precisely, use the [**Value**](function-value.md) function to retrieve the number of milliseconds between that value in your local time zone and January 1, 1970 00:00:00.000 UTC. Within the app, a JavaScript data object holds that value.
+All date/time values in a canvas app are held and calculated in UTC.  Values are translated to the app user's time zone at the point they are displayed or entered.  
 
-Because every date is in your local time zone, the formula **Value( Date( 1970, 1, 1 ) )** won't return zero in most parts of the world. For example, the formula would return 28,800,000 in a time zone that's offset from UTC by eight hours. That number reflects the number of milliseconds in eight hours.
+This is true for **Time zone independent** values as well.  When read from and written to a data source, these values are automatically adjusted to compensate for the time zone of the app's user.  The app will then treat them as UTC values, consistent with all other date/time values in the app.  Because of this compensation, their original time zone independent value is displayed to the user when the app adjusts the UTC value for the app user's time zone.
 
-If you add and subtract date and time values directly, time zones will cause inaccurate results in many cases. Either use the **Value** function to convert date/time values to milliseconds first, or use the [**DateAdd**](function-dateadd-datediff.md) and [**DateDiff**](function-dateadd-datediff.md) functions to add or subtract from one of these values.
+To look at this more closely, we can access the underlying numerical value for a date/time with the [**Value**](function-value.md) function.  It returns the date/time as the raw number of milliseconds since January 1, 1970 00:00:00.000 UTC. 
+
+Because every date/time is held in UTC, the formula **Value( Date( 1970, 1, 1 ) )** won't return zero in most parts of the world because the **Date** function returns a date in UTC. For example, the formula would return 28,800,000 in a time zone that's offset from UTC by eight hours. That number reflects the number of milliseconds in eight hours.
+
+Returning to our example from above:
+
+| Date/time type | Value stored in the database |  Value displayed and entered 7 hours west of UTC | **Value** function returns |
+|--------------------------|------------------------------|------------------------------|
+| User local | Sunday, May 19, 2019 4:00 AM | Saturday, May 18, 2019 9:00 PM | 1,558,238,400,000<br> (Sunday, May 19, 2019 4:00 AM UTC) |
+| Time zone independent | Sunday, May 19, 2019 4:00 AM | Sunday, May 19, 2019 4:00 AM |1,558,263,600,000<br> (Sunday, May 19, 2019 11:00 AM UTC) |
 
 ### Converting Unix times
 
@@ -154,6 +171,13 @@ First(
     )
 ).Value
 ```
+### Mixing date and time information
+
+Despite their different names, **Date**, **Time**, and **DateTime** all hold the same information about dates and times. 
+
+A **Date** value can include time information with it, which is usually midnight. A **Time** value can carry date information, which is usually January 1, 1970. Common Data Service also stores time information with a Date Only field and by default only shows the date information.  Similarly, canvas apps sometimes distinguish between these data types to determine default formats and controls.
+
+Adding and subtracting date and time values directly is not recommended as time zone and other conversions could cause confusing results. Either use the **Value** function to convert date/time values to milliseconds first and take into account the app user's time zone, or use the [**DateAdd**](function-dateadd-datediff.md) and [**DateDiff**](function-dateadd-datediff.md) functions to add or subtract from one of these values.
 
 ## Option sets and Two options
 
