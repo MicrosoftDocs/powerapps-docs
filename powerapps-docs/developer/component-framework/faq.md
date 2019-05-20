@@ -9,18 +9,13 @@ ms.assetid: 9f940264-d7d5-4930-8052-1bd582445d37
 ms.author: "nabuthuk"
 ---
 
-# FAQs
+# FAQ
 
 [!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 ## Multiple components in single manifest file
 
 It is not possible to define multiple components in a single manifest file. 
-
-> [!IMPORTANT]
-> - PowerApps component framework is a preview feature.
-> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)] 
-> - [!INCLUDE[cc_preview_features_no_MS_support](../../includes/cc-preview-features-no-ms-support.md)]
 
 ## Calling Processes/Actions
 

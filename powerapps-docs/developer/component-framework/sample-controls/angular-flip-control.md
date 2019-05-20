@@ -18,11 +18,6 @@ This sample shows how to use third-party libraries to create controls in PowerAp
 > [!div class="mx-imgBorder"]
 > ![Angular Flip](../media/angular-flip.png "Angular Flip")
 
-> [!IMPORTANT]
-> - PowerApps component framework is a preview feature.
-> - [!INCLUDE[cc_preview_features_definition](../../../includes/cc-preview-features-definition.md)] 
-> - [!INCLUDE[cc_preview_features_no_MS_support](../../../includes/cc-preview-features-no-ms-support.md)]
-
 ## Manifest
 
 ```XML
@@ -298,5 +293,5 @@ border-radius : 4px
 ### Related topics
 
 [PowerApps component framework Manifest Schema Reference](../manifest-schema-reference/index.md)<br />
-[PowerApps component framework API Reference](../index.md)<br />
+[PowerApps component framework API Reference](../reference/index.md)<br />
 [PowerApps component framework Overview](../overview.md)

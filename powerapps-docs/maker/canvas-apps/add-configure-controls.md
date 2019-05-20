@@ -45,7 +45,7 @@ To demonstrate how this list works, select **Label** on the **Insert** tab. The 
 
 ![Screen2 in list](./media/add-configure-controls/add-label.png)
 
-In the screen, a box with six handles surrounds the label by default. That type of box surrounds whichever control is selected. If you select the screen by clicking or tapping in it (but outside the label), the box disappears from the label. To select the label again, you can click or tap in it, or you can click or tap **Label2** in the hierarchical list of controls.
+In the screen, a box with six handles surrounds the label by default. That type of box surrounds whichever control is selected. If you select the screen by clicking or tapping in it (but outside the label), the box disappears from the label. To select the label again, you can click or tap in it, or you can click or tap its name in the hierarchical list of controls.
 
 > [!IMPORTANT]
 > You must always select a control before you can configure it.

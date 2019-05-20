@@ -14,6 +14,8 @@ ms.assetid: 9053eee8-2851-427d-88ae-4fc137ca0444
 
 # PickFileOptions
 
+[!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
+
 ## accept
 
 Image file type to select. Valid values are "audio", "video", or "image".
