@@ -17,6 +17,10 @@ search.app:
 
 # AsType and IsType functions in canvas apps
 
+
+<!--This first, incomplete sentence seems awkward. Does it refer to both types of functions? Could it change to something like "The AsType and IsType functions check a record reference for a specific entity type and treat the reference as a specific type." ? -->
+
+
 Checks a record reference for a specific entity type and treats the reference as a specific type.
 
 ## Description
@@ -37,7 +41,7 @@ In canvas-app formulas, you can use record references to work with polymorphic l
 
 The **IsType** function tests whether a record reference refers to a specific entity type. The function returns a Boolean *true* or *false*.
 
-The **AsType** function treats a record reference as a specific entity type, sometimes referred to as *casting*. You can use the result as if it were a record of the entity and, again, use *.Field* notation to access all of the fields of that record. An error occurs if the reference isn't of the specific type.
+The **AsType** function treats a record reference as a specific entity type, sometimes referred to as *casting*. You can use the result as if it were a record of the entity and, again, use the *.Field* notation to access all of the fields of that record. An error occurs if the reference isn't of the specific type.
 
 Use these functions together to first test the entity type of a record and then treat it as a record of that type so that the fields are available:
 
@@ -95,10 +99,15 @@ If the record reference is *blank*, **IsType** returns *false*, and **AsType** r
     > [!div class="mx-imgBorder"]
     > ![Blank app with two data sources: accounts and contacts](media/function-astype-istype/contacts-add-datasources.png)
 
-1. Insert a **Gallery** control with a **Blank vertical** orientation:
+1. Insert a **Gallery** control with a **Blank vertical** orientation.
 
     > [!div class="mx-imgBorder"]
     > ![Insert a gallery control with a blank vertical layout](media/function-astype-istype/contacts-customer-gallery.png)
+
+
+
+<!--Msft style guide suggests "rightmost" instead of right-hand. https://styleguides.azurewebsites.net/Styleguide/Read?id=2700&topicid=35676-->
+
 
 1. On the **Properties** tab of the right-hand pane, set the gallery's **Items** property to **Contacts**.
 
@@ -113,12 +122,12 @@ If the record reference is *blank*, **IsType** returns *false*, and **AsType** r
     > [!div class="mx-imgBorder"]
     > ![Set layout to Title and subtitle](media/function-astype-istype/contacts-customer-flyout.png)
 
-1. In the **Data** pane, open the **Title1** list, and then select **Full Name**:
+1. In the **Data** pane, open the **Title1** list, and then select **Full Name**.
 
     > [!div class="mx-imgBorder"]
     > ![Set title value](media/function-astype-istype/contacts-customer-title.png)
 
-1. Select the **Subtitle1** label control:
+1. Select the **Subtitle1** label control.
 
     > [!div class="mx-imgBorder"]
     > ![Set subtitle value](media/function-astype-istype/contacts-customer-subtitle.png)
