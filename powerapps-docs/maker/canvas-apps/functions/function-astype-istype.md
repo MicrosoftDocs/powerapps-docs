@@ -102,7 +102,7 @@ If the record reference is *blank*, **IsType** returns FALSE, and **AsType** ret
     > [!div class="mx-imgBorder"]
     > ![Insert a gallery control with a blank vertical layout](media/function-astype-istype/contacts-customer-gallery.png)
 
-1. On the **Properties** tab near the right edge, set the gallery's **Items** property to **Contacts**.
+1. On the **Properties** tab near the right side of the screen, set the gallery's **Items** property to **Contacts**.
 
     > [!div class="mx-imgBorder"]
     > ![Set items to Contacts in the properties pane](media/function-astype-istype/contacts-customer-datasource.png)

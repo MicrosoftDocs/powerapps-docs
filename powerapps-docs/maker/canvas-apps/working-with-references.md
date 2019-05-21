@@ -182,9 +182,6 @@ This approach doesn't differ from a normal lookup because the app knows the type
 
 To add this capability to the app:
 
-<!--note from editor: In Step 2, if there is a Tooltip for the ellipsis, use that in the sentence. For example, if Tooltip is "More options": "On the More options (...) menu, select....." or "Select the More options (...) button..."   -->
-
-
 1. In the **Tree view** pane, select the **Radio** control and the two **Combo box** controls at the same time.
 
 1. On the ellipsis menu, select **Copy these items**.
