@@ -40,9 +40,9 @@ You can view details about solution operations from the **Solutions** area of a 
      > ![](media/solution-history-sitemap.png "Solution History area")
 
 The following views are available from the **Solutions History** area. 
-- **All Solutions History**. Displays both system and custom solutions. 
-- **Custom Solutions History**. Displays only custom solutions. 
-- **Internal Solutions History**. Displays only system customizations. 
+- **All Solutions History**. Displays solution history for both internal system and custom solutions. 
+- **Custom Solutions History**. Displays solution history for only custom solutions. 
+- **Internal Solutions History**. Displays solution history for only internal system solutions. 
 
 Each solution history record is read-only and includes the following properties: 
 - **Start Time**. The time in which the operation started. 
