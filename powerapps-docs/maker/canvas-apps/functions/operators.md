@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Operators and data types in PowerApps
+# Operators in PowerApps
 Some of these operators are dependent on the language of the author.  See [Global apps](../global-apps.md) for more information.
 
 
