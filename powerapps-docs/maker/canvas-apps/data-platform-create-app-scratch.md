@@ -98,7 +98,7 @@ When you build an app from Common Data Service, you don't need to create a conne
         - **Number of Employees**
         - **Annual Revenue**
 
-     - To create new field select **Add field**, enter the required and optional information, and then select **Done**. More information: [Create a field](../common-data-service/create-edit-field-portal.md#create-a-field) 
+     - To create a new field select **Add field**, enter the required and optional information, and then select **Done**. More information: [Create a field](../common-data-service/create-edit-field-portal.md#create-a-field) 
 
 1. Select **Add**.
 
