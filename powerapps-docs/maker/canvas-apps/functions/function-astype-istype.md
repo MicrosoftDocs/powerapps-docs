@@ -85,10 +85,7 @@ If the record reference is *blank*, **IsType** returns FALSE, and **AsType** ret
 **IsType**( *RecordReference*, *EntityType* )
 
 - *RecordReference* - Required. A record reference, often a lookup field that can refer to a record in any of multiple entities.
-- *EntityType* - Required. The specific entity to which to cast.
-
-<!--note from editor: Change "The specific entity to which to cast" to "The specific entity to cast to." ?   -->
-
+- *EntityType* - Required. The specific entity to which the record should be cast.
 
 ## Example
 
