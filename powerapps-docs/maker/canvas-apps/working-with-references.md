@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: anneta
-ms.date: 05/05/2019
+ms.date: 05/17/2019
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -21,7 +21,7 @@ When you wrote a research paper in school, you probably provided a list of your 
 
 In canvas apps, you often work with copies of records downloaded from data sources. You use the [**LookUp**](functions/function-filter-lookup.md) and [**Filter**](functions/function-filter-lookup.md) functions and the [**Gallery**](controls/control-gallery.md) control's **Selected** property to identify the specific record that you want. All the records from **Filter** or **Selected** will be of the same entity type, so you can use fields with a simple .*Field* notation. These copies often include reference information so you can use the [**Patch**](functions/function-patch.md) function to update the original source.
 
-Canvas apps also support *record references*. Much like a research-paper reference, a record reference refers to a record without including a complete copy of it. Such a reference can refer to a record in any entity.  Also like research-paper references, you can mix records from different entities in a single column.
+Canvas apps also support *record references*. Much like a research-paper reference, a record reference refers to a record without including a complete copy of it. Such a reference can refer to a record in any entity. Also like research-paper references, you can mix records from different entities in a single column.
 
 Many operations on record references are identical to working with records. You can compare record references to each other and to full records. You can set a record reference's value with the **Patch** function just as you would a lookup with a full record.
 
@@ -33,7 +33,7 @@ There is one important usage difference: you can't directly access the fields of
 
 Common Data Service supports relationships between records. Each record in the **Accounts** entity has a **Primary Contact** lookup field to a record in the **Contacts** entity. The lookup can only refer to a record in **Contacts** and can't refer to a record in, say, the **Teams** entity. That last detail is important because you always know what fields will be available for the lookup.
 
-Common Data Service also supports polymorphic lookups, which can refer to a record from any entity in a set. For example, the **Owner** field can refer to a record in the **Users** entity or the **Teams** entity. The same lookup field in different records could refer to records in different entities. In this case, you don't always know what fields will be available.  
+Common Data Service also supports polymorphic lookups, which can refer to a record from any entity in a set. For example, the **Owner** field can refer to a record in the **Users** entity or the **Teams** entity. The same lookup field in different records could refer to records in different entities. In this case, you don't always know what fields will be available.
 
 Canvas record references were designed for working with polymorphic lookups in Common Data Service. You can also use record references outside of this context, which is how the two concepts differ.
 
@@ -45,14 +45,14 @@ Every entity in Common Data Service includes an **Owner** field. This field can'
 
 To show that field in the **Account** entity:
 
-1. Open [this site](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1. Open [this PowerApps site](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 1. In the left navigation bar, select **Data** > **Entities**.
 1. In the list of entities, select **Account**.
 1. In the upper-right corner, open the filter list (which is set to **Default** by default), and then select **All**.
 1. Scroll down until the **Owner** field appears.
 
-> [!div class="mx-imgBorder"]
-> ![Owner field on Account entity](media/working-with-references/owner-field.png)
+ > [!div class="mx-imgBorder"]
+ > ![Owner field on Account entity](media/working-with-references/owner-field.png)
 
 This lookup field can refer to a record from either the **Teams** entity or the **Users** entity. Not every record in these entities has permission to be an **Owner**; check the supported roles if you run into a problem.
 
@@ -103,7 +103,7 @@ IfError(
 
 ## Filter based on an owner
 
-Congratulations: you've finished the hardest aspect of working with a record reference. Other use cases are more straightforward because they don't access fields of the record. As a case in point, take filtering, which you'll explore in this section.
+Congratulations—you've finished the hardest aspect of working with a record reference. Other use cases are more straightforward because they don't access fields of the record. As a case in point, take filtering, which you'll explore in this section.
 
 Add a **Combo box** control above the gallery, and set these properties of the new control:
 
@@ -111,7 +111,7 @@ Add a **Combo box** control above the gallery, and set these properties of the n
 - **SelectMultiple**: `false`
 
 > [!div class="mx-imgBorder"]
-> ![Added combo box control above gallery with Items property set to Users](media/working-with-references/filter-insert-combobox.png)
+> ![Added combo-box control above gallery with Items property set to Users](media/working-with-references/filter-insert-combobox.png)
 
 To filter the gallery by a specific user selected from this combo box, set the gallery's **Items** property to this formula:
 
@@ -120,7 +120,7 @@ Filter( Accounts, Owner = ComboBox1.Selected )
 ```
 
 > [!div class="mx-imgBorder"]
-> ![Filtered gallery based on value set in the combo box control](media/working-with-references/filter-accounts.png)
+> ![Filtered gallery based on value set in the combo-box control](media/working-with-references/filter-accounts.png)
 
 > [!IMPORTANT]
 > The instructions in this topic are accurate if you follow the steps exactly. However, any formula that refers to a control by its name fails if the control has a different name. If you delete and add a control of the same type, the number at the end of the control's name changes. For any formula that shows an error, confirm that it contains the correct names of all controls.
@@ -181,6 +181,9 @@ Patch( Accounts, Gallery1.Selected, { Owner: First( Teams ) } )
 This approach doesn't differ from a normal lookup because the app knows the type of **First( Teams )**. If you want the first user instead, replace that portion with **First( Users )**. The **Patch** function knows that the **Owner** field can be set to either of these two entity types.
 
 To add this capability to the app:
+
+<!--note from editor: In Step 2, if there is a Tooltip for the ellipsis, use that in the sentence. For example, if Tooltip is "More options": "On the More options (...) menu, select....." or "Select the More options (...) button..."   -->
+
 
 1. In the **Tree view** pane, select the **Radio** control and the two **Combo box** controls at the same time.
 
@@ -349,11 +352,11 @@ Filter( Contacts,
 
 Two important differences between **Customer** and **Owner** require an update to the formulas inside the gallery and the form:
 
-1. One-to-many relationships between **Accounts** and **Contacts** take precedence when you refer to these entity types by name. Instead of **Accounts**, use **\[\@Accounts]**; instead of **Contacts**, use **\[\@Contacts]**. By using the [global disambiguation operator](functions/operators.md#disambiguation-operator) you ensure that you're referring to the entity type in **IsType** and **AsType**. This problem exists only in the record context of the gallery and form controls.
+1. One-to-many relationships between **Accounts** and **Contacts** take precedence when you refer to these entity types by name. Instead of **Accounts**, use **\[\@Accounts]**; instead of **Contacts**, use **\[\@Contacts]**. By using the [global disambiguation operator](functions/operators.md#disambiguation-operator), you ensure that you're referring to the entity type in **IsType** and **AsType**. This problem exists only in the record context of the gallery and form controls.
 
 1. The **Owner** field must have a value, but **Customer** fields can be *blank*. To show the correct result without a type name, test for this case with the [**IsBlank** function](functions/function-isblank-isempty.md), and show an empty text string instead.
 
-Both of these changes are in the same formula, which appears in the custom card in the form, as well as the **Text** property of the gallery's label control:
+Both of these changes are in the same formula, which appears in the custom card in the form, as well as in the **Text** property of the gallery's label control:
 
 ```powerapps-dot
 If( IsBlank( ThisItem.'Company Name' ), "",
@@ -461,7 +464,7 @@ To explore this concept in the app:
 1. On the **Properties** tab near the right side of the screen, set the gallery's **Items** to **Accounts**.
 
     > [!div class="mx-imgBorder"]
-    > ![Set items to accounts in property pane](media/working-with-references/activitypointer-accounts.png)
+    > ![Set Items to Accounts in property pane](media/working-with-references/activitypointer-accounts.png)
 
 1. Set the gallery's layout to **Title**, and then set the title field to **Account Name**.
 
@@ -501,7 +504,7 @@ The **Activity** entity is special. Whenever you add a record to the **Faxes** e
 You can show all activities by changing only one line in the previous example. Replace `Gallery2.Selected.Faxes` with `Gallery2.Selected.Activities`.
 
 > [!div class="mx-imgBorder"]
-> ![Change of items property for the second gallery, changing from faxes to activities](media/working-with-references/activitypointer-gallery.png)
+> ![Change of Items property for the second gallery, changing from faxes to activities](media/working-with-references/activitypointer-gallery.png)
 
 Records are coming from the **Activity** entity, but you can nevertheless use the **IsType** function to identify which kind of activity they are. Again, before you use **IsType** with an entity type, you must add the data source.
 

@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
-ms.date: 05/06/2019
+ms.date: 05/17/2019
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -21,17 +21,19 @@ Checks a record reference for a specific entity type (**IsType**) and treats the
 
 ## Description
 
-Read [understand record references and polymorphic lookups](../working-with-references.md) for a broader introduction and more details.
+Read [Understand record references and polymorphic lookups](../working-with-references.md) for a broader introduction and more details.
 
 A lookup field usually refers to records in a particular entity. Because the entity type is well established, you can access the fields of the lookup by using a simple dot notation. For example, **First( Accounts ).'Primary Contact'.'Full Name'** walks from the **Accounts** entity to the **Primary Contact** record in the **Contacts** entity and extracts the **Full Name** field.
 
-Common Data Service also supports polymorphic lookup fields, which can refer to records from a set of entities, as in these examples:
+Common Data Service also supports polymorphic lookup fields, which can refer to records from a set of entities, as in these examples.
 
 | Lookup field | Can refer to |
 |--------------|--------------|
 | **Owner** | **Users** or **Teams** |
 | **Customer** | **Accounts** or **Contacts** |
 | **Regarding** | **Accounts**, **Contacts**, **Knowledge Articles**, etc. |
+
+<!--note from editor: Change "Knowledge Articles" to "Knowledge Base articles" if that is what is being referenced.   -->
 
 In canvas-app formulas, you can use record references to work with polymorphic lookups. Because a record reference can refer to different entities, you don't know which fields will be available when you write a formula. The *.Field* notation isn't available. Those formulas must adapt to the records that the app encounters when it runs.
 
@@ -84,6 +86,9 @@ If the record reference is *blank*, **IsType** returns FALSE, and **AsType** ret
 
 - *RecordReference* - Required. A record reference, often a lookup field that can refer to a record in any of multiple entities.
 - *EntityType* - Required. The specific entity to which to cast.
+
+<!--note from editor: Change "The specific entity to which to cast" to "The specific entity to cast to." ?   -->
+
 
 ## Example
 
