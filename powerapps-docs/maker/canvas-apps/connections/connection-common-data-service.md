@@ -19,19 +19,19 @@ search.app:
 
 You can securely store your business data in Common Data Service and build rich apps in PowerApps so that users can manage that data. You can also integrate that data into solutions that include Microsoft Flow, Power BI, and data from Dynamics 365.
 
-By default, the Common Data Service connector connects to data in your app's current environmnent. If your app moves to another environment, the connector connects to data in the new environment. This works well for an app using a single environment or an app that follows an ALM process for moving from Development to Test to Production.
+By default, the Common Data Service connector connects to data in your app's current environmnent. If your app moves to another environment, the connector connects to data in the new environment. This behavior works well for an app using a single environment or an app that follows an ALM process for moving from Development to Test to Production.
 
-When you add a data source with the Common Data Service connector, you can change the environment and then select one or more entities.  By default, the app connects to data in the current environment, and the UI shows **(Current)** over the list of entities.  
+When you add a data source with the Common Data Service connector, you can change the environment and then select one or more entities. By default, the app connects to data in the current environment, and the UI shows **(Current)** over the list of entities.
 
-![Common Data Service Change Environment](media/connection-common-data-service/common-data-service-connection-change-environment.png)
+![Default environment](media/connection-common-data-service/common-data-service-connection-change-environment.png)
 
-If you select **Change**, you can select a different environment to pull data from it instead of or in addition to the current environment.
+If you select **Change**, you can specify a different environment to pull data from it instead of or in addition to the current environment.
 
-![Common Data Service Change Environment](media/connection-common-data-service/common-data-service-connection-select-environment.png)
+![Other environments](media/connection-common-data-service/common-data-service-connection-select-environment.png)
 
-The selected environment name is shown below the search box.  
+The name of the selected environment appears under the search box.
 
-![Common Data Service Change Environment](media/connection-common-data-service/common-data-service-connection-after-change-environment.png)
+![New environments](media/connection-common-data-service/common-data-service-connection-after-change-environment.png)
 
 The Common Data Service connector is more robust than the Dynamics 365 connector and approaching feature parity.
 
