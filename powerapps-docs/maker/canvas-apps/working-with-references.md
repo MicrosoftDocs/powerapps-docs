@@ -113,7 +113,7 @@ Add a **Combo box** control above the gallery, and set these properties of the n
 > [!div class="mx-imgBorder"]
 > ![Added combo box control above gallery with Items property set to Users](media/working-with-references/filter-insert-combobox.png)
 
-To filter the gallery by a specific user selected from this combo box, set the gallery's **Items** property to this formula.
+To filter the gallery by a specific user selected from this combo box, set the gallery's **Items** property to this formula:
 
 ```powerapps-dot
 Filter( Accounts, Owner = ComboBox1.Selected )
@@ -165,7 +165,7 @@ With these changes, you can show all records or filter them based on either a us
 
 The formula is fully delegable. The portion that's comparing the radio-button values is a constant across all records and is evaluated before the rest of the filter is sent to Common Data Service.
 
-If you want to filter on the type of the owner, you can use the **IsType** function, but it's not yet delegable:
+If you want to filter on the type of the owner, you can use the **IsType** function, but it's not yet delegable.
 
 > [!div class="mx-imgBorder"]
 > ![Filter by owner type by using IsType](media/working-with-references/filter-bytype.png)
@@ -184,17 +184,17 @@ To add this capability to the app:
 
 1. In the **Tree view** pane, select the **Radio** control and the two **Combo box** controls at the same time.
 
-1. On the ellipsis menu, select **Copy these items**:
+1. On the ellipsis menu, select **Copy these items**.
 
     > [!div class="mx-imgBorder"]
     > ![Copy of multiple controls using the tree view](media/working-with-references/patch-copy.png)
 
-1. On the same menu, select **Paste**:
+1. On the same menu, select **Paste**.
 
     > [!div class="mx-imgBorder"]
     > ![Paste of multiple controls using the tree view](media/working-with-references/patch-paste.png)
 
-1. Move the copied controls to the right of the gallery:
+1. Move the copied controls to the right of the gallery.
 
     > [!div class="mx-imgBorder"]
     > ![Moved copied controls to the right of the gallery](media/working-with-references/patch-position.png)
@@ -262,26 +262,26 @@ You can show an **Owner** field inside a form by adding a custom card. As of thi
 
 1. Insert an **Edit form** control, and then resize and move it to the lower-right corner.
 
-1. On the **Properties** tab of the rightmost pane, open the **Data source** list, and then select **Accounts**:
+1. On the **Properties** tab of the rightmost pane, open the **Data source** list, and then select **Accounts**.
 
     > [!div class="mx-imgBorder"]
     > ![Form control showing additional fields with blank values](media/working-with-references/form-insert.png)  
 
-1. Set the form's **Item** property to `Gallery1.Selected`:
+1. Set the form's **Item** property to `Gallery1.Selected`.
 
     > [!div class="mx-imgBorder"]
     > ![Form control showing additional fields populated from the selected item in the gallery](media/working-with-references/form-item.png)
 
 1. On the **Properties** tab of the rightmost pane, select **Edit fields**.
 
-1. In the **Fields** pane, select the ellipsis, and then select **Add a custom card**:
+1. In the **Fields** pane, select the ellipsis, and then select **Add a custom card**.
 
     > [!div class="mx-imgBorder"]
     > ![Command for adding a custom card](media/working-with-references/form-customcard.png)
 
     The new card appears at the bottom of the form control.
 
-1. Resize the card as needed to show all the text:
+1. Resize the card as needed to show all the text.
 
     > [!div class="mx-imgBorder"]
     > ![Inserted custom card, blank](media/working-with-references/form-inserted-customcard.png)
@@ -306,16 +306,16 @@ For each selection in the gallery, more fields of the account, including the rec
 
 In Common Data Service, the **Customer** lookup field is another polymorphic lookup that's very similar to **Owner**.
 
-**Owner** is limited to one per entity, but entities can include zero, one, or more **Customer** lookup fields. The **Contacts** system entity includes the **Company Name** field, which is a **Customer** lookup field:
+**Owner** is limited to one per entity, but entities can include zero, one, or more **Customer** lookup fields. The **Contacts** system entity includes the **Company Name** field, which is a **Customer** lookup field.
 
 > [!div class="mx-imgBorder"]
 > ![Contact entity showing Company Name field as a Customer data type that isn't required](media/working-with-references/customer-companyname.png)
 
-You can add more **Customer** lookup fields to an entity by selecting the **Customer** data type for a new field:
+You can add more **Customer** lookup fields to an entity by selecting the **Customer** data type for a new field.
 
 ![Customer data type from the list of data types when creating a field](media/working-with-references/customer-datatype.png)
 
-A **Customer** lookup field can refer to a record from either the **Accounts** entity or the **Contacts** entity. You'll use the **IsType** and **AsType** functions with these entities, so now is a good time to add them as data sources (you can leave **Teams** and **Users** in place):
+A **Customer** lookup field can refer to a record from either the **Accounts** entity or the **Contacts** entity. You'll use the **IsType** and **AsType** functions with these entities, so now is a good time to add them as data sources (you can leave **Teams** and **Users** in place).
 
 > [!div class="mx-imgBorder"]
 > ![Accounts, Teams, Users, and Contacts entities in the Data pane](media/working-with-references/customer-datasources.png)
@@ -366,7 +366,7 @@ If( IsBlank( ThisItem.'Company Name' ), "",
 > [!div class="mx-imgBorder"]
 > ![Update to Text property of subtitle label control in the gallery](media/working-with-references/customer-update.png)
 
-With these changes, you can view and change the **Company Name** field in the **Contacts** entity:
+With these changes, you can view and change the **Company Name** field in the **Contacts** entity.
 
 > [!div class="mx-imgBorder"]
 > ![Animation showing changing selection in the Contacts-based gallery control driving changes in the other controls and form](media/working-with-references/customer-allthree.gif)
@@ -382,7 +382,7 @@ With these changes, you can view and change the **Company Name** field in the **
 
 The **Regarding** lookup field differs a little from those that you've already worked with in this topic. You'll start by applying the patterns that this topic described earlier, and then you'll learn other tricks.
 
-You can start simply with the **Faxes** entity. This entity has a polymorphic **Regarding** lookup field, which can refer to **Accounts**, **Contacts**, and other entities. You can take the app for **Customers** and modify it for **Faxes**:
+You can start simply with the **Faxes** entity. This entity has a polymorphic **Regarding** lookup field, which can refer to **Accounts**, **Contacts**, and other entities. You can take the app for **Customers** and modify it for **Faxes**.
 
 | Location | **Customer** sample | **Faxes** sample |
 |----------|-----------|------------------|
@@ -411,7 +411,7 @@ If( IsBlank( ThisItem.Regarding ), "",
 > [!div class="mx-imgBorder"]
 > ![Updated Text property for the subtitle control for Regarding lookups](media/working-with-references/regarding-label.png)
 
-After you make these changes, you work with the **Regarding** lookup just as you did the **Owner** and **Customer** lookups:
+After you make these changes, you work with the **Regarding** lookup just as you did the **Owner** and **Customer** lookups.
 
 > [!div class="mx-imgBorder"]
 > ![Animation showing changes in the Faxes-based gallery control driving updates to the other controls and form](media/working-with-references/regarding-allthree.gif)
@@ -426,20 +426,20 @@ After you make these changes, you work with the **Regarding** lookup just as you
 
 **Regarding** differs from **Owner** and **Customer** because the former involves a many-to-one relationship. By definition, a reverse, one-to-many relationship allows you to write **First( Accounts ).Faxes**.
 
-Let's back up and look at the entity definitions. In Common Data Service, entities such as **Faxes**, **Tasks**, **Emails**, **Notes**, **Phone Calls**, **Letters**, and **Chats** are designated as [*activities*](../../developer/common-data-service/activity-entities.md). You can also create your own [custom activity entities](../../developer/common-data-service/custom-activities.md). When you view or create an activity entity, its settings appear under **More settings**:
+Let's back up and look at the entity definitions. In Common Data Service, entities such as **Faxes**, **Tasks**, **Emails**, **Notes**, **Phone Calls**, **Letters**, and **Chats** are designated as [*activities*](../../developer/common-data-service/activity-entities.md). You can also create your own [custom activity entities](../../developer/common-data-service/custom-activities.md). When you view or create an activity entity, its settings appear under **More settings**.
 
 ![Activity entity setting when creating an entity](media/working-with-references/activity-entitytype.png)
 
-Other entities can be related to an activity entity if they're enabled as an *activity task* in the entity's settings. **Accounts**, **Contacts**, and many other standard entities are so designated (again, under **More settings**):
+Other entities can be related to an activity entity if they're enabled as an *activity task* in the entity's settings. **Accounts**, **Contacts**, and many other standard entities are so designated (again, under **More settings**).
 
 ![Activity task setting when creating an entity](media/working-with-references/activity-entityuse.png)
 
-All activity entities and activity-task entities have an implied relationship. If you change the filter to **All** at the top of the screen, select the **Faxes** entity, and then select the **Relationships** tab, all entities that can be a target of a **Regarding** lookup appear:
+All activity entities and activity-task entities have an implied relationship. If you change the filter to **All** at the top of the screen, select the **Faxes** entity, and then select the **Relationships** tab, all entities that can be a target of a **Regarding** lookup appear.
 
 > [!div class="mx-imgBorder"]
 > ![Relationships of the Faxes entity showing Regarding many-to-one relationships](media/working-with-references/activity-manytoone.png)
 
-If you show the relationships for the **Accounts** entity, all the entities that can be a source of a **Regarding** lookup field appear:
+If you show the relationships for the **Accounts** entity, all the entities that can be a source of a **Regarding** lookup field appear.
 
 > [!div class="mx-imgBorder"]
 > ![Relationships of the Account entity showing Regarding one-to-many relationships](media/working-with-references/activity-onetomany.png)
@@ -451,19 +451,19 @@ What does it all mean?
 
 To explore this concept in the app:
 
-1. Add another screen:
+1. Add another screen.
 
     > [!div class="mx-imgBorder"]
     > ![Insert a blank screen](media/working-with-references/activitypointer-newscreen.png)
 
 1. Insert a gallery control, resize it, and then move it to the left side of the screen.
 
-1. On the **Properties** tab of the rightmost pane, set the gallery's **Items** to **Accounts**:
+1. On the **Properties** tab of the rightmost pane, set the gallery's **Items** to **Accounts**.
 
     > [!div class="mx-imgBorder"]
     > ![Set items to accounts in property pane](media/working-with-references/activitypointer-accounts.png)
 
-1. Set the gallery's layout to **Title**, and then set the title field to **Account Name**:
+1. Set the gallery's layout to **Title**, and then set the title field to **Account Name**.
 
     > [!div class="mx-imgBorder"]
     > ![Set Layout to Title for gallery control in the properties pane](media/working-with-references/activitypointer-account-name.png)
@@ -472,12 +472,12 @@ To explore this concept in the app:
 
 1. Set the new gallery's **Items** property to `Gallery2.Selected.Faxes`.
 
-    This step returns the filtered list of faxes for a given account:
+    This step returns the filtered list of faxes for a given account.
 
     > [!div class="mx-imgBorder"]
     > ![Set items property for the faxes-based gallery control](media/working-with-references/activitypointer-faxes.png)
 
-1. Set the gallery's layout to **Title and subtitle**, and then set the title field to show the **Subject** field (which might be lowercase **subject**):
+1. Set the gallery's layout to **Title and subtitle**, and then set the title field to show the **Subject** field (which might be lowercase **subject**).
 
     > [!div class="mx-imgBorder"]
     > ![Set title to Subject field](media/working-with-references/activitypointer-subject.png)
@@ -491,19 +491,19 @@ As you select an item in the list of accounts, the list of faxes shows faxes for
 
 As the previous section describes, you can show all the faxes for an account. However, you can also show all the activities for an account, including faxes, email messages, phone calls, and other interactions.
 
-For the latter scenario, you use the **Activity** entity. You can show this entity by turning on **All** in the upper-right corner to remove the filter from the list of entities:
+For the latter scenario, you use the **Activity** entity. You can show this entity by turning on **All** in the upper-right corner to remove the filter from the list of entities.
 
 > [!div class="mx-imgBorder"]
 > ![List of entities showing the Activity entity](media/working-with-references/activitypointer-entity.png)
 
 The **Activity** entity is special. Whenever you add a record to the **Faxes** entity, the system also creates a record in the **Activity** entity with the fields that are common across all activity entities. Of those fields, **Subject** is one of the most interesting.
 
-You can show all activities by changing only one line in the previous example. Replace `Gallery2.Selected.Faxes` with `Gallery2.Selected.Activities`:
+You can show all activities by changing only one line in the previous example. Replace `Gallery2.Selected.Faxes` with `Gallery2.Selected.Activities`.
 
 > [!div class="mx-imgBorder"]
 > ![Change of items property for the second gallery, changing from faxes to activities](media/working-with-references/activitypointer-gallery.png)
 
-Records are coming from the **Activity** entity, but you can nevertheless use the **IsType** function to identify which kind of activity they are. Again, before you use **IsType** with an entity type, you must add the data source:
+Records are coming from the **Activity** entity, but you can nevertheless use the **IsType** function to identify which kind of activity they are. Again, before you use **IsType** with an entity type, you must add the data source.
 
 > [!div class="mx-imgBorder"]
 > ![Data pane showing all the entities required for the IsType function](media/working-with-references/activity-datasources.png)
@@ -539,7 +539,7 @@ If( IsType( ThisItem, [@Faxes] ), "Fax",
 > [!div class="mx-imgBorder"]
 > ![Expanded text property with more information for a phone call](media/working-with-references/activitypointer-phonecall.png)
 
-As a result, the app shows a complete list of activities. The **Subject** field appears for all types of activities, whether the formula takes them into account or not. For types of activities that you know about, you can show their type names and type-specific information about each activity:
+As a result, the app shows a complete list of activities. The **Subject** field appears for all types of activities, whether the formula takes them into account or not. For types of activities that you know about, you can show their type names and type-specific information about each activity.
 
 > [!div class="mx-imgBorder"]
 > ![Completed screen showing information for different kinds of activities](media/working-with-references/activitypointer-complete.png)
@@ -548,12 +548,16 @@ As a result, the app shows a complete list of activities. The **Subject** field 
 
 So far, all of the **Regarding** examples have been based on activities, but the **Notes** entity represents another case.
 
-When you create an entity, you can enable attachments:
+When you create an entity, you can enable attachments.
 
 > [!div class="mx-imgBorder"]
 > ![Enabling attachments and notes when creating an entity](media/working-with-references/notes-entity.png)
 
-If you select this check box, you'll create a **Regarding** relationship with the **Notes** entity, as this graphic shows for the **Accounts** entity:
+If you select the Enable attachments check box, you'll create a **Regarding** relationship with the **Notes** entity, as this graphic shows for the **Accounts** entity:
+
+
+<!--The screenshot below shows the entity as "Account" - should the sentence above change from "Accounts" to "Account"?-->
+
 
 > [!div class="mx-imgBorder"]
 > ![Account entity showing relationship to Notes through a one-to-many relationship](media/working-with-references/notes-relationships.png)
