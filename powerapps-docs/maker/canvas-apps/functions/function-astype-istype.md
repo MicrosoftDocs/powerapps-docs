@@ -39,7 +39,7 @@ Common Data Service also supports polymorphic lookup fields, which can refer to 
 
 In canvas-app formulas, you can use record references to work with polymorphic lookups. Because a record reference can refer to different entities, you don't know which fields will be available when you write a formula. The *.Field* notation isn't available. Those formulas must adapt to the records that the app encounters when it runs.
 
-The **IsType** function tests whether a record reference refers to a specific entity type. The function returns a Boolean *true* or *false*.
+The **IsType** function tests whether a record reference refers to a specific entity type. The function returns a Boolean TRUE or FALSE.
 
 The **AsType** function treats a record reference as a specific entity type, sometimes referred to as *casting*. You can use the result as if it were a record of the entity and, again, use the *.Field* notation to access all of the fields of that record. An error occurs if the reference isn't of the specific type.
 
@@ -64,7 +64,7 @@ Similarly, you can use record references with the [**Patch**](function-patch.md)
 Patch( Accounts, First( Accounts ), { Owner: First( Teams ) } )
 ```  
 
-If used in a record context, such as within a [**Gallery**](../controls/control-gallery.md) or [**Edit form**](../controls/control-form-detail.md) control, you might need to use the [global disambiguation operator](operators.md#disambiguation-operator) to reference the entity type. For example, this formula would be effective for a gallery that's displaying a list of contacts where **Company Name** is a **Customer** lookup.
+If used in a record context, such as within a [**Gallery**](../controls/control-gallery.md) or [**Edit form**](../controls/control-form-detail.md) control, you might need to use the [global disambiguation operator](operators.md#disambiguation-operator) to reference the entity type. For example, this formula would be effective for a gallery that's displaying a list of contacts where **Company Name** is a **Customer** lookup:
 
 ```powerapps-dot
 If( IsType( ThisItem.'Company Name', [@Accounts] ),
@@ -75,7 +75,7 @@ If( IsType( ThisItem.'Company Name', [@Accounts] ),
 
 For both functions, you specify the type through the name of the data source that's connected to the entity. For the formula to work, you must also add a data source to the app for any types that you want to test or cast. For example, you must add the **Users** entity as a data source if you want to use **IsType** and **AsType** with an **Owner** lookup and records from that entity. You can add only the data sources that you actually use in your app; you don't need to add all the entities that a lookup could reference.
 
-If the record reference is *blank*, **IsType** returns *false*, and **AsType** returns *blank*. All fields of a *blank* record will be *blank*.
+If the record reference is *blank*, **IsType** returns FALSE, and **AsType** returns *blank*. All fields of a *blank* record will be *blank*.
 
 ## Syntax
 
