@@ -17,11 +17,7 @@ search.app:
 
 # AsType and IsType functions in canvas apps
 
-
-<!--This first, incomplete sentence seems awkward. Does it refer to both types of functions? Could it change to something like "The AsType and IsType functions check a record reference for a specific entity type and treat the reference as a specific type." ? -->
-
-
-Checks a record reference for a specific entity type and treats the reference as a specific type.
+Checks a record reference for a specific entity type (**IsType**) and treats the reference as a specific type (**AsType**).
 
 ## Description
 
@@ -104,12 +100,7 @@ If the record reference is *blank*, **IsType** returns FALSE, and **AsType** ret
     > [!div class="mx-imgBorder"]
     > ![Insert a gallery control with a blank vertical layout](media/function-astype-istype/contacts-customer-gallery.png)
 
-
-
-<!--Msft style guide suggests "rightmost" instead of right-hand. https://styleguides.azurewebsites.net/Styleguide/Read?id=2700&topicid=35676-->
-
-
-1. On the **Properties** tab of the right-hand pane, set the gallery's **Items** property to **Contacts**.
+1. On the **Properties** tab near the right edge, set the gallery's **Items** property to **Contacts**.
 
     > [!div class="mx-imgBorder"]
     > ![Set items to Contacts in the properties pane](media/function-astype-istype/contacts-customer-datasource.png)

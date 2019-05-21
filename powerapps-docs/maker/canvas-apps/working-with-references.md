@@ -262,7 +262,7 @@ You can show an **Owner** field inside a form by adding a custom card. As of thi
 
 1. Insert an **Edit form** control, and then resize and move it to the lower-right corner.
 
-1. On the **Properties** tab of the rightmost pane, open the **Data source** list, and then select **Accounts**.
+1. On the **Properties** tab near the right side of the screen, open the **Data source** list, and then select **Accounts**.
 
     > [!div class="mx-imgBorder"]
     > ![Form control showing additional fields with blank values](media/working-with-references/form-insert.png)  
@@ -272,7 +272,7 @@ You can show an **Owner** field inside a form by adding a custom card. As of thi
     > [!div class="mx-imgBorder"]
     > ![Form control showing additional fields populated from the selected item in the gallery](media/working-with-references/form-item.png)
 
-1. On the **Properties** tab of the rightmost pane, select **Edit fields**.
+1. On the **Properties** tab near the right side of the screen, select **Edit fields**.
 
 1. In the **Fields** pane, select the ellipsis, and then select **Add a custom card**.
 
@@ -369,7 +369,7 @@ If( IsBlank( ThisItem.'Company Name' ), "",
 With these changes, you can view and change the **Company Name** field in the **Contacts** entity.
 
 > [!div class="mx-imgBorder"]
-> ![Animation showing changing selection in the Contacts-based gallery control driving changes in the other controls and form](media/working-with-references/customer-allthree.gif)
+> ![Animation that shows how selecting a contact changes the other controls and the form](media/working-with-references/customer-allthree.gif)
 
 > [!NOTE]
 > As of this writing, **Customer** lookups have these limitations:
@@ -414,7 +414,7 @@ If( IsBlank( ThisItem.Regarding ), "",
 After you make these changes, you work with the **Regarding** lookup just as you did the **Owner** and **Customer** lookups.
 
 > [!div class="mx-imgBorder"]
-> ![Animation showing changes in the Faxes-based gallery control driving updates to the other controls and form](media/working-with-references/regarding-allthree.gif)
+> ![Animation that shows how selecting an item in the gallery changes the other controls and the form](media/working-with-references/regarding-allthree.gif)
 
 > [!NOTE]
 > As of this writing, **Regarding** lookups have these limitations:
@@ -458,7 +458,7 @@ To explore this concept in the app:
 
 1. Insert a gallery control, resize it, and then move it to the left side of the screen.
 
-1. On the **Properties** tab of the rightmost pane, set the gallery's **Items** to **Accounts**.
+1. On the **Properties** tab near the right side of the screen, set the gallery's **Items** to **Accounts**.
 
     > [!div class="mx-imgBorder"]
     > ![Set items to accounts in property pane](media/working-with-references/activitypointer-accounts.png)
@@ -475,7 +475,7 @@ To explore this concept in the app:
     This step returns the filtered list of faxes for a given account.
 
     > [!div class="mx-imgBorder"]
-    > ![Set items property for the faxes-based gallery control](media/working-with-references/activitypointer-faxes.png)
+    > ![Set the Items property of the gallery that shows faxes](media/working-with-references/activitypointer-faxes.png)
 
 1. Set the gallery's layout to **Title and subtitle**, and then set the title field to show the **Subject** field (which might be lowercase **subject**).
 
@@ -553,11 +553,7 @@ When you create an entity, you can enable attachments.
 > [!div class="mx-imgBorder"]
 > ![Enabling attachments and notes when creating an entity](media/working-with-references/notes-entity.png)
 
-If you select the Enable attachments check box, you'll create a **Regarding** relationship with the **Notes** entity, as this graphic shows for the **Accounts** entity:
-
-
-<!--The screenshot below shows the entity as "Account" - should the sentence above change from "Accounts" to "Account"?-->
-
+If you select the check box for enabling attachments, you'll create a **Regarding** relationship with the **Notes** entity, as this graphic shows for the **Accounts** entity:
 
 > [!div class="mx-imgBorder"]
 > ![Account entity showing relationship to Notes through a one-to-many relationship](media/working-with-references/notes-relationships.png)
