@@ -86,7 +86,7 @@ When you build an app from Common Data Service, you don't need to create a conne
 
     ![Set the form's Datasource and Item property](./media/data-platform-create-app-scratch/form-datasource.png)
 
-1. On the **Properties** tab of the right-hand pane, select **Edit** next to **Fields** to open the **Fields** pane.
+1. On the **Properties** tab of the right-hand pane, select **Edit Fields** to open the **Fields** pane.
 
 1. Select **Add field**. 
      -  To add preexisting fields select the check boxes for these fields:
@@ -99,6 +99,9 @@ When you build an app from Common Data Service, you don't need to create a conne
         - **Annual Revenue**
 
      - To create a new field select **Add field**, enter the required and optional information, and then select **Done**. More information: [Create a field](../common-data-service/create-edit-field-portal.md#create-a-field) 
+
+       > [!div class="mx-imgBorder"] 
+       > ![](media/data-platform-create-app-scratch/choose-or-add-fields.png "[Select and add a field")
 
 1. Select **Add**.
 
