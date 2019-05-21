@@ -71,6 +71,30 @@ Follow the steps below to create and import a [solution](https://docs.microsoft.
 5. The generated solution files are located in `\bin\debug\`.
 6. You should manually [import the solution](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/customize/import-update-export-solutions) using the web portal once the zip file is ready.
 
+ ## How to remove components from a solution
+
+If you would like to remove a custom component from a solution, follow the steps below:
+
+1.	Edit the cdsproj file in your solution project directory and remove the reference to the component. Below is an example of a component reference:
+
+```XML
+<ItemGroup>
+    <ProjectReference Include="..\pcf_component\pcf_component.pcfproj">
+      <Project>0481bd83-ffb0-4b70-b526-e0b3dd63e7ef</Project>
+      <Name>pcf_component </Name>
+      <Targets>Build</Targets>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <OutputItemType>Content</OutputItemType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </ProjectReference>
+</ItemGroup>
+```
+
+2.	Perform a rebuild (or clean) by running the command
+   ```CLI
+   msbuild /t:rebuild
+   ```
+
 ### See also
 
 [Add components to entities or fields](add-custom-controls-to-a-field-or-entity.md)<br />
