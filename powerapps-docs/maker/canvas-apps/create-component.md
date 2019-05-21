@@ -45,9 +45,11 @@ Components don't support the **UpdateContext** function, but you can create and 
 
 ## Import and export
 
-If you export a component, you create a local file that you can import to a different app. If the app contains a modified version of the same component, you're prompted to decide whether to replace the modified version or cancel the import. As of this writing, you can't save components to the cloud or share them within an environment.
+Clicking on **Import components** from the component dropdown opens a dialog. The dialog shows all apps that contain components and that you have permission to edit. Selecting an app and clicking the Import button will import the most recent published version of all of the components in that app into your app. Once they’re imported you can make edits to your copy or delete the ones you don’t need. 
 
-![Import and export](./media/create-component/import.png)
+![Import_dialog](./media/create-component/import-dialog.png)
+
+If you export a component, you create a local file that you can import to a different app. If the app contains a modified version of the same component, you're prompted to decide whether to replace the modified version or cancel the import. As of this writing, you can't save components to the cloud or share them within an environment.
 
 ## Custom properties
 
