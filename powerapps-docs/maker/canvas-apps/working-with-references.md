@@ -54,7 +54,7 @@ To show that field in the **Account** entity:
 > [!div class="mx-imgBorder"]
 > ![Owner field on Account entity](media/working-with-references/owner-field.png)
 
-This lookup field can refer to a record from either the **Teams** entity or the **Users** entity. Not every record in these entities have permissions to be an **Owner**; check the supported roles if you run into a problem.
+This lookup field can refer to a record from either the **Teams** entity or the **Users** entity. Not every record in these entities has permission to be an **Owner**; check the supported roles if you run into a problem.
 
 This graphic shows a simple gallery of **Accounts**, where the **Accounts** entity has been added to the app as a data source:
 
@@ -82,7 +82,7 @@ If( IsType( ThisItem.Owner, [@Teams] ),
 > [!div class="mx-imgBorder"]
 > ![Accounts shown in a Gallery control with Owner field displayed](media/working-with-references/accounts-displayowner.png)
 
-In this formula, the **IsType** function tests the **Owner** field against the **Teams** entity. If it's of that entity type, the **AsType** function casts it to a **Team** record. At this point, you can access all the fields of the **Teams** entity, including **Team Name**, by using *.Field* notation. If **IsType** determines that the **Owner** isn't a record in the **Teams** entity, that field must be a record in the **Users** entity because the **Owner** field is required (can't be *blank*).
+In this formula, the **IsType** function tests the **Owner** field against the **Teams** entity. If it's of that entity type, the **AsType** function casts it to a **Team** record. At this point, you can access all the fields of the **Teams** entity, including **Team Name**, by using the *.Field* notation. If **IsType** determines that the **Owner** isn't a record in the **Teams** entity, that field must be a record in the **Users** entity because the **Owner** field is required (can't be *blank*).
 
 You're using the [global disambiguation operator](functions/operators.md#disambiguation-operator) for **[@Teams]** and **[@Users]** to ensure that you're using the global entity type. You don't need it in this case, but it's a good habit to form. One-to-many relationships often conflict in the gallery's record scope, and this practice avoids that confusion.
 
@@ -143,7 +143,7 @@ You can get a little fancier by supporting filtering by either a user or a team.
     - **Items**: `Teams`
     - **Visible**: `Radio1.Selected.Value = "Teams"`
 
-    The app will display only one combo box at a time, dependending on the state of the radio control. Because they're directly above one another, they'll appear to be the same control that changes its contents.
+    The app will display only one combo box at a time, depending on the state of the radio control. Because they're directly above one another, they'll appear to be the same control that changes its contents.
 
 1. Finally, set the **Items** property of the **Gallery** control to this formula:
 
@@ -156,12 +156,12 @@ You can get a little fancier by supporting filtering by either a user or a team.
     ```
 
     > [!div class="mx-imgBorder"]
-    > ![filtered gallery showing all records or a specific user or team](media/working-with-references/filter-combobox.png)
+    > ![Filtered gallery showing all records or a specific user or team](media/working-with-references/filter-combobox.png)
 
 With these changes, you can show all records or filter them based on either a user or a team:
 
 > [!div class="mx-imgBorder"]
-> ![animation showing different filtered results based on the radio control and combo boxes](media/working-with-references/filter-allthree.gif)
+> ![Animation showing different filtered results based on the radio control and combo boxes](media/working-with-references/filter-allthree.gif)
 
 The formula is fully delegable. The portion that's comparing the radio-button values is a constant across all records and is evaluated before the rest of the filter is sent to Common Data Service.
 
@@ -262,7 +262,7 @@ You can show an **Owner** field inside a form by adding a custom card. As of thi
 
 1. Insert an **Edit form** control, and then resize and move it to the lower-right corner.
 
-1. On the **Properties** tab of the right-hand pane, open the **Data source** list, and then select **Accounts**:
+1. On the **Properties** tab of the rightmost pane, open the **Data source** list, and then select **Accounts**:
 
     > [!div class="mx-imgBorder"]
     > ![Form control showing additional fields with blank values](media/working-with-references/form-insert.png)  
@@ -272,7 +272,7 @@ You can show an **Owner** field inside a form by adding a custom card. As of thi
     > [!div class="mx-imgBorder"]
     > ![Form control showing additional fields populated from the selected item in the gallery](media/working-with-references/form-item.png)
 
-1. On the **Properties** tab of the right-hand pane, select **Edit fields**.
+1. On the **Properties** tab of the rightmost pane, select **Edit fields**.
 
 1. In the **Fields** pane, select the ellipsis, and then select **Add a custom card**:
 
@@ -369,7 +369,7 @@ If( IsBlank( ThisItem.'Company Name' ), "",
 With these changes, you can view and change the **Company Name** field in the **Contacts** entity:
 
 > [!div class="mx-imgBorder"]
-> ![Animation showing changing selection in the Contacts based gallery control driving changes in the other controls and form](media/working-with-references/customer-allthree.gif)
+> ![Animation showing changing selection in the Contacts-based gallery control driving changes in the other controls and form](media/working-with-references/customer-allthree.gif)
 
 > [!NOTE]
 > As of this writing, **Customer** lookups have these limitations:
@@ -414,7 +414,7 @@ If( IsBlank( ThisItem.Regarding ), "",
 After you make these changes, you work with the **Regarding** lookup just as you did the **Owner** and **Customer** lookups:
 
 > [!div class="mx-imgBorder"]
-> ![Animation showing changes in the Faxes based gallery control driving updates to the other controls and form](media/working-with-references/regarding-allthree.gif)
+> ![Animation showing changes in the Faxes-based gallery control driving updates to the other controls and form](media/working-with-references/regarding-allthree.gif)
 
 > [!NOTE]
 > As of this writing, **Regarding** lookups have these limitations:
@@ -458,7 +458,7 @@ To explore this concept in the app:
 
 1. Insert a gallery control, resize it, and then move it to the left side of the screen.
 
-1. On the **Properties** tab of the right-hand pane, set the gallery's **Items** to **Accounts**:
+1. On the **Properties** tab of the rightmost pane, set the gallery's **Items** to **Accounts**:
 
     > [!div class="mx-imgBorder"]
     > ![Set items to accounts in property pane](media/working-with-references/activitypointer-accounts.png)
@@ -475,7 +475,7 @@ To explore this concept in the app:
     This step returns the filtered list of faxes for a given account:
 
     > [!div class="mx-imgBorder"]
-    > ![Set items property for the faxes based gallery control](media/working-with-references/activitypointer-faxes.png)
+    > ![Set items property for the faxes-based gallery control](media/working-with-references/activitypointer-faxes.png)
 
 1. Set the gallery's layout to **Title and subtitle**, and then set the title field to show the **Subject** field (which might be lowercase **subject**):
 
@@ -550,7 +550,8 @@ So far, all of the **Regarding** examples have been based on activities, but the
 
 When you create an entity, you can enable attachments:
 
-![Enabling attachments and notes when creating an entity](media/working-with-references/notes-entity.png)
+> [!div class="mx-imgBorder"]
+> ![Enabling attachments and notes when creating an entity](media/working-with-references/notes-entity.png)
 
 If you select this check box, you'll create a **Regarding** relationship with the **Notes** entity, as this graphic shows for the **Accounts** entity:
 
