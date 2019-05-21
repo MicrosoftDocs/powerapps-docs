@@ -2,7 +2,7 @@
 title: "View the history of a solution | MicrosoftDocs"
 description: "Learn how to view the history of a solution"
 keywords: 
-ms.date: 05/13/2019
+ms.date: 05/19/2019
 ms.service: powerapps
 ms.custom: 
 ms.topic: article
@@ -33,13 +33,15 @@ You can view details about solution operations from the **Solutions** area of a 
 > ![](media/solutions-history-custom-view.png "Solutions history custom view")
 
 ## View solution history
-1.	From a PowerApps model-driven app, select **Settings** ![Settings](../model-driven-apps/media/powerapps-gear.png) on the app toolbar, and then select **Advanced Settings**. 
-2.	Select **Settings**, and then select **Solutions History**.
+1. Select **Settings**, and then select **Solutions History**.
 
      > [!div class="mx-imgBorder"] 
      > ![](media/solution-history-sitemap.png "Solution History area")
 
-The following views are available from the **Solutions History** area. 
+     > [!NOTE]
+     > To get to the **Settings** area from a PowerApps unified interface model-driven app, select **Settings** ![Settings](../model-driven-apps/media/powerapps-gear.png) on the app toolbar, and then select **Advanced Settings**. 
+
+2. By default, the **Custom Solutions History** view is displayed. The following views are available from the **Solutions History** area. 
 - **All Solutions History**. Displays solution history for both internal system and custom solutions. 
 - **Custom Solutions History**. Displays solution history for only custom solutions. 
 - **Internal Solutions History**. Displays solution history for only internal system solutions. 
