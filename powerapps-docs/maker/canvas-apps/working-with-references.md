@@ -320,7 +320,7 @@ A **Customer** lookup field can refer to a record from either the **Accounts** e
 > [!div class="mx-imgBorder"]
 > ![Accounts, Teams, Users, and Contacts entities in the Data pane](media/working-with-references/customer-datasources.png)
 
-The treatment of the **Customer** and **Owner** fields are so similar that you can literally copy the app (**File** > **Save as**, and then specify a different name) and make these simple replacements:
+The treatment of the **Customer** and **Owner** fields is so similar that you can literally copy the app (**File** > **Save as**, and then specify a different name) and make these simple replacements:
 
 | Location | **Owner** sample | **Customer** sample |
 |----------|-----------|------------------|
