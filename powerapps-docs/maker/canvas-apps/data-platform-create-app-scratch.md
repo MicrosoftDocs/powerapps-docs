@@ -88,20 +88,20 @@ When you build an app from Common Data Service, you don't need to create a conne
 
 1. On the **Properties** tab of the right-hand pane, select **Edit Fields** to open the **Fields** pane.
 
-1. Select **Add field**. 
-     -  To add preexisting fields select the check boxes for these fields:
+1. Select **Add field**, and then select the check boxes for these fields:
 
-        - **Account Name**
-        - **Address 1: Street 1**
-        - **Address 1: City**
-        - **Address 1: ZIP/Postal code**
-        - **Number of Employees**
-        - **Annual Revenue**
+    - **Account Name**
+    - **Address 1: Street 1**
+    - **Address 1: City**
+    - **Address 1: ZIP/Postal code**
+    - **Number of Employees**
+    - **Annual Revenue**
 
-     - To create a new field select **New field**, enter the required and optional information, and then select **Done**. More information: [Create a field](../common-data-service/create-edit-field-portal.md#create-a-field) 
-
-       > [!div class="mx-imgBorder"] 
-       > ![](media/data-platform-create-app-scratch/choose-or-add-fields.png "[Select and add a field")
+    > [!NOTE]
+    > Outside of this scenario, you can create a custom field by selecting **New field**, providing the required information, and then selecting **Done**. More information: [Create a field](../common-data-service/create-edit-field-portal.md#create-a-field).
+    >
+    > [!div class="mx-imgBorder"] 
+    > ![](media/data-platform-create-app-scratch/choose-or-add-fields.png "[Select and add a field")
 
 1. Select **Add**.
 
