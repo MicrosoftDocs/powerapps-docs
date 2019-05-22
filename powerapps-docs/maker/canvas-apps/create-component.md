@@ -47,7 +47,8 @@ Components don't support the **UpdateContext** function, but you can create and 
 
 To import one or more components from one app into another, select **Import components** in the drop-down list of components. A dialog box lists all apps that contain components that you have permission to edit. Select an app, and then select **Import** to import the most recent published version of all of the components in that app. After you import at least one component, you can edit your copy and delete any that you don’t need.
 
-![Import components dialog box](./media/create-component/import-components.png)
+> [!div class="mx-imgBorder"]
+> ![Import components dialog box](./media/create-component/import-components.png)
 
 If you export a component, you create a local file that you can import to a different app. If the app contains a modified version of the same component, you're prompted to decide whether to replace the modified version or cancel the import. 
 
