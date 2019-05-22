@@ -285,7 +285,7 @@ npm start
 
 Follow the steps below to create and import a [solution](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/customize/solutions-overview) file:
 
-1. Create a new directory inside the **LinearComponent** folder and navigate to the created folder. 
+1. Create a new folder **Solutions** inside the **LinearComponent** folder and navigate into the folder. 
 2. Create a new solution project in the **LinearComponent** folder using the command 
  
     ```CLI
@@ -307,7 +307,7 @@ Follow the steps below to create and import a [solution](https://docs.microsoft.
      msbuild /t:restore
     ```
 
-5. Again run the following command 
+5. Again run the following command msbuild
     ```CLI
      msbuild
     ```
@@ -319,7 +319,7 @@ Follow the steps below to create and import a [solution](https://docs.microsoft.
     > - Click on **Individual Components**
     > - Under **Code Tools**, check **NuGet targets & Build Tasks**
 
-6. The generated solution zip file is located in `\bin\debug\`.
+6. The generated solution zip file is located in `Solution\\bin\debug\`.
 7. You should manually [import the solution](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/customize/import-update-export-solutions) using the web portal once the zip file is ready.
 
 ## Adding custom components to a field or an entity

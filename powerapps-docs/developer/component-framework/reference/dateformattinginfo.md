@@ -18,6 +18,8 @@ ms.assetid: 4e7d43fb-b6b7-4f1d-89e3-0b8157c9d2d9
 
 [!INCLUDE [context-description](includes/dateformattinginfo-description.md)]
 
+## Properties
+
 ## abbreviatedDayNames
 
 { "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" }

@@ -18,6 +18,8 @@ ms.assetid: 8b51654c-ee67-40f8-ae5b-be684dad3520
 
 [!INCLUDE [mode-description](includes/mode-description.md)]
 
+## Properties
+
 ## allocatedHeight
 
 Height in pixels allocated to the component.
