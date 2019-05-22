@@ -40,7 +40,10 @@ Connect with Microsoft Flow from your app to manage your flows.
   
    -   Select **See your flows** to open a new browser tab and direct you to the Microsoft Flow site where any flows in the Flow environment are displayed.  
   
-   -   Select **Login to flow** to connect with Microsoft Flow and display available flows for you to run. This only appears if you aren’t currently signed in to Microsoft Flow.  
-   
-    For information about creating a flow, see [Get started with Microsoft Flow](/flow/getting-started)  
+   -   Select **Login to flow** to connect with Microsoft Flow and display available flows for you to run. This only appears if you aren’t currently signed in to Microsoft Flow.   
+
+    For information about creating a flow, see [Get started with Microsoft Flow](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/using-logic-flows#create-a-flow)  
+    
+ 
+    
   
