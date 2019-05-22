@@ -6,7 +6,7 @@
     href: custom-controls-overview.md
   - name: Create, debug and deploy custom components using Microsoft PowerApps CLI
     href: create-custom-controls-using-pcf.md
-  - name: Update tooling to latest version
+  - name: Update Microsoft PowerApps CLI to latest version
     href: updating-tooling.md
   - name: Implementing custom components in TypeScript
     href: implementing-controls-using-typescript.md
