@@ -50,7 +50,7 @@ To import one or more components from one app into another, select **Import comp
 > [!div class="mx-imgBorder"]
 > ![Import components dialog box](./media/create-component/import-components.png)
 
-If you export a component, you create a local file that you can import to a different app. If the app contains a modified version of the same component, you're prompted to decide whether to replace the modified version or cancel the import. As of this writing, you can't save components to the cloud or share them within an environment.
+If you export a component, you create a local file that you can import to a different app. If the app contains a modified version of the same component, you're prompted to decide whether to replace the modified version or cancel the import. 
 
 ## Custom properties
 
