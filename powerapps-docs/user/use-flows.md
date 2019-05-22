@@ -29,7 +29,7 @@ Connect with Microsoft Flow from your app to manage your flows.
 > [!NOTE]
 > To manage and run Microsoft Flow from your app, Microsoft Flow must be enabled in System Settings for you organization. More information:  [Flows in your organization](https://docs.microsoft.com/flow/organization-q-and-a) 
   
-1. On the toolbar, select **Flows**.  
+1. On the command bar, select **Flows**.  
   
    > [!div class="mx-imgBorder"]
    > ![Microsoft Flow menu](media/flow.png "Microsoft Flow menu") 
