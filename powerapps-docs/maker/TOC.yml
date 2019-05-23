@@ -689,8 +689,8 @@
       href: ./canvas-apps/share-app-resources.md
     - name: Embed an app in Power BI
       href: ./canvas-apps/embed-powerapps-powerbi.md
-    - name: Embed a Teams app
-      href: ./canvas-apps/embed-teams-app.md
+#    - name: Embed a Teams app
+#      href: ./canvas-apps/embed-teams-app.md
   - name: Manage an app
     items:
     - name: Edit an app
