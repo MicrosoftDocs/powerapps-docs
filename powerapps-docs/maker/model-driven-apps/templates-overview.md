@@ -2,7 +2,7 @@
 title: "Work with Excel and Word templates| MicrosoftDocs"
 description: "Learn how to use Word and Excel templates"
 ms.custom: ""
-ms.date: 05/28/2019
+ms.date: 05/23/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
