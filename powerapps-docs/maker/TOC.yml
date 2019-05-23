@@ -689,6 +689,8 @@
       href: ./canvas-apps/share-app-resources.md
     - name: Embed an app in Power BI
       href: ./canvas-apps/embed-powerapps-powerbi.md
+    - name: Embed a Teams app
+      href: ./canvas-apps/embed-teams-app.md
   - name: Manage an app
     items:
     - name: Edit an app
@@ -926,6 +928,8 @@
           href: ./model-driven-apps/timer-control-legacy.md
       - name: Use custom controls for data visualizations
         href: ./model-driven-apps/use-custom-controls-data-visualizations.md
+    - name: Use Excel and Word templates
+      href: ./model-driven-apps/templates-overview.md
     - name: Use themes to apply organization branding
       href: ./model-driven-apps/create-themes-organization-branding.md
   - name: Validate and publish an app
