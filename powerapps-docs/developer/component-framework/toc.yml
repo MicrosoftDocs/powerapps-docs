@@ -6,26 +6,26 @@
     href: custom-controls-overview.md
   - name: Get the tooling
     href: powerapps-cli.md
-- name: Tutorial
-  items:
-   - name: Implement sample component
-     href: implementing-controls-using-typescript.md
-- name: How-to
-  items:
-  - name: Create custom components
-    href: create-custom-controls-using-pcf.md
-  - name: Debug custom components
-    href: debugging-custom-controls.md
-  - name: Packaging a custom component
-    href: import-custom-controls.md
-  - name: Add components to entites or fields
-    href: add-custom-controls-to-a-field-or-entity.md
-  - name: Update existing custom components
-    href: updating-existing-controls.md
-  - name: Publish custom components on AppSource
-    href: publish-components-on-app-source.md
-  - name: Limitations
-    href: limitations.md
+  - name: Tutorial
+    items:
+    - name: Implement sample component
+      href: implementing-controls-using-typescript.md
+  - name: How-to
+    items:
+    - name: Create custom components
+      href: create-custom-controls-using-pcf.md
+    - name: Debug custom components
+      href: debugging-custom-controls.md
+    - name: Packaging a custom component
+      href: import-custom-controls.md
+    - name: Add components to entites or fields
+      href: add-custom-controls-to-a-field-or-entity.md
+    - name: Update existing custom components
+      href: updating-existing-controls.md
+    - name: Publish custom components on AppSource
+      href: publish-components-on-app-source.md
+    - name: Limitations
+      href: limitations.md
   - name: FAQ
     href: faq.md
   - name: Sample components
