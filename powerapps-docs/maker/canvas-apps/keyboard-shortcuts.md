@@ -62,14 +62,27 @@ search.app:
 
 | Shortcut | Action |
 |--|--|
-| Ctrl+G | Group multiple controls. |
-| Ctrl+Shift+G | Ungroup a group of controls. |
-| *Tab* | Select the next control. |
+| Tab | Select the next control. |
 | Ctrl+Click or Shift+Click | Select multiple objects at once. |
 | Right arrow | Nudge the selected control to the right. |
 | Left arrow | Nudge the selected control to the left. |
 | Up arrow | Nudge the selected control up. |
 | Down arrow | Nudge the selected control down. |
+
+## Tree view
+
+> [!NOTE]
+> These shortcuts require the **Tree view** pane to have focus.
+
+| Shortcut | Action |
+|--|--|
+| F2 | Rename a control. |
+| Esc | Cancel renaming a control. |
+| Ctrl+G | Group/ungroup controls. |
+| Ctrl+] | Bring a control forward. |
+| Ctrl+[ | Send a control backward. |
+| Ctrl+Shift+] | Bring to front. |
+| Ctrl+Shift+[ | Send to back. |
 
 ## Resize
 
