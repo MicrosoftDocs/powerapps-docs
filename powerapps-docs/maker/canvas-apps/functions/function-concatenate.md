@@ -40,11 +40,9 @@ The **Concatenate** function concatenates a mix of individual strings and a sing
 
 The examples in this section use the following global variables:
 
-| Global variable | Value |
-| --------------- | ----- |
-| **FirstName** | "Jane" |  
-| **LastName** | "Doe" |
-| **Products** | ![](media/function-concatenate/products.png) |
+- **FirstName** = "Jane"   
+- **LastName** = "Doe" 
+- **Products** = ![](media/function-concatenate/products.png) 
 
 To create these global variables in an app, insert a button control and set its **OnSelect** property to
 ```powerapps-dot

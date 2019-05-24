@@ -45,17 +45,15 @@ These functions work with logical values. They can't be passed a number or a str
 
 The examples in this section use the following global variables:
 
-| Global variable | Value |
-| --------------- | ----- |
-| **a** | *false* |  
-| **b** | *true* | 
-| **x** | **10** |
-| **y** | **100** |
-| **string** | **"hello world"** |
+- **a** = *false*
+- **b** = *true*
+- **x** = 10
+- **y** = 100
+- **s** = "Hello World"
 
-To create these global variables in an app, insert a button control and set its **OnSelect** property to
+To create these global variables in an app, insert a button control and set its **OnSelect** property to this formula:
 ```powerapps-dot
-Set( a, false ); Set( b, true ); Set( x, 10 ); Set( y, 100 ); Set( string, "hello world" )
+Set( a, false ); Set( b, true ); Set( x, 10 ); Set( y, 100 ); Set( s, "Hello World" )
 ```
 Select the button (hold down the Alt key while clicking the button).
 
@@ -70,9 +68,9 @@ Select the button (hold down the Alt key while clicking the button).
 | **Not( a )** | Tests the value of **a**.  Since the argument is *false*, the function returns the opposite *true* | *true* |
 | **Not a** | Same as the previous example, using Visual Basic notation | *true* |
 | **! a** | Same as the previous example, using JavaScript notation | *true* | 
-| **Len(&nbsp;string&nbsp;)&nbsp;<&nbsp;20 And&nbsp;Not&nbsp;IsBlank(&nbsp;string&nbsp;)** | Tests if the length of **string** is less than 20 and if it is not a **blank** value.  Since the length is less than 20 and it is not blank, the result is *true* | *true* |
-| **Or(&nbsp;Len(&nbsp;string&nbsp;)&nbsp;<&nbsp;10, x&nbsp;<&nbsp;100, y&nbsp;<&nbsp;100&nbsp;)** | Tests if the length of **string** is less than 10 which is *false*, if **x** is less than 100 which is *true*, and if y is less than 100 which is *false*.  Since one of the arguments to **Or** is *true*, the function returns *true*. | *true* |
-| **Not IsBlank(&nbsp;string&nbsp;)** | Test if **string** is *blank* which returns *false*.  **Not** returns the opposite of this result which is *true*. | *true* | 
+| **Len(&nbsp;s&nbsp;)&nbsp;<&nbsp;20 And&nbsp;Not&nbsp;IsBlank(&nbsp;s&nbsp;)** | Tests if the length of **s** is less than 20 and if it is not a **blank** value.  Since the length is less than 20 and it is not blank, the result is *true* | *true* |
+| **Or(&nbsp;Len(&nbsp;s&nbsp;)&nbsp;<&nbsp;10, x&nbsp;<&nbsp;100, y&nbsp;<&nbsp;100&nbsp;)** | Tests if the length of **s** is less than 10 which is *false*, if **x** is less than 100 which is *true*, and if y is less than 100 which is *false*.  Since one of the arguments to **Or** is *true*, the function returns *true*. | *true* |
+| **Not IsBlank(&nbsp;s&nbsp;)** | Test if **s** is *blank* which returns *false*.  **Not** returns the opposite of this result which is *true*. | *true* | 
 
 
 
