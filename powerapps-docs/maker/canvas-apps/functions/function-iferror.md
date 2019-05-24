@@ -45,7 +45,7 @@ IfError(
 
 If the first patch encounters a problem, the first **Notify** runs, no further processing occurs, and the second patch doesn't run. If the first patch succeeds, the second patch runs and, if it encounters a problem, the second **Notify** runs.
 
-If the formula doesn't find any errors and you've specified the optional *DefaultResult* argument, the formula returns the value of that you specified for that argument. If the formula doesn't find any errors and you haven't specified that argument, the formula returns the last *Value* argument evaluated.
+If the formula doesn't find any errors and you've specified the optional *DefaultResult* argument, the formula returns the value that you specified for that argument. If the formula doesn't find any errors and you haven't specified that argument, the formula returns the last *Value* argument evaluated.
 
 ## Syntax
 
