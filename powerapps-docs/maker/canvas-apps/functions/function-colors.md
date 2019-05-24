@@ -24,7 +24,7 @@ The **ColorValue** function returns a color based on a CSS color string.  Both n
 
 The **RGBA** function returns a color based on Red, Green, and Blue color components.  It also includes an Alpha component used for mixing colors of objects layered on top of one another.  Alpha varies from 0 or 0% which is fully transparent and invisible to 1 or 100% which is fully opaque and completely blocks out layers below.
 
-The **ColorFade** function returns a brighter or darker version of a color.  The amount of fade varies from -1 which fully darkens a color to black, to 0 which has no impact on the color, to 1 which fully brightens a color to white.  
+The **ColorFade** function returns a brighter or darker version of a color.  The amount of fade varies from -1 or -100% which fully darkens a color to black, to 0 which has no impact on the color, to 1 or 100% which fully brightens a color to white.    
 
 ## Syntax
 **Color**.*ColorName*
@@ -43,7 +43,7 @@ The **ColorFade** function returns a brighter or darker version of a color.  The
 **ColorFade**( *Color*, *FadeAmount* )
 
 * *Color* - Required.  A color value such as **Color.Red** or the output from **ColorValue** or **RGBA**.
-* *FadeAmount* - Required.  A number between -1 and 1.  -1 fully darkens a color to black, 0 has no impact on the color, and 1 fully brightens a color to white.  
+* *FadeAmount* - Required.  A number between -1 and 1.  -1 fully darkens a color to black, 0 has no impact on the color, and 1 fully brightens a color to white.  You can also use a percentage, -100% to 100%
 
 ## Built in colors
 
