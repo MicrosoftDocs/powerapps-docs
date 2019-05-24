@@ -91,9 +91,6 @@ As another example, unlock the **ImageURL** card, and then add an **Image** cont
 
 In the formula bar, set the **Image** property of this control to *TextBox*.**Text**, where *TextBox* is the name of the **Text input** control that holds the URL:
 
-> [!TIP]
-> Press the Alt key to show the name of each control.
-
 ![](./media/working-with-cards/show-image.png)
 
 And now we can see the images and edit their URLs. Note that we could have used **Parent.Default** as the **Image** property, but it wouldn't have updated if the user changed the URL.
@@ -133,7 +130,7 @@ Let's look at the controls that make up a basic data-entry card. The space betwe
 
 ![](./media/working-with-cards/dissect-card1.png)
 
-Hold down the Alt key to show the names of the controls that make up this card:
+In this picture the controls within the data card have been labeled:
 
 ![](./media/working-with-cards/dissect-card2.png)
 
