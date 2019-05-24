@@ -15,18 +15,21 @@ search.app:
   - PowerApps
 ---
 # Color enumeration and ColorFade, ColorValue, and RGBA functions in PowerApps
+
 Using built in color values, defining custom colors, and Alpha blending.
 
 ## Description
-The **Color** enumeration is an easy way to access the colors defined by HTML's Cascading Style Sheets (CSS).  For example, **Color.Red** returns a pure red color.  The list of these colors is included at the end of this article.   
+
+The **Color** enumeration is an easy way to access the colors defined by HTML's Cascading Style Sheets (CSS). For example, **Color.Red** returns a pure red color.  The list of these colors is included at the end of this article.
 
 The **ColorValue** function returns a color based on a CSS color string.  Both names of CSS colors such as "RosyBrown" and hex values such as "#bc8f8f" may be used.
 
-The **RGBA** function returns a color based on Red, Green, and Blue color components.  It also includes an Alpha component used for mixing colors of objects layered on top of one another.  Alpha varies from 0 or 0% which is fully transparent and invisible to 1 or 100% which is fully opaque and completely blocks out layers below.
+The **RGBA** function returns a color based on Red, Green, and Blue color components. It also includes an Alpha component used for mixing colors of objects layered on top of one another.  Alpha varies from 0 or 0% which is fully transparent and invisible to 1 or 100% which is fully opaque and completely blocks out layers below.
 
-The **ColorFade** function returns a brighter or darker version of a color.  The amount of fade varies from -1 or -100% which fully darkens a color to black, to 0 which has no impact on the color, to 1 or 100% which fully brightens a color to white.    
+The **ColorFade** function returns a brighter or darker version of a color. The amount of fade varies from -1 or -100% (which fully darkens a color to black) to 0 (which has no impact on the color) to 1 or 100% (which fully brightens a color to white).
 
 ## Syntax
+
 **Color**.*ColorName*
 
 * *ColorName* - Required.  A Cascading Style Sheet (CSS) color name.  See list below of possible enumeration values.
@@ -38,14 +41,14 @@ The **ColorFade** function returns a brighter or darker version of a color.  The
 **RGBA**( *Red*, *Green*, *Blue*, *Alpha* )
 
 * *Red*, *Green*, *Blue* - Required.  Color component values, ranging from 0 (no saturation) to 255 (full saturation).
-* *Alpha* - Required.  Alpha component, ranging from 0 (fully transparent) to 1 (fully opaque).  You can also use a percentage, 0% to 100%.
+* *Alpha* - Required.  Alpha component, ranging from 0 (fully transparent) to 1 (fully opaque). You can also use a percentage, 0% to 100%.
 
 **ColorFade**( *Color*, *FadeAmount* )
 
 * *Color* - Required.  A color value such as **Color.Red** or the output from **ColorValue** or **RGBA**.
-* *FadeAmount* - Required.  A number between -1 and 1.  -1 fully darkens a color to black, 0 has no impact on the color, and 1 fully brightens a color to white.  You can also use a percentage, -100% to 100%
+* *FadeAmount* - Required.  A number between -1 and 1.  -1 fully darkens a color to black, 0 has no impact on the color, and 1 fully brightens a color to white. You can also use a percentage from -100% to 100%
 
-## Built in colors
+## Built-in colors
 
 | Color enumeration | ColorValue with Hex Code | RGBA | Color Swatch |
 | --- | --- | --- | --- |

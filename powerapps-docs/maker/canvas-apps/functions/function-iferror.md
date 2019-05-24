@@ -14,6 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
+
 # IfError function in PowerApps
 
 Detects errors and provides an alternative value or takes action.
@@ -21,46 +22,47 @@ Detects errors and provides an alternative value or takes action.
 ## Description
 
 > [!NOTE]
-> This function is part of an experimental feature and is subject to change.  The behavior described here is only available when the *Formula-level error management* feature is turned on.  This is an app level setting that defaults to off.  To turn this feature on, navigate to the *File* tab, *App settings* in the left hand menu, and then *Experimental features*.  Your feedback is very valuable to us - please let us know what you think in the [PowerApps community forums](https://powerusers.microsoft.com/t5/Expressions-and-Formulas/bd-p/How-To).
+> This function is part of an experimental feature and is subject to change. The behavior that this topic describes is available only when the *Formula-level error management* feature is turned on. This app-level setting is off by default. To turn this feature on, open the *File* tab, select *App settings* in the left hand menu, and then select *Experimental features*. Your feedback is very valuable to us - please let us know what you think in the [PowerApps community forums](https://powerusers.microsoft.com/t5/Expressions-and-Formulas/bd-p/How-To).
 
-The **IfError** function tests one or more values until an error result is found. If an error is found, a corresponding value is returned. If no error is found, a default value is returned.  In either case, the returned value might be a string to show, a formula to evaluate, or another form of result.  The **IfError** function is very similar to the **If** function: **IfError** tests for errors, while **If** tests for **true**.
+The **IfError** function tests one or more values until it finds an error result . If the function finds an error, the function returns a corresponding value. Otherwise, the function returns a default value. In either case, the function might return a string to show, a formula to evaluate, or another form of result. The **IfError** function resembles the **If** function: **IfError** tests for errors, while **If** tests for **true**.
 
-Use **IfError** to replace error values with a valid value.  For example, if it is possible that user input may result in a division by zero, replace it with a 0 or other valid value that is appropriate for your app so that downstream calculations can proceed.  For example, a simple pattern is:
+Use **IfError** to replace error values with valid values. For example, use this function if user input might result in a division by zero. Build a formula to replace the result with a 0 or another value that's appropriate for your app so that downstream calculations can proceed. Your formula can be as simple as this example:
 
 ```powerapps-dot
 IfError( 1/x, 0 )
 ```
 
-If the value of **x** is non-zero, the formula will return **1/x**.  However, if **x** is zero, **1/x** will result in an error, and **IfError** will return 0 instead. 
+If the value of **x** isn't zero, the formula returns **1/x**. Otherwise, **1/x** produces an error, and the formula returns 0 instead.
 
-Use **IfError** in [behavior formulas](../working-with-formulas-in-depth.md) to perform an action and check for an error before continuing to perform additional actions.  For example in this pattern:
+Use **IfError** in [behavior formulas](../working-with-formulas-in-depth.md) to perform an action and check for an error before performing additional actions, as in this pattern:
 
 ```powerapps-dot
-IfError( 
-    Patch( DS1, ... ), Notify( "problem in the first action" ), 
+IfError(
+    Patch( DS1, ... ), Notify( "problem in the first action" ),
     Patch( DS2, ... ), Notify( "problem in the second action" )
 )
 ```
 
-If there is a problem with the **Patch( DS1, ... )** then the first **Notify** will execute and no further processing will occur and **Patch( DS2, ... )** will not happen.  But if **Patch( DS1, ... )** succeeds then the second patch will happen, and the second **Notify** executed if there is a problem with it.
+If the first patch encounters a problem, the first **Notify** runs, no further processing occurs, and the second patch doesn't run. If the first patch succeeds, the second patch runs and, if it encounters a problem, the second **Notify** runs.
 
-If no errors are found, the value of the optional *DefaultResult* is returned.  If that argument is not provided, the value of the last *Value* argument evaluated is returned.
+If the formula doesn't find any errors and you've specified the optional *DefaultResult* argument, the formula returns the value of that you specified for that argument. If the formula doesn't find any errors and you haven't specified that argument, the formula returns the last *Value* argument evaluated.
 
 ## Syntax
+
 **IfError**( *Value1*, *Fallback1* [, *Value2*, *Fallback2*, ... [, *DefaultResult* ] ] )
 
-* *Value(s)* - Required. Formula(s) to test for an error value. 
-* *Fallback(s)* - Required. The formulas to evaluate and values to return if matching *Value* arguments returned an error.  
-* *DefaultResult* - Optional.  The formulas to evaluate if no errors were found.
+* *Value(s)* - Required. Formula(s) to test for an error value.
+* *Fallback(s)* - Required. The formulas to evaluate and values to return if matching *Value* arguments returned an error.
+* *DefaultResult* - Optional.  The formulas to evaluate if the formula doesn't find any errors.
 
 ## Examples
 
 | Formula | Description | Result |
 | --- | --- | --- |
-| **IfError( 1, 2 )** |The first argument is not an error.  There are no other errors to check and no default return value was provided.  The formula returns the last *value* argument evaluated.   | 1 |
-| **IfError( 1/0, 2 )** | The first argument is returning an error value (due to division by zero).  The second argument is evaluated and returned as the result. | 2 | 
-| **IfError( 1/0, Notify( "There was an internal problem", NotificationType.Error ) )** | The first argument is returning an error value (due to division by zero).  The second argument is evaluated which displays a messages to the user.  The return value of **IfError** is the return value of **Notify**, coerced to the same type as the first argument to **IfError** (a number). | 1 |
-| **IfError( 1, 2, 3, 4, 5 )** | The first argument is not returning an error, so its corresponding fallback is not evaluated.  The third argument is not return an error either, so its corresponding fallback is not evaluated.  The fifth argument has no corresponding fallback and is the default result which is returned since no errors were found. | 5 |
+| **IfError( 1, 2 )** |The first argument isn't an error. The function has no other errors to check and no default return value. The function returns the last *value* argument evaluated.   | 1 |
+| **IfError( 1/0, 2 )** | The first argument returns an error value (due to division by zero). The function evaluates the second argument and returns it as the result. | 2 |
+| **IfError( 1/0, Notify( "There was an internal problem", NotificationType.Error ) )** | The first argument returns an error value (due to division by zero). The function evaluates the second argument and displays a message to the user. The return value of **IfError** is the return value of **Notify**, coerced to the same type as the first argument to **IfError** (a number). | 1 |
+| **IfError( 1, 2, 3, 4, 5 )** | The first argument isn't an error, so the function doesn't evaluate that argument's corresponding fallback. The third argument isn't an error either, so the function doesn't evaluate that argument's corresponding fallback. The fifth argument has no corresponding fallback and is the default result. The function returns that result because the formula contains no errors. | 5 |
 
 ### Step by step
 
