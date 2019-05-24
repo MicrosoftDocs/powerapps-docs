@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: anneta
-ms.date: 04/26/2016
+ms.date: 05/23/2019
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -114,8 +114,11 @@ Let's walk through some simple examples.
    
     ![](media/working-with-tables/gallery-items-sort-firstn.png)
 
-### Table functions and control properties
-Many functions in PowerApps take the name of a table as an argument, create a second table that contains the same data, manipulate the new table based the other arguments, and then return the result. These functions don't modify the original table, even if it's a data source.
+## Table functions and control properties
+
+Consider the **Lower** function.  If the variable **welcome** contains the text string **"Hello, World"**, the formula **Lower( welcome )** returns **"hello, world"**.  Using this function in no way has an impact on the value in the variable **welcome**.  **Lower** is a pure function: it processes its input and produces an output and that it all, it has no side effects.  All functions in Excel and most functions in PowerApps are pure functions allowing the workbook or app to be recalculated automatically.
+
+PowerApps offers a set of functions that operate on tables in the same manner.  They take tables as input and filter, sort, transform, reduce, and summarize entire tables of data.  In fact many of the functions that we often use with a single value, including **Lower**, can also take a single column table as input.
 
 * **[Sort](functions/function-sort.md)**, **[Filter](functions/function-filter-lookup.md)** - Sorts and filters records.
 * **[FirstN](functions/function-first-last.md)**, **[LastN](functions/function-first-last.md)** - Returns the first N or last N records of the table.
@@ -129,20 +132,23 @@ Many functions in PowerApps take the name of a table as an argument, create a se
 * **[HashTags](functions/function-hashtags.md)** - Searches for hashtags in a string.
 * **[Errors](functions/function-errors.md)** - Provides error information when you work with a data source.
 
-You can run a function on a table that contains multiple columns, even if the function requires a single column as an argument. To extract a single column from a multi-column table, use the **[ShowColumns](functions/function-table-shaping.md)** function as an argument for the function that you want to use, as in this example:<br>**Lower( ShowColumns( Products, "Name" ) )**
+Many of these functions take a single column table as their input.  This is no different than a regular table except that it only has one column.  Use the syntax *table.column* to extract a single column from a table that has more than one column, for example **Products.Name** returns the single column table of only **Name** values from the **Proudcts** table.
 
-This formula creates a single-column table that contains all the data from the **Name** column of the **Products** table but converts any uppercase letters to lowercase letters. If you specify a table as an argument for the **[AddColumns](functions/function-table-shaping.md)**, **[RenameColumns](functions/function-table-shaping.md)**, or **[DropColumns](functions/function-table-shaping.md)** function, you can completely reshape that table however you want.
+The **[AddColumns](functions/function-table-shaping.md)**, **[RenameColumns](functions/function-table-shaping.md)**, **[ShowColumns](functions/function-table-shaping.md)**, or **[DropColumns](functions/function-table-shaping.md)** function, you can completely reshape that table however you want.  Again, only the output of these functions will have changed, the original source will not be modified.
 
-If you specify a data source as an argument for one of these functions, it will modify the records of that data source and, in general, return the data source's new value as a table.
+Properties of controls can also be tables:
+
+* **Items** - Applies to galleries, list boxes, and combo boxes. Table to display in the gallery or list of items to offer.
+* **SelectedItems** - Applies to list boxes and combo boxes. Table of items that the user has selected if multi-select is enabled.
+
+## Behavioral formulas
+
+There are also a set of functions that modify data in a data source.  These functions are not pure functions: they are specifically designed to modify data and have side effects. Since they are not pure, they must be executed carefully and cannot take part in the automatic recalculation of the app.  These functions can only be used within a [behavioral formula](working-with-formulas-in-depth.md).
 
 * **[Collect](functions/function-clear-collect-clearcollect.md)**, **[Clear](functions/function-clear-collect-clearcollect.md)**, **[ClearCollect](functions/function-clear-collect-clearcollect.md)** - Creates, clears, and adds to a collection.
+* **[Patch](functions/function-patch.md)** - Patches the contents of a record, modifying one or more fields.
 * **[Update](functions/function-update-updateif.md)**, **[UpdateIf](functions/function-update-updateif.md)** - Updates records that match one or more criteria that you specify.
 * **[Remove](functions/function-remove-removeif.md)**, **[RemoveIf](functions/function-remove-removeif.md)** - Deletes records that match one or more criteria that you specify.
-
-These properties are set to values that are tables:
-
-* **Items** - Applies to galleries and list boxes. Table to display in the gallery.
-* **SelectedItems** - Applies to list boxes. Table of items that the user has selected.
 
 ## Record formulas
 You can also build a formula that calculates data for an individual record, takes an individual record as an argument, and provides an individual record as a return value. Returning to our gallery example above, let's use the **Gallery1.Selected** property to display information from whatever record the user selects in that gallery.
@@ -180,7 +186,7 @@ You can also use a record as a general-purpose container for related named value
 
 In these cases, the record was never a part of a table.
 
-### Record functions and control properties
+## Record functions and control properties
 Functions that return records:
 
 * **[FirstN](functions/function-first-last.md)**, **[LastN](functions/function-first-last.md)** - Returns the first or last record or records of the table.
@@ -210,6 +216,19 @@ Inside these formulas, you can reference the fields of the record being processe
 For example, take a table of **Products**:
 
 ![](media/working-with-tables/requested.png)
+
+To create this example table in your app, insert a button control and set its **OnSelect** property to this formula, and then select the button (hold down the Alt key while in Studio):
+
+```powerapps-dot
+Set( Products, 
+    Table( 
+        { Product: "Widget",    'Quantity Requested': 6,  'Quantity Available': 3 },
+        { Product: "Gadget",    'Quantity Requested': 10, 'Quantity Available': 20 },
+        { Product: "Gizmo",     'Quantity Requested': 4,  'Quantity Available': 11 },
+        { Product: "Apparatus", 'Quantity Requested': 7,  'Quantity Available': 6 }
+    )
+)
+``` 
 
 To determine if any of any of these products had more requested than is available:
 
@@ -249,7 +268,7 @@ ShowColumns(
 
 Note that in the above, we used double quotes (") in some places and single quotes (') in other places.  Single quotes are required when referencing the value of an object, such as a field or table, in which the name of the object contains a space.  Double quotes are used when we are not referencing the value of an object but instead talking about it, especially in situations in which the object does not yet exist, as in the case of **AddColumns**.  
 
-### Disambiguation
+## Disambiguation
 Field names added with the record scope override the same names from elsewhere in the app.  When this happens, you can still access values from outside the record scope with the [**@** disambiguation](functions/operators.md) operator:
 
 * To access values from nested record scopes, use the **@** operator with the name of the table being operated upon using this pattern:<br>_Table_**[@**_FieldName_**]**
@@ -309,8 +328,27 @@ All the **ForAll** record scopes override the global scope.  The **Value** conte
 
 **Ungroup** flattens the result, since nested **ForAll** functions will result in a nested result table.
 
-## Inline syntax
-### Records
+## Single column tables
+
+There are often situations where you will want to operate on a single column from a table.  You can use the **ShowColumns** function to accomplish this, for example this formula:
+
+```powerapps-dot
+ShowColumns( Products, "Product" )
+```
+
+produces this single column table:
+
+![](media/working-with-tables/single-column.png)
+
+You can also use a shortcut.  *Table.Column* extracts the single column table of just *Column* from *Table*.  For example, this formula:  
+
+```powerapps-dot
+Products.Product
+```
+
+produces the exact same result as using **ShowColumns**.  
+
+## Inline records
 You express records by using curly braces that contain named field values.  For example, you can express the first record in the table at the start of this topic by using this formula:
 
 `{ Name: "Chocolate", Price: 3.95, 'Quantity on Hand': 12, 'Quantity on Order': 10 }`
@@ -327,7 +365,7 @@ Enclose each column name that contains a special character, such as a space or a
 
 Note that the value in the **Price** column doesn't include a currency symbol, such as a dollar sign. That formatting will be applied when the value is displayed.  
 
-### Tables
+## Inline tables
 You can create a table by using the **[Table](functions/function-table.md)** function and a set of records. You can express the table at the start of this topic by using this formula:
 
 ```powerapps-dot
@@ -349,7 +387,7 @@ Table(
 )
 ```
 
-### Value tables
+## Inline value tables
 You can create single-column tables by specifying values in square brackets. The resulting table has a single column, named **Value**.
 
 For example, `[ 1, 2, 3, 4 ]` is equivalent to `Table( { Value: 1 }, { Value: 2 }, { Value: 3 }, { Value: 4 } )` and returns this table:

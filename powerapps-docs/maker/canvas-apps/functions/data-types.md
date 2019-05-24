@@ -56,10 +56,6 @@ Because all data types support *blank*, the **Boolean** and **Two option** data 
 
 All four of these data types are based on a [Unicode](https://en.wikipedia.org/wiki/Unicode) text string.
 
-### Size limits
-
-These data types have no preset limit on their length. The underlying JavaScript implementation in your browser or on your device may impose a limit, but it's usually well over 100 MB. However, the amount of available memory on your device may impose another limit that's likely lower than 100 MB. To determine whether your app will run within these limits, test common scenarios on all devices on which it should run.
-
 ### Image and Media resources
 
 Through the **File** menu, you can add image, video, and audio files as app resources. The name of the imported file becomes the resource name in the app. In this graphic, the Northwind Traders logo, which is named **nwindlogo**, has been added to an app:
@@ -93,6 +89,16 @@ You can show the most recent image captured in a [**Camera**](../controls/contro
 You use a URI to reference an image or another media file stored in a database. That way, the app doesn't retrieve the actual data until it's actually needed. For example, an attachment in a Common Data Service entity might return **"appres://datasources/Contacts/table/..."** As in the camera example, you can display this image by setting the **Image** property of an image control to this reference, which retrieves the binary data.
 
 When you save a media data type, such as an image, to a database, the app sends the actual image or media data, not the URI reference.
+
+### Size limits
+
+As text string and URIs, these data types have no preset limit on their length. 
+
+The binary data that these data types reference also has no preset limit on size.  For example an image captured through the camera control that is now referenced as **"appres://..."** can be as large and high resolution as the camera can muster.  The resolution, frame rate, and other attributes of media files are not limited by the data type, but specific controls for playing and capturing media may have their own limitations.
+
+However, all data sizes are subject to the amount of available memory in the app.  Typically browsers running on a desktop computer will support more than 100 megabyteas of data.  However, the amount of available memory on a device such as a phone may be far lower, typically in the range 30-70 megabytes. To determine whether your app will run within these limits, test common scenarios on all devices on which it should run.
+
+It is a best practice to only hold data in memory as long as you need to.  Upload images to a database as soon as you can; download images only when requested by the app's user.    
 
 ## Number and Currency
 
@@ -146,6 +152,10 @@ Unix times reflect the number of seconds since January 1, 1970 00:00:00 UTC. Bec
 For example, Unix time shows September 9, 2001, at 01:46:40 UTC as 1,000,000,000. To show that date/time value in a canvas app, multiply that number by 1,000 to convert it to milliseconds, and then use it in a [**Text**](function-text.md) function. The formula **Text( 1000000000 * 1000, DateTimeFormat.UTC )** returns the string **2001-09-09T01:46:40.000Z**.
 
 However, that function returns **Saturday, September 8, 2001 18:46:40** if you use the **DateTimeFormat.LongDateTime24** format in a time zone that's -7 hours offset from UTC (7 hours west of UTC). This result shows the **DateTime** value correctly based on the local time zone.
+
+To convert to a Unix time, take the result from **Value** and divide by 1,000: **RoundDown( Value( UnixTime ) / 1000, 0 )**. 
+
+If you need the Unix time in a Date value for further calculations or display within PowerApps, use the formula **DateAdd( Date( 1970,1,1 ), UnixTime, Seconds )**.
 
 ### SQL Server
 

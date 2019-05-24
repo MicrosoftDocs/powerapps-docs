@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
-ms.date: 08/28/2017
+ms.date: 05/23/2019
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -22,9 +22,9 @@ The **Concat** function concatenates the result of a formula applied across all 
 
 [!INCLUDE [record-scope](../../../includes/record-scope.md)]
 
-Use the **[Split](function-split.md)** function to split a string into a table of substrings.
+Use the [**Split** function](function-split.md) or [**MatchAll** function](function-ismatch.md) to split a string into a table of substrings.
 
-The **Concatenate** function concatenates a mix of individual strings and a single-column table of strings. Used with individual strings, this function is equivalent to using the **&** [operator](operators.md). You can use a formula that includes the **[ShowColumns](function-table-shaping.md)** function to create a single-column table from a table that has multiple columns.
+The **Concatenate** function concatenates a mix of individual strings and a single-column table of strings. Used with individual strings, this function is equivalent to using the **&** [operator](operators.md). 
 
 ## Syntax
 **Concat**( *Table*, *Formula* )
@@ -37,25 +37,73 @@ The **Concatenate** function concatenates a mix of individual strings and a sing
 * *String(s)* - Required.  Mix of individual strings or a single-column table of strings.
 
 ## Examples
-#### Concat
-1. Add a **[Button](../controls/control-button.md)** control, and set its **[OnSelect](../controls/properties-core.md)** property to this formula:
-   
-    **Collect(Products, {String:"Violin", Wind:"Trombone", Percussion:"Bongos"}, {String:"Cello", Wind:"Trumpet", Percussion:"Tambourine"})**
-2. Press F5, click the button, and then press Esc to return to the design workspace.
-3. Add a **[Label](../controls/control-text-box.md)** control, and set its **[Text](../controls/properties-core.md)** property to this formula:
-   
-    **Concat(Products, String & " ")**
-   
-    The label shows **Violin Cello**.
 
-#### Concatenate
-1. Add a **[Text input](../controls/control-text-input.md)** control, and name it **AuthorName**.
-2. Add a **[Label](../controls/control-text-box.md)** control, and set its **[Text](../controls/properties-core.md)** property to this formula:<br>
-   **Concatenate("By ", AuthorName.Text)**
-3. Type your name in **AuthorName**.
-   
-    The label shows **By** followed by your name.
+The examples in this section use the following global variables:
 
-If you had an **Employees** table that contained a **FirstName** column and a **LastName** column, this formula would concatenate the data in each row of those columns.
-<br>**Concatenate(Employees.FirstName, " ", Employees.LastName)**
+| Global variable | Value |
+| --------------- | ----- |
+| **FirstName** | "Jane" |  
+| **LastName** | "Doe" |
+| **Products** | ![](media/function-concatenate/products.png) |
+
+To create these global variables in an app, insert a button control and set its **OnSelect** property to
+```powerapps-dot
+Set( FirstName, "Jane" ); Set( LastName, "Doe" ); 
+Set( Products, 
+    Table( 
+        { Name: "Violin", Type: "String" }, 
+        { Name: "Cello", Type: "String" },
+        { Name: "Trumpet", Type: "Wind" } 
+    ) 
+)
+```
+Select the button (hold down the Alt key while clicking the button).
+
+### Concatenante function and & operator
+
+| Formula | Description | Result | 
+|---------|-------------|--------|
+| `Concatenate( LastName, ", ", FirstName )` | Concatenates the value in **LastName**, the string **", "** (a comma followed by a space), and the value in **FirstName**. | "Doe, Jane" |
+| `LastName & ", " & FirstName` | Same as the previous example, using the **&** operator instead of the function. | "Doe, Jane" |
+| `Concatenate( FirstName, " ", LastName )` | Concatenates the value in **FirstName**, the string **" "** (a single space), and the value in **LastName**. | "Jane Doe" |
+| `FirstName & " " & LastName` | Same as the previous example, using the **&** operator instead of the function. | "Jane Doe" |
+
+### Concatenate with single column table
+
+| Formula | Description | Result | 
+|---------|-------------|--------|
+| `Concatenate( "Name: ", Products.Name, ", Type: ", Products.Type )` | For each record in the **Products** table, concatenates the string **"Name: "**, the name of the product, the string **", Type: "** and the type of the product.  | ![](media/function-concatenate/single-column.png) |
+
+### Concat function
+
+| Formula | Description | Result | 
+|---------|-------------|--------|
+| `Concat( Products, Name & ", " )` | Evaluates the formula **Name & ", "** for each record of **Products** and concatenates the results together into a single text string.  | "Violin, Cello, Trumpet, " |
+| `Concat( Filter( Products, Type = "String" ), Name & ", " )` | Evaluates the formula **Name & ", "** for each record of **Products** that satifies the filter **Type = "String"** and concatenates the results together into a single text string.   | "Violin, Cello, " |
+
+### Trimming the end
+
+Note that in the last two example an extra ", " is included at the end of the result.  This is because for each record of the table the function extracts the **Name** and adds a ", " to the end, no matter if it is the first record or the last. 
+
+In some cases these extra characters won't matter, for example if a single space separator is used and the result is displayed in a label.  For situations where these extra characters needs to be removed, you can use the [**Left** function](function-left-mid-right.md) or the [**Match** function](function-ismatch.md):
+
+| Formula | Description | Result | 
+|---------|-------------|--------|
+| `Left( Concat( Products, Name & ", " ), Len( Concat( Products, Name & ", " ) ) - 2 )` | Returns the result of **Concat** but removes the last two characters, the extra separator that is not desired. | "Violin, Cello, Trumpet" |
+| `Match( Concat( Products, Name & ", " ), "^(?<trim>.*), $" ).trim` | Returns the characters of **Concat** from the beginning of the text string (^) to the end ($) but does not include the unwanted comma and space at the end. | "Violin, Cello, Trumpet" |
+
+### Split and MatchAll
+
+The **Split** and **MatchAll** functions can be used to reverse **Concat** when used with a separator.
+
+| Formula | Description | Result | 
+|---------|-------------|--------|
+| `Split( Concat( Products, Name & ", " ), ", " )` | Splits the text string with the separator **", "**.  Since there is a comma and space at the end of the string, this becomes an extra row in the result with an empty string.  | ![](media/function-concatenate/split.png) |
+| `MatchAll( Concat( Products, Name & ", " ), "[^\s,]+" ).FullMatch` | Splits the text string based on characters that are not a space or a comma. In this case, the extra comma and space at the end of the string is automatically removed. | ![](media/function-concatenate/matchall.png)
+
+
+
+
+
+
 
