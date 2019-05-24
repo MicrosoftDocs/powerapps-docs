@@ -130,7 +130,7 @@ Let's look at the controls that make up a basic data-entry card. The space betwe
 
 ![](./media/working-with-cards/dissect-card1.png)
 
-In this picture the controls within the data card have been labeled:
+In this graphic, the controls within the data card have been labeled:
 
 ![](./media/working-with-cards/dissect-card2.png)
 
