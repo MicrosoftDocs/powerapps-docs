@@ -92,13 +92,13 @@ When you save a media data type, such as an image, to a database, the app sends 
 
 ### Size limits
 
-As text string and URIs, these data types have no preset limit on their length. 
+As text strings and URIs, these data types have no preset limit on their length.
 
-The binary data that these data types reference also has no preset limit on size.  For example an image captured through the camera control that is now referenced as **"appres://..."** can be as large and high resolution as the camera can muster.  The resolution, frame rate, and other attributes of media files are not limited by the data type, but specific controls for playing and capturing media may have their own limitations.
+The binary data that these data types reference also has no preset limit on size. For example, an image captured through the camera control that's now referenced as **"appres://..."** can be as large and high resolution as the device's camera can muster. The resolution, frame rate, and other attributes of media files aren't limited by the data type, but specific controls for playing and capturing media may have their own limitations.
 
-However, all data sizes are subject to the amount of available memory in the app.  Typically browsers running on a desktop computer will support more than 100 megabyteas of data.  However, the amount of available memory on a device such as a phone may be far lower, typically in the range 30-70 megabytes. To determine whether your app will run within these limits, test common scenarios on all devices on which it should run.
+However, all data sizes are subject to the amount of available memory in the app. Browsers running on a desktop computer typically support more than 100 megabytes of data. However, the amount of available memory on a device such as a phone might be far lower, typically in the range 30-70 megabytes. To determine whether your app will run within these limits, test common scenarios on all devices on which it should run.
 
-It is a best practice to only hold data in memory as long as you need to.  Upload images to a database as soon as you can; download images only when requested by the app's user.    
+As a best practice, hold data in memory only as long as necessary. Upload images to a database as soon as you can; download images only when the app's user requests them.
 
 ## Number and Currency
 
@@ -121,7 +121,7 @@ Date/time values fall in these categories:
 
 This table shows some examples:
 
-| Date/time type | Value stored in the database | Value displayed and entered 7 hours west of UTC | Value displayed and entered 4 hours east of UTC | 
+| Date/time type | Value stored in the database | Value displayed and entered 7 hours west of UTC | Value displayed and entered 4 hours east of UTC |
 |--------------------------|------------------------------|------------------------------|
 | **User local** | Sunday,&nbsp;May&nbsp;19,&nbsp;2019<br>4:00 AM | Saturday,&nbsp;May&nbsp;18,&nbsp;2019<br>9:00 PM | Sunday,&nbsp;May&nbsp;19,&nbsp;2019<br>8:00 AM |
 | **Time zone independent** | Sunday,&nbsp;May&nbsp;19,&nbsp;2019<br>4:00 AM | Sunday,&nbsp;May&nbsp;19,&nbsp;2019<br>4:00 AM | Sunday,&nbsp;May&nbsp;19,&nbsp;2019<br>4:00 AM | 
@@ -153,9 +153,11 @@ For example, Unix time shows September 9, 2001, at 01:46:40 UTC as 1,000,000,000
 
 However, that function returns **Saturday, September 8, 2001 18:46:40** if you use the **DateTimeFormat.LongDateTime24** format in a time zone that's -7 hours offset from UTC (7 hours west of UTC). This result shows the **DateTime** value correctly based on the local time zone.
 
-To convert to a Unix time, take the result from **Value** and divide by 1,000: **RoundDown( Value( UnixTime ) / 1000, 0 )**. 
+To convert to a Unix time, divide the result from **Value** by 1,000:
+<br>**RoundDown( Value( UnixTime ) / 1000, 0 )**
 
-If you need the Unix time in a Date value for further calculations or display within PowerApps, use the formula **DateAdd( Date( 1970,1,1 ), UnixTime, Seconds )**.
+If you need the Unix time in a **Date** value for further calculations or display within PowerApps, use this formula:
+<br>**DateAdd( Date( 1970,1,1 ), UnixTime, Seconds )**
 
 ### SQL Server
 
