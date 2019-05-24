@@ -18,32 +18,13 @@ search.app:
 Boolean logic functions, commonly used to manipulate the results of comparisons and tests.
 
 ## Description
-The **And** function returns **true** if all of its arguments are **true**.  With two arguments:
+The **And** function returns **true** if all of its arguments are **true**.    
 
-| First argument | Second argument | Result |
-| ---------- | -------------- | --------|
-| *false* | *false* | *false* |
-| *false* | *true* | *false* |
-| *true* | *false* | *false* |
-| *true* | *true* | *true* |
+The **Or** function returns **true** if any of its arguments are **true**.  
 
-The **Or** function returns **true** if any of its arguments are **true**.  With two arguments:
+The **Not** function returns **true** if its argument is **false**; it returns **false** if its argument is **true**.  
 
-| First argument | Second argument | Result |
-| ---------- | -------------- | --------|
-| *false* | *false* | *false* |
-| *false* | *true* | *true* |
-| *true* | *false* | *true* |
-| *true* | *true* | *true* |
-
-The **Not** function returns **true** if its argument is **false**; it returns **false** if its argument is **true**.  It always takes one argument:
-
-| Argument | Result |
-| -------- | ------ | 
-| *false* | *true* |
-| *true* | *false* |
-
-These logical functions are consistent with Excel.  You can also use [operators](operators.md) to perform these same operations, using either Visual Basic or JavaScript syntax:
+These functions are consistent with Excel.  You can also use [operators](operators.md) to perform these same operations, using either Visual Basic or JavaScript syntax:
 
 | Function notation | Visual Basic operator notation | JavaScript operator notation | 
 | -------------|------------|--------|
@@ -51,7 +32,7 @@ These logical functions are consistent with Excel.  You can also use [operators]
 | **Or( x, y )** | **x Or y** | **x &#124;&#124; y** |
 | **Not( x )** | **Not x** | **! x** |
 
-These functions work with logical values. They can't be passed a number or a string directly; instead a comparison or test must be made. For example, a comparison such as **x > 1** is a logical formula that evaluates to the Boolean value **true** if **x** is greater than **1**. If **x** is less than **1**, the formula evaluates to **false.**
+These functions work with logical values. They can't be passed a number or a string directly; instead a comparison or test must be made. For example, a comparison such as **x > 1** is a logical formula that evaluates to the Boolean value **true** if **x** is greater than **1**. If **x** is less than **1**, the formula evaluates to **false**.
 
 ## Syntax
 **And**( *LogicalFormula1*, *LogicalFormula2* [, *LogicalFormula3*, ... ] )<br>
@@ -89,9 +70,9 @@ Select the button (hold down the Alt key while clicking the button).
 | **Not( a )** | Tests the value of **a**.  Since the argument is *false*, the function returns the opposite *true* | *true* |
 | **Not a** | Same as the previous example, using Visual Basic notation | *true* |
 | **! a** | Same as the previous example, using JavaScript notation | *true* | 
-| **Len( string ) < 20 And Not IsBlank( string )** | Tests if the length of **string** is less than 20 and if it is not a **blank** value.  Since the length is less than 20 and it is not blank, the result is *true* | *true* |
-| **Or( Len( string ) < 10, x < 100, y < 100 )** | Tests if the length of **string** is less than 10 which is *false*, if **x** is less than 100 which is *true*, and if y is less than 100 which is *false*.  Since one of the arguments to **Or** is *true*, the function returns *true*. | *true* |
-| **Not IsBlank( string )** | Test if **string** is *blank* which returns *false*.  **Not** returns the opposite of this result which is *true*. | *true* | 
+| **Len(&nbsp;string&nbsp;)&nbsp;<&nbsp;20 And&nbsp;Not&nbsp;IsBlank(&nbsp;string&nbsp;)** | Tests if the length of **string** is less than 20 and if it is not a **blank** value.  Since the length is less than 20 and it is not blank, the result is *true* | *true* |
+| **Or(&nbsp;Len(&nbsp;string&nbsp;)&nbsp;<&nbsp;10, x&nbsp;<&nbsp;100, y&nbsp;<&nbsp;100&nbsp;)** | Tests if the length of **string** is less than 10 which is *false*, if **x** is less than 100 which is *true*, and if y is less than 100 which is *false*.  Since one of the arguments to **Or** is *true*, the function returns *true*. | *true* |
+| **Not IsBlank(&nbsp;string&nbsp;)** | Test if **string** is *blank* which returns *false*.  **Not** returns the opposite of this result which is *true*. | *true* | 
 
 
 
