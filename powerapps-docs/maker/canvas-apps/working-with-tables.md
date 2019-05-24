@@ -154,7 +154,7 @@ Other functions are specifically designed to modify data and have side effects. 
 
 You can also build a formula that calculates data for an individual record, takes an individual record as an argument, and provides an individual record as a return value. Returning to our gallery example above, let's use the **Gallery1.Selected** property to display information from whatever record the user selects in that gallery.
 
-1. Add a [**Button**](controls/button-control.md), and set its **[OnSelect](controls/properties-core.md)** property to this formula:<br>
+1. Add a [**Button**](controls/control-button.md), and set its **[OnSelect](controls/properties-core.md)** property to this formula:<br>
     **Collect( SelectedRecord, Gallery1.Selected )**
 
 2. While holding down the Alt key, select the button.
