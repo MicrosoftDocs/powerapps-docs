@@ -19,7 +19,7 @@ search.app:
 
 Get started by filling out an app submission form on AppSource to provide some initial details about your app.
 
-1. Access the app submission form directly by clicking [here](https://go.microsoft.com/fwlink/?linkid=865109). Alternatively, visit [AppSource](https://appsource.microsoft.com), select **List on AppSource** in the top menu of the page. On the page that appears, select **Submit Your App** at the bottom.
+1. Access the app submission form directly by clicking [here](https://partner.microsoft.com/dashboard/account/v3/enrollment/introduction/azureisv). See how to [create a Partner Center account](https://docs.microsoft.com/azure/marketplace/partner-center-portal/create-account) for more information. Alternatively, visit [AppSource](https://appsource.microsoft.com), select **List on AppSource** in the top menu of the page. On the page that appears, select **Submit Your App** at the bottom.
 2. Provide information about your contact details, company, and app. All the fields marked with asterisk (*) are mandatory.
 3. After filling the form, select **Submit**.
 
