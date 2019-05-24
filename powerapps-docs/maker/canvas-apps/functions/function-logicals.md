@@ -59,16 +59,16 @@ Select the button (hold down the Alt key while clicking the button).
 
 | Formula | Description | Result |
 |---------|-------------|--------|
-| **And( a, b )** | Tests the values of **a** and **b**.  Since one of the arguments is *false*, the function returns *false* | *false* |
-| **a And b** | Same as the previous example, using Visual Basic notation | *false* |
-| **a && b** | Same as the previous example, using JavaScript notation | *false* | 
-| **Or( a, b )** | Tests the values of **a** and **b**.  Since one of the arguments is *true*, the function returns *true* | *true* |
-| **a Or b** | Same as the previous example, using Visual Basic notation | *true* |
-| **a &#124;&#124; b** | Same as the previous example, using JavaScript notation | *true* | 
-| **Not( a )** | Tests the value of **a**.  Since the argument is *false*, the function returns the opposite *true* | *true* |
-| **Not a** | Same as the previous example, using Visual Basic notation | *true* |
-| **! a** | Same as the previous example, using JavaScript notation | *true* | 
-| **Len(&nbsp;s&nbsp;)&nbsp;<&nbsp;20 And&nbsp;Not&nbsp;IsBlank(&nbsp;s&nbsp;)** | Tests if the length of **s** is less than 20 and if it is not a **blank** value.  Since the length is less than 20 and it is not blank, the result is *true* | *true* |
+| **And( a, b )** | Tests the values of **a** and **b**.  Since one of the arguments is *false*, the function returns *false*. | *false* |
+| **a And b** | Same as the previous example, using Visual Basic notation. | *false* |
+| **a && b** | Same as the previous example, using JavaScript notation. | *false* | 
+| **Or( a, b )** | Tests the values of **a** and **b**.  Since one of the arguments is *true*, the function returns *true*. | *true* |
+| **a Or b** | Same as the previous example, using Visual Basic notation. | *true* |
+| **a &#124;&#124; b** | Same as the previous example, using JavaScript notation. | *true* | 
+| **Not( a )** | Tests the value of **a**.  Since the argument is *false*, the function returns the opposite *true*. | *true* |
+| **Not a** | Same as the previous example, using Visual Basic notation. | *true* |
+| **! a** | Same as the previous example, using JavaScript notation. | *true* | 
+| **Len(&nbsp;s&nbsp;)&nbsp;<&nbsp;20 And&nbsp;Not&nbsp;IsBlank(&nbsp;s&nbsp;)** | Tests if the length of **s** is less than 20 and if it is not a **blank** value.  Since the length is less than 20 and it is not blank, the result is *true*. | *true* |
 | **Or(&nbsp;Len(&nbsp;s&nbsp;)&nbsp;<&nbsp;10, x&nbsp;<&nbsp;100, y&nbsp;<&nbsp;100&nbsp;)** | Tests if the length of **s** is less than 10 which is *false*, if **x** is less than 100 which is *true*, and if y is less than 100 which is *false*.  Since one of the arguments to **Or** is *true*, the function returns *true*. | *true* |
 | **Not IsBlank(&nbsp;s&nbsp;)** | Test if **s** is *blank* which returns *false*.  **Not** returns the opposite of this result which is *true*. | *true* | 
 

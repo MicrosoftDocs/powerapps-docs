@@ -18,13 +18,14 @@ search.app:
 Concatenates individual strings of text and strings in [tables](../working-with-tables.md).
 
 ## Description
+
+The **Concatenate** function concatenates a mix of individual strings and a single-column table of strings. Used with individual strings, this function is equivalent to using the **&** [operator](operators.md). 
+
 The **Concat** function concatenates the result of a formula applied across all the [records](../working-with-tables.md#records) of a table, resulting in a single string. Use this function to summarize the strings of a table, just as the **[Sum](function-aggregates.md)** function does for numbers.
 
 [!INCLUDE [record-scope](../../../includes/record-scope.md)]
 
 Use the [**Split** function](function-split.md) or [**MatchAll** function](function-ismatch.md) to split a string into a table of substrings.
-
-The **Concatenate** function concatenates a mix of individual strings and a single-column table of strings. Used with individual strings, this function is equivalent to using the **&** [operator](operators.md). 
 
 ## Syntax
 **Concat**( *Table*, *Formula* )
@@ -76,8 +77,8 @@ Select the button (hold down the Alt key while clicking the button).
 
 | Formula | Description | Result | 
 |---------|-------------|--------|
-| **Concat( Products, Name & ", " )** | Evaluates the formula **Name & ", "** for each record of **Products** and concatenates the results together into a single text string.  | "Violin, Cello, Trumpet, " |
-| **Concat( Filter(&nbsp;Products,&nbsp;Type&nbsp;=&nbsp;"String"&nbsp;), Name & ", " )** | Evaluates the formula **Name & ", "** for each record of **Products** that satifies the filter **Type = "String"** and concatenates the results together into a single text string.   | "Violin, Cello, " |
+| **Concat( Products, Name & ", " )** | Evaluates the formula **Name & ", "** for each record of **Products** and concatenates the results together into a single text string.  | "Violin,&nbsp;Cello,&nbsp;Trumpet,&nbsp;" |
+| **Concat( Filter(&nbsp;Products,&nbsp;Type&nbsp;=&nbsp;"String"&nbsp;), Name & ", " )** | Evaluates the formula **Name & ", "** for each record of **Products** that satifies the filter **Type = "String"** and concatenates the results together into a single text string.   | "Violin,&nbsp;Cello,&nbsp;" |
 
 ### Trimming the end
 
@@ -87,8 +88,8 @@ In some cases these extra characters won't matter, for example if a single space
 
 | Formula | Description | Result | 
 |---------|-------------|--------|
-| **Left( Concat(&nbsp;Products,&nbsp;Name&nbsp;&&nbsp;",&nbsp;"&nbsp;), Len(&nbsp;Concat(&nbsp;Products,&nbsp;Name&nbsp;&&nbsp;",&nbsp;"&nbsp;)&nbsp;)&nbsp;-&nbsp;2 )** | Returns the result of **Concat** but removes the last two characters, the extra separator that is not desired. | "Violin, Cello, Trumpet" |
-| **Match( Concat(&nbsp;Products,&nbsp;Name&nbsp;&&nbsp;",&nbsp;"&nbsp;), "^(?&lt;trim&gt;.*),&nbsp;$" ).trim** | Returns the characters of **Concat** from the beginning of the text string (^) to the end ($) but does not include the unwanted comma and space at the end. | "Violin, Cello, Trumpet" |
+| **Left( Concat(&nbsp;Products,&nbsp;Name&nbsp;&&nbsp;",&nbsp;"&nbsp;), Len(&nbsp;Concat(&nbsp;Products,&nbsp;Name&nbsp;&&nbsp;",&nbsp;"&nbsp;)&nbsp;)&nbsp;-&nbsp;2 )** | Returns the result of **Concat** but removes the last two characters, the extra separator that is not desired. | "Violin,&nbsp;Cello,&nbsp;Trumpet" |
+| **Match( Concat(&nbsp;Products,&nbsp;Name&nbsp;&&nbsp;",&nbsp;"&nbsp;), "^(?&lt;trim&gt;.*),&nbsp;$" ).trim** | Returns the characters of **Concat** from the beginning of the text string (^) to the end ($) but does not include the unwanted comma and space at the end. | "Violin,&nbsp;Cello,&nbsp;Trumpet" |
 
 ### Split and MatchAll
 
