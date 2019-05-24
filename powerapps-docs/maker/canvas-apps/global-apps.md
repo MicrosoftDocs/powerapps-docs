@@ -68,7 +68,7 @@ The change in the PowerApps list separator is consistent with what happens to th
 
 * Arguments in function calls.
 * Fields in a [record](working-with-tables.md#elements-of-a-table).
-* Records in a [table](working-with-tables.md#inline-value-table).
+* Records in a [table](working-with-tables.md#inline-value-tables).
 
 For example, consider the following formula expressed in a language and region that uses dot or period as the decimal separator, such as Japan or the United Kingdom:
 

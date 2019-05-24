@@ -63,23 +63,23 @@ Select the button (hold down the Alt key while clicking the button).
 
 | Formula | Description | Result | 
 |---------|-------------|--------|
-| **Concatenate( LastName, ", ", FirstName )** | Concatenates the value in **LastName**, the string **", "** (a comma followed by a space), and the value in **FirstName**. | "Doe, Jane" |
-| **LastName & ", " & FirstName** | Same as the previous example, using the **&** operator instead of the function. | "Doe, Jane" |
-| **Concatenate( FirstName, " ", LastName )** | Concatenates the value in **FirstName**, the string **" "** (a single space), and the value in **LastName**. | "Jane Doe" |
-| **FirstName & " " & LastName** | Same as the previous example, using the **&** operator instead of the function. | "Jane Doe" |
+| **Concatenate(&nbsp;LastName,&nbsp;",&nbsp;",&nbsp;FirstName&nbsp;)** | Concatenates the value in **LastName**, the string **", "** (a comma followed by a space), and the value in **FirstName**. | "Doe,&nbsp;Jane" |
+| **LastName&nbsp;&&nbsp;",&nbsp;"&nbsp;&&nbsp;FirstName** | Same as the previous example, using the **&** operator instead of the function. | "Doe,&nbsp;Jane" |
+| **Concatenate(&nbsp;FirstName,&nbsp;"&nbsp;",&nbsp;LastName&nbsp;)** | Concatenates the value in **FirstName**, the string **" "** (a single space), and the value in **LastName**. | "Jane&nbsp;Doe" |
+| **FirstName&nbsp;&&nbsp;"&nbsp;"&nbsp;&&nbsp;LastName** | Same as the previous example, using the **&** operator instead of the function. | "Jane&nbsp;Doe" |
 
 ### Concatenate with single column table
 
 | Formula | Description | Result | 
 |---------|-------------|--------|
-| **Concatenate( "Name: ", Products.Name, ", Type: ", Products.Type )** | For each record in the **Products** table, concatenates the string **"Name: "**, the name of the product, the string **", Type: "** and the type of the product.  | ![](media/function-concatenate/single-column.png) |
+| **Concatenate( "Name:&nbsp;",&nbsp;Products.Name, ",&nbsp;Type:&nbsp;",&nbsp;Products.Type )** | For each record in the **Products** table, concatenates the string **"Name: "**, the name of the product, the string **", Type: "** and the type of the product.  | ![](media/function-concatenate/single-column.png) |
 
 ### Concat function
 
 | Formula | Description | Result | 
 |---------|-------------|--------|
 | **Concat( Products, Name & ", " )** | Evaluates the formula **Name & ", "** for each record of **Products** and concatenates the results together into a single text string.  | "Violin, Cello, Trumpet, " |
-| **Concat( Filter( Products, Type = "String" ), Name & ", " )** | Evaluates the formula **Name & ", "** for each record of **Products** that satifies the filter **Type = "String"** and concatenates the results together into a single text string.   | "Violin, Cello, " |
+| **Concat( Filter(&nbsp;Products,&nbsp;Type&nbsp;=&nbsp;"String"&nbsp;), Name & ", " )** | Evaluates the formula **Name & ", "** for each record of **Products** that satifies the filter **Type = "String"** and concatenates the results together into a single text string.   | "Violin, Cello, " |
 
 ### Trimming the end
 
@@ -89,7 +89,7 @@ In some cases these extra characters won't matter, for example if a single space
 
 | Formula | Description | Result | 
 |---------|-------------|--------|
-| **Left( Concat(&nbsp;Products,&nbsp;Name&nbsp;&&nbsp;",&nbsp;"&nbsp;), Len(&nbsp;Concat(&nbsp;Products,&nbsp;Name&nbsp;&&nbsp;",&nbsp;"&nbsp;) ) - 2 )** | Returns the result of **Concat** but removes the last two characters, the extra separator that is not desired. | "Violin, Cello, Trumpet" |
+| **Left( Concat(&nbsp;Products,&nbsp;Name&nbsp;&&nbsp;",&nbsp;"&nbsp;), Len(&nbsp;Concat(&nbsp;Products,&nbsp;Name&nbsp;&&nbsp;",&nbsp;"&nbsp;)&nbsp;)&nbsp;-&nbsp;2 )** | Returns the result of **Concat** but removes the last two characters, the extra separator that is not desired. | "Violin, Cello, Trumpet" |
 | **Match( Concat(&nbsp;Products,&nbsp;Name&nbsp;&&nbsp;",&nbsp;"&nbsp;), "^(?&lt;trim&gt;.*),&nbsp;$" ).trim** | Returns the characters of **Concat** from the beginning of the text string (^) to the end ($) but does not include the unwanted comma and space at the end. | "Violin, Cello, Trumpet" |
 
 ### Split and MatchAll
@@ -98,8 +98,8 @@ The **Split** and **MatchAll** functions can be used to reverse **Concat** when 
 
 | Formula | Description | Result | 
 |---------|-------------|--------|
-| **Split( Concat( Products, Name & ", " ), ", " )** | Splits the text string with the separator **", "**.  Since there is a comma and space at the end of the string, this becomes an extra row in the result with an empty string.  | ![](media/function-concatenate/split.png) |
-| **MatchAll( Concat( Products, Name & ", " ), "[^\s,]+" ).FullMatch** | Splits the text string based on characters that are not a space or a comma. In this case, the extra comma and space at the end of the string is automatically removed. | ![](media/function-concatenate/matchall.png)
+| **Split( Concat(&nbsp;Products,&nbsp;Name&nbsp;&&nbsp;",&nbsp;"&nbsp;), ", " )** | Splits the text string with the separator **", "**.  Since there is a comma and space at the end of the string, this becomes an extra row in the result with an empty string.  | ![](media/function-concatenate/split.png) |
+| **MatchAll( Concat(&nbsp;Products,&nbsp;Name&nbsp;&&nbsp;",&nbsp;"&nbsp;), "[^\s,]+" ).FullMatch** | Splits the text string based on characters that are not a space or a comma. In this case, the extra comma and space at the end of the string is automatically removed. | ![](media/function-concatenate/matchall.png)
 
 
 
