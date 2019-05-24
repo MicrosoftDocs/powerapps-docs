@@ -15,9 +15,11 @@ search.app:
   - PowerApps
 ---
 # IfError function in PowerApps
+
 Detects errors and provides an alternative value or takes action.
 
 ## Description
+
 > [!NOTE]
 > This function is part of an experimental feature and is subject to change.  The behavior described here is only available when the *Formula-level error management* feature is turned on.  This is an app level setting that defaults to off.  To turn this feature on, navigate to the *File* tab, *App settings* in the left hand menu, and then *Experimental features*.  Your feedback is very valuable to us - please let us know what you think in the [PowerApps community forums](https://powerusers.microsoft.com/t5/Expressions-and-Formulas/bd-p/How-To).
 

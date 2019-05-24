@@ -106,19 +106,19 @@ Let's walk through some simple examples.
 
 3. Set the **[Items](controls/properties-core.md)** property to a formula that takes the formula from the previous step as an argument and returns a table, as in this example:
 
-	`FirstN(Sort(CustomGallerySample, SampleHeading, Descending), 2)`
+    `FirstN(Sort(CustomGallerySample, SampleHeading, Descending), 2)`
 
     In this formula, you use the **[FirstN](functions/function-first-last.md)** function to show a particular number of records in a table. You use the **[Sort](functions/function-sort.md)** function as the first argument to **[FirstN](functions/function-first-last.md)** and a number (in this case, **2**) as the second argument, which specifies how many records to show.
-   
+
     The entire formula returns a table that contains the first two records of the **CustomGallerySample** table, sorted by the **SampleHeading** column in descending order.
-   
+
     ![](media/working-with-tables/gallery-items-sort-firstn.png)
 
 ## Table functions and control properties
 
-Consider the **Lower** function.  If the variable **welcome** contains the text string **"Hello, World"**, the formula **Lower( welcome )** returns **"hello, world"**.  Using this function in no way has an impact on the value in the variable **welcome**.  **Lower** is a pure function: it processes its input and produces an output and that it all, it has no side effects.  All functions in Excel and most functions in PowerApps are pure functions allowing the workbook or app to be recalculated automatically.
+Consider the **Lower** function. If the variable **welcome** contains the text string **"Hello, World"**, the formula **Lower( welcome )** returns **"hello, world"**.  This function doesn't, in any way, change the value in that variable. **Lower** is a pure function in that it only processes input and produces output. That's all; it has no side effects. All functions in Excel and most functions in PowerApps are pure functions, which allow the workbook or the app to be recalculated automatically.
 
-PowerApps offers a set of functions that operate on tables in the same manner.  They take tables as input and filter, sort, transform, reduce, and summarize entire tables of data.  In fact many of the functions that we often use with a single value, including **Lower**, can also take a single column table as input.
+PowerApps offers a set of functions that operate on tables in the same manner. These functions take tables as input and filter, sort, transform, reduce, and summarize entire tables of data. In fact, **Lower** and many other functions that typically take a single value can also take a single-column table as input.
 
 * **[Sort](functions/function-sort.md)**, **[Filter](functions/function-filter-lookup.md)** - Sorts and filters records.
 * **[FirstN](functions/function-first-last.md)**, **[LastN](functions/function-first-last.md)** - Returns the first N or last N records of the table.
@@ -132,28 +132,29 @@ PowerApps offers a set of functions that operate on tables in the same manner.  
 * **[HashTags](functions/function-hashtags.md)** - Searches for hashtags in a string.
 * **[Errors](functions/function-errors.md)** - Provides error information when you work with a data source.
 
-Many of these functions take a single column table as their input.  This is no different than a regular table except that it only has one column.  Use the syntax *table.column* to extract a single column from a table that has more than one column, for example **Products.Name** returns the single column table of only **Name** values from the **Proudcts** table.
+Many of these functions take a single-column table as their input. If an entire table has only one column, you can specify it by name. If a table has multiple columns, you can specify one of those columns by using *Table.Column* syntax. For example, **Products.Name** returns the single-column table of only **Name** values from the **Products** table.
 
-The **[AddColumns](functions/function-table-shaping.md)**, **[RenameColumns](functions/function-table-shaping.md)**, **[ShowColumns](functions/function-table-shaping.md)**, or **[DropColumns](functions/function-table-shaping.md)** function, you can completely reshape that table however you want.  Again, only the output of these functions will have changed, the original source will not be modified.
+You can completely reshape a table however you want by using the **[AddColumns](functions/function-table-shaping.md)**, **[RenameColumns](functions/function-table-shaping.md)**, **[ShowColumns](functions/function-table-shaping.md)**, or **[DropColumns](functions/function-table-shaping.md)** function. Again, these functions change only their output, not their source.
 
 Properties of controls can also be tables:
 
-* **Items** - Applies to galleries, list boxes, and combo boxes. Table to display in the gallery or list of items to offer.
-* **SelectedItems** - Applies to list boxes and combo boxes. Table of items that the user has selected if multi-select is enabled.
+* **Items** - Applies to galleries, list boxes, and combo boxes. This property defines the table that the gallery or the list shows.
+* **SelectedItems** - Applies to list boxes and combo boxes. This property defines the table of items that the user has selected if **SelectMultiple** is enabled.
 
 ## Behavioral formulas
 
-There are also a set of functions that modify data in a data source.  These functions are not pure functions: they are specifically designed to modify data and have side effects. Since they are not pure, they must be executed carefully and cannot take part in the automatic recalculation of the app.  These functions can only be used within a [behavioral formula](working-with-formulas-in-depth.md).
+Other functions are specifically designed to modify data and have side effects. Because these functions aren't pure, you must build them carefully, and they can't participate in automatically recalculating values in the app. You can use these functions only within [behavioral formulas](working-with-formulas-in-depth.md).
 
-* **[Collect](functions/function-clear-collect-clearcollect.md)**, **[Clear](functions/function-clear-collect-clearcollect.md)**, **[ClearCollect](functions/function-clear-collect-clearcollect.md)** - Creates, clears, and adds to a collection.
-* **[Patch](functions/function-patch.md)** - Patches the contents of a record, modifying one or more fields.
+* **[Collect](functions/function-clear-collect-clearcollect.md)**, **[Clear](functions/function-clear-collect-clearcollect.md)**, **[ClearCollect](functions/function-clear-collect-clearcollect.md)** - Creates collections, clears them, and adds data to them.
+* **[Patch](functions/function-patch.md)** - Modifies one or more fields in a record.
 * **[Update](functions/function-update-updateif.md)**, **[UpdateIf](functions/function-update-updateif.md)** - Updates records that match one or more criteria that you specify.
 * **[Remove](functions/function-remove-removeif.md)**, **[RemoveIf](functions/function-remove-removeif.md)** - Deletes records that match one or more criteria that you specify.
 
 ## Record formulas
+
 You can also build a formula that calculates data for an individual record, takes an individual record as an argument, and provides an individual record as a return value. Returning to our gallery example above, let's use the **Gallery1.Selected** property to display information from whatever record the user selects in that gallery.
 
-1. Add a button, and set its **[OnSelect](controls/properties-core.md)** property to this formula:<br>
+1. Add a [**Button**](controls/button-control.md), and set its **[OnSelect](controls/properties-core.md)** property to this formula:<br>
     **Collect( SelectedRecord, Gallery1.Selected )**
 
 2. While holding down the Alt key, select the button.
@@ -173,7 +174,7 @@ Now that you have the selected record, you can extract individual fields from it
 
 1. Set the label's **[Text](controls/properties-core.md)** property to this expression:<br>
     **"Selected: " & Gallery1.Selected.SampleHeading**
-   
+
     ![](media/working-with-tables/gallery-selected.png)
 
 You've taken the **Selected** property, which is a record, and extracted the **SampleHeading** property from it.
@@ -201,36 +202,37 @@ Properties that return records:
 * **[Update](functions/function-update-updateif.md)** - Applies to input controls such as text-input controls and sliders. Sets up individual properties for the gallery to pull together.
 
 ## Record scope
-Some functions operate by evaluating a formula across all the records of a table individually.  The formula's result is used in various ways:  
+
+Some functions operate by evaluating a formula across all the records of a table individually. The formula's result is used in various ways:
 
 * **Filter**, **Lookup** - Formula determines if the record should be included in the output.
 * **Sort** - Formula provides the value to sort the records on.
 * **Concat** - Formula determines the strings to concatenate together.
 * **ForAll** - Formula can return any value, potentially with a side effect.
-* **Distinct** - Formula returns a value, used to identify duplicate records.  
+* **Distinct** - Formula returns a value, used to identify duplicate records.
 * **AddColumns** - Formula provides the value of the added field.
 * **Average**, **Max**, **Min**, **Sum**, **StdevP**, **VarP** - Formula provides the value to aggregate.
 
-Inside these formulas, you can reference the fields of the record being processed.  Each of these functions creates a "record scope" in which the formula is evaluated, where the fields of the record are available as top-level identifiers.  You can also reference control properties and other values from throughout your app.
+Inside these formulas, you can reference the fields of the record being processed. Each of these functions creates a "record scope" in which the formula is evaluated, where the fields of the record are available as top-level identifiers. You can also reference control properties and other values from throughout your app.
 
 For example, take a table of **Products**:
 
 ![](media/working-with-tables/requested.png)
 
-To create this example table in your app, insert a button control and set its **OnSelect** property to this formula, and then select the button (hold down the Alt key while in Studio):
+To create this example table in your app, insert a button, set its **OnSelect** property to this formula, and then select the button (click it while you hold down the Alt key in PowerApps Studio):
 
 ```powerapps-dot
-Set( Products, 
-    Table( 
+Set( Products,
+    Table(
         { Product: "Widget",    'Quantity Requested': 6,  'Quantity Available': 3 },
         { Product: "Gadget",    'Quantity Requested': 10, 'Quantity Available': 20 },
         { Product: "Gizmo",     'Quantity Requested': 4,  'Quantity Available': 11 },
         { Product: "Apparatus", 'Quantity Requested': 7,  'Quantity Available': 6 }
     )
 )
-``` 
+```
 
-To determine if any of any of these products had more requested than is available:
+To determine whether any of any of these products had more requested than is available:
 
 `Filter( Products, 'Quantity Requested' > 'Quantity Available' )`
 
@@ -242,33 +244,34 @@ Adding to this example, we can calculate how much of each product to order:
 
 ```powerapps-dot
 AddColumns( 
-	Filter( Products, 'Quantity Requested' > 'Quantity Available' ), 
-	"Quantity To Order", 'Quantity Requested' - 'Quantity Available'
+    Filter( Products, 'Quantity Requested' > 'Quantity Available' ), 
+    "Quantity To Order", 'Quantity Requested' - 'Quantity Available'
 )
 ```
 
-Here we are adding a calculated column to the result.  **AddColumns** has its own record scope that it uses to calculate the difference between what has been requested and what is available.
+Here we are adding a calculated column to the result. **AddColumns** has its own record scope that it uses to calculate the difference between what has been requested and what is available.
 
 ![](media/working-with-tables/toorder.png)
 
-Finally, we can reduce the result table to just the columns that we desire:
+Finally, we can reduce the result table to just the columns that we want:
 
 ```powerapps-dot
-ShowColumns( 
-	AddColumns( 
-		Filter( Products, 'Quantity Requested' > 'Quantity Available' ), 
-		"Quantity To Order", 'Quantity Requested' - 'Quantity Available'
-	), 
-	"Product", 
-	"Quantity To Order"
+ShowColumns(
+    AddColumns(
+        Filter( Products, 'Quantity Requested' > 'Quantity Available' ),
+        "Quantity To Order", 'Quantity Requested' - 'Quantity Available'
+    ),
+    "Product",
+    "Quantity To Order"
 )
 ```
 
 ![](media/working-with-tables/toorderonly.png)
 
-Note that in the above, we used double quotes (") in some places and single quotes (') in other places.  Single quotes are required when referencing the value of an object, such as a field or table, in which the name of the object contains a space.  Double quotes are used when we are not referencing the value of an object but instead talking about it, especially in situations in which the object does not yet exist, as in the case of **AddColumns**.  
+Note that in the above, we used double quotes (") in some places and single quotes (') in other places.  Single quotes are required when referencing the value of an object, such as a field or table, in which the name of the object contains a space.  Double quotes are used when we are not referencing the value of an object but instead talking about it, especially in situations in which the object does not yet exist, as in the case of **AddColumns**.
 
 ## Disambiguation
+
 Field names added with the record scope override the same names from elsewhere in the app.  When this happens, you can still access values from outside the record scope with the [**@** disambiguation](functions/operators.md) operator:
 
 * To access values from nested record scopes, use the **@** operator with the name of the table being operated upon using this pattern:<br>_Table_**[@**_FieldName_**]**
@@ -290,16 +293,16 @@ You can create this collection with **ClearCollect( Y, ["A", "B"] )**.
 
 In addition, define a context variable named **Value** with this formula: **UpdateContext( {Value: "!"} )**
 
-Let's put it all together.  In this context, the following formula:
+Let's put it all together. In this context, the following formula:
 
 ```powerapps-dot
-Ungroup( 
-	ForAll( X, 
-		ForAll( Y, 
-			Y[@Value] & Text( X[@Value] ) & [@Value] 
-		) 
-	), 
-	"Value" 
+Ungroup(
+    ForAll( X,
+        ForAll( Y,
+            Y[@Value] & Text( X[@Value] ) & [@Value]
+        )
+    ),
+    "Value"
 )
 ```
 
@@ -314,41 +317,40 @@ The innermost **ForAll** function defines another record scope for **Y**.  Since
 Since **Y** is the innermost record scope, accessing fields of this table do not require disambiguation, allowing us to use this formula with the same result:
 
 ```powerapps-dot
-Ungroup( 
-	ForAll( X, 
-		ForAll( Y, 
-			Value & Text( X[@Value] ) & [@Value] 
-		) 
-	), 
-	"Value" 
+Ungroup(
+    ForAll( X,
+        ForAll( Y,
+            Value & Text( X[@Value] ) & [@Value]
+        )
+    ),
+    "Value"
 )
 ```
 
-All the **ForAll** record scopes override the global scope.  The **Value** context variable we defined is not available by name without the disambiguation operator.   To access this value we must use **[@Value]**.
+All the **ForAll** record scopes override the global scope. The **Value** context variable we defined isn't available by name without the disambiguation operator. To access this value, use **[@Value]**.
 
-**Ungroup** flattens the result, since nested **ForAll** functions will result in a nested result table.
+**Ungroup** flattens the result because nested **ForAll** functions result in a nested result table.
 
-## Single column tables
+## Single-column tables
 
-There are often situations where you will want to operate on a single column from a table.  You can use the **ShowColumns** function to accomplish this, for example this formula:
+To operate on a single column from a table, use the **ShowColumns** function as in this example:
 
 ```powerapps-dot
 ShowColumns( Products, "Product" )
 ```
 
-produces this single column table:
+This formula produces this single-column table:
 
 ![](media/working-with-tables/single-column.png)
 
-You can also use a shortcut.  *Table.Column* extracts the single column table of just *Column* from *Table*.  For example, this formula:  
+For a shorter alternative, specify *Table.Column*, which extracts the single-column table of just *Column* from *Table*. For example, this formula produces exactly the same result as using **ShowColumns**.
 
 ```powerapps-dot
 Products.Product
 ```
 
-produces the exact same result as using **ShowColumns**.  
-
 ## Inline records
+
 You express records by using curly braces that contain named field values.  For example, you can express the first record in the table at the start of this topic by using this formula:
 
 `{ Name: "Chocolate", Price: 3.95, 'Quantity on Hand': 12, 'Quantity on Order': 10 }`
