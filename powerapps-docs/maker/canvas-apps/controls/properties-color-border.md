@@ -18,6 +18,12 @@ search.app:
 ## Overview
 Configure the style of a control based on how the user interacts with it.
 
+Colors can be specified and calculated in many ways.  All colors include an alpha channel to control transparency when layered with other colors and images.  
+* [**Color** enumeration](../functions/function-colors.md): **Color.Red** or **Color.Indigo**.  All CSS color names can be used.
+* [**ColorValue** function](../functions/function-colors.md): **ColorValue( "AliceBlue" )** or **ColorValue( "#ff00ff" )**.  All CSS color names and # notation is supported as a dynamic text string.  
+* [**ColorFade** function](../functions/function-colors.md): **ColorFade( Color.Red, 50% )**.  Fades a color from fully black (-100%) to fully white (100%).
+* [**RGBA** function](../functions/function-colors.md): **RGBA( 255, 0, 255, 25% )**. The red, green, and blue components of a color are provided from 0 to 255, and alpha channel is given from 0% (fully transparent) to 100% (fully opqaue). 
+
 ## Normal
 These properties are in effect normally, when the user is not interacting with the control.
 
