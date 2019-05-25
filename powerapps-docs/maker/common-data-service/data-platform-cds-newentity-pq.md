@@ -89,4 +89,4 @@ We're excited about this functionality and eager to hear your feedback. Please [
 If an [error message about permissions](data-platform-cds-newentity-troubleshooting-mashup.md) appears, talk to your administrator.
 
 > [!WARNING]
-> There is a limit of 500,000 rows per run & per project that can be loaded using this feature.
+> There is a limit of 500,000 rows per run and per project that can be loaded using this feature.
