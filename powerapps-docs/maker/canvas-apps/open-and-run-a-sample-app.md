@@ -1,5 +1,5 @@
 ---
-title: Use a sample app (quickstart) | Microsoft Docs
+title: Use a sample app | Microsoft Docs
 description: Step-by-step instructions for creating a canvas app based on a sample in PowerApps
 author: AFTOwen
 manager: kvivek
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Quickstart: Create a canvas app from a sample in PowerApps
+# Create a canvas app from a sample in PowerApps
 In this quickstart, you'll create a canvas app from a sample so that you can explore design possibilities and discover concepts that you can apply as you develop your own canvas apps.
 
 Each sample showcases a real-world scenario but uses fictitious data. To store this data, you'll need a cloud-storage account, such as Dropbox, Google Drive, or OneDrive.

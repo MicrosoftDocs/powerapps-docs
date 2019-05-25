@@ -70,3 +70,20 @@ You can register the plug-in to run in the context of a user known to have the c
 <!-- But if you prefer that the logic in your plug-in adapt to the privileges that the calling user has, you really need to verify the user's privileges in your code.
 
 TODO: Add content that shows how to do this -->
+
+## Error: Message size exceeded when sending context to Sandbox
+
+<!-- This is the error code for an unexpected error we should be providing a specific error code -->
+Error Code: `-2147220970`<br />
+Error Message: `Message size exceeded when sending context to Sandbox. Message size: ### Mb`
+
+This error occurs when a message payload is greater than 116.85 MB **AND** a plug-in is registered for the message. The error message will include the size of the payload that caused this error.
+ 
+The limit will help ensure that users running applications cannot interfere with each other based on resource constraints. The limit will help provide a level of protection from unusually large message payloads that threaten the availability and performance characteristics of the Common Data Service platform.
+ 
+116.85 MB is large enough that it should be rare to encounter this case. The most likely situation where this case might occur is when you retrieve a record with multiple related records which include large binary files.
+ 
+If you encounter this error you can:
+
+1.	Remove the plug-in for the message. If there are no plug-ins registered for the message, the operation will complete without an error.
+2.	If the error is occurring in a custom client, you can modify your code so that it doesn't attempt to perform the work in a single operation. Instead, write code to retrieve the data in smaller parts.

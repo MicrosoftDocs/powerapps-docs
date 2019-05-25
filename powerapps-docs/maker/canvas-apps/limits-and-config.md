@@ -87,12 +87,13 @@ This list identifies all services to which PowerApps Studio talks and their usag
 | management.azure.com |https |RP |
 | msmanaged-na.azure-apim.net |https |Runtime of Connectors/Apis |
 | login.microsoft.com<br>login.windows.net<br>login.microsoftonline.com<br>secure.aadcdn.microsoftonline-p.com |https |ADAL |
-| graph.microsoft.com<br>graph.windows.net |https |Azure Graph - For getting user info (e.g. profile photo) |
+| graph.microsoft.com<br>graph.windows.net |https |Azure Graph - For getting user info (e.g., profile photo) |
 | gallery.azure.com |https |Sample and Template apps |
 | \*.azure-apim.net |https |Api Hubs - Different sub-domains for each locale |
-| \*.powerapps.com |https |WebAuth + Portal |
-| \*.azureedge.net |https |WebAuth |
-| \*.blob.core.windows.net |https |Blob storage |
+| \*.powerapps.com |https | create.powerapps.com, make.powerapps.com, content.powerapps.com, and web.powerapps.com |
+| \*.azureedge.net |https | create.powerapps.com, make.powerapps.com, content.powerapps.com, and web.powerapps.com |
+| \*.blob.core.windows.net |https | Blob storage |
+| \*.flow.microsoft.com | https | create.powerapps.com, make.powerapps.com, content.powerapps.com, and web.powerapps.com |
 | vortex.data.microsoft.com |https |Telemetry |
 
 > [!NOTE]

@@ -24,7 +24,7 @@ The SolutionPackager tool can be used with any source control system. After a so
  As further customizations and changes are necessary for the solution, developers should edit or customize components through existing means, export again to create a .zip file, and extract the compressed solution file into the same folder.  
   
 > [!IMPORTANT]
->  Except for the sections described in [When to edit the customizations file](/model-driven-apps/when-edit-customization-file.md), manual editing of extracted component files and .zip files is not supported.  
+>  Except for the sections described in [When to edit the customizations file](../model-driven-apps/when-edit-customization-file.md), manual editing of extracted component files and .zip files is not supported.  
   
  When the SolutionPackager tool extracts the component files it will not overwrite existing component files of the same name if the file contents are identical. In addition, the tool honors the read-only attribute on component files producing a warning in the console window that particular files were not written. This enables the user to check out, from source control, the minimal set of files that are changing. The `/clobber` parameter can be used to override and cause read-only files to be written or deleted. The `/allowWrite` parameter can be used to assess what impact an extract operation has without actually causing any files to be written or deleted. Use of the `/allowWrite` parameter with verbose logging is effective.  
   
