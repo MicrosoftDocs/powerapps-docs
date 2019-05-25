@@ -17,11 +17,6 @@ This sample describes how to bind a custom component to different fields on the 
 > [!div class="mx-imgBorder"]
 > ![IFRAME component](../media/iframe-control.png "IFRAME component")
 
-> [!IMPORTANT]
-> - PowerApps component framework is a preview feature.
-> - [!INCLUDE[cc_preview_features_definition](../../../includes/cc-preview-features-definition.md)] 
-> - [!INCLUDE[cc_preview_features_no_MS_support](../../../includes/cc-preview-features-no-ms-support.md)]
-
 ## Manifest
 
 ```xml
@@ -178,5 +173,5 @@ The [updateView](../reference/control/updateview.md) method is invoked whenever 
 
 [Download sample components](https://go.microsoft.com/fwlink/?linkid=2088525)<br/>
 [PowerApps component framework Manifest Schema Reference](../manifest-schema-reference/index.md)<br />
-[PowerApps component framework API Reference](../index.md)<br />
+[PowerApps component framework API Reference](../reference/index.md)<br />
 [PowerApps component framework Overview](../overview.md)

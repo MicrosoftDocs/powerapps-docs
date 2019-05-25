@@ -65,7 +65,7 @@ You can configure the **Price**, **Availability**, and **Colors** fields to appe
 
 1. In the left navigation bar, expand **Details_DataCard1**, and note the numeral that appears at the end of **DataCardValue**.
 
-1. Set the **Visibility** property of the **Color**, **Availability**, and **Price** cards to this formula (replacing, if necessary, the numeral with the one that you noted in the previous step):
+1. Set the **Visible** property of the **Color**, **Availability**, and **Price** cards to this formula (replacing, if necessary, the numeral with the one that you noted in the previous step):
 
     **If(DataCardValue2.Value = true, true)**
 
@@ -191,7 +191,7 @@ You can configure the **Price**, **Availability**, and **Colors** fields to appe
 
 **Q:** Do I need a PowerApps license to create or use custom list forms?
 
-**A:** You need an [Office 365 plan that includes PowerApps](https://docs.microsoft.com/power-platform/admin/pricing-billing-skus.md#licenses).
+**A:** You need an [Office 365 plan that includes PowerApps](https://docs.microsoft.com/power-platform/admin/pricing-billing-skus#licenses).
 
 **Q:** What happens when guest users access a list that has a custom form?
 

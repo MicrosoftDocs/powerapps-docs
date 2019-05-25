@@ -81,7 +81,7 @@ The app should now look like the following image.
 ![All app screens](./media/sharepoint-scenario-build-app/04-01-05-all-screens.png)
 
 ## Step 2: Connect to a SharePoint list
-In this step, we'll connect to the **Product Details** SharePoint list. We only use one list in this app, but you could easily connect to both if you want to extend the app.
+In this step, we'll connect to the **Project Details** SharePoint list. We only use one list in this app, but you could easily connect to both if you want to extend the app.
 
 1. In the left navigation bar, click or tap the **SelectTask** screen.
 2. In the right pane, click or tap **Add data source**.

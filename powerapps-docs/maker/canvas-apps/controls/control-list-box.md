@@ -25,6 +25,8 @@ A **List Box** control always shows all available choices (unlike a **[Drop down
 
 **[Items](properties-core.md)** – The source of data that appears in a control such as a gallery, a list, or a chart.
 
+**Selected** – The data record that represents the selected item.
+
 When you add a gallery, a list, or a chart, the property list shows **Items** by default so that you can easily specify the data that the new control should show. For example, you might set the **Items** property of a gallery to the **Account** table in Salesforce, a table named **Inventory** that you created in Excel and uploaded to the cloud, or a SharePoint list named **ConferenceSpeakers**.
 
 ## Additional properties
@@ -89,6 +91,8 @@ When you add a gallery, a list, or a chart, the property list shows **Items** by
 **[PressedFill](properties-color-border.md)** – The background color of a control when the user taps or clicks that control.
 
 **[Reset](properties-core.md)** – Whether a control reverts to its default value.
+
+**SelectedText (Deprecated)** – A string value that represents the selected item.
 
 **[SelectionColor](properties-color-border.md)** – The text color of a selected item or items in a list or the color of the selection tool in a pen control.
 

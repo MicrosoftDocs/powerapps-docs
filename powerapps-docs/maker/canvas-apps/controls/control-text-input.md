@@ -118,6 +118,8 @@ The user can specify data by typing into a text-input control. Depending on how 
 
 **[Underline](properties-text.md)** – Whether a line appears under the text that appears on a control.
 
+**VirtualKeyboardMode** – Type of virtual keyboard, text or numeric, that appears on an app user's touch screen. The **Format** property determines the default value. Device support varies. Devices that are running iOS must have at least version 12.2. The recommended version of Android is 9.0, and capabilities of numeric keyboards vary for Android devices. Windows 10 doesn't support this property.  
+
 **[Visible](properties-core.md)** – Whether a control appears or is hidden.
 
 **[Width](properties-size-location.md)** – The distance between a control's left and right edges.

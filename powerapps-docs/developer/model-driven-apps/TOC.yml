@@ -26,8 +26,8 @@
     href: use-editable-grids.md
   - name: Query and edit an organization theme
     href: query-and-edit-an-organization-theme.md
-  - name: Build custom controls using PowerApps Component Framework
-    href: /powerapps/developer/control-framework/overview
+  - name: Build custom components using PowerApps Component Framework
+    href: /powerapps/developer/component-framework/overview
 - name: Apply data visualizations using code
   href: customize-visualizations-dashboards.md
   items:
@@ -48,7 +48,7 @@
       - name: Actions on visualizations (charts)
         href: actions-visualizations-charts.md
       - name: Create a visualization (chart)
-        href: create-visualization-chart.md
+        href: create-visualization-chart.md      
 - name: Apply business logic using client scripting
   href: client-scripting.md
   items:

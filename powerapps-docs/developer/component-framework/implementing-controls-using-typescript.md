@@ -9,11 +9,11 @@ ms.assetid: 18e88d702-3349-4022-a7d8-a9adf52cd34f
 ms.author: "nabuthuk"
 ---
 
-# Implement controls using TypeScript
+# Implement components using TypeScript
 
 [!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-This tutorial will walk you through creating a new custom component in Typescript. The sample component is a linear input component.  The linear input component enables users to enter numeric values using a visual slider instead of directly keying in values. 
+This tutorial will walk you through creating a new custom component in Typescript. The sample component is a linear input component. The linear input component enables users to enter numeric values using a visual slider instead of directly keying in values. 
 
 ## Creating a new component project
 
@@ -24,6 +24,7 @@ To create a new project, follow the steps below:
 3. `cd` into the new directory and run the command `cd LinearControl` 
 4. Create the component project using the command `pac pcf init --namespace SampleNamespace --name TSLinearInputControl --template field` 
 5. Install the project build tools using the command `npm install` 
+6. Open your project in any developer environment of your choice and start implementing your custom component.
 
 ## Implementing Manifest
 
@@ -38,7 +39,7 @@ A custom component is defined by the information in the `ControlManifest.Input.x
 2. Rename the `sampleProperty` and change the property type
 
     ```XML
-    <property name="sliderValue" display-name-key="sliderValue _Display_Key" description-key=" sliderValue_Desc_Key" of-type-group="numbers" usage="bound" required="true" /> 
+    <property name="sliderValue" display-name-key="sliderValue_Display_Key" description-key="sliderValue_Desc_Key" of-type-group="numbers" usage="bound" required="true" /> 
     ```
 
 3. The of-type-group attribute references a group of allowable numbers. Add the following type-group element as a sibling to the <property> element in the manifest. The type-group specifies the component value and can contain whole, currency, floating point, or decimal values.
@@ -53,8 +54,10 @@ A custom component is defined by the information in the `ControlManifest.Input.x
     ```
 
 4. Save the changes to the `ControlManifest.Input.xml` file.
-5. Build the component project using the command `npm run build`.
-6. The build generates an updated Typescript type declaration file under `TSLinearInputControl/generated folder`.  The `ManifestTypes.d.ts` file defines the properties that your component will have access to Typescript source code.
+5. Now, create a new folder inside the LinearControl folder and name it as css.
+6. Create a css file to [add styling to the custom component](#adding-style-to-the-custom-component)
+7. Build the component project using the command `npm run build`.
+8. The build generates an updated Typescript type declaration file under `TSLinearInputControl/generated folder`.  The `ManifestTypes.d.ts` file defines the properties that your component will have access to Typescript source code.
 
 ## Implementing component logic
 
