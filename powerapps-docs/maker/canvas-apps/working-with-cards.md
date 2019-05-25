@@ -153,7 +153,7 @@ To populate these controls with data, their properties can be driven from the pr
 | **TextErrorMessage.Text** |**Parent.Error** |If a validation problem occurs, the card's **Error** property provides an appropriate error message. |
 
 > [!NOTE]
-> Note that the **Parent.Error** property is an output only property that cannot be set with a formula.  It will therefore not appear in the formula bar property selector, nor in the properties or advanced panes.  It will appear as a suggestion when writing a formula that references the property.  
+> The **Parent.Error** property is an output only property that cannot be set with a formula.  It will therefore not appear in the formula bar property selector, nor in the properties or advanced panes.  It will appear as a suggestion when writing a formula that references the property.  
 
 To pull information out of these controls and push it back into the data source, we have the following key formulas:
 
