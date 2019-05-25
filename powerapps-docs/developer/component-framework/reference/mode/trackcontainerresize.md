@@ -14,7 +14,7 @@ applies_to:
   - "Dynamics 365 Version 9.x"
 ms.assetid: c5f482c2-dde2-460b-89a7-39e0efcc5704
 ---
-\
+
 # trackContainerResize
 
 [!INCLUDE [trackcontainerresize-description](includes/trackcontainerresize-description.md)]
