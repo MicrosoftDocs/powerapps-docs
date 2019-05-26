@@ -34,7 +34,7 @@ You can specify colors in many ways:
 
 - [**ColorFade**](../functions/function-colors.md) function: Specify how faded a color is, from fully black (-100%) to fully white (100%), as in this example:
 
-  - **ColorFade( Color.Red, 50% )**.
+  - **ColorFade( Color.Red, 50% )**
 
 - [**RGBA**](../functions/function-colors.md) function: Specify the red, green, and blue components of a color from 0 to 255, and specify an alpha channel from 0% (fully transparent) to 100% (fully opaque), as in this example:
 
