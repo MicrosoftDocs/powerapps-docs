@@ -84,7 +84,6 @@ At a high level, the app does the following:
             Set( statusText, "Local data" )
     );
     SaveData( LocalTweets, "LocalTweets" );
-
     ```
 
     ![Formula to load tweets](./media/offline-apps/load-tweets.png)
@@ -144,7 +143,7 @@ This formula checks if the device is online. If it is, the text of the label is 
     Set( resetNewTweet, false )
     ```  
 
-3. In the **OnStart** property for the app, add a line at the end of the formula:
+3. In the **OnStart** property for the **App**, add a line at the end of the formula:
 
     ```powerapps-dot
     If( Connection.Connected,
