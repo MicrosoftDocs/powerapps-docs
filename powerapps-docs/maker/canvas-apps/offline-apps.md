@@ -47,7 +47,7 @@ To keep the focus on the offline aspects of app development, we'll show you a si
 
 At a high level, the app does the following:
 
-1. On app startup (based on the first screen's **OnVisible** property):
+1. On app startup:
 
    * If the device is online, we access the Twitter connector directly to fetch data, and populate a collection with that data.
    * If the device is offline, we load the data from a local cache file using [LoadData](../canvas-apps/functions/function-savedata-loaddata.md).
@@ -74,17 +74,17 @@ At a high level, the app does the following:
     ![Add a Twitter connection](./media/offline-apps/twitter-connection.png)
 
 ### Step 3: Load tweets into a LocalTweets collection on app startup
-Select the **OnVisible** property for **Screen1** in the app, and copy in the following formula:
+Select the **OnStart** property for **App** in the left hand navigation pane, and copy in the following formula:
 
 ```powerapps-dot
 If( Connection.Connected,
     ClearCollect( LocalTweets, Twitter.SearchTweet( "PowerApps", {maxResults: 100} ) );
-        UpdateContext( {statusText: "Online data"} ),
-    LoadData(LocalTweets, "Tweets", true);
-        UpdateContext( {statusText: "Local data"} )
+        Set( statusText, "Online data" ),
+    LoadData( LocalTweets, "Tweets", true );
+        Set( statusText, "Local data" )
 );
-LoadData( LocalTweetsToPost, "LocalTweets", true );
-SaveData( LocalTweets, "Tweets" )
+SaveData( LocalTweets, "Tweets" );
+// LoadData( LocalTweetsToPost, "LocalTweets", true );  
 ```
 
 ![Formula to load tweets](./media/offline-apps/load-tweets.png)
@@ -94,6 +94,15 @@ This formula checks if the device is online:
 * If the device is online, it loads into a **LocalTweets** collection up to 100 tweets with the search term "PowerApps".
 * If the device is offline, it loads the local cache from a file called "Tweets," if it's available.
 
+The last line is commented out because we haven't yet defined the shape of the **LocalTweetsToPost** collection.  In a few steps we'll uncomment this line.
+
+Run this formula by selecting **Run OnStart** from the ellipses menu for the **App** object.
+
+![Run formula to load tweets](./media/offline-apps/load-tweets-run.png)
+
+> [!NOTE]
+> The **LoadData** and **SaveData** will result in an error when run during authoring.  These functions are not supported when running in a web browser.  But that is fine, when you deploy this app to a device these functions will operate normally.  
+
 ### Step 4: Add a gallery and bind it to the LocalTweets collection
 
 1. Insert a new flexible height gallery: **Insert** > **Gallery** > **Blank flexible height**.
@@ -101,27 +110,30 @@ This formula checks if the device is online:
 2. Set the **Items** property to **LocalTweets**.
 
 3. Add four **Label** controls to display data from each tweet, and set the **Text** properties to:
-   * **ThisItem.TweetText**
-   * **ThisItem.UserDetails.FullName & " \@" & ThisItem.UserDetails.UserName**
-   * **"RT: " & ThisItem.RetweetCount**
-   * **Text(DateTimeValue(ThisItem.CreatedAtIso), DateTimeFormat.ShortDateTime)**
-4. Add an **Image** control, and set the **Image** property to **ThisItem.UserDetails.ProfileImageUrl**.
+   * `ThisItem.TweetText`
+   * `ThisItem.UserDetails.FullName & " \@" & ThisItem.UserDetails.UserName`
+   * `"RT: " & ThisItem.RetweetCount`
+   * `Text(DateTimeValue(ThisItem.CreatedAtIso), DateTimeFormat.ShortDateTime)`
+4. Add an **Image** control, and set the **Image** property to:
+    * `ThisItem.UserDetails.ProfileImageUrl`
 
 ### Step 5: Add a connection status label
 Insert a new **Label** control, and set its **Text** property to the following formula:
-
 ```If( Connection.Connected, "Connected", "Offline" )```
 
 This formula checks if the device is online. If it is, the text of the label is "Connected", otherwise it's "Offline".
 
 ### Step 6: Add a text input to compose new tweets
 
-1. Insert a new **Text input** control named "NewTweetTextInput".
+1. Insert a new **Text input** control named **NewTweetTextInput**.
 
-2. Set the **Reset** property of the text input to **resetNewTweet**.
+2. Set the **Reset** property of the text input to:
+```resetNewTweet```
 
 ### Step 7: Add a button to post the tweet
-1. Add a **Button** control, and set the **Text** property to "Tweet".
+1. Add a **Button** control, and set the **Text** property to:
+```"Tweet"```
+
 2. Set the **OnSelect** property to the following formula:
 
     ```powerapps-dot
@@ -130,9 +142,26 @@ This formula checks if the device is online. If it is, the text of the label is 
         Collect( LocalTweetsToPost, {tweetText: NewTweetTextInput.Text} );
             SaveData( LocalTweetsToPost, "LocalTweetsToPost" )
     );
-    UpdateContext( {resetNewTweet: true} );
-    UpdateContext( {resetNewTweet: false} )
+    Set( resetNewTweet, true );
+    Set( resetNewTweet, false )
     ```  
+
+3. In the **OnStart** property for the app, uncomment the last line:
+
+    ```powerapps-dot
+    If( Connection.Connected,
+        ClearCollect( LocalTweets, Twitter.SearchTweet( "PowerApps", {maxResults: 100} ) );
+            Set( statusText, "Online data" ),
+        LoadData( LocalTweets, "Tweets", true );
+            Set( statusText, "Local data" )
+    );
+    SaveData( LocalTweets, "Tweets" );
+    LoadData( LocalTweetsToPost, "LocalTweets", true );  // previously commented out
+    ```
+
+    ![Run formula to load tweets with uncommented line](./media/offline-apps/load-tweets-save.png)
+
+    We couldn't do this earlier since we had not yet established the structure of the collection **LocalTweetToPost** which is done in the last step with the **Collect** call.
 
 This formula checks if the device is online:
 
@@ -156,7 +185,7 @@ Add a new **Timer** control:
         Clear( LocalTweetsToPost);
         Collect( LocalTweetsToPost, {tweetText: NewTweetTextInput.Text} );
         SaveData( LocalTweetsToPost, "LocalTweetsToPost" );
-        UpdateContext( {statusText: "Online data"} )
+        Set( statusText, "Online data" )
     )
     ```
 
