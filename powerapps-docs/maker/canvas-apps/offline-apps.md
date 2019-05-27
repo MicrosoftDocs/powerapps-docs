@@ -126,6 +126,8 @@ This formula checks if the device is online. If it is, the text of the label is 
 
 1. Using the elipses menu in the **Tree view**, rename the control to **NewTweetTextInput**.
 
+1. Set the **Default** property to `""`.
+
 ### Step 7: Add a button to post the tweet
 1. Add a **Button** control, and set the **Text** property to:
         ```"Tweet"```
