@@ -67,9 +67,6 @@ At a high level, the app performs these tasks:
 
 1. On the **Blank app** tile, select **Phone layout**.
 
-    > [!div class="mx-imgBorder"]
-    > ![Blank app, phone layout](./media/offline-apps/blank-app.png)
-
 1. On the **View** tab, select **Data sources**.
 
 1. In the **Data** pane, select **Add data source**.
@@ -78,7 +75,7 @@ At a high level, the app performs these tasks:
 
 1. Enter your credentials, create the connection, and then close the **Data** pane.
 
-### Step 2: Create a collection of tweets
+### Step 2: Collect existing tweets
 
 1. In the **Tree view** pane, select **App**, and then set its **OnStart** property to this formula:
 
@@ -210,22 +207,20 @@ This formula determines whether the device is online. If it is, the app tweets a
 
 ## Test the app
 
-1. On a mobile device that's online, open PowerApps, and then open the Twitter app.
+1. Open the app on a mobile device that's connected to the Internet.
 
-    The tweets are loaded, and the status shows **Connected**.
+    Existing tweets appear in the gallery, and the status shows **Connected**.
 
-1. Close the Twitter app, disable wi-fi, and then enable the device's airplane mode.
-
-1. Open the Twitter app again.
+1. Disconnect the device from the Internet by enabling the device's airplane mode and disabling wi-fi.
 
     The status label shows that the app is **Offline**.
 
-1. Write a tweet that includes **PowerApps**.
+1. While the device is offline, write a tweet that includes **PowerApps**, and then select the **Tweet** button.
 
     The tweet is stored locally in the **LocalTweetsToPost** collection.
 
-1. Disable the device's airplane mode to bring the app online again.
+1. Reconnect the device to the Internet by disabling the device's airplane mode and enabling wi-fi.
 
-    In five minutes or less, the app posts the tweet.
+    Within five minutes, the app posts the tweet, which appears in the gallery.
 
 We hope this article gives you an idea of the capabilities that PowerApps has for building offline apps. As always, please provide feedback in our [forum](https://powerusers.microsoft.com/t5/PowerApps-Forum/bd-p/PowerAppsForum1) and share your examples of offline apps in the [PowerApps community blog](https://powerusers.microsoft.com/t5/PowerApps-Community-Blog/bg-p/PowerAppsBlog).
