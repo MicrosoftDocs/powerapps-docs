@@ -201,7 +201,7 @@ Then the formula resets the text in the text-input box.
     If( Connection.Connected,
         ForAll( LocalTweetsToPost, Twitter.Tweet( "", {tweetText: tweetText} ) );
         Clear( LocalTweetsToPost );
-        ClearCollect( LocalTweets, Twitter.SearchTweet( "PowerApps", {maxResults: 100} ) );
+        ClearCollect( LocalTweets, Twitter.SearchTweet( "PowerApps", {maxResults: 10} ) );
         SaveData( LocalTweets, "LocalTweets" );
    )
     ```
