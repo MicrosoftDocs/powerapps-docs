@@ -93,18 +93,18 @@ At a high level, the app does the following:
     ![Run formula to load tweets](./media/offline-apps/load-tweets-run.png)
 
     > [!NOTE]
-    > The **LoadData** and **SaveData** will result in an error when run during authoring as these functions are not supported when running in a web browser.  This is normal.  When you deploy this app to a device these functions will operate normally.  
+    > The **LoadData** and **SaveData** functions may display an error when evaluated during authoring as these functions are not supported in a web browser.  This is normal.  When you deploy this app to a device these functions will operate normally.  
 
 This formula checks if the device is online:
 
 * If the device is online, it loads into a **LocalTweets** collection up to 100 tweets with the search term "PowerApps".
-* If the device is offline, it loads the local cache from a file called "Tweets," if it's available.
+* If the device is offline, it loads the local cache from a file called "LocalTweets" if it's available.
 
 ### Step 4: Add a gallery and bind it to the LocalTweets collection
 
 1. Insert a new flexible height gallery: **Insert** > **Gallery** > **Blank flexible height**.
 
-2. Set the **Items** property to **LocalTweets**.
+2. Set the **Items** property to `LocalTweets`.
 
 3. Add four **Label** controls to display data from each tweet, and set the **Text** properties to:
    * `ThisItem.TweetText`
@@ -122,10 +122,9 @@ This formula checks if the device is online. If it is, the text of the label is 
 
 ### Step 6: Add a text input to compose new tweets
 
-1. Insert a new **Text input** control named **NewTweetTextInput**.
+1. Insert a new **Text input** control.
 
-2. Set the **Reset** property of the text input to:
-```resetNewTweet```
+1. Using the elipses menu in the **Tree view**, rename the control to **NewTweetTextInput**.
 
 ### Step 7: Add a button to post the tweet
 1. Add a **Button** control, and set the **Text** property to:
@@ -139,8 +138,7 @@ This formula checks if the device is online. If it is, the text of the label is 
         Collect( LocalTweetsToPost, {tweetText: NewTweetTextInput.Text} );
             SaveData( LocalTweetsToPost, "LocalTweetsToPost" )
     );
-    Set( resetNewTweet, true );
-    Set( resetNewTweet, false )
+    Reset( NewTweetTextInput );
     ```  
 
 3. In the **OnStart** property for the **App**, add a line at the end of the formula:
@@ -179,10 +177,7 @@ Then the formula resets the text in the text box.
     ```powerapps-dot
     If( Connection.Connected,
         ForAll( LocalTweetsToPost, Twitter.Tweet( "", {tweetText: tweetText} ) );
-        Clear( LocalTweetsToPost);
-        Collect( LocalTweetsToPost, {tweetText: NewTweetTextInput.Text} );
-        SaveData( LocalTweetsToPost, "LocalTweetsToPost" );
-        Set( statusText, "Online data" )
+            Clear( LocalTweetsToPost )
     )
     ```
 
