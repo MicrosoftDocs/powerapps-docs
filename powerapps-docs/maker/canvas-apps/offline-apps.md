@@ -17,10 +17,9 @@ search.app:
 
 # Develop offline-capable canvas apps
 
-Mobile users often need to be productive even when they have limited or no connectivity. When you build a canvas app, you can:
+Mobile users often need to be productive even when they have limited or no connectivity. When you build a canvas app, you can perform these tasks:
 
-- Open PowerApps Mobile when offline.
-- Run apps that you develop when offline.
+- Open PowerApps Mobile and run apps when offline.
 - Determine when an app is offline, online, or in a metered connection by using the [Connection](../canvas-apps/functions/signals.md#connection) signal object.
 - Use [collections](../canvas-apps/create-update-collection.md) and leverage functions such as [LoadData and SaveData](../canvas-apps/functions/function-savedata-loaddata.md) for basic data storage when offline.
 
@@ -28,25 +27,25 @@ Mobile users often need to be productive even when they have limited or no conne
 
 **LoadData** and **SaveData** combine to form a simple mechanism to store small amounts of data on a local device. By using these functions, you can add simple offline capabilities to your app.
 
-These functions are limited by the amount of available app memory because they operate on an in-memory collection. Available memory can vary depending on the device, the operating system, the memory that PowerApps Mobile uses, and the complexity of the app in terms of screens and controls. If you store more than a few megabytes of data, test your app with expected scenarios on the devices on which you expect it to run. You should generally expect to have between 30 and 70 megabytes of available memory.
+These functions are limited by the amount of available app memory because they operate on an in-memory collection. Available memory can vary depending on the device, the operating system, the memory that PowerApps Mobile uses, and the complexity of the app in terms of screens and controls. If you store more than a few megabytes of data, test your app with expected scenarios on the devices on which you expect it to run. You'll generally have 30-70 megabytes of available memory.
 
-The functions also don't automatically resolve merge conflicts when a device returns to connectivity from offline. Configuration on what data is saved and how to handle reconnection is up to the maker when writing expressions.
+The functions also don't automatically resolve merge conflicts when a device comes online. Configuration on what data is saved and how to handle reconnection is up to the maker when writing expressions.
 
-For updates on capabilities for offline scenarios, return to this topic, and subscribe to the [PowerApps blog](https://powerapps.microsoft.com/blog/).
+For updates on offline capabilities, return to this topic, and subscribe to the [PowerApps blog](https://powerapps.microsoft.com/blog/).
 
 ## Overview
 
-The first thing to think about in offline scenarios is how your apps work with data. Apps in PowerApps primarily access data through a set of [connectors](../canvas-apps/connections-list.md) that the platform provides, such as SharePoint, Office 365, and the Common Data Service. You can also build custom connectors that enable apps to access any service that provides a RESTful endpoint. This could be a Web API or a service such as Azure Functions. All these connectors use HTTPS over the Internet, which means your users must be online for them to access data and any other capabilities that a service offers.
+When you design offline scenarios, you should first consider how your apps work with data. Apps in PowerApps primarily access data through a set of [connectors](../canvas-apps/connections-list.md) that the platform provides, such as SharePoint, Office 365, and Common Data Service. You can also build custom connectors that enable apps to access any service that provides a RESTful endpoint. This could be a Web API or a service such as Azure Functions. All these connectors use HTTPS over the Internet, which means your users must be online for them to access data and any other capabilities that a service offers.
 
 ![PowerApps app with connectors](./media/offline-apps/online-app.png)
 
 ### Handling offline data
 
-One of the most interesting aspects of PowerApps is its set of capabilities and formulas that enable you to filter, search, sort, aggregate, and manipulate data in a consistent way regardless of the data source. Sources range from in-memory collections in the app to SharePoint lists to SQL databases and Common Data Service. This consistency enables you to easily retarget an app to use a different backend. More importantly here, it also enables you to use local collections for data management with almost no changes to an app's logic. In fact, local collections are the primary mechanism for handling offline data.
+In PowerApps, you can filter, search, sort, aggregate, and manipulate data in a consistent way regardless of the data source. Sources range from in-memory collections in the app to SharePoint lists to SQL databases and Common Data Service. Because of this consistency, you can easily retarget an app to use a different data source. More importantly for offline scenarios, you can use local collections for data management with almost no changes to an app's logic. In fact, local collections are the primary mechanism for handling offline data.
 
 ## Build an offline app
 
-To keep the focus on the offline aspects of app development, we'll show you a simple scenario focused around Twitter. We'll build an app that enables you to read Twitter posts and submit tweets while being offline. When the app comes online, the app posts tweets and reloads the local data.
+To keep the focus on the offline aspects of app development, this topic illustrates a simple scenario focused around Twitter. You'll build an app that enables you to read Twitter posts and submit tweets while being offline. When the app comes online, the app posts tweets and reloads the local data.
 
 At a high level, the app performs these tasks:
 
@@ -64,15 +63,10 @@ At a high level, the app performs these tasks:
 ### Step 1: Add Twitter to a blank phone app
 
 1. In PowerApps Studio, select **File** > **New**.
-
 1. On the **Blank app** tile, select **Phone layout**.
-
 1. On the **View** tab, select **Data sources**.
-
 1. In the **Data** pane, select **Add data source**.
-
 1. Select **New Connection** > **Twitter** > **Create**.
-
 1. Enter your credentials, create the connection, and then close the **Data** pane.
 
 ### Step 2: Collect existing tweets
