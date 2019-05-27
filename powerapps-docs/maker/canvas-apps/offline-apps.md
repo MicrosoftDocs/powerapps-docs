@@ -76,7 +76,7 @@ At a high level, the app performs these tasks:
 
 1. Select **New Connection** > **Twitter** > **Create**.
 
-1. Enter your credentials, and create the connection.
+1. Enter your credentials, create the connection, and then close the **Data** pane.
 
 ### Step 2: Create a collection of tweets
 
@@ -114,7 +114,7 @@ This formula checks whether the device is online:
 
 1. Set the **Items** property of the [**Gallery**](controls/control-gallery.md) control to `LocalTweets`.
 
-1. In the gallery template, add three [**Label**](controls/control-text-box/md) controls, and set the **Text** property of each label to one of these values:
+1. In the gallery template, add three [**Label**](controls/control-text-box.md) controls, and set the **Text** property of each label to one of these values:
 
     - `ThisItem.UserDetails.FullName & " (@" & ThisItem.UserDetails.UserName & ")"`
     - `Text(DateTimeValue(ThisItem.CreatedAtIso), DateTimeFormat.ShortDateTime)`
@@ -127,9 +127,7 @@ This formula checks whether the device is online:
 
 ### Step 4: Show connection status
 
-1. Under the gallery, insert a **Label** control.
-
-1. Set the newest label's **Color** property to **Red**.
+1. Under the gallery, insert a label, and then set its **Color** property to **Red**.
 
 1. Set the newest label's **Text** property to this formula:
 
@@ -202,8 +200,10 @@ Then the formula resets the text in the text-input box.
     ```powerapps-dot
     If( Connection.Connected,
         ForAll( LocalTweetsToPost, Twitter.Tweet( "", {tweetText: tweetText} ) );
-            Clear( LocalTweetsToPost )
-    )
+        Clear( LocalTweetsToPost );
+        ClearCollect( LocalTweets, Twitter.SearchTweet( "PowerApps", {maxResults: 100} ) );
+        SaveData( LocalTweets, "LocalTweets" );
+   )
     ```
 
 This formula determines whether the device is online. If it is, the app tweets all the items in the **LocalTweetsToPost** collection and then clears the collection.
@@ -214,7 +214,7 @@ This formula determines whether the device is online. If it is, the app tweets a
 
     The tweets are loaded, and the status shows **Connected**.
 
-1. Close the Twitter app, and then enable the device's airplane mode to ensure that it's offline.
+1. Close the Twitter app, disable wi-fi, and then enable the device's airplane mode.
 
 1. Open the Twitter app again.
 
