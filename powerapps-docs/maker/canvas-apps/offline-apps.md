@@ -42,24 +42,24 @@ The first thing to think about in offline scenarios is how your apps work with d
 
 ### Handling offline data
 
-One of the most interesting aspects of PowerApps is its set of capabilities and formulas that enable you to filter, search, sort, aggregate, and manipulate data in a consistent way regardless of the data source. Sources range from in-memory collections in the app, to SharePoint lists, to SQL databases and the Common Data Service. This consistency enables you to easily retarget an app to use a different backend. More importantly here, it also enables you to use local collections for data management with almost no changes to an app's logic. In fact, local collections are the primary mechanism for handling offline data.
+One of the most interesting aspects of PowerApps is its set of capabilities and formulas that enable you to filter, search, sort, aggregate, and manipulate data in a consistent way regardless of the data source. Sources range from in-memory collections in the app to SharePoint lists to SQL databases and Common Data Service. This consistency enables you to easily retarget an app to use a different backend. More importantly here, it also enables you to use local collections for data management with almost no changes to an app's logic. In fact, local collections are the primary mechanism for handling offline data.
 
 ## Build an offline Twitter app
 
 To keep the focus on the offline aspects of app development, we'll show you a simple scenario focused around Twitter. We'll build an app that enables you to read Twitter posts and submit tweets while being offline. When the app comes online, the app posts tweets and reloads the local data.
 
-At a high level, the app does the following:
+At a high level, the app performs these tasks:
 
-1. On app startup:
+1. When the user opens the app:
 
-    - If the device is online, we access the Twitter connector directly to fetch data, and we populate a collection with that data.
-    - If the device is offline, we load the data from a local cache file using [LoadData](../canvas-apps/functions/function-savedata-loaddata.md).
-    - We enable the user to submit tweets. If online, we post directly to Twitter and refresh the local cache.
+    - If the device is online, the app fetches data through the Twitter connector and populates a collection with that data.
+    - If the device is offline, the app loads the data from a local cache file by using the [**LoadData**](../canvas-apps/functions/function-savedata-loaddata.md) function.
+    - The user can submit tweets. If the app is online, it posts the tweets directly to Twitter and refreshes the local cache.
 
-1. Every five minutes while online:
+1. Every five minutes while the app is online:
 
-    - We post any tweets that we have in the local cache.
-    - We refresh the local cache and save it using [SaveData](../canvas-apps/functions/function-savedata-loaddata.md).
+    - The app posts any tweets in the local cache.
+    - The app refreshes the local cache and saves it by using the [**SaveData**](../canvas-apps/functions/function-savedata-loaddata.md) function.
 
 ### Step 1: Create a blank phone app
 
