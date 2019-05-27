@@ -113,16 +113,11 @@ This formula checks whether the device is online:
 
 1. Set the **Items** property to `LocalTweets`.
 
-1. Add four **Label** controls, and set the **Text** property of each to one of these values:
+1. Add three **Label** controls, and set the **Text** property of each to one of these values:
 
-    - `ThisItem.TweetText`
     - `ThisItem.UserDetails.FullName & " \@" & ThisItem.UserDetails.UserName`
-    - `"RT: " & ThisItem.RetweetCount`
     - `Text(DateTimeValue(ThisItem.CreatedAtIso), DateTimeFormat.ShortDateTime)`
-
-1. Add an **Image** control, and set its **Image** property to this expression:
-
-    - `ThisItem.UserDetails.ProfileImageUrl`
+    - `ThisItem.TweetText`
 
 ### Step 5: Show connection status
 
@@ -212,7 +207,7 @@ Now that the app is finished, let's check out how it looks before we move on to 
 
     The status label shows that the app is **Offline**.
 
-1. Write a tweet.
+1. Write a tweet that includes **PowerApps**.
 
     The tweet is stored locally in the **LocalTweetsToPost** collection.
 
