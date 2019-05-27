@@ -4,7 +4,8 @@
       "source_path": "powerapps-docs/maker/canvas-apps/scan-barcode.md",
       "redirect_url": "controls/control-new-barcode-scanner",
       "redirect_document_id": "false"
-    },    {
+    },
+    {
       "source_path": "powerapps-docs/maker/canvas-apps/connect-to-sharepoint.md",
       "redirect_url": "connections/connection-sharepoint-online",
       "redirect_document_id": "false"
@@ -188,7 +189,7 @@
       "source_path": "powerapps-docs/developer/common-data-service/webapi/web-api-helper-code-authentication-class.md",
       "redirect_url": "enhanced-quick-start",
       "redirect_document_id": false
-    },    
+    },
     {
       "source_path": "powerapps-docs/maker/canvas-apps/create-app-browser.md",
       "redirect_url": "getting-started",
@@ -203,7 +204,6 @@
       "source_path": "powerapps/developer/common-data-service/export-solution-specific-version.md",
       "redirect_url": "https://docs.microsoft.com/dynamics365/customer-engagement/developer/create-export-import-unmanaged-solution",
       "redirect_document_id": false
-
     },
     {
       "source_path": "powerapps-docs/common-data-model/overview.md",
@@ -1559,6 +1559,66 @@
       "source_path": "powerapps/maker/canvas-apps/release-notes.md",
       "redirect_url": "/powerapps/whats-new",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "powerapps-docs/administrator/index.md",
+      "redirect_url": "/powerapps/administrator/admin-guide",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/common-data-service/index.md",
+      "redirect_url": "/powerapps/maker/common-data-service/data-platform-intro",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/model-driven-apps/index.md",
+      "redirect_url": "/powerapps/maker/model-driven-apps/model-driven-app-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/index.md",
+      "redirect_url": "/powerapps/developer/common-data-service/index",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/common-data-service/index.md",
+      "redirect_url": "/powerapps/developer/common-data-service/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/common-data-service/virtual-entities/index.md",
+      "redirect_url": "/powerapps/developer/common-data-service/virtual-entities/get-started-ve",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/common-data-service/xrm-tooling/index.md",
+      "redirect_url": "/powerapps/developer/common-data-service/xrm-tooling/build-windows-client-applications-xrm-tools.md",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/common-data-service/org-service/index.md",
+      "redirect_url": "/powerapps/developer/common-data-service/org-service/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/common-data-service/workflow/index.md",
+      "redirect_url": "/powerapps/developer/common-data-service/workflow/workflow-extensions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/common-data-service/webapi/index.md",
+      "redirect_url": "/powerapps/developer/common-data-service/webapi/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/component-framework/index.md",
+      "redirect_url": "/powerapps/developer/control-framework/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/model-driven-apps/index.md",
+      "redirect_url": "/powerapps/developer/model-driven-apps/overview",
+      "redirect_document_id": false
     }
   ]
 }
