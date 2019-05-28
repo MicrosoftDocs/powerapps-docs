@@ -17,7 +17,7 @@ search.app:
 # Keyboard shortcuts for canvas apps
 
 > [!NOTE]
-> Shortcuts might vary based on language.
+> Shortcuts might vary based on keyboard layout.
 
 ## File
 
