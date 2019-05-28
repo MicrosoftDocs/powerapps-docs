@@ -38,10 +38,6 @@ You can view details about solution operations from the **Solutions** area of a 
      > [!div class="mx-imgBorder"] 
      > ![](media/solution-history-sitemap.png "Solution History area")
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 438b49562d7f567d85293e5e742e06b8b18d1c70
      > [!NOTE]
      > To get to the **Settings** area from a PowerApps unified interface model-driven app, select **Settings** ![Settings](../model-driven-apps/media/powerapps-gear.png) on the app toolbar, and then select **Advanced Settings**. 
 
