@@ -50,6 +50,7 @@ search.app:
 | Ctrl+= or Ctrl+Shift+= | Zoom in. |
 | Ctrl+- or Ctrl+Shift+- | Zoom out. |
 | Ctrl+0 | Fit canvas to page. |
+| Shift+Enter | Break a line in a formula. |
 
 ## Preview
 
