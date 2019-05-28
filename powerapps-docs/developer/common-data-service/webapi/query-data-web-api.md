@@ -2,7 +2,7 @@
 title: "Query Data using the Web API (Common Data Service)| Microsoft Docs"
 description: "Read about the various ways to query Common Data Service data using the Common Data Service Web API and various system query options that can be applied in these queries"
 ms.custom: ""
-ms.date: 02/06/2019
+ms.date: 05/28/2019
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -750,6 +750,23 @@ Follow the steps in the below example to understand how we can filter results us
       - Then loop through the returned values to remove duplicates and get a distinct list. i.e. Create a new array, loop through the query results, for each check to see if they are already in the new array, if not, add them. This should give you a list of distinct `systemuserid` values
       - The way you would do this in JavaScript vs C# would be different, but essentially you should be able to get the same results.
 2. Query <xref href="Microsoft.Dynamics.CRM.systemuser" /> using <xref href="Microsoft.Dynamics.CRM.ContainValues?text=ContainValues Query Function" /> to compare the `systemuserid` values with the list collected in Step 1.  
+
+## Filter parent records based on values of child records
+
+The example given below shows how you can retrieve all the account records which have:
+
+- any of their linked opportunity records' budget greater than or equal to 500, and
+- the opportunity records' have no description, or
+- the opportunity records' description contains the term *good*.
+
+**Request**
+
+```http
+GET [Organization URI]/api/data/v9.1/accounts?$select=name&$filter=not opportunity_customer_accounts/any(o:o/description eq null and o/budgetamount le 300 or contains(o/description, 'bad')) and opportunity_customer_accounts/any() and endswith(name,'{0}') HTTP/1.1
+Accept: application/json  
+OData-MaxVersion: 4.0  
+OData-Version: 4.0 
+```
 
 ### See also
 
