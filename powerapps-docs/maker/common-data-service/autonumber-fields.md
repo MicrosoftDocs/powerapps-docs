@@ -60,9 +60,7 @@ Autonumber fields have a default seed value of 1000, but you may set a custom se
 
 
 > [!IMPORTANT]
-> Designating a custom seed is currently only supported when creating a new autonumber field. 
->
-> Setting the seed only changes the current number value for the specified attribute in the current environment. It does not imply a common start value for the attribute. The seed value is not included in a solution when it's imported in a different environment. 
+> Setting the seed only changes the current number value for the specified attribute in the current environment. The seed value is not included in a solution when it's imported in a different environment. 
 
 ## Create an autonumber field
   
