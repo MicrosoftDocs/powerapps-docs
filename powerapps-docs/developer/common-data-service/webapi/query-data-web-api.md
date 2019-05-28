@@ -757,7 +757,7 @@ The example given below shows how you can retrieve all the account records which
 
 - any of their linked opportunity records' budget greater than or equal to 500, and
 - the opportunity records' have no description, or
-- the opportunity records' description contains the term *good*.
+- the opportunity records' description contains the term "*good*".
 
 **Request**
 
