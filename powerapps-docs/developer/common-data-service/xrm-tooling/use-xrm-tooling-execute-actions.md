@@ -1,10 +1,10 @@
 ---
-title: "Use XRM tooling to execute actions in CDS for Apps (Common Data Service for Apps) | Microsoft Docs"
-description: "Object of CrmServiceClient class can be used to perform create, retrieve, update and delete operations on CDS for Apps data"
+title: "Use XRM tooling to execute actions in Common Data Service (Common Data Service) | Microsoft Docs"
+description: "Object of CrmServiceClient class can be used to perform create, retrieve, update and delete operations on Common Data Service data"
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 03/27/2019
 ms.reviewer: ""
-ms.service: "crm-online"
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -13,7 +13,7 @@ applies_to:
 ms.assetid: 845a198f-a2b1-4c38-83e8-0968e684b627
 caps.latest.revision: 13
 author: "MattB-msft"
-ms.author: "kvivek"
+ms.author: "nabuthuk"
 manager: "kvivek"
 search.audienceType: 
   - developer
@@ -21,9 +21,9 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Use XRM tooling to execute actions in CDS for Apps
+# Use XRM tooling to execute actions in Common Data Service
 
-After you are connected to CDS for Apps, you can use the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> class object to perform actions on your CDS for Apps data such as create, update, retrieve or delete data. This section provides some examples on how you can perform actions in CDS for Apps using XRM tooling.  
+After you are connected to Common Data Service, you can use the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> class object to perform actions on your Common Data Service data such as create, update, retrieve or delete data. This section provides some examples on how you can perform actions in Common Data Service using XRM tooling.  
   
 ## In This Section
 
@@ -35,5 +35,5 @@ After you are connected to CDS for Apps, you can use the <xref:Microsoft.Xrm.Too
   
 ### See also
 
-[Use XRM Tooling API to connect to CDS for Apps](use-crmserviceclient-constructors-connect.md)<br />
+[Use XRM Tooling API to connect to Common Data Service](use-crmserviceclient-constructors-connect.md)<br />
 [Build windows client applications using the XRM tools](build-windows-client-applications-xrm-tools.md)

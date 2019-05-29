@@ -4,7 +4,7 @@ description: "Learn how to create an entity using solution explorer"
 ms.custom: ""
 ms.date: 05/30/2018
 ms.reviewer: ""
-ms.service: "crm-online"
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -23,7 +23,7 @@ search.app:
 
 # Create and edit entities using solution explorer
 
-You can easily create an entity using the PowerApps portal for most common situations, but not all capabilities are implemented there. When you need to meet the requirements described in [Create and edit entities in Common Data Service for Apps](create-edit-entities.md), you can achieve them by creating or editing entities using the Solution Explorer.
+You can easily create an entity using the PowerApps portal for most common situations, but not all capabilities are implemented there. When you need to meet the requirements described in [Create and edit entities in Common Data Service](create-edit-entities.md), you can achieve them by creating or editing entities using the Solution Explorer.
 
 ## Open solution explorer
 
@@ -106,7 +106,7 @@ Both should point to this include
 [!INCLUDE [cc_entity-changeable-options-table](../../includes/cc_entity-changeable-options-table.md)]
 
 You can also make the following changes:
-- [Create and edit fields for Common Data Service for Apps](create-edit-fields.md)
+- [Create and edit fields for Common Data Service](create-edit-fields.md)
 - [Create and edit relationships between entities](create-edit-entity-relationships.md)
 - [Create and design forms](../model-driven-apps/create-design-forms.md)
 - [Create a business process flow to standardize processes](/flow/create-business-process-flow)
@@ -197,6 +197,6 @@ Some options are only used when creating a virtual entity.
 More information: [Create and edit virtual entities that contain data from an external data source](create-edit-virtual-entities.md)
 
 ### See also
-[Create and edit entities in Common Data Service for Apps](create-edit-entities.md)<br />
+[Create and edit entities in Common Data Service](create-edit-entities.md)<br />
 [Tutorial: Create a custom entity that has components in PowerApps](/powerapps/maker/common-data-service/create-custom-entity)<br />
 [Create a solution](create-solution.md)

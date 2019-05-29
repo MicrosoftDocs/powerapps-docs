@@ -4,7 +4,7 @@ description: "Learn how to display or hide from elements, such as tabs, sections
 ms.custom: ""
 ms.date: 06/11/2018
 ms.reviewer: ""
-ms.service: "crm-online"
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"

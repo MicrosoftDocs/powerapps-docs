@@ -26,6 +26,7 @@ Other elements include:
 
 * [All operators](functions/operators.md)
 * [Controls and their properties](reference-properties.md)
+* [Data types](functions/data-types.md)
 
 ## A
 **[Abs](functions/function-numericals.md)** – Absolute value of a number.  
@@ -43,6 +44,8 @@ Other elements include:
 **[App](functions/object-app.md)** – Provides information about the currently running app and control over the app's behavior.
 
 **[Asin](functions/function-trig.md)** – Returns the arcsine of a number, in radians.
+
+**[AsType](functions/function-astype-istype.md)** – Treats a record reference as a specific entity type.
 
 **[Atan](functions/function-trig.md)** – Returns the arctangent of a number, in radians.
 
@@ -177,6 +180,8 @@ Other elements include:
 **[IsNumeric](functions/function-isnumeric.md)** – Checks for a numeric value.
 
 **[IsToday](functions/function-now-today-istoday.md)** – Checks whether a date/time value is sometime today.
+
+**[IsType](functions/function-astype-istype.md)** – Checks whether a record reference  refers to a specific entity type.  
 
 ## L
 **[Language](functions/function-language.md)** – Returns the language tag of the current user.
@@ -345,7 +350,7 @@ Other elements include:
 
 **[Update](functions/function-update-updateif.md)** – Replaces a record in a data source.
 
-**[UpdateContext](functions/function-updatecontext.md)** – Sets the value of one or more [context variables](working-with-variables.md#create-a-context-variable) of the current screen.
+**[UpdateContext](functions/function-updatecontext.md)** – Sets the value of one or more [context variables](working-with-variables.md#use-a-context-variable) of the current screen.
 
 **[UpdateIf](functions/function-update-updateif.md)** – Modifies a set of records in a data source based on a condition.
 

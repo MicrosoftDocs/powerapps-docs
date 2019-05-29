@@ -1,10 +1,10 @@
 ---
-title: "Workflow Extensions (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Workflow Extensions (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "You can extend the options available within the designer for workflows. These extensions are added by adding an assembly that contains a class the extends the CodeActivity class. These extensions are commonly called workflow assemblies or workflow activities." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 05/25/2019
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -17,12 +17,12 @@ search.app:
 ---
 # Workflow extensions
 
-You can extend the options available within the designer for workflows used in Common Data Service for Apps. These extensions are added by adding an assembly that contains a class the extends the [CodeActivity](/dotnet/api/system.activities.codeactivity) class. These extensions are commonly called workflow assemblies or workflow activities.
+You can extend the options available within the designer for workflows used in Common Data Service. These extensions are added by adding an assembly that contains a class the extends the [CodeActivity](/dotnet/api/system.activities.codeactivity) class. These extensions are commonly called workflow assemblies or workflow activities.
 
 You can use these custom extensions within the designer used for workflows, custom actions, and dialogs.
 
 > [!IMPORTANT]
-> Whenever possible, you should first consider applying one of the several declarative options to define business logic. More information: [Apply business logic in Common Data Service for Apps](../../../maker/common-data-service/cds-processes.md)<br/><br/>
+> Whenever possible, you should first consider applying one of the several declarative options to define business logic. More information: [Apply business logic in Common Data Service](../../../maker/common-data-service/cds-processes.md)<br/><br/>
 > Use workflow extensions when a declarative process doesn’t meet your requirement.
 
 ## When to create a workflow extension
@@ -66,7 +66,7 @@ If you have Dynamics 365 Customer Engagement Sales or Service solutions, you can
 More information: 
 
 - [Configure workflow stages and steps](/flow/configure-workflow-steps)
-- [Use CDS for Apps dialogs for guided processes](/flow/use-cds-for-apps-dialogs)
+- [Use Common Data Service dialogs for guided processes](/flow/use-cds-for-apps-dialogs)
 - [Create a custom action](/flow/create-actions)
 
 
@@ -75,9 +75,9 @@ More information:
 
 Because processes use Windows Workflow foundation, you can register an assembly built using the [.NET Framework Activity library](/dotnet/framework/windows-workflow-foundation/net-framework-4-5-built-in-activity-library) that defines custom activities that will appear within the web application editor and will be invoked when the process runs.
 
-Custom workflow activities require creating a .NET Framework assembly that includes one or more classes that are derived from the abstract [CodeActivity Class](/dotnet/api/system.activities.codeactivity?view=netframework-4.6.2). This class provides the [Execute(CodeActivityContext) Method](/dotnet/api/system.activities.codeactivity.execute?view=netframework-4.6.2) called by the CDS for Apps platform when the activity is executed. Each class in your assembly will define a specific activity.
+Custom workflow activities require creating a .NET Framework assembly that includes one or more classes that are derived from the abstract [CodeActivity Class](/dotnet/api/system.activities.codeactivity?view=netframework-4.6.2). This class provides the [Execute(CodeActivityContext) Method](/dotnet/api/system.activities.codeactivity.execute?view=netframework-4.6.2) called by the Common Data Service platform when the activity is executed. Each class in your assembly will define a specific activity.
 
-Workflow activities can also define input and output parameters which are visible in the process designer and enable someone to pass data into the workflow activity and receive the processed output. When you write the class you will add properties for these parameters and annotate them with [.NET attributes](/dotnet/standard/attributes/index) to provide the metadata that CDS for Apps will use to expose your custom workflow activity with any parameters in the designer.
+Workflow activities can also define input and output parameters which are visible in the process designer and enable someone to pass data into the workflow activity and receive the processed output. When you write the class you will add properties for these parameters and annotate them with [.NET attributes](/dotnet/standard/attributes/index) to provide the metadata that Common Data Service will use to expose your custom workflow activity with any parameters in the designer.
 
 ## Visual Studio requirements
 
@@ -236,7 +236,7 @@ The logic you include in the [CodeActivity.Execute(CodeActivityContext) Method](
 
 > [!IMPORTANT]
 > The code in the `Execute` method should be written to be stateless. It is not recommended to use global or member variables to pass data from one invocation to the next.
-> For improved performance, CDS for Apps caches custom workflow activity instances. Because of this, the constructor is not called for every invocation of the custom workflow activity. Also, multiple system threads could execute the custom workflow activity at the same time. You should only use the information that is passed via the [CodeActivityContext](/dotnet/api/system.activities.codeactivitycontext) parameter to the `Execute` method.
+> For improved performance, Common Data Service caches custom workflow activity instances. Because of this, the constructor is not called for every invocation of the custom workflow activity. Also, multiple system threads could execute the custom workflow activity at the same time. You should only use the information that is passed via the [CodeActivityContext](/dotnet/api/system.activities.codeactivitycontext) parameter to the `Execute` method.
 
 ### Reference parameters
 
@@ -280,6 +280,9 @@ protected override void Execute(CodeActivityContext context)
 ...
 ```
 
+> [!IMPORTANT]
+> You should not include any logic dependencies based on the context information. When your custom workflow activity is used in a workflow, all the relevant input parameters should be set within the designer. The output value or behavior of the custom activity should always be determined solely by the input parameters so that there are no hidden factors that change the behavior. When someone uses the custom activity in the designer, the behavior should always be predictable.
+
 ### Use the Organization Service
 
 When you need to perform data operations using the Organization service you can access this using the [CodeActivityContext.GetExtension<T>](/dotnet/api/system.activities.activitycontext.getextension) method with the <xref:Microsoft.Xrm.Sdk.IOrganizationServiceFactory> interface. From there you can use the <xref:Microsoft.Xrm.Sdk.IOrganizationServiceFactory.CreateOrganizationService(System.Nullable{System.Guid})> method to access an instance of the service proxy that you can use to perform data operations. The <xref:Microsoft.Xrm.Sdk.Workflow.IWorkflowContext>.<xref:Microsoft.Xrm.Sdk.IExecutionContext.InitiatingUserId> can be used to determine the user context to use if you want the operation to be performed in the same context as the calling process.
@@ -308,7 +311,7 @@ For custom workflow activites you must specify the following properties to contr
 |Description|Not visible in the UI of the process designer, but may be useful when generating documentation from data drawn from the PluginType Entity that stores this information.|
 |FriendlyName|User friendly name for the plug-in.|
 |Name|The name of the menu represented|
-|WorkflowActivityGroupName|The name of the submenu added to the main menu in the CDS for Apps process designer.|
+|WorkflowActivityGroupName|The name of the submenu added to the main menu in the Common Data Service process designer.|
 
 ![Set descriptive properties](media/create-workflow-activity-set-properties.png)
 
@@ -317,7 +320,7 @@ For custom workflow activites you must specify the following properties to contr
 
 ## Debug Workflow Activities
 
-With custom workflow activities deployed to CDS for apps you can capture profiles to replay for local debugging and use the tracing service to write information to an entity. 
+With custom workflow activities deployed to Common Data Service you can capture profiles to replay for local debugging and use the tracing service to write information to an entity. 
 
 The following example shows using the tracing service to write the following message: `Add your message.`
 

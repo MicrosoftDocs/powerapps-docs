@@ -4,7 +4,7 @@ description: "Learn how to import, update, and export a solution in PowerApps"
 ms.custom: ""
 ms.date: 11/06/2018
 ms.reviewer: ""
-ms.service: "crm-online"
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"

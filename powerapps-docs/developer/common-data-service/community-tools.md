@@ -1,10 +1,10 @@
 ---
-title: "Community tools for Common Data Service for Apps (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Read about the community built tools that help you perform various tasks with PowerApps CDS for Apps." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Community tools for Common Data Service (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Read about the community built tools that help you perform various tasks with PowerApps Common Data Service." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -17,9 +17,9 @@ search.app:
 ---
 # Community tools for Common Data Service
 
-The CDS for Apps community creates tools! Many of the most popular ones are distributed in the [XrmToolBox](https://www.xrmtoolbox.com/). XrmToolBox is a Windows application that connects to Common Data Service for Apps, providing tools to ease customization, configuration and operation tasks. It is shipped with more than 30 plugins to make administration, customization or configuration tasks easier and less time consuming.
+The Common Data Service community creates tools! Many of the most popular ones are distributed in the [XrmToolBox](https://www.xrmtoolbox.com/). XrmToolBox is a Windows application that connects to Common Data Service, providing tools to ease customization, configuration and operation tasks. It is shipped with more than 30 plugins to make administration, customization or configuration tasks easier and less time consuming.
 
-The following is a selected list of community tools distributed via the XrmToolBox that you can use with Common Data Service for Apps.
+The following is a selected list of community tools distributed via the XrmToolBox that you can use with Common Data Service.
 
 |Tool  |Description  |
 |---------|---------|

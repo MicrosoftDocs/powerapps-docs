@@ -1,14 +1,14 @@
 ---
 title: Use Cognitive Services in PowerApps | Microsoft Docs
 description: Build a basic canvas app that uses the Azure Cognitive Services Text Analytics API to analyze text.
-author: gregli-msft
+author: lancedMicrosoft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
 ms.date: 12/08/2017
-ms.author: gregli
+ms.author: lanced
 search.audienceType: 
   - maker
 search.app: 
@@ -115,7 +115,7 @@ OK, you have a nice-looking app, but it doesn't do anything yet. You'll fix that
 
 1. The app makes specific API calls based on the check boxes selected in the app. When you click or tap **Analyze text**, the app makes 1, 2, or 3 API calls.
 
-2. The app stores data that the API returns in three different [collections](working-with-variables.md#create-a-collection): **languageCollect**, **sentimentCollect**, and **phrasesCollect**.
+2. The app stores data that the API returns in three different [collections](working-with-variables.md#use-a-collection): **languageCollect**, **sentimentCollect**, and **phrasesCollect**.
 
 3. The app updates the **Text** property for two of the labels, and the **Items** property for the gallery, based on what's in the three collections.
 

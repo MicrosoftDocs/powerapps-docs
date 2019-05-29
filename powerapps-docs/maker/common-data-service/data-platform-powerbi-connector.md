@@ -1,6 +1,6 @@
 ---
 title: Create a PowerBI report | Microsoft Docs
-description: Connecting to your data from PowerBI Desktop using the Common Data Service for Apps connector.
+description: Connecting to your data from PowerBI Desktop using the Common Data Service connector.
 author: lancedMicrosoft
 manager: kfile
 ms.service: powerapps
@@ -15,43 +15,43 @@ search.app:
   - D365CE
 ---
 # Create a Power BI report
-Common Data Service for Apps allows you to connect directly to your data using Power BI Desktop to create reports and publish them to Power BI. From Power BI, reports can be used in dashboards, shared to other users and accessed cross platform on Power BI mobile apps.
+Common Data Service allows you to connect directly to your data using Power BI Desktop to create reports and publish them to Power BI. From Power BI, reports can be used in dashboards, shared to other users and accessed cross platform on Power BI mobile apps.
 
 ![Power BI Desktop](./media/data-platform-cds-powerbi-connector/PBIDesktop.png "Power BI Desktop")
 
 ## Prerequisites
 
-To use Power BI with the Common Data Service for Apps, you need the following:
+To use Power BI with the Common Data Service, you need the following:
 
 * Download and install Power BI Desktop, which is a free application that runs on your local computer. You can download Power BI desktop [here](https://powerbi.microsoft.com/desktop/).
-* Common Data Service for Apps environment with maker permissions to access the portal and read permissions to access data within entities.
+* Common Data Service environment with maker permissions to access the portal and read permissions to access data within entities.
 
-## Finding your Common Data Service for Apps Environment URL
+## Finding your Common Data Service Environment URL
 
 1. Open [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select the environment you're going to connect to and click the **settings gear** in the top right corner, and click **Advanced customizations**
 
-    ![CDS for Apps Environment](./media/data-platform-cds-powerbi-connector/CDSEnv1.png "CDS for Apps Environment")
+    ![Common Data Service Environment](./media/data-platform-cds-powerbi-connector/CDSEnv1.png "Common Data Service Environment")
 
 2. Click **Resources** under the Developer resources section which will open a new tab.
 
-    ![CDS for Apps Environment](./media/data-platform-cds-powerbi-connector/CDSEnv2.png "CDS for Apps Environment")
+    ![Common Data Service Environment](./media/data-platform-cds-powerbi-connector/CDSEnv2.png "Common Data Service Environment")
 
 3. Copy the root of the URL in the new tab, this is the unique URL for your environment. The URL will be in the format of **https://yourenvironmentid.crm.dynamics.com/** make sure not to copy the rest of the URL. Keep this somewhere handy so you can use it when creating your PowerBI report.
 
     > [!div class="mx-imgBorder"] 
-    > ![CDS for Apps Environment](./media/data-platform-cds-powerbi-connector/CDSEnv3.png "CDS for Apps Environment")
+    > ![Common Data Service Environment](./media/data-platform-cds-powerbi-connector/CDSEnv3.png "Common Data Service Environment")
 
-## Connecting to Common Data Service for Apps from Power BI Desktop
+## Connecting to Common Data Service from Power BI Desktop
 
 1. Launch **Power BI Desktop**, if it's your first time you may be prompted with a Welcome screen or taken straight to a blank canvas - either way, click **Get Data** and select **More** to open the full list of data sources available for Power BI Desktop.
 
     ![Power BI Desktop](./media/data-platform-cds-powerbi-connector/CreateReport1.png "Power BI Desktop")
 
-2. Click **Online Services** and **Common Data Service for Apps (Beta)** from the list of connectors. Click **Connect**.
+2. Click **Online Services** and **Common Data Service (Beta)** from the list of connectors. Click **Connect**.
 
     ![Power BI Desktop](./media/data-platform-cds-powerbi-connector/CreateReport2.png "Power BI Desktop")
 
-3. Paste in your **Common Data Service for Apps Environment URL** into the **Server URL** field and click **Ok**. If this is your first time, you'll be prompted to log in using the same credentials you use to connect to PowerApps and Common Data Service for Apps.
+3. Paste in your **Common Data Service Environment URL** into the **Server URL** field and click **Ok**. If this is your first time, you'll be prompted to log in using the same credentials you use to connect to PowerApps and Common Data Service.
 
     ![Power BI Desktop](./media/data-platform-cds-powerbi-connector/CreateReport3.png "Power BI Desktop")
 
@@ -94,7 +94,7 @@ As an example, if you had an option set on your entity called ApprovalStatus, yo
 
 ## Navigating Relationships
 
-Relationships in Common Data Service for Apps require you to create a relationship within PowerBI desktop between the two entities using a GUID field, this is a system generated unique identifier that ensures relationships are created for the create records where ambiguity or duplication may exist with other fields. You can read more about managing relationships in Power BI desktop [here](https://docs.microsoft.com/power-bi/desktop-create-and-manage-relationships).
+Relationships in Common Data Service require you to create a relationship within PowerBI desktop between the two entities using a GUID field, this is a system generated unique identifier that ensures relationships are created for the create records where ambiguity or duplication may exist with other fields. You can read more about managing relationships in Power BI desktop [here](https://docs.microsoft.com/power-bi/desktop-create-and-manage-relationships).
 
 While some relationships may be automatically created, you can still review and ensure the correct relationships are established when creating your report :
 

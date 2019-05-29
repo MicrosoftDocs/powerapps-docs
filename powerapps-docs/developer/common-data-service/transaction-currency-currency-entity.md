@@ -1,10 +1,10 @@
 ---
-title: "Transaction Currency (currency) entity (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Transaction Currency (currency) entity (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about transaction curreny, which is a multicurrency feature enabling users to perform financial transactions in multiple currencies. Multiple records in different transaction currencies can be aggregated, compared, or analyzed with regard to a single currency using the base currency." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -17,7 +17,7 @@ search.app:
 ---
 # Transaction Currency (currency) entity
 
-Common Data Service for Apps is a multicurrency system, in which each record can be associated with its own currency. This currency is called the *transaction* currency. The multicurrency features enable users to perform financial transactions like opportunities, quotes, orders, and invoices in multiple currencies. This feature also provides a currency choice to the end user when a financial transaction occurs.  
+Common Data Service is a multicurrency system, in which each record can be associated with its own currency. This currency is called the *transaction* currency. The multicurrency features enable users to perform financial transactions like opportunities, quotes, orders, and invoices in multiple currencies. This feature also provides a currency choice to the end user when a financial transaction occurs.  
   
  Multiple records in different transaction currencies can be aggregated, compared, or analyzed with regard to a single currency, by using an exchange rate. This is known as the *base currency*. You first define a base currency for the organization and then define exchange rates to associate the base currency with transaction currencies. The base currency is the currency in which other currencies are quoted. The exchange rate is the value of a transaction currency equal to one base currency.  
   
@@ -43,7 +43,7 @@ All entities that are involved in financial transactions support transaction cur
   
 You can specify the decimal precision for the transaction currency by using the `TransactionCurrency.CurrencyPrecision` attribute. To specify the source of the precision for the attributes of type Money, use the <xref:Microsoft.Xrm.Sdk.Metadata.MoneyAttributeMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.MoneyAttributeMetadata.PrecisionSource> attribute.  
   
-All money properties in a record share the same transaction currency, for example, see the `Account.CreditLimit` attribute. For each money attribute in an entity, Common Data Service for Apps automatically creates a corresponding read-only, system calculated, money attribute that is called the "base". This is a money attribute that stores the value of the corresponding attribute in a base currency equivalent, for example, see the `Account.CreditLimit_Base` attribute.  
+All money properties in a record share the same transaction currency, for example, see the `Account.CreditLimit` attribute. For each money attribute in an entity, Common Data Service automatically creates a corresponding read-only, system calculated, money attribute that is called the "base". This is a money attribute that stores the value of the corresponding attribute in a base currency equivalent, for example, see the `Account.CreditLimit_Base` attribute.  
   
 The following formula is used to calculate the base value:  
   

@@ -1,10 +1,9 @@
 ---
-title: "Web API Conditional Operations Sample (Client-side JavaScript) (Common Data Service for Apps)| Microsoft Docs"
-description: "This sample demonstrates how to perform conditional operations using Common Data Service for Apps Web API and client-side JavaScript"
+title: "Web API Conditional Operations Sample (Client-side JavaScript) (Common Data Service)| Microsoft Docs"
+description: "This sample demonstrates how to perform conditional operations using Common Data Service Web API and client-side JavaScript"
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
-ms.service: "crm-online"
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -14,6 +13,7 @@ author: "brandonsimons" # GitHub ID
 ms.assetid: 7f097d9f-8fe7-428a-9ef7-ca79ec501d81
 caps.latest.revision: 23
 ms.author: "jdaly"
+ms.reviewer: "susikka"
 manager: "amyla"
 search.audienceType: 
   - developer
@@ -23,7 +23,7 @@ search.app:
 ---
 # Web API Conditional Operations Sample (Client-side JavaScript)
 
-This sample demonstrates how to perform conditional operations using Common Data Service for Apps  Web API using client-side JavaScript.  
+This sample demonstrates how to perform conditional operations using Common Data Service  Web API using client-side JavaScript.  
   
 > [!NOTE]
 >  This sample implements the operations detailed in the [Web API Conditional Operations Sample](../web-api-conditional-operations-sample.md) and uses the common client-side JavaScript constructs described in [Web API Samples (Client-side JavaScript)](../web-api-samples-client-side-javascript.md)  
@@ -34,7 +34,7 @@ This sample demonstrates how to perform conditional operations using Common Data
 
  To run this sample, the following is required:  
   
--   Access to CDS for Apps online version 8.0 or higher.  
+-   Access to Common Data Service online version 8.0 or higher.  
   
 -   A user account with privileges to import solutions and perform CRUD operations, typically a system administrator or system customizer security role.  
   
@@ -42,7 +42,7 @@ This sample demonstrates how to perform conditional operations using Common Data
  
 ## Run this sample
 
-To run this sample, go to  [Microsoft CRM Web API Conditional Operations Sample (Client-side JavaScript)](http://go.microsoft.com/fwlink/p/?LinkId=824046) and download the Microsoft CRM Web API Conditional Operations Sample (Client-side JavaScript).zip sample file. Extract the contents and locate the WebAPIConditionalOperations_1_0_0_0_managed.zip managed solution. Import the managed solution into your CDS for Apps organization and view the solution configuration page to run the sample. For instructions on how to import the sample solution, see [Web API Samples (Client-side JavaScript)](../web-api-samples-client-side-javascript.md).  
+To run this sample, go to  [Microsoft CRM Web API Conditional Operations Sample (Client-side JavaScript)](http://go.microsoft.com/fwlink/p/?LinkId=824046) and download the Microsoft CRM Web API Conditional Operations Sample (Client-side JavaScript).zip sample file. Extract the contents and locate the WebAPIConditionalOperations_1_0_0_0_managed.zip managed solution. Import the managed solution into your Common Data Service organization and view the solution configuration page to run the sample. For instructions on how to import the sample solution, see [Web API Samples (Client-side JavaScript)](../web-api-samples-client-side-javascript.md).  
   
 <a name="bkmk_sampleCode"></a>
 
@@ -441,7 +441,7 @@ Sdk.startSample = function () {
   
 ### See also
 
-[Use the Common Data Service for Apps Web API](../overview.md)<br />
+[Use the Common Data Service Web API](../overview.md)<br />
 [Perform conditional operations using the Web API](../perform-conditional-operations-using-web-api.md)<br />
 [Web API Samples](../web-api-samples.md)<br />
 [Web API Conditional Operations Sample](../web-api-conditional-operations-sample.md)<br />

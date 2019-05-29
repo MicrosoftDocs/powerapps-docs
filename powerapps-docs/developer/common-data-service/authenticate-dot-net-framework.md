@@ -1,10 +1,10 @@
 ---
-title: "Authentication with .NET Framework applications (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "How .NET Framework applications can authenticate with Common Data Service for Apps" # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Authentication with .NET Framework applications (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "How .NET Framework applications can authenticate with Common Data Service" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 01/25/2019
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "paulliew" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -58,10 +58,10 @@ Use .NET Framework version 4.6.2 or higher when you create client applications. 
 
 ## .NET Framework applications without SDK assemblies
 
-If you prefer to not have a dependency on any SDK assemblies, you can also use the patterns described in [Use OAuth with Common Data Service for apps](authenticate-oauth.md) without taking a dependency on any SDK assemblies. Without the SDK assemblies, you can only use the OData Restful web services (Web API and OData Global Discovery Service). The [Web API Data operations Samples (C#)](webapi/web-api-samples-csharp.md) demonstrate this approach.
+If you prefer to not have a dependency on any SDK assemblies, you can also use the patterns described in [Use OAuth with Common Data Service](authenticate-oauth.md) without taking a dependency on any SDK assemblies. Without the SDK assemblies, you can only use the OData Restful web services (Web API and OData Global Discovery Service). The [Web API Data operations Samples (C#)](webapi/web-api-samples-csharp.md) demonstrate this approach.
 
 ### See also
 
-[Authentication with Common Data Service for Apps web services](authentication.md)<br />
-[Use OAuth with Common Data Service for apps](authenticate-oauth.md)
+[Authentication with Common Data Service web services](authentication.md)<br />
+[Use OAuth with Common Data Service](authenticate-oauth.md)
 

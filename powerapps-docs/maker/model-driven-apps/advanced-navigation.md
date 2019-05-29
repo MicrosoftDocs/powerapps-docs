@@ -6,9 +6,9 @@ author: Mattp123
 ms.author: matp
 manager: kvivek
 ms.custom: ""
-ms.date: 10/30/2018
+ms.date: 05/14/2019
 ms.reviewer: ""
-ms.service: "crm-online"
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -39,9 +39,9 @@ Use solution explorer to perform app making and customization tasks that can’t
 
 1.	Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). 
 2.	On the left navigation pane select **Solutions**.  
-3.	Select **Switch to classic** on the toolbar to open solution explorer. 
-
+3.	Select **Switch to classic** on the toolbar to open the **All Solutions** view. 
     Notice that the **Switch to classic** command isn't available when you select a solution in the list.
+4.  In the list of available solutions select the solution you want in the **Display Name** column to open solution explorer.
 
 ## Apps
 The Apps area lists all model-driven and canvas apps that you have privileges to in your environment. In addition to launching an app, from the Apps area you can also assign security roles to it. 
@@ -64,11 +64,11 @@ Use the settings area to configure environment settings, activate or deactivate 
 First, see if the setting you need is in the ![Settings icon](media/powerapps-gear.png)  > **Advanced customizations** menu.
 
 To find settings not available from **Advanced customizations**:  
-1.	Access your environment from the Dynamics 365 Administration Center. For environments located in North America go to [https://port.crm.dynamics.com/G/instances/InstancePicker.aspx](https://port.crm.dynamics.com/G/instances/InstancePicker.aspx). For other locations, see Direct sign in to the Dynamics 365 Administration Center.
-2.	Select the environment you want, and then select **Open**.
+1.	From a PowerApps model-driven app, select **Settings** ![Settings](../model-driven-apps/media/powerapps-gear.png) on the app toolbar, and then select **Advanced Settings**. 
+2.	Select **Settings**, and then select the settings area that you want.
 
     > [!div class="mx-imgBorder"] 
-    > ![Open environment](media/open-environment.png)
+    > ![Settings areas](media/settings-areas.png) 
 
 ## See also
 [Create or edit a model-driven app by using the app designer](create-edit-app.md)

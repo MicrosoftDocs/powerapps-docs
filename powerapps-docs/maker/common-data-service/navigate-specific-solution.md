@@ -4,7 +4,7 @@ description: "Learn how to locate and open a specific solution in your environme
 ms.custom: ""
 ms.date: 10/29/2018
 ms.reviewer: ""
-ms.service: "crm-online"
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"

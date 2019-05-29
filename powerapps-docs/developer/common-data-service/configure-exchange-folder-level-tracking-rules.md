@@ -1,10 +1,10 @@
 ---
-title: "Configure Exchange folder-level tracking rules (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Configure Exchange folder-level tracking rules (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to configure Exchange folder-level tracking rules" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -17,9 +17,9 @@ search.app:
 ---
 # Configure Exchange folder-level tracking rules
 
-Configure folder-level tracking rules to map a Microsoft Exchange inbox folder to a Common Data Service for Apps record so that all the emails in the Microsoft Exchange folder get automatically tracked against the mapped record in CDS for Apps. Folder-level tracking of emails will work only if:  
+Configure folder-level tracking rules to map a Microsoft Exchange inbox folder to a Common Data Service record so that all the emails in the Microsoft Exchange folder get automatically tracked against the mapped record in Common Data Service. Folder-level tracking of emails will work only if:  
 
-- The folder-level tracking feature is enabled for your CDS for Apps instance. You can enable folder-level tracking by using the web client or Dynamics 365 for Outlook. More information: [Configure folder-level tracking](/dynamics365/customer-engagement/admin/configure-outlook-exchange-folder-level-tracking)  
+- The folder-level tracking feature is enabled for your Common Data Service instance. You can enable folder-level tracking by using the web client or Dynamics 365 for Outlook. More information: [Configure folder-level tracking](/dynamics365/customer-engagement/admin/configure-outlook-exchange-folder-level-tracking)  
 
 - The folder that you are tracking is under the **Inbox** folder in Microsoft Exchange. Emails in the folders that are not under the **Inbox** folder won’t be tracked.  
 
@@ -33,8 +33,8 @@ Configure folder-level tracking rules to map a Microsoft Exchange inbox folder t
 |                                   Attribute                                   |                                                                                                                                                                                                                Description                                                                                                                                                                                                                 |
 |-------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |  [ExchangeFolderId](/reference/entities/mailboxtrackingfolder.md#BKMK_ExchangeFolderId)  | Specify the Microsoft Exchange folder ID that you want to map. You can use the Exchange Web Services (EWS) to retrieve the ID of a folder under your Inbox folder. For more information, see [MSDN: How to: Work with folders by using EWS in Exchange](https://msdn.microsoft.com/library/office/dn535504.aspx). This is a required attribute. |
-|         [MailboxId](/reference/entities/mailboxtrackingfolder.md#BKMK_MailboxId)         |                                                                                                                                         Specify the mailbox ID in CDS for Apps that you want to create the rule for. This is a required attribute.                                                                                                                                          |
-| [RegardingObjectId](/reference/entities/mailboxtrackingfolder.md#BKMK_RegardingObjectId) |                                                                                                       Set the regarding object in CDS for Apps that you want the specified Microsoft Exchange folder to be mapped to. This is an optional attribute.                                                                                                       |
+|         [MailboxId](/reference/entities/mailboxtrackingfolder.md#BKMK_MailboxId)         |                                                                                                                                         Specify the mailbox ID in Common Data Service that you want to create the rule for. This is a required attribute.                                                                                                                                          |
+| [RegardingObjectId](/reference/entities/mailboxtrackingfolder.md#BKMK_RegardingObjectId) |                                                                                                       Set the regarding object in Common Data Service that you want the specified Microsoft Exchange folder to be mapped to. This is an optional attribute.                                                                                                       |
 
  The following sample code shows how you can create a folder-level tracking rule.  
 
@@ -56,9 +56,9 @@ _folderTrackingId = _serviceProxy.Create(newTrackingFolder);
 Console.WriteLine("Created folder-level tracking rule for '{0}'.\n", _mailboxName);  
 ```  
 
- You can create a maximum of 25 folder-level tracking rules per mailbox. The folder ID of the Microsoft Exchange folder can’t be validated at the time of creating the mapping using SDK. However, as soon as you create a mapping rule, and if the folder ID is invalid, it will show up in the UI in CDS for Apps to indicate that the mapping is invalid.  
+ You can create a maximum of 25 folder-level tracking rules per mailbox. The folder ID of the Microsoft Exchange folder can’t be validated at the time of creating the mapping using SDK. However, as soon as you create a mapping rule, and if the folder ID is invalid, it will show up in the UI in Common Data Service to indicate that the mapping is invalid.  
 
- Any manual changes done to the regarding object in the tracked activity records, created in CDS for Apps as a result of the folder-level tracking rule, will be overridden the next time server-side synchronization occurs. For example, if you have set up a mapping between the `Adventure Works` folder and the `Adventure Works` account, all the emails in the `Adventure Works`Microsoft Exchange folder will be tracked as activities in CDS for Apps with the regarding set to the `Adventure Works` account record. If you change the regarding of some activities to any other record, it will automatically be overridden the next time server-side synchronization occurs.  
+ Any manual changes done to the regarding object in the tracked activity records, created in Common Data Service as a result of the folder-level tracking rule, will be overridden the next time server-side synchronization occurs. For example, if you have set up a mapping between the `Adventure Works` folder and the `Adventure Works` account, all the emails in the `Adventure Works`Microsoft Exchange folder will be tracked as activities in Common Data Service with the regarding set to the `Adventure Works` account record. If you change the regarding of some activities to any other record, it will automatically be overridden the next time server-side synchronization occurs.  
 
 <a name="Retrieve"></a>   
 

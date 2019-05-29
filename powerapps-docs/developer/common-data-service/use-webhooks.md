@@ -1,10 +1,10 @@
 ---
-title: "Use webhooks to create external handlers for server events (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Use webhooks to create external handlers for server events (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "You can send data about events that occur on the server to a web application using webhooks. Webhooks is a lightweight HTTP pattern for connecting Web APIs and services with a publish/subscribe model. webhook senders notify receivers about events by making requests to receiver endpoints with some information about the events." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "brandonsimons" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -17,13 +17,13 @@ search.app:
 ---
 # Use webhooks to create external handlers for server events
 
-With Common Data Service for Apps, you can send data about events that occur on the server to a web application using webhooks. Webhooks is a lightweight HTTP pattern for connecting Web APIs and services with a publish/subscribe model. Webhook senders notify receivers about events by making requests to receiver endpoints with some information about the events.
+With Common Data Service, you can send data about events that occur on the server to a web application using webhooks. Webhooks is a lightweight HTTP pattern for connecting Web APIs and services with a publish/subscribe model. Webhook senders notify receivers about events by making requests to receiver endpoints with some information about the events.
 
 Webhooks enable developers and ISV’s to integrate Customer Engagement data with their own custom code hosted on external services. By using the webhook model, you can secure your endpoint by using authentication header or query string parameter keys. This is simpler than the SAS authentication model that you may currently use for Azure Service Bus integration.
 
 When deciding between the webhook model and the Azure Service Bus integration, here are some items to keep in mind:
 
-- Azure Service Bus works for high scale processing, and provides a full queueing mechanism if CDS for Apps is pushing many events.
+- Azure Service Bus works for high scale processing, and provides a full queueing mechanism if Common Data Service is pushing many events.
 - Webhooks can only scale to the point at which your hosted web service can handle the messages.
 - Webhooks enables synchronous and asynchronous steps. Azure Service Bus only allows for asynchronous steps.
 - Webhooks send POST requests with JSON payload and can be consumed by any programming language or web application hosted anywhere.
@@ -35,12 +35,12 @@ When deciding between the webhook model and the Azure Service Bus integration, h
 There are three parts to using web hooks:
 
 - Creating or configuring a service to consume webhook requests.
-- Registering webhook step on the CDS for Apps service, or
+- Registering webhook step on the Common Data Service service, or
 - Invoking a webhook from a plug-in or custom workflow activity. 
 
 ### Start by registering a test webhook
 
-In order to understand how to create and configure a service to consume a webhook request from CDS for apps, it is valuable to start by understanding how to register a web hook. More information: [Register a web hook](register-web-hook.md)
+In order to understand how to create and configure a service to consume a webhook request from Common Data Service, it is valuable to start by understanding how to register a web hook. More information: [Register a web hook](register-web-hook.md)
 
 When you have registered an example webhook you can use a request logging site to examine the contextual data that will be passed. More information: [Test webhook registration with request logging site](test-webhook-registration.md)
 
@@ -360,7 +360,7 @@ If your web hook is registered to run asynchronously, you can examine the system
 
 [Write a plug-in](write-plug-in.md)<br />
 [Register a plug-in](register-plug-in.md)<br />
-[Asynchronous service in CDS for Apps](asynchronous-service.md)<br />
+[Asynchronous service in Common Data Service](asynchronous-service.md)<br />
 [Sample: Azure aware custom plug-in](/org-service/samples/azure-aware-custom-plugin.md)<br />
 [Sample: Azure aware custom workflow activity](org-service/samples/azure-aware-custom-workflow-activity.md)<br />
 [Azure Functions](https://azure.microsoft.com/services/functions/)<br />

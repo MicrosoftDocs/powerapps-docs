@@ -27,7 +27,9 @@ A **Drop down** control conserves screen real estate, especially when the list c
   
 **Value** – The column of data that you want to show in the control (for example, if a data source has multiple columns).
 
-**Selected** – The selected item.
+**Selected** – The data record that represents the selected item.
+
+**AllowEmptySelection** – Whether the control shows an empty selection if no item has been selected. App users can also clear their choices by selecting the blank item.
 
 ## Additional properties
 **[AccessibleLabel](properties-accessibility.md)** – Label for screen readers.
@@ -92,6 +94,8 @@ A **Drop down** control conserves screen real estate, especially when the list c
 
 **[Reset](properties-core.md)** – Whether a control reverts to its default value.
 
+**SelectedText (Deprecated)** – A string value that represents the selected item.
+
 **[SelectionColor](properties-color-border.md)** – The text color of a selected item or items in a list or the color of the selection tool in a pen control.
 
 **[SelectionFill](properties-color-border.md)** – The background color of a selected item or items in a list or a selected area of a pen control.
@@ -127,7 +131,7 @@ A **Drop down** control conserves screen real estate, especially when the list c
 1. Show the items in the list by selecting the control's down arrow while pressing the Alt key.
 
 ### List from a data source
-The principles in this procedure apply to any [data source that provides tables](../connections-list.md#tables) but, to follow these steps exactly, you must open an environment for which a Common Data Service for Apps database has been created and sample data added.
+The principles in this procedure apply to any [data source that provides tables](../connections-list.md#tables) but, to follow these steps exactly, you must open an environment for which a Common Data Service database has been created and sample data added.
 
 1. [Open a blank app](../data-platform-create-app-scratch.md#open-a-blank-app), and then [specify the **Accounts** entity](../data-platform-create-app-scratch.md#specify-an-entity).
 

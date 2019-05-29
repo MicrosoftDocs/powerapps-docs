@@ -4,7 +4,7 @@ description: "Learn how to use solution to create or customize apps"
 ms.custom: ""
 ms.date: 10/29/2018
 ms.reviewer: ""
-ms.service: "crm-online"
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -75,16 +75,13 @@ search.app:
 > [!div class="mx-imgBorder"]  
 > ![Add existing component to a solution](media/solution-add-existing-component.PNG "Add existing component to a solution")  
   
- With solutions that are managed, there will be no commands available and you’ll see the message as shown below. You’ll need to locate the component in the solution named **Default Solution** and try to edit it there or add it to another unmanaged solution that you’ve created. The component might not be customizable. More information: [Managed properties](solutions-overview.md#managed-properties)
+ With solutions that are managed, only certain commands are available and you’ll see the message as shown below. You’ll need to locate the component in the solution named **Default Solution** and try to edit it there or add it to another unmanaged solution that you’ve created. The component might not be customizable. More information: [Managed properties](solutions-overview.md#managed-properties)
 
 > [!div class="mx-imgBorder"]  
 > ![Managed solution](media/managed-solution.PNG "Managed solution")  
 
  Many of the customizations you’ll want to do will involve entities. You can use the **Entity** filter to show a list of all the entities in the current solution that can be customized in some way. Once you drill into an entity, you can see the components that are part of the entity as shown with the account entity in the following screenshot. 
- 
-> [!NOTE]
->  Currently, when you add an existing entity to a solution the system automatically adds all the components that are part of the entity to your solution. If this is not what you prefer, use the command **Switch to classic** to navigate to the classic experience and add only those components that you want. <!-- We will soon improve this experience from PowerApps and allow you to select only the specific component(s) under entity that you want to add into a solution. -->
-  
+   
 > [!div class="mx-imgBorder"]  
 > ![Demo solution showing expanded account entity](media/solution-entity-account.png "Demo solution showing expanded account entity")  
 
@@ -94,18 +91,18 @@ In PowerApps, you can view the classic solution explorer by selecting **Solution
 
 ## Known limitations
 
-- Deleting or removing a managed solution doesn't delete the canvas app in PowerApps.
 - Custom connectors are not available in a solution.
 - Canvas apps must be opened after a solution is imported to update the connections.
-- After adding an existing SDK assembly, it doesn't appear in the solution. 
 - If a canvas app is packaged in a managed solution, it can still be edited in the target environment.
 - Dependencies are not available for canvas apps.
 - Deleting a managed solution will not rollback to a different canvas app's version. 
--	Canvas app access (CRUD and security) is managed entirely in PowerApps and not the Common Data Service for Apps (CDS) database.
--	CDS APIs to call canvas apps are blocked and don't return anything. 
--	Canvas apps created in a solution can't be shared as co-owner to an AAD Security Group.
+-	Canvas app access (CRUD and security) is managed entirely in PowerApps and not the Common Data Service (Common Data Service) database.
+-	Common Data Service APIs to call canvas apps are blocked and don't return anything. 
+-	Canvas apps and Flows created in a solution can't be shared as co-owner to an AAD Security Group.
 -	Canvas apps won't display in the classic solution explorer.
--	Existing canvas apps are not solution aware. 
+- Button triggered Flows are not available in solutions.
+- Canvas app triggered Flows are not available in solutions.
+- Flows triggered from Microsoft 365 applications such as SharePoint and Excel are not available in solutions.
 
  For details about customizing the individual components in a solution, see the following topics:  
   

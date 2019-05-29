@@ -4,7 +4,7 @@ description: "Learn the different ways that an entity can be edited"
 ms.custom: ""
 ms.date: 05/15/2018
 ms.reviewer: ""
-ms.service: "crm-online"
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -39,7 +39,7 @@ There are two ways to edit an entity using a designer:
 
 In both the PowerApps portal and solution explorer you can perform the following:
 
-- **Edit the entity fields**. More information:  [Create and edit fields for Common Data Service for Apps](create-edit-fields.md)
+- **Edit the entity fields**. More information:  [Create and edit fields for Common Data Service](create-edit-fields.md)
   
 - **Edit the entity relationships**. More information:  [Create and edit relationships between entities](create-edit-entity-relationships.md)
 

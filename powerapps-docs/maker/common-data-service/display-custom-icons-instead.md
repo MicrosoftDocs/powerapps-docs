@@ -4,7 +4,7 @@ description: "Learn how to display custom icon graphics in a view"
 ms.custom: ""
 ms.date: 02/14/2019
 ms.reviewer: ""
-ms.service: "crm-online"
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -104,7 +104,7 @@ search.app:
 > [!IMPORTANT]
 > This sample requires the opportunity entity, which is available with Dynamics 365 for Customer Engagement apps.
   
-```  
+```javascript
 function displayIconTooltip(rowData, userLCID) {      
     var str = JSON.parse(rowData);  
     var coldata = str.opportunityratingcode_Value;  

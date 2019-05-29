@@ -1,10 +1,9 @@
 ---
-title: "Perform conditional operations using the Web API (Common Data Service for Apps)| Microsoft Docs"
+title: "Perform conditional operations using the Web API (Common Data Service)| Microsoft Docs"
 description: "Read how to create conditions that decide whether and how to perform certain operations using the Web API"
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
-ms.service: "crm-online"
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -14,7 +13,8 @@ ms.assetid: 771002b0-825a-462d-bbf0-1aeba4b726c8
 caps.latest.revision: 16
 author: "brandonsimons" # GitHub ID
 ms.author: "jdaly"
-manager: "amyla"
+ms.reviewer: "susikka"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
@@ -23,7 +23,7 @@ search.app:
 ---
 # Perform conditional operations using the Web API
 
-CDS for Apps provides support for a set of conditional operations that rely upon the standard HTTP resource versioning mechanism known as *ETags*.  
+Common Data Service provides support for a set of conditional operations that rely upon the standard HTTP resource versioning mechanism known as *ETags*.  
   
 <a name="bkmk_ETags"></a>
   
@@ -31,13 +31,13 @@ CDS for Apps provides support for a set of conditional operations that rely upon
 
 The HTTP protocol defines an *entity tag*, or [ETag](https://msdn.microsoft.com/en-us/library/dd541486.aspx) for short, for identifying specific versions of a resource. ETags are opaque identifiers whose exact values are implementation dependent. ETag values occur in two varieties: strong and weak validation. Strong validation indicates that a unique resource, identified by a specific URI, will be identical on the binary level if its corresponding ETag value is unchanged. Weak validation only guarantees that the resource representation is semantically equivalent for the same ETag value.  
   
-Common Data Service for Apps generates a weakly validating `@odata.etag` property for every entity instance, and this property is automatically returned with each retrieved entity record. For more information, see [Retrieve an entity using the Web API](retrieve-entity-using-web-api.md).  
+Common Data Service generates a weakly validating `@odata.etag` property for every entity instance, and this property is automatically returned with each retrieved entity record. For more information, see [Retrieve an entity using the Web API](retrieve-entity-using-web-api.md).  
   
 <a name="bkmk_ifMatchHeaders"></a>
  
 ## If-Match and If-None-Match headers
 
-Use [If-Match](https://tools.ietf.org/html/rfc7232#section-3.1) and [If-None-Match](https://tools.ietf.org/html/rfc7232#section-3.2) headers with ETag values to check whether the current version of a resource matches the one last retrieved, matches any previous version or matches no version.  These comparisons form the basis of conditional operation support. Common Data Service for Apps provides ETags to support conditional retrievals, optimistic concurrency, and limited upsert operations.
+Use [If-Match](https://tools.ietf.org/html/rfc7232#section-3.1) and [If-None-Match](https://tools.ietf.org/html/rfc7232#section-3.2) headers with ETag values to check whether the current version of a resource matches the one last retrieved, matches any previous version or matches no version.  These comparisons form the basis of conditional operation support. Common Data Service provides ETags to support conditional retrievals, optimistic concurrency, and limited upsert operations.
  
 Queries which expand collection-valued navigation properties may return cached data for those properties that doesn’t reflect recent changes. It is recommended to use `If-None-Match` header with value `null` to override browser caching. See [HTTP Headers](compose-http-requests-handle-errors.md#bkmk_headers) for more details. Use `If-None-Match` header with a specific ETag value to ensure that only changed data is returned.
   

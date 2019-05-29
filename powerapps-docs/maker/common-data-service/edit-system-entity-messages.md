@@ -4,7 +4,7 @@ description: "Learn how to edit system entity messages"
 ms.custom: ""
 ms.date: 05/15/2018
 ms.reviewer: ""
-ms.service: "crm-online"
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -25,7 +25,7 @@ search.app:
 ---
 # Edit system entity messages
 
-The default display name of some system entities is used in user interface text and error messages in Common Data Service for Apps. If you change the display name, you should also update any messages that use the default display name. For example, if you change the display name from *Account* to *Company*, you could still see an error message using the old name.  
+The default display name of some system entities is used in user interface text and error messages in Common Data Service. If you change the display name, you should also update any messages that use the default display name. For example, if you change the display name from *Account* to *Company*, you could still see an error message using the old name.  
 
 You cannot edit system messages using the PowerApps portal, you must use solution explorer.
 

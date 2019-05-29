@@ -4,7 +4,7 @@ description: "A Ribbon command creates a reusable definition that can be referen
 keywords: ""
 ms.date: 10/31/2018
 ms.service:
-  - "powerapps"
+  - powerapps
 ms.custom:
   - ""
 ms.topic: article

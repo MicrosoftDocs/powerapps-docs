@@ -1,10 +1,10 @@
 ---
-title: "Late-bound and Early-bound programming using the Organization service (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Late-bound and Early-bound programming using the Organization service (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Describes the different programming styles available when using the .NET SDK assemblies with the organization service." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "brandonsimons" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -136,7 +136,26 @@ Which style you choose to use is up to you. The following table provides the adv
 
 Because all the generated classes inherit from the <xref:Microsoft.Xrm.Sdk.Entity> class used with late-bound programming, you can work with entities, attributes, and relationships not defined within classes.
 
-### Example
+### Examples
+
+The following example shows one way to mix early and late binding methods using <xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceContext>.  
+  
+```csharp  
+// Create an organization service context object  
+AWCServiceContext context = new AWCServiceContext(_serviceProxy);  
+  
+// Instantiate an account object using the Entity class.  
+Entity testaccount = new Entity("account");  
+  
+// Set several attributes. For account, only the name is required.   
+testaccount["name"] = "Fourth Coffee";  
+testaccount["emailaddress1"] = "marshd@contoso.com";  
+  
+// Save the entity using the organization service context object.  
+context.AddToAccountSet(testaccount);  
+context.SaveChanges();  
+  
+```  
 
 If a custom attribute was not included in the generated classes, you can still use it.
 
@@ -152,6 +171,17 @@ var account = new Account();
 
 //Create the account
 Guid accountid = svc.Create(account);
+```
+
+#### Assign an early bound instance to a late bound instance  
+ The following sample shows how to assign an early bound instance to a late bound instance.  
+  
+```csharp
+Entity incident = ((Entity)context.InputParameters[ParameterName.Target]).ToEntity<Incident>();  
+Task relatedEntity = new Task() { Id = this.TaskId };  
+  
+incident.RelatedEntities[new Relationship("Incident_Tasks")] =   
+new EntityCollection(new Entity[] { relatedEntity.ToEntity<Entity>() });  
 ```
 
 ### See also

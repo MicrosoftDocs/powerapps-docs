@@ -1,6 +1,6 @@
 ---
 title: Attribute metadata | Microsoft Docs
-description: Learn about the attribute metadata use in Common Data Service for Apps.
+description: Learn about the attribute metadata use in Common Data Service.
 services: ''
 suite: powerapps
 documentationcenter: na
@@ -55,7 +55,7 @@ Each attribute also has two properties that can display localized values. These 
 |`Description`|A short sentence describing the attribute or providing guidance to the user. i.e. *Type an ID number or code for the account to quickly search and identify the account in system views.*<br />In model-driven apps, this information will appear when users hover over the field for this attribute in a form.|
 
 
-These are the localizable values that are used to refer to the attributes in an app. These values can be changed at any time. To add or edit localized values see  [Common Data Service for Apps Customization Guide: Translate customized entity and field text into other languages](/dynamics365/customer-engagement/customize/export-customized-entity-field-text-translation).
+These are the localizable values that are used to refer to the attributes in an app. These values can be changed at any time. To add or edit localized values see  [Common Data Service Customization Guide: Translate customized entity and field text into other languages](/dynamics365/customer-engagement/customize/export-customized-entity-field-text-translation).
 
 ## Attribute types
 
@@ -80,7 +80,7 @@ In the following table:
 |Categorization|`StateType`<br />[StateAttributeMetadata](/dotnet/api/microsoft.xrm.sdk.metadata.stateattributemetadata)|No|Contains the option value that describes the status of an entity record.<br />More information: [Option Sets](#option-sets)|
 |Categorization|`StatusType`<br />[StatusAttributeMetadata](/dotnet/api/microsoft.xrm.sdk.metadata.statusattributemetadata)|No|Contains the option value that describes the reason for the status of an entity record.<br />More information: [Option Sets](#option-sets)|
 |Collection|`CalendarRulesType`|No|Contains a collection of `CalendarRules` entity records.<br />There are no attributes that use this type. When generating a proxy, the code generation tool will create two simulated attributes that are not present in the metadata. These attributes represent a view of the calendar rules records associated in a one-to-many relationship to the entity record.|
-|Collection|`PartyListType`|No|Contains a collection of `ActivityParty` entity records.<br />More information: [ActivityParty entity](#activityparty-entity)|
+|Collection|`PartyListType`|No|Contains a collection of `ActivityParty` entity records.<br />More information: [ActivityParty entity](reference/entities/activityparty.md)|
 |Date and Time|`DateTimeType`<br />[DateTimeAttributeMetadata](/dotnet/api/microsoft.xrm.sdk.metadata.datetimeattributemetadata)|Yes<br />**Date and Time**|Contains a date and time value.<br />All date and time attributes support values as early as 1/1/1753 12:00 AM.|
 |Image|`ImageType`<br />[ImageAttributeMetadata]()|Yes<br />**Image**|Contains data to support retrieving image data for an entity record.<br />More information: [Entity Images](entity-metadata.md#entity-images)|
 |Managed Property|`ManagedPropertyType`<br />[ManagedPropertyAttributeMetadata](/dotnet/api/microsoft.xrm.sdk.metadata.imageattributemetadata)|No|Contains data that describe whether the solution component stored in the entity record can be customized when included in a managed solution.<br />More information: [Managed Properties](introduction-solutions.md#managed-properties)|
@@ -127,7 +127,7 @@ This property can have the following values set:
 |`ApplicationRequired`|2|**Business Required**|The attribute is required by the business to have a value.|
 |`Recommended`|3|**Business Recommended**|It is recommended that the attribute has a value.|
 
-Common Data Service for Apps only enforces the `SystemRequired` option for attributes created by the system. Custom attributes cannot be set to use the `SystemRequired` option. 
+Common Data Service only enforces the `SystemRequired` option for attributes created by the system. Custom attributes cannot be set to use the `SystemRequired` option. 
 
 Model-driven apps will enforce the `ApplicationRequired` option and use a different presentation for the `Recommended` option. Creators of custom clients may use this information to require similar validation or presentation options.
 
@@ -141,8 +141,8 @@ More information: [Managed Properties](introduction-solutions.md#managed-propert
 Calculated and rollup attributes free the user from having to manually perform calculations and focus on their work. System administrators can define a field to contain the value of many common calculations without having to work with a developer. Developers can also leverage the platform capabilities to perform these calculations rather than within their own code.
 
 More information: 
-- [Common Data Service for Apps Customization Guide: Define rollup fields that aggregate values](/dynamics365/customer-engagement/customize/define-rollup-fields)
-- [Common Data Service for Apps Customization Guide: Calculated and rollup attributes](/dynamics365/customer-engagement/customize/define-calculated-fields)
+- [Common Data Service Customization Guide: Define rollup fields that aggregate values](/dynamics365/customer-engagement/customize/define-rollup-fields)
+- [Common Data Service Customization Guide: Calculated and rollup attributes](/dynamics365/customer-engagement/customize/define-calculated-fields)
 - [Calculated and rollup attributes](/dynamics365/customer-engagement/developer/calculated-rollup-attributes)
 
 ## Attribute format
@@ -222,7 +222,7 @@ With the organization service you can use the following messages to retrieve inf
 
 More information: 
 - [Sample: Dump attribute picklist metadata to a file](/dynamics365/customer-engagement/developer/org-service/sample-dump-attribute-picklist-metadata-file)
-- [Common Data Service for Apps Developer Guide : Customize global option sets](/dynamics365/customer-engagement/developer/org-service/customize-global-option-sets)
+- [Common Data Service Developer Guide : Customize global option sets](/dynamics365/customer-engagement/developer/org-service/customize-global-option-sets)
 
 #### Use the Web API to retrieve options
 
@@ -243,9 +243,9 @@ When you create a new entity record in the context of an existing entity record,
 For developers creating custom clients, the same behavior can be achieved by using the `InitializeFrom` message (Organization service  [InitializeFromRequest Class](/dotnet/api/microsoft.crm.sdk.messages.initializefromrequest) or Web API [InitializeFrom Function](/dynamics365/customer-engagement/web-api/initializefrom)) to get the entity data with the configured default values set.
 
 More information 
-- [Common Data Service for Apps Customization Guide: Map entity fields](/dynamics365/customer-engagement/customize/map-entity-fields#BKMK_mappingEntityFields)
-- [Common Data Service for Apps Developer Guide Customize entity and attribute mappings](/dynamics365/customer-engagement/developer/customize-entity-attribute-mappings)
+- [Common Data Service Customization Guide: Map entity fields](/dynamics365/customer-engagement/customize/map-entity-fields#BKMK_mappingEntityFields)
+- [Common Data Service Developer Guide Customize entity and attribute mappings](/dynamics365/customer-engagement/developer/customize-entity-attribute-mappings)
 
 ### See also
 
-[Common Data Service for Apps entities](entities.md)
+[Common Data Service entities](entities.md)

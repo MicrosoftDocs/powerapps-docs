@@ -1,10 +1,10 @@
 ---
-title: "Subscribe to SDK assembly updates using NuGet (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Subscribe to SDK assembly updates using NuGet (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: ".NET SDK assemblies and some command-line tools are available through a software distribution website called nuget.org. Use of NuGet packages in your application project enables you to keep your project up-to-date with the latest releases of the SDK assemblies and tools." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "brandonsimons" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -17,13 +17,13 @@ search.app:
 ---
 # Subscribe to SDK assembly updates using NuGet
 
-.NET SDK assemblies and some command-line tools are available through a software distribution website called [nuget.org](http://www.nuget.org). Use of NuGet  packages in your application project enables you to keep your project up-to-date with the latest releases of the SDK assemblies and tools. Visual Studio has supported this capability since version 2010 and there is even a standalone NuGet  client for those developers that don’t develop in Visual Studio. Another advantage of using NuGet  packages in your projects is that assembly references and dependencies are automatically taken care of for you. NuGet  packages are available for Common Data Service for Apps as well as for earlier versions of Dynamics 365 Customer Engagement.  
+.NET SDK assemblies and some command-line tools are available through a software distribution website called [nuget.org](http://www.nuget.org). Use of NuGet  packages in your application project enables you to keep your project up-to-date with the latest releases of the SDK assemblies and tools. Visual Studio has supported this capability since version 2010 and there is even a standalone NuGet  client for those developers that don’t develop in Visual Studio. Another advantage of using NuGet  packages in your projects is that assembly references and dependencies are automatically taken care of for you. NuGet  packages are available for Common Data Service as well as for earlier versions of Dynamics 365 Customer Engagement.  
   
 <a name="BKMK_GetNuGetPackages"></a>
 
 ## Where to find the NuGet SDK packages
 
-The NuGet SDK are found under the [crmsdk](https://www.nuget.org/profiles/crmsdk) profile. These are the official CDS for Apps packages. Select any package in the list to navigate to the package details page. The following are the current NuGet packages relevant for CDS for Apps.  
+The NuGet SDK are found under the [crmsdk](https://www.nuget.org/profiles/crmsdk) profile. These are the official Common Data Service packages. Select any package in the list to navigate to the package details page. The following are the current NuGet packages relevant for Common Data Service.  
 
 
 |Package|Description|

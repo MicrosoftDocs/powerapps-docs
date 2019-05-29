@@ -1,7 +1,7 @@
 ---
 title: "getMax (Client API reference)| MicrosoftDocs"
 ms.date: 10/31/2018
-ms.service: "crm-online"
+ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 9a04b52a-2bc7-4572-bd3e-8b9622602092

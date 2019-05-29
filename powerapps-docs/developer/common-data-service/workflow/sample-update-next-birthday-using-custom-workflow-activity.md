@@ -1,10 +1,10 @@
 ---
-title: "Sample: Update next birthday using a custom workflow activity (Common Data Service for Apps) | Microsoft Docs"
+title: "Sample: Update next birthday using a custom workflow activity (Common Data Service) | Microsoft Docs"
 description: "The sample demonstrates workflow activity returns the next birthday. Use this in a workflow that sends a birthday greeting to a customer. "
 ms.custom: ""
 ms.date: 12/03/2018
 ms.reviewer: ""
-ms.service: "crm-online"
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "samples"

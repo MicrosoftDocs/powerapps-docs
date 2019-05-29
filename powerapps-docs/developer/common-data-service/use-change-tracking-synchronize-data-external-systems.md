@@ -1,10 +1,10 @@
 ---
-title: "Use change tracking to synchronize data with external systems (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "The change tracking feature in Dynamics 365 Customer Engagement provides a way to keep the data synchronized in a performant way by detecting what data has changed since the data was initially extracted or last synchronized" # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Use change tracking to synchronize data with external systems (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "The change tracking feature in Dynamics 365 Customer Engagement provides a way to keep the data synchronized in an efficient manner by detecting what data has changed since the data was initially extracted or last synchronized" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "brandonsimons" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -17,7 +17,7 @@ search.app:
 ---
 # Use change tracking to synchronize data with external systems
 
-The change tracking feature in Common Data Service for Apps provides a way to keep the data synchronized in a performant way by detecting what data has changed since the data was initially extracted or last synchronized. Previously, without this new feature, it was difficult to build a reliable and efficient mechanism to determine what records had changed in CDS for Apps. This topic discusses how to retrieve changes for an entity.  
+The change tracking feature in Common Data Service provides a way to keep the data synchronized in an efficient manner by detecting what data has changed since the data was initially extracted or last synchronized. Previously, without this new feature, it was difficult to build a reliable and efficient mechanism to determine what records had changed in Common Data Service. This topic discusses how to retrieve changes for an entity.  
   
 <a name="BKMK_enable"></a>   
 ## Enable change tracking for an entity  
@@ -122,7 +122,7 @@ System query options `$filter`, `$orderby` and `$top` are not supported when usi
   
 - If a client has a set of changes for an entity, say version 1, a record is created and deleted prior to the next query for changes, they will get the deleted item even if they didn’t have the item to begin with.  
   
-- Records are retrieved in the order determined by server side logic. Usually, the end user will always get all new or updated records first (sorted by version number) followed by deleted records.  If there are 3000 records created or updated and 2000 records deleted, CDS for Apps returns a collection of 5000 records, which have the first 3000 entries comprised of new or updated records and the last 2000 entries for deleted records.  
+- Records are retrieved in the order determined by server side logic. Usually, the end user will always get all new or updated records first (sorted by version number) followed by deleted records.  If there are 3000 records created or updated and 2000 records deleted, Common Data Service returns a collection of 5000 records, which have the first 3000 entries comprised of new or updated records and the last 2000 entries for deleted records.  
   
 - If the new or updated item collection is greater than 5000, the user can page through the collection.  
   

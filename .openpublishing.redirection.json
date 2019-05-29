@@ -1,6 +1,20 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/maker/canvas-apps/scan-barcode.md",
+      "redirect_url": "controls/control-new-barcode-scanner",
+      "redirect_document_id": "false"
+    },    {
+      "source_path": "powerapps-docs/maker/canvas-apps/connect-to-sharepoint.md",
+      "redirect_url": "connections/connection-sharepoint-online",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/common-data-service/connect-web-services-using-oauth.md",
+      "redirect_url": "authenticate-oauth",
+      "redirect_document_id": "false"
+    },
+    {
       "source_path": "powerapps-docs/maker/canvas-apps/delegation-list.md",
       "redirect_url": "delegation-overview#delegable-data-sources",
       "redirect_document_id": "false"
@@ -1233,7 +1247,7 @@
     },
     {
       "source_path": "powerapps-docs/release-notes.md",
-      "redirect_url": "/powerapps/maker/canvas-apps/release-notes",
+      "redirect_url": "/powerapps/whats-new",
       "redirect_document_id": true
     },
     {

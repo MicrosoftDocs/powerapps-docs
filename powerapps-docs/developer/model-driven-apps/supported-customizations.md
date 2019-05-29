@@ -4,7 +4,7 @@ description: "You can customize Model-driven apps by using tools that are availa
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -41,13 +41,13 @@ The following customization methods can be used to produce fully supported custo
 - Reporting Services. For more information, see [Reporting and Analytics Guide for Model-driven apps](/dynamics365/customer-engagement/analytics/reporting-analytics-with-dynamics-365).
 
 > [!NOTE]
-> The behavior of Model-driven apps depend on customizations applied to the associated Common Data Service for Apps. More information: [Supported Customizations for Common Data Service for Apps](../common-data-service/supported-customizations.md)
+> The behavior of Model-driven apps depend on customizations applied to the associated Common Data Service. More information: [Supported Customizations for Common Data Service](../common-data-service/supported-customizations.md)
 > *Fully supported* means that developer support can provide assistance for customizations and that application support can help customers running those modifications.
 
 
 ## Customizations applied using code
 
-The documentation on this site for developers, technical articles, sample code published on this site, and information released by the CDS for Apps Developer Support Team are included in the area of customizations applied using code. The specific actions and levels of supportability and upgradeability are described later in this topic.
+The documentation on this site for developers, technical articles, sample code published on this site, and information released by the Common Data Service Developer Support Team are included in the area of customizations applied using code. The specific actions and levels of supportability and upgradeability are described later in this topic.
 
 ### Client-side JavaScript
 
@@ -83,7 +83,7 @@ The following is a list of unsupported action types that are frequently asked ab
 
 ### See also
 
-[Supported Customizations for Common Data Service for Apps](../common-data-service/supported-customizations.md)<br/>
+[Supported Customizations for Common Data Service](../common-data-service/supported-customizations.md)<br/>
 [Apply business logic using client scripting in Model-driven apps using JavaScript](client-scripting.md)<br/>
 [Customize commands and the ribbon](customize-commands-ribbon.md)<br/>
 [Web resources in Model-driven apps](web-resources.md)

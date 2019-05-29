@@ -1,10 +1,10 @@
 ---
-title: "Virtual entity walkthrough using the OData Data Provider in Common Data Service for Apps | MicrosoftDocs"
+title: "Virtual entity walkthrough using the OData Data Provider in Common Data Service | MicrosoftDocs"
 description: "Learn how to use the OData v4 data provider with a virtual entity"
 ms.custom: ""
 ms.date: 06/04/2018
 ms.reviewer: ""
-ms.service: "crm-online"
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"

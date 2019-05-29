@@ -4,7 +4,7 @@ description: "Learn how to enable feedback for an entity"
 ms.custom: ""
 ms.date: 05/18/2018
 ms.reviewer: ""
-ms.service: "crm-online"
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"

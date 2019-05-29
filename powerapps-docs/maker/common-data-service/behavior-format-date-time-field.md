@@ -1,9 +1,9 @@
 ---
-title: "Behavior and format of the Date and Time field in Common Data Service for Apps | MicrosoftDocs"
+title: "Behavior and format of the Date and Time field in Common Data Service | MicrosoftDocs"
 ms.custom: ""
 ms.date: 05/25/2018
 ms.reviewer: ""
-ms.service: "crm-online"
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -24,7 +24,7 @@ search.app:
 ---
 # Behavior and format of the Date and Time field
 
-In Common Data Service for Apps, the Date and Time data type is used in many standard entity fields. Depending on what kind of date the field represents, you can choose different field behaviors: **User Local**, **Date Only** or **Time-Zone Independent**.  
+In Common Data Service, the Date and Time data type is used in many standard entity fields. Depending on what kind of date the field represents, you can choose different field behaviors: **User Local**, **Date Only** or **Time-Zone Independent**.  
   
 <a name="Behavior"></a>   
 

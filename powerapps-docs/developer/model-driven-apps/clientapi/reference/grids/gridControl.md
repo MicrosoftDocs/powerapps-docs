@@ -1,7 +1,7 @@
 ---
 title: "GridControl (Client API reference) in model-driven apps| MicrosoftDocs"
 ms.date: 10/31/2018
-ms.service: "crm-online"
+ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: d54eb190-9a97-4004-8771-637c413626c1

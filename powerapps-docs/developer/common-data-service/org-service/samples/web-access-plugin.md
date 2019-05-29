@@ -1,10 +1,10 @@
 ---
-title: "Sample: Web access from a plug-in (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Sample: Web access from a plug-in (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample shows how to write a plug-in that can access resources on the web (network)." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 1/16/2019
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "samples"
 author: "JimDaly"
 ms.author: "pehecke" # MSFT alias of Microsoft employees only

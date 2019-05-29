@@ -30,7 +30,7 @@ If you add a **Date Picker** control instead of a **[Text input](control-text-in
 * The control shows **12/31/2017** if the user clicks or taps the last day of 2017, the **Format** property is set to **ShortDate**, and the **Language** property is set to **en-us**.
 * The control shows **dimanche 31 decembre 2017** if the user clicks or taps the last day of 2017, the **Format** property is set to **LongDate**, and the **Language** property is set to **fr-fr**.
 
-**Language** – Determines the language used to format dates, including names of months. If this property isn't specified, the user's device setting determines the language.
+**Language** – Determines the language that's used to format dates, including names of months. If this property isn't specified, the user's device setting determines the language. Supported values include "EN-us" and "FR".
 
 ## Additional properties
 **[AccessibleLabel](properties-accessibility.md)** – Label for screen readers.
@@ -68,6 +68,8 @@ If you add a **Date Picker** control instead of a **[Text input](control-text-in
 **IconFill** – The foreground color of a the date picker icon.
 
 **IconBackground** – The background color of a the date picker icon.
+
+**InputTextPlaceholder** – Instructional text that appears if no dates are entered.
 
 **[Italic](properties-text.md)** – Whether the text in a control is italic.
 
@@ -122,3 +124,6 @@ If you add a **Date Picker** control instead of a **[Text input](control-text-in
 ### Keyboard support
 * **[TabIndex](properties-accessibility.md)** must be zero or greater so that keyboard users can navigate to it.
 * Focus indicators must be clearly visible. Use **[FocusedBorderColor](properties-color-border.md)** and **[FocusedBorderThickness](properties-color-border.md)** to achieve this.
+
+> [!TIP]
+> When the calendar is open, press **Page up** and **Page down** to navigate between months and **Shift+Page up** and **Shift+Page down** to navigate between years.

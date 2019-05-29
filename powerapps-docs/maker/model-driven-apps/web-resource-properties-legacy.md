@@ -9,8 +9,8 @@ applies_to:
   - "powerapps"
 ms.author: matp
 manager: kvivek
-ms.date: 06/27/2018
-ms.service: crm-online
+ms.date: 04/03/2019
+ms.service: powerapps
 ms.topic: article
 ms.assetid: 82cd41ea-95b0-4606-9e7d-43eb5ce9ecd6
 search.audienceType: 
@@ -36,6 +36,8 @@ This will open the **Add Web Resource** or **Web Resource Properties** dialog bo
 
 ![Add Web Resource dialog](media/add-web-resource-dialog.png)
 
+> [!IMPORTANT]
+> You must select the **Visible by default** option for the web resource to appear on the form and be available to users.
 
 ## Web resource properties
 

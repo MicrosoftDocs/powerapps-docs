@@ -78,15 +78,21 @@ To use **Combo box** as a people picker, choose the **Person** template from the
 **[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
 
 ## Example
-1. Add a **Combo box** control from the Insert tab, Controls menu.  
-2. In the Properties options tab, click on Data.  
-3. Select the data source, layout and related properties below.
-4. Set the **SelectMultiple** property in the Advanced tab.
+1. On the **Insert** tab, open the **Controls** menu, and then select **Combo box**.  
 
-    A functional **Combo box** will appear in your app.
+1. On the **Properties** tab of the right-hand pane, open the **Select a data source** list (next to **Items**), and then add or select a data source.
 
-    Don't know how to [add and configure a control](../add-configure-controls.md)?.
+1. On the same tab, select **Edit** (next to **Fields**).
 
+1. In the **Data** pane, open the **Primary text** list, and then select the column that you want to show in the **Combo box** control.
+
+1. While holding down the Alt key, select the down arrow to open the **Combo box** control.
+
+    The control shows the data from the column that you specified in the data source that you specified.
+    
+1. (optional) To show the first record by default, set the **DefaultSelectedItems** property to this expression, replacing *DataSource* with the name of your data source:
+
+    `First(DataSource)`
 
 ## Accessibility guidelines
 ### Color contrast

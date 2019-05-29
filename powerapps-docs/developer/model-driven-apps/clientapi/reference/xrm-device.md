@@ -1,7 +1,7 @@
 ---
 title: "Xrm.Device| MicrosoftDocs"
 ms.date: 10/31/2018
-ms.service: "crm-online"
+ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: d065fdce-d9de-4d05-a5b9-863e197b4f4d

@@ -1,10 +1,10 @@
 ---
-title: "Use messages with the Organization service (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Use messages with the Organization service (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Understand how messages are used to invoke operations using the organization service." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "brandonsimons" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -103,8 +103,8 @@ CreateResponse response = (CreateResponse)svc.Execute(req);
 ### See also
 
 [Entity Operations using the Organization service](entity-operations.md)<br />
-[Use ExecuteAsync](use-executeAsync.md)<br />
-[Use ExecuteTransaction](use-executetransaction.md)<br />
+[Use ExecuteAsync to execute messages asynchronously](use-executeAsync.md)<br />
+[Execute messages in a single database transaction](use-executetransaction.md)<br />
 [Execute multiple requests using the Organization service](execute-multiple-requests.md)
 
 

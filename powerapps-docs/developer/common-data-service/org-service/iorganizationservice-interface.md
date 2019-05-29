@@ -1,10 +1,10 @@
 ---
-title: "IOrganizationService Interface (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn about the common methods exposed to perform data operations with CDS for Apps." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "IOrganizationService Interface (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Learn about the common methods exposed to perform data operations with Common Data Service." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "brandonsimons" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -58,6 +58,5 @@ Each of the classes which implement the <xref:Microsoft.Xrm.Sdk.IOrganizationSer
 ## See also
 
 [Use messages with the Organization service](use-messages.md)<br />
-[Create a client application](create-client-app.md)<br />
 [Write a plug-in](../write-plug-in.md)<br />
 [Entity Operations using the Organization service](entity-operations.md)

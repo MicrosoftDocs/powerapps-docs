@@ -1,10 +1,10 @@
 ---
-title: "Discovery Services (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "CDS for Apps Discovery service is accessed through either the Web API or the Organization Service."
+title: "Discovery Services (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Common Data Service Discovery service is accessed through either the Web API or the Organization Service."
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "brandonsimons" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -27,5 +27,5 @@ A Discovery service is accessed through either the Web API or the Organization S
 
 ### See Also
 
-[Use the Common Data Service for Apps Web API](webapi/overview.md)<br />
-[Use the Common Data Service for Apps Organization Service](org-service/overview.md)
+[Use the Common Data Service Web API](webapi/overview.md)<br />
+[Use the Common Data Service Organization Service](org-service/overview.md)

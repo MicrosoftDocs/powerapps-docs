@@ -1,20 +1,13 @@
 ---
-title: "DuplicateRecord Entity Reference (Common Data Service for Apps)| Microsoft Docs"
+title: "DuplicateRecord Entity Reference (Common Data Service)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the DuplicateRecord entity."
-services: ''
-suite: powerapps
-documentationcenter: na
-author: JimDaly
-manager: kvivek
-editor: ''
-tags: ''
-ms.service: powerapps
-ms.devlang: na
-ms.topic: reference
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.date: 10/31/2018
-ms.author: jdaly
+ms.date: 04/01/2019
+ms.service: "powerapps"
+ms.topic: "reference"
+ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
+author: "KumarVivek"
+ms.author: "kvivek"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
@@ -25,19 +18,30 @@ search.app:
 
 Potential duplicate record.
 
+
+## Messages
+
+|Message|Web API Operation|SDK Assembly|
+|-|-|-|
+|Retrieve|GET [*org URI*]/api/data/v9.0/duplicaterecords(*duplicateid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/duplicaterecords<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+
 ## Entity Properties
 
-**DisplayName**: Duplicate Record<br />
-**DisplayCollectionName**: Duplicate Records<br />
-**SchemaName**: DuplicateRecord<br />
-**CollectionSchemaName**: DuplicateRecords<br />
-**LogicalName**: duplicaterecord<br />
-**LogicalCollectionName**: duplicaterecords<br />
-**EntitySetName**: duplicaterecords<br />
-**PrimaryIdAttribute**: duplicateid<br />
-**PrimaryNameAttribute**: <br />
-**OwnershipType**: None<br />
-**IsBPFEntity**: False<br />
+|Property|Value|
+|--------|-----|
+|CollectionSchemaName|DuplicateRecords|
+|DisplayCollectionName|Duplicate Records|
+|DisplayName|Duplicate Record|
+|EntitySetName|duplicaterecords|
+|IsBPFEntity|False|
+|LogicalCollectionName|duplicaterecords|
+|LogicalName|duplicaterecord|
+|OwnershipType|None|
+|PrimaryIdAttribute|duplicateid|
+|PrimaryNameAttribute||
+|SchemaName|DuplicateRecord|
+
 <a name="writable-attributes"></a>
 
 ## Writable attributes
@@ -47,17 +51,21 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 ### <a name="BKMK_DuplicateId"></a> DuplicateId
 
-**Description**: Unique identifier of the duplicate record.<br />
-**DisplayName**: <br />
-**LogicalName**: duplicateid<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**IsValidForUpdate**: False<br />
-**Type**: Uniqueidentifier<br />
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier of the duplicate record.|
+|DisplayName||
+|IsValidForForm|False|
+|IsValidForRead|True|
+|IsValidForUpdate|False|
+|LogicalName|duplicateid|
+|RequiredLevel|SystemRequired|
+|Type|Uniqueidentifier|
 
 <a name="read-only-attributes"></a>
+
 ## Read-only attributes
+
 These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [AsyncOperationId](#BKMK_AsyncOperationId)
@@ -79,218 +87,216 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 
 ### <a name="BKMK_AsyncOperationId"></a> AsyncOperationId
 
-**Description**: Unique identifier of the system job that created this record.<br />
-**DisplayName**: System Job<br />
-**LogicalName**: asyncoperationid<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Lookup<br />
-**Targets**: asyncoperation
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier of the system job that created this record.|
+|DisplayName|System Job|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|asyncoperationid|
+|RequiredLevel|None|
+|Targets|asyncoperation|
+|Type|Lookup|
 
 
 ### <a name="BKMK_BaseRecordId"></a> BaseRecordId
 
-**Description**: Unique identifier of the base record.<br />
-**DisplayName**: Base Record ID<br />
-**LogicalName**: baserecordid<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Lookup<br />
-**Targets**: account,appointment,channelaccessprofile,contact,email,emailserverprofile,fax,goal,goalrollupquery,kbarticle,knowledgearticle,knowledgebaserecord,letter,phonecall,publisher,queue,recurringappointmentmaster,sharepointdocumentlocation,sharepointsite,socialactivity,socialprofile,systemuser,task,team,transactioncurrency
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier of the base record.|
+|DisplayName|Base Record ID|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|baserecordid|
+|RequiredLevel|None|
+|Targets|account,appointment,channelaccessprofile,contact,email,emailserverprofile,fax,goal,goalrollupquery,kbarticle,knowledgearticle,knowledgebaserecord,letter,msdyn_connector,phonecall,publisher,queue,recurringappointmentmaster,sharepointdocumentlocation,sharepointsite,socialactivity,socialprofile,systemuser,task,team,transactioncurrency|
+|Type|Lookup|
 
 
 ### <a name="BKMK_BaseRecordIdName"></a> BaseRecordIdName
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: baserecordidname<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 400
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|baserecordidname|
+|MaxLength|400|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_BaseRecordIdTypeCode"></a> BaseRecordIdTypeCode
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: baserecordidtypecode<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: EntityName<br />
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|baserecordidtypecode|
+|RequiredLevel|None|
+|Type|EntityName|
 
 
 ### <a name="BKMK_BaseRecordIdYomiName"></a> BaseRecordIdYomiName
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: baserecordidyominame<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 400
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|baserecordidyominame|
+|MaxLength|400|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_CreatedOn"></a> CreatedOn
 
-**Description**: Date and time when the duplicate record was created.<br />
-**DisplayName**: <br />
-**LogicalName**: createdon<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**Type**: DateTime<br />
-**DateTimeBehavior**: UserLocal<br />
-**Format**: DateAndTime
+|Property|Value|
+|--------|-----|
+|DateTimeBehavior|UserLocal|
+|Description|Date and time when the duplicate record was created.|
+|DisplayName||
+|Format|DateAndTime|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|createdon|
+|RequiredLevel|SystemRequired|
+|Type|DateTime|
 
 
 ### <a name="BKMK_DuplicateRecordId"></a> DuplicateRecordId
 
-**Description**: Unique identifier of the potential duplicate record.<br />
-**DisplayName**: Duplicate Record ID<br />
-**LogicalName**: duplicaterecordid<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Lookup<br />
-**Targets**: account,appointment,channelaccessprofile,contact,email,emailserverprofile,fax,goal,goalrollupquery,kbarticle,knowledgearticle,knowledgebaserecord,letter,phonecall,publisher,queue,recurringappointmentmaster,sharepointdocumentlocation,sharepointsite,socialactivity,socialprofile,systemuser,task,team,transactioncurrency
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier of the potential duplicate record.|
+|DisplayName|Duplicate Record ID|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|duplicaterecordid|
+|RequiredLevel|None|
+|Targets|account,appointment,channelaccessprofile,contact,email,emailserverprofile,fax,goal,goalrollupquery,kbarticle,knowledgearticle,knowledgebaserecord,letter,msdyn_connector,phonecall,publisher,queue,recurringappointmentmaster,sharepointdocumentlocation,sharepointsite,socialactivity,socialprofile,systemuser,task,team,transactioncurrency|
+|Type|Lookup|
 
 
 ### <a name="BKMK_DuplicateRecordIdName"></a> DuplicateRecordIdName
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: duplicaterecordidname<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 400
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|duplicaterecordidname|
+|MaxLength|400|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_DuplicateRecordIdTypeCode"></a> DuplicateRecordIdTypeCode
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: duplicaterecordidtypecode<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: EntityName<br />
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|duplicaterecordidtypecode|
+|RequiredLevel|None|
+|Type|EntityName|
 
 
 ### <a name="BKMK_DuplicateRecordIdYomiName"></a> DuplicateRecordIdYomiName
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: duplicaterecordidyominame<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 400
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|duplicaterecordidyominame|
+|MaxLength|400|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_DuplicateRuleId"></a> DuplicateRuleId
 
-**Description**: Unique identifier of the duplicate rule against which this duplicate was found.<br />
-**DisplayName**: <br />
-**LogicalName**: duplicateruleid<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Lookup<br />
-**Targets**: duplicaterule
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier of the duplicate rule against which this duplicate was found.|
+|DisplayName||
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|duplicateruleid|
+|RequiredLevel|None|
+|Targets|duplicaterule|
+|Type|Lookup|
 
 
 ### <a name="BKMK_OwnerId"></a> OwnerId
 
-**Description**: Unique identifier of the user or team who owns the duplicate record.<br />
-**DisplayName**: Owner<br />
-**LogicalName**: ownerid<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: ApplicationRequired<br />
-**Type**: Owner<br />
-**Targets**: systemuser,team
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier of the user or team who owns the duplicate record.|
+|DisplayName|Owner|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|ownerid|
+|RequiredLevel|ApplicationRequired|
+|Targets|systemuser,team|
+|Type|Owner|
 
 
 ### <a name="BKMK_OwnerIdType"></a> OwnerIdType
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: owneridtype<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**Type**: EntityName<br />
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owneridtype|
+|RequiredLevel|SystemRequired|
+|Type|EntityName|
 
 
 ### <a name="BKMK_OwningBusinessUnit"></a> OwningBusinessUnit
 
-**Description**: Unique identifier of the business unit that owns the duplicate record.<br />
-**DisplayName**: Owning Business Unit<br />
-**LogicalName**: owningbusinessunit<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: ApplicationRequired<br />
-**Type**: Uniqueidentifier<br />
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier of the business unit that owns the duplicate record.|
+|DisplayName|Owning Business Unit|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owningbusinessunit|
+|RequiredLevel|ApplicationRequired|
+|Type|Uniqueidentifier|
 
 
 ### <a name="BKMK_OwningUser"></a> OwningUser
 
-**Description**: Unique identifier of the user who owns the duplicate record.<br />
-**DisplayName**: Owning User<br />
-**LogicalName**: owninguser<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: ApplicationRequired<br />
-**Type**: Uniqueidentifier<br />
-
-<a name="onetomany"></a>
-
-## One-To-Many Relationships
-
-Listed by **SchemaName**.
-
-
-### <a name="BKMK_userentityinstancedata_duplicaterecord"></a> userentityinstancedata_duplicaterecord
-
-Same as userentityinstancedata entity [userentityinstancedata_duplicaterecord](userentityinstancedata.md#BKMK_userentityinstancedata_duplicaterecord) Many-To-One relationship.
-
-**ReferencingEntity**: userentityinstancedata<br />
-**ReferencingAttribute**: objectid<br />
-**IsHierarchical**: False<br />
-**IsCustomizable**: False<br />
-**ReferencedEntityNavigationPropertyName**: userentityinstancedata_duplicaterecord<br />
-**AssociatedMenuConfiguration**:
-
-- **Behavior**: DoNotDisplay
-- **Group**: Details
-- **Label**: 
-- **Order**: 
-
-**CascadeConfiguration**:
-
-- **Assign**: NoCascade
-- **Delete**: Cascade
-- **Merge**: NoCascade
-- **Reparent**: NoCascade
-- **Share**: NoCascade
-- **Unshare**: NoCascade
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier of the user who owns the duplicate record.|
+|DisplayName|Owning User|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owninguser|
+|RequiredLevel|ApplicationRequired|
+|Type|Uniqueidentifier|
 
 <a name="manytoone"></a>
 
@@ -298,10 +304,10 @@ Same as userentityinstancedata entity [userentityinstancedata_duplicaterecord](u
 
 Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related entity. Listed by **SchemaName**.
 
+- [msdyn_connector_DuplicateMatchingRecord](#BKMK_msdyn_connector_DuplicateMatchingRecord)
+- [msdyn_connector_DuplicateBaseRecord](#BKMK_msdyn_connector_DuplicateBaseRecord)
 - [knowledgearticle_DuplicateMatchingRecord](#BKMK_knowledgearticle_DuplicateMatchingRecord)
 - [knowledgearticle_DuplicateBaseRecord](#BKMK_knowledgearticle_DuplicateBaseRecord)
-- [channelaccessprofile_DuplicateMatchingRecord](#BKMK_channelaccessprofile_DuplicateMatchingRecord)
-- [channelaccessprofile_DuplicateBaseRecord](#BKMK_channelaccessprofile_DuplicateBaseRecord)
 - [KnowledgeBaseRecord_DuplicateMatchingRecord](#BKMK_KnowledgeBaseRecord_DuplicateMatchingRecord)
 - [KnowledgeBaseRecord_DuplicateBaseRecord](#BKMK_KnowledgeBaseRecord_DuplicateBaseRecord)
 - [Email_DuplicateMatchingRecord](#BKMK_Email_DuplicateMatchingRecord)
@@ -352,6 +358,18 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [SocialActivity_DuplicateMatchingRecord](#BKMK_SocialActivity_DuplicateMatchingRecord)
 
 
+### <a name="BKMK_msdyn_connector_DuplicateMatchingRecord"></a> msdyn_connector_DuplicateMatchingRecord
+
+**Added by**: Power Connector Solution Solution
+
+See msdyn_connector Entity [msdyn_connector_DuplicateMatchingRecord](msdyn_connector.md#BKMK_msdyn_connector_DuplicateMatchingRecord) One-To-Many relationship.
+
+### <a name="BKMK_msdyn_connector_DuplicateBaseRecord"></a> msdyn_connector_DuplicateBaseRecord
+
+**Added by**: Power Connector Solution Solution
+
+See msdyn_connector Entity [msdyn_connector_DuplicateBaseRecord](msdyn_connector.md#BKMK_msdyn_connector_DuplicateBaseRecord) One-To-Many relationship.
+
 ### <a name="BKMK_knowledgearticle_DuplicateMatchingRecord"></a> knowledgearticle_DuplicateMatchingRecord
 
 See knowledgearticle Entity [knowledgearticle_DuplicateMatchingRecord](knowledgearticle.md#BKMK_knowledgearticle_DuplicateMatchingRecord) One-To-Many relationship.
@@ -359,14 +377,6 @@ See knowledgearticle Entity [knowledgearticle_DuplicateMatchingRecord](knowledge
 ### <a name="BKMK_knowledgearticle_DuplicateBaseRecord"></a> knowledgearticle_DuplicateBaseRecord
 
 See knowledgearticle Entity [knowledgearticle_DuplicateBaseRecord](knowledgearticle.md#BKMK_knowledgearticle_DuplicateBaseRecord) One-To-Many relationship.
-
-### <a name="BKMK_channelaccessprofile_DuplicateMatchingRecord"></a> channelaccessprofile_DuplicateMatchingRecord
-
-See channelaccessprofile Entity [channelaccessprofile_DuplicateMatchingRecord](channelaccessprofile.md#BKMK_channelaccessprofile_DuplicateMatchingRecord) One-To-Many relationship.
-
-### <a name="BKMK_channelaccessprofile_DuplicateBaseRecord"></a> channelaccessprofile_DuplicateBaseRecord
-
-See channelaccessprofile Entity [channelaccessprofile_DuplicateBaseRecord](channelaccessprofile.md#BKMK_channelaccessprofile_DuplicateBaseRecord) One-To-Many relationship.
 
 ### <a name="BKMK_KnowledgeBaseRecord_DuplicateMatchingRecord"></a> KnowledgeBaseRecord_DuplicateMatchingRecord
 
@@ -559,5 +569,9 @@ See fax Entity [Fax_DuplicateMatchingRecord](fax.md#BKMK_Fax_DuplicateMatchingRe
 ### <a name="BKMK_SocialActivity_DuplicateMatchingRecord"></a> SocialActivity_DuplicateMatchingRecord
 
 See socialactivity Entity [SocialActivity_DuplicateMatchingRecord](socialactivity.md#BKMK_SocialActivity_DuplicateMatchingRecord) One-To-Many relationship.
-duplicaterecord
 
+### See also
+
+[About the Entity Reference](../about-entity-reference.md)<br />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+<xref href="Microsoft.Dynamics.CRM.duplicaterecord?text=duplicaterecord EntityType" />

@@ -1,10 +1,10 @@
 ---
-title: "Saved queries (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn how saved queries augment the search environment in CDS for Apps." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Saved queries (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Learn how saved queries augment the search environment in Common Data Service." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "brandonsimons" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -17,7 +17,7 @@ search.app:
 ---
 # Saved queries
 
-Saved queries are business entities that define the parameters and criteria of a Common Data Service (CDS) for Apps environment search. Saved queries support cross-entity searches. There are two entities available for queries against the Common Data Service (CDS) for Apps environment.  
+Saved queries are business entities that define the parameters and criteria of a Common Data Service environment search. Saved queries support cross-entity searches. There are two entities available for queries against the Common Data Service environment.  
   
 - A *user query*, called a saved view in the application, is owned by an individual user, can be assigned and shared with other users, and can be viewed by other users depending on the query's access privileges. This is appropriate for frequently used queries that span entity types and queries that perform aggregation. More information: [UserQuery entity](reference/entities/userquery.md) 
 

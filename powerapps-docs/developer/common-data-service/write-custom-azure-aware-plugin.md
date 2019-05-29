@@ -1,10 +1,10 @@
 ---
-title: "Write a custom Azure-aware plug-in (Common Data Service for Apps) | Microsoft Docs"
+title: "Write a custom Azure-aware plug-in (Common Data Service) | Microsoft Docs"
 description: "The sample shows how plug-in code can be added to obtain the Azure service provider and initiate posting the execution context to the service bus by calling IExecutionContext)."
 keywords: ""
 ms.date: 10/31/2018
 ms.service:
-  - "powerapps"
+  - powerapps
 ms.custom:
   - ""
 ms.topic: article
@@ -24,7 +24,7 @@ search.app:
 
 <!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/write-custom-azure-aware-plugin -->
 
-Writing a plug-in that works with Azure is similar to writing any other Dynamics 365 Common Data Service for Apps plug-in. However, in addition to invoking any desired web service methods, the plug-in must include code to initiate posting the execution context to the Azure Service Bus.  
+Writing a plug-in that works with Azure is similar to writing any other Dynamics 365 Common Data Service plug-in. However, in addition to invoking any desired web service methods, the plug-in must include code to initiate posting the execution context to the Azure Service Bus.  
   
 <a name="bkmk_design"></a>
 
@@ -42,7 +42,7 @@ Note that it is possible for synchronous registered plug-ins to post the executi
 In the following sample plug-in code has been added to obtain the Azure service provider and initiate posting the execution context to the service bus by calling <xref:Microsoft.Xrm.Sdk.IServiceEndpointNotificationService.Execute(Microsoft.Xrm.Sdk.EntityReference,Microsoft.Xrm.Sdk.IExecutionContext)>. Tracing code has been added to facilitate debugging of the plug-in because the plug-in must run in the sandbox.  
 
 > [!NOTE]
-> The `serviceEndpointId` passed into the constructor in this code is the one you get from creating a service endpoint as described in [Walkthrough: Configure Azure (SAS) for integration with CDS for Apps](walkthrough-configure-azure-sas-integration.md)
+> The `serviceEndpointId` passed into the constructor in this code is the one you get from creating a service endpoint as described in [Walkthrough: Configure Azure (SAS) for integration with Common Data Service](walkthrough-configure-azure-sas-integration.md)
 >
 > You can query available service endpoints for your environment using a `GET` request to Web API using your browser with a query like this: *`[organization Uri]`*`/api/data/v9.0/serviceendpoints?$select=name,description,serviceendpointid`
   
