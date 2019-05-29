@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
-ms.date: 03/01/2019
+ms.date: 05/29/2019
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -15,10 +15,12 @@ search.app:
   - PowerApps
 ---
 # Acceleration, App, Compass, Connection, and Location signals in PowerApps
-Returns information about the app's environment, such as where the user is located in the world and which screen is displayed.  
+
+Returns information about the app's environment, such as where the user is located in the world and which screen is displayed.
 
 ## Description and syntax
-Signals are values that can change at any time, independent of how the end user may be interacting with the app.  Formulas based on signals will automatically recalculate as these values change.
+
+Signals are values that can change at any time, independent of how the user may be interacting with the app. Formulas that are based on signals automatically recalculate as these values change.
 
 Signals typically return a [record](../working-with-tables.md#records) of information. You can use and store this information as a record, or you can extract individual properties by using the **.** [operator](operators.md).
 
@@ -26,6 +28,7 @@ Signals typically return a [record](../working-with-tables.md#records) of inform
 > The **Acceleration** and **Compass** functions return accurate values in a native player such as on iOS or Android, but those functions return zero values as you create or modify an app in the browser.
 
 ### Acceleration
+
 The **Acceleration** signal returns the device's acceleration in three dimensions relative to the device's screen. Acceleration is measured in *g* units of 9.81 m/second<sup>2</sup> or 32.2 ft/second<sup>2</sup> (the acceleration that the Earth imparts to objects at its surface due to gravity).
 
 | Property | Description |
@@ -35,13 +38,14 @@ The **Acceleration** signal returns the device's acceleration in three dimension
 | **Acceleration.Z** |Up and down.  Up is a positive number. |
 
 ### App
-Among other properties, the **App** object includes a signal that indicates which screen is currently being displayed.  
+
+Among other properties, the **App** object includes a signal that indicates which screen is showing.
 
 | Property | Description |
 | --- | --- |
-| **App.ActiveScreen** |Screen that's currently displayed. Returns a screen object, which you can use to reference properties of the screen or compare to another screen to determine which screen is displayed.  By using the **[Back](function-navigate.md)** or **[Navigate](function-navigate.md)** function, you can change the displayed screen. |
+| **App.ActiveScreen** |Screen that's showing. Returns a screen object, which you can use to reference properties of the screen or compare to another screen to determine which screen is showing. You can use the **[Back](function-navigate.md)** or **[Navigate](function-navigate.md)** function to change the screen that's showing. |
 
-See the [**App** object documentation](object-app.md) for more information.
+More information: [**App** object](object-app.md) documentation.
 
 ### Compass
 The **Compass** signal returns the compass heading of the top of the screen. The heading is based on magnetic north.
