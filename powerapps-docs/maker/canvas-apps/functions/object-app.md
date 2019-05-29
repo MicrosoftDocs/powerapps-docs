@@ -20,7 +20,7 @@ Provides information about the currently running app and control over the app's 
 ## Description
 Like a control, the **App** object provides properties that your app can use to know which screen is currently being displayed and to control when a confirmation dialog should be displayed before losing unsaved changes.  Every app has an **App** object.  
 
-For setting properties, the **App** object appears at the top of the hierarchical list of controls in the left navigation pane, and you can select this object like a control on a screen. After you select the object, you can view and edit one of its properties if you select that property in the drop-down list to the left of the formula bar.  
+You can write formulas for some **App** object properties.  Select the **App** object at the top of the **Tree view** pane as you would any other control or screen. View and edit its properties by selecting a property in the drop-down list to the left of the formula bar.  
 
 ![](media/object-app/appobject.png)
 
