@@ -92,7 +92,7 @@ Sign in to PowerApps at [https://web.powerapps.com](https://web.powerapps.com/?u
 
     Note that all entities have read-only system fields. By default, system fields are not shown in the list of fields even though they exist in the entity. To see all fields, change the filter on the command bar from **Default** to **All**. For more information on the metadata related to an entity, see [Entity metadata](../../developer/common-data-service/entity-metadata.md).
 
-7. Click **Save Entity** to save your entity and make it available for use in apps.
+7. Click **Save Entity** to save the latest changes to your entity.
 
     The Product Review entity should appear in the list of entities in your database. If you don't see it, change the filter in the command bar from **Default** to **Custom**.
 
