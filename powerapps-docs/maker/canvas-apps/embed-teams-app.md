@@ -35,55 +35,55 @@ Find and make note of your PowerApp's GUID to use in a later step.
 1. Sign in to [https://web.powerapps.com](https://web.powerapps.com), and then select **Apps** in the menu.
 
    > [!div class="mx-imgBorder"] 
-   > ![Show list of apps](./media/share-app/file-apps2.png "Show list of apps")
+   > ![Show list of apps](./media/embed-teams-app/file-apps2.png "Show list of apps")
 
 2. Select **More Commands** (...) for the app you want to share in Teams, and then select **Details**.
 
    > [!div class="mx-imgBorder"] 
-   > ![App details](./media/share-app/app-details.png "App details")
+   > ![App details](./media/embed-teams-app/app-details.png "App details")
 
 3. Record the **App ID** for later use.
 
    > [!div class="mx-imgBorder"] 
-   > ![App details](./media/share-app/app-details2.png "App details")
+   > ![App details](./media/embed-teams-app/app-details2.png "App details")
 
 ## Install App Studio
 
 You can skip these steps if App Studio is already installed. 
 
-1. In Teams, select **Apps** in the lower-left of the Teams menu (![Apps icon](./media/share-app/apps-icon.png "Apps icon")).
+1. In Teams, select **Apps** in the lower-left of the Teams menu (![Apps icon](./media/embed-teams-app/apps-icon.png "Apps icon")).
 
 2. Search for "App Studio" in the search box and then select it.
 
    > [!div class="mx-imgBorder"] 
-   > ![App Studio](./media/share-app/store-app-studio.png "App Studio")
+   > ![App Studio](./media/embed-teams-app/store-app-studio.png "App Studio")
 
 3. Select **Install**. 
 
    > [!div class="mx-imgBorder"] 
-   > ![Install App Studio](./media/share-app/install-app-studio.png "Install App Studio")
+   > ![Install App Studio](./media/embed-teams-app/install-app-studio.png "Install App Studio")
 
 4. Select **Open** for the App feature.
 
    > [!div class="mx-imgBorder"] 
-   > ![Open App Studio](./media/share-app/open-app-studio.png "Open App Studio")
+   > ![Open App Studio](./media/embed-teams-app/open-app-studio.png "Open App Studio")
 
 ## Create a Teams app for your PowerApp
 
 1. In Teams, open App Studio.
 
    > [!div class="mx-imgBorder"] 
-   > ![Open App Studio](./media/share-app/open-app-studio2.png "Open App Studio")
+   > ![Open App Studio](./media/embed-teams-app/open-app-studio2.png "Open App Studio")
 
 2. Select the **Manifest editor** tab, and then select **Create a new app** under Welcome.
 
    > [!div class="mx-imgBorder"] 
-   > ![Create new app](./media/share-app/create-new-app.png "Create new app")
+   > ![Create new app](./media/embed-teams-app/create-new-app.png "Create new app")
 
 3. Fill in information about your app in the **App Details** page.  For the App ID GUID, you should use your PowerApp's App ID GUID you recorded above.  This will avoid duplication of Teams apps for a particular PowerApp.
  
    > [!div class="mx-imgBorder"] 
-   > ![Fill in information](./media/share-app/fill-in-info-about-app.png "Fill in information")
+   > ![Fill in information](./media/embed-teams-app/fill-in-info-about-app.png "Fill in information")
 
    |Fields  |Description  |
    |---------|---------|
@@ -113,14 +113,14 @@ For more information, see [Manifest Editor](https://docs.microsoft.com/microsoft
 4. Scroll down to the Branding section and add your logos and the accent color desired for your app.  These are the logos that will appear for your app in Teams. 
 
    > [!div class="mx-imgBorder"] 
-   > ![Branding and Tabs](./media/share-app/branding-tabs.png "Branding and Tabs")
+   > ![Branding and Tabs](./media/embed-teams-app/branding-tabs.png "Branding and Tabs")
 
 5. Under **Capabilities**, select **Tabs**.
 
 6. Under **Team tab** select **Add**.
 
    > [!div class="mx-imgBorder"] 
-   > ![Team tab Add](./media/share-app/team-tab-add.png "Team tab Add")
+   > ![Team tab Add](./media/embed-teams-app/team-tab-add.png "Team tab Add")
 
 7. Add your app's configuration URL in the "Configuration URL" input field, using the following format: `https://web.powerapps.com/webplayer/teamsapptabsettings?appid=<PowerApp ID>`
 
@@ -129,27 +129,27 @@ For more information, see [Manifest Editor](https://docs.microsoft.com/microsoft
    Select the [scope](https://docs.microsoft.com/microsoftteams/platform/concepts/tabs/tabs-overview#tab-scope) for your app to appear in. Ensure **Can update configuration** is checked, and then select **Save**.
 
    > [!div class="mx-imgBorder"] 
-   > ![Configuration URL](./media/share-app/configuration-url.png "Configuration URL")
+   > ![Configuration URL](./media/embed-teams-app/configuration-url.png "Configuration URL")
 
 8. Under **Finish**, select **Valid domains**. Add **apps.powerapps.com** and **apps.preview.powerapps.com** as valid domains for the Teams application.
 
    > [!div class="mx-imgBorder"] 
-   > ![Add valid domains](./media/share-app/add-valid-domains.png "Add valid domains")
+   > ![Add valid domains](./media/embed-teams-app/add-valid-domains.png "Add valid domains")
 
 9. Under **Finish**, select **Test and distribute**. Under **Install**, select **Install**.
 
    > [!div class="mx-imgBorder"] 
-   > ![Select Install](./media/share-app/test-distribute-app.png "Select Install")
+   > ![Select Install](./media/embed-teams-app/test-distribute-app.png "Select Install")
 
 10. Select the team you want the app installed in, and then select **Install**.
 
     > [!div class="mx-imgBorder"] 
-    > ![Add to team Install](./media/share-app/new-app-add-to-team.png "Add to team Install")
+    > ![Add to team Install](./media/embed-teams-app/new-app-add-to-team.png "Add to team Install")
 
 11. If you want to add an instance of that app to a channel right away, select the channel you wish to use the app in and select **Set up**.
 
     > [!div class="mx-imgBorder"] 
-    > ![Select Set up](./media/share-app/app-now-available.png "Select Set up")
+    > ![Select Set up](./media/embed-teams-app/app-now-available.png "Select Set up")
 
 12. Select **Save**.
 
@@ -158,14 +158,12 @@ For more information, see [Manifest Editor](https://docs.microsoft.com/microsoft
 To add the app as a tab to any channel or conversation, select **+**, and then under **Tabs for your team** select your app. 
 
 > [!div class="mx-imgBorder"] 
-> ![Add app as tab](./media/share-app/add-app-as-tab.png "Add app as tab")
+> ![Add app as tab](./media/embed-teams-app/add-app-as-tab.png "Add app as tab")
 
 The app now appears as a tab.
 
 > [!div class="mx-imgBorder"] 
-> ![App as tab](./media/share-app/app-as-tab.png "App as tab")
-
-
+> ![App as tab](./media/embed-teams-app/app-as-tab.png "App as tab")
 
 ### See also
 [Welcome to Microsoft Teams](https://docs.microsoft.com/MicrosoftTeams/teams-overview)<br />
