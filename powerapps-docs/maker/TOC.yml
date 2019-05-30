@@ -756,7 +756,11 @@
     - name: Let customers test drive your apps
       href: ./canvas-apps/dev-appsource-test-drive.md
     - name: Create a component
-      href: ./canvas-apps/create-component.md
+      items:
+        - name: Overview
+          href: ./canvas-apps/create-component.md
+        - name: Behavior formulas
+          href: ./canvas-apps/component-behavior.md
     - name: Embed canvas apps in your applications
       href: ./canvas-apps/embedding-sdk.md
 - name: Model-driven apps
