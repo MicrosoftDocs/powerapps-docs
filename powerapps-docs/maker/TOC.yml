@@ -760,7 +760,7 @@
         - name: Overview
           href: ./canvas-apps/create-component.md
         - name: Behavior formulas
-          href:./canvas-apps/component-behavior.md
+          href: ./canvas-apps/component-behavior.md
     - name: Embed canvas apps in your applications
       href: ./canvas-apps/embedding-sdk.md
 - name: Model-driven apps
