@@ -23,8 +23,10 @@ Specify one or more [behavior formulas](working-with-formulas-in-depth.md) that 
 
 With a component selected, select **OnReset** in the drop-down list of properties (on the right side of the formula bar), and then enter one or more formulas.
 
-![OnReset example](./media/component-behavior/example-onreset.png)
+> [!div class="mx-imgBorder"]
+> ![OnReset example](./media/component-behavior/example-onreset.png)
 
 To test **OnReset**, configure a control to reset the component. For example, set the **OnSelect** property of a button to this formula: **Reset**(*ComponentName*)
 
-![OnReset button](./media/component-behavior/reset-button.png)
+> [!div class="mx-imgBorder"]
+> ![Reset button](./media/component-behavior/reset-button.png)
