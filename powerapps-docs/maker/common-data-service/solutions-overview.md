@@ -58,6 +58,8 @@ More information: [Whitepaper: Solution Lifecycle Management](https://www.micros
 -   Connection Role  
   
 -   Contract Template  
+
+-   Custom Connector
  
 -   Custom Control
   
