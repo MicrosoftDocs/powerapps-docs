@@ -70,6 +70,8 @@ More information: [Whitepaper: Solution Lifecycle Management](https://www.micros
 -   Entity  
   
 -   Entity Relationship  
+
+-   Environment variable
   
 -   Field  
   
