@@ -58,7 +58,7 @@ Nobody wants to lose unsaved changes. Use the **ConfirmExit** and **ConfirmExitM
 > **ConfirmExit** doesn't work in apps that are embedded in, for example, Power BI and SharePoint.
 
 > [!NOTE]
-> At present, these properties cannot reference controls on any screens besides the first screen.  If references are made, no error will appear while authoring, but the resulting published app will not load in any players.  We are actively working to lift this limitation.
+> At present, these properties cannot reference controls on any screens besides the first screen if the **Delayed load** preview feature is enabled (which it is by default for new apps).  If references are made, no error will appear while authoring, but the resulting published app will not load in any players.  We are actively working to lift this limitation.  In the meantime, you can turn off **Delayed load** in the File > App settings > Advanced settings under Preview features.
 
 ### ConfirmExit
 
