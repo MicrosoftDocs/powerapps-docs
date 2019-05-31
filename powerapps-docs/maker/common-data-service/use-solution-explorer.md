@@ -87,11 +87,10 @@ search.app:
 
 ## Classic solution explorer
 
-In PowerApps, you can view the classic solution explorer by selecting **Solutions** in the left navigation pane, and then selecting **Switch to classic** in the command bar. Classic solution explorer is the one that was previously available through the **Settings > Advanced customizations** area in PowerApps. If you are a Dynamics 365 for Customer Engagement user, you use the classic solution explorer to work with solutions.  
+In PowerApps, you can view the classic solution explorer by selecting **Solutions** in the left navigation pane, and then selecting **Switch to classic** in the command bar. Classic solution explorer is the one that was previously available through the **Settings > Advanced customizations** area in PowerApps. If you are a Dynamics 365 for Customer Engagement user, you have likely used the classic solution explorer to work with solutions.  
 
 ## Known limitations
 
-- Custom connectors are not available in a solution.
 - Canvas apps must be opened after a solution is imported to update the connections.
 - If a canvas app is packaged in a managed solution, it can still be edited in the target environment.
 - Dependencies are not available for canvas apps.
