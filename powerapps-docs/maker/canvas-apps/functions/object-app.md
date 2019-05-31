@@ -58,7 +58,7 @@ Nobody wants to lose unsaved changes. Use the **ConfirmExit** and **ConfirmExitM
 > **ConfirmExit** doesn't work in apps that are embedded in, for example, Power BI and SharePoint.
 
 > [!NOTE]
-> At present, these properties cannot reference controls on any screens besides the first screen if the **Delayed load** preview feature is enabled (which it is by default for new apps).  If references are made, no error will appear while authoring, but the resulting published app will not load in any players.  We are actively working to lift this limitation.  In the meantime, you can turn off **Delayed load** in the File > App settings > Advanced settings under Preview features.
+> At present, these properties can reference controls on only the first screen if the **Delayed load** preview feature is enabled (which it is by default for new apps). If references are made, PowerApps Studio doesn't show an error, but the resulting published app doesn't open in PowerApps Mobile or a browser. We're actively working to lift this limitation. In the meantime, you can turn off **Delayed load** in **File** > **App settings** > **Advanced settings** (under **Preview features**).
 
 ### ConfirmExit
 
@@ -73,8 +73,8 @@ The confirmation dialog box appears in any situation where data could be lost, a
   - Closing the browser or the browser tab in which the app is running.
   - Selecting the browser's back button.
 - If the app is running in PowerApps Mobile (iOS or Android):
-  - Running the [**Launch**](function-param.md) function.<br>If you run this function in a browser, another tab opens (no data would be lost, so the **ConfirmExit** formula doesn't evaluate).
-  - Swiping to switch to a different app in the player.
+  - Running the [**Launch**](function-param.md) function.<br>If you run this function in a browser, another tab opens. (No data would be lost, so the **ConfirmExit** formula doesn't evaluate.)
+  - Swiping to switch to a different app in PowerApps Mobile.
   - Selecting the back button on an Android device.
 
 The exact look of the confirmation dialog box might vary across devices and versions of PowerApps.
