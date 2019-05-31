@@ -73,7 +73,7 @@ The confirmation dialog box appears in any situation where data could be lost, a
   - Closing the browser or the browser tab in which the app is running.
   - Selecting the browser's back button.
 - If the app is running in PowerApps Mobile (iOS or Android):
-  - Running the [**Launch**](function-param.md) function.<br>If you run this function in a browser, another tab opens. (No data would be lost, so the **ConfirmExit** formula doesn't evaluate.)
+  - Running the [**Launch**](function-param.md) function.<br>The **Launch** function doesn't trigger the dialog box in a browser because another tab opens so that data isn't lost.
   - Swiping to switch to a different app in PowerApps Mobile.
   - Selecting the back button on an Android device.
 
