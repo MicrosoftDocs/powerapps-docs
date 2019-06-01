@@ -83,7 +83,7 @@ After you register the endpoint you can test it. A listener must be running or a
 1. Create a new Account entity record.
 1. Enter an account name, for example 'Adventure Works Cycle', into the **Account Name** field, and then click **Save**.  
 1. Wait about 10 minutes for the Azure Service Bus post to occur.  
-1. In the Dynamics 365 Custom model-driven app, select  **Settings > System > System Jobs**.  
+1. In the **Dynamics 365 - Custom** model-driven app, select  **Settings > System > System Jobs**.  
 1. Open the system job that has the same name that you specified for your service endpoint. Check the status to see if the post was successful, is waiting, or failed.  
   
 You can now unregister the endpoint, if so desired, by selecting it in the tool’s tree view and click **Unregister**.  
