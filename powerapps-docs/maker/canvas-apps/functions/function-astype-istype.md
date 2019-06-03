@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
-ms.date: 05/06/2019
+ms.date: 05/17/2019
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -17,15 +17,15 @@ search.app:
 
 # AsType and IsType functions in canvas apps
 
-Checks a record reference for a specific entity type and treats the reference as a specific type.
+Checks a record reference for a specific entity type (**IsType**) and treats the reference as a specific type (**AsType**).
 
 ## Description
 
-Read [understand record references and polymorphic lookups](../working-with-references.md) for a broader introduction and more details.
+Read [Understand record references and polymorphic lookups](../working-with-references.md) for a broader introduction and more details.
 
 A lookup field usually refers to records in a particular entity. Because the entity type is well established, you can access the fields of the lookup by using a simple dot notation. For example, **First( Accounts ).'Primary Contact'.'Full Name'** walks from the **Accounts** entity to the **Primary Contact** record in the **Contacts** entity and extracts the **Full Name** field.
 
-Common Data Service also supports polymorphic lookup fields, which can refer to records from a set of entities, as in these examples:
+Common Data Service also supports polymorphic lookup fields, which can refer to records from a set of entities, as in these examples.
 
 | Lookup field | Can refer to |
 |--------------|--------------|
@@ -33,11 +33,13 @@ Common Data Service also supports polymorphic lookup fields, which can refer to 
 | **Customer** | **Accounts** or **Contacts** |
 | **Regarding** | **Accounts**, **Contacts**, **Knowledge Articles**, etc. |
 
+<!--note from editor: Change "Knowledge Articles" to "Knowledge Base articles" if that is what is being referenced.   -->
+
 In canvas-app formulas, you can use record references to work with polymorphic lookups. Because a record reference can refer to different entities, you don't know which fields will be available when you write a formula. The *.Field* notation isn't available. Those formulas must adapt to the records that the app encounters when it runs.
 
-The **IsType** function tests whether a record reference refers to a specific entity type. The function returns a Boolean *true* or *false*.
+The **IsType** function tests whether a record reference refers to a specific entity type. The function returns a Boolean TRUE or FALSE.
 
-The **AsType** function treats a record reference as a specific entity type, sometimes referred to as *casting*. You can use the result as if it were a record of the entity and, again, use *.Field* notation to access all of the fields of that record. An error occurs if the reference isn't of the specific type.
+The **AsType** function treats a record reference as a specific entity type, sometimes referred to as *casting*. You can use the result as if it were a record of the entity and, again, use the *.Field* notation to access all of the fields of that record. An error occurs if the reference isn't of the specific type.
 
 Use these functions together to first test the entity type of a record and then treat it as a record of that type so that the fields are available:
 
@@ -60,7 +62,7 @@ Similarly, you can use record references with the [**Patch**](function-patch.md)
 Patch( Accounts, First( Accounts ), { Owner: First( Teams ) } )
 ```  
 
-If used in a record context, such as within a [**Gallery**](../controls/control-gallery.md) or [**Edit form**](../controls/control-form-detail.md) control, you might need to use the [global disambiguation operator](operators.md#disambiguation-operator) to reference the entity type. For example, this formula would be effective for a gallery that's displaying a list of contacts where **Company Name** is a **Customer** lookup.
+If used in a record context, such as within a [**Gallery**](../controls/control-gallery.md) or [**Edit form**](../controls/control-form-detail.md) control, you might need to use the [global disambiguation operator](operators.md#disambiguation-operator) to reference the entity type. For example, this formula would be effective for a gallery that's displaying a list of contacts where **Company Name** is a **Customer** lookup:
 
 ```powerapps-dot
 If( IsType( ThisItem.'Company Name', [@Accounts] ),
@@ -71,7 +73,7 @@ If( IsType( ThisItem.'Company Name', [@Accounts] ),
 
 For both functions, you specify the type through the name of the data source that's connected to the entity. For the formula to work, you must also add a data source to the app for any types that you want to test or cast. For example, you must add the **Users** entity as a data source if you want to use **IsType** and **AsType** with an **Owner** lookup and records from that entity. You can add only the data sources that you actually use in your app; you don't need to add all the entities that a lookup could reference.
 
-If the record reference is *blank*, **IsType** returns *false*, and **AsType** returns *blank*. All fields of a *blank* record will be *blank*.
+If the record reference is *blank*, **IsType** returns FALSE, and **AsType** returns *blank*. All fields of a *blank* record will be *blank*.
 
 ## Syntax
 
@@ -83,7 +85,7 @@ If the record reference is *blank*, **IsType** returns *false*, and **AsType** r
 **IsType**( *RecordReference*, *EntityType* )
 
 - *RecordReference* - Required. A record reference, often a lookup field that can refer to a record in any of multiple entities.
-- *EntityType* - Required. The specific entity to which to cast.
+- *EntityType* - Required. The specific entity to which the record should be cast.
 
 ## Example
 
@@ -95,12 +97,12 @@ If the record reference is *blank*, **IsType** returns *false*, and **AsType** r
     > [!div class="mx-imgBorder"]
     > ![Blank app with two data sources: accounts and contacts](media/function-astype-istype/contacts-add-datasources.png)
 
-1. Insert a **Gallery** control with a **Blank vertical** orientation:
+1. Insert a **Gallery** control with a **Blank vertical** orientation.
 
     > [!div class="mx-imgBorder"]
     > ![Insert a gallery control with a blank vertical layout](media/function-astype-istype/contacts-customer-gallery.png)
 
-1. On the **Properties** tab of the right-hand pane, set the gallery's **Items** property to **Contacts**.
+1. On the **Properties** tab near the right side of the screen, set the gallery's **Items** property to **Contacts**.
 
     > [!div class="mx-imgBorder"]
     > ![Set items to Contacts in the properties pane](media/function-astype-istype/contacts-customer-datasource.png)
@@ -113,12 +115,12 @@ If the record reference is *blank*, **IsType** returns *false*, and **AsType** r
     > [!div class="mx-imgBorder"]
     > ![Set layout to Title and subtitle](media/function-astype-istype/contacts-customer-flyout.png)
 
-1. In the **Data** pane, open the **Title1** list, and then select **Full Name**:
+1. In the **Data** pane, open the **Title1** list, and then select **Full Name**.
 
     > [!div class="mx-imgBorder"]
     > ![Set title value](media/function-astype-istype/contacts-customer-title.png)
 
-1. Select the **Subtitle1** label control:
+1. Select the **Subtitle1** label control.
 
     > [!div class="mx-imgBorder"]
     > ![Set subtitle value](media/function-astype-istype/contacts-customer-subtitle.png)

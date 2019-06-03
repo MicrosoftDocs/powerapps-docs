@@ -4,29 +4,19 @@
     href: overview.md
   - name: "What are custom components"
     href: custom-controls-overview.md
-  - name: Get the tooling
-    href: powerapps-cli.md
-  - name: Sample component end-to-end tutorial
+  - name: Create, debug and deploy custom components using Microsoft PowerApps CLI
+    href: create-custom-controls-using-pcf.md
+  - name: Update Microsoft PowerApps CLI to latest version
+    href: updating-tooling.md
+  - name: Implementing custom components in TypeScript
     href: implementing-controls-using-typescript.md
-  - name: How-to
-    items:
-    - name: Create custom components
-      href: create-custom-controls-using-pcf.md
-    - name: Debug custom components
-      href: debugging-custom-controls.md
-    - name: Packaging a custom component
-      href: import-custom-controls.md
-    - name: Add components to entites or fields
-      href: add-custom-controls-to-a-field-or-entity.md
-    - name: Update existing custom components
-      href: updating-existing-controls.md
-    - name: Publish custom components on AppSource
-      href: publish-components-on-app-source.md
-  - name: Limitations
+  - name: Updating existing PowerApps component framework components into the new tools format
+    href: updating-existing-controls.md
+  - name: Limitations of PowerApps component framework
     href: limitations.md
   - name: FAQ
     href: faq.md
-  - name: More Sample Components
+  - name: Sample Components
     items: 
     - name: Increment component
       href: sample-controls/increment-control.md

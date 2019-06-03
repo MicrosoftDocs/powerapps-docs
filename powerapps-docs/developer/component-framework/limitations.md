@@ -23,7 +23,7 @@ For public preview, components should bundle all code including external library
 > [!NOTE]
 > Support for shared libraries across components using library nodes in component manifest is not supported for Public preview. We are reviewing this and will be adding this capability in future release.
 
-## See also
+## Related topics
 
 [PowerApps component framework API Reference](reference/index.md)<br/>
 [PowerApps component framework Overview](overview.md)

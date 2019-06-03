@@ -2,7 +2,7 @@
 title: "Workflow Extensions (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "You can extend the options available within the designer for workflows. These extensions are added by adding an assembly that contains a class the extends the CodeActivity class. These extensions are commonly called workflow assemblies or workflow activities." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 05/25/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.topic: "article"
@@ -279,6 +279,9 @@ protected override void Execute(CodeActivityContext context)
 
 ...
 ```
+
+> [!IMPORTANT]
+> You should not include any logic dependencies based on the context information. When your custom workflow activity is used in a workflow, all the relevant input parameters should be set within the designer. The output value or behavior of the custom activity should always be determined solely by the input parameters so that there are no hidden factors that change the behavior. When someone uses the custom activity in the designer, the behavior should always be predictable.
 
 ### Use the Organization Service
 
