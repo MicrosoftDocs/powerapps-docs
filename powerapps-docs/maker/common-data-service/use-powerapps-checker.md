@@ -161,6 +161,9 @@ Here's a summary of each column in the report.
 |Web Resources  | [web-avoid-isActivityType](http://go.microsoft.com/fwlink/?LinkID=398563&error=web-avoid-isActivityType&client=PAChecker&source=featuredocs)   | Replace Xrm.Utility.isActivityType method with new Xrm.Utility.getEntityMetadata and don't use in ribbon rules.    |
 |Web Resources  | [meta-avoid-silverlight](http://go.microsoft.com/fwlink/?LinkID=398563&error=meta-avoid-silverlight&client=PAChecker&source=featuredocs)   | Silverlight web resource usage is deprecated.   |
 
+## Limitations
+Powerapp checker cannot be automated at this time, it can be run from the http://web.powerapps.com 
+
 
 ## See also
 [Best practices and guidance for the Common Data Service](../../developer/common-data-service/best-practices/index.md)<br />
