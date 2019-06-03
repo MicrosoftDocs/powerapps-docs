@@ -1,5 +1,5 @@
 ---
-title: Use AI Builder in PowerApps? | Microsoft Docs
+title: Use AI Builder in PowerApps | Microsoft Docs
 description: Provides information about how you can use AI Builder .
 author: Dean-Haas
 manager: kvivek
@@ -10,7 +10,7 @@ ms.date: 06/07/2019
 ms.author: v-dehaas
 ms.reviewer: kvivek
 ---
-# Use AI Builder in PowerApps?
+# Use AI Builder in PowerApps
 
 AI Builder (preview) is a new Power Platform capability for teams with the business expertise to easily automate processes and predict outcomes to improve business performance. AI Builder is a turnkey solution that brings the power of Microsoft AI through a point-and-click experience and is directly integrated into PowerApps and Microsoft Flow. More information: [What is AI Builder?](/ai-builder/)
 
