@@ -1146,6 +1146,10 @@
   - name: For developers
     href: ../developer/common-data-service/overview.md
     # href: ../developer/common-data-service/TOC.yml  changing this to have developer TOC rather than buried in maker toc
+- name: AI Builder
+  items:
+  - name: Use AI Builder in PowerApps
+    href: ../use-ai-builder.md
 - name: Learn from others
   items:
   - name: Webinars
