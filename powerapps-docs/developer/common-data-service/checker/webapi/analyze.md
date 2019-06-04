@@ -39,6 +39,7 @@ Initiating an analysis job is done by submitting a `POST` request to the `analyz
 |Name|Type|Expected value|Required?|
 |--|--|--|--|
 |Authorization|string|OAuth 1 bearer token with AAD Application Id claim|yes|
+|x-ms-tenant-id|guid|ID of the tenant for the application|yes|
 |x-ms-correlation-id|guid|Identifier for the analysis run. You should provide the same Id for the entire execution (upload, analyze, status)|yes|
 |Accept|object|application/json, application/x-ms-sarif-v2|yes|
 |Accept-Language|string|language code or codes, e.g.- en-US. The default is en-US. If multiple are provided, the first will be the primary, however, all translations (if the language is supported) will be included.|no

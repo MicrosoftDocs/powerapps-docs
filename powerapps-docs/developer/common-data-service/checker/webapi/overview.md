@@ -65,7 +65,7 @@ Refer to the following for documentation on the individual APIs:
 <a name="bkmk_geo"></a>
 
 ## Determine a geography
-When interacting with the PowerApps checker service files are temporarily stored in Azure along with the reports that are generated. By using a geography specific API, you can control where the data is stored. It is suggested to use the geography for each API call in the analysis lifecycle. Each geography may have a different version at any given point in time due to our multi-stage safe deployment approach and doing this ensures full version compatibility. It also may reduce execution time as the data will not have to travel as far of a distance in some cases. The following are the available geographies:
+When interacting with the PowerApps checker service files are temporarily stored in Azure along with the reports that are generated. By using a geography specific API, you can control where the data is stored. It is suggested to use the same geography for each API call in the analysis lifecycle. Each geography may have a different version at any given point in time due to our multi-stage safe deployment approach and doing this ensures full version compatibility. It also may reduce execution time as the data will not have to travel as far of a distance in some cases. The following are the available geographies:
 
 |Azure datacenter|Name|Geography|Base URI|
 |--|--|--|--|
@@ -81,13 +81,13 @@ When interacting with the PowerApps checker service files are temporarily stored
 |Public|Production|United Kingdom|unitedkingdom.api.advisor.powerapps.com|
 
 > [!NOTE]
->  You may choose to use the preview region to incorporate features and change early, however, note that it uses United States Azure regions.
+>  You may choose to use the preview geography to incorporate features and changes earlier, however, note that it uses United States Azure regions.
 
 <a name="bkmk_versioning"></a>
 
 ## Versioning
 
-While not required, it is recommended to include the api-version query string parameter with the desired version. The current version is 1.0. Example - [https://unitedstatesfirstrelease.api.advisor.powerapps.com/api/ruleset?**api-version=1.0**](https://unitedstatesfirstrelease.api.advisor.powerapps.com/api/rule?api-version=1.0). If not provided, then the latest version will be used by default.
+While not required, it is recommended to include the api-version query string parameter with the desired version. The current version is 1.0. Example - [https://unitedstatesfirstrelease.api.advisor.powerapps.com/api/ruleset?**api-version=1.0**](https://unitedstatesfirstrelease.api.advisor.powerapps.com/api/ruleset?api-version=1.0). If not provided, then the latest version will be used by default. Using an explicit version is recommended as version will be incremented when breaking changes are introduced. If the version is specified, there will be backward compatibility support.
 
 <a name="bkmk_rules"></a>
 
@@ -107,7 +107,7 @@ When publishing applications on AppSource, you need to get your application cert
 
 ## Find your tenant ID
 
-The ID of your tenant is needed to interact with the *analyze* API. Refer to [this article](https://docs.microsoft.com/en-us/onedrive/find-your-office-365-tenant-id) for details on how to obtain it. You can also use PowerShell similar to the following to retrieve it. This example leverages the cmdlets in the [AzureAD module](https://docs.microsoft.com/en-us/powershell/module/azuread/?view=azureadps-2.0).
+The ID of your tenant is needed to interact with the APIs that require a token. Refer to [this article](https://docs.microsoft.com/en-us/onedrive/find-your-office-365-tenant-id) for details on how to obtain it. You can also use PowerShell similar to the following to retrieve it. This example leverages the cmdlets in the [AzureAD module](https://docs.microsoft.com/en-us/powershell/module/azuread/?view=azureadps-2.0).
 
 ```powershell
 # Login to AAD as your user
@@ -121,13 +121,13 @@ The tenant ID is the value of the `ObjectId` property that is returned from `Get
 <a name="bkmk_auth"></a>
 
 ## Authentication and authorization
-Refer to [PowerApps Checker authentication and authorization](checker-api-auth.md). Querying for rules and rulesets do not require an OAuth token, but all of the other APIs do require the token. The APIs do support authorization discovery by calling any of the APIs that require a token. The response will be an unauthorized HTTP status code of 401 with a WWW-Authenticate header the authorization URI and resource ID. You should also provide your tenant ID in the `x-ms-tenant-id` header.
+Refer to [PowerApps Checker authentication and authorization](checker-api-auth.md). Querying for rules and rulesets do not require an OAuth token, but all of the other APIs do require the token. The APIs do support authorization discovery by calling any of the APIs that require a token. The response will be an unauthorized HTTP status code of 401 with a WWW-Authenticate header the authorization URI and resource ID. You should also provide your tenant ID in the `x-ms-tenant-id` header. here is an example of the header returned:
 
-```
+```http
 WWW-Authenticate →Bearer authorization_uri="https://login.microsoftonline.com/0082fff7-33c5-44c9-920c-c2009943fd1e", resource_id="https://api.advisor.powerapps.com/"
 ```
 
-Once you have this information you can choose to use the Azure Active Directory Autentication Library (ADAL) or some other mechanism to acquire the token. Here is an example of how this can be done using C# and the [ADAL library, version 4.5.1](https://www.nuget.org/packages/Microsoft.IdentityModel.Clients.ActiveDirectory/4.5.1):
+Once you have this information, you can choose to use the `Azure Active Directory Autentication Library (ADAL)` or some other mechanism to acquire the token. Here is an example of how this can be done using C# and the [ADAL library, version 4.5.1](https://www.nuget.org/packages/Microsoft.IdentityModel.Clients.ActiveDirectory/4.5.1):
 
 ```c#
 // Call the status URI as it is the most appropriate to use with a GET.
@@ -155,13 +155,13 @@ using (var client = new HttpClient())
     }
 }
 ```
-Once you have acquired the token it is advised that you provide the same token to each subsequent call in the request lifecycle, however, additional requests will likely warrant a new token be acquired for security reasons.
+Once you have acquired the token, it is advised that you provide the same token to subsequent calls in the request lifecycle, however, additional requests will likely warrant a new token be acquired for security reasons.
 
 <a name="bkmk_report"></a>
 
 ## Report format
 
-The result of the *analyze* API call is a zip file containing a report that is formatted using a `JSON` based format standardized for static analysis results, Static Analysis Results Interchange Format (`SARIF`). There are tools available to view and interact with `SARIF` documents. Refer to their [web site](https://sarifweb.azurewebsites.net/) for details. The service leverages version two of the [OASIS standard](http://docs.oasis-open.org/sarif/sarif/v2.0/sarif-v2.0.html).
+The outcome of the analyzis is a zip file containing a report or reports that are formatted using a `JSON` based format that is standardized for static analysis results referred to as Static Analysis Results Interchange Format (`SARIF`). There are tools available to view and interact with `SARIF` documents. Refer to their [web site](https://sarifweb.azurewebsites.net/) for details. The service leverages version two of the [OASIS standard](http://docs.oasis-open.org/sarif/sarif/v2.0/sarif-v2.0.html).
 
 
 ### See also

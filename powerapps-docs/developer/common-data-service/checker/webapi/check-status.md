@@ -38,6 +38,7 @@ A URL is returned as part of the `Location` header in response to a request to t
 |Name|Type|Expected value|Required?|
 |--|--|--|--|
 |Authorization|string|OAuth 1 bearer token with AAD Application Id claim|yes|
+|x-ms-tenant-id|guid|ID of the tenant for the application|yes|
 |x-ms-correlation-id|guid|Identifier for the analysis run. You should provide the same Id for the entire execution (upload, analyze, status)|yes|
 
 <a name="bkmk_responses"></a>

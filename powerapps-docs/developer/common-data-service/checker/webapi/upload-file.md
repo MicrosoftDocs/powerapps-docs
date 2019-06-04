@@ -35,6 +35,7 @@ The initiation of an analysis job requires a path to an `Azure` blob that is acc
 |Name|Type|Expected value|Required?|
 |--|--|--|--|
 |Authorization|string|OAuth 1 bearer token with AAD Application ID claim|yes|
+|x-ms-tenant-id|guid|ID of the tenant for the application|yes|
 |x-ms-correlation-id|guid|Identifier for the analysis run. You should provide the same Id for the entire execution (upload, analyze, status)|yes|
 |Content-Type|object|multipart/form-data|yes|
 |Content-Disposition|object|Include name and filename parameters, e.g.-form-data; name="solution1.zip"; filename="solution1.zip"|yes|
@@ -46,7 +47,7 @@ The initiation of an analysis job requires a path to an `Azure` blob that is acc
 |--|--|--|
 |200|Upload was a success|No result body
 |400|A non zip file was sent, incorrect parameters, or a file was included with a virus|No result body|
-
+|413|File is too large|No result body|
 <a name="bkmk_upload"></a>
 
 ## Example: upload a file
