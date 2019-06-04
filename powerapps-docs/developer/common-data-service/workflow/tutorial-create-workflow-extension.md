@@ -75,7 +75,7 @@ This project will create a simple workflow assembly that will increment an decim
 
 1. Start Visual Studio.
 1. On the **File** menu, click **New**, and then click **Project**.
-1. In the **New Project** dialog box, under **Other Languages**, expand Visual C# and select **Workflow**, and then select **Activity Library**.
+1. In the **New Project** dialog box, expand **Visual C#** and select **Workflow**, and then select **Activity Library**.
 1. Specify a name and location for the solution, and then click **OK**.
 
     > [!NOTE]
