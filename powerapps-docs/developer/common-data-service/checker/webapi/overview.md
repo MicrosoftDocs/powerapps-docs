@@ -23,7 +23,7 @@ search.app:
 ---
 # Use the PowerApps checker web API
 
-The PowerApps checker web API provides a mechanism to run static analysis checks against customizations and extensions to the Common Data Service platform. It is available for makers and developers to perform rich static analysis checks on their solutions against a set of best practice rules to quickly identify problematic patterns. The service provides the logic for the [solution checker feature](../../../../maker/common-data-service/use-powerapps-checker.md) in the PowerApps maker portal (make.powerapps.com) and ISV studio tooling and is included as part of the automation for AppSource certifications. Interacting with the service directly in this manner allows for analysis of solutions that are included as part of on premises (all supported versions) and online environments.
+The PowerApps checker web API provides a mechanism to run static analysis checks against customizations and extensions to the Common Data Service platform. It is available for makers and developers to perform rich static analysis checks on their solutions against a set of best practice rules to quickly identify problematic patterns. The service provides the logic for the [solution checker feature](../../../../maker/common-data-service/use-powerapps-checker.md) in the PowerApps maker portal (make.powerapps.com) and ISV studio tooling and is included as part of the automation for [applications submitted to AppSource](../../publish-app-appsource.md). Interacting with the service directly in this manner allows for analysis of solutions that are included as part of on premises (all supported versions) and online environments.
 
 <a name="bkmk_altApproaches"></a>
 
@@ -48,18 +48,11 @@ A few variations are:
 - You can opt to not use the upload mechanism (see the upload for limitations).
 
 You will need to determine the following:
-- [Use the PowerApps checker web API](#use-the-powerapps-checker-web-api)
-  - [Alternative approaches](#alternative-approaches)
-  - [Getting started](#getting-started)
-  - [Determine a geography](#determine-a-geography)
-  - [Versioning](#versioning)
-  - [Rulesets and rules](#rulesets-and-rules)
-    - [Solution checker ruleset](#solution-checker-ruleset)
-    - [AppSource certification ruleset](#appsource-certification-ruleset)
-  - [Find your tenant ID](#find-your-tenant-id)
-  - [Authentication and authorization](#authentication-and-authorization)
-  - [Report format](#report-format)
-    - [See also](#see-also)
+
+- [Which geography?](#determine-a-geography)
+- [Which version?](#versioning)
+- [Which rulesets and rules?](#rulesets-and-rules)
+- [What is your tenant ID?](#find-your-tenant-id)
 
 Refer to the following for documentation on the individual APIs:
 
