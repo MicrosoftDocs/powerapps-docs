@@ -27,7 +27,7 @@ search.app:
 The initiation of an analysis job requires a path to an `Azure` blob that is accessible by URL. We do provide the ability to upload a file to our Azure blob storage in the specified geography using the upload service. It is not required that our upload API be used in order to run analysis. You can upload using a `POST` request to the following: _/api/upload?api-version=1.0_. We are only able to support uploading a file up to 30 MB in size. For anything larger you will need to provide your own externally accessible Azure storage and SAS URI. 
 
 > [!NOTE]
->  This endpoint does require an OAuth token.
+>  This API does require an OAuth token.
 
 <a name="bkmk_headers"></a>
 

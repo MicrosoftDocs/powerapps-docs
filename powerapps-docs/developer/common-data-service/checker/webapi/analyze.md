@@ -31,7 +31,7 @@ Initiating an analysis job is done by submitting a `POST` request to the `analyz
 >  It is recommended to wait between 15 to 60 seconds between status checks. Analysis usually takes between 1 to 5 minutes to run.
 
 > [!NOTE]
->  This endpoint does require an OAuth token.
+>  This API does require an OAuth token.
 
 <a name="bkmk_headers"></a>
 

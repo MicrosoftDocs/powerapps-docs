@@ -30,7 +30,7 @@ A URL is returned as part of the `Location` header in response to a request to t
 >  It is recommended to wait between 15 to 60 seconds between status checks. Analysis usually takes between 1 to 5 minutes to run.
 
 > [!NOTE]
->  This endpoint does require an OAuth token the must be a token for the same client application that initiated the analysis job.
+>  This API does require an OAuth token the must be a token for the same client application that initiated the analysis job.
 
 <a name="bkmk_headers"></a>
 
