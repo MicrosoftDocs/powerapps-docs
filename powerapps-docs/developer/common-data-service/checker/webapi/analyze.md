@@ -24,6 +24,8 @@ search.app:
 
 # Invoke analysis
 
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../../../includes/cc-beta-prerelease-disclaimer.md)]
+
 Initiating an analysis job is done by submitting a `POST` request to the `analyze` route. Analysis can be a long running process, which is usually longer than a minute, so the API does some basic validation, initiates the request on the backend by submitting a job, and responds with a status code of 202 and a `Location` header or with the apprioriate error details. The `Location` header value is a URL that can be used to check on the status of the request and to obtain the URL(s) of the result(s). There are various options through the POST action to taylor the job based on your criteria, such as the list of rules or rulesets, files to exclude from the analysis, etc. You can initiate using the following _/api/analyze?api-version=1.0_.
 
 

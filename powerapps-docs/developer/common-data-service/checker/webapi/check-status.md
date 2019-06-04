@@ -24,6 +24,8 @@ search.app:
 
 # Check for analysis status
 
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../../../includes/cc-beta-prerelease-disclaimer.md)]
+
 A URL is returned as part of the `Location` header in response to a request to the `analyze` API. It is to be used to query via HTTP `GET` for the analysis job's status. When the analysis job is finished the response body will include the URL or list of URLs in which the results output can be downloaded. Keep calling this URI until an HTTP status code of 200 is returned. While the job is still running, an HTTP status code of 202 will be returned with the `Location` header containing this same URI that was returne from `analyze`. Once a 200 response is returned, the `resultFileUris` property will include the single or list of downloadable locations of the output, which is contained in a zip file. A [SARIF](https://sarifweb.azurewebsites.net) V2 formatted file is included within this zip download that is a `JSON` formatted file containing the results of the analysis. The response body will contain an `IssueSummary` object that contains a summary of the count of issues found.
 
 > [!NOTE]

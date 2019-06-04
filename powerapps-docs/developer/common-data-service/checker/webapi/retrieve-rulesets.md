@@ -24,6 +24,8 @@ search.app:
 
 # Retrieve the list of rulesets
 
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../../../includes/cc-beta-prerelease-disclaimer.md)]
+
 Rules are grouped together using a ruleset. Rulesets can have one or more rules with no limit. A rule can be in no or multiple rulesets. Use a `GET` request to obtain a list of all rulesets available by calling the API, */api/ruleset*.
 
 > [!NOTE]
