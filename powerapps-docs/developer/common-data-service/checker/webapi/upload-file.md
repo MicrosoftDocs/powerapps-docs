@@ -32,6 +32,7 @@ The initiation of an analysis job requires a path to an `Azure` blob that is acc
 <a name="bkmk_headers"></a>
 
 ## Headers
+
 |Name|Type|Expected value|Required?|
 |--|--|--|--|
 |Authorization|string|OAuth 1 bearer token with AAD Application ID claim|yes|
@@ -43,6 +44,7 @@ The initiation of an analysis job requires a path to an `Azure` blob that is acc
 <a name="bkmk_responses"></a>
 
 ## Expected responses
+
 |HTTP status code|Scenario|Result|
 |--|--|--|
 |200|Upload was a success|No result body
@@ -55,6 +57,7 @@ The initiation of an analysis job requires a path to an `Azure` blob that is acc
 This example demonstrates how a file can be uploaded that is to be analyzed.
 
 **Request**
+
 ```http
 POST [Geographical URI]/api/upload
 Accept: application/json
@@ -64,6 +67,7 @@ Content-Disposition: form-data; name=mySolution.zip; filename=mySolution.zip
 ```
 
 **Response**
+
 ```http
 HTTP/1.1 200 OK
 Content-Type: application/json; charset=utf-8

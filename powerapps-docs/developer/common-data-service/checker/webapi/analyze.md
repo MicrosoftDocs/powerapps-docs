@@ -36,6 +36,7 @@ Initiating an analysis job is done by submitting a `POST` request to the `analyz
 <a name="bkmk_headers"></a>
 
 ## Headers
+
 |Name|Type|Expected value|Required?|
 |--|--|--|--|
 |Authorization|string|OAuth 1 bearer token with AAD Application Id claim|yes|
@@ -61,6 +62,7 @@ Initiating an analysis job is done by submitting a `POST` request to the `analyz
 <a name="bkmk_responses"></a>
 
 ## Expected responses
+
 |HTTP status code|Scenario|Result|
 |--|--|--|
 |202|Request for analysis was accepted and the status check URI was returned in the `Location` header|No result body
@@ -68,6 +70,7 @@ Initiating an analysis job is done by submitting a `POST` request to the `analyz
 |409|A request with a duplicate x-ms-correlation-id header value was sent|No result body|
 
 ### Expected response headers
+
 |Name|Type|Expected value|Required?|
 |--|--|--|--|
 |Location|Uri|URL to use in querying for the current status and to obtain the results|yes|
@@ -79,6 +82,7 @@ Initiating an analysis job is done by submitting a `POST` request to the `analyz
 This is an example of initiating an analysis job with the _AppSource Certification_ ruleset, a single file, and excluding files that contain the text _jquery_ and _json_ in the name.
 
 **Request**
+
 ```http
 POST [Geographical URI]/api/analyze?api-version=1.0
 Accept: application/json
@@ -95,6 +99,7 @@ x-ms-correlation-id: 9E378E56-6F35-41E9-BF8B-C0CC88E2B832
 ```
 
 **Response**
+
 ```http
 HTTP/1.1 202 Accepted
 Content-Type: application/json; charset=utf-8

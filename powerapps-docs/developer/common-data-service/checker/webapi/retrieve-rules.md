@@ -32,6 +32,7 @@ Rules are grouped together using a ruleset. A rule can be in no or multiple rule
 <a name="bkmk_headers"></a>
 
 ## Headers
+
 |Name|Type|Expected value|Required?|
 |--|--|--|--|
 |Accept-Language|string|language code, e.g.- en-US. The default is en-US.|no
@@ -39,6 +40,7 @@ Rules are grouped together using a ruleset. A rule can be in no or multiple rule
 <a name="bkmk_params"></a>
 
 ## Parameters
+
 |Name|Type|Expected value|Required?|
 |--|--|--|--|
 |ruleset|string|Name or ID of the ruleset or a list of ruleset IDs or names separated by a comma or semicolon, e.g.- "Solution Checker"|no|
@@ -47,13 +49,16 @@ Rules are grouped together using a ruleset. A rule can be in no or multiple rule
 <a name="bkmk_responses"></a>
 
 ## Expected responses
+
 |HTTP status code|Scenario|Result|
 |--|--|--|
 |200|One or more results were found|See example below. One or more may be returned.|
 |204|No results were found|No result body|
 
 ### Expected response body
+
 The following table outlines the structure of the response for each request (HTTP 200 response only).
+
 |Property|Type|Expected value|Required?|
 |--|--|--|--|
 |code|string|Identifier of the rule, sometimes referred to Rule ID|Yes|
@@ -73,6 +78,7 @@ The following table outlines the structure of the response for each request (HTT
 This example returns data for all of the rules in the *Solution Checker* ruleset in French. If the desired languague is English, then just leave off the Accept-Language header.
 
 **Request**
+
 ```http
 GET [Geographical URI]/api/rule?ruleset=083A2EF5-7E0E-4754-9D88-9455142DC08B&api-version=1.0
 x-ms-correlation-id: 9E378E56-6F35-41E9-BF8B-C0CC88E2B832
@@ -82,6 +88,7 @@ Accept-Language: fr
 ```
 
 **Response**
+
 ```http
 HTTP/1.1 200 OK
 Content-Type: application/json; charset=utf-8
@@ -119,6 +126,7 @@ Content-Type: application/json; charset=utf-8
 This example returns data for all of the rules available.
 
 **Request**
+
 ```http
 GET [Geographical URI]/api/rule?api-version=1.0
 Accept: application/json
@@ -126,6 +134,7 @@ Content-Type: application/json; charset=utf-8
 ```
 
 **Response**
+
 ```http
 HTTP/1.1 200 OK
 Content-Type: application/json; charset=utf-8
@@ -158,11 +167,12 @@ Content-Type: application/json; charset=utf-8
 
 <a name="bkmk_retrieveForRuleset"></a>
 
-## Example: retrieve for a ruleset example with message formats
+## Example: retrieve for a ruleset with message formats
 
 This example returns data for all of the rules in the *Solution Checker* ruleset in French. If the desired languague is English, then just leave off the Accept-Language header.
 
 **Request**
+
 ```http
 GET [Geographical URI]/api/rule?ruleset=083A2EF5-7E0E-4754-9D88-9455142DC08B&includeMessageFormats=true&api-version=1.0
 Accept: application/json
@@ -170,6 +180,7 @@ Content-Type: application/json; charset=utf-8
 ```
 
 **Response**
+
 ```http
 HTTP/1.1 200 OK
 Content-Type: application/json; charset=utf-8

@@ -28,6 +28,7 @@ The PowerApps checker web API provides a mechanism to run static analysis checks
 <a name="bkmk_altApproaches"></a>
 
 ## Alternative approaches
+
 Before reading through the details of how to interact at the lowest level with the web APIs, consider leveraging our PowerShell module, Microsoft.PowerApps.Checker.PowerShell, instead. It is a fully supported tool that is available in the PowerShell Gallery. The current restriction is that it does require `Windows PowerShell`. If unable to meet this requirement, then interacting with the APIs directly will likely be the best fit for you.
 
 <a name="bkmk_getStarted"></a>
@@ -65,6 +66,7 @@ Refer to the following for documentation on the individual APIs:
 <a name="bkmk_geo"></a>
 
 ## Determine a geography
+
 When interacting with the PowerApps checker service files are temporarily stored in Azure along with the reports that are generated. By using a geography specific API, you can control where the data is stored. It is suggested to use the same geography for each API call in the analysis lifecycle. Each geography may have a different version at any given point in time due to our multi-stage safe deployment approach and doing this ensures full version compatibility. It also may reduce execution time as the data will not have to travel as far of a distance in some cases. The following are the available geographies:
 
 |Azure datacenter|Name|Geography|Base URI|
@@ -92,6 +94,7 @@ While not required, it is recommended to include the api-version query string pa
 <a name="bkmk_rules"></a>
 
 ## Rulesets and rules
+
 PowerApps checker requires a list of rules in which to run. This can be provided in the form of individual rules or a grouping of rules, referred to as a ruleset. A ruleset is a convenient way to specify a group of rules instead of having to specify each rule. For example, the solution checker feature uses a ruleset named *Solution Checker*. As new rules are added or removed, the service will include these changes automatically without requiring any change by the consuming application. If you require that the list of rules not change automatically as described above, then the rules can be specified individually.
 Rulesets can have one or more rules with no limit. A rule can be in no or multiple rulesets. You can get a list of all rulesets by calling the API as follows: _/api/ruleset_. This endpoint is open and does not require authentication.
 
@@ -121,6 +124,7 @@ The tenant ID is the value of the `ObjectId` property that is returned from `Get
 <a name="bkmk_auth"></a>
 
 ## Authentication and authorization
+
 Refer to [PowerApps Checker authentication and authorization](checker-api-auth.md). Querying for rules and rulesets do not require an OAuth token, but all of the other APIs do require the token. The APIs do support authorization discovery by calling any of the APIs that require a token. The response will be an unauthorized HTTP status code of 401 with a WWW-Authenticate header the authorization URI and resource ID. You should also provide your tenant ID in the `x-ms-tenant-id` header. here is an example of the header returned:
 
 ```http

@@ -35,6 +35,7 @@ A URL is returned as part of the `Location` header in response to a request to t
 <a name="bkmk_headers"></a>
 
 ## Headers
+
 |Name|Type|Expected value|Required?|
 |--|--|--|--|
 |Authorization|string|OAuth 1 bearer token with AAD Application Id claim|yes|
@@ -44,6 +45,7 @@ A URL is returned as part of the `Location` header in response to a request to t
 <a name="bkmk_responses"></a>
 
 ## Expected responses
+
 |HTTP status code|Scenario|Result|
 |--|--|--|
 |200|One or more results were found|See example below. One will be returned.|
@@ -52,12 +54,15 @@ A URL is returned as part of the `Location` header in response to a request to t
 |404|Not found|Unable to find the analysis request with the reference provided in the URL.|
 
 ### Expected response headers
+
 |Name|Type|Expected value|Required?|
 |--|--|--|--|
 |Location|uri|URI to use in querying for the current status and to obtain the results|yes|
 
 ### Expected response body
+
 The following table outlines the structure of the response for each request (HTTP 200 or 202 response only).
+
 |Property|Type|Expected value|Required?|
 |--|--|--|--|
 |privacyPolicy|string|URI of the privacy policy|Yes|
@@ -79,6 +84,7 @@ The following table outlines the structure of the response for each request (HTT
 This example issues a status check call with the result being a completion.
 
 **Request**
+
 ```http
 GET [Geographical URI]/api/status/9E378E56-6F35-41E9-BF8B-C0CC88E2B832&api-version=1.0
 Accept: application/json
@@ -102,6 +108,7 @@ x-ms-correlation-id: 9E378E56-6F35-41E9-BF8B-C0CC88E2B832
 ```
 
 **Response**
+
 ```http
 HTTP/1.1 200 OK
 Content-Type: application/json; charset=utf-8

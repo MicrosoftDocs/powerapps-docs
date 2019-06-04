@@ -39,6 +39,7 @@ Rules are grouped together using a ruleset. Rulesets can have one or more rules 
 |204|No results were found|No result body|
 
 ### Expected response body
+
 The following table outlines the structure of the response for each request (HTTP 200 response only).
 
 |Property|Type|Expected value|Required?|
@@ -53,6 +54,7 @@ The following table outlines the structure of the response for each request (HTT
 This example returns data for all of the rulesets available.
 
 **Request**
+
 ```http
 GET [Geographical URI]/api/ruleset?api-version=1.0
 Accept: application/json
@@ -61,6 +63,7 @@ Content-Type: application/json; charset=utf-8
 ```
 
 **Response**
+
 ```http
 HTTP/1.1 200 OK
 Content-Type: application/json; charset=utf-8
