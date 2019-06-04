@@ -163,6 +163,11 @@ using (var client = new HttpClient())
 ```
 Once you have acquired the token, it is advised that you provide the same token to subsequent calls in the request lifecycle, however, additional requests will likely warrant a new token be acquired for security reasons.
 
+<a name="bkmk_transport"></a>
+
+## Transport security
+In support of our promise to provide best-in-class encryption to our customers, our service only supports communications using Transport Layer Security (TLS) 1.2 and above. For guidance on .NET best practices around TLS, refer to [Transport Layer Security (TLS) best practices with the .NET Framework](https://docs.microsoft.com/dotnet/framework/network-programming/tls).
+
 <a name="bkmk_report"></a>
 
 ## Report format
