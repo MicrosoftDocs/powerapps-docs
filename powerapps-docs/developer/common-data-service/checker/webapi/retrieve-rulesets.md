@@ -32,6 +32,7 @@ Rules are grouped together using a ruleset. Rulesets can have one or more rules 
 <a name="bkmk_responses"></a>
 
 ## Expected responses
+
 |HTTP status code|Scenario|Result|
 |--|--|--|
 |200|One or more results were found|See example below. One or more may be returned.|
@@ -39,6 +40,7 @@ Rules are grouped together using a ruleset. Rulesets can have one or more rules 
 
 ### Expected response body
 The following table outlines the structure of the response for each request (HTTP 200 response only).
+
 |Property|Type|Expected value|Required?|
 |--|--|--|--|
 |id|Guid|Identifier of the ruleset|Yes|
