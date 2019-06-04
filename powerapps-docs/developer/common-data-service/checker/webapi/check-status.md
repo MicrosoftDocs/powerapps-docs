@@ -92,9 +92,8 @@ GET [Geographical URI]/api/status/9E378E56-6F35-41E9-BF8B-C0CC88E2B832&api-versi
 Accept: application/json
 Content-Type: application/json; charset=utf-8
 x-ms-correlation-id: 9E378E56-6F35-41E9-BF8B-C0CC88E2B832
-```
+x-ms-tenant-id: F2E60E49-CB87-4C24-8D4F-908813B22506
 
-```json
 {
     "privacyPolicy":"https://go.microsoft.com/fwlink/?LinkID=310140",
     "progress":100,

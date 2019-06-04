@@ -80,7 +80,6 @@ Content-Type: application/json; charset=utf-8
         "name": "Solution Checker"
     }
 ]
-
 ```
 
 ### See also

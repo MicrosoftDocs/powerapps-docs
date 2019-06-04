@@ -49,9 +49,10 @@ The initiation of an analysis job requires a path to an `Azure` blob that is acc
 
 |HTTP status code|Scenario|Result|
 |--|--|--|
-|200|Upload was a success|No result body
+|200|Upload was a success|No result body|
 |400|A non zip file was sent, incorrect parameters, or a file was included with a virus|No result body|
 |413|File is too large|No result body|
+
 <a name="bkmk_upload"></a>
 
 ## Example: upload a file
@@ -64,6 +65,7 @@ This example demonstrates how a file can be uploaded that is to be analyzed.
 POST [Geographical URI]/api/upload
 Accept: application/json
 x-ms-correlation-id: 9E378E56-6F35-41E9-BF8B-C0CC88E2B832
+x-ms-tenant-id: F2E60E49-CB87-4C24-8D4F-908813B22506
 Content-Type: multipart/form-data
 Content-Disposition: form-data; name=mySolution.zip; filename=mySolution.zip
 ```
@@ -75,7 +77,6 @@ HTTP/1.1 200 OK
 Content-Type: application/json; charset=utf-8
 
 ["https://mystorage.blob.core.windows.net/solution-files/0a4cd700-d1d0-4ef8-8318-e4844cc1636c/mySolution.zip?sv=2017-11-09&sr=b&sig=xyz&se=2019-06-11T19%3A05%3A20Z&sp=rd"]
-
 ```
 
 ### See also

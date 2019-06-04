@@ -91,7 +91,7 @@ When interacting with the PowerApps checker service files are temporarily stored
 
 ## Versioning
 
-While not required, it is recommended to include the api-version query string parameter with the desired version. The current version is 1.0. Example - [https://unitedstatesfirstrelease.api.advisor.powerapps.com/api/ruleset?**api-version=1.0**](https://unitedstatesfirstrelease.api.advisor.powerapps.com/api/ruleset?api-version=1.0). If not provided, then the latest version will be used by default. Using an explicit version is recommended as version will be incremented when breaking changes are introduced. If the version is specified, there will be backward compatibility support.
+While not required, it is recommended to include the api-version query string parameter with the desired version. The current version is 1.0. Example - [https://unitedstatesfirstrelease.api.advisor.powerapps.com/api/ruleset?**api-version=1.0**](https://unitedstatesfirstrelease.api.advisor.powerapps.com/api/ruleset?api-version=1.0). If not provided, then the latest version will be used by default. Using an explicit version is recommended as version will be incremented if breaking changes are introduced. If the version is specified, there will be backward compatibility support.
 
 <a name="bkmk_rules"></a>
 

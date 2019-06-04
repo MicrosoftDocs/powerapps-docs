@@ -118,7 +118,6 @@ Content-Type: application/json; charset=utf-8
     },
 ...
 ]
-
 ```
 
 <a name="bkmk_retrieveAll"></a>
@@ -164,7 +163,6 @@ Content-Type: application/json; charset=utf-8
     },
 ...
 ]
-
 ```
 
 <a name="bkmk_retrieveForRuleset"></a>
@@ -244,7 +242,6 @@ Content-Type: application/json; charset=utf-8
     },
 ...
 ]
-
 ```
 
 ### See also
