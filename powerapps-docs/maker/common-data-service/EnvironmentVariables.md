@@ -19,21 +19,21 @@ search.app:
   - D365CE
 ---
 # Environment variables overview 
-Applications and Flows often require different configuration settings across environments. Environment variables provide the cability to transport your application configuration data with solutions. Environment variables act as configurable input parameters and allow you to manage configuration data separately - instead of hard-coding values within your customizations or using various tools to transport record data. Because they're solution components, performance is much better than using data import.
+Applications and Flows often require different configuration settings across environments. Environment variables provide the cability to transport your application configuration data within solutions. They serve as configurable input parameters and allow management of configuration data separately - instead of hard-coding values within your customizations or using various tools to transport record data. Because they're solution components, performance is much better than using data import.
 
 Benefits of using Environment variables:
-- No need to manually edit things in a production environment
+- No need to manually edit configurable values in a production environment
 - Configure in one place and reference like a parameter - even reference a single variable from multiple solution components
 - Update values without a code change
-- Granular level security managed by CDS
-- Managed properties can be set to block editing the values
+- Granular level security managed by the Common Data Service for Apps
+- Managed properties can be set to block editing the definitions and values
 - The number of variables is unlimited (although the max solution size is 29 MB)
-- Service definitions and values separately or together via solutions
+- Service the definitions and values independently or together
 - Supported by Solution Packager and DevOps tooling enabling CI/CD
 - Localization and dependency tracking are supported
 
 # How they work
-Environment variables support CRUD operations through our interface and programatically via the SDK. A separate JSON file is created within your solution package, which can also be managed in source control. We also support export to Excel from a model-driven app. After creating Environment variables in the Common Data Service or Dynamics 365 Customer Engagement, you can consume them in plugins, Flows, and other components.
+Environment variables support CRUD operations through the PowerApps interface and programatically via the SDK. A separate JSON file is created within your solution package for the values, which can also be managed in source control. We also support exporting to and importing from Excel. After creating Environment variables in the Common Data Service or Dynamics 365 Customer Engagement, you can use them as inputs within plugins, Flows, and other components.
 
 ## Default value
 This field is part of the Environment variable definition entity is not required. Set a default value for the value to be used in production or when the values don't need to be changed for different environments.
@@ -49,11 +49,12 @@ When Environment variables do not have any values, users with access to the vari
 
 
 # Current limitations
-- Modifying values while using the PowerApps interface to imports solutions
+- Modifying values during the solution import process
 - Caching
 - Native support for canvas apps
-- Key vault integration for secrets
+- Not a secure store for secrets such as passwords
 - Scoping (Environment, user, etc)
+- Dependencies for certain component types 
 
 ### See also
 [Use plug-ins to extend business processes](https://docs.microsoft.com/powerapps/developer/common-data-service/plug-ins)
