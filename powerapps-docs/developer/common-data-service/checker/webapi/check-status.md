@@ -26,7 +26,7 @@ search.app:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../../../includes/cc-beta-prerelease-disclaimer.md)]
 
-A URL is returned as part of the `Location` header in response to a request to the `analyze` API. It is to be used to query via HTTP `GET` for the analysis job's status. When the analysis job is finished the response body will include the URL or list of URLs in which the results output can be downloaded. Keep calling this URI until an HTTP status code of 200 is returned. While the job is still running, an HTTP status code of 202 will be returned with the `Location` header containing this same URI that was returne from `analyze`. Once a 200 response is returned, the `resultFileUris` property will include the single or list of downloadable locations of the output, which is contained in a zip file. A [SARIF](https://sarifweb.azurewebsites.net) V2 formatted file is included within this zip download that is a `JSON` formatted file containing the results of the analysis. The response body will contain an `IssueSummary` object that contains a summary of the count of issues found.
+A URL is returned as part of the `Location` header in response to a request to the `analyze` API. It is to be used to query via HTTP `GET` for the analysis job's status. When the analysis job is finished the response body will include the URL or list of URLs in which the results output can be downloaded. Keep calling this URI until an HTTP status code of 200 is returned. While the job is still running, an HTTP status code of 202 will be returned with the `Location` header containing this same URI that was returned from `analyze`. Once a 200 response is returned, the `resultFileUris` property will include the single or list of downloadable locations of the output, which is contained in a zip file. A [SARIF](https://sarifweb.azurewebsites.net) V2 formatted file is included within this zip download that is a `JSON` formatted file containing the results of the analysis. The response body will contain an `IssueSummary` object that contains a summary of the count of issues found.
 
 > [!NOTE]
 >  It is recommended to wait between 15 to 60 seconds between status checks. Analysis usually takes between 1 to 5 minutes to run.
@@ -39,7 +39,7 @@ A URL is returned as part of the `Location` header in response to a request to t
 ## Headers
 
 |Name|Type|Expected value|Required?|
-|--|--|--|--|
+|---|---|---|---|
 |Authorization|string|OAuth 1 bearer token with AAD Application Id claim|yes|
 |x-ms-tenant-id|guid|ID of the tenant for the application|yes|
 |x-ms-correlation-id|guid|Identifier for the analysis run. You should provide the same Id for the entire execution (upload, analyze, status)|yes|
@@ -49,7 +49,7 @@ A URL is returned as part of the `Location` header in response to a request to t
 ## Expected responses
 
 |HTTP status code|Scenario|Result|
-|--|--|--|
+|---|---|---|
 |200|One or more results were found|See example below. One will be returned.|
 |202|Still processing|See example below. One will be returned.|
 |403|Forbidden|The requestor is not the same as the originator of the request for analysis.|
@@ -58,7 +58,7 @@ A URL is returned as part of the `Location` header in response to a request to t
 ### Expected response headers
 
 |Name|Type|Expected value|Required?|
-|--|--|--|--|
+|---|---|---|---|
 |Location|uri|URI to use in querying for the current status and to obtain the results|yes|
 
 ### Expected response body
@@ -66,7 +66,7 @@ A URL is returned as part of the `Location` header in response to a request to t
 The following table outlines the structure of the response for each request (HTTP 200 or 202 response only).
 
 |Property|Type|Expected value|Required?|
-|--|--|--|--|
+|---|---|---|---|
 |privacyPolicy|string|URI of the privacy policy|Yes|
 |progress|int|0-100, percentage complete where 10 means that processing is approximately 10% complete.|Yes|
 |runCorrelationId|guid|Request identifier that is included in each request. This can be used to correlate to the request, if needed.|Yes|
@@ -93,6 +93,13 @@ Accept: application/json
 Content-Type: application/json; charset=utf-8
 x-ms-correlation-id: 9E378E56-6F35-41E9-BF8B-C0CC88E2B832
 x-ms-tenant-id: F2E60E49-CB87-4C24-8D4F-908813B22506
+```
+
+**Response**
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
 
 {
     "privacyPolicy":"https://go.microsoft.com/fwlink/?LinkID=310140",
@@ -106,13 +113,6 @@ x-ms-tenant-id: F2E60E49-CB87-4C24-8D4F-908813B22506
         "criticalIssueCount":0
     }
 }
-```
-
-**Response**
-
-```http
-HTTP/1.1 200 OK
-Content-Type: application/json; charset=utf-8
 ```
 
 

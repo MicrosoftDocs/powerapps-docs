@@ -40,7 +40,7 @@ Initiating an analysis job is done by submitting a `POST` request to the `analyz
 ## Headers
 
 |Name|Type|Expected value|Required?|
-|--|--|--|--|
+|---|---|---|---|
 |Authorization|string|OAuth 1 bearer token with AAD Application Id claim|yes|
 |x-ms-tenant-id|guid|ID of the tenant for the application|yes|
 |x-ms-correlation-id|guid|Identifier for the analysis run. You should provide the same Id for the entire execution (upload, analyze, status)|yes|
@@ -54,7 +54,7 @@ Initiating an analysis job is done by submitting a `POST` request to the `analyz
 ### Commonly used options:
 
 |Property|Type|Expected value|Required?|
-|--|--|--|--|
+|---|---|---|---|
 |sasUriList|array of strings|List of URIs that provides the service access to download a single solution, a zip file containing multiple solution files, or a package|Yes|
 |ruleSets|array of custom|0 or more|No|
 |ruleSets.id|guid|Id of the ruleset, which can be found by querying the ruleset API.|No, but this is usually what you would want to use. You must use either this or ruleCodes.|
@@ -66,7 +66,7 @@ Initiating an analysis job is done by submitting a `POST` request to the `analyz
 ## Expected responses
 
 |HTTP status code|Scenario|Result|
-|--|--|--|
+|---|---|---|
 |202|Request for analysis was accepted and the status check URI was returned in the `Location` header|No result body
 |400|A non zip file was sent, incorrect parameters, or a file was included with a virus|No result body|
 |409|A request with a duplicate x-ms-correlation-id header value was sent|No result body|
@@ -74,7 +74,7 @@ Initiating an analysis job is done by submitting a `POST` request to the `analyz
 ### Expected response headers
 
 |Name|Type|Expected value|Required?|
-|--|--|--|--|
+|---|---|---|---|
 |Location|Uri|URL to use in querying for the current status and to obtain the results|yes|
 
 <a name="bkmk_analyzeExample"></a>

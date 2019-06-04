@@ -36,7 +36,7 @@ Rules are grouped together using a ruleset. Rulesets can have one or more rules 
 ## Expected responses
 
 |HTTP status code|Scenario|Result|
-|--|--|--|
+|---|---|---|
 |200|One or more results were found|See example below. One or more may be returned.|
 |204|No results were found|No result body|
 
@@ -45,7 +45,7 @@ Rules are grouped together using a ruleset. Rulesets can have one or more rules 
 The following table outlines the structure of the response for each request (HTTP 200 response only).
 
 |Property|Type|Expected value|Required?|
-|--|--|--|--|
+|---|---|---|---|
 |id|Guid|Identifier of the ruleset|Yes|
 |name|string|Friendly name of the ruleset|Yes|
 

@@ -36,7 +36,7 @@ Rules are grouped together using a ruleset. A rule can be in no or multiple rule
 ## Headers
 
 |Name|Type|Expected value|Required?|
-|--|--|--|--|
+|---|---|---|---|
 |Accept-Language|string|language code, e.g.- en-US. The default is en-US.|no
 
 <a name="bkmk_params"></a>
@@ -44,7 +44,7 @@ Rules are grouped together using a ruleset. A rule can be in no or multiple rule
 ## Parameters
 
 |Name|Type|Expected value|Required?|
-|--|--|--|--|
+|---|---|---|---|
 |ruleset|string|Name or ID of the ruleset or a list of ruleset IDs or names separated by a comma or semicolon, e.g.- "Solution Checker"|no|
 |includeMessageFormats|bool|When true the list of possible message variations are included in the results in the language(s) requests, if available. This is useful when needing to do translations into multiple languages. If not needed, then do not provide this parameter or provide false as the value as this will increase the size of the response and can increase processing time.|no|
 
@@ -53,7 +53,7 @@ Rules are grouped together using a ruleset. A rule can be in no or multiple rule
 ## Expected responses
 
 |HTTP status code|Scenario|Result|
-|--|--|--|
+|---|---|---|
 |200|One or more results were found|See example below. One or more may be returned.|
 |204|No results were found|No result body|
 
@@ -62,7 +62,7 @@ Rules are grouped together using a ruleset. A rule can be in no or multiple rule
 The following table outlines the structure of the response for each request (HTTP 200 response only).
 
 |Property|Type|Expected value|Required?|
-|--|--|--|--|
+|---|---|---|---|
 |code|string|Identifier of the rule, sometimes referred to Rule ID|Yes|
 |summary|string|Summary of the the rule|Yes|
 |description|string|More detailed description of the rule.|Yes|
