@@ -6,7 +6,7 @@ ms.date: 1/23/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.topic: "article"
-author: pehecke
+author: phecke
 ms.author: pehecke
 manager: kvivek
 search.audienceType: 
