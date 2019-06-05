@@ -103,7 +103,7 @@ In PowerApps, you can view the classic solution explorer by selecting **Solution
 - Button triggered Flows are not available in solutions.
 - Canvas app triggered Flows are not available in solutions.
 - Flows triggered from Microsoft 365 applications such as SharePoint and Excel are not available in solutions.
-- In a solution, you can create a flow that uses the new Common Data Service connector. However, adding a flow that was created outside a solution isn't supported due to potential failures. 
+- In a solution, you can create a flow that uses the Common Data Service connector or the new Common Data Service (Current Environment) connector. However, adding a flow that was created outside a solution that uses either isn't supported due to potential failures. 
 
  For details about customizing the individual components in a solution, see the following topics:  
   
