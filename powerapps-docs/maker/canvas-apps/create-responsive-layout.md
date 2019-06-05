@@ -130,7 +130,7 @@ You can use these formula patterns for expressing common layout relationships be
 | Bottom edge of **C** aligned with bottom edge of **D** | **Y** | `D.Y + D.Height - C.Height` | ![Example of pattern](media/create-responsive-layout/d4.png) |
 | **C** centered horizontally relative to **D** | **X** | `D.X + (D.Width - C.Width) / 2`  | ![Example of pattern](media/create-responsive-layout/d5.png) |
 | **C** centered vertically relative to **D** | **Y** | `D.Y + (D.Height - C.Height) /2` | ![Example of pattern](media/create-responsive-layout/d6.png) |
-| **C** positioned to the right of **D** with a gap of N | **X** | `D.X + D.Width - N` | ![Example of pattern](media/create-responsive-layout/d7.png) |
+| **C** positioned to the right of **D** with a gap of N | **X** | `D.X + D.Width + N` | ![Example of pattern](media/create-responsive-layout/d7.png) |
 | **C** positioned below **D** with a gap of *N*             | **Y** | `D.Y + D.Height + N` | ![Example of pattern](media/create-responsive-layout/d8.png) |
 | **C** fills space between **D** and right edge of parent | **X** | `D.X + D.Width` | ![Example of pattern](media/create-responsive-layout/d9.png) |
 |  | **Width** | `Parent.Width - C.X` |  |

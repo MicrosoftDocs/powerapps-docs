@@ -34,6 +34,8 @@ The control can have a horizontal or vertical layout.
 
 **[Value](properties-core.md)** – The value of an input control.
 
+**Selected** – The data record that represents the selected item.
+
 ## All properties
 
 **[Align](properties-text.md)** – The location of text in relation to the horizontal center of its control.
@@ -99,6 +101,8 @@ The control can have a horizontal or vertical layout.
 **RadioSize** – The diameter of the circles in a radio-button control.
 
 **[Reset](properties-core.md)** – Whether a control reverts to its default value.
+
+**SelectedText (Deprecated)** – A string value that represents the selected item.
 
 **[Size](properties-text.md)** – The font size of the text that appears on a control.
 

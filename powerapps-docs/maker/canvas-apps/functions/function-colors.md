@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
-ms.date: 05/02/2019
+ms.date: 06/04/2019
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -18,7 +18,8 @@ search.app:
 Using built in color values, defining custom colors, and using alpha channel.
 
 ## Description
-The **Color** enumeration is an easy way to access the colors defined by HTML's Cascading Style Sheets (CSS).  For example, **Color.Red** returns a pure red color.  The list of these colors is included at the end of this article.   
+
+The **Color** enumeration is an easy way to access the colors defined by HTML's Cascading Style Sheets (CSS). For example, **Color.Red** returns a pure red color.  The list of these colors is included at the end of this article.
 
 The **ColorValue** function returns a color based on a CSS color string.  The string can be in one of three forms:
 - **CSS color name:**  For example **"RoxyBrown"** or **"OliveDrab"**.  Spaces are omitted.  See the list of supported colors below.
@@ -42,6 +43,7 @@ Alpha blending can also be done with images.  Not all image file formats support
 All the **Color** enumeration values and the **ColorValue** function when used with color names or a 6 digit hexadecimal value use an alpha setting of 100% or fully opaque. 
 
 ## Syntax
+
 **Color**.*ColorName*
 
 * *ColorName* - Required.  A Cascading Style Sheet (CSS) color name.  See list below of possible enumeration values.
@@ -53,14 +55,14 @@ All the **Color** enumeration values and the **ColorValue** function when used w
 **RGBA**( *Red*, *Green*, *Blue*, *Alpha* )
 
 * *Red*, *Green*, *Blue* - Required.  Color component values, ranging from 0 (no saturation) to 255 (full saturation).
-* *Alpha* - Required.  Alpha component, ranging from 0 (fully transparent) to 1 (fully opaque).  You can also use a percentage, 0% to 100%.
+* *Alpha* - Required.  Alpha component, ranging from 0 (fully transparent) to 1 (fully opaque). You can also use a percentage, 0% to 100%.
 
 **ColorFade**( *Color*, *FadeAmount* )
 
 * *Color* - Required.  A color value such as **Color.Red** or the output from **ColorValue** or **RGBA**.
-* *FadeAmount* - Required.  A number between -1 and 1.  -1 fully darkens a color to black, 0 has no impact on the color, and 1 fully brightens a color to white.  
+* *FadeAmount* - Required.  A number between -1 and 1.  -1 fully darkens a color to black, 0 has no impact on the color, and 1 fully brightens a color to white. You can also use a percentage from -100% to 100%
 
-## Built in colors
+## Built-in colors
 
 | Color enumeration | ColorValue | RGBA | Color Swatch |
 | --- | --- | --- | --- |

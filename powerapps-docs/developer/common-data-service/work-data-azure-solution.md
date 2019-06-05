@@ -2,7 +2,7 @@
 title: "Work with Dynamics 365 data in your Azure solution (Common Data Service) | Microsoft Docs"
 description: "The ServiceBusPlugin plug-in contains the business logic to post the Dynamics 365 message execution context to the Azure Service Bus. To use this plug-in, you need to register a Azure Service Bus solution endpoint and a step for the plug-in. The step defines what message and entity combination being processed by the core Dynamics 365 operation should trigger the plug-in to execute. The ServiceBusPlugin can only be registered to run asynchronously."
 keywords: ""
-ms.date: 10/31/2018
+ms.date: 06/01/2019
 ms.service:
   - powerapps
 ms.custom:
@@ -22,7 +22,7 @@ search.app:
 
 # Work with Common Data Service data in your Azure solution
 
-An internal plug-in named ServiceBusPlugin is provided with Dynamics 365 (online) Common Data Service. The plug-in contains the business logic to post the Dynamics 365 message execution context to the Azure Service Bus. To use this plug-in, you need to register a Azure Service Bus solution endpoint and a step for the plug-in. The step defines what message and entity combination being processed by the core Dynamics 365 operation should trigger the plug-in to execute. The ServiceBusPlugin can only be registered to run asynchronously. For more information, see [Walkthrough: Register an Azure-aware Plug-in using the Plug-in Registration Tool](walkthrough-register-azure-aware-plug-in-using-plug-in-registration-tool.md).  
+An internal plug-in named `ServiceBusPlugin` is provided with Common Data Service (CDS). The plug-in contains the business logic to post the CDS message execution context to the Azure Service Bus. To use this plug-in, you need to register a Azure Service Bus solution endpoint and a step for the plug-in. The step defines what message and entity combination being processed by the core CDS operation should trigger the plug-in to execute. The `ServiceBusPlugin` can only be registered to run asynchronously. For more information, see [Walkthrough: Register an Azure-aware Plug-in using the Plug-in Registration Tool](walkthrough-register-azure-aware-plug-in-using-plug-in-registration-tool.md).  
   
  In addition, you can write a custom plug-in that includes the required lines of code to post to the service bus. The plug-in is registered in a similar way, except that it must be registered in the sandbox and run under partial trust. For more information on writing a custom plug-in that can post to the Azure Service Bus, see [Write a Custom Azure-aware Plug-in](write-custom-azure-aware-plugin.md).  
   

@@ -2,7 +2,7 @@
 title: "Logging and tracing (Common Data Service) | Microsoft Docs"
 description: "Use the trace log to store plug-in execution information to aid in plug-in debugging."
 ms.custom: ""
-ms.date: 1/28/2019
+ms.date: 05/05/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.topic: "article"
@@ -17,97 +17,82 @@ search.app:
 ---
 # Tracing and logging
 
- An alternative method to troubleshoot a plug-in or custom workflow activity (custom code), compared to debugging in [!INCLUDE[pn_Visual_Studio](../../includes/pn-visual-studio.md)], is to use tracing. Tracing assists developers by recording run-time custom information as an aid in diagnosing the cause of code failures. Tracing is especially useful to troubleshoot [!INCLUDE[pn_CRM_Online](../../includes/pn-crm-online.md)] registered custom code as it is the only supported troubleshooting method for that scenario. Tracing is supported for sandboxed (partial trust) and full trust registered custom code and during synchronous or asynchronous execution. Tracing isn’t supported for custom code that executes in [!INCLUDE[pn_microsoft_dynamics_crm_for_outlook](../../includes/pn-microsoft-dynamics-crm-for-outlook.md)] or other mobile client.  
+Use tracing to troubleshoot a plug-in or custom workflow activity (custom code). Tracing assists developers by recording run-time information as an aid in diagnosing the cause of code failures. Tracing is supported for synchronous or asynchronous execution.
   
- Recording of run-time tracing information for [!INCLUDE[pn_dynamics_crm](../../includes/pn-dynamics-crm.md)] apps is provided by a service named <xref:Microsoft.Xrm.Sdk.ITracingService>. Information provided to this service by custom code can be recorded in three different places as identified here.  
-
-> [!NOTE]
-> Trace logging using `ITracingService` interface works only when the Plug-in is registered in Sandbox mode.
+Recording of run-time tracing information for Common Data Service is provided by a service named <xref:Microsoft.Xrm.Sdk.ITracingService>. Information provided to this service by custom code can be recorded in three different places as identified here.  
 
 - **Trace log**  
   
-     Trace log records of type **PluginTraceLog** can be found in the web application by navigating to **Settings** and choosing the **Plug-in Trace Log** tile. The tile is only visible if you have access to the trace log entity records in your assigned security role. Writing of these records is controlled by the trace settings mentioned in the next section.
-  
-    > [!NOTE]
+    Trace log records are written to the [PluginTraceLog Entity](reference/entities/plugintracelog.md). Writing of these records is controlled by the trace settings mentioned in [Enable trace logging](#enable-trace-logging).
+
+    This data can be found in model-driven applications by navigating to **Settings** and choosing the **Plug-in Trace Log** tile. The tile is only visible if you have access to the trace log entity records in your assigned security role.
+
+    You may find it easier to view this data by using the Web API in your browser using the example shown in [Use Tracing](debug-plug-in.md#use-tracing) or by using the [Plug-in trace viewer](#plug-in-trace-viewer) community tool.
+
+    > [!IMPORTANT]
     > Trace logging takes up organization storage space especially when many traces and exceptions are generated. You should only turn trace logging on for debugging and troubleshooting, and turn it off after your investigation is completed.  
   
 - **Error dialog**  
   
-     A synchronous registered plug-in or custom workflow activity that returns an exception back to the platform results in an error dialog box in the web application presented to the logged on user. The user may select the **Download Log File** button in the dialog to view the log containing exception and trace output.  
+     A synchronous registered plug-in or custom workflow activity that returns an exception from the platform results in an error dialog box in the web application presented to the logged on user. The user may select the **Download Log File** button in the dialog to view the log containing exception and trace output.  
   
 - **System job**  
   
      For asynchronous registered plug-in or custom workflow activities that returns an exception, the tracing information is shown in the **Details** area of the **System Job** form in the web application.  
   
-<a name="bkmk_trace-settings"></a>   
-## Enable trace logging  
- To enable trace logging in an organization that supports this feature, in the web application navigate to **Settings** > **Administration** > **System Settings**. In the **Customization** tab, locate the drop-down menu labeled **Enable logging to plug-in trace log** and select one of the available options.  
-  
-|Option|Description|  
-|------------|-----------------|  
-|Off|Writing to the trace log is disabled. No **PluginTraceLog** records will be created. However, custom code can still call the <xref:Microsoft.Xrm.Sdk.ITracingService.Trace(System.String,System.Object[])> method even though no log is written.|  
-|Exceptions|Trace information is written to the log if an exception is passed back to the platform from custom code.|  
-|All|Trace information is written to the log upon code completion or an exception is passed back to the platform from the custom code.|  
-  
- If the trace logging setting is set to **Exception** and your custom code returns an exception back to the platform, a trace log record is created and tracing information is also written to one other location. For custom code that executes synchronously, the information is presented to the user in an error dialog box, otherwise, for asynchronous code, the information is written to the related system job.  
-  
- By default, the System Administrator and System Customizer roles have the required privileges to change the trace logging setting, which is stored in a <xref:Microsoft.Xrm.Sdk.Deployment.TraceSettings> entity record. Trace settings have an organization scope.  
-  
-## Write to the tracing service  
- Before writing to the tracing service, you must first extract the tracing service object from the passed execution context. Afterwards, simply add <xref:Microsoft.Xrm.Sdk.ITracingService.Trace(System.String,System.Object[])> calls to your custom code where appropriate passing any relevant diagnostic information in that method call.  
+<a name="bkmk_trace-settings"></a>
 
- Download the sample: [Work with plug-ins](https://code.msdn.microsoft.com/Sample-Create-a-basic-plug-64d86ade).
+## Enable trace logging
+
+Whether trace logs will be written depends on the value of the [Organization](/powerapps/developer/common-data-service/reference/entities/organization) Entity [PluginTraceLogSetting](/powerapps/developer/common-data-service/reference/entities/organization#BKMK_PluginTraceLogSetting) attribute value.
+
+To enable trace logging you can programmatically update this value or in the web application navigate to **Settings** > **Administration** > **System Settings**. In the **Customization** tab, locate the drop-down menu labeled **Enable logging to plug-in trace log** and select one of the available options.  
+  
+|Value|Option|Description|  
+|------------|-----------------|-----------------|  
+|0|Off|Writing to the trace log is disabled. No **PluginTraceLog** records will be created. However, custom code can still call the <xref:Microsoft.Xrm.Sdk.ITracingService.Trace(System.String,System.Object[])> method even though no log is written.|  
+|1|Exceptions|Trace information is written to the log if an exception is passed back to the platform from custom code.|  
+|2|All|Trace information is written to the log upon code completion or an exception is passed back to the platform from the custom code.|  
+  
+If the trace logging setting is set to **Exception** and your custom code returns an exception back to the platform, a trace log record is created and tracing information is also written to one other location. For custom code that executes synchronously, the information is presented to the user in an error dialog box, otherwise, for asynchronous code, the information is written to the related system job.  
+
+## Write to the tracing service
+
+Before writing to the tracing service, you must first extract the tracing service object from the passed execution context. Afterwards, simply add <xref:Microsoft.Xrm.Sdk.ITracingService.Trace(System.String,System.Object[])> calls to your custom code where appropriate passing any relevant diagnostic information in that method call.  
+
   
  ```csharp
-//Extract the tracing service for use in debugging sandboxed plug-ins.
+//Extract the tracing service for use in debugging plug-ins.
  ITracingService tracingService =
      (ITracingService)serviceProvider.GetService(typeof(ITracingService));
 
- // Obtain the execution context from the service provider.
- IPluginExecutionContext context = (IPluginExecutionContext)
-     serviceProvider.GetService(typeof(IPluginExecutionContext));
-
- // For this sample, execute the plug-in code only while the client is online. 
- tracingService.Trace("AdvancedPlugin: Verifying the client is not offline.");
- if (context.IsExecutingOffline || context.IsOfflinePlayback)
-     return;
-
- // The InputParameters collection contains all the data passed 
- // in the message request.
- if (context.InputParameters.Contains("Target") &&
-     context.InputParameters["Target"] is Entity)
- {
-     // Obtain the target entity from the Input Parameters.
-     tracingService.Trace
-         ("AdvancedPlugin: Getting the target entity from Input Parameters.");
-     Entity entity = (Entity)context.InputParameters["Target"];
-
-     // Obtain the image entity from the Pre Entity Images.
-     tracingService.Trace
-         ("AdvancedPlugin: Getting image entity from PreEntityImages.");
-     Entity image = (Entity)context.PreEntityImages["Target"];
+ // Use the tracing service 
+ tracingService.Trace("Write your message here.");
+ 
 ```
 
-  
- Next, build and deploy the plug-in or custom workflow activity. During execution of the custom code, the information provided in the **Trace** method calls is written to a trace log entity record by <xref:Microsoft.Xrm.Sdk.ITracingService>, if supported by your organization and enabled, and may also be made available to the user in a Web dialog or system job as described in the previous section. Tracing information written to the trace log is configured in the trace settings. For more information see [Enable trace logging](#bkmk_trace-settings).  
+Next, build and deploy the plug-in or custom workflow activity. During execution of the custom code, the information provided in the **Trace** method calls is written to a trace log entity record by <xref:Microsoft.Xrm.Sdk.ITracingService>, if supported by your organization and enabled, and may also be made available to the user in a Web dialog or system job as described in the previous section. Tracing information written to the trace log is configured in the trace settings. For more information see [Enable trace logging](#bkmk_trace-settings).  
   
 > [!NOTE]
-> If your custom code executes within a database transaction, and an exception occurs that causes a transaction rollback, all entity data changes by your code will be undone. However, the **PluginTraceLog** records will remain after the rollback completes.  
+> If your custom code executes within a database transaction, and an exception occurs that causes a transaction rollback, all entity data changes by your code will be undone. However, the [PluginTraceLog](reference/entities/plugintracelog.md) records will remain after the rollback completes.  
   
 ## Additional information about the tracing service
 
- The <xref:Microsoft.Xrm.Sdk.ITracingService> batches the information provided to it through the **Trace** method. The information is written to a new **PluginTraceLog** record after the custom code successfully runs to completion or an exception is thrown.  
+The <xref:Microsoft.Xrm.Sdk.ITracingService> batches the information provided to it through the **Trace** method. The information is written to a new [PluginTraceLog](reference/entities/plugintracelog.md) record after the custom code successfully runs to completion or an exception is thrown.  
   
- PluginTraceLog records have a finite lifetime. A bulk deletion background job runs once per day to delete records that are older than 24 hours from creation. This job can be disabled when needed. 
+[PluginTraceLog](reference/entities/plugintracelog.md) records have a finite lifetime. A bulk deletion background job runs once per day to delete records that are older than 24 hours from creation. 
+
+> [!CAUTION]
+> While this job can be disabled or the frequency in which it occurs can be adjusted, failure to set it back to the original setting is frequently discovered to be the cause of performance issues later on.
 
 ## Community tools
 
  ### Plug-in trace viewer
 
-**Plugin Trace Viewer** is a tool that XrmToolbox community developed for [!INCLUDE[pn_dynamics_crm](../../includes/pn-dynamics-crm.md)] apps. Please see the [Developer tools](developer-tools.md) topic for community developed tools.
+**Plugin Trace Viewer** is a tool that XrmToolbox community developed. Please see the [Developer tools](developer-tools.md) topic for community developed tools.
 
 > [!NOTE]
-> The community tools are not a product of [!include[pn_microsoft_dynamics](../../includes/pn-microsoft-dynamics.md)] apps and does not extend support to the community tools. 
+> The community tools are not a product of Microsoft and does not extend support to the community tools. 
 > If you have questions pertaining to the tool, please contact the publisher. More Information: [XrmToolBox](https://www.xrmtoolbox.com).  
 
 ### See also
