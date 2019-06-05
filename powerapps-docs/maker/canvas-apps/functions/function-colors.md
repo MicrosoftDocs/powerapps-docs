@@ -15,42 +15,42 @@ search.app:
   - PowerApps
 ---
 # Color enumeration and ColorFade, ColorValue, and RGBA functions in PowerApps
-Using built in color values, defining custom colors, and using alpha channel.
+Using built-in color values, defining custom colors, and using the alpha channel.
 
 ## Description
 
-The **Color** enumeration is an easy way to access the colors defined by HTML's Cascading Style Sheets (CSS). For example, **Color.Red** returns a pure red color.  The list of these colors is included at the end of this article.
+The **Color** enumeration is an easy way to access the colors defined by HTML's Cascading Style Sheets (CSS). For example, **Color.Red** returns a pure red color. You can find a list of these colors at the end of this topic.
 
-The **ColorValue** function returns a color based on a CSS color string.  The string can be in one of three forms:
-- **CSS color name:**  For example **"RoxyBrown"** or **"OliveDrab"**.  Spaces are omitted.  See the list of supported colors below.
-- **6 digit hex value:** For example **"#ffd700"** (which is the same as **"Gold"**).  The string is in the format "#*rrggbb*" where *rr* is the two hexadecimal digit red portion, *gg* the green, and *bb* the blue.  
-- **8 digit hex value:** For example **"#ff7f5080"** (which is the same as **"Coral"** with a 50% alpha channel).  The string is in the format "#*rrggbbaa*" where *rr*, *gg*, and *bb* are identical to the 6 digit form.  Alpha channel is represented by *aa* with "00" representing fully transparent and *ff* representing fully opaque.   
+The **ColorValue** function returns a color based on a color string in a CSS. The string can take any of these forms:
+- **CSS color name:** **"RoxyBrown"** and **"OliveDrab"** are examples. These names don't include spaces. The list of supported colors appears later in this topic.
+- **6-digit hex value:** As an example **"#ffd700"** is the same as **"Gold"**. The string is in the format "#*RRGGBB*" where *RR* is the red portion in two hexadecimal digits, *GG* is the green, and *BB* is the blue.
+- **8-digit hex value:** As an example, **"#ff7f5080"** is the same as **"Coral"** with a 50% alpha channel. The string is in the format "#*RRGGBBAA*" where *RR*, *GG*, and *BB* are identical to the 6-digit form. The alpha channel is represented by *AA*: **00** represents fully transparent, and **ff** represents fully opaque.
 
-The **RGBA** function returns a color based on Red, Green, and Blue color components.  It also includes an alpha channel used for mixing colors of objects layered on top of one another.  Alpha varies from 0 or 0% which is fully transparent and invisible to 1 or 100% which is fully opaque and completely blocks out layers below.
+The **RGBA** function returns a color based on red, green, and blue color components. It also includes an alpha channel for mixing colors of objects that are layered on top of one another. Alpha varies from 0 or 0% (which is fully transparent and invisible) to 1 or 100% (which is fully opaque and completely blocks out any layers behind).
 
-The **ColorFade** function returns a brighter or darker version of a color.  The amount of fade varies from -1 which fully darkens a color to black, to 0 which has no impact on the color, to 1 which fully brightens a color to white.
+The **ColorFade** function returns a brighter or darker version of a color. The amount of fade varies from -1 (which fully darkens a color to black) to 0 (which has no impact on the color) to 1 (which fully brightens a color to white).
 
-## Alpha channel  
+## Alpha channel
 
-Controls in a canvas app can be layered on top of one another.  Each layer can control its transparency to the layers below it.  As a result colors will mix with one through the layers.  For example, this diagram shows how the three primary colors mix with an alpha setting of 50%:
+You can layer controls in a canvas app in front of one another and specify the transparency of a control to any controls that are behind it. As a result, colors will blend through the layers. For example, this diagram shows how the three primary colors mix with an alpha setting of 50%:
 
 ![](media/function-colors/alpha-primary.png)
 
-Alpha blending can also be done with images.  Not all image file formats supports an alpha channel; PNG files do while Jpeg files do not. In this example, a PNG file with a red 50% alpha squiggle, the same red color that was used in the previous example, is layered over the top of the green and blue circles from the previous example:  
+You can also blend images in file formats that support alpha channels. For example, you can't blend .jpeg files, but you can blend .png files. The next graphic shows the same red, green, and blue colors from the previous example, but the red color appears as a squiggle (instead of a circle) in a .png file with a 50% alpha channel:
 
 ![](media/function-colors/alpha-image.png)
 
-All the **Color** enumeration values and the **ColorValue** function when used with color names or a 6 digit hexadecimal value use an alpha setting of 100% or fully opaque. 
+If you specify a **Color** enumeration value or you build a **ColorValue** formula with a color name or a 6-digit hexadecimal value, the alpha setting is 100%, which is fully opaque.
 
 ## Syntax
 
 **Color**.*ColorName*
 
-* *ColorName* - Required.  A Cascading Style Sheet (CSS) color name.  See list below of possible enumeration values.
+* *ColorName* - Required.  A Cascading Style Sheet (CSS) color name. See list below of possible enumeration values.
 
 **ColorValue**( *CSSColor* )
 
-* *CSSColor* - Required.  A Cascading Style Sheet (CSS) color definition.  Both names of CSS colors, such as "OliveDrab", and hex values, such as "#6b8e23" and "#7fffd420", may be used. Hex values can either be in the form "#rrggbb" or "#rrggbbaa". 
+* *CSSColor* - Required.  A Cascading Style Sheet (CSS) color definition. You can specify either a name, such as **OliveDrab**, or a hex value, such as **#6b8e23** or **#7fffd420**. Hex values can take the form of either #*RRGGBB* or #*RRGGBBAA*.
 
 **RGBA**( *Red*, *Green*, *Blue*, *Alpha* )
 
