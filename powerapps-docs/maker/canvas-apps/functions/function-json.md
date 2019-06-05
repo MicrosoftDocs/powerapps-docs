@@ -18,9 +18,9 @@ search.app:
 Generates a JSON text string for a table, record, or value.
 
 ## Description
-The **JSON** function returns the JSON (JavaScript Object Notation) representation of a data structure as a text string, suitable for transmitting across a network or storing.  The format is described by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf) and [IETF RFC 8259](https://tools.ietf.org/html/rfc8259) and is widely used with JavaScript and other programming languages.
+The **JSON** function returns the JSON (JavaScript Object Notation) representation of a data structure as text, suitable for transmitting across a network or storing.  The format is described by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf) and [IETF RFC 8259](https://tools.ietf.org/html/rfc8259) and is widely used by JavaScript and other programming languages. 
 
-The data structure can consist of primitive values and records or tables that can be arbitrarily nested.  The following [canvas data types](data-types.md) are supported: 
+The following [canvas data types](data-types.md) are supported with details of their text representation: 
 
 | Data Type | Description | Result example |
 |-----------|-------------|---------| 
@@ -28,18 +28,18 @@ The data structure can consist of primitive values and records or tables that ca
 | **Color** | String containing the 8-digit hexadecimal representation for the color in the format "#rrggbbaa" with *rr* is the red component, *gg* is green, *bb* is blue, and *aa* is the alpha channel where *00* is fully transparent and *ff* is fully opaque. The string can be passed to the [**ColorValue** function](function-colors.md).  | `"#102030ff"` |
 | **Currency, Number** | Number using a dot decimal separator that is independent of the user's language.  Scientific notation is used if needed. | `1.345` |
 | **Date** | String containing the date in ISO 8601 **yyyy-mm-dd** format. | `"2019-03-31"` |
-| **DateTime** | String containing an ISO 8601 date/time. Date/time values are time zone agnostic and will be saved with a "Z" indicating UTC.  | `"2019-03-31T22:32:06.822Z"`  |
+| **DateTime** | String containing an ISO 8601 date/time. Date/time values are in UTC as indicated by the "Z" at the end.  | `"2019-03-31T22:32:06.822Z"`  |
 | **GUID** | String containing the GUID value.  Alphabetic characters will be lowercase. | `"751b58ac-380e-4a04-a925-9f375995cc40"`
 | **Image, Media** | If **IncludeBinaryData** is specified, media files are encoded in a string.  Web references using the http: and https: URL schemes are not modified.  References to in memory binary data, such as captured with the [**Camera**](../controls/control-camera.md) control and any other references with the appres: and blob: URL schemes will be encoded with the ["data:*mimetype*;base64,..."](https://en.wikipedia.org/wiki/Data_URI_scheme) format. | `"data:image/jpeg;base64,/9j/4AA..."` |
 | **Number** | Number using a dot decimal separator that is independent of the user's language.  Scientific notation is used if needed. | `1.345` |
 | **Option&nbsp;set** | The numeric value of the option set, not the label used for display. The numeric value is used because it is language independent.  | `1001` |
 | **Time** | String containing an ISO 8601 **HH:mm:ss.fff** format.  | `"23:12:49.000"` |
-| **Record** | **{** and **}** are wrapped around the comma delimited list of fields and their values.  This is similar to canvas app record notation except that the name is always quoted.  Records that are based on a Many-to-One relationship are not supported.  | `{ "First Name": "Fred", "Age": 21 }` |
+| **Record** | **{** and **}** are wrapped around the comma delimited list of fields and their values.  This is similar to canvas record notation except that the name is always double quoted.  Records that are based on a Many-to-One relationship are not supported.  | `{ "First Name": "Fred", "Age": 21 }` |
 | **Table** | **[** and **]** are wrapped around the comma delimited list of records.  Tables that are based on a a One-to-Many relationship are not supported.  | `[ { "First Name": "Fred", "Age": 21 }, { "First Name": "Jean", "Age": 20 } ]` |
 | **Two&nbsp;option** | The Boolean value of the two option, *true* or *false*, not the label used for display.  The Boolean value is used because it is language independent. | `false` |
 | **Hyperlink, Text** | Double quoted string.  Embedded double quote characters are escaped with a backslash, newlines are replaced with "\n", and other standard JavaScript replacements. | `"This is a string."` | 
 
-Use the optional *Format* argument to control the readability of the result and how some data types are handled.  By default, the output is as compact as possible for transmission across a network with no unnecessary spaces or newlines and unsupported data types and binary data are not allowed.  Multiple formats can be combined with the **&** operator.
+Use the optional *Format* argument to control the readability of the result and how unsupported and binary data types are handled.  By default, the output is as compact as possible with no unnecessary spaces or newlines and unsupported data types and binary data disallowed.  Multiple formats can be combined with the **&** operator.
 
 | JSONFormat Enum | Description |
 |-----------------|-------------|
@@ -162,7 +162,7 @@ For columns that have both a display name and a logical name, the logical name w
 
 2. Add a [**Button** control](../controls/control-button.md) and set its **OnSelect** property to the formula.
 
-    ```powrapps-dot
+    ```powerapps-dot
     Set( ImageJSON, JSON( SampleImage, JSONFormat.IncludeBinaryData ) )
     ```
 
