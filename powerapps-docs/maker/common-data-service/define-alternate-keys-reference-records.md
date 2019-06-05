@@ -76,7 +76,7 @@ Only these kinds of fields can be used to create alternate keys:
  - Decimal
  - Whole Number (Integer)
  - Single line of Text (String)
- - Date Time
+ - Date and Time
  - Lookup
  - Option Set
 
