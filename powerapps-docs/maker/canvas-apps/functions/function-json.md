@@ -55,7 +55,7 @@ The following [canvas data types](data-types.md) are supported:
 | **Option&nbsp;set** | The numeric value of the option set, not the label used for display. The numeric value is used because it is language independent.  | `1001` |
 | **Time** | String containing an ISO 8601 **HH:mm:ss.fff** format.  | `"23:12:49.000"` |
 | **Record** | **{** and **}** are wrapped around the comma delimited list of fields and their values.  This is similar to canvas app record notation except that the name is always quoted.  Records that are based on a Many-to-One relationship are not supported.  | `{ "First Name": "Fred", "Age": 21 }` |
-| **Table** | **[** and **]** are wrapped around the comma delimited list of records.  Tables that are based on a a One-to-Many relationship are not supported.  | `[ { "First Name": "Fred", "Age": 21 },`<br>`{ "First Name": "Jean", "Age": 20 } ]` |
+| **Table** | **[** and **]** are wrapped around the comma delimited list of records.  Tables that are based on a a One-to-Many relationship are not supported.  | `[ { "First Name": "Fred", "Age": 21 }, { "First Name": "Jean", "Age": 20 } ]` |
 | **Two&nbsp;option** | The Boolean value of the two option, *true* or *false*, not the label used for display.  The Boolean value is used because it is language independent. | `false` |
 | **Hyperlink, Text** | Double quoted string.  Embedded double quote characters are escaped with a backslash, newlines are replaced with "\n", and other standard JavaScript replacements. | `"This is a string."` | 
 
