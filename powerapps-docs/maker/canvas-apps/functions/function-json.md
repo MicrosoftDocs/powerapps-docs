@@ -47,7 +47,7 @@ Use the optional *Format* argument to control the readability of the result and 
 | **IndentFour** | To improve readability, the output will add a newline for each column and nesting level and use four space characters for each indentation level. |
 | **IncludeBinaryData** | Images, videos, and audio clips columns are included in the result.  Including binary data can dramatically increase the size of the result and impact performance of your app.  Care should be taken with using this setting as the result can be very large and degrade the performance of your app.    |
 | **IgnoreBinaryData** | Images, videos, and audio clips columns are not included in the result. Without either **IncludeBinaryData** or **IgnoreBinaryData** the function will produce an error if it encounters binary data. |
-| **IgnoreUnsupportedTYpes** | Unsupported data types are allowed but will not be included in the result.  By default unsupported data types produce an error. |  
+| **IgnoreUnsupportedTypes** | Unsupported data types are allowed but will not be included in the result.  By default unsupported data types produce an error. |  
 
 Use the [**ShowColumns** and **DropColumns** functions](function-table-shaping.md) to control what data is included in the result and to avoid unsupported data types.
 
@@ -59,7 +59,7 @@ For columns that have both a display name and a logical name, the logical name w
 **JSON**( *DataStructure* [, *Format* ] )
 
 * *DataStructure* – Required. The data structure to be converted to JSON.  Tables, records, and primitive values are supported, arbitrarily nested.
-* *Format* - Optional.  **JSONFormat** enum value.  Default is **Compact** with no extra newlines or spaces and binary data columns are disallowed.
+* *Format* - Optional.  **JSONFormat** enum value.  Default is **Compact** with no extra newlines or spaces and binary data and unsupported columns are disallowed.
 
 ## Examples
 
@@ -78,9 +78,13 @@ For columns that have both a display name and a logical name, the logical name w
     ClearCollect( CitiesByCountry, GroupBy( CityPopulations, "Country", "Cities" ) )
     ```
 
-2. Press the button.  This results in this data structure in the **CitiesByCountry** collection.
+2. Press the button.  This results in this data structure in the **CitiesByCountry** collection.  
 
     ![](media/function-json/cities-grouped.png)
+
+    View this with **File** > **Collections** or enable **Formula result view** with **File** > **App settings** > **Advanced settings** and select the name of the collection in the formula bar.
+
+    ![](media/function-json/cities-grouped-resultview.png)
 
 1. Insert a second **Button** control and set its **OnSeletct** property to this formula:
 
