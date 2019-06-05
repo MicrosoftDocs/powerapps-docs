@@ -168,7 +168,7 @@ For columns that have both a display name and a logical name, the logical name w
 
 1.  Press the button.
 
-1. Add a [**Label** control] and set its **Text** property to the formula.
+1. Add a **Label** control and set its **Text** property to the formula.
 
     ```powerapps-dot
     ImageJSON
