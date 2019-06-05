@@ -41,7 +41,7 @@ You should be aware of the following constraints when creating alternate keys:
   | StringAttributeMetadata  | Single line of text |
   | DateTimeAttributeMetadata   |      Date Time    |
   | LookupAttributeMetadata     |       Lookup        |
-  | PicklistAttributeMetadata   |      Picklist       |
+  | PicklistAttributeMetadata   |      Option Set       |
 
 
 - **Valid key size**  
