@@ -1,8 +1,8 @@
 ---
-title: Understand model-driven app components in PowerApps | MicrosoftDocs
-description: "Understand various components of a model-driven app such as data, UI, logic, and visualization."
-Keywords: fields, attributes, model-driven app
-author: anneta
+title: Use environment variables in solutions | MicrosoftDocs
+description: "Use environment variables to migrate application configuration data in solutions."
+Keywords: environment variables, variables, model-driven app, configuration data
+author: caburk
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
