@@ -1,6 +1,6 @@
 ---
 title: "Retrieve the list of rules | Microsoft Docs"
-description: "Read how to form a GET request using the PowerApps checker web API to retrieve the list of rules available"
+description: "Learn how to form a GET request using the PowerApps checker web API to retrieve the list of rules available."
 ms.custom: ""
 ms.date: 06/04/2019
 ms.service: powerapps
@@ -13,7 +13,7 @@ ms.assetid: a8dc3019-c49e-48e4-a646-8a3a3fecd3a6
 caps.latest.revision: 21
 author: "mhuguet" # GitHub ID
 ms.author: "mhuguet"
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 manager: "maustinjones"
 search.audienceType: 
   - developer
@@ -26,10 +26,10 @@ search.app:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../../../includes/cc-beta-prerelease-disclaimer.md)]
 
-Rules are grouped together using a ruleset. A rule can be in no or multiple rulesets. Use a `GET` request to obtain a list of all rules available or rules in a ruleset or rulesets by calling the API, */api/rule*. There are a few variations to calling this API, however, the most common usage is to retrieve the list of rules for a specific ruleset.
+Rules are grouped together using a ruleset. A rule can be in no ruleset, or multiple rulesets. Use a `GET` request to obtain a list of all rules available, rules in a ruleset, or rulesets by calling the API [Geographical URI]/api/rule. There are a few variations to calling this API, however, the most common usage is to retrieve the list of rules for a specific ruleset.
 
 > [!NOTE]
->  This API does not require an OAuth token, but can accept one.
+>  This API does not require an OAuth token, but can accept one if provided.
 
 <a name="bkmk_headers"></a>
 
@@ -45,8 +45,8 @@ Rules are grouped together using a ruleset. A rule can be in no or multiple rule
 
 |Name|Type|Expected value|Required?|
 |---|---|---|---|
-|ruleset|string|Name or ID of the ruleset or a list of ruleset IDs or names separated by a comma or semicolon, e.g.- "Solution Checker"|no|
-|includeMessageFormats|bool|When true the list of possible message variations are included in the results in the language(s) requests, if available. This is useful when needing to do translations into multiple languages. If not needed, then do not provide this parameter or provide false as the value as this will increase the size of the response and can increase processing time.|no|
+|ruleset|string|The name or ID of the ruleset or a list of ruleset IDs, or names separated by a comma or semicolon (e.g., "Solution Checker").|no|
+|includeMessageFormats|bool|When set to `true`, the list of possible message variations are included in the results of the language(s) requests, if available. This is useful for translations into multiple languages. If not needed, then do not provide this parameter or provide `false` as the value as this parameter will increase the size of the response and can increase processing time.|no|
 
 <a name="bkmk_responses"></a>
 
@@ -54,8 +54,8 @@ Rules are grouped together using a ruleset. A rule can be in no or multiple rule
 
 |HTTP status code|Scenario|Result|
 |---|---|---|
-|200|One or more results were found|See example below. One or more may be returned.|
-|204|No results were found|No result body|
+|200|One or more results were found|See example below. One or more results may be returned.|
+|204|No results were found|No results in the response body.|
 
 ### Expected response body
 
@@ -63,21 +63,21 @@ The following table outlines the structure of the response for each request (HTT
 
 |Property|Type|Expected value|Required?|
 |---|---|---|---|
-|code|string|Identifier of the rule, sometimes referred to Rule ID|Yes|
-|summary|string|Summary of the the rule|Yes|
+|code|string|The identifier of the rule, sometimes referred to as the Rule ID.|Yes|
+|summary|string|A summary of the the rule.|Yes|
 |description|string|More detailed description of the rule.|Yes|
-|guidanceUrl|URI|URL in which to find published guidance. There may be some cases where there is not a dedicated supporting guidance article.|Yes|
-|include|boolean|Signals to the service that the rule is to be included in the analysis. This will be true for this API.|No|
-|messageTemplates|array|Is included only when _includeMessageFormats_ is _true_|No|
-|messageTemplates.ruleId|string|Matches code.|Yes|
-|messageTemplates.messageTemplateId|string|Identifier used in the `SARIF` report to signal an issue message variation for the rule.|Yes|
-|messageTemplates.messageTemplate|string|Text of the message variation for the issue scenario that the rule reports. This is a format string that may contain tokens in which  arguments provided in the `SARIF` report can be used to construct a detailed message.|Yes|
+|guidanceUrl|URI|The URL in which to find published guidance. There may be some cases where there is not a dedicated supporting guidance article.|Yes|
+|include|boolean|Signals to the service that the rule is to be included in the analysis. This will be `true` for this API.|No|
+|messageTemplates|array|This property value is included only when `includeMessageFormats` is `true`.|No|
+|messageTemplates.ruleId|string| Returns the same ID value as `code`.|Yes|
+|messageTemplates.messageTemplateId|string| An identifier used in the Static Analysis Results Interchange Format (SARIF) report to signal an issue message variation for the rule.|Yes|
+|messageTemplates.messageTemplate|string|The text of the message variation for the issue scenario that the rule reports. This is a format string that may contain tokens in which  arguments provided in the SARIF report can be used to construct a detailed message.|Yes|
 
 <a name="bkmk_retrieveForRuleset"></a>
 
 ## Example: retrieve rules for a ruleset in another language
 
-This example returns data for all of the rules in the *Solution Checker* ruleset in French. If the desired languague is English, then just leave off the Accept-Language header.
+This example returns data for all of the rules in the *Solution Checker* ruleset in the French language. If the desired language is English, then just remove the Accept-Language header.
 
 **Request**
 
@@ -169,7 +169,7 @@ Content-Type: application/json; charset=utf-8
 
 ## Example: retrieve for a ruleset with message formats
 
-This example returns data for all of the rules in the *Solution Checker* ruleset in French. If the desired languague is English, then just leave off the Accept-Language header.
+This example returns data for all of the rules in the *Solution Checker* ruleset in the French language. If the desired language is English, then just remove the Accept-Language header.
 
 **Request**
 
