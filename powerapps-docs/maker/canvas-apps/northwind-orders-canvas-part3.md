@@ -367,17 +367,12 @@ In any gallery, you can show data but you can't update it or add records. Under 
     > [!NOTE]
     > You can also use **Choices** with option sets to return a table of all the options. The steps didn't mention this approach, but you used it already when you added the combo box that shows **Order Status** in the order summary.
 
-1. In the **Data** pane, open the **Primary text** list, and then select **nwind_productname**.
+1. In the **Data** pane, open the **Primary text** list and select **nwind_productname**,  and then open the **SearchField** list and select **nwind_productname**.
 
     You specify the logical name because the **Data** pane doesn't support display names in this case yet:
 
     > [!div class="mx-imgBorder"]
     > ![Set the Primary text for the combo box](media/northwind-orders-canvas-part3/add-details-10.png)
-
-1. In the **Data** pane, open the **SearchField** list, and then select **nwind_productname**:
-
-    > [!div class="mx-imgBorder"]
-    > ![Set the Search field for the combo box](media/northwind-orders-canvas-part3/add-details-11.png)
 
 1. Close the **Data** pane.
 
