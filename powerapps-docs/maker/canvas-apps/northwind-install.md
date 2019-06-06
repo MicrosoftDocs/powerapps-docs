@@ -39,12 +39,14 @@ Northwind Traders is a fictitious organization that manages orders, products, cu
     > [!div class="mx-imgBorder"]
     > ![Solutions view and import-solution entry point](media/northwind-install/solution-import.png)
 
-1. In the **Select Solution Package** page, select **Browse**, find and select the file that you downloaded, and then select **Next**.
+1. In the **Select Solution Package** page, select **Browse**.
 
     Unless you selected a different location, the file will be in your Downloads folder.
 
     > [!div class="mx-imgBorder"]
     > ![Select Solution Package page before package is selected](media/northwind-install/select-solution2.png)
+
+1. Find the file that you downloaded, and then select **Open**.
 
 1. If you have the correct file (the version number might vary), select **Next**:
 
@@ -56,7 +58,7 @@ Northwind Traders is a fictitious organization that manages orders, products, cu
     > [!div class="mx-imgBorder"]
     > ![Solution Information page](media/northwind-install/confirm-publisher.png)
 
-1. In **Import Options** page, select **Import** to confirm SDK message handling, which the sample requires:
+1. In the **Import Options** page, select **Import** to confirm SDK message handling, which the sample requires:
 
     > [!div class="mx-imgBorder"]
     > ![Import Options page](media/northwind-install/confirm-sdk.png)
@@ -87,7 +89,7 @@ Northwind Traders is a fictitious organization that manages orders, products, cu
     > [!div class="mx-imgBorder"]
     > ![Consent dialog box for Common Data Service](media/northwind-install/sample-data-permission.png)
 
-1. After the app loads and shows that the sample entities contain no records, select **Load Data** button to populate the entities:
+1. After the app loads and shows that the sample entities contain no records, select **Load Data** to populate the entities:
 
     > [!div class="mx-imgBorder"]
     > ![Load data button in Sample Data Manager](media/northwind-install/sample-data-load.png)
