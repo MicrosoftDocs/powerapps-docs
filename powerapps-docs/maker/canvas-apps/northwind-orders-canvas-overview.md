@@ -57,9 +57,6 @@ To create this app, you'll show data from five entities and an option set. In fa
 
 The summary contains some of the same information as the list of orders, but it also contains the name and the picture of the employee who managed the order. That information is pulled from fields in the **Employees** entity. The list of order details shows records in the **Order Details** entity, and each product in those details is a record in the **Order Products** entity.
 
-> [!div class="mx-imgBorder"]
-> ![Where each entity and option set appears in the app](media/northwind-orders-canvas-part3/orders-entities.png)
-
 ## Explore the relationships
 
 You can show data from different sources (for example, entities) in the same gallery or form because those entities have relationships that were created for you in the database.
