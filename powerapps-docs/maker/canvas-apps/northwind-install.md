@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: anneta
-ms.date: 04/28/2019
+ms.date: 06/06/2019
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -23,12 +23,12 @@ Northwind Traders is a fictitious organization that manages orders, products, cu
 
 ## Prerequisites
 
-- A PowerApps license that supports Common Data Service. You can [purchase a free license](../signup-for-powerapps.md) for 30 days.
+- A PowerApps license that supports Common Data Service. You can [use a free trial license](../signup-for-powerapps.md) for 30 days.
 - An environment with a Common Data Service database. You can [create such an environment](https://docs.microsoft.com/power-platform/admin/create-environment) if you have appropriate permissions.
 
 ## Install the solution
 
-1. [![download](media/northwind-install/download.png) Download the **Northwind Traders Solution File**](https://pwrappssamples.blob.core.windows.net/samples/NorthwindTraders_1_0_0_1.zip).
+1. [Download the **Northwind Traders Solution File** ![download](media/northwind-install/download.png)](https://pwrappssamples.blob.core.windows.net/samples/NorthwindTraders_1_0_0_5.zip).   
 
     This [solution](../../developer/common-data-service/introduction-solutions.md) file (.zip) contains the definitions of entities, option sets, and business processes; the canvas and model-driven apps; and any other pieces that are used together.
 
