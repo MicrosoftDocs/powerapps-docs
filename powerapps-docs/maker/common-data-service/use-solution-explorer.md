@@ -12,10 +12,10 @@ applies_to:
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
   - "powerapps"
-author: "Mattp123"
+author: "caburk"
 ms.assetid: 72bacfbb-96a3-4daa-88ff-11bdaaac9a3d
 caps.latest.revision: 57
-ms.author: "matp"
+ms.author: "caburk"
 manager: "kvivek"
 search.audienceType: 
   - maker
@@ -103,6 +103,7 @@ In PowerApps, you can view the classic solution explorer by selecting **Solution
 - Button triggered Flows are not available in solutions.
 - Canvas app triggered Flows are not available in solutions.
 - Flows triggered from Microsoft 365 applications such as SharePoint and Excel are not available in solutions.
+- In a solution, you can create a flow that uses the new Common Data Service connector. However, adding a flow that was created outside a solution isn't supported due to potential failures. 
 
  For details about customizing the individual components in a solution, see the following topics:  
   
