@@ -1,6 +1,6 @@
 ---
 title: "Retrieve the list of rulesets | Microsoft Docs"
-description: "Read how to form a GET request using the PowerApps checker web API to retrieve the list of rulesets available"
+description: "Read how to form a GET request using the PowerApps checker web API to retrieve the list of rulesets available."
 ms.custom: ""
 ms.date: 06/04/2019
 ms.service: powerapps
@@ -13,7 +13,7 @@ ms.assetid: 23c9391c-1697-47a3-a8f2-eedd5c862874
 caps.latest.revision: 21
 author: "mhuguet" # GitHub ID
 ms.author: "mhuguet"
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 manager: "maustinjones"
 search.audienceType: 
   - developer
@@ -26,10 +26,10 @@ search.app:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../../../includes/cc-beta-prerelease-disclaimer.md)]
 
-Rules are grouped together using a ruleset. Rulesets can have one or more rules with no limit. A rule can be in no or multiple rulesets. Use a `GET` request to obtain a list of all rulesets available by calling the API, */api/ruleset*.
+Rules are grouped together using a ruleset. Rulesets can have one or more rules with no limit. A rule can be in no ruleset, or multiple rulesets. Use a `GET` request to obtain a list of all rulesets available by calling the API, [Geographical URI]/api/ruleset.
 
 > [!NOTE]
->  This API does not require an OAuth token, but can accept one.
+>  This API does not require an OAuth token, but can accept one if provided.
 
 <a name="bkmk_responses"></a>
 
@@ -37,8 +37,8 @@ Rules are grouped together using a ruleset. Rulesets can have one or more rules 
 
 |HTTP status code|Scenario|Result|
 |---|---|---|
-|200|One or more results were found|See example below. One or more may be returned.|
-|204|No results were found|No result body|
+|200|One or more results were found|See example below. One or more results may be returned.|
+|204|No results were found|No results response body is returned.|
 
 ### Expected response body
 
