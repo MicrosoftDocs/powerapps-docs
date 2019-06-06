@@ -93,7 +93,7 @@ In PowerApps, you can view the classic solution explorer by selecting **Solution
 
 - Custom connectors are not available in a solution.
 - Canvas apps must be opened after a solution is imported to update the connections.
-- If a canvas app is packaged in a managed solution, it can still be edited in the target environment.
+- If a canvas app is packaged in a managed solution, it can still be edited in the target environment. However, it can not be re-published. Currently this will block editing connections the app relies on. 
 - Dependencies are not available for canvas apps.
 - Deleting a managed solution will not rollback to a different canvas app's version. 
 -	Canvas app access (CRUD and security) is managed entirely in PowerApps and not the Common Data Service (Common Data Service) database.
