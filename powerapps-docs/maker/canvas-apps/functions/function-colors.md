@@ -15,30 +15,34 @@ search.app:
   - PowerApps
 ---
 # Color enumeration and ColorFade, ColorValue, and RGBA functions in PowerApps
-Using built-in color values, defining custom colors, and using the alpha channel.
+
+Use built-in color values, define custom colors, and use the alpha channel.
 
 ## Description
 
-The **Color** enumeration is an easy way to access the colors defined by HTML's Cascading Style Sheets (CSS). For example, **Color.Red** returns a pure red color. You can find a list of these colors at the end of this topic.
+By using the **Color** enumeration, you can easily access the colors that are defined by HTML's Cascading Style Sheets (CSS). For example, **Color.Red** returns pure red. You can find a list of these colors at the end of this topic.
 
 The **ColorValue** function returns a color based on a color string in a CSS. The string can take any of these forms:
+
 - **CSS color name:** **"RoxyBrown"** and **"OliveDrab"** are examples. These names don't include spaces. The list of supported colors appears later in this topic.
-- **6-digit hex value:** As an example **"#ffd700"** is the same as **"Gold"**. The string is in the format "#*RRGGBB*" where *RR* is the red portion in two hexadecimal digits, *GG* is the green, and *BB* is the blue.
-- **8-digit hex value:** As an example, **"#ff7f5080"** is the same as **"Coral"** with a 50% alpha channel. The string is in the format "#*RRGGBBAA*" where *RR*, *GG*, and *BB* are identical to the 6-digit form. The alpha channel is represented by *AA*: **00** represents fully transparent, and **ff** represents fully opaque.
+- **6-digit hex value:** As an example **"#ffd700"** is the same as **"Gold"**. The string is in the format "#*rrggbb*" where *rr* is the red portion in two hexadecimal digits, *gg* is the green, and *bb* is the blue.
+- **8-digit hex value:** As an example, **"#ff7f5080"** is the same as **"Coral"** with a 50% alpha channel. The string is in the format "#*rrggbbaa*" where *rr*, *gg*, and *bb* are identical to the 6-digit form. The alpha channel is represented by *aa*: **00** represents fully transparent, and **ff** represents fully opaque.
 
-The **RGBA** function returns a color based on red, green, and blue color components. It also includes an alpha channel for mixing colors of objects that are layered on top of one another. Alpha varies from 0 or 0% (which is fully transparent and invisible) to 1 or 100% (which is fully opaque and completely blocks out any layers behind).
+The **RGBA** function returns a color based on red, green, and blue components. The function also includes an alpha channel for mixing colors of controls that are layered in front of one another. An alpha channel varies from 0 or 0% (which is fully transparent and invisible) to 1 or 100% (which is fully opaque and completely blocks out any layers behind a control).
 
-The **ColorFade** function returns a brighter or darker version of a color. The amount of fade varies from -1 (which fully darkens a color to black) to 0 (which has no impact on the color) to 1 (which fully brightens a color to white).
+The **ColorFade** function returns a brighter or darker version of a color. The amount of fade varies from -1 (which fully darkens a color to black) to 0 (which doesn't affect the color) to 1 (which fully brightens a color to white).
 
 ## Alpha channel
 
-You can layer controls in a canvas app in front of one another and specify the transparency of a control to any controls that are behind it. As a result, colors will blend through the layers. For example, this diagram shows how the three primary colors mix with an alpha setting of 50%:
+In a canvas app, you can layer controls in front of one another and specify the transparency of a control to any controls that are behind it. As a result, colors will blend through the layers. For example, this diagram shows how the three primary colors mix with an alpha setting of 50%:
 
-![](media/function-colors/alpha-primary.png)
+> [!div class="mx-imgBorder"]
+> ![Three primary colors with an alpha setting of 50%](media/function-colors/alpha-primary.png)
 
 You can also blend images in file formats that support alpha channels. For example, you can't blend .jpeg files, but you can blend .png files. The next graphic shows the same red, green, and blue colors from the previous example, but the red color appears as a squiggle (instead of a circle) in a .png file with a 50% alpha channel:
 
-![](media/function-colors/alpha-image.png)
+> [!div class="mx-imgBorder"]
+> ![Red squiggle with an alpha setting of 50% in front of blue and green circles](media/function-colors/alpha-image.png)
 
 If you specify a **Color** enumeration value or you build a **ColorValue** formula with a color name or a 6-digit hexadecimal value, the alpha setting is 100%, which is fully opaque.
 
@@ -46,21 +50,21 @@ If you specify a **Color** enumeration value or you build a **ColorValue** formu
 
 **Color**.*ColorName*
 
-* *ColorName* - Required.  A Cascading Style Sheet (CSS) color name. See list below of possible enumeration values.
+- *ColorName* - Required.  A Cascading Style Sheet (CSS) color name. The list of possible enumeration values appears at the end of this topic.
 
 **ColorValue**( *CSSColor* )
 
-* *CSSColor* - Required.  A Cascading Style Sheet (CSS) color definition. You can specify either a name, such as **OliveDrab**, or a hex value, such as **#6b8e23** or **#7fffd420**. Hex values can take the form of either #*RRGGBB* or #*RRGGBBAA*.
+- *CSSColor* - Required.  A Cascading Style Sheet (CSS) color definition. You can specify either a name, such as **OliveDrab**, or a hex value, such as **#6b8e23** or **#7fffd420**. Hex values can take the form of either #*rrggbb* or #*rrggbbaa*.
 
 **RGBA**( *Red*, *Green*, *Blue*, *Alpha* )
 
-* *Red*, *Green*, *Blue* - Required.  Color component values, ranging from 0 (no saturation) to 255 (full saturation).
-* *Alpha* - Required.  Alpha component, ranging from 0 (fully transparent) to 1 (fully opaque). You can also use a percentage, 0% to 100%.
+- *Red*, *Green*, *Blue* - Required.  Color-component values, which range from 0 (no saturation) to 255 (full saturation).
+- *Alpha* - Required.  Alpha component, which ranges from 0 (fully transparent) to 1 (fully opaque). You can also use a percentage, 0% to 100%.
 
 **ColorFade**( *Color*, *FadeAmount* )
 
-* *Color* - Required.  A color value such as **Color.Red** or the output from **ColorValue** or **RGBA**.
-* *FadeAmount* - Required.  A number between -1 and 1.  -1 fully darkens a color to black, 0 has no impact on the color, and 1 fully brightens a color to white. You can also use a percentage from -100% to 100%
+- *Color* - Required.  A color value such as **Color.Red** or the output from **ColorValue** or **RGBA**.
+- *FadeAmount* - Required.  A number between -1 and 1. -1 fully darkens a color to black, 0 doesn't affect the color, and 1 fully brightens a color to white. You can also use a percentage from -100% to 100%.
 
 ## Built-in colors
 
