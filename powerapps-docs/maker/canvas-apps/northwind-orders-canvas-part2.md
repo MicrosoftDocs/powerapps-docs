@@ -136,6 +136,8 @@ In this section, you'll add controls to show a summary of any order that the use
     1. In the **Data** pane, select **Data sources**.
     1. Next to **Orders**, select the ellipsis (...), select **Refresh**, and then close the **Data** pane.
 
+    If there is still an error with the customer or employee combo boxes, check the **Primary text** and **SearchField** of each by selecting the combo box control and opening the **Data** pane.  For customer, both should be set to **nwind_company** and for employee both should be set to **nwind_lastname**.
+
 1. With the form selected, change the number of columns in the form from 3 to 12 in the **Properties** tab of the right-hand pane.
 
     This step adds flexibility as you arrange the fields:
@@ -219,7 +221,7 @@ In this example, you don't need the time portions of the date fields because tha
     > [!div class="mx-imgBorder"]
     > ![Select an order in the list to show its overview in the form](media/northwind-orders-canvas-part2/form-select.gif)
 
-## Replace a control
+## Replace a data card
 
 **Order number** is an identifier that Common Data Service assigns automatically when you create a record. This field has a [**Text input**](controls/control-text-input.md) control by default, but you'll replace it with a label so that users can't edit this field.
 
