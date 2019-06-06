@@ -20,24 +20,24 @@ Follow step-by-step instructions to create an order gallery in a canvas app for 
 
 1. Create an order gallery (**this topic**).
 1. [Create a summary form](northwind-orders-canvas-part2.md).
-1. [Create a details gallery](northwind-orders-canvas-part3.md).
+1. [Create a detail gallery](northwind-orders-canvas-part3.md).
 
 > [!div class="mx-imgBorder"]
 > ![Definition of screen areas](media/northwind-orders-canvas-part1/orders-parts.png)
 
 ## Prerequisites
 
-1. [Install the Northwind Traders database and apps](northwind-install.md).
-1. Take a moment to read through the [overview of the canvas app for Northwind Traders](northwind-orders-canvas-overview.md).
+- [Install the Northwind Traders database and apps](northwind-install.md).
+- Read through the [overview of the canvas app](northwind-orders-canvas-overview.md) for Northwind Traders.
 
 ## Create a blank app
 
-1. [Sign in to PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then create a blank tablet app:
+1. [Sign in to PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then create a blank tablet app.
 
     > [!div class="mx-imgBorder"]
     > ![Canvas app from blank tile](media/northwind-orders-canvas-part1/start-01.png)
 
-1. Name your app whatever you like, and then select **Create**:
+1. Name your app whatever you like, and then select **Create**.
 
     > [!div class="mx-imgBorder"]
     > ![Canvas app from blank dialog box](media/northwind-orders-canvas-part1/start-02.png)
@@ -90,9 +90,9 @@ Follow step-by-step instructions to create an order gallery in a canvas app for 
 
 1. In PowerApps Studio, close the **Data** pane by selecting the close icon (x) in its upper-right corner.
 
-## Display the list of orders
+## Create the order gallery
 
-1. On the **Insert** tab, select **Gallery** > **Blank vertical** to add a [**Gallery**](controls/control-gallery.md) control in which the list of orders will appear.
+1. On the **Insert** tab, select **Gallery** > **Blank vertical** to add a [**Gallery**](controls/control-gallery.md) control, which will show the orders.
 
     > [!div class="mx-imgBorder"]
     > ![Insert, Gallery, Blank vertical](media/northwind-orders-canvas-part1/orders-01.png)
@@ -108,7 +108,7 @@ Follow step-by-step instructions to create an order gallery in a canvas app for 
     > [!div class="mx-imgBorder"]
     > ![Set Items property of the gallery](media/northwind-orders-canvas-part1/orders-02.png)
 
-1. In the **Properties** tab of the right-hand pane, open the **Layout** list:
+1. In the **Properties** tab near the right edge, open the **Layout** list:
 
     > [!div class="mx-imgBorder"]
     > ![List of layout options](media/northwind-orders-canvas-part1/orders-03.png)
@@ -120,7 +120,7 @@ Follow step-by-step instructions to create an order gallery in a canvas app for 
 
     Two [**Label**](controls/control-text-box.md) controls are added in the gallery's template. By default, these controls show two columns of the **Orders** entity, which you'll change next. The gallery's template is replicated vertically for each record in the entity.
 
-1. On the **Properties** tab of the right-hand pane, select **Edit** (next to **Fields**) to open the **Data** pane.
+1. On the **Properties** tab near the right edge, select **Edit** (next to **Fields**) to open the **Data** pane.
 
 1. In the **Data** pane, select **Title1** (or select the upper label in the gallery's template).
 
@@ -200,7 +200,7 @@ In this procedure, you'll add space in the gallery for a label and configure it 
 
     Each option in a set has a name that appears if you show it in a label. These names can be localized, and the app recognizes the same option whether an English user selects **Apple**, a French user selects **Pomme**, or a Spanish user selects **Manzana**. For this reason, you can't create a formula that relies on a hard-coded string for an option, as this topic demonstrates later.
 
-    In formulas, you must surround **Order Status** with single quotes because it contains a space. However, that name functions the same way as any other name in PowerApps, such as **Customer** or **Company**, does.
+    In formulas, you must surround **Order Status** with single quotation marks because it contains a space. However, that name functions the same way as any other name in PowerApps, such as **Customer** or **Company**, does.
 
 1. On the **Home** tab, increase the font size of the status label to 20 points, and right align the text:
 
@@ -227,7 +227,7 @@ In this procedure, you'll add space in the gallery for a label and configure it 
 
 ## Display each order's total
 
-1. Select the first item in the galley, which is the gallery's template:
+1. Select the first item in the gallery, which is the gallery's template:
 
     > [!div class="mx-imgBorder"]
     > ![Select the gallery template](media/northwind-orders-canvas-part1/aggregate-01.png)
@@ -237,7 +237,7 @@ In this procedure, you'll add space in the gallery for a label and configure it 
     > [!div class="mx-imgBorder"]
     > ![Add a label](media/northwind-orders-canvas-part1/aggregate-02.png)
 
-1. Move the new label so it appears under the status label:
+1. Move the new label so that it appears under the status label:
 
     > [!div class="mx-imgBorder"]
     > ![Resize and move the new label](media/northwind-orders-canvas-part1/aggregate-03.png)
@@ -253,7 +253,7 @@ In this procedure, you'll add space in the gallery for a label and configure it 
 
     In this formula, the [**Sum**](functions/function-aggregates.md)  function adds up the records in the **Order Details** entity that are associated with each record in the **Order** entity through a one-to-many relationship. These line items make up each order, and you'll use the same one-to-many relationship to show and edit the line items in the lower-right area of the screen.
 
-    This formula shows a blue underline and a [delegation warning](delegation-overview.md) because complex aggregate functions (for example, the sum of a multiplication) can't be delegated to Common Data Service. You can ignore this information because no order in this example will have contain than 500 line items. If necessary for a different app, you can increase that limit in the **App settings**.
+    This formula shows a blue underline and a [delegation warning](delegation-overview.md) because Common Data Service doesn't support delegation of complex aggregate functions (for example, the sum of a multiplication). You can ignore this information because no order in this example will contain more than 500 line items. If necessary for a different app, you can increase that limit in **App settings**.
 
     The [**Text**](functions/function-text.md) function in this formula adds a currency symbol and formats the result with thousands and decimal separators. As written, the formula includes the language tag for U.S. English (**[$-en-US]**) and a dollar symbol (**$**). If you remove the language tag, it will be replaced with one based on your language settings, and the label will show the appropriate formats for that tag. If you leave the dollar symbol, the label will show the appropriate currency symbol based on the user's settings. However, you can force a different symbol to appear by replacing the dollar symbol with the one that you prefer.
 
@@ -273,10 +273,10 @@ In this procedure, you'll add space in the gallery for a label and configure it 
 
 To recap, you started to build a single-screen canvas app by adding the order gallery, which includes these elements:
 
-- A formula to show the order number: `"Orders " & ThisItem.OrderNumber`
+- An expression to show the order number: `"Orders " & ThisItem.OrderNumber`
 - A field in a many-to-one relationship: `ThisItem.Customer.Company`
 - A label that shows the name of an option in a set: `ThisItem.'Order Status'`
-- A label that changes format based on which option in a set appears in that label: `Switch( ThisItem.'Order Status', 'Orders Status'.Closed, Green, ...`
+- A label that changes format based on which option in a set the label shows: `Switch( ThisItem.'Order Status', 'Orders Status'.Closed, Green, ...`
 - A complex aggregate function over a one-to-many relationship: `Sum( ThisItem.'Order Details', Quantity * 'Unit Price' )`
 
 ## Next topic

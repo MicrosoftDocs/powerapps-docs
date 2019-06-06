@@ -18,8 +18,7 @@ search.app:
 
 Follow step-by-step instructions to create a detail gallery in a canvas app for managing fictitious data in the Northwind Traders database. This topic is part of a series that explains how to build a business app on relational data in Common Data Service. For best results, explore these topics in this sequence:
 
-1. [Install Northwind Traders database and apps](northwind-install.md).
-1. [Overview of the canvas app for Northwind Traders](northwind-orders-canvas-overview.md).
+
 1. [Create an order gallery in a canvas app](northwind-orders-canvas-part1.md).
 1. [Create a summary form in a canvas app](northwind-orders-canvas-part2.md).
 1. Create a detail gallery in a canvas app (**this topic**).
@@ -29,7 +28,7 @@ Follow step-by-step instructions to create a detail gallery in a canvas app for 
 
 ## Prerequisites
 
-Before you start this topic, you must install the database as described earlier in this topic. You must then either create the order gallery and the summary form or open the **Northwind Orders (Canvas), Start Part 3** app, which already contains that gallery and that form.
+Before you start this topic, you must install the database as described earlier in this topic. You must then either create the order gallery and the summary form or open the **Northwind Orders (Canvas) - Begin Part 3** app, which already contains that gallery and that form.
 
 ## Show order details
 
@@ -78,7 +77,7 @@ Before you start this topic, you must install the database as described earlier 
 
     If an error appears, confirm that the order gallery is named **Gallery1** (in the **Tree view** pane near the left edge). If that gallery has a different name, rename it **Gallery1**.
 
-    You've just linked the two galleries. When the user selects an order in the order gallery, that selection identifies a record in the **Orders** entity. If that order contains one or more line items, the record in the **Orders** entity is linked to one or more records in the **Order details** entity, and data from those records appear in the detail gallery. This behavior reflects the one-to-many relationship that was created for you between the **Orders** and **Order Details** entities. The formula that you specified "walks" that relationship by using dot notation:
+    You've just linked the two galleries. When the user selects an order in the order gallery, that selection identifies a record in the **Orders** entity. If that order contains one or more line items, the record in the **Orders** entity is linked to one or more records in the **Order details** entity, and data from those records appears in the detail gallery. This behavior reflects the one-to-many relationship that was created for you between the **Orders** and **Order Details** entities. The formula that you specified "walks" that relationship by using dot notation:
 
     > [!div class="mx-imgBorder"]
     > ![One-to-many relationship between the Orders entity and the Order Details entity](media/northwind-orders-canvas-part3/schema-orders-rel.png)
@@ -260,7 +259,7 @@ Before you start this topic, you must install the database as described earlier 
 
 1. Copy and paste the product label from the middle title bar, and then move the copy to the bottom title bar, just to the left of the **Quantity** column.
 
-1. Double-click the new label's text, and then type **Order Totals:**:
+1. Double-click the new label's text, and then type this text:<br>**Order Totals:**
 
     > [!div class="mx-imgBorder"]
     > ![Add label for order totals](media/northwind-orders-canvas-part3/sum-03.png)
@@ -365,9 +364,11 @@ In any gallery, you can show data but you can't update it or add records. Under 
     The [**Choices**](functions/function-choices.md) function returns a table of all the possible values for the **Product** field in the **Order Details** entity. This field is a lookup in a many-to-one relationship, so **Choices** returns all the records in the **Order Products** entity.
 
     > [!NOTE]
-    > You can also use **Choices** with option sets to return a table of all the options. The steps didn't mention this approach, but you used it already when you added the combo box that shows **Order Status** in the order summary.
+    > You can also use **Choices** with option sets to return a table of all the options. The steps didn't mention this approach, but you used it already when you added the combo box that shows **Order Status** in the summary form.
 
-1. In the **Data** pane, open the **Primary text** list and select **nwind_productname**,  and then open the **SearchField** list and select **nwind_productname**.
+1. In the **Data** pane, open the **Primary text** list, and then select **nwind_productname**. 
+
+1. Open the **SearchField** list, and then select **nwind_productname**.
 
     You specify the logical name because the **Data** pane doesn't support display names in this case yet:
 
@@ -376,7 +377,7 @@ In any gallery, you can show data but you can't update it or add records. Under 
 
 1. Close the **Data** pane.
 
-1. In the **Properties** tab of the right-hand pane, scroll down, turn off **Allow multiple selection**, and ensure that **Allow searching** is turned on:
+1. In the **Properties** tab near the right edge, scroll down, turn off **Allow multiple selection**, and ensure that **Allow searching** is turned on:
 
     > [!div class="mx-imgBorder"]
     > ![Disable multiple selection and enable searching](media/northwind-orders-canvas-part3/add-details-12.png)
@@ -388,7 +389,7 @@ In any gallery, you can show data but you can't update it or add records. Under 
 
     In this combo box, the user will specify a record in the **Product** entity for the **Order Details** record that the app will create.
 
-1. While holding down the Alt key, select the down arrow on the combo box.
+1. While holding down the Alt key, select the combo box's down arrow.
 
     > [!TIP]
     > By holding down the Alt key, you can interact with controls in PowerApps Studio without opening Preview mode.
@@ -480,7 +481,7 @@ In any gallery, you can show data but you can't update it or add records. Under 
     > [!div class="mx-imgBorder"]
     > ![Change alignment](media/northwind-orders-canvas-part3/add-details-25.png)
 
-1. Copy and paste the list-price label, and then resize and move the copy to the right of the **List price** label.
+1. Copy and paste the list-price label, and then resize and move the copy to the right of the list-price label.
 
 1. Set the new label's **Text** property to this formula:
 
