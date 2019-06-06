@@ -47,7 +47,7 @@ Before you share an app, you must save it to the cloud (not locally) and then pu
 
     - To allow your entire organization to run the app (but not modify or share it), type **Everyone** in the sharing panel.
     - You can share an app with a list of aliases, friendly names, or a combination of those (for example, **Jane Doe &lt;jane.doe@contoso.com>**) if the items are separated by semi-colons. If more than one person has the same name but different aliases, the first person found will be added to the list. A tooltip appears if a name or alias already has permission or can't be resolved. 
-    
+
     ![Specify users and co-owners](./media/share-app/share-everyone.png)
 
     > [!NOTE]
@@ -56,7 +56,7 @@ Before you share an app, you must save it to the cloud (not locally) and then pu
 1. If you want to allow those with whom you're sharing the app to edit and share it (in addition to running it), select the **Co-owner** check box.
 
     You can't grant **Co-owner** permission to a security group if you [created the app from within a solution](add-app-solution.md).
-    
+
     > [!NOTE]
     > Regardless of permissions, no two people can edit an app at the same time. If one person opens the app for editing, other people can run it but not edit it.
 
@@ -64,7 +64,8 @@ Before you share an app, you must save it to the cloud (not locally) and then pu
 
     For example, your app might connect to an entity in a Common Data Service database. When you share such an app, the sharing panel prompts you to manage security for that entity.
 
-    ![Set permissions](./media/share-app/set-permissions.png)
+    > [!div class="mx-imgBorder"]
+    > ![Assign a security role](media/share-app/cds-assign-security-role.png)
 
     For more information about managing security for an entity, see [Manage entity permissions](share-app.md#manage-entity-permissions) later in this topic.
 
@@ -89,6 +90,7 @@ You can change permissions for a user or a security group by selecting their nam
 ## Security-group considerations
 
 - If you share an app with a security group, existing members of that group and anyone who joins it will have the permission that you specify for that group. Anyone who leaves the group loses that permission unless they belong to a different group that has access or you give them permission as an individual.
+
 - Every member of a security group has the same permission for an app as the overall group does. However, you can specify greater permissions for one or more members of that group to allow them greater access. For example, you can give Security Group A permission to run an app, but you can also give User B, who belongs to that group, **Co-owner** permission. Every member of the security group can run the app, but only User B can edit it. If you give Security Group A **Co-owner** permission and User B permission to run the app, that user can still edit the app.
 
 ## Manage entity permissions
@@ -98,47 +100,19 @@ You can change permissions for a user or a security group by selecting their nam
 If you create an app based on Common Data Service, you must also ensure that the users with whom you share the app have the appropriate permissions for the entity or entities on which the app relies. Specifically, those users must belong to a security role that can perform tasks such as creating, reading, writing, and deleting relevant records. In many cases, you'll want to create one or more custom security roles with the exact permissions that users need to run the app. You can then assign a role to each user as appropriate.
 
 > [!NOTE]
-> As of this writing, you can assign security roles to individual users but not to security groups.
+> As of this writing, you can assign security roles to individual users and security groups in Azure Active Directory but not to Office groups.
 
 #### Prerequisite
 
-To perform the next two procedures, you must have **System administrator** permissions for a Common Data Service database.
+To assign a role, you must have **System administrator** permissions for a Common Data Service database.
 
-#### Create a security role
+#### Assign a security group in Azure AD to a role
 
-1. In the sharing panel, select **Set permissions** under **Data permissions**, and then select the **Security Roles** link.
+1. In the sharing panel, select **Assign a security role** under **Data permissions**.
 
-    ![Open security roles](media/share-app/security-roles.png)
+1. Select the role or roles in Common Data Service that you want to assign to the user or the security group in Azure AD with which you want to share the app.
 
-1. Under **All Roles**, select **New**, and then type or paste a name for the role that you're creating.
-
-    ![Create security role](media/share-app/new-role.png)
-
-1. Select one or more tabs to find the entity or entities that your app uses, and then select the permissions that you want to grant the security role.
-
-    For example, this graphic shows that the **Core records** tab contains the **Accounts** entity, and users to which this security role has been assigned can create, read, write, and delete records in that entity.
-
-    ![Specify permissions](media/share-app/grant-access.png)
-
-1. Select **Save and Close**.
-
-#### Assign a user to a role
-
-1. In the sharing panel, select **Set permissions** under **Data permissions**, and then select the **Users** link.
-
-    ![Users link](media/share-app/open-users.png)
-
-1. In the upper-right corner, type or paste the name of the user whom you want to assign to the role, and then select the search icon.
-
-    ![Search for users](media/share-app/search-users.png)
-
-1. In the search results, point to the result that you want, and then select the check box that appears.
-
-1. In the top banner, select **Manage roles**.
-
-1. In the dialog box that appears, select the check boxes for **Common Data Service User** and the role that the user needs for your app, and then select **OK.**
-
-    ![Assign a user to a role](media/share-app/assign-users.png)
+    ![Security role list](media/share-app/cds-assign-security-role-list.png)
 
 ### Common Data Service (previous version)
 
