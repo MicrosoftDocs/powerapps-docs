@@ -539,4 +539,4 @@ To recap, you added a form in which the user can show and edit a summary of each
 In the next topic, you'll add another gallery to show the products in each order, and you'll change those details by using the [**Patch**](functions/function-patch.md) function.
 
 > [!div class="nextstepaction"]
-> [Create the detail gallery](northwind-orders-canvas-part1.md)
+> [Create the detail gallery](northwind-orders-canvas-part3.md)
