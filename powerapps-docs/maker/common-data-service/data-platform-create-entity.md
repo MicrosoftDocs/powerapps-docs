@@ -20,9 +20,7 @@ In PowerApps, an *entity* defines information that you want to track in the form
 In this topic, you'll learn how to create a custom entity called Product Review that you can use to create an app that displays ratings and comments for products that your company sells.
 
 ## Prerequisites
-To follow this procedure, the following items are required:
-* Either a PowerApps Plan 2 or Microsoft Flow Plan 2 license. Alternatively, you can sign up for a [free PowerApps Plan 2 trial](https://web.powerapps.com/signup?redirect=marketing&email=).
-* Either a System Administrator or System Customizer security role within Common Data Service.
+To follow this procedure, you must have either a System Administrator or System Customizer security role within Common Data Service.
 
 ## Sign in to PowerApps
 Sign in to PowerApps at [https://web.powerapps.com](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
@@ -36,21 +34,35 @@ Sign in to PowerApps at [https://web.powerapps.com](https://web.powerapps.com/?u
 
     Before you create an entity, check out the [entity reference](../../developer/common-data-service/reference/about-entity-reference.md) for a description of available standard entities. These entities cover typical scenarios. If one of these entities meets your requirements as is or after minor changes, you can save time by starting with that entity. 
 
-3. In the **New entity** panel, in the **Display name** box, enter **Product review**, and then optionally enter a description (descriptions are helpful if other people will use this entity). Other fields in the panel are autopopulated, as described below. When you're done, click **Next**.
+3. In the **New entity** panel, do the following:
 
-    * **Plural display name** - This field is autopopulated when you enter a display name, but you can change it if needed. The plural display name is the name of the entity in the Common Data Service WebAPI and is used when interacting with this entity from PowerApps or Flow.
-    * **Name** - This field is also autopopulated when you enter a display name. The prefix was set up when the environment was created and ensures that the entities you create can be exported and imported into other environments without conflicting with other entity names. You can change this prefix by updating the prefix on your Publisher for the Common Data Service Default Solution. To keep existing apps from breaking, you cannot change the name after saving the entity.
+    a. In the **Display name** box, enter **Product review**.
+
+    Observe that the following boxes are autopopulated as you enter a display name:
+
+    * **Plural display name** - This box is autopopulated when you enter a display name, but you can change it if needed. The plural display name is the name of the entity in the Common Data Service WebAPI and is used when interacting with this entity from PowerApps or Flow.
+    * **Name** - This box is also autopopulated when you enter a display name. The prefix was set up when the environment was created and ensures that the entities you create can be exported and imported into other environments without conflicting with other entity names. You can change this prefix by updating the prefix on your Publisher for the Common Data Service Default Solution. To keep existing apps from breaking, you cannot change the name after saving the entity.
 
        > [!NOTE]
        > In order for the entity name to work with [Dynamics 365 for Customer Service embedded knowledge search](/dynamics365/customer-engagement/customer-service/set-up-knowledge-management-embedded-knowledge-search), the maximum entity name length including the publisher prefix can’t exceed 24 characters.
-     
-    ![New Entity](./media/data-platform-cds-create-entity/newentitypanel.png "New entity panel")
 
-4. On the entity details page, click or tap the **Primary Name** field to open the **Primary Name** panel, and then in the **Display name** box, replace **Primary Name** with **Product Review**. In the **Name** box, replace **PrimaryName** with **ProductReview**, and then click or tap **Done**.
- 
-    By default, every entity contains a Primary Name field, which is used by lookup fields when establishing relationships with other entities. Typically the Primary Name field stores the name or primary description of the data stored in the entity. You may update the name and display name of the Primary Name field before saving the entity for the first time.
+    b. In the **Primary Field** section, in the **Display name** box, replace **Name** with **Product Review**. 
+
+    By default, every entity contains a **Primary Field**, which is used by lookup fields when establishing relationships with other entities. Typically the primary field stores the name or primary description of the data stored in the entity. You may update the name and display name of the primary field before saving the entity for the first time.
+
+    Also, observe that the primary field also has its own **Name** box, which functions similarly to the entity name described above. The primary field name is autopopulated when a display name is entered, uses the same prefix as the entity, and cannot be changed after the entity is created.
+
+    c. Open the **More settings** section and expand the **Description** accordion. You may enter a description for your entity if you wish (descriptions are helpful if other people will use this entity). 
+    
+    d. When you're done, click **Create**.
+     
+    ![New Entity](./media/data-platform-cds-create-entity/newentitypanel.png "New Entity Panel")
+
+4. On the entity details page, observe that the entity is now being provisioned in the background. Once provisioning is completed, your entity will be saved and available for use in apps. Fields, relationships, and keys can be added to your entity at any time (even while provisioning is still in progress), but views, forms, charts, dashboards, and business rules can only be added to the entity after provisioning is completed.
 
     ![Entity Details](./media/data-platform-cds-create-entity/newentitydetails.png "New Entity Details")
+
+5. Under the **Fields** tab, observe the **Primary Field** that you named in the previous step. Click or tap the **Primary Field** field to open the **Primary Field** panel if you would like to make any additional customizations to the field. Notice that the **Name** can no longer be changed, since the entity has already been saved.
 
 5. To add a field to the entity, do the following:
  
@@ -80,7 +92,7 @@ Sign in to PowerApps at [https://web.powerapps.com](https://web.powerapps.com/?u
 
     Note that all entities have read-only system fields. By default, system fields are not shown in the list of fields even though they exist in the entity. To see all fields, change the filter on the command bar from **Default** to **All**. For more information on the metadata related to an entity, see [Entity metadata](../../developer/common-data-service/entity-metadata.md).
 
-7. Click **Save entity** to save your entity and make it available for use in apps.
+7. Click **Save Entity** to save the latest changes to your entity.
 
     The Product Review entity should appear in the list of entities in your database. If you don't see it, change the filter in the command bar from **Default** to **Custom**.
 

@@ -12,7 +12,7 @@
       href: implementing-controls-using-typescript.md
   - name: How-to
     items:
-    - name: Create custom components
+    - name: Create, debug and deploy custom components using Microsoft PowerApps CLI
       href: create-custom-controls-using-pcf.md
     - name: Debug custom components
       href: debugging-custom-controls.md
@@ -20,6 +20,10 @@
       href: import-custom-controls.md
     - name: Add components to entites or fields
       href: add-custom-controls-to-a-field-or-entity.md
+    - name: Update Microsoft PowerApps CLI to latest version
+      href: updating-tooling.md
+    - name: Implementing custom components in TypeScript
+      href: implementing-controls-using-typescript.md
     - name: Update existing custom components
       href: updating-existing-controls.md
     - name: Publish custom components on AppSource
@@ -29,7 +33,7 @@
   - name: FAQ
     href: faq.md
   - name: Sample components
-    items: 
+     items: 
     - name: Increment component
       href: sample-controls/increment-control.md
     - name: Linear input component

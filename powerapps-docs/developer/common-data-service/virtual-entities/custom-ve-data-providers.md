@@ -88,10 +88,8 @@ If for any reason your code cannot achieve the expected result, you must throw t
 
 |**Exception Class**|**Description**|
 |---------------|-----------|
-|<xref:Microsoft.Xrm.Sdk.Data.Exceptions.AttributeNotFoundException>|The query specifies an attribute that was not found in the associated external data record. Typically occurs as a result of faulty type mapping or a external data source schema change.|
 |<xref:Microsoft.Xrm.Sdk.Data.Exceptions.AuthenticationException>|An error occurred during security authentication to the external data source service; for example HTTP status 401 received from the external data service. Typically occurs because the current user does not have proper privileges or the connection information in the associated **EntityDataSource** is incorrect.|
 |<xref:Microsoft.Xrm.Sdk.Data.Exceptions.EndpointException>|The endpoint configuration in the data source entity is invalid or the endpoint does not exist.|
-|<xref:Microsoft.Xrm.Sdk.Data.Exceptions.EntityNotFoundException>|The query targets an entity which does not exist. Typically occurs as a result of faulty type mapping or a external data source schema change.|
 |<xref:Microsoft.Xrm.Sdk.Data.Exceptions.GenericDataAccessException>|A general data access error, used when the error does not map to a more specific exception.|
 |<xref:Microsoft.Xrm.Sdk.Data.Exceptions.InvalidMetadataException>| |
 |<xref:Microsoft.Xrm.Sdk.Data.Exceptions.InvalidQueryException>|The specified query is invalid; for example it an invalid clause combination or unsupported comparison operator.|

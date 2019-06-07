@@ -13,8 +13,6 @@ ms.topic: "article"
 
 # Add custom components to a field or entity
 
-[!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
-
 Custom components let you transform fields that traditionally contain text into visualizations. Similarly, you can use custom components to transform datasets, such as a view, to display in a more visual rendering rather than a list of records. Custom components can appear as visualizations on forms, dashboards, views, and homepage grids. 
 
 ## Add a custom component to a field
@@ -75,5 +73,6 @@ To add a custom component like data-set component or simple table component to a
 
 ### See also
 
-[Update existing custom components](updating-existing-controls.md)
-
+[Implementing components in TypeScript](implementing-controls-using-typescript.md)<br/>
+[PowerApps component framework API Reference](reference/index.md)<br/>
+[PowerApps component framework Overview](overview.md)
