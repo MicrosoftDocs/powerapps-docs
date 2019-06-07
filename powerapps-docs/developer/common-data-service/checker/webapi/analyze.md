@@ -1,6 +1,6 @@
 ---
 title: "Invoke analysis | Microsoft Docs"
-description: "Read how to form a POST request using the PowerApps checker web API to initiate the analysis request job"
+description: "Learn how to form a POST request using the PowerApps checker web API to initiate the analysis request job."
 ms.custom: ""
 ms.date: 06/04/2019
 ms.service: powerapps
@@ -13,7 +13,7 @@ ms.assetid: a2c771f4-7eb6-4445-af2d-f775619ac3e8
 caps.latest.revision: 21
 author: "mhuguet" # GitHub ID
 ms.author: "mhuguet"
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 manager: "maustinjones"
 search.audienceType: 
   - developer
@@ -26,14 +26,11 @@ search.app:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../../../includes/cc-beta-prerelease-disclaimer.md)]
 
-Initiating an analysis job is done by submitting a `POST` request to the `analyze` route. Analysis can be a long running process, which is usually longer than a minute, so the API does some basic validation, initiates the request on the backend by submitting a job, and responds with a status code of 202 and a `Location` header or with the apprioriate error details. The `Location` header value is a URL that can be used to check on the status of the request and to obtain the URL(s) of the result(s). There are various options through the POST action to taylor the job based on your criteria, such as the list of rules or rulesets, files to exclude from the analysis, etc. You can initiate using the following _/api/analyze?api-version=1.0_.
+Initiating an analysis job is done by submitting a `POST` request to the `analyze` route. Analysis can be a long running process that usually lasts longer than a minute. The API first does some basic validation, initiates the request on the backend by submitting a job, and then responds with a status code of 202 and a `Location` header or with the appropriate error details. The `Location` header value is a URL that can be used to check on the status of the request and to obtain the URL(s) of the result(s). There are various options through the `POST` action to taylor the job based on your criteria, such as the list of rules or rulesets, files to exclude from the analysis, and more. You can initiate the analysis using the following `[Geographical URL]/api/analyze?api-version=1.0`.
 
 
 > [!NOTE]
->  It is recommended to wait between 15 to 60 seconds between status checks. Analysis usually takes between 1 to 5 minutes to run.
-
-> [!NOTE]
->  This API does require an OAuth token.
+>  It is recommended to wait between 15 to 60 seconds between status checks. Analysis usually takes between 1 to 5 minutes to run.<br /> This API does require an OAuth token.
 
 <a name="bkmk_headers"></a>
 
@@ -41,11 +38,11 @@ Initiating an analysis job is done by submitting a `POST` request to the `analyz
 
 |Name|Type|Expected value|Required?|
 |---|---|---|---|
-|Authorization|string|OAuth 1 bearer token with AAD Application Id claim|yes|
-|x-ms-tenant-id|guid|ID of the tenant for the application|yes|
-|x-ms-correlation-id|guid|Identifier for the analysis run. You should provide the same Id for the entire execution (upload, analyze, status)|yes|
-|Accept|object|application/json, application/x-ms-sarif-v2|yes|
-|Accept-Language|string|language code or codes, e.g.- en-US. The default is en-US. If multiple are provided, the first will be the primary, however, all translations (if the language is supported) will be included.|no
+|Authorization|string|The OAuth 1 bearer token with Azure Active Directory (AAD) Application ID claim.|yes|
+|x-ms-tenant-id|GUID|The ID of the tenant for the application.|yes|
+|x-ms-correlation-id|GUID|The Identifier for the analysis run. You should provide the same ID for the entire execution (upload, analyze, status).|yes|
+|Accept|object|`application/json, application/x-ms-sarif-v2`|yes|
+|Accept-Language|string|The language code or codes (e.g,. en-US). The default is en-US. If multiple languages are provided, the first will be the primary. However, all translations (if the language is supported) will be included.|no
 
 <a name="bkmk_body"></a>
 
@@ -55,11 +52,11 @@ Initiating an analysis job is done by submitting a `POST` request to the `analyz
 
 |Property|Type|Expected value|Required?|
 |---|---|---|---|
-|sasUriList|array of strings|List of URIs that provides the service access to download a single solution, a zip file containing multiple solution files, or a package|Yes|
+|sasUriList|array of strings|A list of URIs that provides the service access to download a single solution, a zip file containing multiple solution files, or a package.|Yes|
 |ruleSets|array of custom|0 or more|No|
-|ruleSets.id|guid|Id of the ruleset, which can be found by querying the ruleset API.|No, but this is usually what you would want to use. You must use either this or ruleCodes.|
-|ruleCodes.code|string|Id of the desired rule, which can be found by querying the ruleset and rule APIs.|No. You must use either this or ruleSets.|
-|fileExclusions|array of strings|List of file names or file name patterns to exclude. Support exists for using "*" as a wildcard in the beginning and/or end of a file name, e.g._\*jquery.dll_ and _\*jquery\*_.|No|
+|ruleSets.id|guid|The ID of the ruleset, which can be found by querying the ruleset API.|No, but this is usually what you would want to use. You must use either this or ruleCodes.|
+|ruleCodes.code|string|The ID of the desired rule, which can be found by querying the ruleset and rule APIs.|No, you must use either this or ruleSets.|
+|fileExclusions|array of strings|A list of file names or file name patterns to exclude. Support exists for using "*" as a wildcard in the beginning and/or end of a file name ( e.g.,\*jquery.dll and \*jquery\*).|No|
 
 <a name="bkmk_responses"></a>
 
@@ -68,8 +65,8 @@ Initiating an analysis job is done by submitting a `POST` request to the `analyz
 |HTTP status code|Scenario|Result|
 |---|---|---|
 |202|Request for analysis was accepted and the status check URI was returned in the `Location` header|No result body
-|400|A non zip file was sent, incorrect parameters, or a file was included with a virus|No result body|
-|409|A request with a duplicate x-ms-correlation-id header value was sent|No result body|
+|400|A non-zip file was sent, incorrect parameters, or a file was included with a virus|No result body|
+|409|A request with a duplicate `x-ms-correlation-id` header value was sent|No result body|
 
 ### Expected response headers
 
