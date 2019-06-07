@@ -29,7 +29,7 @@ Follow step-by-step instructions to create a summary form in a canvas app for ma
 ## Prerequisites
 
 1. [Install the Northwind Traders database and apps](northwind-install.md).
-1. Take a moment to review the [overview of the canvas app](northwind-orders-canvas-overview.md) for Northwind Traders.
+1. Review the [overview of the canvas app](northwind-orders-canvas-overview.md) for Northwind Traders.
 1. [Create the order gallery](northwind-orders-canvas-part1.md) yourself, or open the **Northwind Orders (Canvas) - Begin Part 2** app, which already contains that gallery.
 
 ## Add a title bar

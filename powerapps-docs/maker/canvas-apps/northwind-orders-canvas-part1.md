@@ -120,7 +120,7 @@ Follow step-by-step instructions to create an order gallery in a canvas app for 
 
     Two [**Label**](controls/control-text-box.md) controls are added in the gallery's template. By default, these controls show two columns of the **Orders** entity, which you'll change next. The gallery's template is replicated vertically for each record in the entity.
 
-1. On the **Properties** tab near the right edge, select **Edit** (next to **Fields**) to open the **Data** pane.
+1. If you've closed the **Data** pane, select **Edit** (next to **Fields**) in the **Properties** tab near the right edge.
 
 1. In the **Data** pane, select **Title1** (or select the upper label in the gallery's template).
 
@@ -257,7 +257,7 @@ In this procedure, you'll add space in the gallery for a label and configure it 
 
     The [**Text**](functions/function-text.md) function in this formula adds a currency symbol and formats the result with thousands and decimal separators. As written, the formula includes the language tag for U.S. English (**[$-en-US]**) and a dollar symbol (**$**). If you remove the language tag, it will be replaced with one based on your language settings, and the label will show the appropriate formats for that tag. If you leave the dollar symbol, the label will show the appropriate currency symbol based on the user's settings. However, you can force a different symbol to appear by replacing the dollar symbol with the one that you prefer.
 
-1. On the **Home** tab, change the font size of the newest label to 20 points, and right justify its text:
+1. On the **Home** tab, change the font size of the newest label to 20 points, and right align its text:
 
     > [!div class="mx-imgBorder"]
     > ![Change the font size and the alignment of a label](media/northwind-orders-canvas-part1/aggregate-05.png)

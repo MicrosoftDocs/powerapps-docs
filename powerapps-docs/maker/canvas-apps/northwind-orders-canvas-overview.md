@@ -55,7 +55,7 @@ To create this app, you'll show data from five entities and an option set. In fa
 - The customer name is a field in the **Customers** entity.
 - The total cost is calculated based on data in the **Order Details** entity.
 
-The summary contains some of the same information as the list of orders, but it also contains the name and the picture of the employee who managed the order. That information is pulled from fields in the **Employees** entity. The details gallery shows records in the **Order Details** entity, and each product in those details is a record in the **Order Products** entity.
+The summary contains some of the same information as the list of orders, but it also contains the name and the picture of the employee who managed the order. That information is pulled from fields in the **Employees** entity. The detail gallery shows records in the **Order Details** entity, and each product in those details is a record in the **Order Products** entity.
 
 ## Explore the relationships
 
