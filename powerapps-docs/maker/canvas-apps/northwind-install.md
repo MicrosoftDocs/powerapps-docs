@@ -154,7 +154,7 @@ You can follow step-by-step instructions to create the canvas app shown earlier 
 
 If you want to skip ahead, the solution contains a starting-point app for each part.  In the list of apps, look for **Northwind Orders (Canvas) - Begin Part 1** and so on.
 
-This [overview of the app](northwind-orders-overview.md) explains the user interface, data sources, and how relationships are used.
+This [overview of the app](northwind-orders-canvas-overview.md) explains the user interface, data sources, and how relationships are used.
 
 > [!div class="nextstepaction"]
-> [Start by reading the overview](northwind-orders-overview.md)
+> [Start by reading the overview](northwind-orders-canvas-overview.md)
