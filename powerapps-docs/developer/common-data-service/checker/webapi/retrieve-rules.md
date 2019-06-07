@@ -26,7 +26,7 @@ search.app:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../../../includes/cc-beta-prerelease-disclaimer.md)]
 
-Rules are grouped together using a ruleset. A rule can be in no ruleset, or multiple rulesets. Use a `GET` request to obtain a list of all rules available, rules in a ruleset, or rulesets by calling the API [Geographical URI]/api/rule. There are a few variations to calling this API, however, the most common usage is to retrieve the list of rules for a specific ruleset.
+Rules are grouped together using a ruleset. A rule can be in no ruleset, or multiple rulesets. Use a `GET` request to obtain a list of all rules available, rules in a ruleset, or rulesets by calling the API `[Geographical URI]/api/rule`. There are a few variations to calling this API, however, the most common usage is to retrieve the list of rules for a specific ruleset.
 
 > [!NOTE]
 >  This API does not require an OAuth token, but can accept one if provided.
@@ -37,7 +37,7 @@ Rules are grouped together using a ruleset. A rule can be in no ruleset, or mult
 
 |Name|Type|Expected value|Required?|
 |---|---|---|---|
-|Accept-Language|string|language code, e.g.- en-US. The default is en-US.|no
+|Accept-Language|string|The language code (e.g., en-US). The default is en-US.|no
 
 <a name="bkmk_params"></a>
 
@@ -54,7 +54,7 @@ Rules are grouped together using a ruleset. A rule can be in no ruleset, or mult
 
 |HTTP status code|Scenario|Result|
 |---|---|---|
-|200|One or more results were found|See example below. One or more results may be returned.|
+|200|One or more results were found|See the example below. One or more results may be returned.|
 |204|No results were found|No results in the response body.|
 
 ### Expected response body
@@ -69,7 +69,7 @@ The following table outlines the structure of the response for each request (HTT
 |guidanceUrl|URI|The URL in which to find published guidance. There may be some cases where there is not a dedicated supporting guidance article.|Yes|
 |include|boolean|Signals to the service that the rule is to be included in the analysis. This will be `true` for this API.|No|
 |messageTemplates|array|This property value is included only when `includeMessageFormats` is `true`.|No|
-|messageTemplates.ruleId|string| Returns the same ID value as `code`.|Yes|
+|messageTemplates.ruleId|string| Returns the same ID value as the `code` property.|Yes|
 |messageTemplates.messageTemplateId|string| An identifier used in the Static Analysis Results Interchange Format (SARIF) report to signal an issue message variation for the rule.|Yes|
 |messageTemplates.messageTemplate|string|The text of the message variation for the issue scenario that the rule reports. This is a format string that may contain tokens in which  arguments provided in the SARIF report can be used to construct a detailed message.|Yes|
 

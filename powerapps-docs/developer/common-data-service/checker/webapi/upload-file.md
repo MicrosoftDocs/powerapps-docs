@@ -1,6 +1,6 @@
 ---
 title: "Upload a file for analysis | Microsoft Docs"
-description: "Read how to form a POST request using the PowerApps checker web API to retrieve to upload a file to analyze"
+description: "Read how to form a POST request using the PowerApps checker web API to retrieve to upload a file to analyze."
 ms.custom: ""
 ms.date: 06/04/2019
 ms.service: powerapps
@@ -13,7 +13,7 @@ ms.assetid: 08d7d73b-1377-4d3f-b8ef-5c89b19dd735
 caps.latest.revision: 21
 author: "mhuguet" # GitHub ID
 ms.author: "mhuguet"
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 manager: "maustinjones"
 search.audienceType: 
   - developer
@@ -26,7 +26,7 @@ search.app:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../../../includes/cc-beta-prerelease-disclaimer.md)]
 
-The initiation of an analysis job requires a path to an `Azure` blob that is accessible by URL. We do provide the ability to upload a file to our Azure blob storage in the specified geography using the upload service. It is not required that our upload API be used in order to run analysis. You can upload using a `POST` request to the following: _/api/upload?api-version=1.0_. We are only able to support uploading a file up to 30 MB in size. For anything larger you will need to provide your own externally accessible Azure storage and SAS URI. 
+The initiation of an analysis job requires a path to an Azure blob that is accessible by URL. The ability to upload a file to Azure blob storage in the specified geography using the upload service is provided. It is not required that the upload API be used in order to run analysis. You can upload using a `POST` request to the following: `[Geographical URI]/api/upload?api-version=1.0`. Uploading a file up to 30 MB in size is supported. For anything larger you will need to provide your own externally accessible Azure storage and SAS URI.
 
 > [!NOTE]
 >  This API does require an OAuth token.
@@ -37,11 +37,11 @@ The initiation of an analysis job requires a path to an `Azure` blob that is acc
 
 |Name|Type|Expected value|Required?|
 |---|---|---|---|
-|Authorization|string|OAuth 1 bearer token with AAD Application ID claim|yes|
-|x-ms-tenant-id|guid|ID of the tenant for the application|yes|
-|x-ms-correlation-id|guid|Identifier for the analysis run. You should provide the same Id for the entire execution (upload, analyze, status)|yes|
+|Authorization|string|The OAuth 1 bearer token with Azure Active Directory (AAD) Application ID claim.|yes|
+|x-ms-tenant-id|GUID|The ID of the tenant for the application.|yes|
+|x-ms-correlation-id|GUID|The Identifier for the analysis run. You should provide the same ID for the entire execution (upload, analyze, status).|yes|
 |Content-Type|object|multipart/form-data|yes|
-|Content-Disposition|object|Include name and filename parameters, e.g.-form-data; name="solution1.zip"; filename="solution1.zip"|yes|
+|Content-Disposition|object|Include the name and filename parameters, for example:<br />`form-data; name="solution1.zip"; filename="solution1.zip"`|yes|
 
 <a name="bkmk_responses"></a>
 

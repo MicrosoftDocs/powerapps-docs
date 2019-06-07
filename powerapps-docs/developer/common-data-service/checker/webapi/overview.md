@@ -93,7 +93,7 @@ When interacting with the PowerApps checker service, files are temporarily store
 
 While not required, it is recommended to include the api-version query string parameter with the desired API version. The current API version is 1.0. For example, below is a ruleset HTTP request specifying to use the 1.0 API version:
 
-https://unitedstatesfirstrelease.api.advisor.powerapps.com/api/ruleset?api-version=1.0
+`https://unitedstatesfirstrelease.api.advisor.powerapps.com/api/ruleset?api-version=1.0`
 
 If not provided, the latest API version will be used by default. Using an explicit version number is recommended as the version will be incremented if breaking changes are introduced. If the version number is specified in a request, backward compatibility support in later (numerically greater) versions will be maintained.
 
@@ -102,7 +102,7 @@ If not provided, the latest API version will be used by default. Using an explic
 ## Rulesets and rules
 
 PowerApps checker requires a list of rules when run. These rules can be provided in the form of individual rules or a grouping of rules, referred to as a *ruleset*. A ruleset is a convenient way to specify a group of rules instead of having to specify each rule individually. For example, the solution checker feature uses a ruleset named *Solution Checker*. As new rules are added or removed, the service will include these changes automatically without requiring any change by the consuming application. If you require that the list of rules not change automatically as described above, then the rules can be specified individually.
-Rulesets can have one or more rules with no limit. A rule can be in no or multiple rulesets. You can get a list of all rulesets by calling the API as follows: _.../api/ruleset_. This endpoint is open and does not require authentication.
+Rulesets can have one or more rules with no limit. A rule can be in no or multiple rulesets. You can get a list of all rulesets by calling the API as follows: `[Geographical URL]/api/ruleset`. This endpoint is open and does not require authentication.
 
 ### Solution checker ruleset
 
@@ -132,7 +132,7 @@ The tenant ID is the value of the `ObjectId` property that is returned from `Get
 
 ## Authentication and authorization
 
- Querying for rules and rulesets do not require an OAuth token, but all of the other APIs do require the token. The APIs do support authorization discovery by calling any of the APIs that require a token. The response will be an unauthorized HTTP status code of 401 with a WWW-Authenticate header, the authorization URI, and the resource ID. You should also provide your tenant ID in the `x-ms-tenant-id` header. Refer to [PowerApps Checker authentication and authorization](checker-api-auth.md) for more information. Below is an example of the response header returned from an API request:
+ Querying for rules and rulesets do not require an OAuth token, but all of the other APIs do require the token. The APIs do support authorization discovery by calling any of the APIs that require a token. The response will be an unauthorized HTTP status code of 401 with a WWW-Authenticate header, the authorization URI, and the resource ID. You should also provide your tenant ID in the `x-ms-tenant-id` header. Refer to [PowerApps Checker authentication and authorization](/powershell/powerapps/overview#powerapps-checker-authentication-and-authorization) for more information. Below is an example of the response header returned from an API request:
 
 ```http
 WWW-Authenticate →Bearer authorization_uri="https://login.microsoftonline.com/0082fff7-33c5-44c9-920c-c2009943fd1e", resource_id="https://api.advisor.powerapps.com/"
