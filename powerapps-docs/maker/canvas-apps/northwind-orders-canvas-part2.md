@@ -130,13 +130,14 @@ In this section, you'll add controls to show a summary of any order that the use
     > [!div class="mx-imgBorder"]
     > ![Edit form control shows seven fields](media/northwind-orders-canvas-part2/form-08.png)
 
-    If any field shows a red error icon, a problem might have occurred when data was pulled from the source. To resolve the error, refresh the data:
-
-    1. On the **View** tab, select **Data sources**.
-    1. In the **Data** pane, select **Data sources**.
-    1. Next to **Orders**, select the ellipsis (...), select **Refresh**, and then close the **Data** pane.
-
-    If the combo box for the customer or employee name still shows an error, check the **Primary text** and **SearchField** of each box by selecting it and then opening the **Data** pane. For the customer box, both fields should be set to **nwind_company**. For the employee box, both fields should be set to **nwind_lastname**.
+    > [!NOTE]
+    > If any field shows a red error icon, a problem might have occurred when data was pulled from the source. To resolve the error, refresh the data:
+    >
+    > 1. On the **View** tab, select **Data sources**.
+    > 1. In the **Data** pane, select **Data sources**.
+    > 1. Next to **Orders**, select the ellipsis (...), select **Refresh**, and then close the **Data** pane.
+    >
+    > If the combo box for the customer or employee name still shows an error, check the **Primary text** and **SearchField** of each box by selecting it and then opening the **Data** pane. For the customer box, both fields should be set to **nwind_company**. For the employee box, both fields should be set to **nwind_lastname**.
 
 1. With the form selected, change the number of columns in the form from 3 to 12 in the **Properties** tab near the right edge.
 
@@ -520,7 +521,7 @@ The **Orders** entity has a many-to-one relationship with the **Employees** enti
     > [!div class="mx-imgBorder"]
     > ![Deleting orders](media/northwind-orders-canvas-part2/save-delete.gif)
 
-## On to Part 3
+## Summary
 
 To recap, you added a form in which the user can show and edit a summary of each order, and you used these elements:
 

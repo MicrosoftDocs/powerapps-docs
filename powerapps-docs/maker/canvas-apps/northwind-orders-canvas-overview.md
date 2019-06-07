@@ -81,5 +81,15 @@ As another example of walking from one entity to another, you can specify that a
 
 In this case, **Gallery1.Selected** specifies a record in the **Orders** entity, just as **ThisItem** did in the previous example. However, this expression doesn't pull just one record as the previous expression did. Instead, it pulls an entire table of records to show the name and per-unit cost of each product (as reflected in the **Order Products** entity) and the quantity (as reflected in the **Order Details** entity).
 
+## Do it yourself
+
+You can follow step-by-step instructions to create the Northwind Orders canvas app.  The instructions are divided into three parts:
+
+1. [Create an order gallery](northwind-orders-canvas-part1.md).
+1. [Create a summary form](northwind-orders-canvas-part2.md).
+1. [Create a detail gallery](northwind-orders-canvas-part3.md).
+
+If you want to skip ahead, the solution contains a starting-point app for each part.  In the list of apps, look for **Northwind Orders (Canvas), Begin Part 1** and so on.
+
 > [!div class="nextstepaction"]
-> [Create the order gallery](northwind-orders-canvas-part1.md)
+> [Continue by creating the order gallery](northwind-orders-canvas-part1.md)

@@ -18,9 +18,9 @@ search.app:
 
 Follow step-by-step instructions to create a detail gallery in a canvas app for managing fictitious data in the Northwind Traders database. This topic is part of a series that explains how to build a business app on relational data in Common Data Service. For best results, explore these topics in this sequence:
 
-1. [Create an order gallery in a canvas app](northwind-orders-canvas-part1.md).
-1. [Create a summary form in a canvas app](northwind-orders-canvas-part2.md).
-1. Create a detail gallery in a canvas app (**this topic**).
+1. [Create an order gallery](northwind-orders-canvas-part1.md).
+1. [Create a summary form](northwind-orders-canvas-part2.md).
+1. Create a detail gallery (**this topic**).
 
 > [!div class="mx-imgBorder"]
 > ![Definition of screen areas](media/northwind-orders-canvas-part1/orders-parts.png)

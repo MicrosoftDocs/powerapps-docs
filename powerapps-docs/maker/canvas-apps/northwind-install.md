@@ -28,9 +28,10 @@ Northwind Traders is a fictitious organization that manages orders, products, cu
 
 ## Install the solution
 
-1. [Download the **Northwind Traders Solution File** ![download](media/northwind-install/download.png)](https://pwrappssamples.blob.core.windows.net/samples/NorthwindTraders_1_0_0_5.zip).   
+> [!div class="nextstepaction"]
+> [Download the Northwind Traders Solution File](https://pwrappssamples.blob.core.windows.net/samples/NorthwindTraders_1_0_0_5.zip)
 
-    This [solution](../../developer/common-data-service/introduction-solutions.md) file (.zip) contains the definitions of entities, option sets, and business processes; the canvas and model-driven apps; and any other pieces that are used together.
+This [solution](../../developer/common-data-service/introduction-solutions.md) file (.zip) contains the definitions of entities, option sets, and business processes; the canvas and model-driven apps; and any other pieces that are used together.
 
 1. Sign in to [PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then ensure that you're working in an environment that contains a Common Data Service database.
 
@@ -140,3 +141,18 @@ If you scroll down the form, it shows the same line items as the canvas app does
 
 > [!div class="mx-imgBorder"]
 > ![more order details in model-driven app](media/northwind-install/orders-model-3.png)
+
+## Do it yourself
+
+You can follow step-by-step instructions to create the canvas app shown earlier in this topic.  The instructions are divided into three parts:
+
+1. [Create an order gallery](northwind-orders-canvas-part1.md).
+1. [Create a summary form](northwind-orders-canvas-part2.md).
+1. [Create a detail gallery](northwind-orders-canvas-part3.md).
+
+If you want to skip ahead, the solution contains a starting-point app for each part.  In the list of apps, look for **Northwind Orders (Canvas), Begin Part 1** and so on.
+
+This [overview of the app](northwind-orders-overview.md) explains the user interface, data sources, and how relationships are used.
+
+> [!div class="nextstepaction"]
+> [Start by reading the overview](northwind-orders-overview.md)
