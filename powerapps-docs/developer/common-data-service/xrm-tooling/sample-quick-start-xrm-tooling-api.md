@@ -25,7 +25,7 @@ search.app:
 
 The QuickStart sample is a .NET Framework managed code sample that shows how to connect to a Common Data Service instance by using the XRM Tooling APIs, and perform basic create, update, retrieve, and delete operations on an entity. For more information about XRM Tooling, see [Build windows client applications using the XRM tools](build-windows-client-applications-xrm-tools.md).
 
-Download the sample: [Work with XRM Tooling API](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/Xrm%20Tooling/Quick%20start%20for%20XRM%20Tooling)
+Download the sample: [Work with XRM Tooling API](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/Xrm%20Tooling/Quick%20start%20for%20XRM%20Tooling%20API)
 
 ## How to run the sample
 

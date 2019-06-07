@@ -91,9 +91,6 @@ As another example, unlock the **ImageURL** card, and then add an **Image** cont
 
 In the formula bar, set the **Image** property of this control to *TextBox*.**Text**, where *TextBox* is the name of the **Text input** control that holds the URL:
 
-> [!TIP]
-> Press the Alt key to show the name of each control.
-
 ![](./media/working-with-cards/show-image.png)
 
 And now we can see the images and edit their URLs. Note that we could have used **Parent.Default** as the **Image** property, but it wouldn't have updated if the user changed the URL.
@@ -133,7 +130,7 @@ Let's look at the controls that make up a basic data-entry card. The space betwe
 
 ![](./media/working-with-cards/dissect-card1.png)
 
-Hold down the Alt key to show the names of the controls that make up this card:
+In this graphic, the controls within the data card have been labeled:
 
 ![](./media/working-with-cards/dissect-card2.png)
 
@@ -154,6 +151,9 @@ To populate these controls with data, their properties can be driven from the pr
 | **TextFieldDisplayName.Text** |**Parent.DisplayName** |The text-box control shows the user-friendly name, which you or the data source's metadata provides, and which is set on the card's **[DisplayName](controls/control-card.md)** property. |
 | **InputText.Default** |**Parent.Default** |The text-input control initially shows the value of the field from the data source, as provided by the card's default value. |
 | **TextErrorMessage.Text** |**Parent.Error** |If a validation problem occurs, the card's **Error** property provides an appropriate error message. |
+
+> [!NOTE]
+> The **Parent.Error** property is an output-only property that you can't set by using a formula. Therefore, this property won't appear in list of properties near the upper-left corner or in the **Properties** or **Advanced** tabs near the right edge. The formula bar suggests this property if you're writing a formula that could reference the property.
 
 To pull information out of these controls and push it back into the data source, we have the following key formulas:
 
