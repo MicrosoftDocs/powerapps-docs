@@ -103,6 +103,8 @@ Before you start this topic, you must install the database as described earlier 
     ThisItem.Product.'Product Name'
     ```
 
+    If no text appears, select the arrow for **Order 0901** near the bottom of the order gallery.
+
 1. Resize the label so that the full text appears:
 
     > [!div class="mx-imgBorder"]
@@ -263,7 +265,7 @@ Before you start this topic, you must install the database as described earlier 
     > [!div class="mx-imgBorder"]
     > ![Add label for order totals](media/northwind-orders-canvas-part3/sum-03.png)
 
-1. Copy and paste the order-totals label, and then resize and move the copy to the right of the **Order Totals:** label.
+1. Copy and paste the order-totals label, and then resize and move the copy to the right of the order-totals label.
 
 1. Set the new label's **Text** property to this formula:
 
