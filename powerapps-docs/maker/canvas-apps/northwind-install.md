@@ -26,12 +26,14 @@ Northwind Traders is a fictitious organization that manages orders, products, cu
 - A PowerApps license that supports Common Data Service. You can [use a free trial license](../signup-for-powerapps.md) for 30 days.
 - An environment with a Common Data Service database. You can [create such an environment](https://docs.microsoft.com/power-platform/admin/create-environment) if you have appropriate permissions.
 
-## Install the solution
+## Download the solution
 
 > [!div class="nextstepaction"]
 > [Download the Northwind Traders Solution File](https://pwrappssamples.blob.core.windows.net/samples/NorthwindTraders_1_0_0_6.zip)
 
 This [solution](../../developer/common-data-service/introduction-solutions.md) file (.zip) contains the definitions of entities, option sets, and business processes; the canvas and model-driven apps; and any other pieces that are used together.
+
+## Install the solution
 
 1. Sign in to [PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then ensure that you're working in an environment that contains a Common Data Service database.
 
