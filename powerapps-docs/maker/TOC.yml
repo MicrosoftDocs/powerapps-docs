@@ -665,6 +665,18 @@
             href: ./canvas-apps/functions/function-datetime-parts.md
       - name: Create an app in a solution
         href: ./canvas-apps/add-app-solution.md
+      - name: Create an app with relational data
+        items:
+          - name: Install the data
+            href: ./canvas-apps/northwind-install.md
+          - name: Overview of the canvas app
+            href: ./canvas-apps/northwind-orders-canvas-overview.md
+          - name: 1 - Create the order gallery
+            href: ./canvas-apps/northwind-orders-canvas-part1.md
+          - name: 2 - Create the summary form
+            href: ./canvas-apps/northwind-orders-canvas-part2.md
+          - name: 3 - Create the detail gallery
+            href: ./canvas-apps/northwind-orders-canvas-part3.md
       - name: Build a global app
         href: ./canvas-apps/global-apps.md
       - name: Make an app accessible
