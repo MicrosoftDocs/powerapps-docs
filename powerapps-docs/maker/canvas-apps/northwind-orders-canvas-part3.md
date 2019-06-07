@@ -18,8 +18,6 @@ search.app:
 
 Follow step-by-step instructions to create a detail gallery in a canvas app for managing fictitious data in the Northwind Traders database. This topic is part of a series that explains how to build a business app on relational data in Common Data Service. For best results, explore these topics in this sequence:
 
-1. [Install Northwind Traders database and apps](northwind-install.md).
-1. [Overview of the canvas app for Northwind Traders](northwind-orders-canvas-overview.md).
 1. [Create an order gallery in a canvas app](northwind-orders-canvas-part1.md).
 1. [Create a summary form in a canvas app](northwind-orders-canvas-part2.md).
 1. Create a detail gallery in a canvas app (**this topic**).
@@ -29,11 +27,9 @@ Follow step-by-step instructions to create a detail gallery in a canvas app for 
 
 ## Prerequisites
 
-Before you start this topic, you must install the database as described earlier in this topic. You must then either create the order gallery and the summary form or open the **Northwind Orders (Canvas), Start Part 3** app, which already contains that gallery and that form.
+Before you start this topic, you must install the database as described earlier in this topic. You must then either create the order gallery and the summary form or open the **Northwind Orders (Canvas) - Begin Part 3** app, which already contains that gallery and that form.
 
-## Show order details
-
-### Create another title bar
+## Create another title bar
 
 1. At the top of the screen, select the [**Label**](controls/control-text-box.md) control that acts as a title bar, copy it by pressing Ctrl-C, and then paste it by pressing Ctrl-V:
 
@@ -50,7 +46,7 @@ Before you start this topic, you must install the database as described earlier 
     > [!div class="mx-imgBorder"]
     > ![Remove the text from the title-bar copy](media/northwind-orders-canvas-part3/details-02.png)
 
-### Add a gallery
+## Add a gallery
 
 1. Insert a [**Gallery**](controls/control-gallery.md) control with a **Blank vertical** layout:
 
@@ -78,12 +74,12 @@ Before you start this topic, you must install the database as described earlier 
 
     If an error appears, confirm that the order gallery is named **Gallery1** (in the **Tree view** pane near the left edge). If that gallery has a different name, rename it **Gallery1**.
 
-    You've just linked the two galleries. When the user selects an order in the order gallery, that selection identifies a record in the **Orders** entity. If that order contains one or more line items, the record in the **Orders** entity is linked to one or more records in the **Order details** entity, and data from those records appear in the detail gallery. This behavior reflects the one-to-many relationship that was created for you between the **Orders** and **Order Details** entities. The formula that you specified "walks" that relationship by using dot notation:
+    You've just linked the two galleries. When the user selects an order in the order gallery, that selection identifies a record in the **Orders** entity. If that order contains one or more line items, the record in the **Orders** entity is linked to one or more records in the **Order details** entity, and data from those records appears in the detail gallery. This behavior reflects the one-to-many relationship that was created for you between the **Orders** and **Order Details** entities. The formula that you specified "walks" that relationship by using dot notation:
 
     > [!div class="mx-imgBorder"]
     > ![One-to-many relationship between the Orders entity and the Order Details entity](media/northwind-orders-canvas-part3/schema-orders-rel.png)
 
-### Show product names
+## Show product names
 
 1. In the detail gallery, select **Add an item from the Insert tab** to select the gallery template:
 
@@ -105,10 +101,12 @@ Before you start this topic, you must install the database as described earlier 
     ThisItem.Product.'Product Name'
     ```
 
+    If no text appears, select the arrow for **Order 0901** near the bottom of the order gallery.
+
 1. Resize the label so that the full text appears:
 
     > [!div class="mx-imgBorder"]
-    > ![](media/northwind-orders-canvas-part3/details-09.png)
+    > ![Show product name in order detail](media/northwind-orders-canvas-part3/details-09.png)
 
     This expression walks from a record in the **Order Details** entity. The record is held in **ThisItem** over to the **Order Products** entity through a many-to-one relationship:
 
@@ -120,7 +118,7 @@ Before you start this topic, you must install the database as described earlier 
     > [!div class="mx-imgBorder"]
     > ![Fields in the Order Products entity](media/northwind-orders-canvas-part3/schema-products-fields.png)
 
-### Show product images
+## Show product images
 
 1. On the **Insert** tab, insert an [**Image**](controls/control-image.md) control into the detail gallery:
 
@@ -151,7 +149,7 @@ Before you start this topic, you must install the database as described earlier 
     > [!div class="mx-imgBorder"]
     > ![Shorten the gallery's template](media/northwind-orders-canvas-part3/details-13.png)
 
-### Show product quantity and cost
+## Show product quantity and cost
 
 1. On the **Insert** tab, insert another label into the detail gallery, and then resize and move the new label to the right of the product information.
 
@@ -211,7 +209,7 @@ Before you start this topic, you must install the database as described earlier 
 
 1. In the **Tree view** pane, select **Screen1** to ensure that the detail gallery is no longer selected.
 
-### Add text to the new title bar
+## Add text to the new title bar
 
 1. On the **Insert** tab, insert another label on to the screen:
 
@@ -246,7 +244,7 @@ Before you start this topic, you must install the database as described earlier 
     > [!div class="mx-imgBorder"]
     > ![Change label text to Extended](media/northwind-orders-canvas-part3/details-23.png)
 
-### Display order totals
+## Display order totals
 
 1. Reduce the height of the detail gallery to make room for the order totals at the bottom of the screen:
 
@@ -260,12 +258,12 @@ Before you start this topic, you must install the database as described earlier 
 
 1. Copy and paste the product label from the middle title bar, and then move the copy to the bottom title bar, just to the left of the **Quantity** column.
 
-1. Double-click the new label's text, and then type **Order Totals:**:
+1. Double-click the new label's text, and then type this text:<br>**Order Totals:**
 
     > [!div class="mx-imgBorder"]
     > ![Add label for order totals](media/northwind-orders-canvas-part3/sum-03.png)
 
-1. Copy and paste the order-totals label, and then resize and move the copy to the right of the **Order Totals:** label.
+1. Copy and paste the order-totals label, and then resize and move the copy to the right of the order-totals label.
 
 1. Set the new label's **Text** property to this formula:
 
@@ -293,11 +291,9 @@ Before you start this topic, you must install the database as described earlier 
     > [!div class="mx-imgBorder"]
     > ![Show total cost of order](media/northwind-orders-canvas-part3/sum-05.png)
 
-## Add an order detail
+## Add space for new details
 
 In any gallery, you can show data but you can't update it or add records. Under the detail gallery, you'll add an area where the user can configure a record in the **Order Details** entity and insert that record into an order.
-
-### Add a light-blue label
 
 1. Reduce the height of the detail gallery enough to make room for a single-item editing space under that gallery.
 
@@ -318,7 +314,7 @@ In any gallery, you can show data but you can't update it or add records. Under 
     > [!div class="mx-imgBorder"]
     > ![Change label's fill to light blue](media/northwind-orders-canvas-part3/add-details-03.png)
 
-### Add the Order Details data source
+## Add the Order Details data source
 
 1. On the **View** tab, select **Data sources**, and then select **Add data source** in the **Data** pane:
 
@@ -344,7 +340,7 @@ In any gallery, you can show data but you can't update it or add records. Under 
 
 1. Close the **Data** pane.
 
-### Show the list of products
+## Select a product
 
 1. On the **Insert** tab, select **Controls** > **Combo box**:
 
@@ -365,9 +361,11 @@ In any gallery, you can show data but you can't update it or add records. Under 
     The [**Choices**](functions/function-choices.md) function returns a table of all the possible values for the **Product** field in the **Order Details** entity. This field is a lookup in a many-to-one relationship, so **Choices** returns all the records in the **Order Products** entity.
 
     > [!NOTE]
-    > You can also use **Choices** with option sets to return a table of all the options. The steps didn't mention this approach, but you used it already when you added the combo box that shows **Order Status** in the order summary.
+    > You can also use **Choices** with option sets to return a table of all the options. The steps didn't mention this approach, but you used it already when you added the combo box that shows **Order Status** in the summary form.
 
-1. In the **Data** pane, open the **Primary text** list and select **nwind_productname**,  and then open the **SearchField** list and select **nwind_productname**.
+1. In the **Data** pane, open the **Primary text** list, and then select **nwind_productname**. 
+
+1. Open the **SearchField** list, and then select **nwind_productname**.
 
     You specify the logical name because the **Data** pane doesn't support display names in this case yet:
 
@@ -376,7 +374,7 @@ In any gallery, you can show data but you can't update it or add records. Under 
 
 1. Close the **Data** pane.
 
-1. In the **Properties** tab of the right-hand pane, scroll down, turn off **Allow multiple selection**, and ensure that **Allow searching** is turned on:
+1. In the **Properties** tab near the right edge, scroll down, turn off **Allow multiple selection**, and ensure that **Allow searching** is turned on:
 
     > [!div class="mx-imgBorder"]
     > ![Disable multiple selection and enable searching](media/northwind-orders-canvas-part3/add-details-12.png)
@@ -388,7 +386,7 @@ In any gallery, you can show data but you can't update it or add records. Under 
 
     In this combo box, the user will specify a record in the **Product** entity for the **Order Details** record that the app will create.
 
-1. While holding down the Alt key, select the down arrow on the combo box.
+1. While holding down the Alt key, select the combo box's down arrow.
 
     > [!TIP]
     > By holding down the Alt key, you can interact with controls in PowerApps Studio without opening Preview mode.
@@ -398,7 +396,7 @@ In any gallery, you can show data but you can't update it or add records. Under 
     > [!div class="mx-imgBorder"]
     > ![Select a product in the combo box](media/northwind-orders-canvas-part3/add-details-14.png)
 
-### Add product images
+## Add a product image
 
 1. On the **Insert** tab, select **Media** > **Image**:
 
@@ -423,7 +421,7 @@ In any gallery, you can show data but you can't update it or add records. Under 
 
     You're using the same trick as you used to show the employee picture in the summary form. The **Selected** property of the combo box returns the entire record of whatever product the user selects, including the **Picture** field.
 
-### Add a quantity box
+## Add a quantity box
 
 1. On the **Insert** tab, select **Text** > **Text input**:
 
@@ -452,7 +450,7 @@ In any gallery, you can show data but you can't update it or add records. Under 
     > [!div class="mx-imgBorder"]
     > ![Change alignment](media/northwind-orders-canvas-part3/add-details-22.png)
 
-### Show the unit and extended prices
+## Show the unit and extended prices
 
 1. On the **Insert** tab, insert a **Label** control.
 
@@ -480,7 +478,7 @@ In any gallery, you can show data but you can't update it or add records. Under 
     > [!div class="mx-imgBorder"]
     > ![Change alignment](media/northwind-orders-canvas-part3/add-details-25.png)
 
-1. Copy and paste the list-price label, and then resize and move the copy to the right of the **List price** label.
+1. Copy and paste the list-price label, and then resize and move the copy to the right of the list-price label.
 
 1. Set the new label's **Text** property to this formula:
 
@@ -500,7 +498,7 @@ In any gallery, you can show data but you can't update it or add records. Under 
     > [!div class="mx-imgBorder"]
     > ![Specify a quantity, and show the extended price](media/northwind-orders-canvas-part3/add-details-28.png)
 
-### Add an Add icon
+## Add an Add icon
 
 1. On the **Insert** tab, select **Icons** > **Add**:
 

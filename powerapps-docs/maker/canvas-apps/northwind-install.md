@@ -17,7 +17,7 @@ search.app:
 
 # Install Northwind Traders database and apps
 
-By following the steps in this series of topics, you can discover concepts about relational data as implemented in a sample database in Common Data Service. You can also explore sample business apps, both canvas and model-driven, for managing that data and earn practical experience by creating such an app. This first topic explains how to install the Northwind Traders database in your own environment and gain access to the sample apps, which you can open for editing to reveal how they were built.
+By following the steps in [this series of topics](northwind-orders-canvas-part1.md), you can discover concepts about relational data as implemented in a sample database in Common Data Service. You can also explore sample business apps, both canvas and model-driven, for managing that data and earn practical experience by creating such an app. This first topic explains how to install the Northwind Traders database in your own environment and gain access to the sample apps, which you can open for editing to reveal how they were built.
 
 Northwind Traders is a fictitious organization that manages orders, products, customers, suppliers, and many other aspects of a small business. This sample appeared with the first versions of Microsoft Access and is still available as an Access template.
 
@@ -41,12 +41,12 @@ Northwind Traders is a fictitious organization that manages orders, products, cu
 
 1. In the **Select Solution Package** page, select **Browse**.
 
-    Unless you selected a different location, the file will be in your Downloads folder.
-
     > [!div class="mx-imgBorder"]
     > ![Select Solution Package page before package is selected](media/northwind-install/select-solution2.png)
 
 1. Find the file that you downloaded, and then select **Open**.
+
+    Unless you selected a different location, the file will be in your Downloads folder.
 
 1. If you have the correct file (the version number might vary), select **Next**:
 
