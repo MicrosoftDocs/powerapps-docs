@@ -33,7 +33,7 @@
   - name: FAQ
     href: faq.md
   - name: Sample components
-     items: 
+    items: 
     - name: Increment component
       href: sample-controls/increment-control.md
     - name: Linear input component
