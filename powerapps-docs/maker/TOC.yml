@@ -410,7 +410,7 @@
           - name: CountRows
             href: ./canvas-apps/functions/function-table-counts.md
           - name: Data types
-            href: ./canvas-apps/functions/data-types.md	    
+            href: ./canvas-apps/functions/data-types.md
           - name: DataSourceInfo
             href: ./canvas-apps/functions/function-datasourceinfo.md
           - name: Date
@@ -485,6 +485,8 @@
             href: ./canvas-apps/functions/function-now-today-istoday.md
           - name: IsType
             href: ./canvas-apps/functions/function-astype-istype.md
+          - name: JSON
+            href: ./canvas-apps/functions/function-json.md
           - name: Language
             href: ./canvas-apps/functions/function-language.md
           - name: Last

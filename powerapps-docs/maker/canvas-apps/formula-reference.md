@@ -181,7 +181,10 @@ Other elements include:
 
 **[IsToday](functions/function-now-today-istoday.md)** – Checks whether a date/time value is sometime today.
 
-**[IsType](functions/function-astype-istype.md)** – Checks whether a record reference  refers to a specific entity type.  
+**[IsType](functions/function-astype-istype.md)** – Checks whether a record reference  refers to a specific entity type.
+
+## J
+**[JSON](functions/function-json.md)** - Generates a JSON text string for a table, a record, or a value.
 
 ## L
 **[Language](functions/function-language.md)** – Returns the language tag of the current user.
