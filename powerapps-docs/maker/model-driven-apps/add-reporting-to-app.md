@@ -37,19 +37,19 @@ Reports can be built in any of the following ways.
 - Create custom reports using SQL Server Data Tools and Report Authoring Extensions. More information: [Reporting and Analytics Guide](/dynamics365/customer-engagement/analytics/reporting-analytics-with-dynamics-365)
 
 
-## Add reporting your app
+## Add reporting your Unified Interface app
 You can add fetch-based reporting functionality to your app so that users can run, share, create, and edit reports. To do this, you add the report entity to your app's site map. 
 
-1. Sign in to PowerApps and edit an existing app. 
+1. Sign in to PowerApps and open an existing app for editing. 
 2. In App Designer, select the pencil icon next to Site Map. 
 3. In the Sitemap Designer, select Add and then select Area. 
-4. In the Title box, enter Reports. 
-5. Select the Reports area, select Add, select Group, and then in the group Title box enter Reports. 
+4. In the Title box, enter *Reports* or another name that you want. 
+5. Select the **Reports** area, select Add, select Group, and then in the group Title box enter *Reports* or another name that you want. 
 6. Select the group Reports, select Add, select Subarea and enter the following properties: 
 
    - Type: Entity
    - Entity: From the list of entities, select the Report entity.  
-   - Title: Enter a descriptive title, such as Reports.
+   - Title: Enter a descriptive title, such as *Reports*.
 
    ![Add report entity to site map](media/report-entity-sitemap.png)
 
@@ -59,7 +59,7 @@ You can add fetch-based reporting functionality to your app so that users can ru
 8. In App Designer select Save, and then select Publish.
 
 
-Now the app displays a Reports area where app users can view and run the available reports as well as create new reports by selecting **New** to open the report wizard. 
+Now the app displays a Reports area where app users can view, run, assign, share, and edit the reports they have permission to as well as create new reports using the report wizard. 
 
 ![Report view](media/report-feature-in-app.png)
 
