@@ -26,7 +26,8 @@ search.app:
 
 PowerApps apps can include reports that provide useful business information to the user. These reports are based on SQL Server Reporting Services and provide the same set of features that are available for typical SQL Server Reporting Services reports.
 
-![Progress against goals standard report](media/progress-against-goals-report.png)
+> [!div class="mx-imgBorder"] 
+> ![](media/progress-against-goals-report.png "Progress against goals standard report")
 
 System reports are available to all users. Individuals who create or otherwise own reports can share them with specific colleagues or teams, or can make the reports available to the organization, so that all users can run them. These reports use FetchXML queries that are proprietary to Common Data Service and Dynamics 365 for Customer Engagement apps and retrieve data to build the report. Reports that you create in a PowerApps app are Fetch-based reports.
 
@@ -61,6 +62,7 @@ You can add fetch-based reporting functionality to your app so that users can ru
 
 Now the app displays a Reports area where app users can view, run, assign, share, and edit the reports they have permission to as well as create new reports using the report wizard. 
 
-![Report view](media/report-feature-in-app.png)
+> [!div class="mx-imgBorder"] 
+> ![](media/report-feature-in-app.png "Report view")
 
 <!-- Link to Mint's end user reporting topics -->
