@@ -12,9 +12,9 @@
       href: implementing-controls-using-typescript.md
   - name: How-to
     items:
-    - name: Create, debug and deploy custom components using Microsoft PowerApps CLI
+    - name: Create and deploy a custom component 
       href: create-custom-controls-using-pcf.md
-    - name: Debug custom components
+    - name: Debug a custom component
       href: debugging-custom-controls.md
     - name: Package a custom component
       href: import-custom-controls.md

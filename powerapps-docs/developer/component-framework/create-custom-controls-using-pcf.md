@@ -1,5 +1,5 @@
 ---
-title: Create and deploy a component| Microsoft Docs
+title: Create and deploy a custom component| Microsoft Docs
 description: Start creating a component using the PowerApps component framework Tooling
 keywords: PowerApps component framework, Custom components, Component Framework
 ms.author: nabuthuk
@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: d2cbf58a-9112-45c2-b823-2c07a310714c
 ---
 
-# Create and deploy a component
+# Create and deploy a custom component
 
 [!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
