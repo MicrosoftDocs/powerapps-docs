@@ -4,8 +4,8 @@
     href: overview.md
   - name: "What are custom components"
     href: custom-controls-overview.md
-  - name: Get the tooling
-    href: powerapps-cli.md
+  - name: Get PowerApps CLI
+    href: get-powerapps-cli.md
   - name: Tutorial
     items:
     - name: Implement sample component
@@ -28,8 +28,8 @@
       href: updating-existing-controls.md
     - name: Publish custom components on AppSource
       href: publish-components-on-app-source.md
-    - name: Limitations
-      href: limitations.md
+  - name: Limitations
+    href: limitations.md
   - name: FAQ
     href: faq.md
   - name: Sample components
