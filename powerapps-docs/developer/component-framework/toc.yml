@@ -12,7 +12,7 @@
       href: implementing-controls-using-typescript.md
   - name: How-to
     items:
-    - name: Create and deploy a custom component 
+    - name: Create and build a custom component 
       href: create-custom-controls-using-pcf.md
     - name: Debug a custom component
       href: debugging-custom-controls.md
