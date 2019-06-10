@@ -47,9 +47,9 @@ You can add fetch-based reporting functionality to your app so that users can ru
 1. Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and open an existing app for editing. 
 2. In App Designer, select ![Pencil icon for editing site map](media/ccf-pencil-icon.png) next to **Site Map**. 
 3. In the Sitemap Designer, select **Add** and then select **Area**. 
-4. In the **Title** box, enter *Reports* or another name that you want. 
-5. Select the **Reports** area, select **Add**, select **Group**, and then in the group **Title** box enter *Reports* or another name that you want. 
-6. Select the group **Reports**, select **Add**, select **Subarea** and enter the following properties: 
+4. In the **Title** box, enter a name for the area title, such as *Reports*. 
+5. Select the area that you named in the previous step, select **Add**, select **Group**, and then in the group **Title** box enter a name for the group title, such as *Reports*. 
+6. Select the group that you named in the previous step, select **Add**, select **Subarea** and then include the following properties: 
 
    - **Type**. Select **Entity**.
    - **Entity**. From the list of entities, select the **Report** entity.  
