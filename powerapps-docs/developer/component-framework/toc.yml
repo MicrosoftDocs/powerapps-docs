@@ -40,6 +40,8 @@
       href: sample-controls/map-control.md
     - name: Navigation API component
       href: sample-controls/navigation-api-control.md
+    - name: React Facepile component
+      href: sample-controls/react-facepile-control.md
     - name: Table component
       href: sample-controls/table-control.md
     - name: Table grid component
