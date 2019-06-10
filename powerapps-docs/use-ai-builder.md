@@ -1,12 +1,12 @@
 ---
 title: Use AI Builder in PowerApps | Microsoft Docs
-description: Provides information about how you can use AI Builder .
+description: Provides information about how you can use AI Builder in PowerApps.
 author: Dean-Haas
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/07/2019
+ms.date: 06/10/2019
 ms.author: v-dehaas
 ms.reviewer: kvivek
 ---
