@@ -93,10 +93,6 @@ Follow the steps below to create and import a [solution](/powerapps/maker/common
 
 5. The generated solution zip file is located in `\bin\debug\`. You must manually [import the solution](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/customize/import-update-export-solutions) using the web portal once the zip file is ready.
 
-## Adding custom components to an entity or a field
-
-To add a custom component like data-set component or simple table component to a grid or view, follow the steps mentioned in the topic [Add controls to fields and entities](add-custom-controls-to-a-field-or-entity.md). 
-
 ## Known Configuration issues and Workarounds
 
 **Msbuild error MSB4036:**
