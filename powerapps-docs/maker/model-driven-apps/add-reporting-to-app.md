@@ -55,7 +55,7 @@ You can add fetch-based reporting functionality to your app so that users can ru
    - **Entity**. From the list of entities, select the **Report** entity.  
    - **Title**. Enter a descriptive title, such as *Reports*.
 
-    ![Add report entity to site map](media/report-entity-sitemap.png)
+      ![Add report entity to site map](media/report-entity-sitemap.png)
 
 7. Select **Save and Close** to return to the app designer. 
 
