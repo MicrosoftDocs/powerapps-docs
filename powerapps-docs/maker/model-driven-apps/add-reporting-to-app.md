@@ -68,4 +68,5 @@ Now the app displays a **Reports** area where users can view, run, assign, share
 > [!div class="mx-imgBorder"] 
 > ![](media/report-feature-in-app.png "Report view")
 
-<!-- Link to Mint's end user reporting topics -->
+### See also
+[Run a report](/dynamics365/customer-engagement/basics/run-report)
