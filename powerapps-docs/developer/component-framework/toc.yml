@@ -4,7 +4,7 @@
     href: overview.md
   - name: "What are custom components?"
     href: custom-controls-overview.md
-  - name: Get PowerApps CLI
+  - name: Get tooling
     href: get-powerapps-cli.md
   - name: Tutorial
     items:
@@ -20,8 +20,6 @@
       href: import-custom-controls.md
     - name: Add components to entities or fields
       href: add-custom-controls-to-a-field-or-entity.md
-    - name: Update PowerApps CLI to latest version
-      href: updating-tooling.md
     - name: Update existing custom components
       href: updating-existing-controls.md
     - name: Publish custom components on AppSource

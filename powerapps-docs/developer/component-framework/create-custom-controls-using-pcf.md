@@ -97,24 +97,6 @@ Follow the steps below to create and import a [solution](/powerapps/maker/common
 
 To add a custom component like data-set component or simple table component to a grid or view, follow the steps mentioned in the topic [Add controls to fields and entities](add-custom-controls-to-a-field-or-entity.md). 
 
-## Telemetry
-
-The feature team is aggregating anonymized telemetry in order to understand which features or capabilities in the PowerApps CLI tool are most often used by the developers. The aggregated data allows us to provide the best experience to the customers by focusing on what’s truly is important.
-
-> [!NOTE]
-> To disable the telemetry collection, run the command `pac telemetry --enable false`. To turn the telemetry back, use the command `pac telemetry --enable true`.
-
-## How to Uninstall Microsoft PowerApps CLI
-
-To uninstall the CLI tool please run the MSI from [here](http://download.microsoft.com/download/D/B/E/DBE69906-B4DA-471C-8960-092AB955C681/powerapps-cli-0.1.51.msi). If you are Private Preview Participant and have an older version of CLI, please follow below manual steps:
-
-1. To find out where PowerApps CLI is installed, open a command prompt and type `where pac`
-1. Delete the PowerAppsCLI folder.
-1. Open Environment Variables tool by running command `rundll32 sysdm.cpl,EditEnvironmentVariables` in the command prompt
-1. Double-click on `Path` under `User variable for...` section
-1. Select the row containing PowerAppsCLI path and click the Delete button on the right-hand side
-1. Click OK twice
-
 ## Known Configuration issues and Workarounds
 
 **Msbuild error MSB4036:**

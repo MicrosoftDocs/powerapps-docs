@@ -1,6 +1,6 @@
 ---
-title: Microsoft PowerApps Command Line Interface (CLI)| Microsoft Docs
-description: "Get the Microsoft PowerApps Command Line Interface (CLI) to create, debug and deploy custom components using PowerApps component framework."
+title: Get tooling for PowerApps component framework | Microsoft Docs
+description: "Get the Microsoft PowerApps CLI to create, debug and deploy custom components using PowerApps component framework."
 keywords: PowerApps component framework, Custom components, Component Framework
 ms.author: nabuthuk
 manager: kvivek
@@ -12,11 +12,11 @@ ms.topic: "article"
 ms.assetid: f393f227-7a88-4f25-9036-780b3bf14070
 ---
 
-# Get Microsoft PowerApps Command Line Interface (CLI)
+# Get tooling for PowerApps component framework
 
 [!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-Use Microsoft PowerApps Command Line Interface (CLI) to create, debug and deploy custom components using PowerApps component framework. PowerApps CLI enables developers to quickly create PowerApps component framework components and will in the future be expanded to include support for additional development and Application Lifecycle Management (ALM) experiences. 
+Use **Microsoft PowerApps CLI** (commnad-line interface) to create, debug and deploy custom components using PowerApps component framework. PowerApps CLI enables developers to quickly create PowerApps component framework components and will in the future be expanded to include support for additional development and Application Lifecycle Management (ALM) experiences. 
 
 ## What is Microsoft PowerApps CLI? 
 
@@ -28,7 +28,7 @@ Microsoft PowerApps CLI is a simple, single-stop developer command line interfac
 > - If you give feedback about the software to Microsoft, you give to Microsoft, without charge, the right to use, share and commercialize your feedback in any way and for any purpose. 
 > - Microsoft doesn't provide support for this preview feature. Microsoft Technical Support won’t be able to help you with issues or questions.
 
-## Get Microsoft PowerApps CLI
+## Install Microsoft PowerApps CLI
 
 To use Microsoft PowerApps CLI, do the following:
 
@@ -45,6 +45,62 @@ To use Microsoft PowerApps CLI, do the following:
 > [!NOTE]
 > - To deploy your custom component using PowerApps CLI, you must have a Common Data Service environment with system administrator or system customizer privileges.
 > - Currently, PowerApps CLI is supported only on Windows 10.
+
+## Update Microsoft PowerApps CLI to the latest version
+
+To update your Microsoft PowerApps CLI to the latest version 02.856.1 and take advantage of all the latest capabilities, run the following command in the Developer Command Prompt for VS 2017:
+
+```CLI
+pac install latest
+```
+
+### What else do I need to know?
+
+If you have already created a solution project or PowerApps component framework project, ensure to update these projects to the latest packages. This will help you leverage newly added capabilities with your existing projects. Newly created projects will already contain these settings.
+
+- Update the version tag in your `pcfproj` located within your PowerApps component framework project folder:
+
+   ```XML
+   <PackageReference Include="Microsoft.PowerApps.MSBuild.Pcf" Version="0.*"/>
+   ```
+- Update the version tag in your `cdsproj` located within your solution project folder:
+
+   ```XML
+   <PackageReference Include="Microsoft.PowerApps.MSBuild.Solution" Version="0.*"/>
+   ```
+
+    > [!NOTE] 
+    > After making the above changes, run the command `msbuild /t:restore` to update your project to the correct version.
+
+
+- Update the version tag in your `package.json` file located within your PowerApps component framework project folder:
+
+  ```JSON
+  "devDependencies":{
+   "pcf-scripts": "^0",
+   "pcf-start": "^0"
+    }
+  ```
+   > [!NOTE]
+   > After making above changes, using 'npm update' in the command prompt will always update your project to the correct version.
+
+## Microsoft PowerApps CLI telemetry
+
+The feature team is aggregating anonymized telemetry in order to understand which features or capabilities in the PowerApps CLI tool are most often used by the developers. The aggregated data allows us to provide the best experience to the customers by focusing on what’s truly is important.
+
+> [!NOTE]
+> To disable the telemetry collection, run the command `pac telemetry --enable false`. To turn the telemetry back, use the command `pac telemetry --enable true`.
+
+## Uninstall Microsoft PowerApps CLI
+
+To uninstall the CLI tool please run the MSI from [here](http://download.microsoft.com/download/D/B/E/DBE69906-B4DA-471C-8960-092AB955C681/powerapps-cli-0.1.51.msi). If you are Private Preview Participant and have an older version of CLI, please follow below manual steps:
+
+1. To find out where PowerApps CLI is installed, open a command prompt and type `where pac`
+1. Delete the PowerAppsCLI folder.
+1. Open Environment Variables tool by running command `rundll32 sysdm.cpl,EditEnvironmentVariables` in the command prompt
+1. Double-click on `Path` under `User variable for...` section
+1. Select the row containing PowerAppsCLI path and click the Delete button on the right-hand side
+1. Click **OK** twice.
 
 ### See also
 
