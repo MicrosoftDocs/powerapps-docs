@@ -140,7 +140,7 @@ export class ReactStandardControl implements ComponentFramework.StandardControl<
 ```
 
 ### Facepile.tsx
-```JavaScript
+```TSX
 import * as React from "react";
 import { Checkbox } from "office-ui-fabric-react/lib/Checkbox";
 import { Dropdown, IDropdownOption } from "office-ui-fabric-react/lib/Dropdown";
@@ -268,7 +268,7 @@ export class FacepileBasicExample extends React.Component<IFacepileBasicExampleP
 
 ### FacepileExampleData.ts
 
-```JavaScript
+```TypeScript
 import * as React from 'react';
 import { IFacepilePersona } from 'office-ui-fabric-react/lib/Facepile';
 import { PersonaInitialsColor } from 'office-ui-fabric-react/lib/Persona';
