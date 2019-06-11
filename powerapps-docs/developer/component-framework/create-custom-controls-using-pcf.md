@@ -1,5 +1,5 @@
 ---
-title: Create custom component using PowerApp Component Framework Tooling| Microsoft Docs
+title: Create, debug and deploy a component using  Microsoft PowerApps CLI| Microsoft Docs
 description: Start creating a component using the PowerApps component framework Tooling
 keywords: PowerApps component framework, Custom components, Component Framework
 ms.author: nabuthuk
