@@ -16,6 +16,8 @@ ms.assetid: 08ea66d3-b4af-44af-a3ae-cb2ebad043e8
 
 [!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
 
+## Properties
+
 ## entities
 
 An array of JSON objects, where each object represents the retrieved entity record containing attributes and their values.

@@ -18,6 +18,8 @@ ms.assetid: 8c0481ee-abf9-492a-a1ef-b36e8a68167b
 
 [!INCLUDE [context-description](includes/numberformattinginfo-description.md)]
 
+## Properties
+
 ## currencyDecimalDigits
 
  example 2
