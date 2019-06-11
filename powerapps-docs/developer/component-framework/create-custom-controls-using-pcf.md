@@ -49,7 +49,7 @@ To build your component you can open the folder in Visual Studio Code and use th
 
 1. The name of the task in the project file is the same as the name of the task class.
 2. The task class is public and implements the Microsoft.Build.Framework.ITask interface.
-3. The task is correctly declared with <UsingTask> in the project file or in the *.tasks files located in the <path> directory
+3. The task is correctly declared with \<UsingTask> in the project file or in the *.tasks files located in the <path> directory.
 
 **Resolution:**
 
@@ -62,7 +62,7 @@ To build your component you can open the folder in Visual Studio Code and use th
 
 [Debug custom components](debugging-custom-controls.md)<br/>
 [Package a custom component](import-custom-controls.md)<br/>
-[Add custom components to a field or entity](add-custom-controls-to-a-field-or-entity)<br/>
+[Add custom components to a field or entity](add-custom-controls-to-a-field-or-entity.md)<br/>
 [Updating existing custom components](updating-existing-controls.md)<br/>
 [PowerApps component framework API Reference](reference/index.md)<br/>
 [PowerApps component framework Overview](overview.md)
