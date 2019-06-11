@@ -25,7 +25,6 @@ ms.author: "nabuthuk"
 |[init](control/init.md)|[!INCLUDE [init-description](control/includes/init-description.md)]|
 |[updateView](control/updateview.md)|[!INCLUDE [updateview-description](control/includes/updateview-description.md)]|
 
-
 ### Related topics
 
 [PowerApps component framework API Reference](../reference/index.md)<br/>
