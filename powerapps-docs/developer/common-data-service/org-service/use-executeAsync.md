@@ -2,7 +2,7 @@
 title: "Use ExecuteAsync to execute messages asynchronously  (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "You can use the ExecuteAsync message to import solutions asynchronously" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 06/08/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.topic: "article"
@@ -15,20 +15,22 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Use ExecuteAsync to execute messages asynchronously  
+# Use ExecuteAsync to execute messages asynchronously
 
-Except for one, all data operations using the SDK assemblies are synchronous. Importing a solution is one operation which can require considerable resources, so there is an option to execute this operation asynchronously using the <xref:Microsoft.Xrm.Sdk.Messages.ExecuteAsyncRequest> class.
+Except for two, all data operations using the SDK assembly request classes are synchronous.
+
+Importing a solution is one operation which can require considerable resources, so there is an option to execute this operation asynchronously using the <xref:Microsoft.Xrm.Sdk.Messages.ExecuteAsyncRequest> request class. The <xref:Microsoft.Crm.Sdk.Messages.DeleteAndPromoteRequest> request class performs similar resource intensive operations.
 
 Importing a solution asynchronously improves system performance by postponing message execution until some later time when the server load may be less. Interactive users do not have to wait for the target message to execute before they can continue. This is especially useful when importing solutions which may take a few minutes or more to execute.  
   
 > [!NOTE]
->  <xref:Microsoft.Crm.Sdk.Messages.ImportSolutionRequest> is the only message can be used with the `ExecuteAsync` message.  
+>  <xref:Microsoft.Crm.Sdk.Messages.ImportSolutionRequest> and <xref:Microsoft.Crm.Sdk.Messages.DeleteAndPromoteRequest> are the only request classes that can be used with the `ExecuteAsync` message.
   
-Use the <xref:Microsoft.Xrm.Sdk.Messages.ExecuteAsyncRequest> message to execute a message asynchronously. You configure the request and pass the request instance as an argument to <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*>. <xref:Microsoft.Xrm.Sdk.Messages.ExecuteAsyncResponse> returns with the ID of the asynchronous job. You can (optionally) query the job using the ID to find out its current state.  
+Use the <xref:Microsoft.Xrm.Sdk.Messages.ExecuteAsyncRequest> request class to execute a message asynchronously. You configure the request and pass the request instance as an argument to <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*>. <xref:Microsoft.Xrm.Sdk.Messages.ExecuteAsyncResponse> returns with the ID of the asynchronous job. You can (optionally) query the job using the ID to find out its current state.  
   
-You can use the <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest> message queue multiple solutions to be imported asynchronously.To do this, add one or more `ExecuteAsync` message requests to an `ExecuteMultiple` message request. Due to throttling restrictions that improve overall system performance, only one message running asynchronously is allowed to execute at a time for each organization. 
+You can use the <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest> request class to queue multiple solutions to be imported asynchronously.To do this, add one or more `ExecuteAsync` message requests to an `ExecuteMultiple` message request. Due to throttling restrictions that improve overall system performance, only one message running asynchronously is allowed to execute at a time for each organization.
 
-For more information about the `ExecuteMultiple` message request, see [Execute multiple requests using the Organization service](execute-multiple-requests.md).  
+For more information about the `ExecuteMultiple` message, see [Execute multiple requests using the Organization service](execute-multiple-requests.md).  
 
 ## Example
 
