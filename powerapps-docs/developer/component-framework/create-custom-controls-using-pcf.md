@@ -4,7 +4,7 @@ description: Start creating a component using the PowerApps component framework 
 keywords: PowerApps component framework, Custom components, Component Framework
 ms.author: nabuthuk
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 06/11/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -37,8 +37,6 @@ To use PowerApps CLI you will need the following:
    - Option 1: Install Visual Studio 2017 or later
    - Option 2: Install .NET Core 2.2 SDK and install Visual Studio Code
 - Install Microsoft PowerApps CLI from [here](http://download.microsoft.com/download/D/B/E/DBE69906-B4DA-471C-8960-092AB955C681/powerapps-cli-0.1.51.msi)
-
-
 
 > [!NOTE]
 > To deploy your custom component, you will need Common Data Service environment with System administrator or System customizer privileges.
@@ -159,6 +157,10 @@ Follow the steps below to create and import a [solution](https://docs.microsoft.
 
 5. The generated solution zip file is located in `\bin\debug\`.
 6. You should manually [import the solution](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/customize/import-update-export-solutions) using the web portal once the zip file is ready.
+
+> [!NOTE]
+> You can set the msbuild configuration to `Release` to issue a production build.
+> **Example**: `msbuild /p:configuration=Release`
 
 ## Adding custom components to an entity or a field
 
