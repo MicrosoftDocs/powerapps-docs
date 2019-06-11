@@ -159,7 +159,7 @@ Follow the steps below to create and import a [solution](https://docs.microsoft.
 6. You should manually [import the solution](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/customize/import-update-export-solutions) using the web portal once the zip file is ready.
 
 > [!NOTE]
-> You can set the msbuild configuration to `Release` to issue a production build.
+> You can set the msbuild configuration to `Release` in order to issue a production build.
 > **Example**: `msbuild /p:configuration=Release`
 
 ## Adding custom components to an entity or a field
