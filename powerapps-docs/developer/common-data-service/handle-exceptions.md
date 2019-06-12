@@ -39,3 +39,6 @@ The exception message for asynchronous registered plug-ins is written to a Syste
 
 > [!NOTE]
 > For on-premise plug-ins not registered in the sandbox, the exception information is written to the Application event log on the D365 server that executes the plug-in. The event log can be viewed by using the Event Viewer administrative tool.
+
+> [!NOTE]
+> In the Unified Interface for Dynamics 365 the erorr dialog does not support HTML encoded content or messaging.
