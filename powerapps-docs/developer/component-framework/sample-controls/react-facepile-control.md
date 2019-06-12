@@ -100,7 +100,7 @@ export class ReactStandardControl implements ComponentFramework.StandardControl<
     ReactDOM.render(
       // Create the React component
       React.createElement(
-        FacepileBasicExample, // the class type of the React component found in Facepile.ts
+        FacepileBasicExample, // the class type of the React component found in Facepile.tsx
         this.props
       ),
       this.theContainer
