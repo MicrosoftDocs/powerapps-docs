@@ -2,8 +2,8 @@
 title: "Workflow Extensions (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "You can extend the options available within the designer for workflows. These extensions are added by adding an assembly that contains a class the extends the CodeActivity class. These extensions are commonly called workflow assemblies or workflow activities." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 05/25/2019
-ms.reviewer: ""
+ms.date: 06/12/2019
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
@@ -24,6 +24,8 @@ You can use these custom extensions within the designer used for workflows, cust
 > [!IMPORTANT]
 > Whenever possible, you should first consider applying one of the several declarative options to define business logic. More information: [Apply business logic in Common Data Service](../../../maker/common-data-service/cds-processes.md)<br/><br/>
 > Use workflow extensions when a declarative process doesn’t meet your requirement.
+
+This content is for Common Data Service workflow assemblies and applies for Dynamics 365 Customer Engagement (Online) applications as well. Options for on-premises deployments are described here: [On-premises options](/dynamics365/customer-engagement/developer/custom-workflow-activities-workflow-assemblies#on-premise-options).
 
 ## When to create a workflow extension
 
