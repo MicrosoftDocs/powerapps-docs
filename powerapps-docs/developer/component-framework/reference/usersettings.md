@@ -18,6 +18,8 @@ ms.assetid: c237ff96-9268-4068-9d61-aea0bdc79fc2
 
 [!INCLUDE [usersettings-description](includes/usersettings-description.md)]
 
+## Properties
+
 ## dateFormattingInfo
 
 Date formatting information as retrieved from the server.
