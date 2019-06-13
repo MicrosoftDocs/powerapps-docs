@@ -25,7 +25,7 @@ You can use these custom extensions within the designer used for workflows, cust
 > Whenever possible, you should first consider applying one of the several declarative options to define business logic. More information: [Apply business logic in Common Data Service](../../../maker/common-data-service/cds-processes.md)<br/><br/>
 > Use workflow extensions when a declarative process doesn’t meet your requirement.
 
-This content is for Common Data Service workflow assemblies and applies for Dynamics 365 Customer Engagement (Online) applications as well. Options for on-premises deployments are described here: [On-premises options](/dynamics365/customer-engagement/developer/custom-workflow-activities-workflow-assemblies#on-premise-options).
+This content is for Common Data Service workflow assemblies and applies for Dynamics 365 Customer Engagement (online) applications as well. Options for on-premises deployments are described here: [On-premises options](/dynamics365/customer-engagement/developer/custom-workflow-activities-workflow-assemblies#on-premises-options).
 
 ## When to create a workflow extension
 
