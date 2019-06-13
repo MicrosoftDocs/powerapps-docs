@@ -30,8 +30,8 @@ For more information on organizing and creating reports, see: [Customize and org
   
 ## To run a report  
   
-1. [!INCLUDE[proc_reports](../includes/proc-reports.md)]  
-  
+1. From the site map,  Go to **Reports**. 
+ 
 2. Choose the report you want > **Run Report**.  
   
    > [!NOTE]
