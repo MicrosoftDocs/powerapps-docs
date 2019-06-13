@@ -18,6 +18,8 @@ ms.assetid: db4be085-c31e-4045-8834-b0f45c569964
 
 [!INCLUDE [column-description](includes/column-description.md)]
 
+## Properties
+
 ## alias
 
 The alias of this column.

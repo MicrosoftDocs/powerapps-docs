@@ -16,6 +16,8 @@ ms.assetid: 0a11feb1-0b7d-4591-b7b3-8e45d4e58805
 
 [!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
 
+## Properties
+
 ## DisplayName
 
 **Type**: `string`

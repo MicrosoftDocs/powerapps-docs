@@ -38,4 +38,5 @@ When you throw an <xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException> excep
 The exception message for asynchronous registered plug-ins is written to a System Job [AsyncOperation Entity](reference/entities/asyncoperation.md) record which can be viewed in the **System Jobs** area of the web application. No dialog will be displayed to the user. Async plug-ins do not participate in the database transaction that queued them, therefore they cannot cancel the transaction.
 
 > [!NOTE]
-> For on-premise plug-ins not registered in the sandbox, the exception information is written to the Application event log on the D365 server that executes the plug-in. The event log can be viewed by using the Event Viewer administrative tool.
+> - For on-premise plug-ins not registered in the sandbox, the exception information is written to the Application event log on the Dynamics 365 Server that executes the plug-in. The event log can be viewed by using the Event Viewer administrative tool.
+> - In the Unified Interface, the error dialog does not support HTML encoded content or messaging.
