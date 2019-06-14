@@ -41,21 +41,21 @@ Reports can be built in any of the following ways.
 - Create custom reports using SQL Server Data Tools and Report Authoring Extensions. More information: [Reporting and Analytics Guide](/dynamics365/customer-engagement/analytics/reporting-analytics-with-dynamics-365)
 
 
-## Add reporting your Unified Interface app
+## Add reporting to a Unified Interface app
 You can add fetch-based reporting functionality to your app so that users can run, share, create, and edit reports. To do this, you add the report entity to your app's site map. 
 
 1. Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and open an existing app for editing. 
 2. In App Designer, select ![Pencil icon for editing site map](media/ccf-pencil-icon.png) next to **Site Map**. 
 3. In the Sitemap Designer, select **Add** and then select **Area**. 
-4. In the **Title** box, enter *Reports* or another name that you want. 
-5. Select the **Reports** area, select **Add**, select **Group**, and then in the group **Title** box enter *Reports* or another name that you want. 
-6. Select the group **Reports**, select **Add**, select **Subarea** and enter the following properties: 
+4. In the **Title** box, enter a name for the area title, such as *Reports*. 
+5. Select the area that you named in the previous step, select **Add**, select **Group**, and then in the group **Title** box enter a name for the group title, such as *Reports*. 
+6. Select the group that you named in the previous step, select **Add**, select **Subarea** and then include the following properties: 
 
    - **Type**. Select **Entity**.
    - **Entity**. From the list of entities, select the **Report** entity.  
    - **Title**. Enter a descriptive title, such as *Reports*.
 
-    ![Add report entity to site map](media/report-entity-sitemap.png)
+      ![Add report entity to site map](media/report-entity-sitemap.png)
 
 7. Select **Save and Close** to return to the app designer. 
 
@@ -68,4 +68,5 @@ Now the app displays a **Reports** area where users can view, run, assign, share
 > [!div class="mx-imgBorder"] 
 > ![](media/report-feature-in-app.png "Report view")
 
-<!-- Link to Mint's end user reporting topics -->
+### See also
+[Run a report](/dynamics365/customer-engagement/basics/run-report)
