@@ -32,17 +32,15 @@ Shortly after submitting a Solution Checker request to run an analysis or downlo
 
 Whenever possible, Solution Checker will attempt to return a specific error message with link to details on the potential cause and resolution steps. Click on **'Learn more'** for details.
 
-> ![Error message bar](media/solution-checker-missing-roles-error.png)
+![Error message bar](media/solution-checker-missing-roles-error.png)
 
-Failures that occur during background processing of the analysis will fail with **'Couldn't be completed'** status and return an error message in the portal notification as well as the email sent to the requestor.  Clicking on the portal notification will link to this list of common issues for troubleshooting. If one of the provided common issues does not resolve the problem, a reference number will also be returned. Provide this reference number to support for further investigation.
+Failures that occur during background processing of the analysis will fail with **'Couldn't be completed'** status and return an error message in the portal notification as well as the email sent to the requestor. 
 
-> Status value for failed Solution Checker analysis run:
-> 
-> ![Error status](media/solution-checker-exception-status.png)
->
-> Portal notification received for failed Solution Checker analysis run:
->
-> ![Failure notification](media/solution-checker-failure-notification.png)
+![Error status](media/solution-checker-exception-status.png)
+
+Clicking on the portal notification will link to this page of common issues for further troubleshooting. If one of the provided common issues does not resolve the problem, a reference number will also be returned. Provide this reference number to support for further investigation.
+
+![Failure notification](media/solution-checker-failure-notification.png)
 
 ## Solution Checker fails due to unsupported version of PowerApps Checker app
 
@@ -85,8 +83,10 @@ In order to use Solution Checker in this organization, Adminstration Mode must b
 2. Select the organization instance that has issues running Solution Checker.
 3. Select **ADMIN**.<br/>
 ![Instance Admin](media/solution-checker-instance-admin.png)
+
 4. Clear **Enable administration mode** and click **Save**.<br/>
 ![Disable Admin mode](media/solution-checker-instance-disable-admin-mode.png)
+
 5. Run Solution Checker again.
 
 ## Solution Checker fails due to missing security roles
@@ -101,8 +101,9 @@ The application user for Solution Checker requires two security roles to be assi
 1. Access your CDS organization and navigate to **Settings** > **Security** > **Users**.
 2. Select the **'PowerApps Checker'** user from the list of users.
 3. Click **MANAGE ROLES** from the command bar.
-4. Select **'Export Customizations'** and **'Solution Checker'** role checkboxes and click **OK**.
-> ![Required Security Roles](media/solution-checker-required-roles.png)
+4. Select **'Export Customizations'** and **'Solution Checker'** role checkboxes and click **OK**.<br/>
+![Required Security Roles](media/solution-checker-required-roles.png)
+
 5. Run Solution Checker again.
 
 ## Solution Checker fails due to restricted access mode
@@ -116,8 +117,9 @@ To resolve this issue, you must update the **'PowerApps Checker'** application u
 1. Access your CDS organization and navigate to **Settings** > **Security** > **Users**.
 2. Select the **'PowerApps Checker'** user from the list of users and double-click to open the user form.
 3. Scroll to the **'Administration'** > **'Client Access License (CAL) Information'** section of the form.
-4. Select **'Non-interactive'** in the **Access Mode** drop-down control.
-> ![Access Mode](media/solution-checker-access-mode.png)
+4. Select **'Non-interactive'** in the **Access Mode** drop-down control.<br/>
+![Access Mode](media/solution-checker-access-mode.png)
+
 5. Save and close the user form.
 6. Run Solution Checker again.
 
@@ -131,14 +133,17 @@ Follow the below steps to verify that the application identity hasn't been disab
 
 1. Access your tenant in the [Azure Active Directory (AAD) Portal](https://aad.portal.azure.com/).
 2. Navigate to **Enterprise Applications**.
-3. Select **All Application** and search for **'PowerApps-Advisor'**.
-> ![Search PowerApps-Advisor app](media/solution-checker-search-advisor-app.png)
+3. Select **All Application** and search for **'PowerApps-Advisor'**.<br/>
+![Search PowerApps-Advisor app](media/solution-checker-search-advisor-app.png)
+
 4. Click on **'PowerApps-Advisor'** to view the app details.
 5. Click on **Properties**.
-6. Check the state of **Enabled for users to sign-in**. If **'No'**, then the application has been disabled.
-> ![Disabled enterprise app](media/solution-checker-disabled-app.png)
-7. Click the radio control to switch the value to **'Yes'**. This will enable the application.
-> ![Enable PowerApps-Advisor app](media/solution-checker-enable-app.png)
+6. Check the state of **Enabled for users to sign-in**. If **'No'**, then the application has been disabled.<br/>
+![Disabled enterprise app](media/solution-checker-disabled-app.png)
+
+7. Click the radio control to switch the value to **'Yes'**. This will enable the application.<br/>
+![Enable PowerApps-Advisor app](media/solution-checker-enable-app.png)
+
 8. Click **Save**. The application is now enabled (may need to wait a few minutes for change to propagate).
 9. Run Solution Checker again.
 
