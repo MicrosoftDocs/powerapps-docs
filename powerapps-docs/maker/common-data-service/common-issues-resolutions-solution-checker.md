@@ -28,7 +28,7 @@ This article lists some common issues that you might encounter while using Solut
 
 Shortly after submitting a Solution Checker request to run an analysis or download results the operation doesn't complete and an error message is displayed, such as:
 
-*"We weren't able to run the check on **[Solution Name]** solution. Try running it again."*
+> *"We weren't able to run the check on **[Solution Name]** solution. Try running it again."*
 
 Whenever possible, Solution Checker will attempt to return a specific error message with link to details on the potential cause and resolution steps. Click on **'Learn more'** for details.
 
@@ -42,7 +42,7 @@ Clicking on the portal notification will link to this page of common issues for 
 
 ![Failure notification](media/solution-checker-failure-notification.png)
 
-## Solution Checker fails due to unsupported version of PowerApps Checker app
+## Solution Checker fails due to unsupported version of PowerApps Checker
 
 Solution Checker is a feature enabled by the PowerApps Checker app.  If you have installed a PowerApps Checker app version earlier than version **1.0.0.47**, Solution Checker runs may fail to complete successfully. You should upgrade your PowerApps Checker version from the [!INCLUDE [pn-dyn-365-admin-center](../../includes/pn-dyn-365-admin-center.md)]. 
 
@@ -77,9 +77,11 @@ Organizations that have been placed into [Administration Mode](https://docs.micr
 
 In order to use Solution Checker in this organization, Adminstration Mode must be disabled.
 
-### How to disable administration mode for an instance
+### How to disable administration mode for an organization instance
 
-1. Access the Dynamics 365 for Customer Engagement instance picker: https://port.crm.dynamics.com/G/Instances/InstancePicker.aspx.
+To disable administration mode for an organization instance:
+
+1. Open the Dynamics 365 for Customer Engagement instance picker: https://port.crm.dynamics.com/G/Instances/InstancePicker.aspx.
 2. Select the organization instance that has issues running Solution Checker.
 3. Select **ADMIN**.<br/>
 ![Instance Admin](media/solution-checker-instance-admin.png)
@@ -98,7 +100,9 @@ The application user for Solution Checker requires two security roles to be assi
 
 ### How to assign missing security roles
 
-1. Access your CDS organization and navigate to **Settings** > **Security** > **Users**.
+To assign missing security roles to the PowerApps Checker user:
+
+1. Open your CDS organization and navigate to **Settings** > **Security** > **Users**.
 2. Select the **'PowerApps Checker'** user from the list of users.
 3. Click **MANAGE ROLES** from the command bar.
 4. Select **'Export Customizations'** and **'Solution Checker'** role checkboxes and click **OK**.<br/>
@@ -114,7 +118,9 @@ To resolve this issue, you must update the **'PowerApps Checker'** application u
 
 ### How to update user access mode
 
-1. Access your CDS organization and navigate to **Settings** > **Security** > **Users**.
+To update the access mode for the PowerApps Checker user:
+
+1. Open your CDS organization and navigate to **Settings** > **Security** > **Users**.
 2. Select the **'PowerApps Checker'** user from the list of users and double-click to open the user form.
 3. Scroll to the **'Administration'** > **'Client Access License (CAL) Information'** section of the form.
 4. Select **'Non-interactive'** in the **Access Mode** drop-down control.<br/>
@@ -129,7 +135,9 @@ The first-party enterprise application identity used by Solution Checker (PowerA
 
 Follow the below steps to verify that the application identity hasn't been disabled in AAD and if necessary enable the application.
 
-### Verify and/or modify enabled status of PowerApps-Advisor enterprise application
+### How to verify and/or modify enabled status of PowerApps-Advisor
+
+To verify and/or modfify the enabled status of the PowerApps-Advisor enterprise application identity
 
 1. Access your tenant in the [Azure Active Directory (AAD) Portal](https://aad.portal.azure.com/).
 2. Navigate to **Enterprise Applications**.
