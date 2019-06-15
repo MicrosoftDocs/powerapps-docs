@@ -82,17 +82,11 @@ In order to use Solution Checker in this organization, Adminstration Mode must b
 ### How to disable administration mode for an instance
 
 1. Access the Dynamics 365 for Customer Engagement instance picker: https://port.crm.dynamics.com/G/Instances/InstancePicker.aspx.
-2. Select the instance that has issues running Solution Checker.
-3. Select **ADMIN**.
-
-  > [!div class="mx-imgBorder"]
-  > ![Instance Admin](media/solution-checker-instance-admin.png)
-
-4. Clear **Enable administration mode** and click **Save**.
-
-  > [!div class="mx-imgBorder"]
-  > ![Disable Admin mode](media/solution-checker-instance-disable-admin-mode.png)
-
+2. Select the organization instance that has issues running Solution Checker.
+3. Select **ADMIN**.<br/>
+![Instance Admin](media/solution-checker-instance-admin.png)
+4. Clear **Enable administration mode** and click **Save**.<br/>
+![Disable Admin mode](media/solution-checker-instance-disable-admin-mode.png)
 5. Run Solution Checker again.
 
 ## Solution Checker fails due to missing security roles
