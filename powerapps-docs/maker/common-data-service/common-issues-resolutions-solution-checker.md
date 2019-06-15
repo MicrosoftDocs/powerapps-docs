@@ -28,7 +28,7 @@ This article lists some common issues that you might encounter while using Solut
 
 Shortly after submitting a Solution Checker request to run an analysis or download results the operation doesn't complete and an error message is displayed, such as:
 
-> *"We weren't able to run the check on **[Solution Name]** solution. Try running it again."*
+*"We weren't able to run the check on **[Solution Name]** solution. Try running it again."*
 
 Whenever possible, Solution Checker will attempt to return a specific error message with link to details on the potential cause and resolution steps. Click on **'Learn more'** for details.
 
