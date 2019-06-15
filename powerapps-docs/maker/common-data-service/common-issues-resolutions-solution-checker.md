@@ -55,9 +55,9 @@ If you want to keep the past results from Solution Checker, export the results f
 - Analysis Result
 - Analysis Result Detail
 
-### How to delete PowerApps Checker
+### How to uninstall PowerApps Checker
 
-To delete the PowerApps Checker solution:
+To uninstall the PowerApps Checker solution:
 
 1. As a System Administrator or as a System Customizer, open the PowerApps portal by going to https://web.powerapps.com/environments.
 2. Select **Solutions**.
@@ -77,7 +77,7 @@ Organizations that have been placed into [Administration Mode](https://docs.micr
 
 In order to use Solution Checker in this organization, Adminstration Mode must be disabled.
 
-### How to disable administration mode for an organization instance
+### How to disable administration mode
 
 To disable administration mode for an organization instance:
 
@@ -135,7 +135,7 @@ The first-party enterprise application identity used by Solution Checker (PowerA
 
 Follow the below steps to verify that the application identity hasn't been disabled in AAD and if necessary enable the application.
 
-### How to verify and/or modify enabled status of PowerApps-Advisor
+### How to verify and/or modify application enabled status
 
 To verify and/or modfify the enabled status of the PowerApps-Advisor enterprise application identity
 
