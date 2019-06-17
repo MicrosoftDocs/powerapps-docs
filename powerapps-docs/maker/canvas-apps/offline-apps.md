@@ -14,115 +14,134 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
+
 # Develop offline-capable canvas apps
 
-One of the most common scenarios you face as a mobile-app developer is enabling your users to be productive when there is limited connectivity or no connectivity at all. PowerApps has a set of features and behaviors that help you to develop offline-capable canvas apps. You can:
+Mobile users often need to be productive even when they have limited or no connectivity. When you build a canvas app, you can perform these tasks:
 
-* Launch PowerApps Mobile when offline.
-* Run apps that you develop when offline.
-* Determine when an app is offline, online, or in a metered connection by using the [Connection](../canvas-apps/functions/signals.md#connection) signal object.
-* Use [collections](../canvas-apps/create-update-collection.md) and leverage functions such as [LoadData and SaveData](../canvas-apps/functions/function-savedata-loaddata.md) for basic data storage when offline.
+- Open PowerApps Mobile and run apps when offline.
+- Determine when an app is offline, online, or in a metered connection by using the [Connection](../canvas-apps/functions/signals.md#connection) signal object.
+- Use [collections](../canvas-apps/create-update-collection.md) and leverage functions such as [LoadData and SaveData](../canvas-apps/functions/function-savedata-loaddata.md) for basic data storage when offline.
 
 ## Limitations
 
-**LoadData** and **SaveData** combine to form a simple mechanism to store small amounts of data on a local device. By using these functions, you can add simple offline capabilities to your app.  
+**LoadData** and **SaveData** combine to form a simple mechanism to store small amounts of data on a local device. By using these functions, you can add simple offline capabilities to your app.
 
-These functions are limited by the amount of available app memory because they operate on an in-memory collection. Available memory can vary depending on the device, the operating system, the memory that PowerApps Mobile uses, and the complexity of the app in terms of screens and controls. If you store more than a few megabytes of data, test your app with expected scenarios on the devices on which you expect it to run. You should generally expect to have between 30 and 70 megabytes of available memory.  
+These functions are limited by the amount of available app memory because they operate on an in-memory collection. Available memory can vary depending on the device, the operating system, the memory that PowerApps Mobile uses, and the complexity of the app in terms of screens and controls. If you store more than a few megabytes of data, test your app with expected scenarios on the devices on which you expect it to run. You'll generally have 30-70 megabytes of available memory.
 
-The functions also don't automatically resolve merge conflicts when a device returns to connectivity from offline – configuration on what data is saved and how to handle reconnection is up to the maker when writing expressions.
+The functions also don't automatically resolve merge conflicts when a device comes online. Configuration on what data is saved and how to handle reconnection is up to the maker when writing expressions.
 
-We're working to expand the capabilities for offline scenarios. Stay tuned here and on the [PowerApps blog](https://powerapps.microsoft.com/blog/) for updates when they become available.
+For updates on offline capabilities, return to this topic, and subscribe to the [PowerApps blog](https://powerapps.microsoft.com/blog/).
 
-## How to build offline capable apps
+## Overview
 
-The first thing to think about in offline scenarios is how your apps work with data. Apps in PowerApps primarily access data through a set of [connectors](../canvas-apps/connections-list.md) that the platform provides, such as SharePoint, Office 365, and the Common Data Service. You can also build custom connectors that enable apps to access any service that provides a RESTful endpoint. This could be a Web API or a service such as Azure Functions. All these connectors use HTTPS over the Internet, which means your users must be online for them to access data and any other capabilities that a service offers.
+When you design offline scenarios, you should first consider how your apps work with data. Apps in PowerApps primarily access data through a set of [connectors](../canvas-apps/connections-list.md) that the platform provides, such as SharePoint, Office 365, and Common Data Service. You can also build custom connectors that enable apps to access any service that provides a RESTful endpoint. This could be a Web API or a service such as Azure Functions. All these connectors use HTTPS over the Internet, which means your users must be online for them to access data and any other capabilities that a service offers.
 
 ![PowerApps app with connectors](./media/offline-apps/online-app.png)
 
 ### Handling offline data
-One of the most interesting aspects of PowerApps is its set of capabilities and formulas that enable you to filter, search, sort, aggregate, and manipulate data in a consistent way regardless of the data source. Sources range from in-memory collections in the app, to SharePoint lists, to SQL databases and the Common Data Service. This consistency enables you to easily retarget an app to use a different backend. More importantly here, it also enables you to use local collections for data management with almost no changes to an app's logic. In fact, local collections are the primary mechanism for handling offline data.
 
-## Building an offline Twitter app
-To keep the focus on the offline aspects of app development, we'll show you a simple scenario focused around Twitter. We'll build an app that enables you to read Twitter posts and submit tweets while being offline. When the app comes online, the app posts tweets and reloads the local data.
+In PowerApps, you can filter, search, sort, aggregate, and manipulate data in a consistent way regardless of the data source. Sources range from in-memory collections in the app to SharePoint lists to SQL databases and Common Data Service. Because of this consistency, you can easily retarget an app to use a different data source. More importantly for offline scenarios, you can use local collections for data management with almost no changes to an app's logic. In fact, local collections are the primary mechanism for handling offline data.
 
-At a high level, the app does the following:
+## Build an offline app
 
-1. On app startup (based on the first screen's **OnVisible** property):
+To keep the focus on the offline aspects of app development, this topic illustrates a simple scenario focused around Twitter. You'll build an app that enables you to read Twitter posts and submit tweets while being offline. When the app comes online, the app posts tweets and reloads the local data.
 
-   * If the device is online, we access the Twitter connector directly to fetch data, and populate a collection with that data.
-   * If the device is offline, we load the data from a local cache file using [LoadData](../canvas-apps/functions/function-savedata-loaddata.md).
-   * We enable the user to submit tweets - if online we post directly to Twitter and refresh the local cache.
-2. Every 5 minutes, if online:
+At a high level, the app performs these tasks:
 
-   * We post any tweets that we have in the local cache.
-   * We refresh the local cache and save it using [SaveData](../canvas-apps/functions/function-savedata-loaddata.md).
+- When the user opens the app:
 
-### Step 1: Create a new phone app
-1. Open PowerApps Studio.
-2. Click or tap **New** > **Blank app** > **Phone layout**.
+  - If the device is online, the app fetches data through the Twitter connector and populates a collection with that data.
+  - If the device is offline, the app loads the data from a local cache file by using the [**LoadData**](../canvas-apps/functions/function-savedata-loaddata.md) function.
+  - The user can submit tweets. If the app is online, it posts the tweets directly to Twitter and refreshes the local cache.
 
-    ![Blank app, phone layout](./media/offline-apps/blank-app.png)
+- Every five minutes while the app is online:
 
-### Step 2: Add a Twitter connection
+  - The app posts any tweets in the local cache.
+  - The app refreshes the local cache and saves it by using the [**SaveData**](../canvas-apps/functions/function-savedata-loaddata.md) function.
 
-1. Click or tap **Content** > **Data sources**, then choose **Add data source** on the **Data sources** panel.
+### Step 1: Add Twitter to a blank phone app
 
-2. Click or tap **New Connection** , select **Twitter** , and click or tap **Create**.
+1. In PowerApps Studio, select **File** > **New**.
+1. On the **Blank app** tile, select **Phone layout**.
+1. On the **View** tab, select **Data sources**.
+1. In the **Data** pane, select **Add data source**.
+1. Select **New Connection** > **Twitter** > **Create**.
+1. Enter your credentials, create the connection, and then close the **Data** pane.
 
-3. Enter your credentials, and create the connection.
+### Step 2: Collect existing tweets
 
-    ![Add a Twitter connection](./media/offline-apps/twitter-connection.png)
+1. In the **Tree view** pane, select **App**, and then set its **OnStart** property to this formula:
 
-### Step 3: Load tweets into a LocalTweets collection on app startup
-Select the **OnVisible** property for **Screen1** in the app, and copy in the following formula:
+    ```powerapps-dot
+    If( Connection.Connected,
+        ClearCollect( LocalTweets, Twitter.SearchTweet( "PowerApps", {maxResults: 10} ) );
+            Set( statusText, "Online data" ),
+        LoadData( LocalTweets, "LocalTweets", true );
+            Set( statusText, "Local data" )
+    );
+    SaveData( LocalTweets, "LocalTweets" );
+    ```
 
-```powerapps-dot
-If( Connection.Connected,
-    ClearCollect( LocalTweets, Twitter.SearchTweet( "PowerApps", {maxResults: 100} ) );
-        UpdateContext( {statusText: "Online data"} ),
-    LoadData(LocalTweets, "Tweets", true);
-        UpdateContext( {statusText: "Local data"} )
-);
-LoadData( LocalTweetsToPost, "LocalTweets", true );
-SaveData( LocalTweets, "Tweets" )
-```
+    > [!div class="mx-imgBorder"]
+    > ![Formula to load tweets](./media/offline-apps/load-tweets.png)
 
-![Formula to load tweets](./media/offline-apps/load-tweets.png)
+1. In the **Tree view** pane, select the ellipsis menu for the **App** object, and then select **Run OnStart** to run that formula.
 
-This formula checks if the device is online:
+    > [!div class="mx-imgBorder"]
+    > ![Run formula to load tweets](./media/offline-apps/load-tweets-run.png)
 
-* If the device is online, it loads into a **LocalTweets** collection up to 100 tweets with the search term "PowerApps".
-* If the device is offline, it loads the local cache from a file called "Tweets," if it's available.
+    > [!NOTE]
+    > The **LoadData** and **SaveData** functions might show an error in PowerApps Studio because browsers don't support them. However, they'll perform normally after you deploy this app to a device.
 
-### Step 4: Add a gallery and bind it to the LocalTweets collection
+This formula checks whether the device is online:
 
-1. Insert a new flexible height gallery: **Insert** > **Gallery** > **Blank flexible height**.
+- If the device is online, the formula loads up to 10 tweets with the search term "PowerApps" into a **LocalTweets** collection.
+- If the device is offline, the formula loads the local cache from a file called "LocalTweets" if it's available.
 
-2. Set the **Items** property to **LocalTweets**.
+### Step 3: Show tweets in a gallery
 
-3. Add four **Label** controls to display data from each tweet, and set the **Text** properties to:
-   * **ThisItem.TweetText**
-   * **ThisItem.UserDetails.FullName & " \@" & ThisItem.UserDetails.UserName**
-   * **"RT: " & ThisItem.RetweetCount**
-   * **Text(DateTimeValue(ThisItem.CreatedAtIso), DateTimeFormat.ShortDateTime)**
-4. Add an **Image** control, and set the **Image** property to **ThisItem.UserDetails.ProfileImageUrl**.
+1. On the **Insert** tab, select **Gallery** > **Blank flexible height**.
 
-### Step 5: Add a connection status label
-Insert a new **Label** control, and set its **Text** property to the following formula:
+1. Set the **Items** property of the [**Gallery**](controls/control-gallery.md) control to `LocalTweets`.
 
-```If( Connection.Connected, "Connected", "Offline" )```
+1. In the gallery template, add three [**Label**](controls/control-text-box.md) controls, and set the **Text** property of each label to one of these values:
 
-This formula checks if the device is online. If it is, the text of the label is "Connected", otherwise it's "Offline".
+    - `ThisItem.UserDetails.FullName & " (@" & ThisItem.UserDetails.UserName & ")"`
+    - `Text(DateTimeValue(ThisItem.CreatedAtIso), DateTimeFormat.ShortDateTime)`
+    - `ThisItem.TweetText`
 
-### Step 6: Add a text input to compose new tweets
+1. Make the text in the last label bold so that the gallery resembles this example.
 
-1. Insert a new **Text input** control named "NewTweetTextInput".
+    > [!div class="mx-imgBorder"]
+    > ![Gallery showing sample tweets](./media/offline-apps/tweet-gallery.png)
 
-2. Set the **Reset** property of the text input to **resetNewTweet**.
+### Step 4: Show connection status
 
-### Step 7: Add a button to post the tweet
-1. Add a **Button** control, and set the **Text** property to "Tweet".
-2. Set the **OnSelect** property to the following formula:
+1. Under the gallery, insert a label, and then set its **Color** property to **Red**.
+
+1. Set the newest label's **Text** property to this formula:
+
+    `If( Connection.Connected, "Connected", "Offline" )`
+
+This formula determines whether the device is online. If it is, the label shows **Connected**; otherwise, it shows **Offline**.
+
+### Step 5: Add a box to compose tweets
+
+1. Under the connection-status label, insert a [**Text input**](controls/control-text-input.md) control, and rename it **NewTweetTextInput**.
+
+1. Set the text-input box's **Default** property to `""`.
+
+    > [!div class="mx-imgBorder"]
+    > ![Gallery over status info and text-input box](./media/offline-apps/status-input.png)
+
+### Step 6: Add a button to post the tweet
+
+1. Under the text-input box, add a **Button** control, and set its **Text** property to this value:
+
+    `"Tweet"`
+
+1. Set the button's **OnSelect** property to this formula:
 
     ```powerapps-dot
     If( Connection.Connected,
@@ -130,55 +149,72 @@ This formula checks if the device is online. If it is, the text of the label is 
         Collect( LocalTweetsToPost, {tweetText: NewTweetTextInput.Text} );
             SaveData( LocalTweetsToPost, "LocalTweetsToPost" )
     );
-    UpdateContext( {resetNewTweet: true} );
-    UpdateContext( {resetNewTweet: false} )
+    Reset( NewTweetTextInput );
     ```  
 
-This formula checks if the device is online:
+1. In the **OnStart** property for the **App**, add a line at the end of the formula:
 
-* If the device is online, it tweets the text immediately.
-* If the device is offline, it captures the tweet in a **LocalTweetsToPost** collection, and saves it to the app.
+    ```powerapps-dot
+    If( Connection.Connected,
+        ClearCollect( LocalTweets, Twitter.SearchTweet( "PowerApps", {maxResults: 100} ) );
+            Set( statusText, "Online data" ),
+        LoadData( LocalTweets, "LocalTweets", true );
+            Set( statusText, "Local data" )
+    );
+    SaveData( LocalTweets, "LocalTweets" );
+    LoadData( LocalTweetsToPost, "LocalTweetsToPost", true );  // added line
+    ```
 
-Then the formula resets the text in the text box.
+    > [!div class="mx-imgBorder"]
+    > ![Run formula to load tweets with uncommented line](./media/offline-apps/load-tweets-save.png)
 
-### Step 8: Add a timer to check for tweets every five minutes
-Add a new **Timer** control:
+This formula determines whether the device is online:
 
-* Set the **Duration** property to 300000.
+- If the device is online, it posts the tweet immediately.
+- If the device is offline, it captures the tweet in a **LocalTweetsToPost** collection and saves it to the device.
 
-* Set the **AutoStart** property to true.
+Then the formula resets the text in the text-input box.
 
-* Set the **OnTimerEnd** to the following formula:
+### Step 7: Check for new tweets
+
+1. On the right side of the button, add a **Timer** control.
+
+    > [!div class="mx-imgBorder"]
+    > ![Final apps](./media/offline-apps/final-app.png)
+
+1. Set the timer's **Duration** property to **300000**.
+
+1. Set the timer's **AutoStart** and **Repeat** properties to **true**.
+
+1. Set the timer's **OnTimerEnd** to this formula:
 
     ```powerapps-dot
     If( Connection.Connected,
         ForAll( LocalTweetsToPost, Twitter.Tweet( "", {tweetText: tweetText} ) );
-        Clear( LocalTweetsToPost);
-        Collect( LocalTweetsToPost, {tweetText: NewTweetTextInput.Text} );
-        SaveData( LocalTweetsToPost, "LocalTweetsToPost" );
-        UpdateContext( {statusText: "Online data"} )
-    )
+        Clear( LocalTweetsToPost );
+        ClearCollect( LocalTweets, Twitter.SearchTweet( "PowerApps", {maxResults: 10} ) );
+        SaveData( LocalTweets, "LocalTweets" );
+   )
     ```
 
-This formula checks if the device is online. If it is, the app tweets all the items in the **LocalTweetsToPost** collection. Then it clears the collection.
+This formula determines whether the device is online. If it is, the app tweets all the items in the **LocalTweetsToPost** collection and then clears the collection.
 
-Now that the app is finished, let's check out how it looks before we move on to testing. On the left, the app is connected; and on the right, it's offline, with one tweet ready to post when it's online again.
+## Test the app
 
-![Finished app with online and offline modes](./media/offline-apps/finished-app.png)
+1. Open the app on a mobile device that's connected to the Internet.
 
-## Testing the app
-Use the following steps to test the app:
+    Existing tweets appear in the gallery, and the status shows **Connected**.
 
-1. Run PowerApps on a mobile device while online. You must run an app at least once while being online, so you can download the app to the device.
-2. Launch the Twitter app.
-3. Notice that the tweets are loaded, and that the status shows **Connected**.
-4. Close PowerApps completely.
-5. Set the device to airplane mode to ensure that it's offline.
-6. Run PowerApps. You can now run the Twitter app offline, and you have access to any other apps that you have previously run on this device while online (i.e. PowerApps hides any apps that haven't yet been downloaded to your device).
-7. Run the app again.
-8. Notice how it correctly reflects the connection state, with a status of **Offline**.
-9. Write a new tweet. It will be stored locally in the **LocalTweetsToPost** collection.
-10. Exit airplane mode. After the timer triggers, the app posts the tweet.
+1. Disconnect the device from the Internet by enabling the device's airplane mode and disabling wi-fi.
+
+    The status label shows that the app is **Offline**.
+
+1. While the device is offline, write a tweet that includes **PowerApps**, and then select the **Tweet** button.
+
+    The tweet is stored locally in the **LocalTweetsToPost** collection.
+
+1. Reconnect the device to the Internet by disabling the device's airplane mode and enabling wi-fi.
+
+    Within five minutes, the app posts the tweet, which appears in the gallery.
 
 We hope this article gives you an idea of the capabilities that PowerApps has for building offline apps. As always, please provide feedback in our [forum](https://powerusers.microsoft.com/t5/PowerApps-Forum/bd-p/PowerAppsForum1) and share your examples of offline apps in the [PowerApps community blog](https://powerusers.microsoft.com/t5/PowerApps-Community-Blog/bg-p/PowerAppsBlog).
-

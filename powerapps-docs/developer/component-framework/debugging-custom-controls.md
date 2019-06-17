@@ -1,20 +1,20 @@
 ---
-title: "Debugging Custom Components | MicrosoftDocs"
+title: "Debug Custom Components | MicrosoftDocs"
 description: "How to debug a custom control using Fiddler and Native debugging"
 manager: kvivek
 ms.date: 04/23/2019
 ms.service: "powerapps"
-ms.topic: "index-page"
+ms.topic: "article"
 ms.assetid: 18e88d702-3349-4022-a7d8-a9adf52cd34f
 ms.author: "nabuthuk"
 ---
-# Debugging csutom components
+# Debug custom components
 
 Once you are done implementing your custom control logic, run the following command to start the debugging process
 `npm start`
 
 > [!NOTE]
-> Today you can only visualize your field control, but dataset support is coming soon.
+> Currently, you can only visualize your field control, but dataset support is coming soon.
 
 > [!div class="mx-imgBorder"]
 > ![local-host](media/local-host.png "local host")

@@ -2,7 +2,7 @@
 title: "Specify properties for model-driven unified interface apps in PowerApps | MicrosoftDocs"
 description: "Learn how to configure the grid control for your app"
 keywords: ""
-ms.date: 06/06/2018
+ms.date: 06/03/2019
 ms.service: powerapps
 ms.custom: 
 ms.topic: article
@@ -74,7 +74,8 @@ Adding the Read Only Grid control to your controls list allows you to  configure
 
     ![Edit Reflow behaviour](media/UnifiedInterface_ReadOnlyGrid_EditReflow.png "Edit Reflow behaviour")
 
-    b. Select the grid flow type from **Bind to static options** drop down.
+    b. Select the grid flow type from **Bind to static options** drop down. 
+
     |Flow Type|Description|
     |--------------|--------------------|
     |**Reflow**|Allows the grid to render into list mode depending when there is no enough display space.|
