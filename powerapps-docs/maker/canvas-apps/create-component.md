@@ -45,9 +45,12 @@ Components don't support the **UpdateContext** function, but you can create and 
 
 ## Import and export
 
-If you export a component, you create a local file that you can import to a different app. If the app contains a modified version of the same component, you're prompted to decide whether to replace the modified version or cancel the import. As of this writing, you can't save components to the cloud or share them within an environment.
+To import one or more components from one app into another, select **Import components** in the drop-down list of components. A dialog box lists all apps that contain components that you have permission to edit. Select an app, and then select **Import** to import the most recent published version of all of the components in that app. After you import at least one component, you can edit your copy and delete any that you don’t need.
 
-![Import and export](./media/create-component/import.png)
+> [!div class="mx-imgBorder"]
+> ![Import components dialog box](./media/create-component/import-components.png)
+
+If you export a component, you create a local file that you can import to a different app. If the app contains a modified version of the same component, you're prompted to decide whether to replace the modified version or cancel the import. 
 
 ## Custom properties
 
@@ -175,8 +178,7 @@ So far, you've created a component and added it to an app. Next, you'll create a
 
 ## Known limitations
 
-- As of this writing, data sources aren't saved with components, so forms and data tables are disabled. 
-- If you create a variable in a component, that variable is scoped only to that component and doesn't appear with app variables.
+- As of this writing, data sources aren't saved with components, so forms and data tables are disabled.
 - PowerApps doesn't support collections in components.
 - You can't insert a component into a gallery, a form, or a data card.
 - A master instance of a component is a local master and scoped to the app. If you change a master instance, only copies of the component within the app will reflect the change. Copies in other apps will remain the same unless you import the component library again. All master instances in those apps will be automatically detected and updated.

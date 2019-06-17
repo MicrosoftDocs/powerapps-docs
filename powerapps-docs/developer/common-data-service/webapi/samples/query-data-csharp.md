@@ -35,7 +35,7 @@ Prerequisites for all Common Data Service Web API C# samples are detailed in the
   
 <a name="bkmk_runSample"></a>
 
-## Hpw to run this sample
+## How to run this sample
   
 Go to [Web API Query Data Sample (C#)](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/webapi/C%23), clone or download the samples repository, and extract its contents into a local folder. This folder should contain the following files:  
   

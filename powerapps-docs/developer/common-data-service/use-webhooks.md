@@ -88,6 +88,9 @@ The body will contain string that represents the JSON value of an instance of th
 
 The service you create must parse this data to extract the relevant items of information for your service to provide its function. How you choose to parse this data depends on the technology you are using and your preferences.
 
+> [!IMPORTANT]
+> Due to certain Service Bus optimizations, it is not recommended that .NET developers deserialize the JSON formatted message request body to a <xref:Microsoft.Xrm.Sdk.RemoteExecutionContext> object. Rather, use [JObject](https://www.newtonsoft.com/json/help/html/T_Newtonsoft_Json_Linq_JObject.htm) to parse the message body.
+
 The following is an example of the serialized JSON data passed for a step registered with the following properties:
 
 

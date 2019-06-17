@@ -18,6 +18,8 @@ ms.assetid: bd90b3fd-a4b4-4999-8b53-d2a5dce4966b
 
 [!INCLUDE [conditionexpression-description](includes/conditionexpression-description.md)]
 
+## Properties
+
 ## attributeName
 
 The name of the data-set column to apply the filter on.

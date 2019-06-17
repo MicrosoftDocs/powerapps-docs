@@ -10,7 +10,7 @@ author: "nkrb"
 ms.author: "nabuthuk"
 manager: "Jdaly"
 ---
-# PowerApps component Framework API Reference
+# PowerApps component framework API reference
 
 [!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
 
@@ -40,5 +40,3 @@ This section contains reference documentation for creating custom components usi
 |[UserSettings](usersettings.md)|[!INCLUDE [usersettings-description](includes/usersettings-description.md)]|
 |[Utility](utility.md)|[!INCLUDE [utility-description](includes/utility-description.md)]|
 |[WebApi](webapi.md)|[!INCLUDE [webapi-description](includes/webapi-description.md)]|
-
-

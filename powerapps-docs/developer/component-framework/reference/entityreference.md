@@ -18,6 +18,8 @@ ms.assetid: ad8659f7-f566-43db-bed1-c8484c114a59
 
 [!INCLUDE [entityreference-description](includes/entityreference-description.md)]
 
+## Properties
+
 ## entityType
 
 The entity logical name. Read-only.

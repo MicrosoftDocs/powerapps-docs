@@ -1,5 +1,5 @@
 ---
-title: "PowerApps component framework Overview | MicrosoftDocs"
+title: "What are custom components? | MicrosoftDocs"
 description: "Use the PowerApps component framework to create custom components to provide enhanced user experience for users to view and work with data in forms, views, and dashboards."
 manager: kvivek
 ms.date: 04/23/2019
@@ -9,7 +9,7 @@ ms.assetid: 135481cd-4583-4e49-8f58-02f32a9b054a
 ms.author: "nabuthuk"
 ---
 
-# What are custom components
+# What are custom components?
 
 [!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
