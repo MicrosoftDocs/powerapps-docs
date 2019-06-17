@@ -2,7 +2,7 @@
 title: "Use solutions in PowerApps | MicrosoftDocs"
 description: "Learn how to use solution to create or customize apps"
 ms.custom: ""
-ms.date: 10/29/2018
+ms.date: 06/17/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -93,7 +93,7 @@ In PowerApps, you can view the classic solution explorer by selecting **Solution
 
 - Custom connectors are not available in a solution.
 - Canvas apps must be opened after a solution is imported to update the connections.
-- If a canvas app is packaged in a managed solution, it can still be edited in the target environment.
+- If a canvas app is packaged in a managed solution it can still be edited in the target environment, but not re-published..
 - Dependencies are not available for canvas apps.
 - Deleting a managed solution will not rollback to a different canvas app's version. 
 -	Canvas app access (CRUD and security) is managed entirely in PowerApps and not the Common Data Service (Common Data Service) database.
@@ -103,6 +103,7 @@ In PowerApps, you can view the classic solution explorer by selecting **Solution
 - Button triggered Flows are not available in solutions.
 - Canvas app triggered Flows are not available in solutions.
 - Flows triggered from Microsoft 365 applications such as SharePoint and Excel are not available in solutions.
+- Flows in solutions don't support delegated authentication. For example, access to a Flow is not automatically granted based on having access to the SharePoint list the Flow was created from.
 
  For details about customizing the individual components in a solution, see the following topics:  
   
