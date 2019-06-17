@@ -42,6 +42,6 @@ With Dynamics 365 App for Outlook, you can:
 
 For information on using Dynamics 365 App for Outlook, see the following Customer Engagement documentation:
 
-- Using the app:  [Use Word templates to create standardized documents](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/outlook-app/dynamics-365-app-outlook-user-s-guide)
+- Using the app:  [Dynamics 365 App for Outlook User Guide](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/outlook-app/dynamics-365-app-outlook-user-s-guide)
 
 
