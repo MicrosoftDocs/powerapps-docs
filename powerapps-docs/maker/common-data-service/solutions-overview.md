@@ -2,7 +2,7 @@
 title: "Work with solutions in PowerApps | MicrosoftDocs"
 description: "Learn how solutions are distributed"
 ms.custom: ""
-ms.date: 01/28/2019
+ms.date: 05/28/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -139,7 +139,7 @@ More information: [Whitepaper: Solution Lifecycle Management](https://www.micros
  Managed solutions can modify the system solution components and add new components. If multiple managed solutions are installed, the first one installed is below the managed solution installed later. This means that the second solution installed can customize the one installed before it. When two managed solutions have conflicting definitions, the general rule is “Last one wins”. If you uninstall a managed solution, the managed solution below it takes effect. If you uninstall all managed solution, the default behavior defined within the system solution is applied.  
   
  **Unmanaged Customizations**  
- Unmanaged customizations are any change you have made to your environment through an unmanaged solution. The system solution defines what you can or can't customize by using managed properties. Publishers of managed solutions have the same ability to limit your ability to customize solution components that they add in their solution. You can customize any of the solution components that do not have managed properties that prevent you from customization them.  
+ Unmanaged customizations are any change you have made to your environment through an unmanaged solution. The system solution defines what you can or can't customize by using managed properties. Publishers of managed solutions have the same ability to limit your ability to customize solution components that they add in their solution. You can customize any of the solution components that do not have managed properties that prevent you from customizing them.  
   
  **Application Behavior**  
  This is what you actually see in your environment. The default system solution plus any managed solutions, plus any unmanaged customizations you have applied.  
@@ -150,7 +150,7 @@ More information: [Whitepaper: Solution Lifecycle Management](https://www.micros
   
 <a name="BKMK_Dependencies"></a>   
 ### Solution dependencies  
- Because of the way that managed solutions are layered some managed solutions can be dependent on solution components in other managed solutions. Some solution publishers will take advantage of this to build solutions that are modular. You may need to install a “base” managed solution first and then you can install a second managed that will further customize the components in the base managed solution. The second managed solution depends on solution components that are part of the first solution.  
+ Because of the way that managed solutions are layered, some managed solutions can be dependent on solution components in other managed solutions. Some solution publishers will take advantage of this to build solutions that are modular. You may need to install a “base” managed solution first and then you can install a second managed solution that will further customize the components in the base managed solution. The second managed solution depends on solution components that are part of the first solution.  
   
  The system tracks these dependencies between solutions. If you try to install a solution that requires a base solution that isn’t installed, you won’t be able to install the solution. You will get a message saying that the solution requires another solution to be installed first. Similarly, because of the dependencies, you can’t uninstall the base solution while a solution that depends on it is still installed. You have to uninstall the dependent solution before you can uninstall the base solution.  
   
