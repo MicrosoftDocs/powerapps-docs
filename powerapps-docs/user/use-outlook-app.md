@@ -21,10 +21,14 @@ search.app:
 
 Use the Dynamics 365 App for Outlook to manage your Dynamics 365 data using Outlook on the desktop, web, or phone. When Dynamics 365 App for Outlook is installed, depending on which version of the app you have installed, you'll see a Customer Engagement pane or window next to a selected Outlook email message, or when you're composing an email message or setting up a meeting or appointment.
 
+
+   > [!div class="mx-imgBorder"] 
+   > ![Dynamics 365 App for Outlook](media/outlookapp.png "Dynamics 365 App for Outlook")
+
 ## What Dynamics 365 App for Outlook offers  
 With Dynamics 365 App for Outlook, you can:  
   
-- View information about contacts and leads while you’re working in Outlook. You can view this info in the context of an email message, meeting, or appointment. For example, view phone numbers, company name, last and next activities, and recent records. 
+- View information about Common Data Service contacts and accounts while you’re working in Outlook. You can view this info in the context of an email message, meeting, or appointment. For example, view phone numbers, company name, last and next activities, and recent records. 
   
 - Link email messages, meetings, and appointments to a record with a single click. For example, link an email message to a specific account, opportunity, or case. Dynamics 365 App for Outlook also supports custom entities.  
   
@@ -32,13 +36,11 @@ With Dynamics 365 App for Outlook, you can:
   
 - Add a phone call, task, or appointment activity to Common Data Service.  
   
-- Create a new Common Data Service record for any entity (record type).  
-  
-- Add email templates, knowledge articles, and sales literature when you create an email message or set up a meeting.  
+- Create a new record for any entity (record type).  
   
 - Track Outlook contacts in Common Data Service.  
 
-For information on using Dynamics 354 App for Outlook, see the following Customer Engagement documentation:
+For information on using Dynamics 365 App for Outlook, see the following Customer Engagement documentation:
 
 - Using the app:  [Use Word templates to create standardized documents](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/outlook-app/dynamics-365-app-outlook-user-s-guide)
 
