@@ -176,6 +176,8 @@ Here's a summary of each column in the report.
 | Web Resources  | [web-use-strict-equality-operators](http://go.microsoft.com/fwlink/?LinkID=398563&error=web-use-strict-equality-operators&client=PAChecker)  | Use strict equality operators.  | 
 | Web Resources  | [web-avoid-eval](http://go.microsoft.com/fwlink/?LinkID=398563&error=web-avoid-eval&client=PAChecker)  | Don't use the 'eval' function or its functional equivalents.  | 
 
+## Limitations
+Powerapp checker can't be automated at this time. You must run it from http://web.powerapps.com. 
 
 ## See also
 [Best practices and guidance for the Common Data Service](../../developer/common-data-service/best-practices/index.md)<br />
