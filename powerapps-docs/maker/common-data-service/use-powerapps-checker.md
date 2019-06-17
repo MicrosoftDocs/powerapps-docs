@@ -162,7 +162,7 @@ Here's a summary of each column in the report.
 |Web Resources  | [meta-avoid-silverlight](http://go.microsoft.com/fwlink/?LinkID=398563&error=meta-avoid-silverlight&client=PAChecker&source=featuredocs)   | Silverlight web resource usage is deprecated.   |
 
 ## Limitations
-Powerapp checker cannot be automated at this time, it can be run from the http://web.powerapps.com 
+Powerapp checker can't be automated at this time. You must run it from http://web.powerapps.com. 
 
 
 ## See also
