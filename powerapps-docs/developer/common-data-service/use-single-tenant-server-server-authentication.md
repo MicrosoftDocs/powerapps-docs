@@ -46,13 +46,13 @@ To create an application registration in Azure AD, follow these steps.
 1. Navigate to https://admin.microsoft.com and sign in, or from your D365 organization web page select the application launcher in the top left corner.
 2. Choose **Admin** > **Admin centers** > **Azure Active Directory**
 3. From the left panel, choose **Azure Active Directory** > **App registrations (Preview)**
-4. Choose **+ New registration** [[image](#bkmk_app-registration-started)]
-5. In the **Register an application** form provide a name for your app, select **Accounts in this organizational directory only**, and choose **Register**. A redirect URI is not needed for this walkthrough and the provided sample code.
-6. On the **Overview** page, select **API permissions** [[image](#bkmk_app-registration-completed)]
+4. Choose **+ New registration**
+5. In the **Register an application** form provide a name for your app, select **Accounts in this organizational directory only**, and choose **Register**. A redirect URI is not needed for this walkthrough and the provided sample code.<br /> ![Register an application form](media/S2S-app-registration-started.PNG)
+6. On the **Overview** page, select **API permissions** <br >![App registration permissions](media/S2S-app-registration-completed.PNG)
 7. Choose **+ Add a permission**
 8. In the **Microsoft APIs** tab, choose **Dynamics CRM**
-9. In the **Request API permission** form, select **Delegated permissions**, check **user_impersonation**, and select **Add permissions** [[image](#bkmk_api-permission-started)]
-10. On the **API permissions** page below **Grant consent**, select **Grant admin consent for "org-name"** and when prompted choose **Yes** [[image](#bkmk_api-permission-completed)]
+9. In the **Request API permission** form, select **Delegated permissions**, check **user_impersonation**, and select **Add permissions** <br />![Setting API permissions](media/S2S-api-permission-started.PNG)
+10. On the **API permissions** page below **Grant consent**, select **Grant admin consent for "org-name"** and when prompted choose **Yes** <br />![Granting API permissions](media/S2S-api-permission-completed.PNG)
 11. Select **Overview** in the navigation panel, record the **Display name**, **Application ID**, and **Directory ID** values of the app registration. You will provide these later in the code sample.
 12. In the navigation panel, select **Certificates & secrets**
 13. Below **Client secrets**, choose **+ New client secret** to create a secret
@@ -70,7 +70,7 @@ To create an unlicensed "application user" in your Dynamics 365 organization, fo
 6. Navigate to **Settings** > **Security** > **Users**
 7. Choose **Application Users** in the view filter
 8. Select **+ New**
-9. In the **New User** form, enter the required information. These values must be identical to those values for the new user you created in the Azure tenant. [[image](#bkmk_new-appuser)]
+9. In the **New User** form, enter the required information. These values must be identical to those values for the new user you created in the Azure tenant. <br />![New app user](media/S2S-new-appuser.PNG)
 10. If all goes well, after selecting **SAVE**, the **Application ID URI** and **Azure AD Object Id** fields will auto-populate with their correct values
 11. Before exiting the user form, choose **MANAGE ROLES** and assign a security role to this application user so that the application user can access the desired organization data.
 
@@ -111,30 +111,3 @@ Shown below is example console output obtained from a D365 organization that onl
 [Use Multi-Tenant Server-to-server authentication](use-multi-tenant-server-server-authentication.md)   
 [Build web applications using Server-to-Server (S2S) authentication](build-web-applications-server-server-s2s-authentication.md)  
 [How to: Sign in any Azure Active Directory user using the multi-tenant application pattern](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-convert-app-to-be-multi-tenant)
-
-## List of figures
-
-<a name="bkmk_app-registration-started"></a>
-### Figure: Azure AD app registration
-<kbd><img src="media/S2S-app-registration-started.PNG"></kbd><br />
-[[go back](#bkmk_registration)]
-
-<a name="bkmk_app-registration-completed"></a>
-### Figure: Azure AD app registration overview
-<kbd><img src="media/S2S-app-registration-completed.PNG"></kbd><br />
-[[go back](#bkmk_registration)]
-
-<a name="bkmk_api-permission-started"></a>
-### Figure: Setting app permissions
-<kbd><img src="media/S2S-api-permission-started.PNG" ></kbd><br />
-[[go back](#bkmk_registration)]
-
-<a name="bkmk_api-permission-completed"></a>
-### Figure: Completed app permissions and consent
-<kbd><img src="media/S2S-api-permission-completed.PNG" ></kbd><br />
-[[go back](#bkmk_registration)]
-
-<a name="bkmk_new-appuser"></a>
-### Figure: Adding a new application user in D365
-<kbd><img src="media/S2S-new-appuser.PNG" ></kbd><br />
-[[go back](#bkmk_appuser)]

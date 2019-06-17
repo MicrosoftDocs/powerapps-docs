@@ -16,12 +16,13 @@ search.app:
 ---
 # Add a data connection to a canvas app in PowerApps
 
-In PowerApps, add a data connection to an existing canvas app or to an app that you're building from scratch. Your app can connect to SharePoint, Salesforce, OneDrive, or [many other data sources](connections-list.md).
+In PowerApps, add a data connection to an existing canvas app or to an app that you're building from scratch. Your app can connect to SharePoint, Common Data Service, Salesforce, OneDrive, or [many other data sources](connections-list.md).
 
 Your [next step](#next-steps) after this article is to display and manage data from that data source in your app, as in these examples:
 
 * Connect to OneDrive, and manage data in an Excel workbook in your app.
 * Connect to Twilio, and send an SMS message from your app.
+* Connect to Common Data Service, and update an entity from your app.
 * Connect to SQL Server, and update a table from your app.
 
 ## Prerequisites
@@ -58,7 +59,7 @@ Your [next step](#next-steps) after this article is to display and manage data f
 
 1. Select **Create** to both create the connection and add it to your app.
 
-    Some connectors, such as **Office 365 Outlook**, require no additional steps, and you can show data from them immediately. Other connectors prompt you to provide credentials, specify a particular set of data, or perform other steps. For example, [SharePoint](connections/connection-sharepoint-online.md) and [SQL Server](connections/connection-azure-sqldatabase.md) require additional information before you can use them.
+    Some connectors, such as **Office 365 Outlook**, require no additional steps, and you can show data from them immediately. Other connectors prompt you to provide credentials, specify a particular set of data, or perform other steps. For example, [SharePoint](connections/connection-sharepoint-online.md) and [SQL Server](connections/connection-azure-sqldatabase.md) require additional information before you can use them. With [Common Data Service](connections/connection-common-data-service.md), you can change the environment before you select an entity.
 
 ## Identify or change a data source
 If you're updating an app, you might need to identify or change the source of data that appears in a gallery, a form, or another control. For example, you might need to identify a data source as you update an app that someone else created or that you created long ago.
@@ -77,5 +78,5 @@ If you're updating an app, you might need to identify or change the source of da
 
 ## Next steps
 
-* To show and update data in a source such as Excel, SharePoint, or SQL Server, [add a gallery](add-gallery.md), and [add a form](add-form.md).
+* To show and update data in a source such as Excel, SharePoint, Common Data Service, or SQL Server, [add a gallery](add-gallery.md), and [add a form](add-form.md).
 * For data in other sources, use connector-specific functions such as those for [Office 365 Outlook](connections/connection-office365-outlook.md), [Twitter](connections/connection-twitter.md), and [Microsoft Translator](connections/connection-microsoft-translator.md).
