@@ -81,6 +81,8 @@
         href: ../user/work-with-business-processes.md
       - name: Use flows
         href: ../user/use-flows.md
+  - name: 'Use Dynamics 365 App for Outlook'
+    href: ../user/use-outlook-app.md
 - name: Create apps
   items:
   - name: Overview
