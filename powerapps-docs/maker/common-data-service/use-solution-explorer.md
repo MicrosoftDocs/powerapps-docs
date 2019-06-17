@@ -12,10 +12,10 @@ applies_to:
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
   - "powerapps"
-author: "Mattp123"
+author: "caburk"
 ms.assetid: 72bacfbb-96a3-4daa-88ff-11bdaaac9a3d
 caps.latest.revision: 57
-ms.author: "matp"
+ms.author: "caburk"
 manager: "kvivek"
 search.audienceType: 
   - maker
@@ -93,7 +93,7 @@ In PowerApps, you can view the classic solution explorer by selecting **Solution
 
 - Custom connectors are not available in a solution.
 - Canvas apps must be opened after a solution is imported to update the connections.
-- If a canvas app is packaged in a managed solution, it can still be edited in the target environment.
+- If a canvas app is packaged in a managed solution, you can still edit it in the target environment. However, you can't republish the app or edit connections on which it relies. 
 - Dependencies are not available for canvas apps.
 - Deleting a managed solution will not rollback to a different canvas app's version. 
 -	Canvas app access (CRUD and security) is managed entirely in PowerApps and not the Common Data Service (Common Data Service) database.
@@ -103,6 +103,7 @@ In PowerApps, you can view the classic solution explorer by selecting **Solution
 - Button triggered Flows are not available in solutions.
 - Canvas app triggered Flows are not available in solutions.
 - Flows triggered from Microsoft 365 applications such as SharePoint and Excel are not available in solutions.
+- In a solution, you can create a flow that uses the new Common Data Service connector. However, adding a flow that was created outside a solution isn't supported due to potential failures. 
 
  For details about customizing the individual components in a solution, see the following topics:  
   

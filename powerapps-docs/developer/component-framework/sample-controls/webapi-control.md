@@ -12,7 +12,7 @@ ms.author: "nabuthuk"
 
 [!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
 
-The Web API component is designed to perform create, retrieve, update and delete functions. The component renders four buttons, which can be clicked to invoke different Web API actions. The result of the Web API call is injected into a HTML div element at the bottom of the custom component.  
+The Web API component is designed to perform create, retrieve, update and delete actions. The component renders four buttons, which can be clicked to invoke different Web API actions. The result of the Web API call is injected into a HTML div element at the bottom of the custom component.  
 
 > [!div class="mx-imgBorder"]
 > ![Web API component](../media/web-api-control.png "Web API component")
@@ -577,5 +577,5 @@ On successful retrieve of the records, the custom component has logic to count h
 ### Related topics
 
 [Download sample components](https://go.microsoft.com/fwlink/?linkid=2088525)<br/>
-[PowerApps component framework API Reference](../index.md)<br/>
+[PowerApps component framework API Reference](../reference/index.md)<br/>
 [PowerApps component framework Manifest Schema Reference](../manifest-schema-reference/index.md)

@@ -78,7 +78,6 @@ You should use these addresses if, for example, you must whitelist IP addresses 
 | United States | 13.89.171.80 - 13.89.171.95, 52.173.245.164, 40.71.11.80 - 40.71.11.95, 40.71.249.205, 40.70.146.208 - 40.70.146.223, 52.232.188.154, 52.162.107.160 - 52.162.107.175, 52.162.242.161, 40.112.243.160 - 40.112.243.175, 104.42.122.49 |
 | United States (Early Access)  | 13.71.195.32 - 13.71.195.47, 52.161.102.22, 13.66.140.128 - 13.66.140.143, 52.183.78.157 |
 
-
 ## Required services
 This list identifies all services to which PowerApps Studio talks and their usages. Your network must **not** block these services.
 
@@ -87,13 +86,18 @@ This list identifies all services to which PowerApps Studio talks and their usag
 | management.azure.com |https |RP |
 | msmanaged-na.azure-apim.net |https |Runtime of Connectors/Apis |
 | login.microsoft.com<br>login.windows.net<br>login.microsoftonline.com<br>secure.aadcdn.microsoftonline-p.com |https |ADAL |
-| graph.microsoft.com<br>graph.windows.net |https |Azure Graph - For getting user info (e.g. profile photo) |
+| graph.microsoft.com<br>graph.windows.net |https |Azure Graph - For getting user info (e.g., profile photo) |
 | gallery.azure.com |https |Sample and Template apps |
-| *.azure-apim.net |https |Api Hubs - Different sub-domains for each locale |
-| *.powerapps.com |https |WebAuth + Portal |
-| *.azureedge.net |https |WebAuth |
-| *.blob.core.windows.net |https |Blob storage |
+| \*.azure-apim.net |https |Api Hubs - Different sub-domains for each locale |
+| \*.powerapps.com |https | create.powerapps.com, make.powerapps.com, content.powerapps.com, and web.powerapps.com |
+| \*.azureedge.net |https | create.powerapps.com, make.powerapps.com, content.powerapps.com, and web.powerapps.com |
+| \*.blob.core.windows.net |https | Blob storage |
+| \*.flow.microsoft.com | https | create.powerapps.com, make.powerapps.com, content.powerapps.com, and web.powerapps.com |
 | vortex.data.microsoft.com |https |Telemetry |
 
 > [!NOTE]
 > If you're using a VPN, it must be configured to exclude localhost from tunneling for PowerApps Mobile.
+
+## Size limits
+
+You can find information about size limits on text, hyperlinks, images, and media in [Data types](functions/data-types.md#text-hyperlink-image-and-media).

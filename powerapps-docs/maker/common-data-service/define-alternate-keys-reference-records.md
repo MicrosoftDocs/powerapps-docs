@@ -2,7 +2,7 @@
 title: "Define alternate keys to reference records with Common Data Service | MicrosoftDocs"
 description: "Learn how to define alternate keys that can be used to reference records in Common Data Service"
 ms.custom: ""
-ms.date: 06/06/2018
+ms.date: 06/04/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -76,6 +76,9 @@ Only these kinds of fields can be used to create alternate keys:
  - Decimal
  - Whole Number (Integer)
  - Single line of Text (String)
+ - Date and Time
+ - Lookup
+ - Option Set
 
 ### Number of keys
 

@@ -9,11 +9,11 @@ ms.assetid: 18e88d702-3349-4022-a7d8-a9adf52cd34f
 ms.author: "nabuthuk"
 ---
 
-# Implement controls using TypeScript
+# Implement components using TypeScript
 
 [!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-This tutorial will walk you through creating a new custom component in Typescript. The sample component is a linear input component.  The linear input component enables users to enter numeric values using a visual slider instead of directly keying in values. 
+This tutorial will walk you through creating a new custom component in Typescript. The sample component is a linear input component. The linear input component enables users to enter numeric values using a visual slider instead of directly keying in values. 
 
 ## Creating a new component project
 
@@ -24,6 +24,7 @@ To create a new project, follow the steps below:
 3. `cd` into the new directory and run the command `cd LinearControl` 
 4. Create the component project using the command `pac pcf init --namespace SampleNamespace --name TSLinearInputControl --template field` 
 5. Install the project build tools using the command `npm install` 
+6. Open your project in any developer environment of your choice and start implementing your custom component.
 
 ## Implementing Manifest
 
@@ -38,7 +39,7 @@ A custom component is defined by the information in the `ControlManifest.Input.x
 2. Rename the `sampleProperty` and change the property type
 
     ```XML
-    <property name="sliderValue" display-name-key="sliderValue _Display_Key" description-key=" sliderValue_Desc_Key" of-type-group="numbers" usage="bound" required="true" /> 
+    <property name="sliderValue" display-name-key="sliderValue_Display_Key" description-key="sliderValue_Desc_Key" of-type-group="numbers" usage="bound" required="true" /> 
     ```
 
 3. The of-type-group attribute references a group of allowable numbers. Add the following type-group element as a sibling to the <property> element in the manifest. The type-group specifies the component value and can contain whole, currency, floating point, or decimal values.
@@ -53,8 +54,10 @@ A custom component is defined by the information in the `ControlManifest.Input.x
     ```
 
 4. Save the changes to the `ControlManifest.Input.xml` file.
-5. Build the component project using the command `npm run build`.
-6. The build generates an updated Typescript type declaration file under `TSLinearInputControl/generated folder`.  The `ManifestTypes.d.ts` file defines the properties that your component will have access to Typescript source code.
+5. Now, create a new folder inside the LinearControl folder and name it as css.
+6. Create a css file to [add styling to the custom component](#adding-style-to-the-custom-component)
+7. Build the component project using the command `npm run build`.
+8. The build generates an updated Typescript type declaration file under `TSLinearInputControl/generated folder`.  The `ManifestTypes.d.ts` file defines the properties that your component will have access to Typescript source code.
 
 ## Implementing component logic
 
@@ -237,8 +240,64 @@ The linear input control’s `init` method creates an input element and sets the
     ```
 
 5. Save the `TS_LinearInputControl.css` 
-6. Rebuild the project using the command `npm run build `.
-7. Inspect the build output under `./out/controls/TSLinearInputControl` and observe that the `TS_LinearInputControl.css` file is now included with the compiled build artifacts. 
+6. Rebuild the project using the command 
+   ```CLI
+   npm run build
+   ```
+7. Inspect the build output under the **./out/controls/TSLinearInputControl** and observe that the **TS_LinearInputControl.css** file is now included with the compiled build artifacts. 
+
+## Debugging your custom component
+
+Once you are done implementing your custom component logic, run the following command to start the debugging process
+
+```CLI
+npm start
+```
+
+## Packaging your custom components
+
+Follow the steps below to create and import a [solution](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/customize/solutions-overview) file:
+
+1. Create a new folder **Solutions** inside the **LinearComponent** folder and navigate into the folder. 
+2. Create a new solution project in the **LinearComponent** folder using the command 
+ 
+    ```CLI
+     pac solution init --publisherName developer --customizationPrefix dev 
+    ```
+
+   > [!NOTE]
+   > The [publisherName](https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/reference/entities/publisher) and [cutomizationPrefix](https://docs.microsoft.com/en-us/powerapps/maker/common-data-service/change-solution-publisher-prefix) values must be unique to your environment.
+ 
+3. Once the new solution project is created, you need to refer to the location where the created component is located. You can add the reference by using the command
+
+    ```CLI
+     pac solution add-reference --path c:\users\LinearComponent
+    ```
+
+4. To generate a zip file from your solution project, you will need to `cd` into your solution project directory and build the project using the command 
+
+    ```CLI
+     msbuild /t:restore
+    ```
+
+5. Again run the following command msbuild
+    ```CLI
+     msbuild
+    ```
+
+    > [!NOTE]
+    > Make sure that the **NuGet targets & Build Tasks** is checked. To enable it
+    > - Open **Visual Studio Installer**
+    > - For VS 2017, click on **Modify**
+    > - Click on **Individual Components**
+    > - Under **Code Tools**, check **NuGet targets & Build Tasks**
+
+6. The generated solution zip file is located in `Solution\\bin\debug\`.
+7. You should manually [import the solution](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/customize/import-update-export-solutions) using the web portal once the zip file is ready.
+
+## Adding custom components to a field or an entity
+
+To add a custom component like data-set component or simple table component to a grid or view, follow the steps mentioned in the topic [Add components to fields and entities](add-custom-controls-to-a-field-or-entity.md).
 
 ### See also
 
