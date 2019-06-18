@@ -32,4 +32,4 @@ For detailed information on how to customize App for Outlook, see the following 
 
 
 ### See also
- [Use Dynamics 365 App for Outlook](../user/use-outlook-app.md)  
+ [Use Dynamics 365 App for Outlook](../../user/use-outlook-app.md)  
