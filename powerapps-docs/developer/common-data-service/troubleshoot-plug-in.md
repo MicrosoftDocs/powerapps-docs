@@ -117,7 +117,7 @@ At run-time the error is frequently due to the developer assuming that the value
 
 To prevent this error you must check that the key exists before attempting to use it to access a value. 
 
-For example, when accessing an entity attribute, you can use the <xref:Microsoft.Xrm.Sdk.Entity>.<xref:Microsoft.Xrm.Sdk.Entity.Contains> method to check whether an attribute exists in an entity as shown in the following code.
+For example, when accessing an entity attribute, you can use the <xref:Microsoft.Xrm.Sdk.Entity>.<xref:Microsoft.Xrm.Sdk.Entity.Contains(System.String)> method to check whether an attribute exists in an entity as shown in the following code.
 
 ```csharp
 // Obtain the execution context from the service provider.  
@@ -138,6 +138,6 @@ if (context.InputParameters.Contains("Target") &&
     }
 ```
 
-You could also use the <xref:Microsoft.Xrm.Sdk.Entity>.<xref:Microsoft.Xrm.Sdk.Entity.Attributes>.<xref:Microsoft.Xrm.Sdk.Entity.Attributes.Contains> method.
+You could also use the <xref:Microsoft.Xrm.Sdk.Entity>.<xref:Microsoft.Xrm.Sdk.Entity.Attributes>.<xref:Microsoft.Xrm.Sdk.Entity.Attributes.Contains(System.String)> method.
 
-Some developers use the <xref:Microsoft.Xrm.Sdk.Entity>.<xref:Microsoft.Xrm.Sdk.Entity.GetAttributeValue``1> method to avoid this error, but be aware that this method will return the default value of the type if the attribute doesn't exist. If the default value is null, this works as expected. But if the default value doesn't return null, such as with a `DateTime`, the value returned will be `1/1/0001 00:00` rather than null.
+Some developers use the <xref:Microsoft.Xrm.Sdk.Entity>.<xref:Microsoft.Xrm.Sdk.Entity.GetAttributeValue``1(System.String)> method to avoid this error, but be aware that this method will return the default value of the type if the attribute doesn't exist. If the default value is null, this works as expected. But if the default value doesn't return null, such as with a `DateTime`, the value returned will be `1/1/0001 00:00` rather than null.
