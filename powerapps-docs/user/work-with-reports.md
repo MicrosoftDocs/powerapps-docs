@@ -1,13 +1,13 @@
 ---
-title: "Work with report in PowerApps | MicrosoftDocs"
-ms.custom: ""
+title: Work with reports | Microsoft Docs
+description: Work with reports in PowerApps
 author: mduelae
 manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 6/20/2019
-ms.author: mduelae
+ms.date: 06/20/2019
+ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
 ms.assetid: 
@@ -15,7 +15,6 @@ search.audienceType:
   - enduser
 search.app: 
   - PowerApps
-  - D365CE
   - D365CE
 ---
 # Work with reports
