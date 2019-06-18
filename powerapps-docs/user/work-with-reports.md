@@ -1,5 +1,5 @@
 ---
-title: "Run a report in PowerApps | MicrosoftDocs"
+title: "Work with report in PowerApps | MicrosoftDocs"
 ms.custom: ""
 author: mduelae
 manager: kvivek
@@ -18,7 +18,7 @@ search.app:
   - D365CE
   - D365CE
 ---
-# Run a report
+# Work with reports
 
 [!INCLUDE[cc-applies-to-update-9-0-0](../includes/cc_applies_to_update_9_0_0.md)]
 
@@ -37,7 +37,6 @@ For more information on organizing and creating reports, see: [Customize and org
  > [!div class="mx-imgBorder"]
  > ![Run a report](media/report-run.png "Run a report")
  
-  
   
 ## Share the report with other users or teams    
 
@@ -76,6 +75,11 @@ For more information on organizing and creating reports, see: [Customize and org
  > [!div class="mx-imgBorder"]
  > ![Share report with org](media/report-share4.png "Share report with org")
 
-  
+## Download a report
 
-
+1. From the site map, go to **Reports**. 
+2. In the list of reports, select the report you want to share.  
+3. On the command bar, select select **Edit**.  
+4. On the **Actions** menu, select **Download Report**.  
+The RDL file for the report contains tags that specify whether the report is a fetch-based report or an SQL-based report.
+5. Open the report once the download is complete.
