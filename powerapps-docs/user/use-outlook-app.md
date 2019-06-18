@@ -25,7 +25,8 @@ Use the Dynamics 365 App for Outlook to manage your Dynamics 365 data using Outl
    > [!div class="mx-imgBorder"] 
    > ![Dynamics 365 App for Outlook](media/outlookapp.png "Dynamics 365 App for Outlook")
 
-## What Dynamics 365 App for Outlook offers  
+## What Dynamics 365 App for Outlook offers?
+
 With Dynamics 365 App for Outlook, you can:  
   
 - View information about Common Data Service contacts and accounts while you’re working in Outlook. You can view this info in the context of an email message, meeting, or appointment. For example, view phone numbers, company name, last and next activities, and recent records. 
@@ -40,11 +41,10 @@ With Dynamics 365 App for Outlook, you can:
   
 - Track Outlook contacts in Common Data Service.  
 
-For information on using Dynamics 365 App for Outlook, see the following Customer Engagement documentation:
-
-- Using the app:  [Dynamics 365 App for Outlook User Guide](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/outlook-app/dynamics-365-app-outlook-user-s-guide)
+For information on using Dynamics 365 App for Outlook, see the following Customer Engagement documentation: [Dynamics 365 App for Outlook User Guide](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/outlook-app/dynamics-365-app-outlook-user-s-guide)
 
 ### See also
- [Customize Dynamics 365 App for Outlook](../maker/model-driven-apps/app-for-outlook-customize.md)  
+
+[Customize Dynamics 365 App for Outlook](../maker/model-driven-apps/app-for-outlook-customize.md)  
 
 
