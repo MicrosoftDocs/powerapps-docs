@@ -44,4 +44,7 @@ For information on using Dynamics 365 App for Outlook, see the following Custome
 
 - Using the app:  [Dynamics 365 App for Outlook User Guide](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/outlook-app/dynamics-365-app-outlook-user-s-guide)
 
+### See also
+ [Customize Dynamics 365 App for Outlook](../maker/model-driven-apps/app-for-outlook-customize.md)  
+
 
