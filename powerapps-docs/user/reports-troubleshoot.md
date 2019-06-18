@@ -37,4 +37,4 @@ There are several possible reasons why data that you expect to be in a report do
  
 
 ### See Also
-[Use reports](/work-with-reports.md)
+[Use reports](/user/work-with-reports.md)
