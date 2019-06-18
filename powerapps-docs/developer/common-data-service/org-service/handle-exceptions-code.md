@@ -2,7 +2,7 @@
 title: "Handle exceptions in your code (Common Data Service) | Microsoft Docs"
 description: "This article discusses the exceptions that are returned from a Dynamics 365 Customer Engagement web service method call. The sample in this article highlights the common faults and exceptions that your application design should handle."
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 06/17/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.topic: "article"
@@ -23,7 +23,7 @@ There are a number of exceptions that can be returned from a Common Data Service
 
 ## Common exceptions and faults  
 
- The following code is used in most Common Data Service Web Services samples. It highlights the common faults and exceptions that your application design should handle.  
+The following code is used in most Common Data Service Web Services samples. It highlights the common faults and exceptions that your application design should handle.  
   
 ```csharp
 catch (FaultException<Microsoft.Xrm.Sdk.OrganizationServiceFault> ex)
@@ -71,27 +71,23 @@ catch (System.Exception ex)
 > [!NOTE]
 >  If you’re accessing the Discovery web service, your code should catch <xref:Microsoft.Xrm.Sdk.DiscoveryServiceFault> instead of the <xref:Microsoft.Xrm.Sdk.OrganizationServiceFault> fault shown previously.  
   
- In addition to these exceptions and faults, your code must handle the following exceptions:  
+In addition to these exceptions and faults, your code must handle the following exceptions:  
   
--   [SecurityTokenValidationException](https://msdn.microsoft.com/library/system.identitymodel.tokens.securitytokenvalidationexception.aspx)  
+- [SecurityTokenValidationException](https://msdn.microsoft.com/library/system.identitymodel.tokens.securitytokenvalidationexception.aspx)  
+- [ExpiredSecurityTokenException](https://msdn.microsoft.com/library/system.servicemodel.security.expiredsecuritytokenexception.aspx)  
+- [SecurityAccessDeniedException](https://msdn.microsoft.com/library/system.servicemodel.security.securityaccessdeniedexception.aspx)  
+- [MessageSecurityException](https://msdn.microsoft.com/library/system.servicemodel.security.messagesecurityexception.aspx)  
+- [SecurityNegotiationException](https://msdn.microsoft.com/library/system.servicemodel.security.securitynegotiationexception.aspx)  
   
--   [ExpiredSecurityTokenException](https://msdn.microsoft.com/library/system.servicemodel.security.expiredsecuritytokenexception.aspx)  
-  
--   [SecurityAccessDeniedException](https://msdn.microsoft.com/library/system.servicemodel.security.securityaccessdeniedexception.aspx)  
-  
--   [MessageSecurityException](https://msdn.microsoft.com/library/system.servicemodel.security.messagesecurityexception.aspx)  
-  
--   [SecurityNegotiationException](https://msdn.microsoft.com/library/system.servicemodel.security.securitynegotiationexception.aspx)  
-  
- When connecting to Common Data Service, a `SecurityAccessDeniedException` exception can be thrown if you use a valid Microsoft account and your account is not associated with any Common Data Service organization. A `MessageSecurityException` can be thrown if your Microsoft account isn’t valid or there was an authentication failure.  
+When connecting to Common Data Service, a `SecurityAccessDeniedException` exception can be thrown if you use a valid Microsoft account and your account is not associated with any Common Data Service organization. A `MessageSecurityException` can be thrown if your Microsoft account isn’t valid or there was an authentication failure.  
   
 <a name="BKMK_BusinessRuleErrors"></a>
 
 ## Custom errors from business rules
  
- With Common Data Service, customizers can create business rules that are evaluated on the server. Customizers can throw error messages based on conditions set in the business rule. Developers should be sure to include robust error handling in their code to catch and handle these exceptions.  
+With Common Data Service, customizers can create business rules that are evaluated on the server. Customizers can throw error messages based on conditions set in the business rule. Developers should be sure to include robust error handling in their code to catch and handle these exceptions.  
   
- The following is an example of the trace log produced when one of these errors is returned from a business rule named **Name of Entity Scope Business Rule returning Error** and the error message is **custom error message**.  
+The following is an example of the trace log produced when one of these errors is returned from a business rule named **Name of Entity Scope Business Rule returning Error** and the error message is **custom error message**.  
   
 ```csharp
 Unhandled Exception: System.ServiceModel.FaultException`1[[Microsoft.Xrm.Sdk.OrganizationServiceFault, Microsoft.Xrm.Sdk, Version=7.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35]]: custom error messageDetail:   
@@ -123,15 +119,16 @@ Sync workflow 'Name of Entity Scope Business Rule returning Error' terminated wi
 </OrganizationServiceFault>  
 ```  
   
- More information: [Create and edit Business Rules](https://technet.microsoft.com/library/dn531086.aspx).  
+More information: [Create and edit Business Rules](https://technet.microsoft.com/library/dn531086.aspx).  
   
-<a name="BKMK_AdditionalInfo"></a>   
-## Additional information about exceptions  
- When an uncaught exception is thrown that contains sensitive information that the user doesn’t have permission to see, the sensitive information in the exception is hidden from the user and a reference number is provided. This reference number refers to the related server event log entry and server trace entry. A system administrator can look up those entries and find more information about the exception.  
+<a name="BKMK_AdditionalInfo"></a>
+
+## Additional information about exceptions
+
+When an uncaught exception is thrown that contains sensitive information that the user doesn’t have permission to see, the sensitive information in the exception is hidden from the user and a reference number is provided. This reference number refers to the related server event log entry and server trace entry. A system administrator can look up those entries and find more information about the exception.  
   
 ### See also  
- [Troubleshooting and error handling](/dynamics365/customer-engagement/developer/troubleshooting-error-handling)   
- [Troubleshooting tips](/dynamics365/customer-engagement/developer/troubleshooting-tips)   
+
  [Web service error codes](web-service-error-codes.md)   
  [Handle exceptions in plug-ins](../handle-exceptions.md)   
  [.NET Framework Developer Center](https://docs.microsoft.com/dotnet/framework/development-guide)
