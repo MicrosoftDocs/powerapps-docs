@@ -26,7 +26,7 @@ Reports help you manage your progress towards your business goals by helping you
 
 For more information on organizing and creating reports, see: [Customize and organize reports](../customize/customize-organize-reports.md) and [Introduction to reporting & analytics](../analytics/reporting-analytics-with-dynamics-365.md)
   
-## To run a report  
+## Run a report  
   
 1. From the site map,  Go to **Reports**.  
 2. Choose the report you want > **Run Report**.  
@@ -38,7 +38,7 @@ For more information on organizing and creating reports, see: [Customize and org
  > ![Run a report](media/report-run.png "Run a report")
  
   
-## Share the report with other users or teams    
+## Share a report with other users or teams    
 
 1. From the site map, go to **Reports**.  
 2. In the list of reports, select the report you want to share.  
@@ -64,7 +64,7 @@ For more information on organizing and creating reports, see: [Customize and org
  > ![Choose share access](media/report-share3.png "Choose share access")
   
 
-## Share the report with your organization  
+## Share a report with your organization  
  If the report would be useful for all users, make it available to the organization.  
 
 1. From the site map, go to **Reports**. 
