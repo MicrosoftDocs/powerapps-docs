@@ -23,7 +23,7 @@ search.app:
 
 Customize the Dynamics 365 App for Outlook to best suit your organization needs. 
 
-For detailed information on how to customize App for Outlook, see the following Customer Engagement documentation:
+For detailed information on how to customize the App for Outlook, see the following Customer Engagement documentation:
 
 - Customize the app:  [Customizing App for Outlook](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/outlook-app/customizing-the-app)
 
