@@ -19,7 +19,7 @@ search.app:
 ---
 # Use Dynamics 365 App for Outlook
 
-Use the Dynamics 365 App for Outlook to manage your Dynamics 365 data using Outlook on the desktop, web, or phone. When Dynamics 365 App for Outlook is installed, depending on which version of the app you have installed, you'll see a Customer Engagement pane or window next to a selected Outlook email message, or when you're composing an email message or setting up a meeting or appointment.
+Use the Dynamics 365 App for Outlook to manage your Dynamics 365 data using Outlook on the desktop, web, or phone. When Dynamics 365 App for Outlook is installed, depending on which version of the app you have installed, you'll see a Common Data Service pane or window next to a selected Outlook email message, or when you're composing an email message or setting up a meeting or appointment.
 
 
    > [!div class="mx-imgBorder"] 
