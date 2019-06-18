@@ -110,7 +110,7 @@ In the following example, with the following data, the average for Account 1 (tw
 
 ## Count
 
-The following example shows how to use the `count``aggregate` attribute.  
+The following example shows how to use the `count` `aggregate` attribute.  
   
  ```csharp
 // *****************************************************************************************************************
@@ -139,7 +139,7 @@ foreach (var c in opportunity_count_result.Entities)
 
 ### CountColumn
 
-The following example shows how to use the `countcolumn``aggregate` attribute to count columns.  
+The following example shows how to use the `countcolumn` `aggregate` attribute to count columns.  
   
  ```csharp
 // *****************************************************************************************************************
@@ -168,7 +168,7 @@ foreach (var c in opportunity_colcount_result.Entities)
  
 ### Count distinct columns
 
-The following example shows how to use the `countcolumn``aggregate` attribute with the `distinct` attribute to count distinct columns.  
+The following example shows how to use the `countcolumn` `aggregate` attribute with the `distinct` attribute to count distinct columns.  
   
  ```csharp
 // *****************************************************************************************************************
@@ -199,27 +199,27 @@ foreach (var c in opportunity_distcount_result.Entities)
 
 **Null** values are not considered when Common Data Service computes the maximum of data. However, zero (0) is used.  
   
-The following example shows how to use the `max``aggregate` attribute.  
+The following example shows how to use the `max` `aggregate` attribute.  
   
  ```csharp
 // *****************************************************************************************************************
-//                FetchXML      opportunity_distcount   Aggregate 4
+//                FetchXML      estimatedvalue_max   Aggregate 5
 // *****************************************************************************************************************
-// Fetch the count of distinct names for opportunities.  This is the equivalent of 
-// SELECT COUNT(DISTINCT name) AS opportunity_count ... in SQL.
-string opportunity_distcount = @" 
+// Fetch the maximum estimatedvalue of all opportunities.  This is the equivalent of 
+// SELECT MAX(estimatedvalue) AS estimatedvalue_max ... in SQL.
+string estimatedvalue_max = @" 
 <fetch distinct='false' mapping='logical' aggregate='true'> 
     <entity name='opportunity'> 
-       <attribute name='name' alias='opportunity_distcount' aggregate='countcolumn' distinct='true'/> 
+        <attribute name='estimatedvalue' alias='estimatedvalue_max' aggregate='max' /> 
     </entity> 
 </fetch>";
 
-EntityCollection opportunity_distcount_result = _serviceProxy.RetrieveMultiple(new FetchExpression(opportunity_distcount));
+EntityCollection estimatedvalue_max_result = service.RetrieveMultiple(new FetchExpression(estimatedvalue_max));
 
-foreach (var c in opportunity_distcount_result.Entities)
+foreach (var c in estimatedvalue_max_result.Entities)
 {
-    Int32 aggregate4 = (Int32)((AliasedValue)c["opportunity_distcount"]).Value;
-    System.Console.WriteLine("Distinct name count of all opportunities: " + aggregate4);
+    decimal aggregate5 = ((Money)((AliasedValue)c["estimatedvalue_max"]).Value).Value;
+    Console.WriteLine("Max estimated value of all opportunities: " + aggregate5);
 
 }
 ```
