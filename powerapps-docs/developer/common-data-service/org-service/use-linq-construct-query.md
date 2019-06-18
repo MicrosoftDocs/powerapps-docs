@@ -149,8 +149,8 @@ select new Contact
 }
  ```
 ### See also  
- [Sample: Create a LINQ Query](/dynamics365/customer-engagement/developer/org-service/sample-create-linq-query.md)   
- [Sample: LINQ Query Examples](/dynamics365/customer-engagement/developer/org-service/sample-complex-linq-queries.md)   
- [Build Queries with LINQ (.NET Language-Integrated Query)](/dynamics365/customer-engagement/developer/org-service/build-queries-with-linq-net-language-integrated-query.md)   
- [Use Late-Bound Entity Class with a LINQ Query](/dynamics365/customer-engagement/developer/org-service/use-late-bound-entity-class-linq-query.md)   
+ [Sample: Create a LINQ Query](/dynamics365/customer-engagement/developer/org-service/sample-create-linq-query)   
+ [Sample: LINQ Query Examples](/dynamics365/customer-engagement/developer/org-service/sample-complex-linq-queries)   
+ [Build Queries with LINQ (.NET Language-Integrated Query)](/dynamics365/customer-engagement/developer/org-service/build-queries-with-linq-net-language-integrated-query)   
+ [Use Late-Bound Entity Class with a LINQ Query](/dynamics365/customer-engagement/developer/org-service/use-late-bound-entity-class-linq-query)   
  [Blog: LINQPad 4 Driver for Dynamics CRM REST/Web API are available on CodePlex](http://blogs.msdn.com/b/crminthefield/archive/2015/06/11/linqpad-4-driver-for-dynamics-crm-rest-webapi-are-available-on-codeplex.aspx)
