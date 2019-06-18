@@ -90,4 +90,54 @@ If you encounter this error you can:
 
 ## Error: The given key was not present in the dictionary
 
-Common Data Service frequently uses classes derived from the <xref:Microsoft.Xrm.Sdk.DataCollection`2> class that represents a collection or keys and values. For example, in plug-ins the  <xref:Microsoft.Xrm.Sdk.IExecutionContext.InputParameters> property is a <xref:Microsoft.Xrm.Sdk.ParameterCollection> derived from the <xref:Microsoft.Xrm.Sdk.DataCollection`2> class
+Common Data Service frequently uses classes derived from the abstract <xref:Microsoft.Xrm.Sdk.DataCollection`2> class that represents a collection of keys and values. For example, with plug-ins the  <xref:Microsoft.Xrm.Sdk.IExecutionContext>.<xref:Microsoft.Xrm.Sdk.IExecutionContext.InputParameters> property is a <xref:Microsoft.Xrm.Sdk.ParameterCollection> derived from the <xref:Microsoft.Xrm.Sdk.DataCollection`2> class. These classes are essentially dictionary objects where you access a specific value using the key name.
+
+### Error codes
+
+This error occurs when the key value in code doesn't exist in the collection. This is a run-time error rather a platform error. When this error occurs within a plug-in, the error code will depend on whether the error was caught.
+
+If the developer caught the exception and returned an <xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException> as described in [Handle exceptions in plug-ins](handle-exceptions.md), the following error will be returned:
+
+Error Code: `-2147220891`<br />
+Error Message: `ISV code aborted the operation.`
+
+However, with this error it is common that the developer doesn't catch it properly and the following error will be returned:
+
+Error Code: `-2147220956`<br />
+Error Message: `An unexpected error occurred from ISV code.`
+
+### Causes
+
+This error frequently occurs at design time and can be due to a misspelling or using the incorrect casing. The key values are case sensitive.
+
+At run-time the error is frequently due to the developer assuming that the value will be present when it isn't. For example, in a plug-in that is registered for the update of an entity, only those values which are changed will be included in the <xref:Microsoft.Xrm.Sdk.Entity>.<xref:Microsoft.Xrm.Sdk.Entity.Attributes> collection.
+
+
+### Prevention
+
+To prevent this error you must check that the key exists before attempting to use it to access a value. 
+
+For example, when accessing an entity attribute, you can use the <xref:Microsoft.Xrm.Sdk.Entity>.<xref:Microsoft.Xrm.Sdk.Entity.Contains> method to check whether an attribute exists in an entity as shown in the following code.
+
+```csharp
+// Obtain the execution context from the service provider.  
+IPluginExecutionContext context = (IPluginExecutionContext)
+    serviceProvider.GetService(typeof(IPluginExecutionContext));
+
+// The InputParameters collection contains all the data passed in the message request.  
+if (context.InputParameters.Contains("Target") &&
+    context.InputParameters["Target"] is Entity)
+    {
+    // Obtain the target entity from the input parameters.  
+    Entity entity = (Entity)context.InputParameters["Target"];
+
+    //Check whether the name attribute exists.
+    if(entity.Contains("name"))
+    {
+        string name = entity["name"];
+    }
+```
+
+You could also use the <xref:Microsoft.Xrm.Sdk.Entity>.<xref:Microsoft.Xrm.Sdk.Entity.Attributes>.<xref:Microsoft.Xrm.Sdk.Entity.Attributes.Contains> method.
+
+Some developers use the <xref:Microsoft.Xrm.Sdk.Entity>.<xref:Microsoft.Xrm.Sdk.Entity.GetAttributeValue``1> method to avoid this error, but be aware that this method will return the default value of the type if the attribute doesn't exist. If the default value is null, this works as expected. But if the default value doesn't return null, such as with a `DateTime`, the value returned will be `1/1/0001 00:00` rather than null.
