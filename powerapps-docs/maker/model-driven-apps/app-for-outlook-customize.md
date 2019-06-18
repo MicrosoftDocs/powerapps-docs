@@ -28,4 +28,8 @@ For detailed information on how to customize App for Outlook, see the following 
 - Customize the app:  [Customizing App for Outlook](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/outlook-app/customizing-the-app)
 
 > [!NOTE]
-> Before you can customize a model-driven app, you must deploy it in your enviroment. Fore more inforation see
+> Before you can customize a model-driven app, you must deploy it in your enviroment. Fore more inforation see, [Deploy Dynamics 365 App for Outlook](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/outlook-app/deploy-dynamics-365-app-for-outlook).
+
+
+### See also
+ [Use Dynamics 365 App for Outlook](../user/use-outlook-app.md)  
