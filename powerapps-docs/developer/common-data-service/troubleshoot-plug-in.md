@@ -112,7 +112,6 @@ This error frequently occurs at design time and can be due to a misspelling or u
 
 At run-time the error is frequently due to the developer assuming that the value will be present when it isn't. For example, in a plug-in that is registered for the update of an entity, only those values which are changed will be included in the <xref:Microsoft.Xrm.Sdk.Entity>.<xref:Microsoft.Xrm.Sdk.Entity.Attributes> collection.
 
-
 ### Prevention
 
 To prevent this error you must check that the key exists before attempting to use it to access a value. 
@@ -138,6 +137,4 @@ if (context.InputParameters.Contains("Target") &&
     }
 ```
 
-You could also use the <xref:Microsoft.Xrm.Sdk.Entity>.<xref:Microsoft.Xrm.Sdk.Entity.Attributes>.<xref:Microsoft.Xrm.Sdk.Entity.Attributes.Contains(System.String)> method.
-
-Some developers use the <xref:Microsoft.Xrm.Sdk.Entity>.<xref:Microsoft.Xrm.Sdk.Entity.GetAttributeValue``1(System.String)> method to avoid this error, but be aware that this method will return the default value of the type if the attribute doesn't exist. If the default value is null, this works as expected. But if the default value doesn't return null, such as with a `DateTime`, the value returned will be `1/1/0001 00:00` rather than null.
+Some developers use the <xref:Microsoft.Xrm.Sdk.Entity>.<xref:Microsoft.Xrm.Sdk.Entity.GetAttributeValue``1(System.String)> method to avoid this error when accessing entity attributes, but be aware that this method will return the default value of the type if the attribute doesn't exist. If the default value is null, this works as expected. But if the default value doesn't return null, such as with a `DateTime`, the value returned will be `1/1/0001 00:00` rather than null.
