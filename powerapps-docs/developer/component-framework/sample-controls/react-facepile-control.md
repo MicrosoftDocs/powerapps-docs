@@ -2,11 +2,13 @@
 title: "React Facepile component| Microsoft Docs" 
 description: "Implementing a Facepile component using React" 
 ms.custom: ""
+author: ghurlman
 manager: kvivek
 ms.date: 04/23/2019
 ms.service: "powerapps"
 ms.topic: "article"
-ms.author: "grhurl" 
+ms.author: "grhurl"
+ms.reviewer: nkrb
 ---
 
 # Implementing the FacePile component
