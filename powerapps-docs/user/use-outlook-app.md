@@ -42,7 +42,7 @@ With Dynamics 365 App for Outlook, you can:
   
 - Track Outlook contacts in Common Data Service.  
 
-For information on using Dynamics 365 App for Outlook, see the following Customer Engagement documentation: [Dynamics 365 App for Outlook User Guide](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/outlook-app/dynamics-365-app-outlook-user-s-guide)
+For information on using Dynamics 365 App for Outlook, see [Dynamics 365 App for Outlook User Guide](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/outlook-app/dynamics-365-app-outlook-user-s-guide)
 
 ### See also
 
