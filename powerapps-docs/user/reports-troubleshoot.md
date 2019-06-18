@@ -1,5 +1,5 @@
 ---
-title:Troubleshoot problems with data not displaying in a report | Microsoft Docs
+title: Troubleshoot problems with data not displaying in a report| Microsoft Docs
 description: Troubleshoot problems with data not displaying in a report
 author: mduelae
 manager: kvivek
