@@ -2,7 +2,7 @@
 title: "Use FetchXML aggregation (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Read about the grouping and aggregation features of FetchXML that let you calculate sum, average min, max and count" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 06/18/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.topic: "article"
@@ -22,25 +22,20 @@ In Common Data Service, `FetchXML` includes grouping and aggregation features th
   
  The following aggregate functions are supported:  
   
--   sum  
-  
--   avg  
-  
--   min  
-  
--   max  
-  
--   count(*)  
-  
--   count(*attribute name*)  
+- sum  
+- avg  
+- min  
+- max  
+- count(*)  
+- count(*attribute name*)
   
 <a name="Aggregation"></a>
 
 ## About aggregation
  
- To create an aggregate attribute, set the keyword `aggregate` to `true`, then specify a valid *entity name*, *attribute name*, and *alias* (variable name). You must also specify the type of aggregation you want to perform.  
+To create an aggregate attribute, set the keyword `aggregate` to `true`, then specify a valid *entity name*, *attribute name*, and *alias* (variable name). You must also specify the type of aggregation you want to perform.  
   
- The following example shows a simple aggregate attribute in `FetchXML`.  
+The following example shows a simple aggregate attribute in `FetchXML`.  
   
 ```xml  
 <fetch distinct='false' mapping='logical' aggregate='true'>   
@@ -50,9 +45,9 @@ In Common Data Service, `FetchXML` includes grouping and aggregation features th
 </fetch>
 ```  
   
- The result of a query with an aggregate attribute is different from the results of a standard query. The alias value is used as the tag identifier for the aggregate result.  
+The result of a query with an aggregate attribute is different from the results of a standard query. The alias value is used as the tag identifier for the aggregate result.  
   
- The following example shows the format of the result of an aggregate query.  
+The following example shows the format of the result of an aggregate query.  
   
 ```xml
 <resultset morerecords="0"'>   
@@ -62,7 +57,7 @@ In Common Data Service, `FetchXML` includes grouping and aggregation features th
 </resultset>
 ```  
   
- The following example shows the results of a query when the alias variable is set to `account_count`.  
+The following example shows the results of a query when the alias variable is set to `account_count`.  
   
 ```xml
 <resultset morerecords="0"'>   
@@ -76,12 +71,11 @@ In Common Data Service, `FetchXML` includes grouping and aggregation features th
 
 ## Avg
 
- The following example shows how to use the `avg``aggregate` attribute.  
+ The following example shows how to use the `avg` `aggregate` attribute.  
   
  ```csharp
 // Fetch the average of estimatedvalue for all opportunities.  This is the equivalent of 
 // SELECT AVG(estimatedvalue) AS estimatedvalue_avg ... in SQL.
-System.Console.WriteLine("===============================");
 string estimatedvalue_avg = @" 
 <fetch distinct='false' mapping='logical' aggregate='true'> 
     <entity name='opportunity'> 
@@ -97,13 +91,13 @@ foreach (var c in estimatedvalue_avg_result.Entities)
     System.Console.WriteLine("Average estimated value: " + aggregate1);
 
 }
-System.Console.WriteLine("===============================");
 ```
   
-### Limitation with null values while computing average  
- **Null** values are not considered when Common Data Service computes the average of data. However, zero (0) is used.  
+### Limitation with null values while computing average
+
+**Null** values are not considered when Common Data Service computes the average of data. However, zero (0) is used.  
   
- In the following example, with the following data, the average for Account 1 (two entries) is shown as 250 whereas the average for Account 2 (two entries) is shown as 125.  
+In the following example, with the following data, the average for Account 1 (two entries) is shown as 250 whereas the average for Account 2 (two entries) is shown as 125.  
   
 |Topic|Potential Customer|Estimated value|  
 |-----|------------------|---------------|  
@@ -116,7 +110,7 @@ System.Console.WriteLine("===============================");
 
 ## Count
 
- The following example shows how to use the `count``aggregate` attribute.  
+The following example shows how to use the `count``aggregate` attribute.  
   
  ```csharp
 // *****************************************************************************************************************
@@ -139,14 +133,13 @@ foreach (var c in opportunity_count_result.Entities)
     System.Console.WriteLine("Count of all opportunities: " + aggregate2); 
 
 }
-System.Console.WriteLine("===============================");
 ```
   
 <a name="count_column"></a>
 
 ### CountColumn
 
- The following example shows how to use the `countcolumn``aggregate` attribute to count columns.  
+The following example shows how to use the `countcolumn``aggregate` attribute to count columns.  
   
  ```csharp
 // *****************************************************************************************************************
@@ -169,14 +162,13 @@ foreach (var c in opportunity_colcount_result.Entities)
     System.Console.WriteLine("Column count of all opportunities: " + aggregate3);
 
 }
-System.Console.WriteLine("===============================");
 ```
   
 <a name="count_distinct"></a>
  
 ### Count distinct columns
 
- The following example shows how to use the `countcolumn``aggregate` attribute with the `distinct` attribute to count distinct columns.  
+The following example shows how to use the `countcolumn``aggregate` attribute with the `distinct` attribute to count distinct columns.  
   
  ```csharp
 // *****************************************************************************************************************
@@ -199,16 +191,15 @@ foreach (var c in opportunity_distcount_result.Entities)
     System.Console.WriteLine("Distinct name count of all opportunities: " + aggregate4);
 
 }
-System.Console.WriteLine("===============================");
 ```
   
 <a name="max"></a>
 
 ## Max
 
- **Null** values are not considered when Common Data Service computes the maximum of data. However, zero (0) is used.  
+**Null** values are not considered when Common Data Service computes the maximum of data. However, zero (0) is used.  
   
- The following example shows how to use the `max``aggregate` attribute.  
+The following example shows how to use the `max``aggregate` attribute.  
   
  ```csharp
 // *****************************************************************************************************************
@@ -231,16 +222,15 @@ foreach (var c in opportunity_distcount_result.Entities)
     System.Console.WriteLine("Distinct name count of all opportunities: " + aggregate4);
 
 }
-System.Console.WriteLine("===============================");
 ```
   
 <a name="min"></a>
  
 ## Min
 
- **Null** values are not considered when Common Data Service computes the minimum of data. However, zero (0) is used.  
+**Null** values are not considered when Common Data Service computes the minimum of data. However, zero (0) is used.  
   
- The following example shows how to use the `min``aggregate` attribute.  
+The following example shows how to use the `min``aggregate` attribute.  
   
  ```csharp
 // *****************************************************************************************************************
@@ -263,14 +253,13 @@ foreach (var c in estimatedvalue_min_result.Entities)
     System.Console.WriteLine("Minimum estimated value of all opportunities: " + aggregate6);
 
 }
-System.Console.WriteLine("===============================");
 ```
   
 <a name="sum"></a>
 
 ## Sum
 
- The following example shows how to use the `sum``aggregate` attribute.  
+The following example shows how to use the `sum``aggregate` attribute.  
   
  ```csharp
 // *****************************************************************************************************************
@@ -293,14 +282,13 @@ foreach (var c in estimatedvalue_sum_result.Entities)
     System.Console.WriteLine("Sum of estimated value of all opportunities: " + aggregate7);
 
 }
-System.Console.WriteLine("===============================");
 ```
   
 <a name="mult_agg"></a>
  
 ## Multiple aggregates
 
- The following example shows how to use multiple `aggregate` attributes to set a minimum and maximum.  
+The following example shows how to use multiple `aggregate` attributes to set a minimum and maximum.  
   
  ```csharp
 // *****************************************************************************************************************
@@ -328,14 +316,13 @@ foreach (var c in estimatedvalue_avg2_result.Entities)
     System.Console.WriteLine("Average of estimated value of all opportunities: " + aggregate8c);
 
 }
-System.Console.WriteLine("===============================");
 ```
   
 <a name="groupby"></a>
  
 ## Group by
 
- The following example shows how to use multiple `aggregate` attributes and a linked `groupby` attribute.  
+The following example shows how to use multiple `aggregate` attributes and a linked `groupby` attribute.  
   
  ```csharp
 // *****************************************************************************************************************
@@ -363,30 +350,23 @@ foreach (var c in groupby1_result.Entities)
     string aggregate9d = (string)((AliasedValue)c["ownerid_owneridyominame"]).Value;
     System.Console.WriteLine("Owner: " + aggregate9d);
 }
-System.Console.WriteLine("===============================");
 ```
   
- The samples below show the following group by examples:  
+The samples below show the following group by examples:  
   
- [Group by with linked entity](use-fetchxml-aggregation.md#groupby_linked)  
-  
- [Group by year](use-fetchxml-aggregation.md#groupby_year)  
-  
- [Group by quarter](use-fetchxml-aggregation.md#groupby_quarter)  
-  
- [Group by month](use-fetchxml-aggregation.md#groupby_month)  
-  
- [Group by week](use-fetchxml-aggregation.md#groupby_week)  
-  
- [Group by day](use-fetchxml-aggregation.md#groupby_day)  
-  
- [Multiple group by](use-fetchxml-aggregation.md#Multiple_GroupBy)  
+- [Group by with linked entity](use-fetchxml-aggregation.md#groupby_linked)
+- [Group by year](use-fetchxml-aggregation.md#groupby_year)
+- [Group by quarter](use-fetchxml-aggregation.md#groupby_quarter)
+- [Group by month](use-fetchxml-aggregation.md#groupby_month)
+- [Group by week](use-fetchxml-aggregation.md#groupby_week)  
+- [Group by day](use-fetchxml-aggregation.md#groupby_day)  
+- [Multiple group by](use-fetchxml-aggregation.md#Multiple_GroupBy)  
   
 <a name="groupby_linked"></a>
 
 ### Group by with linked entity
 
- The following example shows how to use the `sum``aggregate` attribute to sum linked entity values.  
+The following example shows how to use the `sum``aggregate` attribute to sum linked entity values.  
   
  ```csharp
 // *****************************************************************************************************************
@@ -412,14 +392,13 @@ foreach (var c in groupby2_result.Entities)
       int? aggregate10a = (int?)((AliasedValue)c["opportunity_count"]).Value;
       System.Console.WriteLine("Count of all opportunities: " + aggregate10a + "\n");
 }
-System.Console.WriteLine("===============================");
 ```
   
 <a name="groupby_year"></a>
 
 ### Group by year
 
- Group By for dates uses the day, week, month, quarter, or year value. The following example shows how to use the `aggregate` attribute and the `groupby` attribute to group the results by year.  
+Group By for dates uses the day, week, month, quarter, or year value. The following example shows how to use the `aggregate` attribute and the `groupby` attribute to group the results by year.  
   
  ```csharp
 
@@ -455,14 +434,13 @@ foreach (var c in byyear_result.Entities)
     System.Console.WriteLine("Average of estimated value of all opportunities: " + aggregate11c);
     System.Console.WriteLine("----------------------------------------------");
 }
-System.Console.WriteLine("===============================");
 ```
   
 <a name="groupby_quarter"></a>
  
 ### Group by quarter
 
- The following example shows how to use the `aggregate` attribute and the `groupby` attribute to group the results by quarter.  
+The following example shows how to use the `aggregate` attribute and the `groupby` attribute to group the results by quarter.  
   
  ```csharp
  // *****************************************************************************************************************
@@ -497,14 +475,13 @@ System.Console.WriteLine("===============================");
      System.Console.WriteLine("Average of estimated value of all opportunities: " + aggregate12c);
      System.Console.WriteLine("----------------------------------------------");
  }
- System.Console.WriteLine("===============================");
 ```
   
 <a name="groupby_month"></a>
 
 ### Group by month
 
- The following example shows how to use the `aggregate` attribute and the `groupby` attribute to group the results by month.  
+The following example shows how to use the `aggregate` attribute and the `groupby` attribute to group the results by month.  
   
 ```csharp
 // *****************************************************************************************************************
@@ -539,13 +516,13 @@ foreach (var c in bymonth_result.Entities)
     System.Console.WriteLine("Average of estimated value of all opportunities: " + aggregate13c);
     System.Console.WriteLine("----------------------------------------------");
 }
-System.Console.WriteLine("===============================");
 ``` 
+
 <a name="groupby_week"></a>
 
 ### Group by week
 
- The following example shows how to use the `aggregate` attribute and the `groupby` attribute to group the results by week.  
+The following example shows how to use the `aggregate` attribute and the `groupby` attribute to group the results by week.  
   
  ```csharp
 // *****************************************************************************************************************
@@ -580,7 +557,6 @@ foreach (var c in byweek_result.Entities)
     System.Console.WriteLine("Average of estimated value of all opportunities: " + aggregate14c);
     System.Console.WriteLine("----------------------------------------------");
 }
-System.Console.WriteLine("===============================");
 ```
   
 <a name="groupby_day"></a>
@@ -622,14 +598,13 @@ foreach (var c in byday_result.Entities)
     System.Console.WriteLine("Average of estimated value of all opportunities: " + aggregate15c);
     System.Console.WriteLine("----------------------------------------------");
 }
-System.Console.WriteLine("===============================");
 ```
   
 <a name="Multiple_GroupBy"></a>
  
 ### Multiple group by
 
- The following example shows how to use the `aggregate` attribute and multiple `groupby` clauses.  
+The following example shows how to use the `aggregate` attribute and multiple `groupby` clauses.  
   
  ```csharp
 // *****************************************************************************************************************
@@ -667,14 +642,13 @@ foreach (var c in byyrqtr_result.Entities)
     System.Console.WriteLine("Average of estimated value of all opportunities: " + aggregate16c);
     System.Console.WriteLine("----------------------------------------------");
 }
-System.Console.WriteLine("===============================");
 ```
   
 <a name="orderby_aggregate"></a>
 
 ## Order by
 
- The following example shows how to use the `aggregate` attribute and multiple `orderby` clauses.  
+The following example shows how to use the `aggregate` attribute and multiple `orderby` clauses.  
   
  ```csharp
 // *****************************************************************************************************************
@@ -713,13 +687,12 @@ foreach (var c in byyrqtr2_result.Entities)
     System.Console.WriteLine("Average of estimated value of all opportunities: " + aggregate17c);
     System.Console.WriteLine("----------------------------------------------");
 }
-System.Console.WriteLine("===============================");
 ```
   
-### See also  
- [Build Queries with FetchXML](/dynamics365/customer-engagement/developer/build-queries-fetchxml)   
- [Page Large Result Sets with FetchXML](org-service/page-large-result-sets-with-fetchxml.md)   
- [Fetch XML Schema](fetchxml-schema.md)   
- <xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>   
- <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest>   
- <xref:Microsoft.Xrm.Sdk.Query.FetchExpression>
+### See also
+
+[Page Large Result Sets with FetchXML](org-service/page-large-result-sets-with-fetchxml.md)<br />
+[Fetch XML Schema](fetchxml-schema.md)<br />
+<xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*><br />
+<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest><br />
+<xref:Microsoft.Xrm.Sdk.Query.FetchExpression>
