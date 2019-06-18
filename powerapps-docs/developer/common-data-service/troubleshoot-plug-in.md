@@ -73,7 +73,7 @@ TODO: Add content that shows how to do this -->
 
 ## Error: Message size exceeded when sending context to Sandbox
 
-<!-- This is the error code for an unexpected error we should be providing a specific error code -->
+<!-- This is the error code for an unexpected error we should be providing a specific error code. Bug 1470173 is tracking this. -->
 Error Code: `-2147220970`<br />
 Error Message: `Message size exceeded when sending context to Sandbox. Message size: ### Mb`
 
@@ -87,3 +87,7 @@ If you encounter this error you can:
 
 1.	Remove the plug-in for the message. If there are no plug-ins registered for the message, the operation will complete without an error.
 2.	If the error is occurring in a custom client, you can modify your code so that it doesn't attempt to perform the work in a single operation. Instead, write code to retrieve the data in smaller parts.
+
+## Error: The given key was not present in the dictionary
+
+Common Data Service frequently uses classes derived from the <xref:Microsoft.Xrm.Sdk.DataCollection`2> class that represents a collection or keys and values. For example, in plug-ins the  <xref:Microsoft.Xrm.Sdk.IExecutionContext.InputParameters> property is a <xref:Microsoft.Xrm.Sdk.ParameterCollection> derived from the <xref:Microsoft.Xrm.Sdk.DataCollection`2> class
