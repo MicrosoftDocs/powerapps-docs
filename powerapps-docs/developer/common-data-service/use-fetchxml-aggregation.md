@@ -72,8 +72,8 @@ The following example shows the results of a query when the alias variable is se
 
 Queries that return aggregate values are limited to 50,000 records. This limit helps maintain system performance and reliability. If the filter criteria in your query includes more than 50,000 records you will get the following error:
 
-Error Code: `-2147164125`<br />
-Hexidecimal Error Code: `8004E023`<br />
+Error code: `-2147164125`<br />
+Hexadecimal error code: `8004E023`<br />
 Platform error message: `AggregateQueryRecordLimit exceeded. Cannot perform this operation.`<br />
 Client error message: The maximum record limit is exceeded. Reduce the number of records.<br />
 
