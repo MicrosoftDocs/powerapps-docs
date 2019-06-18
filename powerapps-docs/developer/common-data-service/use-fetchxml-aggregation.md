@@ -66,6 +66,7 @@ The following example shows the results of a query when the alias variable is se
    </result>  
 </resultset>
 ```  
+
 <a name="Limitations"></a>
 
 ## Limitations
