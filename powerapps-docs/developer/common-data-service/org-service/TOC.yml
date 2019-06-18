@@ -70,16 +70,16 @@
   items: # We may need a topic here about CRUD?
     - name: Build queries with LINQ (.NET language-integrated query)
       href: build-queries-with-linq-net-language-integrated-query.md
-    - name: LINQ query examples
-      href: linq-query-examples.md
+    - name: Use LINQ to construct a query
+      href: use-linq-construct-query.md
+    - name: Use late-bound entity class with a LINQ query
+      href: use-late-bound-entity-class-linq-query.md
     - name: Order results using entity attributes with LINQ
       href: order-results-entity-attributes-linq.md
     - name: Page large result sets with LINQ
       href: page-large-result-sets-linq.md
-    - name: Use late-bound entity class with a LINQ query
-      href: use-late-bound-entity-class-linq-query.md
-    - name: Use LINQ to construct a query
-      href: use-linq-construct-query.md
+    - name: LINQ query examples
+      href: linq-query-examples.md
 - name: Detect duplicate data
   href: detect-duplicate-data.md
 - name: Generate classes for early-bound programming
