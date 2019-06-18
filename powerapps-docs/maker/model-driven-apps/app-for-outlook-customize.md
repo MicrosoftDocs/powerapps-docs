@@ -5,7 +5,7 @@ keywords: outlook app; app for outlook; Dynamics 365
 author: mduelae
 ms.author: mkaur
 manager: kvivek
-ms.date: 06/19/2019
+ms.date: 06/18/2019
 ms.topic: article
 applies_to: 
   - Dynamics 365 (online)
