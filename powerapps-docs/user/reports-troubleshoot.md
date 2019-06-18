@@ -23,13 +23,13 @@ search.app:
 
 There are several possible reasons why data that you expect to be in a report does not appear:  
   
-- **Insufficient security permissions**. If you don't have permission in [!INCLUDE[pn_dynamics_crm](../includes/pn-dynamics-crm.md)] to view a record, it will not appear in the report.  
+- **Insufficient security permissions**. If you don't have permission to view a record, it will not appear in the report.  
   
 - **Data is not entered.** The person entering data may have left fields empty.  
   
-- **Data does not match the criteria for the report.** Many reports include a default filter that displays only active records, or you may have selected criteria that don’t have any matching record. Try changing the report filter. [!INCLUDE[proc_more_information](../includes/proc-more-information.md)] [Edit the default filter of a report](../basics/edit-default-filter-report.md)  
+- **Data does not match the criteria for the report.** Many reports include a default filter that displays only active records, or you may have selected criteria that don’t have any matching record. Try changing the report filter. For more information, see [Edit the default filter of a report](ADD LINK)  
   
-- **You may be viewing a cached copy of the report.** By default, data in [!INCLUDE[pn_dynamics_crm](../includes/pn-dynamics-crm.md)] reports is pulled from the database each time you run a report. However, your system administrator may have changed a report to run from the cache. If data you entered recently is not included in the report, you may have an older version of the report from the cache. To refresh the report, on the Report toolbar, click or tap the **Refresh** button ![Refresh button](../basics/media/htm-lviewer-grid-refresh.gif "Refresh button").  
+- **You may be viewing a cached copy of the report.** By default, data in Common Data Service reports is pulled from the database each time you run a report. However, your system administrator may have changed a report to run from the cache. If data you entered recently is not included in the report, you may have an older version of the report from the cache. To refresh the report, on the Report toolbar, click or tap the **Refresh** button.  
   
 - **You may not have permission to read records in a sub-report.** If you do not have permission to read record types that are included in a sub-report, you will get an error message saying that the sub-report could not be displayed.  
   
@@ -37,4 +37,4 @@ There are several possible reasons why data that you expect to be in a report do
  
 
 ### See Also
-[Run a report](../basics/run-report.md)
+[Use reports](/work-with-reports.md)
