@@ -18,58 +18,62 @@ search.app:
   - D365CE
   - D365CE
 ---
-# Use reports
+# Run a report
 
 [!INCLUDE[cc-applies-to-update-9-0-0](../includes/cc_applies_to_update_9_0_0.md)]
 
-Reports help you manage your progress towards your goals by helping you see how you’re doing. You can also track trends - which can give you an advantage over your competitors.  
-  
-For example it’s important for a sales team to know which product or service is selling and which is not doing so well. For a customer service team, it’s important to track the average time it takes to resolve an issue.  
+Reports help you manage your progress towards your business goals by helping you see how you’re doing. You can also track trends - which can give you an advantage over your competitors.  
 
 For more information on organizing and creating reports, see: [Customize and organize reports](../customize/customize-organize-reports.md) and [Introduction to reporting & analytics](../analytics/reporting-analytics-with-dynamics-365.md)
   
 ## To run a report  
   
-1. From the site map,  Go to **Reports**. 
- 
+1. From the site map,  Go to **Reports**.  
 2. Choose the report you want > **Run Report**.  
   
    > [!NOTE]
    >  In **Report Viewer** dialog box, you can leave the search criteria as is, or change it as needed.  
+   
+ > [!div class="mx-imgBorder"]
+ > ![Run a report](/media/report-run.png "Run a report")
   
-   ![Default reports in Dynamics 365 for Customer Engagement apps](../basics/media/default-reports.png "Default reports in Dynamics 365 for Customer Engagement apps")  
+## Share the report with other users or teams    
+
+1. From the site map, go to **Reports**.  
+2. In the list of reports, select the report you want to share.  
+3. On the command bar, select **Share**.
+
+ > [!div class="mx-imgBorder"]
+ > ![share a report](/media/report-share.png "share a report")
   
-## Share the report with other users or teams  
+4. On the **Share Report** dialog box, select **Add User/Team**.    
+5. In the **Look Up Records** dialog box, find the users or team record that you want to share the report with, and select the check box next to the record.
+
+ > [!div class="mx-imgBorder"]
+ > ![Select user to share a report](/media/report-share1.png "Select a user to share report")
+
+6. Choose **Select** to add the user or team record to the **Selected records** box and then select **Add**.
+
+ > [!div class="mx-imgBorder"]
+ > ![Add user to share a report](/media/report-share2.png "Add user to share report")
   
-<a name="Collapsed1"></a>   
-1. [!INCLUDE[proc_reports](../includes/proc-reports.md)]  
-  
-2. In the list of reports, select the report.  
-  
-   **If using the Dynamics 365 for Customer Engagement apps:**  
-  
-   1.  Click **More Commands**![More Commands button in Appointment Activity](../basics/media/more-commands-button.gif "More Commands button in Appointment Activity"), and then click **Share**.  
-  
-   2.  In the **Share Report dialog** box, click **Add User/Team**.  
-  
-   3.  In the **Look Up Records** dialog box, select the users or team you want to share the report with, and click **OK**.  
-  
-   4.  In the **Share Report dialog** box, select the type of share access that you want. The available permissions are: Read, Write, Delete, Append, Assign, or Share.  
+7. In the **Share Report** dialog box, select the type of share access that you want. The available permissions are: Read, Write, Delete, Append, Assign, or Share. This will add the user or team record to the **Selected records** box.
+
+ > [!div class="mx-imgBorder"]
+ > ![Choose share access](/media/report-share3.png "Choose share access")
   
 
 ## Share the report with your organization  
  If the report would be useful for all users, make it available to the organization.  
 
-1. Go to **Reports**.
-2. In the list of reports, select the report, and on the command bar, click **Edit**.  
-3. On the command bar, click **Edit**.  
-4. On the **Actions**![action](../basics/media/action-button.gif "action") menu, click **Make Report Available to Organization**.  
+1. From the site map, go to **Reports**. 
+2. In the list of reports, select the report you want to share.  
+3. On the command bar, select select **Edit**.  
+4. On the **Actions** menu, select **Make Report Available to Organization**.  
+  
+ > [!div class="mx-imgBorder"]
+ > ![Share report with org](/media/report-share4.png "Share report with org")
+
   
 
-
-
-## Privacy notice  
-[!INCLUDE[cc_privacy_crm_print](../includes/cc-privacy-crm-print.md)]
-  
-### See also  
 
