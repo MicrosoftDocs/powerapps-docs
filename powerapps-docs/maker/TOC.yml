@@ -410,7 +410,7 @@
           - name: CountRows
             href: ./canvas-apps/functions/function-table-counts.md
           - name: Data types
-            href: ./canvas-apps/functions/data-types.md	    
+            href: ./canvas-apps/functions/data-types.md
           - name: DataSourceInfo
             href: ./canvas-apps/functions/function-datasourceinfo.md
           - name: Date
@@ -485,6 +485,8 @@
             href: ./canvas-apps/functions/function-now-today-istoday.md
           - name: IsType
             href: ./canvas-apps/functions/function-astype-istype.md
+          - name: JSON
+            href: ./canvas-apps/functions/function-json.md
           - name: Language
             href: ./canvas-apps/functions/function-language.md
           - name: Last
@@ -663,6 +665,18 @@
             href: ./canvas-apps/functions/function-datetime-parts.md
       - name: Create an app in a solution
         href: ./canvas-apps/add-app-solution.md
+      - name: Create an app with relational data
+        items:
+          - name: Install the data
+            href: ./canvas-apps/northwind-install.md
+          - name: Overview of the canvas app
+            href: ./canvas-apps/northwind-orders-canvas-overview.md
+          - name: 1 - Create the order gallery
+            href: ./canvas-apps/northwind-orders-canvas-part1.md
+          - name: 2 - Create the summary form
+            href: ./canvas-apps/northwind-orders-canvas-part2.md
+          - name: 3 - Create the detail gallery
+            href: ./canvas-apps/northwind-orders-canvas-part3.md
       - name: Build a global app
         href: ./canvas-apps/global-apps.md
       - name: Make an app accessible
@@ -1146,6 +1160,10 @@
   - name: For developers
     href: ../developer/common-data-service/overview.md
     # href: ../developer/common-data-service/TOC.yml  changing this to have developer TOC rather than buried in maker toc
+- name: AI Builder
+  items:
+  - name: Use AI Builder in PowerApps
+    href: ../use-ai-builder.md
 - name: Learn from others
   items:
   - name: Webinars

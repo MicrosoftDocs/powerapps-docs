@@ -12,7 +12,7 @@ ms.author: "nabuthuk"
 
 [!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
 
-The Web API component is designed to perform create, retrieve, update and delete functions. The component renders four buttons, which can be clicked to invoke different Web API actions. The result of the Web API call is injected into a HTML div element at the bottom of the custom component.  
+The Web API component is designed to perform create, retrieve, update and delete actions. The component renders four buttons, which can be clicked to invoke different Web API actions. The result of the Web API call is injected into a HTML div element at the bottom of the custom component.  
 
 > [!div class="mx-imgBorder"]
 > ![Web API component](../media/web-api-control.png "Web API component")
