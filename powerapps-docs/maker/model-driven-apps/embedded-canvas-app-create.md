@@ -34,7 +34,7 @@ Imagine that you want to add an embedded canvas app on a main form for the Accou
 
 > [!NOTE] Support to add an embedded canvas apps to model-driven forms using the new form designer will be provided in the future.
 > For now, use the classic form designer to add an embedded canvas app on a model-driven form.
-     
+
 4.	In the classic form designer, select the section on the form where you want the embedded canvas app to appear.
 5.	Using the field explorer pane, add a required field, such as **Account Name**.
       > [!IMPORTANT]
