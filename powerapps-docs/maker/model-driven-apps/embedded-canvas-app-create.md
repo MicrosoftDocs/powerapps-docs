@@ -1,5 +1,5 @@
 ---
-title: "Add an embedded canvas app on a model-driven form | MicrosoftDocs"
+title: "Create and add an embedded canvas app on a model-driven form | MicrosoftDocs"
 ms.custom: ""
 ms.date: 06/19/2019
 ms.reviewer: ""
@@ -23,15 +23,15 @@ search.app:
   - D365CE
 ---
 
-# Add an embedded canvas app on a model-driven form
-This topic explains how to add an embedded canvas app on a model-driven form.
+# Create and add an embedded canvas app on a model-driven form
+This topic explains how to create and add an embedded canvas app on a model-driven form.
 
 Imagine that you want to add an embedded canvas app on an account main form. To do this, follow these steps: 
 
 1.	Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 2.  [Create or edit the main form](create-and-edit-forms.md) of an entity, Accounts entity in our example. 
 3.  In the command bar, select **Switch to classic** to open the form in the classic form designer.
-	   > [!NOTE] Support to add an embedded canvas apps to model-driven forms using the new form designer will be provided in the future.
+	> [!NOTE] Support to add an embedded canvas apps to model-driven forms using the new form designer will be provided in the future.
      > For now, use the classic form designer to add an embedded canvas app on a model-driven form.
 4.	In the classic form designer, select the section on the form where you want the embedded canvas app to appear.
 5.	Using the field explorer pane, add a required field, such as **Account Name**.
