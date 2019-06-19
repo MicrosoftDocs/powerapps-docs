@@ -7,7 +7,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 6/18/2019
+ms.date: 6/19/2019
 ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
