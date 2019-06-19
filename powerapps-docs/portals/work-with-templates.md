@@ -12,7 +12,8 @@ You can edit the built-in templates by using the code editor. The following temp
 
 -   Page with side navigation
 
-**Note**: It is recommended not to edit **Profile** and **Search** templates.
+> [!NOTE]
+> It is recommended not to edit **Profile** and **Search** templates.
 
 To open a template in code editor:
 

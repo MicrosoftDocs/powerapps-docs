@@ -18,7 +18,8 @@
 
     - **Move down**: Move the page down in hierarchy.
 
- **Note**: Moving a page up or down is supported among the pages at the same level.
+        > [!NOTE]
+        > Moving a page up or down is supported among the pages at the same level.
 
     - **Promote subpage**: Decrease the indent and make the child page at the level of the previous page in the hierarchy.
 
@@ -26,5 +27,5 @@
 
     - **Delete**: Delete the page.
 
- ![webpage manage options](media/webpage-manage-options.png "Webpage manage options")  
+    ![webpage manage options](media/webpage-manage-options.png "Webpage manage options")  
 

@@ -6,8 +6,6 @@
 
 -   When you select text in the text box, the font size of the selected text is not displayed in the formatting toolbar.
 
-<!-- -->
-
 -   If you add two entity forms on a webpage, both forms will have same values.
 
 -   If you add a child page from the Home webpage, the navigation’s weblink order is displayed incorrectly.

@@ -12,11 +12,11 @@ If you want to view the changes instantly, follow the below steps:
 
 4.  Choose the **Portal Contact** form.
 
- ![portal contacts view](media/portal-contacts-view.png "Portal contacts view")  
+    ![portal contacts view](media/portal-contacts-view.png "Portal contacts view")  
 
 5.  On the **Related** tab, select **Web Roles.**
 
- ![web roles button](media/web-roles-button.png "Web roles button")  
+    ![web roles button](media/web-roles-button.png "Web roles button")  
 
 6.  In the web role grid, add the existing web role **Administrators**.
 
@@ -28,15 +28,14 @@ If you want to view the changes instantly, follow the below steps:
 
 10. Enter the administrator credentials as below:
 
--   Username: administrator
+    - Username: administrator
+    - Password: Password you created in step 8
 
--   Password: Password you created in step 8
+11.  Go to the link https://&lt;portal\_URL&gt;/\_services/about
 
-1.  Go to the link https://&lt;portal\_URL&gt;/\_services/about
+12.  Select **Clear Cache** to clear the cache.
 
-2.  Select **Clear Cache** to clear the cache.
+13.  When you reload your URL, it will load with recent changes you have made in the maker experience.
 
-3.  When you reload your URL, it will load with recent changes you have made in the maker experience.
-
-Whenever you make changes in maker, clear the cache from https://&lt;portal\_URL&gt;/\_services/about. You’ll be able to view all changes instantly.
+Whenever you make changes in maker, clear the cache from `https://&lt;portal\_URL&gt;/\_services/about`. You'll be able to view all changes instantly.
 

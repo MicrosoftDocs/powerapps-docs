@@ -8,7 +8,8 @@ Share your portal with internal or external users. Follow the steps mentioned in
 
 To share the portal with internal users you must first create a security role and then assign users to the security role so they can use the portal.
 
-**Note**: As a user in Common Data Service, if you do not have appropriate privileges on portal entities, you might see errors such as “You do not have access to view solutions in this environment.” or “You do not have access to view Website in this environment”. For this preview, it is recommended that you are either in a **System Administrator** or at least a **System Customizer** security role in the corresponding Common Data Service database.
+> [!NOTE]
+> As a user in Common Data Service, if you do not have appropriate privileges on portal entities, you might see errors such as “You do not have access to view solutions in this environment.” or “You do not have access to view Website in this environment”. For this preview, it is recommended that you are either in a **System Administrator** or at least a **System Customizer** security role in the corresponding Common Data Service database.
 
 ### Step 1: Create a security role
 
@@ -32,7 +33,8 @@ For information on security roles and privileges, see [Security roles and privil
 
 3.  Select **Manage Roles**.
 
- **Note**: If you are unable to see the **Manage Roles** button on the command bar, you must change the client by setting forceUCI to 0 in the URL. For example, https://&lt;org\_url&gt;/main.aspx?pagetype=entitylist&etn=systemuser&forceUCI=0
+    > [!NOTE]
+    > If you are unable to see the **Manage Roles** button on the command bar, you must change the client by setting forceUCI to 0 in the URL. For example, https://&lt;org\_url&gt;/main.aspx?pagetype=entitylist&etn=systemuser&forceUCI=0
 
 4.  In the **Manage User Roles** dialog box, select the security role that you created earlier, and then select **OK**.
 

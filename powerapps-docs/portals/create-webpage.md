@@ -4,9 +4,9 @@
 
 2.  From the command bar, select **New page** and choose the page template.
 
-![create a new webpage](media/create-webpage.png "Create a new webpage")
+    ![create a new webpage](media/create-webpage.png "Create a new webpage")
 
-1.  In the **Properties** pane, enter the following information:
+3.  In the **Properties** pane, enter the following information:
 
     - **Name**: Name of the page. This value is also used as the title of the page.
 
@@ -14,7 +14,7 @@
 
     - **Template**: Page template used to render this page on the portal. If required, you can choose another template from the list.
 
-![webpage properties](media/webpage-props.png "Webpage properties")
+    ![webpage properties](media/webpage-props.png "Webpage properties")
 
 The webpages you create are added and their hierarchy are displayed in the **Pages** pane. To view the **Pages** pane, select **Pages** ![pages icon](media/pages-icon.png "Pages icon") from the toolbelt on the left side of the screen.  
 
