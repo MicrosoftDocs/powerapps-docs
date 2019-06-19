@@ -76,7 +76,7 @@ public SamplePlugin()
 public SamplePlugin(string unsecure)  
 public SamplePlugin(string unsecure, string secure)
 ```
-The secure configuration data is stored in a separate entity which only system administrators have privileges to read. More information: [Set configuration data](register-plug-in.md#set-configuration-data)
+The secure configuration data is stored in a separate entity which only system administrators have privileges to read. More information: [Register plug-in step > Set configuration data](register-plug-in.md#set-configuration-data)
 
 ## Services you can use in your code
 
@@ -105,17 +105,19 @@ IOrganizationServiceFactory serviceFactory =
     (IOrganizationServiceFactory)serviceProvider.GetService(typeof(IOrganizationServiceFactory));
 IOrganizationService svc = serviceFactory.CreateOrganizationService(context.UserId);
 ```
+
 The `context.UserId` variable used with <xref:Microsoft.Xrm.Sdk.IOrganizationServiceFactory>.<xref:Microsoft.Xrm.Sdk.IOrganizationServiceFactory.CreateOrganizationService(System.Nullable{System.Guid})> comes from execution context the <xref:Microsoft.Xrm.Sdk.IExecutionContext.UserId> property, so this is call is done after the execution context has been accessed.
 
 More information:
- - [Entity Operations](org-service/entity-operations.md)
- - [Query data](org-service/entity-operations-query-data.md)
- - [Create entities](org-service/entity-operations-create.md)
- - [Retrieve an entity](org-service/entity-operations-retrieve.md)
- - [Update and Delete entities](org-service/entity-operations-update-delete.md)
- - [Associate and disassociate entities](org-service/entity-operations-associate-disassociate.md)
- - [Use messages](org-service/use-messages.md)
- - [Late-bound and Early-bound programming](org-service/early-bound-programming.md)
+
+- [Entity Operations](org-service/entity-operations.md)
+- [Query data](org-service/entity-operations-query-data.md)
+- [Create entities](org-service/entity-operations-create.md)
+- [Retrieve an entity](org-service/entity-operations-retrieve.md)
+- [Update and Delete entities](org-service/entity-operations-update-delete.md)
+- [Associate and disassociate entities](org-service/entity-operations-associate-disassociate.md)
+- [Use messages](org-service/use-messages.md)
+- [Late-bound and Early-bound programming](org-service/early-bound-programming.md)
 
 You can use early bound types within a plug-in. Just include the generated types file in your project. But you should be aware that all entity types that are provided by the execution context input parameters will be late-bound types. You will need to convert them to early bound types. For example you can do the following when you know the `Target` parameter represents an account entity.
 
@@ -127,6 +129,7 @@ But you should never try to set the value using an early bound type. Don't try t
 ```csharp
 context.InputParameters["Target"] = new Account() { Name = "MyAccount" }; // WRONG: Do not do this. 
 ```
+
 This will cause an <xref:System.Runtime.Serialization.SerializationException> to occur.
 
 ## Use the tracing service

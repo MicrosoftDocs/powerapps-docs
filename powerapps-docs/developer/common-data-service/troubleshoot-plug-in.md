@@ -106,6 +106,9 @@ However, with this error it is common that the developer doesn't catch it proper
 Error Code: `-2147220956`<br />
 Error Message: `An unexpected error occurred from ISV code.`
 
+> [!NOTE]
+> "ISV" stands for *Independent Software Vendor*.
+
 ### Causes
 
 This error frequently occurs at design time and can be due to a misspelling or using the incorrect casing. The key values are case sensitive.
