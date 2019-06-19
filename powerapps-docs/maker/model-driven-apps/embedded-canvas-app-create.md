@@ -26,7 +26,7 @@ search.app:
 # Create and add an embedded canvas app on a model-driven form
 This topic explains how to create and add an embedded canvas app on a model-driven form.
 
-Imagine that you want to add an embedded canvas app on an account main form. To do this, follow these steps: 
+Imagine that you want to add an embedded canvas app on a main form for the Accounts entity. To do this, follow these steps: 
 
 1.	Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 2.  [Create or edit the main form](create-and-edit-forms.md) of an entity, Accounts entity in our example. 
