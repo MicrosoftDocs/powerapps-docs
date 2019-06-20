@@ -2,7 +2,7 @@
 title: "Write a plug-in (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about the concepts and technical details necessary when writing plug-ins" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 05/26/2019
+ms.date: 06/20/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.topic: "article"
