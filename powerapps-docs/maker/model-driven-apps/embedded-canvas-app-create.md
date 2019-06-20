@@ -1,5 +1,5 @@
 ---
-title: "Create and add an embedded canvas app on a model-driven form | MicrosoftDocs"
+title: "Create an embedded canvas app on a model-driven form | MicrosoftDocs"
 ms.custom: ""
 ms.date: 06/19/2019
 ms.reviewer: ""
@@ -23,8 +23,8 @@ search.app:
   - D365CE
 ---
 
-# Create and add an embedded canvas app on a model-driven form
-This topic explains how to create and add an embedded canvas app on a model-driven form.
+# Create an embedded canvas app on a model-driven form
+This topic explains how to create an embedded canvas app on a model-driven form.
 
 Imagine that you want to add an embedded canvas app on a main form for the Accounts entity. To do this, follow these steps: 
 
