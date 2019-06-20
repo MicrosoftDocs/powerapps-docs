@@ -53,21 +53,23 @@ Imagine that you want to create and add an embedded canvas app on a main form fo
        > If opening PowerApps Studio is blocked due to a web browser pop-up blocker you must enable the web.powerapps.com site or temporarily disable the pop-up blocker and then select **Customize** again.
 13.	In PowerApps Studio notice that there is a special **ModelDrivenFormIntegration** control in the left pane. This control is responsible for bringing contextual data from the host model-driven form to the embedded canvas app.
 14. Observe that a [canvas app form control](../canvas-apps/controls/control-form-detail.md) was automatically added to your embedded canvas app and displays the data being passed to it from the host model-driven form via the ModelDrivenFormIntegration control. 
-15. Select the **View** tab, and then select **Data sources**. Notice that a datasource for the parent entity of your model-driven forms, Accounts in this case, was automatically added to your embedded canvas app.
+15. Select the **View** tab, and then select **Data sources**. Notice that a datasource for the parent entity of your model-driven form, Accounts in this case, was automatically added to your embedded canvas app.
 16. Select the **Form1** control and observe that the **DataSource** property is set to **Accounts**.
 17.	With the **Form1** control still selected, observe that the **Item** property is set to **ModelDrivenFormIntegration.Item**.
 	> [!NOTE]
-	> The embedded canvas app has full access to record from the host model-driven form via ModelDrivenFormIntegration.Item. For example, if you want to get the value of the Account Number field you can access it as ModelDrivenFormIntegration.Item.'Account Number' or ModelDrivenFormIntegration.Item.accountnumber.
+	> The embedded canvas app has full access to record from the host model-driven form via ModelDrivenFormIntegration.Item. 
+	> As an example, to get the value of a field with the name **accountnumber** and display name **Account Number**, you can use **ModelDrivenFormIntegration.Item.accountnumber** or **ModelDrivenFormIntegration.Item.'Account Number'**.
 18.	In the property pane on the right, next to **Fields**, select **Edit fields**.
-19.	Select **+ Add field** to add another field to the form or reorder existing fields using drag and drop. Close the data pane when you are done adding and reordering fields.
+19.	Select **+ Add field** to add another field to the canvas app form or reorder existing fields using drag and drop. Close the data pane when you are done adding and reordering fields.
 20.	Select the **File** tab, and then select **Save**.
 21.	Select the **The cloud** tab. Provide a unique name for the app and then select **Save** located on the lower right. Note the following: 
     -  Saving an app for the first time automatically publishes the app.
 	  -  On subsequent saves, select **Publish** and then select **Publish this version** to make your changes available.
-22.	On the menu, select **Back** and then select the browser tab that has the classic form designer open. Observe that the **App ID** property of the canvas app control now has a value automatically filled in. Note the following: 
-    - 	The form designer has a direct link with PowerApps Studio that was opened in another browser tab in an earlier step.
-    - 	The form designer listens for the App ID to be sent to it.
-    - 	The App ID is sent to the form designer when the app is saved.
+22.	On the menu, select **Back** and then select the browser tab that has the classic form designer open. Observe that the **App ID** property of the canvas app control now has a value automatically filled in.
+	> [!NOTE]
+	> - The form designer has a direct link with PowerApps Studio that was opened in another browser tab in an earlier step.
+	> - The form designer listens for the App ID to be sent to it. 
+	> - The App ID is sent to the form designer when the app is saved.
 23.	On the **Field Properties** dialog box, select the **Display** tab.
 24.	Clear **Display label** on the form and then select **OK**.
     - 	If you already have a canvas app embedded on this form, a message is displayed that “Only one canvas app can be enabled on a form.” To add the new canvas app you must first [disable the current embedded canvas app](embedded-canvas-app-guidelines.md#disable-an-embedded-canvas-app). Then, [enable the new embedded canvas app](embedded-canvas-app-guidelines.md#enable-an-embedded-canvas-app).
