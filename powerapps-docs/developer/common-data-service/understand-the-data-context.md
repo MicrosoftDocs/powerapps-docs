@@ -168,7 +168,10 @@ When you define an entity image, you specify an entity alias value you can use t
 var oldAccountName = (string)context.PreEntityImages["a"]["name"];
 ```
 
-More information: [Define entity images](register-plug-in.md#define-entity-images) [Entity Images for workflow extensions](workflow/workflow-extensions.md#entity-images-for-workflow-extensions)
+More information:
+
+- [Define entity images](register-plug-in.md#define-entity-images)
+- [Entity Images for workflow extensions](workflow/workflow-extensions.md#entity-images-for-workflow-extensions)
 
 
 
