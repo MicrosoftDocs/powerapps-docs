@@ -36,7 +36,7 @@ To use Microsoft PowerApps CLI, do the following:
 
 1. If you don’t already have Visual Studio 2017 or later, follow one of the options below:
    - Option 1: Install [.NET Framework 4.6.2 Developer Pack](https://dotnet.microsoft.com/download/dotnet-framework/net462) and then install [Visual Studio 2017](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2017) or later.
-   - Option 2: Install [.NET Core 2.2 SDK](https://dotnet.microsoft.com/download/dotnet-core/2.2) and then intsall [Visual Studio Code](https://code.visualstudio.com/Download).
+   - Option 2: Install [.NET Core 2.2 SDK](https://dotnet.microsoft.com/download/dotnet-core/2.2) and then install [Visual Studio Code](https://code.visualstudio.com/Download).
 
 1. Install [Microsoft PowerApps CLI](https://aka.ms/PowerAppsCLI).
 
