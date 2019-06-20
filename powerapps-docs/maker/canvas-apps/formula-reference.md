@@ -41,7 +41,7 @@ Other elements include:
 
 **[And](functions/function-logicals.md)** – Boolean logic AND.  Returns **true** if all arguments are **true**.  You can also use the [**&&** operator](functions/operators.md).
 
-**[App](functions/signals.md)** – Returns information about the currently running app, such as which screen is currently displayed.
+**[App](functions/object-app.md)** – Provides information about the currently running app and control over the app's behavior.
 
 **[Asin](functions/function-trig.md)** – Returns the arcsine of a number, in radians.
 
@@ -181,7 +181,10 @@ Other elements include:
 
 **[IsToday](functions/function-now-today-istoday.md)** – Checks whether a date/time value is sometime today.
 
-**[IsType](functions/function-astype-istype.md)** – Checks whether a record reference  refers to a specific entity type.  
+**[IsType](functions/function-astype-istype.md)** – Checks whether a record reference  refers to a specific entity type.
+
+## J
+**[JSON](functions/function-json.md)** - Generates a JSON text string for a table, a record, or a value.
 
 ## L
 **[Language](functions/function-language.md)** – Returns the language tag of the current user.

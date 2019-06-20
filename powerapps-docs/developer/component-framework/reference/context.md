@@ -18,6 +18,8 @@ ms.assetid: 6e066350-9d22-4078-b497-26be7d2fa374
 
 [!INCLUDE [context-description](includes/context-description.md)]
 
+
+
 ## client
 
 The interface for `context.client`

@@ -81,6 +81,8 @@
         href: ../user/work-with-business-processes.md
       - name: Use flows
         href: ../user/use-flows.md
+  - name: 'Use Dynamics 365 App for Outlook'
+    href: ../user/use-outlook-app.md
 - name: Create apps
   items:
   - name: Overview
@@ -91,8 +93,10 @@
   items:
   - name: What are canvas apps?
     href: ./canvas-apps/getting-started.md
-  - name: "System requirements, limits, and configuration"
+  - name: System requirements, limits, and configuration
     href: ./canvas-apps/limits-and-config.md
+  - name: Keyboard shortcuts
+    href: ./canvas-apps/keyboard-shortcuts.md
   - name: Explore sample apps
     items:
     - name: Create a canvas app from a sample
@@ -348,7 +352,7 @@
           - name: And
             href: ./canvas-apps/functions/function-logicals.md
           - name: App
-            href: ./canvas-apps/functions/signals.md
+            href: ./canvas-apps/functions/object-app.md
           - name: Asin
             href: ./canvas-apps/functions/function-trig.md
           - name: AsType
@@ -408,7 +412,7 @@
           - name: CountRows
             href: ./canvas-apps/functions/function-table-counts.md
           - name: Data types
-            href: ./canvas-apps/functions/data-types.md	    
+            href: ./canvas-apps/functions/data-types.md
           - name: DataSourceInfo
             href: ./canvas-apps/functions/function-datasourceinfo.md
           - name: Date
@@ -483,6 +487,8 @@
             href: ./canvas-apps/functions/function-now-today-istoday.md
           - name: IsType
             href: ./canvas-apps/functions/function-astype-istype.md
+          - name: JSON
+            href: ./canvas-apps/functions/function-json.md
           - name: Language
             href: ./canvas-apps/functions/function-language.md
           - name: Last
@@ -661,6 +667,18 @@
             href: ./canvas-apps/functions/function-datetime-parts.md
       - name: Create an app in a solution
         href: ./canvas-apps/add-app-solution.md
+      - name: Create an app with relational data
+        items:
+          - name: Install the data
+            href: ./canvas-apps/northwind-install.md
+          - name: Overview of the canvas app
+            href: ./canvas-apps/northwind-orders-canvas-overview.md
+          - name: 1 - Create the order gallery
+            href: ./canvas-apps/northwind-orders-canvas-part1.md
+          - name: 2 - Create the summary form
+            href: ./canvas-apps/northwind-orders-canvas-part2.md
+          - name: 3 - Create the detail gallery
+            href: ./canvas-apps/northwind-orders-canvas-part3.md
       - name: Build a global app
         href: ./canvas-apps/global-apps.md
       - name: Make an app accessible
@@ -689,6 +707,8 @@
       href: ./canvas-apps/share-app-resources.md
     - name: Embed an app in Power BI
       href: ./canvas-apps/embed-powerapps-powerbi.md
+    - name: Embed a Teams app
+      href: ./canvas-apps/embed-teams-app.md
   - name: Manage an app
     items:
     - name: Edit an app
@@ -752,7 +772,11 @@
     - name: Let customers test drive your apps
       href: ./canvas-apps/dev-appsource-test-drive.md
     - name: Create a component
-      href: ./canvas-apps/create-component.md
+      items:
+        - name: Overview
+          href: ./canvas-apps/create-component.md
+        - name: Behavior formulas
+          href: ./canvas-apps/component-behavior.md
     - name: Embed canvas apps in your applications
       href: ./canvas-apps/embedding-sdk.md
 - name: Model-driven apps
@@ -926,6 +950,8 @@
           href: ./model-driven-apps/timer-control-legacy.md
       - name: Use custom controls for data visualizations
         href: ./model-driven-apps/use-custom-controls-data-visualizations.md
+    - name: Use Excel and Word templates
+      href: ./model-driven-apps/templates-overview.md
     - name: Use themes to apply organization branding
       href: ./model-driven-apps/create-themes-organization-branding.md
   - name: Validate and publish an app
@@ -957,6 +983,8 @@
       href: ./model-driven-apps/create-guided-help-learning-path.md      
   - name: Accessibility in PowerApps app designer
     href: ./model-driven-apps/Accessibility-app-designer-site-map-designer-my-apps-page.md
+  - name: Customize Dynamics 365 App for Outlook
+    href: ./model-driven-apps/app-for-outlook-customize.md
   - name: For developers
     href: ../developer/model-driven-apps/overview.md
     # href: ../developer/model-driven-apps/TOC.yml For authoring I find having developer content buried so deep is awkward
@@ -1136,6 +1164,10 @@
   - name: For developers
     href: ../developer/common-data-service/overview.md
     # href: ../developer/common-data-service/TOC.yml  changing this to have developer TOC rather than buried in maker toc
+- name: AI Builder
+  items:
+  - name: Use AI Builder in PowerApps
+    href: ../use-ai-builder.md
 - name: Learn from others
   items:
   - name: Webinars

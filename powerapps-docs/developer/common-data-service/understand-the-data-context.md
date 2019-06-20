@@ -2,13 +2,13 @@
 title: "Understand the execution context (Common Data Service) | Microsoft Docs" 
 description: "Learn about the data that is passed to your plug-ins when it is executed." 
 ms.custom: ""
-ms.date: 1/23/2019
-ms.reviewer: ""
+ms.date: 05/25/2019
+ms.reviewer: pehecke
 ms.service: powerapps
 ms.topic: "article"
-author: phecke
-ms.author: pehecke
-manager: kvivek
+author: JimDaly
+ms.author: jdaly
+manager: ryjones
 search.audienceType: 
   - developer
 search.app: 
@@ -18,7 +18,11 @@ search.app:
 
 # Understand the execution context
 
-The **Event Execution Pipeline** passes registered plug-ins a wealth of data about the current operation being processed and the plug-in's execution environment. You can access this data in your plug-in code by setting a variable that implements the <xref:Microsoft.Xrm.Sdk.IPluginExecutionContext> interface:
+The **Event Execution Pipeline** passes registered plug-ins a wealth of data about the current operation being processed and the plug-in's execution environment.
+
+## For plug-ins
+
+With Plug-ins you can access this data in your code by setting a variable that implements the <xref:Microsoft.Xrm.Sdk.IPluginExecutionContext> interface:
 
 ```csharp
 // Obtain the execution context from the service provider.  
@@ -26,10 +30,47 @@ IPluginExecutionContext context = (IPluginExecutionContext)
     serviceProvider.GetService(typeof(IPluginExecutionContext));
 ```
 
-This <xref:Microsoft.Xrm.Sdk.IPluginExecutionContext> provides some information about the <xref:Microsoft.Xrm.Sdk.IPluginExecutionContext.Stage> that the plugin is registered for as well as information about the <xref:Microsoft.Xrm.Sdk.IPluginExecutionContext.ParentContext> which provides information about any operation within another plug-in that triggered the current operation.
+This <xref:Microsoft.Xrm.Sdk.IPluginExecutionContext> provides some information about the <xref:Microsoft.Xrm.Sdk.IPluginExecutionContext.Stage> that the plugin is registered for as well as information about the <xref:Microsoft.Xrm.Sdk.IPluginExecutionContext.ParentContext> See [ParentContext](#parentcontext)
 
-But the rest of the information available is provided by the <xref:Microsoft.Xrm.Sdk.IExecutionContext> interface that this class implements. All the properties of this class provide useful information you may need to access in your code, but two of the most important are the 
-<xref:Microsoft.Xrm.Sdk.IExecutionContext.InputParameters> and <xref:Microsoft.Xrm.Sdk.IExecutionContext.OutputParameters> properties. 
+## For Custom Workflow Activities
+
+With custom workflow activities you can access this data in your code by setting a variable that implements the <xref:Microsoft.Xrm.Sdk.Workflow.IWorkflowContext> interface:
+
+```csharp
+// Obtain the execution context using the GetExtension method.  
+protected override void Execute(CodeActivityContext context)
+{
+ IWorkflowContext workflowContext = context.GetExtension<IWorkflowContext>();
+...
+```
+
+This <xref:Microsoft.Xrm.Sdk.Workflow.IWorkflowContext> provides some information about the workflow that the plug-in is running within.
+
+|Property  |Description  |
+|---------|---------|
+|<xref:Microsoft.Xrm.Sdk.Workflow.IWorkflowContext.ParentContext>|Gets the parent context. See [ParentContext](#parentcontext)|
+|<xref:Microsoft.Xrm.Sdk.Workflow.IWorkflowContext.StageName>|Gets the stage information of the process instance.|
+|<xref:Microsoft.Xrm.Sdk.Workflow.IWorkflowContext.WorkflowCategory>|Gets the process category information of the process instance: Is it a workflow or dialog (deprecated).|
+|<xref:Microsoft.Xrm.Sdk.Workflow.IWorkflowContext.WorkflowMode>|Indicates how the workflow is to be executed. 0 = asynchronous, 1 = synchronous|
+
+## ParentContext
+
+The `ParentContext` provides information about any operation that triggers the plug-in or custom workflow activity to run.
+
+Except for specific documented cases, you should avoid taking a dependency on values that you find in the `ParentContext` to apply your business logic. The specific order in which operations occur is not guaranteed and may change over time.
+
+If you do choose to take a dependency on values found in the `ParentContext`, you should take steps to ensure that your code is resilient to adapt to potential changes. You should test the logic regularly to verify that the conditions you depend on remain in effect over time.
+
+## ExecutionContext
+
+The rest of the information available is provided by the <xref:Microsoft.Xrm.Sdk.IExecutionContext> interface that the <xref:Microsoft.Xrm.Sdk.IPluginExecutionContext> and <xref:Microsoft.Xrm.Sdk.Workflow.IWorkflowContext> classes implement.
+
+For plug-ins all the properties of this class provide useful information you may need to access in your code. 
+
+> [!NOTE]
+> For custom workflow activites these properties are generally not used.
+
+Two of the most important are the <xref:Microsoft.Xrm.Sdk.IExecutionContext.InputParameters> and <xref:Microsoft.Xrm.Sdk.IExecutionContext.OutputParameters> properties.
 
 Other frequently used properties are <xref:Microsoft.Xrm.Sdk.IExecutionContext.SharedVariables>, <xref:Microsoft.Xrm.Sdk.IExecutionContext.PreEntityImages>, and <xref:Microsoft.Xrm.Sdk.IExecutionContext.PostEntityImages>.
 
@@ -45,6 +86,7 @@ The <xref:Microsoft.Xrm.Sdk.ParameterCollection> values are defined as <xref:Sys
 ```csharp
 var entity = (Entity)context.InputParameters["Target"];
 ```
+
 Use the <xref:Microsoft.Xrm.Sdk.Messages> and <xref:Microsoft.Crm.Sdk.Messages> documentation to learn the names of the messages defined in the SDK assemblies. For custom actions, refer to the names of the parameters defined in the system.
 
 ## InputParameters
@@ -107,10 +149,12 @@ public class PostOperation : IPlugin
     }
 }
 ```
+
 > [!IMPORTANT]
 > Any type of data added to the shared variables collection must be serializable otherwise the server will not know how to serialize the data and plug-in execution will fail.  
-  
- For a plug-in registered in stage 20 or 40, to access the shared variables from a stage 10 registered plug-in that executes on create, update, delete, or by a <xref:Microsoft.Crm.Sdk.Messages.RetrieveExchangeRateRequest>, you must access the <xref:Microsoft.Xrm.Sdk.IPluginExecutionContext.ParentContext>.**SharedVariables** collection. For all other cases, <xref:Microsoft.Xrm.Sdk.IPluginExecutionContext>.**SharedVariables** contains the collection. 
+
+> [!NOTE]
+> For a plug-in registered for the **PreOperation** or **PostOperation** stages to access the shared variables from a plug-in registered for the  **PreValidation** stage that executes on **Create**, **Update**, **Delete**, or by a <xref:Microsoft.Crm.Sdk.Messages.RetrieveExchangeRateRequest>, you must access the <xref:Microsoft.Xrm.Sdk.IPluginExecutionContext.ParentContext>.**SharedVariables** collection. For all other cases, <xref:Microsoft.Xrm.Sdk.IPluginExecutionContext>.**SharedVariables** contains the collection.
 
 ## Entity Images
 
@@ -125,6 +169,10 @@ var oldAccountName = (string)context.PreEntityImages["a"]["name"];
 ```
 
 More information: [Define entity images](register-plug-in.md#define-entity-images)
+
+### Entity Images for custom workflow activites
+
+There is no way to configure entity images for custom workflow activities since you only register the assembly and the workflow activity runs in the context of the workflow. For custom workflow activities entity images are available using the key values `PreBusinessEntity` and `PostBusinessEntity` respectively for the pre and post entity images.
 
 ### See also
 

@@ -2,11 +2,11 @@
 title: " Event Framework (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Describes the event framework and information developers should know when working with it." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 06/18/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.topic: "article"
-author: "brandonsimons" # GitHub ID
+author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -16,23 +16,6 @@ search.app:
   - D365CE
 ---
 # Event Framework
-
-<!-- Re-write from
-https://docs.microsoft.com/dynamics365/customer-engagement/developer/introduction-event-framework
-https://docs.microsoft.com/dynamics365/customer-engagement/developer/event-execution-pipeline
-
-See notes at https://microsoft-my.sharepoint.com/:w:/p/jdaly/EfmTW7DQXNREuqj1s7tBtIIB4VZmvasZ1Nsbl4F5zlD1ZQ?e=FNlBmr 
-
-
-Make sure to call out the changes due to the legacy update messages. That information was moved.
-
-See 
-https://docs.microsoft.com/dynamics365/customer-engagement/developer/org-service/perform-specialized-operations-using-update#impact-of-this-change-on-plug-ins
-
-https://docs.microsoft.com/dynamics365/customer-engagement/developer/org-service/perform-specialized-operations-using-update#impact-of-this-change-on-workflows
-
-
--->
 
 The capability to extend the default behavior of Common Data Service depends on detecting when events occur on the server. The *Event Framework* provides the capability to register custom code to be run in response to specific events. 
 
@@ -62,7 +45,27 @@ Generally, you can expect to find a message for most of the **Request* classes i
 
 Data about messages is stored in the [SdkMessage](reference/entities/sdkmessage.md) and [SdkMessageFilter](reference/entities/sdkmessagefilter.md) entities. The Plug-in registration tool will filter this information to only show valid messages.
 
-To verify if a message and entity combination supports execution of plug-ins using a database query, use Advanced Find or a community tool (e.g., [FetchXML Builder](http://fxb.xrmtoolbox.com)) to execute the following fetchXML query. When using Advanced Find, you must create the query interactively.
+To verify if a message and entity combination supports execution of plug-ins using a database query, you can use the following Web API query:
+
+```
+{{webapiurl}}sdkmessages?$select=name
+&$filter=isprivate eq false 
+and (name ne 'SetStateDynamicEntity' 
+and name ne 'RemoveRelated' 
+and name ne 'SetRelated' and 
+name ne 'Execute') 
+and sdkmessageid_sdkmessagefilter/any(s:s/iscustomprocessingstepallowed eq true 
+and s/isvisible eq true)
+&$expand=sdkmessageid_sdkmessagefilter($select=primaryobjecttypecode;
+$filter=iscustomprocessingstepallowed eq true and isvisible eq true)
+&$orderby=name
+```
+
+> [!TIP]
+> You can export this data to an Excel worksheet using this query and the instructions provided in this blog post: [Find Messages and entities eligible for plug-ins using the Common Data Service](https://powerapps.microsoft.com/en-us/blog/find-messages-and-entities-eligible-for-plug-ins-using-the-common-data-service/)
+
+
+You can also use the following FetchXML to retrieve this information. The [FetchXML Builder](http://fxb.xrmtoolbox.com) is a useful tool to execute this kind of query.
 
 ```xml
 <fetch>
@@ -81,7 +84,7 @@ To verify if a message and entity combination supports execution of plug-ins usi
         <value>SetStateDynamicEntity</value>
         <value>RemoveRelated</value>
         <value>SetRelated</value>
-	   <value>Execute</value>
+	      <value>Execute</value>
       </condition>
     </filter>
     <order attribute='name' />
@@ -90,7 +93,7 @@ To verify if a message and entity combination supports execution of plug-ins usi
 ```
 
 > [!CAUTION]
-> The `Execute` message is available, but you should typically not register extensions for it since it is called by every operation.
+> The `Execute` message is available, but you should not register extensions for it since it is called by every operation.
 
 > [!NOTE]
 > There are certain cases where plug-ins and workflows that are registed for the Update event can be called twice. More information: [Behavior of specialized update operations](special-update-operation-behavior.md)
@@ -101,10 +104,10 @@ When you register a step using the Plug-in registration tool you must also choos
 
 |Name|Description|
 |--|--|
-|**PreValidation**<br />Stage: 10|[!INCLUDE [cc-prevalidation-description](../../includes/cc-prevalidation-description.md)]|
-|**PreOperation**<br />Stage: 20|[!INCLUDE [cc-preoperation-description](../../includes/cc-preoperation-description.md)]|
-|**MainOperation**<br />Stage: 30|For internal use only.|
-|**PostOperation**<br />Stage: 40|[!INCLUDE [cc-postoperation-description](../../includes/cc-postoperation-description.md)]|
+|**PreValidation**|[!INCLUDE [cc-prevalidation-description](../../includes/cc-prevalidation-description.md)]|
+|**PreOperation**|[!INCLUDE [cc-preoperation-description](../../includes/cc-preoperation-description.md)]|
+|**MainOperation**|For internal use only.|
+|**PostOperation**|[!INCLUDE [cc-postoperation-description](../../includes/cc-postoperation-description.md)]|
 
 The stage you should choose depends on the purpose of the extension. You don't need to apply all your business logic within a single step. You can apply multiple steps so that your logic about whether to allow a operation to proceed can be in the **PreValidation** stage and your logic to make modifications to the message properties can occur in the **PostOperation** stage.
 
