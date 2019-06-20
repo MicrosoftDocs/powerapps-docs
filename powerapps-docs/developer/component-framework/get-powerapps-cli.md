@@ -48,7 +48,7 @@ To use Microsoft PowerApps CLI, do the following:
 
 ## Update Microsoft PowerApps CLI to the latest version
 
-To update your Microsoft PowerApps CLI to the latest version 02.856.1 and take advantage of all the latest capabilities, run the following command in the Developer Command Prompt for VS 2017:
+To update your Microsoft PowerApps CLI to the latest version and take advantage of all the latest capabilities, run the following command in the Developer Command Prompt for VS 2017:
 
 ```CLI
 pac install latest
