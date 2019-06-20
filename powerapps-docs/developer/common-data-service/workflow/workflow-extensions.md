@@ -429,10 +429,10 @@ You can use the value in the <xref:Microsoft.Xrm.Sdk.Workflow.IWorkflowContext>.
 
 For the **Update** operation, the stage is configurable using **Before** or **After** options in the workflow designer. More information: [Using real-time workflows](/flow/configure-workflow-steps#using-real-time-workflows)
 
-If your workflow extension depends on data passed in the execution context, the stage it runs in will control whether data is available in the <xref:Microsoft.Xrm.Sdk.IWorkflowContext.InputParameters> and <xref:Microsoft.Xrm.Sdk.IWorkflowContext.OutputParameters>.
+If your workflow extension depends on data passed in the execution context, the stage it runs in will control whether data is available in the <xref:Microsoft.Xrm.Sdk.IExecutionContext.InputParameters> and <xref:Microsoft.Xrm.Sdk.IExecutionContext.OutputParameters>.
 
 > [!NOTE]
-> We don't recommend including logic dependencies based on the <xref:Microsoft.Xrm.Sdk.InputParameters> and <xref:Microsoft.Xrm.Sdk.OutputParameters>. Workflow extensions should depend on the configured input and output parameters so that the person using the workflow extension can understand the expected behavior without having anything hidden from them.
+> We don't recommend including logic dependencies based on the <xref:Microsoft.Xrm.Sdk.IExecutionContext.InputParameters> and <xref:Microsoft.Xrm.Sdk.IExecutionContext.OutputParameters>. Workflow extensions should depend on the configured input and output parameters so that the person using the workflow extension can understand the expected behavior without having anything hidden from them.
 
 ## Entity Images for workflow extensions
 
