@@ -57,7 +57,7 @@ Imagine that you want to create and add an embedded canvas app on a main form fo
 16. Select the **Form1** control and observe that the **DataSource** property is set to **Accounts**.
 17.	With the **Form1** control still selected, observe that the **Item** property is set to **ModelDrivenFormIntegration.Item**.
 	> [!NOTE]
-	The embedded canvas app has full access to record from the host model-driven form via ModelDrivenFormIntegration.Item. For example, if you want to get the value of the Account Number field you can access it as ModelDrivenFormIntegration.Item.'Account Number' or ModelDrivenFormIntegration.Item.accountnumber.
+	> The embedded canvas app has full access to record from the host model-driven form via ModelDrivenFormIntegration.Item. For example, if you want to get the value of the Account Number field you can access it as ModelDrivenFormIntegration.Item.'Account Number' or ModelDrivenFormIntegration.Item.accountnumber.
 18.	In the property pane on the right, next to **Fields**, select **Edit fields**.
 19.	Select **+ Add field** to add another field to the form or reorder existing fields using drag and drop. Close the data pane when you are done adding and reordering fields.
 20.	Select the **File** tab, and then select **Save**.
