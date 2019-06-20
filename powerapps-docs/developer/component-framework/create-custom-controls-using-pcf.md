@@ -4,7 +4,7 @@ description: Start creating a component using the PowerApps component framework 
 keywords: PowerApps component framework, Custom components, Component Framework
 ms.author: nabuthuk
 manager: kvivek
-ms.date: 06/11/2019
+ms.date: 06/20/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""

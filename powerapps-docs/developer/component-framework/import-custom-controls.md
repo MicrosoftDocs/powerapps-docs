@@ -4,7 +4,7 @@ description: Process to import custom controls
 keywords:
 ms.author: nabuthuk
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 06/20/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.topic: "article"
