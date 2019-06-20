@@ -35,10 +35,10 @@ To use Microsoft PowerApps CLI, do the following:
 1. Install [Npm](https://www.npmjs.com/get-npm) (comes with Node.js) or install [Node.js](https://nodejs.org/en/) (comes with npm). We recommend LTS (Long Term Support) version 10.15.3 LTS as it seems to be most stable.
 
 1. If you don’t already have Visual Studio 2017 or later, follow one of the options below:
-   - Option 1: Install Visual Studio 2017 or later
-   - Option 2: Install .NET Core 2.2 SDK and install Visual Studio Code
+   - Option 1: Install [.NET Framework 4.6.2 Developer Pack](https://dotnet.microsoft.com/download/dotnet-framework/net462) and then install [Visual Studio 2017](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2017) or later.
+   - Option 2: Install [.NET Core 2.2 SDK](https://dotnet.microsoft.com/download/dotnet-core/2.2) and then install [Visual Studio Code](https://code.visualstudio.com/Download).
 
-1. Install Microsoft PowerApps CLI from [here](https://aka.ms/PowerAppsCLI).
+1. Install [Microsoft PowerApps CLI](https://aka.ms/PowerAppsCLI).
 
 
 
@@ -48,7 +48,7 @@ To use Microsoft PowerApps CLI, do the following:
 
 ## Update Microsoft PowerApps CLI to the latest version
 
-To update your Microsoft PowerApps CLI to the latest version 02.856.1 and take advantage of all the latest capabilities, run the following command in the Developer Command Prompt for VS 2017:
+To update your Microsoft PowerApps CLI to the latest version and take advantage of all the latest capabilities, run the following command in the Developer Command Prompt for VS 2017:
 
 ```CLI
 pac install latest
