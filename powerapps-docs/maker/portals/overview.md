@@ -1,13 +1,13 @@
 ---
-title:  | Microsoft Docs
-description: 
-author: 
-manager: 
+title:  What is PowerApps Portals? | Microsoft Docs
+description: Design and build websites using PowerApps which allow external users to interact with the data stored in the Common Data Service.
+author: sbmjais
+manager: shujoshi
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 
-ms.author: 
+ms.date: 07/15/2019
+ms.author: shjais
 ms.reviewer:
 ---
 
@@ -19,4 +19,22 @@ These capabilities feature a revamped end-to-end experience for makers to quickl
 
 > [!NOTE]
 > Since PowerPortals is in private preview, certain experiences might have known issues. These issues are mentioned in the [Known issues](known-issues.md) section later in this document.  
+
+## Supported web browsers
+
+The supported browsers for the PowerApps home and portal maker experience are listed here.
+
+| **Browser**                     | **Operating system**           |
+|---------------------------------|--------------------------------|
+| Google Chrome (latest version)<br>(recommended)                    | <ul><li>Windows 7 SP1, 8.1, and 10</li><li>macOS</li></ul>      |
+| Microsoft Edge (latest version)<br> (recommended)                    | Windows 10                     |
+
+## Additional references
+
+[Dynamics 365 for Customer Engagement Portal](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/administer-manage-portal-dynamics-365)  
+
+[Administer your portal](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/manage-portal)  
+
+[Configure site settings for portals](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/configure-site-settings)  
+
 
