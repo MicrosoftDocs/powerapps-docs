@@ -2,7 +2,7 @@
 title: "Write a plug-in (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about the concepts and technical details necessary when writing plug-ins" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 05/26/2019
+ms.date: 06/20/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.topic: "article"
@@ -155,7 +155,10 @@ More information: [Use Tracing](debug-plug-in.md#use-tracing), [Logging and trac
 
 ## Performance considerations
 
-When you add the business logic for your plug-in you need to be very aware of the impact they will have on overall performance. The business logic in plug-ins should take no more than 2 seconds to complete.
+When you add the business logic for your plug-in you need to be very aware of the impact they will have on overall performance.
+
+> [!IMPORTANT]
+> The business logic in plug-ins registered for synchronous steps should take no more than 2 seconds to complete.
 
 ### Time and resource constraints
 
