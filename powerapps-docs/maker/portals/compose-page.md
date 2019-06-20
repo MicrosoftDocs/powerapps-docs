@@ -16,7 +16,7 @@ After adding the required webpages and managing their hierarchy in the sitemap, 
 
 ## Use the WYSIWYG editor
 
-1.  [Edit the portal](edit.md) to open it in the maker experience.  
+1.  [Edit the portal](manage-existing-portals.md#edit) to open it in the maker experience.  
 
 2.  Select the page on which you want to add the component.
 
@@ -39,7 +39,7 @@ After adding the required webpages and managing their hierarchy in the sitemap, 
 
 ### Add text box
 
-1.  [Edit the portal](edit.md) to open it in the maker experience.  
+1.  [Edit the portal](manage-existing-portals.md#edit) to open it in the maker experience.  
 
 2.  Select the page on which you want to add the component.
 
@@ -57,7 +57,7 @@ After adding the required webpages and managing their hierarchy in the sitemap, 
 
 ### Add image
 
-1.  [Edit the portal](edit.md) to open it in the maker experience.  
+1.  [Edit the portal](manage-existing-portals.md#edit) to open it in the maker experience.  
 
 2.  Select the page on which you want to add the component.
 
@@ -91,7 +91,7 @@ After adding the required webpages and managing their hierarchy in the sitemap, 
 
 ### Add IFrame
 
-1.  [Edit the portal](edit.md) to open it in the maker experience.  
+1.  [Edit the portal](manage-existing-portals.md#edit) to open it in the maker experience.  
 
 2.  Select the page on which you want to add the component.
 
@@ -118,7 +118,7 @@ After adding the required webpages and managing their hierarchy in the sitemap, 
 
 Form is a data-driven configuration that you use to add a form to collect data in the portal without the need for a developer to surface the form in the portal. [Forms are created in Common Data Service](https://docs.microsoft.com/en-us/powerapps/maker/model-driven-apps/form-designer-overview) and you can use them into webpages in the portal or in conjunction with lists to build out complete web applications.  
 
-1.  [Edit the portal](edit.md) to open it in the maker experience.  
+1.  [Edit the portal](manage-existing-portals.md#edit) to open it in the maker experience.  
 
 2.  Select the page on which you want to add the component.
 
@@ -165,7 +165,7 @@ Form is a data-driven configuration that you use to add a form to collect data i
 
 List is a data-driven configuration that you use to add a webpage that will render a list of records without the need for a developer to surface the grid in the portal. Lists use [Common Data Service views](https://docs.microsoft.com/en-us/powerapps/maker/model-driven-apps/create-and-edit-views) to display records on the portal.  
 
-1.  [Edit the portal](edit.md) to open it in the maker experience.  
+1.  [Edit the portal](manage-existing-portals.md#edit) to open it in the maker experience.  
 
 2.  Select the page on which you want to add the component.
 
@@ -200,7 +200,7 @@ List is a data-driven configuration that you use to add a webpage that will rend
 
 ### Add breadcrumb
 
-1.  [Edit the portal](edit.md) to open it in the maker experience.  
+1.  [Edit the portal](manage-existing-portals.md#edit) to open it in the maker experience.  
 
 2.  Select the page on which you want to add the component.
 

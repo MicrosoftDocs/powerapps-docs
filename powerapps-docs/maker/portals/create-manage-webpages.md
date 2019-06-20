@@ -17,7 +17,7 @@ A webpage is a document that is identified by a unique URL in a website. It is o
 
 ## Create webpage
 
-1.  [Edit the portal](edit.md) to open it in the maker experience.  
+1.  [Edit the portal](manage-existing-portals.md#edit) to open it in the maker experience.  
 
 2.  From the command bar, select **New page** and choose the page template.
 
@@ -45,7 +45,7 @@ The navigation on the website is created automatically based on the hierarchy of
 
 ## Manage webpage
 
-1.  [Edit the portal](edit.md) to open it in the maker experience.  
+1.  [Edit the portal](manage-existing-portals.md#edit) to open it in the maker experience.  
 
 2.  Select **Pages** ![pages icon](media/pages-icon.png "Pages icon") from the toolbelt on the left side of the screen.  
 
