@@ -17,7 +17,7 @@ You can edit the built-in templates by using the code editor. The following temp
 
 To open a template in code editor:
 
-1.  [Edit the portal](edit.md) to open it in the maker experience.  
+1.  [Edit the portal](manage-existing-portals.md#edit) to open it in the maker experience.  
 
 2.  Select **Templates** ![templates icon](media/templates-icon.png "Templates icon") from the toolbelt on the left side of the screen. The available templates are displayed.  
 
