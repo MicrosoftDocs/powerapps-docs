@@ -17,7 +17,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Create a report using the report wizard| s
+# Create a report using the Report Wizard
 
 [!INCLUDE[cc-applies-to-update-9-0-0](../includes/cc_applies_to_update_9_0_0.md)]
 
@@ -28,3 +28,10 @@ All reports that are created using the Report Wizard are Fetch-based reports. No
 ## Create a new report
 
 1. From the site map, go to **Reports**.
+2. Select **New** on the command bar.
+
+  > [!div class="mx-imgBorder"]
+  > ![Create a new report](media/newport.png "Create a new report")
+  
+3.  A pop-up will appear. In the Report Type drop-down, leave the default to Report Wizard Report. Select the Report Wizard button.
+ 
