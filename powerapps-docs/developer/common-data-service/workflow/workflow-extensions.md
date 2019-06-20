@@ -400,6 +400,44 @@ If you make changes that include significant changes to public classes or method
 
 When all processes are converted to use the new assembly, you can use the Plug-in Registration tool to Unregister the assembly, so it will no longer be available. More information: [Unregister components](../register-plug-in.md#unregister-components)
 
+## Performance Guidance
+
+Performance considerations for your workflow extensions are the same as for ordinary plug-ins.  More information: [Performance considerations](../write-plug-in.md#performance-considerations)
+
+Unlike an ordinary plug-in, with workflow extensions you do not have the opportunity to explicitly register your code for a specific step. This means you don't control whether the code in your workflow extension will run synchronously or asynchronously. Particular care must be considered for code that runs synchronously because it will directly impact the application user's experience.
+
+As re-usable components, workflow extensions can be added to any workflow or custom action. The workflow may be configured as a *real-time* workflow, which means it will run synchronously. Custom actions are always synchronous, but they do not participate in a transaction unless they have **Enable rollback** set.
+
+> [!IMPORTANT]
+> When your workflow extension is used in a synchronous workflow or a custom action the time spent running the code directly impacts the user's experience. For this reason, workflow extensions should require no more than two seconds to complete when used synchronously. If your extension requires more time than this, you should document this and discourage use of the extension in synchronous workflows or custom actions.
+
+You should also be aware that in a synchronous workflow or a custom action that that participates in the transaction, any error thrown by your workflow extension will cause the entire transaction to rollback, which is a very expensive operation that can impact performance.
+
+You can use the value in the <xref:Microsoft.Xrm.Sdk.Workflow.IWorkflowContext>.<xref:Microsoft.Xrm.Sdk.Workflow.IWorkflowContext.WorkflowMode> property to determine if the plug-in is running synchronously.
+
+## Real-time workflow stages
+
+When a workflow extension is used in a real-time (syncronous) workflow it will be invoked in the event execution pipeline stages shown in the following table. For more information : [Event execution pipeline](../event-framework.md#event-execution-pipeline)
+
+|Message  |Stage  |
+|---------|---------|
+|**Create**|PostOperation|
+|**Delete**|PreOperation|
+|**Update**|PreOperation or <br /> PostOperation|
+
+You can use the value in the <xref:Microsoft.Xrm.Sdk.Workflow.IWorkflowContext>.<xref:Microsoft.Xrm.Sdk.Workflow.IWorkflowContext.StageName> property to detect the stage.
+
+For the **Update** operation, the stage is configurable using **Before** or **After** options in the workflow designer. More information: [Using real-time workflows](/flow/configure-workflow-steps#using-real-time-workflows)
+
+If your workflow extension depends on data passed in the execution context, the stage it runs in will control whether data is available in the <xref:Microsoft.Xrm.Sdk.InputParameters> and <xref:Microsoft.Xrm.Sdk.OutputParameters>.
+
+> [!NOTE]
+> We don't recommend including logic dependencies based on the <xref:Microsoft.Xrm.Sdk.InputParameters> and <xref:Microsoft.Xrm.Sdk.OutputParameters>. Workflow extensions should depend on the configured input and output parameters so that the person using the workflow extension can understand the expected behavior without having anything hidden from them.
+
+## Entity Images for workflow extensions
+
+There is no way to configure entity images for workflow extensions since you only register the assembly and the workflow activity runs in the context of the workflow. For  workflow extensions entity images are available using the key values `PreBusinessEntity` and `PostBusinessEntity` respectively for the pre and post entity images. More information: [Entity Images](../understand-the-data-context.md#entity-images)
+
 
 ### See also
 

@@ -168,11 +168,9 @@ When you define an entity image, you specify an entity alias value you can use t
 var oldAccountName = (string)context.PreEntityImages["a"]["name"];
 ```
 
-More information: [Define entity images](register-plug-in.md#define-entity-images)
+More information: [Define entity images](register-plug-in.md#define-entity-images) [Entity Images for workflow extensions](workflow/workflow-extensions.md#entity-images-for-workflow-extensions)
 
-### Entity Images for custom workflow activites
 
-There is no way to configure entity images for custom workflow activities since you only register the assembly and the workflow activity runs in the context of the workflow. For custom workflow activities entity images are available using the key values `PreBusinessEntity` and `PostBusinessEntity` respectively for the pre and post entity images.
 
 ### See also
 
