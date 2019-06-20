@@ -33,7 +33,7 @@ With embedded canvas apps, makers can bring the power of canvas apps to their mo
    > [!div class="mx-imgBorder"] 
    > ![Embedded canvas app in a model-driven app form](media/embed-canvas-app-in-form.png "Embedded canvas app in a model-driven app form")
 
-Canvas apps are embedded in model-driven forms in the same way other custom controls are added. An embedded canvas app includes rich data integration capabilities that bring in contextual data from the host model-driven form to the embedded canvas app. More information: [Create and add an embedded canvas app](embedded-canvas-app-create.md)
+Canvas apps are embedded in model-driven forms in the same way other custom controls are added. An embedded canvas app includes rich data integration capabilities that bring in contextual data from the host model-driven form to the embedded canvas app. More information: [Create an embedded canvas app](embedded-canvas-app-create.md)
 
 After you have added an embedded canvas app to your model-driven form, learn how to share your embedded canvas app with other users. More information: [Share an embedded canvas app](share-embedded-canvas-app.md).
 
@@ -43,7 +43,7 @@ For guidelines on working with embedded canvas apps as well as helpful tips to t
 [What are canvas apps in PowerApps?](../canvas-apps/getting-started.md) <br />
 [Add and configure a canvas-app control in PowerApps](../canvas-apps/add-configure-controls.md) <br />
 [Overview of canvas-app connectors for PowerApps](../canvas-apps/connections-list.md) <br />
-[Create and add an embedded canvas app](embedded-canvas-app-create.md) <br />
+[Create an embedded canvas app](embedded-canvas-app-create.md) <br />
 [Perform predefined actions on the host form from within an embedded canvas app](embedded-canvas-app-actions.md) <br />
 [Share an embedded canvas app](share-embedded-canvas-app.md) <br />
 [Guidelines on working with embedded canvas apps](embedded-canvas-app-guidelines.md)
