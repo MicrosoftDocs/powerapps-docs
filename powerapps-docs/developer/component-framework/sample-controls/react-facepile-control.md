@@ -44,7 +44,7 @@ Although the PowerApps host applications work on top of React, the version of Re
 
 This sample provides examples on how to add dependencies for third-party libraries and Office UI Fabric, showcasing how to utilize the Office UI Fabric components for React for UI and perform bi-directional data-binding between the PowerApps component framework and the React state model.
 
-The component sample consists of three Office UI Fabric components: a facepile, a slider, a checkbox, and a dropdown list. When you move the slider, the number of faces in the facepile changes. The checkbox controls whether the faces fade in and out or simply appear or disappear, and the options in the dropdown list control the size of the faces. If there is no value set, the number of faces defaults to 3.
+The component sample consists of three Office UI Fabric components: a facepile, a slider, a check box, and a drop-down list. When you move the slider, the number of faces in the facepile changes. The check box controls whether the faces fade in and out or simply appear or disappear, and the options in the drop-down list control the size of the faces. If there is no value set, the number of faces defaults to 3.
 
 - When the component is loaded, the slider is set to the bound attribute value. The `context.parameters.[property_name].attributes` property contains the associated metadata.
 - An event handler is passed in the React component's props; this will allow the React component to notify the host PowerApps component framework control that a value has changed. The event handler then determines if a call to the **notifyOutputEvents** method is necessary.
