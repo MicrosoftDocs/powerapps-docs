@@ -146,7 +146,7 @@ You can add or edit web resources on a form to make it more appealing or useful 
 You can add iFrames to a form to integrate content from another website within a form. To know more about the IFRAME properties, see [IFRAME properties](iframe-properties-legacy.md). 
   
 ## Edit navigation  
- Navigation within the form allows people to view lists of related records. Each entity relationship has properties to control whether it should be shown. More information: [Navigation Pane Item for Primary Entity ](../common-data-service/create-edit-1n-relationships-solution-explorer.md#navigation-pane-item-for-primary-entity)
+ Navigation within the form allows people to view lists of related records. Each entity relationship has properties to control whether it should be shown. More information: [Navigation Pane Item for Primary Entity](../common-data-service/create-edit-1n-relationships-solution-explorer.md#navigation-pane-item-for-primary-entity)
   
  Any entity relationships that are configured to be displayed can be overridden within the form editor.  
   
