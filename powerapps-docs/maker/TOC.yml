@@ -81,6 +81,8 @@
         href: ../user/work-with-business-processes.md
       - name: Use flows
         href: ../user/use-flows.md
+  - name: 'Use Dynamics 365 App for Outlook'
+    href: ../user/use-outlook-app.md
 - name: Create apps
   items:
   - name: Overview
@@ -981,6 +983,8 @@
       href: ./model-driven-apps/create-guided-help-learning-path.md      
   - name: Accessibility in PowerApps app designer
     href: ./model-driven-apps/Accessibility-app-designer-site-map-designer-my-apps-page.md
+  - name: Customize Dynamics 365 App for Outlook
+    href: ./model-driven-apps/app-for-outlook-customize.md
   - name: For developers
     href: ../developer/model-driven-apps/overview.md
     # href: ../developer/model-driven-apps/TOC.yml For authoring I find having developer content buried so deep is awkward

@@ -2,7 +2,7 @@
 title: " Event Framework (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Describes the event framework and information developers should know when working with it." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 05/25/2019
+ms.date: 06/18/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.topic: "article"
@@ -45,7 +45,27 @@ Generally, you can expect to find a message for most of the **Request* classes i
 
 Data about messages is stored in the [SdkMessage](reference/entities/sdkmessage.md) and [SdkMessageFilter](reference/entities/sdkmessagefilter.md) entities. The Plug-in registration tool will filter this information to only show valid messages.
 
-To verify if a message and entity combination supports execution of plug-ins using a database query, use Advanced Find or a community tool (e.g., [FetchXML Builder](http://fxb.xrmtoolbox.com)) to execute the following fetchXML query. When using Advanced Find, you must create the query interactively.
+To verify if a message and entity combination supports execution of plug-ins using a database query, you can use the following Web API query:
+
+```
+{{webapiurl}}sdkmessages?$select=name
+&$filter=isprivate eq false 
+and (name ne 'SetStateDynamicEntity' 
+and name ne 'RemoveRelated' 
+and name ne 'SetRelated' and 
+name ne 'Execute') 
+and sdkmessageid_sdkmessagefilter/any(s:s/iscustomprocessingstepallowed eq true 
+and s/isvisible eq true)
+&$expand=sdkmessageid_sdkmessagefilter($select=primaryobjecttypecode;
+$filter=iscustomprocessingstepallowed eq true and isvisible eq true)
+&$orderby=name
+```
+
+> [!TIP]
+> You can export this data to an Excel worksheet using this query and the instructions provided in this blog post: [Find Messages and entities eligible for plug-ins using the Common Data Service](https://powerapps.microsoft.com/en-us/blog/find-messages-and-entities-eligible-for-plug-ins-using-the-common-data-service/)
+
+
+You can also use the following FetchXML to retrieve this information. The [FetchXML Builder](http://fxb.xrmtoolbox.com) is a useful tool to execute this kind of query.
 
 ```xml
 <fetch>
