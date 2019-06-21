@@ -18,32 +18,35 @@ ms.assetid: e9a70a4c-71e6-4a06-bcc9-6da37cdf52c1
 
 [!INCLUDE [ilinkentityexposedexpression-description](includes/ilinkentityexposedexpression-description.md)]
 
+## Properties
+
 ## name
-The 'name' of the entity to link to.
+
+The `name` of the entity to link to.
 
 **Type**:  `string`
 
 ## from
 
-The 'from' attribute in the link-entity relationship.
+The `from` attribute in the link-entity relationship.
 
 **Type**:  `string`
 
 ## to
 
-The 'to' attribute in the link-entity relationship.
+The `to` attribute in the link-entity relationship.
 
 **Type**:  `string`
 
 ## linkType
 
-The 'type' of the link, referred by the link-entity attribute. '
+The `type` of the link, referred by the link-entity attribute. '
 
 **Type**:  `string`
 
 ## alias
 
-The 'alias' for the link-entity relationship.
+The `alias` for the link-entity relationship.
 
 **Type**:  `string`
 

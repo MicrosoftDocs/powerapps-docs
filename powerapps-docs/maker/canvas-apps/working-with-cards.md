@@ -152,6 +152,9 @@ To populate these controls with data, their properties can be driven from the pr
 | **InputText.Default** |**Parent.Default** |The text-input control initially shows the value of the field from the data source, as provided by the card's default value. |
 | **TextErrorMessage.Text** |**Parent.Error** |If a validation problem occurs, the card's **Error** property provides an appropriate error message. |
 
+> [!NOTE]
+> The **Parent.Error** property is an output-only property that you can't set by using a formula. Therefore, this property won't appear in list of properties near the upper-left corner or in the **Properties** or **Advanced** tabs near the right edge. The formula bar suggests this property if you're writing a formula that could reference the property.
+
 To pull information out of these controls and push it back into the data source, we have the following key formulas:
 
 | Control name | Formula | Description |
