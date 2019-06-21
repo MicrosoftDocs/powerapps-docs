@@ -52,9 +52,9 @@ The following table lists the OData Entity Data Model (EDM) data type mappings w
 
 ### OData EDM data types that are not supported for mapping with virtual entities 
 
-- `Edm.Binary `
+- `Edm.Binary`
 - `Edm.Time` 
-- `Edm.Float `
+- `Edm.Float`
 - `Edm.Single` 
 - `Edm.Int16` 
 - `Edm.Byte` 
