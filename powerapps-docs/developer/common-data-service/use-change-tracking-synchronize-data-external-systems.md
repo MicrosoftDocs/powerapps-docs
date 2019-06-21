@@ -22,7 +22,7 @@ The change tracking feature in Common Data Service provides a way to keep the da
 <a name="BKMK_enable"></a>   
 ## Enable change tracking for an entity  
 
- Before retrieving the changes for an entity, make sure that the change tracking feature is enabled for that entity. This feature can be enabled by using the customization user interface (UI) or programmatically by setting the <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.ChangeTrackingEnabled> property to `True`. Annotation `Org.OData.Capabilities.V1.ChangeTracking ` gets added to entity sets that have change tracking enabled. To see annotations in entity metadata, do 
+ Before retrieving the changes for an entity, make sure that the change tracking feature is enabled for that entity. This feature can be enabled by using the customization user interface (UI) or programmatically by setting the <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.ChangeTrackingEnabled> property to `True`. Annotation `Org.OData.Capabilities.V1.ChangeTracking` gets added to entity sets that have change tracking enabled. To see annotations in entity metadata, do 
 
  ```http 
  GET [Organization URI]/api/data/v9.0/$metadata?annotations=true

@@ -209,7 +209,7 @@ In Visual Studio, press **F6** to build the assembly. Verify that it compiles wi
 1. Click **OK** to close the **Create Strong Name Key** dialog.
 1. In the project properties **Build** tab, verify that the **Configuration** is set to **Debug**.
 1. Press **F6** to build the plug-in again.
-1. Using windows explorer, find the built plug-in at:` \bin\Debug\BasicPlugin.dll`.
+1. Using windows explorer, find the built plug-in at: `\bin\Debug\BasicPlugin.dll`.
 
 > [!NOTE]
 > Build the assembly using **Debug** configuration because you will use the Plug-in profiler to debug it in a later tutorial.   Before you include a plug-in with your solution, you should build it using the release configuration.

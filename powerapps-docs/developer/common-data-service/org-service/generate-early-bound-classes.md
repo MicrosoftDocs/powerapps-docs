@@ -37,7 +37,7 @@ The classes created by the code generation tool are designed to be built into a 
 The following lists assemblies that must be referenced in your project when you use the generated code file.  
 
 - `Microsoft.Crm.Sdk.Proxy.dll`  
-- `Microsoft.Xrm.Sdk.dll ` 
+- `Microsoft.Xrm.Sdk.dll` 
 
 These assemblies are part of the [Microsoft.CrmSdk.CoreAssemblies](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreAssemblies/) NuGet package. Use this Nuget packages to add these assemblies to your Visual Studio project.
 
