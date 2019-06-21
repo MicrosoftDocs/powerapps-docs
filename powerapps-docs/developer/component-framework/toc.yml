@@ -1,0 +1,275 @@
+- name: "PowerApps component framework"
+  items: 
+  - name: Overview
+    href: overview.md
+  - name: "What are custom components?"
+    href: custom-controls-overview.md
+  - name: Get tooling
+    href: get-powerapps-cli.md
+  - name: Tutorial
+    items:
+    - name: Implement sample component
+      href: implementing-controls-using-typescript.md
+  - name: How-to
+    items:
+    - name: Create and build a custom component 
+      href: create-custom-controls-using-pcf.md
+    - name: Debug a custom component
+      href: debugging-custom-controls.md
+    - name: Package a custom component
+      href: import-custom-controls.md
+    - name: Add components to entities or fields
+      href: add-custom-controls-to-a-field-or-entity.md
+    - name: Update existing custom components
+      href: updating-existing-controls.md
+    - name: Publish custom components on AppSource
+      href: publish-components-app-source.md
+  - name: Limitations
+    href: limitations.md
+  - name: FAQ
+    href: faq.md
+  - name: Sample components
+    items: 
+    - name: Increment component
+      href: sample-controls/increment-control.md
+    - name: Linear input component
+      href: sample-controls/linear-input-control.md
+    - name: Localization API component
+      href: sample-controls/localization-api-control.md
+    - name: Angular Flip component
+      href: sample-controls/angular-flip-control.md
+    - name: Control State API component
+      href: sample-controls/control-state-api.md
+    - name: Data Set Grid component
+      href: sample-controls/data-set-grid-control.md
+    - name: Formatting API component
+      href: sample-controls/formatting-api-control.md
+    - name: IFRAME component
+      href: sample-controls/iframe-control.md
+    - name: Image upload component
+      href: sample-controls/image-upload-control.md
+    - name: Map component
+      href: sample-controls/map-control.md
+    - name: Navigation API component
+      href: sample-controls/navigation-api-control.md
+    - name: React Facepile component
+      href: sample-controls/react-facepile-control.md
+    - name: Table component
+      href: sample-controls/table-control.md
+    - name: Table grid component
+      href: sample-controls/table-grid-control.md
+    - name: Web API component
+      href: sample-controls/webapi-control.md
+  - name: Reference
+    items:
+    - name: PowerApps component framework 
+      href: reference/index.md
+      items: 
+      - name: Client
+        href: reference/client.md
+        items:
+        - name: getClient
+          href: reference/client/getclient.md
+        - name: getFormFactor
+          href: reference/client/getformfactor.md
+        - name: isOffline
+          href: reference/client/isoffline.md      
+      - name: Column
+        href: reference/column.md
+      - name: ConditionExpression
+        href: reference/conditionexpression.md
+      - name: Context
+        href: reference/context.md
+      - name: Control
+        href: reference/control.md
+        items:
+        - name: destroy
+          href: reference/control/destroy.md
+        - name: getOutputs
+          href: reference/control/getOutputs.md
+        - name: init
+          href: reference/control/init.md
+        - name: updateView
+          href: reference/control/updateview.md
+      - name: DataSet
+        href: reference/dataset.md
+        items:
+        - name: clearSelectedRecordIds
+          href: reference/dataset/clearselectedrecordids.md
+        - name: getSelectedRecordIds
+          href: reference/dataset/getselectedrecordids.md
+        - name: getTargetEntityType
+          href: reference/dataset/gettargetentitytype.md
+        - name: getTitle
+          href: reference/dataset/gettitle.md
+        - name: getViewId
+          href: reference/dataset/getviewid.md
+        - name: openDatasetItem
+          href: reference/dataset/opendatasetitem.md
+        - name: refresh
+          href: reference/dataset/refresh.md
+        - name: setSelectedRecordIds
+          href: reference/dataset/setselectedrecordids.md
+      - name: DateFormattingInfo
+        href: reference/dateformattinginfo.md
+      - name: EntityReference
+        href: reference/entityreference.md
+      - name: Factory
+        href: reference/factory.md
+        items:
+        - name: getPopupService
+          href: reference/factory/getpopupservice.md
+        - name: requestRender
+          href: reference/factory/requestrender.md
+      - name: Linking
+        href: reference/linking.md
+        items:
+        - name: addLinkedEntity
+          href: reference/linking/addlinkedentity.md
+        - name: getLinkedEntity
+          href: reference/linking/getlinkedentities.md
+      - name: Formatting
+        href: reference/formatting.md
+        items:
+        - name: formatCurrency
+          href: reference/formatting/formatcurrency.md
+        - name: formatDateAsFilterStringInUTC
+          href: reference/formatting/formatdateasfilterstringinutc.md
+        - name: formatDateLong
+          href: reference/formatting/formatdatelong.md
+        - name: formatDateLongAbbreviated
+          href: reference/formatting/formatdatelongabbreviated.md
+        - name: formatDateShort
+          href: reference/formatting/formatdateshort.md
+        - name: formatDateYearMonth
+          href: reference/formatting/formatdateyearmonth.md
+        - name: formatDecimal
+          href: reference/formatting/formatdecimal.md
+        - name: formatInteger
+          href: reference/formatting/formatinteger.md
+        - name: formatLanguage
+          href: reference/formatting/formatlanguage.md
+        - name: formatTime
+          href: reference/formatting/formattime.md
+        - name: getWeekOfYear
+          href: reference/formatting/getweekofyear.md
+      - name: Mode
+        href: reference/mode.md
+        items:
+        - name: setControlState
+          href: reference/mode/setcontrolstate.md
+        - name: setFullScreen
+          href: reference/mode/setfullscreen.md
+        - name: trackContainerResize
+          href: reference/mode/trackcontainerresize.md
+      - name: Navigation
+        href: reference/navigation.md
+        items:
+        - name: openAlertDialog
+          href: reference/navigation/openalertdialog.md
+        - name: openConfirmDialog
+          href: reference/navigation/openconfirmdialog.md
+        - name: openErrorDialog
+          href: reference/navigation/openerrordialog.md
+        - name: openFile
+          href: reference/navigation/openfile.md
+        - name: openForm
+          href: reference/navigation/openform.md
+        - name: openUrl
+          href: reference/navigation/openurl.md
+        - name: openWebResource
+          href: reference/navigation/openwebresource.md
+      - name: NumberFormattingInfo
+        href: reference/numberformattinginfo.md
+      - name: Paging
+        href: reference/paging.md
+        items:
+        - name: loadNextPage
+          href: reference/paging/loadnextpage.md
+        - name: loadPreviousPage
+          href: reference/paging/loadpreviouspage.md
+        - name: reset
+          href: reference/paging/reset.md
+        - name: setpageSize
+          href: reference/paging/setpagesize.md
+      - name: Popup
+        href: reference/popup.md
+      - name: PopupService
+        href: reference/popupservice.md
+        items:
+        - name: closePopup
+          href: reference/popupservice/closepopup.md
+        - name: createPopup
+          href: reference/popupservice/createpopup.md
+        - name: deletePopup
+          href: reference/popupservice/deletepopup.md
+        - name: getPopupsId
+          href: reference/popupservice/getpopupsid.md
+        - name: openPopup
+          href: reference/popupservice/openpopup.md
+        - name: setPopupsId
+          href: reference/popupservice/setpopupsid.md
+        - name: updatePopup
+          href: reference/popupservice/updatepopup.md
+      - name: Resources
+        href: reference/resources.md
+        items:
+        - name: getResource
+          href: reference/resources/getresource.md
+        - name: getString
+          href: reference/resources/getstring.md
+      - name: SortStatus
+        href: reference/sortstatus.md
+      - name: UserSettings
+        href: reference/usersettings.md
+      - name: Utility
+        href: reference/utility.md
+        items:
+        - name: getEntityMetadata
+          href: reference/utility/getentitymetadata.md
+        - name: hasEntityPrivilege
+          href: reference/utility/hasentityprivilege.md
+        - name: lookupObjects
+          href: reference/utility/lookupobjects.md
+      - name: WebApi
+        href: reference/webapi.md
+        items:
+        - name: createRecord
+          href: reference/webapi/createrecord.md
+        - name: deleteRecord
+          href: reference/webapi/deleterecord.md
+        - name: retrieveMultipleRecords
+          href: reference/webapi/retrievemultiplerecords.md
+        - name: retrieveRecord
+          href: reference/webapi/retrieverecord.md
+        - name: updateRecord
+          href: reference/webapi/updaterecord.md
+    - name: Manifest schema reference
+      href: manifest-schema-reference/index.md
+      items:
+      - name: code
+        href: manifest-schema-reference/code.md
+      - name: control
+        href: manifest-schema-reference/control.md
+      - name: css
+        href: manifest-schema-reference/css.md
+      - name: data-set
+        href: manifest-schema-reference/data-set.md
+      - name: html
+        href: manifest-schema-reference/html.md
+      - name: img
+        href: manifest-schema-reference/img.md
+      - name: manifest
+        href: manifest-schema-reference/manifest.md
+      - name: property
+        href: manifest-schema-reference/property.md
+      - name: property-set
+        href: manifest-schema-reference/property-set.md
+      - name: resources
+        href: manifest-schema-reference/resources.md
+      - name: resx
+        href: manifest-schema-reference/resx.md
+      - name: type
+        href: manifest-schema-reference/type.md
+      - name: type-group
+        href: manifest-schema-reference/type-group.md

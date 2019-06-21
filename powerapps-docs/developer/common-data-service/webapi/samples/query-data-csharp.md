@@ -3,7 +3,6 @@ title: "Web API Query Data Sample (C#) (Common Data Service)| Microsoft Docs"
 description: "This sample demonstrates how to perform basic query requests using the Common Data Service Web API and C#"
 ms.custom: ""
 ms.date: 1/09/2019
-ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -13,6 +12,7 @@ applies_to:
 ms.assetid: 91183105-bc99-4e34-a1b3-1085e1a51f82
 caps.latest.revision: 16
 author: "brandonsimons" # GitHub ID
+ms.reviewer: "susikka"
 ms.author: "jdaly"
 search.audienceType: 
   - developer
@@ -35,7 +35,7 @@ Prerequisites for all Common Data Service Web API C# samples are detailed in the
   
 <a name="bkmk_runSample"></a>
 
-## Hpw to run this sample
+## How to run this sample
   
 Go to [Web API Query Data Sample (C#)](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/webapi/C%23), clone or download the samples repository, and extract its contents into a local folder. This folder should contain the following files:  
   

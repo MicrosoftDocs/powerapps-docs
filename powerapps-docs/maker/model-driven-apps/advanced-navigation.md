@@ -6,7 +6,7 @@ author: Mattp123
 ms.author: matp
 manager: kvivek
 ms.custom: ""
-ms.date: 04/11/2019
+ms.date: 05/14/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -64,11 +64,11 @@ Use the settings area to configure environment settings, activate or deactivate 
 First, see if the setting you need is in the ![Settings icon](media/powerapps-gear.png)  > **Advanced customizations** menu.
 
 To find settings not available from **Advanced customizations**:  
-1.	Access your environment from the Dynamics 365 Administration Center. For environments located in North America go to [https://port.crm.dynamics.com/G/instances/InstancePicker.aspx](https://port.crm.dynamics.com/G/instances/InstancePicker.aspx). For other locations, see Direct sign in to the Dynamics 365 Administration Center.
-2.	Select the environment you want, and then select **Open**.
+1.	From a PowerApps model-driven app, select **Settings** ![Settings](../model-driven-apps/media/powerapps-gear.png) on the app toolbar, and then select **Advanced Settings**. 
+2.	Select **Settings**, and then select the settings area that you want.
 
     > [!div class="mx-imgBorder"] 
-    > ![Open environment](media/open-environment.png)
+    > ![Settings areas](media/settings-areas.png) 
 
 ## See also
 [Create or edit a model-driven app by using the app designer](create-edit-app.md)

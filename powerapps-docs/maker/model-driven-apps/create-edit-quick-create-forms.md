@@ -2,7 +2,7 @@
 title: "Create or edit model-driven app quick create forms in PowerApps | MicrosoftDocs"
 description: "Learn how to create or edit a quick create form"
 ms.custom: ""
-ms.date: 01/25/2019
+ms.date: 05/14/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -108,6 +108,63 @@ If you add a composite field to a quick create form, it will be displayed as sep
 4.  When you are finished, select **Save**.  
   
 5.  Select **Publish** to see the modified form in the application.  
+
+## Allow Quick Create property form behavior for activities
+Introduced in the 9.1.0.2007 update, the **Allow Quick Create** property can be enabled or disabled for all standard activities except recurring appointments. This property lets you change the form that is displayed by default for most activities. By default, the **Allow Quick Create** property is enabled and the quick create form is the form displayed in the app areas and activity entities that support it. 
+
+> [!div class="mx-imgBorder"] 
+> ![](media/allow-quick-create.png "Allow Quick Create property on appointment entity")
+
+
+### Unified interface client form display behavior
+The following table indicates what form is displayed by default when the **Allow Quick Create** property is *enabled* in the unified interface client.
+ 
+|Location where form is accessed  |Form displayed  |
+|---------|---------|
+|Specific activity associated grid  | Quick create      |
+|Specific activity sub grid   |  Quick create     |
+|Activities (activitypointer) grid     | Quick create     |
+|Activities (activitypointer) associated grid   | Quick create    |
+|Activities (activitypointer) sub grid  | Quick create    |
+|Global command bar + button<sup>1</sup>    | Quick create    |
+|Timeline wall   | Quick create    |
+|Activities (activitypointer) grid   | Main   |
+|Specific activity grid    | Main   |
+
+<sup>1</sup>Activities appear in the global **Create** or **+ New** buttons when the **Allow Quick Create** property is enabled. In this case, the quick create form is used if it exists or the main form if it does not. If **Allow Quick Create** is disabled, the entry for the entity will not appear.
+
+### Classic web client form display behavior
+
+The following table indicates what form is displayed by default when the **Allow Quick Create** property is *enabled* in the classic web client.
+
+|Location where form is accessed  |Form displayed  |
+|---------|---------|
+|Specific activity associated grid  | Quick create      |
+|Specific activity sub grid   |  Quick create     |
+|Activities (activitypointer) grid     | Main     |
+|Activities (activitypointer) associated grid   | Main    |
+|Activities (activitypointer) sub grid  | Main    |
+|Global command bar + button    | Main    |
+|Specific activity grid   | Main    |
+
+ #### Classic web client social pane behavior
+ 
+The social pane is a special case because it doesn't use the **Allow Quick Create** property but uses different forms for different activity entities as indicated here.
+
+
+|Activity  |Form displayed  |
+|---------|---------|
+|Task     | Quick create    |
+|Phone Call   | Quick create     |
+|Email   | Main     |
+|Appointment  | Main     |
+|Custom activity     | Main      |
+
+### Solution import Allow Quick Create value behavior
+
+When you import a solution from version 8.2 regardless of the value of the **Allow Quick Create** property in the solution, the following entities will be reset to the default form display value and the main form will display: task, phone call, email, and appointment. In this situation, you'll need to reset the **Allow Quick Create** option back to *enabled* for those activity entities after the import.
+ 
+If there is a customization made in a version 9.0 solution to entities where **Allow Quick Create** is enabled, the value will not change after import.  However, if you have set the **Allow Quick Create** option to *disabled* for the task, phone call, email, and appointment entities, the value will be overwritten to enabled. In this situation, you'll need to reset the **Allow Quick Create** option back to disabled for those activity entities after the import. 
   
-### Next steps  
+### See also  
 [Overview of the form editor user interface](form-editor-user-interface-legacy.md)

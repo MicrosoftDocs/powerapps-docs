@@ -3,7 +3,6 @@ title: "Web API Basic Operations Sample (Client-side JavaScript) (Common Data Se
 description: "This sample demonstrates how to perform basic CRUD (create, retrieve, update, and delete) and association and dissociation operations on entity instances using client-side JavaScript and the Common Data Service Web API"
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -14,6 +13,7 @@ ms.assetid: 11847c67-2807-4cb5-998b-90f45d3d98a7
 caps.latest.revision: 27
 author: "brandonsimons" # GitHub ID
 ms.author: "jdaly"
+ms.reviewer: "susikka"
 manager: "amyla"
 search.audienceType: 
   - developer

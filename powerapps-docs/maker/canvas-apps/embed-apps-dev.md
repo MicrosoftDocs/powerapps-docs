@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 10/20/2017
+ms.date: 06/21/2019
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -38,10 +38,9 @@ https://apps.powerapps.com/play/[AppID]?source=iframe
 > [!NOTE]
 > The URI format has changed from https://web.powerapps.com/webplayer to https://apps.powerapps.com/play as of August 2019. Please update any embedded iframes to use the new URI format. References to the previous format will be redirected to the new URI to ensure compatibility.
 >
->Previous format: 
-
->https://web.powerapps.com/webplayer/iframeapp?source=iframe
->&appId=/providers/Microsoft.PowerApps/apps/[AppID]
+> Previous format:
+> 
+> https://web.powerapps.com/webplayer/iframeapp?source=iframe&appId=/providers/Microsoft.PowerApps/apps/[AppID]
 
 The only thing you have to do is substitute the ID of your app for [AppID] in the URI (including '[' & ']'). We'll show you how to get that value shortly, but first here are all the parameters available in the URI:
 
@@ -68,7 +67,7 @@ The app ID is available on powerapps.com. For the app you want to embed:
 ## Embed your app in a website
 Embedding your app is now as simple as adding the iframe to the HTML code for your site (or any other service that supports iframes, such as Power BI or SharePoint):
 
-```
+```html
 <iframe width="[W]" height="[H]" src="https://apps.powerapps.com/play/[AppID]?source=website&screenColor=rgba(165,34,55,1)" allow="geolocation; microphone; camera"/>
 ```
 

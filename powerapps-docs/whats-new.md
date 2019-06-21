@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.reviewer: 
-ms.date: 01/04/2019
+ms.date: 06/17/2019
 ms.author: kvivek
 search.audienceType: 
   - maker
@@ -30,11 +30,11 @@ To know more about how to browse information in the weekly release notes, read t
 > [!NOTE]
 > Releases are rolled out over several days. New or updated functionality might not appear immediately.
 
-## Release notes
+## Release plan
 
 For information about new features releasing over the next few months that you can use for planning, see:
-- [October 2018 release notes](https://docs.microsoft.com/business-applications-release-notes/October18/powerapps/planned-features)
 - [April 2019 release notes](https://docs.microsoft.com/business-applications-release-notes/April19/microsoft-powerapps/planned-features)
+- [2019 release wave 2 plan](https://docs.microsoft.com/power-platform-release-plan/2019wave2/microsoft-powerapps/planned-features)
 
 ## Known limitations
 
