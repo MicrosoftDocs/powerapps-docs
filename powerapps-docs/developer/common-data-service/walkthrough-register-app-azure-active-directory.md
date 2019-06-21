@@ -3,8 +3,7 @@ title: "Walkthrough: Register an app with Azure Active Directory (Common Data Se
 description: "This walkthrough describes how to register an application with Azure Active Directory so that it can connect to the Common Data Service environment, authenticate using OAuth, and access the web services."
 keywords: ""
 ms.date: 04/01/2019
-ms.service:
-  - powerapps
+ms.service: powerapps
 ms.custom:
   - ""
 ms.topic: article

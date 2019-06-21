@@ -3,8 +3,7 @@ title: "Walkthrough: Update a service endpoint imported from a solution (Common 
 description: "The walkthrough demonstrates updating a service endpoint imported from a solution."
 keywords: ""
 ms.date: 10/31/2018
-ms.service:
-  - powerapps
+ms.service: powerapps
 ms.custom:
   - ""
 ms.topic: article
