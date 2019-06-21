@@ -3,7 +3,6 @@ title: "Retrieve an entity using the Web API (Common Data Service)| Microsoft Do
 description: "Read how to form a GET request using the Common Data Service Web API to retrieve data for an entity specified as the resource with a unique identifier"
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -14,7 +13,8 @@ ms.assetid: abae4614-9e03-45e7-94fa-9e6e7225ece5
 caps.latest.revision: 21
 author: "brandonsimons" # GitHub ID
 ms.author: "jdaly"
-manager: "amyla"
+ms.reviewer: "susikka"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 

@@ -2,8 +2,8 @@
 title: "Workflow Extensions (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "You can extend the options available within the designer for workflows. These extensions are added by adding an assembly that contains a class the extends the CodeActivity class. These extensions are commonly called workflow assemblies or workflow activities." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
-ms.reviewer: ""
+ms.date: 06/12/2019
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
@@ -22,8 +22,11 @@ You can extend the options available within the designer for workflows used in C
 You can use these custom extensions within the designer used for workflows, custom actions, and dialogs.
 
 > [!IMPORTANT]
-> Whenever possible, you should first consider applying one of the several declarative options to define business logic. More information: [Apply business logic in Common Data Service](../../../maker/common-data-service/cds-processes.md)<br/><br/>
+> Whenever possible, you should first consider applying one of the several declarative options to define business logic. More information: [Apply business logic in Common Data Service](../../../maker/common-data-service/cds-processes.md)
+> 
 > Use workflow extensions when a declarative process doesn’t meet your requirement.
+> 
+> This content is for Common Data Service workflow assemblies and applies for Dynamics 365 for Customer Engagement apps (online) as well. Options for on-premises deployments of Dynamics 365 for Customer Engagement apps are described here: [On-premises options](/dynamics365/customer-engagement/developer/custom-workflow-activities-workflow-assemblies#on-premises-options).
 
 ## When to create a workflow extension
 
@@ -279,6 +282,9 @@ protected override void Execute(CodeActivityContext context)
 
 ...
 ```
+
+> [!IMPORTANT]
+> You should not include any logic dependencies based on the context information. When your custom workflow activity is used in a workflow, all the relevant input parameters should be set within the designer. The output value or behavior of the custom activity should always be determined solely by the input parameters so that there are no hidden factors that change the behavior. When someone uses the custom activity in the designer, the behavior should always be predictable.
 
 ### Use the Organization Service
 

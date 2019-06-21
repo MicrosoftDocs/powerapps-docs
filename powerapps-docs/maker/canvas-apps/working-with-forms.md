@@ -335,12 +335,16 @@ The **[UpdateContext](functions/function-updatecontext.md)** function creates th
 
 The formula for the **[Items](controls/properties-core.md)** property of the **[Gallery](controls/control-gallery.md)** control uses this context variable, along with the text in the **TextSearchBox1** control:
 
-    Gallery1.Items = Sort( If( IsBlank(TextSearchBox1.Text),
-                               Assets,
-                               Filter( Assets,
-                                       TextSearchBox1.Text in Text(ApproverEmail) ) ),
-                            ApproverEmail,
-                            If(SortDescending1, Descending, Ascending) )
+```powerapps-dot
+Sort( 
+	If( IsBlank(TextSearchBox1.Text),
+		Assets,
+        Filter( Assets, TextSearchBox1.Text in Text(ApproverEmail) ) 
+	),
+	ApproverEmail,
+    If(SortDescending1, Descending, Ascending) 
+)
+```
 
 Let's break this down:
 

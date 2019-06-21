@@ -24,7 +24,6 @@ search.app:
 ---
 
 # Share an embedded canvas app
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 This topic explains how to share an embedded canvas app that you have already created.
 

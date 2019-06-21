@@ -62,7 +62,18 @@
         "maker/TOC.yml": "",
         "maker/dev-community-plan.md": "",
         "maker/index.md": "",
+        "developer/control-framework/TOC.yml": "",
         "maker/signup-for-powerapps.md": ""
+      },
+      "featureFlags": {
+        "**/*.md": [
+          "show_learn_banner"
+        ]
+      },
+      "learn_banner_products": {
+        "**/*.md": [
+          "powerapps"
+        ]
       }
     },
     "template": [],

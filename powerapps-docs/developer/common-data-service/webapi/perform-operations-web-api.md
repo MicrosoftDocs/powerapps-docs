@@ -2,8 +2,7 @@
 title: "Perform operations using the Web API (Common Data Service)| Microsoft Docs"
 description: "Common Data Service Web API provides a modern, RESTful web service that you can use to interact with data in Common Data Service using a wide variety of platforms, programming languages and devices. Read about the operations that can be performed using the Web API"
 ms.custom: ""
-ms.date: 10/31/2018
-ms.reviewer: ""
+ms.date: 04/22/2019
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -13,8 +12,8 @@ applies_to:
 ms.assetid: b7ae4dd3-e9ee-45cc-a345-2fb7be5eddc6
 caps.latest.revision: 12
 author: "brandonsimons" # GitHub ID
-ms.author: "jdaly"
-manager: "amyla"
+ms.author: "susikka"
+manager: "shujoshi"
 search.audienceType: 
   - developer
 search.app: 
@@ -24,6 +23,10 @@ search.app:
 # Perform operations using the Web API
 
 The Web API provides a modern, RESTful web service you can use to interact with data in Common Data Service using a wide variety of platforms, programming languages and devices.
+
+> [!NOTE]
+> Information under this section is also applicable to the Dynamics 365 for Customer Engagement apps users (online and on-premises). 
+
 
 ## In this section
 

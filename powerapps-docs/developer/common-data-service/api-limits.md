@@ -21,6 +21,8 @@ We limit the number of API requests made by each user, per organization instance
 
 The limit will help ensure that users running applications cannot interfere with each other based on resource constraints. The limits will not affect normal users of the platform. Only applications that perform a large number of API requests may be affected. The limit will help provide a level of protection from random and unexpected surges in request volumes that threaten the availability and performance characteristics of the Common Data Service platform.
 
+Since plug-ins and custom workflow activities execute on the server independent of a logged on user, API calls made from plug-in code will not count against this external API request limit.
+
 If your application has the potential to exceed the limit, please consider the guidance given in the [What should I do if my application exceeds the limit?](#what-should-i-do-if-my-application-exceeds-the-limit) section below.
 
 ## What happens when the limit is exceeded?
