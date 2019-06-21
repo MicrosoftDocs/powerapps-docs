@@ -3,10 +3,6 @@ title: Use environment variables in solutions | MicrosoftDocs
 description: "Use environment variables to migrate application configuration data in solutions."
 Keywords: environment variables, variables, model-driven app, configuration data
 author: caburk
-applies_to: 
-  - "Dynamics 365 (online)"
-  - "Dynamics 365 Version 9.x"
-  - "powerapps"
 ms.author: caburk
 manager: kvivek
 ms.date: 06/27/2019
