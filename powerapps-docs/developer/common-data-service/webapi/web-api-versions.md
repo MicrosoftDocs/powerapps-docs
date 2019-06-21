@@ -3,7 +3,6 @@ title: "Common Data Service Web API Versions (Common Data Service)| Microsoft Do
 description: "Read how versioning of Common Data Service Web API works. Common Data Service Web API versions support version specific differences in the same environment which is different from the behavior in the v8.x releases in which new capabilities were additive"
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -14,6 +13,7 @@ ms.assetid: d9bb79a5-2bfa-4ffe-8cb4-60f192359489
 caps.latest.revision: 34
 author: "brandonsimons" # GitHub ID
 ms.author: "jdaly"
+ms.reviewer: "susikka"
 search.audienceType: 
   - developer
 search.app: 

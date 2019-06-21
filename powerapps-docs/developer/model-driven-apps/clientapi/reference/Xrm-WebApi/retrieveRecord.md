@@ -85,7 +85,7 @@ Retrieves the name and revenue of an account record wwith record ID = 5531d753-9
 ```JavaScript
 Xrm.WebApi.retrieveRecord("account", "a8a19cdd-88df-e311-b8e5-6c3be5a8b200", "?$select=name,revenue").then(
     function success(result) {
-        console.log(`Retrieved values: Name: ${result.name}, Revenue: ${result.revenue}`);
+        console.log("Retrieved values: Name: " + result.name + ", Revenue: " + result.revenue);
         // perform operations on record retrieval
     },
     function (error) {
@@ -106,7 +106,8 @@ The above example displays the following in your console; you might see other va
 ```JavaScript
 Xrm.WebApi.retrieveRecord("account", "a8a19cdd-88df-e311-b8e5-6c3be5a8b200", "?$select=name&$expand=primarycontactid($select=contactid,fullname)").then(
     function success(result) {
-        console.log(`Retrieved values: Name: ${result.name}, Primary Contact ID: ${result.primarycontactid.contactid}, Primary Contact Name: ${result.primarycontactid.fullname}`);
+        console.log("Retrieved values: Name: " + result.name + ", Primary Contact ID: " + result.primarycontactid.contactid +
+                ", Primary Contact Name: " + result.primarycontactid.fullname);
         // perform operations on record retrieval
     },
     function (error) {

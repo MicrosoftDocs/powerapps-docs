@@ -67,7 +67,7 @@ To follow this topic, you must switch to an [environment](../canvas-apps/working
 
 1. In the **Primary name field** list, click or tap **ContactName**, and then click or tap **Next** in the lower-right corner.
 
-    You can specify a different primary-name field, map a different column in the source table to each field in the entity that you're creating, or both. To follow this tutorial exactly, leave the default column mapping.
+    You can specify a different primary-name field, map a different column in the source table to each field in the entity that you're creating, or both. You can also specify whether Text columns in your query output should be created as either Multiline Text or Single-Line Text in the Common Data Service. To follow this tutorial exactly, leave the default column mapping.
 
 1. When the **Load status** is **Completed**, select **Done** in the lower-right corner.
 
@@ -87,3 +87,6 @@ If you select **Load to existing entity**, you can specify an entity into which 
 We're excited about this functionality and eager to hear your feedback. Please [send us your suggestions and feedback](https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1) about this feature!
 
 If an [error message about permissions](data-platform-cds-newentity-troubleshooting-mashup.md) appears, talk to your administrator.
+
+> [!WARNING]
+> There is a limit of 500,000 rows per run and per project that can be loaded using this feature.

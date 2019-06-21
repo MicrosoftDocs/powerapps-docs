@@ -61,8 +61,8 @@ In the simplest case, one control fills an entire screen. To create this effect,
 
 | Property      | Value            |
 |--------|---------------|
-| **X**      | 0             |
-| **Y**      | 0             |
+| **X**      | `0`             |
+| **Y**      | `0`             |
 | **Width**  | `Parent.Width`  |
 | **Height** | `Parent.Height` |
 
@@ -76,11 +76,11 @@ If you want a second control to fill the bottom half of the same screen, you can
 
 | Control | Property | Formula           |
 |-|----------|-------------------|
-| **Upper** | **X**        | 0                 |
-| **Upper** | **Y**        | 0                 |
+| **Upper** | **X**        | `0`                 |
+| **Upper** | **Y**        | `0`                 |
 | **Upper** | **Width**    | `Parent.Width`      |
 | **Upper** | **Height**   | `Parent.Height / 2` |
-| **Lower** | **X**        | 0                 |
+| **Lower** | **X**        | `0`                 |
 | **Lower** | **Y**        | `Parent.Height / 2` |
 | **Lower** | **Width**    | `Parent.Width`      |
 | **Lower** | **Height**   | `Parent.Height / 2` |
@@ -94,11 +94,11 @@ To create that effect, you'd need to update the **Height** property of the **Upp
 
 | Control | Property | Formula           |
 |-|----------|-------------------|
-| **Upper** | **X**        | 0                 |
-| **Upper** | **Y**        | 0                 |
+| **Upper** | **X**        | `0`                 |
+| **Upper** | **Y**        | `0`                 |
 | **Upper** | **Width**    | `Parent.Width`      |
 | **Upper** | **Height**   | `Parent.Height / 2` |
-| **Lower** | **X**        | 0                       |
+| **Lower** | **X**        | `0`                       |
 | **Lower** | **Y**        | `Upper.Y + Upper.Height`  |
 | **Lower** | **Width**    | `Parent.Width`            |
 | **Lower** | **Height**   | `Parent.Height - Lower.Y` |
@@ -111,9 +111,9 @@ You can use these formula patterns for expressing common layout relationships be
 
 | Relationship between C and its parent | Property | Formula | Illustration |
 |--|--|--|--|
-| **C** fills width of parent, with a margin of *N* | **X**| *N* | ![Example of C filling width of parent](media/create-responsive-layout/c1.png) |
+| **C** fills width of parent, with a margin of *N* | **X**| `N` | ![Example of C filling width of parent](media/create-responsive-layout/c1.png) |
 |  | **Width** | `Parent.Width - (N * 2)` |  |
-| **C** fills height of parent, with a margin of *N* | **Y** | *N* | ![Example of C filling height of parent](media/create-responsive-layout/c2.png) |
+| **C** fills height of parent, with a margin of *N* | **Y** | `N` | ![Example of C filling height of parent](media/create-responsive-layout/c2.png) |
 |  | **Height** | `Parent.Height - (N * 2)` |  |
 | **C** aligned with right edge of parent, with margin of *N* | **X** | `Parent.Width - (C.Width + N)` | ![Example of C aligning with edge of parent](media/create-responsive-layout/c3.png) |
 | **C** aligned with bottom edge of parent, with margin of *N* | **Y** | `Parent.Height - (C.Height + N)` | ![Example of C aligning with edge of parent](media/create-responsive-layout/c4.png) |
@@ -130,7 +130,7 @@ You can use these formula patterns for expressing common layout relationships be
 | Bottom edge of **C** aligned with bottom edge of **D** | **Y** | `D.Y + D.Height - C.Height` | ![Example of pattern](media/create-responsive-layout/d4.png) |
 | **C** centered horizontally relative to **D** | **X** | `D.X + (D.Width - C.Width) / 2`  | ![Example of pattern](media/create-responsive-layout/d5.png) |
 | **C** centered vertically relative to **D** | **Y** | `D.Y + (D.Height - C.Height) /2` | ![Example of pattern](media/create-responsive-layout/d6.png) |
-| **C** positioned to the right of **D** with a gap of N | **X** | `D.X + D.Width - N` | ![Example of pattern](media/create-responsive-layout/d7.png) |
+| **C** positioned to the right of **D** with a gap of N | **X** | `D.X + D.Width + N` | ![Example of pattern](media/create-responsive-layout/d7.png) |
 | **C** positioned below **D** with a gap of *N*             | **Y** | `D.Y + D.Height + N` | ![Example of pattern](media/create-responsive-layout/d8.png) |
 | **C** fills space between **D** and right edge of parent | **X** | `D.X + D.Width` | ![Example of pattern](media/create-responsive-layout/d9.png) |
 |  | **Width** | `Parent.Width - C.X` |  |
@@ -158,10 +158,10 @@ Set the properties for these controls to these values:
 
 | Property | Header | Menu | Close | Title |
 |--|--|--|--|--|
-| **X** | 0  | 0 | `Parent.Width - Close.Width` | `Menu.X + Menu.Width` |
-| **Y** | 0 | 0 | 0 | 0 |
+| **X** | `0`  | `0` | `Parent.Width - Close.Width` | `Menu.X + Menu.Width` |
+| **Y** | `0` | `0` | `0` | `0` |
 | **Width**  | `Parent.Width` | `Parent.Height` | `Parent.Height` | `Close.X - Title.X` |
-| **Height** | 64 | `Parent.Height` | `Parent.Height` | `Parent.Height` |
+| **Height** | `64` | `Parent.Height` | `Parent.Height` | `Parent.Height` |
 
 For the **Header** control, `Parent` refers to the screen. For the others, `Parent` refers to the **Header** control.
 
@@ -194,17 +194,19 @@ These formulas swap the app's **DesignWidth** and **DesignHeight** values, based
 
 After you adjust the screen's **Width** and **Height** formulas, you might also want to rearrange controls within your screen to better use the available space. For example, if each of two controls occupies half of the screen, you might stack them vertically in portrait but arrange them side by side in landscape.
 
+You can use the screen's **Orientation** property to determine whether the screen is oriented vertically or horizontally.
+
 > [!NOTE]
 > In landscape orientation, the **Upper** and **Lower** controls appear as left and right controls.
 
 | Control | Property | Formula |
 |--|----------|---|
-| **Upper** | **X** | 0 |
-| **Upper** | **Y** | 0 |
-| **Upper** | **Width** | `If(Parent.Width < Parent.Height, Parent.Width, Parent.Width / 2)` |
-| **Upper** | **Height**   | `If(Parent.Width < Parent.Height, Parent.Height / 2, Parent.Height)` |
-| **Lower** | X | `If(Parent.Width < Parent.Height, 0, Upper.X + Upper.Width)`  |
-| **Lower** | Y | `If(Parent.Width < Parent.Height, Upper.Y + Upper.Height, 0)` |
+| **Upper** | **X** | `0` |
+| **Upper** | **Y** | `0` |
+| **Upper** | **Width** | `If(Parent.Orientation = Layout.Vertical, Parent.Width, Parent.Width / 2)` |
+| **Upper** | **Height**   | `If(Parent.Orientation = Layout.Vertical, Parent.Height / 2, Parent.Height)` |
+| **Lower** | X | `If(Parent.Orientation = Layout.Vertical, 0, Upper.X + Upper.Width)`  |
+| **Lower** | Y | `If(Parent.Orientation = Layout.Vertical, Upper.Y + Upper.Height, 0)` |
 | **Lower** | **Width** | `Parent.Width - Lower.X` |
 | **Lower** | **Height** | `Parent.Height - Lower.Y` |
 
@@ -212,7 +214,47 @@ After you adjust the screen's **Width** and **Height** formulas, you might also 
 
 ![expressions to adapt a landscape orientation](media/create-responsive-layout/landscape.png)
 
-### Known limitations
+### Screen sizes and breakpoints
+
+You can adjust your layout based on the size of the device. The screen's **Size** property classifies the current device size. The size is a positive integer; the ScreenSize type provides named constants to help with readability. This table lists the constants:
+
+| Constant              | Value | Typical device type (using default app settings) |
+|-----------------------|-------|--------------------------------------------------|
+| ScreenSize.Small      | 1     | Phone                                            |
+| ScreenSize.Medium     | 2     | Tablet, held vertically                          |
+| ScreenSize.Large      | 3     | Tablet, held horizontally                        |
+| ScreenSize.ExtraLarge | 4     | Desktop computer                                 |
+
+Use these sizes to make decisions about your app's layout. For example, if you want a control to be hidden on a phone-sized device but visible otherwise, you could set the control's **Visible** property to this formula:
+
+`Parent.Size >= ScreenSize.Medium`
+
+This formula evaluates to **true** when the size is medium or larger and **false** otherwise.
+
+If you want a control to occupy a different fraction of the screen width based on the screen size, set the control's **Width** property to this formula:
+
+```powerapps-dot
+Parent.Width *  
+    Switch(Parent.Size,  
+        ScreenSize.Small, 0.5,  
+        ScreenSize.Medium, 0.3,  
+        0.25)
+```
+This formula sets the control's width to half of the screen width on a small screen, three-tenths of the screen width on a medium screen, and a quarter of the screen width on all other screens.
+
+## Custom breakpoints
+
+The screen's **Size** property is calculated by comparing the screen's **Width** property to the values in the app's **SizeBreakpoints** property. This property is a single-column table of numbers that indicate the width breakpoints that separate the named screen sizes:
+
+In an app created for tablet or web, the default value in the app's **SizeBreakpoints** property are **[600, 900, 1200]**. In an app created for phones, the value is **[1200, 1800, 2400]**. (The values for phone apps are doubled because such apps use coordinates that are effectively double the coordinates used in other apps.)
+
+![default values of App.SizeBreakpoints property](media/create-responsive-layout/default-breakpoints.png)
+
+You can customize your app's breakpoints by changing the values in the app's **SizeBreakpoints** property. Select **App** in the tree view, select **SizeBreakpoints** in the property list, and then edit the values in the formula bar. You can create as many breakpoints as your app needs, but only sizes 1 through 4 correspond to named screen sizes. In formulas, you can refer to sizes beyond ExtraLarge by their numeric values (5, 6, and so forth).
+
+You can also specify fewer breakpoints. For example, your app might need only three sizes (two breakpoints), so the possible screen sizes will be Small, Medium, and Large.
+
+## Known limitations
 
 The authoring canvas doesn't respond to the sizing formulas created. To test responsive behavior, save and publish your app, and then open it on devices or in browser windows of various sizes and orientations.
 

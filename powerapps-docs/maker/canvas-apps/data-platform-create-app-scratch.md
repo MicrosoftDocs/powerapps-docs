@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 03/18/2018
+ms.date: 09/21/2019
 ms.author: anneta
 search.audienceType: 
   - maker
@@ -24,7 +24,7 @@ When you build an app from Common Data Service, you don't need to create a conne
 
 - Before you create an app from scratch, familiarize yourself with PowerApps basics by [generating an app](data-platform-create-app.md) and then customizing that app's [gallery](customize-layout-sharepoint.md), [forms](customize-forms-sharepoint.md), and [cards](customize-card.md).
 - [Switch to an environment](working-with-environments.md) in which a database has been created with sample data. If you have an appropriate license, you can [create an environment](../../administrator/create-environment.md) to meet this need.
-- To create an app, you must be assigned to the [Environment Maker](https://docs.microsoft.com/power-platform/admin/database-security.md#predefined-security-roles) security role.
+- To create an app, you must be assigned to the [Environment Maker](https://docs.microsoft.com/power-platform/admin/database-security#predefined-security-roles) security role.
 
 ## Open a blank app
 
@@ -86,7 +86,7 @@ When you build an app from Common Data Service, you don't need to create a conne
 
     ![Set the form's Datasource and Item property](./media/data-platform-create-app-scratch/form-datasource.png)
 
-1. On the **Properties** tab of the right-hand pane, select **Edit fields** to open the **Fields** pane.
+1. On the **Properties** tab of the right-hand pane, select **Edit Fields** to open the **Fields** pane.
 
 1. Select **Add field**, and then select the check boxes for these fields:
 
@@ -96,6 +96,9 @@ When you build an app from Common Data Service, you don't need to create a conne
     - **Address 1: ZIP/Postal code**
     - **Number of Employees**
     - **Annual Revenue**
+
+    > [!NOTE]
+    > Outside of this scenario, you can create a custom field by selecting **New field**, providing the required information, and then selecting **Done**. More information: [Create a field](../common-data-service/create-edit-field-portal.md#create-a-field).<br><br>![](media/data-platform-create-app-scratch/choose-or-add-fields.png "Select and add a field")
 
 1. Select **Add**.
 
