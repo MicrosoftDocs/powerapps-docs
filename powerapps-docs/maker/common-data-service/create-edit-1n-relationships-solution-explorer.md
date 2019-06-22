@@ -190,7 +190,7 @@ Use the **Type of Behavior** field to choose between a set of standard behaviors
 
 While [viewing entity relationships](#view-entity-relationships), select the entity relationship you want to delete and click the ![Delete command](media/delete.gif) command.
 
-Deleteing the relationship will delete the lookup field on the related entity.
+Deleting the relationship will delete the lookup field on the related entity.
 
 > [!NOTE]
 > You will not be able to delete a relationship that has dependencies. For example, if you have added the lookup field to a form for the related entity, you must remove the field from the form before you delete the relationship.
