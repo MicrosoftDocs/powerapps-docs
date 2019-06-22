@@ -118,7 +118,7 @@ Auto-save helps app users focus on their work without having to manage saving da
   
          The **Handler Properties** dialog should look like this. The customization prefix: “new_” may vary based on the customization prefix set for the default publisher for your organization.  
   
- ![OnSave event handler to prevent autosave in Dynamics 365](media/prevent-auto-save-script.png "OnSave event handler to prevent autosave in Dynamics 365")  
+         ![OnSave event handler to prevent autosave in Dynamics 365](media/prevent-auto-save-script.png "OnSave event handler to prevent autosave in Dynamics 365")  
   
     7.  Select **OK** to close the **Handler Properties** dialog.  
   

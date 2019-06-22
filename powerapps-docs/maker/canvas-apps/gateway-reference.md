@@ -85,14 +85,16 @@ You can verify whether your firewall, or proxy, may be blocking connections by r
 
 The results should look similar to this example. If **TcpTestSucceeded** is not **True**, you may be blocked by a firewall.
 
-    ComputerName           : watchdog.servicebus.windows.net
-    RemoteAddress          : 70.37.104.240
-    RemotePort             : 5672
-    InterfaceAlias         : vEthernet (Broadcom NetXtreme Gigabit Ethernet - Virtual Switch)
-    SourceAddress          : 10.120.60.105
-    PingSucceeded          : False
-    PingReplyDetails (RTT) : 0 ms
-    TcpTestSucceeded       : True
+```
+ComputerName           : watchdog.servicebus.windows.net
+RemoteAddress          : 70.37.104.240
+RemotePort             : 5672
+InterfaceAlias         : vEthernet (Broadcom NetXtreme Gigabit Ethernet - Virtual Switch)
+SourceAddress          : 10.120.60.105
+PingSucceeded          : False
+PingReplyDetails (RTT) : 0 ms
+TcpTestSucceeded       : True
+```
 
 If you want to be exhaustive, substitute the **ComputerName** and **Port** values with those listed under **Configure ports** later in this topic.
 
