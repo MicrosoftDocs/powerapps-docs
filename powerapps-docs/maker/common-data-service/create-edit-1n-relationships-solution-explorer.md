@@ -89,7 +89,7 @@ These properties are about the relationship.
 
 ### Lookup field
 
-These are the properties of the lookup field created on the related entity. The properties can be edited here or by editing the lookup field directly. Some field properties are not editiable from the relationship. More information: [Edit a field](create-edit-field-solution-explorer.md#edit-a-field)
+These are the properties of the lookup field created on the related entity. The properties can be edited here or by editing the lookup field directly. Some field properties are not editable from the relationship. More information: [Edit a field](create-edit-field-solution-explorer.md#edit-a-field)
 
 |Field|Description|
 |--|--|
