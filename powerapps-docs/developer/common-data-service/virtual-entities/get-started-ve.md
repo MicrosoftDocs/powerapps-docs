@@ -55,13 +55,12 @@ In this release, there are some limitations to virtual entities that you need to
     - All entity properties must be represented as Common Data Service attributes. You can use simple types representing text, numbers, optionsets, dates, images, and lookups. 
     - You must be able to model any entity relationships in Common Data Service.
     - An attribute on a virtual entity cannot be calculated or rollup.  Any desired calculations must be done on the external side, possibly within or directed by the data provider.
+    - Although you can add virtual entity columns as a lookup on a grid or other UI views, you cannot filter or sort based on this virtual entity lookup column.
 - Auditing and change tracking is not supported.  These may be implemented within the external data store.
 - Virtual entities cannot be enabled for queues.
 - Offline caching of values is not supported for virtual entities.
 - A virtual entity cannot represent an activity and do not support business process flows.
 - Once created, a virtual entity cannot be changed to be a standard (non-virtual) entity.  The reverse is also true: a standard entity cannot be converted into a virtual entity.
-
-<!-- TODO: Make bulleted list into table?  Make more complete by reviewing API modification tables. -->
 
 For more information about how these limitations are reflected in the Common Data Service API, see [API considerations of virtual entities](api-considerations-ve.md). 
 

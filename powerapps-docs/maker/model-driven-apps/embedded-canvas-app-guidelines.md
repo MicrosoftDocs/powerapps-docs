@@ -24,7 +24,6 @@ search.app:
 ---
 
 # Guidelines on working with embedded canvas apps
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 This topic provides guidelines on working with embedded canvas apps as well as helpful tips to troubleshoot any issues you might encounter.
 
