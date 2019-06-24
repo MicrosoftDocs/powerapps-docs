@@ -1,5 +1,5 @@
 ---
-title: "Perform actions on the host form from within an embedded canvas app | MicrosoftDocs"
+title: "Perform actions on the host model-driven form from within an embedded canvas app | MicrosoftDocs"
 ms.custom: ""
 ms.date: 03/29/2019
 ms.reviewer: ""
@@ -23,17 +23,17 @@ search.app:
   - "PowerApps"
   - D365CE
 ---
-# Perform predefined actions on the host form from within an embedded canvas app
-Embedded canvas apps provide the ability to perform predefined actions on the host form. These actions enable makers to navigate, refresh and save the host form. Using these actions, an embedded canvas app can act as a more integral part of the form and the model-driven app.  
+# Perform predefined actions on the host model-driven form from within an embedded canvas app
+Embedded canvas apps provide the ability to perform predefined actions on the host model-driven form. These actions enable makers to navigate, refresh and save the host model-driven form. Using these actions, an embedded canvas app can act as a more integral part of the model-driven form and the model-driven app.  
 
 > [!NOTE]
-> This feature is currently in preview. <br />
+> This feature is currently in preview. model-driven <br />
 > [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)] 
 
-The **ModelDrivenFormIntegration** object now includes the following new methods to enable makers to perform actions on the host form.  
+The **ModelDrivenFormIntegration** object now includes the following new methods to enable makers to perform actions on the host model-driven form.  
   
 ### NavigateToMainForm(entityName, mainFormName, recordId)
-Navigates the host form to a main form and displays the specified record.  
+Navigates the host model-driven form to a main form and displays the specified record.  
 * **entityName** - A required string parameter that specifies the parent entity of the main form.  
 * **formName** - A required string parameter that specifies the name of the main form to navigate to.  
 * **recordId** - A required string parameter, that specifies the ID of the record to display in the main form.  
@@ -48,7 +48,7 @@ Calling the NavigateToMainForm method can show the following error messages.
   
   
 ### NavigateToView(entityName, viewName)
-Navigates the host form to a view.  
+Navigates the host model-driven form to a view.  
 * **entityName** - A required string parameter that specifies the parent entity of the view.  
 * **viewName** - A required string parameter that specifies the name of the main form to navigate to.  
  
@@ -72,8 +72,8 @@ Calling the OpenQuickCreateForm method can show the following error messages.
   
   
 ### RefreshForm(showPrompt)  
-Refreshes the data on the host form.  
-* **showPrompt** - A required boolean parameter that indicates if a confirmation prompt should be displayed to the user before saving any unsaved data on the host form. Values should be "true" or "false".
+Refreshes the data on the host model-driven form.  
+* **showPrompt** - A required boolean parameter that indicates if a confirmation prompt should be displayed to the user before saving any unsaved data on the host model-driven form. Values should be "true" or "false".
  
 Calling the RefreshForm method can show the following error messages.
   
@@ -83,7 +83,7 @@ Calling the RefreshForm method can show the following error messages.
   
   
 ### SaveForm()  
-Saves the data on the host form.  
+Saves the data on the host model-driven form.  
 
 
 > [!NOTE]
