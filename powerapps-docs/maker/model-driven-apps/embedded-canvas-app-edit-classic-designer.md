@@ -1,5 +1,5 @@
 ---
-title: "Edit an existing canvas app embedded on a model-driven form | MicrosoftDocs"
+title: "Edit a canvas app embedded on a model-driven form | MicrosoftDocs"
 ms.custom: ""
 ms.date: 06/19/2019
 ms.reviewer: ""
@@ -23,8 +23,8 @@ search.app:
   - D365CE
 ---
 
-# Edit an existing canvas app embedded on a model-driven form
-This topic explains how to edit an existing canvas app embedded on a model-driven form.
+# Edit a canvas app embedded on a model-driven form
+This topic explains how to edit a canvas app embedded on a model-driven form.
 
 ## Edit the canvas app directly
 You can edit a canvas app embedded on a model-driven form just like any other canvas app. For steps on editing a canvas app see: [Edit a canvas app](../canvas-apps/edit-app.md)
