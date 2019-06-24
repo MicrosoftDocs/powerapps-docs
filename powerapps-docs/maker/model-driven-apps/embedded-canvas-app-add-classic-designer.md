@@ -98,7 +98,7 @@ Imagine that you want to embed an existing  canvas app on a main form for the Ac
 	> [!NOTE]
 	> The embedded canvas app has full access to record from the host model-driven form via ModelDrivenFormIntegration.Item. 
 	> As an example, to get the value of a field with the name **accountnumber** and display name **Account Number**, you can use **ModelDrivenFormIntegration.Item.accountnumber** or **ModelDrivenFormIntegration.Item.'Account Number'**.
-12. In the upper-left corner, in the property list for the ModelDrivenFormIntegration control, select **OnDataRefresh** and set it to an expression that refreshes the datasource corresponding the parent entity of your host model-driven form, **Refresh(Accounts)** in this case. This ensures that your embedded canvas app will refresh data in response to any change in data of the host model-driven form.
+12. In the upper-left corner, in the property list for the ModelDrivenFormIntegration control, select **OnDataRefresh** and set it to an expression that refreshes the datasource corresponding the parent entity of your host model-driven form, **Refresh(Accounts)** in this case. This ensures that your embedded canvas app will refresh data whenever the host model-driven form saves data.
 13. When you are done making changes to your canvas app, select the **File** tab, and then select **Save**.
 14. To make your changes available to end-users select **Publish** and then select **Publish this version**.
 15. On the menu, select **Back**.
