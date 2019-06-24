@@ -18,6 +18,8 @@ ms.assetid: 19ad54b8-e044-4f07-a18e-b00d26b75832
 
 [!INCLUDE [filterexpression-description](includes/filterexpression-description.md)]
 
+## Properties
+
 ## conditions
 
 The set of conditions associated with this filter.

@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: cds
 ms.topic: article
-ms.date: 06/14/2019
+ms.date: 06/17/2019
 ms.author: matp
 search.audienceType: 
   - maker
@@ -30,6 +30,8 @@ Solution checker works with unmanaged solutions that can be exported from an env
 > [!NOTE]
 <!--  - This topic explains how to run solution checker from the PowerApps maker portal. A PowerShell module is also available that you can use to interact directly with the service. The Microsoft.PowerApps.Checker.PowerShell module can be used for analysis of managed and unmanaged solutions for supported versions of on-premises and online environments, or to automate and integrate the service into your build and release pipelines. More information: [Microsoft.PowerApps.Checker.PowerShell Overview]( /powershell/powerapps/overview?view=pa-ps-latest#get-started-using-the-microsoftpowerappscheckerpowershell-module ) -->
 > - Solution checker doesn't work with solutions that contain JavaScript using ECMAScript 6 (2015) or later versions. When JavaScript using one of these versions is detected, a JS001 syntax issue for the web resource is reported.
+<!--  - This topic explains how to run solution checker from the PowerApps maker portal. A PowerShell module is also available that you can use to interact directly with the service. The Microsoft.PowerApps.Checker.PowerShell module can be used for analysis of managed and unmanaged solutions for supported versions of on-premises and online environments, or to automate and integrate the service into your build and release pipelines. More information: [Microsoft.PowerApps.Checker.PowerShell Overview]( /powershell/powerapps/overview?view=pa-ps-latest#get-started-using-the-microsoftpowerappscheckerpowershell-module ) -->
+
 
 ## Enable the solution checker
 The solution checker becomes available in the Solutions area of PowerApps after you install the PowerApps checker solution. Notice that you can't find it by browsing or searching on Microsoft AppSource. To install it, follow these steps:  
@@ -142,7 +144,6 @@ Here's a summary of each column in the report.
 |Plug-in or workflow activity   | [meta-avoid-reg-no-attribute](http://go.microsoft.com/fwlink/?LinkID=398563&error=meta-avoid-reg-no-attribute&client=PAChecker&source=featuredocs)  | Include filtering attributes with Dynamics 365 for Customer Engagement plug-in registrations.    |
 |Plug-in or workflow activity   | [meta-avoid-reg-retrieve](http://go.microsoft.com/fwlink/?LinkID=398563&error=meta-avoid-reg-retrieve&client=PAChecker&source=featuredocs)  | Use caution with Dynamics 365 for Customer Engagement plug-ins registered for Retrieve and RetrieveMultiple messages.    |
 |Plug-in or workflow activity   | [meta-remove-inactive](http://go.microsoft.com/fwlink/?LinkID=398563&error=meta-remove-inactive&client=PAChecker&source=featuredocs)    | Remove inactive configurations in Dynamics 365 for Customer Engagement.    |
-|Plug-in or workflow activity   | [Avoid using window.top](http://go.microsoft.com/fwlink/?LinkID=398563&error=web-avoid-window-top&client=PAChecker&source=featuredocs)   | Avoid using window.top.    |
 |Plug-in or workflow activity   | [il-meta-avoid-crm2011-depr-message](http://go.microsoft.com/fwlink/?LinkID=398563&error=il-avoid-crm2011-depr-message&client=PAChecker&source=featuredocs)  | Don't use Microsoft Dynamics CRM 2011 deprecated messages.     |
 |Plug-in or workflow activity   | [meta-avoid-crm4-event](http://go.microsoft.com/fwlink/?LinkID=398563&error=meta-avoid-crm4-event&client=PAChecker&source=featuredocs) | Don't use Microsoft Dynamics CRM 4.0 plug-in registration stage.    |
 |Plug-in or workflow activity   | [il-avoid-specialized-update-ops](http://go.microsoft.com/fwlink/?LinkID=398563&error=il-avoid-specialized-update-ops&client=PAChecker&source=featuredocs)  | Don't use specialized update operation requests in Dynamics 365 for Customer Engagement.    | 
@@ -170,8 +171,10 @@ Here's a summary of each column in the report.
 | Web Resources  | [web-use-strict-equality-operators](http://go.microsoft.com/fwlink/?LinkID=398563&error=web-use-strict-equality-operators&client=PAChecker)  | Use strict equality operators.  | 
 | Web Resources  | [web-avoid-eval](http://go.microsoft.com/fwlink/?LinkID=398563&error=web-avoid-eval&client=PAChecker)  | Don't use the 'eval' function or its functional equivalents.  | 
 
+## Limitations
+Solution checker can't be automated at this time. You must run it from PowerApps. More information: [Run solution checker](#run-the-solution-checker)
 
-## See also
+### See also
 [Best practices and guidance for the Common Data Service](../../developer/common-data-service/best-practices/index.md)<br />
 [Best practices and guidance for model-driven apps](../../developer/model-driven-apps/best-practices/index.md)<br />
 [Common issues and resolutions for Solution Checker](common-issues-resolutions-solution-checker.md)<br />

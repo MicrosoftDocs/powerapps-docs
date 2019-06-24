@@ -91,7 +91,7 @@ The filtering is done by adding a `<PowerBIFilter>` element in the `<parameter>`
 		<PowerBIGroupId>00000000-0000-0000-0000-000000000000</PowerBIGroupId>
 		<PowerBIReportId>544c4162-6773-4944-900c-abfd075f6081</PowerBIReportId>
 		<TileUrl>https://xyz.powerbi.com/reportEmbed?reportId=544c4162-6773-4944-900c-abfd075f6081</TileUrl>
-		<PowerBIFilter>{"Filter": "[{\"$schema\":\"basic\",\"target\":{\"table\":\"My Active Accounts\",\"column\":\"Account Name\"},\"operator\":\"In\",\"values\":[$a],\"filterType\":1}]", "Alias": {"$a": "name"</PowerBIFilter>
+		<PowerBIFilter>{"Filter": "[{\"$schema\":\"basic\",\"target\":{\"table\":\"My Active Accounts\",\"column\":\"Account Name\"},\"operator\":\"In\",\"values\":[$a],\"filterType\":1}]", "Alias": {"$a": "name"}}</PowerBIFilter>
 	</parameters>
 </control>
 ```

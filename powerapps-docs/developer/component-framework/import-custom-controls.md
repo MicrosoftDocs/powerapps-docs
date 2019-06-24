@@ -10,7 +10,7 @@ ms.suite: ""
 ms.topic: "article"
 ---
 
-# Deploying controls into Common Data Service
+# Package a custom component
 
 This topic demonstrates how to import custom controls into Common Data Service. After developing custom controls using the PowerApps CLI, next step is to import those controls, so that you can see the controls in runtime.
 
@@ -34,11 +34,29 @@ Follow the steps below to create and import a solution file:
 4. The generated solution files are located in `\bin\debug\`.
 5. You should manually import the solution using the web portal.
 
-## Telemetry
+## How to remove components from a solution
 
-The feature team is aggregating anonymized telemetry in order to understand which features or capabilities in the PowerApps CLI tool are most often used by the developers. The aggregated data allows to provide the best experience to the customers by focusing on what’s truly is important.
+If you would like to remove a custom component from a solution, follow the steps below:
 
-To disable the telemetry collection, run the command `pac telemetry - -enabled false`. To turn the telemetry back, use the command `pac telemetry- -enabled true`.
+1.	Edit the cdsproj file in your solution project directory and remove the reference to the component. Below is an example of a component reference:
+
+```XML
+<ItemGroup>
+    <ProjectReference Include="..\pcf_component\pcf_component.pcfproj">
+      <Project>0481bd83-ffb0-4b70-b526-e0b3dd63e7ef</Project>
+      <Name>pcf_component </Name>
+      <Targets>Build</Targets>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <OutputItemType>Content</OutputItemType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </ProjectReference>
+</ItemGroup>
+```
+
+2.	Perform a rebuild (or clean) by running the command
+   ```CLI
+   msbuild /t:rebuild
+   ```
 
 ### See also
 
