@@ -1,7 +1,7 @@
 ---
 title: "Embed a canvas app on a model-driven form | MicrosoftDocs"
 ms.custom: ""
-ms.date: 06/19/2019
+ms.date: 06/25/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -43,7 +43,11 @@ For guidelines on working with embedded canvas apps as well as helpful tips to t
 [What are canvas apps in PowerApps?](../canvas-apps/getting-started.md) <br />
 [Add and configure a canvas-app control in PowerApps](../canvas-apps/add-configure-controls.md) <br />
 [Overview of canvas-app connectors for PowerApps](../canvas-apps/connections-list.md) <br />
-[Create an embedded canvas app](embedded-canvas-app-create.md) <br />
+[Add an embedded canvas app on a model-driven form](embedded-canvas-app-add-classic-designer.md) <br />
+[Edit a canvas app embedded on a model-driven form](embedded-canvas-app-edit-classic-designer.md) <br />
+[Customize the screen size and orientation of a canvas app embedded on a model-driven form](embedded-canvas-app-customize-screen.md) <br />
 [Perform predefined actions on the host form from within an embedded canvas app](embedded-canvas-app-actions.md) <br />
+[ModelDrivenFormIntegration control's properties and actions](embedded-canvas-app-properties-actions.md) <br />
 [Share an embedded canvas app](share-embedded-canvas-app.md) <br />
-[Guidelines on working with embedded canvas apps](embedded-canvas-app-guidelines.md)
+[Guidelines on working with embedded canvas apps](embedded-canvas-app-guidelines.md) <br />
+[Migrating embedded canvas apps on model-driven forms created using the public preview release to latest](embedded-canvas-app-migrate-from-preview.md) <br />
