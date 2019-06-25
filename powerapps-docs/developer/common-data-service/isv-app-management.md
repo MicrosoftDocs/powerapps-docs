@@ -24,7 +24,7 @@ search.app:
 
 # Introduction to ISV Studio for the Power Platform
 
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../../../includes/cc-beta-prerelease-disclaimer.md)]
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 ISV Studio is designed to become the go-to Power Platform destination for
 Independent Software Vendors (ISV) to monitor and support their published
@@ -34,7 +34,7 @@ consolidated view of an ISV’s apps with cross-tenant insights.
 > [!IMPORTANT]
 >
 > - ISV Studio is a preview feature.
-> - [!INCLUDE[cc_preview_features_definition](../../../../includes/cc-preview-features-definition.md)]
+> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
 
 You can try ISV Studio out by visiting [https://isvstudio.powerapps.com/](https://isvstudio.powerapps.com/).
 

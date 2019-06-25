@@ -24,7 +24,7 @@ search.app:
 
 # The Home page
 
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../../../includes/cc-beta-prerelease-disclaimer.md)]
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 After a user logs into ISV Studio, they are presented with the landing page
 known as the *Home* page. A welcome message is displayed which defines the
@@ -69,5 +69,5 @@ The user can also select **See all** to show all the apps.
 
 ### See also
 
-[Introduction to ISV Studio for the Power Platform](isv-app-managment.md) 
+[Introduction to ISV Studio for the Power Platform](isv-app-management.md) 
 [App and Tenant page features](isv-app-management-other-pages.md)
