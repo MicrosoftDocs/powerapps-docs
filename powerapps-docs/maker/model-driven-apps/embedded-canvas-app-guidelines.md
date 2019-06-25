@@ -38,10 +38,10 @@ This topic provides guidelines on working with embedded canvas apps as well as h
 -	Embedded canvas apps are not displayed when creating a new record since they need a record context to be passed to them.
 -	The ModelDrivenFormIntegration.Item object is read-only. 
      - To write back data you must use the Common Data Service connector. More information: [Common Data Service](/connectors/commondataservice/)
--	Embedded canvas apps can only be created via the host model-driven form.
-    > [!NOTE]
-    > Support to embed an existing canvas app in a model-driven form will be provided in a future update.
--	Adding existing canvas apps as embedded on model-driven forms using the App ID is currently not supported but will be enabled in a future update.
+-	Embedded canvas apps can only be created via the host model-driven form. 
+    - Support to embed an existing canvas app in a model-driven form will be provided in a future update.
+-	Adding existing canvas apps as embedded on model-driven forms using the App ID is currently not supported
+    - We are looking to enable this in a future update.
 - When you view a model-driven form with an embedded canvas app, if you see an error message that reads "Sorry we didn't find that app" make sure that the embedded canvas app is in the same solution as the model-driven form.
 - When you view a model-driven form with an embedded canvas app, if you see an error message that reads "It looks like you don’t have access to this app. Ask its owner to share it with you" make sure that the author has shared the embedded canvas app with you. More information: [Share an embedded canvas app](share-embedded-canvas-app.md).
 
@@ -58,8 +58,7 @@ This topic provides guidelines on working with embedded canvas apps as well as h
 4. Select **OK**.
 
 ## Known issues and limitations with embedded canvas apps
-- The canvas app custom control is only supported for use with the **Web** client type. Currently, the **Phone** and **Tablet** client types aren't supported. More information: [Use custom controls for model-driven app data visualizations](use-custom-controls-data-visualizations.md)
-- When you create a new record, an embedded canvas app on a form is not displayed even after the record is saved. 
+- The canvas app custom control is only supported for use with the **Web** client type. Currently, the **Phone** and **Tablet** client types aren't supported.
 - You can’t use the **Canvas App** privilege in a security role to grant app users access to either an embedded or standalone canvas app. For more information on sharing an embedded canvas app, please refer to: [Share an embedded canvas app](share-embedded-canvas-app.md).
 - If you write back the same data that is being displayed in the host model-driven form, the form will continue to display old data until it is refreshed. An easy way to do that is to use the [RefreshForm](embedded-canvas-app-actions.md) method.
 
