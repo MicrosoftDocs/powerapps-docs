@@ -26,6 +26,9 @@ When a report is a SQL Server Reporting Services report, is enabled for prefilte
 1. In the site map, choose Reports. 
 
 2. Choose a report and on the commbar bar, select **Edit Default Filter**.
+
+     > [!div class="mx-imgBorder"]
+     > ![Edit default report filter](media/edit_filter.png "Edit default report filter")
   
 3. Modify the filter criteria.  
   
