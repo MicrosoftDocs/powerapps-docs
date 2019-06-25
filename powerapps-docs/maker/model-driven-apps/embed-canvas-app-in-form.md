@@ -33,7 +33,7 @@ With embedded canvas apps, makers can bring the power of canvas apps to their mo
    > [!div class="mx-imgBorder"] 
    > ![Embedded canvas app in a model-driven app form](media/embed-canvas-app-in-form.png "Embedded canvas app in a model-driven app form")
 
-Canvas apps are embedded in model-driven forms in the same way other custom controls are added. An embedded canvas app includes rich data integration capabilities that bring in contextual data from the host model-driven form to the embedded canvas app. More information: [Create an embedded canvas app](embedded-canvas-app-create.md)
+Canvas apps are embedded in model-driven forms in the same way other custom controls are added. An embedded canvas app includes rich data integration capabilities that bring in contextual data from the host model-driven form to the embedded canvas app. More information: [Add an embedded canvas app on a model-driven form](embedded-canvas-app-add-classic-designer.md).
 
 After you have added an embedded canvas app to your model-driven form, learn how to share your embedded canvas app with other users. More information: [Share an embedded canvas app](share-embedded-canvas-app.md).
 
