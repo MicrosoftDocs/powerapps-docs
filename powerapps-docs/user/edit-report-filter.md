@@ -68,7 +68,7 @@ When a report is a SQL Server Reporting Services report, is enabled for prefilte
 
    > [!TIP]
    > - To clear all criteria and start over, on the Filter toolbar, select **Clear**, and then select **Confirm**.  
-   >   -   To delete a row, select the **Options menu** button for that row, and then select **Delete**.  
+   > - To delete a row, select the **Options menu** button for that row, and then select **Delete**.  
 
    ### Save the filter  
 5. select **Save Default Filter**.  
