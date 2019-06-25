@@ -48,6 +48,16 @@ This topic explains how to migrate embedded canvas apps on model-driven forms fr
 8. When you are done making changes,  Select the **File** tab, and then select **Save**.
 9. To make your changes available to end-users select **Publish** and then select **Publish this version**.
 
+## Migrating apps that use a list of related records
+
+To migrate an embedded canvas app that was getting a list of records related to the current (main form) record as a data context, follow these steps.
+
+1. Follow the steps in the section above to migrate embedded canvas apps on model-driven forms from the public preview release to the latest.
+2. Add the datasource for the related entity to the app. To learn how add a data source in a canvas app please refer to [Add a data connection to a canvas app in PowerApps](../canvas-apps/add-data-connection.md).
+3. When using the related datasource for a control such as [Gallery](../canvas-apps/controls/control-gallery.md) or [Data table](../canvas-apps/controls/control-data-table.md), use the [Filter](../canvas-apps/functions/function-filter-lookup.md) function to filter the records to the ones that are related to the current record.
+4. With recent updates Common Data Service now also provides support to use entity views as a filter. See [Improved data source selection and Common Data Service views](https://powerapps.microsoft.com/blog/improved-data-source-selection-and-common-data-service-views/) for details. 
+
+
 ## See also
 [Embed a canvas app on a model-driven form](embed-canvas-app-in-form.md) <br />
 [Perform predefined actions on the host form from within an embedded canvas app](embedded-canvas-app-actions.md) <br />
