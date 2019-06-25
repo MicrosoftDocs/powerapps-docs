@@ -26,10 +26,6 @@ search.app:
 # Perform predefined actions on the host model-driven form from within an embedded canvas app
 Embedded canvas apps provide the ability to perform predefined actions on the host model-driven form. These actions enable makers to navigate, refresh and save the host model-driven form. Using these actions, an embedded canvas app can act as a more integral part of the model-driven form and the model-driven app.  
 
-> [!NOTE]
-> This feature is currently in preview. model-driven <br />
-> [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)] 
-
 The **ModelDrivenFormIntegration** object now includes the following new methods to enable makers to perform actions on the host model-driven form.  
   
 ### NavigateToMainForm(entityName, mainFormName, recordId)
