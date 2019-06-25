@@ -1,12 +1,12 @@
 ---
 title: What is Common Data Service? | Microsoft Docs
-description: Introduction to Common Data Service, entities, and server-side logic.
+description: Introduction to Common Data Service, entities, server-side logic, security, and developer capabilities.
 author: clwesene
 manager: kvivek
 ms.service: powerapps
 ms.topic: overview
 ms.component: cds
-ms.date: 05/08/2019
+ms.date: 06/21/2019
 ms.reviewer: matp
 ms.author: matp
 search.audienceType: 
@@ -72,14 +72,18 @@ Entities within Common Data Service can leverage rich server-side logic and vali
 * **Workflows** allow you to automate business processes without user interaction. For more information, see [Workflows overview](/dynamics365/customer-engagement/customize/workflow-processes).
 * **Business logic with code** supports advanced developer scenarios to extend the application directly through code. For more information, see [Apply business logic with code](../../developer/common-data-service/apply-business-logic-with-code.md).
 
+## Security
+Common Data Service has a rich security model to protect the data integrity and privacy of users while promoting efficient data access and collaboration. You can combine business units, role-based security, record-based security, and field-based security to define the overall access to information that users have in a Common Data Service environment. More information: [Security in Common Data Service](/power-platform/admin/wp-security) 
+
 ## Developer capabilities
 In addition to the features available through the [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) portal, Common Data Service also includes features for developers to programmatically access metadata and data to create entities and business logic, as well as interact with data. For more information, see [Common Data Service Developer Overview](../../developer/common-data-service/overview.md)
 
 ## Next steps
 To get started using Common Data Service:
-* [Create an app using a Common Data Service database](../canvas-apps/data-platform-create-app-scratch.md).
-* [Create a custom entity](create-custom-entity.md) and then [create an app that uses that entity](../canvas-apps/data-platform-create-app.md).
-* [Use Power Query](./data-platform-cds-newentity-pq.md) to connect to an online or on-premises data source and import the data directly into Common Data Service.
+- [Create a canvas app using a Common Data Service database](../canvas-apps/data-platform-create-app-scratch.md).
+- [Create a custom entity](create-custom-entity.md) and then [create a canvas app that uses the entity](../canvas-apps/data-platform-create-app.md).
+- [Create a model-driven app](/powerapps/maker/model-driven-apps/build-first-model-driven-app) built on Common Data Service.
+- [Use Power Query](./data-platform-cds-newentity-pq.md) to connect to an online or on-premises data source and import the data directly into Common Data Service.
 
 ## Privacy notice
 With the Microsoft PowerApps common data model, Microsoft collects and stores custom entity and field names in our diagnostic systems. We use this knowledge to improve the common data model for our customers. The entity and field names that app Creators create help us understand scenarios that are common across the Microsoft PowerApps community and ascertain gaps in the service’s standard entity coverage, such as schemas related to organizations. The data in the database tables associated with these entities is not accessed or used by Microsoft or replicated outside of the region in which the database is provisioned. Note, however, that the custom entity and field names may be replicated across regions and are deleted in accordance with our data retention policies. Microsoft is committed to your privacy as described further in our [Trust Center](https://www.microsoft.com/trustcenter/Privacy/default.aspx).

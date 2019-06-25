@@ -73,11 +73,11 @@ catch (System.Exception ex)
   
 In addition to these exceptions and faults, your code must handle the following exceptions:  
   
-- [SecurityTokenValidationException](https://msdn.microsoft.com/library/system.identitymodel.tokens.securitytokenvalidationexception.aspx)  
-- [ExpiredSecurityTokenException](https://msdn.microsoft.com/library/system.servicemodel.security.expiredsecuritytokenexception.aspx)  
-- [SecurityAccessDeniedException](https://msdn.microsoft.com/library/system.servicemodel.security.securityaccessdeniedexception.aspx)  
-- [MessageSecurityException](https://msdn.microsoft.com/library/system.servicemodel.security.messagesecurityexception.aspx)  
-- [SecurityNegotiationException](https://msdn.microsoft.com/library/system.servicemodel.security.securitynegotiationexception.aspx)  
+- [SecurityTokenValidationException](/dotnet/api/system.identitymodel.tokens.securitytokenvalidationexception)  
+- [ExpiredSecurityTokenException](/dotnet/api/system.servicemodel.security.expiredsecuritytokenexception)  
+- [SecurityAccessDeniedException](/dotnet/api/system.servicemodel.security.securityaccessdeniedexception)  
+- [MessageSecurityException](/dotnet/api/system.servicemodel.security.messagesecurityexception)  
+- [SecurityNegotiationException](/dotnet/api/system.servicemodel.security.securitynegotiationexception)  
   
 When connecting to Common Data Service, a `SecurityAccessDeniedException` exception can be thrown if you use a valid Microsoft account and your account is not associated with any Common Data Service organization. A `MessageSecurityException` can be thrown if your Microsoft account isn’t valid or there was an authentication failure.  
   
@@ -119,7 +119,7 @@ Sync workflow 'Name of Entity Scope Business Rule returning Error' terminated wi
 </OrganizationServiceFault>  
 ```  
   
-More information: [Create and edit Business Rules](https://technet.microsoft.com/library/dn531086.aspx).  
+More information: [Create a business rule for an entity](../../../maker/common-data-service/data-platform-create-business-rule.md)  
   
 <a name="BKMK_AdditionalInfo"></a>
 
