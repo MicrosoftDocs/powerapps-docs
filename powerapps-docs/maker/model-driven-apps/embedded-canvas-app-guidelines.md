@@ -63,8 +63,11 @@ This topic provides guidelines on working with embedded canvas apps as well as h
 - If you write back the same data that is being displayed in the host model-driven form, the form will continue to display old data until it is refreshed. An easy way to do that is to use the [RefreshForm](embedded-canvas-app-actions.md) method.
 
 ## See also
-[Embed a canvas app in a model-driven form](embed-canvas-app-in-form.md) <br />
-[Pass the current record as data context to an embedded canvas app](pass-current-embedded-canvas-app.md) <br />
-[Pass a list of related records as data context to an embedded canvas app](pass-related-embedded-canvas-app.md) <br />
+[Embed a canvas app on a model-driven form](embed-canvas-app-in-form.md) <br />
+[Add an embedded canvas app on a model-driven form](embedded-canvas-app-add-classic-designer.md) <br />
+[Edit a canvas app embedded on a model-driven form](embedded-canvas-app-edit-classic-designer.md) <br />
+[Customize the screen size and orientation of a canvas app embedded on a model-driven form](embedded-canvas-app-customize-screen.md) <br />
 [Perform predefined actions on the host form from within an embedded canvas app](embedded-canvas-app-actions.md) <br />
-[Share an embedded canvas app](share-embedded-canvas-app.md)
+[ModelDrivenFormIntegration control's properties and actions](embedded-canvas-app-properties-actions.md) <br />
+[Share an embedded canvas app](share-embedded-canvas-app.md) <br />
+[Migrating embedded canvas apps on model-driven forms created using the public preview release to latest](embedded-canvas-app-migrate-from-preview.md) <br />
