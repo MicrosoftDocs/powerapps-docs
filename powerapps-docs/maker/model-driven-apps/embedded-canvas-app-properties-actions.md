@@ -26,6 +26,7 @@ search.app:
 # ModelDrivenFormIntegration control's properties and actions
 Canvas apps embedded on model-driven forms contain a special control named **ModelDrivenFormIntegration**. This control is responsible for 
 bringing contextual data from the host model-driven form to the embedded canvas app.  
+
 This topic explains the properties and actions available on the ModelDrivenFormIntegration control.
 
 | Property or action | Description |
