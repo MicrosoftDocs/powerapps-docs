@@ -21,7 +21,7 @@ search.app:
 
 [!INCLUDE[cc-applies-to-update-9-0-0](../includes/cc_applies_to_update_9_0_0.md)]
 
-If you’ve created a custom report outside of , you can easily add it to 
+If you’ve created a custom report outside of the system, you can easily add it to PowerApps.
 
 1. In the site map, choose Reports. 
 
@@ -44,7 +44,7 @@ If you’ve created a custom report outside of , you can easily add it to
   
    2.  In the **Webpage URL** box, enter the URL of the webpage.  
   
-3. Specify the properties for the report on the **General** tab.  
+3. Specify the properties for the report.
   
    1.  In the **Details** section, specify a meaningful name and description for the report.  
   
