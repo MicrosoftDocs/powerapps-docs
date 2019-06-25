@@ -84,7 +84,6 @@ This topic showed you how to get started with embedding a canvas app in a model-
 
 ## See also
 [Embed a canvas app on a model-driven form](embed-canvas-app-in-form.md) <br />
-[Add an embedded canvas app on a model-driven form](embedded-canvas-app-add-classic-designer.md) <br />
 [Edit a canvas app embedded on a model-driven form](embedded-canvas-app-edit-classic-designer.md) <br />
 [Customize the screen size and orientation of a canvas app embedded on a model-driven form](embedded-canvas-app-customize-screen.md) <br />
 [Perform predefined actions on the host form from within an embedded canvas app](embedded-canvas-app-actions.md) <br />
