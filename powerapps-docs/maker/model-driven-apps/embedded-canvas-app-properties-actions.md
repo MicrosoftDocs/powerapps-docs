@@ -38,9 +38,7 @@ This topic explains the properties and actions available on the ModelDrivenFormI
 |**NavigateToMainForm** | Navigates the host model-driven form to a main form and displays the specified record. <br />See [Perform predefined actions on the host form](embedded-canvas-app-actions.md#navigatetomainformentityname-mainformname-recordid) for details. |
 |**NavigateToView** | Navigates the host model-driven form to a view. <br />See [Perform predefined actions on the host form](embedded-canvas-app-actions.md#navigatetoviewentityname-viewname) for details.  |
 |**OpenQuickCreateForm** | Opens the default quick create form for an entity.  <br />See [Perform predefined actions on the host form](embedded-canvas-app-actions.md#openquickcreateformentityname) for details.  |
-|**DataSource.Data** | Read-only property that can be used by the embedded canvas app to access the data from the host model-driven form. |
-|**DataSource.Data.ItemId** | Please check the value of the *entityName* parameter and ensure it is a valid entity name and that the user has access to it. |
-|**DataSource.Data.RefreshedOn** | Please check the value of the *entityName* parameter and ensure it is a valid entity name and that the user has access to it. |
+|**DataSource.Data** | Read-only property used by the framework to send some key data from the host model-driven form to the embedded canvas app. Do not use this property. Use DataSource.Item instead to access the record from the host model-driven form |
 
 ## See also
 [Embed a canvas app on a model-driven form](embed-canvas-app-in-form.md) <br />
