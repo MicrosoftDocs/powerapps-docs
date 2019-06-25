@@ -31,7 +31,7 @@ All reports that are created using the Report Wizard are Fetch-based reports. No
 2. Select **New** on the command bar.
 
   > [!div class="mx-imgBorder"]
-  > ![Create a new report](media/newport.png "Create a new report")
+  > ![Create a new report](media/newreport.png "Create a new report")
   
 3. A **Report:New Report** screen will appear. For **Report Type** leave the default selection to, **Report Wizard Report** and select the **Report Wizard** button. 
 
