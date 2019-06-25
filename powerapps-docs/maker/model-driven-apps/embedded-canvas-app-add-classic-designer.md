@@ -27,7 +27,7 @@ search.app:
 This topic explains how to embed a new or existing canvas app on a model-driven form.
 
 ## Embedding a new canvas app on a model-driven form
-Imagine that you want to create and add an embedded canvas app on a main form for the Accounts entity. To do this, follow these steps: 
+Imagine that you want to create a new canvas app and embed it on a main form for the Accounts entity. To do this, follow these steps: 
 
 1.	Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 2.  [Create or edit the main form](create-and-edit-forms.md) of an entity, Accounts entity in our example. 
@@ -36,14 +36,14 @@ Imagine that you want to create and add an embedded canvas app on a main form fo
 	> Support to create and add an embedded canvas apps to model-driven forms using the new form designer will be provided in the future.
 	> For now, use the classic form designer to add an embedded canvas app on a model-driven form.
 4.	In the classic form designer, select the section on the form where you want the embedded canvas app to appear.
-5.	Using the field explorer pane, add a required field, such as **Account Name**.
+5.	Using the field pane, add a required field, such as **Account Name**.
       > [!IMPORTANT]
       > Always use a required field that is guaranteed to have a value. If your field does not have a value, your embedded canvas app will not refresh in response to any change in data on the host model-driven form.
 6.	With the field selected, on the **Home** tab in the **Edit** group, select **Change Properties**.
 7.	On the **Field Properties** dialog box, select the **Controls** tab.
 8.	On the **Controls** tab, select **Add Control...**.
 9.	On the **Add Control** dialog box, in the list of available controls, select **Canvas app** and then select **Add**.
-10.	In the **Field Properties** dialog box, in the list of controls select **Canvas app**, and then select the **Web** option.
+10.	On the **Field Properties** dialog box, in the list of controls select **Canvas app**, and then select the **Web** option.
 11.	In the section below the controls list, the list of properties available to the canvas app control are displayed.
      - The **Entity name** property specifies the entity that will provide the data to your embedded canvas app. It will be set to the entity that contains the field you added in an earlier step.
          - Notice that, even though this property appears changeable, changing it has no effect on the embedded canvas app. It is meant only to serve as a reference for you.
@@ -54,7 +54,7 @@ Imagine that you want to create and add an embedded canvas app on a main form fo
        > If opening PowerApps Studio is blocked due to a web browser pop-up blocker you must enable the web.powerapps.com site or temporarily disable the pop-up blocker and then select **Customize** again.
 13.	In PowerApps Studio notice that there is a special **ModelDrivenFormIntegration** control in the left pane. This control is responsible for bringing contextual data from the host model-driven form to the embedded canvas app.
 14. Observe that a [canvas app form control](../canvas-apps/controls/control-form-detail.md) was automatically added to your embedded canvas app and displays the data being passed to it from the host model-driven form via the ModelDrivenFormIntegration control. 
-15. Select the **View** tab, and then select **Data sources**. Notice that a datasource for the parent entity of your host model-driven form, Accounts in this case, was automatically added to your embedded canvas app.
+15. Select the **View** tab, and then select **Data sources**. Notice that a data source for the parent entity of your host model-driven form, Accounts in this case, was automatically added to your embedded canvas app.
 16. Select the **Form1** control and observe that the **DataSource** property is set to **Accounts**.
 17.	With the **Form1** control still selected, observe that the **Item** property is set to **ModelDrivenFormIntegration.Item**.
 	> [!NOTE]
@@ -78,27 +78,29 @@ Imagine that you want to create and add an embedded canvas app on a main form fo
 26.	On the **Home** tab, select **Save**, and then select **Publish**.
 
 ## Embedding an existing canvas app on a model-driven form
-Imagine that you want to embed an existing  canvas app on a main form for the Accounts entity. To do this, follow these steps: 
+Imagine that you want to embed an existing canvas app that you have created previously on a main form for the Accounts entity. To do this, follow these steps: 
 
 1. Follow steps 1-11 in the section above on [Embedding a new canvas app on a model-driven form](embedded-canvas-app-add-classic-designer.md#embedding-a-new-canvas-app-on-a-model-driven-form)
 2. Select the edit icon for **App ID**.
 3. In the **Configure Property "App ID"** dialog, select **Bind to a static value**.
 4. Paste the App ID of the existing canvas app that you would like to embed on the model-driven form and then select **OK**. To learn how to get the App ID for a canvas app please refer to [Get an app ID](../canvas-apps/get-sessionid.md#get-an-app-id)
-5. If you want your canvas app to not have any data context passed to it from the host model-driven form skip to step 17 below.
+5. If you want your embedded canvas app to not have any data context passed to it from the host model-driven form skip to step 17 below.
 6. Select **Customize** to create or edit the canvas app. This opens PowerApps Studio in a new tab.
 	> [!NOTE]
        	> If opening PowerApps Studio is blocked due to a web browser pop-up blocker you must enable the web.powerapps.com site or temporarily disable the pop-up blocker and then select **Customize** again.
 7. If your existing canvas app does not already have the special **ModelDrivenFormIntegration** control, it will be added to your canvas app. You can see it in the left pane. This control is responsible for bringing contextual data from the host model-driven form to the embedded canvas app.
-8. If your app does not already have a datasource for the parent entity of your host model-driven form, Accounts in this case, add it to your app. To learn how add a data source in a canvas app please refer to [Add a data connection to a canvas app in PowerApps](../canvas-apps/add-data-connection.md)
 	> [!NOTE]
-	> Notice that when embedding an existing canvas app on your host model-driven form, the framework does not automatically add a form control or a datasource for the parent entity of your host model-driven form in your canvas app.
+	> If your app  was created using the preview release of embedded canvas apps on model-driven forms, the ModelDrivenFormIntegration control will remain as-is and you will not see **Item** and other new properties from the latest release. For these apps please see [Migrating embedded canvas apps on model-driven forms from public preview release to latest](embedded-canvas-app-migrate-from-preview.md).
+8. If your app does not already have a data source for the parent entity of your host model-driven form, Accounts in this case, add it to your app. To learn how add a data source in a canvas app please refer to [Add a data connection to a canvas app in PowerApps](../canvas-apps/add-data-connection.md)
+	> [!NOTE]
+	> Notice that when embedding an existing canvas app on your host model-driven form, the framework does not automatically add a form control or a data source for the parent entity of your host model-driven form in your canvas app.
 9. In the left pane, select the **ModelDrivenFormIntegration** control.
-10. In the upper-left corner, in the property list for the ModelDrivenFormIntegration control, select **DataSource** and set it to the datasource corresponding the parent entity of your host model-driven form, **Accounts** in this case.
+10. In the upper-left corner, in the property list for the ModelDrivenFormIntegration control, select **DataSource** and set it to the data source corresponding the parent entity of your host model-driven form, **Accounts** in this case.
 11. In your canvas app use **ModelDrivenFormIntegration.Item** to get access to the record from the host model-driven form.
 	> [!NOTE]
 	> The embedded canvas app has full access to record from the host model-driven form via ModelDrivenFormIntegration.Item. 
 	> As an example, to get the value of a field with the name **accountnumber** and display name **Account Number**, you can use **ModelDrivenFormIntegration.Item.accountnumber** or **ModelDrivenFormIntegration.Item.'Account Number'**.
-12. In the upper-left corner, in the property list for the ModelDrivenFormIntegration control, select **OnDataRefresh** and set it to an expression that refreshes the datasource corresponding the parent entity of your host model-driven form, **Refresh(Accounts)** in this case. This ensures that your embedded canvas app will refresh data whenever the host model-driven form saves data.
+12. In the upper-left corner, in the property list for the ModelDrivenFormIntegration control, select **OnDataRefresh** and set it to an expression that refreshes the data source corresponding the parent entity of your host model-driven form, **Refresh(Accounts)** in this case. This ensures that your embedded canvas app will refresh data whenever the host model-driven form saves data.
 13. When you are done making changes to your canvas app, select the **File** tab, and then select **Save**.
 14. To make your changes available to end-users select **Publish** and then select **Publish this version**.
 15. On the menu, select **Back**.
