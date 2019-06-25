@@ -1,7 +1,7 @@
 ---
 title: "Pass a list of related records as data context with an embedded canvas app | MicrosoftDocs"
 ms.custom: ""
-ms.date: 12/17/2018
+ms.date: 06/25/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -25,11 +25,12 @@ search.app:
 
 # Pass a list of related records as data context to an embedded canvas app
 
-This topic explains how to add an embedded canvas app and pass a list of records related to the current (main form) record as a data context to the embedded canvas app.
 
-> [!NOTE]
-> This feature is currently in preview. <br />
-> [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
+> [!IMPORTANT]
+> Canvas apps embedded on model-driven forms are now out of preview and generally available. The steps listed below are outdated and applicable only to the public preview release of canvas apps embedded on model-driven forms.
+>  For the updated list of steps for the latest release, please see: [Add an embedded canvas app on a model-driven form](embedded-canvas-app-add-classic-designer.md)
+
+This topic explains how to add an embedded canvas app and pass a list of records related to the current (main form) record as a data context to the embedded canvas app.
 
 Let's say you want to add an embedded canvas app on an account main form and pass a list of contacts related to the current account record to the embedded canvas app. To do this, follow these steps:
 
