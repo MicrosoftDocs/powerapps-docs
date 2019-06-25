@@ -42,7 +42,7 @@ When a report is a SQL Server Reporting Services report, is enabled for prefilte
 
    2.  Select the query relational operator, and select an operator.  
 
-   3.  Select **Enter Value**, and enter a value to filter on. For some values, you can select the **Select or change the values for this field** button ![Ellipsis button](media/ellipsis-button.gif "Ellipsis button") to open the **Select Values** dialog box and select the value you want.  
+   3.  Select **Enter Value**, and enter a value to filter on. For some values, you can select the **Select or change the values for this field** button ![Ellipsis button](media/ellipsis-button.png "Ellipsis button") to open the **Select Values** dialog box and select the value you want.  
 
    ### To group criteria
    You must select two or more rows for the same record type. However, rows with field values from different record types, such as **Account** and **Contact** record types, cannot be grouped.  
