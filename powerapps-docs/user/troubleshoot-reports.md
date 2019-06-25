@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot problems with data not displaying in a report Microsoft Docs
+title: Troubleshoot problems with data not displaying in a report | Microsoft Docs
 description: Troubleshoot problems with data not displaying in a report
 author: mduelae
 manager: kvivek
@@ -37,3 +37,4 @@ There are several possible reasons why data that you expect to be in a report do
   
 ### See Also
 [Work with reports](work-with-reports.md)
+[Create a report using the Report Wizard](create-report-with-wizard.md)
