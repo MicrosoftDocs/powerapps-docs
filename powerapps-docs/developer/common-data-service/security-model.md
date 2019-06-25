@@ -2,7 +2,7 @@
 title: "Security Model (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "PowerApps provides a security model that protects data integrity and privacy, and supports efficient data access and collaboration" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 06/18/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.topic: "article"
@@ -33,8 +33,5 @@ Combine role-based security, record-level security, and field-level security to 
 As a developer, you should know that your queries run in the context of a user, and will only return records that the user is entitled to read.
 Further, you will only be able to perform operations based on the privileges assigned to your user account through the security roles.
 
-For detailed information about the security concepts, see [Security concepts](/dynamics365/customer-engagement/admin/security-concepts)
+For detailed information, see [Security in Common Data Service](/power-platform/admin/wp-security)
 
-### See also
-
-[BusinessUnit entity](businessunit-entity.md)

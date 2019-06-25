@@ -56,10 +56,10 @@ The following table lists activity entities that are available in a default Comm
 |Name|Description|Display in activity menus|Reference|
 |----------|-----------------|----------------|---------------|  
 |**Appointment**|Commitment representing a time interval with start/end times and duration.|Yes|[Appointment](/powerapps/developer/common-data-service/reference/entities/appointment)|
-|**Email**|Activity that is delivered using email protocols.|Yes|[Email ](/powerapps/developer/common-data-service/reference/entities/email)|
+|**Email**|Activity that is delivered using email protocols.|Yes|[Email](/powerapps/developer/common-data-service/reference/entities/email)|
 |**Fax**|Activity that tracks call outcome and number of pages for a fax and optionally stores an electronic copy of the document.|Yes|[Fax](/powerapps/developer/common-data-service/reference/entities/fax)|
 |**Letter**|Activity that tracks the delivery of a letter. The activity can contain the electronic copy of the letter.|Yes|[Letter](/powerapps/developer/common-data-service/reference/entities/letter)|
-|**Phone Call**|Activity to track a telephone call.|Yes|[PhoneCall ](/powerapps/developer/common-data-service/reference/entities/phonecall)|
+|**Phone Call**|Activity to track a telephone call.|Yes|[PhoneCall](/powerapps/developer/common-data-service/reference/entities/phonecall)|
 |**Recurring Appointment**|The master appointment of a recurring appointment series.|Yes|[RecurringAppointmentMaster](/powerapps/developer/common-data-service/reference/entities/recurringappointmentmaster)|
 |**Task**|Generic activity representing work needed to be done.|Yes|[Task](/powerapps/developer/common-data-service/reference/entities/task)|
   
