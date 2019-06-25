@@ -89,7 +89,7 @@ Imagine that you want to embed an existing  canvas app on a main form for the Ac
 	> [!NOTE]
        	> If opening PowerApps Studio is blocked due to a web browser pop-up blocker you must enable the web.powerapps.com site or temporarily disable the pop-up blocker and then select **Customize** again.
 7. If your existing canvas app does not already have the special **ModelDrivenFormIntegration** control, it will be added to your canvas app. You can see it in the left pane. This control is responsible for bringing contextual data from the host model-driven form to the embedded canvas app.
-8. If your app does not already have a datasource for the parent entity of your host model-driven form, Accounts in this case, add it to your app. To learn how add a data source in a canvas app please refer to [Add a data connection to a canvas app in PowerApps](../canvas-apps/add-data-connection)
+8. If your app does not already have a datasource for the parent entity of your host model-driven form, Accounts in this case, add it to your app. To learn how add a data source in a canvas app please refer to [Add a data connection to a canvas app in PowerApps](../canvas-apps/add-data-connection.md)
 	> [!NOTE]
 	> Notice that when embedding an existing canvas app on your host model-driven form, the framework does not automatically add a form control or a datasource for the parent entity of your host model-driven form in your canvas app.
 9. In the left pane, select the **ModelDrivenFormIntegration** control.
