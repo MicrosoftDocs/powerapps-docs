@@ -1,5 +1,5 @@
 ---
-title: "Migrating embedded canvas apps on model-driven forms from public preview release to latest | MicrosoftDocs"
+title: "Migrating embedded canvas apps on model-driven forms created using the public preview release to latest | MicrosoftDocs"
 ms.custom: ""
 ms.date: 06/19/2019
 ms.reviewer: ""
@@ -23,40 +23,42 @@ search.app:
   - D365CE
 ---
 
-# Migrating embedded canvas apps on model-driven forms from public preview release to latest
-This topic explains how to migrate embedded canvas apps on model-driven forms from the public preview release to the latest.
+# Migrating embedded canvas apps on model-driven forms created using the public preview release to latest
+This topic explains how to migrate embedded canvas apps on model-driven forms created using the public preview release to the latest.
 
 > [!IMPORTANT]
 > With the latest release, embedded canvas apps on model-driven forms are generally available. Any embedded canvas apps on model-driven forms created using the public preview release should be migrated to new embedded canvas apps created using the latest release.
-> Support for embedded canvas apps on model-driven forms from the public preview release will soon be deprecated. 
+> Support for embedded canvas apps on model-driven forms created using the public preview release will soon be deprecated. 
 
 1. Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-2. Open the embedded canvas app from public preview release for editing in PowerApps Studio. For steps on editing a canvas app see: [Edit a canvas app](../canvas-apps/edit-app.md).
-3. In a new browser tab, follow the steps to [create a new embedded canvas app for a model-driven form](embedded-canvas-app-create.md) using the latest release.
-4. Copy the controls from the embedded canvas app from public preview release to the new embedded canvas app, one screen at a time using the steps below.
-    1. Select the browser tab from Step 2, that has the embedded canvas app from public preview release open in PowerApps Studio.
+2. Open the embedded canvas app created using the public preview release for editing in PowerApps Studio. For steps on editing a canvas app see: [Edit a canvas app](../canvas-apps/edit-app.md).
+3. In a new browser tab, follow the steps to [add a new embedded canvas app on a model-driven form](embedded-canvas-app-add-classic-designer.md).
+4. Copy the controls from the embedded canvas app created using the public preview release to the new embedded canvas app, one screen at a time using the steps below.
+    1. Select the browser tab from Step 2, that has the embedded canvas app, created using the public preview release, open in PowerApps Studio.
     2. Select a screen to copy controls from.
     3. Use **Ctrl + A** to select all controls on the screen.
     4. Use **Ctrl + C** to copy all selected controls.
     5. Select the browser tab from Step 3, that has the new embedded canvas app created using the latest release.
     6. Select a screen or add a new one.
-    7. Use **Ctrl + V** to paste the controls.
+    7. Use **Ctrl + V** to paste the controls on the selected screen.
     8. Repeat the steps to copy each screen.
 5. When you are done copying all the screens, select the browser tab from Step 3, that has the new embedded canvas app created using the latest release.
 6. Add any missing datasources in the new embedded canvas app.
 7. Update all missing references in the new embedded canvas app. 
-8. When you are done making changes,  Select the **File** tab, and then select **Save**.
+8. When you are done making changes, select the **File** tab, and then select **Save**.
 9. To make your changes available to end-users select **Publish** and then select **Publish this version**.
 
-## Migrating apps that use a list of related records
+## Migrating embedded canvas apps on model-driven forms that use a list of related records
 
 To migrate an embedded canvas app that was getting a list of records related to the current (main form) record as a data context, follow these steps.
 
-1. Follow the steps in the section above to migrate embedded canvas apps on model-driven forms from the public preview release to the latest.
+1. Follow the steps in the section above to migrate embedded canvas apps on model-driven forms created using the public preview release to the latest.
 2. Add the datasource for the related entity to the app. To learn how add a data source in a canvas app please refer to [Add a data connection to a canvas app in PowerApps](../canvas-apps/add-data-connection.md).
-3. When using the related datasource for a control such as [Gallery](../canvas-apps/controls/control-gallery.md) or [Data table](../canvas-apps/controls/control-data-table.md), use the [Filter](../canvas-apps/functions/function-filter-lookup.md) function to filter the records to the ones that are related to the current record.
-4. With recent updates Common Data Service now also provides support to use entity views as a filter. See [Improved data source selection and Common Data Service views](https://powerapps.microsoft.com/blog/improved-data-source-selection-and-common-data-service-views/) for details. 
-
+3. When using the related datasource for a control such as [Gallery](../canvas-apps/controls/control-gallery.md) or [Data table](../canvas-apps/controls/control-data-table.md), use the **[Filter](../canvas-apps/functions/function-filter-lookup.md)** function to filter the records to the ones that are related to the current (main form) record. The current (main form) record is available via **ModelDrivenFormIntegration.Item**.
+	> [!NOTE]
+	> The embedded canvas app has full access to record from the host model-driven form via ModelDrivenFormIntegration.Item. 
+	> As an example, to get the value of a field with the name **accountnumber** and display name **Account Number**, you can use **ModelDrivenFormIntegration.Item.accountnumber** or **ModelDrivenFormIntegration.Item.'Account Number'**.
+4. With recent updates Common Data Service now also provides support to use entity views as a filter. See this blog post for details: [Improved data source selection and Common Data Service views](https://powerapps.microsoft.com/blog/improved-data-source-selection-and-common-data-service-views/). 
 
 ## See also
 [Embed a canvas app on a model-driven form](embed-canvas-app-in-form.md) <br />
