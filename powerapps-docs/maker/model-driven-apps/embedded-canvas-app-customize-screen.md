@@ -26,9 +26,9 @@ search.app:
 # Customize the screen size and orientation of a canvas app embedded on a model-driven form
 This topic explains how to customize the screen size and orientation of a canvas app embedded on a model-driven form.
 
-1.  Follow the steps to create or edit a canvas app embedded on a model-driven form.
-    - [Create an embedded canvas app for a model-driven form](embedded-canvas-app-create.md)
-    - [Edit an existing canvas app embedded on a model-driven form](embedded-canvas-app-edit.md)
+1.  Follow the steps to add or edit an embedded canvas app on a model-driven form.
+    - [Add an embedded canvas app on a model-driven form](embedded-canvas-app-add-classic-designer.md)
+    - [Edit a canvas app embedded on a model-driven form](embedded-canvas-app-edit-classic-designer.md)
 2. With the canvas app open in PowerApps Studio, select the **File** tab, and then select **App settings**.
 3. Select the **Screen size + orientiation** tab. By default, the **Size** is set to **Custom**.
 4. Select from the list of available **Size** and **Orientation** options or select **Custom** and provide desired values for **Width** and **Height**.
