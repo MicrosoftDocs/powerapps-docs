@@ -34,11 +34,13 @@ To use Microsoft PowerApps CLI, do the following:
 
 1. Install [Npm](https://www.npmjs.com/get-npm) (comes with Node.js) or install [Node.js](https://nodejs.org/en/) (comes with npm). We recommend LTS (Long Term Support) version 10.15.3 LTS as it seems to be most stable.
 
-1. If you don’t already have Visual Studio 2017 or later, follow one of the options below:
-   - Option 1: Install Visual Studio 2017 or later
-   - Option 2: Install .NET Core 2.2 SDK and install Visual Studio Code
+1. Install [.NET Framework 4.6.2 Developer Pack](https://dotnet.microsoft.com/download/dotnet-framework/net462). 
 
-1. Install Microsoft PowerApps CLI from [here](https://aka.ms/PowerAppsCLI).
+1. If you don’t already have Visual Studio 2017 or later, follow one of the options below:
+   - Option 1: Install [Visual Studio 2017](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2017) or later.
+   - Option 2: Install [.NET Core 2.2 SDK](https://dotnet.microsoft.com/download/dotnet-core/2.2) and then install [Visual Studio Code](https://code.visualstudio.com/Download).
+
+1. Install [Microsoft PowerApps CLI](https://aka.ms/PowerAppsCLI).
 
 
 
@@ -48,7 +50,7 @@ To use Microsoft PowerApps CLI, do the following:
 
 ## Update Microsoft PowerApps CLI to the latest version
 
-To update your Microsoft PowerApps CLI to the latest version 02.856.1 and take advantage of all the latest capabilities, run the following command in the Developer Command Prompt for VS 2017:
+To update your Microsoft PowerApps CLI to the latest version and take advantage of all the latest capabilities, run the following command in the Developer Command Prompt for VS 2017:
 
 ```CLI
 pac install latest
@@ -93,7 +95,9 @@ The feature team is aggregating anonymized telemetry in order to understand whic
 
 ## Uninstall Microsoft PowerApps CLI
 
-To uninstall the CLI tool please run the MSI from [here](http://download.microsoft.com/download/D/B/E/DBE69906-B4DA-471C-8960-092AB955C681/powerapps-cli-0.1.51.msi). If you are Private Preview Participant and have an older version of CLI, please follow below manual steps:
+To uninstall PowerApps CLI tool, run the MSI from [here](https://aka.ms/PowerAppsCLI). 
+
+If you are Private Preview Participant and have an older version of CLI, follow these steps:
 
 1. To find out where PowerApps CLI is installed, open a command prompt and type `where pac`
 1. Delete the PowerAppsCLI folder.

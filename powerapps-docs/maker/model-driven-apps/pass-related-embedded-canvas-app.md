@@ -24,8 +24,6 @@ search.app:
 ---
 
 # Pass a list of related records as data context to an embedded canvas app
-
-
 > [!IMPORTANT]
 > Canvas apps embedded on model-driven forms are now out of preview and generally available. The steps listed below are outdated and applicable only to the public preview release of canvas apps embedded on model-driven forms.
 >  For the updated list of steps for the latest release, please see: [Add an embedded canvas app on a model-driven form](embedded-canvas-app-add-classic-designer.md)

@@ -22,7 +22,7 @@ Follow the steps below to create and import a solution file:
    > The `publisherName` and `cutomizationPrefix` values must be unique to your environment.
  
 2. Once the new solution project is created, you need to refer to the location where the created control is located. You can add the reference by using the command
-`pac solution add-reference --<path of your PowerApps component framework project on disk>`
+`pac solution add-reference --path <path of your PowerApps component framework project on disk>`
 3. To generate a zip file from your solution project, you will need to `cd` into your solution project directory and build the project using the command `msbuild/t:restore` and `msbuild`
 
     > [!NOTE]
