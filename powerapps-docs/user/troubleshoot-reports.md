@@ -35,7 +35,13 @@ There are several possible reasons why data that you expect to be in a report do
   
 - **Your Microsoft Internet Explorer privacy settings may block required cookies.** For chart reports, if instead of seeing the chart, you see a red letter X, your privacy settings may be blocking a cookie that is required for the chart control. To fix this problem, in your browser, enable cookies for the server that is running Reporting Services.  
   
+
 ### See Also
-[Work with reports](work-with-reports.md)
+[Work with reports](work-with-reports.md) 
 
 [Create a report using the Report Wizard](create-report-with-wizard.md)
+
+[Add a existing report](add-existing-report.md)
+
+[Edit report filter](edit-report-filter.md)
+
