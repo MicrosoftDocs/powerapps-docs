@@ -23,7 +23,7 @@ search.app:
 
 If you’ve created a custom report outside of the system, you can easily add it to PowerApps.
 
-1. In the site map, choose Reports. 
+1. In the site map, **choose Reports**. 
 
 2. Select **New** on the command bar. 
   
