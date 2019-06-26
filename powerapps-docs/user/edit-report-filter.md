@@ -72,3 +72,15 @@ When a report is a SQL Server Reporting Services report, is enabled for prefilte
 
    ### Save the filter  
 5. select **Save Default Filter**.  
+
+
+
+### See Also
+[Work with reports](work-with-reports.md) 
+
+[Create a report using the Report Wizard](create-report-with-wizard.md)
+
+[Add a existing report](add-existing-report.md)
+
+[ Troubleshoot problems with data not displaying in a report ](troubleshoot-reports.md
+
