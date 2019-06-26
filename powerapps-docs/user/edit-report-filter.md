@@ -82,5 +82,5 @@ When a report is a SQL Server Reporting Services report, is enabled for prefilte
 
 [Add a existing report](add-existing-report.md)
 
-[ Troubleshoot problems with data not displaying in a report ](troubleshoot-reports.md
+[Troubleshoot problems with data not displaying in a report](troubleshoot-reports.md
 
