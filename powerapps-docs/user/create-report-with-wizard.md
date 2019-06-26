@@ -27,8 +27,8 @@ All reports that are created using the Report Wizard are Fetch-based reports. No
 
 ## Create a new report
 
-1. From the site map, go to **Reports**.
-2. Select **New** on the command bar.
+1. From the site map, go to **Reports**.  
+2. On the command bar select **New**.
 
     > [!div class="mx-imgBorder"]
     > ![Create a new report](media/newreport.png "Create a new report")
