@@ -43,10 +43,11 @@ This topic explains how to migrate embedded canvas apps on model-driven forms cr
     7. Use **Ctrl + V** to paste the controls on the selected screen.
     8. Repeat the steps to copy each screen.
 5. When you are done copying all the screens, select the browser tab from Step 3, that has the new embedded canvas app created using the latest release.
-6. Add any missing datasources in the new embedded canvas app.
-7. Update all missing references in the new embedded canvas app. 
-8. When you are done making changes, select the **File** tab, and then select **Save**.
-9. To make your changes available to end-users select **Publish** and then select **Publish this version**.
+6. Update all the places where the record from the host model-driven form is being accessed. Replace **First(ModelDrivenFormIntegration.Data)** with **ModelDrivenFormIntegration.Item**.
+7. Add any missing datasources in the new embedded canvas app.
+8. Update all broken references in the new embedded canvas app. 
+9. When you are done making changes, select the **File** tab, and then select **Save**.
+10. To make your changes available to end-users select **Publish** and then select **Publish this version**.
 
 ## Migrating embedded canvas apps on model-driven forms that use a list of related records
 
