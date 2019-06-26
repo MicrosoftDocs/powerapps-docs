@@ -60,3 +60,14 @@ If you’ve created a custom report outside of the system, you can easily add it
   
 4. Choose **Save** or **Save and Close**.  
 
+
+
+
+### See Also
+[Work with reports](work-with-reports.md) 
+
+[Create a report using the Report Wizard](create-report-with-wizard.md)
+
+[Edit report filter](edit-report-filter.md)
+
+[Troubleshoot problems with data not displaying in a report](troubleshoot-reports.md)
