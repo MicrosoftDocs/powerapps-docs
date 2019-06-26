@@ -27,7 +27,7 @@ For more information on organizing and creating reports, see: [Customize and org
   
 ## Run a report  
   
-1. From the site map,  Go to **Reports**.  
+1. From the site map,  go to **Reports**.  
 2. Choose the report you want > **Run Report**.  
   
    > [!NOTE]
