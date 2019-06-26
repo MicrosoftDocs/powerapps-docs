@@ -58,7 +58,7 @@ All reports that are created using the Report Wizard are Fetch-based reports. No
     > [!div class="mx-imgBorder"]
     > ![Lay out Fields](media/report_wizard_4.png "Lay out Fields")
 
-7. Select the **Record type** and the **Column** for the data you want to have grouped in the report. When you are with your selections,  select **OK**.
+7. Select the **Record type** and the **Column** for the data you want to have grouped in the report. When you are done with your selections, select **OK**.
 
     > [!div class="mx-imgBorder"]
     > ![dd grouping screen](media/report_wizard_5.png "Add grouping screen")
@@ -83,7 +83,7 @@ All reports that are created using the Report Wizard are Fetch-based reports. No
     > [!div class="mx-imgBorder"]
     > ![Format report](media/report_wizard_9.png "Format report screen")
 
-12. Review the summary of your report and select **Next** and then select **Finish**. You will now be able to see this report in your report view.
+12. Review the summary of your report and select **Next** and then select **Finish**. You can now see this report in the list of report in the system.
 
     > [!div class="mx-imgBorder"]
     > ![View you report](media/report_wizard_10.png "View your report")
