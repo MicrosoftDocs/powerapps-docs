@@ -23,8 +23,7 @@ Edit the default filter of a report
 
 When a report is a SQL Server Reporting Services report, is enabled for prefiltering, and has a default filter, you can change the default filter to display the data you expect to see in the report. This filter is used each time any user runs the report.
 
-1. In the site map, choose **Reports**. 
-
+1. From the site map, go to **Reports**.  
 2. Choose a report and on the commbar bar, select **Edit Default Filter**.
 
      > [!div class="mx-imgBorder"]
