@@ -37,7 +37,7 @@ different publisher name to see the corresponding metrics for that publisher.
 
 ![Home page](media/isv-portal-homepage.png)
 
-The Home page summary section has the following metrics:
+The Home page summary section contains the metrics described in the following sections of this topic.
 
 ## App installs by tenant
 
@@ -46,8 +46,7 @@ installed in are displayed in descending order based on the number of installs.
 
 ![App installs by tenant](media/isv-portal-app-installs-by-tenant.png)
 
-
-## Installs by app (28d)
+## Installs by app (28 days)
 
 Published apps, and the number of successful vs.
 failed installations across all production environments, over the last 28 days
@@ -69,5 +68,5 @@ The user can also select **See all** to show all the apps.
 
 ### See also
 
-[Introduction to ISV Studio for the Power Platform](isv-app-management.md) 
+[Introduction to ISV Studio for the Power Platform](isv-app-management.md)  
 [App and Tenant page features](isv-app-management-other-pages.md)
