@@ -82,3 +82,19 @@ For more information on organizing and creating reports, see: [Customize and org
 4. On the **Actions** menu, select **Download Report**.  
 The RDL file for the report contains tags that specify whether the report is a fetch-based report or an SQL-based report.
 5. Open the report once the download is complete.
+
+
+
+
+
+### See Also
+
+[Create a report using the Report Wizard](create-report-with-wizard.md)
+
+[Add a existing report](add-existing-report.md)
+
+[Edit report filter](edit-report-filter.md)
+
+[ Troubleshoot problems with data not displaying in a report ](troubleshoot-reports.md)
+
+
