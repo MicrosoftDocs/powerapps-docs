@@ -89,6 +89,12 @@ All reports that are created using the Report Wizard are Fetch-based reports. No
    > ![View you report](media/report_wizard_10.png "View your report")
 
 ### See Also
-[Work with reports](work-with-reports.md)
+[Work with reports](work-with-reports.md) 
+
+[Add a existing report)(add-existing-report.md)
+
+[Edit report filter](edit-report-filter.md)
 
 [ Troubleshoot problems with data not displaying in a report ](troubleshoot-reports.md)
+
+
