@@ -91,7 +91,7 @@ All reports that are created using the Report Wizard are Fetch-based reports. No
 ### See Also
 [Work with reports](work-with-reports.md) 
 
-[Add a existing report)(add-existing-report.md)
+[Add a existing report](add-existing-report.md)
 
 [Edit report filter](edit-report-filter.md)
 
