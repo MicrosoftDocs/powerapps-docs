@@ -74,19 +74,7 @@
       - name: Export to a static worksheet
         href: ../user/export-excel-static-worksheet.md
       - name: Export to an Excel PivotTable
-        href: ../user/export-excel-pivottable.md      
-    - name: Reports
-      items:
-      - name: Work with reports
-        href: ../user/work-with-reports.md
-      - name: Create a report using the Report Wizard
-        href: ../user/create-report-with-wizard.md
-      - name: Add an existing report
-        href: ../user/add-existing-report.md
-      - name: Edit the default filter of a report
-        href: ../user/edit-report-filter.md
-      - name: Troubleshoot reports
-        href: ../user/troubleshoot-reports.md   
+        href: ../user/export-excel-pivottable.md
     - name: Automate processes
       items:
       - name: Work with business processes
@@ -972,6 +960,8 @@
       href: ./model-driven-apps/templates-overview.md
     - name: Use themes to apply organization branding
       href: ./model-driven-apps/create-themes-organization-branding.md
+    - name: Add reporting to your app
+      href: ./model-driven-apps/add-reporting-to-app.md      
   - name: Validate and publish an app
     href: ./model-driven-apps/validate-app.md
   - name: Share an app
