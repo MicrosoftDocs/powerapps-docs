@@ -81,7 +81,7 @@
         href: ../user/work-with-reports.md
       - name: Create a report using the Report Wizard
         href: ../user/create-report-with-wizard.md
-      - name: Add a existing report
+      - name: Add an existing report
         href: ../user/add-existing-report.md
       - name: Edit the default filter of a report
         href: ../user/edit-report-filter.md
