@@ -74,7 +74,19 @@
       - name: Export to a static worksheet
         href: ../user/export-excel-static-worksheet.md
       - name: Export to an Excel PivotTable
-        href: ../user/export-excel-pivottable.md
+        href: ../user/export-excel-pivottable.md      
+    - name: Reports
+      items:
+      - name: Work with reports
+        href: ../user/work-with-reports.md
+      - name: Create a report using the Report Wizard
+        href: ../user/create-report-with-wizard.md
+      - name: Add a existing report
+        href: ../user/add-existing-report.md
+      - name: Edit the default filter of a report
+        href: ../user/edit-report-filter.md
+      - name: Troubleshoot reports
+        href: ../user/troubleshoot-reports.md   
     - name: Automate processes
       items:
       - name: Work with business processes
