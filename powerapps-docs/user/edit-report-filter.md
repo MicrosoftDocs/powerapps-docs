@@ -17,13 +17,11 @@ search.app:
   - PowerApps
   - D365CE
 ---
-Edit the default filter of a report
-
-[!INCLUDE[cc-applies-to-update-9-0-0](../includes/cc_applies_to_update_9_0_0.md)]
+# Edit the default filter of a report
 
 When a report is a SQL Server Reporting Services report, is enabled for prefiltering, and has a default filter, you can change the default filter to display the data you expect to see in the report. This filter is used each time any user runs the report.
 
-1. From the site map, go to **Reports**.  
+1. From the left navigation pane, select the reports area
 2. Choose a report and on the commbar bar, select **Edit Default Filter**.
 
      > [!div class="mx-imgBorder"]
@@ -31,7 +29,7 @@ When a report is a SQL Server Reporting Services report, is enabled for prefilte
   
 3. Modify the filter criteria.  
   
-    The criteria are grouped by record types that you can use in the filter, such as **Accounts** or **Contacts**.  
+   The criteria are grouped by record types that you can use in the filter, such as **Accounts** or **Contacts**.  
   
    ### To edit an existing row
    1. Select the query relational operator and select an operator, or Select the underlined value and enter a new value.  
@@ -68,9 +66,8 @@ When a report is a SQL Server Reporting Services report, is enabled for prefilte
    > [!TIP]
    > - To clear all criteria and start over, on the Filter toolbar, select **Clear**, and then select **Confirm**.  
    > - To delete a row, select the **Options menu** button for that row, and then select **Delete**.  
-
-   ### Save the filter  
-5. select **Save Default Filter**.  
+  
+4. When you are done, select **Save Default Filter**.
 
 
 
