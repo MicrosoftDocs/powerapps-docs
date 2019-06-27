@@ -1,5 +1,5 @@
 ---
-title: "ModelDrivenFormIntegration control's properties and actions | MicrosoftDocs"
+title: "ModelDrivenFormIntegration control properties and actions | MicrosoftDocs"
 ms.custom: ""
 ms.date: 06/25/2019
 ms.reviewer: ""
@@ -23,7 +23,7 @@ search.app:
   - "PowerApps"
   - D365CE
 ---
-# ModelDrivenFormIntegration control's properties and actions
+# ModelDrivenFormIntegration control properties and actions
 Canvas apps embedded on model-driven forms contain a special control named **ModelDrivenFormIntegration**. This control is responsible for 
 bringing contextual data from the host model-driven form to the embedded canvas app.  
 
@@ -39,7 +39,7 @@ This topic explains the properties and actions available on the ModelDrivenFormI
 |**NavigateToMainForm** | Navigates the host model-driven form to a main form and displays the specified record. <br />See [Perform predefined actions on the host form](embedded-canvas-app-actions.md#navigatetomainformentityname-mainformname-recordid) for details. |
 |**NavigateToView** | Navigates the host model-driven form to a view. <br />See [Perform predefined actions on the host form](embedded-canvas-app-actions.md#navigatetoviewentityname-viewname) for details.  |
 |**OpenQuickCreateForm** | Opens the default quick create form for an entity.  <br />See [Perform predefined actions on the host form](embedded-canvas-app-actions.md#openquickcreateformentityname) for details.  |
-|**Data** | Do not use this property. Use Item to access the record from the host model-driven form. <br />Data is a read-only property used by the framework to send some key data from the host model-driven form to the embedded canvas app.  |
+|**Data** | Read-only property used by the framework to send some key data from the host model-driven form to the embedded canvas app.  <br /> Do not use this property. Use Item to access the record from the host model-driven form.  |
 
 ## See also
 [Embed a canvas app on a model-driven form](embed-canvas-app-in-form.md) <br />
