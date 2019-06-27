@@ -24,9 +24,9 @@ search.app:
 
 # The App and Tenant pages
 
-The following sections in this topic describe the App and Tenant page features.
-
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+
+The following sections in this topic describe the App and Tenant page features.
 
 <a name="bkmk_app-page"></a>
 
