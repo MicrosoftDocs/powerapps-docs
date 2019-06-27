@@ -33,7 +33,9 @@ For information about how to create a custom report, see [Reporting and Analytic
      > [!div class="mx-imgBorder"]
      > ![Add a existing report](media/add_existing_report.png "Add a existing report")
   
-   2. In the **File Location** box, enter the path and file name of the file to add, or choose **Browse** to locate the file.  
+   2. In the **File Location** box, enter the path and file name of the file to add, or choose **Browse** to locate the file. 
+   
+      You can can upload may other file type such as an excel file but for this to run like any other standard report or Report Wizard createed report, the file has to be an .RDL file that is built from fetchXML. For more information, see [Report writing environment using SQL Server Data Tools](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/analytics/report-writing-environment-using-sql-server-data-tools).
   
       -OR  
   
