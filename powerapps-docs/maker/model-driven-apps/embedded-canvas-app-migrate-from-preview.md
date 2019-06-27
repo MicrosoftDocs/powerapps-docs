@@ -1,5 +1,5 @@
 ---
-title: "Migrating embedded canvas apps on model-driven forms created using the public preview release to latest | MicrosoftDocs"
+title: "Migrate embedded canvas apps on model-driven forms created using the public preview release | MicrosoftDocs"
 ms.custom: ""
 ms.date: 06/25/2019
 ms.reviewer: ""
@@ -23,8 +23,8 @@ search.app:
   - D365CE
 ---
 
-# Migrating embedded canvas apps on model-driven forms created using the public preview release to latest
-This topic explains how to migrate embedded canvas apps on model-driven forms created using the public preview release to the latest.
+# Migrate embedded canvas apps on model-driven forms created using the public preview release
+This topic explains how to migrate embedded canvas apps on model-driven forms created using the public preview release to the latest release.
 
 > [!IMPORTANT]
 > With the latest release, embedded canvas apps on model-driven forms are generally available. Any embedded canvas apps on model-driven forms created using the public preview release should be migrated to new embedded canvas apps created using the latest release.
