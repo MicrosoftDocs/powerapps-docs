@@ -19,7 +19,6 @@ search.app:
 ---
 # Create a report using the Report Wizard
 
-[!INCLUDE[cc-applies-to-update-9-0-0](../includes/cc_applies_to_update_9_0_0.md)]
 
 Use the Report Wizard to create reports with charts and tables that allow you to easily analyze your data. 
 
@@ -27,7 +26,7 @@ All reports that are created using the Report Wizard are Fetch-based reports. No
 
 ## Create a new report
 
-1. From the site map, go to **Reports**.  
+1. From the left navigation pane, select the reports area.  
 2. On the command bar select **New**.
 
     > [!div class="mx-imgBorder"]
