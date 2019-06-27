@@ -31,16 +31,13 @@ Imagine that you want to create a new canvas app and embed it on a main form for
 1.	Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 2.  [Create or edit the main form](create-and-edit-forms.md) of an entity, Accounts entity in our example. 
 3.  In the command bar, select **Switch to classic** to open the form in the classic form designer.
-	> [!NOTE]
-	> Support to create and add an embedded canvas apps to model-driven forms using the new form designer will be provided in the future.
-	> For now, use the classic form designer to add an embedded canvas app on a model-driven form.
 4.	In the classic form designer, select the section on the form where you want the embedded canvas app to appear.
 5.	Using the field pane, add a required field, such as **Account Name**.
       > [!IMPORTANT]
       > Always use a required field that is guaranteed to have a value. If your field does not have a value, your embedded canvas app will not refresh in response to any change in data on the host model-driven form.
 6.	With the field selected, on the **Home** tab in the **Edit** group, select **Change Properties**.
 7.	On the **Field Properties** dialog box, select the **Controls** tab.
-8.	On the **Controls** tab, select **Add Control...**.
+8.	On the **Controls** tab, select **Add Control**.
 9.	On the **Add Control** dialog box, in the list of available controls, select **Canvas app** and then select **Add**.
 10.	On the **Field Properties** dialog box, in the list of controls select **Canvas app**, and then select the **Web** option.
 11.	In the section below the controls list, the list of properties available to the canvas app control are displayed.
