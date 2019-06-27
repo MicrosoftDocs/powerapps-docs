@@ -960,6 +960,8 @@
       href: ./model-driven-apps/templates-overview.md
     - name: Use themes to apply organization branding
       href: ./model-driven-apps/create-themes-organization-branding.md
+    - name: Add reporting to your app
+      href: ./model-driven-apps/add-reporting-to-app.md      
   - name: Validate and publish an app
     href: ./model-driven-apps/validate-app.md
   - name: Share an app
