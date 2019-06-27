@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 06/25/2019
+ms.date: 06/27/2019
 ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
@@ -18,8 +18,6 @@ search.app:
   - D365CE
 ---
 # Troubleshoot problems with data not displaying in a report
-
-[!INCLUDE[cc-applies-to-update-9-0-0](../includes/cc_applies_to_update_9_0_0.md)]
 
 There are several possible reasons why data that you expect to be in a report does not appear:  
   
