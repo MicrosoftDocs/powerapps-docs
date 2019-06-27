@@ -19,15 +19,13 @@ search.app:
 ---
 # Work with reports
 
-[!INCLUDE[cc-applies-to-update-9-0-0](../includes/cc_applies_to_update_9_0_0.md)]
-
 Reports help you manage your progress towards your business goals by helping you see how you’re doing. You can also track trends - which can give you an advantage over your competitors.  
 
 For more information on organizing and creating reports, see: [Customize and organize reports](https://docs.microsoft.com/powerapps/maker/model-driven-apps/add-reporting-to-app).
   
 ## Run a report  
   
-1. From the site map,  go to **Reports**.  
+1. From the left navigation pane, select the reports area. 
 2. Choose the report you want > **Run Report**.  
   
    > [!NOTE]
@@ -39,7 +37,7 @@ For more information on organizing and creating reports, see: [Customize and org
   
 ## Share a report with other users or teams    
 
-1. From the site map, go to **Reports**.  
+1. From the left navigation pane, select the reports area.  
 2. In the list of reports, select the report you want to share.  
 3. On the command bar, select **Share**.
 
@@ -63,10 +61,10 @@ For more information on organizing and creating reports, see: [Customize and org
    > ![Choose share access](media/report-share3.png "Choose share access")
   
 
-## Share a report with your organization  
+## Share a report with your organization (for admins)
  If the report would be useful for all users, make it available to the organization.  
 
-1. From the site map, go to **Reports**. 
+1. From the left navigation pane, select the reports area.  
 2. In the list of reports, select the report you want to share.  
 3. On the command bar, select select **Edit**.  
 4. On the **Actions** menu, select **Make Report Available to Organization**.  
@@ -76,11 +74,11 @@ For more information on organizing and creating reports, see: [Customize and org
 
 ## Download a report
 
-1. From the site map, go to **Reports**. 
+1. From the left navigation pane, select the reports area. 
 2. In the list of reports, select the report you want to share.  
 3. On the command bar, select select **Edit**.  
 4. On the **Actions** menu, select **Download Report**.  
-The RDL file for the report contains tags that specify whether the report is a fetch-based report or an SQL-based report.
+The RDL file contains the fetchXML that the report is based on.
 5. Open the report once the download is complete.
 
 
