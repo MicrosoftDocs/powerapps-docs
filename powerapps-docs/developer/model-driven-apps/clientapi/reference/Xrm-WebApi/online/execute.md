@@ -21,7 +21,7 @@ search.app:
 [!INCLUDE[./includes/execute-description.md](./includes/execute-description.md)]
 
 > [!NOTE]
-> This method is supported only for the online mode ([Xrm.WebApi.online](online.md)).
+> This method is supported only for the online mode ([Xrm.WebApi.online](../../online.md)).
 
 ## Syntax
 
@@ -201,7 +201,7 @@ Xrm.WebApi.online.execute(whoAmIRequest).then(
 ### Related topics
 
 
-[Xrm.WebApi](../xrm-webapi.md)
+[Xrm.WebApi](../../xrm-webapi.md)
 
 
 
