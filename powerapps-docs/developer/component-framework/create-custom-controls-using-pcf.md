@@ -4,7 +4,7 @@ description: Start creating a component using the PowerApps component framework 
 keywords: PowerApps component framework, Custom components, Component Framework
 ms.author: nabuthuk
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 06/20/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -41,7 +41,7 @@ To get started, open a new Developer Command Prompt for VS 2017 after installing
 To build your component you can open the folder in Visual Studio Code and use the (Ctrl-Shift-B) command, then select your build options. Alternately, you can build your control quickly using  `npm run build` command in your Developer Command Prompt for VS 2017 window.
 
 > [!TIP]
-> To debug your component during or after the build operation, see [Debug custom components](debugging-custom-controls.md).
+> To debug your component during or after the build operation, see [Debug a custom component](debugging-custom-controls.md).
 
 ## Known Configuration issues and Workarounds
 
