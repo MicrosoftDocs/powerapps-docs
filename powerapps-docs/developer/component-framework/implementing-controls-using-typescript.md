@@ -240,8 +240,64 @@ The linear input control’s `init` method creates an input element and sets the
     ```
 
 5. Save the `TS_LinearInputControl.css` 
-6. Rebuild the project using the command `npm run build `.
-7. Inspect the build output under `./out/controls/TSLinearInputControl` and observe that the `TS_LinearInputControl.css` file is now included with the compiled build artifacts. 
+6. Rebuild the project using the command 
+   ```CLI
+   npm run build
+   ```
+7. Inspect the build output under the **./out/controls/TSLinearInputControl** and observe that the **TS_LinearInputControl.css** file is now included with the compiled build artifacts. 
+
+## Debugging your custom component
+
+Once you are done implementing your custom component logic, run the following command to start the debugging process
+
+```CLI
+npm start
+```
+
+## Packaging your custom components
+
+Follow the steps below to create and import a [solution](https://docs.microsoft.com/dynamics365/customer-engagement/customize/solutions-overview) file:
+
+1. Create a new folder **Solutions** inside the **LinearComponent** folder and navigate into the folder. 
+2. Create a new solution project in the **LinearComponent** folder using the command 
+ 
+    ```CLI
+     pac solution init --publisherName developer --customizationPrefix dev 
+    ```
+
+   > [!NOTE]
+   > The [publisherName](https://docs.microsoft.com/powerapps/developer/common-data-service/reference/entities/publisher) and [cutomizationPrefix](https://docs.microsoft.com/powerapps/maker/common-data-service/change-solution-publisher-prefix) values must be unique to your environment.
+ 
+3. Once the new solution project is created, you need to refer to the location where the created component is located. You can add the reference by using the command
+
+    ```CLI
+     pac solution add-reference --path c:\users\LinearComponent
+    ```
+
+4. To generate a zip file from your solution project, you will need to `cd` into your solution project directory and build the project using the command 
+
+    ```CLI
+     msbuild /t:restore
+    ```
+
+5. Again run the following command msbuild
+    ```CLI
+     msbuild
+    ```
+
+    > [!NOTE]
+    > Make sure that the **NuGet targets & Build Tasks** is checked. To enable it
+    > - Open **Visual Studio Installer**
+    > - For VS 2017, click on **Modify**
+    > - Click on **Individual Components**
+    > - Under **Code Tools**, check **NuGet targets & Build Tasks**
+
+6. The generated solution zip file is located in `Solution\\bin\debug\`.
+7. You should manually [import the solution](https://docs.microsoft.com/dynamics365/customer-engagement/customize/import-update-export-solutions) using the web portal once the zip file is ready.
+
+## Adding custom components to a field or an entity
+
+To add a custom component like data-set component or simple table component to a grid or view, follow the steps mentioned in the topic [Add components to fields and entities](add-custom-controls-to-a-field-or-entity.md).
 
 ### See also
 
