@@ -3,8 +3,7 @@ title: "Write a listener application for a Microsoft Azure solution (Common Data
 description: "The topic describes how to write an Azure solution listener application that can read and process Dynamics 365 (online) Common Data Service messages that are posted to the Azure Service Bus." # 115-145 characters including spaces. This abstract displays in the search result."
 keywords: ""
 ms.date: 10/31/2018
-ms.service:
-  - powerapps
+ms.service: powerapps
 ms.custom:
   - ""
 ms.topic: article
