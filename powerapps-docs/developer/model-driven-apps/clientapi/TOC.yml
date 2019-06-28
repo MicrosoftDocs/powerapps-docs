@@ -689,6 +689,6 @@
       - name: isAvailableOffline
         href: reference/xrm-webapi/isAvailableOffline.md
       - name: execute
-        href: reference/xrm-webapi/execute.md
+        href: reference/xrm-webapi/online/execute.md
       - name: executeMultiple
-        href: reference/xrm-webapi/executeMultiple.md
+        href: reference/xrm-webapi/online/executeMultiple.md
