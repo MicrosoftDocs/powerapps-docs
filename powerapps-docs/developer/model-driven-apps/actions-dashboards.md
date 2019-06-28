@@ -4,8 +4,6 @@ description: "Learn about performing actions such as create, retrieve, update, o
 keywords: ""
 ms.date: 10/31/2018
 ms.service: powerapps
-ms.custom:
-  - ""
 ms.topic: article
 ms.assetid: 339eb79d-5dec-885b-496f-bfa26e9cae08
 author: JimDaly # GitHub ID

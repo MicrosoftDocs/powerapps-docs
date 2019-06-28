@@ -4,8 +4,6 @@ description: "Learn about defining specific rules to control when the ribbon ele
 keywords: ""
 ms.date: 02/08/2019
 ms.service: powerapps
-ms.custom:
-  - ""
 ms.topic: article
 ms.assetid: 201f5db9-be65-7c3b-8202-822d78338bd6
 author: JesseParsons 

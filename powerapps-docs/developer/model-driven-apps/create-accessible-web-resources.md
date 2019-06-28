@@ -4,8 +4,6 @@ description: "The topic introduces general guidance and links to more resources 
 keywords: ""
 ms.date: 10/31/2018
 ms.service: powerapps
-ms.custom:
-  - ""
 ms.topic: article
 ms.assetid: 307269ac-674c-5b8a-fee7-767f060af15f
 author: JimDaly # GitHub ID

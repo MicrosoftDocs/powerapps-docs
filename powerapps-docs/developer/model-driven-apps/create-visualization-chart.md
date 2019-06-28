@@ -4,8 +4,6 @@ description: "The topic shows how to create a chart visualization and a web reso
 keywords: ""
 ms.date: 10/31/2018
 ms.service: powerapps
-ms.custom:
-  - ""
 ms.topic: article
 ms.assetid: 9dbed5ee-21a4-ab86-fc4c-08c3838e42f2
 author: JimDaly # GitHub ID

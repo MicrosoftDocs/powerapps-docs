@@ -4,8 +4,6 @@ description: ""
 keywords: ""
 ms.date: 10/31/2018
 ms.service: powerapps
-ms.custom:
-  - ""
 ms.topic: article
 ms.assetid: 33c9da5b-27dd-d82d-1eb1-7b3b69b6032b
 author: shmcarth # GitHub ID

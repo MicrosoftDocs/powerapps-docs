@@ -4,8 +4,6 @@ description: "The walkthrough demonstrates updating a service endpoint imported 
 keywords: ""
 ms.date: 10/31/2018
 ms.service: powerapps
-ms.custom:
-  - ""
 ms.topic: article
 ms.assetid: 66795838-3b15-bfb3-6f59-68cfe2fe988e
 author: brandonsimons # GitHub ID - brandon simons

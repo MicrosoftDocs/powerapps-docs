@@ -4,8 +4,6 @@ description: "Learn about how to create, manage, and publish model-driven apps u
 keywords: ""
 ms.date: 03/04/2019
 ms.service: powerapps
-ms.custom:
-  - ""
 ms.topic: article
 ms.assetid: 4261c476-2eff-10e3-a334-d02e0cbbb9d5
 author: JimDaly # GitHub ID

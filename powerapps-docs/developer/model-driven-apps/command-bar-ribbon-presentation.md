@@ -4,8 +4,6 @@ description: "Data defining commands in Common Data Service can be presented in 
 keywords: ""
 ms.date: 10/31/2018
 ms.service: powerapps
-ms.custom:
-  - ""
 ms.topic: article
 ms.assetid: 5b1d7633-ab0d-94ec-166f-f5bc1af2a657
 author: JimDaly # GitHub ID

@@ -4,8 +4,6 @@ description: "Forms provide the user interface (UI) that people use to create, v
 keywords: ""
 ms.date: 10/31/2018
 ms.service: powerapps
-ms.custom:
-  - ""
 ms.topic: article
 ms.assetid: e6a25bbe-e484-cfe9-9ad9-20ac6f19336a
 author: JimDaly # GitHub ID

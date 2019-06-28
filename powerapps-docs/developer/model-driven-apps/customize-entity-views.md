@@ -4,8 +4,6 @@ description: "Learn about customizing the entity views." # 115-145 characters in
 keywords: ""
 ms.date: 10/31/2018
 ms.service: powerapps
-ms.custom:
-  - ""
 ms.topic: article
 ms.assetid: da2a9b57-fcd2-38c5-c670-63acf1767efa
 author: JimDaly # GitHub ID

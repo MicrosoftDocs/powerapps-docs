@@ -5,8 +5,6 @@ keywords: ""
 ms.date: 10/31/2018
 ms.service:
   - powerapps
-ms.custom:
-  - ""
 ms.topic: article
 ms.assetid: fbb7ff68-e4be-d8c2-069f-6a4a69665b56
 author: JimDaly # GitHub ID

@@ -4,8 +4,6 @@ description: "The dashboard entities in Dynamics 365 Common Data Service enable 
 keywords: ""
 ms.date: 10/31/2018
 ms.service: powerapps
-ms.custom:
-  - ""
 ms.topic: article
 ms.assetid: 4b54597b-5603-2e6e-4630-bc120f711707
 author: JimDaly # GitHub ID

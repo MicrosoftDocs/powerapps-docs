@@ -4,8 +4,6 @@ description: "The topic describes how to write an Azure solution listener applic
 keywords: ""
 ms.date: 10/31/2018
 ms.service: powerapps
-ms.custom:
-  - ""
 ms.topic: article
 ms.assetid: cf68e0a9-c240-59e7-c501-68cbfa0df455
 author: brandonsimons # GitHub ID

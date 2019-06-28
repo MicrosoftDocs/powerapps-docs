@@ -4,8 +4,6 @@ description: "Learn about defining custom actions to modify the ribbon." # 115-1
 keywords: ""
 ms.date: 10/31/2018
 ms.service: powerapps
-ms.custom:
-  - ""
 ms.topic: article
 ms.assetid: 72544b02-4eed-4d70-666e-a0d880f526af
 author: JimDaly # GitHub ID

@@ -4,8 +4,6 @@ description: "Using the Common Data Service web services, you can perform the fo
 keywords: ""
 ms.date: 10/31/2018
 ms.service: powerapps
-ms.custom:
-  - ""
 ms.topic: article
 ms.assetid: c7eb3bdf-9d6f-9bcc-8114-4c3dc5be2976
 author: JimDaly # GitHub ID
