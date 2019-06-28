@@ -3,8 +3,7 @@ title: "Work with Dynamics 365 event data in your Azure Event Hub solution (Comm
 description: "The topic describes working with event data in your Azure Event Hub solution."
 keywords: ""
 ms.date: 05/08/2019
-ms.service:
-  - powerapps
+ms.service: powerapps
 ms.custom:
   - ""
 ms.topic: article

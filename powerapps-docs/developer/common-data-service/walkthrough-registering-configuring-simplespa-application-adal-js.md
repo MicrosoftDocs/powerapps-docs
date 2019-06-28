@@ -3,8 +3,7 @@ title: "Walkthrough: Registering and configuring SimpleSPA application with adal
 description: "This walkthrough describes the process of registering and configuring the simplest Single Page Application (SPA) to access data in Dynamics 365 Customer Engagement using adal.js and Cross-origin Resource Sharing (CORS)."
 keywords: ""
 ms.date: 02/12/2019
-ms.service:
-  - powerapps
+ms.service: powerapps
 ms.custom:
   - ""
 ms.topic: article
@@ -179,7 +178,7 @@ Finally, you can click on **Logout** button to logout.
        retrievingAccountsMessage.textContent = "Retrieving 10 accounts from " + organizationURI + "/api/data/v9.1/accounts";  
        message.appendChild(retrievingAccountsMessage)  
   
-       // Function to perform operation is passed as a parameter to the aquireToken method  
+       // Function to perform operation is passed as a parameter to the acquireToken method  
        authContext.acquireToken(organizationURI, retrieveAccounts)  
   
       }  
