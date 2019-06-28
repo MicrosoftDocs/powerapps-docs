@@ -13,6 +13,10 @@ ms.assetid: 418871c0-59dc-4a7c-a8f9-9364a19f7662
 ---
 # EntityFormOptions
 
+[!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
+
+## Properties
+
 ## createFromEntity: EntityReference
 
 Designates a record that will provide default values based on mapped attribute value. The lookup object has following properties: entity type, id and name.

@@ -3,8 +3,7 @@ title: "Create a visualization (chart) (model-driven apps) | Microsoft Docs" # I
 description: "The topic shows how to create a chart visualization and a web resource visualization." # 115-145 characters including spaces. This abstract displays in the search result."
 keywords: ""
 ms.date: 10/31/2018
-ms.service:
-  - powerapps
+ms.service: powerapps
 ms.custom:
   - ""
 ms.topic: article
@@ -21,8 +20,6 @@ search.app:
 ---
 
 # Create a visualization (chart)
-
-<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-dev/create-visualization-chart -->
 
 To create a visualization programmatically, you must create a record for the [SavedQueryVisualization Entity](../common-data-service/reference/entities/savedqueryvisualization.md) or [UserQueryVisualization Entity](../common-data-service/reference/entities/userqueryvisualization.md) entity to create an organization-owned or user-owned chart respectively. This topic shows how to create a chart visualization and a web resource visualization.  
   
@@ -51,7 +48,7 @@ To create a visualization programmatically, you must create a record for the [Sa
 
  Multi-series charts map multiple series (vertical) axis values to a single category (horizontal) axis value. The only difference from a single series chart is that these charts have multiple `<measurecollection>` and corresponding `<series>` elements specified in the XML strings. Each `<measurecollection>` element contains a child element called `<measure>` that defines a series (vertical) axis value for the same category (horizontal) value. More information: [Understanding Charts: Underlying Data and Chart Representation](understand-charts-underlying-data-chart-representation.md).  
   
- For a sample multi-series chart and the corresponding data description and presentation descriptions XML strings, see [TODO: Multi-Series Chart]<!--(sample-charts.md#MultiSeriesChart)-->.
+ For a sample multi-series chart and the corresponding data description and presentation descriptions XML strings, see [Multi-Series Chart](sample-charts.md#multi-series-chart).
   
 <a name="CreateWRVisualization"></a>   
 

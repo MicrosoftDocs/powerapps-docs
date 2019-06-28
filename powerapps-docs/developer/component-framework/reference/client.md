@@ -14,7 +14,11 @@ ms.assetid: 4ce41c82-bf4a-4d34-9344-5311c24d76de
 
 # Client
 
+[!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
+
 [!INCLUDE [client-description](includes/client-description.md)]
+
+## Properties
 
 ## disableScroll
 

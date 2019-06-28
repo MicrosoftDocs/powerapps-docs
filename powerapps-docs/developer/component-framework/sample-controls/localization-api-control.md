@@ -14,15 +14,10 @@ ms.author: "nabuthuk"
 
 This sample showcases how localization is done for custom controls. In this sample, we use the [Increment component](increment-control.md) to localize the text that is displayed on the increment button based on the user’s selected language. 
 
-PowerApps component framework uses the concept of implementing String(resx) web resources that is used to manage the localized strings shown on any user interface. More information: [String(Resx) Webresources](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/resx-web-resources). 
+PowerApps component framework uses the concept of implementing String(resx) web resources that is used to manage the localized strings shown on any user interface. More information: [String(Resx) Webresources](https://docs.microsoft.com/dynamics365/customer-engagement/developer/resx-web-resources). 
 
 > [!div class="mx-imgBorder"]
 > ![Localization API component](../media/localization-api-control.png "Localization API component")
-
-> [!IMPORTANT]
-> - PowerApps component framework is a preview feature.
-> - [!INCLUDE[cc_preview_features_definition](../../../includes/cc-preview-features-definition.md)] 
-> - [!INCLUDE[cc_preview_features_no_MS_support](../../../includes/cc-preview-features-no-ms-support.md)]
 
 ## Manifest 
 
@@ -451,5 +446,5 @@ When this line of code is executed, the PowerApps component framework automatica
 ### Related topics
 
 [Download sample components](https://go.microsoft.com/fwlink/?linkid=2088525)<br/>
-[PowerApps component framework API Reference](../index.md)<br/>
+[PowerApps component framework API Reference](../reference/index.md)<br/>
 [PowerApps component framework Manifest Schema Reference](../manifest-schema-reference/index.md)

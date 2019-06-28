@@ -14,6 +14,10 @@ ms.assetid: 8907f07a-ad45-47e4-a503-8eaae9bba5f7
 
 # FileObject
 
+[!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
+
+## Properties
+
 ## fileContent
 
 Contents of the file.

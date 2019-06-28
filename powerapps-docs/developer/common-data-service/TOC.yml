@@ -79,7 +79,7 @@
       href: write-plug-in.md
     - name: Handle exceptions
       href: handle-exceptions.md
-    - name: Inpersonate a user
+    - name: Impersonate a user
       href: impersonate-a-user.md
     - name: Register a plug-in
       href: register-plug-in.md
@@ -329,6 +329,20 @@
       href: use-source-control-solution-files.md       
   - name: Package Deployer tool
     href: package-deployer/create-packages-package-deployer.md
+  - name: Verify quality of solutions and packages
+    items:
+    - name: Use the PowerApps checker web API 
+      href: checker/webapi/overview.md
+    - name: Invoke the analysis
+      href: checker/webapi/analyze.md
+    - name: Check for analysis status
+      href: checker/webapi/check-status.md
+    - name: Retrieve the list of rules
+      href: checker/webapi/retrieve-rules.md
+    - name: Retrieve the list of rulesets
+      href: checker/webapi/retrieve-rulesets.md
+    - name: Upload a file for analysis
+      href: checker/webapi/upload-file.md
   - name: Publish your app on AppSource
     href: publish-app-appsource.md
     items:

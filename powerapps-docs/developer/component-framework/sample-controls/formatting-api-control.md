@@ -21,11 +21,6 @@ This sample component explores the various methods available as part of the Powe
 > [!div class="mx-imgBorder"]
 > ![Formatting API component](../media/formatting-api.png "Formatting API component")
 
-> [!IMPORTANT]
-> - PowerApps component framework is a preview feature.
-> - [!INCLUDE[cc_preview_features_definition](../../../includes/cc-preview-features-definition.md)] 
-> - [!INCLUDE[cc_preview_features_no_MS_support](../../../includes/cc-preview-features-no-ms-support.md)]
-
 ## Manifest
 
 ```xml
@@ -261,7 +256,7 @@ text-align: center;
 ### Related topics
 
 [Download sample components](https://go.microsoft.com/fwlink/?linkid=2088525)<br/>
-[PowerApps component framework API Reference](../index.md)<br/>
+[PowerApps component framework API Reference](../reference/index.md)<br/>
 [PowerApps component framework Manifest Schema Reference](../manifest-schema-reference/index.md)
 
 

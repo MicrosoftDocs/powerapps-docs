@@ -14,7 +14,11 @@ ms.assetid: 09f6d0a7-a95a-421e-a413-281d1d0d0e19
 
 # SortStatus
 
+[!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
+
 [!INCLUDE [sort-description](includes/sortstatus-description.md)]
+
+## Properties
 
 ## name
 

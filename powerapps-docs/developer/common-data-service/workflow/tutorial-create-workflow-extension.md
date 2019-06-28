@@ -1,8 +1,8 @@
 ---
 title: "Tutorial: Create workflow extension (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "<Description>" # 115-145 characters including spaces. This abstract displays in the search result.
+description: "This tutorial will show you the process to extend the workflow designer to add custom activities and logic using a workflow assembly" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 06/04/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.topic: "article"
@@ -75,7 +75,7 @@ This project will create a simple workflow assembly that will increment an decim
 
 1. Start Visual Studio.
 1. On the **File** menu, click **New**, and then click **Project**.
-1. In the **New Project** dialog box, under **Other Languages**, expand Visual C# and select **Workflow**, and then select **Activity Library**.
+1. In the **New Project** dialog box, expand **Visual C#** and select **Workflow**, and then select **Activity Library**.
 1. Specify a name and location for the solution, and then click **OK**.
 
     > [!NOTE]

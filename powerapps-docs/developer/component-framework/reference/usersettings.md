@@ -14,7 +14,11 @@ ms.assetid: c237ff96-9268-4068-9d61-aea0bdc79fc2
 
 # UserSettings
 
+[!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
+
 [!INCLUDE [usersettings-description](includes/usersettings-description.md)]
+
+## Properties
 
 ## dateFormattingInfo
 

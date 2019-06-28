@@ -170,6 +170,7 @@ Unless otherwise specified, the user running these formulas is located in the Un
 | **Text( Now(), DateTimeFormat.LongTime24 )** |Formats as a long time string, using a 24-hour clock. |"14:37:47" |
 | **Text( Now(), DateTimeFormat.ShortDate )** |Formats as a short date string, in the language and locale of the current user. |"11/23/2015" |
 | **Text( Now(), "d-mmm-yy" )** |Formats using placeholder characters: <ul><li>**d** for a single-digit or double-digit day of the month<li>**-** as a literal character copied to the result<li>**mmm** for a three-letter abbreviation of the month<li>**-** as another literal character copied to the result<li>**yy** for a two-digit abbreviation of the year</ul> |"23-Nov-15" |
+| **Text(1448318857*1000, "mmm. dd, yyyy (hh:mm:ss AM/PM)")** | Shows a Unix date-time value in human-readable format if you multiply the source value by 1,000. | "Nov. 23, 2015 (02:47:37 PM)" |
 
 ### Global apps
 

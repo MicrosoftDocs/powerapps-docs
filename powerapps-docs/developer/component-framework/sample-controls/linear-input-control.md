@@ -20,11 +20,6 @@ To implement this component, first you need to define the [Manifest](../manifest
 > [!div class="mx-imgBorder"]
 > ![Linear Input Concomponenttrol](../media/linear-input-control.png "Linear Input component")
 
-> [!IMPORTANT]
-> - PowerApps component framework is a preview feature.
-> - [!INCLUDE[cc_preview_features_definition](../../../includes/cc-preview-features-definition.md)] 
-> - [!INCLUDE[cc_preview_features_no_MS_support](../../../includes/cc-preview-features-no-ms-support.md)]
-
 ## Manifest
 
 ```xml
@@ -64,7 +59,7 @@ private inputElement: HTMLInputElement;
 private _container: HTMLDivElement;
 // Reference to ComponentFramework Context object
 private _context: ComponentFramework.Context<IInputs>;
-// Event Handelr 'refreshData' reference
+// Event Handler 'refreshData' reference
 private _refreshData: EventListenerOrEventListenerObject;
 /**
 * Empty constructor.
@@ -247,5 +242,5 @@ public updateView(context: ControlFramework.IPropBag<InputsOutputs.IInputBag>,):
 ### Related topics
 
 [Download sample components](https://go.microsoft.com/fwlink/?linkid=2088525)<br/>
-[PowerApps component framework API Reference](../index.md)<br/>
+[PowerApps component framework API Reference](../reference/index.md)<br/>
 [PowerApps component framework Manifest Schema Reference](../manifest-schema-reference/index.md)

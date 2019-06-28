@@ -14,7 +14,11 @@ ms.assetid: 12891e96-972c-4289-bbde-2bc261cd1f12
 
 # Paging
 
+[!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
+
 [!INCLUDE [paging-description](includes/paging-description.md)]
+
+## Properties
 
 ## totalResultCount
 

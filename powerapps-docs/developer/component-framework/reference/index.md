@@ -10,16 +10,11 @@ author: "nkrb"
 ms.author: "nabuthuk"
 manager: "Jdaly"
 ---
-# PowerApps component Framework API Reference
+# PowerApps component framework API reference
 
 [!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
 
-This section contains reference documentation for creating custom controls using the PowerApps component framework.
-
-> [!IMPORTANT]
-> - PowerApps component framework is a preview feature.
-> - [!INCLUDE[cc_preview_features_definition](../../../includes/cc-preview-features-definition.md)] 
-> - [!INCLUDE[cc_preview_features_no_MS_support](../../../includes/cc-preview-features-no-ms-support.md)]
+This section contains reference documentation for creating custom components using the PowerApps component framework.
 
 |Name|Description|
 |----|-----------|
@@ -45,5 +40,3 @@ This section contains reference documentation for creating custom controls using
 |[UserSettings](usersettings.md)|[!INCLUDE [usersettings-description](includes/usersettings-description.md)]|
 |[Utility](utility.md)|[!INCLUDE [utility-description](includes/utility-description.md)]|
 |[WebApi](webapi.md)|[!INCLUDE [webapi-description](includes/webapi-description.md)]|
-
-
