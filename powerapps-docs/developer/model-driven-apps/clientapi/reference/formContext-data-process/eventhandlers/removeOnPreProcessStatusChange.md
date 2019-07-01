@@ -1,6 +1,6 @@
 ---
 title: "removeOnPreProcessStatusChange (Client API reference) in Dynamics 365 for Customer Engagement| MicrosoftDocs"
-ms.date: 06/20/2019
+ms.date: 06/30/2019
 ms.service: crm-online
 ms.topic: reference
 applies_to: Dynamics 365 for Customer Engagement (online)
@@ -15,7 +15,7 @@ search.app:
 ---
 # removeOnPreProcessStatusChange (Client API reference)
 
-[!INCLUDE[](../../../../../includes/cc_applies_to_update_9_0_0.md)]
+[!INCLUDE[](../../../../../../includes/cc_applies_to_update_9_0_0.md)]
 
 [!INCLUDE[./includes/removeOnPreProcessStatusChange-description.md](./includes/removeOnPreProcessStatusChange-description.md)]
 
@@ -32,5 +32,8 @@ search.app:
 ### Related topics
 
 [addOnProcessStatusChange](addOnProcessStatusChange.md)
-
+ 
 [formContext.data.process](../../formContext-data-process.md)
+ 
+
+
