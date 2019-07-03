@@ -1,3 +1,16 @@
+---
+title: Known issues in PowerApps Portals | Microsoft Docs
+description: Learn about the known issues in PowerApps Portals 
+author: sbmjais
+manager: shujoshi
+ms.service: powerapps
+ms.topic: conceptual
+ms.custom: 
+ms.date: 07/15/2019
+ms.author: shjais
+ms.reviewer:
+---
+
 # Known issues
 
 -   The **Modified Date** for the app might be incorrect because these are pre-provisioned apps and could have been provisioned earlier.

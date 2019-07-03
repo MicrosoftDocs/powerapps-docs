@@ -1,3 +1,16 @@
+---
+title: Compose webpages | Microsoft Docs
+description: Instructions to compose webpages in portal.
+author: sbmjais
+manager: shujoshi
+ms.service: powerapps
+ms.topic: conceptual
+ms.custom: 
+ms.date: 07/15/2019
+ms.author: shjais
+ms.reviewer:
+---
+
 # Compose a page
 
 After adding the required webpages and managing their hierarchy in the sitemap, you can add various components. The WYSIWYG editor allows you to add and edit the required components on the canvas easily. You can add and edit the following portal components on the canvas:
@@ -209,4 +222,88 @@ List is a data-driven configuration that you use to add a webpage that will rend
 4.  Select **Components** ![components icon](media/components-icon.png "Components icon") from the toolbelt on the left side of the screen.  
 
 5.  Select **Breadcrumb**.
+
+## Use code editor
+
+To view the source of a component on the canvas, select the component, and then select the source code editor icon **&lt;/&gt;** in the footer.
+
+![code editor icon](media/code-editor-icon.png "Code editor icon")  
+
+The source code is displayed in the **Code Editor** pane at the bottom of the screen. The changes you made earlier are updated in the source code. To make changes, update the source code and select **Save**. The changes are reflected on the canvas.
+
+![code editor](media/code-editor.png "Code editor")  
+
+## Work with templates
+
+You can edit the built-in templates by using the code editor. The following templates are editable:
+
+-   Blank page
+
+-   Blank page with title
+
+-   Landing page
+
+-   Page with child links
+
+-   Page with side navigation
+
+> [!NOTE]
+> It is recommended not to edit **Profile** and **Search** templates.
+
+To open a template in code editor:
+
+1.  [Edit the portal](manage-existing-portals.md#edit) to open it in the maker experience.  
+
+2.  Select **Templates** ![templates icon](media/templates-icon.png "Templates icon") from the toolbelt on the left side of the screen. The available templates are displayed.  
+
+ ![templates pane](media/templates-pane.png "Templates pane")  
+
+3.  Select the required template to open it in the code editor.
+
+4.  Edit the code and save the changes.
+
+## Browse website
+
+To view the changes you have made to the website, select **Browse website** on the command bar. The website opens in a new tab with URL of the website. It takes around five minutes for the cache to update.
+
+If you want to view the changes instantly, follow the below steps:
+
+1.  From the PowerApps home page, open the Portal Management app.
+
+2.  Go to **Portals** &gt; **Contacts**.
+
+3.  Change the view of the grid to **All Contacts** and open the record of **System Administrator**.
+
+4.  Choose the **Portal Contact** form.
+
+    ![portal contacts view](media/portal-contacts-view.png "Portal contacts view")  
+
+5.  On the **Related** tab, select **Web Roles.**
+
+    ![web roles button](media/web-roles-button.png "Web roles button")  
+
+6.  In the web role grid, add the existing web role **Administrators**.
+
+7.  On the command bar, select **Change password**.
+
+8.  In the **Change password** window, change the password for the administrator.
+
+9.  Go to the portal website and select **Sign in**.
+
+10. Enter the administrator credentials as below:
+
+    - Username: administrator
+    - Password: Password you created in step 8
+
+11.  Go to the link https://&lt;portal\_URL&gt;/\_services/about
+
+12.  Select **Clear Cache** to clear the cache.
+
+13.  When you reload your URL, it will load with recent changes you have made in the maker experience.
+
+Whenever you make changes in maker, clear the cache from `https://&lt;portal\_URL&gt;/\_services/about`. You'll be able to view all changes instantly.
+
+
+
+
 
