@@ -105,7 +105,9 @@ More information: [Install Visual Studio 2017](/visualstudio/install/install-vis
 
 These are general steps used to create a custom workflow activity using Visual Studio. For a complete step-by-step example see [Tutorial: Create workflow extension](tutorial-create-workflow-extension.md).
 
-1. Create a Workflow Activity Library project using .NET Framework 4.6.2 as the target framework
+1. Create a Workflow Activity Library project using .NET Framework 4.6.2 as the target framework.
+    > [!IMPORTANT]
+    > While assemblies built using later versions should generally work, if they use any features introduced after 4.6.2 an error will occur.
 1. Delete the Activity1.xaml file generated with the project
 1. Install the [Microsoft.CrmSdk.Workflow](https://www.nuget.org/packages/Microsoft.CrmSdk.Workflow/) NuGet package.
 
