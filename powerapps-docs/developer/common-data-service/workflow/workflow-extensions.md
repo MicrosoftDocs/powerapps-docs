@@ -2,7 +2,7 @@
 title: "Workflow Extensions (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "You can extend the options available within the designer for workflows. These extensions are added by adding an assembly that contains a class the extends the CodeActivity class. These extensions are commonly called workflow assemblies or workflow activities." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 06/12/2019
+ms.date: 06/20/2019
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -103,7 +103,7 @@ More information: [Install Visual Studio 2017](/visualstudio/install/install-vis
 
 ## Create a custom workflow activity assembly
 
-These are general steps used to create a custom workflow activity using Visual Studio. For a complete step-by-step example see [Tutorial: Create workflow extension ](tutorial-create-workflow-extension.md).
+These are general steps used to create a custom workflow activity using Visual Studio. For a complete step-by-step example see [Tutorial: Create workflow extension](tutorial-create-workflow-extension.md).
 
 1. Create a Workflow Activity Library project using .NET Framework 4.6.2 as the target framework
 1. Delete the Activity1.xaml file generated with the project
@@ -146,7 +146,7 @@ These are general steps used to create a custom workflow activity using Visual S
 
 ## Add parameters
 
-When you define parameters for your class you must define them as [InArgument<T>](/dotnet/api/system.activities.inargument-1), [OutArgument<T>](/dotnet/api/system.activities.outargument-1), or [InOutArgument<T>](/dotnet/api/system.activities.inoutargument-1) types. These types provide methods inherited from a common [Argument Class](/dotnet/api/system.activities.argument) to Get or Set the parameters. Your code will use these methods in the Execute method. More information: [Add your code to the Execute method](#add-your-code-to-the-execute-method)
+When you define parameters for your class you must define them as [InArgument\<T>](/dotnet/api/system.activities.inargument-1), [OutArgument\<T>](/dotnet/api/system.activities.outargument-1), or [InOutArgument\<T>](/dotnet/api/system.activities.inoutargument-1) types. These types provide methods inherited from a common [Argument Class](/dotnet/api/system.activities.argument) to Get or Set the parameters. Your code will use these methods in the Execute method. More information: [Add your code to the Execute method](#add-your-code-to-the-execute-method)
 
 When your custom workflow activity uses input or output parameters you must add appropriate .NET Attributes to the public class properties that define them. This data will be read by the process designer to define how the parameters can be set in the process designer.
 
@@ -271,7 +271,7 @@ namespace SampleWorkflowActivity
 
 ### Get Contextual information
 
-When your code requires contextual information you can access this using the [CodeActivityContext.GetExtension<T> method](/dotnet/api/system.activities.activitycontext.getextension) with the <xref:Microsoft.Xrm.Sdk.Workflow.IWorkflowContext> Interface. This object is derived from the <xref:Microsoft.Xrm.Sdk.IExecutionContext> Interface which provides access to many read-only properties that describe the context of the operation. The `IWorkflowContext` provides similar contextual information specific to the executing workflow that is using your workflow assembly.
+When your code requires contextual information you can access this using the [CodeActivityContext.GetExtension\<T> method](/dotnet/api/system.activities.activitycontext.getextension) with the <xref:Microsoft.Xrm.Sdk.Workflow.IWorkflowContext> Interface. This object is derived from the <xref:Microsoft.Xrm.Sdk.IExecutionContext> Interface which provides access to many read-only properties that describe the context of the operation. The `IWorkflowContext` provides similar contextual information specific to the executing workflow that is using your workflow assembly.
 
 Use the following code in your `Execute` function to access the `IWorkflowContext`:
 
@@ -288,7 +288,7 @@ protected override void Execute(CodeActivityContext context)
 
 ### Use the Organization Service
 
-When you need to perform data operations using the Organization service you can access this using the [CodeActivityContext.GetExtension<T>](/dotnet/api/system.activities.activitycontext.getextension) method with the <xref:Microsoft.Xrm.Sdk.IOrganizationServiceFactory> interface. From there you can use the <xref:Microsoft.Xrm.Sdk.IOrganizationServiceFactory.CreateOrganizationService(System.Nullable{System.Guid})> method to access an instance of the service proxy that you can use to perform data operations. The <xref:Microsoft.Xrm.Sdk.Workflow.IWorkflowContext>.<xref:Microsoft.Xrm.Sdk.IExecutionContext.InitiatingUserId> can be used to determine the user context to use if you want the operation to be performed in the same context as the calling process.
+When you need to perform data operations using the Organization service you can access this using the [CodeActivityContext.GetExtension\<T>](/dotnet/api/system.activities.activitycontext.getextension) method with the <xref:Microsoft.Xrm.Sdk.IOrganizationServiceFactory> interface. From there you can use the <xref:Microsoft.Xrm.Sdk.IOrganizationServiceFactory.CreateOrganizationService(System.Nullable{System.Guid})> method to access an instance of the service proxy that you can use to perform data operations. The <xref:Microsoft.Xrm.Sdk.Workflow.IWorkflowContext>.<xref:Microsoft.Xrm.Sdk.IExecutionContext.InitiatingUserId> can be used to determine the user context to use if you want the operation to be performed in the same context as the calling process.
 Use the following code in your `Execute` function to get access to the Organization service:
 
 ```csharp
@@ -399,6 +399,44 @@ If you make changes that include significant changes to public classes or method
     ![workflow set version](media/workflow-set-version.png)
 
 When all processes are converted to use the new assembly, you can use the Plug-in Registration tool to Unregister the assembly, so it will no longer be available. More information: [Unregister components](../register-plug-in.md#unregister-components)
+
+## Performance Guidance
+
+Performance considerations for your workflow extensions are the same as for ordinary plug-ins.  More information: [Performance considerations](../write-plug-in.md#performance-considerations)
+
+Unlike an ordinary plug-in, with workflow extensions you do not have the opportunity to explicitly register your code for a specific step. This means you don't control whether the code in your workflow extension will run synchronously or asynchronously. Particular care must be considered for code that runs synchronously because it will directly impact the application user's experience.
+
+As re-usable components, workflow extensions can be added to any workflow or custom action. The workflow may be configured as a *real-time* workflow, which means it will run synchronously. Custom actions are always synchronous, but they do not participate in a transaction unless they have **Enable rollback** set.
+
+> [!IMPORTANT]
+> When your workflow extension is used in a synchronous workflow or a custom action the time spent running the code directly impacts the user's experience. For this reason, workflow extensions should require no more than two seconds to complete when used synchronously. If your extension requires more time than this, you should document this and discourage use of the extension in synchronous workflows or custom actions.
+
+You should also be aware that in a synchronous workflow or a custom action that that participates in the transaction, any error thrown by your workflow extension will cause the entire transaction to rollback, which is a very expensive operation that can impact performance.
+
+You can use the value in the <xref:Microsoft.Xrm.Sdk.Workflow.IWorkflowContext>.<xref:Microsoft.Xrm.Sdk.Workflow.IWorkflowContext.WorkflowMode> property to determine if the plug-in is running synchronously.
+
+## Real-time workflow stages
+
+When a workflow extension is used in a real-time (synchronous) workflow it will be invoked in the event execution pipeline stages shown in the following table. For more information : [Event execution pipeline](../event-framework.md#event-execution-pipeline)
+
+|Message  |Stage  |
+|---------|---------|
+|**Create**|PostOperation|
+|**Delete**|PreOperation|
+|**Update**|PreOperation or <br /> PostOperation|
+
+You can use the value in the <xref:Microsoft.Xrm.Sdk.Workflow.IWorkflowContext>.<xref:Microsoft.Xrm.Sdk.Workflow.IWorkflowContext.StageName> property to detect the stage.
+
+For the **Update** operation, the stage is configurable using **Before** or **After** options in the workflow designer. More information: [Using real-time workflows](/flow/configure-workflow-steps#using-real-time-workflows)
+
+If your workflow extension depends on data passed in the execution context, the stage it runs in will control whether data is available in the <xref:Microsoft.Xrm.Sdk.Workflow.IWorkflowContext>.<xref:Microsoft.Xrm.Sdk.IExecutionContext.InputParameters> and <xref:Microsoft.Xrm.Sdk.Workflow.IWorkflowContext>.<xref:Microsoft.Xrm.Sdk.IExecutionContext.OutputParameters>.
+
+> [!NOTE]
+> We don't recommend including logic dependencies based on the <xref:Microsoft.Xrm.Sdk.IExecutionContext.InputParameters> and <xref:Microsoft.Xrm.Sdk.IExecutionContext.OutputParameters>. Workflow extensions should depend on the configured [input and output parameters](#input-and-output-parameters) so that the person using the workflow extension can understand the expected behavior without having anything hidden from them.
+
+## Entity Images for workflow extensions
+
+There is no way to configure entity images for workflow extensions since you only register the assembly and the workflow activity runs in the context of the workflow. For  workflow extensions entity images are available using the key values `PreBusinessEntity` and `PostBusinessEntity` respectively for the pre and post entity images. More information: [Entity Images](../understand-the-data-context.md#entity-images)
 
 
 ### See also

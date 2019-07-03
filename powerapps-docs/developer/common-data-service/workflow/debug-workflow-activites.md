@@ -2,7 +2,7 @@
 title: "Debug Workflow Activities (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Describes how to debug workflow activities using the Plug-in Registration tool." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 06/21/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.topic: "article"
@@ -124,7 +124,7 @@ This will delete the copy of the workflow that was made.
     ![Select the profile you just generated](media/select-profile-from-crm-dialog.png)
 
     > [!NOTE]
-    > You can manage captured profiles in the **Dynamics 365 - custom** web application by namvigating to **Settings** > **Extensions** > **Plug-in Profiles**.
+    > You can manage captured profiles in the **Dynamics 365 - custom** web application by navigating to **Settings** > **Extensions** > **Plug-in Profiles**.
 
 1. Click **Select** to close the dialog.
 1. In the **Assembly Location** field, click the ellipses (**...**) button to add the location of the assembly that contains the workflow activity you are debugging.

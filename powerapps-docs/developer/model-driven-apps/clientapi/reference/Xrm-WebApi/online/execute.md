@@ -21,7 +21,7 @@ search.app:
 [!INCLUDE[./includes/execute-description.md](./includes/execute-description.md)]
 
 > [!NOTE]
-> This method is supported only for the online mode ([Xrm.WebApi.online](online.md)).
+> This method is supported only for the online mode ([Xrm.WebApi.online](../online.md)).
 
 ## Syntax
 
@@ -99,7 +99,7 @@ On success, returns a promise object with the attributes specified earlier in th
 
 ### Execute an action
 
-The following example demonstrates how to execute the <xref:Microsoft.Dynamics.CRM.WinOpportunity> action. The request object is created based on the action definition here: [Unbound actions](../../../../common-data-service/webapi/use-web-api-actions.md#unbound-actions)
+The following example demonstrates how to execute the <xref:Microsoft.Dynamics.CRM.WinOpportunity> action. The request object is created based on the action definition here: [Unbound actions](../../../../../common-data-service/webapi/use-web-api-actions.md#unbound-actions)
 ```JavaScript
 var Sdk = window.Sdk || {};
 /**
@@ -201,7 +201,7 @@ Xrm.WebApi.online.execute(whoAmIRequest).then(
 ### Related topics
 
 
-[Xrm.WebApi](../xrm-webapi.md)
+[Xrm.WebApi](../../xrm-webapi.md)
 
 
 
