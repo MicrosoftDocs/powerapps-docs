@@ -13,6 +13,8 @@ ms.reviewer:
 
 # Known issues
 
+[!include[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+
 -   The **Modified Date** for the app might be incorrect because these are pre-provisioned apps and could have been provisioned earlier.
 
 -   The owner of the portal is not displayed correctly. It is displayed as System.
