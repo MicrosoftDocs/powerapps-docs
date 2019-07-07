@@ -1023,10 +1023,29 @@
       href: ./portals/compose-page.md
     - name: Manage existing portals
       href: ./portals/manage-existing-portals.md
-    - name: Administer Portals
+    - name: Advanced portal customizations
       items:
-        - name: Item 1
-        - name: Item 2
+        - name: Overview
+        - name: Portal details
+        - name: Download public key of portal
+          href: ./portals/admin/get-public-key.md
+        - name: View portal error logs
+          href: ./portals/admin/portal-error-log.md
+        - name: Reset a portal
+          href: ./portals/admin/reset-portal.md
+        - name: Change base URL of a portal
+          href: ./portals/admin/change-base-url.md
+        - name: Enable maintenance mode
+          href: ./portals/admin/enable-maintenance-mode.md
+        - name: Set up Power BI integration
+          href: ./portals/admin/set-up-power-bi-integration.md
+        - name: Run Portal Checker
+          href: ./portals/admin/portal-checker.md
+        - name: Renew portal authentication key
+          href: ./portals/admin/manage-auth-key.md
+        - name: Set up IP address restriction
+          href: ./portals/admin/ip-address-restrict.md
+
     - name: Known issues
       href: ./portals/known-issues.md
 - name: Common Data Service
