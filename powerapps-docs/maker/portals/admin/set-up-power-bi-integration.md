@@ -23,7 +23,7 @@ Power BI is one of the best tools to deliver insights with simple and interactiv
 
 Enabling Power BI visualization allows you to embed dashboards and reports on web pages in a portal by using the powerbi Liquid tag.
 
-1.	Go to the Dynamics 365 page and select the **Applications** tab.
+1.	Go to the Dynamics 365 admin center and select the **Applications** tab.
 
 2.	Select the name of the portal for which you want enable Power BI visualization, and then select **Manage**.
 
@@ -38,7 +38,7 @@ Customizers can use the [powerbi](dynamics-entity-tags.md#powerbi) Liquid tag to
 
 ### Disable Power BI visualization
 
-1.	Go to the Dynamics 365 page and select the **Applications** tab.
+1.	Go to the Dynamics 365 admin center and select the **Applications** tab.
 
 2.	Select the name of the portal for which you want disable Power BI visualization, and then select **Manage**.
 
@@ -60,7 +60,7 @@ Enabling the Power BI Embedded service allows you to embed dashboards and report
 > [!NOTE]
 > Ensure that Power BI visualization is enabled for the powerbi Liquid tag to work.
 
-1. Go to the Dynamics 365 page, and select the **Applications** tab.
+1. Go to the Dynamics 365 admin center, and select the **Applications** tab.
 
 2. Select the name of the portal for which you want enable Power BI Embedded service, and then select **Manage**.
 
@@ -159,7 +159,7 @@ Customizers can now use the [powerbi](dynamics-entity-tags.md#powerbi) Liquid ta
 
 ### Manage the Power BI Embedded service
 
-1. Go to the Dynamics 365 page, and select the **Applications** tab.
+1. Go to the Dynamics 365 admin center, and select the **Applications** tab.
 
 2. Select the name of the portal for which you want update or disable Power BI Embedded service, and then select **Manage**.
 
@@ -180,7 +180,7 @@ Customizers can now use the [powerbi](dynamics-entity-tags.md#powerbi) Liquid ta
 
 ### Disable the Power BI Embedded service
 
-1.	Go to the Dynamics 365 page, and select the **Applications** tab.
+1.	Go to the Dynamics 365 admin center, and select the **Applications** tab.
 
 2.	Select the name of the portal for which you want to disable the Power BI Embedded service, and then select **Manage**.
 

@@ -15,13 +15,13 @@ ms.reviewer:
 
 Portal development involves several configurations and customizations to achieve a desired experience for portal end users.
 
-After you have completed development or configuration of your [!INCLUDE[pn-dynamics-crm](../includes/pn-dynamics-crm.md)] Portal instance, you might want to migrate your latest [!INCLUDE[pn-dynamics-crm](../includes/pn-dynamics-crm.md)] Portal configuration from development to testing or the production environments. Migration involves exporting the existing configuration from the source [!INCLUDE[pn-dynamics-crm](../includes/pn-dynamics-crm.md)] instance, and then importing it into the target [!INCLUDE[pn-dynamics-crm](../includes/pn-dynamics-crm.md)] instance.
+After you have completed development or configuration of your Dynamics 365 Portal instance, you might want to migrate your latest Dynamics 365 Portal configuration from development to testing or the production environments. Migration involves exporting the existing configuration from the source Dynamics 365 instance, and then importing it into the target Dynamics 365 instance.
 
 To export configuration data, you would need to use the Configuration Migration tool and a portal-specific configuration schema file. For more information about this tool, see [Manage configuration data](../admin/manage-configuration-data.md).
 
 > [!NOTE]
 > - We recommend you to use the latest version of the Configuration Migration tool. The Configuration Migration tool can be downloaded from NuGet. More information for downloading the tool: [Download tools from NuGet](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/download-tools-nuget).
-> - The minimum solution version of [!INCLUDE[pn-dynamics-crm](../includes/pn-dynamics-crm.md)] Portal supported by schema files for configuration migration is 8.4.0.275. However, we recommend that you use the latest solution version.
+> - The minimum solution version of Dynamics 365 Portal supported by schema files for configuration migration is 8.4.0.275. However, we recommend that you use the latest solution version.
 
 Schema files are available for the following portal types:
 - [Community portal](https://go.microsoft.com/fwlink/p/?linkid=2019704)
@@ -51,12 +51,12 @@ You can export portal configuration data from a source system by using portal-sp
     > [!div class=mx-imgBorder]
     ![Export configuration data](media/export-config-data.png "Export configuration data")
 
-4.	On the **Login** screen, provide authentication details to connect to your [!INCLUDE[pn-dynamics-crm](../includes/pn-dynamics-crm.md)] instance from where you want to export data. If you have multiple organizations on the [!INCLUDE[pn-dynamics-crm](../includes/pn-dynamics-crm.md)] instance and want to select the organization from where to export the data, select the **Display list of available organizations** check box, and then select **Login**.
+4.	On the **Login** screen, provide authentication details to connect to your Dynamics 365 instance from where you want to export data. If you have multiple organizations on the Dynamics 365 instance and want to select the organization from where to export the data, select the **Display list of available organizations** check box, and then select **Login**.
 
     > [!div class=mx-imgBorder]
     ![Provide authentication details to connect to your Dynamics 365 for Customer Engagement instance from where you want to export data](media/export-config-login.png "Provide authentication details to connect to your Dynamics 365 for Customer Engagement instance from where you want to export data")
 
-5.	If you have multiple organizations, and you had selected the **Display list of available organizations** check box in the previous step, the next screen allows you to choose the organization that you want to connect to. Select a [!INCLUDE[pn-dynamics-crm](../includes/pn-dynamics-crm.md)] organization to connect to. 
+5.	If you have multiple organizations, and you had selected the **Display list of available organizations** check box in the previous step, the next screen allows you to choose the organization that you want to connect to. Select a Dynamics 365 organization to connect to. 
 
     > [!NOTE]
     > If you do not have multiple organizations, this screen is not displayed.
@@ -85,9 +85,9 @@ You can export portal configuration data from a source system by using portal-sp
     > [!div class=mx-imgBorder]
     ![Import configuration data](media/import-config-data.png "Import configuration data")
 
-2.	On the **Login** screen, provide authentication details to connect to your [!INCLUDE[pn-dynamics-crm](../includes/pn-dynamics-crm.md)] instance from where you want to export data. If you have multiple organizations on the [!INCLUDE[pn-dynamics-crm](../includes/pn-dynamics-crm.md)] instance and want to select the organization from where to export the data, select the **Display list of available organizations** check box, and then select **Login**.
+2.	On the **Login** screen, provide authentication details to connect to your Dynamics 365 instance from where you want to export data. If you have multiple organizations on the Dynamics 365 instance and want to select the organization from where to export the data, select the **Display list of available organizations** check box, and then select **Login**.
 
-3.	If you have multiple organizations, and you had selected the **Display list of available organizations** check box in the previous step, the next screen allows you to choose the organization that you want to connect to. Select a [!INCLUDE[pn-dynamics-crm](../includes/pn-dynamics-crm.md)] organization to connect to. 
+3.	If you have multiple organizations, and you had selected the **Display list of available organizations** check box in the previous step, the next screen allows you to choose the organization that you want to connect to. Select a Dynamics 365 organization to connect to. 
 
     > [!NOTE]
     > - If you do not have multiple organizations, this screen is not displayed.
