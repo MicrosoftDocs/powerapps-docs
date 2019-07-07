@@ -204,7 +204,7 @@ After the note, "Azure Active Directory" is by itself & linked, not part of a pa
 
 ## Privacy notice  
 
-[!INCLUDE[cc_privacy_powerbi_tiles_dashboards](../includes/cc-privacy-powerbi-tiles-dashboards.md)]
+[!INCLUDE[cc_privacy_powerbi_tiles_dashboards](../../../includes/cc-privacy-powerbi-tiles-dashboards.md)]
 
 ### See also
 
