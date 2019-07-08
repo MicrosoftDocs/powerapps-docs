@@ -42,7 +42,8 @@ First, select a non-production environment and enable **Unified Interface Only**
 
 3. Select **Settings** > **Administration** > **System Settings** and then on the **General** tab select **Use the new Unified Interface only**.
 
-   ![Use the new Unified Interface only](media/use-unified-interface-only.png) 
+    > [!div class="mx-imgBorder"] 
+    > ![](media/use-unified-interface-only.png "Use the new Unified Interface only")
 
     > [!NOTE]
     > If you need to switch the environment back to its previous state you can toggle the Unified Interface setting to revert to the original interface. More information: [Enable Unified Interface Only](/dynamics365/customer-engagement/admin/enable-unified-interface-only)
