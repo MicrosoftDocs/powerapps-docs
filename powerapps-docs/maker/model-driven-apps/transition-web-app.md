@@ -1,5 +1,5 @@
 ---
-title: "Transistion your legacy web client app to Unified Interface | MicrosoftDocs"
+title: "Transition your legacy web client app to Unified Interface | MicrosoftDocs"
 description: "Learn how to transistion your web client app to unified interface"
 ms.custom: ""
 ms.date: 07/08/2019
@@ -23,7 +23,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Transistion your legacy web client app to Unified Interface
+# Transition your legacy web client app to Unified Interface
 
 This topic explains how to transition your legacy web client app to Unified Interface. The Unified Interface framework uses responsive web design principles to provide an optimal viewing and interaction experience for any screen size, device, or orientation. 
 
