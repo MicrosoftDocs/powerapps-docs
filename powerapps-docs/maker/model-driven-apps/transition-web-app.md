@@ -34,11 +34,15 @@ This topic explains how to transition your legacy web client app to Unified Inte
 ## Prepare the environment
 First, select a non-production environment and enable **Unified Interface Only** mode, which will use Unified Interface for all model-driven apps in the environment. This also includes any Dynamics 365 for Customer Engagement application modules originally configured for the web client.
 
-1. Go to the [Power Platform Admin center](https://admin.powerplatform.microsoft.com/), select **Environments**, and then select a sandbox environment. 
+1. Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Environment**, and then select a sandbox environment. 
 
-    ![Select a sandbox environment](media/select-sandbox-environment.png)
+   <!-- ![Select a sandbox environment](media/select-sandbox-environment.png)  -->
 
-2. Go to **Settings** > **Behavior** > **Interface settings** and then select **Use Unified Interface only**.
+2. Open a model-driven app, select **Settings** ![Settings](../model-driven-apps/media/powerapps-gear.png) on the app toolbar, and then select **Advanced Settings**.
+
+3. Select **Settings** > **Administration** > **System Settings** and then on the **General** tab select **Use the new Unified Interface only**.
+
+   ![Use the new Unified Interface only](media/use-unified-interface-only.png) 
 
     > [!NOTE]
     > If you need to switch the environment back to its previous state you can toggle the Unified Interface setting to revert to the original interface. More information: [Enable Unified Interface Only](/dynamics365/customer-engagement/admin/enable-unified-interface-only)
