@@ -58,7 +58,7 @@ We recommend that you test all use cases. You can start with the most critical u
 ### Dynamics 365 for Customer Engagement apps
 If you use the Dynamics 365 for Field Service or Dynamics 365 for Project Service Automation apps you must upgrade to the latest Field Service version 8 and Project Service Automation version 3 before validating these applications in Unified Interface.
 
-The latest version of Field Service and Project Service Automation are available by default for newly created instances, but for existing instances with installed previous versions of these solutions you must request the upgrade by contacting a Microsoft Customer Support.
+The latest version of Field Service and Project Service Automation are available by default for newly created instances, but for existing instances with installed previous versions of these solutions you must request the upgrade by contacting Microsoft Customer Support.
 
 More information: [Dynamics 365 for Field Service latest versions](/dynamics365/field-service/version-history#latest-versions) and  [Dynamics 365 for Project Service Automation upgrade home page](/dynamics365/customer-engagement/project-service/upgrade-psa-home-page)
 
@@ -70,8 +70,8 @@ More information: [Design model-driven apps by using the app designer](design-cu
 
 ### See also
 Unified Interface transition community (link tbd) <br />
-Playbook (link tbd) <br />
-White paper (link tbd) <br />
+Unified Interface Playbook (link tbd) <br />
+White paper: Approaching a User Experience and Unified Interface Transition (link tbd) <br />
 [About Unified Interface](/dynamics365/customer-engagement/admin/about-unified-interface) <br />
 [What are model-driven apps in PowerApps?](model-driven-app-overview.md) <br />
 [Update your apps to Unified Interface](/dynamics365/customer-engagement/admin/update-apps-to-unified-interface) <br />
