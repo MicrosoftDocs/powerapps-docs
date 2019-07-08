@@ -13,6 +13,8 @@ ms.reviewer:
 
 # PowerApps Portals admin center
 
+[!include[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
+
 The PowerApps Portals admin center allows you perform advanced administrative actions on portals. The admin center is available when a portal is provisioned successfully.
 
 To open admin center:

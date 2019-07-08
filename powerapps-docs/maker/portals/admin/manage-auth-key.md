@@ -86,7 +86,7 @@ You will also be notified after the key expires every day until 1 week after key
 
 A message about key expiration is displayed at the top of the page.
 
-![Authentication key notification in Portal Admin Center](media/portal-admin-center-auth-notif.png "Authentication key notification in Portal Admin Center")
+![Authentication key notification in Portal Admin Center](../media/portal-admin-center-auth-notif.png "Authentication key notification in Portal Admin Center")
 
 **Portal**
 
@@ -102,7 +102,7 @@ When you navigate to the URL <portal_path>/_services/about, a notification about
 You must renew the key every two years to ensure that your portal can connect to Dynamics 365 organization.
 
 > [!NOTE]
-> To renew the key, you must have permissions to [Manage your Portal](manage-portal.md).
+> To renew the key, you must have permissions to manage your portal.
 
 1. Open [PowerApps Portals admin center](admin-overview.md).
 

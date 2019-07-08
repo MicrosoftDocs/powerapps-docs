@@ -31,12 +31,6 @@ The supported browsers for the PowerApps home and portal maker experience are li
 | Google Chrome (latest version)<br>(recommended)                    | <ul><li>Windows 7 SP1, 8.1, and 10</li><li>macOS</li></ul>      |
 | Microsoft Edge (latest version)<br> (recommended)                    | Windows 10                     |
 
-## Additional references
-
-[Dynamics 365 for Customer Engagement Portal](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/administer-manage-portal-dynamics-365)  
-
-[Administer your portal](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/manage-portal)  
-
-[Configure site settings for portals](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/configure-site-settings)  
+ 
 
 
