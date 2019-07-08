@@ -26,7 +26,7 @@ search.app:
 
 [!include[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-[!INCLUDE[pn-dynamics-crm](../includes/pn-dynamics-crm.md)] Portal is an extensible framework which allows customers to build highly customized and tailored experiences. While customizing, extending, or configuring your portal, you can run into a variety of issues.
+Dynamics 365 Portal is an extensible framework which allows customers to build highly customized and tailored experiences. While customizing, extending, or configuring your portal, you can run into a variety of issues.
 
 In this article you will learn about the common queries and issues we have identified, their impact, and understand the guidance to resolve them. Some of these checks and best practices are also covered under portal checker as well.
 
@@ -50,7 +50,7 @@ However, you can change the audience and type of portal after it is provisioned 
 
 ### How do I change the base URL of a portal after it is provisioned?
 
-You can change the base URL of a portal after it is provisioned by following the steps in [Change the base URL of a portal](change-base-url.md).
+You can change the base URL of a portal after it is provisioned by following the steps in [Change the base URL of a portal](admin/change-base-url.md).
 
 ### How do I delete a portal completely after it is provisioned?
 
@@ -62,7 +62,7 @@ A Dynamics 365 for Customer Engagement Portal consists of the following componen
 
 To delete a portal completely requires deleting the Portal website host as well as uninstalling Portal solutions from your Dynamics 365 for Customer Engagement organization.
 
-To reset the portal host, follow the steps in [Reset a portal](reset-portal.md). It is important to note that resetting a portal host doesn't affect the configuration done in your Dynamics 365 for Customer Engagement organization.
+To reset the portal host, follow the steps in [Reset a portal](admin/reset-portal.md). It is important to note that resetting a portal host doesn't affect the configuration done in your Dynamics 365 for Customer Engagement organization.
 
 To delete portal solutions, you will have to delete solutions from the Dynamics 365 for Customer Engagement solution explorer UI. The order in which Portal solutions should be uninstalled is provided in [Uninstalling Portal Solutions](https://community.dynamics.com/365/b/dynamics365portalssupport/archive/2017/02/27/portal-troubleshooting-part-three-uninstalling-portal-solutions).
 
@@ -74,7 +74,7 @@ When you move your Dynamics 365 for Customer Engagement organization from one ge
 
 To associate your portal again to relevant organizations:
 
-1. Reset your existing portal host from the existing geolocation or tenant by following the steps in [Reset a portal](reset-portal.md). This will delete your associated portal resources and the portal URL will not be accessible after the operation completes.
+1. Reset your existing portal host from the existing geolocation or tenant by following the steps in [Reset a portal](admin/reset-portal.md). This will delete your associated portal resources and the portal URL will not be accessible after the operation completes.
 
 2. Once your existing portal is reset, go to the new tenant (or to the new geolocation of the existing tenant) and provision a portal available there.
 
@@ -95,7 +95,7 @@ When a Dynamics 365 for Customer Engagement organization is restored from a back
 
 - If the organization ID is different after the restore operation or portal solutions are deleted from your organization:
 
-  - In this case, it is better to reset the portal by following the steps in [Reset a portal](reset-portal.md) and then reprovision it.
+  - In this case, it is better to reset the portal by following the steps in [Reset a portal](admin/reset-portal.md) and then reprovision it.
 
 ### We recently changed the URL of our Dynamics 365 for Customer Engagement organization and our portal stopped working. How do we fix it?
 
@@ -114,11 +114,11 @@ Your portal will be restarted and start working again.
 
 Whenever a server error occurs while trying to render a portal, a generic error page is displayed to end users along with the timestamp and activity ID of the error. Portal administrators can configure their portal to get the actual error details, which are helpful in debugging and fixing issues. To see the actual error:
 
-- **Disable the custom error page on the portal**: This will turn off the custom error page and will allow you to see the complete stack trace of any error when navigating to that page. You can disable the custom error by following the steps in [Disable custom error](view-portal-error-log.md#disable-custom-error).
+- **Disable the custom error page on the portal**: This will turn off the custom error page and will allow you to see the complete stack trace of any error when navigating to that page. You can disable the custom error by following the steps in [Disable custom error](admin/view-portal-error-log.md#disable-custom-error).
 
-It is advisable to use this only when you are developing a portal. Once your portal is live for your users, you should enable custom errors again. More information: [View portal error logs](view-portal-error-log.md)
+It is advisable to use this only when you are developing a portal. Once your portal is live for your users, you should enable custom errors again. More information: [View portal error logs](admin/view-portal-error-log.md)
 
-- **Enable diagnostic logging**: This will allow you to get all the portal errors in an Azure Blob storage account. You can enable diagnostic logging by following the steps in [Access portal error logs](view-portal-error-log.md#access-portal-error-logs).
+- **Enable diagnostic logging**: This will allow you to get all the portal errors in an Azure Blob storage account. You can enable diagnostic logging by following the steps in [Access portal error logs](admin/view-portal-error-log.md#access-portal-error-logs).
 
 When you enable diagnostic logging, you can search for particular errors that users report by using the Activity ID shown on the generic error page. The Activity ID is logged along with the error details and is useful to find the actual issue.
 
@@ -140,13 +140,13 @@ You can enable your portal to use a custom domain name in place of the standard 
 
 ### Portal does not load and displays a generic error page (Server Error in "/" application) 
 
-This issue can be caused by a variety of reasons like when a portal is not able to connect to the underlying [!INCLUDE[pn-dynamics-crm](../includes/pn-dynamics-crm.md)] organization, [!INCLUDE[pn-dynamics-crm](../includes/pn-dynamics-crm.md)] organization doesn't exist or its URL has changed, when request to [!INCLUDE[pn-dynamics-crm](../includes/pn-dynamics-crm.md)] organization is timed out, and so on. When you run the portal checker tool, it will try to determine the exact reason and will point you to the correct mitigation. 
+This issue can be caused by a variety of reasons like when a portal is not able to connect to the underlying Dynamics 365 organization, Dynamics 365 organization doesn't exist or its URL has changed, when request to Dynamics 365 organization is timed out, and so on. When you run the portal checker tool, it will try to determine the exact reason and will point you to the correct mitigation. 
 
-Below is a list of most common causes and their correspondng mitigation steps:
+Below is a list of most common causes and their corresponding mitigation steps:
 
 #### URL of the connected Dynamics 365 for Customer Engagement organization has changed 
 
-This happens when the URL of [!INCLUDE[pn-dynamics-crm](../includes/pn-dynamics-crm.md)] organization is changed by a user after portal is provisioned against the organization. To fix this issue, update the Dynamics 365 URL:
+This happens when the URL of Dynamics 365 organization is changed by a user after portal is provisioned against the organization. To fix this issue, update the Dynamics 365 URL:
 
 1. Go to the Dynamics 365 Administration Center page and select the **Applications** tab.
 2. Select the name of the portal that you want to reset, and then select **Manage**.
@@ -154,7 +154,7 @@ This happens when the URL of [!INCLUDE[pn-dynamics-crm](../includes/pn-dynamics-
 
 #### Dynamics 365 organization connected to your portal is in administration mode
 
-This issue occurs when the [!INCLUDE[pn-dynamics-crm](../includes/pn-dynamics-crm.md)] organization is put in administration mode either when changing organization from production to sandbox mode or manually by an organization administrator.
+This issue occurs when the Dynamics 365 organization is put in administration mode either when changing organization from production to sandbox mode or manually by an organization administrator.
 
 If this is the cause, you can disable administration mode by performing actions listed [here](../admin/manage-sandbox-instances.md#administration-mode). Once administration mode is disabled, portal will work fine.
 
@@ -169,7 +169,7 @@ This issue occurs when the authentication connection between Dynamic 365 organiz
 5. Select **On** from the **Portal State** list.
 6. Select **Update**. The portal restarts and will be able to make authentication connection.
 
-However, in certain situations especially if the organization ID has changed after the restore operation (or if you reprovisioned the organization), these mitigation steps will not work. In those situations, you can reset and reprovision the portal against the same instance. For information on how to reset a portal, see [Reset a portal](reset-portal.md).
+However, in certain situations especially if the organization ID has changed after the restore operation (or if you reprovisioned the organization), these mitigation steps will not work. In those situations, you can reset and reprovision the portal against the same instance. For information on how to reset a portal, see [Reset a portal](admin/reset-portal.md).
 
 #### Request to Dynamics 365 organization has timed out
 
@@ -204,13 +204,13 @@ However, there are situations in which portal will not be able to recreate websi
 
 #### An unexpected error has occurred while trying to connect to your Dynamics 365 organization
 
-This situation can arise due to some unexpected issue. To mitigate in this situation, you can either try resetting or reprovisioning the portal. For information on how to reset a portal, see [Reset a portal](reset-portal.md).
+This situation can arise due to some unexpected issue. To mitigate in this situation, you can either try resetting or reprovisioning the portal. For information on how to reset a portal, see [Reset a portal](admin/reset-portal.md).
 
 If portal reset and reprovision doesn't solve this issue, please reach out to Microsoft support for help.
 
 ### Portal is not displaying updated data from Dynamics 365 organization
 
-Any Dynamics 365 data displayed on portal is rendered from the portal cache. This cache gets updated whenever data in Dynamics 365 organization is updated. However, this process is asynchronous and can take upto 15 minutes. If the changes are made in the metadata entity of portal, for example, web pages, web files, content snippet, site setting, and so on, it is advised to clear cache manually or restart the portal from Portal Admin Center. For information on how to clear cache, see [Clear the server-side cache for a portal](clear-server-side-cache.md). 
+Any Dynamics 365 data displayed on portal is rendered from the portal cache. This cache gets updated whenever data in Dynamics 365 organization is updated. However, this process is asynchronous and can take upto 15 minutes. If the changes are made in the metadata entity of portal, for example, web pages, web files, content snippet, site setting, and so on, it is advised to clear cache manually or restart the portal from Portal Admin Center. For information on how to clear cache, see [Clear the server-side cache for a portal](admin/clear-server-side-cache.md). 
 
 However, if you are seeing stale data for a long time in non-portal metadata entities, it can be because of variety of issues listed below:
 
@@ -218,9 +218,9 @@ However, if you are seeing stale data for a long time in non-portal metadata ent
 
 If you are seeing stale data only for certain entities and not for everything, this can be because the Change Tracking metadata is not enabled on that specific entity.
 
-If you run the Portal checker (self-service diagnostic) tool, it will list down Object Type code of all the entities which are referenced on portal in entity list or entity forms and web forms and are not enabled for change tracking. Browse your metadata by using the steps mentioned at [Browse the metadata for your organization](../developer/browse-your-metadata.md)
+If you run the Portal checker (self-service diagnostic) tool, it will list down Object Type code of all the entities which are referenced on portal in entity list or entity forms and web forms and are not enabled for change tracking. Browse your metadata by using the steps mentioned at [Browse the metadata for your organization](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/browse-your-metadata)
 
-If you are experiencing stale data issue in any of these entities, you can enable change tracking by using Dynamics 365 admin UI or Dynamics 365 API. More information:  [Enable change tracking for an entity](../developer/use-change-tracking-synchronize-data-external-systems.md#enable-change-tracking-for-an-entity)
+If you are experiencing stale data issue in any of these entities, you can enable change tracking by using Dynamics 365 admin UI or Dynamics 365 API. More information:  [Enable change tracking for an entity](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/use-change-tracking-synchronize-data-external-systems#enable-change-tracking-for-an-entity)
 
 #### Organization not enabled for change tracking
 

@@ -1034,7 +1034,7 @@
         - name: Download public key of portal
           href: ./portals/admin/get-public-key.md
         - name: View portal error logs
-          href: ./portals/admin/portal-error-log.md
+          href: ./portals/admin/view-portal-error-log.md
         - name: Reset a portal
           href: ./portals/admin/reset-portal.md
         - name: Change base URL of a portal
