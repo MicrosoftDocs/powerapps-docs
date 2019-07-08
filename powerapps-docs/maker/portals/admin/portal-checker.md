@@ -17,7 +17,7 @@ ms.reviewer:
 
 Portal checker for Dynamics 365 Portal is a self-service diagnostic tool that can be used by portal administrators to identify common issues in their portal. Portal checker helps to identify issues with your portal by looking at various configuration parameters and provides suggestions on how to fix them.
 
-When you run the diagnostic tool, the results are displayed in the **Diagnostic results** section in a grid format. The results grid has the following columns:
+When you run portal checker, the results are displayed in the **Diagnostic results** section in a grid format. The results grid has the following columns:
 
 - **Issue**: Displays the top-level issue faced by a customer; for example, performance issue.
 - **Category**: Displays the top-level area where issues can be categorized; for example, provisioning, solution upgrade, and so on.
@@ -26,12 +26,12 @@ When you run the diagnostic tool, the results are displayed in the **Diagnostic 
 By default, information in the grid is sorted by the **Result** column in this order: error, warning, and pass.
 
 > [!div class=mx-imgBorder]
-> ![Diagnostic results](media/diagnostic-results.png "Diagnostic results")
+> ![Diagnostic results](../media/diagnostic-results.png "Diagnostic results")
 
 You can expand an issue to view detailed information and mitigation steps. If the mitigation requires any action, you'll see a button that will perform the action. You can also provide feedback on whether the mitigation was useful.
 
 > [!div class=mx-imgBorder]
-> ![Expand an issue in diagnostic results](media/diagnostic-results-issue-expand.png "Expand an issue in diagnostic results")
+> ![Expand an issue in diagnostic results](../media/diagnostic-results-issue-expand.png "Expand an issue in diagnostic results")
 
 If required, you can rerun the diagnostic checks, which will refresh the results with updated data.
 
@@ -40,23 +40,21 @@ If required, you can rerun the diagnostic checks, which will refresh the results
 
 For a list of common issues diagnosed by the portal checker tool, see [Common portal issues diagnosed by portal checker and their best practices](portal-faq.md#portal-checker).
 
-To run the diagnostic tool:
+To run portal checker:
 
-1.	Go to the **Dynamics 365 Administration Center** page and select the **Applications** tab.
+1.	Open [PowerApps Portals admin center](admin-overview.md).
 
-2.	Select the name of the portal for which you want to run the diagnostic tool, and then select **Manage**.
-
-3.	Go to **Diagnose and resolve problems**.
+2.	Go to **Run Portal Checker**.
 
     > [!div class=mx-imgBorder]
-    > ![Run the diagnostic tool](media/run-diagnostics.png "Run the diagnostic tool")
+    > ![Run portal checker](../media/run-diagnostics.png "Run portal checker")
 
-4.	Select **Run diagnostics**. The diagnostic session will start and gather data about the customer issues. The results are displayed in the **Diagnostic results** section.
-
-    > [!div class=mx-imgBorder]
-    > ![Diagnostic results](media/diagnostic-results.png "Diagnostic results")
-
-5.	To rerun the diagnostic checks, select **Refresh results**.
+3.	Select **Run Portal Checker**. The diagnostic session will start and gather data about the customer issues. The results are displayed in the **Diagnostic results** section.
 
     > [!div class=mx-imgBorder]
-    > ![Refresh diagnostic results](media/diagnostic-results-refresh.png "Refresh diagnostic results")
+    > ![Diagnostic results](../media/diagnostic-results.png "Diagnostic results")
+
+4.	To rerun the diagnostic checks, select **Refresh results**.
+
+    > [!div class=mx-imgBorder]
+    > ![Refresh diagnostic results](../media/diagnostic-results-refresh.png "Refresh diagnostic results")

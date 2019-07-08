@@ -17,5 +17,14 @@ The PowerApps Portals admin center allows you perform advanced administrative ac
 
 To open admin center:
 
-1. Go to the **Recent apps** section on the PowerApps home page an locate your portal.
+1. Go to the **Recent apps** section on the PowerApps home page and locate your portal.
+
+    ![Recent apps](../media/recent-apps.png "Recent apps")  
+
 2. Select **More Commands (...)** > **Settings**.
+
+    ![Portal settings option](../media/portal-settings-option.png "Portal settings option")
+
+3. In the **Portal settings** pane, select **Administration**.
+
+    ![Portal settings pane](../media/portal-settings-admin.png "Portal settings pane")  
