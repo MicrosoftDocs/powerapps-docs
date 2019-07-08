@@ -1013,8 +1013,8 @@
   items:
     - name: What is PowerApps Portals?
       href: ./portals/overview.md
-    items:
-      - name: Design and build a portal
+    - name: Design and build a portal
+      items:
         - name: Create a portal
           href: ./portals/create-portal.md
         - name: Maker experience anatomy
