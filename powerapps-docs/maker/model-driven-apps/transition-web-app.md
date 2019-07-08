@@ -40,8 +40,8 @@ First, select a non-production environment and enable **Unified Interface Only**
 
 2. Go to **Settings** > **Behavior** > **Interface settings** and then select **Use Unified Interface only**.
 
-> [!NOTE]
-> If you need to switch the environment back to its previous state you can toggle the Unified Interface setting to revert to the original interface. More information: [Enable Unified Interface Only](/dynamics365/customer-engagement/admin/enable-unified-interface-only)
+    > [!NOTE]
+    > If you need to switch the environment back to its previous state you can toggle the Unified Interface setting to revert to the original interface. More information: [Enable Unified Interface Only](/dynamics365/customer-engagement/admin/enable-unified-interface-only)
 
 
 ## Run and validate your app in the Unified Interface
