@@ -12,7 +12,7 @@
   
  [!INCLUDE[pn_customerinsight_short](pn-customer-insights-short.md)], a service running in              [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)], stores              [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)] data, including personally identifiable information about customers, for the purpose of computing output for the Relationship Analytics feature. The preview of [!INCLUDE[pn_customerinsight_short](pn-customer-insights-short.md)] is subject to these [supplemental terms of use for preview features](http://go.microsoft.com/fwlink/p/?LinkId=511446).  
   
- [Learn more about the preview of Customer Insights](https://azure.microsoft.com/en-us/services/customer-insights/).  
+ [Learn more about the preview of Customer Insights](https://azure.microsoft.com/services/customer-insights/).  
   
  [Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/)  
   

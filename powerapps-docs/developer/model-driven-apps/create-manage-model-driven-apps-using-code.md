@@ -3,8 +3,7 @@ title: "Create, manage, and publish model-driven apps using code | Microsoft Doc
 description: "Learn about how to create, manage, and publish model-driven apps using code in PowerApps." # 115-145 characters including spaces. This abstract displays in the search result."
 keywords: ""
 ms.date: 03/04/2019
-ms.service:
-  - powerapps
+ms.service: powerapps
 ms.custom:
   - ""
 ms.topic: article
