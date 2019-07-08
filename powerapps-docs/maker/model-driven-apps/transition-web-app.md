@@ -41,7 +41,38 @@ First, create a new sandbox environment and enable **Unified Interface Only** mo
 > If you need to switch the environment back to its original state you can toggle the unified interface setting to revert to the original interface. More information: [Enable Unified Interface Only](/dynamics365/customer-engagement/admin/enable-unified-interface-only)
 
 
-## Review your app in the Unified Interface
-Run your app that was originally legacy web client. Notice that, after you turn on **Unified Interface Only**, all available apps in the environment will use Unified Interface even if an app is configured for Unified Interface or legacy web client.
+## Run and validate your app in the Unified Interface
+Run your app that was originally a legacy web client app. Notice that, after you turn on **Unified Interface Only**, all available apps in the environment use Unified Interface even if the app was originally configured for the legacy web client.
 
+To run your app, sign-in Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) select Apps, and then select the app you want to run. Alternatively, you can use the direct url to the app, such as *https://contoso.crm.dynamics.com/apps/*.
+
+### Validate your app, processes, and customizations 
+We recommen that you test all test use cases, but you can start with the most critical use cases or group them into logical patterns of design. Since Unified Interface is based on responsive design, we recommend that you perform tests with different devices that have different screen resolutions. At this stage you will be able to verify that your customizations are compatible with Unified Interface and whether there are any features that require a re-design or have missing functionality. Build a plan for reviewing these elements. <!-- and raise any product feedback on our community forum located XXXXXX -->
+
+The current version of Common Data Service and Dynamics 365 for Customer Engagement apps still include several deprecated features. You should review your app for any deprecated features and replace as necessary with new capabilities. More information: [Important changes (deprecations) coming in Dynamics 365 Customer Engagement](/dynamics365/get-started/whats-new/customer-engagement/important-changes-coming)
+
+### Dynamics 365 for Customer Engagement apps
+If you use the Dynamics 365 for Field Service or Dynamics 365 for Project Service Automation apps you must upgrade to the latest Field Service version 8 and Project Service Automation version 3 before validating their application in Unified Interface.
+
+The latest version of Field Service and Project Service Automation are available by default for newly created instances, but for existing instances with installed previous versions of these solutions you must request enable the upgrade option by contacting a Microsoft Customer Support.
+
+More information: [Dynamics 365 for Field Service latest versions](/field-service/version-history#latest-versions) and [Dynamics 365 for Project Service Automation upgrade home page](/customer-engagement/project-service/upgrade-psa-home-page)
+
+## Next steps
+Based on your findings your implementation team or partner can estimate the amount of effort needed to transition your application into the Unified Interface and also identify potential usability improvements. With multiple new features and capabilities available in Unified Interface there is opportunity to increase value for your app users. 
+
+Transitioning to the Unified Interface is a great opportunity for you to make a modern user interface and revisit your existing processes to verify that they're still valid or need improvement. This is also a good time to consider whether your application reflects your business requirements and whether the existing app could be spread across multiple apps for various teams and roles.
+More information: [Design custom business apps by using the app designer](https://www.microsoft.com/downloads/) 
+
+### See also
+Unified Interface transition community (link tbd) <br />
+Playbook (link tbd) <br />
+White papser (link tbd) <br />
+[About Unified Interface](/dynamics365/customer-engagement/admin/about-unified-interface) <br />
+[What are model-driven apps in PowerApps?](model-driven-app-overview.md) <br />
+[Update your apps to Unified Interface](/dynamics365/customer-engagement/admin/update-apps-to-unified-interface) <br />
+[Configure model-driven app interactive experience dashboards](configure-interactive-experience-dashboards.md) <br />
+[Use custom controls for model-driven app data visualizations](use-custom-controls-data-visualizations.md) <br />
+[PowerApps component framework overview](/powerapps/developer/component-framework/overview) <br />
+[Unified Interface for everybody](/power-platform-release-plan/2019wave2/microsoft-powerapps/unified-interface-app-everybody)
 
