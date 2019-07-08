@@ -1,5 +1,5 @@
 ---
-title: "Transistion your legacy web client app to unified interface | MicrosoftDocs"
+title: "Transistion your legacy web client app to Unified Interface | MicrosoftDocs"
 description: "Learn how to transistion your web client app to unified interface"
 ms.custom: ""
 ms.date: 07/08/2019
@@ -23,9 +23,9 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Transistion your legacy web client app to unified interface
+# Transistion your legacy web client app to Unified Interface
 
-This topic explains how to transition your legacy web client app to unified interface. The Unified interface framework uses responsive web design principles to provide an optimal viewing and interaction experience for any screen size, device, or orientation. 
+This topic explains how to transition your legacy web client app to Unified Interface. The Unified Interface framework uses responsive web design principles to provide an optimal viewing and interaction experience for any screen size, device, or orientation. 
 
 ## Prerequisites
 - A legacy web client app. 
@@ -41,25 +41,26 @@ First, select a non-production environment and enable **Unified Interface Only**
 2. Go to **Settings** > **Behavior** > **Interface settings** and then select **Use Unified Interface only**.
 
 > [!NOTE]
-> If you need to switch the environment back to its previous state you can toggle the unified interface setting to revert to the original interface. More information: [Enable Unified Interface Only](/dynamics365/customer-engagement/admin/enable-unified-interface-only)
+> If you need to switch the environment back to its previous state you can toggle the Unified Interface setting to revert to the original interface. More information: [Enable Unified Interface Only](/dynamics365/customer-engagement/admin/enable-unified-interface-only)
 
 
 ## Run and validate your app in the Unified Interface
-Run your apps that was originally a legacy web client apps. Notice that, after you turn on **Unified Interface Only**, all available apps in the environment use Unified Interface even if the app was originally configured for the legacy web client.
+Run your apps that were originally legacy web client apps. Notice that, after you turn on **Use Unified Interface Only**, all available apps in the environment use Unified Interface even if the app was originally configured for the legacy web client.
 
 To run your app, sign-in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) select **Apps**, and then select the app you want to run. Alternatively, you can go directly to the **My Apps** page in Dynamics 365 for Customer Engagement apps, such as *https://contoso.crm.dynamics.com/apps/*.
 
 ### Validate your app, processes, and customizations 
 We recommend that you test all use cases. You can start with the most critical use cases or group them into logical patterns of design. Since Unified Interface is based on responsive design, we recommend that you perform tests with different devices that have different screen resolutions. As you test the app you will be able to verify that your customizations are compatible with Unified Interface and whether there are any features that require a re-design or have missing functionality. Build a plan for reviewing these elements and post your questions and feedback on our community forum. <!-- Link tbd -->
 
-The current version of Common Data Service and Dynamics 365 for Customer Engagement apps still includes several deprecated features. You should review your app for any deprecated features and replace as necessary with new capabilities. More information: [Important changes (deprecations) coming in Dynamics 365 Customer Engagement](/dynamics365/get-started/whats-new/customer-engagement/important-changes-coming)
+> [!IMPORTANT]
+> The current version of Common Data Service and Dynamics 365 for Customer Engagement apps still includes several deprecated features. You should review your app for any deprecated features and replace as necessary with new capabilities. More information: [Important changes (deprecations) coming in Dynamics 365 Customer Engagement](/dynamics365/get-started/whats-new/customer-engagement/important-changes-coming)
 
 ### Dynamics 365 for Customer Engagement apps
-If you use the Dynamics 365 for Field Service or Dynamics 365 for Project Service Automation apps you must upgrade to the latest Field Service version 8 and Project Service Automation version 3 before validating their application in Unified Interface.
+If you use the Dynamics 365 for Field Service or Dynamics 365 for Project Service Automation apps you must upgrade to the latest Field Service version 8 and Project Service Automation version 3 before validating these applications in Unified Interface.
 
-The latest version of Field Service and Project Service Automation are available by default for newly created instances, but for existing instances with installed previous versions of these solutions you must request enable the upgrade option by contacting a Microsoft Customer Support.
+The latest version of Field Service and Project Service Automation are available by default for newly created instances, but for existing instances with installed previous versions of these solutions you must request the upgrade by contacting a Microsoft Customer Support.
 
-More information: [Dynamics 365 for Field Service latest versions](/field-service/version-history#latest-versions) and [Dynamics 365 for Project Service Automation upgrade home page](/customer-engagement/project-service/upgrade-psa-home-page)
+More information: [Dynamics 365 for Field Service latest versions](/dynamics365/field-service/version-history#latest-versions) and  [Dynamics 365 for Project Service Automation upgrade home page](/dynamics365/customer-engagement/project-service/upgrade-psa-home-page)
 
 ## Next steps
 Based on your findings your implementation team or partner can estimate the amount of effort needed to transition your application into the Unified Interface and also identify potential usability improvements. With multiple new features and capabilities available in Unified Interface there is opportunity to increase value for your app users. 
