@@ -13,6 +13,8 @@ ms.reviewer:
 
 # Connect to a Dynamics 365 for Customer Engagement online organization using a portal
 
+[!include[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
+
 A portal connects to a Dynamics 365 online organization using an Azure Active Directory application. The application is created in the same tenant where the portal is provisioned. The application is registered with the Dynamics 365 organization during the portal provisioning process.
 
 ![Connecting a portal with Dynamics 365 for Customer Engagement organization](media/connect-with-dynamics.png "Connecting a portal with Dynamics 365 for Customer Engagement organization")

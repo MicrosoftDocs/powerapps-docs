@@ -1013,20 +1013,24 @@
   items:
     - name: What is PowerApps Portals?
       href: ./portals/overview.md
-    - name: Create a portal
-      href: ./portals/create-portal.md
-    - name: Maker experience anatomy
-      href: ./portals/maker-experience-anatomy.md
-    - name: Create and manage webpages
-      href: ./portals/create-manage-webpages.md
-    - name: Compose a page
-      href: ./portals/compose-page.md
+    items:
+      - name: Design and build a portal
+        - name: Create a portal
+          href: ./portals/create-portal.md
+        - name: Maker experience anatomy
+          href: ./portals/maker-experience-anatomy.md
+        - name: Create and manage webpages
+          href: ./portals/create-manage-webpages.md
+        - name: Compose a page
+          href: ./portals/compose-page.md
     - name: Manage existing portals
       href: ./portals/manage-existing-portals.md
-    - name: Advanced portal customizations
+    - name: Advanced portal administration
       items:
         - name: Overview
+          href: ./portals/admin/admin-overview.md
         - name: Portal details
+          href: ./portals/admin/portal-details.md
         - name: Download public key of portal
           href: ./portals/admin/get-public-key.md
         - name: View portal error logs
@@ -1045,7 +1049,7 @@
           href: ./portals/admin/manage-auth-key.md
         - name: Set up IP address restriction
           href: ./portals/admin/ip-address-restrict.md
-
+    - name: Portals FAQ
     - name: Known issues
       href: ./portals/known-issues.md
 - name: Common Data Service

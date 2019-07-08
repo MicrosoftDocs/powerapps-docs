@@ -13,6 +13,8 @@ ms.reviewer:
 
 # Migrate Dynamics 365 for Customer Engagement Portal configuration
 
+[!include[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
+
 Portal development involves several configurations and customizations to achieve a desired experience for portal end users.
 
 After you have completed development or configuration of your Dynamics 365 Portal instance, you might want to migrate your latest Dynamics 365 Portal configuration from development to testing or the production environments. Migration involves exporting the existing configuration from the source Dynamics 365 instance, and then importing it into the target Dynamics 365 instance.

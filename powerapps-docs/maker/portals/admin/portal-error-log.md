@@ -13,6 +13,8 @@ ms.reviewer:
 
 # View portal error logs
 
+[!include[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
+
 As a portal administrator or developer, you can use portal capabilities for Dynamics 365 for Customer Engagement to create a website for your customers. One common task for a developer is to debug issues while developing the portal. To help debug, you can access detailed error logs for any issues on your portal. There are multiple ways that you can get error logs for your portals.
 
 ## Custom error
