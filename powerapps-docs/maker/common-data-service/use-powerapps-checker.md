@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: cds
 ms.topic: article
-ms.date: 06/25/2019
+ms.date: 07/09/2019
 ms.author: matp
 search.audienceType: 
   - maker
@@ -42,9 +42,6 @@ The Solution checker is enabled by default in every Common Data Service environm
    > ![Install solution checker](media/solution-checker-install.png "Install solution checker")
 
 4. Select **Free Trial** on the AppSource page. 
-
-
-<!--from editor: Should it be "solution checker" rather than "checker solution" in the following step?
 
 5. If you agree, accept the terms and conditions and select the environment to install the PowerApps checker solution. 
 6. When the installation is complete, refresh the **Solution** list on the PowerApps site to verify that the solution checker is available.  
@@ -106,7 +103,7 @@ When you install the solution checker in your environment, the **Solution check*
 
 
 ## Review the solution checker report
-When a solution check is completed, you can view the analysis report in the portal or you can download the report from your web browser. In the portal, you have options to filter, group results by Issue, Location or by Severity and view detailed information for issue detected in your solution. 
+When a solution check is completed, you can view the analysis report in the portal or you can download the report from your web browser. In the portal, you have options to filter, group results by **Issue**, **Location** or by **Severity** and view detailed information for issues detected in your solution. 
 
 1. In the left pane, select **Solutions**.
 2. Next to the unmanaged solution where you want to view the solution checker report, select **...**, point to **Solution checker**, and then select **View results**.  
