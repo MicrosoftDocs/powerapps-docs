@@ -36,9 +36,9 @@ First, select a non-production environment and enable **Unified Interface Only**
 
 1. Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Environment**, and then select a sandbox environment. 
 
-   ![Use Unified Interface only setting](media/use-unified-interface-only-pac.png)
+2. Select **Settings** > **Behavior** and then turn on **Use Unified Interface only**.
 
-2. Select **Settings** > **Behavior** > **Interface settings** and then turn on **Use Unified Interface only**.
+   ![Use Unified Interface only setting](media/use-unified-interface-only-pac.png)
 
 You can also set this in Dynamics 365 for Customer Engagement apps. Go to **Settings** > **Administration** > **System Settings** and then on the **General** tab select **Use the new Unified Interface only**.
 
