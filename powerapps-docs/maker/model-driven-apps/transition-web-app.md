@@ -45,6 +45,7 @@ You can also set this in Dynamics 365 for Customer Engagement apps. Go to **Sett
     > [!div class="mx-imgBorder"] 
     > ![](media/use-unified-interface-only.png "Use the new Unified Interface only")
 
+
     > [!NOTE]
     > If you need to switch the environment back to its previous state you can toggle the Unified Interface setting to revert to the original interface. More information: [Enable Unified Interface Only](/dynamics365/customer-engagement/admin/enable-unified-interface-only)
 
