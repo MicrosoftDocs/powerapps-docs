@@ -23,7 +23,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Transition your Web client application to Unified Interface
+# Transition your Web Client application to Unified Interface
 
 This topic explains how to transition your Web Client application to Unified Interface. The Unified Interface framework uses responsive web design principles to provide an optimal viewing and interaction experience for any screen size, device, or orientation. 
 
