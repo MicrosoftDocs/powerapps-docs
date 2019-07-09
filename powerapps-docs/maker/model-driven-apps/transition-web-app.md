@@ -42,13 +42,12 @@ First, select a non-production environment and enable **Unified Interface Only**
 
 You can also set this in Dynamics 365 for Customer Engagement apps. Go to **Settings** > **Administration** > **System Settings** and then on the **General** tab select **Use the new Unified Interface only**.
 
-    > [!div class="mx-imgBorder"] 
-    > ![](media/use-unified-interface-only.png "Use the new Unified Interface only")
+> [!div class="mx-imgBorder"] 
+> ![](media/use-unified-interface-only.png "Use the new Unified Interface only")
 
 
-    > [!NOTE]
-    > If you need to switch the environment back to its previous state you can toggle the Unified Interface setting to revert to the original interface. More information: [Enable Unified Interface Only](/dynamics365/customer-engagement/admin/enable-unified-interface-only)
-
+> [!NOTE]
+> If you need to switch the environment back to its previous state you can toggle the Unified Interface setting to revert to the original interface. More information: [Enable Unified Interface Only](/dynamics365/customer-engagement/admin/enable-unified-interface-only)
 
 ## Run and validate your application in the Unified Interface
 Run your applications that were originally Web Client applications. Notice that, after you turn on **Use Unified Interface Only**, all available apps in the environment use Unified Interface even if the application was originally configured for the Web Client.
