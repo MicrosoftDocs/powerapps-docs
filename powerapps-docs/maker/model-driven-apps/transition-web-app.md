@@ -40,7 +40,7 @@ First, select a non-production environment and enable **Unified Interface Only**
 
    ![Use Unified Interface only setting](media/use-unified-interface-only-pac.png)
 
-You can also set this in Dynamics 365 for Customer Engagement apps. Go to **Settings** > **Administration** > **System Settings** and then on the **General** tab select **Use the new Unified Interface only**.
+You can also set this in Dynamics 365 for Customer Engagement apps. Go to **Settings** > **Administration** > **System Settings** and then on the **General** tab set **Enable only the Unified Interface** to **Yes**.
 
 > [!div class="mx-imgBorder"] 
 > ![](media/use-unified-interface-only.png "Use the new Unified Interface only")
