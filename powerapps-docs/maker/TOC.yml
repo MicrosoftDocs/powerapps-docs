@@ -1049,6 +1049,8 @@
           href: ./portals/admin/manage-auth-key.md
         - name: Set up IP address restriction
           href: ./portals/admin/ip-address-restrict.md
+        - name: Update to PowerApps Portals domain
+          href: ./portals/admin/update-portal-domain.md
     - name: Common portal issues and best practices
       href: ./portals/portal-faq.md
     - name: Known issues
