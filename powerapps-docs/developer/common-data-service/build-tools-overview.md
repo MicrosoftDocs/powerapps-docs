@@ -3,11 +3,11 @@ title: "Build tools overview| Microsoft Docs" # Intent and product brand in a un
 description: "PowerApps build tools are a collection of PowerApps specific Azure DevOps build tasks that eliminate the need to manually download  scripts to manage the development of PowerApps" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 07/21/2019
-ms.reviewer: ""
+ms.reviewer: "Dean-Haas"
 ms.service: powerapps
 ms.topic: "article"
-author: "pemikkel" # GitHub ID
-ms.author: "v-dehaas" # MSFT alias of Microsoft employees only
+author: "mikkelsen2000" # GitHub ID
+ms.author: "pemikkel" # MSFT alias of Microsoft employees only
 manager: "kvivek" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer

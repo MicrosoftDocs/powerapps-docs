@@ -3,11 +3,11 @@ title: "Build tools tutorial and FAQ| Microsoft Docs" # Intent and product brand
 description: "PowerApps build tools are a collection of PowerApps specific Azure DevOps build tasks that eliminate the need to manually download  scripts to manage the development of PowerApps. This topic describes the tutorial and FAQs that you can access to learn more about these tools. " # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 07/21/2019
-ms.reviewer: ""
+ms.reviewer: "Dean-Haas"
 ms.service: powerapps
 ms.topic: "article"
-author: "pemikkel" # GitHub ID
-ms.author: "v-dehaas" # MSFT alias of Microsoft employees only
+author: "mikkelsen2000" # GitHub ID
+ms.author: "pemikkel" # MSFT alias of Microsoft employees only
 manager: "kvivek" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
@@ -34,7 +34,8 @@ The hand-on lab provides a tutorial with step-by-step instructions on how to bui
 7. Generate a build artifact (managed solution).
 8. Deploy the solution to a downstream environment.
 
-> [!NOTE] The hands-on lab is provided to offer hands-on experience for users new to Azure DevOps who are wanting to learn how to build pipelines in Azure DevOps. The finished pipelines that you will end up building can also be downloaded from the tutorial and used as-is with just a few adjustments to environment variables, source/target folders, and repositories.  
+> [!NOTE]
+> The hands-on lab is provided to offer hands-on experience for users new to Azure DevOps who are wanting to learn how to build pipelines in Azure DevOps. The finished pipelines that you will end up building can also be downloaded from the tutorial and used as-is with just a few adjustments to environment variables, source/target folders, and repositories.  
 
 ## Frequently asked question (FAQ)
 

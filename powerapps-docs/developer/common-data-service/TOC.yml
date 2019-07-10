@@ -322,6 +322,14 @@
         href: create-patches-simplify-solution-updates.md
       - name: When to edit the customizations file
         href: when-edit-customization-file.md
+  - name: Build tools for Azure DevOps 
+    items:
+      name: Overview
+      href: build-tools-overview.md
+    - name: Tasks
+      href: build-tools-tasks.md
+    - name: Tutorial and FAQ
+      href: build-tools-tutorial-faq.md
   - name: SolutionPackager tool
     href: compress-extract-solution-file-solutionpackager.md
     items:
