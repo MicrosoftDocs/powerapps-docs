@@ -775,11 +775,11 @@ The Web API allows you to use two lambda operators, which are `any` and `all` to
 
 ### `any` operator
 
-The `any` operator applies a Boolean expression to each member of a collection and returns `true` if the expression is `true` for any member of the collection, otherwise it returns `false`. The `any` operator without an argument returns `true` if the collection is not empty.
+The `any` operator returns `true` if the Boolean expression applied is `true` for any member of the collection, otherwise it returns `false`. The `any` operator without an argument returns `true` if the collection is not empty.
 
 **Example**
 
-The example given below shows how you retrieve all Account entity records that have atleast one email with "sometext" in the subject.
+The example given below shows how you can retrieve all Account entity records that have atleast one email with "sometext" in the subject.
 
 ```http
 https://[Organization URI]/api/data/v9.1/accounts?$select=name&$filter=Account_Emails/any(o:contains(o/subject,'sometext')) HTTP/1.1
@@ -790,7 +790,7 @@ OData-Version: 4.0
 ```
 ### `all` operator
 
-The `all` operator applies a Boolean expression to each member of a collection and returns `true` if the expression is true for all members of the collection, otherwise it returns `false`.
+The `all` operator returns `true` if the Boolean expression applied is `true` for all members of the collection, otherwise it returns `false`.
 
 **Example**
 
