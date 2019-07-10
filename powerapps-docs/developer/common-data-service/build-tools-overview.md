@@ -39,7 +39,7 @@ The PowerApps build tools are a collection of PowerApps specific Azure DevOps bu
 - Environment management tasks
 
 ## Get the PowerApps build tools 
-The PowerApps Build Tools can be installed into your Azure DevOps organization from the Azure Marketplace. Once installed, all tasks included in the PowerApps Build Tools will be available to add into any new or existing pipeline and are easily found by searching for '**PowerApps**.
+The PowerApps Build Tools can be installed into your Azure DevOps organization from the Azure Marketplace. Once installed, all tasks included in the PowerApps Build Tools will be available to add into any new or existing pipeline and are easily found by searching for **PowerApps**.
 
 ![Get build tools](media/build-tools-download.png)
  
