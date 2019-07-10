@@ -18,7 +18,7 @@ search.app:
 
 # PowerApps build tools overview
 
-[!INCLUDE[cc-beta-prerelease-disclaimer](./includes/cc-beta-prerelease-disclaimer.md)]
+[!INCLUDE[cc-beta-prerelease-disclaimer](./powerapps-docs\includes\cc-preview-feature.md)
 
 Use PowerApps Build Tools to automate common build and deployment tasks related to PowerApps . This includes synchronization of solution metadata (a.k.a. solutions) between development environments and source control, generating build artifacts, deploying to downstream environments, provisioning or de-provisioning of environments, and the ability to perform static analysis checks against your solution using the PowerApps checker service.
 
@@ -26,8 +26,8 @@ Use PowerApps Build Tools to automate common build and deployment tasks related 
 
 
 > - PowerApps build tools is a preview feature.
-> - [!INCLUDE[cc_preview_features_definition](./includes/cc-preview-features-definition.md)]
-> PowerApps puild tools currently support end-to-end ALM for PowerApps and Dynamics 365 CE only, as some Environment Actions are not yet available for non-CRM Environments  
+> - [!INCLUDE[cc_preview_features_definition](./powerapps-docs\includes\cc-preview-features-definition.md)
+> - PowerApps build tools currently support end-to-end ALM for PowerApps and Dynamics 365 CE only, as some Environment Actions are not yet available for non-CRM Environments  
   
 ## What are PowerApps build tools
 
