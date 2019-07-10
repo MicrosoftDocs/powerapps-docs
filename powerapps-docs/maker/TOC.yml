@@ -1001,8 +1001,11 @@
       href: ./model-driven-apps/distribute-model-driven-app.md
     - name: Create guided help
       href: ./model-driven-apps/create-guided-help-learning-path.md      
-  - name: Transition your legacy web client app
+  - name: Transition Web Client applications
     href: ./model-driven-apps/transition-web-app.md
+    items: 
+    - name: Transition a Web Client application quick start
+      href: ./model-driven-apps/transition-web-app.md
   - name: Accessibility in PowerApps app designer
     href: ./model-driven-apps/Accessibility-app-designer-site-map-designer-my-apps-page.md
   - name: Customize Dynamics 365 App for Outlook

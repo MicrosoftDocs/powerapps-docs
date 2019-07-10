@@ -1,5 +1,5 @@
 ---
-title: "Transition your Web Client application to Unified Interface | MicrosoftDocs"
+title: "Quick start for transitioning your Web Client application to Unified Interface | MicrosoftDocs"
 description: "Learn how to transistion your Web Client application to Unified Interface"
 ms.custom: ""
 ms.date: 07/08/2019
@@ -23,9 +23,9 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Transition your Web Client application to Unified Interface
+# Quick start for transitioning your Web Client application to Unified Interface
 
-This topic explains how to transition your Web Client application to Unified Interface. The Unified Interface framework uses responsive web design principles to provide an optimal viewing and interaction experience for any screen size, device, or orientation. 
+This quick start topic explains how to transition your Web Client application to Unified Interface. The Unified Interface framework uses responsive web design principles to provide an optimal viewing and interaction experience for any screen size, device, or orientation. 
 
 ## Prerequisites
 - A Web Client application. 
