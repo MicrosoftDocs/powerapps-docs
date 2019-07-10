@@ -32,7 +32,7 @@ This quick start topic explains how to transition your Web Client application to
 - Although not required, we recommend a non-production environment to test your application and ensure it does not impact your current deployment or development cycles. More information: [Manage sandbox instances](/dynamics365/customer-engagement/admin/manage-sandbox-instances)
 
 ## Prepare the environment
-First, select a non-production environment and enable **Unified Interface Only** mode, which will use Unified Interface for all model-driven apps in the environment. This also includes any Dynamics 365 for Customer Engagement application modules originally configured for the Web Client.
+First, select a non-production environment and enable **Use Unified Interface only** mode, which will use Unified Interface for all model-driven apps in the environment. This also includes any Dynamics 365 for Customer Engagement application modules originally configured for the Web Client.
 
 1. Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Environment**, and then select a sandbox environment. 
 
@@ -50,7 +50,7 @@ You can also set this in Dynamics 365 for Customer Engagement apps. Go to **Sett
 > If you need to switch the environment back to its previous state you can toggle the Unified Interface setting to revert to the original interface. More information: [Enable Unified Interface Only](/dynamics365/customer-engagement/admin/enable-unified-interface-only)
 
 ## Run and validate your application in the Unified Interface
-Run your applications that were originally Web Client applications. Notice that, after you turn on **Use Unified Interface Only**, all available apps in the environment use Unified Interface even if the application was originally configured for the Web Client.
+Run your applications that were originally Web Client applications. Notice that, after you turn on **Use Unified Interface only**, all available apps in the environment use Unified Interface even if the application was originally configured for the Web Client.
 
 To run your app, sign-in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) select **Apps**, and then select the application you want to run. Alternatively, you can go directly to the **My Apps** page in Dynamics 365 for Customer Engagement apps, such as *https://contoso.crm.dynamics.com/apps/*.
 
@@ -74,9 +74,9 @@ Transitioning to the Unified Interface is a great opportunity for you to make a 
 More information: [Design model-driven apps by using the app designer](design-custom-business-apps-using-app-designer.md)  
 
 ### See also
-Unified Interface transition community (link tbd) <br />
-Unified Interface Playbook (link tbd) <br />
-White paper: Approaching a User Experience and Unified Interface Transition (link tbd) <br />
+<!-- Unified Interface transition community (link tbd) <br />  -->
+[Unified Interface Playbook](unified-interface-playbook.md) <br />
+[Approaching a user experience and Unified Interface transition](approaching-unified-interface.md) <br />
 [About Unified Interface](/dynamics365/customer-engagement/admin/about-unified-interface) <br />
 [What are model-driven apps in PowerApps?](model-driven-app-overview.md) <br />
 [Update your apps to Unified Interface](/dynamics365/customer-engagement/admin/update-apps-to-unified-interface) <br />
