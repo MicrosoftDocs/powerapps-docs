@@ -1004,8 +1004,6 @@
   - name: Transition Web Client applications
     href: ./model-driven-apps/transition-web-app.md
     items: 
-    - name: Transition a Web Client application quick start
-      href: ./model-driven-apps/transition-web-app.md
     - name: Unified Interface Playbook
       href: ./model-driven-apps/unified-interface-playbook.md
     - name: Approaching a Unified Interface transition
