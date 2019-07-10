@@ -1051,8 +1051,6 @@
           href: ./portals/admin/ip-address-restrict.md
         - name: Update to PowerApps Portals domain
           href: ./portals/admin/update-portal-domain.md
-    - name: Common portal issues and best practices
-      href: ./portals/portal-faq.md
     - name: Known issues
       href: ./portals/known-issues.md
 - name: Common Data Service
