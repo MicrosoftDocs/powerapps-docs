@@ -15,11 +15,11 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# PowerApps build tasks
+# Build tool tasks
 
 You can create several types of tasks in PowerApps build tools to automate certain functions in PowerApps:
   
-## Helper tasks
+## Helper task
 
 The PowerApps tools installer is required to be the first task in any build and release pipeline. This task installs a set of PowerApps specific tools required by the agent to run the PowerApps build tasks. This task does not require any additional configuration.
 

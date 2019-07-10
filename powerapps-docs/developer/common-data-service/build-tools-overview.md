@@ -20,11 +20,10 @@ search.app:
 
 [!INCLUDE [cc-preview-feature](../../includes/cc-preview-feature.md)]
 
-Use PowerApps Build Tools to automate common build and deployment tasks related to PowerApps . This includes synchronization of solution metadata (a.k.a. solutions) between development environments and source control, generating build artifacts, deploying to downstream environments, provisioning or de-provisioning of environments, and the ability to perform static analysis checks against your solution using the PowerApps checker service.
+Use PowerApps build tools to automate common build and deployment tasks related to PowerApps . This includes synchronization of solution metadata (a.k.a. solutions) between development environments and source control, generating build artifacts, deploying to downstream environments, provisioning or de-provisioning of environments, and the ability to perform static analysis checks against your solution using the PowerApps checker service.
 
 > [!IMPORTANT]
-
-
+>
 > - PowerApps build tools is a preview feature.
 > - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 > - PowerApps build tools currently support end-to-end ALM for PowerApps and Dynamics 365 CE only, as some Environment Actions are not yet available for non-CRM Environments  
@@ -33,13 +32,13 @@ Use PowerApps Build Tools to automate common build and deployment tasks related 
 
 The PowerApps build tools are a collection of PowerApps specific Azure DevOps build tasks that eliminate the need to manually download for custom tooling  and scripts to manage the development of PowerApps. The tasks can be used individually to perform a simple task, such as importing a solution into a downstream environment, or used together in a pipeline to orchestrate a scenario, such as ‘Generate Build Artifact,’ ‘Deploy to Test,’ or ‘Harvest Maker Changes.’ The build tasks can largely be categorized into four types:
 
-- Helper task  
-- Solution tasks
-- Publish customizations
-- Environment management tasks
+- Helper 
+- Quality check 
+- Solution 
+- Environment management 
 
 ## Get the PowerApps build tools 
-The PowerApps Build Tools can be installed into your Azure DevOps organization from the Azure Marketplace. Once installed, all tasks included in the PowerApps Build Tools will be available to add into any new or existing pipeline and are easily found by searching for **PowerApps**.
+The PowerApps build tools can be installed into your Azure DevOps organization from the Azure Marketplace. Once installed, all tasks included in the PowerApps build tools will be available to add into any new or existing pipeline and are easily found by searching for **PowerApps**.
 
 ![Get build tools](media/build-tools-download.png)
  
