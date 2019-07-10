@@ -782,7 +782,7 @@ The `any` operator returns `true` if the Boolean expression applied is `true` fo
 The example given below shows how you can retrieve all Account entity records that have atleast one email with "sometext" in the subject.
 
 ```http
-https://[Organization URI]/api/data/v9.1/accounts?$select=name&$filter=Account_Emails/any(o:contains(o/subject,'sometext')) HTTP/1.1
+GET [Organization URI]/api/data/v9.1/accounts?$select=name&$filter=Account_Emails/any(o:contains(o/subject,'sometext')) HTTP/1.1
 Prefer: odata.include-annotations="*"
 Accept: application/json  
 OData-MaxVersion: 4.0  
@@ -797,7 +797,7 @@ The `all` operator returns `true` if the Boolean expression applied is `true` fo
 The example given below shows how you can retrieve all Account entity records that have all associated tasks closed.
 
 ```http
-https://[Organization URI]/api/data/v9.1/accounts?$select=name&$filter=Account_Tasks/all(o:o/statecode eq 1) HTTP/1.1
+GET [Organization URI]/api/data/v9.1/accounts?$select=name&$filter=Account_Tasks/all(o:o/statecode eq 1) HTTP/1.1
 Prefer: odata.include-annotations="*"
 Accept: application/json  
 OData-MaxVersion: 4.0  
@@ -807,7 +807,7 @@ OData-Version: 4.0
 The example given below shows how you can retrieve all Account entity records that have atleast one email with "sometext" in the subject and whose statecode is active.
 
 ```http
-https://[Organization URI]/api/data/v9.1/accounts?$select=name&$filter=Account_Emails/any(o:contains(o/subject,'sometext') and o/statecode eq 0) HTTP/1.1
+GET [Organization URI]/api/data/v9.1/accounts?$select=name&$filter=Account_Emails/any(o:contains(o/subject,'sometext') and o/statecode eq 0) HTTP/1.1
 Prefer: odata.include-annotations="*"
 Accept: application/json
 OData-MaxVersion: 4.0
