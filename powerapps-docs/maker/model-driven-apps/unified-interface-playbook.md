@@ -35,4 +35,4 @@ In summary, this guide will help you:
 - Manage user inquiries and potential objections effectively
 - Find the resources that will support the process
 
-[Download the Unified Interface Playbook](https://microsoft.com/downloads/) 
+[Download the Unified Interface Playbook](http://download.microsoft.com/download/A/F/3/AF3D45A7-4F38-41BE-8956-1DF7A4A5AFDB/dynamics365unifiedinterfaceplaybook.pdf) 
