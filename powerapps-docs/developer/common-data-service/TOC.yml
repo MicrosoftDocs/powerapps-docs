@@ -324,7 +324,7 @@
         href: when-edit-customization-file.md
   - name: Build tools for Azure DevOps 
     items:
-      name: Overview
+    - name: Overview
       href: build-tools-overview.md
     - name: Tasks
       href: build-tools-tasks.md
