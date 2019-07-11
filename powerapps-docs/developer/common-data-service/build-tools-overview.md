@@ -26,11 +26,11 @@ Use PowerApps build tools to automate common build and deployment tasks related 
 >
 > - PowerApps build tools is a preview feature.
 > - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
-> - PowerApps build tools currently support end-to-end ALM for PowerApps and Dynamics 365 CE only, as some Environment Actions are not yet available for non-CRM Environments  
+
   
 ## What are PowerApps build tools?
 
-The PowerApps build tools are a collection of PowerApps specific Azure DevOps build tasks that eliminate the need to manually download for custom tooling  and scripts to manage the development of PowerApps. The tasks can be used individually to perform a simple task, such as importing a solution into a downstream environment, or used together in a pipeline to orchestrate a scenario, such as ‘Generate Build Artifact,’ ‘Deploy to Test,’ or ‘Harvest Maker Changes.’ The build tasks can largely be categorized into four types:
+The PowerApps build tools are a collection of PowerApps specific Azure DevOps build tasks that eliminate the need to manually download custom tooling  and scripts to manage the application lifecycle of PowerApps. The tasks can be used individually to perform a simple task, such as importing a solution into a downstream environment, or used together in a pipeline to orchestrate a scenario, such as ‘Generate Build Artifact,’ ‘Deploy to Test,’ or ‘Harvest Maker Changes.’ The build tasks can largely be categorized into four types:
 
 - Helper 
 - Quality check 
