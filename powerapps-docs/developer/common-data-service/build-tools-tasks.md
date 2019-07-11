@@ -56,9 +56,12 @@ The export solution task exports a solution from a source environment.
 | **Parameters** | **Description** |
 |----------|-------------|
 | PowerApps environment URL | The service endpoint for the source environment that you want to export the solution from.  Defined under **Service Connections -> Generic Service Connection** in **Project Settings**. |
-| Solution name | The name of the solution to export |
-| Solution output file | The path and file name of the solution.zip file to export the source environment to |
+| Solution name | The name of the solution to export. Always use the solution ‘Name’. Not the ‘Display Name’ |
+| Solution output file | The path and file name of the solution.zip file to export the source environment to. For example: *$(Build.ArtifactStagingDirectory)\$(SolutionName).zip* |
 
+> [!NOTE] 
+> Variables give you a convenient way to get key bits of data into various parts of your pipeline. A comprehensive list of predefined variables is available here.
+ 
 ### Unpack solution
 
 The unpack solution task takes a compressed solution file and decomposes it into multiple XML files and other files so that these files can be more easily managed by a source control system.
@@ -115,7 +118,7 @@ Environment management tasks are used to automate common environment management 
 | Deployment Region | The Region that the environment should be deployed into. |
 | Instance Type | The type of instance to deploy. Options are Sandbox or Production. |
 | Base Language | The base language in the environment. |
-| Domain Name | This is the environment specific string that forms part of the URL. For example, for an environment with the following URL: https://powerappsbuildtasks.crm.dynamics.com, the domain name would be ‘powerappsbuildtasks’.  NOTE: If you are entering a domain name that is already in use – the task will append a numeric value to the URL, starting with 0. For the example above, the URL could become https://powerappsbuildtasks0.crm.dynamics.com. |
+| Domain Name | This is the environment specific string that forms part of the URL. For example, for an environment with the following URL: *https://powerappsbuildtasks.crm.dynamics.com*, the domain name would be ‘powerappsbuildtasks’.  NOTE: If you are entering a domain name that is already in use – the task will append a numeric value to the URL, starting with 0. For the example above, the URL could become *https://powerappsbuildtasks0.crm.dynamics.com*. |
 | Friendly name | The friendly name of the environment. |
 
 ### Delete environment
