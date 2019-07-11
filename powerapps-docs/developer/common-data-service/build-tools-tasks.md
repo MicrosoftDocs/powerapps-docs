@@ -1,6 +1,6 @@
 ---
 title: "Build tools tasks| Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "PowerApps build tools are a collection of PowerApps specific Azure DevOps build tasks that eliminate the need to manually download  scripts to manage the development of PowerApps. This topic describes the tasks that are available. " # 115-145 characters including spaces. This abstract displays in the search result.
+description: "PowerApps build tools are a collection of PowerApps specific Azure DevOps build tasks that eliminate the need to manually download  tools and scripts to manage the application lifecycle of PowerApps. This topic describes the tasks that are available. " # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 07/21/2019
 ms.reviewer: "Dean-Haas"
@@ -17,7 +17,7 @@ search.app:
 ---
 # Build tool tasks
 
-You can create several types of tasks in PowerApps build tools to automate certain functions in PowerApps.
+Several types of Build Tasks are available as part of the PowerApps Build Tools to help automate your application lifecycle, using Azure DevOps.
   
 ## Helper task
 
