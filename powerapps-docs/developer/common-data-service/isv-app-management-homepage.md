@@ -1,5 +1,5 @@
 ---
-title: Home page features of ISV Studio | Microsoft Docs
+title: The Home page of ISV Studio | Microsoft Docs
 description: Learn about the home page capabilities provided by the ISV Studio portal.
 services: ''
 suite: powerapps
@@ -13,7 +13,7 @@ ms.devlang: na
 ms.topic: article
 ms.reviewer: pehecke
 ms.workload: na
-ms.date: 06/25/2019
+ms.date: 07/11/2019
 ms.author: prkoduku
 search.audienceType: 
   - developer
@@ -69,4 +69,5 @@ The user can also select **See all** to show all the apps.
 ### See also
 
 [Introduction to ISV Studio for the Power Platform](isv-app-management.md)  
-[App and Tenant page features](isv-app-management-other-pages.md)
+[App page](isv-app-management-apppage.md)  
+[Tenant page](isv-app-management-tenantpage.md)

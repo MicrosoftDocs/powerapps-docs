@@ -13,7 +13,7 @@ ms.devlang: na
 ms.topic: article
 ms.reviewer: pehecke
 ms.workload: na
-ms.date: 06/25/2019
+ms.date: 07/11/2019
 ms.author: prkoduku
 search.audienceType: 
   - developer
@@ -26,35 +26,41 @@ search.app:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-ISV Studio is designed to become the go-to Power Platform destination for
-Independent Software Vendors (ISV) to monitor and support their published
-Microsoft Dynamics 365 for Customer Engagement apps. ISV Studio provides a
-consolidated view of an ISV’s apps with cross-tenant insights.
+ISV Studio is designed to become the go-to Power Platform destination for Independent Software Vendors (ISV) to monitor and manage their applications. ISV Studio provides a consolidated cross tenant view of all the applications an ISV is distributing to customers.
+
+ISV Studio supports applications built on the Common Data Service that are published to and deployed through [AppSource](https://appsource.microsoft.com/). No telemetry will be provided on side loaded solutions not deployed through AppSource.
+
+The applications currently available on the Common Data Service includes PowerApps as well as Dynamics 365 for Sales, Marketing, Service, and Talent.
+
+As an end user installs an application from AppSource, a consent dialog will be displayed requesting the user to acknowledge that contact, usage, and transactional information may be shared with the application provider. This information is used by the provider to supports billing and other transactional activities and to enable telemetry in ISV Studio for the ISV to learn from and act on.
+
+A customer can request that data not be shared with the provider, in which case Microsoft will remove all data from that particular tenant within ISV Studio.
 
 > [!IMPORTANT]
 >
 > - ISV Studio is a preview feature.
 > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
 
-You can try ISV Studio out by visiting [https://isvstudio.powerapps.com/](https://isvstudio.powerapps.com/).
+To join the public preview of ISV Studio, navigate your browser to [https://aka.ms/ISVStudiopublicpreview](https://aka.ms/ISVStudiopublicpreview).
 
 ## Pre-requisites
 
-1. The ISV user must have one or more Dynamics apps published in
-    [AppSource](https://appsource.microsoft.com/).
+1. The ISV must be associated with a Microsoft registered Partner organization [ISV] that has one or more supported apps published in [AppSource](https://appsource.microsoft.com/). Supported apps include Dynamics 365 for Customer Engagement apps and PowerApps.
 
-2. The ISV user must have an [Azure Active Directory](https://azure.microsoft.com/services/active-directory/) (AAD)
-    account and the account must be configured as an app contributor or owner in
-    Cloud Partner Portal (CPP).
+2. The ISV must have an [Azure Active Directory](https://azure.microsoft.com/services/active-directory/) (AAD) account and the account must be configured as an app contributor or owner in Cloud Partner Portal (CPP) for the particular ISV.
 
-3. The ISV publisher should be part of the Microsoft ISV Studio pilot program.
+If you want additional users to get access to ISV Studio, they can be added as app contributors in CPP.  Instructions can be found at
+[Managing users on cloud partner portal](https://docs.microsoft.com/en-us/azure/marketplace/cloud-partner-portal-orig/cloud-partner-portal-manage-users).
 
-Continue reading the "page" topics listed below to learn about the capabilities of ISV Studio.
+Continue reading the "App" and "Tenant" page topics listed below to learn about the capabilities of ISV Studio.
+
+Please send email to [ISVFeedback@microsoft.com](mailto:ISVFeedback@microsoft.com) with any feedback or questions. Your feedback is important for us to shape the experiences moving forward.
 
 ## In this Section
 
-[Home page features](isv-app-management-homepage.md)  
-[App and Tenant page features](isv-app-management-other-pages.md)  
+[Home page](isv-app-management-homepage.md)  
+[App page](isv-app-management-apppage.md)  
+[Tenant page](isv-app-management-tenantpage.md)
 
 ### See also
 
