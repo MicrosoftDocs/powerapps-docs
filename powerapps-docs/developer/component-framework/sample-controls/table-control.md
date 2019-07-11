@@ -36,6 +36,8 @@ This sample component renders a table with two columns. The left column shows th
 ## Code
 
 ```TypeScript
+import {IInputs, IOutputs} from "./generated/ManifestTypes";
+
 export class TSTableControl implements ComponentFramework.StandardControl<IInputs, IOutputs>
 {
 // Flag to track if control is in full screen mode or not
@@ -138,7 +140,8 @@ this._isFullScreen = !this._isFullScreen;
 private onLookupObjectsButtonClick(event: Event): void
 {
 // Get the entity name for the button
-let entityName: string = event.srcElement!.getAttribute("entityName")!;
+let entityName: string = (event.srcElement! as Element)!.getAttribute("entityName")!;
+
 var lookUpOptions: any =
 {
 	// Note: lookup can support multiple entity types with the below syntax
