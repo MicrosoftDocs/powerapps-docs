@@ -41,15 +41,19 @@ The hand-on lab provides a tutorial with step-by-step instructions on how to bui
 ## Frequently asked question (FAQ)
 
 **Do the PowerApps build tools only work for PowerApps?**  
+
 *The PowerApps Build Tools work for both PowerApps and Dynamics 365 CE (Dynamics 365 CE Apps are model driven PowerApps). Separate build tasks are available for Dynamics 365 F&O.*
 
 **Can I include Flow and Canvas Apps?**
+
 *Yes, Flows and Canvas apps are solution aware so if these are added to your solution, they can participate in the lifecycle of your app.  However, some steps still require manual configurations. This will be addressed later this year when we introduce environment variables and connectors.*
 
 **How much do the PowerApps build tools cost?**
-*he PowerApps Build Tools are available at no cost. However, a valid subscription to Azure DevOps is required to utilize the Build Tools. More information is available [here](https://azure.microsoft.com/en-us/pricing/details/devops/azure-devops-services/).*
+
+*The PowerApps Build Tools are available at no cost. However, a valid subscription to Azure DevOps is required to utilize the Build Tools. More information is available [here](https://azure.microsoft.com/en-us/pricing/details/devops/azure-devops-services/).*
 
 **I can see the extension, but why don’t I have an option to install it?**
+
 *If you do not see the **install** option (outlined in screenshot below) then you most likely lack the necessary install privileges in your Azure DevOps Organization. More info available [here](https://docs.microsoft.com/en-us/azure/devops/marketplace/how-to/grant-permissions?view=azure-devops).*
 
 ![Build tasks screen](media/build-tasks.png)
