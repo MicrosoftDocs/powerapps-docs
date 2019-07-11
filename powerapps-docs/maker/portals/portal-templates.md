@@ -48,7 +48,7 @@ The table below summarizes the features associated with each portal template:
 | Profile Management                     | •                            |                | •                            |                  |               |
 | Subscribe to Forum Thread              | •                            |                | •                            |                  |               |
 | Comments                               | •                            |                | •                            | •                |               |
-| [!INCLUDE[pn-azure-shortest](../includes/pn-azure-shortest.md)] AD Authentication                |                              |                | •                            |                  |               |
+| [!INCLUDE[pn-azure-shortest](../../includes/pn-azure-shortest.md)] AD Authentication                |                              |                | •                            |                  |               |
 | Ideas                                  |                              |                |                              | •                |               |
 | Blogs                                  |                              |                |                              | •                |               |
 | Project Service Automation Integration |                              | •              |                              |                  |               |
@@ -57,7 +57,7 @@ The table below summarizes the features associated with each portal template:
 | Portal Base  |  •    | •      |  •| •| •|• |
 | Portal Workflows|  •| •|  •| •| •|• |
 | Web Notifications|  •| •|  •| •| •|• |
-| [!INCLUDE[cc-microsoft](../includes/cc-microsoft.md)] Identity|   •|  •|  •|   •| •|• |
+| [!INCLUDE[cc-microsoft](../../includes/cc-microsoft.md)] Identity|   •|  •|  •|   •| •|• |
 | Identity Workflows| •|  •| •|   •| •|• |
 | Web Forms|  •| •|    •| •| •|• |
 | Feedback|   •|  •|  •| •| •|• |
