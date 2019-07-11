@@ -108,6 +108,8 @@ You must renew the key every two years to ensure that your portal can connect to
 
 2. Select **Manage portal authentication key**. The authentication key is displayed along with its expiration date and thumbprint.
 
+    ![Manage portal authentication key](../media/manage-portal-auth-key.png "Manage portal authentication key")
+
 3. Select **Update key**.
 
 4. Select **Update** in the message. The update process starts, and a message is displayed.
@@ -121,3 +123,5 @@ You must renew the key every two years to ensure that your portal can connect to
 
 If the key update fails, an error message is displayed along with the following action:
 - **Retry Authentication Key Update**. This action allows you to restart the portal authentication key update process. If the update fails multiple times, contact Microsoft support.
+
+![Retry portal authentication key update](../media/retry-auth-key-update.png "Retry portal authentication key update")

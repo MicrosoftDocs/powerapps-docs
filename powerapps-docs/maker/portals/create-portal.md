@@ -34,7 +34,7 @@ To create a portal:
     ![portal components not found](media/portal-components-not-found.png "Portal components not found")  
 
     > [!NOTE]
-    > If you try to create a portal in an environment that contains previous version of Common Data Service database or doesn't contain a Common Data Service database or you don’t have permissions to create a new database, following message is displayed instead:
+    > If you try to create a portal in an environment that contains previous version of Common Data Service database or doesn't contain a Common Data Service database or you don't have permissions to create a new database, following message is displayed instead:
     >
     > ![no database found](media/no-database-found.png "No database found")  
 

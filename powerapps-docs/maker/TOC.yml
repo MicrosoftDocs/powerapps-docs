@@ -1017,6 +1017,8 @@
       items:
         - name: Create a portal
           href: ./portals/create-portal.md
+        - name: Portal templates
+          href: ./portals/portal-templates.md
         - name: Maker experience anatomy
           href: ./portals/maker-experience-anatomy.md
         - name: Create and manage webpages
