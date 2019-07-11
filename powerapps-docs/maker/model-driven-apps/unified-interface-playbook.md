@@ -28,11 +28,11 @@ search.app:
 This playbook is intended to help customers, partners and Microsoft field roles plan and execute transitions from the Web Client to Unified Interface.
 
 In summary, this guide will help you:
-- Understand the Unified Interface 
-- Understand the transitioning process
-- Develop a strategy for discussions and the transition
-- Ensure a smooth transition
-- Manage user inquiries and potential objections effectively
-- Find the resources that will support the process
+- Understand the Unified Interface. 
+- Understand the transitioning process.
+- Develop a strategy for discussions and the transition.
+- Ensure a smooth transition.
+- Manage user inquiries and potential objections effectively.
+- Find the resources that will support the process.
 
 [Download the Unified Interface Playbook](http://download.microsoft.com/download/A/F/3/AF3D45A7-4F38-41BE-8956-1DF7A4A5AFDB/dynamics365unifiedinterfaceplaybook.pdf) 
