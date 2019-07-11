@@ -29,9 +29,9 @@ The PowerApps checker task runs a static analysis check on your solution(s) agai
 
 | **Parameters** | **Description** |
 | --- | --- |
-| PowerApps checker service (required) |   Select the service endpoint for PowerApps checker. The service   endpoint is defined under **Service Connections** in **Project Settings**.   **NOTE:** The service connection type that must be used for this specific task only is ‘PowerApps Checker,’ which is a service principals connection. More   information on how to configure Service Principals before you can use the   task is available here.  |
-|    Location of file to analyze (required) |    Specify whether to reference a local file or a reference   file from a Sas url. | Local Files to Analyze/Sas url for File to Analyze    |    Required Specify the path and file name of the zip files to analyze.   Wildcards can be used. For example, **\*.zip   for all zip files in all sub folders. You can choose to specify the files   directly or reference a File from a Sas url.   |
-|    Rule set (required)    |   Specify which ruleset to apply. The following two rulesets   are available: Solution Checker: This is the same ruleset that is run from the Maker Portal.    AppSource: This is the extended ruleset that   is used to certify an application before it can be published to AppSource.   |
+| PowerApps checker service  |   Select the service endpoint for PowerApps checker. The service   endpoint is defined under **Service Connections** in **Project Settings**.  **NOTE:** The service connection type that must be used for this specific task only is ‘PowerApps Checker,’ which is a service principals connection. More   information on how to configure Service Principals before you can use the  task is available here.  |
+| Location of file to analyze  | Specify whether to reference a local file or a reference file from a Sas url. | Local Files to Analyze/i for File to Analyze |  Required Specify the path and file name of the zip files to analyze.   Wildcards can be used. For example, **\*.zip   for all zip files in all sub folders. You can choose to specify the files   directly or reference a File from a Sas url.   |
+|    Rule set     |   Specify which ruleset to apply. The following two rulesets   are available: Solution Checker: This is the same ruleset that is run from the Maker Portal.    AppSource: This is the extended ruleset that   is used to certify an application before it can be published to AppSource.   |
 
 ## Solution tasks
 
@@ -43,8 +43,8 @@ The import solution imports a solution into a target environment.
 
 | **Parameters** | **Description** |
 |---------------------------|----|
-| PowerApps environment URL (required) | The service endpoint for the target environment that you   want to import the solution to.  Defined under **Service Connections** in **Project Settings**. |
-| Solution input file (required) | The path and file name of the solution.zip file to import into the target environment. |
+| PowerApps environment URL  | The service endpoint for the target environment that you   want to import the solution to.  Defined under **Service Connections** in **Project Settings**. |
+| Solution input file  | The path and file name of the solution.zip file to import into the target environment. |
 
 ### Export solution task
 
@@ -86,7 +86,7 @@ The publish customizations task publishes all customizations in an environment.
 
 ### Set solution version task
 
-The set solution version task updates the version of a solution. 
+The set solution version task updates the version of a solution.
 
 | **Parameters** | **Description** |
 |---------------------------|----|
@@ -95,7 +95,7 @@ The set solution version task updates the version of a solution.
 
 ### Deploy package task
 
-The deploy package task deploys a package to an environment. Deploying a package as opposed to a single solution file provides an option to deploy multiple solutions, data, and code into an environment. 
+The deploy package task deploys a package to an environment. Deploying a package as opposed to a single solution file provides an option to deploy multiple solutions, data, and code into an environment.
 
 ## Environment management tasks
 
@@ -118,7 +118,7 @@ Environment management tasks are used to automate common environment management 
 
 | **Parameters** | **Description** |
 |---------|-----------|
-| PowerApps environment URL (required) | The service endpoint for the environment you want to delete.  Defined under **Service Connections** in **Project Settings**. |
+| PowerApps environment URL  | The service endpoint for the environment you want to delete.  Defined under **Service Connections** in **Project Settings**. |
 
 ### Backup environment
 
@@ -126,8 +126,8 @@ The backup environment task backs up an environment.
 
 | **Parameters** | **Description** |
 |---------|-----------|
-| PowerApps environment URL (required) | The service endpoint for the environment you want to backup.  Defined under **Service Connections** in **Project Settings**. |
-| Backup label (required) | The label you want to assign to the  backup.  |
+| PowerApps environment URL  | The service endpoint for the environment you want to backup.  Defined under **Service Connections** in **Project Settings**. |
+| Backup label  | The label you want to assign to the  backup.  |
 
 ### Copy environment
 
@@ -138,5 +138,5 @@ The copy environment task copies an environment to a target environment. Two typ
 
 | **Parameters** | **Description** |
 |---------|-----------|
-| PowerApps source environment URL (required) | The service endpoint for the environment you want to copy from.  Defined under **Service Connections** in **Project Settings**. |
-| PowerApps target environment URL (required) | The service endpoint for the environment you want to copy to.  Defined under **Service Connections** in **Project Settings**. |
+| PowerApps source environment URL  | The service endpoint for the environment you want to copy from.  Defined under **Service Connections** in **Project Settings**. |
+| PowerApps target environment URL  | The service endpoint for the environment you want to copy to.  Defined under **Service Connections** in **Project Settings**. |
