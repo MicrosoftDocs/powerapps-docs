@@ -18,7 +18,7 @@ search.app:
 
 # Build tools tasks
 
-Several types of Build Tasks are available as part of the PowerApps Build Tools to help automate your application lifecycle, using Azure DevOps.
+Several types of build tasks are available as part of the PowerApps build tools to help automate your application lifecycle, using Azure DevOps.
   
 ## Helper task
 
@@ -30,9 +30,9 @@ The PowerApps checker task runs a static analysis check on your solution(s) agai
 
 | **Parameters** | **Description** |
 | --- | --- |
-| PowerApps checker service  |   Select the service endpoint for PowerApps checker. The service   endpoint is defined under **Service Connections** in **Project Settings**.  **NOTE:** The service connection type that must be used for this specific task only is ‘PowerApps Checker,’ which is a service principals connection. More   information on how to configure Service Principals before you can use the  task is available here.  |
+| PowerApps checker service  |   Select the service endpoint for PowerApps checker. The service   endpoint is defined under **Service Connections** in **Project Settings**.  **NOTE:** The service connection type that must be used for this specific task only is ‘PowerApps Checker,’ which is a service principals connection. More information on how to configure Service Principals before you can use the  task is available [here](https://aka.ms/buildtoolsconnection).  |
 | Location of file to analyze  | Specify whether to reference a local file or a reference file from a Sas url. | Local Files to Analyze/i for File to Analyze |  Required Specify the path and file name of the zip files to analyze.   Wildcards can be used. For example, **\*.zip   for all zip files in all sub folders. You can choose to specify the files   directly or reference a File from a Sas url.   |
-|    Rule set     |   Specify which ruleset to apply. The following two rulesets   are available: Solution Checker: This is the same ruleset that is run from the Maker Portal.    AppSource: This is the extended ruleset that   is used to certify an application before it can be published to AppSource.   |
+|  Rule set |   Specify which ruleset to apply. The following two rulesets are available:  **Solution Checker:** This is the same ruleset that is run from the [Maker Portal](https://make.powerapps.com/).    **AppSource:** This is the extended ruleset that is used to certify an application before it can be published to [AppSource](https://appsource.microsoft.com/en-US/).   |
 
 ## Solution tasks
 
@@ -44,8 +44,10 @@ The import solution imports a solution into a target environment.
 
 | **Parameters** | **Description** |
 |---------------------------|----|
-| PowerApps environment URL  | The service endpoint for the target environment that you   want to import the solution to.  Defined under **Service Connections** in **Project Settings**. |
-| Solution input file  | The path and file name of the solution.zip file to import into the target environment. |
+| PowerApps environment URL  | The service endpoint for the target environment that you   want to import the solution to. . For example, *https://powerappsbuildtools.crm.dynamics.com*.  Service endpoints can be defined under **Service Connections** in **Project Settings**. |
+| Solution input file  | The path and file name of the solution.zip file to import into the target environment. For example: *$(Build.ArtifactStagingDirectory)\$(SolutionName).zip*
+NOTE: Variables give you a convenient way to get key bits of data into various parts of your pipeline. A comprehensive list of predefined variables is available [here](https://docs.microsoft.com/en-us/azure/devops/pipelines/build/variables?view=azure-devops&tabs=yaml).
+ |
 
 ### Export solution
 
