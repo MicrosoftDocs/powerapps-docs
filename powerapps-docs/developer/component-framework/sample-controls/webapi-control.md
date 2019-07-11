@@ -232,7 +232,9 @@ this.updateResultContainerText("Web API sample custom control loaded");
 private createButtonOnClickHandler(event: Event): void
 {
 // Retrieve the value to set the currency field to from the button's attribute
-let currencyAttributeValue:Number = parseInt(event.srcElement!.attributes.getNamedItem("buttonvalue")!.value);
+let currencyAttributeValue:Number = parseInt(
+(event.srcElement! as Element)!.attributes.getNamedItem("buttonvalue")!.value
+);
 // Generate unique record name by appending timestamp to _requiredAttributeValue
 let recordName: string = TSWebAPI._requiredAttributeValue + "_" + Date.now();
 // Set the values for the attributes we want to set on the new record
