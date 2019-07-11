@@ -208,13 +208,11 @@ export class TSDataSetGrid implements ComponentFramework.StandardControl<IInputs
         if(rowRecordId)
         {
             let entityReference = this.contextObj.parameters.dataSetGrid.records[rowRecordId].getNamedReference();
-            if(entityReference.entityType !==undefined){
-	        let entityFormOptions = {
-	            entityName: entityReference.entityType,
-	            entityId: entityReference.id,
-	        }
-	        this._context.navigation.openForm(entityFormOptions);
+            let entityFormOptions = {
+	        entityName: entityReference.entityType!,
+	        entityId: entityReference.id,
 	    }
+	    this._context.navigation.openForm(entityFormOptions);
         }
     }
     /**
