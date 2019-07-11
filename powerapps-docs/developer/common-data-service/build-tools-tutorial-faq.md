@@ -21,7 +21,7 @@ Use the tutorial and FAQs to learn more about the PowerApps build tools for Azur
 
 ## Hands-on-lab
 
-The hands-on lab is available [here](http://aka.ms/ppalmlab)
+The hands-on lab is available [here](C:\GitHub\PowerApps-Samples\build-tools\PowerPlatform_DevOps_6_11.zip)
 
 The hand-on lab provides a tutorial with step-by-step instructions on how to build out the following scenario:
 
