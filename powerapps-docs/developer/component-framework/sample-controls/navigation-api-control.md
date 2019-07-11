@@ -117,7 +117,7 @@ this._container.appendChild(this.divElement);
 */
 public raiseEvent(event: Event,)
 {
-var inputSource = event.srcElement!.id; 
+var inputSource = (event.srcElement! as Element)!.id;
 switch(inputSource)
 {
 	case "openAlertDialogButton": this._context.navigation.openAlertDialog({text:"This is an alert.", confirmButtonLabel : "Yes",}).then(
