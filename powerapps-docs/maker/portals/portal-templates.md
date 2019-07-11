@@ -17,7 +17,12 @@ You can create Common Data Service portal or Dynamics 365 portal in PowerApps ba
 
 ## Environment with Common Data Service
 
-If you select an environment that contains Common Data Service, you can create a Common Data Service starter portal.
+If you select an environment that contains Common Data Service, you can create a Common Data Service starter portal. The Common Data Service starter portal comes with the sample data for you to quickly get started. It also has the following built-in sample pages:
+- Blank page
+- Blank page with title
+- Landing page
+- Page with child links
+- Page with side navigation
 
 ## Environment with Dynamics 365 for Customer Engagement
 
