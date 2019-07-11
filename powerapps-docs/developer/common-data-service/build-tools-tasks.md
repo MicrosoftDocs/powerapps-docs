@@ -15,7 +15,8 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Build tool tasks
+
+# Build tools tasks
 
 Several types of Build Tasks are available as part of the PowerApps Build Tools to help automate your application lifecycle, using Azure DevOps.
   
@@ -37,7 +38,7 @@ The PowerApps checker task runs a static analysis check on your solution(s) agai
 
 This set of tasks perform actions against solutions, and includes the following tasks:
 
-### Import solution task
+### Import solution
 
 The import solution imports a solution into a target environment.
 
@@ -46,7 +47,7 @@ The import solution imports a solution into a target environment.
 | PowerApps environment URL  | The service endpoint for the target environment that you   want to import the solution to.  Defined under **Service Connections** in **Project Settings**. |
 | Solution input file  | The path and file name of the solution.zip file to import into the target environment. |
 
-### Export solution task
+### Export solution
 
 The export solution task exports a solution from a source environment.
 
@@ -56,7 +57,7 @@ The export solution task exports a solution from a source environment.
 | Solution name | The name of the solution to export |
 | Solution output file | The path and file name of the solution.zip file to export the source environment to |
 
-### Unpack solution task
+### Unpack solution
 
 The unpack solution task takes a compressed solution file and decomposes it into multiple XML files and other files so that these files can be more easily managed by a source control system.
 
@@ -67,7 +68,7 @@ The unpack solution task takes a compressed solution file and decomposes it into
 | Type of solution | The type of solution you want to unpack:  **Unmanaged** (recommended): *Only the unmanaged solution should be unpacked to your repo*, **Managed**, **Both** |
 
 
-### Pack solution task
+### Pack solution
 
 Packs a solution represented in source control into a solution.zip file that can be imported into an environment.
 
@@ -77,14 +78,15 @@ Packs a solution represented in source control into a solution.zip file that can
 | Source folder of solution to pack | The path and source folder of the solution  to pack. |
 | Type of solution | The type of solution you want to pack:  **Unmanaged** (recommended):, **Managed**, **Both** |
 
-### Publish customizations task
+### Publish customizations
+
 The publish customizations task publishes all customizations in an environment.
 
 | **Parameters** | **Description** |
 |------------|---------|
 | PowerApps environment URL | The service endpoint for the environment in which you want to publish customizations.  Defined under **Service Connections** in **Project Settings**. |
 
-### Set solution version task
+### Set solution version 
 
 The set solution version task updates the version of a solution.
 
@@ -93,7 +95,7 @@ The set solution version task updates the version of a solution.
 | PowerApps environment URL  | The service endpoint for the environment that holds the solution you want to update.  Defined under **Service Connections** in **Project Settings**. |
 | Solution name  | The name of the solution you want to set the Version Number for |
 
-### Deploy package task
+### Deploy package
 
 The deploy package task deploys a package to an environment. Deploying a package as opposed to a single solution file provides an option to deploy multiple solutions, data, and code into an environment.
 
