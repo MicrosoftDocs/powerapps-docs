@@ -24,9 +24,9 @@ If you select an environment that contains Common Data Service, you can create a
 - Page with child links
 - Page with side navigation
 
-## Environment with Dynamics 365 for Customer Engagement
+## Environment with Dynamics 365 for Customer Engagement apps
 
-If you select an environment that contains Dynamics 365 for Customer Engagement, you can create the following portals:
+If you select an environment that contains Dynamics 365 for Customer Engagement apps, you can create the following portals:
 
 - **Customer self-service portal**: A customer self-service portal enables customers to access self-service knowledge, support resources, view the progress of their cases, and provide feedback.
 - **Partner portal**: A partner portal allows every organization with resellers, distributors, suppliers, or partners to have real-time access to every stage of shared activities.
