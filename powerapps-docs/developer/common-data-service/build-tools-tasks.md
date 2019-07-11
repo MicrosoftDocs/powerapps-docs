@@ -17,7 +17,7 @@ search.app:
 ---
 # Build tool tasks
 
-You can create several types of tasks in PowerApps build tools to automate certain functions in PowerApps:
+You can create several types of tasks in PowerApps build tools to automate certain functions in PowerApps.
   
 ## Helper task
 
@@ -99,7 +99,7 @@ The deploy package task deploys a package to an environment. Deploying a package
 
 ## Environment management tasks
 
-Environment management tasks are used to automate common environment management functions, and includes:
+Environment management tasks are used to automate common environment management functions, and includes the following tasks:
 
 ### Create environment
 
