@@ -26,45 +26,49 @@ search.app:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-After a user logs into ISV Studio, they are presented with the landing page
+After a user logs into the ISV Studio, they are presented with the landing page
 known as the *Home* page. A welcome message is displayed which defines the
 objective of this page.
 
-If an ISV has multiple publishers, the list of publishers is displayed in a
-pivot chart with the first publisher selected by default. All the metrics on
-this page are specific to the selected publisher. The user can toggle to a
-different publisher name to see the corresponding metrics for that publisher.
+If a user is associated with multiple publishers, all publishers are displayed and the first publisher is selected by default. All the metrics on this page are specific to the selected publisher. The user can toggle to a different publisher name to see the corresponding metrics for that publisher.
 
 ![Home page](media/isv-portal-homepage.png)
 
-The Home page summary section contains the metrics described in the following sections of this topic.
+The Home page summary section contains the following graphs and metrics.
 
-## App installs by tenant
+## Successful app package installs by tenant
 
-Published apps and the tenants that they are
-installed in are displayed in descending order based on the number of installs.
+The first graph visualizes the published apps and the tenants that the app’s packages are installed into, and they are displayed in descending order based on the number of package installs.
+
+When hovering over a tenant tile in the graph, the following information is shown:
+
+1. App Name
+2. Tenant Name and Tenant ID
+3. Number of package installs of the app in the tenant
 
 ![App installs by tenant](media/isv-portal-app-installs-by-tenant.png)
 
-## Installs by app (28 days)
+## Package install attempts by app (last 28 days)
 
-Published apps, and the number of successful vs.
-failed installations across all production environments, over the last 28 days
-is displayed here.
+This bar chart visualizes published apps and the number of successful vs. failed installations across all production environments over the last 28 days.
+
+When hovering over an app in the graph, the following information is shown:
+
+1. App Name
+2. Status of package installation (Success vs Failures)
+3. Count of package install attempts
 
 ![Installs by app (28 days)](media/isv-portal-installs-by-app(28d).png)
 
-## Other viewing options
+## Additional insights
 
-Below the summary section, the user can either select an app below the
-**Published apps** section or select a tenant from the **Tenants** section to
-further drill down into app or tenant metrics.
+Below the summary section the user can access additional insights and can choose to further drill down into their install history through the lens of Certified Apps or Tenants.
+
+**Top Certified Apps** and **Top Tenants** are visible on the page by default. The user can also select **See all** to show all the apps.
+
+The App names and icons are from AppSource.
 
 ![Published apps section](media/isv-portal-published-apps-section.png)
-
-The user can also select **See all** to show all the apps.
-
-![Showing all apps](media/isv-portal-all-apps.png)
 
 ### See also
 
