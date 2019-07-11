@@ -198,23 +198,28 @@ this._container.appendChild(this._selectedColorElement);
 * @param selectedColorElement The HTML Div Element that the results should be injected into 
 */
 private onButtonClick(event: Event, selectedColorElement: HTMLDivElement)
-{
-if (event.srcElement)
-{
-// Get the label and the selected color attributes from the div element that was clicked
-let label:string = event.srcElement.attributes.getNamedItem("value")!.value;
-let selectedColor:string = event.srcElement!.attributes.getNamedItem("buttonColor")!.value;
-// Update the selected color div element with the results
-this.updateSelectedColorElement(selectedColorElement, label, selectedColor);
-// store the label and selected color into the local state dictionary that will be passed onto the framework.
-this._stateDictionary[PERSISTED_SELECTED_Label_KEY_NAME] = label;
-this._stateDictionary[PERSISTED_SELECTED_COLOR_KEY_NAME] = selectedColor;
-// Store the state dictionary object into the setControlState interface method to allow the 
-// selected data to persist within the user session
-// In scenarios where you don't need a collection of key value pairs but just one key value pair to be stored, just pass that object to the setControlState method.
-this._context.mode.setControlState(this._stateDictionary);
-}
-}
+        {
+            const eventTarget: Element = event.srcElement as Element;
+
+            if (eventTarget)
+            {
+                // Get the label and the selected color attributes from the div element that was clicked
+                let label:string = eventTarget.attributes.getNamedItem("value")!.value;
+                let selectedColor:string = eventTarget!.attributes.getNamedItem("buttonColor")!.value;
+
+                // Update the selected color div element with the results
+                this.updateSelectedColorElement(selectedColorElement, label, selectedColor);
+
+                // store the label and selected color into the local state dictionary that will be passed onto the framework.
+                this._stateDictionary[PERSISTED_SELECTED_Label_KEY_NAME] = label;
+                this._stateDictionary[PERSISTED_SELECTED_COLOR_KEY_NAME] = selectedColor;
+
+                // Store the state dictionary object into the setControlState interface method to allow the 
+                // selected data to persist within the user session
+                // In scenarios where you don't need a collection of key value pairs but just one key value pair to be stored, just pass that object to the setControlState method.
+                this._context.mode.setControlState(this._stateDictionary);
+            }
+        }
 /** 
 * It is called by the framework prior to a control receiving new data. 
 * @returns an object based on nomenclature defined in manifest, expecting object[s] for property marked as “bound” or “output”
