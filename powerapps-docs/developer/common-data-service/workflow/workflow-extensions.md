@@ -105,7 +105,9 @@ More information: [Install Visual Studio 2017](/visualstudio/install/install-vis
 
 These are general steps used to create a custom workflow activity using Visual Studio. For a complete step-by-step example see [Tutorial: Create workflow extension](tutorial-create-workflow-extension.md).
 
-1. Create a Workflow Activity Library project using .NET Framework 4.6.2 as the target framework
+1. Create a Workflow Activity Library project using .NET Framework 4.6.2 as the target framework.
+    > [!IMPORTANT]
+    > While assemblies built using later versions should generally work, if they use any features introduced after 4.6.2 an error will occur.
 1. Delete the Activity1.xaml file generated with the project
 1. Install the [Microsoft.CrmSdk.Workflow](https://www.nuget.org/packages/Microsoft.CrmSdk.Workflow/) NuGet package.
 
@@ -146,7 +148,7 @@ These are general steps used to create a custom workflow activity using Visual S
 
 ## Add parameters
 
-When you define parameters for your class you must define them as [InArgument<T>](/dotnet/api/system.activities.inargument-1), [OutArgument<T>](/dotnet/api/system.activities.outargument-1), or [InOutArgument<T>](/dotnet/api/system.activities.inoutargument-1) types. These types provide methods inherited from a common [Argument Class](/dotnet/api/system.activities.argument) to Get or Set the parameters. Your code will use these methods in the Execute method. More information: [Add your code to the Execute method](#add-your-code-to-the-execute-method)
+When you define parameters for your class you must define them as [InArgument\<T>](/dotnet/api/system.activities.inargument-1), [OutArgument\<T>](/dotnet/api/system.activities.outargument-1), or [InOutArgument\<T>](/dotnet/api/system.activities.inoutargument-1) types. These types provide methods inherited from a common [Argument Class](/dotnet/api/system.activities.argument) to Get or Set the parameters. Your code will use these methods in the Execute method. More information: [Add your code to the Execute method](#add-your-code-to-the-execute-method)
 
 When your custom workflow activity uses input or output parameters you must add appropriate .NET Attributes to the public class properties that define them. This data will be read by the process designer to define how the parameters can be set in the process designer.
 
@@ -271,7 +273,7 @@ namespace SampleWorkflowActivity
 
 ### Get Contextual information
 
-When your code requires contextual information you can access this using the [CodeActivityContext.GetExtension<T> method](/dotnet/api/system.activities.activitycontext.getextension) with the <xref:Microsoft.Xrm.Sdk.Workflow.IWorkflowContext> Interface. This object is derived from the <xref:Microsoft.Xrm.Sdk.IExecutionContext> Interface which provides access to many read-only properties that describe the context of the operation. The `IWorkflowContext` provides similar contextual information specific to the executing workflow that is using your workflow assembly.
+When your code requires contextual information you can access this using the [CodeActivityContext.GetExtension\<T> method](/dotnet/api/system.activities.activitycontext.getextension) with the <xref:Microsoft.Xrm.Sdk.Workflow.IWorkflowContext> Interface. This object is derived from the <xref:Microsoft.Xrm.Sdk.IExecutionContext> Interface which provides access to many read-only properties that describe the context of the operation. The `IWorkflowContext` provides similar contextual information specific to the executing workflow that is using your workflow assembly.
 
 Use the following code in your `Execute` function to access the `IWorkflowContext`:
 
@@ -288,7 +290,7 @@ protected override void Execute(CodeActivityContext context)
 
 ### Use the Organization Service
 
-When you need to perform data operations using the Organization service you can access this using the [CodeActivityContext.GetExtension<T>](/dotnet/api/system.activities.activitycontext.getextension) method with the <xref:Microsoft.Xrm.Sdk.IOrganizationServiceFactory> interface. From there you can use the <xref:Microsoft.Xrm.Sdk.IOrganizationServiceFactory.CreateOrganizationService(System.Nullable{System.Guid})> method to access an instance of the service proxy that you can use to perform data operations. The <xref:Microsoft.Xrm.Sdk.Workflow.IWorkflowContext>.<xref:Microsoft.Xrm.Sdk.IExecutionContext.InitiatingUserId> can be used to determine the user context to use if you want the operation to be performed in the same context as the calling process.
+When you need to perform data operations using the Organization service you can access this using the [CodeActivityContext.GetExtension\<T>](/dotnet/api/system.activities.activitycontext.getextension) method with the <xref:Microsoft.Xrm.Sdk.IOrganizationServiceFactory> interface. From there you can use the <xref:Microsoft.Xrm.Sdk.IOrganizationServiceFactory.CreateOrganizationService(System.Nullable{System.Guid})> method to access an instance of the service proxy that you can use to perform data operations. The <xref:Microsoft.Xrm.Sdk.Workflow.IWorkflowContext>.<xref:Microsoft.Xrm.Sdk.IExecutionContext.InitiatingUserId> can be used to determine the user context to use if you want the operation to be performed in the same context as the calling process.
 Use the following code in your `Execute` function to get access to the Organization service:
 
 ```csharp
