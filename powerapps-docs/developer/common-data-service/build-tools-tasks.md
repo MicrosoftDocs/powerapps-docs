@@ -90,8 +90,8 @@ The set solution version task updates the version of a solution.
 
 | **Parameters** | **Description** |
 |---------------------------|----|
-| PowerApps environment URL (required) | The service endpoint for the environment that holds the solution you want to update.  Defined under **Service Connections** in **Project Settings**. |
-| Solution name (required) | The name of the solution you want to set the Version Number for |
+| PowerApps environment URL  | The service endpoint for the environment that holds the solution you want to update.  Defined under **Service Connections** in **Project Settings**. |
+| Solution name  | The name of the solution you want to set the Version Number for |
 
 ### Deploy package task
 
@@ -101,7 +101,7 @@ The deploy package task deploys a package to an environment. Deploying a package
 
 Environment management tasks are used to automate common environment management functions, and includes:
 
-### PowerApps create environment
+### Create environment
 
 > [!NOTE]
 > A new environment can only be provisioned if your license or capacity allows for the creation of additional environments.
@@ -114,13 +114,13 @@ Environment management tasks are used to automate common environment management 
 | Domain Name | This is the environment specific string that forms part of the URL. For example, for an environment with the following URL: https://powerappsbuildtasks.crm.dynamics.com, the domain name would be ‘powerappsbuildtasks’.  NOTE: If you are entering a domain name that is already in use – the task will append a numeric value to the URL, starting with 0. For the example above, the URL could become https://powerappsbuildtasks0.crm.dynamics.com. |
 | Friendly name | The friendly name of the environment. |
 
-### PowerApps delete environment 
+### Delete environment
 
 | **Parameters** | **Description** |
 |---------|-----------|
 | PowerApps environment URL (required) | The service endpoint for the environment you want to delete.  Defined under **Service Connections** in **Project Settings**. |
 
-### PowerApps backup environment
+### Backup environment
 
 The backup environment task backs up an environment. 
 
@@ -129,7 +129,7 @@ The backup environment task backs up an environment.
 | PowerApps environment URL (required) | The service endpoint for the environment you want to backup.  Defined under **Service Connections** in **Project Settings**. |
 | Backup label (required) | The label you want to assign to the  backup.  |
 
-### PowerApps copy environment
+### Copy environment
 
 The copy environment task copies an environment to a target environment. Two types of copy are available: full and minimal. Full copies both data and solution metadata (customizations), whereas minimal only copies solution metadata but not the actual data.
 
