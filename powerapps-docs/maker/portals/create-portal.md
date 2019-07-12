@@ -41,7 +41,7 @@ To create a portal:
 
 2.  Under **Make your own app**, select **Portal from blank (preview)**.
 
-3.	If the selected environment does not contain portal pre-requisites, a message is displayed in the **Portal from blank** window suggesting you select another environment or create a new one.
+3.	If the selected environment does not contain portal pre-requisites, a message is displayed in the **Portal from blank (preview)** window suggesting you select another environment or create a new one.
 
     ![create new environment message](media/create-portal-message.png "Create new environment message")
 
@@ -55,9 +55,9 @@ To create a portal:
 5.	After creating the environment, under **Make your own app**, select **Portal from blank (preview)**.
 
     > [!NOTE]
-    > If the database is created and you are still getting the create database prompt, you must refresh the PowerApps home page before selecting the **Portal from blank** tile.
+    > If the database is created and you are still getting the create database prompt, you must refresh the PowerApps home page before selecting the **Portal from blank (preview)** tile.
 
-6.  In the **Portal from blank** window, enter a name for the portal and address for the website, and select a language from the drop-down list. When you're done, select **Create**.
+6.  In the **Portal from blank (preview)** window, enter a name for the portal and address for the website, and select a language from the drop-down list. When you're done, select **Create**.
 
     ![create new portal](media/create-new-portal.png "Create new portal")  
 
@@ -73,7 +73,7 @@ After you select **Create**, the portal will begin provisioning and the provisio
 
 ![Provisioning success notification](media/provision-complete-notif.png "Provisioning success notification") 
 
-If you have created your portal in the environment without portal pre-requisites, the provisioning is also displayed in the grid:
+If you have created your portal in the environment that doesn't have portal pre-requisites installed, the provisioning status is also displayed in the grid:
 
 ![Grid notification](media/provision-progress-notif.png "Grid notification") 
 
@@ -93,6 +93,8 @@ Once the portal is created, you are redirected to the portal designer. You can u
 
 ## Create new environment
 
+Follow these steps when you create an environment using the option provided in the **Portal from blank (preview)** window.
+
 1.  In the **New environment** pane, enter a name for the environment, and then select a region and environment type from the drop-down lists. You cannot change the region once the environment is created. When you're done, select **Create environment**.
 
     ![create new environment](media/create-new-environment.png "Create new environment")  
@@ -106,8 +108,8 @@ Once the portal is created, you are redirected to the portal designer. You can u
 
 3.  Select the currency and language for the data stored in the database. You cannot change the currency or language once the database is created. When you're done, select **Create my database**. The database is created with the starter portal that enables you to quickly get started with sample content once the portal is provisioned.
 
-    > Note
-    > The **Include starter portal** option is available only when you create an environment using the option provided in the Portal from blank window. This option is not available when you create an environment from PowerApps admin center.
+    > [!NOTE]
+    > The **Include starter portal** option is available only when you create an environment using the option provided in the **Portal from blank (preview)** window. This option is not available when you create an environment from PowerApps admin center.
 
     ![create new database](media/create-new-database.png "Create new database")  
 
