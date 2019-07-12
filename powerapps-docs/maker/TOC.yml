@@ -1019,6 +1019,8 @@
           href: ./portals/portal-templates.md
         - name: Create a portal
           href: ./portals/create-portal.md
+        - name: Create a Dynamics 365 for Customer Engagement portal
+          href: ./portals/create-dynamics-portal.md
         - name: Maker experience anatomy
           href: ./portals/maker-experience-anatomy.md
         - name: Create and manage webpages

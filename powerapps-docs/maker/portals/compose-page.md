@@ -15,19 +15,19 @@ ms.reviewer:
 
 [!include[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-After adding the required webpages and managing their hierarchy in the sitemap, you can add various components. The WYSIWYG editor allows you to add and edit the required components on the canvas easily. You can add and edit the following portal components on the canvas:
+After adding the required webpages and managing their hierarchy in the sitemap, you can add various components. The WYSIWYG editor allows you to add and edit the required components on the canvas easily. You can add and edit the following  components on the canvas:
 
--   Text
-
--   Image
-
--   IFrame
-
--   Form
-
--   List
-
--   Breadcrumb
+- Sections
+    - One column section
+    - Two columns section
+    - Three columns section
+- Portal components
+    - Text
+    - Image
+    - IFrame
+    - Form
+    - List
+    - Breadcrumb
 
 ## Use the WYSIWYG editor
 
@@ -51,6 +51,35 @@ After adding the required webpages and managing their hierarchy in the sitemap, 
 6.  To delete a component, select the component on the canvas and then select **Delete** on the component’s toolbar.
 
     ![delete component](media/delete-component.png "Delete component")  
+
+## Add sections
+
+Section allows you to define a structure for your page and arrange portal components accordingly. Once you add sections to your page, you can add portal components inside the sections as per the requirement.
+
+1.	Edit the portal to open it in the maker experience.
+
+2.	Select the page on which you want to add a section.
+
+3.	Select an editable element on the canvas.
+
+4.	Select **Components** ![components icon](media/components-icon.png "Components icon") from the toolbelt on the left side of the screen.
+
+5.	Under Section layout, select the section type to be inserted.
+
+6.	In the properties on the right side of the screen, select the following information:
+
+    - **Alignment**: Select whether the component is to be left, center, or right aligned.
+
+    - **Background**: Select if would like to have color or an image as the section background.
+
+        - **Fill**: Select a color for the background.
+
+        - **Image**: Select an image from the list. If you would like to upload a new image, select Upload image.
+
+7.	Add the required portal component in the section.
+
+
+## Add portal components
 
 ### Add text box
 
