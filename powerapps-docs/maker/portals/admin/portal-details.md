@@ -15,7 +15,7 @@ ms.reviewer:
 
 [!include[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
 
-After you create a portal, it will begin provisioning and you are notified about the status through notifications. Once the portal is provisioned, you are redirected to the maker experience. You can use the maker experience to create and customize your website.
+After you create a portal, it will begin provisioning and you are notified about the status through notifications. Once the portal is provisioned, you are redirected to the portal designer. You can use the portal designer to create and customize your website.
 
 If need to see more details about the provisioned portal such as, portal type, application ID, and so on, you can open [PowerApps Portals admin center](admin-overview.md) and navigate to the **Portal Details** tab.
 

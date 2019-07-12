@@ -31,7 +31,7 @@ After adding the required webpages and managing their hierarchy in the sitemap, 
 
 ## Use the WYSIWYG editor
 
-1.  [Edit the portal](manage-existing-portals.md#edit) to open it in the maker experience.  
+1.  [Edit the portal](manage-existing-portals.md#edit) to open it in the portal designer.  
 
 2.  Select the page on which you want to add the component.
 
@@ -48,7 +48,7 @@ After adding the required webpages and managing their hierarchy in the sitemap, 
 
     The selected component is added to the canvas inside the editable element.
 
-6.  To delete a component, select the component on the canvas and then select **Delete** on the component’s toolbar.
+6.  To delete a component, select the component on the canvas and then select **Delete** on the command bar at the top of the page.
 
     ![delete component](media/delete-component.png "Delete component")  
 
@@ -56,7 +56,7 @@ After adding the required webpages and managing their hierarchy in the sitemap, 
 
 Section allows you to define a structure for your page and arrange portal components accordingly. Once you add sections to your page, you can add portal components inside the sections as per the requirement.
 
-1.	Edit the portal to open it in the maker experience.
+1.	Edit the portal to open it in the portal designer.
 
 2.	Select the page on which you want to add a section.
 
@@ -68,7 +68,7 @@ Section allows you to define a structure for your page and arrange portal compon
 
 6.	In the properties on the right side of the screen, select the following information:
 
-    - **Alignment**: Select whether the component is to be left, center, or right aligned.
+    - **Alignment**: Select whether the component must be left, center, or right aligned.
 
     - **Background**: Select if would like to have color or an image as the section background.
 
@@ -83,7 +83,7 @@ Section allows you to define a structure for your page and arrange portal compon
 
 ### Add text box
 
-1.  [Edit the portal](manage-existing-portals.md#edit) to open it in the maker experience.  
+1.  [Edit the portal](manage-existing-portals.md#edit) to open it in the portal designer.  
 
 2.  Select the page on which you want to add the component.
 
@@ -101,7 +101,7 @@ Section allows you to define a structure for your page and arrange portal compon
 
 ### Add image
 
-1.  [Edit the portal](manage-existing-portals.md#edit) to open it in the maker experience.  
+1.  [Edit the portal](manage-existing-portals.md#edit) to open it in the portal designer.  
 
 2.  Select the page on which you want to add the component.
 
@@ -135,7 +135,7 @@ Section allows you to define a structure for your page and arrange portal compon
 
 ### Add IFrame
 
-1.  [Edit the portal](manage-existing-portals.md#edit) to open it in the maker experience.  
+1.  [Edit the portal](manage-existing-portals.md#edit) to open it in the portal designer.  
 
 2.  Select the page on which you want to add the component.
 
@@ -162,7 +162,7 @@ Section allows you to define a structure for your page and arrange portal compon
 
 Form is a data-driven configuration that you use to add a form to collect data in the portal without the need for a developer to surface the form in the portal. [Forms are created in Common Data Service](https://docs.microsoft.com/en-us/powerapps/maker/model-driven-apps/form-designer-overview) and you can use them into webpages in the portal or in conjunction with lists to build out complete web applications.  
 
-1.  [Edit the portal](manage-existing-portals.md#edit) to open it in the maker experience.  
+1.  [Edit the portal](manage-existing-portals.md#edit) to open it in the portal designer.  
 
 2.  Select the page on which you want to add the component.
 
@@ -209,7 +209,7 @@ Form is a data-driven configuration that you use to add a form to collect data i
 
 List is a data-driven configuration that you use to add a webpage that will render a list of records without the need for a developer to surface the grid in the portal. Lists use [Common Data Service views](https://docs.microsoft.com/en-us/powerapps/maker/model-driven-apps/create-and-edit-views) to display records on the portal.  
 
-1.  [Edit the portal](manage-existing-portals.md#edit) to open it in the maker experience.  
+1.  [Edit the portal](manage-existing-portals.md#edit) to open it in the portal designer.  
 
 2.  Select the page on which you want to add the component.
 
@@ -244,7 +244,7 @@ List is a data-driven configuration that you use to add a webpage that will rend
 
 ### Add breadcrumb
 
-1.  [Edit the portal](manage-existing-portals.md#edit) to open it in the maker experience.  
+1.  [Edit the portal](manage-existing-portals.md#edit) to open it in the portal designer.  
 
 2.  Select the page on which you want to add the component.
 
@@ -254,6 +254,18 @@ List is a data-driven configuration that you use to add a webpage that will rend
 
 5.  Select **Breadcrumb**.
 
+## Create a custom menu
+
+By default, the menu on the website is created automatically based on the hierarchy of the webpages. To create a custom menu, you must create the web link set in the Portal Management app. More information: [Manage web links](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/manage-web-links)
+
+After you create the web link set:
+
+1.	[Edit the portal](manage-existing-portals.md#edit) to open it in the portal designer.
+
+2.	Select the menu. 
+
+3.	In the properties on the right side of the screen, select the web link set name from the **Navigation Menu** list.
+
 ## Use code editor
 
 To view the source of a component on the canvas, select the component, and then select the source code editor icon **&lt;/&gt;** in the footer.
@@ -262,7 +274,7 @@ To view the source of a component on the canvas, select the component, and then 
 
 The source code is displayed in the **Code Editor** pane at the bottom of the screen. The changes you made earlier are updated in the source code. To make changes, update the source code and select **Save**. The changes are reflected on the canvas.
 
-![code editor](media/code-editor.png "Code editor")  
+![code editor](media/code-editor.png "Code editor") 
 
 ## Work with templates
 
@@ -283,7 +295,7 @@ You can edit the built-in templates by using the code editor. The following temp
 
 To open a template in code editor:
 
-1.  [Edit the portal](manage-existing-portals.md#edit) to open it in the maker experience.  
+1.  [Edit the portal](manage-existing-portals.md#edit) to open it in the portal designer.  
 
 2.  Select **Templates** ![templates icon](media/templates-icon.png "Templates icon") from the toolbelt on the left side of the screen. The available templates are displayed.  
 

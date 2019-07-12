@@ -1,6 +1,6 @@
 ---
-title: Create a Dynamics 365 portal in PowerApps | Microsoft Docs
-description: Instructions to create a Dynamics 365 portal in PowerApps.
+title: Create a Dynamics 365 for Customer Engagement portal in PowerApps | Microsoft Docs
+description: Instructions to create a Dynamics 365 for Customer Engagement portal in PowerApps.
 author: sbmjais
 manager: shujoshi
 ms.service: powerapps
@@ -18,7 +18,9 @@ If you select an environment that contains Dynamics 365 for Customer Engagement 
 
 1.	Sign in to [PowerApps](http://web.powerapps.com).
 
-2.	Select **Create** on the left pane to display all portal templates.
+2.	Select **Create** on the left pane and enter **portal** in the **Search templates** field to display all Dynamics 365 for Customer Engagement portal templates.
+
+    ![Dynamics 365 Customer Engagement portal templates](media/dynamics-portals.png "Dynamics 365 Customer Engagement portal templates")  
 
 3.	Select the required portal template.
 

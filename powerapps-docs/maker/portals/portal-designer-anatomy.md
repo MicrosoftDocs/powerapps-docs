@@ -1,6 +1,6 @@
 ---
-title: Portal maker experience anatomy | Microsoft Docs
-description: Learn about the anatomy of portal maker experience 
+title: Portal portal designer anatomy | Microsoft Docs
+description: Learn about the anatomy of portal designer.
 author: sbmjais
 manager: shujoshi
 ms.service: powerapps
@@ -11,13 +11,13 @@ ms.author: shjais
 ms.reviewer:
 ---
 
-# Maker experience anatomy
+# Portal designer anatomy
 
 [!include[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-You can use the maker experience to create and customize your website. It contains various options to add and configure webpages, components, and templates. The anatomy of maker experience is as follows:
+You can use the portal designer to create and customize your website. It contains various options to add and configure webpages, components, and templates. The anatomy of portal designer is as follows:
 
-![maker anatomy](media/maker-anatomy.png "Maker anatomy")  
+![Portal designer anatomy](media/maker-anatomy.png "Portal designer anatomy")  
 
 | **Annotation** | **Name**        | **Description**                                                                              |
 |----------------|-----------------|----------------------------------------------------------------------------------------------|

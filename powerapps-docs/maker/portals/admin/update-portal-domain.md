@@ -17,6 +17,17 @@ With the preview release of PowerApps Portals, you can now update your Dynamics 
 
 1. Open [PowerApps Portals admin center](admin-overview.md).
 
-2. Go to **Portal Actions** > **Update to PowerApps portal domain**.
+2. Go to **Portal Actions** > **Update to PowerApps Portals domain**.
 
-3. In the Update to PowerApps Portals domain window, select **Update to new domain (powerappsportals.com)**.
+    > [!div class=mx-imgBorder]
+    > ![Update to PowerApps portal domain](../media/update-portal-domain-button.png "Update to PowerApps portal domain ")
+
+3. In **Portal URL**, enter the address of the website and select **OK**.
+
+    > [!div class=mx-imgBorder]
+    > ![Update to PowerApps portal domain](../media/update-portal-domain.png "Update to PowerApps portal domain ")
+
+If you are already using the PowerApps Portals domain and would like to revert to the old domain, you can use the **Update to PowerApps portal domain** action to revert to the old domain. In this case, the message is displayed as follows:
+
+> [!div class=mx-imgBorder]
+> ![Revert to old domain](../media/revert-portal-domain.png "Revert to old domain ")

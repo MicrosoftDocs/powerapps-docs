@@ -19,7 +19,7 @@ A webpage is a document that is identified by a unique URL in a website. It is o
 
 ## Create webpage
 
-1.  [Edit the portal](manage-existing-portals.md#edit) to open it in the maker experience.  
+1.  [Edit the portal](manage-existing-portals.md#edit) to open it in the portal designer.  
 
 2.  From the command bar, select **New page** and choose the page template.
 
@@ -41,13 +41,13 @@ Let's say you have created a few webpages for your portal. The page hierarchy lo
 
 ![pages pane](media/pages-pane.png "Pages pane")  
 
-The navigation on the website is created automatically based on the hierarchy of the webpages.
+The menu on the website is created automatically based on the hierarchy of the webpages. You can also create a custom menu to display on the website. More information: [Create a custom menu](compose-page.md#create-a-custom-menu)
 
 ![website navigation](media/website-navigation.png "Website navigation")  
 
 ## Manage webpage
 
-1.  [Edit the portal](manage-existing-portals.md#edit) to open it in the maker experience.  
+1.  [Edit the portal](manage-existing-portals.md#edit) to open it in the portal designer.  
 
 2.  Select **Pages** ![pages icon](media/pages-icon.png "Pages icon") from the toolbelt on the left side of the screen.  
 

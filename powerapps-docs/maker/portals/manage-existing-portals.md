@@ -25,7 +25,7 @@ To manage an app, select **More Commands** (**…**) for the portal and choose a
 
 ## Edit
 
-Opens the [maker experience](maker-experience-anatomy.md) to edit the content and components of the portal.  
+Opens the [portal designer](portal-designer-anatomy.md) to edit the content and components of the portal.  
 
 ![portal maker](media/portal-maker.png "Portal maker")  
 
@@ -34,6 +34,8 @@ Opens the [maker experience](maker-experience-anatomy.md) to edit the content an
 Opens the portal to browse the website. This helps you to see the portal as it will look to your customers.
 
 ![portal website](media/portal-website.png "Portal website")  
+
+Alternately, you can also open the portal to browse the website by selecting **Browse website** in the [portal designer](portal-designer-anatomy.md) to view the changes you have made to the website. The website opens in a new tab with URL of the website.
 
 ## Share
 
@@ -84,6 +86,15 @@ Your portal should work anonymously and should be accessible by the external use
 Displays the portal settings and allows you to change the name of the portal. You can also perform advanced actions such as administering the portal though the Portal Admin Center and working with site settings. Settings provides links to the PowerApps Portals admin center and Site settings. More information: [Administer your portal](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/manage-portal) and [Configure site settings for portals](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/configure-site-settings).  
 
 ![portal settings](media/portal-settings.png "Portal settings")  
+
+## Delete
+
+Deletes the portal and hosted resources. When you delete a portal, its URL becomes inaccessible. Deleting a portal does not affect any portal configurations or solutions present in your environment and they will remain as it is. 
+
+You must delete the portal configurations manually to completely remove portal configuration from your environment. To do this, use the Portal Management app and delete the corresponding website record for the portal.
+
+> [!NOTE]
+> If you don't have sufficient privileges to delete a portal, an error is displayed. You must have the System Customizer or System Administrator role to delete a portal. Also, you must be the owner of the portal application in Azure Active Directory. The user who creates the portal is by default the owner and can delete a portal.
 
 ## Details
 
