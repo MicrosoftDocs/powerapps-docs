@@ -79,7 +79,11 @@ If you use the Dynamics 365 for Field Service or Dynamics 365 for Project Servic
 
 5. Disable Admin Mode within settings to allow you to view the solutions page
 
-6. 
+6. On the menu bar select **Manage Solutions** to open the **Solutions** area. 
+
+    
+
+7. 
 
 
 The latest version of Field Service and Project Service Automation are available by default for newly created instances, but for existing instances with installed previous versions of these solutions you must request the upgrade by contacting Microsoft Customer Support.
