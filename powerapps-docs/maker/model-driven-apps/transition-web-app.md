@@ -73,19 +73,25 @@ If you use the Dynamics 365 for Field Service or Dynamics 365 for Project Servic
     > [!div class="mx-imgBorder"] 
     > ![](../common-data-service/media/ppac-copy-overwrite.png "Overwrite environment")
 
-3. The **Overwrite environment** dialog box appears. Confirm that you have selected the correct environment. It is important to ensure you have the right options selected. When you are sure select **Confirm**. 
+3. The **Overwrite environment** dialog box appears. Make sure you have selected the correct environment and that you have the right options selected, and then select **Confirm**. 
 
-4. When the copy is complete a confirmation notice appears. 
+4. When the copy is successful a confirmation notice appears. 
 
-5. Disable Admin Mode within settings to allow you to view the solutions page
+5. On the menu bar select **Manage Solutions** to open the **Solutions** area. 
 
-6. On the menu bar select **Manage Solutions** to open the **Solutions** area. 
+    > [!div class="mx-imgBorder"] 
+    > ![](../common-data-service/media/ppac-manage-solutions.png "Manage solutions")
 
-7. 
+    > [!IMPORTANT]
+    > If **administration mode** is enabled you must disable it so you can view the **Solutions** area. More information: [Administration mode](/dynamics365/customer-engagement/admin/manage-sandbox-instances#administration-mode)
 
-    ![Upgrade solution](../common-data-service/media/ppac-upgrade-solution.png)
+6. Find the Field Service or Project Service Automation solution and open it. The option to **Upgrade** should be available. Select it to upgrade the solution. 
 
-The latest version of Field Service and Project Service Automation are available by default for newly created instances, but for existing instances with installed previous versions of these solutions you must request the upgrade by contacting Microsoft Customer Support.
+    > [!div class="mx-imgBorder"] 
+    > ![](../common-data-service/media/ppac-upgrade-solution.png "Upgrade solution")
+    
+> [!NOTE]
+> The latest versions of Field Service and Project Service Automation on Unified Interface are available by default for newly created instances. If you want to upgrade an existing environment with installed earlier versions you must request the upgrade by contacting [Microsoft Customer Support](https://go.microsoft.com/fwlink/?LinkId=853505). 
 
 More information: [Dynamics 365 for Field Service latest versions](/dynamics365/field-service/version-history#latest-versions) and  [Dynamics 365 for Project Service Automation upgrade home page](/dynamics365/customer-engagement/project-service/upgrade-psa-home-page)
 
