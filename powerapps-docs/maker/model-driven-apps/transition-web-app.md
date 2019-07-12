@@ -81,10 +81,9 @@ If you use the Dynamics 365 for Field Service or Dynamics 365 for Project Servic
 
 6. On the menu bar select **Manage Solutions** to open the **Solutions** area. 
 
-    
-
 7. 
 
+    ![Upgrade solution](../common-data-service/media/ppac-upgrade-solution.png)
 
 The latest version of Field Service and Project Service Automation are available by default for newly created instances, but for existing instances with installed previous versions of these solutions you must request the upgrade by contacting Microsoft Customer Support.
 
