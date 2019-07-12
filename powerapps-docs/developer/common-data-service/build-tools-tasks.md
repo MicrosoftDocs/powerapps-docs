@@ -16,9 +16,9 @@ search.app:
   - D365CE
 ---
 
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
-
 # Build tools tasks
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 Several types of build tasks are available as part of the PowerApps build tools to help automate your application lifecycle, using Azure DevOps.
   

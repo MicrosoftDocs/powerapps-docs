@@ -16,9 +16,10 @@ search.app:
   - D365CE
 ---
 
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
-
 # PowerApps build tools overview
+
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 Use PowerApps build tools to automate common build and deployment tasks related to PowerApps . This includes synchronization of solution metadata (a.k.a. solutions) between development environments and source control, generating build artifacts, deploying to downstream environments, provisioning or de-provisioning of environments, and the ability to perform static analysis checks against your solution using the PowerApps checker service.
 

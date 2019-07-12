@@ -16,15 +16,15 @@ search.app:
   - D365CE
 ---
 
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
-
 # Tutorial and FAQ
 
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 Use the tutorial and FAQs to learn more about the PowerApps build tools for Azure DevOps. 
 
 ## Hands-on-lab
 
-The hands-on lab is available [here](https://raw.githubusercontent.com/microsoft/PowerApps-Samples/master/build-tools/PowerPlatform_DevOps_6_11.zip)
+The hands-on lab is available [here](https://github.com/microsoft/PowerApps-Samples/tree/master/azure/build-tools)
 
 The hand-on lab provides a tutorial with step-by-step instructions on how to build out the following scenario:
 
