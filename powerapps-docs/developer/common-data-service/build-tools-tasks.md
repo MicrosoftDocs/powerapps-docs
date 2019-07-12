@@ -41,7 +41,7 @@ The PowerApps checker task runs a static analysis check on your solution(s) agai
 
 This set of tasks perform actions against solutions, and includes the following tasks:
 
-### Import solution
+### PowerApps import solution
 
 The import solution imports a solution into a target environment.
 
@@ -53,7 +53,7 @@ The import solution imports a solution into a target environment.
 > [!NOTE] 
 > Variables give you a convenient way to get key bits of data into various parts of your pipeline. A comprehensive list of predefined variables is available [here](https://docs.microsoft.com/en-us/azure/devops/pipelines/build/variables?view=azure-devops&tabs=yaml).
 
-### Export solution
+### PowerApps export solution
 
 The export solution task exports a solution from a source environment.
 
@@ -66,7 +66,7 @@ The export solution task exports a solution from a source environment.
 > [!NOTE] 
 > Variables give you a convenient way to get key bits of data into various parts of your pipeline. A comprehensive list of predefined variables is available here.
  
-### Unpack solution
+### PowerApps unpack solution
 
 The unpack solution task takes a compressed solution file and decomposes it into multiple XML files and other files so that these files can be more easily managed by a source control system.
 
@@ -77,7 +77,7 @@ The unpack solution task takes a compressed solution file and decomposes it into
 | Type of solution | The type of solution you want to unpack:  **Unmanaged** (recommended): *Only the unmanaged solution should be unpacked to your repo*, **Managed**, **Both** |
 
 
-### Pack solution
+### PowerApps pack solution
 
 Packs a solution represented in source control into a solution.zip file that can be imported into an environment.
 
@@ -95,7 +95,7 @@ The publish customizations task publishes all customizations in an environment.
 |------------|---------|
 | PowerApps environment URL | The service endpoint for the environment in which you want to publish customizations.  Defined under **Service Connections** in **Project Settings**. |
 
-### Set solution version 
+### PowerApps set solution version 
 
 The set solution version task updates the version of a solution.
 
@@ -104,7 +104,7 @@ The set solution version task updates the version of a solution.
 | PowerApps environment URL  | The service endpoint for the environment where you want to deploy the package.  Defined under **Service Connections** in **Project Settings**. |
 | Package file  | The path and file name of the package that you want to deploy |
 
-### Deploy package
+### PowerApps deploy package
 
 The deploy package task deploys a package to an environment. Deploying a package as opposed to a single solution file provides an option to deploy multiple solutions, data, and code into an environment.
 
@@ -117,7 +117,7 @@ The deploy package task deploys a package to an environment. Deploying a package
 
 Environment management tasks are used to automate common environment management functions, and includes the following tasks:
 
-### Create environment
+### PowerApps create environment
 
 The create environment task creates an environment.
 
@@ -132,7 +132,7 @@ The create environment task creates an environment.
 | Domain Name | This is the environment specific string that forms part of the URL. For example, for an environment with the following URL: *https://powerappsbuildtasks.crm.dynamics.com*, the domain name would be ‘powerappsbuildtasks’.  NOTE: If you are entering a domain name that is already in use – the task will append a numeric value to the URL, starting with 0. For the example above, the URL could become *https://powerappsbuildtasks0.crm.dynamics.com*. |
 | Friendly name | The friendly name of the environment. |
 
-### Delete environment
+### PowerApps delete environment
 
 The delete environment task deletes an environment.
 
@@ -140,7 +140,7 @@ The delete environment task deletes an environment.
 |---------|-----------|
 | PowerApps environment URL  | The service endpoint for the environment you want to delete.  Defined under **Service Connections** in **Project Settings**. |
 
-### Backup environment
+### PowerApps backup environment
 
 The backup environment task backs up an environment. 
 
@@ -149,7 +149,7 @@ The backup environment task backs up an environment.
 | PowerApps environment URL  | The service endpoint for the environment you want to backup.  Defined under **Service Connections** in **Project Settings**. |
 | Backup label  | The label you want to assign to the  backup.  |
 
-### Copy environment
+### PowerApps copy environment
 
 The copy environment task copies an environment to a target environment. Two types of copy are available: full and minimal. Full copies both data and solution metadata (customizations), whereas minimal only copies solution metadata but not the actual data.
 

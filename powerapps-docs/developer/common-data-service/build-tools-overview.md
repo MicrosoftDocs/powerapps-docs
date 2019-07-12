@@ -1,5 +1,5 @@
 ---
-title: "Build tools overview| Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Build tools for Azure DevOps overview| Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "PowerApps build tools are a collection of PowerApps specific Azure DevOps build tasks that eliminate the need to manually download  scripts to manage the development of PowerApps" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 07/21/2019
@@ -16,7 +16,7 @@ search.app:
   - D365CE
 ---
 
-# PowerApps build tools overview
+# PowerApps build tools for Azure DevOps overview
 
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
