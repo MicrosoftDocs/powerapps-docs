@@ -1022,7 +1022,7 @@
         - name: Create a Dynamics 365 for Customer Engagement portal
           href: ./portals/create-dynamics-portal.md
         - name: Portal designer anatomy
-          href: ./portals/maker-experience-anatomy.md
+          href: ./portals/portal-designer-anatomy.md
         - name: Create and manage webpages
           href: ./portals/create-manage-webpages.md
         - name: Compose a page
