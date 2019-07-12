@@ -48,7 +48,7 @@ The import solution imports a solution into a target environment.
 | **Parameters** | **Description** |
 |----|----|
 | PowerApps environment URL  | The service endpoint for the target environment that you want to import the solution to. For example, *https://powerappsbuildtools.crm.dynamics.com*.  Service endpoints can be defined under **Service Connections** in **Project Settings**. |
-| Solution input file  | The path and file name of the solution.zip file to import into the target environment. For example: *$(Build.ArtifactStagingDirectory)\$(SolutionName).zip*
+| Solution input file  | The path and file name of the solution.zip file to import into the target environment. For example: *$(Build.ArtifactStagingDirectory)\$(SolutionName).zip*.
  |
 > [!NOTE] 
 > Variables give you a convenient way to get key bits of data into various parts of your pipeline. A comprehensive list of predefined variables is available [here](https://docs.microsoft.com/en-us/azure/devops/pipelines/build/variables?view=azure-devops&tabs=yaml).
@@ -60,8 +60,8 @@ The export solution task exports a solution from a source environment.
 | **Parameters** | **Description** |
 |----------|-------------|
 | PowerApps environment URL | The service endpoint for the source environment that you want to export the solution from.  Defined under **Service Connections -> Generic Service Connection** in **Project Settings**. |
-| Solution name | The name of the solution to export. Always use the solution ‘Name’. Not the ‘Display Name’ |
-| Solution output file | The path and file name of the solution.zip file to export the source environment to. For example: *$(Build.ArtifactStagingDirectory)\$(SolutionName).zip* |
+| Solution name | The name of the solution to export. Always use the solution ‘Name’. Not the ‘Display Name’. |
+| Solution output file | The path and file name of the solution.zip file to export the source environment to. For example: *$(Build.ArtifactStagingDirectory)\$(SolutionName).zip*. |
 
 > [!NOTE] 
 > Variables give you a convenient way to get key bits of data into various parts of your pipeline. A comprehensive list of predefined variables is available here.
@@ -101,12 +101,17 @@ The set solution version task updates the version of a solution.
 
 | **Parameters** | **Description** |
 |---------------------------|----|
-| PowerApps environment URL  | The service endpoint for the environment that holds the solution you want to update.  Defined under **Service Connections** in **Project Settings**. |
-| Solution name  | The name of the solution you want to set the Version Number for |
+| PowerApps environment URL  | The service endpoint for the environment where you want to deploy the package.  Defined under **Service Connections** in **Project Settings**. |
+| Package file  | The path and file name of the package that you want to deploy |
 
 ### Deploy package
 
 The deploy package task deploys a package to an environment. Deploying a package as opposed to a single solution file provides an option to deploy multiple solutions, data, and code into an environment.
+
+| **Parameters** | **Description** |
+|---------------------------|----|
+| PowerApps environment URL  | The service endpoint for the target environment that holds the solution you want to update.  Defined under **Service Connections** in **Project Settings**. |
+| Solution name  | The name of the solution you want to set the Version Number for |
 
 ## Environment management tasks
 
