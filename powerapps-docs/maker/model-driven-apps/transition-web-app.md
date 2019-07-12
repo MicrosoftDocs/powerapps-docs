@@ -61,7 +61,26 @@ We recommend that you test all use cases. You can start with the most critical u
 > The current version of Common Data Service and Dynamics 365 for Customer Engagement apps still includes several deprecated features. You should review your application for any deprecated features and replace as necessary with new capabilities. More information: [Important changes (deprecations) coming in Dynamics 365 Customer Engagement](/dynamics365/get-started/whats-new/customer-engagement/important-changes-coming)
 
 ### Dynamics 365 for Customer Engagement apps
-If you use the Dynamics 365 for Field Service or Dynamics 365 for Project Service Automation apps you must upgrade to the latest Field Service version 8 and Project Service Automation version 3 before validating these applications in Unified Interface.
+If you use the Dynamics 365 for Field Service or Dynamics 365 for Project Service Automation apps and wish to test Unified Interface you must setup a new sandbox environment and make a copy of your production environment to upgrade to the latest Field Service version 8 and Project Service Automation version 3 before validating these applications in Unified Interface. To do this, follow these steps.
+
+1. Create a new environment and copy your production environment into this new sandbox environment. Have your new environment ready and then view your production environment within the Power Platform admin center. Select **Copy** on the menu bar.
+
+    > [!div class="mx-imgBorder"] 
+    > ![](../common-data-service/media/ppac-copy-environment.png "Copy environment")
+
+2. On the **Copy Environment** page, select **Everything**, select your new sandbox environment from the **Select Environment to Overwrite** list, and then select **Copy**. 
+
+    > [!div class="mx-imgBorder"] 
+    > ![](../common-data-service/media/ppac-copy-overwrite.png "Overwrite environment")
+
+3. The **Overwrite environment** dialog box appears. Confirm that you have selected the correct environment. It is important to ensure you have the right options selected. When you are sure select **Confirm**. 
+
+4. When the copy is complete a confirmation notice appears. 
+
+5. Disable Admin Mode within settings to allow you to view the solutions page
+
+6. 
+
 
 The latest version of Field Service and Project Service Automation are available by default for newly created instances, but for existing instances with installed previous versions of these solutions you must request the upgrade by contacting Microsoft Customer Support.
 
