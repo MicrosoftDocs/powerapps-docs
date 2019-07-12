@@ -16,6 +16,8 @@ search.app:
   - D365CE
 ---
 
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+
 # Tutorial and FAQ
 
 Use the tutorial and FAQs to learn more about the PowerApps build tools for Azure DevOps. 

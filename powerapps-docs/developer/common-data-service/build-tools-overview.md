@@ -16,6 +16,8 @@ search.app:
   - D365CE
 ---
 
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+
 # PowerApps build tools overview
 
 Use PowerApps build tools to automate common build and deployment tasks related to PowerApps . This includes synchronization of solution metadata (a.k.a. solutions) between development environments and source control, generating build artifacts, deploying to downstream environments, provisioning or de-provisioning of environments, and the ability to perform static analysis checks against your solution using the PowerApps checker service.
@@ -36,7 +38,7 @@ The PowerApps build tools are a collection of PowerApps specific Azure DevOps bu
 - Environment management 
 
 ## Get the PowerApps build tools 
-The PowerApps build tools can be installed into your Azure DevOps organization from the Azure Marketplace. Once installed, all tasks included in the PowerApps build tools will be available to add into any new or existing pipeline and are easily found by searching for **PowerApps**.
+The PowerApps build tools can be installed into your Azure DevOps organization from the [Azure Marketplace](https://azuremarketplace.microsoft.com/en-us/marketplace/). Once installed, all tasks included in the PowerApps build tools will be available to add into any new or existing pipeline and are easily found by searching for **PowerApps**.
 
 ![Get build tools](media/build-tools-download.png)
  
