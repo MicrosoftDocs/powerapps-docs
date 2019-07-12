@@ -63,29 +63,31 @@ We recommend that you test all use cases. You can start with the most critical u
 ### Dynamics 365 for Customer Engagement apps
 If you use the Dynamics 365 for Field Service or Dynamics 365 for Project Service Automation apps and wish to test Unified Interface you must setup a new sandbox environment and make a copy of your production environment to upgrade to the latest Field Service version 8 and Project Service Automation version 3 before validating these applications in Unified Interface. To do this, follow these steps.
 
-1. Create a new environment and copy your production environment into this new sandbox environment. Have your new environment ready and then view your production environment within the Power Platform admin center. Select **Copy** on the menu bar.
+1. Create a new sandbox environment. More information: [Add an instance to your subscription](/dynamics365/customer-engagement/admin/add-instance-subscription)
+
+2. Copy your production environment that has the Dynamics 365 for Field Service or Dynamics 365 for Project Service Automation apps into the new sandbox environment. To do this, on the Power Platform admin center open your production environment, and then select **Copy**.
 
     > [!div class="mx-imgBorder"] 
     > ![](../common-data-service/media/ppac-copy-environment.png "Copy environment")
 
-2. On the **Copy Environment** page, select **Everything**, select your new sandbox environment from the **Select Environment to Overwrite** list, and then select **Copy**. 
+3. On the **Copy Environment** page, select **Everything**, select your new sandbox environment from the **Select Environment to Overwrite** list, and then select **Copy**. 
 
     > [!div class="mx-imgBorder"] 
     > ![](../common-data-service/media/ppac-copy-overwrite.png "Overwrite environment")
 
-3. The **Overwrite environment** dialog box appears. Make sure you have selected the correct environment and that you have the right options selected, and then select **Confirm**. 
+4. The **Overwrite environment** dialog box appears. Make sure you have selected the correct environment and that you have the right options selected, and then select **Confirm**. 
 
-4. When the copy is successful a confirmation notice appears. 
+5. When the copy is successful a confirmation notice appears. 
 
-5. On the menu bar select **Manage Solutions** to open the **Solutions** area. 
+6. On the menu bar select **Manage Solutions** to open the **Solutions** area. 
 
     > [!div class="mx-imgBorder"] 
     > ![](../common-data-service/media/ppac-manage-solutions.png "Manage solutions")
 
     > [!IMPORTANT]
-    > If **administration mode** is enabled you must disable it so you can view the **Solutions** area. More information: [Administration mode](/dynamics365/customer-engagement/admin/manage-sandbox-instances#administration-mode)
+    > If **administration mode** is enabled you must disable it so you can view the **Solutions** area. More information: [Administration mode](/power-platform/admin/sandbox-environments#administration-mode)
 
-6. Find the Field Service or Project Service Automation solution and open it. The option to **Upgrade** should be available. Select it to upgrade the solution. 
+7. Find the Field Service or Project Service Automation solution and open it. The option to **Upgrade** should be available. Select it to upgrade the solution. 
 
     > [!div class="mx-imgBorder"] 
     > ![](../common-data-service/media/ppac-upgrade-solution.png "Upgrade solution")
