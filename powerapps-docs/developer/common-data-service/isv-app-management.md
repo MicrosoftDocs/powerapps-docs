@@ -41,7 +41,7 @@ As an end user installs an application from AppSource, a consent dialog will be 
 
 A customer can request that data not be shared with the provider, in which case Microsoft will remove all data from that particular tenant within ISV Studio.
 
-To join the public preview of ISV Studio, navigate your browser to [https://aka.ms/ISVStudiopublicpreview](https://aka.ms/ISVStudiopublicpreview).
+To access the public preview of ISV Studio, navigate your browser to [https://aka.ms/ISVStudio](https://aka.ms/ISVStudio/).
 
 ## Pre-requisites
 
