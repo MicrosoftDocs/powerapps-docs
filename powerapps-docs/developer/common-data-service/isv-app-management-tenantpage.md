@@ -28,11 +28,11 @@ search.app:
 
 To view the install history of a tenant, the ISV can switch to **Top tenants** view on the home page and select a tenant.
 
-![Tenant page](media/isv-portal-history.png)
+![Install history of a tenant](media/isv-portal-homepage-tenantpivot.png)
 
 The Tenant page contains the following graphs and metrics:
 
-![Tenant page](media/isv-portal-tenant-page.png)
+![Tenant page](media/isv-portal-tenantpage.png)
 
 ## Successfully installed apps
 
@@ -43,7 +43,7 @@ When hovering over the items of the graph, the following information is shown:
 1. App name
 2. Package install count of the app in the selected tenant
 
-![isv-portal-app-installs-by-environment.png](media/isv-portal-app-installs-by-environment.png)
+![Successfully installed apps](media/isv-portal-tenantpage-graph1.png)
 
 ## Successful production vs. sandbox package installs by environment
 
@@ -55,7 +55,7 @@ When hovering over any item of the graph, the following information is shown:
 2. Environment type (production or sandbox)
 3. Package install count in the environment
 
-![Installs by environment type](media/isv-portal-installs-by-environment-type.png)
+![Package installs by environment type](media/isv-portal-tenantpage-graph2.png)
 
 ## Successful package Installs by environment location
 
@@ -66,7 +66,7 @@ When hovering over any location of the graph, the following information is shown
 1. Location
 2. Package install count in the selected location
 
-![Installs by location](media/isv-portal-installs-by-tenant-location.png)
+![Package Installs by environment location](media/isv-portal-tenantpage-graph3.png)
 
 ## Successful app package and version installs by environment
 
@@ -78,7 +78,7 @@ When hovering over any item of the graph, the following information is shown:
 2. Package version
 3. Package install count of the version in the environment
 
-![App versions by environment](media/isv-portal-app-versions-by-environment.png)
+![Package and version installs by environment](media/isv-portal-tenantpage-graph4.png)
 
 ### See also
 
