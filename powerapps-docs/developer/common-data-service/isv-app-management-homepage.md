@@ -46,7 +46,7 @@ When hovering over a tenant tile in the graph, the following information is show
 2. Tenant Name and Tenant ID
 3. Number of package installs of the app in the tenant
 
-![App installs by tenant](media/isv-portal-homepage-graph1.png)
+![Package installs by tenant](media/isv-portal-homepage-graph1.png)
 
 ## Package install attempts by app (last 28 days)
 
@@ -58,7 +58,7 @@ When hovering over an app in the graph, the following information is shown:
 2. Status of package installation (Success vs Failures)
 3. Count of package install attempts
 
-![Installs by app (28 days)](media/isv-portal-homepage-graph2.png)
+![Package install attempts by app (last 28 days)](media/isv-portal-homepage-graph2.png)
 
 ## Additional insights
 
@@ -68,7 +68,7 @@ Below the summary section the user can access additional insights and can choose
 
 The App names and icons are from AppSource.
 
-![Published apps section](media/isv-portal-homepage-seeall.png)
+![All apps](media/isv-portal-homepage-seeall.png)
 
 ### See also
 

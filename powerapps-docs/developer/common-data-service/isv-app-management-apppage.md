@@ -41,7 +41,7 @@ When hovering over the graph, the following information is shown:
 1. Organization type – production or sandbox
 2. Number of package installs for the organization type
 
-![Environment ratio](media/isv-portal-apppage-graph1.png)
+![Package installs by environment type](media/isv-portal-apppage-graph1.png)
 
 ## Package install attempts by tenant (last 28 days)
 
@@ -53,7 +53,7 @@ When hovering over any item of the graph, the following information is shown:
 2. Status of package installation (success vs failures) in the tenant
 3. Count of package install attempts in the tenant
 
-![Installs by tenant (28 days)](media/isv-portal-apppage-graph2.png)
+![Package install attempts by tenant (last 28 days)](media/isv-portal-apppage-graph2.png)
 
 ## Successful package installs by location of tenants
 
@@ -64,7 +64,7 @@ When hovering over any region of the graph, the following information is shown:
 1. Location
 2. Package install count in the selected location
 
-![Installs by location](media/isv-portal-apppage-graph3.png)
+![Package installs by location of tenants](media/isv-portal-apppage-graph3.png)
 
 ## Iuccessful package and version installs by tenant
 
@@ -77,7 +77,7 @@ When hovering over any item of the graph, the following information is shown:
 3. Package install count of the version in the selected tenant
 
 
-![Installed versions by tenant](media/isv-portal-apppage-graph4.png)
+![Package and version installs by tenant](media/isv-portal-apppage-graph4.png)
 
 ### See also
 
