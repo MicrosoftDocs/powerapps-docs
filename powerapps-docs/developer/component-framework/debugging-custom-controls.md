@@ -13,9 +13,6 @@ ms.author: "nabuthuk"
 Once you are done implementing your custom control logic, run the following command to start the debugging process
 `npm start`
 
-> [!NOTE]
-> Currently, you can only visualize your field control, but dataset support is coming soon.
-
 > [!div class="mx-imgBorder"]
 > ![local-host](media/local-host.png "local host")
 
