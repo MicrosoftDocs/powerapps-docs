@@ -41,7 +41,7 @@ Let's say you have created a few webpages for your portal. The page hierarchy lo
 
 ![pages pane](media/pages-pane.png "Pages pane")  
 
-The primary menu on the website is created automatically based on the hierarchy of the webpages. It is called the **default** menu. You can also create a custom menu to display on the website. More information: [Create a custom menu](compose-page.md#create-a-custom-menu)
+The primary menu on the website is created automatically based on the hierarchy of the webpages. It is called the **default** menu. You can also create a custom menu to display on the website. More information: [Add a custom menu](compose-page.md#add-a-custom-menu)
 
 ![website navigation](media/website-navigation.png "Website navigation")  
 
