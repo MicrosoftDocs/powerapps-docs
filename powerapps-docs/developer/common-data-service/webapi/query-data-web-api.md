@@ -770,7 +770,7 @@ OData-Version: 4.0
 
 <a name="bkmk_LambdaOperators"></a>
 
-## Use Lambda operators
+### Use Lambda operators
 
 The Web API allows you to use two lambda operators, which are `any` and `all` to evaluate a Boolean expression on a collection.
 
