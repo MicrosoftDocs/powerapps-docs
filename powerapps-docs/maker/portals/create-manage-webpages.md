@@ -41,7 +41,7 @@ Let's say you have created a few webpages for your portal. The page hierarchy lo
 
 ![pages pane](media/pages-pane.png "Pages pane")  
 
-The menu on the website is created automatically based on the hierarchy of the webpages. You can also create a custom menu to display on the website. More information: [Create a custom menu](compose-page.md#create-a-custom-menu)
+The primary menu on the website is created automatically based on the hierarchy of the webpages. It is called the **default** menu. You can also create a custom menu to display on the website. More information: [Create a custom menu](compose-page.md#create-a-custom-menu)
 
 ![website navigation](media/website-navigation.png "Website navigation")  
 
@@ -51,11 +51,11 @@ The menu on the website is created automatically based on the hierarchy of the w
 
 2.  Select **Pages** ![pages icon](media/pages-icon.png "Pages icon") from the toolbelt on the left side of the screen.  
 
-3.  Hover over the page you want to manage and select the **Ellipsis** button (…) for the webpage you want to manage.
+3.  Hover over the page you want to manage and select the **Ellipsis** button (…) for the webpage you want to manage. You can also right-click the page you want to manage.
 
 4.  Select the required action from the context menu:
 
-    - **Hide from navigation**: Hide the page from being displayed in the sitemap.
+    - **Hide from default menu**: Hide the page from being displayed in the sitemap through default menu.
 
     - **Add a child page**: Add a child page to the selected page. The child page inherits the page template of its parent page.
 

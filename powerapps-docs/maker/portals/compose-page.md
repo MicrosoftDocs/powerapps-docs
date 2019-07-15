@@ -64,7 +64,7 @@ Section allows you to define a structure for your page and arrange portal compon
 
 4.	Select **Components** ![components icon](media/components-icon.png "Components icon") from the toolbelt on the left side of the screen.
 
-5.	Under Section layout, select the section type to be inserted.
+5.	Under **Section layout**, select the section type to be inserted.
 
 6.	In the properties on the right side of the screen, select the following information:
 
@@ -91,7 +91,7 @@ Section allows you to define a structure for your page and arrange portal compon
 
 4.  Select **Components** ![components icon](media/components-icon.png "Components icon") from the toolbelt on the left side of the screen.  
 
-5.  Select **Text**.
+5.	Under **Portal components**, select **Text**.
 
 6.  Enter the required text in the text box.
 
@@ -109,14 +109,15 @@ Section allows you to define a structure for your page and arrange portal compon
 
 4.  Select **Components** ![components icon](media/components-icon.png "Components icon") from the toolbelt on the left side of the screen.  
 
-5.  Select **Image**. The image placeholder is added to the canvas.
+5.  Under **Portal components**, select **Image**. The image placeholder is added to the canvas.
 
-6.  In the **Properties** pane, enter the following information:
+6.  In the properties pane on the right side of the screen, enter the following information:
 
-    - **Image**: Select this option if you would like to select an existing image or upload a new one. If you want to select a previously uploaded image, choose an image from the **Select image** list. To upload a new image, select **Upload file**.
+    - **Image**: Select this option if you would like to select an existing image or upload a new one. If you want to select a previously uploaded image, choose an image from the **Select image** list. To upload a new image, select **Upload image**. All the uploaded images are included in the image library, which can be selected again through the **Image** list.
 
     > [!NOTE]
-    > You can upload only the images of type png, svg, jpg, and jpeg with the maximum size of 5 MB.
+    > - You can upload only the images of type png, svg, jpg, and jpeg with the maximum size of 5 MB.
+    > - You can't upload an image with the same name. You need to modify the name of the image to upload it again.
 
     ![image properties](media/image-props.png "Image properties")  
 
@@ -143,9 +144,9 @@ Section allows you to define a structure for your page and arrange portal compon
 
 4.  Select **Components** ![components icon](media/components-icon.png "Components icon") from the toolbelt on the left side of the screen.  
 
-5.  Select **IFrame**. The IFrame placeholder is added to the canvas.
+5.  Under **Portal components**, select **IFrame**. The IFrame placeholder is added to the canvas.
 
-6.  In the **Properties** pane, enter the following information:
+6.  In the properties pane on the right side of the screen, enter the following information:
 
     1. **Width**: Enter the width of the IFrame.
 
@@ -170,13 +171,20 @@ Form is a data-driven configuration that you use to add a form to collect data i
 
 4.  Select **Components** ![components icon](media/components-icon.png "Components icon") from the toolbelt on the left side of the screen.  
 
-5.  Select **Form**.
+5.  Under **Portal components**, select **Form**.
 
-6.  In the **Properties** pane, enter information or make selection for the following:
+6.  In the properties pane on the right side of the screen, select one of the following options:
 
-    - **Entity name**: The name of the entity from which the form will be loaded.
+    - **Create new**: Create a new form.
+    - **Use existing**: Use an existing form.
 
-    - **Forms**: The name of the form on the target entity in Common Data Service that is to be rendered.
+7. Enter information or make selection for the following:
+
+    - **Name**: Name of the form.
+
+    - **Entity**: The name of the entity from which the form will be loaded.
+
+    - **Form layout**: The name of the form on the target entity in Common Data Service that is to be rendered.
 
     - **Mode**: Select one of the following options:
 
@@ -184,7 +192,7 @@ Form is a data-driven configuration that you use to add a form to collect data i
 
         - **Edit**: Indicates the form should edit an existing record.
 
-        - **ReadOnly**: Indicates the form should display an existing record’s noneditable form.
+        - **Read only**: Indicates the form should display an existing record’s noneditable form.
 
         > [!NOTE]
         > The default option for **Edit** and **ReadOnly** modes is set as Query String Parameter Name passed as ID in URL. To change these values, you need to open Portal Management app and update the form properties.
@@ -217,11 +225,18 @@ List is a data-driven configuration that you use to add a webpage that will rend
 
 4.  Select **Components** ![components icon](media/components-icon.png "Components icon") from the toolbelt on the left side of the screen.  
 
-5.  Select **List**.
+5.  Under **Portal components**, select **List**.
 
-6.  In the **Properties** pane, enter information or make selection for the following:
+6.  In the properties pane on the right side of the screen, select one of the following options:
 
-    - **Entity name**: The name of the entity from which the views will be loaded.
+    - **Create new**: Create a new list.
+    - **Use existing**: Use an existing list.
+
+7.  Enter information or make selection for the following:
+
+    - **Name**: Name of the list.
+
+    - **Entity**: The name of the entity from which the views will be loaded.
 
     - **Views**: The list of views of the target entity that is to be rendered. You can select multiple views to display records in the list. The view selected first will be the default view.
 
@@ -252,9 +267,9 @@ List is a data-driven configuration that you use to add a webpage that will rend
 
 4.  Select **Components** ![components icon](media/components-icon.png "Components icon") from the toolbelt on the left side of the screen.  
 
-5.  Select **Breadcrumb**.
+5.  Under **Portal components**, select **Breadcrumb**.
 
-## Create a custom menu
+## Add a custom menu
 
 By default, the menu on the website is created automatically based on the hierarchy of the webpages. To create a custom menu, you must create the web link set in the Portal Management app. More information: [Manage web links](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/manage-web-links)
 
@@ -280,15 +295,12 @@ The source code is displayed in the **Code Editor** pane at the bottom of the sc
 
 You can edit the built-in templates by using the code editor. The following templates are editable:
 
--   Blank page
-
--   Blank page with title
-
--   Landing page
-
--   Page with child links
-
--   Page with side navigation
+- 100% Blank page
+- Blank page
+- Blank page with title
+- Landing page
+- Page with child links
+- Page with side navigation
 
 > [!NOTE]
 > It is recommended not to edit **Profile** and **Search** templates.

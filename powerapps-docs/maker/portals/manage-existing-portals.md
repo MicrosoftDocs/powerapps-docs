@@ -102,9 +102,3 @@ Displays details such as owner of the portal, date and time when it was created 
 
 ![portal details](media/portal-details.png "Portal details")  
 
-
-
-
-
-
-
