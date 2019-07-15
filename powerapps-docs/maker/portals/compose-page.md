@@ -54,7 +54,7 @@ After adding the required webpages and managing their hierarchy in the sitemap, 
 
 ## Add sections
 
-Section allows you to define a structure for your page and arrange portal components accordingly. Once you add sections to your page, you can add portal components inside the sections as per the requirement.
+Sections allow you to define a structure for your page and arrange portal components accordingly. Once you add sections to your page, you can add portal components inside the sections as per the requirement.
 
 1.	Edit the portal to open it in the portal designer.
 
