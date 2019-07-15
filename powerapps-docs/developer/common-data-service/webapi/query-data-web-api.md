@@ -564,7 +564,13 @@ Preference-Applied: odata.include-annotations="OData.Community.Display.V1.Format
 }
    
 ```  
-  
+
+<a name="bkmk_retrieverelatedentities"></a>
+
+## Retrieve related entities with query
+
+Use the `$expand` system query option in the navigation properties to control what data from related entities is returned. More information: [Retrieve related entities with query](retrieve-related-entities-query.md).
+
 <a name="bkmk_lookupProperty"></a>
 
 ## Retrieve data about lookup properties
