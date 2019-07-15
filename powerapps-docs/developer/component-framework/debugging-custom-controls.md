@@ -16,8 +16,9 @@ Once you are done implementing your custom control logic, run the following comm
 > [!div class="mx-imgBorder"]
 > ![local-host](media/local-host.png "local host")
 
-As show in the image above, the browse window will open with 3 sections. Your control will be rendered in the left pane while the right pane consists of **Inputs** and **Outputs** sections
+As show in the image above, the browse window will open with 3 sections. Your control will be rendered in the left pane while the right pane consists of **Context Inputs**, **Inputs** and **Outputs** sections
 
+  - **Context Inputs** section provides you a way to specify the form factor and test your custom component with each one (web, tablet, phone). In the coming sprints your will also be able to specify the manual height and width in order to similuate resizing of the form factor. 
   - **Inputs** section is an interactive UI that displays all properties and their types/type-groups defined in the manifest.xml. It allows you to key in mock data for each property. 
   - **Outputs** section renders the output whenever a control's `getOutputs` method gets called.  
  
