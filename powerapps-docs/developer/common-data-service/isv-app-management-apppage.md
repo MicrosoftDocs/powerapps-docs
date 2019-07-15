@@ -68,7 +68,7 @@ When hovering over any region of the graph, the following information is shown:
 
 ## Successful package and version installs by tenant
 
-The column chart shown below displays the package unique names where versions of the selected app are displayed in a drop-down menu. All packages are selected by default, and all installed versions of all package (by tenant) are displayed on the graph. The user can select only one package at a time but can multi-select the versions. When the user selects a package, the versions drop-down is updated to have the corresponding versions of the selected package.
+The column chart shown below displays the package unique names where versions of the selected app are displayed in a drop-down menu. All packages are selected by default, and all installed versions of all package (by tenant) are displayed on the graph. The user can select one or more packages and versions for further slicing and dicing. When the user selects a package, the versions drop-down is updated to have the corresponding versions of the selected package.
 
 When hovering over any item of the graph, the following information is shown:
 
