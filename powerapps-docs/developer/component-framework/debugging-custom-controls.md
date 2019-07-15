@@ -10,7 +10,7 @@ ms.author: "nabuthuk"
 ---
 # Debug custom components
 
-Once you are done implementing your custom control logic, get started with testing and debugging using the following command `npm start`. This will build your custom component and open it in the local test harness.
+Once you are done implementing your custom control logic, get started with testing and debugging using `npm start` command. This will build your custom component and open it in the local test harness.
 
 > [!div class="mx-imgBorder"]
 > ![local-host](media/local-host.png "local host")
