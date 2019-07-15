@@ -223,7 +223,153 @@ GET [Organization URI]/api/data/v9.0/accounts?$select=name,numberofemployees&$fi
 ```  
   
 More information: [Compose a query with functions](use-web-api-functions.md#bkmk_composeQueryWithFunctions).  
+
+## Filter parent records based on values of child records
+
+The example given below shows how you can retrieve all the account records which have:
+
+- any of their linked opportunity records' budget greater than or equal to 500, and
+- the opportunity records' have no description, or
+- the opportunity records' description contains the term "*good*".
+
+**Request**
+
+```http
+GET [Organization URI]/api/data/v9.1/accounts?$select=name&$filter=not opportunity_customer_accounts/any(o:o/description eq null and o/budgetamount le 300 or contains(o/description, 'bad')) and opportunity_customer_accounts/any() and endswith(name,'{0}') HTTP/1.1
+Accept: application/json  
+OData-MaxVersion: 4.0  
+OData-Version: 4.0 
+```
+
+<a name="BKMK_FilterNavProperties"></a>
+
+## Filter records based on single-valued navigation property
+
+Navigation properties let you access data related to the current entity. *Single-valued* navigation properties correspond to Lookup attributes that support many-to-one relationships and allow setting a reference to another entity. More information: [Navigation properties](web-api-types-operations.md#bkmk_navprops)  
   
+You can filter your entity set records based on single-valued navigation property  values. For example, you can retrieve child accounts for the specified account. You can only use the primary attribute value of the entity referenced by the single-valued navigation property to filter records.  
+  
+For example:  
+  
+-   **Retrieve all the matching accounts for a specified Contact ID**  
+  
+**Request** 
+ 
+```http 
+GET [Organization URI]/api/data/v9.0/accounts?$select=name&$filter=primarycontactid/contactid%20eq%20a0dbf27c-8efb-e511-80d2-00155db07c77 HTTP/1.1  
+Accept: application/json  
+OData-MaxVersion: 4.0  
+OData-Version: 4.0  
+```  
+  
+**Response**  
+
+```http 
+HTTP/1.1 200 OK  
+Content-Type: application/json; odata.metadata=minimal  
+OData-Version: 4.0  
+  
+{  
+"@odata.context":"[Organization URI]/api/data/v9.0/$metadata#accounts(name)",
+"value":[  
+        {  
+            "@odata.etag":"W/\"513479\"",
+            "name":"Adventure Works (sample)",
+            "accountid":"3adbf27c-8efb-e511-80d2-00155db07c77"
+        },
+        {  
+            "@odata.etag":"W/\"514057\"",
+            "name":"Blue Yonder Airlines (sample)",
+            "accountid":"3edbf27c-8efb-e511-80d2-00155db07c77"
+        }
+    ]
+}  
+```  
+
+-   **Retrieve child accounts for the specified Account ID**  
+  
+**Request**  
+
+```http 
+GET [Organization URI]/api/data/v9.0/accounts?$select=name&$filter=parentaccountid/accountid%20eq%203adbf27c-8efb-e511-80d2-00155db07c77  
+Accept: application/json  
+OData-MaxVersion: 4.0  
+OData-Version: 4.0  
+```  
+  
+**Response**  
+
+```http 
+HTTP/1.1 200 OK  
+Content-Type: application/json; odata.metadata=minimal  
+OData-Version: 4.0  
+  
+{  
+"@odata.context":"[Organization URI]/api/data/v9.0/$metadata#accounts(name)",
+"value":[  
+        {  
+            "@odata.etag":"W/\"514058\"",
+            "name":"Sample Child Account 1",
+            "accountid":"915e89f5-29fc-e511-80d2-00155db07c77"
+        },
+        {  
+            "@odata.etag":"W/\"514061\"",
+            "name":"Sample Child Account 2",
+            "accountid":"03312500-2afc-e511-80d2-00155db07c77"
+        }
+    ]
+}   
+```
+
+## Filter results based on values of collection-valued navigation properties
+
+You cannot use OData `$filter` to limit the entity records returned using criteria applied to collection-valued navigation properties in a single operation.
+
+> [!NOTE]
+> It is possible to use `$filter` within `$expand` to filter results for related records in a Retrieve operation. You can use a semi-colon separated list of system query options enclosed in parentheses after the name of the collection-valued navigation property. The query options that are supported within `$expand` are `$select`, `$filter`, `$top` and `$orderby`. More information: [Options to apply to expanded entities](retrieve-entity-using-web-api.md#options-to-apply-to-expanded-entities).
+
+The two options for filtering results based on values of collection-valued navigation properties are:
+
+1. **Construct a query using FetchXML**
+
+Generally, using FetchXML should provide better performance because the filtering can be applied server-side in a single operation. The example shown below illustrates how to apply filter on values of collection properties for a link-entity.
+
+The below example retrieves the records of `systemuser` entity type that are linked with `team` and `teammembership` entity types, that means it retrieves `systemuser` records who are also administrators of a team.
+
+```xml
+<fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="true">
+  <entity name="systemuser">
+    <attribute name="fullname" />
+    <attribute name="businessunitid" />
+    <attribute name="title" />
+    <attribute name="address1_telephone1" />
+    <attribute name="positionid" />
+    <attribute name="systemuserid" />
+    <order attribute="fullname" descending="false" />
+    <link-entity name="teammembership" from="systemuserid" to="systemuserid" visible="false" intersect="true">
+      <link-entity name="team" from="teamid" to="teamid" alias="ab">
+        <filter type="and">
+          <condition attribute="administratorid" operator="eq-userid" />
+        </filter>
+      </link-entity>
+    </link-entity>
+  </entity>
+</fetch>
+```
+More information: [Build queries with FetchXML](/dynamics365/customer-engagement/developer/org-service/build-queries-fetchxml).
+
+2. **Iterate over results filtering individual entities based on values in the collection using multiple operations**
+
+To get the same results as the FetchXML example above, you can retrieve records of two entity types and then iteratively match the values in the collection of one entity to the value in the other entity, thereby filtering entities based on the values in the collection.
+
+Follow the steps in the below example to understand how we can filter results using the iteration method:
+
+1. Get a distinct list of <xref href="Microsoft.Dynamics.CRM.team" />._administratorid_value values.
+      - `GET [OrganizationURI]/api/data/v9.0/teams?$select=_administratorid_value&$filter=_administrator_value ne null`
+      - Then loop through the returned values to remove duplicates and get a distinct list. i.e. Create a new array, loop through the query results, for each check to see if they are already in the new array, if not, add them. This should give you a list of distinct `systemuserid` values
+      - The way you would do this in JavaScript vs C# would be different, but essentially you should be able to get the same results.
+2. Query <xref href="Microsoft.Dynamics.CRM.systemuser" /> using <xref href="Microsoft.Dynamics.CRM.ContainValues?text=ContainValues Query Function" /> to compare the `systemuserid` values with the list collected in Step 1.
+
 <a name="bkmk_order"></a>
  
 ## Order results
@@ -469,86 +615,6 @@ Preference-Applied: odata.include-annotations="*"
 } 
 ```  
   
-<a name="BKMK_FilterNavProperties"></a>
-
-## Filter records based on single-valued navigation property
-
-Navigation properties let you access data related to the current entity. *Single-valued* navigation properties correspond to Lookup attributes that support many-to-one relationships and allow setting a reference to another entity. More information: [Navigation properties](web-api-types-operations.md#bkmk_navprops)  
-  
-You can filter your entity set records based on single-valued navigation property  values. For example, you can retrieve child accounts for the specified account. You can only use the primary attribute value of the entity referenced by the single-valued navigation property to filter records.  
-  
-For example:  
-  
--   **Retrieve all the matching accounts for a specified Contact ID**  
-  
-**Request** 
- 
-```http 
-GET [Organization URI]/api/data/v9.0/accounts?$select=name&$filter=primarycontactid/contactid%20eq%20a0dbf27c-8efb-e511-80d2-00155db07c77 HTTP/1.1  
-Accept: application/json  
-OData-MaxVersion: 4.0  
-OData-Version: 4.0  
-```  
-  
-**Response**  
-
-```http 
-HTTP/1.1 200 OK  
-Content-Type: application/json; odata.metadata=minimal  
-OData-Version: 4.0  
-  
-{  
-"@odata.context":"[Organization URI]/api/data/v9.0/$metadata#accounts(name)",
-"value":[  
-        {  
-            "@odata.etag":"W/\"513479\"",
-            "name":"Adventure Works (sample)",
-            "accountid":"3adbf27c-8efb-e511-80d2-00155db07c77"
-        },
-        {  
-            "@odata.etag":"W/\"514057\"",
-            "name":"Blue Yonder Airlines (sample)",
-            "accountid":"3edbf27c-8efb-e511-80d2-00155db07c77"
-        }
-    ]
-}  
-```  
-
--   **Retrieve child accounts for the specified Account ID**  
-  
-**Request**  
-
-```http 
-GET [Organization URI]/api/data/v9.0/accounts?$select=name&$filter=parentaccountid/accountid%20eq%203adbf27c-8efb-e511-80d2-00155db07c77  
-Accept: application/json  
-OData-MaxVersion: 4.0  
-OData-Version: 4.0  
-```  
-  
-**Response**  
-
-```http 
-HTTP/1.1 200 OK  
-Content-Type: application/json; odata.metadata=minimal  
-OData-Version: 4.0  
-  
-{  
-"@odata.context":"[Organization URI]/api/data/v9.0/$metadata#accounts(name)",
-"value":[  
-        {  
-            "@odata.etag":"W/\"514058\"",
-            "name":"Sample Child Account 1",
-            "accountid":"915e89f5-29fc-e511-80d2-00155db07c77"
-        },
-        {  
-            "@odata.etag":"W/\"514061\"",
-            "name":"Sample Child Account 2",
-            "accountid":"03312500-2afc-e511-80d2-00155db07c77"
-        }
-    ]
-}   
-```  
-  
 <a name="bkmk_expandRelated"></a>
 
 ## Retrieve related entities by expanding navigation properties
@@ -700,73 +766,8 @@ OData-Version: 4.0
    ]
 }
   
-```
+```  
 
-## Filter results based on values of collection-valued navigation properties
-
-You cannot use OData `$filter` to limit the entity records returned using criteria applied to collection-valued navigation properties in a single operation.
-
-> [!NOTE]
-> It is possible to use `$filter` within `$expand` to filter results for related records in a Retrieve operation. You can use a semi-colon separated list of system query options enclosed in parentheses after the name of the collection-valued navigation property. The query options that are supported within `$expand` are `$select`, `$filter`, `$top` and `$orderby`. More information: [Options to apply to expanded entities](retrieve-entity-using-web-api.md#options-to-apply-to-expanded-entities).
-
-The two options for filtering results based on values of collection-valued navigation properties are:
-
-1. **Construct a query using FetchXML**
-
-Generally, using FetchXML should provide better performance because the filtering can be applied server-side in a single operation. The example shown below illustrates how to apply filter on values of collection properties for a link-entity.
-
-The below example retrieves the records of `systemuser` entity type that are linked with `team` and `teammembership` entity types, that means it retrieves `systemuser` records who are also administrators of a team.
-
-```xml
-<fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="true">
-  <entity name="systemuser">
-    <attribute name="fullname" />
-    <attribute name="businessunitid" />
-    <attribute name="title" />
-    <attribute name="address1_telephone1" />
-    <attribute name="positionid" />
-    <attribute name="systemuserid" />
-    <order attribute="fullname" descending="false" />
-    <link-entity name="teammembership" from="systemuserid" to="systemuserid" visible="false" intersect="true">
-      <link-entity name="team" from="teamid" to="teamid" alias="ab">
-        <filter type="and">
-          <condition attribute="administratorid" operator="eq-userid" />
-        </filter>
-      </link-entity>
-    </link-entity>
-  </entity>
-</fetch>
-```
-More information: [Build queries with FetchXML](/dynamics365/customer-engagement/developer/org-service/build-queries-fetchxml).
-
-2. **Iterate over results filtering individual entities based on values in the collection using multiple operations**
-
-To get the same results as the FetchXML example above, you can retrieve records of two entity types and then iteratively match the values in the collection of one entity to the value in the other entity, thereby filtering entities based on the values in the collection.
-
-Follow the steps in the below example to understand how we can filter results using the iteration method:
-
-1. Get a distinct list of <xref href="Microsoft.Dynamics.CRM.team" />._administratorid_value values.
-      - `GET [OrganizationURI]/api/data/v9.0/teams?$select=_administratorid_value&$filter=_administrator_value ne null`
-      - Then loop through the returned values to remove duplicates and get a distinct list. i.e. Create a new array, loop through the query results, for each check to see if they are already in the new array, if not, add them. This should give you a list of distinct `systemuserid` values
-      - The way you would do this in JavaScript vs C# would be different, but essentially you should be able to get the same results.
-2. Query <xref href="Microsoft.Dynamics.CRM.systemuser" /> using <xref href="Microsoft.Dynamics.CRM.ContainValues?text=ContainValues Query Function" /> to compare the `systemuserid` values with the list collected in Step 1.  
-
-## Filter parent records based on values of child records
-
-The example given below shows how you can retrieve all the account records which have:
-
-- any of their linked opportunity records' budget greater than or equal to 500, and
-- the opportunity records' have no description, or
-- the opportunity records' description contains the term "*good*".
-
-**Request**
-
-```http
-GET [Organization URI]/api/data/v9.1/accounts?$select=name&$filter=not opportunity_customer_accounts/any(o:o/description eq null and o/budgetamount le 300 or contains(o/description, 'bad')) and opportunity_customer_accounts/any() and endswith(name,'{0}') HTTP/1.1
-Accept: application/json  
-OData-MaxVersion: 4.0  
-OData-Version: 4.0 
-```
 <a name="bkmk_LambdaOperators"></a>
 
 ## Use Lambda operators
