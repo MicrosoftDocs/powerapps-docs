@@ -262,11 +262,11 @@ Follow the steps below to create and import a [solution](https://docs.microsoft.
 2. Create a new solution project in the **LinearComponent** folder using the command 
  
     ```CLI
-     pac solution init --publisherName developer --customizationPrefix dev 
+     pac solution init --publisher-name developer --publisher-prefix dev 
     ```
 
    > [!NOTE]
-   > The [publisherName](https://docs.microsoft.com/powerapps/developer/common-data-service/reference/entities/publisher) and [cutomizationPrefix](https://docs.microsoft.com/powerapps/maker/common-data-service/change-solution-publisher-prefix) values must be unique to your environment.
+   > The [publisher-name](https://docs.microsoft.com/powerapps/developer/common-data-service/reference/entities/publisher) and [publisher-prefix](https://docs.microsoft.com/powerapps/maker/common-data-service/change-solution-publisher-prefix) values must be unique to your environment.
  
 3. Once the new solution project is created, you need to refer to the location where the created component is located. You can add the reference by using the command
 

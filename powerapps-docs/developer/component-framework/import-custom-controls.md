@@ -16,10 +16,10 @@ This topic demonstrates how to import custom controls into Common Data Service. 
 
 Follow the steps below to create and import a solution file:
 
-1. Create a new solution project in the directory of your choice by using the command `pac solution init --publisherName <enter your publisher name> --customizationPrefix <enter your publisher name>` after `cd <your new folder>`.
+1. Create a new solution project in the directory of your choice by using the command `pac solution init --publisher-name <enter your publisher name> --publisher-prefix <enter your publisher name>` after `cd <your new folder>`.
 
    > [!NOTE]
-   > The `publisherName` and `cutomizationPrefix` values must be unique to your environment.
+   > The `publisher-name` and `publisher-prefix` values must be unique to your environment.
  
 2. Once the new solution project is created, you need to refer to the location where the created control is located. You can add the reference by using the command
 `pac solution add-reference --path <path of your PowerApps component framework project on disk>`
