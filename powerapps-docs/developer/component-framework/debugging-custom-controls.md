@@ -17,7 +17,7 @@ Once you are done implementing your custom control logic, get started with testi
 
 As show in the image above, the browser window will open with 4 sections. Your control will be rendered in the left pane while the right pane consists of **Context Inputs**, **Data Inputs** and **Outputs** sections
 
-  - **Context Inputs** section provides you a way to specify the form factor and test your custom component with each one (web, tablet, phone). This is especially helpful when you custom component is dependent on a particular form factor capability. In the coming releases you will also have the ability to specify the height and width.
+  - **Context Inputs** section provides you a way to specify the form factor and test your custom component with each one (web, tablet, phone). This is especially helpful when the custom component is dependent on a particular form factor capability. In the coming releases you will also have the ability to specify the height and width.
   - **Data Inputs** section is an interactive UI that displays all properties and their types/type-groups defined in the manifest.xml. It allows you to key in mock data for each property. 
   - **Outputs** section renders the output whenever a control's `getOutputs` method gets called.  
  
