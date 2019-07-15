@@ -562,7 +562,6 @@ Preference-Applied: odata.include-annotations="OData.Community.Display.V1.Format
       }
    ]
 }
-   
 ```  
 
 <a name="bkmk_retrieverelatedentities"></a>

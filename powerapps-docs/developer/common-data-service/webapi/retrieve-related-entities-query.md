@@ -414,6 +414,9 @@ OData-Version: 4.0
 }
   
 ```
+## Filter collection values based on data in related entities
+
+The Web API allows you to use two lambda operators, which are `any` and `all` to evaluate a Boolean expression on a collection. More information: [Use Lambda operators](query-data-web-api.md#bkmk_LambdaOperators).
 
 ## See also
 
