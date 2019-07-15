@@ -14,7 +14,7 @@ ms.reviewer:
 
 # Create a Dynamics 365 for Customer Engagement portal
 
-If you select an environment that contains Dynamics 365 for Customer Engagement apps, you can create the portals mentioned at [Portal templates](portal-templates.md).
+If you select an environment that contains Dynamics 365 for Customer Engagement apps, you can create the portals mentioned in [Portal templates](portal-templates.md).
 
 1.	Sign in to [PowerApps](http://web.powerapps.com).
 
