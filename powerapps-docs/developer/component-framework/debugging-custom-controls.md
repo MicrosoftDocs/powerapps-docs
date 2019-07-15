@@ -16,16 +16,31 @@ Once you are done implementing your custom control logic, run the following comm
 > [!div class="mx-imgBorder"]
 > ![local-host](media/local-host.png "local host")
 
-As show in the image above, the browse window will open with 3 sections. Your control will be rendered in the left pane while the right pane consists of **Context Inputs**, **Inputs** and **Outputs** sections
+As show in the image above, the browser window will open with 4 sections. Your control will be rendered in the left pane while the right pane consists of **Context Inputs**, **Data Inputs** and **Outputs** sections
 
-  - **Context Inputs** section provides you a way to specify the form factor and test your custom component with each one (web, tablet, phone). In the coming sprints your will also be able to specify the manual height and width in order to similuate resizing of the form factor. 
-  - **Inputs** section is an interactive UI that displays all properties and their types/type-groups defined in the manifest.xml. It allows you to key in mock data for each property. 
+  - **Context Inputs** section provides you a way to specify the form factor and test your custom component with each one (web, tablet, phone). This is especially helpful when you custom component is dependent on a particular form factor capability. In the coming releases you will also have the ability to specify the height and width.
+  - **Data Inputs** section is an interactive UI that displays all properties and their types/type-groups defined in the manifest.xml. It allows you to key in mock data for each property. 
   - **Outputs** section renders the output whenever a control's `getOutputs` method gets called.  
  
 > [!NOTE]
 > If you want to modify the `manifest.xml` or create additional properties, you will need to restart the debug process before they appear in the inputs section.
 
-As you are inputting mock data, you can use the browser’s debugging capabilities to observe the control behavior. Each browser provides you with a debugging tool to help you debug your code natively in the browser. Typically, you can activate debugging in your browser by pressing the **F12** key to display the native developer tool used for debugging.
+# Test custom components with Mock data
+- For field controls you can input a value and a type for every property defined in your ControlManifest.Input.xml. 
+- For datasets you can load a CSV file with test data. It can be manually created or exported in csv format directly from your environment. Once a valid csv file is available, it can be loaded it as shown below:
+
+
+<image goes here>
+
+- After loading  a csv file, please bind each property defined in your ControlManifest.Input.xml to a column in the csv. This is done by picking the column for each property as shown below:
+
+<image goes here>
+
+- If you dont have any properties defined in your ControlManifest.Input.xml then all columns will automatically be loaded into the harness.
+
+
+# Debug custom components
+You can use the browser’s debugging capabilities to observe the control behavior. Each browser provides you with a debugging tool to help you debug your code natively in the browser. Typically, you can activate debugging in your browser by pressing the **F12** key to display the native developer tool used for debugging.
 
 For example, on **Microsoft Edge**,
 
