@@ -122,6 +122,7 @@ You must renew the key every two years to ensure that your portal can connect to
 ### Troubleshooting
 
 If the key update fails, an error message is displayed along with the following action:
+
 - **Retry Authentication Key Update**. This action allows you to restart the portal authentication key update process. If the update fails multiple times, contact Microsoft support.
 
-![Retry portal authentication key update](../media/retry-auth-key-update.png "Retry portal authentication key update")
+    ![Retry portal authentication key update](../media/retry-auth-key-update.png "Retry portal authentication key update")
