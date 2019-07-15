@@ -113,7 +113,7 @@ Section allows you to define a structure for your page and arrange portal compon
 
 6.  In the properties pane on the right side of the screen, enter the following information:
 
-    - **Image**: Select this option if you would like to select an existing image or upload a new one. If you want to select a previously uploaded image, choose an image from the **Select image** list. To upload a new image, select **Upload image**. All the uploaded images are included in the image library, which can be selected again through the **Image** list.
+    - **Image**: Select this option if you would like to select an existing image or upload a new one. If you want to select a previously uploaded image, choose an image from the **Select image** list. To upload a new image, select **Upload image**. All the uploaded images are included in the image library, which can be selected again through the **Select image** list.
 
     > [!NOTE]
     > - You can upload only the images of type png, svg, jpg, and jpeg with the maximum size of 5 MB.
