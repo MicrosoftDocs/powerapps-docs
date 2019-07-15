@@ -37,7 +37,7 @@ ISV Studio supports applications built on the Common Data Service that are publi
 
 The applications currently available on the Common Data Service includes PowerApps as well as Dynamics 365 for Sales, Marketing, Service, and Talent.
 
-As an end user installs an application from AppSource, a consent dialog will be displayed requesting the user to acknowledge that contact, usage, and transactional information may be shared with the application provider. This information is used by the provider to supports billing and other transactional activities and to enable telemetry in ISV Studio for the ISV to learn from and act on.
+As an end user installs an application from AppSource, a consent dialog will be displayed requesting the user to acknowledge that contact, usage, and transactional information may be shared with the application provider. This information is used by the provider to support billing and other transactional activities and to enable telemetry in ISV Studio for the ISV to learn from and act on.
 
 A customer can request that data not be shared with the provider, in which case Microsoft will remove all data from that particular tenant within ISV Studio.
 
