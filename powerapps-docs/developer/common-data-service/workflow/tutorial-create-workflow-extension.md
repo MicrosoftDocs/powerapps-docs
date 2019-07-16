@@ -102,13 +102,13 @@ This project will create a simple workflow assembly that will increment an decim
     > [!NOTE]
     > Make sure that the package you are installing is owned by [crmsdk](https://www.nuget.org/profiles/crmsdk). This package will include the `Microsoft.Xrm.Workflow.dll` include a dependency on the [Microsoft.CrmSdk.CoreAssemblies](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreAssemblies/) package so that the required `Microsoft.Xrm.Sdk.dll` assembly is included as well. 
 
-1. You must click **I Accept** in the License Acceptance dialog.
+1. You must click **I Accept** in the **License Acceptance** dialog.
 
     ![Accept license agreement](media/tutorial-create-workflow-activity-license-acceptance.png)
 
 ## Rename the class file
 
-1. In **Solution Explorer**, right-click the Class1.cs file and and select Rename.
+1. In **Solution Explorer**, right-click the default Class1.cs file and and select **Rename**.
 
     ![Rename Class1.cs file](media/rename-class1-file.png)
 
