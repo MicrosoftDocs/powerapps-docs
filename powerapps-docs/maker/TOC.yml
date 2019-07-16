@@ -1059,6 +1059,8 @@
           href: ./portals/admin/update-portal-domain.md
     - name: Known issues
       href: ./portals/known-issues.md
+    - name: PowerApps Portals FAQ
+      href: ./portals/faq.md
 - name: Common Data Service
   href: ./common-data-service/data-platform-intro.md
   items:
