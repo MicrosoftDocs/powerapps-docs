@@ -34,7 +34,7 @@ If you want to retrieve data for an entity set, use a `GET` request. When retrie
  **Request**
 
 ```http 
-GET [Organization URI]/api/data/v9.0/accounts?$select=name&$top=3 HTTP/1.1  
+GET [Organization URI]/api/data/v9.1/accounts?$select=name&$top=3 HTTP/1.1  
 Accept: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
@@ -49,7 +49,7 @@ Content-Type: application/json; odata.metadata=minimal
 OData-Version: 4.0  
   
 {  
-   "@odata.context":"[Organization URI]/api/data/v9.0/$metadata#accounts(name)",
+   "@odata.context":"[Organization URI]/api/data/v9.1/$metadata#accounts(name)",
    "value":[  
       {  
          "@odata.etag":"W/\"501097\"",
@@ -94,7 +94,7 @@ Use the `odata.maxpagesize` preference value to request the number of entities r
  **Request**
 
 ```http 
-GET [Organization URI]/api/data/v9.0/accounts?$select=name HTTP/1.1  
+GET [Organization URI]/api/data/v9.1/accounts?$select=name HTTP/1.1  
 Accept: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
@@ -111,7 +111,7 @@ Content-Length: 402
 Preference-Applied: odata.maxpagesize=3  
   
 {  
-   "@odata.context":"[Organization URI]/api/data/v9.0/$metadata#accounts(name)",
+   "@odata.context":"[Organization URI]/api/data/v9.1/$metadata#accounts(name)",
    "value":[  
       {  
          "@odata.etag":"W/\"437194\"",
@@ -129,7 +129,7 @@ Preference-Applied: odata.maxpagesize=3
          "accountid":"8151925c-cde2-e411-80db-00155d2a68cb"
       }
    ],
-   "@odata.nextLink":"[Organization URI]/api/data/v9.0/accounts?$select=name&$skiptoken=%3Ccookie%20pagenumber=%222%22%20pagingcookie=%22%253ccookie%2520page%253d%25221%2522%253e%253caccountid%2520last%253d%2522%257b8151925C-CDE2-E411-80DB-00155D2A68CB%257d%2522%2520first%253d%2522%257b7D51925C-CDE2-E411-80DB-00155D2A68CB%257d%2522%2520%252f%253e%253c%252fcookie%253e%22%20/%3E"
+   "@odata.nextLink":"[Organization URI]/api/data/v9.1/accounts?$select=name&$skiptoken=%3Ccookie%20pagenumber=%222%22%20pagingcookie=%22%253ccookie%2520page%253d%25221%2522%253e%253caccountid%2520last%253d%2522%257b8151925C-CDE2-E411-80DB-00155D2A68CB%257d%2522%2520first%253d%2522%257b7D51925C-CDE2-E411-80DB-00155D2A68CB%257d%2522%2520%252f%253e%253c%252fcookie%253e%22%20/%3E"
 }
   
 ```  
@@ -146,7 +146,7 @@ Preference-Applied: odata.maxpagesize=3
  Each of the system query options you append to the URL for the entity set is added using the syntax for query strings. The first is appended after [?] and subsequent query options are separated using [&]. All query options are case-sensitive as shown in the following example.  
   
 ```http 
-GET [Organization URI]/api/data/v9.0/accounts?$select=name,revenue&$top=3&$filter=revenue gt 100000  
+GET [Organization URI]/api/data/v9.1/accounts?$select=name,revenue&$top=3&$filter=revenue gt 100000  
 ```  
   
 <a name="bkmk_requestProperties"></a>
@@ -156,7 +156,7 @@ GET [Organization URI]/api/data/v9.0/accounts?$select=name,revenue&$top=3&$filte
  Use the `$select` system query option to limit the properties returned as shown in the following example.  
   
 ```http 
-GET [Organization URI]/api/data/v9.0/accounts?$select=name,revenue  
+GET [Organization URI]/api/data/v9.1/accounts?$select=name,revenue  
 ```  
   
 > [!IMPORTANT]
@@ -219,7 +219,7 @@ The Web API supports these standard OData string query functions:
 Common Data Service provides a number of special functions that accept parameters, return Boolean values, and can be used as filter criteria in a query. See <xref:Microsoft.Dynamics.CRM.QueryFunctionIndex> for a list of these functions. The following is an example of the <xref href="Microsoft.Dynamics.CRM.Between?text=Between Function" /> searching for accounts with a number of employees between 5 and 2000.  
   
 ```http 
-GET [Organization URI]/api/data/v9.0/accounts?$select=name,numberofemployees&$filter=Microsoft.Dynamics.CRM.Between(PropertyName='numberofemployees',PropertyValues=["5","2000"])  
+GET [Organization URI]/api/data/v9.1/accounts?$select=name,numberofemployees&$filter=Microsoft.Dynamics.CRM.Between(PropertyName='numberofemployees',PropertyValues=["5","2000"])  
 ```  
   
 More information: [Compose a query with functions](use-web-api-functions.md#bkmk_composeQueryWithFunctions).  
@@ -247,7 +247,7 @@ OData-Version: 4.0
 
 Navigation properties let you access data related to the current entity. *Single-valued* navigation properties correspond to Lookup attributes that support many-to-one relationships and allow setting a reference to another entity. More information: [Navigation properties](web-api-types-operations.md#bkmk_navprops)  
   
-You can filter your entity set records based on single-valued navigation property  values. For example, you can retrieve child accounts for the specified account. You can only use the primary attribute value of the entity referenced by the single-valued navigation property to filter records.  
+You can filter your entity set records based on single-valued navigation property  values. For example, you can retrieve child accounts for the specified account.  
   
 For example:  
   
@@ -256,7 +256,7 @@ For example:
 **Request** 
  
 ```http 
-GET [Organization URI]/api/data/v9.0/accounts?$select=name&$filter=primarycontactid/contactid%20eq%20a0dbf27c-8efb-e511-80d2-00155db07c77 HTTP/1.1  
+GET [Organization URI]/api/data/v9.1/accounts?$select=name&$filter=primarycontactid/contactid%20eq%20a0dbf27c-8efb-e511-80d2-00155db07c77 HTTP/1.1  
 Accept: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
@@ -270,7 +270,7 @@ Content-Type: application/json; odata.metadata=minimal
 OData-Version: 4.0  
   
 {  
-"@odata.context":"[Organization URI]/api/data/v9.0/$metadata#accounts(name)",
+"@odata.context":"[Organization URI]/api/data/v9.1/$metadata#accounts(name)",
 "value":[  
         {  
             "@odata.etag":"W/\"513479\"",
@@ -291,7 +291,7 @@ OData-Version: 4.0
 **Request**  
 
 ```http 
-GET [Organization URI]/api/data/v9.0/accounts?$select=name&$filter=parentaccountid/accountid%20eq%203adbf27c-8efb-e511-80d2-00155db07c77  
+GET [Organization URI]/api/data/v9.1/accounts?$select=name&$filter=parentaccountid/accountid%20eq%203adbf27c-8efb-e511-80d2-00155db07c77  
 Accept: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
@@ -305,7 +305,7 @@ Content-Type: application/json; odata.metadata=minimal
 OData-Version: 4.0  
   
 {  
-"@odata.context":"[Organization URI]/api/data/v9.0/$metadata#accounts(name)",
+"@odata.context":"[Organization URI]/api/data/v9.1/$metadata#accounts(name)",
 "value":[  
         {  
             "@odata.etag":"W/\"514058\"",
@@ -365,7 +365,7 @@ To get the same results as the FetchXML example above, you can retrieve records 
 Follow the steps in the below example to understand how we can filter results using the iteration method:
 
 1. Get a distinct list of <xref href="Microsoft.Dynamics.CRM.team" />._administratorid_value values.
-      - `GET [OrganizationURI]/api/data/v9.0/teams?$select=_administratorid_value&$filter=_administrator_value ne null`
+      - `GET [OrganizationURI]/api/data/v9.1/teams?$select=_administratorid_value&$filter=_administrator_value ne null`
       - Then loop through the returned values to remove duplicates and get a distinct list. i.e. Create a new array, loop through the query results, for each check to see if they are already in the new array, if not, add them. This should give you a list of distinct `systemuserid` values
       - The way you would do this in JavaScript vs C# would be different, but essentially you should be able to get the same results.
 2. Query <xref href="Microsoft.Dynamics.CRM.systemuser" /> using <xref href="Microsoft.Dynamics.CRM.ContainValues?text=ContainValues Query Function" /> to compare the `systemuserid` values with the list collected in Step 1.
@@ -377,7 +377,7 @@ Follow the steps in the below example to understand how we can filter results us
  Specify the order in which items are returned using the `$orderby` system query option. Use the `asc` or `desc` suffix to specify ascending or descending order respectively. The default is ascending if the suffix isn’t applied. The following example shows retrieving the name and revenue properties of accounts ordered by ascending revenue and by descending name.  
   
 ```http 
-GET [Organization URI]/api/data/v9.0/accounts?$select=name,revenue,&$orderby=revenue asc,name desc&$filter=revenue ne null  
+GET [Organization URI]/api/data/v9.1/accounts?$select=name,revenue,&$orderby=revenue asc,name desc&$filter=revenue ne null  
 ```  
 <a name="bkmk_AggregateGroup"></a>
 
@@ -409,13 +409,13 @@ Additional details on OData data aggregation can be found here: [OData Extension
  Without parameter aliases:
 
 ```http  
-GET [Organization URI]/api/data/v9.0/accounts?$select=name,revenue,&$orderby=revenue asc,name desc&$filter=revenue ne null  
+GET [Organization URI]/api/data/v9.1/accounts?$select=name,revenue,&$orderby=revenue asc,name desc&$filter=revenue ne null  
 ```  
   
  With parameter aliases:
 
 ```http  
-GET [Organization URI]/api/data/v9.0/accounts?$select=name,revenue,&$orderby=@p1 asc,@p2 desc&$filter=@p1 ne @p3&@p1=revenue&@p2=name  
+GET [Organization URI]/api/data/v9.1/accounts?$select=name,revenue,&$orderby=@p1 asc,@p2 desc&$filter=@p1 ne @p3&@p1=revenue&@p2=name  
 ```  
   
  You can also use parameter aliases when using functions. More information: [Use Web API functions](use-web-api-functions.md)  
@@ -427,7 +427,7 @@ GET [Organization URI]/api/data/v9.0/accounts?$select=name,revenue,&$orderby=@p1
  You can limit the number of results returned by using the `$top` system query option. The following example will return just the first three account entities.  
   
 ```http 
-GET [Organization URI]/api/data/v9.0/accounts?$select=name,revenue&$top=3  
+GET [Organization URI]/api/data/v9.1/accounts?$select=name,revenue&$top=3  
 ```  
   
 > [!NOTE]
@@ -454,7 +454,7 @@ GET [Organization URI]/api/data/v9.0/accounts?$select=name,revenue&$top=3
  **Request**
 
 ```http 
-GET [Organization URI]/api/data/v9.0/accounts?$select=name&$filter=contains(name,'sample')&$count=true HTTP/1.1  
+GET [Organization URI]/api/data/v9.1/accounts?$select=name&$filter=contains(name,'sample')&$count=true HTTP/1.1  
 Accept: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
@@ -470,7 +470,7 @@ OData-Version: 4.0
 Preference-Applied: odata.maxpagesize=3  
   
 {  
-   "@odata.context":"[Organization URI]/api/data/v9.0/$metadata#accounts(name)",
+   "@odata.context":"[Organization URI]/api/data/v9.1/$metadata#accounts(name)",
    "@odata.count":10,
    "value":[  
       {  
@@ -489,7 +489,7 @@ Preference-Applied: odata.maxpagesize=3
          "accountid":"695eaf89-f083-e511-80d3-00155d2a68d3"
       }
    ],
-   "@odata.nextLink":"[Organization URI]/api/data/v9.0/accounts?$select=name&$filter=contains(name,'sample')&$skiptoken=%3Ccookie%20pagenumber=%222%22%20pagingcookie=%22%253ccookie%2520page%253d%25221%2522%253e%253caccountid%2520last%253d%2522%257b695EAF89-F083-E511-80D3-00155D2A68D3%257d%2522%2520first%253d%2522%257b655EAF89-F083-E511-80D3-00155D2A68D3%257d%2522%2520%252f%253e%253c%252fcookie%253e%22%20istracking=%22False%22%20/%3E"
+   "@odata.nextLink":"[Organization URI]/api/data/v9.1/accounts?$select=name&$filter=contains(name,'sample')&$skiptoken=%3Ccookie%20pagenumber=%222%22%20pagingcookie=%22%253ccookie%2520page%253d%25221%2522%253e%253caccountid%2520last%253d%2522%257b695EAF89-F083-E511-80D3-00155D2A68D3%257d%2522%2520first%253d%2522%257b655EAF89-F083-E511-80D3-00155D2A68D3%257d%2522%2520%252f%253e%253c%252fcookie%253e%22%20istracking=%22False%22%20/%3E"
 }
 
   
@@ -500,7 +500,7 @@ Preference-Applied: odata.maxpagesize=3
  **Request**  
 
 ```http 
-GET [Organization URI]/api/data/v9.0/accounts/$count HTTP/1.1  
+GET [Organization URI]/api/data/v9.1/accounts/$count HTTP/1.1  
 Accept: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
@@ -529,7 +529,7 @@ OData-Version: 4.0
  **Request**
 
 ```http 
-GET [Organization URI]/api/data/v9.0/accounts?$select=name,donotpostalmail,accountratingcode,numberofemployees,revenue&$top=1 HTTP/1.1  
+GET [Organization URI]/api/data/v9.1/accounts?$select=name,donotpostalmail,accountratingcode,numberofemployees,revenue&$top=1 HTTP/1.1  
 Accept: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
@@ -544,7 +544,7 @@ OData-Version: 4.0
 Preference-Applied: odata.include-annotations="OData.Community.Display.V1.FormattedValue"  
   
 {  
-   "@odata.context":"[Organization URI]/api/data/v9.0/$metadata#accounts(name,donotpostalmail,accountratingcode,numberofemployees,revenue)",
+   "@odata.context":"[Organization URI]/api/data/v9.1/$metadata#accounts(name,donotpostalmail,accountratingcode,numberofemployees,revenue)",
    "value":[  
       {  
          "@odata.etag":"W/\"502170\"",
@@ -588,7 +588,7 @@ Use the `$expand` system query option in the navigation properties to control wh
  **Request**  
 
 ```http 
-GET [Organization URI]/api/data/v9.0/incidents(39dd0b31-ed8b-e511-80d2-00155d2a68d4)?$select=title,_customerid_value&$expand=customerid_contact($select=fullname) HTTP/1.1  
+GET [Organization URI]/api/data/v9.1/incidents(39dd0b31-ed8b-e511-80d2-00155d2a68d4)?$select=title,_customerid_value&$expand=customerid_contact($select=fullname) HTTP/1.1  
 Accept: application/json  
 Content-Type: application/json; charset=utf-8  
 OData-MaxVersion: 4.0  
@@ -605,7 +605,7 @@ OData-Version: 4.0
 Preference-Applied: odata.include-annotations="*"  
   
 {  
-    "@odata.context":"[Organization URI]/api/data/v9.0/$metadata#incidents(title,_customerid_value,customerid_contact(fullname))/$entity",
+    "@odata.context":"[Organization URI]/api/data/v9.1/$metadata#incidents(title,_customerid_value,customerid_contact(fullname))/$entity",
     "@odata.etag":"W/\"504696\"",
     "_customerid_value@Microsoft.Dynamics.CRM.associatednavigationproperty":"customerid_contact",
     "_customerid_value@Microsoft.Dynamics.CRM.lookuplogicalname":"contact",
@@ -636,7 +636,7 @@ The following example retrieves the tasks assigned to the top 5 account records.
 **Request**
 
 ```http 
-GET [Organization URI]/api/data/v9.0/accounts?$top=5&$select=name&$expand=Account_Tasks($select%20=%20subject,%20scheduledstart) HTTP/1.1  
+GET [Organization URI]/api/data/v9.1/accounts?$top=5&$select=name&$expand=Account_Tasks($select%20=%20subject,%20scheduledstart) HTTP/1.1  
 Accept: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
@@ -650,7 +650,7 @@ Content-Type: application/json; odata.metadata=minimal
 OData-Version: 4.0  
   
 {  
-   "@odata.context":"[Organization URI]/api/data/v9.0/$metadata#accounts(name,Account_Tasks,Account_Tasks(subject,scheduledstart))",
+   "@odata.context":"[Organization URI]/api/data/v9.1/$metadata#accounts(name,Account_Tasks,Account_Tasks(subject,scheduledstart))",
    "value":[  
       {  
          "@odata.etag":"W/\"513475\"",
@@ -659,7 +659,7 @@ OData-Version: 4.0
          "Account_Tasks":[  
 
          ],
-         "Account_Tasks@odata.nextLink":"[Organization URI]/api/data/v9.0/accounts(36dbf27c-8efb-e511-80d2-00155db07c77)/Account_Tasks?$select%20=%20subject,%20scheduledstart"
+         "Account_Tasks@odata.nextLink":"[Organization URI]/api/data/v9.1/accounts(36dbf27c-8efb-e511-80d2-00155db07c77)/Account_Tasks?$select%20=%20subject,%20scheduledstart"
       },
       {  
          "@odata.etag":"W/\"513477\"",
@@ -668,7 +668,7 @@ OData-Version: 4.0
          "Account_Tasks":[  
 
          ],
-         "Account_Tasks@odata.nextLink":"[Organization URI]/api/data/v9.0/accounts(38dbf27c-8efb-e511-80d2-00155db07c77)/Account_Tasks?$select%20=%20subject,%20scheduledstart"
+         "Account_Tasks@odata.nextLink":"[Organization URI]/api/data/v9.1/accounts(38dbf27c-8efb-e511-80d2-00155db07c77)/Account_Tasks?$select%20=%20subject,%20scheduledstart"
       },
       {  
          "@odata.etag":"W/\"514074\"",
@@ -677,7 +677,7 @@ OData-Version: 4.0
          "Account_Tasks":[  
 
          ],
-         "Account_Tasks@odata.nextLink":"[Organization URI]/api/data/v9.0/accounts(3adbf27c-8efb-e511-80d2-00155db07c77)/Account_Tasks?$select%20=%20subject,%20scheduledstart"
+         "Account_Tasks@odata.nextLink":"[Organization URI]/api/data/v9.1/accounts(3adbf27c-8efb-e511-80d2-00155db07c77)/Account_Tasks?$select%20=%20subject,%20scheduledstart"
       },
       {  
          "@odata.etag":"W/\"513481\"",
@@ -686,7 +686,7 @@ OData-Version: 4.0
          "Account_Tasks":[  
 
          ],
-         "Account_Tasks@odata.nextLink":"[Organization URI]/api/data/v9.0/accounts(3cdbf27c-8efb-e511-80d2-00155db07c77)/Account_Tasks?$select%20=%20subject,%20scheduledstart"
+         "Account_Tasks@odata.nextLink":"[Organization URI]/api/data/v9.1/accounts(3cdbf27c-8efb-e511-80d2-00155db07c77)/Account_Tasks?$select%20=%20subject,%20scheduledstart"
       },
       {  
          "@odata.etag":"W/\"514057\"",
@@ -695,7 +695,7 @@ OData-Version: 4.0
          "Account_Tasks":[  
 
          ],
-         "Account_Tasks@odata.nextLink":"[Organization URI]/api/data/v9.0/accounts(3edbf27c-8efb-e511-80d2-00155db07c77)/Account_Tasks?$select%20=%20subject,%20scheduledstart"
+         "Account_Tasks@odata.nextLink":"[Organization URI]/api/data/v9.1/accounts(3edbf27c-8efb-e511-80d2-00155db07c77)/Account_Tasks?$select%20=%20subject,%20scheduledstart"
           }
        ]
     }
@@ -713,7 +713,7 @@ In this example, we are retrieving the contact and tasks assigned to the top 3 a
 **Request**
 
 ```http 
-GET [Organization URI]/api/data/v9.0/accounts?$top=3&$select=name&$expand=primarycontactid($select=contactid,fullname),Account_Tasks($select=subject,scheduledstart)  HTTP/1.1  
+GET [Organization URI]/api/data/v9.1/accounts?$top=3&$select=name&$expand=primarycontactid($select=contactid,fullname),Account_Tasks($select=subject,scheduledstart)  HTTP/1.1  
 Accept: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
@@ -727,7 +727,7 @@ Content-Type: application/json; odata.metadata=minimal
 OData-Version: 4.0  
   
 {  
-   "@odata.context":"[Organization URI]/api/data/v9.0/$metadata#accounts(name,primarycontactid,Account_Tasks,primarycontactid(contactid,fullname),Account_Tasks(subject,scheduledstart))",
+   "@odata.context":"[Organization URI]/api/data/v9.1/$metadata#accounts(name,primarycontactid,Account_Tasks,primarycontactid(contactid,fullname),Account_Tasks(subject,scheduledstart))",
    "value":[  
       {  
          "@odata.etag":"W/\"550614\"",
@@ -740,7 +740,7 @@ OData-Version: 4.0
          "Account_Tasks":[  
 
          ],
-         "Account_Tasks@odata.nextLink":"[Organization URI]/api/data/v9.0/accounts(5b9648c3-68f7-e511-80d3-00155db53318)/Account_Tasks?$select=subject,scheduledstart"
+         "Account_Tasks@odata.nextLink":"[Organization URI]/api/data/v9.1/accounts(5b9648c3-68f7-e511-80d3-00155db53318)/Account_Tasks?$select=subject,scheduledstart"
       },
       {  
          "@odata.etag":"W/\"550615\"",
@@ -753,7 +753,7 @@ OData-Version: 4.0
          "Account_Tasks":[  
 
          ],
-         "Account_Tasks@odata.nextLink":"[Organization URI]/api/data/v9.0/accounts(5d9648c3-68f7-e511-80d3-00155db53318)/Account_Tasks?$select=subject,scheduledstart"
+         "Account_Tasks@odata.nextLink":"[Organization URI]/api/data/v9.1/accounts(5d9648c3-68f7-e511-80d3-00155db53318)/Account_Tasks?$select=subject,scheduledstart"
       },
       {  
          "@odata.etag":"W/\"550616\"",
@@ -766,7 +766,7 @@ OData-Version: 4.0
          "Account_Tasks":[  
 
          ],
-         "Account_Tasks@odata.nextLink":"[Organization URI]/api/data/v9.0/accounts(5f9648c3-68f7-e511-80d3-00155db53318)/Account_Tasks?$select=subject,scheduledstart"
+         "Account_Tasks@odata.nextLink":"[Organization URI]/api/data/v9.1/accounts(5f9648c3-68f7-e511-80d3-00155db53318)/Account_Tasks?$select=subject,scheduledstart"
       }
    ]
 }
