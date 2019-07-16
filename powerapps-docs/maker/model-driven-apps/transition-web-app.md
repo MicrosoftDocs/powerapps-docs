@@ -68,12 +68,12 @@ If you use the Dynamics 365 for Field Service or Dynamics 365 for Project Servic
 2. Copy your production environment that has the Dynamics 365 for Field Service or Dynamics 365 for Project Service Automation apps into the new sandbox environment. To do this, on the Power Platform admin center open your production environment, and then select **Copy**.
 
     > [!div class="mx-imgBorder"] 
-    > ![](../common-data-service/media/ppac-copy-environment.png "Copy environment")
+    > ![](media/ppac-copy-environment.png "Copy environment")
 
 3. On the **Copy Environment** page, select **Everything**, select your new sandbox environment from the **Select Environment to Overwrite** list, and then select **Copy**. 
 
     > [!div class="mx-imgBorder"] 
-    > ![](../common-data-service/media/ppac-copy-overwrite.png "Overwrite environment")
+    > ![](media/ppac-copy-overwrite.png "Overwrite environment")
 
 4. The **Overwrite environment** dialog box appears. Make sure you have selected the correct environment and that you have the right options selected, and then select **Confirm**. 
 
@@ -82,7 +82,7 @@ If you use the Dynamics 365 for Field Service or Dynamics 365 for Project Servic
 6. On the menu bar select **Manage Solutions** to open the **Solutions** area. 
 
     > [!div class="mx-imgBorder"] 
-    > ![](../common-data-service/media/ppac-manage-solutions.png "Manage solutions")
+    > ![](media/ppac-manage-solutions.png "Manage solutions")
 
     > [!IMPORTANT]
     > If **administration mode** is enabled you must disable it so you can view the **Solutions** area. More information: [Administration mode](/power-platform/admin/sandbox-environments#administration-mode)
@@ -90,7 +90,7 @@ If you use the Dynamics 365 for Field Service or Dynamics 365 for Project Servic
 7. Find the Field Service or Project Service Automation solution and open it. The option to **Upgrade** should be available. Select it to upgrade the solution. 
 
     > [!div class="mx-imgBorder"] 
-    > ![](../common-data-service/media/ppac-upgrade-solution.png "Upgrade solution")
+    > ![](media/ppac-upgrade-solution.png "Upgrade solution")
     
 > [!NOTE]
 > The latest versions of Field Service and Project Service Automation on Unified Interface are available by default for newly created instances. If you want to upgrade an existing environment with installed earlier versions you must request the upgrade by contacting [Microsoft Customer Support](https://go.microsoft.com/fwlink/?LinkId=853505). 
