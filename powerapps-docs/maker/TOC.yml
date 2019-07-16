@@ -1019,7 +1019,7 @@
           href: ./portals/portal-templates.md
         - name: Create a portal
           href: ./portals/create-portal.md
-        - name: Create a Dynamics 365 for Customer Engagement portal
+        - name: Create a Dynamics 365 Portal
           href: ./portals/create-dynamics-portal.md
         - name: Portal designer anatomy
           href: ./portals/portal-designer-anatomy.md
