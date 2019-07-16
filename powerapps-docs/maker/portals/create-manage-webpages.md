@@ -45,17 +45,23 @@ The primary menu on the website is created automatically based on the hierarchy 
 
 ![website navigation](media/website-navigation.png "Website navigation")
 
+If you are working with Dynamics 365 for Customer Engagement portal, and you want the menu to be the same as page hierarchy, you must select **default** from the **Navigation Menu** list.
+
+`image`
+
 ## Manage webpage
 
 1.  [Edit the portal](manage-existing-portals.md#edit) to open it in the portal designer.  
 
 2.  Select **Pages** ![pages icon](media/pages-icon.png "Pages icon") from the toolbelt on the left side of the screen.  
 
-3.  Hover over the page you want to manage and select the **Ellipsis** button (…) for the webpage you want to manage. You can also right-click the page you want to manage.
+3.  Hover over the page you want to manage and select the **Ellipsis** button (…) for the webpage you want to manage. Alternately. you can right-click the page you want to manage.
 
 4.  Select the required action from the context menu:
 
     - **Hide in default menu**: Hide the page from being displayed in the sitemap through default menu.
+
+    - **Show in default menu**: Show the page in the sitemap through default menu.
 
     - **Add a child page**: Add a child page to the selected page. The child page inherits the page template of its parent page.
 
