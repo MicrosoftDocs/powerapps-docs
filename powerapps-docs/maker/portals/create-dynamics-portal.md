@@ -18,7 +18,7 @@ If you select an environment that contains Dynamics 365 for Customer Engagement 
 
 1.	Sign in to [PowerApps](http://web.powerapps.com).
 
-2.	Select **Create** on the left pane and enter **portal** in the **Search templates** field to display all Dynamics 365 for Customer Engagement portal templates.
+2.	Select **Create** on the left pane and enter **portal** in the **Search templates** field to display all Dynamics 365 Portal templates.
 
     ![Dynamics 365 Portal templates](media/dynamics-portals.png "Dynamics 365 Portal templates")  
 

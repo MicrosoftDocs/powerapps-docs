@@ -45,7 +45,7 @@ The primary menu on the website is created automatically based on the hierarchy 
 
 ![website navigation](media/website-navigation.png "Website navigation")
 
-If you are working with Dynamics 365 for Customer Engagement portal, and you want the menu to be the same as page hierarchy, you must select **Default** from the **Navigation Menu** list.
+If you are working with Dynamics 365 Portal, and you want the menu to be the same as page hierarchy, you must select **Default** from the **Navigation Menu** list.
 
 ![Default navigation menu](media/navigation-menu-default.png "Default navigation menu")
 
