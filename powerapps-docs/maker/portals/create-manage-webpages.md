@@ -25,7 +25,7 @@ A webpage is a document that is identified by a unique URL in a website. It is o
 
     ![create a new webpage](media/create-webpage.png "Create a new webpage")
 
-3.  In the **Properties** pane, enter the following information:
+3.  In the properties pane on the right side of the screen, enter the following information:
 
     - **Name**: Name of the page. This value is also used as the title of the page.
 
@@ -33,7 +33,7 @@ A webpage is a document that is identified by a unique URL in a website. It is o
 
     - **Template**: Page template used to render this page on the portal. If required, you can choose another template from the list.
 
-    ![webpage properties](media/webpage-props.png "Webpage properties")
+        ![webpage properties](media/webpage-props.png "Webpage properties")
 
 The webpages you create are added and their hierarchy are displayed in the **Pages** pane. To view the **Pages** pane, select **Pages** ![pages icon](media/pages-icon.png "Pages icon") from the toolbelt on the left side of the screen.  
 
@@ -41,13 +41,13 @@ Let's say you have created a few webpages for your portal. The page hierarchy lo
 
 ![pages pane](media/pages-pane.png "Pages pane")  
 
-The primary menu on the website is created automatically based on the hierarchy of the webpages. It is called the **default** menu. You can also create a custom menu to display on the website. More information: [Add a custom menu](compose-page.md#add-a-custom-menu)
+The primary menu on the website is created automatically based on the hierarchy of the webpages. It is called the **Default** menu. You can also create a custom menu to display on the website. More information: [Add a custom menu](compose-page.md#add-a-custom-menu)
 
 ![website navigation](media/website-navigation.png "Website navigation")
 
-If you are working with Dynamics 365 for Customer Engagement portal, and you want the menu to be the same as page hierarchy, you must select **default** from the **Navigation Menu** list.
+If you are working with Dynamics 365 for Customer Engagement portal, and you want the menu to be the same as page hierarchy, you must select **Default** from the **Navigation Menu** list.
 
-`image`
+![Default navigation menu](media/navigation-menu-default.png "Default navigation menu")
 
 ## Manage webpage
 
@@ -80,7 +80,7 @@ If you are working with Dynamics 365 for Customer Engagement portal, and you wan
 
     - **Delete**: Delete the page.
 
-    ![webpage manage options](media/webpage-manage-options.png "Webpage manage options")  
+        ![webpage manage options](media/webpage-manage-options.png "Webpage manage options")  
 
 
 

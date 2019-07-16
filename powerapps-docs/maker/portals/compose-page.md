@@ -68,18 +68,34 @@ Sections allow you to define a structure for your page and arrange portal compon
 
 6.	In the properties on the right side of the screen, select the following information:
 
-    - **Alignment**: Select whether the component must be left, center, or right aligned.
+    - **Alignment**: Select whether the component in the section must be left, center, or right aligned.
+
+        ![Alignment in the section](media/section-props-align.png "Alignment in the section")  
 
     - **Background**: Select if would like to have color or an image as the section background.
 
         - **Fill**: Select a color for the background.
 
-        - **Image**: Select an image from the list. If you would like to upload a new image, select Upload image.
+            ![Fill color in the section](media/section-props-fill.png "Fill color in the section")  
+
+        - **Image**: Select an image from the list. If you would like to upload a new image, select **Upload image**.
+
+            ![Add image in the section](media/section-props-image.png "Add image in the section")  
 
 7.	Add the required portal component in the section.
 
 
 ## Add portal components
+
+You can add the following components on a webpage:
+
+- [Text](#add-text-box)
+- [Image](#add-image)
+- [IFrame](#add-iframe)
+- [Form](#add-form)
+- [List](#add-list)
+- [Breadcrumb](#add-breadcrumb)
+
 
 ### Add text box
 
@@ -115,17 +131,17 @@ Sections allow you to define a structure for your page and arrange portal compon
 
     - **Image**: Select this option if you would like to select an existing image or upload a new one. If you want to select a previously uploaded image, choose an image from the **Select image** list. To upload a new image, select **Upload image**. All the uploaded images are included in the image library, which can be selected again through the **Select image** list.
 
-    > [!NOTE]
-    > - You can upload only the images of type png, svg, jpg, and jpeg with the maximum size of 5 MB.
-    > - You can't upload an image with the same name. You need to modify the name of the image to upload it again.
+        ![image properties](media/image-props.png "Image properties")  
 
-    ![image properties](media/image-props.png "Image properties")  
+        > [!NOTE]
+        > - You can upload only the images of type png, svg, jpg, and jpeg with the maximum size of 5 MB.
+        > - You can't upload an image with the same name. You need to modify the name of the image to upload it again.
 
     - **External url**: Select this option if you would like to upload an image from an external URL. Enter the URL in the **External url** field. Only secured links are accepted—that is, https:// is mandatory. If you have images stored in your content delivery network, you can provide the link in this field.
 
-    ![image external url](media/image-ext-url.png "Image external URL")  
+        ![image external url](media/image-ext-url.png "Image external URL")  
 
-    -   Formatting options
+    -   **Formatting options**
 
         - **Width**: Enter width of the image.
 
@@ -148,13 +164,13 @@ Sections allow you to define a structure for your page and arrange portal compon
 
 6.  In the properties pane on the right side of the screen, enter the following information:
 
-    1. **Width**: Enter the width of the IFrame.
+    - **Width**: Enter the width of the IFrame.
 
-    2. **Height**: Enter the height of the IFrame.
+    - **Height**: Enter the height of the IFrame.
 
-    3. **Link**: Enter the URL of the website to be displayed in the IFrame. Only secured links are accepted—that is, https:// is mandatory. By default, <https://www.bing.com> is available as the value.
+    - **Link**: Enter the URL of the website to be displayed in the IFrame. Only secured links are accepted—that is, https:// is mandatory. By default, <https://www.bing.com> is available as the value.
 
-    ![iframe properties](media/iframe-props.png "IFrame properties")  
+        ![iframe properties](media/iframe-props.png "IFrame properties")  
 
     > [!NOTE]
     > You can also select the IFrame on the canvas and drag the handles to resize it.
@@ -211,7 +227,7 @@ Form is a data-driven configuration that you use to add a form to collect data i
 
     - **Enable entity permissions**: Entity permissions to be considered for the form. By default, it is not selected. If selected, explicit permissions are required for any user to access the form. More information: [Entity permission](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/assign-entity-permissions)
 
-    ![form properties](media/form-props.png "Form properties")
+        ![form properties](media/form-props.png "Form properties")
 
 ### Add list
 
@@ -240,13 +256,13 @@ List is a data-driven configuration that you use to add a webpage that will rend
 
     - **Views**: The list of views of the target entity that is to be rendered. You can select multiple views to display records in the list. The view selected first will be the default view.
 
-    - **Enable create new record**: Allows a user to create a record. Select a webpage that contains a form to create a new record.
+    - **Create new record**: Allows a user to create a record. Select a webpage that contains a form to create a new record.
 
-    - **Enable view details**: Allows a user to view details. Select a webpage that contains a form to display details.
+    - **View details**: Allows a user to view details. Select a webpage that contains a form to display details.
 
-    - **Enable edit record**: Allows a user to edit a record. Select a webpage that contains a form to edit the record.
+    - **Edit record**: Allows a user to edit a record. Select a webpage that contains a form to edit the record.
 
-    - **Enable delete record**: Allows a user to delete a record.
+    - **Delete record**: Allows a user to delete a record.
 
     - **Empty list message**: Message to be displayed when there are no records to be displayed.
 
@@ -277,9 +293,11 @@ After you create the web link set:
 
 1.	[Edit the portal](manage-existing-portals.md#edit) to open it in the portal designer.
 
-2.	Select the menu. 
+2.	Select the header component. 
 
 3.	In the properties on the right side of the screen, select the web link set name from the **Navigation Menu** list.
+
+    ![Navigation menu](media/navigation-menu.png "Navigation menu")
 
 ## Use code editor
 
