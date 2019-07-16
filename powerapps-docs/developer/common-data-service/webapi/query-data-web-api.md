@@ -222,7 +222,54 @@ Common Data Service provides a number of special functions that accept parameter
 GET [Organization URI]/api/data/v9.1/accounts?$select=name,numberofemployees&$filter=Microsoft.Dynamics.CRM.Between(PropertyName='numberofemployees',PropertyValues=["5","2000"])  
 ```  
   
-More information: [Compose a query with functions](use-web-api-functions.md#bkmk_composeQueryWithFunctions).  
+More information: [Compose a query with functions](use-web-api-functions.md#bkmk_composeQueryWithFunctions). 
+
+<a name="bkmk_LambdaOperators"></a>
+
+### Use Lambda operators
+
+The Web API allows you to use two lambda operators, which are `any` and `all` to evaluate a Boolean expression on a collection.
+
+### `any` operator
+
+The `any` operator returns `true` if the Boolean expression applied is `true` for any member of the collection, otherwise it returns `false`. The `any` operator without an argument returns `true` if the collection is not empty.
+
+**Example**
+
+The example given below shows how you can retrieve all Account entity records that have atleast one email with "sometext" in the subject.
+
+```http
+GET [Organization URI]/api/data/v9.1/accounts?$select=name&$filter=Account_Emails/any(o:contains(o/subject,'sometext')) HTTP/1.1
+Prefer: odata.include-annotations="*"
+Accept: application/json  
+OData-MaxVersion: 4.0  
+OData-Version: 4.0 
+```
+### `all` operator
+
+The `all` operator returns `true` if the Boolean expression applied is `true` for all members of the collection, otherwise it returns `false`.
+
+**Example**
+
+The example given below shows how you can retrieve all Account entity records that have all associated tasks closed.
+
+```http
+GET [Organization URI]/api/data/v9.1/accounts?$select=name&$filter=Account_Tasks/all(o:o/statecode eq 1) HTTP/1.1
+Prefer: odata.include-annotations="*"
+Accept: application/json  
+OData-MaxVersion: 4.0  
+OData-Version: 4.0 
+```
+
+The example given below shows how you can retrieve all Account entity records that have atleast one email with "sometext" in the subject and whose statecode is active.
+
+```http
+GET [Organization URI]/api/data/v9.1/accounts?$select=name&$filter=Account_Emails/any(o:contains(o/subject,'sometext') and o/statecode eq 0) HTTP/1.1
+Prefer: odata.include-annotations="*"
+Accept: application/json
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+``` 
 
 ## Filter parent records based on values of child records
 
@@ -623,7 +670,6 @@ Preference-Applied: odata.include-annotations="*"
 <a name="bkmk_expandRelated"></a>
 
 ## Retrieve related entities by expanding navigation properties
-
  
 <a bkmk="bkmk_retrieverelatedentityexpandcollectionnavprop"></a>
 
@@ -773,52 +819,6 @@ OData-Version: 4.0
   
 ```  
 
-<a name="bkmk_LambdaOperators"></a>
-
-### Use Lambda operators
-
-The Web API allows you to use two lambda operators, which are `any` and `all` to evaluate a Boolean expression on a collection.
-
-### `any` operator
-
-The `any` operator returns `true` if the Boolean expression applied is `true` for any member of the collection, otherwise it returns `false`. The `any` operator without an argument returns `true` if the collection is not empty.
-
-**Example**
-
-The example given below shows how you can retrieve all Account entity records that have atleast one email with "sometext" in the subject.
-
-```http
-GET [Organization URI]/api/data/v9.1/accounts?$select=name&$filter=Account_Emails/any(o:contains(o/subject,'sometext')) HTTP/1.1
-Prefer: odata.include-annotations="*"
-Accept: application/json  
-OData-MaxVersion: 4.0  
-OData-Version: 4.0 
-```
-### `all` operator
-
-The `all` operator returns `true` if the Boolean expression applied is `true` for all members of the collection, otherwise it returns `false`.
-
-**Example**
-
-The example given below shows how you can retrieve all Account entity records that have all associated tasks closed.
-
-```http
-GET [Organization URI]/api/data/v9.1/accounts?$select=name&$filter=Account_Tasks/all(o:o/statecode eq 1) HTTP/1.1
-Prefer: odata.include-annotations="*"
-Accept: application/json  
-OData-MaxVersion: 4.0  
-OData-Version: 4.0 
-```
-
-The example given below shows how you can retrieve all Account entity records that have atleast one email with "sometext" in the subject and whose statecode is active.
-
-```http
-GET [Organization URI]/api/data/v9.1/accounts?$select=name&$filter=Account_Emails/any(o:contains(o/subject,'sometext') and o/statecode eq 0) HTTP/1.1
-Prefer: odata.include-annotations="*"
-Accept: application/json
-OData-MaxVersion: 4.0
-OData-Version: 4.0
-```
 ### See also
 
 [Web API Query Data Sample (C#)](samples/query-data-csharp.md)<br />
