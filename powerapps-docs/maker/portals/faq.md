@@ -1,5 +1,5 @@
 ---
-title: PowerApps Portals FAQ | Microsoft Docs
+title: Frequently asked questions | Microsoft Docs
 description: Frequently asked questions in PowerApps Portals.
 author: sbmjais
 manager: shujoshi
@@ -33,7 +33,7 @@ For information on deleting a portal and the required privileges, see [Delete a 
 
 ## I'm getting an error that I can't create a portal.
 
-If you don't have sufficient privileges to create a portal, you'll see an error as follows:
+If you don't have sufficient privileges to create a portal in an environment, you'll see an error as follows:
 
 ![Create portal error](media/portal-create-error.png "Create portal error")
 
