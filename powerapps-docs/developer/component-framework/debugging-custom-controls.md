@@ -56,9 +56,6 @@ For example, on **Microsoft Edge**,
 You can also interact with the control locally in real time and observe elements in the DOM by setting a breakpoint in the sources tab as follows
 
 > [!div class="mx-imgBorder"]
-> ![local-host](media/local-host.png "local host")
-
-> [!div class="mx-imgBorder"]
 > ![debug-control](media/debug-control-1.png "Debug control 1")
 
 ## Fiddler AutoResponder
