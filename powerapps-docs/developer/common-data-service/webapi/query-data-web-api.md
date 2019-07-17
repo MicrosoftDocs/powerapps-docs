@@ -271,6 +271,16 @@ OData-MaxVersion: 4.0
 OData-Version: 4.0
 ``` 
 
+The example given below shows how you can also create a nested query using `any` and `all` operators.
+
+```http
+GET [Organization URI]/api/data/v9.1/accounts?$select=name&$filter=(contact_customer_accounts/any(c:c/jobtitle eq 'jobtitle' and c/opportunity_customer_contacts/any(o:o/description ne 'N/A'))) and endswith(name,'{0}')
+Prefer: odata.include-annotations="*"
+Accept: application/json
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+```
+
 ## Filter parent records based on values of child records
 
 The example given below shows how you can retrieve all the account records which have:
