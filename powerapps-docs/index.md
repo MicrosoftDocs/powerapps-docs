@@ -209,7 +209,7 @@ ms.custom:
                      class="cardsF">
                      <li>
                         <div class="container">
-                           <p>App makers can manage their organization's mission-critical data by quickly creating custom business apps without writing code. You can create two types of apps in PowerApps: <strong>Canvas app</strong> and <strong>Model-driven app</strong>. <strong>Common Data Service</strong> is the data platform that lets you securely store and manage data used by business apps. More information: <a href="/powerapps/maker">Create apps</a>.</p>
+                           <p>App makers can manage their organization's mission-critical data by quickly creating custom business apps without writing code. You can create three types of apps in PowerApps: <strong>Canvas app</strong>, <strong>Model-driven app</strong>, and <strong>Portal</strong>. <strong>Common Data Service</strong> is the data platform that lets you securely store and manage data used by business apps. More information: <a href="/powerapps/maker">Create apps</a>.</p>
                            <hr/>
                            <br/>
                         </div>
