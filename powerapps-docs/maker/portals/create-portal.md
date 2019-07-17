@@ -43,23 +43,15 @@ To create a portal:
 
 3.	If the selected environment does not contain portal pre-requisites, a message is displayed in the **Portal from blank (preview)** window suggesting you select another environment or create a new one.
 
-    ![create new environment message](media/create-portal-message.png "Create new environment message")
+    > [!div class=mx-imgBorder]
+    > ![create new environment message](media/create-portal-message.png "Create new environment message")
 
 4.	If you choose to proceed with the current environment, enter the required information in the window as mentioned in the following steps. If you choose to create a new environment, see [Create new environment](#create-new-environment).
 
-    > [!NOTE]
-    > If you try to create a portal in an environment that contains previous version of Common Data Service database or doesn't contain a Common Data Service database or you don't have permissions to create a new database, following message is displayed instead:
-    >
-    > ![no database found](media/no-database-found.png "No database found")  
+5.  In the **Portal from blank (preview)** window, enter a name for the portal and address for the website, and select a language from the drop-down list. When you're done, select **Create**.
 
-5.	After creating the environment, under **Make your own app**, select **Portal from blank (preview)**.
-
-    > [!NOTE]
-    > If the database is created and you are still getting the create database prompt, you must refresh the PowerApps home page before selecting the **Portal from blank (preview)** tile.
-
-6.  In the **Portal from blank (preview)** window, enter a name for the portal and address for the website, and select a language from the drop-down list. When you're done, select **Create**.
-
-    ![create new portal](media/create-new-portal.png "Create new portal")  
+    > [!div class=mx-imgBorder]
+    > ![create new portal](media/create-new-portal.png "Create new portal")  
 
 After you select **Create**, the portal will begin provisioning and the provisioning status is displayed through notifications.
 
@@ -89,7 +81,9 @@ Once the portal is created, you are redirected to the portal designer. You can u
 
 > [!NOTE]
 > - You can create a maximum of one portal in an environment.
-> - If you don't have sufficient privileges to provision a portal, an error is displayed. You must have System Administrator or at least System Customizer role in Common Data Service to create a portal.
+> - If you don't have sufficient privileges to provision a portal, an error is displayed. You must have System Administrator or at least System Customizer role in Common Data Service to create a portal. You must also have the **Access Mode** set to **Read-Write** in **Client Access License (CAL) Information**.
+> - If you try to create a portal in an environment that contains previous version of Common Data Service database or doesn't contain a Common Data Service database or you don't have permissions to create a new database, following message is displayed instead:
+> ![no database found](media/no-database-found.png "No database found") 
 
 ## Create new environment
 
@@ -111,7 +105,12 @@ Follow these steps when you create an environment using the option provided in t
     > [!NOTE]
     > The **Include starter portal** option is available only when you create an environment using the option provided in the **Portal from blank (preview)** window. This option is not available when you create an environment from PowerApps admin center.
 
-    ![create new database](media/create-new-database.png "Create new database")  
+    ![create new database](media/create-new-database.png "Create new database") 
+
+4. After creating the environment and database, under **Make your own app**, select **Portal from blank (preview)**. 
+
+    > [!NOTE]
+    > If the database is created and you are still getting the create database prompt, you must refresh the PowerApps home page before selecting the **Portal from blank (preview)** tile.
 
 
 

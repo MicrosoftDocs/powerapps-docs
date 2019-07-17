@@ -24,5 +24,5 @@ If you select an environment that contains Dynamics 365 for Customer Engagement 
 
 3.	Select the required portal template.
 
-4.	In the create portal window, enter a name for the portal and address for the website, and select a language from the drop-down list. When you're done, select **Create**.
+4.	In the create portal window, enter a name for the portal and address for the website, and select a language from the drop-down list. When you're done, select **Create**. The creation process is same as described in the [Create a Common Data Service starter portal](create-portal.md) section.
 

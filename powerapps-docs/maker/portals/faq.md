@@ -17,7 +17,7 @@ We have compiled a list of frequently asked questions and provided brief answers
 
 ## I'm getting an error that only one portal can be created.
 
-Currently, you can create only one portal of each type in an environment. If you try to create more than one portal, you'll see an error message as follows:
+Currently, you can create only one portal of each type in an environment per language. If you try to create more than one portal, you'll see an error message as follows:
 
 ![Maximum portal created error](media/portal-max-error.png "Maximum portal created error")
 
