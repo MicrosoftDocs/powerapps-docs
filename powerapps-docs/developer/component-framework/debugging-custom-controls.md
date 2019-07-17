@@ -28,7 +28,11 @@ As show in the image above, the browser window will open with 4 sections. Your c
 > If you want to modify the `manifest.xml` or create additional properties, you will need to restart the debug process before they appear in the inputs section.
 
 # Test custom components with Mock data
-- For field controls you can input a value and a type for every property defined in your ControlManifest.Input.xml. 
+- For field controls you can input a value and a type for every property defined in your ControlManifest.Input.xml as shown below
+
+> [!div class="mx-imgBorder"]
+> ![test harness 2.5](media/test-harness-2.5.png "test harness 2.5")
+
 - For datasets you can load a CSV file with test data. It can be manually created or exported in csv format directly from your environment. Once a valid csv file is available, it can be loaded it as shown below:
 
 > [!div class="mx-imgBorder"]
