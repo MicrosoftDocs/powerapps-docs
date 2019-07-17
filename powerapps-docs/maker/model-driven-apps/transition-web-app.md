@@ -1,5 +1,5 @@
 ---
-title: "Quick start for transitioning your Dynamics 365 for Customer Engagement apps legacy web client application to Unified Interface | MicrosoftDocs"
+title: "Quick start for transitioning your Dynamics 365 for Customer Engagement apps web client application to Unified Interface | MicrosoftDocs"
 description: "Learn how to transition your legacy web client application to the Unified Interface"
 ms.custom: ""
 ms.date: 07/08/2019
@@ -23,7 +23,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Quick start for transitioning your Dynamics 365 for Customer Engagement apps legacy web client application to Unified Interface
+# Quick start for transitioning your Dynamics 365 for Customer Engagement apps web client application to Unified Interface
 
 This quick start topic explains how to transition your Dynamics 365 for Customer Engagement apps legacy web client application to the Unified Interface. The Unified Interface framework uses responsive web design principles to provide an optimal viewing and interaction experience for any screen size, device, or orientation. 
 
@@ -64,7 +64,7 @@ We recommend that you test all use cases. You can start with the most critical u
 ### Dynamics 365 for Customer Engagement apps
 If you use the Dynamics 365 for Field Service or Dynamics 365 for Project Service Automation apps and wish to test the Unified Interface, you must set up a new sandbox environment and make a copy of your production environment to upgrade to the latest Field Service version 8 and Project Service Automation version 3 before validating these applications in the Unified Interface. To do this, follow these steps:
 
-1. Create a new sandbox environment from the [Power Platform Admin center](https://admin.powerplatform.microsoft.com/environments) or [Dynamics 365 Administration Center](https://port.crm.dynamics.com/). More information: [Add an instance to your subscription](/dynamics365/customer-engagement/admin/add-instance-subscription)
+1. Create a new sandbox environment from the [Power Platform Admin center](https://admin.powerplatform.microsoft.com/environments) or [Dynamics 365 admin center](https://port.crm.dynamics.com/). More information: [Add an instance to your subscription](/dynamics365/customer-engagement/admin/add-instance-subscription)
 
 2. Copy your production environment that has the Dynamics 365 for Field Service or Dynamics 365 for Project Service Automation apps into the new sandbox environment. To do this, on the Power Platform Admin center open your production environment, and then select **Copy**.
 
