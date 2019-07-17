@@ -15,15 +15,38 @@ ms.reviewer:
 
 [!include[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
--   The **Modified Date** for the app might be incorrect because these are pre-provisioned apps and could have been provisioned earlier.
+## General issues
 
--   The owner of the portal is not displayed correctly. It is displayed as System.
+- The **Modified Date** for the app might be incorrect because these are pre-provisioned apps and could have been provisioned earlier.
+
+- The owner of the portal is not displayed correctly. It is displayed as System.
+
+- If you are reusing the URL of a recently deleted portal to create a new portal, it will have some delay for runtime to setup. This is because the purge of previous resources would still be in progress and may take from 30 minutes to 1 hour for the new portal to setup on azure.
+
+- When switching an environment in PowerApps, the portals within an environment may not show up immediately in **Apps** or **Recent Apps** list. This happens particularly on environments that are created in a different region than their tenant. The workaround is to use browser refresh or wait for some time for portal to show up in the apps list.
+
+## Portal designer issues
 
 -   When you select text in the text box, the font size of the selected text is not displayed in the formatting toolbar.
 
--   Canvas does not load content in Chinese language.
+- The padding of columns in a section is not same as rendered on the website. The padding is adjusted according to the content inside the sections.
 
--   Webpage using the **Page with side navigation** template displays links of the pages which existed when the webpage was created and does not update automatically.
+- Canvas does not load content in Chinese language.
 
--   If you have deleted a webpage, canvas does not reflect the updated weblink until the next refresh of canvas.
+- Webpage using the **Page with side navigation** template displays only the link of the pages which existed during the webpage creation. You can update the links on the left side of the page by changing the page template to another template and then back to **Page with side navigation**.
 
+- When you delete a webpage, canvas does not reflect the updated menu until the next refresh of canvas.
+
+- When creating a child page from a rewrite page (unsupported pages in portal designer), you must choose the template manually from the properties pane to render the page.
+
+- If the page name is large and not displayed completely in the **Pages** pane, the **Ellipsis** button (...) is not displayed. You must right-click the page name to see the page options.
+
+- If you have added a deactivated content snippet on a page, it will be displayed in the portal designer. But, the deactivated content snippet will be hidden on the actual website.
+
+- Few components' placeholder like web links, Power BI, chart, and so on are not editable. But you can still edit the text on the same. The changes on placeholders will not be saved.
+
+- Information and related actions on canvas, like component name, in portal designer are supported only in English.
+
+- Color picker and its related strings are supported only in English.
+
+- Few template pages on the Employee Self Service portal are not able to render correct breadcrumb.
