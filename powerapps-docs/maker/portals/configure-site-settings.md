@@ -15,11 +15,11 @@ ms.reviewer:
 
 A site setting is a configurable, named value that is used by website code to modify the behavior or visual style of the portal. Typically when a developer creates the website code, they will reference site settings for various components to enable an end user to modify the setting values to alter the website without having to change the code, recompile, and redeploy the website.
 
-The sample portals that are provided with the installation of [!INCLUDE[pn-dynamics-crm](../includes/pn-dynamics-crm.md)] portals contain several configurable site settings for various styles used to modify many visual elements within the site such as background style, text color, and layout width.
+The sample portals that are provided with the installation of [!INCLUDE[pn-dynamics-crm](../../includes/pn-dynamics-crm.md)] portals contain several configurable site settings for various styles used to modify many visual elements within the site such as background style, text color, and layout width.
 You can manage the following types of site settings:
 
-- **Global Portal settings**: These settings apply to all portals associated with the [!INCLUDE[pn-dynamics-crm](../includes/pn-dynamics-crm.md)] organization in which they are being added.
-- **Portal site settings**: These settings apply to specific portals (website records) that are associated with the [!INCLUDE[pn-dynamics-crm](../includes/pn-dynamics-crm.md)] organization in which they are being added.
+- **Global Portal settings**: These settings apply to all portals associated with the [!INCLUDE[pn-dynamics-crm](../../includes/pn-dynamics-crm.md)] organization in which they are being added.
+- **Portal site settings**: These settings apply to specific portals (website records) that are associated with the [!INCLUDE[pn-dynamics-crm](../../includes/pn-dynamics-crm.md)] organization in which they are being added.
 
 
 ## Manage portal site settings
