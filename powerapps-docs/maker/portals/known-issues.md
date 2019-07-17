@@ -25,7 +25,7 @@ ms.reviewer:
 
 - When switching an environment in PowerApps, the portals within an environment may not show up immediately in **Apps** or **Recent Apps** list. This happens particularly on environments that are created in a different region than their tenant. The workaround is to use browser refresh or wait for some time for portal to show up in the apps list.
 
-- When you reset your portal successfully from PowerApps Portals admin center, the following error is displayed: The portal you are trying to access doesn't belong to the tenant you are currently logged into. Please log out and log in to the correct tenant. You can visit the PowerApps home page and create a new portal. 
+- When you reset your portal successfully from PowerApps Portals admin center, the following error is displayed: "The portal you are trying to access doesn't belong to the tenant you are currently logged into. Please log out and log in to the correct tenant.". You can visit the PowerApps home page and create a new portal. 
 
 ## Portal designer issues
 
