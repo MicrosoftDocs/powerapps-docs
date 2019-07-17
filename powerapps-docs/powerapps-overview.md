@@ -22,7 +22,7 @@ For more information, see the [PowerApps channel](https://www.youtube.com/channe
 
 ## PowerApps for app makers/creators
 
-Using PowerApps, you can create three types of apps: **canvas**, **model-driven**, and **Portal**. More information: [Overview of creating apps in PowerApps](maker/index.md).
+Using PowerApps, you can create three types of apps: **canvas**, **model-driven**, and **portal**. More information: [Overview of creating apps in PowerApps](maker/index.md).
 
 To create an app, you start with [web.powerapps.com](https://web.powerapps.com).
 

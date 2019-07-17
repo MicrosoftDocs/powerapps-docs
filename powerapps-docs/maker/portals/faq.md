@@ -19,7 +19,8 @@ We have compiled a list of frequently asked questions and provided brief answers
 
 Currently, you can create only one portal of each type in an environment per language. If you try to create more than one portal, you'll see an error message as follows:
 
-![Maximum portal created error](media/portal-max-error.png "Maximum portal created error")
+> [!div class=mx-imgBorder]
+> ![Maximum portal created error](media/portal-max-error.png "Maximum portal created error")
 
 To create more portals, you must create a new environment using the **create new environment** link in the error message. For more information on creating a portal, see [Create a portal](create-portal.md).
 
@@ -27,7 +28,8 @@ To create more portals, you must create a new environment using the **create new
 
 If you don't have sufficient privileges to delete a portal, you'll see an error as follows:
 
-![Delete portal error](media/portal-delete-error.png "Delete portal error")
+> [!div class=mx-imgBorder]
+> ![Delete portal error](media/portal-delete-error.png "Delete portal error")
 
 For information on deleting a portal and the required privileges, see [Delete a portal](manage-existing-portals.md#delete).
 
@@ -35,7 +37,17 @@ For information on deleting a portal and the required privileges, see [Delete a 
 
 If you don't have sufficient privileges to create a portal in an environment, you'll see an error as follows:
 
-![Create portal error](media/portal-create-error.png "Create portal error")
+> [!div class=mx-imgBorder]
+> ![Create portal error](media/portal-create-error.png "Create portal error")
 
 For information on creating a portal and the required privileges, see [Create a portal](create-portal.md).
+
+## I'm getting the message: “Your data isn’t quite ready”.
+
+Sometimes the database creation can take time and the correct status might not reflect on the home page. In this case you'll see the following message:
+
+> [!div class=mx-imgBorder]
+> ![Data not ready](media/data-not-ready.png "Data not ready")
+
+If you keep getting the create database prompt or your data isn't quite ready prompt, you can try refreshing the PowerApps home page before selecting the Portal from blank (Preview) tile.
 

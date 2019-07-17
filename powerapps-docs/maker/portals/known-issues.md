@@ -25,6 +25,8 @@ ms.reviewer:
 
 - When switching an environment in PowerApps, the portals within an environment may not show up immediately in **Apps** or **Recent Apps** list. This happens particularly on environments that are created in a different region than their tenant. The workaround is to use browser refresh or wait for some time for portal to show up in the apps list.
 
+- When you reset your portal successfully from PowerApps Portals admin center, the following error is displayed: The portal you are trying to access doesn't belong to the tenant you are currently logged into. Please log out and log in to the correct tenant. You can visit the PowerApps home page and create a new portal. 
+
 ## Portal designer issues
 
 -   When you select text in the text box, the font size of the selected text is not displayed in the formatting toolbar.
@@ -49,4 +51,6 @@ ms.reviewer:
 
 - Color picker and its related strings are supported only in English.
 
-- Few template pages on the Employee Self Service portal are not able to render correct breadcrumb.
+- A few template pages on the Employee Self Service portal are not able to render correct breadcrumb.
+
+- A few Dynamics 365 Portal templates do not have menu items as per their hierarchy of pages. However, if you create new pages, the menu items are created accordingly.
