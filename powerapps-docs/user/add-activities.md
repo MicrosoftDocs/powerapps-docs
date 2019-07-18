@@ -115,10 +115,12 @@ You can also easily add notes in the activities area.
 
 3. When you're done filling in the form, select **Add Note** to save the note.
 
+> [!NOTE] You can also add a note using the **plus sign** in the upper section of the **Timeline** wall.
+
    > [!div class="mx-imgBorder"]
    > ![Add a note](media/addnote.png "Add a note")
 
-Once the note has been added, you can delete or edit the note. You can also add a note using the **plus sign** in the upper section of the **Timeline** wall.
+Once the note has been added, you can delete or edit the note.
 
 
 > [!div class="mx-imgBorder"]
