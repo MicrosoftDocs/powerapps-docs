@@ -31,7 +31,8 @@ To open a template in code editor:
 
 2.  Select **Templates** ![templates icon](media/templates-icon.png "Templates icon") from the toolbelt on the left side of the screen. The available templates are displayed.  
 
-    ![templates pane](media/templates-pane.png "Templates pane")  
+    > [!div class=mx-imgBorder]
+    > ![templates pane](media/templates-pane.png "Templates pane")  
 
 3.  Select the required template to open it in the code editor.
 

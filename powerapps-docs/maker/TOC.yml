@@ -1023,6 +1023,8 @@
           href: ./portals/create-dynamics-portal.md
         - name: Portal designer anatomy
           href: ./portals/portal-designer-anatomy.md
+        - name: Supported web browsers for portal designer
+          href: ./portals/supported-browser.md
         - name: Create and manage webpages
           href: ./portals/create-manage-webpages.md
         - name: Compose a page

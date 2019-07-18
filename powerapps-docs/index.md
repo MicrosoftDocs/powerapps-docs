@@ -278,7 +278,7 @@ ms.custom:
                               <div class="card">
                                  <div class="cardImageOuter">
                                     <div class="cardImage">
-                                       <img alt="Customize icon" src="media/index/i_model-driven-apps.svg">
+                                       <img alt="Customize icon" src="media/index/i_portals.svg">
                                     </div>
                                  </div>
                                  <div class="cardText">
