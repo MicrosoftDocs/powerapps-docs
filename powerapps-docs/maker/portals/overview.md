@@ -26,14 +26,6 @@ These capabilities feature a revamped end-to-end experience for makers to quickl
 > [!NOTE]
 > Since PowerApps Portals is in preview, certain experiences might have known issues. These issues are mentioned in the [Known issues](known-issues.md) section later in this document.  
 
-## Supported web browsers
-
-The supported browsers for the PowerApps and portal designer are listed below.
-
-| **Browser**                     | **Operating system**           |
-|---------------------------------|--------------------------------|
-| Google Chrome (latest version)<br>(recommended)                    | <ul><li>Windows 7 SP1, 8.1, and 10</li><li>macOS</li></ul>      |
-| Microsoft Edge (latest version)<br> (recommended)                    | Windows 10                     |
 
  
 
