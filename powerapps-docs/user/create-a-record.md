@@ -27,7 +27,7 @@ The **Create a new record** command or **Quick create** makes it fast and easy t
     
 1. On the navigation bar, select the **plus sign** ![Create record button](media/create-record-button.png "Create record button"), and then select the item you want.  
   
-2.  Fill in the fields, and then select **Save and Close**. Or, to save and create another record, select the down arrow and then  **Save & Create New**.
+2.  Fill in the fields, and then select **Save and Close**. Or, to save and create another record, select the down arrow and then select  **Save & Create New**.
 
   ![Save a record](media/quick_create.png "Save a record")
   
