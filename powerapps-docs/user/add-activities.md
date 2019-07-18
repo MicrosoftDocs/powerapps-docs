@@ -151,17 +151,13 @@ In the **Timeline** wall, select ![More button ](media/MoreButton.png "More butt
 
 ## Use the filter pane
 
-Quickly filter activities, notes or posts in the timeline wall by record type or activity type and date using the filter pane.
+Quickly filter activities, notes or posts in the timeline wall by record type or activity type and date using the filter pane. You can select multiple filters and filter options at the same time. You can filter and see activity due date, modified date, or by the status of the activity.
 
-1. In the **Timeline** wall, select ![More button ](media/MoreButton.png "More button") then select **Open Filter Pane**.
+- In the **Timeline** wall, select **Open Filter Pane** funnel icon.
 
 > [!div class="mx-imgBorder"]
 > ![Filter pane in the Timeline ](media/filterpane.png "Filter pane in the Timeline")
 
-2. Once you're done viewing the filtered information, to clear the filter, select **Clear all filters** funnel icon. This will reset the filter show all the information in the timeline wall.
-
-> [!div class="mx-imgBorder"]
-> ![Reset the filter](media/resetfilter.png "Reset the filter")
 
 ## Manage Activities
 Manage activities directly from the timeline wall including assigning an activity to another person, deleting or closing an activity, add an activity to a queue, opening an associated record or editing notes and posts.
