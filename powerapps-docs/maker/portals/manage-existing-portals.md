@@ -17,23 +17,27 @@ ms.reviewer:
 
 Once you've created a portal, it is visible under the **Recent apps** section on the PowerApps home page.
 
-![recent apps](media/recent-apps.png "Recent apps")  
+> [!div class=mx-imgBorder]
+> ![recent apps](media/recent-apps.png "Recent apps")  
 
 To manage an app, select **More Commands** (**…**) for the portal and choose an action from the context menu.
 
-![portal app options](media/portal-app-options.png "Portal app options")  
+> [!div class=mx-imgBorder]
+> ![portal app options](media/portal-app-options.png "Portal app options")  
 
 ## Edit
 
 Opens the [portal designer](portal-designer-anatomy.md) to edit the content and components of the portal.  
 
-![portal maker](media/portal-maker.png "Portal maker")  
+> [!div class=mx-imgBorder]
+> ![portal maker](media/portal-maker.png "Portal maker")  
 
 ## Browse
 
 Opens the portal to browse the website. This helps you to see the portal as it will look to your customers.
 
-![portal website](media/portal-website.png "Portal website")  
+> [!div class=mx-imgBorder]
+> ![portal website](media/portal-website.png "Portal website")  
 
 Alternately, you can also open the portal to browse the website by selecting **Browse website** in the [portal designer](portal-designer-anatomy.md) to view the changes you have made to the website. The website opens in a new tab with URL of the website.
 
@@ -41,7 +45,8 @@ Alternately, you can also open the portal to browse the website by selecting **B
 
 Share your portal with internal or external users. Follow the steps mentioned in the **Share this portal** pane.
 
-![share portal](media/share-portal.png "Share portal")  
+> [!div class=mx-imgBorder]
+> ![share portal](media/share-portal.png "Share portal")  
 
 ### Share with internal users
 
@@ -85,7 +90,8 @@ Your portal should work anonymously and should be accessible by the external use
 
 Displays the portal settings and allows you to change the name of the portal. You can also perform advanced actions such as administering the portal though the Portal Admin Center and working with site settings. Settings provides links to the PowerApps Portals admin center and Site settings. More information: [Administer your portal](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/manage-portal) and [Configure site settings for portals](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/configure-site-settings).  
 
-![portal settings](media/portal-settings.png "Portal settings")  
+> [!div class=mx-imgBorder]
+> ![portal settings](media/portal-settings.png "Portal settings")  
 
 ## Delete
 
@@ -99,5 +105,6 @@ You must delete the portal configurations manually to completely remove portal c
 
 Displays details such as owner of the portal, date and time when it was created and last modified, and the URL of the portal.
 
-![portal details](media/portal-details.png "Portal details")  
+> [!div class=mx-imgBorder]
+> ![portal details](media/portal-details.png "Portal details")  
 
