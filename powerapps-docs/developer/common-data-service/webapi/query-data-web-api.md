@@ -406,7 +406,7 @@ The below example retrieves the records of `systemuser` entity type that are lin
     <link-entity name="teammembership" from="systemuserid" to="systemuserid" visible="false" intersect="true">
       <link-entity name="team" from="teamid" to="teamid" alias="ab">
         <filter type="and">
-          <condition attribute="administratorid" operator="eq-userid" />
+          <condition attribute="administratorid" operator="eq" value="<guid>" />
         </filter>
       </link-entity>
     </link-entity>
