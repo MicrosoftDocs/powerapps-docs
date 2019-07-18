@@ -11,7 +11,7 @@ ms.author: shjais
 ms.reviewer:
 ---
 
-## Supported web browsers for portal designer
+# Supported web browsers for portal designer
 
 The supported browsers for the portal designer are listed below.
 
