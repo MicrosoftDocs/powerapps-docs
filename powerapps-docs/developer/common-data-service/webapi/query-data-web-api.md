@@ -380,8 +380,6 @@ OData-Version: 4.0
 
 ## Filter results based on values of collection-valued navigation properties
 
-You cannot use OData `$filter` to limit the entity records returned using criteria applied to collection-valued navigation properties in a single operation.
-
 > [!NOTE]
 > It is possible to use `$filter` within `$expand` to filter results for related records in a Retrieve operation. You can use a semi-colon separated list of system query options enclosed in parentheses after the name of the collection-valued navigation property. The query options that are supported within `$expand` are `$select`, `$filter`, `$top` and `$orderby`. More information: [Options to apply to expanded entities](retrieve-entity-using-web-api.md#options-to-apply-to-expanded-entities).
 
