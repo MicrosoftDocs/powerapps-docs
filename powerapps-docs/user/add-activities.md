@@ -93,6 +93,15 @@ To add an email activity to a record, you must first save the record you are add
 5. To use a template for the email body, on the command bar, click **Insert Template**, and then select the template.   
   
 6. When you're done filling in the form, select **Send**. 
+
+  >![NOTE] To list emails in a conversation view, go to **Settings** > **Personalization Settings** > **Email** tab and then select **Show email as a conversation on Timeline**. For more information on personal settings, see [Set personal options](set-personal-options.md).
+
+   > [!div class="mx-imgBorder"]
+   > ![Set personal options](media/emailsettings1.png "Set personal options")
+   
+   > [!div class="mx-imgBorder"]
+   > ![Set personal options email](media/emailsettings2.png "Set personal options for email")
+
   
 ## Add an appointment  
 
