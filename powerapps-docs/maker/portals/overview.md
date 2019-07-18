@@ -28,7 +28,7 @@ These capabilities feature a revamped end-to-end experience for makers to quickl
 
 ## Supported web browsers
 
-The supported browsers for the PowerApps and portal portal designer are listed here.
+The supported browsers for the PowerApps and portal designer are listed here.
 
 | **Browser**                     | **Operating system**           |
 |---------------------------------|--------------------------------|
