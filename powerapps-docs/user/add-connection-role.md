@@ -58,15 +58,21 @@ Connection roles are directly associated to a connection. To use a connection ro
   
 ## Manage Connection Roles
 
-- To manage a connection role, select  the connection role from a connection entity. This will open the connection role entity record.  You can edit the name, select a connection role category, and add a description.
+To manage a connection role, select  the connection role from a connection entity. This will open the connection role entity record.  You can edit the name, select a connection role category, and add a description.
 
+
+  > [!div class="mx-imgBorder"]
+  > ![Edit connection role](media/connection7.png "Editconnection role") 
+  
+You can also manage the connection role types that you want associate to the connection role.
+
+1. Select on **Manage Record Type** on the command. 
 
   > [!div class="mx-imgBorder"]
   > ![Edit connection role](media/connection5.png "Editconnection role") 
   
-- You can also manage the connection role types that you want associate to the connection role.
 
-Select on **Manage Record Type** on the command. This will open a list of connection role types that you can add or remove for this connection role.
+2. This will open a list of connection role types that you can add or remove for this connection role.
 
 
   > [!div class="mx-imgBorder"]
