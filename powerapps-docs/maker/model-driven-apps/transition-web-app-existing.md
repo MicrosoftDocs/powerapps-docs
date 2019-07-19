@@ -97,9 +97,8 @@ The tasks required to configure the model-driven app properties include:
 - Assigning user roles to the new app to enable non-administrators access to use the app.  
 - Customizing a friendly URL so that a shortcut to the new app can be easily shared, bookmarked, or remembered by users. 
 
-Navigate to <environment URL> + “/apps”  
-1. For example the URL should look like this https://YourEnvironment.crm.dynamics.com/apps   
-   This opens a list of all the apps in your environment. 
+
+1. Navigate to *environment URL*/**apps**. The URL will look similar to this: https://*YourEnvironment*.crm.dynamics.com/apps. Doing so opens a list of all the apps in your environment. 
 2. Locate your new model-driven app you created.  
 3. On the app tile select the ellipsis, and then select **Manage Roles**.   
 
