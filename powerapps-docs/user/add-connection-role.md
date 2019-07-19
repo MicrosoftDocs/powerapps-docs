@@ -66,7 +66,7 @@ To manage a connection role, select  the connection role from a connection entit
   
 You can also manage the connection role types that you want associate to the connection role.
 
-1. Select on **Manage Record Type** on the command. 
+1. Open the connection role and then select **Manage Record Type** on the command. 
 
   > [!div class="mx-imgBorder"]
   > ![Edit connection role](media/connection5.png "Editconnection role") 
