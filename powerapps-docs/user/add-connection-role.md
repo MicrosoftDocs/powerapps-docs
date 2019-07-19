@@ -28,26 +28,48 @@ It's a quick way to create multiple connections and roles for a particular recor
 Connection roles are directly associated to a connection. To use a connection role, you must first add a connection to your record.  
 
 1. To add or manage connections, select the record you want to manage like an opportunity.  
-2. Select **Related** from the list of options on the page and then select**Connection**. This will open the connection grid with the list of connections for the record.
-3. After selecting a connection or creating a new one, you can to add the connection role using the lookup on the connection entity record. Select the role you want to associate to the connection and select **Save**.
+2. Select the **Related** tab and then select**Connection**. This will open the connection grid with the list of connections for the record.
 
   > [!div class="mx-imgBorder"]
   > ![Add a new connection role](media/connection1.png "Add a new connection role") 
-  
-  
-4. If you do not see the connection role that you need, you can create a new connection role by selection the **New Connection Role** at the bottom of the lookup field. 
+
+3. Select **Connect** and then choose **To Another** or **To Me**.
 
   > [!div class="mx-imgBorder"]
-  > ![Add a new connection role](media/connection2.png "Add a new connection role") 
+  > ![Select connection type](media/connection2.png "Select connection type") 
   
+4. On the **Name** field, enter or find the name of the record for the connection.
+
+5. On the **As this Role** field select the lookup icon and then choose **New Connection Role**. Or, use the search to find an existing role that you want to associate to the connection and the select **Save**.
+
+  > [!div class="mx-imgBorder"]
+  > ![Choose new connection role](media/connection3.png "Choose new connection role")  
+
   > [!NOTE]
   > If you have entered information before creating a new connection role, a warning dialog will be displayed asking if you would like to cancel and continue working on the connection or to go ahead and leave the current record you are working on.
 
+6. To create a new connection role, on the **New Connection Role** screen enter a name and then choose a **Connection Role Category**.
 
-## Add a new connection
+  > [!div class="mx-imgBorder"]
+  > ![Add connection role category](media/connection4.png "Add connection role category") 
+
+7. When you are done, select **Save & Close**.
+
+  
+## Manage Connection Roles
+
+- To manage a connection role, select  the connection role from a connection entity. This will open the connection role entity record.  You can edit the name, select a connection role category, and add a description.
 
 
+  > [!div class="mx-imgBorder"]
+  > ![Edit connection role](media/connection5.png "Editconnection role") 
+  
+- You can also manage the connection role types that you want associate to the connection role.
+
+Select on **Manage Record Type** on the command. This will open a list of connection role types that you can add or remove for this connection role.
 
 
+  > [!div class="mx-imgBorder"]
+  > ![Manage Record Type](media/connection5.png "Manage Record Type") 
 
 
