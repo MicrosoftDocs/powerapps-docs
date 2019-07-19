@@ -1005,6 +1005,8 @@
     items: 
     - name: Transition quick start
       href: ./model-driven-apps/transition-web-app.md
+    - name: Use an existing environment to transition quick start
+      href: ./model-driven-apps/transition-web-app-existing.md  
     - name: Unified Interface Playbook
       href: ./model-driven-apps/unified-interface-playbook.md
     - name: Approaching a Unified Interface transition
