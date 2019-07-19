@@ -94,7 +94,9 @@ To add an email activity to a record, you must first save the record you are add
   
 6. When you're done filling in the form, select **Send**. 
 
-  >![NOTE] To list emails in a conversation view, go to **Settings** > **Personalization Settings** > **Email** tab and then select **Show email as a conversation on Timeline**. For more information on personal settings, see [Set personal options](set-personal-options.md).
+
+> [!NOTE]
+> To list emails in a conversation view, go to **Settings** > **Personalization Settings** > **Email** tab and then select **Show email as a conversation on Timeline**. For more information on personal settings, see [Set personal options](set-personal-options.md).
 
    > [!div class="mx-imgBorder"]
    > ![Set personal options](media/emailsettings1.png "Set personal options")
@@ -125,7 +127,9 @@ You can also easily add notes in the activities area.
 
 3. When you're done filling in the form, select **Add Note** to save the note.
 
-> [!NOTE] You can also add a note using the **plus sign** in the upper section of the **Timeline** wall.
+
+> [!NOTE]
+> You can also add a note using the **plus sign** in the upper section of the **Timeline** wall.
 
    > [!div class="mx-imgBorder"]
    > ![Add a note](media/addnote.png "Add a note")
