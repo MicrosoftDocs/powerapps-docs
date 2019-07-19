@@ -107,8 +107,9 @@ The tasks required to configure the model-driven app properties include:
 
 4. The available roles area listed on the right pane. Select the roles as needed to give non-administrator users access to the app. 
 
-> [!IMPORTANT]
-> Make sure that all users are granted at least one security role that contains **Read** access to the **Model-driven App** privilege. This privilege can be found on the Customization tab within the security role. Users without this privilege receive an error upon opening any model-driven app.  Notice that System Administrator and System Customizer security roles already have this privilege enabled. 
+    > [!IMPORTANT]
+    > Make sure that all users are granted at least one security role that contains **Read** access to the **Model-driven App** privilege. This privilege can be found on the Customization tab within the security role. Users without this privilege receive an error upon opening any model-driven app.  Notice that System Administrator and System Customizer security roles already have this privilege enabled. 
+ 
    > [!div class="mx-imgBorder"] 
    > ![](media/model-driven-app-privilege.png "Model-driven app privilege")
 
