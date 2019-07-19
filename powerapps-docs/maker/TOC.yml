@@ -51,6 +51,8 @@
         href: ../user/assign-or-share-records.md
       - name: Share records using Access Team
         href: ../user/Access-team.md
+      - name: Add a connection role 
+        href: ../user/add-connection-role.md
       - name: Deactivate accounts or contacts
         href: ../user/deactivate-activate-account-contact.md
       - name: Track your progress with dashboards and charts
