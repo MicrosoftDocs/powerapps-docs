@@ -37,11 +37,11 @@ This quick start topic shows you how to use an existing environment to create a 
 ## Overview 
 This topic is for existing customers who are currently using Web Client applications that need to plan and execute their transition to the Unified Interface. 
 
-we recommended using a non-production environment to execute a test using **Use Unified Interface Only** mode to avoid impacting current deployment or development cycles. To do this, you create a new solution based on your existing application as it stands today. This can be done in your current development sandbox environment without impact to your existing work.  
+We recommended using a non-production environment to execute a test using **Use Unified Interface Only** mode to avoid impacting current deployment or development cycles. To do this, you create a new solution based on your existing application as it stands today. This can be done in your current development sandbox environment without impact to your existing work.  
 
 Once you complete the tasks described in this topic in your development environment using a solution, you can import the solution into your testing environment, which allows a wider group of business users to test and compare the app in a familiar environment. 
 
-Follow your application lifecycle management (ALM) and development operations processes. We recommend performing all the steps described inside of a solution context. This will prepare when you test the app by launching it as a pilot program to more users, such as in a production environment. Having the model-driven app and site map inside of a solution enables your app to be exported from the environment where you created this new app following your existing processes onward in your environment pipeline. 
+Follow your application lifecycle management (ALM) and development operations processes. We recommend performing all the steps described inside of a solution context. Once you test and validate the app in the development environment, you can further test the app by launching it as a pilot program to more users, such as in a production environment. Having the model-driven app and site map inside of a solution enables your app to be exported from the environment where you created this new app following your existing processes onward in your environment pipeline. 
 
 ## Process for validating your Web Client app in an existing environment
  
