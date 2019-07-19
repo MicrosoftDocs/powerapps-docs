@@ -27,7 +27,7 @@ Add **Activities** in the **Timeline** wall to keep track of all your communicat
 - If the **Regarding** field of an activity is set, the activity appears in the record it is associated with. 
 - You can also choose the filter pane to filter the activities by record type and date. 
 - When a new activity is created, you will get a **What you missed** notification in the **Timeline** wall.
-- An email with an attachement an image will be shown inline with the body of the email.
+- An email with an attached image will be shown inline with the body of the email.
 
   > [!div class="mx-imgBorder"]
   > ![Timeline view of activities in PowerApps](media/TimelineViewOfActivity.png "Timeline view of activities in PowerApps")  
