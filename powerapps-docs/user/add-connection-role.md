@@ -47,8 +47,8 @@ Before you can add connection roles, it needs to be enabled by your admin. For m
     > [!div class="mx-imgBorder"]
     > ![Choose new connection role](media/connection3.png "Choose new connection role")  
 
-  > [!NOTE]
-  > If you have entered information before creating a new connection role, a warning dialog will be displayed asking if you would like to cancel and continue working on the connection or to go ahead and leave the current record you are working on.
+    > [!NOTE]
+    > If you have entered information before creating a new connection role, a warning dialog will be displayed asking if you would like to cancel and continue working on the connection or to go ahead and leave the current record you are working on.
 
 6. To create a new connection role, on the **New Connection Role** screen enter a name and then choose a **Connection Role Category**.
 
