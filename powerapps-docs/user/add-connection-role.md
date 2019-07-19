@@ -28,7 +28,7 @@ It's a quick way to create multiple connections and roles for a particular recor
 Connection roles are directly associated to a connection. To use a connection role, you must first add a connection to your record.  
 
 1. To add or manage connections, select the record you want to manage like an opportunity.  
-2. Select the **Related** tab and then select**Connection**. This will open the connection grid with the list of connections for the record.
+2. Select the **Related** tab and then select **Connection**. This will open the connection grid with the list of connections for the record.
 
   > [!div class="mx-imgBorder"]
   > ![Add a new connection role](media/connection1.png "Add a new connection role") 
