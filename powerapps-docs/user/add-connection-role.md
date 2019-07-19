@@ -40,7 +40,7 @@ Connection roles are directly associated to a connection. To use a connection ro
   
 4. On the **Name** field, enter or find the name of the record for the connection.
 
-5. On the **As this Role** field select the lookup icon and then choose **New Connection Role**. Or, use the search to find an existing role that you want to associate to the connection and the select **Save**.
+5. On the **As this Role** field select the lookup icon and then choose **New Connection Role**. Or, use the search to find an existing role that you want to associate to the connection and then select **Save**.
 
   > [!div class="mx-imgBorder"]
   > ![Choose new connection role](media/connection3.png "Choose new connection role")  
