@@ -70,6 +70,6 @@ Select on **Manage Record Type** on the command. This will open a list of connec
 
 
   > [!div class="mx-imgBorder"]
-  > ![Manage Record Type](media/connection5.png "Manage Record Type") 
+  > ![Manage Record Type](media/connection6.png "Manage Record Type") 
 
 
