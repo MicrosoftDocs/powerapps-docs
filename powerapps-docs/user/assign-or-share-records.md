@@ -25,7 +25,7 @@ Use the **Share** option if you want to keep ownership of the record but let som
 
 1. From the left navigation pane, select a record type. For exmaple, **Contacts**.
 
-2. In the list of records, select the record that you want to reassign.  
+2. From the list of records, select the record that you want to reassign.  
   
 3. On the command bar, select **Assign**.
 
@@ -46,7 +46,7 @@ Use the **Share** option if you want to keep ownership of the record but let som
 
 ## Use advanced find to reassign records
 
-Use advacned find to search for records you want to reassign. For more information on advacned find, see [Create, edit, or save an Advanced Find search](create-edit-or-save-advanced-find-search.md).
+Use advacned find to search for records that you want to reassign to someone else. For more information on advacned find, see [Create, edit, or save an Advanced Find search](create-edit-or-save-advanced-find-search.md).
 
 
 1. On the command bar, select **Advacned Find**.
