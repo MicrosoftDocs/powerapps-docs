@@ -54,13 +54,13 @@ Use advacned find to search for records and then reassign them to someone else. 
    > [!div class="mx-imgBorder"]
    > ![Advanced find](media/assign3.png "advacned find")
    
-2. From the list of records, select the records that you want to reassign and then select **Assign Accounts**.
+2. From the list of records, select the records that you want to reassign and then select the assign option.
 
    > [!div class="mx-imgBorder"]
    > ![Reassign a record using advanced find](media/assign4.png "Reassign a record using advacned find")
    
  
- ## Reassign all records for a user (for admins)
+ ## Reassign all records (for admins)
  
  A admin can reassign all record for a user from the admin Setting area.
  
