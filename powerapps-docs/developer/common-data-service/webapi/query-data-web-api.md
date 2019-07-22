@@ -300,6 +300,13 @@ OData-MaxVersion: 4.0
 OData-Version: 4.0
 ```
 
+> [!NOTE]
+> You cannot negate operator with `$filter` operator. For example, the query given below is not a valid query.
+>
+> ```http
+> GET [Organization URI]/api/data/v9.1/accounts?$filter=NOT Microsoft.Dynamics.CRM.EqualUserId(Name='Contoso')
+> ```
+
 ## Filter parent records based on values of child records
 
 The example given below shows how you can use the [/any operator](#bkmk_anyoperator) to retrieve all the account records which have:
@@ -404,33 +411,19 @@ OData-Version: 4.0
 
 The two options for filtering results based on values of collection-valued navigation properties are:
 
-1. **Construct a query using FetchXML**
+1. **Construct a query using Lambda operators**
 
 Generally, using FetchXML should provide better performance because the filtering can be applied server-side in a single operation. The example shown below illustrates how to apply filter on values of collection properties for a link-entity.
 
 The below example retrieves the records of `systemuser` entity type that are linked with `team` and `teammembership` entity types, that means it retrieves `systemuser` records who are also administrators of a team.
 
-```xml
-<fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="true">
-  <entity name="systemuser">
-    <attribute name="fullname" />
-    <attribute name="businessunitid" />
-    <attribute name="title" />
-    <attribute name="address1_telephone1" />
-    <attribute name="positionid" />
-    <attribute name="systemuserid" />
-    <order attribute="fullname" descending="false" />
-    <link-entity name="teammembership" from="systemuserid" to="systemuserid" visible="false" intersect="true">
-      <link-entity name="team" from="teamid" to="teamid" alias="ab">
-        <filter type="and">
-          <condition attribute="administratorid" operator="eq" value="<guid>" />
-        </filter>
-      </link-entity>
-    </link-entity>
-  </entity>
-</fetch>
+```http
+GET [Organization URI]/api/data/v9.1/systemusers?$teammembership_association/any(t:t/name eq ‘CITTEST)&$select=fullname,businessunitid,title,address1_telephone1,positioned,systemuserid&$oderby= fullname
+Accept: application/json  
+OData-MaxVersion: 4.0  
+OData-Version: 4.0  
 ```
-More information: [Build queries with FetchXML](/dynamics365/customer-engagement/developer/org-service/build-queries-fetchxml).
+More information: [Use Lambda operators](#bkmk_LambdaOperators).
 
 2. **Iterate over results filtering individual entities based on values in the collection using multiple operations**
 
