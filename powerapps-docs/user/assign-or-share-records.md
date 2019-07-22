@@ -44,15 +44,17 @@ Use the **Share** option if you want to keep ownership of the record but let som
   
 5. When you're done, select **Assign**.
 
-c
+## Use advanced find to reassign records
+
+Use advacned find to search for records you want to reassign. For more information on advacned find, see [Create, edit, or save an Advanced Find search](create-edit-or-save-advanced-find-search.md).
+
 
 1. On the command bar, select **Advacned Find**.
 
    > [!div class="mx-imgBorder"]
    > ![Advanced find](media/assign3.png "advacned find")
    
-2. Use advacned find to search for records you want to reassign. For more information on advacned find, see [Create, edit, or save an Advanced Find search](create-edit-or-save-advanced-find-search.md).
-3. From the list of records, select the records that you want to reassign and then select **Assign Accounts**.
+2. From the list of records, select the records that you want to reassign and then select **Assign Accounts**.
 
    > [!div class="mx-imgBorder"]
    > ![Reassign a record using advanced find](media/assign4.png "Reassign a record using advacned find")
