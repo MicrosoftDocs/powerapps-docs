@@ -300,13 +300,6 @@ OData-MaxVersion: 4.0
 OData-Version: 4.0
 ```
 
-> [!NOTE]
-> You cannot negate operator with `$filter` operator. For example, the query given below is not a valid query.
->
-> ```http
-> GET [Organization URI]/api/data/v9.1/accounts?$filter=NOT Microsoft.Dynamics.CRM.EqualUserId(Name='Contoso')
-> ```
-
 ## Filter parent records based on values of child records
 
 The example given below shows how you can use the [/any operator](#bkmk_anyoperator) to retrieve all the account records which have:
@@ -323,6 +316,13 @@ Accept: application/json
 OData-MaxVersion: 4.0  
 OData-Version: 4.0 
 ```
+
+> [!NOTE]
+> You cannot negate operator with `$filter` operator. For example, the query given below is not a valid query.
+>
+> ```http
+> GET [Organization URI]/api/data/v9.1/accounts?$filter=NOT Microsoft.Dynamics.CRM.EqualUserId(Name='Contoso')
+> ```
 
 <a name="BKMK_FilterNavProperties"></a>
 
