@@ -80,7 +80,7 @@ OData-Version: 4.0
 > [!NOTE]
 >  Queries on model entities aren’t limited or paged. More information:[Query Metadata using the Web API](query-metadata-web-api.md)  
 
-<a name="bkmk_limittop"></a>
+<a name="bkmk_limitResults"></a>
 
 ### Use `$top` query option
 
