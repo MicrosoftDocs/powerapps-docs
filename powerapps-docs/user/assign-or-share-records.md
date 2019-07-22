@@ -23,7 +23,7 @@ If you would like another person in your organization to handle a customer recor
 
 Use the **Share** option if you want to keep ownership of the record but let someone else work on it with you. 
 
-1. From the left navigation pane, select a record type. For exmaple, **Contacts**.
+1. From the left navigation pane, select a record type. For example, **Contacts**.
 
 2. From the list of records, select the record that you want to reassign.  
   
@@ -46,10 +46,10 @@ Use the **Share** option if you want to keep ownership of the record but let som
 
 ## Use advanced find to reassign records
 
-Use advacned find to search for records and then reassign them to someone else. For more information on advacned find, see [Create, edit, or save an Advanced Find search](create-edit-or-save-advanced-find-search.md).
+Use advanced find to search for records and then reassign them to someone else. For more information on advanced find, see [Create, edit, or save an Advanced Find search](create-edit-or-save-advanced-find-search.md).
 
 
-1. On the command bar, select **Advacned Find**.
+1. On the command bar, select **Advanced Find**.
 
    > [!div class="mx-imgBorder"]
    > ![Advanced find](media/assign3.png "advacned find")
@@ -71,7 +71,7 @@ Use advacned find to search for records and then reassign them to someone else. 
    > [!div class="mx-imgBorder"]
    > ![Reassign all records](media/assign5.png "Reassign all records")
    
- 4. On the **Reassing Records** dialog box choose how to want to reassign all the recrods and then select **OK**.
+ 4. On the **Reassign Records** dialog box choose how to want to reassign all the records and then select **OK**.
  
  
    > [!div class="mx-imgBorder"]
