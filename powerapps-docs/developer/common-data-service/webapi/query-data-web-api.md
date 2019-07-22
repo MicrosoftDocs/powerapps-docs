@@ -79,10 +79,25 @@ OData-Version: 4.0
   
 > [!NOTE]
 >  Queries on model entities aren’t limited or paged. More information:[Query Metadata using the Web API](query-metadata-web-api.md)  
+
+<a name="bkmk_limittop></a>
+
+### Use `$top` query option
+
+You can limit the number of results returned by using the `$top` system query option. The following example will return just the first three account entities.  
   
+```http 
+GET [Organization URI]/api/data/v9.1/accounts?$select=name,revenue&$top=3  
+```  
+  
+> [!NOTE]
+>  Limiting results using `$top` will prevent `odata.maxpagesize` preference from being applied. You can use `odata.maxpagesize` preference or `$top`, but not both at the same time. For more information about `odata.maxpagesize`, see [Specify the number of entities to return in a page](query-data-web-api.md#bkmk_specifyNumber).  
+>   
+>  You should also not use `$top` with `$count`.  
+
 <a name="bkmk_specifyNumber"></a>
 
-## Specify the number of entities to return in a page
+### Specify the number of entities to return in a page
 
 Use the `odata.maxpagesize` preference value to request the number of entities returned in the response.  
   
@@ -230,6 +245,8 @@ More information: [Compose a query with functions](use-web-api-functions.md#bkmk
 
 The Web API allows you to use two lambda operators, which are `any` and `all` to evaluate a Boolean expression on a collection.
 
+<a name ="bkmk_anyoperator"></a>
+
 ### `any` operator
 
 The `any` operator returns `true` if the Boolean expression applied is `true` for any member of the collection, otherwise it returns `false`. The `any` operator without an argument returns `true` if the collection is not empty.
@@ -245,6 +262,8 @@ Accept: application/json
 OData-MaxVersion: 4.0  
 OData-Version: 4.0 
 ```
+<a name ="bkmk_alloperator"></a>
+
 ### `all` operator
 
 The `all` operator returns `true` if the Boolean expression applied is `true` for all members of the collection, otherwise it returns `false`.
@@ -283,7 +302,7 @@ OData-Version: 4.0
 
 ## Filter parent records based on values of child records
 
-The example given below shows how you can retrieve all the account records which have:
+The example given below shows how you can use the [/any operator](#bkmk_anyoperator) to retrieve all the account records which have:
 
 - any of their linked opportunity records' budget greater than or equal to 500, and
 - the opportunity records' have no description, or
@@ -474,22 +493,7 @@ GET [Organization URI]/api/data/v9.1/accounts?$select=name,revenue,&$orderby=@p1
 ```  
   
  You can also use parameter aliases when using functions. More information: [Use Web API functions](use-web-api-functions.md)  
-  
-<a name="bkmk_limitResults"></a>
- 
-## Limit results
-
- You can limit the number of results returned by using the `$top` system query option. The following example will return just the first three account entities.  
-  
-```http 
-GET [Organization URI]/api/data/v9.1/accounts?$select=name,revenue&$top=3  
-```  
-  
-> [!NOTE]
->  Limiting results using `$top` will prevent `odata.maxpagesize` preference from being applied. You can use `odata.maxpagesize` preference or `$top`, but not both at the same time. For more information about `odata.maxpagesize`, see [Specify the number of entities to return in a page](query-data-web-api.md#bkmk_specifyNumber).  
->   
->  You should also not use `$top` with `$count`.  
-  
+    
 <a name="bkmk_retrieveCount"></a>
  
 ## Retrieve a count of entities
