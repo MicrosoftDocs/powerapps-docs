@@ -318,7 +318,7 @@ OData-Version: 4.0
 ```
 
 > [!NOTE]
-> You cannot use `NOT` operator with `Microsoft.Dynamics.CRM.EqualUserId` operator. For example, the query given below is not a valid query.
+> You cannot use `NOT` operator with a custom function such as [Microsoft.Dynamics.CRM.EqualUserId](/dynamics365/web-api/equaluserid) function. For example, the query given below is not a valid query.
 >
 > ```http
 > GET [Organization URI]/api/data/v9.1/accounts?$filter=NOT Microsoft.Dynamics.CRM.EqualUserId(Name='Contoso')
@@ -413,10 +413,10 @@ The two options for filtering results based on values of collection-valued navig
 
 1. **Construct a query using Lambda operators**
 
-Lambda operators allow you to apply filter on values of collection properties for a link-entity. The below example retrieves the records of `systemuser` entity type that are linked with `team` and `teammembership` entity types, that means it retrieves `systemuser` records who are also administrators of a team.
+Lambda operators allow you to apply filter on values of collection properties for a link-entity. The below example retrieves the records of `systemuser` entity type that are linked with `team` and `teammembership` entity types, that means it retrieves `systemuser` records who are also administrators of a team whose name is "CITTEST".
 
 ```http
-GET [Organization URI]/api/data/v9.1/systemusers?$teammembership_association/any(t:t/name eq ‘CITTEST)&$select=fullname,businessunitid,title,address1_telephone1,positioned,systemuserid&$oderby= fullname
+GET [Organization URI]/api/data/v9.1/systemusers?$teammembership_association/any(t:t/name eq 'CITTEST')&$select=fullname,businessunitid,title,address1_telephone1,positioned,systemuserid&$oderby= fullname
 Accept: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
