@@ -37,7 +37,7 @@ This quick start topic shows you how to use an existing environment to create a 
 ## Overview 
 This topic is for existing customers who are currently using legacy web client applications that need to plan and execute their transition to the Unified Interface. To set up a parallel environment, you create a new application based on your default solution as it stands today. This can be done in your current development sandbox environment without impact to your existing work.
 
-Now, users with the appropriate role can see your new app in the app list on both the Dynamics 365 for Customer Engagement app list drop-down or on the the Dynamics 365 Home page (http://home.dynamics.com).
+After completing the steps in this article users with the appropriate role can see your new app in the app list on both the Dynamics 365 for Customer Engagement app list drop-down or on the the Dynamics 365 Home page (http://home.dynamics.com).
 
 ![App list](media/app-list.png)
 
@@ -124,7 +124,9 @@ The tasks required to configure the model-driven app properties include:
 
 6. Select **Save**. 
 
-Now users with the appropriate role can see your new app in the app list on both Dynamics 365 for Customer Engagement app list drop-down or on the Dynamics 365 Home page (http://home.dynamics.com).   
+Now users with the appropriate role can see your new app in the app list on both Dynamics 365 for Customer Engagement app list drop-down or on the Dynamics 365 Home page (http://home.dynamics.com). 
+  
+   ![App list](media/app-list.png)
 
 Because the **Use Unified Interface only** mode is set to **Off**, when users navigate to the root URL of your environment, they will still land on the default **Dynamics 365 – Custom** application as before. This is expected if you want to continue supporting your existing legacy web client apps while testing and working on the Unified Interface apps.  
 
