@@ -50,7 +50,7 @@ For example, a date prefixed number would generate records such as *2019-26-02-1
 ### Custom
 
 For more advanced makers with specific use cases, we provide the option to fully customize the desired format of an autonumber field. The format may consist of string constants, automatically incrementing numbers, formatted dates, or random alphanumeric sequences.
-For detailed information about how to define custom formats, see [AutoNumberFormat options](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/create-auto-number-attributes#autonumberformat-options).
+For detailed information about how to define custom formats, see [AutoNumberFormat options](https://docs.microsoft.com/dynamics365/customer-engagement/developer/create-auto-number-attributes#autonumberformat-options).
 
 ## Seed values
 
