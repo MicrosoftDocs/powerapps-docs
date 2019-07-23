@@ -3,8 +3,7 @@ title: "Common issues and resolutions for Solution Checker | Microsoft Docs" # I
 description: " A list of common issues and resolutions within Solution Checker"
 keywords: ""
 ms.date: 02/11/2019
-ms.service:
-  - powerapps
+ms.service: powerapps
 ms.custom:
   - ""
 ms.topic: article
