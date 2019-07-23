@@ -25,7 +25,8 @@ search.app:
 ---
 # Quick start for transitioning your Dynamics 365 for Customer Engagement apps web client application to Unified Interface
 
-This quick start topic explains how to transition your Dynamics 365 for Customer Engagement apps legacy web client application to the Unified Interface. The Unified Interface framework uses responsive web design principles to provide an optimal viewing and interaction experience for any screen size, device, or orientation. 
+The Unified Interface framework uses responsive web design principles to provide an optimal viewing and interaction experience for any screen size, device, or orientation. This quick start topic explains how to transition your Dynamics 365 for Customer Engagement apps Web Client application to Unified Interface by using a new non-production environment. To use and existing non-production environment to transition your Web Client application, see [Quick start for using an existing environment to validate your legacy web client app with the Unified Interface](transition-web-app-existing.md). 
+
 
 ## Prerequisites
 - A Dynamics 365 for Customer Engagement apps legacy web client application. 
