@@ -2,7 +2,7 @@
 title: "Query Data using the Web API (Common Data Service)| Microsoft Docs"
 description: "Read about the various ways to query Common Data Service data using the Common Data Service Web API and various system query options that can be applied in these queries"
 ms.custom: ""
-ms.date: 05/28/2019
+ms.date: 07/23/2019
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -318,7 +318,7 @@ OData-Version: 4.0
 ```
 
 > [!NOTE]
-> You cannot negate operator with `$filter` operator. For example, the query given below is not a valid query.
+> You cannot use `NOT` operator with `Microsoft.Dynamics.CRM.EqualUserId` operator. For example, the query given below is not a valid query.
 >
 > ```http
 > GET [Organization URI]/api/data/v9.1/accounts?$filter=NOT Microsoft.Dynamics.CRM.EqualUserId(Name='Contoso')
@@ -328,7 +328,7 @@ OData-Version: 4.0
 
 ## Filter records based on single-valued navigation property
 
-Navigation properties let you access data related to the current entity. *Single-valued* navigation properties correspond to Lookup attributes that support many-to-one relationships and allow setting a reference to another entity. More information: [Navigation properties](web-api-types-operations.md#bkmk_navprops)  
+Navigation properties let you access data related to the current entity. *Single-valued* navigation properties correspond to Lookup attributes that support many-to-one relationships and allow setting a reference to another entity. More information: [Navigation properties](web-api-types-operations.md#bkmk_navprops).  
   
 You can filter your entity set records based on single-valued navigation property  values. For example, you can retrieve child accounts for the specified account.  
   
@@ -425,7 +425,7 @@ More information: [Use Lambda operators](#bkmk_LambdaOperators).
 
 2. **Iterate over results filtering individual entities based on values in the collection using multiple operations**
 
-To get the same results as the FetchXML example above, you can retrieve records of two entity types and then iteratively match the values in the collection of one entity to the value in the other entity, thereby filtering entities based on the values in the collection.
+To get the same results as the example above, you can retrieve records of two entity types and then iteratively match the values in the collection of one entity to the value in the other entity, thereby filtering entities based on the values in the collection.
 
 Follow the steps in the below example to understand how we can filter results using the iteration method:
 
@@ -460,7 +460,7 @@ By using `$apply` you can aggregate and group your data dynamically.  Possible u
 |Last created record date and time|`$apply=aggregate(createdon with max as lastCreate)`|
 |First created record date and time|`$apply=aggregate(createdon with min as firstCreate)`|
 
-The aggregate functions are limited to a collection of 50,000 records.  Further information around using aggregate functionality with Common Data Service can be found here: [Use FetchXML to construct a query](../use-fetchxml-construct-query.md)
+The aggregate functions are limited to a collection of 50,000 records.  Further information around using aggregate functionality with Common Data Service can be found here: [Use FetchXML to construct a query](../use-fetchxml-construct-query.md).
 
 Additional details on OData data aggregation can be found here: [OData Extension for Data Aggregation Version 4.0](http://docs.oasis-open.org/odata/odata-data-aggregation-ext/v4.0/cs01/odata-data-aggregation-ext-v4.0-cs01.html).  Note that Dynamics 365 for Customer Engagement apps only supports a sub-set of these aggregate methods.
 
@@ -821,6 +821,7 @@ OData-Version: 4.0
 }
   
 ```  
+<a name="BKMK_changetracking"></a>
 
 ## Use change tracking to synchronize data with external systems
 
