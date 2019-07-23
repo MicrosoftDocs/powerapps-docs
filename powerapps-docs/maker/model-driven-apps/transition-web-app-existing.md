@@ -124,7 +124,7 @@ The tasks required to configure the model-driven app properties include:
 
 6. Select **Save**. 
 
-Now users with the appropriate role can see your new app in the app list on both Dynamics 365 for Customer Engagement app list drop-down or on the Dynamics 365 Home page (http://home.dynamics.com). 
+Now, users with the appropriate role can see your new app in the app list on both Dynamics 365 for Customer Engagement app list drop-down or on the Dynamics 365 Home page (http://home.dynamics.com). 
   
    ![App list](media/app-list.png)
 
