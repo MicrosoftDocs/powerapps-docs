@@ -97,7 +97,7 @@ If you use the Dynamics 365 for Field Service or Dynamics 365 for Project Servic
 > [!NOTE]
 > The latest versions of Field Service and Project Service Automation on the Unified Interface are available by default for newly created instances. If you want to upgrade an existing environment with installed earlier versions, you must request the upgrade by contacting [Microsoft Customer Support](https://go.microsoft.com/fwlink/?LinkId=853505). 
 
-More information: [Dynamics 365 for Field Service latest versions](/dynamics365/field-service/version-history#latest-versions) and  [Dynamics 365 for Project Service Automation upgrade home page](/dynamics365/customer-engagement/project-service/upgrade-psa-home-page)
+More information: [Dynamics 365 for Field Service latest versions](/dynamics365/customer-engagement/field-service/version-history#latest-versions) and  [Dynamics 365 for Project Service Automation upgrade home page](/dynamics365/customer-engagement/project-service/upgrade-psa-home-page)
 
 ## Next steps
 Based on your findings, your implementation team or partner can estimate the amount of effort needed to transition your application into the Unified Interface and also identify potential usability improvements. With multiple new features and capabilities available in the Unified Interface, there is opportunity to increase value for your application users. 
