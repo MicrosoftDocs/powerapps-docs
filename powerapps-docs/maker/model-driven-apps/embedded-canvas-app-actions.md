@@ -1,7 +1,7 @@
 ---
-title: "Perform actions on the host form from within an embedded canvas app | MicrosoftDocs"
+title: "Perform actions on the host model-driven form from within an embedded canvas app | MicrosoftDocs"
 ms.custom: ""
-ms.date: 03/29/2019
+ms.date: 06/25/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -23,13 +23,13 @@ search.app:
   - "PowerApps"
   - D365CE
 ---
-# Perform predefined actions on the host form from within an embedded canvas app
-Embedded canvas apps provide the ability to perform predefined actions on the host form. These actions enable makers to navigate, refresh and save the host form. Using these actions, an embedded canvas app can act as a more integral part of the form and the model-driven app.  
+# Perform predefined actions on the host model-driven form from within an embedded canvas app
+Embedded canvas apps provide the ability to perform predefined actions on the host model-driven form. These actions enable makers to navigate, refresh and save the host model-driven form. Using these actions, an embedded canvas app can act as a more integral part of the model-driven form and the model-driven app.  
 
-The **ModelDrivenFormIntegration** object now includes the following new methods to enable makers to perform actions on the host form.  
+The **ModelDrivenFormIntegration** object now includes the following new methods to enable makers to perform actions on the host model-driven form.  
   
 ### NavigateToMainForm(entityName, mainFormName, recordId)
-Navigates the host form to a main form and displays the specified record.  
+Navigates the host model-driven form to a main form and displays the specified record.  
 * **entityName** - A required string parameter that specifies the parent entity of the main form.  
 * **formName** - A required string parameter that specifies the name of the main form to navigate to.  
 * **recordId** - A required string parameter, that specifies the ID of the record to display in the main form.  
@@ -44,7 +44,7 @@ Calling the NavigateToMainForm method can show the following error messages.
   
   
 ### NavigateToView(entityName, viewName)
-Navigates the host form to a view.  
+Navigates the host model-driven form to a view.  
 * **entityName** - A required string parameter that specifies the parent entity of the view.  
 * **viewName** - A required string parameter that specifies the name of the main form to navigate to.  
  
@@ -68,8 +68,8 @@ Calling the OpenQuickCreateForm method can show the following error messages.
   
   
 ### RefreshForm(showPrompt)  
-Refreshes the data on the host form.  
-* **showPrompt** - A required boolean parameter that indicates if a confirmation prompt should be displayed to the user before saving any unsaved data on the host form. Values should be "true" or "false".
+Refreshes the data on the host model-driven form.  
+* **showPrompt** - A required boolean parameter that indicates if a confirmation prompt should be displayed to the user before saving any unsaved data on the host model-driven form. Values should be "true" or "false".
  
 Calling the RefreshForm method can show the following error messages.
   
@@ -79,7 +79,7 @@ Calling the RefreshForm method can show the following error messages.
   
   
 ### SaveForm()  
-Saves the data on the host form.  
+Saves the data on the host model-driven form.  
 
 
 > [!NOTE]
@@ -87,7 +87,10 @@ Saves the data on the host form.
 
 ## See also
 [Embed a canvas app on a model-driven form](embed-canvas-app-in-form.md) <br />
-[Pass the current record as data context to an embedded canvas app](pass-current-embedded-canvas-app.md) <br />
-[Pass a list of related records as data context to an embedded canvas app](pass-related-embedded-canvas-app.md) <br />
+[Add an embedded canvas app on a model-driven form](embedded-canvas-app-add-classic-designer.md) <br />
+[Edit a canvas app embedded on a model-driven form](embedded-canvas-app-edit-classic-designer.md) <br />
+[Customize the screen size and orientation of a canvas app embedded on a model-driven form](embedded-canvas-app-customize-screen.md) <br />
+[ModelDrivenFormIntegration control's properties and actions](embedded-canvas-app-properties-actions.md) <br />
 [Share an embedded canvas app](share-embedded-canvas-app.md) <br />
-[Guidelines on working with embedded canvas apps](embedded-canvas-app-guidelines.md)
+[Guidelines on working with embedded canvas apps](embedded-canvas-app-guidelines.md) <br />
+[Migrating embedded canvas apps on model-driven forms created using the public preview release to latest](embedded-canvas-app-migrate-from-preview.md) <br />

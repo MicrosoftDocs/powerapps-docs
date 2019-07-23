@@ -75,6 +75,18 @@
         href: ../user/export-excel-static-worksheet.md
       - name: Export to an Excel PivotTable
         href: ../user/export-excel-pivottable.md
+    - name: Reports
+      items:
+      - name: Work with reports
+        href: ../user/work-with-reports.md
+      - name: Create a report using the Report Wizard
+        href: ../user/create-report-with-wizard.md
+      - name: Add an existing report
+        href: ../user/add-existing-report.md
+      - name: Edit the default filter of a report
+        href: ../user/edit-report-filter.md
+      - name: Troubleshoot reports
+        href: ../user/troubleshoot-reports.md   
     - name: Automate processes
       items:
       - name: Work with business processes
@@ -883,19 +895,25 @@
             href: ./model-driven-apps/configure-event-handlers-legacy.md
           - name: How to disable auto-save in a form
             href: ./model-driven-apps/manage-auto-save.md
-      - name: Embed a canvas app on a form
+      - name: Embed a canvas app on a model-driven form
         href: ./model-driven-apps/embed-canvas-app-in-form.md
         items:
-        - name: "Pass the current record to an embedded canvas app"
-          href: ./model-driven-apps/pass-current-embedded-canvas-app.md
-        - name: "Pass related records to an embedded canvas app"
-          href:  ./model-driven-apps/pass-related-embedded-canvas-app.md
+        - name: "Add an embedded canvas app"
+          href: ./model-driven-apps/embedded-canvas-app-add-classic-designer.md
+        - name: "Edit an embedded canvas app"
+          href: ./model-driven-apps/embedded-canvas-app-edit-classic-designer.md
+        - name: "Customize the screen size and orientation"
+          href: ./model-driven-apps/embedded-canvas-app-customize-screen.md
         - name: "Perform predefined actions on the host form"
-          href:  ./model-driven-apps/embedded-canvas-app-actions.md
+          href: ./model-driven-apps/embedded-canvas-app-actions.md
+        - name: "ModelDrivenFormIntegration control"
+          href: ./model-driven-apps/embedded-canvas-app-properties-actions.md
         - name: "Share an embedded canvas app"
-          href:  ./model-driven-apps/share-embedded-canvas-app.md
+          href: ./model-driven-apps/share-embedded-canvas-app.md
         - name: "Embedded canvas app guidelines"
-          href:  ./model-driven-apps/embedded-canvas-app-guidelines.md
+          href: ./model-driven-apps/embedded-canvas-app-guidelines.md
+        - name: "Migrating embedded canvas from public preview"
+          href: ./model-driven-apps/embedded-canvas-app-migrate-from-preview.md
       - name: Embed a Power BI report on a form
         href: ./model-driven-apps/embed-powerbi-report-in-system-form.md
       - name: Work with views
@@ -954,6 +972,8 @@
       href: ./model-driven-apps/templates-overview.md
     - name: Use themes to apply organization branding
       href: ./model-driven-apps/create-themes-organization-branding.md
+    - name: Add reporting to your app
+      href: ./model-driven-apps/add-reporting-to-app.md      
   - name: Validate and publish an app
     href: ./model-driven-apps/validate-app.md
   - name: Share an app
@@ -988,6 +1008,63 @@
   - name: For developers
     href: ../developer/model-driven-apps/overview.md
     # href: ../developer/model-driven-apps/TOC.yml For authoring I find having developer content buried so deep is awkward
+
+- name: Portals (preview)
+  items:
+    - name: What is PowerApps Portals?
+      href: ./portals/overview.md
+    - name: Design and build a portal
+      items:
+        - name: Portal templates
+          href: ./portals/portal-templates.md
+        - name: Create a portal
+          href: ./portals/create-portal.md
+        - name: Create a Dynamics 365 Portal
+          href: ./portals/create-dynamics-portal.md
+        - name: Portal designer anatomy
+          href: ./portals/portal-designer-anatomy.md
+        - name: Supported web browsers for portal designer
+          href: ./portals/supported-browser.md
+        - name: Create and manage webpages
+          href: ./portals/create-manage-webpages.md
+        - name: Compose a page
+          href: ./portals/compose-page.md
+        - name: Work with templates
+          href: ./portals/work-with-templates.md
+    - name: Manage existing portals
+      href: ./portals/manage-existing-portals.md
+    - name: Configure site settings
+      href: ./portals/configure-site-settings.md
+    - name: Advanced portal administration
+      items:
+        - name: Overview
+          href: ./portals/admin/admin-overview.md
+        - name: Portal details
+          href: ./portals/admin/portal-details.md
+        - name: Download public key of portal
+          href: ./portals/admin/get-public-key.md
+        - name: View portal error logs
+          href: ./portals/admin/view-portal-error-log.md
+        - name: Reset a portal
+          href: ./portals/admin/reset-portal.md
+        - name: Change base URL of a portal
+          href: ./portals/admin/change-base-url.md
+        - name: Enable maintenance mode
+          href: ./portals/admin/enable-maintenance-mode.md
+        - name: Set up Power BI integration
+          href: ./portals/admin/set-up-power-bi-integration.md
+        - name: Run Portal Checker
+          href: ./portals/admin/portal-checker.md
+        - name: Renew portal authentication key
+          href: ./portals/admin/manage-auth-key.md
+        - name: Set up IP address restriction
+          href: ./portals/admin/ip-address-restrict.md
+        - name: Update to PowerApps Portals domain
+          href: ./portals/admin/update-portal-domain.md
+    - name: Known issues
+      href: ./portals/known-issues.md
+    - name: PowerApps Portals FAQ
+      href: ./portals/faq.md
 - name: Common Data Service
   href: ./common-data-service/data-platform-intro.md
   items:
