@@ -74,7 +74,7 @@ Use advanced find to search for records and then reassign them to someone else. 
  4. On the **Reassign Records** dialog box choose how to want to reassign all the records and then select **OK**.
  
   > [!NOTE]
-   > Reassign Records will reassign all records regardless of their status,inactive and active records will be reassigned to the other user or team.
+   > The **Reassign Records** option will reassign all records regardless of their status. Inactive and active records will be reassigned to the other user or team.
  
    > [!div class="mx-imgBorder"]
    > ![Reassign all records to user or team](media/assign6.png "Reassign all records to user or team")
