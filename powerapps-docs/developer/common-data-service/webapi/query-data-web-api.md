@@ -300,7 +300,7 @@ OData-MaxVersion: 4.0
 OData-Version: 4.0
 ```
 
-## Filter parent records based on values of child records
+### Filter parent records based on values of child records
 
 The example given below shows how you can use the [/any operator](#bkmk_anyoperator) to retrieve all the account records which have:
 
@@ -326,7 +326,7 @@ OData-Version: 4.0
 
 <a name="BKMK_FilterNavProperties"></a>
 
-## Filter records based on single-valued navigation property
+### Filter records based on single-valued navigation property
 
 Navigation properties let you access data related to the current entity. *Single-valued* navigation properties correspond to Lookup attributes that support many-to-one relationships and allow setting a reference to another entity. More information: [Navigation properties](web-api-types-operations.md#bkmk_navprops).  
   
@@ -404,7 +404,7 @@ OData-Version: 4.0
 }   
 ```
 
-## Filter results based on values of collection-valued navigation properties
+### Filter results based on values of collection-valued navigation properties
 
 > [!NOTE]
 > It is possible to use `$filter` within `$expand` to filter results for related records in a Retrieve operation. You can use a semi-colon separated list of system query options enclosed in parentheses after the name of the collection-valued navigation property. The query options that are supported within `$expand` are `$select`, `$filter`, `$top` and `$orderby`. More information: [Options to apply to expanded entities](retrieve-entity-using-web-api.md#options-to-apply-to-expanded-entities).
