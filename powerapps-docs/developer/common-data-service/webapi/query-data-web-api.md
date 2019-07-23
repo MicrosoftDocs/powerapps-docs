@@ -413,9 +413,7 @@ The two options for filtering results based on values of collection-valued navig
 
 1. **Construct a query using Lambda operators**
 
-Generally, using FetchXML should provide better performance because the filtering can be applied server-side in a single operation. The example shown below illustrates how to apply filter on values of collection properties for a link-entity.
-
-The below example retrieves the records of `systemuser` entity type that are linked with `team` and `teammembership` entity types, that means it retrieves `systemuser` records who are also administrators of a team.
+Lambda operators allow you to apply filter on values of collection properties for a link-entity. The below example retrieves the records of `systemuser` entity type that are linked with `team` and `teammembership` entity types, that means it retrieves `systemuser` records who are also administrators of a team.
 
 ```http
 GET [Organization URI]/api/data/v9.1/systemusers?$teammembership_association/any(t:t/name eq ‘CITTEST)&$select=fullname,businessunitid,title,address1_telephone1,positioned,systemuserid&$oderby= fullname
