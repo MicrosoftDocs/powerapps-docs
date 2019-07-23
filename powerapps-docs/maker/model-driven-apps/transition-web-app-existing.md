@@ -25,7 +25,7 @@ search.app:
 ---
 # Quick start for using an existing environment to validate your legacy web client app with the Unified Interface
 
-This quick start topic shows you how to use an existing environment to create a Unified Interface application that’s based on your environment’s default solution. Using an existing environment allows you to continue to explore and test the Unified Interface while running your existing Web Client applications in parallel.  For similar instructions that show you how to create a new sandbox environment to isolate the testing and validation tasks needed  for your Web Client applications, see [Quick start for transitioning your Dynamics 365 for Customer Engagement apps Web Client application to Unified Interface](transition-web-app.md).
+This quick start topic shows you how to use an existing environment to create a Unified Interface application based upon your current configuration or default solution. This allows you to explore and test the Unified Interface while running your existing Web Client applications in parallel. A user can then switch between environments for a side-by-side view. For similar instructions that show you how to create a new sandbox environment to isolate the testing and view only the Unified Interface experience, see [Quick start for transitioning your Dynamics 365 for Customer Engagement apps Web Client application to Unified Interface](transition-web-app.md).
 
 > [!IMPORTANT]
 >  For environments with Dynamics 365 for Field Service or Dynamics 365 for Project Service Automation apps, see [Dynamics 365 for Customer Engagement apps](transition-web-app.md#dynamics-365-for-customer-engagement-apps).
@@ -35,9 +35,11 @@ This quick start topic shows you how to use an existing environment to create a 
 - Although not required, we recommend using a non-production environment to test your application. More information: [Manage sandbox instances](/dynamics365/customer-engagement/admin/manage-sandbox-instances) 
 
 ## Overview 
-This topic is for existing customers who are currently using Web Client applications that need to plan and execute their transition to the Unified Interface. 
+This topic is for existing customers who are currently using Web Client applications that need to plan and execute their transition to the Unified Interface. To set up a parallel environment, you create a new application based on your default solution as it stands today. This can be done in your current development sandbox environment without impact to your existing work.
 
-We recommended using a non-production environment to execute a test using **Use Unified Interface Only** mode to avoid impacting current deployment or development cycles. To do this, you create a new solution based on your existing application as it stands today. This can be done in your current development sandbox environment without impact to your existing work.  
+Now, users with the appropriate role can see your new app in the app list on both the Dynamics 365 for Customer Engagement app list drop-down or on the the Dynamics 365 Home page (http://home.dynamics.com).
+
+![App list](media/app-list.png)
 
 Once you complete the tasks described in this topic in your development environment using a solution, you can import the solution into your testing environment, which allows a wider group of business users to test and compare the app in a familiar environment. 
 
