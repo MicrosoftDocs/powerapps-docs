@@ -255,5 +255,5 @@ People can use [!INCLUDE[pn_ms_dyn_crm_app_for_outlook](../includes/pn-ms-dyn-cr
  [Dynamics 365 App for Outlook User's Guide](http://go.microsoft.com/fwlink/p/?LinkID=613099)   
  [Read more details about supported clients in this blog: Dynamics 365 App for Outlook Support Matrix](https://blogs.msdn.microsoft.com/crm/2016/12/13/dynamics-365-app-for-outlook-support-matrix/)   
  [Set up server-side synchronization of email, appointments, contacts, and tasks](../Topic/Set%20up%20server-side%20synchronization%20of%20email,%20appointments,%20contacts,%20and%20tasks.md)   
- [Add users, licenses, and security roles](http://msdn.microsoft.com/en-us/23612155-f92d-4871-a109-186419d5c19d)   
+ [Add users, licenses, and security roles](https://msdn.microsoft.com/23612155-f92d-4871-a109-186419d5c19d)   
  [Add interoperation features to Microsoft Dynamics 365 (online)](../DocSets/CRMIGv9_Admin/Toc/Add%20interoperation%20features%20to%20Microsoft%20Dynamics%20365%20\(online\).md)
