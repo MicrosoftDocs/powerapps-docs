@@ -318,7 +318,7 @@ OData-Version: 4.0
 ```
 
 > [!NOTE]
-> You cannot use `NOT` operator with a custom function such as [Microsoft.Dynamics.CRM.EqualUserId](/dynamics365/web-api/equaluserid) function. For example, the query given below is not a valid query.
+> You cannot use `NOT` operator with a custom function such as [Microsoft.Dynamics.CRM.EqualUserId](/dynamics365/customer-engagement/web-api/equaluserid) function. For example, the query given below is not a valid query.
 >
 > ```http
 > GET [Organization URI]/api/data/v9.1/accounts?$filter=NOT Microsoft.Dynamics.CRM.EqualUserId(Name='Contoso')
@@ -825,7 +825,7 @@ OData-Version: 4.0
 
 ## Use change tracking to synchronize data with external systems
 
-The change tracking feature allows you to keep the data synchronized in an efficient manner by detecting what data has changed since the data was initially extracted or last synchronized. Changed made in entities can be tracked using Web API requests by adding `odata.track-changes` as a preference header. Preference header `odata.track-changes` requests that a delta link be returned which can subsequently be used to retrieve entity changes.
+The change tracking feature allows you to keep the data synchronized in an efficient manner by detecting what data has changed since the data was initially extracted or last synchronized. Changes made in entities can be tracked using Web API requests by adding `odata.track-changes` as a preference header. Preference header `odata.track-changes` requests that a delta link be returned which can subsequently be used to retrieve entity changes.
 
 More information: [Use change tracking to synchronize data with external systems](../use-change-tracking-synchronize-data-external-systems.md).
 
