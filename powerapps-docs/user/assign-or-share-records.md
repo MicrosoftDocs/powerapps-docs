@@ -33,8 +33,8 @@ Use the **Share** option if you want to keep ownership of the record but let som
    > ![Reassign a record](media/assign1.png "Reassign a record")
 
    > [!NOTE]
-   > If you want to keep ownership of the record but let someone else work with it, select **Share**. Then use the tooltips to guide you through the **Share** option. Remember, you can only share **Account** records—there is no assign option.
-  
+   > If you want to keep ownership of the record but let someone else work with it, select **Share**. Then use the tooltips to guide you through the **Share** option. 
+   
 4. In the assign dialog box, in the **Assign to** area, choose **Me** or **User or Team**.
 
    > [!div class="mx-imgBorder"]
@@ -73,6 +73,8 @@ Use advanced find to search for records and then reassign them to someone else. 
    
  4. On the **Reassign Records** dialog box choose how to want to reassign all the records and then select **OK**.
  
+  > [!NOTE]
+   > Reassign Records will reassign all records regardless of their status,inactive and active records will be reassigned to the other user or team.
  
    > [!div class="mx-imgBorder"]
    > ![Reassign all records to user or team](media/assign6.png "Reassign all records to user or team")
