@@ -824,7 +824,7 @@ OData-Version: 4.0
 
 ## Use change tracking to synchronize data with external systems
 
-The change tracking feature allows you to keep the data synchronized in an efficient manner by detecting what data has changed since the data was initially extracted or last synchronized. Changed made in entities can be tracked using Web API requests by adding `odata.track-changes` as a preference header. Preference header `odata.track-changes` requests that a delta link be returned which can subsequently be used to retrieve entity changes. More information: [Use change tracking to synchronize data with external systems](../use-change-tracking-synchronize-external-systems.md).
+The change tracking feature allows you to keep the data synchronized in an efficient manner by detecting what data has changed since the data was initially extracted or last synchronized. Changed made in entities can be tracked using Web API requests by adding `odata.track-changes` as a preference header. Preference header `odata.track-changes` requests that a delta link be returned which can subsequently be used to retrieve entity changes. More information: [Use change tracking to synchronize data with external systems](../use-change-tracking-synchronize-data-external-systems.md).
 
 ### See also
 
