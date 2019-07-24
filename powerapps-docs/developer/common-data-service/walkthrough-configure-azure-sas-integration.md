@@ -3,8 +3,7 @@ title: "Walkthrough: Configure Microsoft Azure (SAS) for integration (Common Dat
 description: "The walkthrough guides you through configuring the Azure Service Bus issuer, scope, and rules to allow a listener application to read the Common Data Service messages posted to the Azure Service Bus."
 keywords: ""
 ms.date: 10/31/2018
-ms.service:
-  - powerapps
+ms.service: powerapps
 ms.custom:
   - ""
 ms.topic: article
@@ -27,7 +26,7 @@ search.app:
 This walkthrough guides you through configuring the Azure Service Bus issuer, scope, and rules to allow a listener application to read the Common Data Service messages posted to the Azure Service Bus.  
   
 > [!NOTE]
->  This walkthrough applies to any Common Data Service deployment when using SAS authorization for Azure messaging. For more information about Azure Service Bus authorization, see [Service Bus authentication and authorization](https://azure.microsoft.com/en-us/documentation/articles/service-bus-authentication-and-authorization/).  
+>  This walkthrough applies to any Common Data Service deployment when using SAS authorization for Azure messaging. For more information about Azure Service Bus authorization, see [Service Bus authentication and authorization](https://azure.microsoft.com/documentation/articles/service-bus-authentication-and-authorization/).  
 >   
 > You must use the Plug-in Registration Tool. To download the plug-in registration tool, see [Download tools from NuGet](download-tools-NuGet.md).
   
