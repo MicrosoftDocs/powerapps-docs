@@ -2,7 +2,7 @@
 title: "Visual Studio and the .NET Framework (Common Data Service) | Microsoft Docs" 
 description: "Learn about managed code development tools and requirements."
 ms.custom: ""
-ms.date: 01/25/2019
+ms.date: 07/03/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.topic: "article"
@@ -20,6 +20,8 @@ search.app:
 The .NET SDK assemblies for Common Data Service are built on .NET Framework 4.6.2. 
 
 You can use Visual Studio to build your managed code applications using .NET Framework 4.6.2 or later. 
+
+Plug-ins and custom workflow assemblies should use .NET Framework 4.6.2. While assemblies built using later versions should generally work, if they use any features introduced after 4.6.2 an error will occur.
 
 > [!IMPORTANT]
 > You should build any custom client applications using Microsoft .NET Framework 4.6.2 or later.

@@ -76,7 +76,7 @@ Interactive experience dashboards can be a one-stop workplace for app users, suc
  > ![Single-stream dashboard layouts.](media/interactive-dashboards-single-stream-layout.png "Single-stream dashboard layouts.")  
   
 <a name="BKMK_Enable"></a>   
-## Configure fiter fields, and security roles for the interactive dashboards  
+## Configure filter fields, and security roles for the interactive dashboards  
  When you configure interactive dashboards, your first task is to enable filter fields and security roles, so that interactive dashboards can be configured for them. Notice that interactive dashboards are enabled for all entities and custom entities by default. 
   
 ### Configure filter fields  

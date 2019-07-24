@@ -33,7 +33,7 @@ Yes. You can add activities to entities that are read only such as, notes, phone
 
 ## Are HTML tags supported in **Notes**?
 
-No. When creating a note activity for any record or entity, HTML tags are not supported. For example, if you add <TAG> </TAG> to a note field it will be displayed as <TAG_XXX="XX"> </TAG>.
+No. When creating a note activity for any record or entity, HTML tags are not supported. For example, if you add `<TAG> </TAG>` to a note field it will be displayed as `<TAG_XXX="XX"> </TAG>`.
 
 ## How can I improve performance on timeline wall?
 
