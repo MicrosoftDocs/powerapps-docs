@@ -1,7 +1,7 @@
 ---
 title: "Guidelines on working with embedded canvas apps | MicrosoftDocs"
 ms.custom: ""
-ms.date: 06/25/2019
+ms.date: 07/24/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -45,14 +45,14 @@ This topic provides guidelines on working with embedded canvas apps as well as h
 - When you view a model-driven form with an embedded canvas app, if you see an error message that reads "It looks like you don’t have access to this app. Ask its owner to share it with you" make sure that the author has shared the embedded canvas app with you. More information: [Share an embedded canvas app](share-embedded-canvas-app.md).
 
 ## Enable an embedded canvas app
-1. Select the field or sub-grid control that is customized to display as an embedded canvas app.
-2. In the **Field Properties** (or **Set Properties** for sub-grid) dialog, select the **Controls** tab.
+1. Select the field that is customized to display as an embedded canvas app.
+2. In the **Field Properties** dialog, select the **Controls** tab.
 3. In the list of controls select **Canvas app** and then select the **Web** option.
 4. Select **OK**.
 
 ## Disable an embedded canvas app
-1. Select the Field or sub-grid control that is customized to display as an embedded canvas app.
-2. In the **Field Properties** (or **Set Properties** for sub-grid) dialog, select the **Controls** tab.
+1. Select the Field that is customized to display as an embedded canvas app.
+2. In the **Field Properties** dialog, select the **Controls** tab.
 3. In the list of controls select the default control and then select the **Web** option.
 4. Select **OK**.
 
