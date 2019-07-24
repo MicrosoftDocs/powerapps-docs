@@ -1001,6 +1001,16 @@
       href: ./model-driven-apps/distribute-model-driven-app.md
     - name: Create guided help
       href: ./model-driven-apps/create-guided-help-learning-path.md      
+  - name: Transition Web Client applications
+    items: 
+    - name: Transition quick start
+      href: ./model-driven-apps/transition-web-app.md
+    - name: Use an existing environment to transition quick start
+      href: ./model-driven-apps/transition-web-app-existing.md  
+    - name: Unified Interface Playbook
+      href: ./model-driven-apps/unified-interface-playbook.md
+    - name: Approaching a Unified Interface transition
+      href: ./model-driven-apps/approaching-unified-interface.md
   - name: Accessibility in PowerApps app designer
     href: ./model-driven-apps/Accessibility-app-designer-site-map-designer-my-apps-page.md
   - name: Customize Dynamics 365 App for Outlook
