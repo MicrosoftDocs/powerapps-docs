@@ -6,7 +6,7 @@ When you enable Dynamics 365 mobile offline, Dynamics 365 (online) data is downl
   
  A list of the Azure components and services that are involved with Mobile offline functionality is provided below.  
   
- **Note:** For more information about additional Azure service offerings, see the [Microsoft Azure Trust Center](https://azure.microsoft.com/en-us/support/trust-center/).  
+ **Note:** For more information about additional Azure service offerings, see the [Microsoft Azure Trust Center](https://azure.microsoft.com/support/trust-center/).  
   
  **Cloud Services (Web role)**  
   
