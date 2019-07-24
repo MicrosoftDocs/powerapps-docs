@@ -256,7 +256,7 @@ npm start
 
 ## Packaging your custom components
 
-Follow the steps below to create and import a [solution](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/customize/solutions-overview) file:
+Follow the steps below to create and import a [solution](https://docs.microsoft.com/dynamics365/customer-engagement/customize/solutions-overview) file:
 
 1. Create a new folder **Solutions** inside the **LinearComponent** folder and navigate into the folder. 
 2. Create a new solution project in the **LinearComponent** folder using the command 
@@ -266,7 +266,7 @@ Follow the steps below to create and import a [solution](https://docs.microsoft.
     ```
 
    > [!NOTE]
-   > The [publisherName](https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/reference/entities/publisher) and [cutomizationPrefix](https://docs.microsoft.com/en-us/powerapps/maker/common-data-service/change-solution-publisher-prefix) values must be unique to your environment.
+   > The [publisherName](https://docs.microsoft.com/powerapps/developer/common-data-service/reference/entities/publisher) and [cutomizationPrefix](https://docs.microsoft.com/powerapps/maker/common-data-service/change-solution-publisher-prefix) values must be unique to your environment.
  
 3. Once the new solution project is created, you need to refer to the location where the created component is located. You can add the reference by using the command
 
@@ -293,7 +293,7 @@ Follow the steps below to create and import a [solution](https://docs.microsoft.
     > - Under **Code Tools**, check **NuGet targets & Build Tasks**
 
 6. The generated solution zip file is located in `Solution\\bin\debug\`.
-7. You should manually [import the solution](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/customize/import-update-export-solutions) using the web portal once the zip file is ready.
+7. You should manually [import the solution](https://docs.microsoft.com/dynamics365/customer-engagement/customize/import-update-export-solutions) using the web portal once the zip file is ready.
 
 ## Adding custom components to a field or an entity
 

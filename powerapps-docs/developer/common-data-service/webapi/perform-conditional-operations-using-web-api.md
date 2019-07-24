@@ -29,7 +29,7 @@ Common Data Service provides support for a set of conditional operations that re
   
 ## ETags
 
-The HTTP protocol defines an *entity tag*, or [ETag](https://msdn.microsoft.com/en-us/library/dd541486.aspx) for short, for identifying specific versions of a resource. ETags are opaque identifiers whose exact values are implementation dependent. ETag values occur in two varieties: strong and weak validation. Strong validation indicates that a unique resource, identified by a specific URI, will be identical on the binary level if its corresponding ETag value is unchanged. Weak validation only guarantees that the resource representation is semantically equivalent for the same ETag value.  
+The HTTP protocol defines an *entity tag*, or [ETag](https://msdn.microsoft.com/library/dd541486.aspx) for short, for identifying specific versions of a resource. ETags are opaque identifiers whose exact values are implementation dependent. ETag values occur in two varieties: strong and weak validation. Strong validation indicates that a unique resource, identified by a specific URI, will be identical on the binary level if its corresponding ETag value is unchanged. Weak validation only guarantees that the resource representation is semantically equivalent for the same ETag value.  
   
 Common Data Service generates a weakly validating `@odata.etag` property for every entity instance, and this property is automatically returned with each retrieved entity record. For more information, see [Retrieve an entity using the Web API](retrieve-entity-using-web-api.md).  
   
