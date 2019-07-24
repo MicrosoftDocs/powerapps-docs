@@ -46,6 +46,8 @@ Create an asynchronous plug-in registered on the Create message of the account e
 - Download the Plug-in Registration tool.
     - Information about downloading the Plug-in registration tool is at : [Download tools from NuGet](download-tools-nuget.md). That topic includes instructions to use a PowerShell script to download the latest tools from NuGet.
 
+<a name="BKMK_create"></a>
+
 ## Create a plug-in project
 
 You need to use Visual Studio to write a plug-in. Use these steps to write a basic plug-in. Alternately, you can find the complete plug-in solution files here: [Sample: Create a basic plug-in](org-service/samples/basic-followup-plugin.md).
@@ -213,6 +215,8 @@ In Visual Studio, press **F6** to build the assembly. Verify that it compiles wi
 
 > [!NOTE]
 > Build the assembly using **Debug** configuration because you will use the Plug-in profiler to debug it in a later tutorial.   Before you include a plug-in with your solution, you should build it using the release configuration.
+
+<a name="BKMK_register"></a>
 
 ## Register plug-in
 

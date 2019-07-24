@@ -1,7 +1,7 @@
 ---
 title: "Pass the current record as data context with an embedded canvas app | MicrosoftDocs"
 ms.custom: ""
-ms.date: 12/17/2018
+ms.date: 06/25/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -24,6 +24,10 @@ search.app:
 ---
 
 # Pass the current record as data context to an embedded canvas app
+> [!IMPORTANT]
+> Canvas apps embedded on model-driven forms are now out of preview and generally available. The steps listed below are outdated and applicable only to the public preview release of canvas apps embedded on model-driven forms.
+>  For the updated list of steps for the latest release, please see: [Add an embedded canvas app on a model-driven form](embedded-canvas-app-add-classic-designer.md)
+
 This topic explains how to add an embedded canvas app and pass the current (main form) record as a data context to the embedded canvas app.
 
 Imagine that you want to add an embedded canvas app on an account main form and pass the current account record to the embedded canvas app. To do this, follow these steps: 
@@ -76,7 +80,11 @@ This topic showed you how to get started with embedding a canvas app in a model-
 
 ## See also
 [Embed a canvas app on a model-driven form](embed-canvas-app-in-form.md) <br />
-[Pass a list of related records as data context to an embedded canvas app](pass-related-embedded-canvas-app.md) <br />
+[Add an embedded canvas app on a model-driven form](embedded-canvas-app-add-classic-designer.md) <br />
+[Edit a canvas app embedded on a model-driven form](embedded-canvas-app-edit-classic-designer.md) <br />
+[Customize the screen size and orientation of a canvas app embedded on a model-driven form](embedded-canvas-app-customize-screen.md) <br />
 [Perform predefined actions on the host form from within an embedded canvas app](embedded-canvas-app-actions.md) <br />
+[ModelDrivenFormIntegration control's properties and actions](embedded-canvas-app-properties-actions.md) <br />
 [Share an embedded canvas app](share-embedded-canvas-app.md) <br />
-[Guidelines on working with embedded canvas apps](embedded-canvas-app-guidelines.md)
+[Guidelines on working with embedded canvas apps](embedded-canvas-app-guidelines.md) <br />
+[Migrating embedded canvas apps on model-driven forms created using the public preview release to latest](embedded-canvas-app-migrate-from-preview.md) <br />
