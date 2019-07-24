@@ -3,8 +3,7 @@ title: "Walkthrough: Register an app with Azure Active Directory (Common Data Se
 description: "This walkthrough describes how to register an application with Azure Active Directory so that it can connect to the Common Data Service environment, authenticate using OAuth, and access the web services."
 keywords: ""
 ms.date: 04/01/2019
-ms.service:
-  - powerapps
+ms.service: powerapps
 ms.custom:
   - ""
 ms.topic: article
@@ -41,7 +40,7 @@ App registration can also be done by an application developer or individual user
 1.  [Sign in](http://manage.windowsazure.com) to the Azure management portal by using an account with administrator permission. You must use an account in the same Office 365 subscription (tenant) as you intend to register the app with.<br><br> You can also access the Azure management portal through the Office 365 [Admin center](https://admin.microsoft.com/adminportal) by expanding the **Admin centers** item in the left navigation pane, and selecting **Azure AD**.  
   
     > [!NOTE]
-    > If you don’t have an Azure tenant (account) or you do have one but your Office 365 subscription with Common Data Service is not available in your Azure subscription, following the instructions in the topic [Set up Azure Active Directory access for your Developer Site](https://docs.microsoft.com/office/developer-program/office-365-developer-program) to associate the two accounts.<br><br> If you don’t have an account, you can sign up for one by using a credit card. However, the account is free for application registration and your credit card won’t be charged if you only follow the procedures called out in this topic to register one or more apps. More information: [Active Directory Pricing Details](http://azure.microsoft.com/pricing/details/active-directory/)  
+    > If you don’t have an Azure tenant (account) or you do have one but your Office 365 subscription with Common Data Service is not available in your Azure subscription, following the instructions in the topic [Set up Azure Active Directory access for your Developer Site](https://docs.microsoft.com/office/developer-program/office-365-developer-program) to associate the two accounts.<br><br> If you don’t have an account, you can sign up for one by using a credit card. However, the account is free for application registration and your credit card won’t be charged if you only follow the procedures called out in this topic to register one or more apps. More information: [Active Directory Pricing Details](https://azure.microsoft.com/pricing/details/active-directory/)  
   
 1. In the Azure management portal, follow the steps as described in the [Adding an application](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications#adding-an-application) section in the Azure Active Directory developers guide to create an app. 
   

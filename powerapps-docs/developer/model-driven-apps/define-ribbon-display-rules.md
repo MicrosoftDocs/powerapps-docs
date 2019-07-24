@@ -3,8 +3,7 @@ title: "Define ribbon display rules (model-driven apps) | Microsoft Docs" # Inte
 description: "Learn about defining specific rules to control when the ribbon elements will display during the configuration of ribbon elements. " # 115-145 characters including spaces. This abstract displays in the search result."
 keywords: ""
 ms.date: 10/31/2018
-ms.service:
-  - powerapps
+ms.service: powerapps
 ms.custom:
   - ""
 ms.topic: article
