@@ -2,7 +2,7 @@
 title: "Unified Interface Playbook | MicrosoftDocs"
 description: "Learn how to plan and execute your transistion from Web Client to Unified Interface"
 ms.custom: ""
-ms.date: 07/08/2019
+ms.date: 07/24/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""

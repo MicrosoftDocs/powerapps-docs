@@ -2,7 +2,7 @@
 title: "Quick start for using an existing environment to validate your legacy web client app with the Unified Interface | MicrosoftDocs"
 description: "Learn how to plan and execute your transistion from legacy web client to Unified Interface"
 ms.custom: ""
-ms.date: 07/18/2019
+ms.date: 07/24/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""

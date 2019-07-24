@@ -2,7 +2,7 @@
 title: "Quick start for transitioning your Dynamics 365 for Customer Engagement apps web client application to Unified Interface | MicrosoftDocs"
 description: "Learn how to transition your legacy web client application to the Unified Interface"
 ms.custom: ""
-ms.date: 07/08/2019
+ms.date: 07/24/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
