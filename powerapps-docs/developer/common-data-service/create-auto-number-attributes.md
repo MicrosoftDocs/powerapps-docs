@@ -3,11 +3,11 @@ title: "Create auto-number attributes (Common Data Service) | Microsoft Docs" # 
 description: "Learn about creating auto-number attribute in the same way you create a string attribute using the StringAttributeMetadata class except that you use the new AutoNumberFormat property. Use the AutoNumberFormat property to define a pattern that includes sequential numbers and random strings by composing placeholders, which indicates the length and type of values that are generated."
 keywords: "Auto-number attributes" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 07/24/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.topic: "article"
-author: "MicroSri" # GitHub ID
+author: "nhelgren" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
