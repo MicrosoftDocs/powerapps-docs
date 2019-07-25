@@ -36,6 +36,12 @@ Going forward the capabilities of the service can change, including potentially 
 
 For v8.x versions, response of FetchXML queries containing link-entities and their attributes contains Unicode special characters such that '.' becomes '_x002e_' and '@' becomes '_x0040_'. This encoding for special characters is not present in response of FetchXML queries for v9.x release.
 
+### Same name for entity and attribute
+
+If the name of an entity and one of its attributes is same, then "1" gets appended to the attribute name in v8.x instances. For example, if an entity **new_zipcode** has an attribute with name as **new_zipcode** then, the attribute name will change to **new_zipcode1**.
+
+For v9.x instances, nothing gets appended to the attribute name.
+
 ## New operations added  
 
 The following operations have been added to the Web API for the v9.x release.  
