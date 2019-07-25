@@ -2,7 +2,7 @@
 title: "Common Data Service Web API Versions (Common Data Service)| Microsoft Docs"
 description: "Read how versioning of Common Data Service Web API works. Common Data Service Web API versions support version specific differences in the same environment which is different from the behavior in the v8.x releases in which new capabilities were additive"
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 07/25/2019
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -41,7 +41,13 @@ The Common Data Service Web API provides complete parity with the capabilities o
 ||||  
 |-|-|-|  
 |<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|  
-  
+
+<a name="BKMK_fetchresponse"></a>
+
+## Encoding for special characters in FetchXML query response
+
+For v8.x versions, response of FetchXML queries containing link-entities and their attributes contains Unicode special characters such that '.' becomes '_x002e_' and '@' becomes '_x0040_'. This encoding for special characters is not present in response of FetchXML queries for v9.x release.
+
 ### See also  
 
 [Use the Common Data Service Web API](overview.md)<br />
