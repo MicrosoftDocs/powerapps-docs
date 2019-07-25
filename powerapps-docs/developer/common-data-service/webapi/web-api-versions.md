@@ -28,13 +28,6 @@ This is different from the behavior for in the v8.*x* releases. In the previous 
   
 Going forward the capabilities of the service can change, including potentially breaking changes such as removing specific operations. This will allow for improvements to be applied on an on-going basis. This topic will record any version specific differences and any limitations where the Web API hasn't yet achieved parity with the organization service.  
   
-## Web API Limitations  
-
-The Common Data Service Web API provides complete parity with the capabilities of the organization service. For Common Data Service, this topic describes the limitations carried forward from the Common Data Service v8.x release. For earlier releases, see [Dynamics CRM 2016 Web API Limitations](https://msdn.microsoft.com/library/mt628816\(CRM.8\).aspx).  
- 
-> [!NOTE] 
-> If you defined a custom action which included a complex return value and a simple return value, a corresponding Action was not available in the Web API but was available using the 2011 SOAP endpoint. A complex return value is an `EntityReference`, `Entity`, or `EntityCollection`. You can have any combination of simple return values or a single complex return value. More information: [Create your own actions](/dynamics365/customer-engagement/developer/create-own-actions).
-
 ## Web API version specific differences
 
 <a name="BKMK_fetchresponse"></a>
@@ -50,6 +43,13 @@ The following operations have been added to the Web API for the v9.x release.
 ||||  
 |-|-|-|  
 |<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|  
+
+## Web API Limitations  
+
+The Common Data Service Web API provides complete parity with the capabilities of the organization service. For Common Data Service, this topic describes the limitations carried forward from the Common Data Service v8.x release. For earlier releases, see [Dynamics CRM 2016 Web API Limitations](https://msdn.microsoft.com/library/mt628816\(CRM.8\).aspx).  
+ 
+> [!NOTE] 
+> If you defined a custom action which included a complex return value and a simple return value, a corresponding Action was not available in the Web API but was available using the 2011 SOAP endpoint. A complex return value is an `EntityReference`, `Entity`, or `EntityCollection`. You can have any combination of simple return values or a single complex return value. More information: [Create your own actions](/dynamics365/customer-engagement/developer/create-own-actions).
 
 ### See also  
 
