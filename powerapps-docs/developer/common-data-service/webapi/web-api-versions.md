@@ -34,19 +34,22 @@ The Common Data Service Web API provides complete parity with the capabilities o
  
 > [!NOTE] 
 > If you defined a custom action which included a complex return value and a simple return value, a corresponding Action was not available in the Web API but was available using the 2011 SOAP endpoint. A complex return value is an `EntityReference`, `Entity`, or `EntityCollection`. You can have any combination of simple return values or a single complex return value. More information: [Create your own actions](/dynamics365/customer-engagement/developer/create-own-actions).
- 
+
+## Web API version specific differences
+
+<a name="BKMK_fetchresponse"></a>
+
+### Encoding for special characters in FetchXML query response
+
+For v8.x versions, response of FetchXML queries containing link-entities and their attributes contains Unicode special characters such that '.' becomes '_x002e_' and '@' becomes '_x0040_'. This encoding for special characters is not present in response of FetchXML queries for v9.x release.
+
 ## New operations added  
- The following operations have been added to the Web API for the v9.x release.  
+
+The following operations have been added to the Web API for the v9.x release.  
   
 ||||  
 |-|-|-|  
 |<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|  
-
-<a name="BKMK_fetchresponse"></a>
-
-## Encoding for special characters in FetchXML query response
-
-For v8.x versions, response of FetchXML queries containing link-entities and their attributes contains Unicode special characters such that '.' becomes '_x002e_' and '@' becomes '_x0040_'. This encoding for special characters is not present in response of FetchXML queries for v9.x release.
 
 ### See also  
 

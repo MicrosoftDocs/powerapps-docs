@@ -82,7 +82,7 @@
     href: samples/global-discovery-service-csharp.md
 - name: Import data
   href: ../import-data.md 
-- name: Web API versions
+- name: Web API versions and limitations
   href: web-api-versions.md
 - name: Sample data
   href: ../sample-data.md #Topic is for both Web API and Organization service
