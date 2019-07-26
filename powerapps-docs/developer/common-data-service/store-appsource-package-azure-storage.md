@@ -72,4 +72,4 @@ To upload your package to Azure Blob storage:
 
 
 > [!div class="nextstepaction"]
-> [Next steps: Submit your app on Cloud Partner Portal](next-steps-submit-app-cloud-partner-portal.md)
+> [Next steps: Submit your app on Partner Center](next-steps-submit-app-cloud-partner-portal.md)
