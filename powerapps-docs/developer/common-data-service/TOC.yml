@@ -41,8 +41,6 @@
       href: retrieve-and-delete-the-history-of-audited-data-changes.md
     - name: Audit user access
       href: audit-user-access.md
-    - name: Create auto-number attributes
-      href: create-auto-number-attributes.md
   - name: Detect duplicate data
     href: detect-duplicate-data-with-code.md
     items:
@@ -265,6 +263,8 @@
       href: behavior-format-date-time-attribute.md
     - name: Calculated and rollup attributes
       href: calculated-rollup-attributes.md
+    - name: Create auto-number attributes
+      href: create-auto-number-attributes.md
     - name: Multi-Select Picklist attributes
       href: multi-select-picklist.md
     - name: Image attributes

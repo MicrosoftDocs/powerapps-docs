@@ -89,7 +89,11 @@ If you use the Dynamics 365 for Field Service or Dynamics 365 for Project Servic
     > [!IMPORTANT]
     > If **administration mode** is enabled, you must disable it so you can view the **Solutions** area. More information: [Administration mode](/power-platform/admin/sandbox-environments#administration-mode)
 
+<<<<<<< HEAD
 7. Find the Field Service or Project Service Automation solution and select it. The option to **Upgrade** should be available. Select it to upgrade the solution. 
+=======
+7. Find the Field Service or Project Service Automation solution and open it. The option to **Upgrade** should be available. Select it to upgrade the solution. 
+>>>>>>> cb77e767b102907a881457e52a17addedb7941ee
 
     > [!div class="mx-imgBorder"] 
     > ![Upgrade solution](media/ppac-upgrade-solution.png "Upgrade solution")
