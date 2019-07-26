@@ -80,8 +80,6 @@
     href: discover-url-organization-web-api.md
   - name: Global Discovery Service Sample (C#)
     href: samples/global-discovery-service-csharp.md
-- name: Import data
-  href: ../import-data.md 
 - name: Web API versions and limitations
   href: web-api-versions.md
 - name: Sample data
