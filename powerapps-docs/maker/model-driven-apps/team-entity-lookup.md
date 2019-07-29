@@ -36,9 +36,9 @@ However, if the user entity is included in the app but the team entity is not, o
 ## Add the team entity to an app
 
 1. Open the app in the App Designer. 
-2. Select the **Components** tab, select **Entities**, and then select **Team**.  (In this example, the Team Project entity is already added to the Innovation Challenge sample app.)  
+2. Select the **Components** tab, select **Entities**, and then select **Team**.  (In this example, the Team Project entity is already added to the app.)  
 
     ![Add the team entity to the app](media/add-team-entity-app.png)
 
-3. Select **Save**, and the select **Publish** to make it available to app users.   
+3. Select **Save**, and the select **Publish** to make your change available to app users.   
 
