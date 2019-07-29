@@ -31,6 +31,7 @@ App registration in Azure Active Directory is typically done by ISVs who want to
 App registration can also be done by an application developer or individual user who is building a client application to connect to and read/write data in Common Data Service. Use the **Application ID** and **Redirect URI** values from your registered app in your client application's authentication code to be able to connect to Common Data Service environment from your client application, and perform the required operations. Note that if the app is registered in the same tenant as your Common Data Service environment, you won't be presented with a consent form when connecting from your client application to your Common Data Service environment.
 
 ## Prerequisites  
+
 -   The user who is registering the application must have a user account with System Administrator security role and the global administrator role for the Office 365 subscription.  
   
 -   An Azure subscription for application registration. A trial account will also work.  
