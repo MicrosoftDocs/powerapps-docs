@@ -366,7 +366,7 @@
       href: create-package-app-appsource.md
     - name: 'Step 5: Store your AppSource Package on Azure Storage and generate a URL with SAS key'
       href: store-appsource-package-azure-storage.md
-    - name: 'Next steps: Submit your app on Cloud Partner Portal'
+    - name: 'Next steps: Submit your app on Partner Center'
       href: next-steps-submit-app-cloud-partner-portal.md
     - name: 'Appendix: App design best practices checklist'
       href: appendix-app-design-best-practices-checklist.md
