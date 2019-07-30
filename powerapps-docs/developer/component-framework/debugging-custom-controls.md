@@ -7,6 +7,7 @@ ms.service: "powerapps"
 ms.topic: "article"
 ms.assetid: 18e88d702-3349-4022-a7d8-a9adf52cd34f
 ms.author: "nabuthuk"
+author: Nkrb
 ---
 # Debug custom components
 
@@ -55,15 +56,15 @@ You can use the browser’s debugging capabilities to observe the component beha
 
 For example, on **Microsoft Edge**,
 
-- Press **F12** to open inspector.
+- Press **F12** to open the inspector.
 - Click on your component
-- On top bar, go to **Debugger**, and then start searching for the component name described in the Manifest file in the search bar. For example, type your component name like `Hello World component`.
+- On the top bar, go to **Debugger**, and then start searching for the component name described in the Manifest file in the search bar. For example, type your component name like `Hello World component`.
 
      > [!div class="mx-imgBorder"]
      > ![debug-component](media/debug-control.png "Debug component")
 
 > [!NOTE]
-> It is always a good practice to set breakpoints on the component's life cycle methods like `init` and `updateView`
+> It is always a good practice to set breakpoints on the component's life cycle methods like `init` and `updateView`.
 
 You can also interact with the component locally in real-time and observe elements in the DOM by setting a breakpoint in the sources tab as follows
 
@@ -72,7 +73,7 @@ You can also interact with the component locally in real-time and observe elemen
 
 ## Fiddler AutoResponder
 
-Use the Fiddler AutoResponder to quickly debug your custom components. Install [Fiddler](https://www.telerik.com/download/fiddler) and follow the steps to configure [AutoResponder](https://docs.microsoft.com/dynamics365/customer-engagement/developer/streamline-javascript-development-fiddler-autoresponder)
+Use the Fiddler AutoResponder to debug your custom components quickly. Install [Fiddler](https://www.telerik.com/download/fiddler) and follow the steps to configure [AutoResponder](https://docs.microsoft.com/dynamics365/customer-engagement/developer/streamline-javascript-development-fiddler-autoresponder)
 
 ### Related topics
 

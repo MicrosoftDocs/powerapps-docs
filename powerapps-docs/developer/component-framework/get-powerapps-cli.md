@@ -3,6 +3,7 @@ title: Get tooling for PowerApps component framework | Microsoft Docs
 description: "Get the Microsoft PowerApps CLI to create, debug and deploy custom components using PowerApps component framework."
 keywords: PowerApps component framework, Custom components, Component Framework
 ms.author: nabuthuk
+author: Nkrb
 manager: kvivek
 ms.date: 06/18/2019
 ms.service: "powerapps"
@@ -50,7 +51,7 @@ To use Microsoft PowerApps CLI, do the following:
 
 ## Update Microsoft PowerApps CLI to the latest version
 
-To update your Microsoft PowerApps CLI to the latest version and take advantage of all the latest capabilities, run the following command in the Developer Command Prompt for VS 2017:
+To update your Microsoft PowerApps CLI to the latest version and take the advantage of all the latest capabilities, run the following command in the Developer Command Prompt for VS 2017:
 
 ```CLI
 pac install latest

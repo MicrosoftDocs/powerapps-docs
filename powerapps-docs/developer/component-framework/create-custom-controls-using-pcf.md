@@ -3,6 +3,7 @@ title: Create and build a custom component| Microsoft Docs
 description: Start creating a component using the PowerApps component framework Tooling
 keywords: PowerApps component framework, Custom components, Component Framework
 ms.author: nabuthuk
+author: Nkrb
 manager: kvivek
 ms.date: 06/20/2019
 ms.service: "powerapps"
