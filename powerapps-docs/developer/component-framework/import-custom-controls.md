@@ -1,6 +1,6 @@
 ---
-title: Import Controls  | Microsoft Docs
-description: Process to import custom controls
+title: Import components  | Microsoft Docs
+description: Process to import custom components
 keywords:
 ms.author: nabuthuk
 manager: kvivek
@@ -12,7 +12,7 @@ ms.topic: "article"
 
 # Package a custom component
 
-This topic demonstrates how to import custom controls into Common Data Service. After developing custom controls using the PowerApps CLI, next step is to import those controls, so that you can see the controls in runtime.
+This topic demonstrates how to import custom components into Common Data Service. After developing custom components using the PowerApps CLI, next step is to import those components, so that you can see the components in runtime.
 
 Follow the steps below to create and import a solution file:
 
@@ -21,7 +21,7 @@ Follow the steps below to create and import a solution file:
    > [!NOTE]
    > The `publisher-name` and `publisher-prefix` values must be unique to your environment.
  
-2. Once the new solution project is created, you need to refer to the location where the created control is located. You can add the reference by using below command. This reference, tells the solution project which custom components to package during build and you can add references to multiple components in a single solution project.
+2. Once the new solution project is created, you need to refer to the location where the created component is located. You can add the reference by using below command. This reference, tells the solution project which custom components to package during build and you can add references to multiple components in a single solution project.
 `pac solution add-reference --path <path of your PowerApps component framework project on disk>`
 3. To generate a zip file from your solution project, you will need to `cd` into your solution project directory and build the project using the command `msbuild /t:build /restore`. This command uses MSBuild to build your solution project by first pulling down nuget dependencies as part of restore. Please note that the `/restore` has to be used only the first time a solution project is built. For every build afterwards you can simply run `msbuild`.
 
@@ -59,6 +59,6 @@ If you would like to remove a custom component from a solution, follow the steps
 
 ### See also
 
-[Add Controls to entities or fields](add-custom-controls-to-a-field-or-entity.md)<br/>
+[Add components to entities or fields](add-custom-controls-to-a-field-or-entity.md)<br/>
 [PowerApps component framework API Reference](reference/index.md)<br/>
 [PowerApps component framework Overview](overview.md)
