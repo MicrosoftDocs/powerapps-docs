@@ -23,6 +23,11 @@ search.app:
   - PowerApps
   - D365CE
 ---
+
+
+<!--editor comment: I notice two mentions of Dynamics 365 Home page and both are followed by the URL but the text isn't linked. Just want to point that out in case it wasn't intentional. -->
+
+
 # Quick start for using an existing environment to validate your legacy web client app with the Unified Interface
 
 This quick start topic shows you how to use an existing environment to create a Unified Interface application based upon your current configuration or default solution. This allows you to explore and test the Unified Interface while running your existing legacy web client applications in parallel. A user can then switch between environments for a side-by-side view. For similar instructions that show you how to create a new sandbox environment to isolate the testing and view only the Unified Interface experience, see [Quick start for transitioning your Dynamics 365 for Customer Engagement apps legacy web client application to Unified Interface](transition-web-app.md).
