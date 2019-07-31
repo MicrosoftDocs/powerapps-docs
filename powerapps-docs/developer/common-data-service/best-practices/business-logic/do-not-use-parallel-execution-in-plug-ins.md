@@ -33,8 +33,8 @@ search.app:
 
 Multi-threading or parallel calls within plug-ins or custom workflow activities can cause corruption of those the connections.  As an example, executing parallel threads can log exceptions such as:
 
-- `Generic SQL error.`
-- `The transaction active in this session has been committed or aborted by another session.`
+`Generic SQL error.`
+`The transaction active in this session has been committed or aborted by another session.`
 
 <a name='guidance'></a>
 
