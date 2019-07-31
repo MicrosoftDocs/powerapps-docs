@@ -7,6 +7,7 @@ ms.service: "powerapps"
 ms.topic: "index-page"
 ms.assetid: 18e88d702-3349-4022-a7d8-a9adf52cd34f
 ms.author: "nabuthuk"
+author: Nkrb
 ---
 
 # Implement components using TypeScript
@@ -42,7 +43,7 @@ A custom component is defined by the information in the `ControlManifest.Input.x
     <property name="sliderValue" display-name-key="sliderValue_Display_Key" description-key="sliderValue_Desc_Key" of-type-group="numbers" usage="bound" required="true" /> 
     ```
 
-3. The of-type-group attribute references a group of allowable numbers. Add the following type-group element as a sibling to the <property> element in the manifest. The type-group specifies the component value and can contain whole, currency, floating point, or decimal values.
+3. The of-type-group attribute references a group of allowable numbers. Add the following type-group element as a sibling to the property element in the manifest. The type-group specifies the component value and can contain whole, currency, floating point, or decimal values.
 
     ```XML
     <type-group name="numbers"> 
@@ -262,11 +263,11 @@ Follow the steps below to create and import a [solution](https://docs.microsoft.
 2. Create a new solution project in the **LinearComponent** folder using the command 
  
     ```CLI
-     pac solution init --publisherName developer --customizationPrefix dev 
+     pac solution init --publisher-name developer --publisher-prefix dev 
     ```
 
    > [!NOTE]
-   > The [publisherName](https://docs.microsoft.com/powerapps/developer/common-data-service/reference/entities/publisher) and [cutomizationPrefix](https://docs.microsoft.com/powerapps/maker/common-data-service/change-solution-publisher-prefix) values must be unique to your environment.
+   > The [publisher-name](https://docs.microsoft.com/powerapps/developer/common-data-service/reference/entities/publisher) and [publisher-prefix](https://docs.microsoft.com/powerapps/maker/common-data-service/change-solution-publisher-prefix) values must be unique to your environment.
  
 3. Once the new solution project is created, you need to refer to the location where the created component is located. You can add the reference by using the command
 
