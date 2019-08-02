@@ -1245,7 +1245,7 @@
     - name: Restricted entities requiring Dynamics 365 licenses
       href: ./common-data-service/data-platform-restricted-entities.md
   - name: SharePoint, OneNote, and OneDrive integration
-    href: ./common-data-service/sharepoint-onedrive-onenote.md
+    href: ./common-data-service/sharepoint-onedrive-onenote-intro.md
   - name: Create a Power BI report
     href: ./common-data-service/data-platform-powerbi-connector.md
   - name: Translate customized entity and field text
