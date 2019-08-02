@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: cds
 ms.topic: conceptual
-ms.date: 07/15/2019
+ms.date: 08/02/2019
 ms.author: matp
 search.audienceType: 
   - maker
