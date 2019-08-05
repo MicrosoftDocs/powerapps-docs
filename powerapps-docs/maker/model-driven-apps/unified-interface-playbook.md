@@ -27,7 +27,7 @@ search.app:
 
 This playbook is intended to help customers, partners and Microsoft field roles plan and execute transitions from the legacy web client to the Unified Interface.
 
-In summary, this guide will help you:
+In summary, the Unified Interface Playbook documents will help you:
 - Understand the Unified Interface. 
 - Understand the transitioning process.
 - Develop a strategy for discussions and the transition.
@@ -35,4 +35,9 @@ In summary, this guide will help you:
 - Manage user inquiries and potential objections effectively.
 - Find the resources that will support the process.
 
-[Download the Unified Interface Playbook](http://download.microsoft.com/download/A/F/3/AF3D45A7-4F38-41BE-8956-1DF7A4A5AFDB/dynamics365unifiedinterfaceplaybook.pdf) 
+|Download link  |Doc type  |
+|---------|---------|
+|[Unified Interface Playbook Overview](http://download.microsoft.com/download/A/F/3/AF3D45A7-4F38-41BE-8956-1DF7A4A5AFDB/dynamics365unifiedinterfaceplaybook.pdf)      |   PDF      |
+|[Chapter 1: Initiate](http://download.microsoft.com/download/A/F/3/AF3D45A7-4F38-41BE-8956-1DF7A4A5AFDB/playbook-ch1-initiate.pptx)     |  PowerPoint       |
+|[Chapter 2: Explore](http://download.microsoft.com/download/A/F/3/AF3D45A7-4F38-41BE-8956-1DF7A4A5AFDB/playbook-ch-2-explore.pptx)     |  PowerPoint       |
+
