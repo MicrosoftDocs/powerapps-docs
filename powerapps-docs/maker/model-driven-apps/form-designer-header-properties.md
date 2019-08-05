@@ -68,7 +68,9 @@ The behavior of the header flyout changes depending on the header density config
 
 To show or hide the header flyout for model-driven forms, follow these steps.
 
-Note: Use the new form designer, the classic form designer does not provide the ability to show or hide the header flyout.
+  > [!NOTE]
+  > Use the new form designer, the classic form designer does not provide the ability to show or hide the header flyout.
+  
 1.	Open the form designer to create or edit a form. More information: [Create a form or Edit a form](create-and-edit-forms.md)
 2.	Select the form header by clicking on the header in the form preview or by using the [tree view](using-tree-view-on-form.md).
 3.	In the property pane, select **High density** to use high density form header. 
