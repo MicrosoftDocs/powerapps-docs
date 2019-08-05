@@ -159,29 +159,23 @@ This article provided an overview of self-service data prep in PowerApps portal,
 and the ways you can use it. The following articles go into more detail about
 common usage scenarios for dataflows.
 
--   [Creating and using dataflows in
-    PowerApps](https://go.microsoft.com/fwlink/?linkid=2100076)
+-   [Creating and using dataflows in PowerApps](https://go.microsoft.com/fwlink/?linkid=2100076)
 
--   [Add data to an entity in Common Data
-    Service](https://go.microsoft.com/fwlink/?linkid=2100075)
+-   [Add data to an entity in Common Data Service](https://go.microsoft.com/fwlink/?linkid=2100075)
 
--   [Connect Azure Data Lake Storage Gen2 for dataflow
-    storage](https://go.microsoft.com/fwlink/?linkid=2099973)
+-   [Connect Azure Data Lake Storage Gen2 for dataflow storage](https://go.microsoft.com/fwlink/?linkid=2099973)
 
--   [Using dataflows with on-premises data
-    sources](https://go.microsoft.com/fwlink/?linkid=2100077)
+-   [Using dataflows with on-premises data sources](https://go.microsoft.com/fwlink/?linkid=2100077)
 
 For more information about Power Query and scheduled refresh, you can read these
 articles:
 
 -   *Query overview in Power BI Desktop*
 
--   [Configuring scheduled
-    refresh](https://docs.microsoft.com/en-us/power-bi/refresh-scheduled-refresh)
+-   [Configuring scheduled refresh](https://docs.microsoft.com/en-us/power-bi/refresh-scheduled-refresh)
 
 For more information about the Common Data Model, you can read its overview
 article:
 
--   [Common Data Model - overview
-    ](https://docs.microsoft.com/powerapps/common-data-model/overview)
+-   [Common Data Model - overview](https://docs.microsoft.com/powerapps/common-data-model/overview)
 
