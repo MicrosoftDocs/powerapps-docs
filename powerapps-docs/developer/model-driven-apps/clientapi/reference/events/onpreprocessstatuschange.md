@@ -1,5 +1,5 @@
 ---
-title: "OnPreProcessStatusChange Event (Client API reference) in Dynamics 365 for Customer Engagement| MicrosoftDocs"
+title: "onPreProcessStatusChange Event (Client API reference) in Dynamics 365 for Customer Engagement| MicrosoftDocs"
 ms.date: 06/30/2019
 ms.service: crm-online
 ms.topic: reference
@@ -13,7 +13,7 @@ search.audienceType:
 search.app: 
   - D365CE
 ---
-# OnPreProcessStatusChange Event (Client API reference)
+# onPreProcessStatusChange Event (Client API reference)
 
 [!INCLUDE[](../../../../../includes/cc_applies_to_update_9_0_0.md)]
 
@@ -24,3 +24,11 @@ Use the **formContext.data.process**.[addOnPreProcessStatusChange](../formContex
 From within a web resource script registered to the onPreStageChange event, a developer can invoke the following on the executionContext object passed into the web resource script: 
 
 `executionContext.getEventArgs().preventDefault();` 
+
+When you invoke `preventDefault`:
+
+- The stage navigation will not be processed. The process instance will remain on the original stage.
+- The save of the main form will not be processed. If the main form was in a dirty state, it would remain in a dirty state.
+- Any web resources that registered onPreProcessStatusChange will not be invoked.
+
+This client API is only supported on the unified client. The legacy web client does not support this client API.
