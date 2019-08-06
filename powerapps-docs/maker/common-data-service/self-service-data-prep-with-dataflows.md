@@ -166,10 +166,10 @@ articles:
 
 -   [Query overview in Power BI Desktop](/power-bi/desktop-query-overview)
 
--   [Configuring scheduled refresh](https://docs.microsoft.com/en-us/power-bi/refresh-scheduled-refresh)
+-   [Configuring scheduled refresh](/power-bi/refresh-scheduled-refresh)
 
 For more information about the Common Data Model, you can read its overview
 article:
 
--   [Common Data Model - overview](https://docs.microsoft.com/powerapps/common-data-model/overview)
+-   [Common Data Model - overview](/powerapps/common-data-model/overview)
 
