@@ -463,8 +463,6 @@
       items:
       - name: addtabStateChange
         href: reference/formcontext-ui-tabs/addtabStateChange.md
-      - name: addtabStateChange
-        href: reference/formcontext-ui-tabs/addtabStateChange.md
       - name: getDisplayState
         href: reference/formcontext-ui-tabs/getDisplayState.md
       - name: getLabel
