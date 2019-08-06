@@ -32,6 +32,8 @@ An execution context object is passed to event handlers for this event. You can 
 - **getDirection**: Returns a string that is either “next” or “previous” to show the direction of the stage change.
 - **getStage**: Returns a stage object. Except when the navigation moves to a new entity, the stage returned represents the destination stage object,that is, the next active stage. When the navigation moves to a new entity, the stage is the stage being navigated from, that is, the previous active stage object. More information: [Stage methods](../formContext-data-process.md#stage-methods).
 
+This client API is only supported on the unified client. The legacy web client does not support this client API.
+
 ## Methods supported for this event
 - **formContext.data.process**.[addOnPreStageChange](../formcontext-data-process/eventhandlers/addOnPreStageChange.md) method to add event handlers for this event.
 - **formContext.data.process**.[removeOnPreStageChange](../formcontext-data-process/eventhandlers/removeOnPreStageChange.md) method to remove event handlers for this event. 
