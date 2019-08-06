@@ -20,3 +20,7 @@ search.app:
 This event occurs **before** the status of a process instance changes. 
 
 Use the **formContext.data.process**.[addOnPreProcessStatusChange](../formContext-data-process/eventhandlers/addOnPreProcessStatusChange.md) method to add event handlers for this event and the **formContext.data.process**.[removeOnPreProcessStatusChange](../formContext-data-process/eventhandlers/removeOnPreProcessStatusChange.md) method to remove them. 
+
+From within a web resource script registered to the onPreStageChange event, a developer can invoke the following on the executionContext object passed into the web resource script: 
+
+`executionContext.getEventArgs().preventDefault();` 
