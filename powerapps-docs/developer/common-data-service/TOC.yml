@@ -41,8 +41,6 @@
       href: retrieve-and-delete-the-history-of-audited-data-changes.md
     - name: Audit user access
       href: audit-user-access.md
-    - name: Create auto-number attributes
-      href: create-auto-number-attributes.md
   - name: Detect duplicate data
     href: detect-duplicate-data-with-code.md
     items:
@@ -265,6 +263,8 @@
       href: behavior-format-date-time-attribute.md
     - name: Calculated and rollup attributes
       href: calculated-rollup-attributes.md
+    - name: Create auto-number attributes
+      href: create-auto-number-attributes.md
     - name: Multi-Select Picklist attributes
       href: multi-select-picklist.md
     - name: Image attributes
@@ -366,7 +366,7 @@
       href: create-package-app-appsource.md
     - name: 'Step 5: Store your AppSource Package on Azure Storage and generate a URL with SAS key'
       href: store-appsource-package-azure-storage.md
-    - name: 'Next steps: Submit your app on Cloud Partner Portal'
+    - name: 'Next steps: Submit your app on Partner Center'
       href: next-steps-submit-app-cloud-partner-portal.md
     - name: 'Appendix: App design best practices checklist'
       href: appendix-app-design-best-practices-checklist.md
