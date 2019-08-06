@@ -147,7 +147,7 @@ reports. Those include, but aren’t limited to:
 -   Create integration with Azure Data and AI services via your organization’s
     Azure Data Lake Storage Gen2 account.
 
-## Next Steps
+## Next steps
 
 This article provided an overview of self-service data prep in PowerApps portal,
 and the ways you can use it. The following topics go into more detail about
