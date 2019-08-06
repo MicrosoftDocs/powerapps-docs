@@ -29,7 +29,7 @@ When you invoke `preventDefault`:
 
 - The state change will not be processed. The process instance will remain on the original stage in the original state.
 - The save of the main form will not be processed. If the main form was in a dirty state, it would remain in a dirty state.
-- Any web resources that registered onProcessStatusChange will not be invoked..
+- Any web resources that registered onProcessStatusChange will not be invoked.
 
 This client API is only supported on the unified client. The legacy web client does not support this client API.
 
