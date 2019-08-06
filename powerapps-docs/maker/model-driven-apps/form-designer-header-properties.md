@@ -91,7 +91,7 @@ To show or hide the header flyout for a model-driven form, follow these steps.
 
 ## Form designer messages related to form headers
 
-When editing forms using the new and classic form designers, you may see some messages related to form headers. Below you can find the details on each message and why you are seeing it.
+When editing forms using the new or classic form designers, you may see some messages related to form headers. Below you can find the details on each message and why you are seeing it.
 
 - **We've upgraded your form to show a high density header that displays more data. You can edit this setting in the properties of the header.**  
   This message is displayed in the new form designer when a maker creates a new main form (including via the Save as action) or edits a main form that has not previously been configured for header density.  
