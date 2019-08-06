@@ -1,6 +1,6 @@
 ---
 title: "addOnPreProcessStatusChange (Client API reference) in Dynamics 365 for Customer Engagement| MicrosoftDocs"
-ms.date: 06/30/2019
+ms.date: 08/05/2017
 ms.service: crm-online
 ms.topic: reference
 applies_to: Dynamics 365 for Customer Engagement (online)
@@ -28,6 +28,13 @@ search.app:
 |Name|Type|Required|Description|
 |--|--|--|--|
 |myFunction|Function reference|Yes|The function to be executed when the business process flow status changes. The function will be added to the bottom of the event handler pipeline. The execution context is automatically passed as the first parameter to the function. See [Execution context](../../../clientapi-execution-context.md) for more information.<br/><br/>You should use a reference to a named function rather than an anonymous function if you may later want to remove the event handler.|
+
+When you invoke preventDefault:
+-	The stage navigation will not be processed. The process instance will remain on the original stage. 
+-	The save of the main form will not be processed. If the main form was in a dirty state, it would remain in a dirty state.
+-	Any web resources registered OnPreProcessStatusChange will not be invoked.
+
+This client API is only supported on the Unified Client. Legacy web client does not support this client API.
 
 ### Related topics
 
