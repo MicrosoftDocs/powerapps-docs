@@ -164,7 +164,7 @@ common usage scenarios for dataflows.
 For more information about Power Query and scheduled refresh, you can read these
 articles:
 
--   *Query overview in Power BI Desktop*
+-   [Query overview in Power BI Desktop](/power-bi/desktop-query-overview)
 
 -   [Configuring scheduled refresh](https://docs.microsoft.com/en-us/power-bi/refresh-scheduled-refresh)
 
