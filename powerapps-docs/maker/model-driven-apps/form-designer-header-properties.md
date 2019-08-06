@@ -36,10 +36,14 @@ Makers can now control the density of model-driven form headers to match the nee
 
   The framework defaults to high density form header.
 
+  ![High density form header](media/form-header-high-density.png)
+    
 - **Low density**  
   Low density form header allows end-users to directly edit the field values in the header. It also allows visualizations such as custom controls and web resources. However, often this comes at the cost of key information being truncated or not readily visible.
 
   Low density headers truncate the record title. Often only one or two fields are directly visible in headers and the rest overflow and are displayed in a flyout requiring an extra click.
+
+  ![Low density form header](media/form-header-low-density.png)
 
 ### Configuring header density
 
@@ -47,7 +51,7 @@ Makers can now control the density of model-driven form headers to match the nee
   > Use the new form designer, the classic form designer does not provide the ability to configure the header density.
 
 To configure the density of headers for model-driven forms, follow these steps.
-1.	Open the form designer to create or edit a form. More information: [Create a form or Edit a form](create-and-edit-forms.md)
+1.	Open the form designer to [create or edit a form](create-and-edit-forms.md).
 2.	Select the form header by clicking on the header in the form preview or by using the [tree view](using-tree-view-on-form.md).
 3.	In the property pane, select **High density** to use high density form header or unselect it to use low density form header.
 4.	In the command bar, select **Save** to save the form, or select **Publish** if you want to save and make your changes visible to users.
@@ -60,9 +64,13 @@ The behavior of the header flyout changes depending on the header density config
 
 - **Header flyout with high density header**  
   When using high density form header, the header flyout displays all header fields including the four fields that are displayed as read-only in the header. The framework defaults to showing the header flyout when high density header is being used. Makers can control the visibility of the header flyout when using high density header.
+  
+   ![Header flyout with high density header](media/form-header-flyout-high-density.png)
 
 - **Header flyout with low density header**  
   When using low density form header, the header flyout displays only overflow fields i.e. fields that the form is unable to display directly in the header based on the width of the form. The header flyout is also automatically displayed or hidden based on the number of fields in the header and the width of the form. Makers cannot control the visibility of the header flyout when using low density header.
+
+   ![Header flyout with low density header](media/form-header-flyout-low-density.png)
 
 ### Showing or hiding the header flyout
 
@@ -71,7 +79,7 @@ To show or hide the header flyout for model-driven forms, follow these steps.
   > [!NOTE]
   > Use the new form designer, the classic form designer does not provide the ability to show or hide the header flyout.
   
-1.	Open the form designer to create or edit a form. More information: [Create a form or Edit a form](create-and-edit-forms.md)
+1.	Open the form designer to [create or edit a form](create-and-edit-forms.md).
 2.	Select the form header by clicking on the header in the form preview or by using the [tree view](using-tree-view-on-form.md).
 3.	In the property pane, select **High density** to use high density form header. 
 
@@ -82,7 +90,7 @@ To show or hide the header flyout for model-driven forms, follow these steps.
 5.	In the command bar, select **Save** to save the form, or select **Publish** if you want to save and make your changes visible to users.
 Header flyout
 
-## Header messages and what they mean
+## Form designer messages related to form headers
 
 When editing forms using the new and classic form designers, you may see some messages related to form headers. Below you can find the details on each message and why you are seeing it.
 
