@@ -88,7 +88,6 @@ To show or hide the header flyout for a model-driven form, follow these steps.
 
 4.	In the property pane, select **Show header flyout** to make the header flyout visible or unselect it to hide the header flyout.
 5.	In the command bar, select **Save** to save the form, or select **Publish** if you want to save and make your changes visible to users.
-Header flyout
 
 ## Form designer messages related to form headers
 
