@@ -100,13 +100,13 @@ When editing forms using the new and classic form designers, you may see some me
   The framework defaults to high density header and this message is ensuring makers are aware of that behavior. Makers can override the framework default at any time by manually configuring the form header density as outlined earlier.
 
 - **This form isn't using high density header, access the setting in the header properties. High density header helps display more data.**  
-  This message is displayed in the new form designer when a maker opens a main form for editing that is configured to use low density header.    
+  This message is displayed in the new form designer when a maker opens a main form for editing that is configured to use low density header.      
   It is aimed at increasing awareness amongst makers about the high density header and its benefits.
 
 - **Field moved to header flyout: The header supports displaying up to four read-only field values. The field *[field display name]* will now only be available from the flyout.**  
   This message is displayed in the new form designer when a form is using high density header with the header flyout visible.  
   
-  High density header displays read-only values of the first four fields in the header. When makers add a field in the header in the top four positions it causes an existing field that was being directly displayed in the header to be pushed out and visible only in the header flyout.    
+  High density header displays read-only values of the first four fields in the header. When makers add a field in the header in the top four positions it causes an existing field that was being directly displayed in the header to be pushed out and visible only in the header flyout.      
   This message is informing the maker of the change and confirming if they would like to proceed with the action.
 
 - **Header field limit exceeded: The header supports displaying up to four read-only field values. Remove unused fields to add more.**  
