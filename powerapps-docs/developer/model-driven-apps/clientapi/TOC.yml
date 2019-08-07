@@ -23,6 +23,8 @@
         href: ./reference/events/grid-onsave.md
       - name: OnProcessStatusChange event
         href: ./reference/events/onprocessstatuschange.md
+      - name: OnPreProcessStatusChange event
+        href: ./reference/events/onpreprocessstatuschange.md
       - name: OnReadyStateComplete event
         href: ./reference/events/onreadystatecomplete.md
       - name: OnResultOpened event
@@ -279,12 +281,16 @@
       items:
       - name: Event handler methods
         items:
+        - name: addOnPreProcessStatusChange
+          href: reference/formContext-data-process/eventhandlers/addOnPreProcessStatusChange.md
         - name: addOnProcessStatusChange
           href: reference/formContext-data-process/eventhandlers/addOnProcessStatusChange.md
         - name: addOnStageChange
           href: reference/formContext-data-process/eventhandlers/addOnStageChange.md
         - name: addOnStageSelected
           href: reference/formContext-data-process/eventhandlers/addOnStageSelected.md
+        - name: removeOnPreProcessStatusChange
+          href: reference/formContext-data-process/eventhandlers/removeOnPreProcessStatusChange.md
         - name: removeOnProcessStatusChange
           href: reference/formContext-data-process/eventhandlers/removeOnProcessStatusChange.md
         - name: removeOnStageChange
@@ -690,3 +696,4 @@
         href: reference/xrm-webapi/online/execute.md
       - name: executeMultiple
         href: reference/xrm-webapi/online/executeMultiple.md
+        
