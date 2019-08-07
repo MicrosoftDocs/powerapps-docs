@@ -39,12 +39,12 @@ The PowerApps checker task runs a static analysis check on your solution(s) agai
 
 ### Configure service connection for PowerApps checker
 
-Before you can configure the PowerApps Checker task, you first need to define the service principals used to connect to the PowerApps checker service. More information about the underlying PowerApps checker service and authentication is available [here](https://docs.microsoft.com/en-us/powershell/powerapps/overview?view=pa-ps-latest#get-started-using-the-microsoftpowerappscheckerpowershell-module), however – the steps outlined below cover everything you need to get started.
+Before you can configure the PowerApps Checker task, you first need to define the service principals used to connect to the PowerApps checker service. More information about the underlying PowerApps checker service and authentication is available [here](https://docs.microsoft.com/en-us/powershell/powerapps/overview?view=pa-ps-latest#get-started-using-the-microsoftpowerappscheckerpowershell-module), however, the steps outlined below cover everything you need to get started.
 
-The following outlines how to generate the required AAD Application using the [AzureAD PowerShell Module](https://docs.microsoft.com/en-us/powershell/module/azuread/?view=azureadps-2.0), add a client secret and then use that to configure the PowerApps checker connection string.
+The following outlines how to generate the required Azure Active Directory (AAD) application using the [AzureAD PowerShell Module](https://docs.microsoft.com/en-us/powershell/module/azuread/?view=azureadps-2.0), add a client secret and then use that to configure the PowerApps checker connection string.
 
 > [!NOTE]
-> Privileges to create service principals in an AAD tenant licensed for PowerApps (P1/P2) or D365 CE is required to complete these steps. 
+> Privileges to create service principals in an AAD tenant licensed for PowerApps (P1/P2) or D365 CE are required to complete these steps. 
 
 1. Open a PowerShell command with admin rights.
 ![Powershell command window](media/pscommand.png "Powershell command window")
