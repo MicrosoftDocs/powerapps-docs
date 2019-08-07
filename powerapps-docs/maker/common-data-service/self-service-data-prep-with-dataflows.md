@@ -13,8 +13,8 @@ applies_to:
   - "Dynamics 365 Version 9.x"
   - "powerapps"
 author: "Mattp123"
-ms.assetid: 4ddcfcf3-5604-4b93-a5ee-589d4fb97fa4
-caps.latest.revision: 33
+ms.assetid: 
+caps.latest.revision:
 ms.author: "matp"
 manager: "kvivek"
 tags: 
@@ -25,6 +25,8 @@ search.app:
   - D365CE
 ---
 # Self-service data prep with Dataflows
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+
 As the volume of data continues to grow, so does the challenge of shaping that
 data into well-structured, actionable information. You want data that’s ready for
 apps, AI workloads, or analytics, so that you can quickly turn volumes of
