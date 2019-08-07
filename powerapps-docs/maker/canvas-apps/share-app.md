@@ -117,3 +117,200 @@ To assign a role, you must have **System administrator** permissions for a Commo
 ### Common Data Service (previous version)
 
 When you share an app that's based on an older version of Common Data Service, you must share the runtime permission to the service separately. If you don’t have permission to do this, see your environment administrator.
+
+## Share with guests
+
+> [!IMPORTANT]
+> - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback. 
+> - Preview features have limited support by Microsoft Support and may be available only in selected geographic areas. 
+
+PowerApps canvas apps can be shared with guest users of an Azure Active Directory tenant. This enables inviting external business partners, contractors, and third parties to run your company’s canvas apps. 
+
+Note, Guests may only be assigned the User role, and not the Co-owner role, for apps shared with them.
+
+### Prerequisites
+1. In Azure Active Directory, [enable B2B external collaboration](https://docs.microsoft.com/en-us/azure/active-directory/b2b/delegate-invitations) for the tenant.  
+- This is on by default, the settings can be changed by a tenant admin.  
+- For more information about Azure AD B2B check out: [What is guest user access in Azure AD B2B?](https://docs.microsoft.com/en-us/azure/active-directory/b2b/what-is-b2b)  
+2. Access to an account that can add guest users to an AAD tenant. Admins and users with the "guest Inviter" role can add guests to a tenant.   
+3. A PowerApps license must be assigned to the guest user in the tenant the app being shared is associated with. Prior to General Availability of canvas app guest access, guests with a PowerApps license in their home tenant won’t need to be assigned a license in the tenant they’re a guest.
+
+### Steps
+1. Add guest users in Azure Active Directory.  
+- This is outlined in the article: [Quickstart: Add a new guest user in Azure AD](https://docs.microsoft.com/en-us/azure/active-directory/b2b/b2b-quickstart-add-guest-users-portal).
+![Add guest in Azure AD](media/share-app/guest_access_doc_1.png)
+2. Assign a license to the guest user. 
+- This is outlined in the articles: [Assign licenses to one user](https://docs.microsoft.com/en-us/office365/admin/subscriptions-and-billing/assign-licenses-to-users?view=o365-worldwide#assign-licenses-to-one-user) or [Assign or remove licenses](https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/license-users-groups) from users for https://admin.microsoft.com and https://portal.azure.com, respectively.  
+- Note, you may need to turn off the Microsoft 365 admin center preview to assign a license to a guest. 
+3. Share the canvas app. 
+- Sign in to https://make.powerapps.com  
+- Select an app, click share. 
+![Share with guest](media/share-app/guest_access_doc_2.png)
+![Guests may only be Users](media/share-app/guest_access_doc_3.png)
+4. Guests can discover and access apps shared with from the email sent to them as part of the sharing.
+![Guests receive app share email](media/share-app/guest_access_doc_4.png)
+
+### Frequently Asked Questions
+
+#### What’s the difference between canvas app guest access and PowerApps Portal? 
+Canvas apps enable building an app, tailored to digitizing a business processes, without writing code in a traditional programming language such as C#. Guest access for canvas apps enables teams of individuals made up of different organizations participating in a common business process to access the same app resources that may be integrated with a [wide variety of Microsoft and third-party sources](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/connections-list).
+
+[PowerApps Portals](https://docs.microsoft.com/en-us/powerapps/maker/portals/overview) provides the ability to build low-code, responsive websites which allow external users to interact with the data stored in the Common Data Service. It allow organizations to create websites which can be shared with users external to their organization either anonymously or through the login provider of their choice like LinkedIn, Microsoft Account, other commercial login providers. 
+
+The following table outlines a few core capability differences between PowerApps Portals and canvas apps.  
+
+| | Interface | Authentication | Accessible data sources |
+|------|--------|----------|-------------------|
+| PowerApps Portals | Browser only experience | Allows anonymous and authenticated access | Common Data Service |
+| Canvas apps | Browser and mobile apps | Requires authentication via Azure AD | Any ~150 out-of-box connectors and any custom connector  |
+||
+
+#### Can guests access customized forms in SharePoint?
+Yes. Any user that can access a SharePoint list with a customized form can create and edit items in the list, using the form, without any PowerApps license.
+
+#### Can guests access apps embedded in SharePoint? 
+Yes. Though, access to canvas standalone apps require a PowerApps license including apps that are embedded. When embedding a canvas app in SharePoint via the Microsoft PowerApps embed control copy-paste the app id. 
+
+![Embed canvas app in SharePoint for guests](media/share-app/guest_access_doc_5.PNG)
+
+When embedding a canvas app in SharePoint via the iFrame HTML tag, reference the app using the full web link that can be found in http://make.powerapps.com > select an app > Details > web link.
+
+![Canvas app details](media/share-app/guest_access_doc_6.PNG)
+
+#### How come guests can launch the app shared with them but connections fail to be created?
+As with non-guests, the underlying data source(s) accessed by the app must also be made accessible to the guest.
+
+#### What license must be assigned to my guest so they can run an app shared with them?
+The same license that’s required for non-guests to run an app. For instance, if the app doesn’t use premium connecters then a PowerApps P1 license is enough to assign to the guest.  
+
+Prior to canvas app guest access General Availability, guests with a PowerApps license in their home tenant won’t need to be assigned a license in the tenant they’re a guest.
+
+| | SharePoint customized form | Standalone canvas app using non-premium connectors | Standalone canvas app using premium connectors | 
+Standalone canvas app using premium connectors | Model driven app |
+|-|-|-|-|-|-|
+| SharePoint user (no PowerApps license) | • | | | |
+| PowerApps Included w/ Office | • | | | |
+| PowerApps Plan 1 | • | • | | |
+| PowerApps Plan 2 | • | • | • | • |
+||
+
+#### In PowerApps Mobile, how does a guest see apps for their home tenant?
+Any user that has accessed an canvas app, on their mobile device, that’s published in an Azure AD tenant that isn’t their home tenant must sign-out of PowerApps and sign back in to PowerApps Mobile.  
+
+Prior to canvas app General Availability, an organization selector will allow the user to change the Azure AD tenant they’re signed in to without having to explicitly sign-out of the app.  
+
+#### Must a guest accept the Azure AD guest invitation prior to sharing an app with the guest?
+No. If a guest launches an app shared with them prior to accepting a guest invitation the guest will be prompted to accept the invitation as part of the sign-in experience while launching the app.  
+
+#### What Azure AD tenant are connections for a guest user created in?
+Connections for an app are always made in the context of the Azure AD tenant the app is associated. For instance, if an app is created in the Contoso tenant then connections made for Contoso internal and guest users are made in the context of the Contoso tenant.
+
+#### Can guests use Microsoft Graph via [Microsoft Security Graph connector](https://docs.microsoft.com/en-us/connectors/microsoftgraphsecurity/) or a custom connector using [Microsoft Graph APIs](https://developer.microsoft.com/en-us/graph)?
+No, Azure AD guests cannot query Microsoft Graph to retrieve information for a tenant in which they’re a guest.
+
+#### What InTune policies apply to guests using my PowerApps?
+InTune only applies policies of a user’s home tenant. For instance, if Alice@Contoso.com shares an app with Vikram@Fabrikam.com, InTune continues to apply Fabrikam.com policies on Virkam’s device regardless of the PowerApps he runs.
+
+#### What connectors support guest access?
+All connectors that do not perform Azure AD authentication of any type supports guest access. The following table enumerates all connectors that perform Azure AD authentication and which connectors currently support guest access. Many of these will be updated leading up to General Availability.
+
+| Connector | Supports guest access |
+| 10to8 Appointment Scheduling  | No  | 
+| Adobe Creative Cloud  | No  | 
+| Adobe Sign  | No  | 
+| Asana  | No  | 
+| AtBot Admin  | No  | 
+| AtBot Logic  | No  | 
+| Azure AD  | No  | 
+| Azure Automation  | No  | 
+| Azure Container Instance  | No  | 
+| Azure Data Factory  | No  | 
+| Azure Data Lake  | No  | 
+| Azure DevOps  | No  | 
+| Azure Event Grid  | No  | 
+| Azure IoT Central  | No  | 
+| Azure Key Vault  | No  | 
+| Azure Kusto  | No  | 
+| Azure Log Analytics  | No  | 
+| Azure Resource Manager  | No  | 
+| Basecamp 2  | No  | 
+| Bitbucket  | No  | 
+| Bitly  | No  | 
+| bttn  | No  | 
+| Buffer  | No  | 
+| Business Central  | No  | 
+| CandidateZip  | No  | 
+| Capsule CRM  | No  | 
+| Cloud PKI Management  | No  | 
+| Cognito Forms  | No  | 
+| Common Data Service  | No  | 
+| Common Data Service (Legacy)  | No  | 
+| D&B Optimizer  | No  | 
+| Derdack SIGNL4  | No  | 
+| Disqus  | No  | 
+| Document Merge  | No  | 
+| Dynamics 365  | No  | 
+| Dynamics 365 AI for Sales  | No  | 
+| Dynamics 365 for Fin & Ops  | No  | 
+| Enadoc  | No  | 
+| Eventbrite  | No  | 
+| Excel Online (Business)  | No  | 
+| Excel Online (OneDrive)  | No  | 
+| Expiration Reminder  | No  | 
+| FreshBooks  | No  | 
+| GoToMeeting  | No  | 
+| GoToTraining  | No  | 
+| GoToWebinar  | No  | 
+| Harvest  | No  | 
+| HTTP with Azure AD  | No  | 
+| Infusionsoft  | No  | 
+| Inoreader  | No  | 
+| Intercom  | No  | 
+| JotForm  | No  | 
+| kintone  | No  | 
+| LinkedIn  | No  | 
+| Marketing Content Hub  | No  | 
+| Medium  | No  | 
+| Metatask  | No  | 
+| Microsoft Forms  | No  | 
+| Microsoft Forms Pro  | No  | 
+| Microsoft Graph Security  | No  | 
+| Microsoft Kaizala  | No  | 
+| Microsoft School Data Sync  | No  | 
+| Microsoft StaffHub  | No  | 
+| Microsoft Teams  | No  | 
+| Microsoft To-Do (Business)  | No  | 
+| Muhimbi PDF  | No  | 
+| NetDocuments  | No  | 
+| Office 365 Groups  | No  | 
+| Office 365 Outlook  | No  | 
+| Office 365 Users  | No - this uses an API that doesn’t accept requests for Azure AD guests  | 
+| Office 365 Video  | No  | 
+| OneDrive  | No  | 
+| OneDrive for Business  | No  | 
+| OneNote (Business)  | No  | 
+| Outlook Customer Manager  | No  | 
+| Outlook Tasks  | No  | 
+| Outlook.com  | No  | 
+| Paylocity  | No  | 
+| Planner  | No  | 
+| Plumsail Forms  | No  | 
+| Power BI  | No  | 
+| Project Online  | No  | 
+| ProjectWise Design Integration  | No  | 
+| Projectwise Share  | No  | 
+| SharePoint  | Yes  | 
+| SignNow  | No  | 
+| Skype for Business Online  | No  | 
+| Soft1  | No  | 
+| Stormboard  | No  | 
+| Survey123  | No  | 
+| SurveyMonkey  | No  | 
+| Toodledo  | No  | 
+| Typeform  | No  | 
+| Vimeo  | No  | 
+| Webex Teams  | No  | 
+| Windows Defender Advanced Threat Protection (ATP)  | No  | 
+| Word Online (Business)  | No  | 
+||
+
