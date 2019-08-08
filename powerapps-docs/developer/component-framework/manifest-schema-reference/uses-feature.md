@@ -36,3 +36,9 @@ ms.assetid: 87f5e921-4114-4710-a362-db741426a69b
 <uses-feature name="WebAPI" required="true" />
 </feature-usage>
 ```
+|Manifest|If Host supports|If Host doesn't support|
+|----|----|-----|
+|`uses-feature  name="device.captureImage" required=”true"` |`Context.device.captureImage != null`, no check needed.|Warning at design time. Component load will
+fail at runtime.|
+|`uses-feature  name="device.captureImage" required=”false"`|`Context.device.captureImage != null`|`Context.device.captureImage == null`, component can adaptively check this at runtime. |
+|(none)|`Context.device.captureImage == null` |`Context.device.captureImage == null` |
