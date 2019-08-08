@@ -25,6 +25,8 @@
         href: ./reference/events/onprocessstatuschange.md
       - name: OnPreProcessStatusChange event
         href: ./reference/events/onpreprocessstatuschange.md
+      - name: OnPreStageChange
+        href: ./reference/events/onprestagechange.md
       - name: OnReadyStateComplete event
         href: ./reference/events/onreadystatecomplete.md
       - name: OnResultOpened event
@@ -283,6 +285,8 @@
         items:
         - name: addOnPreProcessStatusChange
           href: reference/formContext-data-process/eventhandlers/addOnPreProcessStatusChange.md
+        - name: addOnPreStageChange
+          href: reference/formContext-data-process/eventhandlers/addonprestagechange.md
         - name: addOnProcessStatusChange
           href: reference/formContext-data-process/eventhandlers/addOnProcessStatusChange.md
         - name: addOnStageChange
@@ -291,6 +295,8 @@
           href: reference/formContext-data-process/eventhandlers/addOnStageSelected.md
         - name: removeOnPreProcessStatusChange
           href: reference/formContext-data-process/eventhandlers/removeOnPreProcessStatusChange.md
+        - name: removeOnPreStageChange
+          href: reference/formContext-data-process/eventhandlers/removeOnPreStageChange.md
         - name: removeOnProcessStatusChange
           href: reference/formContext-data-process/eventhandlers/removeOnProcessStatusChange.md
         - name: removeOnStageChange
