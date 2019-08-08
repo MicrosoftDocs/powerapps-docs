@@ -1,5 +1,5 @@
 ---
-title: feature-usage  | Microsoft Docs
+title: uses-feature | Microsoft Docs
 description: 
 keywords:
 ms.author: nabuthuk
@@ -13,14 +13,20 @@ ms.topic: "article"
 ms.assetid: 87f5e921-4114-4710-a362-db741426a69b
 ---
 
-# feature-usage element
+# uses-feature element
+
+## Parent Element
+
+|Element|Description|
+|--|--|
+|feature-usage||
 
 ## Child Elements
 
 |Element|Description|
 |--|--|
-|uses-feature name|Name of the feature that is declared in the component|
-uses-feature required|Indicates if the component requires that feature or not|
+|name|Name of the feature that is declared in the component|
+|required|Indicates if the component requires that feature or not|
 
 
 ### Example 
