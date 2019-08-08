@@ -1089,8 +1089,6 @@
       href: ./common-data-service/data-platform-create-entity.md
     - name: "Create a custom entity that has components"
       href: ./common-data-service/create-custom-entity.md
-    - name: Add data to an entity using Power Query
-      href: ./common-data-service/data-platform-cds-newentity-pq.md
     - name: Entities and metadata
       href: ./common-data-service/create-edit-metadata.md
     - name: Types of entities
@@ -1244,6 +1242,10 @@
     items:
     - name: Create and use dataflows
       href: ./common-data-service/create-and-use-dataflows.md
+    - name: Add data to an entity using Power Query
+      href: ./common-data-service/data-platform-cds-newentity-pq.md      
+    - name: Use an on-premises data gateway      
+      href: using-dataflows-with-on-premises-data.md
   - name: License requirements for entities
     href: ./common-data-service/data-platform-entity-licenses.md
     items:
