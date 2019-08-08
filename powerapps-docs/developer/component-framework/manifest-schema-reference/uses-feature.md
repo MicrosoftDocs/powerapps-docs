@@ -36,6 +36,9 @@ ms.assetid: 87f5e921-4114-4710-a362-db741426a69b
 <uses-feature name="WebAPI" required="true" />
 </feature-usage>
 ```
+
+The table below shows the relationship for these settings, to that happens in the code at runtime, if the feature function is available to call based upon the uses-feature settings defined.
+
 |Manifest|If Host supports|If Host doesn't support|
 |----|----|-----|
 |`uses-feature  name="device.captureImage" required=”true"`|`Context.device.captureImage != null`, no check needed.|Warning at design time. Component load will  fail at runtime.|
