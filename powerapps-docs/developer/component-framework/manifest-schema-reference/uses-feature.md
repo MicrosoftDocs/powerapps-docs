@@ -37,7 +37,7 @@ ms.assetid: 87f5e921-4114-4710-a362-db741426a69b
 </feature-usage>
 ```
 
-The table below shows the relationship for these settings, to that happens in the code at runtime, if the feature function is available to call based upon the uses-feature settings defined.
+The table below shows the relationship of these settings to what happens in the code at runtime whether the feature function will be available to call based upon the uses-feature settings defined in the manifest.
 
 |Manifest|If Host supports|If Host doesn't support|
 |----|----|-----|
