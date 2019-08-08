@@ -121,8 +121,6 @@ You can change the enterprise gateway used for a given dataflow and change the g
    >   For more information about how to manage a connection, see [Manage your connections](../canvas-apps/add-manage-connections.md).
 
 
-
-
 ## Limitations
 There are a few known limitations when using enterprise gateways and dataflows.
 
