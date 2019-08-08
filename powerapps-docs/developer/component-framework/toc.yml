@@ -290,3 +290,5 @@
         href: manifest-schema-reference/type-group.md
       - name: feature-usage
         href: manifest-schema-reference/feature-usage.md
+      - name: uses-feature
+        href: manifest-schema-reference/uses-feature.md

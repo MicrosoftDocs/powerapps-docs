@@ -28,13 +28,13 @@ The feature-usage element acts as a wrapper around the `uses-feature` elements, 
 
 ```XML
 <feature-usage>
- <uses-feature name="Device.captureAudio" required="true" />
- <uses-feature name="Device.captureImage" required="true" />
- <uses-feature name="Device.captureVideo" required="true" />
- <uses-feature name="Device.getBarcodeValue" required="true" />
- <uses-feature name="Device.getCurrentPosition" required="true" />
- <uses-feature name="Device.pickFile" required="true" />
- <uses-feature name="Utility" required="true" />
- <uses-feature name="WebAPI" required="true" />
+    <uses-feature name="Device.captureAudio" required="true" />
+    <uses-feature name="Device.captureImage" required="true" />
+    <uses-feature name="Device.captureVideo" required="true" />
+    <uses-feature name="Device.getBarcodeValue" required="true" />
+    <uses-feature name="Device.getCurrentPosition" required="true" />
+    <uses-feature name="Device.pickFile" required="true" />
+    <uses-feature name="Utility" required="true" />
+    <uses-feature name="WebAPI" required="true" />
  </feature-usage>
 ```
