@@ -3,6 +3,7 @@ title: Component implementation library | Microsoft Docs
 description: Create custom components using JavaScript or TypeScript
 keywords:
 ms.author: nabuthuk
+author: Nkrb
 manager: kvivek
 ms.date: 04/23/2019
 ms.service: "powerapps"

@@ -3,6 +3,7 @@ title: Add Custom Components to a field or entity | Microsoft Docs
 description: Process to import custom components
 keywords:
 ms.author: nabuthuk
+author: Nkrb
 manager: kvivek
 ms.date: 04/23/2019
 ms.service: "powerapps"
