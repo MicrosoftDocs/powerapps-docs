@@ -44,3 +44,9 @@ The table below shows the relationship for these settings, to that happens in th
 |`uses-feature  name="device.captureImage" required=”true"`|`Context.device.captureImage != null`, no check needed.|Warning at design time. Component load will  fail at runtime.|
 |`uses-feature  name="device.captureImage" required=”false"`|`Context.device.captureImage != null`|`Context.device.captureImage == null`, component can adaptively check this at runtime. |
 |(none)|`Context.device.captureImage == null` |`Context.device.captureImage == null` |
+
+### Related topics
+
+[PowerApps component framework Manifest Schema Reference](index.md)<br/>
+[PowerApps component framework API Reference](../reference/index.md)<br/>
+[PowerApps component framework Overview](../overview.md)
