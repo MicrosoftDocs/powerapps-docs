@@ -140,8 +140,8 @@ PowerApps canvas apps can be shared with guest users of an Azure Active Director
     > [!div class="mx-imgBorder"] 
     > ![Add guest in Azure AD](media/share-app/guest_access_doc_1.png "Add guest in Azure AD")
 2. Assign a license to the guest user. 
-   - To assign guest users from https://admin.microsoft.com, see [Assign licenses to one user](/office365/admin/subscriptions-and-billing/assign-licenses-to-users).
-   - To assign guest users from https://portal.azure.com, see Assign or remove licenses](/azure/active-directory/fundamentals/license-users-groups).
+   - To assign guest users from admin.microsoft.com, see [Assign licenses to one user](/office365/admin/subscriptions-and-billing/assign-licenses-to-users).
+   - To assign guest users from portal.azure.com, see [Assign or remove licenses](/azure/active-directory/fundamentals/license-users-groups).
  
    > [!IMPORTANT]
    > You may need to disable the Microsoft 365 admin center preview to assign a license to a guest. 
