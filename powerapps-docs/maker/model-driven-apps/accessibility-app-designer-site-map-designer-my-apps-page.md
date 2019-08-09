@@ -23,7 +23,7 @@ search.app:
 
 Microsoft is committed to making its products and services easier for everyone. More information: [Microsoft accessibility](http://www.microsoft.com/enable/default.aspx)  
  
-This topic describes the accessiblity features available with model-driven apps.  
+This topic describes the accessibility features available with model-driven apps.  
   
 ## Keyboard shortcuts  
 PowerApps offers keyboard shortcuts to address issues faced by people with limited dexterity or motion disabilities.  

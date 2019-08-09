@@ -33,14 +33,7 @@ More information: [Whitepaper: Solution Lifecycle Management](https://www.micros
 > [!NOTE]
 >  If you’re an ISV creating an app that you will distribute, you’ll need to use solutions. For more information about using solutions, see [Developer Guide: Introduction to solutions](/powerapps/developer/common-data-service/introduction-solutions).  
   
- If you are interested in creating PowerApps apps for organizational use or customizing Dynamics 365 for Customer Engagement apps, here is what you need to know about solutions:  
-  
--   Creating solutions is optional. You can build or customize apps in your PowerApps environment directly without ever creating a solution.  
-  
--   When you customize the PowerApps environment directly without creating any solution, you work with a special solution called the **Common Data Services Default Solution**. This solution contains all the customizations you make in your PowerApps environment.  
-  
--   There is another special solution called the **Default Solution**. This solution contains all the components in your system, whether created by you or anyone else. You can export the **Default Solution** to create a backup of the customizations you have defined in your organization. This is a good practice to back up your changes in a worst case scenario.  
-  
+
 <a name="BKMK_SolutionComponents"></a>   
 ### Components  
  A component represents something that you can potentially customize. Anything that can be included in a solution is a component. The following is a list of components that you can view in a solution:  

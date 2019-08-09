@@ -7,6 +7,7 @@ ms.date: 04/23/2019
 ms.service: "powerapps"
 ms.topic: "article"
 ms.author: "nabuthuk" 
+author: Nkrb
 ---
 # Implementing a IFRAME component
 
@@ -92,7 +93,7 @@ private renderBingMapIFrame(): void
 private updateBingMapURL(latitude:number, longitude:number): void
 {
 	// Bing Map API:
-	// https://msdn.microsoft.com/en-us/library/dn217138.aspx
+	// https://msdn.microsoft.com/library/dn217138.aspx
 	// Provide bing map query string parameters to format and style map view
 	let bingMapUrlPrefix = "https://www.bing.com/maps/embed?h=400&w=300&cp=";
 	let bingMapUrlPostfix = "&lvl=12&typ=d&sty=o&src=SHELL&FORM=MBEDV8";

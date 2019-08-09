@@ -19,7 +19,7 @@ search.app:
 ---
 # Work with reports
 
-Reports help you manage your progress towards your business goals by helping you see how you’re doing. You can also track trends - which can give you an advantage over your competitors.  
+Reports help you monitor your progress towards your business goals by helping you see how you’re doing. You can also track trends - which can give you an advantage over your competitors.  
 
 For more information on organizing and creating reports, see: [Customize and organize reports](https://docs.microsoft.com/powerapps/maker/model-driven-apps/add-reporting-to-app).
   

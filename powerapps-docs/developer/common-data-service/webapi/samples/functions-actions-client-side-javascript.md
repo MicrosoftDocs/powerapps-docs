@@ -239,7 +239,7 @@ Sdk.request = function (action, uri, data, addHeader) {
  * @function Sdk.startSample  
  * @description Initiates a chain of promises to show use of Functions and Actions with the Web API.  
  * Functions and actions represent re-usable operations you can perform using the Web API.  
- * For more info, see https://msdn.microsoft.com/en-us/library/mt607990.aspx#bkmk_actions  
+ * For more info, see https://msdn.microsoft.com/library/mt607990.aspx#bkmk_actions  
  * The following standard CRM Web API functions and actions are invoked:  
  *  - WhoAmI, a basic unbound function  
  *  - GetTimeZoneCodeByLocalizedName, an unbound function that requires parameters  
@@ -260,13 +260,13 @@ Sdk.startSample = function () {
  .then(function () {  
   console.log("-- Working with functions --");  
   // Bound and Unbound functions  
-  // See https://msdn.microsoft.com/en-us/library/gg309638.aspx#bkmk_boundAndUnboundFunctions  
+  // See https://msdn.microsoft.com/library/gg309638.aspx#bkmk_boundAndUnboundFunctions  
   
   console.log("Using functions to look up your full name.");  
   // Calling a basic unbound function without parameters.  
   // Retrieves the user's full name using a series of function requests.  
   //  - Call WhoAmI via the Sdk.getUsersFullName function.  
-  // For more info on the WhoAmI function, see https://msdn.microsoft.com/en-us/library/mt607925.aspx  
+  // For more info on the WhoAmI function, see https://msdn.microsoft.com/library/mt607925.aspx  
   return Sdk.getUsersFullName();  
  })  
  .then(function (fullName) {  
@@ -315,7 +315,7 @@ Sdk.startSample = function () {
    totalTime);  
   
   console.log("-- Working with Actions --");  
-  // For more info about Action, see https://msdn.microsoft.com/en-us/library/mt607600.aspx  
+  // For more info about Action, see https://msdn.microsoft.com/library/mt607600.aspx  
   
   console.log("Unbound Action: WinOpportunity");  
   // Calling an unbound action that requires parameters.  
@@ -343,7 +343,7 @@ Sdk.startSample = function () {
   //  - Get a reference to the current user.  
   //  - Get a reference to the letter activity.  
   //  - Add letter to current user's queue via the bound action AddToQueue.  
-  // For more info on AddToQueue, see https://msdn.microsoft.com/en-us/library/mt607880.aspx  
+  // For more info on AddToQueue, see https://msdn.microsoft.com/library/mt607880.aspx  
   
   return Sdk.request("GET", "/WhoAmI");  
  })  
@@ -384,7 +384,7 @@ Sdk.startSample = function () {
   // This custom action is installed when you install this sample's solution to your CRM server.  
   //  - Add a note to an existing contact (e.g.: contactUri)  
   //  - Get the note info and the contact's full name.  
-  // For more info, see https://msdn.microsoft.com/en-us/library/mt607600.aspx#bkmk_customActions  
+  // For more info, see https://msdn.microsoft.com/library/mt607600.aspx#bkmk_customActions  
   //sample_AddNoteToContact custom action parameters  
   var parameters = {  
    NoteTitle: "The Title of the Note",  

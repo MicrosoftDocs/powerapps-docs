@@ -2,7 +2,7 @@
 title: "Write a plug-in (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about the concepts and technical details necessary when writing plug-ins" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 06/20/2019
+ms.date: 07/03/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.topic: "article"
@@ -42,6 +42,10 @@ Content in this topic discusses the steps **in bold** above and supports the fol
 ## Assembly constraints
 
 When creating assemblies keep the following constraints in mind.
+
+### Use .NET Framework 4.6.2
+
+Plug-ins and custom workflow assemblies should use .NET Framework 4.6.2. While assemblies built using later versions should generally work, if they use any features introduced after 4.6.2 an error will occur.
 
 ### Optimize assembly development
 
