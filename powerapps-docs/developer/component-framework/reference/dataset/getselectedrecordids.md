@@ -3,7 +3,7 @@ title: getSelectedRecordIds | Microsoft Docs
 description: 
 keywords:
 ms.author: nabuthuk
-manager: 
+author: Nkrb
 manager: kvivek
 ms.date: 04/23/2019
 ms.service: "powerapps"

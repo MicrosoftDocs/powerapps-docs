@@ -3,6 +3,7 @@ title: Update existing custom components using PowerApps component framework Too
 description: Update components using the PowerApps component framework Tooling
 keywords: PowerApps component framework, Custom component, component Framework
 ms.author: nabuthuk
+author: Nkrb
 manager: kvivek
 ms.date: 04/23/2019
 ms.service: "powerapps"
