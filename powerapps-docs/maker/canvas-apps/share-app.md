@@ -147,7 +147,7 @@ Note, Guests may only be assigned the User role, and not the Co-owner role, for 
 - Select an app, click share. 
 ![Share with guest](media/share-app/guest_access_doc_2.png)
 ![Guests may only be Users](media/share-app/guest_access_doc_3.png)
-4. Guests can discover and access apps shared with from the email sent to them as part of the sharing.
+4. Guests can discover and access apps shared with them from the email sent to them as part of sharing.
 ![Guests receive app share email](media/share-app/guest_access_doc_4.png)
 
 ### Frequently Asked Questions
