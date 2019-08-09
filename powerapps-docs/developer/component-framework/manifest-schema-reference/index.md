@@ -3,7 +3,8 @@ title: PowerApps component framework Manifest Schema Reference | Microsoft Docs
 description: 
 keywords:
 ms.author: nabuthuk
-manager: 
+author: Nkrb
+manager: kvivek
 ms.date: 06/4/2018
 ms.reviewer: ""
 ms.service: "crm-online"
