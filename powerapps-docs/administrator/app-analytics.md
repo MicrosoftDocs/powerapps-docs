@@ -50,5 +50,5 @@ Yes, you are able to download a .csv file with the data for any chart in a repor
 ## Are there going to be any other reports?
 Yes! In fact we are planning to develop similar reports around app performance and error reporting.
 
-If you have specific feedback, questions, or requests we would love to hear about them on our [PowerApps Ideas forum](https://powerusers.microsoft.com/t5/PowerApps-Ideas/idb-p/PowerAppsIdeas)..
+If you have specific feedback, questions, or requests we would love to hear about them on our [PowerApps Ideas forum](https://powerusers.microsoft.com/t5/PowerApps-Ideas/idb-p/PowerAppsIdeas).
 
