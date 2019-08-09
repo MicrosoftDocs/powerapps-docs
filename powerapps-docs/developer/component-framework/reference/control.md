@@ -8,6 +8,7 @@ applies_to: "Dynamics 365 (online)"
 ms.assetid: 0b589cb1-fe63-4152-a9ad-7bde9d75de62
 author: ""
 ms.author: "nabuthuk"
+author: Nkrb
 ---
 
 # StandardControl
