@@ -195,7 +195,7 @@ Prior to canvas app guest access General Availability, guests with a PowerApps l
 #### In PowerApps Mobile, how does a guest see apps for their home tenant?
 Any user that has accessed an canvas app, on their mobile device, that’s published in an Azure AD tenant that isn’t their home tenant must sign-out of PowerApps and sign back in to PowerApps Mobile.  
 
-Prior to canvas app General Availability, an organization selector will allow the user to change the Azure AD tenant they’re signed in to without having to explicitly sign-out of the app.  
+Prior to canvas app guest access General Availability, an organization selector will allow the user to change the Azure AD tenant they’re signed in to without having to explicitly sign-out of the app.  
 
 #### Must a guest accept the Azure AD guest invitation prior to sharing an app with the guest?
 No. If a guest launches an app shared with them prior to accepting a guest invitation the guest will be prompted to accept the invitation as part of the sign-in experience while launching the app.  
