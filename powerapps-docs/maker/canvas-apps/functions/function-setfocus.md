@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
-ms.date: 06/27/2019
+ms.date: 08/09/2019
 ms.author: gregli
 search.audienceType: 
   - maker
