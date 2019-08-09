@@ -185,14 +185,12 @@ The same license that’s required for non-guests to run an app. For instance, i
 
 Prior to canvas app guest access General Availability, guests with a PowerApps license in their home tenant won’t need to be assigned a license in the tenant they’re a guest.
 
-| | SharePoint customized form | Standalone canvas app using non-premium connectors | Standalone canvas app using premium connectors | 
-Standalone canvas app using premium connectors | Model driven app |
-|-|-|-|-|-|-|
-| SharePoint user (no PowerApps license) | • | | | |
-| PowerApps Included w/ Office | • | | | |
-| PowerApps Plan 1 | • | • | | |
-| PowerApps Plan 2 | • | • | • | • |
-||
+|                                 | SharePoint customized form | Standalone canvas app using non-premium connectors | Standalone canvas app using premium connectors | Model driven app |
+|---------------------------------|----------------------------|----------------------------------------------------|------------------------------------------------|------------------|
+| SharePoint user (no PA license) | x                          |                                                    |                                                |                  |
+| PowerApps Included w/ Office    | x                          |                                                    |                                                |                  |
+| PowerApps Plan 1                | x                          | x                                                  |                                                |                  |
+| PowerApps Plan2                 | x                          | x                                                  | x                                              | x                |
 
 #### In PowerApps Mobile, how does a guest see apps for their home tenant?
 Any user that has accessed an canvas app, on their mobile device, that’s published in an Azure AD tenant that isn’t their home tenant must sign-out of PowerApps and sign back in to PowerApps Mobile.  
@@ -214,103 +212,102 @@ InTune only applies policies of a user’s home tenant. For instance, if Alice@C
 #### What connectors support guest access?
 All connectors that do not perform Azure AD authentication of any type supports guest access. The following table enumerates all connectors that perform Azure AD authentication and which connectors currently support guest access. Many of these will be updated leading up to General Availability.
 
-| Connector | Supports guest access |
-| 10to8 Appointment Scheduling  | No  | 
-| Adobe Creative Cloud  | No  | 
-| Adobe Sign  | No  | 
-| Asana  | No  | 
-| AtBot Admin  | No  | 
-| AtBot Logic  | No  | 
-| Azure AD  | No  | 
-| Azure Automation  | No  | 
-| Azure Container Instance  | No  | 
-| Azure Data Factory  | No  | 
-| Azure Data Lake  | No  | 
-| Azure DevOps  | No  | 
-| Azure Event Grid  | No  | 
-| Azure IoT Central  | No  | 
-| Azure Key Vault  | No  | 
-| Azure Kusto  | No  | 
-| Azure Log Analytics  | No  | 
-| Azure Resource Manager  | No  | 
-| Basecamp 2  | No  | 
-| Bitbucket  | No  | 
-| Bitly  | No  | 
-| bttn  | No  | 
-| Buffer  | No  | 
-| Business Central  | No  | 
-| CandidateZip  | No  | 
-| Capsule CRM  | No  | 
-| Cloud PKI Management  | No  | 
-| Cognito Forms  | No  | 
-| Common Data Service  | No  | 
-| Common Data Service (Legacy)  | No  | 
-| D&B Optimizer  | No  | 
-| Derdack SIGNL4  | No  | 
-| Disqus  | No  | 
-| Document Merge  | No  | 
-| Dynamics 365  | No  | 
-| Dynamics 365 AI for Sales  | No  | 
-| Dynamics 365 for Fin & Ops  | No  | 
-| Enadoc  | No  | 
-| Eventbrite  | No  | 
-| Excel Online (Business)  | No  | 
-| Excel Online (OneDrive)  | No  | 
-| Expiration Reminder  | No  | 
-| FreshBooks  | No  | 
-| GoToMeeting  | No  | 
-| GoToTraining  | No  | 
-| GoToWebinar  | No  | 
-| Harvest  | No  | 
-| HTTP with Azure AD  | No  | 
-| Infusionsoft  | No  | 
-| Inoreader  | No  | 
-| Intercom  | No  | 
-| JotForm  | No  | 
-| kintone  | No  | 
-| LinkedIn  | No  | 
-| Marketing Content Hub  | No  | 
-| Medium  | No  | 
-| Metatask  | No  | 
-| Microsoft Forms  | No  | 
-| Microsoft Forms Pro  | No  | 
-| Microsoft Graph Security  | No  | 
-| Microsoft Kaizala  | No  | 
-| Microsoft School Data Sync  | No  | 
-| Microsoft StaffHub  | No  | 
-| Microsoft Teams  | No  | 
-| Microsoft To-Do (Business)  | No  | 
-| Muhimbi PDF  | No  | 
-| NetDocuments  | No  | 
-| Office 365 Groups  | No  | 
-| Office 365 Outlook  | No  | 
-| Office 365 Users  | No - this uses an API that doesn’t accept requests for Azure AD guests  | 
-| Office 365 Video  | No  | 
-| OneDrive  | No  | 
-| OneDrive for Business  | No  | 
-| OneNote (Business)  | No  | 
-| Outlook Customer Manager  | No  | 
-| Outlook Tasks  | No  | 
-| Outlook.com  | No  | 
-| Paylocity  | No  | 
-| Planner  | No  | 
-| Plumsail Forms  | No  | 
-| Power BI  | No  | 
-| Project Online  | No  | 
-| ProjectWise Design Integration  | No  | 
-| Projectwise Share  | No  | 
-| SharePoint  | Yes  | 
-| SignNow  | No  | 
-| Skype for Business Online  | No  | 
-| Soft1  | No  | 
-| Stormboard  | No  | 
-| Survey123  | No  | 
-| SurveyMonkey  | No  | 
-| Toodledo  | No  | 
-| Typeform  | No  | 
-| Vimeo  | No  | 
-| Webex Teams  | No  | 
-| Windows Defender Advanced Threat Protection (ATP)  | No  | 
-| Word Online (Business)  | No  | 
-||
-
+| **Connector**                                     | **Supports guest access**                                              |
+|---------------------------------------------------|------------------------------------------------------------------------|
+| 10to8 Appointment Scheduling                      | No                                                                     |
+| Adobe Creative Cloud                              | No                                                                     |
+| Adobe Sign                                        | No                                                                     |
+| Asana                                             | No                                                                     |
+| AtBot Admin                                       | No                                                                     |
+| AtBot Logic                                       | No                                                                     |
+| Azure AD                                          | Yes                                                                    |
+| Azure Automation                                  | Yes                                                                    |
+| Azure Container Instance                          | Yes                                                                    |
+| Azure Data Factory                                | Yes                                                                    |
+| Azure Data Lake                                   | Yes                                                                    |
+| Azure DevOps                                      | No                                                                     |
+| Azure Event Grid                                  | No                                                                     |
+| Azure IoT Central                                 | Yes                                                                    |
+| Azure Key Vault                                   | No                                                                     |
+| Azure Kusto                                       | Yes                                                                    |
+| Azure Log Analytics                               | Yes                                                                    |
+| Azure Resource Manager                            | Yes                                                                    |
+| Basecamp 2                                        | No                                                                     |
+| Bitbucket                                         | No                                                                     |
+| Bitly                                             | No                                                                     |
+| bttn                                              | No                                                                     |
+| Buffer                                            | No                                                                     |
+| Business Central                                  | No                                                                     |
+| CandidateZip                                      | No                                                                     |
+| Capsule CRM                                       | No                                                                     |
+| Cloud PKI Management                              | No                                                                     |
+| Cognito Forms                                     | No                                                                     |
+| Common Data Service                               | No                                                                     |
+| Common Data Service (Legacy)                      | No                                                                     |
+| D&B Optimizer                                     | No                                                                     |
+| Derdack SIGNL4                                    | No                                                                     |
+| Disqus                                            | No                                                                     |
+| Document Merge                                    | No                                                                     |
+| Dynamics 365                                      | No                                                                     |
+| Dynamics 365 AI for Sales                         | Yes                                                                    |
+| Dynamics 365 for Fin & Ops                        | No                                                                     |
+| Enadoc                                            | No                                                                     |
+| Eventbrite                                        | No                                                                     |
+| Excel Online (Business)                           | No                                                                     |
+| Excel Online (OneDrive)                           | No                                                                     |
+| Expiration Reminder                               | No                                                                     |
+| FreshBooks                                        | No                                                                     |
+| GoToMeeting                                       | No                                                                     |
+| GoToTraining                                      | No                                                                     |
+| GoToWebinar                                       | No                                                                     |
+| Harvest                                           | No                                                                     |
+| HTTP with Azure AD                                | No                                                                     |
+| Infusionsoft                                      | No                                                                     |
+| Inoreader                                         | No                                                                     |
+| Intercom                                          | No                                                                     |
+| JotForm                                           | No                                                                     |
+| kintone                                           | No                                                                     |
+| LinkedIn                                          | No                                                                     |
+| Marketing Content Hub                             | No                                                                     |
+| Medium                                            | No                                                                     |
+| Metatask                                          | No                                                                     |
+| Microsoft Forms                                   | No                                                                     |
+| Microsoft Forms Pro                               | No                                                                     |
+| Microsoft Graph Security                          | No                                                                     |
+| Microsoft Kaizala                                 | No                                                                     |
+| Microsoft School Data Sync                        | No                                                                     |
+| Microsoft StaffHub                                | No                                                                     |
+| Microsoft Teams                                   | Yes                                                                    |
+| Microsoft To-Do (Business)                        | No                                                                     |
+| Muhimbi PDF                                       | No                                                                     |
+| NetDocuments                                      | No                                                                     |
+| Office 365 Groups                                 | Yes                                                                    |
+| Office 365 Outlook                                | No                                                                     |
+| Office 365 Users                                  | Yes                                                                    |
+| Office 365 Video                                  | No                                                                     |
+| OneDrive                                          | No                                                                     |
+| OneDrive for Business                             | No                                                                     |
+| OneNote (Business)                                | No                                                                     |
+| Outlook Customer Manager                          | No                                                                     |
+| Outlook Tasks                                     | Yes                                                                    |
+| Outlook.com                                       | No                                                                     |
+| Paylocity                                         | No                                                                     |
+| Planner                                           | No                                                                     |
+| Plumsail Forms                                    | No                                                                     |
+| Power BI                                          | Yes                                                                    |
+| Project Online                                    | No                                                                     |
+| ProjectWise Design Integration                    | No                                                                     |
+| Projectwise Share                                 | No                                                                     |
+| SharePoint                                        | Yes                                                                    |
+| SignNow                                           | No                                                                     |
+| Skype for Business Online                         | No                                                                     |
+| Soft1                                             | No                                                                     |
+| Stormboard                                        | No                                                                     |
+| Survey123                                         | No                                                                     |
+| SurveyMonkey                                      | No                                                                     |
+| Toodledo                                          | No                                                                     |
+| Typeform                                          | No                                                                     |
+| Vimeo                                             | No                                                                     |
+| Webex Teams                                       | No                                                                     |
+| Windows Defender Advanced Threat Protection (ATP) | No                                                                     |
+| Word Online (Business)                            | No                                                                     |
