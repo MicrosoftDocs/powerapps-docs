@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 11/28/2018
+ms.date: 08/09/2019
 ms.author: anneta
 search.audienceType: 
   - maker
@@ -111,8 +111,8 @@ To assign a role, you must have **System administrator** permissions for a Commo
 1. In the sharing panel, select **Assign a security role** under **Data permissions**.
 
 1. Select the role or roles in Common Data Service that you want to assign to the user or the security group in Azure AD with which you want to share the app.
-
-    ![Security role list](media/share-app/cds-assign-security-role-list.png)
+     > [!div class="mx-imgBorder"] 
+     > ![Security role list](media/share-app/cds-assign-security-role-list.png "Security role list")
 
 ### Common Data Service (previous version)
 
@@ -126,36 +126,43 @@ When you share an app that's based on an older version of Common Data Service, y
 
 PowerApps canvas apps can be shared with guest users of an Azure Active Directory tenant. This enables inviting external business partners, contractors, and third parties to run your company’s canvas apps. 
 
-Note, Guests may only be assigned the User role, and not the Co-owner role, for apps shared with them.
+> [!NOTE]
+> Guests may only be assigned the **User** role, and not the **Co-owner** role, for apps shared with them.
 
 ### Prerequisites
-1. In Azure Active Directory, [enable B2B external collaboration](https://docs.microsoft.com/en-us/azure/active-directory/b2b/delegate-invitations) for the tenant.  
-- This is on by default, the settings can be changed by a tenant admin.  
-- For more information about Azure AD B2B check out: [What is guest user access in Azure AD B2B?](https://docs.microsoft.com/en-us/azure/active-directory/b2b/what-is-b2b)  
-2. Access to an account that can add guest users to an AAD tenant. Admins and users with the "guest Inviter" role can add guests to a tenant.   
-3. A PowerApps license must be assigned to the guest user in the tenant the app being shared is associated with. Prior to General Availability of canvas app guest access, guests with a PowerApps license in their home tenant won’t need to be assigned a license in the tenant they’re a guest.
+1. In Azure Active Directory (Azure AD), enable B2B external collaboration for the tenant. More information: [Enable B2B external collaboration and manage who can invite guests](/azure/active-directory/b2b/delegate-invitations)
+    - Enable B2B external collaboration is on by default. However, the settings can be changed by a tenant admin.  For more information about Azure AD B2B, see [What is guest user access in Azure AD B2B?](/azure/active-directory/b2b/what-is-b2b)  
+2. Access to an account that can add guest users to an Azure AD tenant. Admins and users with the Guest Inviter role can add guests to a tenant.   
+3. A PowerApps license must be assigned to the guest user in the tenant the app being shared is associated with. Prior to general availability of canvas app guest access, guests with a PowerApps license in their home tenant won’t need to be assigned a license in the tenant they’re a guest.
 
-### Steps
-1. Add guest users in Azure Active Directory.  
-- This is outlined in the article: [Quickstart: Add a new guest user in Azure AD](https://docs.microsoft.com/en-us/azure/active-directory/b2b/b2b-quickstart-add-guest-users-portal).
-![Add guest in Azure AD](media/share-app/guest_access_doc_1.png)
-2. Assign a license to the guest user. 
-- This is outlined in the articles: [Assign licenses to one user](https://docs.microsoft.com/en-us/office365/admin/subscriptions-and-billing/assign-licenses-to-users?view=o365-worldwide#assign-licenses-to-one-user) or [Assign or remove licenses](https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/license-users-groups) from users for https://admin.microsoft.com and https://portal.azure.com, respectively.  
-- Note, you may need to turn off the Microsoft 365 admin center preview to assign a license to a guest. 
+### Steps to grant guest access
+1. Add guest users in Azure AD. More information: [Quickstart: Add a new guest user in Azure AD](/azure/active-directory/b2b/b2b-quickstart-add-guest-users-portal).
+    > [!div class="mx-imgBorder"] 
+    > ![Add guest in Azure AD](media/share-app/guest_access_doc_1.png "Add guest in Azure AD")
+2. Assign a license to the guest user. More information: [Assign licenses to one user](/office365/admin/subscriptions-and-billing/assign-licenses-to-users?view=o365-worldwide#assign-licenses-to-one-user) and [Assign or remove licenses](/azure/active-directory/fundamentals/license-users-groups) from users for https://admin.microsoft.com and https://portal.azure.com, respectively.  
+ 
+   > [!IMPORTANT]
+> You may need to disable the Microsoft 365 admin center preview to assign a license to a guest. 
+
 3. Share the canvas app. 
-- Sign in to https://make.powerapps.com  
-- Select an app, click share. 
-![Share with guest](media/share-app/guest_access_doc_2.png)
-![Guests may only be Users](media/share-app/guest_access_doc_3.png)
+    - Sign in to https://make.powerapps.com  
+    - Select an app, and then select **Share**. 
+          > [!div class="mx-imgBorder"] 
+          > ![Share with guest](media/share-app/guest_access_doc_2.png "Share with guest")
+ 
+          > [!div class="mx-imgBorder"]  
+          > ![Guests may only be Users](media/share-app/guest_access_doc_3.png "Guests may only be Users")
+
 4. Guests can discover and access apps shared with them from the email sent to them as part of sharing.
-![Guests receive app share email](media/share-app/guest_access_doc_4.png)
+        > [!div class="mx-imgBorder"]  
+        > ![Guests receive app share email](media/share-app/guest_access_doc_4.png "Guests receive app share email")
 
 ### Frequently Asked Questions
 
 #### What’s the difference between canvas app guest access and PowerApps Portal? 
-Canvas apps enable building an app, tailored to digitizing a business processes, without writing code in a traditional programming language such as C#. Guest access for canvas apps enables teams of individuals made up of different organizations participating in a common business process to access the same app resources that may be integrated with a [wide variety of Microsoft and third-party sources](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/connections-list).
+Canvas apps enable building an app, tailored to digitizing a business processes, without writing code in a traditional programming language such as C#. Guest access for canvas apps enables teams of individuals made up of different organizations participating in a common business process to access the same app resources that may be integrated with a wide variety of Microsoft and third-party sources. More information: [Overview of canvas-app connectors for PowerApps](/powerapps/maker/canvas-apps/connections-list).
 
-[PowerApps Portals](https://docs.microsoft.com/en-us/powerapps/maker/portals/overview) provides the ability to build low-code, responsive websites which allow external users to interact with the data stored in the Common Data Service. It allow organizations to create websites which can be shared with users external to their organization either anonymously or through the login provider of their choice like LinkedIn, Microsoft Account, other commercial login providers. 
+[PowerApps Portals](/powerapps/maker/portals/overview) provide the ability to build low-code, responsive websites that allow external users to interact with the data stored in Common Data Service. It allows organizations to create websites that can be shared with users external to their organization either anonymously or through the login provider of their choice, such as LinkedIn, Microsoft Account, or other commercial login providers. 
 
 The following table outlines a few core capability differences between PowerApps Portals and canvas apps.  
 
@@ -169,13 +176,15 @@ The following table outlines a few core capability differences between PowerApps
 Yes. Any user that can access a SharePoint list with a customized form can create and edit items in the list, using the form, without any PowerApps license.
 
 #### Can guests access apps embedded in SharePoint? 
-Yes. Though, access to canvas standalone apps require a PowerApps license including apps that are embedded. When embedding a canvas app in SharePoint via the Microsoft PowerApps embed control copy-paste the app id. 
+Yes. Though, access to canvas standalone apps require a PowerApps license including apps that are embedded. When embedding a canvas app in SharePoint via the Microsoft PowerApps embed control, enter the app id. To do this, enter the app ID in the **App web link or ID** box. 
 
-![Embed canvas app in SharePoint for guests](media/share-app/guest_access_doc_5.PNG)
+> [!div class="mx-imgBorder"]  
+> ![Embed canvas app in SharePoint for guests](media/share-app/guest_access_doc_5.PNG "Embed canvas app in SharePoint for guests")
 
-When embedding a canvas app in SharePoint via the iFrame HTML tag, reference the app using the full web link that can be found in http://make.powerapps.com > select an app > Details > web link.
+When embedding a canvas app in SharePoint via the iFrame HTML tag, reference the app using the full web URL. To find the URL, go to http://make.powerapps.com, select an app, select the **Details** tab, and the URL is displayed under **Web link**.
 
-![Canvas app details](media/share-app/guest_access_doc_6.PNG)
+> [!div class="mx-imgBorder"]  
+> ![Canvas app details](media/share-app/guest_access_doc_6.PNG "Canvas app details")
 
 #### How come guests can launch the app shared with them but connections fail to be created?
 As with non-guests, the underlying data source(s) accessed by the app must also be made accessible to the guest.
