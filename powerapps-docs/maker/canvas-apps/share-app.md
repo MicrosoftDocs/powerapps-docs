@@ -136,26 +136,26 @@ PowerApps canvas apps can be shared with guest users of an Azure Active Director
 3. A PowerApps license must be assigned to the guest user in the tenant the app being shared is associated with. Prior to general availability of canvas app guest access, guests with a PowerApps license in their home tenant won’t need to be assigned a license in the tenant they’re a guest.
 
 ### Steps to grant guest access
-1. Add guest users in Azure AD. More information: [Quickstart: Add a new guest user in Azure AD](/azure/active-directory/b2b/b2b-quickstart-add-guest-users-portal).
+1. Select **New guest user** to add guest users in Azure AD. More information: [Quickstart: Add a new guest user in Azure AD](/azure/active-directory/b2b/b2b-quickstart-add-guest-users-portal).
     > [!div class="mx-imgBorder"] 
     > ![Add guest in Azure AD](media/share-app/guest_access_doc_1.png "Add guest in Azure AD")
-2. Assign a license to the guest user. More information: [Assign licenses to one user](/office365/admin/subscriptions-and-billing/assign-licenses-to-users?view=o365-worldwide#assign-licenses-to-one-user) and [Assign or remove licenses](/azure/active-directory/fundamentals/license-users-groups) from users for https://admin.microsoft.com and https://portal.azure.com, respectively.  
+2. Assign a license to the guest user. 
+   - To assign guest users from https://admin.microsoft.com, see [Assign licenses to one user](/office365/admin/subscriptions-and-billing/assign-licenses-to-users).
+   - To assign guest users from https://portal.azure.com, see Assign or remove licenses](/azure/active-directory/fundamentals/license-users-groups).
  
    > [!IMPORTANT]
-> You may need to disable the Microsoft 365 admin center preview to assign a license to a guest. 
+   > You may need to disable the Microsoft 365 admin center preview to assign a license to a guest. 
 
 3. Share the canvas app. 
-    - Sign in to https://make.powerapps.com  
-    - Select an app, and then select **Share**. 
+    1. Sign in to https://make.powerapps.com  
+    2. Go to **Apps**, select an app, and then on the command bar select **Share**. 
           > [!div class="mx-imgBorder"] 
           > ![Share with guest](media/share-app/guest_access_doc_2.png "Share with guest")
  
-          > [!div class="mx-imgBorder"]  
-          > ![Guests may only be Users](media/share-app/guest_access_doc_3.png "Guests may only be Users")
+After you share an app for guest access, guests can discover and access apps shared with them from the email sent to them as part of sharing.
 
-4. Guests can discover and access apps shared with them from the email sent to them as part of sharing.
-        > [!div class="mx-imgBorder"]  
-        > ![Guests receive app share email](media/share-app/guest_access_doc_4.png "Guests receive app share email")
+> [!div class="mx-imgBorder"]  
+> ![Guests receive app share email](media/share-app/guest_access_doc_4.png "Guests receive app share email")
 
 ### Frequently Asked Questions
 
