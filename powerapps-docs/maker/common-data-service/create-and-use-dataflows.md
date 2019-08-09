@@ -46,7 +46,7 @@ There are three primary steps to using a dataflow:
 
 1.  Author the dataflow in the PowerApps portal. You select the destination
     to load the output data to, the source to get the data from, and the Power
-    Query steps to transform to the data using Microsoft tools that are
+    Query steps to transform the data using Microsoft tools that are
     designed to make doing so straightforward.
 
 2.  Schedule dataflow runs. This is the frequency in which the Power Platform
