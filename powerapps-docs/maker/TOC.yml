@@ -1245,7 +1245,7 @@
     - name: Add data to an entity using Power Query
       href: ./common-data-service/data-platform-cds-newentity-pq.md      
     - name: Use an on-premises data gateway      
-      href: using-dataflows-with-on-premises-data.md
+      href: ./common-data-service/using-dataflows-with-on-premises-data.md
   - name: License requirements for entities
     href: ./common-data-service/data-platform-entity-licenses.md
     items:
