@@ -192,7 +192,7 @@ As with non-guests, the underlying data source(s) accessed by the app must also 
 #### What license must be assigned to my guest so they can run an app shared with them?
 The same license that’s required for non-guests to run an app. For instance, if the app doesn’t use premium connecters then a PowerApps P1 license is enough to assign to the guest.  
 
-Prior to canvas app guest access General Availability, guests with a PowerApps license in their home tenant won’t need to be assigned a license in the tenant they’re a guest.
+Prior to canvas app guest access general availability, guests with a PowerApps license in their home tenant won’t need to be assigned a license in the tenant they’re a guest.
 
 |                                 | SharePoint customized form | Standalone canvas app using non-premium connectors | Standalone canvas app using premium connectors | Model driven app |
 |---------------------------------|----------------------------|----------------------------------------------------|------------------------------------------------|------------------|
@@ -204,7 +204,7 @@ Prior to canvas app guest access General Availability, guests with a PowerApps l
 #### In PowerApps Mobile, how does a guest see apps for their home tenant?
 Any user that has accessed an canvas app, on their mobile device, that’s published in an Azure AD tenant that isn’t their home tenant must sign-out of PowerApps and sign back in to PowerApps Mobile.  
 
-Prior to canvas app guest access General Availability, an organization selector will allow the user to change the Azure AD tenant they’re signed in to without having to explicitly sign-out of the app.  
+Prior to canvas app guest access general availability, an organization selector will allow the user to change the Azure AD tenant they’re signed in to without having to explicitly sign-out of the app.  
 
 #### Must a guest accept the Azure AD guest invitation prior to sharing an app with the guest?
 No. If a guest launches an app shared with them prior to accepting a guest invitation the guest will be prompted to accept the invitation as part of the sign-in experience while launching the app.  
@@ -212,14 +212,14 @@ No. If a guest launches an app shared with them prior to accepting a guest invit
 #### What Azure AD tenant are connections for a guest user created in?
 Connections for an app are always made in the context of the Azure AD tenant the app is associated. For instance, if an app is created in the Contoso tenant then connections made for Contoso internal and guest users are made in the context of the Contoso tenant.
 
-#### Can guests use Microsoft Graph via [Microsoft Security Graph connector](https://docs.microsoft.com/en-us/connectors/microsoftgraphsecurity/) or a custom connector using [Microsoft Graph APIs](https://developer.microsoft.com/en-us/graph)?
-No, Azure AD guests cannot query Microsoft Graph to retrieve information for a tenant in which they’re a guest.
+#### Can guests use Microsoft Graph via Microsoft Security Graph connector or a custom connector using Microsoft Graph APIs?
+No, Azure AD guests can't query Microsoft Graph to retrieve information for a tenant in which they’re a guest.
 
 #### What InTune policies apply to guests using my PowerApps?
 InTune only applies policies of a user’s home tenant. For instance, if Alice@Contoso.com shares an app with Vikram@Fabrikam.com, InTune continues to apply Fabrikam.com policies on Virkam’s device regardless of the PowerApps he runs.
 
 #### What connectors support guest access?
-All connectors that do not perform Azure AD authentication of any type supports guest access. The following table enumerates all connectors that perform Azure AD authentication and which connectors currently support guest access. Many of these will be updated leading up to General Availability.
+All connectors that do not perform Azure AD authentication of any type supports guest access. The following table enumerates all connectors that perform Azure AD authentication and which connectors currently support guest access. Many of these will be updated leading up to general availability.
 
 | **Connector**                                     | **Supports guest access**                                              |
 |---------------------------------------------------|------------------------------------------------------------------------|
