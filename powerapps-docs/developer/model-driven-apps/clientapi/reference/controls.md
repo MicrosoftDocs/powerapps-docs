@@ -225,6 +225,7 @@ Both multi-select option set and option set controls have the same set of method
 <li><a href="controls/setLabel.md" data-raw-source="[setLabel](controls/setLabel.md)">setLabel</a></li>
 <li><a href="controls/setNotification.md" data-raw-source="[setNotification](controls/setNotification.md)">setNotification</a></li>
 <li><a href="controls/setVisible.md" data-raw-source="[setVisible](controls/setVisible.md)">setVisible</a></li>
+<li><a href="controls/getOptions.md" data-raw-source="[getOptions](controls/getOptions.md)">getOptions</a></li>
 </ul>
 </td>
 </tr>
