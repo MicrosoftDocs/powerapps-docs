@@ -1,13 +1,13 @@
 ---
 title: "getOptions (Client API reference)| MicrosoftDocs"
-ms.date: 10/31/2018
+ms.date: 08/13/2019
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 83347491-68d2-4844-bda4-0cd0abde2edf
-author: "KumarVivek"
+author: "nkrb"
 ms.author: "kvivek"
-manager: "amyla"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
@@ -16,9 +16,9 @@ search.app:
 ---
 # getOptions (Client API reference)
 
-Returns an array of option objects representing valid options currently available including a blank option and excluding any options that have been removed from the control using [removeOption](removeOption.md). 
+Returns an array of option objects representing valid options available for a control, including a blank option and excluding any options that have been removed from the control using [removeOption](removeOption.md). 
 
-## Attribute types supported
+## Control types supported
 
 OptionSet, MultiSelectOptionSet
 
@@ -30,5 +30,5 @@ OptionSet, MultiSelectOptionSet
 
 **Type**: Array of option objects. 
 
-**Description**: The array of option objects representing valid options with the name of the option (string) and the value (number).
+**Description**: The array of option objects representing valid options where each option object has a label (string) and the enumeration value (number) of the option.
 
