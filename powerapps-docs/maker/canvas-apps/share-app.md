@@ -148,7 +148,7 @@ PowerApps canvas apps can be shared with guest users of an Azure Active Director
 
 3. Share the canvas app. 
     1. Sign in to https://make.powerapps.com  
-    2. Go to **Apps**, select an app, and then on the command bar select **Share**. 
+    2. Go to **Apps**, select a canvas app, and then on the command bar select **Share**. 
           > [!div class="mx-imgBorder"] 
           > ![Share with guest](media/share-app/guest_access_doc_2.png "Share with guest")
  
