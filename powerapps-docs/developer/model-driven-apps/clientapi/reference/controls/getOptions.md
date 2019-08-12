@@ -3,7 +3,6 @@ title: "getOptions (Client API reference)| MicrosoftDocs"
 ms.date: 08/13/2019
 ms.service: powerapps
 ms.topic: "reference"
-applies_to: "Dynamics 365 (online)"
 ms.assetid: 83347491-68d2-4844-bda4-0cd0abde2edf
 author: "nkrb"
 ms.author: "kvivek"
