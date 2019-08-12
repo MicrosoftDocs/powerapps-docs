@@ -30,5 +30,7 @@ OptionSet, MultiSelectOptionSet
 
 **Type**: Array of option objects. 
 
-**Description**: The array of option objects representing valid options where each option object has a label (string) and the enumeration value (number) of the option.
+**Description**: The array of option objects representing valid options where each option object has the following attributes:
+- **text**: String. Label of the option.
+- **value**: Number. Enumeration value of the option.
 
