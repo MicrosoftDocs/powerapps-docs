@@ -144,7 +144,7 @@ Note, Guests may only be assigned the User role, and not the Co-owner role, for 
 - Note, you may need to turn off the Microsoft 365 admin center preview to assign a license to a guest. 
 3. Share the canvas app. 
 - Sign in to https://make.powerapps.com  
-- Select an app, click share. 
+- Go to **Apps**, select an app, and then on the command bar select **Share**. 
 ![Share with guest](media/share-app/guest_access_doc_2.png)
 ![Guests may only be Users](media/share-app/guest_access_doc_3.png)
 4. Guests can discover and access apps shared with them from the email sent to them as part of sharing.
