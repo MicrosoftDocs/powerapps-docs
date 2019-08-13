@@ -13,7 +13,7 @@ ms.reviewer:
 
 # Create a custom page template
 
-In this example, we'll create a custom page template by using Liquid and a page template that is based on a web template. [!INCLUDE[proc-more-information](../includes/proc-more-information.md)] [Store source content by using web templates](store-content-web-templates.md). Our goal is to build a simple two-column template that uses a [web link set](manage-web-links.md) as left-side navigation, with the page content to the right. Something like this:
+In this example, we'll create a custom page template by using Liquid and a page template that is based on a web template. [!INCLUDE[proc-more-information](../../../includes/proc-more-information.md)] [Store source content by using web templates](store-content-web-templates.md). Our goal is to build a simple two-column template that uses a [web link set](manage-web-links.md) as left-side navigation, with the page content to the right. Something like this:
 
 > [!div class=mx-imgBorder]
 ![Custom page template](media/custom-page-template.png "Custom page template")  
