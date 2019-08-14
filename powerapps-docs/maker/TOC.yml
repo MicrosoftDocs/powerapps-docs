@@ -51,6 +51,8 @@
         href: ../user/assign-or-share-records.md
       - name: Share records using Access Team
         href: ../user/Access-team.md
+      - name: Add a connection role 
+        href: ../user/add-connection-role.md
       - name: Deactivate accounts or contacts
         href: ../user/deactivate-activate-account-contact.md
       - name: Track your progress with dashboards and charts
@@ -840,6 +842,8 @@
             href: ./model-driven-apps/add-move-or-delete-tabs-on-form.md            
           - name: "Properties in the form designer"
             href: ./model-driven-apps/form-designer-properties.md 
+          - name: "Configuring header properties"
+            href: ./model-driven-apps/form-designer-header-properties.md  
           - name: "Using the tree view"
             href: ./model-driven-apps/using-tree-view-on-form.md  
         - name: Type of forms
@@ -1244,6 +1248,8 @@
       href: ./common-data-service/data-platform-complex-entities.md
     - name: Restricted entities requiring Dynamics 365 licenses
       href: ./common-data-service/data-platform-restricted-entities.md
+  - name: SharePoint, OneNote, and OneDrive integration
+    href: ./common-data-service/sharepoint-onedrive-onenote-intro.md
   - name: Create a Power BI report
     href: ./common-data-service/data-platform-powerbi-connector.md
   - name: Translate customized entity and field text

@@ -3,7 +3,7 @@ title: "Sample: Simplified connection quick start (Developer Guide for Common Da
 description: "This sample shows you how to connect to the Common Data Service web services using the CrmServiceClient and perform basic create, update, retrieve, and delete operations on an entity. "
 ms.custom: 
 ms.date: 03/27/2019
-ms.reviewer: 
+author: Nkrb
 ms.service: crm-online
 ms.suite: 
 ms.tgt_pltfrm: 
