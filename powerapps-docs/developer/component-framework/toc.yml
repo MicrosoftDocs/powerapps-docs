@@ -2,7 +2,7 @@
   items: 
   - name: Overview
     href: overview.md
-  - name: "What are custom components?"
+  - name: What are custom components
     href: custom-controls-overview.md
   - name: Get tooling
     href: get-powerapps-cli.md
