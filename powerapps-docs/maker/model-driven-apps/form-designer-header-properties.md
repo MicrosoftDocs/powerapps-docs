@@ -34,7 +34,7 @@ To ensure that key information is always visible, the framework displays read-on
 When a form does not specify header density or when a new form is created, the framework defaults to high density header.
 
 > [!div class="mx-imgBorder"] 
-> ![High density form header](media/fields-pane.png "High density form header")
+> ![High density form header](media/form-header-low-density.png "High density form header")
     
 ## Low density header
 Low density form header allows users to directly edit the field values in the header. It also allows visualizations such as custom controls and web resources.  
