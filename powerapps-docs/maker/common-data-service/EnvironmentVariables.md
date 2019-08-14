@@ -15,27 +15,28 @@ search.app:
   - D365CE
 ---
 # Environment variables overview 
-Applications and Flows often require different configuration settings across environments. Environment variables provide the cability to transport your application configuration data within solutions. They serve as configurable input parameters and allow management of configuration data separately - instead of hard-coding values within your customizations or using various tools to transport record data. Because they're solution components, performance is much better than using data import.
+Apps and flows often require different configuration settings across environments. Environment variables as configurable input parameters allow management of data separately compared to hard-coding values within your customization or using additional tools. Because they're solution components, performance is much better than using data import.
 
 Benefits of using Environment variables:
-- No need to manually edit configurable values in a production environment
-- Configure in one place and reference like a parameter - even reference a single variable from multiple solution components
-- Update values without a code change
-- Granular level security managed by the Common Data Service for Apps
-- Managed properties can be set to block editing the definitions and values
-- The number of variables is unlimited (although the max solution size is 29 MB)
-- Service the definitions and values independently or together
-- Supported by Solution Packager and DevOps tooling enabling CI/CD
-- Localization and dependency tracking are supported
+- No need to manually edit configurable values in a production environment.
+- Configure in one place and reference like a parameter - even reference a single variable from multiple solution components.
+- Update values without a code change.
+- Granular level security managed by the Common Data Service.
+- Managed properties can be set to block editing the definitions and values.
+- Unlimited number of variables (max solution size is 29 MB).
+- Service the definitions and values independently or together.
+- Supported by SolutionPackager and DevOps tooling enabling continuous integration and continuous delivery (CI/CD).
+- Localization and dependency tracking are supported.
 
 # How they work
-Environment variables support CRUD operations through the PowerApps interface and programatically via the SDK. A separate JSON file is created within your solution package for the values, which can also be managed in source control. We also support exporting to and importing from Excel. After creating Environment variables in the Common Data Service or Dynamics 365 Customer Engagement, you can use them as inputs within plugins, Flows, and other components.
+Environment variables support CRUD operations through the PowerApps interface and programatically via the SDK. A separate JSON file is created within your solution package for the values, which can also be managed in source control. We also support export to and import from Excel. After creating the environment variables in the Common Data Service or Dynamics 365 App, you can use them as inputs within plugins, flows, and other components.
 
 ## Default value
-This field is part of the Environment variable definition entity is not required. Set a default value for the value to be used in production or when the values don't need to be changed for different environments.
+This field is part of the environment variable definition entity and is not required. Set a default value for the value to be used in production or when the values don't need to be changed for different environments.
 
 ## Value
-This field is optional and is a part of the "Environment variable value" entity. Also known as a current value or override value. Set this when you'd like to override the default value in your current environment. Remove the value from your solution if you don't want this value used in the next environment. Note, a 1:1 relationship is currently enforced between the Environment variable definition and the Environment variable value. A value also cannot exist without a definition.
+Also known as current value or override value, this field is optional and is a part of the "Environment variable value" entity. Set this when you'd like to override the default value in your current environment. Remove the value from your solution if you don't want this value used in the next environment. > [!NOTE]
+> A 1:1 relationship is currently enforced between the evironment variable definition and the environment variable value. Also, a value cannot exist without a definition.
 
 Why is there a default value and a value? This allows you to service the definition and default value separately from the current value. It also allows us to extend the functionality in the future to support multiple values scoped to a specific run time context.
 
