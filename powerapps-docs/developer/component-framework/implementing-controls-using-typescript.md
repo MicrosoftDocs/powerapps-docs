@@ -14,18 +14,26 @@ author: Nkrb
 
 [!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-This tutorial walks you through the process of creating a new custom component in Typescript. The sample component is a linear input component. The linear input component enables users to enter numeric values using a visual slider instead of directly keying in values. 
+This tutorial walks you through the process of creating a new custom component in Typescript. The sample component is a linear input component which enables users to enter numeric values using a visual slider instead of directly typing the values in the field. 
 
 ## Creating a new component project
 
-To create a new project, follow the steps below:
+To create a new project:
 
 1. Open a Developer Command Prompt for VS 2017 window.
-2. Create a new folder for the project using the command `mkdir LinearComponent`.
-3. `cd` into the new directory and run the command `cd LinearComponent` 
-4. Create the component project using the command `pac pcf init --namespace SampleNamespace --name TSLinearInputControl --template field` 
-5. Install the project build tools using the command `npm install` 
-6. Open your project in any developer environment of your choice and start implementing your custom component.
+1. Create a new folder for the project using the command 
+    ```CLI
+    mkdir LinearComponent
+    ```
+
+1. `cd` into the new directory and run the command `cd LinearComponent` 
+1. Create the component project using the command 
+    ```CLI
+    pac pcf init --namespace SampleNamespace --name TSLinearInputControl --template field
+    ``` 
+
+1. Install the project build tools using the command `npm install` 
+2. Open the project in any developer environment of your choice and start implementing your custom component.
 
 ## Implementing Manifest
 
@@ -296,9 +304,9 @@ Follow the steps below to create and import a [solution](https://docs.microsoft.
 6. The generated solution zip file is located in `Solution\\bin\debug\`.
 7. You should manually [import the solution](https://docs.microsoft.com/dynamics365/customer-engagement/customize/import-update-export-solutions) using the web portal once the zip file is ready.
 
-## Adding custom components to a field or an entity
+## Adding custom components in model-driven apps
 
-To add a custom component like a data-set component or simple table component to a grid or view, follow the steps mentioned in the topic [Add components to fields and entities](add-custom-controls-to-a-field-or-entity.md).
+To add a custom component like a liner input component or simple table component, follow the steps mentioned in the topic [Add components to fields and entities](add-custom-controls-to-a-field-or-entity.md).
 
 ### See also
 

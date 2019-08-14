@@ -12,7 +12,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ---
 
-# Add custom components to a field or entity
+# Add custom components to a field or entity in model-driven apps
 
 Custom components let you transform fields that traditionally contain text into visualizations. Similarly, you can use custom components to transform datasets, such as a view, to display in a more visual rendering rather than a list of records. Custom components can appear as visualizations on forms, dashboards, views, and homepage grids. 
 
