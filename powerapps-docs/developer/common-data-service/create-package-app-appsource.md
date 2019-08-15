@@ -114,8 +114,7 @@ Here is a description of the elements in the **input.xml** file.
 |--|--|
 |ProviderName|Name of the solution provider. If created by a Microsoft internal team, specify **Microsoft**.|
 |PackageFile|Name of package (.zip file) for the Package Deployer tool. This zip file should contain the package assembly, the package folder with your app assets, and the Content_Types.xml file. For example, the package.zip file created under the [Create a Package file](#create-a-package-file) section.|
-|SolutionAnchorName|Name of the solution zip file in the package that is use for the display name and description of solution assets.|
-|SolutionAnchorName|Name of the solution zip file in the package that is use for the display name and description of solution assets.|
+|SolutionAnchorName|Name of the solution zip file in the package that is used for the display name and description of solution assets.|
 |StartDate|Date on which the app becomes available on AppSource. The format is MM/DD/YYYY.|
 |EndDate|Date on which the app stops being available on AppSource. The format is MM/DD/YYYY.|
 |SupportedCountries|This is a comma-separated list of countries or regions where the app should be available. At the time of writing this article, the supported countries list is the following: AE,AL,AM,AO,AR,AT,AU,AZ,BA,BB,BD,BE,BG,BH,BM,BN,BO,BR,BY,CA,CH,CI,CL,CM,CO,CR,CV,CW,CY,CZ,DE,DK,DO,DZ,EC,EE,EG,ES,FI,FR,GB,GE,GH,GR,GT,HK,HN,HR,HU,ID,IE,IL,IN,IQ,IS,IT,JM,JO,JP,KE,KG,KN,KR,KW,KY,KZ,LB,LK,LT,LU,LV,LY,MA,MC,MD,ME,MK,MN,MO,MT,MU,MX,MY,NG,NI,NL,NO,NZ,OM,PA,PE,PH,PK,PL,PR,PS,PT,PY,QA,RO,RS,RU,RW,SA,SE,SG,SI,SK,SN,SV,TH,TM,TN,TR,TT,TW,UA,US,UY,UZ,VE,VI,VN,ZA,ZW|
