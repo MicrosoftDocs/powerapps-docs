@@ -17,6 +17,10 @@ ms.assetid: 0ad24866-08c3-4584-8964-decff50e716e
 
 [!INCLUDE [getformfactor-description](includes/getformfactor-description.md)]
 
+## Applies for 
+
+Both model-driven apps and canvas apps
+
 ## Syntax
 
 `getFormFactor()`

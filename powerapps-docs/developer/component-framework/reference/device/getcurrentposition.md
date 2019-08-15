@@ -17,6 +17,10 @@ ms.assetid: 98f341b4-1d5d-4ad2-849d-5ea1d7e143b0
 
 [!INCLUDE[./includes/getcurrentposition-description.md](./includes/getcurrentposition-description.md)]
 
+## Applies for 
+
+Model-driven apps
+
 ## Syntax
 
 `getCurrentPosition()`

@@ -19,6 +19,10 @@ ms.assetid: 4b7c18f8-cd00-4f39-8f88-ed9306d6a055
 
 [!INCLUDE [getclient-description](includes/getclient-description.md)]
 
+## Applies for 
+
+Both model-driven apps and canvas apps
+
 ## Syntax
 
 `getClient()`
@@ -32,6 +36,7 @@ Returns a value to indicate in which client the script is executing.
 Web: Web application, or Unified Interface
 Outlook: Outlook
 Mobile: Mobile app
+
 
 
 ### Related topics

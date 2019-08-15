@@ -17,6 +17,10 @@ ms.assetid: 3e6a82ab-dbb2-4a60-acc2-c4f1012a8630
 
 [!INCLUDE[./includes/captureaudio-description.md](./includes/captureaudio-description.md)]
 
+## Applies for 
+
+Model-driven apps
+
 ## Syntax
 
 `captureAudio()`

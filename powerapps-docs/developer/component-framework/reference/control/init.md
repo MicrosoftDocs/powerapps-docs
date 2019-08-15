@@ -13,6 +13,10 @@ author: Nkrb
 
 [!INCLUDE[./includes/init-description.md](./includes/init-description.md)]
 
+## Applies for 
+
+Model-driven apps
+
 ## Syntax
 
 `init(context,notifyOutputChanged,state,container)`

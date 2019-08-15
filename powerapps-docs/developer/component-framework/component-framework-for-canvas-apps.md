@@ -28,29 +28,28 @@ Component developers and app makers can utilize modern web practices and also ha
 
 1. System Administrator privileges is required to enable PowerApps component feature in the environment.
 
-To create custom components using PowerApps component framework, follow t he steps below:
 
-## Step 1: Enable PowerApps component framework feature
+## Enable PowerApps component framework feature
 
 To enable PowerApps component feature:
 
-1. Sign in to PowerApps Admin Portal.
+1. Sign in to [PowerApps](https://powerapps.microsoft.com/en-us/).
 
-2. Click on the **Settings** icon and click on the **Admin Center**
+2. Click on the **Settings** icon and select **Admin Center**
     
     ![Settings admin center](media/select-admin-center-from-settings.png "Settings admin center") 
 
-3. Select the environment and click on **...** and select **Settings**
+3. Select the environment where you want to enable this feature and click on **...** and select **Settings**
 
-4. Under the **Products** tab, click on **Features**
+4. Under the **Products** tab, select **Features**
 
-5. From the list of available features, enable the switch under the **PowerApps component framework for canvas apps**
+5. From the list of available features, turn on the switch under the **PowerApps component framework for canvas apps**
 
-## Step 2: Implementing the custom component
+## Implementing custom components
 
-After you enable the feature in your environment, the next step in the process is to implement the custom component. To implement a custom component step by step, follow the instructions in this topic [Implement sample component](implementing-controls-using-typescript.md)
+After you enable the feature in your environment, the next step is to implement the custom component. [Implement sample component](implementing-controls-using-typescript.md) topic demonstrates step by step process to create custom components right from implementing custom logic, debug process, and creating a solution zip file.
 
-## Adding components to app
+## Add components to an app
 
 To add custom components to an app:
 
@@ -68,6 +67,13 @@ To add custom components to an app:
 
    ![Add sample component](media/add-sample-component-from-list.png "Add sample component")
 
+## Known limitations
+
+1. PowerApps component framework doesn't support adding of multiple components to an app.
+
 ## See also
 
-[Capabilities and limitations of PowerApps component framework for canvas apps](capabilities-and-limitations-for-canvas-apps.md)
+
+[PowerApps component framework overview](overview.md)<br/>
+[Implement sample component](implementing-controls-using-typescript.md)
+<!--[Capabilities and limitations of PowerApps component framework for canvas apps](capabilities-and-limitations-for-canvas-apps.md)-->

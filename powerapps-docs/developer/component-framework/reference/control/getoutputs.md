@@ -13,6 +13,11 @@ author: Nkrb
 
 [!INCLUDE[./includes/getoutputs-description.md](./includes/getoutputs-description.md)]
 
+## Applies for 
+
+Model-driven apps
+
+
 ## Syntax
 
 `getOutputs()`

@@ -64,6 +64,7 @@ If you would like to remove a custom component from a solution, follow the steps
 
 ### See also
 
-[Add components to entities or fields](add-custom-controls-to-a-field-or-entity.md)<br/>
+[Add components to model-drive-apps](add-custom-controls-to-a-field-or-entity.md)<br/>
+[Add components to an app](component-framework-for-canvas-apps.md#add-components-to-an-app)<br/>
 [PowerApps component framework API Reference](reference/index.md)<br/>
 [PowerApps component framework Overview](overview.md)
