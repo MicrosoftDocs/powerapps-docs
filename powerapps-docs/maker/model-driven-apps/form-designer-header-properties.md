@@ -75,18 +75,15 @@ With a low density form header the header flyout displays only overflow fields, 
 ### Show or hide the header flyout
 To show or hide the header flyout for a model-driven form, follow these steps.
 
-> [!NOTE]
-> Use the new form designer, the classic form designer does not provide the ability to show or hide the header flyout.
-
 1.	Open the form designer to [create or edit a form](create-and-edit-forms.md).
 2.	Select the form header in the form preview or use the [tree view](using-tree-view-on-form.md) to select it.
 3.	In the property pane, select **High density** to use high density form header. 
-
-   > [!NOTE]
-   > The visibility of header flyout can only be controlled when using high density form header. When using low density header, the header flyout is automatically displayed or hidden based on the number of fields in the header and the width of the form.
-
 4.	In the property pane, select **Show header flyout** to make the header flyout visible or clear it to hide the header flyout.
 5.	In the command bar, select **Save** to save the form, or select **Publish** to save and make your changes visible to users.
+
+> [!NOTE]
+> - Use the new form designer, the classic form designer does not provide the ability to show or hide the header flyout.   
+> - The visibility of header flyout can only be controlled when using high density form header. When using low density header, the header flyout is automatically displayed or hidden based on the number of fields in the header and the width of the form.
 
 ## Form designer messages related to form headers
 When you edit forms using the new or classic form designer, you may see some messages related to form headers. Below you can find the details on each message and why you are seeing it.
