@@ -15,17 +15,18 @@ search.app:
   - PowerApps
 ---
 # With function in PowerApps
-Calculates values and performs actions for a single [record](../working-with-tables.md#records).
+Calculates values and performs actions for a single [record](../working-with-tables.md#records), including inline records of named values.
 
 ## Description
 
-The **With** function evaluates a formula for a single record.  The formula can calculate a value and/or perform actions, such as modifying data or working with a connection.
+The **With** function evaluates a formula for a single record.  The formula can calculate a value and/or perform actions, such as modifying data or working with a connection.  
+Use the [**ForAll** function](function-with.md) to evaluate a formula for all the records in a table of records.
 
 [!INCLUDE [record-scope](../../../includes/record-scope.md)]
 
-Use the [**ForAll** function](function-with.md) to evaluate a formula for all the records in a table of records.
+Use **With** to improve the readability of complex formulas by dividing it into smaller named sub-formulas.  These named values act like simple local variables confined to the scope of the **With**.  The same inline record syntax that is used with the [**UpdateContext** function](function-updatecontext.md) can be used with **With**.  Using **With** is preferred over context or global variables as it is self contained, easy to understand, and can be used in any declarative formula context.  
 
-Use **With** to improve the readability of complex formulas by pulling values out of a formula and giving them names.  These named values act like simple local variables confined to the scope of the **With**.  The same inline record syntax that is used with the [**UpdateContext** function](function-updatecontext.md) can be used with **With**.  Using **With** is preferred over using context or global variables since **With** can be used outside of [behavior formulas](../working-with-formulas-in-depth.md).  
+Use **With** to access the fields of the record that are returned by functions such as such as [**Patch**](function-patch.md) or [**Match**](function-ismatch.md).  **With** holds the value from these functions long enough to be used in further calculations or actions.  
 
 If the *Record* argument to **With** is an error, that error will be returned by the function and the *Formula* will not be evaluated.
 
@@ -33,7 +34,7 @@ If the *Record* argument to **With** is an error, that error will be returned by
 **With**( *Record*, *Formula* )
 
 * *Record* – Required. The record to be acted upon.  For names values, use the inline syntax `{ name1: value1, name2: value2, ... }`
-* *Formula* – Required.  The formula to evaluate for *Record*.  The formula can reference any of the fields of *Record* directly.
+* *Formula* – Required.  The formula to evaluate for *Record*.  The formula can reference any of the fields of *Record* directly as a record scope.
 
 ## Examples
 
@@ -47,7 +48,7 @@ With( { radius: 10,
 // Result: 4712.38898038 (as shown in a label control)
 ```
 
-This example uses a record of named values to calculate the volume of a cylinder.  These names values**With** can be used to create simple local variables, bringing to the top all of the inputs for a formula and  eliminating the need to repeat the value, for example **radius**.  This is similar to how context variables are defined with the [**UpdateContext** function](function-updatecontext.md).
+This example uses a record of named values to calculate the volume of a cylinder.  **With** is being used to capture all the input values together, making it easy to separate them from the calculation itself.  
 
 ### Nested With
 
@@ -68,9 +69,9 @@ With( { AnnualRate: RateSlider/8/100,        // slider moves in 1/8th increments
 
 This example nests **With** functions to create a two-tier calculation for [monthly mortgage payments](https://en.wikipedia.org/wiki/Mortgage_calculator#Monthly_payment_formula).  As long as there is no conflict, all of the outer **With** named values are available within the inner **With**.
 
-Since the slider controls can only move in increments of 1, the sliders are divided or multiplied to create the equivalent of a custom increment.  In the case of the interest rate, the **RateSlider** has its **Max** property set to **48**, divided by 8 for a 1/8 percentage point increment and divided by 100 to covert from a percentage to a decimal, covering the range 0.125% to 6%.  In the case of of the loan amount, the **AmountSlider** has its **Max** property set to **60** and multiplied by 10,000, covering the range 10,000 to 600,000.
+Since the slider controls can only move in increments of 1, the sliders are divided or multiplied to create effectively a custom increment.  In the case of the interest rate, the **RateSlider** has its **Max** property set to **48**, divided by 8 for a 1/8 percentage point increment and divided by 100 to covert from a percentage to a decimal, covering the range 0.125% to 6%.  In the case of of the loan amount, the **AmountSlider** has its **Max** property set to **60** and multiplied by 10,000, covering the range 10,000 to 600,000.
 
-The **With** is automatically recalculated as the sliders move and the new loan payment displayed.  No variables are used and so need to use the **OnChange** property of the slider controols.
+The **With** is automatically recalculated as the sliders move and the new loan payment displayed.  No variables are used and there is no need to use the **OnChange** property of the slider controls.
 
 Here are the detailed instructions for creating this app:
 1. Create a new app.

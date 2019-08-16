@@ -18,11 +18,9 @@ search.app:
 Calculates values and performs actions for all [records](../working-with-tables.md#records) of a [table](../working-with-tables.md).
 
 ## Description
-The **ForAll** function evaluates a formula for all records of a table.  The formula can calculate a value and/or perform actions, such as modifying data or working with a connection.
+The **ForAll** function evaluates a formula for all records of a table.  The formula can calculate a value and/or perform actions, such as modifying data or working with a connection.  Use the [**With** function](function-with.md) to evaluate a formula for a single record.
 
 [!INCLUDE [record-scope](../../../includes/record-scope.md)]
-
-Use the [**With** function](function-with.md) to evaluate a formula for a single record.
 
 ### Return value
 The result of each formula evaluation is returned in a table, in the same order as the input table.
