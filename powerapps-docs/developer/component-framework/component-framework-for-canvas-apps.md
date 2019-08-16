@@ -22,12 +22,18 @@ PowerApps component framework enables developers and app makers to create custom
 
 - Replace a field that displays a numeric text value with a dial or slider component.
 
+> [!NOTE]
+> Only field type of custom components are supported in this experimetal preview and not the data-set type for canvas apps.
+
 Component developers and app makers can utilize modern web practices and also harness the power of external libraries to create advanced user interactions. The framework automatically handles component lifecycle, retains application business logic and optimizes the performance. more information: [PowerApps component framework overview](overview.md) 
+
 
 ## Prerequisites
 
 1. System Administrator privileges is required to enable PowerApps component feature in the environment.
 
+> [!IMPORTANT]
+> By default PowerApps component framework is enabled in model-driven apps.
 
 ## Enable PowerApps component framework feature
 
@@ -49,12 +55,19 @@ To enable PowerApps component feature:
 
 After you enable the feature in your environment, the next step is to implement the custom component. [Implement sample component](implementing-controls-using-typescript.md) topic demonstrates step by step process to create custom components right from implementing custom logic, debug process, and creating a solution zip file.
 
+> [!NOTE]
+> The process for implementing custom components is same for both model-driven apps and canvas apps. The only difference is adding the custom components to respective apps. 
+
 ## Add components to an app
 
 To add custom components to an app:
 
 1. Navigate to PowerApps Studio.
 2. Select the app that you want to add the custom component.
+
+   > [!IMPORTANT]
+   > Make sure the custom components solution zip file is already [imported](https://docs.microsoft.com/en-us/powerapps/maker/common-data-service/import-update-export-solutions) into Common Data Service before you go onto the next step.
+
 3. Click on **Insert** > **Components** > **Import component** > 
  
     ![Insert components](media/insert-components-import.png "Insert components")
@@ -69,7 +82,9 @@ To add custom components to an app:
 
 ## Known limitations
 
-1. PowerApps component framework doesn't support adding of multiple components to an app.
+1. Only the field type of components are supported in experimental preview and not the data set type. 
+2. Common Data Service dependent APIs including WebApi along with few other APIs are not available for this experimental preview. For individual API availability for canvas experimental preview release, see [PowerApps component framework API reference](reference/index.md)
+
 
 ## See also
 

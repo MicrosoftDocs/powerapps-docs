@@ -17,7 +17,7 @@ ms.assetid: 52c0cd68-5558-4985-a56c-21dc8a1f55de
 
 [!INCLUDE[./includes/getviewid-description.md](./includes/getviewid-description.md)]
 
-## Applies for 
+## Available for 
 
 Model-driven apps
 

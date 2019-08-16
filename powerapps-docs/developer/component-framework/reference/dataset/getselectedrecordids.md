@@ -17,7 +17,7 @@ ms.assetid: 96fa69f3-38d2-4e95-bb25-02d92aa6296c
 
 [!INCLUDE[./includes/getselectedrecordids-description.md](./includes/getselectedrecordids-description.md)]
 
-## Applies for 
+## Available for 
 
 Model-driven apps
 

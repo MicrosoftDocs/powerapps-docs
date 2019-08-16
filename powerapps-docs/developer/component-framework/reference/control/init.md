@@ -13,7 +13,7 @@ author: Nkrb
 
 [!INCLUDE[./includes/init-description.md](./includes/init-description.md)]
 
-## Applies for 
+## Available for 
 
 Model-driven apps
 

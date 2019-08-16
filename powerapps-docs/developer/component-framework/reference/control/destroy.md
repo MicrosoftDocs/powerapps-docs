@@ -12,7 +12,7 @@ ms.date: 04/23/2019
 
 [!INCLUDE[./includes/destroy-description.md](./includes/destroy-description.md)]
 
-## Applies for 
+## Available for 
 
 Model-driven apps
 
