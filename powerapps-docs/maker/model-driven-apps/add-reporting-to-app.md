@@ -1,15 +1,12 @@
 ---
 title: "Add reporting to your model-driven app" 
 ms.custom: ""
-ms.date: 06/24/2019
+ms.date: 08/16/2019
 ms.reviewer: ""
 ms.service: powerapps
-ms.suite: ""
-ms.tgt_pltfrm: ""
 ms.topic: "article"
 author: "Mattp123"
 ms.assetid: b4098c96-bce1-4f57-804f-8694e6254e81
-caps.latest.revision: 15
 ms.author: "matp"
 manager: "kvivek"
 search.audienceType: 
