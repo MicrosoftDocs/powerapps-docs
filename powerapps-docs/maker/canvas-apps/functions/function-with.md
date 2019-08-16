@@ -47,25 +47,24 @@ With( { radius: 10,
 // Result: 4712.38898038 (as shown in a label control)
 ```
 
-This example uses a record of named values to calculate the volume of a cylinder.  These names values**With** can be used to create simple local variables, bringing to the top all of the inputs for a formula and  eliminating the need to repeat the value, for example **radius**.  This is similar to how context variables are defined with the [**UpdateContext function**](function-updatecontext.md).
+This example uses a record of named values to calculate the volume of a cylinder.  These names values**With** can be used to create simple local variables, bringing to the top all of the inputs for a formula and  eliminating the need to repeat the value, for example **radius**.  This is similar to how context variables are defined with the [**UpdateContext** function](function-updatecontext.md).
 
 ### Nested With
 
 ![](media/function-with/interest-calculator.gif)
 
 ```powerapps-dot
-With( { AnnualRate: RateSlider/8/100,           // slider moves in 1/8th increments and convert to decimal
-        Amount: AmountSlider*10000,             // slider moves by 10,000 increment
-        Years: YearsSlider,                     // slider moves in single year increments, no adjustment required
-        AnnualPayments: 12 },                   // number of payments per year
-      With( { r: AnnualRate/AnnualPayments,     // interest rate
-              P: Amount,                        // loan amount
-              n: Years*AnnualPayments },        // number of payments
-            r*P / (1 - (1+r)^-n)                // standard interest calculation
+With( { AnnualRate: RateSlider/8/100,        // slider moves in 1/8th increments and convert to decimal
+        Amount: AmountSlider*10000,          // slider moves by 10,000 increment
+        Years: YearsSlider,                  // slider moves in single year increments, no adjustment required
+        AnnualPayments: 12 },                // number of payments per year
+      With( { r: AnnualRate/AnnualPayments,  // interest rate
+              P: Amount,                     // loan amount
+              n: Years*AnnualPayments },     // number of payments
+            r*P / (1 - (1+r)^-n)             // standard interest calculation
       )
 )  
 ```
-
 
 This example nests **With** functions to create a two-tier calculation for [monthly mortgage payments](https://en.wikipedia.org/wiki/Mortgage_calculator#Monthly_payment_formula).  As long as there is no conflict, all of the outer **With** named values are available within the inner **With**.
 
@@ -75,8 +74,8 @@ The **With** is automatically recalculated as the sliders move and the new loan 
 
 Here are the detailed instructions for creating this app:
 1. Create a new app.
-2. Add a [**Slider**](../controls/control-slider.md) control and name it **RateSlider**.  Set its **Max** property to 48.
-3. Add a [**Label**](../controls/control-text-box.md) control to the left of the slider control.  Set its **Text** property to **"Interest Rate:"**.
+2. Add a [**Slider** control](../controls/control-slider.md) and name it **RateSlider**.  Set its **Max** property to 48.
+3. Add a [**Label** control](../controls/control-text-box.md) to the left of the slider control.  Set its **Text** property to **"Interest Rate:"**.
 3. Add a **Label** control to the right of the slider control.  Set its **Text** property to the formula **RateSlider/8 & "&nbsp;%"**.
 3. Add another **Slider** control and name it **AmountSlider**.  Set its **Max** property to 60.
 3. Add a **Label** control to the left of this slider control.  Set its **Text** property to **"Loan Amount:"**. 
