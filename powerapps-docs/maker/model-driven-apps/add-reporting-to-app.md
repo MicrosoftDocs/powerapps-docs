@@ -1,19 +1,12 @@
 ---
 title: "Add reporting to your model-driven app" 
 ms.custom: ""
-ms.date: 06/24/2019
+ms.date: 08/16/2019
 ms.reviewer: ""
 ms.service: powerapps
-ms.suite: ""
-ms.tgt_pltfrm: ""
 ms.topic: "article"
-applies_to: 
-  - "Dynamics 365 (online)"
-  - "Dynamics 365 Version 9.x"
-  - "PowerApps"
 author: "Mattp123"
 ms.assetid: b4098c96-bce1-4f57-804f-8694e6254e81
-caps.latest.revision: 15
 ms.author: "matp"
 manager: "kvivek"
 search.audienceType: 
@@ -68,5 +61,9 @@ Now the app displays a **Reports** area where users can view, run, assign, share
 > [!div class="mx-imgBorder"] 
 > ![](media/report-feature-in-app.png "Report view")
 
-### See also
-[Run a report](/dynamics365/customer-engagement/basics/run-report)
+## Related topics
+[Work with reports](/powerapps/user/work-with-reports)<br/>
+[Create a report using the Report Wizard](/powerapps/user/create-report-with-wizard)<br/>
+[Add a report from outside PowerApps](/powerapps/user/add-existing-report)<br/>
+[Edit the default filter of a report](/powerapps/user/edit-report-filter)<br/>
+[Troubleshoot reports](/powerapps/user/troubleshoot-reports)
