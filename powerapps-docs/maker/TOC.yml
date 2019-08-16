@@ -844,7 +844,7 @@
             href: ./model-driven-apps/add-move-or-delete-tabs-on-form.md            
           - name: "Properties in the form designer"
             href: ./model-driven-apps/form-designer-properties.md 
-          - name: "Configuring header properties"
+          - name: "Configure header properties"
             href: ./model-driven-apps/form-designer-header-properties.md  
           - name: "Using the tree view"
             href: ./model-driven-apps/using-tree-view-on-form.md  
