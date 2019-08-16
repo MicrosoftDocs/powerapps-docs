@@ -373,6 +373,8 @@ Other elements include:
 ## W
 **[Weekday](functions/function-datetime-parts.md)** – Retrieves the weekday portion of a date/time value.
 
+**[With](functions/function-with.md)** – Calculates values and performs actions for a record, including inline named values.
+
 ## Y
 **[Year](functions/function-datetime-parts.md)** – Retrieves the year portion of a date/time value.  
 
