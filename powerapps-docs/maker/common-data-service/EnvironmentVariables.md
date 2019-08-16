@@ -21,7 +21,7 @@ Benefits of using environment variables:
 - No need to manually edit configurable values in a production environment.
 - Configure one or more variables in one place and reference like a parameter across multiple solution components.
 - Update values without a code change.
-- Granular level security managed by the Common Data Service.
+- Granular level security managed by the [Common Data Service](https://docs.microsoft.com/en-us/powerapps/maker/common-data-service/data-platform-intro).
 - Managed properties can be set to block editing the definitions and values.
 - Unlimited number of variables (max solution size is 29 MB).
 - Service the definitions and values independently or together.
@@ -35,23 +35,23 @@ Environment variables support [CRUD](https://docs.microsoft.com/en-us/iis-admini
 This field is part of the environment variable definition entity and is not required. Set a default value for the production environments or when the values don't need to be changed for different environments.
 
 ## Value
-Also known as current value or override value, this field is optional and is a part of the "Environment variable value" entity. Set this when you'd like to override the default value in your current environment. Remove the value from your solution if you don't want this value used in the next environment. 
+Also known as the current value or the override value, this field is optional and is a part of the "Environment variable value" entity. Set the value when you'd like to override the default value in your current environment. Remove the value from your solution if you don't want to use it in the next environment. 
 
 > A 1:1 relationship is currently enforced between the evironment variable definition and the environment variable value. A value cannot exist without a definition.
 
-Separate default value and current value allows you to service the definition and default value separately from the current value. It also allows us to extend the functionality in the future to support multiple values scoped to a specific run time context.
+Separate default value and current value allows you to service the definition and the default value separately from the current value. It also allows us to extend the functionality in the future to support multiple values scoped to a specific run time context.
 
 ## Notifications
-A notification is displayed when the environment variables do not have any values. This is a reminder to set the value(s) so that components dependent on variables do not fail. It also allows partners to ship variables without values and the customer is prompted to input the value(s).
+A notification is displayed when the environment variables do not have any values. This is a reminder to set the values so that components dependent on variables do not fail. It also allows partners to ship variables without values and the customer is prompted to input the values.
 
-> We recommend partners build their own interfaces when customers are required to provide values. Notifications help prevent failures if this step is skipped. 
+> We recommend partners build their own interfaces requiring the customers to provide values. Notifications help prevent failures if this step is skipped. 
 
 # Current limitations
-- Modify values during the solution import process.
+- Modify the values during the solution import process.
 - Caching.
 - Native support for canvas apps.
 - Not a secure store for secrets such as passwords.
-- Scoping (nvironment, user, etc).
+- Scoping (environment, user, etc).
 - Dependencies for certain component types.
 
 ### See also
