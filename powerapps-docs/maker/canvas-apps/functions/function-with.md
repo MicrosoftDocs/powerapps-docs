@@ -54,7 +54,7 @@ This example uses a record of named values to calculate the volume of a cylinder
 ![](media/function-with/interest-calculator.gif)
 
 ```powerapps-dot
-With( { AnnualRate: RateSlider/8/100,           // slider moves in 1/8th increments and convert to percentage
+With( { AnnualRate: RateSlider/8/100,           // slider moves in 1/8th increments and convert to decimal
         Amount: AmountSlider*10000,             // slider moves by 10,000 increment
         Years: YearsSlider,                     // slider moves in single year increments, no adjustment required
         AnnualPayments: 12 },                   // number of payments per year
@@ -65,7 +65,7 @@ With( { AnnualRate: RateSlider/8/100,           // slider moves in 1/8th increme
       )
 )  
 ```
-3. Add a **Label** control to the left of this slider control.  Set its **Text** property to **"Recurring Monthly Payment:"**. 
+
 
 This example nests **With** functions to create a two-tier calculation for [monthly mortgage payments](https://en.wikipedia.org/wiki/Mortgage_calculator#Monthly_payment_formula).  As long as there is no conflict, all of the outer **With** named values are available within the inner **With**.
 
@@ -75,9 +75,9 @@ The **With** is automatically recalculated as the sliders move and the new loan 
 
 Here are the detailed instructions for creating this app:
 1. Create a new app.
-2. Add a [**Slider**](../controls/control-slider) control and name it **RateSlider**.  Set its **Max** property to 48.
-3. Add a [**Label**](../controls/control-text-box) control to the left of the slider control.  Set its **Text** property to **"Interest Rate:"**.
-3. Add a **Label** control to the right of the slider control.  Set its **Text** property to the formula **RateSlider/8 & " %"**.
+2. Add a [**Slider**](../controls/control-slider.md) control and name it **RateSlider**.  Set its **Max** property to 48.
+3. Add a [**Label**](../controls/control-text-box.md) control to the left of the slider control.  Set its **Text** property to **"Interest Rate:"**.
+3. Add a **Label** control to the right of the slider control.  Set its **Text** property to the formula **RateSlider/8 & "&nbsp;%"**.
 3. Add another **Slider** control and name it **AmountSlider**.  Set its **Max** property to 60.
 3. Add a **Label** control to the left of this slider control.  Set its **Text** property to **"Loan Amount:"**. 
 3. Add a **Label** control to the right of this slider control.  Set its **Text** property to the formula **AmountSlider/8 * 10000**
@@ -85,6 +85,7 @@ Here are the detailed instructions for creating this app:
 3. Add a **Label** control to the left of this slider control.  Set its **Text** property to **"Number of Years:"**. 
 3. Add a **Label** control to the right of this slider control.  Set its **Text** property to the formula **YearsSlider**.
 5. Add a **Label** control and set its **Text** property to the formula shown above.
+3. Add a **Label** control to the left of the last label control.  Set its **Text** property to **"Recurring Monthly Payment:"**.  
 
 ### Primary key returned from Patch
 
