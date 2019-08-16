@@ -52,7 +52,7 @@ A notification is displayed when the environment variables do not have any value
 - Native support for canvas apps.
 - Not a secure store for secrets such as passwords.
 - Scoping (environment, user, etc).
-- Dependencies for certain component types.
+- Dependency for certain component types.
 
 ### See also
 [Use plug-ins to extend business processes](https://docs.microsoft.com/powerapps/developer/common-data-service/plug-ins),
