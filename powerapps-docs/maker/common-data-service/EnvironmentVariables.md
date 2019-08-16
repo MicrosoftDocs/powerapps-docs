@@ -22,20 +22,20 @@ Benefits of using environment variables:
 - Configure one or more variables in one place and reference like a parameter across multiple solution components.
 - Update values without a code change.
 - Granular level security managed by the [Common Data Service](https://docs.microsoft.com/en-us/powerapps/maker/common-data-service/data-platform-intro).
-- Managed properties can be set to block editing the definitions and values.
+- Managed properties can be set to block editing of the definitions and values.
 - Unlimited number of variables (max solution size is 29 MB).
-- Service the definitions and values independently or together.
+- Service the definitions and the values independently or together.
 - Supported by [SolutionPackager](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/compress-extract-solution-file-solutionpackager) and [DevOps](https://marketplace.visualstudio.com/azuredevops) tools enable continuous integration and continuous delivery (CI/CD).
 - Support for localization and dependency tracking.
 
 # How they work
-Environment variables support [CRUD](https://docs.microsoft.com/en-us/iis-administration/api/crud) operations through the PowerApps interface and programatically via the SDK. A separate JSON file is created within your solution package for the values, which can also be managed in source control. Export to and import from Excel is supported. After creating the environment variables in the Common Data Service or Dynamics 365 App, you can use them as inputs within plug-ins, flows, and other components.
+Environment variables support [CRUD](https://docs.microsoft.com/en-us/iis-administration/api/crud) operations through the PowerApps interface and programatically via the SDK. A separate JSON file is created within your solution package for the values, which can also be managed in the source control. Export to and import from Excel is supported. After creating the environment variables in the Common Data Service or Dynamics 365 App, you can use them as inputs within plug-ins, flows, and other components.
 
 ## Default value
 This field is part of the environment variable definition entity and is not required. Set a default value for the production environments or when the values don't need to be changed for different environments.
 
 ## Value
-Also known as the current value or the override value, this field is optional and is a part of the "Environment variable value" entity. Set the value when you'd like to override the default value in your current environment. Remove the value from your solution if you don't want to use it in the next environment. 
+Also known as the current value or the override value, this field is optional and is a part of the environment variable value entity. Set the value when you'd like to override the default value in your current environment. Remove the value from your solution if you don't want to use it in the next environment. 
 
 > A 1:1 relationship is currently enforced between the evironment variable definition and the environment variable value. A value cannot exist without a definition.
 
@@ -44,7 +44,7 @@ Separate default value and current value allows you to service the definition an
 ## Notifications
 A notification is displayed when the environment variables do not have any values. This is a reminder to set the values so that components dependent on variables do not fail. It also allows partners to ship variables without values and the customer is prompted to input the values.
 
-> We recommend partners build their own interfaces requiring the customers to provide values. Notifications help prevent failures if this step is skipped. 
+> We recommend partners build their own interfaces requiring the customers to provide the values. Notifications help prevent failures if this step is skipped. 
 
 # Current limitations
 - Modify the values during the solution import process.
