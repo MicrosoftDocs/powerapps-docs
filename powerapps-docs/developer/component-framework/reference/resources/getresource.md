@@ -17,6 +17,10 @@ ms.assetid: 5c04ba7c-acfe-4375-8dd8-6c537ded9352
 
 [!INCLUDE [getresource-description](includes/getresource-description.md)]
 
+## Available for 
+
+Model-driven apps only
+
 ## Syntax
 
 `getResource(id, success, failure)`

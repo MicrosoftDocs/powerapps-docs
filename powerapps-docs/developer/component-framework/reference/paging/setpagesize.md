@@ -17,6 +17,10 @@ ms.assetid: 094978b8-971b-41ac-89e9-1f578447c689
 
 [!INCLUDE [setpagesize-description](includes/setpagesize-description.md)]
 
+## Available for 
+
+Model-driven apps only
+
 ## Syntax
 
 `setPageSize(pageSize)`

@@ -17,6 +17,10 @@ ms.assetid: 5c9968bf-d535-425c-b1f1-0db6b7822de1
 
 [!INCLUDE [deleterecord-description](includes/deleterecord-description.md)]
 
+## Available for 
+
+Model-driven apps only
+
 ## Syntax
 
 `deleteRecord(entityLogicalName, id).then(successCallback, errorCallback);`

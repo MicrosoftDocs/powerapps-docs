@@ -18,6 +18,10 @@ ms.assetid: fd98d153-391d-41e6-ac9d-d2350a4791b9
 
 [!INCLUDE [updatepopup-description](includes/updatepopup-description.md)]
 
+## Available for 
+
+Model-driven apps only
+
 ## Syntax
 
 `updatePopup(name, newProps)`

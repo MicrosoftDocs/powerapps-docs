@@ -16,6 +16,10 @@ ms.assetid: 10c154b9-45a0-44ee-a621-73d6a9009c6d
 
 [!INCLUDE [openerrordialog-description](includes/openerrordialog-description.md)]
 
+## Available for 
+
+Model-driven apps only
+
 ## Syntax
 
 `openErrorDialog(options)`

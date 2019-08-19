@@ -17,6 +17,10 @@ ms.assetid: 824a53f9-c743-435a-9de2-8128846f3191
 
 [!INCLUDE [retrievemultiplerecords-description](includes/retrievemultiplerecords-description.md)]
 
+## Available for 
+
+Model-driven apps only
+
 ## Syntax
 
 `retrieveMultipleRecords(entityLogicalName, options, maxPageSize).then(successCallback, errorCallback);`

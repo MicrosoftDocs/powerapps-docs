@@ -17,6 +17,10 @@ ms.assetid: 6504657d-5c33-4330-8dd4-3aff1321aa2d
 
 [!INCLUDE [openpopup-description](includes/openpopup-description.md)]
 
+## Available for 
+
+Model-driven apps only
+
 ## Syntax
 
 `openPopup(name)`

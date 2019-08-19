@@ -20,6 +20,10 @@ ms.assetid: c5f482c2-dde2-460b-89a7-39e0efcc5704
 
 [!INCLUDE [trackcontainerresize-description](includes/trackcontainerresize-description.md)]
 
+## Available for 
+
+Model-driven apps only
+
 ## Syntax
 
 `trackContainerResize(value)`

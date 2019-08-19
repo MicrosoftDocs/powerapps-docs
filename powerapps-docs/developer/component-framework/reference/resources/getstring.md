@@ -17,6 +17,10 @@ ms.assetid: f28117a1-5d88-4c52-999c-1e07b09c0fe0
 
 [!INCLUDE [getstring-description](includes/getstring-description.md)]
 
+## Available for 
+
+Model-driven apps only
+
 ## Syntax
 
 `getString(id)`

@@ -17,6 +17,10 @@ ms.assetid: 6a334af7-ca5b-449c-b90f-0901824654d2
 
 [!INCLUDE [getentitymetadata-description](includes/getentitymetadata-description.md)]
 
+## Available for 
+
+Model-driven apps only
+
 ## Syntax
 
 `getEntityMetadata(entityName, attributes)`

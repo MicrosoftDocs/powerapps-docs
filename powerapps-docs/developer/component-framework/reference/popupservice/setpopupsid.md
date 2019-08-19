@@ -17,6 +17,10 @@ ms.assetid: eae8e529-5aef-4bf0-9f73-f3200aef84ed
 
 [!INCLUDE [setpopupsid-description](includes/setpopupsid-description.md)]
 
+## Available for 
+
+Model-driven apps only
+
 ## Syntax
 
 `setPopupsId(id)`

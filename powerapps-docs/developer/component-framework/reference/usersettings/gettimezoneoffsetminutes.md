@@ -17,6 +17,10 @@ ms.assetid: 86290d20-7dbb-4932-adaa-31121ae7a3f6
 
 [!INCLUDE [gettimezoneoffsetminutes-description](includes/gettimezoneoffsetminutes-description.md)]
 
+## Available for 
+
+Model-driven apps only
+
 ## Syntax
 
 `getTimeZoneOffsetMinutes(date)`

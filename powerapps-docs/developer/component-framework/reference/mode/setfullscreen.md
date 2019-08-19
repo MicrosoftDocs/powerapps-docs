@@ -20,6 +20,10 @@ ms.assetid: 1faf3e79-969e-4c1e-ac01-8e2155c609fa
 
 [!INCLUDE [setfullscreen-description](includes/setfullscreen-description.md)]
 
+## Available for 
+
+Model-driven apps only
+
 ## Syntax
 
 `setFullScreen(value)`

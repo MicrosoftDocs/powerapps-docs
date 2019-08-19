@@ -17,6 +17,10 @@ ms.assetid: 4acd3f17-74c0-4de1-9326-3778ff413f1e
 
 [!INCLUDE [openalertdialog-description](includes/openalertdialog-description.md)]
 
+## Available for 
+
+Model-driven apps only
+
 ## Syntax
 
 `openAlertDialog(alertStrings, options)`

@@ -14,7 +14,12 @@ ms.assetid: a28ff618-aaf8-4c76-b322-79ff98bae291
 ---
 
 # isOffline
+
 [!INCLUDE [isoffline-description](includes/isoffline-description.md)]
+
+## Available for
+
+Model-driven apps only
 
 ## Syntax
 

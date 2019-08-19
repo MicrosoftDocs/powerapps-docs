@@ -17,6 +17,10 @@ ms.assetid: dddeecc9-5067-420d-8bd7-4c914218e969
 
 [!INCLUDE [retrieverecord-description](includes/retrieverecord-description.md)]
 
+## Available for 
+
+Model-driven apps only
+
 ## Syntax
 
 `retrieveRecord(entityLogicalName, id, options).then(successCallback, errorCallback);`

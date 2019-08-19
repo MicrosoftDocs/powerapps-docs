@@ -17,6 +17,10 @@ ms.assetid: 89029a0b-5e03-4314-95fe-253b4d8d6da1
 
 [!INCLUDE [deletepopup-description](includes/deletepopup-description.md)]
 
+## Available for 
+
+Model-driven apps only
+
 ## Syntax
 
 `deletePopup(name)`

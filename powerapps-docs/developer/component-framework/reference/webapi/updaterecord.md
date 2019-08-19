@@ -17,6 +17,10 @@ ms.assetid: 179ced61-ff0f-45ef-aa14-835ce99532cf
 
 [!INCLUDE [updaterecord-description](includes/updaterecord-description.md)]
 
+## Available for 
+
+Model-driven apps only
+
 ## Syntax
 
 `updateRecord(entityLogicalName, id, data).then(successCallback, errorCallback);`

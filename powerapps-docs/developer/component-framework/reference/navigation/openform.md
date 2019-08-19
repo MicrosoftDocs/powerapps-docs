@@ -17,6 +17,10 @@ ms.assetid: bea56947-d976-4974-9ac7-2d5f5c7b6732
 
 [!INCLUDE [openform-description](includes/openform-description.md)]
 
+## Available for 
+
+Model-driven apps only
+
 ## Syntax
 
 `openForm(options, parameters)`

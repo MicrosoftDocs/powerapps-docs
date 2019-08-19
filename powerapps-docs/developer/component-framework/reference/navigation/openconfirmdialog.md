@@ -17,6 +17,10 @@ ms.assetid: 83f2c208-696c-48b1-b65c-2ba7374d6cfc
 
 [!INCLUDE [openconfirmdialog-description](includes/openconfirmdialog-description.md)]
 
+## Available for 
+
+Model-driven apps only
+
 ## Syntax
 
 `openConfirmDialog(confirmStrings, options)`

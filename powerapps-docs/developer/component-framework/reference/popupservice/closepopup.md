@@ -17,6 +17,10 @@ ms.assetid: eb191796-37bf-46a3-b055-ee043375a42c
 
 [!INCLUDE [closepopup-description](includes/closepopup-description.md)]
 
+## Available for 
+
+Model-driven apps only
+
 ## Syntax
 
 `closePopup(name)`

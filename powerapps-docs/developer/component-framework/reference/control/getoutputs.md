@@ -15,7 +15,7 @@ author: Nkrb
 
 ## Available for 
 
-Model-driven apps
+Model-driven apps and Canvas apps
 
 
 ## Syntax

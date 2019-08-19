@@ -17,6 +17,10 @@ ms.assetid: 27a1e54c-71fe-450f-8f84-b4cc125970bf
 
 [!INCLUDE [openwebresource-description](includes/openwebresource-description.md)]
 
+## Available for 
+
+Model-driven apps only
+
 ## Syntax
 
 `openWebResource(name, options, data)`
@@ -28,7 +32,6 @@ ms.assetid: 27a1e54c-71fe-450f-8f84-b4cc125970bf
 |name|`string`|yes|The name of the HTML web resource to open.|
 |options|`OpenWebResourceOptions`|yes|Window options for the web resource. The OpenWebResourceOptions has the following attributes:<br/>- **height**: `number`. Height of the window to display the resultant page in pixels.<br/>- **width**: `number`. Width of the window to display the resultant page in pixels.<br/>- **openInNewWindow**: `boolean`. whether to open the web resource in a new window.|
 |data|`string`|no|Data to be passed into the data parameter.
-
 
 ### Related topics
 
