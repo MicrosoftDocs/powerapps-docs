@@ -28,8 +28,8 @@ Benefits of using environment variables:
 - Managed properties can be set to block editing of the definitions and values.
 - Unlimited number of variables (max solution size is 29 MB).
 - Service the definitions and the values independently or together.
-- Supported by [SolutionPackager](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/compress-extract-solution-file-solutionpackager) and [DevOps](https://marketplace.visualstudio.com/azuredevops) tools enable continuous integration and continuous delivery (CI/CD).
-- Support for localization and dependency tracking.
+- Supported by [SolutionPackager](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/compress-extract-solution-file-solutionpackager) and [DevOps](https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/build-tools-overview) tools enable continuous integration and continuous delivery (CI/CD).
+- Support for localization.
 
 > [!IMPORTANT]
 > - This is a preview feature.
@@ -45,7 +45,7 @@ This field is part of the environment variable definition entity and is not requ
 Also known as the current value or the override value, this field is optional and is a part of the environment variable value entity. Set the value when you'd like to override the default value in your current environment. Remove the value from your solution if you don't want to use it in the next environment. 
 
 >[!NOTE]
-> A 1:1 relationship is currently enforced between the environment variable definition and the environment variable value. A value cannot exist without a definition.
+> A value cannot exist without a definition. The interface only allows creation of one value per definition. Latest value is used if a given definition has multiple values created.
 
 Separate default value and current value allows you to service the definition and the default value separately from the current value. It also allows us to extend the functionality in the future to support multiple values scoped to a specific run time context.
 
@@ -61,7 +61,7 @@ A notification is displayed when the environment variables do not have any value
 - Native support for canvas apps.
 - Not a secure store for secrets such as passwords.
 - Scoping (such as environment and user).
-- Dependency for certain component types.
+- Dependencies are not enforced for certain component types.
 
 ### See also
 [Use plug-ins to extend business processes](https://docs.microsoft.com/powerapps/developer/common-data-service/plug-ins) </BR>
