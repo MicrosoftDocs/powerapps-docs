@@ -31,7 +31,7 @@ search.app:
 
 ## Symptoms
 
-If a plug-in makes external web requests that fail to respond quickly, the plug-in will wait for the full default timeout period before failing. This duration may cause a back-up of operations that can effect other operations. If the plug-in is registered:
+If a plug-in makes external web requests that fail to respond quickly, the plug-in will wait for the full default timeout period before failing. This duration may cause a long transaction that can effect other operations. If the plug-in is registered:
 
 - Synchronously, users may experience:
 
@@ -45,9 +45,9 @@ If a plug-in makes external web requests that fail to respond quickly, the plug-
 
 ## Guidance
 
-The default timeout value for .Net http clients is 100 seconds, just 20 seconds short of the time available for the plug-in to complete. It is best to establish an expected baseline time that a calling service will respond. The longer it exceeds this 'normal' response time, the higher the probability it will ultimately fail. As a performance best practice, it is best to fail quickly rather than allow the default timeout period to expire. You should control the period that your call to the external service will wait for.
+The default timeout value for .Net Http clients is 100 seconds, just 20 seconds short of the time available for the plug-in to complete. It is best to establish an expected baseline time that a calling service will respond. The longer it exceeds this normal response time, the higher the probability it will ultimately fail. As a performance best practice, it is best to fail quickly rather than allow the default timeout period to expire. You should control the period that your call to the external service will wait.
 
-The timeout value you should set will depend on the service. For example, if you can monitor the performance of the service you may determine a duration where 99.999% of requests succeed and set your timeout period to that duration. This will prevent the the occasional outliers from having an inordinate impact on the performance of your plug-in.
+The timeout value you should set will depend on the service. For example, if you can monitor the performance of the service you may determine a duration where 99.999% of requests succeed and set your timeout period to that duration with a few seconds buffer. This will prevent the the occasional outliers from having an inordinate impact on the performance of your plug-in.
 
 If you are using [System.Net.Http.HttpClient Class](/dotnet/api/system.net.http.httpclient), you can set the `Timeout` value explicitly, as shown in this example setting the timeout to 15 seconds.
 
