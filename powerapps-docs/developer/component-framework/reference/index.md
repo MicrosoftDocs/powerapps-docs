@@ -21,11 +21,11 @@ This section contains reference documentation for creating custom components usi
 
 |Name|Description|Available for|
 |----|-----------|
-|[Client](client.md)|[!INCLUDE [client-description](includes/client-description.md)]|Model-driven apps and Canvas apps|
+|[Client](client.md)|[!INCLUDE [client-description](includes/client-description.md)]|Model-driven apps and Canvas apps (experimental preview)|
 |[Column](column.md)|[!INCLUDE [column-description](includes/column-description.md)]|Model-driven apps|
 |[ConditionExpression](conditionexpression.md)|[!INCLUDE [conditionexpression-description](includes/conditionexpression-description.md)]|Model-driven apps|
 |[Context](context.md)|[!INCLUDE [context-description](includes/context-description.md)]|Model-driven apps|
-|[Control](control.md)|[!INCLUDE [control-description](includes/control-description.md)]|Model-driven apps and Canvas apps|
+|[Control](control.md)|[!INCLUDE [control-description](includes/control-description.md)]|Model-driven apps and Canvas apps (experimental preview)|
 |[DataSet](dataset.md)|[!INCLUDE [dataset-description](includes/dataset-description.md)]|Model-driven apps|
 |[DateFormattingInfo](dateformattinginfo.md)|[!INCLUDE [dateformattinginfo-description](includes/dateformattinginfo-description.md)]|Model-driven apps|
 |[EntityReference](entityreference.md)|[!INCLUDE [entityreference-description](includes/entityreference-description.md)]|Model-driven apps|
