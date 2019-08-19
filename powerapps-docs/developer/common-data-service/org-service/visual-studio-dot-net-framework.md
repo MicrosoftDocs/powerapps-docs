@@ -32,9 +32,7 @@ Plug-ins and custom workflow assemblies should use .NET Framework 4.6.2. While a
 > [!TIP]
 > When installing .NET Framework 4.6.2 on your development computer, be sure to install the developer pack and not just the run-time. This will enable the 4.6.2 framework to be chosen in the **New Project** dialog box of Visual Studio and in the target framework drop-down menu of the project’s properties.  
 
-You can use a Visual Studio Community edition for development. 
-
-[comment]: <> (However, use of extensions isn’t supported in the Express edition so you won’t be able to install useful extensions in that version of Visual Studio)
+You can use a Visual Studio Community edition for development. However, use of extensions isn’t supported in the Express edition so you won’t be able to install useful extensions in that version of Visual Studio.
 
 More information: [Support for .NET Framework versions](/dynamics365/customer-engagement/developer/supported-extensions#SupportNET)
 
