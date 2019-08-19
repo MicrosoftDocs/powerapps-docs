@@ -45,7 +45,7 @@ This field is part of the environment variable definition entity and is not requ
 Also known as the current value or the override value, this field is optional and is a part of the environment variable value entity. Set the value when you'd like to override the default value in your current environment. Remove the value from your solution if you don't want to use it in the next environment. 
 
 >[!NOTE]
-> A value cannot exist without a definition. The interface only allows creation of one value per definition. Latest value is used if a given definition has multiple values created.
+> A value can't exist without a definition. The interface only allows creation of one value per definition. Latest value is used if a given definition has multiple values created.
 
 Separate default value and current value allows you to service the definition and the default value separately from the current value. It also allows us to extend the functionality in the future to support multiple values scoped to a specific run time context.
 
