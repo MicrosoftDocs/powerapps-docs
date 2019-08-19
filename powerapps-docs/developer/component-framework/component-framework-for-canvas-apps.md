@@ -41,11 +41,11 @@ To enable PowerApps component feature:
 
 1. Sign in to [PowerApps](https://powerapps.microsoft.com/en-us/).
 
-2. Click on the **Settings** icon and select **Admin Center**
+2. Click on the **Settings** icon and then select **Admin Center**
     
     ![Settings admin center](media/select-admin-center-from-settings.png "Settings admin center") 
 
-3. Select the environment where you want to enable this feature and click on **...** and select **Settings**
+3. Select the environment where you want to enable this feature and click on **...** and then select **Settings**
 
 4. Under the **Products** tab, select **Features**
 
@@ -56,11 +56,11 @@ To enable PowerApps component feature:
 After you enable the feature in your environment, the next step is to implement the custom component. [Implement sample component](implementing-controls-using-typescript.md) topic demonstrates step by step process to create custom components right from implementing custom logic, debug process, and creating a solution zip file.
 
 > [!NOTE]
-> The process for implementing custom components is same for both model-driven apps and canvas apps. The only difference is adding the custom components to respective apps. 
+> The process for implementing custom components is same for both model-driven apps and canvas apps. The only difference is adding the custom components. 
 
-## Add components to an app
+## Add components to a canvas app
 
-To add custom components to an app:
+To add custom components to a canvas app:
 
 1. Navigate to PowerApps Studio.
 2. Select the app that you want to add the custom component.
