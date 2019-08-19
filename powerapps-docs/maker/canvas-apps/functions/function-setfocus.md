@@ -29,13 +29,13 @@ Use the **SetFocus** function within the **OnVisible** property of the [**Screen
 - [**Label**](../controls/control-text-box.md) control
 - [**TextInput**](../controls/control-text-input.md) control
 
-You cannot set the focus to controls that are within a [**Gallery**](../controls/control-gallery.md) control, [**Edit form**](../controls/control-form-detail.md) control, or [Component](../create-component.md) from outside those containers.
+You cannot set the focus to controls that are within a [**Gallery**](../controls/control-gallery.md) control, [**Edit form**](../controls/control-form-detail.md) control, or [Component](../create-component.md).
 
 You can only set the focus to controls on the same screen as the formula containing the **SetFocus** call.
 
 Attempting to set the focus to a control that has its [**DisplayMode**](../controls/properties-core.md) property set to **Disabled** has no effect.  Focus will remain where it was previously.
 
-On Apple iOS, the soft keyboard will not be displayed automatically. 
+On Apple iOS, the soft keyboard will only be displayed automatically if **SetFocus** was initiated by a direct user action.  For example, invoking from a button's **OnSelect** property will display the soft keyboard while invoking from a screen's **OnVisible** will not. 
 
 You can use **SetFocus** only in [behavior formulas](../working-with-formulas-in-depth.md).
 
