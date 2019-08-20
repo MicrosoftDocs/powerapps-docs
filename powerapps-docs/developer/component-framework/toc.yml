@@ -70,6 +70,8 @@
       - name: Client
         href: reference/client.md
         items:
+        - name: Overview
+          href: reference/client.md
         - name: getClient
           href: reference/client/getclient.md
         - name: getFormFactor
