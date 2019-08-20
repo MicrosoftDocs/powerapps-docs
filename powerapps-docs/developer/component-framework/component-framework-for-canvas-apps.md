@@ -16,14 +16,14 @@ ms.assetid: 5d100dc3-bd82-4b45-964c-d90eaebc0735
 # PowerApps component framework for canvas apps
 
 > [!IMPORTANT]
-> This feature is still experimental and disabled by default. For more information, see [Experimental and preview features](working-with-experimental.md).
+> This feature is still experimental and disabled by default. For more information, see [Experimental and preview features](../../maker/canvas-apps/working-with-experimental.md).
 
 PowerApps component framework enables developers and app makers to create custom components to use in an app or across apps. PowerApps component framework gives the ability for the developers to enhance the user experience for the users to view and work with data. For example:
 
 - Replace a field that displays a numeric text value with a dial or slider component.
 
 > [!NOTE]
-> In this experimental preview,canvas apps only support field type of custom components and not the data-set.
+> In this experimental preview, canvas apps only support field type of custom components and not the data-set type.
 
 Component developers and app makers can utilize modern web practices and also harness the power of external libraries to create advanced user interactions. The framework automatically handles component lifecycle, retains application business logic and optimizes the performance. more information: [PowerApps component framework overview](overview.md) 
 
@@ -61,6 +61,9 @@ After you enable the PowerApps component framework feature in your environment, 
 ## Add components to a canvas app
 
 To add custom components to a canvas app:
+
+> [!NOTE]
+> To add custom components to a field or an entity, see [Add custom components to model-driven apps](add-custom-controls-to-a-field-or-entity.md)
 
 1. Navigate to PowerApps Studio.
 2. Select the app that you want to add the custom component.
