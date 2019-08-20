@@ -1,7 +1,7 @@
 ---
 title: "Configure header properties in the form designer | MicrosoftDocs"
 ms.custom: ""
-ms.date: 08/02/2019
+ms.date: 08/19/2019
 ms.reviewer: ""
 ms.service: crm-online
 ms.suite: ""
@@ -25,6 +25,9 @@ search.app:
 
 # Configure header properties in the form designer
 Makers can control the density of model-driven app form headers to match the needs of users using the form.
+
+> [!NOTE]
+> This feature is only available on environments that opt-in to the early preview of 2019 release wave 2 features. [Please see Early opt-in to 2019 release wave 2 for details](https://docs.microsoft.com/power-platform/admin/preview-october-2019-updates). <br />
 
 ## High density header
 High density form header ensures that key information is always visible to users. Using high density header, the record title never truncates. Even long record titles are displayed using multiple lines. Similarly, high density header also ensures that up to four field values are directly visible in the header and never truncated or hidden.  
