@@ -16,6 +16,10 @@ ms.assetid: 418871c0-59dc-4a7c-a8f9-9364a19f7662
 
 [!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
 
+## Available for 
+
+Model-driven apps
+
 ## Properties
 
 ## createFromEntity: EntityReference

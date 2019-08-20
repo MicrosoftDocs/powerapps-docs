@@ -19,6 +19,10 @@ ms.assetid: 996f10e5-8057-40ea-9680-555e4cd682ff
 
 [!INCLUDE [property-set-description](includes/property-set-description.md)]
 
+## Available for
+
+Model-driven apps
+
 ## Attributes
 
 |Name|Description|Type|Required|

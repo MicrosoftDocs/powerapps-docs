@@ -17,6 +17,10 @@ ms.assetid: 74992f97-89b7-401e-ac95-9c8a47f990d1
 
 [!INCLUDE[./includes/getformattedvalue-description.md](./includes/getformattedvalue-description.md)]
 
+## Available for 
+
+Model-driven apps
+
 ## Syntax
 
 `getFormattedValue(columnName)`

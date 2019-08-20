@@ -19,6 +19,10 @@ ms.assetid: 058c0319-4d46-40fc-a4f6-e9f722a6b3c7
 
 [!INCLUDE [formatting-description](includes/formatting-description.md)]
 
+## Available for 
+
+Model-driven apps and canvas apps (experimental preview) (experimental preview)
+
 ## Methods
 
 |Method | Description |

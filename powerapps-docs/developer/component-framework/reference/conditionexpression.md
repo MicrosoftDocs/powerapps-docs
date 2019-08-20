@@ -19,6 +19,10 @@ ms.assetid: bd90b3fd-a4b4-4999-8b53-d2a5dce4966b
 
 [!INCLUDE [conditionexpression-description](includes/conditionexpression-description.md)]
 
+## Available for 
+
+Model-driven apps
+
 ## Properties
 
 ## attributeName

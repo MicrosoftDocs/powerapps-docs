@@ -18,7 +18,7 @@ ms.author: nabuthuk
 
 [!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-Use PowerApps component framework to create custom components in model-driven apps and canvas apps to provide an enhanced user experience for the users to view and work with data in forms, views and dashboards. For example:
+Use PowerApps component framework to create custom components in Model-driven apps and canvas apps (experimental preview) to provide an enhanced user experience for the users to view and work with data in forms, views and dashboards. For example:
 
 - Replace a field that displays a numeric text value with a `dial` or `slider` component.
 - Transform a list into an entirely different visual experience bound to the data set like a `Calendar` or `Map`.

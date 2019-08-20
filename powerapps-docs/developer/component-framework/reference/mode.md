@@ -19,6 +19,10 @@ ms.assetid: 8b51654c-ee67-40f8-ae5b-be684dad3520
 
 [!INCLUDE [mode-description](includes/mode-description.md)]
 
+## Available for 
+
+Model-driven apps
+
 ## Properties
 
 ## allocatedHeight

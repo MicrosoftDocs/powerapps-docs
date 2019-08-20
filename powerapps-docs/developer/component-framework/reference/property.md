@@ -17,6 +17,10 @@ ms.assetid: a118f54f-be47-4f35-9ffb-7afa6c296631
 
 [!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
 
+## Available for 
+
+Model-driven apps
+
 ## Properties
 
 ## error

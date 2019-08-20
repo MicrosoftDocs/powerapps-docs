@@ -19,7 +19,7 @@ ms.assetid: ec4d6f14-d08b-410f-aad7-6a040c2b1c6a
 
 ## Available for 
 
-Model-driven apps only
+Model-driven apps
 
 ## Syntax
 

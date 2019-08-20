@@ -17,6 +17,10 @@ ms.assetid: 89807b09-92ee-43cf-8db5-8da838131923
 
 [!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
 
+## Available for 
+
+Model-driven apps
+
 ## Properties
 
 ## allowMultiSelect

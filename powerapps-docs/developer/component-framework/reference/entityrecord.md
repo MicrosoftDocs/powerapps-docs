@@ -19,6 +19,10 @@ ms.assetid: 9efccace-015b-4d45-b893-3e794c254e36
 
 [!INCLUDE [entityrecord-description](includes/entityrecord-description.md)]
 
+## Available for 
+
+Model-driven apps
+
 ## Methods
 
 |Methods|Description|

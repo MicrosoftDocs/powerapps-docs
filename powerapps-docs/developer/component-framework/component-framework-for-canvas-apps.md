@@ -56,7 +56,7 @@ To enable PowerApps component feature:
 After you enable the feature in your environment, the next step is to implement the custom component. [Implement sample component](implementing-controls-using-typescript.md) topic demonstrates step by step process to create custom components right from implementing custom logic, debug process, and creating a solution zip file.
 
 > [!NOTE]
-> The process for implementing custom components is same for both model-driven apps and canvas apps. The only difference is adding the custom components. 
+> The process for implementing custom components is same for both Model-driven apps and canvas apps (experimental preview). The only difference is adding the custom components. 
 
 ## Add components to a canvas app
 

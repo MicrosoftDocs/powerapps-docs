@@ -21,7 +21,7 @@ ms.assetid: 4ce41c82-bf4a-4d34-9344-5311c24d76de
 
 ## Available for 
 
-Model-driven apps and Canvas apps (experimental preview)
+Model-driven apps and canvas apps (experimental preview) (experimental preview)
 
 ## Properties
 
@@ -34,9 +34,9 @@ Whether this component should disable its scrolling capabilities
 ## Methods
 
 |Method | Description |Available for|
-| ------------- |-------------|
-|[getClient](client/getclient.md)|[!INCLUDE [getclient-description](client/includes/getclient-description.md)]|Model-driven apps and canvas apps (experimental preview)|
-|[getFormFactor](client/getformfactor.md)|[!INCLUDE [getformfactor-description](client/includes/getformfactor-description.md)]|Model-driven apps and canvas apps (experimental preview)|
+| ------------- |-------------|------|
+|[getClient](client/getclient.md)|[!INCLUDE [getclient-description](client/includes/getclient-description.md)]|Model-driven apps and canvas apps (experimental preview) (experimental preview)|
+|[getFormFactor](client/getformfactor.md)|[!INCLUDE [getformfactor-description](client/includes/getformfactor-description.md)]|Model-driven apps and canvas apps (experimental preview) (experimental preview)|
 |[isOffline](client/isoffline.md)|[!INCLUDE [isoffline-description](client/includes/isoffline-description.md)]|Model-driven apps|
 
 ### Related topics

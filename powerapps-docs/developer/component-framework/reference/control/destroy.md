@@ -14,7 +14,7 @@ ms.date: 04/23/2019
 
 ## Available for 
 
-Model-driven apps and Canvas apps
+Model-driven apps and canvas apps (experimental preview)
 
 ## Syntax
 

@@ -19,6 +19,10 @@ ms.assetid: ec7c1ad4-b834-4755-8a04-2c8940f75674
 
 [!INCLUDE [type-group-description](includes/type-group-description.md)]
 
+## Available for
+
+Model-driven apps
+
 ## Attributes
 
 |Name|Description|Type|Required|

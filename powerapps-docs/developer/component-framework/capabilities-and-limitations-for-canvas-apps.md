@@ -22,9 +22,9 @@ The following table describes the capabilities and limitations for building cust
 
 |API Name| Available for| Comments|
 |-------|------|---------|
-|Client|Model-driven apps only||
-|Control|Both model-driven apps and canvas apps||
-|DataSet|Model-driven apps only||
+|Client|Model-driven apps||
+|Control|Both Model-driven apps and canvas apps (experimental preview)||
+|DataSet|Model-driven apps||
 
 
 ## Manifest schema reference 

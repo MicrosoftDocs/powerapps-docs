@@ -22,13 +22,17 @@ ms.assetid: 9ffe8930-b290-4252-98d4-a1195b00205f
 
 [!INCLUDE [data-set-description](includes/data-set-description.md)]
 
+## Available for
+
+Model-driven apps
+
 ## Attributes
 
-|Name|Description|Type|Required|
-|--|--|--|--|
-|`description-key`|Used in the customization screen as localized strings that describes the description of the property.|`string`|Optional|
-|`display-name-key`|Used in the customization screens as localized strings that describes the name of the property.|`string`|Yes|
-|`name`|Name of the grid|`string`|Yes|
+|Name|Description|Type|Required|Available for|
+|--|--|--|--|-------|
+|`description-key`|Used in the customization screen as localized strings that describes the description of the property.|`string`|Optional|Model-driven apps|
+|`display-name-key`|Used in the customization screens as localized strings that describes the name of the property.|`string`|Yes|Model-driven apps|
+|`name`|Name of the grid|`string`|Yes|Model-driven apps|
 
 ## Parent Elements
 

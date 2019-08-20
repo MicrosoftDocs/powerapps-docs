@@ -22,7 +22,7 @@ ms.assetid: 1faf3e79-969e-4c1e-ac01-8e2155c609fa
 
 ## Available for 
 
-Model-driven apps only
+Model-driven apps
 
 ## Syntax
 
