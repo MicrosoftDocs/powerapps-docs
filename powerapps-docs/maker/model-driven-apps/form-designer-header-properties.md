@@ -1,7 +1,7 @@
 ---
 title: "Configure header properties in the form designer | MicrosoftDocs"
 ms.custom: ""
-ms.date: 08/02/2019
+ms.date: 08/19/2019
 ms.reviewer: ""
 ms.service: crm-online
 ms.suite: ""
@@ -26,6 +26,7 @@ search.app:
 # Configure header properties in the form designer
 Makers can control the density of model-driven app form headers to match the needs of users using the form.
 
+<<<<<<< HEAD
 ## High density header
 High density form header ensures that key information is always visible to users. Using high density header, the record title never truncates. Even long record titles are displayed using multiple lines. Similarly, high density header also ensures that up to four field values are directly visible in the header and never truncated or hidden.  
 
@@ -33,6 +34,18 @@ To ensure that key information is always visible, the framework displays read-on
 
 When a form does not specify header density or when a new form is created, the framework defaults to high density header.
 
+=======
+> [!NOTE]
+> This feature is only available with environments that opt-in to the early preview of 2019 release wave 2 features. More information: [Early opt-in to 2019 release wave 2](https://docs.microsoft.com/power-platform/admin/preview-october-2019-updates) 
+
+## High density header
+High density form header ensures that key information is always visible to users. Using high density header, the record title never truncates. Even long record titles are displayed using multiple lines. Similarly, high density header also ensures that up to four field values are directly visible in the header and never truncated or hidden.  
+
+To ensure that key information is always visible, the framework displays read-only field values and users can't directly edit the field values in the header. Visualizations such as custom controls or web resources also aren't allowed.
+
+When a form does not specify header density or when a new form is created, the framework defaults to high density header.
+
+>>>>>>> 8f5192f339687d21f01a3d7bbeace39ea79289aa
 > [!div class="mx-imgBorder"] 
 > ![High density form header](media/form-header-high-density.png "High density form header")
     
@@ -136,7 +149,11 @@ This message informs the maker that they are trying to move a field from the for
 ### Form headers now default to high density to display more data. Use the new form designer to edit header density.  
 This message is displayed in the classic form designer when a maker opens a main form for editing and it is configured to use low density header.  
   
+<<<<<<< HEAD
 This messasge helps increase awareness about the high density header and its benefits and that makers should use the new form designer to configure header density.  
+=======
+This message helps increase awareness about the high density header and its benefits and that makers should use the new form designer to configure header density.  
+>>>>>>> 8f5192f339687d21f01a3d7bbeace39ea79289aa
 
 ### This form is using high density header. For the best authoring experience with this form, use the new form designer. 
  This message is displayed in the classic form designer when a maker opens a main form for editing and it is configured to use high density header.  
