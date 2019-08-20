@@ -1,7 +1,7 @@
 ---
 title: "Guidelines on working with embedded canvas apps | MicrosoftDocs"
 ms.custom: ""
-ms.date: 07/24/2019
+ms.date: 08/19/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
