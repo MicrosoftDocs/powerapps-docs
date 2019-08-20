@@ -25,7 +25,7 @@ ms.assetid: 44d9fcfb-0cd8-48cc-aace-dd589099dd79
 
 ## Available for
 
-Model-driven apps and canvas apps (experimental preview) (experimental preview)
+Model-driven apps and canvas apps (experimental preview)
 
 ## Attributes
 

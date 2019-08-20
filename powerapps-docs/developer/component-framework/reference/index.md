@@ -17,15 +17,15 @@ manager: "kvivek"
 This section contains reference documentation for creating custom components using the PowerApps component framework.
 
 > [!IMPORTANT]
-> The **Available for** tab shows which APIs are supported by Model-driven apps and canvas apps (experimental preview). It is recommended to check the **Available for** section in each individual API whether it is supported or not.
+> The **Available for** tab shows which APIs are supported by model-driven apps and canvas apps (experimental preview). It is recommended to check the **Available for** section in each individual API methods whether it is supported or not. For example, the **client** API is supported for both model-driven apps and canvas apps, but the  **isOffline** method in **client** API supports only model-driven apps. 
 
 |Name|Description|Available for|
 |----|-----------|
-|[Client](client.md)|[!INCLUDE [client-description](includes/client-description.md)]|Model-driven apps and canvas apps (experimental preview) (experimental preview)|
+|[Client](client.md)|[!INCLUDE [client-description](includes/client-description.md)]|Model-driven apps and canvas apps (experimental preview)|
 |[Column](column.md)|[!INCLUDE [column-description](includes/column-description.md)]|Model-driven apps|
 |[ConditionExpression](conditionexpression.md)|[!INCLUDE [conditionexpression-description](includes/conditionexpression-description.md)]|Model-driven apps|
 |[Context](context.md)|[!INCLUDE [context-description](includes/context-description.md)]|Model-driven apps|
-|[Control](control.md)|[!INCLUDE [control-description](includes/control-description.md)]|Model-driven apps and canvas apps (experimental preview) (experimental preview)|
+|[Control](control.md)|[!INCLUDE [control-description](includes/control-description.md)]|Model-driven apps and canvas apps (experimental preview)|
 |[DataSet](dataset.md)|[!INCLUDE [dataset-description](includes/dataset-description.md)]|Model-driven apps|
 |[DateFormattingInfo](dateformattinginfo.md)|[!INCLUDE [dateformattinginfo-description](includes/dateformattinginfo-description.md)]|Model-driven apps|
 |[EntityReference](entityreference.md)|[!INCLUDE [entityreference-description](includes/entityreference-description.md)]|Model-driven apps|

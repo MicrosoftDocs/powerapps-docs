@@ -19,7 +19,7 @@ author: Nkrb
 
 ## Available for 
 
-Model-driven apps and canvas apps (experimental preview) (experimental preview)
+Model-driven apps and canvas apps (experimental preview)
 
 ## Methods
 

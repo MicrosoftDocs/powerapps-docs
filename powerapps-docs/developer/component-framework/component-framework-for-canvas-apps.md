@@ -23,7 +23,7 @@ PowerApps component framework enables developers and app makers to create custom
 - Replace a field that displays a numeric text value with a dial or slider component.
 
 > [!NOTE]
-> Only field type of custom components are supported in this experimetal preview and not the data-set type for canvas apps.
+> In this experimental preview,canvas apps only support field type of custom components and not the data-set.
 
 Component developers and app makers can utilize modern web practices and also harness the power of external libraries to create advanced user interactions. The framework automatically handles component lifecycle, retains application business logic and optimizes the performance. more information: [PowerApps component framework overview](overview.md) 
 
@@ -53,10 +53,10 @@ To enable PowerApps component feature:
 
 ## Implementing custom components
 
-After you enable the feature in your environment, the next step is to implement the custom component. [Implement sample component](implementing-controls-using-typescript.md) topic demonstrates step by step process to create custom components right from implementing custom logic, debug process, and creating a solution zip file.
+After you enable the PowerApps component framework feature in your environment, you can start implementing the custom components. [Implement sample component](implementing-controls-using-typescript.md) topic demonstrates step by step process to create custom components right from implementing custom logic, manifest file, debug process, and creating a solution zip file.
 
 > [!NOTE]
-> The process for implementing custom components is same for both Model-driven apps and canvas apps (experimental preview). The only difference is adding the custom components. 
+> Implementing custom components is same for both model-driven apps and canvas apps (experimental preview). The only difference is adding the custom components. 
 
 ## Add components to a canvas app
 

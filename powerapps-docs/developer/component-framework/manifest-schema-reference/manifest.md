@@ -21,7 +21,7 @@ ms.assetid: a48831c6-133a-4747-99fa-7cc1df4558d0
 
 ## Available for
 
-Model-driven apps and canvas apps (experimental preview) (experimental preview)
+Model-driven apps and canvas apps (experimental preview)
 
 ## Child Elements
 
