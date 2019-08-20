@@ -43,12 +43,13 @@ This topic provides guidelines on working with embedded canvas apps as well as h
     - Support to embed an existing canvas app in a model-driven form using App ID will be provided in a future update.
 - When you view a model-driven form with an embedded canvas app, if you see an error message that reads "Sorry we didn't find that app" make sure that the embedded canvas app is in the same solution as the model-driven form.
 - When you view a model-driven form with an embedded canvas app, if you see an error message that reads "It looks like you don’t have access to this app. Ask its owner to share it with you" make sure that the author has shared the embedded canvas app with you. More information: [Share an embedded canvas app](share-embedded-canvas-app.md).
-- Adding canvas app on the sub-grid control was available in preview only.
-    - In the preview release, makers were able to add a canvas app on a sub-grid control. However with the GA release adding an embedded canvas app on a model-driven form is streamlined to the field only. 
+- Adding canvas app on the sub-grid control is no longer available.
+    - In the preview release, makers were able to add a canvas app on a sub-grid control. With canvas app embedding now out of preview and generally available adding an embedded canvas app on a model-driven form is streamlined to the field. 
     - This makes it easier for makers since they dont have to decide up front if they want to pass the current (main form) record as data context or a list of records related to the current (main form) record. 
     - Makers always start with a field and can access both the current (main form) record or a list of records related to the current (main form) record
-    - To access the list of related records in the canvas app, with the *Improve data sources experience and Common Data Service views* capability enabled, makers can use the Common Data Service connector and Filter function. As an example, to access the *Active Contacts* view of the *Contacts* entity makers can use: *Filter(Contacts, 'Contacts (Views)'.'Active Contacts')*.
-    - Please see [Migrating embedded canvas apps on model-driven forms that use a list of records related to the current (main form) record](embedded-canvas-app-migrate-from-preview.md#migrating-embedded-canvas-apps-on-model-driven-forms-that-use-a-list-of-records-related-to-the-current-main-form-record) to learn how to migrate an embedded canvas app on a model-driven form that uses a list of records related to the current (main form) record.
+    - To access the list of related records in the canvas app, makers can use the Common Data Service connector and [*Filter*](../canvas-apps/functions/function-filter-lookup.md) function with the *Improve data sources experience and Common Data Service views* capability enabled.  
+    As an example, to access the *Active Contacts* view of the *Contacts* entity makers can use: *Filter(Contacts, 'Contacts (Views)'.'Active Contacts')*.
+    - Existing canvas apps using the sub-grid control will continue to work but we recommend that makers migrate these apps to use a field instead. Please see [Migrating embedded canvas apps on model-driven forms that use a list of records related to the current (main form) record](embedded-canvas-app-migrate-from-preview.md#migrating-embedded-canvas-apps-on-model-driven-forms-that-use-a-list-of-records-related-to-the-current-main-form-record) for details.
 
 ## Enable an embedded canvas app
 1. Select the field that is customized to display as an embedded canvas app.
