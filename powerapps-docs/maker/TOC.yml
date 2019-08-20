@@ -1009,7 +1009,7 @@
       href: ./model-driven-apps/distribute-model-driven-app.md
     - name: Create guided help
       href: ./model-driven-apps/create-guided-help-learning-path.md      
-  - name: Transition Web Client applications
+  - name: Transition to Unified Interface
     items: 
     - name: Transition quick start
       href: ./model-driven-apps/transition-web-app.md
