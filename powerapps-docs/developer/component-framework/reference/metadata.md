@@ -23,27 +23,27 @@ Model-driven apps
 
 ## Properties
 
-## DisplayName
+### DisplayName
 
 **Type**: `string`
 
-## LogicalName 
+### LogicalName 
 
 **Type**: `string`
 
-## IsSecured
+### IsSecured
 
 **Type**: `boolean`
 
-## SourceType
+### SourceType
 
 **Type**: `number`
 
-## Description
+### Description
 
 **Type**: `string`
 
-## RequiredLevel
+### RequiredLevel
 
 **Type**: `RequiredLevel`
 

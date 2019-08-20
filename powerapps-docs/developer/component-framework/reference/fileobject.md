@@ -23,25 +23,25 @@ Model-driven apps
 
 ## Properties
 
-## fileContent
+### fileContent
 
 Contents of the file.
 
 **Type**: `string`
 
-## fileName
+### fileName
 
 Name of the file.
 
 **Type**: `string`
 
-## fileSize
+### fileSize
 
 Size of the file.
 
 **Type**: `number`
 
-## mimeType
+### mimeType
 
 File MIME type.
 

@@ -23,13 +23,13 @@ Model-driven apps
 
 ## Properties
 
-## Url
+### Url
 
 The Url of the conditional image.
 
 **Type**: `string`
 
-## Tooltip
+### Tooltip
 
 The tooltip associated with that image.
 

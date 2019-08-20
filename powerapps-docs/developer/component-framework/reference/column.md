@@ -25,55 +25,55 @@ Model-driven apps
 
 ## Properties
 
-## alias
+### alias
 
-The alias of this column.
-
-**Type**: `string`
-
-## dataType
-
-The data type of this column's values.
+The alias of the column.
 
 **Type**: `string`
 
-## disableSorting
+### dataType
+
+The data type of the column's values.
+
+**Type**: `string`
+
+### disableSorting
 
 Prevents the UI from making the column sortable.
 
 **Type**: `boolean`<br />
 
-## displayName
+### displayName
 
 Localized display name for the column
 
 **Type**: `string`
 
-## isHidden
+### isHidden
 
 The column visibility state.
 
 **Type**: `boolean`<br />
 
-## isPrimary
+### isPrimary
 
 Is specific column the primary attribute of the view's entity.
 
 **Type**: `boolean`<br />
 
-## name
+### name
 
-Name of the column, unique in this dataset.
+Name of the column, unique in the dataset.
 
 **Type**: `string`
 
-## order
+### order
 
 The column order for the layout.
 
 **Type**: `number`
 
-## visualSizeFactor
+### visualSizeFactor
 
 Customized column width ratios. 
 

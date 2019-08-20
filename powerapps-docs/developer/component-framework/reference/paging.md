@@ -25,19 +25,19 @@ Model-driven apps
 
 ## Properties
 
-## totalResultCount
+### totalResultCount
 
 Total number of results on the server for the current query.
 
 **Type**: `number`
 
-## hasNextPage
+### hasNextPage
 
 Whether the result set can be paged backwards.
 
 **Type**: `boolean`
 
-## hasPreviousPage
+### hasPreviousPage
 
 Whether the result set can be paged backwards.
 

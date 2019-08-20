@@ -4,10 +4,10 @@
     href: overview.md
   - name: What are custom components
     href: custom-controls-overview.md
+  - name: Availability for canvas apps
+    href: component-framework-for-canvas-apps.md
   - name: Get tooling
     href: get-powerapps-cli.md
-  - name: PowerApps component Framework for canvas apps
-    href: component-framework-for-canvas-apps.md
   - name: Tutorial
     items:
     - name: Implement sample component
@@ -70,8 +70,6 @@
       - name: Client
         href: reference/client.md
         items:
-        - name: Overview
-          href: reference/client.md
         - name: getClient
           href: reference/client/getclient.md
         - name: getFormFactor

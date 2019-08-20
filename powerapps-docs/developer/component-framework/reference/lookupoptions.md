@@ -23,31 +23,31 @@ Model-driven apps
 
 ## Properties
 
-## allowMultiSelect
+### allowMultiSelect
 
 Whether the lookup allows more than one item to be selected.
 
 **Type**: `boolean`
 
-## defaultEntityType
+### defaultEntityType
 
 The default entity type.
 
 **Type**: `string`
 
-## defaultViewId
+### defaultViewId
 
 The default view to use.
 
 **Type**: `string`
 
-## entityTypes
+### entityTypes
 
 The entity types to display.
 
 **Type**: `string[]`
 
-## viewIds
+### viewIds
 
 The views to be available in the view picker. Only System views are supported (not user views).
 

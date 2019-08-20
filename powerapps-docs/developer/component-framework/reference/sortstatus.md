@@ -25,13 +25,13 @@ Model-driven apps
 
 ## Properties
 
-## name
+### name
 
 The name of the column
 
 **Type**: `string`
 
-## sortDirection
+### sortDirection
 
 <!-- ColumnSortDirection  -->
 The current sort direction for the column.

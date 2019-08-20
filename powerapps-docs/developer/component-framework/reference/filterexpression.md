@@ -25,13 +25,13 @@ Model-driven apps
 
 ## Properties
 
-## conditions
+### conditions
 
 The set of conditions associated with this filter.
 
 **Type**: [ConditionExpression](conditionexpression.md)[]
 
-## filterOperator
+### filterOperator
 
 The operator used to combine conditions in this filter.
 
@@ -44,7 +44,7 @@ The `filterOperator` value is an enum with the following possible values
 |0|And|
 |1|Or|
 
-## filters
+### filters
 
 Any child filters that should be evaluated after evaluating this filter.
 

@@ -25,31 +25,31 @@ Model-driven apps
 
 ## Properties
 
-## allocatedHeight
+### allocatedHeight
 
 Height in pixels allocated to the component.
 
 **Type**: `number`
 
-## allocatedWidth
+### allocatedWidth
 
 Width in pixels allocated to the component.
 
 **Type**: `number`
 
-## isControlDisabled
+### isControlDisabled
 
 Whether the component is disabled.
 
 **Type**: `string`
 
-## isVisible
+### isVisible
 
 Whether the component is visible on the page.
 
 **Type**: `boolean`
 
-## label
+### label
 
 The defined component label.
 

@@ -23,73 +23,73 @@ ms.assetid: 6e066350-9d22-4078-b497-26be7d2fa374
 
 Model-driven apps
 
-## client
+### client
 
 The interface for `context.client`
 
 **Type**: [Client](client.md)
 
-## device
+### device
 
 The interface for `context.device`
 
 **Type**: [Device](device.md)
 
-## factory
+### factory
 
 The interface for `context.factory`
 
 **Type**: [Factory](factory.md)
 
-## formatting
+### formatting
 
 The interface for `context.formatting`
 
 **Type**: [Formatting](formatting.md)
 
-## mode
+### mode
 
 The interface for `context.mode`
 
 **Type**: [Mode](mode.md)
 
-## navigation
+### navigation
 
 The interface for `context.navigation`
 
 **Type**: [Navigation](navigation.md)
 
-## parameters
+### parameters
 
 The data provided to the control. Structure defined by the component’s manifest, corresponding to parameter and data-set nodes
 
 **Type**: `TInputs`
 
-## resources
+### resources
 
 The resource interface of `context.resource`
 
 **Type**: [Resources](resources.md)
 
-## updatedProperties
+### updatedProperties
 
 An array of strings indicated which values have changed on the context object since the last time it was passed to this control
 
 **Type**: `string[]`
 
-## userSettings
+### userSettings
 
 The interface for `context.userSettings`
 
 **Type**: [UserSettings](usersettings.md)
 
-## utils
+### utils
 
 The interface for `context.utils`
 
 **Type**: [Utility](utility.md)
 
-## webAPI
+### webAPI
 
 The interface for `context.webApi`
 

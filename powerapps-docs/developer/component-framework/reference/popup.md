@@ -25,31 +25,31 @@ Model-driven apps
 
 ## Properties
 
-## closeOnOutsideClick
+### closeOnOutsideClick
 
 Indicates whether popup close on an outside mouse click.
 
 **Type**: `boolean`
 
-## content
+### content
 
 Static DOM element to be inserted.
 
 **Type**: [HTMLElement](https://developer.mozilla.org/docs/Web/API/HTMLElement)
 
-## id
+### id
 
 The id to be set to the anchor component if any.
 
 **Type**: `string`
 
-## name
+### name
 
 The name of the Popup. Used like a reference to open Popups.
 
 **Type**: `string`
 
-## popupToOpen
+### popupToOpen
 
 The name of Popup which should be opened.
 

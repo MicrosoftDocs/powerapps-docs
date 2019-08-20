@@ -23,27 +23,27 @@ Model-driven apps
 
 ## Properties
 
-## error
+### error
 
 **Type**: `boolean`
 
-## errorMessage
+### errorMessage
 
 **type**: `string`
 
-## formatted
+### formatted
 
 **Type**: `string`
 
-## security
+### security
 
 **Type**: `SecurityValues`
 
-## raw
+### raw
 
 **Type**: `any`
 
-## attribute
+### attribute
 
 **Type**: `FieldPropertyMetadata`
 
