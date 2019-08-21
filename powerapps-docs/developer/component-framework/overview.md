@@ -18,7 +18,7 @@ ms.author: nabuthuk
 
 [!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-Use PowerApps component framework to create custom components in Model-driven apps and canvas apps (experimental preview) to provide an enhanced user experience for the users to view and work with data in forms, views and dashboards. For example:
+Use PowerApps component framework to create custom components in model-driven apps and canvas apps (experimental preview) to provide an enhanced user experience for the users to view and work with data in forms, views and dashboards. For example:
 
 - Replace a field that displays a numeric text value with a `dial` or `slider` component.
 - Transform a list into an entirely different visual experience bound to the data set like a `Calendar` or `Map`.
@@ -40,9 +40,9 @@ Component developers can utilize modern web practices and also harness the power
 
 ## Availability
 
-Currently PowerApps component framework is in public preview for model driven apps. For canvas apps, powerApps component feature is in experimental preview and may not support all the APIs that are supported for model driven apps. 
+Currently PowerApps component framework is in public preview for model driven apps. For canvas apps, PowerApps component framework feature is in experimental preview and may not support all the APIs that are supported for model driven apps. 
 
-By default PowerApps component framework is enabled in model-driven apps. To enable this feature in canvas apps, see [PowerApps component framework for canvas apps](component-framework-for-canvas-apps.md)
+By default PowerApps component framework is enabled in model-driven apps. To enable this feature in canvas apps and learn more about it, see [Availability for canvas apps](component-framework-for-canvas-apps.md)
 
 ## Related topics
 
