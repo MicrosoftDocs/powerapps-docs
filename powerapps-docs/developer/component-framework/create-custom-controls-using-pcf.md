@@ -39,38 +39,6 @@ To get started, open a new Developer Command Prompt for VS 2017 after installing
 
 To build the component project, open the project folder in Visual Studio Code and use the (Ctrl-Shift-B) command, then select the build options. Alternatively, you can also build the component quickly using the `npm run build` command in the Developer Command Prompt for VS 2017 window.
 
-## Authenticating to your organization
-
-You can deploy the custom components directly from the PowerApps CLI by authenticating to Common Data Service org, then pushing the updated components. Follow the steps below to create the authentication profile, connect to your environment, and push your updated components. 
- 
-1. Create your authentication profile using the command: 
- 
-    ```CLI
-    pac auth create --url <your Common Data Service org’s url> 
-    ```
- 
-2. If you have previously created an authentication profile, you can view all existing profiles using the command: 
-
-    ```CLI
-     pac auth list 
-    ```
- 
-3. To switch between the previously created authentication profiles, use the command: 
-   
-    ```CLI
-     Pac auth select --index <index of the active profile>
-     ``` 
- 
-4. To get the basic information about the organization, use the command. The connection will made using the default authentication profile. 
-
-    ```CLI
-    pac org who 
-    ```
- 
-5. To delete a particular authentication profile, run the command `pac auth delete --index < index of the profile >`. 
-6. If you want to clear all profiles from your local machine, run the command `pac auth clear”`. This action is irreversible as it completely deletes the `authprofile.json` file and token cache file from your local disk. 
- 
-
 > [!TIP]
 > To debug the component during or after the build operation, see [Debug a custom component](debugging-custom-controls.md).
 
