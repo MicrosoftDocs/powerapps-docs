@@ -100,7 +100,7 @@ To add fields to a form, use the **Fields** pane. The **Fields** pane lets you s
 
      > [!NOTE]
      >   -  If you delete a field by mistake, in the command bar, select **Undo** to revert the form to its previous state. 
-     >   -  You can't delete a field that is required or locked. 
+     >   -  You can't delete a field that is locked or is required and not present anywhere else on the form. 
 
 ### See also
 [Overview of the model-driven form designer](form-designer-overview.md)  
