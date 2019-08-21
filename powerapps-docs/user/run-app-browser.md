@@ -39,14 +39,6 @@ If you've recently installed the app, it might not immediately appear in the lis
 
 ![](./media/run-app-browser/dynamics-365-home.png)
 
-## Run an app from the task pane
-After you find an app, you can pin it to the task pane for easier access. To pin an app, select the ellipsis (...) on the app tile, and then select **Pin this app**.
-
-![](./media/run-app-browser/homepage-pin.png)
-
-To run the pinned app from the task pane, select **Dynamics 365** in the upper-left corner, locate the app under **My apps**, and then select it.
-
-![](./media/run-app-browser/taskpane.png)
 
 ## Run an app from a URL
 You can save an app's URL as a bookmark in your browser and run it by selecting the bookmark, or you can send a URL as a link through email. If someone else created an app and shared it with you in an email, you can run the app by selecting the link in the email. When running an app using a URL, you may be prompted to sign in using your Azure Active Directory credentials.
