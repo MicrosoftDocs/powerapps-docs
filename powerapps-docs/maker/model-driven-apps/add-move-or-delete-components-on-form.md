@@ -50,7 +50,7 @@ To add components to a form, use the **Components** pane. The **Components** pan
 6. Repeat steps 3-5 above if you want to add more components.
 7. In the command bar, select **Save** to save the form, or select **Publish** if you want to save and make your changes visible to users. 
 
-### Add fields to a form using selection 
+### Add components to a form using selection 
 
 1. Open the form designer to create or edit a form. More information: [Create a form](create-and-edit-forms.md#create-a-form) or [Edit a form](create-and-edit-forms.md#edit-a-form)
 2. In the form preview, select another existing component or field or section. Note the following:
@@ -62,45 +62,45 @@ To add components to a form, use the **Components** pane. The **Components** pan
 6. Repeat steps 2-5 above if you want to add more fields.
 7. In the command bar, select **Save** to save the form, or select **Publish** if you want to save and make your changes visible to users. 
 
-## Move fields on a form
+## Move components on a form
 
-### Move fields on a form using drag and drop
+### Move commponents on a form using drag and drop
 
 1. Open the form designer to create or edit a form. More information: [Create a form](create-and-edit-forms.md#create-a-form) or [Edit a form](create-and-edit-forms.md#edit-a-form)
-2. In the form preview, select the field that you want to move and initiate the drag action. As you drag the field on the form preview, you will see drop targets where you can move the field to. 
-3. Drop the field in the location you want. Note the following: 
-    - Fields can be dropped before or after any existing field.
-    - Fields can also be dropped in the empty area within a section. In this case the field will be added in an available space so as to evenly distribute fields across the section columns.
-    - Hovering over a tab header when dragging a field changes the currently selected tab, allowing you to add the field to a different tab.   
-4. Repeat steps 2-3 above if you want to move more fields.
+2. In the form preview, select the component that you want to move and initiate the drag action. As you drag the component on the form preview, you will see drop targets where you can move the component to. 
+3. Drop the component in the location you want. Note the following: 
+    - Components can be dropped before or after any existing component or field.
+    - Components can also be dropped in the empty area within a section. In this case the component will be added in an available space so as to evenly distribute components and fields across the section columns.
+    - Hovering over a tab header when dragging a component changes the currently selected tab, allowing you to add the component to a different tab.   
+4. Repeat steps 2-3 above if you want to move more components.
 5. In the command bar, select **Save** to save the form, or select **Publish** if you want to save and make your changes visible to users. 
 
     > [!NOTE]
-    >   Moving fields in the header and footer using drag and drop is not yet supported. 
+    >   Moving components in the header and footer using drag and drop is not yet supported. 
 
-### Move fields on a form using cut and paste
+### Move components on a form using cut and paste
 
 1. Open the form designer to create or edit a form. More information: [Create a form](create-and-edit-forms.md#create-a-form) or [Edit a form](create-and-edit-forms.md#edit-a-form)
-2. In the form preview, select the field that you want to move.
+2. In the form preview, select the component that you want to move.
 3. In the command bar, select **Cut**.
-4. In the form preview, select another existing field or section. You can also switch to a different tab if needed.
+4. In the form preview, select another existing component, field or section. You can also switch to a different tab if needed.
 5. In the command bar, select **Paste** or select the chevron, and then select **Paste before**. Note the following:
-    - When you select **Paste**, the field being moved is pasted after the existing field. 
-    - When you select **Paste before**, the field being moved is pasted before the existing field.
-    - When you select a section, the field being moved is added in an available space so as to evenly distribute fields across the section columns. The **Paste before** action is not applicable and therefore not available in this case.
-6. Repeat steps 2-5 above if you want to move more fields.
+    - When you select **Paste**, the component being moved is pasted after the existing component or field. 
+    - When you select **Paste before**, the component being moved is pasted before the existing component or field.
+    - When you select a section, the component being moved is added in an available space so as to evenly distribute components and fields across the section columns. The **Paste before** action is not applicable and therefore not available in this case.
+6. Repeat steps 2-5 above if you want to move more components.
 7. In the command bar, select **Save** to save the form, or select **Publish** if you want to save and make your changes visible to users. 
 
-## Delete fields on a form
+## Delete components on a form
 1. Open the form designer to create or edit a form. More information: [Create a form](create-and-edit-forms.md#create-a-form) or [Edit a form](create-and-edit-forms.md#edit-a-form)
-2. In the form preview, select the field that you want to delete from the form. 
+2. In the form preview, select the component that you want to delete from the form. 
 3. In the command bar, select **Delete**. 
-4. Repeat steps 2-3 above if you want to delete more fields.
+4. Repeat steps 2-3 above if you want to delete more components.
 5. In the command bar, select **Save** to save the form, or select **Publish** if you want to save and make your changes visible to users. 
 
      > [!NOTE]
-     >   -  If you delete a field by mistake, in the command bar, select **Undo** to revert the form to its previous state. 
-     >   -  You can't delete a field that is required or locked. 
+     >   -  If you delete a component by mistake, in the command bar, select **Undo** to revert the form to its previous state. 
+     >   -  You can't delete a component that is locked or is using a required field that is not present anywhere else on the form. 
 
 ### See also
 [Overview of the model-driven form designer](form-designer-overview.md)  
