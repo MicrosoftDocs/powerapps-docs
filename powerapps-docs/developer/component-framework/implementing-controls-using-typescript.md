@@ -311,7 +311,7 @@ To add a custom component like a liner input component or simple table component
 
 ## Add custom components to a canvas app
 
-To add a custom component to a canvas app, see the topic [Add components to an app](component-framework-for-canvas-apps.md#add-components-to-an-app)
+To add a custom component to a canvas app, see the topic [Add components to an app](component-framework-for-canvas-apps.md#add-components-to-a-canvas-app)
 
 ### See also
 
