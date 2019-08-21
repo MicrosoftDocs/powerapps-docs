@@ -38,7 +38,7 @@ Follow the steps below to create and import a solution file:
     > - If you encounter an error that says *Ambiguous project name* when running the `msbuild` command on your solution. Then double-check that your solution name and project name are not the same.
 
 4. After build completes, the generated solution files are located in `\bin\debug\`.
-5. You can now manually import the solution using the web portal.
+5. You can now manually import the solution using the web portal or see [Authenticating to your organization](#authenticating-to-your-organization) and [Deployment](#deploying-custom-components) sections to import using PowerApps CLI commands.
 
 ## Authenticating to your organization
 
