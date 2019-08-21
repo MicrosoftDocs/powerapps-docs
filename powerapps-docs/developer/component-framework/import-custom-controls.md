@@ -69,7 +69,7 @@ You can deploy the custom components directly from the PowerApps CLI by authenti
     ```
  
 5. To delete a particular authentication profile, run the command `pac auth delete --index < index of the profile >`. 
-6. If you want to clear all the profiles from your local machine, run the command `pac auth clear”`. This action is irreversible as it completely deletes the `authprofile.json` file and token cache file from your local disk. 
+6. If you want to clear all the profiles from your local machine, run the command `pac auth clear`. This action is irreversible as it completely deletes the `authprofile.json` file and token cache file from your local disk. 
 
 ## Deploying custom components 
 
