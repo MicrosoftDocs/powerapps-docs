@@ -84,8 +84,8 @@ The build tools expect the component source to be exported using standard ES6 mo
 
 ## Using Generated Manifest Typing file
 
-Legacy projects required manually creating and editing an `inputsOutputs.d.ts` typing file. This file is typically located under `private_typing` subfolder. The new tooling now automatically generate this file upon build. Code-gen ensures that `type` definitions used in the component source code stays in-sync with `types` defined in the component manifest file.  
-The typing file is renamed to `ManifestTypes.d.ts` and it is now generated into a subfolder named `generated`. In addition, the `InputsOutputs.IInputBag` and `InputsOutputs.IOutputBag` types are renamed to `IInputs` and `IOutputs` respectively.
+Legacy projects require manually creating and editing an `inputsOutputs.d.ts` typing file. This file is typically located under `private_typing` sub folder. The new tooling now automatically generate this file upon build. Code-gen ensures that `type` definitions used in the component source code stays in-sync with `types` defined in the component manifest file.  
+The typing file is renamed to `ManifestTypes.d.ts` and it is now generated into a sub folder named `generated`. In addition, the `InputsOutputs.IInputBag` and `InputsOutputs.IOutputBag` types are renamed to `IInputs` and `IOutputs` respectively.
 To use the new typing file:
 
 1. Import the new `ManifestTypes.d.ts` file by adding the following line at the top of the component source file:
