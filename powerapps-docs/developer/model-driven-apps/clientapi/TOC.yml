@@ -186,6 +186,8 @@
         href: reference/controls/getName.md
       - name: getObject
         href: reference/controls/getObject.md
+      - name: getOptions
+        href: reference/controls/getOptions.md
       - name: getParent
         href: reference/controls/getParent.md
       - name: getSearchQuery

@@ -13,7 +13,7 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date:  07/30/2019
+ms.date:  08/14/2019
 ms.author: pehecke
 search.audienceType: 
   - developer
@@ -35,6 +35,8 @@ Multi-threading or parallel calls within plug-ins or custom workflow activities 
 
 `Generic SQL error.`
 `The transaction active in this session has been committed or aborted by another session.`
+
+Also, non-thread safe objects such as items in the [System.Collections Namespace](/dotnet/api/system.collections) can become corrupted by parallel threads.
 
 <a name='guidance'></a>
 

@@ -40,7 +40,7 @@ ms.assetid: 9ffe8930-b290-4252-98d4-a1195b00205f
 ## Example
 
 ```xml
- <data-set name="dataSetGrid" display-name-key="DataSetGridProperty">
+ <data-set name="dataSetGrid" display-name-key="DataSetGridProperty" cds-data-set-options="displayCommandBar:true;displayViewSelector:true;displayQuickFindSearch:true">
  </data-set>
 ```
 
