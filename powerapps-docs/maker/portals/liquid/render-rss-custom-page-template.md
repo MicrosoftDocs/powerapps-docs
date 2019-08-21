@@ -60,13 +60,12 @@ Now, we'll create a new page template, allowing us to assign our RSS feed templa
 
 Now all that's left is to create a new web page using the RSS Feed template to host our feed. When we request this new web page, we'll receive our RSS feed XML:
 
-![Example of an RSS feed](media/rss-feed-example.png "Example of an RSS feed")  
+![Example of an RSS feed](../media/rss-feed-example.png "Example of an RSS feed")  
 
 In this example, we've seen how we can combine Liquid, Web Templates, PowerApps views, and portals content management features to create a custom RSS feed. The combination of these features adds powerful customization capabilities to any portal application.
 
 ### See also
 
-[Create advanced templates for portals](create-advanced-templates.md)  
 [Create a custom page template by using Liquid and a web template page template](create-custom-template.md)  
 [Render the entity list associated with the current page](render-entity-list-current-page.md)  
 [Render a website header and primary navigation bar](render-site-header-primary-navigation.md)  

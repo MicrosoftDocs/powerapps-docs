@@ -110,7 +110,6 @@ Now, all that's left to do is to create a web page that uses our page template, 
 
 ### See also
 
-[Create advanced templates for portals](create-advanced-templates.md)  
 [Create a custom page template to render an RSS feed](render-rss-custom-page-template.md)  
 [Render the entity list associated with the current page](render-entity-list-current-page.md)  
 [Render a website header and primary navigation bar](render-site-header-primary-navigation.md)  
