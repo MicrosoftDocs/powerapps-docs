@@ -18,7 +18,7 @@ search.app:
 
 This article lists some common issues that you might encounter while using PowerApps. Where applicable, workarounds are provided.
 
-1. **Sign-in issue on certain android devices when using authenticator** (August 21, 2019)
+1. **Sign-in issue on certain Android mobile devices when using authenticator** (August 21, 2019)
 
     In certain devices and scenarios, you may experience sign-in failures when using authenticator. This is due to the OEM limiting this functionality. For more details on the error and possible mitigations, see [here](https://github.com/AzureAD/azure-activedirectory-library-for-android/wiki/ADALError:-BROKER_AUTHENTICATOR_NOT_RESPONDING).    
 
