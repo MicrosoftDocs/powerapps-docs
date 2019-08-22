@@ -18,8 +18,9 @@ search.app:
   - PowerApps
 searchScope:
   - GetStarted
-  - PowerApps What's New
+  - PowerApps
 ---
+
 # What's new in PowerApps
 
 This topic provides resources where you can learn about the new features that have recently released, new features that will be releasing over the next few months, and known limitations.
