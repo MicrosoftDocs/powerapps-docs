@@ -54,7 +54,7 @@ Many shopping carts allow the customer to reuse the shipping address as the bill
 
 ![](media/function-setfocus/shipping-billing.gif)
 
-There are many formulas in play here, but the one that moves the focus is on the **OnUncheck** property of the **Checkbox** control:
+There are many formulas in play here, but the one that moves the focus is on the **OnUncheck** property of the **Check box** control:
 
 ```powerappa-dot
 SetFocus( BillingName ) 
@@ -67,7 +67,7 @@ To recreate this entire example:
 1. Add [**Label** controls](../controls/control-text-box.md) with the text "Shipping address", "Name:", "Address:", "Billing Address", "Name:", and "Address:" and position them as shown in the animation.
 1. Add a [**Text Input** control](../controls/control-text-input.md) and rename it **ShipingName**.
 1. Add a [**Text Input** control](../controls/control-text-input.md) and rename it **ShipingAddress**.
-1. Add a [**Check box** control](../controls/control-checkbox.md) and rename it **SyncAddresses**.
+1. Add a [**Check box** control](../controls/control-check-box.md) and rename it **SyncAddresses**.
 1. Set the **Text** property of this control to the formula `"Use Shipping address as Billing address"`.
 1. Add a [**Text Input** control](../controls/control-text-input.md) and rename it **BillingName**.
 1. Set the **Default** property on this control to the formula `ShippingNmae`.
@@ -99,5 +99,7 @@ If( IsBlank( Name ), Notify( "Please provide a value for Name", Error ); SetFocu
     Notify( "Form is Complete", NotificationType.Success )
 )
 ```
+
+![](media/function-setfocus/scrollable-screen-small.gif)
 
 
