@@ -24,9 +24,7 @@ search.app:
 ---
 
 # Add, move, or delete components on a form  
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
-
-Using the new form designer makers can add popular components such as sub-grid, quick view and even additional out-of-box components such as arc knob, linear slider and more.
+Using the new form designer makers can add popular components such as sub-grid, quick view and even additional components such as arc knob, linear slider and more.
 
 > [!NOTE]
 > When adding or moving components using drag and drop be aware that the form preview is responsive and may be rendering multiple section columns as stacked. To ensure that the component being added or moved is in the correct section column, drop or paste it anchored to another field or component that is already in that section column.
@@ -35,7 +33,7 @@ Using the new form designer makers can add popular components such as sub-grid, 
 To add components to a form, use the **Components** pane. The **Components** pane also lets you search to help you quickly find components.  
 
 > [!div class="mx-imgBorder"] 
-> ![](media/fields-pane.png "Fields pane")
+> ![](media/FormDesignerComponentsPane.png "Components pane")
 
 ### Add components to a form using drag and drop
 
