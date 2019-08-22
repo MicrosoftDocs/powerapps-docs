@@ -1,5 +1,5 @@
 ---
-title: "Add a connection role to to link records to each other| MicrosoftDocs"
+title: "Add a connection role to link records to each other| MicrosoftDocs"
 ms.custom: ""
 author: mduelae
 manager: kvivek
@@ -17,7 +17,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Add a connection role to to link records to each other|
+# Add a connection role to link records to each other
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
 
