@@ -18,7 +18,7 @@ search.app:
   - PowerApps
 searchScope:
   - GetStarted
-  - PowerApps
+  - PowerApps What's New
 ---
 # What's new in PowerApps
 
