@@ -1,7 +1,7 @@
 ---
 title: "Add, move or delete fields on a form | MicrosoftDocs"
 ms.custom: ""
-ms.date: 04/21/2019
+ms.date: 08/22/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -24,8 +24,6 @@ search.app:
 ---
 
 # Add, move, or delete fields on a form  
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
-
 Add, move, and remove fields using the form designer.
 
 > [!NOTE]
@@ -35,7 +33,7 @@ Add, move, and remove fields using the form designer.
 To add fields to a form, use the **Fields** pane. The **Fields** pane lets you search and filter to help you quickly find fields. It also includes the option to show only unused fields. 
 
 > [!div class="mx-imgBorder"] 
-> ![](media/fields-pane.png "Fields pane")
+> ![](media/FormDesignerFieldsPane.png "Fields pane")
 
 ### Add fields to a form using drag and drop
 
@@ -44,8 +42,8 @@ To add fields to a form, use the **Fields** pane. The **Fields** pane lets you s
 3. In the **Fields** pane, search, filter, or scroll to find the field you want to add. If you can't find a field, it might already be on the form. Clear **Show only unused fields** to view all fields, including those already added to the form. 
 4. In the **Fields** pane, select a field and drag it onto the form preview. As you drag the field on the form preview, you will see drop targets where you can add the field. 
 5. Drop the field in the location you want. Note the following: 
-    - Fields can be dropped before or after any existing field.
-    - Fields can also be dropped in the empty area within a section. In this case the field will be added in an available space so as to evenly distribute fields across the section columns.
+    - Fields can be dropped before or after any existing field or component.
+    - Fields can also be dropped in the empty area within a section. In this case the field will be added in an available space so as to evenly distribute fields and components across the section columns.
     - Hovering over a tab header when dragging a field changes the currently selected tab, allowing you to add the field to a different tab.   
 6. Repeat steps 3-5 above if you want to add more fields.
 7. In the command bar, select **Save** to save the form, or select **Publish** if you want to save and make your changes visible to users. 
@@ -69,25 +67,22 @@ To add fields to a form, use the **Fields** pane. The **Fields** pane lets you s
 1. Open the form designer to create or edit a form. More information: [Create a form](create-and-edit-forms.md#create-a-form) or [Edit a form](create-and-edit-forms.md#edit-a-form)
 2. In the form preview, select the field that you want to move and initiate the drag action. As you drag the field on the form preview, you will see drop targets where you can move the field to. 
 3. Drop the field in the location you want. Note the following: 
-    - Fields can be dropped before or after any existing field.
-    - Fields can also be dropped in the empty area within a section. In this case the field will be added in an available space so as to evenly distribute fields across the section columns.
+    - Fields can be dropped before or after any existing field or component.
+    - Fields can also be dropped in the empty area within a section. In this case the field will be added in an available space so as to evenly distribute fields and components across the section columns.
     - Hovering over a tab header when dragging a field changes the currently selected tab, allowing you to add the field to a different tab.   
 4. Repeat steps 2-3 above if you want to move more fields.
 5. In the command bar, select **Save** to save the form, or select **Publish** if you want to save and make your changes visible to users. 
-
-    > [!NOTE]
-    >   Moving fields in the header and footer using drag and drop is not yet supported. 
 
 ### Move fields on a form using cut and paste
 
 1. Open the form designer to create or edit a form. More information: [Create a form](create-and-edit-forms.md#create-a-form) or [Edit a form](create-and-edit-forms.md#edit-a-form)
 2. In the form preview, select the field that you want to move.
 3. In the command bar, select **Cut**.
-4. In the form preview, select another existing field or section. You can also switch to a different tab if needed.
+4. In the form preview, select another existing field, component or section. You can also switch to a different tab if needed.
 5. In the command bar, select **Paste** or select the chevron, and then select **Paste before**. Note the following:
-    - When you select **Paste**, the field being moved is pasted after the existing field. 
-    - When you select **Paste before**, the field being moved is pasted before the existing field.
-    - When you select a section, the field being moved is added in an available space so as to evenly distribute fields across the section columns. The **Paste before** action is not applicable and therefore not available in this case.
+    - When you select **Paste**, the field being moved is pasted after the existing field or component. 
+    - When you select **Paste before**, the field being moved is pasted before the existing field or component.
+    - When you select a section, the field being moved is added in an available space so as to evenly distribute fields and components across the section columns. The **Paste before** action is not applicable and therefore not available in this case.
 6. Repeat steps 2-5 above if you want to move more fields.
 7. In the command bar, select **Save** to save the form, or select **Publish** if you want to save and make your changes visible to users. 
 
