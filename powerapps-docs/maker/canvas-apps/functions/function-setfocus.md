@@ -18,9 +18,11 @@ search.app:
 Moves input focus to a specific control. 
 
 ## Description
-The **SetFocus** function gives a control the input focus.  The user's keystrokes are then received by that control, allowing them to type into a text input control or use the *Enter* key to select a button.  The control with focus may be visually different based on the [**FocusedBorderColor**](../controls/properties-color-border.md) and [**FocusedBorderThickness**](../controls/properties-color-border.md) properties.  The user can also use the *Tab* key to move the input focus themselves. 
+The **SetFocus** function gives a control the input focus.  The user's keystrokes are then received by that control, allowing them to type into a text input control or use the *Enter* key to select a button.  The user can also use the *Tab* key to move the input focus themselves. 
 
-Use the **SetFocus** function within the **OnVisible** property of the [**Screen**](../controls/control-screen.md) to set the focus when a screen is displayed.  For example, when entering a screen you may always want the first text input control to have the focus.
+Use the **SetFocus** function within the **OnVisible** property of the [**Screen**](../controls/control-screen.md) to set the focus when a screen is displayed.  For example, when entering a screen you may always want the first text input control to have the focus.  Also use **SetFocus** to a newly exposed or enabled input control to guide the user in what comes next and for faster data entry.
+
+The control with focus may be visually different based on the [**FocusedBorderColor**](../controls/properties-color-border.md) and [**FocusedBorderThickness**](../controls/properties-color-border.md) properties.
 
 **SetFocus** can be used with:
 - [**Button**](../controls/control-button.md) control
@@ -43,4 +45,42 @@ You can use **SetFocus** only in [behavior formulas](../working-with-formulas-in
 **SetFocus**( *Control* )
 
 * *Control* – Required.  The control to give the input focus.
+
+## Examples
+
+### Move focus to newly enabled input controls
+
+Many shopping carts allow the customer to reuse the shipping address as the billing address, alleviating the need to enter the same information twice.  If a different billing address is desired, the billing address text input boxes are enabled, and it is helpful to guide the customer to the these newly enabled controls for faster data entry.  
+
+![](media/function-setfocus/shipping-billing.gif)
+
+There are many formulas in play here, but the one that moves the focus is on the **OnUncheck** property of the **Checkbox** control:
+
+```powerappa-dot
+SetFocus( BillingName ) 
+```
+
+The Tab key can also be used to move focus quickly from one field to another.  To better illustrate, the Tab key was not used in the animation.
+
+To recreate this entire example:
+1. Create a new app.
+1. Add [**Label** controls](../controls/control-text-box.md) with the text "Shipping address", "Name:", "Address:", "Billing Address", "Name:", and "Address:" and position them as shown in the animation.
+1. Add a [**Text Input** control](../controls/control-text-input.md) and rename it **ShipingName**.
+1. Add a [**Text Input** control](../controls/control-text-input.md) and rename it **ShipingAddress**.
+1. Add a [**Check box** control](../controls/control-checkbox.md) and rename it **SyncAddresses**.
+1. Set the **Text** property of this control to the formula `"Use Shipping address as Billing address"`.
+1. Add a [**Text Input** control](../controls/control-text-input.md) and rename it **BillingName**.
+1. Set the **Default** property on this control to the formula `ShippingNmae`.
+1. Set the **DisplayMode** property on this control to the formula `If( SyncAddresses.Value, DisplayMode.View, DisplayMode.Edit )`.  This will automatically 
+1. Add a [**Text Input** control](../controls/control-text-input.md) and rename it **BillingAddress**.
+1. Set the **Default** property on this control to the formula `ShippingAddress`.
+1. Set the **DisplayMode** property on this control to the formula `If( SyncAddresses.Value, DisplayMode.View, DisplayMode.Edit )`.
+1. Set the **Default** property of the check box to the formula `true`.  This will default the form to use the Shipping address for the Billing address.
+1. Set the **OnCheck** property of the check box to the formula `Reset( BillingName ); Reset( BillingAddress )`.  If the user chooses to sync Shipping and Billing addresses, this will clear the user input in the Billing address fields and the **Default** properties on each will pull the values from the Shipping address fields.
+1. Set the **OnUncheck** property of the check box to the formula `SetFocus( BillingName )`.  If the user chooses to have a different billing address, this will move the focus to the first control in the Billing address.  The controls will have already been enabled due to their **DisplayMode** properties.
+
+
+
+
+
 
