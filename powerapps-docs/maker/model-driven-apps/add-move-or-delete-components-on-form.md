@@ -26,7 +26,7 @@ search.app:
 # Add, move, or delete components on a form  
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-Add, move, and remove fields using the form designer.
+Using the new form designer makers can add popular components such as sub-grid, quick view and even additional out-of-box components such as arc knob, linear slider and more.
 
 > [!NOTE]
 > When adding or moving components using drag and drop be aware that the form preview is responsive and may be rendering multiple section columns as stacked. To ensure that the component being added or moved is in the correct section column, drop or paste it anchored to another field or component that is already in that section column.
@@ -47,20 +47,9 @@ To add components to a form, use the **Components** pane. The **Components** pan
     - Components can be dropped before or after any existing component or field.
     - Components can also be dropped in the empty area within a section. In this case the component will be added in an available space so as to evenly distribute fields and components across the section columns.
     - Hovering over a tab header when dragging a component changes the currently selected tab, allowing you to add the component to a different tab.   
-6. Repeat steps 3-5 above if you want to add more components.
-7. In the command bar, select **Save** to save the form, or select **Publish** if you want to save and make your changes visible to users. 
-
-### Add components to a form using selection 
-
-1. Open the form designer to create or edit a form. More information: [Create a form](create-and-edit-forms.md#create-a-form) or [Edit a form](create-and-edit-forms.md#edit-a-form)
-2. In the form preview, select another existing component or field or section. Note the following:
-    - When you select an existing component or field, the new component is added after the existing commponent or field. 
-    - When you select a section, the new component is added in an available space so as to evenly distribute components and fields across the section columns. 
-3. In the command bar, select **Add components**, or in the left pane, select **Components**.
-4. In the **Components** pane, search or scroll to find the component you want to add.
-5. In the **Components** pane, select a component to add it to the form. Alternatively, select **...** next to the field you want, and then select **Add to selected section**. 
-6. Repeat steps 2-5 above if you want to add more fields.
-7. In the command bar, select **Save** to save the form, or select **Publish** if you want to save and make your changes visible to users. 
+6. When you drop the component you may see a dialog to configure the properties of the control. Ensure that you have configured all the required properties and then click on the **Done** button to add the component to your form.
+7. Repeat steps 3-6 above if you want to add more components.
+8. In the command bar, select **Save** to save the form, or select **Publish** if you want to save and make your changes visible to users. 
 
 ## Move components on a form
 
@@ -74,9 +63,6 @@ To add components to a form, use the **Components** pane. The **Components** pan
     - Hovering over a tab header when dragging a component changes the currently selected tab, allowing you to add the component to a different tab.   
 4. Repeat steps 2-3 above if you want to move more components.
 5. In the command bar, select **Save** to save the form, or select **Publish** if you want to save and make your changes visible to users. 
-
-    > [!NOTE]
-    >   Moving components in the header and footer using drag and drop is not yet supported. 
 
 ### Move components on a form using cut and paste
 
