@@ -16,6 +16,9 @@ search.audienceType:
   - developer
 search.app: 
   - PowerApps
+searchScope:
+  - GetStarted
+  - PowerApps
 ---
 # What's new in PowerApps
 
