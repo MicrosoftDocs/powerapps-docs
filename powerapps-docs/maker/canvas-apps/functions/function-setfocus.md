@@ -79,8 +79,25 @@ To recreate this entire example:
 1. Set the **OnCheck** property of the check box to the formula `Reset( BillingName ); Reset( BillingAddress )`.  If the user chooses to sync Shipping and Billing addresses, this will clear the user input in the Billing address fields and the **Default** properties on each will pull the values from the Shipping address fields.
 1. Set the **OnUncheck** property of the check box to the formula `SetFocus( BillingName )`.  If the user chooses to have a different billing address, this will move the focus to the first control in the Billing address.  The controls will have already been enabled due to their **DisplayMode** properties.
 
+### Focus on valiation issues
 
+When validating a form, it can be very helpful to not only display a message but to take the user to the field that is offending.  It can be particularly helpful if the field in question is scrolled off the screen and not visible.
 
+![](media/function-setfocus/scrollable-screen.gif)
 
+The validation button in this example uses the formula to both display a banner error and **SetFocus** to the text input box that requires attention:
+
+```powerapps-dot
+If( IsBlank( Name ), Notify( "Please provide a value for Name", Error ); SetFocus( Name ),
+    IsBlank( Street1 ), Notify( "Please provide a value for Street Address 1", Error ); SetFocus( Street1 ),
+    IsBlank( Street2 ), Notify( "Please provide a value for Street Address 2", Error ); SetFocus( Street2 ),
+    IsBlank( City ), Notify( "Please provide a value for City", Error ); SetFocus( City ),
+    IsBlank( County ), Notify( "Please provide a value for County", Error ); SetFocus( County ),
+    IsBlank( AddressState ), Notify( "Please provide a value for State", Error ); SetFocus( AddressState ),
+    IsBlank( Zip ), Notify( "Please provide a value for Zip", Error ); SetFocus( Zip ),
+    IsBlank( Phone ), Notify( "Please provide a value for Contact Phone", Error ); SetFocus( Phone ),
+    Notify( "Form is Complete", NotificationType.Success )
+)
+```
 
 
