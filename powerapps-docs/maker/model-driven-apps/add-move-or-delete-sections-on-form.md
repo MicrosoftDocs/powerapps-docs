@@ -1,7 +1,7 @@
 ---
 title: "Add, move, or delete sections on a form using the form designer | MicrosoftDocs"
 ms.custom: ""
-ms.date: 04/21/2019
+ms.date: 08/22/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -24,8 +24,6 @@ search.app:
 ---
 
 # Add, move, or delete sections on a form 
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
-
 Add, move, or delete sections on a form using the form designer. 
 
 > [!NOTE]
@@ -35,7 +33,7 @@ Add, move, or delete sections on a form using the form designer.
 To add sections to a form, use the **Layouts** pane. 
 
 > [!div class="mx-imgBorder"] 
-> ![](media/layouts-pane.png "Layouts pane")
+> ![](media/FormDesignerComponentsLayout.png "Layout components")
 
   > [!NOTE]
   >   Sections can only be added on main forms and quick view forms. More information: [Form types](types-forms.md)
