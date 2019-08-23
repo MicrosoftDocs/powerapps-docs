@@ -66,7 +66,7 @@ These are the properties available to configure a section when creating or editi
 
 |Area   |Name  |Description  |
 |---------|---------|---------|
-|**Display options** | **Section label**    | The localizable label for the section visible to users. <br /> This property is required.      |
+|**Display options** | **Section label**    | The localizable label for the section visible to users. <br /><br />This property is required.      |
 |**Display options** | **Name** | The unique name for the section that is used when referencing it in scripts. The name can contain only alphanumeric characters and underscores. <br /><br />This property is required. |
 |**Display options** | **Hide label** |  When selected, the section label is hidden. |
 |**Display options** | **Lock section** | Lock this section to keep it from being removed. |
