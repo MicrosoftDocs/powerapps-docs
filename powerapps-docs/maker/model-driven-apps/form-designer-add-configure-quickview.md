@@ -29,7 +29,7 @@ This article outlines how makers can add and configure a quick view component us
 ## Add a quick view component
 Adding a quick view component is the same as any other component. More information: [Add, move or delete components on a form](add-move-or-delete-components-on-form.md)
 
-## Configure a view component
+## Configure a quick view component
 These are the properties available to configure when using a quick view component on a form using the new form designer.
 
 |Area   |Name  |Description  |
