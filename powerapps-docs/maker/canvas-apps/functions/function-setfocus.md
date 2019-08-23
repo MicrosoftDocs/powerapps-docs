@@ -91,7 +91,7 @@ To create this example:
 
 When validating a form, it can be helpful to not only display a message if there is a problem but to also take the user to the field that is offending.  It can be particularly helpful if the field in question is scrolled off the screen and not visible.
 
-![An animation of validing a data entry form and having not only a message displayed but also setting the input focus to the offending input control, even if it is scrolled off the screen.](media/function-setfocus/scrollable-screen.gif)
+![An animation of validating a data entry form and having not only a message displayed but also setting the input focus to the offending input control, even if it is scrolled off the screen.](media/function-setfocus/scrollable-screen.gif)
 
 In this animation, the validation button is repeatedly pressed until all the fields have been filled in properly.  Note that the mouse pointer doesn't move down from the top of the screen.   Instead the **SetFocus** function hsa moved the input focus to the control that requires attention with this formula:
 

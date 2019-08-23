@@ -609,8 +609,6 @@
             href: ./canvas-apps/functions/function-select.md
           - name: Set
             href: ./canvas-apps/functions/function-set.md
-          - name: SetFocus
-            href: ./canvas-apps/functions/function-setfocus.md
           - name: ShowColumns
             href: ./canvas-apps/functions/function-table-shaping.md
           - name: Shuffle
