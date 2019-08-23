@@ -33,6 +33,9 @@ To create an autonumber field, follow the same steps to [create a field](create-
 
 You may also activate autonumber functionality on an existing text field by opening the field and selecting **Autonumber** from the **Data type** drop-down list box. Similarly, autonumber functionality can also be disabled at any time by opening the field and selecting a different option in the **Data type** drop-down list box.
 
+> [!NOTE]
+>Autonumber values are preselected by the database when the record is started. If a record is started but cancelled, the number it was assigned is not used. If, during this time, another record is completed with the next sequential number, gaps will be present in the autonumbering of records.
+
 ## Autonumber types
 
 In order to make the creation of autonumber fields easier, there are a few pre-defined default autonumber types to capture the most common scenarios. 
