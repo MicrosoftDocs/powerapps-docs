@@ -25,13 +25,12 @@ search.app:
 
 # Properties available in the form designer
 
-Located on the right-pane of the model-driven form designer, the property pane lets you quickly view and update the properties of any element selected from the preview or navigation panes. 
+Located on the right-pane of the model-driven form designer, the property pane lets you quickly view and update the properties of any element selected from the preview or the tree view. 
 
 > [!div class="mx-imgBorder"] 
 > ![](media/form-designer-property-pane.png "Form designer property pane")
 
 ## Form properties
-
 
 |Name  |Description  |
 |---------|---------|
@@ -52,8 +51,8 @@ Located on the right-pane of the model-driven form designer, the property pane l
 | **Display options**      | **Hide on phone**     |  For a condensed version of this form on phone screens, tabs can be hidden.     |
 | **Formatting**   | **Layout**     |  Tabs may have up to three columns. Use these options to set the number of tabs and what percentage of the total width they should fill.      |
 
-## Section properties
 
+## Section properties
 
 |Area   |Name  |Description  |
 |---------|---------|---------|
@@ -67,7 +66,6 @@ Located on the right-pane of the model-driven form designer, the property pane l
 
 ## Field properties
 
-
 |Area  |Name  |Description  |
 |---------|---------|---------|
 |**Display options**     | **Field label**    | By default the label will match the display name of the field. You can override that name for the form by entering a different label here.       |
@@ -77,8 +75,18 @@ Located on the right-pane of the model-driven form designer, the property pane l
 |**Display options**     |  **Lock field**   |  Lock this field to keep it from being removed.     |
 |**Display options**     |  **Hide field**     | When selected, field is hidden by default and can be shown using code.      |
 |**Display options**     |  **Hide on phone**    | For a condensed version of this form on phone screens, fields can be hidden.         |
-|**Display options**     | **Field width**      |  When the section containing the fields has more than one column you can set the field to occupy up to the number of columns that the section has.       |
+|**Formatting**     | **Field width**      |  When the section containing the fields has more than one column you can set the field to occupy up to the number of columns that the section has.       |
 
+## Lookup field properties
+In addition to the field properties listed above a lookup field also provides these additional properties to configure
+
+|Area  |Name  |Description  |
+|---------|---------|---------|
+| **Display options** | **Entity** |  The related entity that the lookup field connects to. |
+| **Display options** | **Default view** |  The view of the entity selected in the **Entity** property that will be used to get and display the list of records that end-users can select in the lookup drop down. |
+| **Display options** | **Allow users to change view** |  When selected, end-users will be able to change from the **Default view** to another view of the entity selected in the **Entity** property. |
+| **Display options** | **Show all views** |  When selected, end-users will be able to change from the **Default view** to all other views of the entity selected in the **Entity** property. <br /><br />This property is only available when **Allow users to change view** is selected. |
+| **Display options** | **Selected views** |  A list of views of the entity selected in the **Entity** property that end-users will be able to change to from the **Default view**. <br /><br />This property is only available when **Allow users to change view** is selected and **Show all views** is unselected. |
 
 ## See also
 [Overview of the model-driven form designer](form-designer-overview.md)  
