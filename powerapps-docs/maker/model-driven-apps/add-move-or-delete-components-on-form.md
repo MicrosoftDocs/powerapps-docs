@@ -38,20 +38,35 @@ To add components to a form, use the **Components** pane. The **Components** pan
 ### Add components to a form using drag and drop
 
 1. Open the form designer to create or edit a form. More information: [Create a form](create-and-edit-forms.md#create-a-form) or [Edit a form](create-and-edit-forms.md#edit-a-form)
-2. In the command bar, select **Add component**, or in the left pane, select **Components**.
+2. In the command bar, select **Add component**, or in the left pane, select **Components** to see a list of available components. You can also hover over a component in the list to see a preview image, description and other details of that component.
 3. In the **Components** pane, search or scroll to find the component that you want to add.
 4. In the **Components** pane, select a component and drag it onto the form preview. As you drag the component on the form preview, you will see drop targets where you can add the component. 
 5. Drop the component in the location you want. Note the following: 
     - Components can be dropped before or after any existing component or field.
     - Components can also be dropped in the empty area within a section. In this case the component will be added in an available space so as to evenly distribute fields and components across the section columns.
     - Hovering over a tab header when dragging a component changes the currently selected tab, allowing you to add the component to a different tab.   
-6. When you drop the component you may see a dialog to configure the properties of the control. Ensure that you have configured all the required properties and then click on the **Done** button to add the component to your form.
-7. Repeat steps 3-6 above if you want to add more components.
-8. In the command bar, select **Save** to save the form, or select **Publish** if you want to save and make your changes visible to users. 
+6. When you drop the component, in most cases, you will see a dialog to configure the properties of the component. Ensure that you have configured all the required properties of the component. 
+7. In the dialog to configure the properties of the component, under **Show component on**, the **Web**, **Mobile** and **Tablet** options will be selected by default to ensure the component is used when the form is displayed on the web, mobile app as well as tablet app. Based on your requirements you can unselect some of these options to limit the usage of the component.
+8. When you are done configuring the properties of the component, click on the **Done** button to add the component to your form.
+9. Repeat steps 3-8 above if you want to add more components.
+10. In the command bar, select **Save** to save the form, or select **Publish** if you want to save and make your changes visible to users. 
+
+### Add components for a field on the form
+
+1. Open the form designer to create or edit a form. More information: [Create a form](create-and-edit-forms.md#create-a-form) or [Edit a form](create-and-edit-forms.md#edit-a-form)
+2. In the form preview, select an existing field.
+3. In the property pane, under the **Components** area, select **+ Component**.
+4. The **Add component** dialog will display a list of components that are available and applicable for the current field type. You can also hover over a component in the list to see a preview image, description and other details of that component.
+5. In the **Add component** dialog, search or scroll to find the component you want to add and then select it.
+6. In most cases, you will see a dialog to configure the properties of the component. Ensure that you have configured all the required properties of the component. 
+7. In the dialog to configure the properties of the component, under **Show component on**, the **Web**, **Mobile** and **Tablet** options will be selected by default to ensure the component is used when the form is displayed on the web, mobile app as well as tablet app. Based on your requirements you can unselect some of these options to limit the usage of the component.
+8. When you are done configuring the properties of the component, click on the **Done** button to add the component to your form.
+9. Repeat steps 2-8 above if you want to add more components to the same or another field.
+10. In the command bar, select **Save** to save the form, or select **Publish** if you want to save and make your changes visible to users.
 
 ## Move components on a form
 
-### Move commponents on a form using drag and drop
+### Move components on a form using drag and drop
 
 1. Open the form designer to create or edit a form. More information: [Create a form](create-and-edit-forms.md#create-a-form) or [Edit a form](create-and-edit-forms.md#edit-a-form)
 2. In the form preview, select the component that you want to move and initiate the drag action. As you drag the component on the form preview, you will see drop targets where you can move the component to. 
