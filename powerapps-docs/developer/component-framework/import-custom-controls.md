@@ -73,11 +73,15 @@ You can deploy the custom components directly from the PowerApps CLI by authenti
 
 ## Deploying custom components 
 
-After you have successfully created an authentication profile, you can start pushing your custom component to your environment of choice with all the latest changes. The `push` capability greatly speed up the inner-developer cycle. To use the push capability, follow below steps: 
- 
-1. Ensure that you have a valid authentication profile created 
-2. Go to the directory containing your custom component in your VS command prompt 
-3. Run the command `pac pcf push --publisher-prefix <your publisher prefix>` 
+After you have successfully created an authentication profile, you can start pushing your custom component to your environment of choice with all the latest changes. The `push` capability greatly speeds up the inner-developer cycle development inner loop as it bypasses the custom component versioning requirements and does not require that you build your solution (your cdsproj) in order to import the custom component. To use the push capability, follow below steps the steps below:
+
+1.	Ensure that you have a valid authentication profile created
+2.	In your VS command prompt, go to the root directory containing of your custom component project in your VS command prompt
+3.	Run the command `pac pcf push --publisher-prefix <your publisher prefix>`
+
+> [!NOTE]
+> The publisher prefix that you use with the `push` command should match the publisher prefix of the publisher of your solution in which the component will be included.
+
 
 ## How to remove components from a solution
 
