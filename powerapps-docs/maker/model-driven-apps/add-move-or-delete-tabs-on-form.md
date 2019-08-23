@@ -1,7 +1,7 @@
 ---
-title: "Add, move, or delete tabs on a form using the form designer | MicrosoftDocs"
+title: "Add, configure, move, or delete tabs on a form using the form designer | MicrosoftDocs"
 ms.custom: ""
-ms.date: 08/22/2019
+ms.date: 08/266/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -23,7 +23,7 @@ search.app:
   - D365CE
 ---
 
-# Add, move, or delete tabs on a form  
+# Add, configure, move, or delete tabs on a form  
 Add, move, or delete tabs on a form using the form designer.
 
 ## Add tabs to a form
@@ -56,6 +56,18 @@ To add tabs to a form, use the **Layouts** pane.
 4. In the **Layouts** pane, select a tab control to add it to the form. Alternatively, select **...** next to the tab control you want, and then select **Add to form**. 
 5. Repeat steps 2-4 above if you want to add more tabs.
 6. In the command bar, select **Save** to save the form, or select **Publish** if you want to save and make your changes visible to users. 
+
+## Configure tabs on a form
+These are the properties available to configure a tab when creating or editing a form using the new form designer.
+
+|Area   |Name  |Description  |
+|---------|---------|---------|
+|**Display options** | **Tab label** | The localizable label for the tab visible to users. <br /><br />This property is required. |
+| **Display options** |  **Name**  |  The unique name for the tab that is used when referencing it in scripts. The name can contain only alphanumeric characters and underscores. <br /><br />This property is required. |
+| **Display options** |  **Expand this tab by default** |  The tab state can toggle between expanded or collapsed using form scripts or by people selecting the label. Choose the default state for the tab. |
+| **Display options** | **Hide tab** | When selected, tab is hidden by default and can be shown using code. |
+| **Display options** | **Hide on phone** |  For a condensed version of this form on phone screens, tabs can be hidden. |
+| **Formatting** | **Layout** |  Tabs may have up to three columns. Use these options to set the number of tabs and what percentage of the total width they should fill. |
 
 ## Move tabs on a form
 
