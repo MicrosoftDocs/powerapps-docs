@@ -33,12 +33,12 @@ Adding a sub-grid component is the same as any other component. More information
 
 |Area   |Name  |Description  |
 |---------|---------|---------|
-|**Display options**      | **Label**      | The localizable label for the tab visible to users. <br /> This property is required.         |
-| **Display options**      |  **Name**     |  The unique name for the tab that is used when referencing it in scripts. The name can contain only alphanumeric characters and underscores. <br />This property is required.      |
-| **Display options**      | **Hide on phone**     |  For a condensed version of this form on phone screens, tabs can be hidden.     |
-| **Display options**      | **Show related records**     |  For a condensed version of this form on phone screens, tabs can be hidden.     |
-| **Display options**      | **Entities**     |  For a condensed version of this form on phone screens, tabs can be hidden.     |
-| **Display options**      | **Default view**     |  For a condensed version of this form on phone screens, tabs can be hidden.     |
-| **Display options**      | **Show view selector**     |  For a condensed version of this form on phone screens, tabs can be hidden.     |
-| **Display options**      | **Show all views**     |  For a condensed version of this form on phone screens, tabs can be hidden.     |
-| **Display options**      | **Selected views**     |  For a condensed version of this form on phone screens, tabs can be hidden.     |
+| **Display options** | **Label** | The localizable label for the sub-grid visible to users. <br /> This property is required.|
+| **Display options** |  **Name** |  The unique name for the sub-grid that is used when referencing it in scripts. The name can contain only alphanumeric characters and underscores. <br />This property is required. |
+| **Display options** | **Hide on phone** |  For a condensed version of this form on phone screens, sub-grid can be hidden. |
+| **Display options** | **Show related records** |  When selected, the sub-grid will display only records related to the current record that is being displayed on the form. <br />The Entity drop down is also filtered to only list entities that are related to the current entity. |
+| **Display options** | **Entity** |  The entity whose records you want to display in the sub-grid. <br />When **Show related records** is selected the list of entities is filtered to show only entities that are related to the current entity. In addition to the entity name the name of the lookup field is also displayed in parentheses. |
+| **Display options** | **Default view** |  The view of the entity selected in the **Entity** property that will be used to get and display the list of records. |
+| **Display options** | **Show view selector** |  When selected, end-users will be able to switch from the **Default view** to another view of the entity selected in the **Entity** property. |
+| **Display options** | **Show all views** |  When selected, end-users will be able to switch from the **Default view** to any other view of the entity selected in the **Entity** property. <br />This property is only applicable when **Show view selector** is selected. |
+| **Display options** | **Selected views** |  A list of views of the entity selected in the **Entity** property that end-users will be able to switch to from the **Default view**. <br />This property is only applicable when **Show view selector** is selected and **Show all views** is unselected. |
