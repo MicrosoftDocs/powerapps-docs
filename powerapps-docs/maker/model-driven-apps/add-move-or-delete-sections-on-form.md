@@ -1,5 +1,5 @@
 ---
-title: "Add, move or delete sections on a form using the form designer | MicrosoftDocs"
+title: "Add, move, or delete sections on a form using the form designer | MicrosoftDocs"
 ms.custom: ""
 ms.date: 04/21/2019
 ms.reviewer: ""
