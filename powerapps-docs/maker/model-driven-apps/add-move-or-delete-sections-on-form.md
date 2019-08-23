@@ -1,5 +1,5 @@
 ---
-title: "Add, move, or delete sections on a form using the form designer | MicrosoftDocs"
+title: "Add, configure, move, or delete sections on a form using the form designer | MicrosoftDocs"
 ms.custom: ""
 ms.date: 08/22/2019
 ms.reviewer: ""
@@ -23,14 +23,14 @@ search.app:
   - D365CE
 ---
 
-# Add, move, or delete sections on a form 
-Add, move, or delete sections on a form using the form designer. 
+# Add, configure, move, or delete sections on a form 
+Add, configure, move, or delete sections on a form using the form designer. 
 
 > [!NOTE]
 > When adding or moving sections using drag and drop be aware that the form preview is responsive and may be rendering multiple tab columns as stacked. To ensure that the section being added or moved is in the correct tab column, drop or paste it anchored to another section that is already in that tab column.
 
 ## Add sections to a form
-To add sections to a form, use the **Layouts** pane. 
+To add sections to a form, use the **Components** pane. 
 
 > [!div class="mx-imgBorder"] 
 > ![](media/FormDesignerComponentsLayout.png "Layout components")
@@ -41,8 +41,8 @@ To add sections to a form, use the **Layouts** pane.
 ### Add sections to a form using drag and drop
 
 1. Open the form designer to create or edit a form. More information: [Create a form](create-and-edit-forms.md#create-a-form) or [Edit a form](create-and-edit-forms.md#edit-a-form)
-2. In the command bar, select **Add control**, or in the left pane, select **Layouts**. 
-3. In the **Layouts** pane, select a section control and drag it onto the form preview. As you drag the section on the form preview, you will see drop targets where you can add the section. 
+2. In the command bar, select **Add control**, or in the left pane, select **Components**. 
+3. In the **Components** pane, select a section control and drag it onto the form preview. As you drag the section on the form preview, you will see drop targets where you can add the section. 
 4. Drop the section in the location you want. Note the following: 
     - Sections can be dropped before or after any existing section.
     - Sections can also be dropped in the empty area within a tab. In this case the section will be added in an available space so as to evenly distribute sections across the tab columns.
@@ -56,10 +56,23 @@ To add sections to a form, use the **Layouts** pane.
 2. In the form preview, select another existing section or tab. Note the following:
     - When you select an existing section, the new section is added after the existing section. 
     - When you select a tab, the new section is added in an available space so as to evenly distribute sections across the tab columns. 
-3. In the command bar, select **Add control**, or in the left pane, select **Layouts**.  
-4. In the **Layouts** pane, select a section control to add it to the form. Alternatively, select **...** next to the section control you want, and then select **Add to selected tab**. 
+3. In the command bar, select **Add control**, or in the left pane, select **Components**.  
+4. In the **Components** pane, select a section control to add it to the form. Alternatively, select **...** next to the section control you want, and then select **Add to selected tab**. 
 5. Repeat steps 2-4 above if you want to add more sections.
 6. In the command bar, select **Save** to save the form, or select **Publish** if you want to save and make your changes visible to users. 
+
+## Configure sections on a form
+These are the properties available to configure a section when creating or editing a form using the new form designer.
+
+|Area   |Name  |Description  |
+|---------|---------|---------|
+|**Display options** | **Section label**    | The localizable label for the section visible to users. <br /> This property is required.      |
+|**Display options** | **Name** | The unique name for the section that is used when referencing it in scripts. The name can contain only alphanumeric characters and underscores. <br /><br />This property is required. |
+|**Display options** | **Hide label** |  When selected, the section label is hidden. |
+|**Display options** | **Lock section** | Lock this section to keep it from being removed. |
+|**Display options** | **Hide section** | When selected, section is hidden by default and can be shown using code. |
+|**Display options** | **Hide on phone** |  For a condensed version of this form on phone screens, sections can be hidden. |
+|**Formatting** |  **Columns** |  Specify up to four columns to be in the section. |
 
 ## Move sections on a form
 
