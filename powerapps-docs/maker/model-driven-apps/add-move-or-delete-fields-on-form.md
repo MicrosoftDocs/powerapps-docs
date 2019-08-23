@@ -23,7 +23,7 @@ search.app:
   - D365CE
 ---
 
-# Add, move, or delete fields on a form  
+# Add, move or delete fields on a form  
 Add, move, and remove fields using the form designer.
 
 > [!NOTE]
