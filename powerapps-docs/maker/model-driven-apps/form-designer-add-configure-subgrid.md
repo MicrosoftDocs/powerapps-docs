@@ -26,6 +26,8 @@ search.app:
 # Add and configure a sub-grid component on a form  
 This article outlines how makers can add and configure a sub-grid component using the new form designer.
 
+A form that is displaying the details of a record can use a sub-grid component to display a list of related or unrelated records in a tabular format.
+
 ## Add a sub-grid component
 Adding a sub-grid component is the same as any other component. More information: [Add, move or delete components on a form](add-move-configure-or-delete-components-on-form.md)
 
