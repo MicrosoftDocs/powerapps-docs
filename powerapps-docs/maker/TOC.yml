@@ -51,6 +51,8 @@
         href: ../user/assign-or-share-records.md
       - name: Share records using Access Team
         href: ../user/Access-team.md
+      - name: Add a connection role 
+        href: ../user/add-connection-role.md
       - name: Deactivate accounts or contacts
         href: ../user/deactivate-activate-account-contact.md
       - name: Track your progress with dashboards and charts
@@ -675,6 +677,8 @@
             href: ./canvas-apps/functions/function-form.md
           - name: Weekday
             href: ./canvas-apps/functions/function-datetime-parts.md
+          - name: With
+            href: ./canvas-apps/functions/function-with.md            
           - name: Year
             href: ./canvas-apps/functions/function-datetime-parts.md
       - name: Create an app in a solution
@@ -822,6 +826,8 @@
           href: ./model-driven-apps/create-site-map-app.md
         - name: Add or edit app components
           href: ./model-driven-apps/add-edit-app-components.md
+        - name: Add the team entity as a lookup option
+          href: ./model-driven-apps/team-entity-lookup.md          
       - name: Work with forms
         href: ./model-driven-apps/create-design-forms.md
         items:
@@ -838,6 +844,8 @@
             href: ./model-driven-apps/add-move-or-delete-tabs-on-form.md            
           - name: "Properties in the form designer"
             href: ./model-driven-apps/form-designer-properties.md 
+          - name: "Configure header properties"
+            href: ./model-driven-apps/form-designer-header-properties.md  
           - name: "Using the tree view"
             href: ./model-driven-apps/using-tree-view-on-form.md  
         - name: Type of forms
@@ -1001,6 +1009,16 @@
       href: ./model-driven-apps/distribute-model-driven-app.md
     - name: Create guided help
       href: ./model-driven-apps/create-guided-help-learning-path.md      
+  - name: Transition Web Client applications
+    items: 
+    - name: Transition quick start
+      href: ./model-driven-apps/transition-web-app.md
+    - name: Use an existing environment to transition quick start
+      href: ./model-driven-apps/transition-web-app-existing.md  
+    - name: Unified Interface Playbook
+      href: ./model-driven-apps/unified-interface-playbook.md
+    - name: Approaching a Unified Interface transition
+      href: ./model-driven-apps/approaching-unified-interface.md
   - name: Accessibility in PowerApps app designer
     href: ./model-driven-apps/Accessibility-app-designer-site-map-designer-my-apps-page.md
   - name: Customize Dynamics 365 App for Outlook
@@ -1232,6 +1250,8 @@
       href: ./common-data-service/data-platform-complex-entities.md
     - name: Restricted entities requiring Dynamics 365 licenses
       href: ./common-data-service/data-platform-restricted-entities.md
+  - name: SharePoint, OneNote, and OneDrive integration
+    href: ./common-data-service/sharepoint-onedrive-onenote-intro.md
   - name: Create a Power BI report
     href: ./common-data-service/data-platform-powerbi-connector.md
   - name: Translate customized entity and field text

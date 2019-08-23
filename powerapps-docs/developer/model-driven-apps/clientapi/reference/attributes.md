@@ -104,7 +104,6 @@ The following methods are available only for the **decimal**,  **double**, and *
 <li><a href="attributes/getMin.md" data-raw-source="[getMin](attributes/getMin.md)">getMin</a></li>
 <li><a href="attributes/getPrecision.md" data-raw-source="[getPrecision](attributes/getPrecision.md)">getPrecision</a></a></li>
 <li><a href="attributes/setPrecision.md" data-raw-source="[setPrecision](attributes/setPrecision.md)">setPrecision</a></li>
-<li><a href="attributes/getText.md" data-raw-source="[getText](attributes/getText.md)">getText</a></li>
 </ul>
 </td>
 </tr>

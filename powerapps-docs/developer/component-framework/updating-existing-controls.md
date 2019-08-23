@@ -3,6 +3,7 @@ title: Update existing custom components using PowerApps component framework Too
 description: Update components using the PowerApps component framework Tooling
 keywords: PowerApps component framework, Custom component, component Framework
 ms.author: nabuthuk
+author: Nkrb
 manager: kvivek
 ms.date: 04/23/2019
 ms.service: "powerapps"
@@ -46,6 +47,16 @@ Update the ControlManifest.Input.xml files as follows:
 
 1. Edit the `code` entry in `ControlManifest.Input.xml` to the pre-compiled source file of your custom component (typically this is will be index.ts).
 2. Edit any paths of the resources to correctly refer to the relative paths to files on disk.
+
+## Updating the project files
+
+If you have created a component using the older version of the tooling and would like to take advantage of the latest capabilities, make sure to update your project files as shown below:
+
+Update the version tag in your pcfproj as follows:  
+`<PackageReference Include="Microsoft.PowerApps.MSBuild.Pcf" Version="0.*"/>`
+
+Update the version tag in your cdsproj as follows:  
+`<PackageReference Include="Microsoft.PowerApps.MSBuild.Solution" Version="0.*"/>`
 
 ## Using ES6 Module Syntax
 
