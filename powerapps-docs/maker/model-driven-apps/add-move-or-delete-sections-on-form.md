@@ -1,7 +1,7 @@
 ---
 title: "Add, configure, move, or delete sections on a form using the form designer | MicrosoftDocs"
 ms.custom: ""
-ms.date: 08/22/2019
+ms.date: 08/26/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
