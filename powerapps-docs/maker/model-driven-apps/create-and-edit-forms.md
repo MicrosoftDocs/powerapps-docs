@@ -50,7 +50,7 @@ Use the new form designer to create, edit, or configure forms for model-driven a
 5. When you are done making changes to the form, select **Save** to save the form, or select **Publish** if you want to save and make your changes visible to app users. 
 
 ## Configure a form
-These are the properties available to configure the form when creating or editing a form using the new form designer.
+These are the properties available to configure a form when creating or editing a form using the new form designer.
 
 |Name  |Description  |
 |---------|---------|
