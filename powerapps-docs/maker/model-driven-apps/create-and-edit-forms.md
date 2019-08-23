@@ -55,9 +55,9 @@ These are the properties available to configure the form when creating or editin
 |Name  |Description  |
 |---------|---------|
 |**Title**  | Enter a name that will be meaningful to other makers and end-users. This name will be shown to end-users. If end-users have access to multiple forms for an entity they will use this name to differentiate between the available forms. <br /><br />This property is required. |
-|**Description** |  Enter a description that explains how this form is different from other main forms. This description is only shown to makers in the list of forms for an entity in the solution explorer. |
+|**Description** |  Enter a description that explains how the form is different from other main forms. This description is only shown to makers in the list of forms for an entity in the solution explorer. |
 |**Max Width** | Set a maximum width (in pixels) to limit the width of the form. The default value is 1900. <br /><br />This property is required. |
-|**Show image** | Show the entity’s **Primary Image** if it has one set. This setting will enable showing the image field in the header of this form. <br /><br /> See Enable or disable entity options for more information about entity options.         |
+|**Show image** | Show the entity’s **Primary Image** if it has one set. This setting will enable showing the image field in the header of the form. <br /><br /> See Enable or disable entity options for more information about entity options. |
 
 ## See also
 [Overview of the model-driven form designer](form-designer-overview.md)  
