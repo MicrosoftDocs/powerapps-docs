@@ -18,7 +18,7 @@ search.app:
 Moves input focus to a specific control. 
 
 ## Description
-The **SetFocus** function gives a control the input focus.  The user's keystrokes are then received by that control, allowing them to type into a text input control or use the *Enter* key to select a button.  The user can also use the *Tab* key to move the input focus themselves. 
+The **SetFocus** function gives a control the input focus.  The user's keystrokes are then received by that control, allowing them to type into a text input control or use the *Enter* key to select a button.  The user can also use the *Tab* key, touch gesture, or mouse click to move the input focus themselves. 
 
 Use the **SetFocus** function to set the focus when (each with an example below):
 - a newly exposed or enabled input control, to guide the user in what comes next and for faster data entry.
@@ -27,14 +27,16 @@ Use the **SetFocus** function to set the focus when (each with an example below)
 
 The control with focus may be visually different based on the [**FocusedBorderColor**](../controls/properties-color-border.md) and [**FocusedBorderThickness**](../controls/properties-color-border.md) properties.
 
-**SetFocus** can be used with:
+## Limitatoins
+
+**SetFocus** can only be used with:
 - [**Button**](../controls/control-button.md) control
 - [**Icon**](../controls/control-shapes-icons.md) control
 - [**Image**](../controls/control-image.md) control
 - [**Label**](../controls/control-text-box.md) control
 - [**TextInput**](../controls/control-text-input.md) control
 
-You cannot set the focus to controls that are within a [**Gallery**](../controls/control-gallery.md) control, [**Edit form**](../controls/control-form-detail.md) control, or [Component](../create-component.md).
+You cannot set the focus to controls that are within a [**Gallery**](../controls/control-gallery.md) control, [**Edit form**](../controls/control-form-detail.md) control, or [Component](../create-component.md).  **SetFocus** can be used with a control in a scrollbale screen.
 
 You can only set the focus to controls on the same screen as the formula containing the **SetFocus** call.
 
@@ -53,7 +55,7 @@ You can use **SetFocus** only in [behavior formulas](../working-with-formulas-in
 
 ### Focus on a newly exposed or enabled input control
 
-Many shopping carts allow the customer to reuse the shipping address as the billing address, alleviating the need to enter the same information twice.  If a different billing address is desired, the billing address text input boxes are enabled, and it is helpful to guide the customer to the these newly enabled controls for faster data entry.  
+Many shopping carts allow the customer to use the shipping address as the billing address, alleviating the need to enter the same information twice.  If a different billing address is desired, the billing address text input boxes are enabled, and it is helpful to guide the customer to the these newly enabled controls for faster data entry.  
 
 ![](media/function-setfocus/shipping-billing.gif)
 
@@ -63,7 +65,7 @@ There are many formulas in play here, but the one that moves the focus is on the
 SetFocus( BillingName ) 
 ```
 
-The Tab key can also be used to move focus quickly from one field to another.  To better illustrate, the Tab key was not used in the animation.
+The *Tab* key can also be used to move focus quickly from one field to another.  To better illustrate, the *Tab* key was not used in the animation.
 
 To create this example:
 1. Create a new app.
@@ -79,19 +81,19 @@ To create this example:
 1. Set the **Default** property on this control to the formula `ShippingAddress`.
 1. Set the **DisplayMode** property on this control to the formula `If( SyncAddresses.Value, DisplayMode.View, DisplayMode.Edit )`.
 1. Set the **Default** property of the check box to the formula `true`.  This will default the form to use the Shipping address for the Billing address.
-1. Set the **OnCheck** property of the check box to the formula `Reset( BillingName ); Reset( BillingAddress )`.  If the user chooses to sync Shipping and Billing addresses, this will clear the user input in the Billing address fields and the **Default** properties on each will pull the values from the Shipping address fields.
+1. Set the **OnCheck** property of the check box to the formula `Reset( BillingName ); Reset( BillingAddress )`.  If the user chooses to sync Shipping and Billing addresses, this will clear any user input in the Billing address fields allowing the **Default** properties on each to pull the values from the corresponding Shipping address fields.
 1. Set the **OnUncheck** property of the check box to the formula `SetFocus( BillingName )`.  If the user chooses to have a different billing address, this will move the focus to the first control in the Billing address.  The controls will have already been enabled due to their **DisplayMode** properties.
 
 ### Focus on valiation issues
 
 > [!NOTE]
-> Although this example appears to be an **Edit form** control, unforutnatley **SetFocus** does not yet work with that control.  Instead, this example uses a scrollable screen to host the input controls.
+> Although this example appears to be an **Edit form** control, unforutnatley **SetFocus** is not yet supported by  that control.  Instead, this example uses a scrollable screen to host the input controls.
 
-When validating a form, it can be very helpful to not only display a message but to take the user to the field that is offending.  It can be particularly helpful if the field in question is scrolled off the screen and not visible.
+When validating a form, it can be helpful to not only display a message if there is a problem but to also take the user to the field that is offending.  It can be particularly helpful if the field in question is scrolled off the screen and not visible.
 
 ![](media/function-setfocus/scrollable-screen.gif)
 
-In this animation, the validation button is repeatedly pressed until all the fields have been filled in.  Note that the mouse doesn't move down from the top of the screen.   Instead the **SetFocus** function hsa moved the input focus to the text input control that requires attention with this formula:
+In this animation, the validation button is repeatedly pressed until all the fields have been filled in properly.  Note that the mouse pointer doesn't move down from the top of the screen.   Instead the **SetFocus** function hsa moved the input focus to the control that requires attention with this formula:
 
 ```powerapps-dot
 If( IsBlank( Name ), 
@@ -124,21 +126,21 @@ To create this example:
 ### Focus when displaying a screen
 
 > [!NOTE]
-> Although this example appears to be an **Edit form** control, unforutnatley **SetFocus** does not yet work with that control.  Instead, this example uses a scrollable screen to host the input controls.
+> Although this example appears to be an **Edit form** control, unforutnatley **SetFocus** is not yet supported by  that control.  Instead, this example uses a scrollable screen to host the input controls.
 
 Similar to exposing an input control, when displaying a data entry screen it is helpful to focus the first input control for faster data entry.
 
 ![](media/function-setfocus/visible-setfocus.gif)
 
-In this animation, the data entry screen on the left has no **SetFocus**.  Upon display no input control has focus, requiring the user to tab, touch, or mouse the **Name** field before a value can be typed into it.
+In this animation, the data entry screen on the left is not using **SetFocus**.  Upon display no input control has focus, requiring the user to tab, touch, or mouse the **Name** field before a value can be typed into it.
 
-On the right we have exactly the same app with one modification.  The **OnVisible** property of the data entry screen has the formula:
+On the right we have exactly the same app with the **OnVisible** property of the data entry screen set to this formula:
 
 ```powerapps-dot
 SetFocus( Name )
 ```
 
-This sets the focus to the **Name** field automatically.  The user can begin typing and tabbing between field immediately with no touch or mouse action required.
+This sets the focus to the **Name** field automatically.  The user can begin typing and tabbing between fields immediately with no touch or mouse action required.
 
 To create this example:
 1. Create the "Focus on validation issues" app above.
@@ -147,4 +149,3 @@ To create this example:
 1. Add a [**Button** control](../controls/control-button.md).
 1. Set the **OnSelect** peropty of this control to the formula `Navigate( Screen1 )`.
 1. Preview the app from this screen.  Press the button.  The **OnVisible** formula will be evaluated and The **Name** field will automatically be in focus.
-
