@@ -27,7 +27,7 @@ search.app:
 This article outlines how makers can add and configure a sub-grid component using the new form designer.
 
 ## Add a sub-grid component
-Adding a sub-grid component is the same as any other component. More information: [Add, move or delete components on a form](add-move-or-delete-components-on-form.md)
+Adding a sub-grid component is the same as any other component. More information: [Add, move or delete components on a form](add-move-configure-or-delete-components-on-form.md)
 
 ## Configure a sub-grid component
 These are the properties available to configure when using a sub-grid component on a form using the new form designer.
