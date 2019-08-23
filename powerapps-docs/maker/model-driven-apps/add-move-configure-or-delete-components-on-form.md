@@ -23,7 +23,7 @@ search.app:
   - D365CE
 ---
 
-# Add, configure, move, or delete components on a form  
+# Add, configure, move or delete components on a form  
 Using the new form designer makers can easily add and configure popular components such as sub-grid, quick view and even additional components such as arc knob, linear slider and more.
 
 > [!NOTE]
