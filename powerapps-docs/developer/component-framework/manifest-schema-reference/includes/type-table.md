@@ -33,3 +33,15 @@ ms.assetid: 41ea27ac-65b6-45a4-ae03-5f8d02dfc67b
 |`SingleLine.URL`|The text provides a hyperlink to open the page specified. Any text that does not begin with a valid protocol will have “http://” prepended to it.Only HTTP, HTTPS, FTP , FTPS, ONENOTE and TEL protocols are allowed in this field.|
 |`TwoOptions`|This field provides two options. Each option has a number value of 0 or 1 corresponding to a false or true value. Each option also has a label so that true or false values can be represented as “Yes” and “No”, “Hot” and “Cold”, “On” and “Off” or any pair of labels you want to display.|
 |`Whole.None`|This option simply displays a number.|
+
+## Vlaue elements that are not supported
+
+1. Whole.Duration
+2. Whole.Timezone
+3. Whole.Language
+4. Lookup.Simple
+5. Lookup.Customer
+6. Lookup.Owner
+7. Lookup.PartyList
+8. Lookup.Regarding
+9. MultiSelectOptionSet
