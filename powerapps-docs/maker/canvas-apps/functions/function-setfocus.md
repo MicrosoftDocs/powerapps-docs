@@ -20,7 +20,10 @@ Moves input focus to a specific control.
 ## Description
 The **SetFocus** function gives a control the input focus.  The user's keystrokes are then received by that control, allowing them to type into a text input control or use the *Enter* key to select a button.  The user can also use the *Tab* key to move the input focus themselves. 
 
-Use the **SetFocus** function within the **OnVisible** property of the [**Screen**](../controls/control-screen.md) to set the focus when a screen is displayed.  For example, when entering a screen you may always want the first text input control to have the focus.  Also use **SetFocus** to a newly exposed or enabled input control to guide the user in what comes next and for faster data entry.
+Use the **SetFocus** function to set the focus when (with examples below):
+- a screen is displayed, to focus the first input control with the **OnVisible** property of the [**Screen**](../controls/control-screen.md).
+- a newly exposed or enabled input control, to guide the user in what comes next and for faster data entry.
+- a form is validated, to focus the offending input control for quick resolution.
 
 The control with focus may be visually different based on the [**FocusedBorderColor**](../controls/properties-color-border.md) and [**FocusedBorderThickness**](../controls/properties-color-border.md) properties.
 
@@ -62,7 +65,7 @@ SetFocus( BillingName )
 
 The Tab key can also be used to move focus quickly from one field to another.  To better illustrate, the Tab key was not used in the animation.
 
-To recreate this entire example:
+To create this example:
 1. Create a new app.
 1. Add [**Label** controls](../controls/control-text-box.md) with the text "Shipping address", "Name:", "Address:", "Billing Address", "Name:", and "Address:" and position them as shown in the animation.
 1. Add a [**Text Input** control](../controls/control-text-input.md) and rename it **ShipingName**.
@@ -85,11 +88,12 @@ When validating a form, it can be very helpful to not only display a message but
 
 ![](media/function-setfocus/scrollable-screen.gif)
 
-The validation button in this example uses the formula to both display a banner error and **SetFocus** to the text input box that requires attention:
+In this animation, the validation button is repeatedly pressed until all the fields have been filled in.  Note that the mouse doesn't move down from the top of the screen.   Instead the **SetFocus** function hsa moved the input focus to the text input control that requires attention with this formula:
 
 ```powerapps-dot
-If( IsBlank( Name ), Notify( "Please provide a value for Name", Error ); SetFocus( Name ),
-    IsBlank( Street1 ), Notify( "Please provide a value for Street Address 1", Error ); SetFocus( Street1 ),
+With( { Message: "Please provide a value for " },
+    If( IsBlank( Name ), Notify( Msg & "Name", Error ); SetFocus( Name ),
+        IsBlank( Street1 ), Notify( Msg & "Street Address 1", Error ); SetFocus( Street1 ),
     IsBlank( Street2 ), Notify( "Please provide a value for Street Address 2", Error ); SetFocus( Street2 ),
     IsBlank( City ), Notify( "Please provide a value for City", Error ); SetFocus( City ),
     IsBlank( County ), Notify( "Please provide a value for County", Error ); SetFocus( County ),
@@ -100,6 +104,11 @@ If( IsBlank( Name ), Notify( "Please provide a value for Name", Error ); SetFocu
 )
 ```
 
-![](media/function-setfocus/scrollable-screen-small.gif)
+To create this example:
+1. Create a new, blank phone app.
+1. From the **Insert** menu, select **New screen**, and then select **Scrollable**.
+1. In the center section of the screen **Text input** controls and name them **Name**, **Street1**, **Street2**, **City**, **County**, **AddressState** (since the name **State** is already used), **Zip**, and **Phone**. Add **Label** controls above each one to identify the fields.  You may need to resize the section if it is not long enough to fit all the controls.
+1. Add a checkmark [**Icon** control](../controls/control-shapes-icons.md) at the top of the screen, above the scrollable section.  
+1. Set the **OnSelect** property of the icon control to the formula above.
 
 
