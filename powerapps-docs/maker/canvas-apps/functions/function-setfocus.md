@@ -92,14 +92,22 @@ In this animation, the validation button is repeatedly pressed until all the fie
 
 ```powerapps-dot
 With( { Message: "Please provide a value for " },
-    If( IsBlank( Name ), Notify( Msg & "Name", Error ); SetFocus( Name ),
-        IsBlank( Street1 ), Notify( Msg & "Street Address 1", Error ); SetFocus( Street1 ),
-    IsBlank( Street2 ), Notify( "Please provide a value for Street Address 2", Error ); SetFocus( Street2 ),
-    IsBlank( City ), Notify( "Please provide a value for City", Error ); SetFocus( City ),
-    IsBlank( County ), Notify( "Please provide a value for County", Error ); SetFocus( County ),
-    IsBlank( AddressState ), Notify( "Please provide a value for State", Error ); SetFocus( AddressState ),
-    IsBlank( Zip ), Notify( "Please provide a value for Zip", Error ); SetFocus( Zip ),
-    IsBlank( Phone ), Notify( "Please provide a value for Contact Phone", Error ); SetFocus( Phone ),
+If( IsBlank( Name ), 
+        Notify( "Please provide a value for Name", Error SetFocus( Name ),
+    IsBlank( Street1 ), 
+        Notify( "Please provide a value for Street Address 1", Error ); SetFocus( Street1 ),
+    IsBlank( Street2 ), 
+        Notify( "Please provide a value for Street Address 2", Error ); SetFocus( Street2 ),
+    IsBlank( City ), 
+        Notify( "Please provide a value for City", Error ); SetFocus( City ),
+    IsBlank( County ), 
+        Notify( "Please provide a value for County", Error ); SetFocus( County ),
+    IsBlank( AddressState ), 
+        Notify( "Please provide a value for State", Error ); SetFocus( AddressState ),
+    IsBlank( Zip ), 
+        Notify( "Please provide a value for Zip", Error ); SetFocus( Zip ),
+    IsBlank( Phone ), 
+        Notify( "Please provide a value for Contact Phone", Error ); SetFocus( Phone ),
     Notify( "Form is Complete", NotificationType.Success )
 )
 ```
