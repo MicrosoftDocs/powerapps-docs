@@ -24,7 +24,7 @@ search.app:
 ---
 
 # Add, configure, move, or delete components on a form  
-Using the new form designer makers can easily add and configure popular components such as sub-grid, quick view and even additional components such as arc knob, linear slider and more.
+Using the new form designer makers can easily add and configure popular components such as [sub-grid](form-designer-add-configure-subgrid.md), [quick view](form-designer-add-configure-quickview.md) and even additional components such as arc knob, linear slider and more.
 
 > [!NOTE]
 > When adding or moving components using drag and drop be aware that the form preview is responsive and may be rendering multiple section columns as stacked. To ensure that the component being added or moved is in the correct section column, drop or paste it anchored to another field or component that is already in that section column.
