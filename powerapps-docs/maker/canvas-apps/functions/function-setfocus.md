@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
-ms.date: 08/09/2019
+ms.date: 08/23/2019
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -20,10 +20,10 @@ Moves input focus to a specific control.
 ## Description
 The **SetFocus** function gives a control the input focus.  The user's keystrokes are then received by that control, allowing them to type into a text input control or use the *Enter* key to select a button.  The user can also use the *Tab* key to move the input focus themselves. 
 
-Use the **SetFocus** function to set the focus when (with examples below):
-- a screen is displayed, to focus the first input control with the **OnVisible** property of the [**Screen**](../controls/control-screen.md).
+Use the **SetFocus** function to set the focus when (each with an example below):
 - a newly exposed or enabled input control, to guide the user in what comes next and for faster data entry.
-- a form is validated, to focus the offending input control for quick resolution.
+- a form is validated, to focus and display the offending input control for quick resolution.
+- a screen is displayed, to focus the first input control with the **OnVisible** property of the [**Screen**](../controls/control-screen.md).
 
 The control with focus may be visually different based on the [**FocusedBorderColor**](../controls/properties-color-border.md) and [**FocusedBorderThickness**](../controls/properties-color-border.md) properties.
 
@@ -51,7 +51,7 @@ You can use **SetFocus** only in [behavior formulas](../working-with-formulas-in
 
 ## Examples
 
-### Move focus to newly enabled input controls
+### Focus on a newly exposed or enabled input control
 
 Many shopping carts allow the customer to reuse the shipping address as the billing address, alleviating the need to enter the same information twice.  If a different billing address is desired, the billing address text input boxes are enabled, and it is helpful to guide the customer to the these newly enabled controls for faster data entry.  
 
@@ -84,6 +84,9 @@ To create this example:
 
 ### Focus on valiation issues
 
+> [!NOTE]
+> Although this example appears to be an **Edit form** control, unforutnatley **SetFocus** does not yet work with that control.  Instead, this example uses a scrollable screen to host the input controls.
+
 When validating a form, it can be very helpful to not only display a message but to take the user to the field that is offending.  It can be particularly helpful if the field in question is scrolled off the screen and not visible.
 
 ![](media/function-setfocus/scrollable-screen.gif)
@@ -91,9 +94,8 @@ When validating a form, it can be very helpful to not only display a message but
 In this animation, the validation button is repeatedly pressed until all the fields have been filled in.  Note that the mouse doesn't move down from the top of the screen.   Instead the **SetFocus** function hsa moved the input focus to the text input control that requires attention with this formula:
 
 ```powerapps-dot
-With( { Message: "Please provide a value for " },
 If( IsBlank( Name ), 
-        Notify( "Name requires a value", Error SetFocus( Name ),
+        Notify( "Name requires a value", Error ); SetFocus( Name ),
     IsBlank( Street1 ), 
         Notify( "Street Address 1 requires a value", Error ); SetFocus( Street1 ),
     IsBlank( Street2 ), 
@@ -108,7 +110,7 @@ If( IsBlank( Name ),
         Notify( "Zip requires a value", Error ); SetFocus( Zip ),
     IsBlank( Phone ), 
         Notify( "Contact Phone requires a value", Error ); SetFocus( Phone ),
-    Notify( "Form is Complete", NotificationType.Success )
+    Notify( "Form is Complete", Success )
 )
 ```
 
@@ -119,4 +121,30 @@ To create this example:
 1. Add a checkmark [**Icon** control](../controls/control-shapes-icons.md) at the top of the screen, above the scrollable section.  
 1. Set the **OnSelect** property of the icon control to the formula above.
 
+### Focus when displaying a screen
+
+> [!NOTE]
+> Although this example appears to be an **Edit form** control, unforutnatley **SetFocus** does not yet work with that control.  Instead, this example uses a scrollable screen to host the input controls.
+
+Similar to exposing an input control, when displaying a data entry screen it is helpful to focus the first input control for faster data entry.
+
+![](media/function-setfocus/visible-setfocus.gif)
+
+In this animation, the data entry screen on the left has no **SetFocus**.  Upon display no input control has focus, requiring the user to tab, touch, or mouse the **Name** field before a value can be typed into it.
+
+On the right we have exactly the same app with one modification.  The **OnVisible** property of the data entry screen has the formula:
+
+```powerapps-dot
+SetFocus( Name )
+```
+
+This sets the focus to the **Name** field automatically.  The user can begin typing and tabbing between field immediately with no touch or mouse action required.
+
+To create this example:
+1. Create the "Focus on validation issues" app above.
+1. On this screen, set the **OnVisible** property to the formula `SetFocus( Name )`.
+1. Add a second screen.
+1. Add a [**Button** control](../controls/control-button.md).
+1. Set the **OnSelect** peropty of this control to the formula `Navigate( Screen1 )`.
+1. Preview the app from this screen.  Press the button.  The **OnVisible** formula will be evaluated and The **Name** field will automatically be in focus.
 
