@@ -19,6 +19,9 @@ ms.assetid: 12891e96-972c-4289-bbde-2bc261cd1f12
 
 [!INCLUDE [paging-description](includes/paging-description.md)]
 
+> [!NOTE]
+> On forms, dataset 
+
 ## Properties
 
 ## totalResultCount
@@ -47,6 +50,7 @@ Whether the result set can be paged backwards.
 |[loadPreviousPage](paging/loadpreviouspage.md)|[!INCLUDE [loadpreviouspage-description](paging/includes/loadpreviouspage-description.md)]|
 |[reset](paging/reset.md)|[!INCLUDE [reset-description](paging/includes/reset-description.md)]|
 |[setPageSize](paging/setpagesize.md)|[!INCLUDE [setpagesize-description](paging/includes/setpagesize-description.md)]|
+|pageSize|Page size to be set. On forms, dataset pageSize goes with the formatting (Number of rows).|
 
 
 ### Related topics
