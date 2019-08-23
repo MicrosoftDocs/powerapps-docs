@@ -28,7 +28,7 @@ The new canvas apps embedding SDK enables you to embed canvas apps in your appli
 
 ## Using the canvas apps embedding SDK and documentation
 
-For information on how to download and use the Canvas apps embedding SDK, download the docs [here]().
+For information on how to download and use the Canvas apps embedding SDK, download the docs [here](https://download.microsoft.com/download/e/6/0/e605470b-c6f4-461c-92e7-936091bf7e3c/CanvasApps-Embedding-SDK-PublicPreview.pdf).
 
 
 
