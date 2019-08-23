@@ -36,6 +36,8 @@ ms.assetid: 41ea27ac-65b6-45a4-ae03-5f8d02dfc67b
 
 ## Vlaue elements that are not supported
 
+Following of-type attribute values are not supported currently:
+
 1. Whole.Duration
 2. Whole.Timezone
 3. Whole.Language
