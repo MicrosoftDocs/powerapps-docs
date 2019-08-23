@@ -1,5 +1,5 @@
 ---
-title: "Add, move or delete fields on a form | MicrosoftDocs"
+title: "Add, move, or delete fields on a form | MicrosoftDocs"
 ms.custom: ""
 ms.date: 08/22/2019
 ms.reviewer: ""
