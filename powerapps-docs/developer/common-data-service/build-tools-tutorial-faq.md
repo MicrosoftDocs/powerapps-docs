@@ -52,10 +52,10 @@ The hand-on lab provides a tutorial with step-by-step instructions on how to bui
 
 **How much do the PowerApps build tools cost?**
 
-*The PowerApps Build Tools are available at no cost. However, a valid subscription to Azure DevOps is required to utilize the Build Tools. More information is available [here](https://azure.microsoft.com/en-us/pricing/details/devops/azure-devops-services/).*
+*The PowerApps Build Tools are available at no cost. However, a valid subscription to Azure DevOps is required to utilize the Build Tools. More information is available [here](https://azure.microsoft.com/pricing/details/devops/azure-devops-services/).*
 
 **I can see the extension, but why don’t I have an option to install it?**
 
-*If you do not see the **install** option (outlined in screenshot below) then you most likely lack the necessary install privileges in your Azure DevOps Organization. More info available [here](https://docs.microsoft.com/en-us/azure/devops/marketplace/how-to/grant-permissions?view=azure-devops).*
+*If you do not see the **install** option (outlined in screenshot below) then you most likely lack the necessary install privileges in your Azure DevOps Organization. More info available [here](https://docs.microsoft.com/azure/devops/marketplace/how-to/grant-permissions?view=azure-devops).*
 
 ![Build tasks screen](media/build-tasks.png)

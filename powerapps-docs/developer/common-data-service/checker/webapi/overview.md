@@ -121,7 +121,7 @@ When publishing applications on AppSource, you must get your application certifi
 
 ## Find your tenant ID
 
-The ID of your tenant is needed to interact with the APIs that require a token. Refer to [this article](https://docs.microsoft.com/en-us/onedrive/find-your-office-365-tenant-id) for details on how to obtain the tenant ID. You can also use PowerShell commands to retrieve the tenant ID. The following example leverages the cmdlets in the [AzureAD module](https://docs.microsoft.com/en-us/powershell/module/azuread/?view=azureadps-2.0).
+The ID of your tenant is needed to interact with the APIs that require a token. Refer to [this article](https://docs.microsoft.com/onedrive/find-your-office-365-tenant-id) for details on how to obtain the tenant ID. You can also use PowerShell commands to retrieve the tenant ID. The following example leverages the cmdlets in the [AzureAD module](https://docs.microsoft.com/powershell/module/azuread/?view=azureadps-2.0).
 
 ```powershell
 # Login to AAD as your user
