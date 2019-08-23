@@ -22,6 +22,8 @@
         href: business-logic/remove-unsupported-code-using-reflection-workflow-activities.md
       - name: Set KeepAlive to false when interacting with external hosts in a plug-in
         href: business-logic/set-keepalive-false-interacting-external-hosts-plugin.md
+      - name: Set Timeout when making external calls in a plug-in
+        href: business-logic/set-timeout-for-external-calls-from-plug-ins.md
       - name: Use InvalidPluginExecutionException in plug-ins and workflow activities
         href: business-logic/use-invalidpluginexecutionexception-plugin-workflow-activities.md
   - name: Work with data using code

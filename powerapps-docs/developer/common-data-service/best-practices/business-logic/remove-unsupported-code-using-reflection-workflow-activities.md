@@ -64,8 +64,6 @@ The underlying issue about supporting strong types has been fixed, but this code
 
 ## Additional information
 
-We are in the process of releasing changes that will enable the use of reflection within custom workflow activities. However, in the sandbox environment where this code will run any calls using [Type.GetType Method](/dotnet/api/system.type.gettype) must use the fully qualified name of the assembly. In addition to being unnecessary, this code doesn't use the fully qualified name and this is why it throws an error.
-
 Currently reflection is not allowed. This code references an internal assembly that was included in a white list so that internal code could reflect on it. This is why it does not currently throw an error. But when general restrictions are lifted in the future, this will cause the workflow activity to break.
 
 In order to provide greater capabilities within custom workflow activities without breaking people's business logic, we need everyone to review their code base and remove references like this.
