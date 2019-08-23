@@ -1,7 +1,7 @@
 ---
 title: "Add, move, or delete tabs on a form using the form designer | MicrosoftDocs"
 ms.custom: ""
-ms.date: 04/21/2019
+ms.date: 08/22/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -24,15 +24,13 @@ search.app:
 ---
 
 # Add, move, or delete tabs on a form  
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
-
 Add, move, or delete tabs on a form using the form designer.
 
 ## Add tabs to a form
 To add tabs to a form, use the **Layouts** pane.  
 
 > [!div class="mx-imgBorder"] 
-> ![](media/layouts-pane.png "Layouts pane")
+> ![](media/FormDesignerComponentsLayout.png "Layout components")
    
   > [!NOTE]
   >  Tabs can only be added on main forms. More information: [Form types](types-forms.md)
