@@ -24,39 +24,55 @@ search.app:
 ---
 
 # Configure header properties in the form designer
+
+
+<!-- from editor: Would it be OK to change "users" to "anyone" in the following sentence? Then we avoid saying "users using." -->
+
+
 Makers can control the density of model-driven app form headers to match the needs of users using the form.
 
 > [!NOTE]
-> This feature is only available with environments that opt-in to the early preview of 2019 release wave 2 features. More information: [Early opt-in to 2019 release wave 2](https://docs.microsoft.com/power-platform/admin/preview-october-2019-updates) 
+> This feature is only available with environments that opt in to the early preview of 2019 release wave 2 features. More information: [Early opt-in to 2019 release wave 2](https://docs.microsoft.com/power-platform/admin/preview-october-2019-updates) 
 
-## High density header
-High density form header ensures that key information is always visible to users. Using high density header, the record title never truncates. Even long record titles are displayed using multiple lines. Similarly, high density header also ensures that up to four field values are directly visible in the header and never truncated or hidden.  
+## High-density header
+
+<!-- from editor: Unless there's a UI issue that conflicts with this, "high-density header" should be hyphenated this way. -->
+
+
+High-density form header ensures that key information is always visible to users. Using high-density header, the record title never truncates. Even long record titles are displayed using multiple lines. Similarly, high-density header also ensures that up to four field values are directly visible in the header and never truncated or hidden.  
 
 To ensure that key information is always visible, the framework displays read-only field values and users can't directly edit the field values in the header. Visualizations such as custom controls or web resources also aren't allowed.
 
-When a form does not specify header density or when a new form is created, the framework defaults to high density header.
+When a form does not specify header density or when a new form is created, the framework defaults to high-density header.
 
 > [!div class="mx-imgBorder"] 
-> ![High density form header](media/form-header-high-density.png "High density form header")
+> ![High-density form header](media/form-header-high-density.png "High-density form header")
     
-## Low density header
-Low density form header allows users to directly edit the field values in the header. It also allows visualizations such as custom controls and web resources.  
+## Low-density header
+Low-density form header allows users to directly edit the field values in the header. It also allows visualizations such as custom controls and web resources.  
   
-However, often this comes at the cost of key information being truncated or not readily visible. Low density header truncates the record title as well as field values displayed in the header. Often only one or two fields are directly visible in the header and the rest overflow and are displayed in a flyout requiring an extra click.
+However, often this comes at the cost of key information being truncated or not readily visible. Low-density header truncates the record title as well as field values displayed in the header. Often only one or two fields are directly visible in the header and the rest overflow and are displayed in a flyout requiring an extra click.
 
 > [!div class="mx-imgBorder"] 
-> ![Low density form header](media/form-header-low-density.png "Low density form header")
+> ![Low-density form header](media/form-header-low-density.png "Low-density form header")
 
 ### Configuring header density
 
-To configure the header density of a model-driven form, follow these steps.
+To configure the header density of a model-driven form, follow these steps:
 1.	Open the form designer to [create or edit a form](create-and-edit-forms.md).
 2.	Select the form header by selecting the header in the form preview or by using the [tree view](using-tree-view-on-form.md).
-3.	In the property pane, select **High density** to use high density form header or clear it to use low density form header.
+3.	In the property pane, select **High density** to use high-density form header or clear it to use low-density form header.
 4.	In the command bar, select **Save** to save the form, or select **Publish** to save and make your changes visible to users.
 
 > [!NOTE]
 > Use the new form designer. The classic form designer does not provide the ability to configure the header density.
+
+
+
+
+
+
+
 
 ## Header flyout
 The header flyout is displayed when users select the chevron in the form header. It enables users to edit field values and also displays visualizations such as custom controls or web resources that are a part of the form header.
