@@ -18,7 +18,7 @@ search.app:
 Moves input focus to a specific control. 
 
 ## Description
-The **SetFocus** function gives a control the input focus.  The user's keystrokes are then received by that control, allowing them to type into a text input control or use the *Enter* key to select a button.  The user can also use the *Tab* key, touch, mouse, or other gesture to move the input focus themselves.  *Tab* key behavior is governed by the [**TabIndex** property](../controls/properties-accessibility.md).
+The **SetFocus** function gives a control the input focus.  The user's keystrokes are then received by that control, allowing them to type into a text input control or use the *Enter* key to select a button.  The user can also use the *Tab* key, touch, mouse, or other gesture to move the input focus themselves. *Tab* key behavior is governed by the [**TabIndex** property](../controls/properties-accessibility.md).
 
 Use the **SetFocus** function to set the focus when (each with an example below):
 - a newly exposed or enabled input control, to guide the user in what comes next and for faster data entry.
