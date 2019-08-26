@@ -18,7 +18,7 @@ search.app:
 Moves input focus to a specific control. 
 
 ## Description
-The **SetFocus** function gives a control the input focus.  The user's keystrokes are then received by that control, allowing them to type into a text input control or use the *Enter* key to select a button.  The user can also use the *Tab* key, touch, mouse, or other gesture to move the input focus themselves. 
+The **SetFocus** function gives a control the input focus.  The user's keystrokes are then received by that control, allowing them to type into a text input control or use the *Enter* key to select a button.  The user can also use the *Tab* key, touch, mouse, or other gesture to move the input focus themselves.  *Tab* key behavior is governed by the [**TabIndex** property](../controls/properties-accessibility.md).
 
 Use the **SetFocus** function to set the focus when (each with an example below):
 - a newly exposed or enabled input control, to guide the user in what comes next and for faster data entry.
@@ -121,7 +121,7 @@ To create this example:
 1. From the **Insert** menu, select **New screen**, and then select **Scrollable**.
 1. In the center section of the screen, add **Text input** controls and name them **Name**, **Street1**, **Street2**, **City**, **County**, **StateProvince**, **PostalCode**, and **Phone**. Add **Label** controls above each one to identify the fields.  You may need to resize the section if it is not long enough to fit all the controls.
 1. Add a checkmark [**Icon** control](../controls/control-shapes-icons.md) at the top of the screen, above the scrollable section.  
-1. Set the **OnSelect** property of the icon control to the formula above.
+1. Set the **OnSelect** property of the icon control to the formula `If( IsBlank( ...` given above.
 
 ### Focus when displaying a screen
 
