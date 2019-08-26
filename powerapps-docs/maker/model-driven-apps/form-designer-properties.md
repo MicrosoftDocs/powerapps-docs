@@ -1,7 +1,7 @@
 ---
 title: "Properties available in the form designer | MicrosoftDocs"
 ms.custom: ""
-ms.date: 02/19/2019
+ms.date: 08/26/2019
 ms.reviewer: ""
 ms.service: crm-online
 ms.suite: ""
@@ -79,10 +79,13 @@ Located on the right-pane of the model-driven form designer, the property pane l
 
 ## See also
 [Overview of the model-driven form designer](form-designer-overview.md)  
-[Create or edit forms using the form designer](create-and-edit-forms.md)  
-[Add, move or delete fields on a form using the form designer](add-move-or-delete-fields-on-form.md)  
-[Add, move or delete sections on a form using the form designer](add-move-or-delete-sections-on-form.md)  
-[Add, move or delete tabs on a form using the form designer](add-move-or-delete-tabs-on-form.md)  
-[Configuring header properties in the form designer](form-designer-header-properties.md)  
+[Create, edit, or configure forms using the form designer](create-and-edit-forms.md)  
+[Add, configure, move, or delete fields on a form](add-move-or-delete-fields-on-form.md)  
+[Add, configure, move, or delete components on a form](add-move-configure-or-delete-components-on-form.md)  
+[Add, configure, move, or delete sections on a form](add-move-or-delete-sections-on-form.md)  
+[Add, configure, move, or delete tabs on a form](add-move-or-delete-tabs-on-form.md)  
+[Configure header properties in the form designer](form-designer-header-properties.md)  
+[Add and configure a sub-grid component on a form](form-designer-add-configure-subgrid.md)  
+[Add and configure a quick view component on a form](form-designer-add-configure-quickview.md)  
 [Using the tree view in the form designer](using-tree-view-on-form.md)  
-[Create and edit fields](../common-data-service/create-edit-field-portal.md)
+[Create and edit fields](../common-data-service/create-edit-field-portal.md)  
