@@ -1,7 +1,7 @@
 ---
 title: "Configure header properties in the form designer | MicrosoftDocs"
 ms.custom: ""
-ms.date: 08/19/2019
+ms.date: 08/26/2019
 ms.reviewer: ""
 ms.service: crm-online
 ms.suite: ""
