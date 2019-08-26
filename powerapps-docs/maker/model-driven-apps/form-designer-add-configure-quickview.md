@@ -1,7 +1,7 @@
 ---
 title: "Add and configure a quick view component on a form | MicrosoftDocs"
 ms.custom: ""
-ms.date: 08/22/2019
+ms.date: 08/26/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -40,3 +40,15 @@ These are the properties available to configure when using a quick view componen
 | **Display options** | **Name** |  The unique name for the quick view that is used when referencing it in scripts. The name can contain only alphanumeric characters and underscores. <br />This property is required. |
 | **Display options**  | **Hide label** |  When selected, the quick view label is hidden. |
 | **Display options**  | **Quick view forms** |  A list of quick view forms that will be displayed to end-users. <br /><br />To configure the list of quick view forms <br /><br /> Select **Select forms ...**, and then in the **Lookup** drop down select a lookup field that you want to display a quick view form for. <br /><br />Depending on the lookup field you select in the **Lookup** drop down you will see drop downs that will let you select quick view forms for one or more entities. |
+
+## See also
+[Overview of the model-driven form designer](form-designer-overview.md)  
+[Create, edit, or configure forms using the form designer](create-and-edit-forms.md)  
+[Add, configure, move, or delete fields on a form](add-move-or-delete-fields-on-form.md)  
+[Add, configure, move, or delete components on a form](add-move-configure-or-delete-components-on-form.md)  
+[Add, configure, move, or delete sections on a form](add-move-or-delete-sections-on-form.md)  
+[Add, configure, move, or delete tabs on a form](add-move-or-delete-tabs-on-form.md)  
+[Configure header properties in the form designer](form-designer-header-properties.md)  
+[Add and configure a sub-grid component on a form](form-designer-add-configure-subgrid.md)  
+[Using the tree view in the form designer](using-tree-view-on-form.md)  
+[Create and edit fields](../common-data-service/create-edit-field-portal.md)  
