@@ -53,7 +53,12 @@ As shown in the image above, the browser window opens with 4 sections. The custo
 
 ## Watch mode in test harness
 
-The test harness supports the watch mode which you can take advantage of for PowerApps Component Framework projects. To enable watch mode, start the test harness using the command  `npm start watch`. In watch mode you can see the changes made to `index.ts`, `ControlManifest.Input.xml`, and all resources that automatically reflect in the test harness without having to restart it. 
+The test harness supports the watch mode which you can take advantage of for PowerApps component framework projects. To enable watch mode, start the test harness using the command `npm start watch`. In watch mode, the changes made to any of the below component assets are automatically reflected in the test harness without having to restart it:
+
+1.	`index.ts` file
+2.	`ControlManifest.Input.xml` file
+3.	Imported libraries in `index.ts`
+4.	All the resources listed in the manifest file.
 
 ## Debug custom components using native browsers
 
