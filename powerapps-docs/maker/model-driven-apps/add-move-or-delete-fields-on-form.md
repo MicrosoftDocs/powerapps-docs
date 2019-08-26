@@ -132,7 +132,7 @@ In addition to the field properties listed above, a lookup field provides these 
 5. In the **New field** dialog, select the **Data type** and any other required properties of the field.
 
      > [!NOTE]
-     >   -  Some field types are not available when creating a field from within the form designer. If a field type you are looking to create is not available, you can follow the steps outlined in [Create and edit fields for Common Data Service using PowerApps portal](../../common-data-service/create-edit-field-portal.md)
+     >   -  Some field types are not available when creating a field from within the form designer. If a field type you are looking to create is not available, you can follow the steps outlined in [Create and edit fields for Common Data Service using PowerApps portal](../common-data-service/create-edit-field-portal.md)
 
 6. Click on the **Done** button to create a new field on the entity. The field will be created and appear in the **Fields** pane.
 7. If you want to add the newly created field to the form, follow the steps outlined in the [**Add fields to a form**](add-move-or-delete-fields-on-form.md#add-fields-to-a-form) topic above.
