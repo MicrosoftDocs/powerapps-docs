@@ -19,10 +19,6 @@ ms.assetid: 12891e96-972c-4289-bbde-2bc261cd1f12
 
 [!INCLUDE [paging-description](includes/paging-description.md)]
 
-## Available for 
-
-Model-driven apps
-
 ## Properties
 
 ### totalResultCount
