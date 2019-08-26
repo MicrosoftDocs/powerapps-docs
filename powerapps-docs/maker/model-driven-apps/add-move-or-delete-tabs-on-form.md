@@ -1,7 +1,7 @@
 ---
 title: "Add, configure, move, or delete tabs on a form using the form designer | MicrosoftDocs"
 ms.custom: ""
-ms.date: 08/266/2019
+ms.date: 08/26/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
