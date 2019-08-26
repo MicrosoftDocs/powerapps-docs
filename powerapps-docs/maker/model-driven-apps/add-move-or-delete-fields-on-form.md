@@ -124,6 +124,22 @@ In addition to the field properties listed above, a lookup field provides these 
      >   -  If you delete a field by mistake, in the command bar, select **Undo** to revert the form to its previous state. 
      >   -  You can't delete a field that is locked or is required and not present anywhere else on the form. 
 
+## Create a new field on the entity when editing a form 
+1. Open the form designer to create or edit a form. More information: [Create a form](create-and-edit-forms.md#create-a-form) or [Edit a form](create-and-edit-forms.md#edit-a-form)
+2. In the command bar, select **Add field**, or in the left pane, select **Fields**. The **Fields** pane is open by default when the form designer is opened. 
+3. In the **Fields** pane, select **+ New field**.
+4. In the **New field** dialog, provide the **Display name** and **Name** for the field.
+5. In the **New field** dialog, select the **Data type** and any other required properties of the field.
+
+     > [!NOTE]
+     >   -  Some field types are not available when creating a field from within the form designer. If a field type you are looking to create is not available, you can follow the steps outlined in [Create and edit fields for Common Data Service using PowerApps portal](../../common-data-service/create-edit-field-portal.md)
+
+6. Click on the **Done** button to create a new field on the entity. The field will be created and appear in the **Fields** pane.
+7. If you want to add the newly created field to the form, follow the steps outlined in the [**Add fields to a form**](add-move-or-delete-fields-on-form.md#add-fields-to-a-form) topic above.
+
+     > [!NOTE]
+     >  When a field is created on the entity, it is not limited to the current form and will be available for use in other places.
+
 ### See also
 [Overview of the model-driven form designer](form-designer-overview.md)  
 [Create or edit forms using the form designer](create-and-edit-forms.md)  
