@@ -70,7 +70,7 @@ Sections allow you to define a structure for your page and arrange portal compon
 
 6.	In the properties pane on the right side of the screen, enter or select the following information:
 
-    - **Min Height**: Enter the minimum height of the section. If you enter text that is more than the specified height, the component expands to accommodate the text. By default, the minimum height is 100px. You can also enter the height in points (pt) and percentage (%).
+    - **Min Height**: Enter the minimum height of the section. If you add a component that occupies more space than the specified height, the section expands to accommodate the component. By default, the minimum height is 100px. You can also enter the height in points (pt) and percentage (%).
 
         > [!div class=mx-imgBorder]
         > ![Alignment in the section](media/section-props-height.png "Alignment in the section")  
