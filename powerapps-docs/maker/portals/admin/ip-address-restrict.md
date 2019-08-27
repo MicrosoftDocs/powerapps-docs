@@ -1,5 +1,5 @@
 ---
-title: "Restrict access to a portal by using IP address in Dynamics 365 for Customer Engagement | MicrosoftDocs"
+title: "Restrict access to a portal by using IP address | MicrosoftDocs"
 description: "Instructions to restrict portal access by IP address."
 author: sbmjais
 manager: shujoshi

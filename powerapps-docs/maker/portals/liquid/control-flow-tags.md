@@ -86,4 +86,4 @@ Hello, stranger.
 [Iteration tags](iteration-tags.md)<br>
 [Variable tags](variable-tags.md)<br>
 [Template tags](template-tags.md)<br>
-[Dynamics 365 for Customer Engagement entity tags](dynamics-entity-tags.md)
+[PowerApps common data service entity tags](dynamics-entity-tags.md)

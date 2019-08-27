@@ -1,5 +1,5 @@
 ---
-title: "Change the base URL of a Dynamics 365 for Customer Engagement portal | MicrosoftDocs"
+title: "Change the base URL of a portal | MicrosoftDocs"
 description: "Learn how to change the base URL of a portal."
 author: sbmjais
 manager: shujoshi

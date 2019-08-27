@@ -1,5 +1,5 @@
 ---
-title: "Clear the server-side cache for a portal in Dynamics 365 for Customer Engagement | MicrosoftDocs"
+title: "Clear the server-side cache for a portal | MicrosoftDocs"
 description: "Instructions to force the portal to refresh its cache immediately."
 author: sbmjais
 manager: shujoshi
