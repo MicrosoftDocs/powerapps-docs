@@ -2,7 +2,7 @@
 title: "Create and edit One-to-many or Many-to-one entity relationships using PowerApps portal | MicrosoftDocs"
 description: "Learn how to create one-to-many or many-to-one entity relationships using PowerApps portal"
 ms.custom: ""
-ms.date: 06/11/2018
+ms.date: 08/27/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -40,7 +40,6 @@ The portal enables configuring the most common options, but certain options can 
  |**All**| Shows all the relationships for the entity|
  |**Custom**|Shows only custom relationships for the entity|
  |**Default**|Shows only the standard relationships for the entity|
-<!-- TODO: What is the actual difference between All and Default? -->
 
 ![Account entity relationships](media/view-account-relationships-portal.png)
 
@@ -53,13 +52,11 @@ While [viewing entity relationships](#view-entity-relationships), in the command
 > [!NOTE]
 > For information about **Many-to-many** relationships see [Create N:N (many-to-many) relationships](create-edit-nn-relationships.md)
 
-<!-- This may change going forward, but this is the way it is now. #2534972 -->
 > [!Important]
 > The portal uses different terminology than solution explorer. The solution explorer **Primary entity** is the **Current entity** in the portal.
 
 Depending on your choice you will see either:
 
-<!-- These are the correct screenshots from the UI as of 6/11/18 -->
 |Type|Panel|
 |--|--|
 |**Many-to-one**|![Many to one relationship panel](media/many-to-one-relationship-panel.png)|
@@ -72,7 +69,6 @@ Choose the **Related entity** for the relationship you want to create between th
 
 Once you select the entity you can edit the details of the relationship. In this example, multiple contact entity records can be associated with a single account.
 
-<!-- These are the correct screenshots from the UI as of 6/11/18 -->
 ![One to many relationship account and contact](media/One-to-many-account-contact.png)
 
 You can edit the default values provided before you save. Select **More options** to view the **Relationship name** and **Lookup field description** values
