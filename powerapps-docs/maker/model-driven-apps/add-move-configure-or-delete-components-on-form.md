@@ -56,7 +56,7 @@ To add components to a form, use the **Components** pane. The **Components** pan
 1. Open the form designer to create or edit a form. More information: [Create a form](create-and-edit-forms.md#create-a-form) or [Edit a form](create-and-edit-forms.md#edit-a-form)
 2. In the form preview, select an existing field.
 3. In the property pane, under the **Components** area, select **+ Component**.
-4. The **Add component** dialog will display a list of components that are available and applicable for the current field type. You can also hover over a component in the list to see a preview image, description and other details of that component.
+4. The **Add component** dialog will display a list of components that are available for the current field type. You can also hover over a component in the list to see a preview image, description and other details of that component.
 5. In the **Add component** dialog, search or scroll to find the component you want to add and then select it.
 6. In most cases, you will see a dialog to configure the properties of the component. Ensure that you have configured all the required properties of the component. 
 7. In the dialog to configure the properties of the component, under **Show component on**, the **Web**, **Mobile** and **Tablet** options will be selected by default to ensure the component is used when the form is displayed on the web, mobile app and tablet app. Based on your requirements you can unselect some of these options to limit the usage of the component.
