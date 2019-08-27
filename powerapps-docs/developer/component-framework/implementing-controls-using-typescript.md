@@ -294,7 +294,7 @@ Follow the steps below to create and import a [solution](https://docs.microsoft.
     > - Under **Code Tools**, check **NuGet targets & Build Tasks**
 
 6. The generated solution zip file is located in `Solution\\bin\debug\`.
-7. You should manually [import the solution](https://docs.microsoft.com/dynamics365/customer-engagement/customize/import-update-export-solutions) using the web portal once the zip file is ready or see [Authenticating to your organization](#authenticating-to-your-organization) and [Deployment](#deploying-custom-components) sections to import using PowerApps CLI commands.
+7. You should manually [import the solution](https://docs.microsoft.com/dynamics365/customer-engagement/customize/import-update-export-solutions) using the web portal once the zip file is ready or see [Authenticating to your organization](import-custom-controls.md#authenticating-to-your-organization) and [Deployment](import-custom-controls.md#deploying-custom-components) sections to import using PowerApps CLI commands.
 
 ## Adding custom components to a field or an entity
 
