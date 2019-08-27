@@ -32,16 +32,23 @@ Learn how to [announce dynamic changes with live regions](../accessible-apps-liv
 
 **TabIndex** – Determines if the control participates in keyboard navigation.
 
-This property has two valid values:
+Keyboard navigation is an important aspect of any app.  For many it is more efficient than using touch or a mouse and it enables screen readers for the visually impaired.  The navigation order should:
+- mirror what is seen visually
+- should only have a tab stop at controls that are interactive
+- should follow either an intuitive across and then down "Z" order or a down and then across "reverse-N" order.  
+
+The **TabIndex** property along with the [**Enhanced group** control](https://powerapps.microsoft.com/en-us/blog/enhanced-group-experimental-control-with-layout-control-and-nesting/) (experimental) are used to adjust the navigation order.
+
+The **TabIndex** property has two recommended values:
 
 | **TabIndex** value | Behavior | Default for |
 |--------------------|----------|-------------|
 | 0 | Control participates in keyboard navigation. | [**Button**](control-button.md), [**Text input**](control-text-input.md), [**Combo box**](control-combo-box.md), and other typically interactive controls. |
 | &minus;1 | Control does not participate in keyboard navigation. | [**Label**](control-text-box.md), [**Image**](control-image.md), [**Icon**](control-shapes-icons.md), and other typically non-interactive controls. |
 
-The navigation order is based on the relative **X** and **Y** property values of the controls, navigating first across and then down.  If controls are dynamically moved on the screen, for example by having a formula for **X** or **Y** based on a timer or other control, the navigation order will change dynamically too.
+The navigation order is based on the relative **X** and **Y** property values of the controls, navigating first across and then down in a "Z" pattern.  If controls are dynamically moved on the screen, for example by having a formula for **X** or **Y** based on a timer or other control, the navigation order will change dynamically too.
 
-Use the [**Enhanced group control**](https://powerapps.microsoft.com/en-us/blog/enhanced-group-experimental-control-with-layout-control-and-nesting/) (experimental) to bundle controls that should be navigated together.  At the top of the following example, the name fields are contained within an enhanced group control which causes navigation to proceed down before moving across.  At the bottom of the example, no group controls are used, and navigation proceeds across and then down as normal. 
+Use the [**Enhanced group** control](https://powerapps.microsoft.com/en-us/blog/enhanced-group-experimental-control-with-layout-control-and-nesting/) (experimental) to bundle controls that should be navigated together or to create columns in a "reverse-N" pattern.  At the top of the following example, the name fields are contained within an enhanced group control which causes navigation to proceed down before moving across.  At the bottom of the example, no group controls are used, and navigation proceeds across and then down as normal which is not intuitive given the control groupings. 
 
 ![Animation showing enhanced group control causing navigation to proceed down within a group before moving across](media/properties-accessibility/enhanced-group.gif)
 
