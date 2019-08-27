@@ -57,11 +57,13 @@ While [viewing entity relationships](#view-many-to-many-entity-relationships), i
 
 In the **Many-to-many** panel, choose the entity you want related to the current entity.
 
-![Many-to-many panel with account entity selected](media/many-to-many-panel-1.png)
+> [!div class="mx-imgBorder"] 
+> ![Many-to-many panel with account entity selected](media/many-to-many-panel-1.png)
 
 Select **More Options** to view the **Relationship Name** and **Relationship entity name** fields.
 
-![Many-to-many panel with More Options selected](media/many-to-many-panel-2.png)
+> [!div class="mx-imgBorder"] 
+> ![Many-to-many panel with More Options selected](media/many-to-many-panel-2.png)
 
 The values for these fields are generated for you based on the entities chosen.
 

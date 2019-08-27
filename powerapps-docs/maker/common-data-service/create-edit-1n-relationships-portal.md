@@ -69,7 +69,8 @@ Choose the **Related entity** for the relationship you want to create between th
 
 Once you select the entity you can edit the details of the relationship. In this example, multiple contact entity records can be associated with a single account.
 
-![One to many relationship account and contact](media/One-to-many-account-contact.png)
+> [!div class="mx-imgBorder"] 
+> ![One to many relationship account and contact](media/One-to-many-account-contact.png)
 
 You can edit the default values provided before you save. Select **More options** to view the **Relationship name** and **Lookup field description** values
 
