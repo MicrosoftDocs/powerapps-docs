@@ -32,21 +32,21 @@ Learn how to [announce dynamic changes with live regions](../accessible-apps-liv
 
 **TabIndex** – Determines if the control participates in keyboard navigation.
 
-Keyboard navigation is an important aspect of any app.  For many it is more efficient than using touch or a mouse and it enables screen readers for the visually impaired.  The navigation order should:
+Keyboard navigation is an important aspect of any app.  For many the keyboard is more efficient than using touch or a mouse and it enables screen readers for the visually impaired.  The navigation order should:
 - mirror what is seen visually
 - should only have a tab stop at controls that are interactive
-- should follow either an intuitive across and then down "Z" order or a down and then across "reverse-N" order.  
+- should follow either an intuitive across and then down "Z" order or a down and then across "reverse-N" order.
 
-The **TabIndex** property along with the [**Enhanced group** control](https://powerapps.microsoft.com/en-us/blog/enhanced-group-experimental-control-with-layout-control-and-nesting/) (experimental) are used to adjust the navigation order.
+The above requirements will be met with the default **TabIndex** values on controls and we recommend that you do not change them.  The default is what most users expect visually and it will work well with a screen reader.  But there may be cases in which you will want to override the default.  Use the **TabIndex** property and the [**Enhanced group** control](https://powerapps.microsoft.com/en-us/blog/enhanced-group-experimental-control-with-layout-control-and-nesting/) (experimental) to make adjustments to the navigation order.  
 
 The **TabIndex** property has two recommended values:
 
-| **TabIndex** value | Behavior | Default for |
-|--------------------|----------|-------------|
+| TabIndex value | Behavior | Default for |
+|----------------|----------|-------------|
 | 0 | Control participates in keyboard navigation. | [**Button**](control-button.md), [**Text input**](control-text-input.md), [**Combo box**](control-combo-box.md), and other typically interactive controls. |
 | &minus;1 | Control does not participate in keyboard navigation. | [**Label**](control-text-box.md), [**Image**](control-image.md), [**Icon**](control-shapes-icons.md), and other typically non-interactive controls. |
 
-The navigation order is based on the relative **X** and **Y** property values of the controls, navigating first across and then down in a "Z" pattern.  If controls are dynamically moved on the screen, for example by having a formula for **X** or **Y** based on a timer or other control, the navigation order will change dynamically too.
+Navigation order generally goes from left-to-right, then top-to-bottom, in a "Z" pattern. The order is based on the **X** and **Y** property values of the controls. If controls are dynamically moved on the screen, for example by having a formula for **X** or **Y** based on a timer or other control, the navigation order will change dynamically too.
 
 Use the [**Enhanced group** control](https://powerapps.microsoft.com/en-us/blog/enhanced-group-experimental-control-with-layout-control-and-nesting/) (experimental) to bundle controls that should be navigated together or to create columns in a "reverse-N" pattern.  At the top of the following example, the name fields are contained within an enhanced group control which causes navigation to proceed down before moving across.  At the bottom of the example, no group controls are used, and navigation proceeds across and then down as normal which is not intuitive given the control groupings. 
 
@@ -58,7 +58,12 @@ Controls which have a **Visible** property value of *false* or a **DisplayMode**
 
 When using a browser, navigating from the last control of the screen will move to the browser's built-in controls, such as the URL address.  
 
-Values for **TabIndex** greater than 0 are highly discouraged. Ultimately controls are rendered in HTML where even the [W3C has warned](https://www.w3.org/TR/wai-aria-practices/#kbd_general_between) "Authors are strongly advised NOT to use these values." Many HTML tools warn if if values other than 0 and &minus;1 are used.  All for good reason: using **TabIndex** in this manner can be very difficult to get right and can make assistive technologies such as screen readers unusable.
+> [!WARNING]
+> Avoid **TabIndex** values that are greater than 0. Ultimately controls are rendered in HTML where even the [W3C has warned](https://www.w3.org/TR/wai-aria-practices/#kbd_general_between) "Authors are strongly advised NOT to use these values." Many HTML tools warn for values greater than 0 as does the [App Checker](../accessibility-checker.md) when it reports "Check the order of the screen items."  All for good reason: using **TabIndex** in this manner can be very difficult to get right and can make assistive technologies such as screen readers unusable.
+> 
+> When greater than 0, users will navigate to controls with positive **TabIndex** values in increasing order. When they have navigated all controls with positive **TabIndex** values, they will finally navigate to controls with **TabIndex** of 0 including the browser's built-in controls. When there are multiple controls with the same **TabIndex**, their **X** and **Y** position determines their order.
+
+
 
 
 
