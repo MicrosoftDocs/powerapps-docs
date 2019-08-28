@@ -37,8 +37,6 @@ Follow the steps below to create and import a solution file:
 
 4. After build completes, the generated solution files are located in `\bin\debug\`.
 5. Manually [Import solution to model-driven apps](https://docs.microsoft.com/dynamics365/customer-engagement/customize/import-update-export-solutions) using the web portal once the zip file is ready.
-8. To manually import solutions into canvas apps, see the topic [Import solutions into canvas apps](https://docs.microsoft.com/en-us/powerapps/maker/common-data-service/import-update-export-solutions)
-
 
 ## How to remove components from a solution
 

@@ -303,15 +303,10 @@ Follow the steps below to create and import a [solution](https://docs.microsoft.
 
 6. The generated solution zip file is located in `Solution\\bin\debug\`.
 7. Manually [Import solution to model-driven apps](https://docs.microsoft.com/dynamics365/customer-engagement/customize/import-update-export-solutions) using the web portal once the zip file is ready.
-8. To manually import solutions into canvas apps, see the topic [Import solutions into canvas apps](https://docs.microsoft.com/en-us/powerapps/maker/common-data-service/import-update-export-solutions)
 
 ## Adding custom components in model-driven apps
 
 To add a custom component like a liner input component or simple table component, follow the steps mentioned in the topic [Add components to fields and entities](add-custom-controls-to-a-field-or-entity.md).
-
-## Add custom components to a canvas app
-
-To add a custom component to a canvas app, see the topic [Add components to an app](component-framework-for-canvas-apps.md#add-components-to-a-canvas-app)
 
 ### See also
 
