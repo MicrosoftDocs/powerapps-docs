@@ -36,7 +36,49 @@ Follow the steps below to create and import a solution file:
     > - You can set the msbuild configuration to `Release` to issue a production build. Example: `msbuild /p:configuration=Release` 
 
 4. After build completes, the generated solution files are located in `\bin\debug\`.
-5. Manually [Import solution to model-driven apps](https://docs.microsoft.com/dynamics365/customer-engagement/customize/import-update-export-solutions) using the web portal once the zip file is ready.
+5. You can now manually import the solution using the web portal or see [Authenticating to your organization](#authenticating-to-your-organization) and [Deployment](#deploying-custom-components) sections to import using PowerApps CLI commands.
+
+## Authenticating to your organization
+
+You can deploy the custom components directly from the PowerApps CLI by authenticating to Common Data Service org, then pushing the updated components. Follow the steps below to create the authentication profile, connect to your environment, and push your updated components. 
+ 
+1. Create your authentication profile using the command: 
+ 
+    ```CLI
+    pac auth create --url <your Common Data Service org’s url> 
+    ```
+ 
+2. If you have previously created an authentication profile, you can view all existing profiles using the command: 
+
+    ```CLI
+     pac auth list 
+    ```
+ 
+3. To switch between the previously created authentication profiles, use the command: 
+   
+    ```CLI
+     Pac auth select --index <index of the active profile>
+     ``` 
+ 
+4. To get the basic information about the organization, use the command. The connection will made using the default authentication profile. 
+
+    ```CLI
+    pac org who 
+    ```
+ 
+5. To delete a particular authentication profile, run the command `pac auth delete --index < index of the profile >`. 
+6. If you want to clear all the profiles from your local machine, run the command `pac auth clear`. This action is irreversible as it completely deletes the `authprofile.json` file and token cache file from your local disk. 
+
+## Deploying custom components 
+
+After you have successfully created an authentication profile, you can start pushing your custom component to your environment of choice with all the latest changes. The `push` capability greatly speeds up the inner-developer cycle development inner loop as it bypasses the custom component versioning requirements and does not require that you build your solution (your cdsproj) in order to import the custom component. To use the push capability, follow below steps the steps below:
+
+1. Ensure that you have a valid authentication profile created
+2. In your VS command prompt, go to the root directory containing of your custom component project in your VS command prompt
+3. Run the command `pac pcf push --publisher-prefix <your publisher prefix>`
+
+> [!NOTE]
+> The publisher prefix that you use with the `push` command should match the publisher prefix of the publisher of your solution in which the component will be included.
 
 ## How to remove components from a solution
 
