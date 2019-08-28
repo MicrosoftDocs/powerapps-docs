@@ -16,7 +16,7 @@ search.app:
 
 # setIsValid (Client API reference)
 
-Sets a value for an attribute to  determine whether it is valid or invalid and with a message.
+Sets a value for an attribute to determine whether it is valid or invalid with a message.
 
 ## Attribute types supported
 
