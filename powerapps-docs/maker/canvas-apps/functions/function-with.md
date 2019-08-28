@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 08/15/2019
 ms.author: gregli
 search.audienceType: 
@@ -68,7 +68,7 @@ With( { AnnualRate: RateSlider/8/100,        // slider moves in 1/8th increments
 
 This example nests **With** functions to create a two-tier calculation for [monthly mortgage payments](https://en.wikipedia.org/wiki/Mortgage_calculator#Monthly_payment_formula).  As long as there is no conflict, all of the outer **With** named values are available within the inner **With**.
 
-Since the slider controls can only move in increments of 1, the sliders are divided or multiplied to create effectively a custom increment.  In the case of the interest rate, the **RateSlider** has its **Max** property set to **48**, divided by 8 for a 1/8 percentage point increment and divided by 100 to covert from a percentage to a decimal, covering the range 0.125% to 6%.  In the case of of the loan amount, the **AmountSlider** has its **Max** property set to **60** and multiplied by 10,000, covering the range 10,000 to 600,000.
+Since the slider controls can only move in increments of 1, the sliders are divided or multiplied to create effectively a custom increment.  In the case of the interest rate, the **RateSlider** has its **Max** property set to **48**, divided by 8 for a 1/8 percentage point increment and divided by 100 to convert from a percentage to a decimal, covering the range 0.125% to 6%.  In the case of of the loan amount, the **AmountSlider** has its **Max** property set to **60** and multiplied by 10,000, covering the range 10,000 to 600,000.
 
 The **With** is automatically recalculated as the sliders move and the new loan payment displayed.  No variables are used and there is no need to use the **OnChange** property of the slider controls.
 
@@ -79,7 +79,7 @@ Here are the detailed instructions for creating this app:
 3. Add a **Label** control to the right of the slider control.  Set its **Text** property to the formula **RateSlider/8 & "&nbsp;%"**.
 3. Add another **Slider** control and name it **AmountSlider**.  Set its **Max** property to 60.
 3. Add a **Label** control to the left of this slider control.  Set its **Text** property to **"Loan Amount:"**. 
-3. Add a **Label** control to the right of this slider control.  Set its **Text** property to the formula **AmountSlider/8 * 10000**
+3. Add a **Label** control to the right of this slider control.  Set its **Text** property to the formula **AmountSlider/8 * 10000**.
 4. Add another **Slider** control and name it **YearsSlider**.  Set its **Max** property to 40.
 3. Add a **Label** control to the left of this slider control.  Set its **Text** property to **"Number of Years:"**. 
 3. Add a **Label** control to the right of this slider control.  Set its **Text** property to the formula **YearsSlider**.
