@@ -1067,8 +1067,12 @@
           href: ./portals/admin/change-base-url.md
         - name: Enable maintenance mode
           href: ./portals/admin/enable-maintenance-mode.md
-        - name: Set up Power BI integration
-          href: ./portals/admin/set-up-power-bi-integration.md
+        - name: Power BI integration
+          items:
+            - name: Set up Power BI integration
+              href: ./portals/admin/set-up-power-bi-integration.md
+            - name: Add a Power BI report or dashboard to a web page in portal
+              href: ./portals/admin/add-powerbi-report.md
         - name: Run Portal Checker
           href: ./portals/admin/portal-checker.md
         - name: Renew portal authentication key

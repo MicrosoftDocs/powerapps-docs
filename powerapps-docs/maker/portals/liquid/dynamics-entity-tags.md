@@ -37,10 +37,10 @@ ID of the entity when opened in view editor.
 
 ## powerbi
 
-Adds the Power BI dashboards and reports within pages. The tag can be added in the **Copy** field on a web page or in the **Source** field on a web template. For steps to add a Power BI report or dashboard to a webpage in portal, see [Add a Power BI report or dashboard to a webpage in portal](add-powerbi-report.md).
+Adds the Power BI dashboards and reports within pages. The tag can be added in the **Copy** field on a web page or in the **Source** field on a web template. For steps to add a Power BI report or dashboard to a webpage in portal, see [Add a Power BI report or dashboard to a webpage in portal](../admin/add-powerbi-report.md).
 
 > [!NOTE]
-> For the tag to work, you must [enable Power BI integration](set-up-power-bi-integration.md) from Portal Admin Center. If the Power BI integration is not enabled, dashboard or report will not be displayed.
+> For the tag to work, you must [enable Power BI integration](../admin/set-up-power-bi-integration.md) from Portal Admin Center. If the Power BI integration is not enabled, dashboard or report will not be displayed.
 
 ### Parameters
 
@@ -62,7 +62,7 @@ Type of authentication required for the Power BI report or dashboard. Valid valu
 
 - **AAD**: Allows you to share secure Power BI reports or dashboards to Power BI Azure Active Directory authenticated users.
 
-- **powerbiembedded**: Allows you to share the secure Power BI reports or dashboards to external users who doesn't have Power BI license or Azure Active Directory authentication setup. For information on Power BI Embedded service setup, see [Enable Power BI Embedded service](set-up-power-bi-integration.md#enable-power-bi-embedded-service). 
+- **powerbiembedded**: Allows you to share the secure Power BI reports or dashboards to external users who doesn't have Power BI license or Azure Active Directory authentication setup. For information on Power BI Embedded service setup, see [Enable Power BI Embedded service](../admin/set-up-power-bi-integration.md#enable-power-bi-embedded-service). 
 
 While adding the secure Power BI report or dashboard, ensure that it is shared with Dynamics 365 for Customer Engagement Portal Azure Active Directory or Power BI Embedded services. 
 
@@ -134,7 +134,7 @@ If you've assigned a role to a Power BI report, and didn't specify the **roles**
 
 ## editable
 
-Renders a given PowerApps portals CMS object as [Use the front-side editing engine to publish content](publish-content-editing-engine.md), for users with content editing permission for that object. Editable objects include [page](liquid-objects.md#page), [snippets](liquid-objects.md#snippets), and [weblinks](liquid-objects.md#weblinks).  
+Renders a given PowerApps portals CMS object as editable on the portal, for users with content editing permission for that object. Editable objects include [page](liquid-objects.md#page), [snippets](liquid-objects.md#snippets), and [weblinks](liquid-objects.md#weblinks).  
 
 ```
 {% editable page 'adx_copy' type: 'html', title: 'Page Copy', escape: false, liquid: true %}
@@ -676,10 +676,10 @@ The size of the result page to be returned. If not provided, a default size of 1
 
 ## entityform
 
-Fully renders a PowerApps-configured [entity forms](entity-forms-custom-logic.md), by name or ID.  
+Fully renders a PowerApps-configured entity forms, by name or ID.  
 
 > [!Note]
-> The entityform tag is only available for use in content rendered inside a <em>[web template](store-content-web-templates.md)–</em>based page template. Attempting to use the tag inside a Rewrite-based Page Template will not render anything.                                                                                                                                                                             You may only render a single entityform or webform tag per page. entityform or webform tags after the first will not be rendered.       
+> The entityform tag is only available for use in content rendered inside a <em>[web template](store-content-web-templates.md)–</em>based page template. Attempting to use the tag inside a Rewrite-based Page Template will not render anything. You may only render a single entityform or webform tag per page. entityform or webform tags after the first will not be rendered.       
 
 `{% entityform name: 'My Entity Form' %}`
 
