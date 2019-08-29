@@ -34,10 +34,10 @@ Learn how to [announce dynamic changes with live regions](../accessible-apps-liv
 
 Keyboard navigation is an important aspect of any app.  For many the keyboard is more efficient than using touch or a mouse and it enables screen readers for the visually impaired.  The navigation order should:
 - mirror what is seen visually
-- should only have a tab stop at controls that are interactive
-- should follow either an intuitive across and then down "Z" order or a down and then across "reverse-N" order.
+- only have a tab stop at controls that are interactive
+- follow either an intuitive across and then down "Z" order or a down and then across "reverse-N" order.
 
-The above requirements will be met with the default **TabIndex** values on controls and we recommend that you do not change them.  The default is what most users expect visually and it will work well with a screen reader.  But there may be cases in which you will want to override the default.  Use the **TabIndex** property and the [**Enhanced group** control](https://powerapps.microsoft.com/en-us/blog/enhanced-group-experimental-control-with-layout-control-and-nesting/) (experimental) to make adjustments to the navigation order.  
+The above requirements will be met with the default **TabIndex** values and we recommend that you do not change them.  The default is what most users expect visually and it will work well with a screen reader.  But there may be cases in which you will want to override the default.  Use the **TabIndex** property and the [**Enhanced group** control](https://powerapps.microsoft.com/en-us/blog/enhanced-group-experimental-control-with-layout-control-and-nesting/) (experimental) to make adjustments to the navigation order.  
 
 The **TabIndex** property has two recommended values:
 
@@ -61,7 +61,7 @@ When using a browser, navigating from the last control of the screen will move t
 > [!WARNING]
 > Avoid **TabIndex** values that are greater than 0. Ultimately controls are rendered in HTML where even the [W3C has warned](https://www.w3.org/TR/wai-aria-practices/#kbd_general_between) "Authors are strongly advised NOT to use these values." Many HTML tools warn for values greater than 0 as does the [App Checker](../accessibility-checker.md) when it reports "Check the order of the screen items."  All for good reason: using **TabIndex** in this manner can be very difficult to get right and can make assistive technologies such as screen readers unusable.
 > 
-> When greater than 0, users will navigate to controls with positive **TabIndex** values in increasing order. When they have navigated all controls with positive **TabIndex** values, they will finally navigate to controls with **TabIndex** of 0 including the browser's built-in controls. When there are multiple controls with the same **TabIndex**, their **X** and **Y** position determines their order.
+> When controls exist with **TabIndex** greater than 0, users will navigate to controls with increasing **TabIndex** values (1, then 2, etc). When users have navigated all controls with positive **TabIndex** values, they will finally navigate to controls with **TabIndex** of 0 including the browser's built-in controls. When there are multiple controls with the same **TabIndex**, their **X** and **Y** position determines their relative order.
 
 
 
