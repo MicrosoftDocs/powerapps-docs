@@ -68,12 +68,9 @@ There is a set of premade Liquid templates available within PowerApps portals. T
 
 ### See also
 
-[Add dynamic content and create custom templates](custom-templates-dynamic-content.md)  
 [Understand Liquid operators](liquid-operators.md)  
 [Liquid types](liquid-types.md)  
 [Conditional](liquid-conditional-operators.md)  
 [Liquid Objects](liquid-objects.md)  
 [Liquid Tags](liquid-tags.md)  
 [Liquid Filters](liquid-filters.md)  
-[Create advanced templates for portals](create-advanced-templates.md)
-[Enable header and footer output caching on a portal](enable-header-footer-output-caching.md)

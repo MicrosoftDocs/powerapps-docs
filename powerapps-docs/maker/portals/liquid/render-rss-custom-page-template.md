@@ -22,7 +22,7 @@ First, we'll create a new PowerApps view that we'll use to load the data for our
 
 ## Step 2: Create a web template for RSS feed
 
-In this step, we'll create a web template for our RSS feed. This template will be applied to a particular webpage in our website, so we'll use the title and summary of that page as the title and description of the feed. The we'll use the entityview tag to load our newly-created News Articles view. [!INCLUDE[proc-more-information](../../../includes/proc-more-information.md)] [PowerApps common data service entity tags](dynamics-entity-tags.md). Note that we also set the **MIME Type** field of the Web Template to application/rss+xml. This indicates what the response content type could be when our template is rendered.  
+In this step, we'll create a web template for our RSS feed. This template will be applied to a particular webpage in our website, so we'll use the title and summary of that page as the title and description of the feed. The we'll use the entityview tag to load our newly-created News Articles view. [!INCLUDE[proc-more-information](../../../includes/proc-more-information.md)] [PowerApps common data service entity tags](portals-entity-tags.md). Note that we also set the **MIME Type** field of the Web Template to application/rss+xml. This indicates what the response content type could be when our template is rendered.  
 
 ![Configure a web template for an RSS feed](../media/web-template-rss-feed.png "Configure a web template for an RSS feed")  
 

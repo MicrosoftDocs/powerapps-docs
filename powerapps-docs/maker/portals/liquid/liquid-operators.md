@@ -67,12 +67,9 @@ This is a forum page.
 
 ### See also
 
-[Add dynamic content and create custom templates](custom-templates-dynamic-content.md)  
 [Store source content by using web templates](store-content-web-templates.md)  
 [Liquid types](liquid-types.md)  
 [Conditional](liquid-conditional-operators.md)  
 [Liquid Objects](liquid-objects.md)  
 [Liquid Tags](liquid-tags.md)  
-[Liquid Filters](liquid-filters.md)  
-[Create advanced templates for portals](create-advanced-templates.md)  
-
+[Liquid Filters](liquid-filters.md) 

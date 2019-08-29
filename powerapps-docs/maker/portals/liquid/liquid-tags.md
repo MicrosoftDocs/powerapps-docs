@@ -42,7 +42,6 @@ You can tell the engine to strip all leading or trailing white space by adding a
 ```
 ### See also
 
-[Add dynamic content and create custom templates](custom-templates-dynamic-content.md)  
 [Liquid types](liquid-types.md)  
 [Liquid Objects](liquid-objects.md)  
 [Liquid Filters](liquid-filters.md) 

@@ -59,11 +59,9 @@ You can also test the size of [Liquid types](liquid-types.md), [Liquid types](li
 
 ### See also
 
-[Add dynamic content and create custom templates](custom-templates-dynamic-content.md)  
 [Store source content by using web templates](store-content-web-templates.md)  
 [Understand Liquid operators](liquid-operators.md)  
 [Liquid types](liquid-types.md)  
 [Liquid Objects](liquid-objects.md)  
 [Liquid Tags](liquid-tags.md)  
 [Liquid Filters](liquid-filters.md)  
-[Create advanced templates for portals](create-advanced-templates.md)  
