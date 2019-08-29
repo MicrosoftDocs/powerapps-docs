@@ -57,6 +57,23 @@ To build the component project, open the project folder in Visual Studio Code an
 1. Click on Individual Components.
 1. Under Code Tools, check **NuGet targets & Build Tasks**.
 
+**Publisher Prefix**
+
+1. If the components are created using the previous version of the CLI tooling which didn't enforce publisher prefix as part of the component name and if the same components are updated and built again with the latest CLI version,  you will hit an error while trying to import the components into Common Data Service.
+
+**Workaround**:
+- Delete the solution file containing the previous version of the component. 
+- Import the new solution with updates to the component built by latest CLI version.
+- Update the forms associated with the old component. 
+
+
+2. When the components are created with the publisher prefix in mixed or upper case using the new CLI toolin version, it throws an error while importing the solution. The new version of the CLI tooling requires the publisher prefix to be in lower cases. 
+
+**Workaround**:
+
+Update the solution and customizations to ensure that the associated prefix is modified to lower case and import the new solution into Common Data Service.
+
+
 ### See also
 
 [Debug custom components](debugging-custom-controls.md)<br/>
