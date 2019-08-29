@@ -73,7 +73,7 @@ The PowerApps custom visual is available in preview and has these limitations:
 - The PowerApps custom visual can't filter the data or send any data back to the report.
 - You'll need to share the PowerApps app separately from your report. Learn about [sharing apps in PowerApps](share-app.md).
 - These technologies don't support the PowerApps custom visual: Power BI Report Server, the mobile app for Power BI, and Internet Explorer.
-- In order to use PowerBIIntegration.Refresh() function to refresh a Power BI Report, the Report must be backed by a DirectQuery-supporting source (see this link for a full list: https://docs.microsoft.com/en-us/power-bi/desktop-directquery-data-sources) and the data connection must be created via DirectQuery (non-static) connection.
+- If you use PowerBIIntegration.Refresh() function, you must use a source that supports [DirectQuery](https://docs.microsoft.com/en-us/power-bi/desktop-directquery-data-sources) and the data connection must be created via DirectQuery (non-static) connection. 
 
 ## Next steps
 
