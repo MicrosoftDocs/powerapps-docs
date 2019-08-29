@@ -27,11 +27,11 @@ search.app:
 The documents section tab on an entity main form helps users discover and use the SharePoint integration features that are available. 
 
 > [!IMPORTANT]
-> To use this feature you must enable document management. More information: [Manage your documents using SharePoint](../admin/manage-documents-using-sharepoint.md)
+> To use this feature you must enable document management. More information: [Manage your documents using SharePoint](/dynamics365/customer-engagement/admin/manage-documents-using-sharepoint)
 
 ## Add the Documents tab in the FormXML 
-1.	Create a new solution. To do this, got to Settings > Solutions, select New and then enter the required and optional information. More information: [Create a solution](create-solution.md)
-2. Add the entity to the solution where you want to add the Documents tab on the main form. All standard and custom entities are supported with the Documents tab. More information: [Add solution components](create-solution.md#add-solution-components)
+1.	Create a new solution. To do this, got to Settings > Solutions, select New and then enter the required and optional information. More information: [Create a solution](../common-data-service/create-solution.md)
+2. Add the entity to the solution where you want to add the Documents tab on the main form. All standard and custom entities are supported with the Documents tab. More information: [Add an existing component to a solution](/powerapps/maker/common-data-service/use-solution-explorer#add-an-existing-component-to-a-solution)
 3. Include the main form for the entity in the solution. 
 
    > [!div class="mx-imgBorder"] 
@@ -46,7 +46,7 @@ The documents section tab on an entity main form helps users discover and use th
    - Double-click the **Section** and then on the **Section Properties** page change the **Label** to something more appropriate, such as *Documents*, and then select **OK**.
    - Double-click the **Tab** and then on the **Tab Properties** page change the **Label** to something more appropriate, such as *SharePoint Files*, and then select **OK**.
 8. On the form designer ribbon, select **Save**, select **Publish**, and then close the form designer. 
-9. Export the solution as an unmanaged solution. More information: [Export a solution](export-solution.md)
+9. Export the solution as an unmanaged solution. More information: [Export a solution](import-update-export-solutions.md)
 10. Extract the solution and open the customization.xml file with an XML or text editor. 
 11. In the customization.xml search for **label description="Documents"**.
 12. Scroll down to the control id="*field name*" element and replace it with the [XML sample](#xml-sample-for-adding-the-documents-tab-to-a-form) in this topic. 
@@ -63,7 +63,7 @@ The documents section tab on an entity main form helps users discover and use th
        ![Control element unique id](media/control-unique-id.png)
     3. Save your changes to customizations.xml. 
 9. Open the solution.xml file and update the **Version** element value. For example, from 0.1 to 0.2. 
-10. Package all solution files into a compressed (zipped) folder and import in to Dynamics 365 for Customer Engagement apps (the default solution). More information: [Import, update, and upgrade a solution](import-update-upgrade-solution.md) 
+10. Package all solution files into a compressed (zipped) folder and import in to Dynamics 365 for Customer Engagement apps (the default solution). More information: [Import, update, and upgrade a solution](import-update-export-solutions.md) 
 
 ## XML sample for adding the Documents tab to a form
 ```xml
@@ -89,4 +89,4 @@ The documents section tab on an entity main form helps users discover and use th
 ```
 
 ### See also
-[Manage your documents using SharePoint](../admin/manage-documents-using-sharepoint.md)
+[Manage your documents using SharePoint](/dynamics365/customer-engagement/admin/manage-documents-using-sharepoint)
