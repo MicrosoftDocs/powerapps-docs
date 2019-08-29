@@ -2,7 +2,7 @@
 title: "Add the Documents tab to the main form for an entity | MicrosoftDocs"
 description: "Learn how to add the Documents tab to the main form for an entity"
 s.custom: 
-ms.date: 07/25/2019
+ms.date: 08/29/2019
 ms.reviewer: 
 ms.service: crm-online
 ms.suite: 
