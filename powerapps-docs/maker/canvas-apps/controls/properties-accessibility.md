@@ -33,9 +33,9 @@ Learn how to [announce dynamic changes with live regions](../accessible-apps-liv
 **TabIndex** – Determines if the control participates in keyboard navigation.
 
 Keyboard navigation is an important aspect of any app.  For many the keyboard is more efficient than using touch or a mouse and it enables screen readers for the visually impaired.  The navigation order should:
-- mirror what is seen visually
-- only have a tab stop at controls that are interactive
-- follow either an intuitive across and then down "Z" order or a down and then across "reverse-N" order.
+- Mirror what is seen visually.
+- Only have a tab stop at controls that are interactive.
+- Follow either an intuitive across and then down "Z" order or a down and then across "reverse-N" order.
 
 The above requirements will be met with the default **TabIndex** values and we recommend that you do not change them.  The default is what most users expect visually and it will work well with a screen reader.  But there may be cases in which you will want to override the default.  Use the **TabIndex** property and the [**Enhanced group** control](https://powerapps.microsoft.com/en-us/blog/enhanced-group-experimental-control-with-layout-control-and-nesting/) (experimental) to make adjustments to the navigation order.  
 
