@@ -22,7 +22,7 @@ search.app:
   - D365CE
 ---
 # Add the Documents tab to the main form for an entity
-[!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 The documents section tab on an entity main form helps users discover and use the SharePoint integration features that are available. 
 
