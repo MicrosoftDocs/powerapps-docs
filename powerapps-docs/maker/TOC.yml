@@ -1110,7 +1110,7 @@
                 - name: Template tags
                   href: ./portals/liquid/template-tags.md
                 - name: PowerApps common data service entity tags
-                  href: ./portals/liquid/dynamics-entity-tags.md
+                  href: ./portals/liquid/portals-entity-tags.md
             - name: Available Liquid filters
               href: ./portals/liquid/liquid-filters.md
             - name: Create advanced templates
