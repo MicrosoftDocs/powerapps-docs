@@ -43,7 +43,7 @@ Adding a tab on an entity main form to display SharePoint documents helps users 
    ![Add a field to the tab](media/add-field-to-tab.png)
 6. Rename the tab label. To do this, select New Tab, and in the right properties pane replace **New Tab** with something more descriptive, such as *Files*.
 7. Select **Save**, select **Publish**, and then close the form designer. 
-8. From the PowerApps maker home page, select **Solutions**, select the solution, and the select **Export** to export the solution as a managed solution. More information: [Export a solution](import-update-export-solutions.md)
+8. From the PowerApps maker home page, select **Solutions**, select the solution, and the select **Export** to export the solution as a managed solution. More information: [Export solutions](../common-data-service/import-update-export-solutions.md#export-solutions) 
 9. Extract the solution and open the customization.xml file with an XML or text editor. 
 10. In the customization.xml search for **label description="Files"** (or whatever you named the tab label in the previous step).
 11. Scroll down to the control id="*field name*" element, such as **control id="address1_city"** and replace the entire element with the [XML sample](#xml-sample-for-adding-the-documents-tab-to-a-form) in this topic. 
@@ -60,7 +60,7 @@ Adding a tab on an entity main form to display SharePoint documents helps users 
        ![Control element unique id](media/control-unique-id.png)
     3. Save your changes to customizations.xml. 
 13. Open the solution.xml file and increment the **Version** element value. For example, from 1.1.0.0 to 1.2.0.0. 
-14. Package all solution files into a compressed (zipped) folder and import in to the model-driven app you want, such as Dynamics 365 for Sales (commonly the default solution). If you receive an error that you must delete the previous solution, do so. More information: [Import, update, and upgrade a solution](import-update-export-solutions.md) 
+14. Package all solution files into a compressed (zipped) folder and import in to the model-driven app you want, such as Dynamics 365 for Sales (commonly the default solution). If you receive an error that you must delete the previous solution, do so. More information: [Import, update, and upgrade a solution](../common-data-service/import-update-export-solutions.md) 
 
 ## XML sample for adding the Documents tab to a form
 ```xml
