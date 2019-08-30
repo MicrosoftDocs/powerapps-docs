@@ -68,7 +68,7 @@ The data provided to the component. Structure defined by the component’s manif
 
 The resource interface of `context.resource`
 
-[!INCLUDE [resource-description](includes/resource-description.md)]
+[!INCLUDE [resource-description](includes/resources-description.md)]
 
 ### updatedProperties
 
