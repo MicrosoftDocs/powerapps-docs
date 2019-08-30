@@ -41,7 +41,7 @@ Adding a tab on an entity main form to display SharePoint documents helps users 
 
 5. In the form designer select the **New Tab** on the form designer canvas, select **Add Field**, and add a field such as *Address 1: City* from the left pane. You can use any text or numeric field for the tab.
    ![Add a field to the tab](media/add-field-to-tab.png)
-6. Rename the tab label. To do this, select New Tab, and in the right properties pane replace **New Tab** with something more descriptive, such as *Files*.
+6. Rename the tab label. To do this, select **New Tab**, and in the right properties pane replace **New Tab** with something more descriptive, such as *Files*.
 7. Select **Save**, select **Publish**, and then close the form designer. 
 8. From the PowerApps maker home page, select **Solutions**, select the solution, and the select **Export** to export the solution as a managed solution. More information: [Export solutions](../common-data-service/import-update-export-solutions.md#export-solutions) 
 9. Extract the solution and open the customization.xml file with an XML or text editor. 
@@ -52,14 +52,15 @@ Adding a tab on an entity main form to display SharePoint documents helps users 
     > ![](media/form-xml.png "XML sample insertion point")
 
 12. Make these modifications to the XML sample. 
-   1. Locate the **RelationshipName** element and replace it with the schema name that appears as *entityLogicalName*_SharePointDocument. For example, for the accounts entity the schema name for the relationship is Account_SharePointDocument, which is the schema name for the XML sample in this topic. To find the name for a different entity, go to **Settings** > **Customizations** > **Customize the System** > **Entities** > select the entity > select **1:N Relationships**. Locate the **Related Entity** of type **SharePointDocument**. 
+    
+     a. Locate the **RelationshipName** element and replace it with the schema name that appears as *entityLogicalName*_SharePointDocument. For example, for the accounts entity the schema name for the relationship is Account_SharePointDocument, which is the schema name for the XML sample in this topic. To find the name for a different entity, go to **Settings** > **Customizations** > **Customize the System** > **Entities** > select the entity > select **1:N Relationships**. Locate the **Related Entity** of type **SharePointDocument**. 
 
       ![Account relationship SharePoint document](media/account-sharepointdocument.png)
 
-    2. Create a globally unique identifier (guid) and replace the existing **uniqueid** guid located in the **control** element you pasted in the previous step while preserving the curly braces {}.  
+     b. Create a globally unique identifier (guid) and replace the existing **uniqueid** guid located in the **control** element you pasted in the previous step while preserving the curly braces {}.  
        ![Control element unique id](media/control-unique-id.png)
-    3. Save your changes to customizations.xml. 
-13. Open the solution.xml file and increment the **Version** element value. For example, from 1.1.0.0 to 1.2.0.0. 
+     c. Save your changes to customizations.xml. 
+13. Open the solution.xml file and increment the **Version** element value. For example, from *1.1.0.0* to *1.2.0.0*. 
 14. Package all solution files into a compressed (zipped) folder and import in to the model-driven app you want, such as Dynamics 365 for Sales (commonly the default solution). If you receive an error that you must delete the previous solution, do so. More information: [Import, update, and upgrade a solution](../common-data-service/import-update-export-solutions.md) 
 
 ## XML sample for adding the Documents tab to a form
