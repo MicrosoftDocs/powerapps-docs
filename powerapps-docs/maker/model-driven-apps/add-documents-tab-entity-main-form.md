@@ -34,10 +34,10 @@ Adding a tab on an entity main form to display SharePoint documents helps users 
 ## Add the Documents tab in the FormXML 
 1.	Create a new solution. We recommend a managed solution so you can revert the changes by uninstalling the solution if needed. From a PowerApps model-driven app go to **[Settings](advanced-navigation.md#settings)** > **Solutions**, select **New** and then enter the required and optional information. More information: [Create a solution](../common-data-service/create-solution.md)
 2. Add the entity to the solution where you want to add the documents tab on the main form. All standard and custom entities are supported. More information: [Add an existing component to a solution](/powerapps/maker/common-data-service/use-solution-explorer#add-an-existing-component-to-a-solution)
-3. Include the main form for the entity in the solution. 
+3. Include the main form for the entity in the solution, such as the main form for the account entity. 
 
-   > [!div class="mx-imgBorder"] 
-   > ![](media/account-main-form-in-solution.png "Account main form")
+   > [!div class="mx-imgBorder"]
+   > ![Account main form](media/account-main-form-in-solution.png "Account main form")
 
 4. Add a one-column tab to the main form. To do this, in the form designer select **Insert** > **1 Tab** > **One Column**. 
    ![Insert one column tab](media/insert-one-column-tab.png)
