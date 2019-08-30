@@ -25,19 +25,12 @@ search.app:
 
 # Configure header properties in the form designer
 
-
-<!-- from editor: Would it be OK to change "users" to "anyone" in the following sentence? Then we avoid saying "users using." -->
-
-
-Makers can control the density of model-driven app form headers to match the needs of users using the form.
+Makers can control the density of model-driven app form headers to match the needs of anyone using the form.
 
 > [!NOTE]
 > This feature is only available with environments that opt in to the early preview of 2019 release wave 2 features. More information: [Early opt-in to 2019 release wave 2](https://docs.microsoft.com/power-platform/admin/preview-october-2019-updates) 
 
 ## High-density header
-
-<!-- from editor: Unless there's a UI issue that conflicts with this, "high-density header" should be hyphenated this way. -->
-
 
 High-density form header ensures that key information is always visible to users. Using high-density header, the record title never truncates. Even long record titles are displayed using multiple lines. Similarly, high-density header also ensures that up to four field values are directly visible in the header and never truncated or hidden.  
 
