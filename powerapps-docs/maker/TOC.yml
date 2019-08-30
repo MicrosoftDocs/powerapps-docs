@@ -1085,6 +1085,8 @@
           href: ./portals/admin/ip-address-restrict.md
         - name: Update to PowerApps Portals domain
           href: ./portals/admin/update-portal-domain.md
+        - name: Clear the server-side cache
+          href: ./portals/admin/clear-server-side-cache.md
     - name:  Advanced portal customizations
       items:
         - name: Work with Liquid templates
