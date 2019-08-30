@@ -61,7 +61,7 @@ Adding a tab on an entity main form to display SharePoint documents helps users 
        ![Control element unique id](media/control-unique-id.png)
      c. Save your changes to customizations.xml. 
 13. Open the solution.xml file and increment the **Version** element value. For example, from *1.1.0.0* to *1.2.0.0*. 
-14. Package all solution files into a compressed (zipped) folder and import in to the model-driven app you want, such as Dynamics 365 for Sales (commonly the default solution). If you receive an error that you must delete the previous solution, do so. More information: [Import, update, and upgrade a solution](../common-data-service/import-update-export-solutions.md) 
+14. Package all solution files into a compressed (zipped) folder and import in to your environment. If you receive an error that you must delete the previous solution, do so. More information: [Import, update, and upgrade a solution](../common-data-service/import-update-export-solutions.md) 
 
 ## XML sample for adding the Documents tab to a form
 ```xml
