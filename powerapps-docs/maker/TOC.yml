@@ -905,6 +905,8 @@
             href: ./model-driven-apps/configure-event-handlers-legacy.md
           - name: How to disable auto-save in a form
             href: ./model-driven-apps/manage-auto-save.md
+          - name: How to add a tab for SharePoint documents on a form
+            href: ./model-driven-apps/add-documents-tab-entity-main-form.md            
       - name: Embed a canvas app on a model-driven form
         href: ./model-driven-apps/embed-canvas-app-in-form.md
         items:
