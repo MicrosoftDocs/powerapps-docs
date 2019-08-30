@@ -1133,6 +1133,8 @@
                   href: ./portals/liquid/render-rss-custom-page-template.md 
                 - name: Render a site header and primary navigation bar   
                   href: ./portals/liquid/render-site-header-primary-navigation.md
+        - name: OAuth 2.0 implicit grant flow
+          href: ./portals/oauth-implicit-grant-flow.md
     - name: Known issues
       href: ./portals/known-issues.md
     - name: PowerApps Portals FAQ
