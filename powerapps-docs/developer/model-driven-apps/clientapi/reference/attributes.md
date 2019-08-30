@@ -59,6 +59,7 @@ This topic provides information about the methods available per attribute type.
 <li><a href="attributes/setRequiredLevel.md" data-raw-source="[setRequiredLevel](attributes/setRequiredLevel.md)">setRequiredLevel</a></li>
 <li><a href="attributes/setSubmitMode.md" data-raw-source="[setSubmitMode](attributes/setSubmitMode.md)">setSubmitMode</a></li>
 <li><a href="attributes/setValue.md" data-raw-source="[setValue](attributes/setValue.md)">setValue</a></li>
+<li><a href="attributes/setIsValid.md" data-raw-source="[setIsValid](attributes/setIsValid.md)">setIsValid</a></li>
 </ul>
 </td>
 </tr>
@@ -66,18 +67,19 @@ This topic provides information about the methods available per attribute type.
 
 
 ## Boolean attribute type
-In addition to the methods available for all attribute types as explained ealier, the following method is available only for the **boolean** attribute:
+
+In addition to the methods available for all attribute types as explained earlier, the following method is available only for the **boolean** attribute:
 
 - [getInitialValue](attributes/getInitialValue.md)
 
 ## Lookup attribute type
-In addition to the methods available for all attribute types as explained ealier, the following method is available only for the **lookup** attribute:
+In addition to the methods available for all attribute types as explained earlier, the following method is available only for the **lookup** attribute:
 
 - [getIsPartyList](attributes/getIsPartyList.md)
 
 ## MultiSelectOptionSet and OptionSet attribute types
 
-In addition to the methods available for all attribute types as explained ealier, the following methods are available only for the **multiselectoption** and **optionset** attributes:
+In addition to the methods available for all attribute types as explained earlier, the following methods are available only for the **multiselectoption** and **optionset** attributes:
 
 <table>
 <tr>
@@ -110,7 +112,7 @@ The following methods are available only for the **decimal**,  **double**, and *
 </table>
 
 ## String attribute type
-In addition to the methods available for all attribute types as explained ealier, the following method is available only for the **string** attribute:
+In addition to the methods available for all attribute types as explained earlier, the following method is available only for the **string** attribute:
 
 - [getMaxLength](attributes/getMaxLength.md)
 
