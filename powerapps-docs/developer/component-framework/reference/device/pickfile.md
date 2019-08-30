@@ -29,7 +29,7 @@ Model-driven apps
 
 | Parameter Name|Type|Required|Description|
 | ------------- |----|--------|-----------|
-|`options`|`object`|no|Options to pick file.|
+|`options`|`Object`|No|Options to pick file.|
 
 ## Return Value
 
@@ -43,9 +43,9 @@ The `options` parameter object has the following properties:
 
 |Name|Type|Description|
 |--|--|--|
-|`accept`|`string`|Image file type to select. Valid values are "audio", "video", or "image"|
-|`allowMultipleFiles`|`boolean`|Indicates whether to allow select multiple files|
-|`maximumAllowedFileSize`|`number`|Maximum size of the files(s) to be selected|
+|`accept`|`String`|Image file type to select. Valid values are "audio", "video", or "image"|
+|`allowMultipleFiles`|`Boolean`|Indicates whether to allow select multiple files|
+|`maximumAllowedFileSize`|`Number`|Maximum size of the files(s) to be selected|
 
 
 ### Related topics

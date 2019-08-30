@@ -23,14 +23,14 @@ Model-driven apps
 
 ## Syntax
 
-`getEntityMetadata(entityName, attributes)`
+`context.utility.getEntityMetadata(entityName, attributes)`
 
 ## Parameters
 
 | Parameter Name|Type|Required|Description|
 | ------------- |----|--------|-----------|
-|entityName|`string`|yes|The logical name of the entity.|
-|attributes|`string[]`|yes|The attributes to get metadata for.
+|entityName|`String`|Yes|The logical name of the entity.|
+|attributes|`String[]`|No|The attributes to get metadata for.|
 
 ## Return Value
 

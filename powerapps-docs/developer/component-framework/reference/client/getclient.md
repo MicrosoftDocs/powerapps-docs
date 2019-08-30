@@ -25,11 +25,11 @@ Model-driven apps and canvas apps (experimental preview)
 
 ## Syntax
 
-`getClient()`
+`context.client.getClient()`
 
 ## Return Value
 
-Type: `string`
+Type: `String`
 
 Returns a value to indicate in which client the script is executing.
 

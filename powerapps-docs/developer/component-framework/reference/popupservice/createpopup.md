@@ -29,7 +29,7 @@ Model-driven apps
 
 | Parameter Name|Type|Required|Description|
 | ------------- |----|--------|-----------|
-|props|`Popup`|yes|The popup properties object.|
+|props|`Popup`|Yes|The popup properties object.|
 
 
 ### Related topics

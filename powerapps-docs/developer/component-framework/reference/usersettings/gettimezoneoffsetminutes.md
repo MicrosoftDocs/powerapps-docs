@@ -33,7 +33,8 @@ Model-driven apps
 
 ## Return Value
 
-Type: `number`
+Type: `Number`
+Description: Time zone offset in minutes.
 
 
 ### Related topics

@@ -24,14 +24,14 @@ Model-driven apps
 
 ## Syntax
 
-`openUrl(url, options)`
+`context.navigation.openUrl(url, options)`
 
 ## Parameters
 
 | Parameter Name|Type|Required|Description|
 | ------------- |----|--------|-----------|
-|url|`string`|yes|Url to be opened.|
-|options|`OpenUrlOptions`|yes|Window options for the url. The OpenUrlOptions has the following parameters: <br/>- **height**: `number`. Height of the window to display the resultant page in pixels.<br/>- **width**: `number`. Width of the window to display the resultant page in pixels.|
+|url|`string`|Yes|Url to be opened.|
+|options|`OpenUrlOptions`|No|Options to open the URL. The OpenUrlOptions has the following parameters: <br/>- **height**: `Number`. Height of the window to display the resultant page in pixels.<br/>- **width**: `Number`. Width of the window to display the resultant page in pixels.|
 
 
 ### Related topics

@@ -29,7 +29,7 @@ Model-driven apps
 
 | Parameter Name|Type|Required|Description|
 | ------------- |----|--------|-----------|
-|id|`string`|yes|The string to set as id.|
+|id|`String`|Yes|The string to set as id.|
 
 
 ### Related topics

@@ -29,7 +29,7 @@ Model-driven apps
 
 | Parameter Name|Type|Required|Description|
 | ------------- |----|--------|-----------|
-|pageSize|`number`|yes|Pagesize to be set.|
+|pageSize|`Number`|Yes|Pagesize to be set.|
 
 
 ### Related topics
