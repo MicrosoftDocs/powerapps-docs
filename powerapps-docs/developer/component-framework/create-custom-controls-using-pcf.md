@@ -67,7 +67,7 @@ To build the component project, open the project folder in Visual Studio Code an
 - Update the forms associated with the old component. 
 
 
-2. When the components are created with the publisher prefix in mixed or upper case using the new CLI toolin version, it throws an error while importing the solution. The new version of the CLI tooling requires the publisher prefix to be in lower cases. 
+2. When the components are created with the publisher prefix in mixed or upper case using the new CLI tooling version, it throws an error while importing the solution. The new version of the CLI tooling requires the publisher prefix to be in lower cases. 
 
 **Workaround**:
 
