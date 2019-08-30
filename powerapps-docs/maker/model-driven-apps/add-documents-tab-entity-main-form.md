@@ -26,12 +26,14 @@ search.app:
 
 The documents section tab on an entity main form helps users discover and use the SharePoint integration features that are available. 
 
+![Document files tab](media/document-files-tab.png)
+
 > [!IMPORTANT]
 > To use this feature you must enable document management. More information: [Manage your documents using SharePoint](/dynamics365/customer-engagement/admin/manage-documents-using-sharepoint)
 
 ## Add the Documents tab in the FormXML 
-1.	Create a new solution. To do this, got to Settings > Solutions, select New and then enter the required and optional information. More information: [Create a solution](../common-data-service/create-solution.md)
-2. Add the entity to the solution where you want to add the Documents tab on the main form. All standard and custom entities are supported with the Documents tab. More information: [Add an existing component to a solution](/powerapps/maker/common-data-service/use-solution-explorer#add-an-existing-component-to-a-solution)
+1.	Create a new solution. We recommend a managed solution so you can revert the changes by uninstalling the solution if needed. From a PowerApps model-driven app go to **[Settings](advanced-navigation.md#settings)** > **Solutions**, select **New** and then enter the required and optional information. More information: [Create a solution](../common-data-service/create-solution.md)
+2. Add the entity to the solution where you want to add the documents tab on the main form. All standard and custom entities are supported. More information: [Add an existing component to a solution](/powerapps/maker/common-data-service/use-solution-explorer#add-an-existing-component-to-a-solution)
 3. Include the main form for the entity in the solution. 
 
    > [!div class="mx-imgBorder"] 
@@ -42,8 +44,8 @@ The documents section tab on an entity main form helps users discover and use th
 5. In the form designer scroll down to where the new tab is located and drag and drop a field, such as *Address 1: City* from the **Field Explorer** on to the **Section** of the **Tab**. Notice that you can use any field for the Document tab.
    ![Add a field to the tab](media/add-field-to-tab.png)
 6. Rename the tab, section, and field labels. 
-   -  Double-click the field and then on the **Field Properties** page change the **Label** to something more appropriate, such as *Documents*, and then select **OK**. 
-   - Double-click the **Section** and then on the **Section Properties** page change the **Label** to something more appropriate, such as *Documents*, and then select **OK**.
+   -  Double-click the field and then on the **Field Properties** page change the **Label** to something more appropriate, such as *Files*, and then select **OK**. 
+   - Double-click the **Section** and then on the **Section Properties** page change the **Label** to something more appropriate, such as *Files*, and then select **OK**.
    - Double-click the **Tab** and then on the **Tab Properties** page change the **Label** to something more appropriate, such as *SharePoint Files*, and then select **OK**.
 8. On the form designer ribbon, select **Save**, select **Publish**, and then close the form designer. 
 9. Export the solution as an unmanaged solution. More information: [Export a solution](import-update-export-solutions.md)
