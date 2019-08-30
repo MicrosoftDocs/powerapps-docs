@@ -1,6 +1,6 @@
 ---
-title: "Use PowerApps common data service entity tags tags for a portal | MicrosoftDocs"
-description: "Learn about PowerApps common data service entity tags available in portal."
+title: "Use PowerApps Common Data Service entity tags for a portal | MicrosoftDocs"
+description: "Learn about PowerApps Common Data Service entity tags available in portal."
 author: sbmjais
 manager: shujoshi
 ms.service: powerapps
@@ -11,7 +11,7 @@ ms.author: shjais
 ms.reviewer:
 ---
 
-# PowerApps common data service entity tags
+# PowerApps Common Data Service entity tags
 
 PowerApps entity tags are used to load and display PowerApps data, or use other PowerApps Portals framework services. These tags are PowerApps-specific extensions to the Liquid language.
 
@@ -64,7 +64,7 @@ Type of authentication required for the Power BI report or dashboard. Valid valu
 
 - **powerbiembedded**: Allows you to share the secure Power BI reports or dashboards to external users who doesn't have Power BI license or Azure Active Directory authentication setup. For information on Power BI Embedded service setup, see [Enable Power BI Embedded service](../admin/set-up-power-bi-integration.md#enable-power-bi-embedded-service). 
 
-While adding the secure Power BI report or dashboard, ensure that it is shared with Dynamics 365 for Customer Engagement Portal Azure Active Directory or Power BI Embedded services. 
+While adding the secure Power BI report or dashboard, ensure that it is shared with Dynamics 365 Portal Azure Active Directory or Power BI Embedded services. 
 
 > [!NOTE]
 > The values for the `authentication_type` parameter are case insensitive.
