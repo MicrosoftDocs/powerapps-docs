@@ -609,6 +609,8 @@
             href: ./canvas-apps/functions/function-select.md
           - name: Set
             href: ./canvas-apps/functions/function-set.md
+          - name: SetFocus
+            href: ./canvas-apps/functions/function-setfocus.md
           - name: ShowColumns
             href: ./canvas-apps/functions/function-table-shaping.md
           - name: Shuffle
@@ -677,6 +679,8 @@
             href: ./canvas-apps/functions/function-form.md
           - name: Weekday
             href: ./canvas-apps/functions/function-datetime-parts.md
+          - name: With
+            href: ./canvas-apps/functions/function-with.md            
           - name: Year
             href: ./canvas-apps/functions/function-datetime-parts.md
       - name: Create an app in a solution
@@ -842,7 +846,7 @@
             href: ./model-driven-apps/add-move-or-delete-tabs-on-form.md            
           - name: "Properties in the form designer"
             href: ./model-driven-apps/form-designer-properties.md 
-          - name: "Configuring header properties"
+          - name: "Configure header properties"
             href: ./model-driven-apps/form-designer-header-properties.md  
           - name: "Using the tree view"
             href: ./model-driven-apps/using-tree-view-on-form.md  
@@ -1007,7 +1011,7 @@
       href: ./model-driven-apps/distribute-model-driven-app.md
     - name: Create guided help
       href: ./model-driven-apps/create-guided-help-learning-path.md      
-  - name: Transition Web Client applications
+  - name: Transition to Unified Interface
     items: 
     - name: Transition quick start
       href: ./model-driven-apps/transition-web-app.md

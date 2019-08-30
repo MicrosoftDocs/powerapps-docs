@@ -133,6 +133,8 @@
         href: reference/attributes/isValid.md
       - name: removeOnChange
         href: reference/attributes/removeOnChange.md
+      - name: setIsValid
+        href: reference/attributes/setIsValid.md
       - name: setPrecision
         href: reference/attributes/setPrecision.md
       - name: setRequiredLevel
@@ -186,6 +188,8 @@
         href: reference/controls/getName.md
       - name: getObject
         href: reference/controls/getObject.md
+      - name: getOptions
+        href: reference/controls/getOptions.md
       - name: getParent
         href: reference/controls/getParent.md
       - name: getSearchQuery

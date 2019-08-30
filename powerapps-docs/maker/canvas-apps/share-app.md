@@ -133,7 +133,7 @@ PowerApps canvas apps can be shared with guest users of an Azure Active Director
 1. In Azure Active Directory (Azure AD), enable B2B external collaboration for the tenant. More information: [Enable B2B external collaboration and manage who can invite guests](/azure/active-directory/b2b/delegate-invitations)
     - Enable B2B external collaboration is on by default. However, the settings can be changed by a tenant admin.  For more information about Azure AD B2B, see [What is guest user access in Azure AD B2B?](/azure/active-directory/b2b/what-is-b2b)  
 2. Access to an account that can add guest users to an Azure AD tenant. Admins and users with the Guest Inviter role can add guests to a tenant.   
-3. A PowerApps license must be assigned to the guest user in the tenant the app being shared is associated with. Prior to general availability of canvas app guest access, guests with a PowerApps license in their home tenant won’t need to be assigned a license in the tenant they’re a guest.
+3. A PowerApps license must be assigned to the guest user in the tenant the app being shared is associated with. Although not possible yet, prior to general availability of canvas app guest access, guests with a PowerApps license in their home tenant won’t need to be assigned a license in the tenant they’re a guest.
 
 ### Steps to grant guest access
 1. Select **New guest user** to add guest users in Azure AD. More information: [Quickstart: Add a new guest user in Azure AD](/azure/active-directory/b2b/b2b-quickstart-add-guest-users-portal).
