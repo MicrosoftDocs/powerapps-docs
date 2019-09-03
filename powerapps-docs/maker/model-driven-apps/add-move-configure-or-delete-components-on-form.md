@@ -122,5 +122,6 @@ To add components to a form, use the **Components** pane. The **Components** pan
 [Configure header properties in the form designer](form-designer-header-properties.md)  
 [Add and configure a sub-grid component on a form](form-designer-add-configure-subgrid.md)  
 [Add and configure a quick view component on a form](form-designer-add-configure-quickview.md)  
+[Configure a lookup component on a form](form-designer-add-configure-lookup.md)  
 [Using the tree view in the form designer](using-tree-view-on-form.md)  
 [Create and edit fields](../common-data-service/create-edit-field-portal.md)  
