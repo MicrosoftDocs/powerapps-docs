@@ -39,7 +39,8 @@ The form designer interface has the following areas:
 - Zoom slider - Zooms in or out of the form preview helping you take a closer look.
 - Fit to width - Quick action to fit the form preview to the available width.
 
-   ![Form designer layout](media/FormDesignerOverview.png)
+> [!div class="mx-imgBorder"] 
+> ![](media/FormDesignerOverview.png "Form designer layout")
 
 ## See also
 [Create, edit, or configure forms using the form designer](create-and-edit-forms.md)  
