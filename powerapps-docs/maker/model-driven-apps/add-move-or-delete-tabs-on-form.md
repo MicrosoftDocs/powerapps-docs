@@ -1,7 +1,7 @@
 ---
-title: "Add, move or delete tabs on a form using the form designer | MicrosoftDocs"
+title: "Add, configure, move, or delete tabs on a form using the form designer | MicrosoftDocs"
 ms.custom: ""
-ms.date: 04/21/2019
+ms.date: 08/26/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -23,16 +23,14 @@ search.app:
   - D365CE
 ---
 
-# Add, move, or delete tabs on a form  
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
-
+# Add, configure, move, or delete tabs on a form  
 Add, move, or delete tabs on a form using the form designer.
 
 ## Add tabs to a form
-To add tabs to a form, use the **Layouts** pane.  
+To add tabs to a form, use the **Components** pane.  
 
 > [!div class="mx-imgBorder"] 
-> ![](media/layouts-pane.png "Layouts pane")
+> ![](media/FormDesignerComponentsLayout.png "Layout components")
    
   > [!NOTE]
   >  Tabs can only be added on main forms. More information: [Form types](types-forms.md)
@@ -40,8 +38,8 @@ To add tabs to a form, use the **Layouts** pane.
 ### Add tabs to a form using drag and drop
 
 1. Open the form designer to create or edit a form. More information: [Create a form](create-and-edit-forms.md#create-a-form) or [Edit a form](create-and-edit-forms.md#edit-a-form)
-2. In the command bar, select **Add control**, or in the left pane, select **Layouts**. 
-3. In the **Layouts** pane, select a tab control and drag it onto the form preview. As you drag the tab on the form preview, you will see drop targets where you can add the tab. 
+2. In the command bar, select **Add component**, or in the left pane, select **Components**. 
+3. In the **Components** pane, select a tab component and drag it onto the form preview. As you drag the tab on the form preview, you will see drop targets where you can add the tab. 
 4. Drop the tab in the location you want. Note the following: 
     - Tabs can be dropped before or after any existing tabs by hovering over the tab headers.
     - Tabs can also be dropped before or after the current tab by hovering over the left or right edge of the current tab.
@@ -54,10 +52,22 @@ To add tabs to a form, use the **Layouts** pane.
 2. In the form preview, select another existing tab or the form. Note the following:
     - When you select an existing tab, the new tab will be added after the existing tab. 
     - When you select the form, the new tab will be added as the last tab on the form. 
-3. In the command bar, select **Add control**, or in the left pane, select **Layouts**.  
-4. In the **Layouts** pane, select a tab control to add it to the form. Alternatively, select **...** next to the tab control you want, and then select **Add to form**. 
+3. In the command bar, select **Add component**, or in the left pane, select **Components**.  
+4. In the **Components** pane, select a tab component to add it to the form. Alternatively, select **...** next to the tab component you want, and then select **Add to form**. 
 5. Repeat steps 2-4 above if you want to add more tabs.
 6. In the command bar, select **Save** to save the form, or select **Publish** if you want to save and make your changes visible to users. 
+
+## Configure tabs on a form
+These are the properties available to configure a tab when creating or editing a form using the new form designer.
+
+|Area   |Name  |Description  |
+|---------|---------|---------|
+|**Display options** | **Tab label** | The localizable label for the tab visible to users. <br /><br />This property is required. |
+| **Display options** |  **Name**  |  The unique name for the tab that is used when referencing it in scripts. The name can contain only alphanumeric characters and underscores. <br /><br />This property is required. |
+| **Display options** |  **Expand this tab by default** |  The tab state can toggle between expanded or collapsed using form scripts or by people selecting the label. Choose the default state for the tab. |
+| **Display options** | **Hide tab** | When selected, tab is hidden by default and can be shown using code. |
+| **Display options** | **Hide on phone** |  For a condensed version of this form on phone screens, tabs can be hidden. |
+| **Formatting** | **Layout** |  Tabs may have up to three columns. Use these options to set the number of tabs and what percentage of the total width they should fill. |
 
 ## Move tabs on a form
 
@@ -100,10 +110,13 @@ To add tabs to a form, use the **Layouts** pane.
 
 ### See also
 [Overview of the model-driven form designer](form-designer-overview.md)  
-[Create or edit forms using the form designer](create-and-edit-forms.md)  
-[Add, move or delete fields on a form using the form designer](add-move-or-delete-fields-on-form.md)  
-[Add, move or delete sections on a form using the form designer](add-move-or-delete-sections-on-form.md)  
-[Properties available in the form designer](form-designer-properties.md)  
-[Configuring header properties in the form designer](form-designer-header-properties.md)  
+[Create, edit, or configure forms using the form designer](create-and-edit-forms.md)  
+[Add, configure, move, or delete fields on a form](add-move-or-delete-fields-on-form.md)  
+[Add, configure, move, or delete components on a form](add-move-configure-or-delete-components-on-form.md)  
+[Add, configure, move, or delete sections on a form](add-move-or-delete-sections-on-form.md)  
+[Configure header properties in the form designer](form-designer-header-properties.md)  
+[Add and configure a sub-grid component on a form](form-designer-add-configure-subgrid.md)  
+[Add and configure a quick view component on a form](form-designer-add-configure-quickview.md)  
+[Configure a lookup component on a form](form-designer-add-configure-lookup.md)  
 [Using the tree view in the form designer](using-tree-view-on-form.md)  
-[Create and edit fields](../common-data-service/create-edit-field-portal.md)
+[Create and edit fields](../common-data-service/create-edit-field-portal.md)  

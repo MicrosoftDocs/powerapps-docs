@@ -36,6 +36,7 @@ This list below contains all of the guidance and best practices regarding the pl
 |[Optimize custom assembly development](optimize-assembly-development.md)     |Consider merging separate plug-ins/custom workflow activities into a single custom assembly to improve performance and maintainability and move plug-ins/custom workflow activities into multiple custom assemblies if an assembly size is near the sandbox assembly size constraints.         |
 |[Remove unsupported code that uses reflection in custom workflow activities](remove-unsupported-code-using-reflection-workflow-activities.md)|Workflow activities containing unsupported code that uses reflection will break in the coming months unless it is removed.|
 |[Set KeepAlive to false when interacting with external hosts in a plug-in](set-keepalive-false-interacting-external-hosts-plugin.md)     |KeepAlive property set to true in the HTTP request header or not explicitly defined as false can cause increased execution times of plug-ins.         |
+|[Set Timeout when making external calls in a plug-in](set-timeout-for-external-calls-from-plug-ins.md)     |Limit the time period that external calls will expect a response within plug-ins.|   
 |[Use InvalidPluginExecutionException in plug-ins and workflow activities](use-invalidpluginexecutionexception-plugin-workflow-activities.md)     |Use InvalidPluginExecutionException when raising errors within the context of a plug-in or workflow activity.         |
 
 ### See Also
