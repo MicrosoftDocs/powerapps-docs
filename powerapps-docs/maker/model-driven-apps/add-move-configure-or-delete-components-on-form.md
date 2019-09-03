@@ -53,9 +53,9 @@ Note the following:
 1. Open the form designer to create or edit a form. More information: [Create a form](create-and-edit-forms.md#create-a-form) or [Edit a form](create-and-edit-forms.md#edit-a-form)
 2. In the form preview, select an existing field.
 3. In the property pane, under the **Components** area, select **+ Component**.
-4. The **Add component** dialog will display a list of components that are available for the current field type. You can also hover over a component in the list to see a preview image, description and other details of that component.
+4. The **Add component** dialog displays a list of components that are available for the current field type. You can hover over a component in the list to see a preview image, description and other details of that component.
 5. In the **Add component** dialog, search or scroll to find the component you want to add and then select it.
-   In most cases, you will see a dialog to configure the properties of the component. Ensure that you have configured all the required properties of the component.
+   In most cases, a dialog is displayed so you can configure the properties of the component. Ensure that you have configured all the required properties of the component.
 6. In the dialog to configure the properties of the component, under **Show component on**, the **Web**, **Mobile** and **Tablet** options are selected by default to ensure the component is used when the form is displayed on the web, mobile app and tablet app. Based on your requirements you can clear some of these options to limit the usage of the component. Select  **Done**.
 7. Repeat steps 2-6 above if you want to add more components to the same or another field.
 8. On the command bar, select **Save** to save the form, or select **Publish** if you want to save and make your changes visible to users.
@@ -90,7 +90,7 @@ You can move components on a form by either drag and drop or cut and paste actio
     - When you select **Paste before**, the component being moved is pasted before the existing component or field.
     - When you select a section, the component being moved is added in an available space so as to evenly distribute components and fields across the section columns. The **Paste before** action is not applicable and therefore not available in this case.
 6. Repeat steps 2-5 above if you want to move more components.
-7. In the command bar, select **Save** to save the form, or select **Publish** if you want to save and make your changes visible to users. 
+7. On the command bar, select **Save** to save the form, or select **Publish** if you want to save and make your changes visible to users. 
 
 ## Delete components on a form
 1. Open the form designer to create or edit a form. More information: [Create a form](create-and-edit-forms.md#create-a-form) or [Edit a form](create-and-edit-forms.md#edit-a-form)
