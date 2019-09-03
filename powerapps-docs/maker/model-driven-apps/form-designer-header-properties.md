@@ -32,7 +32,7 @@ Makers can control the density of model-driven app form headers to match the nee
 ## High density header
 High density form header ensures that key information is always visible to users. Using high density header, the record title never truncates. Even long record titles are displayed using multiple lines. Similarly, high density header also ensures that up to four field values are directly visible in the header and never truncated or hidden.  
 
-To ensure that key information is always visible, the framework displays read-only field values and users can't directly edit the field values in the header. Visualizations such as custom controls or web resources also aren't allowed.
+To ensure that key information is always visible, the framework displays read-only field values and users can't directly edit the field values in the header. Visualizations such as custom components or web resources also aren't allowed.
 
 When a form does not specify header density or when a new form is created, the framework defaults to high density header.
 
@@ -59,7 +59,7 @@ To configure the header density of a model-driven form, follow these steps.
 > Use the new form designer. The classic form designer does not provide the ability to configure the header density.
 
 ## Header flyout
-The header flyout is displayed when users select the chevron in the form header. It enables users to edit field values and also displays visualizations such as custom controls or web resources that are a part of the form header.
+The header flyout is displayed when users select the chevron in the form header. It enables users to edit field values and also displays visualizations such as custom components or web resources that are a part of the form header.
 
 The behavior of the header flyout changes depending on the header density configuration.
 
@@ -160,4 +160,3 @@ This message informs the maker that when editing a form that is using high densi
 [Configure a lookup component on a form](form-designer-add-configure-lookup.md)  
 [Using the tree view in the form designer](using-tree-view-on-form.md)  
 [Create and edit fields](../common-data-service/create-edit-field-portal.md)  
-[Create and edit fields](../common-data-service/create-edit-field-portal.md)
