@@ -59,15 +59,15 @@ To build the component project, open the project folder in Visual Studio Code an
 
 **Publisher Prefix**
 
-1. If the components are created using the previous version of the CLI tooling which didn't enforce publisher prefix as part of the component name and if the same components are updated and built again with the latest CLI version,  you will hit an error while trying to import the components into Common Data Service.
+1. If a component is created using the CLI tooling version lower than 0.4.3,  you will hit an error while trying to re-import the solution file into Common Data Service. The error is thrown because the newly imported component name is now being appended with the publisher prefix to ensure its uniqueness and to avoid collisions.
 
     **Workaround**:
      - Delete the solution containing relevant component from Common Data Service. If the component is already configured on a form or grid, it needs to be removed there first as the component solution had dependency on configuration.  
     - Import the new solution with updates to the component built by latest CLI version.
-    - Update the forms associated with the old component. 
+    - Newly imported components can now be configured on forms or grids.  
 
 
-2. When the components are created with the publisher prefix in mixed or upper case using the new CLI tooling version, it throws an error while importing the solution. The new version of the CLI tooling requires the publisher prefix to be in lower cases. 
+2. When the components are created with the publisher prefix in mixed or upper case using the new CLI tooling version, it throws an error while importing the solution. This happens because the updated tooling version (0.4.3 and newer) now enforces the platform standard for lower case publisher prefix.
 
    **Workaround**:
 

@@ -5,7 +5,7 @@ keywords: PowerApps component framework, Custom component, component Framework
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 09/03/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
