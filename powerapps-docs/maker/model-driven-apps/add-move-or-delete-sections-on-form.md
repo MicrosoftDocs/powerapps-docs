@@ -41,8 +41,8 @@ To add sections to a form, use the **Components** pane.
 ### Add sections to a form using drag and drop
 
 1. Open the form designer to create or edit a form. More information: [Create a form](create-and-edit-forms.md#create-a-form) or [Edit a form](create-and-edit-forms.md#edit-a-form)
-2. In the command bar, select **Add control**, or in the left pane, select **Components**. 
-3. In the **Components** pane, select a section control and drag it onto the form preview. As you drag the section on the form preview, you will see drop targets where you can add the section. 
+2. In the command bar, select **Add component**, or in the left pane, select **Components**. 
+3. In the **Components** pane, select a section component and drag it onto the form preview. As you drag the section on the form preview, you will see drop targets where you can add the section. 
 4. Drop the section in the location you want. Note the following: 
     - Sections can be dropped before or after any existing section.
     - Sections can also be dropped in the empty area within a tab. In this case the section will be added in an available space so as to evenly distribute sections across the tab columns.
@@ -56,8 +56,8 @@ To add sections to a form, use the **Components** pane.
 2. In the form preview, select another existing section or tab. Note the following:
     - When you select an existing section, the new section is added after the existing section. 
     - When you select a tab, the new section is added in an available space so as to evenly distribute sections across the tab columns. 
-3. In the command bar, select **Add control**, or in the left pane, select **Components**.  
-4. In the **Components** pane, select a section control to add it to the form. Alternatively, select **...** next to the section control you want, and then select **Add to selected tab**. 
+3. In the command bar, select **Add component**, or in the left pane, select **Components**.  
+4. In the **Components** pane, select a section component to add it to the form. Alternatively, select **...** next to the section component you want, and then select **Add to selected tab**. 
 5. Repeat steps 2-4 above if you want to add more sections.
 6. In the command bar, select **Save** to save the form, or select **Publish** if you want to save and make your changes visible to users. 
 
