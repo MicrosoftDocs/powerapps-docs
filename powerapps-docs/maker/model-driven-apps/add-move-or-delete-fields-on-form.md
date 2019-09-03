@@ -76,17 +76,6 @@ These are the properties available to configure a field when creating or editing
 |**Display options** | **Hide on phone** | For a condensed version of this form on phone screens, fields can be hidden. |
 |**Formatting** | **Field width** |  When the section containing the fields has more than one column you can set the field to occupy up to the number of columns that the section has. |
 
-### Lookup field properties
-In addition to the field properties listed above, a lookup field provides these additional properties to configure
-
-|Area  |Name  |Description  |
-|---------|---------|---------|
-| **Display options** | **Entity** |  The related entity that the lookup field connects to. |
-| **Display options** | **Default view** |  The view of the entity selected in the **Entity** property that will be used to get and display the list of records that end-users can select in the lookup drop down. |
-| **Display options** | **Allow users to change view** |  When selected, end-users will be able to change from the **Default view** to another view of the entity selected in the **Entity** property. |
-| **Display options** | **Show all views** |  When selected, end-users will be able to change from the **Default view** to all other views of the entity selected in the **Entity** property. <br /><br />This property is only available when **Allow users to change view** is selected. |
-| **Display options** | **Selected views** |  A list of views of the entity selected in the **Entity** property that end-users will be able to change to from the **Default view**. <br /><br />This property is only available when **Allow users to change view** is selected and **Show all views** is unselected. |
-
 ## Move fields on a form
 
 ### Move fields on a form using drag and drop
