@@ -99,7 +99,7 @@ You can move components on a form by either drag and drop or cut and paste actio
 4. On the command bar, select **Save** to save the form, or select **Publish** if you want to save and make your changes visible to users. 
 
      > [!NOTE]
-     >   -  If you delete a component by mistake, in the command bar, select **Undo** to revert the form to its previous state. 
+     >   -  If you delete a component by mistake, on the command bar, select **Undo** to revert the form to its previous state. 
      >   -  You can't delete a component that is locked or is using a required field that is not present anywhere else on the form. 
 
 ### See also
