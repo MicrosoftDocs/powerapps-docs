@@ -32,7 +32,7 @@ Model-driven apps
 
 | Parameter Name|Type|Required|Description|
 | ------------- |----|--------|-----------|
-|value|`boolean`|yes|`True` if controls needs to track container size, component will get allocatedWidth/allocatedHeight.|
+|value|`Boolean`|Yes|`True` if controls needs to track container size, component will get allocatedWidth or allocatedHeight.|
 
 
 ### Related topics

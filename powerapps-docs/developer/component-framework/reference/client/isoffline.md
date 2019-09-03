@@ -23,11 +23,12 @@ Model-driven apps
 
 ## Syntax
 
-`isOffline()`
+`context.client.isOffline()`
 
 ## Return Value
 
-Type: `boolean`
+Type: `Boolean`
+Description: **true** if the server is offline; **false** otherwise.
 
 ### Related topics
 

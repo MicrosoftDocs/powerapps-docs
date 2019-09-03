@@ -29,11 +29,11 @@ Model-driven apps
 
 | Parameter Name|Type|Required|Description|
 | ------------- |----|--------|-----------|
-|id|`string`|yes|Name of the resource in the component manifest.|
+|id|`String`|Yes|Name of the resource in the component manifest.|
 
 ## Return Value
 
-Type: `string`
+Type: `String`
 
 
 ### Related topics

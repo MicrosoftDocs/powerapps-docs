@@ -26,7 +26,7 @@ Model-driven apps
 
 ## Syntax
 
-`createRecord(entityLogicalName, data).then(successCallback, errorCallback);`
+`context.webapi.createRecord(entityLogicalName, data).then(successCallback, errorCallback);`
 
 ## Parameters
 

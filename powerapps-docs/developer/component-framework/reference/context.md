@@ -25,43 +25,42 @@ Model-driven apps
 
 ### client
 
-The interface for `context.client`
-
+[!INCLUDE [client-description](includes/client-description.md)]
 **Type**: [Client](client.md)
 
 ### device
 
-The interface for `context.device`
+[!INCLUDE [device-description](includes/device-description.md)]
 
 **Type**: [Device](device.md)
 
 ### factory
 
-The interface for `context.factory`
+[!INCLUDE [factory-description](includes/factory-description.md)]
 
 **Type**: [Factory](factory.md)
 
 ### formatting
 
-The interface for `context.formatting`
+[!INCLUDE [formatting-description](includes/formatting-description.md)]
 
 **Type**: [Formatting](formatting.md)
 
 ### mode
 
-The interface for `context.mode`
+[!INCLUDE [mode-description](includes/mode-description.md)]
 
 **Type**: [Mode](mode.md)
 
 ### navigation
 
-The interface for `context.navigation`
+[!INCLUDE [navigation-description](includes/navigation-description.md)]
 
 **Type**: [Navigation](navigation.md)
 
 ### parameters
 
-The data provided to the control. Structure defined by the component’s manifest, corresponding to parameter and data-set nodes
+The data provided to the component. Structure defined by the component’s manifest, corresponding to parameter and data-set nodes.
 
 **Type**: `TInputs`
 
@@ -69,29 +68,29 @@ The data provided to the control. Structure defined by the component’s manifes
 
 The resource interface of `context.resource`
 
-**Type**: [Resources](resources.md)
+[!INCLUDE [resource-description](includes/resources-description.md)]
 
 ### updatedProperties
 
-An array of strings indicated which values have changed on the context object since the last time it was passed to this control
+An array of strings indicated which values have changed on the context object since the last time it was passed to this component.
 
 **Type**: `string[]`
 
 ### userSettings
 
-The interface for `context.userSettings`
+[!INCLUDE [usersettings-description](includes/usersettings-description.md)]
 
 **Type**: [UserSettings](usersettings.md)
 
 ### utils
 
-The interface for `context.utils`
+[!INCLUDE [utility-description](includes/utility-description.md)]
 
 **Type**: [Utility](utility.md)
 
 ### webAPI
 
-The interface for `context.webApi`
+[!INCLUDE [webapi-description](includes/webapi-description.md)]
 
 **Type**: [WebApi](webapi.md)
 

@@ -30,7 +30,7 @@ Model-driven apps
 
 | Parameter Name|Type|Required|Description|
 | ------------- |----|--------|-----------|
-|expression|[ILinkEntityExposedExpression](../ilinkentityexposedexpression.md)|yes|The `ILinkEntityExposedExpression` to set.|
+|expression|[ILinkEntityExposedExpression](../ilinkentityexposedexpression.md)|Yes|The `ILinkEntityExposedExpression` to set.|
 
 ### Related topics
 

@@ -29,7 +29,7 @@ Model-driven apps
 
 | Parameter Name|Type|Required|Description|
 | ------------- |----|--------|-----------|
-|name|`string`|yes|The name of the popup to remove.|
+|name|`String`|Yes|The name of the popup to remove.|
 
 
 ### Related topics

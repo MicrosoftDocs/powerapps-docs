@@ -29,9 +29,9 @@ Model-driven apps
 
 | Parameter Name|Type|Required|Description|
 | ------------- |----|--------|-----------|
-|id|`string`|yes|The resource string identifier.|
-|success|`string`|no|The success callback. Resource data is returned in base 64 encoded format.|
-|failure|`string`|no|The failure callback.|
+|id|`String`|Yes|The resource string identifier.|
+|success|`String`|no|The success callback. Resource data is returned in base 64 encoded format.|
+|failure|`String`|no|The failure callback.|
 
 
 ### Related topics

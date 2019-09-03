@@ -23,13 +23,13 @@ Model-driven apps
 
 ## Syntax
 
-`lookupObjects(lookupOptions)`
+`context.utility.lookupObjects(lookupOptions)`
 
 ## Parameters
 
 | Parameter Name|Type|Required|Description|
 | ------------- |----|--------|-----------|
-|lookupOptions|`UtilityApi.LookupOptions`|yes|Options for opening the lookup dialog. The LookupOptions has the following attributes:<br/>- **allowMultiSelect**: `boolean`. Whether the lookup allows more than one item to be selected.<br/>- **defaultEntityType**: `string`. The default entity type.<br/>- **defaultViewId**: `string`. The default view to use.<br/>- **entityTypes**: `string[]`. The entity types to display.<br/>- **viewIds**: `string[]`. The views to be available in the view picker. Only System views are supported (not user views).|
+|lookupOptions|`UtilityApi.LookupOptions`|Yes|Defines the options for opening the lookup dialog. The LookupOptions has the following attributes:<br/>- **allowMultiSelect**: `Boolean`. Indicates whether the lookup allows more than one item to be selected.<br/>- **defaultEntityType**: `String`. The default entity type to use.<br/>- **defaultViewId**: `String`. The default view to use.<br/>- **entityTypes**: `String[]`. The entity types to display.<br/>- **viewIds**: `String[]`. The views to be available in the view picker. Only System views are supported (not user views).|
 
 ## Return Value
 

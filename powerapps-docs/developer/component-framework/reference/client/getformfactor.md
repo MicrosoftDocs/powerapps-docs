@@ -23,11 +23,11 @@ Model-driven apps and canvas apps (experimental preview)
 
 ## Syntax
 
-`getFormFactor()`
+`context.client.getFormFactor()`
 
 ## Return Value
 
-Type: `number`
+Type: `Number`
 
 |Value|Form Factor|
 |---|---|

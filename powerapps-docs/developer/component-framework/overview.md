@@ -23,26 +23,16 @@ Use PowerApps component framework to create custom components in model-driven ap
 - Replace a field that displays a numeric text value with a `dial` or `slider` component.
 - Transform a list into an entirely different visual experience bound to the data set like a `Calendar` or `Map`.
  
-   > [!NOTE]
-   > Canvas apps only support field type of custom components and not the data-set type.
-
 > [!IMPORTANT]
-> - PowerApps component framework is a preview feature.
-> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)] 
+> - PowerApps component framework is in public preview for model driven apps, and in experimental preview for canvas apps. This implies that all the APIs that are supported for model driven apps might not be supported on canvas apps yet.
+> - By default PowerApps component framework is enabled for model-driven apps. To enable this feature for canvas apps, see [Availability for canvas apps](component-framework-for-canvas-apps.md)
+> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
+> - Canvas apps only support the *field* type of custom components, and not the *data-set* type.
 
 
 PowerApps component framework enables professional developers to create custom components that can be used across the full breadth of PowerApps capabilities. Custom components have access to a rich set of framework APIs which expose capabilities like component lifecycle management, contextual data and metadata access, seamless server access via Web API, utility and data formatting methods, device features like camera, location and microphone along with easy to invoke UX elements like dialogs, lookups, full page rendering etc.  
 
-> [!NOTE]
-> Custom components are supported only on Unified Interface for [model-driven apps](/powerapps/maker/model-driven-apps/model-driven-app-overview) and canvas apps.
-
 Component developers can utilize modern web practices and also harness the power of external libraries to create advanced user interactions. The framework automatically handles component lifecycle, retains application business logic and optimizes for performance (no more async IFrames). Components created using this framework are fully configurable and can be reused on multiple surfaces in model-driven apps like forms, dashboards, grids, etc. Component definition, dependencies, and configurations can all be packaged into a [solution](https://docs.microsoft.com/dynamics365/customer-engagement/customize/solutions-overview) and moved across environments and can be shipped via [app source](https://appsource.microsoft.com/en-us/marketplace/apps?page=1&product=dynamics-365).  
-
-## Availability
-
-Currently PowerApps component framework is in public preview for model driven apps. For canvas apps, PowerApps component framework feature is in experimental preview and may not support all the APIs that are supported for model driven apps. 
-
-By default PowerApps component framework is enabled in model-driven apps. To enable this feature in canvas apps and learn more about it, see [Availability for canvas apps](component-framework-for-canvas-apps.md)
 
 ## Related topics
 

@@ -23,7 +23,7 @@ Model-driven apps
 
 ## Syntax
 
-`deleteRecord(entityLogicalName, id).then(successCallback, errorCallback);`
+`context.webapi.deleteRecord(entityLogicalName, id).then(successCallback, errorCallback);`
 
 ## Parameters
 

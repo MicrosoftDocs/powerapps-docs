@@ -32,7 +32,7 @@ Model-driven apps
 
 | Parameter Name|Type|Required|Description|
 | ------------- |----|--------|-----------|
-|value|`boolean`|yes|`True` if component needs to auto size to full screen. `False` if component needs to auto size to allocated width.|
+|value|`Boolean`|Yes|`True` if component needs to auto size to full screen. `False` if component needs to auto size to allocated width.|
 
 
 ### Related topics
