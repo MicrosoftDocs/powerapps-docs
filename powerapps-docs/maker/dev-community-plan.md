@@ -10,7 +10,9 @@ ms.custom: canvas
 ms.date: 04/30/2019
 ms.author: iyanni
 ms.reviewer:
-
+searchScope:
+  - GetStarted
+  - PowerApps
 ---
 # PowerApps Community Plan: a free development environment for individual use
 If you want to build skills and learn more about PowerApps, Microsoft Flow, and the Common Data Service, the PowerApps Community Plan is the right plan for you. The PowerApps Community Plan gives you a free development environment for individual use, where you can:

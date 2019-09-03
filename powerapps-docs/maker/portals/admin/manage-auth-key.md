@@ -1,23 +1,23 @@
 ---
-title: "Connect a portal to a Dynamics 365 for Customer Engagement online organization | MicrosoftDocs"
-description: "Learn how to connect a portal to a Dynamics 365 for Customer Engagement online organization and how to renew the authentication key."
+title: "Connect a portal to a Dynamics 365 online organization | MicrosoftDocs"
+description: "Learn how to connect a portal to a Dynamics 365 online organization and how to renew the authentication key."
 author: sbmjais
 manager: shujoshi
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/18/2019
+ms.date: 08/30/2019
 ms.author: shjais
 ms.reviewer:
 ---
 
-# Connect to a Dynamics 365 for Customer Engagement online organization using a portal
+# Connect to a Dynamics 365 online organization using a portal
 
 [!include[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
 
 A portal connects to a Dynamics 365 online organization using an Azure Active Directory application. The application is created in the same tenant where the portal is provisioned. The application is registered with the Dynamics 365 organization during the portal provisioning process.
 
-![Connecting a portal with Dynamics 365 for Customer Engagement organization](../media/connect-with-dynamics.png "Connecting a portal with Dynamics 365 for Customer Engagement organization")
+![Connecting a portal with Dynamics 365 organization](../media/connect-with-dynamics.png "Connecting a portal with Dynamics 365 organization")
 
 Each portal has a separate Azure Active Directory application associated with it, whether it is connected to the same Dynamics 365 organization or not. The default Azure Active Directory authentication provider created for a portal uses the same Azure Active Directory application to authenticate the portal. Authorization is enforced by web roles assigned to the user accessing the portal.
 

@@ -1,12 +1,12 @@
 ---
-title: "Identify and fix customer issues with a portal in Dynamics 365 for Customer Engagement | MicrosoftDocs"
+title: "Identify and fix customer issues with a portal | MicrosoftDocs"
 description: "Learn to identify and fix customer issues with a portal."
 author: sbmjais
 manager: shujoshi
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/18/2019
+ms.date: 08/30/2019
 ms.author: shjais
 ms.reviewer:
 ---
@@ -15,7 +15,7 @@ ms.reviewer:
 
 [!include[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
 
-Portal checker for Dynamics 365 Portal is a self-service diagnostic tool that can be used by portal administrators to identify common issues in their portal. Portal checker helps to identify issues with your portal by looking at various configuration parameters and provides suggestions on how to fix them.
+Portal checker is a self-service diagnostic tool that can be used by portal administrators to identify common issues in their portal. Portal checker helps to identify issues with your portal by looking at various configuration parameters and provides suggestions on how to fix them.
 
 When you run portal checker, the results are displayed in the **Diagnostic results** section in a grid format. The results grid has the following columns:
 

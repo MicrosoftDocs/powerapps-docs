@@ -1,5 +1,5 @@
 ---
-title: "Clear the server-side cache for a portal in Dynamics 365 for Customer Engagement | MicrosoftDocs"
+title: "Clear the server-side cache for a portal | MicrosoftDocs"
 description: "Instructions to force the portal to refresh its cache immediately."
 author: sbmjais
 manager: shujoshi
@@ -28,7 +28,7 @@ To clear the server-side cache
 
 3.	Select **Clear Cache**. 
 
-The server-side cache is deleted, and data is reloaded from Dynamics 365. Note that clearing the portal server-side cache will temporararily cause poor portal performance while data is being reloaded from Dynamics 365.
+The server-side cache is deleted, and data is reloaded from Dynamics 365. Note that clearing the portal server-side cache will temporarily cause poor portal performance while data is being reloaded from Dynamics 365.
 
 > [!div class=mx-imgBorder]
 > ![Clear the portal cache](../media/clear-portal-cache.png "Clear the portal cache")

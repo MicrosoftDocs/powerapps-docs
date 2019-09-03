@@ -2,7 +2,7 @@
 title: "Query Data using the Web API (Common Data Service)| Microsoft Docs"
 description: "Read about the various ways to query Common Data Service data using the Common Data Service Web API and various system query options that can be applied in these queries"
 ms.custom: ""
-ms.date: 07/23/2019
+ms.date: 09/02/2019
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -339,7 +339,7 @@ For example:
 **Request** 
  
 ```http 
-GET [Organization URI]/api/data/v9.1/accounts?$select=name&$filter=primarycontactid/contactid%20eq%20a0dbf27c-8efb-e511-80d2-00155db07c77 HTTP/1.1  
+GET [Organization URI]/api/data/v9.1/accounts?$select=name&$filter=primarycontactid/contactid eq a0dbf27c-8efb-e511-80d2-00155db07c77 HTTP/1.1  
 Accept: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
@@ -374,7 +374,7 @@ OData-Version: 4.0
 **Request**  
 
 ```http 
-GET [Organization URI]/api/data/v9.1/accounts?$select=name&$filter=parentaccountid/accountid%20eq%203adbf27c-8efb-e511-80d2-00155db07c77  
+GET [Organization URI]/api/data/v9.1/accounts?$select=name&$filter=parentaccountid/accountid eq 3adbf27c-8efb-e511-80d2-00155db07c77  
 Accept: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
@@ -685,7 +685,7 @@ The following example retrieves the tasks assigned to the top 5 account records.
 **Request**
 
 ```http 
-GET [Organization URI]/api/data/v9.1/accounts?$top=5&$select=name&$expand=Account_Tasks($select%20=%20subject,%20scheduledstart) HTTP/1.1  
+GET [Organization URI]/api/data/v9.1/accounts?$top=5&$select=name&$expand=Account_Tasks($select=subject,scheduledstart) HTTP/1.1  
 Accept: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
@@ -708,7 +708,7 @@ OData-Version: 4.0
          "Account_Tasks":[  
 
          ],
-         "Account_Tasks@odata.nextLink":"[Organization URI]/api/data/v9.1/accounts(36dbf27c-8efb-e511-80d2-00155db07c77)/Account_Tasks?$select%20=%20subject,%20scheduledstart"
+         "Account_Tasks@odata.nextLink":"[Organization URI]/api/data/v9.1/accounts(36dbf27c-8efb-e511-80d2-00155db07c77)/Account_Tasks?$select=subject,scheduledstart"
       },
       {  
          "@odata.etag":"W/\"513477\"",
@@ -717,7 +717,7 @@ OData-Version: 4.0
          "Account_Tasks":[  
 
          ],
-         "Account_Tasks@odata.nextLink":"[Organization URI]/api/data/v9.1/accounts(38dbf27c-8efb-e511-80d2-00155db07c77)/Account_Tasks?$select%20=%20subject,%20scheduledstart"
+         "Account_Tasks@odata.nextLink":"[Organization URI]/api/data/v9.1/accounts(38dbf27c-8efb-e511-80d2-00155db07c77)/Account_Tasks?$select=subject,scheduledstart"
       },
       {  
          "@odata.etag":"W/\"514074\"",
@@ -726,7 +726,7 @@ OData-Version: 4.0
          "Account_Tasks":[  
 
          ],
-         "Account_Tasks@odata.nextLink":"[Organization URI]/api/data/v9.1/accounts(3adbf27c-8efb-e511-80d2-00155db07c77)/Account_Tasks?$select%20=%20subject,%20scheduledstart"
+         "Account_Tasks@odata.nextLink":"[Organization URI]/api/data/v9.1/accounts(3adbf27c-8efb-e511-80d2-00155db07c77)/Account_Tasks?$select=subject,scheduledstart"
       },
       {  
          "@odata.etag":"W/\"513481\"",
@@ -735,7 +735,7 @@ OData-Version: 4.0
          "Account_Tasks":[  
 
          ],
-         "Account_Tasks@odata.nextLink":"[Organization URI]/api/data/v9.1/accounts(3cdbf27c-8efb-e511-80d2-00155db07c77)/Account_Tasks?$select%20=%20subject,%20scheduledstart"
+         "Account_Tasks@odata.nextLink":"[Organization URI]/api/data/v9.1/accounts(3cdbf27c-8efb-e511-80d2-00155db07c77)/Account_Tasks?$select=subject,scheduledstart"
       },
       {  
          "@odata.etag":"W/\"514057\"",
@@ -744,7 +744,7 @@ OData-Version: 4.0
          "Account_Tasks":[  
 
          ],
-         "Account_Tasks@odata.nextLink":"[Organization URI]/api/data/v9.1/accounts(3edbf27c-8efb-e511-80d2-00155db07c77)/Account_Tasks?$select%20=%20subject,%20scheduledstart"
+         "Account_Tasks@odata.nextLink":"[Organization URI]/api/data/v9.1/accounts(3edbf27c-8efb-e511-80d2-00155db07c77)/Account_Tasks?$select=subject,scheduledstart"
           }
        ]
     }
