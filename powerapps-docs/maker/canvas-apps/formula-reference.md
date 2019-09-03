@@ -299,6 +299,8 @@ Other elements include:
 
 **[Set](functions/function-set.md)** – Sets the value of a global variable.
 
+**[SetFocus](functions/function-setfocus.md)** – Moves input focus to a specific control.
+
 **[ShowColumns](functions/function-table-shaping.md)** – Returns a table with only selected columns.
 
 **[Shuffle](functions/function-shuffle.md)** – Randomly reorders the records of a table.

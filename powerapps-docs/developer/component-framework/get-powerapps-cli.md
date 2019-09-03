@@ -44,7 +44,6 @@ To use Microsoft PowerApps CLI, do the following:
 1. Install [Microsoft PowerApps CLI](https://aka.ms/PowerAppsCLI).
 
 
-
 > [!NOTE]
 > - To deploy your custom component using PowerApps CLI, you must have a Common Data Service environment with system administrator or system customizer privileges.
 > - Currently, PowerApps CLI is supported only on Windows 10.
@@ -57,7 +56,7 @@ To update your Microsoft PowerApps CLI to the latest version and take the advant
 pac install latest
 ```
 
-### What else do I need to know?
+### What else do I need to know
 
 If you have already created a solution project or PowerApps component framework project, ensure to update these projects to the latest packages. This will help you leverage newly added capabilities with your existing projects. Newly created projects will already contain these settings.
 

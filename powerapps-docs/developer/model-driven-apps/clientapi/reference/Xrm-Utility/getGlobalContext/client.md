@@ -1,6 +1,6 @@
 ---
 title: "getGlobalContext.client (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
+ms.date: 08/27/2019
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -42,7 +42,7 @@ Value |Client |
 |---|---|
 |Web |Web application|
 |Web |Unified Interface|
-|Outlook |Outlook |
+|Outlook |Dynamics 365 for Outlook client (COM add-in)|
 |Mobile |Mobile app |
 
 ## getClientState
@@ -61,7 +61,7 @@ Returns a value to indicate the state of the client.
 
 Value |Client | 
 |---|---|
-|Online |Web application, Outlook, Mobile app, Unified Interface|
+|Online |Web application, Dynamics 365 for Outlook client (COM add-in), Mobile app, Unified Interface|
 |Offline |Outlook, Mobile app|
 
 ## getFormFactor
