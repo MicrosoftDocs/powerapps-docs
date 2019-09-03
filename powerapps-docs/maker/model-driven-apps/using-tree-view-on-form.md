@@ -24,9 +24,9 @@ search.app:
 ---
 
 # Using the tree view in the form designer
-The **Tree View** pane displays a visual hierarchy of the controls and fields on the form. The icons in the tree view help you quickly identify the type of field or control. 
+The **Tree View** pane displays a visual hierarchy of the components on the form. The icons in the tree view help you quickly identify the type of field or component. 
 
-You can also use the tree view to select fields and controls present on the form. The tree view is helpful when you want to select hidden elements that are not visible on the form preview. 
+You can also use the tree view to select fields and components present on the form. The tree view is helpful when you want to select hidden elements that are not visible on the form preview. 
 
 You can expand or collapse nodes in the tree view to see or hide the elements within a node. When you select an element in the tree view, it becomes highlighted in the form preview, and the property pane displays the properties for the element. 
 
