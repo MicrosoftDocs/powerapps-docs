@@ -84,8 +84,8 @@ The build tools expect the component source to be exported using standard ES6 mo
 
 ## Using Generated Manifest Typing file
 
-Legacy projects required manually creating and editing an `inputsOutputs.d.ts` typing file. This file is typically located under `private_typing` subfolder. The new tooling now automatically generate this file upon build. Code-gen ensures that `type` definitions used in the component source code stays in-sync with `types` defined in the component manifest file.  
-The typing file is renamed to `ManifestTypes.d.ts` and it is now generated into a subfolder named `generated`. In addition, the `InputsOutputs.IInputBag` and `InputsOutputs.IOutputBag` types are renamed to `IInputs` and `IOutputs` respectively.
+Legacy projects require manually creating and editing an `inputsOutputs.d.ts` typing file. This file is typically located under `private_typing` sub folder. The new tooling now automatically generate this file upon build. Code-gen ensures that `type` definitions used in the component source code stays in-sync with `types` defined in the component manifest file.  
+The typing file is renamed to `ManifestTypes.d.ts` and it is now generated into a sub folder named `generated`. In addition, the `InputsOutputs.IInputBag` and `InputsOutputs.IOutputBag` types are renamed to `IInputs` and `IOutputs` respectively.
 To use the new typing file:
 
 1. Import the new `ManifestTypes.d.ts` file by adding the following line at the top of the component source file:
@@ -93,6 +93,34 @@ To use the new typing file:
 2. Rename all references of **InputsOutputs.IInputBag** to **IInputs**.
 3. Rename all references of **InputsOutputs.IOutputBag** to IOutputs**.
 4. Build the project to generate a new **ManifestTypes.d.ts** file using the command `npm run build`.
+
+## Troubleshooting and workarounds
+
+1. If you get a 1ES notification asking how pcf-scripts are being used, note that these scripts are only used to build the custom components but they are not bundled or used by the resulting component.  
+2. If you have previously created a custom component using the tooling version 0.1.817.1 or earlier and would like to ensure that the latest build & debug modules are being utilized, make updates to the package.json as shown:
+   
+    ```JSON
+     "dependencies": { "@types/node": "^10.12.18", "@types/powerapps-component-framework": "1.1.0"}, "devDependencies": { "pcf-scripts": "~0", "pcf-start": "~0" } 
+    ```
+3. User gets the error `Failed to retrieve information about Microsoft.PowerApps.MSBuild.Pcf from remote s​ource <Feed Url>` when the build fails for authorization issues. The workaround for this is to:
+
+   - Open the NuGet.Config file from **%APPDATA%\NuGet**. The feed from which the user is getting the error should be present in this file. 
+   - Remove the feed from the NuGet.Config file or generate a PAT token and add into Nuget.Config file. For example,
+
+     ```XML
+     <?xml version="1.0" encoding="utf-8"?>  
+     <configuration>  
+     <packageSources>  
+         <add key="CRMSharedFeed" value="https://dynamicscrm.pkgs.visualstudio.com/_packaging/CRMSharedFeed/nuget/v3/index.json" />  
+      </packageSources>  
+     <packageSourceCredentials>  
+      <CRMSharedFeed>  
+      <add key="Username" value="anything" />  
+      <add key="Password" value="User PAT" />  
+    </CRMSharedFeed>  
+     </packageSourceCredentials>  
+   </configuration>
+     ```
 
 ### See also
 
