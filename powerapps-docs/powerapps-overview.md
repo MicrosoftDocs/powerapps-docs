@@ -9,6 +9,9 @@ ms.custom:
 ms.date: 07/15/2019
 ms.author: kvivek
 ms.reviewer: kvivek
+searchScope:
+  - GetStarted
+  - PowerApps
 ---
 # What is PowerApps?
 
