@@ -47,6 +47,7 @@ These are the properties available to configure when using a lookup component on
 [Add, configure, move, or delete sections on a form](add-move-or-delete-sections-on-form.md)  
 [Add, configure, move, or delete tabs on a form](add-move-or-delete-tabs-on-form.md)  
 [Configure header properties in the form designer](form-designer-header-properties.md)  
+[Add and configure a sub-grid component on a form](form-designer-add-configure-subgrid.md)  
 [Add and configure a quick view component on a form](form-designer-add-configure-quickview.md)  
 [Using the tree view in the form designer](using-tree-view-on-form.md)  
 [Create and edit fields](../common-data-service/create-edit-field-portal.md)  
