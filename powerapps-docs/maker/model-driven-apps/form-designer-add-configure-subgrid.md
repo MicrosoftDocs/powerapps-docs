@@ -55,5 +55,6 @@ These are the properties available to configure when using a sub-grid component 
 [Add, configure, move, or delete tabs on a form](add-move-or-delete-tabs-on-form.md)  
 [Configure header properties in the form designer](form-designer-header-properties.md)  
 [Add and configure a quick view component on a form](form-designer-add-configure-quickview.md)  
+[Configure a lookup component on a form](form-designer-add-configure-lookup.md)  
 [Using the tree view in the form designer](using-tree-view-on-form.md)  
 [Create and edit fields](../common-data-service/create-edit-field-portal.md)  
