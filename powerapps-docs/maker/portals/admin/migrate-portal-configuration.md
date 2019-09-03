@@ -1,17 +1,17 @@
 ---
-title: "Migrate Dynamics 365 for Customer Engagement Portal configuration | MicrosoftDocs"
-description: "Learn how to migrate Dynamics 365 for Customer Engagement Portal configuration."
+title: "Migrate Dynamics 365 Portal configuration | MicrosoftDocs"
+description: "Learn how to migrate Dynamics 365 Portal configuration."
 author: sbmjais
 manager: shujoshi
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/18/2019
+ms.date: 08/30/2019
 ms.author: shjais
 ms.reviewer:
 ---
 
-# Migrate Dynamics 365 for Customer Engagement Portal configuration
+# Migrate Dynamics 365 Portal configuration
 
 [!include[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
 
@@ -56,7 +56,7 @@ You can export portal configuration data from a source system by using portal-sp
 4.	On the **Login** screen, provide authentication details to connect to your Dynamics 365 instance from where you want to export data. If you have multiple organizations on the Dynamics 365 instance and want to select the organization from where to export the data, select the **Display list of available organizations** check box, and then select **Login**.
 
     > [!div class=mx-imgBorder]
-    > ![Provide authentication details to connect to your Dynamics 365 for Customer Engagement instance from where you want to export data](../media/export-config-login.png "Provide authentication details to connect to your Dynamics 365 for Customer Engagement instance from where you want to export data")
+    > ![Provide authentication details to connect to your Dynamics 365 instance from where you want to export data](../media/export-config-login.png "Provide authentication details to connect to your Dynamics 365 instance from where you want to export data")
 
 5.	If you have multiple organizations, and you had selected the **Display list of available organizations** check box in the previous step, the next screen allows you to choose the organization that you want to connect to. Select a Dynamics 365 organization to connect to. 
 
