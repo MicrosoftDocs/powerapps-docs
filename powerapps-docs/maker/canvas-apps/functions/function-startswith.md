@@ -44,7 +44,7 @@ Use **EndsWith** and **StartsWith** with the **[Filter](function-filter-lookup.m
 | **EndsWith( "Hello World", "world" )** |Tests whether **"Hello World"** ends with **"world"**.  The test is case insensitive. |**true** |
 | **EndsWith( "Good bye", "good" )** |Tests whether **"Good bye"** ends with **"good"**.  The *EndText* argument (**"good"**) appears in the text but not at the end. |**false** |
 | **EndsWith( "Always say hello", "hello" )** |Tests whether **"Always say hello"** ends with **"hello"**. |**true** |
-| **Endswith( "Bye bye", "" )** |Tests whether **"Bye bye"** ends with an empty text string (**Len** returns 0).  Easing its use in **Filter** expressions, **EndsWith** is defined to return **true** in this case. |**true** |
+| **EndsWith( "Bye bye", "" )** |Tests whether **"Bye bye"** ends with an empty text string (**Len** returns 0).  Easing its use in **Filter** expressions, **EndsWith** is defined to return **true** in this case. |**true** |
 
 | Formula | Description | Result |
 | --- | --- | --- |

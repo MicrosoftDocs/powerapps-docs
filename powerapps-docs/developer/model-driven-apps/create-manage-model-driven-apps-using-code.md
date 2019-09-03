@@ -3,8 +3,7 @@ title: "Create, manage, and publish model-driven apps using code | Microsoft Doc
 description: "Learn about how to create, manage, and publish model-driven apps using code in PowerApps." # 115-145 characters including spaces. This abstract displays in the search result."
 keywords: ""
 ms.date: 03/04/2019
-ms.service:
-  - powerapps
+ms.service: powerapps
 ms.custom:
   - ""
 ms.topic: article
@@ -225,8 +224,9 @@ Accept: application/json
 
 To disassociate a security role from a Model-driven app, you use the DELETE request with the same navigation property. For example:
 
-`DELETE	[Organization URI]/api/data/v9.0/appmodules(dd621d4a-d898-e711-80e7-00155db763be)/appmoduleroles_association/$ref?$id=[Organization URI]/api/data/v9.0/roles(<roleId)
-`
+```
+DELETE	[Organization URI]/api/data/v9.0/appmodules(dd621d4a-d898-e711-80e7-00155db763be)/appmoduleroles_association/$ref?$id=[Organization URI]/api/data/v9.0/roles(<roleId)
+```
 
 ## Manage your model-driven apps and its components
 

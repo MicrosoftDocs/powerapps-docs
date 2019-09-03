@@ -3,8 +3,7 @@ title: "Define ribbon enable rules (model-driven apps) | Microsoft Docs" # Inten
 description: "Learn about defining specific rules to control when the ribbon elements are enabled during configuration of ribbon elements." # 115-145 characters including spaces. This abstract displays in the search result."
 keywords: ""
 ms.date: 02/08/2019
-ms.service:
-  - powerapps
+ms.service: powerapps
 ms.custom:
   - ""
 ms.topic: article

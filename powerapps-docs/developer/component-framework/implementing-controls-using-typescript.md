@@ -7,21 +7,22 @@ ms.service: "powerapps"
 ms.topic: "index-page"
 ms.assetid: 18e88d702-3349-4022-a7d8-a9adf52cd34f
 ms.author: "nabuthuk"
+author: Nkrb
 ---
 
 # Implement components using TypeScript
 
 [!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-This tutorial will walk you through creating a new custom component in Typescript. The sample component is a linear input component. The linear input component enables users to enter numeric values using a visual slider instead of directly keying in values. 
+This tutorial walks you through the process of creating a new custom component in Typescript. The sample component is a linear input component. The linear input component enables users to enter numeric values using a visual slider instead of directly keying in values. 
 
 ## Creating a new component project
 
 To create a new project, follow the steps below:
 
 1. Open a Developer Command Prompt for VS 2017 window.
-2. Create a new folder for the project using the command `mkdir LinearControl`.
-3. `cd` into the new directory and run the command `cd LinearControl` 
+2. Create a new folder for the project using the command `mkdir LinearComponent`.
+3. `cd` into the new directory and run the command `cd LinearComponent` 
 4. Create the component project using the command `pac pcf init --namespace SampleNamespace --name TSLinearInputControl --template field` 
 5. Install the project build tools using the command `npm install` 
 6. Open your project in any developer environment of your choice and start implementing your custom component.
@@ -42,7 +43,7 @@ A custom component is defined by the information in the `ControlManifest.Input.x
     <property name="sliderValue" display-name-key="sliderValue_Display_Key" description-key="sliderValue_Desc_Key" of-type-group="numbers" usage="bound" required="true" /> 
     ```
 
-3. The of-type-group attribute references a group of allowable numbers. Add the following type-group element as a sibling to the <property> element in the manifest. The type-group specifies the component value and can contain whole, currency, floating point, or decimal values.
+3. The of-type-group attribute references a group of allowable numbers. Add the following type-group element as a sibling to the property element in the manifest. The type-group specifies the component value and can contain whole, currency, floating point, or decimal values.
 
     ```XML
     <type-group name="numbers"> 
@@ -54,19 +55,20 @@ A custom component is defined by the information in the `ControlManifest.Input.x
     ```
 
 4. Save the changes to the `ControlManifest.Input.xml` file.
-5. Now, create a new folder inside the LinearControl folder and name it as css.
-6. Create a css file to [add styling to the custom component](#adding-style-to-the-custom-component)
+5. Now, create a new folder inside the `TSLinearInputControl` folder and name it as **css**.
+6. Create a CSS file to [add styling to the custom component](#adding-style-to-the-custom-component)
 7. Build the component project using the command `npm run build`.
-8. The build generates an updated Typescript type declaration file under `TSLinearInputControl/generated folder`.  The `ManifestTypes.d.ts` file defines the properties that your component will have access to Typescript source code.
+8. The build generates an updated Typescript type declaration file under `TSLinearInputControl/generated folder`.
 
 ## Implementing component logic
 
 Source for the custom component is implemented in the `index.ts` file. The `index.ts` file includes scaffolding for interface methods that are required by the PowerApps component framework. 
 
-1. Open the `index.ts` file in code editor of your choice.
+1. Open the `index.ts` file in the code editor of your choice.
 2. Update the `TSLinearInputControl` class with the following
 
 ```TypeScript
+import { IInputs, IOutputs } from "./generated/ManifestTypes";
 export class TSLinearInputControl implements ComponentFramework.StandardControl<IInputs, IOutputs> {
   // Value of the field is stored and used inside the control 
   private _value: number;
@@ -148,27 +150,18 @@ export class TSLinearInputControl implements ComponentFramework.StandardControl<
 
 3. Rebuild the project using the command `npm run build` 
  
-4. The component is compiled into the `out/controls/TSLinearInputControl` folder. The build artifacts includes:
+4. The component is compiled into the `out/controls/TSLinearInputControl` folder. The build artifacts include:
 
    - bundle.js – Bundled component source code 
-   - ControlManifest.xml – Actual component manifest file that will be uploaded to Common Data Service organization.
+   - ControlManifest.xml – Actual component manifest file that is uploaded to the Common Data Service organization.
 
-## Adding Style to the custom component
+## Adding style to the custom component
 
-The linear input control’s `init` method creates an input element and sets the class attribute to `linearslider`. The style for the `linearslider` class is defined in a separate `css` file. Additional component resources like `css` files can be included with the custom component to support further customizations.
+The linear input component’s `init` method creates an input element and sets the class attribute to `linearslider`. The style for the `linearslider` class is defined in a separate `CSS` file. Additional component resources like `CSS` files can be included with the custom component to support further customizations.
 
-1. Edit the `ControlManifest.Input.xml` file to include an additional `css` resource inside the <resources> element
- 
-    ```XML
-    <resources> 
-      <code path="index.ts" order="1"/> 
-      <css path="css/TS_LinearInputControl.css" order="1"/> 
-    </resources> 
-     ```
-
-2. Create a new `css` sub folder under the `TSLinearInputControl` folder. 
-3. Create a new `TS_LinearInputControl.css` file inside the `css` sub folder. 
-4. Add the following style content to `TS_LinearInputControl.css` file
+1. Create a new `css` subfolder under the `TSLinearInputControl` folder. 
+2. Create a new `TS_LinearInputControl.css` file inside the `css` subfolder. 
+3. Add the following style content to `TS_LinearInputControl.css` file
 
     ```CSS
     .SampleNamespace\.TSLinearInputControl input[type=range].linearslider {
@@ -239,16 +232,24 @@ The linear input control’s `init` method creates an input element and sets the
     }
     ```
 
-5. Save the `TS_LinearInputControl.css` 
-6. Rebuild the project using the command 
+5. Save the `TS_LinearInputControl.css` file.
+6. Edit the `ControlManifest.Input.xml` file to include the `CSS` resource file inside the resources element
+ 
+    ```XML
+    <resources> 
+      <code path="index.ts" order="1"/> 
+      <css path="css/TS_LinearInputControl.css" order="1"/> 
+    </resources> 
+     ```
+7. Rebuild the project using the command 
    ```CLI
    npm run build
    ```
-7. Inspect the build output under the **./out/controls/TSLinearInputControl** and observe that the **TS_LinearInputControl.css** file is now included with the compiled build artifacts. 
+8. Inspect the build output under the **./out/controls/TSLinearInputControl** and observe that the **TS_LinearInputControl.css** file is now included with the compiled build artifacts. 
 
 ## Debugging your custom component
 
-Once you are done implementing your custom component logic, run the following command to start the debugging process
+Once you are done implementing your custom component logic, run the following command to start the debugging process. More information: [Debugging custom components](debugging-custom-controls.md)
 
 ```CLI
 npm start
@@ -256,17 +257,17 @@ npm start
 
 ## Packaging your custom components
 
-Follow the steps below to create and import a [solution](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/customize/solutions-overview) file:
+Follow the steps below to create and import a [solution](https://docs.microsoft.com/dynamics365/customer-engagement/customize/solutions-overview) file:
 
 1. Create a new folder **Solutions** inside the **LinearComponent** folder and navigate into the folder. 
 2. Create a new solution project in the **LinearComponent** folder using the command 
  
     ```CLI
-     pac solution init --publisherName developer --customizationPrefix dev 
+     pac solution init --publisher-name developer --publisher-prefix dev 
     ```
 
    > [!NOTE]
-   > The [publisherName](https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/reference/entities/publisher) and [cutomizationPrefix](https://docs.microsoft.com/en-us/powerapps/maker/common-data-service/change-solution-publisher-prefix) values must be unique to your environment.
+   > The [publisher-name](https://docs.microsoft.com/powerapps/developer/common-data-service/reference/entities/publisher) and [publisher-prefix](https://docs.microsoft.com/powerapps/maker/common-data-service/change-solution-publisher-prefix) values must be unique to your environment.
  
 3. Once the new solution project is created, you need to refer to the location where the created component is located. You can add the reference by using the command
 
@@ -274,7 +275,7 @@ Follow the steps below to create and import a [solution](https://docs.microsoft.
      pac solution add-reference --path c:\users\LinearComponent
     ```
 
-4. To generate a zip file from your solution project, you will need to `cd` into your solution project directory and build the project using the command 
+4. To generate a zip file from your solution project, you need to `cd` into your solution project directory and build the project using the command 
 
     ```CLI
      msbuild /t:restore
@@ -293,11 +294,11 @@ Follow the steps below to create and import a [solution](https://docs.microsoft.
     > - Under **Code Tools**, check **NuGet targets & Build Tasks**
 
 6. The generated solution zip file is located in `Solution\\bin\debug\`.
-7. You should manually [import the solution](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/customize/import-update-export-solutions) using the web portal once the zip file is ready.
+7. You should manually [import the solution](https://docs.microsoft.com/dynamics365/customer-engagement/customize/import-update-export-solutions) using the web portal once the zip file is ready or see [Authenticating to your organization](import-custom-controls.md#authenticating-to-your-organization) and [Deployment](import-custom-controls.md#deploying-custom-components) sections to import using PowerApps CLI commands.
 
 ## Adding custom components to a field or an entity
 
-To add a custom component like data-set component or simple table component to a grid or view, follow the steps mentioned in the topic [Add components to fields and entities](add-custom-controls-to-a-field-or-entity.md).
+To add a custom component like a data-set component or simple table component to a grid or view, follow the steps mentioned in the topic [Add components to fields and entities](add-custom-controls-to-a-field-or-entity.md).
 
 ### See also
 

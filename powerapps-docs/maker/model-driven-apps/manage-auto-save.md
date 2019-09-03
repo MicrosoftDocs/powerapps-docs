@@ -55,7 +55,7 @@ Auto-save helps app users focus on their work without having to manage saving da
  If you want to disable auto-save for specific entity forms, you can add code to the `OnSave` event in an entity.  
   
 > [!NOTE]
->  Auto-save will be disabled for the form, but data will still be saved whenyou  select the ![Auto save button](media/auto-save-icon.png "Auto save button") button in the lower-right corner. If you attempt to navigate away from a form or close a form where data has been changed they will get prompt to save their changes before they are allowed to navigate away or close the form.  
+>  Auto-save will be disabled for the form, but data will still be saved when you select the ![Auto save button](media/auto-save-icon.png "Auto save button") button in the lower-right corner. If you attempt to navigate away from a form or close a form where data has been changed they will get prompt to save their changes before they are allowed to navigate away or close the form.  
   
 1.  Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 

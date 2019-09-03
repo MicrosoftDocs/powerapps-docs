@@ -5,7 +5,8 @@ keywords:
 manager: kvivek
 ms.date: 04/23/2019
 ms.service: "powerapps"
-ms.reviewer: ""
+ms.reviewer: "nabuthuk"
+author: Nkrb
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""

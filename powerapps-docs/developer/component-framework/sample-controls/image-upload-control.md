@@ -6,7 +6,8 @@ manager: kvivek
 ms.date: 04/23/2019
 ms.service: "powerapps"
 ms.topic: "article"
-ms.author: "nkrb" 
+ms.author: "nabuthuk"
+author: nkrb 
 ---
 
 # Implementing an image upload component
@@ -33,6 +34,9 @@ The selected image renders within the component. Meanwhile, the `Remove` button 
       <img path="img/default.png" />
       <resx path="strings/TSImageUploadControl.1033.resx" version="1.0.0" />
     </resources>
+	<feature-usage>
+<uses-feature name="Device.pickFile" required="true" />
+</feature-usage>
   </control>
 </manifest>
 ```
