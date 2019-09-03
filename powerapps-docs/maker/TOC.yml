@@ -609,6 +609,8 @@
             href: ./canvas-apps/functions/function-select.md
           - name: Set
             href: ./canvas-apps/functions/function-set.md
+          - name: SetFocus
+            href: ./canvas-apps/functions/function-setfocus.md
           - name: ShowColumns
             href: ./canvas-apps/functions/function-table-shaping.md
           - name: Shuffle
@@ -1075,8 +1077,12 @@
           href: ./portals/admin/change-base-url.md
         - name: Enable maintenance mode
           href: ./portals/admin/enable-maintenance-mode.md
-        - name: Set up Power BI integration
-          href: ./portals/admin/set-up-power-bi-integration.md
+        - name: Power BI integration
+          items:
+            - name: Set up Power BI integration
+              href: ./portals/admin/set-up-power-bi-integration.md
+            - name: Add a Power BI report or dashboard to a web page in portal
+              href: ./portals/admin/add-powerbi-report.md
         - name: Run Portal Checker
           href: ./portals/admin/portal-checker.md
         - name: Renew portal authentication key
@@ -1085,6 +1091,56 @@
           href: ./portals/admin/ip-address-restrict.md
         - name: Update to PowerApps Portals domain
           href: ./portals/admin/update-portal-domain.md
+        - name: Clear the server-side cache
+          href: ./portals/admin/clear-server-side-cache.md
+        - name: Migrate Dynamics 365 Portal configuration
+          href: ./portals/admin/migrate-portal-configuration.md
+    - name:  Advanced portal customizations
+      items:
+        - name: Work with Liquid templates
+          items:
+            - name: Overview
+              href: ./portals/liquid/liquid-overview.md
+            - name: Store content by using web templates
+              href: ./portals/liquid/store-content-web-templates.md
+            - name: Understand Liquid operators
+              href: ./portals/liquid/liquid-operators.md
+            - name: Available Liquid types
+              href: ./portals/liquid/liquid-types.md
+            - name: Available Liquid conditional operators
+              href: ./portals/liquid/liquid-conditional-operators.md
+            - name: Available Liquid objects
+              href: ./portals/liquid/liquid-objects.md
+            - name: Available Liquid tags
+              items:
+                - name: Available Liquid tags
+                  href: ./portals/liquid/liquid-tags.md
+                - name: Control flow tags
+                  href: ./portals/liquid/control-flow-tags.md
+                - name: Iteration tags
+                  href: ./portals/liquid/iteration-tags.md
+                - name: Variable tags
+                  href: ./portals/liquid/variable-tags.md
+                - name: Template tags
+                  href: ./portals/liquid/template-tags.md
+                - name: PowerApps common data service entity tags
+                  href: ./portals/liquid/portals-entity-tags.md
+            - name: Available Liquid filters
+              href: ./portals/liquid/liquid-filters.md
+            - name: Create advanced templates
+              items:
+                - name: Create a custom page template
+                  href: ./portals/liquid/create-custom-template.md
+                - name: Use hybrid navigation to render page hierarchy
+                  href: ./portals/liquid/hybrid-navigation-render-page-hierachy.md
+                - name: Render the entity list for a page 
+                  href: ./portals/liquid/render-entity-list-current-page.md 
+                - name: Render an RSS feed by using a custom page template   
+                  href: ./portals/liquid/render-rss-custom-page-template.md 
+                - name: Render a site header and primary navigation bar   
+                  href: ./portals/liquid/render-site-header-primary-navigation.md
+        - name: OAuth 2.0 implicit grant flow
+          href: ./portals/oauth-implicit-grant-flow.md
     - name: Known issues
       href: ./portals/known-issues.md
     - name: PowerApps Portals FAQ
