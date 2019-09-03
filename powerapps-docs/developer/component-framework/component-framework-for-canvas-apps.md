@@ -18,13 +18,6 @@ ms.assetid: 5d100dc3-bd82-4b45-964c-d90eaebc0735
 > [!IMPORTANT]
 > This feature is still experimental and disabled by default. For more information, see [Experimental and preview features](../../maker/canvas-apps/working-with-experimental.md).
 
-PowerApps component framework enables developers and app makers to create custom code components to use in an app or across apps. PowerApps component framework gives the ability for the developers to enhance the user experience for the users to view and work with data. For example:
-
-- Replace a field that displays a numeric text value with a dial or slider component.
-
-> [!NOTE]
-> In this experimental preview, canvas apps only support field type of custom components and not the data-set type.
-
 Component developers and app makers can utilize modern web practices and also harness the power of external libraries to create advanced user interactions. The framework automatically handles component lifecycle, retains application business logic and optimizes the performance. more information: [PowerApps component framework overview](overview.md) 
 
 > [!WARNING]
@@ -67,7 +60,7 @@ After you enable the PowerApps component framework feature in your environment, 
 To add custom components to a canvas app:
 
 > [!NOTE]
-> To add custom components to a field or an entity, see [Add custom components to model-driven apps](add-custom-controls-to-a-field-or-entity.md)
+> To add custom components to a field or an entity for model-driven apps, see [Add custom components to model-driven apps](add-custom-controls-to-a-field-or-entity.md)
 
 1. Navigate to PowerApps Studio.
 2. Create a new canvas app or edit an existing app that you want to add the custom component to.
@@ -75,11 +68,11 @@ To add custom components to a canvas app:
    > [!IMPORTANT]
    > Make sure the custom components solution zip file is already [imported](https://docs.microsoft.com/en-us/powerapps/maker/common-data-service/import-update-export-solutions) into Common Data Service before you go onto the next step.
 
-3. Click on **Insert** > **Components** > **Import component** > 
+3. Click on **Insert** > **Components** > **Import component**. 
  
     ![Insert components](media/insert-components-import.png "Insert components")
 
-4. Select **Code (experimental)** tab and add a component from the list and click on **Import**. This adds the sample component in the **Components** menu
+4. Select **Code (experimental)** tab and add a component from the list and click on **Import**. This adds the sample component in the **Components** menu.
 
     ![Import sample component](media/import-component-add-sample-component.png "Insert sample component")
 
@@ -90,7 +83,7 @@ To add custom components to a canvas app:
 ## Known limitations
 
 1. Only the field type of components are supported in experimental preview and not the data set type. 
-2. Common Data Service dependent APIs including WebApi along with few other APIs are not available for this experimental preview. For individual API availability for canvas experimental preview release, see [PowerApps component framework API reference](reference/index.md)
+2. Common Data Service dependent APIs including WebAPI along with few other APIs are not available for this experimental preview. For individual API availability for experimental preview release, see [PowerApps component framework API reference](reference/index.md)
 
 ## See also
 
