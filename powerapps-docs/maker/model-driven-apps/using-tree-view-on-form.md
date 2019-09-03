@@ -1,7 +1,7 @@
 ---
 title: "Using the tree view in the form designer | MicrosoftDocs"
 ms.custom: ""
-ms.date: 04/21/2019
+ms.date: 08/26/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -24,8 +24,6 @@ search.app:
 ---
 
 # Using the tree view in the form designer
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
-
 The **Tree View** pane displays a visual hierarchy of the controls and fields on the form. The icons in the tree view help you quickly identify the type of field or control. 
 
 You can also use the tree view to select fields and controls present on the form. The tree view is helpful when you want to select hidden elements that are not visible on the form preview. 
@@ -41,10 +39,13 @@ You can expand or collapse nodes in the tree view to see or hide the elements wi
 
 ## See also
 [Overview of the model-driven form designer](form-designer-overview.md)  
-[Create or edit forms using the form designer](create-and-edit-forms.md)  
-[Add, move or delete fields on a form using the form designer](add-move-or-delete-fields-on-form.md)  
-[Add, move or delete sections on a form using the form designer](add-move-or-delete-sections-on-form.md)  
-[Add, move or delete tabs on a form using the form designer](add-move-or-delete-tabs-on-form.md)  
-[Properties available in the form designer](form-designer-properties.md)  
-[Configuring header properties in the form designer](form-designer-header-properties.md)   
-[Create and edit fields](../common-data-service/create-edit-field-portal.md)
+[Create, edit, or configure forms using the form designer](create-and-edit-forms.md)  
+[Add, configure, move, or delete fields on a form](add-move-or-delete-fields-on-form.md)  
+[Add, configure, move, or delete components on a form](add-move-configure-or-delete-components-on-form.md)  
+[Add, configure, move, or delete sections on a form](add-move-or-delete-sections-on-form.md)  
+[Add, configure, move, or delete tabs on a form](add-move-or-delete-tabs-on-form.md)  
+[Configure header properties in the form designer](form-designer-header-properties.md)  
+[Add and configure a sub-grid component on a form](form-designer-add-configure-subgrid.md)  
+[Add and configure a quick view component on a form](form-designer-add-configure-quickview.md)  
+[Configure a lookup component on a form](form-designer-add-configure-lookup.md)  
+[Create and edit fields](../common-data-service/create-edit-field-portal.md)  
