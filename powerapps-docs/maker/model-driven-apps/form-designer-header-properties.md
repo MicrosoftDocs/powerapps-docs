@@ -40,7 +40,7 @@ When a form does not specify header density or when a new form is created, the f
 > ![High density form header](media/form-header-high-density.png "High density form header")
     
 ## Low density header
-Low density form header allows users to directly edit the field values in the header. It also allows visualizations such as custom component and web resources.  
+Low density form header allows users to directly edit the field values in the header. It also allows visualizations such as custom components and web resources.  
   
 However, often this comes at the cost of key information being truncated or not readily visible. Low density header truncates the record title as well as field values displayed in the header. Often only one or two fields are directly visible in the header and the rest overflow and are displayed in a flyout requiring an extra click.
 
