@@ -22,7 +22,7 @@ search.app:
 
 ## Syntax
 
-`Xrm.Utility.getAllowedStatusTransitions(entityName,stateCode).then(successCallback, errorCallback)`
+`Xrm.Utility.getAllowedStatusTransitions(entityName,statusCode).then(successCallback, errorCallback)`
 
 ## Parameters
 
