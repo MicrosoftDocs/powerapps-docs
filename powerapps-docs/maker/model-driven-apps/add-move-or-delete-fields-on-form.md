@@ -33,7 +33,7 @@ Add, configure, move, or delete fields using the form designer.
 To add fields to a form, use the **Fields** pane. The **Fields** pane lets you search and filter to help you quickly find fields. It also includes the option to show only unused fields. 
 
 > [!div class="mx-imgBorder"] 
-> ![](media/FormDesignerFieldsPane.png "Fields pane")
+>    ![](media/FormDesignerFieldsPane.png "Fields pane")
 
 ### Add fields to a form using drag and drop
 
