@@ -38,8 +38,8 @@ To add tabs to a form, use the **Components** pane.
 ### Add tabs to a form using drag and drop
 
 1. Open the form designer to create or edit a form. More information: [Create a form](create-and-edit-forms.md#create-a-form) or [Edit a form](create-and-edit-forms.md#edit-a-form)
-2. In the command bar, select **Add control**, or in the left pane, select **Components**. 
-3. In the **Components** pane, select a tab control and drag it onto the form preview. As you drag the tab on the form preview, you will see drop targets where you can add the tab. 
+2. In the command bar, select **Add component**, or in the left pane, select **Components**. 
+3. In the **Components** pane, select a tab component and drag it onto the form preview. As you drag the tab on the form preview, you will see drop targets where you can add the tab. 
 4. Drop the tab in the location you want. Note the following: 
     - Tabs can be dropped before or after any existing tabs by hovering over the tab headers.
     - Tabs can also be dropped before or after the current tab by hovering over the left or right edge of the current tab.
@@ -52,8 +52,8 @@ To add tabs to a form, use the **Components** pane.
 2. In the form preview, select another existing tab or the form. Note the following:
     - When you select an existing tab, the new tab will be added after the existing tab. 
     - When you select the form, the new tab will be added as the last tab on the form. 
-3. In the command bar, select **Add control**, or in the left pane, select **Components**.  
-4. In the **Components** pane, select a tab control to add it to the form. Alternatively, select **...** next to the tab control you want, and then select **Add to form**. 
+3. In the command bar, select **Add component**, or in the left pane, select **Components**.  
+4. In the **Components** pane, select a tab component to add it to the form. Alternatively, select **...** next to the tab component you want, and then select **Add to form**. 
 5. Repeat steps 2-4 above if you want to add more tabs.
 6. In the command bar, select **Save** to save the form, or select **Publish** if you want to save and make your changes visible to users. 
 
