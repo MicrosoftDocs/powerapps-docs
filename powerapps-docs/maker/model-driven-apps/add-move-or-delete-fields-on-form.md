@@ -129,7 +129,7 @@ In addition to the field properties listed above, a lookup field provides these 
 2. In the command bar, select **Add field**, or in the left pane, select **Fields**. The **Fields** pane is open by default when the form designer is opened. 
 3. In the **Fields** pane, select **+ New field**.
 4. In the **New field** dialog, provide the **Display name** and **Name** for the field.
-5. In the **New field** dialog, select the **Data type** and any other required properties of the field.
+5. In the **New field** dialog, select the **Data type** and configure any other required properties of the field.
 
      > [!NOTE]
      >   -  Some field types are not available when creating a field from within the form designer. If a field type you are looking to create is not available, you can follow the steps outlined in [Create and edit fields for Common Data Service using PowerApps portal](../common-data-service/create-edit-field-portal.md)
