@@ -5,7 +5,7 @@ keywords: PowerApps component framework, Custom component, component Framework
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 09/03/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -57,6 +57,10 @@ Update the version tag in your pcfproj as follows:
 
 Update the version tag in your cdsproj as follows:  
 `<PackageReference Include="Microsoft.PowerApps.MSBuild.Solution" Version="0.*"/>`
+
+## Updating your project with the latest node modules
+
+Legacy projects require the latest npm modules to be retrieved in order to take advantage of the latest CLI capabilities. In order to update the node modules which you have previously downloaded, go to your project directory in the developer command prompt and run the command `npm update`. 
 
 ## Using ES6 Module Syntax
 
