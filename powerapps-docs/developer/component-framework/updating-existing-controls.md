@@ -16,7 +16,10 @@ ms.assetid: d2cbf58a-9112-45c2-b823-2c07a310714c
 
 [!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-If you are a PowerApps component framework Private Preview participant and have already built custom components, you will need to make some minor updates to make it compatible with the new ALM-centric project structures. To use the new PowerApps component framework build tools with your existing PowerApps component framework custom component source, a few changes are required.
+If you are a PowerApps component framework private preview participant for model-driven apps and have already built custom components, you need to make some minor updates to make it compatible with the new ALM-centric project structures. To use the new PowerApps CLI tooling with your existing PowerApps component framework custom component source, a few changes are required.
+
+> [!NOTE]
+> This topic is not applicable for updating custom components in canvas apps because the PowerApps CLI tooling is not available at the time of private preview for the model-driven apps.  
 
 ## Creating an empty project
 
