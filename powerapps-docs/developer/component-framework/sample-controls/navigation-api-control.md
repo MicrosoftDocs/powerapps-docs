@@ -7,6 +7,7 @@ ms.date: 04/23/2019
 ms.service: "powerapps"
 ms.topic: "article"
 ms.author: "nabuthuk" 
+author: Nkrb
 ---
 
 # Implementing Navigation API component
@@ -211,28 +212,28 @@ The `openAlertDialog` method provides the capability to display an alert dialog 
 In this sample when you click on the `openAlertDialogButton` an alert dialog pops up and sets the value of it to `Alert dialog closed` when the dialog is closed either using the `OK` button or the `X` button.
 
 > [!NOTE]
-> This is similar to calling the [Xrm.Navigation.openAlertDialog](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/clientapi/reference/xrm-navigation/openalertdialog) method in ClientAPI.  
+> This is similar to calling the [Xrm.Navigation.openAlertDialog](https://docs.microsoft.com/dynamics365/customer-engagement/developer/clientapi/reference/xrm-navigation/openalertdialog) method in ClientAPI.  
 
 The `openConfirmDialog` method provides the ability to display an alert dialog containing a message and two buttons. You can use this method to implement different logic based on the button clicked. You can implement the success callback which is called when the dialog is closed by clicking either of the buttons.
   
 This sample shows you a confirm dialog when you click on the `openConfirmDialogButton` and sets the value of it to `Ok` or `Cancel`, or `X` depending on the button that was clicked.
 
 > [!NOTE]
-> This is similar to calling the [Xrm.Navigation.openConfirmDialog](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/clientapi/reference/xrm-navigation/openconfirmdialog) method in ClientAPI.
+> This is similar to calling the [Xrm.Navigation.openConfirmDialog](https://docs.microsoft.com/dynamics365/customer-engagement/developer/clientapi/reference/xrm-navigation/openconfirmdialog) method in ClientAPI.
   
 The `openFile` method provides the ability to open a file. You’d need to pass in the file object which has the filename, content, mimetype and the filesize. You can also pass in the optional parameter of the mode you want to open the file as 1 or 2, 1 being the default which opens the file in read or open mode.
   
 This sample opens a file named `SampleDemo.txt` in save mode on clicking the `openFileButton`.
 
 > [!NOTE]
-> This is similar to calling the [Xrm.Navigation.openFile](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/clientapi/reference/xrm-navigation/openfile) method in ClientAPI.
+> This is similar to calling the [Xrm.Navigation.openFile](https://docs.microsoft.com/dynamics365/customer-engagement/developer/clientapi/reference/xrm-navigation/openfile) method in ClientAPI.
 
 The `openUrl` method provides the ability to open a URL. You need to pass the URL as a string to the method and also pass the optional parameters of height, width and openInNewWindow as true if you want the URL to be opened in a new window.
   
 This sample opens a new window and loads the microsoft.com home page on clicking the `openUrlButton`.
 
 > [!NOTE]
-> This is similar to calling the [Xrm.Navigation.openUrl](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/clientapi/reference/xrm-navigation/openurl) method in ClientAPI.
+> This is similar to calling the [Xrm.Navigation.openUrl](https://docs.microsoft.com/dynamics365/customer-engagement/developer/clientapi/reference/xrm-navigation/openurl) method in ClientAPI.
 
 ### Related topics
 

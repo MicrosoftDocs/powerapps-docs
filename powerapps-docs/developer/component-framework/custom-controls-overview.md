@@ -7,13 +7,14 @@ ms.service: "powerapps"
 ms.topic: "article"
 ms.assetid: 135481cd-4583-4e49-8f58-02f32a9b054a
 ms.author: "nabuthuk"
+author: Nkrb
 ---
 
 # What are custom components?
 
 [!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-Custom components are a type of solution component, which means they can be included in a solution and installed in different environments. More information: [Package and distribute extensions using solutions](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/package-distribute-extensions-use-solutions).
+Custom components are a type of solution component, which means they can be included in a solution and installed in different environments. More information: [Package and distribute extensions using solutions](https://docs.microsoft.com/dynamics365/customer-engagement/developer/package-distribute-extensions-use-solutions).
 
 You add custom components by including them in a solution and then importing it into the system. Once they are in the system, admin and system customizers can configure form fields, sub-grids, views, and dashboard sub-grids to use them in place of default component.
 
@@ -63,7 +64,7 @@ controlObj.init(context,notifyOutputChanged,state,container);
 |---|---|
 |context| Contains all the information about how the component is configured and all the parameters that can be used within the component along with the [framework APIs](reference/index.md). For example, the `context.parameters.["property name from manifest"]` can be used to access the input property.|
 |notifyOutputChanged |Function that alerts the framework that the component has new outputs ready to be retrieved asynchronously.|
-|state|Contains component data from the previous page load in the current session if control explicitly stored it earlier using `setControlState API`.|
+|state|Contains component data from the previous page load in the current session if component explicitly stored it earlier using `setControlState API`.|
 |container|An HTML div element to which you will append the HTML elements for the UI that defines your component. To display the value in the UI, you must get the data from `context.parameters.controlValue object`.|
 
 ### User changes data

@@ -2,7 +2,7 @@
 title: "Retrieve related entities with a query (Common Data Service)| Microsoft Docs"
 description: "ead how you can retrieve related entities by expanding the navigation properties."
 ms.custom: ""
-ms.date: 02/06/2019
+ms.date: 07/15/2019
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -42,7 +42,7 @@ The following example demonstrates how to retrieve the contact for all the accou
 **Request**  
 
 ```http 
-GET [Organization URI]/api/data/v9.0/accounts?$select=name&$expand=primarycontactid($select=contactid,fullname) HTTP/1.1  
+GET [Organization URI]/api/data/v9.1/accounts?$select=name&$expand=primarycontactid($select=contactid,fullname) HTTP/1.1  
 Accept: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
@@ -56,7 +56,7 @@ Content-Type: application/json; odata.metadata=minimal
 OData-Version: 4.0  
   
 {  
-   "@odata.context":"[Organization URI]/api/data/v9.0/$metadata#accounts(name,primarycontactid,primarycontactid(contactid,fullname))",
+   "@odata.context":"[Organization URI]/api/data/v9.1/$metadata#accounts(name,primarycontactid,primarycontactid(contactid,fullname))",
    "value":[  
       {  
          "@odata.etag":"W/\"513475\"",
@@ -157,7 +157,7 @@ Instead of returning the related entities for entity sets, you can also return r
  **Request**
 
 ```http  
-GET [Organization URI]/api/data/v9.0/accounts?$select=name&$expand=primarycontactid/$ref HTTP/1.1  
+GET [Organization URI]/api/data/v9.1/accounts?$select=name&$expand=primarycontactid/$ref HTTP/1.1  
 Accept: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
@@ -171,7 +171,7 @@ Content-Type: application/json; odata.metadata=minimal
 OData-Version: 4.0  
   
 {  
-   "@odata.context":"[Organization URI]/api/data/v9.0/$metadata#accounts(name,primarycontactid)",
+   "@odata.context":"[Organization URI]/api/data/v9.1/$metadata#accounts(name,primarycontactid)",
    "value":[  
       {  
          "@odata.etag":"W/\"513475\"",
@@ -179,7 +179,7 @@ OData-Version: 4.0
          "_primarycontactid_value":"9cdbf27c-8efb-e511-80d2-00155db07c77",
          "accountid":"36dbf27c-8efb-e511-80d2-00155db07c77",
          "primarycontactid":{  
-            "@odata.id":"[Organization URI]/api/data/v9.0/contacts(9cdbf27c-8efb-e511-80d2-00155db07c77)"
+            "@odata.id":"[Organization URI]/api/data/v9.1/contacts(9cdbf27c-8efb-e511-80d2-00155db07c77)"
          }
       },
       {  
@@ -188,7 +188,7 @@ OData-Version: 4.0
          "_primarycontactid_value":"9edbf27c-8efb-e511-80d2-00155db07c77",
          "accountid":"38dbf27c-8efb-e511-80d2-00155db07c77",
          "primarycontactid":{  
-            "@odata.id":"[Organization URI]/api/data/v9.0/contacts(9edbf27c-8efb-e511-80d2-00155db07c77)"
+            "@odata.id":"[Organization URI]/api/data/v9.1/contacts(9edbf27c-8efb-e511-80d2-00155db07c77)"
          }
       },
       {  
@@ -197,7 +197,7 @@ OData-Version: 4.0
          "_primarycontactid_value":"a0dbf27c-8efb-e511-80d2-00155db07c77",
          "accountid":"3adbf27c-8efb-e511-80d2-00155db07c77",
          "primarycontactid":{  
-            "@odata.id":"[Organization URI]/api/data/v9.0/contacts(a0dbf27c-8efb-e511-80d2-00155db07c77)"
+            "@odata.id":"[Organization URI]/api/data/v9.1/contacts(a0dbf27c-8efb-e511-80d2-00155db07c77)"
          }
       },
       {  
@@ -206,7 +206,7 @@ OData-Version: 4.0
          "_primarycontactid_value":"a2dbf27c-8efb-e511-80d2-00155db07c77",
          "accountid":"3cdbf27c-8efb-e511-80d2-00155db07c77",
          "primarycontactid":{  
-            "@odata.id":"[Organization URI]/api/data/v9.0/contacts(a2dbf27c-8efb-e511-80d2-00155db07c77)"
+            "@odata.id":"[Organization URI]/api/data/v9.1/contacts(a2dbf27c-8efb-e511-80d2-00155db07c77)"
          }
       },
       {  
@@ -215,7 +215,7 @@ OData-Version: 4.0
          "_primarycontactid_value":"a0dbf27c-8efb-e511-80d2-00155db07c77",
          "accountid":"3edbf27c-8efb-e511-80d2-00155db07c77",
          "primarycontactid":{  
-            "@odata.id":"[Organization URI]/api/data/v9.0/contacts(a0dbf27c-8efb-e511-80d2-00155db07c77)"
+            "@odata.id":"[Organization URI]/api/data/v9.1/contacts(a0dbf27c-8efb-e511-80d2-00155db07c77)"
          }
       },
       {  
@@ -224,7 +224,7 @@ OData-Version: 4.0
          "_primarycontactid_value":"a6dbf27c-8efb-e511-80d2-00155db07c77",
          "accountid":"40dbf27c-8efb-e511-80d2-00155db07c77",
          "primarycontactid":{  
-            "@odata.id":"[Organization URI]/api/data/v9.0/contacts(a6dbf27c-8efb-e511-80d2-00155db07c77)"
+            "@odata.id":"[Organization URI]/api/data/v9.1/contacts(a6dbf27c-8efb-e511-80d2-00155db07c77)"
          }
       },
       {  
@@ -233,7 +233,7 @@ OData-Version: 4.0
          "_primarycontactid_value":"a8dbf27c-8efb-e511-80d2-00155db07c77",
          "accountid":"42dbf27c-8efb-e511-80d2-00155db07c77",
          "primarycontactid":{  
-            "@odata.id":"[Organization URI]/api/data/v9.0/contacts(a8dbf27c-8efb-e511-80d2-00155db07c77)"
+            "@odata.id":"[Organization URI]/api/data/v9.1/contacts(a8dbf27c-8efb-e511-80d2-00155db07c77)"
          }
       },
       {  
@@ -242,7 +242,7 @@ OData-Version: 4.0
          "_primarycontactid_value":"aadbf27c-8efb-e511-80d2-00155db07c77",
          "accountid":"44dbf27c-8efb-e511-80d2-00155db07c77",
          "primarycontactid":{  
-            "@odata.id":"[Organization URI]/api/data/v9.0/contacts(aadbf27c-8efb-e511-80d2-00155db07c77)"
+            "@odata.id":"[Organization URI]/api/data/v9.1/contacts(aadbf27c-8efb-e511-80d2-00155db07c77)"
          }
       },
       {  
@@ -251,7 +251,7 @@ OData-Version: 4.0
          "_primarycontactid_value":"acdbf27c-8efb-e511-80d2-00155db07c77",
          "accountid":"46dbf27c-8efb-e511-80d2-00155db07c77",
          "primarycontactid":{  
-            "@odata.id":"[Organization URI]/api/data/v9.0/contacts(acdbf27c-8efb-e511-80d2-00155db07c77)"
+            "@odata.id":"[Organization URI]/api/data/v9.1/contacts(acdbf27c-8efb-e511-80d2-00155db07c77)"
          }
       },
       {  
@@ -260,7 +260,7 @@ OData-Version: 4.0
          "_primarycontactid_value":"aedbf27c-8efb-e511-80d2-00155db07c77",
          "accountid":"48dbf27c-8efb-e511-80d2-00155db07c77",
          "primarycontactid":{  
-            "@odata.id":"[Organization URI]/api/data/v9.0/contacts(aedbf27c-8efb-e511-80d2-00155db07c77)"
+            "@odata.id":"[Organization URI]/api/data/v9.1/contacts(aedbf27c-8efb-e511-80d2-00155db07c77)"
          }
       }
    ]
@@ -278,7 +278,7 @@ The following example retrieves the tasks assigned to the top 5 account records.
 **Request**
 
 ```http 
-GET [Organization URI]/api/data/v9.0/accounts?$top=5&$select=name&$expand=Account_Tasks($select%20=%20subject,%20scheduledstart) HTTP/1.1  
+GET [Organization URI]/api/data/v9.1/accounts?$top=5&$select=name&$expand=Account_Tasks($select%20=%20subject,%20scheduledstart) HTTP/1.1  
 Accept: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
@@ -292,7 +292,7 @@ Content-Type: application/json; odata.metadata=minimal
 OData-Version: 4.0  
   
 {  
-   "@odata.context":"[Organization URI]/api/data/v9.0/$metadata#accounts(name,Account_Tasks,Account_Tasks(subject,scheduledstart))",
+   "@odata.context":"[Organization URI]/api/data/v9.1/$metadata#accounts(name,Account_Tasks,Account_Tasks(subject,scheduledstart))",
    "value":[  
       {  
          "@odata.etag":"W/\"513475\"",
@@ -301,7 +301,7 @@ OData-Version: 4.0
          "Account_Tasks":[  
 
          ],
-         "Account_Tasks@odata.nextLink":"[Organization URI]/api/data/v9.0/accounts(36dbf27c-8efb-e511-80d2-00155db07c77)/Account_Tasks?$select%20=%20subject,%20scheduledstart"
+         "Account_Tasks@odata.nextLink":"[Organization URI]/api/data/v9.1/accounts(36dbf27c-8efb-e511-80d2-00155db07c77)/Account_Tasks?$select%20=%20subject,%20scheduledstart"
       },
       {  
          "@odata.etag":"W/\"513477\"",
@@ -310,7 +310,7 @@ OData-Version: 4.0
          "Account_Tasks":[  
 
          ],
-         "Account_Tasks@odata.nextLink":"[Organization URI]/api/data/v9.0/accounts(38dbf27c-8efb-e511-80d2-00155db07c77)/Account_Tasks?$select%20=%20subject,%20scheduledstart"
+         "Account_Tasks@odata.nextLink":"[Organization URI]/api/data/v9.1/accounts(38dbf27c-8efb-e511-80d2-00155db07c77)/Account_Tasks?$select%20=%20subject,%20scheduledstart"
       },
       {  
          "@odata.etag":"W/\"514074\"",
@@ -319,7 +319,7 @@ OData-Version: 4.0
          "Account_Tasks":[  
 
          ],
-         "Account_Tasks@odata.nextLink":"[Organization URI]/api/data/v9.0/accounts(3adbf27c-8efb-e511-80d2-00155db07c77)/Account_Tasks?$select%20=%20subject,%20scheduledstart"
+         "Account_Tasks@odata.nextLink":"[Organization URI]/api/data/v9.1/accounts(3adbf27c-8efb-e511-80d2-00155db07c77)/Account_Tasks?$select%20=%20subject,%20scheduledstart"
       },
       {  
          "@odata.etag":"W/\"513481\"",
@@ -328,7 +328,7 @@ OData-Version: 4.0
          "Account_Tasks":[  
 
          ],
-         "Account_Tasks@odata.nextLink":"[Organization URI]/api/data/v9.0/accounts(3cdbf27c-8efb-e511-80d2-00155db07c77)/Account_Tasks?$select%20=%20subject,%20scheduledstart"
+         "Account_Tasks@odata.nextLink":"[Organization URI]/api/data/v9.1/accounts(3cdbf27c-8efb-e511-80d2-00155db07c77)/Account_Tasks?$select%20=%20subject,%20scheduledstart"
       },
       {  
          "@odata.etag":"W/\"514057\"",
@@ -337,7 +337,7 @@ OData-Version: 4.0
          "Account_Tasks":[  
 
          ],
-         "Account_Tasks@odata.nextLink":"[Organization URI]/api/data/v9.0/accounts(3edbf27c-8efb-e511-80d2-00155db07c77)/Account_Tasks?$select%20=%20subject,%20scheduledstart"
+         "Account_Tasks@odata.nextLink":"[Organization URI]/api/data/v9.1/accounts(3edbf27c-8efb-e511-80d2-00155db07c77)/Account_Tasks?$select%20=%20subject,%20scheduledstart"
           }
        ]
     }
@@ -355,7 +355,7 @@ In this example, we are retrieving the contact and tasks assigned to the top 3 a
 **Request**
 
 ```http 
-GET [Organization URI]/api/data/v9.0/accounts?$top=3&$select=name&$expand=primarycontactid($select=contactid,fullname),Account_Tasks($select=subject,scheduledstart)  HTTP/1.1  
+GET [Organization URI]/api/data/v9.1/accounts?$top=3&$select=name&$expand=primarycontactid($select=contactid,fullname),Account_Tasks($select=subject,scheduledstart)  HTTP/1.1  
 Accept: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
@@ -369,7 +369,7 @@ Content-Type: application/json; odata.metadata=minimal
 OData-Version: 4.0  
   
 {  
-   "@odata.context":"[Organization URI]/api/data/v9.0/$metadata#accounts(name,primarycontactid,Account_Tasks,primarycontactid(contactid,fullname),Account_Tasks(subject,scheduledstart))",
+   "@odata.context":"[Organization URI]/api/data/v9.1/$metadata#accounts(name,primarycontactid,Account_Tasks,primarycontactid(contactid,fullname),Account_Tasks(subject,scheduledstart))",
    "value":[  
       {  
          "@odata.etag":"W/\"550614\"",
@@ -382,7 +382,7 @@ OData-Version: 4.0
          "Account_Tasks":[  
 
          ],
-         "Account_Tasks@odata.nextLink":"[Organization URI]/api/data/v9.0/accounts(5b9648c3-68f7-e511-80d3-00155db53318)/Account_Tasks?$select=subject,scheduledstart"
+         "Account_Tasks@odata.nextLink":"[Organization URI]/api/data/v9.1/accounts(5b9648c3-68f7-e511-80d3-00155db53318)/Account_Tasks?$select=subject,scheduledstart"
       },
       {  
          "@odata.etag":"W/\"550615\"",
@@ -395,7 +395,7 @@ OData-Version: 4.0
          "Account_Tasks":[  
 
          ],
-         "Account_Tasks@odata.nextLink":"[Organization URI]/api/data/v9.0/accounts(5d9648c3-68f7-e511-80d3-00155db53318)/Account_Tasks?$select=subject,scheduledstart"
+         "Account_Tasks@odata.nextLink":"[Organization URI]/api/data/v9.1/accounts(5d9648c3-68f7-e511-80d3-00155db53318)/Account_Tasks?$select=subject,scheduledstart"
       },
       {  
          "@odata.etag":"W/\"550616\"",
@@ -408,12 +408,15 @@ OData-Version: 4.0
          "Account_Tasks":[  
 
          ],
-         "Account_Tasks@odata.nextLink":"[Organization URI]/api/data/v9.0/accounts(5f9648c3-68f7-e511-80d3-00155db53318)/Account_Tasks?$select=subject,scheduledstart"
+         "Account_Tasks@odata.nextLink":"[Organization URI]/api/data/v9.1/accounts(5f9648c3-68f7-e511-80d3-00155db53318)/Account_Tasks?$select=subject,scheduledstart"
       }
    ]
 }
   
 ```
+## Filter collection values based on data in related entities
+
+The Web API allows you to use two lambda operators, which are `any` and `all` to evaluate a Boolean expression on a collection. More information: [Use Lambda operators](query-data-web-api.md#bkmk_LambdaOperators).
 
 ## See also
 

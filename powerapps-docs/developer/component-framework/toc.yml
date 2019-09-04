@@ -2,7 +2,7 @@
   items: 
   - name: Overview
     href: overview.md
-  - name: "What are custom components?"
+  - name: What are custom components
     href: custom-controls-overview.md
   - name: Get tooling
     href: get-powerapps-cli.md
@@ -14,10 +14,10 @@
     items:
     - name: Create and build a custom component 
       href: create-custom-controls-using-pcf.md
-    - name: Debug a custom component
-      href: debugging-custom-controls.md
     - name: Package a custom component
       href: import-custom-controls.md
+    - name: Debug a custom component
+      href: debugging-custom-controls.md
     - name: Add components to entities or fields
       href: add-custom-controls-to-a-field-or-entity.md
     - name: Update existing custom components
@@ -110,6 +110,21 @@
           href: reference/dataset/refresh.md
         - name: setSelectedRecordIds
           href: reference/dataset/setselectedrecordids.md
+      - name: Device
+        href: reference/device.md
+        items:
+        - name: captureAudio
+          href: reference/device/captureaudio.md
+        - name: captureImage
+          href: reference/device/captureimage.md
+        - name: captureVideo
+          href: reference/device/capturevideo.md
+        - name: getBarcodeValue
+          href: reference/device/getbarcodevalue.md
+        - name: getCurrentPosition
+          href: reference/device/getcurrentposition.md
+        - name: pickFile
+          href: reference/device/pickfile.md
       - name: DateFormattingInfo
         href: reference/dateformattinginfo.md
       - name: EntityReference
@@ -273,3 +288,7 @@
         href: manifest-schema-reference/type.md
       - name: type-group
         href: manifest-schema-reference/type-group.md
+      - name: feature-usage
+        href: manifest-schema-reference/feature-usage.md
+      - name: uses-feature
+        href: manifest-schema-reference/uses-feature.md

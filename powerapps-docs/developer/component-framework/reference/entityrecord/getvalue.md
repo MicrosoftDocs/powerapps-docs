@@ -3,6 +3,7 @@ title: getValue | Microsoft Docs
 description: 
 keywords:
 ms.author: nabuthuk
+author: Nkrb
 manager: kvivek
 ms.date: 04/23/2019
 ms.service: "powerapps"

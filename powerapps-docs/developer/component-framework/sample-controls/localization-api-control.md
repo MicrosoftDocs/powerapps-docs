@@ -7,14 +7,16 @@ ms.date: 04/23/2019
 ms.service: "powerapps"
 ms.topic: "article"
 ms.author: "nabuthuk" 
+author: Nkrb
 ---
+
 # Implementing localization API component
 
 [!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
 
 This sample showcases how localization is done for custom controls. In this sample, we use the [Increment component](increment-control.md) to localize the text that is displayed on the increment button based on the user’s selected language. 
 
-PowerApps component framework uses the concept of implementing String(resx) web resources that is used to manage the localized strings shown on any user interface. More information: [String(Resx) Webresources](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/resx-web-resources). 
+PowerApps component framework uses the concept of implementing String(resx) web resources that is used to manage the localized strings shown on any user interface. More information: [String(Resx) Webresources](https://docs.microsoft.com/dynamics365/customer-engagement/developer/resx-web-resources). 
 
 > [!div class="mx-imgBorder"]
 > ![Localization API component](../media/localization-api-control.png "Localization API component")

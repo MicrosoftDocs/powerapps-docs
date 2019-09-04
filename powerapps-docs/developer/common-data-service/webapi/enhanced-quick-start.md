@@ -185,7 +185,7 @@ These helpers are also used in the [SampleHelper.cs](https://github.com/Microsof
     > [!NOTE]
     > Do not add this within the `SampleHelpers` class itself.
 
-    This class ensures that the access token is refreshed each time an operation is performed. Each access token will expire after about an hour. This class implements a <xref:System.Net.Http.DelegatingHandler> that will work with the Azure Active Directory Authentication Library (ADAL) authentication context to call the `AquireToken` method everytime an operation is performed so you don't need to explicitly manage token expiration.
+    This class ensures that the access token is refreshed each time an operation is performed. Each access token will expire after about an hour. This class implements a <xref:System.Net.Http.DelegatingHandler> that will work with the Azure Active Directory Authentication Library (ADAL) authentication context to call the `AcquireToken` method everytime an operation is performed so you don't need to explicitly manage token expiration.
 
     ```csharp
     /// <summary>
