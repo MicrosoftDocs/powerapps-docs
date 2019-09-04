@@ -26,9 +26,6 @@ search.app:
 # Add, configure, move, or delete sections on a form 
 Add, configure, move, or delete sections on a form using the form designer. 
 
-> [!NOTE]
-> When adding or moving sections using drag and drop be aware that the form preview is responsive and may be rendering multiple tab columns as stacked. To ensure that the section being added or moved is in the correct tab column, drop or paste it anchored to another section that is already in that tab column.
-
 ## Add sections to a form
 To add sections to a form, use the **Components** pane. 
 
@@ -39,7 +36,8 @@ To add sections to a form, use the **Components** pane.
   >   Sections can only be added on main forms and quick view forms. More information: [Form types](types-forms.md)
 
 ### Add sections to a form using drag and drop
-
+> [!NOTE]
+> When adding or moving sections using drag and drop be aware that the form preview is responsive and may be rendering multiple tab columns as stacked. To ensure that the section being added or moved is in the correct tab column, drop or paste it anchored to another section that is already in that tab column.
 1. Open the form designer to create or edit a form. More information: [Create a form](create-and-edit-forms.md#create-a-form) or [Edit a form](create-and-edit-forms.md#edit-a-form)
 2. In the command bar, select **Add component**, or in the left pane, select **Components**. 
 3. In the **Components** pane, select a section component and drag it onto the form preview. As you drag the section on the form preview, you will see drop targets where you can add the section. 
