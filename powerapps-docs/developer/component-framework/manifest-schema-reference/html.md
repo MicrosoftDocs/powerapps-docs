@@ -31,7 +31,7 @@ Model-driven apps
 |Name|Description|Type|Required|Available for|
 |--|--|--|--|----------|
 |`path`|Relative path w.r.t manifest where HTML files are located|`string`|Yes|Model-driven apps|
-|`order`|The order in which HTML files must load|`Positive integer`|Optional|Model-driven apps|
+|`order`|The order in which HTML files should load|`Positive integer`|Optional|Model-driven apps|
 
 ## Parent Elements
 

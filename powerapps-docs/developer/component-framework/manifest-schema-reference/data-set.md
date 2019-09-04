@@ -26,8 +26,8 @@ ms.assetid: 9ffe8930-b290-4252-98d4-a1195b00205f
 
 |Name|Description|Type|Required|Available for|
 |--|--|--|--|-------|
-|`description-key`|Used in the customization screen as localized strings that describes the description of the property.|`string`|Optional|
-|`display-name-key`|Used in the customization screens as localized strings that describes the name of the property.|`string`|Yes|
+|`description-key`|Defines the description of the property.|`string`|Optional|
+|`display-name-key`|Defines the name of the property.|`string`|Yes|
 |`name`|Name of the grid|`string`|Yes|
 |`cds-data-set-options`|Displays the Commandbar, ViewSelector, QuickFindSearch if set to true |`boolean`|Yes|
 

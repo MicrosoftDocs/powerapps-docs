@@ -30,7 +30,7 @@ Model-driven apps
 
 |Name|Description|Type|Required|Available for|
 |--|--|--|--|-------|
-|`path`|Relative path w.r.t manifest where image files are located|`string`|Yes|Model-driven apps|
+|`path`|Relative path w.r.t manifest where the image files are located|`string`|Yes|Model-driven apps|
 
 ## Parent Elements
 

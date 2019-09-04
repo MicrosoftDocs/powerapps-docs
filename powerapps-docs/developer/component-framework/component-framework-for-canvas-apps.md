@@ -32,7 +32,7 @@ Component developers and app makers can utilize modern web practices and also ha
 
 ## Enable PowerApps component framework feature
 
-PowerApps code components need to be enabled in each environment where they are to be used.  To enable an environment to use PowerApps components inside its apps:
+PowerApps code components need to be enabled in each environment where they are to be used. To enable an environment to use PowerApps components inside its apps:
 
 1. Sign in to [PowerApps](https://powerapps.microsoft.com/en-us/).
 
@@ -50,7 +50,7 @@ PowerApps code components need to be enabled in each environment where they are 
 
 ## Implementing custom components
 
-After you enable the PowerApps component framework feature in your environment, you can start implementing the custom components. [Implement sample component](implementing-controls-using-typescript.md) topic demonstrates step by step process to create custom components right from implementing custom logic, manifest file, debug process, and creating a solution zip file.
+After you enable the PowerApps component framework feature in your environment, you can start implementing the custom components. [Implement sample component](implementing-controls-using-typescript.md) topic demonstrates the step by step process to create custom components right from implementing the custom logic, manifest file, debug process, and creating a solution zip file.
 
 > [!NOTE]
 > Implementing custom components is same for both model-driven apps and canvas apps (experimental preview). The only difference is adding the custom components. 
@@ -82,7 +82,7 @@ To add custom components to a canvas app:
 
 ## Known limitations
 
-1. Only the field type of components are supported in experimental preview and not the data set type. 
+1. Only the field type of components are supported in the experimental preview and not the data set type components. 
 2. Common Data Service dependent APIs including WebAPI along with few other APIs are not available for this experimental preview. For individual API availability for experimental preview release, see [PowerApps component framework API reference](reference/index.md)
 
 ## See also

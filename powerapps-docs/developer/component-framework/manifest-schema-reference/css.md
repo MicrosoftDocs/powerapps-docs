@@ -31,7 +31,7 @@ Model-driven apps and canvas apps (experimental preview)
 |Name|Description|Type|Required|Available for|
 |--|--|--|--|-----|
 |`path`|Relative path w.r.t manifest where CSS files are located|`string`|Yes|Model-driven apps and canvas apps (experimental preview) (experimental preview)|
-|`order`|The order in which the files must load|`Positive integer`|Optional|Model-driven apps and canvas apps (experimental preview) (experimental preview)|
+|`order`|The order in which the CSS files Should load|`Positive integer`|Optional|Model-driven apps and canvas apps (experimental preview) (experimental preview)|
 
 ## Parent Elements
 

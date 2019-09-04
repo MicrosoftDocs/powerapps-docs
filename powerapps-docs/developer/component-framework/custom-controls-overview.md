@@ -2,7 +2,7 @@
 title: "What are custom components? | MicrosoftDocs"
 description: "Use the PowerApps component framework to create custom components to provide enhanced user experience for users to view and work with data in forms, views, and dashboards."
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 09/05/2019
 ms.service: "powerapps"
 ms.topic: "article"
 ms.assetid: 135481cd-4583-4e49-8f58-02f32a9b054a
@@ -10,19 +10,19 @@ ms.author: "nabuthuk"
 author: Nkrb
 ---
 
-# What are custom components?
+# What are custom components
 
 [!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-Custom components are a type of solution component, which means they can be included in a solution and installed in different environments. More information: [Package and distribute extensions using solutions](https://docs.microsoft.com/dynamics365/customer-engagement/developer/package-distribute-extensions-use-solutions).
+Custom components are a type of solution components, which means they can be included in a solution file and installed in different environments. More information: [Package and distribute extensions using solutions](https://docs.microsoft.com/dynamics365/customer-engagement/developer/package-distribute-extensions-use-solutions).
 
-You add custom components by including them in a solution and then importing it into Common Data Service. Once they are in Common Data Service, system administrator and system customizers can configure form fields, sub-grids, views, and dashboard sub-grids to use them in place of default component.
+You add custom components by including them in a solution and then importing it into Common Data Service. Once they are in Common Data Service, system administrator and system customizers can configure on fields, sub-grids, views, and dashboard sub-grids to use them in place of default component.  You can also add these custom components in canvas apps. 
 
 Custom components are comprised of three components:
 
-1. Manifest
-2. Component implementation library
-3. Resources
+1. [Manifest](#manifest)
+2. [Component implementation library](#component-implementation-library)
+3. [Resources](#resources)
 
 ## Manifest
 

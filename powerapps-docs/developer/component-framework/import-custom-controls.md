@@ -38,7 +38,7 @@ Follow the steps below to create and import a solution file:
     > - If you encounter an error that says *Ambiguous project name* when running the `msbuild` command on your solution. Then double-check that your solution name and project name are not the same.
 
 4. After build completes, the generated solution files are located in `\bin\debug\`.
-5. You can now manually import the solution using the web portal or see [Authenticating to your organization](#authenticating-to-your-organization) and [Deployment](#deploying-custom-components) sections to import using PowerApps CLI commands.
+5. You can now manually import the solution into Common Data Service using the web portal or see [Authenticating to your organization](#authenticating-to-your-organization) and [Deployment](#deploying-custom-components) sections to import using PowerApps CLI commands.
 
 ## Authenticating to your organization
 
@@ -73,7 +73,7 @@ You can deploy the custom components directly from the PowerApps CLI by authenti
 
 ## Deploying custom components 
 
-After you have successfully created an authentication profile, you can start pushing your custom component to your environment of choice with all the latest changes. The `push` capability greatly speeds up the inner-developer cycle development inner loop as it bypasses the custom component versioning requirements and does not require that you build your solution (your cdsproj) in order to import the custom component. To use the push capability, follow below steps the steps below:
+After you have successfully created an authentication profile, you can start pushing the custom component to your environment of choice with all the latest changes. The `push` capability speeds up the inner-developer cycle development as it bypasses the custom component versioning requirements and does not require that you build your solution (your cdsproj) in order to import the custom component. To use the push capability, follow below the steps below:
 
 1.	Ensure that you have a valid authentication profile created
 2.	In your VS command prompt, go to the root directory containing of your custom component project in your VS command prompt
