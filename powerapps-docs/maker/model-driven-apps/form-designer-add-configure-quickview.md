@@ -30,12 +30,12 @@ A main form that displays the details of a record can use a quick view component
 You add a quick view component in the same way as you add any other component. More information: [Add, move or delete components on a form](add-move-configure-or-delete-components-on-form.md)
 
 ## Configure a quick view component
-These are the properties available to configure when using a quick view component on a form using the new form designer.
+These are the properties available to configure when using a quick view component on a form using the form designer.
 
 |Area   |Name  |Description  |
 |---------|---------|---------|
 |**Display options** | **Label** | The localizable label for the quick view visible to users. <br /><br /> This property is required. |
-| **Display options** | **Name** |  The unique name for the quick view that is used when referencing it in scripts. The name can contain only alphanumeric characters and underscores. <br />This property is required. |
+| **Display options** | **Name** |  The unique name for the quick view that is used when referencing it in scripts. The name can contain only alphanumeric characters and underscores. <br /> <br />This property is required. |
 | **Display options**  | **Hide label** |  When selected, the quick view label is hidden. |
 | **Display options**  | **Quick view forms** |  A list of quick view forms that are displayed to app users. <br /><br />To configure the list of quick view forms <br /><br /> Select **Select forms ...**, and then in the **Lookup** drop down select a lookup field where you want to display a quick view form. <br /><br />Depending on the lookup field you select in the **Lookup** drop-down you will see drop-downs that will let you select quick view forms for one or more entities. |
 
