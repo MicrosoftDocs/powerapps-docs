@@ -24,9 +24,7 @@ search.app:
 ---
 
 # Configure a lookup component on a form  
-A lookup field can be used to link to a record in another entity. A lookup component is automatically used when a lookup field is added to a form.
-
-This article outlines how makers can configure a lookup component using the form designer.
+A lookup field can be used to link to a record in another entity. A lookup component is automatically used when a lookup field is added to a form. Makers can configure a lookup component using the form designer.
 
 ## Configure a lookup component
 These are the properties available to configure when using a lookup component on a form using the form designer.
