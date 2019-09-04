@@ -26,9 +26,6 @@ search.app:
 # Add, configure, move, or delete components on a form  
 Using the form designer makers can easily add and configure popular components such as [sub-grid](form-designer-add-configure-subgrid.md), [quick view](form-designer-add-configure-quickview.md), arc knob, linear slider, and more.
 
-> [!NOTE]
-> When adding or moving components using drag and drop be aware that the form preview is responsive and may render multiple section columns as stacked. To ensure that the component that's added or moved is in the correct section column, drop or paste it anchored to another field or component that is already in that section column.
-
 ## Add components to a form
 To add components to a form, use the **Components** pane. The **Components** pane also lets you search to quickly find components.  
 
@@ -36,6 +33,8 @@ To add components to a form, use the **Components** pane. The **Components** pan
 > ![](media/FormDesignerComponentsPane.png "Components pane")
 
 ### Add components to a form using drag and drop
+> [!NOTE]
+> When adding or moving components using drag and drop be aware that the form preview is responsive and may render multiple section columns as stacked. To ensure that the component that's added or moved is in the correct section column, drop or paste it anchored to another field or component that is already in that section column.
 1. Open the form designer to create or edit a form. More information: [Create a form](create-and-edit-forms.md#create-a-form) or [Edit a form](create-and-edit-forms.md#edit-a-form)
 2. On the command bar, select **Add component**, or in the left pane, select **Components** to see a list of available components. You can also hover over a component in the list to see a preview image, description and other details of that component.
 3. In the **Components** pane, search or scroll to find the component that you want to add and then select it.
