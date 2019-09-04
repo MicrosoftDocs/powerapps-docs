@@ -35,7 +35,7 @@ Model-driven apps
 
 Type: `Promise<FileObject[]>`
 
-See [Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise) and [File](https://developer.mozilla.org/docs/Web/API/File)
+See [Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise) and [FileObject](../fileobject.md)
 
 ## Remarks
 

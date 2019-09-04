@@ -1,6 +1,6 @@
 ---
 title: "Xrm.WebApi.online.execute (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 11/21/2018
+ms.date: 09/03/2019
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -15,8 +15,6 @@ search.app:
   - D365CE
 ---
 # Xrm.WebApi.online.execute (Client API reference)
-
-
 
 [!INCLUDE[./includes/execute-description.md](./includes/execute-description.md)]
 
@@ -73,13 +71,15 @@ search.app:
 <td>No</td>
 <td><p>A function to call when operation is executed successfully. A response object is passed to the function with the following attributes:</p>
 <ul>
-<li><b>body</b>: (Optional). Object. Response body.</li>
+<li><b>body (Deprecated)</b>: Object. Response body.</li>
 <li><b>headers</b>: Object. Response headers.</li>
 <li><b>ok</b>: Boolean. Indicates whether the request was successful.</li>
 <li><b>status</b>: Number. Numeric value in the response status code. For example: <b>200</b></li>
 <li><b>statusText</b>: String. Description of the response status code. For example: <b>OK</b></li>
-<li><b>type</b>: String. Response type. Values are: the empty string (default), "arraybuffer", "blob", "document", "json", and "text".</b></li>
+<li><b>type (Deprecated)</b>: String. Response type. Values are: the empty string (default), "arraybuffer", "blob", "document", "json", and "text".</b></li>
 <li><b>url</b>: String. Request URL of the action, function, or CRUD request that was sent to the Web API endpoint.</b></li>
+<li><b>json</b>: Promise. Parameter to the callback delegate is of type any (JSON object).</b></li>
+<li><b>text</b>: Promise. Parameter to the callback delegate is a String.</b></li>
 </ul>
 </td>
 </tr>

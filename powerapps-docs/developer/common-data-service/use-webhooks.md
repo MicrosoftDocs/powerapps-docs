@@ -2,7 +2,7 @@
 title: "Use webhooks to create external handlers for server events (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "You can send data about events that occur on the server to a web application using webhooks. Webhooks is a lightweight HTTP pattern for connecting Web APIs and services with a publish/subscribe model. webhook senders notify receivers about events by making requests to receiver endpoints with some information about the events." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 09/04/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.topic: "article"
@@ -364,7 +364,7 @@ If your web hook is registered to run asynchronously, you can examine the system
 [Write a plug-in](write-plug-in.md)<br />
 [Register a plug-in](register-plug-in.md)<br />
 [Asynchronous service in Common Data Service](asynchronous-service.md)<br />
-[Sample: Azure aware custom plug-in](/org-service/samples/azure-aware-custom-plugin.md)<br />
+[Sample: Azure aware custom plug-in](org-service/samples/azure-aware-custom-plugin.md)<br />
 [Sample: Azure aware custom workflow activity](org-service/samples/azure-aware-custom-workflow-activity.md)<br />
 [Azure Functions](https://azure.microsoft.com/services/functions/)<br />
 [ServiceEndpoint Entity](reference/entities/serviceendpoint.md)<br />

@@ -138,6 +138,8 @@
           href: reference/factory/getpopupservice.md
         - name: requestRender
           href: reference/factory/requestrender.md
+      - name: FileObject
+        href: reference/fileobject.md
       - name: Linking
         href: reference/linking.md
         items:
