@@ -409,7 +409,7 @@ The two options for filtering results based on values of collection-valued navig
 Lambda operators allow you to apply filter on values of collection properties for a link-entity. The below example retrieves the records of `systemuser` entity type that are linked with `team` and `teammembership` entity types, that means it retrieves `systemuser` records who are also administrators of a team whose name is "CITTEST".
 
 ```http
-GET [Organization URI]/api/data/v9.1/systemusers?$filter=(teammembership_association/any(t:t/name eq 'CITTEST'))&$select=fullname,businessunitid,title,address1_telephone1,positioned,systemuserid&$orderby= fullname
+GET [Organization URI]/api/data/v9.1/systemusers?$filter=(teammembership_association/any(t:t/name eq 'CITTEST'))&$select=fullname,businessunitid,title,address1_telephone1,systemuserid&$orderby= fullname
 Accept: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
