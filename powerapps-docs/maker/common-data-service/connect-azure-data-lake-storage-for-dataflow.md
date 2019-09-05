@@ -28,45 +28,47 @@ search.app:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-You can configure dataflows to store their data in your organization’s Azure Data Lake Storage Gen2 account. This article describes the general steps necessary to do so, and provides guidance and best practices along the way. There are some advantages to configuring dataflows to store their definitions and datafiles in your data lake, including the following:
+You can configure dataflows to store their data in your organization’s Azure Data Lake Storage Gen2 account. This article describes the general steps necessary to do so, and provides guidance and best practices along the way. 
 
-- Azure Data Lake Storage Gen2 provides an enormously scalable storage facility for data
-- Dataflow data and definition files can be leveraged by your IT department's developers to leverage Azure Data and artificial intelligence (AI) services as demonstrated in the GitHub samples from Azure Data Services
-- Enables developers in your organization to integrate dataflow data into internal applications, and line-of-business solutions, using developer resources for dataflows and Azure
+There are some advantages to configuring dataflows to store their definitions and datafiles in your data lake, including the following:
+- Azure Data Lake Storage Gen2 provides an enormously scalable storage facility for data.
+- Dataflow data and definition files can be leveraged by your IT department's developers to leverage Azure Data and artificial intelligence (AI) services as demonstrated in the GitHub samples from Azure Data Services.
+- Enables developers in your organization to integrate dataflow data into internal applications, and line-of-business solutions, using developer resources for dataflows and Azure.
 
 > [!IMPORTANT]
 > You should not change files created by dataflows in your organization’s lake or add files to a dataflow’s CDM Folder. Changing files might damage dataflows or alter their behavior and is not supported. Power Platform Dataflows only grants read access to files it creates in the lake. If you authorize other people or services to the filesystem used by Power Platform Dataflows, only grant them read access to files or folders in that filesystem.
 
 ## Requirements
 To use Azure Data Lake Storage Gen2 for dataflows, you need the following:
-- A PowerApps environment – any PowerApps plan will allow you to create dataflows with Azure Data Lake Storage Gen2 as a destination, you will need to be authorized the environment as a maker. 
-- An Azure subscription - you need an Azure subscription to use Azure Data Lake Storage Gen2
-- Resource group - use a resource group you already have, or you can create a new one
-- An Azure Storage account with Data Lake Storage Gen2 feature enabled
+- A PowerApps environment. Any PowerApps plan will allow you to create dataflows with Azure Data Lake Storage Gen2 as a destination. You will need to be authorized in the environment as a maker. 
+- An Azure subscription. You need an Azure subscription to use Azure Data Lake Storage Gen2.
+- A resource group. Use a resource group you already have, or you can create a new one.
+- An Azure Storage account. The storage account must have the Data Lake Storage Gen2 feature enabled.
 
 > [!TIP]
-> If you don't have an Azure subscription, create a free account before you begin.
+> If you don't have an Azure subscription, [create a free trial account](https://azure.microsoft.com/free/) before you begin.
 
 ## Prepare your Azure Data Lake Storage Gen2 for Power Platform Dataflows
-Before you can configure Power BI with an Azure Data Lake Storage Gen2 account, you must create and configure a storage account. Let's take a look at the requirements for Power Platform Dataflows:
-1.	The storage account must be created in the same AAD tenant as your PowerApps tenant.
-2.	It is recommended that the storage account is created in the same region as the PowerApps environment you plan to use it in. To determine where you PowerApps environment is contact your environment admin.
+Before you configure Power BI with an Azure Data Lake Storage Gen2 account, you must create and configure a storage account. Here are the requirements for Power Platform Dataflows:
+1.	The storage account must be created in the same Azure Active Directory tenant as your PowerApps tenant.
+2.	We recommended that the storage account is created in the same region as the PowerApps environment you plan to use it in. To determine where you PowerApps environment is contact your environment admin.
 3.	The storage account must have the Hierarchical Name Space feature enabled.
 4.	You must must be granted an Owner role on the storage account.
-The following sections walk through the steps necessary to configure your Azure Data Lake Storage Gen2 account in detail.
+
+The following sections walk through the steps necessary to configure your Azure Data Lake Storage Gen2 account.
 
 ## Create the storage account
-Follow the steps in the Create an Azure Data Lake Storage Gen2 storage account article.
-1.	Make sure you select the same location as your Power BI tenant, and set your storage as StorageV2 (general purpose v2)
-2.	Make sure you enable the hierarchical namespace feature
-3.	It is recommended to set replication setting to Read-access geo-redundant storage (RA-GRS)
+Follow the steps in the [Create an Azure Data Lake Storage Gen2 storage account](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-quickstart-create-account) article.
+1.	Make sure you select the same location as your Power BI tenant, and set your storage as StorageV2 (general purpose v2).
+2.	Make sure you enable the hierarchical namespace feature. 
+3.	We recommend that you set the replication setting to Read-access geo-redundant storage (RA-GRS).
 
 ## Create a Cross-Origin Resource Sharing (CORS) rule for the Athena service
 
 > [!NOTE]
-> Power Platform Dataflows leveraged the Athena service to connect a Data Lake to a PowerApps environment. In this section, you are required to grant the Athena service a role to the storage account, so it can be configured for Dataflow use
+> Power Platform Dataflows leverage the Athena service to connect a Data Lake to a PowerApps environment. In this section, you are required to grant the Athena service a role to the storage account, so it can be configured for Dataflow use.
 
-Next, you need to enable the Athena service access the storage account via web browser and the PowerApps portal. Web browsers implement a security restriction known as same-origin policy that prevents a web page from calling APIs in a different domain; CORS provides a secure way to allow one domain (the origin domain) to call APIs in another domain. See the CORS specification for details on CORS.
+Next, you need to enable the Athena service access the storage account via web browser and the PowerApps portal. Web browsers implement a security restriction known as [same-origin policy](http://www.w3.org/Security/wiki/Same_Origin_Policy) that prevents a web page from calling APIs in a different domain; CORS provides a secure way to allow one domain (the origin domain) to call APIs in another domain. For more information about CORS, see the [CORS specification](http://www.w3.org/TR/cors/).
 
 Follow the steps in the storage account, you just created, settings page in the Azure Portal. In the CORS menu item, select the Blob service section and enter these details. 
 
