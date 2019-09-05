@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
-ms.date: 11/14/2018
+ms.date: 08/15/2019
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -299,6 +299,8 @@ Other elements include:
 
 **[Set](functions/function-set.md)** – Sets the value of a global variable.
 
+**[SetFocus](functions/function-setfocus.md)** – Moves input focus to a specific control.
+
 **[ShowColumns](functions/function-table-shaping.md)** – Returns a table with only selected columns.
 
 **[Shuffle](functions/function-shuffle.md)** – Randomly reorders the records of a table.
@@ -372,6 +374,8 @@ Other elements include:
 
 ## W
 **[Weekday](functions/function-datetime-parts.md)** – Retrieves the weekday portion of a date/time value.
+
+**[With](functions/function-with.md)** – Calculates values and performs actions for a single record, including inline records of named values.
 
 ## Y
 **[Year](functions/function-datetime-parts.md)** – Retrieves the year portion of a date/time value.  

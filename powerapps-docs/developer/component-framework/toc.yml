@@ -2,7 +2,7 @@
   items: 
   - name: Overview
     href: overview.md
-  - name: "What are custom components?"
+  - name: What are custom components
     href: custom-controls-overview.md
   - name: Get tooling
     href: get-powerapps-cli.md
@@ -14,10 +14,10 @@
     items:
     - name: Create and build a custom component 
       href: create-custom-controls-using-pcf.md
-    - name: Debug a custom component
-      href: debugging-custom-controls.md
     - name: Package a custom component
       href: import-custom-controls.md
+    - name: Debug a custom component
+      href: debugging-custom-controls.md
     - name: Add components to entities or fields
       href: add-custom-controls-to-a-field-or-entity.md
     - name: Update existing custom components
@@ -136,6 +136,8 @@
           href: reference/factory/getpopupservice.md
         - name: requestRender
           href: reference/factory/requestrender.md
+      - name: FileObject
+        href: reference/fileobject.md
       - name: Linking
         href: reference/linking.md
         items:

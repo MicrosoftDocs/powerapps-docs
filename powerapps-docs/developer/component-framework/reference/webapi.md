@@ -1,5 +1,5 @@
 ---
-title: WebApi | Microsoft Docs
+title: WebAPI | Microsoft Docs
 description: 
 keywords:
 ms.author: nabuthuk
@@ -13,7 +13,7 @@ ms.topic: "article"
 ms.assetid: f6e1aca7-7415-42a2-8ca2-44c962cdc90a
 ---
 
-# WebApi
+# WebAPI
 
 [!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
 
