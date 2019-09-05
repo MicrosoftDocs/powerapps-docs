@@ -31,7 +31,7 @@ Adding a tab on an entity main form to display SharePoint documents helps users 
 > [!IMPORTANT]
 > To use this feature you must enable document management. More information: [Manage your documents using SharePoint](/dynamics365/customer-engagement/admin/manage-documents-using-sharepoint)
 
-## Add the Documents tab in the FormXML 
+## Add the documents tab in the FormXML 
 1.	Create a new solution. Sign-in to PowerApps and go to **Solutions**, select **New solution** and then enter the required and optional information. More information: [Create a solution](../common-data-service/create-solution.md)
 2. Add the entity to the solution where you want to add the documents tab on the main form. All standard and custom entities are supported. More information: [Add an existing component to a solution](/powerapps/maker/common-data-service/use-solution-explorer#add-an-existing-component-to-a-solution)
 3. Include the form for the entity in the solution, such as the main form for the account entity. Next to the entity, select **...**, and then select **Edit**. Select the **Forms** tab. If the form you want is missing, add it.   
@@ -63,7 +63,7 @@ Adding a tab on an entity main form to display SharePoint documents helps users 
 13. Open the solution.xml file and increment the **Version** element value. For example, from *1.1.0.0* to *1.2.0.0*. 
 14. Package all solution files into a compressed (zipped) folder and import in to your environment. If you receive an error that you must delete the previous solution, do so. More information: [Import, update, and upgrade a solution](../common-data-service/import-update-export-solutions.md) 
 
-## XML sample for adding the Documents tab to a form
+## XML sample for adding the documents tab to a form
 ```xml
   <control id="DocumentSubGrid" classid="{E7A81278-8635-4d9e-8D4D-59480B391C5B}" indicationOfSubgrid="true" uniqueid="{9cd66b5c-8b7a-6433-c5a5-46a7245dd534}"> 
     <parameters> 
