@@ -198,28 +198,28 @@ You must use the full name of the function and include the names of the paramete
 GET [Organization URI]/api/data/v9.0/accounts?$select=name,accountnumber&$filter=Microsoft.Dynamics.CRM.LastXHours(PropertyName=@p1,PropertyValue=@p2)&@p1='modifiedon'&@p2=12  
 ```  
 
-Query functions have some limitations. One of them is that you cannot use the `not` operator to negate Query functions.
+Query functions have some limitations. One of them is that you cannot use the `not` operator to negate query functions.
 
-For example, the following query using <xref href="Microsoft.Dynamics.CRM.EqualUserId?text=EqualUserId Function" /> will fail with the error: Not operator along with the Custom Named Condition operators is not allowed.
+For example, the following query using <xref href="Microsoft.Dynamics.CRM.EqualUserId?text=EqualUserId Function" /> will fail with the error: `Not operator along with the Custom Named Condition operators is not allowed`.
 
 ```http
-{{webapiurl}}systemusers?$select=fullname,systemuserid&$filter=not Microsoft.Dynamics.CRM.EqualUserId(PropertyName=@p1)&@p1='systemuserid'
+GET [Organization URI]/api/data/v9.1/systemusers?$select=fullname,systemuserid&$filter=not Microsoft.Dynamics.CRM.EqualUserId(PropertyName=@p1)&@p1='systemuserid'
 ```
 Several Query functions have a companion negated query function. For example, use the <xref href="Microsoft.Dynamics.CRM.NotEqualUserId?text=NotEqualUserId Function" />. The following query will return the expected results:
 
 ```http
-{{webapiurl}}systemusers?$select=fullname,systemuserid&$filter=Microsoft.Dynamics.CRM.NotEqualUserId(PropertyName=@p1)&@p1='systemuserid'
+GET [Organization URI]/api/data/v9.1/systemusers?$select=fullname,systemuserid&$filter=Microsoft.Dynamics.CRM.NotEqualUserId(PropertyName=@p1)&@p1='systemuserid'
 ```
 
 Others query functions can be negated in different ways. For example rather than try to negate the <xref href="Microsoft.Dynamics.CRM.Last7Days?text=Last7Days Function" /> like this (which will fail):
 
 ```http
-{{webapiurl}}accounts?$select=name&$filter=not Microsoft.Dynamics.CRM.Last7Days(PropertyName=@p1)&@p1='createdon'
+GET [Organization URI]/api/data/v9.1/accounts?$select=name&$filter=not Microsoft.Dynamics.CRM.Last7Days(PropertyName=@p1)&@p1='createdon'
 ```
-Use the <xref href="Microsoft.Dynamics.CRM.OlderThanXDays?text=OlderThanXDays Function" /> like this:
+Use the <xref href="Microsoft.Dynamics.CRM.OlderThanXDays?text=OlderThanXDays Function" /> as given below:
 
 ```http
-{{webapiurl}}accounts?$select=name&$filter=Microsoft.Dynamics.CRM.OlderThanXDays(PropertyName=@p1,PropertyValue=@p2)&@p1='createdon'&@p2=7
+GET [Organization URI]/api/data/v9.1/accounts?$select=name&$filter=Microsoft.Dynamics.CRM.OlderThanXDays(PropertyName=@p1,PropertyValue=@p2)&@p1='createdon'&@p2=7
 ```
 
 ### See also
