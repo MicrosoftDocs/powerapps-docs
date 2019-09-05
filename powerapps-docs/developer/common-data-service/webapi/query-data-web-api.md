@@ -2,7 +2,7 @@
 title: "Query Data using the Web API (Common Data Service)| Microsoft Docs"
 description: "Read about the various ways to query Common Data Service data using the Common Data Service Web API and various system query options that can be applied in these queries"
 ms.custom: ""
-ms.date: 09/02/2019
+ms.date: 09/05/2019
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -316,13 +316,6 @@ Accept: application/json
 OData-MaxVersion: 4.0  
 OData-Version: 4.0 
 ```
-
-> [!NOTE]
-> You cannot use `NOT` operator with a custom function such as [Microsoft.Dynamics.CRM.EqualUserId](/dynamics365/customer-engagement/web-api/equaluserid) function. For example, the query given below is not a valid query.
->
-> ```http
-> GET [Organization URI]/api/data/v9.1/accounts?$filter=NOT Microsoft.Dynamics.CRM.EqualUserId(Name='Contoso')
-> ```
 
 <a name="BKMK_FilterNavProperties"></a>
 
