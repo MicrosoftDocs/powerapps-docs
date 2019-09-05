@@ -207,7 +207,7 @@ For example, the following query using <xref href="Microsoft.Dynamics.CRM.EqualU
 ```http
 GET [Organization URI]/api/data/v9.1/systemusers?$select=fullname,systemuserid&$filter=not Microsoft.Dynamics.CRM.EqualUserId(PropertyName=@p1)&@p1='systemuserid'
 ```
-Several Query functions have a companion negated query function. For example, you can use the <xref href="Microsoft.Dynamics.CRM.NotEqualUserId?text=NotEqualUserId Function" />. The following query will return the expected results:
+Several query functions have a companion negated query function. For example, you can use the <xref href="Microsoft.Dynamics.CRM.NotEqualUserId?text=NotEqualUserId Function" />. The following query will return the expected results:
 
 ```http
 GET [Organization URI]/api/data/v9.1/systemusers?$select=fullname,systemuserid&$filter=Microsoft.Dynamics.CRM.NotEqualUserId(PropertyName=@p1)&@p1='systemuserid'
