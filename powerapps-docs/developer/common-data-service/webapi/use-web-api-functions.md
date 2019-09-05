@@ -202,7 +202,7 @@ GET [Organization URI]/api/data/v9.0/accounts?$select=name,accountnumber&$filter
 
 One of the limitations of query functions is that you cannot use the `not` operator to negate query functions.
 
-For example, the following query using <xref href="Microsoft.Dynamics.CRM.EqualUserId?text=EqualUserId Function" /> will fail with the error: **Not operator along with the Custom Named Condition operators is not allowed**.
+For example, the following query using <xref href="Microsoft.Dynamics.CRM.EqualUserId?text=EqualUserId Function" /> will fail with the error: `Not operator along with the Custom Named Condition operators is not allowed`.
 
 ```http
 GET [Organization URI]/api/data/v9.1/systemusers?$select=fullname,systemuserid&$filter=not Microsoft.Dynamics.CRM.EqualUserId(PropertyName=@p1)&@p1='systemuserid'
