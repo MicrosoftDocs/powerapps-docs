@@ -1311,7 +1311,9 @@
     - name: Create and use dataflows
       href: ./common-data-service/create-and-use-dataflows.md
     - name: Add data to an entity using Power Query
-      href: ./common-data-service/data-platform-cds-newentity-pq.md      
+      href: ./common-data-service/data-platform-cds-newentity-pq.md
+    - name: Connect Azure Data Lake for dataflow storage
+      href: ./common-data-service/connect-azure-data-lake-storage-for-dataflow.md      
     - name: Use an on-premises data gateway      
       href: ./common-data-service/using-dataflows-with-on-premises-data.md
   - name: License requirements for entities
