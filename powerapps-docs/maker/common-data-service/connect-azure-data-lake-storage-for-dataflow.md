@@ -43,7 +43,7 @@ To use Azure Data Lake Storage Gen2 for dataflows, you need the following:
 - A PowerApps environment. Any PowerApps plan will allow you to create dataflows with Azure Data Lake Storage Gen2 as a destination. You will need to be authorized in the environment as a maker. 
 - An Azure subscription. You need an Azure subscription to use Azure Data Lake Storage Gen2.
 - A resource group. Use a resource group you already have, or you can create a new one.
-- An Azure Storage account. The storage account must have the Data Lake Storage Gen2 feature enabled.
+- An Azure storage account. The storage account must have the Data Lake Storage Gen2 feature enabled.
 
 > [!TIP]
 > If you don't have an Azure subscription, [create a free trial account](https://azure.microsoft.com/free/) before you begin.
@@ -70,80 +70,81 @@ Follow the steps in the [Create an Azure Data Lake Storage Gen2 storage account]
 
 Next, you need to enable the Athena service access the storage account via web browser and the PowerApps portal. Web browsers implement a security restriction known as [same-origin policy](http://www.w3.org/Security/wiki/Same_Origin_Policy) that prevents a web page from calling APIs in a different domain; CORS provides a secure way to allow one domain (the origin domain) to call APIs in another domain. For more information about CORS, see the [CORS specification](http://www.w3.org/TR/cors/).
 
-Follow the steps in the storage account, you just created, settings page in the Azure Portal. In the CORS menu item, select the Blob service section and enter these details. 
+Follow the steps in the storage account you just created on the settings page in the Azure portal. In the CORS menu item, select the Blob service section and enter these details. 
 
 |Setting  |Value  |
 |---------|---------|
 |Allowed origins   | https://athena-ui-prod.trafficmanager.net     |
 |Allowed methods   |  DELETE, GET, HEAD, MERGE, POST, OPTIONS, PUT, PATCH   |
-|Allowed headers   | *        |
-|Exposed headers   | *        |
-|Max age |         *|
+|Allowed headers   | *    |
+|Exposed headers   | *    |
+|Max age |   *  |
 
 
-The following image shows the CORS Rule configured for the Athena Service.
+The following image shows the CORS rule configured for the Athena Service.
 ![CORS rule](media/dataflows-cores-rule.png)
 
 ## Connect your Azure Data Lake Storage Gen2 to PowerApps
-Once you've set up your Azure Data Lake Storage Gen2 account in the Azure portal, you are ready to connect it to a specific dataflow or a PowerApps environment from the PowerApps portal. Connecting the lake to an environment will allow other makers and admins in the environment to create dataflows that store their data in your organizations lake as well. 
+Once you've set up your Azure Data Lake Storage Gen2 account in the Azure portal, you are ready to connect it to a specific dataflow or a PowerApps environment. Connecting the lake to an environment allows other makers and admins in the environment to create dataflows that store their data in your organizations lake as well. 
 
-You connect your Azure Data Lake Storage Gen2 account with the following steps:
-1.	Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and verify which environment you're in, find the environment switcher near the right side of the header. 
-2. Click or tap the down arrow for Data near the left edge.
+To connect your Azure Data Lake Storage Gen2 account with the dataflow, following steps:
+1.	Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and verify which environment you're in. The environment switcher is located on the right side of the header. 
+2. On the left navigation pane, select the down arrow next to **Data**.
 
    ![PowerApps maker portal Data tab](media/powerapps-portal-data.png)
 
-3. In the list that appears, click or tap Dataflows, and then click or tap New Dataflow near the upper-right corner of the window.
+3. In the list that appears, select **Dataflows**, and then on the command bar select **New Dataflow**.
 
    ![Create a new dataflow](media/new-dataflow.png) 
 
-4. From there, you select analytical entities only to indicate you would like to store data in your organizations Azure Data Lake Store Gen2 account. 
+4. Select analytical entities you want. These entities indicate what data you want to store in your organization's Azure Data Lake Store Gen2 account. 
 
    ![Select analytical entities](media/select-analytical-entities.png)
 
-## Select the Storage Account to use for Dataflow storage
-If a storage account has not yet been associated with the environment, Link to data lake dialog will appear. You will need to sign in, and find the Data Lake you created in previous steps. In this example there is no lake associated with the environment so we will be prompted to add a lake. 
+## Select the storage account to use for dataflow storage
+If a storage account has not yet been associated with the environment, a **Link to data lake** dialog box appear. You will need to sign in and find the data lake you created in previous steps. In this example there's no data lake associated with the environment so a prompt occurs to add one. 
 
-1. Select storage account
-    The following screen will appear:
+1. Select storage account.
+    The **Select Storage Account** screen appears.
     ![Select storage account](media/select-storage-account.png)
-2. Select the Subscription ID of the Storage Account.
-3. Select the Resource Group name in which the storage account was created.
-4. Provide the Storage Account name.
+2. Select the **Subscription ID** of the storage account.
+3. Select the **Resource Group name** in which the storage account was created.
+4. Enter the **Storage Account name**.
 5. Select **Save**.
 
-Once those steps are successfully completed, your Azure Data Lake Storage Gen2 is connected to Power Platform Dataflows and you can continue to create a dataflow.
+Once these steps are successfully completed, your Azure Data Lake Storage Gen2 account is connected to Power Platform Dataflows and you can continue to create a dataflow.
 
 ## Considerations and limitations
-This feature is a preview feature, and its behavior may change as it approaches release. There are a few considerations and limitations to keep in mind when working with your dataflow storage:
+There are a few considerations and limitations to keep in mind when working with your dataflow storage.
 - Linking an Azure Data Lake Store Gen2 account for dataflow storage is not supported in the default environment.
-- Once a dataflow storage location is configured for a dataflow, it cannot be changed.
-- By default member of the environment can access dataflow data using the Power Platform Dataflows Connector. However, only the owners of a dataflow can access its files directly in Azure Data Lake Storage Gen2. To authorize additional people to access the dataflows data directly in the lake, you must authorize them to the dataflow’s CDM folder in the lake or the lake itself.
-- When a Dataflow is deleted, its CDM Folder in the lake will be deleted. It is not recommended to modify or add files to a dataflow’s CDM Folder.
+- Once a dataflow storage location is configured for a dataflow, it can't be changed.
+- By default, any member of the environment can access dataflow data using the Power Platform Dataflows Connector. However, only the owners of a dataflow can access its files directly in Azure Data Lake Storage Gen2. To authorize additional people to access the dataflows data directly in the lake, you must authorize them to the dataflow’s CDM folder in the data lake or the data lake itself.
+- When a dataflow is deleted, its CDM folder in the lake will also be deleted. We recommended that you don't modify or add files to a dataflow’s CDM Folder.
 
 ## Frequently asked questions
 *What if I had previously created dataflows in my organization’s Azure Data Lake Storage Gen2 and would like to change their storage location?*
 
-You cannot change the storage location of a dataflow after it was created.
+    You can't change the storage location of a dataflow after it was created.
 
 *When can I change the dataflow storage location of an environment?*
 
-Changing the environments dataflow storage location is not yet allowed 
+    Changing the environments dataflow storage location is not currently supported. 
 
 ## Next steps
-This article provided guidance on how to connect an Azure Data Lake Gen2 for dataflow storage. For additional information, take a look at the following articles:
-For more information about dataflows, CDM, and Azure Data Lake Storage Gen2, take a look at the following articles:
+This article provided guidance about how to connect an Azure Data Lake Gen2 account for dataflow storage. 
 
+For more information about dataflows, CDM, and Azure Data Lake Storage Gen2, see these articles:
 - [Self-service data prep in PowerApps](https://go.microsoft.com/fwlink/?linkid=2099972)
 - [Creating and using dataflows in PowerApps](https://go.microsoft.com/fwlink/?linkid=2100076)
 - [Connect Azure Data Lake Storage Gen2 for dataflow storage](https://go.microsoft.com/fwlink/?linkid=2099973)
 - [Add data to an entity in Common Data Service](https://go.microsoft.com/fwlink/?linkid=2100075)
 
-For more information about Azure storage, you can read these articles:
+For more information about Azure storage, see this article:
 - [Azure Storage security guide](https://docs.microsoft.com/azure/storage/common/storage-security-guide)
-For more information about the Common Data Model, you can read its overview article:
+
+For more information about the Common Data Model, see these articles:
 - [Common Data Model - overview](https://docs.microsoft.com/powerapps/common-data-model/overview) 
 - [CDM folders](https://go.microsoft.com/fwlink/?linkid=2045304)
 - [CDM model file definition](https://go.microsoft.com/fwlink/?linkid=2045521)
 
-And you can always try asking questions of the [PowerApps Community](https://go.microsoft.com/fwlink/?linkid=2099971).
+Ask you questions in the [PowerApps Community](https://go.microsoft.com/fwlink/?linkid=2099971).
