@@ -1,7 +1,7 @@
 ---
 title: "Custom virtual entity data providers (Common Data Service) | Microsoft Docs"
 description: "Using the Common Data Service Data SDK, .NET Developers have the option of creating custom virtual entity data providers to help integrate external data source types that are not supported by an existing data provider."
-ms.date: 10/31/2018
+ms.date: 09/05/2019
 ms.service: powerapps
 ms.topic: "article"
 applies_to: 
@@ -30,18 +30,11 @@ Using the Common Data Service Data SDK, .NET Developers have the option of creat
 Custom data providers require substantial development resources to create and maintain. You must have fundamental knowledge of the following areas:
 
 - The external data source schema and associated data access techniques.  This domain knowledge is specific to the external data source type.
-
-
-<!-- TODO:
-- Common Data Service metadata schema: More information: [The metadata and data models in Microsoft Dynamics 365](../metadata-data-models.md).
-- Common Data Service event system: More information: [Introduction to the event framework](../introduction-event-framework.md). 
-- Common Data Service plug-in architecture and development: More information: [Plug-in development](../plugin-development.md). -->
+- Common Data Service metadata schema: More information: [Work with metadata using code](../metadata-services.md).
+- Common Data Service event framework: More information: [Event Framework](../event-framework.md). 
+- Common Data Service plug-in architecture and development: More information: [Use plug-ins to extend business processes](../plug-ins.md).
 
 The `Microsoft.Xrm.Sdk.Data.dll` assembly is available as a NuGet package: [Microsoft.CrmSdk.Data](https://www.nuget.org/packages/Microsoft.CrmSdk.Data/)
-
-<!-- ## Data Provider Architecture -->
-<!-- TODO: it would be nice to have a more detailed architecture diagram of a data provider and add discussion. -->
-
 
 ## Categories of providers
 
@@ -96,11 +89,6 @@ If for any reason your code cannot achieve the expected result, you must throw t
 |<xref:Microsoft.Xrm.Sdk.Data.Exceptions.ObjectNotFoundException>|The specified record in the external data source does not exist.|
 |<xref:Microsoft.Xrm.Sdk.Data.Exceptions.TimeoutException>|The external operation did not complete within the allowed time; for example, the result of a HTTP status 408 from the external data service.|
 
-<!-- 
-  TODO:
-  To assist you in plug-in development, the Data SDK contains the _Plugin Profiler and Debugger_; for more information see [TBD]TODO: Obtain information on this tool, create subtopic. 
--->
-
 
 ### Plug-in registration
 
@@ -113,6 +101,11 @@ Unlike an ordinary plugin, you will only use the Plugin Registration Tool (PRT) 
 |[EntityDataSource](../reference/entities/entitydatasource.md)|Provides the entity context and any connection information required for the external data source, including any secrets required to authenticate.|
 
 When the metadata for your virtual entity is configured, your plugins are registered using the PRT and the correct configuration data is set in the **EntityDataProvider** and **EntityDataSource** entities, your virtual entity will start to respond to requests.
+
+### Debugging plug-ins
+
+A custom virtual entity provider is a type of plug-in. Use the information in these topics to debug plug-ins for custom virtual entity providers: [Debug Plug-ins](../debug-plug-in.md) and [Tutorial: Debug a plug-in](../tutorial-debug-plug-in.md).
+
 
 ### See also
 
