@@ -2,7 +2,7 @@
 title: "Query Data using the Web API (Common Data Service)| Microsoft Docs"
 description: "Read about the various ways to query Common Data Service data using the Common Data Service Web API and various system query options that can be applied in these queries"
 ms.custom: ""
-ms.date: 09/05/2019
+ms.date: 09/06/2019
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -304,14 +304,19 @@ OData-Version: 4.0
 
 The example given below shows how you can use the [/any operator](#bkmk_anyoperator) to retrieve all the account records which have:
 
-- any of their linked opportunity records' budget greater than or equal to 500, and
+- any of their linked opportunity records' budget greater than or equal to 300, and
 - the opportunity records' have no description, or
-- the opportunity records' description contains the term "*good*".
+- the opportunity records' description contains the term "*bad*".
 
 **Request**
 
 ```http
-GET [Organization URI]/api/data/v9.1/accounts?$select=name&$filter=not opportunity_customer_accounts/any(o:o/description eq null and o/budgetamount le 300 or contains(o/description, 'bad')) and opportunity_customer_accounts/any() and endswith(name,'{0}') HTTP/1.1
+GET [Organization URI]/api/data/v9.1/accounts?$select=name
+&$filter=not opportunity_customer_accounts/any(o:o/description eq null and 
+o/budgetamount le 300 or 
+contains(o/description, 'bad')) and 
+opportunity_customer_accounts/any() and 
+endswith(name,'{0}') HTTP/1.1
 Accept: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0 
