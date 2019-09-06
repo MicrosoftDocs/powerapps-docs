@@ -124,11 +124,11 @@ There are a few considerations and limitations to keep in mind when working with
 ## Frequently asked questions
 *What if I had previously created dataflows in my organization’s Azure Data Lake Storage Gen2 and would like to change their storage location?*
 
-    You can't change the storage location of a dataflow after it was created.
+   You can't change the storage location of a dataflow after it was created.
 
 *When can I change the dataflow storage location of an environment?*
 
-    Changing the environments dataflow storage location is not currently supported. 
+   Changing the environments dataflow storage location is not currently supported. 
 
 ## Next steps
 This article provided guidance about how to connect an Azure Data Lake Gen2 account for dataflow storage. 
