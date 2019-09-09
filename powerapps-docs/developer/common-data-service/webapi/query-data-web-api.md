@@ -273,7 +273,8 @@ The `all` operator returns `true` if the Boolean expression applied is `true` fo
 The example given below shows how you can retrieve all Account entity records that have all associated tasks closed.
 
 ```http
-GET [Organization URI]/api/data/v9.1/accounts?$select=name&$filter=Account_Tasks/all(o:o/statecode eq 1) HTTP/1.1
+GET [Organization URI]/api/data/v9.1/accounts?$select=name
+&$filter=Account_Tasks/all(o:o/statecode eq 1) HTTP/1.1
 Prefer: odata.include-annotations="*"
 Accept: application/json  
 OData-MaxVersion: 4.0  
@@ -283,7 +284,8 @@ OData-Version: 4.0
 The example given below shows how you can retrieve all Account entity records that have atleast one email with "sometext" in the subject and whose statecode is active.
 
 ```http
-GET [Organization URI]/api/data/v9.1/accounts?$select=name&$filter=Account_Emails/any(o:contains(o/subject,'sometext') and o/statecode eq 0) HTTP/1.1
+GET [Organization URI]/api/data/v9.1/accounts?$select=name
+&$filter=Account_Emails/any(o:contains(o/subject,'sometext') and o/statecode eq 0) HTTP/1.1
 Prefer: odata.include-annotations="*"
 Accept: application/json
 OData-MaxVersion: 4.0
@@ -293,7 +295,8 @@ OData-Version: 4.0
 The example given below shows how you can also create a nested query using `any` and `all` operators.
 
 ```http
-GET [Organization URI]/api/data/v9.1/accounts?$select=name&$filter=(contact_customer_accounts/any(c:c/jobtitle eq 'jobtitle' and c/opportunity_customer_contacts/any(o:o/description ne 'N/A'))) and endswith(name,'{0}') HTTP/1.1
+GET [Organization URI]/api/data/v9.1/accounts?$select=name
+&$filter=(contact_customer_accounts/any(c:c/jobtitle eq 'jobtitle' and c/opportunity_customer_contacts/any(o:o/description ne 'N/A'))) and endswith(name,'{0}') HTTP/1.1
 Prefer: odata.include-annotations="*"
 Accept: application/json
 OData-MaxVersion: 4.0
@@ -337,7 +340,8 @@ For example:
 **Request** 
  
 ```http 
-GET [Organization URI]/api/data/v9.1/accounts?$select=name&$filter=primarycontactid/contactid eq a0dbf27c-8efb-e511-80d2-00155db07c77 HTTP/1.1  
+GET [Organization URI]/api/data/v9.1/accounts?$select=name
+&$filter=primarycontactid/contactid eq a0dbf27c-8efb-e511-80d2-00155db07c77 HTTP/1.1  
 Accept: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
@@ -372,7 +376,8 @@ OData-Version: 4.0
 **Request**  
 
 ```http 
-GET [Organization URI]/api/data/v9.1/accounts?$select=name&$filter=parentaccountid/accountid eq 3adbf27c-8efb-e511-80d2-00155db07c77  
+GET [Organization URI]/api/data/v9.1/accounts?$select=name
+&$filter=parentaccountid/accountid eq 3adbf27c-8efb-e511-80d2-00155db07c77  
 Accept: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
@@ -414,7 +419,9 @@ The two options for filtering results based on values of collection-valued navig
 Lambda operators allow you to apply filter on values of collection properties for a link-entity. The below example retrieves the records of `systemuser` entity type that are linked with `team` and `teammembership` entity types, that means it retrieves `systemuser` records who are also administrators of a team whose name is "CITTEST".
 
 ```http
-GET [Organization URI]/api/data/v9.1/systemusers?$filter=(teammembership_association/any(t:t/name eq 'CITTEST'))&$select=fullname,businessunitid,title,address1_telephone1,systemuserid&$orderby= fullname
+GET [Organization URI]/api/data/v9.1/systemusers?$filter=(teammembership_association/any(t:t/name eq 'CITTEST'))
+&$select=fullname,businessunitid,title,address1_telephone1,systemuserid
+&$orderby= fullname
 Accept: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
