@@ -51,9 +51,9 @@ Sometimes the database creation can take time and the correct status might not r
 
 If you keep getting the create database prompt or your data isn't quite ready prompt, you can try refreshing the PowerApps home page before selecting the Portal from blank (Preview) tile.
 
-## I'm getting an error that I don't have required permissions to create Azure Active Directory applications in this tenant.
+## I'm getting an error that I don't have required permissions to create Azure AD applications.
 
-When you create a portal, a portal application is created and get registered in Azure AD. If you don't have sufficient permissions to register an application with your Azure AD tenant, you'll see an error as follows;
+When you create a portal, a portal application is created and get registered in Azure AD. If you don't have sufficient permissions to register an application with your Azure AD tenant, you'll see an error as follows:
 
 > [!div class=mx-imgBorder]
 > ![Azure AD error](media/azure-ad-error.png "Azure AD error")
