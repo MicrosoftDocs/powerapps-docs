@@ -33,7 +33,7 @@ To get started, open a new Developer Command Prompt for VS 2017 after installing
    > Currently, PowerApps CLI supports two types of components: **field** and **dataset**.  For canvas apps, only field type is supported for experimental preview.
 
 4. To retrieve all the required project dependencies, run the command `npm install`.
-5. Open your project folder (`C:\Users\<your name>\Documents\My_PCF_Component\<component name>`) in any developer environment of your choice and get started with your custom component development.
+5. Open your project folder (`C:\Users\<your name>\Documents\My_PCF_Component\`) in any developer environment of your choice and get started with your custom component development.
 
 ## Build your component
 
