@@ -24,13 +24,13 @@ search.app:
 ---
 
 # Add, configure, move, or delete components on a form  
-Using the form designer makers can easily add and configure popular components such as [sub-grid](form-designer-add-configure-subgrid.md), [quick view](form-designer-add-configure-quickview.md), arc knob, linear slider, and more.
+By using the form designer, makers can easily add and configure popular components such as [sub-grid](form-designer-add-configure-subgrid.md), [quick view](form-designer-add-configure-quickview.md), arc knob, linear slider, and more.
 
 ## Add components to a form
 To add components to a form, use the **Components** pane. The **Components** pane also lets you search to quickly find components.  
 
 > [!div class="mx-imgBorder"] 
-> ![](media/FormDesignerComponentsPane.png "Components pane")
+> ![](media/FormDesignerComponentsPane.PNG "Components pane")
 
 ### Add components to a form using drag and drop
 > [!NOTE]
