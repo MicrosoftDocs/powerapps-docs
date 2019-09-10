@@ -2,7 +2,7 @@
 title: "Query Data using the Web API (Common Data Service)| Microsoft Docs"
 description: "Read about the various ways to query Common Data Service data using the Common Data Service Web API and various system query options that can be applied in these queries"
 ms.custom: ""
-ms.date: 09/06/2019
+ms.date: 09/10/2019
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -34,7 +34,8 @@ If you want to retrieve data for an entity set, use a `GET` request. When retrie
  **Request**
 
 ```http 
-GET [Organization URI]/api/data/v9.1/accounts?$select=name&$top=3 HTTP/1.1  
+GET [Organization URI]/api/data/v9.1/accounts?$select=name
+&$top=3 HTTP/1.1  
 Accept: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
@@ -256,7 +257,8 @@ The `any` operator returns `true` if the Boolean expression applied is `true` fo
 The example given below shows how you can retrieve all Account entity records that have atleast one email with "sometext" in the subject.
 
 ```http
-GET [Organization URI]/api/data/v9.1/accounts?$select=name&$filter=Account_Emails/any(o:contains(o/subject,'sometext')) HTTP/1.1
+GET [Organization URI]/api/data/v9.1/accounts?$select=name
+&$filter=Account_Emails/any(o:contains(o/subject,'sometext')) HTTP/1.1
 Prefer: odata.include-annotations="*"
 Accept: application/json  
 OData-MaxVersion: 4.0  
@@ -447,7 +449,9 @@ Follow the steps in the below example to understand how we can filter results us
  Specify the order in which items are returned using the `$orderby` system query option. Use the `asc` or `desc` suffix to specify ascending or descending order respectively. The default is ascending if the suffix isn’t applied. The following example shows retrieving the name and revenue properties of accounts ordered by ascending revenue and by descending name.  
   
 ```http 
-GET [Organization URI]/api/data/v9.1/accounts?$select=name,revenue,&$orderby=revenue asc,name desc&$filter=revenue ne null  
+GET [Organization URI]/api/data/v9.1/accounts?$select=name,revenue
+&$orderby=revenue asc,name desc
+&$filter=revenue ne null  
 ```  
 <a name="bkmk_AggregateGroup"></a>
 
@@ -479,13 +483,17 @@ Additional details on OData data aggregation can be found here: [OData Extension
  Without parameter aliases:
 
 ```http  
-GET [Organization URI]/api/data/v9.1/accounts?$select=name,revenue,&$orderby=revenue asc,name desc&$filter=revenue ne null  
+GET [Organization URI]/api/data/v9.1/accounts?$select=name,revenue
+&$orderby=revenue asc,name desc
+&$filter=revenue ne null  
 ```  
   
  With parameter aliases:
 
 ```http  
-GET [Organization URI]/api/data/v9.1/accounts?$select=name,revenue,&$orderby=@p1 asc,@p2 desc&$filter=@p1 ne @p3&@p1=revenue&@p2=name  
+GET [Organization URI]/api/data/v9.1/accounts?$select=name,revenue
+&$orderby=@p1 asc,@p2 desc
+&$filter=@p1 ne @p3&@p1=revenue&@p2=name  
 ```  
   
  You can also use parameter aliases when using functions. More information: [Use Web API functions](use-web-api-functions.md)  
@@ -509,7 +517,9 @@ GET [Organization URI]/api/data/v9.1/accounts?$select=name,revenue,&$orderby=@p1
  **Request**
 
 ```http 
-GET [Organization URI]/api/data/v9.1/accounts?$select=name&$filter=contains(name,'sample')&$count=true HTTP/1.1  
+GET [Organization URI]/api/data/v9.1/accounts?$select=name
+&$filter=contains(name,'sample')
+&$count=true HTTP/1.1  
 Accept: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
@@ -584,7 +594,8 @@ OData-Version: 4.0
  **Request**
 
 ```http 
-GET [Organization URI]/api/data/v9.1/accounts?$select=name,donotpostalmail,accountratingcode,numberofemployees,revenue&$top=1 HTTP/1.1  
+GET [Organization URI]/api/data/v9.1/accounts?$select=name,donotpostalmail,accountratingcode,numberofemployees,revenue
+&$top=1 HTTP/1.1  
 Accept: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
@@ -643,7 +654,8 @@ Use the `$expand` system query option in the navigation properties to control wh
  **Request**  
 
 ```http 
-GET [Organization URI]/api/data/v9.1/incidents(39dd0b31-ed8b-e511-80d2-00155d2a68d4)?$select=title,_customerid_value&$expand=customerid_contact($select=fullname) HTTP/1.1  
+GET [Organization URI]/api/data/v9.1/incidents(39dd0b31-ed8b-e511-80d2-00155d2a68d4)?$select=title,_customerid_value
+&$expand=customerid_contact($select=fullname) HTTP/1.1  
 Accept: application/json  
 Content-Type: application/json; charset=utf-8  
 OData-MaxVersion: 4.0  
@@ -690,7 +702,9 @@ The following example retrieves the tasks assigned to the top 5 account records.
 **Request**
 
 ```http 
-GET [Organization URI]/api/data/v9.1/accounts?$top=5&$select=name&$expand=Account_Tasks($select=subject,scheduledstart) HTTP/1.1  
+GET [Organization URI]/api/data/v9.1/accounts?$top=5
+&$select=name
+&$expand=Account_Tasks($select=subject,scheduledstart) HTTP/1.1  
 Accept: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
@@ -767,7 +781,9 @@ In this example, we are retrieving the contact and tasks assigned to the top 3 a
 **Request**
 
 ```http 
-GET [Organization URI]/api/data/v9.1/accounts?$top=3&$select=name&$expand=primarycontactid($select=contactid,fullname),Account_Tasks($select=subject,scheduledstart)  HTTP/1.1  
+GET [Organization URI]/api/data/v9.1/accounts?$top=3
+&$select=name
+&$expand=primarycontactid($select=contactid,fullname),Account_Tasks($select=subject,scheduledstart)  HTTP/1.1  
 Accept: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
