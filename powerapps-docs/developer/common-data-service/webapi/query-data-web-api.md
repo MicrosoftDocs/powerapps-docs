@@ -162,7 +162,9 @@ Preference-Applied: odata.maxpagesize=3
  Each of the system query options you append to the URL for the entity set is added using the syntax for query strings. The first is appended after [?] and subsequent query options are separated using [&]. All query options are case-sensitive as shown in the following example.  
   
 ```http 
-GET [Organization URI]/api/data/v9.1/accounts?$select=name,revenue&$top=3&$filter=revenue gt 100000  
+GET [Organization URI]/api/data/v9.1/accounts?$select=name,revenue
+&$top=3
+&$filter=revenue gt 100000  
 ```  
   
 <a name="bkmk_requestProperties"></a>
@@ -235,7 +237,8 @@ The Web API supports these standard OData string query functions:
 Common Data Service provides a number of special functions that accept parameters, return Boolean values, and can be used as filter criteria in a query. See <xref:Microsoft.Dynamics.CRM.QueryFunctionIndex> for a list of these functions. The following is an example of the <xref href="Microsoft.Dynamics.CRM.Between?text=Between Function" /> searching for accounts with a number of employees between 5 and 2000.  
   
 ```http 
-GET [Organization URI]/api/data/v9.1/accounts?$select=name,numberofemployees&$filter=Microsoft.Dynamics.CRM.Between(PropertyName='numberofemployees',PropertyValues=["5","2000"])  
+GET [Organization URI]/api/data/v9.1/accounts?$select=name,numberofemployees
+&$filter=Microsoft.Dynamics.CRM.Between(PropertyName='numberofemployees',PropertyValues=["5","2000"])  
 ```  
   
 More information: [Compose a query with functions](use-web-api-functions.md#bkmk_composeQueryWithFunctions). 
@@ -287,7 +290,8 @@ The example given below shows how you can retrieve all Account entity records th
 
 ```http
 GET [Organization URI]/api/data/v9.1/accounts?$select=name
-&$filter=Account_Emails/any(o:contains(o/subject,'sometext') and o/statecode eq 0) HTTP/1.1
+&$filter=Account_Emails/any(o:contains(o/subject,'sometext') and 
+o/statecode eq 0) HTTP/1.1
 Prefer: odata.include-annotations="*"
 Accept: application/json
 OData-MaxVersion: 4.0
@@ -298,7 +302,9 @@ The example given below shows how you can also create a nested query using `any`
 
 ```http
 GET [Organization URI]/api/data/v9.1/accounts?$select=name
-&$filter=(contact_customer_accounts/any(c:c/jobtitle eq 'jobtitle' and c/opportunity_customer_contacts/any(o:o/description ne 'N/A'))) and endswith(name,'{0}') HTTP/1.1
+&$filter=(contact_customer_accounts/any(c:c/jobtitle eq 'jobtitle' and 
+c/opportunity_customer_contacts/any(o:o/description ne 'N/A'))) and 
+endswith(name,'{0}') HTTP/1.1
 Prefer: odata.include-annotations="*"
 Accept: application/json
 OData-MaxVersion: 4.0
@@ -423,7 +429,7 @@ Lambda operators allow you to apply filter on values of collection properties fo
 ```http
 GET [Organization URI]/api/data/v9.1/systemusers?$filter=(teammembership_association/any(t:t/name eq 'CITTEST'))
 &$select=fullname,businessunitid,title,address1_telephone1,systemuserid
-&$orderby= fullname
+&$orderby=fullname
 Accept: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
