@@ -53,7 +53,7 @@ If you keep getting the create database prompt or your data isn't quite ready pr
 
 ## I'm getting an error that I don't have required permissions to create Azure Active Directory applications.
 
-When you create a portal, portal as a new application is registered in the Azure Active Directory associated with the tenant. If you don't have sufficient permissions to register an application with your Azure Active Directory tenant, you'll see an error as follows:
+When you create a portal, portal as a new application is registered in Azure Active Directory associated with the tenant. If you don't have sufficient permissions to register an application with your Azure Active Directory tenant, you'll see an error as follows:
 
 > [!div class=mx-imgBorder]
 > ![Azure Active Directory error](media/azure-ad-error.png "Azure Active Directory error")
