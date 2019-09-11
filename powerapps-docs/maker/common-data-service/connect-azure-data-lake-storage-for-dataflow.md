@@ -35,9 +35,6 @@ There are some advantages to configuring dataflows to store their definitions an
 - Dataflow data and definition files can be leveraged by your IT department's developers to leverage Azure Data and artificial intelligence (AI) services as demonstrated in the GitHub samples from Azure Data Services.
 - Enables developers in your organization to integrate dataflow data into internal applications, and line-of-business solutions, using developer resources for dataflows and Azure.
 
-> [!IMPORTANT]
-> You should not change files created by dataflows in your organization’s lake or add files to a dataflow’s CDM Folder. Changing files might damage dataflows or alter their behavior and is not supported. Power Platform Dataflows only grants read access to files it creates in the lake. If you authorize other people or services to the filesystem used by Power Platform Dataflows, only grant them read access to files or folders in that filesystem.
-
 ## Requirements
 To use Azure Data Lake Storage Gen2 for dataflows, you need the following:
 - A PowerApps environment. Any PowerApps plan will allow you to create dataflows with Azure Data Lake Storage Gen2 as a destination. You will need to be authorized in the environment as a maker. 
@@ -119,7 +116,10 @@ There are a few considerations and limitations to keep in mind when working with
 - Linking an Azure Data Lake Store Gen2 account for dataflow storage is not supported in the default environment.
 - Once a dataflow storage location is configured for a dataflow, it can't be changed.
 - By default, any member of the environment can access dataflow data using the Power Platform Dataflows Connector. However, only the owners of a dataflow can access its files directly in Azure Data Lake Storage Gen2. To authorize additional people to access the dataflows data directly in the lake, you must authorize them to the dataflow’s CDM folder in the data lake or the data lake itself.
-- When a dataflow is deleted, its CDM folder in the lake will also be deleted. We recommended that you don't modify or add files to a dataflow’s CDM Folder.
+- When a dataflow is deleted, its CDM folder in the lake will also be deleted. 
+
+> [!IMPORTANT]
+> You shouldn't change files created by dataflows in your organization’s lake or add files to a dataflow’s CDM folder. Changing files might damage dataflows or alter their behavior and is not supported. Power Platform Dataflows only grants read access to files it creates in the lake. If you authorize other people or services to the filesystem used by Power Platform Dataflows, only grant them read access to files or folders in that filesystem.
 
 ## Frequently asked questions
 *What if I had previously created dataflows in my organization’s Azure Data Lake Storage Gen2 and would like to change their storage location?*
