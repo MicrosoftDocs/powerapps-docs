@@ -3,6 +3,7 @@ title: IImageInfo | Microsoft Docs
 description: 
 keywords:
 ms.author: nabuthuk
+author: Nkrb
 manager: kvivek
 ms.date: 04/23/2019
 ms.service: "powerapps"
@@ -15,6 +16,8 @@ ms.assetid: 16691acb-a58c-4ca6-b6a8-58c76c9db1ca
 # IImageInfo
 
 [!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
+
+## Properties
 
 ## Url
 

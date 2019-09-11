@@ -3,6 +3,7 @@ title: Popup | Microsoft Docs
 description: 
 keywords:
 ms.author: nabuthuk
+author: Nkrb
 manager: kvivek
 ms.date: 04/23/2019
 ms.service: "powerapps"
@@ -17,6 +18,8 @@ ms.assetid: b0af1803-ae3a-41c2-a8a5-b15970bd6f96
 [!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
 
 [!INCLUDE [popup-description](includes/popup-description.md)]
+
+## Properties
 
 ## closeOnOutsideClick
 

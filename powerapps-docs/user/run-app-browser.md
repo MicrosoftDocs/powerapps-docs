@@ -5,7 +5,7 @@ author: Mattp123
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 11/16/2018
+ms.date: 8/21/2019
 ms.author: matp
 manager: "kvivek"
 ms.custom: ""
@@ -33,23 +33,15 @@ To follow this quickstart, you need:
 Sign in to Dynamics 365 at [https://home.dynamics.com](https://home.dynamics.com).
 
 ## Find an app on the Home page
-The Home page may show several types of business apps, but you can find a specific app by typing part of its name in the search box. You can also filter the list to show only apps created by a specific source, such as PowerApps. To do this, click or tap **Filter** and then select the source.
+The Home page may show several types of business apps, but you can find a specific app by typing part of its name in the search box. You can also filter the list to show only apps created by a specific source, such as PowerApps. To do this, select **Filter** and then select the source.
 
-If you've recently installed the app, it might not immediately appear in the list of apps. Click or tap **Sync** to show all your apps. This process may take up to a minute.
+If you've recently installed the app, it might not immediately appear in the list of apps. Select **Sync** to show all your apps. This process may take up to a minute.
 
 ![](./media/run-app-browser/dynamics-365-home.png)
 
-## Run an app from the task pane
-After you find an app, you can pin it to the task pane for easier access. To pin an app, click or tap the ellipsis (...) on the app tile, and then click or tap **Pin this app**.
-
-![](./media/run-app-browser/homepage-pin.png)
-
-To run the pinned app from the task pane, click or tap **Dynamics 365** in the upper-left corner, locate the app under **My apps**, and then click or tap it.
-
-![](./media/run-app-browser/taskpane.png)
 
 ## Run an app from a URL
-You can save an app's URL as a bookmark in your browser and run it by selecting the bookmark, or you can send a URL as a link through email. If someone else created an app and shared it with you in an email, you can run the app by clicking or tapping the link in the email. When running an app using a URL, you may be prompted to sign in using your Azure Active Directory credentials.
+You can save an app's URL as a bookmark in your browser and run it by selecting the bookmark, or you can send a URL as a link through email. If someone else created an app and shared it with you in an email, you can run the app by selecting the link in the email. When running an app using a URL, you may be prompted to sign in using your Azure Active Directory credentials.
 
 ![](./media/run-app-browser/web-login.png)
 

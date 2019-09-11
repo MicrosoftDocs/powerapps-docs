@@ -3,6 +3,7 @@ title: LookupOptions | Microsoft Docs
 description: 
 keywords:
 ms.author: nabuthuk
+author: Nkrb
 manager: kvivek
 ms.date: 04/23/2019
 ms.service: "powerapps"
@@ -15,6 +16,8 @@ ms.assetid: 89807b09-92ee-43cf-8db5-8da838131923
 # LookupOptions
 
 [!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
+
+## Properties
 
 ## allowMultiSelect
 

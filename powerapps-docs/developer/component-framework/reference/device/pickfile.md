@@ -3,6 +3,7 @@ title: PickFile | Microsoft Docs
 description: 
 keywords:
 ms.author: nabuthuk
+author: Nkrb
 manager: kvivek
 ms.date: 04/23/2019
 ms.service: "powerapps"
@@ -24,13 +25,13 @@ ms.assetid: aae27c64-33c4-47f1-b833-4c04161c01e2
 
 | Parameter Name|Type|Required|Description|
 | ------------- |----|--------|-----------|
-|`options`|`object`|no|Options to pick file.|
+|`options`|`Object`|No|Options to pick file.|
 
 ## Return Value
 
-Type: `Promise<File[]>`
+Type: `Promise<FileObject[]>`
 
-See [Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise) and [File](https://developer.mozilla.org/docs/Web/API/File)
+See [Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise) and [FileObject](../fileobject.md)
 
 ## Remarks
 

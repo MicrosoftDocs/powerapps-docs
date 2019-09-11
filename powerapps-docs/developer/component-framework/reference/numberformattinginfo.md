@@ -3,6 +3,7 @@ title: NumberFormattingInfo | Microsoft Docs
 description: 
 keywords:
 ms.author: nabuthuk
+author: Nkrb
 manager: kvivek
 ms.date: 04/23/2019
 ms.service: "powerapps"
@@ -17,6 +18,8 @@ ms.assetid: 8c0481ee-abf9-492a-a1ef-b36e8a68167b
 [!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
 
 [!INCLUDE [context-description](includes/numberformattinginfo-description.md)]
+
+## Properties
 
 ## currencyDecimalDigits
 

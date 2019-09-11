@@ -3,6 +3,7 @@ title: SortStatus | Microsoft Docs
 description: 
 keywords:
 ms.author: nabuthuk
+author: Nkrb
 manager: kvivek
 ms.date: 04/23/2019
 ms.service: "powerapps"
@@ -17,6 +18,8 @@ ms.assetid: 09f6d0a7-a95a-421e-a413-281d1d0d0e19
 [!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
 
 [!INCLUDE [sort-description](includes/sortstatus-description.md)]
+
+## Properties
 
 ## name
 

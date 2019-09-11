@@ -8,7 +8,7 @@ ms.assetid: 7da1b8e9-97af-4acb-a393-2e09caf86fc2
 ms.assetid: 
 author: "nkrb"
 ms.author: "nabuthuk"
-manager: "Jdaly"
+manager: "kvivek"
 ---
 # PowerApps component framework API reference
 
@@ -40,5 +40,3 @@ This section contains reference documentation for creating custom components usi
 |[UserSettings](usersettings.md)|[!INCLUDE [usersettings-description](includes/usersettings-description.md)]|
 |[Utility](utility.md)|[!INCLUDE [utility-description](includes/utility-description.md)]|
 |[WebApi](webapi.md)|[!INCLUDE [webapi-description](includes/webapi-description.md)]|
-
-

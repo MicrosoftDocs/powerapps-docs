@@ -3,6 +3,7 @@ title: RetrieveMultipleResponse | Microsoft Docs
 description: 
 keywords:
 ms.author: nabuthuk
+author: Nkrb
 manager: kvivek
 ms.date: 04/23/2019
 ms.service: "powerapps"
@@ -15,6 +16,8 @@ ms.assetid: 08ea66d3-b4af-44af-a3ae-cb2ebad043e8
 # RetrieveMultipleResponse
 
 [!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
+
+## Properties
 
 ## entities
 

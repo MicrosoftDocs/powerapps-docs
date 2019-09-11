@@ -1,7 +1,7 @@
 ---
 title: "Properties available in the form designer | MicrosoftDocs"
 ms.custom: ""
-ms.date: 02/19/2019
+ms.date: 08/26/2019
 ms.reviewer: ""
 ms.service: crm-online
 ms.suite: ""
@@ -25,13 +25,12 @@ search.app:
 
 # Properties available in the form designer
 
-Located on the right-pane of the model-driven form designer, the property pane lets you quickly view and update the properties of any element selected from the preview or navigation panes. 
+Located on the right-pane of the model-driven form designer, the property pane lets you quickly view and update the properties of any element selected from the preview or the tree view. 
 
 > [!div class="mx-imgBorder"] 
 > ![](media/form-designer-property-pane.png "Form designer property pane")
 
 ## Form properties
-
 
 |Name  |Description  |
 |---------|---------|
@@ -52,8 +51,8 @@ Located on the right-pane of the model-driven form designer, the property pane l
 | **Display options**      | **Hide on phone**     |  For a condensed version of this form on phone screens, tabs can be hidden.     |
 | **Formatting**   | **Layout**     |  Tabs may have up to three columns. Use these options to set the number of tabs and what percentage of the total width they should fill.      |
 
-## Section properties
 
+## Section properties
 
 |Area   |Name  |Description  |
 |---------|---------|---------|
@@ -67,7 +66,6 @@ Located on the right-pane of the model-driven form designer, the property pane l
 
 ## Field properties
 
-
 |Area  |Name  |Description  |
 |---------|---------|---------|
 |**Display options**     | **Field label**    | By default the label will match the display name of the field. You can override that name for the form by entering a different label here.       |
@@ -77,9 +75,17 @@ Located on the right-pane of the model-driven form designer, the property pane l
 |**Display options**     |  **Lock field**   |  Lock this field to keep it from being removed.     |
 |**Display options**     |  **Hide field**     | When selected, field is hidden by default and can be shown using code.      |
 |**Display options**     |  **Hide on phone**    | For a condensed version of this form on phone screens, fields can be hidden.         |
-|**Display options**     | **Field width**      |  When the section containing the fields has more than one column you can set the field to occupy up to the number of columns that the section has.       |
-
+|**Formatting**     | **Field width**      |  When the section containing the fields has more than one column you can set the field to occupy up to the number of columns that the section has.       |
 
 ## See also
-[Overview of the model-driven form designer](form-designer-overview.md) <br />
-[Create or edit forms using the form designer](create-and-edit-forms.md)
+[Overview of the model-driven form designer](form-designer-overview.md)  
+[Create, edit, or configure forms using the form designer](create-and-edit-forms.md)  
+[Add, configure, move, or delete fields on a form](add-move-or-delete-fields-on-form.md)  
+[Add, configure, move, or delete components on a form](add-move-configure-or-delete-components-on-form.md)  
+[Add, configure, move, or delete sections on a form](add-move-or-delete-sections-on-form.md)  
+[Add, configure, move, or delete tabs on a form](add-move-or-delete-tabs-on-form.md)  
+[Configure header properties in the form designer](form-designer-header-properties.md)  
+[Add and configure a sub-grid component on a form](form-designer-add-configure-subgrid.md)  
+[Add and configure a quick view component on a form](form-designer-add-configure-quickview.md)  
+[Using the tree view in the form designer](using-tree-view-on-form.md)  
+[Create and edit fields](../common-data-service/create-edit-field-portal.md)  

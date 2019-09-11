@@ -3,6 +3,7 @@ title: Mode | Microsoft Docs
 description: 
 keywords:
 ms.author: nabuthuk
+author: Nkrb
 manager: kvivek
 ms.date: 04/23/2019
 ms.service: "powerapps"
@@ -17,6 +18,8 @@ ms.assetid: 8b51654c-ee67-40f8-ae5b-be684dad3520
 [!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
 
 [!INCLUDE [mode-description](includes/mode-description.md)]
+
+## Properties
 
 ## allocatedHeight
 

@@ -6,9 +6,12 @@ manager: annbe
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 03/18/2019
+ms.date: 07/15/2019
 ms.author: kvivek
 ms.reviewer: kvivek
+searchScope:
+  - GetStarted
+  - PowerApps
 ---
 # What is PowerApps?
 
@@ -22,7 +25,7 @@ For more information, see the [PowerApps channel](https://www.youtube.com/channe
 
 ## PowerApps for app makers/creators
 
-Using PowerApps, you can create two types of apps: **canvas** and **model-driven**. More information: [Overview of creating apps in PowerApps](maker/index.md).
+Using PowerApps, you can create three types of apps: **canvas**, **model-driven**, and **portal**. More information: [Overview of creating apps in PowerApps](maker/index.md).
 
 To create an app, you start with [web.powerapps.com](https://web.powerapps.com).
 

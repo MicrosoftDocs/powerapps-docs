@@ -3,6 +3,7 @@ title: UserSettings | Microsoft Docs
 description: 
 keywords:
 ms.author: nabuthuk
+author: Nkrb
 manager: kvivek
 ms.date: 04/23/2019
 ms.service: "powerapps"
@@ -17,6 +18,8 @@ ms.assetid: c237ff96-9268-4068-9d61-aea0bdc79fc2
 [!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
 
 [!INCLUDE [usersettings-description](includes/usersettings-description.md)]
+
+## Properties
 
 ## dateFormattingInfo
 

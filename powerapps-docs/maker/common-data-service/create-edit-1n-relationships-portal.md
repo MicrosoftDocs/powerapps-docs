@@ -55,7 +55,7 @@ While [viewing entity relationships](#view-entity-relationships), in the command
 
 <!-- This may change going forward, but this is the way it is now. #2534972 -->
 > [!Important]
-> The portal uses different terminology than solution explorer. The terms are reversed. The solution explorer **Related entity** is the **Primary entity** in the portal. Likewise, the **Primary entity** in solution explorer is the **Related entity** in the portal.
+> The portal uses different terminology than solution explorer. The solution explorer **Primary entity** is the **Current entity** in the portal.
 
 Depending on your choice you will see either:
 
@@ -65,10 +65,10 @@ Depending on your choice you will see either:
 |**Many-to-one**|![Many to one relationship panel](media/many-to-one-relationship-panel.png)|
 |**One-to-many**|![One to many relationship panel](media/one-to-many-relationship-panel.png)|
 
-Choose either the **Related entity** or the **Primary entity** for the relationship you want to create between the two entities. 
+Choose the **Related entity** for the relationship you want to create between the two entities. 
 
 > [!NOTE]
-> With either choice, a lookup field will be created on the *primary* entity.
+> With either choice, a lookup field will be created on the *current* entity.
 
 Once you select the entity you can edit the details of the relationship. In this example, multiple contact entity records can be associated with a single account.
 

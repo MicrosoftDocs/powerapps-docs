@@ -3,6 +3,7 @@ title: EntityFormOptions | Microsoft Docs
 description: 
 keywords:
 ms.author: nabuthuk
+author: Nkrb
 manager: kvivek
 ms.date: 04/23/2019
 ms.service: "powerapps"
@@ -14,6 +15,8 @@ ms.assetid: 418871c0-59dc-4a7c-a8f9-9364a19f7662
 # EntityFormOptions
 
 [!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
+
+## Properties
 
 ## createFromEntity: EntityReference
 

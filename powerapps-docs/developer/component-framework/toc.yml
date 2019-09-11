@@ -2,21 +2,33 @@
   items: 
   - name: Overview
     href: overview.md
-  - name: "What are custom components"
+  - name: What are custom components
     href: custom-controls-overview.md
-  - name: Create, debug and deploy custom components using Microsoft PowerApps CLI
-    href: create-custom-controls-using-pcf.md
-  - name: Update Microsoft PowerApps CLI to latest version
-    href: updating-tooling.md
-  - name: Implementing custom components in TypeScript
-    href: implementing-controls-using-typescript.md
-  - name: Updating existing PowerApps component framework components into the new tools format
-    href: updating-existing-controls.md
-  - name: Limitations of PowerApps component framework
+  - name: Get tooling
+    href: get-powerapps-cli.md
+  - name: Tutorial
+    items:
+    - name: Implement sample component
+      href: implementing-controls-using-typescript.md
+  - name: How-to
+    items:
+    - name: Create and build a custom component 
+      href: create-custom-controls-using-pcf.md
+    - name: Package a custom component
+      href: import-custom-controls.md
+    - name: Debug a custom component
+      href: debugging-custom-controls.md
+    - name: Add components to entities or fields
+      href: add-custom-controls-to-a-field-or-entity.md
+    - name: Update existing custom components
+      href: updating-existing-controls.md
+    - name: Publish custom components on AppSource
+      href: publish-components-app-source.md
+  - name: Limitations
     href: limitations.md
   - name: FAQ
     href: faq.md
-  - name: Sample Components
+  - name: Sample components
     items: 
     - name: Increment component
       href: sample-controls/increment-control.md
@@ -40,6 +52,8 @@
       href: sample-controls/map-control.md
     - name: Navigation API component
       href: sample-controls/navigation-api-control.md
+    - name: React Facepile component
+      href: sample-controls/react-facepile-control.md
     - name: Table component
       href: sample-controls/table-control.md
     - name: Table grid component
@@ -96,6 +110,21 @@
           href: reference/dataset/refresh.md
         - name: setSelectedRecordIds
           href: reference/dataset/setselectedrecordids.md
+      - name: Device
+        href: reference/device.md
+        items:
+        - name: captureAudio
+          href: reference/device/captureaudio.md
+        - name: captureImage
+          href: reference/device/captureimage.md
+        - name: captureVideo
+          href: reference/device/capturevideo.md
+        - name: getBarcodeValue
+          href: reference/device/getbarcodevalue.md
+        - name: getCurrentPosition
+          href: reference/device/getcurrentposition.md
+        - name: pickFile
+          href: reference/device/pickfile.md
       - name: DateFormattingInfo
         href: reference/dateformattinginfo.md
       - name: EntityReference
@@ -107,6 +136,8 @@
           href: reference/factory/getpopupservice.md
         - name: requestRender
           href: reference/factory/requestrender.md
+      - name: FileObject
+        href: reference/fileobject.md
       - name: Linking
         href: reference/linking.md
         items:
@@ -259,6 +290,7 @@
         href: manifest-schema-reference/type.md
       - name: type-group
         href: manifest-schema-reference/type-group.md
-    
-      
-        
+      - name: feature-usage
+        href: manifest-schema-reference/feature-usage.md
+      - name: uses-feature
+        href: manifest-schema-reference/uses-feature.md

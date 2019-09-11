@@ -7,12 +7,13 @@ ms.date: 04/23/2019
 ms.service: "powerapps"
 ms.topic: "article"
 ms.author: "nabuthuk" 
+author: nkrb
 ---
 # Implementing Web API component
 
 [!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
 
-The Web API component is designed to perform create, retrieve, update and delete functions. The component renders four buttons, which can be clicked to invoke different Web API actions. The result of the Web API call is injected into a HTML div element at the bottom of the custom component.  
+The Web API component is designed to perform create, retrieve, update and delete actions. The component renders four buttons, which can be clicked to invoke different Web API actions. The result of the Web API call is injected into a HTML div element at the bottom of the custom component.  
 
 > [!div class="mx-imgBorder"]
 > ![Web API component](../media/web-api-control.png "Web API component")
@@ -22,13 +23,16 @@ The Web API component is designed to perform create, retrieve, update and delete
  ```xml
 <?xml version="1.0" encoding="utf-8" ?>
 <manifest>
-	<control namespace="SampleNamespace" constructor="TSWebAPI" version="1.0.0" display-name-key="TS_WebAPI_Display_Key" description-key="TS_WebAPI_Desc_Display_Key" control-type="standard">
-		<property name="stringProperty" display-name-key="stringProperty_Display_Key" description-key="stringProperty_Desc_Key" of-type="SingleLine.Text" usage="bound" required="true" />
-		<resources>
-			<code path="index.ts" order="1" />
-			<css path="css/TS_WebAPI.css" order="2" />
-		</resources>
-	</control>
+    <control namespace="SampleNamespace" constructor="TSWebAPI" version="1.0.0" display-name-key="TS_WebAPI_Display_Key" description-key="TS_WebAPI_Desc_Display_Key" control-type="standard">
+        <property name="stringProperty" display-name-key="stringProperty_Display_Key" description-key="stringProperty_Desc_Key" of-type="SingleLine.Text" usage="bound" required="true" />
+        <resources>
+            <code path="index.ts" order="1" />
+            <css path="css/TS_WebAPI.css" order="2" />
+        </resources>
+        <feature-usage>
+<uses-feature name="WebAPI" required="true" />
+</feature-usage>
+    </control>
 </manifest>
 ```
 

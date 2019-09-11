@@ -3,6 +3,7 @@ title: FilterExpression | Microsoft Docs
 description: 
 keywords:
 ms.author: nabuthuk
+author: Nkrb
 manager: kvivek
 ms.date: 04/23/2019
 ms.service: "powerapps"
@@ -17,6 +18,8 @@ ms.assetid: 19ad54b8-e044-4f07-a18e-b00d26b75832
 [!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
 
 [!INCLUDE [filterexpression-description](includes/filterexpression-description.md)]
+
+## Properties
 
 ## conditions
 

@@ -3,6 +3,7 @@ title: ConditionExpression | Microsoft Docs
 description: 
 keywords:
 ms.author: nabuthuk
+author: Nkrb
 manager: kvivek
 ms.date: 04/23/2019
 ms.service: "powerapps"
@@ -17,6 +18,8 @@ ms.assetid: bd90b3fd-a4b4-4999-8b53-d2a5dce4966b
 [!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
 
 [!INCLUDE [conditionexpression-description](includes/conditionexpression-description.md)]
+
+## Properties
 
 ## attributeName
 

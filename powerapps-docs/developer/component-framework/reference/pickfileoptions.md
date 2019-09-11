@@ -3,6 +3,7 @@ title: PickFileOptions| Microsoft Docs
 description: 
 keywords: 
 ms.author: nabuthuk
+author: Nkrb
 manager: kvivek
 ms.date: 04/23/2019
 ms.service: "powerapps"
@@ -15,6 +16,8 @@ ms.assetid: 9053eee8-2851-427d-88ae-4fc137ca0444
 # PickFileOptions
 
 [!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
+
+## Properties
 
 ## accept
 

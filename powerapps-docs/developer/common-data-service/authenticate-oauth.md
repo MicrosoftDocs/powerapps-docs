@@ -54,7 +54,7 @@ When you select **Native**, you must provide a Redirect URI. This is a unique id
 
 If your app will be a client which allows the authenticated user to perform operations, you must configure the application to have the Access Dynamics 365 as organization users delegated permission.
 
-For specific steps to do this, see [Walkthrough: Register an app with Azure Active Directory > Apply Permissions](walkthrough-register-app-azure-active-directory.md#apply-permissions).
+For specific steps to do this, see [Walkthrough: Register an app with Azure Active Directory > Apply Permissions](walkthrough-register-app-azure-active-directory.md).
 
 <!-- TODO Verify this -->
 If your app will use Server-to-Server (S2S) authentication, this step is not required. That configuration requires a specific system user and the operations will be performed by that user account rather than any user that must be authenticated.
@@ -312,7 +312,8 @@ To add a password:
 
 #### Common Data Service user account bound to the registered app
 
-The first thing you must do is create a custom security role that will define what access and privileges this account will have within the Common Data Service organization. More information: [Create or configure a custom security role](/power-platform/admin/database-security#create-or-configure-a-custom-security-role).
+
+The first thing you must do is create a custom security role that will define what access and privileges this account will have within the Common Data Service organization. More information: [Create or configure a custom security role](/power-platform/admin/database-security#create-or-configure-a-custom-security-role)
 
 After you have created the custom security role, you must create the user account which will use it.
 

@@ -3,6 +3,7 @@ title: CaptureImage | Microsoft Docs
 description: 
 keywords:
 ms.author: nabuthuk
+author: Nkrb
 manager: kvivek
 ms.date: 04/23/2019
 ms.service: "powerapps"
@@ -30,7 +31,7 @@ ms.assetid: 1d9c0063-add2-4002-acab-1be07ca1f6b6
 
 Type: `Promise<FileObject>`
 
-See [Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise) and [File](https://developer.mozilla.org/docs/Web/API/File)
+See [Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise) and [FileObject](../fileobject.md)
 
 ## Remarks
 
