@@ -68,7 +68,7 @@ After the portal is provisioned successfully, the status is updated and the port
 To edit the portal in portal designer, see [Edit a portal](manage-existing-portals.md#edit).
 
 > [!NOTE]
-> - You can create maximum of five portals in a tenant. However, there can only be one portal of each type created in an environment.
+> - You can create a maximum of five portals in a tenant. However, there can only be one portal of each type created in an environment.
 > - If you don't have sufficient privileges to provision a portal, an error is displayed. You must have System Administrator or at least System Customizer role in Common Data Service to create a portal. You must also have the **Access Mode** set to **Read-Write** under **Client Access License (CAL) Information** in the user record.
 
 ## Create new environment
