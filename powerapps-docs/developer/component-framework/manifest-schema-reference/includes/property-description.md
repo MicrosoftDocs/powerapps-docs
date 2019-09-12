@@ -15,4 +15,4 @@ applies_to:
 ms.assetid: 0966cc45-b8a7-47bc-ab13-126b17c60d5c
 ---
 
-The property node defines a specific, configurable piece of data that the control expects from the Common Data Service.
+The property node defines a specific, configurable piece of data that the component expects from the Common Data Service.

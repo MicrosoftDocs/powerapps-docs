@@ -17,6 +17,10 @@ ms.assetid: a604fbbf-6d09-450d-b686-7a5cb3f3a2bc
 
 [!INCLUDE [formatdateasfilterstringinutc-description](includes/formatdateasfilterstringinutc-description.md)]
 
+## Available for 
+
+Model-driven apps and canvas apps (experimental preview)
+
 ## Syntax
 
 `formatDateAsFilterStringInUTC(value, includeTime)`

@@ -19,6 +19,10 @@ ms.assetid: 45f4872d-c1d2-4c5a-8721-251b96ede370
 
 [!INCLUDE [property-description](includes/property-description.md)]
 
+## Available for
+
+Model-driven apps and canvas apps (experimental preview)
+
 ## Attributes
 
 |Name|Description|Type|Required|

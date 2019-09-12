@@ -1,5 +1,5 @@
 ---
-title: "Debug Custom Components | MicrosoftDocs"
+title: "Debug code components | MicrosoftDocs"
 description: "How to debug a custom component using Fiddler and Native debugging"
 manager: kvivek
 ms.date: 04/23/2019
@@ -9,7 +9,7 @@ ms.assetid: 18e88d702-3349-4022-a7d8-a9adf52cd34f
 ms.author: "nabuthuk"
 author: Nkrb
 ---
-# Debug custom components
+# Debug code components
 
 Once you're done implementing the custom component logic, get started with testing and debugging the custom component using the `npm start` command. This builds the custom component and opens it in the local test harness.
 
@@ -28,7 +28,7 @@ As shown in the image above, the browser window opens with 4 sections. The custo
 > [!NOTE]
 > If you want to modify the `manifest.xml` file or create additional properties, you need to restart the debug process before they appear in the inputs section.
 
-## Test custom components with Mock data
+## Test code components with Mock data
 
 - For field components, you can input value and type for every property defined in your **ControlManifest.Input.xml** as shown below
 
@@ -60,7 +60,7 @@ The test harness supports the watch mode which you can take advantage of for Pow
 3.	Imported libraries in `index.ts`
 4.	All the resources listed in the manifest file.
 
-## Debug custom components using native browsers
+## Debug code components using native browsers
 
 You can use the browser’s debugging capabilities to observe the component behavior. Each browser provides you with a debugging tool to help you debug your code natively in the browser. Typically, you can activate debugging in your browser by pressing the **F12** key to display the native developer tool used for debugging.
 
@@ -83,7 +83,7 @@ You can also interact with the component locally in real-time and observe elemen
 
 ## Fiddler AutoResponder
 
-Use the Fiddler AutoResponder to debug your custom components quickly. Install [Fiddler](https://www.telerik.com/download/fiddler) and follow the steps to configure [AutoResponder](https://docs.microsoft.com/dynamics365/customer-engagement/developer/streamline-javascript-development-fiddler-autoresponder)
+Use the Fiddler AutoResponder to debug your code components quickly. Install [Fiddler](https://www.telerik.com/download/fiddler) and follow the steps to configure [AutoResponder](https://docs.microsoft.com/dynamics365/customer-engagement/developer/streamline-javascript-development-fiddler-autoresponder)
 
 ### Related topics
 

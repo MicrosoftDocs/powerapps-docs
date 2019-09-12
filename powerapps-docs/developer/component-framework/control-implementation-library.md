@@ -1,6 +1,6 @@
 ---
 title: Component implementation library | Microsoft Docs
-description: Create custom components using JavaScript or TypeScript
+description: Create code components using JavaScript or TypeScript
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -13,7 +13,7 @@ ms.topic: "article"
 ms.assetid: 5d100dc3-bd82-4b45-964c-d90eaebc0735
 ---
 
-Implementing the component library is one of the key step when you are developing custom components using PowerApps component framework. Developers can implement component library using TypeScript. Each custom component must have a library that includes the definition of a function which returns an object that implements the methods described in the custom component interface. 
+Implementing the component library is one of the key step when you are developing code components using PowerApps component framework. Developers can implement component library using TypeScript. Each custom component must have a library that includes the definition of a function which returns an object that implements the methods described in the custom component interface. 
 
 The object implements the following methods:
 

@@ -18,6 +18,10 @@ ms.assetid: 35d94cf8-eab3-4dee-82af-336f6b33b789
 
 [!INCLUDE[./includes/clearselectedrecordids-description.md](./includes/clearselectedrecordids-description.md)]
 
+## Available for 
+
+Model-driven apps
+
 ## Syntax
 
 `clearSelectedRecordIds()`
