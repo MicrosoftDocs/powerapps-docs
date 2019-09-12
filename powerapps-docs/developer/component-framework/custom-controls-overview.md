@@ -1,6 +1,6 @@
 ---
-title: "What are custom components? | MicrosoftDocs"
-description: "Use the PowerApps component framework to create custom components to provide enhanced user experience for users to view and work with data in forms, views, and dashboards."
+title: "What are code components? | MicrosoftDocs"
+description: "Use the PowerApps component framework to create code components to provide enhanced user experience for users to view and work with data in forms, views, and dashboards."
 manager: kvivek
 ms.date: 09/05/2019
 ms.service: "powerapps"
@@ -10,15 +10,15 @@ ms.author: "nabuthuk"
 author: Nkrb
 ---
 
-# What are custom components
+# What are code components
 
 [!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-Custom components are a type of solution components, which means they can be included in a solution file and installed in different environments. More information: [Package and distribute extensions using solutions](https://docs.microsoft.com/dynamics365/customer-engagement/developer/package-distribute-extensions-use-solutions).
+code components are a type of solution components, which means they can be included in a solution file and installed in different environments. More information: [Package and distribute extensions using solutions](https://docs.microsoft.com/dynamics365/customer-engagement/developer/package-distribute-extensions-use-solutions).
 
-You add custom components by including them in a solution and then importing it into Common Data Service. Once they are in Common Data Service, system administrator and system customizers can configure on fields, sub-grids, views, and dashboard sub-grids to use them in place of default component.  You can also add these custom components in canvas apps. 
+You add code components by including them in a solution and then importing it into Common Data Service. Once they are in Common Data Service, system administrator and system customizers can configure on fields, sub-grids, views, and dashboard sub-grids to use them in place of default component.  You can also add these code components in canvas apps. 
 
-Custom components are comprised of three components:
+code components are comprised of three components:
 
 1. [Manifest](#manifest)
 2. [Component implementation library](#component-implementation-library)
@@ -87,4 +87,4 @@ Each custom component should have a resource file to construct its visualization
 
 ### Related topics
 
-[Create custom components](create-custom-controls-using-pcf.md)
+[Create code components](create-custom-controls-using-pcf.md)

@@ -15,4 +15,4 @@ applies_to:
 ms.assetid: 428003fb-8b2f-435a-8f96-617727864b57
 ---
 
-CSS describes how custom components are to be displayed on UI.
+CSS describes how code components are to be displayed on UI.

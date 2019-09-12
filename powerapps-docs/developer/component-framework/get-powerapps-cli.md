@@ -1,7 +1,7 @@
 ---
 title: Get tooling for PowerApps component framework | Microsoft Docs
-description: "Get the Microsoft PowerApps CLI to create, debug and deploy custom components using PowerApps component framework."
-keywords: PowerApps component framework, Custom components, Component Framework
+description: "Get the Microsoft PowerApps CLI to create, debug and deploy code components using PowerApps component framework."
+keywords: PowerApps component framework, code components, Component Framework
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
@@ -17,11 +17,11 @@ ms.assetid: f393f227-7a88-4f25-9036-780b3bf14070
 
 [!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-Use **Microsoft PowerApps CLI** (command-line interface) to create, debug, and deploy custom components using PowerApps component framework. PowerApps CLI enables developers to create PowerApps component framework components quickly and will in the future be expanded to include support for additional development and Application Lifecycle Management (ALM) experiences. 
+Use **Microsoft PowerApps CLI** (command-line interface) to create, debug, and deploy code components using PowerApps component framework. PowerApps CLI enables developers to create PowerApps component framework components quickly and will in the future be expanded to include support for additional development and Application Lifecycle Management (ALM) experiences. 
 
 ## What is Microsoft PowerApps CLI 
 
-Microsoft PowerApps CLI is a simple, single-stop developer command-line interface which enables the developers to create custom components. PowerApps CLI tooling is the first step towards a comprehensive ALM story where the enterprise developers and ISVs can create, build, debug, and publish their extensions and customizations quickly and efficiently.  
+Microsoft PowerApps CLI is a simple, single-stop developer command-line interface which enables the developers to create code components. PowerApps CLI tooling is the first step towards a comprehensive ALM story where the enterprise developers and ISVs can create, build, debug, and publish their extensions and customizations quickly and efficiently.  
 
 > [!IMPORTANT]
 > - Microsoft PowerApps CLI tools are a pre-release version and may be different from the commercially released version.

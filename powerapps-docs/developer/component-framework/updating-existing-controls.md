@@ -1,5 +1,5 @@
 ---
-title: Update existing custom components using PowerApps component framework Tooling| Microsoft Docs
+title: Update existing code components using PowerApps component framework Tooling| Microsoft Docs
 description: Update components using the PowerApps component framework Tooling
 keywords: PowerApps component framework, Custom component, component Framework
 ms.author: nabuthuk
@@ -12,14 +12,14 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: d2cbf58a-9112-45c2-b823-2c07a310714c
 ---
-# Updating existing custom components 
+# Updating existing code components 
 
 [!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-If you are a PowerApps component framework private preview participant for model-driven apps and have already built custom components, you need to make some minor updates to make it compatible with the new ALM-centric project structures. To use the new PowerApps CLI tooling with your existing PowerApps component framework custom component source, a few changes are required.
+If you are a PowerApps component framework private preview participant for model-driven apps and have already built code components, you need to make some minor updates to make it compatible with the new ALM-centric project structures. To use the new PowerApps CLI tooling with your existing PowerApps component framework custom component source, a few changes are required.
 
 > [!NOTE]
-> This topic is not applicable for updating custom components in canvas apps because the PowerApps CLI tooling is not available at the time of private preview for the model-driven apps.  
+> This topic is not applicable for updating code components in canvas apps because the PowerApps CLI tooling is not available at the time of private preview for the model-driven apps.  
 
 ## Creating an empty project
 
@@ -103,7 +103,7 @@ To use the new typing file:
 
 ## Troubleshooting and workarounds
 
-1. If you get a 1ES notification asking how pcf-scripts are being used, note that these scripts are only used to build the custom components but they are not bundled or used by the resulting component.  
+1. If you get a 1ES notification asking how pcf-scripts are being used, note that these scripts are only used to build the code components but they are not bundled or used by the resulting component.  
 2. If you have previously created a custom component using the tooling version 0.1.817.1 or earlier and would like to ensure that the latest build & debug modules are being utilized, make updates to the package.json as shown:
    
     ```JSON

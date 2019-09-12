@@ -1,6 +1,6 @@
 ---
-title: "Implementing Custom Components using TypeScript | MicrosoftDocs"
-description: "How to implement a custom components using TypeScript"
+title: "Implementing code components using TypeScript | MicrosoftDocs"
+description: "How to implement a code components using TypeScript"
 manager: kvivek
 ms.date: 04/23/2019
 ms.service: "powerapps"
@@ -257,13 +257,13 @@ The linear input component’s `init` method creates an input element and sets t
 
 ## Debugging your custom component
 
-Once you are done implementing your custom component logic, run the following command to start the debugging process. More information: [Debugging custom components](debugging-custom-controls.md)
+Once you are done implementing your custom component logic, run the following command to start the debugging process. More information: [Debugging code components](debugging-custom-controls.md)
 
 ```CLI
 npm start
 ```
 
-## Packaging your custom components
+## Packaging your code components
 
 Follow the steps below to create and import a [solution](https://docs.microsoft.com/dynamics365/customer-engagement/customize/solutions-overview) file:
 
@@ -304,13 +304,13 @@ Follow the steps below to create and import a [solution](https://docs.microsoft.
 6. The generated solution zip file is located in `Solution\\bin\debug\`.
 7. You should manually [import the solution into Common Data Service](https://docs.microsoft.com/dynamics365/customer-engagement/customize/import-update-export-solutions) using the web portal once the zip file is ready or see [Authenticating to your organization](import-custom-controls.md#authenticating-to-your-organization) and [Deployment](import-custom-controls.md#deploying-custom-components) sections to import using PowerApps CLI commands.
 
-## Adding custom components in model-driven apps
+## Adding code components in model-driven apps
 
 To add a custom component like a linear input component, follow the steps mentioned in the topic [Add components to fields and entities](add-custom-controls-to-a-field-or-entity.md).
 
-## Adding custom components to a canvas app
+## Adding code components to a canvas app
 
-To add the custom components to a canvas app, follow the steps mentioned in this topic [Add custom components to a canvas app](component-framework-for-canvas-apps.md#add-components-to-a-canvas-app)
+To add the code components to a canvas app, follow the steps mentioned in this topic [Add code components to a canvas app](component-framework-for-canvas-apps.md#add-components-to-a-canvas-app)
 
 ### See also
 

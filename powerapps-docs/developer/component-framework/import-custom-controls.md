@@ -1,6 +1,6 @@
 ---
 title: Import components  | Microsoft Docs
-description: Process to import custom components
+description: Process to import code components
 keywords:
 ms.author: nabuthuk
 manager: kvivek
@@ -13,7 +13,7 @@ author: Nkrb
 
 # Package a custom component
 
-This topic demonstrates how to import custom components into Common Data Service. After developing the custom components using the PowerApps CLI, the next step is to import those components, so that you can see the components in runtime.
+This topic demonstrates how to import code components into Common Data Service. After developing the code components using the PowerApps CLI, the next step is to import those components, so that you can see the components in runtime.
 
 Follow the steps below to create and import a solution file:
 
@@ -23,7 +23,7 @@ Follow the steps below to create and import a solution file:
    > The `publisher-name` and `publisher-prefix` values must be unique to your environment.
  
    
-2. Once the new solution project gets created, you need to refer to the location where the created component is located. You can add the reference using the below command. This reference, tells the solution project which custom components should be added during the build, and you can add references to multiple components in a single solution project.
+2. Once the new solution project gets created, you need to refer to the location where the created component is located. You can add the reference using the below command. This reference, tells the solution project which code components should be added during the build, and you can add references to multiple components in a single solution project.
 
     ```CLI   
     pac solution add-reference --path<path of your PowerApps component framework project on disk>
@@ -42,7 +42,7 @@ Follow the steps below to create and import a solution file:
 
 ## Authenticating to your organization
 
-You can deploy the custom components directly from the PowerApps CLI by authenticating to Common Data Service org, then pushing the updated components. Follow the steps below to create the authentication profile, connect to your environment, and push your updated components. 
+You can deploy the code components directly from the PowerApps CLI by authenticating to Common Data Service org, then pushing the updated components. Follow the steps below to create the authentication profile, connect to your environment, and push your updated components. 
  
 1. Create your authentication profile using the command: 
  
@@ -71,7 +71,7 @@ You can deploy the custom components directly from the PowerApps CLI by authenti
 5. To delete a particular authentication profile, run the command `pac auth delete --index < index of the profile >`. 
 6. If you want to clear all the profiles from your local machine, run the command `pac auth clear`. This action is irreversible as it completely deletes the `authprofile.json` file and token cache file from your local disk. 
 
-## Deploying custom components 
+## Deploying code components 
 
 After you have successfully created an authentication profile, you can start pushing the custom component to your environment of choice with all the latest changes. The `push` capability speeds up the inner-developer cycle development as it bypasses the custom component versioning requirements and does not require that you build your solution (your cdsproj) in order to import the custom component. To use the push capability, follow below the steps below:
 

@@ -14,7 +14,7 @@ manager: "kvivek"
 
 [!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
 
-This section contains reference documentation for creating custom components using the PowerApps component framework.
+This section contains reference documentation for creating code components using the PowerApps component framework.
 
 > [!IMPORTANT]
 > The **Available for** tab shows which APIs are supported by model-driven apps and canvas apps (experimental preview). It is recommended to check the **Available for** section for each individual API methods whether it is supported or not. For example, the **client** API is supported for both model-driven apps and canvas apps, but the  **isOffline** method in **client** API supports only model-driven apps.
