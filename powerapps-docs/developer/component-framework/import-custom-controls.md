@@ -38,7 +38,7 @@ Follow the steps below to create and import a solution file:
     > - If you encounter an error that says *Ambiguous project name* when running the `msbuild` command on your solution. Then double-check that your solution name and project name are not the same.
 
 4. After build completes, the generated solution files are located in `\bin\debug\`.
-5. You can now manually import the solution into Common Data Service using the web portal or see [Authenticating to your organization](#authenticating-to-your-organization) and [Deployment](#deploying-custom-components) sections to import using PowerApps CLI commands.
+5. You can now manually import the solution into Common Data Service using the web portal or see [Authenticating to your organization](#authenticating-to-your-organization) and [Deployment](#deploying-code-components) sections to import using PowerApps CLI commands.
 
 ## Authenticating to your organization
 
@@ -110,6 +110,6 @@ If you would like to remove a custom component from a solution, follow the steps
 ### See also
 
 [Add components to model-drive-apps](add-custom-controls-to-a-field-or-entity.md)<br/>
-[Add components to an app](component-framework-for-canvas-apps.md#add-components-to-an-app)<br/>
+[Add components to an app](component-framework-for-canvas-apps.md#add-components-to-a-canvas-app)<br/>
 [PowerApps component framework API Reference](reference/index.md)<br/>
 [PowerApps component framework Overview](overview.md)
