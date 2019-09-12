@@ -306,11 +306,11 @@ Follow the steps below to create and import a [solution](https://docs.microsoft.
 
 ## Adding custom components in model-driven apps
 
-To add a custom component like a liner input component or simple table component, follow the steps mentioned in the topic [Add components to fields and entities](add-custom-controls-to-a-field-or-entity.md).
+To add a custom component like a linear input component, follow the steps mentioned in the topic [Add components to fields and entities](add-custom-controls-to-a-field-or-entity.md).
 
 ## Adding custom components to a canvas app
 
-To add the custom components to a canvas app, follow the steps mentioned in this topic [Add custom components to a canvas app](component-framework-for0-canvas-apps.md#add-components-to-a-canvas-app)
+To add the custom components to a canvas app, follow the steps mentioned in this topic [Add custom components to a canvas app](component-framework-for-canvas-apps.md#add-components-to-a-canvas-app)
 
 ### See also
 
