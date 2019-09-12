@@ -21,7 +21,7 @@ This sample component renders a table with two columns. The left column shows th
 
 ## Available for 
 
-Model-driven apps and canvas apps (experimental preview) 
+Model-driven apps
 
 ## Manifest
 

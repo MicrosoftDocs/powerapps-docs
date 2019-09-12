@@ -23,8 +23,7 @@ The selected image renders within the component. Meanwhile, the `Remove` button 
 
 ## Available for 
 
-Model-driven apps and canvas apps (experimental preview) 
-
+Model-driven apps 
 ## Manifest
 
 ```xml

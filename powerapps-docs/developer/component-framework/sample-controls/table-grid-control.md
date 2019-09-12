@@ -22,7 +22,7 @@ The component header columns and internal record values are bound to the existin
 
 ## Available for 
 
-Model-driven apps and canvas apps (experimental preview) 
+Model-driven apps  
 
 ## Manifest 
 
