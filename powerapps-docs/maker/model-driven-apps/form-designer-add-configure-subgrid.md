@@ -38,16 +38,12 @@ You add a sub-grid component the same way as you add any other component. More i
 These are the properties available to configure when using a sub-grid component on a form using the form designer.
 
 
-
-<!--note from editor: Drop-down should be used as an adjective only. Please add "list," "menu," or whatever else is appropriate with drop-down in line 50. -->
-
-
 |Area   |Name  |Description  |
 |---------|---------|---------|
 | **Display options** | **Label** | The localizable label for the sub-grid visible to users. <br /><br />This property is required.|
 | **Display options** |  **Name** |  The unique name for the sub-grid that is used when referencing it in scripts. The name can contain only alphanumeric characters and underscores. <br /><br />This property is required. |
 | **Display options** | **Hide on phone** |  The sub-grid can be hidden to render a condensed version of the form on phone screens. |
-| **Display options** | **Show related records** |  When selected, the sub-grid displays only records related to the current record that is displayed on the form. <br /><br />The **Entity** drop-down is also filtered to only list entities that are related to the current entity. |
+| **Display options** | **Show related records** |  When selected, the sub-grid displays only records related to the current record that is displayed on the form. <br /><br />The **Entity** drop-down list is also filtered to only list entities that are related to the current entity. |
 | **Display options** | **Entity** |  The entity whose records you want to display in the sub-grid. <br /><br />When **Show related records** is selected, the list of entities is filtered to show only entities that are related to the current entity. In addition to the entity name, the name of the lookup field is also displayed in parentheses. |
 | **Display options** | **Default view** |  The view of the entity selected in the **Entity** property that will be used to get and display the list of records in the sub-grid. |
 | **Display options** | **Allow users to change view** |  When selected, app users can change from the **Default view** to another view of the entity selected in the **Entity** property. |
