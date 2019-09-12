@@ -11,7 +11,7 @@ ms.topic: "article"
 author: Nkrb
 ---
 
-# Package a custom component
+# Package a code component
 
 This topic demonstrates how to import code components into Common Data Service. After developing the code components using the PowerApps CLI, the next step is to import those components, so that you can see the components in runtime.
 

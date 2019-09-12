@@ -16,9 +16,9 @@
     items:
     - name: Create and build a code component 
       href: create-custom-controls-using-pcf.md
-    - name: Package a custom component
+    - name: Package a code component
       href: import-custom-controls.md
-    - name: Debug a custom component
+    - name: Debug a code component
       href: debugging-custom-controls.md
     - name: Add components to model-driven apps
       href: add-custom-controls-to-a-field-or-entity.md
