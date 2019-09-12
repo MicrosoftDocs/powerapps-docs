@@ -47,7 +47,7 @@ The **Distinct** function evaluates a formula across each record of a table and 
 
 1. Select the button while holding down the Alt key.
 
-    The **CityPopulations** collection is created which you can show by selecting **CityPopulations** in the formula bar:
+    The formula is evaluatd and the **CityPopulations** collection is created which you can show by selecting **CityPopulations** in the formula bar:
 
     > [!div class="mx-imgBorder"]
     > ![CityPopulations collection shown in result view](media/function-distinct/citypopulations-create.png)
