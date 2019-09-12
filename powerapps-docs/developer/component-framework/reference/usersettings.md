@@ -19,45 +19,49 @@ ms.assetid: c237ff96-9268-4068-9d61-aea0bdc79fc2
 
 [!INCLUDE [usersettings-description](includes/usersettings-description.md)]
 
+## Available for 
+
+Model-driven apps
+
 ## Properties
 
-## dateFormattingInfo
+### dateFormattingInfo
 
 Date formatting information as retrieved from the server.
 
 **Type**: `DateFormattingInfo`
 
-## isRTL
+### isRTL
 
 Whether the language is right to left
 
 **Type**: `boolean`
 
-## languageId
+### languageId
 
 Current user's language id
 
 **Type**: `number`
 
-## numberFormattingInfo
+### numberFormattingInfo
 
 Number formatting information as retrieved from the server.
 
 **Type**: `NumberFormattingInfo`
 
-## securityRoles
+### securityRoles
 
 Current user roles
 
 **Type**: `string[]`
 
-## userId
+### userId
 
 The id of the current user
 
 **Type**: `string`
 
-## userName
+### userName
 
 The name of the current user
 

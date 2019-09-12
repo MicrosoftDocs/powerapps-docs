@@ -20,9 +20,13 @@ This sample shows how to use React to create controls using PowerApps component 
 > [!div class="mx-imgBorder"]
 > ![React Facepile](../media/react-facepile.png "React Facepile")
 
-## A note on performance
+## Available for 
 
-Although the PowerApps host applications work on top of React, the version of React you bundle will not communicate with the host version, nor is it dependent on that version. A new copy of React (or any third-party library you bundle with your control) will be loaded into the host page for every instance of that control, so be mindful of how large you are making your page(s) as you add controls. We will have a solution to this issue in a future release.
+Model-driven apps and canvas apps (experimental preview) 
+
+
+> [!IMPORTANT]
+> Although the PowerApps host applications work on top of React, the version of React you bundle will not communicate with the host version, nor is it dependent on that version. A new copy of React (or any third-party library you bundle with your control) will be loaded into the host page for every instance of that control, so be mindful of how large you are making your page(s) as you add controls. We will have a solution to this issue in a future release.
 
 ## Manifest
 

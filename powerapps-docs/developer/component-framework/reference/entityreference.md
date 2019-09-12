@@ -19,15 +19,19 @@ ms.assetid: ad8659f7-f566-43db-bed1-c8484c114a59
 
 [!INCLUDE [entityreference-description](includes/entityreference-description.md)]
 
+## Available for 
+
+Model-driven apps
+
 ## Properties
 
-## etn
+### etn
 
 The entity type name. Read-only.
 
 **Type**: `string`
 
-## id
+### id
 
 The record id. Read-only.
 
@@ -39,7 +43,7 @@ The `id` object contains the following property:
 |--|--|--|
 |`guid`|`string`|00000000-0000-0000-0000-000000000000|
 
-## name
+### name
 
 The name of the entity reference. Read-only.
 

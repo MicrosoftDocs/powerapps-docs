@@ -19,6 +19,10 @@ This sample component renders a table with two columns. The left column shows th
 > [!div class="mx-imgBorder"]
 > ![Table component](../media/table-control.png "Table component")
 
+## Available for 
+
+Model-driven apps
+
 ## Manifest
 
 ```xml

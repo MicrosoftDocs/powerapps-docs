@@ -17,6 +17,10 @@ ms.assetid: 4027f62f-1cc7-4eb6-aae8-a05d1a5fc722
 
 [!INCLUDE[./includes/gettargetentitytype-description.md](./includes/gettargetentitytype-description.md)]
 
+## Available for 
+
+Model-driven apps
+
 ## Syntax
 
 `getTargetEntityType()`

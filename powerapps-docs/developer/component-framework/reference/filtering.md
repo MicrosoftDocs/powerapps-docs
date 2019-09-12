@@ -19,6 +19,10 @@ ms.assetid: e4673628-28d9-432c-92f4-24d1fcb44e21
 
 [!INCLUDE [filtering-description](includes/filtering-description.md)]
 
+## Available for 
+
+Model-driven apps
+
 ## Methods
 
 |Method | Description | 

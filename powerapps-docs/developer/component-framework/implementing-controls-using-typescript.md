@@ -1,6 +1,6 @@
 ---
-title: "Implementing Custom Components using TypeScript | MicrosoftDocs"
-description: "How to implement a custom components using TypeScript"
+title: "Implementing code components using TypeScript | MicrosoftDocs"
+description: "How to implement a code components using TypeScript"
 manager: kvivek
 ms.date: 04/23/2019
 ms.service: "powerapps"
@@ -14,18 +14,26 @@ author: Nkrb
 
 [!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-This tutorial walks you through the process of creating a new custom component in Typescript. The sample component is a linear input component. The linear input component enables users to enter numeric values using a visual slider instead of directly keying in values. 
+This tutorial walks you through the process of creating a new custom component in Typescript. The sample component is a linear input component which enables users to enter numeric values using a visual slider instead of directly typing the values in the field. 
 
 ## Creating a new component project
 
-To create a new project, follow the steps below:
+To create a new project:
 
 1. Open a Developer Command Prompt for VS 2017 window.
-2. Create a new folder for the project using the command `mkdir LinearComponent`.
-3. `cd` into the new directory and run the command `cd LinearComponent` 
-4. Create the component project using the command `pac pcf init --namespace SampleNamespace --name TSLinearInputControl --template field` 
-5. Install the project build tools using the command `npm install` 
-6. Open your project in any developer environment of your choice and start implementing your custom component.
+1. Create a new folder for the project using the command 
+    ```CLI
+    mkdir LinearComponent
+    ```
+
+1. `cd` into the new directory and run the command `cd LinearComponent` 
+1. Create the component project using the command 
+    ```CLI
+    pac pcf init --namespace SampleNamespace --name TSLinearInputControl --template field
+    ``` 
+
+1. Install the project build tools using the command `npm install` 
+2. Open the project in any developer environment of your choice and start implementing your custom component.
 
 ## Implementing Manifest
 
@@ -249,13 +257,13 @@ The linear input component’s `init` method creates an input element and sets t
 
 ## Debugging your custom component
 
-Once you are done implementing your custom component logic, run the following command to start the debugging process. More information: [Debugging custom components](debugging-custom-controls.md)
+Once you are done implementing your custom component logic, run the following command to start the debugging process. More information: [Debugging code components](debugging-custom-controls.md)
 
 ```CLI
 npm start
 ```
 
-## Packaging your custom components
+## Packaging your code components
 
 Follow the steps below to create and import a [solution](https://docs.microsoft.com/dynamics365/customer-engagement/customize/solutions-overview) file:
 
@@ -294,11 +302,15 @@ Follow the steps below to create and import a [solution](https://docs.microsoft.
     > - Under **Code Tools**, check **NuGet targets & Build Tasks**
 
 6. The generated solution zip file is located in `Solution\\bin\debug\`.
-7. You should manually [import the solution](https://docs.microsoft.com/dynamics365/customer-engagement/customize/import-update-export-solutions) using the web portal once the zip file is ready or see [Authenticating to your organization](import-custom-controls.md#authenticating-to-your-organization) and [Deployment](import-custom-controls.md#deploying-custom-components) sections to import using PowerApps CLI commands.
+7. You should manually [import the solution into Common Data Service](https://docs.microsoft.com/dynamics365/customer-engagement/customize/import-update-export-solutions) using the web portal once the zip file is ready or see [Authenticating to your organization](import-custom-controls.md#authenticating-to-your-organization) and [Deployment](import-custom-controls.md#deploying-code-components) sections to import using PowerApps CLI commands.
 
-## Adding custom components to a field or an entity
+## Adding code components in model-driven apps
 
-To add a custom component like a data-set component or simple table component to a grid or view, follow the steps mentioned in the topic [Add components to fields and entities](add-custom-controls-to-a-field-or-entity.md).
+To add a custom component like a linear input component, follow the steps mentioned in the topic [Add components to fields and entities](add-custom-controls-to-a-field-or-entity.md).
+
+## Adding code components to a canvas app
+
+To add the code components to a canvas app, follow the steps mentioned in this topic [Add code components to a canvas app](component-framework-for-canvas-apps.md#add-components-to-a-canvas-app)
 
 ### See also
 

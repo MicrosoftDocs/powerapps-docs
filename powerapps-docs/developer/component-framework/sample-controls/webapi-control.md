@@ -18,6 +18,10 @@ The Web API component is designed to perform create, retrieve, update and delete
 > [!div class="mx-imgBorder"]
 > ![Web API component](../media/web-api-control.png "Web API component")
 
+## Available for 
+
+Model-driven apps
+
  ## Manifest
 
  ```xml

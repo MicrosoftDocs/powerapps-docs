@@ -24,6 +24,9 @@ For example, if your custom component is a long list that the user can scroll th
 > [!div class="mx-imgBorder"]
 > ![Control state API](../media/control-state-api.png "Control state API")
 
+## Available for 
+
+Model-driven apps and canvas apps (experimental preview) 
 
 ## Manifest
 

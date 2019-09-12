@@ -14,4 +14,5 @@ applies_to:
   - "Dynamics 365 Version 9.x"
 ms.assetid: 54872c8e-8db7-43df-b928-a83591b3bb77
 ---
-Opens a Confirm Dialog.
+
+Displays a confirmation dialog box containing a message and two buttons.

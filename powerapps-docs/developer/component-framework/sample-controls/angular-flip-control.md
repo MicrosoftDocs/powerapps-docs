@@ -19,6 +19,10 @@ This sample shows how to use third-party libraries to create controls in PowerAp
 > [!div class="mx-imgBorder"]
 > ![Angular Flip](../media/angular-flip.png "Angular Flip")
 
+## Available for 
+
+Model-driven apps and canvas apps (experimental preview) 
+
 ## Manifest
 
 ```XML
