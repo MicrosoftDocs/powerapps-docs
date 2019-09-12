@@ -19,7 +19,7 @@ search.app:
 
 Specify one or more [behavior formulas](working-with-formulas-in-depth.md) that run when an event triggers a change in component instances. For example, set a component's **OnReset** property to one or more formulas that perform initialization, clear input, and reset values when the **Reset** function runs on the component instances.
 
-## OnReset ##
+## OnReset
 
 With a component selected, select **OnReset** in the drop-down list of properties (on the right side of the formula bar), and then enter one or more formulas.
 
