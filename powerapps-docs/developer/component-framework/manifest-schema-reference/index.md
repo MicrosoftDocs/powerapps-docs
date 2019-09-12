@@ -36,7 +36,7 @@ This section contains reference documentation for manifest schema generated usin
 |[property-set](property-set.md)|[!INCLUDE [property-set-description](includes/property-set-description.md)]|Model-driven apps|
 |[resources](resources.md)|[!INCLUDE [resources-description](includes/resources-description.md)]|Model-driven apps and canvas apps (experimental preview)|
 |[resx](resx.md)|[!INCLUDE [resx-description](includes/resx-description.md)]|Model-driven apps and canvas apps (experimental preview)|
-|[type-group](type-group.md)|[!INCLUDE [type-group-description](includes/type-group-description.md)]|Model-driven apps|
+|[type-group](type-group.md)|[!INCLUDE [type-group-description](includes/type-group-description.md)]|Model-driven apps and canvas apps (experimental preview)|
 |[feature-usage](feature-usage.md)|The feature-usage element acts as a wrapper around the `uses-feature` elements, which themselves allow developers to declare which features their component wants to use. If there are no uses-feature elements defined, the feature-usage element is not required.|Model-driven apps|
 
 ### Related topics
