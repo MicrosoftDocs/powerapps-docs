@@ -1,6 +1,6 @@
 ---
 title: "Debug code components | MicrosoftDocs"
-description: "How to debug a custom component using Fiddler and Native debugging"
+description: "How to debug a code component using Fiddler and Native debugging"
 manager: kvivek
 ms.date: 04/23/2019
 ms.service: "powerapps"
@@ -11,14 +11,14 @@ author: Nkrb
 ---
 # Debug code components
 
-Once you're done implementing the custom component logic, get started with testing and debugging the custom component using the `npm start` command. This builds the custom component and opens it in the local test harness.
+Once you're done implementing the code component logic, get started with testing and debugging the code component using the `npm start` command. This builds the code component and opens it in the local test harness.
 
 > [!div class="mx-imgBorder"]
 > ![test harness 1](media/test-harness-1.png "test harness 1")
 
-As shown in the image above, the browser window opens with 4 sections. The custom component is rendered in the left pane while the right pane has **Context Inputs**, **Data Inputs** and **Outputs** sections.
+As shown in the image above, the browser window opens with 4 sections. The code component is rendered in the left pane while the right pane has **Context Inputs**, **Data Inputs** and **Outputs** sections.
 
-- **Context Inputs** provides a way to specify the form factor and test the custom component with each form factor (web, tablet, phone). This is especially helpful when the custom component is dependent on a particular form factor capability. In the coming release, you can have the ability to specify the height and width.
+- **Context Inputs** provides a way to specify the form factor and test the code component with each form factor (web, tablet, phone). This is especially helpful when the code component is dependent on a particular form factor capability. In the coming release, you can have the ability to specify the height and width.
 - **Data Inputs** is an interactive UI that displays all the properties and their types or type-groups defined in the manifest file. It allows you to key in the mock data for each property. 
 - **Outputs** renders the output whenever a component's `getOutputs` method gets called.  
 
