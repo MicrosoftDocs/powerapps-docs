@@ -15,7 +15,7 @@ ms.assetid: 5d100dc3-bd82-4b45-964c-d90eaebc0735
 
 # PowerApps component framework capabilities and limitations for canvas apps
 
-The following table describes the capabilities and limitations for building custom components using PowerApps component framework for canvas apps. 
+The following table describes the capabilities and limitations for building code components using PowerApps component framework for canvas apps. 
 
 ## PowerApps component framework APIs
 
