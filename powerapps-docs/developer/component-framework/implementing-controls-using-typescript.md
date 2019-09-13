@@ -64,7 +64,7 @@ A code component is defined by the information in the `ControlManifest.Input.xml
 
 4. Save the changes to the `ControlManifest.Input.xml` file.
 5. Now, create a new folder inside the `TSLinearInputControl` folder and name it as **css**.
-6. Create a CSS file to [add styling to the code component](#adding-style-to-the-custom-component)
+6. Create a CSS file to [add styling to the code component](#adding-style-to-the-code-component)
 7. Build the component project using the command `npm run build`.
 8. The build generates an updated Typescript type declaration file under `TSLinearInputControl/generated folder`.
 
