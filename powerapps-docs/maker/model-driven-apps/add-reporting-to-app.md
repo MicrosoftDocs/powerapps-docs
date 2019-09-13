@@ -55,11 +55,28 @@ You can add fetch-based reporting functionality to your app so that users can ru
 
 8. In App Designer select **Save**, and then select **Publish**.
 
-
 Now the app displays a **Reports** area where users can view, run, assign, share, and edit the reports they have permission to as well as create new reports using the report wizard. 
 
 > [!div class="mx-imgBorder"] 
 > ![](media/report-feature-in-app.png "Report view")
+
+## Options for creating new reports
+To create a new report, you can:
+- Use the Report Wizard. Open a model-driven app that has been enabled for reporting and run the Report Wizard to create a new report. The Report Wizard can create table and chart reports, including drill-through reports and top N reports. More information: [Create a report using the Report Wizard](../../user/create-report-with-wizard.md) 
+- Use the Report Authoring Extension. You can write new or customize existing fetch-based Reporting Services reports with Visual Studio, SQL Server Data Tools, and the Report Authoring Extension. More information: [Create a new report using SQL Server Data Tools](/dynamics365/customer-engagement/analytics/create-a-new-report-using-sql-server-data-tools)
+
+## Report ownership
+Standard entity reports, such as the Accounts Summary report for the account entity, are available to all app users. Users who own reports can share them with specific colleagues or teams. System administrators and system customizers can make reports available with organization-wide scope, so that all users can use them. For information about how to share a report, see [Share a report with other users and teams](../../user/work-with-reports.md#share-a-report-with-other-users-or-teams). 
+
+## Reports in solutions
+Reports are solution aware. Adding a report as a component to a solution makes it become a single unit of software that extends PowerApps functionality and the user interface. Only reports that are visible to the organization can be added to solutions.
+
+To find if a report is viewable to the organization: In the list of reports, open a model-driven app, select a report, and then select Edit. On the Administration tab, see if Viewable By is set to Organization. 
+
+> [!div class="mx-imgBorder"] 
+> ![](media/report-scope.png "Organization level report visibility")
+
+You can add, import, or export snapshots of reports as part of a solution. In model-driven apps, reports, sub reports, report category, report display area, and report-related record type are considered as components of a report set. When you import a solution update in non-overwrite mode, any updates by the solution to a report will be ignored if any component of the report set has been customized.
 
 ## Related topics
 [Work with reports](/powerapps/user/work-with-reports)<br/>
