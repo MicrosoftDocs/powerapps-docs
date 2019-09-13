@@ -61,7 +61,7 @@ Now the app displays a **Reports** area where users can view, run, assign, share
 > ![](media/report-feature-in-app.png "Report view")
 
 ## Options for creating new reports
-To create a new report, you can:
+You can create a new report in one of two ways:
 - Use the Report Wizard. Open a model-driven app that has been enabled for reporting and run the Report Wizard to create a new report. The Report Wizard can create table and chart reports, including drill-through reports and top N reports. More information: [Create a report using the Report Wizard](../../user/create-report-with-wizard.md) 
 - Use the Report Authoring Extension. You can write new or customize existing fetch-based Reporting Services reports with Visual Studio, SQL Server Data Tools, and the Report Authoring Extension. More information: [Create a new report using SQL Server Data Tools](/dynamics365/customer-engagement/analytics/create-a-new-report-using-sql-server-data-tools)
 
