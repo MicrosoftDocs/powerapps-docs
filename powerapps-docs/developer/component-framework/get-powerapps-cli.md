@@ -45,7 +45,7 @@ To use Microsoft PowerApps CLI, do the following:
 
 
 > [!NOTE]
-> - To deploy your custom component using PowerApps CLI, you must have a Common Data Service environment with system administrator or system customizer privileges.
+> - To deploy your code component using PowerApps CLI, you must have a Common Data Service environment with system administrator or system customizer privileges.
 > - Currently, PowerApps CLI is supported only on Windows 10.
 
 ## Update Microsoft PowerApps CLI to the latest version
