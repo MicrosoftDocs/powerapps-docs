@@ -20,6 +20,10 @@ ms.assetid: f22723f0-c606-465c-abba-0a8c46a10e32
 
 [!INCLUDE [hasentityprivilege-description](includes/hasentityprivilege-description.md)]
 
+## Available for 
+
+Model-driven apps
+
 ## Syntax
 
 `hasEntityPrivilege(entityTypeName, privilegeType, privilegeDepth)`

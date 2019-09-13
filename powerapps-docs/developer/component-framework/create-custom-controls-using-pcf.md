@@ -1,7 +1,7 @@
 ---
 title: Create and build a custom component| Microsoft Docs
 description: Start creating a component using the PowerApps component framework Tooling
-keywords: PowerApps component framework, Custom components, Component Framework
+keywords: PowerApps component framework, code components, Component Framework
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
@@ -17,7 +17,7 @@ ms.assetid: d2cbf58a-9112-45c2-b823-2c07a310714c
 
 [!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-This topic demonstrates how to create and deploy custom components using PowerApps component framework. Ensure that you have installed Microsoft PowerApps CLI
+This topic demonstrates how to create and deploy code components using PowerApps component framework. Ensure that you have installed Microsoft PowerApps CLI
 
 ## Create a new component
 
@@ -76,9 +76,9 @@ To build the component project, open the project folder in Visual Studio Code an
 
 ### See also
 
-[Debug custom components](debugging-custom-controls.md)<br/>
+[Debug code components](debugging-custom-controls.md)<br/>
 [Package a custom component](import-custom-controls.md)<br/>
-[Add custom components to a field or entity](add-custom-controls-to-a-field-or-entity.md)<br/>
-[Updating existing custom components](updating-existing-controls.md)<br/>
+[Add code components to a field or entity](add-custom-controls-to-a-field-or-entity.md)<br/>
+[Updating existing code components](updating-existing-controls.md)<br/>
 [PowerApps component framework API Reference](reference/index.md)<br/>
 [PowerApps component framework Overview](overview.md)

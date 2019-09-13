@@ -21,6 +21,10 @@ PowerApps component framework uses the concept of implementing String(resx) web 
 > [!div class="mx-imgBorder"]
 > ![Localization API component](../media/localization-api-control.png "Localization API component")
 
+## Available for 
+
+Model-driven apps and canvas apps (experimental preview) 
+
 ## Manifest 
 
 ```xml

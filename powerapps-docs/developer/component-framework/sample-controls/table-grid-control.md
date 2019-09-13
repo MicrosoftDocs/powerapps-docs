@@ -20,6 +20,10 @@ The component header columns and internal record values are bound to the existin
 > [!div class="mx-imgBorder"]
 > ![Table Grid component](../media/table-grid-control.png "Table Grid component")
 
+## Available for 
+
+Model-driven apps  
+
 ## Manifest 
 
 ```xml

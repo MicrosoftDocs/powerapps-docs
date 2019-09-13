@@ -19,6 +19,10 @@ ms.assetid: 8907f07a-ad45-47e4-a503-8eaae9bba5f7
 
 Provides access to all the properties of a file.
 
+## Available for
+
+Model-driven apps
+
 ## Properties
 
 ### fileContent

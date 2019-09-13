@@ -25,7 +25,7 @@ ms.assetid: 90f2b4c9-7396-4ab9-bc9f-810189dc18b7
 |--|--|--|--|
 |`name`|Name of the library|`string`|Yes|
 |`version`|The current library version|Positive integer|Yes|
-|`order`|The order in which the library files must load|Positive integer|Yes|
+|`order`|The order in which the library files should load|Positive integer|Yes|
 
 ## Parent Elements
 

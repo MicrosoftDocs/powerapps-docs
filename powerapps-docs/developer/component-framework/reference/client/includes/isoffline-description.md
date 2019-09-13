@@ -12,4 +12,4 @@ ms.topic: "article"
 ms.assetid: 11679e32-23ed-4971-9367-56aef5cc5f45
 ---
 
-Whether the user is online or offline.
+Returns the information whether the server is online or offline.

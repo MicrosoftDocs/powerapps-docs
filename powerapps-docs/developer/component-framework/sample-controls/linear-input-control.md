@@ -21,6 +21,10 @@ To implement this component, first you need to define the [Manifest](../manifest
 > [!div class="mx-imgBorder"]
 > ![Linear Input Concomponenttrol](../media/linear-input-control.png "Linear Input component")
 
+## Available for 
+
+Model-driven apps and canvas apps (experimental preview) 
+
 ## Manifest
 
 ```xml

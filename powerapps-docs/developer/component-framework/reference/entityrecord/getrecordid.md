@@ -17,6 +17,10 @@ ms.assetid: 8d98a8ca-d4e9-405e-bd59-a1207a46020c
 
 [!INCLUDE [getrecordid-description](includes/getrecordid-description.md)]
 
+## Available for 
+
+Model-driven apps
+
 ## Syntax
 
 `getRecordId()`

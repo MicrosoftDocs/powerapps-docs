@@ -17,6 +17,10 @@ ms.assetid: e119c1e1-e35f-47cf-9437-e7376657bbc0
 
 [!INCLUDE [loadnextpage-description](includes/loadnextpage-description.md)]
 
+## Available for 
+
+Model-driven apps
+
 ## Syntax
 
 `loadNextPage()`

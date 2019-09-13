@@ -20,9 +20,13 @@ ms.assetid: 9179f03b-9d26-4253-9535-13ab544d58ac
 
 [!INCLUDE [createrecord-description](includes/createrecord-description.md)]
 
+## Available for 
+
+Model-driven apps
+
 ## Syntax
 
-`createRecord(entityLogicalName, data).then(successCallback, errorCallback);`
+`context.webapi.createRecord(entityLogicalName, data).then(successCallback, errorCallback);`
 
 ## Parameters
 
