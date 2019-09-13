@@ -2,7 +2,7 @@
 title: "Work with solutions in PowerApps | MicrosoftDocs"
 description: "Learn how solutions are distributed"
 ms.custom: ""
-ms.date: 05/28/2019
+ms.date: 09/13/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -81,7 +81,9 @@ More information: [Whitepaper: Solution Lifecycle Management](https://www.micros
 -   Plug-in Assembly  
   
 -   Process  
-  
+
+-   Report  
+
 -   Sdk Message Processing Step  
   
 -   Security Role  
