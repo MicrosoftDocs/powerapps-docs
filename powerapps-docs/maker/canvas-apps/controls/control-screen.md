@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
-ms.date: 10/25/2016
+ms.date: 09/14/2019
 ms.author: emcoope
 search.audienceType: 
   - maker
