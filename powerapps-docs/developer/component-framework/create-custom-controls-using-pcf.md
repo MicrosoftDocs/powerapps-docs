@@ -33,11 +33,11 @@ To get started, open a new Developer Command Prompt for VS 2017 after installing
    > Currently, PowerApps CLI supports two types of components: **field** and **dataset**.  For canvas apps, only field type is supported for experimental preview.
 
 4. To retrieve all the required project dependencies, run the command `npm install`.
-5. Open your project folder (`C:\Users\<your name>\Documents\My_PCF_Component\<component name>`) in any developer environment of your choice and get started with your code component development.
+5. Open your project folder `C:\Users\<your name>\Documents\<My_PCF_Component>` in any developer environment of your choice and get started with your code component development. The quickest way to get started is by running `code .` from your command prompt once you are in the `C:\Users\<your name>\Documents\<My_PCF_Component>` directory. This command opens your component project in Visual Studio Code.
 
 ## Build your component
 
-To build the component project, open the project folder in Visual Studio Code and use the (Ctrl-Shift-B) command, then select the build options. Alternatively, you can also build the component quickly using the `npm run build` command in the Developer Command Prompt for VS 2017 window.
+To build the component project, open the project folder that contains `package.json` in Visual Studio Code and use the (Ctrl-Shift-B) command, then select the build options. Alternatively, you can also build the component quickly using the `npm run build` command in the Developer Command Prompt for VS 2017 window.
 
 > [!TIP]
 > To debug the component during or after the build operation, see [Debug a code component](debugging-custom-controls.md).
