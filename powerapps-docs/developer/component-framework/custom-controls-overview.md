@@ -18,7 +18,7 @@ Code components are a type of solution components, which means they can be inclu
 
 You add code components by including them in a solution and then importing it into Common Data Service. Once they are in Common Data Service, system administrator and system customizers can configure on fields, sub-grids, views, and dashboard sub-grids to use them in place of default component.  You can also add these code components in canvas apps. 
 
-code components are comprised of three components:
+Code components are comprised of three components:
 
 1. [Manifest](#manifest)
 2. [Component implementation library](#component-implementation-library)
