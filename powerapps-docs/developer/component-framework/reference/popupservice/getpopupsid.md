@@ -18,6 +18,10 @@ ms.assetid: 08b572ab-3c66-4406-9de7-869026973ce8
 
 [!INCLUDE [getpopupsid-description](includes/getpopupsid-description.md)]
 
+## Available for 
+
+Model-driven apps
+
 ## Syntax
 
 `getPopupsId()`

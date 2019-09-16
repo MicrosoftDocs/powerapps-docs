@@ -22,11 +22,15 @@ ms.assetid: 0e776647-a4a2-42c9-85e8-62718154052f
 
 [!INCLUDE [img-description](includes/img-description.md)]
 
+## Available for
+
+Model-driven apps
+
 ## Attributes
 
-|Name|Description|Type|Required|
-|--|--|--|--|
-|`path`|Relative path w.r.t manifest where image files are located|`string`|Yes|
+|Name|Description|Type|Required|Available for|
+|--|--|--|--|-------|
+|`path`|Relative path w.r.t manifest where the image files are located|`string`|Yes|Model-driven apps|
 
 ## Parent Elements
 

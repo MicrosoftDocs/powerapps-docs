@@ -15,4 +15,4 @@ applies_to:
 ms.assetid: c515ef34-cd7f-4483-9b59-fae564dca6a4
 ---
 
-Gets the localized string from the resx file defined in the manifest file.
+Returns the localized string for a given key associated with the specified resource (resx) defined in the manifest file.

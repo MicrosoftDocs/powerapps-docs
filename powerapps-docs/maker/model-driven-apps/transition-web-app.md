@@ -2,7 +2,7 @@
 title: "Quick start for transitioning your Dynamics 365 for Customer Engagement apps web client application to Unified Interface | MicrosoftDocs"
 description: "Learn how to transition your legacy web client application to the Unified Interface"
 ms.custom: ""
-ms.date: 07/24/2019
+ms.date: 09/11/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -25,9 +25,11 @@ search.app:
 ---
 # Quick start for transitioning your Dynamics 365 for Customer Engagement apps web client application to Unified Interface
 
-The Unified Interface framework uses responsive web design principles to provide an optimal viewing and interaction experience for any screen size, device, or orientation. This quick start topic explains how to transition your Dynamics 365 for Customer Engagement apps Web Client application to Unified Interface by using a new non-production environment. To use and existing non-production environment to transition your Web Client application, see [Quick start for using an existing environment to validate your legacy web client app with the Unified Interface](transition-web-app-existing.md). 
+The Unified Interface framework uses responsive web design principles to provide an optimal viewing and interaction experience for any screen size, device, or orientation. This quick start topic explains how to transition your Dynamics 365 for Customer Engagement apps Web Client application to Unified Interface by using a new non-production environment. 
 
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE3JwWU]
 
+To use an existing non-production environment to transition your Web Client application, see [Quick start for using an existing environment to validate your legacy web client app with the Unified Interface](transition-web-app-existing.md). 
 ## Prerequisites
 - A Dynamics 365 for Customer Engagement apps legacy web client application. 
 - Although not required, we recommend a non-production environment to test your application and ensure it does not impact your current deployment or development cycles. More information: [Manage sandbox instances](/dynamics365/customer-engagement/admin/manage-sandbox-instances)
@@ -89,7 +91,7 @@ If you use the Dynamics 365 for Field Service or Dynamics 365 for Project Servic
     > [!IMPORTANT]
     > If **administration mode** is enabled, you must disable it so you can view the **Solutions** area. More information: [Administration mode](/power-platform/admin/sandbox-environments#administration-mode)
 
-7. Find the Field Service or Project Service Automation solution and open it. The option to **Upgrade** should be available. Select it to upgrade the solution. 
+7. Find the Field Service or Project Service Automation solution and select it. The option to **Upgrade** should be available. Select it to upgrade the solution. 
 
     > [!div class="mx-imgBorder"] 
     > ![Upgrade solution](media/ppac-upgrade-solution.png "Upgrade solution")

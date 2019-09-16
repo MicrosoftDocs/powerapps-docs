@@ -1,7 +1,7 @@
 ---
-title: Create and build a custom component| Microsoft Docs
+title: Create and build a code component| Microsoft Docs
 description: Start creating a component using the PowerApps component framework Tooling
-keywords: PowerApps component framework, Custom components, Component Framework
+keywords: PowerApps component framework, code components, Component Framework
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
@@ -13,11 +13,11 @@ ms.topic: "article"
 ms.assetid: d2cbf58a-9112-45c2-b823-2c07a310714c
 ---
 
-# Create and build a custom component
+# Create and build a code component
 
 [!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-This topic demonstrates how to create and deploy custom components using PowerApps component framework. Ensure that you have installed Microsoft PowerApps CLI
+This topic demonstrates how to create and deploy code components using PowerApps component framework. Ensure that you have installed Microsoft PowerApps CLI
 
 ## Create a new component
 
@@ -33,14 +33,14 @@ To get started, open a new Developer Command Prompt for VS 2017 after installing
    > Currently, PowerApps CLI supports two types of components: **field** and **dataset**.  For canvas apps, only field type is supported for experimental preview.
 
 4. To retrieve all the required project dependencies, run the command `npm install`.
-5. Open your project folder (`C:\Users\<your name>\Documents\My_PCF_Component\<component name>`) in any developer environment of your choice and get started with your custom component development.
+5. Open your project folder (`C:\Users\<your name>\Documents\My_PCF_Component\<component name>`) in any developer environment of your choice and get started with your code component development.
 
 ## Build your component
 
 To build the component project, open the project folder in Visual Studio Code and use the (Ctrl-Shift-B) command, then select the build options. Alternatively, you can also build the component quickly using the `npm run build` command in the Developer Command Prompt for VS 2017 window.
 
 > [!TIP]
-> To debug the component during or after the build operation, see [Debug a custom component](debugging-custom-controls.md).
+> To debug the component during or after the build operation, see [Debug a code component](debugging-custom-controls.md).
 
 ## Known Configuration issues and Workarounds
 
@@ -76,9 +76,9 @@ To build the component project, open the project folder in Visual Studio Code an
 
 ### See also
 
-[Debug custom components](debugging-custom-controls.md)<br/>
-[Package a custom component](import-custom-controls.md)<br/>
-[Add custom components to a field or entity](add-custom-controls-to-a-field-or-entity.md)<br/>
-[Updating existing custom components](updating-existing-controls.md)<br/>
+[Debug code components](debugging-custom-controls.md)<br/>
+[Package a code component](import-custom-controls.md)<br/>
+[Add code components to a field or entity](add-custom-controls-to-a-field-or-entity.md)<br/>
+[Updating existing code components](updating-existing-controls.md)<br/>
 [PowerApps component framework API Reference](reference/index.md)<br/>
 [PowerApps component framework Overview](overview.md)

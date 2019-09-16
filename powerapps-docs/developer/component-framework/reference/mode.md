@@ -19,33 +19,37 @@ ms.assetid: 8b51654c-ee67-40f8-ae5b-be684dad3520
 
 [!INCLUDE [mode-description](includes/mode-description.md)]
 
+## Available for 
+
+Model-driven apps
+
 ## Properties
 
-## allocatedHeight
+### allocatedHeight
 
 Height in pixels allocated to the component.
 
 **Type**: `number`
 
-## allocatedWidth
+### allocatedWidth
 
 Width in pixels allocated to the component.
 
 **Type**: `number`
 
-## isControlDisabled
+### isControlDisabled
 
 Whether the component is disabled.
 
 **Type**: `string`
 
-## isVisible
+### isVisible
 
 Whether the component is visible on the page.
 
 **Type**: `boolean`
 
-## label
+### label
 
 The defined component label.
 

@@ -14,10 +14,14 @@ author: Nkrb
 
 [!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
 
-This sample shows how to use third-party libraries to create controls in PowerApps component framework.  The flip sample component is implemented based on angular.js, angular-ui, angular-animate, angular-sanitize, bootstrap. The code may not reveal the best practices for the mentioned third-party libraries.
+This sample shows how to use third-party libraries to create components in PowerApps component framework.  The flip sample component is implemented based on angular.js, angular-ui, angular-animate, angular-sanitize, bootstrap. The code may not reveal the best practices for the mentioned third-party libraries.
 
 > [!div class="mx-imgBorder"]
 > ![Angular Flip](../media/angular-flip.png "Angular Flip")
+
+## Available for 
+
+Model-driven apps and canvas apps (experimental preview) 
 
 ## Manifest
 

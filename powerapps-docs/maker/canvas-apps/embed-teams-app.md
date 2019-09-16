@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 05/29/2019
+ms.date: 09/09/2019
 ms.author: jimholtz
 search.audienceType: 
   - maker
@@ -123,7 +123,7 @@ For more information, see [Manifest Editor](https://docs.microsoft.com/microsoft
    > [!div class="mx-imgBorder"] 
    > ![Team tab Add](./media/embed-teams-app/team-tab-add.png "Team tab Add")
 
-7. Add your app's configuration URL in the "Configuration URL" input field, using the following format: `https://web.powerapps.com/webplayer/teamsapptabsettings?appid=<PowerApp ID>`
+7. Add your app's configuration URL in the "Configuration URL" input field, using the following format: `https://apps.powerapps.com/teams/settings/<PowerApp ID>`
 
    Replace `<PowerApp ID>` with the App ID GUID you recorded above.
 

@@ -19,6 +19,10 @@ This sample component renders a table with two columns. The left column shows th
 > [!div class="mx-imgBorder"]
 > ![Table component](../media/table-control.png "Table component")
 
+## Available for 
+
+Model-driven apps
+
 ## Manifest
 
 ```xml
@@ -409,13 +413,13 @@ color: #1160B7;
 
 This sample provides examples on how to use methods from the `IClient, IUserSettings, IUtility, IFormatting interfaces`.
 
-This component also showcases two utility functions, `setFullScreen` and `lookupObjects`. These functions are invoked by clicking the button rendered as part of the custom component. The `setFullScreen` button toggles the component in and out of full screen mode. The `lookupObjects` button opens a lookup dialog, and then inject the selected record as text into div.
+This component also showcases two utility functions, `setFullScreen` and `lookupObjects`. These functions are invoked by clicking the button rendered as part of the code component. The `setFullScreen` button toggles the component in and out of full screen mode. The `lookupObjects` button opens a lookup dialog, and then inject the selected record as text into div.
 
 In this sample, we render an HTML button and attach a JavaScript `onClick` event handler `onLookupObjectsButtonClick` to the button. On click of this button, we invoke `context.utils.lookupObjects()` method and pass as a parameter an array of entity names. 
 
 This method returns a JavaScript Promise object, representing the completion or failure of the call to the lookup dialog. If the promise is resolved successfully, the lookup object which the user selected is passed as a parameter into the callback method and can be referenced as data.id, data.name, data.entityType.
 
-The callback method injects this information as HTML into a div rendered on the custom component to showcase the selected results to the user. If the promise is rejected, the error callback method is invoked where your component can handle the error scenario accordingly.
+The callback method injects this information as HTML into a div rendered on the code component to showcase the selected results to the user. If the promise is rejected, the error callback method is invoked where your component can handle the error scenario accordingly.
 
 ### Related topics
 

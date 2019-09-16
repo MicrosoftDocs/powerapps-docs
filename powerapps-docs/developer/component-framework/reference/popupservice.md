@@ -19,6 +19,10 @@ ms.assetid: 8f8d46c1-cc61-48c3-8e15-71f36e1cada1
 
 [!INCLUDE [popupservice-description](includes/popupservice-description.md)]
 
+## Available for 
+
+Model-driven apps and canvas apps (experimental preview)
+
 ## Methods
 
 |Method | Description | 
