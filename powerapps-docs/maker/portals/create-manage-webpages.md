@@ -6,7 +6,7 @@ manager: shujoshi
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 09/12/2019
+ms.date: 09/16/2019
 ms.author: shjais
 ms.reviewer:
 ---
@@ -18,7 +18,7 @@ ms.reviewer:
 A webpage is a document that is identified by a unique URL in a website. It is one of the core objects of the website and builds a hierarchy of the website through parent and child relationships to other webpages.
 
 > [!NOTE]
-> If you make any change in the portal designer, the website users would notice a performance impact. We recommended you to do the changes during non-peak hours on a live portal.
+> If you customize your portal using the portal designer, the website users would notice a performance impact. We recommended you to do the changes during non-peak hours on a live portal.
 
 ## Create webpage
 
