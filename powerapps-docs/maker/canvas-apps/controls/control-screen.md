@@ -38,7 +38,7 @@ Most apps have multiple **Screen** controls that contain **[Label](control-text-
 
 **OnHidden** – The behavior of an app when the user navigates away from a screen.
 
-**OnVisible** – The behavior of an app when the user navigates to a screen.  Use this property to setup variables and preload data used by the screen.  Use the [**App.OnStart**](../functions/object-app.md#onstart-property) property for setup once when the app is started.
+**OnVisible** – The behavior of an app when the user navigates to a screen.  Use this property to set up variables and preload data used by the screen.  Use the [**App.OnStart**](../functions/object-app.md#onstart-property) property for set up once when the app is started.
 
 **Orientation** - The orientation of the screen. If its **Width** is greater than its **Height**, the orientation will be **Layout.Horizontal**; otherwise, it will be **Layout.Vertical**.
 
