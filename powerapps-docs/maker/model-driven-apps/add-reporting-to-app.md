@@ -70,7 +70,7 @@ Standard entity reports, such as the Accounts Summary report for the account ent
 ## Reports in solutions
 Reports are solution aware. Adding a report as a component to a solution makes it become a single unit of software that extends PowerApps functionality and the user interface. Only reports that are visible to the organization can be added to solutions.
 
-To find if a report is viewable to the organization: In the list of reports, open a model-driven app, select a report, and then select Edit. On the Administration tab, see if Viewable By is set to Organization. 
+To find if a report is viewable to the organization: In the list of reports, open a model-driven app, select a report, and then select **Edit**. On the **Administration** tab, see if **Viewable By** is set to **Organization**. 
 
 > [!div class="mx-imgBorder"] 
 > ![](media/report-scope.png "Organization level report visibility")
