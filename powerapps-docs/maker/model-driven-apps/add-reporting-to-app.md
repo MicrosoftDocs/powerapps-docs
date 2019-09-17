@@ -60,10 +60,10 @@ Now the app displays a **Reports** area where users can view, run, assign, share
 > [!div class="mx-imgBorder"] 
 > ![](media/report-feature-in-app.png "Report view")
 
-## Options for creating new reports
+<!-- ## Options for creating new reports
 You can create a new report in one of two ways:
 - Use the Report Wizard. Open a model-driven app that has been enabled for reporting and run the Report Wizard to create a new report. The Report Wizard can create table and chart reports, including drill-through reports and top N reports. More information: [Create a report using the Report Wizard](../../user/create-report-with-wizard.md) 
-- Use the Report Authoring Extension. You can write new or customize existing fetch-based Reporting Services reports with Visual Studio, SQL Server Data Tools, and the Report Authoring Extension. More information: [Create a new report using SQL Server Data Tools](/dynamics365/customer-engagement/analytics/create-a-new-report-using-sql-server-data-tools)
+- Use the Report Authoring Extension. You can write new or customize existing fetch-based Reporting Services reports with Visual Studio, SQL Server Data Tools, and the Report Authoring Extension. More information: [Create a new report using SQL Server Data Tools](/dynamics365/customer-engagement/analytics/create-a-new-report-using-sql-server-data-tools) -->
 
 ## Report visibility
 Standard entity reports, such as the Accounts Summary report for the account entity, are available to all app users. Users who own reports can share them with specific colleagues or teams. System administrators and system customizers can make reports available with organization-wide visibility, so that all users can use them. For information about how to share a report, see [Share a report with other users and teams](../../user/work-with-reports.md#share-a-report-with-other-users-or-teams). 
