@@ -2,7 +2,7 @@
 title: "Use Web API functions (Common Data Service)| Microsoft Docs"
 description: "Functions are reusable operations that are used with a GET request to retrieve data from Common Data Service"
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 09/05/2019
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -197,7 +197,33 @@ You must use the full name of the function and include the names of the paramete
 ```http
 GET [Organization URI]/api/data/v9.0/accounts?$select=name,accountnumber&$filter=Microsoft.Dynamics.CRM.LastXHours(PropertyName=@p1,PropertyValue=@p2)&@p1='modifiedon'&@p2=12  
 ```  
-  
+
+#### Limitations of query functions
+
+One of the limitations of query functions is that you cannot use the `not` operator to negate query functions.
+
+For example, the following query using <xref href="Microsoft.Dynamics.CRM.EqualUserId?text=EqualUserId Function" /> will fail with the error: `Not operator along with the Custom Named Condition operators is not allowed`.
+
+```http
+GET [Organization URI]/api/data/v9.1/systemusers?$select=fullname,systemuserid&$filter=not Microsoft.Dynamics.CRM.EqualUserId(PropertyName=@p1)&@p1='systemuserid'
+```
+Several query functions have a companion negated query function. For example, you can use the <xref href="Microsoft.Dynamics.CRM.NotEqualUserId?text=NotEqualUserId Function" />. The following query will return the expected results:
+
+```http
+GET [Organization URI]/api/data/v9.1/systemusers?$select=fullname,systemuserid&$filter=Microsoft.Dynamics.CRM.NotEqualUserId(PropertyName=@p1)&@p1='systemuserid'
+```
+
+Other query functions can be negated in different ways. For example, rather than trying to negate the <xref href="Microsoft.Dynamics.CRM.Last7Days?text=Last7Days Function" /> like this (which will fail with the same error as mentioned above):
+
+```http
+GET [Organization URI]/api/data/v9.1/accounts?$select=name&$filter=not Microsoft.Dynamics.CRM.Last7Days(PropertyName=@p1)&@p1='createdon'
+```
+Use the <xref href="Microsoft.Dynamics.CRM.OlderThanXDays?text=OlderThanXDays Function" /> like this:
+
+```http
+GET [Organization URI]/api/data/v9.1/accounts?$select=name&$filter=Microsoft.Dynamics.CRM.OlderThanXDays(PropertyName=@p1,PropertyValue=@p2)&@p1='createdon'&@p2=7
+```
+
 ### See also
 
 [Web API Functions and Actions Sample (C#)](samples/functions-actions-csharp.md)<br />
