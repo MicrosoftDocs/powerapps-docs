@@ -270,6 +270,23 @@ class SampleProgram
 
 Even though this example uses <xref:System.Net.Http.HttpClient>.<xref:System.Net.Http.HttpClient.GetAsync*> rather than the overridden <xref:System.Net.Http.HttpClient.SendAsync*>, it will apply for any of the <xref:System.Net.Http.HttpClient> methods that send a request.
 
+### Discover the authority at run time
+
+The authentication authority URL, and the resource URL, can be determined dynamically at run time using the following ADAL code. This is the recommended method to use as compared to the well-known authority URL ("https://login.microsoftonline.com/common") shown previously in a code snippet.  
+  
+```csharp    
+AuthenticationParameters ap = AuthenticationParameters.CreateFromResourceUrlAsync(  
+                        new Uri("https://mydomain.crm.dynamics.com/api/data/")).Result;  
+  
+String authorityUrl = ap.Authority;  
+String resourceUrl  = ap.Resource;  
+```  
+  
+For the Web API, another way to obtain the authority URL is to send any message request to the web service specifying no access token. This is known as a         *bearer challenge*. The response can be parsed to obtain the authority URL.  
+  
+```csharp  
+httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", "");  
+```  
 
 ## Connect as an app
 
