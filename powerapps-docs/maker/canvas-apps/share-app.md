@@ -130,16 +130,18 @@ PowerApps canvas apps can be shared with guest users of an Azure Active Director
 > Guests may only be assigned the **User** role, and not the **Co-owner** role, for apps shared with them.
 
 ### Prerequisites
-1. In Azure Active Directory (Azure AD), enable B2B external collaboration for the tenant. More information: [Enable B2B external collaboration and manage who can invite guests](/azure/active-directory/b2b/delegate-invitations)
+- In Azure Active Directory (Azure AD), enable B2B external collaboration for the tenant. More information: [Enable B2B external collaboration and manage who can invite guests](/azure/active-directory/b2b/delegate-invitations)
     - Enable B2B external collaboration is on by default. However, the settings can be changed by a tenant admin.  For more information about Azure AD B2B, see [What is guest user access in Azure AD B2B?](/azure/active-directory/b2b/what-is-b2b)  
-2. Access to an account that can add guest users to an Azure AD tenant. Admins and users with the Guest Inviter role can add guests to a tenant.   
-3. A PowerApps license must be assigned to the guest user in either 1) the tenant the app being shared is associated with or 2) the guest's home tenant. 
+- Access to an account that can add guest users to an Azure AD tenant. Admins and users with the Guest Inviter role can add guests to a tenant.   
+- The guest user must have a PowerApps license assigned through one of the following tenants:
+    - The tenant hosting the app being shared.
+    - The home tenant of the guest user.
 
 ### Steps to grant guest access
 1. Select **New guest user** to add guest users in Azure AD. More information: [Quickstart: Add a new guest user in Azure AD](/azure/active-directory/b2b/b2b-quickstart-add-guest-users-portal).
     > [!div class="mx-imgBorder"] 
     > ![Add guest in Azure AD](media/share-app/guest_access_doc_1.png "Add guest in Azure AD")
-2. If the guest doesn't already have a license in their home tenant, assign a license to the guest user.
+2. If the guest user doesn't already have a license in their home tenant, assign a license to the guest user.
    - To assign guest users from admin.microsoft.com, see [Assign licenses to one user](/office365/admin/subscriptions-and-billing/assign-licenses-to-users).
    - To assign guest users from portal.azure.com, see [Assign or remove licenses](/azure/active-directory/fundamentals/license-users-groups).
  
