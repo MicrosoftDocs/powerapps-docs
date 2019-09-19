@@ -173,7 +173,7 @@ interval of your choice. To schedule a refresh automatically, select **Refresh a
 2. Enter the dataflow refresh frequency, start date, and time, in UTC.
 
 3. Select **Create.**
-
+<!-- 
 ## Connect to your dataflow in Power BI Desktop
 Once you’ve created your dataflow and you have scheduled the refresh frequency
 for each data source that will populate the model, you’re ready for the final task, which is connecting to your dataflow from within Power BI Desktop.
@@ -190,7 +190,7 @@ name of your dataflow or entities from among many dataflow entities.
 
 When you select the entity and then select the **Load** button, the entities
 appear in the **Fields** pane in Power BI Desktop, and appear and behave just
-like tables from any other dataset.
+like tables from any other dataset. -->
 
 ## Using dataflows stored in Azure Data Lake Storage Gen2
 Some organizations might want to use their own storage for creation and management
