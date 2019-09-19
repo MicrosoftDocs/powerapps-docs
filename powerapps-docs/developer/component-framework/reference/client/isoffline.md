@@ -17,13 +17,15 @@ ms.assetid: a28ff618-aaf8-4c76-b322-79ff98bae291
 
 [!INCLUDE [isoffline-description](includes/isoffline-description.md)]
 
+## Syntax
+
+`context.client.isOffline()`
+
 ## Available for
 
 Model-driven apps
 
-## Syntax
 
-`context.client.isOffline()`
 
 ## Return Value
 

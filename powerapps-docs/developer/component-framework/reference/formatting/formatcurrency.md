@@ -17,6 +17,10 @@ ms.assetid: 87e433e6-573f-414f-b49d-1213f2bd8cf4
 
 [!INCLUDE [formatcurrency-description](includes/formatcurrency-description.md)]
 
+## Syntax
+
+`context.formatting.formatCurrency();`
+
 ## Available for 
 
 Model-driven apps and canvas apps (experimental preview)

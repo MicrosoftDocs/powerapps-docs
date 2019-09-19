@@ -17,13 +17,13 @@ ms.assetid: aae27c64-33c4-47f1-b833-4c04161c01e2
 
 [!INCLUDE[./includes/pickfile-description.md](./includes/pickfile-description.md)]
 
+## Syntax
+
+`context.device.pickFile()`
+
 ## Available for 
 
 Model-driven apps
-
-## Syntax
-
-`pickFile(options)`
 
 ## Parameters
 

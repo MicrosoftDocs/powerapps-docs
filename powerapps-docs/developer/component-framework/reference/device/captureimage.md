@@ -17,13 +17,14 @@ ms.assetid: 1d9c0063-add2-4002-acab-1be07ca1f6b6
 
 [!INCLUDE[./includes/captureimage-description.md](./includes/captureimage-description.md)]
 
+## Syntax
+
+`context.device.captureImage()`
+
 ## Available for 
 
 Model-driven apps
 
-## Syntax
-
-`captureImage(options)`
 
 ## Parameters
 

@@ -23,7 +23,7 @@ Model-driven apps
 
 ## Syntax
 
-`context.webapi.updateRecord(entityLogicalName, id, data).then(successCallback, errorCallback);`
+`context.webAPI.updateRecord(entityLogicalName, id, data).then(successCallback, errorCallback);`
 
 ## Parameters
 

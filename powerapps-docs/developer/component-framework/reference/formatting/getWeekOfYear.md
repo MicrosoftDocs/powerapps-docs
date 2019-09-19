@@ -16,13 +16,13 @@ ms.assetid: 9d62e091-2276-44e9-9b9f-b216f51b4d05
 
 [!INCLUDE [getweekofyear-description](includes/getweekofyear-description.md)]
 
+## Syntax
+
+`context.formatting.getWeekOfYear();`
+
 ## Available for 
 
 Model-driven apps
-
-## Syntax
-
-`getWeekOfYear(value)`
 
 ## Parameters
 

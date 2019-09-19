@@ -23,7 +23,7 @@ Model-driven apps
 
 ## Syntax
 
-`getResource(id, success, failure)`
+`context.resources.getResource(id, success, failure)`
 
 ## Parameters
 

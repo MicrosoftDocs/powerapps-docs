@@ -23,7 +23,7 @@ Model-driven apps
 
 ## Syntax
 
-`context.webapi.retrieveRecord(entityLogicalName, id, options).then(successCallback, errorCallback);`
+`context.webAPI.retrieveRecord(entityLogicalName, id, options).then(successCallback, errorCallback);`
 
 ## Parameters
 

@@ -17,13 +17,13 @@ ms.assetid: b7cbb29f-4663-46c4-9aa8-1209a68e73b3
 
 [!INCLUDE[./includes/getbarcodevalue-description.md](./includes/getbarcodevalue-description.md)]
 
+## Syntax
+
+`context.device.cgetBarcodeValue()`
+
 ## Available for 
 
 Model-driven apps
-
-## Syntax
-
-`getBarcodeValue()`
 
 ## Return Value
 
