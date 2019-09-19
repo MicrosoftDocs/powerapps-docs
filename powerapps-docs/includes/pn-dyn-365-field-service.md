@@ -1,1 +1,1 @@
-Dynamics 365 for Field Service
+Dynamics 365 Field Service
