@@ -1,6 +1,6 @@
 ---
 title: "Using an on-premises data gateway in Power Platform Dataflows | MicrosoftDocs"
-description: "Learn how use an on-premises data gateway in Power Platform Dataflows"
+description: "Learn how to use an on-premises data gateway in Power Platform Dataflows"
 ms.custom: ""
 ms.date: 08/05/2019
 ms.reviewer: ""
@@ -52,7 +52,7 @@ With a gateway, you can connect to on-premises data through these connections:
 -   A PowerApps account. Don't have one? [Sign up for 30 days free](https://docs.microsoft.com/en-us/powerapps/maker/signup-for-powerapps).
 
 -   Administrative permissions on a gateway. These permissions are provided by
-    default for gateways you install and administrators can grant other people
+    default for gateways you install. Administrators can grant other people
     permissions for gateways. 
 
 -   A license that supports accessing on-premises data using an on-premises
@@ -91,34 +91,34 @@ You can change the enterprise gateway used for a given dataflow and change the g
 
 
 ## View and manage gateway permissions
-1.  In the left navigation pane of [powerapps.com](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Gateways**, and then select the gateway you want.
+1.  In the left navigation pane of [powerapps.com](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Gateways** and then select the gateway you want.
 
-2.  To add a user to a gateway select **Users**, specify a user or group, and then specify a permission level:
+2.  To add a user to a gateway, select **Users**, specify a user or group, and then specify a permission level:
 
-    -   **Can use**. Users with this permission can create connections on the gateway to use for
+    -   **Can use.** Users with this permission can create connections on the gateway to use for
         apps and flows, but can't share the gateway. Use this permission for
         users who will run apps but not share them.
 
-    -   **Can use + share**. Users with this permission can create a connection on the gateway to
+    -   **Can use + share.** Users with this permission can create a connection on the gateway to
         use for apps and flows, and automatically share the gateway when sharing
         an app. Use this permission for users who need to share apps with other
         users or with the organization.
 
-    -   **Admin**. Admins have full control of the gateway, including adding users, setting permissions, creating connections to all available data sources, and deleting the gateway.
+    -   **Admin.** Admins have full control of the gateway, including adding users, setting permissions, creating connections to all available data sources, and deleting the gateway.
 
       For **Can use** and **Can use + share** permission levels, select the data sources that the user can connect to over the gateway.
 
 ## View and manage gateway connections
 1.  In the left navigation bar of *powerapps.com*, select **Gateways**, and then choose the gateway you want.
 
-2.  Peform the action that you want: 
-    - To view details, edit the settings, or delete a gateway select **Connections**, and then select a connection.
-    - To share a connection, select **Share**, and then add or remove users.
+2.  Perform the action that you want: 
+    - To view details, edit the settings, or delete a gateway, select **Connections** and then select a connection.
+    - To share a connection, select **Share** and then add or remove users.
 
-   > [!NOTE]
-   >   You can only share some types of connections, such as a SQL Server connection. For more
-   >   information, see [Share canvas-app resources in PowerApps](../canvas-apps/share-app-resources.md). <br />
-   >   For more information about how to manage a connection, see [Manage your connections](../canvas-apps/add-manage-connections.md).
+      > [!NOTE]
+      > You can only share some types of connections, such as a SQL Server connection. For more information, see [Share canvas-app resources in PowerApps](../canvas-apps/share-app-resources.md). <br />
+      >
+      > For more information about how to manage a connection, see [Manage canvas-app connections in PowerApps](../canvas-apps/add-manage-connections.md).
 
 
 ## Limitations
@@ -134,7 +134,7 @@ There are a few known limitations when using enterprise gateways and dataflows.
     capabilities to unify the data.
 
 -   Dataflows are only supported using enterprise gateways. Personal gateways
-    will not be available for selection in the drop down lists and settings
+    will not be available for selection in the drop-down lists and settings
     screens.
 
 For information about troubleshooting issues with gateways, or configuring the
