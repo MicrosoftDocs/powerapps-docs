@@ -6,8 +6,8 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
-ms.date: 03/17/2016
+ms.reviewer: tapanm-msft
+ms.date: 9/20/2019
 ms.author: fikaradz
 search.audienceType:
   - maker
@@ -41,6 +41,8 @@ Configure the appearance and behavior of a control by setting one of its propert
 **[Column](controls/control-column.md)** - Provides the display experience for a single field in a [**Data table**](controls/control-data-table.md) control.
 
 **[Combo box](controls/control-combo-box.md)** - Allows users to make selections from provided choices. Supports search and multi-select.
+
+**[Container (experimental)](controls/control-container.md)** - Create nested hierarchy for accessibility and responsiveness. 
 
 **[Data table](controls/control-data-table.md)** - Show data in a tabular format.
 
