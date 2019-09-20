@@ -8,7 +8,7 @@ ms.topic: reference
 ms.component: canvas
 ms.date: 8/28/2019
 ms.author: emcoope
-ms.reviewer: 
+ms.reviewer: tapanm-msft
 search.audienceType: 
   - maker
 search.app: 
