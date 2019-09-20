@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm-msft
-ms.date: 03/17/2016
+ms.date: 9/20/2019
 ms.author: fikaradz
 search.audienceType:
   - maker
