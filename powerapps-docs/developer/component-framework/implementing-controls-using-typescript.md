@@ -64,7 +64,7 @@ A code component is defined by the information in the `ControlManifest.Input.xml
 
 4. Save the changes to the `ControlManifest.Input.xml` file.
 5. Now, create a new folder inside the `TSLinearInputControl` folder and name it as **css**.
-6. Create a CSS file to [add styling to the code component](#adding-style-to-the-custom-component)
+6. Create a CSS file to [add styling to the code component](#adding-style-to-the-code-component)
 7. Build the component project using the command `npm run build`.
 8. The build generates an updated Typescript type declaration file under `TSLinearInputControl/generated folder`.
 
@@ -116,7 +116,7 @@ export class TSLinearInputControl implements ComponentFramework.StandardControl<
     this.labelElement.setAttribute("class", "TS_LinearRangeLabel");
     this.labelElement.setAttribute("id", "lrclabel");
     // retrieving the latest value from the control and setting it to the HTMl elements.
-    this._value = context.parameters.sliderValue.raw;
+    this._value = context.parameters.sliderValue.raw ? context.parameters.sliderValue.raw : 0;
     this.inputElement.setAttribute("value", context.parameters.sliderValue.formatted ? context.parameters.sliderValue.formatted : "0");
     this.labelElement.innerHTML = context.parameters.sliderValue.formatted ? context.parameters.sliderValue.formatted : "0";
     // appending the HTML elements to the control's HTML container element.
@@ -138,7 +138,7 @@ export class TSLinearInputControl implements ComponentFramework.StandardControl<
 
   public updateView(context: ComponentFramework.Context<IInputs>): void {
     // storing the latest context from the control.
-    this._value = context.parameters.sliderValue.raw;
+    this._value = context.parameters.sliderValue.raw ? context.parameters.sliderValue.raw : 0;
     this._context = context;
     this.inputElement.setAttribute("value",context.parameters.sliderValue.formatted ? context.parameters.sliderValue.formatted : "");
     this.labelElement.innerHTML = context.parameters.sliderValue.formatted ? context.parameters.sliderValue.formatted : "";

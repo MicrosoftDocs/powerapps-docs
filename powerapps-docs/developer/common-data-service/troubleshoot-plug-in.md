@@ -2,7 +2,7 @@
 title: "Troubleshoot plug-ins (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Contains information on errors that can occur due to plug-ins and how to fix them." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 04/26/2019
+ms.date: 09/18/2019
 ms.reviewer: ""
 ms.service: "powerapps"
 ms.topic: "article"
@@ -19,12 +19,20 @@ search.app:
 
 This topic contains information about errors that can occur due to plug-ins and how to fix them.
 
-## Error: There is no active transaction. 
+## Transaction errors
+
+There are two common types of errors related to transactions: 
+
+Error Code: `-2146893812`<br />
+Error Message: `ISV code reduced the open transaction count. Custom plug-ins should not catch exceptions from OrganizationService calls and continue processing.`
 
 Error Code: `-2147220911`<br />
 Error Message: `There is no active transaction. This error is usually caused by custom plug-ins that ignore errors from service calls and continue processing.`
 
-This can be a difficult error to address because the cause can be in someone else's code. To understand the message, you need to appreciate that any time an error related to a data operation occurs within a synchronous plug-in the transaction for the entire operation will be ended.
+> [!NOTE]
+> The top error was added most recently. It should occur immediately and in the context of the plug-in that contains the problem. The bottom error can still occur in different circumstances, typically involving custom workflow activities. It may be due to problems in another plug-in.
+
+To understand the message, you need to appreciate that any time an error related to a data operation occurs within a synchronous plug-in the transaction for the entire operation will be ended.
 
 More information: [Scalable Customization Design in Common Data Service](scalable-customization-design/overview.md)
 

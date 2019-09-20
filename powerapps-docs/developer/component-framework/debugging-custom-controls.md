@@ -1,6 +1,6 @@
 ---
 title: "Debug code components | MicrosoftDocs"
-description: "How to debug a code components using Fiddler and Native debugging"
+description: "How to debug a code component using Fiddler and Native debugging"
 manager: kvivek
 ms.date: 04/23/2019
 ms.service: "powerapps"
@@ -11,7 +11,7 @@ author: Nkrb
 ---
 # Debug code components
 
-Once you're done implementing the code component logic, get started with testing and debugging the code components using the `npm start` command. This builds the code components and opens it in the local test harness.
+Once you're done implementing the code component logic, get started with testing and debugging the code component using the `npm start` command. This builds the code component and opens it in the local test harness.
 
 > [!div class="mx-imgBorder"]
 > ![test harness 1](media/test-harness-1.png "test harness 1")

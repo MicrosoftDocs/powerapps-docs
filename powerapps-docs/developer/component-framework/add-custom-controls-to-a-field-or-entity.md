@@ -14,7 +14,7 @@ ms.topic: "article"
 
 # Add code components to a field or entity in model-driven apps
 
-code components let you transform fields that traditionally contain text into visualizations. Similarly, you can use code components to transform datasets, such as a view, to display in a more visual rendering rather than a list of records. code components can appear as visualizations on forms, dashboards, views, and homepage grids. 
+Code components let you transform fields that traditionally contain text into visualizations. Similarly, you can use code components to transform datasets, such as a view, to display in a more visual rendering rather than a list of records. code components can appear as visualizations on forms, dashboards, views, and homepage grids. 
 
 
    > [!div class="mx-imgBorder"] 
@@ -22,7 +22,7 @@ code components let you transform fields that traditionally contain text into vi
 
 ## Add a code component to a field
 
-Following the steps in this procedure will change the default label and text box field of the **Budget Amount** field to the slider code components on the Opportunity entity. You can use similar steps to replace an existing field with a code component or configure a code component for a custom field.
+Following the steps in this procedure will change the default label and text box field of the **Budget Amount** field to the slider code component on the Opportunity entity. You can use similar steps to replace an existing field with a code component or configure a code component for a custom field.
 
 1. Open solution explorer.
 
