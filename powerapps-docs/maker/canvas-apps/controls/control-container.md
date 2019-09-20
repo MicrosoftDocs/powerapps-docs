@@ -22,7 +22,6 @@ Provides the ability to create hierarchy.
 
 You can start with inserting a blank container, then customize it by adding controls to it, resizing it, moving it, hiding it, and making other changes. You can also start with a number of controls, select them and add them into a container through the context menu in the tree view or right click on the canvas. 
 
-
 ## Properties
 **[BorderColor](properties-color-border.md)** – The color of a control's border.
 
@@ -43,13 +42,14 @@ You can start with inserting a blank container, then customize it by adding cont
 **[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container). 
 
 
-##Known limitations
+## Known limitations
 
-Currently, there is 
+Containers do not work with canvas components or within forms. 
 
-## Responsive layout examples
-See [Understand data cards](../working-with-cards.md) and [Understand data form layout](../working-with-form-layout.md) for examples.
+## Frequently asked questions
 
-## Accessibility guidelines
-### Use to help keyboard and screen reader management
+**What is the difference between a container and a group?**
+The authoring group is a lightweight concept used for moving around controls and bulk editing similar properties of controls within the group. The authoring group does not affect the layout of the app. 
+
+The container control previously shipped in experimental as a replacement for the authoring group renamed as the enhanced group. It was renamed to the container control as there is value in both a lightweight authoring group and a strutured container control with additional properties. 
 
