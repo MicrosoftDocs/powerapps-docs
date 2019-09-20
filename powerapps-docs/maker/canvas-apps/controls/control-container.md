@@ -17,6 +17,10 @@ search.app:
 # Container control in PowerApps (experimental)
 Provides the ability to create hierarchy.
 
+> [!IMPORTANT]
+> This is an experimental feature. Experimental features can radically change or completely disappear at any time.
+> For more information, read [!INCLUDE[working-with-experimental-preview](../includes/working-with-experimental-preview.md)]. 
+
 ## Description
  The container can hold a set of controls and has its own properties. 
 
