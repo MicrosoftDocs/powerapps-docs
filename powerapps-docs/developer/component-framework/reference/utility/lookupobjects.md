@@ -23,7 +23,7 @@ Model-driven apps
 
 ## Syntax
 
-`context.utility.lookupObjects(lookupOptions)`
+`context.utils.lookupObjects(lookupOptions)`
 
 ## Parameters
 
@@ -33,9 +33,7 @@ Model-driven apps
 
 ## Return Value
 
-Type: `Promise`
-
-See [Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise) and [File](https://developer.mozilla.org/docs/Web/API/File)
+Type: [Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)<[EntityReference](../entityreference.md)[]>
 
 
 ### Related topics

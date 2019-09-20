@@ -23,7 +23,7 @@ Model-driven apps and canvas apps (experimental preview)
 
 ## Syntax
 
-`formatLanguage(value)`
+`context.formatting.formatLanguage(value)`
 
 ## Parameters
 

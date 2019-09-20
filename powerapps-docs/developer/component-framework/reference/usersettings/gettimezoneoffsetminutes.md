@@ -23,7 +23,7 @@ Model-driven apps
 
 ## Syntax
 
-`getTimeZoneOffsetMinutes(date)`
+`context.usersettings.getTimeZoneOffsetMinutes(date)`
 
 ## Parameters
 

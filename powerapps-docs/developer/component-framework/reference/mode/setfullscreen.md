@@ -26,7 +26,7 @@ Model-driven apps
 
 ## Syntax
 
-`setFullScreen(value)`
+`context.mode.setFullScreen(value)`
 
 ## Parameters
 

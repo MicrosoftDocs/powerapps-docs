@@ -23,7 +23,7 @@ Model-driven apps
 
 ## Syntax
 
-`captureAudio()`
+`context.device.captureAudio()`
 
 ## Return Value
 

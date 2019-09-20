@@ -23,7 +23,7 @@ Model-driven apps
 
 ## Syntax
 
-`captureImage(options)`
+`context.device.captureImage(options)`
 
 ## Parameters
 

@@ -14,6 +14,18 @@ ms.topic: "article"
 
 # Entity
 
+Defines an entity sent or received from the SDK theough the Web API.
+
+## Available for
+
+Model-driven apps
+
+## Parameters
+
+| Parameter Name|Type|Required|Description|
+| ------------- |----|--------|-----------|
+|key|`String`|Yes||
+
 ### Related topics
 
 [PowerApps component framework API Reference](../reference/index.md)<br/>

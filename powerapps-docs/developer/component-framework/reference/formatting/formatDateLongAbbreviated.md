@@ -22,7 +22,7 @@ Model-driven apps and canvas apps (experimental preview)
 
 ## Syntax
 
-`formatDateLongAbbreviated(value)`
+`context.formatting.formatDateLongAbbreviated(value)`
 
 ## Parameters
 
