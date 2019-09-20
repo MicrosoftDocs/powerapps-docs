@@ -42,6 +42,8 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Combo box](controls/control-combo-box.md)** - Allows users to make selections from provided choices. Supports search and multi-select.
 
+**[Container (experimental)](controls/control-container.md)** - Create nested hierarchy for accessibility and responsiveness. 
+
 **[Data table](controls/control-data-table.md)** - Show data in a tabular format.
 
 **[Date picker](controls/control-date-picker.md)** – Specify a date by clicking or tapping.
