@@ -23,7 +23,7 @@ Model-driven apps and canvas apps (experimental preview)
 
 ## Syntax
 
-`formatDateYearMonth(value)`
+`context.formatting.formatDateYearMonth(value)`
 
 ## Parameters
 

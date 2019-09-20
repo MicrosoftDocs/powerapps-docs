@@ -23,7 +23,7 @@ Model-driven apps and canvas apps (experimental preview)
 
 ## Syntax
 
-`formatDateAsFilterStringInUTC(value, includeTime)`
+`context.formatting.formatDateAsFilterStringInUTC(value, includeTime)`
 
 ## Parameters
 

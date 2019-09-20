@@ -23,7 +23,7 @@ Model-driven apps
 
 ## Syntax
 
-`getBarcodeValue()`
+`context.device.getBarcodeValue()`
 
 ## Return Value
 

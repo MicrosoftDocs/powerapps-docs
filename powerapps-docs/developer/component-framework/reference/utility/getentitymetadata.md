@@ -23,7 +23,7 @@ Model-driven apps
 
 ## Syntax
 
-`context.utility.getEntityMetadata(entityName, attributes)`
+`context.utils.getEntityMetadata(entityName, attributes)`
 
 ## Parameters
 
@@ -34,7 +34,7 @@ Model-driven apps
 
 ## Return Value
 
-Type: `Promise`
+Type: `Promise<EntityMetadata>`
 
 
 ### Related topics

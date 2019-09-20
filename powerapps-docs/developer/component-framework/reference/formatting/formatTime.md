@@ -24,7 +24,7 @@ Model-driven apps and canvas apps (experimental preview)
 
 ## Syntax
 
-`formatTime(value, behavior)`
+`context.formatting.formatTime(value, behavior)`
 
 ## Parameters
 

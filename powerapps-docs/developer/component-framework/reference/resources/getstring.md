@@ -23,7 +23,7 @@ Model-driven apps
 
 ## Syntax
 
-`getString(id)`
+`context.resources.getString(id)`
 
 ## Parameters
 

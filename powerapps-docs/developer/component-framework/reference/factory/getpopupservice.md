@@ -23,7 +23,11 @@ Model-driven apps
 
 ## Syntax
 
-`getPopupService()`
+`context.factory.getPopupService()`
+
+## Return Value
+
+Type: [PopupService](../popupservice.md)
 
 
 ### Related topics
