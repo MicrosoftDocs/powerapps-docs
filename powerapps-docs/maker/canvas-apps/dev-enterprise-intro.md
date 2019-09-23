@@ -19,7 +19,7 @@ search.app:
 
 As a developer, you can extend canvas apps in PowerApps, enabling even more powerful solutions for organizations and customers.
 
-## PowerApps for enterprise developers
+## Canvas apps for enterprise developers
 
 As an enterprise developer, empower your organization to build robust, tailored solutions on PowerApps:
 
@@ -31,7 +31,7 @@ As an enterprise developer, empower your organization to build robust, tailored 
 
 - **Build offline-capable apps**: Develop offline-capable apps so your users are productive whether they are online or offline. [Learn more](offline-apps.md)
 
-## PowerApps for ISVs and Microsoft partners
+## Canvas apps for ISVs and Microsoft partners
 
 As a Microsoft partner or Independent Software Vendor (ISV), accelerate customer adoption by extending your products to integrate with your customers' data and business processes:
 
