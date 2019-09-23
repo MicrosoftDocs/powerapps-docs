@@ -95,10 +95,10 @@ The following table lists the browser supportability for view, create and modify
 
 To navigate the PowerApps visual using the keyboard follow these steps:
 
-1. Focus selection on the Power BI Report in which the visual lives.
-2. Hit **“Tab”** until the visual is highlighted.
-3. Hit **“Ctrl + Right”** to enter the visual.
-3. Hit **“Tab”** until the desired component of the visual is selected.
+1. Focus selection on the Power BI Report for the desired PowerApps visual.
+2. Use the **Tab** key on the keyboard until the visual is highlighted.
+3. Use the **Ctrl+Right** key on the keyboard to enter the visual.
+3. Use the  **Tab** key on the keyboard until the desired component of the visual is selected.
 
 For more information see: [Power BI Accessibility Documentation]( https://docs.microsoft.com/en-us/power-bi/desktop-accessibility)
 
