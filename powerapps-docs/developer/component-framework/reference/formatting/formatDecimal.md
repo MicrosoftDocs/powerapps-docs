@@ -23,7 +23,7 @@ Model-driven apps and canvas apps (experimental preview)
 
 ## Syntax
 
-`formatDecimal(value, precision)`
+`context.formatting.formatDecimal(value, precision)`
 
 ## Parameters
 

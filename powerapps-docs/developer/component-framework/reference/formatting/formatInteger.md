@@ -23,7 +23,7 @@ Model-driven apps and canvas apps (experimental preview)
 
 ## Syntax
 
-`formatInteger(value)`
+`context.formatting.formatInteger(value)`
 
 ## Parameters
 

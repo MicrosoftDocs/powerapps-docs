@@ -23,7 +23,7 @@ Model-driven apps and canvas apps (experimental preview)
 
 ## Syntax
 
-`formatCurrency(value, precision, symbol)`
+`context.formatting.formatCurrency(value, precision, symbol)`
 
 ## Parameters
 

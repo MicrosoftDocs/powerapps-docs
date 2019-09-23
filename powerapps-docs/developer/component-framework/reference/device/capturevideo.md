@@ -23,7 +23,7 @@ Model-driven apps
 
 ## Syntax
 
-`captureVideo()`
+`context.device.captureVideo()`
 
 ## Return Value
 

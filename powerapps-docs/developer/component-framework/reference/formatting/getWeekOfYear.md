@@ -22,7 +22,7 @@ Model-driven apps
 
 ## Syntax
 
-`getWeekOfYear(value)`
+`context.formatting.getWeekOfYear(value)`
 
 ## Parameters
 

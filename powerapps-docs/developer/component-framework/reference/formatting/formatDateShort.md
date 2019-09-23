@@ -23,7 +23,7 @@ Model-driven apps and canvas apps (experimental preview)
 
 ## Syntax
 
-`formatDateShort(value, includeTime)`
+`context.formatting.formatDateShort(value, includeTime)`
 
 ## Parameters
 
