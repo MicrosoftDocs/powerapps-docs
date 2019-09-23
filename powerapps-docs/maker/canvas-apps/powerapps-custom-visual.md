@@ -6,8 +6,8 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: tapanm
-ms.date: 08/30/2019
+ms.reviewer: tapanm-msft
+ms.date: 09/23/2019
 ms.author: chmoncay
 search.audienceType: 
   - maker
@@ -73,6 +73,7 @@ The following limitations apply to the PowerApps custom visual:
 - You'll need to share the PowerApps app separately from your report. Learn about [sharing apps in PowerApps](share-app.md).
 - Power BI Report Server and the mobile app for Power BI do not support the PowerApps custom visual.
 - If you use PowerBIIntegration.Refresh() function, you must use a source that supports [DirectQuery](https://docs.microsoft.com/en-us/power-bi/desktop-directquery-data-sources) and the data connection must be created using DirectQuery method.
+- Power Apps Desktop provides data to Power Apps Studio when creating apps but not while editing. Use Power BI Web to preview the data while editing apps.
 
 > [!NOTE]
 > We recommend that you first publish your report to the Power BI service and then create or modify apps.
@@ -89,6 +90,18 @@ The following table lists the browser supportability for view, create and modify
 |Safari|&check;
 |Mozilla Firefox
 |All other browsers
+
+## Accessibility support
+
+To navigate the PowerApps visual using the keyboard follow these steps:
+
+1. Focus selection on the Power BI Report in which the visual lives.
+2. Hit **“Tab”** until the visual is highlighted.
+3. Hit **“Ctrl + Right”** to enter the visual.
+3. Hit **“Tab”** until the desired component of the visual is selected.
+
+For more information see: [Power BI Accessibility Documentation]( https://docs.microsoft.com/en-us/power-bi/desktop-accessibility)
+
 
 ## Next steps
 
