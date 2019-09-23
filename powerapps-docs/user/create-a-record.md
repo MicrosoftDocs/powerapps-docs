@@ -42,7 +42,7 @@ The **Create a new record** command or **Quick create** makes it fast and easy t
 > A plus sign ![Recommended Field button](media/recommended-field-button.png "Recommended Field button") next to the field on the screen means your organization recommends that you fill in the field.  
 
 
-## Create a new record using New button 
+## Create a new record using the New button 
 
 1. From the left navigation pane, select a record type. For example, select **Contacts** to create a new contact record.
 2. On the command bar, select **+New**.
