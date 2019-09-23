@@ -23,7 +23,7 @@ search.app:
 ---
 # RDL sandboxing 
 
-In Common Data Service, reports run in the sandbox mode. This is done by enabling Report Definition Language (RDL) Sandboxing in [!INCLUDE[pn_SQL_Server_Reporting](../includes/pn-sql-server-reporting.md)]. The RDL Sandboxing lets you detect and restrict the usage of specific types of resources. As a result, certain features in PowerApps model-driven apps may not be available. For more information, see [MSDN: Enabling and Disabling RDL Sandboxing](https://msdn.microsoft.com/library/ee210591.aspx).  
+In Common Data Service, reports run in the sandbox mode. This is done by enabling Report Definition Language (RDL) Sandboxing in SQL Server Reporting Services. The RDL Sandboxing lets you detect and restrict the usage of specific types of resources. As a result, certain features in PowerApps model-driven apps may not be available. For more information, see [MSDN: Enabling and Disabling RDL Sandboxing](https://msdn.microsoft.com/library/ee210591.aspx).  
   
  The current RDL Sandboxing configuration settings in Common Data Service are described in the following sections in this topic.  
     
@@ -31,7 +31,7 @@ In Common Data Service, reports run in the sandbox mode. This is done by enablin
 ## Limits of the array result length and string result length  
  The maximum number of items allowed in an array return value for an RDL expression is increased from 250 to 102400. The maximum number of items allowed in a string return value for an RDL expression is also increased from 250 to 102400. This enables you to include images and logos with sizes up to 75 KB, which will be stored in a database with Base64 encoding.  
   
- The MaxResourceSize is set to 2000. This lets you include external images in a report up to 1500 KB in size. [!INCLUDE[proc_more_information](../includes/proc-more-information.md)] [TechNet: Add an External Image (Report Builder and SSRS)](https://technet.microsoft.com/library/dd220527.aspx)  
+ The MaxResourceSize is set to 2000. This lets you include external images in a report up to 1500 KB in size. More information: [TechNet: Add an External Image (Report Builder and SSRS)](https://technet.microsoft.com/library/dd220527.aspx)  
   
 <a name="BKMK_Allowed"></a>   
 ## Allowed types and denied members  
