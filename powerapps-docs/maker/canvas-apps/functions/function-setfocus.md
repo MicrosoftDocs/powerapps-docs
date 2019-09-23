@@ -27,7 +27,7 @@ Use the **SetFocus** function to set the focus when (each with an example below)
 
 The control with focus may be visually different based on the [**FocusedBorderColor**](../controls/properties-color-border.md) and [**FocusedBorderThickness**](../controls/properties-color-border.md) properties.
 
-## Limitatoins
+## Limitations
 
 **SetFocus** can only be used with:
 - [**Button**](../controls/control-button.md) control
