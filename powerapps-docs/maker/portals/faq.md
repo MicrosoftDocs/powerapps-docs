@@ -69,7 +69,7 @@ If portal creation is blocked in a tenant by your global administrator, you'll s
 
 You must contact your global administrator to enable creation of portals by non-administrators also.
 
-If you are a global administrator, you must run the following command in a PowerShell window (run PowerShell as an administrator).
+If you are a global administrator, you must disable the `disablePortalsCreationByNonAdminUsers` tenant level setting through PowerShell. Run the following command in a PowerShell window (run PowerShell as an administrator).
 
 ```
 Set-TenantSettings -RequestBody @{ "disablePortalsCreationByNonAdminUsers" = $false }
