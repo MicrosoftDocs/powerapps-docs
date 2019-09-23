@@ -991,7 +991,10 @@
     - name: Use themes to apply organization branding
       href: ./model-driven-apps/create-themes-organization-branding.md
     - name: Add reporting to your app
-      href: ./model-driven-apps/add-reporting-to-app.md      
+      href: ./model-driven-apps/add-reporting-to-app.md    
+      items: 
+      - name: Report considerations and best practices
+        href: ./model-driven-apps/report-considerations-and-best-practices.md  
   - name: Validate and publish an app
     href: ./model-driven-apps/validate-app.md
   - name: Share an app
