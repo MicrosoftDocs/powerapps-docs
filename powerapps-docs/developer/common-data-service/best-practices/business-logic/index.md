@@ -13,7 +13,7 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 1/15/2019
+ms.date: 9/23/2019
 ms.author: jowells
 search.audienceType: 
   - developer
@@ -31,6 +31,7 @@ This list below contains all of the guidance and best practices regarding the pl
 |[Develop IPlugin implementations as stateless](develop-iplugin-implementations-stateless.md)     |Members of classes that implement IPlugin are exposed to potential thread-safety issues which could lead to data inconsistency or performance problems.         |
 |[Do not duplicate plug-in step registration](do-not-duplicate-plugin-step-registration.md)     |Duplicate plug-in step registration will cause the plug-in to fire multiple times on the same message/event.         |
 |[Do not use parallel execution within plug-ins and workflow activities](do-not-use-parallel-execution-in-plug-ins.md)|Multi or parallel threading within plug-ins or custom workflow activities is not supported.|
+|[Implement all types of queries when filtering results using PreOperation RetrieveMultiple](implement-all-types-of-queries-when-filtering-preoperation-retrievemultiple.md)|For best performance and consistent results for all applications you must implement filtering for all types of queries that can be used with plug-ins that are registered for the PreOperation stage of RetrieveMultiple|
 |[Include filtering attributes with plug-in registration](include-filtering-attributes-plugin-registration.md)     |If no filtering attributes are set for a plug-in registration step, then the plug-in will execute every time an update message occurs for that event.         |
 |[Limit the registration of plug-ins for Retrieve and RetrieveMultiple messages](limit-registration-plugins-retrieve-retrievemultiple.md)     |Adding synchronous plug-in logic to the Retrieve and RetrieveMultiple message events can cause slowness.         |
 |[Optimize custom assembly development](optimize-assembly-development.md)     |Consider merging separate plug-ins/custom workflow activities into a single custom assembly to improve performance and maintainability and move plug-ins/custom workflow activities into multiple custom assemblies if an assembly size is near the sandbox assembly size constraints.         |
