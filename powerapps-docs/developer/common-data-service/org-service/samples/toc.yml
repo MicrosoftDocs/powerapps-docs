@@ -144,10 +144,12 @@
     href: import-data-complex-data-map.md
 - name: Plug-ins
   items:
-  - name: Web access from a plug-in
-    href: web-access-plugin.md
   - name: Create a basic plug-in
     href: basic-followup-plugin.md
+  - name: Modify query in PreOperation stage
+    href: modify-query-preoperation-stage.md
+  - name: Web access from a plug-in
+    href: web-access-plugin.md    
 - name: Queues
   items:
   - name: Add a record to a queue
