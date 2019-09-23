@@ -13,8 +13,6 @@ author: Nkrb
 
 # StandardControl
 
-[!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
-
 [!INCLUDE [control-description](includes/control-description.md)]
 
 ## Available for 

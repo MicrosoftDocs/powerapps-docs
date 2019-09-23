@@ -13,8 +13,6 @@ ms.reviewer: nkrb
 
 # Implementing the FacePile component
 
-[!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
-
 This sample shows how to use React to create components using PowerApps component framework.  The facepile sample component is implemented based on React and the Office UI Fabric React components. The code may not reveal the best practices for the mentioned third-party libraries.
 
 > [!div class="mx-imgBorder"]

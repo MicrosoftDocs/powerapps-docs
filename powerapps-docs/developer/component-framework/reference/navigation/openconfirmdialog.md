@@ -35,12 +35,11 @@ Model-driven apps
 ## Return Value
 
 Type: `Promise<ConfirmDialogResponse>`
-
 Returns an object with the confirmed (Boolean) attribute is passed that indicates whether the confirm button was clicked to close the dialog.
 
 ## Remarks
 
-See [Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise) and [File](https://developer.mozilla.org/docs/Web/API/File)
+See [Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise) 
 
 
 ### Related topics

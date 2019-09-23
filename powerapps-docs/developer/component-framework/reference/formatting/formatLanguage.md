@@ -29,7 +29,7 @@ Model-driven apps and canvas apps (experimental preview)
 
 | Parameter Name|Type|Required|Description|
 | ------------- |----|--------|-----------|
-|value|`number`|yes|A language code to be formatted.|
+|value|`number`|Yes|A language code to be formatted.|
 
 ## Return Value
 

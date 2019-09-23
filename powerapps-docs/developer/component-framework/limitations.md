@@ -12,8 +12,6 @@ ms.author: "nabuthuk"
 
 # Limitations of PowerApps component framework
 
-[!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
-
 With the release of PowerApps component framework, you can now create your own code components to improve the user experience in model-driven apps. Even though you can create your own components, there are some limitations that restrict developers implementing some features in the code components. Below are some of the limitations:
 
 ## Support for external libraries

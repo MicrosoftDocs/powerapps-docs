@@ -15,4 +15,4 @@ applies_to:
 ms.assetid: 5e27ab35-adb7-4756-8b0e-2b2b48b371e2
 ---
 
-Metadata about a column in a dataset
+Provides information about the column metadata in a dataset

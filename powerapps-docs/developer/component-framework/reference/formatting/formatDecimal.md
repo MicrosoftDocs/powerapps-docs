@@ -29,8 +29,8 @@ Model-driven apps and canvas apps (experimental preview)
 
 | Parameter Name|Type|Required|Description|
 | ------------- |----|--------|-----------|
-|value|`number`|yes|The date to be formatted.|
-|precision|`number`|yes|The number of digits after decimal point.|
+|value|`number`|Yes|The date to be formatted.|
+|precision|`number`|Yes|The number of digits after decimal point.|
 
 ## Return Value
 

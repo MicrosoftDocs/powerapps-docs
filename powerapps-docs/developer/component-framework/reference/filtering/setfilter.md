@@ -29,7 +29,7 @@ Model-driven apps
 
 | Parameter Name|Type|Required|Description|
 | ------------- |----|--------|-----------|
-|expression|[FilterExpression](../filterexpression.md)|yes|The `FilterExpression` to set.|
+|expression|[FilterExpression](../filterexpression.md)|Yes|The `FilterExpression` to set.|
 
 
 ### Related topics

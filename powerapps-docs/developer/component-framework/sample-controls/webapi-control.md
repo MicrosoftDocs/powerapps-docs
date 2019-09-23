@@ -11,8 +11,6 @@ author: nkrb
 ---
 # Implementing Web API component
 
-[!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
-
 The Web API component is designed to perform create, retrieve, update and delete actions. The component renders four buttons, which can be clicked to invoke different Web API actions. The result of the Web API call is injected into a HTML div element at the bottom of the code component.  
 
 > [!div class="mx-imgBorder"]

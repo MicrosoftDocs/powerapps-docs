@@ -29,7 +29,7 @@ Model-driven apps
 
 | Parameter Name|Type|Required|Description|
 | ------------- |----|--------|-----------|
-|date|`Date`|yes|date to get the offset from utc for.|
+|date|`Date`|Yes|date to get the offset from utc for.|
 
 ## Return Value
 

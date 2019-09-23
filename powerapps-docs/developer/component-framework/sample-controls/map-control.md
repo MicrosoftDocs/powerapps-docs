@@ -12,8 +12,6 @@ author: Nkrb
 
 # Implementing map component
 
-[!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
-
 This sample component changes the user experience of interacting with address fields on the form. Along with the text values of the address, this component provides the ability to visually identify a particular address on a map without navigating to another tab or screen. 
 
 > [!div class="mx-imgBorder"]

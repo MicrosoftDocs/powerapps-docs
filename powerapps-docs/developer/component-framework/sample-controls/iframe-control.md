@@ -11,8 +11,6 @@ author: Nkrb
 ---
 # Implementing a IFRAME component
 
-[!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
-
 This sample describes how to bind a code component to different fields on the form and use the value of these fields as input properties to the component.  
 
 > [!div class="mx-imgBorder"]

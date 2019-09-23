@@ -15,8 +15,6 @@ ms.assetid: b9b232cd-5d3a-4bd6-a745-5242a63978ad
 
 # Utility
 
-[!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
-
 [!INCLUDE [utility-description](includes/utility-description.md)]
 
 ## Available for 

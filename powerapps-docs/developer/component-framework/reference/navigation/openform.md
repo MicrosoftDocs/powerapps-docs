@@ -34,12 +34,11 @@ Model-driven apps
 
 ## Return Value
 
-Type: `Promise`
+Type: `Promise<OpenFormSuccessResponse>`
 
 ## Remarks
 
-See [Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise) and [File](https://developer.mozilla.org/docs/Web/API/File)
-
+See [Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 
 ### Related topics
 

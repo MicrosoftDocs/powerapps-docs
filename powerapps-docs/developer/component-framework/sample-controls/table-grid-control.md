@@ -12,8 +12,6 @@ author: Nkrb
 
 # Implementing table grid component
 
-[!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
-
 This sample showcases how to create a simple dataset component, view’s column metadata binding, record binding, more records from paging and record navigation to form.
 The component header columns and internal record values are bound to the existing views.
 

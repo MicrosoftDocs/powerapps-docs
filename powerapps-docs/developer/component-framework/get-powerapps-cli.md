@@ -15,8 +15,6 @@ ms.assetid: f393f227-7a88-4f25-9036-780b3bf14070
 
 # Get tooling for PowerApps component framework
 
-[!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
-
 Use **Microsoft PowerApps CLI** (command-line interface) to create, debug, and deploy code components using PowerApps component framework. PowerApps CLI enables developers to create PowerApps component framework components quickly and will in the future be expanded to include support for additional development and Application Lifecycle Management (ALM) experiences. 
 
 ## What is Microsoft PowerApps CLI 

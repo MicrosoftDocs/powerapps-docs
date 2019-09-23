@@ -28,7 +28,7 @@ Model-driven apps and canvas apps (experimental preview)
 
 | Parameter Name|Type|Required|Description|
 | ------------- |----|--------|-----------|
-|value|`Date`|yes|Value Date to format.|
+|value|`Date`|Yes|Value Date to format.|
 
 ## Return Value
 

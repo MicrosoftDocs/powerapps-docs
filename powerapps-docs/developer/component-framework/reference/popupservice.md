@@ -15,8 +15,6 @@ ms.assetid: 8f8d46c1-cc61-48c3-8e15-71f36e1cada1
 
 # PopupService
 
-[!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
-
 [!INCLUDE [popupservice-description](includes/popupservice-description.md)]
 
 ## Available for 

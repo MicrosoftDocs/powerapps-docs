@@ -29,7 +29,7 @@ Model-driven apps
 
 | Parameter Name|Type|Required|Description|
 | ------------- |----|--------|-----------|
-|`columnName`|`string`|yes|Column name of the record|
+|`columnName`|`string`|Yes|Column name of the record|
 
 ## Return Value
 

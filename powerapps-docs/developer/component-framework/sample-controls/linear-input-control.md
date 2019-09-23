@@ -12,9 +12,7 @@ author: Nkrb
 
 # Implementing linear input component
 
-[!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
-
-This sample component changes the user experience of interacting with numeric types on the form. Instead of keying in the numbers, the linear input component provides a linear slider using which the value of the attribute can be set on the form.  
+This sample component changes the user experience of interacting with numeric types on the form. Instead of typing in the numbers, the linear input component provides a linear slider using which the value of the attribute can be set on the form.  
 
 To implement this component, first you need to define the [Manifest](../manifest-schema-reference/manifest.md) file, and them implement the custom logic in TypeScript
 

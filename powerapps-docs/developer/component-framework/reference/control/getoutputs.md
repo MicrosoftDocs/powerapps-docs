@@ -17,7 +17,6 @@ author: Nkrb
 
 Model-driven apps and canvas apps (experimental preview)
 
-
 ## Syntax
 
 `getOutputs()`

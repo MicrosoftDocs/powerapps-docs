@@ -12,8 +12,6 @@ author: nkrb
 
 # Implementing an image upload component
 
-[!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
-
 This sample component renders as an `Upload` button to upload the image and a default image when the component loads for the first time. When you click on the `Upload`, a file explorer pops up to pick an image.
  
 The selected image renders within the component. Meanwhile, the `Remove` button is shown if we need to reset. When you click on the `Remove` button, the default image is displayed.  

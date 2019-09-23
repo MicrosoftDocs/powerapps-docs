@@ -15,8 +15,6 @@ ms.assetid: 0202d51f-e9a9-4a2e-b3e9-0bfd7f6afb86
 
 # DataSet
 
-[!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
-
 [!INCLUDE [dataset-description](includes/dataset-description.md)]
 
 ## Available for 

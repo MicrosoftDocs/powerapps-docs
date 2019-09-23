@@ -29,7 +29,7 @@ Model-driven apps and canvas apps (experimental preview)
 
 | Parameter Name|Type|Required|Description|
 | ------------- |----|--------|-----------|
-|value|`number`|yes|A number primitive to be formatted.|
+|value|`number`|Yes|A number primitive to be formatted.|
 
 ## Return Value
 

@@ -15,7 +15,6 @@ ms.assetid: 8b51654c-ee67-40f8-ae5b-be684dad3520
 
 # Mode
 
-[!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
 
 [!INCLUDE [mode-description](includes/mode-description.md)]
 

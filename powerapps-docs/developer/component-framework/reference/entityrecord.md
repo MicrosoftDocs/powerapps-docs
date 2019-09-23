@@ -15,7 +15,6 @@ ms.assetid: 9efccace-015b-4d45-b893-3e794c254e36
 
 # EntityRecord
 
-[!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
 
 [!INCLUDE [entityrecord-description](includes/entityrecord-description.md)]
 

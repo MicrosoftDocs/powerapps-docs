@@ -12,8 +12,6 @@ author: Nkrb
 
 # Implement components using TypeScript
 
-[!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
-
 This tutorial walks you through the process of creating a new code component in Typescript. The sample component is a linear input component which enables users to enter numeric values using a visual slider instead of directly typing the values in the field. 
 
 ## Creating a new component project

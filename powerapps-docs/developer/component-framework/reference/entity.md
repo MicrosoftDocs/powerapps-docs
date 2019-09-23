@@ -14,7 +14,7 @@ ms.topic: "article"
 
 # Entity
 
-Defines an entity sent or received from the SDK theough the Web API.
+Defines an entity sent or received from the SDK through the Web API.
 
 ## Available for
 

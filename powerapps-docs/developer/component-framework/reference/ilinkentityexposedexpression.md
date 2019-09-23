@@ -15,8 +15,6 @@ ms.assetid: e9a70a4c-71e6-4a06-bcc9-6da37cdf52c1
 
 # ILinkEntityExposedExpression
 
-[!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
-
 [!INCLUDE [ilinkentityexposedexpression-description](includes/ilinkentityexposedexpression-description.md)]
 
 ## Available for 

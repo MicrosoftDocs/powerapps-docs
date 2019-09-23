@@ -14,8 +14,6 @@ ms.assetid: d2cbf58a-9112-45c2-b823-2c07a310714c
 ---
 # Updating existing code components 
 
-[!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
-
 If you are a PowerApps component framework private preview participant for model-driven apps and have already built code components, you need to make some minor updates to make it compatible with the new ALM-centric project structures. To use the new PowerApps CLI tooling with your existing PowerApps component framework code component source, a few changes are required.
 
 > [!NOTE]

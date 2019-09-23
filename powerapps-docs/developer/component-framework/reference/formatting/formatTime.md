@@ -30,8 +30,8 @@ Model-driven apps and canvas apps (experimental preview)
 
 | Parameter Name|Type|Required|Description|
 | ------------- |----|--------|-----------|
-|value|`Date`|yes|The date to be formatted.|
-|behavior|`DateTimeFieldBehavior`|yes|The behavior of the datetime object to be formatted. The `DateTimeFieldBehavior` has the following attributes:<br/>- `None =0`: Unknown DateTime behavior <br/>- `UserLocal =1`: Respect user local time. Dates stored as UTC<br/>- `TimeZoneIndependent =3`: Dates and time stored without conversion to UTC|
+|value|`Date`|Yes|The date to be formatted.|
+|behavior|`DateTimeFieldBehavior`|Yes|The behavior of the datetime object to be formatted. The `DateTimeFieldBehavior` has the following attributes:<br/>- `None =0`: Unknown DateTime behavior <br/>- `UserLocal =1`: Respect user local time. Dates stored as UTC<br/>- `TimeZoneIndependent =3`: Dates and time stored without conversion to UTC|
 
 ## Return Value
 

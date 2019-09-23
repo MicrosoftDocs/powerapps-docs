@@ -15,4 +15,4 @@ applies_to:
 ms.assetid: 7c5808e8-8149-4f81-85ff-ae67d16bf634
 ---
 
-
+Provides properties and methods to create and manage popups.

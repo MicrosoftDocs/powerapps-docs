@@ -15,8 +15,6 @@ ms.assetid: f9fbfe65-4a9f-42f6-91a4-fe997f030012
 
 # Linking
 
-[!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
-
 [!INCLUDE [linking-description](includes/linking-description.md)]
 
 ## Available for 

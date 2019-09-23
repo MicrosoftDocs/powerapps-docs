@@ -29,8 +29,8 @@ Model-driven apps and canvas apps (experimental preview)
 
 | Parameter Name|Type|Required|Description|
 | ------------- |----|--------|-----------|
-|value|`Date`|yes|Value Date to format.|
-|includeTime|`boolean`|yes|Whether to show time in formatted value.|
+|value|`Date`|Yes|Value Date to format.|
+|includeTime|`boolean`|Yes|Whether to show time in formatted value.|
 
 ## Return Value
 

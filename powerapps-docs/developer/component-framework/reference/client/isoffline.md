@@ -25,8 +25,6 @@ ms.assetid: a28ff618-aaf8-4c76-b322-79ff98bae291
 
 Model-driven apps
 
-
-
 ## Return Value
 
 Type: `Boolean`

@@ -28,12 +28,11 @@ Model-driven apps
 
 | Parameter Name|Type|Required|Description|
 | ------------- |----|--------|-----------|
-|value|`Date`|yes|The DateTime to convert.|
+|value|`Date`|Yes|The DateTime to convert.|
 
 ## Return Value
 
 Type: `string`
-
 
 ### Related topics
 
