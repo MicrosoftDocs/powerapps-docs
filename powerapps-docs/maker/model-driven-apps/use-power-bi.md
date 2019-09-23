@@ -126,7 +126,7 @@ To learn more about how to add Power BI dashboards to personal dashboards, see [
   
 6. The organization database entity tables appear in the Power BI Desktop Navigator window. You can select both default and custom entities. For more information about creating reports with Power BI Desktop, see [Power BI Support: Report View in Power BI Desktop](https://powerbi.microsoft.com/documentation/powerbi-desktop-report-view/).  
   
-   ![Select entity table](../admin/media/pbi-select-entity-table.PNG "Select entity table")  
+   ![Select entity table](media/pbi-select-entity-table.PNG "Select entity table")  
   
    > [!TIP]
    >  You can use similar steps to connect to Dynamics 365 using Excel Power Query by selecting **From Other Sources** on the **Power Query** tab in Excel.  

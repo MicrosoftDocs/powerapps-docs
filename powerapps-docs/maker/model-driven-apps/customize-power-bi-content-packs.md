@@ -56,7 +56,7 @@ Before you customize a content pack, read  the information here and perform each
 > [!IMPORTANT]
 >  To connect the OData feed to your instance you must follow the steps described here before you customize the content pack.  
 > 
-> Currently, the Power BI service isn’t compatible with the Dynamics 365 version 9.0 OData endpoint. When you try to use the version 9.0 OData endpoint with the Power BI service the error message “The feed's metadata document appears to be invalid” is displayed. To work around this incompatibility, use the Dynamics 365 version 8.2 OData endpoint.For more information about the different endpoint versions, see [Web API URL and versions](../developer/webapi/compose-http-requests-handle-errors.md).
+> Currently, the Power BI service isn’t compatible with the Dynamics 365 version 9.0 OData endpoint. When you try to use the version 9.0 OData endpoint with the Power BI service the error message “The feed's metadata document appears to be invalid” is displayed. To work around this incompatibility, use the Dynamics 365 version 8.2 OData endpoint.For more information about the different endpoint versions, see [Compose HTTP requests and handle errors](../../developer/common-data-service/webapi/compose-http-requests-handle-errors.md).
   
 1. Start Power BI Desktop.  
   
@@ -74,7 +74,7 @@ Before you customize a content pack, read  the information here and perform each
   
 5. When the Access an OData feed dialog appears, select **Organizational account**, and then select **Sign-in**.  
   
-   ![Access an OData Feed dialog](../analytics/media/pbi-odata-signin.PNG "Access an OData Feed dialog")  
+   ![Access an OData Feed dialog](media/pbi-odata-signin.PNG "Access an OData Feed dialog")  
   
 6. When the sign-in page appears, enter your credentials to authenticate to your instance.  
   
@@ -104,7 +104,7 @@ Before you customize a content pack, read  the information here and perform each
   
 3. Right-click the column heading, such as *Estimated Close Date*, point to **Change Type**, and then select another date type, such as **Date**.  
   
-   ![Change data type in Power BI Desktop](../analytics/media/pbi-changeformat.PNG "Change data type in Power BI Desktop")  
+   ![Change data type in Power BI Desktop](media/pbi-changeformat.PNG "Change data type in Power BI Desktop")  
   
 4. Select **Close & Apply** to close the Query Editor.  
   
@@ -121,7 +121,7 @@ Before you customize a content pack, read  the information here and perform each
   
 2. In the  left navigation pane of the Query Editor, under **Queries**, select the query that has the custom field that you want to make available for reports, such as the **Opportunity** entity query.  
   
-3. In the right pane, under **APPLIED STEPS**, select the settings button ![Settings button](../analytics/media/mp-ua-r16-settings.png "Settings button") next to **Removed Other Columns**.  
+3. In the right pane, under **APPLIED STEPS**, select the settings button ![Settings button](media/mp-ua-r16-settings.png "Settings button") next to **Removed Other Columns**.  
   
 4. The **Choose Columns** list shows all fields for the entity, including custom fields. Select the custom field that you want, and then select **OK**.  
   
@@ -133,7 +133,7 @@ Before you customize a content pack, read  the information here and perform each
    {"int_forecast","Forecast"}  
    ```  
   
-   ![Add mapping for a custom field on a report](../analytics/media/pbi-addfieldmapping.png "Add mapping for a custom field on a report")  
+   ![Add mapping for a custom field on a report](media/pbi-addfieldmapping.png "Add mapping for a custom field on a report")  
   
 6. After you add your field mapping, make sure there are no syntax errors displayed at the bottom of the Advanced Editor. Also, make sure the field name appears exactly as it appears in the column heading, including the correct letter case. If no syntax or table errors are detected, select **Done**.  
   
@@ -179,9 +179,9 @@ Before you customize a content pack, read  the information here and perform each
   
     The screen shot below indicates where the left-most quotation is located.  
   
-   ![Paste encoded URL into OData feed](../analytics/media/pbi-acct-encoded-url.PNG "Paste encoded URL into OData feed")  
+   ![Paste encoded URL into OData feed](media/pbi-acct-encoded-url.PNG "Paste encoded URL into OData feed")  
   
-6. In the right pane, under **APPLIED STEPS**, select the settings button ![Settings button](../analytics/media/mp-ua-r16-settings.png "Settings button") next to **Removed Other Columns**.  
+6. In the right pane, under **APPLIED STEPS**, select the settings button ![Settings button](media/mp-ua-r16-settings.png "Settings button") next to **Removed Other Columns**.  
   
 7. The Choose Columns list shows all fields for the entity, including custom fields. Select the custom field, such as *customclassificationcode*, that you added to the Fetch XML query earlier, and then select **OK**.  
   
@@ -198,7 +198,7 @@ Before you customize a content pack, read  the information here and perform each
 ## Add a custom option set field to a report  
  Option set fields allow you to choose from multiple values. Examples of out-of-box option set fields are the Rating and Sales Stage fields for an opportunity. Imagine you have  a custom option set field on the main opportunity form that has the following values and labels.  
   
- ![Custom option set example](../analytics/media/pbi-custom-option-set-example.PNG "Custom option set example")  
+ ![Custom option set example](media/pbi-custom-option-set-example.PNG "Custom option set example")  
   
  To add the custom option set field to a report, follow these steps.  
   
@@ -206,7 +206,7 @@ Before you customize a content pack, read  the information here and perform each
   
    -   In the left navigation pane of the Query Editor, under **Queries**, select the entity that has the associated custom option set, such as the *Opportunity* entity.  
   
-   -   In the right pane, under **APPLIED STEPS**, select the settings button ![Settings button](../analytics/media/mp-ua-r16-settings.png "Settings button") next to **Removed Other Columns**.  
+   -   In the right pane, under **APPLIED STEPS**, select the settings button ![Settings button](media/mp-ua-r16-settings.png "Settings button") next to **Removed Other Columns**.  
   
    -   The Choose Columns list shows all fields for the entity, including custom fields. Select the custom field, such as *new_customoptionset*, and then select **OK**.  
   
@@ -224,7 +224,7 @@ Before you customize a content pack, read  the information here and perform each
   
         The option set query is displayed.  
   
-   ![Create an option set query](../analytics/media/pbi-makeoptionsetquery.png "Create an option set query")  
+   ![Create an option set query](media/pbi-makeoptionsetquery.png "Create an option set query")  
   
    4.  Copy the entire query to the clipboard. You can paste it in to a text editor, such as Notepad, for later reference.  
   
@@ -258,7 +258,7 @@ Before you customize a content pack, read  the information here and perform each
   
    10. Make sure there are no syntax errors, and then select **Done** to close the Advanced Editor. The table of values and options appears in the Query Editor.  
   
-   ![New option set query](../analytics/media/pbi-optionsetquerycreated.png "New option set query")  
+   ![New option set query](media/pbi-optionsetquerycreated.png "New option set query")  
   
    11. Select **Save**, and then when prompted, select **Apply**.  
   
@@ -270,7 +270,7 @@ Before you customize a content pack, read  the information here and perform each
   
    3.  In the Merge dialog, select the column heading for the custom option set, such as *new_optionset*. In the drop-down list, select the corresponding option set  query that you created earlier.  When the option set table appears, select the **Value** column heading to select it.  
   
-   ![Merge table selections](../analytics/media/pbi-merge-tables.png "Merge table selections")  
+   ![Merge table selections](media/pbi-merge-tables.png "Merge table selections")  
   
    4.  Leave the join kind as **Left Outer (all from first, matching from second)**, and then select **OK**.  
   
@@ -289,7 +289,7 @@ Before you customize a content pack, read  the information here and perform each
   
    5.  In the Expand new column dialog, clear the column that corresponds to the values (because only the labels should appear in the column). Select **Done**.  
   
-   ![Choose the column that represents the label](../analytics/media/pbi-expand-column.png "Choose the column that represents the label")  
+   ![Choose the column that represents the label](media/pbi-expand-column.png "Choose the column that represents the label")  
   
    6.  Select **Save**, and then when prompted, select **Apply**.  
   
@@ -301,7 +301,7 @@ Before you customize a content pack, read  the information here and perform each
   
    3.  Add a renamed column line item, make sure there are no syntax errors, and then select **Done**. In this example, the custom option set column name that you created earlier is **NewColumn** that is being renamed to *Custom Option Set*.  
   
-   ![Rename a column to display in reports](../analytics/media/pbi-rename-column.png "Rename a column to display in reports")  
+   ![Rename a column to display in reports](media/pbi-rename-column.png "Rename a column to display in reports")  
   
    4.  Select **Save**, and then when prompted, select **Apply**.  
   
@@ -328,7 +328,7 @@ Before you customize a content pack, read  the information here and perform each
   
 6. Locate the **>100,000** part of the step.  
   
-   ![Increase row count value](../analytics/media/pbi-increaserowcount.png "Increase row count value")  
+   ![Increase row count value](media/pbi-increaserowcount.png "Increase row count value")  
   
 7. Increase the value to a larger number, such as *150,000*.  
   
