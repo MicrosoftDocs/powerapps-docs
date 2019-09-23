@@ -1,13 +1,13 @@
 ---
 title: "Xrm.WebApi.online.execute (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 09/03/2019
+ms.date: 09/23/2019
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: d4e92999-3b79-4783-8cac-f656fc5f7fda
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "amyla"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
@@ -224,8 +224,9 @@ Sdk.CreateRequest = function (entityName, payload) {
 };
 
 // Construct a request object from the metadata
-var payload = {};
-payload["name"] = "Fabrikam Inc.";
+var payload = {
+    name: "Fabrikam Inc."
+};
 var createRequest = new Sdk.CreateRequest("account", payload);
 
 // Use the request object to execute the function
@@ -267,15 +268,23 @@ Sdk.RetrieveRequest = function (entityReference, columns) {
     };
 };
 
-// Construct a request object from the metadata
-var retrieveRequest = new Sdk.RetrieveRequest({ etn: "account", id: "87547d08-b9d0-e911-a826-000d3a43d70a" }, ["name"]);
+// Construct request object from the metadata
+var entityReference = {
+    entityType: "account",
+    id: "0b9b8a43-e0dd-e911-a849-000d3a11e59b"
+};
+var retrieveRequest = new Sdk.RetrieveRequest(entityReference, ["name"]);
 
 // Use the request object to execute the function
 Xrm.WebApi.online.execute(retrieveRequest).then(
     function (result) {
         if (result.ok) {
             console.log("Status: %s %s", result.status, result.statusText);
-            // perform other operations as required;
+            result.json().then(
+                function (response) {
+                    console.log("Name: %s", response.name);
+                    // perform other operations as required;
+                });
         }
     },
     function (error) {
@@ -313,9 +322,10 @@ Sdk.UpdateRequest = function (entityName, entityId, payload) {
 };
 
 // Construct a request object from the metadata
-var payload = {};
-payload["name"] = "AdventureWorks Inc.";
-var updateRequest = new Sdk.UpdateRequest("account", "87547d08-b9d0-e911-a826-000d3a43d70a", payload);
+var payload = {
+    name: "Updated Sample Account"
+};
+var updateRequest = new Sdk.UpdateRequest("account", "0b9b8a43-e0dd-e911-a849-000d3a11e59b", payload);
 
 // Use the request object to execute the function
 Xrm.WebApi.online.execute(updateRequest).then(
@@ -355,8 +365,12 @@ Sdk.DeleteRequest = function (entityReference) {
     };
 };
 
-// Construct a request object from the metadata
-var deleteRequest = new Sdk.DeleteRequest({ entityType: "account", id: "87547d08-b9d0-e911-a826-000d3a43d70a" });
+// Construct request object from the metadata
+var entityReference = {
+    entityType: "account",
+    id: "0b9b8a43-e0dd-e911-a849-000d3a11e59b"
+};
+var deleteRequest = new Sdk.DeleteRequest(entityReference);
 
 // Use the request object to execute the function
 Xrm.WebApi.online.execute(deleteRequest).then(
@@ -377,7 +391,4 @@ Xrm.WebApi.online.execute(deleteRequest).then(
 
 
 [Xrm.WebApi](../../xrm-webapi.md)
-
-
-
 
