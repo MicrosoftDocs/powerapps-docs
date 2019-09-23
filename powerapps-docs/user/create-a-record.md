@@ -28,12 +28,13 @@ The **Create a new record** command or **Quick create** makes it fast and easy t
     
 1. On the navigation bar, select the **plus sign** ![Create record button](media/create-record-button.png "Create record button"), and then select the item you want.  
 
-  > [!div class="mx-imgBorder"] 
-  > ![Create record button](media/newrecord1.png "Create record button")
+    > [!div class="mx-imgBorder"] 
+    > ![Create record button](media/newrecord1.png "Create record button")
   
 2.  Fill in the fields, and then select **Save and Close**. Or, to save and create another record, select the down arrow and then select  **Save & Create New**.
 
-  ![Save a record](media/quick_create.png "Save a record")
+     > [!div class="mx-imgBorder"] 
+     > ![Save a record](media/quick_create.png "Save a record")
   
 > [!NOTE]
 > An asterisk ![Required Field button](media/required-field-button.png "Required Field button") next to the field on the screen means the field is required. If you select **Save and Close** before entering required fields an error message will be displayed or if you have entered information and select **Cancel** a warning will be displayed.
@@ -46,12 +47,12 @@ The **Create a new record** command or **Quick create** makes it fast and easy t
 1. From the left navigation pane, select a record type. For example, **Contacts**. 
 2. On the command bar, select **+New**.
 
-  > [!div class="mx-imgBorder"] 
-  > ![Create new button](media/newrecord2.png "Create new button")
+    > [!div class="mx-imgBorder"] 
+    > ![Create new button](media/newrecord2.png "Create new button")
   
 3. Fill in the appropriate details and then select **Save and Close**.
 
-  > [!div class="mx-imgBorder"] 
-  > ![Create new button](media/newrecord3.png "Create new button")
+    > [!div class="mx-imgBorder"] 
+    > ![Create new button](media/newrecord3.png "Create new button")
 
     
