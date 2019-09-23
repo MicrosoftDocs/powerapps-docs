@@ -1,5 +1,5 @@
 ---
-title: "Use Power BI with model-driven apps | MicrosoftDocs"
+title: "Use Power BI with Dynamics 365 apps | MicrosoftDocs"
 ms.custom: 
 ms.date: 12/07/2018
 ms.reviewer: 
@@ -41,7 +41,7 @@ The Power BI cloud service works with Common Data Service apps to provide a self
   
    - **Microsoft Dynamics 365 - Social Engagement**  
   
-3. For the Sales Analytics and Service Analytics content packs, enter the URL of your instance, such as *<https://OrganizationName.crm.dynamics.com>*, where *OrganizationName* is the organization name of your instance of [!INCLUDE[pn_CRM_Online](../includes/pn-crm-online.md)] apps, and select **Next**.  
+3. For the Sales Analytics and Service Analytics content packs, enter the URL of your instance, such as *<https://OrganizationName.crm.dynamics.com>*, where *OrganizationName* is the organization name of your instance, and select **Next**.  
   
    > [!NOTE]
    >  If your data center is outside of North America the crm.dynamics.com domain name may be different, such as crm2.dynamics.com, crm3.dynamics.com, crm4.dynamics.com, etc. To find the domain name, in the apps web app go to **Settings** > **Customizations** > **Developer Resources**. The URLs listed will indicate the correct domain name.  
@@ -62,7 +62,7 @@ The Power BI cloud service works with Common Data Service apps to provide a self
   
 - [Download the Dynamics 365 for Customer Engagement apps (online) Service Manager .PBIX](http://download.microsoft.com/download/9/2/B/92BCBDCE-CE01-4BC9-A306-2A92653B683E/Customer%20Service%20Manager.pbix)  
   
-  The Power BI Report Template for [!INCLUDE[pn_connected_field_service_msdyn365](../includes/pn-connected-field-service-msdyn365.md)] enables users to publish a Power BI report that displays the live heart beat of connected devices.  
+  The Power BI Report Template for Connected Field Service enables users to publish a Power BI report that displays the live heart beat of connected devices.  
   
 - [Download the Power BI Report Template for Connected Field Service for Dynamics 365 for Customer Engagement](http://download.microsoft.com/download/E/B/5/EB5ED97A-A36A-4CAE-8C04-333A1E463B4F/PowerBI%20Report%20Template%20for%20Connected%20Field%20Service%20for%20Microsoft%20Dynamics%20365.pbix)  
   
@@ -77,7 +77,7 @@ The Power BI cloud service works with Common Data Service apps to provide a self
   
 ### Enable Power BI visualizations in the organization  
   
-1. Sign-in to [!INCLUDE[pn_microsoftcrm](../includes/pn-dynamics-crm.md)] apps as a user with the system administrator security role.  
+1. Sign-in to Dynamics 365 as a user with the system administrator security role.  
   
 2. Go to **Settings** > **Administration** > **System Settings**.  
   
@@ -85,9 +85,9 @@ The Power BI cloud service works with Common Data Service apps to provide a self
   
 4. Select **OK**.  
   
-To learn more about how to add Power BI tiles to personal dashboards, see [Embed  Power BI tiles on your personal dashboard  ](../basics/add-edit-power-bi-visualizations-dashboard.md#embed--power-bi-tiles-on-your-personal-dashboard).  
+To learn more about how to add Power BI tiles to personal dashboards, see [Embed  Power BI tiles on your personal dashboard  ](/dynamics365/customer-engagement/on-premises/basics/add-edit-power-bi-visualizations-dashboard.md#embed--power-bi-tiles-on-your-personal-dashboard).  
   
-To learn more about how to add Power BI dashboards to personal dashboards, see [Add a Power BI dashboard on your personal dashboard](../basics/add-edit-power-bi-visualizations-dashboard.md).  
+To learn more about how to add Power BI dashboards to personal dashboards, see [Add a Power BI dashboard on your personal dashboard](/dynamics365/customer-engagement/on-premises/basics/add-edit-power-bi-visualizations-dashboard.md).  
   
 <a name="CRMOnline_PBIDesktop"></a>   
 ## Use Power BI Desktop to connect directly to your instance  
