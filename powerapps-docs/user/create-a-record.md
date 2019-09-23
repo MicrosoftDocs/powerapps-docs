@@ -19,7 +19,7 @@ search.app:
 ---
 # Create a new record
 
-## Quickly create a new reocrd
+## Create a new record using the + option on the command bar
 
 The **Create a new record** command or **Quick create** makes it fast and easy to enter almost any type of information into the system. The command is on the nav bar, so it’s available whenever you need to enter new information into the system. You can also save a record and create a new one directly from the **Quick create** form.
 
@@ -39,4 +39,19 @@ The **Create a new record** command or **Quick create** makes it fast and easy t
 > An asterisk ![Required Field button](media/required-field-button.png "Required Field button") next to the field on the screen means the field is required. If you select **Save and Close** before entering required fields an error message will be displayed or if you have entered information and select **Cancel** a warning will be displayed.
 >   
 > A plus sign ![Recommended Field button](media/recommended-field-button.png "Recommended Field button") next to the field on the screen means your organization recommends that you fill in the field.  
+
+
+## Create a new record using New button 
+
+1. From the left navigation pane, select a record type. For example, **Contacts**. 
+2. On the command bar, select **+New**.
+
+  > [!div class="mx-imgBorder"] 
+  > ![Create new button](media/newrecord2.png "Create new button")
+  
+3. Fill in the appropriate details and then select **Save and Close**.
+
+  > [!div class="mx-imgBorder"] 
+  > ![Create new button](media/newrecord3.png "Create new button")
+
     
