@@ -73,7 +73,7 @@ The following limitations apply to the PowerApps custom visual:
 - You'll need to share the PowerApps app separately from your report. Learn about [sharing apps in PowerApps](share-app.md).
 - Power BI Report Server and the mobile app for Power BI do not support the PowerApps custom visual.
 - If you use PowerBIIntegration.Refresh() function, you must use a source that supports [DirectQuery](https://docs.microsoft.com/en-us/power-bi/desktop-directquery-data-sources) and the data connection must be created using DirectQuery method.
-- Power Apps Desktop provides data to Power Apps Studio when creating apps but not while editing. Use Power BI Web to preview the data while editing apps.
+- PowerApps in Power BI Desktop provides data to Power Apps Studio when creating apps but not while editing. Use Power BI Web to preview the data while editing apps.
 
 > [!NOTE]
 > We recommend that you first publish your report to the Power BI service and then create or modify apps.
