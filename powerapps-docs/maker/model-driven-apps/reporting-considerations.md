@@ -52,9 +52,9 @@ Model-driven apps have a number of capabilities that allow customers to surface 
   
   If users must run reports that exceed these settings, we recommend that you review the following options for assistance with complex reporting needs. Both options effectively offload reporting workloads from Common Data Service to another datastore by using a data integration solution.  
   
-- [Adapters](../analytics/reporting-considerations.md#BKMK_ThirdPartyAdapt) are used in conjunction with SQL Server Integration Services (SSIS) to extend the capabilities for integration with your apps data.  
+- [Adapters](reporting-considerations.md#BKMK_ThirdPartyAdapt) are used in conjunction with SQL Server Integration Services (SSIS) to extend the capabilities for integration with your apps data.  
   
-- Extract transform load [(ETL) tools](../analytics/reporting-considerations.md#BKMK_ETL) provide a new tool set for creating analysis of data by combining multiple data sources or extracting data to the data warehouse solution if SSIS is not in use. ETL tools provide comprehensive solutions for connecting with common data service to move data.  
+- Extract transform load [(ETL) tools](reporting-considerations.md#BKMK_ETL) provide a new tool set for creating analysis of data by combining multiple data sources or extracting data to the data warehouse solution if SSIS is not in use. ETL tools provide comprehensive solutions for connecting with common data service to move data.  
   
 > [!IMPORTANT]
 >  When you use these tools, we recommend you move or synchronize data during nonbusiness hours.  
@@ -87,4 +87,4 @@ Model-driven apps have a number of capabilities that allow customers to surface 
  [Introduction to Microsoft Power Query for Excel](http://office.microsoft.com/en-ca/excel-help/introduction-to-microsoft-power-query-for-excel-HA104003940.aspx?CTT=5&origin=HA104003813)   <br />
  [Dynamics 365 for Customer Engagement OData Feeds and Power Query: What’s the &#91;Record&#93;?](https://community.dynamics.com/crm/b/survivingcrm/archive/2014/02/16/dynamics-crm-odata-feeds-and-power-query-what-s-the-record.aspx)   <br />
  [Using Power View in Excel 2013 to Analyze CRM Data](http://blogs.msdn.com/b/crm/archive/2013/04/17/using-power-view-in-excel-2013-to-analyze-crm-data.aspx)   <br />
- [Reporting and Analytics Guide](../analytics/reporting-analytics-with-dynamics-365.md)
+

@@ -267,6 +267,4 @@ In Common Data Service, reports run in the sandbox mode. This is done by enablin
 |GetType|  
 |MemberwiseClone|  
   
-### See also  
- [Reporting and Analytics Guide](../analytics/reporting-analytics-with-dynamics-365.md)   
- [Sample Reports](../analytics/example-reports.md)
+

@@ -345,4 +345,4 @@ Before you customize a content pack, read  the information here and perform each
 3. If multiple destinations are available, select the one you want, and then select **Publish**.  
   
 ### See also  
- [Use Power BI with Dynamics 365 Customer Engagement (on-premises)](../admin/use-power-bi.md)
+ [Use Power BI with Dynamics 365 Customer Engagement (on-premises)](use-power-bi.md)
