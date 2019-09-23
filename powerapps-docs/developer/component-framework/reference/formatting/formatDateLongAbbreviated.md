@@ -18,7 +18,7 @@ ms.assetid: d91ba452-b57f-425c-bf64-cabf723a6249
 
 ## Syntax
 
-`context.formatting.formatDateLongAbbreviated();`
+`context.formatting.formatDateLongAbbreviated(value);`
 
 ## Available for 
 

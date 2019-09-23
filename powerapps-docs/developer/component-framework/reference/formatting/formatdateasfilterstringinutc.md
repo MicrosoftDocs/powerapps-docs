@@ -19,7 +19,7 @@ ms.assetid: a604fbbf-6d09-450d-b686-7a5cb3f3a2bc
 
 ## Syntax
 
-`context.formatting.formatDateAsFilterStringInUTC()`
+`context.formatting.formatDateAsFilterStringInUTC(value, includeTime)`
 
 ## Available for 
 

@@ -19,7 +19,7 @@ ms.assetid: 05c1c54d-14b5-4dad-9cd8-eec07e750c00
 
 ## Syntax
 
-`context.formatting.formatDecimal();`
+`context.formatting.formatDecimal(value, precision);`
 
 ## Available for 
 

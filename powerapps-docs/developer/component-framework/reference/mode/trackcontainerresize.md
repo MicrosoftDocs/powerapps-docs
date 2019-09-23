@@ -26,7 +26,7 @@ Model-driven apps
 
 ## Syntax
 
-`trackContainerResize(value)`
+`context.mode.trackContainerResize(value)`
 
 ## Parameters
 

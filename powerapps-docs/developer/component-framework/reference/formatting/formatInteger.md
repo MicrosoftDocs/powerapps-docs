@@ -19,7 +19,7 @@ ms.assetid: 58ce031a-cd68-4f19-a755-59a7b6030ddc
 
 ## Syntax
 
-`context.formatting.formatInteger();`
+`context.formatting.formatInteger(value);`
 
 ## Available for 
 

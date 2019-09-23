@@ -25,8 +25,6 @@ ms.assetid: 3e6a82ab-dbb2-4a60-acc2-c4f1012a8630
 
 Model-driven apps
 
-
-
 ## Return Value
 
 Type: `Promise<FileObject>`

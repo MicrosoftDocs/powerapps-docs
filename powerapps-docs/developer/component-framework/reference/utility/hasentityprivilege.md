@@ -26,7 +26,7 @@ Model-driven apps
 
 ## Syntax
 
-`context.utility.hasEntityPrivilege(entityTypeName, privilegeType, privilegeDepth)`
+`context.utils.hasEntityPrivilege(entityTypeName, privilegeType, privilegeDepth)`
 
 ## Parameters
 

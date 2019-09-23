@@ -19,7 +19,7 @@ ms.assetid: b4c08ece-a164-455c-a1b7-8ce855aedad4
 
 ## Syntax
 
-`context.formatting.formatDateYearMonth();`
+`context.formatting.formatDateYearMonth(value);`
 
 ## Available for 
 

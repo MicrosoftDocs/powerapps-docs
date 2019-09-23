@@ -19,7 +19,7 @@ ms.assetid: aae27c64-33c4-47f1-b833-4c04161c01e2
 
 ## Syntax
 
-`context.device.pickFile()`
+`context.device.pickFile(options)`
 
 ## Available for 
 

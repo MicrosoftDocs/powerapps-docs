@@ -19,7 +19,7 @@ ms.assetid: e69a9b6c-f737-4ebb-a9c1-901923b85358
 
 ## Syntax
 
-`context.formatting.formatDateShort();`
+`context.formatting.formatDateShort(value, includeTime);`
 
 ## Available for 
 

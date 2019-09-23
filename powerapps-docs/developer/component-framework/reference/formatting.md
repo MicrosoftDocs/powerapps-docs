@@ -30,8 +30,8 @@ Model-driven apps and canvas apps (experimental preview)
 |[formatCurrency](formatting/formatcurrency.md)|[!INCLUDE [formatcurrency-description](formatting/includes/formatcurrency-description.md)]|
 |[formatDateAsFilterStringInUTC](formatting/formatdateasfilterstringinutc.md)|[!INCLUDE [formatdateasfilterstringinutc-description](formatting/includes/formatdateasfilterstringinutc-description.md)]|
 |[formatDateLong](formatting/formatdatelong.md)|[!INCLUDE [formatdatelong-description](formatting/includes/formatdatelong-description.md)]|
-|[formatDateLongAbbreviated](formatting/formatdatelongabbreviated.md)|[!INCLUDE [formatdatelongabbreviated-description](formatting/includes/formatdatelongabbreviated-description.md)|
 |[formatDateShort](formatting/formatdateshort.md)|[!INCLUDE [formatdateshort-description](formatting/includes/formatdateshort-description.md)]|
+|[formatDateLongAbbreviated](formatting/formatdatelongabbreviated.md)|[!INCLUDE [formatdatelongabbreviated-description](formatting/includes/formatdatelongabbreviated-description.md)]|
 |[formatDateYearMonth](formatting/formatdateyearmonth.md)|[!INCLUDE [formatdateyearmonth-description](formatting/includes/formatdateyearmonth-description.md)]|
 |[formatDecimal](formatting/formatdecimal.md)|[!INCLUDE [formatdecimal-description](formatting/includes/formatdecimal-description.md)]|
 |[formatInteger](formatting/formatinteger.md)|[!INCLUDE [formatinteger-description](formatting/includes/formatinteger-description.md)]|

@@ -22,7 +22,7 @@ ms.assetid: 1052db82-7002-44ca-ad1f-9d3d4c311817
 
 ## Syntax
 
-`context.mode.setControlState();`
+`context.mode.setControlState(state);`
 
 ## Available for 
 

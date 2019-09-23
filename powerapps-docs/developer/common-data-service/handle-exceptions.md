@@ -2,7 +2,7 @@
 title: "Handle exceptions in a plug-in (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Understand system behavior when a plug-in passes an exception back to the caller."
 ms.custom: ""
-ms.date: 1/23/2019
+ms.date: 09/20/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.topic: "article"
@@ -38,5 +38,4 @@ When you throw an <xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException> excep
 The exception message for asynchronous registered plug-ins is written to a System Job [AsyncOperation Entity](reference/entities/asyncoperation.md) record which can be viewed in the **System Jobs** area of the web application. No dialog will be displayed to the user. Async plug-ins do not participate in the database transaction that queued them, therefore they cannot cancel the transaction.
 
 > [!NOTE]
-> - For on-premise plug-ins not registered in the sandbox, the exception information is written to the Application event log on the Dynamics 365 Server that executes the plug-in. The event log can be viewed by using the Event Viewer administrative tool.
-> - In the Unified Interface, the error dialog does not support HTML encoded content or messaging.
+> In the Unified Interface, the error dialog does not support HTML encoded content or messaging.

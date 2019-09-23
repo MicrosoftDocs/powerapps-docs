@@ -19,7 +19,7 @@ ms.assetid: b7cbb29f-4663-46c4-9aa8-1209a68e73b3
 
 ## Syntax
 
-`context.device.cgetBarcodeValue()`
+`context.device.getBarcodeValue()`
 
 ## Available for 
 

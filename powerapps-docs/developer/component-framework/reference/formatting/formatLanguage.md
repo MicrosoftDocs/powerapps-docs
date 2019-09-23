@@ -19,7 +19,7 @@ ms.assetid: 859ca133-92db-49d5-a68f-a2f47d8daa83
 
 ## Syntax
 
-`context.formatting.formatLanguage();`
+`context.formatting.formatLanguage(value);`
 
 ## Available for 
 
