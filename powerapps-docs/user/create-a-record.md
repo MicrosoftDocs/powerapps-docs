@@ -44,13 +44,13 @@ The **Create a new record** command or **Quick create** makes it fast and easy t
 
 ## Create a new record using New button 
 
-1. From the left navigation pane, select a record type. For example, **Contacts**. 
+1. From the left navigation pane, select a record type. For example, select **Contacts** to create a new contact record.
 2. On the command bar, select **+New**.
 
     > [!div class="mx-imgBorder"] 
     > ![Create new button](media/newrecord2.png "Create new button")
   
-3. Fill in the appropriate details and then select **Save and Close**.
+3. Fill in the appropriate details for new contact and then select **Save and Close**.
 
     > [!div class="mx-imgBorder"] 
     > ![Create new button](media/newrecord3.png "Create new button")
