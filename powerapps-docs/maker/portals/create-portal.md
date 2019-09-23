@@ -6,7 +6,7 @@ manager: shujoshi
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 08/30/2019
+ms.date: 10/01/2019
 ms.author: shjais
 ms.reviewer:
 ---
@@ -134,4 +134,24 @@ Notification shown for provisioning successfully completed
 
 If the portal provisioning fails, the notifications are displayed similarly.
   
+## Disable portal creation in a tenant
+
+As a tenant administrator, if you want to disable portal creation in a tenant by non-administrators, you can do it through PowerShell cmdlets. To run PowerShell cmdlets, you must first install the required modules. For information on installing the required PowerShell modules, see [Installation](https://docs.microsoft.com/en-us/power-platform/admin/powerapps-powershell#installation).
+
+After installing the modules, run the following command in a PowerShell window (run PowerShell as an administrator).
+
+```Set-TenantSettings -RequestBody @{ "disablePortalsCreationByNonAdminUsers" = $true }```
+
+Administrator are the users having one of the following Azure roles:
+
+- Global Administrator
+- Dynamics 365 Service Administrator
+- Power Platform Service Administrator
+
+Users not having the above mentioned Azure roles are considered as non-administrators.
+
+When the portal creation is disabled in a tenant, non-administrators will see an error as follows:
+
+> [!div class=mx-imgBorder]
+> ![Portal creation blocked error](media/portal-create-blocked-error.png "Portal creation blocked error")
 
