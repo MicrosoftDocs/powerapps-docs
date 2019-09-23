@@ -56,7 +56,7 @@ To update your Microsoft PowerApps CLI to the latest version and take advantage 
 pac install latest
 ```
 
-### What else do I need to know
+### How to update your existing Projects after installing the latest CLI version
 
 If you have already created a solution project or PowerApps component framework project, update these projects to the latest packages, so that you can leverage thenewly added capabilities with your existing projects. Newly created projects contain these settings by default.
 
