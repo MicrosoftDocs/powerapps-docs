@@ -19,8 +19,7 @@ search.app:
 ---
 # Create a new record
 
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
+## Quickly create a new reocrd
 
 The **Create a new record** command or **Quick create** makes it fast and easy to enter almost any type of information into the system. The command is on the nav bar, so it’s available whenever you need to enter new information into the system. You can also save a record and create a new one directly from the **Quick create** form.
 
@@ -28,6 +27,9 @@ The **Create a new record** command or **Quick create** makes it fast and easy t
 > The **Quick create** option is only available for records that are enabled by your admin.
     
 1. On the navigation bar, select the **plus sign** ![Create record button](media/create-record-button.png "Create record button"), and then select the item you want.  
+
+  > [!div class="mx-imgBorder"] 
+  > ![Create record button](media/newrecord1.png "Create record button")
   
 2.  Fill in the fields, and then select **Save and Close**. Or, to save and create another record, select the down arrow and then select  **Save & Create New**.
 
