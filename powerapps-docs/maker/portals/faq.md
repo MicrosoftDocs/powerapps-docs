@@ -71,6 +71,8 @@ You must contact your global administrator to enable creation of portals by non-
 
 If you are a global administrator, you must run the following command in a PowerShell window (run PowerShell as an administrator).
 
-```Set-TenantSettings -RequestBody @{ "disablePortalsCreationByNonAdminUsers" = $false }```
+```
+Set-TenantSettings -RequestBody @{ "disablePortalsCreationByNonAdminUsers" = $false }
+```
 
 More information: [Disable portal creation in a tenant](create-portal.md#disable-portal-creation-in-a-tenant)

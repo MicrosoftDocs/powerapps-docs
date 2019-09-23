@@ -140,7 +140,9 @@ As a tenant administrator, if you want to disable portal creation in a tenant by
 
 After installing the modules, run the following command in a PowerShell window (run PowerShell as an administrator).
 
-```Set-TenantSettings -RequestBody @{ "disablePortalsCreationByNonAdminUsers" = $true }```
+```
+Set-TenantSettings -RequestBody @{ "disablePortalsCreationByNonAdminUsers" = $true }
+```
 
 Administrator are the users having one of the following Azure roles:
 

@@ -27,3 +27,5 @@ If you select an environment that contains Dynamics 365 model-driven application
 
 4.	In the create portal window, enter a name for the portal and address for the website, and select a language from the drop-down list. When you're done, select **Create**. The creation process is same as described in the [Create a Common Data Service starter portal](create-portal.md) section.
 
+To disable portal creation in a tenant, see [Disable portal creation in a tenant](create-portal.md#disable-portal-creation-in-a-tenant).
+
