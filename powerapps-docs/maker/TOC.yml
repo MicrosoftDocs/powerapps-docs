@@ -996,7 +996,11 @@
       - name: Report considerations 
         href: ./model-driven-apps/reporting-considerations.md  
       - name: RDL sandboxing
-        href: ./model-driven-apps/rdl-sandboxing.md  
+        href: ./model-driven-apps/rdl-sandboxing.md 
+      - name: Use Power BI
+        href: ./model-driven-apps/use-power-bi.md 
+      - name: Customize Power BI content packs
+        href: ./model-driven-apps/customize-power-bi-content-packs.md
   - name: Validate and publish an app
     href: ./model-driven-apps/validate-app.md
   - name: Share an app
