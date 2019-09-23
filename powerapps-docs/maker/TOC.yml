@@ -993,8 +993,10 @@
     - name: Add reporting to your app
       href: ./model-driven-apps/add-reporting-to-app.md    
       items: 
-      - name: Report considerations and best practices
-        href: ./model-driven-apps/report-considerations-and-best-practices.md  
+      - name: Report considerations 
+        href: ./model-driven-apps/reporting-considerations.md  
+      - name: RDL sandboxing
+        href: ./model-driven-apps/rdl-sandboxing.md  
   - name: Validate and publish an app
     href: ./model-driven-apps/validate-app.md
   - name: Share an app
