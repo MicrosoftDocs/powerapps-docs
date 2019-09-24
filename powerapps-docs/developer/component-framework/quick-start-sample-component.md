@@ -35,7 +35,7 @@ To create a new project:
 
 ## Implementing Manifest
 
-Manifest is an XML file that contains the metadata of the code component. It also defines the behaviour of the code component. In this quick start tutorial, this manifest file is created under the `<Your component Name>` sub folder. When you open the `ControlManifest.Input.xml` file in Visual Studio Code, you will notice that the manifest file is predefined with some properties. Make changes to the predefined manifest file as shown below:
+Manifest is an XML file that contains the metadata of the code component. It also defines the behavior of the code component. In this quick start tutorial, this manifest file is created under the `<Your component Name>` sub folder. When you open the `ControlManifest.Input.xml` file in Visual Studio Code, you will notice that the manifest file is predefined with some properties. Make changes to the predefined manifest file as shown below:
 
 The [control](manifest-schema-reference/control.md) node defines the namespace, version and display name of the code component. Now, define each property of the [control](manifest-schema-reference/control.md) node as shown below:
 
@@ -91,7 +91,7 @@ The overall manifest file should look something like this:
 
 ## Implement component logic
 
-The next step after implementing the manifest file, is to implement the componet logic using TypeScript. The component logic should be implemented inside the `index.ts` file. When you open the `index.ts` file in Visual Studio Code, you will notice that the four important classes are predefined. Now, let's implement the logic for the code component. First thing you need to do is to define the `labelElement` as shown below:
+The next step after implementing the manifest file, is to implement the component logic using TypeScript. The component logic should be implemented inside the `index.ts` file. When you open the `index.ts` file in Visual Studio Code, you will notice that the four important classes are predefined. Now, let's implement the logic for the code component. First thing you need to do is to define the `labelElement` as shown below:
 
 ```TypeScript
 module MyNameSpace
