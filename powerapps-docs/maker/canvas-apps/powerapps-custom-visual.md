@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: tapanm-msft
+ms.reviewer: tapanm
 ms.date: 09/23/2019
 ms.author: chmoncay
 search.audienceType: 
