@@ -16,8 +16,6 @@ ms.assetid: 045a395b-4475-48dd-8f67-6bc2b33cd89c
 
 # Manifest schema reference
 
-[!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
-
 This section contains reference documentation for manifest schema generated using the PowerApps CLI.
 
 > [!IMPORTANT]

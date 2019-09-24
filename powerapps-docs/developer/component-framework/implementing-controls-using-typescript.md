@@ -29,7 +29,7 @@ To create a new project:
 1. Run the command below to create a new component project by passing basic parameters.
 
    ```CLI
-    pac pcf init --namespace SampleNamespace --name TSLinearInputControl --template field
+    pac pcf init --namespace SampleNamespace --name TSLinearInputComponent --template field
     ``` 
 
 1. Install the project build tools using the command `npm install`. 
@@ -59,12 +59,12 @@ Manifest is an XML file that contains the metadata of the code component. It als
    - **name**: Name of the property.
    - **display-name-key**: The display name of the property that is displayed on the UI.
    - **description-name-key**: The description of the property that is displayed on the UI. 
-   - **of-type-group**: The [of-type-group](manifest-schema-reference/type-group.md) is used when you want to have more than two data type fields. Add the [of-type-group](manifest-schema-reference/type-group.md) element as a sibling to the `property` element in the manifest. The `0f-type-group` specifies the component value and can contain whole, currency, floating point, or decimal values.
+   - **of-type-group**: The [of-type-group](manifest-schema-reference/type-group.md) is used when you want to have more than two data type fields. Add the [of-type-group](manifest-schema-reference/type-group.md) element as a sibling to the `property` element in the manifest. The `of-type-group` specifies the component value and can contain whole, currency, floating point, or decimal values.
    - **usage**: It has two properties *bound* and *input*. Bound properties are the one that are only bound to the value of the field. Input properties are the one that are either bound to a field or allows a static value.
    - **required**: Defines whether the property is required or not.
 
      ```XML
-      <property name="componentValue" display-name-key="componentValue_Display_Key" description-key="componentValue_Desc_Key" of-type-group="numbers" usage="bound" required="true" />
+      <property name="sliderValue" display-name-key="sliderValue_Display_Key" description-key="sliderValue_Desc_Key" of-type-group="numbers" usage="bound" required="true" />
       ```
 3. The [resources](manifest-schema-reference/resources.md) node defines the visualization of the code component. It contains all the resources that makes up the code component. The [code](manifest-schema-reference/code.md) is specified as child element under the resources element. Define the [resources](manifest-schema-reference/resources.md) as shown below:
 
@@ -200,7 +200,7 @@ export class TSLinearInputComponent implements ComponentFramework.StandardContro
 
 ## Adding style to the code component
 
-The linear input component’s `init` method creates an input element and sets the class attribute to `linearslider`. The style for the `linearslider` class is defined in a separate `CSS` file. Additional component resources like `CSS` files can be included with the code component to support further customizations.
+Developers and app makers can define their own **CSS** to represent their code components visually. CSSv allows the developers to describe the presentation of code components including style, colors, layouts, and fonts. The linear input component’s `init` method creates an input element and sets the class attribute to `linearslider`. The style for the `linearslider` class is defined in a separate `CSS` file. Additional component resources like `CSS` files can be included with the code component to support further customizations.
 
 1. Create a new `css` sub folder under the `TSLinearInputComponent` folder. 
 2. Create a new `TS_LinearInputComponent.css` file inside the `css` sub folder. 

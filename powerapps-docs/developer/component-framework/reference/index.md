@@ -12,8 +12,6 @@ manager: "kvivek"
 ---
 # PowerApps component framework API reference
 
-[!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
-
 This section contains reference documentation for creating code components using the PowerApps component framework.
 
 > [!IMPORTANT]
