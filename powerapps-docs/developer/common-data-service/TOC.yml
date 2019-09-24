@@ -413,6 +413,8 @@
     href: discovery-service.md
 - name: Best practices
   href: best-practices/index.md
+- name: Online Management API
+  href: online-management-api/toc.yml
 - name: Samples
   items:
   - name: Web API
