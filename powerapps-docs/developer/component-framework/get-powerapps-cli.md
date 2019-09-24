@@ -5,7 +5,7 @@ keywords: PowerApps component framework, code components, Component Framework
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 06/18/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -55,43 +55,6 @@ To update your Microsoft PowerApps CLI to the latest version and take advantage 
 ```CLI
 pac install latest
 ```
-
-### How to update your existing Projects after installing the latest CLI version
-
-If you have already created a solution project or PowerApps component framework project, update these projects to the latest packages, so that you can leverage thenewly added capabilities with your existing projects. Newly created projects contain these settings by default.
-
-1. Update your existing projects to use the latest modules
- 
-   - Update the version tag in your `pcfproj` located within your PowerApps component framework project folder as below:
-
-      ```XML
-      <PackageReference Include="Microsoft.PowerApps.MSBuild.Pcf" Version="1.*"/>
-      ```
-   - Update the version tag in your `cdsproj` located within your solution project folder as below:
-
-      ```XML
-      <PackageReference Include="Microsoft.PowerApps.MSBuild.Solution" Version="1.*"/>
-      ```
-
-    > [!NOTE] 
-    > After making the above changes, run the command `msbuild /t:restore` to update your project to the correct version.
-
-
-   - Update the version tag in your `package.json` file located within your PowerApps component framework project folder:
-
-      ```JSON
-      "devDependencies":{
-       "pcf-scripts": "^1",
-       "pcf-start": "^1"
-          }
-      ```
-   > [!NOTE]
-   > After making above changes, run the `npm update` command to update your project to the correct version.
-
-2. If you have previously created an auth profile, you need to re-create it again. This is because a new property was added to the profile to support non-public cloud. You can do this by:
- 
-    - Running the command `pac auth clear`
-    - Running the command `pac auth create --url <your org url>`
 
 ## Microsoft PowerApps CLI telemetry
 
