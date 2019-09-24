@@ -472,6 +472,7 @@ By using `$apply` you can aggregate and group your data dynamically.  Possible u
 |Average size of the deal based on estimated value and status|`$apply=groupby((statuscode),aggregate(estimatedvalue with average as averagevalue)`|
 |Sum of estimated value based on status|`$apply=groupby((statuscode),aggregate(estimatedvalue with sum as total))`|
 |Total opportunity revenue by Account name|`$apply=groupby((parentaccountid/name),aggregate(estimatedvalue with sum as total))`|
+|Primary contact names for accounts in 'WA'|`/accounts?$apply=filter(address1_stateorprovince eq 'WA')/groupby((primarycontactid/fullname))`|
 |Last created record date and time|`$apply=aggregate(createdon with max as lastCreate)`|
 |First created record date and time|`$apply=aggregate(createdon with min as firstCreate)`|
 
