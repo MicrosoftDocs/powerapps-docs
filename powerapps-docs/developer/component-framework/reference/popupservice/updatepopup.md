@@ -31,7 +31,7 @@ Model-driven apps
 | Parameter Name|Type|Required|Description|
 | ------------- |----|--------|-----------|
 |name|`String`|Yes|The name of the popup you're trying to update.|
-|newProps|`Popup`|No|The updated properties to give to the popup.|
+|newProps|[Popup](../popup.md)|No|The updated properties to give to the popup.|
 
 
 ### Related topics

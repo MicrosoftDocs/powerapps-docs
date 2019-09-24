@@ -63,8 +63,6 @@ The `calendar` object contains the following properties:
 
 ### calendarWeekRule
 
-0
-
 **Type**: `number`
 
 ### dateSeparator

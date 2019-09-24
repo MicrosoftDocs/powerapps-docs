@@ -15,8 +15,6 @@ ms.assetid: 45f4872d-c1d2-4c5a-8721-251b96ede370
 
 # property element
 
-[!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
-
 [!INCLUDE [property-description](includes/property-description.md)]
 
 ## Available for

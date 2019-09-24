@@ -21,11 +21,13 @@ Model-driven apps
 
 ## Properties
 
-### createFromEntity: EntityReference
+### createFromEntity
 
 Designates a record that will provide default values based on mapped attribute value. The lookup object has following properties: entity type, id and name.
 
-### entity
+**Type**: [EntityReference](entityreference.md)
+
+### entityId
 
 Unique Id of the entity record to display the form for. 
 
@@ -51,7 +53,7 @@ Height of the form window to be displayed in pixels.
 
 ### openInNewWindow
 
-Whether to display the form in new window
+Whether to display the form in new window.
 
 **Type**: `boolean`
 

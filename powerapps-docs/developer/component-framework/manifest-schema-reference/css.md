@@ -18,8 +18,6 @@ ms.assetid: b6119424-c0a4-4412-b25c-8239da6cbe36
 
 # css element
 
-[!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
-
 [!INCLUDE [css-description](includes/css-description.md)]
 
 ## Available for

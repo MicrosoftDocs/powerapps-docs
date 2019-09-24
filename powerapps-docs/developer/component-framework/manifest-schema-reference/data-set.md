@@ -18,8 +18,6 @@ ms.assetid: 9ffe8930-b290-4252-98d4-a1195b00205f
 
 # data-set element
 
-[!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
-
 [!INCLUDE [data-set-description](includes/data-set-description.md)]
 
 ## Attributes

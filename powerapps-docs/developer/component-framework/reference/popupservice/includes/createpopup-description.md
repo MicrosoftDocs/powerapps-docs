@@ -15,4 +15,4 @@ applies_to:
 ms.assetid: d75f3fcb-f885-407f-9663-bf318e6317c5
 ---
 
-Creates a new popup element
+Creates a new popup element.

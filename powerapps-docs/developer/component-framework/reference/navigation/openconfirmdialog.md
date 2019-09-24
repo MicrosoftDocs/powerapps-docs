@@ -35,7 +35,8 @@ Model-driven apps
 ## Return Value
 
 Type: `Promise<ConfirmDialogResponse>`
-Returns an object with the confirmed (Boolean) attribute is passed that indicates whether the confirm button was clicked to close the dialog.
+
+Description: Returns an object with the confirmed (Boolean) attribute is passed that indicates whether the confirm button was clicked to close the dialog.
 
 ## Remarks
 

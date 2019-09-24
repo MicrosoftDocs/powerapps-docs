@@ -25,7 +25,7 @@ Model-driven apps
 
 ### closeOnOutsideClick
 
-Indicates whether popup close on an outside mouse click.
+Indicates whether popup close on an outside mouse click. When set to `false`, the popup will not be closed on an outside mouse click.
 
 **Type**: `boolean`
 
@@ -43,13 +43,13 @@ The id to be set to the anchor component if any.
 
 ### name
 
-The name of the Popup. Used like a reference to open Popups.
+The name of the popup. Used as the reference to open popups.
 
 **Type**: `string`
 
 ### popupToOpen
 
-The name of Popup which should be opened.
+The name of popup which should be opened.
 
 **Type**: `string`
 
@@ -59,7 +59,7 @@ Should be defined only in a root popup. To open nested popups, should be provide
 
 ## type
 
-The type of Popup
+The type of popup, which is described in the enum PopupType. There should be only one `root` popup for each set of popups.
 
 **Type**: `enum`
 

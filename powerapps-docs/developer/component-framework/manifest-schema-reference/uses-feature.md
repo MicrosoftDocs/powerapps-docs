@@ -29,11 +29,10 @@ Model-driven apps
 
 ## Child Elements
 
-|Element|Description|
-|--|--|
-|name|Name of the feature that is declared in the component|
-|required|Indicates if the component requires that feature or not|
-
+|Element|Description|Type|Required|
+|--|--|---|----|
+|name|Name of the feature that is declared in the component|`string`|Yes|
+|required|Indicates if the component requires that feature or not|`boolean`|Yes|
 
 ### Example 
 

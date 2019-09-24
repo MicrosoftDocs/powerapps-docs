@@ -43,9 +43,9 @@ The `options` parameter object has the following properties:
 
 |Name|Type|Description|
 |--|--|--|
-|`accept`|`String`|Image file type to select. Valid values are "audio", "video", or "image"|
+|`accept`|`String`|Image file types to select. Valid values are *audio*, *video*, or *image*.|
 |`allowMultipleFiles`|`Boolean`|Indicates whether to allow select multiple files|
-|`maximumAllowedFileSize`|`Number`|Maximum size of the files(s) to be selected|
+|`maximumAllowedFileSize`|`Number`|Maximum size of the file(s) to be selected|
 
 
 ### Related topics

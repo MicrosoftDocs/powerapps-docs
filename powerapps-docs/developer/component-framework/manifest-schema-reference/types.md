@@ -15,9 +15,6 @@ ms.assetid: 87f5e921-4114-4710-a362-db741426a69b
 
 # types element
 
-
-[!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
-
 ## Available for 
 
 Model-driven apps and canvas apps (experimental preview) 

@@ -15,8 +15,6 @@ ms.assetid: a48831c6-133a-4747-99fa-7cc1df4558d0
 
 # Manifest element
 
-[!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
-
 [!INCLUDE [manifest-description](includes/manifest-description.md)]
 
 ## Available for

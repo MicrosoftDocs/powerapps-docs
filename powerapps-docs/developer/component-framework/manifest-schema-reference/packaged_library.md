@@ -15,8 +15,6 @@ ms.assetid: 41c50db2-3096-4990-ac2b-e702c161bf4f
 
 # packaged_library element
 
-[!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
-
 [!INCLUDE [packaged_library-description](includes/packaged_library-description.md)]
 
 ## Available for

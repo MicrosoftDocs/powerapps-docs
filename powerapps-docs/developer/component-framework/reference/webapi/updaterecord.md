@@ -77,7 +77,9 @@ Model-driven apps
 
 ## Return Value
 
-On success, returns a promise object containing the attributes specified earlier in the description of the **successCallback** parameter.
+Type: [Promise]((dateformattinginfo.md))<[EntityReference](../entityreference.md)>
+
+Description: On success, returns a promise object containing the attributes specified earlier in the description of the **successCallback** parameter.
 
 
 ### Related topics

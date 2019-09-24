@@ -15,8 +15,6 @@ ms.assetid: 90f2b4c9-7396-4ab9-bc9f-810189dc18b7
 
 # library element
 
-[!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
-
 [!INCLUDE [library-description](includes/library-description.md)]
 
 ## Attributes
