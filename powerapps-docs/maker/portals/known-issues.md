@@ -53,4 +53,4 @@ ms.reviewer:
 
 - A few template pages on the Employee Self Service portal are not able to render correct breadcrumb.
 
-- A few Dynamics 365 Portal templates do not have menu items as per their hierarchy of pages. However, if you create new pages, the menu items are created accordingly.
+- A few Dynamics 365 Portals templates do not have menu items as per their hierarchy of pages. However, if you create new pages, the menu items are created accordingly.

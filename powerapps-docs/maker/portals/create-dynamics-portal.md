@@ -1,6 +1,6 @@
 ---
-title: Create a Dynamics 365 Portal in PowerApps | Microsoft Docs
-description: Instructions to create a Dynamics 365 Portal in PowerApps.
+title: Create a Dynamics 365 Portals in PowerApps | Microsoft Docs
+description: Instructions to create a Dynamics 365 Portals in PowerApps.
 author: sbmjais
 manager: shujoshi
 ms.service: powerapps
@@ -12,16 +12,16 @@ ms.reviewer:
 ---
 
 
-# Create a Dynamics 365 Portal
+# Create Dynamics 365 Portals
 
 If you select an environment that contains Dynamics 365 model-driven applications, you can create the portals mentioned in [Portal templates](portal-templates.md).
 
 1.	Sign in to [PowerApps](http://web.powerapps.com).
 
-2.	Select **Create** on the left pane and enter **portal** in the **Search templates** field to display all Dynamics 365 Portal templates.
+2.	Select **Create** on the left pane and enter **portal** in the **Search templates** field to display all Dynamics 365 Portals templates.
 
     > [!div class=mx-imgBorder]
-    > ![Dynamics 365 Portal templates](media/dynamics-portals.png "Dynamics 365 Portal templates")  
+    > ![Dynamics 365 Portals templates](media/dynamics-portals.png "Dynamics 365 Portals templates")  
 
 3.	Select the required portal template.
 

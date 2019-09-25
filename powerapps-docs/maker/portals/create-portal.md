@@ -29,7 +29,7 @@ If you choose to create your portal in a new environment using the **Create new 
 
 If you choose to create your portal in an existing environment without portal pre-requisites, the pre-requisites are installed first and then the portal is created. In this method, the portal provisioning can take some time and you’ll be notified when the portal is provisioned.
 
-You can create Common Data Service starter portal or Dynamics 365 Portal in PowerApps based on the selected environment.
+You can create Common Data Service starter portal or Dynamics 365 Portals in PowerApps based on the selected environment.
 
 More information on working with environments: [Working with environments and Microsoft PowerApps](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/working-with-environments)
 
