@@ -15,15 +15,15 @@ ms.assetid: d2cbf58a-9112-45c2-b823-2c07a310714c
 
 # Create and build a code component
 
-This topic demonstrates how to create and deploy code components using PowerApps component framework. Ensure that you have installed Microsoft PowerApps CLI
+This topic demonstrates how to create and deploy code components using PowerApps component framework. Ensure that you have installed [Microsoft PowerApps CLI](https://aka.ms/PowerAppsCLI).
 
 ## Create a new component
 
-To get started, open a new Developer Command Prompt for VS 2017 after installing PowerApps CLI.
+To get started, open **Developer Command Prompt for VS 2017** after installing PowerApps CLI.
 
-1. In the Developer Command Prompt for VS 2017, create a new folder on your local machine for example, *C:\Users\your name\Documents\My_PCF_Component*.
+1. In the Developer Command Prompt for VS 2017, create a new folder on your local machine for example, *C:\Users\your name\Documents\My_PCF_Component* using the command `mkdir <Specify the folder name>`.
 2. Go to the newly created folder using the command `cd <specify your new folder path>`.
-3. Run the command to create a new component project by passing some basic parameters:
+3. Run the command below to create a new component project by passing some basic parameters:
 
     `pac pcf init --namespace <specify your namespace here> --name <put component name here> --template <component type>`
  
@@ -39,6 +39,8 @@ To build the component project, open the project folder that contains `package.j
 
 > [!TIP]
 > To debug the component during or after the build operation, see [Debug a code component](debugging-custom-controls.md).
+
+Once you're done with implementing the component logic in TypeScript, you need to bundle all the code component elements into a solution file so that you can import the solution into Common Data Service. More information: [Package a code component](import-custom-controls.md).
 
 ## Known Configuration issues and Workarounds
 

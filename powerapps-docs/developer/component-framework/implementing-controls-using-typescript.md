@@ -101,7 +101,7 @@ Manifest is an XML file that contains the metadata of the code component. It als
 5. Now, create a new folder inside the `TSLinearInputComponent` folder and name it as **css**.
 6. Create a CSS file to [add styling to the code component](#adding-style-to-the-code-component).
 7. Build the component project using the command `npm run build`.
-8. The build generates an updated Typescript type declaration file under `TSLinearInputComponent/generated folder`.
+8. The build generates an updated Typescript type declaration file under `TSLinearInputComponent/generated` folder.
 
 ## Implementing component logic
 
@@ -200,7 +200,7 @@ export class TSLinearInputComponent implements ComponentFramework.StandardContro
 
 ## Adding style to the code component
 
-Developers and app makers can define their own **CSS** to represent their code components visually. CSSv allows the developers to describe the presentation of code components including style, colors, layouts, and fonts. The linear input component’s `init` method creates an input element and sets the class attribute to `linearslider`. The style for the `linearslider` class is defined in a separate `CSS` file. Additional component resources like `CSS` files can be included with the code component to support further customizations.
+Developers and app makers can define their own styling to represent their code components visually using CSS. CSS allows the developers to describe the presentation of code components including style, colors, layouts, and fonts. The linear input component’s [init](reference/control/init.md) method creates an input element and sets the class attribute to `linearslider`. The style for the `linearslider` class is defined in a separate `CSS` file. Additional component resources like `CSS` files can be included with the code component to support further customizations.
 
 1. Create a new `css` sub folder under the `TSLinearInputComponent` folder. 
 2. Create a new `TS_LinearInputComponent.css` file inside the `css` sub folder. 
@@ -303,7 +303,7 @@ npm start
 Follow the steps below to create and import a [solution](https://docs.microsoft.com/dynamics365/customer-engagement/customize/solutions-overview) file:
 
 1. Create a new folder **Solutions** inside the **LinearComponent** folder and navigate into the folder. 
-2. Create a new solution project in the **LinearComponent** folder using the command 
+2. Create a new solution project in the **LinearComponent** folder using the command.
  
     ```CLI
      pac solution init --publisher-name developer --publisher-prefix dev 
@@ -312,19 +312,19 @@ Follow the steps below to create and import a [solution](https://docs.microsoft.
    > [!NOTE]
    > The [publisher-name](https://docs.microsoft.com/powerapps/developer/common-data-service/reference/entities/publisher) and [publisher-prefix](https://docs.microsoft.com/powerapps/maker/common-data-service/change-solution-publisher-prefix) values must be unique to your environment.
  
-3. Once the new solution project is created, you need to refer to the location where the created component is located. You can add the reference by using the command
+3. Once the new solution project is created, you need to refer to the location where the created component is located. You can add the reference by using the command.
 
     ```CLI
      pac solution add-reference --path c:\users\LinearComponent
     ```
 
-4. To generate a zip file from your solution project, you need to `cd` into your solution project directory and build the project using the command 
+4. To generate a zip file from your solution project, you need to `cd` into your solution project directory and build the project using the command. 
 
     ```CLI
      msbuild /t:restore
     ```
 
-5. Again run the following command msbuild
+5. Again run the following command msbuild.
     ```CLI
      msbuild
     ```
@@ -337,7 +337,7 @@ Follow the steps below to create and import a [solution](https://docs.microsoft.
     > - Under **Code Tools**, check **NuGet targets & Build Tasks**
 
 6. The generated solution zip file is located in `Solution\bin\debug` folder.
-7. You should manually [import the solution into Common Data Service](https://docs.microsoft.com/dynamics365/customer-engagement/customize/import-update-export-solutions) using the web portal once the zip file is ready or see [Authenticating to your organization](import-custom-controls.md#authenticating-to-your-organization) and [Deployment](import-custom-controls.md#deploying-code-components) sections to import using PowerApps CLI commands.
+7. You should manually [import the solution into Common Data Service](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/customize/import-update-upgrade-solution) using the web portal once the zip file is ready or see [Authenticating to your organization](import-custom-controls.md#authenticating-to-your-organization) and [Deployment](import-custom-controls.md#deploying-code-components) sections to import using PowerApps CLI commands.
 
 ## Adding code components in model-driven apps
 

@@ -18,19 +18,19 @@ Once you're done implementing the code component logic, get started with testing
 
 As shown in the image above, the browser window opens with 4 sections. The code component is rendered in the left pane while the right pane has **Context Inputs**, **Data Inputs** and **Outputs** sections.
 
-- **Context Inputs** provides a way to specify the form factor and test the code component with each form factor (web, tablet, phone). This is especially helpful when the code component is dependent on a particular form factor capability. In the coming release, you can have the ability to specify the height and width.
-- **Data Inputs** is an interactive UI that displays all the properties and their types or type-groups defined in the manifest file. It allows you to key in the mock data for each property. 
+- **Context Inputs** provides a way to specify the form factor and test the code component with each form factor (web, tablet, phone). This is helpful when the code component is dependent on a particular form factor capability. In the coming release, you can have the ability to specify the height and width.
+- **Data Inputs** is an interactive UI that displays all the properties and their [types](manifest-schema-reference/types.md) or [type-groups](manifest-schema-reference/type-group.md) defined in the [manifest](manifest-schema-reference/manifest.md) file. It allows you to key in the mock data for each property. 
 - **Outputs** renders the output whenever a component's `getOutputs` method gets called.  
 
      > [!div class="mx-imgBorder"]
      > ![test harness 2](media/test-harness-2.png "test harness 2")
 
 > [!NOTE]
-> If you want to modify the `manifest.xml` file or create additional properties, you need to restart the debug process before they appear in the inputs section.
+> If you want to modify the `ControlManifest.Input.xml` file or create additional properties, you need to restart the debug process before they appear in the inputs section.
 
 ## Test code components with Mock data
 
-- For field components, you can input value and type for every property defined in your **ControlManifest.Input.xml** as shown below
+- For field components, you can input value and type for every property defined in your **ControlManifest.Input.xml** as shown below:
 
    > [!div class="mx-imgBorder"]
    > ![test harness 2.5](media/test-harness-2.5.png "test harness 2.5")

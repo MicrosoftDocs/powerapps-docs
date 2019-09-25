@@ -17,7 +17,7 @@ ms.assetid: d2cbf58a-9112-45c2-b823-2c07a310714c
 If you are a PowerApps component framework private preview participant for model-driven apps and have already built code components, you need to make some minor updates to make it compatible with the new ALM-centric project structures. To use the new PowerApps CLI tooling with your existing PowerApps component framework code component source, a few changes are required.
 
 > [!NOTE]
-> This topic is not applicable for updating code components in canvas apps because the PowerApps CLI tooling is not available at the time of private preview for the model-driven apps.  
+> This topic is only applicable for updating code components for model-driven apps because the PowerApps CLI tooling is not available at the time of private preview for the model-driven apps.  
 
 ## Creating an empty project
 
@@ -26,7 +26,7 @@ Once the project has been created migrate your code component source to the new 
 
 1. Copy or replace the component source from the old source file into **index.ts**.
 2. Copy or replace the contents of **ControlManifest.xml** into **ControlManifest.Input.xml** file.
-3. Copy all other peripheral component resources such as css, resx, img into the corresponding subfolder from the old project to the new project.
+3. Copy all other peripheral component resources such as css, resx, img into the corresponding sub folder from the old project to the new project.
 
 ## Updating Manifest file
 
@@ -43,7 +43,7 @@ For example, if your component source is implemented in a file called `MyControl
     </resources>
     ```
 
-The `path` attribute above indicates that the `YourControlName.css` file is located in `css` subfolder relative to the current directory where the `ControlManifest.Input.xml` resides on disk.
+The `path` attribute above indicates that the `YourControlName.css` file is located in `css` sub folder relative to the current directory where the `ControlManifest.Input.xml` resides on disk.
 Update the ControlManifest.Input.xml files as follows:
 
 1. Edit the `code` entry in `ControlManifest.Input.xml` to the pre-compiled source file of your code component (typically this is will be index.ts).
