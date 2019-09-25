@@ -23,7 +23,7 @@ Model-driven apps and canvas apps (experimental preview)
 
 ## Syntax
 
-`requestRender()`
+`context.factory.requestRender()`
 
 ### Related topics
 

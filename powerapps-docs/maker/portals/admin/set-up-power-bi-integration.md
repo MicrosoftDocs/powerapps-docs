@@ -199,5 +199,5 @@ Customizers can now use the [powerbi](../liquid/portals-entity-tags.md#powerbi) 
 
 ### See also
 
-[powerbi Liquid tag](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/portals-entity-tags#powerbi)<br> 
+[powerbi Liquid tag](../liquid/portals-entity-tags.md#powerbi)<br> 
 [Add a Power BI report or dashboard to a webpage in portal](add-powerbi-report.md)

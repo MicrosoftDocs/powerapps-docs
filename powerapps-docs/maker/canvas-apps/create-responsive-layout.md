@@ -6,8 +6,8 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: anneta
-ms.date: 02/28/2019
+ms.reviewer: tapanm-msft
+ms.date: 9/20/2019
 ms.author: emcoope
 search.audienceType:
   - maker
@@ -146,11 +146,11 @@ If you use a gallery in your app, you'll need to lay out controls within the gal
 
 ![Vertical gallery showing Template Width and Height](media/create-responsive-layout/gallery-vertical.png)
 
-### Enhanced Group control
+### Container control
 
-You can use an experimental feature, the enhanced **Group** control, as a parent control. To turn this feature on, select **File** > **App settings** > **Advanced settings**.
+You can use an experimental feature, the **Container** control, as a parent control. To turn this feature on, select **File** > **App settings** > **Advanced settings**.
 
-Consider the example of a header at the top of a screen. It's common to have a header with a title and several icons with which your users can interact. You can construct such a header using the enhanced **Group** control, containing a **Label** control and two **Icon** controls:
+Consider the example of a header at the top of a screen. It's common to have a header with a title and several icons with which your users can interact. You can construct such a header using the **Container** control, containing a **Label** control and two **Icon** controls:
 
 ![Header example using a group](media/create-responsive-layout/header-group.png)
 
@@ -169,7 +169,7 @@ Having written these formulas, you can adjust the size or position of the **Head
 
 ### Components
 
-If you use another experimental feature, named Components, you can construct building blocks and reuse them throughout your app. As with the **Group** control, the controls that you place within a component should base their position and size formulas on `Parent.Width` and `Parent.Height`, which refer to the size of the component. More information: [Create a component](create-component.md).
+If you use another experimental feature, named Components, you can construct building blocks and reuse them throughout your app. As with the **Container** control, the controls that you place within a component should base their position and size formulas on `Parent.Width` and `Parent.Height`, which refer to the size of the component. More information: [Create a component](create-component.md).
 
 ## Adapting layout for device size and orientation
 

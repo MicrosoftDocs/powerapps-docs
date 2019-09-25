@@ -23,7 +23,7 @@ Model-driven apps
 
 ## Syntax
 
-`context.webapi.retrieveRecord(entityLogicalName, id, options).then(successCallback, errorCallback);`
+`context.webAPI.retrieveRecord(entityLogicalName, id, options).then(successCallback, errorCallback);`
 
 ## Parameters
 
@@ -75,7 +75,8 @@ Model-driven apps
 
 ## Return Value
 
-On success, returns a promise containing a JSON object with the retrieved attributes and their values.
+Type: [Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)<[Entity](../entity.md)>
+
 
 
 ### Related topics

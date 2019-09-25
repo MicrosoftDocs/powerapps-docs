@@ -23,7 +23,7 @@ Model-driven apps
 
 ## Syntax
 
-`context.webapi.retrieveMultipleRecords(entityLogicalName, options, maxPageSize).then(successCallback, errorCallback);`
+`context.webAPI.retrieveMultipleRecords(entityLogicalName, options, maxPageSize).then(successCallback, errorCallback);`
 
 ## Parameters
 

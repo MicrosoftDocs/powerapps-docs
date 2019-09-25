@@ -23,7 +23,7 @@ Model-driven apps
 
 ## Syntax
 
-`pickFile(options)`
+`context.device.pickFile(options)`
 
 ## Parameters
 

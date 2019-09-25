@@ -14,7 +14,7 @@ author: Nkrb
 
 [!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-This tutorial walks you through the process of creating a new custom component in Typescript. The sample component is a linear input component which enables users to enter numeric values using a visual slider instead of directly typing the values in the field. 
+This tutorial walks you through the process of creating a new code component in Typescript. The sample component is a linear input component which enables users to enter numeric values using a visual slider instead of directly typing the values in the field. 
 
 ## Creating a new component project
 
@@ -33,11 +33,11 @@ To create a new project:
     ``` 
 
 1. Install the project build tools using the command `npm install` 
-2. Open the project in any developer environment of your choice and start implementing your custom component.
+2. Open the project in any developer environment of your choice and start implementing your code component.
 
 ## Implementing Manifest
 
-A custom component is defined by the information in the `ControlManifest.Input.xml` manifest file. In this walkthrough, this file is created under the `<Your component Name>` sub folder. For the linear input component, a property will be defined to store the numeric value of the slider input.
+A code component is defined by the information in the `ControlManifest.Input.xml` manifest file. In this walkthrough, this file is created under the `<Your component Name>` sub folder. For the linear input component, a property will be defined to store the numeric value of the slider input.
 
 1. Open the `ControlManifest.Input.xml` file in the code editor (Visual Studio Code). The `ControlManifest.Input.xml` file defines an initial component property called `sampleProperty`.
 
@@ -64,13 +64,13 @@ A custom component is defined by the information in the `ControlManifest.Input.x
 
 4. Save the changes to the `ControlManifest.Input.xml` file.
 5. Now, create a new folder inside the `TSLinearInputControl` folder and name it as **css**.
-6. Create a CSS file to [add styling to the custom component](#adding-style-to-the-custom-component)
+6. Create a CSS file to [add styling to the code component](#adding-style-to-the-code-component)
 7. Build the component project using the command `npm run build`.
 8. The build generates an updated Typescript type declaration file under `TSLinearInputControl/generated folder`.
 
 ## Implementing component logic
 
-Source for the custom component is implemented in the `index.ts` file. The `index.ts` file includes scaffolding for interface methods that are required by the PowerApps component framework. 
+Source for the code component is implemented in the `index.ts` file. The `index.ts` file includes scaffolding for interface methods that are required by the PowerApps component framework. 
 
 1. Open the `index.ts` file in the code editor of your choice.
 2. Update the `TSLinearInputControl` class with the following
@@ -116,7 +116,7 @@ export class TSLinearInputControl implements ComponentFramework.StandardControl<
     this.labelElement.setAttribute("class", "TS_LinearRangeLabel");
     this.labelElement.setAttribute("id", "lrclabel");
     // retrieving the latest value from the control and setting it to the HTMl elements.
-    this._value = context.parameters.sliderValue.raw;
+    this._value = context.parameters.sliderValue.raw ? context.parameters.sliderValue.raw : 0;
     this.inputElement.setAttribute("value", context.parameters.sliderValue.formatted ? context.parameters.sliderValue.formatted : "0");
     this.labelElement.innerHTML = context.parameters.sliderValue.formatted ? context.parameters.sliderValue.formatted : "0";
     // appending the HTML elements to the control's HTML container element.
@@ -138,7 +138,7 @@ export class TSLinearInputControl implements ComponentFramework.StandardControl<
 
   public updateView(context: ComponentFramework.Context<IInputs>): void {
     // storing the latest context from the control.
-    this._value = context.parameters.sliderValue.raw;
+    this._value = context.parameters.sliderValue.raw ? context.parameters.sliderValue.raw : 0;
     this._context = context;
     this.inputElement.setAttribute("value",context.parameters.sliderValue.formatted ? context.parameters.sliderValue.formatted : "");
     this.labelElement.innerHTML = context.parameters.sliderValue.formatted ? context.parameters.sliderValue.formatted : "";
@@ -163,9 +163,9 @@ export class TSLinearInputControl implements ComponentFramework.StandardControl<
    - bundle.js – Bundled component source code 
    - ControlManifest.xml – Actual component manifest file that is uploaded to the Common Data Service organization.
 
-## Adding style to the custom component
+## Adding style to the code component
 
-The linear input component’s `init` method creates an input element and sets the class attribute to `linearslider`. The style for the `linearslider` class is defined in a separate `CSS` file. Additional component resources like `CSS` files can be included with the custom component to support further customizations.
+The linear input component’s `init` method creates an input element and sets the class attribute to `linearslider`. The style for the `linearslider` class is defined in a separate `CSS` file. Additional component resources like `CSS` files can be included with the code component to support further customizations.
 
 1. Create a new `css` subfolder under the `TSLinearInputControl` folder. 
 2. Create a new `TS_LinearInputControl.css` file inside the `css` subfolder. 
@@ -255,9 +255,9 @@ The linear input component’s `init` method creates an input element and sets t
    ```
 8. Inspect the build output under the **./out/controls/TSLinearInputControl** and observe that the **TS_LinearInputControl.css** file is now included with the compiled build artifacts. 
 
-## Debugging your custom component
+## Debugging your code component
 
-Once you are done implementing your custom component logic, run the following command to start the debugging process. More information: [Debugging code components](debugging-custom-controls.md)
+Once you are done implementing your code component logic, run the following command to start the debugging process. More information: [Debugging code components](debugging-custom-controls.md)
 
 ```CLI
 npm start
@@ -306,7 +306,7 @@ Follow the steps below to create and import a [solution](https://docs.microsoft.
 
 ## Adding code components in model-driven apps
 
-To add a custom component like a linear input component, follow the steps mentioned in the topic [Add components to fields and entities](add-custom-controls-to-a-field-or-entity.md).
+To add a code component like a linear input component, follow the steps mentioned in the topic [Add components to fields and entities](add-custom-controls-to-a-field-or-entity.md).
 
 ## Adding code components to a canvas app
 

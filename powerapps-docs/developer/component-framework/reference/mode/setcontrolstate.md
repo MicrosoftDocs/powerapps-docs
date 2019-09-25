@@ -30,7 +30,7 @@ Model-driven apps and canvas apps (experimental preview)
 
 ## Syntax
 
-`setControlState(state)`
+`context.mode.setControlState(state)`
 
 ## Parameters
 

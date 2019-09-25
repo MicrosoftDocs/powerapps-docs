@@ -14,11 +14,11 @@ author: Nkrb
 
 [!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-code components are a type of solution components, which means they can be included in a solution file and installed in different environments. More information: [Package and distribute extensions using solutions](https://docs.microsoft.com/dynamics365/customer-engagement/developer/package-distribute-extensions-use-solutions).
+Code components are a type of solution components, which means they can be included in a solution file and installed in different environments. More information: [Package and distribute extensions using solutions](https://docs.microsoft.com/dynamics365/customer-engagement/developer/package-distribute-extensions-use-solutions).
 
 You add code components by including them in a solution and then importing it into Common Data Service. Once they are in Common Data Service, system administrator and system customizers can configure on fields, sub-grids, views, and dashboard sub-grids to use them in place of default component.  You can also add these code components in canvas apps. 
 
-code components are comprised of three components:
+Code components are comprised of three components:
 
 1. [Manifest](#manifest)
 2. [Component implementation library](#component-implementation-library)
@@ -63,7 +63,7 @@ controlObj.init(context,notifyOutputChanged,state,container);
 |Parameter|Description|
 |---|---|
 |context| Contains all the information about how the component is configured and all the parameters that can be used within the component along with the [framework APIs](reference/index.md). For example, the `context.parameters.["property name from manifest"]` can be used to access the input property.|
-|notifyOutputChanged |Alerts the framework whenever the custom component has new outputs ready to be retrieved asynchronously.|
+|notifyOutputChanged |Alerts the framework whenever the code component has new outputs ready to be retrieved asynchronously.|
 |state|Contains component data from the previous page load in the current session if component explicitly stored it earlier using `setControlState API`.|
 |container|An HTML div element to which you can append the HTML elements for the UI that defines your component. To display the value in the UI, you must get the data from `context.parameters.controlValue object`.|
 
@@ -77,13 +77,13 @@ If the platform changes the data, it calls out the [updateView](reference/contro
 
 ### Page close
 
-Whenever a user goes away from the page, custom component loses the scope and all the memory allocated in that page for the objects in the component will be cleared. However, some methods based on the browser implementation mechanism might stay and consume memory. Typically, these are event handlers. If the user wants to store the information, they should implement the `setControlState` method so that the information is given next time within the same session.
+Whenever a user goes away from the page, code component loses the scope and all the memory allocated in that page for the objects in the component will be cleared. However, some methods based on the browser implementation mechanism might stay and consume memory. Typically, these are event handlers. If the user wants to store the information, they should implement the `setControlState` method so that the information is given next time within the same session.
 
 Developers should implement the [destroy](reference/control/destroy.md) method which is called when the page closes, and use it to remove any cleanup code such as removing any event handlers.
 
 ## Resources
 
-Each custom component should have a resource file to construct its visualization. You can define a resource file in the manifest. The resource node in the manifest file refers to the resources that the component requires to implement its visualization. More information: [Resources](manifest-schema-reference/resources.md)
+Each code component should have a resource file to construct its visualization. You can define a resource file in the manifest. The resource node in the manifest file refers to the resources that the component requires to implement its visualization. More information: [Resources](manifest-schema-reference/resources.md)
 
 ### Related topics
 

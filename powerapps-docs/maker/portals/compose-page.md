@@ -6,7 +6,7 @@ manager: shujoshi
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 09/02/2019
+ms.date: 09/16/2019
 ms.author: shjais
 ms.reviewer:
 ---
@@ -28,6 +28,9 @@ After adding the required webpages and managing their hierarchy in the sitemap, 
     - Form
     - List
     - Breadcrumb
+
+> [!NOTE]
+> If you customize your portal using the portal designer, the website users would notice a performance impact. We recommended you to do the changes during non-peak hours on a live portal. 
 
 ## Use the WYSIWYG editor
 

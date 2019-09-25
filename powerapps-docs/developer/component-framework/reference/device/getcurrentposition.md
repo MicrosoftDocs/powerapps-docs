@@ -23,7 +23,7 @@ Model-driven apps
 
 ## Syntax
 
-`getCurrentPosition()`
+`context.device.getCurrentPosition()`
 
 ## Return Value
 
@@ -32,9 +32,6 @@ Type: `Promise<Position>`
 ## Remarks
 
 See [Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise) and [Position](https://developer.mozilla.org/en-US/docs/Web/API/Position)
-
-### Related topics
-
 
 ### Related topics
 
