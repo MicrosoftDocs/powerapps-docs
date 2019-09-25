@@ -5,7 +5,7 @@ keywords: PowerApps component framework, code component, component Framework
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 09/03/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -55,11 +55,38 @@ Update the ControlManifest.Input.xml files as follows:
 
 If you have created a component using the older version of the tooling and would like to take advantage of the latest capabilities, make sure to update your project files as shown below:
 
-Update the version tag in your pcfproj as follows:  
-`<PackageReference Include="Microsoft.PowerApps.MSBuild.Pcf" Version="0.*"/>`
+1. Update your existing projects to use the latest modules
+ 
+   - Update the version tag in your `pcfproj` located within your PowerApps component framework project folder as below:
 
-Update the version tag in your cdsproj as follows:  
-`<PackageReference Include="Microsoft.PowerApps.MSBuild.Solution" Version="0.*"/>`
+      ```XML
+      <PackageReference Include="Microsoft.PowerApps.MSBuild.Pcf" Version="1.*"/>
+      ```
+   - Update the version tag in your `cdsproj` located within your solution project folder as below:
+
+      ```XML
+      <PackageReference Include="Microsoft.PowerApps.MSBuild.Solution" Version="1.*"/>
+      ```
+
+    > [!NOTE] 
+    > After making the above changes, run the command `msbuild /t:restore` to update your project to the correct version.
+
+
+   - Update the version tag in your `package.json` file located within your PowerApps component framework project folder:
+
+      ```JSON
+      "devDependencies":{
+       "pcf-scripts": "^1",
+       "pcf-start": "^1"
+          }
+      ```
+   > [!NOTE]
+   > After making above changes, run the `npm update` command to update your project to the correct version.
+
+2. If you have previously created an auth profile, you need to re-create it again. This is because a new property was added to the profile to support non-public cloud. You can do this by:
+ 
+    - Running the command `pac auth clear`
+    - Running the command `pac auth create --url <your org url>`
 
 ## Updating your project with the latest node modules
 
