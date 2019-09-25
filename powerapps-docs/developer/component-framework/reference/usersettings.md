@@ -27,7 +27,7 @@ Model-driven apps
 
 Date formatting information as retrieved from the server.
 
-**Type**: [DateFormattingInfo]((dateformattinginfo.md))
+**Type**: [DateFormattingInfo](dateformattinginfo.md)
 
 ### isRTL
 

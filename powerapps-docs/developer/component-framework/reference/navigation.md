@@ -35,7 +35,7 @@ Model-driven apps
 
 ## Example
 
-To learn more about how to implement navigation methods, see [Navigation API component](sample-controls/navigation-api-control.md)
+To learn more about how to implement navigation methods, see [Navigation API component](../sample-controls/navigation-api-control.md)
 
 ### Related topics
 

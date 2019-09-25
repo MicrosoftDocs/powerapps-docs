@@ -39,7 +39,7 @@ Model-driven apps and canvas apps (experimental preview)
 
 ## Example
 
-To learn more about how to implement formatting methods, see [Formatting API component](sample-controls/formatting-api-control.md)
+To learn more about how to implement formatting methods, see [Formatting API component](../sample-controls/formatting-api-control.md)
 
 ### Related topics
 

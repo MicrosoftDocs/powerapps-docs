@@ -34,19 +34,15 @@ To use Microsoft PowerApps CLI, do the following:
    - Option 2: Install [.NET Core 2.2 SDK](https://dotnet.microsoft.com/download/dotnet-core/2.2) and then install [Visual Studio Code](https://code.visualstudio.com/Download).
 
 1. Install [Microsoft PowerApps CLI](https://aka.ms/PowerAppsCLI).
+1. Update Microsoft PowerApps CLI to the latest version and take advantage of all the latest capabilities, run the following command in the Developer Command Prompt for VS 2017.
 
+    ```CLI
+    pac install latest
+    ```
 
 > [!NOTE]
 > - To deploy your code component using PowerApps CLI, you must have a Common Data Service environment with system administrator or system customizer privileges.
 > - Currently, PowerApps CLI is supported only on Windows 10.
-
-## Update Microsoft PowerApps CLI to the latest version
-
-To update your Microsoft PowerApps CLI to the latest version and take advantage of all the latest capabilities, run the following command in the Developer Command Prompt for VS 2017:
-
-```CLI
-pac install latest
-```
 
 ## Microsoft PowerApps CLI telemetry
 
@@ -61,11 +57,11 @@ To uninstall the PowerApps CLI tooling, run the MSI from [here](https://aka.ms/P
 
 If you are Private Preview Participant and have an older version of CLI, follow these steps:
 
-1. To find out where PowerApps CLI is installed, open a command prompt and type `where pac`
+1. To find out where PowerApps CLI is installed, open a command prompt and type `where pac`.
 1. Delete the PowerAppsCLI folder.
-1. Open Environment Variables tool by running the command `rundll32 sysdm.cpl,EditEnvironmentVariables` in the command prompt
+1. Open Environment Variables tool by running the command `rundll32 sysdm.cpl,EditEnvironmentVariables` in the command prompt.
 1. Double-click on `Path` under `User variable for...` section
-1. Select the row containing PowerAppsCLI path and click the Delete button on the right-hand side
+1. Select the row containing PowerAppsCLI path and click the Delete button on the right-hand side.
 1. Click **OK** twice.
 
 ### See also

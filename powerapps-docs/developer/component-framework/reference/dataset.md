@@ -111,7 +111,7 @@ The sorting status for the current query.
 
 ## Example
 
-To learn more about how to implement the dataset methods, see [DataSet Grid component](sample-controls/data-set-grid-control.md)
+To learn more about how to implement the dataset methods, see [DataSet Grid component](../sample-controls/data-set-grid-control.md)
 
 ### Related topics
 

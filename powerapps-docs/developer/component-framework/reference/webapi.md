@@ -33,7 +33,7 @@ Model-driven apps
 
 ## Example
 
-To learn more about how to implement the web API methods, see [Web API component](sample-controls/webapi-control.md)
+To learn more about how to implement the web API methods, see [Web API component](../sample-controls/webapi-control.md)
 
 ### Related topics
 

@@ -42,11 +42,11 @@ Manifest is an XML file that contains the metadata of the code component. It als
 1. The [control](manifest-schema-reference/control.md) node defines the namespace, version and display name of the code component. Now, define each property of the [control](manifest-schema-reference/control.md) node as shown below:
 
    - **namespace**: The namespace of the code component. 
-   - **Constructor**: 
-   - **Version**: The version of the component. Whenever you update the component, you need to update the version in-order to see the changes in the run time.
+   - **Constructor**: The constructor of the code component.
+   - **Version**: The version of the component. Whenever you update the component, you need to update the version in-order to see the changes in the runtime.
    - **display-name-key**: The name of the code component that is displayed on the UI.
    - **description-name-key**: The description of the code component that is displayed on the UI.
-   - **control-type**" The code component type. Only *standard* type of code components are supported.
+   - **control-type**: The code component type. Only *standard* type of code components are supported.
 
      ```XML
       <?xml version="1.0" encoding="utf-8" ?>
@@ -68,38 +68,38 @@ Manifest is an XML file that contains the metadata of the code component. It als
       ```
 3. The [resources](manifest-schema-reference/resources.md) node defines the visualization of the code component. It contains all the resources that makes up the code component. The [code](manifest-schema-reference/code.md) is specified as child element under the resources element. Define the [resources](manifest-schema-reference/resources.md) as shown below:
 
- - **code**: Refers to the path where all the resource files are located.
+   - **code**: Refers to the path where all the resource files are located.
  
-   ```XML
-   <resources>
-	  <code path="index.ts" order="1" />
-	  <css path="css/TS_LinearInputComponent.css" order="1" />
-	</resources>
-   ```
-   The overall manifest file should look something like this: 
+      ```XML
+      <resources>
+	    <code path="index.ts" order="1" />
+	    <css path="css/TS_LinearInputComponent.css" order="1" />
+	    </resources>
+        ```
+      The overall manifest file should look something like this: 
 
-    ```XML
-    <?xml version="1.0" encoding="utf-8" ?>
-    <manifest>
-    <control namespace="SampleNamespace" constructor="TSLinearInputComponent" version="1.0.0" display-name-key="Linear Input Component" description-key="Allows you to enter the numeric values using the visual slider." control-type="standard">
-	  <type-group name="numbers">
-		<type>Whole.None</type>
-		<type>Currency</type>
-		<type>FP</type>
-		<type>Decimal</type>
-	   </type-group>
-	   <property name="sliderValue" display-name-key="sliderValue_Display_Key" description-key="sliderValue_Desc_Key" of-type-group="numbers" usage="bound" required="true" />
+     ```XML
+      <?xml version="1.0" encoding="utf-8" ?>
+      <manifest>
+      <control namespace="SampleNamespace" constructor="TSLinearInputComponent" version="1.0.0" display-name-key="Linear Input Component" description-key="Allows you to enter the numeric values using the visual slider." control-type="standard">
+	    <type-group name="numbers">
+		  <type>Whole.None</type>
+		  <type>Currency</type>
+		  <type>FP</type>
+		  <type>Decimal</type>
+	     </type-group>
+	    <property name="sliderValue" display-name-key="sliderValue_Display_Key" description-key="sliderValue_Desc_Key" of-type-group="numbers" usage="bound" required="true" />
 	   <resources>
-		<code path="index.ts" order="1" />
-		<css path="css/TS_LinearInputComponent.css" order="1" />
+		 <code path="index.ts" order="1" />
+		 <css path="css/TS_LinearInputComponent.css" order="1" />
 	   </resources>
-   </control>
-    </manifest>
-   ```
+      </control>
+     </manifest>
+     ```
 
 4. Save the changes to the `ControlManifest.Input.xml` file.
 5. Now, create a new folder inside the `TSLinearInputComponent` folder and name it as **css**.
-6. Create a CSS file to [add styling to the code component](#adding-style-to-the-code-component)
+6. Create a CSS file to [add styling to the code component](#adding-style-to-the-code-component).
 7. Build the component project using the command `npm run build`.
 8. The build generates an updated Typescript type declaration file under `TSLinearInputComponent/generated folder`.
 
@@ -191,7 +191,7 @@ export class TSLinearInputComponent implements ComponentFramework.StandardContro
 }
 ```
 
-3. Rebuild the project using the command `npm run build` 
+3. Rebuild the project using the command `npm run build`. 
  
 4. The component is compiled into the `out/controls/TSLinearInputComponent` folder. The build artifacts include:
 
@@ -336,7 +336,7 @@ Follow the steps below to create and import a [solution](https://docs.microsoft.
     > - Click on **Individual Components**
     > - Under **Code Tools**, check **NuGet targets & Build Tasks**
 
-6. The generated solution zip file is located in `Solution\\bin\debug\`.
+6. The generated solution zip file is located in `Solution\bin\debug` folder.
 7. You should manually [import the solution into Common Data Service](https://docs.microsoft.com/dynamics365/customer-engagement/customize/import-update-export-solutions) using the web portal once the zip file is ready or see [Authenticating to your organization](import-custom-controls.md#authenticating-to-your-organization) and [Deployment](import-custom-controls.md#deploying-code-components) sections to import using PowerApps CLI commands.
 
 ## Adding code components in model-driven apps
