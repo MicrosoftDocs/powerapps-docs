@@ -18,7 +18,7 @@ ms.assetid: 5d100dc3-bd82-4b45-964c-d90eaebc0735
 > [!IMPORTANT]
 > This feature is still experimental and disabled by default. For more information, see [Experimental and preview features](../../maker/canvas-apps/working-with-experimental.md).
 
-PowerApps component framework enables app makers to create code components to use in an app or across the apps. more information: [PowerApps component framework overview](overview.md) 
+PowerApps component framework enables app makers to create code components to use in an app or across the apps. More information: [PowerApps component framework overview](overview.md) 
 
 In this experimental preview, PowerApps component framework enables app makers to create code components, debug, import and add them to canvas apps using the PowerApps CLI tooling. Only certain APIs are supported in this experimental preview. It is recommended to check each individual API whether it supports canvas apps or not. 
 
@@ -58,7 +58,7 @@ To add code components to an app, you need to be enable the PowerApps component 
 
 ## Implementing code components
 
-After you enable the PowerApps component framework feature in your environment, you can start implementing the logic for code components. The [implement sample component](implementing-controls-using-typescript.md) topic demonstrates the step by step process to create code components right from implementing the custom logic, manifest file, debug process, and creating a solution zip file.
+After you enable the PowerApps component framework feature in your environment, you can start implementing the logic for code components. The [implement sample component](implementing-controls-using-typescript.md) topic demonstrates the step by step process to create code components right from implementing the custom logic, manifest file, debug process, creating solution zip file, and importing the solution into Common Data Service.
 
 > [!NOTE]
 > Implementing code components is same for both model-driven apps and canvas apps (experimental preview). The only difference is adding the code components. 
@@ -98,8 +98,8 @@ When you update the code components, we will specify the *version* attribute in 
 
 ## Known limitations
 
-1. Only the field type of components are supported in the experimental preview and not the data set type components. 
-2. Common Data Service dependent APIs including WebAPI along with few other APIs are not available for this experimental preview. For individual API availability for this experimental preview release, see [PowerApps component framework API reference](reference/index.md)
+1. Only the *field* type of components are supported in the experimental preview and not the data set type components. 
+2. Common Data Service dependent APIs including WebAPI along with few other APIs are not available for this experimental preview. For individual API availability for this experimental preview release, see [PowerApps component framework API reference](reference/index.md).
 
 ## See also
 

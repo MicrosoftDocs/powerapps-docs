@@ -21,12 +21,6 @@ Use **Microsoft PowerApps CLI** (command-line interface) to create, debug, and d
 
 Microsoft PowerApps CLI is a simple, single-stop developer command-line interface which enables the developers to create code components. PowerApps CLI tooling is the first step towards a comprehensive ALM story where the enterprise developers and ISVs can create, build, debug, and publish their extensions and customizations quickly and efficiently.  
 
-> [!IMPORTANT]
-> - Microsoft PowerApps CLI tools are a pre-release version and may be different from the commercially released version.
-> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)] 
-> - If you give feedback about the software to Microsoft, you give to Microsoft, without charge, the right to use, share, and commercialize your feedback in any way and for any purpose. 
-> - Microsoft doesn't provide support for this preview feature. Microsoft Technical Support won’t be able to help you with issues or questions.
-
 ## Install Microsoft PowerApps CLI
 
 To use Microsoft PowerApps CLI, do the following:
