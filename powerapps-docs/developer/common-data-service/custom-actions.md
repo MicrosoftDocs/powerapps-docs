@@ -6,7 +6,7 @@ ms.date: 09/20/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.topic: "article"
-author: "brandonsimons" # GitHub ID
+author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -30,7 +30,7 @@ The business logic of an action is implemented using a workflow. When you create
   
 - Can be associated with a single entity or be global (not associated with any particular entity).  
   
-- Is executed in the core operation stage 30 of the event execution pipeline.  
+- Is executed in the main operation stage of the event execution pipeline.  
   
 - Supports the invocation of plug-ins registered in the pre-operation and post-operation stages of the event execution pipeline.  
   
