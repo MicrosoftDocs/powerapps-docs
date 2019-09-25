@@ -2,7 +2,7 @@
 title: "Debug code components | MicrosoftDocs"
 description: "How to debug a code component using Fiddler and Native debugging"
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.topic: "article"
 ms.assetid: 18e88d702-3349-4022-a7d8-a9adf52cd34f

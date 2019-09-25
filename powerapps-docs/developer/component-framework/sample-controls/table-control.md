@@ -3,7 +3,7 @@ title: " Table component| Microsoft Docs"
 description: "Implementing a table component" 
 ms.custom: ""
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.topic: "article"
 ms.author: "nabuthuk" 

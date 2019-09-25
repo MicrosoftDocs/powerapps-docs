@@ -5,7 +5,7 @@ keywords:
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -33,8 +33,8 @@ This method accept two parameters.
 
 |Name|Type|Required|Description|
 |------|-----|------|-----|
-|name|`string`|Yes|Column name to be added to the dataset|
-|entityAlias|`string`|No| Entity alias for which the column name needs to be added|
+|name|`string`|Yes|Column name to be added to the dataset.|
+|entityAlias|`string`|No| Entity alias for which the column name needs to be added.|
 
 ### columns
 
@@ -109,6 +109,9 @@ The sorting status for the current query.
 |[refresh](dataset/refresh.md)|[!INCLUDE [refresh-description](dataset/includes/refresh-description.md)]| 
 |[setSelectedRecordIds](dataset/setselectedrecordids.md)|[!INCLUDE [setselectedrecordids-description](dataset/includes/setselectedrecordids-description.md)]| 
 
+## Example
+
+To learn more about how to implement the dataset methods, see [DataSet Grid component](sample-controls/data-set-grid-control.md)
 
 ### Related topics
 
