@@ -46,7 +46,7 @@ To use Azure Data Lake Storage Gen2 for dataflows, you need the following:
 > If you don't have an Azure subscription, [create a free trial account](https://azure.microsoft.com/free/) before you begin.
 
 ## Prepare your Azure Data Lake Storage Gen2 for Power Platform Dataflows
-Before you configure you environment with an Azure Data Lake Storage Gen2 account, you must create and configure a storage account. Here are the requirements for Power Platform Dataflows:
+Before you configure your environment with an Azure Data Lake Storage Gen2 account, you must create and configure a storage account. Here are the requirements for Power Platform Dataflows:
 1.	The storage account must be created in the same Azure Active Directory tenant as your PowerApps tenant.
 2.	We recommend that the storage account is created in the same region as the PowerApps environment you plan to use it in. To determine where your PowerApps environment is, contact your environment admin.
 3.	The storage account must have the Hierarchical Name Space feature enabled.
