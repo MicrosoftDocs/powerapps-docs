@@ -39,7 +39,7 @@ This section provides links for developers to find resources. The following reso
 
 |Link |Description|
 |---------|---------|
-|[Developer Center](https://go.microsoft.com/fwlink/?LinkId=551006).|Start her for all the developer docs on PowerApps and Common Data Service.|
+|[Developer Center](https://go.microsoft.com/fwlink/?LinkId=551006).|Start here for developer docs on PowerApps and Common Data Service.|
 |[PowerApps Community/Forums](https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1)|Ask and answer questions in the PowerApps community.|
 |[NuGet Packages](https://www.nuget.org/profiles/crmsdk)|Discover NuGet packages to add SDK assemblies to your projects.|
 |[Download Tools](/powerapps/developer/common-data-service/download-tools-nuget)|Tools that you will need are available to download from NuGet. Use the PowerShell script on this page to get the latest versions.|
