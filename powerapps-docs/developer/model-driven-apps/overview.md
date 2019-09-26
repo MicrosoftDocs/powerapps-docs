@@ -24,9 +24,7 @@ search.app:
 
 PowerApps offers users, businesses, partners, independent software vendors (ISVs), and systems integrators (SIs) a powerful platform for building line-of-business apps. The new addition to PowerApps in this release are Model-driven apps built using the new Common Data Service. Common Data Service now contains the core functionality of the applications. With Model-driven apps, you can build apps that use the same extensibility capabilities as those applications.
 
-Model-driven apps are primarily a no-code or low-code component focused approach to app development. The value developers can provide is by extending the application. Before you start writing code, begin with [learning how to build Model-driven apps](/powerapps/maker/model-driven-apps/model-driven-app-components) and what options can be applied without code. 
-
-If you are already experienced with Dynamics 365 Customer Engagement apps, you will find that you will be able to apply your experience building Model-driven apps. There are some new designers available to you, but generally the concepts are the same.
+Model-driven apps are primarily a no-code or low-code component focused approach to app development. The value developers can provide is by extending the application. Before you start writing code, begin with [learning how to build Model-driven apps](/powerapps/maker/model-driven-apps/model-driven-app-components) and what options can be applied without code.
 
 > [!NOTE]
 > Model-driven apps connect to Common Data Service. For information about how developers can add value at the service level, see [Common Data Service Developer Overview](../common-data-service/overview.md).

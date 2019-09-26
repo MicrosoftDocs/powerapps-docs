@@ -149,7 +149,7 @@ search.app:
  Use the website preview control to map a URL field and show a preview of the website.  
   
 > [!IMPORTANT]
->  By enabling this control, you consent to allow your users to share certain identifiable device information with an external system. Data imported from external systems into a PowerApps app or Dynamics 365 customer engagement are subject to our privacy statement at [Microsoft Privacy and Cookies](http://go.microsoft.com/fwlink/p/?LinkId=521839).  
+>  By enabling this control, you consent to allow your users to share certain identifiable device information with an external system. Data imported from external systems into a PowerApps app or Dynamics 365 apps such as Dynamics 365 Sales or Dynamics 365 Customer Service are subject to our privacy statement at [Microsoft Privacy and Cookies](http://go.microsoft.com/fwlink/p/?LinkId=521839).  
 >   
 >  [Privacy notices](use-the-form-editor-legacy.md#BKMK_PrivacyNotices)  
   

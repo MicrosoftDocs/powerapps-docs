@@ -19,7 +19,7 @@ search.app:
 
 With Common Data Service, you can send data about events that occur on the server to a web application using webhooks. Webhooks is a lightweight HTTP pattern for connecting Web APIs and services with a publish/subscribe model. Webhook senders notify receivers about events by making requests to receiver endpoints with some information about the events.
 
-Webhooks enable developers and ISV’s to integrate Customer Engagement data with their own custom code hosted on external services. By using the webhook model, you can secure your endpoint by using authentication header or query string parameter keys. This is simpler than the SAS authentication model that you may currently use for Azure Service Bus integration.
+Webhooks enable developers and ISV’s to integrate Common Data Service data with their own custom code hosted on external services. By using the webhook model, you can secure your endpoint by using authentication header or query string parameter keys. This is simpler than the SAS authentication model that you may currently use for Azure Service Bus integration.
 
 When deciding between the webhook model and the Azure Service Bus integration, here are some items to keep in mind:
 

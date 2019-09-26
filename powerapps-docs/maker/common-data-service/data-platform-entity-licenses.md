@@ -66,7 +66,7 @@ Barb and Isaac need the following licenses:
 App users need the following licenses:
 * App 1 users only need a PowerApps Plan 1 or Plan 2 license, since the app doesn't contain any entities with complex business logic or restricted entities.
 
-* App 2 users need a Dynamics 365 for Customer Service, Enterprise edition license (or a Dynamics 365 or Dynamics 365 Customer Engagement plan), since the app includes a restricted entity.
+* App 2 users need a Dynamics 365 Customer Service, Enterprise edition license (or a Dynamics 365 or Dynamics 365 Customer Engagement plan), since the app includes a restricted entity.
 
 * App 3 users need a PowerApps Plan 2 license, since it's a model-driven app.
 

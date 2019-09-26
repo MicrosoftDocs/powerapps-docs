@@ -44,7 +44,7 @@ The hand-on lab provides a tutorial with step-by-step instructions on how to bui
 
 **Do the PowerApps build tools only work for PowerApps?**  
 
-*The PowerApps Build Tools work for both PowerApps and Dynamics for Customer Engagement (Dynamics 365 CE Apps are model driven PowerApps). Separate build tasks are available for Microsoft Dynamics for Finance and Operations.*
+*The PowerApps Build Tools work for both PowerApps and model-driven apps in Dynamics 365 such as Dynamics 365 Sales and Dynamics 365 Customer Service. Separate build tasks are available for Microsoft Dynamics for Finance and Operations.*
 
 **Can I include Flow and Canvas Apps?**
 

@@ -6,10 +6,6 @@ ms.date: 05/19/2019
 ms.service: powerapps
 ms.custom: 
 ms.topic: article
-applies_to: 
-  - Dynamics 365 for Customer Engagement (online)
-  - Dynamics 365 for Customer Engagement Version 9.x
-  - powerapps
 ms.assetid: 
 author: Mattp123
 ms.author: matp

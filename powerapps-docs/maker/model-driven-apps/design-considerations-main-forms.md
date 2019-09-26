@@ -27,7 +27,7 @@ search.app:
 
 Main forms are the primary user interface where people view and interact with their data. Main forms provide the widest range of options and are available for model-driven apps, the exception being Dynamics 365 for phones.  
   
- One of the main design objectives for main forms is that you design them once and deploy them everywhere. The same main form you design for a model-driven app or the Dynamics 365 customer engagement web application, is also used in Dynamics 365 for Outlook and Dynamics 365 for tablets. The advantage to this approach is that you don’t have to integrate changes into multiple forms. However there are several important factors to consider in designing these forms.  
+ One of the main design objectives for main forms is that you design them once and deploy them everywhere. The same main form you design for a model-driven app is also used in Dynamics 365 for Outlook and Dynamics 365 for tablets. The advantage to this approach is that you don’t have to integrate changes into multiple forms. However there are several important factors to consider in designing these forms.  
   
 <a name="BKMK_CustomFormsForGroups"></a>   
 
