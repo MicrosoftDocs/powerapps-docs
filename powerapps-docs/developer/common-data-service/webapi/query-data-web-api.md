@@ -467,17 +467,18 @@ By using `$apply` you can aggregate and group your data dynamically.  Possible u
 
 |Use Case|Example|
 |--------------|-------------| 
-|List of unique statuses in the query|`$apply=groupby((statuscode))`|
-|Aggregate sum of the estimated value|`$apply=aggregate(estimatedvalue with sum as total)`|
-|Average size of the deal based on estimated value and status|`$apply=groupby((statuscode),aggregate(estimatedvalue with average as averagevalue)`|
-|Sum of estimated value based on status|`$apply=groupby((statuscode),aggregate(estimatedvalue with sum as total))`|
-|Total opportunity revenue by Account name|`$apply=groupby((parentaccountid/name),aggregate(estimatedvalue with sum as total))`|
-|Last created record date and time|`$apply=aggregate(createdon with max as lastCreate)`|
-|First created record date and time|`$apply=aggregate(createdon with min as firstCreate)`|
+|List of unique statuses in the query|`accounts?$apply=groupby((statuscode))`|
+|Aggregate sum of the estimated value|`opportunities?$apply=aggregate(estimatedvalue with sum as total)`|
+|Average size of the deal based on estimated value and status|`opportunities?$apply=groupby((statuscode),aggregate(estimatedvalue with average as averagevalue)`|
+|Sum of estimated value based on status|`opportunities?$apply=groupby((statuscode),aggregate(estimatedvalue with sum as total))`|
+|Total opportunity revenue by Account name|`opportunities?$apply=groupby((parentaccountid/name),aggregate(estimatedvalue with sum as total))`|
+|Primary contact names for accounts in 'WA'|`accounts?$apply=filter(address1_stateorprovince eq 'WA')/groupby((primarycontactid/fullname))`|
+|Last created record date and time|`accounts?$apply=aggregate(createdon with max as lastCreate)`|
+|First created record date and time|`accounts?$apply=aggregate(createdon with min as firstCreate)`|
 
 The aggregate functions are limited to a collection of 50,000 records.  Further information around using aggregate functionality with Common Data Service can be found here: [Use FetchXML to construct a query](../use-fetchxml-construct-query.md).
 
-Additional details on OData data aggregation can be found here: [OData Extension for Data Aggregation Version 4.0](http://docs.oasis-open.org/odata/odata-data-aggregation-ext/v4.0/cs01/odata-data-aggregation-ext-v4.0-cs01.html).  Note that Dynamics 365 for Customer Engagement apps only supports a sub-set of these aggregate methods.
+Additional details on OData data aggregation can be found here: [OData Extension for Data Aggregation Version 4.0](http://docs.oasis-open.org/odata/odata-data-aggregation-ext/v4.0/cs01/odata-data-aggregation-ext-v4.0-cs01.html).  Note that Common Data Service supports only a sub-set of these aggregate methods.
 
 
 <a name="bkmk_useParameterAliases"></a>

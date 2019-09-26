@@ -1,1 +1,0 @@
-Information in this topic is also applicable to the Dynamics 365 for Customer Engagement apps (online) users because the Customer Engagement apps are built on the Common Data Service platform. If you are Dynamics 365 for Customer Engagement apps (on-premises) user, see the documentation applicable for the on-premises functionality in the Customer Engagement documentation at 

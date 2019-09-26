@@ -22,7 +22,7 @@ The email activity lets you track and manage email communications with customers
 <a name="Actions"></a>   
 
 ## Actions on an Email Activity  
- Using Dynamics 365 Customer Engagement Web Services, you can perform the following actions on an email activity:  
+ Using Common Data Service Web Services, you can perform the following actions on an email activity:  
   
 - Create, retrieve, update, and delete the email activity.  
   

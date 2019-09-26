@@ -55,9 +55,9 @@ If you create any new solution components in the process of editing the form, fo
   
 4.  Select **Form Editor**.  
 
-## Access the form editor from within Dynamics 365 customer engagement
+## Access the form editor from within app
   
- You can access the form editor in Dynamics 365 customer engagement through the command bar or the ribbon, depending on the entity. Both of these methods will open the form in the context of the default solution. 
+ You can access the form editor through the command bar or the ribbon, depending on the entity. Both of these methods will open the form in the context of the default solution. 
 
 ## Access the form editor for an unmanaged solution  
   

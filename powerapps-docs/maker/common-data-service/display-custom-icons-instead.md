@@ -102,7 +102,7 @@ search.app:
  The following sample code displays icons and tooltips based on one of three values (1: Hot, 2: Warm, 3: Cold) in the opportunityratingcode (Rating) attribute. The sample code also shows how to display localized tooltip text. For this sample to work, you must create three image web resources with 16x16 images with the following names: new_Hot, new_Warm, and new_Cold.  
 
 > [!IMPORTANT]
-> This sample requires the opportunity entity, which is available with Dynamics 365 for Customer Engagement apps.
+> This sample requires the opportunity entity, which is available with Dynamics 365 Sales app.
   
 ```javascript
 function displayIconTooltip(rowData, userLCID) {      

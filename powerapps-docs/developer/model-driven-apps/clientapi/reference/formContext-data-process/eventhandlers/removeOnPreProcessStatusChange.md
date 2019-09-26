@@ -1,9 +1,8 @@
 ---
-title: "removeOnPreProcessStatusChange (Client API reference) in Dynamics 365 for Customer Engagement| MicrosoftDocs"
+title: "removeOnPreProcessStatusChange (Client API reference) in model-driven apps in PowerApps| MicrosoftDocs"
 ms.date: 06/30/2019
 ms.service: crm-online
 ms.topic: reference
-applies_to: Dynamics 365 for Customer Engagement (online)
 ms.assetid: 
 author: MSFTMan
 ms.author: Deonhe

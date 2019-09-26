@@ -149,6 +149,6 @@ You can create more complex filter expressions by looking at examples from [Cons
 
 [Embed a Power BI dashboard in a PowerApps model-driven personal dashboard](https://docs.microsoft.com/dynamics365/customer-engagement/basics/add-edit-power-bi-visualizations-dashboard)
 
-[Use Power BI with Dynamics 365 for Customer Engagement](https://docs.microsoft.com/dynamics365/customer-engagement/admin/use-power-bi)
+[Use Power BI with Dynamics 365 apps](https://docs.microsoft.com/dynamics365/customer-engagement/admin/use-power-bi)
 
 [Import, update, and export solutions](../common-data-service/import-update-export-solutions.md)

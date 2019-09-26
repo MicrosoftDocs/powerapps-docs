@@ -25,8 +25,7 @@ You can use these custom extensions within the designer used for workflows, cust
 > Whenever possible, you should first consider applying one of the several declarative options to define business logic. More information: [Apply business logic in Common Data Service](../../../maker/common-data-service/cds-processes.md)
 > 
 > Use workflow extensions when a declarative process doesn’t meet your requirement.
-> 
-> This content is for Common Data Service workflow assemblies and applies for Dynamics 365 for Customer Engagement apps (online) as well. Options for on-premises deployments of Dynamics 365 for Customer Engagement apps are described here: [On-premises options](/dynamics365/customer-engagement/developer/custom-workflow-activities-workflow-assemblies#on-premises-options).
+
 
 ## When to create a workflow extension
 
@@ -56,7 +55,7 @@ You can use the **Perform Action** activity to execute any custom actions or the
 |AddToQueue|AddUserToRecordTeam|RemoveUserFromRecordTeam|
 |SetProcess|SetWordTemplate||
 
-If you have Dynamics 365 Customer Engagement Sales or Service solutions, you can find other command actions depending on the solution:
+If you have Dynamics 365 Sales or Service solutions, you can find other command actions depending on the solution:
 
 ||||
 |--|--|--|

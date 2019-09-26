@@ -1,9 +1,8 @@
 ---
-title: "addOnPreStageChange (Client API reference) in Dynamics 365 for Customer Engagement| MicrosoftDocs"
+title: "addOnPreStageChange (Client API reference) in model-driven apps in PowerApps| MicrosoftDocs"
 ms.date: 07/19/2019
 ms.service: crm-online
 ms.topic: reference
-applies_to: Dynamics 365 for Customer Engagement (online)
 ms.assetid: 
 author: msftman
 ms.author: deonhe
