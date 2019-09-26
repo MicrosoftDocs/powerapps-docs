@@ -24,9 +24,6 @@ The organization service is optimized for use with the .NET Framework and the SD
 
 Some extension capabilities, such as plug-ins and workflow extensions, depend on the .NET Framework and classes defined in these assemblies so the organization service is the only option when using these methods to extend Common Data Service.
 
-> [!NOTE]
-> [!INCLUDE[cc-d365ce-note-section](../includes/cc-d365ce-note-section.md)] [Use the Dynamics 365 for Customer Engagement Organization service](/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-organization-service)
-
 ## Organization service assemblies
 
 It is valuable to recognize that the organization service is what defines the platform. The organization service defines the supported operations as messages. Each message has a name. These messages correspond to the events that are emitted by the event framework. More information: [Event Framework](../event-framework.md)

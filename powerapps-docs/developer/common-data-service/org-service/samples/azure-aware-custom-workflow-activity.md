@@ -1,6 +1,6 @@
 ---
-title: "Azure aware custom workflow activity(Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "This sample obtains the data context from the current Dynamics 365 Customer Engagement operation and posts it to the Azure Service Bus." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Azure aware custom workflow activity (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "This sample obtains the data context from the current Common Data Service operation and posts it to the Azure Service Bus." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
