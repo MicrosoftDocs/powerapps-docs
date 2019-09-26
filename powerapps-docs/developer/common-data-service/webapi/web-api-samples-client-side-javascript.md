@@ -21,18 +21,10 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Web API  Data operations Samples (Client-side JavaScript)
+# Web API Data operations Samples (Client-side JavaScript)
 
 
-
-<!-- TODO: > [!NOTE]
-> ![This page is under construction. Check back soon!](../../media/under_construction.png "Coming soon") [!INCLUDE[cc-under-construction](../../includes/cc-under-construction.md)]
-
-With the availability of the new [Xrm.WebApi](../clientapi/reference/xrm-webapi.md) client API methods, we are working on updating the client-side JavaScript samples to use the new client API methods. Check back soon. -->
-
-If you are using an earlier version of Common Data Service Customer Engagement, see [Web API Samples (Client-side JavaScript)](https://msdn.microsoft.com/library/mt770370.aspx)
-
-<!--This topic provides common understanding about Web API samples using client-side JavaScript. While each sample focuses on a different aspect of Common Data Service Web API, they all follow similar process and structure described in this topic.  
+This topic provides common understanding about Web API samples using client-side JavaScript. While each sample focuses on a different aspect of Common Data Service Web API, they all follow similar process and structure described in this topic.  
 
 <a name="bkmk_listOfSamples"></a>   
 ## Web API Samples using client-side JavaScript  
@@ -52,7 +44,7 @@ If you are using an earlier version of Common Data Service Customer Engagement, 
  After you download the sample, extract the compressed file. Find the [!INCLUDE[pn_visual_studio_2015](../../includes/pn-visual-studio-2015.md)] solution for each sample within the C# folder because the project is an empty [!INCLUDE[pn_ASP.NET_short](../../includes/pn-asp-net-short.md)] web application project. A Common Data Service solution is also provided in the download that you can import and run.  
   
 > [!NOTE]
->  Neither Visual Studio or [!INCLUDE[pn_ASP.NET_short](../../includes/pn-asp-net-short.md)] is required to develop  client-side JavaScript for Common Data Service, however the MSDN Code Gallery site requires files be included in a Visual Studio as a container.  However, Visual Studio does provide a good experience for writing JavaScript.  
+>  Neither Visual Studio or [!INCLUDE[pn_ASP.NET_short](../../includes/pn-asp-net-short.md)] is required to develop client-side JavaScript for Common Data Service, however the MSDN Code Gallery site requires files be included in a Visual Studio as a container.  However, Visual Studio does provide a good experience for writing JavaScript.  
   
 <a name="bkmk_HowToImport"></a>   
 ## How to import the Common Data Service solution that contains the sample.  
