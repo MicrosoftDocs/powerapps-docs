@@ -70,7 +70,7 @@ You can download the WSDL for this service here, but usually you will use the Cr
 
 This information uniquely describes your instance. There is a GUID **ID** and a **Unique Name**.
 This information is needed when you use Azure extensions with your instance.
-More information: [Developer Documentation: Azure extensions for Dynamics 365 Customer Engagement](/dynamics365/customer-engagement/developer/azure-extensions)
+More information: [Azure integration](/powerapps/developer/common-data-service/azure-integration)
 
 ## Connect your apps to the Common Data Service Discovery Service
 

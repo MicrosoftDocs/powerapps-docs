@@ -25,9 +25,6 @@ There are a number of third-party tools that allow you to authenticate to Common
 
 Use Postman to perform ad hoc queries or to verify the behavior of operations without writing a program. This section covers information on how to configure a Postman environment that connects to your Common Data Service instance and use Postman to perform operations with the Web API.
 
-> [!NOTE]
-> [!INCLUDE[cc-d365ce-note-topic](../includes/cc-d365ce-note-topic.md)] [Use Postman with the Customer Engagement Web API](/dynamics365/customer-engagement/developer/webapi/use-postman-web-api)
-
 Postman offers many other capabilities beyond those covered in this content. More information: [First 5 things to try if you’re new to Postman](http://blog.getpostman.com/2018/04/11/first-5-things-to-try-if-youre-new-to-postman/)
 
 ## In this section
