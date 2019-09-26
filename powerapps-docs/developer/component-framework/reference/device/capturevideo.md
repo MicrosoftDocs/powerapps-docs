@@ -17,9 +17,13 @@ ms.assetid: 93021be2-b284-4da3-81a1-6d5587be6ce7
 
 [!INCLUDE[./includes/capturevideo-description.md](./includes/capturevideo-description.md)]
 
+## Available for 
+
+Model-driven apps
+
 ## Syntax
 
-`captureVideo()`
+`context.device.captureVideo()`
 
 ## Return Value
 

@@ -130,16 +130,18 @@ PowerApps canvas apps can be shared with guest users of an Azure Active Director
 > Guests may only be assigned the **User** role, and not the **Co-owner** role, for apps shared with them.
 
 ### Prerequisites
-1. In Azure Active Directory (Azure AD), enable B2B external collaboration for the tenant. More information: [Enable B2B external collaboration and manage who can invite guests](/azure/active-directory/b2b/delegate-invitations)
+- In Azure Active Directory (Azure AD), enable B2B external collaboration for the tenant. More information: [Enable B2B external collaboration and manage who can invite guests](/azure/active-directory/b2b/delegate-invitations)
     - Enable B2B external collaboration is on by default. However, the settings can be changed by a tenant admin.  For more information about Azure AD B2B, see [What is guest user access in Azure AD B2B?](/azure/active-directory/b2b/what-is-b2b)  
-2. Access to an account that can add guest users to an Azure AD tenant. Admins and users with the Guest Inviter role can add guests to a tenant.   
-3. A PowerApps license must be assigned to the guest user in the tenant the app being shared is associated with. Although not possible yet, prior to general availability of canvas app guest access, guests with a PowerApps license in their home tenant won’t need to be assigned a license in the tenant they’re a guest.
+- Access to an account that can add guest users to an Azure AD tenant. Admins and users with the Guest Inviter role can add guests to a tenant.   
+- The guest user must have a PowerApps license assigned through one of the following tenants:
+    - The tenant hosting the app being shared.
+    - The home tenant of the guest user.
 
 ### Steps to grant guest access
 1. Select **New guest user** to add guest users in Azure AD. More information: [Quickstart: Add a new guest user in Azure AD](/azure/active-directory/b2b/b2b-quickstart-add-guest-users-portal).
     > [!div class="mx-imgBorder"] 
     > ![Add guest in Azure AD](media/share-app/guest_access_doc_1.png "Add guest in Azure AD")
-2. Assign a license to the guest user. 
+2. If the guest user doesn't already have a license in their home tenant, assign a license to the guest user.
    - To assign guest users from admin.microsoft.com, see [Assign licenses to one user](/office365/admin/subscriptions-and-billing/assign-licenses-to-users).
    - To assign guest users from portal.azure.com, see [Assign or remove licenses](/azure/active-directory/fundamentals/license-users-groups).
  
@@ -193,7 +195,6 @@ As with non-guests, the underlying data source(s) accessed by the app must also 
 #### What license must be assigned to my guest so they can run an app shared with them?
 The same license that’s required for non-guests to run an app. For instance, if the app doesn’t use premium connecters then a PowerApps P1 license is enough to assign to the guest.  
 
-Prior to canvas app guest access general availability, guests with a PowerApps license in their home tenant won’t need to be assigned a license in the tenant they’re a guest.
 
 |                                 | SharePoint customized form | Standalone canvas app using non-premium connectors | Standalone canvas app using premium connectors | Model driven app |
 |---------------------------------|----------------------------|----------------------------------------------------|------------------------------------------------|------------------|
@@ -204,8 +205,6 @@ Prior to canvas app guest access general availability, guests with a PowerApps l
 
 #### In PowerApps Mobile, how does a guest see apps for their home tenant?
 Any user that has accessed an canvas app, on their mobile device, that’s published in an Azure AD tenant that isn’t their home tenant must sign-out of PowerApps and sign back in to PowerApps Mobile.  
-
-Prior to canvas app guest access general availability, an organization selector will allow the user to change the Azure AD tenant they’re signed in to without having to explicitly sign-out of the app.  
 
 #### Must a guest accept the Azure AD guest invitation prior to sharing an app with the guest?
 No. If a guest launches an app shared with them prior to accepting a guest invitation the guest will be prompted to accept the invitation as part of the sign-in experience while launching the app.  

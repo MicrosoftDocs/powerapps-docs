@@ -17,9 +17,13 @@ ms.assetid: 86290d20-7dbb-4932-adaa-31121ae7a3f6
 
 [!INCLUDE [gettimezoneoffsetminutes-description](includes/gettimezoneoffsetminutes-description.md)]
 
+## Available for 
+
+Model-driven apps
+
 ## Syntax
 
-`getTimeZoneOffsetMinutes(date)`
+`context.usersettings.getTimeZoneOffsetMinutes(date)`
 
 ## Parameters
 
@@ -29,7 +33,8 @@ ms.assetid: 86290d20-7dbb-4932-adaa-31121ae7a3f6
 
 ## Return Value
 
-Type: `number`
+Type: `Number`
+Description: Time zone offset in minutes.
 
 
 ### Related topics

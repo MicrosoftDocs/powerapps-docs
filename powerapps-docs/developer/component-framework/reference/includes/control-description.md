@@ -14,4 +14,5 @@ applies_to:
   - "Dynamics 365 Version 9.x"
 ms.assetid: a547ac7f-2b9f-4e1b-8d9d-1e9bd9003677
 ---
-Interface for the PowerApps components (Standard)
+
+Provides properties and methods to initiate, update, destroy and perform various actions to build a component.

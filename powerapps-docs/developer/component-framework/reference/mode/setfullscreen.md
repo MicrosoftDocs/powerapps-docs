@@ -20,15 +20,19 @@ ms.assetid: 1faf3e79-969e-4c1e-ac01-8e2155c609fa
 
 [!INCLUDE [setfullscreen-description](includes/setfullscreen-description.md)]
 
+## Available for 
+
+Model-driven apps
+
 ## Syntax
 
-`setFullScreen(value)`
+`context.mode.setFullScreen(value)`
 
 ## Parameters
 
 | Parameter Name|Type|Required|Description|
 | ------------- |----|--------|-----------|
-|value|`boolean`|yes|`True` if component needs to auto size to full screen. `False` if component needs to auto size to allocated width.|
+|value|`Boolean`|Yes|`True` if component needs to auto size to full screen. `False` if component needs to auto size to allocated width.|
 
 
 ### Related topics

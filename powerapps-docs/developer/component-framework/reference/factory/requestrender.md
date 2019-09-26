@@ -17,8 +17,13 @@ ms.assetid: 8a6521c7-a05d-44ff-a007-1bda53d6d73a
 
 [!INCLUDE [requestrender-description](includes/requestrender-description.md)]
 
+## Available for 
+
+Model-driven apps and canvas apps (experimental preview)
+
 ## Syntax
-`requestRender()`
+
+`context.factory.requestRender()`
 
 ### Related topics
 

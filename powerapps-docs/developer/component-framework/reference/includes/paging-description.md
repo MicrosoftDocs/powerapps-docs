@@ -15,4 +15,4 @@ applies_to:
 ms.assetid: e3d039d6-64f4-4a6c-9921-cd0aec90aee4
 ---
 
-Paging state for a dataset
+Provides properties and methods to work with paging.

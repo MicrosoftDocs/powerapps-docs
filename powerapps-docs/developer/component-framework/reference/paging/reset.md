@@ -17,6 +17,10 @@ ms.assetid: 3556c2d7-5ef7-4f5d-b694-006fb5c75130
 
 [!INCLUDE [reset-description](includes/reset-description.md)]
 
+## Available for 
+
+Model-driven apps
+
 ## Syntax
 
 `reset()`

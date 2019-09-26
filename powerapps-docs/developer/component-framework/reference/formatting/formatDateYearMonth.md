@@ -17,9 +17,13 @@ ms.assetid: b4c08ece-a164-455c-a1b7-8ce855aedad4
 
 [!INCLUDE [formatdateyearmonth-description](includes/formatdateyearmonth-description.md)]
 
+## Available for 
+
+Model-driven apps and canvas apps (experimental preview)
+
 ## Syntax
 
-`formatDateYearMonth(value)`
+`context.formatting.formatDateYearMonth(value)`
 
 ## Parameters
 

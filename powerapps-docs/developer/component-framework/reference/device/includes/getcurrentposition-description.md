@@ -16,4 +16,4 @@ ms.assetid: 8602f0cb-e299-4e80-95ab-e3a67d4b3156
 
 ---
 
-Returns the current location using the device `geolocation` capability.
+Returns the current location using the device geolocation capability.

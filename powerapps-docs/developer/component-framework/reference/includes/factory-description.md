@@ -14,4 +14,5 @@ applies_to:
   - "Dynamics 365 Version 9.x"
 ms.assetid: bfa50b3a-ef71-4a03-8f43-8489b78d8191
 ---
-The interface for the `context.factory`
+
+Provides properties and methods to work with Popup services.

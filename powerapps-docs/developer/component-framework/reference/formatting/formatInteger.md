@@ -17,9 +17,13 @@ ms.assetid: 58ce031a-cd68-4f19-a755-59a7b6030ddc
 
 [!INCLUDE [formatinteger-description](includes/formatinteger-description.md)]
 
+## Available for 
+
+Model-driven apps and canvas apps (experimental preview)
+
 ## Syntax
 
-`formatInteger(value)`
+`context.formatting.formatInteger(value)`
 
 ## Parameters
 

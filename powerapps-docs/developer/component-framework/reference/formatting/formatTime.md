@@ -18,9 +18,13 @@ ms.assetid: 148964b5-106e-4f2e-8038-9086d29dc54f
 
 [!INCLUDE [formattime-description](includes/formattime-description.md)]
 
+## Available for 
+
+Model-driven apps and canvas apps (experimental preview)
+
 ## Syntax
 
-`formatTime(value, behavior)`
+`context.formatting.formatTime(value, behavior)`
 
 ## Parameters
 

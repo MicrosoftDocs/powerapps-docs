@@ -17,17 +17,21 @@ ms.assetid: 5c04ba7c-acfe-4375-8dd8-6c537ded9352
 
 [!INCLUDE [getresource-description](includes/getresource-description.md)]
 
+## Available for 
+
+Model-driven apps
+
 ## Syntax
 
-`getResource(id, success, failure)`
+`context.resources.getResource(id, success, failure)`
 
 ## Parameters
 
 | Parameter Name|Type|Required|Description|
 | ------------- |----|--------|-----------|
-|id|`string`|yes|The resource string identifier.|
-|success|`string`|no|The success callback. Resource data is returned in base 64 encoded format.|
-|failure|`string`|no|The failure callback.|
+|id|`String`|Yes|The resource string identifier.|
+|success|`String`|no|The success callback. Resource data is returned in base 64 encoded format.|
+|failure|`String`|no|The failure callback.|
 
 
 ### Related topics
