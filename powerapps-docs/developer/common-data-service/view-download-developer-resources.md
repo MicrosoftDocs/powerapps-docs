@@ -1,6 +1,6 @@
 ---
 title: "View or download developer resources for PowerApps and Common Data Service | MicrosoftDocs"
-description: "Find developer resources and service endpoint URLs PowerApps and Common Data Service"
+description: "Find developer resources and service endpoint URLs for PowerApps and Common Data Service"
 keywords: ""
 ms.date: 06/06/2018
 ms.service: powerapps
