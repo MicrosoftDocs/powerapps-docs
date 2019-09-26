@@ -41,10 +41,10 @@ This topic provides common understanding about Web API samples using client-side
 ## How to download the source code for the sample.  
  The source code for each sample is available on [MSDN Code Gallery](https://code.msdn.microsoft.com/site/search?f%5b0%5d.type=user&f%5b0%5d.value=microsoft%20dynamics%20crm%20sdk%20documentation%20team). The link to download each sample is included in the individual page for that sample.  
   
- After you download the sample, extract the compressed file. Find the [!INCLUDE[pn_visual_studio_2015](../../includes/pn-visual-studio-2015.md)] solution for each sample within the C# folder because the project is an empty [!INCLUDE[pn_ASP.NET_short](../../includes/pn-asp-net-short.md)] web application project. A Common Data Service solution is also provided in the download that you can import and run.  
+ After you download the sample, extract the compressed file. Find the Microsoft Visual Studio 2015 solution for each sample within the C# folder because the project is an empty ASP.NET web application project. A Common Data Service solution is also provided in the download that you can import and run.  
   
 > [!NOTE]
->  Neither Visual Studio or [!INCLUDE[pn_ASP.NET_short](../../includes/pn-asp-net-short.md)] is required to develop client-side JavaScript for Common Data Service, however the MSDN Code Gallery site requires files be included in a Visual Studio as a container.  However, Visual Studio does provide a good experience for writing JavaScript.  
+>  Neither Visual Studio or ASP.NET is required to develop client-side JavaScript for Common Data Service, however the MSDN Code Gallery site requires files be included in a Visual Studio as a container.  However, Visual Studio does provide a good experience for writing JavaScript.  
   
 <a name="bkmk_HowToImport"></a>   
 ## How to import the Common Data Service solution that contains the sample.  
@@ -78,9 +78,9 @@ This topic provides common understanding about Web API samples using client-side
   
 -   The `Sdk.startSample` function is called when a user clicks the **Start Sample** button from the  HTML page. The `Sdk.startSample` function initializes global variables and kicks off the first operation in the chain.  
   
--   Program output and error messages are sent to the browser’s debugger console. To see these output, open the console window first before running the sample.  Press F12 to access the developer tools, including the console window, in the [!INCLUDE[pn_Windows_Internet_Explorer](../../includes/pn-windows-internet-explorer.md)] and [!INCLUDE[pn_microsoft_edge](../../includes/pn-microsoft-edge.md)] browsers.  
+-   Program output and error messages are sent to the browser’s debugger console. To see these output, open the console window first before running the sample.  Press F12 to access the developer tools, including the console window, in the Internet Explorer and Microsoft Edge browsers.  
   
--   These samples use the browser native [ES6-Promise](https://msdn.microsoft.com/library/dn802826\(v=vs.94\).aspx) implementation for modern browsers that support it. For [!INCLUDE[pn_ie_11](../../includes/pn-ie-11.md)], this sample uses the [ES6-Promise polyfill](https://github.com/stefanpenner/es6-promise) because [!INCLUDE[pn_ie_11](../../includes/pn-ie-11.md)] is the only browser supported by Common Data Service which does not have native support for this feature.  
+-   These samples use the browser native [ES6-Promise](https://msdn.microsoft.com/library/dn802826\(v=vs.94\).aspx) implementation for modern browsers that support it. For Internet Explorer, this sample uses the [ES6-Promise polyfill](https://github.com/stefanpenner/es6-promise) because Internet Explorer is the only browser supported by Common Data Service which does not have native support for this feature.  
   
      Promises are not required. Similar interactions can be performed using callback functions. For more information, see [Create a re-usable function using promises](get-started-web-api-client-side-javascript.md#bkmk_createPromiseFunction).  
   
