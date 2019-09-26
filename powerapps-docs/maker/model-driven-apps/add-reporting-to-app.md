@@ -1,5 +1,5 @@
 ---
-title: "Add reporting to your model-driven app" 
+title: "Add reporting features to your model-driven app" 
 ms.custom: ""
 ms.date: 08/16/2019
 ms.reviewer: ""
@@ -15,7 +15,7 @@ search.app:
   - "PowerApps"
   - D365CE
 ---
-# Add reporting to your model-driven app
+# Add reporting features to your model-driven app
 
 PowerApps apps can include reports that provide useful business information to the user. These reports are based on SQL Server Reporting Services and provide the same set of features that are available for typical SQL Server Reporting Services reports.
 
