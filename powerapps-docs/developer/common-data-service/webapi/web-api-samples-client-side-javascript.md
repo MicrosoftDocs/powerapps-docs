@@ -60,9 +60,7 @@ This topic provides common understanding about Web API samples using client-side
   
 <a name="bkmk_howToRunSample"></a>   
 ## How to run the sample to see the script in action  
- The sample program runs as a web resource within Common Data Service. The imported solution provides a configuration page that gives you an option to keep or delete sample data and a button to start the sample program.  For the `Basic Operations` sample, this interface looks like the following.  
-  
- ![Common Data Service Web API Sample Configuration page](../media/crm-web-api-js-sample-configuration.png "Common Data Service Web API Sample Configuration page")  
+ The sample program runs as a web resource within Common Data Service. The imported solution provides a configuration page that gives you an option to keep or delete sample data and a button to start the sample program.
   
  To run the sample, do the following:  
   

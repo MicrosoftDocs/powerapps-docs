@@ -31,7 +31,7 @@ This quick start topic shows you how to use an existing environment to create a 
 For similar instructions that show you how to create a new sandbox environment to isolate the testing and view only the Unified Interface experience, see [Quick start for transitioning your Dynamics 365 legacy web client application to Unified Interface](transition-web-app.md).
 
 > [!IMPORTANT]
->  For environments with Dynamics 365 Field Service or Dynamics 365 Project Service Automation apps, see [Dynamics 365 apps](transition-web-app.md#dynamics-365-for-customer-engagement-apps).
+>  For environments with Dynamics 365 Field Service or Dynamics 365 Project Service Automation apps, see [Dynamics 365 apps](transition-web-app.md#dynamics-365-apps).
 
 ## Prerequisites 
 - An existing Dynamics 365 Sales or Service legacy web client application. 
