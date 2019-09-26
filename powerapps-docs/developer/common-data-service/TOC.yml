@@ -422,7 +422,7 @@
 - name: Resources
   items:
   - name: Developer resources page
-    href: developer-resources-page.md
+    href: view-download-developer-resources.md
   - name: Developer tools
     href: developer-tools.md
     items:

@@ -51,7 +51,7 @@ You can use templates in a variety of ways to speed your work and improve consis
    > [!div class="mx-imgBorder"] 
    > ![](media/document-templates.png "Document Templates") 
 
-For information on using templates, see the following Customer Engagement documentation:
+For information on using templates, see the following documentation:
 
 - Word templates:  [Use Word templates to create standardized documents](https://docs.microsoft.com/dynamics365/customer-engagement/admin/using-word-templates-dynamics-365)
 - Excel templates: [Analyze and share your data with Excel templates](https://docs.microsoft.com/dynamics365/customer-engagement/admin/analyze-your-data-with-excel-templates)
