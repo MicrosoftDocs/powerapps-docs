@@ -8,8 +8,6 @@ ms.service: powerapps
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: 
-  - Dynamics 365 for Customer Engagement (online)
 ms.assetid: 5829C16D-417D-4A82-9093-C576ADB683D1
 caps.latest.revision: 7
 author: susikka

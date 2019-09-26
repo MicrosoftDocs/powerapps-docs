@@ -134,5 +134,5 @@ This section explains how to add a basic set of settings and instructions to per
 ### See also
 
  [Get Started with the Web API (C#)](get-started-dynamics-365-web-api-csharp.md)   
- [Use the Dynamics 365 for Customer Engagement Web API Helper Library (C#)](use-microsoft-dynamics-365-web-api-helper-library-csharp.md)   
+ [Use the Web API Helper Library (C#)](use-microsoft-dynamics-365-web-api-helper-library-csharp.md)   
  [Perform operations using the Web API](perform-operations-web-api.md)

@@ -26,7 +26,7 @@ search.app:
    
 # Use Excel and Word templates
 
-You can use templates in a variety of ways to speed your work and improve consistency. With Excel templates, you can easily create and share your customized analysis with others in your organization. You can use Word templates to create standardized documents automatically populated with Customer Engagement apps data.
+You can use templates in a variety of ways to speed your work and improve consistency. With Excel templates, you can easily create and share your customized analysis with others in your organization. You can use Word templates to create standardized documents automatically populated with Common Data Service data.
 
 ## Enable and work with Excel and Word templates
 

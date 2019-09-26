@@ -32,7 +32,7 @@ The Unified Interface framework uses responsive web design principles to provide
 To use an existing non-production environment to transition your Web Client application, see [Quick start for using an existing environment to validate your legacy web client app with the Unified Interface](transition-web-app-existing.md). 
 ## Prerequisites
 - A legacy web client application. 
-- Although not required, we recommend a non-production environment to test your application and ensure it does not impact your current deployment or development cycles. More information: [Manage sandbox instances](/dynamics365/customer-engagement/admin/manage-sandbox-instances)
+- Although not required, we recommend a non-production environment to test your application and ensure it does not impact your current deployment or development cycles. More information: [Manage sandbox instances](/dynamics365/admin/manage-sandbox-instances)
 
 ## Prepare the environment
 First, select a non-production environment and enable **Use Unified Interface only** mode, which will use the Unified Interface for all model-driven apps in the environment. This also includes any Dynamics 365 application modules originally configured for the legacy web client.

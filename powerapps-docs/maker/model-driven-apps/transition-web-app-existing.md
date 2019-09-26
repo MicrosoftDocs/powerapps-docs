@@ -28,13 +28,13 @@ This quick start topic shows you how to use an existing environment to create a 
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE3JzyI]
 
-For similar instructions that show you how to create a new sandbox environment to isolate the testing and view only the Unified Interface experience, see [Quick start for transitioning your Dynamics 365 for Customer Engagement apps legacy web client application to Unified Interface](transition-web-app.md).
+For similar instructions that show you how to create a new sandbox environment to isolate the testing and view only the Unified Interface experience, see [Quick start for transitioning your Dynamics 365 legacy web client application to Unified Interface](transition-web-app.md).
 
 > [!IMPORTANT]
->  For environments with Dynamics 365 for Field Service or Dynamics 365 for Project Service Automation apps, see [Dynamics 365 for Customer Engagement apps](transition-web-app.md#dynamics-365-for-customer-engagement-apps).
+>  For environments with Dynamics 365 Field Service or Dynamics 365 Project Service Automation apps, see [Dynamics 365 apps](transition-web-app.md#dynamics-365-for-customer-engagement-apps).
 
 ## Prerequisites 
-- An existing Dynamics 365 for Sales or Service legacy web client application. 
+- An existing Dynamics 365 Sales or Service legacy web client application. 
 - Although not required, we recommend using a non-production environment to test your application. More information: [Manage sandbox instances](/dynamics365/customer-engagement/admin/manage-sandbox-instances) 
 
 ## Overview 
@@ -56,7 +56,7 @@ The process for validating your legacy web client app in an existing environment
 2.	Create a new model-driven app 
 3.	Configure app properties  
 
-If you’ve recently switched the **Use Unified Interface only** mode to **On** in your development environment, such as instructed by following the [Quick start for transitioning your Dynamics 365 for Customer Engagement apps legacy web client application to Unified Interface](transition-web-app.md) topic, you must turn the setting back to **Off** so you can run the existing legacy web client apps.
+If you’ve recently switched the **Use Unified Interface only** mode to **On** in your development environment, such as instructed by following the [Quick start for transitioning your Dynamics 365 legacy web client application to Unified Interface](transition-web-app.md) topic, you must turn the setting back to **Off** so you can run the existing legacy web client apps.
 
 ### Create a new solution that's based on the default solution
 1. Sign in to the [PowerApps maker portal](https://make.powerapps.com).   
