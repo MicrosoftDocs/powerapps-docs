@@ -50,8 +50,6 @@ This section provides links for developers to find resources. The following reso
 |[Sample Code](https://go.microsoft.com/fwlink/?LinkId=553007)|A list of samples available.|
 |[Developer Overview](https://go.microsoft.com/fwlink/?LinkId=550995)|Link to a topic providing an overview for developers.|
 
-<!-- TODO update 512122 to go to https://docs.microsoft.com/dynamics365/customer-engagement/developer/download-tools-nuget -->
-
 
 ## Connect your apps to this instance of Common Data Service
 
@@ -59,14 +57,14 @@ This section provides information you need to connect to your Common Data Servic
 
 ### Instance Web API
 
-This is the URL for the Web API for your instance. The Web API is an OData v4 RESTful API. You can also download the service document that describes the metadata and operations available in your instance. More information: [Developer Documentation: Use the Dynamics 365 Customer Engagement Web API](/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api)
+This is the URL for the Web API for your instance. The Web API is an OData v4 RESTful API. You can also download the service document that describes the metadata and operations available in your instance. More information: [Developer Documentation: Use the Common Data Service Web API](/powerapps/developer/common-data-service/webapi/overview)
 
 ### Organization Service
 
 This is the URL for the SOAP endpoint for the Organization Service for your instance.
 You can download the WSDL for this service here, but usually you will use the CrmSvcUtil.exe code generation tool to build entity classes for .NET projects. More information: 
-- [Developer Documentation: Create early bound entity classes with the code generation tool (CrmSvcUtil.exe)](/dynamics365/customer-engagement/developer/org-service/create-early-bound-entity-classes-code-generation-tool)
-- [Developer Documentation: Use the Organization Service to read and write data or metadata](/dynamics365/customer-engagement/developer/org-service/use-organization-service-read-write-data-metadata)
+- [Developer Documentation: Create early bound entity classes with the code generation tool (CrmSvcUtil.exe)](/powerapps/developer/common-data-service/org-service/generate-early-bound-classes)
+- [Developer Documentation: Use the Organization Service](/powerapps/developer/common-data-service/org-service/overview)
 
 ### Instance Reference Information
 
@@ -81,21 +79,13 @@ Because people may have access to multiple Common Data Service environments, the
 ### Discovery Web API
 
 This is the endpoint address for the RESTful OData v4 version of the discovery service to use for your instance. You can also download the service document here.
-More information: [Developer Documentation: Discover the URL for your organization using the Web API](/dynamics365/customer-engagement/developer/webapi/discover-url-organization-web-api)
+More information: [Developer Documentation: Discover the URL for your organization using the Web API](/powerapps/developer/common-data-service/webapi/discover-url-organization-web-api)
 
 
 ### Discovery Service
 
 This is the endpoint address for the SOAP version of the discovery service to use for your instance. You can also download the service document here.
-More information: [Developer Documentation: Discover the URL for your organization using the Discovery Service](/dynamics365/customer-engagement/developer/org-service/discover-url-organization-organization-service)
+More information: [Developer Documentation: Discover the URL for your organization using the Organization Service](/powerapps/developer/common-data-service/org-service/discovery-service)
   
-### More information
-
-[Developer Documentation: Developer resources page](/dynamics365/customer-engagement/developer/developer-resources-page)<br />
-[Developer Documentation: Use the Dynamics 365 Customer Engagement Web API](/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api)<br />
-[Developer Documentation: Use the Organization Service to read and write data or metadata](/dynamics365/customer-engagement/developer/org-service/use-organization-service-read-write-data-metadata)<br />
-[Developer Documentation: Azure extensions for Dynamics 365 Customer Engagement](/dynamics365/customer-engagement/developer/azure-extensions)<br />
-[Developer Documentation: Discover the URL for your organization using the Web API](/dynamics365/customer-engagement/developer/webapi/discover-url-organization-web-api)<br />
-[Developer Documentation: Discover the URL for your organization using the Discovery Service](/dynamics365/customer-engagement/developer/org-service/discover-url-organization-organization-service)
   
 
