@@ -242,7 +242,7 @@ See [Grids and subgrids](grids.md) for information methods supported for this co
 
 ## timelinewall control type
 
-The timeline control is a new control type introduced in Dynamics 365 for Customer Engagement apps version 9.0 that presents the Posts, Activities, and Notes in a unified view. These are the methods available for this control type.
+The timeline control presents the Posts, Activities, and Notes in a unified view. These are the methods available for this control type.
 
 <table>
 <tr>

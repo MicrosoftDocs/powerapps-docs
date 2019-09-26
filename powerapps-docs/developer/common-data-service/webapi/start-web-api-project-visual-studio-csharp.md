@@ -1,5 +1,5 @@
 ---
-title: "Start a Dynamics 365 for Customer Engagement Web API project in Visual Studio (C#) (Common Data Service)| MicrosoftDocs"
+title: "Start a Common Data Service Web API project in Visual Studio (C#) (Common Data Service)| MicrosoftDocs"
 description: "Create a new project in Visual Studio to build a console application that uses Common Data Service Web API"
 ms.custom: 
 ms.date: 04/22/2019
@@ -8,8 +8,6 @@ ms.service: powerapps
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: 
-  - Dynamics 365 for Customer Engagement (online)
 ms.assetid: F96B384D-EF70-490D-BE3D-2E3883278B99
 caps.latest.revision: 14
 author: JimDaly
@@ -75,7 +73,7 @@ install-package System.Net.Http
   
 1.  In the **Solution Explorer**, open **Program.cs** for editing.  
   
-2.  At the top of the file, add the following `using` statements, which reference namespaces commonly used in Dynamics 365 for Customer Engagement Web API-based solutions.  
+2.  At the top of the file, add the following `using` statements, which reference namespaces commonly used in Common Data Service Web API-based solutions.  
   
     ```csharp
     using Newtonsoft.Json;  
@@ -136,5 +134,5 @@ This section explains how to add a basic set of settings and instructions to per
 ### See also
 
  [Get Started with the Web API (C#)](get-started-dynamics-365-web-api-csharp.md)   
- [Use the Dynamics 365 for Customer Engagement Web API Helper Library (C#)](use-microsoft-dynamics-365-web-api-helper-library-csharp.md)   
+ [Use the Web API Helper Library (C#)](use-microsoft-dynamics-365-web-api-helper-library-csharp.md)   
  [Perform operations using the Web API](perform-operations-web-api.md)

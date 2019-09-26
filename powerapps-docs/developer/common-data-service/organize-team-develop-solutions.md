@@ -49,4 +49,4 @@ When multiple developers have to work on the same solution, you may want to crea
 ### See also  
  [Planning for Solution Development](/dynamics365/customer-engagement/developer/plan-solution-development)   
  [Modularize your Solutions](organize-solutions.md)   
- [White Paper: Deploying Dynamics 365 Customer Engagement and CRM Online Solutions from Development through Test and Production Environments](http://www.microsoft.com/download/en/details.aspx?displaylang=en&id=27824)
+ 

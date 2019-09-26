@@ -72,5 +72,4 @@ Service level agreements (SLAs) in Common Data Service help you define the level
 -   You can have a maximum of 5 SLA KPIs per entity for active SLAs. You will encounter an error on activating an SLA if this limit is exceeded. This limit is not applicable for the `Incident` entity.  
   
 ### See also  
- [Service entities in Customer Engagement](/dynamics365/customer-engagement/developer/service-entities)   
  [Enhanced service level agreements (SLAs)](/dynamics365/customer-engagement/admin/enhanced-service-level-agreements)

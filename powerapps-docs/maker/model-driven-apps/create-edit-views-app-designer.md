@@ -177,9 +177,9 @@ When you edit a public or system  view, you must save and publish your changes b
 
 
 ## Community tools
-**View Layout Replicator** and **View Designer** are tools that XrmToolbox community developed for Dynamics 365 Customer Engagement.
+**View Layout Replicator** and **View Designer** are tools that XrmToolbox community developed for PowerApps.
 
-More information: [Developer tools](https://docs.microsoft.com/dynamics365/customer-engagement/developer/developer-tools).
+More information: [Developer tools](/powerapps/developer/common-data-service/developer-tools).
 
 > [!NOTE]
 > These tools are provided by XrmToolBox and are not supported by Microsoft. If you have questions pertaining to the tool, please contact the publisher. More information: [XrmToolBox](https://www.xrmtoolbox.com/). 

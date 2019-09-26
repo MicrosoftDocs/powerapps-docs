@@ -27,7 +27,7 @@ Model-driven app design is a component-focused approach to app development. Mode
 Model-driven app design provides the following benefits:
 - Rich component-focused no-code design environments 
 - Create complex responsive apps with a similar UI across a variety of devices from desktop to mobile
-- Design capability similar to what’s is available in the Dynamics 365 customer engagement platform 
+- Rich design capability 
 - Your app can be distributed as a solution
  
 ## The approach to model-driven app making
