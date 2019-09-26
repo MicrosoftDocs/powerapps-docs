@@ -80,7 +80,7 @@ This topic provides common understanding about Web API samples using client-side
   
 -   These samples use the browser native [ES6-Promise](https://msdn.microsoft.com/library/dn802826\(v=vs.94\).aspx) implementation for modern browsers that support it. For Internet Explorer, this sample uses the [ES6-Promise polyfill](https://github.com/stefanpenner/es6-promise) because Internet Explorer is the only browser supported by Common Data Service which does not have native support for this feature.  
   
-     Promises are not required. Similar interactions can be performed using callback functions. For more information, see [Create a re-usable function using promises](get-started-web-api-client-side-javascript.md#bkmk_createPromiseFunction).  
+     Promises are not required. Similar interactions can be performed using callback functions.  
   
 -   The `Sdk.request` function handles the request based on the information passed in as parameters. Depending on the need of each sample, the parameters passed in may be different. See the source code of that sample for more details.  
   
