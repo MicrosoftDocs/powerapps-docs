@@ -26,7 +26,7 @@ To create a new project:
 
 1. Go into the new directory using the command `cd LinearComponent`. 
    
-1. Run the command below to create a new component project by passing basic parameters.
+1. Run the command below to create a new component project passing basic parameters.
 
    ```CLI
     pac pcf init --namespace SampleNamespace --name TSLinearInputComponent --template field
@@ -37,13 +37,13 @@ To create a new project:
 
 ## Implementing Manifest
 
-Manifest is an XML file that contains the metadata of the code component. It also defines the behavior of the code component. In this tutorial, this manifest file is created under the `<Your component Name>` sub folder. When you open the `ControlManifest.Input.xml` file in Visual Studio Code, you will notice that the manifest file is predefined with some properties. Make changes to these predefined manifest file as shown below:
+Manifest is an XML file that contains the metadata of the code component. It also defines the behavior of the code component. In this tutorial, this manifest file is created under the `<Your component Name>` subfolder. When you open the `ControlManifest.Input.xml` file in Visual Studio Code, you notice that the manifest file is predefined with some properties. Make changes to these predefined manifest file, as shown below:
 
 1. The [control](manifest-schema-reference/control.md) node defines the namespace, version and display name of the code component. Now, define each property of the [control](manifest-schema-reference/control.md) node as shown below:
 
    - **namespace**: The namespace of the code component. 
    - **Constructor**: The constructor of the code component.
-   - **Version**: The version of the component. Whenever you update the component, you need to update the version in-order to see the changes in the runtime.
+   - **Version**: The version of the component. Whenever you update the component, you need to update the version to see the changes in the runtime.
    - **display-name-key**: The name of the code component that is displayed on the UI.
    - **description-name-key**: The description of the code component that is displayed on the UI.
    - **control-type**: The code component type. Only *standard* type of code components are supported.
@@ -54,13 +54,13 @@ Manifest is an XML file that contains the metadata of the code component. It als
       <control namespace="SampleNameSpace" constructor="TSLinearInputComponent" version="1.0.0" display-name-key="Linear Input Component" description-key="Allows you to enter the numeric values using the visual slider." control-type="standard">
      ```
 
-2. The [property](manifest-schema-reference/property.md) node defines the properties of the code component like defining the data type of field. The  property node is specified as child element under the control element. Define the [property](manifest-schema-reference/property.md) node as shown below:
+2. The [property](manifest-schema-reference/property.md) node defines the properties of the code component like defining the data type of field. The property node is specified as the child element under the control element. Define the [property](manifest-schema-reference/property.md) node as shown below:
 
    - **name**: Name of the property.
    - **display-name-key**: The display name of the property that is displayed on the UI.
    - **description-name-key**: The description of the property that is displayed on the UI. 
    - **of-type-group**: The [of-type-group](manifest-schema-reference/type-group.md) is used when you want to have more than two data type fields. Add the [of-type-group](manifest-schema-reference/type-group.md) element as a sibling to the `property` element in the manifest. The `of-type-group` specifies the component value and can contain whole, currency, floating point, or decimal values.
-   - **usage**: It has two properties *bound* and *input*. Bound properties are the one that are only bound to the value of the field. Input properties are the one that are either bound to a field or allows a static value.
+   - **usage**: It has two properties *bound* and *input*. Bound properties are the one that is only bound to the value of the field. Input properties are the one that is either bound to a field or allows a static value.
    - **required**: Defines whether the property is required or not.
 
      ```XML
@@ -105,7 +105,7 @@ Manifest is an XML file that contains the metadata of the code component. It als
 
 ## Implementing component logic
 
-The next step after implementing the manifest file, is to implement the component logic using TypeScript. The component logic should be implemented inside the `index.ts` file. When you open the `index.ts` file in Visual Studio Code, you will notice that the four important classes are predefined. Now, let's implement the logic for the code component. 
+The next step after implementing the manifest file is to implement the component logic using TypeScript. The component logic should be implemented inside the `index.ts` file. When you open the `index.ts` file in the Visual Studio Code, you notice that the four essential classes are predefined. Now, let's implement the logic for the code component. 
 
 1. Open the `index.ts` file in the code editor of your choice.
 2. Update the `TSLinearInputComponent` class with the following code:
@@ -200,10 +200,10 @@ export class TSLinearInputComponent implements ComponentFramework.StandardContro
 
 ## Adding style to the code component
 
-Developers and app makers can define their own styling to represent their code components visually using CSS. CSS allows the developers to describe the presentation of code components including style, colors, layouts, and fonts. The linear input component’s [init](reference/control/init.md) method creates an input element and sets the class attribute to `linearslider`. The style for the `linearslider` class is defined in a separate `CSS` file. Additional component resources like `CSS` files can be included with the code component to support further customizations.
+Developers and app makers can define their styling to represent their code components visually using CSS. CSS allows the developers to describe the presentation of code components, including style, colors, layouts, and fonts. The linear input component’s [init](reference/control/init.md)method creates an input element and sets the class attribute to `linearslider`. The style for the `linearslider` class is defined in a separate `CSS` file. Additional component resources like `CSS` files can be included with the code component to support further customizations.
 
-1. Create a new `css` sub folder under the `TSLinearInputComponent` folder. 
-2. Create a new `TS_LinearInputComponent.css` file inside the `css` sub folder. 
+1. Create a new `css` subfolder under the `TSLinearInputComponent` folder. 
+2. Create a new `TS_LinearInputComponent.css` file inside the `css` subfolder. 
 3. Add the following style content to `TS_LinearInputComponent.css` file
 
     ```CSS
@@ -337,7 +337,7 @@ Follow the steps below to create and import a [solution](https://docs.microsoft.
     > - Under **Code Tools**, check **NuGet targets & Build Tasks**
 
 6. The generated solution zip file is located in `Solution\bin\debug` folder.
-7. You should manually [import the solution into Common Data Service](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/customize/import-update-upgrade-solution) using the web portal once the zip file is ready or see [Authenticating to your organization](import-custom-controls.md#authenticating-to-your-organization) and [Deployment](import-custom-controls.md#deploying-code-components) sections to import using PowerApps CLI commands.
+7. Manually [import the solution into Common Data Service](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/customize/import-update-upgrade-solution) using the web portal once the zip file is ready or see [Authenticating to your organization](import-custom-controls.md#authenticating-to-your-organization) and [Deployment](import-custom-controls.md#deploying-code-components) sections to import using PowerApps CLI commands.
 
 ## Adding code components in model-driven apps
 
