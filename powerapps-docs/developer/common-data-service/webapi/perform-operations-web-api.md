@@ -7,8 +7,6 @@ ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-applies_to: 
-- "Common Data Service (online)"
 ms.assetid: b7ae4dd3-e9ee-45cc-a345-2fb7be5eddc6
 caps.latest.revision: 12
 author: "brandonsimons" # GitHub ID

@@ -55,5 +55,5 @@ Model-driven apps provides you a rich set of **client APIs** to interact with fo
 
 [Web resources for Model-driven apps](web-resources.md)<br/>
 [Customize commands and the ribbon](customize-commands-ribbon.md)<br/>
-[Dynamics 365 for Customer Engagement apps developer guide](/dynamics365/customer-engagement/developer/developer-guide)
+
 
