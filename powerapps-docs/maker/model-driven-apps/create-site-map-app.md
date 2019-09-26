@@ -194,7 +194,7 @@ You can view or set these privileges on the **Customization** tab of a security 
   
     - **More Descriptions**: If your organization uses multiple languages, select a language for the description, enter the description for the subarea, and then select **Add**. You can create, edit, or delete descriptions for as many languages as your organization uses. However, you can have only one description per language.  
   
-    - **SKUs**: Select the versions of Dynamics 365 customer engagement that display this subarea.  
+    - **SKUs**: Select the versions of Dynamics 365 that display this subarea.  
   
     - **Client**: Select the type of client that displays this subarea.  
   
@@ -228,9 +228,9 @@ You can view or set these privileges on the **Customization** tab of a security 
  
 |Site Maps|Supported Clients|  
 |---------------|-----------------------|  
-|New apps| Unified Interface and Dynamics 365 customer engagement web app |  
-|Site map for the Dynamics 365 - custom app | Dynamics 365 customer engagement web app and Dynamics 365 for Outlook |  
-|Default business apps (Sales, Sales Hub, Customer Service, Customer Service Hub, Field Service, Project Service Automation)| Dynamics 365 customer engagement web app and Unified Interface|  
+|New apps| Unified Interface |  
+|Site map for the Dynamics 365 - custom app | Legacy web app and Dynamics 365 for Outlook |  
+|MOdel-driven apps (Sales, Sales Hub, Customer Service, Customer Service Hub, Field Service, Project Service Automation)| Legacy web app and Unified Interface|  
  
   
 ### Next steps  

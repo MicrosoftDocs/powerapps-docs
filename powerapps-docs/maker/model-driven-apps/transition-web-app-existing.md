@@ -31,7 +31,7 @@ This quick start topic shows you how to use an existing environment to create a 
 For similar instructions that show you how to create a new sandbox environment to isolate the testing and view only the Unified Interface experience, see [Quick start for transitioning your Dynamics 365 legacy web client application to Unified Interface](transition-web-app.md).
 
 > [!IMPORTANT]
->  For environments with Dynamics 365 Field Service or Dynamics 365 Project Service Automation apps, see [Dynamics 365 apps](transition-web-app.md#dynamics-365-for-customer-engagement-apps).
+>  For environments with Dynamics 365 Field Service or Dynamics 365 Project Service Automation apps, see [Dynamics 365 apps](transition-web-app.md#dynamics-365-apps).
 
 ## Prerequisites 
 - An existing Dynamics 365 Sales or Service legacy web client application. 
@@ -40,7 +40,7 @@ For similar instructions that show you how to create a new sandbox environment t
 ## Overview 
 This topic is for existing customers who are currently using legacy web client applications who need to plan and execute their transition to the Unified Interface. To set up a parallel environment, you create a new application based on your default solution as it stands today. This can be done in your current development sandbox environment without impact to your existing work.
 
-After completing the steps in this article, users with the appropriate role can see your new app in the app list on both the Dynamics 365 for Customer Engagement drop-down app list or on the Dynamics 365 Home page (http://home.dynamics.com).
+After completing the steps in this article, users with the appropriate role can see your new app in the app list on both the Dynamics 365 drop-down app list or on the Dynamics 365 Home page (http://home.dynamics.com).
 
 ![App list](media/app-list.png)
 
@@ -87,7 +87,7 @@ In this step you will create a new app that leverages your existing customizatio
 5. The App Designer opens, displaying all the app components that were in the default solution. Select **Publish**.  
 6. After the publishing process completes, select **Play**.  
 
-A new window opens in the browser with your new model-driven app that contains all of the entities, sitemap, and sitemap customizations that were in your default Dynamics 365 for Customer Engagement application.  
+A new window opens in the browser with your new model-driven app that contains all of the entities, sitemap, and sitemap customizations that were in your default Dynamics 365 application.  
 
 > [!div class="mx-imgBorder"] 
 > ![New Unified Interface app](media/new-unified-interface-app.png "New Unified Interface app")
@@ -130,7 +130,7 @@ The tasks required to configure the model-driven app properties include:
 
 6. Select **Save**. 
 
-Now, users with the appropriate role can see your new app in the app list on both the Dynamics 365 for Customer Engagement drop-down app list or on the Dynamics 365 Home page (http://home.dynamics.com). 
+Now, users with the appropriate role can see your new app in the app list on both the Dynamics 365 drop-down app list or on the Dynamics 365 Home page (http://home.dynamics.com). 
   
    ![App list](media/app-list.png "App list")
 

@@ -195,7 +195,7 @@ Use Learning Path to give your users a custom, in-app Help experience that is ta
 
 -   Select the **training** tile on the site map, and then select **Content Library**.  
 
-     ![Content Library icon on the Dynamics 365 for Customer Engagement sitemap](media/lp-sitemap-content-library.png "Content Library icon on the model-driven app site map")  
+     ![Content Library icon on the model-driven app site map](media/lp-sitemap-content-library.png "Content Library icon on the model-driven app site map")  
 
 **To open the Content Library from the mobile app interface simulator:**  
 

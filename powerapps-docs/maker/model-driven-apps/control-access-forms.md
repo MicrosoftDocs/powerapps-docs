@@ -26,7 +26,7 @@ search.app:
   
 - **Make a main form inactive**  
   
-     You can set an active or inactive state to main forms. This feature was included primarily to manage new forms included when Dynamics 365 customer engagement organizations upgrade but you can use it to prevent users from being able to use any main form.   
+     You can set an active or inactive state to main forms. This feature was included primarily to manage new forms included when Common Data Service environments upgrade but you can use it to prevent users from being able to use any main form.   
   
 - **Assign security roles to the main form**  
   
