@@ -86,7 +86,7 @@ For some entities, such as account and user, the visualizations are provided out
   
 > [!TIP]
 >  If an entity can be enabled for a hierarchy:  
->  In solution explorer, expand the entity that you want. You will see the entity component called **Hierarchy Settings**. The entities that can’t be enabled for a hierarchy don’t have this component, with the exception of the Dynamics 365 customer engagement Sales Territory entity. Although **Hierarchy Settings** appears for the Sales Territory entity, the entity can’t be enabled for a hierarchy.  
+>  In solution explorer, expand the entity that you want. You will see the entity component called **Hierarchy Settings**. The entities that can’t be enabled for a hierarchy don’t have this component, with the exception of the Dynamics 365 Sales Territory entity. Although **Hierarchy Settings** appears for the Sales Territory entity, the entity can’t be enabled for a hierarchy.  
   
  Important things to remember when you create visualizations:  
   
