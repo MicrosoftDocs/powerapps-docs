@@ -13,8 +13,6 @@ ms.reviewer:
 
 # Set up Power BI integration
 
-[!include[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
-
 Power BI is one of the best tools to deliver insights with simple and interactive visualization. To view dashboards and reports from Power BI on web pages in a portal, you must enable Power BI visualization from the Portal Admin Center. You can also embed dashboards and reports created in the new workspace of Power BI by enabling the Power BI Embedded service integration.
 
 > [!NOTE]

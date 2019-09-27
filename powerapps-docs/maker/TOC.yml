@@ -1037,7 +1037,7 @@
     href: ../developer/model-driven-apps/overview.md
     # href: ../developer/model-driven-apps/TOC.yml For authoring I find having developer content buried so deep is awkward
 
-- name: Portals (preview)
+- name: Portals
   items:
     - name: What is PowerApps Portals?
       href: ./portals/overview.md

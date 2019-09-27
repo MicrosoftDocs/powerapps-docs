@@ -13,8 +13,6 @@ ms.reviewer:
 
 # Reset a portal
 
-[!include[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
-
 Once a portal is provisioned, you might need to delete resources from your portal under certain circumstances, such as if you move your organization to another tenant or another datacenter or if you want to remove the portal from your organization.
 
 To do this, you can reset your portal, which will delete all the hosted resources associated with it. Then you can provision the portal again. Once the reset operation is finished, your portal URL will not be accessible anymore.

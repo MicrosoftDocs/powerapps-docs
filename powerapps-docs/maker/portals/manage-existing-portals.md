@@ -13,8 +13,6 @@ ms.reviewer:
 
 # Manage existing portals in PowerApps
 
-[!include[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
-
 Once you've created a portal, it is visible under the **Recent apps** section on the PowerApps home page.
 
 > [!div class=mx-imgBorder]

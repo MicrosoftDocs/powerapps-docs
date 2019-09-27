@@ -14,8 +14,6 @@ ms.reviewer:
 
 # Add a Power BI report or dashboard to a web page in portal
 
-[!include[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
-
 You can add a Power BI report or dashboard to a web page in portal by using the [powerbi](../liquid/portals-entity-tags.md#powerbi) Liquid tag. You can add the tag in the **Copy** field on a web page or in the **Source** field on a web template. If you adding a Power BI report or dashboard created in the new workspace in Power BI, you must specify the authentication type as powerbiembedded in the powerbi Liquid tag.
 
 For example: 

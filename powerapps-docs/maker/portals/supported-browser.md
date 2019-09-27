@@ -13,8 +13,6 @@ ms.reviewer:
 
 # Supported web browsers for portal designer
 
-[!include[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
-
 The supported browsers for the portal designer are listed below.
 
 | **Browser**                     | **Operating system**           |

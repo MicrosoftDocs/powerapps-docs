@@ -13,8 +13,6 @@ ms.reviewer:
 
 # Create a Common Data Service starter portal
 
-[!include[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
-
 With the capability to build a portal in PowerApps, you can create a website for external and internal users enabling them to interact with data stored in Common Data Service.
 
 These are some benefits of creating a portal:

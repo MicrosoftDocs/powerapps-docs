@@ -13,8 +13,6 @@ ms.reviewer:
 
 # Portal designer anatomy
 
-[!include[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
-
 You can use the portal designer to create and customize your website. It contains various options to add and configure webpages, components, forms, and lists. The anatomy of portal designer is as follows:
 
 ![Portal designer anatomy](media/maker-anatomy.png "Portal designer anatomy")  

@@ -11,7 +11,6 @@ ms.author: shjais
 ms.reviewer:
 ---
 
-
 # Create a Dynamics 365 Portal
 
 If you select an environment that contains Dynamics 365 model-driven applications, you can create the portals mentioned in [Portal templates](portal-templates.md).

@@ -13,8 +13,6 @@ ms.reviewer:
 
 # Portal checker
 
-[!include[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
-
 Portal checker is a self-service diagnostic tool that can be used by portal administrators to identify common issues in their portal. Portal checker helps to identify issues with your portal by looking at various configuration parameters and provides suggestions on how to fix them.
 
 When you run portal checker, the results are displayed in the **Diagnostic results** section in a grid format. The results grid has the following columns:

@@ -13,8 +13,6 @@ ms.reviewer:
 
 # What is PowerApps Portals?
 
-[!include[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
-
 > [!IMPORTANT]
 > - [!INCLUDE[cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 > - Preview features have limited support by Microsoft Support and may be available only in selected geographic areas.
