@@ -1,7 +1,7 @@
 ---
 title: "Reporting considerations | MicrosoftDocs"
 ms.custom: 
-ms.date: 09/30/2017
+ms.date: 09/27/2019
 ms.reviewer: 
 ms.service: crm-online
 ms.suite: 
@@ -64,22 +64,22 @@ Model-driven apps have a number of capabilities that allow customers to surface 
 <a name="BKMK_ThirdPartyAdapt"></a>   
 ## Third-party Dynamics 365 for Customer Engagement apps adapters for SSIS  
   
--   [CozyRoc SSIS+ component for Microsoft Dynamics CRM](http://www.cozyroc.com/ssis/dynamics-crm-destination)  
+-   [CozyRoc SSIS+ component for Dynamics 365/CRM](http://www.cozyroc.com/ssis/dynamics-crm)  
   
--   [KingswaySoft SSIS Integration Toolkit for Microsoft Dynamics CRM](http://www.kingswaysoft.com/products/ssis-integration-toolkit-for-microsoft-dynamics-crm/)  
+-   [KingswaySoft SSIS Integration Toolkit for Dynamics 365](https://www.kingswaysoft.com/products/ssis-integration-toolkit-for-microsoft-dynamics-365)  
   
--   [RSSBus SSIS task for Microsoft Dynamics CRM](http://www.rssbus.com/ssis/mscrm/)  
+-   [CData SSIS components for Dynamics 365](https://www.cdata.com/ssis/components/)  
   
--   [Team4 SSIS Connector for Microsoft CRM](http://www.team4.com/ssismicrosoftcrm/index.html)  
+-   [Team4 SSIS Connector for Dynamics 365](https://www.team4.de/microsoft-dynamics-365-crm/)  
   
--   [PragmaticWorks TaskFactory SSIS Source/Destination for Dynamics CRM](http://pragmaticworks.com/Products/Task-Factory/Features/DynamicsCRMSource.aspx)  
+<!--    [PragmaticWorks TaskFactory SSIS Source/Destination for Dynamics CRM](http://pragmaticworks.com/Products/Task-Factory/Features/DynamicsCRMSource.aspx)  -->
   
 <a name="BKMK_ETL"></a>   
 ## ETL tools  
   
--   [Scribe Insight and Scribe Online with adapter for Microsoft Dynamics CRM](http://www.scribesoft.com/microsoft-dynamics-crm.asp)  <br />
+-   [TIBCO Dynamics 365 integration](https://www.tibco.com/solutions/microsoft-dynamics-365-integration)  <br />
   
--   [Productivity tools from Informatica](https://community.informatica.com/community/search.jspa?peopleEnabled=true&userID=&containerType=14&container=2002&spotlight=true&resultTypes=solution&q=dynamics+CRM)  
+<!--   [Productivity tools from Informatica](https://community.informatica.com/community/search.jspa?peopleEnabled=true&userID=&containerType=14&container=2002&spotlight=true&resultTypes=solution&q=dynamics+CRM)  -->
   
 ### See also  
  [Report Authoring Extension (with SQL Server Data Tools support)](http://www.microsoft.com/download/details.aspx?id=45013) <br />
