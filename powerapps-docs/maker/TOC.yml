@@ -1145,6 +1145,18 @@
                   href: ./portals/liquid/render-site-header-primary-navigation.md
         - name: OAuth 2.0 implicit grant flow
           href: ./portals/oauth-implicit-grant-flow.md
+    - name: Document storage in portals
+      items:
+        - name: Configure notes
+          href: ./portals/configure-notes.md
+        - name: Azure storage
+          items:
+            - name: Enable Azure storage
+              href: ./portals/enable-azure-storage.md
+            - name: Add the Azure Storage web resource to a form
+              href: ./portals/add-web-resource.md
+        - name: Manage SharePoint documents
+          href: ./portals/manage-sharepoint-documents.md
     - name: Known issues
       href: ./portals/known-issues.md
     - name: PowerApps Portals FAQ
