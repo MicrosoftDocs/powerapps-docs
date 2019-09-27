@@ -6,7 +6,7 @@ manager: shujoshi
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 08/30/2019
+ms.date: 10/07/2019
 ms.author: shjais
 ms.reviewer:
 ---
@@ -58,16 +58,14 @@ Once you add an IP address to the restriction list, the portal will be accessibl
 
 To remove access to a portal from a previously allowed IP address, you can remove the IP address from the list. If you remove all IP addresses, the portal will be accessible from all IP addresses.
 
-1.	Go to the Dynamics 365 admin center and select the **Applications** tab.
+1.	Open [PowerApps Portals admin center](admin-overview.md).
 
-2.	Select the name of the portal for which you want restrict access by IP address, and then select **Manage**.
-
-3.	Go to **Set up IP address restriction**. A list of IP addresses and their type is displayed.
+2.	Go to **Set up IP address restriction**. A list of IP addresses and their type is displayed.
 
     > [!div class=mx-imgBorder]
     > ![Set up IP address restriction](../media/set-up-ip-address-restrict.png "Set up IP address restriction")
 
-4.	Select **Remove an IP address (x)** next to the IP address to be removed.
+3.	Select **Remove an IP address (x)** next to the IP address to be removed.
 
-5.	Select **Remove** in the confirmation message.
+4.	Select **Remove** in the confirmation message.
 

@@ -49,7 +49,7 @@ Sometimes the database creation can take time and the correct status might not r
 > [!div class=mx-imgBorder]
 > ![Data not ready](media/data-not-ready.png "Data not ready")
 
-If you keep getting the create database prompt or your data isn't quite ready prompt, you can try refreshing the PowerApps home page before selecting the Portal from blank (Preview) tile.
+If you keep getting the create database prompt or your data isn't quite ready prompt, you can try refreshing the PowerApps home page before selecting the **Portal from blank** tile.
 
 ## I'm getting an error that I don't have required permissions to create Azure Active Directory applications.
 

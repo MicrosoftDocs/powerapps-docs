@@ -27,7 +27,7 @@ If you choose to create your portal in a new environment using the **Create new 
 
 If you choose to create your portal in an existing environment without portal pre-requisites, the pre-requisites are installed first and then the portal is created. In this method, the portal provisioning can take some time and you’ll be notified when the portal is provisioned.
 
-You can create Common Data Service starter portal or Dynamics 365 Portal in PowerApps based on the selected environment.
+You can create Common Data Service starter portal or Dynamics 365 Portals in PowerApps based on the selected environment.
 
 More information on working with environments: [Working with environments and Microsoft PowerApps](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/working-with-environments)
 
@@ -37,16 +37,16 @@ To create a portal:
 
 1.  Sign in to [PowerApps](http://web.powerapps.com).  
 
-2.  Under **Make your own app**, select **Portal from blank (preview)**.
+2.  Under **Make your own app**, select **Portal from blank**.
 
-3.	If the selected environment does not contain portal pre-requisites, a message is displayed in the **Portal from blank (preview)** window suggesting you select another environment or create a new one.
+3.	If the selected environment does not contain portal pre-requisites, a message is displayed in the **Portal from blank** window suggesting you select another environment or create a new one.
 
     > [!div class=mx-imgBorder]
     > ![create new environment message](media/create-portal-message.png "Create new environment message")
 
 4.	If you choose to proceed with the current environment, enter the required information in the window as mentioned in the following steps. If you choose to create a new environment, see [Create new environment](#create-new-environment).
 
-5.  In the **Portal from blank (preview)** window, enter a name for the portal and address for the website, and select a language from the drop-down list. When you're done, select **Create**.
+5.  In the **Portal from blank** window, enter a name for the portal and address for the website, and select a language from the drop-down list. When you're done, select **Create**.
 
     > [!div class=mx-imgBorder]
     > ![create new portal](media/create-new-portal.png "Create new portal")  
@@ -71,7 +71,7 @@ To edit the portal in portal designer, see [Edit a portal](manage-existing-porta
 
 ## Create new environment
 
-Follow these steps when you create an environment using the option provided in the **Portal from blank (preview)** window.
+Follow these steps when you create an environment using the option provided in the **Portal from blank** window.
 
 1.  In the **New environment** pane, enter a name for the environment, and then select a region and environment type from the drop-down lists. You cannot change the region once the environment is created. When you're done, select **Create environment**.
 
@@ -89,7 +89,7 @@ Follow these steps when you create an environment using the option provided in t
 3.  Select the currency and language for the data stored in the database. You cannot change the currency or language once the database is created. When you're done, select **Create my database**. The database is created with the starter portal that enables you to quickly get started with sample content once the portal is provisioned.
 
     > [!NOTE]
-    > The **Include starter portal** option is available only when you create an environment using the option provided in the **Portal from blank (preview)** window. This option is not available when you create an environment from PowerApps admin center.
+    > The **Include starter portal** option is available only when you create an environment using the option provided in the **Portal from blank** window. This option is not available when you create an environment from PowerApps admin center.
 
     > [!div class=mx-imgBorder]
     > ![create new database](media/create-new-database.png "Create new database") 
@@ -99,10 +99,10 @@ Follow these steps when you create an environment using the option provided in t
     > [!div class=mx-imgBorder]
     > ![portal management app](media/portal-mgmt-app.png "Portal management app")
 
-4. After creating the environment and database, under **Make your own app**, select **Portal from blank (preview)**. 
+4. After creating the environment and database, under **Make your own app**, select **Portal from blank**. 
 
     > [!NOTE]
-    > If the database is created and you are still getting the create database prompt, you must refresh the PowerApps home page before selecting the **Portal from blank (preview)** tile.
+    > If the database is created and you are still getting the create database prompt, you must refresh the PowerApps home page before selecting the **Portal from blank** tile.
 
 
 ## Portal provisioning notifications
