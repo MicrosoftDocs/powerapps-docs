@@ -62,7 +62,7 @@ Model-driven apps have a number of capabilities that allow customers to surface 
  If needed, there are many Microsoft partners who can help provide a solution for your specific reporting needs, such as creating an offline copy of the data specifically used for running large reports.  These partners are knowledgeable with the data integration tools available. More information: [Find a Dynamics 365 partner](https://dynamics.microsoft.com/partners/find-a-partner/)  
   
 <a name="BKMK_ThirdPartyAdapt"></a>   
-## Third-party Dynamics 365 for Customer Engagement apps adapters for SSIS  
+## Third-party adapters for SSIS  
   
 -   [CozyRoc SSIS+ component for Dynamics 365/CRM](http://www.cozyroc.com/ssis/dynamics-crm)  
   
