@@ -6,7 +6,7 @@ manager: shujoshi
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 09/16/2019
+ms.date: 10/07/2019
 ms.author: shjais
 ms.reviewer:
 ---
@@ -16,11 +16,11 @@ ms.reviewer:
 A webpage is a document that is identified by a unique URL in a website. It is one of the core objects of the website and builds a hierarchy of the website through parent and child relationships to other webpages.
 
 > [!NOTE]
-> If you customize your portal using the portal designer, the website users would notice a performance impact. We recommended you to do the changes during non-peak hours on a live portal.
+> If you customize your portal using PowerApps Portals Studio, the website users would notice a performance impact. We recommended you to do the changes during non-peak hours on a live portal.
 
 ## Create webpage
 
-1.  [Edit the portal](manage-existing-portals.md#edit) to open it in the portal designer.  
+1.  [Edit the portal](manage-existing-portals.md#edit) to open it in PowerApps Portals Studio.  
 
 2.  From the command bar, select **New page** and choose the page template.
 
@@ -57,7 +57,7 @@ If you are working with Dynamics 365 Portals, and you want the menu to be the sa
 
 ## Manage webpage
 
-1.  [Edit the portal](manage-existing-portals.md#edit) to open it in the portal designer.  
+1.  [Edit the portal](manage-existing-portals.md#edit) to open it in PowerApps Portals Studio.  
 
 2.  Select **Pages** ![pages icon](media/pages-icon.png "Pages icon") from the toolbelt on the left side of the screen.  
 

@@ -6,7 +6,7 @@ manager: shujoshi
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 08/30/2019
+ms.date: 10/07/2019
 ms.author: shjais
 ms.reviewer:
 ---
@@ -19,7 +19,7 @@ These are some benefits of creating a portal:
 
 - Because the data is stored in Common Data Service, you don't need to create a connection from PowerApps as you do with data sources such as SharePoint, Dynamics 365 model-driven applications, or Salesforce. You need only to specify the entities that you want to show or manage in the portal.
 
-- You can design the portal through the WYSIWYG portal designer by adding and configuring components on the webpages.
+- You can design the portal through the WYSIWYG PowerApps Portals Studio by adding and configuring components on the webpages.
 
 You can create a portal either in a new environment or in your existing environment.
 
@@ -63,7 +63,7 @@ After the portal is provisioned successfully, the status is updated and the port
 > [!div class=mx-imgBorder]
 > ![Portal provisioned](media/recent-apps.png "Portal provisioned")
 
-To edit the portal in portal designer, see [Edit a portal](manage-existing-portals.md#edit).
+To edit the portal in PowerApps Portals Studio, see [Edit a portal](manage-existing-portals.md#edit).
 
 > [!NOTE]
 > - You can create a maximum of five portals in a tenant. However, there can only be one portal of each type created in an environment.

@@ -6,7 +6,7 @@ manager: shujoshi
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 09/16/2019
+ms.date: 10/07/2019
 ms.author: shjais
 ms.reviewer:
 ---
@@ -16,7 +16,7 @@ ms.reviewer:
 You can create Common Data Service starter portal or Dynamics 365 Portal in PowerApps based on the selected environment.
 
 > [!NOTE]
-> Existing portals and existing portal templates (Community, Partner, Employee self-service, Customer self-service) are not completely supported in portal designer and some components might not render. However, you can continue editing rest of the components as usual. 
+> Existing portals and existing portal templates (Community, Partner, Employee self-service, Customer self-service) are not completely supported in PowerApps Portals Studio and some components might not render. However, you can continue editing rest of the components as usual. 
 
 ## Environment with Common Data Service
 

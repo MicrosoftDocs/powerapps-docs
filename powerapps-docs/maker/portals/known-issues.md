@@ -6,7 +6,7 @@ manager: shujoshi
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/18/2019
+ms.date: 10/07/2019
 ms.author: shjais
 ms.reviewer:
 ---
@@ -26,7 +26,7 @@ ms.reviewer:
 
 - When you reset your portal successfully from PowerApps Portals admin center, the following error is displayed: "The portal you are trying to access doesn't belong to the tenant you are currently logged into. Please log out and log in to the correct tenant.". You can visit the PowerApps home page and create a new portal. 
 
-## Portal designer issues
+## PowerApps Portals Studio issues
 
 -   When you select text in the text box, the font size of the selected text is not displayed in the formatting toolbar.
 
@@ -38,15 +38,15 @@ ms.reviewer:
 
 - When you delete a webpage, canvas does not reflect the updated menu until the next refresh of canvas.
 
-- When creating a child page from a rewrite page (unsupported pages in portal designer), you must choose the template manually from the properties pane to render the page.
+- When creating a child page from a rewrite page (unsupported pages in PowerApps Portals Studio), you must choose the template manually from the properties pane to render the page.
 
 - If the page name is large and not displayed completely in the **Pages** pane, the **Ellipsis** button (...) is not displayed. You must right-click the page name to see the page options.
 
-- If you have added a deactivated content snippet on a page, it will be displayed in the portal designer. But, the deactivated content snippet will be hidden on the actual website.
+- If you have added a deactivated content snippet on a page, it will be displayed in PowerApps Portals Studio. But, the deactivated content snippet will be hidden on the actual website.
 
 - Few components' placeholder like web links, Power BI, chart, and so on are not editable. But you can still edit the text on the same. The changes on placeholders will not be saved.
 
-- Information and related actions on canvas, like component name, in portal designer are supported only in English.
+- Information and related actions on canvas, like component name, in PowerApps Portals Studio are supported only in English.
 
 - Color picker and its related strings are supported only in English.
 
