@@ -1097,6 +1097,8 @@
           href: ./portals/admin/clear-server-side-cache.md
         - name: Migrate Dynamics 365 Portal configuration
           href: ./portals/admin/migrate-portal-configuration.md
+        - name: About trial portals
+          href: ./portals/admin/about-trial.md
     - name:  Advanced portal customizations
       items:
         - name: Work with Liquid templates
