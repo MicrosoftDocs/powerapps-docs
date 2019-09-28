@@ -16,7 +16,7 @@ ms.reviewer:
 Just like with subgrids, adding notes to your managed forms on the portal is easy&mdash;just add the notes control to the Dynamics 365 form through the out-of-the-box Dynamics 365 form designer and you're done. You can configure the behavior of the notes control by using metadata.
 
 > [!Note]                                                           
-> Explicit [Entity Permissions](assign-entity-permissions.md) are required for any notes to appear on the portal. For read and edit, the Read and Write privileges must be granted. For create, two permissions must exist: a permission with the Create and Append privileges must be granted for the note (annotation) entity, the second permission must be assigned to the entity type the note is being attached to with the Append To privilege granted. The **Enable Entity Permissions** check box must be selected on the corresponding entity form or web form step for the entity permissions to take effect.
+> Explicit [Entity Permissions](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/assign-entity-permissions) are required for any notes to appear on the portal. For read and edit, the Read and Write privileges must be granted. For create, two permissions must exist: a permission with the Create and Append privileges must be granted for the note (annotation) entity, the second permission must be assigned to the entity type the note is being attached to with the Append To privilege granted. The **Enable Entity Permissions** check box must be selected on the corresponding entity form or web form step for the entity permissions to take effect.
 
 ## Notes configuration for entity forms
 
@@ -26,7 +26,7 @@ Just like with subgrids, adding notes to your managed forms on the portal is eas
 4. Go to **Entity Form Metadata** either by using the top drop-down list or the subgrid on the main form of the entity form record that you are working with.
 5. Select **Add New Entity Form Metadata** to add a new record.
 6. From the **Type** drop-down list, select **Notes**. The notes configuration&ndash;specific settings are displayed. Most of the settings are collapsed by default. You can expand a section to see additional settings.
-7. Fill in the fields by entering appropriate values. [!include[](../includes/proc-more-information.md)] [Attributes](#attributes), [Create dialog options](#create-dialog-options), [Edit dialog options](#edit-dialog-options), and [Delete dialog options](#delete-dialog-options)
+7. Fill in the fields by entering appropriate values. [!include[](../../includes/proc-more-information.md)] [Attributes](#attributes), [Create dialog options](#create-dialog-options), [Edit dialog options](#edit-dialog-options), and [Delete dialog options](#delete-dialog-options)
 8. Save the form.
 
     ![Add notes configuration for entity forms](media/add-note-configuration.png "Add notes configuration for entity forms")  
@@ -120,7 +120,7 @@ Just like with subgrids, adding notes to your managed forms on the portal is eas
 ## Delete Dialog Options
 
 | Name                     | Description                                                                                                                                       |
-|--------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
+|--------------------------|------------------------------|
 | **Basic settings**       |                                                                                                                                                   |
 | Confirmation             | Override the confirmation message to delete the note.                                                                                             |
 | **Advanced settings**    |                                                                                                                                                   |
@@ -152,13 +152,4 @@ If you created a custom form in Dynamics 365 and added the notes section to it, 
 
 ## Notes configuration for web forms
 
-Web form notes are configured in the same way as [entity form notes](#notes-configuration-for-entity-forms). You must first create a metadata record for the Web Form Step that has notes, and then add the notes configuration metadata. 
-
-### See also
-
-[Configure a Dynamics 365 for Customer Engagement portal](configure-portal.md)  
-[Define entity forms and custom logic within the Dynamics 365 for Customer Engagement portal](entity-forms-custom-logic.md)  
-[Web Form properties for portals](web-form-properties.md)  
-[Web Form steps for portals](web-form-steps.md)  
-[Web Forms metadata for portals](configure-web-form-metadata.md)  
-[Web Form subgrid configuration for portals](configure-web-form-subgrid.md)  
+Web form notes are configured in the same way as [entity form notes](#notes-configuration-for-entity-forms). You must first create a metadata record for the Web Form Step that has notes, and then add the notes configuration metadata.
