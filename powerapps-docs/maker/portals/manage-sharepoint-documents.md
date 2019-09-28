@@ -58,7 +58,7 @@ When [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] inte
     > [!div class=mx-imgBorder]
     > ![Disable SharePoint integration](media/disable-sharepoint-integration.png "Disable SharePoint integration")
 
-Enabling or disabling the [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] integration will update the [!INCLUDE[pn-azure-active-directory](../includes/pn-azure-active-directory.md)] ([!INCLUDE[pn-azure-shortest](../includes/pn-azure-shortest.md)] AD) application for the portal and add or remove the required [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] permissions, respectively. You will also be redirected to provide your consent for the changes to be made in the [!INCLUDE[pn-azure-shortest](../includes/pn-azure-shortest.md)] AD application. 
+Enabling or disabling the [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] integration will update the [!INCLUDE[pn-azure-active-directory](../../includes/pn-azure-active-directory.md)] ([!INCLUDE[pn-azure-shortest](../../includes/pn-azure-shortest.md)] AD) application for the portal and add or remove the required [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] permissions, respectively. You will also be redirected to provide your consent for the changes to be made in the [!INCLUDE[pn-azure-shortest](../../includes/pn-azure-shortest.md)] AD application. 
 
 > [!div class=mx-imgBorder]
 > ![Disable SharePoint integration](media/sharepoint-integration-consent.png "Disable SharePoint integration")
@@ -67,7 +67,7 @@ If you do not provide your consent:
 
 - Enabling or disabling the [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] integration will not be complete and an error message will display.
 
-- Your out-of-the-box [!INCLUDE[pn-azure-shortest](../includes/pn-azure-shortest.md)] AD login on the portal will not work. 
+- Your out-of-the-box [!INCLUDE[pn-azure-shortest](../../includes/pn-azure-shortest.md)] AD login on the portal will not work. 
 
 
 ## Step 3: Enable document management for entities
