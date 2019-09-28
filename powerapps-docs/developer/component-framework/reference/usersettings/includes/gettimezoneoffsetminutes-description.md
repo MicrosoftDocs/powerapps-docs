@@ -15,4 +15,4 @@ applies_to:
 ms.assetid: 6c14b05a-b142-409a-9ef4-f86487a037c9
 ---
 
-Gets the offset in minutes from UTC for the given date.
+Returns the difference in the minutes between the local time and Coordinated Universal Time (UTC).

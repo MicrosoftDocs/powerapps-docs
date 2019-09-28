@@ -16,10 +16,14 @@ author: Nkrb
 
 This sample component changes the user experience of interacting with numeric types on the form. Instead of keying in the numbers, the linear input component provides a linear slider using which the value of the attribute can be set on the form.  
 
-To implement this component, first you need to define the [Manifest](../manifest-schema-reference/manifest.md)file, and them implement the custom logic in TypeScript
+To implement this component, first you need to define the [Manifest](../manifest-schema-reference/manifest.md) file, and them implement the custom logic in TypeScript
 
 > [!div class="mx-imgBorder"]
 > ![Linear Input Concomponenttrol](../media/linear-input-control.png "Linear Input component")
+
+## Available for 
+
+Model-driven apps and canvas apps (experimental preview) 
 
 ## Manifest
 

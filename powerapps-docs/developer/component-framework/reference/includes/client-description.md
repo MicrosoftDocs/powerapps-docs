@@ -15,4 +15,4 @@ applies_to:
 ms.assetid: b01ca88a-168a-4eb1-9992-1debbdb244a0
 ---
 
-The interface for the `context.client`
+Provides access to the methods to determine which client is being used, whether the client is connected to server, and what kind of device is being used.

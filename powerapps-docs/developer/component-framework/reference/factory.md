@@ -19,6 +19,10 @@ ms.assetid: 47a15499-c526-4289-a632-49b717ba455f
 
 [!INCLUDE [factory-description](includes/factory-description.md)]
 
+## Available for 
+
+Model-driven apps and canvas apps (experimental preview)
+
 ## Methods
 
 |Method | Description |

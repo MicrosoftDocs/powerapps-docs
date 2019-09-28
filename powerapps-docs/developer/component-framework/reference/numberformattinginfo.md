@@ -19,159 +19,163 @@ ms.assetid: 8c0481ee-abf9-492a-a1ef-b36e8a68167b
 
 [!INCLUDE [context-description](includes/numberformattinginfo-description.md)]
 
+## Available for 
+
+Model-driven apps
+
 ## Properties
 
-## currencyDecimalDigits
+### currencyDecimalDigits
 
  example 2
 
 **Type**: `number`
 
-## currencyDecimalSeparator
+### currencyDecimalSeparator
 
 example "."
 
 **Type**: `string`
 
-## currencyGroupSeparator
+### currencyGroupSeparator
 
 example ","
 
 **Type**: `string`
 
-## currencyGroupSizes
+### currencyGroupSizes
 
 example [ 3 ]
 
 **Type**: `number[]`
 
-## currencyNegativePattern
+### currencyNegativePattern
 
 example 0
 
 **Type**: `number`
 
-## currentPositivePattern
+### currentPositivePattern
 
 example 0
 
 **Type**: `number`
 
-## currencySymbol
+### currencySymbol
 
 example "$"
 
 **Type**: `string`
 
-## nanSymbol
+### nanSymbol
 
 example "NaN"
 
 **Type**: `string`
 
-## nativeDigits
+### nativeDigits
 
 example { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"}
 
 **Type**: `string[]`
 
-## negativeInfinitySymbol
+### negativeInfinitySymbol
 
 example "-Infinity"
 
 **Type**: `string`
 
-## negativeSign
+### negativeSign
 
 example "-"
 
 **Type**: `string`
 
-## numberDecimalDigits
+### numberDecimalDigits
 
 example 2
 
 **Type**: `number`
 
-## numberDecimalSeparator
+### numberDecimalSeparator
 
 example "."
 
 **Type**: `string`
 
-## numberGroupSeparator
+### numberGroupSeparator
 
 example ","
 
 **Type**: `string`
 
-## numberGroupSizes
+### numberGroupSizes
 
 example [3]
 
 **Type**: `number[]`
 
-## numberNegativePattern
+### numberNegativePattern
 
 example 1
 
 **Type**: `number`
 
-## perMilleSymbol
+### perMilleSymbol
 
 example "‰"
 
 **Type**: `string`
 
-## percentDecimalDigits
+### percentDecimalDigits
 
 example 2
 
 **Type**: `number`
 
-## percentDecimalSeparator
+### percentDecimalSeparator
 
 example "."
 
 **Type**: `string`
 
-## percentGroupSeparator
+### percentGroupSeparator
 
 example ","
 
 **Type**: `string`
 
-## percentGroupSizes
+### percentGroupSizes
 
 example [3]
 
 **Type**: `number[]`
 
-## percentNegativePattern
+### percentNegativePattern
 
 example 0
 
 **Type**: `number`
 
-## percentPositivePattern
+### percentPositivePattern
 
 example 0
 
 **Type**: `number`
 
-## percentSymbol
+### percentSymbol
 
 example "%"
 
 **Type**: `string`
 
-## positiveInfinitySymbol
+### positiveInfinitySymbol
 
 example "Infinity"
 
 **Type**: `string`
 
-## positiveSign
+### positiveSign
 
 example "+"
 

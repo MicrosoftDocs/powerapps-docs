@@ -19,6 +19,10 @@ ms.assetid: a0f9abc5-c605-4433-bf5a-f8253eeeda3b
 
 [!INCLUDE [device-description](includes/device-description.md)]
 
+## Available for 
+
+Model-driven apps
+
 ## Methods
 
 |Method | Description |

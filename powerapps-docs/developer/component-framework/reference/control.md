@@ -17,6 +17,10 @@ author: Nkrb
 
 [!INCLUDE [control-description](includes/control-description.md)]
 
+## Available for 
+
+Model-driven apps and canvas apps (experimental preview)
+
 ## Methods
 
 |Method | Description | 

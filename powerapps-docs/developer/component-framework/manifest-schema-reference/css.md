@@ -22,12 +22,16 @@ ms.assetid: b6119424-c0a4-4412-b25c-8239da6cbe36
 
 [!INCLUDE [css-description](includes/css-description.md)]
 
+## Available for
+
+Model-driven apps and canvas apps (experimental preview)
+
 ## Attributes
 
-|Name|Description|Type|Required|
-|--|--|--|--|
-|`path`|Relative path w.r.t manifest where CSS files are located|`string`|Yes|
-|`order`|The order in which the files must load|`Positive integer`|Optional|
+|Name|Description|Type|Required|Available for|
+|--|--|--|--|-----|
+|`path`|Relative path w.r.t manifest where CSS files are located|`string`|Yes|Model-driven apps and canvas apps (experimental preview) (experimental preview)|
+|`order`|The order in which the CSS files Should load|`Positive integer`|Optional|Model-driven apps and canvas apps (experimental preview) (experimental preview)|
 
 ## Parent Elements
 

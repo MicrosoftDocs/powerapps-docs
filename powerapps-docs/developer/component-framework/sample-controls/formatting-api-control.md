@@ -22,6 +22,10 @@ This sample component explores the various methods available as part of the Powe
 > [!div class="mx-imgBorder"]
 > ![Formatting API component](../media/formatting-api.png "Formatting API component")
 
+## Available for 
+
+Model-driven apps and canvas apps (experimental preview) 
+
 ## Manifest
 
 ```xml

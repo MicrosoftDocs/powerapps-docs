@@ -14,4 +14,5 @@ applies_to:
   - "Dynamics 365 Version 9.x"
 ms.assetid: 2ab7dec5-e73e-4f2f-8148-395e34540cef
 ---
-The interface for `context.userSettings`
+
+Provides information about the current user settings.

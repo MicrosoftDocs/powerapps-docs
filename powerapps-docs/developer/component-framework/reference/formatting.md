@@ -19,6 +19,10 @@ ms.assetid: 058c0319-4d46-40fc-a4f6-e9f722a6b3c7
 
 [!INCLUDE [formatting-description](includes/formatting-description.md)]
 
+## Available for 
+
+Model-driven apps and canvas apps (experimental preview)
+
 ## Methods
 
 |Method | Description |
@@ -26,8 +30,8 @@ ms.assetid: 058c0319-4d46-40fc-a4f6-e9f722a6b3c7
 |[formatCurrency](formatting/formatcurrency.md)|[!INCLUDE [formatcurrency-description](formatting/includes/formatcurrency-description.md)]|
 |[formatDateAsFilterStringInUTC](formatting/formatdateasfilterstringinutc.md)|[!INCLUDE [formatdateasfilterstringinutc-description](formatting/includes/formatdateasfilterstringinutc-description.md)]|
 |[formatDateLong](formatting/formatdatelong.md)|[!INCLUDE [formatdatelong-description](formatting/includes/formatdatelong-description.md)]|
-|[formatDateLongAbbreviated](formatting/formatdatelongabbreviated.md)|[!INCLUDE [formatdatelongabbreviated-description](formatting/includes/formatdatelongabbreviated-description.md)|
 |[formatDateShort](formatting/formatdateshort.md)|[!INCLUDE [formatdateshort-description](formatting/includes/formatdateshort-description.md)]|
+|[formatDateLongAbbreviated](formatting/formatdatelongabbreviated.md)|[!INCLUDE [formatdatelongabbreviated-description](formatting/includes/formatdatelongabbreviated-description.md)]|
 |[formatDateYearMonth](formatting/formatdateyearmonth.md)|[!INCLUDE [formatdateyearmonth-description](formatting/includes/formatdateyearmonth-description.md)]|
 |[formatDecimal](formatting/formatdecimal.md)|[!INCLUDE [formatdecimal-description](formatting/includes/formatdecimal-description.md)]|
 |[formatInteger](formatting/formatinteger.md)|[!INCLUDE [formatinteger-description](formatting/includes/formatinteger-description.md)]|

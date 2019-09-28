@@ -17,21 +17,25 @@ ms.assetid: aae27c64-33c4-47f1-b833-4c04161c01e2
 
 [!INCLUDE[./includes/pickfile-description.md](./includes/pickfile-description.md)]
 
+## Available for 
+
+Model-driven apps
+
 ## Syntax
 
-`pickFile(options)`
+`context.device.pickFile(options)`
 
 ## Parameters
 
 | Parameter Name|Type|Required|Description|
 | ------------- |----|--------|-----------|
-|`options`|`object`|no|Options to pick file.|
+|`options`|`Object`|No|Options to pick file.|
 
 ## Return Value
 
-Type: `Promise<File[]>`
+Type: `Promise<FileObject[]>`
 
-See [Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise) and [File](https://developer.mozilla.org/docs/Web/API/File)
+See [Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise) and [FileObject](../fileobject.md)
 
 ## Remarks
 
@@ -39,9 +43,9 @@ The `options` parameter object has the following properties:
 
 |Name|Type|Description|
 |--|--|--|
-|`accept`|`string`|Image file type to select. Valid values are "audio", "video", or "image"|
-|`allowMultipleFiles`|`boolean`|Indicates whether to allow select multiple files|
-|`maximumAllowedFileSize`|`number`|Maximum size of the files(s) to be selected|
+|`accept`|`String`|Image file type to select. Valid values are "audio", "video", or "image"|
+|`allowMultipleFiles`|`Boolean`|Indicates whether to allow select multiple files|
+|`maximumAllowedFileSize`|`Number`|Maximum size of the files(s) to be selected|
 
 
 ### Related topics

@@ -19,9 +19,13 @@ ms.assetid: 0202d51f-e9a9-4a2e-b3e9-0bfd7f6afb86
 
 [!INCLUDE [dataset-description](includes/dataset-description.md)]
 
+## Available for 
+
+Model-driven apps
+
 ## Properties
 
-## addColumn
+### addColumn
 
 The function to add a column to the dataset
 
@@ -37,25 +41,25 @@ This function must accept two parameters.
 |name|string|Yes|Column name to be added to the dataset|
 |entityalias|string|No| Alias for which the column name needs to be added|
 
-## columns
+### columns
 
 The set of columns available in this dataset.
 
 **Type**: [Column](column.md)[]
 
-## error
+### error
 
 Whether an error occurred in data retrieval.
 
 **Type**: `boolean`
 
-## errorMessage
+### errorMessage
 
 The error message associated with the last encountered error.
 
 **Type**: `string`
 
-## filtering
+### filtering
 
 Placeholder description: IDataSetExposedParameter.name
 <!-- 
@@ -65,37 +69,37 @@ QUESTION: This description doesn't seem right
 
 **Type**: [Filtering](filtering.md)
 
-## linking
+### linking
 
 Placeholder description: IDataSetExposedParameter.name
 
 **Type**: [Linking](linking.md)
 
-## loading
+### loading
 
 Whether the dataset is loading.
 
 **Type**: `boolean`
 
-## paging
+### paging
 
 Pagination status and actions.
 
 **Type**: [Paging](paging.md)
 
-## records
+### records
 
 Map of IDs to the full record object.
 
 **Type**: `object`
 
-## sortedRecordIds
+### sortedRecordIds
 
 IDs of the records in the dataset, in order.
 
 **Type**: `string[]`
 
-## sorting
+### sorting
 
 The column sorting for the current query.
 

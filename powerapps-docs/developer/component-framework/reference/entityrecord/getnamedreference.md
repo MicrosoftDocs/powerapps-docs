@@ -16,6 +16,10 @@ ms.assetid: f879cb97-34d2-49ed-bef3-4df0af972b19
 
 [!INCLUDE[./includes/getnamedreference-description.md](./includes/getnamedreference-description.md)]
 
+## Available for 
+
+Model-driven apps
+
 ## Syntax
 
 `getNamedReference()`

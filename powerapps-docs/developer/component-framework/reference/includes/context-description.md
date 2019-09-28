@@ -14,4 +14,5 @@ applies_to:
   - "Dynamics 365 Version 9.x"
 ms.assetid: ba6d60a5-671a-4006-984a-0149f8649432
 ---
-The property bag interface available to component via Context Object
+
+Povides all the properties and methods available in the PowerApps componment framework via Context Object.

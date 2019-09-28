@@ -19,6 +19,10 @@ ms.assetid: af1bf8bb-380f-45db-8bbc-b7d4a18e5623
 
 [!INCLUDE [navigation-description](includes/navigation-description.md)]
 
+## Available for 
+
+Model-driven apps
+
 ## Methods
 
 |Method | Description |

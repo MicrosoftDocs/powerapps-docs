@@ -19,6 +19,10 @@ ms.assetid: 996f10e5-8057-40ea-9680-555e4cd682ff
 
 [!INCLUDE [property-set-description](includes/property-set-description.md)]
 
+## Available for
+
+Model-driven apps
+
 ## Attributes
 
 |Name|Description|Type|Required|
@@ -27,7 +31,7 @@ ms.assetid: 996f10e5-8057-40ea-9680-555e4cd682ff
 |`display-name-key`|Used in customization screens as localized strings that describe the name of the property|`string`|Yes|
 |`description-key`|Used in customization screens as localized strings that describe the description of the property|`string`|Optional|
 |`of-type`|Defines the data type of the property|See [Remarks](#remarks)|Optional|
-|`required`|Whether the property is required or not|`boolean`|Optional|
+|`required`|Indicates whether the property is required or not|`boolean`|Optional|
 |`of-type-group`|Name of the type-group as defined in manifest|`string`|Optional|
 
 ## Parent Elements

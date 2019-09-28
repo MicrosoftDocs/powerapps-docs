@@ -19,6 +19,10 @@ ms.assetid: 38acfda3-4adc-4aa2-bb8b-f29ba572a6e5
 
 [!INCLUDE [resx-description](includes/resx-description.md)]
 
+## Available for
+
+Model-driven apps and canvas apps (experimental preview)
+
 ## Attributes
 
 |Name|Description|Type|Required|

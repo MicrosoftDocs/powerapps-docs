@@ -17,34 +17,39 @@ ms.assetid: 8907f07a-ad45-47e4-a503-8eaae9bba5f7
 
 [!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
 
+Provides access to all the properties of a file.
+
+## Available for
+
+Model-driven apps
+
 ## Properties
 
-## fileContent
+### fileContent
 
 Contents of the file.
 
-**Type**: `string`
+**Type**: `String`
 
-## fileName
+### fileName
 
 Name of the file.
 
-**Type**: `string`
+**Type**: `String`
 
-## fileSize
+### fileSize
 
-Size of the file.
+Size of the file in KB.
 
-**Type**: `number`
+**Type**: `Number`
 
-## mimeType
+### mimeType
 
 File MIME type.
 
-**Type**: `string`
+**Type**: `String`
 
-
-### Related topics
+## Related topics
 
 [PowerApps component framework API Reference](../reference/index.md)<br/>
 [PowerApps component framework Overview](../overview.md)

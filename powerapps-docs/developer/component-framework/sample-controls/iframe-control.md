@@ -13,10 +13,14 @@ author: Nkrb
 
 [!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
 
-This sample describes how to bind a custom component to different fields on the form and use the value of these fields as input properties to the component.  
+This sample describes how to bind a code component to different fields on the form and use the value of these fields as input properties to the component.  
 
 > [!div class="mx-imgBorder"]
 > ![IFRAME component](../media/iframe-control.png "IFRAME component")
+
+## Available for 
+
+Model-driven apps and canvas apps (experimental preview) 
 
 ## Manifest
 
@@ -142,7 +146,7 @@ public destroy()
 ```
 
 > [!NOTE]
-> PowerApps component framework does not yet support composite fields, so you will not be able to bind this component to the out of the box latitude and longitude address fields. You need to bind the custom component to a different floating-point field.
+> PowerApps component framework does not yet support composite fields, so you will not be able to bind this component to the out of the box latitude and longitude address fields. You need to bind the code component to a different floating-point field.
 
 This sample component renders an `IFRAME` which displays `Bing Maps URL`. The component is bound to two floating point fields on the form, which are passed as parameters to the component and injected into the `IFRAME URL` to update the Bing Map to the latitude and longitude of the provided inputs.  
 
@@ -168,7 +172,7 @@ Additional bound properties may be required or not. This will be enforced during
 
 The initial rendering generates an `IFRAME` element and appends it to the controls container. This `IFRAME` is used to display the **Bing Map**. The url of the `IFRAME` is set to a `Bing Map URL` and includes the bound fields (latitudeValue and longitudeValue) in the url to center the map at the provided location. 
 
-The [updateView](../reference/control/updateview.md) method is invoked whenever one of these fields are updated on the form. This method updates the url of the **Bing Map** IFRAME to use the new latitude and longitude values passed to the component. To view this component in run time, bind the component to a field on the form like any other custom component.
+The [updateView](../reference/control/updateview.md) method is invoked whenever one of these fields are updated on the form. This method updates the url of the **Bing Map** IFRAME to use the new latitude and longitude values passed to the component. To view this component in run time, bind the component to a field on the form like any other code component.
 
 ### Related topics
 

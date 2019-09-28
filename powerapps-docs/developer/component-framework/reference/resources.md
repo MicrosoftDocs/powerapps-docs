@@ -19,6 +19,10 @@ ms.assetid: 48dc8649-3a98-4f5e-8319-a6f5e378a9cc
 
 [!INCLUDE [resources-description](includes/resources-description.md)]
 
+## Available for 
+
+Model-driven apps
+
 ## Methods
 
 |Method | Description |

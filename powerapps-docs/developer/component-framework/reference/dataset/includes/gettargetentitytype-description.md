@@ -15,4 +15,4 @@ applies_to:
 ms.assetid: 6c9ba34d-579a-4378-b47b-ba1205e9bdf1
 ---
 
-Get DataSet target entity type name.
+Returns the target entity type name.

@@ -133,6 +133,8 @@
         href: reference/attributes/isValid.md
       - name: removeOnChange
         href: reference/attributes/removeOnChange.md
+      - name: setIsValid
+        href: reference/attributes/setIsValid.md
       - name: setPrecision
         href: reference/attributes/setPrecision.md
       - name: setRequiredLevel

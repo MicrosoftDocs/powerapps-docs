@@ -1,5 +1,5 @@
 ---
-title: "Set up Power BI integration with Dynamics 365 for Customer Engagement portal | MicrosoftDocs"
+title: "Set up Power BI integration with your portal | MicrosoftDocs"
 description: "Learn how to set up Power BI integration with your portal."
 author: sbmjais
 manager: shujoshi
@@ -34,7 +34,7 @@ Enabling Power BI visualization allows you to embed dashboards and reports on we
 
 3.	Select **Enable** in the confirmation message. While Power BI visualization is being enabled, the portal restarts and will be unavailable for a few minutes. A message appears when Power BI visualization is enabled.
 
-Customizers can use the [powerbi](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/dynamics-entity-tags#powerbi) Liquid tag to embed Power BI dashboards and reports on web pages in a portal. While embedding the Power BI content, customizers can use [filter parameters](https://docs.microsoft.com/en-us/power-bi/service-url-filters) to create personalized views. More information: [powerbi Liquid tag](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/dynamics-entity-tags#powerbi)
+Customizers can use the [powerbi](../liquid/portals-entity-tags.md#powerbi) Liquid tag to embed Power BI dashboards and reports on web pages in a portal. While embedding the Power BI content, customizers can use [filter parameters](https://docs.microsoft.com/en-us/power-bi/service-url-filters) to create personalized views. More information: [powerbi Liquid tag](../liquid/portals-entity-tags.md#powerbi)
 
 ### Disable Power BI visualization
 
@@ -150,7 +150,7 @@ After enabling the Power BI Embedded service integration, you must create a secu
 
 6. Select **Apply**.
 
-Customizers can now use the [powerbi](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/dynamics-entity-tags#powerbi) Liquid tag to embed Power BI dashboards and reports from new Power BI workspaces on webpages in a portal. To use Power BI Embedded service, the authentication type must be specified as **powerbiembedded**. While embedding the Power BI content, customizers can use [filter parameters](https://docs.microsoft.com/en-us/power-bi/service-url-filters) to create personalized views. More information: [powerbi Liquid tag](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/dynamics-entity-tags#powerbi).
+Customizers can now use the [powerbi](../liquid/portals-entity-tags.md#powerbi) Liquid tag to embed Power BI dashboards and reports from new Power BI workspaces on webpages in a portal. To use Power BI Embedded service, the authentication type must be specified as **powerbiembedded**. While embedding the Power BI content, customizers can use [filter parameters](https://docs.microsoft.com/en-us/power-bi/service-url-filters) to create personalized views. More information: [powerbi Liquid tag](../liquid/portals-entity-tags.md#powerbi).
 
 ### Manage the Power BI Embedded service
 
@@ -199,5 +199,5 @@ Customizers can now use the [powerbi](https://docs.microsoft.com/en-us/dynamics3
 
 ### See also
 
-[powerbi Liquid tag](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/dynamics-entity-tags#powerbi)<br> 
+[powerbi Liquid tag](../liquid/portals-entity-tags.md#powerbi)<br> 
 [Add a Power BI report or dashboard to a webpage in portal](add-powerbi-report.md)

@@ -128,6 +128,8 @@ This table shows some examples:
 
 For **User local** date/times, canvas apps use the time zone of the browser or device, but model-driven apps use the user's setting in Common Data Service. These settings typically match, but results will differ if these settings differ.
 
+Use the [**DateAdd**](function-dateadd-datediff.md) and [**TimeZoneInformation**](function-dateadd-datediff.md) functions to convert local time to UTC and back again.  See the examples at the end of the documentation for these functions.
+
 ### Numeric equivalents
 
 Canvas apps hold and calculate all date/time values, whether **User local** or **Time zone independent** in UTC. The app translates the values based on the app user's time zone when showing them and when the app user specifies them.

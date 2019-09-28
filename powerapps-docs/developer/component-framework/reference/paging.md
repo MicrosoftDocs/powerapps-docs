@@ -19,21 +19,25 @@ ms.assetid: 12891e96-972c-4289-bbde-2bc261cd1f12
 
 [!INCLUDE [paging-description](includes/paging-description.md)]
 
+## Available for 
+
+Model-driven apps
+
 ## Properties
 
-## totalResultCount
+### totalResultCount
 
 Total number of results on the server for the current query.
 
 **Type**: `number`
 
-## hasNextPage
+### hasNextPage
 
 Whether the result set can be paged backwards.
 
 **Type**: `boolean`
 
-## hasPreviousPage
+### hasPreviousPage
 
 Whether the result set can be paged backwards.
 
@@ -47,6 +51,7 @@ Whether the result set can be paged backwards.
 |[loadPreviousPage](paging/loadpreviouspage.md)|[!INCLUDE [loadpreviouspage-description](paging/includes/loadpreviouspage-description.md)]|
 |[reset](paging/reset.md)|[!INCLUDE [reset-description](paging/includes/reset-description.md)]|
 |[setPageSize](paging/setpagesize.md)|[!INCLUDE [setpagesize-description](paging/includes/setpagesize-description.md)]|
+|pageSize|The number of records to return per dataset page. On forms, dataset pageSize goes with the formatting (Number of rows) and on others you can choose your personal options.|
 
 
 ### Related topics

@@ -13,6 +13,10 @@ author: Nkrb
 
 [!INCLUDE[./includes/updateview-description.md](./includes/updateview-description.md)]
 
+## Available for 
+
+Model-driven apps and canvas apps (experimental preview)
+
 ## Syntax
 
 `updateView(context)`

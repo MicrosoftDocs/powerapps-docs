@@ -6,7 +6,7 @@ manager: shujoshi
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/18/2019
+ms.date: 08/30/2019
 ms.author: shjais
 ms.reviewer:
 ---
@@ -19,7 +19,7 @@ With the capability to build a portal in PowerApps, you can create a website for
 
 These are some benefits of creating a portal:
 
-- Because the data is stored in Common Data Service, you don't need to create a connection from PowerApps as you do with data sources such as SharePoint, Dynamics 365 for Customer Engagement apps, or Salesforce. You need only to specify the entities that you want to show or manage in the portal.
+- Because the data is stored in Common Data Service, you don't need to create a connection from PowerApps as you do with data sources such as SharePoint, Dynamics 365 model-driven applications, or Salesforce. You need only to specify the entities that you want to show or manage in the portal.
 
 - You can design the portal through the WYSIWYG portal designer by adding and configuring components on the webpages.
 
@@ -68,7 +68,7 @@ After the portal is provisioned successfully, the status is updated and the port
 To edit the portal in portal designer, see [Edit a portal](manage-existing-portals.md#edit).
 
 > [!NOTE]
-> - You can create a maximum of one portal in an environment.
+> - You can create a maximum of five portals in a tenant. However, there can only be one portal of each type created in an environment.
 > - If you don't have sufficient privileges to provision a portal, an error is displayed. You must have System Administrator or at least System Customizer role in Common Data Service to create a portal. You must also have the **Access Mode** set to **Read-Write** under **Client Access License (CAL) Information** in the user record.
 
 ## Create new environment

@@ -154,7 +154,7 @@ There is currently no single place where tenant administrators  can manage all t
 **Answer:** No. A gateway connects to on-premises data sources only.
 
 **Question:** What is the actual Windows service called?  
-**Answer:** In Services, the gateway is called **Power BI Enterprise Gateway Service**.
+**Answer:** In Services, the gateway is called **On-premises data gateway service**.
 
 **Question:** Are there any inbound connections to the gateway from the cloud?  
 **Answer:** No. The gateway uses outbound connections to Azure Service Bus.

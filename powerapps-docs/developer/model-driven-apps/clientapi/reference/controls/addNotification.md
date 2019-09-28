@@ -1,6 +1,6 @@
 ---
 title: "addNotification (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
+ms.date: 09/03/2019
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -15,8 +15,6 @@ search.app:
   - D365CE
 ---
 # addNotification (Client API reference)
-
-
 
 Displays an error or recommendation notification for a control, and lets you specify actions to execute based on the notification. When you specify an error type of notification, a red "X" icon appears next to the control. When you specify a recommendation type of notification, an "i" icon appears next to the control. On Dynamics 365 mobile clients, tapping on the icon will display the message, and let you perform the configured action by clicking the **Apply** button or dismiss the message. 
 
@@ -65,7 +63,12 @@ All
 
 ## Remarks
 
-The **addNotification** method displays a notification with the messages you specified and two standard buttons: **Apply** and **Dismiss**. Clicking **Apply** executes the action you define; clicking **Dismiss** closes the notification message. 
+In web client the **addNotification** method displays a notification with the messages you specified and two standard buttons: **Apply** and **Dismiss**. Clicking **Apply** executes the action you define; clicking **Dismiss** closes the notification message.
+
+In UCI:
+
+- There is no **Dismiss** button.
+- The **Apply** button only appears when the notification level is set to **RECOMMENDATION**, not **ERROR**.
 
 ## Example
 

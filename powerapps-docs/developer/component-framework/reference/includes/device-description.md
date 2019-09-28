@@ -15,4 +15,4 @@ applies_to:
 ms.assetid: de178280-a62e-4cbb-8421-21d792d8e194
 ---
 
-The interface for the `context.device`
+Provides methods to use native device capabilities.

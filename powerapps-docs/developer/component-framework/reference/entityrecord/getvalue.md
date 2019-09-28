@@ -16,6 +16,10 @@ ms.assetid: 5928055f-784f-496d-bd96-6921d9574d2f
 
 [!INCLUDE[./includes/getvalue-description.md](./includes/getvalue-description.md)]
 
+## Available for 
+
+Model-driven apps
+
 ## Syntax
 
 `getValue(columnName)`

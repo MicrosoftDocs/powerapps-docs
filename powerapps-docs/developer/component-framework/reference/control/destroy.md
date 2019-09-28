@@ -12,6 +12,10 @@ ms.date: 04/23/2019
 
 [!INCLUDE[./includes/destroy-description.md](./includes/destroy-description.md)]
 
+## Available for 
+
+Model-driven apps and canvas apps (experimental preview)
+
 ## Syntax
 
 `destroy()`

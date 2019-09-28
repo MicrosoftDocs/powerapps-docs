@@ -17,6 +17,10 @@ ms.assetid: 5af40d6f-111f-4c74-a2eb-4ffc79025415
 
 [!INCLUDE [setfilter-description](includes/setfilter-description.md)]
 
+## Available for 
+
+Model-driven apps
+
 ## Syntax
 
 `setFilter(expression)`

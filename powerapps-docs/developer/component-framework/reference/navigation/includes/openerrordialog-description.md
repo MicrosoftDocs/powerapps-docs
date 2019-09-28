@@ -15,4 +15,4 @@ applies_to:
 ms.assetid: 43be6a4c-11c3-4dfc-831f-7a200db28f09
 ---
 
-Opens Error Dialog.
+Displays an error dialog.

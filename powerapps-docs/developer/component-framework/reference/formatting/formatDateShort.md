@@ -17,9 +17,13 @@ ms.assetid: e69a9b6c-f737-4ebb-a9c1-901923b85358
 
 [!INCLUDE [formatdateshort-description](includes/formatdateshort-description.md)]
 
+## Available for 
+
+Model-driven apps and canvas apps (experimental preview)
+
 ## Syntax
 
-`formatDateShort(value, includeTime)`
+`context.formatting.formatDateShort(value, includeTime)`
 
 ## Parameters
 

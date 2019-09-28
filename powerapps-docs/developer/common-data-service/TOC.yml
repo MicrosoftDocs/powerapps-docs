@@ -15,8 +15,8 @@
     href: webapi/index.md
   - name: Use Organization Service
     href: org-service/index.md
-  - name: Add and remove sample data
-    href: sample-data.md
+  - name: Create your own actions
+    href: custom-actions.md
   - name: Use FetchXML to query data
     href: use-fetchxml-construct-query.md
     items:
@@ -60,6 +60,8 @@
     href: impersonate-another-user.md
   - name: Best Practices
     href: best-practices/work-with-data/index.md
+  - name: Add and remove sample data
+    href: sample-data.md    
 - name: Apply business logic using code
   href: apply-business-logic-with-code.md
   items:

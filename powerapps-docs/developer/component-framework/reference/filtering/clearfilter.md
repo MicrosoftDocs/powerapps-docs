@@ -17,6 +17,10 @@ ms.assetid: 6c306633-14a1-4199-95cb-58000b3cafed
 
 [!INCLUDE [clearfilter-description](includes/clearfilter-description.md)]
 
+## Available for 
+
+Model-driven apps
+
 ## Syntax
 
 `clearFilter()`

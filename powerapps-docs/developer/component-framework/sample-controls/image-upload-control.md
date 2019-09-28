@@ -21,6 +21,9 @@ The selected image renders within the component. Meanwhile, the `Remove` button 
 > [!div class="mx-imgBorder"]
 > ![Image Upload component](../media/image-upload-control.png "Image Upload component")
 
+## Available for 
+
+Model-driven apps 
 ## Manifest
 
 ```xml

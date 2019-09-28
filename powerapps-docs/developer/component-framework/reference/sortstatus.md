@@ -19,15 +19,19 @@ ms.assetid: 09f6d0a7-a95a-421e-a413-281d1d0d0e19
 
 [!INCLUDE [sort-description](includes/sortstatus-description.md)]
 
+## Available for 
+
+Model-driven apps
+
 ## Properties
 
-## name
+### name
 
 The name of the column
 
 **Type**: `string`
 
-## sortDirection
+### sortDirection
 
 <!-- ColumnSortDirection  -->
 The current sort direction for the column.

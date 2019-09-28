@@ -21,6 +21,10 @@ To implement this component, the first thing you need to define the [Manifest](.
 > [!div class="mx-imgBorder"]
 > ![Increment component](../media/increment-control.png "Increment component")
 
+## Available for 
+
+Model-driven apps and canvas apps (experimental preview) 
+
 ## Manifest
 
 ```xml

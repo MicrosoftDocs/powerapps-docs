@@ -17,6 +17,10 @@ ms.assetid: 2e3b7c38-7365-40b1-a0ea-614798023aeb
 
 [!INCLUDE [createpopup-description](includes/createpopup-description.md)]
 
+## Available for 
+
+Model-driven apps
+
 ## Syntax
 
 `createPopup(props)`
@@ -25,7 +29,7 @@ ms.assetid: 2e3b7c38-7365-40b1-a0ea-614798023aeb
 
 | Parameter Name|Type|Required|Description|
 | ------------- |----|--------|-----------|
-|props|`Popup`|yes|The popup properties object.|
+|props|`Popup`|Yes|The popup properties object.|
 
 
 ### Related topics

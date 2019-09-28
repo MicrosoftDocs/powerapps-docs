@@ -19,6 +19,10 @@ ms.assetid: d9fb178c-6cc6-48cc-99c0-9972e37dec3e
 
 [!INCLUDE [type-description](includes/type-description.md)]
 
+## Available for
+
+Model-driven apps
+
 ## Parent Elements
 
 |Element|Description|

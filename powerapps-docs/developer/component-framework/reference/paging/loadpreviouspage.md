@@ -17,6 +17,10 @@ ms.assetid: 93cecfc6-bdce-421f-a410-07d95ea77c37
 
 [!INCLUDE [loadpreviouspage-description](includes/loadpreviouspage-description.md)]
 
+## Available for 
+
+Model-driven apps
+
 ## Syntax
 
 `loadPreviousPage()`

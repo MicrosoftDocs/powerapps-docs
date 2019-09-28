@@ -19,6 +19,10 @@ This sample component changes the user experience of interacting with address fi
 > [!div class="mx-imgBorder"]
 > ![Map component](../media/map-control.png "Map component")
 
+## Available for 
+
+Model-driven apps and canvas apps (experimental preview) 
+
 ## Manifest
 
 ```xml

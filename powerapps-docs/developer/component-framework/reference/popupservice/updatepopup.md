@@ -18,6 +18,10 @@ ms.assetid: fd98d153-391d-41e6-ac9d-d2350a4791b9
 
 [!INCLUDE [updatepopup-description](includes/updatepopup-description.md)]
 
+## Available for 
+
+Model-driven apps
+
 ## Syntax
 
 `updatePopup(name, newProps)`
@@ -26,8 +30,8 @@ ms.assetid: fd98d153-391d-41e6-ac9d-d2350a4791b9
 
 | Parameter Name|Type|Required|Description|
 | ------------- |----|--------|-----------|
-|name|`string`|yes|The name of the popup you're trying to update.|
-|newProps|`Popup`|no|The updated properties to give to the popup.|
+|name|`String`|Yes|The name of the popup you're trying to update.|
+|newProps|`Popup`|No|The updated properties to give to the popup.|
 
 
 ### Related topics

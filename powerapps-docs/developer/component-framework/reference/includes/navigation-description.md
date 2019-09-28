@@ -14,4 +14,5 @@ applies_to:
   - "Dynamics 365 Version 9.x"
 ms.assetid: 70764a49-d238-45be-b807-ff27aad00e13
 ---
-The navigation interface of `context.navigation`
+
+Provides navigation-related methods.

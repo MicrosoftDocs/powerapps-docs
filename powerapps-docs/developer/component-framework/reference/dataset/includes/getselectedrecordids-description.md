@@ -15,4 +15,4 @@ applies_to:
 ms.assetid: b360d5aa-4cfb-4504-a404-62a7913c803f
 ---
 
-Retrieves all selected record ids.
+Retrieves all the selected record ids.

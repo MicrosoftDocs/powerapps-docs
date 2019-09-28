@@ -1,7 +1,7 @@
 ---
 title: "Guidelines on working with embedded canvas apps | MicrosoftDocs"
 ms.custom: ""
-ms.date: 07/24/2019
+ms.date: 08/19/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -43,6 +43,13 @@ This topic provides guidelines on working with embedded canvas apps as well as h
     - Support to embed an existing canvas app in a model-driven form using App ID will be provided in a future update.
 - When you view a model-driven form with an embedded canvas app, if you see an error message that reads "Sorry we didn't find that app" make sure that the embedded canvas app is in the same solution as the model-driven form.
 - When you view a model-driven form with an embedded canvas app, if you see an error message that reads "It looks like you don’t have access to this app. Ask its owner to share it with you" make sure that the author has shared the embedded canvas app with you. More information: [Share an embedded canvas app](share-embedded-canvas-app.md).
+- Adding a canvas app on the sub-grid control is no longer available.
+    - In the preview release, makers were able to add a canvas app on a sub-grid control. With canvas app embedding on model-driven forms now generally available, adding an embedded canvas app on a model-driven form is streamlined to the field. 
+    - This makes it easier for makers since they don't have to decide up front whether to pass the current (main form) record as data context or a list of records related to the current (main form) record. 
+    - Makers always start with a field and can access both the current (main form) record or a list of records related to the current (main form) record.
+    - To access the list of related records in the canvas app, makers can use the Common Data Service connector and [Filter](../canvas-apps/functions/function-filter-lookup.md) function with the [Improve data sources experience and Common Data Service views](https://powerapps.microsoft.com/blog/improved-data-source-selection-and-common-data-service-views/) capability enabled in the canvas app.  
+    For example, to access the *Active Contacts* view of the *Contacts* entity, makers can use: *Filter(Contacts, 'Contacts (Views)'.'Active Contacts')*.
+    - Existing canvas apps that use the sub-grid control will continue to work. However, we recommend that you migrate these apps to use a field instead. More information: [Migrating embedded canvas apps on model-driven forms that use a list of records related to the current (main form) record](embedded-canvas-app-migrate-from-preview.md#migrating-embedded-canvas-apps-on-model-driven-forms-that-use-a-list-of-records-related-to-the-current-main-form-record) for details.
 
 ## Enable an embedded canvas app
 1. Select the field that is customized to display as an embedded canvas app.
@@ -58,6 +65,12 @@ This topic provides guidelines on working with embedded canvas apps as well as h
 
 ## Known issues and limitations with embedded canvas apps
 - The canvas app custom control is only supported for use with the **Web** client type. Currently, the **Phone** and **Tablet** client types aren't supported.
+- The ModelDrivenFormIntegration control does not provide a value for fields of a related entity. 
+  - For example, when the ModelDrivenFormIntegration control is connected to the Accounts entity, using *ModelDrivenFormIntegration.Item.’Primary Contact’.’Full Name’* will not return a value. 
+  - To access fields of a related entity makers can use either of the expressions listed here:
+    - *LookUp(Accounts, Account = GUID(First(ModelDrivenFormIntegration.Data).ItemId)).'Primary Contact'.'Full Name'*  
+      - *ItemId* is empty at authoring time but will have a value at runtime.
+    - *LookUp(Accounts, Account = ModelDrivenFormIntegration.Item.Account).'Primary Contact'.'Full Name'* (This expression is easier to read, but the previous expression will perform slightly better.)
 - You can’t use the **Canvas App** privilege in a security role to grant app users access to either an embedded or standalone canvas app. For more information on sharing an embedded canvas app, please refer to: [Share an embedded canvas app](share-embedded-canvas-app.md).
 - If you write back the same data that is being displayed in the host model-driven form, the form will continue to display old data until it is refreshed. An easy way to do that is to use the [RefreshForm](embedded-canvas-app-actions.md#refreshformshowprompt) method.
 

@@ -17,6 +17,10 @@ ms.assetid: 87f5e921-4114-4710-a362-db741426a69b
 
 Indicates which feature their components want to use.
 
+## Available for
+
+Model-driven apps
+
 ## Parent Element
 
 |Element|Description|

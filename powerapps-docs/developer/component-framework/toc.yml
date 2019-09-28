@@ -2,8 +2,10 @@
   items: 
   - name: Overview
     href: overview.md
-  - name: "What are custom components?"
+  - name: What are code components
     href: custom-controls-overview.md
+  - name: Availability for canvas apps
+    href: component-framework-for-canvas-apps.md
   - name: Get tooling
     href: get-powerapps-cli.md
   - name: Tutorial
@@ -12,17 +14,19 @@
       href: implementing-controls-using-typescript.md
   - name: How-to
     items:
-    - name: Create and build a custom component 
+    - name: Create and build a code component 
       href: create-custom-controls-using-pcf.md
-    - name: Debug a custom component
-      href: debugging-custom-controls.md
-    - name: Package a custom component
+    - name: Package a code component
       href: import-custom-controls.md
-    - name: Add components to entities or fields
+    - name: Debug a code component
+      href: debugging-custom-controls.md
+    - name: Add components to model-driven apps
       href: add-custom-controls-to-a-field-or-entity.md
-    - name: Update existing custom components
+    - name: Add components to canvas apps
+      href: component-framework-for-canvas-apps.md#add-components-to-a-canvas-app
+    - name: Update existing code components
       href: updating-existing-controls.md
-    - name: Publish custom components on AppSource
+    - name: Publish code components on AppSource
       href: publish-components-app-source.md
   - name: Limitations
     href: limitations.md
@@ -136,6 +140,8 @@
           href: reference/factory/getpopupservice.md
         - name: requestRender
           href: reference/factory/requestrender.md
+      - name: FileObject
+        href: reference/fileobject.md
       - name: Linking
         href: reference/linking.md
         items:
