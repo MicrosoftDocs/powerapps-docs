@@ -1,11 +1,15 @@
 ---
 title: "View or download developer resources for PowerApps and Common Data Service | MicrosoftDocs"
-description: "Find developer resources and service endpoint URLs PowerApps and Common Data Service"
+description: "Find developer resources and service endpoint URLs for PowerApps and Common Data Service"
 keywords: ""
-ms.date: 09/25/2019
+ms.date: 06/06/2018
 ms.service: powerapps
 ms.custom: 
 ms.topic: article
+applies_to: 
+  - "Dynamics 365 (online)"
+  - "Dynamics 365 Version 9.x"
+  - "powerapps"
 ms.assetid: e200d242-ff3f-48e5-af32-aed050e02441
 author: Mattp123
 ms.author: matp
@@ -39,12 +43,13 @@ This section provides links for developers to find resources. The following reso
 
 |Link |Description|
 |---------|---------|
-|[Developer Center](https://go.microsoft.com/fwlink/?LinkId=551006).|Start here for developer docs on PowerApps and Common Data Service.|
-|[PowerApps Community/Forums](https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1)|Ask and answer questions in the PowerApps community.|
-|[NuGet Packages](https://www.nuget.org/profiles/crmsdk)|Discover NuGet packages to add SDK assemblies to your projects.|
-|[Download Tools](/powerapps/developer/common-data-service/download-tools-nuget)|Tools that you will need are available to download from NuGet. Use the PowerShell script on this page to get the latest versions.|
-|[Sample Code](https://go.microsoft.com/fwlink/?LinkId=553007)|A GitHub repo for PowerApps samples.|
+|[Developer Center](https://go.microsoft.com/fwlink/?LinkId=551006)|The main entry point for documentation for developers.|
+|[Developer Forums](https://go.microsoft.com/fwlink/?LinkId=550993)|Ask and answer questions with other developers.|
+|[NuGet Packages](https://go.microsoft.com/fwlink/?LinkId=550994)|Discover NuGet packages to add SDK assemblies to your projects.|
+|[Download Tools](https://go.microsoft.com/fwlink/?LinkID=512122)|Tools that you will need are available to download from NuGet. Use the PowerShell script on this page to get the latest versions.|
+|[Sample Code](https://go.microsoft.com/fwlink/?LinkId=553007)|A list of samples available.|
 |[Developer Overview](https://go.microsoft.com/fwlink/?LinkId=550995)|Link to a topic providing an overview for developers.|
+
 
 ## Connect your apps to this instance of Common Data Service
 
@@ -58,14 +63,14 @@ This is the URL for the Web API for your instance. The Web API is an OData v4 RE
 
 This is the URL for the SOAP endpoint for the Organization Service for your instance.
 You can download the WSDL for this service here, but usually you will use the CrmSvcUtil.exe code generation tool to build entity classes for .NET projects. More information: 
-- [Developer Documentation: Generate early-bound entity classes using the code generation tool (CrmSvcUtil.exe)](/powerapps/developer/common-data-service/org-service/generate-early-bound-classes)
-- [Developer Documentation: Use the Organization Service to read and write data or metadata](/powerapps/developer/common-data-service/org-service/overview)
+- [Developer Documentation: Create early bound entity classes with the code generation tool (CrmSvcUtil.exe)](/powerapps/developer/common-data-service/org-service/generate-early-bound-classes)
+- [Developer Documentation: Use the Organization Service](/powerapps/developer/common-data-service/org-service/overview)
 
 ### Instance Reference Information
 
 This information uniquely describes your instance. There is a GUID **ID** and a **Unique Name**.
 This information is needed when you use Azure extensions with your instance.
-More information: [Developer Documentation: Azure extensions for Dynamics 365](/dynamics365/customer-engagement/developer/azure-extensions)
+More information: [Azure integration](/powerapps/developer/common-data-service/azure-integration)
 
 ## Connect your apps to the Common Data Service Discovery Service
 
@@ -80,5 +85,7 @@ More information: [Developer Documentation: Discover the URL for your organizati
 ### Discovery Service
 
 This is the endpoint address for the SOAP version of the discovery service to use for your instance. You can also download the service document here.
-More information: [Developer Documentation: Discover the URL for your organization using the Discovery Service](/dynamics365/customer-engagement/developer/org-service/discover-url-organization-organization-service)
+More information: [Developer Documentation: Discover the URL for your organization using the Organization Service](/powerapps/developer/common-data-service/org-service/discovery-service)
   
+  
+

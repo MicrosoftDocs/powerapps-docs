@@ -5,7 +5,7 @@ keywords: PowerApps component framework, code components, Component Framework
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 06/18/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -55,36 +55,6 @@ To update your Microsoft PowerApps CLI to the latest version and take advantage 
 ```CLI
 pac install latest
 ```
-
-### What else do I need to know
-
-If you have already created a solution project or PowerApps component framework project, update these projects to the latest packages, so that you can leverage thenewly added capabilities with your existing projects. Newly created projects contain these settings by default.
-
-- Update the version tag in your `pcfproj` located within your PowerApps component framework project folder:
-
-   ```XML
-   <PackageReference Include="Microsoft.PowerApps.MSBuild.Pcf" Version="0.*"/>
-   ```
-- Update the version tag in your `cdsproj` located within your solution project folder:
-
-   ```XML
-   <PackageReference Include="Microsoft.PowerApps.MSBuild.Solution" Version="0.*"/>
-   ```
-
-    > [!NOTE] 
-    > After making the above changes, run the command `msbuild /t:restore` to update your project to the correct version.
-
-
-- Update the version tag in your `package.json` file located within your PowerApps component framework project folder:
-
-  ```JSON
-  "devDependencies":{
-   "pcf-scripts": "^0",
-   "pcf-start": "^0"
-    }
-  ```
-   > [!NOTE]
-   > After making above changes, using 'npm update' in the command prompt will always update your project to the correct version.
 
 ## Microsoft PowerApps CLI telemetry
 

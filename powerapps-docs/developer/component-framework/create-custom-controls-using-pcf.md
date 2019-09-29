@@ -23,7 +23,7 @@ This topic demonstrates how to create and deploy code components using PowerApps
 
 To get started, open a new Developer Command Prompt for VS 2017 after installing PowerApps CLI.
 
-1. In the Developer Command Prompt for VS 2017, create a new folder on your local hard drive for example, *C:\Users\your name\Documents\My_PCF_Componet*
+1. In the Developer Command Prompt for VS 2017, create a new folder on your local hard drive for example, *C:\Users\your name\Documents\My_PCF_Componet*. 
 2. Go to the newly created folder using the command `cd <specify your new folder path>`
 3. Run the command to create a new component project by passing some basic parameters:
 
@@ -59,19 +59,20 @@ To build the component project, open the project folder that contains `package.j
 
 **Publisher Prefix**
 
-1. If a component is created using the CLI tooling version lower than 0.4.3,  you will hit an error while trying to re-import the solution file into Common Data Service. The error is thrown because the newly imported component name is now being appended with the publisher prefix to ensure its uniqueness and to avoid collisions.
+If a component is created using the PowerApps CLI tooling version lower than 0.4.3,  you will hit an error while trying to re-import the solution file into Common Data Service. The error is thrown because the newly imported component name is now being appended with the publisher prefix to ensure its uniqueness and to avoid collisions.
 
-    **Workaround**:
-     - Delete the solution containing relevant component from Common Data Service. If the component is already configured on a form or grid, it needs to be removed there first as the component solution had dependency on configuration.  
-    - Import the new solution with updates to the component built by latest CLI version.
-    - Newly imported components can now be configured on forms or grids.  
+**Workaround**:
+
+- Delete the solution containing relevant component from Common Data Service. If the component is already configured on a form or grid, it needs to be removed there first as the component solution had dependency on configuration.  
+- Import the new solution with updates to the component built by latest CLI version.
+- Newly imported components can now be configured on forms or grids.  
 
 
-2. When the components are created with the publisher prefix in mixed or upper case using the new CLI tooling version, it throws an error while importing the solution. This happens because the updated tooling version (0.4.3 and newer) now enforces the platform standard for lower case publisher prefix.
+<!--2. When the components are created with the publisher prefix in mixed or upper case using the new CLI tooling version, it throws an error while importing the solution. This happens because the updated tooling version (0.4.3 and newer) now enforces the platform standard for lower case publisher prefix.
 
    **Workaround**:
 
-    Update the solution and customizations to ensure that the associated prefix is modified to lower case and import the new solution into Common Data Service.
+    Update the solution and customizations to ensure that the associated prefix is modified to lower case and import the new solution into Common Data Service.-->
 
 
 ### See also

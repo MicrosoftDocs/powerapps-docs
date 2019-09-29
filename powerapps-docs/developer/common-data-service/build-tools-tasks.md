@@ -55,6 +55,7 @@ The following outlines how to generate the required Azure Active Directory (AAD)
 1. Copy and paste the following into the PowerShell prompt:
 
 ``` function New-PowerAppsCheckerAzureADApplication
+function New-PowerAppsCheckerAzureADApplication
 {
     [CmdletBinding()]
     param(

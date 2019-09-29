@@ -17,7 +17,7 @@ This topic demonstrates how to import code components into Common Data Service. 
 
 Follow the steps below to create and import a solution file:
 
-1. Create a new solution project in the directory of your choice using the command `pac solution init --publisher-name <enter your publisher name> --publisher-prefix <enter your publisher name>` after `cd <your new folder>`. The solution project is used for packaging the code component into a solution zip file which is used for importing to your environment.
+1. Create a new solution project in the directory of your choice using the command `pac solution init --publisher-name <enter your publisher name> --publisher-prefix <enter your publisher name>` after `cd <your new folder>`. The solution project is used for packaging the code component into a solution zip file which is used for importing to your environment. To ensure that the duplicate project names aren't used accidentally, the PowerApps CLI tooling validates the solution projects to prevent them from sharing the same name as those they reference.
 
    > [!NOTE]
    > The `publisher-name` and `publisher-prefix` values must be unique to your environment.
@@ -75,12 +75,13 @@ You can deploy the code components directly from the PowerApps CLI by authentica
 
 After you have successfully created an authentication profile, you can start pushing the code component to your environment of choice with all the latest changes. The `push` capability speeds up the inner-developer cycle development as it bypasses the code component versioning requirements and does not require that you build your solution (your cdsproj) in order to import the code component. To use the push capability, follow below the steps below:
 
-1.	Ensure that you have a valid authentication profile created
-2.	In your VS command prompt, go to the root directory containing of your code component project in your VS command prompt
+1.	Ensure that you have a valid authentication profile created.
+2.	In your VS command prompt, go to the root directory containing your code component project.
 3.	Run the command `pac pcf push --publisher-prefix <your publisher prefix>`
 
 > [!NOTE]
 > The publisher prefix that you use with the `push` command should match the publisher prefix of the publisher of your solution in which the component will be included.
+> The `pac pcf push` command will not delete any temporary solutions.
 
 
 ## How to remove components from a solution

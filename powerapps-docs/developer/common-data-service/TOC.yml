@@ -157,13 +157,13 @@
       href: work-data-azure-solution.md
     - name: Work with event data in your Azure Event Hub solution
       href: work-event-data-azure-event-hub-solution.md
-    - name: Configure Azure integration with Common Data Service for App
+    - name: Configure Azure integration with Common Data Service
       href: configure-azure-integration.md
     - name: Write a custom Azure-aware plug-in
       href: write-custom-azure-aware-plugin.md
     - name: Write a listener application for a Azure solution
       href: write-listener-application-azure-solution.md
-    - name: "Tutorial: Configure Azure (SAS) for integration with Customer Engagement"
+    - name: "Tutorial: Configure Azure (SAS) for integration with Common Data Service"
       href: walkthrough-configure-azure-sas-integration.md
     - name: "Tutorial: Register an Azure-aware plug-in using the Plug-in Registration Tool"
       href: walkthrough-register-azure-aware-plug-in-using-plug-in-registration-tool.md
@@ -424,7 +424,7 @@
 - name: Resources
   items:
   - name: Developer resources page
-    href: developer-resources-page.md
+    href: view-download-developer-resources.md
   - name: Developer tools
     href: developer-tools.md
     items:
