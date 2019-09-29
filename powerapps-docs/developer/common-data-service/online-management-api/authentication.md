@@ -1,10 +1,9 @@
 ---
-title: "Authenticate to use the Online Management API for Dynamics 365 for Customer Engagement| MicrosoftDocs"
-description: "Provides information about authenticating to the Online Management API to perform instance-related operations."
+title: "Authenticate to use the Online Management API for Common Data Service| MicrosoftDocs"
+description: "Provides information about authenticating to the Online Management API to perform environment-related operations."
 ms.date: 11/27/2017
 ms.service: crm-online
 ms.topic: conceptual
-applies_to: Dynamics 365 for Customer Engagement (online)
 ms.assetid: c292c148-01f0-41f6-a2fe-7ed05a01a733
 author: KumarVivek
 ms.author: kvivek
@@ -18,13 +17,13 @@ search.app:
 
 Online Management API supports OAuth 2.0 protocol for authentication. Use [Azure Active Directory (AAD)](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-whatis) to authenticate by obtaining a valid OAuth 2.0 access token, and pass it using the **Authorization** header in your requests to the Online Management API.
 
-The recommended authentication API to use with the Online Management API is [Azure Active Directory Authentication Library (ADAL)](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-authentication-libraries), which is available for a wide variety of platforms and programming languages. 
+The recommended authentication API to use with the Online Management API is [Azure Active Directory Authentication Library (ADAL)](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-libraries), which is available for a wide variety of platforms and programming languages. 
 
 ## How to authenticate?
 
 These are the broad steps to authenticate to the Online Management API service. 
 
-1. Register an app with Azure Active Directory to obtain *clientId* and *redirectUrl* values for your app. For information about this, see the "App registration for OAuth authentication" section in [Walkthrough: Register a Dynamics 365 for Customer Engagement app with Azure Active Directory](https://msdn.microsoft.com/library/mt622431.aspx)
+1. Register an app with Azure Active Directory to obtain *clientId* and *redirectUrl* values for your app. For information about this, see the "App registration for OAuth authentication" section in [Walkthrough: Register an app with Azure Active Directory](/powerapps/developer/common-data-service/walkthrough-register-app-azure-active-directory)
 
 1. Specify the values obtained from step# 1 in the authentication [helper code](sample-authentication-helper.md):
 
@@ -58,7 +57,7 @@ These are the broad steps to authenticate to the Online Management API service.
         }
     }
     ```
-1. Use the resource you discoverd in the previous step along with the client ID and redirect URL values of your client app to acquire an access token. Note that you must use the resource, and not service URL to acquire or refresh access token.
+1. Use the resource you discovered in the previous step along with the client ID and redirect URL values of your client app to acquire an access token. Note that you must use the resource, and not service URL to acquire or refresh access token.
 
     ```csharp
     public AuthenticationResult AcquireToken()
@@ -85,7 +84,7 @@ These are the broad steps to authenticate to the Online Management API service.
     }
     ```
 
-You are all set to execute messages against the Online Management API. For a sample code that demonstrates how to retrieve all Customer Engagement instances in your Office 365 tenant, see [Quick Start Sample: Retrieve instances in your tenant](sample-quick-start.md)
+You are all set to execute messages against the Online Management API. For a sample code that demonstrates how to retrieve all Common Data Service environments in your Office 365 tenant, see [Quick Start Sample: Retrieve environments in your tenant](sample-quick-start.md)
 
 
 ### Related Topics  

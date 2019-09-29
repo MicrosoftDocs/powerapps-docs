@@ -2,8 +2,8 @@
   "swagger": "2.0",
   "info": {
     "version": "v1.2",
-    "title": "Online Management API for Dynamics 365 Customer Engagement",
-    "description": "The REST API provides the ability to manage the Customer Engagement online instances in an Office 365 tenant."
+    "title": "Online Management API for Common Data Service",
+    "description": "The REST API provides the ability to manage the Common Data Service environments in an Office 365 tenant."
   },
   "host": "{ServiceUrl}",
   "schemes": [
@@ -15,7 +15,7 @@
         "tags": [
           "Currencies"
         ],
-        "summary": "Retrieves currencies in a Customer Engagement instance.",
+        "summary": "Retrieves currencies in a Common Data Service environment.",
         "description": "For a list of region-specific service URLs, see [Service URL](/dynamics365/customer-engagement/developer/online-management-api/get-started-online-management-api#service-url)",
         "operationId": "GetCurrencies",
         "consumes": [],
@@ -26,7 +26,7 @@
         "parameters": [],
         "responses": {
           "200": {
-            "description": "List of available currencies in a Customer Engagement instance.",
+            "description": "List of available currencies in a Common Data Service environment.",
             "schema": {
               "type": "array",
               "items": {
@@ -42,7 +42,7 @@
         "tags": [
           "InstanceBackups"
         ],
-        "summary": "Retrieves all backups of a Customer Engagement instance.",
+        "summary": "Retrieves all backups of a Common Data Service environment.",
         "description": "For a list of region-specific service URLs, see [Service URL](/dynamics365/customer-engagement/developer/online-management-api/get-started-online-management-api#service-url)",
         "operationId": "GetInstanceBackups",
         "consumes": [],
@@ -62,7 +62,7 @@
         ],
         "responses": {
           "200": {
-            "description": "List of backups available for a Customer Engagement instance.",
+            "description": "List of backups available for a Common Data Service environment.",
             "schema": {
               "type": "array",
               "items": {
@@ -79,7 +79,7 @@
         "tags": [
           "InstanceBackups"
         ],
-        "summary": "Backs up a Customer Engagement instance.",
+        "summary": "Backs up a Common Data Service environment.",
         "description": "For a list of region-specific service URLs, see [Service URL](/dynamics365/customer-engagement/developer/online-management-api/get-started-online-management-api#service-url)",
         "operationId": "BackupInstance",
         "consumes": [
@@ -122,7 +122,7 @@
         "tags": [
           "InstanceBackups"
         ],
-        "summary": "Retrieves a Customer Engagement instance backup based on the restore point.",
+        "summary": "Retrieves a Common Data Service environment backup based on the restore point.",
         "description": "For a list of region-specific service URLs, see [Service URL](/dynamics365/customer-engagement/developer/online-management-api/get-started-online-management-api#service-url)",
         "operationId": "GetInstanceBackup",
         "consumes": [],
@@ -150,7 +150,7 @@
         ],
         "responses": {
           "200": {
-            "description": "A Customer Engagement instance backup.",
+            "description": "A Common Data Service environment backup.",
             "schema": {
               "$ref": "#/definitions/InstanceBackup"
             }
@@ -166,7 +166,7 @@
         "tags": [
           "Instances"
         ],
-        "summary": "Retrieves all Customer Engagement instances in your Office 365 tenant.",
+        "summary": "Retrieves all Common Data Service environments in your Office 365 tenant.",
         "description": "For a list of region-specific service URLs, see [Service URL](/dynamics365/customer-engagement/developer/online-management-api/get-started-online-management-api#service-url)",
         "operationId": "GetInstances",
         "consumes": [],
@@ -177,7 +177,7 @@
         "parameters": [],
         "responses": {
           "200": {
-            "description": "List of Customer Engagement instances instances retrieved from your Office 365 tenant.",
+            "description": "List of Common Data Service environments retrieved from your Office 365 tenant.",
             "schema": {
               "type": "array",
               "items": {
@@ -193,7 +193,7 @@
         "tags": [
           "Instances"
         ],
-        "summary": "Retrieves a Customer Engagement instance in your Office 365 tenant.",
+        "summary": "Retrieves a Common Data Service environment in your Office 365 tenant.",
         "description": "For a list of region-specific service URLs, see [Service URL](/dynamics365/customer-engagement/developer/online-management-api/get-started-online-management-api#service-url)",
         "operationId": "GetInstance",
         "consumes": [],
@@ -205,7 +205,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "ID of an instance to retieve.",
+            "description": "ID of an instance to retrieve.",
             "required": true,
             "type": "string",
             "format": "uuid"
@@ -213,7 +213,7 @@
         ],
         "responses": {
           "200": {
-            "description": "The retrieved Customer Engagement instance.",
+            "description": "The retrieved Common Data Service environment.",
             "schema": {
               "$ref": "#/definitions/Instance"
             }
@@ -229,7 +229,7 @@
         "tags": [
           "Instances"
         ],
-        "summary": "Provisions (creates) a Customer Engagement instance in your Office 365 tenant.",
+        "summary": "Provisions (creates) a Common Data Service environment in your Office 365 tenant.",
         "description": "For a list of region-specific service URLs, see [Service URL](/dynamics365/customer-engagement/developer/online-management-api/get-started-online-management-api#service-url)",
         "operationId": "ProvisionInstance",
         "consumes": [
@@ -244,7 +244,7 @@
           {
             "name": "newInstance",
             "in": "body",
-            "description": "Allowed state for the new instance.",
+            "description": "Allowed state for the new environment.",
             "required": true,
             "schema": {
               "$ref": "#/definitions/NewInstance"
@@ -344,7 +344,7 @@
         "tags": [
           "Instances"
         ],
-        "summary": "Resets a Customer Engagement instance in your Office 365 tenant.",
+        "summary": "Resets a Common Data Service environment in your Office 365 tenant.",
         "description": "For a list of region-specific service URLs, see [Service URL](/dynamics365/customer-engagement/developer/online-management-api/get-started-online-management-api#service-url)",
         "operationId": "ResetInstance",
         "consumes": [
@@ -359,7 +359,7 @@
           {
             "name": "targetInstanceId",
             "in": "path",
-            "description": "ID of the Customer Engagement instance that you want to reset.",
+            "description": "ID of the Common Data Service environment that you want to reset.",
             "required": true,
             "type": "string",
             "format": "uuid"
@@ -403,7 +403,7 @@
         "tags": [
           "Instances"
         ],
-        "summary": "Restores a Customer Engagement instance in your Office 365 tenant.",
+        "summary": "Restores a Common Data Service environment in your Office 365 tenant.",
         "description": "For a list of region-specific service URLs, see [Service URL](/dynamics365/customer-engagement/developer/online-management-api/get-started-online-management-api#service-url)",
         "operationId": "RestoreInstance",
         "consumes": [
@@ -418,7 +418,7 @@
           {
             "name": "targetInstanceId",
             "in": "path",
-            "description": "ID of the Customer Engagement instance that you want to restore.",
+            "description": "ID of the Common Data Service environment that you want to restore.",
             "required": true,
             "type": "string",
             "format": "uuid"
@@ -457,7 +457,7 @@
         "tags": [
           "Instances"
         ],
-        "summary": "Force applies a user on a Customer Engagement instance.",
+        "summary": "Force applies a user on a Common Data Service environment.",
         "description": "For a list of region-specific service URLs, see [Service URL](/dynamics365/customer-engagement/developer/online-management-api/get-started-online-management-api#service-url)",
         "operationId": "ApplyUser",
         "consumes": [],
@@ -469,7 +469,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "ID of the Customer Engagement instance to force apply the user.",
+            "description": "ID of the Common Data Service environment to force apply the user.",
             "required": true,
             "type": "string",
             "format": "uuid"
@@ -507,7 +507,7 @@
         "tags": [
           "Instances"
         ],
-        "summary": "Updates the Admin Mode settings of a Customer Engagement instance.",
+        "summary": "Updates the Admin Mode settings of a Common Data Service environment.",
         "description": "For a list of region-specific service URLs, see [Service URL](/dynamics365/customer-engagement/developer/online-management-api/get-started-online-management-api#service-url)",
         "operationId": "UpdateInstanceAdminMode",
         "consumes": [
@@ -522,7 +522,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "ID of the Customer Engagement instance to update the admin mode settings.",
+            "description": "ID of the Common Data Service environment to update the admin mode settings.",
             "required": true,
             "type": "string",
             "format": "uuid"
@@ -568,7 +568,7 @@
         "tags": [
           "Instances"
         ],
-        "summary": "Updates instance settings for the specified Customer Engagement instance.",
+        "summary": "Updates instance settings for the specified Common Data Service environment.",
         "description": "For a list of region-specific service URLs, see [Service URL](/dynamics365/customer-engagement/developer/online-management-api/get-started-online-management-api#service-url)",
         "operationId": "ConfigureInstance",
         "consumes": [
@@ -629,7 +629,7 @@
         "tags": [
           "Instances"
         ],
-        "summary": "Deletes a Customer Engagement instance in your Office 365 tenant.",
+        "summary": "Deletes a Common Data Service environment in your Office 365 tenant.",
         "description": "For a list of region-specific service URLs, see [Service URL](/dynamics365/customer-engagement/developer/online-management-api/get-started-online-management-api#service-url)",
         "operationId": "DeleteInstance",
         "consumes": [],
@@ -641,7 +641,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "ID of the Customer Engagement instance to delete.",
+            "description": "ID of the Common Data Service environment to delete.",
             "required": true,
             "type": "string",
             "format": "uuid"
@@ -684,7 +684,7 @@
         "tags": [
           "InstanceTypeInfo"
         ],
-        "summary": "Retrieve information about all the instance types in Customer Engagement.",
+        "summary": "Retrieve information about all the environment types in Common Data Service.",
         "description": "For a list of region-specific service URLs, see [Service URL](/dynamics365/customer-engagement/developer/online-management-api/get-started-online-management-api#service-url)",
         "operationId": "GetInstanceTypesInfo",
         "consumes": [],
@@ -711,7 +711,7 @@
         "tags": [
           "InstanceTypeInfo"
         ],
-        "summary": "Retrieve information about a Customer Engagement instance type.",
+        "summary": "Retrieve information about a Common Data Service environment type.",
         "description": "For a list of region-specific service URLs, see [Service URL](/dynamics365/customer-engagement/developer/online-management-api/get-started-online-management-api#service-url)",
         "operationId": "GetInstanceTypeInfo",
         "consumes": [],
@@ -1132,7 +1132,7 @@
         "tags": [
           "OperationStatus"
         ],
-        "summary": "Retrieves status of an operation in your Customer Engagement instance.",
+        "summary": "Retrieves status of an operation in your Common Data Service environment.",
         "description": "For a list of region-specific service URLs, see [Service URL](/dynamics365/customer-engagement/developer/online-management-api/get-started-online-management-api#service-url)",
         "operationId": "GetOperationStatus",
         "consumes": [],
@@ -1168,7 +1168,7 @@
         "tags": [
           "OperationStatus"
         ],
-        "summary": "Retrieves operation status of a Customer Engagement instance.",
+        "summary": "Retrieves operation status of a Common Data Service environment.",
         "description": "For a list of region-specific service URLs, see [Service URL](/dynamics365/customer-engagement/developer/online-management-api/get-started-online-management-api#service-url)",
         "operationId": "GetOperationStatusByQuery",
         "consumes": [],
@@ -1208,7 +1208,7 @@
         "tags": [
           "ServiceVersions"
         ],
-        "summary": "Retrieves information about all the supported releases for Customer Engagement.",
+        "summary": "Retrieves information about all the supported releases for Common Data Service.",
         "description": "For a list of region-specific service URLs, see [Service URL](/dynamics365/customer-engagement/developer/online-management-api/get-started-online-management-api#service-url)",
         "operationId": "GetServiceVersions",
         "consumes": [],
@@ -1235,7 +1235,7 @@
         "tags": [
           "Templates"
         ],
-        "summary": "Retrieves templates supported for provisioning a Customer Engagement instance.",
+        "summary": "Retrieves templates supported for provisioning a Common Data Service environment.",
         "description": "For a list of region-specific service URLs, see [Service URL](/dynamics365/customer-engagement/developer/online-management-api/get-started-online-management-api#service-url)",
         "operationId": "GetTemplates",
         "consumes": [],
@@ -2052,26 +2052,26 @@
       "type": "object",
       "properties": {
         "Code": {
-          "description": "Code of the Currency in Customer Engagement",
+          "description": "Code of the Currency in Common Data Service",
           "maxLength": 3,
           "minLength": 3,
           "type": "string"
         },
         "Precision": {
-          "description": "Precision of the Currency in Customer Engagement",
+          "description": "Precision of the Currency in Common Data Service",
           "format": "int32",
           "maximum": 4,
           "minimum": 0,
           "type": "integer"
         },
         "Symbol": {
-          "description": "Symbol of the Currency in Customer Engagement",
+          "description": "Symbol of the Currency in Common Data Service",
           "maxLength": 4,
           "minLength": 0,
           "type": "string"
         },
         "Name": {
-          "description": "Name of the Currency in Customer Engagement",
+          "description": "Name of the Currency in Common Data Service",
           "type": "string"
         }
       }

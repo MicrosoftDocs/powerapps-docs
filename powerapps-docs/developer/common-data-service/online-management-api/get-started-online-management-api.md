@@ -1,8 +1,8 @@
 ---
-title: "Get started with Online Management API for Dynamics 365 for Customer Engagement| MicrosoftDocs"
-description: "Provides basic information to help you get started with the Online Admin API for Customer Engagement."
-ms.date: 03/28/2019
-ms.service: crm-online
+title: "Get started with Online Management API for Common Data Service| MicrosoftDocs"
+description: "Provides basic information to help you get started with the Online Admin API for Common Data Service."
+ms.date: 09/30/2019
+ms.service: powerapps
 ms.topic: conceptual
 ms.assetid: c292c148-01f0-41f6-a2fe-7ed05a01a733
 author: KumarVivek
@@ -11,11 +11,11 @@ manager: annbe
 search.audienceType: 
   - developer
 search.app: 
-  - D365CE
+  - PowerApps
 ---
 # Get started with Online Management API 
 
-This topic provides basic information to help you get started with the Online Admin API for Customer Engagement.
+This topic provides basic information to help you get started with the Online Admin API for Common Data Service.
 
 ## Office 365 Admin roles
 
@@ -37,7 +37,7 @@ For example, you can pass in the following URL with a **GET** request to retriev
 `https://admin.services.crm.dynamics.com/api/v1.2/instances`
 
 
-The following table lists the service URL of Online Management API for worldwide Office 365 data centers.
+The following table lists the service URLs of Online Management API for worldwide Office 365 data centers.
 
 |Location | Service URL |
 |---------|-------------|
@@ -55,7 +55,7 @@ The following table lists the service URL of Online Management API for worldwide
 
 ## Standard headers
 
-The Online Management API has following standard request and response headers.   
+The Online Management API has following standard request and response headers.
 
 ### Request headers
 
