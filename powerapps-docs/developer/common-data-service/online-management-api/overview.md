@@ -23,7 +23,7 @@ Application publishers and ISVs can use the Online Management API to:
 Using the Online Management API, you can perform various tasks on your environment such as create, retrieve, delete, backup and restore environments, and other environment-related tasks.
 
 > [!NOTE]
-> Administrators can manage Common Data Service environments using the admin center or [PowerShell cmdlets](/powershell/dynamics365/customer-engagement/overview#get-started-using-the-microsoftxrmonlinemanagementapi-module) 
+> Administrators can manage Common Data Service environments using the admin center or [PowerShell cmdlets](/powershell/dynamics365/customer-engagement/overview#get-started-using-the-microsoftxrmonlinemanagementapi-module). 
   
 ### Related Sections  
 
