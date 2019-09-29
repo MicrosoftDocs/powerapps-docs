@@ -1,4 +1,3 @@
-# This TOC is a work in progress. The specific location of items is not locked down
 - name: Common Data Service
   href: ../../maker/common-data-service/data-platform-intro.md
 - name: Developer overview
@@ -414,7 +413,7 @@
 - name: Best practices
   href: best-practices/index.md
 - name: Online Management API
-  href: online-management-api/toc.yml
+  href: online-management-api/overview.md
 - name: Samples
   items:
   - name: Web API
