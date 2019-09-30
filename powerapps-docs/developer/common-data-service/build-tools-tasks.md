@@ -54,7 +54,7 @@ The following outlines how to generate the required Azure Active Directory (AAD)
 3.	This prompts you to trust the modules from PSGallery. Select **A (Yes to all)**.
 1. Copy and paste the following into the PowerShell prompt:
 
-``` function New-PowerAppsCheckerAzureADApplication
+```powershell 
 function New-PowerAppsCheckerAzureADApplication
 {
     [CmdletBinding()]
