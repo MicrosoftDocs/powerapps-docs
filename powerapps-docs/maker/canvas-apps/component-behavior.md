@@ -20,7 +20,7 @@ search.app:
 
 Specify one or more [behavior formulas](working-with-formulas-in-depth.md) that run when an event triggers a change in component instances. For example, set a component's **OnReset** property to one or more formulas that perform initialization, clear input, and reset values when the **Reset** function runs on the component instances.
 
-## OnReset
+## Update OnReset using formula
 
 With a component master selected, select **OnReset** in the drop-down list of properties (on the left side of the formula bar), and then enter one or more formulas.
 
@@ -41,11 +41,10 @@ To trigger reset, go to a screen and insert an instance of the component. Add a 
 > [!div class="mx-imgBorder"]
 > ![Reset button](./media/component-behavior/reset-button.png)
 
-## Custom properties trigger OnReset when value changes
+## Update OnReset using custom property
 
 Besides resetting a component instance from the outside of the component, there is another method to trigger the OnReset from the inside. "**Raise OnReset when value changes**" is an option when creating a custom input property, and it allows the value changes of this property to trigger OnReset of the component. This method is designed to set and reset default value easily. 
 
-> [!div class="mx-imgBorder"]
 > ![OnReset example](./media/component-behavior/property-trigger.png)
 
 ### Example
