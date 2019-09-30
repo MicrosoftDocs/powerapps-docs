@@ -34,7 +34,6 @@ Manifest is the metadata file that defines a component. It is an XML document th
 
 When a user configures a code component, the data in the manifest file filters out the available components so that only valid components for the context are available for configuration. The properties defined in the manifest file for a component are rendered as configuration fields so that the user configuring the component can specify the values. These property values are then available to the component  at runtime. More information: [Manifest file reference](manifest-schema-reference/index.md)
 
-## Component implementation library
 
 [!INCLUDE [component-implementation-library](control-implementation-library.md)]
 
