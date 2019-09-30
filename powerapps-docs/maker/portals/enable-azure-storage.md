@@ -17,7 +17,7 @@ Azure Storage integration for portals enables you to take advantage of the great
 
 You must create a storage account with **Resource manager** as the deployment model. [!include[More information](../../includes/proc-more-information.md)] [Create an Azure storage account](https://docs.microsoft.com/en-us/azure/storage/storage-create-storage-account#create-a-storage-account).
 
-After the storage account is running, portals require certain global settings that tell the application how to locate your storage account. From Dynamics 365, go to **Settings** > **Settings**, and add a new setting named **FileStorage/CloudStorageAccount**.
+After the storage account is running, portals require certain global settings that tell the application how to locate your storage account. In the Portal Management app, go to **Settings** > **New**, and add a new setting named **FileStorage/CloudStorageAccount**.
 
 > [!NOTE]
 > The maximum file upload size is 125 MB.
@@ -42,7 +42,7 @@ To locate the value for FileStorage/CloudStorageAccount, you must get a connecti
 
 If you do not already have an Azure Blob container in your storage account, you must add one by using your [!include[Azure portal](../../includes/pn-azure-portal.md)].
 
-From Dynamics 365, go to **Settings** > **Settings**, and add a new setting named FileStorage/CloudStorageContainerName, using the name of your container as the value.
+In the Portal Management app, go to **Settings** > **New**, and add a new setting named **FileStorage/CloudStorageContainerName**, using the name of your container as the value.
 
 ![Portal setting for cloud storage container](media/portal-site-setting-cloud-storage-container.png "Portal setting for your cloud storage container")
 
@@ -50,7 +50,7 @@ From Dynamics 365, go to **Settings** > **Settings**, and add a new setting name
 
 You must add cross-origin resource sharing (CORS) rule on your Azure Storage account as follows, otherwise you will see the regular attachment icon rather than the cloud icon:
 
-- **Allowed origins**: Specify your Dynamics 365 for Customer Engagement domain. For example, contoso.crm.dynamics.com.
+- **Allowed origins**: Specify your domain. For example, contoso.crm.dynamics.com.
 - **Allowed verbs**: GET, PUT, DELETE, HEAD, POST
 - **Allowed headers**: Specify the request headers that the origin domain may specify on the CORS request. For example, x-ms-meta-data\*, x-ms-meta-target\*. 
 - **Exposed headers**: Specify the response headers that may be sent in the response to the CORS request and exposed by the browser to the request issuer. For example, x-ms-meta-\*.
@@ -68,7 +68,7 @@ Add the following site settings from **Portals** > **Site Settings**. [!include[
 |WebFiles/StorageLocation|AzureBlobStorage|
 |||
 
-You can now create a child file in portal and mention fully qualified name (along with container) in Azure Blob address URL. With these settings, your portal capabilities for Dynamics 365 application is ready to begin uploading and downloading files to and from Azure Storage. However, you cannot take full advantage of this feature until you [add a web resource to enable uploading attachments to Azure Storage](add-web-resource.md), and configure [entity forms](configure-notes.md#notes-configuration-for-entity-forms) or [web forms](configure-notes.md#notes-configuration-for-web-forms) to use it.
+You can now create a child file in portal and mention fully qualified name (along with container) in Azure Blob address URL. With these settings, your portal is ready to begin uploading and downloading files to and from Azure Storage. However, you cannot take full advantage of this feature until you [add a web resource to enable uploading attachments to Azure Storage](add-web-resource.md), and configure [entity forms](configure-notes.md#notes-configuration-for-entity-forms) or [web forms](configure-notes.md#notes-configuration-for-web-forms) to use it.
 
 ### See also
 
