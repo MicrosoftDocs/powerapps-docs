@@ -159,7 +159,8 @@ Even though an entity has an image field, displaying that image in a model-drive
   
 When image display is enabled for an entity, any records that don’t have an image will display a placeholder image. For example:
 
-![Default entity image](../common-data-service/media/default-entity-image-on-form.png)
+> [!div class="mx-imgBorder"] 
+> ![Default entity image](../common-data-service/media/default-entity-image-on-form.png "Default entity image")
   
 People can choose the default image to upload a picture from their computer. Images must be less than 5120 KB and must one of the following formats:  
   
@@ -185,6 +186,9 @@ When an image is uploaded, it will be resized to a maximum size of 144 pixels by
 6.	Open the form where you want image support, such as the entity main form. 
 7.	On the form editor ribbon, select **Form Properties**. 
 8.	On the **Form Properties** page, select the **Display** tab, select **Show image in the form**, and then select **OK**. 
+   > [!div class="mx-imgBorder"] 
+   > ![Show image in the form setting](media/show-image-on-form.png "Show image in the form setting")
+
 9.	On the form editor ribbon, select **Save**, and then select **Publish**. Close the form editor. 
 
 App users can now select the image to display on the form. When an app user opens the form for a record, they can choose the image that they want displayed on the form. 
@@ -194,10 +198,12 @@ App users can now select the image to display on the form. When an app user open
 
 #### Change the image for a record
 1. Open the app that includes the entity form, and then select the image on the form. 
-   ![Default entity image](../common-data-service/media/default-entity-image-on-form.png)
+   > [!div class="mx-imgBorder"] 
+   > ![Default entity image](../common-data-service/media/default-entity-image-on-form.png "Default entity image")
 
 2. Select **Upload image**, browse and select the image you want displayed on the entity form, and then select **Change**. The image appears on the record. 
-     ![Default entity image](../common-data-service/media/custom-entity-icon-record.png)
+   > [!div class="mx-imgBorder"] 
+   > ![Changed image saved to a record](../common-data-service/media/custom-entity-icon-record.png "Changed image saved to a record")
 
 
 More information for developers working with image data:
