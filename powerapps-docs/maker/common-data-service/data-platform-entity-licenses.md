@@ -22,7 +22,7 @@ App makers can use most of the entities available within Common Data Service (in
 |Entity    |Description    |Requirement    |
 |---------|---------|---------|
 |Entities with complex business logic   | These are entities that use complex server-side business logic. For example, any entity that uses a real-time workflow or code plug-in.       |  [PowerApps Plan 2](https://powerapps.microsoft.com/pricing/) or [Flow Plan 2](https://flow.microsoft.com/pricing/)        |
-|Restricted entities  |  These are entities that are not standard with Common Data Service but are included in a Dynamics 365 customer engagement application or third-party solution. For example, the knowledge article, goal, and entitlement entities.     |  [A Dynamics 365 plan](https://dynamics.microsoft.com/pricing/)      | 
+|Restricted entities  |  These are entities that are not standard with Common Data Service but are included in a model-driven app available in Dynamics 365 (such as Dynamics 365 Sales or Dynamics 365 Customer Service) or a third-party solution. For example, the knowledge article, goal, and entitlement entities.     |  [A Dynamics 365 plan](https://dynamics.microsoft.com/pricing/)      | 
 
 
 > [!NOTE]
@@ -31,13 +31,13 @@ App makers can use most of the entities available within Common Data Service (in
 ## Entities with complex business logic
 Entities that include the following complex server-side logic require users of an app or flow that uses these entities to have a PowerApps Plan 2 or Microsoft Flow Plan 2 license:
 
-* Code plug-ins (for more information, see [Plug-in development](https://docs.microsoft.com/dynamics365/customer-engagement/developer/plugin-development))
-* Real-time workflows (for more information, see [Workflow processes](https://docs.microsoft.com/dynamics365/customer-engagement/customize/workflow-processes))
+* Code plug-ins (for more information, see [Plug-in development](/powerapps/developer/common-data-service/plug-ins))
+* Real-time workflows (for more information, see [Workflow processes](/flow/workflow-processes))
 
     > [!NOTE]
     >  Only workflows that are converted to a real-time workflow are considered real-time and synchronous. Workflows that are run in the background can still be used with the appropriate PowerApps plan and do not require additional licenses.
 
-To know whether or not you added complex business logic to your entities, review the list of plug-in assemblies and workflows configured in your environment. For the list of entities which may contain server side logic after installing a Dynamics 365 application, see [Complex entities requiring PowerApps Plan 2 licenses](data-platform-complex-entities.md)  
+To know whether or not you added complex business logic to your entities, review the list of plug-in assemblies and workflows configured in your environment. For the list of entities which may contain server side logic after installing a model-driven application in Dynamics 365 (such as Dynamics 365 Sales or Dynamics 365 Customer Service), see [Complex entities requiring PowerApps Plan 2 licenses](data-platform-complex-entities.md)  
 
 ### Impacting license requirements when adding complex business logic
 App makers can add code plug-ins and real-time workflows to entities within Common Data Service, but doing so could change the license requirements for users of apps already deployed. App makers should be cautious when adding complex business logic to an entity and should first check which apps use the entity and whether users of those apps have the appropriate licenses.
