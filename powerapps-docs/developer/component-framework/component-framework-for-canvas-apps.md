@@ -96,10 +96,8 @@ To delete a code component from a canvas app, select the code component that you
 
 When you update the code components, we specify the *version* attribute in the manifest file, so that latest changes get reflected in the runtime. For canvas apps, when you update the existing code components, you don't need to update the *version* attribute. By design, the canvas apps pick up the latest code component and display it in runtime. Only a single version of the same component can exist in canvas apps.
 
-## Known limitations
-
-1. Only the *field* type of components are supported in the experimental preview and not the data set type components. 
-2. Common Data Service dependent APIs, including WebAPI along with few other APIs, are not available for this experimental preview. For individual API availability for this experimental preview release, see [PowerApps component framework API reference](reference/index.md).
+> [!NOTE]
+> Existing code components are updated only when the app is closed or reopened in the PowerApps Studio. When you reopen the app, it asks you to update the code components. Simply deleting the code components or adding the code component back into the app doesn't update the components.
 
 ## See also
 

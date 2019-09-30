@@ -90,7 +90,7 @@ If you have created a component using the older version of the tooling and would
 
 ## Updating your project with the latest node modules
 
-Legacy projects require the latest npm modules to be retrievedto take advantage of the latest CLI capabilities. To update the node modules which you have previously downloaded, go to your project directory in the developer command prompt and run the command `npm update`. 
+Legacy projects require the latest npm modules to be retrieved to take advantage of the latest CLI capabilities. To update the node modules which you have previously downloaded, go to your project directory in the developer command prompt and run the command `npm update`. 
 
 ## Using ES6 Module Syntax
 

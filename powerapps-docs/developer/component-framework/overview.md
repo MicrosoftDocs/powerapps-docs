@@ -26,7 +26,7 @@ Use PowerApps component framework to create code components for model-driven app
 > - PowerApps component framework is in experimental preview for canvas apps, and in GA for model-driven apps. This implies that all the APIs that are supported for model-driven apps might not be supported on canvas apps yet.
 > - By default PowerApps component framework is enabled for model-driven apps. To enable this feature for canvas apps, see [Availability for canvas apps](component-framework-for-canvas-apps.md)
 > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
-> - Canvas apps only support the *field* type of code components, and not the *data-set* type.
+> - Canvas apps only support the *field* type of code components, and not the *dataset* type.
 
 
 PowerApps component framework enables professional developers and app makers to create code components that can be used across the full breadth of PowerApps capabilities. Unlike HTML web resources, code components are rendered as a part of the same context, load at the same time as any other components, providing a seamless experience for the users. Developers can bundle all the HTML, CSS, and TypeScript or JavaScript files into a single solution package file. Code components can be reused many times across different entities and forms.

@@ -32,7 +32,7 @@ Model-driven apps and canvas apps (experimental preview)
 |`required`|Whether the property is required or not|`boolean`|Optional|
 |`of-type-group`|Name of the type-group as defined in manifest|`string`|Optional|
 |`description-key`|Used in the customization screens as localized strings that describes the description of the property.|`string`|Optional|
-|`default-value`|The default configuration value provided to the component. In Unified Interface, this attribute is only allowed on inputs since the bound parameters expect to have a field associated.|`string`|Optional|
+|`default-value`|The default configuration value provided to the component. In model-driven apps, this attribute is only allowed on inputs since the bound parameters expect to have a field associated.|`string`|Optional|
 
 ### Remarks
 

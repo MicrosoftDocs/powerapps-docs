@@ -56,30 +56,27 @@ The component sample consists of three Office UI Fabric components: a facepile, 
 
 ## Code
 
-### index.ts
 ```TypeScript
 import { IInputs, IOutputs } from "./generated/ManifestTypes";
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import { FacepileBasicExample, IFacepileBasicExampleProps } from './Facepile';
+import * as React from "react";
+import * as ReactDOM from "react-dom";
+import { FacepileBasicExample, IFacepileBasicExampleProps } from "./Facepile";
 
-export class ReactStandardControl implements ComponentFramework.StandardControl<IInputs, IOutputs> {
+export class ReactStandardControl
+  implements ComponentFramework.StandardControl<IInputs, IOutputs> {
   // Reference to the notifyOutputChanged method
   private notifyOutputChanged: () => void;
   // Reference to the container div
   private theContainer: HTMLDivElement;
   // Reference to the React props, prepopulated with a bound event handler
   private props: IFacepileBasicExampleProps = {
-    numberFacesChanged: this.numberFacesChanged.bind(this),
-  }
+    numberFacesChanged: this.numberFacesChanged.bind(this)
+  };
 
   /**
    * Empty constructor.
    */
-  constructor()
-  {
-
-  }
+  constructor() {}
 
   /**
    * Used to initialize the control instance. Controls can kick off remote server calls and other initialization actions here.
@@ -89,8 +86,12 @@ export class ReactStandardControl implements ComponentFramework.StandardControl<
    * @param state A piece of data that persists in one session for a single user. Can be set at any point in a controls life cycle by calling 'setControlState' in the Mode interface.
    * @param container If a control is marked control-type='starndard', it will receive an empty div element within which it can render its content.
    */
-  public init(context: ComponentFramework.Context<IInputs>, notifyOutputChanged: () => void, state: ComponentFramework.Dictionary, container:HTMLDivElement)
-  {
+  public init(
+    context: ComponentFramework.Context<IInputs>,
+    notifyOutputChanged: () => void,
+    state: ComponentFramework.Dictionary,
+    container: HTMLDivElement
+  ) {
     this.notifyOutputChanged = notifyOutputChanged;
     this.props.numberOfFaces = context.parameters.numberOfFaces.raw || 3;
     this.theContainer = container;
@@ -100,9 +101,9 @@ export class ReactStandardControl implements ComponentFramework.StandardControl<
    * Called when any value in the property bag has changed. This includes field values, data-sets, global values such as container height and width, offline status, control metadata values such as label, visible, etc.
    * @param context The entire property bag available to control via Context Object; It contains values as set up by the customizer mapped to names defined in the manifest, as well as utility functions
    */
-  public updateView(context: ComponentFramework.Context<IInputs>): void
-  {
-    if (context.updatedProperties.includes("numberOfFaces")) this.props.numberOfFaces = context.parameters.numberOfFaces.raw || 3;
+  public updateView(context: ComponentFramework.Context<IInputs>): void {
+    if (context.updatedProperties.includes("numberOfFaces"))
+      this.props.numberOfFaces = context.parameters.numberOfFaces.raw || 3;
 
     // Render the React component into the div container
     ReactDOM.render(
@@ -145,9 +146,11 @@ export class ReactStandardControl implements ComponentFramework.StandardControl<
     ReactDOM.unmountComponentAtNode(this.theContainer);
   }
 }
+
 ```
 
 ### Facepile.tsx
+
 ```TSX
 import * as React from "react";
 import { Checkbox } from "office-ui-fabric-react/lib/Checkbox";
