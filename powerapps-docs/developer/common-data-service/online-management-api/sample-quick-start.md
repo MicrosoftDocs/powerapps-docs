@@ -1,5 +1,5 @@
 ---
-title: "Quick Start Sample: Retrieve Customer Enagament instances using Online Management API for Dynamics 365 for Customer Engagement| MicrosoftDocs"
+title: "Quick Start Sample: Retrieve Common Data Service environements using Online Management API| MicrosoftDocs"
 description: "The C# sample demonstrates how to authenticate to the Online Management API and then retrieve all Customer Engagement instances from your Office 365 tenant."
 ms.date: 12/13/2018
 ms.service: crm-online
@@ -14,9 +14,9 @@ search.audienceType:
 search.app: 
   - D365CE
 ---
-# Quick Start Sample: Retrieve Customer Engagement instances using Online Management API 
+# Quick Start Sample: Retrieve Common Data Service environements using Online Management API 
 
-The C# sample demonstrates how to authenticate to the Online Management API and then retrieve all Customer Engagement instances from your Office 365 tenant.
+The C# sample demonstrates how to authenticate to the Online Management API and then retrieve all Common Data Service environements from your Office 365 tenant.
 
 The sample uses the authentication [helper code](sample-authentication-helper.md) to easily authenticate to Online Management API using the OAuth 2.0 protocol and pass in the access token in header of your request.
 
