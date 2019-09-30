@@ -1,6 +1,6 @@
 - name: Common Data Service Developer Overview
   href: ../overview.md
-- name: Online Management API for Customer Engagement
+- name: Online Management API
   href: overview.md
 - name: Get started with Online Management API
   href: get-started-online-management-api.md
@@ -11,5 +11,5 @@
     href: sample-authentication-helper.md
 - name: Operations supported by Online Management API
   href: operations-supported.md
-- name: 'Quick Start Sample: Retrieve instances in your tenant'
+- name: 'Quick Start Sample: Retrieve environements in your tenant'
   href: sample-quick-start.md
