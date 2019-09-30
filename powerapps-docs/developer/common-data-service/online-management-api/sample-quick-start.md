@@ -1,10 +1,9 @@
 ---
 title: "Quick Start Sample: Retrieve Common Data Service environements using Online Management API| MicrosoftDocs"
-description: "The C# sample demonstrates how to authenticate to the Online Management API and then retrieve all Customer Engagement instances from your Office 365 tenant."
-ms.date: 12/13/2018
-ms.service: crm-online
+description: "The C# sample demonstrates how to authenticate to the Online Management API and then retrieve all Common Data Service environements from your Office 365 tenant."
+ms.date: 10/01/2019
+ms.service: powerapps
 ms.topic: conceptual
-applies_to: Dynamics 365 for Customer Engagement (online)
 ms.assetid: 63600a55-a1f0-491f-83f6-b3252566d27e
 author: KumarVivek
 ms.author: kvivek
@@ -12,7 +11,7 @@ manager: amyla
 search.audienceType: 
   - developer
 search.app: 
-  - D365CE
+  - PowerApps
 ---
 # Quick Start Sample: Retrieve Common Data Service environements using Online Management API 
 
