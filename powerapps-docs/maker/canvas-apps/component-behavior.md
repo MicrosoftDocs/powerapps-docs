@@ -4,8 +4,9 @@ description: Trigger an app to perform one or more tasks when a component-based 
 author: yifwang
 ms.service: powerapps
 ms.topic: article
-ms.date: 05/24/2019
+ms.date: 30/9/2019
 ms.author: yifwang
+ms.reviewer: tapanm
 search.audienceType:
   - maker
 search.app:
