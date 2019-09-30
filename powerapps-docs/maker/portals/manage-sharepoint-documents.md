@@ -21,9 +21,9 @@ Dynamics 365 supports integration with [!INCLUDE[pn-microsoft-sharepoint-online]
 
 To work with the document management capabilities of [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] from within Dynamics 365 apps, you must:
 
-1.	[Enable document management functionality in Dynamics 365 apps](#step-1-enable-document-management-functionality-in-dynamics-365-for-customer-engagement-apps)
+1.	[Enable document management functionality in Dynamics 365 apps](#step-1-enable-document-management-functionality-in-dynamics-365-apps)
 
-2.	[Set up SharePoint integration from portal admin center](#step-2-set-up-sharepoint-integration-from-portal-admin-center)
+2.	[Set up SharePoint integration from portal admin center](#step-2-set-up-sharepoint-integration-from-powerapps-portals-admin-center)
 
 3.	[Enable document management for entities](#step-3-enable-document-management-for-entities)
 
@@ -90,8 +90,6 @@ You can specify name and label as per your requirement. Save and publish the for
 
 ### PowerApps Portals configuration
 
-If you do not already have an entity or web form configured, then configure one. For more information on configuring entity forms, see [Add a form to your portal](entity-forms-custom-logic.md#add-a-form-to-your-portal). If you are configuring this on a web form, see [Define web form properties for portals](web-form-properties.md) and [Define web form steps for portals](web-form-steps.md).
-
 Apart from the standard configuration required for entity form or web form, you must set the following properties to enable document management:
 
 - **Entity Name** and **Form Name**: Enter the entity and form names customized in the previous step, respectively.
@@ -132,7 +130,7 @@ This sample provides exact steps and configuration values to enable document man
 
 1.	Follow the instructions in [Step 1](#step-1-enable-document-management-functionality-in-dynamics-365-apps) to ensure that server-based configuration is complete for model-driven apps in Dynamics 365 and [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] integration.
 
-2.	Follow the instructions in [Step 2](#step-2-set-up-sharepoint-integration-from-portal-admin-center) to ensure that the portal has permissions to integrate with [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)]. 
+2.	Follow the instructions in [Step 2](#step-2-set-up-sharepoint-integration-from-powerapps-portals-admin-center) to ensure that the portal has permissions to integrate with [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)]. 
 
 3.	Follow the instructions in [Step 3](#step-3-enable-document-management-for-entities) to ensure Document Management is enabled for the Case entity.
 
