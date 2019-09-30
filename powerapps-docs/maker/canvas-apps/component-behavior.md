@@ -26,12 +26,12 @@ With a component master selected, select **OnReset** in the drop-down list of pr
 > [!div class="mx-imgBorder"]
 > ![OnReset example](./media/component-behavior/example-onreset.png)
 
-To test **OnReset**, configure a control to reset the component. For example, set the **OnSelect** property of a button to this formula: **Reset**(*ComponentName*)
+To test **OnReset**, configure a control to reset the component. For example, set the **OnSelect** property of a button to this formula: **Reset**(*ComponentName*).
 
-## Example - Reset timer
+### Example - Reset timer
 
 > [!div class="mx-imgBorder"]
-> ![OnReset example](./media/component-behavior/Resettimer.png)
+> ![OnReset example](./media/component-behavior/Resettimer.gif)
 
 In this time picker component, two variables are used to display the time _selectedHour and _selectedMinute. When the picker gets reset, these variables should be reset to a default value, say 12: 12.  The OnReset property for the component has the following formula: **Set(_selectedHour,12); Set(_selectedMinute,12)**
 
@@ -42,16 +42,16 @@ To trigger reset, go to a screen and insert an instance of the component. Add a 
 
 ## Custom properties trigger OnReset when value changes
 
-Besides resetting a component instance from the outside of the component, there is another method to trigger the OnReset from the inside. "Raise OnReset when value changes" is an option when creating a custom input property, and it allows the value changes of this property to trigger OnReset of the component. This method is designed to set and reset default value easily. 
+Besides resetting a component instance from the outside of the component, there is another method to trigger the OnReset from the inside. "**Raise OnReset when value changes**" is an option when creating a custom input property, and it allows the value changes of this property to trigger OnReset of the component. This method is designed to set and reset default value easily. 
 
 > [!div class="mx-imgBorder"]
 > ![OnReset example](./media/component-behavior/property-trigger.png)
 
-## Example
+### Example
 
 > [!div class="mx-imgBorder"]
-> ![OnReset example](./media/component-behavior/updateordernumber2.png)
+> ![OnReset example](./media/component-behavior/updateordernumber2.gif)
 
-This is an example of reviewing order numbers and updating the numbers. The numeric up and down component is used to increase or decrease number of orders. When selecting the gallery on the left, the default number of numeric up and down component is reset to display the order number of selected tool. "Raise OnReset when value changes" made it possible to reset the default value when the input changes. 
+This is an example of reviewing order numbers and updating the numbers. The numeric up and down component is used to increase or decrease number of orders. When selecting the gallery on the left, the default number of numeric up and down component is reset to display the order number of selected tool. "**Raise OnReset when value changes**" made it possible to reset the default value when the input changes. 
 
-To do so, check "Raise OnReset when value changes" of the default input property. **OnReset** of the component is set to **Set(_numericValue,'Numeric up down'.DefaultValue)**. _numericValue is the variable to store the value of the current order value. And set the **Default** of the text input control to **If(IsBlank(_numericValue), 'Numeric up down'.DefaultValue, _numericValue)**. 
+To do so, check "**Raise OnReset when value changes**" of the default input property. **OnReset** of the component is set to **Set(_numericValue,'Numeric up down'.DefaultValue)**. _numericValue is the variable to store the value of the current order value. And set the **Default** of the text input control to **If(IsBlank(_numericValue), 'Numeric up down'.DefaultValue, _numericValue)**. 
