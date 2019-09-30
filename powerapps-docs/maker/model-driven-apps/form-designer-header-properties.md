@@ -89,6 +89,9 @@ To show or hide the header flyout for a model-driven form, follow these steps:
 > [!NOTE]
 > - Use the new form designer. The classic form designer does not provide the ability to show or hide the header flyout.   
 > - The visibility of header flyout can only be controlled when using high-density form header. When using low-density header, the header flyout is automatically displayed or hidden based on the number of fields in the header and the width of the form.
+> - Entity images in the header will only show if the [PrimaryImageAttribute](https://docs.microsoft.com/dotnet/api/microsoft.xrm.sdk.metadata.entitymetadata.primaryimageattribute?view=dynamics-general-ce-9)
+ is defined.
+
 
 ## Form designer messages related to form headers
 When you edit forms using the new or classic form designer, you might see messages related to form headers. Below, you can find details on each message and why you are seeing it.
