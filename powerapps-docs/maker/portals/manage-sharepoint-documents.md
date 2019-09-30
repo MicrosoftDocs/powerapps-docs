@@ -215,7 +215,7 @@ This sample provides exact steps and configuration values to enable document man
       > [!div class=mx-imgBorder]
       > ![Customer Service entity permission](media/customer-service-entity-permission.png "Customer Service entity permission")
   
-   4. Sign in to Portal to ensure document management is enabled for the Case entity.
+   4. Sign in to portal to ensure document management is enabled for the Case entity.
 
       a. Go to the **Support** page.
 
