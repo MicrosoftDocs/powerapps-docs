@@ -15,6 +15,7 @@ ms.assetid: a118f54f-be47-4f35-9ffb-7afa6c296631
 
 # Property
 
+Interface for `context.parameters.<property_key>`
 ## Available for 
 
 Model-driven apps
@@ -35,7 +36,7 @@ Model-driven apps
 
 ### security
 
-**Type**: `SecurityValues`
+**Type**: [SecurityValues](securityvalues.md)
 
 ### raw
 
@@ -44,7 +45,6 @@ Model-driven apps
 ### attribute
 
 **Type**: `FieldPropertyMetadata`
-
 
 ### Related topics
 

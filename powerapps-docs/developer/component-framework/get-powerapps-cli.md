@@ -34,7 +34,7 @@ To get Microsoft PowerApps CLI, do the following:
    - Option 2: Install [.NET Core 2.2 SDK](https://dotnet.microsoft.com/download/dotnet-core/2.2) and then install [Visual Studio Code](https://code.visualstudio.com/Download).
 
 1. Install [Microsoft PowerApps CLI](https://aka.ms/PowerAppsCLI).
-1. Update Microsoft PowerApps CLI to the latest version and To take advantage of all the latest capabilities, update the PowerApps CLI tooling to the latest version using the command.
+1. To take advantage of all the latest capabilities, update the PowerApps CLI tooling to the latest version using the command.
 
     ```CLI
     pac install latest

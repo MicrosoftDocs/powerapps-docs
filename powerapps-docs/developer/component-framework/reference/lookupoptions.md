@@ -15,6 +15,7 @@ ms.assetid: 89807b09-92ee-43cf-8db5-8da838131923
 
 # LookupOptions
 
+Provides all the information about options used when opening a lookup dialog.
 
 ## Available for 
 

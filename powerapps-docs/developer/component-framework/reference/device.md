@@ -17,6 +17,14 @@ ms.assetid: a0f9abc5-c605-4433-bf5a-f8253eeeda3b
 
 [!INCLUDE [device-description](includes/device-description.md)]
 
+> [!IMPORTANT]
+> If you want to use the device API methods, you need to declare the usage of these method in [feature-usage](../manifest-schema-reference/feature-usage.md) node in the manifest file.
+
+## Syntax
+
+`context.device`
+
+
 ## Available for 
 
 Model-driven apps

@@ -129,6 +129,21 @@
           href: reference/device/pickfile.md
       - name: DateFormattingInfo
         href: reference/dateformattinginfo.md
+      - name: Entity
+        href: reference/entity.md
+      - name: EntityFormOptions
+        href: reference/entityformoptions.md
+      - name: EntityRecord
+        href: reference/entityrecord.md
+        items:
+        - name: getFormattedValue 
+          href: reference/entityrecord/getformattedvalue.md
+        - name: getNamedReference
+          href: reference/entityrecord/getnamedreference.md
+        - name: getRecordId
+          href: reference/entityrecord/getrecordid.md
+        - name: getValue
+          href: reference/entityrecord/getvalue.md
       - name: EntityReference
         href: reference/entityreference.md
       - name: Factory
@@ -140,13 +155,10 @@
           href: reference/factory/requestrender.md
       - name: FileObject
         href: reference/fileobject.md
-      - name: Linking
-        href: reference/linking.md
-        items:
-        - name: addLinkedEntity
-          href: reference/linking/addlinkedentity.md
-        - name: getLinkedEntity
-          href: reference/linking/getlinkedentities.md
+      - name: Filtering
+        href: reference/filtering.md
+      - name: FilterExpression
+        href: reference/filterexpression.md
       - name: Formatting
         href: reference/formatting.md
         items:
@@ -172,6 +184,15 @@
           href: reference/formatting/formattime.md
         - name: getWeekOfYear
           href: reference/formatting/getweekofyear.md
+      - name: Linking
+        href: reference/linking.md
+        items:
+        - name: addLinkedEntity
+          href: reference/linking/addlinkedentity.md
+        - name: getLinkedEntity
+          href: reference/linking/getlinkedentities.md
+      - name: LookupOptions
+        href: reference/lookupoptions.md
       - name: Mode
         href: reference/mode.md
         items:
@@ -211,6 +232,8 @@
           href: reference/paging/reset.md
         - name: setPageSize
           href: reference/paging/setpagesize.md
+      - name: PickFileOptions
+        href: reference/pickfileoptions.md
       - name: Popup
         href: reference/popup.md
       - name: PopupService
@@ -230,6 +253,10 @@
           href: reference/popupservice/setpopupsid.md
         - name: updatePopup
           href: reference/popupservice/updatepopup.md
+      - name: Property
+        href: reference/property.md
+      - name: RetrieveMultipleResponse
+        href: reference/retrievemultipleresponse.md
       - name: Resources
         href: reference/resources.md
         items:
@@ -237,6 +264,8 @@
           href: reference/resources/getresource.md
         - name: getString
           href: reference/resources/getstring.md
+      - name: SecurityValues
+        href: reference/securityvalues.md
       - name: SortStatus
         href: reference/sortstatus.md
       - name: UserSettings

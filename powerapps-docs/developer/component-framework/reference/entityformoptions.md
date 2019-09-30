@@ -14,6 +14,7 @@ ms.assetid: 418871c0-59dc-4a7c-a8f9-9364a19f7662
 ---
 # EntityFormOptions
 
+Provides access to all the information about the entity forms.
 
 ## Available for 
 
