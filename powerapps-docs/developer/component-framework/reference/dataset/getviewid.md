@@ -23,7 +23,7 @@ Model-driven apps
 
 ## Syntax
 
-`getViewId()`
+`context.parameters.dataset.getViewId()`
 
 ## Return Value
 

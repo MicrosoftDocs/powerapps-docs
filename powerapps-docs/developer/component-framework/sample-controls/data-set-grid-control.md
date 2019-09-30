@@ -279,8 +279,6 @@ export class TSDataSetGrid
     this.toggleLoadMoreButtonWhenNeeded(this.contextObj.parameters.dataSetGrid);
   }
 }
-
-
 ```
 
 ## Resources
@@ -347,7 +345,6 @@ export class TSDataSetGrid
   align-items: center;
   justify-content: center;
 }
-
 ```
 
 ```XML

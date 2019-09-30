@@ -153,7 +153,6 @@ export class TSLocalizationAPI
    */
   public destroy(): void {}
 }
-
 ```
 
 ## Resources
@@ -177,7 +176,6 @@ export class TSLocalizationAPI
   button.LocalizationSample_Input_Error_Style {
   color: red;
 }
-
 ```
 
 ```xml

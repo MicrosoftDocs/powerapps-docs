@@ -252,7 +252,6 @@ export class TSImageUploadControl
    */
   public destroy(): void {}
 }
-
 ```
 
 ## Resources
@@ -287,7 +286,6 @@ export class TSImageUploadControl
   display: block;
   color: red;
 }
-
 ```
 
 ```XML

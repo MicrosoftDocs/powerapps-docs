@@ -24,7 +24,7 @@ Model-driven apps
 
 ## Syntax
 
-`clearSelectedRecordIds()`
+`context.parameters.dataset.clearSelectedRecordIds()`
 
 
 ### Related topics

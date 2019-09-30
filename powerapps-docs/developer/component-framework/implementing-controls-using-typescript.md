@@ -112,10 +112,11 @@ The next step after implementing the manifest file is to implement the component
 
 ```TypeScript
 import { IInputs, IOutputs } from "./generated/ManifestTypes";
-export class TSLinearInputComponent implements ComponentFramework.StandardControl<IInputs, IOutputs> {
-  // Value of the field is stored and used inside the component 
+export class TSLinearInputComponent
+  implements ComponentFramework.StandardControl<IInputs, IOutputs> {
+  // Value of the field is stored and used inside the component
   private _value: number;
-  // PowerApps component framework delegate which will be assigned to this object which would be called whenever any update happens. 
+  // PowerApps component framework delegate which will be assigned to this object which would be called whenever any update happens.
   private _notifyOutputChanged: () => void;
   // label element created as part of this component
   private labelElement: HTMLLabelElement;
@@ -129,10 +130,14 @@ export class TSLinearInputComponent implements ComponentFramework.StandardContro
   // Event Handler 'refreshData' reference
   private _refreshData: EventListenerOrEventListenerObject;
 
-  constructor() {
-  }
+  constructor() {}
 
-  public init(context: ComponentFramework.Context<IInputs>, notifyOutputChanged: () => void, state: ComponentFramework.Dictionary, container: HTMLDivElement) {
+  public init(
+    context: ComponentFramework.Context<IInputs>,
+    notifyOutputChanged: () => void,
+    state: ComponentFramework.Dictionary,
+    container: HTMLDivElement
+  ) {
     this._context = context;
     this._container = document.createElement("div");
     this._notifyOutputChanged = notifyOutputChanged;
@@ -151,9 +156,18 @@ export class TSLinearInputComponent implements ComponentFramework.StandardContro
     this.labelElement.setAttribute("class", "TS_LinearRangeLabel");
     this.labelElement.setAttribute("id", "lrclabel");
     // retrieving the latest value from the component and setting it to the HTMl elements.
-    this._value = context.parameters.sliderValue.raw ? context.parameters.sliderValue.raw : 0;
-    this.inputElement.setAttribute("value", context.parameters.sliderValue.formatted ? context.parameters.sliderValue.formatted : "0");
-    this.labelElement.innerHTML = context.parameters.sliderValue.formatted ? context.parameters.sliderValue.formatted : "0";
+    this._value = context.parameters.sliderValue.raw
+      ? context.parameters.sliderValue.raw
+      : 0;
+    this.inputElement.setAttribute(
+      "value",
+      context.parameters.sliderValue.formatted
+        ? context.parameters.sliderValue.formatted
+        : "0"
+    );
+    this.labelElement.innerHTML = context.parameters.sliderValue.formatted
+      ? context.parameters.sliderValue.formatted
+      : "0";
     // appending the HTML elements to the component's HTML container element.
     this._container.appendChild(this.inputElement);
     this._container.appendChild(this.labelElement);
@@ -161,9 +175,9 @@ export class TSLinearInputComponent implements ComponentFramework.StandardContro
   }
 
   /**
-  * Updates the values to the internal value variable we are storing and also updates the html label that displays the value
-  * @param context : The "Input Properties" containing the parameters, component metadata and interface functions
-  */
+   * Updates the values to the internal value variable we are storing and also updates the html label that displays the value
+   * @param context : The "Input Properties" containing the parameters, component metadata and interface functions
+   */
 
   public refreshData(evt: Event): void {
     this._value = (this.inputElement.value as any) as number;
@@ -173,10 +187,19 @@ export class TSLinearInputComponent implements ComponentFramework.StandardContro
 
   public updateView(context: ComponentFramework.Context<IInputs>): void {
     // storing the latest context from the control.
-    this._value = context.parameters.sliderValue.raw ? context.parameters.sliderValue.raw : 0;
+    this._value = context.parameters.sliderValue.raw
+      ? context.parameters.sliderValue.raw
+      : 0;
     this._context = context;
-    this.inputElement.setAttribute("value",context.parameters.sliderValue.formatted ? context.parameters.sliderValue.formatted : "");
-    this.labelElement.innerHTML = context.parameters.sliderValue.formatted ? context.parameters.sliderValue.formatted : "";
+    this.inputElement.setAttribute(
+      "value",
+      context.parameters.sliderValue.formatted
+        ? context.parameters.sliderValue.formatted
+        : ""
+    );
+    this.labelElement.innerHTML = context.parameters.sliderValue.formatted
+      ? context.parameters.sliderValue.formatted
+      : "";
   }
 
   public getOutputs(): IOutputs {
@@ -189,6 +212,7 @@ export class TSLinearInputComponent implements ComponentFramework.StandardContro
     this.inputElement.removeEventListener("input", this._refreshData);
   }
 }
+
 ```
 
 3. Rebuild the project using the command `npm run build`. 

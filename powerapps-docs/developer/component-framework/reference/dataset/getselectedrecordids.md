@@ -23,7 +23,7 @@ Model-driven apps
 
 ## Syntax
 
-`getSelectedRecordIds()`
+`context.parameters.dataset.getSelectedRecordIds()`
 
 ## Return Value
 

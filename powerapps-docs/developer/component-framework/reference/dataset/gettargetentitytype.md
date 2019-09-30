@@ -23,7 +23,7 @@ Model-driven apps
 
 ## Syntax
 
-`getTargetEntityType()`
+`context.parameters.dataset.getTargetEntityType()`
 
 ## Return Value
 

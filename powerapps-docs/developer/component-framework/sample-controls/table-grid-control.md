@@ -316,7 +316,6 @@ export class TSTableGrid
     );
   }
 }
-
 ```
 
 ## Resources
@@ -403,7 +402,6 @@ export class TSTableGrid
   width: 100%;
   border: none;
 }
-
 ```
 
 ```xml

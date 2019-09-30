@@ -371,7 +371,6 @@ export class TSTableControl
    */
   public destroy() {}
 }
-
 ```
 
 ## Resources
@@ -425,7 +424,6 @@ export class TSTableControl
 .SampleNamespace\.TSTableControl .lookupObjectsResultDiv {
   color: #1160b7;
 }
-
 ```
 
 This sample provides examples on how to use methods from the `IClient, IUserSettings, IUtility, IFormatting interfaces`.

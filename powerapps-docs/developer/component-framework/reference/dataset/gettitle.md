@@ -23,7 +23,7 @@ Model-driven apps
 
 ## Syntax
 
-`getTitle()`
+`context.parameters.dataset.getTitle()`
 
 ## Return Value
 

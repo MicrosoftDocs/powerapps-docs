@@ -570,7 +570,6 @@ export class TSWebAPI
     return div;
   }
 }
-
 ```
 
 ## Resources
@@ -607,7 +606,6 @@ export class TSWebAPI
   margin-bottom: 5px;
   display: block;
 }
-
 ```
 
 By default, in the sample, the component is configured to perform the create, retrieve, update actions on the `Account` entity and set the name and revenue fields in the Web API examples.

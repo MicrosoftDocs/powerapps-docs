@@ -127,7 +127,6 @@ export class TSMapControl
    */
   public destroy() {}
 }
-
 ```
 
 ## Resources
@@ -141,7 +140,6 @@ export class TSMapControl
 .SampleNamespace\.TSMapControl .mapHiddenStyle {
   visibility: hidden;
 }
-
 ```
 
 In the manifest file, we defined property of type `Single line of Text`. We use this to bind it to the address field on the form.  

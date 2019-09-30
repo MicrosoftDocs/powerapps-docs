@@ -128,8 +128,6 @@ export class TSIFrameControl
     // no-op: method not leveraged by this example custom control
   }
 }
-
-
 ```
 
 ## Resources

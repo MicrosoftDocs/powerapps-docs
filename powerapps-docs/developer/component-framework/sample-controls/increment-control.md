@@ -151,7 +151,6 @@ export class TSIncrementControl
    */
   public destroy(): void {}
 }
-
 ```
 
 ## Resources
@@ -173,7 +172,6 @@ export class TSIncrementControl
 .SampleNamespace\.TSIncrementControl button.SimpleIncrement_Input_Error_Style {
   color: red;
 }
-
 ```
 
 ```XML

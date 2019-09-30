@@ -23,7 +23,7 @@ Model-driven apps
 
 ## Syntax
 
-`openDatasetItem(entityReference)`
+`context.parameters.dataset.openDatasetItem(entityReference)`
 
 ## Return Value
 

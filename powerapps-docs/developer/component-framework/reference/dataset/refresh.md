@@ -23,7 +23,7 @@ Model-driven apps
 
 ## Syntax
 
-`refresh()`
+`context.parameters.dataset.refresh()`
 
 ### Related topics
 

@@ -160,7 +160,6 @@ export class TSLinearInputControl
     this.inputElement.removeEventListener("input", this._refreshData);
   }
 }
-
 ```
 
 ## Resources
@@ -231,23 +230,22 @@ export class TSLinearInputControl
   opacity: 1;
   -webkit-appearance: none;
 }
-
 ```
 
 In this sample, a [type -group](../manifest-schema-reference/type-group.md) is defined and named it as `numbers` which includes decimal, whole, floating and currency value types into that group in the manifest. This group is used to bind the component property.
 
-An input element of type `range` with `min` and `max` value set to 1 and 1000, respectively is created. A label element is created which shows the value that is relative to the position of the slider. Attach a function `refreshData` to the eventlistener on the input of the component.
+An input element of type `range` with `min` and `max` value set to 1 and 1000, respectively is created. A label element is created which shows the value that is relative to the position of the slider. Attach a function `refreshData` to the `eventlistener` on the input of the component.
 
 Create a local variable for saving the [context](../reference/context.md) and `notifyOutputChanged`. Assign the context and notifyOutputChanged from the parameters that are passed as part of the init function.
 
 Implement the logic for the `refreshData` function. As you can see in the sample, we take the value from the `inputElement` and set the value of the component, `innerHTML` property of the `labelElement` and then call the `notifyOutputChanged` so that the changes are cascaded up above the framework layer.
 
 ```TypeScript
-public refreshData(context: ControlFramework.IPropBag<InputsOutputs.IInputBag>,) 
+public refreshData(context: ControlFramework.IPropBag<InputsOutputs.IInputBag>) 
 { 
-    this._value = (this.inputElement.value as any)as number; 
-    this.labelElement.innerHTML = this.inputElement.value; 
-    this._notifyOutputChanged(); 
+   this._value = (this.inputElement.value as any)as number; 
+   this.labelElement.innerHTML = this.inputElement.value; 
+   this._notifyOutputChanged(); 
 } 
 ```
 
@@ -255,13 +253,13 @@ In the `updateView` method, we get the value of the attribute from the context.p
 
 ```TypeScript
 
-public updateView(context: ControlFramework.IPropBag<InputsOutputs.IInputBag>,): void 
-  { 
-      this._value = context.parameters.controlValue.raw; 
-      this._context = context; 
-      this.inputElement.setAttribute("value",context.parameters.controlValue.formatted ? context.parameters.controlValue.formatted : ""); 
-      this.labelElement.innerHTML = context.parameters.controlValue.formatted ? context.parameters.controlValue.formatted : ""; 
-    } 
+public updateView(context: ControlFramework.IPropBag<InputsOutputs.IInputBag>): void 
+ { 
+    this._value = context.parameters.controlValue.raw; 
+    this._context = context; 
+    this.inputElement.setAttribute("value",context.parameters.controlValue.formatted ? context.parameters.controlValue.formatted : ""); 
+    this.labelElement.innerHTML = context.parameters.controlValue.formatted ? context.parameters.controlValue.formatted : ""; 
+   } 
  ```
 
 ### Related topics

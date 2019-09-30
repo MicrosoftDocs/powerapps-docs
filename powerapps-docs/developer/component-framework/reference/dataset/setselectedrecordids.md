@@ -23,13 +23,13 @@ Model-driven apps
 
 ## Syntax
 
-`setSelectedRecordIds(ids)`
+`context.parameters.dataset.setSelectedRecordIds(ids)`
 
 ## Parameters
 
 |Parameter Name|Type|Required|description|
 |----|----|----|----|
-|ids|`string`|yes|List of record id's|
+|ids|`string`|Yes|List of record id's|
 
 
 ### Related topics

@@ -19,7 +19,8 @@ The PowerApps component framework allows you to persist state of component acros
 
 For example, if your code component is a long list that the user can scroll through, you could leverage the **_SetControlState_** functionality to remember the point in the list the user is looking at when they navigated away from the form. You could then add logic on component initialization to check the stored state and render the component's list at the point where the user was previously reading.
 
-> [!div class="mx-imgBorder"] > ![Control state API](../media/control-state-api.png "Control state API")
+> [!div class="mx-imgBorder"] 
+> ![Control state API](../media/control-state-api.png "Control state API")
 
 ## Available for
 
@@ -43,7 +44,6 @@ Model-driven apps and canvas apps (experimental preview)
 ## Code
 
 ```TypeScript
-
 import { IInputs, IOutputs } from "./generated/ManifestTypes";
 // Key used to store the selected color into the context object to persist across navigations
 const PERSISTED_SELECTED_COLOR_KEY_NAME = "selectedColor";
@@ -243,8 +243,6 @@ export class TSControlStateAPI
    */
   public destroy(): void {}
 }
-
-
 ```
 
 ## Resources

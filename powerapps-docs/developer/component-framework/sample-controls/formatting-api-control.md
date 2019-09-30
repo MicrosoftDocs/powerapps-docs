@@ -234,7 +234,6 @@ export class FormattingAPI
    */
   public destroy() {}
 }
-
 ```
 
 ## Resources
@@ -279,7 +278,6 @@ export class FormattingAPI
   color: #1160b7;
   text-align: center;
 }
-
 ```
 
 ### Related topics

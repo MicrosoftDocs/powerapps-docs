@@ -6,11 +6,11 @@
     href: custom-controls-overview.md
   - name: Availability for canvas apps
     href: component-framework-for-canvas-apps.md
-  - name: Get tooling
+  - name: Get PowerApps CLI
     href: get-powerapps-cli.md
   - name: Tutorial
     items:
-    - name: Implement sample component
+    - name: Implementing sample component
       href: implementing-controls-using-typescript.md
   - name: How-to
     items:
@@ -30,8 +30,6 @@
       href: publish-components-app-source.md
   - name: Limitations
     href: limitations.md
-  - name: FAQ
-    href: faq.md
   - name: Sample components
     items: 
     - name: Increment component
@@ -211,7 +209,7 @@
           href: reference/paging/loadpreviouspage.md
         - name: reset
           href: reference/paging/reset.md
-        - name: setpageSize
+        - name: setPageSize
           href: reference/paging/setpagesize.md
       - name: Popup
         href: reference/popup.md

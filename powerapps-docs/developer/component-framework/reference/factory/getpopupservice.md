@@ -25,6 +25,10 @@ ms.assetid: 878465d9-3e25-44df-ad7b-de50916fd9d2
 
 Model-driven apps
 
+## Return Value
+
+Type: [PopupService](../popupservice.md)
+
 ### Related topics
 
 [Factory](../factory.md)<br/>

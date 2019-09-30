@@ -239,7 +239,6 @@ export class JSAngularJSFlipControl
     // Add code to cleanup control if necessary
   }
 }
-
 ```
 
 ### Resources

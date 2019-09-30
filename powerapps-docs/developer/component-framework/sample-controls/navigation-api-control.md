@@ -198,7 +198,6 @@ export class TSNavigationAPI
    */
   public destroy() {}
 }
-
 ```
 
 ## Resources
@@ -219,7 +218,6 @@ export class TSNavigationAPI
 .SampleNamespace\.TSNavigationAPI button:hover {
   background-color: #c2c2c2;
 }
-
 ```
 
 The `openAlertDialog` method provides the capability to display an alert dialog containing a message and a button. You can also implement callback methods when the alert dialog is closed or if an error is encountered when loading the dialog.
