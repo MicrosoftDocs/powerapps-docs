@@ -15,15 +15,15 @@ ms.assetid: f393f227-7a88-4f25-9036-780b3bf14070
 
 # Get tooling for PowerApps component framework
 
-Use **Microsoft PowerApps CLI** (command-line interface) to create, debug, and deploy code components using PowerApps component framework. PowerApps CLI enables developers to create PowerApps component framework components quickly and will in the future be expanded to include support for additional development and Application Lifecycle Management (ALM) experiences. 
+Use **Microsoft PowerApps CLI** (command-line interface) to create, debug, and deploy code components using PowerApps component framework. PowerApps CLI enables developers to create code components quickly and will in the future be expanded to include support for additional development and Application Lifecycle Management (ALM) experiences. 
 
 ## What is Microsoft PowerApps CLI 
 
-Microsoft PowerApps CLI is a simple, single-stop developer command-line interface which enables the developers to create code components. PowerApps CLI tooling is the first step towards a comprehensive ALM story where the enterprise developers and ISVs can create, build, debug, and publish their extensions and customizations quickly and efficiently.  
+Microsoft PowerApps CLI is a simple, single-stop developer command-line interface which empowers the developers and app makers to create code components. PowerApps CLI tooling is the first step towards a comprehensive ALM story where the enterprise developers and ISVs can create, build, debug, and publish their extensions and customizations quickly and efficiently.  
 
 ## Install Microsoft PowerApps CLI
 
-To use Microsoft PowerApps CLI, do the following:
+To get Microsoft PowerApps CLI, do the following:
 
 1. Install [Npm](https://www.npmjs.com/get-npm) (comes with Node.js) or install [Node.js](https://nodejs.org/en/) (comes with npm). We recommend LTS (Long Term Support) version 10.15.3 LTS as it seems to be most stable.
 
@@ -34,7 +34,7 @@ To use Microsoft PowerApps CLI, do the following:
    - Option 2: Install [.NET Core 2.2 SDK](https://dotnet.microsoft.com/download/dotnet-core/2.2) and then install [Visual Studio Code](https://code.visualstudio.com/Download).
 
 1. Install [Microsoft PowerApps CLI](https://aka.ms/PowerAppsCLI).
-1. Update Microsoft PowerApps CLI to the latest version and take advantage of all the latest capabilities, run the following command in the Developer Command Prompt for VS 2017.
+1. Update Microsoft PowerApps CLI to the latest version and To take advantage of all the latest capabilities, update the PowerApps CLI tooling to the latest version using the command.
 
     ```CLI
     pac install latest

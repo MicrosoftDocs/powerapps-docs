@@ -26,9 +26,9 @@ Follow the steps below to create and import a solution file:
  
 3. Once the new solution project gets created, you need to refer this **Solution** folder to the location where the created sample component is located. You can add the reference using the below command. This reference, informs the solution project about which code components should be added during the build, and you can add references to multiple components in a single solution project.
 
-    ```CLI   
-    pac solution add-reference --path<path to your PowerApps component framework project>
-    ```
+   ```CLI   
+    pac solution add-reference --path <path to your PowerApps component framework project>
+   ```
 
 3. To generate a zip file from the solution project, you need to go into your solution project directory and build the project using the command `msbuild /t:build /restore`. This command uses *MSBuild* to build the solution project by pulling down the *NuGet* dependencies as part of the restore. Use the `/restore` only for the first time when the solution project is built. For every build afterwards, you can run the command `msbuild`.
 
@@ -43,7 +43,7 @@ Follow the steps below to create and import a solution file:
 
 ## Authenticating to your organization
 
-You can deploy the code components directly from the PowerApps CLI by authenticating to Common Data Service org and then pushing the updated components. Follow the steps below to create the authentication profile, connect to Common Data Service, and push the updated components. 
+You can deploy the code components directly from the PowerApps CLI by authenticating to Common Data Service organization and then pushing the updated components. Follow the steps below to create the authentication profile, connect to Common Data Service, and push the updated components. 
  
 1. Create your authentication profile using the command: 
  
@@ -70,11 +70,11 @@ You can deploy the code components directly from the PowerApps CLI by authentica
     ```
  
 5. To delete a particular authentication profile, use the command `pac auth delete --index < index of the profile >`. 
-6. If you wish to clear all the profiles from your local machine, use the command `pac auth clear`. This action is irreversible as it completely deletes the `authprofile.json` file and token cache file from your local machine. 
+6. If you wish to clear all the authentication profiles from your local machine, use the command `pac auth clear`. This action is irreversible as it completely deletes the `authprofile.json` file and token cache file from your local machine. 
 
 ## Deploying code components 
 
-After you have successfully created an authentication profile, you can start pushing the code components to the Common Data Service instance with all the latest changes. The `push` capability speeds up the inner-developer cycle development as it bypasses the code component versioning requirements and does not require that you build your solution (your cdsproj) in order to import the code component. To use the push capability, follow below the steps below:
+After you have successfully created an authentication profile, you can start pushing the code components to the Common Data Service instance with all the latest changes. The `push` capability speeds up the inner-developer cycle development as it bypasses the code component versioning requirements and does not require that you build your solution (cdsproj) to import the code component. To use the `push` capability, follow below the steps below:
 
 1. Ensure that you have a valid authentication profile created.
 2. Navigate to the root directory where the code component project is created.
@@ -82,7 +82,6 @@ After you have successfully created an authentication profile, you can start pus
 
    > [!NOTE]
    > The publisher prefix that you use with the `push` command should match the publisher prefix of your solution in which the components will be included.
-
 
 ## How to remove components from a solution
 
@@ -106,7 +105,7 @@ If you wish to remove a code component from a solution file:
 2. Perform a rebuild (or clean) using the command
    
     ```CLI
-     msbuild /t:rebuild
+    msbuild /t:rebuild
     ```
 
 ### See also

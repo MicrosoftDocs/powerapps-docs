@@ -15,7 +15,7 @@ ms.assetid: d2cbf58a-9112-45c2-b823-2c07a310714c
 
 # Create and build a code component
 
-This topic demonstrates how to create and deploy code components using PowerApps component framework. Ensure that you have installed [Microsoft PowerApps CLI](https://aka.ms/PowerAppsCLI).
+This topic demonstrates how to create and deploy code components using PowerApps CLI. Ensure that you have installed [Microsoft PowerApps CLI](https://aka.ms/PowerAppsCLI).
 
 ## Create a new component
 

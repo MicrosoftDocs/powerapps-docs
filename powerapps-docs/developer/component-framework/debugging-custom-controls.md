@@ -20,7 +20,7 @@ As shown in the image above, the browser window opens with 4 sections. The code 
 
 - **Context Inputs** provides a way to specify the form factor and test the code component with each form factor (web, tablet, phone). This is helpful when the code component is dependent on a particular form factor capability. In the coming release, you can have the ability to specify the height and width.
 - **Data Inputs** is an interactive UI that displays all the properties and their [types](manifest-schema-reference/types.md) or [type-groups](manifest-schema-reference/type-group.md) defined in the [manifest](manifest-schema-reference/manifest.md) file. It allows you to key in the mock data for each property. 
-- **Outputs** renders the output whenever a component's `getOutputs` method gets called.  
+- **Outputs** renders the output whenever a component's [getOutputs](reference/control/getoutputs.md) method gets called.  
 
      > [!div class="mx-imgBorder"]
      > ![test harness 2](media/test-harness-2.png "test harness 2")
@@ -28,24 +28,24 @@ As shown in the image above, the browser window opens with 4 sections. The code 
 > [!NOTE]
 > If you want to modify the `ControlManifest.Input.xml` file or create additional properties, you need to restart the debug process before they appear in the inputs section.
 
-## Test code components with Mock data
+## Test code components with mock data
 
-- For field components, you can input value and type for every property defined in your **ControlManifest.Input.xml** as shown below:
+- For *field* type components, you can input value and type for every property defined in your **ControlManifest.Input.xml** as shown below:
 
    > [!div class="mx-imgBorder"]
    > ![test harness 2.5](media/test-harness-2.5.png "test harness 2.5")
 
-- For datasets, you can load a CSV file with test data. It can be manually created or exported in .csv format directly from your environment. Once a valid CSV file is available, it can be loaded as shown below:
+- For *dataset* type components, you can load a CSV file with test data. You manually create or export in .csv format directly from your environment. Once a valid CSV file is available, it can be loaded as shown below:
 
    > [!div class="mx-imgBorder"]
    > ![test harness 3](media/test-harness-3.png "test harness 3")
 
-- After loading a CSV file, bind each property defined in your **ControlManifest.Input.xml** to a column in the CSV. This is done by picking the column for each property as shown below:
+- After loading a CSV file, bind each property defined in the **ControlManifest.Input.xml** to a column in the CSV file. This is done by picking the column for each property as shown below:
 
     > [!div class="mx-imgBorder"]
     > ![test harness 4](media/test-harness-4.png "test harness 4")
 
-- If you don't have any properties defined in your **ControlManifest.Input.xml**, then all the columns get automatically loaded into the harness.
+- If you don't have any properties defined in the **ControlManifest.Input.xml** file, then all the columns get automatically loaded into the test harness.
 
    > [!div class="mx-imgBorder"]
    > ![test harness 5](media/test-harness-5.png "test harness 5")
@@ -53,11 +53,11 @@ As shown in the image above, the browser window opens with 4 sections. The code 
 
 ## Watch mode in test harness
 
-The test harness supports the watch mode which you can take advantage of for PowerApps component framework projects. To enable watch mode, start the test harness using the command `npm start watch`. In watch mode, the changes made to any of the below component assets are automatically reflected in the test harness without having to restart it:
+The test harness supports the `watch` mode which you can take advantage of for PowerApps component framework projects. To enable `watch` mode, start the test harness using the command `npm start watch`. In `watch` mode, the changes made to any of the below component assets are automatically reflected in the test harness without having to restart it:
 
-1.	`index.ts` file
-2.	`ControlManifest.Input.xml` file
-3.	Imported libraries in `index.ts`
+1.	`index.ts` file.
+2.	`ControlManifest.Input.xml` file.
+3.	Imported libraries in `index.ts`.
 4.	All the resources listed in the manifest file.
 
 ## Debug code components using native browsers
@@ -74,7 +74,7 @@ For example, on **Microsoft Edge**,
      > ![debug-component](media/debug-control.png "Debug component")
 
 > [!NOTE]
-> It is always a good practice to set breakpoints on the component's life cycle methods like `init` and `updateView`.
+> It is always a good practice to set breakpoints on the component's life cycle methods like [init](reference/control/init.md) and [updateView](reference/control/updateview.md).
 
 You can also interact with the component locally in real-time and observe elements in the DOM by setting a breakpoint in the sources tab as follows
 
