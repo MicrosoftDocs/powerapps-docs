@@ -157,6 +157,13 @@
         href: reference/fileobject.md
       - name: Filtering
         href: reference/filtering.md
+        items:
+        - name: clearFilter
+          href: reference/filtering/clearfilter.md
+        - name: getFilter
+          href: reference/filtering/getfilter.md
+        - name: setFilter
+          href: reference/filtering/setfilter.md
       - name: FilterExpression
         href: reference/filterexpression.md
       - name: Formatting
@@ -232,8 +239,6 @@
           href: reference/paging/reset.md
         - name: setPageSize
           href: reference/paging/setpagesize.md
-      - name: PickFileOptions
-        href: reference/pickfileoptions.md
       - name: Popup
         href: reference/popup.md
       - name: PopupService
