@@ -5,7 +5,7 @@ keywords:
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -36,11 +36,11 @@ Model-driven apps
 
 Type: `Promise<ConfirmDialogResponse>`
 
-Returns an object with the confirmed (Boolean) attribute is passed that indicates whether the confirm button was clicked to close the dialog.
+Description: Returns an object with the confirmed (Boolean) attribute is passed that indicates whether the confirm button was clicked to close the dialog.
 
 ## Remarks
 
-See [Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise) and [File](https://developer.mozilla.org/docs/Web/API/File)
+See [Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise) 
 
 
 ### Related topics

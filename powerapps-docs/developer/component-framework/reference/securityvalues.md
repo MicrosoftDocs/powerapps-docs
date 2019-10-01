@@ -1,5 +1,5 @@
 ---
-title: IImageInfo | Microsoft Docs
+title: SecurityValues | Microsoft Docs
 description: 
 keywords:
 ms.author: nabuthuk
@@ -10,29 +10,25 @@ ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-ms.assetid: 16691acb-a58c-4ca6-b6a8-58c76c9db1ca
 ---
 
-# IImageInfo
+# Security Values
 
-## Available for 
-
-Model-driven apps
+Provides all the information about entity metadata security values. 
 
 ## Properties
 
-### Url
+### editable
 
-The Url of the conditional image.
+**Type**: `boolean`
 
-**Type**: `string`
+### readable
 
-### Tooltip
+**Type**: `boolean`
 
-The tooltip associated with that image.
+### secured
 
-**Type**: `string`
-
+**Type**: `boolean`
 
 ### Related topics
 
