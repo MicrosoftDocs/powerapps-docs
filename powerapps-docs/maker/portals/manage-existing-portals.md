@@ -51,7 +51,7 @@ Share your portal with internal or external users. Follow the steps mentioned in
 To share the portal with internal users you must first create a security role and then assign users to the security role so they can use the portal.
 
 > [!NOTE]
-> As a user in Common Data Service, if you do not have appropriate privileges on portal entities, you might see errors such as “You do not have access to view solutions in this environment.” or “You do not have access to view Website in this environment”. For this preview, it is recommended that you are either in a **System Administrator** or at least a **System Customizer** security role in the corresponding Common Data Service database.
+> As a user in Common Data Service, if you do not have appropriate privileges on portal entities, you might see errors such as “You do not have access to view solutions in this environment.” or “You do not have access to view Website in this environment”. It is recommended that you are either in a **System Administrator** or at least a **System Customizer** security role in the corresponding Common Data Service database.
 
 #### Step 1: Create a security role
 
@@ -86,7 +86,7 @@ Your portal should work anonymously and should be accessible by the external use
 
 ## Settings
 
-Displays the portal settings and allows you to change the name of the portal. You can also perform advanced actions such as administering the portal though the Portal Admin Center and working with site settings. Settings provides links to the PowerApps Portals admin center and Site settings. More information: [Administer your portal](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/manage-portal) and [Configure site settings for portals](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/configure-site-settings).  
+Displays the portal settings and allows you to change the name of the portal. You can also perform advanced actions such as administering the portal though the PowerApps Portals admin center and working with site settings. Settings provides links to the PowerApps Portals admin center and Site settings. More information: [Administer your portal](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/manage-portal) and [Configure site settings for portals](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/configure-site-settings).  
 
 > [!div class=mx-imgBorder]
 > ![portal settings](media/portal-settings.png "Portal settings")  

@@ -13,7 +13,7 @@ ms.reviewer:
 
 # Update to PowerApps Portals domain
 
-With the preview release of PowerApps Portals, you can now update your Dynamics 365 domain `microsoftcrmportals.com` to the PowerApps Portals domain `powerappsportals.com`.
+With the release of PowerApps Portals, you can now update your Dynamics 365 domain `microsoftcrmportals.com` to the PowerApps Portals domain `powerappsportals.com`.
 
 1. Open [PowerApps Portals admin center](admin-overview.md).
 

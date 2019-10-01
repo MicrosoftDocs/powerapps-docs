@@ -40,7 +40,7 @@ ID of the entity when opened in view editor.
 Adds the Power BI dashboards and reports within pages. The tag can be added in the **Copy** field on a web page or in the **Source** field on a web template. For steps to add a Power BI report or dashboard to a webpage in portal, see [Add a Power BI report or dashboard to a webpage in portal](../admin/add-powerbi-report.md).
 
 > [!NOTE]
-> For the tag to work, you must [enable Power BI integration](../admin/set-up-power-bi-integration.md) from Portal Admin Center. If the Power BI integration is not enabled, dashboard or report will not be displayed.
+> For the tag to work, you must [enable Power BI integration](../admin/set-up-power-bi-integration.md) from PowerApps Portals admin center. If the Power BI integration is not enabled, dashboard or report will not be displayed.
 
 ### Parameters
 

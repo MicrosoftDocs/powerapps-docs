@@ -34,9 +34,9 @@ To reset a configured portal:
 
 > [!NOTE]
 > - If you don't have appropriate permissions on an associated Azure Active Directory application, an error is displayed. You must contact the global administrator for the appropriate permissions.
-> - When the portal is reset successfully, the portal name and its status on the **Applications** tab on the Dynamics 365 admin center does not change. For example, if your portal name and status were Portal 1 and Configured respectively, then after resetting the portal, these values do not change. If you want to change the portal name, you can change it on the **Portal Details** tab in the Portal Admin Center. However, the status value cannot be reverted to Not Configured.
+> - When the portal is reset successfully, the portal name and its status on the **Applications** tab on the Dynamics 365 admin center does not change. For example, if your portal name and status were Portal 1 and Configured respectively, then after resetting the portal, these values do not change. If you want to change the portal name, you can change it on the **Portal Details** tab in the PowerApps Portals admin center. However, the status value cannot be reverted to Not Configured.
 > 
-> It is important to note that the portal's status on the **Applications** tab does not represent its provisioning status and does not affect the functioning of your portal. It just shows whether you have ever accessed the Portal Admin Center for that corresponding portal or not.
+> It is important to note that the portal's status on the **Applications** tab does not represent its provisioning status and does not affect the functioning of your portal. It just shows whether you have ever accessed the PowerApps Portals admin center for that corresponding portal or not.
 
 If your portal is not provisioned correctly, it goes into an error state and the following screen is displayed. In this case, you can also reset the portal by selecting **Reset Portal** on the error screen.
 
@@ -49,7 +49,7 @@ This section provides information about troubleshooting issues while resetting a
 
 ### Reset request could not be submitted
 
-If a portal reset request could not be submitted, an error is displayed as shown in the following image. In this case, you must close and reopen the Portal Admin Center, and try to reset the portal again. If the issue persists, contact Microsoft support.
+If a portal reset request could not be submitted, an error is displayed as shown in the following image. In this case, you must close and reopen the PowerApps Portals admin center, and try to reset the portal again. If the issue persists, contact Microsoft support.
 
 > [!div class=mx-imgBorder]
 > ![Error while resetting a portal](../media/reset-portal-request-error.png "Error while resetting a portal")

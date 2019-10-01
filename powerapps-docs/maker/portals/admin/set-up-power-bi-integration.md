@@ -13,7 +13,7 @@ ms.reviewer:
 
 # Set up Power BI integration
 
-Power BI is one of the best tools to deliver insights with simple and interactive visualization. To view dashboards and reports from Power BI on web pages in a portal, you must enable Power BI visualization from the Portal Admin Center. You can also embed dashboards and reports created in the new workspace of Power BI by enabling the Power BI Embedded service integration.
+Power BI is one of the best tools to deliver insights with simple and interactive visualization. To view dashboards and reports from Power BI on web pages in a portal, you must enable Power BI visualization from the PowerApps Portals admin center. You can also embed dashboards and reports created in the new workspace of Power BI by enabling the Power BI Embedded service integration.
 
 > [!NOTE]
 > - You must have an appropriate Power BI license.
@@ -49,7 +49,7 @@ Customizers can use the [powerbi](../liquid/portals-entity-tags.md#powerbi) Liqu
 
 Enabling the Power BI Embedded service allows you to embed dashboards and reports created in the new workspace of Power BI. The dashboards and reports are embedded on webpages in a portal by using the powerbi Liquid tag.
 
-**Prerequisites**: Before enabling the Power BI Embedded service, ensure that you have created your dashboards and reports in the new workspace in Power BI. After creating the workspace, provide admin access to the global administrator so the workspaces are displayed in the Portal Admin Center. For more information on creating new workspaces and adding access to them, see [Create the new workspaces in Power BI](https://docs.microsoft.com/en-us/power-bi/service-create-the-new-workspaces).
+**Prerequisites**: Before enabling the Power BI Embedded service, ensure that you have created your dashboards and reports in the new workspace in Power BI. After creating the workspace, provide admin access to the global administrator so the workspaces are displayed in the PowerApps Portals admin center. For more information on creating new workspaces and adding access to them, see [Create the new workspaces in Power BI](https://docs.microsoft.com/en-us/power-bi/service-create-the-new-workspaces).
 
 **Power BI Embedded service limitations**: For information on limitations, see [Considerations and limitations](https://docs.microsoft.com/en-us/power-bi/developer/embed-service-principal#considerations-and-limitations).
 

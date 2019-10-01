@@ -19,7 +19,7 @@ A portal connects to a Dynamics 365 online organization using an Azure Active Di
 
 Each portal has a separate Azure Active Directory application associated with it, whether it is connected to the same Dynamics 365 organization or not. The default Azure Active Directory authentication provider created for a portal uses the same Azure Active Directory application to authenticate the portal. Authorization is enforced by web roles assigned to the user accessing the portal.
 
-You can see the associated portal application in Azure Active Directory. The name of this application will be Microsoft CRM Portals, and the portal ID is in the **App ID URI** field in the Azure Active Directory application. The person who provisions the portal owns this application. You should not delete or modify this application, or you might break the portal functionality. You must be the application owner to manage a portal from the Portal Admin Center.
+You can see the associated portal application in Azure Active Directory. The name of this application will be Microsoft CRM Portals, and the portal ID is in the **App ID URI** field in the Azure Active Directory application. The person who provisions the portal owns this application. You should not delete or modify this application, or you might break the portal functionality. You must be the application owner to manage a portal from the PowerApps Portals admin center.
 
 ## Authentication key
 
@@ -30,16 +30,16 @@ For a Portal to connect to Dynamics 365 using an Azure Active Directory applicat
 
 ### Authentication key details
 
-The details of an authentication key is displayed on Portal Admin Center and portal.
+The details of an authentication key is displayed on PowerApps Portals admin center and portal.
 
-**Portal Admin Center**
+**PowerApps Portals admin center**
 
 1. Open [PowerApps Portals admin center](admin-overview.md).
 
 2. Select **Manage portal authentication key**. The authentication key is displayed along with its expiration date and thumbprint.
 
    > [!div class=mx-imgBorder]
-   > ![Authentication key details in Portal Admin Center](../media/manage-auth-key.png "Authentication key details in Portal Admin Center")
+   > ![Authentication key details in PowerApps Portals admin center](../media/manage-auth-key.png "Authentication key details in PowerApps Portals admin center")
 
 **Portal**
 
@@ -55,7 +55,7 @@ The details of an authentication key is displayed on Portal Admin Center and por
 
 ### Authentication key expiration notification
 
-Before the authentication key expires, you will be notified by emails, Portal Admin Center, and portal.
+Before the authentication key expires, you will be notified by emails, PowerApps Portals admin center, and portal.
 
 **Email**
 
@@ -83,12 +83,12 @@ You will also be notified after the key expires every day until 1 week after key
 > - Intervals are calculated in UTC from the key expiration date.
 > - Email is not guaranteed to be exactly at the intervals as listed above. Email notification can be delayed or missed. Be sure to check for the key expiration date online as well.
 
-**Portal Admin Center**
+**PowerApps Portals admin center**
 
 A message about key expiration is displayed at the top of the page.
 
 > [!div class=mx-imgBorder]
-> ![Authentication key notification in Portal Admin Center](../media/portal-admin-center-auth-notif.png "Authentication key notification in Portal Admin Center")
+> ![Authentication key notification in PowerApps Portals admin center](../media/portal-admin-center-auth-notif.png "Authentication key notification in PowerApps Portals admin center")
 
 **Portal**
 

@@ -18,7 +18,7 @@ PowerApps makers can now create a powerful new type of experience: external-faci
 These capabilities feature a revamped end-to-end experience for makers to quickly create a website and customize it with pages, layout, and content. Makers can reuse page designs through templates, add forms and views to display key data from Common Data Service, and publish to users.
 
 > [!NOTE]
-> Since PowerApps Portals is in preview, certain experiences might have known issues. These issues are mentioned in the [Known issues](known-issues.md) section later in this document.  
+> Certain experiences might have known issues. These issues are mentioned in the [Known issues](known-issues.md) section later in this document.  
 
 
  

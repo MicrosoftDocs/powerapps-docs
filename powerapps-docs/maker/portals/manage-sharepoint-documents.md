@@ -23,7 +23,7 @@ To work with the document management capabilities of [!INCLUDE[pn-sharepoint-sho
 
 1.	[Enable document management functionality in Dynamics 365 apps](#step-1-enable-document-management-functionality-in-dynamics-365-apps)
 
-2.	[Set up SharePoint integration from portal admin center](#step-2-set-up-sharepoint-integration-from-powerapps-portals-admin-center)
+2.	[Set up SharePoint integration from PowerApps Portals admin center](#step-2-set-up-sharepoint-integration-from-powerapps-portals-admin-center)
 
 3.	[Enable document management for entities](#step-3-enable-document-management-for-entities)
 
