@@ -5,7 +5,7 @@ keywords:
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -14,8 +14,6 @@ ms.assetid: 996f10e5-8057-40ea-9680-555e4cd682ff
 ---
 
 # property-set element
-
-[!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
 
 [!INCLUDE [property-set-description](includes/property-set-description.md)]
 
@@ -33,6 +31,7 @@ Model-driven apps
 |`of-type`|Defines the data type of the property|See [Remarks](#remarks)|Optional|
 |`required`|Indicates whether the property is required or not|`boolean`|Optional|
 |`of-type-group`|Name of the type-group as defined in manifest|`string`|Optional|
+|`usage`|The usage attribute identifies if the property is meant to represent an entity attribute that the component can change (bound) or read-only values (input)|`bound` or `input`|Yes|
 
 ## Parent Elements
 

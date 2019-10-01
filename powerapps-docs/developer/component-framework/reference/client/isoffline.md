@@ -5,7 +5,7 @@ keywords:
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -17,13 +17,13 @@ ms.assetid: a28ff618-aaf8-4c76-b322-79ff98bae291
 
 [!INCLUDE [isoffline-description](includes/isoffline-description.md)]
 
-## Available for
-
-Model-driven apps
-
 ## Syntax
 
 `context.client.isOffline()`
+
+## Available for
+
+Model-driven apps
 
 ## Return Value
 

@@ -4,7 +4,7 @@ description:
 keywords:
 ms.author: nabuthuk
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -15,4 +15,4 @@ applies_to:
 ms.assetid: 6c14b05a-b142-409a-9ef4-f86487a037c9
 ---
 
-Returns the difference in the minutes between the local time and Coordinated Universal Time (UTC).
+Gets the offset in minutes from UTC for the given date.
