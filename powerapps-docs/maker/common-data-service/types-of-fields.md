@@ -162,7 +162,7 @@ Even though an entity has an image field, displaying that image in a model-drive
 When image display is enabled for an entity, any records that don’t have an image will display a placeholder image. For example:
 
 > [!div class="mx-imgBorder"] 
-> ![Default entity image](../common-data-service/media/default-entity-image-on-form.png "Default entity image")
+> ![Default entity image](../common-data-service/media/account-record-default-image.png "Default account entity image")
   
 People can choose the default image to upload a picture from their computer. Images must be less than 5120 KB and must one of the following formats:  
   
