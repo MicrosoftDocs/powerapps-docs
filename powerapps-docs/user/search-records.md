@@ -91,16 +91,81 @@ If your organization has turned on both search options (Relevance and Categorize
 
 2. On the left, select the drop-down menu to switch between **Relevance Search** or **Categorized Search**.
 
-## Start a search  
+## Start a search 
   
-1.  From the top nav bar, select **Search**.  
+1.  From the top nav bar, select the **Search** button.  
   
 2.  Type your search words in the search box and then select **Search**.  
   
-## Filter search results  
+## Filter search results (work with categorized search)  
   
 -   To filter results by one record type, on the search screen, choose a record type from the **Filter with:** drop-down box.  
   
 -   To search against all record types, choose **None** in the **Filter with:** drop-down box.  
+
+## Filter records with facets  (work with relevance search)  
+ With [!INCLUDE[pn_crm_8_2_0_online](../includes/pn-crm-8-2-0-online.md)], you can now refine your search results by using facets and filters. Facets are available in the left pane. Immediately after you perform a search, the following global facets are available for four common fields:  
+  
+-   Record Type  
+  
+-   Owner  
+  
+-   Created On  
+  
+-   Modified On  
+  
+### Record Type facets  
+ To narrow your search results to a specific entity, select the entity under the **Record Type** section.  
+  
+ ![Record Type facet to narrow the search results](../basics/media/relevance-search-record-type-facet.png "Record Type facet used to narrow search results")  
+  
+ When you filter on a specific record type, you can include activities and notes that are related to the selected record in your search results. To do that, select the **Related Notes & Activities** check box. The activities and notes will appear in top-level results.  
+  
+ ![Include notes and activities related to a record type in the search results](../basics/media/relevance-search-record-type-facet-related-notes-activities.png "Include notes and activities related to a record type in the search results")  
+  
+ Search results that are found in email attachments or appointment entities  are shown in the search results under their parent record, either Email or Appointment.  
+  
+ When you refine by record type, the facet scope switches to the selected entity, and up to four facets that are specific to the entity are shown. For example, if you select the Account entity, you'll see the **Primary Contact** facet in addition to the global facets.  
+  
+ In the **Set Personal Options** dialog box, you can also choose other facets from the ones that your system administrator or customer has made available to you. The user setting overrides the default setting. [!INCLUDE[proc_more_information](../includes/proc-more-information.md)] [Configure facets and filters for the search](#BKMK_ConfigureFacets)  
+  
+### Text-based facets  
+ All lookups, option sets, and record types are text-based facets. For example, the text-based facet Owner consists of a list of field values and their corresponding counts.  
+  
+ ![Text-based facet in Relevance Search](../basics/media/relevance-search-text-based-facets.png "Text-based facet in Relevance Search")  
+  
+ Filters in these facets are sorted in descending order by count. The top four facet values are displayed by default. When there are more than four facet values, you'll see a **SHOW MORE** link that you can select to expand the list and see up to 15 top facet values. Select each value to filter the search results to show only records where the field has the value you've selected. For example, if you select **Kim Abercrombie**, the search results will show all records where the owner is Kim Abercrombie. When you select a Lookup or Option Set facet value, search results are filtered to only include records with the value that you specified.  
+  
+### Date and time facets  
+ Like other facets, you can use date and time facets to filter and see search results for a specific time. To select a range of values, drag the slider or select one of the vertical columns.  
+  
+ ![Date and time facets for Relevance Search](../basics/media/relevance-search-date-time-facets.png "Date and time facets for Relevance Search")  
+  
+<a name="BKMK_ConfigureFacets"></a>   
+## Configure facets and filters for the search  
+ Facets and filters let you drill into and explore the results of your current search without having to repeatedly refine your search term. Configure the facets and filters you want in the **Set Personal Options** dialog box.  
+  
+> [!NOTE]
+>  The system customizer can set the default experience for all entities, but you can configure your own facets and filters.  
+  
+#### To configure facets for yourself  
+  
+1. Select the personal settings button in the upper-right corner of the page, and then select **Options**.  
+  
+   ![Select default search experience](../basics/media/relevance-search-personal-settings.PNG "Select default search experience")  
+  
+2. On the **General** tab, in the **Select the default search experience** section, for the **Facets and Filters** field, select **Configure**.  
+  
+3. In the **Configure Facets and Filters** dialog box, specify the facets you'd like to see for an entity. Your system administrator or customizer can set a default experience for all entities, but you can set your own here.  
+  
+   - In the **Select Entity** drop-down list, select an entity you want to configure facets for. This drop-down list contains only the entities that are enabled for Relevance Search.  
+  
+   - For the selected entity, select up to four facet fields. By default, the first four facetable fields in the **Quick Find** view for the selected entity are selected in the list. At any time, you can only have four fields selected as facets.  
+  
+     You can update multiple entities at one time. When you select **OK**, the changes for all entities that you've configured are saved. To revert to the default behavior for an entity that you previously configured, select **Default**.  
+  
+   > [!NOTE]
+   > - If a system customizer deletes a field or makes it no longer searchable, and you've saved a facet for that field, it will no longer show up as a facet.  
+   >   -   You'll only see the fields that exist in the default solution and that are configured as searchable by your system customizer.  
   
  
