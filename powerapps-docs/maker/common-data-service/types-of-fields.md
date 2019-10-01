@@ -177,4 +177,4 @@ When an image is uploaded, it will be resized to a maximum size of 144 pixels by
 
 More information for developers working with image data:
 - [Entity metadata > Entity images](/powerapps/developer/common-data-service/entity-metadata#entity-images)
-- [Dynamics 365 Customer Engagement Developer Guide:Image attributes](/dynamics365/customer-engagement/developer/image-attributes)
+- [Image attributes](/powerapps/developer/common-data-service/image-attributes)
