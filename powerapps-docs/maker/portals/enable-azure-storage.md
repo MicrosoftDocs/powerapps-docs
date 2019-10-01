@@ -42,7 +42,7 @@ To locate the value for FileStorage/CloudStorageAccount, you must get a connecti
 
 If you do not already have an Azure Blob container in your storage account, you must add one by using your [!include[Azure portal](../../includes/pn-azure-portal.md)].
 
-In the [Portal Management app](configure-portal.md), go to **Settings** > **New**, and add a new setting named **FileStorage/CloudStorageContainerName**, using the name of your container as the value.
+In the [Portal Management app](configure/configure-portal.md), go to **Settings** > **New**, and add a new setting named **FileStorage/CloudStorageContainerName**, using the name of your container as the value.
 
 ![Portal setting for cloud storage container](media/portal-site-setting-cloud-storage-container.png "Portal setting for your cloud storage container")
 
@@ -60,7 +60,7 @@ You must add cross-origin resource sharing (CORS) rule on your Azure Storage acc
 
 ## Add site settings
 
-Add the following site settings from **Portals** > **Site Settings**. [!include[More information:](../../includes/proc-more-information.md)] [Manage portal site settings](configure-site-settings.md#manage-portal-site-settings).
+Add the following site settings from **Portals** > **Site Settings**. [!include[More information:](../../includes/proc-more-information.md)] [Manage portal site settings](configure/configure-site-settings.md#manage-portal-site-settings).
 
 |Name|Value|
 |-----|-----|
