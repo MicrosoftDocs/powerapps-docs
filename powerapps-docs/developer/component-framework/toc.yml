@@ -82,17 +82,6 @@
         href: reference/conditionexpression.md
       - name: Context
         href: reference/context.md
-      - name: StandardControl
-        href: reference/control.md
-        items:
-        - name: destroy
-          href: reference/control/destroy.md
-        - name: getOutputs
-          href: reference/control/getOutputs.md
-        - name: init
-          href: reference/control/init.md
-        - name: updateView
-          href: reference/control/updateview.md
       - name: DataSet
         href: reference/dataset.md
         items:
@@ -273,6 +262,17 @@
         href: reference/securityvalues.md
       - name: SortStatus
         href: reference/sortstatus.md
+      - name: StandardControl
+        href: reference/control.md
+        items:
+        - name: destroy
+          href: reference/control/destroy.md
+        - name: getOutputs
+          href: reference/control/getOutputs.md
+        - name: init
+          href: reference/control/init.md
+        - name: updateView
+          href: reference/control/updateview.md
       - name: UserSettings
         href: reference/usersettings.md
       - name: Utility

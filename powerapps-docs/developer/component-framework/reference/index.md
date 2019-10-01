@@ -22,7 +22,7 @@ This section contains reference documentation for creating code components using
 |[Client](client.md)|[!INCLUDE [client-description](includes/client-description.md)]|Model-driven apps and canvas apps (experimental preview)|
 |[Column](column.md)|[!INCLUDE [column-description](includes/column-description.md)]|Model-driven apps and canvas apps (experimental preview)|
 |[ConditionExpression](conditionexpression.md)|[!INCLUDE [conditionexpression-description](includes/conditionexpression-description.md)]|Model-driven apps|
-|[Context](context.md)|[!INCLUDE [context-description](includes/context-description.md)]|Model-driven apps|
+|[Context](context.md)|[!INCLUDE [context-description](includes/context-description.md)]|Model-driven apps and canvas apps (experimental preview)|
 |[DataSet](dataset.md)|[!INCLUDE [dataset-description](includes/dataset-description.md)]|Model-driven apps|
 |[DateFormattingInfo](dateformattinginfo.md)|[!INCLUDE [dateformattinginfo-description](includes/dateformattinginfo-description.md)]|Model-driven apps|
 |[Device](device.md)|[!INCLUDE [device-description](includes/device-description.md)]|Model-driven apps and canvas apps (experimental preview)|
