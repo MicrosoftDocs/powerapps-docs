@@ -89,7 +89,7 @@ To show or hide the header flyout for a model-driven form, follow these steps:
 > [!NOTE]
 > - Use the new form designer. The classic form designer does not provide the ability to show or hide the header flyout.   
 > - The visibility of header flyout can only be controlled when using high-density form header. When using low-density header, the header flyout is automatically displayed or hidden based on the number of fields in the header and the width of the form.
-> - An image for an entity will be displayed in the header only if the image is selected in the **Primary Attribute** field for the entity. For more information about this field, see [Image fields](../common-data-service/types-of-fields.md#image-fields). Developers can specify an image for an entity by using the [EntityMetadata.PrimaryImageAttribute](https://docs.microsoft.com/dotnet/api/microsoft.xrm.sdk.metadata.entitymetadata.primaryimageattribute?view=dynamics-general-ce-9) attribute. 
+> - An image for an entity will be displayed in the header only if the **Primary Imagine** attribute is defined for the entity and the form property **Show image in the form** is enabled. More information: [Image fields](../common-data-service/types-of-fields.md#image-fields). Developers can specify an image for an entity by using the [EntityMetadata.PrimaryImageAttribute](https://docs.microsoft.com/dotnet/api/microsoft.xrm.sdk.metadata.entitymetadata.primaryimageattribute?view=dynamics-general-ce-9) attribute. 
 
 
 ## Form designer messages related to form headers
