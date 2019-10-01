@@ -20,7 +20,7 @@ Just like with subgrids, adding notes to your managed forms on the portal is eas
 
 ## Notes configuration for entity forms
 
-1. Open the Portal Management app.
+1. Open the [Portal Management app](configure-portal.md).
 2. Go to **Portals** > **Content** > **Entity Forms**. A list of active entity forms is displayed.
 3. Select the entity form to which you want to add note configuration.
 4. Go to **Entity Form Metadata** either by using the top drop-down list or the subgrid on the main form of the entity form record that you are working with.

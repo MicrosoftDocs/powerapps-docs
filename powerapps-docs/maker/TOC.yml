@@ -1059,10 +1059,10 @@
           href: ./portals/compose-page.md
         - name: Work with templates
           href: ./portals/work-with-templates.md
+        - name: Edit CSS
+          href: ./portals/edit-css.md
     - name: Manage existing portals
       href: ./portals/manage-existing-portals.md
-    - name: Configure site settings
-      href: ./portals/configure-site-settings.md
     - name: Advanced portal administration
       items:
         - name: Overview
@@ -1099,6 +1099,12 @@
           href: ./portals/admin/migrate-portal-configuration.md
         - name: About trial portals
           href: ./portals/admin/about-trial.md
+    - name: Advanced portal configurations
+      items:
+        - name: Overview
+          href: ./portals/configure/configure-portal.md
+        - name: Configure site settings
+          href: ./portals/configure/configure-site-settings.md
     - name:  Advanced portal customizations
       items:
         - name: Work with Liquid templates
@@ -1148,15 +1154,15 @@
     - name: Document storage in portals
       items:
         - name: Configure notes
-          href: ./portals/configure-notes.md
+          href: ./portals/configure/configure-notes.md
         - name: Azure storage
           items:
             - name: Enable Azure storage
-              href: ./portals/enable-azure-storage.md
+              href: ./portals/configure/enable-azure-storage.md
             - name: Add the Azure Storage web resource to a form
-              href: ./portals/add-web-resource.md
+              href: ./portals/configure/add-web-resource.md
         - name: Manage SharePoint documents
-          href: ./portals/manage-sharepoint-documents.md
+          href: ./portals/admin/manage-sharepoint-documents.md
     - name: Known issues
       href: ./portals/known-issues.md
     - name: PowerApps Portals FAQ

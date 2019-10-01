@@ -24,7 +24,7 @@ You can manage the following types of site settings:
 
 ## Manage portal site settings
 
-1. Go to [portal settings](manage-existing-portals.md#settings) and select **Site settings**.
+1. Go to [portal settings](../manage-existing-portals.md#settings) and select **Site settings**.
 
 2. To create a new setting, select **New**.
 

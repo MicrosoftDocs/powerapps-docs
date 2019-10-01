@@ -22,10 +22,13 @@ A webpage is a document that is identified by a unique URL in a website. It is o
 
 1.  [Edit the portal](manage-existing-portals.md#edit) to open it in PowerApps Portals Studio.  
 
-2.  From the command bar, select **New page** and choose the page template.
+2.  From the command bar, select **New page** and either choose a page from **Layouts** or **Fixed layouts**.
 
     > [!div class=mx-imgBorder]
     > ![create a new webpage](media/create-webpage.png "Create a new webpage")
+
+    > [!NOTE]
+    > Creating a page using **Layouts** gives you the flexibility to edit the complete page. **Fixed layouts** contains the page templates that are installed as part of portal provisioning and the custom page templates created using the [Portal Management app](configure/configure-portal.md).
 
 3.  In the properties pane on the right side of the screen, enter the following information:
 
