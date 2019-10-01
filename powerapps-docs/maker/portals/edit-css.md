@@ -34,9 +34,11 @@ To upload a new CSS file:
 
 2.  Select **Theme** ![Theme icon](media/theme-icon.png "Theme icon") from the toolbelt on the left side of the screen. The available themes are displayed.  
 
+3. Select **Upload custom CSS**.
+
     > [!div class=mx-imgBorder]
     > ![Theme pane](media/upload-css.png "Theme pane")  
 
-3. Select **Upload custom CSS**.
+4. Browse and select the CSS file to upload.
 
 
