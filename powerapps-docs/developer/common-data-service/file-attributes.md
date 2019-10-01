@@ -17,7 +17,7 @@ search.app:
 ---
 # File attributes
 
-A "File" attribute is used for storing binary data up to a specified maximum size. The primary intended use of this field is to store a single image, annotation (note), or attachment. However, storage of other forms of binary data is also possible. A custom or customizable entity can have zero or more file attributes. All file attributes have the <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.SchemaName> ‘EntityFile’ and the <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.LogicalName> ‘entityfile’.
+A file attribute is used for storing binary data up to a specified maximum size. The primary intended use of this field is to store a single image, annotation (note), or attachment. However, storage of other forms of binary data is also possible. A custom or customizable entity can have zero or more file attributes. All file attributes have the <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.SchemaName> ‘EntityFile’ and the <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.LogicalName> ‘entityfile’.
 
 Web API (type) | SDK API (class)
 ------- | -------
@@ -43,7 +43,7 @@ To retrieve file data, use the following APIs.
 
 Web API | SDK API
 ------- | -------
- *none*  | <xref:Microsoft.Crm.Sdk.Messages.InitializeFileBlocksDownloadRequest>,<br/><xref:Microsoft.Crm.Sdk.Messages.InitializeAttachmentBlocksDownloadRequest>,<br/><xref:Microsoft.Crm.Sdk.Messages.InitializeAnnotationBlocksDownloadRequest>
+ none  | <xref:Microsoft.Crm.Sdk.Messages.InitializeFileBlocksDownloadRequest>,<br/><xref:Microsoft.Crm.Sdk.Messages.InitializeAttachmentBlocksDownloadRequest>,<br/><xref:Microsoft.Crm.Sdk.Messages.InitializeAnnotationBlocksDownloadRequest>
 GET /api/data/v9.0/\<entity-type(id)\>/\<file-attribute-name\>/$value   | <xref:Microsoft.Crm.Sdk.Messages.DownloadBlockRequest>
 
 File data transfers from the web service endpoints are limited to a maximum of 16 MB data in a single service call. File data greater that that amount must be divided into 4 MB or smaller data blocks (chunks) where each block is received in a separate API call until all file data has been received. It is your responsibility to join the downloaded data blocks to form the complete data file by combining the data blocks in the same sequence as the blocks were received.

@@ -2,7 +2,7 @@
 title: "Image attributes (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about image attributes that include image data witht in the application, and supporting attributes, Retrieving image data, and Uploading image data." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 11/26/2018
+ms.date: 10/01/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.topic: "article"
@@ -17,16 +17,15 @@ search.app:
 ---
 # Image attributes
 
-Entity records that include image data provide a unique experience within the application. As a developer you need to understand how you work with image data.  
-  
- Only certain system entities and custom entities support images. For information about which system entities support images, see [Entity images](/dynamics365/customer-engagement/developer/introduction-entities#entity-images).  
+Certain system entities and all custom entities support images. Those entities that do support images can contain both a thumbnail and a full-size primary image. The thumbnail image can be seen in the web application when viewing the entity's form data. There can be multiple image attributes in an entity instance but there can be only one primary image. However, you can change the primary image from one image to another. Each full-sized image attribute is limited to 30 MB in size.
+
+For information about which system entities support images, see [Entity images](/dynamics365/customer-engagement/developer/introduction-entities#entity-images).
+
+In addition to image attributes, custom entities support zero or more file attributes that can contain any binary data. These file attributes can contain more binary data than image attributes. For more information see [File attributes](file-attributes.md).
   
 <a name="BKMK_SupportingAttributes"></a>   
 ## Supporting attributes  
- For those entities which support image attributes, the <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.SchemaName> of the entity image attribute is always `EntityImage`. When an image attribute is added to an entity some additional attributes are created to support it.  
-  
-> [!NOTE]
->  Clients that do not use the current .NET assemblies need to include <xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy.SdkClientVersion> with a value of ‘6.0.0.0’ or higher in order to receive <xref:Microsoft.Xrm.Sdk.Metadata.ImageAttributeMetadata> attributes. More information: <xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy.SdkClientVersion>.  
+ For those entities that support image attributes, the <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.SchemaName> of the entity image attribute is always `EntityImage`. When an image attribute is added to an entity some additional attributes are created to support it.  
   
 ### EntityImage_Timestamp attribute  
  Attribute Type Name:  `BigIntType`  
@@ -88,6 +87,7 @@ Entity records that include image data provide a unique experience within the ap
  More information: [Sample: Set and retrieve entity images](/dynamics365/customer-engagement/developer/sample-set-retrieve-entity-images).  
   
 ### See also  
- [Introduction to Entities in Dynamics 365](/dynamics365/customer-engagement/developer/introduction-entities)   
+[File attributes](file-attributes.md)  
+[Introduction to Entities in Dynamics 365](/dynamics365/customer-engagement/developer/introduction-entities)   
  [Introduction to entity attributes in Dynamics 365](/dynamics365/customer-engagement/developer/introduction-entity-attributes)   
  [Sample: Set and retrieve entity images](/dynamics365/customer-engagement/developer/sample-set-retrieve-entity-images)
