@@ -183,7 +183,7 @@ When an image is uploaded, it will be resized to a maximum size of 144 pixels by
 2. In the left navigation pane, expand **Entities**, expand the custom entity you want, and then select **Fields**. 
 3. On the toolbar, select **New**. 
 4. In the **Type** section in the **Data Type** dropdown list select **Image**. 
-5. Enter a **Display Name**, such as *Main form image*. 
+5. Enter a **Display Name**, such as *Custom entity image*. 
 6. Complete the remaining fields as appropriate. Notice that the **Name**, **Field Requirement**, and **Searchable** fields can’t be changed. Select **Save and Close**. 
 7. On the entity definition next to the **Primary Image** property make sure value is set to the custom image you created in the previous step. If it's not select it.  
     ![Primary image property selected](media/primary-image-property.png)
