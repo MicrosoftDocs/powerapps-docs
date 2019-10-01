@@ -1099,13 +1099,13 @@
           href: ./portals/admin/migrate-portal-configuration.md
         - name: About trial portals
           href: ./portals/admin/about-trial.md
-    - name: Advanced portal configurations
+    - name: Advanced portal configuration
       items:
         - name: Overview
           href: ./portals/configure/configure-portal.md
         - name: Configure site settings
           href: ./portals/configure/configure-site-settings.md
-    - name:  Advanced portal customizations
+    - name:  Advanced portal customization
       items:
         - name: Work with Liquid templates
           items:

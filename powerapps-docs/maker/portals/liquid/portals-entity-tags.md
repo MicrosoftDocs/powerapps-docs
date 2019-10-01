@@ -64,7 +64,7 @@ Type of authentication required for the Power BI report or dashboard. Valid valu
 
 - **powerbiembedded**: Allows you to share the secure Power BI reports or dashboards to external users who doesn't have Power BI license or Azure Active Directory authentication setup. For information on Power BI Embedded service setup, see [Enable Power BI Embedded service](../admin/set-up-power-bi-integration.md#enable-power-bi-embedded-service). 
 
-While adding the secure Power BI report or dashboard, ensure that it is shared with Dynamics 365 Portal Azure Active Directory or Power BI Embedded services. 
+While adding the secure Power BI report or dashboard, ensure that it is shared with Dynamics 365 portal Azure Active Directory or Power BI Embedded services. 
 
 > [!NOTE]
 > The values for the `authentication_type` parameter are case insensitive.

@@ -1,6 +1,6 @@
 ---
-title: "Connect a portal to a Dynamics 365 online organization | MicrosoftDocs"
-description: "Learn how to connect a portal to a Dynamics 365 online organization and how to renew the authentication key."
+title: "Connect a portal to a Common Data Service environment | MicrosoftDocs"
+description: "Learn how to connect a portal to a Common Data Service environment and how to renew the authentication key."
 author: sbmjais
 manager: shujoshi
 ms.service: powerapps
@@ -11,22 +11,22 @@ ms.author: shjais
 ms.reviewer:
 ---
 
-# Connect to a Dynamics 365 online organization using a portal
+# Connect to a Common Data Service environment using a portal
 
-A portal connects to a Dynamics 365 online organization using an Azure Active Directory application. The application is created in the same tenant where the portal is provisioned. The application is registered with the Dynamics 365 organization during the portal provisioning process.
+A portal connects to a Common Data Service environment using an Azure Active Directory application. The application is created in the same tenant where the portal is provisioned. The application is registered with the Common Data Service environment during the portal provisioning process.
 
-![Connecting a portal with Dynamics 365 organization](../media/connect-with-dynamics.png "Connecting a portal with Dynamics 365 organization")
+![Connecting a portal with Common Data Service environment](../media/connect-with-dynamics.png "Connecting a portal with Common Data Service environment")
 
-Each portal has a separate Azure Active Directory application associated with it, whether it is connected to the same Dynamics 365 organization or not. The default Azure Active Directory authentication provider created for a portal uses the same Azure Active Directory application to authenticate the portal. Authorization is enforced by web roles assigned to the user accessing the portal.
+Each portal has a separate Azure Active Directory application associated with it, whether it is connected to the same Common Data Service environment or not. The default Azure Active Directory authentication provider created for a portal uses the same Azure Active Directory application to authenticate the portal. Authorization is enforced by web roles assigned to the user accessing the portal.
 
 You can see the associated portal application in Azure Active Directory. The name of this application will be Microsoft CRM Portals, and the portal ID is in the **App ID URI** field in the Azure Active Directory application. The person who provisions the portal owns this application. You should not delete or modify this application, or you might break the portal functionality. You must be the application owner to manage a portal from the PowerApps Portals admin center.
 
 ## Authentication key
 
-For a Portal to connect to Dynamics 365 using an Azure Active Directory application, it requires an authentication key connected to the Azure Active Directory application. This key is generated when you provision a portal and the public part of this key is automatically uploaded to the Azure Active Directory application.
+For a portal to connect to Common Data Service using an Azure Active Directory application, it requires an authentication key connected to the Azure Active Directory application. This key is generated when you provision a portal and the public part of this key is automatically uploaded to the Azure Active Directory application.
 
 > [!IMPORTANT]
-> The authentication key will expire in two years. It must be renewed every two years to ensure that your portal will continue to connect to the Dynamics 365 organization. If you do not update the key, the portal will stop working.  
+> The authentication key will expire in two years. It must be renewed every two years to ensure that your portal will continue to connect to the Common Data Service environment. If you do not update the key, the portal will stop working.  
 
 ### Authentication key details
 
@@ -102,7 +102,7 @@ When you navigate to the URL <portal_path>/_services/about, a notification about
 
 ## Renew portal authentication key
 
-You must renew the key every two years to ensure that your portal can connect to Dynamics 365 organization.
+You must renew the key every two years to ensure that your portal can connect to Common Data Service environment.
 
 > [!NOTE]
 > To renew the key, you must have permissions to manage your portal.

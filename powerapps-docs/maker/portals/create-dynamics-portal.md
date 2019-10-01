@@ -17,10 +17,10 @@ If you select an environment that contains model-driven apps in Dynamics 365, yo
 
 1.	Sign in to [PowerApps](http://web.powerapps.com).
 
-2.	Select **Create** on the left pane and enter **portal** in the **Search templates** field to display all Dynamics 365 Portal templates.
+2.	Select **Create** on the left pane and enter **portal** in the **Search templates** field to display all Dynamics 365 portal templates.
 
     > [!div class=mx-imgBorder]
-    > ![Dynamics 365 Portal templates](media/dynamics-portals.png "Dynamics 365 Portal templates")  
+    > ![Dynamics 365 portal templates](media/dynamics-portals.png "Dynamics 365 portal templates")  
 
 3.	Select the required portal template.
 

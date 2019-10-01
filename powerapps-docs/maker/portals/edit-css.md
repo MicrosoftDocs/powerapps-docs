@@ -1,6 +1,6 @@
 ---
-title: Create a Dynamics 365 portal in PowerApps | Microsoft Docs
-description: Instructions to create a Dynamics 365 portal in PowerApps.
+title: Edit CSS in portal | Microsoft Docs
+description: Instructions to edit CSS in portal.
 author: sbmjais
 manager: shujoshi
 ms.service: powerapps
