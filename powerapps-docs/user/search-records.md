@@ -24,15 +24,64 @@ You can search for records across multiple entities by using Relevance search or
 
 Normally, Categorized search is the default search option. However, if Relevance search is enabled by your organization, it becomes the default search experience.   
   
-### Normal quick find (Categorized search) 
+## Normal quick find (Categorized search) 
   
 - **Begins with**: Results include records that begin with a specific word. For example, if you want to search for “Alpine Ski House,” type **alp** in the search box; if you type **ski**, the record won’t show up.  
   
 - **Wildcard**: For example, *ski or *ski\*  
   
-### Relevance search
+## Relevance search
   
-- **Search within**: Results include records that contain a field with all of the words in the search term.  The individual words can appear anywhere in the string and in any order.  For example, if you search for “Alpine Ski House,” you could find results for “I left the house today to go skiing in the Alpine Meadows,” since all of the search words appear somewhere in the string.  
+Relevance Search delivers fast and comprehensive results across multiple entities in a single list, sorted by relevance. It uses a dedicated search service external to Common Data Service (powered by [!INCLUDE[pn_Windows_Azure](../includes/pn-windows-azure.md)]) to boost search performance for Common Data Service.  
+  
+ Relevance Search is available in addition to other Common Data Service searches you are already familiar with. You can continue using single-entity Quick Find on the entity grid or Multi-Entity Quick Find (called Categorized Search, if you have Relevance Search enabled) by using **Search for records across multiple entities sorted by relevance** on the navigation bar. For more comprehensive and faster results, we recommend using Relevance Search.  
+
+ Relevance Search brings the following enhancements and benefits:  
+  
+- Improves performance with external indexing and [!INCLUDE[pn_azure_shortest](../includes/pn-azure-shortest.md)] Search technology.  
+  
+- Finds matches to any word in the search term in any field in the entity. Matches can include inflectional words like **stream**, **streaming**, or **streamed**.  
+  
+- Returns results from all searchable entities in a single list sorted by relevance, based on factors like number of words matched or their proximity to each other in the text.  
+  
+- Highlights matches in the result list.  
+  
+> [!NOTE]
+> - Relevance Search is disabled by default. Your administrator needs to enable it for the organization. After Relevance Search is enabled, you might have to wait up to an hour or more, depending on the size of your organization, before you start seeing Relevance Search results for your apps. Smaller changes in indexed data can take up to 15 minutes to show up in your system.
+> - Enabling Relevance Search allows all users in the organization to use it.  
+> - Relevance search is text-based, and can search only on fields of type Single Line of Text, Multiple Lines of Text, Option Sets, or Lookups. It doesn't support searching in fields of Numeric or Date data type. 
+  
+ Although Relevance Search finds matches to any word in the search term in any field in an entity, in Quick Find&mdash;even with full-text search enabled&mdash;all words from the search term must be found in one field.  
+  
+ In Relevance Search, the better the match, the higher it appears in the results. A match has a higher relevancy if more words from the search term are found in close proximity to each other. The smaller the amount of text where the search words are found, the higher the relevancy. For example, if you find the search words in a company name and address, it might be a better match than the same words found in a large article, far apart from each other. Because the results are returned in a single list, you can see a mix of records displayed one after another, such as accounts, opportunities, leads, and so on. The matched words in the list are highlighted.  
+  
+<a name="BKMK_Use_RelevanceSearch"></a>   
+### Use Relevance Search  
+ When Relevance Search is enabled for your organization, it becomes the default search experience. On the navigation bar use the search box to enter a search term, and then select the Enter key or select the search button. Then the **Relevance Search** search results page appears. Search results are shown in a single list ordered by relevance. To learn how to change your default search experience, see [Select a default search experience](#BKMK_DefaultOption).  
+  
+ Start a new search by entering a search term in the **Relevance Search** search box or in the search box on the nav bar, as shown here.  
+  
+ ![Relevance Search](../basics/media/relevance-search.png "Relevance Search")  
+  
+ Use syntax in your search term to get the results you want. For example, type **car silver 2-door** to include matches for any word in the search term in the search results. Type **car+silver+2-door** to find only matches that include all three words. Type **car&#124;silver&#124;2-door** to  get results that contain **car** or **silver** or **2-door**, or all three words. More information about syntax you can use in your search queries: [Simple query syntax in Azure Search](https://docs.microsoft.com/rest/api/searchservice/simple-query-syntax-in-azure-search)
+
+
+> [!NOTE]
+> You'll see hit highlights when your search term matches a term in your app. The hit highlights appear as bold and italicized text in your search results. These are often returned as a portion of the full value in a field because only the matched terms are highlighted. 
+  
+ In [!INCLUDE[pn_crm_8_2_0_online](../includes/pn-crm-8-2-0-online.md)], the following enhancements have been made to the Relevance Search experience:  
+  
+- You'll find search results for text in a document that is stored in [!INCLUDE[pn_crm_shortest](../includes/pn-crm-shortest.md)], including text in notes, email attachments, or appointments. The following file formats are supported for search: PDF, Microsoft Office documents, HTML, XML, ZIP, EML, plain text, and JSON.  
+  
+- You can search for records that are shared with you and records that you own.  
+  
+  > [!NOTE]
+  >  Hierarchical security models aren't supported.  Even if you see a row in [!INCLUDE[pn_crm_shortest](../includes/pn-crm-shortest.md)] because you have access to it through hierarchical security, you won't see the result in Relevance Search.  
+  
+- You can also search for option sets  and lookups. For example, let's say you want to find a retail store account that has **Pharmaceuticals** in the name. When you search for **Pharmaceutical Retail**, you'll find the result because there's a match to the Industry field, which is a searchable option set.  
+  
+  Because your results might include a mix of entities, you can narrow your search results to a specific entity by selecting an entity in the **Filter with** drop-down list. When you filter on a specific record type, you can include activities and notes related to the selected record in your search results. To do that, select the **Search activities and notes for selected records** check box to the right of the **Filter with** drop-down list. The check box is selected after you select a record in the **Filter with** drop-down list; it is cleared if you didn't select an entity in the **Filter with** list. The activities and notes are returned as top-level results.  
+  
 
 ## Switch between Relevance and Categorized search
 
