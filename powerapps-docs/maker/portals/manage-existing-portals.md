@@ -51,7 +51,7 @@ Share your portal with internal or external users. Follow the steps mentioned in
 To share the portal with internal users you must first create a security role and then assign users to the security role so they can use the portal.
 
 > [!NOTE]
-> As a user in Common Data Service, if you do not have appropriate privileges on portal entities, you might see errors such as “You do not have access to view solutions in this environment.” or “You do not have access to view Website in this environment”. It is recommended that you are either in a **System Administrator** or at least a **System Customizer** security role in the corresponding Common Data Service database.
+> As a user in Common Data Service, if you do not have appropriate privileges on portal entities, you might see errors such as “You do not have access to view solutions in this environment.” or “You do not have access to view Website in this environment”. It is recommended that you are in a System Administrator security role in the corresponding Common Data Service database.
 
 #### Step 1: Create a security role
 
@@ -97,7 +97,7 @@ Deletes the portal and hosted resources. When you delete a portal, its URL becom
 You must delete the portal configurations manually to completely remove portal configurations from your environment. To do this, use the Portal Management app, and delete the corresponding website record for the portal.
 
 > [!NOTE]
-> If you don't have sufficient privileges to delete a portal, an error is displayed. You must have the System Customizer or System Administrator role to delete a portal. Also, you must be the owner of the portal application in Azure Active Directory. The user who creates the portal is by default the owner and can delete a portal. For information on adding yourself as an owner, see [Add yourself as an owner of the Azure AD application](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/manage-portal#to-add-yourself-as-an-owner-of-the-azure-ad-application).
+> If you don't have sufficient privileges to delete a portal, an error is displayed. You must have the System Administrator role to delete a portal. Also, you must be the owner of the portal application in Azure Active Directory. The user who creates the portal is by default the owner and can delete a portal. For information on adding yourself as an owner, see [Add yourself as an owner of the Azure AD application](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/manage-portal#to-add-yourself-as-an-owner-of-the-azure-ad-application).
 
 ## Details
 
