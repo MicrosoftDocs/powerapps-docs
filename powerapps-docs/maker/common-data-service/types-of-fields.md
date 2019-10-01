@@ -164,7 +164,7 @@ When image display is enabled for an entity, any records that don’t have an im
 > [!div class="mx-imgBorder"] 
 > ![Default entity image](../common-data-service/media/account-record-default-image.png "Default account entity image")
   
-People can choose the default image to upload a picture from their computer. Images must be less than 5120 KB and must one of the following formats:  
+People can choose the default image to upload a picture from their computer. Images must be less than 5120 KB and must be in one of the following formats:  
   
 - jpg
 - jpeg
@@ -185,7 +185,7 @@ When an image is uploaded, it will be resized to a maximum size of 144 pixels by
 4. In the **Type** section in the **Data Type** dropdown list select **Image**. 
 5. Enter a **Display Name**, such as *Custom entity image*. 
 6. Complete the remaining fields as appropriate. Notice that the **Name**, **Field Requirement**, and **Searchable** fields can’t be changed. Select **Save and Close**. 
-7. On the entity definition next to the **Primary Image** property make sure value is set to the custom image you created in the previous step. If it's not select it.  
+7. On the entity definition next to the **Primary Image** property make sure the value is set to the custom image you created in the previous step. If it's not select it.  
     ![Primary image property selected](media/primary-image-property.png)
 
 8.	Open the form where you want image support, such as the entity main form. 
