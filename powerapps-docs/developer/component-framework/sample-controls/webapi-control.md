@@ -20,21 +20,21 @@ The Web API component is designed to perform create, retrieve, update and delete
 
 Model-driven apps
 
- ## Manifest
+## Manifest
 
  ```xml
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <manifest>
-    <control namespace="SampleNamespace" constructor="TSWebAPI" version="1.0.0" display-name-key="TS_WebAPI_Display_Key" description-key="TS_WebAPI_Desc_Display_Key" control-type="standard">
-        <property name="stringProperty" display-name-key="stringProperty_Display_Key" description-key="stringProperty_Desc_Key" of-type="SingleLine.Text" usage="bound" required="true" />
-        <resources>
-            <code path="index.ts" order="1" />
-            <css path="css/TS_WebAPI.css" order="2" />
-        </resources>
-        <feature-usage>
-<uses-feature name="WebAPI" required="true" />
-</feature-usage>
-    </control>
+	<control namespace="SampleNamespace" constructor="TSWebAPI" version="1.0.0" display-name-key="TS_WebAPI_Display_Key" description-key="TS_WebAPI_Desc_Display_Key" control-type="standard">
+		<property name="stringProperty" display-name-key="stringProperty_Display_Key" description-key="stringProperty_Desc_Key" of-type="SingleLine.Text" usage="bound" required="true" />
+		<resources>
+			<code path="index.ts" order="1" />
+			<css path="css/TS_WebAPI.css" order="2" />
+		</resources>
+		<feature-usage>
+			<uses-feature name="WebAPI" required="true" />
+		</feature-usage>
+	</control>
 </manifest>
 ```
 

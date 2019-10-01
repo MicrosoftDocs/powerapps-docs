@@ -24,7 +24,16 @@ Model-driven apps and canvas apps (experimental preview)
 ## Manifest
 
 ```XML
-
+<?xml version="1.0" encoding="utf-8"?>
+<manifest>
+	<control namespace="SampleNamespace" constructor="JSAngularJSFlipControl" version="1.0.0" display-name-key="JS_AngularJSFlipControl_Display_Key" description-key="JS_AngularJSFlipControl_Desc_Key" control-type="standard">
+		<property name="flipModel" display-name-key="flipModel_Display_Key" description-key="flipModel_Desc_Key" of-type="TwoOptions" usage="bound" required="true" />
+		<resources>
+			<code path="index.ts" order="5" />
+			<css path="css/bootstrap-associated.css" order="1" />
+		</resources>
+	</control>
+</manifest>
 ```
 
 ## Overview

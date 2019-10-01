@@ -20,10 +20,11 @@ This sample component explores the various methods available as part of the Powe
 ## Available for 
 
 Model-driven apps
+
 ## Manifest
 
 ```xml
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <manifest>
 	<control namespace="SampleNamespace" constructor="TSNavigationAPI" version="1.0.0" display-name-key="TS_NavigationAPI_Display_Key" description-key="TS_NavigationAPI_Desc_Key" control-type="standard">
 		<type-group name="numbers">

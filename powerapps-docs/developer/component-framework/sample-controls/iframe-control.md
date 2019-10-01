@@ -22,8 +22,8 @@ Model-driven apps and canvas apps (experimental preview)
 
 ## Manifest
 
-```xml
-<?xml version="1.0" encoding="utf-8" ?>
+```XML
+<?xml version="1.0" encoding="utf-8"?>
 <manifest>
 	<control namespace="SampleNamespace" constructor="TSIFrameControl" version="1.0.0" display-name-key="TS_IFrameControl_Display_Key" description-key="TS_IFrameControl_Desc_Key" control-type="standard">
 		<property name="stringProperty" display-name-key="stringProperty_Display_Key" description-key="stringProperty_Desc_Key" of-type="SingleLine.Text" usage="bound" required="true" />

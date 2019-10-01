@@ -17,7 +17,7 @@ This sample component changes the user experience of interacting with numeric ty
 To implement this component, first you need to define the [Manifest](../manifest-schema-reference/manifest.md) file, and them implement the custom logic in TypeScript
 
 > [!div class="mx-imgBorder"]
-> ![Linear Input Concomponenttrol](../media/linear-input-control.png "Linear Input component")
+> ![Linear Input component](../media/linear-input-control.png "Linear Input component")
 
 ## Available for 
 
@@ -26,21 +26,21 @@ Model-driven apps and canvas apps (experimental preview)
 ## Manifest
 
 ```xml
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <manifest>
-<control namespace="SampleNamespace" constructor="TSLinearInputControl" version="1.0.0" display-name-key="TSLinearInputControl_Display_Key" description-key="TSLinearInputControl_Desc_Key" control-type="standard">
-	<type-group name="numbers">
-		<type>Whole.None</type>
-		<type>Currency</type>
-		<type>FP</type>
-		<type>Decimal</type>
-	</type-group>
-	<property name="controlValue" display-name-key="controlValue_Display_Key" description-key="controlValue_Desc_Key" of-type-group="numbers" usage="bound" required="true" />
-	<resources>
-		<code path="index.ts" order="1" />
-		<css path="css/TS_LinearInputControl.css" order="1" />
-	</resources>
-</control>
+	<control namespace="SampleNamespace" constructor="TSLinearInputControl" version="1.0.0" display-name-key="TSLinearInputControl_Display_Key" description-key="TSLinearInputControl_Desc_Key" control-type="standard">
+		<type-group name="numbers">
+			<type>Whole.None</type>
+			<type>Currency</type>
+			<type>FP</type>
+			<type>Decimal</type>
+		</type-group>
+		<property name="controlValue" display-name-key="controlValue_Display_Key" description-key="controlValue_Desc_Key" of-type-group="numbers" usage="bound" required="true" />
+		<resources>
+			<code path="index.ts" order="1" />
+			<css path="css/TS_LinearInputControl.css" order="1" />
+		</resources>
+	</control>
 </manifest>
 ```
 
@@ -232,7 +232,7 @@ export class TSLinearInputControl
 }
 ```
 
-In this sample, a [type -group](../manifest-schema-reference/type-group.md) is defined and named it as `numbers` which includes decimal, whole, floating and currency value types into that group in the manifest. This group is used to bind the component property.
+In this sample, a [type-group](../manifest-schema-reference/type-group.md) is defined and named it as `numbers` which includes decimal, whole, floating and currency value types into that group in the manifest. This group is used to bind the component property.
 
 An input element of type `range` with `min` and `max` value set to 1 and 1000, respectively is created. A label element is created which shows the value that is relative to the position of the slider. Attach a function `refreshData` to the `eventlistener` on the input of the component.
 

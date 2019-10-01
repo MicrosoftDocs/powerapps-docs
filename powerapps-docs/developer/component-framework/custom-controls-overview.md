@@ -34,8 +34,18 @@ Manifest is the metadata file that defines a component. It is an XML document th
 
 When a user configures a code component, the data in the manifest file filters out the available components so that only valid components for the context are available for configuration. The properties defined in the manifest file for a component are rendered as configuration fields so that the user configuring the component can specify the values. These property values are then available to the component  at runtime. More information: [Manifest file reference](manifest-schema-reference/index.md)
 
+## Component implementation library
 
-[!INCLUDE [component-implementation-library](control-implementation-library.md)]
+Implementing the component library is one of the key step when you are developing code components using PowerApps component framework. Developers can implement component library using TypeScript. Each code component must have a library that includes the definition of a function which returns an object that implements the methods described in the code component interface. 
+
+The object implements the following methods:
+
+- [init](reference/control/init.md) (Required)
+- [updateView](reference/control/updateview.md) (Required)
+- [getOutputs](reference/control/getoutputs.md) (Optional)
+- [destroy](reference/control/destroy.md) (Required)
+
+These methods controls the lifecycle of the code component.
 
 ### Page load
 

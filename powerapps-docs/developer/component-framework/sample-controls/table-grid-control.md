@@ -25,17 +25,17 @@ Model-driven apps
 ## Manifest 
 
 ```xml
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <manifest>
-  <control namespace="SampleNamespace" constructor="TSTableGrid" version="1.0.0" display-name-key="TS_TableGrid_Display_Key" description-key="TSTableGrid_Desc_Key" control-type="standard">
-    <data-set name="simpleTableGrid" display-name-key="SimpleTableGridProperty_Display_Key">
-	  </data-set>
-    <resources>
-      <code path="index.ts" order="1" />
-	    <css path="css/TS_TableGrid.css" order="1" />
-      <resx path="strings/TSTableGrid.1033.resx" version="1.0.0" />
-    </resources>
-  </control>
+	<control namespace="SampleNamespace" constructor="TSTableGrid" version="1.0.0" display-name-key="TS_TableGrid_Display_Key" description-key="TSTableGrid_Desc_Key" control-type="standard">
+		<data-set name="simpleTableGrid" display-name-key="SimpleTableGridProperty_Display_Key">
+		</data-set>
+		<resources>
+			<code path="index.ts" order="1" />
+			<css path="css/TS_TableGrid.css" order="1" />
+			<resx path="strings/TSTableGrid.1033.resx" version="1.0.0" />
+		</resources>
+	</control>
 </manifest>
 ```
 

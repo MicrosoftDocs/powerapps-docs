@@ -26,8 +26,8 @@ Model-driven apps and canvas apps (experimental preview)
 
 ## Manifest
 
-```xml
-<?xml version="1.0" encoding="utf-8" ?>
+```XML
+<?xml version="1.0" encoding="utf-8"?>
 <manifest>
 	<control namespace="SampleNamespace" constructor="FormattingAPI" version="1.0.0" display-name-key="TS_FormattingAPI_Display_Key" description-key="TS_FormattingAPI_Desc_Key" control-type="standard">
 		<property name="controlValue" display-name-key="controlValue_Display_Key" description-key="controlValue_Desc_Key" of-type="SingleLine.Text" usage="bound" required="true" />

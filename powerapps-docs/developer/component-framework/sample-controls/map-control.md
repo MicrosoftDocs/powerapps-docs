@@ -24,7 +24,7 @@ Model-driven apps and canvas apps (experimental preview)
 ## Manifest
 
 ```xml
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <manifest>
 	<control namespace="SampleNamespace" constructor="TSMapControl" version="1.0.0" display-name-key="TS_MapControl_Display_Key" description-key="TS_MapControl_Desc_Key" control-type="standard">
 		<property name="controlValue" display-name-key="controlValue_Display_Key" description-key="controlValue_Desc_Key" of-type="SingleLine.Text" usage="bound" required="true" />
@@ -155,30 +155,15 @@ By default, we are setting the map to be hidden and display it only when the add
 `buildMapUrl` and `renderMap` (you can even merge them into one) takes the address string and embeds it onto the map URL by encoding the address string and then sets the IFRAME element’s src element to the URL respectively. Also, call the **notifyOutputChanged** method to ensure we notify the component that the rendering has changed. 
  
 ```TypeScript
-
-public renderMap(mapUrl: string)
-  {
-    if(mapUrl)
-     {
-        this._iFrameElement.setAttribute("src",mapUrl);
-        this._iFrameElement.setAttribute("class","mapVisibleStyle");
-            }
-     else
-       {
-          this._iFrameElement.setAttribute("class","mapHiddenStyle");
-            }
-          this._notifyOutputChanged();
-        } 
- 
-public buildMapUrl(addressString :string|undefined):string
-   {
-     if(addressString)
-      {
-         let url:string = "https://www.google.com/maps/embed/v1/place?key="+this.MAPS_API_KEY+"&q=" +encodeURIComponent(addressString);
-         return url;
-            }
-            return "";
-        }
+ public renderMap(mapUrl: string) {
+    if (mapUrl) {
+      this._iFrameElement.setAttribute("src", mapUrl);
+      this._iFrameElement.setAttribute("class", "mapVisibleStyle");
+    } else {
+      this._iFrameElement.setAttribute("class", "mapHiddenStyle");
+    }
+    this._notifyOutputChanged();
+  }
 ```
 
 Ensure you call the `renderMap` function inside the [updateView](../reference/control/updateview.md) function to ensure the control is refreshed every time the view is updated. 

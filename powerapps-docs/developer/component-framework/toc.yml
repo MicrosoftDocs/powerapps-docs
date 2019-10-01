@@ -82,7 +82,7 @@
         href: reference/conditionexpression.md
       - name: Context
         href: reference/context.md
-      - name: Control
+      - name: StandardControl
         href: reference/control.md
         items:
         - name: destroy
