@@ -1154,15 +1154,15 @@
     - name: Document storage in portals
       items:
         - name: Configure notes
-          href: ./portals/configure/configure-notes.md
+          href: ./portals/configure-notes.md
         - name: Azure storage
           items:
             - name: Enable Azure storage
-              href: ./portals/configure/enable-azure-storage.md
+              href: ./portals/enable-azure-storage.md
             - name: Add the Azure Storage web resource to a form
-              href: ./portals/configure/add-web-resource.md
+              href: ./portals/add-web-resource.md
         - name: Manage SharePoint documents
-          href: ./portals/admin/manage-sharepoint-documents.md
+          href: ./portals/manage-sharepoint-documents.md
     - name: Known issues
       href: ./portals/known-issues.md
     - name: PowerApps Portals FAQ
