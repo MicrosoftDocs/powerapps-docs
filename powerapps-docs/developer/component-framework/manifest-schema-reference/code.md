@@ -19,8 +19,6 @@ ms.assetid: 44d9fcfb-0cd8-48cc-aace-dd589099dd79
 
 # code element
 
-[!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
-
 [!INCLUDE [code-description](includes/code-description.md)]
 
 ## Available for

@@ -2,7 +2,7 @@
 title: "Field data types in Common Data Service | MicrosoftDocs"
 description: "Understand the different field data types available for your app"
 keywords: ""
-ms.date: 06/27/2018
+ms.date: 09/30/2019
 ms.service: powerapps
 ms.custom: 
 ms.topic: article
@@ -155,13 +155,16 @@ However, you should be aware that not every lookup behaves this way. There are s
 
 Use image fields to display a single image per record in the application. Each entity can have one image field. You can add an image field to custom entities but not to standard entities. Some standard entities have image fields defined.
   
-Even though an entity has an image field, displaying that image in a model-driven app requires an additional step. In the entity definition the **Primary Image** field values are either **[None]** or **Entity Image**. Select **Entity Image** to display the image in the application.  
+Even though an entity has an image field, displaying that image in a model-driven app requires that you enable two settings. 
+- The standard entity definition **Primary Image** property value must be set to **Default Image**. Custom entities require a custom image field. Then, you can select that image field for the **Primary Image** value in the custom entity definition.  
+- The entity form where the image is to be displayed must have the **Show image in the form** property enabled.  
   
 When image display is enabled for an entity, any records that don’t have an image will display a placeholder image. For example:
 
-![Placeholder image](../common-data-service/media/lead-entity-form.PNG)
+> [!div class="mx-imgBorder"] 
+> ![Default entity image](../common-data-service/media/account-record-default-image.png "Default account entity image")
   
-People can choose the default image to upload a picture from their computer. Images must be less than 5120 KB and must one of the following formats:  
+People can choose the default image to upload a picture from their computer. Images must be less than 5120 KB and must be in one of the following formats:  
   
 - jpg
 - jpeg
@@ -174,6 +177,40 @@ People can choose the default image to upload a picture from their computer. Ima
 When the image is uploaded, it will be converted to a .jpg format and all downloaded images will also use this format. If an animated .gif is uploaded, only the first frame is saved.  
   
 When an image is uploaded, it will be resized to a maximum size of 144 pixels by 144 pixels. People should resize or crop the images before they upload them so that they will display well using this size. All images are cropped to be square. If both sides of an image are smaller than 144 pixels, the image will be cropped to be a square with the dimensions of the smaller side.  
+
+### Add image support for a form in a custom entity using solution explorer
+1. Open [solution explorer](../model-driven-apps/advanced-navigation.md#solution-explorer). 
+2. In the left navigation pane, expand **Entities**, expand the custom entity you want, and then select **Fields**. 
+3. On the toolbar, select **New**. 
+4. In the **Type** section in the **Data Type** dropdown list select **Image**. 
+5. Enter a **Display Name**, such as *Custom entity image*. 
+6. Complete the remaining fields as appropriate. Notice that the **Name**, **Field Requirement**, and **Searchable** fields can’t be changed. Select **Save and Close**. 
+7. On the entity definition next to the **Primary Image** property make sure the value is set to the custom image you created in the previous step. If it's not select it.  
+    ![Primary image property selected](media/primary-image-property.png)
+
+8.	Open the form where you want image support, such as the entity main form. 
+9.	On the form editor ribbon, select **Form Properties**. 
+10.	On the **Form Properties** page, select the **Display** tab, select **Show image in the form**, and then select **OK**. 
+
+    > [!div class="mx-imgBorder"] 
+    > ![Show image in the form setting](media/show-image-on-form.png "Show image in the form setting")
+
+11.	On the form editor ribbon, select **Save**, and then select **Publish**. Close the form editor. 
+
+App users can now select the image to display on the form. When an app user opens the form for a record, they can choose the image that they want displayed on the form. 
+
+> [!IMPORTANT]
+> If the record is a new record that hasn’t been saved the error Invalid Argument is returned when you try to change the image. 
+
+#### Change the image for a record
+1. Open the app that includes the entity form, and then select the image on the form. 
+   > [!div class="mx-imgBorder"] 
+   > ![Default entity image](../common-data-service/media/default-entity-image-on-form.png "Default entity image")
+
+2. Select **Upload image**, browse and select the image you want displayed on the entity form, and then select **Change**. The image appears on the record. 
+   > [!div class="mx-imgBorder"] 
+   > ![Changed image saved to a record](../common-data-service/media/custom-entity-icon-record.png "Changed image saved to a record")
+
 
 More information for developers working with image data:
 - [Entity metadata > Entity images](/powerapps/developer/common-data-service/entity-metadata#entity-images)
