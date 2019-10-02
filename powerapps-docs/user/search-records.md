@@ -62,7 +62,7 @@ Relevance Search delivers fast and comprehensive results across multiple entitie
   
  Start a new search by entering a search term in the **Relevance Search** search box or in the search box on the nav bar, as shown here.  
   
- ![Relevance Search](../basics/media/relevance-search.png "Relevance Search")  
+ ![Relevance Search](media/relevance-search.png "Relevance Search")  
   
  Use syntax in your search term to get the results you want. For example, type **car silver 2-door** to include matches for any word in the search term in the search results. Type **car+silver+2-door** to find only matches that include all three words. Type **car&#124;silver&#124;2-door** to  get results that contain **car** or **silver** or **2-door**, or all three words. More information about syntax you can use in your search queries: [Simple query syntax in Azure Search](https://docs.microsoft.com/rest/api/searchservice/simple-query-syntax-in-azure-search)
 
