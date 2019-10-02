@@ -85,8 +85,8 @@ If your organization has turned on both search options (Relevance and Categorize
 
 2. On the left, select the drop-down menu to switch between **Relevance Search** or **Categorized Search**.
 
-    > [!div class="mx-imgBorder"]
-    > ![Switch between Relevance and Categorized search](media/switch-search.png "Switch between Relevance and Categorized search") 
+   > [!div class="mx-imgBorder"]
+   > ![Switch between Relevance and Categorized search](media/switch-search.png "Switch between Relevance and Categorized search") 
     
 ### Set a default experience
 
@@ -94,13 +94,13 @@ If your organization has turned on both search options then you can select a def
 
 1. In the upper-right corner of the page, select **Settings** and then select **Personalization Settings**.  
   
-  > [!div class="mx-imgBorder"]
-  > ![Select default search experience](media/relevance-search-personal-settings.png "Select default search experience")  
-  
+   > [!div class="mx-imgBorder"]
+   > ![Select default search experience](media/relevance-search-personal-settings.png "Select default search experience")  
+
 2. On the **General** tab, in the **Select the default search experience** section, for the **Default Search Experience**, select your default experience. 
 
-  > [!div class="mx-imgBorder"]
-  > ![Select default search experience](media/default.png "Select default search experience")  
+   > [!div class="mx-imgBorder"]
+   > ![Select default search experience](media/default.png "Select default search experience")  
  
 
 
@@ -176,8 +176,8 @@ If your organization has turned on both search options then you can select a def
   
 1. In the upper-right corner of the page, select **Settings** and then select **Personalization Settings**.  
   
-  > [!div class="mx-imgBorder"]
-  > ![Select default search experience](media/relevance-search-personal-settings.png "Select default search experience")  
+   > [!div class="mx-imgBorder"]
+   > ![Select default search experience](media/relevance-search-personal-settings.png "Select default search experience")  
   
 2. On the **General** tab, in the **Select the default search experience** section, for the **Facets and Filters** field, select **Configure**.  
   
