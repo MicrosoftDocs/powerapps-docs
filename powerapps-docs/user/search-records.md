@@ -105,10 +105,10 @@ If your organization has turned on both search options then you can select a def
 
 
 ## Start a search 
-  
+ 
 1.  From the top nav bar, select the **Search** button.  
   
-2.  Type your search words in the search box and then select ******.  
+2.  Type your search words in the search box and then select **Search** button.   
 
     > [!div class="mx-imgBorder"]
     > ![Search option](media/search-option.png "Search option")  
