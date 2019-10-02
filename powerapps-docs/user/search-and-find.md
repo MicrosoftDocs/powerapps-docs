@@ -18,11 +18,11 @@ search.app:
   - D365CE
 ---
 
-# Search and Find in [!INCLUDE[pn_dynamics_crm](../includes/pn-dynamics-crm.md)]
+# Search and Find in Common Data Service
 
-## Compare [!INCLUDE[pn_dynamics_crm](../includes/pn-dynamics-crm.md)] searches  
+## Compare Common Data Service search options
 
-There are four ways to find data in [!INCLUDE[pn_dynamics_crm](../includes/pn-dynamics-crm.md)]:
+There are four ways to find data in Common Data Service:
 
 -   Relevance Search  
   
@@ -37,7 +37,7 @@ There are four ways to find data in [!INCLUDE[pn_dynamics_crm](../includes/pn-dy
   
 The following table provides a brief comparison of the four available options.
 
-|Functionality|[Relevance Search](../basics/relevance-search-results.md)|[Full-text Quick Find](../basics/search-records.md)|[Quick Find](../basics/search-records.md)|[Advanced Find](../basics/save-advanced-find-search.md)|  
+|Functionality|[Relevance Search](search-records.md#relevance-search)|[Full-text Quick Find](search-records.md#start-a-search)|[Quick Find](search-records.md#start-a-search)|[Advanced Find](create-edit-or-save-advanced-find-search.md)|  
 |-------------------|----------------------|---------------------------|----------------|-------------------|  
 |Enabled by default?|No. An administrator must manually enable it.|No. An administrator must manually enable it.|Yes|Yes|  
 |Single-entity search scope|Not available in an entity grid. You can filter the search results by an entity on the results page.|Available in an entity grid.|Available in an entity grid.|Available in an entity grid.|  
