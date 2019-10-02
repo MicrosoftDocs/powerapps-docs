@@ -6,7 +6,7 @@ manager: shujoshi
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/01/2019
+ms.date: 10/02/2019
 ms.author: shjais
 ms.reviewer:
 ---
