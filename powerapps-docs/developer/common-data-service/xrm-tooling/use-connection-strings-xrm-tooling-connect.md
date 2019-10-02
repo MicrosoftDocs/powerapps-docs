@@ -105,7 +105,7 @@ The following examples show how you can use connection strings for connecting to
 ```  
   
 ### OAuth using named account in Office 365 with UX to prompt for authentication  
-Create a new connection to CDS using a UserID \ Password via oAuth. <br\>
+Create a new connection to CDS using a UserID \ Password via oAuth.
 
 > [!NOTE]
 > OAuth is the preferred auth type for connecting to CDS when using an interactive flow.  This auth type fully supports the features of Azure Active Directory Conditional Access and Multi-Factor Authentication.
@@ -124,7 +124,7 @@ Create a new connection to CDS using a UserID \ Password via oAuth. <br\>
 ```  
 
 ### OAuth using current logged in user with fall back UX to prompt for authentication
-Create a new connection to CDS using the current logged in user via oAuth. <br\>
+Create a new connection to CDS using the current logged in user via oAuth.
 
 > [!NOTE]
 > OAuth is the preferred auth type for connecting to CDS when using a interactive flow.  This auth type fully supports the features of Azure Active Directory Conditional Access and Multi-Factor Authentication.
