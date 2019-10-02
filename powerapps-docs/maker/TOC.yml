@@ -59,6 +59,8 @@
         href: ../user/track-your-progress-with-dashboard-and-charts.md
     - name: Search records
       items:
+       - name: Compare search and find options
+        href: ../user/search-and-find.md
       - name: Search for records
         href: ../user/search-records.md
       - name: Use advanced find
