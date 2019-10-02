@@ -100,12 +100,18 @@ If your organization has turned on both search options (Relevance and Categorize
 1.  From the top nav bar, select the **Search** button.  
   
 2.  Type your search words in the search box and then select **Search**.  
+
+    > [!div class="mx-imgBorder"]
+    > ![Search option](media/search-option.png "Search option")  
   
 ## Filter categorized search results 
   
 -   To filter results by one record type, on the search screen, choose a record type from the **Filter with:** drop-down box.  
   
 -   To search against all record types, choose **None** in the **Filter with:** drop-down box.  
+
+    > [!div class="mx-imgBorder"]
+    > ![Filter Search](media/filter-search.png "Filter Search")  
 
 ## Filter records with facets  (works with relevance search)  
  With Common Data Service, you can now refine your search results by using facets and filters. Facets are available in the left pane. Immediately after you perform a search, the following global facets are available for four common fields:  
