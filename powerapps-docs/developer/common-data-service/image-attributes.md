@@ -1,6 +1,6 @@
 ---
 title: "Image attributes (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn about image attributes that include image data witht in the application, and supporting attributes, Retrieving image data, and Uploading image data." # 115-145 characters including spaces. This abstract displays in the search result.
+description: "Learn about image attributes that store image data, supporting attributes, retrieving image data, and Uploading image data." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/01/2019
 ms.reviewer: ""
@@ -17,15 +17,20 @@ search.app:
 ---
 # Image attributes
 
-Certain system entities and all custom entities support images. Those entities that do support images can contain both a thumbnail and a full-size primary image. The thumbnail image can be seen in the web application when viewing the entity's form data. There can be multiple image attributes in an entity instance but there can be only one primary image. However, you can change the primary image from one image to another. Each full-sized image attribute is limited to 30 MB in size.
+Certain system entities and all custom entities support images. Those entities that do support images can contain both a thumbnail and a full-size primary image. The thumbnail image can be seen in the web application when viewing the entity's form data. There can be multiple image attributes in an entity instance but there can be only one primary image. However, you can change the primary image from one image to another. Each full-sized image attribute is limited to 30 MB in size. The <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.SchemaName> of the entity image attribute is `EntityImage`. More information: [Entity images](/dynamics365/customer-engagement/developer/introduction-entities#entity-images).
 
-For information about which system entities support images, see [Entity images](/dynamics365/customer-engagement/developer/introduction-entities#entity-images).
+Web API | SDK API
+------- | -------
+[ImageAttributeMetadata](/dynamics365/customer-engagement/web-api/imageattributemetadata) | <xref:Microsoft.Xrm.Sdk.Metadata.ImageAttributeMetadata>
+IsPrimaryImage, MaxHeight, MaxWidth | [IsPrimaryImage](https://docs.microsoft.com/dotnet/api/microsoft.xrm.sdk.metadata.imageattributemetadata.isprimaryimage?view=dynamics-general-ce-9#Microsoft_Xrm_Sdk_Metadata_ImageAttributeMetadata_IsPrimaryImage), [MaxHeight](https://docs.microsoft.com/en-us/dotnet/api/microsoft.xrm.sdk.metadata.imageattributemetadata.maxheight?view=dynamics-general-ce-9), [MaxWidth](https://docs.microsoft.com/en-us/dotnet/api/microsoft.xrm.sdk.metadata.imageattributemetadata.maxwidth?view=dynamics-general-ce-9)
 
-In addition to image attributes, custom entities support zero or more file attributes that can contain any binary data. These file attributes can contain more binary data than image attributes. For more information see [File attributes](file-attributes.md).
-  
+
+
+In addition to image attributes, custom entities support zero or more file attributes that can contain any binary data. These file attributes can contain a much larger amount of binary data than image attributes. For more information see [File attributes](file-attributes.md).
+
 <a name="BKMK_SupportingAttributes"></a>   
 ## Supporting attributes  
- For those entities that support image attributes, the <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.SchemaName> of the entity image attribute is always `EntityImage`. When an image attribute is added to an entity some additional attributes are created to support it.  
+ When an image attribute is added to an entity some additional attributes are created to support it.  
   
 ### EntityImage_Timestamp attribute  
  Attribute Type Name:  `BigIntType`  
@@ -63,11 +68,40 @@ In addition to image attributes, custom entities support zero or more file attri
   
 <a name="BKMK_RetrievingImages"></a>   
 ## Retrieving image data  
- When you use <xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*> or <xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*> the `EntityImage` is not included when the <xref:Microsoft.Xrm.Sdk.Query.ColumnSet>.`AllColumns` property is set to true. Because of the potential size of data in this attribute, to return this attribute you must explicitly request it.  
+
+To retrieve image data, use the following APIs.
+
+Web API | SDK API
+------- | -------
+GET /api/data/v9.1/\<entity-type(id)\>/\<image-attribute-name\>/$value   | <xref:Microsoft.Crm.Sdk.Messages.RetrieveRequest> or <xref:Microsoft.Crm.Sdk.Messages.RetrieveMultipleRequest>
+
+ > [!NOTE]
+> When you use <xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*> or <xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>, the `EntityImage` is not included when the <xref:Microsoft.Xrm.Sdk.Query.ColumnSet>.`AllColumns` property is set to `true`. Because of the potential size of data in this attribute, to return this attribute you must explicitly request it.
+
+Image data transfers from the web service endpoints are limited to a maximum of 16 MB data in a single service call. Image data greater that that amount must be divided into 4 MB or smaller data blocks (chunks) where each block is received in a separate API call until all image data has been received. It is your responsibility to join the downloaded data blocks to form the complete image by combining the data blocks in the same sequence as the blocks were received.
+
+### Example: HTTP request/response for thumbnail download
+
+```http
+GET /api/data/v9.1/accounts(b9ccec62-f266-e911-8196-000d3a6de638)/myentityimage/$value
+```
+
+### Example: HTTP request/response for full image download (<=16MB)
+
+```http
+GET /api/data/v9.1/accounts(C0864F1C-0B71-E911-8196-000D3A6D09B3)/myentityimage/$value?size=full
+```
+
+### Example: HTTP request/response for full image download (>16MB)
+
+```http
+GET /api/data/v9.1/accounts(C0864F1C-0B71-E911-8196-000D3A6D09B3)/myentityimage/$value?size=full
+
+Headers:
+Range: bytes=0-1023
+```
   
- The binary data representing the image isn’t returned using the deprecated <xref:Microsoft.Crm.Sdk.Messages.ExecuteFetchRequest> class. You should use <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> instead.  
-  
- More information: [Sample: Set and retrieve entity images](/dynamics365/customer-engagement/developer/sample-set-retrieve-entity-images).  
+ More information on chunking: [File attributes](file-attributes.md).
   
 <a name="BKMK_UploadingImages"></a>   
 ## Uploading image data  
@@ -82,11 +116,10 @@ In addition to image attributes, custom entities support zero or more file attri
 |Before|After|  
 |------------|-----------|  
 |![Image before resize](media/crm-itpro-cust-imagebeforeresize.png "Image before resize")<br /><br /> 300x428|![image after resize](media/crm-itpro-cust-imageafterresize.jpg "image after resize")<br /><br /> 144x144|  
-|![Second image resize example](media/crm-itpro-cust-imagebeforeresizeexample2.png "Second image resize example")<br /><br /> 91x130|![second resize example](media/crm-itpro-cust-imageafterresizeexample2.jpg "second resize example")<br /><br /> 91x91|  
-  
- More information: [Sample: Set and retrieve entity images](/dynamics365/customer-engagement/developer/sample-set-retrieve-entity-images).  
+|![Second image resize example](media/crm-itpro-cust-imagebeforeresizeexample2.png "Second image resize example")<br /><br /> 91x130|![second resize example](media/crm-itpro-cust-imageafterresizeexample2.jpg "second resize example")<br /><br /> 91x91|
   
 ### See also  
+[Sample: Set and retrieve entity images](/dynamics365/customer-engagement/developer/sample-set-retrieve-entity-images)
 [File attributes](file-attributes.md)  
 [Introduction to Entities in Dynamics 365](/dynamics365/customer-engagement/developer/introduction-entities)   
  [Introduction to entity attributes in Dynamics 365](/dynamics365/customer-engagement/developer/introduction-entity-attributes)   

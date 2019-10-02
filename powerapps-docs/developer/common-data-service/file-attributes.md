@@ -17,16 +17,13 @@ search.app:
 ---
 # File attributes
 
-A file attribute is used for storing binary data up to a specified maximum size. The primary intended use of this field is to store a single image, annotation (note), or attachment. However, storage of other forms of binary data is also possible. A custom or customizable entity can have zero or more file attributes. All file attributes have the <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.SchemaName> ‘EntityFile’ and the <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.LogicalName> ‘entityfile’.
+A file attribute is used for storing binary data up to a specified maximum size. The primary intended use of this field is to store a single image, annotation (note), or attachment. However, storage of other forms of binary data is also possible. A custom or customizable entity can have zero or more file attributes. The <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.SchemaName> of the entity file attribute is `EntityFile`.
 
-Web API (type) | SDK API (class)
+Web API | SDK API
 ------- | -------
-entityfile | <xref:Microsoft.Xrm.Sdk.Metadata.FileAttributeMetadata>
+[FieAttributeMetadata](/dynamics365/customer-engagement/web-api/fileattributemetadata) | <xref:Microsoft.Xrm.Sdk.Metadata.FileAttributeMetadata>
 
 <!--File data is not passed to plug-ins for performance reasons. You must retrieve the file data in plug-in code using an explicit retrieve call. -->
-
-> [!NOTE]
-> File data is stored in Azure Blob Storage for improved data access performance and increased file size limits. This also applies to new attachment and annotation data. Existing attachments and annotations will continue to be stored in the relational data store. A planned future update may move the attachment and annotation data from relational storage to Azure Blob Storage as part of a background task during an organization upgrade.
   
 <a name="BKMK_SupportingAttributes"></a>   
 ## Supporting attributes  
