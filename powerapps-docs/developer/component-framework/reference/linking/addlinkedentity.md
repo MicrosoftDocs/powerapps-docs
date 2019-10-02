@@ -3,8 +3,9 @@ title: addLinkedEtity | Microsoft Docs
 description: 
 keywords:
 ms.author: nabuthuk
+author: Nkrb
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -17,6 +18,10 @@ ms.assetid: 05fd8a07-e850-4b56-9c8b-70ef3a35cf4d
 
 [!INCLUDE [addlinkedentity-description](includes/addlinkedentity-description.md)]
 
+## Available for 
+
+Model-driven apps
+
 ## Syntax
 
 `addLinkedEntity(expression)`
@@ -25,7 +30,7 @@ ms.assetid: 05fd8a07-e850-4b56-9c8b-70ef3a35cf4d
 
 | Parameter Name|Type|Required|Description|
 | ------------- |----|--------|-----------|
-|expression|[ILinkEntityExposedExpression](../ilinkentityexposedexpression.md)|yes|The `ILinkEntityExposedExpression` to set.|
+|expression|[ILinkEntityExposedExpression](../ilinkentityexposedexpression.md)|Yes|The `ILinkEntityExposedExpression` to set.|
 
 ### Related topics
 

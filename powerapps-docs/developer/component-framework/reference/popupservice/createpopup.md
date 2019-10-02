@@ -3,8 +3,9 @@ title: createPopup | Microsoft Docs
 description: 
 keywords:
 ms.author: nabuthuk
+author: Nkrb
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -16,6 +17,10 @@ ms.assetid: 2e3b7c38-7365-40b1-a0ea-614798023aeb
 
 [!INCLUDE [createpopup-description](includes/createpopup-description.md)]
 
+## Available for 
+
+Model-driven apps
+
 ## Syntax
 
 `createPopup(props)`
@@ -24,7 +29,7 @@ ms.assetid: 2e3b7c38-7365-40b1-a0ea-614798023aeb
 
 | Parameter Name|Type|Required|Description|
 | ------------- |----|--------|-----------|
-|props|`Popup`|yes|The popup properties object.|
+|props|[Popup](../popup.md)|Yes|The popup properties object.|
 
 
 ### Related topics

@@ -2,7 +2,7 @@
 title: "Work with solutions in PowerApps | MicrosoftDocs"
 description: "Learn how solutions are distributed"
 ms.custom: ""
-ms.date: 05/28/2019
+ms.date: 09/30/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -26,21 +26,14 @@ search.app:
    
 # Solutions overview  
 
-  In PowerApps, solutions are leveraged to transport apps and components from one environment to another or to apply a set of customizations to existing apps. A solution can contain one or more apps as well as other components such as entities, option sets, etc.  You can get a solution from [AppSource](https://appsource.microsoft.com/) or from an independent software vendor (ISV).
+  In PowerApps, solutions are leveraged to transport apps and components from one environment to another or to apply a set of customizations to existing apps. A solution can contain one or more apps as well as other components such as site maps, entities, processes, web resources, option sets, and more.  You can get a solution from [AppSource](https://appsource.microsoft.com/) or from an independent software vendor (ISV).
   
 More information: [Whitepaper: Solution Lifecycle Management](https://www.microsoft.com/en-us/download/details.aspx?id=57777)  
   
 > [!NOTE]
 >  If you’re an ISV creating an app that you will distribute, you’ll need to use solutions. For more information about using solutions, see [Developer Guide: Introduction to solutions](/powerapps/developer/common-data-service/introduction-solutions).  
   
- If you are interested in creating PowerApps apps for organizational use or customizing Dynamics 365 for Customer Engagement apps, here is what you need to know about solutions:  
-  
--   Creating solutions is optional. You can build or customize apps in your PowerApps environment directly without ever creating a solution.  
-  
--   When you customize the PowerApps environment directly without creating any solution, you work with a special solution called the **Common Data Services Default Solution**. This solution contains all the customizations you make in your PowerApps environment.  
-  
--   There is another special solution called the **Default Solution**. This solution contains all the components in your system, whether created by you or anyone else. You can export the **Default Solution** to create a backup of the customizations you have defined in your organization. This is a good practice to back up your changes in a worst case scenario.  
-  
+
 <a name="BKMK_SolutionComponents"></a>   
 ### Components  
  A component represents something that you can potentially customize. Anything that can be included in a solution is a component. The following is a list of components that you can view in a solution:  
@@ -88,7 +81,9 @@ More information: [Whitepaper: Solution Lifecycle Management](https://www.micros
 -   Plug-in Assembly  
   
 -   Process  
-  
+
+-   Report  
+
 -   Sdk Message Processing Step  
   
 -   Security Role  
@@ -119,8 +114,6 @@ More information: [Whitepaper: Solution Lifecycle Management](https://www.micros
 >  Install an unmanaged solution only if you want to add all the components to your environment and overwrite any existing customizations.  
   
  Even if you don’t plan on distributing your apps or customizations, you may want to create and use an unmanaged solution to have a separate view that only includes those parts of the application that you have customized. Whenever you customize something, just add it to the unmanaged solution that you created.  
-  
- You can only export your **Default Solution** as an unmanaged solution.  
   
  To create a **managed** solution, you choose the **As managed** option when you export the solution. If you create a managed solution, you can’t import it back into the same environment you used to create it. You can only import it into a different environment.  
   

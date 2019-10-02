@@ -2,7 +2,7 @@
 title: "Perform conditional operations using the Web API (Common Data Service)| Microsoft Docs"
 description: "Read how to create conditions that decide whether and how to perform certain operations using the Web API"
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 08/31/2019
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -29,7 +29,7 @@ Common Data Service provides support for a set of conditional operations that re
   
 ## ETags
 
-The HTTP protocol defines an *entity tag*, or [ETag](https://msdn.microsoft.com/en-us/library/dd541486.aspx) for short, for identifying specific versions of a resource. ETags are opaque identifiers whose exact values are implementation dependent. ETag values occur in two varieties: strong and weak validation. Strong validation indicates that a unique resource, identified by a specific URI, will be identical on the binary level if its corresponding ETag value is unchanged. Weak validation only guarantees that the resource representation is semantically equivalent for the same ETag value.  
+The HTTP protocol defines an *entity tag*, or [ETag](https://msdn.microsoft.com/library/dd541486.aspx) for short, for identifying specific versions of a resource. ETags are opaque identifiers whose exact values are implementation dependent. ETag values occur in two varieties: strong and weak validation. Strong validation indicates that a unique resource, identified by a specific URI, will be identical on the binary level if its corresponding ETag value is unchanged. Weak validation only guarantees that the resource representation is semantically equivalent for the same ETag value.  
   
 Common Data Service generates a weakly validating `@odata.etag` property for every entity instance, and this property is automatically returned with each retrieved entity record. For more information, see [Retrieve an entity using the Web API](retrieve-entity-using-web-api.md).  
   
@@ -85,7 +85,7 @@ An upsert ordinarily operates by creating an entity if it doesn’t exist; other
  
 ### Prevent create in upsert
 
-If you are updating data and there is some possibility that the entity was deleted intentionally, you will not want to re-create the entity. To prevent this, add an `If-Match` header to the request with a value of "`*`".  
+If you are updating data and there is some possibility that the entity was deleted intentionally, you will not want to re-create the entity. To prevent this, add an `If-Match` header to the request with a value of "*".  
   
  **Request**  
 ```http  
@@ -93,7 +93,7 @@ PATCH [Organization URI]/api/data/v9.0/accounts(00000000-0000-0000-0000-00000000
 Content-Type: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
-If-Match: "*"  
+If-Match: *  
   
 {  
     "name": "Updated Sample Account ",  
@@ -130,7 +130,7 @@ Content-Type: application/json; odata.metadata=minimal
   
 ### Prevent update in upsert
 
-If you’re inserting data, there is some possibility that a record with the same `id` value already exists in the system and you may not want to update it. To prevent this, add an `If-None-Match` header to the request with a value of "`*`".  
+If you’re inserting data, there is some possibility that a record with the same `id` value already exists in the system and you may not want to update it. To prevent this, add an `If-None-Match` header to the request with a value of "*".  
   
  **Request**  
 ```http  
@@ -138,7 +138,7 @@ PATCH [Organization URI]/api/data/v9.0/accounts(00000000-0000-0000-0000-00000000
 Content-Type: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
-If-None-Match: "*"  
+If-None-Match: *  
   
 {  
     "name": "Updated Sample Account ",  

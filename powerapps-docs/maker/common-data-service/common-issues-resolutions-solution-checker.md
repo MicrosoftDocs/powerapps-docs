@@ -3,8 +3,7 @@ title: "Common issues and resolutions for Solution Checker | Microsoft Docs" # I
 description: " A list of common issues and resolutions within Solution Checker"
 keywords: ""
 ms.date: 02/11/2019
-ms.service:
-  - powerapps
+ms.service: powerapps
 ms.custom:
   - ""
 ms.topic: article
@@ -73,7 +72,7 @@ To install PowerApps Checker back into your Common Data Service environment:
 
 ## Solution Checker can't access organizations in Administration Mode
 
-Organizations that have been placed into [Administration Mode](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/admin/manage-sandbox-instances#administration-mode) purposely restrict access to only users with System Adminstrator and System Customizer roles. Because the PowerApps Checker application identity has neither of these roles assigned by default, it can't access organizations operating in this mode.
+Organizations that have been placed into [Administration Mode](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/admin/manage-sandbox-instances#administration-mode) purposely restrict access to only users with System Administrator and System Customizer roles. Because the PowerApps Checker application identity has neither of these roles assigned by default, it can't access organizations operating in this mode.
 
 In order to use Solution Checker in this organization, Adminstration Mode must be disabled.
 
@@ -81,7 +80,7 @@ In order to use Solution Checker in this organization, Adminstration Mode must b
 
 To disable administration mode for an organization instance:
 
-1. Open the Dynamics 365 for Customer Engagement apps instance picker: https://port.crm.dynamics.com/G/Instances/InstancePicker.aspx.
+1. Open the Dynamics 365 instance picker: https://port.crm.dynamics.com/G/Instances/InstancePicker.aspx.
 2. Select the organization instance that has issues running Solution Checker.
 3. Select **ADMIN**.<br/>
 ![Instance Admin](media/solution-checker-instance-admin.png)

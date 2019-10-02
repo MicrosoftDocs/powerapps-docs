@@ -26,7 +26,7 @@ search.app:
 
 # Virtual entity walkthrough using the OData v4 Data Provider
 
-Imagine that you want to access ticket information from an external data source within your model-driven app or the Service area of Dynamics 365 for Customer Engagement. In this simple walkthrough, you'll model a virtual entity with fields mapped to the external schema that retrieves ticket data at runtime from an OData web service.
+Imagine that you want to access ticket information from an external data source within your model-driven app. In this simple walkthrough, you'll model a virtual entity with fields mapped to the external schema that retrieves ticket data at runtime from an OData web service.
 
 ## Data source details
 
@@ -155,7 +155,7 @@ On the left navigation pane of the **Entity: Ticket** page, select **Fields**. A
     ![Publish all customizations](media/publishall.png)
 1. After all customizations are published, close the Solution Explorer window.
 
-## View the virtual entity in action with Dynamics 365 customer engagement
+## View the virtual entity in action with Dynamics 365
 
 1. Go to **Service** > **Extensions** > **Tickets**.
     

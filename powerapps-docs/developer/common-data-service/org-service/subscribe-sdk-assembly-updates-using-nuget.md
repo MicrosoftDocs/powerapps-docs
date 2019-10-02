@@ -17,7 +17,7 @@ search.app:
 ---
 # Subscribe to SDK assembly updates using NuGet
 
-.NET SDK assemblies and some command-line tools are available through a software distribution website called [nuget.org](http://www.nuget.org). Use of NuGet  packages in your application project enables you to keep your project up-to-date with the latest releases of the SDK assemblies and tools. Visual Studio has supported this capability since version 2010 and there is even a standalone NuGet  client for those developers that don’t develop in Visual Studio. Another advantage of using NuGet  packages in your projects is that assembly references and dependencies are automatically taken care of for you. NuGet  packages are available for Common Data Service as well as for earlier versions of Dynamics 365 Customer Engagement.  
+.NET SDK assemblies and some command-line tools are available through a software distribution website called [nuget.org](http://www.nuget.org). Use of NuGet  packages in your application project enables you to keep your project up-to-date with the latest releases of the SDK assemblies and tools. Visual Studio has supported this capability since version 2010 and there is even a standalone NuGet  client for those developers that don’t develop in Visual Studio. Another advantage of using NuGet  packages in your projects is that assembly references and dependencies are automatically taken care of for you.  
   
 <a name="BKMK_GetNuGetPackages"></a>
 
@@ -32,7 +32,7 @@ The NuGet SDK are found under the [crmsdk](https://www.nuget.org/profiles/crmsdk
 |[Microsoft.CrmSdk.CoreTools](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreTools/)|Contains the SDK tools authored by the Microsoft Dynamics 365 team.|
 |[Microsoft.CrmSdk.Deployment](https://www.nuget.org/packages/Microsoft.CrmSdk.Deployment/)|Contains the Microsoft.Xrm.Sdk.Deployment.dll assembly|
 |[Microsoft.CrmSdk.Outlook](https://www.nuget.org/packages/Microsoft.CrmSdk.Outlook/)|Contains the Microsoft.Crm.Outlook.dll assembly|
-|[Microsoft.CrmSdk.WebApi.Samples.HelperCode](https://www.nuget.org/packages/Microsoft.CrmSdk.WebApi.Samples.HelperCode/)|C# helper code authored by the Microsoft Dynamics 365  Customer Engagement Developer documentation team. This code is for use with the Web API. These classes provide web service authentication for both on-premises and online deployments, error handling, and connection string configuration. These classes are used in our Web API samples|
+|[Microsoft.CrmSdk.WebApi.Samples.HelperCode](https://www.nuget.org/packages/Microsoft.CrmSdk.WebApi.Samples.HelperCode/)|C# helper code authored by the PowerApps documentation team. This code is for use with the Web API. These classes provide web service authentication for both on-premises and online deployments, error handling, and connection string configuration. These classes are used in our Web API samples|
 |[Microsoft.CrmSdk.Workflow](https://www.nuget.org/packages/Microsoft.CrmSdk.Workflow/)|Contains the Microsoft.Xrm.Sdk.Workflow.dll assembly|
 |[Microsoft.CrmSdk.XrmTooling.CoreAssembly](https://www.nuget.org/packages/Microsoft.CrmSdk.XrmTooling.CoreAssembly/)|Contains the  Microsoft.Xrm.Tooling.Connector assembly |
 |[Microsoft.CrmSdk.XrmTooling.CrmConnector.PowerShell](https://www.nuget.org/packages/Microsoft.CrmSdk.XrmTooling.CrmConnector.PowerShell/)|Contains the assemblies for Xrm.Tooling.Connector Powershell |

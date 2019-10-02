@@ -4,7 +4,7 @@ description:
 keywords:
 ms.author: nabuthuk
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -15,4 +15,4 @@ applies_to:
 ms.assetid: 8f615966-77a0-49e9-92d4-2160af03b20d
 ---
 
-Gets the entity metadata for the specified entity.
+Returns the entity metadata for the specified entity.

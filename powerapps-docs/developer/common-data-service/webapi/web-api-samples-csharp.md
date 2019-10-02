@@ -160,7 +160,7 @@ throw new Exception(string.Format(" Operation Failed", response.Content));
   
 ```  
 
- [HttpStatusCode](https://msdn.microsoft.com/library/hh435235.aspx).NoContent is equivalent to an HTTP status code 204, “No content”. Here, this status code indicates that the POST request succeeded. For more information, see [Compose HTTP requests and handle errors](https://msdn.microsoft.com/en-us/library/gg334391.aspx).  
+ [HttpStatusCode](https://msdn.microsoft.com/library/hh435235.aspx).NoContent is equivalent to an HTTP status code 204, “No content”. Here, this status code indicates that the POST request succeeded. For more information, see [Compose HTTP requests and handle errors](https://msdn.microsoft.com/library/gg334391.aspx).  
   
 ### Characteristics and methods
   

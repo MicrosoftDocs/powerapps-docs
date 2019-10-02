@@ -3,8 +3,9 @@ title: openDatasetItem | Microsoft Docs
 description: 
 keywords:
 ms.author: nabuthuk
+author: Nkrb
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -16,9 +17,13 @@ ms.assetid: ec4d6f14-d08b-410f-aad7-6a040c2b1c6a
 
 [!INCLUDE[./includes/opendatasetitem-description.md](./includes/opendatasetitem-description.md)]
 
+## Available for 
+
+Model-driven apps
+
 ## Syntax
 
-`openDatasetItem(entityReference)`
+`context.parameters.dataset.openDatasetItem(entityReference)`
 
 ## Return Value
 

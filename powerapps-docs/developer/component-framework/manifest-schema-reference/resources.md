@@ -3,8 +3,9 @@ title: Resources Element | Microsoft Docs
 description: 
 keywords:
 ms.author: nabuthuk
+author: Nkrb
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -14,9 +15,11 @@ ms.assetid: 66599c2f-6651-4b27-92da-a38897acdfb5
 
 # resources element
 
-[!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
-
 [!INCLUDE [resources-description](includes/resources-description.md)]
+
+## Available for
+
+Model-driven apps and canvas apps (experimental preview)
 
 ## Parent Elements
 
@@ -28,7 +31,7 @@ ms.assetid: 66599c2f-6651-4b27-92da-a38897acdfb5
 
 |Element|Description|Occurrences|
 |--|--|--|
-|[code](code.md)|[!INCLUDE [code-description](includes/code-description.md)]|1 or more|
+|[code](code.md)|[!INCLUDE [code-description](includes/code-description.md)]|1|
 |[css](css.md)|[!INCLUDE [css-description](includes/css-description.md)]|0 or more|
 |[img](img.md)|[!INCLUDE [img-description](includes/img-description.md)]|0 or more|
 |[html](html.md)|[!INCLUDE [html-description](includes/html-description.md)]|0 or more|

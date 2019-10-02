@@ -3,7 +3,7 @@ title: CaptureAudio | Microsoft Docs
 description: 
 keywords:
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.reviewer: ""
 ms.service: "crm-online"

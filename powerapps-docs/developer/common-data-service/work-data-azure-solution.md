@@ -3,8 +3,7 @@ title: "Work with Dynamics 365 data in your Azure solution (Common Data Service)
 description: "The ServiceBusPlugin plug-in contains the business logic to post the Dynamics 365 message execution context to the Azure Service Bus. To use this plug-in, you need to register a Azure Service Bus solution endpoint and a step for the plug-in. The step defines what message and entity combination being processed by the core Dynamics 365 operation should trigger the plug-in to execute. The ServiceBusPlugin can only be registered to run asynchronously."
 keywords: ""
 ms.date: 06/01/2019
-ms.service:
-  - powerapps
+ms.service: powerapps
 ms.custom:
   - ""
 ms.topic: article

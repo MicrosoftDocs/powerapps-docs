@@ -1,0 +1,1 @@
+Adds a function as an event handler for the [OnPreProcessStatusChange](../../../events/onpreprocessstatuschange.md) event so that it will be called **before** the business process flow status changes.

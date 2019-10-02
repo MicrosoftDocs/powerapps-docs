@@ -3,8 +3,7 @@ title: "Command bar or ribbon presentation (model-driven apps) | Microsoft Docs"
 description: "Data defining commands in Common Data Service can be presented in several different ways depending on the client and differences in how some entities are treated. You need to take these factors into consideration as you change ribbon commands or define new ones." # 115-145 characters including spaces. This abstract displays in the search result."
 keywords: ""
 ms.date: 10/31/2018
-ms.service:
-  - powerapps
+ms.service: powerapps
 ms.custom:
   - ""
 ms.topic: article

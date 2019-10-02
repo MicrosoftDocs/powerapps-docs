@@ -3,8 +3,9 @@ title: setPageSize | Microsoft Docs
 description: 
 keywords:
 ms.author: nabuthuk
+author: Nkrb
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -16,6 +17,10 @@ ms.assetid: 094978b8-971b-41ac-89e9-1f578447c689
 
 [!INCLUDE [setpagesize-description](includes/setpagesize-description.md)]
 
+## Available for 
+
+Model-driven apps
+
 ## Syntax
 
 `setPageSize(pageSize)`
@@ -24,7 +29,7 @@ ms.assetid: 094978b8-971b-41ac-89e9-1f578447c689
 
 | Parameter Name|Type|Required|Description|
 | ------------- |----|--------|-----------|
-|pageSize|`number`|yes|Pagesize to be set.|
+|pageSize|`Number`|Yes|Pagesize to be set.|
 
 
 ### Related topics

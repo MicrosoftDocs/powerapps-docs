@@ -6,9 +6,12 @@ manager: annbe
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 03/18/2019
+ms.date: 07/15/2019
 ms.author: kvivek
 ms.reviewer: kvivek
+searchScope:
+  - GetStarted
+  - PowerApps
 ---
 # What is PowerApps?
 
@@ -22,7 +25,7 @@ For more information, see the [PowerApps channel](https://www.youtube.com/channe
 
 ## PowerApps for app makers/creators
 
-Using PowerApps, you can create two types of apps: **canvas** and **model-driven**. More information: [Overview of creating apps in PowerApps](maker/index.md).
+Using PowerApps, you can create three types of apps: **canvas**, **model-driven**, and **portal**. More information: [Overview of creating apps in PowerApps](maker/index.md).
 
 To create an app, you start with [web.powerapps.com](https://web.powerapps.com).
 
@@ -40,7 +43,7 @@ PowerApps admins can use:
 
 - **PowerApps admin center** ([admin.powerapps.com](https://admin.powerapps.com)) to create and manage environments, users, roles, and data-loss prevention policies. 
 
-- **Power Platform admin center** ([admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com)) to manage environments, get real-time, self-help recommendations and support for Dynamics 365 for Customer Engagement apps, PowerApps, and Microsoft Flow, and view Common Data Service analytics. 
+- **Power Platform admin center** ([admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com)) to manage environments, get real-time, self-help recommendations and support for PowerApps and Microsoft Flow, and view Common Data Service analytics. 
 
 More information: [Administer PowerApps](/power-platform/admin/admin-guide)
 

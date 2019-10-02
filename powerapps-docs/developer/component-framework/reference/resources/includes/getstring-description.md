@@ -4,7 +4,7 @@ description:
 keywords:
 ms.author: nabuthuk
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -15,4 +15,4 @@ applies_to:
 ms.assetid: c515ef34-cd7f-4483-9b59-fae564dca6a4
 ---
 
-Gets the localized string from the resx file defined in the manifest file.
+Returns the localized string for a given key associated with the specified resource (resx) defined in the manifest file.

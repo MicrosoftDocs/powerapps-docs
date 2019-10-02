@@ -3,8 +3,7 @@ title: "Walkthrough: Update a service endpoint imported from a solution (Common 
 description: "The walkthrough demonstrates updating a service endpoint imported from a solution."
 keywords: ""
 ms.date: 10/31/2018
-ms.service:
-  - powerapps
+ms.service: powerapps
 ms.custom:
   - ""
 ms.topic: article
@@ -47,4 +46,4 @@ An extra step is required after importing into an organization a solution contai
 ### See also  
 [Azure integration for Dynamics 365](azure-integration.md)
 
- [Service Bus authentication and authorization](https://azure.microsoft.com/en-us/documentation/articles/service-bus-authentication-and-authorization/)
+ [Service Bus authentication and authorization](https://azure.microsoft.com/documentation/articles/service-bus-authentication-and-authorization/)

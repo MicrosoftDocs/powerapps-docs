@@ -1,4 +1,3 @@
-# This TOC is a work in progress. The specific location of items is not locked down
 - name: Common Data Service
   href: ../../maker/common-data-service/data-platform-intro.md
 - name: Developer overview
@@ -15,8 +14,8 @@
     href: webapi/index.md
   - name: Use Organization Service
     href: org-service/index.md
-  - name: Add and remove sample data
-    href: sample-data.md
+  - name: Create your own actions
+    href: custom-actions.md
   - name: Use FetchXML to query data
     href: use-fetchxml-construct-query.md
     items:
@@ -26,6 +25,8 @@
       href: use-fetchxml-fiscal-date-older-datetime-query-operators.md
     - name: Use a left outer join in FetchXML to query for records "not in"
       href: use-fetchxml-left-outer-join-query-records-not-in.md
+    - name: Page large result sets with FetchXML
+      href: org-service/page-large-result-sets-with-fetchxml.md
   - name: Saved Queries
     href: saved-queries.md
   - name: Query Hierarchical data
@@ -39,8 +40,6 @@
       href: retrieve-and-delete-the-history-of-audited-data-changes.md
     - name: Audit user access
       href: audit-user-access.md
-    - name: Create auto-number attributes
-      href: create-auto-number-attributes.md
   - name: Detect duplicate data
     href: detect-duplicate-data-with-code.md
     items:
@@ -60,6 +59,8 @@
     href: impersonate-another-user.md
   - name: Best Practices
     href: best-practices/work-with-data/index.md
+  - name: Add and remove sample data
+    href: sample-data.md    
 - name: Apply business logic using code
   href: apply-business-logic-with-code.md
   items:
@@ -155,13 +156,13 @@
       href: work-data-azure-solution.md
     - name: Work with event data in your Azure Event Hub solution
       href: work-event-data-azure-event-hub-solution.md
-    - name: Configure Azure integration with Common Data Service for App
+    - name: Configure Azure integration with Common Data Service
       href: configure-azure-integration.md
     - name: Write a custom Azure-aware plug-in
       href: write-custom-azure-aware-plugin.md
     - name: Write a listener application for a Azure solution
       href: write-listener-application-azure-solution.md
-    - name: "Tutorial: Configure Azure (SAS) for integration with Customer Engagement"
+    - name: "Tutorial: Configure Azure (SAS) for integration with Common Data Service"
       href: walkthrough-configure-azure-sas-integration.md
     - name: "Tutorial: Register an Azure-aware plug-in using the Plug-in Registration Tool"
       href: walkthrough-register-azure-aware-plug-in-using-plug-in-registration-tool.md
@@ -263,6 +264,8 @@
       href: behavior-format-date-time-attribute.md
     - name: Calculated and rollup attributes
       href: calculated-rollup-attributes.md
+    - name: Create auto-number attributes
+      href: create-auto-number-attributes.md
     - name: Multi-Select Picklist attributes
       href: multi-select-picklist.md
     - name: Image attributes
@@ -322,6 +325,14 @@
         href: create-patches-simplify-solution-updates.md
       - name: When to edit the customizations file
         href: when-edit-customization-file.md
+  - name: Build tools for Azure DevOps 
+    items:
+    - name: Overview
+      href: build-tools-overview.md
+    - name: Tasks
+      href: build-tools-tasks.md
+    - name: Tutorial and FAQ
+      href: build-tools-tutorial-faq.md
   - name: SolutionPackager tool
     href: compress-extract-solution-file-solutionpackager.md
     items:
@@ -329,6 +340,20 @@
       href: use-source-control-solution-files.md       
   - name: Package Deployer tool
     href: package-deployer/create-packages-package-deployer.md
+  - name: Verify quality of solutions and packages
+    items:
+    - name: Use the PowerApps checker web API 
+      href: checker/webapi/overview.md
+    - name: Invoke the analysis
+      href: checker/webapi/analyze.md
+    - name: Check for analysis status
+      href: checker/webapi/check-status.md
+    - name: Retrieve the list of rules
+      href: checker/webapi/retrieve-rules.md
+    - name: Retrieve the list of rulesets
+      href: checker/webapi/retrieve-rulesets.md
+    - name: Upload a file for analysis
+      href: checker/webapi/upload-file.md
   - name: Publish your app on AppSource
     href: publish-app-appsource.md
     items:
@@ -342,12 +367,22 @@
       href: create-package-app-appsource.md
     - name: 'Step 5: Store your AppSource Package on Azure Storage and generate a URL with SAS key'
       href: store-appsource-package-azure-storage.md
-    - name: 'Next steps: Submit your app on Cloud Partner Portal'
+    - name: 'Next steps: Submit your app on Partner Center'
       href: next-steps-submit-app-cloud-partner-portal.md
     - name: 'Appendix: App design best practices checklist'
       href: appendix-app-design-best-practices-checklist.md
     - name: 'Appendix: App certification checklist'
       href: appendix-app-certification-checklist.md
+  - name: ISV app management and monitoring
+    items:
+    - name: Introduction to ISV Studio
+      href: isv-app-management.md
+    - name: Home page
+      href: isv-app-management-homepage.md
+    - name: App page
+      href: isv-app-management-apppage.md
+    - name: Tenant page
+      href: isv-app-management-tenantpage.md
 - name: Create client applications
   href: connect-cds.md
   items:
@@ -377,6 +412,8 @@
     href: discovery-service.md
 - name: Best practices
   href: best-practices/index.md
+- name: Online Management API
+  href: online-management-api/overview.md
 - name: Samples
   items:
   - name: Web API
@@ -386,7 +423,7 @@
 - name: Resources
   items:
   - name: Developer resources page
-    href: developer-resources-page.md
+    href: view-download-developer-resources.md
   - name: Developer tools
     href: developer-tools.md
     items:

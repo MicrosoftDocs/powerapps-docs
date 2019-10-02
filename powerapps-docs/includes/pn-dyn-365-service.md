@@ -1,1 +1,1 @@
-Dynamics 365 for Customer Service
+Dynamics 365 Customer Service

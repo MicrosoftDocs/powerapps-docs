@@ -11,3 +11,5 @@ powerapps-docs/maker/common-data-service/entity-relationship-behavior.md
 
 These files have been redirected, and the .md topic files have been deleted. This list hasn't been provided to loc yet.
 
+
+

@@ -49,11 +49,11 @@ At this time, you can use lookup columns only with SharePoint and Common Data Se
 
     **Note**: Entity names are singular on web.powerapps.com and plural in PowerApps Studio.
 
-    ![A partial list of the fields from the Account entity in Commmon Data Service for Apps, highlighting that "Primary Contact" is a lookup field](media/function-choices/entity-account.png)
+    ![A partial list of the fields from the Account entity in Common Data Service for Apps, highlighting that "Primary Contact" is a lookup field](media/function-choices/entity-account.png)
 
     The **Accounts** entity has a **Primary Contact** column, which is a lookup to the **Contacts** entity.  
 
-    ![A partial list of the fields from the Contact entity in the Commmon Data Service](media/function-choices/entity-contact.png)
+    ![A partial list of the fields from the Contact entity in the Common Data Service](media/function-choices/entity-contact.png)
 
     For each account, a contact is designated as the primary contact, or the primary contact is *blank*.
 

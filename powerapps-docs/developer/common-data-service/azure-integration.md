@@ -73,7 +73,7 @@ For more information about the asynchronous service see [Asynchronous service](a
 The service bus relays the request message data context between Common Data Service and Azure Service Bus solution listener applications. The service bus also provides data security so that only authorized applications can access the posted Dynamics 365 data.  Authorization of Common Data Service to post the data context to the service bus and for listener applications to read it is managed by  Azure Shared Access Signatures (SAS).  
   
   
- For more information about the service bus, see [Service Bus](https://azure.microsoft.com/en-us/services/service-bus/). For more information about service bus authorization, see [Service Bus authentication and authorization](https://azure.microsoft.com/en-us/documentation/articles/service-bus-authentication-and-authorization/).  
+ For more information about the service bus, see [Service Bus](https://azure.microsoft.com/services/service-bus/). For more information about service bus authorization, see [Service Bus authentication and authorization](https://azure.microsoft.com/documentation/articles/service-bus-authentication-and-authorization/).  
   
 ### Microsoft Azure Solution
 

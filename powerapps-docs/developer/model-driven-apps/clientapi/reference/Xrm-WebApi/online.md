@@ -29,8 +29,8 @@ The **onlineWebApi** object provides the following methods:
 - [retrieveRecord](retrieveRecord.md)
 - [retrieveMultipleRecords](retrieveMultipleRecords.md)
 - [updateRecord](updateRecord.md)
-- [execute](execute.md)
-- [executeMultiple](executeMultiple.md)
+- [execute](online/execute.md)
+- [executeMultiple](online/executeMultiple.md)
 
 ### Related topics
 

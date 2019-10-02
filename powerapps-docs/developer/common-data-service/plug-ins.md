@@ -31,9 +31,6 @@ The classes in the assembly that can be registered to a step must implement the 
 
 Plug-ins can be configured to execute synchronously or asynchronously. A synchronous plug-in will cause the operation to wait until the code in the Plug-in completes. This has an impact on perceived performance of the system. The operations in an asynchronous plug-in are placed in a queue and are executed after the operation is completed so that the operation can complete with minimal interruption.
 
-> [!NOTE]
-> [!INCLUDE[cc-d365ce-note-section](./includes/cc-d365ce-note-section.md)] [Write plug-ins to extend business processes (Customer Engagement)](/dynamics365/customer-engagement/developer/write-plugin-extend-business-processes)
-
 ## When to use plug-ins
 
 People frequently compare workflows and plug-ins as the choices to apply custom business logic. There is significant overlap in the capabilities of workflows and plug-ins. Plug-ins can do everything workflows can do but the inverse is not true. But this doesn't mean you should just use plug-ins for anything that can't be done with a workflow. There are other capabilities to achieve requirements without using plug-ins. 
@@ -83,10 +80,10 @@ These topics provide details that you will use to create plug-ins.
 - [Handle exceptions](handle-exceptions.md)
 - [Register a plug-in](register-plug-in.md)
 - [Debug Plug-ins](debug-plug-in.md)
-- 
+ 
 These topics provide additional information about writing or debugging a plug-in, or analyzing its performance.
 
 - [Impersonate a user](impersonate-a-user.md)
 - [Tracing and logging](logging-tracing.md)
 - [Analyze performance](analyze-performance.md)
-- [Access external web resources](access-web-services.md)]
+- [Access external web resources](access-web-services.md)

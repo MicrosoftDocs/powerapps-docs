@@ -30,9 +30,9 @@ search.app:
 You can use Power BI reports in PowerApps model-driven apps to bring rich reporting and analytics to your system forms and empower your users to accomplish more. This unlocks the power to aggregate data across systems, and tailor it down to the context of a single record.
  
 ## Prerequisites
-Embedding Power BI content is an optional feature and is disabled on all environments by default. You must enable it before you can embed Power BI content. More information: [Enable Power BI visualizations in the organization](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/admin/use-power-bi?#enable--visualizations-in-the-organization).
+Embedding Power BI content is an optional feature and is disabled on all environments by default. You must enable it before you can embed Power BI content. More information: [Enable Power BI visualizations in the organization](https://docs.microsoft.com/dynamics365/customer-engagement/admin/use-power-bi?#enable--visualizations-in-the-organization).
 
-This feature requires exporting a solution, modifying it to add the xml snippet, and then importing back into the environment. Be sure to import the changes on your target environment via a managed solution only. See [Import, update, and export solutions](https://docs.microsoft.com/en-us/powerapps/maker/common-data-service/import-update-export-solutions) for guidance on installing an update to an existing managed solution.
+This feature requires exporting a solution, modifying it to add the xml snippet, and then importing back into the environment. Be sure to import the changes on your target environment via a managed solution only. See [Import, update, and export solutions](https://docs.microsoft.com/powerapps/maker/common-data-service/import-update-export-solutions) for guidance on installing an update to an existing managed solution.
 
 ## Embed without contextual filtering
 You can use your Power BI reports and tiles by simply embedding them, and get the exact same report. This does not involve contextualizing them to the current model-driven form, and hence you get the same report or tile on all records of the entity. For example, the following report shows the geographic location of all accounts at once, and is useful to show summary information.
@@ -141,14 +141,14 @@ You can create more complex filter expressions by looking at examples from [Cons
    > [!div class="mx-imgBorder"] 
    > ![](media/embed-powerbi/embed-powerbi-report-in-system-form-auth-3.png "Embed-powerbi-report-in-system-form-auth-3")
 
-5. The view of the report data shown inside PowerApps is the same as that in Power BI, and PowerApps security roles and privileges don't affect the data that is displayed. Hence, the data is essentially the same as what the creator of the Power BI dataset would see. To apply data access restrictions similar to PowerApps security roles and teams, use [Row-level security (RLS) with Power BI](https://docs.microsoft.com/en-us/power-bi/service-admin-rls).
+5. The view of the report data shown inside PowerApps is the same as that in Power BI, and PowerApps security roles and privileges don't affect the data that is displayed. Hence, the data is essentially the same as what the creator of the Power BI dataset would see. To apply data access restrictions similar to PowerApps security roles and teams, use [Row-level security (RLS) with Power BI](https://docs.microsoft.com/power-bi/service-admin-rls).
 6. If the form doesn’t show the Power BI report after importing the solution and publishing customizations, open it in the model-driven form editor and save it, so that the form JSON is regenerated.
 
 
 ### See also
 
-[Embed a Power BI dashboard in a PowerApps model-driven personal dashboard](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/basics/add-edit-power-bi-visualizations-dashboard)
+[Embed a Power BI dashboard in a PowerApps model-driven personal dashboard](https://docs.microsoft.com/dynamics365/customer-engagement/basics/add-edit-power-bi-visualizations-dashboard)
 
-[Use Power BI with Dynamics 365 for Customer Engagement](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/admin/use-power-bi)
+[Use Power BI with Dynamics 365 apps](https://docs.microsoft.com/dynamics365/customer-engagement/admin/use-power-bi)
 
 [Import, update, and export solutions](../common-data-service/import-update-export-solutions.md)

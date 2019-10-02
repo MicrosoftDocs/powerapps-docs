@@ -3,8 +3,9 @@ title: deleteRecord | Microsoft Docs
 description: 
 keywords:
 ms.author: nabuthuk
+author: Nkrb
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -16,9 +17,13 @@ ms.assetid: 5c9968bf-d535-425c-b1f1-0db6b7822de1
 
 [!INCLUDE [deleterecord-description](includes/deleterecord-description.md)]
 
+## Available for 
+
+Model-driven apps
+
 ## Syntax
 
-`deleteRecord(entityLogicalName, id).then(successCallback, errorCallback);`
+`context.webAPI.deleteRecord(entityLogicalName, id).then(successCallback, errorCallback);`
 
 ## Parameters
 
@@ -62,8 +67,7 @@ ms.assetid: 5c9968bf-d535-425c-b1f1-0db6b7822de1
 
 ## Return Value
 
-On success, returns a promise object containing the attributes specified earlier in the description of the **successCallback** parameter.
-
+Type: [Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)<[EntityReference](../entityreference.md)>
 
 ### Related topics
 

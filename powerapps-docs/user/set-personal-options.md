@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 11/16/2018
+ms.date: 08/01/2019
 ms.author: mduelae
 ms.custom: ""
 ms.reviewer: ""
@@ -19,6 +19,8 @@ search.app:
 ---
 # Set personal options
 
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
 
 Change your display settings in an app to suit your preferences. For example, you can choose the page that you want to see as soon as you sign in to the app. You can also personalize many other options such as language, currency, and time zone.  
     
@@ -106,6 +108,7 @@ Change your display settings in an app to suit your preferences. For example, yo
 |                                                                                           Configure Folder Tracking Rules                                                                                           |                                                                                                                                        Set up folders to automatically track incoming email.                                                                                                                                          |
 |                                                           **Automatically create records in Dynamics 365**                                                           |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 |                                                                                                       Create                                                                                                        |                                                                                                                                                                                 Select this option to allow Dynamics 365 to create leads or contacts automatically from the information in tracked email messages.                                                                                                                                                                                  |
+|                                                                                                  Show emails as conversation on Timeline                                                                                                 |                                                                                                                                                                                                                                                    Select this to list emails in a conversation thread, the way many email applications work when viewing emails in a conversation.                                                                                                                                                                                                                                                    |
 |                                                                                                  View your Mailbox                                                                                                  |                                                                                                                                                                                                                                                    Select this link to see your mailbox details.                                                                                                                                                                                                                                                    |
   
 ## Privacy tab options  

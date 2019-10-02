@@ -4,7 +4,7 @@ description:
 keywords:
 ms.author: nabuthuk
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -15,4 +15,4 @@ applies_to:
 ms.assetid: 327d7764-8c18-4cb5-bdf5-7256dc0c7e44
 ---
 
-Removes the referenced popup from the popupservice, un register the service.
+Removes the referenced popup from the popup service and unregister the service.

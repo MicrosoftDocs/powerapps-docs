@@ -18,7 +18,7 @@
   
  [!INCLUDE[cc_privacy_note_azure_trust_center](cc-privacy-note-azure-trust-center.md)]  
   
- [Cloud Services](https://azure.microsoft.com/en-us/services/cloud-services/)  
+ [Cloud Services](https://azure.microsoft.com/services/cloud-services/)  
   
  **Web Service**  
   
@@ -28,7 +28,7 @@
   
  Compiler role manages the publish of a control to a publishing group. Compiler uses the queue to store messages about the Publish job. The results are stored in [!INCLUDE[pn_Azure_SQL_Database_long](pn-azure-sql-database-long.md)].  
   
- [Azure SQL Database](https://azure.microsoft.com/en-us/services/sql-database/)  
+ [Azure SQL Database](https://azure.microsoft.com/services/sql-database/)  
   
  Learning Path uses [!INCLUDE[pn_Azure_SQL_Database_long](pn-azure-sql-database-long.md)] to store:  
   
@@ -36,22 +36,22 @@
   
 -   Configuration-related Learning Path Authoring.  
   
- [Azure Active Directory](https://azure.microsoft.com/en-us/services/active-directory/)  
+ [Azure Active Directory](https://azure.microsoft.com/services/active-directory/)  
   
  Learning Path uses [!INCLUDE[pn_azure_active_directory](pn-azure-active-directory.md)] to authenticate Web Service.  
   
- [Azure Traffic Manager](https://azure.microsoft.com/en-us/services/traffic-manager/)  
+ [Azure Traffic Manager](https://azure.microsoft.com/services/traffic-manager/)  
   
  Learning Path uses [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] Traffic Manager to load balance the Web Service for availability and performance.  
   
- [Azure Storage Queue](https://azure.microsoft.com/en-us/services/storage/)  
+ [Azure Storage Queue](https://azure.microsoft.com/services/storage/)  
   
  [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] Storage queue is used to coordinate communication between the Web Service and Compiler roles.  
   
- [Azure Blob Storage](https://azure.microsoft.com/en-us/services/storage/)  
+ [Azure Blob Storage](https://azure.microsoft.com/services/storage/)  
   
  Learning Path uses [!INCLUDE[pn_azure_blob_storage](pn-azure-blob-storage.md)] to store the static content (client-side [!INCLUDE[pn_JavaScript](pn-javascript.md)], images, CSS content).  
   
- [Azure Content Delivery Network (CDN)](https://azure.microsoft.com/en-us/services/cdn/)  
+ [Azure Content Delivery Network (CDN)](https://azure.microsoft.com/services/cdn/)  
   
  CDN is used to cache the client side static content ([!INCLUDE[pn_JavaScript](pn-javascript.md)], images, and CSS files), to serve them from global CDN network.

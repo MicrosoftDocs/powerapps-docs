@@ -7,17 +7,18 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.date: 03/18/2018
+ms.date: 07/18/2018
 ms.author: anneta
 ms.reviewer:
 ---
 
 # Overview of creating apps in PowerApps
 
-PowerApps is a high-productivity development platform for business apps, and it has three major components:
+PowerApps is a high-productivity development platform for business apps, and it has four major components:
 
 - [Canvas apps](canvas-apps/getting-started.md) start with your user experience, crafting a highly tailored interface with the power of a blank canvas and connecting it to your choice of 200 data sources. You can build canvas apps for web, mobile, and tablet applications.
 - [Model-driven apps](model-driven-apps/model-driven-app-overview.md) start with your data model – building up from the shape of your core business data and processes in the Common Data Service to model forms, views, and other components. Model-driven apps automatically generate great UI that is responsive across devices.
+- [Portals](portals/overview.md) start to create external-facing websites that allow users outside your organization to sign in with a wide variety of identities, create and view data in Common Data Service, or even browse content anonymously.
 - [Common Data Service](common-data-service/data-platform-intro.md) is the data platform that comes with PowerApps and allows you to store and model business data. It's the platform on which Dynamics 365 applications are built; if you’re a Dynamics customer, your data is already in the Common Data Service.
 
 It's easy and simple to try building out your first app. We have a 30-day trial plan and a free community plan; find out which one is best for you and get started.
