@@ -57,7 +57,8 @@ Relevance Search delivers fast and comprehensive results across multiple entitie
   
 <a name="BKMK_Use_RelevanceSearch"></a>   
 ### Use Relevance Search  
- When Relevance Search is enabled for your organization, it becomes the default search experience. On the navigation bar use the search box to enter a search term, and then select the Enter key or select the search button. Then the **Relevance Search** search results page appears. Search results are shown in a single list ordered by relevance. To learn how to change your default search experience, see [Select a default search experience](#BKMK_DefaultOption).  
+
+ When Relevance Search is enabled for your organization, it becomes the default search experience. On the navigation bar use the search box to enter a search term, and then select the Enter key or select the search button. Then the **Relevance Search** search results page appears. Search results are shown in a single list ordered by relevance. To learn how to change your default search experience, see [Switch between Relevance and Categorized search](#BKMK_DefaultOption).  
   
  Start a new search by entering a search term in the **Relevance Search** search box or in the search box on the nav bar, as shown here.  
   
@@ -71,7 +72,7 @@ Relevance Search delivers fast and comprehensive results across multiple entitie
   
  In Common Data Service, the following enhancements have been made to the Relevance Search experience:  
   
-- You'll find search results for text in a document that is stored in [!INCLUDE[pn_crm_shortest](../includes/pn-crm-shortest.md)], including text in notes, email attachments, or appointments. The following file formats are supported for search: PDF, Microsoft Office documents, HTML, XML, ZIP, EML, plain text, and JSON.  
+- You'll find search results for text in a document that is stored in Common Data Service, including text in notes, email attachments, or appointments. The following file formats are supported for search: PDF, Microsoft Office documents, HTML, XML, ZIP, EML, plain text, and JSON.  
   
 - You can search for records that are shared with you and records that you own.  
   
@@ -82,7 +83,7 @@ Relevance Search delivers fast and comprehensive results across multiple entitie
   
   Because your results might include a mix of entities, you can narrow your search results to a specific entity by selecting an entity in the **Filter with** drop-down list. When you filter on a specific record type, you can include activities and notes related to the selected record in your search results. To do that, select the **Search activities and notes for selected records** check box to the right of the **Filter with** drop-down list. The check box is selected after you select a record in the **Filter with** drop-down list; it is cleared if you didn't select an entity in the **Filter with** list. The activities and notes are returned as top-level results.  
   
-
+<a name=" #BKMK_DefaultOption "></a>
 ## Switch between Relevance and Categorized search
 
 If your organization has turned on both search options (Relevance and Categorized search), then you can switch between the two.
