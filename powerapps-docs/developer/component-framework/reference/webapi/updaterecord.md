@@ -5,7 +5,7 @@ keywords:
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -23,7 +23,7 @@ Model-driven apps
 
 ## Syntax
 
-`context.webapi.updateRecord(entityLogicalName, id, data).then(successCallback, errorCallback);`
+`context.webAPI.updateRecord(entityLogicalName, id, data).then(successCallback, errorCallback);`
 
 ## Parameters
 
@@ -77,7 +77,9 @@ Model-driven apps
 
 ## Return Value
 
-On success, returns a promise object containing the attributes specified earlier in the description of the **successCallback** parameter.
+Type: [Promise]((dateformattinginfo.md)<[EntityReference](../entityreference.md)>
+
+Description: On success, returns a promise object containing the attributes specified earlier in the description of the **successCallback** parameter.
 
 
 ### Related topics
