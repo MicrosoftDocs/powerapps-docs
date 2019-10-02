@@ -80,7 +80,7 @@ CrmServiceClient svc = new CrmServiceClient(ConnectionString);
 |`Thumbprint` or `CertThumbprint`| Specifies the thumbprint of the certificate to be utilized during an S2S connection. When set, AppID is required and UserID and Password values are ignored.|
 |`SkipDiscovery`|Specifies whether to call instance discovery to determine the connection uri for a given instance. As of NuGet release Microsoft.CrmSdk.XrmTooling.CoreAssembly Version 9.0.2.7, default = true. Older versions default to false. <br/> Note: If set to true, it is important that the user provide the correct and accurate URI for the target instance.|
 
-> [!NOTE]<br/>
+> [!NOTE]
 > <b>When using the `OAuth` AuthType\AuthenticationType</b><br/>
 > For development and prototyping purposes we have provided the following AppId\ClientId and Redirect URI for use in OAuth Flows.<br/>
 > For production use, you should create an AppId\ClientId that is specific to your tenant in the Azure Management portal.<br/>
