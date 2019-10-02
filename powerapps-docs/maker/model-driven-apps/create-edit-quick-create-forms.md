@@ -29,7 +29,7 @@ In this topic, you create and edit a quick create form.
 
  With quick create forms, your app can have a streamlined data entry experience with full support for logic defined by form scripts and business rules. In a PowerApps model-driven app, quick create forms appear when you select the **Create** button in the navigation bar or when you choose **+ New** when creating a new record from a lookup or sub-grid.
   
- The Dynamics 365 customer engagement mobile apps use quick create forms for creating new records. If an entity already has a quick create form configured for it, the mobile apps use that form. If an entity doesn't have a configured quick create form, PowerApps generates a quick create form  for creating records in the mobile apps based on the main form definition.  
+ Dynamics 365 mobile apps use quick create forms for creating new records. If an entity already has a quick create form configured for it, the mobile apps use that form. If an entity doesn't have a configured quick create form, PowerApps generates a quick create form  for creating records in the mobile apps based on the main form definition.  
   
 <a name="BKMK_QuickCreateFormEntities"></a>   
 ## Entities with quick create forms  

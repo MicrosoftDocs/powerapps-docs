@@ -19,8 +19,7 @@ search.app:
 # Use the Web API with metadata
 
 You can perform any of the metadata operations with the Web API that you can perform using the organization service. This section provides guidance about how to use the Web API with the entity types included in <xref:Microsoft.Dynamics.CRM.MetadataEntityTypeIndex>.  
-> [!NOTE]
-> Information under this section is also applicable to the Dynamics 365 for Customer Engagement apps users (online and on-premises).
+
 
  There are four entity set paths exposed to perform operations with metadata entities as described in the following table.  
   
@@ -59,4 +58,3 @@ You can check whether entities are eligible to participate in a relationship wit
 
 [Browse the metadata for your environment](../browse-your-metadata.md)<br />
 [Use the Common Data Service Web API](overview.md)
-[Developer Guide for Dynamics 365 for Customer Engagement apps](/dynamics365/customer-engagement/developer/developer-guide)

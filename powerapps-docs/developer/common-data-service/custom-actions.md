@@ -1,12 +1,12 @@
 ---
 title: "Create your own actions (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Actions are custom messages that help in extending functionality of Dynamics 365 Customer Engagement. Learn more about how to create your own actions" # 115-145 characters including spaces. This abstract displays in the search result.
+description: "Actions are custom messages that help in extending functionality of Common Data Service. Learn more about how to create your own actions" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 09/20/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.topic: "article"
-author: "brandonsimons" # GitHub ID
+author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -30,7 +30,7 @@ The business logic of an action is implemented using a workflow. When you create
   
 - Can be associated with a single entity or be global (not associated with any particular entity).  
   
-- Is executed in the core operation stage 30 of the event execution pipeline.  
+- Is executed in the main operation stage of the event execution pipeline.  
   
 - Supports the invocation of plug-ins registered in the pre-operation and post-operation stages of the event execution pipeline.  
   

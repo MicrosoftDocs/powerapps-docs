@@ -26,7 +26,7 @@ No need to manually work on a task to get your work done. With PowerApps, you ca
 
 Because canvas apps can essentially be anything, there isn’t much help documentation on how to use an app once it’s created. If you need help using a canvas app, contact your app maker or PowerApps admin.
 
-[Model-driven apps](/powerapps/maker/model-driven-apps/model-driven-app-overview) use the [Unified Interface](unified-interface.md) that provides a responsive and accessible design. You can run the app on a web browser or on popular mobile devices. The app has multiple components including dashboards, forms, views, charts, and business processes that together help make the app easy to use. Model-driven apps are built and modeled on the Microsoft Dynamics 365 Customer Engagement framework, so the user experience is similar to Dynamics 365 Customer Engagement [apps](/dynamics365/customer-engagement/basics/business-apps-dynamics-365).
+[Model-driven apps](/powerapps/maker/model-driven-apps/model-driven-app-overview) use the [Unified Interface](unified-interface.md) that provides a responsive and accessible design. You can run the app on a web browser or on popular mobile devices. The app has multiple components including dashboards, forms, views, charts, and business processes that together help make the app easy to use.
 
 This section provides information about how to find and run canvas and model-driven apps from various places. It also provides information on how to navigate and work within a model-driven app: [Use model-driven apps](use-model-driven-apps.md).
 

@@ -5,7 +5,7 @@ keywords:
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -15,7 +15,7 @@ ms.assetid: 89807b09-92ee-43cf-8db5-8da838131923
 
 # LookupOptions
 
-[!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
+Provides all the information about options used when opening a lookup dialog.
 
 ## Available for 
 

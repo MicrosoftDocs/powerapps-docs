@@ -5,7 +5,7 @@ keywords:
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -14,8 +14,6 @@ ms.assetid: b0af1803-ae3a-41c2-a8a5-b15970bd6f96
 ---
 
 # Popup
-
-[!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
 
 [!INCLUDE [popup-description](includes/popup-description.md)]
 
@@ -27,7 +25,7 @@ Model-driven apps
 
 ### closeOnOutsideClick
 
-Indicates whether popup close on an outside mouse click.
+Indicates whether popup close on an outside mouse click. When set to `false`, the popup will not be closed on an outside mouse click.
 
 **Type**: `boolean`
 
@@ -45,13 +43,13 @@ The id to be set to the anchor component if any.
 
 ### name
 
-The name of the Popup. Used like a reference to open Popups.
+The name of the popup. Used as the reference to open popups.
 
 **Type**: `string`
 
 ### popupToOpen
 
-The name of Popup which should be opened.
+The name of popup which should be opened.
 
 **Type**: `string`
 
@@ -61,7 +59,7 @@ Should be defined only in a root popup. To open nested popups, should be provide
 
 ## type
 
-The type of Popup
+The type of popup, which is described in the enum PopupType. There should be only one `root` popup for each set of popups.
 
 **Type**: `enum`
 
