@@ -90,7 +90,7 @@ If your organization has turned on both search options (Relevance and Categorize
     
 ### Set a default experience
 
-If your organization has turned on both search options then you choose to set a default search experience.
+If your organization has turned on both search options then you can select a default search experience in your personal settings.
 
 1. In the upper-right corner of the page, select **Settings** and then select **Personalization Settings**.  
   
