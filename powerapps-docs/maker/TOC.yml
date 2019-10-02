@@ -44,11 +44,11 @@
         href: ../user/create-a-record.md
       - name: Add activities to the timeline
         href: ../user/add-activities.md
-      - name: View a profile card
-        href: ../user/profile-cards.md
         items:
         - name: FAQ about activities
           href: ../user/faq-for-timeline-and-activity.md
+      - name: View a profile card
+        href: ../user/profile-cards.md
       - name: Assign or share records
         href: ../user/assign-or-share-records.md
       - name: Share records using Access Team
