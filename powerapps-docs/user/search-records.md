@@ -22,7 +22,7 @@ search.app:
 
 You can search for records across multiple entities by using Relevance search or Categorized search in Common Data Service. 
 
-- Relevance search delivers fast and comprehensive results across multiple entities, in a single list, sorted by relevance. 
+- Relevance search delivers fast and comprehensive results across multiple entities, in a single list, sorted by relevance. It uses a dedicated search service external to Common Data Service (powered by [!INCLUDE[pn_Windows_Azure](../includes/pn-windows-azure.md)]) to boost search performance. 
 - Categorized search returns search results grouped by entity types, such as accounts, contacts or leads.
 
 Normally, Categorized search is the default search option. However, if Relevance search is enabled by your organization, it becomes the default search experience.   
@@ -37,9 +37,7 @@ With Categorized you can search records that begin with a specific word or use a
   
 ## Relevance search
   
-Relevance Search delivers fast and comprehensive results across multiple entities in a single list, sorted by relevance. It uses a dedicated search service external to Common Data Service (powered by [!INCLUDE[pn_Windows_Azure](../includes/pn-windows-azure.md)]) to boost search performance for Common Data Service.  
-  
- Relevance Search is available in addition to other Common Data Service searches you are already familiar with. You can continue using single-entity Quick Find on the entity grid or Multi-Entity Quick Find (called Categorized Search, if you have Relevance Search enabled). For more comprehensive and faster results, we recommend using Relevance Search.  
+  Relevance Search is available in addition to other Common Data Service searches you are already familiar with. You can continue using single-entity Quick Find on the entity grid or Multi-Entity Quick Find (called Categorized Search, if you have Relevance Search enabled). For more comprehensive and faster results, we recommend using Relevance Search.  
 
  Relevance Search brings the following enhancements and benefits:  
   
@@ -50,6 +48,17 @@ Relevance Search delivers fast and comprehensive results across multiple entitie
 - Returns results from all searchable entities in a single list sorted by relevance, based on factors like number of words matched or their proximity to each other in the text.  
   
 - Highlights matches in the result list.  
+
+- You'll find search results for text in a document that is stored in Common Data Service, including text in notes, email attachments, or appointments. The following file formats are supported for search: PDF, Microsoft Office documents, HTML, XML, ZIP, EML, plain text, and JSON.  
+  
+- You can search for records that are shared with you and records that you own.  
+  
+  > [!NOTE]
+  >  Hierarchical security models aren't supported.  Even if you see a row in Common Data Service because you have access to it through hierarchical security, you won't see the result in Relevance Search.  
+  
+- You can also search for option sets  and lookups. For example, let's say you want to find a retail store account that has **Pharmaceuticals** in the name. When you search for **Pharmaceutical Retail**, you'll find the result because there's a match to the Industry field, which is a searchable option set.  
+  
+  Because your results might include a mix of entities, you can narrow your search results to a specific entity by selecting an entity in the **Filter with** drop-down list. When you filter on a specific record type, you can include activities and notes related to the selected record in your search results. To do that, select the **Search activities and notes for selected records** check box to the right of the **Filter with** drop-down list. The check box is selected after you select a record in the **Filter with** drop-down list; it is cleared if you didn't select an entity in the **Filter with** list. The activities and notes are returned as top-level results.
   
 > [!NOTE]
 > - Relevance Search is disabled by default. Your administrator needs to enable it for the organization. After Relevance Search is enabled, you might have to wait up to an hour or more, depending on the size of your organization, before you start seeing Relevance Search results for your apps. Smaller changes in indexed data can take up to 15 minutes to show up in your system.
@@ -66,18 +75,6 @@ Relevance Search delivers fast and comprehensive results across multiple entitie
 > [!NOTE]
 > You'll see hit highlights when your search term matches a term in your app. The hit highlights appear as bold and italicized text in your search results. These are often returned as a portion of the full value in a field because only the matched terms are highlighted. 
   
- In Common Data Service, the following enhancements have been made to the Relevance Search experience:  
-  
-- You'll find search results for text in a document that is stored in Common Data Service, including text in notes, email attachments, or appointments. The following file formats are supported for search: PDF, Microsoft Office documents, HTML, XML, ZIP, EML, plain text, and JSON.  
-  
-- You can search for records that are shared with you and records that you own.  
-  
-  > [!NOTE]
-  >  Hierarchical security models aren't supported.  Even if you see a row in Common Data Service because you have access to it through hierarchical security, you won't see the result in Relevance Search.  
-  
-- You can also search for option sets  and lookups. For example, let's say you want to find a retail store account that has **Pharmaceuticals** in the name. When you search for **Pharmaceutical Retail**, you'll find the result because there's a match to the Industry field, which is a searchable option set.  
-  
-  Because your results might include a mix of entities, you can narrow your search results to a specific entity by selecting an entity in the **Filter with** drop-down list. When you filter on a specific record type, you can include activities and notes related to the selected record in your search results. To do that, select the **Search activities and notes for selected records** check box to the right of the **Filter with** drop-down list. The check box is selected after you select a record in the **Filter with** drop-down list; it is cleared if you didn't select an entity in the **Filter with** list. The activities and notes are returned as top-level results.  
   
 <a name=" #BKMK_DefaultOption "></a>
 ## Switch between Relevance and Categorized search
@@ -89,13 +86,29 @@ If your organization has turned on both search options (Relevance and Categorize
 2. On the left, select the drop-down menu to switch between **Relevance Search** or **Categorized Search**.
 
     > [!div class="mx-imgBorder"]
-    > ![Switch between Relevance and Categorized search](media/switch-search.png "Switch between Relevance and Categorized search")  
+    > ![Switch between Relevance and Categorized search](media/switch-search.png "Switch between Relevance and Categorized search") 
+    
+### Set a default experiecne
+
+If your organization has turned on both search options then you choose to set a default search experience.
+
+1. In the upper-right corner of the page, select **Settings** and then select **Personalization Settings**.  
+  
+  > [!div class="mx-imgBorder"]
+  > ![Select default search experience](media/relevance-search-personal-settings.png "Select default search experience")  
+  
+2. On the **General** tab, in the **Select the default search experience** section, for the **Default Search Experience**, select your default experience. 
+
+  > [!div class="mx-imgBorder"]
+  > ![Select default search experience](media/default.png "Select default search experience")  
+ 
+
 
 ## Start a search 
   
 1.  From the top nav bar, select the **Search** button.  
   
-2.  Type your search words in the search box and then select **Search**.  
+2.  Type your search words in the search box and then select ******.  
 
     > [!div class="mx-imgBorder"]
     > ![Search option](media/search-option.png "Search option")  
