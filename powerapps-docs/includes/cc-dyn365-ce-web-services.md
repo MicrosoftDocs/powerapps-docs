@@ -1,1 +1,1 @@
-Dynamics 365 Customer Engagement Web Services
+Common Data Service Web Services

@@ -1,7 +1,7 @@
 ---
 title: "getOutputs | MicrosoftDocs"
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.topic: "reference"
 applies_to: ""
@@ -16,7 +16,6 @@ author: Nkrb
 ## Available for 
 
 Model-driven apps and canvas apps (experimental preview)
-
 
 ## Syntax
 

@@ -54,16 +54,13 @@ be handled with a few clicks by individuals who aren’t even data scientists,
 such as app creators, business analysts and report creators.
 
 
-<!--from editor: The following paragraph includes mention of Dynamics 365 for Customer Engagement apps. New branding guidelines are doing away with Customer Engagement. I'm not entirely sure how this should be handled now; the style book says to name the apps individually: https://styleguides.azurewebsites.net/Styleguide/Read?id=2858&topicid=44518 One suggestion is to replace it here with a specific app as an example. --> 
-
-
 Dataflows store data in entities. An entity is a set of records used to store
 data, similar to how a table stores data within a database. Customers can define
 custom entity schema or leverage the Common Data Model’s standard entities.
 The Common Data Model is a shared data language for business and analytical
 applications to use. The Common Data Model metadata system enables consistency
 of data and its meaning across applications and business processes such as
-PowerApps, Power BI, Dynamics 365 for Customer Engagement apps, and Azure, which store data in conformance with the Common Data Model. A dataflow’s resulting entities can then be stored
+PowerApps, Power BI, some Dynamics 365 apps (model-driven apps), and Azure, which store data in conformance with the Common Data Model. A dataflow’s resulting entities can then be stored
 in either of the following:
 
 -   **Common Data Service.** Lets you securely store and manage data that's used

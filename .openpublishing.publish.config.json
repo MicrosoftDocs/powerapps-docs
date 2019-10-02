@@ -53,6 +53,10 @@
         {
           "ConceptualTOC": "powerapps-docs/developer/common-data-service/virtual-entities/toc.yml",
           "ReferenceTOCUrl": "/dotnet/api/ce-9-virtualentity/toc.json"
+        },
+        {
+          "ConceptualTOC": "powerapps-docs/developer/common-data-service/online-management-api/toc.yml",
+          "ReferenceTOCUrl": "/rest/api/dynamics365/toc.json"
         }
       ]
     }
