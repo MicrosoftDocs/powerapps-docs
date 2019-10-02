@@ -37,7 +37,7 @@ You can view details of the contact inline which includes the contact picture, n
 4. To view more details, select **Show more** to expand the contact's profile.
  
     > [!div class="mx-imgBorder"] 
-    > ![Expand contact profile card detail](media/profiles.png "Expand contact profile card details")
+    > ![Expand contact profile card detail](media/profile1.png"Expand contact profile card details")
    
  ## View a user's profile
  
@@ -47,7 +47,7 @@ You can view details of the contact inline which includes the contact picture, n
 4.  To view more details like emails and shared files with the user, select **Show more** to expand the contact's profile.
  
     > [!div class="mx-imgBorder"] 
-    > ![Expand User profile card detail](media/profile2.png "Expand User profile card details")
+    > ![Expand User profile card detail](media/profile1.png "Expand User profile card details")
 
 
  ## FAQs
