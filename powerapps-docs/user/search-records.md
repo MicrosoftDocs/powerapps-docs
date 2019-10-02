@@ -20,25 +20,30 @@ search.app:
 
 # Search for records in an app
 
-You can search for records across multiple entities by using Relevance search or Categorized search in model-driven apps. Relevance search delivers fast and comprehensive results across multiple entities, in a single list, sorted by relevance. Categorized search returns search results grouped by entity types, such as accounts, contacts or leads.
+You can search for records across multiple entities by using Relevance search or Categorized search in Common Data Service. 
+
+- Relevance search delivers fast and comprehensive results across multiple entities, in a single list, sorted by relevance. 
+- Categorized search returns search results grouped by entity types, such as accounts, contacts or leads.
 
 Normally, Categorized search is the default search option. However, if Relevance search is enabled by your organization, it becomes the default search experience.   
   
 ## Normal quick find (Categorized search) 
+
+With Categorized you can search records that begin with a specific word or use a wildcard.
   
 - **Begins with**: Results include records that begin with a specific word. For example, if you want to search for “Alpine Ski House,” type **alp** in the search box; if you type **ski**, the record won’t show up.  
   
-- **Wildcard**: For example, *ski or *ski\*  
+- **Wildcard**: For example, *ski or *ski\*. 
   
 ## Relevance search
   
 Relevance Search delivers fast and comprehensive results across multiple entities in a single list, sorted by relevance. It uses a dedicated search service external to Common Data Service (powered by [!INCLUDE[pn_Windows_Azure](../includes/pn-windows-azure.md)]) to boost search performance for Common Data Service.  
   
- Relevance Search is available in addition to other Common Data Service searches you are already familiar with. You can continue using single-entity Quick Find on the entity grid or Multi-Entity Quick Find (called Categorized Search, if you have Relevance Search enabled) by using **Search for records across multiple entities sorted by relevance** on the navigation bar. For more comprehensive and faster results, we recommend using Relevance Search.  
+ Relevance Search is available in addition to other Common Data Service searches you are already familiar with. You can continue using single-entity Quick Find on the entity grid or Multi-Entity Quick Find (called Categorized Search, if you have Relevance Search enabled). For more comprehensive and faster results, we recommend using Relevance Search.  
 
  Relevance Search brings the following enhancements and benefits:  
   
-- Improves performance with external indexing and [!INCLUDE[pn_azure_shortest](../includes/pn-azure-shortest.md)] Search technology.  
+- Improves performance with external indexing and [!INCLUDE[pn_azure_shortest](../includes/pn-azure-shortest.md)] search technology.  
   
 - Finds matches to any word in the search term in any field in the entity. Matches can include inflectional words like **stream**, **streaming**, or **streamed**.  
   
@@ -54,15 +59,6 @@ Relevance Search delivers fast and comprehensive results across multiple entitie
  Although Relevance Search finds matches to any word in the search term in any field in an entity, in Quick Find&mdash;even with full-text search enabled&mdash;all words from the search term must be found in one field.  
   
  In Relevance Search, the better the match, the higher it appears in the results. A match has a higher relevancy if more words from the search term are found in close proximity to each other. The smaller the amount of text where the search words are found, the higher the relevancy. For example, if you find the search words in a company name and address, it might be a better match than the same words found in a large article, far apart from each other. Because the results are returned in a single list, you can see a mix of records displayed one after another, such as accounts, opportunities, leads, and so on. The matched words in the list are highlighted.  
-  
-<a name="BKMK_Use_RelevanceSearch"></a>   
-### Use Relevance Search  
-
- When Relevance Search is enabled for your organization, it becomes the default search experience. On the navigation bar use the search box to enter a search term, and then select the Enter key or select the search button. Then the **Relevance Search** search results page appears. Search results are shown in a single list ordered by relevance. To learn how to change your default search experience, see [Switch between Relevance and Categorized search](#BKMK_DefaultOption).  
-  
- Start a new search by entering a search term in the **Relevance Search** search box or in the search box on the nav bar, as shown here.  
-  > [!div class="mx-imgBorder"]
-  > ![Relevance Search](media/relevance-search.png "Relevance Search")  
   
  Use syntax in your search term to get the results you want. For example, type **car silver 2-door** to include matches for any word in the search term in the search results. Type **car+silver+2-door** to find only matches that include all three words. Type **car&#124;silver&#124;2-door** to  get results that contain **car** or **silver** or **2-door**, or all three words. More information about syntax you can use in your search queries: [Simple query syntax in Azure Search](https://docs.microsoft.com/rest/api/searchservice/simple-query-syntax-in-azure-search)
 
