@@ -5,7 +5,7 @@ keywords:
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -15,8 +15,6 @@ ms.assetid: 0202d51f-e9a9-4a2e-b3e9-0bfd7f6afb86
 
 # DataSet
 
-[!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
-
 [!INCLUDE [dataset-description](includes/dataset-description.md)]
 
 ## Available for 
@@ -25,21 +23,18 @@ Model-driven apps
 
 ## Properties
 
-### addColumn
+### addColumn()
 
-The function to add a column to the dataset
-
-**Type**: `function`<br />
-**Optional**
+Adds  a column to the columnset
 
 ### Remarks
 
-This function must accept two parameters.
+This method accept two parameters.
 
 |Name|Type|Required|Description|
-|-|-|-|-|
-|name|string|Yes|Column name to be added to the dataset|
-|entityalias|string|No| Alias for which the column name needs to be added|
+|------|-----|------|-----|
+|name|`string`|Yes|Column name to be added to the dataset.|
+|entityAlias|`string`|No| Entity alias for which the column name needs to be added.|
 
 ### columns
 
@@ -55,29 +50,25 @@ Whether an error occurred in data retrieval.
 
 ### errorMessage
 
-The error message associated with the last encountered error.
+The error message associated with the last encountered error, if applicable.
 
 **Type**: `string`
 
 ### filtering
 
-Placeholder description: IDataSetExposedParameter.name
-<!-- 
-QUESTION: This description doesn't seem right
-'The column sorting for the current query.' 
--->
+The column filtering for the current query.
 
 **Type**: [Filtering](filtering.md)
 
 ### linking
 
-Placeholder description: IDataSetExposedParameter.name
+Defines the linked entity information.
 
 **Type**: [Linking](linking.md)
 
 ### loading
 
-Whether the dataset is loading.
+Indicates whether the dataset is loading or not.
 
 **Type**: `boolean`
 
@@ -91,19 +82,19 @@ Pagination status and actions.
 
 Map of IDs to the full record object.
 
-**Type**: `object`
+**Type**: [EntityRecord](entityrecord.md)
 
 ### sortedRecordIds
 
-IDs of the records in the dataset, in order.
+IDs of the records in the dataset, order by the query response result.
 
 **Type**: `string[]`
 
 ### sorting
 
-The column sorting for the current query.
+The sorting status for the current query.
 
-**Type**: [Sort](sortstatus.md)
+**Type**: [SortStatus](sortstatus.md)
 
 ## Methods
 
@@ -118,6 +109,9 @@ The column sorting for the current query.
 |[refresh](dataset/refresh.md)|[!INCLUDE [refresh-description](dataset/includes/refresh-description.md)]| 
 |[setSelectedRecordIds](dataset/setselectedrecordids.md)|[!INCLUDE [setselectedrecordids-description](dataset/includes/setselectedrecordids-description.md)]| 
 
+## Example
+
+To learn more about how to implement the dataset methods, see [DataSet Grid component](../sample-controls/data-set-grid-control.md)
 
 ### Related topics
 

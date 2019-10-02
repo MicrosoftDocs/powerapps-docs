@@ -4,7 +4,7 @@ description:
 keywords:
 ms.author: nabuthuk
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -15,4 +15,4 @@ applies_to:
 ms.assetid: e20f7dd7-4a2a-4409-84ad-59ada98b39da
 ---
 
-Helper of Factory Pop API interface
+Provides access to get all the information about the popup.

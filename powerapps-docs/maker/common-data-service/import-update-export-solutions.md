@@ -2,7 +2,7 @@
 title: "Import, update, and export solutions | MicrosoftDocs"
 description: "Learn how to import, update, and export a solution in PowerApps"
 ms.custom: ""
-ms.date: 11/06/2018
+ms.date: 09/30/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -25,7 +25,7 @@ search.app:
 ---
 # Import, update, and export solutions 
 
- You can import solutions manually using the steps below. Only import solutions that you've obtained from a trusted source. Customizations might include code that can send data to external sources. You can import the solution called **Default Solution** only to the environment from which you exported it, but not into a different environment.  
+ You can import solutions manually using the steps below. Only import solutions that you've obtained from a trusted source. Customizations might include code that can send data to external sources.   
   
 1.  Select **Solutions** from the left navigation.  
   
@@ -87,8 +87,11 @@ search.app:
 <a name="BKMK_ExportSolutions"></a>   
 
 ## Export solutions  
- We recommend that you export your unmanaged customizations periodically so that you have a backup in case anything happens. You cannot export managed solutions. You can either export solutions from PowerApps or you can export using the classic experience. 
+ We recommend that you create an unmanaged solution to use for exporting your customizations. Then, export your customizations periodically so that you have a backup in case anything happens. You cannot export managed solutions. You can either export solutions from PowerApps or you can export using the classic experience. 
  
+> [!IMPORTANT]
+> Exporting the Default Solution is not supported. 
+
 ### Export from PowerApps
   
 1.  Select **Solutions** from the left navigation.   
