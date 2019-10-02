@@ -69,14 +69,14 @@ Relevance Search delivers fast and comprehensive results across multiple entitie
 > [!NOTE]
 > You'll see hit highlights when your search term matches a term in your app. The hit highlights appear as bold and italicized text in your search results. These are often returned as a portion of the full value in a field because only the matched terms are highlighted. 
   
- In [!INCLUDE[pn_crm_8_2_0_online](../includes/pn-crm-8-2-0-online.md)], the following enhancements have been made to the Relevance Search experience:  
+ In Common Data Service, the following enhancements have been made to the Relevance Search experience:  
   
 - You'll find search results for text in a document that is stored in [!INCLUDE[pn_crm_shortest](../includes/pn-crm-shortest.md)], including text in notes, email attachments, or appointments. The following file formats are supported for search: PDF, Microsoft Office documents, HTML, XML, ZIP, EML, plain text, and JSON.  
   
 - You can search for records that are shared with you and records that you own.  
   
   > [!NOTE]
-  >  Hierarchical security models aren't supported.  Even if you see a row in [!INCLUDE[pn_crm_shortest](../includes/pn-crm-shortest.md)] because you have access to it through hierarchical security, you won't see the result in Relevance Search.  
+  >  Hierarchical security models aren't supported.  Even if you see a row in Common Data Service because you have access to it through hierarchical security, you won't see the result in Relevance Search.  
   
 - You can also search for option sets  and lookups. For example, let's say you want to find a retail store account that has **Pharmaceuticals** in the name. When you search for **Pharmaceutical Retail**, you'll find the result because there's a match to the Industry field, which is a searchable option set.  
   
@@ -97,13 +97,13 @@ If your organization has turned on both search options (Relevance and Categorize
   
 2.  Type your search words in the search box and then select **Search**.  
   
-## Filter search results (work with categorized search)  
+## Filter categorized search results 
   
 -   To filter results by one record type, on the search screen, choose a record type from the **Filter with:** drop-down box.  
   
 -   To search against all record types, choose **None** in the **Filter with:** drop-down box.  
 
-## Filter records with facets  (work with relevance search)  
+## Filter records with facets  (works with relevance search)  
  With [!INCLUDE[pn_crm_8_2_0_online](../includes/pn-crm-8-2-0-online.md)], you can now refine your search results by using facets and filters. Facets are available in the left pane. Immediately after you perform a search, the following global facets are available for four common fields:  
   
 -   Record Type  
