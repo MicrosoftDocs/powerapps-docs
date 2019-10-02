@@ -166,7 +166,7 @@ If your organization has turned on both search options then you can select a def
   > ![Date and time facets for Relevance Search](media/relevance-search-date-time-facets.png "Date and time facets for Relevance Search")  
   
 <a name="BKMK_ConfigureFacets"></a>   
-## Configure facets and filters for the search  
+### Configure facets and filters for the search  
  Facets and filters let you drill into and explore the results of your current search without having to repeatedly refine your search term. Configure the facets and filters you want in the **Set Personal Options** dialog box.  
   
 > [!NOTE]
