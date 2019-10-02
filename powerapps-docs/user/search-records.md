@@ -88,7 +88,7 @@ If your organization has turned on both search options (Relevance and Categorize
     > [!div class="mx-imgBorder"]
     > ![Switch between Relevance and Categorized search](media/switch-search.png "Switch between Relevance and Categorized search") 
     
-### Set a default experiecne
+### Set a default experience
 
 If your organization has turned on both search options then you choose to set a default search experience.
 
