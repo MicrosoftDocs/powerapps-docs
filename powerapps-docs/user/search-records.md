@@ -105,7 +105,7 @@ If your organization has turned on both search options (Relevance and Categorize
 -   To search against all record types, choose **None** in the **Filter with:** drop-down box.  
 
 ## Filter records with facets  (works with relevance search)  
- With [!INCLUDE[pn_crm_8_2_0_online](../includes/pn-crm-8-2-0-online.md)], you can now refine your search results by using facets and filters. Facets are available in the left pane. Immediately after you perform a search, the following global facets are available for four common fields:  
+ With Common Data Service, you can now refine your search results by using facets and filters. Facets are available in the left pane. Immediately after you perform a search, the following global facets are available for four common fields:  
   
 -   Record Type  
   
@@ -118,11 +118,11 @@ If your organization has turned on both search options (Relevance and Categorize
 ### Record Type facets  
  To narrow your search results to a specific entity, select the entity under the **Record Type** section.  
   
- ![Record Type facet to narrow the search results](../basics/media/relevance-search-record-type-facet.png "Record Type facet used to narrow search results")  
+ ![Record Type facet to narrow the search results](media/relevance-search-record-type-facet.png "Record Type facet used to narrow search results")  
   
  When you filter on a specific record type, you can include activities and notes that are related to the selected record in your search results. To do that, select the **Related Notes & Activities** check box. The activities and notes will appear in top-level results.  
   
- ![Include notes and activities related to a record type in the search results](../basics/media/relevance-search-record-type-facet-related-notes-activities.png "Include notes and activities related to a record type in the search results")  
+ ![Include notes and activities related to a record type in the search results](media/relevance-search-record-type-facet-related-notes-activities.png "Include notes and activities related to a record type in the search results")  
   
  Search results that are found in email attachments or appointment entities  are shown in the search results under their parent record, either Email or Appointment.  
   
@@ -133,14 +133,14 @@ If your organization has turned on both search options (Relevance and Categorize
 ### Text-based facets  
  All lookups, option sets, and record types are text-based facets. For example, the text-based facet Owner consists of a list of field values and their corresponding counts.  
   
- ![Text-based facet in Relevance Search](../basics/media/relevance-search-text-based-facets.png "Text-based facet in Relevance Search")  
+ ![Text-based facet in Relevance Search](media/relevance-search-text-based-facets.png "Text-based facet in Relevance Search")  
   
  Filters in these facets are sorted in descending order by count. The top four facet values are displayed by default. When there are more than four facet values, you'll see a **SHOW MORE** link that you can select to expand the list and see up to 15 top facet values. Select each value to filter the search results to show only records where the field has the value you've selected. For example, if you select **Kim Abercrombie**, the search results will show all records where the owner is Kim Abercrombie. When you select a Lookup or Option Set facet value, search results are filtered to only include records with the value that you specified.  
   
 ### Date and time facets  
  Like other facets, you can use date and time facets to filter and see search results for a specific time. To select a range of values, drag the slider or select one of the vertical columns.  
   
- ![Date and time facets for Relevance Search](../basics/media/relevance-search-date-time-facets.png "Date and time facets for Relevance Search")  
+ ![Date and time facets for Relevance Search](media/relevance-search-date-time-facets.png "Date and time facets for Relevance Search")  
   
 <a name="BKMK_ConfigureFacets"></a>   
 ## Configure facets and filters for the search  
@@ -151,9 +151,9 @@ If your organization has turned on both search options (Relevance and Categorize
   
 #### To configure facets for yourself  
   
-1. Select the personal settings button in the upper-right corner of the page, and then select **Options**.  
+1. In the upper-right corner of the page, select **Settings** and then select **Personalization Settings**.  
   
-   ![Select default search experience](../basics/media/relevance-search-personal-settings.PNG "Select default search experience")  
+   ![Select default search experience](media/relevance-search-personal-settings.PNG "Select default search experience")  
   
 2. On the **General** tab, in the **Select the default search experience** section, for the **Facets and Filters** field, select **Configure**.  
   
