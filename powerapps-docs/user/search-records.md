@@ -113,7 +113,7 @@ If your organization has turned on both search options then you can select a def
     > [!div class="mx-imgBorder"]
     > ![Search option](media/search-option.png "Search option")  
   
-## Filter categorized search results 
+## Filter Categorized Search results 
   
 -   To filter results by one record type, on the search screen, choose a record type from the **Filter with:** drop-down box.  
   
@@ -122,7 +122,7 @@ If your organization has turned on both search options then you can select a def
     > [!div class="mx-imgBorder"]
     > ![Filter Search](media/filter-search.png "Filter Search")  
 
-## Filter records with facets  (works with relevance search)  
+## Filter records with facets (works with Relevance Search)  
  With Common Data Service, you can now refine your search results by using facets and filters. Facets are available in the left pane. Immediately after you perform a search, the following global facets are available for four common fields:  
   
 -   Record Type  
