@@ -61,8 +61,8 @@ Relevance Search delivers fast and comprehensive results across multiple entitie
  When Relevance Search is enabled for your organization, it becomes the default search experience. On the navigation bar use the search box to enter a search term, and then select the Enter key or select the search button. Then the **Relevance Search** search results page appears. Search results are shown in a single list ordered by relevance. To learn how to change your default search experience, see [Switch between Relevance and Categorized search](#BKMK_DefaultOption).  
   
  Start a new search by entering a search term in the **Relevance Search** search box or in the search box on the nav bar, as shown here.  
-  
- ![Relevance Search](media/relevance-search.png "Relevance Search")  
+  > [!div class="mx-imgBorder"]
+  > ![Relevance Search](media/relevance-search.png "Relevance Search")  
   
  Use syntax in your search term to get the results you want. For example, type **car silver 2-door** to include matches for any word in the search term in the search results. Type **car+silver+2-door** to find only matches that include all three words. Type **car&#124;silver&#124;2-door** to  get results that contain **car** or **silver** or **2-door**, or all three words. More information about syntax you can use in your search queries: [Simple query syntax in Azure Search](https://docs.microsoft.com/rest/api/searchservice/simple-query-syntax-in-azure-search)
 
@@ -92,6 +92,9 @@ If your organization has turned on both search options (Relevance and Categorize
 
 2. On the left, select the drop-down menu to switch between **Relevance Search** or **Categorized Search**.
 
+    > [!div class="mx-imgBorder"]
+    > ![Switch between Relevance and Categorized search](media/switch-search.png "Switch between Relevance and Categorized search")  
+
 ## Start a search 
   
 1.  From the top nav bar, select the **Search** button.  
@@ -117,12 +120,15 @@ If your organization has turned on both search options (Relevance and Categorize
   
 ### Record Type facets  
  To narrow your search results to a specific entity, select the entity under the **Record Type** section.  
-  
- ![Record Type facet to narrow the search results](media/relevance-search-record-type-facet.png "Record Type facet used to narrow search results")  
+ 
+  > [!div class="mx-imgBorder"]
+  > ![Record Type facet to narrow the search results](media/relevance-search-record-type-facet.png "Record Type facet used to narrow search results")  
   
  When you filter on a specific record type, you can include activities and notes that are related to the selected record in your search results. To do that, select the **Related Notes & Activities** check box. The activities and notes will appear in top-level results.  
   
- ![Include notes and activities related to a record type in the search results](media/relevance-search-record-type-facet-related-notes-activities.png "Include notes and activities related to a record type in the search results")  
+ 
+  > [!div class="mx-imgBorder"]
+  > ![Include notes and activities related to a record type in the search results](media/relevance-search-record-type-facet-related-notes-activities.png "Include notes and activities related to a record type in the search results")  
   
  Search results that are found in email attachments or appointment entities  are shown in the search results under their parent record, either Email or Appointment.  
   
@@ -132,15 +138,17 @@ If your organization has turned on both search options (Relevance and Categorize
   
 ### Text-based facets  
  All lookups, option sets, and record types are text-based facets. For example, the text-based facet Owner consists of a list of field values and their corresponding counts.  
-  
- ![Text-based facet in Relevance Search](media/relevance-search-text-based-facets.png "Text-based facet in Relevance Search")  
+ 
+  > [!div class="mx-imgBorder"]
+  > ![Text-based facet in Relevance Search](media/relevance-search-text-based-facets.png "Text-based facet in Relevance Search")  
   
  Filters in these facets are sorted in descending order by count. The top four facet values are displayed by default. When there are more than four facet values, you'll see a **SHOW MORE** link that you can select to expand the list and see up to 15 top facet values. Select each value to filter the search results to show only records where the field has the value you've selected. For example, if you select **Kim Abercrombie**, the search results will show all records where the owner is Kim Abercrombie. When you select a Lookup or Option Set facet value, search results are filtered to only include records with the value that you specified.  
   
 ### Date and time facets  
  Like other facets, you can use date and time facets to filter and see search results for a specific time. To select a range of values, drag the slider or select one of the vertical columns.  
-  
- ![Date and time facets for Relevance Search](media/relevance-search-date-time-facets.png "Date and time facets for Relevance Search")  
+ 
+  > [!div class="mx-imgBorder"]
+  > ![Date and time facets for Relevance Search](media/relevance-search-date-time-facets.png "Date and time facets for Relevance Search")  
   
 <a name="BKMK_ConfigureFacets"></a>   
 ## Configure facets and filters for the search  
@@ -153,7 +161,8 @@ If your organization has turned on both search options (Relevance and Categorize
   
 1. In the upper-right corner of the page, select **Settings** and then select **Personalization Settings**.  
   
-   ![Select default search experience](media/relevance-search-personal-settings.PNG "Select default search experience")  
+  > [!div class="mx-imgBorder"]
+  > ![Select default search experience](media/relevance-search-personal-settings.png "Select default search experience")  
   
 2. On the **General** tab, in the **Select the default search experience** section, for the **Facets and Filters** field, select **Configure**.  
   
