@@ -1097,8 +1097,8 @@
           href: ./portals/admin/clear-server-side-cache.md
         - name: Migrate portal configuration
           href: ./portals/admin/migrate-portal-configuration.md
-        - name: About trial portals
-          href: ./portals/admin/about-trial.md
+        - name: About portal lifecycle
+          href: ./portals/admin/portal-lifecycle.md
     - name: Advanced portal configuration
       items:
         - name: Overview
