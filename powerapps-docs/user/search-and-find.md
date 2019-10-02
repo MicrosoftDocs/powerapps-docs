@@ -1,12 +1,12 @@
 ---
-title: "Search for records in model-driven apps| MicrosoftDocs"
+title: "Seach and find options in Common Data Service| MicrosoftDocs"
 ms.custom: ""
 author: mduelae
 manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 11/16/2018
+ms.date: 10/02/2019
 ms.author: mduelae
 ms.custom: ""
 ms.reviewer: ""
