@@ -18,9 +18,7 @@ search.app:
   - D365CE
 ---
 
-# Search and Find in Common Data Service
-
-## Compare Common Data Service search options
+# Compare search and find options in Common Data Service
 
 There are four ways to find data in Common Data Service:
 
