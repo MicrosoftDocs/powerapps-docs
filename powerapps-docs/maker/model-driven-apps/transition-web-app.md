@@ -1,5 +1,5 @@
 ---
-title: "Quick start for transitioning your Dynamics 365 for Customer Engagement apps web client application to Unified Interface | MicrosoftDocs"
+title: "Quick start for transitioning your legacy web client application to Unified Interface | MicrosoftDocs"
 description: "Learn how to transition your legacy web client application to the Unified Interface"
 ms.custom: ""
 ms.date: 09/11/2019
@@ -23,19 +23,19 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Quick start for transitioning your Dynamics 365 for Customer Engagement apps web client application to Unified Interface
+# Quick start for transitioning your legacy web client application to Unified Interface
 
-The Unified Interface framework uses responsive web design principles to provide an optimal viewing and interaction experience for any screen size, device, or orientation. This quick start topic explains how to transition your Dynamics 365 for Customer Engagement apps Web Client application to Unified Interface by using a new non-production environment. 
+The Unified Interface framework uses responsive web design principles to provide an optimal viewing and interaction experience for any screen size, device, or orientation. This quick start topic explains how to transition your legacy Web Client application to Unified Interface by using a new non-production environment. 
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE3JwWU]
 
 To use an existing non-production environment to transition your Web Client application, see [Quick start for using an existing environment to validate your legacy web client app with the Unified Interface](transition-web-app-existing.md). 
 ## Prerequisites
-- A Dynamics 365 for Customer Engagement apps legacy web client application. 
-- Although not required, we recommend a non-production environment to test your application and ensure it does not impact your current deployment or development cycles. More information: [Manage sandbox instances](/dynamics365/customer-engagement/admin/manage-sandbox-instances)
+- A legacy web client application. 
+- Although not required, we recommend a non-production environment to test your application and ensure it does not impact your current deployment or development cycles. More information: [Manage sandbox instances](/dynamics365/admin/manage-sandbox-instances)
 
 ## Prepare the environment
-First, select a non-production environment and enable **Use Unified Interface only** mode, which will use the Unified Interface for all model-driven apps in the environment. This also includes any Dynamics 365 for Customer Engagement application modules originally configured for the legacy web client.
+First, select a non-production environment and enable **Use Unified Interface only** mode, which will use the Unified Interface for all model-driven apps in the environment. This also includes any Dynamics 365 application modules originally configured for the legacy web client.
 
 1. Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Environment**, and then select a sandbox environment. 
 
@@ -44,7 +44,7 @@ First, select a non-production environment and enable **Use Unified Interface on
    > [!div class="mx-imgBorder"] 
    > ![Use Unified Interface only setting](media/use-unified-interface-only-pac.png)
 
-You can also set this in Dynamics 365 for Customer Engagement apps. Go to **Settings** > **Administration** > **System Settings** and then on the **General** tab set **Enable only the Unified Interface** to **Yes**.
+You can also set this in the settings area. Go to **Settings** > **Administration** > **System Settings** and then on the **General** tab set **Enable only the Unified Interface** to **Yes**.
 
 > [!div class="mx-imgBorder"] 
 > ![Use the new Unified Interface only](media/use-unified-interface-only.png "Use the new Unified Interface only")
@@ -56,20 +56,20 @@ You can also set this in Dynamics 365 for Customer Engagement apps. Go to **Sett
 ## Run and validate your application in the Unified Interface
 Run your applications that were originally web client applications. Notice that, after you turn on **Use Unified Interface only**, all available apps in the environment use the Unified Interface even if the application was originally configured for the web client.
 
-To run your app, sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Apps**, and then select the application you want to run. Alternatively, you can go directly to the **My Apps** page in Dynamics 365 for Customer Engagement apps, such as *https://contoso.crm.dynamics.com/apps/*.
+To run your app, sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Apps**, and then select the application you want to run. Alternatively, you can go directly to the **My Apps** page, such as *https://contoso.crm.dynamics.com/apps/*.
 
 ### Validate your app, processes, and customizations 
-We recommend that you test all use cases. You can start with the most critical use cases or group them into logical patterns of design. Since the Unified Interface is based on responsive design, we recommend that you perform tests with different devices that have different screen resolutions. As you test the application you will be able to verify that your customizations are compatible with the Unified Interface and whether there are any features that require a redesign or have missing functionality. Build a plan for reviewing these elements and post your questions and feedback on our community forum. <!-- Link tbd -->
+We recommend that you test all use cases. You can start with the most critical use cases or group them into logical patterns of design. Since the Unified Interface is based on responsive design, we recommend that you perform tests with different devices that have different screen resolutions. As you test the application you will be able to verify that your customizations are compatible with the Unified Interface and whether there are any features that require a redesign or have missing functionality. Build a plan for reviewing these elements and post your questions and feedback on our community forum. 
 
 > [!IMPORTANT]
-> The current version of Common Data Service and Dynamics 365 for Customer Engagement apps still includes several deprecated features. You should review your application for any deprecated features and replace as necessary with new capabilities. More information: [Important changes (deprecations) coming in Dynamics 365 Customer Engagement](/dynamics365/get-started/whats-new/customer-engagement/important-changes-coming)
+> The current version of Common Data Service and model-driven apps in Dynamics 365 still includes several deprecated features. You should review your application for any deprecated features and replace as necessary with new capabilities. More information: [Important changes (deprecations) coming](/dynamics365/get-started/whats-new/customer-engagement/important-changes-coming)
 
-### Dynamics 365 for Customer Engagement apps
-If you use the Dynamics 365 for Field Service or Dynamics 365 for Project Service Automation apps and wish to test the Unified Interface, you must set up a new sandbox environment and make a copy of your production environment to upgrade to the latest Field Service version 8 and Project Service Automation version 3 before validating these applications in the Unified Interface. To do this, follow these steps:
+### Dynamics 365 apps
+If you use the Dynamics 365 Field Service or Dynamics 365 Project Service Automation apps and want to test the Unified Interface, you must set up a new sandbox environment and make a copy of your production environment to upgrade to the latest Field Service version and Project Service Automation version before validating these applications in the Unified Interface. To do this, follow these steps:
 
 1. Create a new sandbox environment from the [Power Platform Admin center](https://admin.powerplatform.microsoft.com/environments) or [Dynamics 365 admin center](https://port.crm.dynamics.com/). More information: [Add an instance to your subscription](/dynamics365/customer-engagement/admin/add-instance-subscription)
 
-2. Copy your production environment that has the Dynamics 365 for Field Service or Dynamics 365 for Project Service Automation apps into the new sandbox environment. To do this, on the Power Platform Admin center open your production environment, and then select **Copy**.
+2. Copy your production environment that has the Dynamics 365 Field Service or Dynamics 365 Project Service Automation apps into the new sandbox environment. To do this, on the Power Platform Admin center open your production environment, and then select **Copy**.
 
     > [!div class="mx-imgBorder"] 
     > ![Copy environment](media/ppac-copy-environment.png "Copy environment")

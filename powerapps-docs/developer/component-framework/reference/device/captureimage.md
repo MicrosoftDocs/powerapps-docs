@@ -5,7 +5,7 @@ keywords:
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -43,11 +43,11 @@ The `options` parameter object has the following properties:
 
 |Name|Type|Description|
 | ---|----|-----------|
-|`allowEdit`|`Boolean`|Indicates whether to edit the image before saving|
-|`height`|`Number`|Height of the image to capture|
-|`preferFrontCamera`|`Boolean`|Indicates whether to capture image using the front camera of the device|
-|`quality`|`Number`|Quality of the image file in percentage|
-|`width`|`Number`|Width of the image to capture|
+|`allowEdit`|`Boolean`|Indicates whether to edit the image before saving.|
+|`height`|`Number`|Height of the image to capture.|
+|`preferFrontCamera`|`Boolean`|Indicates whether to capture image using the front camera of the device.|
+|`quality`|`Number`|Quality of the image file in percentage.|
+|`width`|`Number`|Width of the image to capture.|
 
 
 ### Related topics

@@ -4,7 +4,7 @@ description:
 keywords:
 ms.author: nabuthuk
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -15,4 +15,4 @@ applies_to:
 ms.assetid: ba6d60a5-671a-4006-984a-0149f8649432
 ---
 
-Povides all the properties and methods available in the PowerApps componment framework via Context Object.
+Povides all the properties and methods available in the PowerApps component framework.

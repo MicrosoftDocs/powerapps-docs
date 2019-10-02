@@ -5,7 +5,7 @@ keywords:
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -20,17 +20,13 @@ ms.assetid: 1052db82-7002-44ca-ad1f-9d3d4c311817
 
 [!INCLUDE [setcontrolstate-description](includes/setcontrolstate-description.md)]
 
-## Available for 
+## Syntax
 
-Model-driven apps
+`context.mode.setControlState(state);`
 
 ## Available for 
 
 Model-driven apps and canvas apps (experimental preview) 
-
-## Syntax
-
-`context.mode.setControlState(state)`
 
 ## Parameters
 
