@@ -16,9 +16,7 @@ ms.author: nabuthuk
 
 # Publish code components on AppSource
 
-[!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
-
 After you have tested your code components and want it to distribute to others to use it, you must publish it on Microsoft AppSource.
 
-For detailed information on how to publish your apps and components on AppSource, see [Publish your app on AppSource](/powerapps/developer/common-data-service/publish-app-appsource).
+For detailed information on how to publish your code components on AppSource, see [Publish your app on AppSource](/powerapps/developer/common-data-service/publish-app-appsource).
 
