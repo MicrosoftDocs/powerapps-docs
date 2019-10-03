@@ -17,7 +17,7 @@ With the capability to build a portal in PowerApps, you can create a website for
 
 These are some benefits of creating a portal:
 
-- Because the data is stored in Common Data Service, you don't need to create a connection from PowerApps as you do with data sources such as SharePoint, Dynamics 365 model-driven applications, or Salesforce. You need only to specify the entities that you want to show or manage in the portal.
+- Because the data is stored in Common Data Service, you don't need to create a connection from PowerApps as you do with data sources such as SharePoint, model-driven apps in Dynamics 365, or Salesforce. You need only to specify the entities that you want to show or manage in the portal.
 
 - You can design the portal through the WYSIWYG PowerApps Portals Studio by adding and configuring components on the webpages.
 

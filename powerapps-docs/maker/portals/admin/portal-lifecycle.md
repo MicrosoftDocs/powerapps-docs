@@ -13,7 +13,7 @@ ms.reviewer:
 
 # About portal lifecycle
 
-A portal is always created as a trial. A trial portal, which expires after 30 days, is useful for trying out its capabilities at no cost. After expiration, a portal is suspended and shut down. Seven days after suspension, the trial portal is deleted.
+A portal is always created as a trial. A trial portal, which expires after 30 days, is useful for trying out its capabilities at no cost. After expiration, a portal is suspended and shut down. Seven days after suspension, the trial portal is deleted. On every change of portal lifecycle stage, such as nearing to suspension, suspended, deleted, and converted from trial to production, you will receive notifications as a toast and through email.
 
 As an administrator, you can convert a trial or suspended portal to a production portal. While converting a trial portal to production, ensure that the environment is also a production environment. You can’t convert a trial portal to production in a trial environment. If you delete the environment in which a trial portal is created, the portal is also deleted.
 
