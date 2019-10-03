@@ -24,7 +24,7 @@ To browse a lookup, when you see the list of results, press Enter.
   > [!div class="mx-imgBorder"]
   > ![Browse a lookup field](media/Lookup_02-MRUandBrowse[1].gif "Browse a lookup field")  
  
-The list of records shows an image to help disambiguate between record types.
+The list of records shows an image to help distinguish between record types.
 
   > [!div class="mx-imgBorder"]
   > ![Lookup fields shows image](media/Lookup_03-MRU_Entity_Images_56[1].png "Lookup fields shows image")  
