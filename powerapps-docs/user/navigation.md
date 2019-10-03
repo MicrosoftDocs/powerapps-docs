@@ -73,8 +73,6 @@ There are three types of notifications that are shown on a form: Informational, 
 
 When you select the error notification, it will take you to the field on the form where the error occurred.
 
-The notifications described below are available with version 9.1.9.3010.
-
 ![Example of notifications](media/notifications.png "Example of notifications")
 
 If there is only one notification you will see a single line.
