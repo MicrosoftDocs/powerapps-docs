@@ -6,7 +6,7 @@ manager: shujoshi
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 09/16/2019
+ms.date: 10/02/2019
 ms.author: shjais
 ms.reviewer:
 ---
@@ -60,3 +60,19 @@ When you create a portal, portal as a new application is registered in Azure Act
 
 To create and register applications in Azure Active Directory, you must contact your tenant administrator to turn on the **App registrations** setting for your tenant. For information, see [Required permissions](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal#required-permissions).
 
+## I'm getting an error that portal creation is blocked in this tenant by global administrator
+
+If portal creation is blocked in a tenant by your global administrator, you'll see an error as follows:
+
+> [!div class=mx-imgBorder]
+> ![Portal creation blocked error](media/portal-create-blocked-error.png "Portal creation blocked error")
+
+You must contact your global administrator to enable creation of portals by non-administrators also.
+
+If you are a global administrator, you must disable the `disablePortalsCreationByNonAdminUsers` tenant level setting through PowerShell. Run the following command in a PowerShell window (run PowerShell as an administrator).
+
+```
+Set-TenantSettings -RequestBody @{ "disablePortalsCreationByNonAdminUsers" = $false }
+```
+
+More information: [Disable portal creation in a tenant](create-portal.md#disable-portal-creation-in-a-tenant)

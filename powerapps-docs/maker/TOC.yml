@@ -1104,7 +1104,7 @@
           href: ./portals/admin/update-portal-domain.md
         - name: Clear the server-side cache
           href: ./portals/admin/clear-server-side-cache.md
-        - name: Migrate Dynamics 365 Portal configuration
+        - name: Migrate Dynamics 365 Portals configuration
           href: ./portals/admin/migrate-portal-configuration.md
     - name:  Advanced portal customizations
       items:
