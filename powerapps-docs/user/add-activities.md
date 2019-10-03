@@ -95,7 +95,7 @@ To add an email activity to a record, you must first save the record you are add
 
 
     > [!NOTE]
-    > To list emails in a conversation view, go to **Settings** > **Personalization Settings** > **Email** tab and then select **Show email as a conversation on Timeline**. For more information on personal settings, see [Set personal options](set-personal-options.md).
+    > To list emails in a conversation view, go to **Settings** > **Personalization Settings** > **Email** tab and then select **Show email as a conversation on Timeline**. For more information on personal settings, see [Set personal options](set-personal-options.mdh#email-tab-options). Once enabled, you can open any form that has a timeline and your emails will be grouped into conversation threads with the latest email at the top.
 
    > [!div class="mx-imgBorder"]
    > ![Set personal options](media/emailsettings1.png "Set personal options")
