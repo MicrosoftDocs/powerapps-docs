@@ -83,5 +83,9 @@ If there is more than one notification, you will see the number of notifications
 
 ![Example of multiple notifications](media/multiple_notification.png "Example of multiple notifications")
 
+## Grids
+
+Grids in Unified Interface have been improved to increase the amount of data that can be seen on your screen. Grids also have improved filtering options inculding remembers your last filter and sorts order. For a detailed list of improvements see, [Blog: Enhanced functionality in Unified Interface grids](https://powerapps.microsoft.com/en-us/blog/enhanced-functionality-in-unified-interface-grids).
+
 
 
