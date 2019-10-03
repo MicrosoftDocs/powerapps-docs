@@ -2,7 +2,7 @@
 title: License requirements for entities| Microsoft Docs
 description: An explanation of license requirements for entities within Common Data Service.
 author: lancedMicrosoft
-manager: kfile
+manager: kvivek
 ms.service: powerapps
 ms.component: cds
 ms.topic: conceptual
@@ -18,7 +18,7 @@ search.app:
 # License requirements for entities
 
 > [!IMPORTANT
-> This topic is out-of-date and will be updated soon to reflect the latest licensing changes that went into effect on October 1, 2019. For the latest information on licensing requirements for entities, see the [PowerApps licensing guide](https://go.microsoft.com/fwlink/?linkid=2085130).
+> This topic is out-of-date and will be updated soon to reflect the latest licensing changes that are applicable starting October 1, 2019. For the latest information on licensing requirements for entities, see the [PowerApps licensing guide](https://go.microsoft.com/fwlink/?linkid=2085130).
 
 App makers can use most of the entities available within Common Data Service (including custom entities and entities that are part of the Common Data Model) to create apps and flows for users who have a PowerApps Plan 1 or Microsoft Flow Plan 1 license. In some cases, entities contain complex business logic or are tied to Dynamics 365 applications that require app users to have a specific license. 
 
