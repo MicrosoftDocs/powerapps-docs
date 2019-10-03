@@ -47,6 +47,8 @@
         items:
         - name: FAQ about activities
           href: ../user/faq-for-timeline-and-activity.md
+      - name: Use the lookup field on a record
+        href: ../user/lookup-field.md
       - name: Assign or share records
         href: ../user/assign-or-share-records.md
       - name: Share records using Access Team
