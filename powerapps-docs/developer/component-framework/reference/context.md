@@ -5,7 +5,7 @@ keywords:
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -14,8 +14,6 @@ ms.assetid: 6e066350-9d22-4078-b497-26be7d2fa374
 ---
 
 # Context
-
-[!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
 
 [!INCLUDE [context-description](includes/context-description.md)]
 

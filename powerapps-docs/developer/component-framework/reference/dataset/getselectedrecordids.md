@@ -5,7 +5,7 @@ keywords:
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -23,7 +23,7 @@ Model-driven apps
 
 ## Syntax
 
-`getSelectedRecordIds()`
+`context.parameters.dataset.getSelectedRecordIds()`
 
 ## Return Value
 

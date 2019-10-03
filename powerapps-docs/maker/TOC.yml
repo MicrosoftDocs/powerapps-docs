@@ -991,7 +991,16 @@
     - name: Use themes to apply organization branding
       href: ./model-driven-apps/create-themes-organization-branding.md
     - name: Add reporting to your app
-      href: ./model-driven-apps/add-reporting-to-app.md      
+      href: ./model-driven-apps/add-reporting-to-app.md    
+      items: 
+      - name: Report considerations 
+        href: ./model-driven-apps/reporting-considerations.md  
+      - name: RDL sandboxing
+        href: ./model-driven-apps/rdl-sandboxing.md 
+      - name: Use Power BI
+        href: ./model-driven-apps/use-power-bi.md 
+      - name: Customize Power BI content packs
+        href: ./model-driven-apps/customize-power-bi-content-packs.md
   - name: Validate and publish an app
     href: ./model-driven-apps/validate-app.md
   - name: Share an app
@@ -1095,7 +1104,7 @@
           href: ./portals/admin/update-portal-domain.md
         - name: Clear the server-side cache
           href: ./portals/admin/clear-server-side-cache.md
-        - name: Migrate Dynamics 365 Portal configuration
+        - name: Migrate Dynamics 365 Portals configuration
           href: ./portals/admin/migrate-portal-configuration.md
     - name:  Advanced portal customizations
       items:

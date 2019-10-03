@@ -5,7 +5,7 @@ keywords:
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -14,8 +14,6 @@ ms.assetid: bd90b3fd-a4b4-4999-8b53-d2a5dce4966b
 ---
 
 # ConditionExpression
-
-[!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
 
 [!INCLUDE [conditionexpression-description](includes/conditionexpression-description.md)]
 

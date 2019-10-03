@@ -38,16 +38,14 @@ Customizers can use the [powerbi](../liquid/portals-entity-tags.md#powerbi) Liqu
 
 ### Disable Power BI visualization
 
-1.	Go to the Dynamics 365 admin center and select the **Applications** tab.
+1.	Open [PowerApps Portals admin center](admin-overview.md).
 
-2.	Select the name of the portal for which you want disable Power BI visualization, and then select **Manage**.
-
-3.	Go to **Set up Power BI integration** > **Disable Power BI visualization**.
+2.	Go to **Set up Power BI integration** > **Disable Power BI visualization**.
 
     > [!div class=mx-imgBorder]
     > ![Disable Power BI visualization](../media/disable-power-bi-visualization.png "Disable Power BI visualization")
 
-4. Select **Disable** in the confirmation message. While Power BI visualization is being disabled, the portal restarts and will be unavailable for a few minutes. A message appears when Power BI visualization is disabled.
+3. Select **Disable** in the confirmation message. While Power BI visualization is being disabled, the portal restarts and will be unavailable for a few minutes. A message appears when Power BI visualization is disabled.
 
 ## Enable Power BI Embedded service
 
@@ -154,16 +152,14 @@ Customizers can now use the [powerbi](../liquid/portals-entity-tags.md#powerbi) 
 
 ### Manage the Power BI Embedded service
 
-1. Go to the Dynamics 365 admin center, and select the **Applications** tab.
+1. Open [PowerApps Portals admin center](admin-overview.md).
 
-2. Select the name of the portal for which you want update or disable Power BI Embedded service, and then select **Manage**.
-
-3. Go to **Set up Power BI integration** > **Manage Power BI Embedded service (preview)**.
+2. Go to **Set up Power BI integration** > **Manage Power BI Embedded service (preview)**.
 
     > [!div class=mx-imgBorder]
     > ![Manage Power BI Embedded service](../media/manage-powerbi-embedded-button.png "Manage Power BI Embedded service")
 
-4. In the **Manage Power BI Embedded service integration** window, remove or move the Power BI workspaces from which dashboards and reports need to be displayed in your portal to the **Selected Workspaces** list.
+3. In the **Manage Power BI Embedded service integration** window, remove or move the Power BI workspaces from which dashboards and reports need to be displayed in your portal to the **Selected Workspaces** list.
 
     > [!div class=mx-imgBorder]
     > ![Select Power BI workspaces](../media/manage-powerbi-embedded-window.png "Select Power BI workspaces")
@@ -171,27 +167,25 @@ Customizers can now use the [powerbi](../liquid/portals-entity-tags.md#powerbi) 
     > [!NOTE]
     > After removing the workspaces from the **Selected Workspaces** list, it can take up to 1 hour to reflect the changes. Until then, the databases and reports are rendered on the portal without any issues.
 
-5. Select **Save**.
+4. Select **Save**.
 
 ### Disable the Power BI Embedded service
 
-1.	Go to the Dynamics 365 admin center, and select the **Applications** tab.
+1. Open [PowerApps Portals admin center](admin-overview.md).
 
-2.	Select the name of the portal for which you want to disable the Power BI Embedded service, and then select **Manage**.
-
-3.	Go to **Set up Power BI integration** > **Manage Power BI Embedded service (preview)**.
+2.	Go to **Set up Power BI integration** > **Manage Power BI Embedded service (preview)**.
 
     > [!div class=mx-imgBorder]
     > ![Manage Power BI Embedded service](../media/manage-powerbi-embedded-button.png "Manage Power BI Embedded service")
 
-4. In the **Manage Power BI Embedded service integration** window, select **Disable Power BI Embedded service integration**.
+3. In the **Manage Power BI Embedded service integration** window, select **Disable Power BI Embedded service integration**.
 
     > [!div class=mx-imgBorder]
     > ![Disable Power BI Embedded service](../media/disable-powerbi-embedded-window.png "Disable Power BI Embedded service")
 
-5. Select **Save**.
+4. Select **Save**.
 
-6. Select **OK** in the confirmation message. While Power BI Embedded service is being disabled, the portal restarts and is unavailable for a few minutes. A message appears when Power BI Embedded service is disabled.
+5. Select **OK** in the confirmation message. While Power BI Embedded service is being disabled, the portal restarts and is unavailable for a few minutes. A message appears when Power BI Embedded service is disabled.
 
 ## Privacy notice  
 

@@ -5,7 +5,7 @@ keywords:
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -32,9 +32,9 @@ Model-driven apps
 
 | Parameter Name|Type|Required|Description|
 | ------------- |----|--------|-----------|
-|entityTypeName|`string`|yes|Entity type name|
-|privilegeType|`enum`|no|Entity privilege types. It has the following attributes:<br/>- `None =1`<br/>- `Create =1` <br/>- `Read =2`<br/>- `Write =3`<br/>- `Delete =4`<br/>- `Assign =5`<br/>- `Share =6`<br/>- `Append =7`<br/>- `AppendTo =8`|
-|privilegeDepth|`enum`|no|Entity privilege depth. It has the following attribute: <br/>- `None =-1`<br/>- `Basic =0`<br/>- `Local =1`<br/>- `Deep =2`<br/>- `Global =3`|
+|entityTypeName|`string`|Yes|Entity type name|
+|privilegeType|`enum`|No|Entity privilege types. It has the following attributes:<br/>- `None = 0`<br/>- `Create = 1` <br/>- `Read = 2`<br/>- `Write = 3`<br/>- `Delete = 4`<br/>- `Assign =5`<br/>- `Share =6`<br/>- `Append =7`<br/>- `AppendTo =8`|
+|privilegeDepth|`enum`|No|Entity privilege depth. It has the following attribute: <br/>- `None = -1`<br/>- `Basic = 0`<br/>- `Local = 1`<br/>- `Deep = 2`<br/>- `Global = 3`|
 
 ## Return Value
 
