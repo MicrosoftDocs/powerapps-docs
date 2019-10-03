@@ -25,7 +25,9 @@ You can search for records across multiple entities by using Relevance search or
 - Relevance search delivers fast and comprehensive results across multiple entities, in a single list, sorted by relevance. It uses a dedicated search service external to Common Data Service (powered by [!INCLUDE[pn_Windows_Azure](../includes/pn-windows-azure.md)]) to boost search performance. 
 - Categorized search returns search results grouped by entity types, such as accounts, contacts or leads.
 
-Normally, Categorized search is the default search option. However, if Relevance search is enabled by your organization, it becomes the default search experience.   
+Normally, Categorized search is the default search option. However, if Relevance search is enabled by your organization, it becomes the default search experience.  
+
+To find records of one type only, you can use the Quick Find View in the entity's grid.
   
 ## Normal quick find (Categorized search) 
 
