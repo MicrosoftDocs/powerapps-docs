@@ -1,6 +1,6 @@
 ---
-title: Edit CSS in portal | Microsoft Docs
-description: Instructions to edit CSS in portal.
+title: Edit CSS in a portal | Microsoft Docs
+description: Instructions on editing CSS in a portal.
 author: sbmjais
 manager: shujoshi
 ms.service: powerapps
@@ -13,7 +13,7 @@ ms.reviewer:
 
 # Edit CSS
 
-Cascading Style Sheets (CSS) allows you to control the formatting of your website. By default, bootstrap.min.css and theme.css files are available. You can edit the existing CSS files and upload new CSS files also. When you upload a new CSS file, it will be available as a web file in the Portal Management app.
+Cascading Style Sheets (CSS) allows you to control the formatting of your website. By default, bootstrap.min.css and theme.css files are available. You can edit the existing CSS files and upload new CSS files. When you upload a new CSS file, it will be available as a web file in the Portal Management app.
 
 To open a CSS in code editor:
 
