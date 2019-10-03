@@ -16,6 +16,10 @@ search.app:
 ---
 
 # Restricted entities requiring Dynamics 365 licenses
+
+> [!IMPORTANT
+> This topic is out-of-date and will be updated soon to reflect the latest licensing changes that are applicable starting October 1, 2019. For the latest information on licensing requirements for entities, see the [PowerApps licensing guide](https://go.microsoft.com/fwlink/?linkid=2085130).
+
 App makers can use most of the entities available within Common Data Service to create apps and flows for users who have only a PowerApps Plan 1 license. However, some entities contain complex business logic that requires app users to have a PowerApps Plan 2 or Microsoft Flow Plan 2 license (for more information, see [Entity license requirements](data-platform-entity-licenses.md)). An even smaller set of entities tied to Dynamics 365 products requires canvas and model-driven app users to have a license for the corresponding Dynamics 365 product if they need to create, update, or delete records within the entities. These are referred to as *restricted* entities.
 
 Entities may be restricted to a Dynamics 365 license for the following reasons:
