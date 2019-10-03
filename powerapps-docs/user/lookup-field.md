@@ -36,7 +36,7 @@ When you select the lookup icon (magnifying glass) or the text box, it shows the
   > ![Recently used records](media/ConsistentEntry[1].gif "Recently used records")  
   
   
-When results span multiple record types, you can now see how many types of records there are and select them from a list.
+When results span multiple record types, you can see how many types of records there are and select them from the list.
 
   > [!div class="mx-imgBorder"]
   > ![See how many records](media/Lookup_04-MultipleEntityTypes[1].gif "See how many records")  
