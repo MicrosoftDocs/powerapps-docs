@@ -1,4 +1,4 @@
 Navigates to the specified page. 
 
 > [!NOTE]
-> This method is supported only on Unified Interface.
+> This method is supported only on the Unified Interface.
