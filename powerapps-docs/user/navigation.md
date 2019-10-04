@@ -87,7 +87,9 @@ If there is more than one notification, you will see the number of notifications
 
 Grids in Unified Interface have been improved to increase the amount of data that can be seen on your screen. Grids also have improved filtering options which include remembering your last filter and sorts order. 
 
-The main grid page remembers the filter, sort, page state when you navigate away and back.  This includes quick find, column filtering, page number, and more. The navigation outside the page will always open with the initial state so it easily returns to the normal state.
+When grids area retrieving data, you will see a loading indicator letting you know the system is working on retrieving data.
+
+The main grid page remembers the filter, sort, page state when you navigate away and back. This includes quick find, column filtering, page number, and more. The navigation outside the page will always open with the initial state so it easily returns to the normal state.
 
 
    > [!div class="mx-imgBorder"]
@@ -100,7 +102,19 @@ The jump bar uses the first sorted field. If no sort change has been made, the j
    > ![Grids remember state](media/jumpbar-filter-on-sorted-column.gif "Grids remember state")
    
 
-The activity type field now has column filtering allowing the selection of one or more types.  Also related entity fields like owner, status, and reason can be filtered.
+The activity type field has column filtering to allow the selection of one or more types.  Also related entity fields like owner, status, and reason can be filtered.
 
    > [!div class="mx-imgBorder"]
    > ![Grids filtering](media/grid-activity-type-column-filter.gif "Grids filtering")
+   
+When you select the hierarchy icon, it will navigate to the hierarchy form.
+
+   > [!div class="mx-imgBorder"]
+   > ![Hierarchy icon](media/grid-row-hierarchy-icon.png "Hierarchy icon")
+   
+You can also optne primary field and lookup fields in new tab or windows.
+
+   > [!div class="mx-imgBorder"]
+   > ![Open in a new window](media/grid-browser-menu-open-in-new-tab.gif "[Open in a new window")
+
+
