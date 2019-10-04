@@ -29,10 +29,6 @@ To convert a trial portal to production, the environment should have required ad
 
 ### Suspended portal
 
-
-<!--from editor: The following says you will "continue" to see notifications - when do the notifications start and stop? --> 
-
-
 You will continue to see notifications in the PowerApps Portals admin center about the expiration of your trial portal. Trial portals expire after 30 days. If you don't convert your portal to production within the trial period, the portal is shut down and placed on the suspended status. You won't be able to access your portal after its expiration.
 
 However, the suspended portal can still be converted to production within seven days of suspension. 
