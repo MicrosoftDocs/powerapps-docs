@@ -105,10 +105,10 @@ The following examples show how you can use connection strings for connecting to
 ```  
   
 ### OAuth using named account in Office 365 with UX to prompt for authentication  
-Create a new connection to CDS using a UserID \ Password via oAuth.
+Create a new connection to Common Data Service using a UserID or Password via oAuth.
 
 > [!NOTE]
-> OAuth is the preferred auth type for connecting to CDS when using an interactive flow.  This auth type fully supports the features of Azure Active Directory Conditional Access and Multi-Factor Authentication.
+> OAuth is the preferred auth type for connecting to Common Data Service when using an interactive flow.  This auth type fully supports the features of Azure Active Directory Conditional Access and Multi-Factor authentication.
 
 ```xml
 <add name="MyCDSServer"
@@ -124,10 +124,11 @@ Create a new connection to CDS using a UserID \ Password via oAuth.
 ```  
 
 ### OAuth using current logged in user with fall back UX to prompt for authentication
-Create a new connection to CDS using the current logged in user via oAuth.
+
+Create a new connection to Common Data Service using the current logged in user via oAuth.
 
 > [!NOTE]
-> OAuth is the preferred auth type for connecting to CDS when using a interactive flow.  This auth type fully supports the features of Azure Active Directory Conditional Access and Multi-Factor Authentication.
+> OAuth is the preferred auth type for connecting to Common Data Service when using a interactive flow. This auth type fully supports the features of Azure Active Directory Conditional Access and Multi-Factor authentication.
 
 ```xml
 <add name="MyCDSServer"
@@ -144,7 +145,8 @@ Create a new connection to CDS using the current logged in user via oAuth.
 
 
 ### Certificate based authentication
-Create a new connection to CDS using a Application/Client Id and a Certificate
+
+Create a new connection to Common Data Service using a Application or Client Id and a Certificate.
 ```xml
 <add name="MyCDSServer" 
   connectionString="
@@ -156,7 +158,7 @@ Create a new connection to CDS using a Application/Client Id and a Certificate
 ```
 
 ### ClientId \ Client Secret based authentication
-Create a new connection to CDS using a Application/Client Id and a Client Secret
+Create a new connection to Common Data Service using a Application or Client Id and a Client Secret.
 ```xml
 <add name="MyCDSServer" 
   connectionString="
