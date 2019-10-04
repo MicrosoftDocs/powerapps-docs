@@ -69,7 +69,7 @@ CrmServiceClient svc = new CrmServiceClient(ConnectionString);
 |`UserName`, `User Name`, `UserId`, or `User Id`|Specifies the user's identification name associated with the credentials.|  
 |`Password`|Specifies the password for the user name associated with the credentials.|  
 |`HomeRealmUri` or `Home Realm Uri`|Specifies the Home Realm Uri.|  
-|`AuthenticationType` or `AuthType`|Specifies the authentication type to connect to Common Data Service environment. Valid values are: `AD`, `IFD` (AD FS enabled), `OAuth`, `Certificate`, `ClientSecret`, or `Office365`.<br /><br /> -   `AD` and `IFD` are permitted for Common Data Service on-premises environments only.<br />-   `OAuth`, `Certificate` and `ClientSecret` are permitted for Common Data Service and on-premises environments. <br/><br/>For on-premises, ADFS 3.x+ and App\Client Id registration with ADFS is required for `OAuth`, `Certificate` and `ClientSecret` types.<br />-   `Office365` is permitted for Common Data Service environments only.|  
+|`AuthenticationType` or `AuthType`|Specifies the authentication type to connect to Common Data Service environment. Valid values are: `AD`, `IFD` (AD FS enabled), `OAuth`, `Certificate`, `ClientSecret`, or `Office365`.<br /><br /> -   `AD` and `IFD` are permitted for Dynamics 365 Customer Engagement (on-premises) environments only.<br />-   `OAuth`, `Certificate` and `ClientSecret` are permitted for Common Data Service and Dynamics 365 Customer Engagement (on-premises) environments. <br/>-   `Office365` is permitted for Common Data Service environments only.|  
 |`RequireNewInstance`|Specifies whether to reuse an existing connection if recalled while the connection is still active. Default value is `false` that indicates the existing connection be reused. If set to `true`, will force the system to create a unique connection.|  
 |`ClientId`, `AppId` or `ApplicationId`|Specifies the `ClientID` assigned when you registered your application in Azure Active Directory or Active Directory Federation Services (AD FS).<br /><br /> This parameter is applicable only when the authentication type is specified as `OAuth`.|
 |`ClientSecret` or `Secret` |Required when Auth Type is set to `ClientSecret`. Client Secret string to use for authentication.|
@@ -105,7 +105,7 @@ The following examples show how you can use connection strings for connecting to
 ```  
   
 ### OAuth using named account in Office 365 with UX to prompt for authentication  
-Create a new connection to Common Data Service using a UserID or Password via oAuth.
+Create a new connection to Common Data Service using a UserID or Password via OAuth.
 
 > [!NOTE]
 > OAuth is the preferred auth type for connecting to Common Data Service when using an interactive flow.  This auth type fully supports the features of Azure Active Directory Conditional Access and Multi-Factor authentication.
@@ -125,7 +125,7 @@ Create a new connection to Common Data Service using a UserID or Password via oA
 
 ### OAuth using current logged in user with fall back UX to prompt for authentication
 
-Create a new connection to Common Data Service using the current logged in user via oAuth.
+Create a new connection to Common Data Service using the current logged in user via OAuth.
 
 > [!NOTE]
 > OAuth is the preferred auth type for connecting to Common Data Service when using a interactive flow. This auth type fully supports the features of Azure Active Directory Conditional Access and Multi-Factor authentication.
