@@ -92,6 +92,10 @@ If you want to remove a code component from a solution file:
 
 1.	Edit the `cdsproj` file in the solution project directory and remove the references to the component. Here is an example of a component reference:
 
+
+<!--from editor: The following code block isn't indenting as it should on the review page. I haven't been able to correct it. It should indent like the block in step 2 below. -->
+
+
    ```XML
    <ItemGroup>
        <ProjectReference Include="..\pcf_component\pcf_component.pcfproj">
