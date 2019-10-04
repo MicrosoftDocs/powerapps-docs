@@ -1,6 +1,6 @@
 ---
 title: "What are code components? | MicrosoftDocs"
-description: "Use the PowerApps component framework to create code components to provide enhanced user experience for users to view and work with data in forms, views, and dashboards."
+description: "Use the PowerApps component framework to create code components to provide enhanced user experiences for users to view and work with data in forms, views, and dashboards."
 manager: kvivek
 ms.date: 09/05/2019
 ms.service: "powerapps"
@@ -14,9 +14,12 @@ author: Nkrb
 
 Code components are a type of solution components, which means they can be included in a solution file and installed in different environments. More information: [Package and distribute extensions using solutions](https://docs.microsoft.com/dynamics365/customer-engagement/developer/package-distribute-extensions-use-solutions).
 
-You add code components by including them in a solution and then import it into Common Data Service. Once they are in Common Data Service, system administrator and system customizers can configure on fields, sub-grids, views, and dashboard sub-grids to use them in place of default components. You can also add these code components in canvas apps. 
 
-Code components are comprised of three elements:
+<!--from editor: Can the next sentence change to "... and then import the solution into ..." ?-->
+
+You add code components by including them in a solution and then import it into Common Data Service. Once the components are in Common Data Service, system administrators and system customizers can configure fields, subgrids, views, and dashboard subgrids to use in place of default components. You can also add these code components in canvas apps. 
+
+Code components consist of three elements:
 
 1. [Manifest](#manifest)
 2. [Component implementation library](#component-implementation-library)
@@ -27,16 +30,16 @@ Code components are comprised of three elements:
 Manifest is the metadata file that defines a component. It is an XML document that describes:
 
 - The name of the component.
-- The kind of data it can be configured, either a field or a data-set.
+- The kind of data that can be configured, either a field or a data-set.
 - Any properties that can be configured in the application when the component is added.
 - A list of resource files that the component needs. 
 - The name of the TypeScript function in the component implementation library that returns an object that applies the required component interface.
 
-When a user configures a code component, the data in the manifest file filters out the available components so that only valid components for the context are available for configuration. The properties defined in the manifest file for a component are rendered as configuration fields so that the user configuring the component can specify the values. These property values are then available to the component  at runtime. More information: [Manifest file reference](manifest-schema-reference/index.md)
+When a user configures a code component, the data in the manifest file filters out the available components so that only valid components for the context are available for configuration. The properties defined in the manifest file for a component are rendered as configuration fields so that the user configuring the component can specify the values. These property values are then available to the component  at runtime. More information: [Manifest schema reference](manifest-schema-reference/index.md)
 
 ## Component implementation library
 
-Implementing the component library is one of the key step when you are developing code components using PowerApps component framework. Developers can implement component library using TypeScript. Each code component must have a library that includes the definition of a function which returns an object that implements the methods described in the code component interface. 
+Implementing the component library is one of the key steps when you are developing code components using PowerApps component framework. Developers can implement a component library using TypeScript. Each code component must have a library that includes the definition of a function, which returns an object that implements the methods described in the code component interface. 
 
 The object implements the following methods:
 
@@ -45,7 +48,7 @@ The object implements the following methods:
 - [getOutputs](reference/control/getoutputs.md) (Optional)
 - [destroy](reference/control/destroy.md) (Required)
 
-These methods controls the lifecycle of the code component.
+These methods control the lifecycle of the code component.
 
 ### Page load
 
@@ -76,7 +79,11 @@ controlObj.init(context,notifyOutputChanged,state,container);
 
 ### User changes data
 
-When the page loads, the component displays the data until the user interacts with the component to change the data. When this occurs, you can manage it any way you like, but you must call the method passed in as *notifyOutputChanged* parameter in the [init](reference/control/init.md) method. When you use this method, the platform then responds by calling the [getOutputs](reference/control/getoutputs.md) method. The [getOutputs](reference/control/getoutputs.md) method returns values that has the changes user had made. For a field component, this would typically be the new value for the component.
+
+<!--from editor: The second sentence is confusing, the part that says "you must call the method passed in as *notifyOutputChanged* parameter in the init method." I'm not sure what it means so can't suggest a change. -->
+
+
+When the page loads, the component displays the data until the user interacts with the component to change the data. When this occurs, you can manage it any way you like, but you must call the method passed in as *notifyOutputChanged* parameter in the [init](reference/control/init.md) method. When you use this method, the platform then responds by calling the [getOutputs](reference/control/getoutputs.md) method. The [getOutputs](reference/control/getoutputs.md) method returns values that have the changes made by the user. For a field component, this would typically be the new value for the component.
 
 ### App changes data
 
@@ -84,14 +91,17 @@ If the platform changes the data, it calls out the [updateView](reference/contro
 
 ### Page close
 
-Whenever a user steps away from the page, code component loses the scope and all the memory allocated in that page for the objects are cleared. However, some methods based on the browser implementation mechanism might stay and consume memory. Typically, these are event handlers. If the user wants to store this information, they should implement the [setControlState](reference/mode/setcontrolstate.md) method so that the information is given next time within the same session.
+Whenever a user steps away from the page, the code component loses the scope and all the memory allocated in that page for the objects is cleared. However, some methods, based on the browser implementation mechanism, might stay and consume memory. Typically, these are event handlers. If the user wants to store this information, they should implement the [setControlState](reference/mode/setcontrolstate.md) method so that the information is given next time within the same session.
 
-Developers should implement the [destroy](reference/control/destroy.md) method which is called when the page closes to remove any cleanup code such as removing any event handlers.
+
+<!--from editor: Would it be accurate to change this to "to remove any cleanup code such as event handlers"? It's confusing to use "remove" and "removing" twice at the end of that sentence. -->
+
+Developers should implement the [destroy](reference/control/destroy.md) method, which is called when the page closes, to remove any cleanup code such as removing any event handlers.
 
 ## Resources
 
-Each code component should have a resource file to construct its visualization. You can define a resource file in the manifest. The resource node in the manifest file refers to the resources that the component requires to implement its visualization. More information: [Resources](manifest-schema-reference/resources.md)
+Each code component should have a resource file to construct its visualization. You can define a resource file in the manifest. The resource node in the manifest file refers to the resources that the component requires to implement its visualization. More information: [resources element](manifest-schema-reference/resources.md)
 
 ### Related topics
 
-[Create code components](create-custom-controls-using-pcf.md)
+[Create and build a code component](create-custom-controls-using-pcf.md)
