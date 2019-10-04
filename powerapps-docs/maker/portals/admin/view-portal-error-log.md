@@ -92,7 +92,7 @@ This is a custom error, please file a support ticket with screenshot of error by
 After developing and publishing the portal, you still need to be able to access portal logs to debug issues reported by your customers. To access the logs, you can configure your portal to send all application errors to an Azure Blob storage account that you own. By accessing portal error logs, you can respond to customer queries efficiently because you have details of the issue. To get portal error logs into your Azure Blob storage, you must enable diagnostic logging from the PowerApps Portals admin center.
 
 > [!NOTE]
-> If you change the Dynamics 365 instance that your portal is connected to, diagnostic logging is disabled. You must enable diagnostic logging again.
+> If you change the Common Data Service instance that your portal is connected to, diagnostic logging is disabled. You must enable diagnostic logging again.
 
 ### Enable diagnostic logging
 
