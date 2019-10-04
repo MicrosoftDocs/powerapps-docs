@@ -1,6 +1,6 @@
 ---
-title: Create a Dynamics 365 portal in PowerApps | Microsoft Docs
-description: Instructions to create a Dynamics 365 portal in PowerApps.
+title: Create a a portal with Dynamics 365 environment | Microsoft Docs
+description: Instructions to create a a portal with Dynamics 365 environment.
 author: sbmjais
 manager: shujoshi
 ms.service: powerapps
@@ -11,7 +11,7 @@ ms.author: shjais
 ms.reviewer:
 ---
 
-# Create a Dynamics 365 portal
+# Create a portal with Dynamics 365 environment
 
 If you select an environment that contains model-driven apps in Dynamics 365, you can create the portals mentioned in [Portal templates](portal-templates.md).
 

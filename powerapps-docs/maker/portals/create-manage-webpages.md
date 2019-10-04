@@ -53,7 +53,7 @@ The primary menu on the website is created automatically based on the hierarchy 
 > [!div class=mx-imgBorder]
 > ![website navigation](media/website-navigation.png "Website navigation")
 
-If you are working with Dynamics 365 Portals, and you want the menu to be the same as page hierarchy, you must select **Default** from the **Navigation Menu** list.
+If you are working with a portal created with Dynamics 365 environment, and you want the menu to be the same as page hierarchy, you must select **Default** from the **Navigation Menu** list.
 
 > [!div class=mx-imgBorder]
 > ![Default navigation menu](media/navigation-menu-default.png "Default navigation menu")

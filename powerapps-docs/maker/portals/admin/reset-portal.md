@@ -34,7 +34,7 @@ To reset a configured portal:
 
 > [!NOTE]
 > - If you don't have appropriate permissions on an associated Azure Active Directory application, an error is displayed. You must contact the global administrator for the appropriate permissions.
-> - When the portal is reset successfully, the portal name and its status on the **Applications** tab on the Dynamics 365 admin center does not change. For example, if your portal name and status were Portal 1 and Configured respectively, then after resetting the portal, these values do not change. If you want to change the portal name, you can change it on the **Portal Details** tab in the PowerApps Portals admin center. However, the status value cannot be reverted to Not Configured.
+> - If you have provisioned a portal using the older portal add-on and the portal is reset successfully, the portal name and its status on the **Applications** tab on the Dynamics 365 admin center does not change. For example, if your portal name and status were Portal 1 and Configured respectively, then after resetting the portal, these values do not change. If you want to change the portal name, you can change it on the **Portal Details** tab in the PowerApps Portals admin center. However, the status value cannot be reverted to Not Configured.
 > 
 > It is important to note that the portal's status on the **Applications** tab does not represent its provisioning status and does not affect the functioning of your portal. It just shows whether you have ever accessed the PowerApps Portals admin center for that corresponding portal or not.
 

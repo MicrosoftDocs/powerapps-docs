@@ -1045,9 +1045,9 @@
       items:
         - name: Portal templates
           href: ./portals/portal-templates.md
-        - name: Create a portal
+        - name: Create a starter portal
           href: ./portals/create-portal.md
-        - name: Create a Dynamics 365 Portal
+        - name: Create a portal with Dynamics 365 environment
           href: ./portals/create-dynamics-portal.md
         - name: Portal designer anatomy
           href: ./portals/portal-designer-anatomy.md
