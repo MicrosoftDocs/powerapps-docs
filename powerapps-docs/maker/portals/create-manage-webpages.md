@@ -28,7 +28,8 @@ A webpage is a document that is identified by a unique URL in a website. It is o
     > ![create a new webpage](media/create-webpage.png "Create a new webpage")
 
     > [!NOTE]
-    > Creating a page using **Layouts** gives you the flexibility to edit the complete page. **Fixed layouts** contains the page templates that are installed as part of portal provisioning and the custom page templates created using the [Portal Management app](configure/configure-portal.md).
+    > - Creating a page using **Layouts** gives you the flexibility to edit the complete page. **Fixed layouts** contains the page templates that are installed as part of portal provisioning and the custom page templates created using the [Portal Management app](configure/configure-portal.md).
+    > - For the pages to be created using the **Layouts** option, a new **Default studio template** page template is installed.
 
 3.  In the properties pane on the right side of the screen, enter the following information:
 
