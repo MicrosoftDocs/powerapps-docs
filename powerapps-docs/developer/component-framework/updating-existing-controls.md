@@ -72,8 +72,8 @@ If you have created a component using the older version of the tooling and want 
       <PackageReference Include="Microsoft.PowerApps.MSBuild.Solution" Version="1.*"/>
       ```
 
-    > [!NOTE] 
-    > After making the above changes, run the command `msbuild /t:restore` to update your project to the correct version.
+      > [!NOTE] 
+      > After making the above changes, run the command `msbuild /t:restore` to update your project to the correct version.
 
 
    - Update the version tag in your `package.json` file located within your PowerApps component framework project folder:
@@ -84,8 +84,8 @@ If you have created a component using the older version of the tooling and want 
        "pcf-start": "^1"
           }
       ```
-   > [!NOTE]
-   > After making the above changes, run the `npm update` command to update your project to the correct version.
+     > [!NOTE]
+     > After making the above changes, run the `npm update` command to update your project to the correct version.
 
 2. If you have previously created an auth profile, you need to recreate it. This is because a new property was added to the profile to support non-public cloud. You can do this by:
  
@@ -138,7 +138,7 @@ To use the new typing file:
 
     import { IInputs, IOutputs } from `./generated/ManifestTypes`.
 2. Rename all references of **InputsOutputs.IInputBag** to **IInputs**.
-3. Rename all references of **InputsOutputs.IOutputBag** to IOutputs**.
+3. Rename all references of **InputsOutputs.IOutputBag** to **IOutputs**.
 4. Build the project to generate a new **ManifestTypes.d.ts** file using the command `npm run build`.
 
 ## Troubleshooting and workarounds
@@ -153,6 +153,10 @@ To use the new typing file:
 
    - Open the NuGet.Config file from **%APPDATA%\NuGet**. The feed from which the user is getting the error should be present in this file. 
    - Remove the feed from the NuGet.Config file or generate a PAT token and add it to the Nuget.Config file. For example:
+
+
+<!--from editor: Something below isn't indented right. On the live page, there's no code after User PAT. And the final three backticks are visible. -->
+
 
      ```XML
      <?xml version="1.0" encoding="utf-8"?>  
