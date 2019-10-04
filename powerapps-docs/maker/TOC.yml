@@ -47,6 +47,10 @@
         items:
         - name: FAQ about activities
           href: ../user/faq-for-timeline-and-activity.md
+      - name: Use the lookup field on a record
+        href: ../user/lookup-field.md
+      - name: View a profile card
+        href: ../user/profile-cards.md
       - name: Assign or share records
         href: ../user/assign-or-share-records.md
       - name: Share records using Access Team
@@ -59,6 +63,8 @@
         href: ../user/track-your-progress-with-dashboard-and-charts.md
     - name: Search records
       items:
+      - name: Compare search and find options
+        href: ../user/search-and-find.md
       - name: Search for records
         href: ../user/search-records.md
       - name: Use advanced find
@@ -991,7 +997,16 @@
     - name: Use themes to apply organization branding
       href: ./model-driven-apps/create-themes-organization-branding.md
     - name: Add reporting to your app
-      href: ./model-driven-apps/add-reporting-to-app.md      
+      href: ./model-driven-apps/add-reporting-to-app.md    
+      items: 
+      - name: Report considerations 
+        href: ./model-driven-apps/reporting-considerations.md  
+      - name: RDL sandboxing
+        href: ./model-driven-apps/rdl-sandboxing.md 
+      - name: Use Power BI
+        href: ./model-driven-apps/use-power-bi.md 
+      - name: Customize Power BI content packs
+        href: ./model-driven-apps/customize-power-bi-content-packs.md
   - name: Validate and publish an app
     href: ./model-driven-apps/validate-app.md
   - name: Share an app

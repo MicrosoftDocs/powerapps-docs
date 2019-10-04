@@ -26,7 +26,7 @@ To clear the server-side cache
 
 3.	Select **Clear Cache**. 
 
-The server-side cache is deleted, and data is reloaded from Common Data Service . Note that clearing the portal server-side cache will temporarily cause poor portal performance while data is being reloaded from Common Data Service .
+The server-side cache is deleted, and data is reloaded from Common Data Service. Note that clearing the portal server-side cache will temporarily cause poor portal performance while data is being reloaded from Common Data Service .
 
 > [!div class=mx-imgBorder]
 > ![Clear the portal cache](../media/clear-portal-cache.png "Clear the portal cache")

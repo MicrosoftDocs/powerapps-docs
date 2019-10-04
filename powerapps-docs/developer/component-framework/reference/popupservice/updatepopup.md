@@ -5,7 +5,7 @@ keywords:
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -31,7 +31,7 @@ Model-driven apps
 | Parameter Name|Type|Required|Description|
 | ------------- |----|--------|-----------|
 |name|`String`|Yes|The name of the popup you're trying to update.|
-|newProps|`Popup`|No|The updated properties to give to the popup.|
+|newProps|[Popup](../popup.md)|No|The updated properties to give to the popup.|
 
 
 ### Related topics
