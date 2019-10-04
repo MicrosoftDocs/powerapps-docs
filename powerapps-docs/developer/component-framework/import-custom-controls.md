@@ -1,6 +1,6 @@
 ---
 title: Import components  | Microsoft Docs
-description: Process to import code components
+description: This topic describes how to import code components
 keywords:
 ms.author: nabuthuk
 manager: kvivek
