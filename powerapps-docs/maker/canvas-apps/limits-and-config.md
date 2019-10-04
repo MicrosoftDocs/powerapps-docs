@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: tapanm 
+ms.reviewer: tapanm
 ms.date: 10/04/2019
 ms.author: gregli
 search.audienceType: 
