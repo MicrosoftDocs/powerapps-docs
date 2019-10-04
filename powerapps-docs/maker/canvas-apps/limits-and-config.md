@@ -116,10 +116,8 @@ The ‘Auto assign per app passes toggle’ appears in all app setting.
 
 ### App Settings
 
-[!div class="mx-imgBorder"]
 ![Canvas app settings](./media/limits-and-config/app_settings.png "Canvas app settings")
 
 ### Pass assignment
 
-[!div class="mx-imgBorder"]
 ![Canvas app settings pass assignment](./media/limits-and-config/app_settings_pass_assignment.png "Canvas app settings pass assignment")
