@@ -40,7 +40,7 @@ This troubleshooting guide helps fix the following two common configuration prob
 
 If you experience one of the issues that's described in this section, check out the common errors matrix, below, and then try Resolution 1, Resolution 2, or Resolution 3 to resolve the problem.
 
-# Common error matrix
+## Common error matrix
 
 | Error identifier                                                              | Internet Explorer 11          | Edge                          | Chrome                        |
 |-------------------------------------------------------------------------------|-------------------------------|-------------------------------|-------------------------------|
@@ -49,7 +49,7 @@ If you experience one of the issues that's described in this section, check out 
 | UserInterventionNeeded_NavigateToAadDenied UserInterventionNeeded_StorageLost | Configure Trust Zones         | Configure Trust Zones         | Not applicable                |
 | AadError                                                                      | Azure Active Directory Errors | Azure Active Directory Errors | Azure Active Directory Errors |
 
-# Resolution 1: Enable storage of local data in your browser
+## Resolution 1: Enable storage of local data in your browser
 PowerApps stores some data locally in your browser, including user identity and preferences. PowerApps can’t function if the browser is configured to disallow this.
 
 - Instructions for Internet Explorer 11
@@ -106,7 +106,7 @@ PowerApps stores some data locally in your browser, including user identity and 
       6. Select __Done__.
 
 
-# Resolution 2: Configure Trust Zones for Internet Explorer and Edge
+## Resolution 2: Configure Trust Zones for Internet Explorer and Edge
 Internet Explorer and Edge use *Trust Zones*. Problems can occur if services on which PowerApps relies are in different Trust Zones in your browser settings. While these settings apply to both Internet Explorer and Edge, the easiest way to access them is from Internet Explorer. (You might need assistance from your IT administrator to change some of these settings.)
 
 - Option 1: Add the required PowerApps domains to the Trusted Sites zone
@@ -140,7 +140,7 @@ Internet Explorer and Edge use *Trust Zones*. Problems can occur if services on 
     - Any other address that ends in __powerapps.com__ or __create.powerapps.com__.
   7. Select __Close__.
 
-# Resolution 3: Azure Active Directory Errors
+## Resolution 3: Azure Active Directory Errors
 Azure Active Directory (AAD) is the technology on which the PowerApps ecosystem relies for user authentication and authorization.
 
 The error page that you see might contain additional information that can help diagnose and fix the problem.
