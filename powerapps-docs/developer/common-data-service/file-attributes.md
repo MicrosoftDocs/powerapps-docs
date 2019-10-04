@@ -2,7 +2,7 @@
 title: "File attributes (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about File attributes that store file data within the application, supporting attributes, retrieving data, and uploading file data." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 09/25/2019
+ms.date: 10/04/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.topic: "article"
@@ -19,7 +19,7 @@ search.app:
 
 A file attribute is used for storing file data up to a specified maximum size. A custom or customizable entity can have zero or more file attributes plus a notes (annotation) collection with zero to one attachment in each note. The <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.SchemaName> of the file attribute is `EntityFile`.
 
-Web API | .NET API
+Web API (REST) | .NET API (SOAP)
 ------- | -------
 [FieAttributeMetadata](/dynamics365/customer-engagement/web-api/fileattributemetadata) | <xref:Microsoft.Xrm.Sdk.Metadata.FileAttributeMetadata>
 
@@ -27,12 +27,6 @@ For more information about types of files that are not allowed, see [System Sett
 
 > [!IMPORTANT]
 > Some restrictions do apply when using the File and enhanced Image data-types of the Common Data Service. If Customer Managed Keys (CMK) is enabled on the tenant, then File, Image, and IoT data-types are not available to the tenant's organizations. Solutions that contain excluded data-types will not install. Customers must opt-out of CMK in order to make use of these data-types.
-
-
-Solutions that involve excluded datatypes will not install.
-
-
-Organizaion needs to opt out of the CMK in order to have this functionality.
 
 <!--File data is not passed to plug-ins for performance reasons. You must retrieve the file data in plug-in code using an explicit retrieve call. -->
   
@@ -49,23 +43,27 @@ When a file attribute is added to an entity some additional attributes are creat
 ## Retrieve file data
 To retrieve file data, use the following APIs.
 
-Web API | .NET API
+Web API (REST) | .NET API (SOAP)
 ------- | -------
  none  | <xref:Microsoft.Crm.Sdk.Messages.InitializeFileBlocksDownloadRequest>,<br/><xref:Microsoft.Crm.Sdk.Messages.InitializeAttachmentBlocksDownloadRequest>,<br/><xref:Microsoft.Crm.Sdk.Messages.InitializeAnnotationBlocksDownloadRequest>
 GET /api/data/v9.0/\<entity-type(id)\>/\<file-attribute-name\>/$value   | <xref:Microsoft.Crm.Sdk.Messages.DownloadBlockRequest>
 
 File data transfers from the web service endpoints are limited to a maximum of 16 MB data in a single service call. File data greater that that amount must be divided into 4 MB or smaller data blocks (chunks) where each block is received in a separate API call until all file data has been received. It is your responsibility to join the downloaded data blocks to form the complete data file by combining the data blocks in the same sequence as the blocks were received.
 
-### Example: REST download
+### Example: REST download with chunking
 
+**Request**
 ```http
-GET
-/api/data/v9.0/accounts(id)/myfileattribute/$value
+GET [Organization URI]/api/data/v9.0/accounts(id)/myfileattribute/$value
 Headers:
 Range: 0-1023
+```
 
-Response:
+**Response**
+```http
 206 Partial Content
+
+Body:
 byte[]
 
 Response Headers:
@@ -74,7 +72,8 @@ x-ms-file-name: "sample.txt"
 x-ms-file-size: 12345
 Location: api/data/v9.0/accounts(id)/myfileattribute?FileContinuationToken
 ```
-Chunking will be decided based on the **Range** header existence in the request. The full file will be downloaded (up to 16 MB) in one request if no **Range** header is included. For chunking, the **Location** response header contains the query-able parameter *FileContinuationToken*. Use the provided location header value in the next GET request to retrieve the next block of data in the sequence.
+
+Chunking will be decided based on the `Range` header existence in the request. The full file will be downloaded (up to 16 MB) in one request if no `Range` header is included. For chunking, the `Location` response header contains the query-able parameter `FileContinuationToken`. Use the provided location header value in the next GET request to retrieve the next block of data in the sequence.
 
 ### Example: .NET C# code for download with chunking
 
@@ -124,7 +123,7 @@ static async Task ChunkedDownloadAsync(
 ## Upload file data  
 To upload file data, use the following APIs.
 
-Web API | .NET API
+Web API (REST) | .NET API (SOAP)
 ------- | -------
 none   | <xref:Microsoft.Crm.Sdk.Messages.InitializeFileBlocksUploadRequest>,<br/><xref:Microsoft.Crm.Sdk.Messages.InitializeAttachmentBlocksUploadRequest>,<br/><xref:Microsoft.Crm.Sdk.Messages.InitializeAnnotationBlocksUploadRequest>
 PATCH /api/data/v9.0/\<entity-type(id)\>/\<file-attribute-name\>   | <xref:Microsoft.Crm.Sdk.Messages.UploadBlockRequest>
@@ -134,14 +133,16 @@ As was previously mentioned under [Retrieve file data](#retrieve-file-data), upl
 
 ### Example: REST upload with chunking (first request)
 
+**Request**
 ```http
-PATCH /api/data/v9.0/accounts(id)/myfileattribute 
+PATCH [Organization URI]/api/data/v9.0/accounts(id)/myfileattribute 
 
 Headers: 
 x-ms-transfer-mode: chunked 
-x-ms-file-name: [User input from power apps] 
-
-Response: 
+x-ms-file-name: [User input from power apps]
+```
+**Response**
+```http
 200 OK 
 
 Response Headers: 
@@ -151,20 +152,22 @@ Location: api/data/v9.0/accounts(id)/myfileattribute?FileContinuationToken
 ```
 
 ### Example: REST upload with chunking (next request)
-
+**Request**
 ```http
-PATCH /api/data/v9.0/accounts(id)/myfileattribute?FileContinuationToken 
+PATCH [Organization URI]/api/data/v9.0/accounts(id)/myfileattribute?FileContinuationToken 
 
 Headers: 
 Content-Range: bytes 0-4095/8190 
 Content-Type: application/octet-stream 
 x-ms-file-name: [User input from power apps] 
+```
+
+**Response**
+```http
+206 Partial Content
 
 Body: 
 byte[]
-
-Response:  
-206 Partial Content 
 ```
 
 ### Example: .NET C# code for upload with chunking
@@ -222,7 +225,7 @@ static async Task ChunkedUploadAsync(
 ## Delete file data  
 To delete file, attachment, or annotation data in Azure Blob Storage, use the following APIs.
 
-Web API | .NET API
+Web API (REST) | .NET API (SOAP)
 ------- | -------
 DELETE /api/data/v9.0/\<entity-type(id)\>/\<attribute-name\> | <xref:Microsoft.Crm.Sdk.Messages.DeleteFileRequest>
 
