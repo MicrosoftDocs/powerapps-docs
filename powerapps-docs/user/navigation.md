@@ -115,6 +115,6 @@ When you select the hierarchy icon, it will navigate to the hierarchy form.
 You can also optne primary field and lookup fields in new tab or windows.
 
    > [!div class="mx-imgBorder"]
-   > ![Open in a new window](media/grid-browser-menu-open-in-new-tab.gif "[Open in a new window")
+   > ![Open in a new window](media/newtab.png "[Open in a new window")
 
 
