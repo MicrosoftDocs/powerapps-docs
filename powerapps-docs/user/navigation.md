@@ -85,7 +85,22 @@ If there is more than one notification, you will see the number of notifications
 
 ## Grids
 
-Grids in Unified Interface have been improved to increase the amount of data that can be seen on your screen. Grids also have improved filtering options which include remembering your last filter and sorts order. For a detailed list of improvements see this blog post, [Enhanced functionality in Unified Interface grids](https://powerapps.microsoft.com/en-us/blog/enhanced-functionality-in-unified-interface-grids).
+Grids in Unified Interface have been improved to increase the amount of data that can be seen on your screen. Grids also have improved filtering options which include remembering your last filter and sorts order. 
+
+The main grid page remembers the filter, sort, page state when you navigate away and back.  This includes quick find, column filtering, page number, and more. The navigation outside the page will always open with the initial state so it easily returns to the normal state.
 
 
+   > [!div class="mx-imgBorder"]
+   > ![Grids remember state](media/grid-remember-state-on-back-navigate.gif "Grids remember state")
 
+
+The jump bar uses the first sorted field. If no sort change has been made, the jump bar uses the primary field. If a sort change has been made, then the sort is used. 
+
+   > [!div class="mx-imgBorder"]
+   > ![Grids jump bar](media/jumpbar-filter-on-sorted-column (002).gif "Grids just bar")
+   
+
+The activity type field now has column filtering allowing the selection of one or more types.  Also related entity fields like owner, status, and reason can be filtered.
+
+   > [!div class="mx-imgBorder"]
+   > ![Grids filtering](media/grid-activity-type-column-filter (002).gif "Grids filtering")
