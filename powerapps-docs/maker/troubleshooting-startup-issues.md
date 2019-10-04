@@ -20,7 +20,7 @@ This troubleshooting guide helps fix the following two common configuration prob
 
 - When you receive a “Hmmm … We couldn’t sign you in” error message and identifier that resembles the following image:
 
-    ![Hmmm … We couldn’t sign you in. The information below may be helpful](./media/troubleshooting-startup-issues/error.png)
+    ![Hmmm … We couldn’t sign you in. The information below may be helpful](./media/troubleshooting-startup-issues/error.png "Hmmm … We couldn’t sign you in. The information below may be helpful")
 
 - When you try to create an app from a SharePoint list, you receive the following "abnormal termination" error message
     ```
