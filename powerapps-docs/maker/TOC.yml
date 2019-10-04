@@ -47,6 +47,10 @@
         items:
         - name: FAQ about activities
           href: ../user/faq-for-timeline-and-activity.md
+      - name: Use the lookup field on a record
+        href: ../user/lookup-field.md
+      - name: View a profile card
+        href: ../user/profile-cards.md
       - name: Assign or share records
         href: ../user/assign-or-share-records.md
       - name: Share records using Access Team
@@ -59,6 +63,8 @@
         href: ../user/track-your-progress-with-dashboard-and-charts.md
     - name: Search records
       items:
+      - name: Compare search and find options
+        href: ../user/search-and-find.md
       - name: Search for records
         href: ../user/search-records.md
       - name: Use advanced find
