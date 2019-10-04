@@ -112,7 +112,7 @@ When you select the hierarchy icon, it will navigate to the hierarchy form.
    > [!div class="mx-imgBorder"]
    > ![Hierarchy icon](media/grid-row-hierarchy-icon.png "Hierarchy icon")
    
-You can also optne primary field and lookup fields in new tab or windows.
+You can also open primary field and lookup fields in new tab or windows.
 
    > [!div class="mx-imgBorder"]
    > ![Open in a new window](media/newtab.png "[Open in a new window")
