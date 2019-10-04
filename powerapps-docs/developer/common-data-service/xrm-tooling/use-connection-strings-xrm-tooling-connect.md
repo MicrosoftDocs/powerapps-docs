@@ -64,8 +64,7 @@ CrmServiceClient svc = new CrmServiceClient(ConnectionString);
   
 |Parameter name|Description|  
 |--------------------|-----------------|  
-|`ServiceUri`, `Service Uri`, `Url`, or `Server`|Specifies the URL to the Common Data Service environment. The URL can use http or https protocol, and the port is optional. The default port is 80 for the http protocol and 443 for the https protocol. The server URL is typically in the format `https://`*`<organization-name>`*`.crm.dynamics.com`<br /><br /> The organization-name is required.|  
-<!--|`Domain`|Specifies the domain that will verify user credentials.|-->  
+|`ServiceUri`, `Service Uri`, `Url`, or `Server`|Specifies the URL to the Common Data Service environment. The URL can use http or https protocol, and the port is optional. The default port is 80 for the http protocol and 443 for the https protocol. The server URL is typically in the format `https://`*`<organization-name>`*`.crm.dynamics.com`<br /><br /> The organization-name is required.|   
 |`UserName`, `User Name`, `UserId`, or `User Id`|Specifies the user's identification name associated with the credentials.|  
 |`Password`|Specifies the password for the user name associated with the credentials.|  
 |`HomeRealmUri` or `Home Realm Uri`|Specifies the Home Realm Uri.|  
