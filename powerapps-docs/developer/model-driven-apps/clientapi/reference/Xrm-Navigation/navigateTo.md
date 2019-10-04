@@ -29,7 +29,7 @@ search.app:
 
 |Name |Type |Required |Description |
 |---|---|---|---|
-|pageInput|Object|Yes|Input about the page to navigate to. The object contains the following attributes:<br/>- **pageType**: String. Specify "entitylist".<br/>- **entityName**: String. The logical name of the entity to load in the list control. <br/>- **viewId**: (Optional) String. The ID of the view to load.<br/>- **viewType**: (Optional) String. Specify "systemQuery" or "userQuery".|
+|pageInput|Object|Yes|Input about the page to navigate to. The object contains the following attributes:<br/>- **pageType**: String. Specify "entitylist".<br/>- **entityName**: String. The logical name of the entity to load in the list control. <br/>- **viewId**: (Optional) String. The ID of the view to load. If you don't specify it, navigates to the default main view for the entity.<br/>- **viewType**: (Optional) String. Type of view to load. Specify "savedquery" or "userquery".|
 |successCallback|function|No|A function to execute on successful navigation to page.|
 |errorCallback|function|No|A function to execute when the operation fails.|
 
