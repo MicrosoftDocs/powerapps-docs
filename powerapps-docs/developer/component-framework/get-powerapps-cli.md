@@ -49,7 +49,7 @@ To get Microsoft PowerApps CLI, do the following:
 The feature team is aggregating the telemetry to understand what features or capabilities developers most often use in the PowerApps CLI tool. The aggregated data allows us to provide the best experience to the customers by focusing on what’s truly is essential.
 
 > [!NOTE]
-> To disable the telemetry collection, run the command `pac telemetry --enable false`. To turn the telemetry back, use the command `pac telemetry --enable true`.
+> To disable the telemetry collection, run the command `pac telemetry disable`. To turn the telemetry back, use the command `pac telemetry enable`.
 
 ## Uninstall Microsoft PowerApps CLI
 
