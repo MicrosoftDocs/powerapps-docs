@@ -28,7 +28,7 @@ Track expense reports from submission to approval. Tally line items as individua
 ![Opening screen of the Expense Report PowerApp](./media/expense-report-install/expense-report-powerapp.png)
 
 > [!TIP]
-> Watch [this](https://youtu.be/h6E9cdrOvMU) video to see how to use the Expense Report sample.
+> Watch [this](https://youtu.be/kJXZPILfbwU) video to see how to use the Expense Report sample.
 
 ## Prerequisites
 
