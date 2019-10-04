@@ -65,11 +65,11 @@ CrmServiceClient svc = new CrmServiceClient(ConnectionString);
 |Parameter name|Description|  
 |--------------------|-----------------|  
 |`ServiceUri`, `Service Uri`, `Url`, or `Server`|Specifies the URL to the Common Data Service environment. The URL can use http or https protocol, and the port is optional. The default port is 80 for the http protocol and 443 for the https protocol. The server URL is typically in the format `https://`*`<organization-name>`*`.crm.dynamics.com`<br /><br /> The organization-name is required.|  
-|`Domain`|Specifies the domain that will verify user credentials.|  
+<!--|`Domain`|Specifies the domain that will verify user credentials.|-->  
 |`UserName`, `User Name`, `UserId`, or `User Id`|Specifies the user's identification name associated with the credentials.|  
 |`Password`|Specifies the password for the user name associated with the credentials.|  
 |`HomeRealmUri` or `Home Realm Uri`|Specifies the Home Realm Uri.|  
-|`AuthenticationType` or `AuthType`|Specifies the authentication type to connect to Common Data Service environment. Valid values are: `AD`, `IFD` (AD FS enabled), `OAuth`, `Certificate`, `ClientSecret`, or `Office365`.<br /><br /> -   `AD` and `IFD` are permitted for Dynamics 365 Customer Engagement (on-premises) environments only.<br />-   `OAuth`, `Certificate` and `ClientSecret` are permitted for Common Data Service and Dynamics 365 Customer Engagement (on-premises) environments. <br/>-   `Office365` is permitted for Common Data Service environments only.|  
+|`AuthenticationType` or `AuthType`|Specifies the authentication type to connect to Common Data Service environment. Valid values are: `AD`, `IFD` (AD FS enabled), `OAuth`, `Certificate`, `ClientSecret`, or `Office365`.<br />-  Only `OAuth`, `Certificate`, `ClientSecret` and `Office365` are permitted for Common Data Service environments.|  
 |`RequireNewInstance`|Specifies whether to reuse an existing connection if recalled while the connection is still active. Default value is `false` that indicates the existing connection be reused. If set to `true`, will force the system to create a unique connection.|  
 |`ClientId`, `AppId` or `ApplicationId`|Specifies the `ClientID` assigned when you registered your application in Azure Active Directory or Active Directory Federation Services (AD FS).<br /><br /> This parameter is applicable only when the authentication type is specified as `OAuth`.|
 |`ClientSecret` or `Secret` |Required when Auth Type is set to `ClientSecret`. Client Secret string to use for authentication.|
