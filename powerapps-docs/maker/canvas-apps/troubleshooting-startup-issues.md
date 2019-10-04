@@ -137,6 +137,8 @@ Internet Explorer and Edge use *Trust Zones*. Problems can occur if services on 
     - __https://login.microsoftonline.com__
     - __https://create.powerapps.com__
     - __https://*.create.powerapps.com__
+    - __https://make.powerapps.com__
+    - __https://make.*.powerapps.com__ 
     - Any other address that ends in __powerapps.com__ or __create.powerapps.com__.
   7. Select __Close__.
 
