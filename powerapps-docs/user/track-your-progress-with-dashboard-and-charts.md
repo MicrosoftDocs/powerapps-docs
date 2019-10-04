@@ -78,8 +78,8 @@ For example, choose "All Opportunities," then select a different view, and both 
 > [!div class="mx-imgBorder"]
 > ![Change a chart view in PowerApps](media/ChangeChartView.png "Change a chart view in PowerApps")
 
-
-
+## Known issues  
+In the chart designer, adding a order by on certain calculated fields are not supported and will cause an error.  The calculated fields causing this are using another calculated fields, a related entity field, or a local field on the entity.
 
 
 
