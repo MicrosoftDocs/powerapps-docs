@@ -15,8 +15,11 @@ search.app:
 # navigateTo (Client API reference)
 
 
-
 [!INCLUDE[./includes/navigateTo-description.md](./includes/navigateTo-description.md)]
+
+
+> [!NOTE]
+> This method is supported only on the Unified Interface.
 
 ## Syntax
 
