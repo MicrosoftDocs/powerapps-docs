@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting startup issues for PowerApps | Microsoft Docs
 description: This troubleshooting guide helps fix common configuration problems that prevent PowerApps from starting.
-author: mabolan
+author: matthewbolanos
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
@@ -22,7 +22,7 @@ This troubleshooting guide helps fix the following two common configuration prob
     ![Hmmm … We couldn’t sign you in. The information below may be helpful](./media/troubleshooting-startup-issues/error.png)
 
 - When you try to create an app from a SharePoint list, you receive the following "abnormal termination" error message
-    ``
+    ```
     WebAuthoring abnormal termination.
 
     Client date/time: <Client Time>Thh:mm:ss.sssZ
@@ -36,7 +36,7 @@ This troubleshooting guide helps fix the following two common configuration prob
     stack: null
     errorNumber: 0
     errorMessage: Script error
-    ``
+    ```
 
 If you experience one of the issues that's described in this section, check out the common errors matrix, below, and then try Resolution 1, Resolution 2, or Resolution 3 to resolve the problem.
 
