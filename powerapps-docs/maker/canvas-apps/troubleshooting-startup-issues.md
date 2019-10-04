@@ -18,7 +18,8 @@ search.app:
 
 This troubleshooting guide helps fix the following two common configuration problems that prevent PowerApps from starting:
 
-- When you receive a “Hmmm … We couldn’t sign you in” error message and identifier that resembles the following image
+- When you receive a “Hmmm … We couldn’t sign you in” error message and identifier that resembles the following image:
+
     ![Hmmm … We couldn’t sign you in. The information below may be helpful](./media/troubleshooting-startup-issues/error.png)
 
 - When you try to create an app from a SharePoint list, you receive the following "abnormal termination" error message
@@ -38,7 +39,7 @@ This troubleshooting guide helps fix the following two common configuration prob
     errorMessage: Script error
     ```
 
-If you experience one of the issues that's described in this section, check out the common errors matrix, below, and then try Resolution 1, Resolution 2, or Resolution 3 to resolve the problem.
+If you experience one of the issues that's described in this section, check out the common errors matrix later, and then try one of the resolutions listed later to resolve the problem.
 
 ## Common error matrix
 
