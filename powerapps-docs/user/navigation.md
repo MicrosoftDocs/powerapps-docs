@@ -97,10 +97,10 @@ The main grid page remembers the filter, sort, page state when you navigate away
 The jump bar uses the first sorted field. If no sort change has been made, the jump bar uses the primary field. If a sort change has been made, then the sort is used. 
 
    > [!div class="mx-imgBorder"]
-   > ![Grids jump bar](media/jumpbar-filter-on-sorted-column (002).gif "Grids just bar")
+   > ![Grids remember state](media/jumpbar-filter-on-sorted-column.gif "Grids remember state")
    
 
 The activity type field now has column filtering allowing the selection of one or more types.  Also related entity fields like owner, status, and reason can be filtered.
 
    > [!div class="mx-imgBorder"]
-   > ![Grids filtering](media/grid-activity-type-column-filter (002).gif "Grids filtering")
+   > ![Grids filtering](media/grid-activity-type-column-filter.gif "Grids filtering")
