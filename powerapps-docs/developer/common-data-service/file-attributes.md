@@ -1,6 +1,6 @@
 ---
 title: "File attributes (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn about File attributes that store binary data within the application, supporting attributes, retrieving binary data, and uploading binary data." # 115-145 characters including spaces. This abstract displays in the search result.
+description: "Learn about File attributes that store file data within the application, supporting attributes, retrieving data, and uploading file data." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 09/25/2019
 ms.reviewer: ""
@@ -17,11 +17,22 @@ search.app:
 ---
 # File attributes
 
-A file attribute is used for storing binary data up to a specified maximum size. The primary intended use of this field is to store a single image, annotation (note), or attachment. However, storage of other forms of binary data is also possible. A custom or customizable entity can have zero or more file attributes. The <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.SchemaName> of the entity file attribute is `EntityFile`.
+A file attribute is used for storing file data up to a specified maximum size. A custom or customizable entity can have zero or more file attributes plus a notes (annotation) collection with zero to one attachment in each note. The <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.SchemaName> of the file attribute is `EntityFile`.
 
 Web API | .NET API
 ------- | -------
 [FieAttributeMetadata](/dynamics365/customer-engagement/web-api/fileattributemetadata) | <xref:Microsoft.Xrm.Sdk.Metadata.FileAttributeMetadata>
+
+For more information about types of files that are not allowed, see [System Settings General tab](/power-platform/admin/system-settings-dialog-box-general-tab) under the **Set blocked file extensions for attachments** setting.
+
+> [!IMPORTANT]
+> Some restrictions do apply when using the File and enhanced Image data-types of the Common Data Service. If Customer Managed Keys (CMK) is enabled on the tenant, then File, Image, and IoT data-types are not available to the tenant's organizations. Solutions that contain excluded data-types will not install. Customers must opt-out of CMK in order to make use of these data-types.
+
+
+Solutions that involve excluded datatypes will not install.
+
+
+Organizaion needs to opt out of the CMK in order to have this functionality.
 
 <!--File data is not passed to plug-ins for performance reasons. You must retrieve the file data in plug-in code using an explicit retrieve call. -->
   
@@ -31,7 +42,7 @@ When a file attribute is added to an entity some additional attributes are creat
   
 ### MaxSizeInKB attribute
 
- This value represents the maximum size (in kilobytes) of the binary data that the attribute can contain. Set this value to the smallest useable data size appropriate for your particular application. See the <xref:Microsoft.Xrm.Sdk.Metadata.FileAttributeMetadata.MaxSizeInKB> property for the allowable size limit and the default value.
+ This value represents the maximum size (in kilobytes) of the file data that the attribute can contain. Set this value to the smallest useable data size appropriate for your particular application. See the <xref:Microsoft.Xrm.Sdk.Metadata.FileAttributeMetadata.MaxSizeInKB> property for the allowable size limit and the default value.
   
 <a name="BKMK_RetrievingFiles"></a>
 
@@ -119,7 +130,7 @@ none   | <xref:Microsoft.Crm.Sdk.Messages.InitializeFileBlocksUploadRequest>,<br
 PATCH /api/data/v9.0/\<entity-type(id)\>/\<file-attribute-name\>   | <xref:Microsoft.Crm.Sdk.Messages.UploadBlockRequest>
 none   | <xref:Microsoft.Crm.Sdk.Messages.CommitFileBlocksUploadRequest>,<br/><xref:Microsoft.Crm.Sdk.Messages.CommitAttachmentBlocksUploadRequest>,<br/><xref:Microsoft.Crm.Sdk.Messages.CommitAnnotationBlocksUploadRequest>
 
-As was previously mentioned under [Retrieve file data](#retrieve-file-data), uploading a binary data file of 16 MB or less can be accomplished in a single API call while uploading more than 16 MB of data requires the file data to be divided into blocks of 4 MB or less data. After the complete set of data blocks has been uploaded and a commit request has been sent, the web service will automatically combine the blocks, in the same sequence as the data blocks were uploaded, into a single data file in Azure Blob Storage.
+As was previously mentioned under [Retrieve file data](#retrieve-file-data), uploading a data file of 16 MB or less can be accomplished in a single API call while uploading more than 16 MB of data requires the file data to be divided into blocks of 4 MB or less data. After the complete set of data blocks has been uploaded and a commit request has been sent, the web service will automatically combine the blocks, in the same sequence as the data blocks were uploaded, into a single data file in Azure Blob Storage.
 
 ### Example: REST upload with chunking (first request)
 
