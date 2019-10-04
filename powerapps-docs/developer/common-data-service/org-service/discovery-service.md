@@ -63,7 +63,7 @@ namespace DiscoveryServiceSample
     class Program
     {
         //These sample application registration values are available for all online instances.
-        // this sample requires ADAL 3.19 + 
+        // this sample requires ADAL.net 5.2 + 
         public static string clientId = "51f81489-12ee-4a9e-aaae-a2591f45987d";
         public static string redirectUrl = "app://58145B91-0C36-4500-8554-080854F2AC97";
 
