@@ -26,6 +26,8 @@ search.app:
 With Common Data Service, XRM tooling enables you to connect to your Common Data Service environment by using connection strings. This is similar to the concept of connection strings used with **SQL Server**. Connection strings have native support in configuration files, including the ability to encrypt the configuration sections for maximum security. This enables you to configure Common Data Service connections at deployment time, and not hard code in your application to connect to your Common Data Service environment.  
 
 
+
+
 <a name="Create"></a> 
 
 ## Create a connection string
@@ -34,8 +36,7 @@ With Common Data Service, XRM tooling enables you to connect to your Common Data
   
 ```xml  
 <connectionStrings>  
-    <add name="MyCDSServer" connectionString="AuthType=Office365;Url=http://contoso:8080/Test;UserName=jsmith@contoso.onmicrosoft.com; 
-  Password=passcode" />  
+    <add name="MyCDSServer" connectionString="AuthType=OAuth;Username=jsmith@contoso.onmicrosoft.com;Password=passcode;Url=https://contosotest.crm.dynamics.com;AppId=51f81489-12ee-4a9e-aaae-a2591f45987d;RedirectUri=app://58145B91-0C36-4500-8554-080854F2AC97;TokenCacheStorePath=c:\MyTokenCache;LoginPrompt=Auto"
 </connectionStrings>  
 ```  
   
@@ -63,20 +64,27 @@ CrmServiceClient svc = new CrmServiceClient(ConnectionString);
   
 |Parameter name|Description|  
 |--------------------|-----------------|  
-|`ServiceUri`, `Service Uri`, `Url`, or `Server`|Specifies the URL to the Common Data Service environment. The URL can use http or https protocol, and the port is optional. The default port is 80 for the http protocol and 443 for the https protocol. The server URL is typically in the format `https://`*`<organization-name>`*`.crm.dynamics.com`<br /><br /> The organization-name is required.|  
-|`Domain`|Specifies the domain that will verify user credentials.|  
+|`ServiceUri`, `Service Uri`, `Url`, or `Server`|Specifies the URL to the Common Data Service environment. The URL can use http or https protocol, and the port is optional. The default port is 80 for the http protocol and 443 for the https protocol. The server URL is typically in the format `https://`*`<organization-name>`*`.crm.dynamics.com`<br /><br /> The organization-name is required.|   
 |`UserName`, `User Name`, `UserId`, or `User Id`|Specifies the user's identification name associated with the credentials.|  
 |`Password`|Specifies the password for the user name associated with the credentials.|  
 |`HomeRealmUri` or `Home Realm Uri`|Specifies the Home Realm Uri.|  
-|`AuthenticationType` or `AuthType`|Specifies the authentication type to connect to Common Data Service environment. Valid values are: `AD`, `IFD` (AD FS enabled), `OAuth`, or `Office365`.<br /><br /> -   `AD` and `IFD` are permitted for Common Data Service on-premises environments only.<br />-   `OAuth` is permitted for Common Data Service and on-premises environments.<br />-   `Office365` is permitted for Common Data Service environments only.|  
+|`AuthenticationType` or `AuthType`|Specifies the authentication type to connect to Common Data Service environment. Valid values are: `AD`, `IFD` (AD FS enabled), `OAuth`, `Certificate`, `ClientSecret`, or `Office365`. However,  only `OAuth`, `Certificate`, `ClientSecret` and `Office365` are permitted values for Common Data Service environments.|  
 |`RequireNewInstance`|Specifies whether to reuse an existing connection if recalled while the connection is still active. Default value is `false` that indicates the existing connection be reused. If set to `true`, will force the system to create a unique connection.|  
-|`ClientId`, `AppId` or `ApplicationId`|Specifies the `ClientID` assigned when you registered your application in Azure Active Directory or Active Directory Federation Services (AD FS).<br /><br /> This parameter is applicable only when the authentication type is specified as `OAuth`.|  
+|`ClientId`, `AppId` or `ApplicationId`|Specifies the `ClientID` assigned when you registered your application in Azure Active Directory or Active Directory Federation Services (AD FS).<br /><br /> This parameter is applicable only when the authentication type is specified as `OAuth`.|
+|`ClientSecret` or `Secret` |Required when Auth Type is set to `ClientSecret`. Client Secret string to use for authentication.|
 |`RedirectUri` or `ReplyUrl`|Specifies the redirect URI of the application you registered in Azure Active Directory or Active Directory Federation Services (AD FS).<br /><br /> This parameter is applicable only when the authentication type is specified as `OAuth`.|  
 |`TokenCacheStorePath`|Specifies the full path to the location where the user token cache should be stored. The running process should have access to the specified path. It is the processes responsibility to set and configure this path.<br /><br /> This parameter is applicable only when the authentication type is specified as `OAuth`.|  
 |`LoginPrompt`|Specifies whether the user is prompted for credentials if the credentials are not supplied. Valid values are:<br /><br /> -   `Always`: Always prompts the user to specify credentials.<br />-   `Auto`: Allows the user to select in the login control interface whether to display the prompt or not.<br />-   `Never`: Does not prompt the user to specify credentials. If using a connection method does not have a user interface, you should use this value.<br /><br /> This parameter is applicable only when the authentication type is specified as `OAuth`.|  
 |`StoreName` or `CertificateStoreName`|Specifies the store name where the certificate identified by thumbprint can be found. When set, Thumbprint is required.|
 |`Thumbprint` or `CertThumbprint`| Specifies the thumbprint of the certificate to be utilized during an S2S connection. When set, AppID is required and UserID and Password values are ignored.|
 |`SkipDiscovery`|Specifies whether to call instance discovery to determine the connection uri for a given instance. As of NuGet release Microsoft.CrmSdk.XrmTooling.CoreAssembly Version 9.0.2.7, default = true. Older versions default to false. <br/> Note: If set to true, it is important that the user provide the correct and accurate URI for the target instance.|
+
+> [!NOTE]
+> <b>When using the `OAuth` AuthType\AuthenticationType</b><br/>
+> For development and prototyping purposes we have provided the following AppId or ClientId and Redirect URI for use in OAuth Flows.<br/>
+> For production use, you should create an AppId or ClientId that is specific to your tenant in the Azure Management portal.<br/>
+> Sample AppId or ClientId = 51f81489-12ee-4a9e-aaae-a2591f45987d<br/>
+> Sample RedirectUri = app://58145B91-0C36-4500-8554-080854F2AC97<br/>
 
 <a name="Examples"></a>
 
@@ -96,7 +104,11 @@ The following examples show how you can use connection strings for connecting to
 ```  
   
 ### OAuth using named account in Office 365 with UX to prompt for authentication  
-  
+Create a new connection to Common Data Service using a UserID or Password via OAuth.
+
+> [!NOTE]
+> OAuth is the preferred auth type for connecting to Common Data Service when using an interactive flow.  This auth type fully supports the features of Azure Active Directory Conditional Access and Multi-Factor authentication.
+
 ```xml
 <add name="MyCDSServer"
  connectionString="
@@ -104,23 +116,55 @@ The following examples show how you can use connection strings for connecting to
   Username=jsmith@contoso.onmicrosoft.com;
   Password=passcode;
   Url=https://contosotest.crm.dynamics.com;
-  AppId=<GUID>;
-  RedirectUri =app://<GUID>;
-  TokenCacheStorePath =c:\MyTokenCache;
+  AppId=51f81489-12ee-4a9e-aaae-a2591f45987d;
+  RedirectUri=app://58145B91-0C36-4500-8554-080854F2AC97;
+  TokenCacheStorePath=c:\MyTokenCache;
   LoginPrompt=Auto"/>  
 ```  
 
+### OAuth using current logged in user with fall back UX to prompt for authentication
+
+Create a new connection to Common Data Service using the current logged in user via OAuth.
+
+> [!NOTE]
+> OAuth is the preferred auth type for connecting to Common Data Service when using a interactive flow. This auth type fully supports the features of Azure Active Directory Conditional Access and Multi-Factor authentication.
+
+```xml
+<add name="MyCDSServer"
+ connectionString="
+  AuthType=OAuth;
+  Username=jsmith@contoso.onmicrosoft.com;
+  Integrated Security=true;
+  Url=https://contosotest.crm.dynamics.com;
+  AppId=51f81489-12ee-4a9e-aaae-a2591f45987d;
+  RedirectUri=app://58145B91-0C36-4500-8554-080854F2AC97;
+  TokenCacheStorePath=c:\MyTokenCache;
+  LoginPrompt=Auto"/>  
+```  
+
+
 ### Certificate based authentication
 
+Create a new connection to Common Data Service using a Application or Client Id and a Certificate.
 ```xml
 <add name="MyCDSServer" 
   connectionString="
   AuthType=Certificate;
-  SkipDiscovery=true;
-  url={InstanceUri};
+  url=https://contosotest.crm.dynamics.com;
   thumbprint={CertThumbPrintId};
   ClientId={AppId};
-  RequireNewInstance=true"
+  />
+```
+
+### ClientId or Client Secret based authentication
+Create a new connection to Common Data Service using a Application or Client Id and a Client Secret.
+```xml
+<add name="MyCDSServer" 
+  connectionString="
+  AuthType=ClientSecret;
+  url=https://contosotest.crm.dynamics.com;
+  ClientId={AppId};
+  ClientSecret={ClientSecret}
   />
 ```
 
