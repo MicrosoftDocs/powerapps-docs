@@ -6,7 +6,7 @@ ms.date: 03/21/2019
 ms.reviewer: "kvivek"
 ms.service: powerapps
 ms.topic: "article"
-author: "brandonsimons" 
+author: "JimDaly" 
 ms.author: "bsimons" 
 manager: "annbe" 
 search.audienceType: 
