@@ -128,7 +128,7 @@ By default, the file size is set to 10 MB. However, you can configure the file s
 
 The below example demonstrates configuration using the Case entity which needs the Dynamics 365 Customer Service application as a pre-requisite. Although this sample uses the Case entity, it is just an illustration of the steps mentioned above and can be followed with any other custom entity or any Common Data Service entity that supports managing documents in SharePoint. 
 
-1.	Follow the instructions in [Step 1](#step-1-enable-document-management-functionality-in-dynamics-365-apps) to ensure that server-based configuration is complete for model-driven apps in Dynamics 365 and [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] integration.
+1.	Follow the instructions in [Step 1](#step-1-enable-document-management-functionality-in-model-driven-apps-in-dynamics-365) to ensure that server-based configuration is complete for model-driven apps in Dynamics 365 and [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] integration.
 
 2.	Follow the instructions in [Step 2](#step-2-set-up-sharepoint-integration-from-powerapps-portals-admin-center) to ensure that the portal has permissions to integrate with [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)]. 
 

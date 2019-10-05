@@ -104,7 +104,7 @@ Just getting an ID token is not sufficient to authenticate the user; you must al
 
 By default, implicit grant flow is enabled. If you want to turn off implicit grant flow, set the value of the **Connector/ImplicitGrantFlowEnabled** site setting to **False**.
 
-If this site setting is not available in your portal, you must [create a new site setting](configure-site-settings.md#manage-portal-site-settings) with the appropriate value.
+If this site setting is not available in your portal, you must [create a new site setting](configure/configure-site-settings.md#manage-portal-site-settings) with the appropriate value.
 
 ## Configure token validity
 
