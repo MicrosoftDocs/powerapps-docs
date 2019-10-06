@@ -46,7 +46,7 @@ To use Azure Data Lake Storage Gen2 for dataflows, you need the following:
 > If you don't have an Azure subscription, [create a free trial account](https://azure.microsoft.com/free/) before you begin.
 
 ## Prepare your Azure Data Lake Storage Gen2 for Power Platform Dataflows
-Before you configure Power BI with an Azure Data Lake Storage Gen2 account, you must create and configure a storage account. Here are the requirements for Power Platform Dataflows:
+Before you configure your environment with an Azure Data Lake Storage Gen2 account, you must create and configure a storage account. Here are the requirements for Power Platform Dataflows:
 1.	The storage account must be created in the same Azure Active Directory tenant as your PowerApps tenant.
 2.	We recommend that the storage account is created in the same region as the PowerApps environment you plan to use it in. To determine where your PowerApps environment is, contact your environment admin.
 3.	The storage account must have the Hierarchical Name Space feature enabled.
@@ -56,7 +56,7 @@ The following sections walk through the steps necessary to configure your Azure 
 
 ## Create the storage account
 Follow the steps in [Create an Azure Data Lake Storage Gen2 storage account](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-quickstart-create-account).
-1.	Make sure you select the same location as your Power BI tenant and set your storage as StorageV2 (general purpose v2).
+1.	Make sure you select the same region as your environment and set your storage as StorageV2 (general purpose v2).
 2.	Make sure you enable the hierarchical namespace feature. 
 3.	We recommend that you set the replication setting to Read-access geo-redundant storage (RA-GRS).
 
