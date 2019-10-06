@@ -5,7 +5,7 @@ keywords:
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -14,8 +14,6 @@ ms.assetid: 058c0319-4d46-40fc-a4f6-e9f722a6b3c7
 ---
 
 # Formatting
-
-[!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
 
 [!INCLUDE [formatting-description](includes/formatting-description.md)]
 
@@ -39,6 +37,9 @@ Model-driven apps and canvas apps (experimental preview)
 |[formatTime](formatting/formattime.md)|[!INCLUDE [formattime-description](formatting/includes/formattime-description.md)]|
 |[getWeekOfYear](formatting/getweekofyear.md)|[!INCLUDE [getweekofyear-description](formatting/includes/getweekofyear-description.md)]|
 
+## Example
+
+To learn more about how to implement formatting methods, see [Formatting API component](../sample-controls/formatting-api-control.md)
 
 ### Related topics
 

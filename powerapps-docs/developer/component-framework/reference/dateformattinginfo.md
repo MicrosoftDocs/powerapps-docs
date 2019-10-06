@@ -5,7 +5,7 @@ keywords:
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -14,8 +14,6 @@ ms.assetid: 4e7d43fb-b6b7-4f1d-89e3-0b8157c9d2d9
 ---
 
 # DateFormattingInfo
-
-[!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
 
 [!INCLUDE [context-description](includes/dateformattinginfo-description.md)]
 
@@ -64,8 +62,6 @@ The `calendar` object contains the following properties:
 |`twoDigitYearMax`|`number`|2029|
 
 ### calendarWeekRule
-
-0
 
 **Type**: `number`
 

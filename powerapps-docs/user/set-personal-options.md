@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 08/01/2019
+ms.date: 10/03/2019
 ms.author: mduelae
 ms.custom: ""
 ms.reviewer: ""
@@ -20,7 +20,7 @@ search.app:
 # Set personal options
 
 
-[!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
+
 
 Change your display settings in an app to suit your preferences. For example, you can choose the page that you want to see as soon as you sign in to the app. You can also personalize many other options such as language, currency, and time zone.  
     

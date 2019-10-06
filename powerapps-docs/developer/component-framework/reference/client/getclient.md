@@ -5,7 +5,7 @@ keywords:
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -19,13 +19,15 @@ ms.assetid: 4b7c18f8-cd00-4f39-8f88-ed9306d6a055
 
 [!INCLUDE [getclient-description](includes/getclient-description.md)]
 
+## Syntax
+
+`context.client.getClient()`
+
 ## Available for 
 
 Model-driven apps and canvas apps (experimental preview) 
 
-## Syntax
 
-`context.client.getClient()`
 
 ## Return Value
 

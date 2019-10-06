@@ -4,8 +4,6 @@ description: "The walkthrough demonstrates how to register a service endpoint st
 keywords: ""
 ms.date: 06/01/2019
 ms.service: powerapps
-ms.custom:
-  - ""
 ms.topic: article
 ms.assetid: b5ef50fa-8085-f425-3968-804d012fc840
 author: brandonsimons # GitHub ID - Brandon Simmons

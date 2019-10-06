@@ -5,7 +5,7 @@ keywords:
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -14,8 +14,6 @@ ms.assetid: 8c0481ee-abf9-492a-a1ef-b36e8a68167b
 ---
 
 # NumberFormattingInfo
-
-[!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
 
 [!INCLUDE [context-description](includes/numberformattinginfo-description.md)]
 
@@ -27,157 +25,157 @@ Model-driven apps
 
 ### currencyDecimalDigits
 
- example 2
+ Example: 2
 
 **Type**: `number`
 
 ### currencyDecimalSeparator
 
-example "."
+Example: "."
 
 **Type**: `string`
 
 ### currencyGroupSeparator
 
-example ","
+Example: ","
 
 **Type**: `string`
 
 ### currencyGroupSizes
 
-example [ 3 ]
+Example: [ 3 ]
 
 **Type**: `number[]`
 
 ### currencyNegativePattern
 
-example 0
+Example: 0
 
 **Type**: `number`
 
 ### currentPositivePattern
 
-example 0
+Example: 0
 
 **Type**: `number`
 
 ### currencySymbol
 
-example "$"
+Example: "$"
 
 **Type**: `string`
 
 ### nanSymbol
 
-example "NaN"
+Example: "NaN"
 
 **Type**: `string`
 
 ### nativeDigits
 
-example { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"}
+Example: { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"}
 
 **Type**: `string[]`
 
 ### negativeInfinitySymbol
 
-example "-Infinity"
+Example: "-Infinity"
 
 **Type**: `string`
 
 ### negativeSign
 
-example "-"
+Example: "-"
 
 **Type**: `string`
 
 ### numberDecimalDigits
 
-example 2
+Example: 2
 
 **Type**: `number`
 
 ### numberDecimalSeparator
 
-example "."
+Example: "."
 
 **Type**: `string`
 
 ### numberGroupSeparator
 
-example ","
+Example: ","
 
 **Type**: `string`
 
 ### numberGroupSizes
 
-example [3]
+Example: [3]
 
 **Type**: `number[]`
 
 ### numberNegativePattern
 
-example 1
+Example: 1
 
 **Type**: `number`
 
 ### perMilleSymbol
 
-example "‰"
+Example: "‰"
 
 **Type**: `string`
 
 ### percentDecimalDigits
 
-example 2
+Example: 2
 
 **Type**: `number`
 
 ### percentDecimalSeparator
 
-example "."
+Example: "."
 
 **Type**: `string`
 
 ### percentGroupSeparator
 
-example ","
+Example: ","
 
 **Type**: `string`
 
 ### percentGroupSizes
 
-example [3]
+Example: [3]
 
 **Type**: `number[]`
 
 ### percentNegativePattern
 
-example 0
+Example: 0
 
 **Type**: `number`
 
 ### percentPositivePattern
 
-example 0
+Example: 0
 
 **Type**: `number`
 
 ### percentSymbol
 
-example "%"
+Example: "%"
 
 **Type**: `string`
 
 ### positiveInfinitySymbol
 
-example "Infinity"
+Example: "Infinity"
 
 **Type**: `string`
 
 ### positiveSign
 
-example "+"
+Example: "+"
 
 **Type**: `string`
 

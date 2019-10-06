@@ -478,7 +478,7 @@ By using `$apply` you can aggregate and group your data dynamically.  Possible u
 
 The aggregate functions are limited to a collection of 50,000 records.  Further information around using aggregate functionality with Common Data Service can be found here: [Use FetchXML to construct a query](../use-fetchxml-construct-query.md).
 
-Additional details on OData data aggregation can be found here: [OData Extension for Data Aggregation Version 4.0](http://docs.oasis-open.org/odata/odata-data-aggregation-ext/v4.0/cs01/odata-data-aggregation-ext-v4.0-cs01.html).  Note that Dynamics 365 for Customer Engagement apps only supports a sub-set of these aggregate methods.
+Additional details on OData data aggregation can be found here: [OData Extension for Data Aggregation Version 4.0](http://docs.oasis-open.org/odata/odata-data-aggregation-ext/v4.0/cs01/odata-data-aggregation-ext-v4.0-cs01.html).  Note that Common Data Service supports only a sub-set of these aggregate methods.
 
 
 <a name="bkmk_useParameterAliases"></a>

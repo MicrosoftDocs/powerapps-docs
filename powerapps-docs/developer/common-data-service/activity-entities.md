@@ -49,8 +49,7 @@ In Common Data Service, activities are tasks that you or your teams perform when
  [Sample Code for Activity Entities](/dynamics365/customer-engagement/developer/sample-code-activity-entities)  
   
 ## Related Sections  
- [Model Your Business Data with Dynamics 365 Customer Engagement](/dynamics365/customer-engagement/developer/model-business-data)  
-  
+   
  [Server-side Synchronization Entities](server-side-synchronization-entities.md)  
   
  [Customize Entity Metadata](customize-entity-metadata.md)

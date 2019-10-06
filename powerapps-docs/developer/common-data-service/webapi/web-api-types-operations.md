@@ -24,9 +24,6 @@ search.app:
 
 In order to use the Web API you need to find information about what is available for you to use. The service describes itself via service and metadata documents that you can access. This topic will introduce important concepts and describe how you can find the information you need using documentation generated from the service and metadata documents as well as the documentation of the system entity types, functions, and actions. 
 
-> [!NOTE]
-> Information in this topic is also applicable to the Dynamics 365 for Customer Engagement apps users (online and on-premises).
-  
 <a name="bkmk_terminology"></a>
   
 ## Terminology 
@@ -378,4 +375,4 @@ An ordinary intersect entity has only the four basic properties required to main
 [Use the Common Data Service Web API](overview.md)<br />
 [Authenticate to Common Data Service with the Web API](authenticate-web-api.md)<br />
 [Perform operations using the Web API](perform-operations-web-api.md)<br/>
-[Developer Guide for Dynamics 365 for Customer Engagement apps](/dynamics365/customer-engagement/developer/developer-guide)
+

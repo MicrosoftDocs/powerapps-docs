@@ -4,8 +4,6 @@ description: "Common Data Service displays commands in different ways depending 
 keywords: ""
 ms.date: 10/31/2018
 ms.service: powerapps
-ms.custom:
-  - ""
 ms.topic: article
 ms.assetid: 926364b0-ede6-00e9-39d4-5aae5e00be0b
 author: JimDaly # GitHub ID

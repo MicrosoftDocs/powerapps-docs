@@ -4,8 +4,6 @@ description: "This walkthrough describes the process of registering and configur
 keywords: ""
 ms.date: 08/26/2019
 ms.service: powerapps
-ms.custom:
-  - ""
 ms.topic: article
 ms.assetid: a327d2ff-e252-61cf-1190-6a974130ef19
 author: "paulliew" # GitHub ID
