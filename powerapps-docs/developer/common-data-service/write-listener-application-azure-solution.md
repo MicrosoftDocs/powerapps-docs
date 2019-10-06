@@ -63,7 +63,7 @@ After your listener is registered with an endpoint, the listener’s <xref:Micro
   
 - Address: service URI  
   
-- Binding: [WS2007HttpRelayBinding]((/dotnet/api/microsoft.servicebus.ws2007httprelaybinding)  
+- Binding: [WS2007HttpRelayBinding](/dotnet/api/microsoft.servicebus.ws2007httprelaybinding)  
   
 - Contract: <xref:Microsoft.Xrm.Sdk.ITwoWayServiceEndpointPlugin>  
   
