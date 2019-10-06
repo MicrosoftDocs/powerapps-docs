@@ -5,7 +5,7 @@ keywords:
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -15,19 +15,21 @@ ms.assetid: 19ad54b8-e044-4f07-a18e-b00d26b75832
 
 # FilterExpression
 
-[!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
-
 [!INCLUDE [filterexpression-description](includes/filterexpression-description.md)]
+
+## Available for 
+
+Model-driven apps
 
 ## Properties
 
-## conditions
+### conditions
 
 The set of conditions associated with this filter.
 
 **Type**: [ConditionExpression](conditionexpression.md)[]
 
-## filterOperator
+### filterOperator
 
 The operator used to combine conditions in this filter.
 
@@ -40,7 +42,7 @@ The `filterOperator` value is an enum with the following possible values
 |0|And|
 |1|Or|
 
-## filters
+### filters
 
 Any child filters that should be evaluated after evaluating this filter.
 

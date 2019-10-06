@@ -5,7 +5,7 @@ keywords:
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -19,7 +19,11 @@ ms.assetid: 93021be2-b284-4da3-81a1-6d5587be6ce7
 
 ## Syntax
 
-`captureVideo()`
+`context.device.captureVideo()`
+
+## Available for 
+
+Model-driven apps
 
 ## Return Value
 
@@ -27,7 +31,7 @@ Type: `Promise<FileObject>`
 
 ## Remarks
 
-See [Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise) and [File](https://developer.mozilla.org/docs/Web/API/File)
+See [Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise) and [FileObject](../fileobject.md)
 
 
 ### Related topics

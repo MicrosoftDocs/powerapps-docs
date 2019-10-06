@@ -4,8 +4,6 @@ description: "The walkthrough guides you through configuring the Azure Service B
 keywords: ""
 ms.date: 10/31/2018
 ms.service: powerapps
-ms.custom:
-  - ""
 ms.topic: article
 ms.assetid: d7b24b11-57f0-ab05-4bec-0b64efee178d
 author: brandonsimons # GitHub ID

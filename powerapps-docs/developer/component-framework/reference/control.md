@@ -1,7 +1,7 @@
 ---
 title: StandardControl | MicrosoftDocs
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -13,9 +13,11 @@ author: Nkrb
 
 # StandardControl
 
-[!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
-
 [!INCLUDE [control-description](includes/control-description.md)]
+
+## Available for 
+
+Model-driven apps and canvas apps (experimental preview)
 
 ## Methods
 

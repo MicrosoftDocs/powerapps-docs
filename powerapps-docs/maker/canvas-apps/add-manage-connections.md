@@ -37,7 +37,7 @@ Most PowerApps apps use external information called **Data Sources** that is sto
 
 The commonest type of data source is the table, which you can use to retrieve and store information. You can use connections to data sources to read and write data in Microsoft Excel workbooks, SharePoint lists, SQL tables, and many other formats, which can be stored in cloud services like OneDrive for Business, DropBox, SQL Server, etc.
 
-There are other kinds of data sources that are not tables, such as email, calendars, twitter, and (coming soon) notifications.
+There are other kinds of data sources that are not tables, such as email, calendars, twitter, and notifications.
 
 Using the **[Gallery](controls/control-gallery.md)**, **[Display form](controls/control-form-detail.md)**, and **[Edit form](controls/control-form-detail.md)** controls, it is easy to create an app that reads and writes data from a data source. To get started, read the article [Understand data forms](working-with-forms.md).
 
@@ -80,4 +80,5 @@ In the list of connections, find the connection that you want to update or delet
 
 * To update the credentials for a connection, click or tap the key icon, and then provide credentials for that connection.
 * To delete the connection, click or tap the trash-can icon.
+* Click or tap the information icon to see the connection details.
 

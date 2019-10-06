@@ -1,6 +1,6 @@
 ---
 title: "getObject (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
+ms.date: 09/03/2019
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -16,8 +16,6 @@ search.app:
 ---
 # getObject (Client API reference)
 
-
-
 Returns the object in the form that represents an IFRAME or web resource. 
 
 ## Control types supported
@@ -28,13 +26,12 @@ iframe, webresource
 
 `formContext.getControl(arg).getObject();`
 
+> [!NOTE]
+> This method should be used after the [onreadystatecomplete](../events/onreadystatecomplete.md) event is triggered. If this is used before, then there is chance that the call to `getObject()` will fail.
+ 
 ## Return Value
 
 **Type**: Object
 
 **Description**: Object depends on the type of control:
-- An IFRAME returns the [IFrame](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe) element from the Document Object Model (DOM).
-- A Silverlight web resource will return the [Object](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/object) element from the DOM that represents the embedded Silverlight plug-in.
-
-
-
+- An IFRAME and HTML web resource returns the [IFrame](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe) element from the Document Object Model (DOM).

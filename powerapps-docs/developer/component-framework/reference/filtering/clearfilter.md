@@ -5,7 +5,7 @@ keywords:
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -19,7 +19,11 @@ ms.assetid: 6c306633-14a1-4199-95cb-58000b3cafed
 
 ## Syntax
 
-`clearFilter()`
+`context.filtering.clearFilter()`
+
+## Available for 
+
+Model-driven apps
 
 ### Related topics
 

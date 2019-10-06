@@ -1,6 +1,6 @@
 ---
 title: Apply business logic using client scripting in model-driven apps using JavaScript | Microsoft Docs
-description: Learn how developers can use JavaScript in client-side scripts to apply custom business logic in model-driven apps and Dynamics 365 for Customer Engagement apps
+description: Learn how developers can use JavaScript in client-side scripts to apply custom business logic in model-driven apps
 services: ''
 suite: powerapps
 author: KumarVivek
@@ -20,7 +20,7 @@ search.app:
 Client-side scripting using JavaScript is one of the ways to apply custom business process logic for displaying data on a form in a model-driven app.
 
 > [!IMPORTANT]
-> All the client scripting concepts and APIs explained in this documentation also apply to Dynamics 365 for Customer Engagement apps because Customer Engagement apps are in fact model-driven apps built on Common Data Service platform.
+> All the client scripting concepts and APIs explained in this documentation also apply to Dynamics 365 Customer Engagement (on-premises) users.
 
 Client scripting shouldn't be your first choice though for applying custom business process logic in model-driven app forms. *Business rules* provide a way for someone, who does not know JavaScript and is not a developer, to apply business process logic in a form. More information: [Create business rules to apply logic](/powerapps/maker/model-driven-apps/create-business-rules-recommendations-apply-logic-form). You will find the business rule designer within the **Common Data Service** area on [powerapps.com](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). When you view an entity, look for the **Business rules** tab.
 
@@ -55,5 +55,5 @@ Model-driven apps provides you a rich set of **client APIs** to interact with fo
 
 [Web resources for Model-driven apps](web-resources.md)<br/>
 [Customize commands and the ribbon](customize-commands-ribbon.md)<br/>
-[Dynamics 365 for Customer Engagement apps developer guide](/dynamics365/customer-engagement/developer/developer-guide)
+
 

@@ -5,7 +5,7 @@ keywords:
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -15,35 +15,39 @@ ms.assetid: 89807b09-92ee-43cf-8db5-8da838131923
 
 # LookupOptions
 
-[!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
+Provides all the information about options used when opening a lookup dialog.
+
+## Available for 
+
+Model-driven apps
 
 ## Properties
 
-## allowMultiSelect
+### allowMultiSelect
 
 Whether the lookup allows more than one item to be selected.
 
 **Type**: `boolean`
 
-## defaultEntityType
+### defaultEntityType
 
 The default entity type.
 
 **Type**: `string`
 
-## defaultViewId
+### defaultViewId
 
 The default view to use.
 
 **Type**: `string`
 
-## entityTypes
+### entityTypes
 
 The entity types to display.
 
 **Type**: `string[]`
 
-## viewIds
+### viewIds
 
 The views to be available in the view picker. Only System views are supported (not user views).
 

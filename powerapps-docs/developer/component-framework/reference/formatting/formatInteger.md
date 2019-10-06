@@ -5,7 +5,7 @@ keywords:
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -19,13 +19,17 @@ ms.assetid: 58ce031a-cd68-4f19-a755-59a7b6030ddc
 
 ## Syntax
 
-`formatInteger(value)`
+`context.formatting.formatInteger(value);`
+
+## Available for 
+
+Model-driven apps and canvas apps (experimental preview)
 
 ## Parameters
 
 | Parameter Name|Type|Required|Description|
 | ------------- |----|--------|-----------|
-|value|`number`|yes|A number primitive to be formatted.|
+|value|`number`|Yes|A number primitive to be formatted.|
 
 ## Return Value
 

@@ -80,7 +80,7 @@ In order to use Solution Checker in this organization, Adminstration Mode must b
 
 To disable administration mode for an organization instance:
 
-1. Open the Dynamics 365 for Customer Engagement apps instance picker: https://port.crm.dynamics.com/G/Instances/InstancePicker.aspx.
+1. Open the Dynamics 365 instance picker: https://port.crm.dynamics.com/G/Instances/InstancePicker.aspx.
 2. Select the organization instance that has issues running Solution Checker.
 3. Select **ADMIN**.<br/>
 ![Instance Admin](media/solution-checker-instance-admin.png)

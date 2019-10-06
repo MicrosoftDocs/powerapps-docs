@@ -4,7 +4,7 @@ description:
 keywords:
 ms.author: nabuthuk
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -16,4 +16,4 @@ ms.assetid: 6b2e8a67-f90b-42a7-af2b-4b8cbda9d149
 
 ---
 
-Add a new linked entity relationship with the existing query primary entity.
+Adds a new linked entity relationship with the existing query primary entity.

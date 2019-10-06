@@ -2,7 +2,7 @@
 title: "Work with solutions in PowerApps | MicrosoftDocs"
 description: "Learn how solutions are distributed"
 ms.custom: ""
-ms.date: 05/28/2019
+ms.date: 09/30/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -26,7 +26,7 @@ search.app:
    
 # Solutions overview  
 
-  In PowerApps, solutions are leveraged to transport apps and components from one environment to another or to apply a set of customizations to existing apps. A solution can contain one or more apps as well as other components such as entities, option sets, etc.  You can get a solution from [AppSource](https://appsource.microsoft.com/) or from an independent software vendor (ISV).
+  In PowerApps, solutions are leveraged to transport apps and components from one environment to another or to apply a set of customizations to existing apps. A solution can contain one or more apps as well as other components such as site maps, entities, processes, web resources, option sets, and more.  You can get a solution from [AppSource](https://appsource.microsoft.com/) or from an independent software vendor (ISV).
   
 More information: [Whitepaper: Solution Lifecycle Management](https://www.microsoft.com/en-us/download/details.aspx?id=57777)  
   
@@ -81,7 +81,9 @@ More information: [Whitepaper: Solution Lifecycle Management](https://www.micros
 -   Plug-in Assembly  
   
 -   Process  
-  
+
+-   Report  
+
 -   Sdk Message Processing Step  
   
 -   Security Role  
@@ -102,9 +104,9 @@ More information: [Whitepaper: Solution Lifecycle Management](https://www.micros
   
 <a name="BKMK_ManagedAndUnmanagedSolutions"></a>   
 ### Managed and unmanaged solutions  
- There are **managed** and **unmanaged** solutions. A **managed** solution cannot be modified and can be uninstalled after it is imported. All the components of that solution are removed by uninstalling the solution.  
+ There are **managed** and **unmanaged** solutions. A **managed** solution cannot be modified and can be uninstalled after it is imported. All the components of that solution are deleted by uninstalling the solution.  
   
- When you import an **unmanaged** solution, you add all the components of that solution into your environment. You can’t remove the components by uninstalling the solution.  
+ When you import an **unmanaged** solution, you add all the components of that solution into your environment. You can’t delete the components by uninstalling the solution.  
   
  When you import an **unmanaged** solution that contains components that you have already customized, your customizations will be overwritten by the customizations in the imported unmanaged solution. You can’t undo this.  
   
@@ -112,8 +114,6 @@ More information: [Whitepaper: Solution Lifecycle Management](https://www.micros
 >  Install an unmanaged solution only if you want to add all the components to your environment and overwrite any existing customizations.  
   
  Even if you don’t plan on distributing your apps or customizations, you may want to create and use an unmanaged solution to have a separate view that only includes those parts of the application that you have customized. Whenever you customize something, just add it to the unmanaged solution that you created.  
-  
- You can only export your **Default Solution** as an unmanaged solution.  
   
  To create a **managed** solution, you choose the **As managed** option when you export the solution. If you create a managed solution, you can’t import it back into the same environment you used to create it. You can only import it into a different environment.  
   

@@ -25,10 +25,10 @@ search.app:
 ---
 # Approaching a user experience and Unified Interface transition
 
-This business-oriented white paper outlines the planning, governance, and management principles to consider when approaching a user experience change within a model-driven application on the PowerApps platform. This white paper focuses specifically on Dynamics 365 for Customer Engagement applications such as Dynamics 365 for Sales and  Dynamics 365 for Service, and adopting the Unified Interface, but many topics are applicable to any user experience update.
+This business-oriented white paper outlines the planning, governance, and management principles to consider when approaching a user experience change within a model-driven application on the PowerApps platform. This white paper focuses specifically on Dynamics 365 applications such as Dynamics 365 Sales and Dynamics 365 Customer Service, and adopting the Unified Interface, but many topics are applicable to any user experience update.
 
 In summary, this guide will help you:
-- Positioning the Unified Interface.
+- Position the Unified Interface.
 - Design approach best practice.
 - Governance and guidelines.
 - UX usage recommendations.

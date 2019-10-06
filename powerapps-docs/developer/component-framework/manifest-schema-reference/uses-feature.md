@@ -5,7 +5,7 @@ keywords:
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -17,6 +17,10 @@ ms.assetid: 87f5e921-4114-4710-a362-db741426a69b
 
 Indicates which feature their components want to use.
 
+## Available for
+
+Model-driven apps
+
 ## Parent Element
 
 |Element|Description|
@@ -25,11 +29,10 @@ Indicates which feature their components want to use.
 
 ## Child Elements
 
-|Element|Description|
-|--|--|
-|name|Name of the feature that is declared in the component|
-|required|Indicates if the component requires that feature or not|
-
+|Element|Description|Type|Required|
+|--|--|---|----|
+|name|Name of the feature that is declared in the component|`string`|Yes|
+|required|Indicates if the component requires that feature or not|`boolean`|Yes|
 
 ### Example 
 

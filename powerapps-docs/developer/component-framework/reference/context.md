@@ -5,7 +5,7 @@ keywords:
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -15,81 +15,80 @@ ms.assetid: 6e066350-9d22-4078-b497-26be7d2fa374
 
 # Context
 
-[!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
-
 [!INCLUDE [context-description](includes/context-description.md)]
 
+## Available for 
 
+Model-driven apps
 
-## client
+### client
 
-The interface for `context.client`
-
+[!INCLUDE [client-description](includes/client-description.md)]
 **Type**: [Client](client.md)
 
-## device
+### device
 
-The interface for `context.device`
+[!INCLUDE [device-description](includes/device-description.md)]
 
 **Type**: [Device](device.md)
 
-## factory
+### factory
 
-The interface for `context.factory`
+[!INCLUDE [factory-description](includes/factory-description.md)]
 
 **Type**: [Factory](factory.md)
 
-## formatting
+### formatting
 
-The interface for `context.formatting`
+[!INCLUDE [formatting-description](includes/formatting-description.md)]
 
 **Type**: [Formatting](formatting.md)
 
-## mode
+### mode
 
-The interface for `context.mode`
+[!INCLUDE [mode-description](includes/mode-description.md)]
 
 **Type**: [Mode](mode.md)
 
-## navigation
+### navigation
 
-The interface for `context.navigation`
+[!INCLUDE [navigation-description](includes/navigation-description.md)]
 
 **Type**: [Navigation](navigation.md)
 
-## parameters
+### parameters
 
-The data provided to the control. Structure defined by the component’s manifest, corresponding to parameter and data-set nodes
+The data provided to the component. Structure defined by the component’s manifest, corresponding to parameter and data-set nodes.
 
 **Type**: `TInputs`
 
-## resources
+### resources
 
 The resource interface of `context.resource`
 
-**Type**: [Resources](resources.md)
+[!INCLUDE [resource-description](includes/resources-description.md)]
 
-## updatedProperties
+### updatedProperties
 
-An array of strings indicated which values have changed on the context object since the last time it was passed to this control
+An array of strings indicated which values have changed on the context object since the last time it was passed to this component.
 
 **Type**: `string[]`
 
-## userSettings
+### userSettings
 
-The interface for `context.userSettings`
+[!INCLUDE [usersettings-description](includes/usersettings-description.md)]
 
 **Type**: [UserSettings](usersettings.md)
 
-## utils
+### utils
 
-The interface for `context.utils`
+[!INCLUDE [utility-description](includes/utility-description.md)]
 
 **Type**: [Utility](utility.md)
 
-## webAPI
+### webAPI
 
-The interface for `context.webApi`
+[!INCLUDE [webapi-description](includes/webapi-description.md)]
 
 **Type**: [WebApi](webapi.md)
 

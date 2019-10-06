@@ -5,7 +5,7 @@ keywords:
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -17,9 +17,13 @@ ms.assetid: 4e35efbc-4557-41c6-9821-6198bda9a32a
 
 [!INCLUDE[./includes/gettitle-description.md](./includes/gettitle-description.md)]
 
+## Available for 
+
+Model-driven apps
+
 ## Syntax
 
-`getTitle()`
+`context.parameters.dataset.getTitle()`
 
 ## Return Value
 

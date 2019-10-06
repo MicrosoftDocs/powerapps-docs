@@ -54,7 +54,8 @@ The following outlines how to generate the required Azure Active Directory (AAD)
 3.	This prompts you to trust the modules from PSGallery. Select **A (Yes to all)**.
 1. Copy and paste the following into the PowerShell prompt:
 
-``` function New-PowerAppsCheckerAzureADApplication
+```powershell 
+function New-PowerAppsCheckerAzureADApplication
 {
     [CmdletBinding()]
     param(
@@ -195,7 +196,8 @@ The set solution version task updates the version of a solution.
 | **Parameters** | **Description** |
 |---------------------------|----|
 | PowerApps environment URL  | The service endpoint for the environment where you want to deploy the package.  Defined under **Service Connections** in **Project Settings**. |
-| Package file  | The path and file name of the package that you want to deploy |
+| Solution name  | The name of the solution you want to set the Version Number for |
+| Solution Version Number | Version number to set, using format `major.minor.build.revision` e.g. **1.0.0.1** |
 
 ### PowerApps deploy package
 
@@ -204,7 +206,6 @@ The deploy package task deploys a package to an environment. Deploying a package
 | **Parameters** | **Description** |
 |---------------------------|----|
 | PowerApps environment URL  | The service endpoint for the target environment that holds the solution you want to update.  Defined under **Service Connections** in **Project Settings**. |
-| Solution name  | The name of the solution you want to set the Version Number for |
 
 ## Environment management tasks
 

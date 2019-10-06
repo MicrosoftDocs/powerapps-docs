@@ -5,7 +5,7 @@ keywords:
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -13,6 +13,18 @@ ms.topic: "article"
 ---
 
 # Entity
+
+Defines an entity sent or received from the SDK through the Web API.
+
+## Available for
+
+Model-driven apps
+
+## Parameters
+
+| Parameter Name|Type|Required|Description|
+| ------------- |----|--------|-----------|
+|key|`String`|Yes||
 
 ### Related topics
 

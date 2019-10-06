@@ -5,7 +5,7 @@ keywords:
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -15,8 +15,6 @@ ms.assetid: 90f2b4c9-7396-4ab9-bc9f-810189dc18b7
 
 # library element
 
-[!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
-
 [!INCLUDE [library-description](includes/library-description.md)]
 
 ## Attributes
@@ -25,7 +23,7 @@ ms.assetid: 90f2b4c9-7396-4ab9-bc9f-810189dc18b7
 |--|--|--|--|
 |`name`|Name of the library|`string`|Yes|
 |`version`|The current library version|Positive integer|Yes|
-|`order`|The order in which the library files must load|Positive integer|Yes|
+|`order`|The order in which the library files should load|Positive integer|Yes|
 
 ## Parent Elements
 

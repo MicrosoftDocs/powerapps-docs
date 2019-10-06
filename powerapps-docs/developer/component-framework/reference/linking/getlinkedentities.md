@@ -5,7 +5,7 @@ keywords:
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -16,6 +16,10 @@ ms.assetid: feb4e449-935f-452e-a67a-d3cf3c2bdcfb
 # getLinkedEntities
 
 [!INCLUDE [getlinkedentities-description](includes/getlinkedentities-description.md)]
+
+## Available for 
+
+Model-driven apps
 
 ## Syntax
 

@@ -5,7 +5,7 @@ keywords:
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -15,9 +15,11 @@ ms.assetid: 45f4872d-c1d2-4c5a-8721-251b96ede370
 
 # property element
 
-[!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
-
 [!INCLUDE [property-description](includes/property-description.md)]
+
+## Available for
+
+Model-driven apps and canvas apps (experimental preview)
 
 ## Attributes
 
@@ -30,6 +32,7 @@ ms.assetid: 45f4872d-c1d2-4c5a-8721-251b96ede370
 |`required`|Whether the property is required or not|`boolean`|Optional|
 |`of-type-group`|Name of the type-group as defined in manifest|`string`|Optional|
 |`description-key`|Used in the customization screens as localized strings that describes the description of the property.|`string`|Optional|
+|`default-value`|The default configuration value provided to the component. In model-driven apps, this attribute is only allowed on inputs since the bound parameters expect to have a field associated.|`string`|Optional|
 
 ### Remarks
 

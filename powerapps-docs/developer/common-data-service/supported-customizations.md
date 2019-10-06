@@ -40,7 +40,7 @@ The following customization methods can be used to produce fully supported custo
 
 - Settings in the web application. For more information, see [Administer PowerApps](../../administrator/admin-guide.md).
 
-- Reporting Services. For more information, see [Reporting and Analytics Guide for Dynamics 365 Customer Engagement](/dynamics365/customer-engagement/analytics/reporting-analytics-with-dynamics-365).
+- Reporting Services. For more information, see [Add reporting to your model-driven app](/powerapps/maker/model-driven-apps/add-reporting-to-app).
 
 > [!NOTE]
 > Fully supported means that developer support can provide assistance for customizations and that application support can help customers running those modifications.
@@ -82,7 +82,7 @@ The ability to create custom business logic using the plug-in mechanism describe
 
 ### Workflow extensions
 
-The ability to create custom workflow activities (assemblies) to be called from workflow rules is fully supported and upgradeable. Custom workflow activities can only be registered and executed in the sandbox (isolation). More information: [Workflow extensions](workflow/workflow-extensions.md) Automate your business processes in Customer Engagement
+The ability to create custom workflow activities (assemblies) to be called from workflow rules is fully supported and upgradeable. Custom workflow activities can only be registered and executed in the sandbox (isolation). More information: [Workflow extensions](workflow/workflow-extensions.md)
 
 ## Support for .NET Framework Versions
 
@@ -90,10 +90,9 @@ The following describes the support considerations for custom code written the M
 
 - Any web service client created by using the Microsoft .NET Framework 4.6.2 or higher that calls the web services is fully supported in Common Data Service.
 
-> [!IMPORTANT]
-> You should build any custom client applications using Microsoft .NET Framework 4.6.2 or later. Only applications using Transport Level Security (TLS) 1.2 or better security will be allowed to connect. TLS 1.2 is not the default protocol used by .NET Framework 4.5.2, but it is in .NET Framework 4.6.2.
-> 
-> If clients designed for earlier versions of  Dynamics 365 Customer Engagement are designed to connect to any version or deployment type you can prepare by re-compiling the application to use .NET Framework 4.6.2. More information: [Blog Post: Updates coming to Dynamics 365 Customer Engagement connection security](https://blogs.msdn.microsoft.com/crm/2017/09/28/updates-coming-to-dynamics-365-customer-engagement-connection-security/)
+    > [!IMPORTANT]
+    > You should build any custom client applications using Microsoft .NET Framework 4.6.2 or later. Only applications using Transport Level Security (TLS) 1.2 or better security will be allowed to connect. TLS 1.2 is not the default protocol used by .NET Framework 4.5.2, but it is in .NET Framework 4.6.2.
+
 
 - Any .NET assembly that is created with the Microsoft .NET Framework 4.6.2 for use in Common Data Service as a plug-in assembly or as a custom workflow activity is supported.
 

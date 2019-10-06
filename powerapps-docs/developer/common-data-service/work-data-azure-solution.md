@@ -4,8 +4,6 @@ description: "The ServiceBusPlugin plug-in contains the business logic to post t
 keywords: ""
 ms.date: 06/01/2019
 ms.service: powerapps
-ms.custom:
-  - ""
 ms.topic: article
 ms.assetid: 1ef66369-71c9-3b89-ac1a-09d523ca737b
 author: brandonsimons # GitHub ID

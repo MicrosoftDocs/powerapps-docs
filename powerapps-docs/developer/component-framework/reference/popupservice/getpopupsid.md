@@ -5,7 +5,7 @@ keywords:
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -17,6 +17,10 @@ ms.assetid: 08b572ab-3c66-4406-9de7-869026973ce8
 # getPopupsId
 
 [!INCLUDE [getpopupsid-description](includes/getpopupsid-description.md)]
+
+## Available for 
+
+Model-driven apps
 
 ## Syntax
 

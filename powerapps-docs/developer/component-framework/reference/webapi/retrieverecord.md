@@ -5,7 +5,7 @@ keywords:
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -17,9 +17,13 @@ ms.assetid: dddeecc9-5067-420d-8bd7-4c914218e969
 
 [!INCLUDE [retrieverecord-description](includes/retrieverecord-description.md)]
 
+## Available for 
+
+Model-driven apps
+
 ## Syntax
 
-`retrieveRecord(entityLogicalName, id, options).then(successCallback, errorCallback);`
+`context.webAPI.retrieveRecord(entityLogicalName, id, options).then(successCallback, errorCallback);`
 
 ## Parameters
 
@@ -71,7 +75,8 @@ ms.assetid: dddeecc9-5067-420d-8bd7-4c914218e969
 
 ## Return Value
 
-On success, returns a promise containing a JSON object with the retrieved attributes and their values.
+Type: [Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)<[Entity](../entity.md)>
+
 
 
 ### Related topics

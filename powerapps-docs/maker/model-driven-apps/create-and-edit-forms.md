@@ -1,7 +1,7 @@
 ---
-title: "Create or edit forms using the model-driven form designer | MicrosoftDocs"
+title: "Create, edit or configure forms using the model-driven form designer | MicrosoftDocs"
 ms.custom: ""
-ms.date: 04/21/2019
+ms.date: 08/26/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -23,10 +23,8 @@ search.app:
   - D365CE
 ---
 
-# Create or edit forms using the form designer 
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
-
-Use the new form designer to create or edit forms for model-driven apps. 
+# Create, edit, or configure forms using the form designer 
+Use the new form designer to create, edit, or configure forms for model-driven apps. 
 
 > [!IMPORTANT]
 > The new model-driven form designer does not currently support editing card forms. More information: [Form types](types-forms.md)
@@ -36,10 +34,10 @@ Use the new form designer to create or edit forms for model-driven apps.
 2. On the left navigation pane, expand **Data**, and then select **Entities**. 
 3. Select an entity, such as the account entity, and then select the **Forms** tab. 
 4. Select **Add form**, and then select one of the following
-    - **Main form (preview)**  
+    - **Main form**  
     The contents of the new form are filled using the existing main form definition. If multiple main forms exist, the form at the top of the list in the form order is used to fill the new form. 
-    - **Quick create form (preview)**
-    - **Quick view form (preview)**
+    - **Quick create form**
+    - **Quick view form**
 5. When you are done making changes to the form, select **Save** to save the form, or select **Publish** if you want to save and make your changes visible to app users.  
 
 ## Edit a form 
@@ -47,16 +45,29 @@ Use the new form designer to create or edit forms for model-driven apps.
 2. On the left navigation pane, expand **Data**, and then select **Entities**. 
 3. Select an entity, such as the account entity, and then select the **Forms** tab.
 4. Select the form name that you want to edit.  
-    - You can also select the row for a form, and then in the command bar, select **Edit form (preview)**
-    - Another alternative is to select **...** next to the form name, and then in the menu, select **Edit form (preview)**. 
+    - You can also select the row for a form, and then in the command bar, select **Edit form**
+    - Another alternative is to select **...** next to the form name, and then in the menu, select **Edit form**. 
 5. When you are done making changes to the form, select **Save** to save the form, or select **Publish** if you want to save and make your changes visible to app users. 
+
+## Configure a form
+These are the properties available to configure a form when you create or edit a form using the form designer.
+
+|Name  |Description  |
+|---------|---------|
+|**Title**  | Enter a name that is meaningful to other makers and app users. This name is shown to app users. If users have access to multiple forms for an entity they will use this name to differentiate between the available forms. <br /><br />This property is required. |
+|**Description** |  Enter a description that explains how the form is different from other main forms. This description is only shown to makers in the list of forms for an entity in the solution explorer. |
+|**Max Width** | Set a maximum width (in pixels) to limit the width of the form. The default value is 1900. <br /><br />This property is required. |
+|**Show image** | Show the entity’s **Primary Image** if it has one set. This setting will enable showing the image field in the header of the form. <br /><br /> See Enable or disable entity options for more information about entity options. |
 
 ## See also
 [Overview of the model-driven form designer](form-designer-overview.md)  
-[Add, move or delete fields on a form using the form designer](add-move-or-delete-fields-on-form.md)  
-[Add, move or delete sections on a form using the form designer](add-move-or-delete-sections-on-form.md)  
-[Add, move or delete tabs on a form using the form designer](add-move-or-delete-tabs-on-form.md)  
-[Properties available in the form designer](form-designer-properties.md)  
-[Configuring header properties in the form designer](form-designer-header-properties.md)  
+[Add, configure, move, or delete fields on a form](add-move-or-delete-fields-on-form.md)  
+[Add, configure, move, or delete components on a form](add-move-configure-or-delete-components-on-form.md)  
+[Add, configure, move, or delete sections on a form](add-move-or-delete-sections-on-form.md)  
+[Add, configure, move, or delete tabs on a form](add-move-or-delete-tabs-on-form.md)  
+[Configure header properties in the form designer](form-designer-header-properties.md)  
+[Add and configure a sub-grid component on a form](form-designer-add-configure-subgrid.md)  
+[Add and configure a quick view component on a form](form-designer-add-configure-quickview.md)  
+[Configure a lookup component on a form](form-designer-add-configure-lookup.md)  
 [Using the tree view in the form designer](using-tree-view-on-form.md)  
-[Create and edit fields](../common-data-service/create-edit-field-portal.md)
+[Create and edit fields](../common-data-service/create-edit-field-portal.md)  

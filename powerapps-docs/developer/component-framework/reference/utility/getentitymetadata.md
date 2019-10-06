@@ -5,7 +5,7 @@ keywords:
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -17,20 +17,24 @@ ms.assetid: 6a334af7-ca5b-449c-b90f-0901824654d2
 
 [!INCLUDE [getentitymetadata-description](includes/getentitymetadata-description.md)]
 
+## Available for 
+
+Model-driven apps
+
 ## Syntax
 
-`getEntityMetadata(entityName, attributes)`
+`context.utils.getEntityMetadata(entityName, attributes)`
 
 ## Parameters
 
 | Parameter Name|Type|Required|Description|
 | ------------- |----|--------|-----------|
-|entityName|`string`|yes|The logical name of the entity.|
-|attributes|`string[]`|yes|The attributes to get metadata for.
+|entityName|`String`|Yes|The logical name of the entity.|
+|attributes|`String[]`|No|The attributes to get metadata for.|
 
 ## Return Value
 
-Type: `Promise`
+Type: `Promise<EntityMetadata>`
 
 
 ### Related topics
