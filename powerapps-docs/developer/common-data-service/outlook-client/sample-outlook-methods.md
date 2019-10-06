@@ -17,7 +17,7 @@ search.app:
 ---
 # Sample: Use Dynamics 365 for Outlook methods
 
-This sample code is for Common Data Service. To download the sample, refer [Sample: Use Dynamics 365 for Outlook methods](https://msdn.microsoft.com/en-us/library/gg309513.aspx).
+This sample code is for Common Data Service. To download the sample, refer [Sample: Use Dynamics 365 for Outlook methods](https://msdn.microsoft.com/library/gg309513.aspx).
 
 ## Prerequisites
 

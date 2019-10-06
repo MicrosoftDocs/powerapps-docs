@@ -3,8 +3,9 @@ title: Mode | Microsoft Docs
 description: 
 keywords:
 ms.author: nabuthuk
+author: Nkrb
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -14,37 +15,40 @@ ms.assetid: 8b51654c-ee67-40f8-ae5b-be684dad3520
 
 # Mode
 
-[!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
 
 [!INCLUDE [mode-description](includes/mode-description.md)]
 
+## Available for 
+
+Model-driven apps
+
 ## Properties
 
-## allocatedHeight
+### allocatedHeight
 
 Height in pixels allocated to the component.
 
 **Type**: `number`
 
-## allocatedWidth
+### allocatedWidth
 
 Width in pixels allocated to the component.
 
 **Type**: `number`
 
-## isControlDisabled
+### isControlDisabled
 
 Whether the component is disabled.
 
 **Type**: `string`
 
-## isVisible
+### isVisible
 
 Whether the component is visible on the page.
 
 **Type**: `boolean`
 
-## label
+### label
 
 The defined component label.
 

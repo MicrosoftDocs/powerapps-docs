@@ -3,7 +3,8 @@ title: Code Element | Microsoft Docs
 description: 
 keywords:
 ms.author: nabuthuk
-manager: jdaly
+author: Nkrb
+manager: kvivek
 ms.date: 06/4/2018
 ms.reviewer: ""
 ms.service: "crm-online"
@@ -18,16 +19,18 @@ ms.assetid: 44d9fcfb-0cd8-48cc-aace-dd589099dd79
 
 # code element
 
-[!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
-
 [!INCLUDE [code-description](includes/code-description.md)]
+
+## Available for
+
+Model-driven apps and canvas apps (experimental preview)
 
 ## Attributes
 
-|Name|Description|Type|Required|
-|--|--|--|--|
-|`path`|Place where files are located|`string`|Yes|
-|`order`|The order in which files must load|Positive integer|Yes|
+|Name|Description|Type|Required|Available for|
+|--|--|--|--|-----|
+|`path`|Place where the resource files are located|`String`|Yes|Model-driven apps and canvas apps (experimental preview) (experimental preview)|
+|`order`|The order in which the resource files should load|`Positive integer`|Yes|Model-driven apps and canvas apps (experimental preview) (experimental preview)|
 
 ## Parent Elements
 

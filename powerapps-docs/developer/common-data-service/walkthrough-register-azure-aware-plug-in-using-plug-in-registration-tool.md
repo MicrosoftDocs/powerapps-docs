@@ -3,8 +3,7 @@ title: "Walkthrough: Register an Azure-aware plug-in using the Plug-in Registrat
 description: "The walkthrough demonstrates how to register a service endpoint step using the Plug-in Registration Tool. "
 keywords: ""
 ms.date: 06/01/2019
-ms.service:
-  - powerapps
+ms.service: powerapps
 ms.custom:
   - ""
 ms.topic: article

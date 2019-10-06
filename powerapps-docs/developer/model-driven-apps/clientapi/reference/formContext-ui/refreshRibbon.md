@@ -32,7 +32,7 @@ search.app:
 
 ## Remarks
 
- This function is typically used when a ribbon <EnableRule> (RibbonDiffXml) depends on a value in the form. After your code changes a value that is used by a rule, use this method to force the ribbon to re-evaluate the data in the form so that the rule can be applied.
+ This function is typically used when a ribbon `<EnableRule>` (RibbonDiffXml) depends on a value in the form. After your code changes a value that is used by a rule, use this method to force the ribbon to re-evaluate the data in the form so that the rule can be applied.
 
 ### Related topics
 

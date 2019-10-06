@@ -2,7 +2,7 @@
 title: "Tutorial: Create workflow extension (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This tutorial will show you the process to extend the workflow designer to add custom activities and logic using a workflow assembly" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 06/04/2019
+ms.date: 07/16/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.topic: "article"
@@ -21,7 +21,7 @@ This tutorial will show you the process to extend the workflow designer to add c
 
 This tutorial uses a very simple example to focus on the requirements and process to:
 
-- Create a Visual Studio Activity Library project
+- Create a Visual Studio Class Library project
 - Add a CodeActivity class
 - Define input and output parameters
 - Add your business logic
@@ -32,7 +32,6 @@ This tutorial uses a very simple example to focus on the requirements and proces
 
 ## Prerequisites
 
-- You must have Windows Workflow Foundation included as an individual component with Visual Studio 2017.  More information: [Visual Studio requirements](workflow-extensions.md#visual-studio-requirements)
 - A Common Data Service instance and administrator privileges
 - Understanding of how to configure workflows. More information: [Classic Common Data Service workflows](/flow/workflow-processes)
 - A model-driven app that allows you to edit accounts.
@@ -69,46 +68,56 @@ In the second step, an **Update Record** action will assign the output of the **
 
 ![Update the credit limit](media/tutorial-create-workflow-activity-step2.png)
 
-## Create a Visual Studio Activity Library project
+## Create a Visual Studio Class Library project
 
 This project will create a simple workflow assembly that will increment an decimal value by 10.
 
 1. Start Visual Studio.
 1. On the **File** menu, click **New**, and then click **Project**.
-1. In the **New Project** dialog box, expand **Visual C#** and select **Workflow**, and then select **Activity Library**.
-1. Specify a name and location for the solution, and then click **OK**.
+1. Search for *Class library* and select **Class Library (.NET Framework)**.
+
+    ![Searching for class library (.NET Framework)](media/create-new-class-library-project.png)
+
+1. Click **Next**.
+1. Specify a name and location for the solution.
+
+    ![Configure your new project dialog in Visual Studio 2019](media/configure-your-new-project.png)
 
     > [!NOTE]
-    > Choose a Solution name that makes sense for your project. In this example we will use `SampleWorkflowActivity`.
+    > Choose a Project name that makes sense for your project. In this example we will use `SampleWorkflowActivity`.
 
-    ![create workflow activity project](media/tutorial-create-workflow-activity-create-workflow-activity-project.png)
-
-1. Navigate to the **Project** menu and select **Properties**. On the **Application** tab, specify **.NET Framework 4.6.2** as the target framework.
+1. Click **Create**.
+1. In the **Solution Explorer**, right-click on the project select **Properties**. On the **Application** tab, verify that  **.NET Framework 4.6.2** is set as the target framework.
 
     ![set project properties](media/tutorial-create-workflow-activity-workflow-project.png)
 
-1. Delete the `Activity1.xaml` file in the project.
-1. In the Solution Explorer, right-click the project and select **Manage NuGet Packages…** .
+1. In the **Solution Explorer**, right-click the project and select **Manage NuGet Packages…** .
 
     ![manage nuget packages](media/tutorial-create-workflow-activity-manage-nuget-packages.png)
 
 1. Browse for the [Microsoft.CrmSdk.Workflow](https://www.nuget.org/packages/Microsoft.CrmSdk.Workflow/) NuGet package and install it.
 
+    ![Install Microsoft.CrmSdk.Workflow Workflow NuGet Package](media/select-install-microsoft.crmsdk.workflow-nuget-package.png)
+
     > [!NOTE]
     > Make sure that the package you are installing is owned by [crmsdk](https://www.nuget.org/profiles/crmsdk). This package will include the `Microsoft.Xrm.Workflow.dll` include a dependency on the [Microsoft.CrmSdk.CoreAssemblies](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreAssemblies/) package so that the required `Microsoft.Xrm.Sdk.dll` assembly is included as well. 
 
-1. You must click **I Accept** in the License Acceptance dialog.
+1. You must click **I Accept** in the **License Acceptance** dialog.
 
     ![Accept license agreement](media/tutorial-create-workflow-activity-license-acceptance.png)
 
-## Add a CodeActivity class
+## Rename the class file
 
-1. Add a class file (.cs) to the project. In **Solution Explorer**, right-click the project, select **Add**, and then click **Class**. In the **Add New Item**dialog box, type a name for the class, and then click **Add**.
+1. In **Solution Explorer**, right-click the default Class1.cs file and and select **Rename**.
+
+    ![Rename Class1.cs file](media/rename-class1-file.png)
 
     > [!NOTE]
     > Choose a class name that makes sense for your activity. In this example, we will name the class `IncrementByTen`.
 
-    ![Add a class](media/tutorial-create-workflow-activity-add-class.png)
+1. Select **Yes** in the dialog box that asks if you would like to rename the class as well.
+
+    ![Select Yes to rename the class as well](media/rename-file-dialog.png)
 
 1. Open the IncrementByTen.cs file, and add the following using directives:
 
@@ -181,11 +190,15 @@ Add the logic within the Execute method to apply the logic to increment the inpu
 
 ## Sign and build the assembly
 
-1. Sign the assembly. In the project properties, under the **Signing** tab, select **Sign the assembly** and provide a key file name. Custom workflow activity (and plug-in) assemblies must be signed. You do not need to set a password for the purpose of this tutorial. For this example we created a new strong name key file named `SampleWorkflowActivity.snk`
+1. Custom workflow activity (and plug-in) assemblies must be signed. In the project properties, under the **Signing** tab, select **Sign the assembly**. Below **Choose a strong name key file**, select the **&lt;New...&gt;** option.
+    You do not need to set a password for the purpose of this tutorial. For this example we created a new strong name key file named `SampleWorkflowActivity.snk`
 
     ![sign assembly](media/tutorial-create-workflow-activity-sign-assembly.png)
 
 1. Build the solution in Debug mode and verify that the `SampleWorkflowActivity.dll` assembly is in the `/bin/Debug` folder.
+
+> [!NOTE]
+> While developing an assembly it is fine to use the **Debug** build configuration. When you deploy your assembly to a production server or in a solution, you should use the **Release** build configuration.
 
 ## Register your assembly
 
@@ -231,17 +244,17 @@ Custom workflow activity assemblies are registered using the Plug-in Registratio
 
     ![Save workflow activity properties](media/tutorial-create-workflow-activity-set-workflow-activity-properties.png)
 
-    > [!NOTE]
-    > These values will not be visible in the unmanaged solution when you test your workflow activity. However, when you export a managed solution that includes this workflow activity these values will be visible in the process designer.
-
 ## Test your assembly
 
 You can test your new workflow activity by creating a process that will use it. Use these steps to create the Workflow process described in the [Goal](#goal) section above:
 
-1. Open [PowerApps](http://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)
-1. Switch the design mode from **Canvas** to **Model-Driven**.
+1. Open [PowerApps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)
 1. Select **Solutions**.
-1. Open the **Common Data Service Default Solution**.
+1. Open the **CDS Default Publisher** solution.
+1. In the menu, expand the **...** and choose **Switch to classic**.
+    
+    ![Switch to classic user interface](media/switch-to-classic-solution-ui.png)
+
 1. Select **Processes** in the **Components** list
 1. Select **New** and in the **Create Process** dialog enter the following:
 
@@ -268,14 +281,11 @@ You can test your new workflow activity by creating a process that will use it. 
     ![configuration of a test workflow](media/tutorial-create-workflow-activity-configuration-test-workflow.png)
 
     > [!NOTE]
-    > Setting Scope to Organization creates an on-demand workflow that can be applied by anyone in the organization.
+    > Setting **Scope** to **Organization** creates a workflow that can be applied by anyone in the organization.
 
 1. Add the following **Step**:
 
     ![Add the SampleWorkflowActivity.IncrementByTen step](media/tutorial-create-workflow-activity-use-sample-step.png)
-
-    > [!NOTE]
-    > As mentioned earlier, the custom values you set in [Register your assembly](#register-your-assembly) will not be applied in the designer until after the workflow activity is imported as part of a managed solution.
 
 1. Set the Step **Description** to **Get incremented Account Credit Limit** and click **Set properties**.
 1. Set the value of the **Decimal input** property to the Credit Limit of the account with a default value of 0.
@@ -316,15 +326,13 @@ You can test your new workflow activity by creating a process that will use it. 
 
 To distribute a custom workflow activity in a solution, you must add the registered assembly that contains it to an unmanaged solution.
 
-1. Open the unmanaged solution you want to add the assembly to using Solution Explorer.
-1. Select **Plug-in Assemblies** in the list of components.
-1. Click **Add Existing** in the command bar.
+1. Open the unmanaged solution you want to add the assembly to using [PowerApps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)
+1. Select **Add existing** > **Other** > **Plugin assembly**
 
-    ![select add existing](media/tutorial-create-workflow-activity-add-existing-solution-component.png)
+    ![Add existing plugin assembly](media/add-existing-plugin-assembly.png)
 
-1. In the **Select solution components** dialog, select the SampleWorkflowActivity you created and click **OK**.
-
-    ![Add SampleWorkflowActivity](media/tutorial-create-workflow-activity-add-solution-component.png)
+1. Search for the Plugin assembly by name, in this case 'SampleWorkflowActivity'.
+1. Select the plugin assembly and select **Add**.
 
 ### See also
 

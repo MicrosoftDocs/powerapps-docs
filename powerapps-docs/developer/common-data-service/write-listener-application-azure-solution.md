@@ -3,8 +3,7 @@ title: "Write a listener application for a Microsoft Azure solution (Common Data
 description: "The topic describes how to write an Azure solution listener application that can read and process Dynamics 365 (online) Common Data Service messages that are posted to the Azure Service Bus." # 115-145 characters including spaces. This abstract displays in the search result."
 keywords: ""
 ms.date: 10/31/2018
-ms.service:
-  - powerapps
+ms.service: powerapps
 ms.custom:
   - ""
 ms.topic: article
@@ -22,7 +21,7 @@ search.app:
 
 # Write a listener application for a Azure solution
 
-This topic describes how to write an Azure solution  listener application that can read and process Dynamics 365 (online) Common Data Service messages that are posted to the Azure Service Bus. As a prerequisite, you should familiarize yourself with how to write a Azure Service Bus listener before trying to learn the specifics of a Dynamics 365 listener. For more information, see the [Azure Service Bus documentation](https://azure.microsoft.com/en-us/documentation/services/service-bus/).  
+This topic describes how to write an Azure solution  listener application that can read and process Dynamics 365 (online) Common Data Service messages that are posted to the Azure Service Bus. As a prerequisite, you should familiarize yourself with how to write a Azure Service Bus listener before trying to learn the specifics of a Dynamics 365 listener. For more information, see the [Azure Service Bus documentation](https://azure.microsoft.com/documentation/services/service-bus/).  
   
 <a name="bkmk_writequeued"></a>
 
@@ -33,12 +32,12 @@ A message *queue* is a repository of messages received at a service bus endpoint
 > [!IMPORTANT]
 >  When writing a queue listener, check each message header action to determine if the message originated from Dynamics 365. For information on how to do this see [Filter messages](write-listener-application-azure-solution.md#filter).  
   
-You can do a destructive message read using [Receive](https://docs.microsoft.com/dotnet/api/microsoft.servicebus.messaging.queueclient?redirectedfrom=MSDN&view=azure-dotnet#Microsoft_ServiceBus_Messaging_QueueClient_Receive) in [ReceiveAndDelete](https://docs.microsoft.com/dotnet/api/microsoft.servicebus.messaging.receivemode?redirectedfrom=MSDN&view=azure-dotnet#microsoft_servicebus_messaging_receivemode) mode, where the message is read and removed from the queue, or a non-destructive read using [PeekLock](https://docs.microsoft.com/dotnet/api/microsoft.servicebus.messaging.receivemode?redirectedfrom=MSDN&view=azure-dotnet#microsoft_servicebus_messaging_receivemode) mode, where the message is read but still available in the queue. The persistent queue listener sample code provided in this SDK does a destructive read. For more information about reading messages from a queue, see [How to Receive Messages from a Queue](http://azure.microsoft.com/documentation/articles/service-bus-dotnet-how-to-use-queues/#how-to-receive-messages-from-a-queue).  
+You can do a destructive message read using [Receive](https://docs.microsoft.com/dotnet/api/microsoft.servicebus.messaging.queueclient?redirectedfrom=MSDN&view=azure-dotnet#Microsoft_ServiceBus_Messaging_QueueClient_Receive) in [ReceiveAndDelete](https://docs.microsoft.com/dotnet/api/microsoft.servicebus.messaging.receivemode?redirectedfrom=MSDN&view=azure-dotnet#microsoft_servicebus_messaging_receivemode) mode, where the message is read and removed from the queue, or a non-destructive read using [PeekLock](https://docs.microsoft.com/dotnet/api/microsoft.servicebus.messaging.receivemode?redirectedfrom=MSDN&view=azure-dotnet#microsoft_servicebus_messaging_receivemode) mode, where the message is read but still available in the queue. The persistent queue listener sample code provided in this SDK does a destructive read. For more information about reading messages from a queue, see [How to Receive Messages from a Queue](https://azure.microsoft.com/documentation/articles/service-bus-dotnet-how-to-use-queues/#how-to-receive-messages-from-a-queue).  
   
 A *topic* is similar to a queue but implements a publish/subscribe model. One or more listeners can subscribe to the topic and receive messages from its queue. More information: [Queues, Topics, and Subscriptions](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-queues-topics-subscriptions)  
   
 > [!IMPORTANT]
->  To use these queue or topic contracts, you must write your listener applications using the [Azure SDK](http://azure.microsoft.com/downloads/archive-net-downloads/) version 1.7 or higher.  
+>  To use these queue or topic contracts, you must write your listener applications using the [Azure SDK](https://azure.microsoft.com/downloads/archive-net-downloads/) version 1.7 or higher.  
   
 Use of queues and topics in your multi-system software design can result in the decoupling of systems. If the listener application ever becomes unavailable, the message delivery from Dynamics 365 will still succeed and the listener application can continue processing the queue message when it is back online. More information: [Queues, Topics, and Subscriptions](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-queues-topics-subscriptions)  
   

@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 11/28/2018
+ms.date: 08/09/2019
 ms.author: anneta
 search.audienceType: 
   - maker
@@ -111,9 +111,212 @@ To assign a role, you must have **System administrator** permissions for a Commo
 1. In the sharing panel, select **Assign a security role** under **Data permissions**.
 
 1. Select the role or roles in Common Data Service that you want to assign to the user or the security group in Azure AD with which you want to share the app.
-
-    ![Security role list](media/share-app/cds-assign-security-role-list.png)
+     > [!div class="mx-imgBorder"] 
+     > ![Security role list](media/share-app/cds-assign-security-role-list.png "Security role list")
 
 ### Common Data Service (previous version)
 
 When you share an app that's based on an older version of Common Data Service, you must share the runtime permission to the service separately. If you don’t have permission to do this, see your environment administrator.
+
+## Share with guests
+
+> [!IMPORTANT]
+> - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback. 
+> - Preview features have limited support by Microsoft Support and may be available only in selected geographic areas. 
+
+PowerApps canvas apps can be shared with guest users of an Azure Active Directory tenant. This enables inviting external business partners, contractors, and third parties to run your company’s canvas apps. 
+
+> [!NOTE]
+> Guests may only be assigned the **User** role, and not the **Co-owner** role, for apps shared with them.
+
+### Prerequisites
+- In Azure Active Directory (Azure AD), enable B2B external collaboration for the tenant. More information: [Enable B2B external collaboration and manage who can invite guests](/azure/active-directory/b2b/delegate-invitations)
+    - Enable B2B external collaboration is on by default. However, the settings can be changed by a tenant admin.  For more information about Azure AD B2B, see [What is guest user access in Azure AD B2B?](/azure/active-directory/b2b/what-is-b2b)  
+- Access to an account that can add guest users to an Azure AD tenant. Admins and users with the Guest Inviter role can add guests to a tenant.   
+- The guest user must have a PowerApps license assigned through one of the following tenants:
+    - The tenant hosting the app being shared.
+    - The home tenant of the guest user.
+
+### Steps to grant guest access
+1. Select **New guest user** to add guest users in Azure AD. More information: [Quickstart: Add a new guest user in Azure AD](/azure/active-directory/b2b/b2b-quickstart-add-guest-users-portal).
+    > [!div class="mx-imgBorder"] 
+    > ![Add guest in Azure AD](media/share-app/guest_access_doc_1.png "Add guest in Azure AD")
+2. If the guest user doesn't already have a license in their home tenant, assign a license to the guest user.
+   - To assign guest users from admin.microsoft.com, see [Assign licenses to one user](/office365/admin/subscriptions-and-billing/assign-licenses-to-users).
+   - To assign guest users from portal.azure.com, see [Assign or remove licenses](/azure/active-directory/fundamentals/license-users-groups).
+ 
+   > [!IMPORTANT]
+   > You may need to disable the Microsoft 365 admin center preview to assign a license to a guest. 
+
+3. Share the canvas app. 
+    1. Sign in to https://make.powerapps.com  
+    2. Go to **Apps**, select a canvas app, and then on the command bar select **Share**. 
+    3. Enter an email address for a guest user from an Azure AD tenant. More information: [What is guest user access in Azure AD B2B?](/azure/active-directory/b2b/what-is-b2b)
+          > [!div class="mx-imgBorder"] 
+          > ![Share with guest](media/share-app/guest_access_doc_2.png "Share with guest")
+ 
+After you share an app for guest access, guests can discover and access apps shared with them from the email sent to them as part of sharing.
+
+> [!div class="mx-imgBorder"]  
+> ![Guests receive app share email](media/share-app/guest_access_doc_4.png "Guests receive app share email")
+
+### Frequently Asked Questions
+
+#### What’s the difference between canvas app guest access and PowerApps Portals? 
+Canvas apps enable building an app, tailored to digitizing a business processes, without writing code in a traditional programming language such as C#. Guest access for canvas apps enables teams of individuals made up of different organizations participating in a common business process to access the same app resources that may be integrated with a wide variety of Microsoft and third-party sources. More information: [Overview of canvas-app connectors for PowerApps](/powerapps/maker/canvas-apps/connections-list).
+
+[PowerApps Portals](/powerapps/maker/portals/overview) provide the ability to build low-code, responsive websites that allow external users to interact with the data stored in Common Data Service. It allows organizations to create websites that can be shared with users external to their organization either anonymously or through the login provider of their choice, such as LinkedIn, Microsoft Account, or other commercial login providers. 
+
+The following table outlines a few core capability differences between PowerApps Portals and canvas apps.  
+
+| | Interface | Authentication | Accessible data sources |
+|------|--------|----------|-------------------|
+| PowerApps Portals | Browser only experience | Allows anonymous and authenticated access | Common Data Service |
+| Canvas apps | Browser and mobile apps | Requires authentication via Azure AD | Any ~150 out-of-box connectors and any custom connector  |
+||
+
+#### Can guests access customized forms in SharePoint?
+Yes. Any user that can access a SharePoint list with a customized form can create and edit items in the list, using the form, without any PowerApps license.
+
+#### Can guests access apps embedded in SharePoint? 
+Yes. Though, access to canvas standalone apps require a PowerApps license including apps that are embedded. When embedding a canvas app in SharePoint via the Microsoft PowerApps embed control, enter the app id. To do this, enter the app ID in the **App web link or ID** box. 
+
+> [!div class="mx-imgBorder"]  
+> ![Embed canvas app in SharePoint for guests](media/share-app/guest_access_doc_5.PNG "Embed canvas app in SharePoint for guests")
+
+When embedding a canvas app in SharePoint via the iFrame HTML tag, reference the app using the full web URL. To find the URL, go to http://make.powerapps.com, select an app, select the **Details** tab, and the URL is displayed under **Web link**.
+
+> [!div class="mx-imgBorder"]  
+> ![Canvas app details](media/share-app/guest_access_doc_6.PNG "Canvas app details")
+
+#### How come guests can launch the app shared with them but connections fail to be created?
+As with non-guests, the underlying data source(s) accessed by the app must also be made accessible to the guest.
+
+#### What license must be assigned to my guest so they can run an app shared with them?
+The same license that’s required for non-guests to run an app. For instance, if the app doesn’t use premium connecters then a PowerApps P1 license is enough to assign to the guest.  
+
+
+|                                 | SharePoint customized form | Standalone canvas app using non-premium connectors | Standalone canvas app using premium connectors | Model driven app |
+|---------------------------------|----------------------------|----------------------------------------------------|------------------------------------------------|------------------|
+| SharePoint user (no PA license) | x                          |                                                    |                                                |                  |
+| PowerApps Included w/ Office    | x                          |                                                    |                                                |                  |
+| PowerApps Plan 1                | x                          | x                                                  |                                                |                  |
+| PowerApps Plan2                 | x                          | x                                                  | x                                              | x                |
+
+#### In PowerApps Mobile, how does a guest see apps for their home tenant?
+Any user that has accessed an canvas app, on their mobile device, that’s published in an Azure AD tenant that isn’t their home tenant must sign-out of PowerApps and sign back in to PowerApps Mobile.  
+
+#### Must a guest accept the Azure AD guest invitation prior to sharing an app with the guest?
+No. If a guest launches an app shared with them prior to accepting a guest invitation the guest will be prompted to accept the invitation as part of the sign-in experience while launching the app.  
+
+#### What Azure AD tenant are connections for a guest user created in?
+Connections for an app are always made in the context of the Azure AD tenant the app is associated. For instance, if an app is created in the Contoso tenant then connections made for Contoso internal and guest users are made in the context of the Contoso tenant.
+
+#### Can guests use Microsoft Graph via Microsoft Security Graph connector or a custom connector using Microsoft Graph APIs?
+No, Azure AD guests can't query Microsoft Graph to retrieve information for a tenant in which they’re a guest.
+
+#### What InTune policies apply to guests using my PowerApps?
+InTune only applies policies of a user’s home tenant. For instance, if Alice@Contoso.com shares an app with Vikram@Fabrikam.com, InTune continues to apply Fabrikam.com policies on Virkam’s device regardless of the PowerApps he runs.
+
+#### What connectors support guest access?
+All connectors that do not perform Azure AD authentication of any type supports guest access. The following table enumerates all connectors that perform Azure AD authentication and which connectors currently support guest access. Many of these will be updated leading up to general availability.
+
+| **Connector**                                     | **Supports guest access**                                              |
+|---------------------------------------------------|------------------------------------------------------------------------|
+| 10to8 Appointment Scheduling                      | No                                                                     |
+| Adobe Creative Cloud                              | No                                                                     |
+| Adobe Sign                                        | No                                                                     |
+| Asana                                             | No                                                                     |
+| AtBot Admin                                       | No                                                                     |
+| AtBot Logic                                       | No                                                                     |
+| Azure AD                                          | Yes                                                                    |
+| Azure Automation                                  | Yes                                                                    |
+| Azure Container Instance                          | Yes                                                                    |
+| Azure Data Factory                                | Yes                                                                    |
+| Azure Data Lake                                   | Yes                                                                    |
+| Azure DevOps                                      | No                                                                     |
+| Azure Event Grid                                  | No                                                                     |
+| Azure IoT Central                                 | Yes                                                                    |
+| Azure Key Vault                                   | No                                                                     |
+| Azure Kusto                                       | Yes                                                                    |
+| Azure Log Analytics                               | Yes                                                                    |
+| Azure Resource Manager                            | Yes                                                                    |
+| Basecamp 2                                        | No                                                                     |
+| Bitbucket                                         | No                                                                     |
+| Bitly                                             | No                                                                     |
+| bttn                                              | No                                                                     |
+| Buffer                                            | No                                                                     |
+| Business Central                                  | No                                                                     |
+| CandidateZip                                      | No                                                                     |
+| Capsule CRM                                       | No                                                                     |
+| Cloud PKI Management                              | No                                                                     |
+| Cognito Forms                                     | No                                                                     |
+| Common Data Service                               | No                                                                     |
+| Common Data Service (Legacy)                      | No                                                                     |
+| D&B Optimizer                                     | No                                                                     |
+| Derdack SIGNL4                                    | No                                                                     |
+| Disqus                                            | No                                                                     |
+| Document Merge                                    | No                                                                     |
+| Dynamics 365                                      | No                                                                     |
+| Dynamics 365 AI for Sales                         | Yes                                                                    |
+| Dynamics 365 for Fin & Ops                        | No                                                                     |
+| Enadoc                                            | No                                                                     |
+| Eventbrite                                        | No                                                                     |
+| Excel Online (Business)                           | No                                                                     |
+| Excel Online (OneDrive)                           | No                                                                     |
+| Expiration Reminder                               | No                                                                     |
+| FreshBooks                                        | No                                                                     |
+| GoToMeeting                                       | No                                                                     |
+| GoToTraining                                      | No                                                                     |
+| GoToWebinar                                       | No                                                                     |
+| Harvest                                           | No                                                                     |
+| HTTP with Azure AD                                | No                                                                     |
+| Infusionsoft                                      | No                                                                     |
+| Inoreader                                         | No                                                                     |
+| Intercom                                          | No                                                                     |
+| JotForm                                           | No                                                                     |
+| kintone                                           | No                                                                     |
+| LinkedIn                                          | No                                                                     |
+| Marketing Content Hub                             | No                                                                     |
+| Medium                                            | No                                                                     |
+| Metatask                                          | No                                                                     |
+| Microsoft Forms                                   | No                                                                     |
+| Microsoft Forms Pro                               | No                                                                     |
+| Microsoft Graph Security                          | No                                                                     |
+| Microsoft Kaizala                                 | No                                                                     |
+| Microsoft School Data Sync                        | No                                                                     |
+| Microsoft StaffHub                                | No                                                                     |
+| Microsoft Teams                                   | Yes                                                                    |
+| Microsoft To-Do (Business)                        | No                                                                     |
+| Muhimbi PDF                                       | No                                                                     |
+| NetDocuments                                      | No                                                                     |
+| Office 365 Groups                                 | Yes                                                                    |
+| Office 365 Outlook                                | No                                                                     |
+| Office 365 Users                                  | Yes                                                                    |
+| Office 365 Video                                  | No                                                                     |
+| OneDrive                                          | No                                                                     |
+| OneDrive for Business                             | No                                                                     |
+| OneNote (Business)                                | No                                                                     |
+| Outlook Customer Manager                          | No                                                                     |
+| Outlook Tasks                                     | Yes                                                                    |
+| Outlook.com                                       | No                                                                     |
+| Paylocity                                         | No                                                                     |
+| Planner                                           | No                                                                     |
+| Plumsail Forms                                    | No                                                                     |
+| Power BI                                          | Yes                                                                    |
+| Project Online                                    | No                                                                     |
+| ProjectWise Design Integration                    | No                                                                     |
+| Projectwise Share                                 | No                                                                     |
+| SharePoint                                        | Yes                                                                    |
+| SignNow                                           | No                                                                     |
+| Skype for Business Online                         | No                                                                     |
+| Soft1                                             | No                                                                     |
+| Stormboard                                        | No                                                                     |
+| Survey123                                         | No                                                                     |
+| SurveyMonkey                                      | No                                                                     |
+| Toodledo                                          | No                                                                     |
+| Typeform                                          | No                                                                     |
+| Vimeo                                             | No                                                                     |
+| Webex Teams                                       | No                                                                     |
+| Windows Defender Advanced Threat Protection (ATP) | No                                                                     |
+| Word Online (Business)                            | No                                                                     |

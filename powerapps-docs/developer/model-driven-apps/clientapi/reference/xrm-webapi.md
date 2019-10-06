@@ -37,8 +37,8 @@ Provides properties and methods to use Web API to create and manage records and 
 |[retrieveMultipleRecords](xrm-webapi/retrieveMultipleRecords.md)|[!INCLUDE[xrm-webapi/includes/retrieveMultipleRecords-description.md](xrm-webapi/includes/retrieveMultipleRecords-description.md)]|
 |[updateRecord](xrm-webapi/updateRecord.md)|[!INCLUDE[xrm-webapi/includes/updateRecord-description.md](xrm-webapi/includes/updateRecord-description.md)]|
 |[isAvailableOffline](xrm-webapi/isAvailableOffline.md)|[!INCLUDE[xrm-webapi/includes/isAvailableOffline-description.md](xrm-webapi/includes/isAvailableOffline-description.md)]|
-|[execute](xrm-webapi/execute.md)|[!INCLUDE[xrm-webapi/includes/execute-description.md](xrm-webapi/includes/execute-description.md)]|
-|[executeMultiple](xrm-webapi/executeMultiple.md)|[!INCLUDE[xrm-webapi/includes/executeMultiple-description.md](xrm-webapi/includes/executeMultiple-description.md)]|
+|[execute](xrm-webapi/online/execute.md)|[!INCLUDE[xrm-webapi/online/includes/execute-description.md](xrm-webapi/online/includes/execute-description.md)]|
+|[executeMultiple](xrm-webapi/online/executeMultiple.md)|[!INCLUDE[xrm-webapi/online/includes/executeMultiple-description.md](xrm-webapi/online/includes/executeMultiple-description.md)]|
 
 ### Related topics
 

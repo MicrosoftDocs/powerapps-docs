@@ -1,7 +1,7 @@
 ---
 title: "Create and edit fields for Common Data Service using PowerApps portal | MicrosoftDocs"
 ms.custom: ""
-ms.date: 02/28/2019
+ms.date: 08/13/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -13,6 +13,7 @@ applies_to:
   - "PowerApps"
 ms.author: "matp"
 manager: "kvivek"
+author: "Mattp123"
 search.audienceType: 
   - maker
 search.app: 
@@ -88,7 +89,7 @@ These fields store data as a number but include different presentation and valid
 |Data type|Description|
 |--|--|
 |**Whole Number**|A number value presented in a text box.|
-|**Duration**|A number value presented as a drop-down list that contains time intervals. A user can select a value from the list or type an integer value that represents the number of minutes.|
+|**Duration**|A number value presented as a drop-down list that contains time intervals. A user can select a value from the list or type an integer value that represents the number of minutes. The duration must be entered in the format: “x minutes”, “x hours” or “x days”. Hours and days can also be entered using decimals, for example, “x.x hours” or “x.x days”. The values entered must be expressible in minutes, sub-minute values will be rounded to the nearest minute.|
 |**Timezone**|A number value presented as a drop-down list that contains a list of time zones.|
 |**Language**|A number value presented as a drop-down list that contains a list of languages that have been enabled for the environment. If no other languages have been enabled, the base language will be the only option. The value saved is the Locale Identifier (LCID) value for the language.|
 

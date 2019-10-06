@@ -94,6 +94,7 @@ This list identifies all services to which PowerApps Studio talks and their usag
 | \*.blob.core.windows.net |https | Blob storage |
 | \*.flow.microsoft.com | https | create.powerapps.com, make.powerapps.com, content.powerapps.com, and web.powerapps.com |
 | vortex.data.microsoft.com |https |Telemetry |
+| localhost | https | PowerApps Mobile
 
 > [!NOTE]
 > If you're using a VPN, it must be configured to exclude localhost from tunneling for PowerApps Mobile.

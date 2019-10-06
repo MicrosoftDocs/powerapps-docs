@@ -4,7 +4,7 @@ description:
 keywords:
 ms.author: nabuthuk
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -14,4 +14,5 @@ applies_to:
   - "Dynamics 365 Version 9.x"
 ms.assetid: fbda8959-44a7-46a8-9630-6208bd789c52
 ---
+
 The data-set node in the component manifest represents a specific, configurable representation of a set of entity records. 

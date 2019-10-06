@@ -3,8 +3,7 @@ title: "Actions on dashboards (model-driven apps) | Microsoft Docs" # Intent and
 description: "Learn about performing actions such as create, retrieve, update, or delete, on organization-owned and user-owned dashboards." # 115-145 characters including spaces. This abstract displays in the search result."
 keywords: ""
 ms.date: 10/31/2018
-ms.service:
-  - powerapps
+ms.service: powerapps
 ms.custom:
   - ""
 ms.topic: article

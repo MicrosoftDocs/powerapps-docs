@@ -27,7 +27,7 @@ Provides properties and methods to retrieve information about the user interface
 
 |Name|Description|
 |--|--|
-|Controls|Collection of all the controls on the page. See [Collections](collections.md) for information about the collections and [Controls](controls.md) for information about the control objects in the collection.|
+|controls|Collection of all the controls on the page. See [Collections](collections.md) for information about the collections and [Controls](controls.md) for information about the control objects in the collection.|
 |formSelector|Use the formSelector.getCurrentItem method to retrieve information about the form currently in use. Use the formSelector.items collection to return information about all the forms available for the user. **formSelector** is not available for Microsoft Dynamics 365 for tablets.|
 |navigation|A collection of all the navigation items on the page. See [Collections](collections.md) for information about the collection methods and [formContext.ui.navigation item](formContext-ui-navigation.md) for information about the items in the collection. **navigation** is not available for Microsoft Dynamics 365 for tablets.|
 |process|Provides objects and methods to interact with the business process flow control on a form.<br/>More information: [formContext.ui.process](formContext-ui-process.md)|

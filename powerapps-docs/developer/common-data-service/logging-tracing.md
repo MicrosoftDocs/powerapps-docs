@@ -2,7 +2,7 @@
 title: "Logging and tracing (Common Data Service) | Microsoft Docs"
 description: "Use the trace log to store plug-in execution information to aid in plug-in debugging."
 ms.custom: ""
-ms.date: 05/05/2019
+ms.date: 09/19/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.topic: "article"
@@ -79,6 +79,8 @@ Next, build and deploy the plug-in or custom workflow activity. During execution
 ## Additional information about the tracing service
 
 The <xref:Microsoft.Xrm.Sdk.ITracingService> batches the information provided to it through the **Trace** method. The information is written to a new [PluginTraceLog](reference/entities/plugintracelog.md) record after the custom code successfully runs to completion or an exception is thrown.  
+
+Each Trace call is logged as a new line in the [PluginTraceLog](reference/entities/plugintracelog.md) [MessageBlock](reference/entities/plugintracelog.md#BKMK_MessageBlock) attribute. Only 10kb of text can be written. Older trace lines will be removed to meet this limit so that only the most recent lines will be saved.
   
 [PluginTraceLog](reference/entities/plugintracelog.md) records have a finite lifetime. A bulk deletion background job runs once per day to delete records that are older than 24 hours from creation. 
 
@@ -89,7 +91,7 @@ The <xref:Microsoft.Xrm.Sdk.ITracingService> batches the information provided to
 
  ### Plug-in trace viewer
 
-**Plugin Trace Viewer** is a tool that XrmToolbox community developed. Please see the [Developer tools](developer-tools.md) topic for community developed tools.
+**Plugin Trace Viewer** is a tool that XrmToolbox community developed. Please see the [Community tools for Common Data Service](community-tools.md) topic for community developed tools.
 
 > [!NOTE]
 > The community tools are not a product of Microsoft and does not extend support to the community tools. 

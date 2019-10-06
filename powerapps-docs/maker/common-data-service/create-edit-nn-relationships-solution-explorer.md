@@ -102,7 +102,7 @@ You can hide the relationship from **Advanced Find** in model-driven apps by set
 
 While [viewing entity relationships](#view-entity-relationships), select the entity relationship you want to delete and click the ![Delete command](media/delete.gif) command.
 
-Deleteing the relationship will delete the relationship entity created. All data connecting entities using the relationship will be lost.
+Deleting the relationship will delete the relationship entity created. All data connecting entities using the relationship will be lost.
 
 ### See also
 

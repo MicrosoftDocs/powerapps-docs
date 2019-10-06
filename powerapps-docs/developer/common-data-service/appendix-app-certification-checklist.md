@@ -27,7 +27,7 @@ The following checklist provides the list of validations performed by Microsoft 
 <th>Certification checklist</th>
 </tr>
 <tr>
-<td rowspan=5><a href="https://docs.microsoft.com/powerapps/maker/model-driven-apps/model-driven-app-overview">Model-driven apps</a>, <a href="https://docs.microsoft.com/powerapps/maker/canvas-apps/getting-started">canvas apps</a>, and <a href="https://docs.microsoft.com/flow/getting-started">flows</a> that connect to Common Data Service<br/><br/><strong>NOTE</strong>: Dynamics 365 for Customer Engagement apps are model-driven apps.</td>
+<td rowspan=5><a href="https://docs.microsoft.com/powerapps/maker/model-driven-apps/model-driven-app-overview">Model-driven apps</a>, <a href="https://docs.microsoft.com/powerapps/maker/canvas-apps/getting-started">canvas apps</a>, and <a href="https://docs.microsoft.com/flow/getting-started">flows</a> that connect to Common Data Service<br/></td>
 <td>Sanity Check</td>
 <td><ul>
 <li>Check for app registration type: Free, Trial or Contact me. If registered in Contact me then publisher need to enable test drive.</li>
@@ -40,7 +40,7 @@ The following checklist provides the list of validations performed by Microsoft 
 <td>Code Validation</td>
 <td>
 <ul>
-<li>Code validation for Canvas apps will be done through <a href="https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/accessibility-checker">Accessibility Checker tool</a> in PowerApps to check for the following:
+<li>Code validation for Canvas apps will be done through <a href="https://docs.microsoft.com/powerapps/maker/canvas-apps/accessibility-checker">Accessibility Checker tool</a> in PowerApps to check for the following:
 <ul>
 <li>Static formula errors and warnings: If any issues found then certification team will share the feedback to resolve and resubmit to AppSource.</li>
 <li>Runtime errors: May occur once the app is opened in Run mode to view. Any issues found will be reported through email.</li>

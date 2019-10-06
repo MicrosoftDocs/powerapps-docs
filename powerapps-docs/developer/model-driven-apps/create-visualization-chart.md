@@ -3,8 +3,7 @@ title: "Create a visualization (chart) (model-driven apps) | Microsoft Docs" # I
 description: "The topic shows how to create a chart visualization and a web resource visualization." # 115-145 characters including spaces. This abstract displays in the search result."
 keywords: ""
 ms.date: 10/31/2018
-ms.service:
-  - powerapps
+ms.service: powerapps
 ms.custom:
   - ""
 ms.topic: article

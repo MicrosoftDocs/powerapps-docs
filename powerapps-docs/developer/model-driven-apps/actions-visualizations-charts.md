@@ -3,8 +3,7 @@ title: "Actions on visualizations (charts) (model-driven apps) | Microsoft Docs"
 description: "Using the Common Data Service web services, you can perform the following actions on the visualization entities." # 115-145 characters including spaces. This abstract displays in the search result."
 keywords: ""
 ms.date: 10/31/2018
-ms.service:
-  - powerapps
+ms.service: powerapps
 ms.custom:
   - ""
 ms.topic: article

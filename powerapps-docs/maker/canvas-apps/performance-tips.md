@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: anneta
-ms.date: 08/31/2018
+ms.date: 06/17/2019
 ms.author: yingchin
 search.audienceType: 
   - maker
@@ -90,10 +90,11 @@ Contact information doesn’t change frequently, and neither do default values a
 technique with the **Defaults** and **User** functions also. 
 
 ## Avoid controls dependency between screens
-If a control’s value depends on the value of a control on a different screen, manage the data by using a variable, a collection, or a data-source reference.
+To improve performance, the screens of an app are loaded into memory only as they are needed. This optimization can be hampered if, for example, screen 1 is loaded and one of its formulas uses a property of a control from screen 2. Now screen 2 must be loaded to fulfill the dependency before screen 1 can be displayed. Imagine screen 2 has a dependency on screen 3, which has another dependency on screen 4, and so on. This dependency chain can cause many screens to be loaded.
 
-## Use global variables
-To pass the app’s state from one screen to another, create or modify a global variable value by using the [**Set**](functions/function-set.md) function instead of by using the **Navigate** and **UpdateContext)** functions.
+For this reason avoid formula dependencies between screens. In some cases you can use a global variable or collection to share information between screens.
+
+There is an exception. In the previous example imagine that the only way to display screen 1 is by navigating from screen 2. Then screen 2 would have already been loaded in memory when screen 1 was to be loaded. No additional work is needed to fulfill the dependency for screen 2 and therefore there's no performance impact.
 
 ## Use delegation
 Where possible, use functions that delegate data processing to the data source instead of retrieving data to the local device for processing. If an app must process data locally, the operation requires much more processing power, memory, and network bandwidth, especially if the data set is large.

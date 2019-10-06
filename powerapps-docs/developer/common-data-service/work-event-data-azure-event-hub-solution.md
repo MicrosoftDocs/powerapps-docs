@@ -3,8 +3,7 @@ title: "Work with Dynamics 365 event data in your Azure Event Hub solution (Comm
 description: "The topic describes working with event data in your Azure Event Hub solution."
 keywords: ""
 ms.date: 05/08/2019
-ms.service:
-  - powerapps
+ms.service: powerapps
 ms.custom:
   - ""
 ms.topic: article
@@ -30,7 +29,7 @@ Azure Event Hubs is a highly scalable publish-subscribe service that can ingest 
 ## 1. Create an event hub  
  You can create an event hub in Azure either through API programming  or interactively by using the [Azure classic portal](https://manage.windowsazure.com). Either way, after creating your event hub you must obtain a copy of the event hub connection string and provide that string when registering the Azure service endpoint detailed in the next section.  
   
- For more information about creating event hubs see the [Event Hubs documentation](https://azure.microsoft.com/en-us/documentation/services/event-hubs/).  
+ For more information about creating event hubs see the [Event Hubs documentation](https://azure.microsoft.com/documentation/services/event-hubs/).  
   
 ## 2. Register an endpoint  
  Registering a service endpoint for an event hub is similar to registering for any other supported contract type such as queues or topics. You use the Plug-in Registration Tool, provided in the SDK download, to register the service endpoint.  When filling out the registration form specify a contract type of **Event Hub**. For the message body format, you can choose **XML** or **JSON**. In addition, only SAS authorization is permitted and you must provide the connection string obtained when you created the event hub. More information: [Tutorial: Configure Microsoft Azure (SAS) for integration with Common Data Service](walkthrough-configure-azure-sas-integration.md).  
