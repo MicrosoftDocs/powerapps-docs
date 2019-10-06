@@ -19,10 +19,10 @@ Portal development involves several configurations and customizations to achieve
 
 After you have completed development or configuration of your Dynamics 365 Portals instance, you might want to migrate your latest Dynamics 365 Portals configuration from development to testing or the production environments. Migration involves exporting the existing configuration from the source Dynamics 365 instance, and then importing it into the target Dynamics 365 instance.
 
-To export configuration data, you would need to use the Configuration Migration tool and a portal-specific configuration schema file. For more information about this tool, see [Manage configuration data](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/admin/manage-configuration-data).
+To export configuration data, you would need to use the Configuration Migration tool and a portal-specific configuration schema file. For more information about this tool, see [Manage configuration data](https://docs.microsoft.com/dynamics365/customer-engagement/admin/manage-configuration-data).
 
 > [!NOTE]
-> - We recommend you to use the latest version of the Configuration Migration tool. The Configuration Migration tool can be downloaded from NuGet. More information for downloading the tool: [Download tools from NuGet](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/download-tools-nuget).
+> - We recommend you to use the latest version of the Configuration Migration tool. The Configuration Migration tool can be downloaded from NuGet. More information for downloading the tool: [Download tools from NuGet](https://docs.microsoft.com/dynamics365/customer-engagement/developer/download-tools-nuget).
 > - The minimum solution version of Dynamics 365 Portals supported by schema files for configuration migration is 8.4.0.275. However, we recommend that you use the latest solution version.
 
 Schema files are available for the following portal types:

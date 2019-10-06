@@ -67,7 +67,7 @@ To share the portal with internal users you must first create a security role an
 
 5.  When you have finished configuring the security role, on the toolbar, select **Save and Close**.
 
-For information on security roles and privileges, see [Security roles and privileges](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/admin/security-roles-privileges).  
+For information on security roles and privileges, see [Security roles and privileges](https://docs.microsoft.com/dynamics365/customer-engagement/admin/security-roles-privileges).  
 
 #### Step 2: Assign users to the security role
 
@@ -84,11 +84,11 @@ For information on security roles and privileges, see [Security roles and privil
 
 ### Share with external users
 
-Your portal should work anonymously and should be accessible by the external users. If you want to try advanced capabilities for managing roles and permissions for external users, see [Configure a contact for use on a portal](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/configure-contacts), [Invite contacts to your portals](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/invite-contacts), [Create web roles for portals](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/create-web-roles), [Assign entity permissions](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/assign-entity-permissions).  
+Your portal should work anonymously and should be accessible by the external users. If you want to try advanced capabilities for managing roles and permissions for external users, see [Configure a contact for use on a portal](https://docs.microsoft.com/dynamics365/customer-engagement/portals/configure-contacts), [Invite contacts to your portals](https://docs.microsoft.com/dynamics365/customer-engagement/portals/invite-contacts), [Create web roles for portals](https://docs.microsoft.com/dynamics365/customer-engagement/portals/create-web-roles), [Assign entity permissions](https://docs.microsoft.com/dynamics365/customer-engagement/portals/assign-entity-permissions).  
 
 ## Settings
 
-Displays the portal settings and allows you to change the name of the portal. You can also perform advanced actions such as administering the portal though the Portal Admin Center and working with site settings. Settings provides links to the PowerApps Portals admin center and Site settings. More information: [Administer your portal](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/manage-portal) and [Configure site settings for portals](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/configure-site-settings).  
+Displays the portal settings and allows you to change the name of the portal. You can also perform advanced actions such as administering the portal though the Portal Admin Center and working with site settings. Settings provides links to the PowerApps Portals admin center and Site settings. More information: [Administer your portal](https://docs.microsoft.com/dynamics365/customer-engagement/portals/manage-portal) and [Configure site settings for portals](https://docs.microsoft.com/dynamics365/customer-engagement/portals/configure-site-settings).  
 
 > [!div class=mx-imgBorder]
 > ![portal settings](media/portal-settings.png "Portal settings")  
@@ -99,7 +99,7 @@ Deletes the portal and hosted resources. When you delete a portal, its URL becom
 You must delete the portal configurations manually to completely remove portal configurations from your environment. To do this, use the Portal Management app, and delete the corresponding website record for the portal.
 
 > [!NOTE]
-> If you don't have sufficient privileges to delete a portal, an error is displayed. You must have the System Customizer or System Administrator role to delete a portal. Also, you must be the owner of the portal application in Azure Active Directory. The user who creates the portal is by default the owner and can delete a portal. For information on adding yourself as an owner, see [Add yourself as an owner of the Azure AD application](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/manage-portal#to-add-yourself-as-an-owner-of-the-azure-ad-application).
+> If you don't have sufficient privileges to delete a portal, an error is displayed. You must have the System Customizer or System Administrator role to delete a portal. Also, you must be the owner of the portal application in Azure Active Directory. The user who creates the portal is by default the owner and can delete a portal. For information on adding yourself as an owner, see [Add yourself as an owner of the Azure AD application](https://docs.microsoft.com/dynamics365/customer-engagement/portals/manage-portal#to-add-yourself-as-an-owner-of-the-azure-ad-application).
 
 ## Details
 
