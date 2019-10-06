@@ -5,7 +5,7 @@ keywords:
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -17,13 +17,13 @@ ms.assetid: a604fbbf-6d09-450d-b686-7a5cb3f3a2bc
 
 [!INCLUDE [formatdateasfilterstringinutc-description](includes/formatdateasfilterstringinutc-description.md)]
 
+## Syntax
+
+`context.formatting.formatDateAsFilterStringInUTC(value, includeTime)`
+
 ## Available for 
 
 Model-driven apps and canvas apps (experimental preview)
-
-## Syntax
-
-`formatDateAsFilterStringInUTC(value, includeTime)`
 
 ## Parameters
 

@@ -5,7 +5,7 @@ keywords:
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -17,20 +17,20 @@ ms.assetid: 05c1c54d-14b5-4dad-9cd8-eec07e750c00
 
 [!INCLUDE [formatdecimal-description](includes/formatdecimal-description.md)]
 
+## Syntax
+
+`context.formatting.formatDecimal(value, precision);`
+
 ## Available for 
 
 Model-driven apps and canvas apps (experimental preview)
-
-## Syntax
-
-`formatDecimal(value, precision)`
 
 ## Parameters
 
 | Parameter Name|Type|Required|Description|
 | ------------- |----|--------|-----------|
-|value|`number`|yes|The date to be formatted.|
-|precision|`number`|yes|The number of digits after decimal point.|
+|value|`number`|Yes|The date to be formatted.|
+|precision|`number`|Yes|The number of digits after decimal point.|
 
 ## Return Value
 

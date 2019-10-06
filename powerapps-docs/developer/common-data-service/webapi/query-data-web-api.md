@@ -2,7 +2,7 @@
 title: "Query Data using the Web API (Common Data Service)| Microsoft Docs"
 description: "Read about the various ways to query Common Data Service data using the Common Data Service Web API and various system query options that can be applied in these queries"
 ms.custom: ""
-ms.date: 09/02/2019
+ms.date: 09/10/2019
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -34,7 +34,8 @@ If you want to retrieve data for an entity set, use a `GET` request. When retrie
  **Request**
 
 ```http 
-GET [Organization URI]/api/data/v9.1/accounts?$select=name&$top=3 HTTP/1.1  
+GET [Organization URI]/api/data/v9.1/accounts?$select=name
+&$top=3 HTTP/1.1  
 Accept: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
@@ -161,7 +162,9 @@ Preference-Applied: odata.maxpagesize=3
  Each of the system query options you append to the URL for the entity set is added using the syntax for query strings. The first is appended after [?] and subsequent query options are separated using [&]. All query options are case-sensitive as shown in the following example.  
   
 ```http 
-GET [Organization URI]/api/data/v9.1/accounts?$select=name,revenue&$top=3&$filter=revenue gt 100000  
+GET [Organization URI]/api/data/v9.1/accounts?$select=name,revenue
+&$top=3
+&$filter=revenue gt 100000  
 ```  
   
 <a name="bkmk_requestProperties"></a>
@@ -234,7 +237,8 @@ The Web API supports these standard OData string query functions:
 Common Data Service provides a number of special functions that accept parameters, return Boolean values, and can be used as filter criteria in a query. See <xref:Microsoft.Dynamics.CRM.QueryFunctionIndex> for a list of these functions. The following is an example of the <xref href="Microsoft.Dynamics.CRM.Between?text=Between Function" /> searching for accounts with a number of employees between 5 and 2000.  
   
 ```http 
-GET [Organization URI]/api/data/v9.1/accounts?$select=name,numberofemployees&$filter=Microsoft.Dynamics.CRM.Between(PropertyName='numberofemployees',PropertyValues=["5","2000"])  
+GET [Organization URI]/api/data/v9.1/accounts?$select=name,numberofemployees
+&$filter=Microsoft.Dynamics.CRM.Between(PropertyName='numberofemployees',PropertyValues=["5","2000"])  
 ```  
   
 More information: [Compose a query with functions](use-web-api-functions.md#bkmk_composeQueryWithFunctions). 
@@ -256,7 +260,8 @@ The `any` operator returns `true` if the Boolean expression applied is `true` fo
 The example given below shows how you can retrieve all Account entity records that have atleast one email with "sometext" in the subject.
 
 ```http
-GET [Organization URI]/api/data/v9.1/accounts?$select=name&$filter=Account_Emails/any(o:contains(o/subject,'sometext')) HTTP/1.1
+GET [Organization URI]/api/data/v9.1/accounts?$select=name
+&$filter=Account_Emails/any(o:contains(o/subject,'sometext')) HTTP/1.1
 Prefer: odata.include-annotations="*"
 Accept: application/json  
 OData-MaxVersion: 4.0  
@@ -273,7 +278,8 @@ The `all` operator returns `true` if the Boolean expression applied is `true` fo
 The example given below shows how you can retrieve all Account entity records that have all associated tasks closed.
 
 ```http
-GET [Organization URI]/api/data/v9.1/accounts?$select=name&$filter=Account_Tasks/all(o:o/statecode eq 1) HTTP/1.1
+GET [Organization URI]/api/data/v9.1/accounts?$select=name
+&$filter=Account_Tasks/all(o:o/statecode eq 1) HTTP/1.1
 Prefer: odata.include-annotations="*"
 Accept: application/json  
 OData-MaxVersion: 4.0  
@@ -283,7 +289,9 @@ OData-Version: 4.0
 The example given below shows how you can retrieve all Account entity records that have atleast one email with "sometext" in the subject and whose statecode is active.
 
 ```http
-GET [Organization URI]/api/data/v9.1/accounts?$select=name&$filter=Account_Emails/any(o:contains(o/subject,'sometext') and o/statecode eq 0) HTTP/1.1
+GET [Organization URI]/api/data/v9.1/accounts?$select=name
+&$filter=Account_Emails/any(o:contains(o/subject,'sometext') and 
+o/statecode eq 0) HTTP/1.1
 Prefer: odata.include-annotations="*"
 Accept: application/json
 OData-MaxVersion: 4.0
@@ -293,7 +301,10 @@ OData-Version: 4.0
 The example given below shows how you can also create a nested query using `any` and `all` operators.
 
 ```http
-GET [Organization URI]/api/data/v9.1/accounts?$select=name&$filter=(contact_customer_accounts/any(c:c/jobtitle eq 'jobtitle' and c/opportunity_customer_contacts/any(o:o/description ne 'N/A'))) and endswith(name,'{0}') HTTP/1.1
+GET [Organization URI]/api/data/v9.1/accounts?$select=name
+&$filter=(contact_customer_accounts/any(c:c/jobtitle eq 'jobtitle' and 
+c/opportunity_customer_contacts/any(o:o/description ne 'N/A'))) and 
+endswith(name,'{0}') HTTP/1.1
 Prefer: odata.include-annotations="*"
 Accept: application/json
 OData-MaxVersion: 4.0
@@ -304,25 +315,23 @@ OData-Version: 4.0
 
 The example given below shows how you can use the [/any operator](#bkmk_anyoperator) to retrieve all the account records which have:
 
-- any of their linked opportunity records' budget greater than or equal to 500, and
+- any of their linked opportunity records' budget greater than or equal to 300, and
 - the opportunity records' have no description, or
-- the opportunity records' description contains the term "*good*".
+- the opportunity records' description contains the term "*bad*".
 
 **Request**
 
 ```http
-GET [Organization URI]/api/data/v9.1/accounts?$select=name&$filter=not opportunity_customer_accounts/any(o:o/description eq null and o/budgetamount le 300 or contains(o/description, 'bad')) and opportunity_customer_accounts/any() and endswith(name,'{0}') HTTP/1.1
+GET [Organization URI]/api/data/v9.1/accounts?$select=name
+&$filter=not opportunity_customer_accounts/any(o:o/description eq null and 
+o/budgetamount le 300 or 
+contains(o/description, 'bad')) and 
+opportunity_customer_accounts/any() and 
+endswith(name,'{0}') HTTP/1.1
 Accept: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0 
 ```
-
-> [!NOTE]
-> You cannot use `NOT` operator with a custom function such as [Microsoft.Dynamics.CRM.EqualUserId](/dynamics365/customer-engagement/web-api/equaluserid) function. For example, the query given below is not a valid query.
->
-> ```http
-> GET [Organization URI]/api/data/v9.1/accounts?$filter=NOT Microsoft.Dynamics.CRM.EqualUserId(Name='Contoso')
-> ```
 
 <a name="BKMK_FilterNavProperties"></a>
 
@@ -339,7 +348,8 @@ For example:
 **Request** 
  
 ```http 
-GET [Organization URI]/api/data/v9.1/accounts?$select=name&$filter=primarycontactid/contactid eq a0dbf27c-8efb-e511-80d2-00155db07c77 HTTP/1.1  
+GET [Organization URI]/api/data/v9.1/accounts?$select=name
+&$filter=primarycontactid/contactid eq a0dbf27c-8efb-e511-80d2-00155db07c77 HTTP/1.1  
 Accept: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
@@ -374,7 +384,8 @@ OData-Version: 4.0
 **Request**  
 
 ```http 
-GET [Organization URI]/api/data/v9.1/accounts?$select=name&$filter=parentaccountid/accountid eq 3adbf27c-8efb-e511-80d2-00155db07c77  
+GET [Organization URI]/api/data/v9.1/accounts?$select=name
+&$filter=parentaccountid/accountid eq 3adbf27c-8efb-e511-80d2-00155db07c77  
 Accept: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
@@ -416,7 +427,9 @@ The two options for filtering results based on values of collection-valued navig
 Lambda operators allow you to apply filter on values of collection properties for a link-entity. The below example retrieves the records of `systemuser` entity type that are linked with `team` and `teammembership` entity types, that means it retrieves `systemuser` records who are also administrators of a team whose name is "CITTEST".
 
 ```http
-GET [Organization URI]/api/data/v9.1/systemusers?$teammembership_association/any(t:t/name eq 'CITTEST')&$select=fullname,businessunitid,title,address1_telephone1,positioned,systemuserid&$oderby= fullname
+GET [Organization URI]/api/data/v9.1/systemusers?$filter=(teammembership_association/any(t:t/name eq 'CITTEST'))
+&$select=fullname,businessunitid,title,address1_telephone1,systemuserid
+&$orderby=fullname
 Accept: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
@@ -442,7 +455,9 @@ Follow the steps in the below example to understand how we can filter results us
  Specify the order in which items are returned using the `$orderby` system query option. Use the `asc` or `desc` suffix to specify ascending or descending order respectively. The default is ascending if the suffix isn’t applied. The following example shows retrieving the name and revenue properties of accounts ordered by ascending revenue and by descending name.  
   
 ```http 
-GET [Organization URI]/api/data/v9.1/accounts?$select=name,revenue,&$orderby=revenue asc,name desc&$filter=revenue ne null  
+GET [Organization URI]/api/data/v9.1/accounts?$select=name,revenue
+&$orderby=revenue asc,name desc
+&$filter=revenue ne null  
 ```  
 <a name="bkmk_AggregateGroup"></a>
 
@@ -452,17 +467,18 @@ By using `$apply` you can aggregate and group your data dynamically.  Possible u
 
 |Use Case|Example|
 |--------------|-------------| 
-|List of unique statuses in the query|`$apply=groupby((statuscode))`|
-|Aggregate sum of the estimated value|`$apply=aggregate(estimatedvalue with sum as total)`|
-|Average size of the deal based on estimated value and status|`$apply=groupby((statuscode),aggregate(estimatedvalue with average as averagevalue)`|
-|Sum of estimated value based on status|`$apply=groupby((statuscode),aggregate(estimatedvalue with sum as total))`|
-|Total opportunity revenue by Account name|`$apply=groupby((parentaccountid/name),aggregate(estimatedvalue with sum as total))`|
-|Last created record date and time|`$apply=aggregate(createdon with max as lastCreate)`|
-|First created record date and time|`$apply=aggregate(createdon with min as firstCreate)`|
+|List of unique statuses in the query|`accounts?$apply=groupby((statuscode))`|
+|Aggregate sum of the estimated value|`opportunities?$apply=aggregate(estimatedvalue with sum as total)`|
+|Average size of the deal based on estimated value and status|`opportunities?$apply=groupby((statuscode),aggregate(estimatedvalue with average as averagevalue)`|
+|Sum of estimated value based on status|`opportunities?$apply=groupby((statuscode),aggregate(estimatedvalue with sum as total))`|
+|Total opportunity revenue by Account name|`opportunities?$apply=groupby((parentaccountid/name),aggregate(estimatedvalue with sum as total))`|
+|Primary contact names for accounts in 'WA'|`accounts?$apply=filter(address1_stateorprovince eq 'WA')/groupby((primarycontactid/fullname))`|
+|Last created record date and time|`accounts?$apply=aggregate(createdon with max as lastCreate)`|
+|First created record date and time|`accounts?$apply=aggregate(createdon with min as firstCreate)`|
 
 The aggregate functions are limited to a collection of 50,000 records.  Further information around using aggregate functionality with Common Data Service can be found here: [Use FetchXML to construct a query](../use-fetchxml-construct-query.md).
 
-Additional details on OData data aggregation can be found here: [OData Extension for Data Aggregation Version 4.0](http://docs.oasis-open.org/odata/odata-data-aggregation-ext/v4.0/cs01/odata-data-aggregation-ext-v4.0-cs01.html).  Note that Dynamics 365 for Customer Engagement apps only supports a sub-set of these aggregate methods.
+Additional details on OData data aggregation can be found here: [OData Extension for Data Aggregation Version 4.0](http://docs.oasis-open.org/odata/odata-data-aggregation-ext/v4.0/cs01/odata-data-aggregation-ext-v4.0-cs01.html).  Note that Common Data Service supports only a sub-set of these aggregate methods.
 
 
 <a name="bkmk_useParameterAliases"></a>
@@ -474,13 +490,17 @@ Additional details on OData data aggregation can be found here: [OData Extension
  Without parameter aliases:
 
 ```http  
-GET [Organization URI]/api/data/v9.1/accounts?$select=name,revenue,&$orderby=revenue asc,name desc&$filter=revenue ne null  
+GET [Organization URI]/api/data/v9.1/accounts?$select=name,revenue
+&$orderby=revenue asc,name desc
+&$filter=revenue ne null  
 ```  
   
  With parameter aliases:
 
 ```http  
-GET [Organization URI]/api/data/v9.1/accounts?$select=name,revenue,&$orderby=@p1 asc,@p2 desc&$filter=@p1 ne @p3&@p1=revenue&@p2=name  
+GET [Organization URI]/api/data/v9.1/accounts?$select=name,revenue
+&$orderby=@p1 asc,@p2 desc
+&$filter=@p1 ne @p3&@p1=revenue&@p2=name  
 ```  
   
  You can also use parameter aliases when using functions. More information: [Use Web API functions](use-web-api-functions.md)  
@@ -504,7 +524,9 @@ GET [Organization URI]/api/data/v9.1/accounts?$select=name,revenue,&$orderby=@p1
  **Request**
 
 ```http 
-GET [Organization URI]/api/data/v9.1/accounts?$select=name&$filter=contains(name,'sample')&$count=true HTTP/1.1  
+GET [Organization URI]/api/data/v9.1/accounts?$select=name
+&$filter=contains(name,'sample')
+&$count=true HTTP/1.1  
 Accept: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
@@ -579,7 +601,8 @@ OData-Version: 4.0
  **Request**
 
 ```http 
-GET [Organization URI]/api/data/v9.1/accounts?$select=name,donotpostalmail,accountratingcode,numberofemployees,revenue&$top=1 HTTP/1.1  
+GET [Organization URI]/api/data/v9.1/accounts?$select=name,donotpostalmail,accountratingcode,numberofemployees,revenue
+&$top=1 HTTP/1.1  
 Accept: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
@@ -638,7 +661,8 @@ Use the `$expand` system query option in the navigation properties to control wh
  **Request**  
 
 ```http 
-GET [Organization URI]/api/data/v9.1/incidents(39dd0b31-ed8b-e511-80d2-00155d2a68d4)?$select=title,_customerid_value&$expand=customerid_contact($select=fullname) HTTP/1.1  
+GET [Organization URI]/api/data/v9.1/incidents(39dd0b31-ed8b-e511-80d2-00155d2a68d4)?$select=title,_customerid_value
+&$expand=customerid_contact($select=fullname) HTTP/1.1  
 Accept: application/json  
 Content-Type: application/json; charset=utf-8  
 OData-MaxVersion: 4.0  
@@ -685,7 +709,9 @@ The following example retrieves the tasks assigned to the top 5 account records.
 **Request**
 
 ```http 
-GET [Organization URI]/api/data/v9.1/accounts?$top=5&$select=name&$expand=Account_Tasks($select=subject,scheduledstart) HTTP/1.1  
+GET [Organization URI]/api/data/v9.1/accounts?$top=5
+&$select=name
+&$expand=Account_Tasks($select=subject,scheduledstart) HTTP/1.1  
 Accept: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
@@ -762,7 +788,9 @@ In this example, we are retrieving the contact and tasks assigned to the top 3 a
 **Request**
 
 ```http 
-GET [Organization URI]/api/data/v9.1/accounts?$top=3&$select=name&$expand=primarycontactid($select=contactid,fullname),Account_Tasks($select=subject,scheduledstart)  HTTP/1.1  
+GET [Organization URI]/api/data/v9.1/accounts?$top=3
+&$select=name
+&$expand=primarycontactid($select=contactid,fullname),Account_Tasks($select=subject,scheduledstart)  HTTP/1.1  
 Accept: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  

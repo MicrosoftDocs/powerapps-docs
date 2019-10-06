@@ -6,7 +6,7 @@ manager: shujoshi
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/18/2019
+ms.date: 09/16/2019
 ms.author: shjais
 ms.reviewer:
 ---
@@ -16,6 +16,9 @@ ms.reviewer:
 [!include[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 A webpage is a document that is identified by a unique URL in a website. It is one of the core objects of the website and builds a hierarchy of the website through parent and child relationships to other webpages.
+
+> [!NOTE]
+> If you customize your portal using the portal designer, the website users would notice a performance impact. We recommended you to do the changes during non-peak hours on a live portal.
 
 ## Create webpage
 
@@ -49,7 +52,7 @@ The primary menu on the website is created automatically based on the hierarchy 
 > [!div class=mx-imgBorder]
 > ![website navigation](media/website-navigation.png "Website navigation")
 
-If you are working with Dynamics 365 Portal, and you want the menu to be the same as page hierarchy, you must select **Default** from the **Navigation Menu** list.
+If you are working with Dynamics 365 Portals, and you want the menu to be the same as page hierarchy, you must select **Default** from the **Navigation Menu** list.
 
 > [!div class=mx-imgBorder]
 > ![Default navigation menu](media/navigation-menu-default.png "Default navigation menu")

@@ -5,7 +5,7 @@ keywords:
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -17,13 +17,13 @@ ms.assetid: 98f341b4-1d5d-4ad2-849d-5ea1d7e143b0
 
 [!INCLUDE[./includes/getcurrentposition-description.md](./includes/getcurrentposition-description.md)]
 
+## Syntax
+
+`context.device.getCurrentPosition()`
+
 ## Available for 
 
 Model-driven apps
-
-## Syntax
-
-`getCurrentPosition()`
 
 ## Return Value
 
@@ -32,9 +32,6 @@ Type: `Promise<Position>`
 ## Remarks
 
 See [Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise) and [Position](https://developer.mozilla.org/en-US/docs/Web/API/Position)
-
-### Related topics
-
 
 ### Related topics
 

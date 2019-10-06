@@ -19,7 +19,7 @@ Power BI is one of the best tools to deliver insights with simple and interactiv
 
 > [!NOTE]
 > - You must have an appropriate Power BI license.
-> - To use Power BI Embedded service, you must have an appropriate Power BI Embedded license. For more information, see [Licensing](https://docs.microsoft.com/en-us/power-bi/developer/embedded-faq#licensing).
+> - To use Power BI Embedded service, you must have an appropriate Power BI Embedded license. For more information, see [Licensing](https://docs.microsoft.com/power-bi/developer/embedded-faq#licensing).
 
 ## Enable Power BI visualization
 
@@ -38,24 +38,22 @@ Customizers can use the [powerbi](../liquid/portals-entity-tags.md#powerbi) Liqu
 
 ### Disable Power BI visualization
 
-1.	Go to the Dynamics 365 admin center and select the **Applications** tab.
+1.	Open [PowerApps Portals admin center](admin-overview.md).
 
-2.	Select the name of the portal for which you want disable Power BI visualization, and then select **Manage**.
-
-3.	Go to **Set up Power BI integration** > **Disable Power BI visualization**.
+2.	Go to **Set up Power BI integration** > **Disable Power BI visualization**.
 
     > [!div class=mx-imgBorder]
     > ![Disable Power BI visualization](../media/disable-power-bi-visualization.png "Disable Power BI visualization")
 
-4. Select **Disable** in the confirmation message. While Power BI visualization is being disabled, the portal restarts and will be unavailable for a few minutes. A message appears when Power BI visualization is disabled.
+3. Select **Disable** in the confirmation message. While Power BI visualization is being disabled, the portal restarts and will be unavailable for a few minutes. A message appears when Power BI visualization is disabled.
 
 ## Enable Power BI Embedded service
 
 Enabling the Power BI Embedded service allows you to embed dashboards and reports created in the new workspace of Power BI. The dashboards and reports are embedded on webpages in a portal by using the powerbi Liquid tag.
 
-**Prerequisites**: Before enabling the Power BI Embedded service, ensure that you have created your dashboards and reports in the new workspace in Power BI. After creating the workspace, provide admin access to the global administrator so the workspaces are displayed in the Portal Admin Center. For more information on creating new workspaces and adding access to them, see [Create the new workspaces (preview) in Power BI](https://docs.microsoft.com/en-us/power-bi/service-create-the-new-workspaces).
+**Prerequisites**: Before enabling the Power BI Embedded service, ensure that you have created your dashboards and reports in the new workspace in Power BI. After creating the workspace, provide admin access to the global administrator so the workspaces are displayed in the Portal Admin Center. For more information on creating new workspaces and adding access to them, see [Create the new workspaces (preview) in Power BI](https://docs.microsoft.com/power-bi/service-create-the-new-workspaces).
 
-**Power BI Embedded service limitations**: For information on limitations, see [Considerations and limitations](https://docs.microsoft.com/en-us/power-bi/developer/embed-service-principal#considerations-and-limitations).
+**Power BI Embedded service limitations**: For information on limitations, see [Considerations and limitations](https://docs.microsoft.com/power-bi/developer/embed-service-principal#considerations-and-limitations).
 
 > [!NOTE]
 > Ensure that Power BI visualization is enabled for the powerbi Liquid tag to work.
@@ -152,18 +150,17 @@ After enabling the Power BI Embedded service integration, you must create a secu
 
 Customizers can now use the [powerbi](../liquid/portals-entity-tags.md#powerbi) Liquid tag to embed Power BI dashboards and reports from new Power BI workspaces on webpages in a portal. To use Power BI Embedded service, the authentication type must be specified as **powerbiembedded**. While embedding the Power BI content, customizers can use [filter parameters](https://docs.microsoft.com/en-us/power-bi/service-url-filters) to create personalized views. More information: [powerbi Liquid tag](../liquid/portals-entity-tags.md#powerbi).
 
+
 ### Manage the Power BI Embedded service
 
-1. Go to the Dynamics 365 admin center, and select the **Applications** tab.
+1. Open [PowerApps Portals admin center](admin-overview.md).
 
-2. Select the name of the portal for which you want update or disable Power BI Embedded service, and then select **Manage**.
-
-3. Go to **Set up Power BI integration** > **Manage Power BI Embedded service (preview)**.
+2. Go to **Set up Power BI integration** > **Manage Power BI Embedded service (preview)**.
 
     > [!div class=mx-imgBorder]
     > ![Manage Power BI Embedded service](../media/manage-powerbi-embedded-button.png "Manage Power BI Embedded service")
 
-4. In the **Manage Power BI Embedded service integration** window, remove or move the Power BI workspaces from which dashboards and reports need to be displayed in your portal to the **Selected Workspaces** list.
+3. In the **Manage Power BI Embedded service integration** window, remove or move the Power BI workspaces from which dashboards and reports need to be displayed in your portal to the **Selected Workspaces** list.
 
     > [!div class=mx-imgBorder]
     > ![Select Power BI workspaces](../media/manage-powerbi-embedded-window.png "Select Power BI workspaces")
@@ -171,27 +168,25 @@ Customizers can now use the [powerbi](../liquid/portals-entity-tags.md#powerbi) 
     > [!NOTE]
     > After removing the workspaces from the **Selected Workspaces** list, it can take up to 1 hour to reflect the changes. Until then, the databases and reports are rendered on the portal without any issues.
 
-5. Select **Save**.
+4. Select **Save**.
 
 ### Disable the Power BI Embedded service
 
-1.	Go to the Dynamics 365 admin center, and select the **Applications** tab.
+1. Open [PowerApps Portals admin center](admin-overview.md).
 
-2.	Select the name of the portal for which you want to disable the Power BI Embedded service, and then select **Manage**.
-
-3.	Go to **Set up Power BI integration** > **Manage Power BI Embedded service (preview)**.
+2.	Go to **Set up Power BI integration** > **Manage Power BI Embedded service (preview)**.
 
     > [!div class=mx-imgBorder]
     > ![Manage Power BI Embedded service](../media/manage-powerbi-embedded-button.png "Manage Power BI Embedded service")
 
-4. In the **Manage Power BI Embedded service integration** window, select **Disable Power BI Embedded service integration**.
+3. In the **Manage Power BI Embedded service integration** window, select **Disable Power BI Embedded service integration**.
 
     > [!div class=mx-imgBorder]
     > ![Disable Power BI Embedded service](../media/disable-powerbi-embedded-window.png "Disable Power BI Embedded service")
 
-5. Select **Save**.
+4. Select **Save**.
 
-6. Select **OK** in the confirmation message. While Power BI Embedded service is being disabled, the portal restarts and is unavailable for a few minutes. A message appears when Power BI Embedded service is disabled.
+5. Select **OK** in the confirmation message. While Power BI Embedded service is being disabled, the portal restarts and is unavailable for a few minutes. A message appears when Power BI Embedded service is disabled.
 
 ## Privacy notice  
 
@@ -199,5 +194,5 @@ Customizers can now use the [powerbi](../liquid/portals-entity-tags.md#powerbi) 
 
 ### See also
 
-[powerbi Liquid tag](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/portals-entity-tags#powerbi)<br> 
+[powerbi Liquid tag](../liquid/portals-entity-tags.md#powerbi)<br> 
 [Add a Power BI report or dashboard to a webpage in portal](add-powerbi-report.md)

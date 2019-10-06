@@ -5,7 +5,7 @@ keywords:
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -23,7 +23,7 @@ Model-driven apps
 
 ## Syntax
 
-`context.webapi.retrieveMultipleRecords(entityLogicalName, options, maxPageSize).then(successCallback, errorCallback);`
+`context.webAPI.retrieveMultipleRecords(entityLogicalName, options, maxPageSize).then(successCallback, errorCallback);`
 
 ## Parameters
 
@@ -81,7 +81,14 @@ Model-driven apps
 
 ## Return Value
 
-On success, returns a promise that contains an array of JSON objects (**entities**) containing the retrieved entity records and the **nextLink** attribute (optional) with the URL pointing to next set of records in case paging (`maxPageSize`) is specified in the request, and the record count returned exceeds the paging value.
+Type: [Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)<RetrieveMultipleResponse>
+
+Description: The `RetrieveMultipleResponse` returns a promise that contains an array of JSON objects containing the retrieved entity records and the **nextLink** attribute with the URL pointing to next set of records in case paging (`maxPageSize`) is specified in the request, and the record count returned exceeds the paging value. It has the following parameters:
+
+|parameter|Return Value|Description|
+|----|------|-------|
+|entities|`Entity[]`|An array of JSON objects, where each object represents the retrieved entity record containing attributes and their values.|
+|nextLink|`string`|If the number of records being retrieved is more than the value specified in the 'maxPageSize' parameter in the request, this attribute returns the URL to return next set of records.|
 
 
 ### Related topics

@@ -5,7 +5,7 @@ keywords:
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -20,13 +20,13 @@ ms.assetid: 1faf3e79-969e-4c1e-ac01-8e2155c609fa
 
 [!INCLUDE [setfullscreen-description](includes/setfullscreen-description.md)]
 
+## Syntax
+
+`context.mode.setControlState(mode);`
+
 ## Available for 
 
 Model-driven apps
-
-## Syntax
-
-`setFullScreen(value)`
 
 ## Parameters
 

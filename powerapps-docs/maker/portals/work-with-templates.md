@@ -39,4 +39,4 @@ To open a template in code editor:
 4.  Edit the code and save the changes.
 
 > [!NOTE]
-> You can also add Liquid tags in source code editor for advanced configuration. More information: [Work with Liquid templates](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/custom-templates-dynamic-content)
+> You can also add Liquid tags in source code editor for advanced configuration. More information: [Work with Liquid templates](https://docs.microsoft.com/dynamics365/customer-engagement/portals/custom-templates-dynamic-content)
