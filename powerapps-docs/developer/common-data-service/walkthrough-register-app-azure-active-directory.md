@@ -4,8 +4,6 @@ description: "This walkthrough describes how to register an application with Azu
 keywords: ""
 ms.date: 04/01/2019
 ms.service: powerapps
-ms.custom:
-  - ""
 ms.topic: article
 ms.assetid: 86c4a8a8-7401-6d75-7979-3b04b506eb0c
 author: "paulliew" # GitHub ID

@@ -4,8 +4,6 @@ description: "A Ribbon command creates a reusable definition that can be referen
 keywords: ""
 ms.date: 10/31/2018
 ms.service: powerapps
-ms.custom:
-  - ""
 ms.topic: article
 ms.assetid: 60933770-8c7c-499c-12b4-8b64f6eedb35
 author: JimDaly # GitHub ID
