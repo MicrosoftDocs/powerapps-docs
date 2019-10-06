@@ -12,7 +12,8 @@ applies_to:
   - "Dynamics 365 Version 9.x"
   - "PowerApps"
 ms.author: "matp"
-manager: "brycho"
+manager: "kvivek"
+author: "Mattp123"
 search.audienceType: 
   - maker
 search.app: 

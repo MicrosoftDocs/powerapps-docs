@@ -55,7 +55,7 @@ Auto-save helps app users focus on their work without having to manage saving da
  If you want to disable auto-save for specific entity forms, you can add code to the `OnSave` event in an entity.  
   
 > [!NOTE]
->  Auto-save will be disabled for the form, but data will still be saved whenyou  select the ![Auto save button](media/auto-save-icon.png "Auto save button") button in the lower-right corner. If you attempt to navigate away from a form or close a form where data has been changed they will get prompt to save their changes before they are allowed to navigate away or close the form.  
+>  Auto-save will be disabled for the form, but data will still be saved when you select the ![Auto save button](media/auto-save-icon.png "Auto save button") button in the lower-right corner. If you attempt to navigate away from a form or close a form where data has been changed they will get prompt to save their changes before they are allowed to navigate away or close the form.  
   
 1.  Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
@@ -118,7 +118,7 @@ Auto-save helps app users focus on their work without having to manage saving da
   
          The **Handler Properties** dialog should look like this. The customization prefix: “new_” may vary based on the customization prefix set for the default publisher for your organization.  
   
- ![OnSave event handler to prevent autosave in Dynamics 365](media/prevent-auto-save-script.png "OnSave event handler to prevent autosave in Dynamics 365")  
+         ![OnSave event handler to prevent autosave in Dynamics 365](media/prevent-auto-save-script.png "OnSave event handler to prevent autosave in Dynamics 365")  
   
     7.  Select **OK** to close the **Handler Properties** dialog.  
   

@@ -111,7 +111,7 @@ For shapes without borders:
 For example, you might set the **[AccessibleLabel](properties-accessibility.md)** property of a **Settings** icon to **Settings**. This icon isn't used as a button. It's next to a **[Label](control-text-box.md)** that also says **Settings**. Screen readers will read both the icon and the label as **Settings**, which is unnecessarily verbose. In this case, the icon doesn't need an **[AccessibleLabel](properties-accessibility.md)**.
 
 > [!IMPORTANT]
-> Screen readers will read read an icon or shape as **button** if its **[AccessibleLabel](properties-accessibility.md)** is set to an empty string and its **[TabIndex](properties-accessibility.md)** is set to zero or greater. Such icons or shapes are rendered as buttons. 
+> Screen readers will read an icon or shape as **button** if its **[AccessibleLabel](properties-accessibility.md)** is set to an empty string and its **[TabIndex](properties-accessibility.md)** is set to zero or greater. Such icons or shapes are rendered as buttons. 
 
 ### Keyboard support
 - **[TabIndex](properties-accessibility.md)** must be zero or greater if the graphic is used as a button. If you set this value for an icon or shape, keyboard users can navigate to it.

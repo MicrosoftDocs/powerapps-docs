@@ -585,7 +585,7 @@ In any gallery, you can show data but you can't update it or add records. Under 
 
     As of this writing, you can't remove a record directly from a relationship, so the [**Remove**](functions/function-remove-removeif.md) function removes a record directly from the related entity. **ThisItem** specifies the record to remove, taken from the same record in the detail gallery where the Trash icon appears.
 
-    Again, the operation uses cached data, so the **Refresh** function informs the **Orders** entity that that app has changed one of its related entities.
+    Again, the operation uses cached data, so the **Refresh** function informs the **Orders** entity that the app has changed one of its related entities.
 
 1. Press F5 to open Preview mode, and then select the Trash icon next to each **Order Details** record that you want to remove from the order.
 

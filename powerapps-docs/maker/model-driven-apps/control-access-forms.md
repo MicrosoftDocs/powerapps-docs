@@ -1,6 +1,6 @@
 ---
 title: "Control access to model-driven app forms in PowerApps | MicrosoftDocs"
-description: "Learn how to control acces to main forms"
+description: "Learn how to control access to main forms"
 ms.custom: ""
 ms.date: 06/18/2019
 ms.reviewer: ""
@@ -8,10 +8,6 @@ ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-applies_to: 
-  - "Dynamics 365 (online)"
-  - "Dynamics 365 Version 9.x"
-  - "powerapps"
 author: "Mattp123"
 ms.assetid: 15d123e0-b604-45dd-ab34-0b37787a04bb
 caps.latest.revision: 33
@@ -30,7 +26,7 @@ search.app:
   
 - **Make a main form inactive**  
   
-     You can set an active or inactive state to main forms. This feature was included primarily to manage new forms included when Dynamics 365 customer engagement organizations upgrade but you can use it to prevent users from being able to use any main form.   
+     You can set an active or inactive state to main forms. This feature was included primarily to manage new forms included when Common Data Service environments upgrade but you can use it to prevent users from being able to use any main form.   
   
 - **Assign security roles to the main form**  
   
@@ -74,7 +70,7 @@ search.app:
 The Client API form context (formContext) provides a reference to the form or to an item on the form, such as, a quick view control or a row in an editable grid, against which the current code is executed. More information: [Client API form context](/dynamics365/customer-engagement/developer/clientapi/clientapi-form-context)
 
 > [!IMPORTANT]
-> With Dynamics 365 for Customer Engagement apps version 9.0, the Xrm.Page object is [deprecated](/dynamics365/get-started/whats-new/customer-engagement/important-changes-coming#some-client-apis-are-deprecated), and you should use the [getFormContext](/dynamics365/customer-engagement/developer/clientapi/reference/executioncontext/getformcontext) method of the passed in execution context object to return reference to the appropriate form or an item on the form.
+> The Xrm.Page object is [deprecated](/dynamics365/get-started/whats-new/customer-engagement/important-changes-coming#some-client-apis-are-deprecated), and you should use the [getFormContext](/powerapps/developer/model-driven-apps/clientapi/reference/executioncontext/getformcontext) method of the passed in execution context object to return reference to the appropriate form or an item on the form.
 <!-- 
  Finally, in the web application it is possible, but not recommended, for a developer to use scripts in the form Onload event to use the [Xrm.Page.ui.formSelector.items collection](http://go.microsoft.com/fwlink/p/?LinkID=513300) to query available forms and use the navigate method to direct users to a specific form. Remember that the [navigate method](http://go.microsoft.com/fwlink/p/?LinkID=513301) will cause the form to load again (and the Onload event to occur again). Your logic in the event handler should always check some condition before you use the navigate method to avoid an endless loop or unnecessarily restrict users options to navigate between forms.  
   

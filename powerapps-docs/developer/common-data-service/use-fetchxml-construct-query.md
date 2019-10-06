@@ -2,12 +2,13 @@
 title: "Use FetchXML to query data (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "FetchXML is a proprietary query language that is used in Common Data Service. It’s based on a schema that describes the capabilities of the language." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 07/23/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.topic: "article"
 author: "brandonsimons" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
+ms.reviewer: "susikka"
 manager: "kvivek" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
@@ -91,7 +92,10 @@ This example shows an inner join between EntityMap and AttributeMap where the En
    </entity>  
  </fetch>  
 ```  
-  
+
+> [!IMPORTANT]
+> A FetchXML query has a limit of a maximum of 10 allowed link entities.
+
 ## Execute the FetchXML query
 
 You can execute a FetchXML query by using either the **Web API** or the **Organization service**.

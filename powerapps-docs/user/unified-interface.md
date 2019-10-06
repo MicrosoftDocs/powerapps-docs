@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 11/16/2018
+ms.date: 9/23/2019
 ms.author: mduelae
 ms.custom: ""
 ms.reviewer: ""
@@ -17,12 +17,15 @@ search.app:
   - PowerApps
   - D365CE
 ---
-#  Enhanced user experience with the Unified Interface for model-driven apps 
+# Enhanced user experience with the Unified Interface for model-driven apps 
 
 The Unified Interface for model-driven apps provides a consistent and accessible user experience across devices—whether on a desktop, laptop, tablet, or phone. The apps scale by reflowing the components on the screen. The responsive design adapts to your environment based on screen size, so the more available space that you have, the more information can be displayed.
 
 > [!div class="mx-imgBorder"]
 > ![Unified Interface adapts to screen](media/Reflow.png "Unified Interface adapts to screen")
+
+> [!NOTE]
+> The legacy web client will be deprecated and customers must transition to Unified Interface before October 1, 2020. For more information, see [Blog: Announcing the timeline to move to Unified Interface](https://cloudblogs.microsoft.com/dynamics365/it/2019/09/10/announcing-the-timeline-to-move-to-unified-interface/). To learn more on how to transition, see [Quick start for transitioning](https://docs.microsoft.com/en-us/powerapps/maker/model-driven-apps/transition-web-app).
 
 ## Navigation
 
@@ -50,3 +53,12 @@ The business process flow has been improved by the docking mechanism. You can do
 
 ## Accessibility
 The improved accessibility experience lets you use screen readers to translate on-screen information into audible sound and print to a Braille reader so that more people can use the app. For more information, see [Use a screen reader](screen-reader.md).
+
+## Create a Unified Interface app
+If you have requirements to create your own experience on Unified Interface, you can create a model-driven app using the app designer. See [Overview of building model-driven apps](https://docs.microsoft.com/powerapps/maker/model-driven-apps/model-driven-app-overview).
+
+![Create new Unified Interface app](media/uci-model-driven-app.png "Create new Unified Interface app")
+
+## Unified Interface Community
+
+Go to the [Unified Interface Community site](https://community.dynamics.com/365/unified-interface/) to get help with planning and executing a smooth transition to the Unified Interface and engage with experts and peers on blogs, webinars, videos, events, and more.

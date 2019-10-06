@@ -4,7 +4,7 @@ description:
 keywords:
 ms.author: nabuthuk
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -14,4 +14,5 @@ applies_to:
   - "Dynamics 365 Version 9.x"
 ms.assetid: 2ab7dec5-e73e-4f2f-8148-395e34540cef
 ---
-The interface for `context.userSettings`
+
+Provides information about the current user settings.

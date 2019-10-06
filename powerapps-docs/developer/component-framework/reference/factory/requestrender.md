@@ -3,8 +3,9 @@ title: requestRender | Microsoft Docs
 description: 
 keywords:
 ms.author: nabuthuk
+author: Nkrb
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -17,7 +18,12 @@ ms.assetid: 8a6521c7-a05d-44ff-a007-1bda53d6d73a
 [!INCLUDE [requestrender-description](includes/requestrender-description.md)]
 
 ## Syntax
-`requestRender()`
+
+`context.factory.requestRender()`
+
+## Available for 
+
+Model-driven apps and canvas apps (experimental preview)
 
 ### Related topics
 

@@ -2,11 +2,12 @@
 title: "FAQ | MicrosoftDocs"
 description: "Frequently asked questions about component framework"
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.topic: "index-page"
 ms.assetid: 9f940264-d7d5-4930-8052-1bd582445d37
 ms.author: "nabuthuk"
+author: Nkrb
 ---
 
 # FAQ

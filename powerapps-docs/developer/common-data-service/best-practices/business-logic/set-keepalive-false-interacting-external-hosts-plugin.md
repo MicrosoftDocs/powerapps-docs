@@ -13,7 +13,7 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 12/12/2018
+ms.date: 8/21/2019
 ms.author: jowells
 search.audienceType: 
   - developer
@@ -31,7 +31,7 @@ search.app:
 
 ## Symptoms
 
-If a plug-in makes external web requests and is trying to use `KeepAlive` on a closed connection, the plug-in will ultimately fail to execute the web request. However, if the plug-in is registered:
+If a plug-in makes external web requests and is trying to use `KeepAlive` on a closed connection, the plug-in will ultimately fail to execute the web request. If the plug-in is registered:
 
 - Synchronously, users may experience:
 

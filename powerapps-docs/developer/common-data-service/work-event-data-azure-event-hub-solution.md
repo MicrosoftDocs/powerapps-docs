@@ -4,8 +4,6 @@ description: "The topic describes working with event data in your Azure Event Hu
 keywords: ""
 ms.date: 05/08/2019
 ms.service: powerapps
-ms.custom:
-  - ""
 ms.topic: article
 ms.assetid: a3732c49-7f47-d87c-5062-585ef28ab511
 author: brandonsimons # GitHub ID

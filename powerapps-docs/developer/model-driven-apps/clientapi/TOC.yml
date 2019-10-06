@@ -23,6 +23,10 @@
         href: ./reference/events/grid-onsave.md
       - name: OnProcessStatusChange event
         href: ./reference/events/onprocessstatuschange.md
+      - name: OnPreProcessStatusChange event
+        href: ./reference/events/onpreprocessstatuschange.md
+      - name: OnPreStageChange
+        href: ./reference/events/onprestagechange.md
       - name: OnReadyStateComplete event
         href: ./reference/events/onreadystatecomplete.md
       - name: OnResultOpened event
@@ -129,6 +133,8 @@
         href: reference/attributes/isValid.md
       - name: removeOnChange
         href: reference/attributes/removeOnChange.md
+      - name: setIsValid
+        href: reference/attributes/setIsValid.md
       - name: setPrecision
         href: reference/attributes/setPrecision.md
       - name: setRequiredLevel
@@ -182,6 +188,8 @@
         href: reference/controls/getName.md
       - name: getObject
         href: reference/controls/getObject.md
+      - name: getOptions
+        href: reference/controls/getOptions.md
       - name: getParent
         href: reference/controls/getParent.md
       - name: getSearchQuery
@@ -279,12 +287,20 @@
       items:
       - name: Event handler methods
         items:
+        - name: addOnPreProcessStatusChange
+          href: reference/formContext-data-process/eventhandlers/addOnPreProcessStatusChange.md
+        - name: addOnPreStageChange
+          href: reference/formContext-data-process/eventhandlers/addonprestagechange.md
         - name: addOnProcessStatusChange
           href: reference/formContext-data-process/eventhandlers/addOnProcessStatusChange.md
         - name: addOnStageChange
           href: reference/formContext-data-process/eventhandlers/addOnStageChange.md
         - name: addOnStageSelected
           href: reference/formContext-data-process/eventhandlers/addOnStageSelected.md
+        - name: removeOnPreProcessStatusChange
+          href: reference/formContext-data-process/eventhandlers/removeOnPreProcessStatusChange.md
+        - name: removeOnPreStageChange
+          href: reference/formContext-data-process/eventhandlers/removeOnPreStageChange.md
         - name: removeOnProcessStatusChange
           href: reference/formContext-data-process/eventhandlers/removeOnProcessStatusChange.md
         - name: removeOnStageChange
@@ -461,8 +477,6 @@
     - name: formContext.ui.tabs
       href: reference/formcontext-ui-tabs.md
       items:
-      - name: addtabStateChange
-        href: reference/formcontext-ui-tabs/addtabStateChange.md
       - name: addtabStateChange
         href: reference/formcontext-ui-tabs/addtabStateChange.md
       - name: getDisplayState
@@ -692,3 +706,4 @@
         href: reference/xrm-webapi/online/execute.md
       - name: executeMultiple
         href: reference/xrm-webapi/online/executeMultiple.md
+        

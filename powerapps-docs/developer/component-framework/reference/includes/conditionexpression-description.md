@@ -15,5 +15,4 @@ applies_to:
   - "Dynamics 365 Version 9.x"
 ms.assetid: c170e5d5-ced1-4785-9d1d-97f568881d95
 ---
-
-An expression used to represent a filter condition.
+Provides a expression used to filter the result of the query.

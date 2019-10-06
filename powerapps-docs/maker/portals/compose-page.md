@@ -6,7 +6,7 @@ manager: shujoshi
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/18/2019
+ms.date: 09/16/2019
 ms.author: shjais
 ms.reviewer:
 ---
@@ -28,6 +28,9 @@ After adding the required webpages and managing their hierarchy in the sitemap, 
     - Form
     - List
     - Breadcrumb
+
+> [!NOTE]
+> If you customize your portal using the portal designer, the website users would notice a performance impact. We recommended you to do the changes during non-peak hours on a live portal. 
 
 ## Use the WYSIWYG editor
 
@@ -58,7 +61,7 @@ After adding the required webpages and managing their hierarchy in the sitemap, 
 
 Sections allow you to define a structure for your page and arrange portal components accordingly. Once you add sections to your page, you can add portal components inside the sections as per the requirement.
 
-1.	Edit the portal to open it in the portal designer.
+1.	[Edit the portal](manage-existing-portals.md#edit) to open it in the portal designer.
 
 2.	Select the page on which you want to add a section.
 
@@ -68,7 +71,12 @@ Sections allow you to define a structure for your page and arrange portal compon
 
 5.	Under **Section layout**, select the section type to be inserted.
 
-6.	In the properties on the right side of the screen, select the following information:
+6.	In the properties pane on the right side of the screen, enter or select the following information:
+
+    - **Min Height**: Enter the minimum height of the section. If you add a component that occupies more space than the specified height, the section expands to accommodate the component. By default, the minimum height is 100px. You can also enter the height in points (pt) and percentage (%).
+
+        > [!div class=mx-imgBorder]
+        > ![Alignment in the section](media/section-props-height.png "Alignment in the section")  
 
     - **Alignment**: Select whether the component in the section must be left, center, or right aligned.
 
@@ -120,6 +128,16 @@ You can add the following components on a webpage:
 
     > [!div class=mx-imgBorder]
     > ![text component](media/text-component.png "Text component")  
+
+8. In the properties pane on the right side of the screen, select the following information:
+
+    - **Alignment**: Select whether the text must be left, center, or right aligned.
+
+    - **Font color**: Select a color for the text.
+
+        > [!div class=mx-imgBorder]
+        > ![Select text alignment and color](media/text-props.png "Select text alignment and color")  
+ 
 
 ### Add image
 

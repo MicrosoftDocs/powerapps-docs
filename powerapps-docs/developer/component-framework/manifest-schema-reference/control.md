@@ -3,8 +3,9 @@ title: Control Element | Microsoft Docs
 description: 
 keywords:
 ms.author: nabuthuk
+author: Nkrb
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -17,22 +18,24 @@ ms.assetid: 4dacd337-c9df-458e-86f3-bfb3ab543ea7
 
 # control element
 
-[!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
-
 [!INCLUDE [control-description](includes/control-description.md)]
+
+## Available for
+
+Model-driven apps and canvas apps (experimental preview)
 
 ## Attributes
 
-|Name|Description|Type|Required|
-|--|--|--|--|
-|`namespace`|Defines the object prototype of the component|[!INCLUDE [alphanumerictype-description](includes/alphanumerictype-description.md)]|yes|
-|`constructor`|A method for initializing the object|[!INCLUDE [alphanumerictype-description](includes/alphanumerictype-description.md)]|yes|
-|`control-type`|Standard|[!INCLUDE [controltype-description](includes/controltype-description.md)]|no|
-|`description-key`|Used in the customization screens as localized strings that describes the description of the property.|`string`|no|
-|`display-name-key`|Used in the customization screens as localized strings that describes the name of the property.|`string`|yes|
-|`preview-image`|Image that will be used on the customization screens to show a preview of the component to the customizer|`string`|no|
-|`version`|Defines the version of the component defined in [Semantic Versioning](https://semver.org)|`string`|yes|
-|`hidden`|Defines whether the component should be hidden or not|[!INCLUDE [booleantype-description](includes/booleantype-description.md)]| no|
+|Name|Description|Type|Required|Available for|
+|--|--|--|--|--------|
+|`namespace`|Defines the object prototype of the component|[!INCLUDE [alphanumerictype-description](includes/alphanumerictype-description.md)]|Yes|Model-driven apps and canvas apps (experimental preview) (experimental preview)|
+|`constructor`|A method for initializing the object|[!INCLUDE [alphanumerictype-description](includes/alphanumerictype-description.md)]|Yes|Model-driven apps and canvas apps (experimental preview) (experimental preview)|
+|`control-type`|Standard|[!INCLUDE [controltype-description](includes/controltype-description.md)]|No|Model-driven apps and canvas apps (experimental preview) (experimental preview)|
+|`description-key`|Defines the description of the component that will be seen on the UI.|`string`|No|Model-driven apps and canvas apps (experimental preview) (experimental preview)|
+|`display-name-key`|Defines the name of the control that is displayed on the UI.|`string`|Yes|Model-driven apps and canvas apps (experimental preview) (experimental preview)|
+|`preview-image`|Image that will be used on the customization screens to show a preview of the component.|`string`|No|Model-driven apps|
+|`version`|Defines the version of the component defined in [Semantic Versioning](https://semver.org)|`string`|Yes|Model-driven apps and canvas apps (experimental preview) (experimental preview)|
+<!--|`hidden`|Defines whether the component should be hidden or not|[!INCLUDE [booleantype-description](includes/booleantype-description.md)]| No|Model-driven apps|-->
 
 ## Parent Elements
 

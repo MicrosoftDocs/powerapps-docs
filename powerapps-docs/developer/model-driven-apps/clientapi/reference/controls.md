@@ -1,9 +1,8 @@
 ---
 title: "Controls in model-driven apps for Dynamics 365| MicrosoftDocs"
-ms.date: 10/31/2018
+ms.date: 08/12/2019
 ms.service: powerapps
 ms.topic: "reference"
-applies_to: "Dynamics 365 (online)"
 ms.assetid: 4d025f92-db16-440c-9f82-e40d71e09862
 author: "KumarVivek"
 ms.author: "kvivek"
@@ -213,18 +212,21 @@ Both multi-select option set and option set controls have the same set of method
 <li><a href="controls/getDisabled.md" data-raw-source="[getDisabled](controls/getDisabled.md)">getDisabled</a></li>
 <li><a href="controls/getLabel.md" data-raw-source="[getLabel](controls/getLabel.md)">getLabel</a></li>
 <li><a href="controls/getName.md" data-raw-source="[getName](controls/getName.md)">getName</a></li>
+<li><a href="controls/getOptions.md" data-raw-source="[getOptions](controls/getOptions.md)">getOptions</a></li>
 <li><a href="controls/getParent.md" data-raw-source="[getParent](controls/getParent.md)">getParent</a></li>
 <li><a href="controls/getVisible.md" data-raw-source="[getVisible](controls/getVisible.md)">getVisible</a></li>
-<li><a href="controls/removeoption.md" data-raw-source="[removeOption](controls/removeoption.md)">removeOption</a></li>
+
 </ul>
 </td>
 <td>
 <ul>
+<li><a href="controls/removeoption.md" data-raw-source="[removeOption](controls/removeoption.md)">removeOption</a></li>
 <li><a href="controls/setDisabled.md" data-raw-source="[setDisabled](controls/setDisabled.md)">setDisabled</a></li>
 <li><a href="controls/setFocus.md" data-raw-source="[setFocus](controls/setFocus.md)">setFocus</a></li>
 <li><a href="controls/setLabel.md" data-raw-source="[setLabel](controls/setLabel.md)">setLabel</a></li>
 <li><a href="controls/setNotification.md" data-raw-source="[setNotification](controls/setNotification.md)">setNotification</a></li>
 <li><a href="controls/setVisible.md" data-raw-source="[setVisible](controls/setVisible.md)">setVisible</a></li>
+
 </ul>
 </td>
 </tr>
@@ -240,7 +242,7 @@ See [Grids and subgrids](grids.md) for information methods supported for this co
 
 ## timelinewall control type
 
-The timeline control is a new control type introduced in Dynamics 365 for Customer Engagement apps version 9.0 that presents the Posts, Activities, and Notes in a unified view. These are the methods available for this control type.
+The timeline control presents the Posts, Activities, and Notes in a unified view. These are the methods available for this control type.
 
 <table>
 <tr>

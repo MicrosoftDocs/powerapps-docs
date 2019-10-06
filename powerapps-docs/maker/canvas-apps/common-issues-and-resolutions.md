@@ -1,14 +1,14 @@
 ---
 title: Common issues and resolutions for PowerApps | Microsoft Docs
 description: A list of common issues and resolutions within PowerApps.
-author: AFTOwen
+author: KumarVivek
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 11/09/2018
-ms.author: anneta
+ms.date: 08/21/2019
+ms.author: kvivek
 search.audienceType: 
   - maker
 search.app: 
@@ -18,7 +18,9 @@ search.app:
 
 This article lists some common issues that you might encounter while using PowerApps. Where applicable, workarounds are provided.
 
-## Added after February 2018
+1. **Sign-in issue on certain Android mobile devices when using authenticator** (August 21, 2019)
+
+    In certain devices and scenarios, you may experience sign-in failures when using authenticator. This is due to the OEM limiting this functionality. For more details on the error and possible mitigations, see [here](https://github.com/AzureAD/azure-activedirectory-library-for-android/wiki/ADALError:-BROKER_AUTHENTICATOR_NOT_RESPONDING).    
 
 1. **Camera issue on Android mobile devices** (Jan. 1, 2019)
 
@@ -66,8 +68,6 @@ This article lists some common issues that you might encounter while using Power
 1. **Changing the layout of SharePoint forms** (March 7, 2018)
 
     While customizing a SharePoint list form in certain languages, if you try to change the layout from portrait (default) to landscape, the app may show multiple errors (yellow triangles in controls). To resolve these errors and retain the landscape layout, click **Undo**.
-
-## Added in or before February 2018
 
 1. **Data Table control**
 

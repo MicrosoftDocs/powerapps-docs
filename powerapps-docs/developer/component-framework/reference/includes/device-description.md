@@ -4,7 +4,7 @@ description:
 keywords:
 ms.author: nabuthuk
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -15,4 +15,4 @@ applies_to:
 ms.assetid: de178280-a62e-4cbb-8421-21d792d8e194
 ---
 
-The interface for the `context.device`
+Provides methods to use native device capabilities.

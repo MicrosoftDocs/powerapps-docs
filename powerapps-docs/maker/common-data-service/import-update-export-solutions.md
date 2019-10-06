@@ -2,7 +2,7 @@
 title: "Import, update, and export solutions | MicrosoftDocs"
 description: "Learn how to import, update, and export a solution in PowerApps"
 ms.custom: ""
-ms.date: 11/06/2018
+ms.date: 09/30/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -25,7 +25,7 @@ search.app:
 ---
 # Import, update, and export solutions 
 
- You can import solutions manually using the steps below. Only import solutions that you've obtained from a trusted source. Customizations might include code that can send data to external sources. You can import the solution called **Default Solution** only to the environment from which you exported it, but not into a different environment.  
+ You can import solutions manually using the steps below. Only import solutions that you've obtained from a trusted source. Customizations might include code that can send data to external sources.   
   
 1.  Select **Solutions** from the left navigation.  
   
@@ -87,8 +87,11 @@ search.app:
 <a name="BKMK_ExportSolutions"></a>   
 
 ## Export solutions  
- We recommend that you export your unmanaged customizations periodically so that you have a backup in case anything happens. You cannot export managed solutions. You can either export solutions from PowerApps or you can export using the classic experience. 
+ We recommend that you create an unmanaged solution to use for exporting your customizations. Then, export your customizations periodically so that you have a backup in case anything happens. You cannot export managed solutions. You can either export solutions from PowerApps or you can export using the classic experience. 
  
+> [!IMPORTANT]
+> Exporting the Default Solution is not supported. 
+
 ### Export from PowerApps
   
 1.  Select **Solutions** from the left navigation.   
@@ -116,7 +119,7 @@ search.app:
   
 6.  In the **Package Type** step, you must choose whether to export the solution as an **Unmanaged** or **Managed** solution.  
   
-7.  The next step allows you to choose a target solution for a specific Dynamics 365 for Customer Engagement version. This option is typically used by ISVs who may want to export a solution that is compliant with a previous version. Unless you intend to import this solution into an environment that is not upgraded to the same version as the environment version you are using, accept the default.   
+7.  The next step allows you to choose a target solution for a specific version. This option is typically used by ISVs who may want to export a solution that is compliant with a previous version. Unless you intend to import this solution into an environment that is not upgraded to the same version as the environment version you are using, accept the default.   
   
 8.  Select **Export** to download the solution file.  
   
@@ -137,7 +140,7 @@ search.app:
 |Order Prefix|Prefix to use for all orders throughout the app.|  
 |Unique String Length|Number of characters appended to invoice, quote, and order numbers.|  
 |Calendar|Calendar Type|Calendar type for the system. Set to Gregorian US by default|  
-|Date Format Code|Information about how the date is displayed throughout Dynamics 365 for Customer Engagement|  
+|Date Format Code|Information about how the date is displayed throughout Common Data Service|  
 |Date Separator|Character used to separate the month, the day, and the year in dates throughout the app.|  
 |Max Appointment Duration|Maximum number of days an appointment can last.|  
 |Show Week Number|Information that specifies whether to display the week number in calendar displays throughout the app.|  

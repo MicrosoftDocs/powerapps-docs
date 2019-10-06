@@ -6,7 +6,7 @@ manager: shujoshi
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/18/2019
+ms.date: 10/02/2019
 ms.author: shjais
 ms.reviewer:
 ---
@@ -19,7 +19,7 @@ With the capability to build a portal in PowerApps, you can create a website for
 
 These are some benefits of creating a portal:
 
-- Because the data is stored in Common Data Service, you don't need to create a connection from PowerApps as you do with data sources such as SharePoint, Dynamics 365 for Customer Engagement apps, or Salesforce. You need only to specify the entities that you want to show or manage in the portal.
+- Because the data is stored in Common Data Service, you don't need to create a connection from PowerApps as you do with data sources such as SharePoint, Dynamics 365 model-driven applications, or Salesforce. You need only to specify the entities that you want to show or manage in the portal.
 
 - You can design the portal through the WYSIWYG portal designer by adding and configuring components on the webpages.
 
@@ -29,7 +29,7 @@ If you choose to create your portal in a new environment using the **Create new 
 
 If you choose to create your portal in an existing environment without portal pre-requisites, the pre-requisites are installed first and then the portal is created. In this method, the portal provisioning can take some time and you’ll be notified when the portal is provisioned.
 
-You can create Common Data Service starter portal or Dynamics 365 Portal in PowerApps based on the selected environment.
+You can create Common Data Service starter portal or Dynamics 365 Portals in PowerApps based on the selected environment.
 
 More information on working with environments: [Working with environments and Microsoft PowerApps](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/working-with-environments)
 
@@ -68,7 +68,7 @@ After the portal is provisioned successfully, the status is updated and the port
 To edit the portal in portal designer, see [Edit a portal](manage-existing-portals.md#edit).
 
 > [!NOTE]
-> - You can create a maximum of one portal in an environment.
+> - You can create a maximum of five portals in a tenant. However, there can only be one portal of each type created in an environment.
 > - If you don't have sufficient privileges to provision a portal, an error is displayed. You must have System Administrator or at least System Customizer role in Common Data Service to create a portal. You must also have the **Access Mode** set to **Read-Write** under **Client Access License (CAL) Information** in the user record.
 
 ## Create new environment
@@ -134,4 +134,26 @@ Notification shown for provisioning successfully completed
 
 If the portal provisioning fails, the notifications are displayed similarly.
   
+## Disable portal creation in a tenant
+
+As a global administrator, if you want to disable portal creation in a tenant by non-administrators, you can do it by enabling the `disablePortalsCreationByNonAdminUsers` tenant level setting through PowerShell. To run PowerShell cmdlets, you must first install the required modules. For information on installing the required PowerShell modules, see [Installation](https://docs.microsoft.com/en-us/power-platform/admin/powerapps-powershell#installation).
+
+After installing the modules, run the following command in a PowerShell window (run PowerShell as an administrator).
+
+```
+Set-TenantSettings -RequestBody @{ "disablePortalsCreationByNonAdminUsers" = $true }
+```
+
+Administrator are the users having one of the following Azure roles:
+
+- Global Administrator
+- Dynamics 365 Service Administrator
+- Power Platform Service Administrator
+
+Users not having the any of the above mentioned Azure roles are considered as non-administrators.
+
+When the portal creation is disabled in a tenant, non-administrators will see an error as follows:
+
+> [!div class=mx-imgBorder]
+> ![Portal creation blocked error](media/portal-create-blocked-error.png "Portal creation blocked error")
 

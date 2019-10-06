@@ -8,8 +8,6 @@ ms.service: powerapps
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: 
-  - Dynamics 365 for Customer Engagement (online)
 ms.assetid: 955BA444-A53D-4843-9429-833B1636E2B4
 caps.latest.revision: 7
 author: susikka
@@ -26,9 +24,6 @@ search.app:
 You can use Postman to connect to your Common Data Service instance and to compose Web API requests, send them, and view responses. Managing authentication challenges many people. This topic describes how to configure a Postman environment to work for your Common Data Service environments.
 
 You can use a Postman environment to save a set of variables that you use to connect. These values can be accessed within Postman by using this syntax: `{{name}}`. For more information with Postman variables, see [Postman Documentation > Variables](https://www.getpostman.com/docs/v6/postman/environments_and_globals/variables).
-
-> [!NOTE]
-> [!INCLUDE[cc-d365ce-note-topic](../includes/cc-d365ce-note-topic.md)] [Set up a Postman environment (Customer Engagement)](/dynamics365/customer-engagement/developer/webapi/setup-postman-environment)
 
 ## Prerequisites
 
