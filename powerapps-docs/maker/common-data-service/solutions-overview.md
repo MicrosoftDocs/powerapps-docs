@@ -104,9 +104,9 @@ More information: [Whitepaper: Solution Lifecycle Management](https://www.micros
   
 <a name="BKMK_ManagedAndUnmanagedSolutions"></a>   
 ### Managed and unmanaged solutions  
- There are **managed** and **unmanaged** solutions. A **managed** solution cannot be modified and can be uninstalled after it is imported. All the components of that solution are removed by uninstalling the solution.  
+ There are **managed** and **unmanaged** solutions. A **managed** solution cannot be modified and can be uninstalled after it is imported. All the components of that solution are deleted by uninstalling the solution.  
   
- When you import an **unmanaged** solution, you add all the components of that solution into your environment. You can’t remove the components by uninstalling the solution.  
+ When you import an **unmanaged** solution, you add all the components of that solution into your environment. You can’t delete the components by uninstalling the solution.  
   
  When you import an **unmanaged** solution that contains components that you have already customized, your customizations will be overwritten by the customizations in the imported unmanaged solution. You can’t undo this.  
   

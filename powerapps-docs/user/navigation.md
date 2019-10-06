@@ -5,7 +5,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 11/16/2018
+ms.date: 10/03/2019
 ms.author: mkaur
 ms.reviewer: ""
 ms.assetid: 
@@ -71,7 +71,7 @@ The reference panel is a great way to get work done without moving away from the
 
 There are three types of notifications that are shown on a form: Informational, Warning and Error. Notifications are always available at the top of the form, just above the header.
 
-The notifications described below are available with version 9.1.9.3010.
+When you select the error notification, it will take you to the field on the form where the error occurred.
 
 ![Example of notifications](media/notifications.png "Example of notifications")
 
@@ -82,6 +82,10 @@ If there is only one notification you will see a single line.
 If there is more than one notification, you will see the number of notifications. Select the chevron, to view each message.
 
 ![Example of multiple notifications](media/multiple_notification.png "Example of multiple notifications")
+
+## Grids
+
+Grids in Unified Interface have been improved to increase the amount of data that can be seen on your screen. Grids also have improved filtering options which include remembering your last filter and sorts order. For a detailed list of improvements see this blog post, [Enhanced functionality in Unified Interface grids](https://powerapps.microsoft.com/en-us/blog/enhanced-functionality-in-unified-interface-grids).
 
 
 
