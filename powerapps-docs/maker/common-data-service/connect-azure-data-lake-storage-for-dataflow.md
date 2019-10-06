@@ -60,17 +60,12 @@ Follow the steps in [Create an Azure Data Lake Storage Gen2 storage account](htt
 2.	Make sure you enable the hierarchical namespace feature. 
 3.	We recommend that you set the replication setting to Read-access geo-redundant storage (RA-GRS).
 
-
-
-<!--from editor: I haven't heard of Athena before. Is it the Amazon service, https://aws.amazon.com/athena/? If so, it probably should be identified as Amazon at first mention. -->
-
-
-## Create a Cross-Origin Resource Sharing (CORS) rule for the Athena service
+## Create a Cross-Origin Resource Sharing (CORS) rule for the Export to data lake (preview) service
 
 > [!NOTE]
-> Power Platform Dataflows leverage the Athena service to connect a data lake to a PowerApps environment. In this section, you are required to grant the Athena service a role to the storage account so it can be configured for dataflow use.
+> Power Platform Dataflows leverage the Export to data lake (preview) feature to connect a Data Lake to a PowerApps environment. In this section, you are required to grant the Export to data lake (preview) service a role to the storage account, so it can be configured for Dataflow use.
 
-Next, you need to enable the Athena service to access the storage account via web browser and the PowerApps portal. Web browsers implement a security restriction known as [same-origin policy](http://www.w3.org/Security/wiki/Same_Origin_Policy) that prevents a web page from calling APIs in a different domain; CORS provides a secure way to allow one domain (the origin domain) to call APIs in another domain. For more information about CORS, see the [CORS specification](http://www.w3.org/TR/cors/).
+Next, you need to enable the Export to data lake (preview) service access the storage account via web browser and the PowerApps portal. Web browsers implement a security restriction known as [same-origin policy](http://www.w3.org/Security/wiki/Same_Origin_Policy) that prevents a web page from calling APIs in a different domain; CORS provides a secure way to allow one domain (the origin domain) to call APIs in another domain. For more information about CORS, see the [CORS specification](http://www.w3.org/TR/cors/).
 
 Follow the steps in the storage account you just created on the settings page in the Azure portal. In the CORS menu item, select the Blob service section and enter these details. 
 
@@ -83,7 +78,7 @@ Follow the steps in the storage account you just created on the settings page in
 |Max age |   *  |
 
 
-The following image shows the CORS rule configured for the Athena Service.
+The following image shows the CORS rule configured for the Export to data lake (preview) Service.
 
 ![CORS rule](media/dataflows-cores-rule.png)
 
