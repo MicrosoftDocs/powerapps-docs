@@ -4,7 +4,7 @@ description:
 keywords:
 ms.author: nabuthuk
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -15,4 +15,4 @@ applies_to:
 ms.assetid: 8022c3a6-fa4c-4cfc-afad-a2589d0fbe53
 ---
 
-The interface for the `context.mode`
+Provides access to methods to get the information about the current state of the code component. 

@@ -28,19 +28,19 @@ This quick start topic shows you how to use an existing environment to create a 
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE3JzyI]
 
-For similar instructions that show you how to create a new sandbox environment to isolate the testing and view only the Unified Interface experience, see [Quick start for transitioning your Dynamics 365 for Customer Engagement apps legacy web client application to Unified Interface](transition-web-app.md).
+For similar instructions that show you how to create a new sandbox environment to isolate the testing and view only the Unified Interface experience, see [Quick start for transitioning your Dynamics 365 legacy web client application to Unified Interface](transition-web-app.md).
 
 > [!IMPORTANT]
->  For environments with Dynamics 365 for Field Service or Dynamics 365 for Project Service Automation apps, see [Dynamics 365 for Customer Engagement apps](transition-web-app.md#dynamics-365-for-customer-engagement-apps).
+>  For environments with Dynamics 365 Field Service or Dynamics 365 Project Service Automation apps, see [Dynamics 365 apps](transition-web-app.md#dynamics-365-apps).
 
 ## Prerequisites 
-- An existing Dynamics 365 for Sales or Service legacy web client application. 
+- An existing Dynamics 365 Sales or Service legacy web client application. 
 - Although not required, we recommend using a non-production environment to test your application. More information: [Manage sandbox instances](/dynamics365/customer-engagement/admin/manage-sandbox-instances) 
 
 ## Overview 
 This topic is for existing customers who are currently using legacy web client applications who need to plan and execute their transition to the Unified Interface. To set up a parallel environment, you create a new application based on your default solution as it stands today. This can be done in your current development sandbox environment without impact to your existing work.
 
-After completing the steps in this article, users with the appropriate role can see your new app in the app list on both the Dynamics 365 for Customer Engagement drop-down app list or on the Dynamics 365 Home page (http://home.dynamics.com).
+After completing the steps in this article, users with the appropriate role can see your new app in the app list on both the Dynamics 365 drop-down app list or on the Dynamics 365 Home page (http://home.dynamics.com).
 
 ![App list](media/app-list.png)
 
@@ -56,7 +56,7 @@ The process for validating your legacy web client app in an existing environment
 2.	Create a new model-driven app 
 3.	Configure app properties  
 
-If you’ve recently switched the **Use Unified Interface only** mode to **On** in your development environment, such as instructed by following the [Quick start for transitioning your Dynamics 365 for Customer Engagement apps legacy web client application to Unified Interface](transition-web-app.md) topic, you must turn the setting back to **Off** so you can run the existing legacy web client apps.
+If you’ve recently switched the **Use Unified Interface only** mode to **On** in your development environment, such as instructed by following the [Quick start for transitioning your Dynamics 365 legacy web client application to Unified Interface](transition-web-app.md) topic, you must turn the setting back to **Off** so you can run the existing legacy web client apps.
 
 ### Create a new solution that's based on the default solution
 1. Sign in to the [PowerApps maker portal](https://make.powerapps.com).   
@@ -87,7 +87,7 @@ In this step you will create a new app that leverages your existing customizatio
 5. The App Designer opens, displaying all the app components that were in the default solution. Select **Publish**.  
 6. After the publishing process completes, select **Play**.  
 
-A new window opens in the browser with your new model-driven app that contains all of the entities, sitemap, and sitemap customizations that were in your default Dynamics 365 for Customer Engagement application.  
+A new window opens in the browser with your new model-driven app that contains all of the entities, sitemap, and sitemap customizations that were in your default Dynamics 365 application.  
 
 > [!div class="mx-imgBorder"] 
 > ![New Unified Interface app](media/new-unified-interface-app.png "New Unified Interface app")
@@ -130,7 +130,7 @@ The tasks required to configure the model-driven app properties include:
 
 6. Select **Save**. 
 
-Now, users with the appropriate role can see your new app in the app list on both the Dynamics 365 for Customer Engagement drop-down app list or on the Dynamics 365 Home page (http://home.dynamics.com). 
+Now, users with the appropriate role can see your new app in the app list on both the Dynamics 365 drop-down app list or on the Dynamics 365 Home page (http://home.dynamics.com). 
   
    ![App list](media/app-list.png "App list")
 
@@ -149,7 +149,7 @@ Now you are ready to launch the app. You can compare the new Unified Interface a
 With your application showcasing the Unified Interface, you can start validating your app, processes, and customizations to identify how the transition will look. We recommend that you test all use cases, but you can start with the most critical ones or group into logical patterns of design. Since the Unified Interface is based on responsive design, we recommend that you always perform tests with different devices that have different screen resolutions. As you test the application you will be able to verify that your customizations are compatible with the Unified Interface and whether there are any features that require a redesign or have missing functionality.  
 
 > [!IMPORTANT]
-> The current version of Common Data Service and Dynamics 365 for Customer Engagement apps still includes several deprecated features. You should review your application for any deprecated features and replace as necessary with new capabilities. More information: [Important changes (deprecations) coming in Dynamics 365 Customer Engagement](/dynamics365/get-started/whats-new/customer-engagement/important-changes-coming)
+> The current version of Common Data Service and model-driven apps in Dynamics 365 still include several deprecated features. You should review your application for any deprecated features and replace as necessary with new capabilities. More information: [Important changes (deprecations) coming](/dynamics365/get-started/whats-new/customer-engagement/important-changes-coming)
 
 > [!TIP]
 > The PowerApps Checker tool assists in quality checking of your solution's components.  More information: [Use solution checker to validate your model-driven apps in PowerApps](../common-data-service/use-powerapps-checker.md)

@@ -5,7 +5,7 @@ keywords:
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -14,8 +14,6 @@ ms.assetid: c237ff96-9268-4068-9d61-aea0bdc79fc2
 ---
 
 # UserSettings
-
-[!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
 
 [!INCLUDE [usersettings-description](includes/usersettings-description.md)]
 
@@ -29,17 +27,17 @@ Model-driven apps
 
 Date formatting information as retrieved from the server.
 
-**Type**: `DateFormattingInfo`
+**Type**: [DateFormattingInfo](dateformattinginfo.md)
 
 ### isRTL
 
-Whether the language is right to left
+Returns true if the language is right  to left.
 
 **Type**: `boolean`
 
 ### languageId
 
-Current user's language id
+Current user's language id.
 
 **Type**: `number`
 
@@ -47,23 +45,23 @@ Current user's language id
 
 Number formatting information as retrieved from the server.
 
-**Type**: `NumberFormattingInfo`
+**Type**: [NumberFormattingInfo](numberformattinginfo.md)
 
 ### securityRoles
 
-Current user roles
+Current user roles.
 
 **Type**: `string[]`
 
 ### userId
 
-The id of the current user
+The id of the current user.
 
 **Type**: `string`
 
 ### userName
 
-The name of the current user
+The username of the current user.
 
 **Type**: `string`
 

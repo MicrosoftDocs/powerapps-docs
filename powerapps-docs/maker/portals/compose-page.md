@@ -204,7 +204,7 @@ You can add the following components on a webpage:
 
 ### Add form
 
-Form is a data-driven configuration that you use to add a form to collect data in the portal without the need for a developer to surface the form in the portal. [Forms are created in Common Data Service](https://docs.microsoft.com/en-us/powerapps/maker/model-driven-apps/form-designer-overview) and you can use them into webpages in the portal or in conjunction with lists to build out complete web applications.  
+Form is a data-driven configuration that you use to add a form to collect data in the portal without the need for a developer to surface the form in the portal. [Forms are created in Common Data Service](https://docs.microsoft.com/powerapps/maker/model-driven-apps/form-designer-overview) and you can use them into webpages in the portal or in conjunction with lists to build out complete web applications.  
 
 1.  [Edit the portal](manage-existing-portals.md#edit) to open it in the portal designer.  
 
@@ -252,14 +252,14 @@ Form is a data-driven configuration that you use to add a form to collect data i
 
     - **Show captcha for authenticated users**: Displays captcha to authenticated users.
 
-    - **Enable entity permissions**: Entity permissions to be considered for the form. By default, it is not selected. If selected, explicit permissions are required for any user to access the form. More information: [Entity permission](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/assign-entity-permissions)
+    - **Enable entity permissions**: Entity permissions to be considered for the form. By default, it is not selected. If selected, explicit permissions are required for any user to access the form. More information: [Entity permission](https://docs.microsoft.com/dynamics365/customer-engagement/portals/assign-entity-permissions)
 
         > [!div class=mx-imgBorder]
         > ![form properties](media/form-props.png "Form properties")
 
 ### Add list
 
-List is a data-driven configuration that you use to add a webpage that will render a list of records without the need for a developer to surface the grid in the portal. Lists use [Common Data Service views](https://docs.microsoft.com/en-us/powerapps/maker/model-driven-apps/create-and-edit-views) to display records on the portal.  
+List is a data-driven configuration that you use to add a webpage that will render a list of records without the need for a developer to surface the grid in the portal. Lists use [Common Data Service views](https://docs.microsoft.com/powerapps/maker/model-driven-apps/create-and-edit-views) to display records on the portal.  
 
 1.  [Edit the portal](manage-existing-portals.md#edit) to open it in the portal designer.  
 
@@ -298,7 +298,7 @@ List is a data-driven configuration that you use to add a webpage that will rend
 
     - **Enable search in entity list**: Allows a user to search records in the list.
 
-    - **Enable entity permissions**: Entity permissions to be considered for the list. By default, it is not selected. If selected, explicit permissions are required for any user to access the form. More information: [Entity permission](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/assign-entity-permissions)  
+    - **Enable entity permissions**: Entity permissions to be considered for the list. By default, it is not selected. If selected, explicit permissions are required for any user to access the form. More information: [Entity permission](https://docs.microsoft.com/dynamics365/customer-engagement/portals/assign-entity-permissions)  
 
     > [!div class=mx-imgBorder]
     > ![list properties](media/list-props.png "List properties")
@@ -317,7 +317,7 @@ List is a data-driven configuration that you use to add a webpage that will rend
 
 ## Add a custom menu
 
-By default, the menu on the website is created automatically based on the hierarchy of the webpages. It is called the **default** menu. To create a custom menu, you must create the web link set in the Portal Management app. More information: [Manage web links](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/manage-web-links)
+By default, the menu on the website is created automatically based on the hierarchy of the webpages. It is called the **default** menu. To create a custom menu, you must create the web link set in the Portal Management app. More information: [Manage web links](https://docs.microsoft.com/dynamics365/customer-engagement/portals/manage-web-links)
 
 After you create the web link set:
 
@@ -343,6 +343,6 @@ The source code is displayed in the **Code Editor** pane at the bottom of the sc
 > ![code editor](media/code-editor.png "Code editor") 
 
 > [!NOTE]
-> You can also add Liquid tags in source code editor for advanced configuration. More information: [Work with Liquid templates](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/custom-templates-dynamic-content)
+> You can also add Liquid tags in source code editor for advanced configuration. More information: [Work with Liquid templates](https://docs.microsoft.com/dynamics365/customer-engagement/portals/custom-templates-dynamic-content)
 
 

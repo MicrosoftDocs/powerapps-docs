@@ -86,6 +86,7 @@ Use these methods to retrieve information about the active stage and set a diffe
 ## Stage methods 
 
 A stage contains the data for a stage in a business process flow. Use the methods to access properties of the stage.
+
 |Name | Description|
 |--|--|
 |[getCategory](formcontext-data-process/stage/getCategory.md)|[!INCLUDE[formcontext-data-process/stage/includes/getCategory-description.md](formcontext-data-process/stage/includes/getCategory-description.md)]|
