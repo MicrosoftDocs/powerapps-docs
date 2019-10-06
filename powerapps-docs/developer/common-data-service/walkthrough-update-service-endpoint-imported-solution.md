@@ -44,4 +44,4 @@ An extra step is required after importing into an organization a solution contai
 ### See also  
 [Azure integration for Dynamics 365](azure-integration.md)
 
- [Service Bus authentication and authorization](https://azure.microsoft.com/en-us/documentation/articles/service-bus-authentication-and-authorization/)
+ [Service Bus authentication and authorization](https://azure.microsoft.com/documentation/articles/service-bus-authentication-and-authorization/)

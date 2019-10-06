@@ -1,13 +1,13 @@
 ---
 title: "Walkthrough: Registering and configuring SimpleSPA application with adal.js (Common Data Service) | Microsoft Docs"
-description: "This walkthrough describes the process of registering and configuring the simplest Single Page Application (SPA) to access data in Dynamics 365 Customer Engagement using adal.js and Cross-origin Resource Sharing (CORS)."
+description: "This walkthrough describes the process of registering and configuring the simplest Single Page Application (SPA) to access data in Common Data Service using adal.js and Cross-origin Resource Sharing (CORS)."
 keywords: ""
-ms.date: 02/12/2019
+ms.date: 08/26/2019
 ms.service: powerapps
 ms.topic: article
 ms.assetid: a327d2ff-e252-61cf-1190-6a974130ef19
 author: "paulliew" # GitHub ID
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
+ms.author: "nabuthuk" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 ms.reviewer: 
 search.audienceType: 
@@ -19,13 +19,13 @@ search.app:
 
 # Walkthrough: Registering and configuring a SPA application with adal.js
 
-This walkthrough describes the process of registering and configuring the simplest Single Page Application (SPA) to access data in Common Data Service using adal.js and Cross-origin Resource Sharing (CORS). More information: [Use OAuth with Cross-Origin Resource Sharing  to connect a Single Page Application  to Dynamics 365 (online)](oauth-cross-origin-resource-sharing-connect-single-page-application.md).
+This walkthrough describes the process of registering and configuring the simplest Single Page Application (SPA) to access data in Common Data Service using adal.js and Cross-origin Resource Sharing (CORS). More information: [Use OAuth with Cross-Origin Resource Sharing  to connect a Single Page Application to Common Data Service ](oauth-cross-origin-resource-sharing-connect-single-page-application.md).
   
 ## Prerequisites  
   
 - PowerApps Common Data Service  
   
-- You must have a Dynamics 365 (online) system user account with administrator role for the Office 365.  
+- You must have a Common Data Service system user account with administrator role for the Office 365.  
   
 - An Azure subscription to register your application. A trial account will also work.  
   
@@ -48,22 +48,22 @@ Click the **Get Accounts** button to retrieve 10 account records from your Commo
 ![The SimpleSPA page](media/simple-spa.png "The SimpleSPA page")  
 
 > [!NOTE]
->  The initial load of data from Common Data Service may be slow as the operations to support authentication take place, but subsequent operations are much faster.  
+> The initial load of data from Common Data Service may be slow as the operations to support authentication take place, but subsequent operations are much faster.  
 
 Finally, you can click on **Logout** button to logout.  
 
 > [!NOTE]
->  This SPA application is not intended to represent a pattern for developing robust SPA applications. It is simplified to focus on the process of registering and configuring the application.  
+> This SPA application is not intended to represent a pattern for developing robust SPA applications. It is simplified to focus on the process of registering and configuring the application.  
 
 <a name="bkmk_createwebapp"></a>
 
 ## Create a web application project  
   
-1.  Using Visual Studio 2017, create a new **ASP.NET Web Application** project and use the **Empty** template. You can name the project whatever you like.  
+1. Using Visual Studio 2017, create a new **ASP.NET Web Application** project and use the **Empty** template. You can name the project whatever you like.  
   
     You should be able to use earlier versions of Visual Studio as well, but these steps will describe using Visual Studio 2017.  
   
-2.  Add a new HTML page named `SimpleSPA.html` to the project and paste in the following code:  
+2. Add a new HTML page named `SimpleSPA.html` to the project and paste in the following code:  
   
     ```html  
     <!DOCTYPE html>  
@@ -268,11 +268,11 @@ Finally, you can click on **Logout** button to logout.
   
     ```  
   
-3.  Right click on the SimpleSPA.html file and select **Set As Start Page** to set this page as the start page for the project.  
+3. Right click on the SimpleSPA.html file and select **Set As Start Page** to set this page as the start page for the project.  
   
-4.  In the properties of the project, select **Web** and under **Servers** note the **Project URL**. It should be something like `http://localhost:62111/`. Note the port number that is generated. You will need this in the next step.  
+4. In the properties of the project, select **Web** and under **Servers** note the **Project URL**. It should be something like `http://localhost:62111/`. Note the port number that is generated. You will need this in the next step.  
   
-5.  Within the SimpleSPA.html page, locate the following configuration variables and set them accordingly. You will be able to set the `clientId` after you complete the next part of the walkthrough.  
+5. Within the SimpleSPA.html page, locate the following configuration variables and set them accordingly. You will be able to set the `clientId` after you complete the next part of the walkthrough.  
   
     ```javascript  
     //Set these variables to match your environment  
@@ -285,81 +285,77 @@ Finally, you can click on **Logout** button to logout.
   
 ## Register the application  
   
-1.  [Sign in](https://portal.azure.com) to the Azure management portal by using an account with administrator permission. You must use an account in the same Office 365 subscription (tenant) as you intend to register the app with. You can also access the Azure portal through the Microsoft 365 admin center by expanding the **ADMIN** item in the left navigation pane and selecting **Azure AD**.  
+1. Sign in to the [Azure portal](https://go.microsoft.com/fwlink/?linkid=2083908) using an account with administrator permission. You must use an account in the same Office 365 subscription (tenant) as you intend to register the app with. You can also access the Azure portal through the Microsoft 365 admin center by expanding the **ADMIN** item in the left navigation pane and selecting **Azure AD**.  
   
-     If you don’t have an Azure tenant (account) or you do have one but your Office 365 subscription with Common Data Service is not available in your Azure subscription, following the instructions in the topic [Set up Azure Active Directory access for your Developer Site](https://docs.microsoft.com/office/developer-program/office-365-developer-program) to associate the two accounts.  
+    > [!NOTE]
+    > If you don’t have an Azure tenant (account) or you do have one but your Office 365 subscription with Common Data Service is not available in your Azure subscription, following the instructions in the topic [Set up Azure Active Directory access for your Developer Site](https://docs.microsoft.com/en-us/office/developer-program/office-365-developer-program) to associate the two accounts.<br/><br/> If you don’t have an account, you can sign up for one by using a credit card. However, the account is free for application registration and your credit card won’t be charged if you only follow the procedures called out in this topic to register one or more apps. More information: [Active Directory Pricing Details](http://azure.microsoft.com/pricing/details/active-directory/).  
   
-     If you don’t have an account, you can sign up for one by using a credit card. However, the account is free for application registration and your credit card won’t be charged if you only follow the procedures called out in this topic to register one or more apps. More information: [Active Directory Pricing Details](http://azure.microsoft.com/pricing/details/active-directory/).  
+2. Click on **Azure Active Directory** in the left column of the page. You may need to scroll the left column to see the **Azure Active Directory** icon and label.  
   
-2.  Click on **Azure Active Directory** in the left column of the page. You may need to scroll the left column to see the **Azure Active Directory** icon and label.  
+3. Now select **Enterprise Applications** in the panel that opens up.
+
+   ![Select Enterprise Applications](media/register-spa-app-registration.PNG)
+
+4. Select **New application**(near the top of the page), and then under **Add your own app** select **Application you're developing**.  
+
+   ![Select Application you're developing](media/register-spa-app-you-developing.PNG)
   
-3.  Now select **Enterprise Applications** in the panel that opens up.
+5. Now click on **Ok, take me to App Registrations to register my new application**.
 
-![Select Enterprise Applications](media/register-spa-app-registration.PNG)
+   ![Select Ok, take me to App Registrations](media/register-spa-take-me-app-reg.PNG)
 
-4.  Select **New application**(near the top of the page), and then under **Add your own app** select **Application you're developing**.  
+6. Now click on **New application registration**(near the top of the page).  
 
-![Select Application you're developing](media/register-spa-app-you-developing.PNG)
+   ![Select New application registration](media/register-spa-new-reg.PNG)
   
-5.  Now click on **Ok, take me to App Registrations to register my new application**.
-
-![Select Ok, take me to App Registrations](media/register-spa-take-me-app-reg.PNG)
-
-6.  Now click on **New application registration**(near the top of the page).  
-
-![Select New application registration](media/register-spa-new-reg.PNG)
+7. Enter the following information :  
   
-7.  Enter the following information :  
-  
-  - **Name**<br />The name of the application.
+   - **Name**<br />The name of the application.
 
-  - **Web application type**<br />Select **Web app/API**.
+   - **Supported account types**<br />Select **Accounts in any organizational directory**.
 
-  - **Sign-on URL**<br />This is the URL which the user should be redirected to after they sign in. For debugging purposes in Visual Studio it should be  `http://localhost:####/SimpleSPA.html` where #### represents the port number you got from step 4 of the [Create a web application project](#bkmk_createwebapp) procedure.  
+   - **Redirect URL**<br />This is the URL which the user should be redirected to after they sign in. Select **Web** from the drop down list. For debugging purposes in Visual Studio it should be  `http://localhost:####/SimpleSPA.html` where #### represents the port number you got from step 4 of the [Create a web application project](#bkmk_createwebapp) procedure. Then click on **Register** at the end of the page.
 
-![Enter details](media/register-spa-enter-details.PNG)
-    
-8. Then click on **Create** at the end of the page.
+   ![Enter details](media/new-app-registration-page.png)
 
-9.  In the tab of the newly registered app, copy the **Application ID**.  
-  
-    Set the `clientId` variable in the SimpleSPA.html page to this value. Refer to step 5 of the **Create a web application project** procedure.  
+8. In the tab of the newly registered app, copy the **Application (client) ID**. Set the `clientId` variable in the SimpleSPA.html page to this value. Refer to step 5 of the **Create a web application project** procedure.  
 
-10. Now click on **Settings** and then select **Required permissions**.
+9. Now click on **API permissions** and then select **Add a permission**.
 
-![Select Required permissions](media/register-spa-settings-permissions.PNG)
+   ![Select Required permissions](media/azure-api-permissions-page.png)
 
-11. Click on **Add**, then select **Select an API**. Now select **Dynamics CRM Online** and click **Select** at the end of the page.
+10. Select **Dynamics CRM** under **Microsoft APIs** tab.
 
-![Select Dynamics CRM Online under Select an API](media/register-spa-permission-dyncrm.PNG)
+    ![Select Dynamics CRM Online under Select an API](media/app-registration-select-api-page.png)
 
-12. Now in the **Selected permissions** tab, select all **Delegated Permissions** and click on **Select** at the end of the page.
+11. Click on **Delegated permissions** tab, select all permissions and click on **Add permissions** at the end of the page.
 
-![Select all Delegated permissions](media/register-spa-del-permissions.PNG)
+    ![Select all Delegated permissions](media/app-registration-delegate-permissions-page.png)
 
-13. Then select **Done**. You will see a row for **Dynamics CRM Online** added.
+12. Then select **Done**. You will see a row for **Dynamics CRM** added.
 
-![New row for Dynamics CRM Online gets added](media/register-spa-row-dyncrm.PNG)
+13. Now close the **API permissions** tab. In the registered app tab, select **Manifest**.
 
-14. Now close the **Settings** tab. In the registered app tab, select **Manifest**.
+14. Locate the line: `"oauth2AllowImplicitFlow": false,` and change `false` to `true` and then click on **Save** to save the file.
 
-15. Click on **Edit** and locate the line: `"oauth2AllowImplicitFlow": false,` and change `false` to `true` and then click on **Save** to save the file.
+    ![Set oauth2AllowImplicitFlow to true in Manifest file](media/register-spa-edit-manifest.PNG)
 
-![Set oauth2AllowImplicitFlow to true in Manifest file](media/register-spa-edit-manifest.PNG)
+15. For successful execution of your application, you will also need to grant administrator consent to it. To do this, login as a tenant admin in your Azure management portal and select **Azure Active Directory**. Then click on **Enterprise Applications** and from the list of applications that appear, select the application that you just created.
 
-16. For successful execution of your application, you will also need to grant administrator consent to it. To do this, login as a tenant admin in your Azure management portal and select **Azure Active Directory**. Then click on **Enterprise Applications** and from the list of applications that appear, select the application that you just created.
+    ![Grant administrator consent to your application](media/simple-spa-admin-consent.PNG)
 
-![Grant administrator consent to your application](media/simple-spa-admin-consent.PNG)
+16. Now select **API permissions** as shown above, and click on **Grant admin consent for**`<your AAD Org name>`.
 
-17. Now select **Permissions** as shown above, and click on **Grant admin consent for**`<your AAD Org name>`.
+    ![Click on Grant admin consent button](media/simple-spa-admin-consent-button.PNG)
 
-![Click on Grant admin consent button](media/simple-spa-admin-consent-button.PNG)
+17. Once you click on this button, it will open a login window and ask you whether you wish to grant the requested permissions to your application. Click on **Accept** to proceed.
 
-18. Once you click on this button, it will open a login window and ask you whether you wish to grant the requested permissions to your application. Click on **Accept** to proceed.
+    ![Click on Accept to grant the requested permissions](media/simple-spa-admin-consent-click-accept.PNG)
 
-![Click on Accept to grant the requested permissions](media/simple-spa-admin-consent-click-accept.PNG)
+18. Once this is done, proceed to debugging the application.
 
-19. Once this is done, proceed to debugging the application.
+> [!NOTE]
+> You need to enable the **ID tokens** option in the **Authentication** tab for the app you have registered.
 
 ## Debugging the application  
   

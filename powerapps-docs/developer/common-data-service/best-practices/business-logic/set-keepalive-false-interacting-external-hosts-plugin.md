@@ -13,7 +13,7 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 12/12/2018
+ms.date: 8/21/2019
 ms.author: jowells
 search.audienceType: 
   - developer
@@ -31,7 +31,7 @@ search.app:
 
 ## Symptoms
 
-If a plug-in makes external web requests and is trying to use `KeepAlive` on a closed connection, the plug-in will ultimately fail to execute the web request. However, if the plug-in is registered:
+If a plug-in makes external web requests and is trying to use `KeepAlive` on a closed connection, the plug-in will ultimately fail to execute the web request. If the plug-in is registered:
 
 - Synchronously, users may experience:
 
@@ -281,7 +281,7 @@ The following examples show the problematic pattern based on the method you use 
 Plug-ins interacting with external services may experience abnormally increased execution times. The problem is due to the ([KeepAlive property](https://msdn.microsoft.com/library/system.net.httpwebrequest.keepalive.aspx)) of HTTP requests issued to external web servers. If the `KeepAlive` property is set to true or not defined at all (default behavior is true) the Sandbox client on the server could continue to try and use a persistent session even though the session has become expired due to network device configuration. The cause of the extended execution time is due to the network retrying the request until the connection is, ultimately, reset.
 
 > [!IMPORTANT]
-> This affects all code that initiates HTTP Requests to a web server using [System.Net.WebClient](https://msdn.microsoft.com/library/system.net.webclient.aspx), [System.Net.WebRequest](https://msdn.microsoft.com/library/system.net.webrequest.aspx) or [System.Net.HttpWebRequest](https://msdn.microsoft.com/library/system.net.httpwebrequest.aspx) as well as Windows Communications Foundation (WCF) client communications using an HTTP transport binding directly or indirectly via [ChannelFactory<TChannel>](https://docs.microsoft.com/dotnet/api/system.servicemodel.channelfactory-1) or [ClientBase<T>](https://docs.microsoft.com/dotnet/api/system.servicemodel.clientbase-1).
+> This affects all code that initiates HTTP Requests to a web server using [System.Net.WebClient](https://msdn.microsoft.com/library/system.net.webclient.aspx), [System.Net.WebRequest](https://msdn.microsoft.com/library/system.net.webrequest.aspx) or [System.Net.HttpWebRequest](https://msdn.microsoft.com/library/system.net.httpwebrequest.aspx) as well as Windows Communications Foundation (WCF) client communications using an HTTP transport binding directly or indirectly via [ChannelFactory\<TChannel>](https://docs.microsoft.com/dotnet/api/system.servicemodel.channelfactory-1) or [ClientBase\<T>](https://docs.microsoft.com/dotnet/api/system.servicemodel.clientbase-1).
 
 This behavior is transparent to end users and traditional logging as the execution is due to network delays.  If the plug-in was registered as a synchronous event, users could experience intermittent performance issues during those registered operations which could cause unresponsiveness of model-driven apps.  If the plug-in is registered asynchronously, the issue would only be observed by reviewing execution times of the plug-in and seeing the execution taking longer than normal or expected.
 

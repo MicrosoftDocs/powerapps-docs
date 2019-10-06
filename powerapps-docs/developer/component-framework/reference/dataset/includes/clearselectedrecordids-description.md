@@ -4,7 +4,7 @@ description:
 keywords:
 ms.author: nabuthuk
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -15,4 +15,4 @@ applies_to:
 ms.assetid: e8c9f86c-55cd-45ad-92a7-985d61040b34
 ---
 
-Clear selected record ids list
+Clears the selected record ids list.

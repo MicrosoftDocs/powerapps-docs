@@ -29,7 +29,7 @@ var tabObj = formContext.ui.tabs.get(arg);
 
 ## Properties
 
-- **Sections**: The sections collection provides access to sections within the tab. See [Collections (Client API reference)](collections.md) for information about methods to access the sections in the collection. See [formContext.ui section](formContext-ui-sections.md) for information about the properties and methods of the section objects in the collection.
+- **sections**: The sections collection provides access to sections within the tab. See [Collections (Client API reference)](collections.md) for information about methods to access the sections in the collection. See [formContext.ui section](formContext-ui-sections.md) for information about the properties and methods of the section objects in the collection.
 
 ## Methods
 

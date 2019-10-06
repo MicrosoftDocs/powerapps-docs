@@ -757,9 +757,9 @@
       - name: isAvailableOffline
         href: clientapi/reference/xrm-webapi/isAvailableOffline.md
       - name: execute
-        href: clientapi/reference/xrm-webapi/execute.md
+        href: clientapi/reference/xrm-webapi/online/execute.md
       - name: executeMultiple
-        href: clientapi/reference/xrm-webapi/executeMultiple.md
+        href: clientapi/reference/xrm-webapi/online/executeMultiple.md
   - name: Best practices
     href: best-practices/business-logic/index.md
 - name: Customize commands and ribbon

@@ -4,7 +4,7 @@ description:
 keywords:
 ms.author: nabuthuk
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -15,4 +15,4 @@ applies_to:
 ms.assetid: c8ff5a3c-d6e4-4b33-b63e-3604d3dc95dc
 ---
 
-Device form factor.
+Returns information about the kind of device the user is using.

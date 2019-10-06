@@ -4,7 +4,7 @@ description:
 keywords:
 ms.author: nabuthuk
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -14,4 +14,5 @@ applies_to:
   - "Dynamics 365 Version 9.x"
 ms.assetid: 60f0ddb1-ff47-4d1f-ab6c-35bcd4e4cf51
 ---
-Refers to the  `TypeScript` files that defines a component.
+
+Refers to the path where the resource files are located.

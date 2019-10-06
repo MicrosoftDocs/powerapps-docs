@@ -221,7 +221,7 @@ namespace PowerApps.Samples
                     //Add a new letter tracking activity to the current user's queue. Uses the AddToQueue 
                     //action: https://msdn.microsoft.com/library/mt607880.aspx, which is bound to the queue 
                     //entity type: https://msdn.microsoft.com/library/mt607886.aspx, and returns a 
-                    //AddToQueueResponse complex type: https://msdn.microsoft.com/en-us/library/mt608105.aspx.
+                    //AddToQueueResponse complex type: https://msdn.microsoft.com/library/mt608105.aspx.
                     string queueItemId;
                     //Create a letter tracking instance.
                     string letterUri;

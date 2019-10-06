@@ -81,7 +81,7 @@ Successful forms often enforce strong business logic by, for example, changing t
 
 ![Hide Show Lock Data Cards](./media/transform-infopath/hide-show-lock.png)
 
-In the right-hand pane, scroll to the **DefaultMode** property so that you can edit it.
+In the right-hand pane, scroll to the **DisplayMode** property so that you can edit it.
 
 ![If Else Statement Expressions](./media/transform-infopath/if-else-statement.png)
 

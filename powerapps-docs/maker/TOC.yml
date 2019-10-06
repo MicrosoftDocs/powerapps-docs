@@ -47,16 +47,24 @@
         items:
         - name: FAQ about activities
           href: ../user/faq-for-timeline-and-activity.md
+      - name: Use the lookup field on a record
+        href: ../user/lookup-field.md
+      - name: View a profile card
+        href: ../user/profile-cards.md
       - name: Assign or share records
         href: ../user/assign-or-share-records.md
       - name: Share records using Access Team
         href: ../user/Access-team.md
+      - name: Add a connection role 
+        href: ../user/add-connection-role.md
       - name: Deactivate accounts or contacts
         href: ../user/deactivate-activate-account-contact.md
       - name: Track your progress with dashboards and charts
         href: ../user/track-your-progress-with-dashboard-and-charts.md
     - name: Search records
       items:
+      - name: Compare search and find options
+        href: ../user/search-and-find.md
       - name: Search for records
         href: ../user/search-records.md
       - name: Use advanced find
@@ -75,6 +83,18 @@
         href: ../user/export-excel-static-worksheet.md
       - name: Export to an Excel PivotTable
         href: ../user/export-excel-pivottable.md
+    - name: Reports
+      items:
+      - name: Work with reports
+        href: ../user/work-with-reports.md
+      - name: Create a report using the Report Wizard
+        href: ../user/create-report-with-wizard.md
+      - name: Add an existing report
+        href: ../user/add-existing-report.md
+      - name: Edit the default filter of a report
+        href: ../user/edit-report-filter.md
+      - name: Troubleshoot reports
+        href: ../user/troubleshoot-reports.md   
     - name: Automate processes
       items:
       - name: Work with business processes
@@ -595,6 +615,8 @@
             href: ./canvas-apps/functions/function-select.md
           - name: Set
             href: ./canvas-apps/functions/function-set.md
+          - name: SetFocus
+            href: ./canvas-apps/functions/function-setfocus.md
           - name: ShowColumns
             href: ./canvas-apps/functions/function-table-shaping.md
           - name: Shuffle
@@ -663,6 +685,8 @@
             href: ./canvas-apps/functions/function-form.md
           - name: Weekday
             href: ./canvas-apps/functions/function-datetime-parts.md
+          - name: With
+            href: ./canvas-apps/functions/function-with.md            
           - name: Year
             href: ./canvas-apps/functions/function-datetime-parts.md
       - name: Create an app in a solution
@@ -810,6 +834,8 @@
           href: ./model-driven-apps/create-site-map-app.md
         - name: Add or edit app components
           href: ./model-driven-apps/add-edit-app-components.md
+        - name: Add the team entity as a lookup option
+          href: ./model-driven-apps/team-entity-lookup.md          
       - name: Work with forms
         href: ./model-driven-apps/create-design-forms.md
         items:
@@ -820,12 +846,20 @@
             href: ./model-driven-apps/create-and-edit-forms.md
           - name: "Add, move or delete fields"
             href: ./model-driven-apps/add-move-or-delete-fields-on-form.md
+          - name: "Add, move or delete components"
+            href: ./model-driven-apps/add-move-configure-or-delete-components-on-form.md
           - name: "Add, move or delete sections"
             href: ./model-driven-apps/add-move-or-delete-sections-on-form.md
           - name: "Add, move or delete tabs"
             href: ./model-driven-apps/add-move-or-delete-tabs-on-form.md            
-          - name: "Properties in the form designer"
-            href: ./model-driven-apps/form-designer-properties.md 
+          - name: "Configure header properties"
+            href: ./model-driven-apps/form-designer-header-properties.md  
+          - name: "Add and configure sub-grid component"
+            href: ./model-driven-apps/form-designer-add-configure-subgrid.md
+          - name: "Add and configure quick view component"
+            href: ./model-driven-apps/form-designer-add-configure-quickview.md
+          - name: "Configure lookup component"
+            href: ./model-driven-apps/form-designer-add-configure-lookup.md
           - name: "Using the tree view"
             href: ./model-driven-apps/using-tree-view-on-form.md  
         - name: Type of forms
@@ -883,19 +917,27 @@
             href: ./model-driven-apps/configure-event-handlers-legacy.md
           - name: How to disable auto-save in a form
             href: ./model-driven-apps/manage-auto-save.md
-      - name: Embed a canvas app on a form
+          - name: How to add a tab for SharePoint documents
+            href: ./model-driven-apps/add-documents-tab-entity-main-form.md            
+      - name: Embed a canvas app on a model-driven form
         href: ./model-driven-apps/embed-canvas-app-in-form.md
         items:
-        - name: "Pass the current record to an embedded canvas app"
-          href: ./model-driven-apps/pass-current-embedded-canvas-app.md
-        - name: "Pass related records to an embedded canvas app"
-          href:  ./model-driven-apps/pass-related-embedded-canvas-app.md
+        - name: "Add an embedded canvas app"
+          href: ./model-driven-apps/embedded-canvas-app-add-classic-designer.md
+        - name: "Edit an embedded canvas app"
+          href: ./model-driven-apps/embedded-canvas-app-edit-classic-designer.md
+        - name: "Customize the screen size and orientation"
+          href: ./model-driven-apps/embedded-canvas-app-customize-screen.md
         - name: "Perform predefined actions on the host form"
-          href:  ./model-driven-apps/embedded-canvas-app-actions.md
+          href: ./model-driven-apps/embedded-canvas-app-actions.md
+        - name: "ModelDrivenFormIntegration control"
+          href: ./model-driven-apps/embedded-canvas-app-properties-actions.md
         - name: "Share an embedded canvas app"
-          href:  ./model-driven-apps/share-embedded-canvas-app.md
+          href: ./model-driven-apps/share-embedded-canvas-app.md
         - name: "Embedded canvas app guidelines"
-          href:  ./model-driven-apps/embedded-canvas-app-guidelines.md
+          href: ./model-driven-apps/embedded-canvas-app-guidelines.md
+        - name: "Migrating embedded canvas from public preview"
+          href: ./model-driven-apps/embedded-canvas-app-migrate-from-preview.md
       - name: Embed a Power BI report on a form
         href: ./model-driven-apps/embed-powerbi-report-in-system-form.md
       - name: Work with views
@@ -954,6 +996,17 @@
       href: ./model-driven-apps/templates-overview.md
     - name: Use themes to apply organization branding
       href: ./model-driven-apps/create-themes-organization-branding.md
+    - name: Add reporting to your app
+      href: ./model-driven-apps/add-reporting-to-app.md    
+      items: 
+      - name: Report considerations 
+        href: ./model-driven-apps/reporting-considerations.md  
+      - name: RDL sandboxing
+        href: ./model-driven-apps/rdl-sandboxing.md 
+      - name: Use Power BI
+        href: ./model-driven-apps/use-power-bi.md 
+      - name: Customize Power BI content packs
+        href: ./model-driven-apps/customize-power-bi-content-packs.md
   - name: Validate and publish an app
     href: ./model-driven-apps/validate-app.md
   - name: Share an app
@@ -981,6 +1034,16 @@
       href: ./model-driven-apps/distribute-model-driven-app.md
     - name: Create guided help
       href: ./model-driven-apps/create-guided-help-learning-path.md      
+  - name: Transition to Unified Interface
+    items: 
+    - name: Transition quick start
+      href: ./model-driven-apps/transition-web-app.md
+    - name: Use an existing environment to transition quick start
+      href: ./model-driven-apps/transition-web-app-existing.md  
+    - name: Unified Interface Playbook
+      href: ./model-driven-apps/unified-interface-playbook.md
+    - name: Approaching a Unified Interface transition
+      href: ./model-driven-apps/approaching-unified-interface.md
   - name: Accessibility in PowerApps app designer
     href: ./model-driven-apps/Accessibility-app-designer-site-map-designer-my-apps-page.md
   - name: Customize Dynamics 365 App for Outlook
@@ -988,6 +1051,117 @@
   - name: For developers
     href: ../developer/model-driven-apps/overview.md
     # href: ../developer/model-driven-apps/TOC.yml For authoring I find having developer content buried so deep is awkward
+
+- name: Portals (preview)
+  items:
+    - name: What is PowerApps Portals?
+      href: ./portals/overview.md
+    - name: Design and build a portal
+      items:
+        - name: Portal templates
+          href: ./portals/portal-templates.md
+        - name: Create a portal
+          href: ./portals/create-portal.md
+        - name: Create a Dynamics 365 Portal
+          href: ./portals/create-dynamics-portal.md
+        - name: Portal designer anatomy
+          href: ./portals/portal-designer-anatomy.md
+        - name: Supported web browsers for portal designer
+          href: ./portals/supported-browser.md
+        - name: Create and manage webpages
+          href: ./portals/create-manage-webpages.md
+        - name: Compose a page
+          href: ./portals/compose-page.md
+        - name: Work with templates
+          href: ./portals/work-with-templates.md
+    - name: Manage existing portals
+      href: ./portals/manage-existing-portals.md
+    - name: Configure site settings
+      href: ./portals/configure-site-settings.md
+    - name: Advanced portal administration
+      items:
+        - name: Overview
+          href: ./portals/admin/admin-overview.md
+        - name: Portal details
+          href: ./portals/admin/portal-details.md
+        - name: Download public key of portal
+          href: ./portals/admin/get-public-key.md
+        - name: View portal error logs
+          href: ./portals/admin/view-portal-error-log.md
+        - name: Reset a portal
+          href: ./portals/admin/reset-portal.md
+        - name: Change base URL of a portal
+          href: ./portals/admin/change-base-url.md
+        - name: Enable maintenance mode
+          href: ./portals/admin/enable-maintenance-mode.md
+        - name: Power BI integration
+          items:
+            - name: Set up Power BI integration
+              href: ./portals/admin/set-up-power-bi-integration.md
+            - name: Add a Power BI report or dashboard to a web page in portal
+              href: ./portals/admin/add-powerbi-report.md
+        - name: Run Portal Checker
+          href: ./portals/admin/portal-checker.md
+        - name: Renew portal authentication key
+          href: ./portals/admin/manage-auth-key.md
+        - name: Set up IP address restriction
+          href: ./portals/admin/ip-address-restrict.md
+        - name: Update to PowerApps Portals domain
+          href: ./portals/admin/update-portal-domain.md
+        - name: Clear the server-side cache
+          href: ./portals/admin/clear-server-side-cache.md
+        - name: Migrate Dynamics 365 Portals configuration
+          href: ./portals/admin/migrate-portal-configuration.md
+    - name:  Advanced portal customizations
+      items:
+        - name: Work with Liquid templates
+          items:
+            - name: Overview
+              href: ./portals/liquid/liquid-overview.md
+            - name: Store content by using web templates
+              href: ./portals/liquid/store-content-web-templates.md
+            - name: Understand Liquid operators
+              href: ./portals/liquid/liquid-operators.md
+            - name: Available Liquid types
+              href: ./portals/liquid/liquid-types.md
+            - name: Available Liquid conditional operators
+              href: ./portals/liquid/liquid-conditional-operators.md
+            - name: Available Liquid objects
+              href: ./portals/liquid/liquid-objects.md
+            - name: Available Liquid tags
+              items:
+                - name: Available Liquid tags
+                  href: ./portals/liquid/liquid-tags.md
+                - name: Control flow tags
+                  href: ./portals/liquid/control-flow-tags.md
+                - name: Iteration tags
+                  href: ./portals/liquid/iteration-tags.md
+                - name: Variable tags
+                  href: ./portals/liquid/variable-tags.md
+                - name: Template tags
+                  href: ./portals/liquid/template-tags.md
+                - name: PowerApps common data service entity tags
+                  href: ./portals/liquid/portals-entity-tags.md
+            - name: Available Liquid filters
+              href: ./portals/liquid/liquid-filters.md
+            - name: Create advanced templates
+              items:
+                - name: Create a custom page template
+                  href: ./portals/liquid/create-custom-template.md
+                - name: Use hybrid navigation to render page hierarchy
+                  href: ./portals/liquid/hybrid-navigation-render-page-hierachy.md
+                - name: Render the entity list for a page 
+                  href: ./portals/liquid/render-entity-list-current-page.md 
+                - name: Render an RSS feed by using a custom page template   
+                  href: ./portals/liquid/render-rss-custom-page-template.md 
+                - name: Render a site header and primary navigation bar   
+                  href: ./portals/liquid/render-site-header-primary-navigation.md
+        - name: OAuth 2.0 implicit grant flow
+          href: ./portals/oauth-implicit-grant-flow.md
+    - name: Known issues
+      href: ./portals/known-issues.md
+    - name: PowerApps Portals FAQ
+      href: ./portals/faq.md
 - name: Common Data Service
   href: ./common-data-service/data-platform-intro.md
   items:
@@ -998,8 +1172,6 @@
       href: ./common-data-service/data-platform-create-entity.md
     - name: "Create a custom entity that has components"
       href: ./common-data-service/create-custom-entity.md
-    - name: Add data to an entity using Power Query
-      href: ./common-data-service/data-platform-cds-newentity-pq.md
     - name: Entities and metadata
       href: ./common-data-service/create-edit-metadata.md
     - name: Types of entities
@@ -1148,6 +1320,17 @@
       href: ./common-data-service/set-managed-properties-metadata.md
     - name: Publish changes
       href: ./common-data-service/publish-changes-for-use-customer-service-hub.md
+  - name: Work with dataflows
+    href: ./common-data-service/self-service-data-prep-with-dataflows.md
+    items:
+    - name: Create and use dataflows
+      href: ./common-data-service/create-and-use-dataflows.md
+    - name: Add data to an entity using Power Query
+      href: ./common-data-service/data-platform-cds-newentity-pq.md
+    - name: Connect Azure Data Lake for dataflow storage
+      href: ./common-data-service/connect-azure-data-lake-storage-for-dataflow.md      
+    - name: Use an on-premises data gateway      
+      href: ./common-data-service/using-dataflows-with-on-premises-data.md
   - name: License requirements for entities
     href: ./common-data-service/data-platform-entity-licenses.md
     items:
@@ -1155,6 +1338,8 @@
       href: ./common-data-service/data-platform-complex-entities.md
     - name: Restricted entities requiring Dynamics 365 licenses
       href: ./common-data-service/data-platform-restricted-entities.md
+  - name: SharePoint, OneNote, and OneDrive integration
+    href: ./common-data-service/sharepoint-onedrive-onenote-intro.md
   - name: Create a Power BI report
     href: ./common-data-service/data-platform-powerbi-connector.md
   - name: Translate customized entity and field text

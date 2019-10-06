@@ -128,7 +128,7 @@ HttpResponseMessage response = client.GetAsync(contact1Uri + queryOptions, HttpC
    // 2) Using  query functions (e.g.: LastXhours, Last7Days, Today, Between, In, ...)
    // 3) Using filter operators and logical operators (e.g.: eq, ne, gt, and, or, etc…)
    // 4) Set precedence using parenthesis (e.g.: ((criteria1) and (criteria2)) or (criteria3)
-   // For more info, see: https://msdn.microsoft.com/en-us/library/gg334767.aspx#bkmk_filter
+   // For more info, see: https://msdn.microsoft.com/library/gg334767.aspx#bkmk_filter
 
       Console.WriteLine("-- Filter Criteria --");
       JObject collection;
@@ -150,7 +150,7 @@ HttpResponseMessage response = client.GetAsync(contact1Uri + queryOptions, HttpC
 
 //Filter 2: Using  query functions to filter results. In this operation, we will query
 //for all contacts that were created in the last hour. For complete list of CRM query  
-//functions, see: https://msdn.microsoft.com/en-us/library/mt607843.aspx
+//functions, see: https://msdn.microsoft.com/library/mt607843.aspx
 
        filter = "&$filter=Microsoft.Dynamics.CRM.LastXHours(PropertyName='createdon',PropertyValue='1')";
        queryOptions = "?$select=" + String.Join(",", contactProperties) + filter;
@@ -167,7 +167,7 @@ HttpResponseMessage response = client.GetAsync(contact1Uri + queryOptions, HttpC
 
   //Filter 3: Using operators. Building on the previous operation, we further limit
   //the results by the contact's income. For more info on standard filter operators, 
-  //https://msdn.microsoft.com/en-us/library/gg334767.aspx#bkmk_filter
+  //https://msdn.microsoft.com/library/gg334767.aspx#bkmk_filter
 
      filter = "&$filter=contains(fullname,'(sample)') and annualincome gt 55000";
      queryOptions = "?$select=" + String.Join(",", contactProperties) + filter;
@@ -222,7 +222,7 @@ HttpResponseMessage response = client.GetAsync(contact1Uri + queryOptions, HttpC
 //Parameterized aliases can be used as parameters in a query. These parameters can be used 
  //in $filter and $orderby options. Using the previous operation as basis, parameterizing the 
 //query will give us the same results. For more info, see: 
-//https://msdn.microsoft.com/en-us/library/gg309638.aspx#bkmk_passParametersToFunctions
+//https://msdn.microsoft.com/library/gg309638.aspx#bkmk_passParametersToFunctions
 
       Console.WriteLine("\n-- Parameterized Aliases --");
       filter = "&$filter=contains(@p1,'(sample)') &$orderby=@p2 asc, " +
@@ -244,7 +244,7 @@ HttpResponseMessage response = client.GetAsync(contact1Uri + queryOptions, HttpC
 #region Limit results
 //To limit records returned, use the $top query option.  Specifying a limit number for $top 
  //returns at most that number of results per request. Extra results are ignored.
- //For more information, see: https://msdn.microsoft.com/en-us/library/gg334767.aspx#bkmk_limits
+ //For more information, see: https://msdn.microsoft.com/library/gg334767.aspx#bkmk_limits
     
       Console.WriteLine("\n-- Top Results --");
       filter = "&$filter=contains(fullname,'(sample)')&$top=5";
@@ -392,7 +392,7 @@ Console.WriteLine("\n-- Result Count --");
   #region FetchXML queries
     //Use FetchXML to query for all contacts whose fullname contains '(sample)'.
     //Note: XML string must be URI encoded. For more information, see: 
-     //https://msdn.microsoft.com/en-us/library/gg328117.aspx
+     //https://msdn.microsoft.com/library/gg328117.aspx
 
                     Console.WriteLine("\n-- FetchXML -- ");
                     string fetchXmlQuery =
@@ -425,7 +425,7 @@ Console.WriteLine("\n-- Result Count --");
    //Use predefined queries of the following two types:
    //  1) Saved query (system view)
    //  2) User query (saved view)
-   //For more info, see: https://msdn.microsoft.com/en-us/library/mt607533.aspx
+   //For more info, see: https://msdn.microsoft.com/library/mt607533.aspx
 
    //1) Saved Query - retrieve "Active Accounts", run it, then display the results.
        Console.WriteLine("\n-- Saved Query -- ");
@@ -454,7 +454,7 @@ Console.WriteLine("\n-- Result Count --");
            }
 
                     //2) Create a user query, then retrieve and execute it to display its results.
-                    //For more info, see: https://msdn.microsoft.com/en-us/library/gg509053.aspx
+                    //For more info, see: https://msdn.microsoft.com/library/gg509053.aspx
                     Console.WriteLine("\n-- User Query -- ");
 
                     string userQueryRep = "{ " +
