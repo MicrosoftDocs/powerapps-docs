@@ -2,13 +2,13 @@
 title: "Walkthrough: Update a service endpoint imported from a solution (Common Data Service) | Microsoft Docs"
 description: "The walkthrough demonstrates updating a service endpoint imported from a solution."
 keywords: ""
-ms.date: 10/31/2018
+ms.date: 10/06/2019
 ms.service: powerapps
 ms.custom:
   - ""
 ms.topic: article
 ms.assetid: 66795838-3b15-bfb3-6f59-68cfe2fe988e
-author: JimDaly # GitHub ID - brandon simons
+author: JimDaly # GitHub ID
 ms.author: jdaly # MSFT alias of Microsoft employees only
 manager: ryjones # MSFT alias of manager or PM counterpart
 ms.reviewer: 
@@ -21,29 +21,28 @@ search.app:
 
 # Tutorial: Update a service endpoint imported from a solution
 
-<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/walkthrough-update-service-endpoint-imported-solution -->
-
 An extra step is required after importing into an organization a solution containing one or more service endpoints configured for SAS authorization. When the solution containing the service endpoints is exported, the exported solution does not contain the SAS Key for each service endpoint. After importing the solution into an organization, you must perform an additional step to provide the SAS Key for each service endpoint.  
   
- Follow these steps to set the SAS Key for each service endpoint after solution import.  
+Follow these steps to set the SAS Key for each service endpoint after solution import.  
   
-### Update the SAS Key  
+## Update the SAS Key  
   
-1.  Run the Plug-in Registration Tool, which can be found in the Tools folder of the  Dynamics CRM 2016 Service Pack 1 On-Premises (or later) SDK download. Previous releases of the tool do not support SAS authorization.  
+1. Run the Plug-in Registration Tool, which is available for download from NuGet. More information: [Download tools from NuGet](download-tools-nuget.md)
   
-2.  Using the tool, sign in to the organization that contains the imported solution.  
+1. Using the Plug-in Registration Tool, sign in to the organization that contains the imported solution.  
   
-3.  Select the target service endpoint in the tab view of the organization.  
+1. Select the target service endpoint in the tab view of the organization.  
   
-4.  Select **Update**. You should see the following form with the fields already filled in.  
+1. Select **Update**. You should see the following form with the fields already filled in.  
   
- ![Update service endpoint SAS key value](media/sas-key.PNG "Update service endpoint SAS key value")  
+    ![Update service endpoint SAS key value](media/sas-key.PNG "Update service endpoint SAS key value")  
   
-5.  The **SAS Key** field is displayed with a value of "*******".  Replace that value with the correct SAS key value. You can obtain the SAS Key for your Azure messaging entity (queue, topic, etc.) from the Azure [classic portal](http://manage.windowsazure.com).  
+1. The **SAS Key** field is displayed with a value of "*******".  Replace that value with the correct SAS key value. You can obtain the SAS Key for your Azure messaging entity (queue, topic, etc.) from the [Azure portal](https://portal.azure.com).  
   
-6.  Select **Save**.  
+1. Select **Save**.  
   
-### See also  
-[Azure integration for Dynamics 365](azure-integration.md)
+### See also
 
- [Service Bus authentication and authorization](https://azure.microsoft.com/documentation/articles/service-bus-authentication-and-authorization/)
+[Azure Integration](azure-integration.md)<br />
+[Service Bus authentication and authorization](/azure/service-bus-messaging/service-bus-authentication-and-authorization)<br />
+[Service Bus access control with Shared Access Signatures](/azure/service-bus-messaging/service-bus-sas)
