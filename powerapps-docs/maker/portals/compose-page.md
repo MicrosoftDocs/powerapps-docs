@@ -6,7 +6,7 @@ manager: shujoshi
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/18/2019
+ms.date: 09/16/2019
 ms.author: shjais
 ms.reviewer:
 ---
@@ -29,6 +29,9 @@ After adding the required webpages and managing their hierarchy in the sitemap, 
     - List
     - Breadcrumb
 
+> [!NOTE]
+> If you customize your portal using the portal designer, the website users would notice a performance impact. We recommended you to do the changes during non-peak hours on a live portal. 
+
 ## Use the WYSIWYG editor
 
 1.  [Edit the portal](manage-existing-portals.md#edit) to open it in the portal designer.  
@@ -44,19 +47,21 @@ After adding the required webpages and managing their hierarchy in the sitemap, 
 
 5.  Select the component to be added.
 
-    ![components pane](media/components-pane.png "Components pane")  
+    > [!div class=mx-imgBorder]
+    > ![components pane](media/components-pane.png "Components pane")  
 
     The selected component is added to the canvas inside the editable element.
 
 6.  To delete a component, select the component on the canvas and then select **Delete** on the command bar at the top of the page.
 
-    ![delete component](media/delete-component.png "Delete component")  
+    > [!div class=mx-imgBorder]
+    > ![delete component](media/delete-component.png "Delete component")  
 
 ## Add sections
 
 Sections allow you to define a structure for your page and arrange portal components accordingly. Once you add sections to your page, you can add portal components inside the sections as per the requirement.
 
-1.	Edit the portal to open it in the portal designer.
+1.	[Edit the portal](manage-existing-portals.md#edit) to open it in the portal designer.
 
 2.	Select the page on which you want to add a section.
 
@@ -66,21 +71,29 @@ Sections allow you to define a structure for your page and arrange portal compon
 
 5.	Under **Section layout**, select the section type to be inserted.
 
-6.	In the properties on the right side of the screen, select the following information:
+6.	In the properties pane on the right side of the screen, enter or select the following information:
+
+    - **Min Height**: Enter the minimum height of the section. If you add a component that occupies more space than the specified height, the section expands to accommodate the component. By default, the minimum height is 100px. You can also enter the height in points (pt) and percentage (%).
+
+        > [!div class=mx-imgBorder]
+        > ![Alignment in the section](media/section-props-height.png "Alignment in the section")  
 
     - **Alignment**: Select whether the component in the section must be left, center, or right aligned.
 
-        ![Alignment in the section](media/section-props-align.png "Alignment in the section")  
+        > [!div class=mx-imgBorder]
+        > ![Alignment in the section](media/section-props-align.png "Alignment in the section")  
 
     - **Background**: Select if would like to have color or an image as the section background.
 
         - **Fill**: Select a color for the background.
 
-            ![Fill color in the section](media/section-props-fill.png "Fill color in the section")  
+            > [!div class=mx-imgBorder]
+            > ![Fill color in the section](media/section-props-fill.png "Fill color in the section")  
 
         - **Image**: Select an image from the list. If you would like to upload a new image, select **Upload image**.
 
-            ![Add image in the section](media/section-props-image.png "Add image in the section")  
+            > [!div class=mx-imgBorder]
+            > ![Add image in the section](media/section-props-image.png "Add image in the section")  
 
 7.	Add the required portal component in the section.
 
@@ -113,7 +126,18 @@ You can add the following components on a webpage:
 
 7.  To format the text, select the text to display the format options. Modify the font size and style as required.
 
-    ![text component](media/text-component.png "Text component")  
+    > [!div class=mx-imgBorder]
+    > ![text component](media/text-component.png "Text component")  
+
+8. In the properties pane on the right side of the screen, select the following information:
+
+    - **Alignment**: Select whether the text must be left, center, or right aligned.
+
+    - **Font color**: Select a color for the text.
+
+        > [!div class=mx-imgBorder]
+        > ![Select text alignment and color](media/text-props.png "Select text alignment and color")  
+ 
 
 ### Add image
 
@@ -131,7 +155,8 @@ You can add the following components on a webpage:
 
     - **Image**: Select this option if you would like to select an existing image or upload a new one. If you want to select a previously uploaded image, choose an image from the **Select image** list. To upload a new image, select **Upload image**. All the uploaded images are included in the image library, which can be selected again through the **Select image** list.
 
-        ![image properties](media/image-props.png "Image properties")  
+        > [!div class=mx-imgBorder]
+        > ![image properties](media/image-props.png "Image properties")  
 
         > [!NOTE]
         > - You can upload only the images of type png, svg, jpg, and jpeg with the maximum size of 5 MB.
@@ -139,7 +164,8 @@ You can add the following components on a webpage:
 
     - **External url**: Select this option if you would like to upload an image from an external URL. Enter the URL in the **External url** field. Only secured links are accepted—that is, https:// is mandatory. If you have images stored in your content delivery network, you can provide the link in this field.
 
-        ![image external url](media/image-ext-url.png "Image external URL")  
+        > [!div class=mx-imgBorder]
+        > ![image external url](media/image-ext-url.png "Image external URL")  
 
     -   **Formatting options**
 
@@ -170,14 +196,15 @@ You can add the following components on a webpage:
 
     - **Link**: Enter the URL of the website to be displayed in the IFrame. Only secured links are accepted—that is, https:// is mandatory. By default, <https://www.bing.com> is available as the value.
 
-        ![iframe properties](media/iframe-props.png "IFrame properties")  
+        > [!div class=mx-imgBorder]
+        > ![iframe properties](media/iframe-props.png "IFrame properties")  
 
     > [!NOTE]
     > You can also select the IFrame on the canvas and drag the handles to resize it.
 
 ### Add form
 
-Form is a data-driven configuration that you use to add a form to collect data in the portal without the need for a developer to surface the form in the portal. [Forms are created in Common Data Service](https://docs.microsoft.com/en-us/powerapps/maker/model-driven-apps/form-designer-overview) and you can use them into webpages in the portal or in conjunction with lists to build out complete web applications.  
+Form is a data-driven configuration that you use to add a form to collect data in the portal without the need for a developer to surface the form in the portal. [Forms are created in Common Data Service](https://docs.microsoft.com/powerapps/maker/model-driven-apps/form-designer-overview) and you can use them into webpages in the portal or in conjunction with lists to build out complete web applications.  
 
 1.  [Edit the portal](manage-existing-portals.md#edit) to open it in the portal designer.  
 
@@ -225,13 +252,14 @@ Form is a data-driven configuration that you use to add a form to collect data i
 
     - **Show captcha for authenticated users**: Displays captcha to authenticated users.
 
-    - **Enable entity permissions**: Entity permissions to be considered for the form. By default, it is not selected. If selected, explicit permissions are required for any user to access the form. More information: [Entity permission](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/assign-entity-permissions)
+    - **Enable entity permissions**: Entity permissions to be considered for the form. By default, it is not selected. If selected, explicit permissions are required for any user to access the form. More information: [Entity permission](https://docs.microsoft.com/dynamics365/customer-engagement/portals/assign-entity-permissions)
 
-        ![form properties](media/form-props.png "Form properties")
+        > [!div class=mx-imgBorder]
+        > ![form properties](media/form-props.png "Form properties")
 
 ### Add list
 
-List is a data-driven configuration that you use to add a webpage that will render a list of records without the need for a developer to surface the grid in the portal. Lists use [Common Data Service views](https://docs.microsoft.com/en-us/powerapps/maker/model-driven-apps/create-and-edit-views) to display records on the portal.  
+List is a data-driven configuration that you use to add a webpage that will render a list of records without the need for a developer to surface the grid in the portal. Lists use [Common Data Service views](https://docs.microsoft.com/powerapps/maker/model-driven-apps/create-and-edit-views) to display records on the portal.  
 
 1.  [Edit the portal](manage-existing-portals.md#edit) to open it in the portal designer.  
 
@@ -270,8 +298,10 @@ List is a data-driven configuration that you use to add a webpage that will rend
 
     - **Enable search in entity list**: Allows a user to search records in the list.
 
-    - **Enable entity permissions**: Entity permissions to be considered for the list. By default, it is not selected. If selected, explicit permissions are required for any user to access the form. More information: [Entity permission](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/assign-entity-permissions)  
-    ![list properties](media/list-props.png "List properties")
+    - **Enable entity permissions**: Entity permissions to be considered for the list. By default, it is not selected. If selected, explicit permissions are required for any user to access the form. More information: [Entity permission](https://docs.microsoft.com/dynamics365/customer-engagement/portals/assign-entity-permissions)  
+
+    > [!div class=mx-imgBorder]
+    > ![list properties](media/list-props.png "List properties")
 
 ### Add breadcrumb
 
@@ -287,7 +317,7 @@ List is a data-driven configuration that you use to add a webpage that will rend
 
 ## Add a custom menu
 
-By default, the menu on the website is created automatically based on the hierarchy of the webpages. It is called the **default** menu. To create a custom menu, you must create the web link set in the Portal Management app. More information: [Manage web links](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/manage-web-links)
+By default, the menu on the website is created automatically based on the hierarchy of the webpages. It is called the **default** menu. To create a custom menu, you must create the web link set in the Portal Management app. More information: [Manage web links](https://docs.microsoft.com/dynamics365/customer-engagement/portals/manage-web-links)
 
 After you create the web link set:
 
@@ -297,19 +327,22 @@ After you create the web link set:
 
 3.	In the properties on the right side of the screen, select the web link set name from the **Navigation Menu** list.
 
-    ![Navigation menu](media/navigation-menu.png "Navigation menu")
+    > [!div class=mx-imgBorder]
+    > ![Navigation menu](media/navigation-menu.png "Navigation menu")
 
 ## Use code editor
 
 To view the source of a component on the canvas, select the component, and then select the source code editor icon **&lt;/&gt;** in the footer.
 
-![code editor icon](media/code-editor-icon.png "Code editor icon")  
+> [!div class=mx-imgBorder]
+> ![code editor icon](media/code-editor-icon.png "Code editor icon")  
 
 The source code is displayed in the **Code Editor** pane at the bottom of the screen. The changes you made earlier are updated in the source code. To make changes, update the source code and select **Save**. The changes are reflected on the canvas.
 
-![code editor](media/code-editor.png "Code editor") 
+> [!div class=mx-imgBorder]
+> ![code editor](media/code-editor.png "Code editor") 
 
 > [!NOTE]
-> You can also add Liquid tags in source code editor for advanced configuration. More information: [Work with Liquid templates](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/custom-templates-dynamic-content)
+> You can also add Liquid tags in source code editor for advanced configuration. More information: [Work with Liquid templates](https://docs.microsoft.com/dynamics365/customer-engagement/portals/custom-templates-dynamic-content)
 
 

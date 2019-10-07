@@ -31,11 +31,12 @@ To open a template in code editor:
 
 2.  Select **Templates** ![templates icon](media/templates-icon.png "Templates icon") from the toolbelt on the left side of the screen. The available templates are displayed.  
 
-    ![templates pane](media/templates-pane.png "Templates pane")  
+    > [!div class=mx-imgBorder]
+    > ![templates pane](media/templates-pane.png "Templates pane")  
 
 3.  Select the required template to open it in the code editor.
 
 4.  Edit the code and save the changes.
 
 > [!NOTE]
-> You can also add Liquid tags in source code editor for advanced configuration. More information: [Work with Liquid templates](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/custom-templates-dynamic-content)
+> You can also add Liquid tags in source code editor for advanced configuration. More information: [Work with Liquid templates](https://docs.microsoft.com/dynamics365/customer-engagement/portals/custom-templates-dynamic-content)

@@ -5,7 +5,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 11/16/2018
+ms.date: 10/03/2019
 ms.author: mkaur
 ms.reviewer: ""
 ms.assetid: 
@@ -71,7 +71,7 @@ The reference panel is a great way to get work done without moving away from the
 
 There are three types of notifications that are shown on a form: Informational, Warning and Error. Notifications are always available at the top of the form, just above the header.
 
-The notifications described below are available with version 9.1.9.3010.
+When you select the error notification, it will take you to the field on the form where the error occurred.
 
 ![Example of notifications](media/notifications.png "Example of notifications")
 
@@ -83,5 +83,38 @@ If there is more than one notification, you will see the number of notifications
 
 ![Example of multiple notifications](media/multiple_notification.png "Example of multiple notifications")
 
+## Grids
+
+Grids in Unified Interface have been improved to increase the amount of data that can be seen on your screen. Grids also have improved filtering options which include remembering your last filter and sorts order. 
+
+When grids area retrieving data, you will see a loading indicator letting you know the system is working on retrieving data.
+
+The main grid page remembers the filter, sort, and the page state when you navigate away and back. This includes quick find, column filtering, page number, and more. The navigation outside the page opens with the initial state.
+
+
+   > [!div class="mx-imgBorder"]
+   > ![Grids remember state](media/grid-remember-state-on-back-navigate.gif "Grids remember state")
+
+
+The jump bar uses the first sorted field. If no sort change has been made, the jump bar uses the primary field. 
+
+   > [!div class="mx-imgBorder"]
+   > ![Grids remember state](media/jumpbar-filter-on-sorted-column.gif "Grids remember state")
+   
+
+The you can filter the **Activity Type** field and select multiple filtering type. Also, related entity fields like owner, status, and reason can be filtered.
+
+   > [!div class="mx-imgBorder"]
+   > ![Grids filtering](media/grid-activity-type-column-filter.gif "Grids filtering")
+   
+When you select the hierarchy icon, it will navigate to the hierarchy form.
+
+   > [!div class="mx-imgBorder"]
+   > ![Hierarchy icon](media/grid-row-hierarchy-icon.png "Hierarchy icon")
+   
+You can also open primary field and lookup fields in new tab or window.
+
+   > [!div class="mx-imgBorder"]
+   > ![Open in a new window](media/newtab.png "[Open in a new window")
 
 

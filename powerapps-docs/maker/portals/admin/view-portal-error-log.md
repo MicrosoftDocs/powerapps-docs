@@ -23,14 +23,15 @@ If any server-side exception occurs in your portal, a customized error page with
 
 However, it is better to see the ASP.NET detailed error page, also known as Yellow Screen of Death (YSOD), for debugging purposes. The detailed error page helps you to get the full stack of server errors.
 
-![Yellow Screen of Death](../media/ysod.png "Yellow Screen of Death")
+> [!div class=mx-imgBorder]
+> ![Yellow Screen of Death](../media/ysod.png "Yellow Screen of Death")
 
 To enable YSOD, you need to [disable custom errors](#disable-custom-error) on your portal.
 
 > [!NOTE]
 > It is advisable to only disable custom errors when you are in the development phase and enable custom errors once you go live.
 
-More information on custom error: [Displaying a Custom Error Page](https://docs.microsoft.com/en-us/aspnet/web-forms/overview/older-versions-getting-started/deploying-web-site-projects/displaying-a-custom-error-page-cs)
+More information on custom error: [Displaying a Custom Error Page](https://docs.microsoft.com/aspnet/web-forms/overview/older-versions-getting-started/deploying-web-site-projects/displaying-a-custom-error-page-cs)
 
 ### Disable custom error
 
@@ -40,7 +41,8 @@ You can disable custom errors on portals to display the detailed exception messa
 
 2. Go to **Portal Actions** > **Disable custom errors**.
 
-   ![Disable custom error](../media/disable-custom-errors.png "Disable custom error")
+   > [!div class=mx-imgBorder]
+   > ![Disable custom error](../media/disable-custom-errors.png "Disable custom error")
 
 3. Select **Disable** in the confirmation message. While custom errors are being disabled, the portal restarts and will be unavailable. A message appears when custom errors are disabled.
 
@@ -52,19 +54,20 @@ You can enable custom errors on portals to display a professional-looking page i
 
 2. Go to **Portal Actions** > **Enable custom errors**.
 
-   ![Enable custom error](../media/enable-custom-errors.png "Enable custom error")
+   > [!div class=mx-imgBorder]
+   > ![Enable custom error](../media/enable-custom-errors.png "Enable custom error")
 
 3. Select **Enable** in the confirmation message. While custom errors are being enabled, the portal restarts and will be unavailable. A message appears when custom errors are enabled.
 
 > [!NOTE]
-> - If you change the Dynamics 365 for Customer Engagement instance that your portal is connected to, the custom errors setting is set to enabled. You must disable the custom errors again, if required.
-> - You must not enable or disable custom errors when the Dynamics 365 for Customer Engagement instance that your portal is connected to is being changed; otherwise an error message appears.
+> - If you change the instance that your portal is connected to, the custom errors setting is set to enabled. You must disable the custom errors again, if required.
+> - You must not enable or disable custom errors when the instance that your portal is connected to is being changed; otherwise an error message appears.
 
 ### Display a custom error message
 
 You can configure your portal to display a professional-looking custom error instead of a generic error.
 
-To define a custom error, use the content snippet `Portal Generic Error`. The content defined in this snippet is shown on the error page. This content snippet is not available out-of-the-box and you must create it. The content snippet **Type** can be **Text** or **HTML**. To create or edit the content snippet, see [Customize content by using content snippets](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/customize-content-snippets).
+To define a custom error, use the content snippet `Portal Generic Error`. The content defined in this snippet is shown on the error page. This content snippet is not available out-of-the-box and you must create it. The content snippet **Type** can be **Text** or **HTML**. To create or edit the content snippet, see [Customize content by using content snippets](https://docs.microsoft.com/dynamics365/customer-engagement/portals/customize-content-snippets).
 
 > [!NOTE]
 > If liquid code is written in the content snippet, it will be skipped and not rendered.
@@ -80,10 +83,11 @@ Below is an example of a custom error message, using a content snippet of type H
 
 This is a custom error, please file a support ticket with screenshot of error by clicking here
 
-![Custom error message](../media/custom-error-message.png "Custom error message")
+> [!div class=mx-imgBorder]
+> ![Custom error message](../media/custom-error-message.png "Custom error message")
 
 > [!NOTE]
-> If the portal cannot retrieve a content snippet because it can't connect to Dynamics 365 or if the snippet is not available in Dynamics 365, an error message appears.
+> If the portal cannot retrieve a content snippet because it can't connect to Common Data Service or if the snippet is not available in Common Data Service, an error message appears.
 
 ## Access portal error logs
 
@@ -98,11 +102,12 @@ After developing and publishing the portal, you still need to be able to access 
 
 2. Go to **Portal Actions** > **Enable diagnostic logging**.
 
-   ![Enable diagnostic logging](../media/enable-diagnostic-logging.png "Enable diagnostic logging")
+   > [!div class=mx-imgBorder]
+   > ![Enable diagnostic logging](../media/enable-diagnostic-logging.png "Enable diagnostic logging")
 
 3. In the **Enable diagnostic logging** window, enter the following values:
 
-   - **Connection String of Azure Blob Storage service**: URL of the Azure Blob Storage service to store the portal error logs. The maximum length of the URL is 2048 characters. If the URL is longer than 2048 characters, an error message appears. More information on connection string: [Configure Azure Storage connection strings](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string)
+   - **Connection String of Azure Blob Storage service**: URL of the Azure Blob Storage service to store the portal error logs. The maximum length of the URL is 2048 characters. If the URL is longer than 2048 characters, an error message appears. More information on connection string: [Configure Azure Storage connection strings](https://docs.microsoft.com/azure/storage/common/storage-configure-connection-string)
    - **Select retention period**: Duration to keep the portal error logs in blob storage. The error logs are deleted after the selected duration. You can select one of the following values:
      - 1 day
      - 7 days
@@ -114,13 +119,15 @@ After developing and publishing the portal, you still need to be able to access 
 
    By default, the retention period is 30 days.
   
-   ![Enable diagnostic logging window](../media/enable-diagnostic-logging-window.png "Enable diagnostic logging window")
+   > [!div class=mx-imgBorder]
+   > ![Enable diagnostic logging window](../media/enable-diagnostic-logging-window.png "Enable diagnostic logging window")
 
 4. Click **Configure**.
 
 Once diagnostic logging is configured, a new **telemetry-logs** blob container is created in your Azure storage account and the logs are written into the blob files stored in the container. The following screenshot shows the **telemetry-logs** blob container in Azure storage explorer:
 
-![Azure blog storage account](../media/azure-blob-storage.png "Azure blog storage account")
+> [!div class=mx-imgBorder]
+> ![Azure blog storage account](../media/azure-blob-storage.png "Azure blog storage account")
 
 When diagnostic logging is enabled successfully, the following action becomes available:
 - **Update diagnostic logging configuration**: Allows you to update or remove diagnostic logging configuration for the portal.
@@ -132,11 +139,12 @@ When diagnostic logging is enabled successfully, the following action becomes av
 
 2. Go to **Portal Actions** > **Update diagnostic logging configuration**.
 
-   ![Update diagnostic logging configuration](../media/update-diagnostic-logging.png "Update diagnostic logging configuration")
+   > [!div class=mx-imgBorder]
+   > ![Update diagnostic logging configuration](../media/update-diagnostic-logging.png "Update diagnostic logging configuration")
 
 3. In the Update diagnostic logging configuration window, enter the following values:
    - **Do you want to update the Connection string of the Azure Blob Storage service?**: Allows you to specify whether to update the connection string of the Azure Blob Storage service. By default, it is selected.
-   - **Connection String of Azure Blob Storage service**: URL of the Azure Blob Storage service to store the portal error logs. The maximum length of the URL can be 2048 characters. If the URL is longer than 2048 characters, an error message appears. This field is displayed only if the **Do you want to update the Connection string of the Azure Blob Storage service?** check box is selected. More information on connection string: [Configure Azure Storage connection strings](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string)
+   - **Connection String of Azure Blob Storage service**: URL of the Azure Blob Storage service to store the portal error logs. The maximum length of the URL can be 2048 characters. If the URL is longer than 2048 characters, an error message appears. This field is displayed only if the **Do you want to update the Connection string of the Azure Blob Storage service?** check box is selected. More information on connection string: [Configure Azure Storage connection strings](https://docs.microsoft.com/azure/storage/common/storage-configure-connection-string)
    - **Select retention period**: Duration to keep the portal error logs in blob storage. The error logs are deleted after the selected duration. You can select one of the following values:
      - 1 day
      - 7 days
@@ -148,7 +156,8 @@ When diagnostic logging is enabled successfully, the following action becomes av
 
    By default, the retention period is 30 days.
 
-   ![Update diagnostic logging configuration window](../media/update-diagnostic-logging-window.png "Update diagnostic logging configuration window")
+   > [!div class=mx-imgBorder]
+   > ![Update diagnostic logging configuration window](../media/update-diagnostic-logging-window.png "Update diagnostic logging configuration window")
 
 4. Click **Update**.
 
@@ -158,13 +167,14 @@ When diagnostic logging is enabled successfully, the following action becomes av
 
 2. Go to **Portal Actions** > **Disable diagnostic logging**.
 
-   ![Disable diagnostic logging](../media/disable-diagnostic-logging.png "Disable diagnostic logging")
+   > [!div class=mx-imgBorder]
+   > ![Disable diagnostic logging](../media/disable-diagnostic-logging.png "Disable diagnostic logging")
 
 3. Click **Disable** in the confirmation message.
 
-## Display Dynamics 365 for Customer Engagement plugin error
+## Display plugin error
 
-Another scenario that often occurs while developing a portal is an error generated by custom plug-ins and business logic written in your Dynamics 365 organization. These errors can generally be accessed by [disabling custom errors](#disable-custom-error) or [enabling diagnostic logging](#enable-diagnostic-logging). However, in some cases, it is faster to display these errors directly on the portal to diagnose the issue faster. To do this, you can configure your portal to display custom plugin errors from Dynamics 365 on your portal screen.
+Another scenario that often occurs while developing a portal is an error generated by custom plug-ins and business logic written in your Dynamics 365 organization. These errors can generally be accessed by [disabling custom errors](#disable-custom-error) or [enabling diagnostic logging](#enable-diagnostic-logging). However, in some cases, it is faster to display these errors directly on the portal to diagnose the issue faster. To do this, you can configure your portal to display custom plugin errors on your portal screen.
 
 To display custom plugin errors, create the site setting `Site/EnableCustomPluginError` and set its value to True. The custom plugin errors will be displayed on the screen instead of a generic error. The error will display only the message part of the plugin error and not the complete stack trace.
 

@@ -3,25 +3,28 @@ title: " Navigation API component| Microsoft Docs"
 description: "Implementing navigation api component" 
 ms.custom: ""
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.topic: "article"
 ms.author: "nabuthuk" 
+author: Nkrb
 ---
 
 # Implementing Navigation API component
-
-[!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
 
 This sample component explores the various methods available as part of the PowerApps component framework navigation API. In this sample, you create a series of input elements of type buttons which calls into the respective methods of the navigation API that matches with the value displayed.  
 
 > [!div class="mx-imgBorder"]
 > ![Navigation API component](../media/navigation-api-control.png "Navigation API component")
 
+## Available for 
+
+Model-driven apps
+
 ## Manifest
 
 ```xml
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <manifest>
 	<control namespace="SampleNamespace" constructor="TSNavigationAPI" version="1.0.0" display-name-key="TS_NavigationAPI_Display_Key" description-key="TS_NavigationAPI_Desc_Key" control-type="standard">
 		<type-group name="numbers">
@@ -189,20 +192,20 @@ public destroy()
 ## Resources
 
 ```css
-mpleNamespace\.TSNavigationAPI button{
-	background-color: rgb(59, 121, 183);
-	border: 1px solid black;
-	color: white;
-	padding: 10px 24px;
-	cursor: pointer;
-	width: 100%;
-	display: block;
+.SampleNamespace\.TSNavigationAPI button {
+  background-color: rgb(59, 121, 183);
+  border: 1px solid black;
+  color: white;
+  padding: 10px 24px;
+  cursor: pointer;
+  width: 100%;
+  display: block;
 }
 .SampleNamespace\.TSNavigationAPI button:not(:last-child) {
-	border-bottom: none;
+  border-bottom: none;
 }
 .SampleNamespace\.TSNavigationAPI button:hover {
-	background-color: #c2c2c2;
+  background-color: #c2c2c2;
 }
 ```
 

@@ -13,6 +13,8 @@ ms.reviewer:
 
 # Configure site settings for portals
 
+[!include[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+
 A site setting is a configurable, named value that is used by website code to modify the behavior or visual style of the portal. Typically when a developer creates the website code, they will reference site settings for various components to enable an end user to modify the setting values to alter the website without having to change the code, recompile, and redeploy the website.
 
 The sample portals that are provided with the installation of [!INCLUDE[pn-dynamics-crm](../../includes/pn-dynamics-crm.md)] portals contain several configurable site settings for various styles used to modify many visual elements within the site such as background style, text color, and layout width.
@@ -66,19 +68,19 @@ You can manage the following types of site settings:
 
 For site settings related to various portal features, see:
 
-- [Authentication identity](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/set-authentication-identity)
-- [Azure AD B2C provider](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/azure-ad-b2c)
-- [OAuth 2.0](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/configure-oauth2-settings)
-- [Open ID Connect](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/configure-openid-settings)
-- [WS-Federation](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/configure-ws-federation-settings)
-- [SAML 2.0](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/configure-saml2-settings)
-- [Migrate identity providers to Azure AD B2C](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/migrate-identity-providers)
-- [Search within file attachment content](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/search-file-attachment)
-- [Behavior and format of the date and time field](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/behavior-format-date-time-field)
-- [Add geolocation](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/add-geolocation)
-- [Integrate Field Service](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/integrate-field-service)
-- [Implementing General Data Protection Regulations](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/implement-gdpr)
-- [Enable header and footer output caching](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/enable-header-footer-output-caching)
+- [Authentication identity](https://docs.microsoft.com/dynamics365/customer-engagement/portals/set-authentication-identity)
+- [Azure AD B2C provider](https://docs.microsoft.com/dynamics365/customer-engagement/portals/azure-ad-b2c)
+- [OAuth 2.0](https://docs.microsoft.com/dynamics365/customer-engagement/portals/configure-oauth2-settings)
+- [Open ID Connect](https://docs.microsoft.com/dynamics365/customer-engagement/portals/configure-openid-settings)
+- [WS-Federation](https://docs.microsoft.com/dynamics365/customer-engagement/portals/configure-ws-federation-settings)
+- [SAML 2.0](https://docs.microsoft.com/dynamics365/customer-engagement/portals/configure-saml2-settings)
+- [Migrate identity providers to Azure AD B2C](https://docs.microsoft.com/dynamics365/customer-engagement/portals/migrate-identity-providers)
+- [Search within file attachment content](https://docs.microsoft.com/dynamics365/customer-engagement/portals/search-file-attachment)
+- [Behavior and format of the date and time field](https://docs.microsoft.com/dynamics365/customer-engagement/portals/behavior-format-date-time-field)
+- [Add geolocation](https://docs.microsoft.com/dynamics365/customer-engagement/portals/add-geolocation)
+- [Integrate Field Service](https://docs.microsoft.com/dynamics365/customer-engagement/portals/integrate-field-service)
+- [Implementing General Data Protection Regulations](https://docs.microsoft.com/dynamics365/customer-engagement/portals/implement-gdpr)
+- [Enable header and footer output caching](https://docs.microsoft.com/dynamics365/customer-engagement/portals/enable-header-footer-output-caching)
 
 ## Manage global portal settings
 

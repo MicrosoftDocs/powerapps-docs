@@ -1,23 +1,23 @@
 ---
-title: "Connect a portal to a Dynamics 365 for Customer Engagement online organization | MicrosoftDocs"
-description: "Learn how to connect a portal to a Dynamics 365 for Customer Engagement online organization and how to renew the authentication key."
+title: "Connect a portal to a Dynamics 365 online organization | MicrosoftDocs"
+description: "Learn how to connect a portal to a Dynamics 365 online organization and how to renew the authentication key."
 author: sbmjais
 manager: shujoshi
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/18/2019
+ms.date: 08/30/2019
 ms.author: shjais
 ms.reviewer:
 ---
 
-# Connect to a Dynamics 365 for Customer Engagement online organization using a portal
+# Connect to a Dynamics 365 online organization using a portal
 
 [!include[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
 
 A portal connects to a Dynamics 365 online organization using an Azure Active Directory application. The application is created in the same tenant where the portal is provisioned. The application is registered with the Dynamics 365 organization during the portal provisioning process.
 
-![Connecting a portal with Dynamics 365 for Customer Engagement organization](../media/connect-with-dynamics.png "Connecting a portal with Dynamics 365 for Customer Engagement organization")
+![Connecting a portal with Dynamics 365 organization](../media/connect-with-dynamics.png "Connecting a portal with Dynamics 365 organization")
 
 Each portal has a separate Azure Active Directory application associated with it, whether it is connected to the same Dynamics 365 organization or not. The default Azure Active Directory authentication provider created for a portal uses the same Azure Active Directory application to authenticate the portal. Authorization is enforced by web roles assigned to the user accessing the portal.
 
@@ -40,14 +40,17 @@ The details of an authentication key is displayed on Portal Admin Center and por
 
 2. Select **Manage portal authentication key**. The authentication key is displayed along with its expiration date and thumbprint.
 
-   ![Authentication key details in Portal Admin Center](../media/manage-auth-key.png "Authentication key details in Portal Admin Center")
+   > [!div class=mx-imgBorder]
+   > ![Authentication key details in Portal Admin Center](../media/manage-auth-key.png "Authentication key details in Portal Admin Center")
 
 **Portal**
 
 1. Sign in to the portal as administrator.
+
 2. Navigate to the URL <portal_path>/_services/about. The authentication key expiration date is displayed. 
 
-   ![Portal service page](../media/portal-services-page.png "Portal service page")
+   > [!div class=mx-imgBorder]
+   > ![Portal service page](../media/portal-services-page.png "Portal service page")
 
 > [!NOTE]
 > To view authentication key information, you must sign in to the portal in the same browser session and you must have all website access permission.
@@ -58,7 +61,7 @@ Before the authentication key expires, you will be notified by emails, Portal Ad
 
 **Email**
 
-Email will be sent to people who have signed up for email notification for the organization connected to their portal. More information about signing up for email notification: [Manage email notifications to admins](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/admin/manage-email-notifications)
+Email will be sent to people who have signed up for email notification for the organization connected to their portal. More information about signing up for email notification: [Manage email notifications to admins](https://docs.microsoft.com/dynamics365/customer-engagement/admin/manage-email-notifications)
 
 Email notifications are sent at the following intervals: 
 - 90 days 
@@ -86,7 +89,8 @@ You will also be notified after the key expires every day until 1 week after key
 
 A message about key expiration is displayed at the top of the page.
 
-![Authentication key notification in Portal Admin Center](../media/portal-admin-center-auth-notif.png "Authentication key notification in Portal Admin Center")
+> [!div class=mx-imgBorder]
+> ![Authentication key notification in Portal Admin Center](../media/portal-admin-center-auth-notif.png "Authentication key notification in Portal Admin Center")
 
 **Portal**
 
@@ -95,7 +99,8 @@ When you navigate to the URL <portal_path>/_services/about, a notification about
 > [!NOTE]
 > You must sign in to your portal in the same browser session, and you must be assigned all website access permission.
 
-![Authentication key notification on portal](../media/portal-service-page-auth-notif.png "Authentication key notification on portal")
+> [!div class=mx-imgBorder]
+> ![Authentication key notification on portal](../media/portal-service-page-auth-notif.png "Authentication key notification on portal")
 
 ## Renew portal authentication key
 
@@ -108,7 +113,8 @@ You must renew the key every two years to ensure that your portal can connect to
 
 2. Select **Manage portal authentication key**. The authentication key is displayed along with its expiration date and thumbprint.
 
-    ![Manage portal authentication key](../media/manage-portal-auth-key.png "Manage portal authentication key")
+    > [!div class=mx-imgBorder]
+    > ![Manage portal authentication key](../media/manage-portal-auth-key.png "Manage portal authentication key")
 
 3. Select **Update key**.
 
@@ -125,4 +131,5 @@ If the key update fails, an error message is displayed along with the following 
 
 - **Retry Authentication Key Update**. This action allows you to restart the portal authentication key update process. If the update fails multiple times, contact Microsoft support.
 
-    ![Retry portal authentication key update](../media/retry-auth-key-update.png "Retry portal authentication key update")
+    > [!div class=mx-imgBorder]
+    > ![Retry portal authentication key update](../media/retry-auth-key-update.png "Retry portal authentication key update")

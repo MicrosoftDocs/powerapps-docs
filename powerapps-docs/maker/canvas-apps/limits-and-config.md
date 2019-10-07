@@ -6,8 +6,8 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: 
-ms.date: 03/07/2018
+ms.reviewer: tapanm
+ms.date: 10/04/2019
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -94,6 +94,7 @@ This list identifies all services to which PowerApps Studio talks and their usag
 | \*.blob.core.windows.net |https | Blob storage |
 | \*.flow.microsoft.com | https | create.powerapps.com, make.powerapps.com, content.powerapps.com, and web.powerapps.com |
 | vortex.data.microsoft.com |https |Telemetry |
+| localhost | https | PowerApps Mobile
 
 > [!NOTE]
 > If you're using a VPN, it must be configured to exclude localhost from tunneling for PowerApps Mobile.
@@ -101,3 +102,28 @@ This list identifies all services to which PowerApps Studio talks and their usag
 ## Size limits
 
 You can find information about size limits on text, hyperlinks, images, and media in [Data types](functions/data-types.md#text-hyperlink-image-and-media).
+
+## PowerApps per app plan
+
+PowerApps per app plan allows individual users to run 2 applications on single portal for a specific business scenario based on the full capabilities of PowerApps. This plan provides an easy way for users to get started with the platform before broader scale adoption.
+
+After an admin allocates PowerApps per app plan to an environment, they're assigned to users by default when app is shared with them.
+
+Follow these steps to turn off the assigning per app plans for users when an app is shared with them:
+
+- Choose the **App**.
+- Select **Settings**.
+- Change the **Auto assign per app passes** toggle under **Pass assignment**.
+
+The **Auto assign per app passes** toggle appears in all app setting.
+
+> [!NOTE]
+> Disabling the per app plan is currently available for only canvas apps.  Model-driven apps and Portals will have this ability in the future.
+
+### App Settings
+
+![Canvas app settings](./media/limits-and-config/app_settings.png "Canvas app settings")
+
+### Pass assignment
+
+![Canvas app settings pass assignment](./media/limits-and-config/app_settings_pass_assignment.png "Canvas app settings pass assignment")

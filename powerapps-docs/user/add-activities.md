@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 11/26/2018
+ms.date: 10/03/2019
 ms.author: mduelae
 ms.custom: ""
 ms.reviewer: ""
@@ -19,12 +19,14 @@ search.app:
 ---
 # Add an appointment, email, phone call, note, or task activity to the timeline 
 
+
 Add **Activities** in the **Timeline** wall to keep track of all your communications with a customer or contact. For example, you can take notes, add posts, add a task, send email, add phone call details, or set up appointments. The system automatically timestamps every activity and shows who created it. You and other people on your team can scroll through the activities to see the history as you work with a customer. 
 
 - Activities that you add from within a record appear in the **Timeline** wall of the record. 
 - If the **Regarding** field of an activity is set, the activity appears in the record it is associated with. 
 - You can also choose the filter pane to filter the activities by record type and date. 
 - When a new activity is created, you will get a **What you missed** notification in the **Timeline** wall.
+- An email with an attached image will be shown inline with the body of the email.
 
   > [!div class="mx-imgBorder"]
   > ![Timeline view of activities in PowerApps](media/TimelineViewOfActivity.png "Timeline view of activities in PowerApps")  
@@ -90,6 +92,17 @@ To add an email activity to a record, you must first save the record you are add
 5. To use a template for the email body, on the command bar, click **Insert Template**, and then select the template.   
   
 6. When you're done filling in the form, select **Send**. 
+
+
+    > [!NOTE]
+    > To list emails in a conversation view, go to **Settings** > **Personalization Settings** > **Email** tab and then select **Show email as a conversation on Timeline**. For more information on personal settings, see [Set personal options](https://docs.microsoft.com/en-us/powerapps/user/set-personal-options#email-tab-options). Once enabled, you can open any form that has a timeline and your emails will be grouped into conversation threads with the latest email at the top.
+
+   > [!div class="mx-imgBorder"]
+   > ![Set personal options](media/emailsettings1.png "Set personal options")
+   
+    > [!div class="mx-imgBorder"]
+    > ![Set personal options email](media/emailsettings2.png "Set personal options for email")
+
   
 ## Add an appointment  
 
@@ -113,10 +126,14 @@ You can also easily add notes in the activities area.
 
 3. When you're done filling in the form, select **Add Note** to save the note.
 
+
+> [!NOTE]
+> You can also add a note using the **plus sign** in the upper section of the **Timeline** wall.
+
    > [!div class="mx-imgBorder"]
    > ![Add a note](media/addnote.png "Add a note")
 
-Once the note has been added, you can delete or edit the note. You can also add a note using the **plus sign** in the upper section of the **Timeline** wall.
+Once the note has been added, you can delete or edit the note.
 
 
 > [!div class="mx-imgBorder"]
@@ -149,17 +166,13 @@ In the **Timeline** wall, select ![More button ](media/MoreButton.png "More butt
 
 ## Use the filter pane
 
-Quickly filter activities, notes or posts in the timeline wall by record type or activity type and date using the filter pane.
+Quickly filter activities, notes or posts in the timeline wall by record type or activity type and date using the filter pane. You can select multiple filters and filter options at the same time. You can filter and see activity due date, modified date, or by the status of the activity.
 
-1. In the **Timeline** wall, select ![More button ](media/MoreButton.png "More button") then select **Open Filter Pane**.
+- In the **Timeline** wall, select **Open Filter Pane** funnel icon.
 
 > [!div class="mx-imgBorder"]
 > ![Filter pane in the Timeline ](media/filterpane.png "Filter pane in the Timeline")
 
-2. Once you're done viewing the filtered information, to clear the filter, select **Clear all filters** funnel icon. This will reset the filter show all the information in the timeline wall.
-
-> [!div class="mx-imgBorder"]
-> ![Reset the filter](media/resetfilter.png "Reset the filter")
 
 ## Manage Activities
 Manage activities directly from the timeline wall including assigning an activity to another person, deleting or closing an activity, add an activity to a queue, opening an associated record or editing notes and posts.

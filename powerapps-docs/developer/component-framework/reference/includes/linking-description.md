@@ -4,7 +4,7 @@ description:
 keywords:
 ms.author: nabuthuk
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -14,4 +14,5 @@ applies_to:
   - "Dynamics 365 Version 9.x"
 ms.assetid: badd9822-d9f4-4d42-8def-e13f633a3309
 ---
-Dataset entity linking.
+
+Provides properties and methods to determine which entity is linked and to get all the entities linked.

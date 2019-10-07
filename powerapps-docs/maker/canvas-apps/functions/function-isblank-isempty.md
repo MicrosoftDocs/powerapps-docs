@@ -6,9 +6,9 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.component: canvas
-ms.date: 07/24/2017
+ms.date: 08/27/2019
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -19,30 +19,25 @@ search.app:
 Tests whether a value is blank or a [table](../working-with-tables.md) contains no [records](../working-with-tables.md#records), and provides a way to create *blank* values.
 
 ## Overview
-*Blank* is a placeholder for "no value" or "unknown value." A **[Text input](../controls/control-text-input.md)** control is *blank* if the user hasn't typed any characters in it. The same control is no longer *blank* as soon as the user types a character in it.  Some data sources can store and return NULL values, which are represented in PowerApps as *blank*.
+*Blank* is a placeholder for "no value" or "unknown value."  For example, a **[Combo box](../controls/control-combo-box.md)** control's **Selected** property is *blank* if the user hasn't made a selection. Many data sources can store and return NULL values, which are represented in PowerApps as *blank*.
+
+Any property or calculated value in PowerApps can be *blank*.  For example, a Boolean value normally has one of two values: **true** or **false**.  But in addition to these two, it can also be *blank* indicating that the state is not known.  This is similar to Microsoft Excel, where a worksheet cell starts out as blank with no contents but can hold the values **TRUE** or **FALSE** (among others). At any time, the contents of the cell can again be cleared, returning it to a *blank* state.
+
+*Empty string* refers to a string that contains no characters.  The [**Len** function](function-len.md) returns zero for such a string and it can be written in a formulas as  two double quotes with nothing in between `""`.  Some controls and data sources use an empty string to indicate a "no value" condition.  To simplify app creation, the **IsBlank** and **Coalesce** functions test for both *blank* values or empty strings.    
+
+In the context of the **IsEmpty** function, *empty* is specific to tables that contain no records. The table structure may be intact, complete with [column](../working-with-tables.md#columns) names, but no data is in the table. A table may start as empty, take on records and no longer be empty, and then have the records removed and again be empty.
 
 > [!NOTE]
-> At this time, storing *blank* values is supported only for local collections. We know that many data sources support *blank* (NULL) values, and we're working to lift this limitation.
-
-Any property or calculated value can be *blank*.  For example, a Boolean value normally has one of two values: **true** or **false**.  But in addition to these two, it can also be *blank*.  This is similar to Microsoft Excel, where a worksheet cell starts out as blank but can hold the values **TRUE** or **FALSE**, among others. At any time, the contents of the cell can be removed, and it would return to a *blank* state.
-
-*Empty* is specific to tables that contain no records. The table structure may be intact, complete with [column](../working-with-tables.md#columns) names, but no data is in the table. A table may start as empty, take on records and no longer be empty, and then have the records removed and again be empty.
+> We are in a period of transition.  Until now, *blank* has also been used to report errors, making it impossible to differentiate a valid "no value" from an error.  For this reason, at this time, storing *blank* values is supported only for local collections.  You can store *blank* values in other data sources if you turn on the "Formula-level error management" experimental feature under the File menu, App settings, Advanced settings, Experimental features.  We are actively working to finish this feature and complete the proper separation of *blank* values from errors.
 
 ## Description
 The **Blank** function returns a *blank* value. Use this to store a NULL value in a data source that supports these values, effectively removing any value from the field.
 
-The **IsBlank** function tests for a *blank* value. *Blank* values are found in situations such as these:
+The **IsBlank** function tests for a *blank* value or an empty string.  The test includes empty strings to ease app creation since some data sources and controls use an empty string when there is no value present.  To test specifically for a *blank* value use `if( Value = Blank(), ...` instead of **IsBlank**.
 
-* The return value from the **Blank** function.
-* A control property has no formula set for it.
-* No value is typed into a text-input control, or no selection is made in a listbox. You can use **IsBlank** to provide feedback that a field is required.
-* A string that contains no characters has a **[Len](function-len.md)** of 0.
-* An error occurred in a function. Often, one of the arguments to the function wasn't valid. Many functions return *blank* if the value of an argument is *blank*.
-* Connected [data sources](../working-with-data-sources.md), such as SQL Server, may use "null" values. These values appear as *blank* in PowerApps.
-* The *else* portion of an **[If](function-if.md)** function wasn't specified, and all conditions were **false**.
-* You used the **[Update](function-update-updateif.md)** function but didn't specify a value for all columns. As a result, no values were placed in the columns that you didn't specify.
+The **Coalesce** function evaluates its arguments in order and returns the first value that isn't *blank* or an empty string.  Use this function to replace a *blank* value or empty string with a different value but leave non-*blank* and non-empty string values unchanged.  If all of the arguments are *blank* or empty strings then the function returns *blank*, making **Coalesce** a good way to convert empty strings to *blank* values.  All arguments to **Coalesce** must be of the same type; for example, you can't mix numbers with text strings.  
 
-The **Coalesce** function evaluates its arguments in order and returns the first value that isn't *blank*.  Use this function to replace a *blank* value with a different value but leave non-*blank* values unchanged.  If all of the arguments are *blank*, then the function returns *blank*.  All arguments to **Coalesce** must be of the same type; for example, you can't mix numbers with text strings.  **Coalesce( value1, value2 )** is the more concise equivalent of **If( Not( IsBlank( value1 ) ), value1, value2 )** and doesn't require **value1** to be evaluated twice.  
+`Coalesce( value1, value2 )` is the more concise equivalent of `If( Not IsBlank( value1 ), value1, Not IsBlank( value2 ), value2 )` and doesn't require **value1** and **value2** to be evaluated twice.  The [**If** function](function-if.md) returns *blank* if there is no "else" formula as is the case here.
 
 The **IsEmpty** function tests whether a table contains any records. It's equivalent to using the **[CountRows](function-table-counts.md)** function and checking for zero. You can check for data-source errors by combining **IsEmpty** with the **[Errors](function-errors.md)** function.
 
@@ -53,11 +48,11 @@ The return value for both **IsBlank** and **IsEmpty** is a Boolean **true** or *
 
 **Coalesce**( *Value1* [, *Value2*, ... ] )
 
-* *Value(s)* – Required. Values to test.  Each value is evaluated in order until a non-*blank* value is found.  Values after the first non-*blank* value aren't evaluated.  
+* *Value(s)* – Required. Values to test.  Each value is evaluated in order until a value that is not *blank* and not an empty string is found.  Values after this point are not evaluated.  
 
 **IsBlank**( *Value* )
 
-* *Value* – Required. Value to test.
+* *Value* – Required. Value to test for a *blank* value or empty string.
 
 **IsEmpty**( *Table* )
 
@@ -66,12 +61,14 @@ The return value for both **IsBlank** and **IsEmpty** is a Boolean **true** or *
 ## Examples
 ### Blank
 > [!NOTE]
-> At this time, the following example only works for local collections.  We know that many data sources support *blank* (NULL) values and We are working to lift this limitation.
+> At this time, the following example only works for local collections.  You can store *blank* values in other data sources if you turn on the "Formula-level error management" experimental feature under the File menu, App settings, Advanced settings, Experimental features.  We are actively working to finish this feature and complete the separation of *blank* values from errors.
 
 1. Create an app from scratch, and add a **Button** control.
 2. Set the button's **[OnSelect](../controls/properties-core.md)** property to this formula:
 
-    **ClearCollect( Cities, { Name: "Seattle", Weather: "Rainy" } )**
+    ```powerapps-dot
+    ClearCollect( Cities, { Name: "Seattle", Weather: "Rainy" } )
+    ```
 3. Preview your app, click or tap the button that you added, and then close Preview.  
 4. On the **File** menu, click or tap **Collections**.
 
@@ -81,12 +78,16 @@ The return value for both **IsBlank** and **IsEmpty** is a Boolean **true** or *
 5. Click or tap the back arrow to return to the default workspace.
 6. Add a **Label** control, and set its **Text** property to this formula:
 
-    **IsBlank( First( Cities ).Weather )**
+    ```powerapps-dot
+    IsBlank( First( Cities ).Weather )
+    ```
 
     The label shows **false** because the **Weather** field contains a value ("Rainy").
 7. Add a second button, and set its **OnSelect** property to this formula:
 
-    **Patch( Cities, First( Cities ), { Weather: Blank() } )**
+    ```powerapps-dot
+    Patch( Cities, First( Cities ), { Weather: Blank() } )
+    ```
 8. Preview your app, click or tap the button that you added, and then close Preview.  
 
     The **Weather** field of the first record in **Cities** is replaced with a *blank*, removing the "Rainy" that was there previously.
@@ -99,19 +100,23 @@ The return value for both **IsBlank** and **IsEmpty** is a Boolean **true** or *
 
 | Formula | Description | Result |
 | --- | --- | --- |
-| **Coalesce( Blank(), 1 )** |Tests the return value from the **Blank** function, which always returns a *blank* value. Because the first argument is *blank*, evaluation continues with the next argument until a non-*blank* value is found. |**1** |
-| **Coalesce( Blank(), Blank(), Blank(), Blank(), 2, 3 )** |**Coalesce** starts at the beginning of the argument list and evaluates each argument in turn until a non-*blank* value is found.  In this case, the first four arguments all return *blank*, so evaluation continues to the fifth argument. The fifth argument is non-*blank*, so evaluation stops here. The value of the fifth argument is returned, and the sixth argument isn't evaluated. |**2** |
+| **Coalesce(&nbsp;Blank(),&nbsp;1&nbsp;)** |Tests the return value from the **Blank** function, which always returns a *blank* value. Because the first argument is *blank*, evaluation continues with the next argument until a non-*blank* value and non-empty string is found. |**1** |
+| **Coalesce( "", 2 )** |Tests the first argument which is an empty string. Because the first argument is an empty string, evaluation continues with the next argument until a non-*blank* value and non-empty string is found. |**2** |
+| **Coalesce( Blank(), "", Blank(), "", 3, 4 )** |**Coalesce** starts at the beginning of the argument list and evaluates each argument in turn until a non-*blank* value and non-empty string is found.  In this case, the first four arguments all return *blank* or an empty string, so evaluation continues to the fifth argument. The fifth argument is non-*blank* and non-empty string, so evaluation stops here. The value of the fifth argument is returned, and the sixth argument isn't evaluated. |**3** |
+| **Coalesce( "" )** | Tests the first argument which is an empty string. Because the first argument is an empty string, and there are no more arguments, the function returns *blank*.   |*blank* |
 
 ### IsBlank
 1. Create an app from scratch, add a text-input control, and name it **FirstName**.
 2. Add a label, and set its **[Text](../controls/properties-core.md)** property to this formula:
 
-    **If( IsBlank( FirstName.Text ), "First Name is a required field." )**
+    ```powerapps-dot
+    If( IsBlank( FirstName.Text ), "First Name is a required field." )
+    ```
 
     By default, the **[Text](../controls/properties-core.md)** property of a text-input control is set to **"Text input"**. Because the property contains a value, it isn't blank, and the label doesn't display any message.
 3. Remove all the characters from the text-input control, including any spaces.
 
-    Because the **[Text](../controls/properties-core.md)** property no longer contains any characters, it's *blank*, and **IsBlank( FirstName.Text )** will be **true**. The required field message is displayed.
+    Because the **[Text](../controls/properties-core.md)** property no longer contains any characters, it's an empty string, and **IsBlank( FirstName.Text )** will be **true**. The required field message is displayed.
 
 For information about how to perform validation by using other tools, see the **[Validate](function-validate.md)** function and [working with data sources](../working-with-data-sources.md).  
 
@@ -119,7 +124,7 @@ Other examples:
 
 | Formula | Description | Result |
 | --- | --- | --- |
-| **IsBlank( Blank() )** |Tests the return value from the **Blank** function, which always returns a *blank* value. |**true** |
+| **IsBlank(&nbsp;Blank()&nbsp;)** |Tests the return value from the **Blank** function, which always returns a *blank* value. |**true** |
 | **IsBlank( "" )** |A string that contains no characters. |**true** |
 | **IsBlank( "Hello" )** |A string that contains one or more characters. |**false** |
 | **IsBlank( *AnyCollection* )** |Because the [collection](../working-with-data-sources.md#collections) exists, it isn't blank, even if it doesn't contain any records. To check for an empty collection, use **IsEmpty** instead. |**false** |

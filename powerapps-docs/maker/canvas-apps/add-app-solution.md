@@ -1,14 +1,14 @@
 ---
 title: Create a canvas app in a solution | Microsoft Docs
 description: In PowerApps, create a canvas app in a solution so that you can deploy the app to another environment
-author: AFTOwen
+author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: article
 ms.custom: canvas
 ms.reviewer:
 ms.date: 10/23/2018
-ms.author: anneta
+ms.author: tapanm
 search.audienceType: 
   - maker
 search.app: 
@@ -18,7 +18,7 @@ search.app:
 
 Create an app from within a solution if, for example, you want to deploy the app to a different environment. Solutions can contain not only apps but also customized entities, option sets, and other components. You can quickly customize an environment in a variety of ways by creating apps and other components from within a solution, exporting the solution, and then importing it into another environment.
 
-Solutions are built on the same platform as Dynamics 365 for Customer Engagement. For more information, see [Solutions overview](../common-data-service/solutions-overview.md).
+For more information about solutions, see [Solutions overview](../common-data-service/solutions-overview.md).
 
 ## Prerequisite
 

@@ -4,7 +4,7 @@ description:
 keywords:
 ms.author: nabuthuk
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -15,4 +15,4 @@ applies_to:
 ms.assetid: df189d10-3fce-48a4-a79b-f1c3b041deb4
 ---
 
-Gets Id of view used by dataset parameter.
+Returns the Id of view used by dataset parameter.

@@ -1,15 +1,17 @@
 ---
 title: Explore PowerApps for free for 30 days | Microsoft Docs
 description: Sign up for a free license that includes all PowerApps capabilities and expires after 30 days.
-author: AFTOwen
+author: KumarVivek
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.date: 01/15/2019
-ms.author: anneta
-ms.reviewer:
+ms.author: kvivek
+ms.reviewer: kvivek
+searchScope:
+  - GetStarted
+  - PowerApps
 ---
 # Explore PowerApps for free for 30 days
 

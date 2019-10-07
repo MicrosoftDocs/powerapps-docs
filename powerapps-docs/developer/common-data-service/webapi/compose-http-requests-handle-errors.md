@@ -11,7 +11,7 @@ applies_to:
   - "Dynamics 365 (online)"
 ms.assetid: 64a39182-25de-4d31-951c-852025a75811
 caps.latest.revision: 13
-author: "brandonsimons" # GitHub ID
+author: "JimDaly" # GitHub ID
 ms.author: "jdaly"
 ms.reviewer: "susikka"
 manager: "annbe"
@@ -35,7 +35,7 @@ To access the Web API you must compose a URL using the parts in the following ta
 |--|--|
 |Protocol| `https://`|
 |Environment Name|The unique name that applies to your environment. If your company name is *Contoso*, then it may be `contoso`.|
-|Region|Your environment will usually be available in a data center that is close to you geographically.<br />North America: `crm`<br />South America: `crm2`<br />Canada: `crm3`<br />Europe, Middle East and Africa (EMEA): `crm4`<br />Asia Pacific Area (APAC): `crm5`<br />Oceania: `crm6`<br />Japan: `crm7`<br />India: `crm8`<br />North America 2: `crm9`<br />United Kingdom: `crm11`<br />More values will be added over time as new data center regions are opened.|
+|Region|Your environment will usually be available in a data center that is close to you geographically.<br />North America: `crm`<br />South America: `crm2`<br />Canada: `crm3`<br />Europe, Middle East and Africa (EMEA): `crm4`<br />Asia Pacific Area (APAC): `crm5`<br />Oceania: `crm6`<br />Japan: `crm7`<br />India: `crm8`<br />North America 2: `crm9`<br />United Kingdom: `crm11`<br />France: `crm12`<br />More values will be added over time as new data center regions are opened.|
 |Base URL|`dynamics.com.`|
 |Web API path|The path to the web API is `/api/data/`.|
 |Version|	The version is expressed this way: `v[Major_version].[Minor_version][PatchVersion]/`. The valid version for this release is `v9.0`.|

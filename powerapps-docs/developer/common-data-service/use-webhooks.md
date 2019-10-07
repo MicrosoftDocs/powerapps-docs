@@ -2,11 +2,11 @@
 title: "Use webhooks to create external handlers for server events (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "You can send data about events that occur on the server to a web application using webhooks. Webhooks is a lightweight HTTP pattern for connecting Web APIs and services with a publish/subscribe model. webhook senders notify receivers about events by making requests to receiver endpoints with some information about the events." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 09/04/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.topic: "article"
-author: "brandonsimons" # GitHub ID
+author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -19,7 +19,7 @@ search.app:
 
 With Common Data Service, you can send data about events that occur on the server to a web application using webhooks. Webhooks is a lightweight HTTP pattern for connecting Web APIs and services with a publish/subscribe model. Webhook senders notify receivers about events by making requests to receiver endpoints with some information about the events.
 
-Webhooks enable developers and ISV’s to integrate Customer Engagement data with their own custom code hosted on external services. By using the webhook model, you can secure your endpoint by using authentication header or query string parameter keys. This is simpler than the SAS authentication model that you may currently use for Azure Service Bus integration.
+Webhooks enable developers and ISV’s to integrate Common Data Service data with their own custom code hosted on external services. By using the webhook model, you can secure your endpoint by using authentication header or query string parameter keys. This is simpler than the SAS authentication model that you may currently use for Azure Service Bus integration.
 
 When deciding between the webhook model and the Azure Service Bus integration, here are some items to keep in mind:
 
@@ -364,7 +364,7 @@ If your web hook is registered to run asynchronously, you can examine the system
 [Write a plug-in](write-plug-in.md)<br />
 [Register a plug-in](register-plug-in.md)<br />
 [Asynchronous service in Common Data Service](asynchronous-service.md)<br />
-[Sample: Azure aware custom plug-in](/org-service/samples/azure-aware-custom-plugin.md)<br />
+[Sample: Azure aware custom plug-in](org-service/samples/azure-aware-custom-plugin.md)<br />
 [Sample: Azure aware custom workflow activity](org-service/samples/azure-aware-custom-workflow-activity.md)<br />
 [Azure Functions](https://azure.microsoft.com/services/functions/)<br />
 [ServiceEndpoint Entity](reference/entities/serviceendpoint.md)<br />

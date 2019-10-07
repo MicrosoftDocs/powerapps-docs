@@ -15,6 +15,7 @@ ms.assetid: c765b6d9-4d87-4c2d-aae2-5b1c3b664a71
 caps.latest.revision: 28
 ms.author: "matp"
 manager: "kvivek"
+author: "Mattp123"
 search.audienceType: 
   - maker
 search.app: 
@@ -48,10 +49,10 @@ When you look at the solution explorer you might think that there are three type
   
 |Relationship Type|Description|  
 |-----------------------|-----------------|  
-|**1:N (One-to-Many)**|An entity relationship where one entity record for the **Primary Entity** can be associated to many other **Related Entity** records because of a lookup field on the related entity.<br /><br /> When viewing a primary entity record you can see a list of the related entity records that are associated with it.|  
+|**1:N (One-to-Many)**|An entity relationship where one entity record for the **Primary Entity** can be associated to many other **Related Entity** records because of a lookup field on the related entity.<br /><br /> When viewing a primary entity record you can see a list of the related entity records that are associated with it.<br /><br /> In the PowerApps portal, **Current Entity** represents the primary entity.|  
 |**N:N (Many-to-Many)**|An entity relationship that depends on a special **Relationship Entity**, sometimes called an Intersect entity, so that many records of one entity can be related to many records of another entity.<br /><br /> When viewing records of either entity in a N:N relationship you can see a list of any records of the other entity that are related to it.|  
   
-The **N:1 (many-to-one)** relationship type exists in the user interface because the designer shows you a view grouped by entities. 1:N relationships actually exist *between* entities and refer to each entity as either a **Primary Entity** or **Related Entity**. The related entity, sometimes called the *child* entity, has a lookup field that allows storing a reference to a record from the primary entity, sometimes called the *parent* entity. A N:1 relationship is just a 1:N relationship viewed from the related entity.  
+The **N:1 (many-to-one)** relationship type exists in the user interface because the designer shows you a view grouped by entities. 1:N relationships actually exist *between* entities and refer to each entity as either a **Primary/Current Entity** or **Related Entity**. The related entity, sometimes called the *child* entity, has a lookup field that allows storing a reference to a record from the primary entity, sometimes called the *parent* entity. A N:1 relationship is just a 1:N relationship viewed from the related entity.  
  
 ## Entity relationship behavior
 Behaviors  for related entities is important because it helps ensure data integrity and can automate business processes for your company.
@@ -96,7 +97,7 @@ These are the actions that can trigger certain behaviors:
 |**Assign**|What should happen when the primary entity record is assigned to someone else?|Cascade All<br />Cascade Active<br />Cascade User-owned<br />Cascade None|
 |**Reparent**|What should happen when the lookup value of a related entity in a parental relationship is changed?<br />More information: [Parental entity relationships](#parental-entity-relationships)|Cascade All<br />Cascade Active<br />Cascade User-owned<br />Cascade None|
 |**Share**|What should happen when the primary entity record is shared?|Cascade All<br />Cascade Active<br />Cascade User-owned<br />Cascade None|
-|**Delete**|What should happend when the primary entity record is deleted?|Cascade All<br />Remove Link<br />Restrict|
+|**Delete**|What should happen when the primary entity record is deleted?|Cascade All<br />Remove Link<br />Restrict|
 |**Unshare**|What should happen when a primary entity record is unshared?|Cascade All<br />Cascade Active<br />Cascade User-owned<br />Cascade None|
 |**Merge**|What should happen when a primary entity record is merged?|Cascade All<br />Cascade None|
 |**Rollup View**|What is the desired behavior of the rollup view associated with this relationship? |Cascade All<br />Cascade Active<br />Cascade User-owned<br />Cascade None|

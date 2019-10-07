@@ -33,11 +33,11 @@ Use the following steps to prepare for submitting your app to be listed on Micro
 > 
 > [Step 5: Store your package on Azure Storage](store-appsource-package-azure-storage.md)
 
-## Submit your app on Cloud Partner Portal
+## Submit your app on Partner Center
 
-Once your app is ready for submission, you use the [Cloud Partner Portal](https://cloudpartner.azure.com) to submit your app to be listed on the Microsoft AppSource. Access to the Cloud Partner Portal and related documentation is available only to Microsoft Partner Network members.
+Once your app is ready for submission, you use the [Partner Center](https://partner.microsoft.com/dashboard/account/v3/enrollment/introduction/azureisv) to submit your app to be listed on Microsoft AppSource. Access to the Partner Center and related documentation is available only to Microsoft Partner Network members.
 
-More information: [Next steps: Submit your app on Cloud Partner Portal](next-steps-submit-app-cloud-partner-portal.md)
+More information: [Next steps: Submit your app on Partner Center](next-steps-submit-app-cloud-partner-portal.md)
   
 ## Checklists
 

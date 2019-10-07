@@ -19,4 +19,5 @@ After you create a portal, it will begin provisioning and you are notified about
 
 If need to see more details about the provisioned portal such as, portal type, application ID, and so on, you can open [PowerApps Portals admin center](admin-overview.md) and navigate to the **Portal Details** tab.
 
-![Portal details](../media/portal-details-admin.png "Portal details")
+> [!div class=mx-imgBorder]
+> ![Portal details](../media/portal-details-admin.png "Portal details")

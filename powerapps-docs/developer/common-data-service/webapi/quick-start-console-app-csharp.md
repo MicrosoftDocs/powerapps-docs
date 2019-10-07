@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: 02/02/2019
 ms.service: powerapps
 ms.topic: "article"
-author: "brandonsimons" # GitHub ID
+author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 ms.reviewer: "susikka"
 manager: "ryjones" # MSFT alias of manager or PM counterpart

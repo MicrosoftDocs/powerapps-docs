@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 05/23/2019
 ms.author: gregli
 search.audienceType: 
@@ -205,13 +205,14 @@ Properties that return records:
 
 Some functions operate by evaluating a formula across all the records of a table individually. The formula's result is used in various ways:
 
-* **Filter**, **Lookup** - Formula determines if the record should be included in the output.
-* **Sort** - Formula provides the value to sort the records on.
-* **Concat** - Formula determines the strings to concatenate together.
-* **ForAll** - Formula can return any value, potentially with a side effect.
-* **Distinct** - Formula returns a value, used to identify duplicate records.
 * **AddColumns** - Formula provides the value of the added field.
 * **Average**, **Max**, **Min**, **Sum**, **StdevP**, **VarP** - Formula provides the value to aggregate.
+* **Filter**, **Lookup** - Formula determines if the record should be included in the output.
+* **Concat** - Formula determines the strings to concatenate together.
+* **Distinct** - Formula returns a value, used to identify duplicate records.
+* **ForAll** - Formula can return any value, potentially with side effects.
+* **Sort** - Formula provides the value to sort the records on.
+* **With** - Formula can return any value, potentially with side effects.
 
 Inside these formulas, you can reference the fields of the record being processed. Each of these functions creates a "record scope" in which the formula is evaluated, where the fields of the record are available as top-level identifiers. You can also reference control properties and other values from throughout your app.
 

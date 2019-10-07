@@ -6,7 +6,7 @@ manager: shujoshi
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/18/2019
+ms.date: 09/16/2019
 ms.author: shjais
 ms.reviewer:
 ---
@@ -17,13 +17,17 @@ ms.reviewer:
 
 A webpage is a document that is identified by a unique URL in a website. It is one of the core objects of the website and builds a hierarchy of the website through parent and child relationships to other webpages.
 
+> [!NOTE]
+> If you customize your portal using the portal designer, the website users would notice a performance impact. We recommended you to do the changes during non-peak hours on a live portal.
+
 ## Create webpage
 
 1.  [Edit the portal](manage-existing-portals.md#edit) to open it in the portal designer.  
 
 2.  From the command bar, select **New page** and choose the page template.
 
-    ![create a new webpage](media/create-webpage.png "Create a new webpage")
+    > [!div class=mx-imgBorder]
+    > ![create a new webpage](media/create-webpage.png "Create a new webpage")
 
 3.  In the properties pane on the right side of the screen, enter the following information:
 
@@ -33,21 +37,25 @@ A webpage is a document that is identified by a unique URL in a website. It is o
 
     - **Template**: Page template used to render this page on the portal. If required, you can choose another template from the list.
 
-        ![webpage properties](media/webpage-props.png "Webpage properties")
+        > [!div class=mx-imgBorder]
+        > ![webpage properties](media/webpage-props.png "Webpage properties")
 
 The webpages you create are added and their hierarchy are displayed in the **Pages** pane. To view the **Pages** pane, select **Pages** ![pages icon](media/pages-icon.png "Pages icon") from the toolbelt on the left side of the screen.  
 
 Let's say you have created a few webpages for your portal. The page hierarchy looks as follows:
 
-![pages pane](media/pages-pane.png "Pages pane")  
+> [!div class=mx-imgBorder]
+> ![pages pane](media/pages-pane.png "Pages pane")  
 
 The primary menu on the website is created automatically based on the hierarchy of the webpages. It is called the **Default** menu. You can also create a custom menu to display on the website. More information: [Add a custom menu](compose-page.md#add-a-custom-menu)
 
-![website navigation](media/website-navigation.png "Website navigation")
+> [!div class=mx-imgBorder]
+> ![website navigation](media/website-navigation.png "Website navigation")
 
-If you are working with Dynamics 365 Portal, and you want the menu to be the same as page hierarchy, you must select **Default** from the **Navigation Menu** list.
+If you are working with Dynamics 365 Portals, and you want the menu to be the same as page hierarchy, you must select **Default** from the **Navigation Menu** list.
 
-![Default navigation menu](media/navigation-menu-default.png "Default navigation menu")
+> [!div class=mx-imgBorder]
+> ![Default navigation menu](media/navigation-menu-default.png "Default navigation menu")
 
 ## Manage webpage
 
@@ -80,7 +88,8 @@ If you are working with Dynamics 365 Portal, and you want the menu to be the sam
 
     - **Delete**: Delete the page.
 
-        ![webpage manage options](media/webpage-manage-options.png "Webpage manage options")  
+        > [!div class=mx-imgBorder]
+        > ![webpage manage options](media/webpage-manage-options.png "Webpage manage options")  
 
 
 

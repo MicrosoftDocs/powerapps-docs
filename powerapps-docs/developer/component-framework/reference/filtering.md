@@ -3,8 +3,9 @@ title: Filtering | Microsoft Docs
 description: 
 keywords:
 ms.author: nabuthuk
+author: Nkrb
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -14,9 +15,11 @@ ms.assetid: e4673628-28d9-432c-92f4-24d1fcb44e21
 
 # Filtering
 
-[!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
-
 [!INCLUDE [filtering-description](includes/filtering-description.md)]
+
+## Available for 
+
+Model-driven apps
 
 ## Methods
 

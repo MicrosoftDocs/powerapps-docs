@@ -1,14 +1,14 @@
 ---
 title: Create a canvas app from scratch based on Excel data | Microsoft Docs
 description: In this tutorial, you'll create a two-screen canvas app so that users can create, edit, and delete records in an Excel file.
-author: AFTOwen
+author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
 ms.date: 03/26/2019
-ms.author: anneta
+ms.author: tapanm
 search.audienceType: 
   - maker
 search.app: 
@@ -37,7 +37,7 @@ To follow the steps in this tutorial exactly, first create an Excel file using t
 
     For more information, see [Format a table in Excel](how-to-excel-tips.md).
 
-3. Save the file under the name **eventsignup.xls**, close it, and then upload it to a [cloud-storage account](connections/cloud-storage-blob-connections.md), such as OneDrive.
+3. Save the file under the name **eventsignup.xlsx**, close it, and then upload it to a [cloud-storage account](connections/cloud-storage-blob-connections.md), such as OneDrive.
 
 > [!IMPORTANT]
 > You can use your own Excel file and review this tutorial for general concepts only. However, the data in the Excel file must be formatted as a table. For more information, see [Format a table in Excel](how-to-excel-tips.md).
@@ -123,7 +123,7 @@ To follow the steps in this tutorial exactly, first create an Excel file using t
 
 1. On the **Properties** tab of the right-hand pane, select **Edit** next to the **Fields** label.
 
-1. In the **Title2** box, select **Volunteer**.
+1. In the **Title2** box, select **Volunteer**, in the **Subtitle2** box, select **StartDay**, and in the **Body1** box, select **StartTime**.
 
 1. In the upper-right corner of the **Data** pane, close it by selecting the close icon (X).
 

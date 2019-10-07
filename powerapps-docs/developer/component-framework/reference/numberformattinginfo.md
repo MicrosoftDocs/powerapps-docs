@@ -3,8 +3,9 @@ title: NumberFormattingInfo | Microsoft Docs
 description: 
 keywords:
 ms.author: nabuthuk
+author: Nkrb
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -14,165 +15,167 @@ ms.assetid: 8c0481ee-abf9-492a-a1ef-b36e8a68167b
 
 # NumberFormattingInfo
 
-[!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
-
 [!INCLUDE [context-description](includes/numberformattinginfo-description.md)]
+
+## Available for 
+
+Model-driven apps
 
 ## Properties
 
-## currencyDecimalDigits
+### currencyDecimalDigits
 
- example 2
+ Example: 2
 
 **Type**: `number`
 
-## currencyDecimalSeparator
+### currencyDecimalSeparator
 
-example "."
-
-**Type**: `string`
-
-## currencyGroupSeparator
-
-example ","
+Example: "."
 
 **Type**: `string`
 
-## currencyGroupSizes
+### currencyGroupSeparator
 
-example [ 3 ]
+Example: ","
+
+**Type**: `string`
+
+### currencyGroupSizes
+
+Example: [ 3 ]
 
 **Type**: `number[]`
 
-## currencyNegativePattern
+### currencyNegativePattern
 
-example 0
-
-**Type**: `number`
-
-## currentPositivePattern
-
-example 0
+Example: 0
 
 **Type**: `number`
 
-## currencySymbol
+### currentPositivePattern
 
-example "$"
+Example: 0
+
+**Type**: `number`
+
+### currencySymbol
+
+Example: "$"
 
 **Type**: `string`
 
-## nanSymbol
+### nanSymbol
 
-example "NaN"
+Example: "NaN"
 
 **Type**: `string`
 
-## nativeDigits
+### nativeDigits
 
-example { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"}
+Example: { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"}
 
 **Type**: `string[]`
 
-## negativeInfinitySymbol
+### negativeInfinitySymbol
 
-example "-Infinity"
-
-**Type**: `string`
-
-## negativeSign
-
-example "-"
+Example: "-Infinity"
 
 **Type**: `string`
 
-## numberDecimalDigits
+### negativeSign
 
-example 2
+Example: "-"
+
+**Type**: `string`
+
+### numberDecimalDigits
+
+Example: 2
 
 **Type**: `number`
 
-## numberDecimalSeparator
+### numberDecimalSeparator
 
-example "."
-
-**Type**: `string`
-
-## numberGroupSeparator
-
-example ","
+Example: "."
 
 **Type**: `string`
 
-## numberGroupSizes
+### numberGroupSeparator
 
-example [3]
+Example: ","
+
+**Type**: `string`
+
+### numberGroupSizes
+
+Example: [3]
 
 **Type**: `number[]`
 
-## numberNegativePattern
+### numberNegativePattern
 
-example 1
-
-**Type**: `number`
-
-## perMilleSymbol
-
-example "‰"
-
-**Type**: `string`
-
-## percentDecimalDigits
-
-example 2
+Example: 1
 
 **Type**: `number`
 
-## percentDecimalSeparator
+### perMilleSymbol
 
-example "."
-
-**Type**: `string`
-
-## percentGroupSeparator
-
-example ","
+Example: "‰"
 
 **Type**: `string`
 
-## percentGroupSizes
+### percentDecimalDigits
 
-example [3]
+Example: 2
+
+**Type**: `number`
+
+### percentDecimalSeparator
+
+Example: "."
+
+**Type**: `string`
+
+### percentGroupSeparator
+
+Example: ","
+
+**Type**: `string`
+
+### percentGroupSizes
+
+Example: [3]
 
 **Type**: `number[]`
 
-## percentNegativePattern
+### percentNegativePattern
 
-example 0
-
-**Type**: `number`
-
-## percentPositivePattern
-
-example 0
+Example: 0
 
 **Type**: `number`
 
-## percentSymbol
+### percentPositivePattern
 
-example "%"
+Example: 0
+
+**Type**: `number`
+
+### percentSymbol
+
+Example: "%"
 
 **Type**: `string`
 
-## positiveInfinitySymbol
+### positiveInfinitySymbol
 
-example "Infinity"
+Example: "Infinity"
 
 **Type**: `string`
 
-## positiveSign
+### positiveSign
 
-example "+"
+Example: "+"
 
 **Type**: `string`
 

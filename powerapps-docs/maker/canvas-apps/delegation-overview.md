@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 07/05/2018
 ms.author: lanced
 search.audienceType: 
@@ -121,7 +121,7 @@ Aggregate functions can also cause confusion. Take **Average** over a column of 
 500 is the default number of records, but you can change this number for an entire app:
 
 1. On the **File** tab, select **App settings**.
-2. Under **Experimental features**, change the **Data row limit for non-delegable queries** setting from 1 to 2000.
+2. Under **Advanced settings**, change the **Data row limit for non-delegable queries** setting from 1 to 2000.
 
 In some cases, you'll know that 2,000 (or 1,000 or 1,500) will satisfy the needs of your scenario. With care, you can increase this number to fit your scenario. As you increase this number, your app's performance may degrade, especially for wide tables with lots of columns. Still, the best answer is to delegate as much as you can.
 
