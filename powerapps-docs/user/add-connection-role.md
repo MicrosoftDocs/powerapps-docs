@@ -27,7 +27,7 @@ It's a quick way to create multiple connections and roles for a particular recor
 
 Connection roles are directly associated to a connection. To use a connection role, you must first add a connection to your record.
 
-Before you can add connection roles, it needs to be enabled by your admin. For more information see, [Configure connection roles](https://docs.microsoft.com/en-us/powerapps/maker/common-data-service/configure-connection-roles).
+Before you can add connection roles, it needs to be enabled by your admin. For more information see, [Configure connection roles](https://docs.microsoft.com/powerapps/maker/common-data-service/configure-connection-roles).
 
 1. To add or manage connections, select the record you want to manage like an opportunity.  
 2. Select the **Related** tab and then select **Connection**. This will open the connection grid with the list of connections for the record.

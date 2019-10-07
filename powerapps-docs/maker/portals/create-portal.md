@@ -6,7 +6,7 @@ manager: shujoshi
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 08/30/2019
+ms.date: 10/02/2019
 ms.author: shjais
 ms.reviewer:
 ---
@@ -29,9 +29,9 @@ If you choose to create your portal in a new environment using the **Create new 
 
 If you choose to create your portal in an existing environment without portal pre-requisites, the pre-requisites are installed first and then the portal is created. In this method, the portal provisioning can take some time and you’ll be notified when the portal is provisioned.
 
-You can create Common Data Service starter portal or Dynamics 365 Portal in PowerApps based on the selected environment.
+You can create Common Data Service starter portal or Dynamics 365 Portals in PowerApps based on the selected environment.
 
-More information on working with environments: [Working with environments and Microsoft PowerApps](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/working-with-environments)
+More information on working with environments: [Working with environments and Microsoft PowerApps](https://docs.microsoft.com/powerapps/maker/canvas-apps/working-with-environments)
 
 More information on available portal templates: [Portal templates](portal-templates.md)
 
@@ -134,4 +134,26 @@ Notification shown for provisioning successfully completed
 
 If the portal provisioning fails, the notifications are displayed similarly.
   
+## Disable portal creation in a tenant
+
+As a global administrator, if you want to disable portal creation in a tenant by non-administrators, you can do it by enabling the `disablePortalsCreationByNonAdminUsers` tenant level setting through PowerShell. To run PowerShell cmdlets, you must first install the required modules. For information on installing the required PowerShell modules, see [Installation](https://docs.microsoft.com/en-us/power-platform/admin/powerapps-powershell#installation).
+
+After installing the modules, run the following command in a PowerShell window (run PowerShell as an administrator).
+
+```
+Set-TenantSettings -RequestBody @{ "disablePortalsCreationByNonAdminUsers" = $true }
+```
+
+Administrator are the users having one of the following Azure roles:
+
+- Global Administrator
+- Dynamics 365 Service Administrator
+- Power Platform Service Administrator
+
+Users not having the any of the above mentioned Azure roles are considered as non-administrators.
+
+When the portal creation is disabled in a tenant, non-administrators will see an error as follows:
+
+> [!div class=mx-imgBorder]
+> ![Portal creation blocked error](media/portal-create-blocked-error.png "Portal creation blocked error")
 
