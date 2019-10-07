@@ -1,14 +1,14 @@
 ---
 title: What are canvas apps? | Microsoft Docs
 description: Design and build canvas apps in PowerApps so that users can manage line-of-business data in a browser or on their mobile devices
-author: AFTOwen
+author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: overview
 ms.custom: canvas
 ms.reviewer: 
 ms.date: 04/26/2018
-ms.author: anneta
+ms.author: tapanm
 search.audienceType: 
   - maker
 search.app: 
