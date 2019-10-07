@@ -1,14 +1,14 @@
 ---
 title: Save and publish a canvas app | Microsoft Docs
 description: Step-by-step instructions for saving and publishing canvas apps for app makers
-author: AFTOwen
+author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
 ms.date: 09/14/2017
-ms.author: anneta
+ms.author: tapanm
 search.audienceType: 
   - maker
 search.app: 

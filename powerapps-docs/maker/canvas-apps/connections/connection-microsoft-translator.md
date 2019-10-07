@@ -8,7 +8,7 @@ ms.topic: reference
 ms.custom: canvas
 ms.date: 07/12/2017
 ms.author: lanced
-ms.reviewer: anneta
+ms.reviewer: tapanm
 search.audienceType: 
   - maker
 search.app: 

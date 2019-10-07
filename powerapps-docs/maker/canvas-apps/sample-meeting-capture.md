@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: sample
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 07/03/2018
 ms.author: brdang
 search.audienceType: 

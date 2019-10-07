@@ -8,7 +8,7 @@ ms.topic: reference
 ms.custom: canvas
 ms.date: 11/25/2018
 ms.author: fikaradz
-ms.reviewer: anneta
+ms.reviewer: tapanm
 search.audienceType:
   - maker
 search.app:

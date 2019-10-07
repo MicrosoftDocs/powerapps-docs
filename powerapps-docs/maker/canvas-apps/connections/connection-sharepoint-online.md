@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 04/03/2019
 ms.author: niwaggon
 search.audienceType:
