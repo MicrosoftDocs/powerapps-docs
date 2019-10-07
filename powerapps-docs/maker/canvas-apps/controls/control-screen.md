@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 09/14/2019
 ms.author: emcoope
 search.audienceType: 
