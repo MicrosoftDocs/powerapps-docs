@@ -208,6 +208,7 @@ export class TSControlStateAPI
    * @param selectedColorElement The HTML Div Element that the results should be injected into
    */
   private onButtonClick(event: Event, selectedColorElement: HTMLDivElement) {
+    const eventTarget: Element = event.srcElement as Element;
     if (event.srcElement) {
       // Get the label and the selected color attributes from the div element that was clicked
       let label: string = event.srcElement.attributes.getNamedItem("value")!
