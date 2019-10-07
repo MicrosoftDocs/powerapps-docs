@@ -38,6 +38,8 @@ More information: [Whitepaper: Solution Lifecycle Management](https://www.micros
 ### Components  
  A component represents something that you can potentially customize. Anything that can be included in a solution is a component. The following is a list of components that you can view in a solution:  
   
+-   AI Model
+
 -   Application Ribbon  
   
 -   Article Template  
@@ -51,6 +53,8 @@ More information: [Whitepaper: Solution Lifecycle Management](https://www.micros
 -   Connection Role  
   
 -   Contract Template  
+
+-   Custom Connector
  
 -   Custom Control
   
