@@ -1,14 +1,14 @@
 ---
 title: Generate a canvas app from Common Data Service | Microsoft Docs
 description: In PowerApps, automatically generate a canvas app to manage data in Common Data Service
-author: AFTOwen
+author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: quickstart
 ms.custom: canvas
 ms.reviewer: 
 ms.date: 05/06/2018
-ms.author: anneta
+ms.author: tapanm
 search.audienceType: 
   - maker
 search.app: 

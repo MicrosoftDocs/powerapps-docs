@@ -23,7 +23,7 @@ For example:
 ```
 
 > [!NOTE]
-> If you have specified AAD as the authentication type in powerbi Liquid tag, you must share it with the required users before adding the secure Power BI report or dashboard to a web page in portal. More information: [Share Power BI workspace](https://docs.microsoft.com/en-us/power-bi/service-how-to-collaborate-distribute-dashboards-reports#collaborate-with-coworkers-in-an-app-workspace) and [Share Power BI dashboard and report](https://docs.microsoft.com/en-us/power-bi/service-share-dashboards).
+> If you have specified AAD as the authentication type in powerbi Liquid tag, you must share it with the required users before adding the secure Power BI report or dashboard to a web page in portal. More information: [Share Power BI workspace](https://docs.microsoft.com/power-bi/service-how-to-collaborate-distribute-dashboards-reports#collaborate-with-coworkers-in-an-app-workspace) and [Share Power BI dashboard and report](https://docs.microsoft.com/power-bi/service-share-dashboards).
 
 ## Get the path of a dashboard or report
 
@@ -54,6 +54,7 @@ For example:
 
 
 ### See also
+
 
 [powerbi Liquid tag](../liquid/portals-entity-tags.md#powerbi)<br> 
 [Set up Power BI integration](set-up-power-bi-integration.md)

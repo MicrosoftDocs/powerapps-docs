@@ -11,7 +11,7 @@ applies_to:
   - "Dynamics 365 (online)"
 ms.assetid: 08377156-32c7-492a-8e66-50a47a330dc6
 caps.latest.revision: 14
-author: "brandonsimons" # GitHub ID
+author: "JimDaly" # GitHub ID
 ms.author: "jdaly"
 ms.reviewer: "susikka"
 manager: "annbe"
@@ -274,10 +274,10 @@ This is less code and you have added error handling and the means to refresh the
 
 Press F5 to run the program. Just like the [Quick start](quick-start-console-app-csharp.md) sample, the output should look like this:
 
-    ```
-    Your UserId is 969effb0-98ae-478c-b547-53a2968c2e75
-    Press any key to exit.
-    ```
+```
+Your UserId is 969effb0-98ae-478c-b547-53a2968c2e75
+Press any key to exit.
+```
 
 ## Create re-usable methods
 

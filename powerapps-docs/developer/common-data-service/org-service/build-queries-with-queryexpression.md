@@ -6,7 +6,7 @@ ms.date: 06/25/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.topic: "article"
-author: "brandonsimons" 
+author: "JimDaly" 
 ms.author: "jdaly" 
 manager: "ryjones" 
 search.audienceType: 

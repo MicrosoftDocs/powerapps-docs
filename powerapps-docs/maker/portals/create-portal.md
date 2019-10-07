@@ -29,7 +29,7 @@ If you choose to create your portal in an existing environment without portal pr
 
 You can create a Common Data Service starter portal or a Dynamics 365 portal in PowerApps based on the selected environment.
 
-More information on working with environments: [Working with environments and Microsoft PowerApps](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/working-with-environments)
+More information on working with environments: [Working with environments and Microsoft PowerApps](https://docs.microsoft.com/powerapps/maker/canvas-apps/working-with-environments)
 
 More information on available portal templates: [Portal templates](portal-templates.md)
 

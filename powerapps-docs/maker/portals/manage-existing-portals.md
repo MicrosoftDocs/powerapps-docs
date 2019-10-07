@@ -65,7 +65,7 @@ To share the portal with internal users you must first create a security role an
 
 5.  When you have finished configuring the security role, on the toolbar, select **Save and Close**.
 
-For information on security roles and privileges, see [Security roles and privileges](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/admin/security-roles-privileges).  
+For information on security roles and privileges, see [Security roles and privileges](https://docs.microsoft.com/dynamics365/customer-engagement/admin/security-roles-privileges).  
 
 #### Step 2: Assign users to the security role
 
@@ -82,11 +82,11 @@ For information on security roles and privileges, see [Security roles and privil
 
 ### Share with external users
 
-Your portal should work anonymously and should be accessible by the external users. If you want to try advanced capabilities for managing roles and permissions for external users, see [Configure a contact for use on a portal](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/configure-contacts), [Invite contacts to your portals](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/invite-contacts), [Create web roles for portals](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/create-web-roles), [Assign entity permissions](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/assign-entity-permissions).  
+Your portal should work anonymously and should be accessible by the external users. If you want to try advanced capabilities for managing roles and permissions for external users, see [Configure a contact for use on a portal](https://docs.microsoft.com/dynamics365/customer-engagement/portals/configure-contacts), [Invite contacts to your portals](https://docs.microsoft.com/dynamics365/customer-engagement/portals/invite-contacts), [Create web roles for portals](https://docs.microsoft.com/dynamics365/customer-engagement/portals/create-web-roles), [Assign entity permissions](https://docs.microsoft.com/dynamics365/customer-engagement/portals/assign-entity-permissions).  
 
 ## Settings
 
-Displays the portal settings and allows you to change the name of the portal. You can also perform advanced actions such as administering the portal though the PowerApps Portals admin center and working with site settings. Settings provides links to the PowerApps Portals admin center and Site settings. More information: [Administer your portal](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/manage-portal) and [Configure site settings for portals](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/configure-site-settings).  
+Displays the portal settings and allows you to change the name of the portal. You can also perform advanced actions such as administering the portal though the PowerApps Portals admin center and working with site settings. Settings provides links to the PowerApps Portals admin center and Site settings. More information: [Advanced portal administration](admin/admin-overview.md) and [Configure site settings](configure/configure-site-settings.md).  
 
 > [!div class=mx-imgBorder]
 > ![portal settings](media/portal-settings.png "Portal settings")  

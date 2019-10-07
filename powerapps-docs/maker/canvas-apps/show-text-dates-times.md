@@ -1,14 +1,14 @@
 ---
 title: Show text, dates, and times in a canvas app | Microsoft Docs
 description: In PowerApps, show text, dates, and times in a canvas app
-author: AFTOwen
+author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
 ms.date: 10/16/2016
-ms.author: anneta
+ms.author: tapanm
 search.audienceType: 
   - maker
 search.app: 

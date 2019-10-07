@@ -67,19 +67,19 @@ You can manage the following types of site settings:
 
 For site settings related to various portal features, see:
 
-- [Authentication identity](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/set-authentication-identity)
-- [Azure AD B2C provider](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/azure-ad-b2c)
-- [OAuth 2.0](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/configure-oauth2-settings)
-- [Open ID Connect](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/configure-openid-settings)
-- [WS-Federation](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/configure-ws-federation-settings)
-- [SAML 2.0](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/configure-saml2-settings)
-- [Migrate identity providers to Azure AD B2C](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/migrate-identity-providers)
-- [Search within file attachment content](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/search-file-attachment)
-- [Behavior and format of the date and time field](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/behavior-format-date-time-field)
-- [Add geolocation](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/add-geolocation)
-- [Integrate Field Service](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/integrate-field-service)
-- [Implementing General Data Protection Regulations](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/implement-gdpr)
-- [Enable header and footer output caching](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/enable-header-footer-output-caching)
+- [Authentication identity](https://docs.microsoft.com/dynamics365/customer-engagement/portals/set-authentication-identity)
+- [Azure AD B2C provider](https://docs.microsoft.com/dynamics365/customer-engagement/portals/azure-ad-b2c)
+- [OAuth 2.0](https://docs.microsoft.com/dynamics365/customer-engagement/portals/configure-oauth2-settings)
+- [Open ID Connect](https://docs.microsoft.com/dynamics365/customer-engagement/portals/configure-openid-settings)
+- [WS-Federation](https://docs.microsoft.com/dynamics365/customer-engagement/portals/configure-ws-federation-settings)
+- [SAML 2.0](https://docs.microsoft.com/dynamics365/customer-engagement/portals/configure-saml2-settings)
+- [Migrate identity providers to Azure AD B2C](https://docs.microsoft.com/dynamics365/customer-engagement/portals/migrate-identity-providers)
+- [Search within file attachment content](https://docs.microsoft.com/dynamics365/customer-engagement/portals/search-file-attachment)
+- [Behavior and format of the date and time field](https://docs.microsoft.com/dynamics365/customer-engagement/portals/behavior-format-date-time-field)
+- [Add geolocation](https://docs.microsoft.com/dynamics365/customer-engagement/portals/add-geolocation)
+- [Integrate Field Service](https://docs.microsoft.com/dynamics365/customer-engagement/portals/integrate-field-service)
+- [Implementing General Data Protection Regulations](https://docs.microsoft.com/dynamics365/customer-engagement/portals/implement-gdpr)
+- [Enable header and footer output caching](https://docs.microsoft.com/dynamics365/customer-engagement/portals/enable-header-footer-output-caching)
 
 ## Manage global portal settings
 

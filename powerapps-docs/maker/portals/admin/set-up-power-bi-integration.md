@@ -17,7 +17,7 @@ Power BI is one of the best tools to deliver insights with simple and interactiv
 
 > [!NOTE]
 > - You must have an appropriate Power BI license.
-> - To use Power BI Embedded service, you must have an appropriate Power BI Embedded license. For more information, see [Licensing](https://docs.microsoft.com/en-us/power-bi/developer/embedded-faq#licensing).
+> - To use Power BI Embedded service, you must have an appropriate Power BI Embedded license. For more information, see [Licensing](https://docs.microsoft.com/power-bi/developer/embedded-faq#licensing).
 
 ## Enable Power BI visualization
 
@@ -51,7 +51,7 @@ Enabling the Power BI Embedded service allows you to embed dashboards and report
 
 **Prerequisites**: Before enabling the Power BI Embedded service, ensure that you have created your dashboards and reports in the new workspace in Power BI. After creating the workspace, provide admin access to the global administrator so the workspaces are displayed in the PowerApps Portals admin center. For more information on creating new workspaces and adding access to them, see [Create the new workspaces in Power BI](https://docs.microsoft.com/en-us/power-bi/service-create-the-new-workspaces).
 
-**Power BI Embedded service limitations**: For information on limitations, see [Considerations and limitations](https://docs.microsoft.com/en-us/power-bi/developer/embed-service-principal#considerations-and-limitations).
+**Power BI Embedded service limitations**: For information on limitations, see [Considerations and limitations](https://docs.microsoft.com/power-bi/developer/embed-service-principal#considerations-and-limitations).
 
 > [!NOTE]
 > Ensure that Power BI visualization is enabled for the powerbi Liquid tag to work.
@@ -147,6 +147,7 @@ After enabling the Power BI Embedded service integration, you must create a secu
 6. Select **Apply**.
 
 Customizers can now use the [powerbi](../liquid/portals-entity-tags.md#powerbi) Liquid tag to embed Power BI dashboards and reports from new Power BI workspaces on webpages in a portal. To use Power BI Embedded service, the authentication type must be specified as **powerbiembedded**. While embedding the Power BI content, customizers can use [filter parameters](https://docs.microsoft.com/en-us/power-bi/service-url-filters) to create personalized views. More information: [powerbi Liquid tag](../liquid/portals-entity-tags.md#powerbi).
+
 
 ### Manage the Power BI Embedded service
 

@@ -17,7 +17,7 @@ Portal development involves several configurations and customizations to achieve
 
 After you have completed development or configuration of your portal instance, you might want to migrate your latest portal configuration from development to testing or the production environments. Migration involves exporting the existing configuration from the source Common Data Service environment, and then importing it into the target Common Data Service environment.
 
-To export configuration data, you would need to use the Configuration Migration tool and a portal-specific configuration schema file. For more information about this tool, see [Manage configuration data](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/admin/manage-configuration-data).
+To export configuration data, you would need to use the Configuration Migration tool and a portal-specific configuration schema file. For more information about this tool, see [Manage configuration data](https://docs.microsoft.com/dynamics365/customer-engagement/admin/manage-configuration-data).
 
 > [!NOTE]
 > - We recommend you to use the latest version of the Configuration Migration tool. The Configuration Migration tool can be downloaded from NuGet. More information for downloading the tool: [Download tools from NuGet](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/download-tools-nuget).
