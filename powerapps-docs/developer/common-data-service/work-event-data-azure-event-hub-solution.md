@@ -6,7 +6,7 @@ ms.date: 05/08/2019
 ms.service: powerapps
 ms.topic: article
 ms.assetid: a3732c49-7f47-d87c-5062-585ef28ab511
-author: brandonsimons # GitHub ID
+author: JimDaly # GitHub ID
 ms.author: jdaly # MSFT alias of Microsoft employees only
 manager: ryjones # MSFT alias of manager or PM counterpart
 ms.reviewer: pehecke
