@@ -33,7 +33,7 @@ Standard and custom entities within Common Data Service provide a secure and clo
 * **Logic and validation** &ndash; Define calculated fields, business rules, workflows, and business process flows to ensure data quality and drive business processes.
 * **Productivity tools** &ndash; Entities are available within the add-ins for Microsoft Excel to increase productivity and ensure data accessibility.
 
-## Dynamics 365 and the Common Data Service
+## Dynamics 365 and Common Data Service
 
 Dynamics 365 applications, such as Dynamics 365 Sales, Dynamics 365 Customer Service or Dynamics 365 Talent, also use the Common Data Service to store and secure data used by the applications. This enables you to build apps using PowerApps and the Common Data Service directly against your core business data already used within Dynamics 365 without the need for integration.
 
