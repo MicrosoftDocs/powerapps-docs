@@ -104,6 +104,7 @@ This table describes any additional properties used in the previous example.
 |-----------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |                         **PowerBIFilter**                          |        The filter expression that contextualizes the Power BI report by passing the form attributes as parameters. To make it more readable, the filter is constructed as shown here. 	|
 
+```json
 	{
 	        "Filter": "[{
 	                \"$schema\":\"basic\",
@@ -120,6 +121,7 @@ This table describes any additional properties used in the previous example.
 	                "$b":"lastname"
 	        }
 	}
+```
 
 The target part of the previous expression identifies the table and the column to apply the filters on. The operator identifies the logic and values identify the data passed from the PowerApps model-driven app. To parameterize in a generic way, the values are constructed by aliasing. In the previous expression, the value of an account's **firstname** and **lastname** are passed, and either of them is searched in the **Account Name** column in the Power BI report. Note that **firstname** and **lastname** are the unique names of attributes of the account entity, whose value will be passed here. 
 

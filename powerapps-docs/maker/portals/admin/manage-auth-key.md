@@ -61,7 +61,7 @@ Before the authentication key expires, you will be notified by emails, Portal Ad
 
 **Email**
 
-Email will be sent to people who have signed up for email notification for the organization connected to their portal. More information about signing up for email notification: [Manage email notifications to admins](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/admin/manage-email-notifications)
+Email will be sent to people who have signed up for email notification for the organization connected to their portal. More information about signing up for email notification: [Manage email notifications to admins](https://docs.microsoft.com/dynamics365/customer-engagement/admin/manage-email-notifications)
 
 Email notifications are sent at the following intervals: 
 - 90 days 

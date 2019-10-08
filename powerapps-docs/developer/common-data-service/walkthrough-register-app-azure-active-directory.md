@@ -4,8 +4,6 @@ description: "This walkthrough describes how to register an application with Azu
 keywords: ""
 ms.date: 04/01/2019
 ms.service: powerapps
-ms.custom:
-  - ""
 ms.topic: article
 ms.assetid: 86c4a8a8-7401-6d75-7979-3b04b506eb0c
 author: "paulliew" # GitHub ID
@@ -41,7 +39,7 @@ App registration can also be done by an application developer or individual user
 1. Sign in to the [Azure portal](https://go.microsoft.com/fwlink/?linkid=2083908) using an account with administrator permission. You must use an account in the same Office 365 subscription (tenant) as you intend to register the app with. You can also access the Azure portal through the Office 365 [Admin center](https://admin.microsoft.com/adminportal) by expanding the **Admin centers** item in the left navigation pane, and selecting **Azure Active Directory**.  
   
    > [!NOTE]
-   > If you don’t have an Azure tenant (account) or you do have one but your Office365 subscription with Common Data Service is not available in your Azure subscription, following the instructions in the topic [Set up Azure Active Directory access for your Developer Site](https://msdn.microsoft.com/office/office365/HowTo/setup-development-environment) to associate the two accounts.<br><br> If you don’t have an account, you can sign up for one by using a credit card. However, the account is free for application registration and your credit card won’t be charged if you only follow the procedures called out in this topic to register one or more apps. More information: [Active Directory Pricing Details](http://azure.microsoft.com/pricing/details/active-directory/)  
+   > If you don’t have an Azure tenant (account) or you do have one but your Office365 subscription with Common Data Service is not available in your Azure subscription, following the instructions in the topic [Set up Azure Active Directory access for your Developer Site](https://msdn.microsoft.com/office/office365/HowTo/setup-development-environment) to associate the two accounts.<br><br> If you don’t have an account, you can sign up for one by using a credit card. However, the account is free for application registration and your credit card won’t be charged if you only follow the procedures called out in this topic to register one or more apps. More information: [Active Directory Pricing Details](https://azure.microsoft.com/pricing/details/active-directory/)  
   
 2. In the Azure portal, select **Azure Active Directory** in the left pane and select **App registrations** and click on **New registration**.
     

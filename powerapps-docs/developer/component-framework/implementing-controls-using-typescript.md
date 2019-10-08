@@ -1,6 +1,6 @@
 ---
 title: "Implementing code components using TypeScript | MicrosoftDocs"
-description: "How to implement a code components using TypeScript"
+description: "How to implement code components using TypeScript"
 manager: kvivek
 ms.date: 10/01/2019
 ms.service: "powerapps"
@@ -12,40 +12,40 @@ author: Nkrb
 
 # Implement components using TypeScript
 
-This tutorial walks you through the process of creating a new code component in Typescript. The sample component is a linear input component which enables users to enter numeric values using a visual slider instead of typing the values in the field. 
+This tutorial walks you through the process of creating a new code component in TypeScript. The sample component is a linear input component that enables users to enter numeric values using a visual slider instead of typing the values in the field. 
 
 ## Creating a new component project
 
 To create a new project:
 
 1. Open a **Developer Command Prompt for VS 2017** window.
-1. Create a new folder for the project using the command 
+1. Create a new folder for the project using the following command: 
     ```CLI
     mkdir LinearComponent
     ```
 
 1. Go into the new directory using the command `cd LinearComponent`. 
    
-1. Run the command below to create a new component project passing basic parameters.
+1. Run the following command to create a new component project passing basic parameters.
 
    ```CLI
     pac pcf init --namespace SampleNamespace --name TSLinearInputComponent --template field
     ``` 
 
 1. Install the project build tools using the command `npm install`. 
-2. Open your project folder `C:\Users\<your name>\Documents\<My_PCF_Component`> in any developer environment of your choice and get started with your code component development. The quickest way to get started is by running `code .` from the command prompt once you are in the `C:\Users\<your name>\Documents\<My_PCF_Component>` directory. This command opens your component project in **Visual Studio Code**.
+2. Open your project folder `C:\Users\<your name>\Documents\<My_PCF_Component>` in a developer environment of your choice and get started with your code component development. The quickest way to start is by running `code .` from the command prompt once you are in the `C:\Users\<your name>\Documents\<My_PCF_Component>` directory. This command opens your component project in Visual Studio Code.
 
-## Implementing Manifest
+## Implementing manifest
 
-Manifest is an XML file that contains the metadata of the code component. It also defines the behavior of the code component. In this tutorial, this manifest file is created under the `<Your component Name>` subfolder. When you open the `ControlManifest.Input.xml` file in Visual Studio Code, you notice that the manifest file is predefined with some properties. Make changes to these predefined manifest file, as shown below:
+Manifest is an XML file that contains the metadata of the code component. It also defines the behavior of the code component. In this tutorial, this manifest file is created under the `<Your component Name>` subfolder. When you open the `ControlManifest.Input.xml` file in Visual Studio Code, you'll notice that the manifest file is predefined with some properties. Make changes to the predefined manifest file, as shown here:
 
-1. The [control](manifest-schema-reference/control.md) node defines the namespace, version and display name of the code component. Now, define each property of the [control](manifest-schema-reference/control.md) node as shown below:
+1. The [control](manifest-schema-reference/control.md) node defines the namespace, version, and display name of the code component. Now, define each property of the [control](manifest-schema-reference/control.md) node as shown here:
 
-   - **namespace**: The namespace of the code component. 
-   - **Constructor**: The constructor of the code component.
-   - **Version**: The version of the component. Whenever you update the component, you need to update the version to see the changes in the runtime.
-   - **display-name-key**: The name of the code component that is displayed on the UI.
-   - **description-name-key**: The description of the code component that is displayed on the UI.
+   - **namespace**: Namespace of the code component. 
+   - **Constructor**: Constructor of the code component.
+   - **Version**: Version of the component. Whenever you update the component, you need to update the version to see the changes in the runtime.
+   - **display-name-key**: Name of the code component that is displayed on the UI.
+   - **description-name-key**: Description of the code component that is displayed on the UI.
    - **control-type**: The code component type. Only *standard* type of code components are supported.
 
      ```XML
@@ -54,19 +54,23 @@ Manifest is an XML file that contains the metadata of the code component. It als
       <control namespace="SampleNameSpace" constructor="TSLinearInputComponent" version="1.0.0" display-name-key="Linear Input Component" description-key="Allows you to enter the numeric values using the visual slider." control-type="standard">
      ```
 
-2. The [property](manifest-schema-reference/property.md) node defines the properties of the code component like defining the data type of field. The property node is specified as the child element under the control element. Define the [property](manifest-schema-reference/property.md) node as shown below:
+2. The [property](manifest-schema-reference/property.md) node defines the properties of the code component like defining the data type of field. The property node is specified as the child element under the control element. Define the [property](manifest-schema-reference/property.md) node as shown here:
+
+
+<!--from editor: Note that the of-type-group link opens a page called type-group element, not of-type-group. Should they match? -->
+
 
    - **name**: Name of the property.
-   - **display-name-key**: The display name of the property that is displayed on the UI.
-   - **description-name-key**: The description of the property that is displayed on the UI. 
+   - **display-name-key**: Display name of the property that is displayed on the UI.
+   - **description-name-key**: Description of the property that is displayed on the UI. 
    - **of-type-group**: The [of-type-group](manifest-schema-reference/type-group.md) is used when you want to have more than two data type fields. Add the [of-type-group](manifest-schema-reference/type-group.md) element as a sibling to the `property` element in the manifest. The `of-type-group` specifies the component value and can contain whole, currency, floating point, or decimal values.
-   - **usage**: It has two properties *bound* and *input*. Bound properties are the one that is only bound to the value of the field. Input properties are the one that is either bound to a field or allows a static value.
-   - **required**: Defines whether the property is required or not.
+   - **usage**: Has two properties, *bound* and *input*. Bound properties are bound only to the value of the field. Input properties are either bound to a field or allow a static value.
+   - **required**: Defines whether the property is required.
 
      ```XML
       <property name="sliderValue" display-name-key="sliderValue_Display_Key" description-key="sliderValue_Desc_Key" of-type-group="numbers" usage="bound" required="true" />
       ```
-3. The [resources](manifest-schema-reference/resources.md) node defines the visualization of the code component. It contains all the resources that makes up the code component. The [code](manifest-schema-reference/code.md) is specified as child element under the resources element. Define the [resources](manifest-schema-reference/resources.md) as shown below:
+3. The [resources](manifest-schema-reference/resources.md) node defines the visualization of the code component. It contains all the resources that make up the code component. The [code](manifest-schema-reference/code.md) is specified as a child element under the resources element. Define the [resources](manifest-schema-reference/resources.md) as shown here:
 
    - **code**: Refers to the path where all the resource files are located.
  
@@ -101,7 +105,7 @@ Manifest is an XML file that contains the metadata of the code component. It als
 5. Now, create a new folder inside the `TSLinearInputComponent` folder and name it as **css**.
 6. Create a CSS file to [add styling to the code component](#adding-style-to-the-code-component).
 7. Build the component project using the command `npm run build`.
-8. The build generates an updated Typescript type declaration file under `TSLinearInputComponent/generated` folder.
+8. The build generates an updated TypeScript type declaration file under the `TSLinearInputComponent/generated` folder.
 
 ## Implementing component logic
 
@@ -109,6 +113,10 @@ The next step after implementing the manifest file is to implement the component
 
 1. Open the `index.ts` file in the code editor of your choice.
 2. Update the `TSLinearInputComponent` class with the following code:
+
+
+<!--from editor: On line 166, should the L in HTML be capitalized? -->
+
 
 ```TypeScript
 import { IInputs, IOutputs } from "./generated/ManifestTypes";
@@ -219,7 +227,7 @@ export class TSLinearInputComponent
  
 4. The component is compiled into the `out/controls/TSLinearInputComponent` folder. The build artifacts include:
 
-   - bundle.js – Bundled component source code 
+   - bundle.js – Bundled component source code. 
    - ControlManifest.xml – Actual component manifest file that is uploaded to the Common Data Service organization.
 
 ## Adding style to the code component
@@ -228,7 +236,7 @@ Developers and app makers can define their styling to represent their code compo
 
 1. Create a new `css` subfolder under the `TSLinearInputComponent` folder. 
 2. Create a new `TS_LinearInputComponent.css` file inside the `css` subfolder. 
-3. Add the following style content to `TS_LinearInputComponent.css` file
+3. Add the following style content to the `TS_LinearInputComponent.css` file:
 
     ```CSS
     .SampleNamespace\.TSLinearInputComponent input[type=range].linearslider {
@@ -300,7 +308,7 @@ Developers and app makers can define their styling to represent their code compo
     ```
 
 5. Save the `TS_LinearInputComponent.css` file.
-6. Edit the `ControlManifest.Input.xml` file to include the `CSS` resource file inside the resources element
+6. Edit the `ControlManifest.Input.xml` file to include the `CSS` resource file inside the resources element.
  
     ```XML
     <resources> 
@@ -308,7 +316,7 @@ Developers and app makers can define their styling to represent their code compo
       <css path="css/TS_LinearInputComponent.css" order="1"/> 
     </resources> 
      ```
-7. Rebuild the project using the command 
+7. Rebuild the project using the following command: 
    ```CLI
    npm run build
    ```
@@ -316,7 +324,7 @@ Developers and app makers can define their styling to represent their code compo
 
 ## Debugging your code component
 
-Once you are done implementing your code component logic, run the following command to start the debugging process. More information: [Debugging code components](debugging-custom-controls.md)
+Once you are done implementing your code component logic, run the following command to start the debugging process. More information: [Debug code components](debugging-custom-controls.md)
 
 ```CLI
 npm start
@@ -324,10 +332,13 @@ npm start
 
 ## Packaging your code components
 
-Follow the steps below to create and import a [solution](https://docs.microsoft.com/dynamics365/customer-engagement/customize/solutions-overview) file:
+Follow these steps to create and import a [solution](https://docs.microsoft.com/dynamics365/customer-engagement/customize/solutions-overview) file:
 
-1. Create a new folder **Solutions** inside the **LinearComponent** folder and navigate into the folder. 
-2. Create a new solution project in the **LinearComponent** folder using the command.
+
+<!--from editor: in the following sentence, which folder do users navigate to? -->
+
+1. Create a new folder **Solutions** inside the **LinearComponent** folder and navigate to the folder. 
+2. Create a new solution project in the **LinearComponent** folder using the following command:
  
     ```CLI
      pac solution init --publisher-name developer --publisher-prefix dev 
@@ -336,32 +347,36 @@ Follow the steps below to create and import a [solution](https://docs.microsoft.
    > [!NOTE]
    > The [publisher-name](https://docs.microsoft.com/powerapps/developer/common-data-service/reference/entities/publisher) and [publisher-prefix](https://docs.microsoft.com/powerapps/maker/common-data-service/change-solution-publisher-prefix) values must be unique to your environment.
  
-3. Once the new solution project is created, you need to refer to the location where the created component is located. You can add the reference by using the command.
+3. Once the new solution project is created, you need to refer to the location where the created component is located. You can add the reference by using the following command:
 
     ```CLI
      pac solution add-reference --path c:\users\LinearComponent
     ```
 
-4. To generate a zip file from your solution project, you need to `cd` into your solution project directory and build the project using the command. 
+
+<!--from editor: In the next sentence, should there be a verb before 'cd'? Such as, "... you need to enter 'cd' to your solution ...." ?
+
+
+4. To generate a zip file from your solution project, you need to `cd` into your solution project directory and build the project using the following command: 
 
     ```CLI
      msbuild /t:restore
     ```
 
-5. Again run the following command msbuild.
+5. Again, run the following command msbuild:
     ```CLI
      msbuild
     ```
 
     > [!NOTE]
-    > Make sure that the **NuGet targets & Build Tasks** is checked. To enable it
-    > - Open **Visual Studio Installer**
-    > - For VS 2017, click on **Modify**
-    > - Click on **Individual Components**
-    > - Under **Code Tools**, check **NuGet targets & Build Tasks**
+    > Make sure that **NuGet targets & Build Tasks** is checked. To enable it:
+    > - Open **Visual Studio Installer**.
+    > - For Visual Studio 2017, select **Modify**.
+    > - Select **Individual Components**.
+    > - Under **Code Tools**, check **NuGet targets & Build Tasks**.
 
-6. The generated solution zip file is located in `Solution\bin\debug` folder.
-7. Manually [import the solution into Common Data Service](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/customize/import-update-upgrade-solution) using the web portal once the zip file is ready or see [Authenticating to your organization](import-custom-controls.md#authenticating-to-your-organization) and [Deployment](import-custom-controls.md#deploying-code-components) sections to import using PowerApps CLI commands.
+6. The generated solution zip file is located in the `Solution\bin\debug` folder.
+7. Manually [import the solution into Common Data Service](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/customize/import-update-upgrade-solution) using the web portal once the zip file is ready or see the [Authenticating to your organization](import-custom-controls.md#authenticating-to-your-organization) and [Deployment](import-custom-controls.md#deploying-code-components) sections to import using PowerApps CLI commands.
 
 ## Adding code components in model-driven apps
 
@@ -369,11 +384,11 @@ To add a code component like a linear input component, follow the steps mentione
 
 ## Adding code components to a canvas app
 
-To add the code components to a canvas app, follow the steps mentioned in this topic [Add code components to a canvas app](component-framework-for-canvas-apps.md#add-components-to-a-canvas-app)
+To add the code components to a canvas app, follow the steps in the topic [Add code components to a canvas app](component-framework-for-canvas-apps.md#add-components-to-a-canvas-app).
 
 ### See also
 
 [Download sample components](https://go.microsoft.com/fwlink/?linkid=2088525)<br/>
 [Update existing PowerApps component framework controls](updating-existing-controls.md)<br/>
-[PowerApps component framework API Reference](reference/index.md)<br/>
-[PowerApps component framework Overview](overview.md)
+[PowerApps component framework API reference](reference/index.md)<br/>
+[PowerApps component framework overview](overview.md)

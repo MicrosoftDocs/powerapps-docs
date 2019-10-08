@@ -1,14 +1,14 @@
 ---
 title: Sign in for the first time | Microsoft Docs
 description: A new home for all makers of apps.
-author: AFTOwen
+author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
 ms.date: 08/06/2018
-ms.author: anneta
+ms.author: tapanm
 search.audienceType: 
   - maker
 search.app: 

@@ -1,14 +1,14 @@
 ---
 title: Generate a canvas app from a SharePoint list | Microsoft Docs
 description: In PowerApps, automatically generate a canvas app to manage data in a SharePoint list
-author: AFTOwen
+author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
 ms.date: 08/09/2018
-ms.author: anneta
+ms.author: tapanm
 search.audienceType: 
   - maker
 search.app: 

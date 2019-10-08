@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-author: "brandonsimons" # GitHub ID
+author: "JimDaly" # GitHub ID
 ms.author: "susikka"
 manager: "shujoshi"
 search.audienceType: 
