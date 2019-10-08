@@ -1,14 +1,14 @@
 ---
 title: Create a canvas app from scratch using Common Data Service | Microsoft Docs
 description: In PowerApps, create a canvas app to add, update, and delete records in Common Data Service.
-author: AFTOwen
+author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
 ms.date: 05/21/2019
-ms.author: anneta
+ms.author: tapanm
 search.audienceType: 
   - maker
 search.app: 

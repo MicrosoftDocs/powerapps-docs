@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta anneta
+ms.reviewer: tapanm tapanm
 ms.date: 11/07/2015
 ms.author: gregli
 search.audienceType: 

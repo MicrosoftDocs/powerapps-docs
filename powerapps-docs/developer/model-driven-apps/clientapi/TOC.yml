@@ -618,6 +618,8 @@
     - name: Xrm.Navigation
       href: reference/xrm-navigation.md
       items:
+      - name: navigateTo
+        href: reference/xrm-navigation/navigateTo.md
       - name: openAlertDialog
         href: reference/xrm-navigation/openAlertDialog.md
       - name: openConfirmDialog
