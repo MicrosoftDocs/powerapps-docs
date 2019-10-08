@@ -35,14 +35,14 @@ Standard and custom entities within Common Data Service provide a secure and clo
 
 ## Dynamics 365 and the Common Data Service
 
-Dynamics 365 applications, like Dynamics 365 for Sales, Service or Talent also use the Common Data Service to store and secure data used by the applications. This enables you to build apps using PowerApps and the Common Data Service directly against your core business data already used within Dynamics 365 without the need for integration.
+Dynamics 365 applications, such as Dynamics 365 Sales, Dynamics 365 Customer Service or Dynamics 365 Talent, also use the Common Data Service to store and secure data used by the applications. This enables you to build apps using PowerApps and the Common Data Service directly against your core business data already used within Dynamics 365 without the need for integration.
 
 * **Build Apps against your Dynamics 365 Data** &ndash; Build apps quickly against your business data within PowerApps or using the Pro Developer SDK.
 * **Manage reusable Business logic and rules** &ndash; Business Rules and logic already defined in your Dynamics 365 entities are applied to your PowerApps to ensure data consistency regardless of how your users are accessing the data or through which app.
-* **Reusable skills across Dynamics 365 and PowerApps** &ndash; Users with skills previously in PowerApps or Dynamics 365 can now leverage those skills across the new Common Data Service Platform. Creating entities, forms, charts, etc are now common across your applications.
+* **Reusable skills across Dynamics 365 and PowerApps** &ndash; Users with skills previously in PowerApps or Dynamics 365 can now leverage those skills across the Common Data Service platform. Creating entities, forms, charts, etc are now common across your applications.
 
     > [!NOTE]
-    > Dynamics 365 for Finance and Operations currently requires the configuration of the Data Integrator to make your business data from Finance and Operations available within the Common Data Service.
+    > Finance and Operations apps currently requires the configuration of the [Data Integrator](/power-platform/admin/data-integrator) to make your business data from Finance and Operations apps available in Common Data Service.
 
 ## Integrating Data into the Common Data Service
 
