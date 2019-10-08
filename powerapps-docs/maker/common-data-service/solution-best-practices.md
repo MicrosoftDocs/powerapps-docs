@@ -24,7 +24,7 @@ search.app:
   - D365CE
 ---
 
-# Best practices when working with solutions (new topic)
+# Best practices when working with solutions 
 This topic describes best practices when you work with solutions. 
 
 ## Use a single managed solution to manage a model-driven app 
