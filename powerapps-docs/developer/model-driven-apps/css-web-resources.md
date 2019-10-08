@@ -4,8 +4,6 @@ description: "Use cascading style sheet (CSS) web resources to create style shee
 keywords: ""
 ms.date: 10/31/2018
 ms.service: powerapps
-ms.custom:
-  - ""
 ms.topic: article
 ms.assetid: a4e98fa7-930d-e320-5384-9f773775639b
 author: JimDaly # GitHub ID

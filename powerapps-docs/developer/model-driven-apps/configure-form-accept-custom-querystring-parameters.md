@@ -4,8 +4,6 @@ description: "Learn about configuring a form to acept custom querystring paramet
 keywords: ""
 ms.date: 10/31/2018
 ms.service: powerapps
-ms.custom:
-  - ""
 ms.topic: article
 ms.assetid: 89287d32-0d16-8f7d-e0b6-8cc208212cff
 author: JimDaly # GitHub ID

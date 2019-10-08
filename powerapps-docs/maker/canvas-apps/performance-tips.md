@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 06/17/2019
 ms.author: yingchin
 search.audienceType: 
@@ -48,10 +48,12 @@ use **Concurrent** to cut the amount of time an app needs to load data in half.
 
 Without the **Concurrent** function, this formula loads each of four tables one at a time:
 
-	ClearCollect( Product, '[SalesLT].[Product]' );
-	ClearCollect( Customer, '[SalesLT].[Customer]' );
-	ClearCollect( SalesOrderDetail, '[SalesLT].[SalesOrderDetail]' );
-	ClearCollect( SalesOrderHeader, '[SalesLT].[SalesOrderHeader]' )
+```
+ClearCollect( Product, '[SalesLT].[Product]' );
+ClearCollect( Customer, '[SalesLT].[Customer]' );
+ClearCollect( SalesOrderDetail, '[SalesLT].[SalesOrderDetail]' );
+ClearCollect( SalesOrderHeader, '[SalesLT].[SalesOrderHeader]' )
+```
 
 You can confirm this behavior in the Developer Tools for your browser:
 
@@ -59,12 +61,14 @@ You can confirm this behavior in the Developer Tools for your browser:
 	
 You can enclose the same formula in the **Concurrent** function to reduce the overall time that the operation needs:
 
-	Concurrent(	
-		ClearCollect( Product, '[SalesLT].[Product]' ),
-		ClearCollect( Customer, '[SalesLT].[Customer]' ),
-		ClearCollect( SalesOrderDetail, '[SalesLT].[SalesOrderDetail]' ),
-		ClearCollect( SalesOrderHeader, '[SalesLT].[SalesOrderHeader]' ))
-		
+```
+Concurrent(	
+	ClearCollect( Product, '[SalesLT].[Product]' ),
+	ClearCollect( Customer, '[SalesLT].[Customer]' ),
+	ClearCollect( SalesOrderDetail, '[SalesLT].[SalesOrderDetail]' ),
+	ClearCollect( SalesOrderHeader, '[SalesLT].[SalesOrderHeader]' ))
+```
+
 With this change, the app fetches the tables in parallel: 
 
 ![Parallel ClearCollect](./media/performance-tips/perfconcurrent2.png)	
@@ -74,11 +78,13 @@ Use the **Set** function to cache data from lookup tables locally to avoid repea
 optimizes performance if the data probably won’t change during a session. As in this example, the data is retrieved from the source once
 and then referenced locally after that until the user closes the app. 
 
-	Set(CustomerOrder, Lookup(Order, id = “123-45-6789”));
-	Set(CustomerName, CustomerOrder.Name);
-	Set(CustomerAddress, CustomerOrder.Address);
-	Set(CustomerEmail, CustomerOrder.Email);
-	Set(CustomerPhone, CustomerOrder.Phone);
+```
+Set(CustomerOrder, Lookup(Order, id = “123-45-6789”));
+Set(CustomerName, CustomerOrder.Name);
+Set(CustomerAddress, CustomerOrder.Address);
+Set(CustomerEmail, CustomerOrder.Email);
+Set(CustomerPhone, CustomerOrder.Phone);
+```
 
 Contact information doesn’t change frequently, and neither do default values and user information. So you can generally use this 
 technique with the **Defaults** and **User** functions also. 

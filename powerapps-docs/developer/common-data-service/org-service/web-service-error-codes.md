@@ -6,7 +6,7 @@ ms.date: 05/09/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.topic: "article"
-author: "brandonsimons" # GitHub ID
+author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -790,7 +790,7 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />CorruptedHiddensheetData<br />**Hex**:<br />800609B7<br />**Number**:<br />-2147087945|The hidden sheet data is corrupted.|
 > |**Name**:<br />CouldNotDecryptOAuthToken<br />**Hex**:<br />8005F110<br />**Number**:<br />-2147094256|Yammer OAuth token could not be decrypted. Please try to reconfigure Yammer once again.|
 > |**Name**:<br />CouldNotFindQueueItemInQueue<br />**Hex**:<br />80040524<br />**Number**:<br />-2147220188|Could not find any queue item associated with the Target in the specified SourceQueueId. Either the SourceQueueId or Target is invalid or the queue item does not exist.|
-> |**Name**:<br />CouldNotObtainLockOnResource<br />**Hex**:<br />80044339<br />**Number**:<br />-2147204295|Database resource lock could not be obtained. For more information, see http://docs.microsoft.com/dynamics365/customer-engagement/customize/best-practices-workflow-processes#limit-the-number-of-workflows-that-update-the-same-entity|
+> |**Name**:<br />CouldNotObtainLockOnResource<br />**Hex**:<br />80044339<br />**Number**:<br />-2147204295|Database resource lock could not be obtained. For more information, see https://docs.microsoft.com/dynamics365/customer-engagement/customize/best-practices-workflow-processes#limit-the-number-of-workflows-that-update-the-same-entity|
 > |**Name**:<br />CouldNotReadAccessToken<br />**Hex**:<br />8005F105<br />**Number**:<br />-2147094267|The system was not able to read users Yammer access token although a non-empty code was passed.|
 > |**Name**:<br />CouldNotSetLocationTypeToOneNote<br />**Hex**:<br />80060905<br />**Number**:<br />-2147088123|Couldn't set location type of document location to OneNote.|
 > |**Name**:<br />CountSpecifiedWithoutOrder<br />**Hex**:<br />8004E01F<br />**Number**:<br />-2147164129|The Data Description for the visualization is invalid as it does not specify an order node for the count attribute.|

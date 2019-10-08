@@ -16,7 +16,7 @@ search.app:
   - D365CE
 ---
 
-## Detect Duplicate Data using the Web API
+# Detect Duplicate Data using the Web API
 
 <!-- 
 Related topics

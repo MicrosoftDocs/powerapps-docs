@@ -1,14 +1,14 @@
 ---
 title: Understand on-premises data gateways for canvas apps | Microsoft Docs
 description: Reference information about on-premises data gateways including installation in PowerApps and troubleshooting
-author: AFTOwen
+author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: 
 ms.date: 10/20/2017
-ms.author: anneta
+ms.author: tapanm
 search.audienceType: 
   - maker
 search.app: 
@@ -85,14 +85,16 @@ You can verify whether your firewall, or proxy, may be blocking connections by r
 
 The results should look similar to this example. If **TcpTestSucceeded** is not **True**, you may be blocked by a firewall.
 
-    ComputerName           : watchdog.servicebus.windows.net
-    RemoteAddress          : 70.37.104.240
-    RemotePort             : 5672
-    InterfaceAlias         : vEthernet (Broadcom NetXtreme Gigabit Ethernet - Virtual Switch)
-    SourceAddress          : 10.120.60.105
-    PingSucceeded          : False
-    PingReplyDetails (RTT) : 0 ms
-    TcpTestSucceeded       : True
+```
+ComputerName           : watchdog.servicebus.windows.net
+RemoteAddress          : 70.37.104.240
+RemotePort             : 5672
+InterfaceAlias         : vEthernet (Broadcom NetXtreme Gigabit Ethernet - Virtual Switch)
+SourceAddress          : 10.120.60.105
+PingSucceeded          : False
+PingReplyDetails (RTT) : 0 ms
+TcpTestSucceeded       : True
+```
 
 If you want to be exhaustive, substitute the **ComputerName** and **Port** values with those listed under **Configure ports** later in this topic.
 
