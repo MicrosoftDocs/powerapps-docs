@@ -23,7 +23,7 @@ Web API (REST) | .NET API (SOAP)
 ------- | -------
 [FieAttributeMetadata](/dynamics365/customer-engagement/web-api/fileattributemetadata) | <xref:Microsoft.Xrm.Sdk.Metadata.FileAttributeMetadata>
 
-For more information about types of files that are not allowed, see [System Settings General tab](/power-platform/admin/system-settings-dialog-box-general-tab) under the **Set blocked file extensions for attachments** setting.
+For information about types of files that are not allowed, see [System Settings General tab](/power-platform/admin/system-settings-dialog-box-general-tab) under the **Set blocked file extensions for attachments** setting.
 
 > [!IMPORTANT]
 > Some restrictions do apply when using the File and enhanced Image data-types of the Common Data Service. If Customer Managed Keys (CMK) is enabled on the tenant, then File, Image, and IoT data-types are not available to the tenant's organizations. Solutions that contain excluded data-types will not install. Customers must opt-out of CMK in order to make use of these data-types.
@@ -58,7 +58,7 @@ Messages such as <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> and <xref:Mic
 ```http
 GET [Organization URI]/api/data/v9.0/accounts(id)/myfileattribute/$value
 Headers:
-Range: 0-1023/8191
+Range: 0-1023/8192
 ```
 
 **Response**
@@ -75,7 +75,7 @@ x-ms-file-size: 8192
 Location: api/data/v9.0/accounts(id)/myfileattribute?FileContinuationToken
 ```
 
-Chunking will be decided based on the `Range` header existence in the request. The full file will be downloaded (up to 16 MB) in one request if no `Range` header is included. For chunking, the `Location` response header contains the query-able parameter `FileContinuationToken`. Use the provided location header value in the next GET request to retrieve the next block of data in the sequence.
+Chunking will be decided based on the `Range` header existence in the request. The Range header value format is: startByte-endByte/total bytes. The full file will be downloaded (up to 16 MB) in one request if no `Range` header is included. For chunking, the `Location` response header contains the query-able parameter `FileContinuationToken`. Use the provided location header value in the next GET request to retrieve the next block of data in the sequence.
 
 ### Example: .NET C# code for download with chunking
 
@@ -161,7 +161,7 @@ Location: api/data/v9.0/accounts(id)/myfileattribute?FileContinuationToken
 PATCH [Organization URI]/api/data/v9.0/accounts(id)/myfileattribute?FileContinuationToken 
 
 Headers: 
-Content-Range: bytes 0-4095/8190 
+Content-Range: 0-4095/8192 
 Content-Type: application/octet-stream 
 x-ms-file-name: [User input from power apps] 
 ```
@@ -227,7 +227,7 @@ static async Task ChunkedUploadAsync(
 <a name="BKMK_DeletingFiles"></a>
 
 ## Delete file data  
-To delete file, attachment, or annotation data in Azure Blob Storage, use the following APIs.
+To delete file, attachment, or annotation data in storage, use the following APIs.
 
 Web API (REST) | .NET API (SOAP)
 ------- | -------
