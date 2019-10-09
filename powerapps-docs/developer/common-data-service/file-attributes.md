@@ -41,7 +41,7 @@ When a file attribute is added to an entity some additional attributes are creat
 <a name="BKMK_RetrievingFiles"></a>
 
 ## Retrieve file data
-To retrieve file data, use the following APIs.
+To retrieve file data use the following APIs.
 
 Web API (REST) | .NET API (SOAP)
 ------- | -------
@@ -50,13 +50,15 @@ GET /api/data/v9.0/\<entity-type(id)\>/\<file-attribute-name\>/$value   | <xref:
 
 File data transfers from the web service endpoints are limited to a maximum of 16 MB data in a single service call. File data greater that that amount must be divided into 4 MB or smaller data blocks (chunks) where each block is received in a separate API call until all file data has been received. It is your responsibility to join the downloaded data blocks to form the complete data file by combining the data blocks in the same sequence as the blocks were received.
 
+Messages such as <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> and <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> cannot be used to download file data.
+
 ### Example: REST download with chunking
 
 **Request**
 ```http
 GET [Organization URI]/api/data/v9.0/accounts(id)/myfileattribute/$value
 Headers:
-Range: 0-1023
+Range: 0-1023/8191
 ```
 
 **Response**
@@ -69,7 +71,7 @@ byte[]
 Response Headers:
 Content-Disposition: attachment; filename="sample.txt"
 x-ms-file-name: "sample.txt"
-x-ms-file-size: 12345
+x-ms-file-size: 8192
 Location: api/data/v9.0/accounts(id)/myfileattribute?FileContinuationToken
 ```
 
@@ -130,6 +132,8 @@ PATCH /api/data/v9.0/\<entity-type(id)\>/\<file-attribute-name\>   | <xref:Micro
 none   | <xref:Microsoft.Crm.Sdk.Messages.CommitFileBlocksUploadRequest>,<br/><xref:Microsoft.Crm.Sdk.Messages.CommitAttachmentBlocksUploadRequest>,<br/><xref:Microsoft.Crm.Sdk.Messages.CommitAnnotationBlocksUploadRequest>
 
 As was previously mentioned under [Retrieve file data](#retrieve-file-data), uploading a data file of 16 MB or less can be accomplished in a single API call while uploading more than 16 MB of data requires the file data to be divided into blocks of 4 MB or less data. After the complete set of data blocks has been uploaded and a commit request has been sent, the web service will automatically combine the blocks, in the same sequence as the data blocks were uploaded, into a single data file in Azure Blob Storage.
+
+Messages such as <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> and <xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> cannot be used to upload file data.
 
 ### Example: REST upload with chunking (first request)
 
