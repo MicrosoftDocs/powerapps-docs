@@ -45,7 +45,7 @@ If the component has dependencies (such as relationships), you must remove the d
 > When you delete the app, we recommend that you delete its associated site map. If you do not delete the associated site map, the site map designer displays an error the first time you try to create another app with the same name. However, you can ignore the error, and the error will not appear when you try to create the app again.
 
 ## Delete a model-driven app that was installed as part of a managed solution
-To delete a model-driven app that was installed in the environment as part of a managed solution, delete the managed solution that included the model-driven app. 
+To delete a model-driven app that was installed in the environment as part of a managed solution, delete the managed solution. 
 
 ### Delete a managed solution 
 All the components of a managed solution are deleted by deleting the solution.
