@@ -17,7 +17,7 @@ search.app:
 ---
 # Image attributes
 
-Certain system entities and all custom entities support images. Those entities that do support images can contain both a thumbnail and a full-size primary image. The thumbnail image can be seen in the web application when viewing the entity's form data. There can be multiple image attributes in an entity instance but there can be only one primary image. However, you can change the primary image from one image to another. Each full-sized image attribute is limited to 30 MB in size. The <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.SchemaName> of the entity image attribute is `EntityImage`. More information: [Entity images](/dynamics365/customer-engagement/developer/introduction-entities#entity-images).
+Certain system entities and all custom entities support images. Those entities that do support images can contain both a thumbnail and a full-size primary image. The thumbnail image can be seen in the web application when viewing the entity's form data. There can be multiple image attributes in an entity instance but there can be only one primary image. However, you can change the primary image from one image to another by setting [IsPrimaryImage](https://docs.microsoft.com/dotnet/api/microsoft.xrm.sdk.metadata.imageattributemetadata.isprimaryimage?view=dynamics-general-ce-9#Microsoft_Xrm_Sdk_Metadata_ImageAttributeMetadata_IsPrimaryImage) for that attribute to `true`. Each full-sized image attribute is limited to 30 MB in size. The <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.SchemaName> of the entity image attribute is `EntityImage`. More information: [Entity images](/dynamics365/customer-engagement/developer/introduction-entities#entity-images).
 
 Web API (REST) | .NET API (SOAP) 
 ------- | -------
@@ -67,7 +67,7 @@ In addition to image attributes, custom entities support zero or more file attri
 <a name="BKMK_RetrievingImages"></a>   
 ## Retrieve image data  
 
-To download image data, use the following APIs.
+To download thumbnail image attribute data, use the following APIs.
 
 Web API (REST) | .NET API (SOAP)
 ------- | -------
@@ -80,11 +80,23 @@ Image data transfers from the web service endpoints are limited to a maximum of 
 
  More information on chunking: [File attributes](file-attributes.md).
 
+To download the full image attribute data use the following APIs.
+
+Web API (REST) | .NET API (SOAP)
+------- | -------
+ none  | <xref:Microsoft.Crm.Sdk.Messages.InitializeFileBlocksDownloadRequest>
+GET /api/data/v9.1/\<entity-type(id)\>/\<image-attribute-name\>/$value?size=full   | <xref:Microsoft.Crm.Sdk.Messages.DownloadBlockRequest>
+
+Note that in this case the image attribute download makes use of the file attribute message requests. 
+
 ### Example: REST thumbnail download
 
 **Request**
 ```http
 GET [Organization URI]/api/data/v9.1/accounts(b9ccec62-f266-e911-8196-000d3a6de638)/myentityimage/$value
+
+Headers:
+Content-Type: application/octet-stream
 ```
 
 **Response**
@@ -100,6 +112,9 @@ byte[]
 **Request**
 ```http
 GET [Organization URI]/api/data/v9.1/accounts(C0864F1C-0B71-E911-8196-000D3A6D09B3)/myentityimage/$value?size=full
+
+Headers:
+Content-Type: application/octet-stream
 ```
 **Response**
 ```http
@@ -113,7 +128,7 @@ x-ms-file-name: "sample.png"
 x-ms-file-size: 12345
 ```
 
-In the above example, the query string parameter `size=full` indicates to download the full image. The file name and size will be provided if the request header contains a Prefer annotation.
+In the above example, the query string parameter `size=full` indicates to download the full image. The file name and size will be provided in the response headers.
 
 ### Example: REST full image download (>16MB)
 
@@ -122,19 +137,21 @@ In the above example, the query string parameter `size=full` indicates to downlo
 GET [Organization URI]/api/data/v9.1/accounts(C0864F1C-0B71-E911-8196-000D3A6D09B3)/myentityimage/$value?size=full
 
 Header:
-Range: bytes=0-1023
+Range: bytes=0-1023/8192
 ```
 **Response**
 ```http
 206 Partial Content
+
+Body:
 byte[]
 
 Response Headers:
 x-ms-file-name: "sample.png"
-x-ms-file-size: 12345
-Location: api/data/v9.0/accounts(id)/myentityimage?FileContinuationToken
+x-ms-file-size: 8192
+Location: api/data/v9.1/accounts(id)/myentityimage?FileContinuationToken
 ```
-In the above example, the **Range** header indicates a chunked download.
+In the above example, the **Range** header indicates the first chunked download of 1024 bytes for an image that is 8192 bytes in total.
   
 <a name="BKMK_UploadingImages"></a>   
 ## Upload image data  
@@ -151,7 +168,7 @@ In the above example, the **Range** header indicates a chunked download.
 |![Image before resize](media/crm-itpro-cust-imagebeforeresize.png "Image before resize")<br /><br /> 300x428|![image after resize](media/crm-itpro-cust-imageafterresize.jpg "image after resize")<br /><br /> 144x144|  
 |![Second image resize example](media/crm-itpro-cust-imagebeforeresizeexample2.png "Second image resize example")<br /><br /> 91x130|![second resize example](media/crm-itpro-cust-imageafterresizeexample2.jpg "second resize example")<br /><br /> 91x91|
 
-To upload image data, use the following APIs.
+To upload image data less than or equal to 16MB in size, use the following APIs.
 
 Web API (REST) | .NET API (SOAP)
 ------- | -------
@@ -161,6 +178,16 @@ Image data transfers from the web service endpoints are limited to a maximum of 
 
  More information on chunking: [File attributes](file-attributes.md).
 
+To upload image data greater than 16MB in size, use the following APIs.
+
+Web API (REST) | .NET API (SOAP)
+------- | -------
+none   | <xref:Microsoft.Crm.Sdk.Messages.InitializeFileBlocksUploadRequest>
+PATCH /api/data/v9.1/\<entity-type(id)\>/\<image-attribute-name\>   | <xref:Microsoft.Crm.Sdk.Messages.UploadBlockRequest>
+none   | <xref:Microsoft.Crm.Sdk.Messages.CommitFileBlocksUploadRequest>
+
+You could also use the Initialize/Upload/Commit block message requests for an image attribute <=16MB in size (instead of the Create/Update message requests) if you chunk the image data.
+
 ### Example: REST full image upload (<=16MB)
 
 **Request**
@@ -169,7 +196,7 @@ PUT [Organization URI]/api/data/v9.1/accounts(C0864F1C-0B71-E911-8196-000D3A6D09
 
 Header:
 Content-Type: application/octet-stream
-x-ms-file-name: [User input from power apps]
+x-ms-file-name: sample.png
 
 Body:
 byte[]
@@ -183,13 +210,8 @@ After the upload is completed, a thumbnail image is automatically created by the
 PATCH [Organization URI]/api/data/v9.1/accounts(id)/myentityimage
 
 Headers:
-Content-Type: application/octet-stream
 x-ms-transfer-mode: chunked
-x-ms-file-name: [User input from power apps]
-x-ms-file-size: 12345
-
-Body:
-byte[]
+x-ms-file-name: sample.png
 ```
 
 **Response**
@@ -211,9 +233,9 @@ In the above example, the `x-ms-transfer-mode: chunked` header indicates a chunk
 PATCH [Organization URI]/api/data/v9.1/accounts(id)/myentityimage?FileContinuationToken
 
 Headers:
-Content-Range: bytes 0-4095/8190
+Content-Range: bytes 0-4095/8192
 Content-Type: application/octet-stream
-x-ms-file-name: [User input from power apps]
+x-ms-file-name: sample.png
 
 Body:
 byte[]
@@ -221,7 +243,7 @@ byte[]
 
 **Response**
 ```http
-206 Partial Content
+204 No Content
 ```
 In the above request, the next block of data is being uploaded. After all image data has been received by the web service, a thumbnail image is automatically created by the web service.
 

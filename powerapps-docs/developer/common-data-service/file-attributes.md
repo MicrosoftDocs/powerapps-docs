@@ -41,22 +41,22 @@ When a file attribute is added to an entity some additional attributes are creat
 <a name="BKMK_RetrievingFiles"></a>
 
 ## Retrieve file data
-To retrieve file data use the following APIs.
+To retrieve file attribute data use the following APIs.
 
 Web API (REST) | .NET API (SOAP)
 ------- | -------
  none  | <xref:Microsoft.Crm.Sdk.Messages.InitializeFileBlocksDownloadRequest>,<br/><xref:Microsoft.Crm.Sdk.Messages.InitializeAttachmentBlocksDownloadRequest>,<br/><xref:Microsoft.Crm.Sdk.Messages.InitializeAnnotationBlocksDownloadRequest>
-GET /api/data/v9.0/\<entity-type(id)\>/\<file-attribute-name\>/$value   | <xref:Microsoft.Crm.Sdk.Messages.DownloadBlockRequest>
+GET /api/data/v9.1/\<entity-type(id)\>/\<file-attribute-name\>/$value   | <xref:Microsoft.Crm.Sdk.Messages.DownloadBlockRequest>
 
 File data transfers from the web service endpoints are limited to a maximum of 16 MB data in a single service call. File data greater that that amount must be divided into 4 MB or smaller data blocks (chunks) where each block is received in a separate API call until all file data has been received. It is your responsibility to join the downloaded data blocks to form the complete data file by combining the data blocks in the same sequence as the blocks were received.
 
-Messages such as <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> and <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> cannot be used to download file data.
+Messages such as <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> and <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> cannot be used to download file attribute data.
 
 ### Example: REST download with chunking
 
 **Request**
 ```http
-GET [Organization URI]/api/data/v9.0/accounts(id)/myfileattribute/$value
+GET [Organization URI]/api/data/v9.1/accounts(id)/myfileattribute/$value
 Headers:
 Range: 0-1023/8192
 ```
@@ -72,7 +72,7 @@ Response Headers:
 Content-Disposition: attachment; filename="sample.txt"
 x-ms-file-name: "sample.txt"
 x-ms-file-size: 8192
-Location: api/data/v9.0/accounts(id)/myfileattribute?FileContinuationToken
+Location: api/data/v9.1/accounts(id)/myfileattribute?FileContinuationToken
 ```
 
 Chunking will be decided based on the `Range` header existence in the request. The Range header value format is: startByte-endByte/total bytes. The full file will be downloaded (up to 16 MB) in one request if no `Range` header is included. For chunking, the `Location` response header contains the query-able parameter `FileContinuationToken`. Use the provided location header value in the next GET request to retrieve the next block of data in the sequence.
@@ -123,27 +123,27 @@ static async Task ChunkedDownloadAsync(
 <a name="BKMK_UploadingFiles"></a>
 
 ## Upload file data  
-To upload file data, use the following APIs.
+To upload file attribute data, use the following APIs.
 
 Web API (REST) | .NET API (SOAP)
 ------- | -------
 none   | <xref:Microsoft.Crm.Sdk.Messages.InitializeFileBlocksUploadRequest>,<br/><xref:Microsoft.Crm.Sdk.Messages.InitializeAttachmentBlocksUploadRequest>,<br/><xref:Microsoft.Crm.Sdk.Messages.InitializeAnnotationBlocksUploadRequest>
-PATCH /api/data/v9.0/\<entity-type(id)\>/\<file-attribute-name\>   | <xref:Microsoft.Crm.Sdk.Messages.UploadBlockRequest>
+PATCH /api/data/v9.1/\<entity-type(id)\>/\<file-attribute-name\>   | <xref:Microsoft.Crm.Sdk.Messages.UploadBlockRequest>
 none   | <xref:Microsoft.Crm.Sdk.Messages.CommitFileBlocksUploadRequest>,<br/><xref:Microsoft.Crm.Sdk.Messages.CommitAttachmentBlocksUploadRequest>,<br/><xref:Microsoft.Crm.Sdk.Messages.CommitAnnotationBlocksUploadRequest>
 
 As was previously mentioned under [Retrieve file data](#retrieve-file-data), uploading a data file of 16 MB or less can be accomplished in a single API call while uploading more than 16 MB of data requires the file data to be divided into blocks of 4 MB or less data. After the complete set of data blocks has been uploaded and a commit request has been sent, the web service will automatically combine the blocks, in the same sequence as the data blocks were uploaded, into a single data file in Azure Blob Storage.
 
-Messages such as <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> and <xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> cannot be used to upload file data.
+Messages such as <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> and <xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> cannot be used to upload file attribute data.
 
 ### Example: REST upload with chunking (first request)
 
 **Request**
 ```http
-PATCH [Organization URI]/api/data/v9.0/accounts(id)/myfileattribute 
+PATCH [Organization URI]/api/data/v9.1/accounts(id)/myfileattribute 
 
 Headers: 
 x-ms-transfer-mode: chunked 
-x-ms-file-name: [User input from power apps]
+x-ms-file-name: sample.png
 ```
 **Response**
 ```http
@@ -152,26 +152,26 @@ x-ms-file-name: [User input from power apps]
 Response Headers: 
 x-ms-chunk-size: 4096 
 Accept-Ranges: bytes 
-Location: api/data/v9.0/accounts(id)/myfileattribute?FileContinuationToken 
+Location: api/data/v9.1/accounts(id)/myfileattribute?FileContinuationToken 
 ```
 
 ### Example: REST upload with chunking (next request)
 **Request**
 ```http
-PATCH [Organization URI]/api/data/v9.0/accounts(id)/myfileattribute?FileContinuationToken 
+PATCH [Organization URI]/api/data/v9.1/accounts(id)/myfileattribute?FileContinuationToken 
 
 Headers: 
 Content-Range: 0-4095/8192 
-Content-Type: application/octet-stream 
-x-ms-file-name: [User input from power apps] 
+Content-Type: application/octet-stream
+x-ms-file-name: sample.png
+
+Body:
+byte[]
 ```
 
 **Response**
 ```http
 206 Partial Content
-
-Body: 
-byte[]
 ```
 
 ### Example: .NET C# code for upload with chunking
@@ -227,11 +227,11 @@ static async Task ChunkedUploadAsync(
 <a name="BKMK_DeletingFiles"></a>
 
 ## Delete file data  
-To delete file, attachment, or annotation data in storage, use the following APIs.
+To delete file, attachment, or annotation attribute data from storage, use the following APIs.
 
 Web API (REST) | .NET API (SOAP)
 ------- | -------
-DELETE /api/data/v9.0/\<entity-type(id)\>/\<attribute-name\> | <xref:Microsoft.Crm.Sdk.Messages.DeleteFileRequest>
+DELETE /api/data/v9.1/\<entity-type(id)\>/\<attribute-name\> | <xref:Microsoft.Crm.Sdk.Messages.DeleteFileRequest>
 
 ### See Also
 [Image attributes](image-attributes.md)
