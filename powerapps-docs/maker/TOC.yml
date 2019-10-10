@@ -1052,7 +1052,7 @@
     href: ../developer/model-driven-apps/overview.md
     # href: ../developer/model-driven-apps/TOC.yml For authoring I find having developer content buried so deep is awkward
 
-- name: Portals (preview)
+- name: Portals
   items:
     - name: What is PowerApps Portals?
       href: ./portals/overview.md
@@ -1060,9 +1060,9 @@
       items:
         - name: Portal templates
           href: ./portals/portal-templates.md
-        - name: Create a portal
+        - name: Create a starter portal
           href: ./portals/create-portal.md
-        - name: Create a Dynamics 365 Portal
+        - name: Create a portal with Dynamics 365 environment
           href: ./portals/create-dynamics-portal.md
         - name: Portal designer anatomy
           href: ./portals/portal-designer-anatomy.md
@@ -1074,10 +1074,10 @@
           href: ./portals/compose-page.md
         - name: Work with templates
           href: ./portals/work-with-templates.md
+        - name: Edit CSS
+          href: ./portals/edit-css.md
     - name: Manage existing portals
       href: ./portals/manage-existing-portals.md
-    - name: Configure site settings
-      href: ./portals/configure-site-settings.md
     - name: Advanced portal administration
       items:
         - name: Overview
@@ -1110,9 +1110,17 @@
           href: ./portals/admin/update-portal-domain.md
         - name: Clear the server-side cache
           href: ./portals/admin/clear-server-side-cache.md
-        - name: Migrate Dynamics 365 Portals configuration
+        - name: Migrate portal configuration
           href: ./portals/admin/migrate-portal-configuration.md
-    - name:  Advanced portal customizations
+        - name: About portal lifecycle
+          href: ./portals/admin/portal-lifecycle.md
+    - name: Advanced portal configuration
+      items:
+        - name: Overview
+          href: ./portals/configure/configure-portal.md
+        - name: Configure site settings
+          href: ./portals/configure/configure-site-settings.md
+    - name:  Advanced portal customization
       items:
         - name: Work with Liquid templates
           items:
@@ -1158,6 +1166,18 @@
                   href: ./portals/liquid/render-site-header-primary-navigation.md
         - name: OAuth 2.0 implicit grant flow
           href: ./portals/oauth-implicit-grant-flow.md
+    - name: Document storage in portals
+      items:
+        - name: Configure notes
+          href: ./portals/configure-notes.md
+        - name: Azure storage
+          items:
+            - name: Enable Azure storage
+              href: ./portals/enable-azure-storage.md
+            - name: Add the Azure Storage web resource to a form
+              href: ./portals/add-web-resource.md
+        - name: Manage SharePoint documents
+          href: ./portals/manage-sharepoint-documents.md
     - name: Known issues
       href: ./portals/known-issues.md
     - name: PowerApps Portals FAQ
