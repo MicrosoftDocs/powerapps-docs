@@ -37,6 +37,7 @@ The names used for types depends on the designer used. [PowerApps portal](https:
 |**Decimal Number**|**Decimal Number**|`DecimalType`|
 |**Duration**|**Whole Number**<br />*Duration* Format|`IntegerType`|
 |**Email**|**Single Line of Text**<br />*Email* Format|`StringType`|
+|**File** | **File**   | `FileType`  |
 |**Floating Point Number**|**Floating Point Number**|`DoubleType`|
 |**Image**|**Image**|`ImageType`|
 |**Language**|**Whole Number**<br />*Language* Format|`IntegerType`|
@@ -152,7 +153,6 @@ However, you should be aware that not every lookup behaves this way. There are s
 <a name="BKMK_ImageFields"></a>
 
 ## Image fields  
-
 Use image fields to display a single image per record in the application. Each entity can have one image field. You can add an image field to custom entities but not to standard entities. Some standard entities have image fields defined.
   
 Even though an entity has an image field, displaying that image in a model-driven app requires that you enable two settings. 
@@ -177,6 +177,14 @@ People can choose the default image to upload a picture from their computer. Ima
 When the image is uploaded, it will be converted to a .jpg format and all downloaded images will also use this format. If an animated .gif is uploaded, only the first frame is saved.  
   
 When an image is uploaded, it will be resized to a maximum size of 144 pixels by 144 pixels. People should resize or crop the images before they upload them so that they will display well using this size. All images are cropped to be square. If both sides of an image are smaller than 144 pixels, the image will be cropped to be a square with the dimensions of the smaller side.  
+
+## File fields (preview)
+[!INCLUDE [cc-preview-feature](../../includes/cc-preview-feature.md)]
+
+The **File** field is used for storing binary data. The primary intended use of this field is to store a single image, note, or attachment. However, storage of other forms of binary data is also possible. One or more fields of this data type can be added to an existing standard customizable entity or a custom entity.
+
+By default, the File data type maximum size limit is 128 MB. This data size limit can be set individually for each field of File type added to an entity. 
+
 
 ### Add image support for a form in a custom entity using solution explorer
 1. Open [solution explorer](../model-driven-apps/advanced-navigation.md#solution-explorer). 
