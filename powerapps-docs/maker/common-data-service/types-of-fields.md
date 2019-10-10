@@ -181,6 +181,8 @@ When an image is uploaded, it will be resized to a maximum size of 144 pixels by
 ## File fields (preview)
 [!INCLUDE [cc-preview-feature](../../includes/cc-preview-feature.md)]
 
+Currently, the file data type is only available to canvas apps and flows. 
+
 The **File** field is used for storing binary data. The primary intended use of this field is to store a single image, note, or attachment. However, storage of other forms of binary data is also possible. One or more fields of this data type can be added to an existing standard customizable entity or a custom entity.
 
 By default, the File data type maximum size limit is 128 MB. This data size limit can be set individually for each field of File type added to an entity. 
