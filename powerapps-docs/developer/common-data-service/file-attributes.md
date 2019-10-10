@@ -227,7 +227,7 @@ static async Task ChunkedUploadAsync(
 <a name="BKMK_DeletingFiles"></a>
 
 ## Delete file data  
-To delete file, attachment, or annotation attribute data from storage, use the following APIs.
+To delete the file attribute data from storage, use the following APIs.
 
 Web API (REST) | .NET API (SOAP)
 ------- | -------

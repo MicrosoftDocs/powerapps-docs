@@ -63,7 +63,15 @@ In addition to image attributes, custom entities support zero or more file attri
  Attribute Type Name: `UniqueIdentifierType`  
   
  The unique identifier of the image  
-  
+
+### MaxSizeInKB attribute
+
+ This value represents the maximum size (in kilobytes) of the image data that the attribute can contain. Set this value to the smallest useable data size appropriate for your particular application. See the <xref:Microsoft.Xrm.Sdk.Metadata.ImageAttributeMetadata.MaxSizeInKB> property for the allowable size limit and the default value.
+
+### CanStoreFullImage attribute
+
+ This value indicates if an image attribute can store a full image. See the <xref:Microsoft.Xrm.Sdk.Metadata.ImageAttributeMetadata.CanStoreFullImage> property.
+
 <a name="BKMK_RetrievingImages"></a>   
 ## Retrieve image data  
 
