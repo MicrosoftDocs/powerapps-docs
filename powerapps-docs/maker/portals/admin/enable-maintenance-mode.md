@@ -6,14 +6,12 @@ manager: shujoshi
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/18/2019
+ms.date: 10/07/2019
 ms.author: shjais
 ms.reviewer:
 ---
 
 # Maintenance mode for a portal
-
-[!include[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
 
 There might be times when your website is under scheduled maintenance or is down due to temporary outage. When a customer accesses the website during maintenance, unpredictable behavior and intermittent unavailability might be experienced. 
 
