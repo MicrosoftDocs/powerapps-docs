@@ -178,16 +178,6 @@ When the image is uploaded, it will be converted to a .jpg format and all downlo
   
 When an image is uploaded, it will be resized to a maximum size of 144 pixels by 144 pixels. People should resize or crop the images before they upload them so that they will display well using this size. All images are cropped to be square. If both sides of an image are smaller than 144 pixels, the image will be cropped to be a square with the dimensions of the smaller side.  
 
-## File fields (preview)
-[!INCLUDE [cc-preview-feature](../../includes/cc-preview-feature.md)]
-
-Currently, the file data type is only available to canvas apps and flows. 
-
-The **File** field is used for storing binary data. The primary intended use of this field is to store a single image, note, or attachment. However, storage of other forms of binary data is also possible. One or more fields of this data type can be added to an existing standard customizable entity or a custom entity.
-
-By default, the File data type maximum size limit is 128 MB. This data size limit can be set individually for each field of File type added to an entity. 
-
-
 ### Add image support for a form in a custom entity using solution explorer
 1. Open [solution explorer](../model-driven-apps/advanced-navigation.md#solution-explorer). 
 2. In the left navigation pane, expand **Entities**, expand the custom entity you want, and then select **Fields**. 
@@ -225,3 +215,13 @@ App users can now select the image to display on the form. When an app user open
 More information for developers working with image data:
 - [Entity metadata > Entity images](/powerapps/developer/common-data-service/entity-metadata#entity-images)
 - [Image attributes](/powerapps/developer/common-data-service/image-attributes)
+
+
+## File fields (preview)
+[!INCLUDE [cc-preview-feature](../../includes/cc-preview-feature.md)]
+
+Currently, the file data type is only available to canvas apps and flows. 
+
+The **File** field is used for storing binary data. The primary intended use of this field is to store a single image, note, or attachment. However, storage of other forms of binary data is also possible. One or more fields of this data type can be added to an existing standard customizable entity or a custom entity.
+
+The default **Maximum file size** is 32 MB and the largest size you can set is 128 MB. The file size limit can be set individually for each field of file type added to an entity. 
