@@ -43,19 +43,19 @@ export class TSTableControl
   implements ComponentFramework.StandardControl<IInputs, IOutputs> {
   // Flag to track if control is in full screen mode or not
   private _isFullScreen: boolean;
-  // Reference to HTMLTableElement rendered by control
+  // reference to HTMLTableElement rendered by control
   private _tableElement: HTMLTableElement;
-  // Reference to 'Set Full Screen' HTMLButtonElement
+  // reference to 'Set Full Screen' HTMLButtonElement
   private _setFullScreenButton: HTMLButtonElement;
-  // Reference to 'Lookup Objects' HTMLButtonElement
+  // reference to 'Lookup Objects' HTMLButtonElement
   private _lookupObjectsButton: HTMLButtonElement;
-  // Reference to 'Lookup Result Div' HTMLDivElement
+  // reference to 'Lookup Result Div' HTMLDivElement
   // Used to display information about the item selected by the lookup
   private _lookupObjectsResultDiv: HTMLDivElement;
-  // Reference to the control container HTMLDivElement
+  // reference to the control container HTMLDivElement
   // This element contains all elements of our custom control example
   private _container: HTMLDivElement;
-  // Reference to ComponentFramework Context object
+  // reference to ComponentFramework Context object
   private _context: ComponentFramework.Context<IInputs>;
   // Flag if control view has been rendered
   private _controlViewRendered: Boolean;
@@ -439,5 +439,5 @@ The callback method injects this information as HTML into a div rendered on the 
 ### Related topics
 
 [Download sample components](https://go.microsoft.com/fwlink/?linkid=2088525)<br/>
-[PowerApps component framework API Reference](../reference/index.md)<br/>
-[PowerApps component framework Manifest Schema Reference](../manifest-schema-reference/index.md)
+[PowerApps component framework API reference](../reference/index.md)<br/>
+[PowerApps component framework Manifest Schema reference](../manifest-schema-reference/index.md)

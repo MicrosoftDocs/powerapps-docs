@@ -61,7 +61,7 @@ export class TSLocalizationAPI
   private label: HTMLInputElement;
   // button element created as part of this control
   private button: HTMLButtonElement;
-  // Reference to the control container HTMLDivElement
+  // reference to the control container HTMLDivElement
   // This element contains all elements of our custom control example
   private _container: HTMLDivElement;
   /**
@@ -451,5 +451,5 @@ When this line of code is executed, the PowerApps component framework automatica
 ### Related topics
 
 [Download sample components](https://go.microsoft.com/fwlink/?linkid=2088525)<br/>
-[PowerApps component framework API Reference](../reference/index.md)<br/>
-[PowerApps component framework Manifest Schema Reference](../manifest-schema-reference/index.md)
+[PowerApps component framework API reference](../reference/index.md)<br/>
+[PowerApps component framework Manifest Schema reference](../manifest-schema-reference/index.md)

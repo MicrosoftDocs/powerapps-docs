@@ -236,12 +236,12 @@ export class TSDataSetGrid
       RowRecordId
     );
     if (rowRecordId) {
-      let entityReference = this.contextObj.parameters.dataSetGrid.records[
+      let entityreference = this.contextObj.parameters.dataSetGrid.records[
         rowRecordId
-      ].getNamedReference();
+      ].getNamedreference();
       let entityFormOptions = {
-        entityName: entityReference.name,
-        entityId: entityReference.id
+        entityName: entityreference.name,
+        entityId: entityreference.id
       };
       this.contextObj.navigation.openForm(entityFormOptions);
     }
@@ -438,5 +438,5 @@ The ***getSortedColumnsOnView*** method returns the list of columns based on the
 ### Related topics
 
 [Download sample components](https://go.microsoft.com/fwlink/?linkid=2088525)<br/>
-[PowerApps component framework API Reference](../reference/index.md)<br/>
-[PowerApps component framework Manifest Schema Reference](../manifest-schema-reference/index.md)
+[PowerApps component framework API reference](../reference/index.md)<br/>
+[PowerApps component framework Manifest Schema reference](../manifest-schema-reference/index.md)

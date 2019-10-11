@@ -15,4 +15,4 @@ applies_to:
 ms.assetid: 256b0604-59cf-4787-a345-1daecbe85fe1
 ---
 
-Open dataset item for a given EntityReference. It checks if there is a command with command button id `Mscrm.OpenRecordItem`. If there is, it executes the command, otherwise it just navigates to the associated form of the EntityReference.
+Open dataset item for a given Entityreference. It checks if there is a command with command button id `Mscrm.OpenRecordItem`. If there is, it executes the command, otherwise it just navigates to the associated form of the Entityreference.

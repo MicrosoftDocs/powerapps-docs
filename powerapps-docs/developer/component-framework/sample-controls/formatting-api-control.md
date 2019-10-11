@@ -47,14 +47,14 @@ export class FormattingAPI
   implements ComponentFramework.StandardControl<IInputs, IOutputs> {
   // PowerApps component framework framework delegate which will be assigned to this object which would be called whenever an update happens.
   private _notifyOutputChanged: () => void;
-  // Reference to the div element that holds together all the HTML elements that we are creating as part of this control
+  // reference to the div element that holds together all the HTML elements that we are creating as part of this control
   private divElement: HTMLDivElement;
-  // Reference to HTMLTableElement rendered by control
+  // reference to HTMLTableElement rendered by control
   private _tableElement: HTMLTableElement;
-  // Reference to the control container HTMLDivElement
+  // reference to the control container HTMLDivElement
   // This element contains all elements of our custom control example
   private _container: HTMLDivElement;
-  // Reference to ComponentFramework Context object
+  // reference to ComponentFramework Context object
   private _context: ComponentFramework.Context<IInputs>;
   // Flag if control view has been rendered
   private _controlViewRendered: Boolean;
@@ -283,7 +283,7 @@ export class FormattingAPI
 ### Related topics
 
 [Download sample components](https://go.microsoft.com/fwlink/?linkid=2088525)<br/>
-[PowerApps component framework API Reference](../reference/index.md)<br/>
-[PowerApps component framework Manifest Schema Reference](../manifest-schema-reference/index.md)
+[PowerApps component framework API reference](../reference/index.md)<br/>
+[PowerApps component framework Manifest Schema reference](../manifest-schema-reference/index.md)
 
 

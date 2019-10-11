@@ -16,16 +16,9 @@ Once you're done implementing the code component logic, you can start testing an
 > [!div class="mx-imgBorder"]
 > ![Test harness 1](media/test-harness-1.png "Test harness 1")
 
-
-<!--from editor: Note that the image does not show the Output section. -->
-
 As the image above shows, the browser window opens with four sections. The code component is rendered in the left pane while the right pane has **Context Inputs**, **Data Inputs**, and **Outputs** sections.
 
-
-<!--from editor: The next paragraph mentions a coming release. It seems risky to tell people this is coming, when things can change before then. -->
-
-
-- **Context Inputs** provides a way to specify the form factor and test the code component with each form factor (web, tablet, phone). This is helpful when the code component is dependent on a particular form factor capability. In the coming release, you will have the ability to specify the height and width.
+- **Context Inputs** provides a way to specify the form factor and test the code component with each form factor (web, tablet, phone). This is helpful when the code component is dependent on a particular form factor capability.
 - **Data Inputs** is an interactive UI that displays all the properties and their [types](manifest-schema-reference/types.md) or [type-groups](manifest-schema-reference/type-group.md) defined in the [manifest](manifest-schema-reference/manifest.md) file. It allows you to key in the mock data for each property. 
 - **Outputs** renders the output whenever a component's [getOutputs](reference/control/getoutputs.md) method gets called.  
 
@@ -83,11 +76,7 @@ For example, on **Microsoft Edge**:
 > [!NOTE]
 > It is always a good practice to set breakpoints on the component's lifecycle methods like [init](reference/control/init.md) and [updateView](reference/control/updateview.md).
 
-
-
-<!--from editor: DOM is Document Object Model? Also, note that the screenshot below doesn't look like the Sources tab is open. -->
-
-You can also interact with the component locally in real time and observe elements in the DOM by setting a breakpoint in the Sources tab as shown here:
+You can also interact with the component locally in real time and observe elements in the DOM by setting a breakpoint in the *Sources* tab as shown here:
 
 > [!div class="mx-imgBorder"]
 > ![Debug component](media/debug-control-1.png "Debug component 1")

@@ -44,10 +44,10 @@ Model-driven apps
 import { IInputs, IOutputs } from "./generated/ManifestTypes";
 export class TSWebAPI
   implements ComponentFramework.StandardControl<IInputs, IOutputs> {
-  // Reference to the control container HTMLDivElement
+  // reference to the control container HTMLDivElement
   // This element contains all elements of our custom control example
   private _container: HTMLDivElement;
-  // Reference to ComponentFramework Context object
+  // reference to ComponentFramework Context object
   private _context: ComponentFramework.Context<IInputs>;
   // Name of entity to use for example Web API calls performed by this control
   private static _entityName: string = "account";
@@ -64,14 +64,14 @@ export class TSWebAPI
   private static _currencyAttributeNameFriendlyName: string = "annual revenue";
   // Flag if control view has been rendered
   private _controlViewRendered: Boolean;
-  // References to button elements rendered by example custom control
+  // references to button elements rendered by example custom control
   private _createEntity1Button: HTMLButtonElement;
   private _createEntity2Button: HTMLButtonElement;
   private _createEntity3Button: HTMLButtonElement;
   private _deleteRecordButton: HTMLButtonElement;
   private _fetchXmlRefreshButton: HTMLButtonElement;
   private _oDataRefreshButton: HTMLButtonElement;
-  // References to div elements rendered by the example custom control
+  // references to div elements rendered by the example custom control
   private _odataStatusContainerDiv: HTMLDivElement;
   private _resultContainerDiv: HTMLDivElement;
   /**
@@ -284,7 +284,7 @@ export class TSWebAPI
     var thisRef = this;
     // Invoke the Web API to creat the new record
     this._context.webAPI.createRecord(TSWebAPI._entityName, data).then(
-      function(response: ComponentFramework.EntityReference) {
+      function(response: ComponentFramework.Entityreference) {
         // Callback method for successful creation of new record
         // Get the ID of the new record created
         let id: string = response.id;
@@ -324,14 +324,14 @@ export class TSWebAPI
     lookUpPromise.then(
       // Callback method - invoked after user has selected an item from the lookup dialog
       // Data parameter is the item selected in the lookup dialog
-      (data: ComponentFramework.EntityReference[]) => {
+      (data: ComponentFramework.Entityreference[]) => {
         if (data && data[0]) {
           // Get the ID and entityType of the record selected by the lookup
           let id: string = data[0].id;
           let entityType: string = data[0].entityType!;
           // Invoke the deleteRecord method of the WebAPI to delete the selected record
           this._context.webAPI.deleteRecord(entityType, id).then(
-            function(response: ComponentFramework.EntityReference) {
+            function(response: ComponentFramework.Entityreference) {
               // Record was deleted successfully
               let responseId: string = response.id;
               let responseEntityType: string = response.entityType!;
@@ -634,5 +634,5 @@ On successful retrieve of the records, the code component has logic to count how
 ### Related topics
 
 [Download sample components](https://go.microsoft.com/fwlink/?linkid=2088525)<br/>
-[PowerApps component framework API Reference](../reference/index.md)<br/>
-[PowerApps component framework Manifest Schema Reference](../manifest-schema-reference/index.md)
+[PowerApps component framework API reference](../reference/index.md)<br/>
+[PowerApps component framework Manifest Schema reference](../manifest-schema-reference/index.md)

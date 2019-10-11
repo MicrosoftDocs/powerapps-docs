@@ -48,9 +48,6 @@ Once you're done implementing the component logic in TypeScript, you need to bun
 
 1. The name of the task in the project file is the same as the name of the task class.
 2. The task class is public and implements the Microsoft.Build.Framework.ITask interface.
-
-<!--from editor: The following sentence needs a closing * somewhere after .tasks to make the italics correct, but I am not sure where it goes. -->
-
 3. The task is correctly declared with *\<UsingTask>* in the project file or in the *.tasks files located in the path directory.
 
 **Resolution:**

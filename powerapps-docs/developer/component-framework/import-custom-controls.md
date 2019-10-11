@@ -19,7 +19,7 @@ To create and import a solution file:
 
 1. Create a new folder and name it **Solution** (or any name of your choice) using the command `mkdir Solutions`. Navigate into the directory using the command `cd Solutions`.
 
-2. Create a new solutions project using the command `pac solution init --publisher-name <enter your publisher name> --publisher-prefix <enter your publisher name>`. The solution project is used for bundling the code component into a solution zip file that is used for importing into Common Data Service.
+2. Create a new solutions project using the command `pac solution init --publisher-name <enter your publisher name> --publisher-prefix <enter your publisher prefix>`. The solution project is used for bundling the code component into a solution zip file that is used for importing into Common Data Service.
 
    > [!NOTE]
    > The `publisher-name` and `publisher-prefix` values must be unique to your environment.
@@ -32,8 +32,6 @@ To create and import a solution file:
 
 3. To generate a zip file from the solution project, go into your solution project directory and build the project using the command `msbuild /t:build /restore`. This command uses *MSBuild* to build the solution project by pulling down the *NuGet* dependencies as part of the restore. Use the `/restore` only for the first time when the solution project is built. For every build after that, you can run the command `msbuild`.
 
-
-     <!--from editor: In the first list item, is the asterisk correct like that, or is it supposed to be part of an italics tag? -->
 
     > [!NOTE]
     > - If msbuild 15.9.* is not in the path, open Developer Command Prompt for VS 2017 to run the `msbuild` commands.
@@ -92,20 +90,16 @@ If you want to remove a code component from a solution file:
 
 1.	Edit the `cdsproj` file in the solution project directory and remove the references to the component. Here is an example of a component reference:
 
-
-<!--from editor: The following code block isn't indenting as it should on the review page. I haven't been able to correct it. It should indent like the block in step 2 below. -->
-
-
    ```XML
    <ItemGroup>
-       <ProjectReference Include="..\pcf_component\pcf_component.pcfproj">
+       <Projectreference Include="..\pcf_component\pcf_component.pcfproj">
          <Project>0481bd83-ffb0-4b70-b526-e0b3dd63e7ef</Project>
          <Name>pcf_component </Name>
          <Targets>Build</Targets>
-         <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+         <referenceOutputAssembly>false</referenceOutputAssembly>
          <OutputItemType>Content</OutputItemType>
          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-       </ProjectReference>
+       </Projectreference>
    </ItemGroup>
    ```
 

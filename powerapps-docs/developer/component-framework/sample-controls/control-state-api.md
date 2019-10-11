@@ -53,7 +53,7 @@ export class TSControlStateAPI
   implements ComponentFramework.StandardControl<IInputs, IOutputs> {
   // Flag if control view has been rendered
   private _controlViewRendered: Boolean;
-  // Reference to the control container HTMLDivElement
+  // reference to the control container HTMLDivElement
   // This element contains all elements of our custom control example
   private _container: HTMLDivElement;
   // Div element to show the current selected color
@@ -66,7 +66,7 @@ export class TSControlStateAPI
   private _persistedSelectedLabel: string;
   // Data type used to store the various information as part of the state object.
   private _stateDictionary: ComponentFramework.Dictionary = {};
-  // References to HTML Button Elements rendered on the control
+  // references to HTML Button Elements rendered on the control
   private _buttonRed: HTMLButtonElement;
   private _buttonBlue: HTMLButtonElement;
   private _buttonGreen: HTMLButtonElement;
@@ -294,5 +294,5 @@ export class TSControlStateAPI
 ### Related topics
 
 [Download sample components](https://go.microsoft.com/fwlink/?linkid=2088525)<br/>
-[PowerApps component framework API Reference](../reference/index.md)<br/>
-[PowerApps component framework Manifest Schema Reference](../manifest-schema-reference/index.md)
+[PowerApps component framework API reference](../reference/index.md)<br/>
+[PowerApps component framework Manifest Schema reference](../manifest-schema-reference/index.md)

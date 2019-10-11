@@ -26,7 +26,7 @@ Model-driven apps
 
 Designates a record that will provide default values based on mapped attribute value. The lookup object has following properties: entity type, id and name.
 
-**Type**: [EntityReference](entityreference.md)
+**Type**: [Entityreference](entityreference.md)
 
 ### entityId
 
@@ -86,5 +86,5 @@ The windowPosition value is a number with the following possible values
 
 ### Related topics
 
-[PowerApps component framework API Reference](../reference/index.md)<br/>
-[PowerApps component framework Overview](../overview.md)
+[PowerApps component framework API reference](../reference/index.md)<br/>
+[PowerApps component framework overview](../overview.md)

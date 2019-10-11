@@ -42,7 +42,7 @@ Model-driven apps and canvas apps (experimental preview)
 </manifest>
 ```
 
-## Overview
+## overview
 
 This sample provides examples on how to add dependencies for third-party libraries and Office UI Fabric, showcasing how to utilize the Office UI Fabric components for React for UI and perform bi-directional data-binding between the PowerApps component framework and the React state model.
 
@@ -64,11 +64,11 @@ import { FacepileBasicExample, IFacepileBasicExampleProps } from "./Facepile";
 
 export class ReactStandardControl
   implements ComponentFramework.StandardControl<IInputs, IOutputs> {
-  // Reference to the notifyOutputChanged method
+  // reference to the notifyOutputChanged method
   private notifyOutputChanged: () => void;
-  // Reference to the container div
+  // reference to the container div
   private theContainer: HTMLDivElement;
-  // Reference to the React props, prepopulated with a bound event handler
+  // reference to the React props, prepopulated with a bound event handler
   private props: IFacepileBasicExampleProps = {
     numberFacesChanged: this.numberFacesChanged.bind(this)
   };
@@ -415,6 +415,6 @@ export const TestImages = {
 
 ### Related topics
 
-[PowerApps component framework Manifest Schema Reference](../manifest-schema-reference/index.md)<br />
-[PowerApps component framework API Reference](../reference/index.md)<br />
-[PowerApps component framework Overview](../overview.md)
+[PowerApps component framework Manifest Schema reference](../manifest-schema-reference/index.md)<br />
+[PowerApps component framework API reference](../reference/index.md)<br />
+[PowerApps component framework overview](../overview.md)

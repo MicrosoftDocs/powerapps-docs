@@ -43,9 +43,9 @@ Model-driven apps and canvas apps (experimental preview)
 import { IInputs, IOutputs } from "./generated/ManifestTypes";
 export class TSIFrameControl
   implements ComponentFramework.StandardControl<IInputs, IOutputs> {
-  // Reference to Bing Map IFrame HTMLElement
+  // reference to Bing Map IFrame HTMLElement
   private _bingMapIFrame: HTMLElement;
-  // Reference to the control container HTMLDivElement
+  // reference to the control container HTMLDivElement
   // This element contains all elements of our custom control example
   private _container: HTMLDivElement;
   // Flag if control view has been rendered
@@ -172,6 +172,6 @@ The [updateView](../reference/control/updateview.md) method is invoked whenever 
 ### Related topics
 
 [Download sample components](https://go.microsoft.com/fwlink/?linkid=2088525)<br/>
-[PowerApps component framework Manifest Schema Reference](../manifest-schema-reference/index.md)<br />
-[PowerApps component framework API Reference](../reference/index.md)<br />
-[PowerApps component framework Overview](../overview.md)
+[PowerApps component framework Manifest Schema reference](../manifest-schema-reference/index.md)<br />
+[PowerApps component framework API reference](../reference/index.md)<br />
+[PowerApps component framework overview](../overview.md)
