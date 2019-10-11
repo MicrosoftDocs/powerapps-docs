@@ -33,12 +33,12 @@ getvalue-description.md
 
 ## Return Value
 
-Type: `string | Date | number | boolean |` [EntityReference](../entityreference.md)[]
+Type: `string | Date | number | boolean |` [Entityreference](../entityreference.md)[]
 
 ### Related topics
 
 ### Related topics
 
 [Entity](../entity.md)<br/>
-[PowerApps component framework API Reference](../../reference/index.md)<br/>
-[PowerApps component framework Overview](../../overview.md)
+[PowerApps component framework API reference](../../reference/index.md)<br/>
+[PowerApps component framework overview](../../overview.md)

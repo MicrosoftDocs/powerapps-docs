@@ -38,7 +38,7 @@ Type: `Promise`
 
 ## Remarks
 
-See [Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise) and [File](https://developer.mozilla.org/docs/Web/API/File)
+See [Promise](https://developer.mozilla.org/docs/Web/JavaScript/reference/Global_Objects/Promise) and [File](https://developer.mozilla.org/docs/Web/API/File)
 
 ## Example 
 
@@ -58,5 +58,5 @@ context.navigation.openAlertDialog({text:"This is an alert.", confirmButtonLabel
 ### Related topics
 
 [Navigation](../navigation.md)<br/>
-[PowerApps component framework API Reference](../../reference/index.md)<br/>
-[PowerApps component framework Overview](../../overview.md)
+[PowerApps component framework API reference](../../reference/index.md)<br/>
+[PowerApps component framework overview](../../overview.md)

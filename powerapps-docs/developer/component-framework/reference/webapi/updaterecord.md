@@ -77,7 +77,7 @@ Model-driven apps
 
 ## Return Value
 
-Type: [Promise]((dateformattinginfo.md)<[EntityReference](../entityreference.md)>
+Type: [Promise]((dateformattinginfo.md)<[Entityreference](../entityreference.md)>
 
 Description: On success, returns a promise object containing the attributes specified earlier in the description of the **successCallback** parameter.
 
@@ -85,5 +85,5 @@ Description: On success, returns a promise object containing the attributes spec
 ### Related topics
 
 [Web API](../webapi.md)<br/>
-[PowerApps component framework API Reference](../../reference/index.md)<br/>
-[PowerApps component framework Overview](../../overview.md)
+[PowerApps component framework API reference](../../reference/index.md)<br/>
+[PowerApps component framework overview](../../overview.md)

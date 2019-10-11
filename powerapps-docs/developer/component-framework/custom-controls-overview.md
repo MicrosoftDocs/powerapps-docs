@@ -14,9 +14,6 @@ author: Nkrb
 
 Code components are a type of solution components, which means they can be included in a solution file and installed in different environments. More information: [Package and distribute extensions using solutions](https://docs.microsoft.com/dynamics365/customer-engagement/developer/package-distribute-extensions-use-solutions).
 
-
-<!--from editor: Can the next sentence change to "... and then import the solution into ..." ?-->
-
 You add code components by including them in a solution and then import it into Common Data Service. Once the components are in Common Data Service, system administrators and system customizers can configure fields, subgrids, views, and dashboard subgrids to use in place of default components. You can also add these code components in canvas apps. 
 
 Code components consist of three elements:
@@ -79,11 +76,7 @@ controlObj.init(context,notifyOutputChanged,state,container);
 
 ### User changes data
 
-
-<!--from editor: The second sentence is confusing, the part that says "you must call the method passed in as *notifyOutputChanged* parameter in the init method." I'm not sure what it means so can't suggest a change. -->
-
-
-When the page loads, the component displays the data until the user interacts with the component to change the data. When this occurs, you can manage it any way you like, but you must call the method passed in as *notifyOutputChanged* parameter in the [init](reference/control/init.md) method. When you use this method, the platform then responds by calling the [getOutputs](reference/control/getoutputs.md) method. The [getOutputs](reference/control/getoutputs.md) method returns values that have the changes made by the user. For a field component, this would typically be the new value for the component.
+When the page loads, the component displays the data until the user interacts with the component to change the data. When this occurs, you must call the method passed in as *notifyOutputChanged* parameter in the [init](reference/control/init.md) method. When you use this method, the platform then responds by calling the [getOutputs](reference/control/getoutputs.md) method. The [getOutputs](reference/control/getoutputs.md) method returns values that have the changes made by the user. For a field component, this would typically be the new value for the component.
 
 ### App changes data
 
@@ -93,10 +86,7 @@ If the platform changes the data, it calls out the [updateView](reference/contro
 
 Whenever a user steps away from the page, the code component loses the scope and all the memory allocated in that page for the objects is cleared. However, some methods, based on the browser implementation mechanism, might stay and consume memory. Typically, these are event handlers. If the user wants to store this information, they should implement the [setControlState](reference/mode/setcontrolstate.md) method so that the information is given next time within the same session.
 
-
-<!--from editor: Would it be accurate to change this to "to remove any cleanup code such as event handlers"? It's confusing to use "remove" and "removing" twice at the end of that sentence. -->
-
-Developers should implement the [destroy](reference/control/destroy.md) method, which is called when the page closes, to remove any cleanup code such as removing any event handlers.
+Developers should implement the [destroy](reference/control/destroy.md) method, which is called when the page closes, to remove any cleanup code such as event handlers.
 
 ## Resources
 

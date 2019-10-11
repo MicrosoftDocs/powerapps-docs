@@ -36,5 +36,5 @@ If the number of records being retrieved is more than the value specified in the
 
 ### Related topics
 
-[PowerApps component framework API Reference](../reference/index.md)<br/>
-[PowerApps component framework Overview](../overview.md)
+[PowerApps component framework API reference](../reference/index.md)<br/>
+[PowerApps component framework overview](../overview.md)
