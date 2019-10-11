@@ -1,6 +1,6 @@
 - name: "PowerApps component framework"
   items: 
-  - name: overview
+  - name: Overview
     href: overview.md
   - name: What are code components
     href: custom-controls-overview.md
@@ -62,7 +62,7 @@
       href: sample-controls/table-grid-control.md
     - name: Web API component
       href: sample-controls/webapi-control.md
-  - name: reference
+  - name: Reference
     items:
     - name: PowerApps component framework 
       href: reference/index.md

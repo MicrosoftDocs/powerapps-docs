@@ -24,5 +24,5 @@ The object implements the following methods:
 - [getOutputs](reference/control/getoutputs.md) (Optional)
 - [destroy](reference/control/destroy.md) (Required)
 
-These methods controls the lifecycle of the code component.
+These methods control the lifecycle of the code component.
 

@@ -10,7 +10,7 @@ ms.assetid: 18e88d702-3349-4022-a7d8-a9adf52cd34f
 ms.author: "nabuthuk"
 ---
 
-# Limitations of PowerApps component framework
+# Limitations 
 
 With the release of PowerApps component framework, you can now create your own code components to improve the user experience in model-driven apps and canvas apps. Even though you can create your own components, there are some limitations that restrict developers implementing some features in the code components. Below are some of the limitations:
 
