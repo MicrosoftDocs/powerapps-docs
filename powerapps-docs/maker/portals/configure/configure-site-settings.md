@@ -6,27 +6,25 @@ manager: shujoshi
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/18/2019
+ms.date: 10/07/2019
 ms.author: shjais
 ms.reviewer:
 ---
 
 # Configure site settings for portals
 
-[!include[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
-
 A site setting is a configurable, named value that is used by website code to modify the behavior or visual style of the portal. Typically when a developer creates the website code, they will reference site settings for various components to enable an end user to modify the setting values to alter the website without having to change the code, recompile, and redeploy the website.
 
-The sample portals that are provided with the installation of [!INCLUDE[pn-dynamics-crm](../../includes/pn-dynamics-crm.md)] portals contain several configurable site settings for various styles used to modify many visual elements within the site such as background style, text color, and layout width.
+The sample portals that are provided with the installation of PowerApps Portals contain several configurable site settings for various styles used to modify many visual elements within the site such as background style, text color, and layout width.
 You can manage the following types of site settings:
 
-- **Global Portal settings**: These settings apply to all portals associated with the [!INCLUDE[pn-dynamics-crm](../../includes/pn-dynamics-crm.md)] organization in which they are being added.
-- **Portal site settings**: These settings apply to specific portals (website records) that are associated with the [!INCLUDE[pn-dynamics-crm](../../includes/pn-dynamics-crm.md)] organization in which they are being added.
+- **Global Portal settings**: These settings apply to all portals associated with the Common Data Service environment in which they are being added.
+- **Portal site settings**: These settings apply to specific portals (website records) that are associated with the Common Data Service environment in which they are being added.
 
 
 ## Manage portal site settings
 
-1. Go to [portal settings](manage-existing-portals.md#settings) and select **Site settings**.
+1. Go to [portal settings](../manage-existing-portals.md#settings) and select **Site settings**.
 
 2. To create a new setting, select **New**.
 
@@ -64,6 +62,7 @@ You can manage the following types of site settings:
 |search/query|+(@Query) _title:(@Query) _logicalname:adx_webpage~0.9^0.2<br> -_logicalname:adx_webfile~0.9 adx_partialurl:(@Query)<br> _logicalname:adx_blogpost~0.9^0.1 -_logicalname:adx_communityforumthread~0.9|Override query for site search, to apply additional weights and filters. @Query is the query text entered by a user. Lucene query syntax reference: [http://lucene.apache.org/core/old_versioned_docs/versions/2_9_1/queryparsersyntax.html](http://lucene.apache.org/core/old_versioned_docs/versions/2_9_1/queryparsersyntax.html)| 
 |Search/Stemmer|English|The language used by the portal search's stemming algorithm. Default: English|
 |CustomerSupport/DisplayAllUserActivitiesOnTimeline|FALSE| |
+|Authentication/[Protocol]/[Provider]/AllowContactMappingWithEmail| |Allow auto-association to a contact record based on email. For more information, click [here](https://docs.microsoft.com/en-us/dynamics365/portals/azure-ad-b2c#allow-auto-association-to-a-contact-record-based-on-email).|
 |||
 
 For site settings related to various portal features, see:
@@ -84,7 +83,7 @@ For site settings related to various portal features, see:
 
 ## Manage global portal settings
 
-1. Go to [portal settings](manage-existing-portals.md#settings) and select **Site settings**.
+1. Go to [portal settings](../manage-existing-portals.md#settings) and select **Site settings**.
 
 2. Go to **Settings** &gt; **Settings**.
 
