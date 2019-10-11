@@ -6,7 +6,7 @@ manager: shujoshi
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 08/30/2019
+ms.date: 10/07/2019
 ms.author: shjais
 ms.reviewer:
 ---
@@ -40,7 +40,7 @@ The following objects can be used and accessed anywhere, in any template.
 |    page     | Refers to the current portal request page. The page object provides access to things like the breadcrumbs for the current page, the title or URL of the current page, and any other attributes or related entities of the underlying PowerApps record. [!INCLUDE[proc-more-information](../../../includes/proc-more-information.md)] [page](#page) |
 |   params    |                                                                                                                             A convenient shortcut for request.params. [!INCLUDE[proc-more-information](../../../includes/proc-more-information.md)] [request](#request)                                                                                                                              |
 |   request   |                                                                                                                        Contains information about the current HTTP request. [!INCLUDE[proc-more-information](../../../includes/proc-more-information.md)] [request](#request)                                                                                                                        |
-|  settings   |                                                                                                            Allows you to load any [Site Setting](../configure-site-settings.md) by name. [!INCLUDE[proc-more-information](../../../includes/proc-more-information.md)] [settings](#settings)                                                                                                            |
+|  settings   |                                                                                                            Allows you to load any [Site Setting](../configure/configure-site-settings.md) by name. [!INCLUDE[proc-more-information](../../../includes/proc-more-information.md)] [settings](#settings)                                                                                                            |
 |   sitemap   |                                                                                                                               Allows access to the portal site map. [!INCLUDE[proc-more-information](../../../includes/proc-more-information.md)] [sitemap](#sitemap)                                                                                                                                |
 | sitemarkers |                                                                                                                        Allows you to load any Site Markers by name. [!INCLUDE[proc-more-information](../../../includes/proc-more-information.md)] [sitemarkers](#sitemarkers)                                                                                                                        |
 |  snippets   |                                                                                                         Allows you to load any [Content Snippet](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/customize-content-snippets) by name. [!INCLUDE[proc-more-information](../../../includes/proc-more-information.md)] [snippets](#snippets)                                                                                                         |
@@ -1055,7 +1055,7 @@ The searchindex object is used within the [PowerApps common data service entity 
 
 ## settings
 
-Allows you to load any [site setting](../configure-site-settings.md) by name. If a setting with the given name is not found, [null](liquid-types.md#null) will be returned.  
+Allows you to load any [site setting](../configure/configure-site-settings.md) by name. If a setting with the given name is not found, [null](liquid-types.md#null) will be returned.  
 
 > [!Note]
 > Settings are returned as [strings](liquid-types.md#string), but you can use [Type filters](liquid-filters.md#type-filters) to convert them to other types.
