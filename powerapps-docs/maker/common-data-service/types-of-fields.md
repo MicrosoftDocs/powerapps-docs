@@ -178,20 +178,18 @@ When the image is uploaded, it will be converted to a .jpg format and all downlo
   
 When an image is uploaded, it will be resized to a maximum size of 144 pixels by 144 pixels. People should resize or crop the images before they upload them so that they will display well using this size. All images are cropped to be square. If both sides of an image are smaller than 144 pixels, the image will be cropped to be a square with the dimensions of the smaller side.  
 
-### Add an image field to a form using the PowerApps site
+### Add an image field to an entity using the PowerApps site
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-Currently, the file data type is only available to canvas apps and flows. 
-
-1. Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) 
-2.  Select **Data** > **Entities** and select the entity where you want to add an image field. 
-3. Select **Add field** on the command bar and enter the following properties, and then select **Done**: 
+1. Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
+2.  Select **Data** > **Entities** and then select the entity where you want to add an image field. 
+3. Select **Add field** on the command bar, enter the following properties, and then select **Done**: 
    - **Display name**. Enter a friendly name for the field. 
    - **Data type**. Select **Image**. 
    - **Primary image**. When selected, the primary image field becomes the image field for the entity. You can only have one primary image for each entity. 
    - **Maximum image size**. The maximum file size that an app user can upload to the record. 10,240 KB is the default maximum size and 30 MB is the maximum size limit. 
-   - **Can store full images**. When selected, in addition to the rescaled thumbnail image described earlier, the full image is stored when uploaded by the user for each record. Full sized images are limited to 30 MB in size.
+   - **Can store full images**. When selected, in addition to the rescaled thumbnail image described earlier, the full image is stored when uploaded by the user for each record. Full size images are limited to 30 MB.
 
 ### Add image support for a form in a custom entity using solution explorer
 1. Open [solution explorer](../model-driven-apps/advanced-navigation.md#solution-explorer). 
@@ -218,7 +216,7 @@ App users can now select the image to display on the form. When an app user open
 > If the record is a new record that hasn’t been saved the error Invalid Argument is returned when you try to change the image. 
 
 ### Change the image for a record
-Once an entity form has an image field app users can change the image for a given record. 
+Once an entity form has an image field, app users can change the image for a given record. 
 
 1. Open the app that includes the entity form, and then select the image on the form. 
    > [!div class="mx-imgBorder"] 
