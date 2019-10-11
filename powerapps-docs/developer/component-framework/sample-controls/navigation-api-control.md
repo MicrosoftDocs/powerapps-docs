@@ -253,4 +253,4 @@ This sample opens a new window and loads the microsoft.com home page on clicking
 
 [Download sample components](https://go.microsoft.com/fwlink/?linkid=2088525)<br/>
 [PowerApps component framework API reference](../reference/index.md)<br/>
-[PowerApps component framework Manifest Schema reference](../manifest-schema-reference/index.md)
+[PowerApps component framework manifest schema reference](../manifest-schema-reference/index.md)

@@ -1,5 +1,5 @@
 ---
-title: PowerApps component framework Manifest Schema reference | Microsoft Docs
+title: PowerApps component framework manifest schema reference | Microsoft Docs
 description: 
 keywords:
 ms.author: nabuthuk
@@ -39,6 +39,6 @@ This section contains reference documentation for manifest schema generated usin
 
 ### Related topics
 
-[PowerApps component framework Manifest Schema reference](index.md)<br/>
+[PowerApps component framework manifest schema reference](index.md)<br/>
 [PowerApps component framework API reference](../reference/index.md)<br/>
 [PowerApps component framework overview](../overview.md)

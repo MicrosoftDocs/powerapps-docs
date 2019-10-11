@@ -45,6 +45,6 @@ Model-driven apps
 
 ### Related topics
 
-[PowerApps component framework Manifest Schema reference](index.md)<br/>
+[PowerApps component framework manifest schema reference](index.md)<br/>
 [PowerApps component framework API reference](../reference/index.md)<br/>
 [PowerApps component framework overview](../overview.md)
