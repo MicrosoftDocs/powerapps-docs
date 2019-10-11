@@ -6,28 +6,30 @@ manager: shujoshi
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 09/16/2019
+ms.date: 10/07/2019
 ms.author: shjais
 ms.reviewer:
 ---
 
 # Create and manage webpages
 
-[!include[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
-
 A webpage is a document that is identified by a unique URL in a website. It is one of the core objects of the website and builds a hierarchy of the website through parent and child relationships to other webpages.
 
 > [!NOTE]
-> If you customize your portal using the portal designer, the website users would notice a performance impact. We recommended you to do the changes during non-peak hours on a live portal.
+> If you customize your portal using PowerApps Portals Studio, the website users would notice a performance impact. We recommended you to do the changes during non-peak hours on a live portal.
 
 ## Create webpage
 
-1.  [Edit the portal](manage-existing-portals.md#edit) to open it in the portal designer.  
+1.  [Edit the portal](manage-existing-portals.md#edit) to open it in PowerApps Portals Studio.  
 
-2.  From the command bar, select **New page** and choose the page template.
+2.  From the command bar, select **New page** and either choose a page from **Layouts** or **Fixed layouts**.
 
     > [!div class=mx-imgBorder]
     > ![create a new webpage](media/create-webpage.png "Create a new webpage")
+
+    > [!NOTE]
+    > - Creating a page using **Layouts** gives you the flexibility to edit the complete page. **Fixed layouts** contains the page templates that are installed as part of portal provisioning and the custom page templates created using the [Portal Management app](configure/configure-portal.md).
+    > - For the pages to be created using the **Layouts** option, a new **Default studio template** page template is installed.
 
 3.  In the properties pane on the right side of the screen, enter the following information:
 
@@ -52,14 +54,14 @@ The primary menu on the website is created automatically based on the hierarchy 
 > [!div class=mx-imgBorder]
 > ![website navigation](media/website-navigation.png "Website navigation")
 
-If you are working with Dynamics 365 Portals, and you want the menu to be the same as page hierarchy, you must select **Default** from the **Navigation Menu** list.
+If you are working with a portal created with Dynamics 365 environment, and you want the menu to be the same as page hierarchy, you must select **Default** from the **Navigation Menu** list.
 
 > [!div class=mx-imgBorder]
 > ![Default navigation menu](media/navigation-menu-default.png "Default navigation menu")
 
 ## Manage webpage
 
-1.  [Edit the portal](manage-existing-portals.md#edit) to open it in the portal designer.  
+1.  [Edit the portal](manage-existing-portals.md#edit) to open it in PowerApps Portals Studio.  
 
 2.  Select **Pages** ![pages icon](media/pages-icon.png "Pages icon") from the toolbelt on the left side of the screen.  
 

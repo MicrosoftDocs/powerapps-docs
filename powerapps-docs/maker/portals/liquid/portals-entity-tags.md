@@ -6,7 +6,7 @@ manager: shujoshi
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 08/30/2019
+ms.date: 10/07/2019
 ms.author: shjais
 ms.reviewer:
 ---
@@ -40,7 +40,7 @@ ID of the entity when opened in view editor.
 Adds the Power BI dashboards and reports within pages. The tag can be added in the **Copy** field on a web page or in the **Source** field on a web template. For steps to add a Power BI report or dashboard to a webpage in portal, see [Add a Power BI report or dashboard to a webpage in portal](../admin/add-powerbi-report.md).
 
 > [!NOTE]
-> For the tag to work, you must [enable Power BI integration](../admin/set-up-power-bi-integration.md) from Portal Admin Center. If the Power BI integration is not enabled, dashboard or report will not be displayed.
+> For the tag to work, you must [enable Power BI integration](../admin/set-up-power-bi-integration.md) from PowerApps Portals admin center. If the Power BI integration is not enabled, dashboard or report will not be displayed.
 
 ### Parameters
 
@@ -64,7 +64,7 @@ Type of authentication required for the Power BI report or dashboard. Valid valu
 
 - **powerbiembedded**: Allows you to share the secure Power BI reports or dashboards to external users who doesn't have Power BI license or Azure Active Directory authentication setup. For information on Power BI Embedded service setup, see [Enable Power BI Embedded service](../admin/set-up-power-bi-integration.md#enable-power-bi-embedded-service). 
 
-While adding the secure Power BI report or dashboard, ensure that it is shared with Dynamics 365 Portals Azure Active Directory or Power BI Embedded services. 
+While adding the secure Power BI report or dashboard, ensure that it is shared with Dynamics 365 portal Azure Active Directory or Power BI Embedded services. 
 
 > [!NOTE]
 > The values for the `authentication_type` parameter are case insensitive.

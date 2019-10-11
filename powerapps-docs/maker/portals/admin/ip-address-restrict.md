@@ -6,14 +6,12 @@ manager: shujoshi
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 08/30/2019
+ms.date: 10/07/2019
 ms.author: shjais
 ms.reviewer:
 ---
 
 # Restrict portal access by IP address
-
-[!include[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
 
 The portal is public when provisioned and accessible by anyone from any computer. Now you can restrict access to your portal from a list of IP addresses. For example, a government organization might want to surface their content only within their corporate network. A commercial organization might want to display the portal only when it is published and not while it is in development to avoid any data leak.
 
@@ -22,7 +20,7 @@ When a request to the portal is generated from any user, their IP address is eva
 To add or remove IP addresses, you must be assigned any one of the following roles:
 - Office 365 Global Administrator 
 - Service Administrator. More information: [Use the service admin role to manage your tenant](https://technet.microsoft.com/en-us/library/mt793847.aspx)  
-- System Administrator of the environment selected for the portal
+- System Administrator of the Common Data Service environment selected for the portal
 
 ## Add an IP address
 

@@ -6,14 +6,12 @@ manager: shujoshi
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 09/16/2019
+ms.date: 10/07/2019
 ms.author: shjais
 ms.reviewer:
 ---
 
 # Compose a page
-
-[!include[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 After adding the required webpages and managing their hierarchy in the sitemap, you can add various components. The WYSIWYG editor allows you to add and edit the required components on the canvas easily. You can add and edit the following components on the canvas:
 
@@ -30,11 +28,11 @@ After adding the required webpages and managing their hierarchy in the sitemap, 
     - Breadcrumb
 
 > [!NOTE]
-> If you customize your portal using the portal designer, the website users would notice a performance impact. We recommended you to do the changes during non-peak hours on a live portal. 
+> If you customize your portal using PowerApps Portals Studio, the website users would notice a performance impact. We recommended you to do the changes during non-peak hours on a live portal. 
 
 ## Use the WYSIWYG editor
 
-1.  [Edit the portal](manage-existing-portals.md#edit) to open it in the portal designer.  
+1.  [Edit the portal](manage-existing-portals.md#edit) to open it in PowerApps Portals Studio.  
 
 2.  Select the page on which you want to add the component.
 
@@ -61,7 +59,7 @@ After adding the required webpages and managing their hierarchy in the sitemap, 
 
 Sections allow you to define a structure for your page and arrange portal components accordingly. Once you add sections to your page, you can add portal components inside the sections as per the requirement.
 
-1.	[Edit the portal](manage-existing-portals.md#edit) to open it in the portal designer.
+1.	[Edit the portal](manage-existing-portals.md#edit) to open it in PowerApps Portals Studio.
 
 2.	Select the page on which you want to add a section.
 
@@ -112,7 +110,7 @@ You can add the following components on a webpage:
 
 ### Add text box
 
-1.  [Edit the portal](manage-existing-portals.md#edit) to open it in the portal designer.  
+1.  [Edit the portal](manage-existing-portals.md#edit) to open it in PowerApps Portals Studio.  
 
 2.  Select the page on which you want to add the component.
 
@@ -141,7 +139,7 @@ You can add the following components on a webpage:
 
 ### Add image
 
-1.  [Edit the portal](manage-existing-portals.md#edit) to open it in the portal designer.  
+1.  [Edit the portal](manage-existing-portals.md#edit) to open it in PowerApps Portals Studio.  
 
 2.  Select the page on which you want to add the component.
 
@@ -178,7 +176,7 @@ You can add the following components on a webpage:
 
 ### Add IFrame
 
-1.  [Edit the portal](manage-existing-portals.md#edit) to open it in the portal designer.  
+1.  [Edit the portal](manage-existing-portals.md#edit) to open it in PowerApps Portals Studio.  
 
 2.  Select the page on which you want to add the component.
 
@@ -206,7 +204,7 @@ You can add the following components on a webpage:
 
 Form is a data-driven configuration that you use to add a form to collect data in the portal without the need for a developer to surface the form in the portal. [Forms are created in Common Data Service](https://docs.microsoft.com/powerapps/maker/model-driven-apps/form-designer-overview) and you can use them into webpages in the portal or in conjunction with lists to build out complete web applications.  
 
-1.  [Edit the portal](manage-existing-portals.md#edit) to open it in the portal designer.  
+1.  [Edit the portal](manage-existing-portals.md#edit) to open it in PowerApps Portals Studio.  
 
 2.  Select the page on which you want to add the component.
 
@@ -235,7 +233,7 @@ Form is a data-driven configuration that you use to add a form to collect data i
 
         - **Edit**: Indicates the form should edit an existing record.
 
-        - **Read only**: Indicates the form should display an existing record’s noneditable form.
+        - **Read only**: Indicates the form should display an existing record’s non-editable form.
 
         > [!NOTE]
         > The default option for **Edit** and **ReadOnly** modes is set as Query String Parameter Name passed as ID in URL. To change these values, you need to open Portal Management app and update the form properties.
@@ -261,7 +259,7 @@ Form is a data-driven configuration that you use to add a form to collect data i
 
 List is a data-driven configuration that you use to add a webpage that will render a list of records without the need for a developer to surface the grid in the portal. Lists use [Common Data Service views](https://docs.microsoft.com/powerapps/maker/model-driven-apps/create-and-edit-views) to display records on the portal.  
 
-1.  [Edit the portal](manage-existing-portals.md#edit) to open it in the portal designer.  
+1.  [Edit the portal](manage-existing-portals.md#edit) to open it in PowerApps Portals Studio.  
 
 2.  Select the page on which you want to add the component.
 
@@ -305,7 +303,7 @@ List is a data-driven configuration that you use to add a webpage that will rend
 
 ### Add breadcrumb
 
-1.  [Edit the portal](manage-existing-portals.md#edit) to open it in the portal designer.  
+1.  [Edit the portal](manage-existing-portals.md#edit) to open it in PowerApps Portals Studio.  
 
 2.  Select the page on which you want to add the component.
 
@@ -321,7 +319,7 @@ By default, the menu on the website is created automatically based on the hierar
 
 After you create the web link set:
 
-1.	[Edit the portal](manage-existing-portals.md#edit) to open it in the portal designer.
+1.	[Edit the portal](manage-existing-portals.md#edit) to open it in PowerApps Portals Studio.
 
 2.	Select the header component. 
 
