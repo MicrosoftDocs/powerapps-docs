@@ -38,15 +38,9 @@ You can view details about solution operations from the **Solutions** area of a 
      > To get to the **Settings** area from a PowerApps unified interface model-driven app, select **Settings** ![Settings](../model-driven-apps/media/powerapps-gear.png) on the app toolbar, and then select **Advanced Settings**. 
 
 2. By default, the **Custom Solutions History** view is displayed. The following views are available from the **Solutions History** area. 
-<<<<<<< HEAD
-- **All Solutions History**. Displays both system and custom solutions. 
-- **Custom Solutions History**. Displays only custom solutions. 
-- **Internal Solutions History**. Displays only system customizations. 
-=======
 - **All Solutions History**. Displays solution history for both internal system and custom solutions. 
 - **Custom Solutions History**. Displays solution history for only custom solutions. 
 - **Internal Solutions History**. Displays solution history for only internal system solutions. 
->>>>>>> 438b49562d7f567d85293e5e742e06b8b18d1c70
 
 Each solution history record is read-only and includes the following properties: 
 - **Start Time**. The time in which the operation started. 
