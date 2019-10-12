@@ -127,13 +127,13 @@
         items:
         - name: getFormattedValue 
           href: reference/entityrecord/getformattedvalue.md
-        - name: getNamedReference
+        - name: getNamedreference
           href: reference/entityrecord/getnamedreference.md
         - name: getRecordId
           href: reference/entityrecord/getrecordid.md
         - name: getValue
           href: reference/entityrecord/getvalue.md
-      - name: EntityReference
+      - name: Entityreference
         href: reference/entityreference.md
       - name: Factory
         href: reference/factory.md

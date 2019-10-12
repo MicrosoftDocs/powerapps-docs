@@ -81,7 +81,7 @@ Model-driven apps
 
 ## Return Value
 
-Type: [Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)<RetrieveMultipleResponse>
+Type: [Promise](https://developer.mozilla.org/docs/Web/JavaScript/reference/Global_Objects/Promise)<RetrieveMultipleResponse>
 
 Description: The `RetrieveMultipleResponse` returns a promise that contains an array of JSON objects containing the retrieved entity records and the **nextLink** attribute with the URL pointing to next set of records in case paging (`maxPageSize`) is specified in the request, and the record count returned exceeds the paging value. It has the following parameters:
 
@@ -94,5 +94,5 @@ Description: The `RetrieveMultipleResponse` returns a promise that contains an a
 ### Related topics
 
 [Web API](../webapi.md)<br/>
-[PowerApps component framework API Reference](../../reference/index.md)<br/>
-[PowerApps component framework Overview](../../overview.md)
+[PowerApps component framework API reference](../../reference/index.md)<br/>
+[PowerApps component framework overview](../../overview.md)
