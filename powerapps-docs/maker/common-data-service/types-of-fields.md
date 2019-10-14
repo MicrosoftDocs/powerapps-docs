@@ -190,7 +190,7 @@ By default,	when an app user adds an image to display to a form or canvas app, t
    - **Display name**. Enter a friendly name for the field. 
    - **Data type**. Select **Image**. 
    - **Primary image**. When selected, the primary image field becomes the image field for the entity. You can only have one primary image for each entity. 
-   - **Maximum image size**. The maximum file size that an app user can upload to the record. 10,240 KB is the default maximum size and 30 MB is the maximum size limit. 
+   - **Maximum image size**. The maximum file size that an app user can upload to the record. 10,240 KB is the default maximum size and 10 MB is the maximum size limit. 
    - **Can store full images**. When selected, in addition to the rescaled thumbnail image described earlier, the full image is stored when uploaded by the user for each record. Full size images are limited to 30 MB.
 
 ### Add image support for a form in a custom entity using solution explorer
