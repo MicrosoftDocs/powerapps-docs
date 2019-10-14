@@ -218,25 +218,6 @@ App users can now select the image to display on the form. When an app user open
 > [!IMPORTANT]
 > If the record is a new record that hasn’t been saved the error Invalid Argument is returned when you try to change the image. 
 
-### Display a full-sized image
-<!-- move this to the canvas apps folder and section -->
-By default,	when an app user adds an image to display to a form in a canvas app, the image displayed is the thumbnail image. To display a full image for a canvas app, follow these steps: 
-1. Open the canvas app in PowerApps Studio. 
-2. Select **Insert**, and then select **Image**.
-3. Select the image data card. 
-
-    > [!div class="mx-imgBorder"] 
-    > ![Image data card](../canvas-apps/media/display-full-sized-image/image-data-card.png)
-
-4. Under the **Advanced** tab set the **Data** field to the entity that contains the image you want to display.
-5.	Add **.Full** after the value for the image **Default** setting. 
-
-    > [!div class="mx-imgBorder"] 
-    > ![Image full size setting](../canvas-apps/media/display-full-sized-image/image-full-setting.png)
-
-6.	Select **Save**. 
-
-
 ### Change the image for a record
 Once an entity form has an image field, app users can change the image for a given record. 
 
