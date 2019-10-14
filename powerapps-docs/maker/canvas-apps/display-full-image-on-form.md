@@ -39,5 +39,5 @@ By default,	when an app user adds an image to display to a form in a canvas app,
 6.	Select **Save**. 
 
 ### See also
-[Show, edit, or add a record in a canvas app](add-form.md) 
+[Show, edit, or add a record in a canvas app](add-form.md) <br />
 [Image fields](../common-data-service/types-of-fields.md#image-fields)
