@@ -46,7 +46,7 @@ export class TSMapControl
   private _iFrameElement: HTMLIFrameElement;
   // PowerApps component framework framework delegate which will be assigned to this object which would be called whenever an update happens.
   private _notifyOutputChanged: () => void;
-  // Reference to ComponentFramework Context object
+  // reference to ComponentFramework Context object
   private _context: ComponentFramework.Context<IInputs>;
   // API Key used to activate and embed the maps automatically
   // NOTE: You can follow the documentation at https://developers.google.com/maps/documentation/embed/get-api-key to generate your own API Key
@@ -171,5 +171,5 @@ Ensure you call the `renderMap` function inside the [updateView](../reference/co
 ### Related topics
 
 [Download sample components](https://go.microsoft.com/fwlink/?linkid=2088525)<br/>
-[PowerApps component framework API Reference](../reference/index.md)<br/>
-[PowerApps component framework Manifest Schema Reference](../manifest-schema-reference/index.md)
+[PowerApps component framework API reference](../reference/index.md)<br/>
+[PowerApps component framework manifest schema reference](../manifest-schema-reference/index.md)

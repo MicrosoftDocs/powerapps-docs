@@ -33,11 +33,11 @@ Model-driven apps
 
 ## Return Value
 
-Type: [Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)<[EntityReference](../entityreference.md)[]>
+Type: [Promise](https://developer.mozilla.org/docs/Web/JavaScript/reference/Global_Objects/Promise)<[Entityreference](../entityreference.md)[]>
 
 
 ### Related topics
 
 [Utility](../utility.md)<br/>
-[PowerApps component framework API Reference](../../reference/index.md)<br/>
-[PowerApps component framework Overview](../../overview.md)
+[PowerApps component framework API reference](../../reference/index.md)<br/>
+[PowerApps component framework overview](../../overview.md)

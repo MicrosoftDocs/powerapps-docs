@@ -58,10 +58,10 @@ export class TSLinearInputControl
   private labelElement: HTMLLabelElement;
   // input element that is used to create the range slider
   private inputElement: HTMLInputElement;
-  // Reference to the control container HTMLDivElement
+  // reference to the control container HTMLDivElement
   // This element contains all elements of our custom control example
   private _container: HTMLDivElement;
-  // Reference to ComponentFramework Context object
+  // reference to ComponentFramework Context object
   private _context: ComponentFramework.Context<IInputs>;
   // Event Handler 'refreshData' reference
   private _refreshData: EventListenerOrEventListenerObject;
@@ -265,5 +265,5 @@ public updateView(context: ControlFramework.IPropBag<InputsOutputs.IInputBag>): 
 ### Related topics
 
 [Download sample components](https://go.microsoft.com/fwlink/?linkid=2088525)<br/>
-[PowerApps component framework API Reference](../reference/index.md)<br/>
-[PowerApps component framework Manifest Schema Reference](../manifest-schema-reference/index.md)
+[PowerApps component framework API reference](../reference/index.md)<br/>
+[PowerApps component framework manifest schema reference](../manifest-schema-reference/index.md)

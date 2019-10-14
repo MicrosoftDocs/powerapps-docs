@@ -56,10 +56,6 @@ Manifest is an XML file that contains the metadata of the code component. It als
 
 2. The [property](manifest-schema-reference/property.md) node defines the properties of the code component like defining the data type of field. The property node is specified as the child element under the control element. Define the [property](manifest-schema-reference/property.md) node as shown here:
 
-
-<!--from editor: Note that the of-type-group link opens a page called type-group element, not of-type-group. Should they match? -->
-
-
    - **name**: Name of the property.
    - **display-name-key**: Display name of the property that is displayed on the UI.
    - **description-name-key**: Description of the property that is displayed on the UI. 
@@ -114,10 +110,6 @@ The next step after implementing the manifest file is to implement the component
 1. Open the `index.ts` file in the code editor of your choice.
 2. Update the `TSLinearInputComponent` class with the following code:
 
-
-<!--from editor: On line 166, should the L in HTML be capitalized? -->
-
-
 ```TypeScript
 import { IInputs, IOutputs } from "./generated/ManifestTypes";
 export class TSLinearInputComponent
@@ -130,10 +122,10 @@ export class TSLinearInputComponent
   private labelElement: HTMLLabelElement;
   // input element that is used to create the range slider
   private inputElement: HTMLInputElement;
-  // Reference to the component container HTMLDivElement
+  // reference to the component container HTMLDivElement
   // This element contains all elements of our code component example
   private _container: HTMLDivElement;
-  // Reference to PowerApps component framework Context object
+  // reference to PowerApps component framework Context object
   private _context: ComponentFramework.Context<IInputs>;
   // Event Handler 'refreshData' reference
   private _refreshData: EventListenerOrEventListenerObject;
@@ -163,7 +155,7 @@ export class TSLinearInputComponent
     this.labelElement = document.createElement("label");
     this.labelElement.setAttribute("class", "TS_LinearRangeLabel");
     this.labelElement.setAttribute("id", "lrclabel");
-    // retrieving the latest value from the component and setting it to the HTMl elements.
+    // retrieving the latest value from the component and setting it to the HTML elements.
     this._value = context.parameters.sliderValue.raw
       ? context.parameters.sliderValue.raw
       : 0;
@@ -334,10 +326,7 @@ npm start
 
 Follow these steps to create and import a [solution](https://docs.microsoft.com/dynamics365/customer-engagement/customize/solutions-overview) file:
 
-
-<!--from editor: in the following sentence, which folder do users navigate to? -->
-
-1. Create a new folder **Solutions** inside the **LinearComponent** folder and navigate to the folder. 
+1. Create a new folder **Solutions** inside the **LinearComponent** folder and navigate into the folder. 
 2. Create a new solution project in the **LinearComponent** folder using the following command:
  
     ```CLI
@@ -352,10 +341,6 @@ Follow these steps to create and import a [solution](https://docs.microsoft.com/
     ```CLI
      pac solution add-reference --path c:\users\LinearComponent
     ```
-
-
-<!--from editor: In the next sentence, should there be a verb before 'cd'? Such as, "... you need to enter 'cd' to your solution ...." ?
-
 
 4. To generate a zip file from your solution project, you need to `cd` into your solution project directory and build the project using the following command: 
 
@@ -389,6 +374,6 @@ To add the code components to a canvas app, follow the steps in the topic [Add c
 ### See also
 
 [Download sample components](https://go.microsoft.com/fwlink/?linkid=2088525)<br/>
-[Update existing PowerApps component framework controls](updating-existing-controls.md)<br/>
+[Update existing PowerApps component framework components](updating-existing-controls.md)<br/>
 [PowerApps component framework API reference](reference/index.md)<br/>
 [PowerApps component framework overview](overview.md)

@@ -1,5 +1,5 @@
 ---
-title: "PowerApps component framework API Reference | MicrosoftDocs"
+title: "PowerApps component framework API reference | MicrosoftDocs"
 description: "The topic provides PowerApps component framework API reference."
 ms.date: 10/01/2019
 ms.service: "powerapps"
@@ -27,7 +27,7 @@ This section contains reference documentation for creating code components using
 |[DateFormattingInfo](dateformattinginfo.md)|[!INCLUDE [dateformattinginfo-description](includes/dateformattinginfo-description.md)]|Model-driven apps|
 |[Device](device.md)|[!INCLUDE [device-description](includes/device-description.md)]|Model-driven apps and canvas apps (experimental preview)|
 |[EntityRecord](entityrecord.md)|[!INCLUDE [entityrecord-description](includes/entityrecord-description.md)]|Model-driven apps|
-|[EntityReference](entityreference.md)|[!INCLUDE [entityreference-description](includes/entityreference-description.md)]|Model-driven apps|
+|[Entityreference](entityreference.md)|[!INCLUDE [entityreference-description](includes/entityreference-description.md)]|Model-driven apps|
 |[Factory](factory.md)|[!INCLUDE [factory-description](includes/factory-description.md)]|Model-driven apps|
 |[Filtering](filtering.md)|[!INCLUDE [filtering-description](includes/filtering-description.md)]|Model-driven apps|
 |[Formatting](formatting.md)|[!INCLUDE [formatting-description](includes/formatting-description.md)]|Model-driven apps|
