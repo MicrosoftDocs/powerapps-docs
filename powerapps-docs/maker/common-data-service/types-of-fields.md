@@ -201,7 +201,8 @@ By default,	when an app user adds an image to display to a form or canvas app, t
 5. Enter a **Display Name**, such as *Custom entity image*. 
 6. Complete the remaining fields as appropriate. Notice that the **Name**, **Field Requirement**, and **Searchable** fields can’t be changed. Select **Save and Close**. 
 7. On the entity definition next to the **Primary Image** property make sure the value is set to the custom image you created in the previous step. If it's not select it.  
-    ![Primary image property selected](media/primary-image-property.png)
+    > [!div class="mx-imgBorder"] 
+    > ![Primary image property selected](media/primary-image-property.png "Primary image property selected")
 
 8.	Open the form where you want image support, such as the entity main form. 
 9.	On the form editor ribbon, select **Form Properties**. 
