@@ -28,16 +28,16 @@ This section contains reference documentation for creating code components using
 |[Device](device.md)|[!INCLUDE [device-description](includes/device-description.md)]|Model-driven apps and canvas apps (experimental preview)|
 |[EntityRecord](entityrecord.md)|[!INCLUDE [entityrecord-description](includes/entityrecord-description.md)]|Model-driven apps|
 |[Entityreference](entityreference.md)|[!INCLUDE [entityreference-description](includes/entityreference-description.md)]|Model-driven apps|
-|[Factory](factory.md)|[!INCLUDE [factory-description](includes/factory-description.md)]|Model-driven apps|
+|[Factory](factory.md)|[!INCLUDE [factory-description](includes/factory-description.md)]|Model-driven apps and canvas apps (experimental preview)|
 |[Filtering](filtering.md)|[!INCLUDE [filtering-description](includes/filtering-description.md)]|Model-driven apps|
-|[Formatting](formatting.md)|[!INCLUDE [formatting-description](includes/formatting-description.md)]|Model-driven apps|
+|[Formatting](formatting.md)|[!INCLUDE [formatting-description](includes/formatting-description.md)]|Model-driven apps and canvas apps (experimental preview)|
 |[Linking](linking.md)|[!INCLUDE [linking-description](includes/linking-description.md)]|Model-driven apps|
 |[Mode](mode.md)|[!INCLUDE [mode-description](includes/mode-description.md)]|Model-driven apps|
 |[Navigation](navigation.md)|[!INCLUDE [navigation-description](includes/navigation-description.md)]|Model-driven apps|
 |[NumberFormattingInfo](numberformattinginfo.md)|[!INCLUDE [numberformattinginfo-description](includes/numberformattinginfo-description.md)]|Model-driven apps|
 |[Paging](paging.md)|[!INCLUDE [paging-description](includes/paging-description.md)]|Model-driven apps|
 |[Popup](popup.md)|[!INCLUDE [popup-description](includes/popup-description.md)]|Model-driven apps|
-|[PopupService](popupservice.md)|[!INCLUDE [popupservice-description](includes/popupservice-description.md)]|Model-driven apps|
+|[PopupService](popupservice.md)|[!INCLUDE [popupservice-description](includes/popupservice-description.md)]|Model-driven apps and canvas apps (experimental preview)|
 |[Resources](resources.md)|[!INCLUDE [resources-description](includes/resources-description.md)]|Model-driven apps|
 |[SortStatus](sortstatus.md)|[!INCLUDE [sortstatus-description](includes/sortstatus-description.md)]|Model-driven apps|
 |[StandardControl](control.md)|[!INCLUDE [control-description](includes/control-description.md)]|Model-driven apps and canvas apps (experimental preview)|
