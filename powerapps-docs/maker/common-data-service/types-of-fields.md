@@ -228,6 +228,7 @@ By default,	when an app user adds an image to display to a form or canvas app, t
 4. Under the **Advanced** tab set the **Data** field to the entity that contains the image you want to display.
 5.	Add **.Full** after the value for the image **Default** setting. 
    ![Image full size setting](../canvas-apps/media/display-full-sized-image/image-full-setting.png)
+
 6.	Select **Save**. 
 
 
