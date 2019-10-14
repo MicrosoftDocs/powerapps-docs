@@ -220,15 +220,19 @@ App users can now select the image to display on the form. When an app user open
 
 ### Display a full-sized image
 <!-- move this to the canvas apps folder and section -->
-By default,	when an app user adds an image to display to a form or canvas app, the image displayed is the thumbnail image. To display a full image for a canvas app, follow these steps: 
+By default,	when an app user adds an image to display to a form in a canvas app, the image displayed is the thumbnail image. To display a full image for a canvas app, follow these steps: 
 1. Open the canvas app in PowerApps Studio. 
 2. Select **Insert**, and then select **Image**.
 3. Select the image data card. 
-   ![Image data card](../canvas-apps/media/display-full-sized-image/image-data-card.png)
+
+    > [!div class="mx-imgBorder"] 
+    > ![Image data card](../canvas-apps/media/display-full-sized-image/image-data-card.png)
 
 4. Under the **Advanced** tab set the **Data** field to the entity that contains the image you want to display.
 5.	Add **.Full** after the value for the image **Default** setting. 
-   ![Image full size setting](../canvas-apps/media/display-full-sized-image/image-full-setting.png)
+
+    > [!div class="mx-imgBorder"] 
+    > ![Image full size setting](../canvas-apps/media/display-full-sized-image/image-full-setting.png)
 
 6.	Select **Save**. 
 
