@@ -164,7 +164,7 @@ When image display is enabled for an entity, any records that don’t have an im
 > [!div class="mx-imgBorder"] 
 > ![Default entity image](../common-data-service/media/account-record-default-image.png "Default account entity image")
   
-People can choose the default image to upload a picture from their computer. Images must be less than 5120 KB and must be in one of the following formats:  
+People can choose the default image to upload a picture from their computer. Images must be less than 10 MB and must be in one of the following formats:  
   
 - jpg
 - jpeg
@@ -176,7 +176,9 @@ People can choose the default image to upload a picture from their computer. Ima
   
 When the image is uploaded, it will be converted to a .jpg format and all downloaded images will also use this format. If an animated .gif is uploaded, only the first frame is saved.  
   
-When an image is uploaded, it will be resized to a maximum size of 144 pixels by 144 pixels. People should resize or crop the images before they upload them so that they will display well using this size. All images are cropped to be square. If both sides of an image are smaller than 144 pixels, the image will be cropped to be a square with the dimensions of the smaller side.  
+When an image is uploaded, it will be resized as a "thumbnail" image to a maximum size of 144 pixels by 144 pixels. People should resize or crop the images before they upload them so that they will display well using this size. All images are cropped to be square. If both sides of an image are smaller than 144 pixels, the image will be cropped to be a square with the dimensions of the smaller side.  
+
+By default,	when an app user adds an image to display to a form or canvas app, the image displayed is the thumbnail image. To display a full image for a canvas app, see [Display a full-sized image](#display-a-full-sized-image).
 
 ### Add an image field to an entity using the PowerApps site
 
@@ -214,6 +216,20 @@ App users can now select the image to display on the form. When an app user open
 
 > [!IMPORTANT]
 > If the record is a new record that hasn’t been saved the error Invalid Argument is returned when you try to change the image. 
+
+### Display a full-sized image
+<!-- move this to the canvas apps folder and section -->
+By default,	when an app user adds an image to display to a form or canvas app, the image displayed is the thumbnail image. To display a full image for a canvas app, follow these steps: 
+1. Open the canvas app in PowerApps Studio. 
+2. Select **Insert**, and then select **Image**.
+3. Select the image data card. 
+   ![Image data card](../canvas-apps/media/display-full-sized-image/image-data-card.png)
+
+4. Under the **Advanced** tab set the **Data** field to the entity that contains the image you want to display.
+5.	Add **.Full** after the value for the image **Default** setting. 
+   ![Image full size setting](../canvas-apps/media/display-full-sized-image/image-full-setting.png)
+6.	Select **Save**. 
+
 
 ### Change the image for a record
 Once an entity form has an image field, app users can change the image for a given record. 
