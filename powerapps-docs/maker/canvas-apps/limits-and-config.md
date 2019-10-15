@@ -105,7 +105,7 @@ You can find information about size limits on text, hyperlinks, images, and medi
 
 ## PowerApps per app plan
 
-PowerApps per app plan allows individual users to run 2 applications on single portal for a specific business scenario based on the full capabilities of PowerApps. This plan provides an easy way for users to get started with the platform before broader scale adoption.
+PowerApps per app plan allows individual users to run 2 applications on a single portal for a specific business scenario based on the full capabilities of PowerApps. This plan provides an easy way for users to get started with the platform before broader scale adoption.
 
 After an admin allocates PowerApps per app plan to an environment, they're assigned to users by default when app is shared with them.
 
