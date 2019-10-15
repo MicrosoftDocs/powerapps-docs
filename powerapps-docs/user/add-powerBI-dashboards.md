@@ -36,7 +36,7 @@ Create rich, interactive reports and real-time visualizations in Common Data Ser
 1. Open you app and go to **Dashboards**.
   
 2. Select **New** and then select **Power BI Dashboard**.  
-   You may be prompted to sign in to Power BI.
+
    
     > [!div class="mx-imgBorder"] 
     > ![Add new Power BI dashboard](media/pbi_1.png "Add bew Power BI dashboard") 
