@@ -19,7 +19,7 @@ ms.assetid: db4be085-c31e-4045-8834-b0f45c569964
 
 ## Available for 
 
-Model-driven apps
+Model-driven apps and canvas apps (experimental preview)
 
 ## Properties
 
@@ -80,5 +80,5 @@ Customized column width ratios.
 
 ### Related topics
 
-[PowerApps component framework API Reference](../reference/index.md)<br/>
-[PowerApps component framework Overview](../overview.md)
+[PowerApps component framework API reference](../reference/index.md)<br/>
+[PowerApps component framework overview](../overview.md)

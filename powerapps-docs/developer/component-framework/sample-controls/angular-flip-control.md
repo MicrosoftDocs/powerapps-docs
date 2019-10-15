@@ -36,7 +36,7 @@ Model-driven apps and canvas apps (experimental preview)
 </manifest>
 ```
 
-## Overview
+## overview
 
 This sample provides examples on how to add dependencies for third-party libraries, showcasing how to perform data-binding between PowerApps component framework, component model and third-party inner data model in bi-direction.
 
@@ -355,6 +355,6 @@ fieldset[disabled].btn-primary:hover {
 
 ### Related topics
 
-[PowerApps component framework Manifest Schema Reference](../manifest-schema-reference/index.md)<br />
-[PowerApps component framework API Reference](../reference/index.md)<br />
-[PowerApps component framework Overview](../overview.md)
+[PowerApps component framework manifest schema reference](../manifest-schema-reference/index.md)<br />
+[PowerApps component framework API reference](../reference/index.md)<br />
+[PowerApps component framework overview](../overview.md)

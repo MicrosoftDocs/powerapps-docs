@@ -40,5 +40,5 @@ Description: Time zone offset in minutes.
 ### Related topics
 
 [User Settings](../usersettings.md)<br/>
-[PowerApps component framework API Reference](../../reference/index.md)<br/>
-[PowerApps component framework Overview](../../overview.md)
+[PowerApps component framework API reference](../../reference/index.md)<br/>
+[PowerApps component framework overview](../../overview.md)

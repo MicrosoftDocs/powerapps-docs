@@ -1,5 +1,5 @@
 ---
-title: EntityReference | Microsoft Docs
+title: Entityreference | Microsoft Docs
 description: 
 keywords:
 ms.author: nabuthuk
@@ -13,7 +13,7 @@ ms.topic: "article"
 ms.assetid: ad8659f7-f566-43db-bed1-c8484c114a59
 ---
 
-# EntityReference
+# Entityreference
 
 [!INCLUDE [entityreference-description](includes/entityreference-description.md)]
 
@@ -49,5 +49,5 @@ The name of the entity reference. Read-only.
 
 ### Related topics
 
-[PowerApps component framework API Reference](../reference/index.md)<br/>
-[PowerApps component framework Overview](../overview.md)
+[PowerApps component framework API reference](../reference/index.md)<br/>
+[PowerApps component framework overview](../overview.md)
