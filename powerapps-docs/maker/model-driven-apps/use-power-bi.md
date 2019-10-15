@@ -1,5 +1,5 @@
 ---
-title: "Use Power BI with model-driven apps and Customer Engagement (on-premises) | MicrosoftDocs"
+title: "Use Power BI with model-driven apps | MicrosoftDocs"
 ms.custom: 
 ms.date: 10/14/2019
 ms.reviewer: 
@@ -81,7 +81,7 @@ The Dynamics 365 apps content packs for Power BI allow you to easily access and 
   
 4. Select **OK**.  
   
-To learn more about how to add Power BI tiles to personal dashboards, see [Embed Power BI tiles on your personal dashboard](/dynamics365/customerengagement/on-premises/basics/add-edit-power-bi-visualizations-dashboard.md#embed--power-bi-tiles-on-your-personal-dashboard).  
+To learn more about how to add Power BI tiles to personal dashboards, see [Embed Power BI tiles on your personal dashboard](/dynamics365/customerengagement/on-premises/basics/add-edit-power-bi-visualizations-dashboard#embed--power-bi-tiles-on-your-personal-dashboard).  
   
 To learn more about how to add Power BI dashboards to personal dashboards, see [Add a Power BI dashboard on your personal dashboard](/dynamics365/customerengagement/on-premises/basics/add-edit-power-bi-visualizations-dashboard).  
   
