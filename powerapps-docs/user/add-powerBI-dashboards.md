@@ -71,13 +71,14 @@ Create rich, interactive reports and real-time visualizations in Common Data Ser
    > [!div class="mx-imgBorder"] 
    >![Embed Power BI tile features](media/embed-powerbi-tile-features.png "Embed Power BI tile features")  
   
-1. Click the **Refresh** button ![Refresh button](media/embed-pbi-tile-refresh-button.png "Refresh button") to refresh the tile’s underlying report data.  
+1. Select the **Refresh** button ![Refresh button](media/embed-pbi-tile-refresh-button.png "Refresh button") to refresh the tile’s underlying report data.  
   
-2. Click the **Open in Power BI** button ![Open in Power BI button](media/open-in-power-bi.png "Open in Power BI button") to open the [!INCLUDE[pn_power_bi_for_office_365_short](../includes/pn-power-bi-for-office-365-short.md)] dashboard that contains the visualization  in a new browser tab.  
+2. Select the **Open in Power BI** button ![Open in Power BI button](media/open-in-power-bi.png "Open in Power BI button") to open the [!INCLUDE[pn_power_bi_for_office_365_short](../includes/pn-power-bi-for-office-365-short.md)] dashboard that contains the visualization  in a new browser tab.  
   
-3. Click the **Enlarge** button ![Enlarge tile](media/embed-pbi-tile-enlarge-button.png "Enlarge tile") to expand the visualization and increase the viewing area for the visualization, like the Sales Pipeline tile displayed here.  
+3. Select the **Enlarge** button ![Enlarge tile](media/embed-pbi-tile-enlarge-button.png "Enlarge tile") to expand the visualization and increase the viewing area for the visualization, like the Sales Pipeline tile displayed here.  
   
-   ![Enlarged embedded Power BI tile](media/embed-power-bi-tile-features.png "Enlarged embedded Power BI tile")  
+    > [!div class="mx-imgBorder"] 
+    >![Enlarged embedded Power BI tile](media/embed-power-bi-tile-features.png "Enlarged embedded Power BI tile")  
   
  
 ## Share a personal dashboard that contains Power BI visualizations  
