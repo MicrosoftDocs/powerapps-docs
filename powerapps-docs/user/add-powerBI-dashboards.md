@@ -29,7 +29,7 @@ Create rich, interactive reports and real-time visualizations in Common Data Ser
 > - Have a [!INCLUDE[pn_power_bi_for_office_365_short](../includes/pn-power-bi-for-office-365-short.md)] account and have access to at least one [!INCLUDE[pn_power_bi_for_office_365_short](../includes/pn-power-bi-for-office-365-short.md)] dashboard. [!INCLUDE[proc_more_information](../includes/proc-more-information.md)] [Introduction to reporting and analytics](../analytics/reporting-analytics-with-dynamics-365.md)  
 > - Avoid adding [!INCLUDE[pn_power_bi_for_office_365_short](../includes/pn-power-bi-for-office-365-short.md)] visualizations to system dashboards; it's not supported.
   
-<a name="embedPBDashboard"></a>
+
 ## Create a personal Power BI dashboard
   Follow these steps to add a [!INCLUDE[pn_power_bi_for_office_365_short](../includes/pn-power-bi-for-office-365-short.md)] dashboard to your model-driven app. If you are connecting to the [!INCLUDE[pn_power_bi_for_office_365_short](../includes/pn-power-bi-for-office-365-short.md)] service, you need an account and to have selected your Common Data Service instance as a data source. For more information about registering and connecting data sources, see [Microsoft Power BI](https://powerbi.microsoft.com/).  
 
@@ -37,14 +37,18 @@ Create rich, interactive reports and real-time visualizations in Common Data Ser
   
 2. Select **New** and then select **Power BI Dashboard**.  
    You may be prompted to sign in to Power BI.
+   
+    > [!div class="mx-imgBorder"] 
+    > ![Add new Power BI dashboard](media/pbi_1.png "Add bew Power BI dashboard") 
 
 3. In the Add Power BI Dashboard dialog select the workspace and then select the [!INCLUDE[pn_power_bi_for_office_365_short](../includes/pn-power-bi-for-office-365-short.md)] dashboard that you want to embed in your dashboard. Select **Enable for mobile** if you want to make the dashboard available for [!INCLUDE[pn_moca_full](../includes/pn-moca-full.md)] and [!INCLUDE[pn_Microsoft_Dynamics_CRM_Mobile](../includes/pn-dyn-365-phones.md)].
 
-    ![Add a Power BI tile to your personal dashboard](media/workspace-add-power-bi-dashboard.png "Add a Power BI tile to your personal dashboard") 
+    
+    > [!div class="mx-imgBorder"] 
+    > ![Add a Power BI tile to your personal dashboard](media/workspace-add-power-bi-dashboard.png "Add a Power BI tile to your personal dashboard") 
 
 4. Select **Save** to save your dashboard.
  
-<a name="embedPBItiles"></a>   
 ## Embed  Power BI tiles on your personal dashboard  
  Follow these steps to add one or more [!INCLUDE[pn_power_bi_for_office_365_short](../includes/pn-power-bi-for-office-365-short.md)] tiles to your personal dashboard. If you are connecting to the [!INCLUDE[pn_power_bi_for_office_365_short](../includes/pn-power-bi-for-office-365-short.md)] service, you need an account and to have selected your Dynamics 365 Customer Engagement (on-premises) instance as a data source. For more information about registering and connecting data sources, see [Microsoft Power BI](https://powerbi.microsoft.com/).  
   
@@ -60,11 +64,12 @@ Create rich, interactive reports and real-time visualizations in Common Data Ser
   
 5. Select **Save** to save your dashboard.  
   
-<a name="PBIthings"></a>   
+  
 ### Things you can do with Power BI embedded tiles on Common Data Service personal dashboards  
  To show the features available with a [!INCLUDE[pn_power_bi_for_office_365_short](../includes/pn-power-bi-for-office-365-short.md)] visualization, hover over the upper-right of the visualization to reveal the following capabilities.  
   
- ![Embed Power BI tile features](media/embed-powerbi-tile-features.png "Embed Power BI tile features")  
+   > [!div class="mx-imgBorder"] 
+   >![Embed Power BI tile features](media/embed-powerbi-tile-features.png "Embed Power BI tile features")  
   
 1. Click the **Refresh** button ![Refresh button](media/embed-pbi-tile-refresh-button.png "Refresh button") to refresh the tile’s underlying report data.  
   
@@ -74,7 +79,7 @@ Create rich, interactive reports and real-time visualizations in Common Data Ser
   
    ![Enlarged embedded Power BI tile](media/embed-power-bi-tile-features.png "Enlarged embedded Power BI tile")  
   
-<a name="sharePBIdashboard"></a>   
+ 
 ## Share a personal dashboard that contains Power BI visualizations  
  To share your personal dashboard that contains [!INCLUDE[pn_power_bi_for_office_365_short](../includes/pn-power-bi-for-office-365-short.md)] visualizations you must configure sharing in both Common Data Service and [!INCLUDE[pn_power_bi_for_office_365_short](../includes/pn-power-bi-for-office-365-short.md)],  and the user or group must have the same credentials and appropriate level of access  in both services. To share your personal dashboard in your app go to, **Dashboards**. In the list of dashboards, select the personal dashboard you want, and then click **SHARE DASHBOARD**. For more information about sharing a dashboard in [!INCLUDE[pn_power_bi_for_office_365_short](../includes/pn-power-bi-for-office-365-short.md)], see [Power BI: Share a dashboard with colleagues and others](https://powerbi.microsoft.com/documentation/powerbi-service-share-unshare-dashboard/).  
   
