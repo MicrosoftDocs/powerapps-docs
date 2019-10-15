@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 10/03/2019
+ms.date: 10/15/2019
 ms.author: mduelae
 ms.custom: ""
 ms.reviewer: ""
@@ -40,7 +40,7 @@ Create rich, interactive reports and real-time visualizations in Common Data Ser
 
 3. In the Add Power BI Dashboard dialog select the workspace and then select the [!INCLUDE[pn_power_bi_for_office_365_short](../includes/pn-power-bi-for-office-365-short.md)] dashboard that you want to embed in your dashboard in Dynamics 365 Customer Engagement (on-premises). Select **Enable for mobile** if you want to make the dashboard available for [!INCLUDE[pn_moca_full](../includes/pn-moca-full.md)] and [!INCLUDE[pn_Microsoft_Dynamics_CRM_Mobile](../includes/pn-dyn-365-phones.md)].
 
-    ![Add a Power BI tile to your personal dashboard](../basics/media/workspace-add-power-bi-dashboard.PNG "Add a Power BI tile to your personal dashboard") 
+    ![Add a Power BI tile to your personal dashboard](/media/workspace-add-power-bi-dashboard.png "Add a Power BI tile to your personal dashboard") 
 
 4. Select **Save** to save your dashboard.
  
@@ -64,13 +64,13 @@ Create rich, interactive reports and real-time visualizations in Common Data Ser
 ### Things you can do with Power BI embedded tiles on Dynamics 365 Customer Engagement (on-premises) personal dashboards  
  To show the features available with a [!INCLUDE[pn_power_bi_for_office_365_short](../includes/pn-power-bi-for-office-365-short.md)] visualization, hover over the upper-right of the visualization to reveal the following capabilities.  
   
- ![Embed Power BI tile features](../basics/media/embed-powerbi-tile-features.PNG "Embed Power BI tile features")  
+ ![Embed Power BI tile features](media/embed-powerbi-tile-features.png "Embed Power BI tile features")  
   
-1. Click the **Refresh** button ![Refresh button](../basics/media/embed-pbi-tile-refresh-button.PNG "Refresh button") to refresh the tile’s underlying report data.  
+1. Click the **Refresh** button ![Refresh button](media/embed-pbi-tile-refresh-button.png "Refresh button") to refresh the tile’s underlying report data.  
   
 2. Click the **Open in Power BI** button ![Open in Power BI button](../basics/media/open-in-power-bi.PNG "Open in Power BI button") to open the [!INCLUDE[pn_power_bi_for_office_365_short](../includes/pn-power-bi-for-office-365-short.md)] dashboard that contains the visualization  in a new browser tab.  
   
-3. Click the **Enlarge** button ![Enlarge tile](../basics/media/embed-pbi-tile-enlarge-button.PNG "Enlarge tile") to expand the visualization and increase the viewing area for the visualization, like the Sales Pipeline tile displayed here.  
+3. Click the **Enlarge** button ![Enlarge tile](/media/embed-pbi-tile-enlarge-button.png "Enlarge tile") to expand the visualization and increase the viewing area for the visualization, like the Sales Pipeline tile displayed here.  
   
    ![Enlarged embedded Power BI tile](../basics/media/embed-power-bi-tile-features.png "Enlarged embedded Power BI tile")  
   
