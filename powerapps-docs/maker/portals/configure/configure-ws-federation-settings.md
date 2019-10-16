@@ -13,7 +13,7 @@ ms.reviewer:
 
 # Configure WS-Federation provider settings for portals
 
-A single [!INCLUDE[pn-active-directory](../includes/pn-active-directory.md)] Federation Services server can be added (or another [WS-Federation](https://msdn.microsoft.com/library/bb498017.aspx)–compliant security token service) as an identity provider. In addition, a single [[!INCLUDE[pn-azure-shortest](../includes/pn-azure-shortest.md)] ACS](https://azure.microsoft.com/documentation/articles/active-directory-dotnet-how-to-use-access-control/) namespace can be configured as a set of individual identity providers. The settings for both AD FS and ACS are based on the properties of the [WsFederationAuthenticationOptions](https://msdn.microsoft.com/library/microsoft.owin.security.wsfederation.wsfederationauthenticationoptions.aspx) class.
+A single [!INCLUDE[pn-active-directory](../../../includes/pn-active-directory.md)] Federation Services server can be added (or another [WS-Federation](https://msdn.microsoft.com/library/bb498017.aspx)–compliant security token service) as an identity provider. In addition, a single [[!INCLUDE[pn-azure-shortest](../../../includes/pn-azure-shortest.md)] ACS](https://azure.microsoft.com/documentation/articles/active-directory-dotnet-how-to-use-access-control/) namespace can be configured as a set of individual identity providers. The settings for both AD FS and ACS are based on the properties of the [WsFederationAuthenticationOptions](https://msdn.microsoft.com/library/microsoft.owin.security.wsfederation.wsfederationauthenticationoptions.aspx) class.
 
 ## Create an AD FS relying party trust
 
@@ -47,7 +47,7 @@ Relying party WS-Federation Passive protocol URL: Enter https://portal.contoso.c
 
 Add the **Name ID** claim to the relying party trust:
 
-**Transform [!INCLUDE[pn-ms-windows-short](../includes/pn-ms-windows-short.md)] account name** to **Name ID** claim (Transform an Incoming Claim):
+**Transform [!INCLUDE[pn-ms-windows-short](../../../includes/pn-ms-windows-short.md)] account name** to **Name ID** claim (Transform an Incoming Claim):
 - Incoming claim type: Windows account name
 - Outgoing claim type: Name ID
 - Outgoing name ID format: Unspecified
@@ -65,7 +65,7 @@ Apply portal site settings referencing the above AD FS Relying Party Trust.
 > - Authentication/WsFederation/ADFS/Wtrealm - https://portal.contoso.com/
 > - Authentication/WsFederation/ADFS/Wreply - https://portal.contoso.com/signin-federation
 
-The **WS-Federation metadata** can be retrieved in **[!INCLUDE[pn-powershell-short](../includes/pn-powershell-short.md)]** by running the following script on the AD FS server:
+The **WS-Federation metadata** can be retrieved in **[!INCLUDE[pn-powershell-short](../../../includes/pn-powershell-short.md)]** by running the following script on the AD FS server:
 
 ```
 Import-Module adfs
@@ -103,9 +103,9 @@ Get-ADFSEndpoint -AddressPath /FederationMetadata/2007-06/FederationMetadata.xml
 |  Authentication/WsFederation/ADFS/ValidateIssuerSigningKey  |                                                                                                                                                         A Boolean that controls if validation of the System.IdentityModel.Tokens.SecurityKey that signed the securityToken xmlns=<http://ddue.schemas.microsoft.com/authoring/2003/5> is called.                                                                                                                                                          |
 |            Authentication/WsFederation/ADFS/Whr             |                                                                                                                                       Specifies a "whr" parameter in the identity provider redirect URL. For more information: [wsFederation](https://docs.microsoft.com/dotnet/framework/configure-apps/file-schema/windows-identity-foundation/wsfederation).                                                                                                                                       |
 
-## WS-Federation settings for [!INCLUDE[pn-azure-active-directory](../includes/pn-azure-active-directory.md)]
+## WS-Federation settings for [!INCLUDE[pn-azure-active-directory](../../../includes/pn-azure-active-directory.md)]
 
-The previous section describing AD FS can also be applied to [!INCLUDE[pn-azure-active-directory](../includes/pn-azure-active-directory.md)] ([[!INCLUDE[pn-azure-shortest](../includes/pn-azure-shortest.md)] AD](https://msdn.microsoft.com/library/azure/mt168838.aspx)), because [!INCLUDE[pn-azure-shortest](../includes/pn-azure-shortest.md)] AD behaves like a standard [WS-Federation](https://docs.microsoft.com/azure/active-directory/develop/active-directory-developers-guide) compliant security token service. To get started sign into the [[!INCLUDE[pn-azure-shortest](../includes/pn-azure-shortest.md)] Management Portal](https://msdn.microsoft.com/library/azure/hh967611.aspx#bkmk_azureportal) and create or select an existing directory. When a directory is available follow the instructions to [add an application](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications) to the directory.
+The previous section describing AD FS can also be applied to [!INCLUDE[pn-azure-active-directory](../../../includes/pn-azure-active-directory.md)] ([[!INCLUDE[pn-azure-shortest](../../../includes/pn-azure-shortest.md)] AD](https://msdn.microsoft.com/library/azure/mt168838.aspx)), because [!INCLUDE[pn-azure-shortest](../../../includes/pn-azure-shortest.md)] AD behaves like a standard [WS-Federation](https://docs.microsoft.com/azure/active-directory/develop/active-directory-developers-guide) compliant security token service. To get started sign into the [[!INCLUDE[pn-azure-shortest](../../../includes/pn-azure-shortest.md)] Management Portal](https://msdn.microsoft.com/library/azure/hh967611.aspx#bkmk_azureportal) and create or select an existing directory. When a directory is available follow the instructions to [add an application](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications) to the directory.
 
 1.  Under the **Applications** menu of the directory, select **Add**.
 2.  Choose **Add an application my organization is developing**.
@@ -123,7 +123,7 @@ The previous section describing AD FS can also be applied to [!INCLUDE[pn-azure-
     - This corresponds to the **AuthenticationType** site setting value.
 
 > [!Note]
-> A standard [!INCLUDE[pn-azure-shortest](../includes/pn-azure-shortest.md)] AD configuration only uses the following settings (with example values):
+> A standard [!INCLUDE[pn-azure-shortest](../../../includes/pn-azure-shortest.md)] AD configuration only uses the following settings (with example values):
 > - Authentication/WsFederation/ADFS/MetadataAddress - https://login.microsoftonline.com/01234567-89ab-cdef-0123-456789abcdef/federationmetadata/2007-06/federationmetadata.xml
 > - Authentication/WsFederation/ADFS/AuthenticationType - https://sts.windows.net/01234567-89ab-cdef-0123-456789abcdef/
 >   - Use the value of the **entityID** attribute in the root element of the Federation Metadata (open the **MetadataAddress URL** in a browser that is the value of the above site setting)

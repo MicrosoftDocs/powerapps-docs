@@ -18,7 +18,7 @@ In a portal application, an authenticated portal user is associated with either 
 The latest portal authentication experience allows portal users to sign in with their choice of a local contact membership provider based account or an external account based on [ASP.NET Identity](http://www.asp.net/identity).   
 
 - **Local authentication**: Local authentication is the common forms-based authentication uses the contact records of a Common Data Service environment for authentication. To build custom authentication experiences, developers can use the ASP.Net Identity API to create custom login pages and tools.
-- **External authentication**: External authentication is provided by the ASP.NET Identity API. In this case, account credentials and password management are handled by a third-party identity provider. This includes OpenID based providers such as Yahoo! and Google and OAuth 2.0 based providers such as Twitter, Facebook, and [!INCLUDE[cc-microsoft](../includes/cc-microsoft.md)]. Users sign up to the portal by selecting an external identity to register with the portal. After it is registered, an external identity has access to the same features as a local account. 
+- **External authentication**: External authentication is provided by the ASP.NET Identity API. In this case, account credentials and password management are handled by a third-party identity provider. This includes OpenID based providers such as Yahoo! and Google and OAuth 2.0 based providers such as Twitter, Facebook, and [!INCLUDE[cc-microsoft](../../../includes/cc-microsoft.md)]. Users sign up to the portal by selecting an external identity to register with the portal. After it is registered, an external identity has access to the same features as a local account. 
 
 Both local and external account registration can use invitation codes for sign up, as well as the email confirmation workflow. In addition, portal administrators may choose to enable or disable any combination of authentication options through portal site settings.
 
@@ -35,6 +35,3 @@ With open registration enabled, users are not required to provide an invitation 
 ### See also
 
 [Set authentication identity for a portal](set-authentication-identity.md)  
-[Define entity forms and custom logic within a portal](entity-forms-custom-logic.md)<br>
-[Configure a contact for use on a portal](configure-contacts.md)  
-[Invite contacts to your portals](invite-contacts.md)  

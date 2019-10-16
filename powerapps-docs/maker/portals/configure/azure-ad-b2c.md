@@ -464,7 +464,7 @@ For a complete list of other CORS settings, see [CORS protocol support](../add-w
 
 ### Step 5: [!include[Azure](../../../includes/pn-azure-shortest.md)] configuration
 
-1. Sign in to your [!include[Azure portal](../includes/pn-azure-portal.md)].
+1. Sign in to your [!include[Azure portal](../../../includes/pn-azure-portal.md)].
 2. Navigate to the **[!include[Azure](../../../includes/pn-azure-shortest.md)] AD B2C Tenant Management** blade.
 3. Navigate to **Settings** > **Sign-up or sign-in policies**. A list of available policies is displayed.
 4. Select the policy you want to edit.
