@@ -25,6 +25,9 @@ This topic contains device platform and web browser requirements, as well as lim
 | Android 5 or later |Android 7 or later with at least 4GB of RAM |
 | Windows 8.1 or later (PC only) |Windows 10 Fall Creators Update with at least 8 GB of RAM)|
 
+> [!NOTE]
+> We currently do not support new features on Windows platform for PowerApps app. Features such as improved Common Data Service capabilities and guest access are not be available for PowerApps app on this platform. We recommend using web player on Windows to leverage the full set of functionalities. Updates to PowerApps app for Windows platform will be announced in future.
+
 ## Supported browsers for running canvas apps
 
 | **Browser** | **Operating system** |
