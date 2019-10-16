@@ -26,7 +26,7 @@ This topic contains device platform and web browser requirements, as well as lim
 | Windows 8.1 or later (PC only) |Windows 10 Fall Creators Update with at least 8 GB of RAM)|
 
 > [!NOTE]
-> We currently do not support new features on Windows platform for PowerApps app. Features such as the Improved Common Data Service option and guest access are available on this platform. We recommend using a web player on Windows to leverage the full set of capabilities. Updates to the PowerApps app for Windows platform will be announced in future.
+> We currently don't support new features on Windows platform for PowerApps app. Features such as the Improved Common Data Service option and guest access are available on this platform. We recommend using a web player on Windows to leverage the full set of capabilities. Updates to the PowerApps app for Windows platform will be announced in future.
 
 ## Supported browsers for running canvas apps
 
