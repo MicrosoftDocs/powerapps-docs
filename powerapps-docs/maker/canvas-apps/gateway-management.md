@@ -37,7 +37,7 @@ With a gateway, you can connect to on-premises data over these connections:
 
 ## Install a gateway
 
-To install a gateway, follow the steps in [Install an on-premises data gateway](/data-integration/gateway/service-gateway-install).
+To install a gateway, follow the steps in [Install an on-premises data gateway](/data-integration/gateway/service-gateway-install). Install the gateway in standard mode because the _on-premises data gateway (personal mode)_ is available only for Power BI.
 
 ## View and manage gateway permissions
 
