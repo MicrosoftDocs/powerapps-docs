@@ -33,7 +33,7 @@ Create rich, interactive reports and real-time visualizations in Common Data Ser
 ## Create a personal Power BI dashboard
   Follow these steps to add a [!INCLUDE[pn_power_bi_for_office_365_short](../includes/pn-power-bi-for-office-365-short.md)] dashboard to your model-driven app. If you are connecting to the [!INCLUDE[pn_power_bi_for_office_365_short](../includes/pn-power-bi-for-office-365-short.md)] service, you need an account and to have selected your Common Data Service instance as a data source. For more information about registering and connecting data sources, see [Microsoft Power BI](https://powerbi.microsoft.com/).  
 
-1. Open you app and go to **Dashboards**.
+1. Open your app and go to **Dashboards**.
   
 2. Select **New** and then select **Power BI Dashboard**.  
 
@@ -50,7 +50,7 @@ Create rich, interactive reports and real-time visualizations in Common Data Ser
 4. Select **Save** to save your dashboard.
  
 ## Embed  Power BI tiles on your personal dashboard  
- Follow these steps to add one or more [!INCLUDE[pn_power_bi_for_office_365_short](../includes/pn-power-bi-for-office-365-short.md)] tiles to your personal dashboard. If you are connecting to the [!INCLUDE[pn_power_bi_for_office_365_short](../includes/pn-power-bi-for-office-365-short.md)] service, you need an account and to have selected your Dynamics 365 Customer Engagement (on-premises) instance as a data source. For more information about registering and connecting data sources, see [Microsoft Power BI](https://powerbi.microsoft.com/).  
+ Follow these steps to add one or more [!INCLUDE[pn_power_bi_for_office_365_short](../includes/pn-power-bi-for-office-365-short.md)] tiles to your personal dashboard. If you are connecting to the [!INCLUDE[pn_power_bi_for_office_365_short](../includes/pn-power-bi-for-office-365-short.md)] service, you need an account and to have selected your Common Data Service instance as a data source. For more information about registering and connecting data sources, see [Microsoft Power BI](https://powerbi.microsoft.com/).  
   
 1. In you app, go to **Dashboards**. 
   
