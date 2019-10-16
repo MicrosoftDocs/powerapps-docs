@@ -81,9 +81,9 @@ The Dynamics 365 apps content packs for Power BI allow you to easily access and 
   
 4. Select **OK**.  
   
-To learn more about how to add Power BI tiles to personal dashboards, see [Embed Power BI tiles on your personal dashboard](/dynamics365/customerengagement/on-premises/basics/add-edit-power-bi-visualizations-dashboard#embed--power-bi-tiles-on-your-personal-dashboard).  
+To learn more about how to add Power BI tiles to personal dashboards, see [Embed Power BI tiles on your personal dashboard](/powerapps/user/add-powerbi-dashboards#embed--power-bi-tiles-on-your-personal-dashboard).  
   
-To learn more about how to add Power BI dashboards to personal dashboards, see [Add a Power BI dashboard on your personal dashboard](/dynamics365/customerengagement/on-premises/basics/add-edit-power-bi-visualizations-dashboard).  
+To learn more about how to add Power BI dashboards to personal dashboards, see [Add or edit Power BI visualizations on your dashboard](/powerapps/user/add-powerbi-dashboards).  
   
 <a name="CRMOnline_PBIDesktop"></a>   
 ## Use Power BI Desktop to connect directly to your instance  
@@ -105,12 +105,12 @@ To learn more about how to add Power BI dashboards to personal dashboards, see [
   
 3. In the Get Data list, select **Dynamics 365 Online**.  
   
-4. Enter the Dynamics 365 OData endpoint URL. It should look similar to this URL, where *OrganizationName* is the name of your organization, and **v8.1** is the version. Select **OK**.  
+4. Enter the Dynamics 365 OData endpoint URL. It should look similar to this URL, where *OrganizationName* is the name of your organization, and **v9.0** is the version. Select **OK**.  
   
-    https://<em>OrganizationName</em>.api.crm.dynamics.com/api/data/*v8.1*  
+    https://<em>OrganizationName</em>.api.crm.dynamics.com/api/data/*v9.0*  
   
 > [!IMPORTANT]
-> For more information about the different endpoint versions, see [Web API URL and versions]( https://msdn.microsoft.com/library/gg334391.aspx#bkmk_url_and_versions).
+> For more information about the different endpoint versions, see [Web API URL and versions](/powerapps/developer/common-data-service/webapi/compose-http-requests-handle-errors#web-api-url-and-versions).
  
 > [!TIP]
 >  You can find your OData endpoint URL. Go to **Settings** > **Customizations** > **Developer Resources** and locate the URL under **Instance Web API**.  
