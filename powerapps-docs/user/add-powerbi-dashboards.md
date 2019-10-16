@@ -1,5 +1,5 @@
 ---
-title: "Add an appointment, email, phone call, notes or task activity to the Timeline in a Model-driven app| MicrosoftDocs"
+title: "Add or edit Power BI visualizations on your dashboard | MicrosoftDocs"
 ms.custom: ""
 author: mduelae
 manager: kvivek
@@ -20,7 +20,7 @@ search.app:
 
 # Add or edit Power BI visualizations on your dashboard
 
-Create rich, interactive reports and real-time visualizations in Common Data Service with [!INCLUDE[pn_power_bi_for_office_365_short](../includes/pn-power-bi-for-office-365-short.md)] dashboards and  tiles that you add  to your personal dashboards.  
+Create rich, interactive reports and real-time visualizations with [!INCLUDE[pn_power_bi_for_office_365_short](../includes/pn-power-bi-for-office-365-short.md)] dashboards and  tiles that you add  to your personal dashboards.  
   
 > [!NOTE]
 > To add [!INCLUDE[pn_power_bi_for_office_365_short](../includes/pn-power-bi-for-office-365-short.md)] visualizations to personal dashboards in your model-driven app, you must:  
@@ -68,8 +68,9 @@ Create rich, interactive reports and real-time visualizations in Common Data Ser
 5. Select **Save** to save your dashboard.  
   
   
-### Things you can do with Power BI embedded tiles in Common Data Service personal dashboards  
- To show the features available with a [!INCLUDE[pn_power_bi_for_office_365_short](../includes/pn-power-bi-for-office-365-short.md)] visualization, hover over the upper-right of the visualization to reveal the following capabilities.  
+### Things you can do with Power BI embedded tiles in personal dashboards 
+
+To show the features available with a [!INCLUDE[pn_power_bi_for_office_365_short](../includes/pn-power-bi-for-office-365-short.md)] visualization, hover over the upper-right of the visualization to reveal the following capabilities.  
   
    > [!div class="mx-imgBorder"] 
    >![Embed Power BI tile features](media/embed-powerbi-tile-features.png "Embed Power BI tile features")  
@@ -85,7 +86,7 @@ Create rich, interactive reports and real-time visualizations in Common Data Ser
   
  
 ## Share a personal dashboard that contains Power BI visualizations  
- To share your personal dashboard that contains [!INCLUDE[pn_power_bi_for_office_365_short](../includes/pn-power-bi-for-office-365-short.md)] visualizations you must configure sharing in both Common Data Service and [!INCLUDE[pn_power_bi_for_office_365_short](../includes/pn-power-bi-for-office-365-short.md)],  and the user or group must have the same credentials and appropriate level of access  in both services. To share your personal dashboard in your app go to, **Dashboards**. In the list of dashboards, select the personal dashboard you want, and then select **SHARE DASHBOARD**. For more information about sharing a dashboard in [!INCLUDE[pn_power_bi_for_office_365_short](../includes/pn-power-bi-for-office-365-short.md)], see [Power BI: Share a dashboard with colleagues and others](https://powerbi.microsoft.com/documentation/powerbi-service-share-unshare-dashboard/).  
+ To share your personal dashboard that contains [!INCLUDE[pn_power_bi_for_office_365_short](../includes/pn-power-bi-for-office-365-short.md)] visualizations you must configure sharing in both Common Data Service and [!INCLUDE[pn_power_bi_for_office_365_short](../includes/pn-power-bi-for-office-365-short.md)], and the user or group must have the same credentials and appropriate level of access  in both services. To share your personal dashboard in your app go to, **Dashboards**. In the list of dashboards, select the personal dashboard you want, and then select **SHARE DASHBOARD**. For more information about sharing a dashboard in [!INCLUDE[pn_power_bi_for_office_365_short](../includes/pn-power-bi-for-office-365-short.md)], see [Power BI: Share a dashboard with colleagues and others](https://powerbi.microsoft.com/documentation/powerbi-service-share-unshare-dashboard/).  
   
 <a name="privacy"></a>   
 ## Privacy notice  
