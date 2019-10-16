@@ -1,4 +1,4 @@
-﻿By enabling the embedding of Power BI tiles and dashboards, when a user embeds a Power BI tile or dashboard, that user’s [!INCLUDE[pn_azure_active_directory](pn-azure-active-directory.md)] authorization token for [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)] is used to authenticate with the Power BI service with an implicit grant, providing a seamless “single-sign on” experience for the end user.  
+﻿By enabling the embedding of Power BI tiles and dashboards, when a user embeds a Power BI tile or dashboard, that user’s [!INCLUDE[pn_azure_active_directory](pn-azure-active-directory.md)] authorization token for Common Data Service is used to authenticate with the Power BI service with an implicit grant, providing a seamless “single-sign on” experience for the end user.  
   
  An administrator can disable embedding of Power BI tiles and dashboards at any time to stop use of the [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)] authorization token for authenticating with Power BI service. Any existing tiles or dashboards will stop rendering for the end user.  
   
