@@ -139,6 +139,8 @@
         href: ./canvas-apps/app-from-sharepoint.md
       - name: From Excel
         href: ./canvas-apps/get-started-create-from-data.md
+      - name: From Azure SQL Database
+        href: ./canvas-apps/app-from-azure-sql-database.md
     - name: 2 - Make basic customizations
       items:
       - name: 1 - Galleries
