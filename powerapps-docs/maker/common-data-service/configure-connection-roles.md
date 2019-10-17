@@ -1,7 +1,7 @@
 ---
 title: "Configure connection roles | MicrosoftDocs"
 ms.custom: ""
-ms.date: 05/27/2018
+ms.date: 10/17/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -27,6 +27,19 @@ With Common Data Service you can define **connections** between entity records w
 When people set a connection between two records, they can also add a description and additional information such as start and end dates for the relationship. More information: [Create connections to define and view relationships between records](/dynamics365/customer-engagement/basics/create-connections-view-relationships-between-records)
 
 Anyone with write access to the **Connection Role** entity can establish which connection are available for people to use.
+
+> [!IMPORTANT]
+> For an entity to be available as a record type for a new or existing connection role, the **Enable connections** property must be enabled for the entity. 
+
+## Enable connection roles for an entity
+1. Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). 
+2. Expand **Data**, and then select **Entities**. 
+3. Select the entity that you want to enable for connection roles, and then on the command bar select **Settings**. 
+4. In the **Settings** pane expand the **Collaboration** area, and then select **Enable connections**.
+    > [!div class="mx-imgBorder"] 
+    > ![Enable connections setting](media/enable-connections.png "Enable connections setting")
+
+6. Select **Done**. 
 
 ## View connection roles
 
