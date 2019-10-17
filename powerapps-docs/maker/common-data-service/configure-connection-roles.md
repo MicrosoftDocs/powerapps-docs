@@ -47,10 +47,11 @@ There are a number of standard connection roles already configured in Common Dat
 
 ### Navigate to the settings area
 
-1. While viewing a model-driven app edit the URL to remove everything after `dynamics.com` and refresh the page.
-1. Navigate to **Settings** > **Business** > **Business Management** and then select **Connection Roles**.
+1. In a model-driven app select **Settings** > **Advanced Settings**. 
+2. Navigate to **Settings** > **Business** > **Business Management** and then select **Connection Roles**.
 
-![Connection roles in the Business Management settings](media/navigate-settings-connection-roles.png)
+   > [!div class="mx-imgBorder"] 
+    > ![Connection roles in the Business Management settings](media/navigate-settings-connection-roles.png "Connection roles in the Business Management settings")
 
 In this view you can see all the connection roles that are available for this environment and you can edit them here.
 
