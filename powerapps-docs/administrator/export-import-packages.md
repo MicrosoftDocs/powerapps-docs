@@ -1,4 +1,5 @@
 ---
+redirect_url: https://docs.microsoft.com/power-platform/admin/powerapps-gdpr-export-dsr
 title: Export and import resources | Microsoft Docs
 description: Learn how to export and import resources in PowerApps
 author: nimakms
