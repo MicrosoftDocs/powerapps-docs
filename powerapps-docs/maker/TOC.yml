@@ -61,6 +61,8 @@
         href: ../user/deactivate-activate-account-contact.md
       - name: Track your progress with dashboards and charts
         href: ../user/track-your-progress-with-dashboard-and-charts.md
+      - name: Add Power BI dashboards 
+        href: ../user/add-powerbi-dashboards.md
     - name: Search records
       items:
       - name: Compare search and find options

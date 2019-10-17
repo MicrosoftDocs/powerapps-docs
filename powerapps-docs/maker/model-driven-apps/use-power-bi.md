@@ -1,17 +1,12 @@
 ---
-title: "Use Power BI with Dynamics 365 apps | MicrosoftDocs"
+title: "Use Power BI with model-driven apps | MicrosoftDocs"
 ms.custom: 
-ms.date: 12/07/2018
+ms.date: 10/14/2019
 ms.reviewer: 
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: 
-  - Dynamics 365 for Customer Engagement  (online)
-  - Dynamics 365 for Customer Engagement  Version 9.x
-ms.assetid: 48997010-a47c-4e16-b7d2-f55d7a52ba19
-caps.latest.revision: 36
 author: Mattp123
 ms.author: matp
 manager: kvivek
@@ -26,8 +21,9 @@ search.app:
 The Power BI cloud service works with Common Data Service apps to provide a self-service analytics solution. Power BI automatically refreshes the app's data displayed. With Power BI Desktop or Microsoft Excel, Power Query for authoring reports and Power BI for sharing dashboards and refreshing data from model-driven apps, your users have a powerful way to work with your app's data.  
   
 <a name="PowerBIGetstarted"></a>   
-## Get started using Power BI with Dynamics 365 for Customer Engagement apps (online)  
- The Dynamics 365 apps content packs for Power BI allow you to easily access and analyze your sales, service, or marketing data.  
+## Get started using Power BI with model-driven apps  
+ 
+The Dynamics 365 apps content packs for Power BI allow you to easily access and analyze your data in model-driven apps in Dynamics 365 (Dynamics 365 Sales, Dynamics 365 Customer Service, Dynamics 365 Field Service, Dynamics 365 Marketing, Dynamics 365 Project Service Automation).  
   
  To create a Power BI dashboard using a content pack, follow these instructions.  
   
@@ -66,7 +62,7 @@ The Power BI cloud service works with Common Data Service apps to provide a self
   
 - [Download the Power BI Report Template for Connected Field Service for Dynamics 365 for Customer Engagement](http://download.microsoft.com/download/E/B/5/EB5ED97A-A36A-4CAE-8C04-333A1E463B4F/PowerBI%20Report%20Template%20for%20Connected%20Field%20Service%20for%20Microsoft%20Dynamics%20365.pbix)  
   
- For information about how to customize the content packs, see [Customize Dynamics 365 for Customer Engagement apps Power BI content packs](customize-power-bi-content-packs.md). 
+ For information about how to customize the content packs, see [Customize Power BI content packs](customize-power-bi-content-packs.md). 
   
 <a name="BPI_embed"></a>   
 ## Embed Power BI visualizations on personal dashboards  
@@ -85,9 +81,9 @@ The Power BI cloud service works with Common Data Service apps to provide a self
   
 4. Select **OK**.  
   
-To learn more about how to add Power BI tiles to personal dashboards, see [Embed  Power BI tiles on your personal dashboard  ](/dynamics365/customer-engagement/on-premises/basics/add-edit-power-bi-visualizations-dashboard.md#embed--power-bi-tiles-on-your-personal-dashboard).  
+To learn more about how to add Power BI tiles to personal dashboards, see [Embed Power BI tiles on your personal dashboard](/powerapps/user/add-powerbi-dashboards#embed--power-bi-tiles-on-your-personal-dashboard).  
   
-To learn more about how to add Power BI dashboards to personal dashboards, see [Add a Power BI dashboard on your personal dashboard](/dynamics365/customer-engagement/on-premises/basics/add-edit-power-bi-visualizations-dashboard.md).  
+To learn more about how to add Power BI dashboards to personal dashboards, see [Add or edit Power BI visualizations on your dashboard](/powerapps/user/add-powerbi-dashboards).  
   
 <a name="CRMOnline_PBIDesktop"></a>   
 ## Use Power BI Desktop to connect directly to your instance  
@@ -109,12 +105,12 @@ To learn more about how to add Power BI dashboards to personal dashboards, see [
   
 3. In the Get Data list, select **Dynamics 365 Online**.  
   
-4. Enter the Dynamics 365 OData endpoint URL. It should look similar to this URL, where *OrganizationName* is the name of your organization, and **v8.1** is the version. Select **OK**.  
+4. Enter the Dynamics 365 OData endpoint URL. It should look similar to this URL, where *OrganizationName* is the name of your organization, and **v9.0** is the version. Select **OK**.  
   
-    https://<em>OrganizationName</em>.api.crm.dynamics.com/api/data/*v8.1*  
+    https://<em>OrganizationName</em>.api.crm.dynamics.com/api/data/*v9.0*  
   
 > [!IMPORTANT]
-> For more information about the different endpoint versions, see [Web API URL and versions]( https://msdn.microsoft.com/library/gg334391.aspx#bkmk_url_and_versions).
+> For more information about the different endpoint versions, see [Web API URL and versions](/powerapps/developer/common-data-service/webapi/compose-http-requests-handle-errors#web-api-url-and-versions).
  
 > [!TIP]
 >  You can find your OData endpoint URL. Go to **Settings** > **Customizations** > **Developer Resources** and locate the URL under **Instance Web API**.  
