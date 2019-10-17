@@ -64,12 +64,12 @@ If you have created a component using the older version of the tooling and want 
    - Update the version tag in your `pcfproj` located within your PowerApps component framework project folder as follows:
 
       ```XML
-      <PackageReference Include="Microsoft.PowerApps.MSBuild.Pcf" Version="1.*"/>
+      <Packagereference Include="Microsoft.PowerApps.MSBuild.Pcf" Version="1.*"/>
       ```
    - Update the version tag in your `cdsproj` located within your solution project folder as follows:
 
       ```XML
-      <PackageReference Include="Microsoft.PowerApps.MSBuild.Solution" Version="1.*"/>
+      <Packagereference Include="Microsoft.PowerApps.MSBuild.Solution" Version="1.*"/>
       ```
 
       > [!NOTE] 
@@ -122,10 +122,6 @@ The build tools expect the component source to be exported using standard ES6 mo
 
 ## Using generated manifest typing file
 
-
-<!--from editor: Is the file located "under" or "in" the subfolder? -->
-
-
 Legacy projects require manually creating and editing an `inputsOutputs.d.ts` typing file, which is typically located under the `private_typing` subfolder. The PowerApps CLI tooling now automatically generates this file upon build. 
 
 Code-gen ensures that `type` definitions used in the component source code stay in sync with `types` defined in the component manifest file.
@@ -153,10 +149,6 @@ To use the new typing file:
 
    - Open the NuGet.Config file from **%APPDATA%\NuGet**. The feed from which the user is getting the error should be present in this file. 
    - Remove the feed from the NuGet.Config file or generate a PAT token and add it to the Nuget.Config file. For example:
-
-
-<!--from editor: Something below isn't indented right. On the live page, there's no code after User PAT. And the final three backticks are visible. -->
-
 
      ```XML
      <?xml version="1.0" encoding="utf-8"?>  

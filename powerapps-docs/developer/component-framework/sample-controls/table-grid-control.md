@@ -279,12 +279,12 @@ export class TSTableGrid
       RowRecordId
     );
     if (rowRecordId) {
-      let entityReference = this.contextObj.parameters.simpleTableGrid.records[
+      let entityreference = this.contextObj.parameters.simpleTableGrid.records[
         rowRecordId
-      ].getNamedReference();
+      ].getNamedreference();
       let entityFormOptions = {
-        entityName: entityReference.entityType!,
-        entityId: entityReference.id
+        entityName: entityreference.entityType!,
+        entityId: entityreference.id
       };
       this.contextObj.navigation.openForm(entityFormOptions);
     }
@@ -500,5 +500,5 @@ If the allocatedHeight is –1, that means there is no limit on height. The comp
 ### Related topics
 
 [Download sample components](https://go.microsoft.com/fwlink/?linkid=2088525)<br/>
-[PowerApps component framework API Reference](../reference/index.md)<br/>
-[PowerApps component framework Manifest Schema Reference](../manifest-schema-reference/index.md)
+[PowerApps component framework API reference](../reference/index.md)<br/>
+[PowerApps component framework manifest schema reference](../manifest-schema-reference/index.md)

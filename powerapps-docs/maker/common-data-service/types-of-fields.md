@@ -164,7 +164,7 @@ When image display is enabled for an entity, any records that don’t have an im
 > [!div class="mx-imgBorder"] 
 > ![Default entity image](../common-data-service/media/account-record-default-image.png "Default account entity image")
   
-People can choose the default image to upload a picture from their computer. Images must be less than 5120 KB and must be in one of the following formats:  
+People can choose the default image to upload a picture from their computer. Images must be less than 10 MB and must be in one of the following formats:  
   
 - jpg
 - jpeg
@@ -176,7 +176,9 @@ People can choose the default image to upload a picture from their computer. Ima
   
 When the image is uploaded, it will be converted to a .jpg format and all downloaded images will also use this format. If an animated .gif is uploaded, only the first frame is saved.  
   
-When an image is uploaded, it will be resized to a maximum size of 144 pixels by 144 pixels. People should resize or crop the images before they upload them so that they will display well using this size. All images are cropped to be square. If both sides of an image are smaller than 144 pixels, the image will be cropped to be a square with the dimensions of the smaller side.  
+When an image is uploaded, it will be resized as a "thumbnail" image to a maximum size of 144 pixels by 144 pixels. People should resize or crop the images before they upload them so that they will display well using this size. All images are cropped to be square. If both sides of an image are smaller than 144 pixels, the image will be cropped to be a square with the dimensions of the smaller side.  
+
+By default,	when an app user adds an image to display to a form or canvas app, the image displayed is the thumbnail image. To display a full image for a canvas app, see [Display a full-sized image on a canvas app form](../canvas-apps/display-full-image-on-form.md).
 
 ### Add an image field to an entity using the PowerApps site
 
@@ -188,7 +190,7 @@ When an image is uploaded, it will be resized to a maximum size of 144 pixels by
    - **Display name**. Enter a friendly name for the field. 
    - **Data type**. Select **Image**. 
    - **Primary image**. When selected, the primary image field becomes the image field for the entity. You can only have one primary image for each entity. 
-   - **Maximum image size**. The maximum file size that an app user can upload to the record. 10,240 KB is the default maximum size and 30 MB is the maximum size limit. 
+   - **Maximum image size**. The maximum file size that an app user can upload to the record. 10,240 KB is the default maximum size and 10 MB is the maximum size limit. 
    - **Can store full images**. When selected, in addition to the rescaled thumbnail image described earlier, the full image is stored when uploaded by the user for each record. Full size images are limited to 30 MB.
 
 ### Add image support for a form in a custom entity using solution explorer
@@ -199,7 +201,8 @@ When an image is uploaded, it will be resized to a maximum size of 144 pixels by
 5. Enter a **Display Name**, such as *Custom entity image*. 
 6. Complete the remaining fields as appropriate. Notice that the **Name**, **Field Requirement**, and **Searchable** fields can’t be changed. Select **Save and Close**. 
 7. On the entity definition next to the **Primary Image** property make sure the value is set to the custom image you created in the previous step. If it's not select it.  
-    ![Primary image property selected](media/primary-image-property.png)
+    > [!div class="mx-imgBorder"] 
+    > ![Primary image property selected](media/primary-image-property.png "Primary image property selected")
 
 8.	Open the form where you want image support, such as the entity main form. 
 9.	On the form editor ribbon, select **Form Properties**. 
