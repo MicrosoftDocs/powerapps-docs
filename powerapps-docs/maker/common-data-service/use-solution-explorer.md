@@ -93,11 +93,11 @@ In PowerApps, you can view the classic solution explorer by selecting **Solution
 
 - Canvas apps must be played after a solution is imported to authorize the connections.
 - Canvas app triggered flows are not available in solutions.
--	Canvas apps shared as co-owner to an AAD Security Group cannot be added to solutions. Unshare the app before adding it to a solution.
+-	Canvas apps shared as co-owner to an Azure Active Directory (AAD) security group can't be added to solutions. Unshare the app before adding it to a solution.
 -	Canvas apps won't display in the classic solution explorer. Use the modern experience.
-- Canvas apps are not currently mastered in CDS. Therefore the following limitations exist:
+- Canvas apps are not currently mastered in Common Data Service. Therefore the following limitations exist:
   - Database operations such as backup, restore, and copy are not supported for canvas apps and flows. These operations can corrupt canvas apps and flows.
-  - If a canvas app is packaged in a managed solution, cannot be edited and re-published in the target environment. Use unmanaged solutions if the apps require editing in the target environment. 
+  - If a canvas app is packaged in a managed solution, it can't be edited and re-published in the target environment. Use unmanaged solutions if the apps require editing in the target environment. 
   - Deleting a managed solution will not rollback to a different canvas app's version. Instead all versions of the app will be deleted.
   
 - Importing a solution containing a flow will not automatically create or associate required connections. The flow must be edited to fix the connections.
