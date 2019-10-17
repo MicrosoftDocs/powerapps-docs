@@ -21,7 +21,10 @@ All Common Data Service records have unique identifiers defined as GUIDs. These 
 
 <a name="BKMK_Declare"></a>
 
-## Create alternate keys  
+## Create alternate keys
+
+MAKING RANDOM CHANGES. HERE'S A GIF.
+![A particularly stupid GIF](https://media.giphy.com/media/3oz8xvMt8xNFkqZSWA/giphy.gif "For the record, it should be a hard 'g'")
 
 You can create alternate keys programmatically or by using the customizations tools. For more information about using the customization tools, see [Define alternate keys to reference CRM records](https://technet.microsoft.com/library/29e53691-0b18-4fde-a1d0-7490aa227898.aspx).  
 
