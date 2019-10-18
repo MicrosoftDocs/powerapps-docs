@@ -69,9 +69,9 @@ To access the created app again, visit the [PowerApps portal](https://make.power
 In this quickstart, you created an app using data from your Azure SQL database using the Azure portal. As a next step, customize the app with controls, images and logic to better suit your business needs.
 
 > [!div class="nextstepaction"]
-> [Customize apps in PowerApps](https://docs.microsoft.com/learn/modules/customize-apps-in-powerapps/)
+> [Design the canvas app interface in PowerApps](add-configure-controls)
 
 ## See also
 
 - [Add a data connection to a canvas app in PowerApps](add-data-connection#add-data-source)</br>
-- [Design the interface of a canvas app in PowerApps](add-configure-controls)
+- [Microsoft Learn: Customize apps in PowerApps](https://docs.microsoft.com/learn/modules/customize-apps-in-powerapps/)
