@@ -25,7 +25,7 @@ search.app:
   - D365CE
 ---
 # Configure a map on a form
-By default, the ability to display a map on the entity main form is configured for the account and contact entities. The Bing map control can be added to the system user entity. Maps can also be displayed with some entities included with model-driven apps in Dynamics 365, such as Dynamics 365 Sales and Dynamics 365 Customer Service. For example, the lead, quote, order, invoice, and competitor entities.  
+By default, the ability to display a map on the entity main form is configured for the account and contact entities. The Bing map control can be added to the system user entity. Maps can also be displayed with some entities included with model-driven apps in Dynamics 365, such as Dynamics 365 Sales and Dynamics 365 Customer Service. For example, the lead, quote, order, invoice, and competitor entities. The Bing maps control can't be used used with custom entities.  
 
 When enabled, the map displays the location specified in the primary address composite fields for the given record. 
 
