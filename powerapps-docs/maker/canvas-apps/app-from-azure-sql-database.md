@@ -28,11 +28,11 @@ In this topic, you'll use data in your Azure SQL tables to create an app with Po
 
 - Your browser must have pop-ups enabled.
 - You need an Azure SQL Database subscription.
-- A valid PowerApps license or a valid [30 day trial license](../signup-for-powerapps.md "Explore PowerApps for free for 30 days").
+- You need a valid PowerApps license or a valid [30 day trial license](../signup-for-powerapps.md).
 
 ## Generate an app
 
-1. Sign into [Azure Portal](https://portal.azure.com "Azure Portal").
+1. Sign into [Azure Portal](https://portal.azure.com).
 2. Navigate to your SQL Database.
 3. Select PowerApps from the left side menu.
 
