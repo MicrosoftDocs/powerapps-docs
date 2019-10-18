@@ -52,7 +52,7 @@ In this topic, you'll use data in your Azure SQL database to create an app with 
 6. Select a table from the dropdown that you wish to use to create the app.
 
     > [!NOTE]
-    > You can select only one table while creating canvas app from the Azure portal. You can customize the app with additional tables and other data sources by adding more data sources after the app is created.
+    > You can select only one table while creating canvas app from the Azure portal. Customize the app after the app is created to add more tables and other data sources by adding more data connections.
 
 7. Click **Create**.
 
@@ -73,5 +73,5 @@ In this quickstart, you created an app using data from your Azure SQL database u
 
 ## See also
 
-- [Add a data connection to a canvas app in PowerApps](add-data-connection#add-data-source)
+- [Add a data connection to a canvas app in PowerApps](add-data-connection#add-data-source)</br>
 - [Design the interface of a canvas app in PowerApps](add-configure-controls)
