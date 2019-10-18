@@ -22,6 +22,9 @@ The latest portal authentication experience allows portal users to sign in with 
 
 Both local and external account registration can use invitation codes for sign up, as well as the email confirmation workflow. In addition, portal administrators may choose to enable or disable any combination of authentication options through portal site settings.
 
+> [!NOTE]
+> Portal users must have an unique email address. If two or more contact records (including deactivated contact records) have the same email address, the contacts will not be able to authenticate on the portal.
+
 ## Account sign-up (registration)
 
 Portal administrators have several options for controlling account sign-up behavior. Open registration is the least restrictive sign-up configuration where the portal allows a user account to be registered by simply providing a user identity. Alternative configurations may require users to provide an invitation code or valid email address to register with the portal. Regardless of the registration configuration, both local and external accounts participate equally in the registration workflow. That is, users have the option to choose which type of account they want to register.
