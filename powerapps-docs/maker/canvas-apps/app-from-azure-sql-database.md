@@ -73,5 +73,5 @@ In this quickstart, you created an app using data from your Azure SQL database u
 
 ## See also
 
-- [Add a data connection to a canvas app in powerApps](add-data-connection#add-data-source)
-- [Design the interface of a canvas app in PoewrApps](add-configure-controls)
+- [Add a data connection to a canvas app in PowerApps](add-data-connection#add-data-source)
+- [Design the interface of a canvas app in PowerApps](add-configure-controls)
