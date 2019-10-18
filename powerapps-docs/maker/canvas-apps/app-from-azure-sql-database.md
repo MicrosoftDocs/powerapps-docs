@@ -43,27 +43,21 @@ In this topic, you'll use data in your Azure SQL database to create an app with 
     > [!NOTE]
     > If you don't have a PowerApps license, you'll see a blue information bar with a link to start a trial. When you select to start trial, you'll be taken to a new tab where you'll be signed up for a license. Once complete, go back to the Azure portal and refresh the blade to continue.
 
-4. Type a name for the app.
-    
-    > [!TIP]
-    > The name can only be a letter, digit, '-', '(', ')' or '_'. We suggest names such as “Site Inspection”, “Fundraiser” and “Budget Tracker”.
+4. Type a name for the app. The name can only be a letter, digit, '-', '(', ')' or '_'. We suggest names such as “Site Inspection”, “Fundraiser” and “Budget Tracker”.
 
 5. Provide your SQL authentication – your username is pre-filled (edit if incorrect), and fill in your password.
-6. Select a table from the dropdown that you wish to use to create the app.
-
-    > [!NOTE]
-    > You can select only one table while creating canvas app from the Azure portal. Customize the app after the app is created if you want to add more tables and other data sources by adding more data connections.
+6. Select a table from the dropdown that you wish to use to create the app. You can select only one table while creating canvas app from the Azure portal. You can customize the app after the app is created if you want to add more tables and other data sources by adding more data connections.
 
 7. Click **Create**.
 
 
     ![Specify the information for your app](./media/app-from-azure-sql-database/powerapps-create-page-azure-portal.png "Specify the information for your app")
 
-The [PowerApps studio](https://create.powerapps.com/studio/ "https://create.powerapps.com/studio/") opens in a new tab. If pop-up is blocked, update browser to allow pop-ups and retry. Once created, you'll have a 3 page app with data from your Azure SQL database.
+    The [PowerApps studio](https://create.powerapps.com/studio/) opens in a new tab. If pop-up is blocked, update browser to allow pop-ups and retry. Once created, you'll have a 3 page app with data from your Azure SQL database.
 
 ## Accessing your app
 
-To access the created app again, visit the [PowerApps portal](https://make.powerapps.com "https://make.powerapps.com"). The app is also listed in the PowerApps blade of the SQL database instance inside the Azure portal.
+To access the created app again, visit the [PowerApps portal](https://make.powerapps.com). The app is also listed in the PowerApps blade of the SQL database instance inside the Azure portal.
 
 ## Next steps
 In this quickstart, you created an app using data from your Azure SQL database using the Azure portal. As a next step, customize the app with controls, images and logic to better suit your business needs.
