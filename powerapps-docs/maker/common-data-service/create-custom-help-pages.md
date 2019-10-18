@@ -116,7 +116,25 @@ A user can easily either select element in order or go back to a specific one an
 
 # Solutions and Custom Help Pane content
 
-All help content is stored in a Help Page entity in CDS as part of your solution.  When you move your solution from one environment to another (e.g., test to production) you can define that your help records are exported and move with the solution.  This enables you to keep your help content in sync with features in your solution as it moves to different environments.  As a part of your solution, Custom Help Panes participate in all of the Solution ALM features. 
+All help content is stored in a Help Page component in CDS as part of your solution.  When you move your solution from one environment to another (e.g., test to production) you can define that your help records are exported and move with the solution.  This enables you to keep your help content in sync with features in your solution as it moves to different environments.  As a part of your solution, Custom Help Panes participate in all standard Solution ALM features.
+
+## Moving content via solutions
+
+By default, all new Help Pages will appear in the default solution. If you want to move your content to another environment, you will need to first add your existing Help Pages into an unmanaged solution before you can export them. To add a Help Page to an unmanaged solution:
+
+1. Navigate to your unmanaged solution.
+2. Select **Switch to classic** from the ellipses in the command bar.
+3. Select **Add Existing**.
+4. Select **Help Page**.
+5. Check the Help Pages that you want to add and select **Ok**.
+
+> [!NOTE]
+> Currently it is not possible to add existing Help Panes to an unmanaged solution in the modern solution explorer. Support for this functionality will come as custom help panes and guided tasks becomes GA.
+
+
+
+
+
 
 # Help page documentation automation
 
