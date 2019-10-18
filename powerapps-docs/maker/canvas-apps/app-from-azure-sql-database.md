@@ -18,7 +18,7 @@ search.app:
 
 [This topic is pre-release documentation and is subject to change.]
 
-In this topic, you'll use data in your Azure SQL tables to create an app with PowerApps in minutes. You’ll have a fully functional app with your data that you can customize to fit your business needs and share  on any device.
+In this topic, you'll use data in your Azure SQL database to create an app with PowerApps in minutes. You’ll have a fully functional app with your data that you can customize to fit your business needs and share  on any device.
 
 > [!IMPORTANT]
 > - This is a preview feature.
