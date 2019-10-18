@@ -29,7 +29,7 @@ The following site settings are used to control the deprecation of identity prov
 
 When a portal user tries to sign in, and you have marked at least one identity provider as deprecated, the deprecated account is shown on the page. In the following example, a Microsoft account is marked as deprecated.
 
-![Deprecated account example](media/gdpr-deprecate-account.png "Deprecated account example")
+![Deprecated account example](../media/gdpr-deprecate-account.png "Deprecated account example")
 
 The text on the screen for legacy authentication provider can be changed by using the following content snippet:
 
@@ -45,7 +45,7 @@ The text on the screen for legacy authentication provider can be changed by usin
 
 If a portal user signs in with a deprecated identity provider, the account migration screen displays a message to sign in with a non-deprecated identity provider. When the user signs in with the non-deprecated identity provider, the user account is associated with the new provider.
 
-![Account migration example](media/gdpr-account-migration.png "Account migration example")
+![Account migration example](../media/gdpr-account-migration.png "Account migration example")
 
 The message on the screen for account migration can be changed using the following content snippets:
 
@@ -78,4 +78,4 @@ You can configure a portal to disable local login by using the `Authentication/R
 The following field is added in the portal contact record to indicate if the local login is disabled for a user:
 - **Local Login Disabled**: Indicates that the contact can no longer sign in to the portal using the local account. By default, it is set to **No**. This field is set to **Yes** if a user’s account is migrated to a non-deprecated identity provider and local login is disabled.
 
-    ![Local login disabled](media/local-login-disabled.png "Local login disabled")
+    ![Local login disabled](../media/local-login-disabled.png "Local login disabled")
