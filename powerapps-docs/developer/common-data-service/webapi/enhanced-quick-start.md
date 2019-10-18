@@ -35,7 +35,7 @@ Enabling this requires three steps:
 
 1. [Add Reference to System.Configuration to the Visual Studio project](#add-reference-to-systemconfiguration-to-the-visual-studio-project)
 1. [Edit the application configuration file](#edit-the-application-configuration-file)
-1. [Add using statement to Program.cs](#add-using-statement-to-programcs)
+1. [Add using directive to Program.cs](#add-using-directive-to-programcs)
 
 
 ### Add Reference to System.Configuration to the Visual Studio project
@@ -76,9 +76,9 @@ This creates a connection string that can be referenced by name, in this case `C
 
 Edit the connection string `Url`, `Username` and `Password` values in the `connectionString` to match what you need to connect to your Common Data Service environment.
 
-### Add using statement to Program.cs
+### Add using directive to Program.cs
 
-At the top of your Program.cs file, add this using statement:
+At the top of your Program.cs file, add this using directive:
 
 ```csharp
 using System.Configuration;
@@ -96,7 +96,7 @@ These helpers are also used in the [SampleHelper.cs](https://github.com/Microsof
     > [!NOTE]
     > The name of the class will determine how you will reference these helper properties and methods within your `Program.cs`. The remaining instructions will expect you named it `SampleHelpers`, so remember if you named it something else.
 
-1. Add the following `using` statements:
+1. Add the following `using` directives:
 
     ```csharp
     using Microsoft.IdentityModel.Clients.ActiveDirectory;
@@ -343,7 +343,7 @@ In your Visual Studio project perform the following steps:
 
     In this way the `Program` class in `ProgramMethods.cs` file is just an extension of the original `Program` class in the `Program.cs` file. 
 
-1. Add the following using statements to the top of the `ProgramMethods.cs` file.
+1. Add the following using directives to the top of the `ProgramMethods.cs` file.
 
     ```csharp
     using Newtonsoft.Json.Linq;
