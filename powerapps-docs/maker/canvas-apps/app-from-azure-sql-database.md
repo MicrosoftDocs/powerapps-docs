@@ -16,7 +16,13 @@ search.app:
 ---
 # Generate a canvas app from Azure SQL Database
 
+[This topic is pre-release documentation and is subject to change.]
+
 In this topic, you'll use data in your Azure SQL tables to create an app with PowerApps in minutes. You’ll have a fully functional app with your data that you can customize to fit your business needs and share  on any device.
+
+> [!IMPORTANT]
+> - This is a preview feature.
+> - A preview feature may have limited availability and restricted functionality. A preview feature is available before an official release so that customers can get early access and provide feedback.
 
 ## Prerequisites
 
