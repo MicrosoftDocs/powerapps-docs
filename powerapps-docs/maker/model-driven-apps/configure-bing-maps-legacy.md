@@ -25,7 +25,7 @@ search.app:
 # Configure a map on a form
 By default, the Bing maps control is configured on the main form for both the account and contact entities, which provides the ability to display a map on entity records. Although not configured by default, the Bing maps control can be added to the system user entity. The Bing maps control can also be used with some entities included with model-driven apps in Dynamics 365, such as Dynamics 365 Sales and Dynamics 365 Customer Service. For example, the lead, quote, order, invoice, and competitor entities. The Bing maps control can't be used with custom entities.  
 
-When enabled, the map displays the location specified in the primary address composite fields for the given record. 
+When enabled, the map displays the location specified in the address composite fields for the given record. 
 
 > [!div class="mx-imgBorder"] 
 > ![Bing map control in an app](media/bing-map-example.png "Bing map control in an app")
