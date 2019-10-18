@@ -24,6 +24,9 @@ search.app:
 
 `executionContext.getEventArgs().preventDefault();`
 
+>[!IMPORTANT]
+>When you use `preventDefault` on a form with business process flows, the stage navigation may throw this error: **Unable to save form data due to web resource registered onSave invoking preventDefault**. Use `OnPreStageChange` to prevent this error. 
+
 ### Related topics
 
 [getSaveMode](getSaveMode.md)
