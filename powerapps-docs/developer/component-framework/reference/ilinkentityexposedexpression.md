@@ -5,7 +5,7 @@ keywords:
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -13,9 +13,7 @@ ms.topic: "article"
 ms.assetid: e9a70a4c-71e6-4a06-bcc9-6da37cdf52c1
 ---
 
-# ILinkEntityExposedExpression
-
-[!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
+# LinkEntityExposedExpression
 
 [!INCLUDE [ilinkentityexposedexpression-description](includes/ilinkentityexposedexpression-description.md)]
 
@@ -57,5 +55,5 @@ The `alias` for the link-entity relationship.
 
 ### Related topics
 
-[PowerApps component framework API Reference](../reference/index.md)<br/>
-[PowerApps component framework Overview](../overview.md)
+[PowerApps component framework API reference](../reference/index.md)<br/>
+[PowerApps component framework overview](../overview.md)

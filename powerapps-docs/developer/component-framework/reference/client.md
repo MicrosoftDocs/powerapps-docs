@@ -5,7 +5,7 @@ keywords:
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -15,9 +15,11 @@ ms.assetid: 4ce41c82-bf4a-4d34-9344-5311c24d76de
 
 # Client
 
-[!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
-
 [!INCLUDE [client-description](includes/client-description.md)]
+
+## Syntax
+
+`context.client;`
 
 ## Available for 
 
@@ -41,5 +43,5 @@ Disables the scrolling capabilities for the components.
 
 ### Related topics
 
-[PowerApps component framework API Reference](../reference/index.md)<br/>
-[PowerApps component framework Overview](../overview.md)
+[PowerApps component framework API reference](../reference/index.md)<br/>
+[PowerApps component framework overview](../overview.md)

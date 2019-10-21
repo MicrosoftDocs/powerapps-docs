@@ -6,8 +6,8 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: 
-ms.date: 03/07/2018
+ms.reviewer: tapanm
+ms.date: 10/15/2019
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -24,6 +24,9 @@ This topic contains device platform and web browser requirements, as well as lim
 | iOS 9.3 or later |iOS 10 or later with at least 2GB of RAM |
 | Android 5 or later |Android 7 or later with at least 4GB of RAM |
 | Windows 8.1 or later (PC only) |Windows 10 Fall Creators Update with at least 8 GB of RAM)|
+
+> [!NOTE]
+> We currently don't support new features on Windows platform for PowerApps app. Features such as the Improved Common Data Service option and guest access are not available on this platform. We recommend using a web player on Windows to leverage the full set of capabilities. Updates to the PowerApps app for Windows platform will be announced in future.
 
 ## Supported browsers for running canvas apps
 
@@ -102,3 +105,28 @@ This list identifies all services to which PowerApps Studio talks and their usag
 ## Size limits
 
 You can find information about size limits on text, hyperlinks, images, and media in [Data types](functions/data-types.md#text-hyperlink-image-and-media).
+
+## PowerApps per app plan
+
+PowerApps per app plan allows individual users to run 2 applications on a single portal for a specific business scenario based on the full capabilities of PowerApps. This plan provides an easy way for users to get started with the platform before broader scale adoption.
+
+After an admin allocates PowerApps per app plan to an environment, they're assigned to users by default when app is shared with them.
+
+Follow these steps to turn off the assigning per app plans for users when an app is shared with them:
+
+- Choose the **App**.
+- Select **Settings**.
+- Change the **Auto assign per app passes** toggle under **Pass assignment**.
+
+The **Auto assign per app passes** toggle appears in all app setting.
+
+> [!NOTE]
+> Disabling the per app plan is currently available for only canvas apps.  Model-driven apps and Portals will have this ability in the future.
+
+### App Settings
+
+![Canvas app settings](./media/limits-and-config/app_settings.png "Canvas app settings")
+
+### Pass assignment
+
+![Canvas app settings pass assignment](./media/limits-and-config/app_settings_pass_assignment.png "Canvas app settings pass assignment")

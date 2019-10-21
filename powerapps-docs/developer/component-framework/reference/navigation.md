@@ -5,7 +5,7 @@ keywords:
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -14,8 +14,6 @@ ms.assetid: af1bf8bb-380f-45db-8bbc-b7d4a18e5623
 ---
 
 # Navigation
-
-[!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
 
 [!INCLUDE [navigation-description](includes/navigation-description.md)]
 
@@ -35,8 +33,11 @@ Model-driven apps
 |[openUrl](navigation/openurl.md)|[!INCLUDE [openurl-description](navigation/includes/openurl-description.md)]|
 |[openWebResource](navigation/openwebresource.md)|[!INCLUDE [openwebresource-description](navigation/includes/openwebresource-description.md)]|
 
+## Example
+
+To learn more about how to implement navigation methods, see [Navigation API component](../sample-controls/navigation-api-control.md)
 
 ### Related topics
 
-[PowerApps component framework API Reference](../reference/index.md)<br/>
-[PowerApps component framework Overview](../overview.md)
+[PowerApps component framework API reference](../reference/index.md)<br/>
+[PowerApps component framework overview](../overview.md)

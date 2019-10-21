@@ -1,12 +1,12 @@
 ---
 title: "Sample: Share records using GrantAccess, ModifyAccess and RevokeAccess (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "This sample shows how to share a record using grant, modify and revoke access mesage." # 115-145 characters including spaces. This abstract displays in the search result.
+description: "This sample shows how to share a record using grant, modify and revoke access message." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
 ms.service: powerapps
 ms.topic: "samples"
-author: "brandonsimons" # GitHub ID
+author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 

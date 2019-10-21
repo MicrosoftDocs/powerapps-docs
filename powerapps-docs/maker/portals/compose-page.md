@@ -6,14 +6,12 @@ manager: shujoshi
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 09/02/2019
+ms.date: 10/07/2019
 ms.author: shjais
 ms.reviewer:
 ---
 
 # Compose a page
-
-[!include[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 After adding the required webpages and managing their hierarchy in the sitemap, you can add various components. The WYSIWYG editor allows you to add and edit the required components on the canvas easily. You can add and edit the following components on the canvas:
 
@@ -29,9 +27,12 @@ After adding the required webpages and managing their hierarchy in the sitemap, 
     - List
     - Breadcrumb
 
+> [!NOTE]
+> If you customize your portal using PowerApps Portals Studio, the website users would notice a performance impact. We recommended you to do the changes during non-peak hours on a live portal. 
+
 ## Use the WYSIWYG editor
 
-1.  [Edit the portal](manage-existing-portals.md#edit) to open it in the portal designer.  
+1.  [Edit the portal](manage-existing-portals.md#edit) to open it in PowerApps Portals Studio.  
 
 2.  Select the page on which you want to add the component.
 
@@ -58,7 +59,7 @@ After adding the required webpages and managing their hierarchy in the sitemap, 
 
 Sections allow you to define a structure for your page and arrange portal components accordingly. Once you add sections to your page, you can add portal components inside the sections as per the requirement.
 
-1.	[Edit the portal](manage-existing-portals.md#edit) to open it in the portal designer.
+1.	[Edit the portal](manage-existing-portals.md#edit) to open it in PowerApps Portals Studio.
 
 2.	Select the page on which you want to add a section.
 
@@ -109,7 +110,7 @@ You can add the following components on a webpage:
 
 ### Add text box
 
-1.  [Edit the portal](manage-existing-portals.md#edit) to open it in the portal designer.  
+1.  [Edit the portal](manage-existing-portals.md#edit) to open it in PowerApps Portals Studio.  
 
 2.  Select the page on which you want to add the component.
 
@@ -138,7 +139,7 @@ You can add the following components on a webpage:
 
 ### Add image
 
-1.  [Edit the portal](manage-existing-portals.md#edit) to open it in the portal designer.  
+1.  [Edit the portal](manage-existing-portals.md#edit) to open it in PowerApps Portals Studio.  
 
 2.  Select the page on which you want to add the component.
 
@@ -175,7 +176,7 @@ You can add the following components on a webpage:
 
 ### Add IFrame
 
-1.  [Edit the portal](manage-existing-portals.md#edit) to open it in the portal designer.  
+1.  [Edit the portal](manage-existing-portals.md#edit) to open it in PowerApps Portals Studio.  
 
 2.  Select the page on which you want to add the component.
 
@@ -201,9 +202,9 @@ You can add the following components on a webpage:
 
 ### Add form
 
-Form is a data-driven configuration that you use to add a form to collect data in the portal without the need for a developer to surface the form in the portal. [Forms are created in Common Data Service](https://docs.microsoft.com/en-us/powerapps/maker/model-driven-apps/form-designer-overview) and you can use them into webpages in the portal or in conjunction with lists to build out complete web applications.  
+Form is a data-driven configuration that you use to add a form to collect data in the portal without the need for a developer to surface the form in the portal. [Forms are created in Common Data Service](https://docs.microsoft.com/powerapps/maker/model-driven-apps/form-designer-overview) and you can use them into webpages in the portal or in conjunction with lists to build out complete web applications.  
 
-1.  [Edit the portal](manage-existing-portals.md#edit) to open it in the portal designer.  
+1.  [Edit the portal](manage-existing-portals.md#edit) to open it in PowerApps Portals Studio.  
 
 2.  Select the page on which you want to add the component.
 
@@ -232,7 +233,7 @@ Form is a data-driven configuration that you use to add a form to collect data i
 
         - **Edit**: Indicates the form should edit an existing record.
 
-        - **Read only**: Indicates the form should display an existing record’s noneditable form.
+        - **Read only**: Indicates the form should display an existing record’s non-editable form.
 
         > [!NOTE]
         > The default option for **Edit** and **ReadOnly** modes is set as Query String Parameter Name passed as ID in URL. To change these values, you need to open Portal Management app and update the form properties.
@@ -249,16 +250,16 @@ Form is a data-driven configuration that you use to add a form to collect data i
 
     - **Show captcha for authenticated users**: Displays captcha to authenticated users.
 
-    - **Enable entity permissions**: Entity permissions to be considered for the form. By default, it is not selected. If selected, explicit permissions are required for any user to access the form. More information: [Entity permission](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/assign-entity-permissions)
+    - **Enable entity permissions**: Entity permissions to be considered for the form. By default, it is not selected. If selected, explicit permissions are required for any user to access the form. More information: [Entity permission](https://docs.microsoft.com/dynamics365/customer-engagement/portals/assign-entity-permissions)
 
         > [!div class=mx-imgBorder]
         > ![form properties](media/form-props.png "Form properties")
 
 ### Add list
 
-List is a data-driven configuration that you use to add a webpage that will render a list of records without the need for a developer to surface the grid in the portal. Lists use [Common Data Service views](https://docs.microsoft.com/en-us/powerapps/maker/model-driven-apps/create-and-edit-views) to display records on the portal.  
+List is a data-driven configuration that you use to add a webpage that will render a list of records without the need for a developer to surface the grid in the portal. Lists use [Common Data Service views](https://docs.microsoft.com/powerapps/maker/model-driven-apps/create-and-edit-views) to display records on the portal.  
 
-1.  [Edit the portal](manage-existing-portals.md#edit) to open it in the portal designer.  
+1.  [Edit the portal](manage-existing-portals.md#edit) to open it in PowerApps Portals Studio.  
 
 2.  Select the page on which you want to add the component.
 
@@ -295,14 +296,14 @@ List is a data-driven configuration that you use to add a webpage that will rend
 
     - **Enable search in entity list**: Allows a user to search records in the list.
 
-    - **Enable entity permissions**: Entity permissions to be considered for the list. By default, it is not selected. If selected, explicit permissions are required for any user to access the form. More information: [Entity permission](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/assign-entity-permissions)  
+    - **Enable entity permissions**: Entity permissions to be considered for the list. By default, it is not selected. If selected, explicit permissions are required for any user to access the form. More information: [Entity permission](https://docs.microsoft.com/dynamics365/customer-engagement/portals/assign-entity-permissions)  
 
     > [!div class=mx-imgBorder]
     > ![list properties](media/list-props.png "List properties")
 
 ### Add breadcrumb
 
-1.  [Edit the portal](manage-existing-portals.md#edit) to open it in the portal designer.  
+1.  [Edit the portal](manage-existing-portals.md#edit) to open it in PowerApps Portals Studio.  
 
 2.  Select the page on which you want to add the component.
 
@@ -314,11 +315,11 @@ List is a data-driven configuration that you use to add a webpage that will rend
 
 ## Add a custom menu
 
-By default, the menu on the website is created automatically based on the hierarchy of the webpages. It is called the **default** menu. To create a custom menu, you must create the web link set in the Portal Management app. More information: [Manage web links](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/manage-web-links)
+By default, the menu on the website is created automatically based on the hierarchy of the webpages. It is called the **default** menu. To create a custom menu, you must create the web link set in the Portal Management app. More information: [Manage web links](https://docs.microsoft.com/dynamics365/customer-engagement/portals/manage-web-links)
 
 After you create the web link set:
 
-1.	[Edit the portal](manage-existing-portals.md#edit) to open it in the portal designer.
+1.	[Edit the portal](manage-existing-portals.md#edit) to open it in PowerApps Portals Studio.
 
 2.	Select the header component. 
 
@@ -340,6 +341,6 @@ The source code is displayed in the **Code Editor** pane at the bottom of the sc
 > ![code editor](media/code-editor.png "Code editor") 
 
 > [!NOTE]
-> You can also add Liquid tags in source code editor for advanced configuration. More information: [Work with Liquid templates](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/custom-templates-dynamic-content)
+> You can also add Liquid tags in source code editor for advanced configuration. More information: [Work with Liquid templates](https://docs.microsoft.com/dynamics365/customer-engagement/portals/custom-templates-dynamic-content)
 
 

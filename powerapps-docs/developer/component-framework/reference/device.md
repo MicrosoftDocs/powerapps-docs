@@ -5,7 +5,7 @@ keywords:
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -15,13 +15,18 @@ ms.assetid: a0f9abc5-c605-4433-bf5a-f8253eeeda3b
 
 # Device
 
-[!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
-
 [!INCLUDE [device-description](includes/device-description.md)]
+
+> [!IMPORTANT]
+> If you want to use the device API methods, you need to declare the usage of these method in [feature-usage](../manifest-schema-reference/feature-usage.md) node in the manifest file.
+
+## Syntax
+
+`context.device`
 
 ## Available for 
 
-Model-driven apps
+Model-driven apps and canvas apps (experimental preview)
 
 ## Methods
 
@@ -36,5 +41,5 @@ Model-driven apps
 
 ### Related topics
 
-[PowerApps component framework API Reference](../reference/index.md)<br/>
-[PowerApps component framework Overview](../overview.md)
+[PowerApps component framework API reference](../reference/index.md)<br/>
+[PowerApps component framework overview](../overview.md)

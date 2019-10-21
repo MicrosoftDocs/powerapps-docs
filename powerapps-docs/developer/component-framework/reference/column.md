@@ -5,7 +5,7 @@ keywords:
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -15,13 +15,11 @@ ms.assetid: db4be085-c31e-4045-8834-b0f45c569964
 
 # Column
 
-[!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
-
 [!INCLUDE [column-description](includes/column-description.md)]
 
 ## Available for 
 
-Model-driven apps
+Model-driven apps and canvas apps (experimental preview)
 
 ## Properties
 
@@ -82,5 +80,5 @@ Customized column width ratios.
 
 ### Related topics
 
-[PowerApps component framework API Reference](../reference/index.md)<br/>
-[PowerApps component framework Overview](../overview.md)
+[PowerApps component framework API reference](../reference/index.md)<br/>
+[PowerApps component framework overview](../overview.md)

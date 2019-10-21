@@ -6,7 +6,7 @@ manager: shujoshi
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/18/2019
+ms.date: 10/07/2019
 ms.author: shjais
 ms.reviewer:
 ---
@@ -49,5 +49,38 @@ Sometimes the database creation can take time and the correct status might not r
 > [!div class=mx-imgBorder]
 > ![Data not ready](media/data-not-ready.png "Data not ready")
 
-If you keep getting the create database prompt or your data isn't quite ready prompt, you can try refreshing the PowerApps home page before selecting the Portal from blank (Preview) tile.
+If you keep getting the create database prompt or your data isn't quite ready prompt, you can try refreshing the PowerApps home page before selecting the **Portal from blank** tile.
+
+## I'm getting an error that I don't have required permissions to create Azure Active Directory applications.
+
+When you create a portal, portal as a new application is registered in Azure Active Directory associated with the tenant. If you don't have sufficient permissions to register an application with your Azure Active Directory tenant, you'll see an error as follows:
+
+> [!div class=mx-imgBorder]
+> ![Azure Active Directory error](media/azure-ad-error.png "Azure Active Directory error")
+
+To create and register applications in Azure Active Directory, you must contact your tenant administrator to turn on the **App registrations** setting for your tenant. For information, see [Required permissions](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal#required-permissions).
+
+## I'm getting an error that portal creation is blocked in this tenant by global administrator
+
+If portal creation is blocked in a tenant by your global administrator, you'll see an error as follows:
+
+> [!div class=mx-imgBorder]
+> ![Portal creation blocked error](media/portal-create-blocked-error.png "Portal creation blocked error")
+
+You must contact your global administrator to enable creation of portals by non-administrators also.
+
+If you are a global administrator, you must disable the `disablePortalsCreationByNonAdminUsers` tenant level setting through PowerShell. Run the following command in a PowerShell window (run PowerShell as an administrator).
+
+```
+Set-TenantSettings -RequestBody @{ "disablePortalsCreationByNonAdminUsers" = $false }
+```
+
+More information: [Disable portal creation in a tenant](create-portal.md#disable-portal-creation-in-a-tenant)
+
+## I'm getting an error that I don't have appropriate license to access this website.
+
+Internal users of an organization that use portals for accessing authenticated pages require that licenses be assigned to the environment that a portal is connected to. You  can read more about the user rights for portals for internal users [here](https://docs.microsoft.com/en-us/power-platform/admin/powerapps-flow-licensing-faq#can-you-clarify-the-use-rights-to-portals-for-internal-users). When an environment does not have licenses assigned, internal users will get an error such as follows:
+
+> [!div class=mx-imgBorder]
+> ![Portal login error](media/portal-login-error.png "Portal login error")
 

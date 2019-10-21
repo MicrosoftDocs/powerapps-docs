@@ -1,4 +1,3 @@
-# This TOC is a work in progress. The specific location of items is not locked down
 - name: Common Data Service
   href: ../../maker/common-data-service/data-platform-intro.md
 - name: Developer overview
@@ -15,8 +14,8 @@
     href: webapi/index.md
   - name: Use Organization Service
     href: org-service/index.md
-  - name: Add and remove sample data
-    href: sample-data.md
+  - name: Create your own actions
+    href: custom-actions.md
   - name: Use FetchXML to query data
     href: use-fetchxml-construct-query.md
     items:
@@ -60,6 +59,8 @@
     href: impersonate-another-user.md
   - name: Best Practices
     href: best-practices/work-with-data/index.md
+  - name: Add and remove sample data
+    href: sample-data.md    
 - name: Apply business logic using code
   href: apply-business-logic-with-code.md
   items:
@@ -155,13 +156,13 @@
       href: work-data-azure-solution.md
     - name: Work with event data in your Azure Event Hub solution
       href: work-event-data-azure-event-hub-solution.md
-    - name: Configure Azure integration with Common Data Service for App
+    - name: Configure Azure integration with Common Data Service
       href: configure-azure-integration.md
     - name: Write a custom Azure-aware plug-in
       href: write-custom-azure-aware-plugin.md
     - name: Write a listener application for a Azure solution
       href: write-listener-application-azure-solution.md
-    - name: "Tutorial: Configure Azure (SAS) for integration with Customer Engagement"
+    - name: "Tutorial: Configure Azure (SAS) for integration with Common Data Service"
       href: walkthrough-configure-azure-sas-integration.md
     - name: "Tutorial: Register an Azure-aware plug-in using the Plug-in Registration Tool"
       href: walkthrough-register-azure-aware-plug-in-using-plug-in-registration-tool.md
@@ -267,6 +268,8 @@
       href: create-auto-number-attributes.md
     - name: Multi-Select Picklist attributes
       href: multi-select-picklist.md
+    - name: File attributes
+      href: file-attributes.md
     - name: Image attributes
       href: image-attributes.md
     - name: Define custom state model transitions
@@ -411,6 +414,8 @@
     href: discovery-service.md
 - name: Best practices
   href: best-practices/index.md
+- name: Online Management API
+  href: online-management-api/overview.md
 - name: Samples
   items:
   - name: Web API
@@ -420,7 +425,7 @@
 - name: Resources
   items:
   - name: Developer resources page
-    href: developer-resources-page.md
+    href: view-download-developer-resources.md
   - name: Developer tools
     href: developer-tools.md
     items:

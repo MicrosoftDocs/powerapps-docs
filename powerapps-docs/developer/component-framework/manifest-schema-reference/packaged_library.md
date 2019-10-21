@@ -5,7 +5,7 @@ keywords:
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -14,8 +14,6 @@ ms.assetid: 41c50db2-3096-4990-ac2b-e702c161bf4f
 ---
 
 # packaged_library element
-
-[!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
 
 [!INCLUDE [packaged_library-description](includes/packaged_library-description.md)]
 
@@ -47,6 +45,6 @@ Model-driven apps
 
 ### Related topics
 
-[PowerApps component framework Manifest Schema Reference](index.md)<br/>
-[PowerApps component framework API Reference](../reference/index.md)<br/>
-[PowerApps component framework Overview](../overview.md)
+[PowerApps component framework manifest schema reference](index.md)<br/>
+[PowerApps component framework API reference](../reference/index.md)<br/>
+[PowerApps component framework overview](../overview.md)

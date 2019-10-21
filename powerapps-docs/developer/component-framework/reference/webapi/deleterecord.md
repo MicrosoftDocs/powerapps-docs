@@ -5,7 +5,7 @@ keywords:
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -23,7 +23,7 @@ Model-driven apps
 
 ## Syntax
 
-`context.webapi.deleteRecord(entityLogicalName, id).then(successCallback, errorCallback);`
+`context.webAPI.deleteRecord(entityLogicalName, id).then(successCallback, errorCallback);`
 
 ## Parameters
 
@@ -67,11 +67,10 @@ Model-driven apps
 
 ## Return Value
 
-On success, returns a promise object containing the attributes specified earlier in the description of the **successCallback** parameter.
-
+Type: [Promise](https://developer.mozilla.org/docs/Web/JavaScript/reference/Global_Objects/Promise)<[Entityreference](../entityreference.md)>
 
 ### Related topics
 
 [Web API](../webapi.md)<br/>
-[PowerApps component framework API Reference](../../reference/index.md)<br/>
-[PowerApps component framework Overview](../../overview.md)
+[PowerApps component framework API reference](../../reference/index.md)<br/>
+[PowerApps component framework overview](../../overview.md)

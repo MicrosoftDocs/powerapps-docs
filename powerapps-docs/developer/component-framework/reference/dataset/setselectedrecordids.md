@@ -5,7 +5,7 @@ keywords:
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -23,17 +23,17 @@ Model-driven apps
 
 ## Syntax
 
-`setSelectedRecordIds(ids)`
+`context.parameters.dataset.setSelectedRecordIds(ids)`
 
 ## Parameters
 
 |Parameter Name|Type|Required|description|
 |----|----|----|----|
-|ids|`string`|yes|List of record id's|
+|ids|`string`|Yes|List of record id's|
 
 
 ### Related topics
 
 [Dataset](../dataset.md)<br/>
-[PowerApps component framework API Reference](../../reference/index.md)<br/>
-[PowerApps component framework Overview](../../overview.md)
+[PowerApps component framework API reference](../../reference/index.md)<br/>
+[PowerApps component framework overview](../../overview.md)

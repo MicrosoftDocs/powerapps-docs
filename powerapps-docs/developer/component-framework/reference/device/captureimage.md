@@ -5,7 +5,7 @@ keywords:
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -23,7 +23,7 @@ Model-driven apps
 
 ## Syntax
 
-`captureImage(options)`
+`context.device.captureImage(options)`
 
 ## Parameters
 
@@ -35,7 +35,7 @@ Model-driven apps
 
 Type: `Promise<FileObject>`
 
-See [Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise) and [FileObject](../fileobject.md)
+See [Promise](https://developer.mozilla.org/docs/Web/JavaScript/reference/Global_Objects/Promise) and [FileObject](../fileobject.md)
 
 ## Remarks
 
@@ -43,15 +43,15 @@ The `options` parameter object has the following properties:
 
 |Name|Type|Description|
 | ---|----|-----------|
-|`allowEdit`|`Boolean`|Indicates whether to edit the image before saving|
-|`height`|`Number`|Height of the image to capture|
-|`preferFrontCamera`|`Boolean`|Indicates whether to capture image using the front camera of the device|
-|`quality`|`Number`|Quality of the image file in percentage|
-|`width`|`Number`|Width of the image to capture|
+|`allowEdit`|`Boolean`|Indicates whether to edit the image before saving.|
+|`height`|`Number`|Height of the image to capture.|
+|`preferFrontCamera`|`Boolean`|Indicates whether to capture image using the front camera of the device.|
+|`quality`|`Number`|Quality of the image file in percentage.|
+|`width`|`Number`|Width of the image to capture.|
 
 
 ### Related topics
 
 [Device](../device.md)<br/>
-[PowerApps component framework API Reference](../../reference/index.md)<br/>
-[PowerApps component framework Overview](../../overview.md)
+[PowerApps component framework API reference](../../reference/index.md)<br/>
+[PowerApps component framework overview](../../overview.md)

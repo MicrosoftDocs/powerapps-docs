@@ -5,7 +5,7 @@ keywords:
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -14,8 +14,6 @@ ms.assetid: 90f2b4c9-7396-4ab9-bc9f-810189dc18b7
 ---
 
 # library element
-
-[!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
 
 [!INCLUDE [library-description](includes/library-description.md)]
 
@@ -51,6 +49,6 @@ ms.assetid: 90f2b4c9-7396-4ab9-bc9f-810189dc18b7
 
 ### Related topics
 
-[PowerApps component framework Manifest Schema Reference](index.md)<br/>
-[PowerApps component framework API Reference](../reference/index.md)<br/>
-[PowerApps component framework Overview](../overview.md)
+[PowerApps component framework manifest schema reference](index.md)<br/>
+[PowerApps component framework API reference](../reference/index.md)<br/>
+[PowerApps component framework overview](../overview.md)

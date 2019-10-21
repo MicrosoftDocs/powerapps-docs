@@ -5,7 +5,7 @@ keywords:
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -17,23 +17,23 @@ ms.assetid: 5af40d6f-111f-4c74-a2eb-4ffc79025415
 
 [!INCLUDE [setfilter-description](includes/setfilter-description.md)]
 
+## Syntax
+
+`context.filtering.setFilter()`
+
 ## Available for 
 
 Model-driven apps
-
-## Syntax
-
-`setFilter(expression)`
 
 ## Parameters
 
 | Parameter Name|Type|Required|Description|
 | ------------- |----|--------|-----------|
-|expression|[FilterExpression](../filterexpression.md)|yes|The `FilterExpression` to set.|
+|expression|[FilterExpression](../filterexpression.md)|Yes|The `FilterExpression` to set.|
 
 
 ### Related topics
 
 [Filtering](../filtering.md)<br/>
-[PowerApps component framework API Reference](../../reference/index.md)<br/>
-[PowerApps component framework Overview](../../overview.md)
+[PowerApps component framework API reference](../../reference/index.md)<br/>
+[PowerApps component framework overview](../../overview.md)

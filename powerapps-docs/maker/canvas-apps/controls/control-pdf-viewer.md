@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 10/25/2016
 ms.author: fikaradz
 search.audienceType: 
@@ -103,9 +103,9 @@ Add a **PDF viewer** control, and set its **Document** property to the URL, encl
 
   **"https://blog.mozilla.org/security/files/2015/05/HTTPS-FAQ.pdf"**
 
-    The control shows the PDF file.
+The control shows the PDF file.
 
-    Don't know how to [add and configure a control](../add-configure-controls.md)?
+Don't know how to [add and configure a control](../add-configure-controls.md)?
 
 ## Accessibility guidelines
 

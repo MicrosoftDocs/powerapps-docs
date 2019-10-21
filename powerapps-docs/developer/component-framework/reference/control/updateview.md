@@ -1,7 +1,7 @@
 ---
 title: "updateView| MicrosoftDocs"
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -43,5 +43,5 @@ Set the value of the field component to the raw value from the configured field
 ### Related topics
 
 [Control](../control.md)<br/>
-[PowerApps component framework API Reference](../../reference/index.md)<br/>
-[PowerApps component framework Overview](../../overview.md)
+[PowerApps component framework API reference](../../reference/index.md)<br/>
+[PowerApps component framework overview](../../overview.md)
