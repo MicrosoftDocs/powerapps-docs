@@ -48,7 +48,7 @@ Custom Help Panes **do not provide** the following key features that are in Lear
 To author custom help panes you need the following: 
 - Version 1710 (9.1.0.9234) or later.
 - System administrator or system customizer security role membership or equivelant privileges.
-- [Your environment must have custom help panes enabled](#turn-on-custom-help-panes-for-your-environment)
+- [Your environment must have custom help panes enabled](#enable-custom-help-panes-for-your-environment)
 
 ## Enable custom help panes for your environment
 1. Sign into PowerApp, and then on the command bar select **Settings** ![Settings](../model-driven-apps/media/powerapps-gear.png) > **Advanced  Settings** .
