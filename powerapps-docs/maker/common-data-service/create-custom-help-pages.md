@@ -36,13 +36,13 @@ The new guided help implementation of custom help panes differs from the previou
 Custom help panes provide the following key features that are not available with learning path: 
 - Free-form rich text – including bullets and numbering.
 - Visibly linked coachmarks and help balloons.
-- More options for video sources (including private sources).
+- More options for video sources – including private sources.
 - Storage of help content in the Common Data Service as part of your solution. 
 
-Custom Help Panes **do not provide** the following key features that are in Learning Path: 
+Custom help panes don't provide the following key features that are available with learning Path: 
 - Sequential help balloons.
 - Help pages per role.
-- Help pages for per device form factor, such as smartphones.
+- Help pages for per device form factor, such as smartphones. 
 
 ## Prerequisites 
 To author custom help panes you need the following: 
