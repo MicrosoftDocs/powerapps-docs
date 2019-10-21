@@ -57,24 +57,32 @@ In this topic, you'll use data in your Azure SQL Database to create an app with 
 
 ## Accessing your app
 
-To access the created app again, visit the [PowerApps portal](https://make.powerapps.com). The app is also listed in the PowerApps blade of the SQL Database instance inside the Azure portal.
+To access the created app again, visit the [PowerApps portal](https://make.powerapps.com). 
 
-## Considerations
+## PowerApps app region and IP addresses
 
-- The app name can only include a letter, digit, '-', '(', ')' or '_'.
-- PowerApps requires SQL authentication to connect to SQL Database.
-- You can select only one table while creating canvas app from the Azure portal. Customize the app after the app is created if you want to add more tables and other data sources by adding more data connections.
-- The access of PowerApps app to SQL Database is implicitly shared to all users that you [share this app](share-app) with. Ensure the SQL authentication credentials have appropriate access for reading and writing data. For example, you can create separate PowerApps apps that connect to the same SQL Database with different SQL authentication credentials to segregate read and read/write access.
-- Review throttling limits, delegatable functions and operations, known issues and limitations of the [SQL Database](https://docs.microsoft.com/en-us/connectors/sql/) connector this feature uses for performance considerations.
+PowerApps app created with this method is deployed in similar region as that of the [SQL Database](https://azure.microsoft.com/en-us/global-infrastructure/services/?products=sql-database). For example, if a SQL Database is deployed in **East US** or **West US** region, the PowerApp is deployed to **United States** region. You can find the region of a deployed PowerApps app from the [admin center](https://docs.microsoft.com/en-us/power-platform/admin/regions-overview#how-do-i-find-out-where-my-app-is-deployed).
 
-## Allow PowerApps IP address access to SQL Database
+PowerApps app IP addresses require access to connect to SQL Database. [PowerApps system requirements](limits-and-config#ip-addresses) lists the IP addresses that PowerApps uses depending on the region of the app.
 
-PowerApps app IP addresses require access to connect to SQL Database. [PowerApps system requirements](limits-and-config#ip-addresses) lists the IP addresses that PowerApps uses depending on the [region of the app](https://docs.microsoft.com/power-platform/admin/regions-overview#what-regions-are-available). You can use either a Transact-SQL stored procedure or the Azure portal to configure this access.
+You can use either a Transact-SQL stored procedure or the Azure portal to configure this access:
 
 - Stored procedure [sp_set_firewall_rule](https://docs.microsoft.com/en-us/sql/relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database?view=azuresqldb-current) for SQL Database or SQL Server level firewall rules.
 - [Azure portal](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-firewall-configure) for SQL Server level rules.
 
+## Limitations
+
+- The app name can only include a letter, digit, '-', '(', ')' or '_'.
+- PowerApps requires SQL authentication to connect to SQL Database.
+- You can select only one table while creating canvas app from the Azure portal. Customize the app after the app is created if you want to add more tables and other data sources by adding more data connections.
+
+## Considerations
+
+- The access of PowerApps app to SQL Database is implicitly shared to all users that you [share this app](share-app) with. Ensure the SQL authentication credentials have appropriate access for reading and writing data. </br> For example, you can create separate PowerApps apps that connect to the same SQL Database with different SQL authentication credentials to segregate read and read/write access.
+- Review throttling limits, delegatable functions and operations, known issues and limitations of the [SQL Database](https://docs.microsoft.com/en-us/connectors/sql/) connector this feature uses for performance considerations.
+
 ## Next steps
+
 In this quickstart, you created an app using data from your Azure SQL database using the Azure portal. As a next step, customize the app with controls, images and logic to better suit your business needs.
 
 > [!div class="nextstepaction"]
