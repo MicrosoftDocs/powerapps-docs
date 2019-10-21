@@ -998,6 +998,8 @@
       href: ./model-driven-apps/templates-overview.md
     - name: Use themes to apply organization branding
       href: ./model-driven-apps/create-themes-organization-branding.md
+    - name: Create guided help for your app
+      href: ./model-driven-apps/create-custom-help-pages.md
     - name: Add reporting to your app
       href: ./model-driven-apps/add-reporting-to-app.md    
       items: 
