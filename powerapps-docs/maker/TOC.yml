@@ -1094,6 +1094,10 @@
           href: ./portals/admin/change-base-url.md
         - name: Enable maintenance mode
           href: ./portals/admin/enable-maintenance-mode.md
+        - name: Add a custom domain name
+          href: ./portals/admin/add-custom-domain.md
+        - name: Import metadata translation
+          href: ./portals/admin/import-metadata-translation.md
         - name: Power BI integration
           items:
             - name: Set up Power BI integration
