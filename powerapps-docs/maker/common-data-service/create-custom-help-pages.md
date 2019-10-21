@@ -28,21 +28,21 @@ search.app:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-Use custom help panes and guided tasks (custom help panes) to give your Unified Interface application a custom in-product help experience that is tailored to your organization. Use custom help panes to provide entity, form, and language specific help and guidance that includes rich text, content links, images, and video links. Custom help panes replace the previous learning path guided learning feature used with legacy web client apps.
+Use custom help panes and guided tasks to give your Unified Interface application a custom in-product help experience that is tailored to your organization. Use custom help panes to provide entity, form, and language specific help and guidance that includes rich text, content links, images, and video links. Custom help panes replace the previous learning path guided learning feature used with legacy web client apps.
 
 ## Custom help panes and learning path
 The new guided help implementation of custom help panes differs from the previous learning path guided help feature. Both features let you create custom help for your application, however custom help panes are optimized for the most common guided help scenarios.   
 
-Custom Help Panes **provide** the following key features that are not available on Learning Path: 
-* Free-form rich text – including bullets and numbering.
-* Visibly linked coachmarks and help balloons.
-* More options for video sources (including private sources.)
-* Storage of help content in the Common Data Service as part of your solution. 
+Custom help panes provide the following key features that are not available with learning path: 
+- Free-form rich text – including bullets and numbering.
+- Visibly linked coachmarks and help balloons.
+- More options for video sources (including private sources).
+- Storage of help content in the Common Data Service as part of your solution. 
 
 Custom Help Panes **do not provide** the following key features that are in Learning Path: 
-* Sequential help balloons
-* Help pages per role
-* Help pages for per device form factor (e.g., phone)
+- Sequential help balloons.
+- Help pages per role.
+- Help pages for per device form factor, such as smartphones.
 
 ## Prerequisites 
 To author custom help panes you need the following: 
