@@ -59,13 +59,13 @@ In this topic, you'll use data in your Azure SQL database to create an app with 
 
 To access the created app again, visit the [PowerApps portal](https://make.powerapps.com). The app is also listed in the PowerApps blade of the SQL database instance inside the Azure portal.
 
-## Next steps
+### Next steps
 In this quickstart, you created an app using data from your Azure SQL database using the Azure portal. As a next step, customize the app with controls, images and logic to better suit your business needs.
 
 > [!div class="nextstepaction"]
 > [Design the canvas app interface in PowerApps](add-configure-controls)
 
-## See also
+### See also
 
 - [Add a data connection to a canvas app in PowerApps](add-data-connection#add-data-source)</br>
 - [Microsoft Learn: Customize apps in PowerApps](https://docs.microsoft.com/learn/modules/customize-apps-in-powerapps/)
