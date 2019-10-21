@@ -14,7 +14,7 @@ applies_to:
   - "powerapps"
 ms.assetid: 
 caps.latest.revision:
-author: "Mattp123"
+author: "matthewbolanos"
 ms.author: "matp"
 manager: "kvivek"
 search.audienceType: 
@@ -24,13 +24,13 @@ search.app:
   - D365CE
 ---
 
-# Create guided help for your Unified Interface app [Public Preview]
+# Create guided help for your Unified Interface app
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-Use Custom Help Panes and Guided Tasks (“Custom Help Panes”) to give your UCI application a custom in-product help experience that is tailored to your organization.  Use Custom Help Panes to provide entity, form, and language specific help and guidance that includes rich text, content links, images, and video links.  Custom Help panes (UCI) replace the previous Learning Path (WebClient) guided learning feature.
+Use custom help panes and guided tasks (custom help panes) to give your Unified Interface application a custom in-product help experience that is tailored to your organization. Use custom help panes to provide entity, form, and language specific help and guidance that includes rich text, content links, images, and video links. Custom help panes replace the previous learning path guided learning feature used with legacy web client apps.
 
-## Custom Help Panes and Learning Path
+## Custom help panes and learning path
 
 The new guided help implementation of Custom Help Panes differs from the previous Learning Path guided help feature.  Both features enable you to create custom help for your application however Custom Help Panes is optimized for the most common guided help scenarios.   
 
