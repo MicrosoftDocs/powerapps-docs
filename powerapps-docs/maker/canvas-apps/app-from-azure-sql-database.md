@@ -18,7 +18,7 @@ search.app:
 
 [This topic is pre-release documentation and is subject to change.]
 
-In this topic, you'll use data in your Azure SQL database to create an app with PowerApps in minutes. You’ll have a fully functional app with your data that you can customize to fit your business needs and share  on any device.
+In this topic, you'll use data in your Azure SQL Database to create an app with PowerApps in minutes. You’ll have a fully functional app with your data that you can customize to fit your business needs and share  on any device.
 
 > [!IMPORTANT]
 > - This is a preview feature.
@@ -28,7 +28,7 @@ In this topic, you'll use data in your Azure SQL database to create an app with 
 
 - Your browser must have pop-ups enabled.
 - You need an Azure subscription.
-- You need access to an existing SQL database.
+- You need access to an existing SQL Database.
 - You need a valid PowerApps license or sign up for a [30 day trial license](../signup-for-powerapps.md).
 
 ## Create an app
@@ -43,10 +43,10 @@ In this topic, you'll use data in your Azure SQL database to create an app with 
     > [!NOTE]
     > If you don't have a PowerApps license, you'll see a blue information bar with a link to start a trial. When you select to start trial, you'll be taken to a new tab where you'll be signed up for a license. Once complete, go back to the Azure portal and refresh the blade to continue.
 
-4. Type a name for the app. </br> The name can only be a letter, digit, '-', '(', ')' or '_'. We suggest names such as “Site Inspection”, “Fundraiser” and “Budget Tracker”.
+4. Type a name for the app such as “Site Inspection”, “Fundraiser” or “Budget Tracker”.
 
-5. Provide your SQL authentication – your username is pre-filled (edit if incorrect), and fill in your password.
-6. Select a table from the dropdown that you wish to use to create the app. </br> You can select only one table while creating canvas app from the Azure portal. You can customize the app after the app is created if you want to add more tables and other data sources by adding more data connections.
+5. Enter SQL authentication password and if required, change the username.
+6. Select a table from the dropdown that you wish to use to create the app.
 
 7. Click **Create**.
 
@@ -57,7 +57,22 @@ In this topic, you'll use data in your Azure SQL database to create an app with 
 
 ## Accessing your app
 
-To access the created app again, visit the [PowerApps portal](https://make.powerapps.com). The app is also listed in the PowerApps blade of the SQL database instance inside the Azure portal.
+To access the created app again, visit the [PowerApps portal](https://make.powerapps.com). The app is also listed in the PowerApps blade of the SQL Database instance inside the Azure portal.
+
+## Considerations
+
+- The app name can only include a letter, digit, '-', '(', ')' or '_'.
+- PowerApps requires SQL authentication to connect to SQL Database.
+- You can select only one table while creating canvas app from the Azure portal. Customize the app after the app is created if you want to add more tables and other data sources by adding more data connections.
+- The access of PowerApps app to SQL Database is implicitly shared to all users that you [share this app](share-app) with. Ensure the SQL authentication credentials have appropriate access for reading and writing data. For example, you can create separate PowerApps apps that connect to the same SQL Database with different SQL authentication credentials to segregate read and read/write access.
+- Review throttling limits, delegatable functions and operations, known issues and limitations of the [SQL Database](https://docs.microsoft.com/en-us/connectors/sql/) connector this feature uses for performance considerations.
+
+## Allow PowerApps IP address access to SQL Database
+
+PowerApps app IP addresses require access to connect to SQL Database. [PowerApps system requirements](limits-and-config#ip-addresses) lists the IP addresses that PowerApps uses depending on the [region of the app](https://docs.microsoft.com/power-platform/admin/regions-overview#what-regions-are-available). You can use either a Transact-SQL stored procedure or the Azure portal to configure this access.
+
+- Stored procedure [sp_set_firewall_rule](https://docs.microsoft.com/en-us/sql/relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database?view=azuresqldb-current) for SQL Database or SQL Server level firewall rules.
+- [Azure portal](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-firewall-configure) for SQL Server level rules.
 
 ## Next steps
 In this quickstart, you created an app using data from your Azure SQL database using the Azure portal. As a next step, customize the app with controls, images and logic to better suit your business needs.
@@ -67,5 +82,6 @@ In this quickstart, you created an app using data from your Azure SQL database u
 
 ## See also
 
+- [Share a canvas app in PowerApps](share-app) </br>
 - [Add a data connection to a canvas app in PowerApps](add-data-connection#add-data-source)</br>
-- [Microsoft Learn: Customize apps in PowerApps](https://docs.microsoft.com/learn/modules/customize-apps-in-powerapps/)
+- [Learning path on Microsoft Learn: Customize apps in PowerApps](https://docs.microsoft.com/learn/modules/customize-apps-in-powerapps/)
