@@ -46,12 +46,12 @@ Custom help panes don't provide the following key features that are available wi
 
 ## Prerequisites 
 To author custom help panes you need the following: 
-- Version 1710 (9.1.0.9234) or later.
-- System administrator or system customizer security role membership or equivelant privileges.
+- Late October 2019 version environment.
+- System administrator or system customizer security role membership or equivelant privileges. <!-- There's a new security role or privilege that needs to be added here. -->
 - [Your environment must have custom help panes enabled](#enable-custom-help-panes-for-your-environment).
 
 ## Enable custom help panes for your environment
-1. Sign into PowerApp, and then on the command bar select **Settings** ![Settings](../model-driven-apps/media/powerapps-gear.png) > **Advanced  Settings** .
+1. Open a model-driven app, and then on the command bar select **Settings** ![Settings](../model-driven-apps/media/powerapps-gear.png) > **Advanced  Settings** .
 2. Go to **Settings** > **System** > **Administration**.  
 3. On the **Administration** page, select **System Settings**.
 4. On the **General** tab, under **Set custom Help URL**, select **Yes** for **Enable Custom Help Panes and Guided Tasks**, and then select **OK**.
@@ -70,9 +70,6 @@ Each help pane is unique for these contexts:
 
 ## Help pane navigation
 By default, a help page stays open and on the help content you first opened it with even when you navigate to a different form. This allows for the help content to remain intact as you direct users to different parts of the app. 
-
-<!-- ## Authoring custom help panes
-To author a custom help panes you must have sufficient rights.  Several roles have rights – including administrator.  The Help Page Author role specifically gives rights for this capability.  -->
 
 ### To author help pane content
 1.	To view the help pane, open a model-driven app, and then on the command bar select **?**.   
@@ -104,7 +101,6 @@ Custom help panes support the following video sources.
 
 ### Links
 Links can be to websites and open in the same window (the default) or open in a separate window. The ability to link to an existing help page is not yet enabled.   
-
 
 ### Balloons and coach marks
 Balloons and coach marks can be used to point to specific UI elements. A balloon can have text in it. A coach mark simply highlights an element with a coach pointer. A way to illustrate several UI elements sequentially is to simply collect links in a list that the user can select.  For instance:
