@@ -58,11 +58,11 @@ In this topic, you'll use data in your Azure SQL Database to create an app with 
 
 ## Accessing your app
 
-To access the created app again, go to **make.powerapps.com**.
+To access the created app again, go to [**make.powerapps.com**](https://make.powerapps.com).
 
 ## App environment and region
 
-PowerApps app you create with this method uses the [default environment](https://docs.microsoft.com/power-platform/admin/environments-overview#the-default-environment) for the tenant and deploys to the region of this environment. You can find the region of a deployed PowerApps app or your tenant's default environment from the [admin center](https://docs.microsoft.com/power-platform/admin/regions-overview#how-do-i-find-out-where-my-app-is-deployed). To review all apps in a specific environment, go to **make.powerapps.com**, select the **Environment** from the ribbon and click **Apps** on the left.
+PowerApps app you create with this method uses the [default environment](https://docs.microsoft.com/power-platform/admin/environments-overview#the-default-environment) for the tenant and deploys to the region of this environment. You can find the region of a deployed PowerApps app or your tenant's default environment from the [admin center](https://docs.microsoft.com/power-platform/admin/regions-overview#how-do-i-find-out-where-my-app-is-deployed). To review all apps in a specific environment, go to [**make.powerapps.com**](https://make.powerapps.com), select the **Environment** from the ribbon and click **Apps** on the left.
 
 ## App IP addresses
 
@@ -84,7 +84,7 @@ You can use either a Transact-SQL stored procedure or the Azure portal to config
 
 - The access of PowerApps app to SQL Database is implicitly shared to all users that you [share this app](share-app) with. Ensure the SQL authentication credentials have appropriate access for reading and writing data. </br> For example, you can create separate PowerApps apps that connect to the same SQL Database with different SQL authentication credentials to segregate read and read/write access.
 - Review throttling limits, delegatable functions and operations, known issues and limitations of the [SQL Database](https://docs.microsoft.com/connectors/sql/) connector this feature uses for performance considerations.
-- Create an app from **make.powerapps.com** when you need to create an app for a non-default environment and a different region for the tenant using data from SQL Database.
+- Create an app from [**make.powerapps.com**](https://make.powerapps.com) when you need to create an app for a non-default environment and a different region for the tenant using data from SQL Database.
 
 ## Next steps
 
