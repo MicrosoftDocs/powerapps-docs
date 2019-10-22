@@ -63,7 +63,7 @@ To access the created app again, go to [make.powerapps.com](https://make.powerap
 
 ## App environment and region
 
-The app you create with this method uses the [default environment](https://docs.microsoft.com/power-platform/admin/environments-overview#the-default-environment) for the tenant and deploys to the region of this environment. You can find the region of a deployed app or your tenant's default environment from the [admin center](https://docs.microsoft.com/power-platform/admin/regions-overview#how-do-i-find-out-where-my-app-is-deployed). To review all apps in a specific environment, go to [make.powerapps.com](https://make.powerapps.com), select the **Environment** from the ribbon and click **Apps** on the left.
+The app you create with this method uses the [default environment](https://docs.microsoft.com/power-platform/admin/environments-overview#the-default-environment) for the tenant and deploys to the region of this environment. You can find the region of a deployed app or your tenant's default environment from the [admin center](https://docs.microsoft.com/power-platform/admin/regions-overview#how-do-i-find-out-where-my-app-is-deployed). To review all apps in a specific environment, go to [make.powerapps.com](https://make.powerapps.com), select the **Environment** from the ribbon and then select **Apps** on the left.
 
 ## App IP addresses
 
