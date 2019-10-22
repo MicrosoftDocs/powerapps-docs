@@ -42,7 +42,7 @@ People with the system administrator security role can use the settings to overr
 5. Select **OK**.
 
 ### Set customizable Help for a specific entity
-After you enable custom Help at the global level, system customizers can override the default Help for an entity in the entity definition. 
+After you enable custom Help at the global level, system customizers can override the global Help URL for an entity in the entity definition. 
 
 1. Open solution explorer.
 2. Expand **Entities**, and then select the entity you want. 
