@@ -30,6 +30,7 @@ In this topic, you'll use data in your Azure SQL Database to create an app with 
 - You need an Azure subscription.
 - You need access to an existing SQL Database.
 - You need to allow PowerApps region [IP addresses](#app-ip-addresses) in SQL Database firewall settings.
+- The SQL Database table must have at least one column with text data type.
 - You need a valid PowerApps license or sign up for a [30 day trial license](../signup-for-powerapps.md).
 
 ## Create an app
