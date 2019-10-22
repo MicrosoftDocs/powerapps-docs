@@ -98,4 +98,4 @@ In this quickstart, you created an app using data from your SQL Database using t
 
 - [Share a canvas app in PowerApps](share-app.md) </br>
 - [Add a data connection to a canvas app in PowerApps](add-data-connection.md#add-data-source)</br>
-- [Learning path on Microsoft Learn: Customize apps in PowerApps](https://docs.microsoft.com/learn/modules/customize-apps-in-powerapps/)
+- [Microsoft Learn: Customize a canvas app in PowerApps](https://docs.microsoft.com/learn/modules/customize-apps-in-powerapps/)
