@@ -78,7 +78,7 @@ You can use either a Transact-SQL stored procedure or the Azure portal to config
 - The app name can only include a letter, digit, '-', '(', ')' or '_'.
 - PowerApps requires SQL authentication to connect to SQL Database.
 - You can select only one table while creating canvas app from the Azure portal. Customize the app after the app is created if you want to add more tables and other data sources by adding more data connections.
-- The PowerApps app connects to SQL Database using firewall rules does not use Azure Services or VNet for connectivity. For more information, read [allowing Azure services or VNet Service Endpoints](https://docs.microsoft.com/azure/sql-database/sql-database-vnet-service-endpoint-rule-overview).
+- The PowerApps app connects to SQL Database using firewall rules and does not use Azure Services or VNet for connectivity. For more information, read [allowing Azure services or VNet Service Endpoints](https://docs.microsoft.com/azure/sql-database/sql-database-vnet-service-endpoint-rule-overview).
 
 ## Other considerations
 
