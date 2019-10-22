@@ -6,7 +6,7 @@ manager: shujoshi
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/07/2019
+ms.date: 10/18/2019
 ms.author: shjais
 ms.reviewer:
 ---
@@ -67,13 +67,13 @@ You can manage the following types of site settings:
 
 For site settings related to various portal features, see:
 
-- [Authentication identity](https://docs.microsoft.com/dynamics365/customer-engagement/portals/set-authentication-identity)
-- [Azure AD B2C provider](https://docs.microsoft.com/dynamics365/customer-engagement/portals/azure-ad-b2c)
-- [OAuth 2.0](https://docs.microsoft.com/dynamics365/customer-engagement/portals/configure-oauth2-settings)
-- [Open ID Connect](https://docs.microsoft.com/dynamics365/customer-engagement/portals/configure-openid-settings)
-- [WS-Federation](https://docs.microsoft.com/dynamics365/customer-engagement/portals/configure-ws-federation-settings)
-- [SAML 2.0](https://docs.microsoft.com/dynamics365/customer-engagement/portals/configure-saml2-settings)
-- [Migrate identity providers to Azure AD B2C](https://docs.microsoft.com/dynamics365/customer-engagement/portals/migrate-identity-providers)
+- [Authentication identity](set-authentication-identity.md)
+- [Azure AD B2C provider](azure-ad-b2c.md)
+- [OAuth 2.0](configure-oauth2-settings.md)
+- [Open ID Connect](configure-openid-settings.md)
+- [WS-Federation](configure-ws-federation-settings.md)
+- [SAML 2.0](configure-saml2-settings.md)
+- [Migrate identity providers to Azure AD B2C](migrate-identity-providers.md)
 - [Search within file attachment content](https://docs.microsoft.com/dynamics365/customer-engagement/portals/search-file-attachment)
 - [Behavior and format of the date and time field](https://docs.microsoft.com/dynamics365/customer-engagement/portals/behavior-format-date-time-field)
 - [Add geolocation](https://docs.microsoft.com/dynamics365/customer-engagement/portals/add-geolocation)
