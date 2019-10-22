@@ -29,6 +29,7 @@ In this topic, you'll use data in your Azure SQL Database to create an app with 
 - Your browser must have pop-ups enabled.
 - You need an Azure subscription.
 - You need access to an existing SQL Database.
+- You need to allow PowerApps region [IP addresses](#app-ip-addresses) in SQL Database firewall settings.
 - You need a valid PowerApps license or sign up for a [30 day trial license](../signup-for-powerapps.md).
 
 ## Create an app
@@ -38,7 +39,7 @@ In this topic, you'll use data in your Azure SQL Database to create an app with 
 3. Select PowerApps.
 
     
-    ![PowerApps option in Azure SQL Database options](./media/app-from-azure-sql-database/powerapps-link-azure-portal.png "PowerApps option inside Azure SQL Database")
+    ![PowerApps option in SQL Database options](./media/app-from-azure-sql-database/powerapps-link-azure-portal.png "PowerApps option inside SQL Database")
 
     > [!NOTE]
     > If you don't have a PowerApps license, you'll see a blue information bar with a link to start a trial. When you select to start trial, you'll be taken to a new tab where you'll be signed up for a license. Once complete, go back to the Azure portal and refresh the blade to continue.
@@ -53,17 +54,17 @@ In this topic, you'll use data in your Azure SQL Database to create an app with 
 
     ![Specify the information for your app](./media/app-from-azure-sql-database/powerapps-create-page-azure-portal.png "Specify the information for your app")
 
-    The [PowerApps studio](https://create.powerapps.com/studio/) opens in a new tab. If pop-up is blocked, update browser to allow pop-ups and retry. Once created, you'll have a 3 page app with data from your Azure SQL database.
+    The [PowerApps studio](https://create.powerapps.com/studio/) opens in a new tab. If pop-up is blocked, update browser to allow pop-ups and retry. Once created, you'll have a 3 page app with data from your SQL Database.
 
 ## Accessing your app
 
 To access the created app again, go to **make.powerapps.com**.
 
-## PowerApps app environment and region
+## App environment and region
 
-PowerApps app you create with this method uses the [default environment](https://docs.microsoft.com/power-platform/admin/environments-overview#the-default-environment) for the tenant and deploys to the region of this environment. You can find the region of a deployed PowerApps app from the [admin center](https://docs.microsoft.com/power-platform/admin/regions-overview#how-do-i-find-out-where-my-app-is-deployed). To review all apps in a specific environment, go to **make.powerapps.com**, select the **Environment** from the ribbon and click **Apps** on the left.
+PowerApps app you create with this method uses the [default environment](https://docs.microsoft.com/power-platform/admin/environments-overview#the-default-environment) for the tenant and deploys to the region of this environment. You can find the region of a deployed PowerApps app or your tenant's default environment from the [admin center](https://docs.microsoft.com/power-platform/admin/regions-overview#how-do-i-find-out-where-my-app-is-deployed). To review all apps in a specific environment, go to **make.powerapps.com**, select the **Environment** from the ribbon and click **Apps** on the left.
 
-## PowerApps app IP addresses
+## App IP addresses
 
 PowerApps app IP addresses require access to connect to SQL Database. [PowerApps system requirements](limits-and-config#ip-addresses) lists the IP addresses that PowerApps uses depending on the region of the app.
 
@@ -87,7 +88,7 @@ You can use either a Transact-SQL stored procedure or the Azure portal to config
 
 ## Next steps
 
-In this quickstart, you created an app using data from your Azure SQL database using the Azure portal. As a next step, customize the app with controls, images and logic to better suit your business needs.
+In this quickstart, you created an app using data from your SQL Database using the Azure portal. As a next step, customize the app with controls, images and logic to better suit your business needs.
 
 > [!div class="nextstepaction"]
 > [Design the canvas app interface in PowerApps](add-configure-controls)
