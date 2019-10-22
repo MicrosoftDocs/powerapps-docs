@@ -1098,6 +1098,10 @@
           href: ./portals/admin/change-base-url.md
         - name: Enable maintenance mode
           href: ./portals/admin/enable-maintenance-mode.md
+        - name: Add a custom domain name
+          href: ./portals/admin/add-custom-domain.md
+        - name: Import metadata translation
+          href: ./portals/admin/import-metadata-translation.md
         - name: Power BI integration
           items:
             - name: Set up Power BI integration
@@ -1124,6 +1128,24 @@
           href: ./portals/configure/configure-portal.md
         - name: Configure site settings
           href: ./portals/configure/configure-site-settings.md
+        - name: Portal authentication
+          items:
+            - name: Configure portal authentication
+              href: ./portals/configure/configure-portal-authentication.md
+            - name: Set authentication identity
+              href: ./portals/configure/set-authentication-identity.md
+            - name: Azure AD B2C provider settings for portals
+              href: ./portals/configure/azure-ad-b2c.md 
+            - name: Configure OAuth2 provider settings
+              href: ./portals/configure/configure-oauth2-settings.md 
+            - name: Configure OpenID provider settings
+              href: ./portals/configure/configure-openid-settings.md 
+            - name: Configure WS-Federation provider settings
+              href: ./portals/configure/configure-ws-federation-settings.md 
+            - name: Configure SAML 2.0 provider settings
+              href: ./portals/configure/configure-saml2-settings.md 
+            - name: Migrate identity providers to Azure AD B2C
+              href: ./portals/configure/migrate-identity-providers.md
     - name:  Advanced portal customization
       items:
         - name: Work with Liquid templates
