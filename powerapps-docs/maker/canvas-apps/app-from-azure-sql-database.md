@@ -57,29 +57,33 @@ In this topic, you'll use data in your Azure SQL Database to create an app with 
 
 ## Accessing your app
 
-To access the created app again, visit the [PowerApps portal](https://make.powerapps.com). 
+To access the created app again, go to **make.powerapps.com**.
 
-## PowerApps app region and IP addresses
+## PowerApps app environment and region
 
-PowerApps app created with this method is deployed in similar region as that of the [SQL Database](https://azure.microsoft.com/en-us/global-infrastructure/services/?products=sql-database). For example, if a SQL Database is deployed in **East US** or **West US** region, the PowerApp is deployed to **United States** region. You can find the region of a deployed PowerApps app from the [admin center](https://docs.microsoft.com/en-us/power-platform/admin/regions-overview#how-do-i-find-out-where-my-app-is-deployed).
+PowerApps app you create with this method uses the [default environment](https://docs.microsoft.com/power-platform/admin/environments-overview#the-default-environment) for the tenant and deploys to the region of this environment. You can find the region of a deployed PowerApps app from the [admin center](https://docs.microsoft.com/power-platform/admin/regions-overview#how-do-i-find-out-where-my-app-is-deployed). To review all apps in a specific environment, go to **make.powerapps.com**, select the **Environment** from the ribbon and click **Apps** on the left.
+
+## PowerApps app IP addresses
 
 PowerApps app IP addresses require access to connect to SQL Database. [PowerApps system requirements](limits-and-config#ip-addresses) lists the IP addresses that PowerApps uses depending on the region of the app.
 
 You can use either a Transact-SQL stored procedure or the Azure portal to configure this access:
 
-- Stored procedure [sp_set_firewall_rule](https://docs.microsoft.com/en-us/sql/relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database?view=azuresqldb-current) for SQL Database or SQL Server level firewall rules.
-- [Azure portal](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-firewall-configure) for SQL Server level rules.
+- Stored procedure [sp_set_firewall_rule](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database?view=azuresqldb-current) for SQL Database or SQL Server level firewall rules.
+- [Azure portal](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure) for SQL Server level rules.
 
 ## Limitations
 
 - The app name can only include a letter, digit, '-', '(', ')' or '_'.
 - PowerApps requires SQL authentication to connect to SQL Database.
 - You can select only one table while creating canvas app from the Azure portal. Customize the app after the app is created if you want to add more tables and other data sources by adding more data connections.
+- The PowerApps app connects to SQL Database using firewall rules does not use Azure Services or VNet for connectivity. For more information, read [allowing Azure services or VNet Service Endpoints](https://docs.microsoft.com/azure/sql-database/sql-database-vnet-service-endpoint-rule-overview).
 
-## Considerations
+## Other considerations
 
 - The access of PowerApps app to SQL Database is implicitly shared to all users that you [share this app](share-app) with. Ensure the SQL authentication credentials have appropriate access for reading and writing data. </br> For example, you can create separate PowerApps apps that connect to the same SQL Database with different SQL authentication credentials to segregate read and read/write access.
-- Review throttling limits, delegatable functions and operations, known issues and limitations of the [SQL Database](https://docs.microsoft.com/en-us/connectors/sql/) connector this feature uses for performance considerations.
+- Review throttling limits, delegatable functions and operations, known issues and limitations of the [SQL Database](https://docs.microsoft.com/connectors/sql/) connector this feature uses for performance considerations.
+- Create an app from **make.powerapps.com** when you need to create an app for a non-default environment and a different region for the tenant using data from SQL Database.
 
 ## Next steps
 
