@@ -72,7 +72,7 @@ PowerApps app IP addresses require access to connect to SQL Database. [PowerApps
 You can use either a Transact-SQL stored procedure or the Azure portal to configure this access:
 
 - Stored procedure [sp_set_firewall_rule](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database?view=azuresqldb-current) for SQL Database or SQL Server level firewall rules.
-- [Azure portal](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure) for SQL Server level rules.
+- [Azure portal](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure) for SQL Server level firewall rules.
 
 ## Limitations
 
