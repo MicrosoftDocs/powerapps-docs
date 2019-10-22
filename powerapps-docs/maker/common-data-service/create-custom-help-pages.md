@@ -39,7 +39,7 @@ Custom help panes provide the following key features that are not available with
 - More options for video sources – including private sources.
 - Storage of help content in the Common Data Service as part of your solution. 
 
-Custom help panes don't provide the following key features that are available with learning Path: 
+Custom help panes don't provide the following key features that are available with learning path: 
 - Sequential help balloons.
 - Help pages per role.
 - Help pages for per device form factor, such as smartphones. 
@@ -48,13 +48,15 @@ Custom help panes don't provide the following key features that are available wi
 To author custom help panes you need the following: 
 - Version 1710 (9.1.0.9234) or later.
 - System administrator or system customizer security role membership or equivelant privileges.
-- [Your environment must have custom help panes enabled](#enable-custom-help-panes-for-your-environment)
+- [Your environment must have custom help panes enabled](#enable-custom-help-panes-for-your-environment).
 
 ## Enable custom help panes for your environment
 1. Sign into PowerApp, and then on the command bar select **Settings** ![Settings](../model-driven-apps/media/powerapps-gear.png) > **Advanced  Settings** .
 2. Go to **Settings** > **System** > **Administration**.  
 3. On the **Administration** page, select **System Settings**.
 4. On the **General** tab, under **Set custom Help URL**, select **Yes** for **Enable Custom Help Panes and Guided Tasks**, and then select **OK**.
+    > [!div class="mx-imgBorder"] 
+    > ![Enable custom help panes](media/enable-custom-help-panes.png "Enable custom help panes")
 
 > [!IMPORTANT]
 > You can enable custom help panes or customizable help, but not both at the same time. Confirm that **Use custom Help for customizable entities** and **Append parameters to URL** are both set to **No**.  
@@ -88,13 +90,13 @@ Selecting the bullet or number icon toggles the current line to become bulleted 
 A section is a collapsible text box.  You can put links or free form text in it. Use a section to group like items. A section can be either open or collapsed by default. 
 
 ### Video and static images
-You can insert videos and static images into your help pane. Videos and images are links to content on the internet. Custom help panes do not store the video and image files in your help pane. When the help pane is opened, custom help panes bring the content in from the link to display it. You can use a link to a Microsoft Stream video if you wish to reference corporate private content. 
+You can insert videos and static images into your help pane. Videos and images are links to content on the internet. Custom help panes do not store the video and image files in your help pane. When the help pane is opened, custom help panes bring the content in from the link to display it. You can use a link to a Microsoft Stream video if you want to reference corporate private content. 
 
 > [!TIP]
 > Remember to copy the link URL for the video or image you want so you can paste it in to your help pane. 
 
 Custom help panes support the following video sources.
-- Microsoft Stream (use for private content.) 
+- Microsoft Stream (use for private content) 
 - YouTube
 - Facebook
 - Vimeo
@@ -130,7 +132,7 @@ By default, all new help pages appear in the default solution. If you want to mo
 
 
 ## Help page documentation automation
-You might want to back up or store your content in a source code control system. You might also like to use documentation automation tools, such as translation tools or checkers, on help pane content as well. The custom help pane data is stored directly in Common Data Service and can be exported and imported for this purpose.  
+You might want to back up or store your content in a source code control system. You might also like to use documentation automation tools, such as translation tools or checkers, on help pane content. The custom help pane data is stored directly in Common Data Service and can be exported and imported for this purpose.  
 
 Custom help panes support a custom XML format. This format is documented below. More information: [Custom Help XML definition](#custom-help-xml-definition)  
 
@@ -145,8 +147,8 @@ Custom help panes and guided tasks are an option in the **Set custom help URL** 
 For more information about customizable help, see  [Customize the Help experience](https://docs.microsoft.com/en-us/previous-versions/dynamicscrm-2016/administering-dynamics-365/dn832079(v=crm.8)?redirectedfrom=MSDN).
 
 
-### How do I migrate my data from learning path (legacy web client) to custom help panes? 
-Learning path has two types of help: help panes and sequential help balloons.  The sequential help balloon locations are deeply integrated with the legacy web client UI and are not transferrable to the new custom help panes.  
+### How do I migrate my data from learning path to custom help panes? 
+Learning path has two types of help: help panes and sequential help balloons. The sequential help balloon locations are deeply integrated with the legacy web client UI and are not transferrable to the new custom help panes.  
 
 Depending on how much text you have in your guided help it might be easiest to simply copy the information directly from the learning path user interface to the new custom help pane user interface. However, you can also export your learning path help content.  The simplest way to do this is to export your content using the **Learning Path** > **Content Library** > **Localize** > **Export** feature. Select the records you want and then export them. This creates an XLIFF file for each help pane and guided task.  Then, use a publicly available XLIFF editor or XLIFF to HTML converter to retrieve your content. 
 
