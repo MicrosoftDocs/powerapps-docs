@@ -127,7 +127,7 @@ Fortunately, there is another method that you can use. When the number of reques
 ```csharp
 catch (FaultException<OrganizationServiceFault> fault)
 {
-    // Check if the maximum batch size has been exceeded. The maximum batch size is only included in the fault if it
+    // Check if the maximum batch size has been exceeded. The maximum batch size is only included in the fault if
     // the input request collection count exceeds the maximum batch size.
     if (fault.Detail.ErrorDetails.Contains("MaxBatchSize"))
     {
