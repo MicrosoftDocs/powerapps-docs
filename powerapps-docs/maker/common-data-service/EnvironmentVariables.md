@@ -5,7 +5,7 @@ Keywords: environment variables, variables, model-driven app, configuration data
 author: caburk
 ms.author: caburk
 manager: kvivek
-ms.date: 06/27/2019
+ms.date: 10/22/2019
 ms.service: powerapps
 ms.topic: article
 search.audienceType: 
@@ -24,10 +24,10 @@ Benefits of using environment variables:
 - No need to manually edit configurable values in a production environment.
 - Configure one or more variables in one place and reference like a parameter across multiple solution components.
 - Update values without a code change.
-- Granular level security managed by [Common Data Service](https://docs.microsoft.com/en-us/powerapps/maker/common-data-service/data-platform-intro).
+- Granular level security managed by [Common Data Service](https://docs.microsoft.com/powerapps/maker/common-data-service/data-platform-intro).
 - Unlimited number of variables (max solution size is 29 MB).
 - Service the definitions and the values independently or together.
-- Supported by [SolutionPackager](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/compress-extract-solution-file-solutionpackager) and [DevOps](https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/build-tools-overview) tools enable continuous integration and continuous delivery (CI/CD).
+- Supported by [SolutionPackager](/powerapps/developer/common-data-service/compress-extract-solution-file-solutionpackager) and [DevOps](/powerapps/developer/common-data-service/build-tools-overview) tools enable continuous integration and continuous delivery (CI/CD).
 - Support for localization.
 - Can be used to control feature flags and other application settings.
 
@@ -35,7 +35,7 @@ Benefits of using environment variables:
 > - This is a preview feature.
 > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)] 
 
-# How they work
+## How they work?
 Environment variables support [CRUD](https://docs.microsoft.com/en-us/iis-administration/api/crud) operations through the PowerApps interface and programatically via the SDK. A separate JSON file is created within your solution package for the values, which can also be managed in the source control. Export to and import from Excel is supported. After creating environment variables in the modern Solution Explorer, you can use them as inputs within plug-ins, flows, and other components.
 
 ## Default value
@@ -56,9 +56,9 @@ A notification is displayed when the environment variables do not have any value
 > We recommend partners build their own interfaces requiring the customers to provide the values. Notifications help prevent failures if this step is skipped. 
 
 ## Security
-Both the environmentvariabledefinition and environmentvariablevalue entities are [user or team owned] (https://docs.microsoft.com/powerapps/maker/common-data-service/types-of-entities). When creating an application that uses Environment variables, be sure to assign users the appropriate level of permission. See [Security in Common Data Service](https://docs.microsoft.com/power-platform/admin/wp-security) for more information. 
+Both the environmentvariabledefinition and environmentvariablevalue entities are [user or team owned](https://docs.microsoft.com/powerapps/maker/common-data-service/types-of-entities). When creating an application that uses Environment variables, be sure to assign users the appropriate level of permission. More information: [Security in Common Data Service](https://docs.microsoft.com/power-platform/admin/wp-security). 
 
-# Current limitations
+## Current limitations
 - Caching. Plugins will need to run a query to fetch the values. 
 - Canvas apps and flows can consume Environment variables just like entity record data. In the future we plan to build additional actions into canvas app and flow designers. This will simplify authoring and provide better visibility into environment variables being used by a specific app or flow.
 - Azure Key Vault integration for secret management. Currently Environment variables should not be used to store secure data such as passwords and keys.
