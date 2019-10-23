@@ -50,6 +50,7 @@ You can enable custom activity entities to support quick create forms, and you c
   
 > [!NOTE]
 >  - The entity must have the **Allow Quick Create** option enabled for the quick create form to be displayed. 
+>  - You must also add the entity and the quick create form to your app.
 >  - Some fields, such as the CREATEDON field, aren’t available to add to a quick create form.  
   
 ### How to create a quick create form  
