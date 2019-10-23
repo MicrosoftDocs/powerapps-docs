@@ -1,6 +1,6 @@
 ---
 title: "navigateTo (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/4/2019
+ms.date: 10/23/2019
 ms.service: powerapps
 ms.topic: "reference"
 author: "KumarVivek"
