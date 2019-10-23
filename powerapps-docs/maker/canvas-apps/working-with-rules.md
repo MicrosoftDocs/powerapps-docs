@@ -20,7 +20,7 @@ Create rules to automatically modify an app based on criteria that you specify. 
 You can add rules to a variety of controls. In this topic, you'll add a rule to change the text color of a **Label** control if the value of a **Slider** control is greater than 70.
 
 > [!IMPORTANT]
-> Effective October 14, 2019, the rules feature in canvas apps is deprecated. More information: [Blog: Canvas Rules feature deprecation](powerapps.microsoft.com/en-us/blog/canvas-rules-feature-deprecation/).
+> Effective October 14, 2019, the rules feature in canvas apps is deprecated. More information: [Blog: Canvas Rules feature deprecation](https://powerapps.microsoft.com/en-us/blog/canvas-rules-feature-deprecation/).
 
 ## Add a rule
 1. Select a control (or add a control and leave it selected).
