@@ -36,7 +36,7 @@ Benefits of using environment variables:
 > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)] 
 
 ## How they work?
-Environment variables can be created and managed through the modern solution interface and programatically via the web [API](https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview) and [Organization service](https://docs.microsoft.com/powerapps/developer/common-data-service/org-service/overview). A separate JSON file is created within your solution package for the values, which can also be managed in the source control. Export to and import from Excel is supported. After creating environment variables in the modern Solution Explorer, you can use them as inputs within plug-ins, flows, and other components.
+Environment variables can be created and managed through the modern solution interface or by [using code](https://docs.microsoft.com/powerapps/developer/common-data-service/work-with-data-cds). A separate JSON file is created within your solution package for the values, which can also be managed in source control and modified in a build pipeline. Export to and import from Excel is supported. After creating environment variables, you can use them as inputs within plug-ins, flows, and other components.
 
 ## Default value
 This field is part of the environment variable definition entity and is not required. Set a default value for the production environments or when the values don't need to be changed for different environments.
