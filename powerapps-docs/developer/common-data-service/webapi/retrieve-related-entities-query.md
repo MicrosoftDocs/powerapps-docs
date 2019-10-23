@@ -1,6 +1,6 @@
 ---
-title: "Retrieve related entities with a query (Common Data Service)| Microsoft Docs"
-description: "ead how you can retrieve related entities by expanding the navigation properties."
+title: "Retrieve related entity records with a query (Common Data Service)| Microsoft Docs"
+description: "ead how you can retrieve related entity records by expanding the navigation properties."
 ms.custom: ""
 ms.date: 07/15/2019
 ms.service: powerapps
@@ -20,7 +20,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Retrieve related entities with a query
+# Retrieve related entity records with a query
 
 Use the `$expand` system query option in the navigation properties to control what data from related entities is returned. There are two types of navigation properties:  
   
@@ -35,7 +35,7 @@ If you include only the name of the navigation property, you’ll receive all th
 
 <a bkmk="bkmk_retrieverelatedentityexpandsinglenavprop"></a>
 
-## Retrieve related entities by expanding single-valued navigation properties
+## Retrieve related entity records by expanding single-valued navigation properties
 
 The following example demonstrates how to retrieve the contact for all the account records. For the related contact records, we are only retrieving the contactid and fullname.  
   
