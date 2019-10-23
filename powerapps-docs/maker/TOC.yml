@@ -359,6 +359,8 @@
           href: ./canvas-apps/sharepoint-lookup-fields.md
         - name: Add a flow
           href: ./canvas-apps/using-logic-flows.md
+        - name: Create a rule in canvas apps
+          href: ./canvas-apps/working-with-rules.md  
         - name: Formula reference
           items:
           - name: Overview
