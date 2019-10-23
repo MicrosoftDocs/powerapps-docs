@@ -18,7 +18,7 @@ This sample describes how to bind a code component to different fields on the fo
 
 ## Available for 
 
-Model-driven apps and canvas apps (experimental preview) 
+Model-driven apps and canvas apps (public preview) 
 
 ## Manifest
 

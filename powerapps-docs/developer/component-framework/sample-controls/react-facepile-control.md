@@ -20,7 +20,7 @@ This sample shows how to use React to create components using PowerApps componen
 
 ## Available for 
 
-Model-driven apps and canvas apps (experimental preview) 
+Model-driven apps and canvas apps (public preview) 
 
 
 > [!IMPORTANT]

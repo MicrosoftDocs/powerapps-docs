@@ -19,7 +19,7 @@ This sample component changes the user experience of interacting with address fi
 
 ## Available for 
 
-Model-driven apps and canvas apps (experimental preview) 
+Model-driven apps and canvas apps (public preview) 
 
 ## Manifest
 

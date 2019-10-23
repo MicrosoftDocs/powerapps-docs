@@ -17,7 +17,7 @@ This topic describes how to import code components into Common Data Service. Aft
 
 To create and import a solution file:
 
-1. Create a new folder and name it **Solution** (or any name of your choice) using the command `mkdir Solutions`. Navigate into the directory using the command `cd Solutions`.
+1. Create a new folder and name it **Solution** (or any name of your choice) using the command `mkdir Solutions` inside the sample component folder. Navigate into the directory using the command `cd Solutions`.
 
 2. Create a new solutions project using the command `pac solution init --publisher-name <enter your publisher name> --publisher-prefix <enter your publisher prefix>`. The solution project is used for bundling the code component into a solution zip file that is used for importing into Common Data Service.
 

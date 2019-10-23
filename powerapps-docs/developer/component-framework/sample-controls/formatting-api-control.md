@@ -22,7 +22,7 @@ This sample component explores the various methods available as part of the Powe
 
 ## Available for 
 
-Model-driven apps and canvas apps (experimental preview) 
+Model-driven apps and canvas apps (public preview) 
 
 ## Manifest
 
