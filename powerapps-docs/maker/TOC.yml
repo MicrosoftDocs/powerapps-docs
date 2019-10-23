@@ -47,6 +47,10 @@
         items:
         - name: FAQ about activities
           href: ../user/faq-for-timeline-and-activity.md
+      - name: Use the lookup field on a record
+        href: ../user/lookup-field.md
+      - name: View a profile card
+        href: ../user/profile-cards.md
       - name: Assign or share records
         href: ../user/assign-or-share-records.md
       - name: Share records using Access Team
@@ -57,8 +61,12 @@
         href: ../user/deactivate-activate-account-contact.md
       - name: Track your progress with dashboards and charts
         href: ../user/track-your-progress-with-dashboard-and-charts.md
+      - name: Add Power BI dashboards 
+        href: ../user/add-powerbi-dashboards.md
     - name: Search records
       items:
+      - name: Compare search and find options
+        href: ../user/search-and-find.md
       - name: Search for records
         href: ../user/search-records.md
       - name: Use advanced find
@@ -991,7 +999,16 @@
     - name: Use themes to apply organization branding
       href: ./model-driven-apps/create-themes-organization-branding.md
     - name: Add reporting to your app
-      href: ./model-driven-apps/add-reporting-to-app.md      
+      href: ./model-driven-apps/add-reporting-to-app.md    
+      items: 
+      - name: Report considerations 
+        href: ./model-driven-apps/reporting-considerations.md  
+      - name: RDL sandboxing
+        href: ./model-driven-apps/rdl-sandboxing.md 
+      - name: Use Power BI
+        href: ./model-driven-apps/use-power-bi.md 
+      - name: Customize Power BI content packs
+        href: ./model-driven-apps/customize-power-bi-content-packs.md
   - name: Validate and publish an app
     href: ./model-driven-apps/validate-app.md
   - name: Share an app
@@ -1037,7 +1054,7 @@
     href: ../developer/model-driven-apps/overview.md
     # href: ../developer/model-driven-apps/TOC.yml For authoring I find having developer content buried so deep is awkward
 
-- name: Portals (preview)
+- name: Portals
   items:
     - name: What is PowerApps Portals?
       href: ./portals/overview.md
@@ -1045,9 +1062,9 @@
       items:
         - name: Portal templates
           href: ./portals/portal-templates.md
-        - name: Create a portal
+        - name: Create a starter portal
           href: ./portals/create-portal.md
-        - name: Create a Dynamics 365 Portal
+        - name: Create a portal with Dynamics 365 environment
           href: ./portals/create-dynamics-portal.md
         - name: Portal designer anatomy
           href: ./portals/portal-designer-anatomy.md
@@ -1059,10 +1076,10 @@
           href: ./portals/compose-page.md
         - name: Work with templates
           href: ./portals/work-with-templates.md
+        - name: Edit CSS
+          href: ./portals/edit-css.md
     - name: Manage existing portals
       href: ./portals/manage-existing-portals.md
-    - name: Configure site settings
-      href: ./portals/configure-site-settings.md
     - name: Advanced portal administration
       items:
         - name: Overview
@@ -1079,6 +1096,10 @@
           href: ./portals/admin/change-base-url.md
         - name: Enable maintenance mode
           href: ./portals/admin/enable-maintenance-mode.md
+        - name: Add a custom domain name
+          href: ./portals/admin/add-custom-domain.md
+        - name: Import metadata translation
+          href: ./portals/admin/import-metadata-translation.md
         - name: Power BI integration
           items:
             - name: Set up Power BI integration
@@ -1095,9 +1116,35 @@
           href: ./portals/admin/update-portal-domain.md
         - name: Clear the server-side cache
           href: ./portals/admin/clear-server-side-cache.md
-        - name: Migrate Dynamics 365 Portal configuration
+        - name: Migrate portal configuration
           href: ./portals/admin/migrate-portal-configuration.md
-    - name:  Advanced portal customizations
+        - name: About portal lifecycle
+          href: ./portals/admin/portal-lifecycle.md
+    - name: Advanced portal configuration
+      items:
+        - name: Overview
+          href: ./portals/configure/configure-portal.md
+        - name: Configure site settings
+          href: ./portals/configure/configure-site-settings.md
+        - name: Portal authentication
+          items:
+            - name: Configure portal authentication
+              href: ./portals/configure/configure-portal-authentication.md
+            - name: Set authentication identity
+              href: ./portals/configure/set-authentication-identity.md
+            - name: Azure AD B2C provider settings for portals
+              href: ./portals/configure/azure-ad-b2c.md 
+            - name: Configure OAuth2 provider settings
+              href: ./portals/configure/configure-oauth2-settings.md 
+            - name: Configure OpenID provider settings
+              href: ./portals/configure/configure-openid-settings.md 
+            - name: Configure WS-Federation provider settings
+              href: ./portals/configure/configure-ws-federation-settings.md 
+            - name: Configure SAML 2.0 provider settings
+              href: ./portals/configure/configure-saml2-settings.md 
+            - name: Migrate identity providers to Azure AD B2C
+              href: ./portals/configure/migrate-identity-providers.md
+    - name:  Advanced portal customization
       items:
         - name: Work with Liquid templates
           items:
@@ -1143,6 +1190,18 @@
                   href: ./portals/liquid/render-site-header-primary-navigation.md
         - name: OAuth 2.0 implicit grant flow
           href: ./portals/oauth-implicit-grant-flow.md
+    - name: Document storage in portals
+      items:
+        - name: Configure notes
+          href: ./portals/configure-notes.md
+        - name: Azure storage
+          items:
+            - name: Enable Azure storage
+              href: ./portals/enable-azure-storage.md
+            - name: Add the Azure Storage web resource to a form
+              href: ./portals/add-web-resource.md
+        - name: Manage SharePoint documents
+          href: ./portals/manage-sharepoint-documents.md
     - name: Known issues
       href: ./portals/known-issues.md
     - name: PowerApps Portals FAQ
@@ -1307,6 +1366,8 @@
       href: ./common-data-service/set-managed-properties-metadata.md
     - name: Publish changes
       href: ./common-data-service/publish-changes-for-use-customer-service-hub.md
+    - name: Best practices
+      href: ./common-data-service/solution-best-practices.md
   - name: Work with dataflows
     href: ./common-data-service/self-service-data-prep-with-dataflows.md
     items:

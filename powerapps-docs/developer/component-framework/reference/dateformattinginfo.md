@@ -5,7 +5,7 @@ keywords:
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -15,37 +15,39 @@ ms.assetid: 4e7d43fb-b6b7-4f1d-89e3-0b8157c9d2d9
 
 # DateFormattingInfo
 
-[!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
-
 [!INCLUDE [context-description](includes/dateformattinginfo-description.md)]
+
+## Available for 
+
+Model-driven apps
 
 ## Properties
 
-## abbreviatedDayNames
+### abbreviatedDayNames
 
 { "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" }
 
 **Type**: `string`
 
-## abbreviatedMonthGenitiveNames
+### abbreviatedMonthGenitiveNames
 
 { "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec", "" }
 
 **Type**: `string[]`
 
-## abbreviatedMonthNames
+### abbreviatedMonthNames
 
 { "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec", "" }
 
 **Type**: `string[]`
 
-## amDesignator
+### amDesignator
 
 "AM"
 
 **Type**: `string`
 
-## calendar
+### calendar
 
 **Type**: `object`
 
@@ -59,25 +61,23 @@ The `calendar` object contains the following properties:
 |`minSupportedDateTime`|`Date`|"/Date(-62135568000000)/"|
 |`twoDigitYearMax`|`number`|2029|
 
-## calendarWeekRule
-
-0
+### calendarWeekRule
 
 **Type**: `number`
 
-## dateSeparator
+### dateSeparator
 
 "/"
 
 **Type**: `string`
 
-## dayNames
+### dayNames
 
 { "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" }
 
 **Type**: `string[]`
 
-## firstDayOfWeek
+### firstDayOfWeek
 
 **Type**: `number`
 
@@ -93,85 +93,85 @@ The `firstDayOfWeek` property can be set to one of the following values:
 |5|Friday|
 |6|Saturday|
 
-## fullDateTimePattern
+### fullDateTimePattern
 
 "dddd, MMMM d, yyyy h:mm:ss tt"
 
 **Type**: `string`
 
-## longDatePattern
+### longDatePattern
 
 dddd, MMMM d, yyyy"
 
 **Type**: `string`
 
-## longTimePattern
+### longTimePattern
 
 "hh:mm:ss tt"
 
 **Type**: `string`
 
-## monthDayPattern
+### monthDayPattern
 
 "MMMM dd"
 
 **Type**: `string`
 
-## monthGenitiveNames
+### monthGenitiveNames
 
 { "January", "February", "March", ...  "December", "" }
 
 **Type**: `string[]`
 
-## monthNames
+### monthNames
 
 { "January", "February", "March", ...  "December", "" }
 
 **Type**: `string[]`
 
-## pmDesignator
+### pmDesignator
 
 "PM"
 
 **Type**: `string`
 
-## shortDatePattern
+### shortDatePattern
 
 "M/d/yyyy"
 
 **Type**: `string`
 
-## shortTimePattern
+### shortTimePattern
 
 "h:mm tt"
 
 **Type**: `string`
 
-## shortestDayNames
+### shortestDayNames
 
 { "Su", "Mo", "Tu", "We", "Th", "Fr", "Sa" }
 
 **Type**: `string[]`
 
-## sortableDateTimePattern
+### sortableDateTimePattern
 
 yyyy'-'MM'-'dd'T'HH':'mm':'ss"
 
 **Type**: `string`
 
-## timeSeparator
+### timeSeparator
 
 ":"
 
 **Type**: `string`
 
-## universalSortableDateTimePattern
+### universalSortableDateTimePattern
 
 "yyyy'-'MM'-'dd HH':'mm':'ss'Z'"
 
 **Type**: `string`
 
-## yearMonthPattern
+### yearMonthPattern
 
 "MMMM yyyy"
 
@@ -180,5 +180,5 @@ yyyy'-'MM'-'dd'T'HH':'mm':'ss"
 
 ### Related topics
 
-[PowerApps component framework API Reference](../reference/index.md)<br/>
-[PowerApps component framework Overview](../overview.md)
+[PowerApps component framework API reference](../reference/index.md)<br/>
+[PowerApps component framework overview](../overview.md)

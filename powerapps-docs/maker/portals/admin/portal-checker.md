@@ -6,14 +6,12 @@ manager: shujoshi
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 08/30/2019
+ms.date: 10/07/2019
 ms.author: shjais
 ms.reviewer:
 ---
 
 # Portal checker
-
-[!include[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
 
 Portal checker is a self-service diagnostic tool that can be used by portal administrators to identify common issues in their portal. Portal checker helps to identify issues with your portal by looking at various configuration parameters and provides suggestions on how to fix them.
 
@@ -38,7 +36,7 @@ If required, you can rerun the diagnostic checks, which will refresh the results
 > [!NOTE]
 > If portal is turned off or IP address filtering is enabled, certain diagnostic checks will not be run on your portal.
 
-For a list of common issues diagnosed by the portal checker tool, see [Common portal issues diagnosed by portal checker and their best practices](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/portal-faq).
+For a list of common issues diagnosed by the portal checker tool, see [Common portal issues diagnosed by portal checker and their best practices](https://docs.microsoft.com/dynamics365/customer-engagement/portals/portal-faq).
 
 To run portal checker:
 

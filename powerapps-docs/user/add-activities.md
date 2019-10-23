@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 8/02/2019
+ms.date: 10/03/2019
 ms.author: mduelae
 ms.custom: ""
 ms.reviewer: ""
@@ -19,7 +19,6 @@ search.app:
 ---
 # Add an appointment, email, phone call, note, or task activity to the timeline 
 
-[!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
 
 Add **Activities** in the **Timeline** wall to keep track of all your communications with a customer or contact. For example, you can take notes, add posts, add a task, send email, add phone call details, or set up appointments. The system automatically timestamps every activity and shows who created it. You and other people on your team can scroll through the activities to see the history as you work with a customer. 
 
@@ -96,7 +95,7 @@ To add an email activity to a record, you must first save the record you are add
 
 
     > [!NOTE]
-    > To list emails in a conversation view, go to **Settings** > **Personalization Settings** > **Email** tab and then select **Show email as a conversation on Timeline**. For more information on personal settings, see [Set personal options](set-personal-options.md).
+    > To list emails in a conversation view, go to **Settings** > **Personalization Settings** > **Email** tab and then select **Show email as a conversation on Timeline**. For more information on personal settings, see [Set personal options](https://docs.microsoft.com/en-us/powerapps/user/set-personal-options#email-tab-options). Once enabled, you can open any form that has a timeline and your emails will be grouped into conversation threads with the latest email at the top.
 
    > [!div class="mx-imgBorder"]
    > ![Set personal options](media/emailsettings1.png "Set personal options")

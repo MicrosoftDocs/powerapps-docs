@@ -6,8 +6,8 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: anneta
-ms.date: 05/17/2019
+ms.reviewer: tapanm
+ms.date: 09/14/2019
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -371,13 +371,6 @@ With these changes, you can view and change the **Company Name** field in the **
 > [!div class="mx-imgBorder"]
 > ![Animation that shows how selecting a contact changes the other controls and the form](media/working-with-references/customer-allthree.gif)
 
-> [!NOTE]
-> As of this writing, **Customer** lookups have these limitations:
->
-> - You can't filter a list based on a specific record in the **Contacts** or **Accounts** entities. The filter radio-button control in the previous example won't work.
-> - The only customer field that's working is the system-defined **'Company Name'** on the **Contacts** entity, which was used in the previous example. Adding a custom customer field isn't yet supported.
-> - You can't clear the customer field by using **Patch** to set it to *blank*.
-
 ## Understand Regarding lookup fields
 
 The **Regarding** lookup field differs a little from those that you've already worked with in this topic. You'll start by applying the patterns that this topic described earlier, and then you'll learn other tricks.
@@ -415,12 +408,6 @@ After you make these changes, you work with the **Regarding** lookup just as you
 
 > [!div class="mx-imgBorder"]
 > ![Animation that shows how selecting an item in the gallery changes the other controls and the form](media/working-with-references/regarding-allthree.gif)
-
-> [!NOTE]
-> As of this writing, **Regarding** lookups have these limitations:
->
-> - You can't filter a list based on a specific record. The filter radio-button control in the previous example won't work.
-> - You can't clear the regarding field by using **Patch** to set it to *blank*.
 
 ## Understand Regarding relationships
 

@@ -6,51 +6,79 @@ manager: shujoshi
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/18/2019
+ms.date: 10/07/2019
 ms.author: shjais
 ms.reviewer:
 ---
 
 # Known issues
 
-[!include[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 ## General issues
 
 - The **Modified Date** for the app might be incorrect because these are pre-provisioned apps and could have been provisioned earlier.
 
-- The owner of the portal is not displayed correctly. It is displayed as System.
+- When you create an environment along with the starter portal, the owner of the portal is not displayed correctly. It is displayed as System.
 
-- If you are reusing the URL of a recently deleted portal to create a new portal, it will have some delay for runtime to setup. This is because the purge of previous resources would still be in progress and may take from 30 minutes to 1 hour for the new portal to setup on azure.
+- If you are reusing the URL of a recently deleted portal to create a new portal, it will have some delay for runtime to setup. This is because the purge of previous resources would still be in progress and may take from 30 minutes to 1 hour for the new portal to setup on Azure. The portal will also not be available for editing during this time and may show errors when launched in studio for editing.
 
 - When switching an environment in PowerApps, the portals within an environment may not show up immediately in **Apps** or **Recent Apps** list. This happens particularly on environments that are created in a different region than their tenant. The workaround is to use browser refresh or wait for some time for portal to show up in the apps list.
 
-- When you reset your portal successfully from PowerApps Portals admin center, the following error is displayed: "The portal you are trying to access doesn't belong to the tenant you are currently logged into. Please log out and log in to the correct tenant.". You can visit the PowerApps home page and create a new portal. 
+- If you keep the portal settings pane open in PowerApps home page while resetting the portal from PowerApps Portals admin center, a user will see the "Something went wrong" error message in the portal settings pane, as portal is not available.
 
-## Portal designer issues
+- In certain cases, when you create a portal, the styles are not applied properly to the portal, and the website is displayed without the styles when opened through **Browse website**. This rarely happens and styles can be recovered by restarting the portal from PowerApps Portals admin center.
 
--   When you select text in the text box, the font size of the selected text is not displayed in the formatting toolbar.
+## PowerApps Portals Studio issues
 
-- The padding of columns in a section is not same as rendered on the website. The padding is adjusted according to the content inside the sections.
+- If a portal has page hierarchy of more than three levels, the pages from fourth level onwards are not displayed in PowerApps Portals Studio.
 
-- Canvas does not load content in Chinese language.
+- The selected text font size will only be displayed if there is a font size defined specifically for that text. If it is part of the standard HTML tags such as p, H1, H2, H3, an so on, PowerApps Portals Studio will not display the font size.
 
 - Webpage using the **Page with side navigation** template displays only the link of the pages which existed during the webpage creation. You can update the links on the left side of the page by changing the page template to another template and then back to **Page with side navigation**.
 
 - When you delete a webpage, canvas does not reflect the updated menu until the next refresh of canvas.
 
-- When creating a child page from a rewrite page (unsupported pages in portal designer), you must choose the template manually from the properties pane to render the page.
-
-- If the page name is large and not displayed completely in the **Pages** pane, the **Ellipsis** button (...) is not displayed. You must right-click the page name to see the page options.
-
-- If you have added a deactivated content snippet on a page, it will be displayed in the portal designer. But, the deactivated content snippet will be hidden on the actual website.
-
-- Few components' placeholder like web links, Power BI, chart, and so on are not editable. But you can still edit the text on the same. The changes on placeholders will not be saved.
-
-- Information and related actions on canvas, like component name, in portal designer are supported only in English.
-
 - Color picker and its related strings are supported only in English.
 
 - A few template pages on the Employee Self Service portal are not able to render correct breadcrumb.
 
-- A few Dynamics 365 Portal templates do not have menu items as per their hierarchy of pages. However, if you create new pages, the menu items are created accordingly.
+- A few PowerApps Portals templates, especially bound to model-driven apps in Dynamics 365, do not have default menu items as per their hierarchy of pages. The reason is that there is not page order available in all or few of the webpages. Any portal without the display order of webpages will have this issue.
+
+- An error message is displayed when the page content (page copy) exceeds its limit of 65536 characters and page summary exceed its default limit of 2000 characters.
+
+- Navigation menu is only visible on the canvas with a resolution of minimum width of 1600px.
+
+- An image uploaded on a page becomes the child of the page. If you delete the page, and use the image on another page, the image will not render on PowerApps Portals Studio and website.
+
+- Form rendering is not currently supported in PowerApps Portals Studio. When you add a form, you must select **Browse website** to open the website and verify the form.
+
+- On a text or a section background, if you change the color to **No color**, PowerApps Portals Studio does not remove the related attributes such as background color or font color, instead make the values null.
+
+- In the following scenarios PowerApps Portals Studio ceases to load and shows the "Sorry, there's a disconnect" error:
+    - If the Home page is deleted or disabled for a portal.
+    - If a page template related to the Home page or any page is disabled or deleted.
+
+- PowerApps Portals Studio will be unable to load source code of those content snippets which do not have a language assigned in Common Data Service.
+
+- In some instances the changes for header and footer, either through WYSIWYG experience of PowerApps Portals Studio or through the code editor, will not be reflected immediately.
+
+- If a webpage is assigned the Search template in PowerApps Portals Studio, it will show a simple page with loader. For this to work, you will have to create an appropriate site marker for that page.
+
+- The Default studio template also shows up as an option in page template while creating a new page once it is used in PowerApps Portals Studio. Also, this template is only inserted in English language and it does not support localization based on default Common Data Service or portal language.
+
+- A list rendered as a calendar control or map is not configurable through PowerApps Portals Studio.
+
+- The Partial URL field in page properties does not accept special characters and it breaks the rendering in the canvas for some time. 
+
+- Upload CSS might fail in scenarios where CSS file name contains special characters or space in the file name.
+
+- Unpublished webpages do not render in canvas of PowerApps Portals Studio.
+
+- While using PowerApps Portals Studio, if your portal base language is different than the browser's language, the new webpages created using the Default studio template will have dummy content inserted in browser's language instead of portal language.
+
+- Only CSS applied at the root page is displayed in the **Theme** pane. Although, if you try uploading a CSS file with a same name as any other CSS file available in the portal, PowerApps Portals Studio asks you to replace that file.
+
+- PowerApps Portals Studio is currently not supported on Safari in Mac operating system and has the following issues:
+    - The selection of component is not correct and hovering on a component provides incorrect target indication.
+    - Two or three column sections do not render properly in PowerApps Portals Studio but works fine on the website.
+

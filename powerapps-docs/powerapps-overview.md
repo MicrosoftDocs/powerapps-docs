@@ -43,7 +43,7 @@ PowerApps admins can use:
 
 - **PowerApps admin center** ([admin.powerapps.com](https://admin.powerapps.com)) to create and manage environments, users, roles, and data-loss prevention policies. 
 
-- **Power Platform admin center** ([admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com)) to manage environments, get real-time, self-help recommendations and support for Dynamics 365 for Customer Engagement apps, PowerApps, and Microsoft Flow, and view Common Data Service analytics. 
+- **Power Platform admin center** ([admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com)) to manage environments, get real-time, self-help recommendations and support for PowerApps and Microsoft Flow, and view Common Data Service analytics. 
 
 More information: [Administer PowerApps](/power-platform/admin/admin-guide)
 
@@ -53,7 +53,7 @@ Developers are app makers who can write code to extend business app creation and
 
 ## PowerApps and Dynamics 365
 
-Dynamics 365 applications, like Dynamics 365 for Sales, Dynamics 365 for Service, Dynamics 365 for Marketing also use the underlying data platform (Common Data Service) used by PowerApps to store and secure data. This enables you to build apps using PowerApps and Common Data Service directly against your core business data already used within Dynamics 365 without the need for integration. More information: [Dynamics 365 and the Common Data Service](maker/common-data-service/data-platform-intro.md#dynamics-365-and-the-common-data-service)
+Dynamics 365 applications, such as Dynamics 365 Sales, Dynamics 365 Customer Service, Dynamics 365 Marketing also use the underlying data platform (Common Data Service) used by PowerApps to store and secure data. This enables you to build apps using PowerApps and Common Data Service directly against your core business data already used within Dynamics 365 without the need for integration. More information: [Dynamics 365 and Common Data Service](maker/common-data-service/data-platform-intro.md#dynamics-365-and-common-data-service)
 
 ## Try PowerApps for free
 

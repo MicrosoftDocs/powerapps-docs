@@ -95,14 +95,11 @@ These libraries are available for various platforms as shown in the following ta
 
 ## ADAL .NET Client library versions
 
-There are two libraries that support .NET clients. The ADAL .NET v3 library is the latest but does not replace the ADAL .NET v2 library.
+The Common Data Service supports application authentication with the Web API endpoint using the OAuth 2.0 protocol. The Azure Active Directory Authentication Library (ADAL) is the recommended API interface to that protocol for your custom .NET applications. ADAL v2.x has long been supported by our SDK APIs and in fact many SDK code samples use that version of the library. When ADAL v3 was published, a breaking change was introduced such that user credentials could no longer be passed in ADAL API calls to improve application security.
 
-> [!IMPORTANT]
-> If you are using Xrm.Tooling for .NET framework applications, you must use the ADAL .NET v2 library.
+For your custom .NET applications, use ADAL v2 or greater for application authentication with the Web API endpoint. When using the XrmTooling APIs found in the [Microsoft.CrmSdk.XrmTooling.CoreAssembly](https://www.nuget.org/packages/Microsoft.CrmSdk.XrmTooling.CoreAssembly/) NuGet package, the correct version of the ADAL library will be imported automatically into your Visual Studio project. Note that the transition from ADAL v2 to ADAL v3 in the XrmTooling APIs occurred in the [v9.1.0.13](https://www.nuget.org/packages/Microsoft.CrmSdk.XrmTooling.CoreAssembly/9.1.0.13) NuGet package. Consult the package's release notes for detailed information.  
 
-One of the significant differences between the .NET Client versions is that the v2 library provides support for passing user credentials. The v3 library requires that user credential information must be captured interactively using a browser pop-up.
-
-If you are not using Xrm.Tooling you may use the ADAL .NET v2 or v3 client libraries with the Web API. For an example using the v3 client library see : [ADAL v3 WhoAmI sample](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/webapi/C%23/ADALV3WhoAmI/ADALV3WhoAmI).
+For a code sample using the v3 ADAL library see : [ADAL v3 WhoAmI sample](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/webapi/C%23/ADALV3WhoAmI/ADALV3WhoAmI).
 
 ## Use the AccessToken with your requests
 
@@ -111,7 +108,7 @@ This only requires a few lines of code, and just a few more lines to configure a
 
 ### Simple example
 
-The following is the minimum amount of code needed to execute a single Web Api request, but it is not the recommended approach:
+The following is the minimum amount of code needed to execute a single Web Api request, but it is not the recommended approach. Note that this is an ADAL v2 sample due to the use of client credentials:
 
 ```csharp
 class SampleProgram
@@ -270,6 +267,23 @@ class SampleProgram
 
 Even though this example uses <xref:System.Net.Http.HttpClient>.<xref:System.Net.Http.HttpClient.GetAsync*> rather than the overridden <xref:System.Net.Http.HttpClient.SendAsync*>, it will apply for any of the <xref:System.Net.Http.HttpClient> methods that send a request.
 
+### Discover the authority at run time
+
+The authentication authority URL, and the resource URL, can be determined dynamically at run time using the following ADAL code. This is the recommended method to use as compared to the well-known authority URL ("https://login.microsoftonline.com/common") shown previously in a code snippet.  
+  
+```csharp    
+AuthenticationParameters ap = AuthenticationParameters.CreateFromResourceUrlAsync(  
+                        new Uri("https://mydomain.crm.dynamics.com/api/data/")).Result;  
+  
+String authorityUrl = ap.Authority;  
+String resourceUrl  = ap.Resource;  
+```  
+  
+For the Web API, another way to obtain the authority URL is to send any message request to the web service specifying no access token. This is known as a         *bearer challenge*. The response can be parsed to obtain the authority URL.  
+  
+```csharp  
+httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", "");  
+```  
 
 ## Connect as an app
 

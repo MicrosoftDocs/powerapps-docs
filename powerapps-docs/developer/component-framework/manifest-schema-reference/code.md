@@ -19,16 +19,18 @@ ms.assetid: 44d9fcfb-0cd8-48cc-aace-dd589099dd79
 
 # code element
 
-[!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
-
 [!INCLUDE [code-description](includes/code-description.md)]
+
+## Available for
+
+Model-driven apps and canvas apps (experimental preview)
 
 ## Attributes
 
-|Name|Description|Type|Required|
-|--|--|--|--|
-|`path`|Place where files are located|`string`|Yes|
-|`order`|The order in which files must load|Positive integer|Yes|
+|Name|Description|Type|Required|Available for|
+|--|--|--|--|-----|
+|`path`|Place where the resource files are located|`String`|Yes|Model-driven apps and canvas apps (experimental preview) (experimental preview)|
+|`order`|The order in which the resource files should load|`Positive integer`|Yes|Model-driven apps and canvas apps (experimental preview) (experimental preview)|
 
 ## Parent Elements
 
@@ -46,6 +48,6 @@ ms.assetid: 44d9fcfb-0cd8-48cc-aace-dd589099dd79
 
 ### Related topics
 
-[PowerApps component framework Manifest Schema Reference](index.md)<br/>
-[PowerApps component framework API Reference](../reference/index.md)<br/>
-[PowerApps component framework Overview](../overview.md)
+[PowerApps component framework manifest schema reference](index.md)<br/>
+[PowerApps component framework API reference](../reference/index.md)<br/>
+[PowerApps component framework overview](../overview.md)

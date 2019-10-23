@@ -5,7 +5,7 @@ keywords:
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -18,15 +18,17 @@ ms.assetid: 0e776647-a4a2-42c9-85e8-62718154052f
 
 # img element
 
-[!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
-
 [!INCLUDE [img-description](includes/img-description.md)]
+
+## Available for
+
+Model-driven apps
 
 ## Attributes
 
-|Name|Description|Type|Required|
-|--|--|--|--|
-|`path`|Relative path w.r.t manifest where image files are located|`string`|Yes|
+|Name|Description|Type|Required|Available for|
+|--|--|--|--|-------|
+|`path`|Relative path w.r.t manifest where the image files are located|`string`|Yes|Model-driven apps|
 
 ## Parent Elements
 
@@ -43,6 +45,6 @@ ms.assetid: 0e776647-a4a2-42c9-85e8-62718154052f
 
 ### Related topics
 
-[PowerApps component framework Manifest Schema Reference](index.md)<br/>
-[PowerApps component framework API Reference](../reference/index.md)<br/>
-[PowerApps component framework Overview](../overview.md)
+[PowerApps component framework manifest schema reference](index.md)<br/>
+[PowerApps component framework API reference](../reference/index.md)<br/>
+[PowerApps component framework overview](../overview.md)

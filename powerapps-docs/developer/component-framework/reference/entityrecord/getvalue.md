@@ -5,7 +5,7 @@ keywords:
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -16,6 +16,10 @@ ms.assetid: 5928055f-784f-496d-bd96-6921d9574d2f
 
 [!INCLUDE[./includes/getvalue-description.md](./includes/getvalue-description.md)]
 
+## Available for 
+
+Model-driven apps
+
 ## Syntax
 
 `getValue(columnName)`
@@ -24,7 +28,7 @@ ms.assetid: 5928055f-784f-496d-bd96-6921d9574d2f
 
 | Parameter Name|Type|Required|Description|
 | ------------- |----|--------|-----------|
-|`columnName`|`string`|yes|Column name of the record|
+|`columnName`|`string`|Yes|Column name of the record|
 
 
 ## Return Value
@@ -34,5 +38,5 @@ Type: `string`
 ### Related topics
 
 [Entityrecord](../entityrecord.md)<br/>
-[PowerApps component framework API Reference](../../reference/index.md)<br/>
-[PowerApps component framework Overview](../../overview.md)
+[PowerApps component framework API reference](../../reference/index.md)<br/>
+[PowerApps component framework overview](../../overview.md)

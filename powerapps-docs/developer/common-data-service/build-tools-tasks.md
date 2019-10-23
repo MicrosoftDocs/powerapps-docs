@@ -39,9 +39,9 @@ The PowerApps checker task runs a static analysis check on your solution(s) agai
 
 ### Configure service connection for PowerApps checker
 
-Before you can configure the PowerApps Checker task, you first need to define the service principals used to connect to the PowerApps checker service. More information about the underlying PowerApps checker service and authentication is available [here](https://docs.microsoft.com/en-us/powershell/powerapps/overview?view=pa-ps-latest#get-started-using-the-microsoftpowerappscheckerpowershell-module), however, the steps outlined below cover everything you need to get started.
+Before you can configure the PowerApps Checker task, you first need to define the service principals used to connect to the PowerApps checker service. More information about the underlying PowerApps checker service and authentication is available [here](https://docs.microsoft.com/powershell/powerapps/overview?view=pa-ps-latest#get-started-using-the-microsoftpowerappscheckerpowershell-module), however, the steps outlined below cover everything you need to get started.
 
-The following outlines how to generate the required Azure Active Directory (AAD) application using the [AzureAD PowerShell Module](https://docs.microsoft.com/en-us/powershell/module/azuread/?view=azureadps-2.0), add a client secret and then use that to configure the PowerApps checker connection string.
+The following outlines how to generate the required Azure Active Directory (AAD) application using the [AzureAD PowerShell Module](https://docs.microsoft.com/powershell/module/azuread/?view=azureadps-2.0), add a client secret and then use that to configure the PowerApps checker connection string.
 
 > [!NOTE]
 > Privileges to create service principals in an AAD tenant licensed for PowerApps (P1/P2) or D365 CE are required to complete these steps. 
@@ -54,7 +54,8 @@ The following outlines how to generate the required Azure Active Directory (AAD)
 3.	This prompts you to trust the modules from PSGallery. Select **A (Yes to all)**.
 1. Copy and paste the following into the PowerShell prompt:
 
-``` function New-PowerAppsCheckerAzureADApplication
+```powershell 
+function New-PowerAppsCheckerAzureADApplication
 {
     [CmdletBinding()]
     param(
@@ -144,7 +145,7 @@ The import solution imports a solution into a target environment.
 | Solution input file  | The path and file name of the solution.zip file to import into the target environment. For example: *$(Build.ArtifactStagingDirectory)\$(SolutionName).zip*.
  |
 > [!NOTE] 
-> Variables give you a convenient way to get key bits of data into various parts of your pipeline. A comprehensive list of predefined variables is available [here](https://docs.microsoft.com/en-us/azure/devops/pipelines/build/variables?view=azure-devops&tabs=yaml).
+> Variables give you a convenient way to get key bits of data into various parts of your pipeline. A comprehensive list of predefined variables is available [here](https://docs.microsoft.com/azure/devops/pipelines/build/variables?view=azure-devops&tabs=yaml).
 
 ### PowerApps export solution
 
@@ -195,7 +196,8 @@ The set solution version task updates the version of a solution.
 | **Parameters** | **Description** |
 |---------------------------|----|
 | PowerApps environment URL  | The service endpoint for the environment where you want to deploy the package.  Defined under **Service Connections** in **Project Settings**. |
-| Package file  | The path and file name of the package that you want to deploy |
+| Solution name  | The name of the solution you want to set the Version Number for |
+| Solution Version Number | Version number to set, using format `major.minor.build.revision` e.g. **1.0.0.1** |
 
 ### PowerApps deploy package
 
@@ -204,7 +206,6 @@ The deploy package task deploys a package to an environment. Deploying a package
 | **Parameters** | **Description** |
 |---------------------------|----|
 | PowerApps environment URL  | The service endpoint for the target environment that holds the solution you want to update.  Defined under **Service Connections** in **Project Settings**. |
-| Solution name  | The name of the solution you want to set the Version Number for |
 
 ## Environment management tasks
 

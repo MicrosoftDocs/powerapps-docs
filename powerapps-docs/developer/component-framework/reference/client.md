@@ -5,7 +5,7 @@ keywords:
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -15,27 +15,33 @@ ms.assetid: 4ce41c82-bf4a-4d34-9344-5311c24d76de
 
 # Client
 
-[!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
-
 [!INCLUDE [client-description](includes/client-description.md)]
+
+## Syntax
+
+`context.client;`
+
+## Available for 
+
+Model-driven apps and canvas apps (experimental preview)
 
 ## Properties
 
-## disableScroll
+### disableScroll
 
-Whether this component should disable its scrolling capabilities
+Disables the scrolling capabilities for the components.
 
 **Type**: `boolean`
 
 ## Methods
 
-|Method | Description |
-| ------------- |-------------|
-|[getClient](client/getclient.md)|[!INCLUDE [getclient-description](client/includes/getclient-description.md)]|
-|[getFormFactor](client/getformfactor.md)|[!INCLUDE [getformfactor-description](client/includes/getformfactor-description.md)]|
-|[isOffline](client/isoffline.md)|[!INCLUDE [isoffline-description](client/includes/isoffline-description.md)]|
+|Method | Description |Available for|
+| ------------- |-------------|------|
+|[getClient](client/getclient.md)|[!INCLUDE [getclient-description](client/includes/getclient-description.md)]|Model-driven apps and canvas apps (experimental preview)|
+|[getFormFactor](client/getformfactor.md)|[!INCLUDE [getformfactor-description](client/includes/getformfactor-description.md)]|Model-driven apps and canvas apps(experimental preview)|
+|[isOffline](client/isoffline.md)|[!INCLUDE [isoffline-description](client/includes/isoffline-description.md)]|Model-driven apps|
 
 ### Related topics
 
-[PowerApps component framework API Reference](../reference/index.md)<br/>
-[PowerApps component framework Overview](../overview.md)
+[PowerApps component framework API reference](../reference/index.md)<br/>
+[PowerApps component framework overview](../overview.md)

@@ -5,7 +5,7 @@ keywords:
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -15,36 +15,38 @@ ms.assetid: a118f54f-be47-4f35-9ffb-7afa6c296631
 
 # Property
 
-[!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
+Interface for `context.parameters.<property_key>`
+## Available for 
+
+Model-driven apps
 
 ## Properties
 
-## error
+### error
 
 **Type**: `boolean`
 
-## errorMessage
+### errorMessage
 
 **type**: `string`
 
-## formatted
+### formatted
 
 **Type**: `string`
 
-## security
+### security
 
-**Type**: `SecurityValues`
+**Type**: [SecurityValues](securityvalues.md)
 
-## raw
+### raw
 
 **Type**: `any`
 
-## attribute
+### attribute
 
 **Type**: `FieldPropertyMetadata`
 
-
 ### Related topics
 
-[PowerApps component framework API Reference](../reference/index.md)<br/>
-[PowerApps component framework Overview](../overview.md)
+[PowerApps component framework API reference](../reference/index.md)<br/>
+[PowerApps component framework overview](../overview.md)

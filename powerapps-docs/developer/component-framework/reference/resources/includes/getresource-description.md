@@ -4,7 +4,7 @@ description:
 keywords:
 ms.author: nabuthuk
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -15,4 +15,4 @@ applies_to:
 ms.assetid: 1589a95b-baa6-4f22-b7be-9b219409baba
 ---
 
-Gets a CSS, HTML or img resource defined in the component manifest.
+Returns a CSS, HTML or img resource defined in the component manifest.

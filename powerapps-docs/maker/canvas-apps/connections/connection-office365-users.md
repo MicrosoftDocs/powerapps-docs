@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 06/07/2016
 ms.author: lanced
 search.audienceType: 
@@ -38,17 +38,24 @@ The Office 365 Users connection has been created and added to your app. Now, it'
 1. On the **Insert** menu, select **Label**
 2. In the function bar, set its **[Text](../controls/properties-core.md)** property to any of the following formulas:
 
-    `Office365Users.MyProfile().Department`  
-    `Office365Users.MyProfile().DisplayName`  
-    `Office365Users.MyProfile().GivenName`  
-    `Office365Users.MyProfile().Id`  
-    `Office365Users.MyProfile().JobTitle`  
-    `Office365Users.MyProfile().Mail`  
-    `Office365Users.MyProfile().MailNickname`  
-    `Office365Users.MyProfile().Surname`  
-    `Office365Users.MyProfile().TelephoneNumber`  
-    `Office365Users.MyProfile().UserPrincipalName`  
-    `Office365Users.MyProfile().AccountEnabled`  
+   `Office365Users.MyProfile().City`  
+   `Office365Users.MyProfile().CompanyName`  
+   `Office365Users.MyProfile().Country`  
+   `Office365Users.MyProfile().Department`  
+   `Office365Users.MyProfile().DisplayName`  
+   `Office365Users.MyProfile().GivenName`  
+   `Office365Users.MyProfile().Id`  
+   `Office365Users.MyProfile().JobTitle`  
+   `Office365Users.MyProfile().Mail`  
+   `Office365Users.MyProfile().MailNickname`  
+   `Office365Users.MyProfile().mobilePhone`  
+   `Office365Users.MyProfile().OfficeLocation`  
+   `Office365Users.MyProfile().PostalCode`  
+   `Office365Users.MyProfile().Surname`  
+   `Office365Users.MyProfile().TelephoneNumber`  
+   `Office365Users.MyProfile().UserPrincipalName`  
+   `Office365Users.MyProfile().AccountEnabled`  
+   `Office365Users.MyProfile().BusinessPhones`
 
 The label shows the information that you entered about the current user.
 
@@ -61,30 +68,45 @@ The label shows the information that you entered about the current user.
 
    * To show information about another user:  
 
-       `Office365Users.UserProfile(InfoAbout.Text).Department`  
-       `Office365Users.UserProfile(InfoAbout.Text).DisplayName`  
-       `Office365Users.UserProfile(InfoAbout.Text).GivenName`  
-       `Office365Users.UserProfile(InfoAbout.Text).Id`  
-       `Office365Users.UserProfile(InfoAbout.Text).JobTitle`  
-       `Office365Users.UserProfile(InfoAbout.Text).Mail`  
-       `Office365Users.UserProfile(InfoAbout.Text).MailNickname`  
-       `Office365Users.UserProfile(InfoAbout.Text).Surname`  
-       `Office365Users.UserProfile(InfoAbout.Text).TelephoneNumber`  
-       `Office365Users.UserProfile(InfoAbout.Text).UserPrincipalName`  
-       `Office365Users.UserProfile(InfoAbout.Text).AccountEnabled`  
+     `Office365Users.UserProfile(InfoAbout.Text).City`  
+     `Office365Users.UserProfile(InfoAbout.Text).CompanyName`  
+     `Office365Users.UserProfile(InfoAbout.Text).Country`  
+     `Office365Users.UserProfile(InfoAbout.Text).Department`  
+     `Office365Users.UserProfile(InfoAbout.Text).DisplayName`  
+     `Office365Users.UserProfile(InfoAbout.Text).GivenName`  
+     `Office365Users.UserProfile(InfoAbout.Text).Id`  
+     `Office365Users.UserProfile(InfoAbout.Text).JobTitle`  
+     `Office365Users.UserProfile(InfoAbout.Text).Mail`  
+     `Office365Users.UserProfile(InfoAbout.Text).MailNickname`  
+     `Office365Users.UserProfile(InfoAbout.Text).mobilePhone`  
+     `Office365Users.UserProfile(InfoAbout.Text).OfficeLocation`  
+     `Office365Users.UserProfile(InfoAbout.Text).PostalCode`  
+     `Office365Users.UserProfile(InfoAbout.Text).Surname`  
+     `Office365Users.UserProfile(InfoAbout.Text).TelephoneNumber`  
+     `Office365Users.UserProfile(InfoAbout.Text).UserPrincipalName`  
+     `Office365Users.UserProfile(InfoAbout.Text).AccountEnabled`  
+     `Office365Users.UserProfile(InfoAbout.Text).BusinessPhones`
+
    * To show information about another user's manager:  
 
-       `Office365Users.Manager(InfoAbout.Text).Department`  
-       `Office365Users.Manager(InfoAbout.Text).DisplayName`  
-       `Office365Users.Manager(InfoAbout.Text).GivenName`  
-       `Office365Users.Manager(InfoAbout.Text).Id`  
-       `Office365Users.Manager(InfoAbout.Text).JobTitle`  
-       `Office365Users.Manager(InfoAbout.Text).Mail`  
-       `Office365Users.Manager(InfoAbout.Text).MailNickname`  
-       `Office365Users.Manager(InfoAbout.Text).Surname`  
-       `Office365Users.Manager(InfoAbout.Text).TelephoneNumber`  
-       `Office365Users.Manager(InfoAbout.Text).UserPrincipalName`  
-       `Office365Users.Manager(InfoAbout.Text).AccountEnabled`  
+     `Office365Users.Manager(InfoAbout.Text).City`  
+     `Office365Users.Manager(InfoAbout.Text).CompanyName`  
+     `Office365Users.Manager(InfoAbout.Text).Country`  
+     `Office365Users.Manager(InfoAbout.Text).Department`  
+     `Office365Users.Manager(InfoAbout.Text).DisplayName`  
+     `Office365Users.Manager(InfoAbout.Text).GivenName`  
+     `Office365Users.Manager(InfoAbout.Text).Id`  
+     `Office365Users.Manager(InfoAbout.Text).JobTitle`  
+     `Office365Users.Manager(InfoAbout.Text).Mail`  
+     `Office365Users.Manager(InfoAbout.Text).MailNickname`  
+     `Office365Users.Manager(InfoAbout.Text).mobilePhone`  
+     `Office365Users.Manager(InfoAbout.Text).OfficeLocation`  
+     `Office365Users.Manager(InfoAbout.Text).PostalCode`  
+     `Office365Users.Manager(InfoAbout.Text).Surname`  
+     `Office365Users.Manager(InfoAbout.Text).TelephoneNumber`  
+     `Office365Users.Manager(InfoAbout.Text).UserPrincipalName`  
+     `Office365Users.Manager(InfoAbout.Text).AccountEnabled`  
+     `Office365Users.Manager(InfoAbout.Text).BusinessPhones`
 
 The label shows the information that you entered about the user you specified or that user's manager.
 
@@ -129,11 +151,11 @@ This connection includes the following functions:
 
 | Function Name | Description |
 | --- | --- |
-| [MyProfile](connection-office365-users.md#myprofile) |Retrieves the profile for the current user |
-| [UserProfile](connection-office365-users.md#userprofile) |Retrieves a specific user profile |
-| [Manager](connection-office365-users.md#manager) |Retrieves user profile for the manager of the specified user |
-| [DirectReports](connection-office365-users.md#directreports) |Returns the direct reports for the specified user |
-| [SearchUser](connection-office365-users.md#searchuser) |Retrieves search results of user profiles |
+| [DirectReports](connection-office365-users.md#directreports) |Returns the direct reports for the specified user. |
+| [Manager](connection-office365-users.md#manager) |Retrieves user profile for the manager of the specified user. |
+| [MyProfile](connection-office365-users.md#myprofile) |Retrieves the profile for the current user. |
+| [SearchUser](connection-office365-users.md#searchuser) |Retrieves search results of user profiles. |
+| [UserProfile](connection-office365-users.md#userprofile) |Retrieves a specific user profile. |
 
 ### MyProfile
 Get my profile: Retrieves the profile for the current user.
@@ -145,17 +167,24 @@ None.
 
 | Property Name | Type | Description |
 | --- | --- | --- |
-| Department |string |Department of the user. |
+| City | string |City of user. |
+| CompanyName | string |Company of user. |
+| Country | string |Country of user. |
+| Department |string |Department of user. |
 | DisplayName |string |Display name of user. |
 | GivenName |string |Given name of user. |
-| Id |string |User id |
-| JobTitle |string |Job Title of the user. |
+| Id |string |User id. |
+| JobTitle |string |Job title of user. |
 | Mail |string |Email id of user. |
 | MailNickname |string |Nickname of user. |
+| mobilePhone | string |Mobile phone of user. |
+| OfficeLocation | string |Office location of user.|
+| PostalCode | string |Postal code of user.|
 | Surname |string |Surname of user. |
 | TelephoneNumber |string |Telephone number of user. |
 | UserPrincipalName |string |User Principal Name. |
 | AccountEnabled |boolean |Account enabled flag. |
+| BusinessPhones | string |Phone numbers of user's company.|
 
 ### UserProfile
 Get user profile: Retrieves a specific user profile.
@@ -164,98 +193,123 @@ Get user profile: Retrieves a specific user profile.
 
 | Name | Data Type | Required | Description |
 | --- | --- | --- | --- |
-| Id |string |yes |User principal name or email id |
+| Id |string |yes |User principal name or email id. |
 
 #### Output properties
 
 | Property Name | Type | Description |
 | --- | --- | --- |
-| Department |string |Department of the user. |
+| City | string |City of user. |
+| CompanyName | string |Company of user. |
+| Country | string |Country of user. |
+| Department |string |Department of user. |
 | DisplayName |string |Display name of user. |
 | GivenName |string |Given name of user. |
-| Id |string |User id |
-| JobTitle |string |Job Title of the user. |
+| Id |string |User id. |
+| JobTitle |string |Job title of user. |
 | Mail |string |Email id of user. |
 | MailNickname |string |Nickname of user. |
 | Surname |string |Surname of user. |
 | TelephoneNumber |string |Telephone number of user. |
 | UserPrincipalName |string |User Principal Name. |
 | AccountEnabled |boolean |Account enabled flag. |
+| BusinessPhones | string |Phone numbers of user's company.|
 
 ### Manager
-Get manager: Retrieves user profile for the manager of the specified user
+Get manager: Retrieves user profile for the manager of the specified user.
 
 #### Input properties
 
 | Name | Data Type | Required | Description |
 | --- | --- | --- | --- |
-| Id |string |yes |User principal name or email id |
+| Id |string |yes |User principal name or email id. |
 
 #### Output properties
 
 | Property Name | Type | Description |
 | --- | --- | --- |
-| Department |string |Department of the user. |
+| City | string |City of user. |
+| CompanyName | string |Company of user. |
+| Country | string |Country of user. |
+| Department |string |Department of user. |
 | DisplayName |string |Display name of user. |
 | GivenName |string |Given name of user. |
-| Id |string |User id |
-| JobTitle |string |Job Title of the user. |
+| Id |string |User id. |
+| JobTitle |string |Job title of user. |
 | Mail |string |Email id of user. |
 | MailNickname |string |Nickname of user. |
+| mobilePhone | string |Mobile phone of user. |
+| OfficeLocation | string |Office location of user.|
+| PostalCode | string |Postal code of user.|
 | Surname |string |Surname of user. |
 | TelephoneNumber |string |Telephone number of user. |
 | UserPrincipalName |string |User Principal Name. |
 | AccountEnabled |boolean |Account enabled flag. |
+| BusinessPhones | string |Phone numbers of user's company.|
 
 ### DirectReports
-Get direct reports: Get direct reports
+Get direct reports: Get direct reports.
 
 #### Input properties
 
 | Name | Data Type | Required | Description |
 | --- | --- | --- | --- |
-| Id |string |yes |User principal name or email id |
+| Id |string |yes |User principal name or email id. |
 
 #### Output properties
 
 | Property Name | Type | Description |
 | --- | --- | --- |
-| Department |string |Department of the user. |
+| City | string |City of user. |
+| CompanyName | string |Company of user. |
+| Country | string |Country of user. |
+| Department |string |Department of user. |
 | DisplayName |string |Display name of user. |
 | GivenName |string |Given name of user. |
-| Id |string |User id |
-| JobTitle |string |Job Title of the user. |
+| Id |string |User id. |
+| JobTitle |string |Job title of user. |
 | Mail |string |Email id of user. |
 | MailNickname |string |Nickname of user. |
+| mobilePhone | string |Mobile phone of user. |
+| OfficeLocation | string |Office location of user.|
+| PostalCode | string |Postal code of user.|
 | Surname |string |Surname of user. |
 | TelephoneNumber |string |Telephone number of user. |
 | UserPrincipalName |string |User Principal Name. |
 | AccountEnabled |boolean |Account enabled flag. |
+| BusinessPhones | string |Phone numbers of user's company.|
 
 ### SearchUser
-Search for users: Retrieves search results of user profiles
+Search for users: Retrieves search results of user profiles.
 
 #### Input properties
 
 | Name | Data Type | Required | Description |
 | --- | --- | --- | --- |
-| searchTerm |string |no |Search string. Applies to: display name, given name, surname, mail, mail nickname, and user principal name |
+| searchTerm |string |no |Search string. Applies to: display name, given name, surname, mail, mail nickname, and user principal name. |
 
 #### Output properties
 
 | Property Name | Type | Description |
 | --- | --- | --- |
-| Department |string |Department of the user. |
+| City | string |City of user. |
+| CompanyName | string |Company of user. |
+| Country | string |Country of user. |
+| Department |string |Department of user. |
 | DisplayName |string |Display name of user. |
 | GivenName |string |Given name of user. |
-| Id |string |User id |
-| JobTitle |string |Job Title of the user. |
+| Id |string |User id. |
+| JobTitle |string |Job title of user. |
 | Mail |string |Email id of user. |
 | MailNickname |string |Nickname of user. |
+| mobilePhone | string |Mobile phone of user. |
+| OfficeLocation | string |Office location of user.|
+| PostalCode | string |Postal code of user.|
 | Surname |string |Surname of user. |
 | TelephoneNumber |string |Telephone number of user. |
 | UserPrincipalName |string |User Principal Name. |
 | AccountEnabled |boolean |Account enabled flag. |
+| BusinessPhones | string |Phone numbers of user's company.|
 
 ## Helpful links
 * See all the [available connections](../connections-list.md).

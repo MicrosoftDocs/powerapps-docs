@@ -2,16 +2,10 @@
 title: "Use solutions in PowerApps | MicrosoftDocs"
 description: "Learn how to use solution to create or customize apps"
 ms.custom: ""
-ms.date: 06/17/2019
+ms.date: 10/22/2019
 ms.reviewer: ""
 ms.service: powerapps
-ms.suite: ""
-ms.tgt_pltfrm: ""
 ms.topic: "article"
-applies_to: 
-  - "Dynamics 365 (online)"
-  - "Dynamics 365 Version 9.x"
-  - "powerapps"
 author: "caburk"
 ms.assetid: 72bacfbb-96a3-4daa-88ff-11bdaaac9a3d
 caps.latest.revision: 57
@@ -103,9 +97,22 @@ In PowerApps, you can view the classic solution explorer by selecting **Solution
 - Flows created from solutions will not be displayed in the "Team Flows" list
 - Button triggered flows are not available in solutions.
 - Canvas app triggered flows are not available in solutions.
+-	Canvas apps shared as co-owner to an Azure Active Directory (AAD) security group can't be added to solutions. Unshare the app before adding it to a solution.
+-	Canvas apps won't display in the classic solution explorer. Use the modern experience.
+- Canvas apps are not currently mastered in Common Data Service. Therefore, the following limitations exist:
+  - Database operations such as backup, restore, and copy are not supported for canvas apps and flows. These operations can corrupt canvas apps and flows.
+  - If a canvas app is packaged in a managed solution, it can't be edited and re-published in the target environment. Use unmanaged solutions if the apps require editing in the target environment. 
+  - Deleting a managed solution will not rollback to a different canvas app's version. Instead all versions of the app will be deleted.
+  
+- Importing a solution containing a flow will not automatically create or associate required connections. The flow must be edited to fix the connections.
+  - If using managed solutions, this creates an active customization in the unmanaged layer. Therefore subsequent solution updates to the flow will not be reflected. 
+- Flows created from solutions will not be displayed in the "Team Flows" list. They must be accessed through a solution. 
+- Button triggered flows are not available in solutions.
 - Flows triggered from Microsoft 365 applications such as Excel are not available in solutions.
 - Flows that connect to SharePoint are not available in solutions.
 - Flows in solutions don't support delegated authentication. For example, access to a flow is not automatically granted based on having access to the SharePoint list the flow was created from.
+- Custom connectors created outside solutions cannot be added to solutions at this time.
+
 
  For details about customizing the individual components in a solution, see the following topics:  
   

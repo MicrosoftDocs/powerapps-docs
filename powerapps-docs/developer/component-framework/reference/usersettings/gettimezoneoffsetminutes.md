@@ -5,7 +5,7 @@ keywords:
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -17,23 +17,28 @@ ms.assetid: 86290d20-7dbb-4932-adaa-31121ae7a3f6
 
 [!INCLUDE [gettimezoneoffsetminutes-description](includes/gettimezoneoffsetminutes-description.md)]
 
+## Available for 
+
+Model-driven apps
+
 ## Syntax
 
-`getTimeZoneOffsetMinutes(date)`
+`context.usersettings.getTimeZoneOffsetMinutes(date)`
 
 ## Parameters
 
 | Parameter Name|Type|Required|Description|
 | ------------- |----|--------|-----------|
-|date|`Date`|yes|date to get the offset from utc for.|
+|date|`Date`|Yes|date to get the offset from utc for.|
 
 ## Return Value
 
-Type: `number`
+Type: `Number`
+Description: Time zone offset in minutes.
 
 
 ### Related topics
 
 [User Settings](../usersettings.md)<br/>
-[PowerApps component framework API Reference](../../reference/index.md)<br/>
-[PowerApps component framework Overview](../../overview.md)
+[PowerApps component framework API reference](../../reference/index.md)<br/>
+[PowerApps component framework overview](../../overview.md)

@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: cds
 ms.topic: reference
-ms.date: 07/17/2018
+ms.date: 09/26/2019
 ms.author: lanced
 search.audienceType: 
   - maker
@@ -16,18 +16,22 @@ search.app:
 ---
 
 # Complex entities and licensing
+
+> [!IMPORTANT]
+> This topic is out-of-date and will be updated soon to reflect the latest licensing changes that are applicable starting October 1, 2019. For the latest information on licensing requirements for entities, see the [PowerApps licensing guide](https://go.microsoft.com/fwlink/?linkid=2085130).
+
 Entities that include the following complex server-side logic require users of an app or flow that uses these entities to have a PowerApps Plan 2 or Microsoft Flow Plan 2 license:
 
-* Code plug-ins. More information: [Plug-in development](https://docs.microsoft.com/dynamics365/customer-engagement/developer/plugin-development)
-* Real-time workflows. More information: [Workflow processes](https://docs.microsoft.com/dynamics365/customer-engagement/customize/workflow-processes)
+* Code plug-ins. More information: [Plug-in development](/powerapps/developer/common-data-service/plug-ins)
+* Real-time workflows. More information: [Workflow processes](/flow/workflow-processes)
 
     > [!IMPORTANT]
     >  Only workflows that are converted to a real-time workflow are considered real-time and synchronous. Workflows that are run in the background can still be used with the appropriate PowerApps plan and do not require additional licenses.
 
 To know whether or not you've added complex business logic to your entities, review the list of plug-in assemblies and workflows configured in your environment.
 
-## Complex entities installed with Dynamics 365
-The following table lists entities which contain complex server side logic out-of-the-box as part of a Dynamics 365 application installation. This list is intended as a guide. Depending on which Dynamics 365 applications and versions are installed in your environment, the list of complex entities may vary.
+## Complex entities installed with Dynamics 365 apps
+The following table lists entities that contain complex server-side logic out-of-the-box as part of the installation of model-driven applications in Dynamics 365, such as Dynamics 365 Sales and Dynamics 365 Customer Service. This list is intended as a guide. Depending on which Dynamics 365 apps and versions are installed in your environment, the list of complex entities may vary.
 
 > [!NOTE]
 >  If you are using the Common Data Service and have not installed a Dynamics 365 application or third-party solution, your environment will not have entities containing complex server side logic.

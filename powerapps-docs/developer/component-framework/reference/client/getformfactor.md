@@ -5,7 +5,7 @@ keywords:
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -19,11 +19,15 @@ ms.assetid: 0ad24866-08c3-4584-8964-decff50e716e
 
 ## Syntax
 
-`getFormFactor()`
+`context.client.getFormFactor()`
+
+## Available for 
+
+Model-driven apps and canvas apps (experimental preview)
 
 ## Return Value
 
-Type: `number`
+Type: `Number`
 
 |Value|Form Factor|
 |---|---|
@@ -36,5 +40,5 @@ Type: `number`
 ### Related topics
 
 [Client](../client.md)<br/>
-[PowerApps component framework API Reference](../../reference/index.md)<br/>
-[PowerApps component framework Overview](../../overview.md)
+[PowerApps component framework API reference](../../reference/index.md)<br/>
+[PowerApps component framework overview](../../overview.md)

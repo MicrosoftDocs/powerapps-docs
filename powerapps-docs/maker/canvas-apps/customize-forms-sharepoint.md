@@ -1,14 +1,14 @@
 ---
 title: Customize a form in a canvas app | Microsoft Docs
 description: In PowerApps, specify which data to show in a canvas-app form, in which order to show them, and in which controls.
-author: AFTOwen
+author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
 ms.date: 03/17/2018
-ms.author: anneta
+ms.author: tapanm
 search.audienceType: 
   - maker
 search.app: 

@@ -8,7 +8,7 @@ ms.topic: reference
 ms.component: canvas
 ms.date: 10/25/2016
 ms.author: gregli
-ms.reviewer: anneta
+ms.reviewer: tapanm
 search.audienceType: 
   - maker
 search.app: 

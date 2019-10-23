@@ -29,10 +29,14 @@ A lookup field can be used to link to a record in another entity. A lookup compo
 ## Configure a lookup component
 These are the properties available to configure when using a lookup component on a form using the form designer.
 
+
+<!--from editor: "Drop-down" should only be an adjective. In the following table, is it a list? A menu? -->
+
+
 |Area  |Name  |Description  |
 |---------|---------|---------|
 | **Display options** | **Entity** |  The related entity that the lookup field connects to. |
-| **Display options** | **Default view** |  The view of the entity selected in the **Entity** property that can be used to get and display the list of records that app users can select in the lookup drop down. |
+| **Display options** | **Default view** |  The view of the entity selected in the **Entity** property that can be used to get and display the list of records that app users can select in the lookup drop-down. |
 | **Display options** | **Allow users to change view** |  When selected, app users can change from the **Default view** to another view of the entity selected in the **Entity** property. |
 | **Display options** | **Show all views** |  When selected, app users can change from the **Default view** to all other views of the entity selected in the **Entity** property. <br /><br />This property is only available when **Allow users to change view** is selected. |
 | **Display options** | **Selected views** |  A list of views of the entity selected in the **Entity** property that app users can change to from the **Default view**. <br /><br />This property is only available when **Allow users to change view** is selected and **Show all views** is unselected. |

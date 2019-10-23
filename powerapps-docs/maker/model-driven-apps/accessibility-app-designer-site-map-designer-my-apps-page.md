@@ -106,4 +106,4 @@ PowerApps offers keyboard shortcuts to address issues faced by people with limit
 
 ## See also
 
-[Use keyboard shortcuts in Dynamics 365 Customer Engagement applications](https://docs.microsoft.com/dynamics365/customer-engagement/basics/keyboard-shortcuts)
+[Use keyboard shortcuts in PowerApps](/powerapps/user/keyboard-shortcuts)

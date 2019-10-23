@@ -5,7 +5,7 @@ keywords:
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -15,9 +15,11 @@ ms.assetid: 66599c2f-6651-4b27-92da-a38897acdfb5
 
 # resources element
 
-[!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
-
 [!INCLUDE [resources-description](includes/resources-description.md)]
+
+## Available for
+
+Model-driven apps and canvas apps (experimental preview)
 
 ## Parent Elements
 
@@ -46,6 +48,6 @@ ms.assetid: 66599c2f-6651-4b27-92da-a38897acdfb5
 
 ### Related topics
 
-[PowerApps component framework Manifest Schema Reference](index.md)<br/>
-[PowerApps component framework API Reference](../reference/index.md)<br/>
-[PowerApps component framework Overview](../overview.md)
+[PowerApps component framework manifest schema reference](index.md)<br/>
+[PowerApps component framework API reference](../reference/index.md)<br/>
+[PowerApps component framework overview](../overview.md)

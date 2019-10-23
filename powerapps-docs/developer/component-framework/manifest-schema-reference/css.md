@@ -5,7 +5,7 @@ keywords:
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -18,16 +18,18 @@ ms.assetid: b6119424-c0a4-4412-b25c-8239da6cbe36
 
 # css element
 
-[!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
-
 [!INCLUDE [css-description](includes/css-description.md)]
+
+## Available for
+
+Model-driven apps and canvas apps (experimental preview)
 
 ## Attributes
 
-|Name|Description|Type|Required|
-|--|--|--|--|
-|`path`|Relative path w.r.t manifest where CSS files are located|`string`|Yes|
-|`order`|The order in which the files must load|`Positive integer`|Optional|
+|Name|Description|Type|Required|Available for|
+|--|--|--|--|-----|
+|`path`|Relative path w.r.t manifest where CSS files are located|`string`|Yes|Model-driven apps and canvas apps (experimental preview) (experimental preview)|
+|`order`|The order in which the CSS files Should load|`Positive integer`|Optional|Model-driven apps and canvas apps (experimental preview) (experimental preview)|
 
 ## Parent Elements
 
@@ -43,6 +45,6 @@ ms.assetid: b6119424-c0a4-4412-b25c-8239da6cbe36
 
 ### Related topics
 
-[PowerApps component framework Manifest Schema Reference](index.md)<br/>
-[PowerApps component framework API Reference](../reference/index.md)<br/>
-[PowerApps component framework Overview](../overview.md)
+[PowerApps component framework manifest schema reference](index.md)<br/>
+[PowerApps component framework API reference](../reference/index.md)<br/>
+[PowerApps component framework overview](../overview.md)

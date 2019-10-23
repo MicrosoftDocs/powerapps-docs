@@ -13,16 +13,18 @@ ms.reviewer: nkrb
 
 # Implementing the FacePile component
 
-[!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
-
-This sample shows how to use React to create controls using PowerApps component framework.  The facepile sample component is implemented based on React and the Office UI Fabric React components. The code may not reveal the best practices for the mentioned third-party libraries.
+This sample shows how to use React to create components using PowerApps component framework.  The facepile sample component is implemented based on React and the Office UI Fabric React components. The code may not reveal the best practices for the mentioned third-party libraries.
 
 > [!div class="mx-imgBorder"]
 > ![React Facepile](../media/react-facepile.png "React Facepile")
 
-## A note on performance
+## Available for 
 
-Although the PowerApps host applications work on top of React, the version of React you bundle will not communicate with the host version, nor is it dependent on that version. A new copy of React (or any third-party library you bundle with your control) will be loaded into the host page for every instance of that control, so be mindful of how large you are making your page(s) as you add controls. We will have a solution to this issue in a future release.
+Model-driven apps and canvas apps (experimental preview) 
+
+
+> [!IMPORTANT]
+> Although the PowerApps host applications work on top of React, the version of React you bundle will not communicate with the host version, nor is it dependent on that version. A new copy of React (or any third-party library you bundle with your component) will be loaded into the host page for every instance of that control, so be mindful of how large you are making your page(s) as you add components. We will have a solution to this issue in a future release.
 
 ## Manifest
 
@@ -40,11 +42,11 @@ Although the PowerApps host applications work on top of React, the version of Re
 </manifest>
 ```
 
-## Overview
+## overview
 
 This sample provides examples on how to add dependencies for third-party libraries and Office UI Fabric, showcasing how to utilize the Office UI Fabric components for React for UI and perform bi-directional data-binding between the PowerApps component framework and the React state model.
 
-The component sample consists of three Office UI Fabric components: a facepile, a slider, a check box, and a drop-down list. When you move the slider, the number of faces in the facepile changes. The check box controls whether the faces fade in and out or simply appear or disappear, and the options in the drop-down list control the size of the faces. If there is no value set, the number of faces defaults to 3.
+The component sample consists of three Office UI Fabric components: a facepile, a slider, a check box, and a drop-down list. When you move the slider, the number of faces in the facepile changes. The check box components whether the faces fade in and out or simply appear or disappear, and the options in the drop-down list control the size of the faces. If there is no value set, the number of faces defaults to 3.
 
 - When the component is loaded, the slider is set to the bound attribute value. The `context.parameters.[property_name].attributes` property contains the associated metadata.
 - An event handler is passed in the React component's props; this will allow the React component to notify the host PowerApps component framework control that a value has changed. The event handler then determines if a call to the **notifyOutputEvents** method is necessary.
@@ -54,30 +56,27 @@ The component sample consists of three Office UI Fabric components: a facepile, 
 
 ## Code
 
-### index.ts
 ```TypeScript
 import { IInputs, IOutputs } from "./generated/ManifestTypes";
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import { FacepileBasicExample, IFacepileBasicExampleProps } from './Facepile';
+import * as React from "react";
+import * as ReactDOM from "react-dom";
+import { FacepileBasicExample, IFacepileBasicExampleProps } from "./Facepile";
 
-export class ReactStandardControl implements ComponentFramework.StandardControl<IInputs, IOutputs> {
-  // Reference to the notifyOutputChanged method
+export class ReactStandardControl
+  implements ComponentFramework.StandardControl<IInputs, IOutputs> {
+  // reference to the notifyOutputChanged method
   private notifyOutputChanged: () => void;
-  // Reference to the container div
+  // reference to the container div
   private theContainer: HTMLDivElement;
-  // Reference to the React props, prepopulated with a bound event handler
+  // reference to the React props, prepopulated with a bound event handler
   private props: IFacepileBasicExampleProps = {
-    numberFacesChanged: this.numberFacesChanged.bind(this),
-  }
+    numberFacesChanged: this.numberFacesChanged.bind(this)
+  };
 
   /**
    * Empty constructor.
    */
-  constructor()
-  {
-
-  }
+  constructor() {}
 
   /**
    * Used to initialize the control instance. Controls can kick off remote server calls and other initialization actions here.
@@ -87,8 +86,12 @@ export class ReactStandardControl implements ComponentFramework.StandardControl<
    * @param state A piece of data that persists in one session for a single user. Can be set at any point in a controls life cycle by calling 'setControlState' in the Mode interface.
    * @param container If a control is marked control-type='starndard', it will receive an empty div element within which it can render its content.
    */
-  public init(context: ComponentFramework.Context<IInputs>, notifyOutputChanged: () => void, state: ComponentFramework.Dictionary, container:HTMLDivElement)
-  {
+  public init(
+    context: ComponentFramework.Context<IInputs>,
+    notifyOutputChanged: () => void,
+    state: ComponentFramework.Dictionary,
+    container: HTMLDivElement
+  ) {
     this.notifyOutputChanged = notifyOutputChanged;
     this.props.numberOfFaces = context.parameters.numberOfFaces.raw || 3;
     this.theContainer = container;
@@ -98,9 +101,9 @@ export class ReactStandardControl implements ComponentFramework.StandardControl<
    * Called when any value in the property bag has changed. This includes field values, data-sets, global values such as container height and width, offline status, control metadata values such as label, visible, etc.
    * @param context The entire property bag available to control via Context Object; It contains values as set up by the customizer mapped to names defined in the manifest, as well as utility functions
    */
-  public updateView(context: ComponentFramework.Context<IInputs>): void
-  {
-    if (context.updatedProperties.includes("numberOfFaces")) this.props.numberOfFaces = context.parameters.numberOfFaces.raw || 3;
+  public updateView(context: ComponentFramework.Context<IInputs>): void {
+    if (context.updatedProperties.includes("numberOfFaces"))
+      this.props.numberOfFaces = context.parameters.numberOfFaces.raw || 3;
 
     // Render the React component into the div container
     ReactDOM.render(
@@ -143,9 +146,11 @@ export class ReactStandardControl implements ComponentFramework.StandardControl<
     ReactDOM.unmountComponentAtNode(this.theContainer);
   }
 }
+
 ```
 
 ### Facepile.tsx
+
 ```TSX
 import * as React from "react";
 import { Checkbox } from "office-ui-fabric-react/lib/Checkbox";
@@ -410,6 +415,6 @@ export const TestImages = {
 
 ### Related topics
 
-[PowerApps component framework Manifest Schema Reference](../manifest-schema-reference/index.md)<br />
-[PowerApps component framework API Reference](../reference/index.md)<br />
-[PowerApps component framework Overview](../overview.md)
+[PowerApps component framework manifest schema reference](../manifest-schema-reference/index.md)<br />
+[PowerApps component framework API reference](../reference/index.md)<br />
+[PowerApps component framework overview](../overview.md)

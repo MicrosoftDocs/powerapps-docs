@@ -1,7 +1,7 @@
 ---
 title: "getOutputs | MicrosoftDocs"
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.topic: "reference"
 applies_to: ""
@@ -12,6 +12,10 @@ author: Nkrb
 # getOutputs
 
 [!INCLUDE[./includes/getoutputs-description.md](./includes/getoutputs-description.md)]
+
+## Available for 
+
+Model-driven apps and canvas apps (experimental preview)
 
 ## Syntax
 
@@ -43,5 +47,5 @@ MyControl.prototype.getOutputs = function () {
 ### Related topics
 
 [Control](../control.md)<br/>
-[PowerApps component framework API Reference](../../reference/index.md)<br/>
-[PowerApps component framework Overview](../../overview.md)
+[PowerApps component framework API reference](../../reference/index.md)<br/>
+[PowerApps component framework overview](../../overview.md)

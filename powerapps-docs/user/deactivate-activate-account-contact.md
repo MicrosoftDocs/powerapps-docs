@@ -17,7 +17,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
----
+
 # Deactivate or activate an account or contact
 
 In a model-driven app, you can deactivate an account or contact rather than deleting it. This ensures the integrity of the audit trail associated with that record.  

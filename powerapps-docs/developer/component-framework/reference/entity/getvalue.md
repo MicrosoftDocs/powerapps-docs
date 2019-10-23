@@ -5,7 +5,7 @@ keywords:
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -29,16 +29,16 @@ getvalue-description.md
 
 | Parameter Name|Type|Required|Description|
 | ------------- |----|--------|-----------|
-|`columnName`|`string`|yes|Logical name of the entity attribute.|
+|`columnName`|`String`|Yes|Logical name of the entity attribute.|
 
 ## Return Value
 
-Type: `string | Date | number | boolean |` [EntityReference](../entityreference.md)[]
+Type: `string | Date | number | boolean |` [Entityreference](../entityreference.md)[]
 
 ### Related topics
 
 ### Related topics
 
 [Entity](../entity.md)<br/>
-[PowerApps component framework API Reference](../../reference/index.md)<br/>
-[PowerApps component framework Overview](../../overview.md)
+[PowerApps component framework API reference](../../reference/index.md)<br/>
+[PowerApps component framework overview](../../overview.md)

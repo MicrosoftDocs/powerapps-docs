@@ -5,7 +5,7 @@ keywords:
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -19,7 +19,11 @@ ms.assetid: aae27c64-33c4-47f1-b833-4c04161c01e2
 
 ## Syntax
 
-`pickFile(options)`
+`context.device.pickFile(options)`
+
+## Available for 
+
+Model-driven apps
 
 ## Parameters
 
@@ -31,7 +35,7 @@ ms.assetid: aae27c64-33c4-47f1-b833-4c04161c01e2
 
 Type: `Promise<FileObject[]>`
 
-See [Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise) and [FileObject](../fileobject.md)
+See [Promise](https://developer.mozilla.org/docs/Web/JavaScript/reference/Global_Objects/Promise) and [FileObject](../fileobject.md)
 
 ## Remarks
 
@@ -39,13 +43,13 @@ The `options` parameter object has the following properties:
 
 |Name|Type|Description|
 |--|--|--|
-|`accept`|`string`|Image file type to select. Valid values are "audio", "video", or "image"|
-|`allowMultipleFiles`|`boolean`|Indicates whether to allow select multiple files|
-|`maximumAllowedFileSize`|`number`|Maximum size of the files(s) to be selected|
+|`accept`|`String`|Image file types to select. Valid values are *audio*, *video*, or *image*.|
+|`allowMultipleFiles`|`Boolean`|Indicates whether to allow select multiple files|
+|`maximumAllowedFileSize`|`Number`|Maximum size of the file(s) to be selected|
 
 
 ### Related topics
 
 [Device](../device.md)<br/>
-[PowerApps component framework API Reference](../../reference/index.md)<br/>
-[PowerApps component framework Overview](../../overview.md)
+[PowerApps component framework API reference](../../reference/index.md)<br/>
+[PowerApps component framework overview](../../overview.md)

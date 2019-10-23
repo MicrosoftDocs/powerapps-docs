@@ -45,7 +45,7 @@ If you have customized entity or field text, such as field labels or drop-down l
 
 ## Community tools
 
-[Easy Translator](https://www.xrmtoolbox.com/plugins/MsCrmTools.Translator/) is a tool that XrmToolBox community developed for Dynamics 365 Customer Engagement. Use Easy Translator to export and import translations with contextual information. 
+[Easy Translator](https://www.xrmtoolbox.com/plugins/MsCrmTools.Translator/) is a tool that XrmToolBox community developed for PowerApps. Use Easy Translator to export and import translations with contextual information. 
 
 > [!NOTE]
 > The community tools are not supported by Microsoft. 

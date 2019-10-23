@@ -9,7 +9,7 @@ ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
 ms.assetid: get-started-dynamics-365-web-api-client-side-JavaScript
-author: "brandonsimons" # GitHub ID
+author: "JimDaly" # GitHub ID
 ms.author: "kvivek"
 manager: "annbe"
 search.audienceType: 
