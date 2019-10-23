@@ -82,9 +82,9 @@ By default, a help page stays open and on the help content you first opened it w
     - Enter text by typing directly in the help page area. 
     - Format text by using the rich text commands, such as bold, italic, strikethrough, and create lists. 
     - Select the **Insert** tab to add sections, video, images, links, coach marks, and balloon help. 
-
+<!-- confirm the image is safe for use
     > [!div class="mx-imgBorder"] 
-    > ![Custom help pane edit](media/custom-help-pane-edit.png)
+    > ![Custom help pane edit](media/custom-help-pane-edit.png)  -->
 4.	To save your changes, select **Save**.  
 
 ### Free form text
