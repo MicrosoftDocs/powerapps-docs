@@ -563,7 +563,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 |Property|Value|
 |--------|-----|
-|Description|Root execution context of the job that trigerred async job.|
+|Description|Root execution context of the job that triggered async job.|
 |DisplayName|RootExecutionContext|
 |Format|TextArea|
 |IsLocalizable|False|
