@@ -69,7 +69,7 @@ Each help pane is unique for these contexts:
 4. Language   
 
 ## Help pane navigation
-By default, a help page stays open and on the help content you first opened it with even when you navigate to a different form. This allows for the help content to remain intact as you direct users to different parts of the app. 
+By default, a help pane stays open and on the help content you first opened it with even when you navigate to a different form. This allows for the help content to remain intact as you direct users to different parts of the app. 
 
 ### To author help pane content
 1.	To view the help pane, open a model-driven app, and then on the command bar select **Help**. 
@@ -79,7 +79,7 @@ By default, a help page stays open and on the help content you first opened it w
     
     The help pane is now in edit mode and the cursor is positioned on the help pane title.
 3.	From the edit pane you can perform  the following tasks: 
-    - Enter text by typing directly in the help page area. 
+    - Enter text by typing directly in the help pane area. 
     - Format text by using the rich text commands, such as bold, italic, strikethrough, and create lists. 
     - Select the **Insert** tab to add sections, video, images, links, coach marks, and balloon help. 
 <!-- confirm the image is safe for use
@@ -88,10 +88,10 @@ By default, a help page stays open and on the help content you first opened it w
 4.	To save your changes, select **Save**.  
 
 ### Free form text
-Text can be place anywhere within the help pane. Enter free form text before, in, or after sections. Text supports bold, italic, and strike out font formats. Cut, copy, and paste can be used as well as multi-level undo. 
+Text can be placed anywhere within the help pane. Enter free form text before, in, or after sections. Text supports bold, italic, underline, and strikeout font formats. Cut, copy, and paste can be used as well as multi-level undo. 
 
 ### Bullets and numbered lists
-Selecting the bullet or number icon toggles the current line to become bulleted or numbered. If you have multiple lines in a list selected, each line becomes bulleted or numbered.  Tabbing and indenting sub-numbers a line within the list.  
+Selecting the bullet or number icon toggles the current line to become bulleted or numbered. If you have multiple lines in a list selected, each line becomes bulleted or numbered. Tabbing and indenting sub-numbers a line within the list.  
 
 ### Sections
 A section is a collapsible text box.  You can put links or free form text in it. Use a section to group like items. A section can be either open or collapsed by default. 
@@ -113,13 +113,13 @@ Custom help panes support the following video sources.
 Links can be to websites and open in the same window (the default) or open in a separate window. The ability to link to an existing help page is not yet enabled.   
 
 ### Balloons and coach marks
-Balloons and coach marks can be used to point to specific UI elements. A balloon can have text in it. A coach mark simply highlights an element with a coach pointer. A way to illustrate several UI elements sequentially is to simply collect links in a list that the user can select.  For instance:
+Balloons and coach marks can be used to point to specific UI elements. A balloon can have text in it. A coach mark simply highlights an element with a coach pointer. A way to illustrate several UI elements sequentially is to simply collect links in a list that the user can select. For instance:
 
 1. Link to first UI element with instructions or comments.
 2. Link to second UI element with instructions or comments.
 3. Link to third UI element with instructions or comments.
 
-A user can easily either select an element in order or go back to a specific one and highlight it.
+A user can either select an element in order or go back to a specific one and highlight it.
 
 ## Solutions and custom help pane content
 All help content is stored in a help page component in Common Data Service as part of your solution. When you move your solution from one environment to another, such as from test to production, you can define that your help records are exported so that they are included in the solution. This enables you to keep your help content in sync with features in your solution as it moves to different environments. As a part of your solution, custom help panes support all standard solution application lifecycle management (ALM) features.
@@ -134,7 +134,7 @@ By default, all new help pages appear in the default solution. If you want to mo
 5. Select the help pages that you want to add, and then select **Ok**.
 
 > [!NOTE]
-> Currently, you can't add existing help panes to an unmanaged solution in the modern solution explorer. <!-- Support for this functionality will come as custom help panes and guided tasks becomes GA. -->
+> Currently, you can't add existing help panes to an unmanaged solution in the modern solution explorer. 
 
 
 ## Help page documentation automation
@@ -145,15 +145,15 @@ Custom help panes support a custom XML format. This format is documented below. 
 When exported, each help page is exported as a separate file.   
 
 ## Frequently asked questions
-This section discusses frequently asked questions about custom help panes. 
+This section discusses frequently asked questions about custom help pages. 
 
-### Are custom help panes the same as customizable help?
+### Are custom help pages the same as customizable help?
 Custom help panes and guided tasks are an option in the **Set custom help URL** section of system settings. Custom help panes and guided tasks enable a customizable help pane that shows up right next to the user’s form.  The other options in this system settings set custom help section comprise the customizable help features. They allow you to to override the default apps help and point users in your organization to a different URL for help. Alternatively, you can override the help for a highly customized entity so that you can better describe your workflow.
 
-For more information about customizable help, see  [Customize the Help experience](https://docs.microsoft.com/en-us/previous-versions/dynamicscrm-2016/administering-dynamics-365/dn832079(v=crm.8)?redirectedfrom=MSDN).
+For more information about customizable help, see [Enable and use customizable help](../model-driven-apps/use-customizable-help.md).
 
 
-### How do I migrate my data from learning path to custom help panes? 
+### How do I migrate my data from learning path to custom help pages? 
 Learning path has two types of help: help panes and sequential help balloons. The sequential help balloon locations are deeply integrated with the legacy web client UI and are not transferrable to the new custom help panes.  
 
 Depending on how much text you have in your guided help it might be easiest to simply copy the information directly from the learning path user interface to the new custom help pane user interface. However, you can also export your learning path help content.  The simplest way to do this is to export your content using the **Learning Path** > **Content Library** > **Localize** > **Export** feature. Select the records you want and then export them. This creates an XLIFF file for each help pane and guided task.  Then, use a publicly available XLIFF editor or XLIFF to HTML converter to retrieve your content. 
@@ -331,8 +331,8 @@ The `<a>` tag defines a link, which allows the user to navigate from a help page
    - If `_top`, the link is opened in the current browser window.
    - If the value is the name of an `iframe` the link is opened in that iframe.
 
-### Coachmark
-Presents a coachmark in a help page:
+### Coach mark
+Presents a coach mark in a help page:
 
 ```
 <coachmark target="#my-html-button">Click to highlight the HTML element with id [my-html-button]</coachmark>
