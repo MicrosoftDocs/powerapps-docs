@@ -46,8 +46,8 @@ Custom help panes don't provide the following key features that are available wi
 
 ## Prerequisites 
 To author custom help panes you need the following: 
-- Late October 2019 version environment.
-- System administrator or system customizer security role membership or equivelant privileges. <!-- There's a new security role or privilege that needs to be added here. -->
+- Version 9.1.0000.10414 or later version.
+- Global create, read, write, delete, append, and append to permissions on the **Help Page** privilege. By default, System Administrator and System Customizer security roles both have this privilege.  
 - [Your environment must have custom help panes enabled](#enable-custom-help-panes-for-your-environment).
 
 ## Enable custom help panes for your environment
@@ -72,9 +72,19 @@ Each help pane is unique for these contexts:
 By default, a help page stays open and on the help content you first opened it with even when you navigate to a different form. This allows for the help content to remain intact as you direct users to different parts of the app. 
 
 ### To author help pane content
-1.	To view the help pane, open a model-driven app, and then on the command bar select **?**.   
-2.	Select the vertical ellipses, and then select **Edit**. The help pane is now in edit mode and the cursor is positioned on the help pane title.
-3.	Add content by either typing directly in the help page area or insert sections, video, images, links, coachmarks, or balloon help.
+1.	To view the help pane, open a model-driven app, and then on the command bar select **Help**. 
+    ![Help](media/help-command.png)   
+2.	On the Help pane, select the vertical ellipses, and then select **Edit**. 
+    ![Edit help](media/help-edit-command.png)
+    
+    The help pane is now in edit mode and the cursor is positioned on the help pane title.
+3.	From the edit pane you can perform  the following tasks: 
+    - Enter text by typing directly in the help page area. 
+    - Format text by using the rich text commands, such as bold, italic, strikethrough, and create lists. 
+    - Select the **Insert** tab to add sections, video, images, links, coach marks, and balloon help. 
+
+    > [!div class="mx-imgBorder"] 
+    > ![Custom help pane edit](media/custom-help-pane-edit.png)
 4.	To save your changes, select **Save**.  
 
 ### Free form text
