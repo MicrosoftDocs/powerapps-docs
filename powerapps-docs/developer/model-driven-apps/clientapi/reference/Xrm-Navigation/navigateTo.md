@@ -98,10 +98,10 @@ var navigationOptions = {
 };
 Xrm.Navigation.navigateTo(pageInput, navigationOptions).then(
     function success() {
-                   // Handle dialog closed
+            // Handle dialog closed
     },
     function error() {
-                   // Handle errors
+            // Handle errors
     }
 );
 ```
