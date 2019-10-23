@@ -1350,6 +1350,8 @@
       href: ./common-data-service/navigate-specific-solution.md
     - name: Create a solution
       href: ./common-data-service/create-solution.md
+    - name: Use environment variables
+      href: ./common-data-service/EnvironmentVariables.md
     - name: View solution layers
       href: ./common-data-service/solution-layers.md
     - name: View solution history
