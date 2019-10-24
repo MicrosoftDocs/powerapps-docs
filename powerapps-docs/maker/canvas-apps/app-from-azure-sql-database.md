@@ -55,7 +55,7 @@ In this topic, you'll use data in your Azure SQL Database to create an app with 
 
     ![Specify the information for your app](./media/app-from-azure-sql-database/powerapps-create-page-azure-portal.png "Specify the information for your app")
 
-    The [PowerApps studio](https://create.powerapps.com/studio/) opens in a new tab. If pop-up is blocked, update browser to allow pop-ups and retry. Once created, you'll have a 3 page app with data from your SQL Database.
+    The [PowerApps Studio](https://create.powerapps.com/studio/) opens in a new tab. If pop-up is blocked, update browser to allow pop-ups and retry. Once created, you'll have a 3 page app with data from your SQL Database.
 
 ## Accessing your app
 
