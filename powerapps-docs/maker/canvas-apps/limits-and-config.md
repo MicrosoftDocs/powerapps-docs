@@ -96,6 +96,7 @@ This list identifies all services to which PowerApps Studio talks and their usag
 | \*.azureedge.net |https | create.powerapps.com, make.powerapps.com, content.powerapps.com, and web.powerapps.com |
 | \*.blob.core.windows.net |https | Blob storage |
 | \*.flow.microsoft.com | https | create.powerapps.com, make.powerapps.com, content.powerapps.com, and web.powerapps.com |
+| *.dynamics.com | https | Common Data Service |
 | vortex.data.microsoft.com |https |Telemetry |
 | localhost | https | PowerApps Mobile
 
