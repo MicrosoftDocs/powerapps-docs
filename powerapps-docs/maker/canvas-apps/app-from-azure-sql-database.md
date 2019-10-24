@@ -29,7 +29,7 @@ In this topic, you'll use data in your Azure SQL Database to create an app with 
 - Your browser must have pop-ups enabled.
 - You need an Azure subscription. </br>If you don't have an Azure subscription, [create a free account](https://azure.microsoft.com/free/).
 - You need access to an existing SQL Database. </br> If you don't have an existing SQL Database, [create a new database](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-single-database-get-started?tabs=azure-portal).
-- You need to allow PowerApps region [IP addresses](#App-access-using-IP-address) or [Azure services](#App-access-as-an-Azure-service) access to SQL Database in firewall settings.
+- You need to allow PowerApps region [IP addresses or Azure services](#App-access-to-SQL-Database) access to SQL Database in firewall settings.
 - The SQL Database table must have at least one column with text data type.
 - You need a valid PowerApps license or sign up for a [30 day trial license](../signup-for-powerapps.md).
 
