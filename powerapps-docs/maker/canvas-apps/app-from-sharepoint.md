@@ -90,7 +90,7 @@ If you create an app of a custom list from the SharePoint Online command bar, th
         To remove the app from PowerApps, [delete the app](delete-app.md).
 
 > [!NOTE]
-> Apps created from the SharePoint list currently do not show in the PowerApps mobile app.
+> Apps created from the SharePoint list currently do not show in the PowerApps Mobile.
 
 ## Next steps
 In this topic, you created an app to manage data in a SharePoint list. As a next step, generate an app from a more complex list, and then customize the app (starting with the browse screen) to better suit your needs.
