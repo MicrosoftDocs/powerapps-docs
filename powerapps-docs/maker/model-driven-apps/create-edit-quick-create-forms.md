@@ -50,6 +50,7 @@ You can enable custom activity entities to support quick create forms, and you c
   
 > [!NOTE]
 >  - The entity must have the **Allow Quick Create** option enabled for the quick create form to be displayed. 
+>  - You must also add the entity and the quick create form to your app.
 >  - Some fields, such as the CREATEDON field, aren’t available to add to a quick create form.  
   
 ### How to create a quick create form  
@@ -95,7 +96,7 @@ If you add a composite field to a quick create form, it will be displayed as sep
 1.  Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
 > [!IMPORTANT]
-> “If the **Model-driven** design mode isn't available, you may need to [Create an environment](https://docs.microsoft.com/powerapps/administrator/create-environment).    
+> If the **Model-driven** design mode isn't available, you may need to [Create an environment](https://docs.microsoft.com/powerapps/administrator/create-environment).    
   
 2. Expand **Data**, select **Entities**, select the entity that you want, and then select the **Forms** tab.    
 
