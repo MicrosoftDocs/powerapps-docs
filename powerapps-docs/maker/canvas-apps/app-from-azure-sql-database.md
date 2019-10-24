@@ -29,7 +29,7 @@ In this topic, you'll use data in your Azure SQL Database to create an app with 
 - Your browser must have pop-ups enabled.
 - You need an Azure subscription. </br>If you don't have an Azure subscription, [create a free account](https://azure.microsoft.com/free/).
 - You need access to an existing SQL Database. </br> If you don't have an existing SQL Database, [create a new database](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-single-database-get-started?tabs=azure-portal).
-- You need to allow PowerApps region [IP addresses](#app-ip-addresses) in SQL Database firewall settings.
+- You need to allow PowerApps region [IP addresses](#App-access-using-IP-address) or [Azure services](#App-access-as-an-Azure-service) access to SQL Database in firewall settings.
 - The SQL Database table must have at least one column with text data type.
 - You need a valid PowerApps license or sign up for a [30 day trial license](../signup-for-powerapps.md).
 
@@ -65,21 +65,32 @@ To access the created app again, go to [make.powerapps.com](https://make.powerap
 
 The app you create with this method uses the [default environment](https://docs.microsoft.com/power-platform/admin/environments-overview#the-default-environment) for the tenant and deploys to the region of this environment. You can find the region of a deployed app or your tenant's default environment from the [admin center](https://docs.microsoft.com/power-platform/admin/regions-overview#how-do-i-find-out-where-my-app-is-deployed). To review all apps in a specific environment, go to [make.powerapps.com](https://make.powerapps.com), select the **Environment** from the ribbon and then select **Apps** on the left.
 
-## App IP addresses
+## App access to SQL Database
 
-PowerApps IP addresses require access to connect to SQL Database. [PowerApps system requirements](limits-and-config.md#ip-addresses) lists the IP addresses that PowerApps uses depending on the region of the app.
+You can configure PowerApps to connect to SQL Database using IP addresses or as an Azure service.
+
+### App access using IP address
+
+[PowerApps system requirements](limits-and-config.md#ip-addresses) lists the IP addresses that PowerApps uses depending on the region of the app.
 
 You can use either a Transact-SQL stored procedure or the Azure portal to configure this access:
 
 - Stored procedure [sp_set_firewall_rule](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database?view=azuresqldb-current) for SQL Database or SQL Server level firewall rules.
 - [Azure portal](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure) for SQL Server level firewall rules.
 
+### App access as an Azure service
+
+PowerApps can connect to SQL Database **Allow access to Azure services** control using the Azure portal. To configure this access, sign in to the [Azure portal](https://portal.azure.com/) and navigate the portal to **SQL Server**. Select **Firewalls and virtual networks** and set the control **Allow Azure services and resources to access this server** to ON. Select **Save** to submit changes.
+
+> [!IMPORTANT]
+> If you leave the control set to ON, your Azure SQL Database server accepts communication from any subnet inside the Azure boundary i.e. originating from one of the IP addresses that is recognized as those within ranges defined for Azure data centers. Leaving the control set to ON might be excessive access from a security point of view.
+
 ## Limitations
 
 - The app name can only include a letter, digit, '-', '(', ')' or '_'.
 - PowerApps requires SQL authentication to connect to SQL Database.
 - You can select only one table while creating canvas app from the Azure portal. Customize the app after the app is created if you want to add more tables and other data sources by adding more data connections.
-- PowerApps connects to SQL Database using firewall rules and does not use Azure Services or VNet for connectivity. For more information, read [allowing Azure services or VNet Service Endpoints](https://docs.microsoft.com/azure/sql-database/sql-database-vnet-service-endpoint-rule-overview).
+- PowerApps cannot connect to SQL Database using VNet Service Endpoints. For more information, read [allowing access through VNet Service Endpoints](https://docs.microsoft.com/azure/sql-database/sql-database-vnet-service-endpoint-rule-overview).
 
 ## Other considerations
 
