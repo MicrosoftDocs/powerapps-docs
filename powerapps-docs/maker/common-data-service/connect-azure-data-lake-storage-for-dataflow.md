@@ -101,11 +101,11 @@ Once these steps are successfully completed, your Azure Data Lake Storage Gen2 a
 There are a few considerations and limitations to keep in mind when working with your dataflow storage:
 - Linking an Azure Data Lake Store Gen2 account for dataflow storage is not supported in the default environment.
 - Once a dataflow storage location is configured for a dataflow, it can't be changed.
-- By default, any member of the environment can access dataflow data using the Power Platform Dataflows Connector. However, only the owners of a dataflow can access its files directly in Azure Data Lake Storage Gen2. To authorize additional people to access the dataflows data directly in the lake, you must authorize them to the dataflow’s CDM folder in the data lake or the data lake itself.
-- When a dataflow is deleted, its CDM folder in the lake will also be deleted. 
+- By default, any member of the environment can access dataflow data using the Power Platform Dataflows Connector. However, only the owners of a dataflow can access its files directly in Azure Data Lake Storage Gen2. To authorize additional people to access the dataflows data directly in the lake, you must authorize them to the dataflow’s **CDM Folder** in the data lake or the data lake itself.
+- When a dataflow is deleted, its **CDM Folder** in the lake will also be deleted. 
 
 > [!IMPORTANT]
-> You shouldn't change files created by dataflows in your organization’s lake or add files to a dataflow’s CDM folder. Changing files might damage dataflows or alter their behavior and is not supported. Power Platform Dataflows only grants read access to files it creates in the lake. If you authorize other people or services to the filesystem used by Power Platform Dataflows, only grant them read access to files or folders in that filesystem.
+> You shouldn't change files created by dataflows in your organization’s lake or add files to a dataflow’s **CDM Folder**. Changing files might damage dataflows or alter their behavior and is not supported. Power Platform Dataflows only grants read access to files it creates in the lake. If you authorize other people or services to the filesystem used by Power Platform Dataflows, only grant them read access to files or folders in that filesystem.
 
 ## Frequently asked questions
 *What if I had previously created dataflows in my organization’s Azure Data Lake Storage Gen2 and would like to change their storage location?*
