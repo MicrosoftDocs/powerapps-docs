@@ -81,9 +81,6 @@ To connect your Azure Data Lake Storage Gen2 account with the dataflow, follow t
 If a storage account has not yet been associated with the environment, a **Link to data lake** dialog box appears. You will need to sign in and find the data lake you created in the previous steps. In this example, no data lake is associated with the environment and so a prompt occurs to add one. 
 
 
-
-<!--from editor: Should "storage account" be in bold because it's something the user has to select? -->
-
 1. Select storage account.
 
     The **Select Storage Account** screen appears.
