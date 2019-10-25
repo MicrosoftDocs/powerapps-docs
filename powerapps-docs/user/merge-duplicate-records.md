@@ -33,7 +33,7 @@ For example, let's say you enter a contact record, Jim Glynn,  along with a mobi
  > [!div class="mx-imgBorder"] 
  > ![Duplicate contact record detectied](media/duplicates-detected_1.png "Duplicate contact record detectied")  
  
-Dynamics 365 Customer Engagement (on-premises) includes duplicate detection rules for accounts, contacts, and leads. These rules are automatically turned on, so you don’t have to do anything to set up duplicate detection for these record types.  
+Common Data Service includes duplicate detection rules for accounts and contacts. These rules are automatically turned on, so you don’t have to do anything to set up duplicate detection for these record types.  
   
 > [!NOTE]
 >  If available on your system, you may also be able to check for duplicates of other record types, in addition to contacts and accounts. Check with your system administrator. [Find your administrator or support person](find-admin.md)  
@@ -52,10 +52,10 @@ Dynamics 365 Customer Engagement (on-premises) includes duplicate detection rule
    > ![Dialog box for merging records](media/merge-records-dialog.png "Dialog box for merging records")  
   
 > [!NOTE]
->  There are three situations when duplicates may be found:  
+>  There are a few situations when duplicates may be found:  
 > 
 > - When a record is created or updated.  
->   - When  you're using [!INCLUDE[pn_crm_for_outlook_short](../includes/pn-crm-for-outlook-short.md)] and you go from offline to online.  
+>   - When  you're using Dynamics 365 for Outlook and you go from offline to online.  
 >   - When you import data using the Import Data wizard.  
 > 
->   Duplicates aren't detected when you merge records, convert a lead, save an activity as completed, or change the status of a record, such as activating or reactivating a record.  
+>   Duplicates aren't detected when you merge records, save an activity as completed, or change the status of a record, such as activating or reactivating a record.  
