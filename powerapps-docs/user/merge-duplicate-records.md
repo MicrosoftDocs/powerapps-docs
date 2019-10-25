@@ -24,7 +24,7 @@ Duplicate records can creep into your data when you or others enter data manuall
 For example, let's say you enter a contact record, Jim Glynn,  along with a mobile phone number.  The duplicate detection rule discovers that you already have a similar record, and displays this dialog box.  
   
  > [!div class="mx-imgBorder"] 
- > ![Duplicate contact record detectied](/media/duplicates-detected.png "Duplicate contact record detectied")  
+ > ![Duplicate contact record detectied](media/duplicates-detected.png "Duplicate contact record detectied")  
   
  You're not sure if this is a new record (one that happens to have the  same name as an existing contact) or a duplicate, so you select **Ignore And Save**.  
   
