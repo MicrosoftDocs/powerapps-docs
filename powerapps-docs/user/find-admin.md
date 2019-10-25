@@ -20,7 +20,7 @@ search.app:
 
 # Find your administrator or support person 
 
-You may occasionally run across issues that require consultation with your Dynamics 365 Customer Engagement (on-premises) administrator. If you don’t know who your administrator is, you can use Advanced Find to find your administrator.  
+You may occasionally run across issues that require consultation with your administrator. If you don’t know who your administrator is, you can use Advanced Find to find your administrator.  
   
 1. Sign in to your Customer Engagement (on-premises) organization.  
   
