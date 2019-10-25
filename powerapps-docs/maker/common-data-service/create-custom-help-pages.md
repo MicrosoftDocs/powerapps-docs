@@ -46,7 +46,7 @@ Custom help panes don't provide the following key features that are available wi
 
 ## Prerequisites 
 To author custom help panes you need the following: 
-- Version 9.1.0000.10414 or later version.
+- Version 9.1.0.10300 or later version.
 - Global create, read, write, delete, append, and append to permissions on the **Help Page** privilege. By default, System Administrator and System Customizer security roles both have this privilege.  
 - [Your environment must have custom help panes enabled](#enable-custom-help-panes-for-your-environment).
 
