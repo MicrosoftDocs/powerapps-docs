@@ -43,7 +43,7 @@ Common Data Service includes duplicate detection rules for accounts and contacts
 1. Select the duplicate records, and then select **Merge**.  
   
    > [!div class="mx-imgBorder"] 
-   > ![Duplicate contact record detectied](media/duplicates-detected_1.png "Duplicate contact record detectied")  
+   > ![Duplicate contact record detectied](media/duplicates-detected_2.png "Duplicate contact record detectied")  
   
 2. In the **Merge Records** dialog box, select the master record (the one you want to keep), and then select any fields in the new record that you want to merge into the master record. Data in these fields may override the existing data in the master record. Select **OK**.  
   
