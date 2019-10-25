@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Create a canvas app from Azure SQL Database
+# Preview: Create a canvas app from Azure SQL Database
 
 [This topic is pre-release documentation and is subject to change.]
 
