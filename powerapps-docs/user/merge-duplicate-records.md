@@ -42,14 +42,14 @@ Dynamics 365 Customer Engagement (on-premises) includes duplicate detection rule
   
 1. Select the duplicate records, and then select **Merge**.  
   
-  > [!div class="mx-imgBorder"] 
-  > ![Duplicate contact record detectied](media/duplicates-detected_1.png "Duplicate contact record detectied")  
+   > [!div class="mx-imgBorder"] 
+   > ![Duplicate contact record detectied](media/duplicates-detected_1.png "Duplicate contact record detectied")  
   
 2. In the **Merge Records** dialog box, select the master record (the one you want to keep), and then select any fields in the new record that you want to merge into the master record. Data in these fields may override the existing data in the master record. Select **OK**.  
   
      
-  > [!div class="mx-imgBorder"] 
-  > ![Dialog box for merging records](media/merge-records-dialog.png "Dialog box for merging records")  
+   > [!div class="mx-imgBorder"] 
+   > ![Dialog box for merging records](media/merge-records-dialog.png "Dialog box for merging records")  
   
 > [!NOTE]
 >  There are three situations when duplicates may be found:  
