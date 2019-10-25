@@ -84,7 +84,7 @@ search.app:
 </table>
 </li>
 <li><b>selectedStageId</b>: (Optional) String. ID of the selected stage in business process instance.</li>
-<li><b>useQuickCreateForm</b>: (Optional) Boolean. Indicates whether to open a quick create form. If you do not specify this, by default <b>false</b> is passed.</li>
+<li><b>useQuickCreateForm</b>: (Optional) Boolean. Indicates whether to open a quick create form.  The entity must have the **Allow Quick Create** option enabled for the quick create form to be displayed and you must also add the entity and the quick create form to your app. If you do not specify the value of useQuickCreateForm, the default will be set to <b>false</b>.</li>
 <li><b>width</b>: (Optional) Number. Width of the form window to be displayed in pixels.</li>
 </ul>
 </tr>
