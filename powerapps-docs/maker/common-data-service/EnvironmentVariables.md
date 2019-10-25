@@ -64,7 +64,7 @@ Both the environmentvariabledefinition and environmentvariablevalue entities are
 - Azure Key Vault integration for secret management. Currently Environment variables should not be used to store secure data such as passwords and keys.
 - Data types are validated in the modern solution interface only, but not currently on the server during the preview. 
 - Dependencies are not enforced for certain component types.
-- If using Excel to import environment variables, be sure to pre-pend the publisher prefix to the ShemaName.
+- If using Excel to import environment variables, be sure to pre-pend the publisher prefix to the SchemaName.
 
 ### See also
 [Use plug-ins to extend business processes](https://docs.microsoft.com/powerapps/developer/common-data-service/plug-ins) </BR>
