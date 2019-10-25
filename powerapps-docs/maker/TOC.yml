@@ -34,8 +34,8 @@
         href: ../user/view-your-user-profile.md
       - name: Find your Find your admin or support person
         href: ../user/find-admin.md
-           - name: View your profile
-        href: ../user/view-your-user-profile.md
+      - name: Set personal option
+        href: ../user/set-personal-options.md
       - name: Use a screen reader
         href: ../user/screen-reader.md
       - name: Keyboard shortcuts
