@@ -123,10 +123,10 @@ Internet Explorer and Edge use *Trust Zones*. Problems can occur if services on 
     4. Select **Trusted sites**.
     5. Select **Sites**.
     6. Add the following sites by typing the address and selecting **Add** for each:
-        - **https://login.microsoftonline.com__
-        - **https://create.powerapps.com__
+        - **https://login.microsoftonline.com**
+        - **https://create.powerapps.com**
         - **https://*.create.powerapps.com** (the asterisk is part of the address, don't replace it)
-        - **https://make.powerapps.com__
+        - **https://make.powerapps.com**
         - **https://make.*.powerapps.com** (the asterisk is part of the address, don't replace it)
         - **https://*.powerapps.com** (the asterisk is part of the address, don't replace it)
     7. Select **Close**.
@@ -141,10 +141,10 @@ Internet Explorer and Edge use *Trust Zones*. Problems can occur if services on 
     4. Select **Trusted sites**.
     5. Select **Sites**.
     6. Remove all existing entries for the following sites:
-        - **https://login.microsoftonline.com__
-        - **https://create.powerapps.com__
-        - **https://*.create.powerapps.com__
-        - **https://make.powerapps.com__
+        - **https://login.microsoftonline.com**
+        - **https://create.powerapps.com**
+        - **https://*.create.powerapps.com**
+        - **https://make.powerapps.com**
         - **https://make.*.powerapps.com** 
         - Any other address that ends in **powerapps.com** or **create.powerapps.com**.
   7. Select **Close**.
