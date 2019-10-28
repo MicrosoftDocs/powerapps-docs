@@ -5,7 +5,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 10/03/2019
+ms.date: 10/28/2019
 ms.author: mkaur
 ms.reviewer: ""
 ms.assetid: 
