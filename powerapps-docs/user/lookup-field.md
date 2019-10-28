@@ -42,13 +42,13 @@ Lookups are classified into the following:
   
 - **Regarding-type fields:** Use to select a single record from multiple entities in a lookup. 
 
-## Browse in a lookup field
+## Search in a lookup field 
 To search a lookup, select the textbox and type your search criteria. If recent records are enabled for your lookup, your recent records will be displayed when you select the textbox.
 
   > [!div class="mx-imgBorder"]
   > ![Browse a lookup field](media/MRU.png "Browse a lookup field")  
 
-## Search in a lookup field
+## Browse in a lookup field
 To browse a lookup, select the lookup icon (magnifying glass). A full list of items will be shown in the dropdown.
 
   > [!div class="mx-imgBorder"]
