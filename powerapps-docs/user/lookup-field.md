@@ -69,3 +69,33 @@ When results span multiple record types, you can see how many types of records t
 ## Create a new record if you don’t find an existing record
 
 If you do not find a record, select **New** in the lookup area to create a new record.
+
+
+### Replace an existing record from a lookup field
+
+You can replace an existing record while using simple and regarding-type lookups. Search for a record. Then select the record, and replace it with a new record.
+
+### Change a view in a lookup field 
+
+Selecting **Change View** lets you determine:
+ - How you want to view records such as **Contacts Being Followed**, **Contacts Lookup View**, or **Active Contacts**.
+ - What you want to view in the records, such as name, email, or telephone number. For example, if you want to view only the contacts that you follow, select
+    **Change View** \> **Contacts being followed**. Only the contacts that you are following will be displayed, as illustrated here. 
+
+    ![Change view contacts types](media/change-view.png "Change view contacts types")
+
+>[!IMPORTANT] 
+>The **Change View** option will not be visible if your administrator hasn't configured the option to appear in your views.
+
+### Choose from multiple records
+
+When lookup has more records in a field than can fit in the available display area, the display area is collapsed—that is, the records that do fit the display area are shown next to the number of records that are not shown. To view all records, select the number. The following images show the difference between collapsed and non-collapsed fields.
+
+**Collapsed:**
+
+![Collapsed multi-lookup display area](media/collapsed-multi-lookup-display-area.png "Collapsed multi-lookup display area")
+
+
+**Non-collapsed:**
+
+![Non-collapsed multi-lookup display area](media/non-collapsed-multi-lookup-display-area.png "Non-collapsed multi-lookup display area")
