@@ -51,7 +51,7 @@ To search a lookup, select the textbox and type your search criteria. If recent 
 
 ## Search in a lookup field
 
-To browse a lookup, select the llookup icon (magnifying glass). A full list of items will be shown in the dropdown.
+To browse a lookup, select the lookup icon (magnifying glass). A full list of items will be shown in the dropdown.
 
   > [!div class="mx-imgBorder"]
   > ![Search a lookup field](media/MRU_1.png "Search a lookup field")  
