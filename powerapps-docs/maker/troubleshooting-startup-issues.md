@@ -58,28 +58,28 @@ PowerApps stores some data locally in your browser, including user identity and 
 - **Option 1: Enable local data for all sites**
 
     1. Close all Internet Explorer and Edge windows.
-    2. Select __OK__ to close the __Internet Options__ dialog box.
-    3. Select __OK__.
-    4. Remove any entries for __powerapps.com__.
-    5. In the __Settings__ section, select __Sites__.
-    6. Select __OK__.
-    7. Select __Accept__ for third-party cookies.
-    8. Select __Accept__ for first-party cookies.
-    9. In the __Settings__ section, select __Advanced__.
-    10. Select the __Privacy__ tab.
-    11. Select __Internet Options__.
+    2. Select **OK** to close the **Internet Options** dialog box.
+    3. Select **OK**.
+    4. Remove any entries for **powerapps.com**.
+    5. In the **Settings** section, select **Sites**.
+    6. Select **OK**.
+    7. Select **Accept** for third-party cookies.
+    8. Select **Accept** for first-party cookies.
+    9. In the **Settings** section, select **Advanced**.
+    10. Select the **Privacy** tab.
+    11. Select **Internet Options**.
     12. On the browser toolbar, select the gear icon.
     13. Open Internet Explorer.
 
 - **Option 2: Create exceptions to enable local data for PowerApps and associated services**
     1. Open Internet Explorer.
     2. On the browser toolbar, select the gear icon.
-    3. Select __Internet Options__.
-    4. Select the __Privacy__ tab.
-    5. In the __Settings__ section, select __Sites__.
-    6. Add an entry to “Allow” __powerapps.com__.
-    7. Select __OK__.
-    8. Select __OK__ to close the Internet Options dialog box.
+    3. Select **Internet Options**.
+    4. Select the **Privacy** tab.
+    5. In the **Settings** section, select **Sites**.
+    6. Add an entry to “Allow” **powerapps.com**.
+    7. Select **OK**.
+    8. Select **OK** to close the Internet Options dialog box.
     9. Close all Internet Explorer and Edge windows.
 
 ### Instructions for Edge
@@ -93,23 +93,23 @@ PowerApps stores some data locally in your browser, including user identity and 
 ### Instructions for Chrome
     
 - **Option 1: Enable local data for all sites**
-    1. On your browser toolbar, select __More__.
-    2. Select __Settings__.
-    3. Near the bottom of the page, select __Show advanced settings__.
-    4. In the "Privacy" section, select __Content settings__.
-    5. Select __Allow local data to be set (recommended)__.
-    6. Make sure that __Block third-party cookies and site data__ is not selected.
-    7. Select Manage exceptions and make sure that there are no exceptions for \__https://create.powerapps.com__, \__https://\*.create.powerapps.com__, \__https://make.\*.powerapps.com__, \__https://make.powerapps.com__, and \__https://login.microsoftonline.com__. If there are such exceptions, remove them by clicking on the x sign for the corresponding rows.
-    8. Select __Done__.
+    1. On your browser toolbar, select **More**.
+    2. Select **Settings**.
+    3. Near the bottom of the page, select **Show advanced settings**.
+    4. In the "Privacy" section, select **Content settings**.
+    5. Select **Allow local data to be set (recommended)**.
+    6. Make sure that **Block third-party cookies and site data** is not selected.
+    7. Select Manage exceptions and make sure that there are no exceptions for **https://create.powerapps.com**, **https://\*.create.powerapps.com**, **https://make.\*.powerapps.com**, **https://make.powerapps.com**, and **https://login.microsoftonline.com**. If there are such exceptions, remove them by clicking on the x sign for the corresponding rows.
+    8. Select **Done**.
     
 - **Option 2: Create exceptions to allow local data for PowerApps and associated services**
       
-    1. On the browser toolbar, select __More__.
-    2. Select __Settings__.
-    3. Near the bottom of the page, select __Show advanced settings__.
-    4. In the Privacy section, select __Content settings__.
-    5. Select __Manage exceptions__ and create exceptions to “Allow” data storage for \__https://create.powerapps.com__, \__https://\*.create.powerapps.com__, \__https://make.\*.powerapps.com__, \__https://make.powerapps.com__, and \__https://login.microsoftonline.com__.
-    6. Select __Done__.
+    1. On the browser toolbar, select **More**.
+    2. Select **Settings**.
+    3. Near the bottom of the page, select **Show advanced settings**.
+    4. In the Privacy section, select **Content settings**.
+    5. Select **Manage exceptions** and create exceptions to “Allow” data storage for **https://create.powerapps.com**, **https://\*.create.powerapps.com**, **https://make.\*.powerapps.com**, **https://make.powerapps.com**, and **https://login.microsoftonline.com**.
+    6. Select **Done**.
 
 
 ## Resolution 2: Configure Trust Zones for Internet Explorer and Edge
@@ -118,36 +118,36 @@ Internet Explorer and Edge use *Trust Zones*. Problems can occur if services on 
 
 - **Option 1: Add the required PowerApps domains to the Trusted Sites zone**
     1. On the browser toolbar, select the gear icon.
-    2. Select __Internet Options__.
-    3. Select the __Security__ tab.
-    4. Select __Trusted sites__.
-    5. Select __Sites__.
-    6. Add the following sites by typing the address and selecting __Add__ for each:
-        - \__https://login.microsoftonline.com__
-        - \__https://create.powerapps.com__
-        - \__https://*.create.powerapps.com__ (the asterisk is part of the address, don't replace it)
-        - \__https://make.powerapps.com__
-        - \__https://make.*.powerapps.com__ (the asterisk is part of the address, don't replace it)
-        - \__https://*.powerapps.com__ (the asterisk is part of the address, don't replace it)
-    7. Select __Close__.
-    8. Select __OK__.
+    2. Select **Internet Options**.
+    3. Select the **Security** tab.
+    4. Select **Trusted sites**.
+    5. Select **Sites**.
+    6. Add the following sites by typing the address and selecting **Add** for each:
+        - **https://login.microsoftonline.com__
+        - **https://create.powerapps.com__
+        - **https://*.create.powerapps.com** (the asterisk is part of the address, don't replace it)
+        - **https://make.powerapps.com__
+        - **https://make.*.powerapps.com** (the asterisk is part of the address, don't replace it)
+        - **https://*.powerapps.com** (the asterisk is part of the address, don't replace it)
+    7. Select **Close**.
+    8. Select **OK**.
     9. Close all Internet Explorer and Edge windows.
  
 
 - **Option 2: Remove all the PowerApps domains from the Trusted Sites zone**
     1. On the browser toolbar, select the gear icon.
-    2. Select __Internet Options__.
-    3. Select the __Security__ tab.
-    4. Select __Trusted sites__.
-    5. Select __Sites__.
+    2. Select **Internet Options**.
+    3. Select the **Security** tab.
+    4. Select **Trusted sites**.
+    5. Select **Sites**.
     6. Remove all existing entries for the following sites:
-        - \__https://login.microsoftonline.com__
-        - \__https://create.powerapps.com__
-        - \__https://*.create.powerapps.com__
-        - \__https://make.powerapps.com__
-        - \__https://make.*.powerapps.com__ 
-        - Any other address that ends in __powerapps.com__ or __create.powerapps.com__.
-  7. Select __Close__.
+        - **https://login.microsoftonline.com__
+        - **https://create.powerapps.com__
+        - **https://*.create.powerapps.com__
+        - **https://make.powerapps.com__
+        - **https://make.*.powerapps.com** 
+        - Any other address that ends in **powerapps.com** or **create.powerapps.com**.
+  7. Select **Close**.
 
 ## Resolution 3: Azure Active Directory Errors
 
