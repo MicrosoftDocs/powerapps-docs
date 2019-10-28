@@ -84,6 +84,26 @@ The windowPosition value is a number with the following possible values
 |2|Side|
 
 
+## Example
+
+```TypeScript
+private onRowClick(event: Event): void {
+    let rowRecordId = (event.currentTarget as HTMLTableRowElement).getAttribute(
+      RowRecordId
+    );
+    if (rowRecordId) {
+      let entityreference = this.contextObj.parameters.simpleTableGrid.records[
+        rowRecordId
+      ].getNamedreference();
+      let entityFormOptions = {
+        entityName: entityreference.entityType!,
+        entityId: entityreference.id
+      };
+      this.contextObj.navigation.openForm(entityFormOptions);
+    }
+  }
+```
+
 ### Related topics
 
 [PowerApps component framework API reference](../reference/index.md)<br/>
