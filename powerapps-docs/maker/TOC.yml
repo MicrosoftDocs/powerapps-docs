@@ -32,7 +32,9 @@
       items:
       - name: View your profile
         href: ../user/view-your-user-profile.md
-      - name: Set personal options
+      - name: Find your admin or support person
+        href: ../user/find-admin.md
+      - name: Set personal option
         href: ../user/set-personal-options.md
       - name: Use a screen reader
         href: ../user/screen-reader.md
@@ -85,6 +87,8 @@
         href: ../user/export-excel-static-worksheet.md
       - name: Export to an Excel PivotTable
         href: ../user/export-excel-pivottable.md
+      - name: Merge duplicate records
+        href: ../user/merge-duplicate-records.md
     - name: Reports
       items:
       - name: Work with reports
