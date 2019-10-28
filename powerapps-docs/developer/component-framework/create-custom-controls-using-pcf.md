@@ -21,7 +21,7 @@ This topic demonstrates how to create and deploy code components using PowerApps
 
 To begin, open **Developer Command Prompt for VS 2017** after installing PowerApps CLI.
 
-1. In the Developer Command Prompt for VS 2017, create a new folder on your local machine, for example, *C:\Users\your name\Documents\My_PCF_Component* using the command `mkdir <Specify the folder name>`.
+1. In the Developer Command Prompt for VS 2017, create a new folder on your local machine, for example, *C:\Users\your name\Documents\My_code_Component* using the command `mkdir <Specify the folder name>`.
 2. Go to the newly created folder using the command `cd <specify your new folder path>`.
 3. Create a new component project by passing some basic parameters using the command:
 
