@@ -334,7 +334,7 @@ npm start
 
 ## Packaging your code components
 
-Follow these steps to create and import a [solution](https://docs.microsoft.com/en-us/powerapps/maker/common-data-service/solutions-overview) file:
+Follow these steps to create and import a [solution](https://docs.microsoft.com/powerapps/maker/common-data-service/solutions-overview) file:
 
 1. Create a new folder **Solutions** inside the **LinearComponent** folder and navigate into the folder. 
 2. Create a new solution project in the **LinearComponent** folder using the following command:
@@ -371,7 +371,7 @@ Follow these steps to create and import a [solution](https://docs.microsoft.com/
     > - Under **Code Tools**, check **NuGet targets & Build Tasks**.
 
 6. The generated solution zip file is located in the `Solution\bin\debug` folder.
-7. Manually [import the solution into Common Data Service](https://docs.microsoft.com/en-us/powerapps/maker/common-data-service/import-update-export-solutions) using the web portal once the zip file is ready or see the [Authenticating to your organization](import-custom-controls.md#authenticating-to-your-organization) and [Deployment](import-custom-controls.md#deploying-code-components) sections to import using PowerApps CLI commands.
+7. Manually [import the solution into Common Data Service](https://docs.microsoft.com/powerapps/maker/common-data-service/import-update-export-solutions) using the web portal once the zip file is ready or see the [Authenticating to your organization](import-custom-controls.md#authenticating-to-your-organization) and [Deployment](import-custom-controls.md#deploying-code-components) sections to import using PowerApps CLI commands.
 
 ## Adding code components in model-driven apps
 

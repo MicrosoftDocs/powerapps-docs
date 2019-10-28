@@ -40,7 +40,7 @@ To create and import a solution file:
     > - If you encounter an error that says *Ambiguous project name* when running the `msbuild` command on your solution, ensure that your solution name and project name are not the same.
 
 4. The generated solution files are located inside the `\bin\debug\` folder after the build is successful.
-5. Manually [import the solution into Common Data Service](https://docs.microsoft.com/en-us/powerapps/maker/common-data-service/import-update-export-solutions) using the web portal or see the [Authenticating to your organization](#authenticating-to-your-organization) and [Deployment](#deploying-code-components) sections to import using PowerApps CLI commands.
+5. Manually [import the solution into Common Data Service](https://docs.microsoft.com/powerapps/maker/common-data-service/import-update-export-solutions) using the web portal or see the [Authenticating to your organization](#authenticating-to-your-organization) and [Deployment](#deploying-code-components) sections to import using PowerApps CLI commands.
 
 ## Authenticating to your organization
 
