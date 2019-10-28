@@ -16,7 +16,7 @@ search.app:
 ---
 # Troubleshooting startup issues for PowerApps
 
-This troubleshooting guide helps fix the following two common configuration problems that prevent PowerApps from starting:
+This troubleshooting topic helps fix the following two common configuration problems that prevent PowerApps from starting:
 
 - When you receive a “Hmmm … We couldn’t sign you in” error message and identifier that resembles the following image:
 
