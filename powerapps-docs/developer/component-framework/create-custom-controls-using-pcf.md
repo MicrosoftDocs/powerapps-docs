@@ -15,23 +15,24 @@ ms.assetid: d2cbf58a-9112-45c2-b823-2c07a310714c
 
 # Create and build a code component
 
-This topic explains how to create and deploy code components using PowerApps CLI. Ensure that you have installed [Microsoft PowerApps CLI](https://aka.ms/PowerAppsCLI).
+This topic demonstrates how to create and deploy code components using PowerApps CLI. Ensure that you have installed [Microsoft PowerApps CLI](https://aka.ms/PowerAppsCLI).
 
 ## Create a new component
 
 To begin, open **Developer Command Prompt for VS 2017** after installing PowerApps CLI.
 
-1. In the Developer Command Prompt for VS 2017, create a new folder on your local machine—for example, *C:\Users\your name\Documents\My_PCF_Component* using the command `mkdir <Specify the folder name>`.
+1. In the Developer Command Prompt for VS 2017, create a new folder on your local machine, for example, *C:\Users\your name\Documents\My_PCF_Component* using the command `mkdir <Specify the folder name>`.
 2. Go to the newly created folder using the command `cd <specify your new folder path>`.
-3. Run the following command to create a new component project by passing some basic parameters:
+3. Create a new component project by passing some basic parameters using the command:
 
-    `pac pcf init --namespace <specify your namespace here> --name <put component name here> --template <component type>`
+    `pac pcf init --namespace <specify your namespace here> --name <Name of the code component> --template <component type>`
  
    > [!NOTE]
-   > Currently, PowerApps CLI supports two types of components: **field** and **dataset**.  For canvas apps, only the **field** type is supported for this experimental preview.
+   > Currently, PowerApps CLI supports two types of components: **field** and **dataset** for model-driven apps.  For canvas apps, only the **field** type is supported for this experimental preview.
 
 4. To retrieve all the required project dependencies, run the command `npm install`.
-5. Open your project folder `C:\Users\<your name>\Documents\<My_PCF_Component>` in any developer environment of your choice and get started with your code component development. The quickest way to get started is by running `code .` from your command prompt once you are in the `C:\Users\<your name>\Documents\<My_PCF_Component>` directory. This command opens your component project in Visual Studio Code.
+5. Open your project folder `C:\Users\<your name>\Documents\<My_code_Component>` in any developer environment of your choice and get started with your code component development. The quickest way to get started is by running `code .` from your command prompt once you are in the `C:\Users\<your name>\Documents\<My_code_Component>` directory. This command opens your component project in Visual Studio Code.
+6. Implement the required artifacts for the component like manifest, component logic and styling and then build the component project. More information: [Implementing sample component](implementing-controls-using-typescript.md)
 
 ## Build your component
 
