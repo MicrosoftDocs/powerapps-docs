@@ -1425,6 +1425,8 @@
     href: ./canvas-apps/common-issues-and-resolutions.md
   - name: Get a session or app ID
     href: ./canvas-apps/get-sessionid.md
+  - name: Troubleshoot startup issues for PowerApps
+    href: troubleshooting-startup-issues.md
   - name: Troubleshoot Power Query
     href: ./common-data-service/data-platform-cds-newentity-troubleshooting-mashup.md
   - name: Support
