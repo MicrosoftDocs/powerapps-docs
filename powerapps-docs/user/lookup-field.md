@@ -43,32 +43,29 @@ Lookups are classified into the following:
 - **Regarding-type fields:** Use to select a single record from multiple entities in a lookup. 
 
 ## Browse in a lookup field
-
 To search a lookup, select the textbox and type your search criteria. If recent records are enabled for your lookup, your recent records will be displayed when you select the textbox.
 
   > [!div class="mx-imgBorder"]
   > ![Browse a lookup field](media/MRU.png "Browse a lookup field")  
 
 ## Search in a lookup field
-
 To browse a lookup, select the lookup icon (magnifying glass). A full list of items will be shown in the dropdown.
 
   > [!div class="mx-imgBorder"]
   > ![Search a lookup field](media/MRU_1.png "Search a lookup field")  
  
-
-When you select the lookup icon (magnifying glass) or the text box, it shows the same list of most recently used records.
-
-  > [!div class="mx-imgBorder"]
-  > ![Recently used records](media/ConsistentEntry[1].gif "Recently used records")  
-  
-The list of records shows an image to help distinguish between record types.
+## Most recently used record type images
+The most recently used list of records shows an image to help distinguish between record types.
 
   > [!div class="mx-imgBorder"]
   > ![Lookup fields shows image](media/Lookup_03-MRU_Entity_Images_56[1].png "Lookup fields shows image")  
   
-  
+## Record type selection list  
 When results span multiple record types, you can see how many types of records there are and select them from the list.
 
   > [!div class="mx-imgBorder"]
   > ![See how many records](media/Lookup_04-MultipleEntityTypes[1].gif "See how many records")  
+  
+## Create a new record if you don’t find an existing record
+
+If you do not find a record, select **New** in the lookup area to create a new record.
