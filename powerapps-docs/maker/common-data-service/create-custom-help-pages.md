@@ -74,8 +74,10 @@ By default, a help pane stays open and on the help content you first opened it w
 
 ### To author help pane content
 1.	To view the help pane, open a model-driven app, and then on the command bar select **Help**. 
+
     ![Help](media/help-command.png)   
 2.	On the Help pane, select the vertical ellipsis, and then select **Edit**. 
+
     ![Edit help](media/help-edit-command.png)
     
     The help pane is now in edit mode and the cursor is positioned on the help pane title.
