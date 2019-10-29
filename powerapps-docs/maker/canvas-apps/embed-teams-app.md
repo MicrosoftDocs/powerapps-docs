@@ -47,13 +47,13 @@ An admin can upload the app so it shows up for **all** teams in your tenant unde
 1. To add the app as a personal app or as a tab to any channel or conversation, select **Apps** in the left navigation and then select **Upload a custom app**.
 
     > [!NOTE]
-    > The **Upload a custom app** only appears if your Teams administrator has created a [custom app policy](https://docs.microsoft.com/en-us/microsoftteams/teams-app-setup-policies) and turned on **Allow uploading of custom apps**.
+    > The **Upload a custom app** only appears if your Teams administrator has created a [custom app policy](https://docs.microsoft.com/microsoftteams/teams-app-setup-policies) and turned on **Allow uploading of custom apps**.
 
     ![Add app as tab](./media/embed-teams-app/upload-custom-app.png "Upload a custom app")
 
 2. Select **Add** to add the app as a personal app or select **Add to team** to add the app as a tab within an existing channel or conversation.
 
-If you are an admin, you can also [publish the app to the Microsoft Teams catalogue](https://docs.microsoft.com/en-us/microsoftteams/tenant-apps-catalog-teams).
+If you are an admin, you can also [publish the app to the Microsoft Teams catalogue](https://docs.microsoft.com/microsoftteams/tenant-apps-catalog-teams).
 
 ### See also
 
