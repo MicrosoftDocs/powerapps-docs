@@ -1,5 +1,5 @@
 ---
-title: "Create Custom Help Pages | MicrosoftDocs"
+title: "Create custom help pages | MicrosoftDocs"
 description: "Create custom help pages on UCI"
 ms.custom: ""
 ms.date: 09/13/2019
@@ -28,53 +28,56 @@ search.app:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-Use custom help panes and guided tasks to give your Unified Interface application a custom in-product help experience that is tailored to your organization. Use custom help panes to provide entity, form, and language specific help and guidance that includes rich text, content links, images, and video links. Custom help panes replace the previous learning path guided learning feature used with legacy web client apps.
+Use custom help panes and guided tasks to give your Unified Interface application a custom in-product help experience that is tailored to your organization. Use custom help panes to provide entity, form, and language-specific help and guidance that includes rich text, content links, images, and video links. Custom help panes replace the previous learning path guided learning feature used with legacy web client apps.
 
 ## Custom help panes and learning path
-The new guided help implementation of custom help panes differs from the previous learning path guided help feature. Both features let you create custom help for your application, however custom help panes are optimized for the most common guided help scenarios.   
+The new guided help implementation of custom help panes differs from the previous learning path guided help feature. Both features let you create custom help for your application. However, custom help panes are optimized for the most common guided help scenarios.   
 
 Custom help panes provide the following key features that are not available with learning path: 
-- Free-form rich text – including bullets and numbering.
-- Visibly linked coachmarks and help balloons.
-- More options for video sources – including private sources.
-- Storage of help content in the Common Data Service as part of your solution. 
+- Free-form rich text, including bullets and numbering.
+- Visibly linked coach marks and help balloons.
+- More options for video sources, including private sources.
+- Storage of help content in Common Data Service as part of your solution. 
 
 Custom help panes don't provide the following key features that are available with learning path: 
 - Sequential help balloons.
 - Help pages per role.
-- Help pages for per device form factor, such as smartphones. 
+- Help pages for per-device form factor, such as smartphones. 
 
 ## Prerequisites 
-To author custom help panes you need the following: 
-- Version 9.1.0.10300 or later version.
+To author custom help panes, you need the following: 
+- Version 9.1.0.10300 or later.
 - Global create, read, write, delete, append, and append to permissions on the **Help Page** privilege. By default, System Administrator and System Customizer security roles both have this privilege.  
-- [Your environment must have custom help panes enabled](#enable-custom-help-panes-for-your-environment).
+- [Your environment must have custom help panes enabled.](#enable-custom-help-panes-for-your-environment)
 
 ## Enable custom help panes for your environment
-1. Open a model-driven app, and then on the command bar select **Settings** ![Settings](../model-driven-apps/media/powerapps-gear.png) > **Advanced  Settings** .
+1. Open a model-driven app, and then on the command bar select **Settings** ![Settings](../model-driven-apps/media/powerapps-gear.png) > **Advanced  Settings**.
 2. Go to **Settings** > **System** > **Administration**.  
 3. On the **Administration** page, select **System Settings**.
 4. On the **General** tab, under **Set custom Help URL**, select **Yes** for **Enable Custom Help Panes and Guided Tasks**, and then select **OK**.
+
     > [!div class="mx-imgBorder"] 
     > ![Enable custom help panes](media/enable-custom-help-panes.png "Enable custom help panes")
 
 > [!IMPORTANT]
 > You can enable custom help panes or customizable help, but not both at the same time. Confirm that **Use custom Help for customizable entities** and **Append parameters to URL** are both set to **No**.  
  
-## Context sensitive custom help
+## Context-sensitive custom help
 Each help pane is unique for these contexts: 
-1. Application 
-2. Entity
-3. Form 
-4. Language   
+- Application 
+- Entity
+- Form 
+- Language   
 
 ## Help pane navigation
 By default, a help pane stays open and on the help content you first opened it with even when you navigate to a different form. This allows for the help content to remain intact as you direct users to different parts of the app. 
 
 ### To author help pane content
 1.	To view the help pane, open a model-driven app, and then on the command bar select **Help**. 
+
     ![Help](media/help-command.png)   
-2.	On the Help pane, select the vertical ellipses, and then select **Edit**. 
+2.	On the Help pane, select the vertical ellipsis, and then select **Edit**. 
+
     ![Edit help](media/help-edit-command.png)
     
     The help pane is now in edit mode and the cursor is positioned on the help pane title.
@@ -87,22 +90,22 @@ By default, a help pane stays open and on the help content you first opened it w
     > ![Custom help pane edit](media/custom-help-pane-edit.png)  -->
 4.	To save your changes, select **Save**.  
 
-### Free form text
-Text can be placed anywhere within the help pane. Enter free form text before, in, or after sections. Text supports bold, italic, underline, and strikeout font formats. Cut, copy, and paste can be used as well as multi-level undo. 
+### Free-form text
+Text can be placed anywhere within the help pane. Enter free-form text before, in, or after sections. Text supports bold, italic, underline, and strikeout font formats. Cut, copy, and paste can be used as well as multilevel undo. 
 
 ### Bullets and numbered lists
-Selecting the bullet or number icon toggles the current line to become bulleted or numbered. If you have multiple lines in a list selected, each line becomes bulleted or numbered. Tabbing and indenting sub-numbers a line within the list.  
+Selecting the bullet or number icon toggles the current line to become bulleted or numbered. If you have selected multiple lines in a list, each line becomes bulleted or numbered. Tabbing and indenting subnumbers a line within the list.  
 
 ### Sections
-A section is a collapsible text box.  You can put links or free form text in it. Use a section to group like items. A section can be either open or collapsed by default. 
+A section is a collapsible text box.  You can put links or free-form text in it. Use a section to group similar items. A section can be either open or collapsed by default. 
 
 ### Video and static images
 You can insert videos and static images into your help pane. Videos and images are links to content on the internet. Custom help panes do not store the video and image files in your help pane. When the help pane is opened, custom help panes bring the content in from the link to display it. You can use a link to a Microsoft Stream video if you want to reference corporate private content. 
 
 > [!TIP]
-> Remember to copy the link URL for the video or image you want so you can paste it in to your help pane. 
+> Remember to copy the link URL for the video or image you want so you can paste it into your help pane. 
 
-Custom help panes support the following video sources.
+Custom help panes support the following video sources:
 - Microsoft Stream (use for private content) 
 - YouTube
 - Facebook
@@ -128,7 +131,7 @@ All help content is stored in a help page component in Common Data Service as pa
 By default, all new help pages appear in the default solution. If you want to move your content to another environment, first add your existing help pages into an unmanaged solution before you export them. To add a help page to an unmanaged solution, follow these steps:
 
 1. Navigate to your unmanaged solution.
-2. Select **Switch to classic** from the ellipses on the command bar.
+2. Select **Switch to classic** from the ellipsis on the command bar.
 3. Select **Add Existing**.
 4. Select **Help Page**.
 5. Select the help pages that you want to add, and then select **Ok**.
@@ -140,7 +143,7 @@ By default, all new help pages appear in the default solution. If you want to mo
 ## Help page documentation automation
 You might want to back up or store your content in a source code control system. You might also like to use documentation automation tools, such as translation tools or checkers, on help pane content. The custom help pane data is stored directly in Common Data Service and can be exported and imported for this purpose.  
 
-Custom help panes support a custom XML format. This format is documented below. More information: [Custom Help XML definition](#custom-help-xml-definition)  
+Custom help panes support a custom XML format. This format is documented below. More information: [Custom help XML definition](#custom-help-xml-definition)  
 
 When exported, each help page is exported as a separate file.   
 
@@ -148,7 +151,8 @@ When exported, each help page is exported as a separate file.
 This section discusses frequently asked questions about custom help pages. 
 
 ### Are custom help pages the same as customizable help?
-Custom help panes and guided tasks are an option in the **Set custom help URL** section of system settings. Custom help panes and guided tasks enable a customizable help pane that shows up right next to the user’s form.  The other options in this system settings set custom help section comprise the customizable help features. They allow you to to override the default apps help and point users in your organization to a different URL for help. Alternatively, you can override the help for a highly customized entity so that you can better describe your workflow.
+
+Custom help panes and guided tasks are an option in the **Set custom help URL** section of system settings. Custom help panes and guided tasks enable a customizable help pane that shows up right next to the user’s form.  The other options in this system settings set custom help section comprise the customizable help features. They allow you to override the default apps help and point users in your organization to a different URL for help. Alternatively, you can override the help for a highly customized entity so that you can better describe your workflow.
 
 For more information about customizable help, see [Enable and use customizable help](../model-driven-apps/use-customizable-help.md).
 
@@ -158,7 +162,7 @@ Learning path has two types of help: help panes and sequential help balloons. Th
 
 Depending on how much text you have in your guided help it might be easiest to simply copy the information directly from the learning path user interface to the new custom help pane user interface. However, you can also export your learning path help content.  The simplest way to do this is to export your content using the **Learning Path** > **Content Library** > **Localize** > **Export** feature. Select the records you want and then export them. This creates an XLIFF file for each help pane and guided task.  Then, use a publicly available XLIFF editor or XLIFF to HTML converter to retrieve your content. 
 
-## Custom Help XML definition
+## Custom help XML definition
 This section describes the custom help XML definition. 
 
 ### PPHML
@@ -167,7 +171,7 @@ This section describes the custom help XML definition.
 <pphml>
     <h1>FAQ</h1>
     <collapsible title="What is PPHML?">
-        <p>PPHML is a domain specific language for help content. It is used to create help content that includes elements such as images, videos, balloons, coachmarks, etc.</p>
+        <p>PPHML is a domain specific language for help content. It is used to create help content that includes elements such as images, videos, balloons, coach marks, etc.</p>
     </collapsible>
     <collapsible title="What does PPHML stand for?">
         <p>PPHML stands for Power Platform Help Markup Language</p>
@@ -196,14 +200,14 @@ The **`<h1>`** element defines the title of a help page.
 `<h1>` This must be the first element inside `<pphml>`.
 
 ### Image
-Presents an image in a help page:
+Presents an image in a help page.
 
 ```
 <img src="smiley.gif" alt="Smiley face" title="Smiley face"/>
 ```
 
 #### Definition and usage
-The **`<img>`** element embeds an image in a Help page.
+The **`<img>`** element embeds an image in a help page.
 
 #### Attributes
 - `src`: Specifies the URL of an image. This attribute is required.
@@ -213,7 +217,7 @@ The **`<img>`** element embeds an image in a Help page.
 - `alt`: Specifies an alternate text for an image. This text is used by screen readers.
 
 ### Video
-Presents a video in a help page:
+Presents a video in a help page.
 
 ```
 <video src="https://www.youtube.com/watch?v=WSWmn7WM3i4" />
@@ -240,7 +244,7 @@ The **`<video>`** element embeds a video, such as a tutorial or training movie, 
 - `startTime`: Specifies, in seconds, from which point to start playing the video.
 
 ### Paragraph
-Presents a paragraph in a help page:
+Presents a paragraph in a help page.
 
 ```
 <p>This is some text in a paragraph.</p>
@@ -250,12 +254,12 @@ Presents a paragraph in a help page:
 The **`<p>`** element defines a paragraph.
 
 Text inside a paragraph can be decorated in the following ways:
-- bold, with `<strong>` element
-- italic, with `<em>` element
-- strikethrough, with `<del>` element
-- underline, with `<u>` element
+- Bold, with `<strong>` element
+- Italic, with `<em>` element
+- Strikethrough, with `<del>` element
+- Underline, with `<u>` element
 
-These decorations can be combined. For example, make a fragment of text that is both bold and underline.
+These decorations can be combined. For example, make a fragment of text that is both bold and underlined.
 
 ### Bulleted list
 Presents a bulleted list in a help page.
@@ -268,13 +272,13 @@ Presents a bulleted list in a help page.
 </ul>
 ```
 
-#### Definition and Usage
+#### Definition and usage
 The **`<ul>`** element defines a bulleted list.
 
 Use the `<ul>` element together with the `<li>` element to create bulleted lists.
 
-### Numbered List
-How to present a numbered list in a help page:
+### Numbered list
+Presents a numbered list in a help page.
 
 ```
 <ol>
@@ -285,11 +289,11 @@ How to present a numbered list in a help page:
 ```
 
 #### Definition and usage
-The **`<ol>`** element defines an ordered list.
+The **`<ol>`** element defines an ordered (numbered) list.
 Use the `<ol>` tag together with the `<li>` element to create numbered lists.
 
 ### Collapsible
-How to present a collapsible section in a help page:
+Presents a collapsible section in a help page.
 
 ```
 <collapsible title="This is a Section">
@@ -298,22 +302,22 @@ How to present a collapsible section in a help page:
 </collapsible>
 ```
 
-#### Definition and Usage
+#### Definition and usage
 The **`<collapsible>`** element defines a section of content that the user can view or hide on demand.
 
 #### Attributes
 - `collapsed`: Specifies whether the section is collapsed or expanded initially. Possible values are "true" (collapsed) or "false" (expanded).
 
 ### Link
-How to represent a link in a help page:
+Presents a link in a help page.
 
-Link to a website that opens in a new browser window.
+Link to a website that opens in a new browser window:
 
 ```
 <a href="https://www.microsoft.com" target="_blank">Microsoft Home Page</a>
 ```
 
-Link to another help page.
+Link to another help page:
 
 ```
 <a href="./LearnMore">Learn More</a>
@@ -324,29 +328,29 @@ The `<a>` tag defines a link, which allows the user to navigate from a help page
 
 #### Attributes
 
-- `href`: Specifies the URL of the website or help hage to which to navigate. This attribute is  required.
+- `href`: Specifies the URL of the website or help page to which to navigate. This attribute is  required.
 - `target`: Specifies where to open the linked URL.
    - If not present or `_self`, the link is assumed to be to another help page and it's opened in the help browser.
    - If `_blank`, the link is opened in a new browser window.
    - If `_top`, the link is opened in the current browser window.
-   - If the value is the name of an `iframe` the link is opened in that iframe.
+   - If the value is the name of an `iframe`, the link is opened in that iframe.
 
 ### Coach mark
-Presents a coach mark in a help page:
+Presents a coach mark in a help page.
 
 ```
 <coachmark target="#my-html-button">Click to highlight the HTML element with id [my-html-button]</coachmark>
 ```
 
 #### Definition and usage
-A coachmark is an interactive element that can be used to draw the user's attention to a specific point in the UI of the application hosting the help browser.
+A coach mark is an interactive element that can be used to draw the user's attention to a specific point in the UI of the application hosting the help browser.
 
 #### Attributes
 
-- `target`: [CSS selector](https://www.w3schools.com/cssref/css_selectors.asp) that specifies the HTML element over which the coachmark will be shown. This attribute is required.
+- `target`: [CSS selector](https://www.w3schools.com/cssref/css_selectors.asp) that specifies the HTML element over which the coach mark will be shown. This attribute is required.
 
 ### Balloon
-Presents a balloon in a help page:
+Presents a balloon in a help page.
 
 ```
 <balloon target="#my-html-button" title="This button submits the form" details="Please click this button to continue and submit the form">Click to show a balloon over the HTML element with id [my-html-button]</balloon>
@@ -356,7 +360,7 @@ Presents a balloon in a help page:
 A balloon is an interactive element that can be used to help the user perform an action in the UI of the application hosting the help browser.
 
 #### Attributes
-- `target`: CSS selector that specifies the HTML element over which the balloon link will appear. Tnis attribute is required.
+- `target`: CSS selector that specifies the HTML element over which the balloon link will appear. This attribute is required.
 - `title`: Specifies the title of the balloon.
 - `details`: Specifies the content to show inside the balloon.
 
