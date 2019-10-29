@@ -8,7 +8,7 @@ ms.topic: sample
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 10/29/2019
-ms.author: brdang
+ms.author: mabolan
 search.audienceType: 
   - maker
 search.app: 
