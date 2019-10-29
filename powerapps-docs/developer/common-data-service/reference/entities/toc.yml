@@ -84,8 +84,16 @@
   href: email.md
 - name: EmailServerProfile
   href: emailserverprofile.md
+- name: EntityAnalyticsConfig
+  href: entityanalyticsconfig.md
 - name: EntityDataProvider
   href: entitydataprovider.md
+- name: EntityImageConfig
+  href: entityimageconfig.md
+- name: EnvironmentVariableDefinition
+  href: environmentvariabledefinition.md
+- name: EnvironmentVariableValue
+  href: environmentvariablevalue.md
 - name: ExchangeSyncIdMapping
   href: exchangesyncidmapping.md
 - name: ExpiredProcess
