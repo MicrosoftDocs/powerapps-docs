@@ -1,13 +1,13 @@
 ---
 title: Meeting Capture sample template | Microsoft Docs
 description: Learn about the Meeting Capture sample template in PowerApps with setup, overview, and deep dives into how the app was built.
-author: mr-dang-msft
+author: matthewbolanos
 manager: kvivek
 ms.service: powerapps
 ms.topic: sample
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 07/03/2018
+ms.date: 10/29/2019
 ms.author: brdang
 search.audienceType: 
   - maker
