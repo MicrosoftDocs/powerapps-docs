@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Embed a PowerApps app in Teams
+# Embed an app in Teams
 
 You can share a PowerApps you've created by embedding it directly into Microsoft Teams. When completed, users can select **+** to add your app to any of **your** team channels or conversations in the team you are in. The app appears as a tile under **Tabs for your team**.
 
@@ -28,7 +28,7 @@ An admin can upload the app so it shows up for **all** teams in your tenant unde
 - You need a valid [PowerApps license](https://docs.microsoft.com/power-platform/admin/pricing-billing-skus).
 - To embed an app into Teams, you need an existing app [created using PowerApps](data-platform-create-app.md).
 
-## Create a Teams app for your PowerApp
+## Download the app
 
 1. Sign in to [web.powerapps.com](https://web.powerapps.com), and then select **Apps** in the menu.
 
@@ -52,6 +52,8 @@ An admin can upload the app so it shows up for **all** teams in your tenant unde
     ![Add app as tab](./media/embed-teams-app/upload-custom-app.png "Upload a custom app")
 
 2. Select **Add** to add the app as a personal app or select **Add to team** to add the app as a tab within an existing channel or conversation.
+
+## Publish the app to the Teams catalogue
 
 If you are an admin, you can also [publish the app to the Microsoft Teams catalogue](https://docs.microsoft.com/microsoftteams/tenant-apps-catalog-teams).
 
