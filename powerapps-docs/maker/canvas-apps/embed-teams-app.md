@@ -55,7 +55,7 @@ An admin can upload the app so it shows up for **all** teams in your tenant unde
 
 ## Publish the app to the Teams catalogue
 
-If you are an admin, you can also [publish the app to the Microsoft Teams catalogue](https://docs.microsoft.com/microsoftteams/tenant-apps-catalog-teams).
+If you are an admin, you can also [publish the app](https://docs.microsoft.com/microsoftteams/tenant-apps-catalog-teams) to the Microsoft Teams catalogue.
 
 ### See also
 
