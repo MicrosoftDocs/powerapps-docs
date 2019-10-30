@@ -38,8 +38,26 @@ Disables the scrolling capabilities for the components.
 |Method | Description |Available for|
 | ------------- |-------------|------|
 |[getClient](client/getclient.md)|[!INCLUDE [getclient-description](client/includes/getclient-description.md)]|Model-driven apps and canvas apps (experimental preview)|
-|[getFormFactor](client/getformfactor.md)|[!INCLUDE [getformfactor-description](client/includes/getformfactor-description.md)]|Model-driven apps and canvas apps(experimental preview)|
+|[getFormFactor](client/getformfactor.md)|[!INCLUDE [getformfactor-description](client/includes/getformfactor-description.md)]|Model-driven apps and canvas apps (experimental preview)|
 |[isOffline](client/isoffline.md)|[!INCLUDE [isoffline-description](client/includes/isoffline-description.md)]|Model-driven apps|
+
+## Example 
+
+```TypeScript
+private createHTMLTableElement(): HTMLTableElement {
+    let tableElement: HTMLTableElement = document.createElement("table");
+    tableElement.setAttribute("class", "SampleControlHtmlTable_HtmlTable");
+    let key: string = "Example Method";
+    let value: string = "Result";
+    tableElement.appendChild(this.createHTMLTableRowElement(key, value, true));
+    key = "getFormFactor()";
+    value = String(this._context.client.getFormFactor());
+    tableElement.appendChild(this.createHTMLTableRowElement(key, value, false));
+    key = "getClient()";
+    value = String(this._context.client.getClient());
+    tableElement.appendChild(this.createHTMLTableRowElement(key, value, false));
+}
+```
 
 ### Related topics
 
