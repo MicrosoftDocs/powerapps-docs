@@ -15,7 +15,7 @@ ms.assetid: 5d100dc3-bd82-4b45-964c-d90eaebc0735
 
 # PowerApps component framework for canvas apps
 
-<!--> [!IMPORTANT]
+<!--[!IMPORTANT]
 > This feature is still experimental and disabled by default. For more information, see [Experimental and preview features](../../maker/canvas-apps/working-with-experimental.md).-->
 
 PowerApps component framework enables app makers to create code components to use in an app or across the apps. More information: [PowerApps component framework overview](overview.md) 
