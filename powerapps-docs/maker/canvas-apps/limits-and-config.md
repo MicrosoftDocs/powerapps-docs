@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 10/24/2019
+ms.date: 10/30/2019
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -21,8 +21,8 @@ This topic contains device platform and web browser requirements, as well as lim
 
 | **Minimum required** | **Recommended** |
 | --- | --- |
-| iOS 9.3 or later |iOS 10 or later with at least 2GB of RAM |
-| Android 5 or later |Android 7 or later with at least 4GB of RAM |
+| iOS 12 or later |iOS 12 or later|
+| Android 7 or later |Android 7 or later |
 | Windows 8.1 or later (PC only) |Windows 10 Fall Creators Update with at least 8 GB of RAM)|
 
 > [!NOTE]
