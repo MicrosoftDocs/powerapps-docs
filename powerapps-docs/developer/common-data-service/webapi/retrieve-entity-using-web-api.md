@@ -95,7 +95,7 @@ If an entity has an alternate key defined, you can also use the alternate key to
 ```http
 GET [Organization URI]/api/data/v9.0/contacts(firstname='Joe',emailaddress1='abc@example.com')
 ```
-If the alternate key definition contains Lookup type field, for example, the primarycontactid property for the Account entity, you can retrieve the account using a query with data provided for the key as shown here.
+If the alternate key definition contains Lookup type field (for example, the primarycontactid property for the Account entity), you can retrieve the account using the [lookup property](/powerapps/developer/common-data-service/webapi/web-api-types-operations#lookup-properties) as shown here.
 
 ```http
 GET [Organization URI]/api/data/v9.0/accounts(_primarycontactid_value=00000000-0000-0000-0000-000000000001) 
