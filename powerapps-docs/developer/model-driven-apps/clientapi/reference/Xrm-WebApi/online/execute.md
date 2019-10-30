@@ -349,8 +349,8 @@ var Sdk = window.Sdk || {};
  */
 Sdk.DeleteRequest = function (entityReference) {
     this.entityReference = entityReference;
-
-    this.getMetadata = function () {
+}
+Sdk.DeleteRequest.prototype.getMetadata = function () {
         return {
             boundParameter: null,
             parameterTypes: {},
@@ -363,7 +363,7 @@ Sdk.DeleteRequest = function (entityReference) {
 // Construct request object from the metadata
 var entityReference = {
     entityType: "account",
-    id: "0b9b8a43-e0dd-e911-a849-000d3a11e59b"
+    id: "d2b6c3f8-b0fa-e911-a812-000d3a59fa22"
 };
 var deleteRequest = new Sdk.DeleteRequest(entityReference);
 
