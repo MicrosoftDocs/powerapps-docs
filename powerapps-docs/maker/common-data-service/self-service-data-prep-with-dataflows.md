@@ -127,8 +127,7 @@ Databricks, Azure Data Factory, and more.
 
 For more information about Azure Data Lake Storage Gen2 and dataflows
 integration, including how to create dataflows that reside in your
-organization's Azure Data Lake, see [Dataflows and Azure Data Lake integration
-(Preview)](/power-bi/service-dataflows-azure-data-lake-integration).
+organization's Azure Data Lake, see [Connect Azure Data Lake Storage Gen2 for dataflow storage](connect-azure-data-lake-storage-for-dataflow.md).
 
 ## Summary of self-service data prep for big data in PowerApps
 There are multiple scenarios and examples where dataflows can enable you to get

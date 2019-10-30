@@ -1,7 +1,7 @@
 ---
 title: "Configure connection roles | MicrosoftDocs"
 ms.custom: ""
-ms.date: 05/27/2018
+ms.date: 10/17/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -28,16 +28,30 @@ When people set a connection between two records, they can also add a descriptio
 
 Anyone with write access to the **Connection Role** entity can establish which connection are available for people to use.
 
+> [!IMPORTANT]
+> For an entity to be available as a record type for a new or existing connection role, the **Enable connections** property must be enabled for the entity. 
+
+## Enable connection roles for an entity
+1. Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). 
+2. Expand **Data**, and then select **Entities**. 
+3. Select the entity that you want to enable for connection roles, and then on the command bar select **Settings**. 
+4. In the **Settings** pane expand the **Collaboration** area, and then select **Enable connections**.
+    > [!div class="mx-imgBorder"] 
+    > ![Enable connections setting](media/enable-connections.png "Enable connections setting")
+
+6. Select **Done**. 
+
 ## View connection roles
 
 There are a number of standard connection roles already configured in Common Data Service. To view them you need to go to the settings area. 
 
 ### Navigate to the settings area
 
-1. While viewing a model-driven app edit the URL to remove everything after `dynamics.com` and refresh the page.
-1. Navigate to **Settings** > **Business** > **Business Management** and then select **Connection Roles**.
+1. In a model-driven app select **Settings** > **Advanced Settings**. 
+2. Navigate to **Settings** > **Business** > **Business Management** and then select **Connection Roles**.
 
-![Connection roles in the Business Management settings](media/navigate-settings-connection-roles.png)
+   > [!div class="mx-imgBorder"] 
+    > ![Connection roles in the Business Management settings](media/navigate-settings-connection-roles.png "Connection roles in the Business Management settings")
 
 In this view you can see all the connection roles that are available for this environment and you can edit them here.
 

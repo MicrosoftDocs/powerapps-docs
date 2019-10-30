@@ -60,28 +60,6 @@ Follow the steps in [Create an Azure Data Lake Storage Gen2 storage account](htt
 2.	Make sure you enable the hierarchical namespace feature. 
 3.	We recommend that you set the replication setting to Read-access geo-redundant storage (RA-GRS).
 
-## Create a Cross-Origin Resource Sharing (CORS) rule for the Export to data lake (preview) service
-
-> [!NOTE]
-> Power Platform Dataflows leverage the Export to data lake (preview) feature to connect a Data Lake to a PowerApps environment. In this section, you are required to grant the Export to data lake (preview) service a role to the storage account, so it can be configured for Dataflow use.
-
-Next, you need to enable the Export to data lake (preview) service access the storage account via web browser and the PowerApps portal. Web browsers implement a security restriction known as [same-origin policy](http://www.w3.org/Security/wiki/Same_Origin_Policy) that prevents a web page from calling APIs in a different domain; CORS provides a secure way to allow one domain (the origin domain) to call APIs in another domain. For more information about CORS, see the [CORS specification](http://www.w3.org/TR/cors/).
-
-Follow the steps in the storage account you just created on the settings page in the Azure portal. In the CORS menu item, select the Blob service section and enter these details. 
-
-|Setting  |Value  |
-|---------|---------|
-|Allowed origins   | https://athena-ui-prod.trafficmanager.net     |
-|Allowed methods   |  DELETE, GET, HEAD, MERGE, POST, OPTIONS, PUT, PATCH   |
-|Allowed headers   | *    |
-|Exposed headers   | *    |
-|Max age |   *  |
-
-
-The following image shows the CORS rule configured for the Export to data lake (preview) Service.
-
-![CORS rule](media/dataflows-cores-rule.png)
-
 ## Connect your Azure Data Lake Storage Gen2 to PowerApps
 Once you've set up your Azure Data Lake Storage Gen2 account in the Azure portal, you are ready to connect it to a specific dataflow or a PowerApps environment. Connecting the lake to an environment allows other makers and admins in the environment to create dataflows that store their data in your organization's lake as well. 
 
@@ -103,9 +81,6 @@ To connect your Azure Data Lake Storage Gen2 account with the dataflow, follow t
 If a storage account has not yet been associated with the environment, a **Link to data lake** dialog box appears. You will need to sign in and find the data lake you created in the previous steps. In this example, no data lake is associated with the environment and so a prompt occurs to add one. 
 
 
-
-<!--from editor: Should "storage account" be in bold because it's something the user has to select? --"
-
 1. Select storage account.
 
     The **Select Storage Account** screen appears.
@@ -123,11 +98,11 @@ Once these steps are successfully completed, your Azure Data Lake Storage Gen2 a
 There are a few considerations and limitations to keep in mind when working with your dataflow storage:
 - Linking an Azure Data Lake Store Gen2 account for dataflow storage is not supported in the default environment.
 - Once a dataflow storage location is configured for a dataflow, it can't be changed.
-- By default, any member of the environment can access dataflow data using the Power Platform Dataflows Connector. However, only the owners of a dataflow can access its files directly in Azure Data Lake Storage Gen2. To authorize additional people to access the dataflows data directly in the lake, you must authorize them to the dataflow’s CDM folder in the data lake or the data lake itself.
-- When a dataflow is deleted, its CDM folder in the lake will also be deleted. 
+- By default, any member of the environment can access dataflow data using the Power Platform Dataflows Connector. However, only the owners of a dataflow can access its files directly in Azure Data Lake Storage Gen2. To authorize additional people to access the dataflows data directly in the lake, you must authorize them to the dataflow’s **CDM Folder** in the data lake or the data lake itself.
+- When a dataflow is deleted, its **CDM Folder** in the lake will also be deleted. 
 
 > [!IMPORTANT]
-> You shouldn't change files created by dataflows in your organization’s lake or add files to a dataflow’s CDM folder. Changing files might damage dataflows or alter their behavior and is not supported. Power Platform Dataflows only grants read access to files it creates in the lake. If you authorize other people or services to the filesystem used by Power Platform Dataflows, only grant them read access to files or folders in that filesystem.
+> You shouldn't change files created by dataflows in your organization’s lake or add files to a dataflow’s **CDM Folder**. Changing files might damage dataflows or alter their behavior and is not supported. Power Platform Dataflows only grants read access to files it creates in the lake. If you authorize other people or services to the filesystem used by Power Platform Dataflows, only grant them read access to files or folders in that filesystem.
 
 ## Frequently asked questions
 *What if I had previously created dataflows in my organization’s Azure Data Lake Storage Gen2 and would like to change their storage location?*

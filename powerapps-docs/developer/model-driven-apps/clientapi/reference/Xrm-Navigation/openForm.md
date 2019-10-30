@@ -36,16 +36,17 @@ search.app:
     <td>Object</td> 
     <td>Yes</td>
     <td>Entity form options for opening the form. The object contains the following attributes:<ul>
+<li><b>entityName</b>: String. Logical name of the entity to display the form for.</li>
+<li><b>entityId</b>: (Optional) String. ID of the entity record to display the form for.</li>
+<li><b>formId</b>: (Optional) String. ID of the form instance to be displayed.</li>
 <li><b>cmdbar</b>: (Optional) Boolean. Indicates whether to display the command bar. If you do not specify this parameter, the command bar is displayed by default.</li>
 <li><b>createFromEntity</b>: (Optional) Lookup. Designates a record that will provide default values based on mapped attribute values. The lookup object has the following String properties: <code>entityType</code>, <code>id</code>, and <code>name</code> (optional).</li>
-<li><b>entityId</b>: (Optional) String. ID of the entity record to display the form for.</li>
-<li><b>entityName</b>: (Optional) String. Logical name of the entity to display the form for.</li>
-<li><b>formId</b>: (Optional) String. ID of the form instance to be displayed.</li>
 <li><b>height</b>: (Optional) Number. Height of the form window to be displayed in pixels.</li>
 <li><b>navbar</b>: (Optional) String. Controls whether the navigation bar is displayed and whether application navigation is available using the areas and subareas defined in the sitemap. Valid vlaues are: "on", "off", or "entity".<ul><li><code>on</code>: The navigation bar is displayed. This is the default behavior if the <b>navbar</b> parameter is not used.</li>
 <li><code>off</code>: The navigation bar is not displayed. People can navigate using other user interface elements or the back and forward buttons.</li><li><code>entity</code>: On an entity form, only the navigation options for related entities are available. After navigating to a related entity, a back button is displayed in the navigation bar to allow returning to the original record.</li></ul></li>
 <li><b>openInNewWindow</b>: (Optional) Boolean. Indicates whether to display form in a new window.</li>
-<li><b>windowPosition</b>: (Optional) Number. Specify one of the following values for the window position of the form on the screen:<ul><li><code>1:center</code></li><li><code>2:side</code></li></ul>
+<li><b>windowPosition</b>: (Optional) Number. Specify one of the following values for the position of the form on the screen:<ul><li><code>1:center</code></li><li><code>2:side</code></li></ul>
+This does not apply to opening a new browser window.  
 <li><b>processId</b>: (Optional) String. ID of the business process to be displayed on the form.</li>
 <li><b>processInstanceId</b>: (Optional) String. ID of the business process instance to be displayed on the form.</li>
 <li><b>relationship</b>: (Optional) Object. Define a relationship object to display the related records on the form. The object has the following attributes.
@@ -84,7 +85,7 @@ search.app:
 </table>
 </li>
 <li><b>selectedStageId</b>: (Optional) String. ID of the selected stage in business process instance.</li>
-<li><b>useQuickCreateForm</b>: (Optional) Boolean. Indicates whether to open a quick create form. If you do not specify this, by default <b>false</b> is passed.</li>
+<li><b>useQuickCreateForm</b>: (Optional) Boolean. Indicates whether to open a quick create form.  The entity must have the <b>Allow Quick Create</b> option enabled for the quick create form to be displayed and you must also add the entity and the quick create form to your app. If you do not specify the value of <code>useQuickCreateForm</code>, the default will be set to <b>false</b>.</li>
 <li><b>width</b>: (Optional) Number. Width of the form window to be displayed in pixels.</li>
 </ul>
 </tr>

@@ -12,7 +12,15 @@ author: Nkrb
 
 # Implement components using TypeScript
 
-This tutorial walks you through the process of creating a new code component in TypeScript. The sample component is a linear input component that enables users to enter numeric values using a visual slider instead of typing the values in the field. 
+This topic walks you through the process of creating a new code component in TypeScript using the PowerApps CLI. In this tutorial we will build a sample linear code component that enables users to change the numeric values using a visual slider instead of typing the values in the field. 
+
+The artifacts that are required to build code components are:
+
+1. [Create a new component project](#creating-a-new-component-project)
+2. [Implementing manifest](#implementing-manifest)
+3. [Implement component logic using TypeScript](#implementing-component-logic)
+4. [Add style to the code components](#adding-style-to-the-code-component)
+5. [Packaging code components](#packaging-your-code-components)
 
 ## Creating a new component project
 
@@ -24,26 +32,28 @@ To create a new project:
     mkdir LinearComponent
     ```
 
-1. Go into the new directory using the command `cd LinearComponent`. 
+1. Go into the component folder using the command `cd LinearComponent`. 
    
-1. Run the following command to create a new component project passing basic parameters.
+1. Create a new component project by passing basic parameters using the command.
 
    ```CLI
     pac pcf init --namespace SampleNamespace --name TSLinearInputComponent --template field
     ``` 
 
 1. Install the project build tools using the command `npm install`. 
-2. Open your project folder `C:\Users\<your name>\Documents\<My_PCF_Component>` in a developer environment of your choice and get started with your code component development. The quickest way to start is by running `code .` from the command prompt once you are in the `C:\Users\<your name>\Documents\<My_PCF_Component>` directory. This command opens your component project in Visual Studio Code.
+1. Open your project folder `C:\Users\<your name>\Documents\<My_code_Component>` in a developer environment of your choice and get started with your code component development. The quickest way to start is by running `code .` from the command prompt once you are in the `C:\Users\<your name>\Documents\<My_code_Component>` directory. This command opens your component project in Visual Studio Code.
 
 ## Implementing manifest
 
-Manifest is an XML file that contains the metadata of the code component. It also defines the behavior of the code component. In this tutorial, this manifest file is created under the `<Your component Name>` subfolder. When you open the `ControlManifest.Input.xml` file in Visual Studio Code, you'll notice that the manifest file is predefined with some properties. Make changes to the predefined manifest file, as shown here:
+Manifest is an XML file that contains the metadata of the code component. It also defines the behavior of the code component. In this tutorial, this manifest file is created under the `<Your component Name>` subfolder. When you open the `ControlManifest.Input.xml` file in Visual Studio Code, you'll notice that the manifest file is predefined with some properties. More information: [Manifest](manifest-schema-reference/manifest.md).
+
+Make changes to the predefined manifest file, as shown here:
 
 1. The [control](manifest-schema-reference/control.md) node defines the namespace, version, and display name of the code component. Now, define each property of the [control](manifest-schema-reference/control.md) node as shown here:
 
    - **namespace**: Namespace of the code component. 
    - **Constructor**: Constructor of the code component.
-   - **Version**: Version of the component. Whenever you update the component, you need to update the version to see the changes in the runtime.
+   - **Version**: Version of the component. Whenever you update the component, you need to update the version to see the latest changes in the runtime.
    - **display-name-key**: Name of the code component that is displayed on the UI.
    - **description-name-key**: Description of the code component that is displayed on the UI.
    - **control-type**: The code component type. Only *standard* type of code components are supported.
@@ -54,7 +64,7 @@ Manifest is an XML file that contains the metadata of the code component. It als
       <control namespace="SampleNameSpace" constructor="TSLinearInputComponent" version="1.0.0" display-name-key="Linear Input Component" description-key="Allows you to enter the numeric values using the visual slider." control-type="standard">
      ```
 
-2. The [property](manifest-schema-reference/property.md) node defines the properties of the code component like defining the data type of field. The property node is specified as the child element under the control element. Define the [property](manifest-schema-reference/property.md) node as shown here:
+2. The [property](manifest-schema-reference/property.md) node defines the properties of the code component like defining the data type of field. The property node is specified as the child element under the `control` element. Define the [property](manifest-schema-reference/property.md) node as shown here:
 
    - **name**: Name of the property.
    - **display-name-key**: Display name of the property that is displayed on the UI.
@@ -66,7 +76,7 @@ Manifest is an XML file that contains the metadata of the code component. It als
      ```XML
       <property name="sliderValue" display-name-key="sliderValue_Display_Key" description-key="sliderValue_Desc_Key" of-type-group="numbers" usage="bound" required="true" />
       ```
-3. The [resources](manifest-schema-reference/resources.md) node defines the visualization of the code component. It contains all the resources that make up the code component. The [code](manifest-schema-reference/code.md) is specified as a child element under the resources element. Define the [resources](manifest-schema-reference/resources.md) as shown here:
+3. The [resources](manifest-schema-reference/resources.md) node defines the visualization of the code component. It contains all the resources that build the visualization and styling of the code component. The [code](manifest-schema-reference/code.md) is specified as a child element under the resources element. Define the [resources](manifest-schema-reference/resources.md) as shown here:
 
    - **code**: Refers to the path where all the resource files are located.
  
@@ -105,7 +115,7 @@ Manifest is an XML file that contains the metadata of the code component. It als
 
 ## Implementing component logic
 
-The next step after implementing the manifest file is to implement the component logic using TypeScript. The component logic should be implemented inside the `index.ts` file. When you open the `index.ts` file in the Visual Studio Code, you notice that the four essential classes are predefined. Now, let's implement the logic for the code component. 
+The next step after implementing the manifest file is to implement the component logic using TypeScript. The component logic should be implemented inside the `index.ts` file. When you open the `index.ts` file in the Visual Studio Code, you'll notice that the four essential classes are predefined. Now, let's implement the logic for the code component. 
 
 1. Open the `index.ts` file in the code editor of your choice.
 2. Update the `TSLinearInputComponent` class with the following code:
@@ -324,7 +334,7 @@ npm start
 
 ## Packaging your code components
 
-Follow these steps to create and import a [solution](https://docs.microsoft.com/dynamics365/customer-engagement/customize/solutions-overview) file:
+Follow these steps to create and import a [solution](https://docs.microsoft.com/powerapps/maker/common-data-service/solutions-overview) file:
 
 1. Create a new folder **Solutions** inside the **LinearComponent** folder and navigate into the folder. 
 2. Create a new solution project in the **LinearComponent** folder using the following command:
@@ -361,7 +371,7 @@ Follow these steps to create and import a [solution](https://docs.microsoft.com/
     > - Under **Code Tools**, check **NuGet targets & Build Tasks**.
 
 6. The generated solution zip file is located in the `Solution\bin\debug` folder.
-7. Manually [import the solution into Common Data Service](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/customize/import-update-upgrade-solution) using the web portal once the zip file is ready or see the [Authenticating to your organization](import-custom-controls.md#authenticating-to-your-organization) and [Deployment](import-custom-controls.md#deploying-code-components) sections to import using PowerApps CLI commands.
+7. Manually [import the solution into Common Data Service](https://docs.microsoft.com/powerapps/maker/common-data-service/import-update-export-solutions) using the web portal once the zip file is ready or see the [Authenticating to your organization](import-custom-controls.md#authenticating-to-your-organization) and [Deployment](import-custom-controls.md#deploying-code-components) sections to import using PowerApps CLI commands.
 
 ## Adding code components in model-driven apps
 
