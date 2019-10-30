@@ -27,7 +27,7 @@ For more information, see the [PowerApps channel](https://www.youtube.com/channe
 
 Using PowerApps, you can create three types of apps: **canvas**, **model-driven**, and **portal**. More information: [Overview of creating apps in PowerApps](maker/index.md).
 
-To create an app, you start with [web.powerapps.com](https://web.powerapps.com).
+To create an app, you start with [make.powerapps.com](https://make.powerapps.com).
 
 - **PowerApps Studio** is the app designer used for building canvas apps. The app designer makes creating apps feel more like building a slide deck in Microsoft PowerPoint. More information: [Generate an app from data](/powerapps/maker/canvas-apps/data-platform-create-app)  
 
