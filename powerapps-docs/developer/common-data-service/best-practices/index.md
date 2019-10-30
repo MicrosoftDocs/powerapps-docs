@@ -28,14 +28,14 @@ The Common Data Service is an extensible framework that will allow developers to
 
 Within this section you will learn about the issues we have identified, their impact, and understand the guidance to resolve them. We will explain the background about why things should be done in a certain way and avoid potential problems in the future. This can benefit the usability, supportability, and performance of your environment. The guidance documentation supports the existing information within the Developer and Administration guides.
 
-# Targeted customization types
+## Targeted customization types
 The documentation targets the following customization types:
 
 - Custom workflow activities and plug-ins
 - Working with Common Data Service data
 - Integrations extending Common Data Service
 
-# Sections
+## Sections
 Each guidance article includes most or all of the following sections:
 
 - Title - description of the guidance
@@ -47,7 +47,7 @@ Each guidance article includes most or all of the following sections:
 - Additional information - supporting details for a more extensive view
 - See also - references to learn more about something mentioned in the article
 
-# Categories
+## Categories
 Each guidance article is classified with one or more of the following categories:
 
 - Usage – improper usage of a particular API, pattern, or configuration
