@@ -16,7 +16,7 @@ ms.reviewer:
 You can create Common Data Service starter portal or Dynamics 365 portal in PowerApps based on the selected environment.
 
 > [!NOTE]
-> Existing portals and existing portal templates (Community, Partner, Employee self-service, Customer self-service) are not completely supported in PowerApps Portals Studio and some components might not render. However, you can continue editing rest of the components as usual. 
+> Existing portals and existing portal templates (Community, Partner, Employee self-service, Customer self-service) are not completely supported in PowerApps Portals Studio and some components might not render. However, you can continue editing the rest of the components as usual. 
 
 ## Environment with Common Data Service
 
@@ -34,7 +34,7 @@ If you select an environment that contains model-driven apps in Dynamics 365 (Dy
 - **Partner portal**: A partner portal allows every organization with resellers, distributors, suppliers, or partners to have real-time access to every stage of shared activities.
 
     > [!NOTE]
-    > Field Service and Project Service packages must be installed in your Dynamics 365 organization to enable respective options. For more information, see [Integrate Project Service Automation](https://docs.microsoft.com/en-us/dynamics365/portals/integrate-project-service-automation) and [Integrate Field Service](https://docs.microsoft.com/en-us/dynamics365/portals/integrate-field-service).
+    > Field Service and Project Service packages must be installed in your Dynamics 365 organization to enable respective options. For more information, see [Integrate Project Service Automation](https://docs.microsoft.com/dynamics365/portals/integrate-project-service-automation) and [Integrate Field Service](https://docs.microsoft.com/dynamics365/portals/integrate-field-service).
 
 - **Employee self-service portal**: An employee self-service portal creates an efficient and well-informed workforce by streamlining common tasks and empowering every employee with a definitive source of knowledge
 - **Community portal**: A community portal leverages peer-to-peer interactions between customers and experts to organically grow the catalog of available knowledge from knowledge base articles, forums, and blogs as well as providing feedback through comments and ratings

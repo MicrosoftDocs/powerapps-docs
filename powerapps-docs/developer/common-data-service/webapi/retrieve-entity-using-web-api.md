@@ -1,5 +1,5 @@
 ---
-title: "Retrieve an entity using the Web API (Common Data Service)| Microsoft Docs"
+title: "Retrieve an entity record using the Web API (Common Data Service)| Microsoft Docs"
 description: "Read how to form a GET request using the Common Data Service Web API to retrieve data for an entity specified as the resource with a unique identifier"
 ms.custom: ""
 ms.date: 10/31/2018
@@ -22,9 +22,9 @@ search.app:
   - D365CE
 ---
 
-# Retrieve an entity using the Web API
+# Retrieve an entity record using the Web API
 
-Use a `GET` request to retrieve data for an entity specified as the resource with a unique identifier. When retrieving an entity you can also request specific properties and expand navigation properties to return properties from related entities.  
+Use a `GET` request to retrieve data for an entity specified as the resource with a unique identifier. When retrieving an entity record you can also request specific properties and expand navigation properties to return properties from related entities.  
 
 > [!NOTE]
 >  For information about retrieving entity metadata, see [Query Metadata using the Web API](query-metadata-web-api.md).
@@ -39,7 +39,7 @@ This example returns data for an account entity instance with the primary key va
 GET [Organization URI]/api/data/v9.0/accounts(00000000-0000-0000-0000-000000000001)
 ```
 
-To retrieve more than one entity at a time, see [Basic query example](query-data-web-api.md#bkmk_basicQuery) in the [Query Data using the Web API](query-data-web-api.md) topic.
+To retrieve more than one entity record at a time, see [Basic query example](query-data-web-api.md#bkmk_basicQuery) in the [Query Data using the Web API](query-data-web-api.md) topic.
 
 > [!CAUTION]
 >  The above example will return all the properties for account record, which is against the performance best practices for retrieving data. This example was just to illustrate how you can do a basic retrieve of an entity instance in Common Data Service. Because all the properties were returned, we haven't included the response information for the request in this example.
