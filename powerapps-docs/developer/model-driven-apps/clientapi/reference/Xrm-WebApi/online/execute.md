@@ -1,6 +1,6 @@
 ---
 title: "Xrm.WebApi.online.execute (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 09/23/2019
+ms.date: 10/28/2019
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -100,6 +100,7 @@ On success, returns a promise object with the attributes specified earlier in th
 ### Execute an action
 
 The following example demonstrates how to execute the <xref:Microsoft.Dynamics.CRM.WinOpportunity> action. The request object is created based on the action definition here: [Unbound actions](../../../../../common-data-service/webapi/use-web-api-actions.md#unbound-actions)
+
 ```JavaScript
 var Sdk = window.Sdk || {};
 /**
@@ -110,26 +111,24 @@ var Sdk = window.Sdk || {};
 Sdk.WinOpportunityRequest = function (opportunityClose, status) {
     this.OpportunityClose = opportunityClose;
     this.Status = status;
-
-    this.getMetadata = function () {
-        return {
-            boundParameter: null,
-            parameterTypes: {
-                "OpportunityClose": {
-                    "typeName": "mscrm.opportunityclose",
-                    "structuralProperty": 5 // Entity Type
+}
+Sdk.WinOpportunityRequest.prototype.getMetadata = function () {
+    return {
+        boundParameter: null,
+        parameterTypes: {
+            "OpportunityClose": {
+                "typeName": "mscrm.opportunityclose",
+                "structuralProperty": 5 // Entity Type
                 },
-                "Status": {
-                    "typeName": "Edm.Int32",
-                    "structuralProperty": 1 // Primitive Type
+            "Status": {
+                "typeName": "Edm.Int32",
+                "structuralProperty": 1 // Primitive Type
                 }
             },
-            operationType: 0, // This is an action. Use '1' for functions and '2' for CRUD
-            operationName: "WinOpportunity",
-        };
+        operationType: 0, // This is an action. Use '1' for functions and '2' for CRUD
+        operationName: "WinOpportunity",
     };
 };
-
 
 var opportunityClose = {
     "opportunityid@odata.bind": "/opportunities(c60e0283-5bf2-e311-945f-6c3be5a8dd64)",
@@ -212,17 +211,15 @@ var Sdk = window.Sdk || {};
 Sdk.CreateRequest = function (entityName, payload) {
     this.etn = entityName;
     this.payload = payload;
-
-    this.getMetadata = function () {
-        return {
-            boundParameter: null,
-            parameterTypes: {},
-            operationType: 2, // This is a CRUD operation. Use '0' for actions and '1' for functions
-            operationName: "Create",
-        };
+};
+Sdk.CreateRequest.prototype.getMetadata = function () {
+    return {
+        boundParameter: null,
+        parameterTypes: {},
+        operationType: 2, // This is a CRUD operation. Use '0' for actions and '1' for functions
+        operationName: "Create",
     };
 };
-
 // Construct a request object from the metadata
 var payload = {
     name: "Fabrikam Inc."
@@ -257,21 +254,20 @@ var Sdk = window.Sdk || {};
 Sdk.RetrieveRequest = function (entityReference, columns) {
     this.entityReference = entityReference;
     this.columns = columns;
-
-    this.getMetadata = function () {
-        return {
-            boundParameter: null,
-            parameterTypes: {},
-            operationType: 2, // This is a CRUD operation. Use '0' for actions and '1' for functions
-            operationName: "Retrieve",
-        };
+};
+Sdk.RetrieveRequest.prototype.getMetadata = function () {
+    return {
+        boundParameter: null,
+        parameterTypes: {},
+        operationType: 2, // This is a CRUD operation. Use '0' for actions and '1' for functions
+        operationName: "Retrieve",
     };
 };
 
 // Construct request object from the metadata
 var entityReference = {
     entityType: "account",
-    id: "0b9b8a43-e0dd-e911-a849-000d3a11e59b"
+    id: "d2b6c3f8-b0fa-e911-a812-000d3a59fa22"
 };
 var retrieveRequest = new Sdk.RetrieveRequest(entityReference, ["name"]);
 
@@ -310,14 +306,13 @@ Sdk.UpdateRequest = function (entityName, entityId, payload) {
     this.etn = entityName;
     this.id = entityId;
     this.payload = payload;
-
-    this.getMetadata = function () {
-        return {
-            boundParameter: null,
-            parameterTypes: {},
-            operationType: 2, // This is a CRUD operation. Use '0' for actions and '1' for functions
-            operationName: "Update",
-        };
+};
+Sdk.UpdateRequest.prototype.getMetadata = function () {
+    return {
+        boundParameter: null,
+        parameterTypes: {},
+        operationType: 2, // This is a CRUD operation. Use '0' for actions and '1' for functions
+        operationName: "Update",
     };
 };
 
@@ -325,7 +320,7 @@ Sdk.UpdateRequest = function (entityName, entityId, payload) {
 var payload = {
     name: "Updated Sample Account"
 };
-var updateRequest = new Sdk.UpdateRequest("account", "0b9b8a43-e0dd-e911-a849-000d3a11e59b", payload);
+var updateRequest = new Sdk.UpdateRequest("account", "d2b6c3f8-b0fa-e911-a812-000d3a59fa22", payload);
 
 // Use the request object to execute the function
 Xrm.WebApi.online.execute(updateRequest).then(
