@@ -111,7 +111,7 @@ var Sdk = window.Sdk || {};
 Sdk.WinOpportunityRequest = function (opportunityClose, status) {
     this.OpportunityClose = opportunityClose;
     this.Status = status;
-}
+};
 Sdk.WinOpportunityRequest.prototype.getMetadata = function () {
     return {
         boundParameter: null,
@@ -349,7 +349,7 @@ var Sdk = window.Sdk || {};
  */
 Sdk.DeleteRequest = function (entityReference) {
     this.entityReference = entityReference;
-}
+};
 Sdk.DeleteRequest.prototype.getMetadata = function () {
         return {
             boundParameter: null,
