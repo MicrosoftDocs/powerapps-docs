@@ -25,7 +25,7 @@ search.app:
 ---
 # Quick start for transitioning your legacy web client application to Unified Interface
 
-The Unified Interface framework uses responsive web design principles to provide an optimal viewing and interaction experience for any screen size, device, or orientation. This quick start topic explains how to transition your legacy Web Client application to Unified Interface by using a new non-production environment. 
+The Unified Interface framework uses responsive web design principles to provide an optimal viewing and interaction experience for any screen size, device, or orientation. This quick start topic explains how to transition your legacy web client application to Unified Interface by using a new non-production environment. 
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE3JwWU]
 

@@ -15,4 +15,4 @@ applies_to:
 ms.assetid: 67867410-2147-47af-9d63-86b9560c2653
 ---
 
-Set the ids of the selected records
+Set the ids of the selected records.

@@ -51,5 +51,8 @@ In this topic you learn how to create a system chart. System charts are organiza
   
 5.  Select **Save and Close**.  
 
+## Known issues  
+In the chart designer, adding a order by on certain calculated fields are not supported and will cause an error.  The calculated fields causing this are using another calculated fields, a related entity field, or a local field on the entity.
+
 ## Next steps  
 [Create or edit dashboards](create-edit-dashboards.md)

@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 04/04/2019
+ms.date: 10/24/2019
 ms.author: tapanm
 search.audienceType: 
   - maker
@@ -21,7 +21,8 @@ You can easily customize the form for a SharePoint list by opening PowerApps in 
 To follow the steps in this topic, you'll create a simple list so that you can see how customization works, and then you can apply the same concepts to your own list.
 
 > [!NOTE]
-> If the **Customize forms** option isn't available or doesn't work correctly for your list, it might contain data types that [PowerApps doesn't support](connections/connection-sharepoint-online.md#known-issues). Also, you can't move your form to a different list or [environment](working-with-environments.md).
+> - If the **Customize forms** option isn't available or doesn't work correctly for your list, it might contain data types that [PowerApps doesn't support](connections/connection-sharepoint-online.md#known-issues). Also, you can't move your form to a different list or [environment](working-with-environments.md). 
+> - Custom forms for lists are only supported in generic lists. Support for generic document libraries is coming soon. Custom list and library templates are currently not supported; including but not limited to lists such as Announcements, Contacts and Tasks.
 
 ## Create a list
 

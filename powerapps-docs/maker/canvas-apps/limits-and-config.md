@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 10/04/2019
+ms.date: 10/24/2019
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -24,6 +24,9 @@ This topic contains device platform and web browser requirements, as well as lim
 | iOS 9.3 or later |iOS 10 or later with at least 2GB of RAM |
 | Android 5 or later |Android 7 or later with at least 4GB of RAM |
 | Windows 8.1 or later (PC only) |Windows 10 Fall Creators Update with at least 8 GB of RAM)|
+
+> [!NOTE]
+> We currently don't support new features on Windows platform for PowerApps app. Features such as the Improved Common Data Service option and guest access are not available on this platform. We recommend using a web player on Windows to leverage the full set of capabilities. Updates to the PowerApps app for Windows platform will be announced in future.
 
 ## Supported browsers for running canvas apps
 
@@ -93,6 +96,7 @@ This list identifies all services to which PowerApps Studio talks and their usag
 | \*.azureedge.net |https | create.powerapps.com, make.powerapps.com, content.powerapps.com, and web.powerapps.com |
 | \*.blob.core.windows.net |https | Blob storage |
 | \*.flow.microsoft.com | https | create.powerapps.com, make.powerapps.com, content.powerapps.com, and web.powerapps.com |
+| *.dynamics.com | https | Common Data Service |
 | vortex.data.microsoft.com |https |Telemetry |
 | localhost | https | PowerApps Mobile
 
@@ -105,9 +109,9 @@ You can find information about size limits on text, hyperlinks, images, and medi
 
 ## PowerApps per app plan
 
-PowerApps per app plan allows individual users to run 2 applications on single portal for a specific business scenario based on the full capabilities of PowerApps. This plan provides an easy way for users to get started with the platform before broader scale adoption.
+PowerApps per app plan allows individual users to run 2 applications on a single portal for a specific business scenario based on the full capabilities of PowerApps. This plan provides an easy way for users to get started with the platform before broader scale adoption.
 
-After an admin allocates PowerApps per app plan to an environment, they're assigned to users by default when app is shared with them.
+After an admin allocates PowerApps per app plan to an environment, they're assigned to users by default when app is shared with them. You can see how an admin allocates per app plans [here](https://docs.microsoft.com/power-platform/admin/capacity-add-on).
 
 Follow these steps to turn off the assigning per app plans for users when an app is shared with them:
 

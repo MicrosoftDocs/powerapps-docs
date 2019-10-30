@@ -14,4 +14,4 @@ applies_to:
   - "Dynamics 365 Version 9.x"
 ms.assetid: a19bfc74-7b2e-47ea-9549-c49e0751c8f6
 ---
-Gets the record ID
+Gets the record ID.

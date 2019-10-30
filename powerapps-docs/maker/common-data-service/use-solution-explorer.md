@@ -2,16 +2,10 @@
 title: "Use solutions in PowerApps | MicrosoftDocs"
 description: "Learn how to use solution to create or customize apps"
 ms.custom: ""
-ms.date: 06/17/2019
-ms.reviewer: ""
+ms.date: 10/28/2019
+ms.reviewer: tapanm
 ms.service: powerapps
-ms.suite: ""
-ms.tgt_pltfrm: ""
 ms.topic: "article"
-applies_to: 
-  - "Dynamics 365 (online)"
-  - "Dynamics 365 Version 9.x"
-  - "powerapps"
 author: "caburk"
 ms.assetid: 72bacfbb-96a3-4daa-88ff-11bdaaac9a3d
 caps.latest.revision: 57
@@ -91,20 +85,25 @@ In PowerApps, you can view the classic solution explorer by selecting **Solution
 
 ## Known limitations
 
-- Custom connectors are not available in a solution.
-- Canvas apps must be played after a solution is imported to authorize the connections.
-- If a canvas app is packaged in a managed solution it can still be edited in the target environment, but not re-published.
-- Deleting a managed solution will not rollback to a different canvas app's version. 
--	Canvas app access (CRUD and security) is managed entirely in PowerApps and not the Common Data Service (Common Data Service) database.
--	Common Data Service APIs to call canvas apps are blocked and don't return anything. 
--	Canvas apps created from a solution can't be shared as co-owner to an AAD Security Group.
--	Canvas apps won't display in the classic solution explorer.
-- Flows created from solutions will not be displayed in the "Team Flows" list
-- Button triggered flows are not available in solutions.
+The following limitations apply to the use of canvas apps, flows, and custom connectors in solutions. 
+
 - Canvas app triggered flows are not available in solutions.
+- If a canvas app is packaged in a managed solution, it can't be edited and re-published in the target environment. Use unmanaged solutions if the apps require editing in the target environment. 
+- Connections require authentication and consent, which requires an interactive user session and therefore cannot be transported via solutions. After importing your solution, play the app to authenticate connections. You can also create the connections in the target enviornment prior to importing the solution. 
+-	Canvas apps shared as co-owner to an Azure Active Directory (AAD) security group can't be added to solutions. Unshare the app before adding it to a solution.
+-	Canvas apps won't display in the classic solution explorer. Use the modern experience.
+-	Canvas app access (CRUD and security) is managed entirely in PowerApps and not in the Common Data Service database.
+- Database operations such as backup, restore, and copy are not supported for canvas apps and flows. These operations can corrupt canvas apps and flows.
+- Deleting a managed solution does not rollback to a different canvas app version. Instead, all versions of the app are deleted.
+- Importing a solution containing a flow will not automatically create or associate required connections. The flow must be edited to fix the connections.
+  - If using managed solutions, this creates an active customization in the unmanaged layer. Therefore subsequent solution updates to the flow will not be reflected. 
+- Flows created from solutions will not be displayed in the "Team Flows" list. They must be accessed through a solution. 
+- Button triggered flows are not available in solutions.
 - Flows triggered from Microsoft 365 applications such as Excel are not available in solutions.
 - Flows that connect to SharePoint are not available in solutions.
 - Flows in solutions don't support delegated authentication. For example, access to a flow is not automatically granted based on having access to the SharePoint list the flow was created from.
+- Custom connectors created outside solutions cannot be added to solutions at this time.
+
 
  For details about customizing the individual components in a solution, see the following topics:  
   
