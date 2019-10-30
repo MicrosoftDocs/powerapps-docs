@@ -32,7 +32,9 @@
       items:
       - name: View your profile
         href: ../user/view-your-user-profile.md
-      - name: Set personal options
+      - name: Find your admin or support person
+        href: ../user/find-admin.md
+      - name: Set personal option
         href: ../user/set-personal-options.md
       - name: Use a screen reader
         href: ../user/screen-reader.md
@@ -85,6 +87,8 @@
         href: ../user/export-excel-static-worksheet.md
       - name: Export to an Excel PivotTable
         href: ../user/export-excel-pivottable.md
+      - name: Merge duplicate records
+        href: ../user/merge-duplicate-records.md
     - name: Reports
       items:
       - name: Work with reports
@@ -131,7 +135,7 @@
       href: ./canvas-apps/sample-meeting-capture.md
   - name: Create your first app
     items:
-    - name: 1 - Generate an app from data
+    - name: 1 - Create an app from data
       items:
       - name: From Common Data Service
         href: ./canvas-apps/data-platform-create-app.md
@@ -139,6 +143,8 @@
         href: ./canvas-apps/app-from-sharepoint.md
       - name: From Excel
         href: ./canvas-apps/get-started-create-from-data.md
+      - name: From Azure SQL Database
+        href: ./canvas-apps/app-from-azure-sql-database.md
     - name: 2 - Make basic customizations
       items:
       - name: 1 - Galleries
@@ -1421,6 +1427,8 @@
     href: ./canvas-apps/common-issues-and-resolutions.md
   - name: Get a session or app ID
     href: ./canvas-apps/get-sessionid.md
+  - name: Troubleshoot startup issues for PowerApps
+    href: troubleshooting-startup-issues.md
   - name: Troubleshoot Power Query
     href: ./common-data-service/data-platform-cds-newentity-troubleshooting-mashup.md
   - name: Support
