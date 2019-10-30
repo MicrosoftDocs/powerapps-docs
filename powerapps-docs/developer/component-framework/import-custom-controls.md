@@ -17,7 +17,7 @@ This topic describes how to import code components into Common Data Service. Aft
 
 To create and import a solution file:
 
-1. Create a new folder and name it **Solution** (or any name of your choice) using the command `mkdir Solutions` inside the sample component folder. Navigate into the directory using the command `cd Solutions`.
+1. Create a new folder inside the sample component folder and name it **Solution** (or any name of your choice) using the command `mkdir Solutions`. Navigate into the directory using the command `cd Solutions`.
 
 2. Create a new solutions project using the command `pac solution init --publisher-name <enter your publisher name> --publisher-prefix <enter your publisher prefix>`. The solution project is used for bundling the code component into a solution zip file that is used for importing into Common Data Service.
 
@@ -40,7 +40,7 @@ To create and import a solution file:
     > - If you encounter an error that says *Ambiguous project name* when running the `msbuild` command on your solution, ensure that your solution name and project name are not the same.
 
 4. The generated solution files are located inside the `\bin\debug\` folder after the build is successful.
-5. Manually [import the solution into Common Data Service](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/customize/import-update-upgrade-solution) using the web portal or see the [Authenticating to your organization](#authenticating-to-your-organization) and [Deployment](#deploying-code-components) sections to import using PowerApps CLI commands.
+5. Manually [import the solution into Common Data Service](https://docs.microsoft.com/powerapps/maker/common-data-service/import-update-export-solutions) using the web portal or see the [Authenticating to your organization](#authenticating-to-your-organization) and [Deployment](#deploying-code-components) sections to import using PowerApps CLI commands.
 
 ## Authenticating to your organization
 

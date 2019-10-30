@@ -39,6 +39,14 @@ Model-driven apps and canvas apps (public preview)
 |[getCurrentPosition](device/getcurrentposition.md)|[!INCLUDE [getcurrentposition-description](device/includes/getcurrentposition-description.md)]|
 |[pickFile](device/pickfile.md)|[!INCLUDE [pickfile-description](device/includes/pickfile-description.md)]|
 
+## Example
+
+```TypeScript
+ private onUploadButtonClick(event: Event): void {
+    this._context.device.pickFile().then(this.processFile.bind(this), this.showError.bind(this));
+  }
+```
+
 ### Related topics
 
 [PowerApps component framework API reference](../reference/index.md)<br/>
