@@ -1,6 +1,6 @@
 ---
-title: "Create an entity using the Web API (Common Data Service) | Microsoft Docs"
-description: "Read how to create a POST request to send data to create an entity on Common Data Service using the Web API"
+title: "Create an entity record using the Web API (Common Data Service) | Microsoft Docs"
+description: "Read how to create a POST request to send data to create an entity record on Common Data Service using the Web API"
 ms.custom: ""
 ms.date: 10/31/2018
 ms.service: powerapps
@@ -22,9 +22,9 @@ search.app:
   - D365CE
 ---
 
-# Create an entity using the Web API
+# Create an entity record using the Web API
 
-Use a POST request to send data to create an entity. You can create multiple related entities in a single operation using ‘deep insert’. You also need to know how to set values to associate a new entity to existing entities using the @odata.bind annotation.  
+Use a POST request to send data to create an entity. You can create multiple related entity records in a single operation using ‘deep insert’. You also need to know how to set values to associate a new entity record to existing entities using the @odata.bind annotation.  
 
 > [!NOTE]
 > For information about how to create and update the entity metadata using the Web API, see [Create and update entity definitions using the Web API](create-update-entity-definitions-using-web-api.md).
@@ -33,7 +33,7 @@ Use a POST request to send data to create an entity. You can create multiple rel
 
 ## Basic Create
 
- This example creates a new account entity. The response `OData-EntityId` header contains the Uri of the created entity.
+ This example creates a new account entity record. The response `OData-EntityId` header contains the Uri of the created entity.
 
  **Request**
 
@@ -65,11 +65,11 @@ OData-EntityId: [Organization URI]/api/data/v9.0/accounts(7eb682f1-ca75-e511-80d
 
 ```
 
-To create a new entity you must identify the valid property names and types. For all system entities and attributes, you can find this information in the topic for that entity in the [About the Entity Reference](../reference/about-entity-reference.md). For custom entities or attributes, refer to the definition of that entity in the [CSDL $metadata document](web-api-types-operations.md#csdl-metadata-document) . More information:[Entity types](web-api-types-operations.md#entity-types)
+To create a new entity record you must identify the valid property names and types. For all system entities and attributes, you can find this information in the topic for that entity in the [About the Entity Reference](../reference/about-entity-reference.md). For custom entities or attributes, refer to the definition of that entity in the [CSDL $metadata document](web-api-types-operations.md#csdl-metadata-document) . More information:[Entity types](web-api-types-operations.md#entity-types)
 
 <a name="bkmk_CreateRelated"></a>
 
-## Create related entities in one operation
+## Create related entity records in one operation
 
  You can create entities related to each other by defining them as navigation properties values. This is known as *deep insert*.
 
@@ -125,7 +125,7 @@ OData-EntityId: [Organization URI]/api/data/v9.0/accounts(3c6e4b5f-86f6-e411-80d
 
 <a name="bkmk_associateOnCreate"></a>
 
-## Associate entities on create
+## Associate entity records on create
 
  To associate new entities to existing entities when they are created you must set the value of single-valued navigation properties using the `@odata.bind` annotation.
 
@@ -172,7 +172,7 @@ See [Detect duplicate data using Web API](manage-duplicate-detection-create-upda
 
 <a name="bkmk_initializefrom"></a>
 
-## Create a new entity from another entity
+## Create a new entity record from another entity
 
 Use `InitializeFrom function` to create a new record in the context of an existing record where a mapping exists between the entities to which the records belong. 
 
