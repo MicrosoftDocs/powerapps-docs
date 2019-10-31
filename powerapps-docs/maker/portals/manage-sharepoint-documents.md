@@ -13,7 +13,7 @@ ms.reviewer:
 
 # Manage SharePoint documents
 
-Common Data Service supports integration with [!INCLUDE[pn-microsoft-sharepoint-online](../../includes/pn-microsoft-sharepoint-online.md)] that enables you to use the document management capabilities of [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] from within Common Data Service. PowerApps Portals now supports uploading and displaying documents to and from [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] directly on an entity form or web form in a portal. This allows portal users to view, download, add, and delete documents from a portal. Portal users can also create subfolders to organize their documents.
+Common Data Service supports integration with [!INCLUDE[pn-microsoft-sharepoint-online](../../includes/pn-microsoft-sharepoint-online.md)] that enables you to use the document management capabilities of [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] from within Common Data Service. PowerApps portals now supports uploading and displaying documents to and from [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] directly on an entity form or web form in a portal. This allows portal users to view, download, add, and delete documents from a portal. Portal users can also create subfolders to organize their documents.
 
 > [!NOTE]
 > - Document management works only with [!INCLUDE[pn-microsoft-sharepoint-online](../../includes/pn-microsoft-sharepoint-online.md)].
@@ -88,7 +88,7 @@ You can specify name and label as per your requirement. Save and publish the for
 > [!NOTE]
 > Document management must be enabled for the entity for which you edit the form. More information: [Enable document management for entities](#step-3-enable-document-management-for-entities)
 
-### PowerApps Portals configuration
+### PowerApps portals configuration
 
 Apart from the standard configuration required for entity form or web form, you must set the following properties to enable document management:
 
@@ -167,7 +167,7 @@ The below example demonstrates configuration using the Case entity which needs t
 
         f. In the form editor, select **Save** and then select **Publish**.
 
-    - PowerApps Portals configuration
+    - PowerApps portals configuration
 
         a. Go to **Portals** > **Entity Forms**.
     

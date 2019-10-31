@@ -25,7 +25,7 @@ To manage an app, select **More Commands** (**…**) for the portal and choose a
 
 ## Edit
 
-Opens the [PowerApps Portals Studio](portal-designer-anatomy.md) to edit the content and components of the portal.  
+Opens the [PowerApps portals Studio](portal-designer-anatomy.md) to edit the content and components of the portal.  
 
 > [!div class=mx-imgBorder]
 > ![portal maker](media/portal-maker.png "Portal maker")  
@@ -37,7 +37,7 @@ Opens the portal to browse the website. This helps you to see the portal as it w
 > [!div class=mx-imgBorder]
 > ![portal website](media/portal-website.png "Portal website")  
 
-Alternately, you can also open the portal to browse the website by selecting **Browse website** in the [PowerApps Portals Studio](portal-designer-anatomy.md) to view the changes you have made to the website. The website opens in a new tab with URL of the website.
+Alternately, you can also open the portal to browse the website by selecting **Browse website** in the [PowerApps portals Studio](portal-designer-anatomy.md) to view the changes you have made to the website. The website opens in a new tab with URL of the website.
 
 ## Share
 

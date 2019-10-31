@@ -13,7 +13,7 @@ ms.reviewer:
 
 # PowerApps Common Data Service entity tags
 
-PowerApps entity tags are used to load and display PowerApps data, or use other PowerApps Portals framework services. These tags are PowerApps-specific extensions to the Liquid language.
+PowerApps entity tags are used to load and display PowerApps data, or use other PowerApps portals framework services. These tags are PowerApps-specific extensions to the Liquid language.
 
 ## chart
 
@@ -64,7 +64,7 @@ Type of authentication required for the Power BI report or dashboard. Valid valu
 
 - **powerbiembedded**: Allows you to share the secure Power BI reports or dashboards to external users who doesn't have Power BI license or Azure Active Directory authentication setup. For information on Power BI Embedded service setup, see [Enable Power BI Embedded service](../admin/set-up-power-bi-integration.md#enable-power-bi-embedded-service). 
 
-While adding the secure Power BI report or dashboard, ensure that it is shared with Dynamics 365 portal Azure Active Directory or Power BI Embedded services. 
+While adding the secure Power BI report or dashboard, ensure that it is shared with portal Azure Active Directory or Power BI Embedded services. 
 
 > [!NOTE]
 > The values for the `authentication_type` parameter are case insensitive.
@@ -134,7 +134,7 @@ If you've assigned a role to a Power BI report, and didn't specify the **roles**
 
 ## editable
 
-Renders a given PowerApps Portals CMS object as editable on the portal, for users with content editing permission for that object. Editable objects include [page](liquid-objects.md#page), [snippets](liquid-objects.md#snippets), and [weblinks](liquid-objects.md#weblinks).  
+Renders a given PowerApps portals CMS object as editable on the portal, for users with content editing permission for that object. Editable objects include [page](liquid-objects.md#page), [snippets](liquid-objects.md#snippets), and [weblinks](liquid-objects.md#weblinks).  
 
 ```
 {% editable page 'adx_copy' type: 'html', title: 'Page Copy', escape: false, liquid: true %}

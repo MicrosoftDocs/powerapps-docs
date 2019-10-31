@@ -13,7 +13,7 @@ ms.reviewer:
 
 # View portal error logs
 
-As a portal administrator or developer, you can use PowerApps Portals to create a website for your customers. One common task for a developer is to debug issues while developing the portal. To help debug, you can access detailed error logs for any issues on your portal. There are multiple ways that you can get error logs for your portals.
+As a portal administrator or developer, you can use PowerApps portals to create a website for your customers. One common task for a developer is to debug issues while developing the portal. To help debug, you can access detailed error logs for any issues on your portal. There are multiple ways that you can get error logs for your portals.
 
 ## Custom error
 

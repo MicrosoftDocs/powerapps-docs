@@ -1056,7 +1056,7 @@
 
 - name: Portals
   items:
-    - name: What is PowerApps Portals?
+    - name: What is PowerApps portals?
       href: ./portals/overview.md
     - name: Design and build a portal
       items:
@@ -1112,7 +1112,7 @@
           href: ./portals/admin/manage-auth-key.md
         - name: Set up IP address restriction
           href: ./portals/admin/ip-address-restrict.md
-        - name: Update to PowerApps Portals domain
+        - name: Update to PowerApps portals domain
           href: ./portals/admin/update-portal-domain.md
         - name: Clear the server-side cache
           href: ./portals/admin/clear-server-side-cache.md
@@ -1204,7 +1204,7 @@
           href: ./portals/manage-sharepoint-documents.md
     - name: Known issues
       href: ./portals/known-issues.md
-    - name: PowerApps Portals FAQ
+    - name: PowerApps portals FAQ
       href: ./portals/faq.md
 - name: Common Data Service
   href: ./common-data-service/data-platform-intro.md

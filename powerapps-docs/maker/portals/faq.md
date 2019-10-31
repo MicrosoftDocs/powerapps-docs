@@ -1,6 +1,6 @@
 ---
 title: Frequently asked questions | Microsoft Docs
-description: Frequently asked questions in PowerApps Portals.
+description: Frequently asked questions in PowerApps portals.
 author: sbmjais
 manager: shujoshi
 ms.service: powerapps
@@ -11,7 +11,7 @@ ms.author: shjais
 ms.reviewer:
 ---
 
-# PowerApps Portals FAQ
+# PowerApps portals FAQ
 
 We have compiled a list of frequently asked questions and provided brief answers to help you get to your information quickly.
 
