@@ -17,23 +17,23 @@ search.app:
 ---
 # Service Protection API Limits
 
-To ensure consistent availability and performance for everyone we limit the number of API requests made by each user, per organization instance, within a five minute sliding window. Additionally, we limit the number of concurrent requests that may come in at one time.  When one of these limits is exceeded, an exception will be thrown by the platform.
+To ensure consistent availability and performance for everyone we apply some limits to how APIs are used. We limit the number of concurrent connections per user account, the number of API requests per connection, and the amount of execution time that can be used for each connection. These are evaluated within a five minute sliding window. When one of these limits is exceeded, an exception will be thrown by the platform.
 
 > [!NOTE]
 > This is different from [Requests limits and allocations](/power-platform/admin/api-request-limits-allocations). *Request limits and allocations* refers to entitlements based on licensing which do not have in-product enforcement yet. *Service Protection API Limits* will throw exceptions when limits are exceeded.
 
-Service protection API limits help ensure that users running applications cannot interfere with each other based on resource constraints. The limits will not affect normal users of the platform. Only applications that perform a large number of API requests may be affected. The limit provides a level of protection from random and unexpected surges in request volumes that threaten the availability and performance characteristics of the Common Data Service platform.
+Service protection API limits help ensure that users running applications cannot interfere with each other based on resource constraints. The limits will not affect normal users of the platform. Only applications that perform a large number of API requests may be affected. The limits provide a level of protection from random and unexpected surges in request volumes that threaten the availability and performance characteristics of the Common Data Service platform.
 
 Since plug-ins and custom workflow activities execute on the server independent of a logged on user, API calls made from plug-in code will not count against service protection API limits.
 
 ## Limits
 
 > [!IMPORTANT]
-> These limits are applied per web server. Each scale group has multiple web servers that may process each request, so these numbers represent the lowest possible level of throughput. We are publishing these numbers to help people understand a maximum level of limits that could be applied. Your actual experience will probably be higher.
+> These limits are applied per web server. Each scale group has multiple web servers that may process each request, so these numbers represent the lowest possible level of throughput due to these limits. We are publishing these numbers to help people understand a maximum level of limits that could be applied. Your actual experience will probably be higher.
 > 
-> You will see significant differences between trial environments and production environments. Trial environments have fewer resources allocated to them.
+> You will see significant differences between trial environments and production environments. Trial environments have fewer resources allocated to them so they will encounter these limits more easily than production environments.
 > 
-> Don't focus too much on the numbers here. The important thing to understand is that applications which depend on high volume data operations should be designed to respond to signals that the server will send to indicate when limits are reached. Don't try to hard-code solutions based on the numbers here. Instead use the techniques described to get the highest possible throughput by responding to the signals the service will send.
+> Don't focus too much on the numbers here. The important thing to understand is that applications which depend on high volume data operations should be designed to respond to signals that the server will send to indicate when limits are reached. Don't try to hard-code solutions based on the numbers here. Instead use the techniques described below to get the highest possible throughput by responding to the signals the service will send.
 
 Service protection limits expect that the application uses multiple threads to maximize performance. Each thread represents a separate connection and each connection is evaluated on a 5 minute (300 second) sliding window.
 
@@ -42,7 +42,7 @@ Within that 5 minute sliding window, there are three aspects that are measured a
 |Measure|Description|Limit per web server|
 |--|--|--|
 |Number of requests|The actual number of requests made per connection.|6000|
-|Execution time|The combined duration for all connections using the same user account| 20 minutes (1200 second)|
+|Execution time|The combined duration for all connections using the same user account| 20 minutes (1200 seconds)|
 |Number of connections|The number of connections using the same user account|52|
 
 The combination of **Number of requests** and **Execution time** accounts for the fact that some operations require more system resources than others. Importing a solution or performing a complex query requires more system resources that creating or updating a single record.
@@ -68,13 +68,13 @@ If you use the .NET SDK assemblies, the platform will respond with a `FaultExcep
 |`-2147015903`|`Combined execution time of incoming requests exceeded limit of 1,200,000 milliseconds over time window of 300 seconds. Decrease number of concurrent requests or reduce the duration of requests and try again later.`|
 |`-2147015898`|`Number of concurrent requests exceeded the limit of 52`|
 
-If you use HTTP requests, the response will include the same messages, but with:<br />
+If you use HTTP requests with the Web API, the response will include the same messages, but with:<br />
 `StatusCode` : `429`
 
 All requests will return these error responses until the volume of API requests falls below the limit. If you get these responses, your application should stop sending API requests until the volume of requests is below the limit.
 
 > [!TIP]
-> If you are using HTTP requests, you can track the remaining limit values with the following HTTP response headers:
+> If you are using HTTP requests with the Web API, you can track the remaining limit values with the following HTTP response headers:
 > 
 > |Header  |Value Description  |
 > |---------|---------|
@@ -83,19 +83,19 @@ All requests will return these error responses until the volume of API requests 
 
 ## What should I do if my application exceeds the limit?
 
-When your application exceeds the limit, the error response from the server may specify the amount of time you should wait before sending more requests. The response object is slightly different if you are using SDK assemblies or HTTP requests.
+When your application exceeds the limit, the error response from the server may specify the amount of time you should wait before sending more requests. The response object is slightly different if you are using SDK assemblies or HTTP requests with the Web API.
 
 For a discussion of best practices, see [Azure Architecture Best Practices Transient fault handling](/azure/architecture/best-practices/transient-faults)
 
 [The Polly Project](http://www.thepollyproject.org/) is a library which includes capabilities for dealing with transient faults using execution policies.
 
-### HTTP requests
+### HTTP requests with the Web API
 
 If you encounter a 429 error code you can look for the `Retry-After` HTTP header included in the error response. This will contain a value in seconds indicating how long you should wait before making a follow-up request. More information [MDN web docs Retry-After](https://developer.mozilla.org/docs/Web/HTTP/Headers/Retry-After)
 
 ### SDK assemblies
 
-If you are using the SDK assemblies, you can look for the `Retry-After` delay in the <xref:Microsoft.Xrm.Sdk.OrganizationServiceFault>.<xref:Microsoft.Xrm.Sdk.BaseServiceFault.ErrorDetails> property, using the key `"Retry-After"`. The value returned is a [TimeSpan](/dotnet/api/system.timespan) object.
+If you are using the SDK assemblies, you can look for the `Retry-After` delay value in the <xref:Microsoft.Xrm.Sdk.OrganizationServiceFault>.<xref:Microsoft.Xrm.Sdk.BaseServiceFault.ErrorDetails> property, using the key `"Retry-After"`. The value returned is a [TimeSpan](/dotnet/api/system.timespan) object.
 
 ## .NET SDK Assembly Example
 
