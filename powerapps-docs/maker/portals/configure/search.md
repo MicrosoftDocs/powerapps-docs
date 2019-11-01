@@ -217,7 +217,7 @@ In the following example, we will remove the Case entity from portal global sear
 
 To block the Case entity from getting indexed, you must rename the view of the Case entity that defines the record set to be indexed by the portal (defined by the Search/IndexQueryName site setting). By default, the name of that view is Portal Search.
 
-1.	Open the [Portal Management app](configure/configure-portal.md).
+1.	Open the [Portal Management app](configure-portal.md).
 
 2.  Select the **Settings** icon from the toolbar at the top of the page and then select **Advanced Settings**.
 

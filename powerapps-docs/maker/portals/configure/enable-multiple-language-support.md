@@ -29,7 +29,7 @@ To enable multiple languages for a portal, follow these steps:
    ![Set default language for your portal](../media/set-default-language-portal.png "Set default language for your portal")
 
 > [!Note]
-> If you activate new languages after the portal has been provisioned, you can [import the metadata translations](manage-portal.md#import-metadata-translation) to get the metadata translated for the newly activated languages.
+> If you activate new languages after the portal has been provisioned, you can [import the metadata translations](../admin/import-metadata-translation.md) to get the metadata translated for the newly activated languages.
 
 ## Supported languages
 
@@ -88,7 +88,7 @@ The table below shows all the languages currently available out of the box. This
 3. To add a new localization of the page, go to a base page and scroll down to **Localized Content**.
 4. Select the **+** button on the rightmost side to create a lookup for the localized version.
 
-    ![Add new localized content](media/Add-new-localized-content.png "Add new localized content")  
+    ![Add new localized content](../media/add-new-localized-content.png "Add new localized content")  
 
 > [!Note]
 > The configuration fields on the home page of a content page is not inherited to the existing content pages. They are used only in creation of new content pages. You must update the content page configurations individually.
@@ -97,4 +97,4 @@ Knowledge articles will only be displayed if they have been translated into the 
 
 Web link sets are the navigation links at the top of the portal. By navigating to **Portals** > **Content** > **Web Link Sets** you can control how this content is translated. When a language is active for the portal, a new set of links are created for the newly activated language.
 
-![Active web link for new language](media/active-weblink-new-language.png "Active web link for new language")
+![Active web link for new language](../media/active-weblink-new-language.png "Active web link for new language")

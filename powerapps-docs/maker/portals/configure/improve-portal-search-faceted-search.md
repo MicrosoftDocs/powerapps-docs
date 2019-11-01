@@ -19,13 +19,13 @@ Portal content may be searched by using filters based on characteristics of the 
 
 Out-of-the-box faceted search is enabled in your portals. To control or enable it, follow these steps:
 
-1. Open the [Portal Management app](configure/configure-portal.md) and go to **Portals** &gt; **Website** &gt; **Site Settings**.
+1. Open the [Portal Management app](configure-portal.md) and go to **Portals** &gt; **Website** &gt; **Site Settings**.
 2. Select the **Search/FacetedView** site setting. 
 3. Change the **Value** to **True** to enable or **False** to disable faceted search.
 
 To disable a single piece of the faceted view:
 
-1. Open the [Portal Management app](configure/configure-portal.md) and go to **Portals** &gt; **Web Templates**.
+1. Open the [Portal Management app](configure-portal.md) and go to **Portals** &gt; **Web Templates**.
 2. Select the view to disable (that is, Knowledge Management – Top Rated Articles)
 3. Select **Deactivate** at the top of the page.
 

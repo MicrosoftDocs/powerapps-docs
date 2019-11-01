@@ -25,7 +25,7 @@ When you create a new webpage, you must choose a page template from a list of ex
 
 Creating a new Page Template is only necessary when creating a brand new .aspx page to display content on your website, a portal developer’s task. In fact, for the purposing of simply customizing the layout of your site, a portal developer can largely just modify existing .aspx pages.
 
-1. pen the [Portal Management app](configure/configure-portal.md).
+1. pen the [Portal Management app](configure-portal.md).
 
 2. Go to **Portals** > **Page Templates**.
 

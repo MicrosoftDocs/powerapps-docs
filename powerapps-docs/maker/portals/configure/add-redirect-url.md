@@ -17,7 +17,7 @@ Customers frequently want to have a simple URL that redirects to a page deeper i
 
 ## Create a redirect
 
-1. Open the [Portal Management app](configure/configure-portal.md).
+1. Open the [Portal Management app](configure-portal.md).
 
 2. Go to the **Portals** > **Website** > **Redirects**.
 

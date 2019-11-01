@@ -21,7 +21,7 @@ To store the actual contents of a given file, portals uses the attachment featur
 
 Web files can be created, edited, and deleted within PowerApps portals.
 
-1. Open the [Portal Management app](configure/configure-portal.md).
+1. Open the [Portal Management app](configure-portal.md).
 
 2. Go to **Portals** > **Web Files**.
 

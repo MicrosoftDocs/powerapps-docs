@@ -19,7 +19,7 @@ Content snippets are small chunks of editable content that can be placed by a de
 
 Snippets can be edited either through the Portal Management app. The main power of the snippet is the fact that you can abstract a bit of content (other than the main copy of the page) and edit it separately, allowing essentially any static content on your site to be fully content-managed and editable.
 
-1. Open the [Portal Management app](configure/configure-portal.md).
+1. Open the [Portal Management app](configure-portal.md).
 
 2.  Go to **Portals** > **Content Snippets**.
 

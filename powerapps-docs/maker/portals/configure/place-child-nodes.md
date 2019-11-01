@@ -18,7 +18,7 @@ Use shortcuts to place child nodes throughout your portal's sitemap that simply 
 
 Creating, editing, and deleting shortcuts can be done within PowerApps portals.
 
-1. Open the [Portal Management app](configure/configure-portal.md).
+1. Open the [Portal Management app](configure-portal.md).
 
 2. Go to **Portals** &gt; **Shortcuts**. 
 

@@ -32,7 +32,7 @@ To index the attachments, you must create the following site settings and set th
 
 When you search for a term, the search results also include attachments. If the search term matches a notes attachment, the link to the corresponding knowledge base article is also provided. To see downloadable attachments, select **Downloads** under **Record Type** in the left pane. To modify the **Downloads** label, edit the Search/Facet/Downloads content snippet. By default, the value is set to **Downloads**.
 
-![Download attachment](media/search-attachment-content.png "Download attachment") 
+![Download attachment](../media/search-attachment-content.png "Download attachment") 
 
 > [!NOTE]
 > - To use this functionality, you must [enable relevance search](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/admin/configure-relevance-search-organization). More information: [Relevance search](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/basics/relevance-search-results)
@@ -50,7 +50,7 @@ To modify the label displayed in the search results for annotation and web file 
 
 The content of file attachments associated with web files can now be indexed. You can update existing web files for CSS files and image files (for example, bootstrap.min.css, theme.css, and homehero.jpg) to be excluded from search. 
 
-1. Open the [Portal Management app](configure/configure-portal.md) and go to **Portals** > **Web Files**.
+1. Open the [Portal Management app](configure-portal.md) and go to **Portals** > **Web Files**.
 2. Open the file to be excluded from search.
 3. Under **Miscellaneous**, select **Yes** in the **Exclude From Search** field.
 

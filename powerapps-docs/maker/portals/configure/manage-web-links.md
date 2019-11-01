@@ -19,7 +19,7 @@ A web link can link to any URL or it can link to another webpage within the same
 
 Once the portal customizations have been imported into the Common Data Service environment, web links can be managed from a web link set.
 
-1. Open the [Portal Management app](configure/configure-portal.md).
+1. Open the [Portal Management app](configure-portal.md).
 
 2. Go to **Portals** > **Web Link Sets**.
 
@@ -31,13 +31,11 @@ Once the portal customizations have been imported into the Common Data Service e
 
 6. If you create a new web link set, select **Save** to save the record so you can add web links.
 
-7. Select the down arrow next to your web link set name at the top of the screen, and then select **Web Links**.
+7. Go to the **Links** tab.
 
-    ![Select web link](media/web-link.png "Select web link")
+8. To create a new web link, select **New Web Link**.
 
-8. To create a new web link, select **Add New Web Link**.
-
-    ![Add web link](media/add-web-link.png "add web link")
+    ![Add web link](../media/add-web-link.png "add web link")
 
 9. To edit an existing web link, select the web link name.
 
