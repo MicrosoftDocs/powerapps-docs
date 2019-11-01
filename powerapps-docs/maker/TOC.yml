@@ -1066,7 +1066,7 @@
           href: ./portals/create-portal.md
         - name: Create a portal with Dynamics 365 environment
           href: ./portals/create-dynamics-portal.md
-        - name: Portal designer anatomy
+        - name: PowerApps portals Studio anatomy
           href: ./portals/portal-designer-anatomy.md
         - name: Supported web browsers for portal designer
           href: ./portals/supported-browser.md
@@ -1144,6 +1144,28 @@
               href: ./portals/configure/configure-saml2-settings.md 
             - name: Migrate identity providers to Azure AD B2C
               href: ./portals/configure/migrate-identity-providers.md
+          - name: Search
+            items:
+              - name: About search
+                href: ./portals/configure/search.md
+              - name: Improve search by using faceted search
+                href: ./portals/configure/improve-portal-search-faceted-search.md
+              - name: Search within file attachments
+                href: ./portals/configure/search-file-attachment.md
+          - name: Enable multiple-language support
+            href: ./portals/configure/enable-multiple-language-support.md
+          - name: Create and manage web files
+            href: ./portals/configure/web-files.md
+          - name: Manage web links
+            href: ./portals/configure/manage-web-links.md
+          - name: Create and manage page templates
+            href: ./portals/configure/page-templates.md
+          - name: Manage content snippets
+            href: ./portals/configure/customize-content-snippets.md
+          - name: Create a redirect URL
+            href: ./portals/configure/add-redirect-url.md
+          - name: Use shortcuts to place child nodes
+            href: ./portals/configure/place-child-nodes.md
     - name:  Advanced portal customization
       items:
         - name: Work with Liquid templates
