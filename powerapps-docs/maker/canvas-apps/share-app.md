@@ -119,11 +119,7 @@ To assign a role, you must have **System administrator** permissions for a Commo
 When you share an app that's based on an older version of Common Data Service, you must share the runtime permission to the service separately. If you don’t have permission to do this, see your environment administrator.
 
 ## Share with guests
-
-> [!IMPORTANT]
-> - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback. 
-> - Preview features have limited support by Microsoft Support and may be available only in selected geographic areas. 
-
+ 
 PowerApps canvas apps can be shared with guest users of an Azure Active Directory tenant. This enables inviting external business partners, contractors, and third parties to run your company’s canvas apps. 
 
 > [!NOTE]
