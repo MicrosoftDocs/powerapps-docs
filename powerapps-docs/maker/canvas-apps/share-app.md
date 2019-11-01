@@ -193,7 +193,7 @@ When embedding a canvas app in SharePoint via the iFrame HTML tag, reference the
 As with non-guests, the underlying data source(s) accessed by the app must also be made accessible to the guest.
 
 #### What license must be assigned to my guest so they can run an app shared with them?
-The same license that’s required for non-guests to run an app. For instance, if the app doesn’t use premium connecters then a PowerApps P1 license is enough to assign to the guest.  
+The same license that’s required for non-guests to run an app. For instance, if the app uses premium connecters then a PowerApps Per App Plan or a PowerApps Per User Plan must be assigned to the guest.  
 
 |                                 | SharePoint customized form | Standalone canvas app using non-premium connectors | Standalone canvas app using premium connectors | Model driven app |
 |---------------------------------|----------------------------|----------------------------------------------------|------------------------------------------------|------------------|
