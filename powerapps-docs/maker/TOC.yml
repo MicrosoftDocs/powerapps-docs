@@ -32,7 +32,9 @@
       items:
       - name: View your profile
         href: ../user/view-your-user-profile.md
-      - name: Set personal options
+      - name: Find your admin or support person
+        href: ../user/find-admin.md
+      - name: Set personal option
         href: ../user/set-personal-options.md
       - name: Use a screen reader
         href: ../user/screen-reader.md
@@ -85,6 +87,8 @@
         href: ../user/export-excel-static-worksheet.md
       - name: Export to an Excel PivotTable
         href: ../user/export-excel-pivottable.md
+      - name: Merge duplicate records
+        href: ../user/merge-duplicate-records.md
     - name: Reports
       items:
       - name: Work with reports
@@ -131,7 +135,7 @@
       href: ./canvas-apps/sample-meeting-capture.md
   - name: Create your first app
     items:
-    - name: 1 - Generate an app from data
+    - name: 1 - Create an app from data
       items:
       - name: From Common Data Service
         href: ./canvas-apps/data-platform-create-app.md
@@ -139,6 +143,8 @@
         href: ./canvas-apps/app-from-sharepoint.md
       - name: From Excel
         href: ./canvas-apps/get-started-create-from-data.md
+      - name: From Azure SQL Database
+        href: ./canvas-apps/app-from-azure-sql-database.md
     - name: 2 - Make basic customizations
       items:
       - name: 1 - Galleries
@@ -357,6 +363,8 @@
           href: ./canvas-apps/sharepoint-lookup-fields.md
         - name: Add a flow
           href: ./canvas-apps/using-logic-flows.md
+        - name: Create a rule in canvas apps
+          href: ./canvas-apps/working-with-rules.md  
         - name: Formula reference
           items:
           - name: Overview
@@ -733,7 +741,7 @@
       href: ./canvas-apps/share-app-resources.md
     - name: Embed an app in Power BI
       href: ./canvas-apps/embed-powerapps-powerbi.md
-    - name: Embed a Teams app
+    - name: Embed an app in Teams
       href: ./canvas-apps/embed-teams-app.md
   - name: Manage an app
     items:
@@ -1372,6 +1380,8 @@
       href: ./common-data-service/navigate-specific-solution.md
     - name: Create a solution
       href: ./common-data-service/create-solution.md
+    - name: Use environment variables
+      href: ./common-data-service/EnvironmentVariables.md
     - name: View solution layers
       href: ./common-data-service/solution-layers.md
     - name: View solution history
@@ -1439,6 +1449,8 @@
     href: ./canvas-apps/common-issues-and-resolutions.md
   - name: Get a session or app ID
     href: ./canvas-apps/get-sessionid.md
+  - name: Troubleshoot startup issues for PowerApps
+    href: troubleshooting-startup-issues.md
   - name: Troubleshoot Power Query
     href: ./common-data-service/data-platform-cds-newentity-troubleshooting-mashup.md
   - name: Support

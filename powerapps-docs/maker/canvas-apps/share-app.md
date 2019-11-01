@@ -195,13 +195,13 @@ As with non-guests, the underlying data source(s) accessed by the app must also 
 #### What license must be assigned to my guest so they can run an app shared with them?
 The same license that’s required for non-guests to run an app. For instance, if the app doesn’t use premium connecters then a PowerApps P1 license is enough to assign to the guest.  
 
-
 |                                 | SharePoint customized form | Standalone canvas app using non-premium connectors | Standalone canvas app using premium connectors | Model driven app |
 |---------------------------------|----------------------------|----------------------------------------------------|------------------------------------------------|------------------|
 | SharePoint user (no PA license) | x                          |                                                    |                                                |                  |
 | PowerApps Included w/ Office    | x                          |                                                    |                                                |                  |
-| PowerApps Plan 1                | x                          | x                                                  |                                                |                  |
-| PowerApps Plan2                 | x                          | x                                                  | x                                              | x                |
+| PowerApps Per App Plan          | x                          | x                                                  | x                                              | x                |
+| PowerApps Per User Plan         | x                          | x                                                  | x                                              | x                |
+
 
 #### In PowerApps Mobile, how does a guest see apps for their home tenant?
 Any user that has accessed an canvas app, on their mobile device, that’s published in an Azure AD tenant that isn’t their home tenant must sign-out of PowerApps and sign back in to PowerApps Mobile.  
