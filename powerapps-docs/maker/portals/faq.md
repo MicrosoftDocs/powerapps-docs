@@ -58,7 +58,7 @@ When you create a portal, portal as a new application is registered in Azure Act
 > [!div class=mx-imgBorder]
 > ![Azure Active Directory error](media/azure-ad-error.png "Azure Active Directory error")
 
-To create and register applications in Azure Active Directory, you must contact your tenant administrator to turn on the **App registrations** setting for your tenant. For information, see [Required permissions](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal#required-permissions).
+To create and register applications in Azure Active Directory, you must contact your tenant administrator to turn on the **App registrations** setting for your tenant. For information, see [Required permissions](https://docs.microsoft.com/azure/active-directory/develop/howto-create-service-principal-portal#required-permissions).
 
 ## I'm getting an error that portal creation is blocked in this tenant by global administrator
 
@@ -79,7 +79,7 @@ More information: [Disable portal creation in a tenant](create-portal.md#disable
 
 ## I'm getting an error that I don't have appropriate license to access this website.
 
-Internal users of an organization that use portals for accessing authenticated pages require that licenses be assigned to the environment that a portal is connected to. You  can read more about the user rights for portals for internal users [here](https://docs.microsoft.com/en-us/power-platform/admin/powerapps-flow-licensing-faq#can-you-clarify-the-use-rights-to-portals-for-internal-users). When an environment does not have licenses assigned, internal users will get an error such as follows:
+Internal users of an organization that use portals for accessing authenticated pages require that licenses be assigned to the environment that a portal is connected to. You  can read more about the user rights for portals for internal users [here](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#can-you-clarify-the-use-rights-to-portals-for-internal-users). When an environment does not have licenses assigned, internal users will get an error such as follows:
 
 > [!div class=mx-imgBorder]
 > ![Portal login error](media/portal-login-error.png "Portal login error")

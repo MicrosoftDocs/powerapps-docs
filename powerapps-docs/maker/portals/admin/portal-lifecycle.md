@@ -25,7 +25,7 @@ The first portal is free to be created in an environment in a tenant. If you nee
 
 A portal is always created as a trial portal. You can convert it to production from the PowerApps Portals admin center if you have the required licenses. For information on converting a trial portal to production, see [Convert a trial portal to production](#convert-a-trial-portal-to-production).
 
-To convert a trial portal to production, the environment should have required add-ons for external users, or a license for internal users. For more information on licensing, see [PowerApps and Microsoft Flow licensing FAQs](https://docs.microsoft.com/en-us/power-platform/admin/powerapps-flow-licensing-faq) and [PowerApps portals licensing](https://docs.microsoft.com/en-us/power-platform/admin/powerapps-flow-licensing-faq#can-you-share-more-details-regarding-the-new-powerapps-portals-licensing).
+To convert a trial portal to production, the environment should have required add-ons for external users, or a license for internal users. For more information on licensing, see [PowerApps and Microsoft Flow licensing FAQs](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq) and [PowerApps portals licensing](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#can-you-share-more-details-regarding-the-new-powerapps-portals-licensing).
 
 ### Suspended portal
 
