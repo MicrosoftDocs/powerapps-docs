@@ -55,11 +55,11 @@ When creating or editing a webpage, you can specify an entity list in the lookup
 
 ## Add custom Javascript
 
-The Options tab on the form contains a text area that you can enter custom [!INCLUDE[pn-javascript](../includes/pn-javascript.md)]; if your page includes jQuery library, you can use that here as well. The script block will be added at the bottom of the webpage just before the page’s closing form tag.
+The Options tab on the form contains a text area that you can enter custom [!INCLUDE[pn-javascript](../../../includes/pn-javascript.md)]; if your page includes jQuery library, you can use that here as well. The script block will be added at the bottom of the webpage just before the page’s closing form tag.
 
 ![Custom JavaScript example](media/custom-javascript-example.png "Custom JavaScript example")  
 
-The list gets its data asynchronously, and when it is complete it will trigger an event `loaded` that your custom [!INCLUDE[pn-javascript](../includes/pn-javascript.md)] can listen for and do something with items in the grid. The following code is a trivial example:
+The list gets its data asynchronously, and when it is complete it will trigger an event `loaded` that your custom [!INCLUDE[pn-javascript](../../../includes/pn-javascript.md)] can listen for and do something with items in the grid. The following code is a trivial example:
 ```
 $(document).ready(function (){
 $(".entitylist.entity-grid").on("loaded", function () {
@@ -170,7 +170,7 @@ Enabling a **Create Action** renders a button above the entity list that, when s
 
 **Download action settings**
 
-Enabling a **Download Action** renders a button above the entity list that, when selected, downloads the data from the list to an [!INCLUDE[pn-excel-short](../includes/pn-excel-short.md)] (.xlsx) file.
+Enabling a **Download Action** renders a button above the entity list that, when selected, downloads the data from the list to an [!INCLUDE[pn-excel-short](../../../includes/pn-excel-short.md)] (.xlsx) file.
 
 | Name              | Description                                                                                        |
 |-------------------|----------------------------------------------------------------------------------------------------|
@@ -477,7 +477,7 @@ The FetchXML filter uses only one attribute:
 
 ## Entity list Map view
 
-With entity lists, it is possible to enable and configure a Map view of the data, powered by [!INCLUDE[pn-bing](../includes/pn-bing.md)] maps with search functionality to find locations near an address. By populating your records with latitude and longitude coordinate values and specifying the necessary configuration options listed in this section, your records can be rendered as pushpins on a map. Any record that does not have a latitude or longitude value will be excluded from the search. The initial load of the page will display all records within the initial value of the Distance Values field (in miles or km, depending on the Distance Units specified) from the Default Center Latitude and Default Center Longitude coordinates. The view specified is ignored when Map view is used, and a distance query is applied to the dataset to return the mappable results.
+With entity lists, it is possible to enable and configure a Map view of the data, powered by [!INCLUDE[pn-bing](../../../includes/pn-bing.md)] maps with search functionality to find locations near an address. By populating your records with latitude and longitude coordinate values and specifying the necessary configuration options listed in this section, your records can be rendered as pushpins on a map. Any record that does not have a latitude or longitude value will be excluded from the search. The initial load of the page will display all records within the initial value of the Distance Values field (in miles or km, depending on the Distance Units specified) from the Default Center Latitude and Default Center Longitude coordinates. The view specified is ignored when Map view is used, and a distance query is applied to the dataset to return the mappable results.
 >[!Note] 
 >This option is not supported in the German Sovereign Cloud environment. The Map view section will not be visible in this environment.
 
@@ -490,7 +490,7 @@ To display records by using a calendar, those records need to include at a minim
 
 ## Enhanced view filter for entity lists
 
-If enabled, an entity can be published to an OData feed. The OData protocol is an application-level protocol for interacting with data via RESTful web services. Data from this feed can be viewed in a web browser, consumed by a client-side web application, or imported into [!INCLUDE[pn-excel-short](../includes/pn-excel-short.md)].
+If enabled, an entity can be published to an OData feed. The OData protocol is an application-level protocol for interacting with data via RESTful web services. Data from this feed can be viewed in a web browser, consumed by a client-side web application, or imported into [!INCLUDE[pn-excel-short](../../../includes/pn-excel-short.md)].
 
 ## Entity list OData feeds
 

@@ -91,7 +91,7 @@ Enabling a **Create action** renders a button above the subgrid that, when selec
 
 ## Download action
 
-Enabling a **Download action** renders a button above the subgrid that, when selected, downloads the data from the subgrid to an [!INCLUDE[pn-excel-short](../includes/pn-excel-short.md)] (.xlsx) file.
+Enabling a **Download action** renders a button above the subgrid that, when selected, downloads the data from the subgrid to an [!INCLUDE[pn-excel-short](../../../includes/pn-excel-short.md)] (.xlsx) file.
 
 ### Download action settings
 
