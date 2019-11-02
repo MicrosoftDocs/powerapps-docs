@@ -2,7 +2,7 @@
 title: "FAQs: Unified Interface transition | MicrosoftDocs"
 description: "FAQs related to the auto-transition process for moving users from the legacy web client to Unified Interface."
 ms.custom: ""
-ms.date: 011/04/2019
+ms.date: 11/04/2019
 ms.reviewer: "kvivek"
 ms.service: powerapps
 ms.topic: "article"

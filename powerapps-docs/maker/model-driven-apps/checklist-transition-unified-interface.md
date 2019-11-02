@@ -292,6 +292,6 @@ flow.
 ## Check your transition date
 
 On October 1, 2020, [the legacy web client will no longer be
-available](https://docs.microsoft.com/en-us/power-platform/important-changes-coming#legacy-web-client-is-deprecated).
+available](https://docs.microsoft.com/power-platform/important-changes-coming#legacy-web-client-is-deprecated).
 Be sure to migrate well in advance to ensure there’s time for any issues to be
 addressed.
