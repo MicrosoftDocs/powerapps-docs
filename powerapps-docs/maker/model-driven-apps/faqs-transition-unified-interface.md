@@ -89,7 +89,7 @@ Our first recommendation is to check the transition portal (<https://runone.powe
 
 If the date in the portal isn’t updated to your new date, raise a support request following your standard procedure.
 
-### If I already have an environment transitioned across to the Unified Interface will I still be able to switch back to the legacy web client manually?
+### If I already have an environment transitioned to Unified Interface, will I still be able to switch back to the legacy web client manually?
 
 If your environment has been transitioned for at least 4 days, we will look to disable the manual switch back to the legacy web client. 
 
