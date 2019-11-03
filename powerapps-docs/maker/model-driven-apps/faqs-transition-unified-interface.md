@@ -51,7 +51,7 @@ The ability to change the transition date for an environment is available only u
 > [!NOTE]
 > We can't guarantee the transition can be stopped if the request is made after the date has been locked on the portal (48 hrs or less).
 
-### I have environments without an auto schedule date next to them. Can I update these to include a date?
+### I have environments without a target auto-transition date. Can I update these to include a date?
 
 Yes, if you have a **Global admin** or **Service admin** for the tenant, select the environment, submit an exception request, and update with your proposed time frame using the target date list. 
 
