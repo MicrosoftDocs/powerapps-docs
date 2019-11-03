@@ -169,7 +169,7 @@ Clicking on one of these options displays a configuration area for that action. 
 - Set Opportunity on Hold (opportunity)
 
 > [!NOTE]
-> It is recommend to create a workflow instead of adding an **Activate** or a **Deactivate** button for out of the box entities having defined specific **state** and **status code** values that they require for their business processes. For example, Incident ([status options](../customerengagement/on-premises/developer/entities/incident.md#statuscode-options)), Opportunity([status options](../customerengagement/on-premises/developer/entities/opportunity.md#statuscode-options)), Entitlements ([status options](../customerengagement/on-premises/developer/entities/entitlement.md#statuscode-options)). 
+> It is recommend to create a workflow instead of adding an **Activate** or a **Deactivate** button for out of the box entities having defined specific **state** and **status code** values that they require for their business processes. For example, Incident ([status options](https://docs.microsoft.com/dynamics365/customerengagement/on-premises/developer/entities/incident#statuscode-options)), Opportunity([status options](https://docs.microsoft.com/dynamics365/customerengagement/on-premises/developer/entities/opportunity#statuscode-options)), Entitlements ([status options](https://docs.microsoft.com/dynamics365/customerengagement/on-premises/developer/entities/entitlement#statuscode-options)). 
 
 
 ## Geolocation configuration for entity forms

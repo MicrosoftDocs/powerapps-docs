@@ -77,7 +77,6 @@ For site settings related to various portal features, see:
 - [Search within file attachment content](search-file-attachment.md)
 - [Behavior and format of the date and time field](behavior-format-date-time-field.md)
 - [Add geolocation](add-geolocation.md)
-- [Integrate Field Service](https://docs.microsoft.com/dynamics365/customer-engagement/portals/integrate-field-service)
 - [Implementing General Data Protection Regulations](https://docs.microsoft.com/dynamics365/customer-engagement/portals/implement-gdpr)
 - [Enable header and footer output caching](https://docs.microsoft.com/dynamics365/customer-engagement/portals/enable-header-footer-output-caching)
 

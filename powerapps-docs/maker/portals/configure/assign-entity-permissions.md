@@ -15,7 +15,7 @@ ms.reviewer:
 
 To apply record-based security in portals to individual records, use entity permissions. You add entity permissions to web roles so you can define roles in your organization that correspond logically to the privileges and concepts of record ownership and access that are introduced by using entity permissions. Remember that a given contact can belong to any number of roles, and a given role can contain any number of entity permissions. [!INCLUDE[proc-more-information](../../../includes/proc-more-information.md)] [Create web roles for portals](create-web-roles.md) 
 
-Although permissions to change and access URLs in a portal site map is granted via Content Authorization, site managers will also want to secure their custom web applications built with entity forms and entity lists. [!INCLUDE[proc-more-information](../includes/proc-more-information.md)] [Define entity forms](entity-forms.md) and [Define entity lists](entity-lists.md)  
+Although permissions to change and access URLs in a portal site map is granted via Content Authorization, site managers will also want to secure their custom web applications built with entity forms and entity lists. [!INCLUDE[proc-more-information](../../../includes/proc-more-information.md)] [Define entity forms](entity-forms.md) and [Define entity lists](entity-lists.md)  
 
 To secure these features, entity permissions allow for granular rights to be granted for arbitrary entities and for record-level security to be enabled via relationship definitions.
 
@@ -46,7 +46,7 @@ With Contact scope, a signed-in user in the role for which the permission record
 
 On an entity list, this means that a filter will be added to whatever model-driven app views are surfaced by that list, which only retrieves records directly linked to the current user. (Depending on the scenario, this relationship can be thought of as ownership or management rights.)
 
-Entity forms will only allow the appropriate permission for Read, Create, Write, and so on if this relationship exists when the record is loaded. [!INCLUDE[proc-more-information](../includes/proc-more-information.md)] [Define entity forms and custom logic within a portal](entity-forms-custom-logic.md).  
+Entity forms will only allow the appropriate permission for Read, Create, Write, and so on if this relationship exists when the record is loaded. [!INCLUDE[proc-more-information](../../../includes/proc-more-information.md)] [Define entity forms and custom logic within a portal](entity-forms.md).  
 
 ### Account scope
 
@@ -100,7 +100,7 @@ We will now add a Child permission to the Global Lead permission. With the Paren
 
 Select the entity as Tasks and the scope as Parental. Note that you can then select the parent relationship (**Lead\_Tasks**). This permission implies that a contact that is in a web role with the parent permission will then have global permission to all tasks that are related to leads.
 
-Remember that in order for your list to respect these permissions, you must have enabled Entity Permissions on the list AND there must be actions that will actually allow users to perform the actions for which their permissions have been granted. Furthermore, permissions must also be enabled on the [entity form](entity-forms-custom-logic.md) record, and that form must be surfacing a page that has a subgrid on it for the entity that you want to enable with child permissions, in this case Tasks. Furthermore, to enable Read or Create permissions for tasks, you will need to configure those entity forms too, and edit the forms to remove the Regarding lookup field.  
+Remember that in order for your list to respect these permissions, you must have enabled Entity Permissions on the list AND there must be actions that will actually allow users to perform the actions for which their permissions have been granted. Furthermore, permissions must also be enabled on the [entity form](entity-forms.md) record, and that form must be surfacing a page that has a subgrid on it for the entity that you want to enable with child permissions, in this case Tasks. Furthermore, to enable Read or Create permissions for tasks, you will need to configure those entity forms too, and edit the forms to remove the Regarding lookup field.  
 
 ![Edit a web page form](../media/edit-webpage-form.png "Edit a web page form")  
 
