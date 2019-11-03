@@ -65,7 +65,7 @@ To share the portal with internal users you must first create a security role an
 
 5.  When you have finished configuring the security role, on the toolbar, select **Save and Close**.
 
-For information on security roles and privileges, see [Security roles and privileges](https://docs.microsoft.com/dynamics365/customer-engagement/admin/security-roles-privileges).  
+For information on security roles and privileges, see [Security roles and privileges](https://docs.microsoft.com/power-platform/admin/security-roles-privileges).
 
 #### Step 2: Assign users to the security role
 

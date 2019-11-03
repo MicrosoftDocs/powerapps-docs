@@ -57,7 +57,7 @@ When creating or editing a webpage, you can specify an entity list in the lookup
 
 The Options tab on the form contains a text area that you can enter custom [!INCLUDE[pn-javascript](../../../includes/pn-javascript.md)]; if your page includes jQuery library, you can use that here as well. The script block will be added at the bottom of the webpage just before the page’s closing form tag.
 
-![Custom JavaScript example](media/custom-javascript-example.png "Custom JavaScript example")  
+![Custom JavaScript example](../media/custom-javascript-example.png "Custom JavaScript example")  
 
 The list gets its data asynchronously, and when it is complete it will trigger an event `loaded` that your custom [!INCLUDE[pn-javascript](../../../includes/pn-javascript.md)] can listen for and do something with items in the grid. The following code is a trivial example:
 ```
@@ -88,7 +88,7 @@ You can easily enable and configure actions (Create, Edit, Delete, and so on) fo
 
 These settings are found in the Configuration section of the entity list form. By default, only **Basic Settings** are shown. Select **Advanced Settings** to see additional settings.
 
-![Configure an entity list](media/configure-entitylist.png "Configure an entity list")  
+![Configure an entity list](../media/configure-entitylist.png "Configure an entity list")  
 
 **Attributes**
 
@@ -288,7 +288,7 @@ This page can be a completely customized page template, perhaps created by using
 
 The important thing to be aware of is that each record listed in the grid will have a hyperlink to the details page, and the link will contain a named Query String parameter with the ID of the record. The name of the Query String parameter depends on the ID Query String Parameter Name specified on the entity list. The final thing to note is that the targeted details webpage must also be aware of the name of this Query String parameter to get the ID of the record that it needs to query and load its data.
 
-![Add view details page](media/add-view-details-page.png "Add view details page")  
+![Add view details page](../media/add-view-details-page.png "Add view details page")  
 
 **Using an entity form to display details**
 
@@ -324,7 +324,7 @@ In the Metadata filter section, select the Enabled check box. This will add the 
 
 You can define how the Filter area on the entity list will be rendered by using the Orientation setting. The default, Horizontal, renders the Filter area above the entity list. Vertical orientation renders the Filter area as a box to the left of the entity list.
 
-![Metadata filter settings](media/metadata-filter-settings.png "Metadata filter settings")  
+![Metadata filter settings](../media/metadata-filter-settings.png "Metadata filter settings")  
 
 **Filter types**
 
@@ -344,7 +344,7 @@ The Text filter adds a text box to the entity list Filter area that is tied to a
 
 To add a Text filter, select **+Text Filter**.
 
-![Add a text filter](media/add-text-filter.png "Add a Text filter")  
+![Add a text filter](../media/add-text-filter.png "Add a Text filter")  
 
 The Text filter uses the following attributes:
 
@@ -357,7 +357,7 @@ The Text filter uses the following attributes:
 
 The Attribute Filter Set adds a series of options to filter the entity list by, tied to a single attribute of the entity list's selected entity type. When a user applies the filter, the entity list only displays those records that exactly match at least one of the selected options.
 
-![Attribute filter settings](media/set-attribute-filter.png "Attribute filter settings")
+![Attribute filter settings](../media/set-attribute-filter.png "Attribute filter settings")
 
 The Attribute Filter Set uses the following attributes:
 
@@ -383,7 +383,7 @@ Options have the following attributes:
 
 The Lookup Set adds a series of options to filter the entity list by, tied to a related entity to the entity list's selected entity type. When a user applies the filter, the entity list only displays those records that exactly match at least one of the selected related records.
 
-![Lookup set](media/lookup-set.png "Lookup Set")  
+![Lookup set](../media/lookup-set.png "Lookup Set")  
 
 The Lookup Set uses the following attributes:
 
@@ -408,7 +408,7 @@ Options have the following attributes:
 
 The Range Filter Set adds a series of options, each with one or two conditions, to the Filter area. When a user applies the filter, the entity list only displays those records that exactly match all conditions on at least one of the selected options.
 
-![Range filter settings](media/set-range-filter.png "Range filter settings")  
+![Range filter settings](../media/set-range-filter.png "Range filter settings")  
 
 The Range Filter Set uses the following attributes:
 
@@ -436,7 +436,7 @@ Options have the following attributes:
 
 The Dynamic Picklist Set adds a series of options to filter by that represent all the values of a specified Picklist field. This is different from selecting a Picklist in the Attribute Filter Set. In the Attribute Filter Set, you must specify a set of options that will be made available to the user to filter by; in the Dynamic Picklist Set, you need only specify the Picklist field and the entire set of options will be provided automatically. If you need greater control, we recommend that you use the Attribute Filter Set.
 
-![Dynamic picklist settings](media/set-dynamic-picklist.png "Dynamic picklist settings")  
+![Dynamic picklist settings](../media/set-dynamic-picklist.png "Dynamic picklist settings")  
 
 The Dynamic Picklist Set uses the following options:
 
@@ -451,7 +451,7 @@ The Dynamic Lookup Set adds a dynamic series of options to filter the entity lis
 
 This is different from a Lookup Set. In the Lookup Set, you must manually specify the related entities to filter by. In the Dynamic Lookup Set, you need only specify the relationship on which to filter, and a list of options will be generated based on the specified view of related entities.
 
-![Dynamic lookup settings](media/set-dynamic-lookup.png "Dynamic lookup settings")  
+![Dynamic lookup settings](../media/set-dynamic-lookup.png "Dynamic lookup settings")  
 
 The Dynamic Lookup Set uses the following options:
 
@@ -467,7 +467,7 @@ The Dynamic Lookup Set uses the following options:
 
 The range filter can create either a simple text box filter like the Text filter or a set of options like the other filter types. It allows you to manually create virtually any type of filter for the entity list by using FetchXML.
 
-![FetchXML filter settings](media/set-fetchxml-filter.png "FetchXML filter settings")
+![FetchXML filter settings](../media/set-fetchxml-filter.png "FetchXML filter settings")
 
 The FetchXML filter uses only one attribute:
 

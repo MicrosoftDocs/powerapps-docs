@@ -17,7 +17,7 @@ ms.reviewer:
 
 A managed form can be configured to display a map control either to display an existing location as a pin on a map or to provide the ability for the user to specify a location.
 
-![Location data in a form.](media/location-data-form.png "Location data in a form")
+![Location data in a form.](../media/location-data-form.png "Location data in a form")
 
 If the form or Address Line field is editable and this field is blank, when the page loads it will prompt the user asking if they would like to share their location. If they choose to share their location, the map will be updated with their currently detected location. The user can refine the location of the pin by dragging it. If the user chooses not to share their location, they can manually specify the location in the fields provided and the mapping service will be queried to find the location, update latitude and longitude, and reposition the pin on the map accordingly.
 
@@ -43,7 +43,7 @@ Edit the entity form by using the form designer and make the following modificat
 
 The resulting form should look similar to the following. You can choose different display names for these fields. You can also choose to lay out these sections any way you prefer.
 
-![Custom geolocation form.](media/custom-geolocation-form.png "Custom geolocation form")
+![Custom geolocation form.](../media/custom-geolocation-form.png "Custom geolocation form")
 
 ### Site settings
 Geolocation with map functionality on managed forms requires configuration settings to complete requests with the mapping service REST endpoint. The following site settings are used to configure the location service.

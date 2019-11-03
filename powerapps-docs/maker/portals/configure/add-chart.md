@@ -17,7 +17,7 @@ You add a chart to a webpage by using a Liquid tag named [Chart](../liquid/porta
  
 For example, {% chart id:EE3C733D-5693-DE11-97D4-00155DA3B01E %}
 
-![Chart example](media/dynamics365-chart-example.png "Chart example")
+![Chart example](../media/dynamics365-chart-example.png "Chart example")
 
 You can also specify the ID of a view (saved query) to filter the query. For example:
 
@@ -32,12 +32,12 @@ You can also specify the ID of a view (saved query) to filter the query. For exa
 3.	Choose the chart you want.
 4.	Select **More Commands**, and then select **Export Chart**.
 
-    ![Export a chart](media/export-dynamics365-chart.png "Export a chart")
+    ![Export a chart](../media/export-dynamics365-chart.png "Export a chart")
 
 5. Open the XML file of the exported chart in a text editor.
 6. Copy the value of the \<visualizationid\> tag.
 
-    ![Get chartid for a chart](media/dynamics365-chart-chartid.png "Get the chart ID for a chart")
+    ![Get chartid for a chart](../media/dynamics365-chart-chartid.png "Get the chart ID for a chart")
 
 7. Paste the visualizationid value into your Liquid chart tag declaration for the chart ID parameter, for example:
 
@@ -51,11 +51,11 @@ You must open the view editor to get the view ID to be used with the Liquid char
 2.	Select the view you want from the view drop-down header.
 3.	Select **View** from the toolbar. The View window opens.
 
-    ![View the leads in the view editor](media/dynamics365-chart-view.png "View the leads in the view editor")
+    ![View the leads in the view editor](../media/dynamics365-chart-view.png "View the leads in the view editor")
 
 4. Copy the **id** value from the View window's URL.
 
-    ![Get view id from the view editor](media/dynamics365-chart-viewid.png "Get the view ID from the view editor")
+    ![Get view id from the view editor](../media/dynamics365-chart-viewid.png "Get the view ID from the view editor")
 
 5. Paste this ID into your Liquid chart tag declaration for the viewid parameter, for example:
 

@@ -1250,6 +1250,20 @@
                   href: ./portals/liquid/render-site-header-primary-navigation.md
         - name: OAuth 2.0 implicit grant flow
           href: ./portals/oauth-implicit-grant-flow.md
+    - name: User management and security in portal
+      items:
+        - name: Configure contacts
+          href: ./portals/configure/configure-contacts.md
+        - name: Invite contacts
+          href: ./portals/configure/invite-contacts.md
+        - name: Create web roles
+          href: ./portals/configure/create-web-roles.md
+        - name: Assign entity permissions
+          href: ./portals/configure/assign-entity-permissions.md
+        - name: Control webpage access
+          href: ./portals/configure/webpage-access-control.md
+        - name: Create website access permissions
+          href: ./portals/configure/website-access-permission.md
     - name: Document storage in portals
       items:
         - name: Configure notes

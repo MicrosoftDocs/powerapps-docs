@@ -20,7 +20,7 @@ The Web Form Step provides the flow logic of the form's user experience such as 
 
 Each Web Form will be presented on the portal has one or more steps. These steps share some common properties, outlined below. Each Step contains a pointer (a lookup) to the next step, with the exception of terminal steps. Terminal steps do not have a next time, and are thus the last step of the Web Form (due to conditional branching, there can be multiple terminal steps)
 
-![Steps to create a web form](media/web-form-creation-steps.png "Steps to create a web form")  
+![Steps to create a web form](../media/web-form-creation-steps.png "Steps to create a web form")  
 
 | Name     | Description                                    |
 |----------|------------------------------------------------|
