@@ -250,7 +250,7 @@ Form is a data-driven configuration that you use to add a form to collect data i
 
     - **Show captcha for authenticated users**: Displays captcha to authenticated users.
 
-    - **Enable entity permissions**: Entity permissions to be considered for the form. By default, it is not selected. If selected, explicit permissions are required for any user to access the form. More information: [Entity permission](https://docs.microsoft.com/dynamics365/customer-engagement/portals/assign-entity-permissions)
+    - **Enable entity permissions**: Entity permissions to be considered for the form. By default, it is not selected. If selected, explicit permissions are required for any user to access the form. More information: [Entity permission](configure/assign-entity-permissions.md)
 
         > [!div class=mx-imgBorder]
         > ![form properties](media/form-props.png "Form properties")
@@ -296,7 +296,7 @@ List is a data-driven configuration that you use to add a webpage that will rend
 
     - **Enable search in entity list**: Allows a user to search records in the list.
 
-    - **Enable entity permissions**: Entity permissions to be considered for the list. By default, it is not selected. If selected, explicit permissions are required for any user to access the form. More information: [Entity permission](https://docs.microsoft.com/dynamics365/customer-engagement/portals/assign-entity-permissions)  
+    - **Enable entity permissions**: Entity permissions to be considered for the list. By default, it is not selected. If selected, explicit permissions are required for any user to access the form. More information: [Entity permission](configure/assign-entity-permissions.md)  
 
     > [!div class=mx-imgBorder]
     > ![list properties](media/list-props.png "List properties")
@@ -315,7 +315,7 @@ List is a data-driven configuration that you use to add a webpage that will rend
 
 ## Add a custom menu
 
-By default, the menu on the website is created automatically based on the hierarchy of the webpages. It is called the **default** menu. To create a custom menu, you must create the web link set in the Portal Management app. More information: [Manage web links](https://docs.microsoft.com/dynamics365/customer-engagement/portals/manage-web-links)
+By default, the menu on the website is created automatically based on the hierarchy of the webpages. It is called the **default** menu. To create a custom menu, you must create the web link set in the Portal Management app. More information: [Manage web links](configure/manage-web-links.md)
 
 After you create the web link set:
 
@@ -341,6 +341,6 @@ The source code is displayed in the **Code Editor** pane at the bottom of the sc
 > ![code editor](media/code-editor.png "Code editor") 
 
 > [!NOTE]
-> You can also add Liquid tags in source code editor for advanced configuration. More information: [Work with Liquid templates](https://docs.microsoft.com/dynamics365/customer-engagement/portals/custom-templates-dynamic-content)
+> You can also add Liquid tags in source code editor for advanced configuration. More information: [Work with Liquid templates](liquid/liquid-overview.md)
 
 

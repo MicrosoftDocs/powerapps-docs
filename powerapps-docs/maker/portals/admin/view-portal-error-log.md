@@ -65,7 +65,7 @@ You can enable custom errors on portals to display a professional-looking page i
 
 You can configure your portal to display a professional-looking custom error instead of a generic error.
 
-To define a custom error, use the content snippet `Portal Generic Error`. The content defined in this snippet is shown on the error page. This content snippet is not available out-of-the-box and you must create it. The content snippet **Type** can be **Text** or **HTML**. To create or edit the content snippet, see [Customize content by using content snippets](https://docs.microsoft.com/dynamics365/customer-engagement/portals/customize-content-snippets).
+To define a custom error, use the content snippet `Portal Generic Error`. The content defined in this snippet is shown on the error page. This content snippet is not available out-of-the-box and you must create it. The content snippet **Type** can be **Text** or **HTML**. To create or edit the content snippet, see [Customize content by using content snippets](../configure/customize-content-snippets.md).
 
 > [!NOTE]
 > If liquid code is written in the content snippet, it will be skipped and not rendered.

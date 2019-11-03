@@ -17,7 +17,7 @@ PowerApps entity tags are used to load and display PowerApps data, or use other 
 
 ## chart
 
-Adds a PowerApps chart to a web page. The chart tag can be added in the Copy field on a Web Page or in the Source field on a Web Template. For steps to add a PowerApps chart to a web page, see [Add a chart to a web page in portal](https://docs.microsoft.com/dynamics365/customer-engagement/portals/add-chart).
+Adds a PowerApps chart to a web page. The chart tag can be added in the Copy field on a Web Page or in the Source field on a Web Template. For steps to add a PowerApps chart to a web page, see [Add a chart to a web page in portal](../configure/add-chart.md).
 
 ```
 {% chart id:"EE3C733D-5693-DE11-97D4-00155DA3B01E" viewid:"00000000-0000-0000-00AA-000010001006" %}
