@@ -137,5 +137,5 @@ The following properties are displayed when the Type selected equals 'Tab'
 [Web Form properties for portals](web-form-properties.md)  
 [Web Form steps for portals](web-form-steps.md)  
 [Web Form subgrid configuration for portals](configure-web-form-subgrid.md)  
-[Notes configuration for Web Forms for portals](configure-notes.md)  
+[Notes configuration for Web Forms for portals](../configure-notes.md)  
 

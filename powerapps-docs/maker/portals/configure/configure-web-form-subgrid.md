@@ -273,5 +273,5 @@ Enabling a **Disassociate action** allows a user to remove the link between the 
 [Web Form properties for portals](web-form-properties.md)  
 [Web Form steps for portals](web-form-steps.md)  
 [Web Forms metadata for portals](configure-web-form-metadata.md)  
-[Notes configuration for Web Forms for portals](configure-notes.md)  
+[Notes configuration for Web Forms for portals](../configure-notes.md)  
 

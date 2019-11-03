@@ -17,7 +17,7 @@ PowerApps entity tags are used to load and display PowerApps data, or use other 
 
 ## chart
 
-Adds a PowerApps chart to a web page. The chart tag can be added in the Copy field on a Web Page or in the Source field on a Web Template. For steps to add a PowerApps chart to a web page, see [Add a chart to a web page in portal](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/add-chart).
+Adds a PowerApps chart to a web page. The chart tag can be added in the Copy field on a Web Page or in the Source field on a Web Template. For steps to add a PowerApps chart to a web page, see [Add a chart to a web page in portal](https://docs.microsoft.com/dynamics365/customer-engagement/portals/add-chart).
 
 ```
 {% chart id:"EE3C733D-5693-DE11-97D4-00155DA3B01E" viewid:"00000000-0000-0000-00AA-000010001006" %}
@@ -87,7 +87,7 @@ The complete code will be:
 {% powerbi authentication_type:"AAD" path:"https://app.powerbi.com/groups/00000000-0000-0000-0000-000000000000/reports/00000000-0000-0000-0000-000000000001/ReportSection01?filter=Executives/Executive eq 'Bert Hair'" %}
 ```
 
-More information on filtering a report: [Filter a report using query string parameters in the URL](https://docs.microsoft.com/en-us/power-bi/service-url-filters)
+More information on filtering a report: [Filter a report using query string parameters in the URL](https://docs.microsoft.com/power-bi/service-url-filters)
 
 > [!NOTE]
 > Anonymous report doesn't support filtering. 
@@ -113,7 +113,7 @@ Displays the specified tile of the dashboard. You must provide the ID of the til
 
 Roles assigned to the Power BI report. This parameter works only when the **authentication_type** parameter is set to **powerbiembedded**.
 
-If you have defined roles in Power BI and assigned them to reports, you must specify the appropriate roles in the **powerbi** Liquid tag. Roles allow you to filter the data to be displayed in a report. You can specify multiple roles separated by a comma. For more information on defining roles in Power BI, see [Row-level security (RLS) with Power BI](https://docs.microsoft.com/en-us/power-bi/service-admin-rls).
+If you have defined roles in Power BI and assigned them to reports, you must specify the appropriate roles in the **powerbi** Liquid tag. Roles allow you to filter the data to be displayed in a report. You can specify multiple roles separated by a comma. For more information on defining roles in Power BI, see [Row-level security (RLS) with Power BI](https://docs.microsoft.com/power-bi/service-admin-rls).
 
 ```
 {% powerbi authentication_type:"powerbiembedded" path:"https://app.powerbi.com/groups/00000000-0000-0000-0000-000000000000/reports/00000000-0000-0000-0000-000000000000/ReportSection2" roles:"Region_East,Region_West" %}
