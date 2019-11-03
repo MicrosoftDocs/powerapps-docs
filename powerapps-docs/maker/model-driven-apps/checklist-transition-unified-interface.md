@@ -2,7 +2,7 @@
 title: "Checklist: Unified Interface transition | MicrosoftDocs"
 description: "Checklist to ensure that you're prepared for transition to the Unified Interface."
 ms.custom: ""
-ms.date: 011/04/2019
+ms.date: 11/04/2019
 ms.reviewer: "kvivek"
 ms.service: powerapps
 ms.topic: "article"
