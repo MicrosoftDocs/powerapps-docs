@@ -15,7 +15,7 @@ ms.reviewer:
 
 You can use the notes attachment to include downloadable files in knowledge base articles. You can also use web files to create an FAQ page with downloadable content.
 
-You can configure your portal to allow portal users to search within the attachment content (knowledge base articles and web files). This helps users to find the information that they're looking for.
+You can configure your portal to allow portal users to search within the attachment content of  knowledge base articles. This helps users to find the information that they're looking for.
 
 In knowledge base articles, any notes attachment with the defined prefix are indexed. In web files, the latest notes attachment are indexed.
 
@@ -116,6 +116,6 @@ You must add `\_logicalname:annotation~0.9^0.25` value to the Search/Query site 
 
 To configure the facets to group annotations associated with knowledge base articles and web files in a single facet, edit the Search/RecordTypeFacetsEntities site setting name and append `;Downloads:annotation,adx_webfile` to its value.
 
-To allow attachments associated with knowledge articles to appear in the portal and search results, edit the KnowledgeManagement/DisplayNotes site setting and set its value to **True**. The site setting KnowledgeManagement/NotesFilter contains a prefix value that must be prefixed to the note text field on notes; only notes with the specified prefix value will appear on the portal. By default, the value is \*WEB\*, but you can change it through the site setting.
+To allow attachments associated with knowledge articles to appear in the portal and search results, edit the **KnowledgeManagement/DisplayNotes** site setting and set its value to **True**. The site setting **KnowledgeManagement/NotesFilter** contains a prefix value that must be prefixed to the note text field on notes; only notes with the specified prefix value will appear on the portal. By default, the value is \*WEB\*, but you can change it through the site setting.
 
-To enable the indexing of file attachments associated with notes, create the Search/IndexNotesAttachments site setting and set its value to **True**.
+To enable the indexing of file attachments associated with notes, create the **Search/IndexNotesAttachments** site setting and set its value to **True**.
