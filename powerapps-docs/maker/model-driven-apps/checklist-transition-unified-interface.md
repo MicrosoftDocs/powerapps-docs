@@ -77,7 +77,7 @@ Unified Interface.
 
 -   If you have installed ISV (Independent Software Vendor) add-ins through
     [AppSource](https://appsource.microsoft.com), check if upgrades are
-    available in the **Dynamics 365 Administration Center** in “Solutions”.
+    available in the [Power Platform Admin center](https://admin.powerplatform.microsoft.com) by selecting **Environments** > [environment_name] > **Manage Solutions**.
 
 -   If you are using third-party solutions that were provided outside of
     AppSource, contact the provider (Partner or ISV) to get a new version that
