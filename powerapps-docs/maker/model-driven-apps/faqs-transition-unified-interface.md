@@ -28,7 +28,7 @@ Use the auto-transition portal to manage your environment transition date: <http
 
 Do the following:
 1. Visit <https://runone.powerappsportals.com>.
-2. Sign in with your admin credentials that you use to sign in to your environements.
+2. Sign in with the admin credentials of the tenant you want to manage.
 3. Select **My Environements**, and review all environments that have a target date assigned.
 
 ### I see my environment has a date for auto transition. Can I change this date?
