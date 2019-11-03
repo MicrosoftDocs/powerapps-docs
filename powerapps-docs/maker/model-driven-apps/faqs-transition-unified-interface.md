@@ -22,7 +22,14 @@ This topic provides answers to the most common questions about the transition pr
 
 ### Where can I go to see the transition dates that have been assigned to my environments? 
 
-Use the auto-transition portal to manage your environment transition date: <https://runone.powerappsportals.com>. 
+Use the auto-transition portal to manage your environment transition date: <https://runone.powerappsportals.com>.
+
+### How do I gain access to the portal?
+
+Do the following:
+1. Visit <https://runone.powerappsportals.com>.
+2. Sign in with your admin credentials that you use to sign in to your environements.
+3. Select **My Environements**, an the then review all environments that have a target date assigned.
 
 ### I see my environment has a date for auto transition. Can I change this date?
 
