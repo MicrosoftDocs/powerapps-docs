@@ -1074,6 +1074,8 @@
           href: ./portals/create-portal.md
         - name: Create a portal with Dynamics 365 environment
           href: ./portals/create-dynamics-portal.md
+        - name: Provision a portal using the older portal add-on
+          href: ./portals/provision-portal-add-on.md
         - name: PowerApps portals Studio anatomy
           href: ./portals/portal-designer-anatomy.md
         - name: Supported web browsers for portal designer
