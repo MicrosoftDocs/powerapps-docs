@@ -15,9 +15,9 @@ ms.reviewer:
 
 Liquid is an open-source template language integrated into portals. It can be used to add dynamic content to pages, and to create a wide variety of custom templates. Using Liquid, you can:
 
-- Add dynamic content directly to the **Copy** field of a webpage or the content of a [content snippet](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/customize-content-snippets).  
+- Add dynamic content directly to the **Copy** field of a webpage or the content of a [content snippet](../configure/customize-content-snippets.md).  
 
-- [Store source content by using web templates](store-content-web-templates.md), entirely through configuration within PowerApps, for use throughout the PowerApps Portals content management system.  
+- [Store source content by using web templates](store-content-web-templates.md), entirely through configuration within PowerApps, for use throughout the PowerApps portals content management system.  
 
 - [Render a website header and primary navigation bar](render-site-header-primary-navigation.md), entirely through configuration within PowerApps.  
 

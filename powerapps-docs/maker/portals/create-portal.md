@@ -19,7 +19,7 @@ These are some benefits of creating a portal:
 
 - Because the data is stored in Common Data Service, you don't need to create a connection from PowerApps as you do with data sources such as SharePoint, model-driven apps in Dynamics 365, or Salesforce. You need only to specify the entities that you want to show or manage in the portal.
 
-- You can design the portal through the WYSIWYG PowerApps Portals Studio by adding and configuring components on the webpages.
+- You can design the portal through the WYSIWYG PowerApps portals Studio by adding and configuring components on the webpages.
 
 You can create a portal either in a new environment or in your existing environment.
 
@@ -27,7 +27,7 @@ If you choose to create your portal in a new environment using the **Create new 
 
 If you choose to create your portal in an existing environment without portal pre-requisites, the pre-requisites are installed first and then the portal is created. In this method, the portal provisioning can take some time and you’ll be notified when the portal is provisioned.
 
-You can create a Common Data Service starter portal or a Dynamics 365 portal in PowerApps based on the selected environment.
+Based on the selected environment in PowerApps, you can create a Common Data Service starter portal or a portal in an environment containing model-driven apps in Dynamics 365.
 
 More information on working with environments: [Working with environments and Microsoft PowerApps](https://docs.microsoft.com/powerapps/maker/canvas-apps/working-with-environments)
 
@@ -63,16 +63,16 @@ After the portal is provisioned successfully, the status is updated and the port
 > [!div class=mx-imgBorder]
 > ![Portal provisioned](media/recent-apps.png "Portal provisioned")
 
-To edit the portal in PowerApps Portals Studio, see [Edit a portal](manage-existing-portals.md#edit).
+To edit the portal in PowerApps portals Studio, see [Edit a portal](manage-existing-portals.md#edit).
 
 > [!NOTE]
 > - You can create a maximum of five portals in a tenant. However, there can only be one portal of each type created in an environment.
 > - If you don't have sufficient privileges to provision a portal, an error is displayed. You must have the System Administrator role in Common Data Service to create a portal. You must also have the **Access Mode** set to **Read-Write** under **Client Access License (CAL) Information** in the user record.
-> - If you have purchased an older portal add-on, and want to provision a portal using the add-on, you must go to the **Dynamics 365 Administration Center** page. More information: [Provision a portal](https://docs.microsoft.com/en-gb/dynamics365/customer-engagement/portals/provision-portal)
+> - If you have purchased an older portal add-on, and want to provision a portal using the add-on, you must go to the **Dynamics 365 Administration Center** page. More information: [Provision a portal using the older portal add-on](provision-portal-add-on.md)
 > - If you have provisioned a portal using the older portal add-on, you can still customize and manage it from [make.powerapps.com](https://make.powerapps.com).
 > - Provisioning portals from [make.powerapps.com](https://make.powerapps.com) does not consume the older portal add-ons. Also, these portals are not listed under the **Applications** tab on the **Dynamics 365 Administration Center** page.
 > - A Common Data Service starter portal cannot be created from the **Dynamics 365 Administration Center** page.
-> - PowerApps Portals is not available in the France region.
+> - PowerApps portals is not available in the France region.
 
 ## Create new environment
 
@@ -143,7 +143,7 @@ Once the provisioning request is successfully placed, a confirmation email notif
 
 ## Disable portal creation in a tenant
 
-As a global administrator, if you want to disable portal creation in a tenant by non-administrators, you can do it by enabling the `disablePortalsCreationByNonAdminUsers` tenant level setting through PowerShell. To run PowerShell cmdlets, you must first install the required modules. For information on installing the required PowerShell modules, see [Installation](https://docs.microsoft.com/en-us/power-platform/admin/powerapps-powershell#installation).
+As a global administrator, if you want to disable portal creation in a tenant by non-administrators, you can do it by enabling the `disablePortalsCreationByNonAdminUsers` tenant level setting through PowerShell. To run PowerShell cmdlets, you must first install the required modules. For information on installing the required PowerShell modules, see [Installation](https://docs.microsoft.com/power-platform/admin/powerapps-powershell#installation).
 
 After installing the modules, run the following command in a PowerShell window (run PowerShell as an administrator).
 
