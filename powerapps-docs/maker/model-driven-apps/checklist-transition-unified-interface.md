@@ -92,10 +92,9 @@ Unified Interface.
 ## Identify replacements for deprecated client API code and features
 
 Based on the outputs of the **PowerApps Solution Checker** and the information
-contained in [Important changes coming](https://docs.microsoft.com/power-platform/important-changes-coming) on deprecated client APIs and
+contained in [Important changes (deprecations) coming](https://docs.microsoft.com/power-platform/important-changes-coming) on deprecated client APIs and
 features, you should have a good understanding of the customizations and features that
-either need to be corrected or replaced in your Unified Interface
-project."
+either need to be corrected or replaced in your Unified Interface project.
 
 Here are some of the most common areas needing attention:
 
@@ -110,8 +109,8 @@ Flows](https://docs.microsoft.com/power-platform-release-plan/2019wave2/microsof
 
 -   **Service scheduling**: Consider using [Universal Resource Scheduling](https://docs.microsoft.com/dynamics365/common-scheduler/schedule-anything-with-universal-resource-scheduling) to replace legacy service scheduling.
 
--   **Dynamics 365 for Outlook (COM Add-in)**: Consider replacing the Dynamics 365 for Outlook COM Add-in with the lightweight [Dynamics 365 App for
-Outlook](https://docs.microsoft.com/dynamics365/outlook-app/dynamics-365-app-outlook-user-s-guide).
+> [!NOTE]
+> You might also consider replacing the Dynamics 365 for Outlook (COM Add-in) with the lightweight [Dynamics 365 App for Outlook](https://docs.microsoft.com/dynamics365/outlook-app/overview).
 
 ## Test your application in Unified Interface
 
