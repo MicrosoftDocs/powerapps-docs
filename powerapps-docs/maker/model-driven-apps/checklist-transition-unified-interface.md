@@ -116,7 +116,7 @@ Flows](https://docs.microsoft.com/power-platform-release-plan/2019wave2/microsof
 
 One of the easiest ways to test your application in Unified Interface is to turn
 on the [**Enable Unified Interface Only**](https://docs.microsoft.com/power-platform/admin/enable-unified-interface-only) option on a copy of your production environment. After the Unified Interface is enabled, you should be able to access your application using the **Dynamics 365 –
-Custom" app and test the use cases relevant to your context.
+Custom** app and test the use cases relevant to your context.
 
 ### Test your business and technical scenarios
 
