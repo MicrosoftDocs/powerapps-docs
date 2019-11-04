@@ -83,7 +83,7 @@ ms.custom:
                               </a>
                            </li>
                            <li>
-                              <a href="https://powerapps.microsoft.com/en-us/blog/">
+                              <a href="https://powerapps.microsoft.com/blog/">
                                  <div class="cardSize">
                                     <div class="cardPadding">
                                        <div class="card">
@@ -313,7 +313,7 @@ ms.custom:
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/common-data-service/cds-processes">Apply business logic</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/common-data-service/solutions-overview">Solutions</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/power-platform/admin/wp-security">Security in Common Data Service</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="https://www.microsoft.com/en-us/download/details.aspx?id=57777">Whitepaper: ALM using solutions</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="https://www.microsoft.com/download/details.aspx?id=57777">Whitepaper: ALM using solutions</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/common-data-service/data-platform-powerbi-connector">Build Power BI reports from Common Data Service data</a></p>
                                  </div>
                               </div>
@@ -602,7 +602,7 @@ ms.custom:
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/checker/webapi/overview">Use the PowerApps checker</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/isv-app-management">ISV app management and monitoring</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/publish-app-appsource">Publish your app on AppSource</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="https://www.microsoft.com/en-us/download/details.aspx?id=57777">Whitepaper: ALM using solutions</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="https://www.microsoft.com/download/details.aspx?id=57777">Whitepaper: ALM using solutions</a></p>
                                  </div>
                               </div>
                            </div>

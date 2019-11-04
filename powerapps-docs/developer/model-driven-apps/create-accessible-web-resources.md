@@ -82,7 +82,7 @@ When you include web resources that provide user interface elements in your solu
   
 -   [Silverlight Accessibility for Developers](https://docs.microsoft.com/previous-versions/windows/)  
   
--   [Accessibility Overview](https://developer.microsoft.com/en-us/windows/accessible-apps)  
+-   [Accessibility Overview](https://developer.microsoft.com/windows/accessible-apps)  
   
 -   [Accessibility - W3C](https://www.w3.org/standards/webdesign/accessibility)  
   

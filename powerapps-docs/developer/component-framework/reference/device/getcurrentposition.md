@@ -31,7 +31,7 @@ Type: `Promise<Position>`
 
 ## Remarks
 
-See [Promise](https://developer.mozilla.org/docs/Web/JavaScript/reference/Global_Objects/Promise) and [Position](https://developer.mozilla.org/en-US/docs/Web/API/Position)
+See [Promise](https://developer.mozilla.org/docs/Web/JavaScript/reference/Global_Objects/Promise) and [Position](https://developer.mozilla.org/docs/Web/API/Position)
 
 ### Related topics
 

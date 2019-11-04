@@ -51,7 +51,7 @@ This article lists some common issues that you might encounter while using Power
 
 1. **Launching a website from an embedded app** (May 10, 2018)
 
-    Internet Explorer and Microsoft Edge browsers might block the launch of a URL or website that’s in protected mode or a lower security zone than the website in which the app is loaded. To resolve this issue, [change the security and privacy settings](https://support.microsoft.com/en-us/help/17479/windows-internet-explorer-11-change-security-privacy-settings) for your browser.
+    Internet Explorer and Microsoft Edge browsers might block the launch of a URL or website that’s in protected mode or a lower security zone than the website in which the app is loaded. To resolve this issue, [change the security and privacy settings](https://support.microsoft.com/help/17479/windows-internet-explorer-11-change-security-privacy-settings) for your browser.
 
 1. **Combo box controls in galleries** (May 3, 2018)
 

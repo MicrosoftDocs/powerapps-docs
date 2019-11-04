@@ -38,7 +38,7 @@ Screen readers make model-driven apps accessible to people who have low or no vi
 2.  Press the **Tab** key until you hear the name of the application you want to open—for example, “Sales.” Press **Enter** to open the app.
 
 ### Use scan mode in Narrator
-You can use scan mode to quickly navigate apps using the arrow keys and common keyboard shortcuts. Quickly jump to headings, links, landmarks, form fields, controls, and tables in this mode. Turn scan mode on and off by pressing **Caps lock+Spacebar**. More information: [Using scan mode](https://support.microsoft.com/en-us/help/22809/windows-10-narrator-using-scan-mode)
+You can use scan mode to quickly navigate apps using the arrow keys and common keyboard shortcuts. Quickly jump to headings, links, landmarks, form fields, controls, and tables in this mode. Turn scan mode on and off by pressing **Caps lock+Spacebar**. More information: [Using scan mode](https://support.microsoft.com/help/22809/windows-10-narrator-using-scan-mode)
 
 ### Find your way around the app
 

@@ -49,7 +49,7 @@ With a gateway, you can connect to on-premises data through these connections:
 
 ## Prerequisites
 
--   A PowerApps account. Don't have one? [Sign up for 30 days free](https://docs.microsoft.com/en-us/powerapps/maker/signup-for-powerapps).
+-   A PowerApps account. Don't have one? [Sign up for 30 days free](https://docs.microsoft.com/powerapps/maker/signup-for-powerapps).
 
 -   Administrative permissions on a gateway. These permissions are provided by
     default for gateways you install. Administrators can grant other people

@@ -31,7 +31,7 @@ Every customization that you make to Common Data Service, or to a previously ins
 If you intend to transport customizations or extensions between different Common Data Service environments or distribute solutions using AppSource, you must understand the solution framework.
 
 > [!NOTE]
-> For detailed information about how to effectively use solutions for a successful application lifecycle management (ALM) implementation, see [Whitepaper: Solution Lifecycle Management](https://www.microsoft.com/en-us/download/details.aspx?id=57777)
+> For detailed information about how to effectively use solutions for a successful application lifecycle management (ALM) implementation, see [Whitepaper: Solution Lifecycle Management](https://www.microsoft.com/download/details.aspx?id=57777)
 
 ## Managed and unmanaged solutions
 
