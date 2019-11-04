@@ -194,7 +194,7 @@ The same license that’s required for non-guests to run an app. For instance, i
 |                                 | SharePoint customized form | Standalone canvas app using non-premium connectors | Standalone canvas app using premium connectors | Model driven app |
 |---------------------------------|----------------------------|----------------------------------------------------|------------------------------------------------|------------------|
 | SharePoint user (no PA license) | x                          |                                                    |                                                |                  |
-| PowerApps Included w/ Office    | x                          |                                                    |                                                |                  |
+| PowerApps Included w/ Office    | x                          | x                                                  |                                                |                  |
 | PowerApps Per App Plan          | x                          | x                                                  | x                                              | x                |
 | PowerApps Per User Plan         | x                          | x                                                  | x                                              | x                |
 
