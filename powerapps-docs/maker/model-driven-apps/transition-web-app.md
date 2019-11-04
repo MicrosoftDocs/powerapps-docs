@@ -37,7 +37,7 @@ To use an existing non-production environment to transition your Web Client appl
 ## Prepare the environment
 First, select a non-production environment and enable **Use Unified Interface only** mode, which will use the Unified Interface for all model-driven apps in the environment. This also includes any Dynamics 365 application modules originally configured for the legacy web client.
 
-1. Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Environment**, and then select a sandbox environment. 
+1. Sign in to [PowerApps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Environment**, and then select a sandbox environment. 
 
 2. Select **Settings** > **Behavior** and then turn on **Use Unified Interface only**.
 
@@ -56,7 +56,7 @@ You can also set this in the settings area. Go to **Settings** > **Administratio
 ## Run and validate your application in the Unified Interface
 Run your applications that were originally web client applications. Notice that, after you turn on **Use Unified Interface only**, all available apps in the environment use the Unified Interface even if the application was originally configured for the web client.
 
-To run your app, sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Apps**, and then select the application you want to run. Alternatively, you can go directly to the **My Apps** page, such as *https://contoso.crm.dynamics.com/apps/*.
+To run your app, sign in to [PowerApps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Apps**, and then select the application you want to run. Alternatively, you can go directly to the **My Apps** page, such as *https://contoso.crm.dynamics.com/apps/*.
 
 ### Validate your app, processes, and customizations 
 We recommend that you test all use cases. You can start with the most critical use cases or group them into logical patterns of design. Since the Unified Interface is based on responsive design, we recommend that you perform tests with different devices that have different screen resolutions. As you test the application you will be able to verify that your customizations are compatible with the Unified Interface and whether there are any features that require a redesign or have missing functionality. Build a plan for reviewing these elements and post your questions and feedback on our community forum. 

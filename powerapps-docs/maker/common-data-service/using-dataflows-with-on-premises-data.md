@@ -63,7 +63,7 @@ With a gateway, you can connect to on-premises data through these connections:
     user's default environment. More information: [Working with environments and Microsoft PowerApps](../canvas-apps/working-with-environments.md).
 
 ## Install a gateway
-1.  In the left navigation pane of [powerapps.com](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Gateways**.
+1.  In the left navigation pane of [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Gateways**.
 
     ![Gateways in left navigation bar](media/nav-pane-gateways.png)
 
@@ -91,7 +91,7 @@ You can change the enterprise gateway used for a given dataflow and change the g
 
 
 ## View and manage gateway permissions
-1.  In the left navigation pane of [powerapps.com](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Gateways** and then select the gateway you want.
+1.  In the left navigation pane of [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Gateways** and then select the gateway you want.
 
 2.  To add a user to a gateway, select **Users**, specify a user or group, and then specify a permission level:
 

@@ -32,7 +32,7 @@ Follow step-by-step instructions to create an order gallery in a canvas app for 
 
 ## Create a blank app
 
-1. [Sign in to PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then create a blank tablet app.
+1. [Sign in to PowerApps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then create a blank tablet app.
 
     > [!div class="mx-imgBorder"]
     > ![Canvas app from blank tile](media/northwind-orders-canvas-part1/start-01.png)

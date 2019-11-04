@@ -35,7 +35,7 @@ More information on available portal templates: [Portal templates](portal-templa
 
 To create a portal:
 
-1.  Sign in to [PowerApps](http://web.powerapps.com).  
+1.  Sign in to [PowerApps](http://make.powerapps.com).  
 
 2.  Under **Make your own app**, select **Portal from blank**.
 

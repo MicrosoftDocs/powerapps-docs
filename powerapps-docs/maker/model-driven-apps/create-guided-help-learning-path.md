@@ -54,7 +54,7 @@ Use Learning Path to give your users a custom, in-app Help experience that is ta
 ## Turn on Learning Path for your organization  
  Learning Path is an optional feature that can be turned on or off for your organization. You can display Learning Path content included with [!INCLUDE[pn_crm_shortest](../../includes/pn-crm-shortest.md)], create your own Learning Path content for your users, or both.  
 
-1. Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) or [!INCLUDE[pn_crm_shortest](../../includes/pn-crm-shortest.md)] with an admin account.  
+1. Sign in to [PowerApps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) or [!INCLUDE[pn_crm_shortest](../../includes/pn-crm-shortest.md)] with an admin account.  
 
 2. Go to **Settings**, and then select **Administration** under **System**. More information: [Settings](/powerapps/maker/model-driven-apps/advanced-navigation#settings)
 

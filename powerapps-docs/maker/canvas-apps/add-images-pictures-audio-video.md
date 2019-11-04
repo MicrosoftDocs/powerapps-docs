@@ -20,7 +20,7 @@ This topic shows you how to embed multimedia files in your canvas app, upload pe
 
 ## Prerequisites
 
-[Sign up](../signup-for-powerapps.md) for PowerApps, and then [sign in](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) using the same credentials that you used to sign up.
+[Sign up](../signup-for-powerapps.md) for PowerApps, and then [sign in](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) using the same credentials that you used to sign up.
 
 ## Add media from a file or the cloud
 

@@ -72,7 +72,7 @@ More information: [Maintain managed solutions > Create managed solution updates]
 
 To create a  solution publisher and a solution you need to navigate to the Common Data Service Customization area.
 
-From [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)
+From [powerapps.com](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)
 
 1. Select the *Waffle* icon at the top left corner
 2. In the fly out, select **All apps**.

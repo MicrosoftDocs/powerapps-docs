@@ -92,10 +92,10 @@ This list identifies all services to which PowerApps Studio talks and their usag
 | graph.microsoft.com<br>graph.windows.net |https |Azure Graph - For getting user info (e.g., profile photo) |
 | gallery.azure.com |https |Sample and Template apps |
 | \*.azure-apim.net |https |Api Hubs - Different sub-domains for each locale |
-| \*.powerapps.com |https | create.powerapps.com, make.powerapps.com, content.powerapps.com, and web.powerapps.com |
-| \*.azureedge.net |https | create.powerapps.com, make.powerapps.com, content.powerapps.com, and web.powerapps.com |
+| \*.powerapps.com |https | create.powerapps.com, make.powerapps.com, content.powerapps.com, and make.powerapps.com |
+| \*.azureedge.net |https | create.powerapps.com, make.powerapps.com, content.powerapps.com, and make.powerapps.com |
 | \*.blob.core.windows.net |https | Blob storage |
-| \*.flow.microsoft.com | https | create.powerapps.com, make.powerapps.com, content.powerapps.com, and web.powerapps.com |
+| \*.flow.microsoft.com | https | create.powerapps.com, make.powerapps.com, content.powerapps.com, and make.powerapps.com |
 | *.dynamics.com | https | Common Data Service |
 | vortex.data.microsoft.com |https |Telemetry |
 | localhost | https | PowerApps Mobile

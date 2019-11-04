@@ -30,7 +30,7 @@ If you have a PowerApps Plan 1 license or a license through Office 365, you alre
 
 ## Identify your current license
 
-To find out which license or licenses you already have, try to [sign in to PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) with your work or school credentials.
+To find out which license or licenses you already have, try to [sign in to PowerApps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) with your work or school credentials.
 
 - If you can't sign in, you don't have any PowerApps licenses, and you'll need to [start a trial](#get-a-license-from-scratch) if you want any access to PowerApps.
 
@@ -43,7 +43,7 @@ To find out which license or licenses you already have, try to [sign in to Power
 
 ## Upgrade an existing license
 
-To start a free, 30-day trial of PowerApps Plan 2 from an existing license, [sign in to PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then try any feature that requires Plan 2. (For example, select the gear icon near the upper-right corner, select **Admin center**, and then select **New environment** near the upper-right corner.) Then follow the prompts to complete the sign-up process.
+To start a free, 30-day trial of PowerApps Plan 2 from an existing license, [sign in to PowerApps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then try any feature that requires Plan 2. (For example, select the gear icon near the upper-right corner, select **Admin center**, and then select **New environment** near the upper-right corner.) Then follow the prompts to complete the sign-up process.
 
 ## Get a license from scratch
 
@@ -82,7 +82,7 @@ You can use a work or school address to sign up for a trial license. If you use 
 <!--
 ### When will my trial license expire?
 
-To determine when your trial license will expire, select the gear icon near the upper-right corner of the [PowerApps site](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then select **Plan(s)**.
+To determine when your trial license will expire, select the gear icon near the upper-right corner of the [PowerApps site](http://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then select **Plan(s)**.
 -->
 
 ### What happens when my trial expires?

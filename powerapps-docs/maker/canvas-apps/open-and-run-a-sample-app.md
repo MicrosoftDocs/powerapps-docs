@@ -22,7 +22,7 @@ Each sample showcases a real-world scenario but uses fictitious data. To store t
 If you don't have a license for PowerApps, you can [sign up for free](../signup-for-powerapps.md).
 
 ## Open a sample app
-1. Sign in to [PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1. Sign in to [PowerApps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
 1. In the list of sample apps, hover over a sample app (such as **Cost Estimator**) with your mouse.
 

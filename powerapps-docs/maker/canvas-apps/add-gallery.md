@@ -28,7 +28,7 @@ Show a list of items from any data source by adding a **[Gallery](controls/contr
     2. Upload the Excel file to a [cloud-storage account](connections/cloud-storage-blob-connections.md), such as OneDrive for Business.
 
 - Open a blank app:
-    1. [Sign in to PowerApps](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+    1. [Sign in to PowerApps](http://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
     1. Under **Make your own app**, select **Canvas app from blank**.
 

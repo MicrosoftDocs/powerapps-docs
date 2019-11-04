@@ -56,7 +56,7 @@ For some entities, such as account and user, the visualizations are provided out
  To query the data as a hierarchy, you must set one of the entity’s one-to-many or many-to-one self-referential relationships as hierarchical. To turn the hierarchy on:  
   
 
-1. On [powerapps.com](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand the **Data** section and click or tap **Entities** in the left navigation pane.
+1. On [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand the **Data** section and click or tap **Entities** in the left navigation pane.
 
 2. Click or tap an existing entity, or [Create a new entity](data-platform-create-entity.md)
 
