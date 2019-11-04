@@ -27,7 +27,7 @@ To effectively define changes to the default RibbonXml, you must be able to refe
   
 <a name="BKMK_AccessDefaultRibbonData"></a>   
 ## Access the default ribbon data  
- The default ribbon definitions for Model-driven apps can be downloaded from [Microsoft Downloads: ExportedRibbonXml.zip](http://download.microsoft.com/download/C/2/A/C2A79C47-DD2D-4938-A595-092CAFF32D6B/ExportedRibbonXml.zip). 
+ The default ribbon definitions for Model-driven apps can be downloaded from [Microsoft Downloads: ExportedRibbonXml.zip](https://download.microsoft.com/download/C/2/A/C2A79C47-DD2D-4938-A595-092CAFF32D6B/ExportedRibbonXml.zip). 
   
  The applicationRibbon.xml file contains the definition of the core application ribbons.  
   

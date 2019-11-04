@@ -13,11 +13,11 @@ ms.reviewer:
 
 # PowerApps Common Data Service entity tags
 
-PowerApps entity tags are used to load and display PowerApps data, or use other PowerApps Portals framework services. These tags are PowerApps-specific extensions to the Liquid language.
+PowerApps entity tags are used to load and display PowerApps data, or use other PowerApps portals framework services. These tags are PowerApps-specific extensions to the Liquid language.
 
 ## chart
 
-Adds a PowerApps chart to a web page. The chart tag can be added in the Copy field on a Web Page or in the Source field on a Web Template. For steps to add a PowerApps chart to a web page, see [Add a chart to a web page in portal](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/add-chart).
+Adds a PowerApps chart to a web page. The chart tag can be added in the Copy field on a Web Page or in the Source field on a Web Template. For steps to add a PowerApps chart to a web page, see [Add a chart to a web page in portal](../configure/add-chart.md).
 
 ```
 {% chart id:"EE3C733D-5693-DE11-97D4-00155DA3B01E" viewid:"00000000-0000-0000-00AA-000010001006" %}
@@ -64,7 +64,7 @@ Type of authentication required for the Power BI report or dashboard. Valid valu
 
 - **powerbiembedded**: Allows you to share the secure Power BI reports or dashboards to external users who doesn't have Power BI license or Azure Active Directory authentication setup. For information on Power BI Embedded service setup, see [Enable Power BI Embedded service](../admin/set-up-power-bi-integration.md#enable-power-bi-embedded-service). 
 
-While adding the secure Power BI report or dashboard, ensure that it is shared with Dynamics 365 portal Azure Active Directory or Power BI Embedded services. 
+While adding the secure Power BI report or dashboard, ensure that it is shared with portal Azure Active Directory or Power BI Embedded services. 
 
 > [!NOTE]
 > The values for the `authentication_type` parameter are case insensitive.
@@ -87,7 +87,7 @@ The complete code will be:
 {% powerbi authentication_type:"AAD" path:"https://app.powerbi.com/groups/00000000-0000-0000-0000-000000000000/reports/00000000-0000-0000-0000-000000000001/ReportSection01?filter=Executives/Executive eq 'Bert Hair'" %}
 ```
 
-More information on filtering a report: [Filter a report using query string parameters in the URL](https://docs.microsoft.com/en-us/power-bi/service-url-filters)
+More information on filtering a report: [Filter a report using query string parameters in the URL](https://docs.microsoft.com/power-bi/service-url-filters)
 
 > [!NOTE]
 > Anonymous report doesn't support filtering. 
@@ -113,7 +113,7 @@ Displays the specified tile of the dashboard. You must provide the ID of the til
 
 Roles assigned to the Power BI report. This parameter works only when the **authentication_type** parameter is set to **powerbiembedded**.
 
-If you have defined roles in Power BI and assigned them to reports, you must specify the appropriate roles in the **powerbi** Liquid tag. Roles allow you to filter the data to be displayed in a report. You can specify multiple roles separated by a comma. For more information on defining roles in Power BI, see [Row-level security (RLS) with Power BI](https://docs.microsoft.com/en-us/power-bi/service-admin-rls).
+If you have defined roles in Power BI and assigned them to reports, you must specify the appropriate roles in the **powerbi** Liquid tag. Roles allow you to filter the data to be displayed in a report. You can specify multiple roles separated by a comma. For more information on defining roles in Power BI, see [Row-level security (RLS) with Power BI](https://docs.microsoft.com/power-bi/service-admin-rls).
 
 ```
 {% powerbi authentication_type:"powerbiembedded" path:"https://app.powerbi.com/groups/00000000-0000-0000-0000-000000000000/reports/00000000-0000-0000-0000-000000000000/ReportSection2" roles:"Region_East,Region_West" %}
@@ -134,7 +134,7 @@ If you've assigned a role to a Power BI report, and didn't specify the **roles**
 
 ## editable
 
-Renders a given PowerApps Portals CMS object as editable on the portal, for users with content editing permission for that object. Editable objects include [page](liquid-objects.md#page), [snippets](liquid-objects.md#snippets), and [weblinks](liquid-objects.md#weblinks).  
+Renders a given PowerApps portals CMS object as editable on the portal, for users with content editing permission for that object. Editable objects include [page](liquid-objects.md#page), [snippets](liquid-objects.md#snippets), and [weblinks](liquid-objects.md#weblinks).  
 
 ```
 {% editable page 'adx_copy' type: 'html', title: 'Page Copy', escape: false, liquid: true %}
@@ -231,7 +231,7 @@ Provide **only one** of id, name, or key to select the Entity List to load.
 
 **id**
 
-Loads an entity list by [GUID](http://en.wikipedia.org/wiki/Globally_unique_identifier) ID. id must be a string that can be parsed as a GUID.  
+Loads an entity list by [GUID](https://en.wikipedia.org/wiki/Globally_unique_identifier) ID. id must be a string that can be parsed as a GUID.  
 
 ```
 {% entitylist id:936DA01F-9ABD-4d9d-80C7-02AF85C822A8 %}
@@ -265,7 +265,7 @@ Loaded entity list {{ entitylist.adx_name }}.
 
 **key**
 
-Loads an entity list by ID **or** name. If the provided key value can be parsed as a [GUID](http://en.wikipedia.org/wiki/Globally_unique_identifier), the entity list will be loaded by ID. Otherwise, it will be loaded by name.
+Loads an entity list by ID **or** name. If the provided key value can be parsed as a [GUID](https://en.wikipedia.org/wiki/Globally_unique_identifier), the entity list will be loaded by ID. Otherwise, it will be loaded by name.
 
 ```
 <!-- key_variable can hold an ID or name -->
@@ -610,7 +610,7 @@ A common use case is to set this parameter based on a [request](liquid-objects.m
 {% endsearchindex %}
 ```
 
-This parameter supports [the Lucene Query Parser syntax](http://lucene.apache.org/core/2_9_4/queryparsersyntax.html).
+This parameter supports [the Lucene Query Parser syntax](https://lucene.apache.org/core/2_9_4/queryparsersyntax.html).
 
 **filter**
 
@@ -624,7 +624,7 @@ An additional query used to match results. This parameter is intended to accept 
 {% endsearchindex %}
 ```
 
-This parameter supports [the Lucene Query Parser syntax](http://lucene.apache.org/core/2_9_4/queryparsersyntax.html).  
+This parameter supports [the Lucene Query Parser syntax](https://lucene.apache.org/core/2_9_4/queryparsersyntax.html).  
 
 > [!Note]     
 > The difference between filter and query is that while both will accept the Lucene Query Parser syntax, query is intended to be more forgiving about how this syntax is parsed ߝ as it's expected that most end users will not be aware of this syntax. So, in the case that parsing query according to this syntax fails, the entire query will be escaped and submitted as the query text. filter, on the other hand, will be parsed strictly and return an error if the case of invalid syntax.

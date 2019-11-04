@@ -37,9 +37,9 @@ In summary, the Unified Interface Playbook documents will help you:
 
 |Download link  |Doc type  |
 |---------|---------|
-|[Unified Interface Playbook Overview](http://download.microsoft.com/download/A/F/3/AF3D45A7-4F38-41BE-8956-1DF7A4A5AFDB/dynamics365unifiedinterfaceplaybook.pdf)      |   PDF      |
-|[Chapter 1: Initiate](http://download.microsoft.com/download/A/F/3/AF3D45A7-4F38-41BE-8956-1DF7A4A5AFDB/playbook-ch1-initiate.pptx)     |  PowerPoint       |
-|[Chapter 2: Explore](http://download.microsoft.com/download/A/F/3/AF3D45A7-4F38-41BE-8956-1DF7A4A5AFDB/playbook-ch-2-explore.pptx)     |  PowerPoint       |
+|[Unified Interface Playbook Overview](https://download.microsoft.com/download/A/F/3/AF3D45A7-4F38-41BE-8956-1DF7A4A5AFDB/dynamics365unifiedinterfaceplaybook.pdf)      |   PDF      |
+|[Chapter 1: Initiate](https://download.microsoft.com/download/A/F/3/AF3D45A7-4F38-41BE-8956-1DF7A4A5AFDB/playbook-ch1-initiate.pptx)     |  PowerPoint       |
+|[Chapter 2: Explore](https://download.microsoft.com/download/A/F/3/AF3D45A7-4F38-41BE-8956-1DF7A4A5AFDB/playbook-ch-2-explore.pptx)     |  PowerPoint       |
 | [Chapter 3: Transition](https://download.microsoft.com/download/A/F/3/AF3D45A7-4F38-41BE-8956-1DF7A4A5AFDB/playbook-ch3-transition.pptx)|  PowerPoint     |
 | [Chapter 4: Optimize](https://download.microsoft.com/download/A/F/3/AF3D45A7-4F38-41BE-8956-1DF7A4A5AFDB/playbook-ch4-optimize.pptx)  | PowerPoint  |
 

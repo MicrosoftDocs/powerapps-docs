@@ -25,7 +25,7 @@ The Unified Interface for model-driven apps provides a consistent and accessible
 > ![Unified Interface adapts to screen](media/Reflow.png "Unified Interface adapts to screen")
 
 > [!NOTE]
-> The legacy web client will be deprecated and customers must transition to Unified Interface before October 1, 2020. For more information, see [Blog: Announcing the timeline to move to Unified Interface](https://cloudblogs.microsoft.com/dynamics365/it/2019/09/10/announcing-the-timeline-to-move-to-unified-interface/). To learn more on how to transition, see [Quick start for transitioning](https://docs.microsoft.com/en-us/powerapps/maker/model-driven-apps/transition-web-app).
+> The legacy web client will be deprecated and customers must transition to Unified Interface before October 1, 2020. For more information, see [Blog: Announcing the timeline to move to Unified Interface](https://cloudblogs.microsoft.com/dynamics365/it/2019/09/10/announcing-the-timeline-to-move-to-unified-interface/). To learn more on how to transition, see [Quick start for transitioning](https://docs.microsoft.com/powerapps/maker/model-driven-apps/transition-web-app).
 
 ## Navigation
 

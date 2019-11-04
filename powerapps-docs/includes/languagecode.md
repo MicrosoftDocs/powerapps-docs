@@ -1,1 +1,1 @@
-Language codes are four-digit or five-digit locale IDs. Valid locale ID values can be found at [Locale ID (LCID) Chart)](http://go.microsoft.com/fwlink/?LinkId=122128).
+Language codes are four-digit or five-digit locale IDs. Valid locale ID values can be found at [Locale ID (LCID) Chart)](https://go.microsoft.com/fwlink/?LinkId=122128).

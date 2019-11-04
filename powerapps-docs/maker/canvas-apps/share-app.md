@@ -31,7 +31,7 @@ Before you share an app, you must save it to the cloud (not locally) and then pu
 
 ## Share an app
 
-1. [Sign in](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) to PowerApps, and then select **Apps** near the left edge.
+1. [Sign in](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) to PowerApps, and then select **Apps** near the left edge.
 
     ![Show list of apps](./media/share-app/file-apps.png)
 
@@ -73,7 +73,7 @@ Before you share an app, you must save it to the cloud (not locally) and then pu
 
 1. At the bottom of the share panel, select **Share**.
 
-    Everyone with whom you shared the app can run it in PowerApps Mobile on a mobile device or in AppSource on [Dynamics 365](https://home.dynamics.com) in a browser. Co-owners can edit and share the app in [PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+    Everyone with whom you shared the app can run it in PowerApps Mobile on a mobile device or in AppSource on [Dynamics 365](https://home.dynamics.com) in a browser. Co-owners can edit and share the app in [PowerApps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
     If you sent an email invitation, everyone with whom you shared the app can run it by selecting a link in the invitation.
 
@@ -119,11 +119,7 @@ To assign a role, you must have **System administrator** permissions for a Commo
 When you share an app that's based on an older version of Common Data Service, you must share the runtime permission to the service separately. If you don’t have permission to do this, see your environment administrator.
 
 ## Share with guests
-
-> [!IMPORTANT]
-> - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback. 
-> - Preview features have limited support by Microsoft Support and may be available only in selected geographic areas. 
-
+ 
 PowerApps canvas apps can be shared with guest users of an Azure Active Directory tenant. This enables inviting external business partners, contractors, and third parties to run your company’s canvas apps. 
 
 > [!NOTE]
@@ -184,7 +180,7 @@ Yes. Though, access to canvas standalone apps require a PowerApps license includ
 > [!div class="mx-imgBorder"]  
 > ![Embed canvas app in SharePoint for guests](media/share-app/guest_access_doc_5.PNG "Embed canvas app in SharePoint for guests")
 
-When embedding a canvas app in SharePoint via the iFrame HTML tag, reference the app using the full web URL. To find the URL, go to http://make.powerapps.com, select an app, select the **Details** tab, and the URL is displayed under **Web link**.
+When embedding a canvas app in SharePoint via the iFrame HTML tag, reference the app using the full web URL. To find the URL, go to https://make.powerapps.com, select an app, select the **Details** tab, and the URL is displayed under **Web link**.
 
 > [!div class="mx-imgBorder"]  
 > ![Canvas app details](media/share-app/guest_access_doc_6.PNG "Canvas app details")
@@ -193,7 +189,7 @@ When embedding a canvas app in SharePoint via the iFrame HTML tag, reference the
 As with non-guests, the underlying data source(s) accessed by the app must also be made accessible to the guest.
 
 #### What license must be assigned to my guest so they can run an app shared with them?
-The same license that’s required for non-guests to run an app. For instance, if the app doesn’t use premium connecters then a PowerApps P1 license is enough to assign to the guest.  
+The same license that’s required for non-guests to run an app. For instance, if the app uses premium connecters then a PowerApps Per App Plan or a PowerApps Per User Plan must be assigned to the guest.  
 
 |                                 | SharePoint customized form | Standalone canvas app using non-premium connectors | Standalone canvas app using premium connectors | Model driven app |
 |---------------------------------|----------------------------|----------------------------------------------------|------------------------------------------------|------------------|

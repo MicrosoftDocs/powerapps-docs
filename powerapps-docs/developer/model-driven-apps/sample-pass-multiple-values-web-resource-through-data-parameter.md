@@ -177,7 +177,7 @@ An (HTML) web resource page can only accept a single custom parameter called `da
      Open the page passing the encoded parameters as the value of the data parameter:  
   
     ```  
-    http://<server name>/WebResources/new_/ShowDataParams.htm?data=first%3DFirst%20Value%26second%3DSecond%20Value%26third%3DThird%20Value  
+    https://<server name>/WebResources/new_/ShowDataParams.htm?data=first%3DFirst%20Value%26second%3DSecond%20Value%26third%3DThird%20Value  
     ```  
   
     > [!NOTE]

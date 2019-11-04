@@ -37,7 +37,7 @@ Keyboard navigation is an important aspect of any app.  For many the keyboard is
 - Only have a tab stop at controls that are interactive.
 - Follow either an intuitive across and then down "Z" order or a down and then across "reverse-N" order.
 
-The above requirements will be met with the default **TabIndex** values and we recommend that you do not change them.  The default is what most users expect visually and it will work well with a screen reader.  But there may be cases in which you will want to override the default.  Use the **TabIndex** property and the [**Enhanced group** control](https://powerapps.microsoft.com/en-us/blog/enhanced-group-experimental-control-with-layout-control-and-nesting/) (experimental) to make adjustments to the navigation order.  
+The above requirements will be met with the default **TabIndex** values and we recommend that you do not change them.  The default is what most users expect visually and it will work well with a screen reader.  But there may be cases in which you will want to override the default.  Use the **TabIndex** property and the [**Enhanced group** control](https://powerapps.microsoft.com/blog/enhanced-group-experimental-control-with-layout-control-and-nesting/) (experimental) to make adjustments to the navigation order.  
 
 The **TabIndex** property has two recommended values:
 
@@ -48,7 +48,7 @@ The **TabIndex** property has two recommended values:
 
 Navigation order generally goes from left-to-right, then top-to-bottom, in a "Z" pattern. The order is based on the **X** and **Y** property values of the controls. If controls are dynamically moved on the screen, for example by having a formula for **X** or **Y** based on a timer or other control, the navigation order will change dynamically too.
 
-Use the [**Enhanced group** control](https://powerapps.microsoft.com/en-us/blog/enhanced-group-experimental-control-with-layout-control-and-nesting/) (experimental) to bundle controls that should be navigated together or to create columns in a "reverse-N" pattern.  At the top of the following example, the name fields are contained within an enhanced group control which causes navigation to proceed down before moving across.  At the bottom of the example, no group controls are used, and navigation proceeds across and then down as normal which is not intuitive given the control groupings. 
+Use the [**Enhanced group** control](https://powerapps.microsoft.com/blog/enhanced-group-experimental-control-with-layout-control-and-nesting/) (experimental) to bundle controls that should be navigated together or to create columns in a "reverse-N" pattern.  At the top of the following example, the name fields are contained within an enhanced group control which causes navigation to proceed down before moving across.  At the bottom of the example, no group controls are used, and navigation proceeds across and then down as normal which is not intuitive given the control groupings. 
 
 ![Animation showing enhanced group control causing navigation to proceed down within a group before moving across](media/properties-accessibility/enhanced-group.gif)
 

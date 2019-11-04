@@ -68,12 +68,12 @@ In this tutorial, we:
 ## Add the image in an Excel file to your app
 In another example, you can save images in a cloud storage account, and then use an Excel table to display the images in your app.
 
-In this example, we use the [CreateFirstApp.zip](http://pwrappssamples.blob.core.windows.net/samples/CreateFirstApp.zip) that contains some .jpeg files.
+In this example, we use the [CreateFirstApp.zip](https://pwrappssamples.blob.core.windows.net/samples/CreateFirstApp.zip) that contains some .jpeg files.
 
 > [!NOTE]
 > When displaying images from an Excel file, the path to these images must use forward slashes. When PowerApps saves images to an Excel table (as with the previous steps), the path uses backslashes. So, you can also use the **SavePen_images** from the previous example. If you do, change the paths in the Excel table to use forward slashes instead of backslashes. Otherwise, the images will not display.  
 
-1. Download [CreateFirstApp.zip](http://pwrappssamples.blob.core.windows.net/samples/CreateFirstApp.zip), and extract the **Assets** folder to your cloud storage account.
+1. Download [CreateFirstApp.zip](https://pwrappssamples.blob.core.windows.net/samples/CreateFirstApp.zip), and extract the **Assets** folder to your cloud storage account.
 2. In an Excel spreadsheet, create a table that looks similar to the following:
    
     ![Jackets table](./media/tutorial-working-with-images-in-excel/jackets.png)
@@ -89,7 +89,7 @@ In this example, we use the [CreateFirstApp.zip](http://pwrappssamples.blob.core
 
 When you set the Items property, the Excel table is automatically updated with a new column named **PowerAppsId**.
 
-In the Excel table, the image path can also be the URL to an image. Download the [Flooring Estimates](http://pwrappssamples.blob.core.windows.net/samples/FlooringEstimates.xlsx) sample file to your cloud storage account, add the `FlooringEstimates` table as a data source in your app, and then set the gallery control to `FlooringEstimates`. The gallery is automatically updated with the images.
+In the Excel table, the image path can also be the URL to an image. Download the [Flooring Estimates](https://pwrappssamples.blob.core.windows.net/samples/FlooringEstimates.xlsx) sample file to your cloud storage account, add the `FlooringEstimates` table as a data source in your app, and then set the gallery control to `FlooringEstimates`. The gallery is automatically updated with the images.
 
 ## Learn more
 [Add an image, a video, or a sound](add-images-pictures-audio-video.md)  

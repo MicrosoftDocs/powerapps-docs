@@ -51,7 +51,7 @@ The app designer refers to existing metadata in the default solution. You can us
  > ![Canvas search option](media/app-designer-search-tab.png "Canvas search")
 
 ## Open an app
-1. Sign in to [PowerApps](https://web.powerapps.com/). 
+1. Sign in to [PowerApps](https://make.powerapps.com/). 
 
 2. Select an existing model-driven app or select **Start from blank**. For information about how to create an app, see [Create or edit a model-driven app by using the app designer](create-edit-app.md#create-an-app).
 

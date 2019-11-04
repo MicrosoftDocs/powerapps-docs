@@ -49,7 +49,7 @@ With a gateway, you can connect to on-premises data through these connections:
 
 ## Prerequisites
 
--   A PowerApps account. Don't have one? [Sign up for 30 days free](https://docs.microsoft.com/en-us/powerapps/maker/signup-for-powerapps).
+-   A PowerApps account. Don't have one? [Sign up for 30 days free](https://docs.microsoft.com/powerapps/maker/signup-for-powerapps).
 
 -   Administrative permissions on a gateway. These permissions are provided by
     default for gateways you install. Administrators can grant other people
@@ -63,12 +63,12 @@ With a gateway, you can connect to on-premises data through these connections:
     user's default environment. More information: [Working with environments and Microsoft PowerApps](../canvas-apps/working-with-environments.md).
 
 ## Install a gateway
-1.  In the left navigation pane of [powerapps.com](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Gateways**.
+1.  In the left navigation pane of [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Gateways**.
 
     ![Gateways in left navigation bar](media/nav-pane-gateways.png)
 
 2.  Select a gateway from the list. If you don't have administrative permissions for a gateway, select
-    [Install a gateway now](http://go.microsoft.com/fwlink/?LinkID=820931), and then follow the prompts in the wizard.
+    [Install a gateway now](https://go.microsoft.com/fwlink/?LinkID=820931), and then follow the prompts in the wizard.
 
      ![Gateways install](media/install-gateway-now.png)
 
@@ -91,7 +91,7 @@ You can change the enterprise gateway used for a given dataflow and change the g
 
 
 ## View and manage gateway permissions
-1.  In the left navigation pane of [powerapps.com](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Gateways** and then select the gateway you want.
+1.  In the left navigation pane of [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Gateways** and then select the gateway you want.
 
 2.  To add a user to a gateway, select **Users**, specify a user or group, and then specify a permission level:
 

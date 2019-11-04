@@ -33,4 +33,4 @@ In summary, this guide will help you:
 - Governance and guidelines.
 - UX usage recommendations.
 
-[Download the white paper](http://download.microsoft.com/download/A/F/3/AF3D45A7-4F38-41BE-8956-1DF7A4A5AFDB/approaching-unified-interface-transition.pdf) 
+[Download the white paper](https://download.microsoft.com/download/A/F/3/AF3D45A7-4F38-41BE-8956-1DF7A4A5AFDB/approaching-unified-interface-transition.pdf) 

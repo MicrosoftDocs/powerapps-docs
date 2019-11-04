@@ -41,7 +41,7 @@ If you haven't already enabled the languages for your environment, use the steps
 > Each language can take several minutes to enable. During this time, other users of the environment may not be able to use your app. You should enable languages at time that will be least disruptive to users.
 
 > [!TIP]
-> While you are enableing the languages, note the LCID values used for each language. This value will represent the language in the exported data for the localizable text. Language codes are four-digit or five-digit locale IDs. Valid locale ID values can be found at [Locale ID (LCID) Chart)](http://go.microsoft.com/fwlink/?LinkId=122128).
+> While you are enableing the languages, note the LCID values used for each language. This value will represent the language in the exported data for the localizable text. Language codes are four-digit or five-digit locale IDs. Valid locale ID values can be found at [Locale ID (LCID) Chart)](https://go.microsoft.com/fwlink/?LinkId=122128).
 
 ## Export the localizable text
 

@@ -54,7 +54,7 @@ Use Learning Path to give your users a custom, in-app Help experience that is ta
 ## Turn on Learning Path for your organization  
  Learning Path is an optional feature that can be turned on or off for your organization. You can display Learning Path content included with [!INCLUDE[pn_crm_shortest](../../includes/pn-crm-shortest.md)], create your own Learning Path content for your users, or both.  
 
-1. Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) or [!INCLUDE[pn_crm_shortest](../../includes/pn-crm-shortest.md)] with an admin account.  
+1. Sign in to [PowerApps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) or [!INCLUDE[pn_crm_shortest](../../includes/pn-crm-shortest.md)] with an admin account.  
 
 2. Go to **Settings**, and then select **Administration** under **System**. More information: [Settings](/powerapps/maker/model-driven-apps/advanced-navigation#settings)
 
@@ -501,7 +501,7 @@ More information about using YouTube: [YouTube Help Center](https://go.microsoft
 
 <a name="Localize"></a>   
 ## Localize Learning Path controls  
- You can localize the content in the controls you create in Learning Path so that they are displayed to users in the language they have selected for [!INCLUDE[pn_crm_shortest](../../includes/pn-crm-shortest.md)]. To localize your controls, you can simply export them, localize the strings that are displayed to users, and then import the control that includes the localized content. You can import the control into the same organization or into any organization you want. You can localize the same control into multiple languages, and then just import the specific languages into specific organizations that support users who have that language selected. Localization support in Learning Path follows the OASIS XML Localisation Interchange File Format (XLIFF) 2.0 standard. There are tools and tutorials freely available for working with this common format. More information: [XLIFF Version 2.0](http://docs.oasis-open.org/xliff/xliff-core/v2.0/os/xliff-core-v2.0-os.html)  
+ You can localize the content in the controls you create in Learning Path so that they are displayed to users in the language they have selected for [!INCLUDE[pn_crm_shortest](../../includes/pn-crm-shortest.md)]. To localize your controls, you can simply export them, localize the strings that are displayed to users, and then import the control that includes the localized content. You can import the control into the same organization or into any organization you want. You can localize the same control into multiple languages, and then just import the specific languages into specific organizations that support users who have that language selected. Localization support in Learning Path follows the OASIS XML Localisation Interchange File Format (XLIFF) 2.0 standard. There are tools and tutorials freely available for working with this common format. More information: [XLIFF Version 2.0](https://docs.oasis-open.org/xliff/xliff-core/v2.0/os/xliff-core-v2.0-os.html)  
 
  More information about user language settings in [!INCLUDE[pn_crm_shortest](../../includes/pn-crm-shortest.md)]: [Set personal options](/dynamics365/customer-engagement/basics/set-personal-options)  
 

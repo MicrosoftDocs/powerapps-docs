@@ -19,7 +19,7 @@ search.app:
 
 To import data into Common Data Service, you must provide the appropriate data maps.  
   
- You can download examples of data maps from [Microsoft Downloads: DataImportMaps.zip](http://download.microsoft.com/download/D/5/F/D5F73E15-439B-4EBC-BFFB-C6837B146C76/DataImportMaps.zip).
+ You can download examples of data maps from [Microsoft Downloads: DataImportMaps.zip](https://download.microsoft.com/download/D/5/F/D5F73E15-439B-4EBC-BFFB-C6837B146C76/DataImportMaps.zip).
   
  You use data maps to map the data contained in the source file to the Common Data Service entity attributes. You must map every column in the source file to an appropriate attribute. The data in the unmapped columns is not imported during the data import operation.  
   

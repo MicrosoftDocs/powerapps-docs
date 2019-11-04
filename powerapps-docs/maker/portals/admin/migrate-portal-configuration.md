@@ -20,7 +20,7 @@ After you have completed development or configuration of your portal instance, y
 To export configuration data, you would need to use the Configuration Migration tool and a portal-specific configuration schema file. For more information about this tool, see [Manage configuration data](https://docs.microsoft.com/dynamics365/customer-engagement/admin/manage-configuration-data).
 
 > [!NOTE]
-> - We recommend you to use the latest version of the Configuration Migration tool. The Configuration Migration tool can be downloaded from NuGet. More information for downloading the tool: [Download tools from NuGet](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/download-tools-nuget).
+> - We recommend you to use the latest version of the Configuration Migration tool. The Configuration Migration tool can be downloaded from NuGet. More information for downloading the tool: [Download tools from NuGet](https://docs.microsoft.com/dynamics365/customer-engagement/developer/download-tools-nuget).
 > - The minimum solution version of portals supported by schema files for configuration migration is 8.4.0.275. However, we recommend that you use the latest solution version.
 
 Schema files are available for the following portal types:

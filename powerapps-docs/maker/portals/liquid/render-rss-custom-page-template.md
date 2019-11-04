@@ -12,7 +12,7 @@ ms.reviewer:
 ---
 
 # Create a custom page template to render an RSS feed
-In this example, we'll create a custom page template to render an [RSS feed](http://en.wikipedia.org/wiki/RSS) of news articles, using Liquid and a Web Template Page Template. [!INCLUDE[proc-more-information](../../../includes/proc-more-information.md)] [Store source content by using web templates](store-content-web-templates.md)  
+In this example, we'll create a custom page template to render an [RSS feed](https://en.wikipedia.org/wiki/RSS) of news articles, using Liquid and a Web Template Page Template. [!INCLUDE[proc-more-information](../../../includes/proc-more-information.md)] [Store source content by using web templates](store-content-web-templates.md)  
 
 ## Step 1: Create a new PowerApps view
 

@@ -26,7 +26,7 @@ This group of samples demonstrate how to perform operations that are conditional
   
  [Web API Conditional Operations Sample (C#)](samples/conditional-operations-csharp.md)  
  
- The Common Data Service Web API follows the conventions of the [OData v4.0](http://www.odata.org/documentation/) protocol, which uses [ETags](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752236) to implement resource version control. Web API conditional operations depend upon this versioning  mechanism.  
+ The Common Data Service Web API follows the conventions of the [OData v4.0](https://www.odata.org/documentation/) protocol, which uses [ETags](https://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752236) to implement resource version control. Web API conditional operations depend upon this versioning  mechanism.  
   
  This topic explains the structure and content of the samples at a higher, language-neutral level. It details the HTTP requests and responses, and the associated program output, where applicable. Review the linked sample topics above to obtain language-specific implementations and related details about how to perform the operations described in this topic.  
   
@@ -63,7 +63,7 @@ This group of samples demonstrate how to perform operations that are conditional
  **Request**  
   
    ```http  
-   GET http://[Organization URI]/api/data/v9.0/accounts(14e151db-9b4f-e611-80e0-00155da84c08)?$select=name,revenue,telephone1,description HTTP/1.1  
+   GET https://[Organization URI]/api/data/v9.0/accounts(14e151db-9b4f-e611-80e0-00155da84c08)?$select=name,revenue,telephone1,description HTTP/1.1  
    If-None-Match: W/"628448"  
    OData-MaxVersion: 4.0  
    OData-Version: 4.0  
@@ -91,7 +91,7 @@ This group of samples demonstrate how to perform operations that are conditional
  **Request**  
   
    ```http
-   PUT http://[Organization URI]/api/data/v9.0/accounts(14e151db-9b4f-e611-80e0-00155da84c08)/telephone1 HTTP/1.1  
+   PUT https://[Organization URI]/api/data/v9.0/accounts(14e151db-9b4f-e611-80e0-00155da84c08)/telephone1 HTTP/1.1  
    OData-MaxVersion: 4.0  
    OData-Version: 4.0  
    Accept: application/json  
@@ -118,7 +118,7 @@ This group of samples demonstrate how to perform operations that are conditional
  **Request**  
   
    ```http
-   GET http://[Organization URI]/api/data/v9.0/accounts(14e151db-9b4f-e611-80e0-00155da84c08)?$select=name,revenue,telephone1,description HTTP/1.1  
+   GET https://[Organization URI]/api/data/v9.0/accounts(14e151db-9b4f-e611-80e0-00155da84c08)?$select=name,revenue,telephone1,description HTTP/1.1  
    If-None-Match: W/"628448"  
    OData-MaxVersion: 4.0  
    OData-Version: 4.0  
@@ -132,7 +132,7 @@ This group of samples demonstrate how to perform operations that are conditional
    Content-Type: application/json; odata.metadata=minimal  
    ETag: W/"628460"  
    {  
-      "@odata.context":"http://[Organization URI]/api/data/v9.0/$metadata#accounts(name,revenue,telephone1,description)/$entity",  
+      "@odata.context":"https://[Organization URI]/api/data/v9.0/$metadata#accounts(name,revenue,telephone1,description)/$entity",  
       "@odata.etag":"W/\"628460\"",  
       "name":"Contoso Ltd",  
       "revenue":5000000.0000,  
@@ -148,7 +148,7 @@ This group of samples demonstrate how to perform operations that are conditional
    ```
    Instance retrieved using ETag: W/"628448"  
    {  
-      "@odata.context": "http://[Organization URI]/api/data/v9.0/$metadata#accounts(name,revenue,telephone1,description)/$entity",  
+      "@odata.context": "https://[Organization URI]/api/data/v9.0/$metadata#accounts(name,revenue,telephone1,description)/$entity",  
       "@odata.etag": "W/\"628460\"",  
       "name": "Contoso Ltd",  
       "revenue": 5000000.0,  
@@ -171,7 +171,7 @@ This group of samples demonstrate how to perform operations that are conditional
  **Request**  
   
    ```http
-   DELETE http://[Organization URI]/api/data/v9.0/accounts(14e151db-9b4f-e611-80e0-00155da84c08) HTTP/1.1  
+   DELETE https://[Organization URI]/api/data/v9.0/accounts(14e151db-9b4f-e611-80e0-00155da84c08) HTTP/1.1  
    If-Match: W/"628448"  
    OData-MaxVersion: 4.0  
    OData-Version: 4.0  
@@ -203,7 +203,7 @@ This group of samples demonstrate how to perform operations that are conditional
  **Request**  
   
    ```http  
-    PATCH http://[Organization URI]/api/data/v9.0/accounts(14e151db-9b4f-e611-80e0-00155da84c08) HTTP/1.1  
+    PATCH https://[Organization URI]/api/data/v9.0/accounts(14e151db-9b4f-e611-80e0-00155da84c08) HTTP/1.1  
     If-Match: W/"628448"  
     OData-MaxVersion: 4.0  
     OData-Version: 4.0  
@@ -240,7 +240,7 @@ This group of samples demonstrate how to perform operations that are conditional
  **Request**  
   
    ```http
-    PATCH http://[Organization URI]/api/data/v9.0/accounts(14e151db-9b4f-e611-80e0-00155da84c08) HTTP/1.1  
+    PATCH https://[Organization URI]/api/data/v9.0/accounts(14e151db-9b4f-e611-80e0-00155da84c08) HTTP/1.1  
     If-Match: W/"628460"  
     OData-MaxVersion: 4.0  
     OData-Version: 4.0  
@@ -268,7 +268,7 @@ This group of samples demonstrate how to perform operations that are conditional
  **Request**  
   
    ```http 
-    GET http://[Organization URI]/api/data/v9.0/accounts(14e151db-9b4f-e611-80e0-00155da84c08)?$select=name,revenue,telephone1,description HTTP/1.1  
+    GET https://[Organization URI]/api/data/v9.0/accounts(14e151db-9b4f-e611-80e0-00155da84c08)?$select=name,revenue,telephone1,description HTTP/1.1  
     OData-MaxVersion: 4.0  
     OData-Version: 4.0  
     Accept: application/json  
@@ -282,7 +282,7 @@ This group of samples demonstrate how to perform operations that are conditional
     ETag: W/"628461"  
     OData-Version: 4.0  
     {  
-      "@odata.context":"http://[Organization URI]/api/data/v9.0/$metadata#accounts(name,revenue,telephone1,description)/$entity",  
+      "@odata.context":"https://[Organization URI]/api/data/v9.0/$metadata#accounts(name,revenue,telephone1,description)/$entity",  
       "@odata.etag":"W/\"628461\"",  
       "name":"Contoso Ltd",  
       "revenue":6000000.0000,  
@@ -297,7 +297,7 @@ This group of samples demonstrate how to perform operations that are conditional
   
    ```
     {  
-      "@odata.context": "http://[Organization URI]/api/data/v9.0/$metadata#accounts(name,revenue,telephone1,description)/$entity",  
+      "@odata.context": "https://[Organization URI]/api/data/v9.0/$metadata#accounts(name,revenue,telephone1,description)/$entity",  
       "@odata.etag": "W/\"628461\"",  
       "name": "Contoso Ltd",  
       "revenue": 6000000.0,  
@@ -319,7 +319,7 @@ This group of samples demonstrate how to perform operations that are conditional
  **Request**  
   
    ```http
-    PATCH http://[Organization URI]/api/data/v9.0/accounts(14e151db-9b4f-e611-80e0-00155da84c08) HTTP/1.1  
+    PATCH https://[Organization URI]/api/data/v9.0/accounts(14e151db-9b4f-e611-80e0-00155da84c08) HTTP/1.1  
     If-None-Match: *  
     OData-MaxVersion: 4.0  
     OData-Version: 4.0  
@@ -356,7 +356,7 @@ This group of samples demonstrate how to perform operations that are conditional
  **Request**  
   
    ```http
-    PATCH http://[Organization URI]/api/data/v9.0/accounts(14e151db-9b4f-e611-80e0-00155da84c08) HTTP/1.1  
+    PATCH https://[Organization URI]/api/data/v9.0/accounts(14e151db-9b4f-e611-80e0-00155da84c08) HTTP/1.1  
     If-Match: *  
     OData-MaxVersion: 4.0  
     OData-Version: 4.0  
@@ -385,7 +385,7 @@ This group of samples demonstrate how to perform operations that are conditional
  **Request**  
   
    ```http  
-    GET http://[Organization URI]/api/data/v9.0/accounts(14e151db-9b4f-e611-80e0-00155da84c08)?$select=name,revenue,telephone1,description HTTP/1.1  
+    GET https://[Organization URI]/api/data/v9.0/accounts(14e151db-9b4f-e611-80e0-00155da84c08)?$select=name,revenue,telephone1,description HTTP/1.1  
     OData-MaxVersion: 4.0  
     OData-Version: 4.0  
     Accept: application/json    
@@ -399,7 +399,7 @@ This group of samples demonstrate how to perform operations that are conditional
     ETag: W/"628463"  
     OData-Version: 4.0  
     {  
-      "@odata.context":"http://[Organization URI]/api/data/v9.0/$metadata#accounts(name,revenue,telephone1,description)/$entity",  
+      "@odata.context":"https://[Organization URI]/api/data/v9.0/$metadata#accounts(name,revenue,telephone1,description)/$entity",  
       "@odata.etag":"W/\"628463\"",  
       "name":"Contoso Ltd","revenue":7500000.0000,  
       "telephone1":"555-0005",  
@@ -413,7 +413,7 @@ This group of samples demonstrate how to perform operations that are conditional
   
    ```http    
     {  
-      "@odata.context": "http://[Organization URI]/api/data/v9.0/$metadata#accounts(name,revenue,telephone1,description)/$entity",  
+      "@odata.context": "https://[Organization URI]/api/data/v9.0/$metadata#accounts(name,revenue,telephone1,description)/$entity",  
       "@odata.etag": "W/\"628463\"",  
       "name": "Contoso Ltd",  
       "revenue": 7500000.0,  
@@ -429,7 +429,7 @@ This group of samples demonstrate how to perform operations that are conditional
  **Request**  
   
    ```http    
-    DELETE http://[Organization URI]/api/data/v9.0/accounts(14e151db-9b4f-e611-80e0-00155da84c08) HTTP/1.1  
+    DELETE https://[Organization URI]/api/data/v9.0/accounts(14e151db-9b4f-e611-80e0-00155da84c08) HTTP/1.1  
     OData-MaxVersion: 4.0  
     OData-Version: 4.0  
     Accept: application/json    
@@ -452,7 +452,7 @@ This group of samples demonstrate how to perform operations that are conditional
  **Request**  
   
    ```http  
-    PATCH http://[Organization URI]/api/data/v9.0/accounts(14e151db-9b4f-e611-80e0-00155da84c08) HTTP/1.1  
+    PATCH https://[Organization URI]/api/data/v9.0/accounts(14e151db-9b4f-e611-80e0-00155da84c08) HTTP/1.1  
     If-Match: *  
     OData-MaxVersion: 4.0  
     OData-Version: 4.0  
