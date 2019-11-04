@@ -604,7 +604,7 @@ Adds the specified number of whole years to the DateTime value. The parameter ca
 
 ### date\_to\_iso8601
 
-Formats a DateTime value according to the [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) standard. Useful when creating [*Atom feeds*](http://tools.ietf.org/html/rfc4287), or the HTML5 &lt;time&gt; element.  
+Formats a DateTime value according to the [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) standard. Useful when creating [*Atom feeds*](https://tools.ietf.org/html/rfc4287), or the HTML5 &lt;time&gt; element.  
 
 **Code**
 
@@ -620,7 +620,7 @@ Formats a DateTime value according to the [ISO 8601](http://en.wikipedia.org/wik
 
 ### date\_to\_rfc822
 
-Formats a DateTime value according to the [RFC 822](https://www.ietf.org/rfc/rfc0822.txt) standard. Useful when creating [*RSS feeds*](http://cyber.law.harvard.edu/rss/rss.html).  
+Formats a DateTime value according to the [RFC 822](https://www.ietf.org/rfc/rfc0822.txt) standard. Useful when creating [*RSS feeds*](https://cyber.law.harvard.edu/rss/rss.html).  
 
 **Code**
 
@@ -1205,7 +1205,7 @@ Formats a plain text string as simple HTML. All text will be HTML encoded, block
 **Output**
 
 ```
-<p>This is the first paragraph of notetext. It contains a URL: <a href="http://example.com/" rel="nofollow">http://example.com</a></p>
+<p>This is the first paragraph of notetext. It contains a URL: <a href="https://example.com/" rel="nofollow">https://example.com</a></p>
 
 <p>This is a second paragraph.</p>
 ```
@@ -1395,7 +1395,7 @@ If this filter is applied to a full absolute URL, an updated absolute URL will b
 **Code**
 
 ```
-{{ 'http://example.com/path?page=1' | add_query: 'foo', 'bar' }}
+{{ 'https://example.com/path?page=1' | add_query: 'foo', 'bar' }}
 
 {{ '/path?page=1' | add_query: 'page', 2 }}
 ```
@@ -1403,7 +1403,7 @@ If this filter is applied to a full absolute URL, an updated absolute URL will b
 **Output**
 
 ```
-http://example.com/path?page=1&foo=bar
+https://example.com/path?page=1&foo=bar
 
 /path?page=2
 ```
@@ -1415,13 +1415,13 @@ Gets the base URL of a given URL.
 **Code**
 
 ```
-{{ 'http://example.com/path?foo=bar&page=2' | base }}
+{{ 'https://example.com/path?foo=bar&page=2' | base }}
 ```
 
 **Output**
 
 ```
-http://example.com
+https://example.com
 ```
 
 ### **host**
@@ -1431,7 +1431,7 @@ Gets the host part of a URL.
 **Code**
 
 ```
-{{ 'http://example.com/path?foo=bar&page=2' | host }}
+{{ 'https://example.com/path?foo=bar&page=2' | host }}
 ```
 
 **Output**
@@ -1447,7 +1447,7 @@ Gets the path part of a URL.
 **Code**
 
 ```
-{{ 'http://example.com/path?foo=bar&page=2' | path }}
+{{ 'https://example.com/path?foo=bar&page=2' | path }}
 
 {{ '/path?foo=bar&page=2' | path }}
 ```
@@ -1467,7 +1467,7 @@ Gets the path and query part of a URL.
 **Code**
 
 ```
-{{ 'http://example.com/path?foo=bar&page=2' | path_and_query }}
+{{ 'https://example.com/path?foo=bar&page=2' | path_and_query }}
 
 {{ '/path?foo=bar&page=2' | path_and_query }}
 ```
@@ -1487,7 +1487,7 @@ Gets the port number of a URL.
 **Code**
 
 ```
-{{ 'http://example.com/path?foo=bar&page=2' | port }}
+{{ 'https://example.com/path?foo=bar&page=2' | port }}
 
 {{ 'https://example.com/path?foo=bar&page=2' | port }}
 
@@ -1513,7 +1513,7 @@ If this filter is applied to a full absolute URL, an updated absolute URL will b
 **Code**
 
 ```
-{{ 'http://example.com/path?page=1' | remove_query: 'page' }}
+{{ 'https://example.com/path?page=1' | remove_query: 'page' }}
 
 {{ '/path?page=1' | remove_query: 'page' }}
 ```
@@ -1521,7 +1521,7 @@ If this filter is applied to a full absolute URL, an updated absolute URL will b
 **Output**
 
 ```
-http://example.com/path
+https://example.com/path
 
 /path
 ```
@@ -1533,7 +1533,7 @@ Gets the scheme part of a URL.
 **Code**
 
 ```
-{{ 'http://example.com/path?foo=bar&page=2' | scheme }}
+{{ 'https://example.com/path?foo=bar&page=2' | scheme }}
 
 {{ 'https://example.com/path?foo=bar&page=2' | scheme }}
 ```

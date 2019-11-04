@@ -15,7 +15,7 @@ ms.reviewer:
 
 If you select an environment that contains model-driven apps in Dynamics 365 (such as Dynamics 365 Sales and Dynamics 365 Customer Service), you can create the portals mentioned in [Portal templates](portal-templates.md).
 
-1.	Sign in to [PowerApps](http://web.powerapps.com).
+1.	Sign in to [PowerApps](https://make.powerapps.com).
 
 2.	Select **Create** on the left pane and enter **portal** in the **Search templates** field to display all Dynamics 365 portal templates.
 

@@ -36,7 +36,7 @@ The principles of generating an app won't change even if you create a list that'
 
 ## Generate an app from within PowerApps
 
-1. Sign in to [PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1. Sign in to [PowerApps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
 1. Under **Make your own app**, hover over **Start from data**, and then select **Make this app**.
 

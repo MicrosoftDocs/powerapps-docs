@@ -29,7 +29,7 @@ Because the default solution contains all the solutions components, it may be ea
   
  For more information about solution concepts, see [Working with solutions](solutions-overview.md).  
   
-1.  Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select **Solutions** from the left navigation. 
+1.  Sign in to [PowerApps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select **Solutions** from the left navigation. 
   
 2.  Select **New solution** and then complete the required fields for the solution.
   

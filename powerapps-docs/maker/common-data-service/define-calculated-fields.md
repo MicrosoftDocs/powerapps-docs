@@ -54,9 +54,9 @@ For example, a salesperson may want to know the weighted revenue for an opportun
 
 ## Create a calculated field
 
-Use the field editor to specify a calculated field. In this example we will use [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) but the steps are similar using solution explorer. More information: [Create and edit fields](create-edit-fields.md)
+Use the field editor to specify a calculated field. In this example we will use [PowerApps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) but the steps are similar using solution explorer. More information: [Create and edit fields](create-edit-fields.md)
   
-1. Open [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)
+1. Open [PowerApps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)
 1. Expand **Data** > **Entities**.  
 1. Select the entity you want and choose **Fields**. Choose **Add Field**.  
 1. Provide the required information for the field, including the **Display name**, **Name** and **Data type**. 
@@ -228,4 +228,4 @@ You should be aware of certain conditions and limitations when working with calc
  
 [Create and edit fields](create-edit-fields.md)<br />
 [Define rollup fields that aggregate values](define-rollup-fields.md)<br />
-[Video: Rollup and calculated fields](http://go.microsoft.com/fwlink/p/?LinkId=517727)
+[Video: Rollup and calculated fields](https://go.microsoft.com/fwlink/p/?LinkId=517727)

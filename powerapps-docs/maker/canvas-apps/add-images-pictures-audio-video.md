@@ -20,7 +20,7 @@ This topic shows you how to embed multimedia files in your canvas app, upload pe
 
 ## Prerequisites
 
-[Sign up](../signup-for-powerapps.md) for PowerApps, and then [sign in](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) using the same credentials that you used to sign up.
+[Sign up](../signup-for-powerapps.md) for PowerApps, and then [sign in](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) using the same credentials that you used to sign up.
 
 ## Add media from a file or the cloud
 
@@ -72,12 +72,12 @@ You can choose the kind of media file to add (for example, images, video, or aud
 ## Add images from the cloud to your app
 In this scenario, you save images in a cloud storage account, OneDrive for Business. You use an Excel table to contain the path to the images, and you display the images in a gallery control in your app.
 
-This scenario uses the [CreateFirstApp.zip](http://pwrappssamples.blob.core.windows.net/samples/CreateFirstApp.zip) that contains some .jpeg files.
+This scenario uses the [CreateFirstApp.zip](https://pwrappssamples.blob.core.windows.net/samples/CreateFirstApp.zip) that contains some .jpeg files.
 
 > [!NOTE]
 > The path to these images in the Excel file must use forward slashes. When PowerApps saves image paths in an Excel table, the path uses backslashes. If you use image paths from such a table, change the paths in the Excel table to use forward slashes instead of backslashes. Otherwise, the images won't display.  
 
-1. Download [CreateFirstApp.zip](http://pwrappssamples.blob.core.windows.net/samples/CreateFirstApp.zip), and extract the **Assets** folder to your cloud storage account.
+1. Download [CreateFirstApp.zip](https://pwrappssamples.blob.core.windows.net/samples/CreateFirstApp.zip), and extract the **Assets** folder to your cloud storage account.
 
 2. Rename the **Assets** folder to **Assets_images**.
 
@@ -99,7 +99,7 @@ This scenario uses the [CreateFirstApp.zip](http://pwrappssamples.blob.core.wind
 
     When you set the **Items** property, a column named **PowerAppsId** is automatically added to the Excel table.
 
-    In the Excel table, the image path can also be the URL to an image. An example is the [Flooring Estimates](http://pwrappssamples.blob.core.windows.net/samples/FlooringEstimates.xlsx) sample file. You can download it to your cloud storage account, add the `FlooringEstimates` table as a data source in your app, and then set the gallery control to `FlooringEstimates`. The gallery is automatically updated with the images.
+    In the Excel table, the image path can also be the URL to an image. An example is the [Flooring Estimates](https://pwrappssamples.blob.core.windows.net/samples/FlooringEstimates.xlsx) sample file. You can download it to your cloud storage account, add the `FlooringEstimates` table as a data source in your app, and then set the gallery control to `FlooringEstimates`. The gallery is automatically updated with the images.
 
 ## Upload pen drawings to the cloud
 In this scenario, you learn how to upload pen drawings to your data source, OneDrive for Business, and examine how the drawings are stored there.

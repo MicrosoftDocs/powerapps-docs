@@ -30,7 +30,7 @@ An admin can upload the app so it shows up for **all** teams in your tenant unde
 
 ## Download the app
 
-1. Sign in to [web.powerapps.com](https://web.powerapps.com), and then select **Apps** in the menu.
+1. Sign in to [make.powerapps.com](https://make.powerapps.com), and then select **Apps** in the menu.
 
     ![Show list of apps](./media/embed-teams-app/file-apps2.png "Show list of apps")
 

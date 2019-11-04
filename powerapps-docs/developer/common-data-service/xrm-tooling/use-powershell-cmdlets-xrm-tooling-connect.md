@@ -147,4 +147,4 @@ Use the `Get-CrmConnection` cmdlet to connect to a Common Data Service instance.
   
 [Use XRM Tooling API to connect to Common Data Service](use-crmserviceclient-constructors-connect.md)<br />
 [Build Windows client applications using the XRM tools](build-windows-client-applications-xrm-tools.md)<br />
-[Blog: PowerShell module for performing data operations and manipulating user and system settings in Common Data Service](http://blogs.msdn.com/b/crm/archive/2015/09/25/powershell-module-for-performing-data-operations-and-manipulating-user-and-system-settings-in-crm.aspx)
+[Blog: PowerShell module for performing data operations and manipulating user and system settings in Common Data Service](https://blogs.msdn.com/b/crm/archive/2015/09/25/powershell-module-for-performing-data-operations-and-manipulating-user-and-system-settings-in-crm.aspx)

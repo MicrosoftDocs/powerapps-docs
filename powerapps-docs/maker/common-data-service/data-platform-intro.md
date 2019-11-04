@@ -75,7 +75,7 @@ Entities within Common Data Service can leverage rich server-side logic and vali
 Common Data Service has a rich security model to protect the data integrity and privacy of users while promoting efficient data access and collaboration. You can combine business units, role-based security, record-based security, and field-based security to define the overall access to information that users have in a Common Data Service environment. More information: [Security in Common Data Service](/power-platform/admin/wp-security) 
 
 ## Developer capabilities
-In addition to the features available through the [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) portal, Common Data Service also includes features for developers to programmatically access metadata and data to create entities and business logic, as well as interact with data. For more information, see [Common Data Service Developer Overview](../../developer/common-data-service/overview.md)
+In addition to the features available through the [PowerApps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) portal, Common Data Service also includes features for developers to programmatically access metadata and data to create entities and business logic, as well as interact with data. For more information, see [Common Data Service Developer Overview](../../developer/common-data-service/overview.md)
 
 ## Next steps
 To get started using Common Data Service:

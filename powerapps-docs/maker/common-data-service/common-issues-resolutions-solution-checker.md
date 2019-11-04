@@ -58,7 +58,7 @@ If you want to keep the past results from Solution Checker, export the results f
 
 To uninstall the PowerApps Checker solution:
 
-1. As a System Administrator or as a System Customizer, open the PowerApps portal by going to https://web.powerapps.com/environments.
+1. As a System Administrator or as a System Customizer, open the PowerApps portal by going to https://make.powerapps.com/environments.
 2. Select **Solutions**.
 3. Select **PowerApps Checker**, and then on the solutions toolbar select **Delete**.
 
@@ -66,7 +66,7 @@ To uninstall the PowerApps Checker solution:
 
 To install PowerApps Checker back into your Common Data Service environment:
 
-1. As a System Administrator or as a System Customizer, open up your PowerApps portal by going to https://web.powerapps.com/environments.
+1. As a System Administrator or as a System Customizer, open up your PowerApps portal by going to https://make.powerapps.com/environments.
 2. Select **Solutions**.
 3. On the solution toolbar select **Solution Checker**, and then select **Install**.
 

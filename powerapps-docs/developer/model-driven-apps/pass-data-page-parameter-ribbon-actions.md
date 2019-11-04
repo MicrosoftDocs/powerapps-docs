@@ -64,7 +64,7 @@ function mySampleFunction(primaryControl) {
 
     // Set the WebSiteURL field if account name contains "Contoso"
     if (accountName.toLowerCase().search("contoso") != -1) {
-        formContext.getAttribute("websiteurl").setValue("http://www.contoso.com");
+        formContext.getAttribute("websiteurl").setValue("https://www.contoso.com");
     }
     else {
         Xrm.Navigation.openAlertDialog({ text: "Account name does not contain 'Contoso'." });

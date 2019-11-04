@@ -45,9 +45,9 @@ When the inbound URL is requested, the browser is redirected to the URL of the t
 
 For example, for an Inbound URL value of cs-survey with a target webpage set to the Customer Support Survey page, the following request:
 
-http://customerportal.contoso.com/cs-survey
+https://customerportal.contoso.com/cs-survey
 
 results in the browser requesting the following URL:
 
-http://customerportal.contoso.com/surveys/customer-service-survey/
+https://customerportal.contoso.com/surveys/customer-service-survey/
 

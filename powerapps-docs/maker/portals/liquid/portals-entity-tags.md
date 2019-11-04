@@ -231,7 +231,7 @@ Provide **only one** of id, name, or key to select the Entity List to load.
 
 **id**
 
-Loads an entity list by [GUID](http://en.wikipedia.org/wiki/Globally_unique_identifier) ID. id must be a string that can be parsed as a GUID.  
+Loads an entity list by [GUID](https://en.wikipedia.org/wiki/Globally_unique_identifier) ID. id must be a string that can be parsed as a GUID.  
 
 ```
 {% entitylist id:936DA01F-9ABD-4d9d-80C7-02AF85C822A8 %}
@@ -265,7 +265,7 @@ Loaded entity list {{ entitylist.adx_name }}.
 
 **key**
 
-Loads an entity list by ID **or** name. If the provided key value can be parsed as a [GUID](http://en.wikipedia.org/wiki/Globally_unique_identifier), the entity list will be loaded by ID. Otherwise, it will be loaded by name.
+Loads an entity list by ID **or** name. If the provided key value can be parsed as a [GUID](https://en.wikipedia.org/wiki/Globally_unique_identifier), the entity list will be loaded by ID. Otherwise, it will be loaded by name.
 
 ```
 <!-- key_variable can hold an ID or name -->
@@ -610,7 +610,7 @@ A common use case is to set this parameter based on a [request](liquid-objects.m
 {% endsearchindex %}
 ```
 
-This parameter supports [the Lucene Query Parser syntax](http://lucene.apache.org/core/2_9_4/queryparsersyntax.html).
+This parameter supports [the Lucene Query Parser syntax](https://lucene.apache.org/core/2_9_4/queryparsersyntax.html).
 
 **filter**
 
@@ -624,7 +624,7 @@ An additional query used to match results. This parameter is intended to accept 
 {% endsearchindex %}
 ```
 
-This parameter supports [the Lucene Query Parser syntax](http://lucene.apache.org/core/2_9_4/queryparsersyntax.html).  
+This parameter supports [the Lucene Query Parser syntax](https://lucene.apache.org/core/2_9_4/queryparsersyntax.html).  
 
 > [!Note]     
 > The difference between filter and query is that while both will accept the Lucene Query Parser syntax, query is intended to be more forgiving about how this syntax is parsed ߝ as it's expected that most end users will not be aware of this syntax. So, in the case that parsing query according to this syntax fails, the entire query will be escaped and submitted as the query text. filter, on the other hand, will be parsed strictly and return an error if the case of invalid syntax.

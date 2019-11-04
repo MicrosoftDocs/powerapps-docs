@@ -34,22 +34,22 @@ URL addressable elements enable you to include links to forms, views, dialogs, a
 
 <!-- To open a new account entity record form for on-premises [!INCLUDE[pn_microsoftcrm](../includes/pn-microsoftcrm.md)]:  
  ```  
-http://mycrm/myOrg/main.aspx?etn=account&pagetype=entityrecord  
+https://mycrm/myOrg/main.aspx?etn=account&pagetype=entityrecord  
  ```  -->
 
  To open an account entity record form for where the id is {91330924-802A-4B0D-A900-34FD9D790829}:  
  ```  
-http://myorg.crm.dynamics.com/main.aspx?etn=account&pagetype=entityrecord&id=%7B91330924-802A-4B0D-A900-34FD9D790829%7D  
+https://myorg.crm.dynamics.com/main.aspx?etn=account&pagetype=entityrecord&id=%7B91330924-802A-4B0D-A900-34FD9D790829%7D  
  ```  
 
  To open the **Closed Opportunities** view:  
  ```  
-http://myorg.crm.dynamics.com/main.aspx?etn=opportunity&pagetype=entitylist&viewid=%7b00000000-0000-0000-00AA-000010003006%7d&viewtype=1039  
+https://myorg.crm.dynamics.com/main.aspx?etn=opportunity&pagetype=entitylist&viewid=%7b00000000-0000-0000-00AA-000010003006%7d&viewtype=1039  
  ```  
 
  To open the **Active Contacts** view with no navigation bar or command bar  
  ```  
-http://myorg.crm.dynamics.com/main.aspx?etn=contact&pagetype=entitylist&viewid={00000000-0000-0000-00AA-000010001004}&viewtype=1039&navbar=off&cmdbar=false  
+https://myorg.crm.dynamics.com/main.aspx?etn=contact&pagetype=entitylist&viewid={00000000-0000-0000-00AA-000010001004}&viewtype=1039&navbar=off&cmdbar=false  
  ```  
 
 > [!NOTE]
@@ -65,7 +65,7 @@ http://myorg.crm.dynamics.com/main.aspx?etn=contact&pagetype=entitylist&viewid={
 > [!TIP]
 >  To get the id value for any record, use the **Send a Link** button the command bar. The following is an example of what will be opened in your email application:  
 >   
->  `<http://mycrm/myOrg/main.aspx?etc=4&id=%7b899D4FCF-F4D3-E011-9D26-00155DBA3819%7d&pagetype=entityrecord>`.  
+>  `<https://mycrm/myOrg/main.aspx?etc=4&id=%7b899D4FCF-F4D3-E011-9D26-00155DBA3819%7d&pagetype=entityrecord>`.  
 >   
 >  The id parameter passed to the URL is the encoded id value for the record. In this example the id value is `{899D4FCF-F4D3-E011-9D26-00155DBA3819}`. The encoded version of the GUID substitutes opening and closing brackets “{” and “}” with “%7B” and “%7D”, respectively,  
 

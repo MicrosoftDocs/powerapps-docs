@@ -50,7 +50,7 @@ There are two designers you can use to create alternate keys:
 
 |Designer| Description|
 |--|--|
-|[PowerApps portal](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)|Provides an easy streamlined experience, but some options are not available.<br />More information: [Define alternate keys using PowerApps portal](define-alternate-keys-portal.md)|
+|[PowerApps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)|Provides an easy streamlined experience, but some options are not available.<br />More information: [Define alternate keys using PowerApps portal](define-alternate-keys-portal.md)|
 |Solution explorer|Not as easy, but provides for more flexibility for less common requirements.<br />More information: [Define alternate keys using solution explorer](define-alternate-keys-solution-explorer.md) |
 
 > [!NOTE]
@@ -60,7 +60,7 @@ There are two designers you can use to create alternate keys:
 
 Information in this topic will help you choose which designer you can use. 
 
-You should use the [PowerApps portal](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) to create alternate keys unless you need to address any of the following requirements:
+You should use the [PowerApps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) to create alternate keys unless you need to address any of the following requirements:
 
 - Create an alternate key within a solution other than the Common Data Service default solution
 - You want to easily track the system job created that tracks the progress of creating the supporting indexes

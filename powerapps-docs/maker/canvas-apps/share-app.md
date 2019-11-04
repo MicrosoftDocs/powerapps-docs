@@ -31,7 +31,7 @@ Before you share an app, you must save it to the cloud (not locally) and then pu
 
 ## Share an app
 
-1. [Sign in](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) to PowerApps, and then select **Apps** near the left edge.
+1. [Sign in](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) to PowerApps, and then select **Apps** near the left edge.
 
     ![Show list of apps](./media/share-app/file-apps.png)
 
@@ -73,7 +73,7 @@ Before you share an app, you must save it to the cloud (not locally) and then pu
 
 1. At the bottom of the share panel, select **Share**.
 
-    Everyone with whom you shared the app can run it in PowerApps Mobile on a mobile device or in AppSource on [Dynamics 365](https://home.dynamics.com) in a browser. Co-owners can edit and share the app in [PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+    Everyone with whom you shared the app can run it in PowerApps Mobile on a mobile device or in AppSource on [Dynamics 365](https://home.dynamics.com) in a browser. Co-owners can edit and share the app in [PowerApps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
     If you sent an email invitation, everyone with whom you shared the app can run it by selecting a link in the invitation.
 
@@ -180,7 +180,7 @@ Yes. Though, access to canvas standalone apps require a PowerApps license includ
 > [!div class="mx-imgBorder"]  
 > ![Embed canvas app in SharePoint for guests](media/share-app/guest_access_doc_5.PNG "Embed canvas app in SharePoint for guests")
 
-When embedding a canvas app in SharePoint via the iFrame HTML tag, reference the app using the full web URL. To find the URL, go to http://make.powerapps.com, select an app, select the **Details** tab, and the URL is displayed under **Web link**.
+When embedding a canvas app in SharePoint via the iFrame HTML tag, reference the app using the full web URL. To find the URL, go to https://make.powerapps.com, select an app, select the **Details** tab, and the URL is displayed under **Web link**.
 
 > [!div class="mx-imgBorder"]  
 > ![Canvas app details](media/share-app/guest_access_doc_6.PNG "Canvas app details")
