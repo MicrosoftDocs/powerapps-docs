@@ -128,7 +128,7 @@ System query options `$filter`, `$orderby` and `$top` are not supported when usi
   
 <a name="BKMK_SampleCode"></a>   
 ## Sample code  
- The following code snippet shows how the `RetrieveEntityChangesRequest` message is used to retrieve the changes for an entity. For the complete sample, see [Synchronize data with external systems using change tracking](http://go.microsoft.com/fwlink/p/?LinkId=533957).  
+ The following code snippet shows how the `RetrieveEntityChangesRequest` message is used to retrieve the changes for an entity. For the complete sample, see [Synchronize data with external systems using change tracking](https://go.microsoft.com/fwlink/p/?LinkId=533957).  
   
 ```csharp
 string token;

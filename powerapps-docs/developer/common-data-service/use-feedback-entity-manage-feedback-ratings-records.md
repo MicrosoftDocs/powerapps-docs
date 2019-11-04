@@ -30,7 +30,7 @@ Improve your products and services by enabling users to provide feedback and rat
   Once you have enabled an entity for feedback and rating, you can't disable it. After you enable an entity for feedback, a regarding relationship is created between the entity and the `Feedback` entity.  
   
 > [!NOTE]
->  You can also use the customization tools in Common Data Service to enable feedback and rating for system and custom entities. More information: [Enable an entity for feedback](http://go.microsoft.com/fwlink/p/?LinkId=785436)  
+>  You can also use the customization tools in Common Data Service to enable feedback and rating for system and custom entities. More information: [Enable an entity for feedback](https://go.microsoft.com/fwlink/p/?LinkId=785436)  
   
  The `Feedback` entity stores the following information :  
   

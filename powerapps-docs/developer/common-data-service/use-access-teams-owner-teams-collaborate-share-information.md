@@ -115,7 +115,7 @@ With *owner* teams or *access* teams, you can easily share business objects and 
  [Sample: Share a record using an access team](org-service/samples/share-record-using-access-team.md)   
  [Manage teams](https://technet.microsoft.com/library/dn531089.aspx)   
  [Whitepaper: Access Teams with Microsoft Dynamics CRM 2013](http://download.microsoft.com/download/E/9/0/E9009308-CA01-4B37-B03C-435B8ACB49B4/Access%20Teams%20with%20Microsoft%20Dynamics%20CRM%202013.pdf)   
- [Whitepaper: Scalable security modeling with Microsoft Dynamics CRM](http://go.microsoft.com/fwlink/p/?LinkID=328757)   
+ [Whitepaper: Scalable security modeling with Microsoft Dynamics CRM](https://go.microsoft.com/fwlink/p/?LinkID=328757)   
  [User and Team Entities](user-team-entities.md)   
  [Team Entity](reference/entities/team.md)   
  [TeamTemplate Entity](reference/entities/teamtemplate.md)   

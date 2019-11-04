@@ -33,7 +33,7 @@ Visualizations let you see your business data graphically. A visualization is at
   
 <a name="Charts"></a>   
 ## Chart visualizations  
- Charts let you see summaries of grid data. The charts are built by using the Microsoft Chart Controls for Microsoft .NET Framework 3.5. For more information about Microsoft Chart Controls, see [Download: Chart Controls for .NET Framework](http://go.microsoft.com/fwlink/p/?LinkId=128852).  
+ Charts let you see summaries of grid data. The charts are built by using the Microsoft Chart Controls for Microsoft .NET Framework 3.5. For more information about Microsoft Chart Controls, see [Download: Chart Controls for .NET Framework](https://go.microsoft.com/fwlink/p/?LinkId=128852).  
   
  These charts are integrated with the grids in the web application. When you apply a filter (query) to the data in a grid, the filter is applied to the chart also, and the chart is updated accordingly. Similarly, when you perform drill-down operations on a chart, the grid data is updated automatically.  
   
@@ -125,6 +125,6 @@ UoMSchedule
  [UserQueryVisualization Entity](../common-data-service/reference/entities/userqueryvisualization.md)
  [Download: Chart Controls for .NET Framework Language Pack](http://www.microsoft.com/downloads/details.aspx?FamilyId=581FF4E3-749F-4454-A5E3-DE4C463143BD&displaylang=en)   
  [Download: Chart Controls Add-on for Visual Studio](http://www.microsoft.com/downloads/details.aspx?FamilyId=1D69CE13-E1E5-4315-825C-F14D33A303E9&displaylang=en)   
- [Download: Chart Controls for .NET Framework Documentation](http://go.microsoft.com/fwlink/p/?LinkId=128301)   
+ [Download: Chart Controls for .NET Framework Documentation](https://go.microsoft.com/fwlink/p/?LinkId=128301)   
  [Samples Environment for Microsoft Chart Controls](http://code.msdn.microsoft.com/mschart)   
- [Chart Controls Forum](http://go.microsoft.com/fwlink/p/?LinkId=128713)
+ [Chart Controls Forum](https://go.microsoft.com/fwlink/p/?LinkId=128713)

@@ -51,7 +51,7 @@ To view the entity metadata for your organization, install the Metadata Browser 
 <a name="BKMK_DetectValidStatusTransitions"></a>   
 
 ## Detect valid status transitions  
- You can modify the `statuscode` attribute to define which other status options represent valid transitions from the current status. For instructions, see the Customization Guide topic: [Define status reason transitions](http://go.microsoft.com/fwlink/p/?LinkId=393657)  
+ You can modify the `statuscode` attribute to define which other status options represent valid transitions from the current status. For instructions, see the Customization Guide topic: [Define status reason transitions](https://go.microsoft.com/fwlink/p/?LinkId=393657)  
   
  When custom state transitions are applied to an entity, the <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.EnforceStateTransitions> property will be `true`. Also, each <xref:Microsoft.Xrm.Sdk.Metadata.StatusOptionMetadata> within the <xref:Microsoft.Xrm.Sdk.Metadata.StatusAttributeMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.OptionSetMetadata.Options> collection will have a new <xref:Microsoft.Xrm.Sdk.Metadata.StatusOptionMetadata.TransitionData> property. This property will contain a String value that represents an XML document. This document contains the definition of the allowed transitions. For example, the default `Incident` (**Case**) `StatusCode` attribute option may have the following `TransitionData` value.  
   
@@ -82,4 +82,4 @@ To view the entity metadata for your organization, install the Metadata Browser 
  [Sample: Retrieve Valid Status Transitions](org-service/samples/retrieve-valid-status-transitions.md)   
  [Record state and status](/dynamics365/customer-engagement/developer/introduction-entities#bkmk_RecordStateandStatus)   
  [Retrieve and Detect Changes to Metadata](/dynamics365/customer-engagement/developer/retrieve-detect-changes-metadata)   
- [Define status reason transitions](http://go.microsoft.com/fwlink/p/?LinkId=393657)
+ [Define status reason transitions](https://go.microsoft.com/fwlink/p/?LinkId=393657)

@@ -228,4 +228,4 @@ You should be aware of certain conditions and limitations when working with calc
  
 [Create and edit fields](create-edit-fields.md)<br />
 [Define rollup fields that aggregate values](define-rollup-fields.md)<br />
-[Video: Rollup and calculated fields](http://go.microsoft.com/fwlink/p/?LinkId=517727)
+[Video: Rollup and calculated fields](https://go.microsoft.com/fwlink/p/?LinkId=517727)

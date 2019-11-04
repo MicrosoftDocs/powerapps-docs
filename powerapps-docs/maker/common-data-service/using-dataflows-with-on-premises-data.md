@@ -68,7 +68,7 @@ With a gateway, you can connect to on-premises data through these connections:
     ![Gateways in left navigation bar](media/nav-pane-gateways.png)
 
 2.  Select a gateway from the list. If you don't have administrative permissions for a gateway, select
-    [Install a gateway now](http://go.microsoft.com/fwlink/?LinkID=820931), and then follow the prompts in the wizard.
+    [Install a gateway now](https://go.microsoft.com/fwlink/?LinkID=820931), and then follow the prompts in the wizard.
 
      ![Gateways install](media/install-gateway-now.png)
 
