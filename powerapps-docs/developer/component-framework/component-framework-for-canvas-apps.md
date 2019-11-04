@@ -74,7 +74,7 @@ To add code components to a canvas app:
 2. Create a new canvas app or edit an existing app to which you want to add the code component.
 
    > [!IMPORTANT]
-   > Make sure the solution zip file is already [imported](https://docs.microsoft.com/en-us/powerapps/maker/common-data-service/import-update-export-solutions) into Common Data Service before you proceed to the next step.
+   > Make sure the solution zip file is already [imported](https://docs.microsoft.com/powerapps/maker/common-data-service/import-update-export-solutions) into Common Data Service before you proceed to the next step.
 
 3. Go to **Insert** > **Components** > **Import component**. 
  
