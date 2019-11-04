@@ -54,7 +54,7 @@ The configuration information that is required for importing data is contained i
 ### See Also
 
 [Import data](import-data.md)<br />
-[Blog Post: How to Import attachments programmatically](http://blogs.msdn.com/b/crm/archive/2012/08/06/how-to-import-attachments-programmatically.aspx)<br />
+[Blog Post: How to Import attachments programmatically](https://blogs.msdn.com/b/crm/archive/2012/08/06/how-to-import-attachments-programmatically.aspx)<br />
 [Prepare source files for import](prepare-source-files-import.md)<br />
 [Create data maps for import](create-data-maps-for-import.md)<br />
 [Add transformation mappings for import](add-transformation-mappings-import.md)<br />

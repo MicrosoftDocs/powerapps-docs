@@ -29,7 +29,7 @@ This topic provides resources where you can learn about the new features that ha
 
 For information about the new features, fixes, and improvements released in the past few weeks, see [Released versions for Microsoft PowerApps](https://docs.microsoft.com/business-applications-release-notes/powerplatform/released-versions/powerapps).
 
-To know more about how to browse information in the weekly release notes, read this [blog post](https://powerapps.microsoft.com/en-us/blog/stay-tuned-with-the-latest-features-and-fixes-through-powerapps-weekly-release-notes/).
+To know more about how to browse information in the weekly release notes, read this [blog post](https://powerapps.microsoft.com/blog/stay-tuned-with-the-latest-features-and-fixes-through-powerapps-weekly-release-notes/).
 
 > [!NOTE]
 > Releases are rolled out over several days. New or updated functionality might not appear immediately.

@@ -47,7 +47,7 @@ At this time, you can use lookup columns only with SharePoint and Common Data Se
 
     Many entities, such as **Accounts**, are created.
 
-    **Note**: Entity names are singular on web.powerapps.com and plural in PowerApps Studio.
+    **Note**: Entity names are singular on make.powerapps.com and plural in PowerApps Studio.
 
     ![A partial list of the fields from the Account entity in Common Data Service for Apps, highlighting that "Primary Contact" is a lookup field](media/function-choices/entity-account.png)
 

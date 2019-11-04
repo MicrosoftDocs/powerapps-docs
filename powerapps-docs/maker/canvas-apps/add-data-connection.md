@@ -27,7 +27,7 @@ Your [next step](#next-steps) after this article is to display and manage data f
 
 ## Prerequisites
 
-[Sign up](../signup-for-powerapps.md) for PowerApps, and then [sign in](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) by providing the same credentials that you used to sign up.
+[Sign up](../signup-for-powerapps.md) for PowerApps, and then [sign in](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) by providing the same credentials that you used to sign up.
 
 ## Open a blank app
 

@@ -37,17 +37,17 @@ Before you customize a content pack, read  the information here and perform each
   
 ### Meet the requirements  
   
-- [Power BI service registration](http://powerbi.com/).  
+- [Power BI service registration](https://powerbi.com/).  
   
 - [Power BI Desktop](https://powerbi.microsoft.com/desktop) application for editing Power BI reports.  
   
 - PBIX file for the content pack that you want to customize.  
   
-  -   [Download the Dynamics CRM Online Sales Manager PBIX](http://download.microsoft.com/download/9/2/B/92BCBDCE-CE01-4BC9-A306-2A92653B683E/Sales%20Manager.pbix)  
+  -   [Download the Dynamics CRM Online Sales Manager PBIX](https://download.microsoft.com/download/9/2/B/92BCBDCE-CE01-4BC9-A306-2A92653B683E/Sales%20Manager.pbix)  
   
-  -   [Download the Dynamics CRM Online Service Manager PBIX](http://download.microsoft.com/download/9/2/B/92BCBDCE-CE01-4BC9-A306-2A92653B683E/Customer%20Service%20Manager.pbix)  
+  -   [Download the Dynamics CRM Online Service Manager PBIX](https://download.microsoft.com/download/9/2/B/92BCBDCE-CE01-4BC9-A306-2A92653B683E/Customer%20Service%20Manager.pbix)  
   
-  -   [Download the Microsoft Dynamics 365 Process Analyzer PBIX](http://download.microsoft.com/download/9/2/B/92BCBDCE-CE01-4BC9-A306-2A92653B683E/Process%20Analyzer%20-1.34b.pbix)  
+  -   [Download the Microsoft Dynamics 365 Process Analyzer PBIX](https://download.microsoft.com/download/9/2/B/92BCBDCE-CE01-4BC9-A306-2A92653B683E/Process%20Analyzer%20-1.34b.pbix)  
   
   Dynamics 365 content packs are currently only supported in the U.S. English language.  
   

@@ -31,13 +31,13 @@ This topic describes how to access advanced customization and administration are
 ## Solutions
 The solutions area is where you can view, edit, create, import, export, and delete managed and unmanaged solutions. 
 
-1.	Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1.	Sign in to [PowerApps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 2.	On the left navigation pane select **Solutions**. 
 
 ## Solution explorer
 Use solution explorer to perform app making and customization tasks that can’t be completed from the PowerApps home page.
 
-1.	Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). 
+1.	Sign in to [PowerApps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). 
 2.	On the left navigation pane select **Solutions**.  
 3.	Select **Switch to classic** on the toolbar to open the **All Solutions** view. 
     Notice that the **Switch to classic** command isn't available when you select a solution in the list.
@@ -47,7 +47,7 @@ Use solution explorer to perform app making and customization tasks that can’t
 The Apps area lists all model-driven and canvas apps that you have privileges to in your environment. In addition to launching an app, from the Apps area you can also assign security roles to it. 
 
 To share an app:
-1.	Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1.	Sign in to [PowerApps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
 2.  Select **Apps**.
  

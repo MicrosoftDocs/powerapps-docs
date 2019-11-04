@@ -31,7 +31,7 @@ Every customization that you make to Common Data Service, or to a previously ins
 If you intend to transport customizations or extensions between different Common Data Service environments or distribute solutions using AppSource, you must understand the solution framework.
 
 > [!NOTE]
-> For detailed information about how to effectively use solutions for a successful application lifecycle management (ALM) implementation, see [Whitepaper: Solution Lifecycle Management](https://www.microsoft.com/en-us/download/details.aspx?id=57777)
+> For detailed information about how to effectively use solutions for a successful application lifecycle management (ALM) implementation, see [Whitepaper: Solution Lifecycle Management](https://www.microsoft.com/download/details.aspx?id=57777)
 
 ## Managed and unmanaged solutions
 
@@ -72,7 +72,7 @@ More information: [Maintain managed solutions > Create managed solution updates]
 
 To create a  solution publisher and a solution you need to navigate to the Common Data Service Customization area.
 
-From [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)
+From [powerapps.com](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)
 
 1. Select the *Waffle* icon at the top left corner
 2. In the fly out, select **All apps**.
@@ -81,7 +81,7 @@ From [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=link
 4. Click the **Common Data Service - custom app** app and select it.
 5. Navigate to **Settings** > **Customization** > **Customizations**.
 
-From [home.dynamics.com](http://home.dynamics.com/)
+From [home.dynamics.com](https://home.dynamics.com/)
 
 1. Look for the **Common Data Service - custom** tile and click it.
 2. Navigate to **Settings** > **Customization** > **Customizations**.

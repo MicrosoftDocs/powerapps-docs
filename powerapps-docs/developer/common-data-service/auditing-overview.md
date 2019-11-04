@@ -78,4 +78,4 @@ Organizations often need to be in compliance with various regulations to ensure 
  [Data Management in Dynamics 365](/dynamics365/customer-engagement/developer/manage-data)   
  [Audit entity data changes](/dynamics365/customer-engagement/developer/audit-entity-data-changes)   
  [Configure entities and attributes for auditing](configure-entities-attributes-auditing.md)       
- [Blog: Recover your deleted CRM data and recreate them using CRM API](http://blogs.msdn.com/b/crm/archive/2011/05/23/recover-your-deleted-crm-data-and-recreate-them-using-crm-api.aspx)
+ [Blog: Recover your deleted CRM data and recreate them using CRM API](https://blogs.msdn.com/b/crm/archive/2011/05/23/recover-your-deleted-crm-data-and-recreate-them-using-crm-api.aspx)

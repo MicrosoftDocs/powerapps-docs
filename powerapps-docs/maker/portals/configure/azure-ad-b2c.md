@@ -492,7 +492,7 @@ When a new customer who does not exist in Common Data Service is provisioned, th
 
 **Format**: attribute1=claim1,attribute2=claim2,attribute3=claim3
 
-For example:  firstname=<http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname,lastname=http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname,jobtitle=jobTitle>
+For example:  firstname=<https://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname,lastname=https://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname,jobtitle=jobTitle>
 
 > [!NOTE]
 > Ensure that you map the email address to the primary email (emailaddress1) of the contact. If you have added secondary email (emailaddress2) or alternate email (emailaddress3) to the contact record and mapped it to the email, identity information will not be added to the contact and a new one will be created with the email address used for registration set in the primary email (emailaddress1).
@@ -507,7 +507,7 @@ The data in Common Data Service and in the identity provider are not directly li
 
 **Format**: attribute1=claim1, attribute2=claim2, attribute3=claim3
 
-For example: firstname=<http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname,lastname=http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname,jobtitle=jobTitle> 
+For example: firstname=<https://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname,lastname=https://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname,jobtitle=jobTitle> 
 
 The claim name is the CLAIM TYPE field listed next to the attribute in the sign-in policies Application claims.
 

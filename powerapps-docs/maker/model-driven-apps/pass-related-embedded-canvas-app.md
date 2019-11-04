@@ -32,7 +32,7 @@ This topic explains how to add an embedded canvas app and pass a list of records
 
 Let's say you want to add an embedded canvas app on an account main form and pass a list of contacts related to the current account record to the embedded canvas app. To do this, follow these steps:
 
-1.	Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and open the form editor for a main form of an entity, such as the account entity.
+1.	Sign in to [PowerApps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and open the form editor for a main form of an entity, such as the account entity.
 2.	Select the section on the form where you want the embedded canvas app to appear.
 3.	With the section selected, on the **Insert** tab, in the **Control** group, select **Sub-Grid**.
 4.	In the **Set Properties** dialog box, select the **Display** tab, and then in the **Name** box enter a name for the grid control.
@@ -50,7 +50,7 @@ Let's say you want to add an embedded canvas app on an account main form and pas
          - 	Notice that any change to the App ID value breaks the link from the model-driven form to the embedded canvas app.
 10.	Select the **Customize** button to create or edit the canvas app. This opens PowerApps Studio in a new browser tab.
 	 > [!IMPORTANT]
-     > If opening PowerApps Studio is blocked due to a web browser pop-up blocker, you must enable the web.powerapps.com site or temporarily disable the pop-up blocker and then select **Customize** again. 
+     > If opening PowerApps Studio is blocked due to a web browser pop-up blocker, you must enable the make.powerapps.com site or temporarily disable the pop-up blocker and then select **Customize** again. 
 11.	In PowerApps Studio, notice that there is a **ModelDrivenFormIntegration** control located in the left pane. This control is responsible for bringing contextual data from the host model-driven form to the embedded canvas app. 
 12.	Select the **Gallery1** control and observe that the **Items** property is set to **ModelDrivenFormIntegration.Data**.
 13.	In the property pane on the right, next to **Fields**, select **Edit**.

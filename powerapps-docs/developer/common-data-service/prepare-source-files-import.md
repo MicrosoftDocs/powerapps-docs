@@ -23,7 +23,7 @@ The data source files that you use in an import must be formatted as comma-separ
   
 A source file may contain data for one entity type or multiple entity types, such as accounts and contacts. For the source files that contain multiple entity data, you must provide a map that includes the `<EntitiesPerFile>` tag. Set the value of this tag to “Multiple” to indicate that there is more than one entity type in the source file. Add the `Dedupe = “Eliminate”` attribute to the `<EntityMap>` tag. This assures that if the file contains duplicate rows for the entity type, a single row is used to minimize lookup related errors.  
   
-You can download an example of a data map with multiple entity types from [Microsoft Downloads: DataImportMaps.zip](http://download.microsoft.com/download/D/5/F/D5F73E15-439B-4EBC-BFFB-C6837B146C76/DataImportMaps.zip). Look at the `MapForSalesForceContactAccount.xml` file.  
+You can download an example of a data map with multiple entity types from [Microsoft Downloads: DataImportMaps.zip](https://download.microsoft.com/download/D/5/F/D5F73E15-439B-4EBC-BFFB-C6837B146C76/DataImportMaps.zip). Look at the `MapForSalesForceContactAccount.xml` file.  
   
  The field values in the source file can be separated by commas, tabs, or other characters that are defined in the `ImportFile.FieldDelimiterCode` attribute.  
   

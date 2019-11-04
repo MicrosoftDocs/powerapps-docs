@@ -65,7 +65,7 @@ Model-driven apps have a number of capabilities that allow customers to surface 
 <a name="BKMK_ThirdPartyAdapt"></a>   
 ## Third-party adapters for SSIS  
   
--   [CozyRoc SSIS+ component for Dynamics 365/CRM](http://www.cozyroc.com/ssis/dynamics-crm)  
+-   [CozyRoc SSIS+ component for Dynamics 365/CRM](https://www.cozyroc.com/ssis/dynamics-crm)  
   
 -   [KingswaySoft SSIS Integration Toolkit for Dynamics 365](https://www.kingswaysoft.com/products/ssis-integration-toolkit-for-microsoft-dynamics-365)  
   
@@ -73,7 +73,7 @@ Model-driven apps have a number of capabilities that allow customers to surface 
   
 -   [Team4 SSIS Connector for Dynamics 365](https://www.team4.de/microsoft-dynamics-365-crm/)  
   
-<!--    [PragmaticWorks TaskFactory SSIS Source/Destination for Dynamics CRM](http://pragmaticworks.com/Products/Task-Factory/Features/DynamicsCRMSource.aspx)  -->
+<!--    [PragmaticWorks TaskFactory SSIS Source/Destination for Dynamics CRM](https://pragmaticworks.com/Products/Task-Factory/Features/DynamicsCRMSource.aspx)  -->
   
 <a name="BKMK_ETL"></a>   
 ## ETL tools  
@@ -83,9 +83,9 @@ Model-driven apps have a number of capabilities that allow customers to surface 
 <!--   [Productivity tools from Informatica](https://community.informatica.com/community/search.jspa?peopleEnabled=true&userID=&containerType=14&container=2002&spotlight=true&resultTypes=solution&q=dynamics+CRM)  -->
   
 ### See also  
- [Report Authoring Extension (with SQL Server Data Tools support)](http://www.microsoft.com/download/details.aspx?id=45013) <br />
+ [Report Authoring Extension (with SQL Server Data Tools support)](https://www.microsoft.com/download/details.aspx?id=45013) <br />
   
- [Introduction to Microsoft Power Query for Excel](http://office.microsoft.com/en-ca/excel-help/introduction-to-microsoft-power-query-for-excel-HA104003940.aspx?CTT=5&origin=HA104003813)   <br />
+ [Introduction to Microsoft Power Query for Excel](https://office.microsoft.com/en-ca/excel-help/introduction-to-microsoft-power-query-for-excel-HA104003940.aspx?CTT=5&origin=HA104003813)   <br />
  [Dynamics 365 for Customer Engagement OData Feeds and Power Query: What’s the &#91;Record&#93;?](https://community.dynamics.com/crm/b/survivingcrm/archive/2014/02/16/dynamics-crm-odata-feeds-and-power-query-what-s-the-record.aspx)   <br />
  
 
