@@ -21,7 +21,7 @@ Connect to SQL Server, in either Azure or an on-premises database, so that you c
 
 ## Prerequisites
 
-* [Sign up](../../signup-for-powerapps.md) for PowerApps, and then [sign in](http://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) by providing the same credentials that you used to sign up.
+* [Sign up](../../signup-for-powerapps.md) for PowerApps, and then [sign in](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) by providing the same credentials that you used to sign up.
 * Gather the following information for a database that contains at least one table with a primary key:
   
   * the name of the database

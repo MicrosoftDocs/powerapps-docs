@@ -254,8 +254,8 @@ Common Data Service provides you with a Visual Studio template for creating thes
 
    ```xml  
    <?xml version="1.0" encoding="utf-16"?>  
-   <configdatastorage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
-   xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
+   <configdatastorage xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"  
+   xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
    installsampledata="true"  
    waitforsampledatatoinstall="true"  
    agentdesktopzipfile=""  

@@ -32,7 +32,7 @@ Imagine that you want to access ticket information from an external data source 
 
 Because the data source used for this walkthrough has an OData v4 web service, we can use the OData v4 Data Provider included with your environment.
 
-Web service url: `http://contosowebservice.azurewebsites.net/odata/` 
+Web service url: `https://contosowebservice.azurewebsites.net/odata/` 
 
 > [!IMPORTANT]
 > The web service url used for this walkthrough isn't a functioning web service.
@@ -69,7 +69,7 @@ Create the data source for the OData v4 data provider that uses the OASIS Open D
     |Field|Value|
     |--|--|
     |**Name**|Contoso Sample Data Source|
-    |**URL**|`http://contosowebservice.azurewebsites.net/odata` |
+    |**URL**|`https://contosowebservice.azurewebsites.net/odata` |
     |**Timeout**|30|
     |**Return Inline Count**|True|
 

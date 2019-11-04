@@ -49,7 +49,7 @@ To start a free, 30-day trial of PowerApps Plan 2 from an existing license, [sig
 
 Regardless of whether you have a license for PowerApps, you can start a free, 30-day trial of PowerApps Plan 2 by following these steps:
 
-1. Open the [PowerApps site](http://powerapps.microsoft.com), and then select **Sign up free**.
+1. Open the [PowerApps site](https://powerapps.microsoft.com), and then select **Sign up free**.
 
     If you're using a phone, open the menu in the upper-right corner first, and then select **Sign up free**.
 
@@ -82,7 +82,7 @@ You can use a work or school address to sign up for a trial license. If you use 
 <!--
 ### When will my trial license expire?
 
-To determine when your trial license will expire, select the gear icon near the upper-right corner of the [PowerApps site](http://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then select **Plan(s)**.
+To determine when your trial license will expire, select the gear icon near the upper-right corner of the [PowerApps site](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then select **Plan(s)**.
 -->
 
 ### What happens when my trial expires?

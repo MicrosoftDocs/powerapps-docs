@@ -79,7 +79,7 @@ If the attached file is an image, the control will display the image as a thumbn
 
 ## CORS protocol support
 
-The [cross-origin resource sharing (CORS)](http://www.w3.org/TR/cors/) protocol consists of a set of headers that indicates whether a response can be shared with another domain.
+The [cross-origin resource sharing (CORS)](https://www.w3.org/TR/cors/) protocol consists of a set of headers that indicates whether a response can be shared with another domain.
 The following site settings are used to configure CORS:
 
 |                 Name                  |                                                                            Description                                                                            |

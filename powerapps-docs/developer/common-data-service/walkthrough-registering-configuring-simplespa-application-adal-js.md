@@ -79,7 +79,7 @@ Finally, you can click on **Logout** button to logout.
       var organizationURI = "https://[organization name].crm.dynamics.com"; //The URL of your Common Data Service organization  
       var tenant = "[xxx.onmicrosoft.com]"; //The name of the Azure AD organization you use  
       var clientId = "[client id]"; //The ClientId you got when you registered the application  
-      var pageUrl = "http://localhost:[PORT #]/SimpleSPA.html"; //The URL of this page in your development environment when debugging.  
+      var pageUrl = "https://localhost:[PORT #]/SimpleSPA.html"; //The URL of this page in your development environment when debugging.  
   
       var user, authContext, message, errorMessage, loginButton, logoutButton, getAccountsButton, accountsTable, accountsTableBody;  
   
@@ -270,7 +270,7 @@ Finally, you can click on **Logout** button to logout.
   
 3. Right click on the SimpleSPA.html file and select **Set As Start Page** to set this page as the start page for the project.  
   
-4. In the properties of the project, select **Web** and under **Servers** note the **Project URL**. It should be something like `http://localhost:62111/`. Note the port number that is generated. You will need this in the next step.  
+4. In the properties of the project, select **Web** and under **Servers** note the **Project URL**. It should be something like `https://localhost:62111/`. Note the port number that is generated. You will need this in the next step.  
   
 5. Within the SimpleSPA.html page, locate the following configuration variables and set them accordingly. You will be able to set the `clientId` after you complete the next part of the walkthrough.  
   
@@ -279,7 +279,7 @@ Finally, you can click on **Logout** button to logout.
     var organizationURI = "https://[organization name].crm.dynamics.com"; //The URL to connect to PowerApps Common Data Service  
     var tenant = "[xxx.onmicrosoft.com]"; //The name of the Azure AD organization you use  
     var clientId = "[client id]"; //The ClientId you got when you registered the application  
-    var pageUrl = "http://localhost:[PORT #]/SimpleSPA.html"; //The URL of this page in your development environment when debugging.  
+    var pageUrl = "https://localhost:[PORT #]/SimpleSPA.html"; //The URL of this page in your development environment when debugging.  
   
     ```  
   
@@ -288,7 +288,7 @@ Finally, you can click on **Logout** button to logout.
 1. Sign in to the [Azure portal](https://go.microsoft.com/fwlink/?linkid=2083908) using an account with administrator permission. You must use an account in the same Office 365 subscription (tenant) as you intend to register the app with. You can also access the Azure portal through the Microsoft 365 admin center by expanding the **ADMIN** item in the left navigation pane and selecting **Azure AD**.  
   
     > [!NOTE]
-    > If you don’t have an Azure tenant (account) or you do have one but your Office 365 subscription with Common Data Service is not available in your Azure subscription, following the instructions in the topic [Set up Azure Active Directory access for your Developer Site](https://docs.microsoft.com/en-us/office/developer-program/office-365-developer-program) to associate the two accounts.<br/><br/> If you don’t have an account, you can sign up for one by using a credit card. However, the account is free for application registration and your credit card won’t be charged if you only follow the procedures called out in this topic to register one or more apps. More information: [Active Directory Pricing Details](http://azure.microsoft.com/pricing/details/active-directory/).  
+    > If you don’t have an Azure tenant (account) or you do have one but your Office 365 subscription with Common Data Service is not available in your Azure subscription, following the instructions in the topic [Set up Azure Active Directory access for your Developer Site](https://docs.microsoft.com/en-us/office/developer-program/office-365-developer-program) to associate the two accounts.<br/><br/> If you don’t have an account, you can sign up for one by using a credit card. However, the account is free for application registration and your credit card won’t be charged if you only follow the procedures called out in this topic to register one or more apps. More information: [Active Directory Pricing Details](https://azure.microsoft.com/pricing/details/active-directory/).  
   
 2. Click on **Azure Active Directory** in the left column of the page. You may need to scroll the left column to see the **Azure Active Directory** icon and label.  
   
@@ -314,7 +314,7 @@ Finally, you can click on **Logout** button to logout.
 
    - **Supported account types**<br />Select **Accounts in any organizational directory**.
 
-   - **Redirect URL**<br />This is the URL which the user should be redirected to after they sign in. Select **Web** from the drop down list. For debugging purposes in Visual Studio it should be  `http://localhost:####/SimpleSPA.html` where #### represents the port number you got from step 4 of the [Create a web application project](#bkmk_createwebapp) procedure. Then click on **Register** at the end of the page.
+   - **Redirect URL**<br />This is the URL which the user should be redirected to after they sign in. Select **Web** from the drop down list. For debugging purposes in Visual Studio it should be  `https://localhost:####/SimpleSPA.html` where #### represents the port number you got from step 4 of the [Create a web application project](#bkmk_createwebapp) procedure. Then click on **Register** at the end of the page.
 
    ![Enter details](media/new-app-registration-page.png)
 

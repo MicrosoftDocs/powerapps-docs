@@ -65,7 +65,7 @@ $filter=iscustomprocessingstepallowed eq true and isvisible eq true)
 > You can export this data to an Excel worksheet using this query and the instructions provided in this blog post: [Find Messages and entities eligible for plug-ins using the Common Data Service](https://powerapps.microsoft.com/en-us/blog/find-messages-and-entities-eligible-for-plug-ins-using-the-common-data-service/)
 
 
-You can also use the following FetchXML to retrieve this information. The [FetchXML Builder](http://fxb.xrmtoolbox.com) is a useful tool to execute this kind of query.
+You can also use the following FetchXML to retrieve this information. The [FetchXML Builder](https://fxb.xrmtoolbox.com) is a useful tool to execute this kind of query.
 
 ```xml
 <fetch>

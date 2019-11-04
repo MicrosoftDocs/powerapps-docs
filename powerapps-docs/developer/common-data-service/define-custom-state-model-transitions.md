@@ -56,7 +56,7 @@ To view the entity metadata for your organization, install the Metadata Browser 
  When custom state transitions are applied to an entity, the <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.EnforceStateTransitions> property will be `true`. Also, each <xref:Microsoft.Xrm.Sdk.Metadata.StatusOptionMetadata> within the <xref:Microsoft.Xrm.Sdk.Metadata.StatusAttributeMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.OptionSetMetadata.Options> collection will have a new <xref:Microsoft.Xrm.Sdk.Metadata.StatusOptionMetadata.TransitionData> property. This property will contain a String value that represents an XML document. This document contains the definition of the allowed transitions. For example, the default `Incident` (**Case**) `StatusCode` attribute option may have the following `TransitionData` value.  
   
 ```xml  
-<allowedtransitions xmlns="http://schemas.microsoft.com/crm/2009/WebServices">  
+<allowedtransitions xmlns="https://schemas.microsoft.com/crm/2009/WebServices">  
 <allowedtransition sourcestatusid="1" tostatusid="6" />  
 <allowedtransition sourcestatusid="1" tostatusid="1000" />   
 <allowedtransition sourcestatusid="1" tostatusid="2000" />  
@@ -68,7 +68,7 @@ To view the entity metadata for your organization, install the Metadata Browser 
 >  When this data is retrieved in unmanaged code from the web service, for example when using JavaScript, it will be escaped and appear like the following example.  
   
 ```xml  
-<allowedtransitions xmlns="http://schemas.microsoft.com/crm/2009/WebServices">  
+<allowedtransitions xmlns="https://schemas.microsoft.com/crm/2009/WebServices">  
 <allowedtransition sourcestatusid="1" tostatusid="6">  
 <allowedtransition sourcestatusid="1" tostatusid="1000">  
 <allowedtransition sourcestatusid="1" tostatusid="2000">  

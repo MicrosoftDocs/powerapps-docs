@@ -387,7 +387,7 @@ GET [Organization URI]/api/data/v9.0/accounts(00000000-0000-0000-0000-0000000000
 ```
 
 > [!NOTE]
-> This is a subset of the system query options described in the “11.2.4.2.1 Expand Options” section of [OData Version 4.0 Part 1: Protocol Plus Errata 02](http://docs.oasis-open.org/odata/odata/v4.0/errata02/os/complete/part1-protocol/odata-v4.0-errata02-os-part1-protocol-complete.html). The options `$skip`, `$count`, `$search`, `$expand` and `$levels` aren’t supported for the Web API.
+> This is a subset of the system query options described in the “11.2.4.2.1 Expand Options” section of [OData Version 4.0 Part 1: Protocol Plus Errata 02](https://docs.oasis-open.org/odata/odata/v4.0/errata02/os/complete/part1-protocol/odata-v4.0-errata02-os-part1-protocol-complete.html). The options `$skip`, `$count`, `$search`, `$expand` and `$levels` aren’t supported for the Web API.
 
 <a name="bkmk_DetectIfChanged"></a>
 

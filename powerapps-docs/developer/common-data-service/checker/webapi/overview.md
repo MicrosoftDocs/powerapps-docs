@@ -183,7 +183,7 @@ For best-in-class encryption, the checker service only supports communications u
 
 ## Report format
 
-The result of the solution analysis is a zip file containing one or more reports in a standardized JSON format. The report format is based on static analysis results referred to as Static Analysis Results Interchange Format (SARIF). There are tools available to view and interact with SARIF documents. Refer to this [web site](https://sarifweb.azurewebsites.net/) for details. The service leverages version two of the [OASIS standard](http://docs.oasis-open.org/sarif/sarif/v2.0/sarif-v2.0.html).
+The result of the solution analysis is a zip file containing one or more reports in a standardized JSON format. The report format is based on static analysis results referred to as Static Analysis Results Interchange Format (SARIF). There are tools available to view and interact with SARIF documents. Refer to this [web site](https://sarifweb.azurewebsites.net/) for details. The service leverages version two of the [OASIS standard](https://docs.oasis-open.org/sarif/sarif/v2.0/sarif-v2.0.html).
 
 
 ### See also

@@ -992,7 +992,7 @@ Contains information about the current HTTP request.
 | Path             | The path of the current request URL. <br> /profile/|
 | path\_and\_query | The path and query of the current request URL.<br> /profile/?foo=1&bar=something|
 | query            | The query part of the current request URL. <br> ?foo=1&bar=something |
-| url              | The full URL of the current request.<br>  http://www.example.com/profile/?foo=1&bar=something  |
+| url              | The full URL of the current request.<br>  https://www.example.com/profile/?foo=1&bar=something  |
 
 
 ## searchindex

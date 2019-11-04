@@ -34,7 +34,7 @@ The API has an online demo – you can see how it works, and look at the JSON th
    
     ![Text Analytics API demo](./media/cognitive-services-api/text-analytics-demo.png)
 
-3. The page shows formatted results on the **Analyzed text** tab, and the JSON response on the **JSON** tab. [JSON](http://json.org/) is a way to represent data - in this case, data returned by the Text Analytics API.
+3. The page shows formatted results on the **Analyzed text** tab, and the JSON response on the **JSON** tab. [JSON](https://json.org/) is a way to represent data - in this case, data returned by the Text Analytics API.
 
 ## Sign up for the Text Analytics API
 The API is available as a free preview, and it is associated with an Azure subscription. You manage the API through the Azure portal.

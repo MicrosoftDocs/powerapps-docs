@@ -81,7 +81,7 @@ From [powerapps.com](https://make.powerapps.com?utm_source=padocs&utm_medium=lin
 4. Click the **Common Data Service - custom app** app and select it.
 5. Navigate to **Settings** > **Customization** > **Customizations**.
 
-From [home.dynamics.com](http://home.dynamics.com/)
+From [home.dynamics.com](https://home.dynamics.com/)
 
 1. Look for the **Common Data Service - custom** tile and click it.
 2. Navigate to **Settings** > **Customization** > **Customizations**.

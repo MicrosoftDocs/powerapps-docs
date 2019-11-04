@@ -134,7 +134,7 @@ This list stores the Help Desk tickets.
 
 ## Download the app
 
-1.	[Download](http://pappsfeprodwestuscontent.blob.core.windows.net/sampleapps/helpdesk/docs/HelpDesk(SP_List).zip) the PowerApps package and save it to your machine.
+1.	[Download](https://pappsfeprodwestuscontent.blob.core.windows.net/sampleapps/helpdesk/docs/HelpDesk(SP_List).zip) the PowerApps package and save it to your machine.
 
 ## Create connections
 

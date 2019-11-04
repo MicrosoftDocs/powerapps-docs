@@ -40,7 +40,7 @@ For similar instructions that show you how to create a new sandbox environment t
 ## Overview 
 This topic is for existing customers who are currently using legacy web client applications who need to plan and execute their transition to the Unified Interface. To set up a parallel environment, you create a new application based on your default solution as it stands today. This can be done in your current development sandbox environment without impact to your existing work.
 
-After completing the steps in this article, users with the appropriate role can see your new app in the app list on both the Dynamics 365 drop-down app list or on the Dynamics 365 Home page (http://home.dynamics.com).
+After completing the steps in this article, users with the appropriate role can see your new app in the app list on both the Dynamics 365 drop-down app list or on the Dynamics 365 Home page (https://home.dynamics.com).
 
 ![App list](media/app-list.png)
 
@@ -130,7 +130,7 @@ The tasks required to configure the model-driven app properties include:
 
 6. Select **Save**. 
 
-Now, users with the appropriate role can see your new app in the app list on both the Dynamics 365 drop-down app list or on the Dynamics 365 Home page (http://home.dynamics.com). 
+Now, users with the appropriate role can see your new app in the app list on both the Dynamics 365 drop-down app list or on the Dynamics 365 Home page (https://home.dynamics.com). 
   
    ![App list](media/app-list.png "App list")
 

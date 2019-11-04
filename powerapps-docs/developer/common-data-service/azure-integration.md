@@ -131,7 +131,7 @@ Similar to a queue except that one or more listeners can subscribe to receive me
 This contract type applies to Azure Event Hub solutions.  
   
 > [!IMPORTANT]
->  To use these contracts, you must write your listener applications using the [Azure SDK](http://www.windowsazure.com/develop/downloads/) v1.7 or later.  
+>  To use these contracts, you must write your listener applications using the [Azure SDK](https://www.windowsazure.com/develop/downloads/) v1.7 or later.  
   
 Identifying the kind of security a contract uses is part of the contract’s configuration. A contract can use Transport security, which uses Transport Layer Security (TLS) or Secure Sockets Layer (SSL) (https).  
   

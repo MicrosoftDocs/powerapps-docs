@@ -23,7 +23,7 @@ To maintain security of your files, all app developers must store their AppSourc
 
 ## Before you upload your package
 
-Download and install the Microsoft Azure Storage Explorer from [http://storageexplorer.com](http://storageexplorer.com).
+Download and install the Microsoft Azure Storage Explorer from [https://storageexplorer.com](https://storageexplorer.com).
 
 Azure Storage Explorer lets you easily manage the contents of your storage account.
 

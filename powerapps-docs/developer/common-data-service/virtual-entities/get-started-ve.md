@@ -34,7 +34,7 @@ A virtual entity is a definition of an entity in the Common Data Service platfor
 A data provider is a particular type of Common Data Service plug-in, which is registered against CRUD events that occur in the platform. This initial release only supports READ operations. More information: [Write a plug-in](../write-plugin.md) -->
 
 The following data providers ship with Common Data Service:
-- An [OData v4](http://www.odata.org/documentation/) provider is included with the service and is installed by default.
+- An [OData v4](https://www.odata.org/documentation/) provider is included with the service and is installed by default.
 - An [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db) (formerly *Microsoft Document DB*) provider is available from [AppSource](https://appsource.microsoft.com).
 
 Additional providers will be made available by Microsoft, its partners, or other third parties. If a data provider cannot be found for your external data source, you can develop a *custom virtual entity data provider*; for more information, see [Virtual entity data providers](custom-ve-data-providers.md).

@@ -180,7 +180,7 @@ Yes. Though, access to canvas standalone apps require a PowerApps license includ
 > [!div class="mx-imgBorder"]  
 > ![Embed canvas app in SharePoint for guests](media/share-app/guest_access_doc_5.PNG "Embed canvas app in SharePoint for guests")
 
-When embedding a canvas app in SharePoint via the iFrame HTML tag, reference the app using the full web URL. To find the URL, go to http://make.powerapps.com, select an app, select the **Details** tab, and the URL is displayed under **Web link**.
+When embedding a canvas app in SharePoint via the iFrame HTML tag, reference the app using the full web URL. To find the URL, go to https://make.powerapps.com, select an app, select the **Details** tab, and the URL is displayed under **Web link**.
 
 > [!div class="mx-imgBorder"]  
 > ![Canvas app details](media/share-app/guest_access_doc_6.PNG "Canvas app details")

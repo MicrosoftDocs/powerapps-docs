@@ -24,7 +24,7 @@ If you don't have a license for PowerApps, you can [sign up for free](../signup-
 
 ## Create an app
 
-1. Sign in to [PowerApps](http://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1. Sign in to [PowerApps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
 1. Under **Make your own app**, hover over **Start from data**, and then click or tap **Make this app**.
 

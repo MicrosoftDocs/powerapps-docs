@@ -28,7 +28,7 @@ If you're unfamiliar with canvas-pps, see [What are canvas apps?](getting-starte
 
 ## Show and hide cards
 
-1. Sign in to [PowerApps](http://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then open the app that you generated and customized.
+1. Sign in to [PowerApps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then open the app that you generated and customized.
 
 1. In the left navigation bar, type or paste **D** in the search bar to filter the list of elements, and then select **DetailForm1**.
 

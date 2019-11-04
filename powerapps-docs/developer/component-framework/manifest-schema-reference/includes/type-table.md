@@ -30,7 +30,7 @@ ms.assetid: 41ea27ac-65b6-45a4-ae03-5f8d02dfc67b
 |`SingleLine.Text`|This option simply displays text.|
 |`SingleLine.TextArea`|This format option can be used to display multiple lines of text. But with a limit of 4000 characters, the Multiple Lines of Text field is a better choice if large amounts of text are expected.|
 |`SingleLine.Ticker`|For most languages, the text will be enabled as a link to open the MSN Money website to show details about the stock price represented by the ticker symbol.For certain East Asian languages the window will open Bing search results for the ticker symbol.|
-|`SingleLine.URL`|The text provides a hyperlink to open the page specified. Any text that does not begin with a valid protocol will have “http://” prepended to it.Only HTTP, HTTPS, FTP , FTPS, ONENOTE and TEL protocols are allowed in this field.|
+|`SingleLine.URL`|The text provides a hyperlink to open the page specified. Any text that does not begin with a valid protocol will have “https://” prepended to it.Only HTTP, HTTPS, FTP , FTPS, ONENOTE and TEL protocols are allowed in this field.|
 |`TwoOptions`|This field provides two options. Each option has a number value of 0 or 1 corresponding to a false or true value. Each option also has a label so that true or false values can be represented as “Yes” and “No”, “Hot” and “Cold”, “On” and “Off” or any pair of labels you want to display.|
 |`Whole.None`|This option simply displays a number.|
 

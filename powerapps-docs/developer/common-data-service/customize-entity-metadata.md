@@ -17,7 +17,7 @@ search.app:
 ---
 # Customize entity metadata
 
-Entities are defined by metadata. By defining or changing the entity metadata, you can control the capabilities of an entity. To view the metadata for your organization, use the metadata browser. [Download the metadata browser](http://download.microsoft.com/download/8/E/3/8E3279FE-7915-48FE-A68B-ACAFB86DA69C/MetadataBrowser_3_0_0_5_managed.zip).
+Entities are defined by metadata. By defining or changing the entity metadata, you can control the capabilities of an entity. To view the metadata for your organization, use the metadata browser. [Download the metadata browser](https://download.microsoft.com/download/8/E/3/8E3279FE-7915-48FE-A68B-ACAFB86DA69C/MetadataBrowser_3_0_0_5_managed.zip).
 
 More information: [Browse the Metadata for Your Organization](browse-your-metadata.md)  
   

@@ -106,7 +106,7 @@ Common Data Service supports multiple languages. If you want your solution to be
   
  After the text in the worksheets has been localized, add both the CrmTranslations.xml and [Content_Types].xml files to a single compressed .zip file. You can now import this file.  
   
- If you prefer to work with the exported files programmatically as an XML document, see [Office 2003 XML Reference Schemas](http://www.microsoft.com/downloads/details.aspx?FamilyID=fe118952-3547-420a-a412-00a2662442d9) for information about the schemas these files use.  
+ If you prefer to work with the exported files programmatically as an XML document, see [Office 2003 XML Reference Schemas](https://www.microsoft.com/downloads/details.aspx?FamilyID=fe118952-3547-420a-a412-00a2662442d9) for information about the schemas these files use.  
   
 #### Importing translated text  
   

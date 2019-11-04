@@ -48,7 +48,7 @@ To follow this topic, you must switch to an [environment](../canvas-apps/working
 	![Choose the OAuth connector](./media/data-platform-cds-newentity-pq/choose-odata.png)
 
 1. Under **Connection settings**, type or paste this URL, and then select **Next**:<br>
-`http://services.odata.org/V4/Northwind/Northwind.svc/`
+`https://services.odata.org/V4/Northwind/Northwind.svc/`
 
 1. In the list of tables, select the **Customers** check box, and then click or tap **Next**.
 

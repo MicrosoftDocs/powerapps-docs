@@ -24,7 +24,7 @@ search.app:
 Screen readers make model-driven apps accessible to people who have low or no vision or might need extra support for a temporary scenario, such as eye fatigue. Commonly used screen readers such as Narrator, JAWS, and NVDA are supported. 
 
 - [Learn more about working with Microsoft Narrator](https://support.microsoft.com/help/22798)
-- [Learn more about working with JAWS](http://www.freedomscientific.com/Products/Blindness/JawsDocumentation)
+- [Learn more about working with JAWS](https://www.freedomscientific.com/Products/Blindness/JawsDocumentation)
 
 
 - [Learn more about working with NVDA](https://www.nvaccess.org/get-help/)
@@ -69,7 +69,7 @@ You can navigate through the dashboard charts using the Tab key and Caps lock + 
 
 
 > [!NOTE]
-> You must have the latest [Windows 10](http://www.microsoft.com/enable/products/windows10/default.aspx) Update installed to have all of the accessibility features available for charts.
+> You must have the latest [Windows 10](https://www.microsoft.com/enable/products/windows10/default.aspx) Update installed to have all of the accessibility features available for charts.
 
 #### Interactive dashboard streams
 You can use the **Tab** key or **Shift+Tab** keys to move between interactive dashboard streams, such as found in the Accounts dashboard, or just change the navigation mode until you hear “Headings” and then use the **Tab** key to quickly move between dashboard streams.

@@ -28,7 +28,7 @@ You can use Microsoft Flow to create logic that performs one or more tasks when 
 
 ## Create a flow
 
-1. Sign in to [PowerApps](http://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1. Sign in to [PowerApps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
 1. In the left navigation bar, select **Business logic**, and then select **Flows**.
 

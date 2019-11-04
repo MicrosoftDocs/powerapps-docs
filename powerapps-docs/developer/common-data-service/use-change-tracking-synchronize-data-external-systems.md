@@ -35,7 +35,7 @@ The change tracking feature in Common Data Service provides a way to keep the da
 ## Retrieve changes for an entity using the Web API  
 Changes made in entities can be tracked using Web API requests by adding `odata.track-changes` as a preference header. Preference header `odata.track-changes` is used to request that a *delta link* be returned which can subsequently be used to retrieve entity changes.
 
-Delta links are opaque, service-generated links that the client uses to retrieve subsequent changes to a result. They are based on a defining query that describes the set of results for which changes are being tracked; for example, the request that generated the results containing the delta link. The delta link encodes the collection of entities for which changes are being tracked, along with a starting point from which to track changes. Read more about delta links here [Oasis OData Version 4.0 - Delta Links](http://docs.oasis-open.org/odata/odata/v4.0/cs01/part1-protocol/odata-v4.0-cs01-part1-protocol.html#_Toc365046305)
+Delta links are opaque, service-generated links that the client uses to retrieve subsequent changes to a result. They are based on a defining query that describes the set of results for which changes are being tracked; for example, the request that generated the results containing the delta link. The delta link encodes the collection of entities for which changes are being tracked, along with a starting point from which to track changes. Read more about delta links here [Oasis OData Version 4.0 - Delta Links](https://docs.oasis-open.org/odata/odata/v4.0/cs01/part1-protocol/odata-v4.0-cs01-part1-protocol.html#_Toc365046305)
 
 <a name="BKMK_webapiexample"></a>   
 ## Retrieve changes in entities using Web API example
