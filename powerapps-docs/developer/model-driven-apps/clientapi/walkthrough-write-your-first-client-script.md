@@ -83,7 +83,7 @@ Let's look at the code in detail:
         // Automatically set some field values if the account name contains "Contoso"
         var accountName = formContext.getAttribute("name").getValue();
         if (accountName.toLowerCase().search("contoso") != -1) {
-            formContext.getAttribute("websiteurl").setValue("http://www.contoso.com");
+            formContext.getAttribute("websiteurl").setValue("https://www.contoso.com");
             formContext.getAttribute("telephone1").setValue("425-555-0100");
             formContext.getAttribute("description").setValue("Website URL, Phone and Description set using custom script.");
         }
@@ -219,7 +219,7 @@ var Sdk = window.Sdk || {};
         // Automatically set some field values if the account name contains "Contoso"
         var accountName = formContext.getAttribute("name").getValue();
         if (accountName.toLowerCase().search("contoso") != -1) {
-            formContext.getAttribute("websiteurl").setValue("http://www.contoso.com");
+            formContext.getAttribute("websiteurl").setValue("https://www.contoso.com");
             formContext.getAttribute("telephone1").setValue("425-555-0100");
             formContext.getAttribute("description").setValue("Website URL, Phone and Description set using custom script.");
         }

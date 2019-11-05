@@ -21,7 +21,7 @@ search.app:
 
 The following is the schema definition for the ribbon types portion of an import/export customization file. Ribbon types schema is included from the [Ribbon Core Schema](ribbon-core-schema.md). You can find schema  in the `Schemas\9.0.0.2090\RibbonTypes.xsd` folder when you download the Schemas zip file.
 
-Download the [Schemas](http://download.microsoft.com/download/B/9/7/B97655A4-4E46-4E51-BA0A-C669106D563F/Schemas.zip).
+Download the [Schemas](https://download.microsoft.com/download/B/9/7/B97655A4-4E46-4E51-BA0A-C669106D563F/Schemas.zip).
 
 For more information, see [Package and Distribute Extensions with Solutions](/dynamics365/customer-engagement/developer/package-distribute-extensions-use-solutions).
 
@@ -30,7 +30,7 @@ For more information, see [Package and Distribute Extensions with Solutions](/dy
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="CrmRibbonTypes" xmlns:xs="http://www.w3.org/2001/XMLSchema" >
+<xs:schema id="CrmRibbonTypes" xmlns:xs="https://www.w3.org/2001/XMLSchema" >
 
 	<!-- Command Definition Types -->
 	<xs:complexType name="ActionsType">

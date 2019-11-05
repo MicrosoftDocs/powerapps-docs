@@ -104,7 +104,7 @@ section, you get a tour of how dataflows can be used in an organization.
 
 ### Load data to Common Data Service
 Dataflows can be used to populate entities in the [Common Data
-Service](https://docs.microsoft.com/en-us/powerapps/maker/common-data-service/data-platform-intro)
+Service](https://docs.microsoft.com/powerapps/maker/common-data-service/data-platform-intro)
 that are then used in PowerApps applications. With a few clicks, you can
 integrate data from online and on-premises sources data sources.
 

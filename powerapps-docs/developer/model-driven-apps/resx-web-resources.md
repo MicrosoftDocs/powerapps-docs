@@ -21,7 +21,7 @@ search.app:
 
 Use these web resources to manage localized strings in any user interface you define or with error messages you will display. 
 
-# Using RESX web resources
+## Using RESX web resources
 
 RESX web resources contain the keys and localized string values for a single language defined using the RESX XML format. RESX is a common format for defining localized resources for windows applications, so there is common tooling available to work with this type of file and localization vendors will be familiar with working with them. When the file is published as a web resource in CRM it will be converted to a JSON format which will be downloaded to the application when needed.
 

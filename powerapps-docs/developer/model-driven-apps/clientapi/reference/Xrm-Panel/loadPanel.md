@@ -1,6 +1,6 @@
 ---
 title: "loadPanel| MicrosoftDocs"
-ms.date: "2017-09-15"
+ms.date: "09/15/2017"
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"

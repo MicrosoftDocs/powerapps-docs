@@ -28,7 +28,7 @@ In order to use the Web API you need to find information about what is available
   
 ## Terminology 
 
-The Web API is implemented using the OData v4 standard which uses a specific set of terms you need to be familiar with. *Entity Data Model (EDM)* is the abstract data model that is used to describe the data exposed by an OData service. The following table is a selected list of terms defined in [OData Version 4.0 Part 1: Protocol Plus Errata 02](http://docs.oasis-open.org/odata/odata/v4.0/errata02/os/complete/part1-protocol/odata-v4.0-errata02-os-part1-protocol-complete.html) which you should understand.  
+The Web API is implemented using the OData v4 standard which uses a specific set of terms you need to be familiar with. *Entity Data Model (EDM)* is the abstract data model that is used to describe the data exposed by an OData service. The following table is a selected list of terms defined in [OData Version 4.0 Part 1: Protocol Plus Errata 02](https://docs.oasis-open.org/odata/odata/v4.0/errata02/os/complete/part1-protocol/odata-v4.0-errata02-os-part1-protocol-complete.html) which you should understand.  
   
 |Term|Definition|  
 |----------|----------------|  
@@ -80,7 +80,7 @@ GET [Organization URI]/api/data/v9.0/$metadata
   
 This document can be used as a data source to generate classes that will provide strongly typed objects for the service. But if you are not using generated classes, you may want to review documentation generated from this information instead. The [Web API Reference](/dynamics365/customer-engagement/web-api/about) uses information primarily from this document taken from a system with common additional solutions installed.  
   
-You can learn more about this document in [OData Version 4.0 Part 3: Common Schema Definition Language (CSDL) Plus Errata 02](http://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part3-csdl.html).  
+You can learn more about this document in [OData Version 4.0 Part 3: Common Schema Definition Language (CSDL) Plus Errata 02](https://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part3-csdl.html).  
   
 > [!TIP]
 >  Before your read the rest of this topic, download the `$metadata` for your organization and take a look at how the types, functions, and actions described are included in the `$metadata` and the supporting documentation.  
@@ -99,7 +99,7 @@ The metadata document includes several types of `Annotation` elements which prov
   
 -   Add  the `Prefer: odata.include-annotations="*"` header to the request.  
   
-Each `Annotation` element includes a `Term` attribute that describes the type of annotation. The definitions of all the possible annotations used by OData v4 can be found in [OData Vocabularies Version 4.0](http://docs.oasis-open.org/odata/odata-vocabularies/v4.0/csprd01/odata-vocabularies-v4.0-csprd01.html). The following table provides some examples used by the Web API.  
+Each `Annotation` element includes a `Term` attribute that describes the type of annotation. The definitions of all the possible annotations used by OData v4 can be found in [OData Vocabularies Version 4.0](https://docs.oasis-open.org/odata/odata-vocabularies/v4.0/csprd01/odata-vocabularies-v4.0-csprd01.html). The following table provides some examples used by the Web API.  
   
 |Term|Description|  
 |----------|-----------------|  

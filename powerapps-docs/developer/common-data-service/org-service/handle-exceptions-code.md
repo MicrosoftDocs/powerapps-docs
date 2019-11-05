@@ -91,16 +91,16 @@ The following is an example of the trace log produced when one of these errors i
   
 ```csharp
 Unhandled Exception: System.ServiceModel.FaultException`1[[Microsoft.Xrm.Sdk.OrganizationServiceFault, Microsoft.Xrm.Sdk, Version=7.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35]]: custom error messageDetail:   
-<OrganizationServiceFault xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/xrm/2011/Contracts">  
+<OrganizationServiceFault xmlns:i="https://www.w3.org/2001/XMLSchema-instance" xmlns="https://schemas.microsoft.com/xrm/2011/Contracts">  
   <ErrorCode>-2147220891</ErrorCode>  
-  <ErrorDetails xmlns:d2p1="http://schemas.datacontract.org/2004/07/System.Collections.Generic">  
+  <ErrorDetails xmlns:d2p1="https://schemas.datacontract.org/2004/07/System.Collections.Generic">  
     <KeyValuePairOfstringanyType>  
       <d2p1:key>OperationStatus</d2p1:key>  
-      <d2p1:value xmlns:d4p1="http://www.w3.org/2001/XMLSchema" i:type="d4p1:string">0</d2p1:value>  
+      <d2p1:value xmlns:d4p1="https://www.w3.org/2001/XMLSchema" i:type="d4p1:string">0</d2p1:value>  
     </KeyValuePairOfstringanyType>  
     <KeyValuePairOfstringanyType>  
       <d2p1:key>SubErrorCode</d2p1:key>  
-      <d2p1:value xmlns:d4p1="http://www.w3.org/2001/XMLSchema" i:type="d4p1:string">-2146233088</d2p1:value>  
+      <d2p1:value xmlns:d4p1="https://www.w3.org/2001/XMLSchema" i:type="d4p1:string">-2146233088</d2p1:value>  
     </KeyValuePairOfstringanyType>  
   </ErrorDetails>  
   <Message>custom error message</Message>  

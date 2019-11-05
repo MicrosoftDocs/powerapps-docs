@@ -135,7 +135,7 @@
       href: ./canvas-apps/sample-meeting-capture.md
   - name: Create your first app
     items:
-    - name: 1 - Generate an app from data
+    - name: 1 - Create an app from data
       items:
       - name: From Common Data Service
         href: ./canvas-apps/data-platform-create-app.md
@@ -143,6 +143,8 @@
         href: ./canvas-apps/app-from-sharepoint.md
       - name: From Excel
         href: ./canvas-apps/get-started-create-from-data.md
+      - name: From Azure SQL Database
+        href: ./canvas-apps/app-from-azure-sql-database.md
     - name: 2 - Make basic customizations
       items:
       - name: 1 - Galleries
@@ -741,7 +743,7 @@
       href: ./canvas-apps/share-app-resources.md
     - name: Embed an app in Power BI
       href: ./canvas-apps/embed-powerapps-powerbi.md
-    - name: Embed a Teams app
+    - name: Embed an app in Teams
       href: ./canvas-apps/embed-teams-app.md
   - name: Manage an app
     items:
@@ -1054,6 +1056,8 @@
       href: ./model-driven-apps/unified-interface-playbook.md
     - name: Approaching a Unified Interface transition
       href: ./model-driven-apps/approaching-unified-interface.md
+    - name: "Checklist: Unified Interface transition"
+      href: ./model-driven-apps/checklist-transition-unified-interface.md    
   - name: Accessibility in PowerApps app designer
     href: ./model-driven-apps/Accessibility-app-designer-site-map-designer-my-apps-page.md
   - name: Customize Dynamics 365 App for Outlook
@@ -1064,7 +1068,7 @@
 
 - name: Portals
   items:
-    - name: What is PowerApps Portals?
+    - name: What is PowerApps portals?
       href: ./portals/overview.md
     - name: Design and build a portal
       items:
@@ -1074,7 +1078,9 @@
           href: ./portals/create-portal.md
         - name: Create a portal with Dynamics 365 environment
           href: ./portals/create-dynamics-portal.md
-        - name: Portal designer anatomy
+        - name: Provision a portal using the older portal add-on
+          href: ./portals/provision-portal-add-on.md
+        - name: PowerApps portals Studio anatomy
           href: ./portals/portal-designer-anatomy.md
         - name: Supported web browsers for portal designer
           href: ./portals/supported-browser.md
@@ -1120,7 +1126,7 @@
           href: ./portals/admin/manage-auth-key.md
         - name: Set up IP address restriction
           href: ./portals/admin/ip-address-restrict.md
-        - name: Update to PowerApps Portals domain
+        - name: Update to PowerApps portals domain
           href: ./portals/admin/update-portal-domain.md
         - name: Clear the server-side cache
           href: ./portals/admin/clear-server-side-cache.md
@@ -1152,6 +1158,58 @@
               href: ./portals/configure/configure-saml2-settings.md 
             - name: Migrate identity providers to Azure AD B2C
               href: ./portals/configure/migrate-identity-providers.md
+        - name: Search
+          items:
+            - name: About search
+              href: ./portals/configure/search.md
+            - name: Improve search by using faceted search
+              href: ./portals/configure/improve-portal-search-faceted-search.md
+            - name: Search within file attachments
+              href: ./portals/configure/search-file-attachment.md
+        - name: Enable multiple-language support
+          href: ./portals/configure/enable-multiple-language-support.md
+        - name: Create and manage web files
+          href: ./portals/configure/web-files.md
+        - name: Manage web links
+          href: ./portals/configure/manage-web-links.md
+        - name: Create and manage page templates
+          href: ./portals/configure/page-templates.md
+        - name: Manage content snippets
+          href: ./portals/configure/customize-content-snippets.md
+        - name: Create a redirect URL
+          href: ./portals/configure/add-redirect-url.md
+        - name: Use shortcuts to place child nodes
+          href: ./portals/configure/place-child-nodes.md
+        - name: Behavior and format of the date and time field
+          href: ./portals/configure/behavior-format-date-time-field.md
+        - name: Add chart on a web page in portal
+          href: ./portals/configure/add-chart.md
+        - name: Work with entity forms
+          href: ./portals/configure/entity-forms.md
+        - name: Work with entity lists
+          href: ./portals/configure/entity-lists.md
+        - name: Work with web forms
+          items:
+            - name: Define web form properties
+              href: ./portals/configure/web-form-properties.md
+            - name: Web form steps
+              items:
+                - name: Define web form steps
+                  href: ./portals/configure/web-form-steps.md
+                - name: Define a load form and load tab step type
+                  href: ./portals/configure/load-form-step.md
+                - name: Add a redirect step type
+                  href: ./portals/configure/add-redirect-step.md
+                - name: Add a conditional step type
+                  href: ./portals/configure/add-conditional-step.md
+                - name: Add custom JavaScript
+                  href: ./portals/configure/add-custom-javascript.md
+            - name: Configure web form metadata
+              href: ./portals/configure/configure-web-form-metadata.md
+            - name: Configure a web form subgrid
+              href: ./portals/configure/configure-web-form-subgrid.md
+            - name: Add geolocation
+              href: ./portals/configure/add-geolocation.md
     - name:  Advanced portal customization
       items:
         - name: Work with Liquid templates
@@ -1198,6 +1256,20 @@
                   href: ./portals/liquid/render-site-header-primary-navigation.md
         - name: OAuth 2.0 implicit grant flow
           href: ./portals/oauth-implicit-grant-flow.md
+    - name: User management and security in portal
+      items:
+        - name: Configure contacts
+          href: ./portals/configure/configure-contacts.md
+        - name: Invite contacts
+          href: ./portals/configure/invite-contacts.md
+        - name: Create web roles
+          href: ./portals/configure/create-web-roles.md
+        - name: Assign entity permissions
+          href: ./portals/configure/assign-entity-permissions.md
+        - name: Control webpage access
+          href: ./portals/configure/webpage-access-control.md
+        - name: Create website access permissions
+          href: ./portals/configure/website-access-permission.md
     - name: Document storage in portals
       items:
         - name: Configure notes
@@ -1212,7 +1284,7 @@
           href: ./portals/manage-sharepoint-documents.md
     - name: Known issues
       href: ./portals/known-issues.md
-    - name: PowerApps Portals FAQ
+    - name: PowerApps portals FAQ
       href: ./portals/faq.md
 - name: Common Data Service
   href: ./common-data-service/data-platform-intro.md
@@ -1427,6 +1499,8 @@
     href: ./canvas-apps/common-issues-and-resolutions.md
   - name: Get a session or app ID
     href: ./canvas-apps/get-sessionid.md
+  - name: Troubleshoot startup issues for PowerApps
+    href: troubleshooting-startup-issues.md
   - name: Troubleshoot Power Query
     href: ./common-data-service/data-platform-cds-newentity-troubleshooting-mashup.md
   - name: Support

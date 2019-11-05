@@ -52,4 +52,4 @@ By default,  when you build or customize a model-driven app, you work with the s
 ## See Also  
 [Understand model-driven app components](../model-driven-apps/model-driven-app-components.md)
  <br/>
- [Whitepaper: Patterns and Principles for Solution Builders](http://go.microsoft.com/fwlink/p/?LinkID=533946)
+ [Whitepaper: Patterns and Principles for Solution Builders](https://go.microsoft.com/fwlink/p/?LinkID=533946)

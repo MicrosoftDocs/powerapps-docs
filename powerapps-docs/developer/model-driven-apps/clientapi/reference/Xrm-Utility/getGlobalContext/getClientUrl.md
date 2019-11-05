@@ -37,7 +37,7 @@ globalContext.getClientUrl();
 |---|---|
 |https://[org].crm.dynamics.com|model-driven apps (online)|
 |http(s)://[server]/[org]|model-driven apps (on-premises)|
-|http://localhost:2525|model-driven apps for Outlook with Offline Access when offline|
+|https://localhost:2525|model-driven apps for Outlook with Offline Access when offline|
 
 ### Related topics
 

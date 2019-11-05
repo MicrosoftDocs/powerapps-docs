@@ -44,7 +44,7 @@ The response received from InitializeFrom request consists of values of mapped a
 > [!NOTE] 
 > To determine if two entities can be mapped, use the following Web API request:<br/>`GET [Organization URI]/api/data/v9.0/entitymaps?$select=sourceentityname,targetentityname&$orderby=sourceentityname`
 
-For more information see [Create a new entity from another entity](webapi/create-entity-web-api.md#create-a-new-entity-from-another-entity).
+For more information see [Create a new entity record from another entity](webapi/create-entity-web-api.md#create-a-new-entity-record-from-another-entity).
 
 ### Using Organization Service
 
