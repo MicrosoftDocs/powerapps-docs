@@ -1,6 +1,6 @@
 ---
 title: "navigateTo (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/23/2019
+ms.date: 11/04/2019
 ms.service: powerapps
 ms.topic: "reference"
 author: "KumarVivek"
@@ -62,8 +62,12 @@ search.app:
 <td><p>Options for navigating to a page: whether to open inline or in a dialog. If you don't specify this parameter, page is opened inline by default. The object contains the following attributes:</p>
 <ul>
 <li><strong>target</strong>: Number. Specify <strong>1</strong> to open the page inline; <strong>2</strong> to open the page in a dialog. <br/><i>Entity lists</i> can only be opened inline; <i>web resources</i> can be opened either inline or in a dialog.</li>
-<li><strong>width</strong>: (Optional) Number. The width of dialog in pixel.</li>
-<li><strong>height</strong>: (Optional) Number. The width of dialog in pixel.</li>
+<li><strong>width</strong>: (Optional) Number or Object. The width of dialog. To specify the width in pixels, just type a numeric value. To specify the width in percentage, specify an object of type <b>SizeValue</b> with the following properties:
+<ul><li><b>value</b>: Number. The numerical value.</li>
+<li><b>unit</b>: String. The unit of measurement. Specify "%" or "px". Default value is "px".</li></ul></li>
+<li><strong>height</strong>: (Optional) Number or Object. The height of dialog. To specify the height in pixels, just type a numeric value. To specify the width in percentage, specify an object of type <b>SizeValue</b> with the following properties:
+<ul><li><b>value</b>: Number. The numerical value.</li>
+<li><b>unit</b>: String. The unit of measurement. Specify "%" or "px". Default value is "px".</li></ul></li>
 <li><strong>position</strong>: (Optional) Number. Specify <strong>1</strong> to open the dialog in center; <strong>2</strong> to open the dialog on the side. Default is 1 (center).</li>
 </ul></td>
 </tr>
