@@ -13,7 +13,7 @@ ms.reviewer:
 
 # Manage SharePoint documents
 
-Common Data Service supports integration with [!INCLUDE[pn-microsoft-sharepoint-online](../../includes/pn-microsoft-sharepoint-online.md)] that enables you to use the document management capabilities of [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] from within Common Data Service. PowerApps Portals now supports uploading and displaying documents to and from [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] directly on an entity form or web form in a portal. This allows portal users to view, download, add, and delete documents from a portal. Portal users can also create subfolders to organize their documents.
+Common Data Service supports integration with [!INCLUDE[pn-microsoft-sharepoint-online](../../includes/pn-microsoft-sharepoint-online.md)] that enables you to use the document management capabilities of [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] from within Common Data Service. PowerApps portals now supports uploading and displaying documents to and from [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] directly on an entity form or web form in a portal. This allows portal users to view, download, add, and delete documents from a portal. Portal users can also create subfolders to organize their documents.
 
 > [!NOTE]
 > - Document management works only with [!INCLUDE[pn-microsoft-sharepoint-online](../../includes/pn-microsoft-sharepoint-online.md)].
@@ -33,7 +33,7 @@ To work with the document management capabilities of [!INCLUDE[pn-sharepoint-sho
 
 ## Step 1: Enable document management functionality in model-driven apps in Dynamics 365
 
-You must enable the document management functionality in model-driven apps in Dynamics 365 by using server-based [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] integration. Server-based [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] integration allows model-driven apps in Dynamics 365 and [!INCLUDE[pn-microsoft-sharepoint-online](../../includes/pn-microsoft-sharepoint-online.md)] to perform a server-to-server connection. The default [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] site record is used by the portal. For information on how to enable document management functionality in model-driven apps in Dynamics 365, see [Set up model-driven apps in Dynamics 365 to use SharePoint Online](https://docs.microsoft.com/en-us/power-platform/admin/set-up-dynamics-365-online-to-use-sharepoint-online).
+You must enable the document management functionality in model-driven apps in Dynamics 365 by using server-based [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] integration. Server-based [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] integration allows model-driven apps in Dynamics 365 and [!INCLUDE[pn-microsoft-sharepoint-online](../../includes/pn-microsoft-sharepoint-online.md)] to perform a server-to-server connection. The default [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] site record is used by the portal. For information on how to enable document management functionality in model-driven apps in Dynamics 365, see [Set up model-driven apps in Dynamics 365 to use SharePoint Online](https://docs.microsoft.com/power-platform/admin/set-up-dynamics-365-online-to-use-sharepoint-online).
 
 ## Step 2: Set up SharePoint integration from PowerApps Portals admin center
 
@@ -71,7 +71,7 @@ If you do not provide your consent:
 
 
 ## Step 3: Enable document management for entities
-You must enable document management for entities to store documents related to entity records in [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)]. For information on how to enable document management for entities, see [Enable SharePoint document management for specific entities](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/admin/enable-sharepoint-document-management-specific-entities).
+You must enable document management for entities to store documents related to entity records in [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)]. For information on how to enable document management for entities, see [Enable SharePoint document management for specific entities](https://docs.microsoft.com/dynamics365/customer-engagement/admin/enable-sharepoint-document-management-specific-entities).
 
 ## Step 4: Configure the appropriate form to display documents
 
@@ -88,7 +88,7 @@ You can specify name and label as per your requirement. Save and publish the for
 > [!NOTE]
 > Document management must be enabled for the entity for which you edit the form. More information: [Enable document management for entities](#step-3-enable-document-management-for-entities)
 
-### PowerApps Portals configuration
+### PowerApps portals configuration
 
 Apart from the standard configuration required for entity form or web form, you must set the following properties to enable document management:
 
@@ -167,7 +167,7 @@ The below example demonstrates configuration using the Case entity which needs t
 
         f. In the form editor, select **Save** and then select **Publish**.
 
-    - PowerApps Portals configuration
+    - PowerApps portals configuration
 
         a. Go to **Portals** > **Entity Forms**.
     

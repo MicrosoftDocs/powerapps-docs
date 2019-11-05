@@ -26,7 +26,7 @@ The supported providers are:
 
 ## Create OAuth applications
 
-In general, if an OAuth provider uses app settings that require a redirect URI value, specify <http://portal.contoso.com/or> http://portal.contoso.com/signin-\[provider\] depending on how the provider performs redirect URI validation (some providers require the full URL path to be specified along with the domain name). Substitute the name of the provider in place of \[provider\] in the redirect URI.
+In general, if an OAuth provider uses app settings that require a redirect URI value, specify <https://portal.contoso.com/or> https://portal.contoso.com/signin-\[provider\] depending on how the provider performs redirect URI validation (some providers require the full URL path to be specified along with the domain name). Substitute the name of the provider in place of \[provider\] in the redirect URI.
 
 ### Google
 
@@ -41,8 +41,8 @@ In general, if an OAuth provider uses app settings that require a redirect URI v
     - Select**Save**.
 5. Go to**APIs & auth** &gt;**Credentials** and create a new client ID.
    - Application Type:**Web application**
-   - Authorized [!INCLUDE[pn-javascript](../../../includes/pn-javascript.md)] Origins: http://portal.contoso.com
-   - Authorized Redirect URIs: http://portal.contoso.com/signin-google 
+   - Authorized [!INCLUDE[pn-javascript](../../../includes/pn-javascript.md)] Origins: https://portal.contoso.com
+   - Authorized Redirect URIs: https://portal.contoso.com/signin-google 
    - Select **Create Client ID**.
 
 ### Facebook app settings
@@ -59,7 +59,7 @@ In general, if an OAuth provider uses app settings that require a redirect URI v
     - App Domains (optional): portal.contoso.com 
     - Contact Email: *&lt;email address of your choice&gt;* 
     - Select **Add Platform**, and then select **Website**. 
-    - Site URL: http://portal.contoso.com/ or http://portal.contoso.com/signin-facebook
+    - Site URL: https://portal.contoso.com/ or https://portal.contoso.com/signin-facebook
 
 6. Select **Save Changes**.
 7. Go to **Status & Review** &gt; **Status** tab.
@@ -70,7 +70,7 @@ In general, if an OAuth provider uses app settings that require a redirect URI v
 1. Open [[!INCLUDE[cc-microsoft](../../../includes/cc-microsoft.md)] account Developer Center](https://account.live.com/developers/applications/index)  
 2. Select **Create application** and specify an **Application name**.
 3. Select **I accept** to accept Terms and Conditions.
-4. Go to **Settings** &gt;**API settings**, and then set the redirect URL as http://portal.contoso.com/signin-microsoft 
+4. Go to **Settings** &gt;**API settings**, and then set the redirect URL as https://portal.contoso.com/signin-microsoft 
 
 ### Twitter apps settings
 
@@ -78,8 +78,8 @@ In general, if an OAuth provider uses app settings that require a redirect URI v
 2. Select **Create New App**.
 
     - Specify a **Name** and **Description** for your app.
-    - Set the Website URL as http://portal.contoso.com.
-    - Set the Callback URL as http://portal.contoso.com or http://portal.contoso.com/signin-twitter.
+    - Set the Website URL as https://portal.contoso.com.
+    - Set the Callback URL as https://portal.contoso.com or https://portal.contoso.com/signin-twitter.
 
 3. Select **Create your Twitter application**.
 
@@ -89,9 +89,9 @@ In general, if an OAuth provider uses app settings that require a redirect URI v
 2. Select **Add New Application**.
 
     - Specify an **Application Name**, **Description**, and so on.
-    - Set Website URL as http://portal.contoso.com.
+    - Set Website URL as https://portal.contoso.com.
     - Set OAuth User Agreement/Default Scope: r\_basicprofie and r\_emailaddress
-    - Set OAuth 2.0 Redirect url: http://portal.contoso.com/signin-linkedin.
+    - Set OAuth 2.0 Redirect url: https://portal.contoso.com/signin-linkedin.
 
 3. Select **Add Application**.
 

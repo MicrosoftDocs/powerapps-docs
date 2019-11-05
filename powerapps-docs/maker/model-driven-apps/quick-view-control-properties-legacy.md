@@ -9,7 +9,7 @@ applies_to:
   - "powerapps"
 ms.author: matp
 manager: kvivek
-ms.date: 06/06/2018
+ms.date: 10/28/2019
 ms.service: powerapps
 ms.topic: article
 ms.assetid: 68f68d5b-6c71-4b95-bb46-d48c59d9008e
@@ -27,7 +27,7 @@ A quick view control on a model-driven app form displays data from a record that
 > ![Contact quick view form on the account form](media/quick-view-form-contact.png "Contact quick view form on the account form")  
 
 You can access **Quick view control properties** from the PowerApps site. 
-1.  Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
+1.  Sign in to [PowerApps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
 
 2.  Expand **Data**, select **Entities**, select the entity that you want, and then select the **Forms** tab. 

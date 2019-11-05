@@ -13,7 +13,7 @@ ms.reviewer:
 
 # Store source content by using web templates
 
-Web Template is a PowerApps entity (adx\_webtemplate), included with PowerApps Portals, that is used to store template source content. A web template will generally contain Liquid for dynamic content rendering and is the central entity used to integrate Liquid templates with the rest of the PowerApps Portals system.
+Web Template is a PowerApps entity (adx\_webtemplate), included with PowerApps portals, that is used to store template source content. A web template will generally contain Liquid for dynamic content rendering and is the central entity used to integrate Liquid templates with the rest of the PowerApps portals system.
 
 Web Templates can be included in other content or combined with other templates by using template tags, and are referenced in these tags by their **Name** attribute. They can also be used to create entire custom Page Templates, or create custom headers and footers for your portal website.
 
@@ -28,13 +28,13 @@ Web Templates can be included in other content or combined with other templates 
 
 ## Web templates as page templates
 
-Web Templates can be used in conjunction with page templates to create new templates for the PowerApps Portals content management system. This can be done entirely within PowerApps, without the need to write .NET code or redeploy your portal application.
+Web Templates can be used in conjunction with page templates to create new templates for the PowerApps portals content management system. This can be done entirely within PowerApps, without the need to write .NET code or redeploy your portal application.
 
 To create a new page template based on a web template, select a **Type** of Web Template when creating a new Page Template record. Then select a **Web Template**.
 
 Note the option **Use Website Header and Footer** (which is checked by default). If this is checked, your Web Template will control rendering of all page content between the global website header and footer. If this option is unchecked, your Web Template will be responsible for rendering the entire response in the case that you're rendering HTML, this means everything from the doctype to the root &lt;html&gt; tags, and everything in between.
 
-While the most common use cases for Web Templates will be to render HTML, rendering the entire response (by deselecting **Use Website Header and Footer**) gives you the option of rendering any text-based format you choose. This is where the **MIME Type** attribute of Web Template becomes relevant. When a Page Template that does not use the website header and footer is rendered, the HTTP response Content-Type header will be set to the MIME Type of the associated Web Template. (text/html will be used if no MIME Type is provided.) This gives you a wide variety of options for rendering non-HTML content by using Liquid. A common use case would be to render an [RSS](http://en.wikipedia.org/wiki/RSS) feed, by setting a MIME Type of application/rss+xml.  
+While the most common use cases for Web Templates will be to render HTML, rendering the entire response (by deselecting **Use Website Header and Footer**) gives you the option of rendering any text-based format you choose. This is where the **MIME Type** attribute of Web Template becomes relevant. When a Page Template that does not use the website header and footer is rendered, the HTTP response Content-Type header will be set to the MIME Type of the associated Web Template. (text/html will be used if no MIME Type is provided.) This gives you a wide variety of options for rendering non-HTML content by using Liquid. A common use case would be to render an [RSS](https://en.wikipedia.org/wiki/RSS) feed, by setting a MIME Type of application/rss+xml.  
 
 ## Web templates as website headers and footers
 
@@ -42,7 +42,7 @@ Web templates can also be used to override the global header and footer used by 
 
 ## Built-in web templates
 
-There is a set of premade Liquid templates available within PowerApps Portals. To use them, you must include them by name, using the list below as a reference.
+There is a set of premade Liquid templates available within PowerApps portals. To use them, you must include them by name, using the list below as a reference.
 
 | Name                        | Description                                                                                                                                                                                                                             | Code                                                                                   |
 |-----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|

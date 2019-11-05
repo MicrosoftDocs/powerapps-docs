@@ -75,7 +75,7 @@ This procedure shows you how to use the out-of-box OData Data Provider to use as
 1. On the **New Data Source** properties page, complete the following fields, and then save the record.  
   
     - **Name**. Type a name that describes the data source.  
-    - **Uri**. If you are using the OData Data Provider, enter the uri for the OData web service. For example, if you are using the OData provider to connect to a web service hosted in Azure, the URI can look similar to *`http://contosodataservice.azurewebsites.net/odata/`*.  
+    - **Uri**. If you are using the OData Data Provider, enter the uri for the OData web service. For example, if you are using the OData provider to connect to a web service hosted in Azure, the URI can look similar to *`https://contosodataservice.azurewebsites.net/odata/`*.  
     - **Timeout in seconds**. Enter the number of seconds to wait for a response from the web service before a data request time-out. For example, enter 30 to wait a maximum of thirty seconds before a time-out occurs.  
     - **Pagination mode**. Select whether to use client-side or server-side paging to control how query results are paged. The default value is client-side paging. With server-side paging, the server controls how results are paged by using the $skiptoken parameter, which is added to the query string. More information:  [Skip Token System Query Option ($skiptoken)](https://msdn.microsoft.com/library/dd942121.aspx)  
         -  **Return inline count**. Returns the total number records in the result set. This setting is used to enable next page functionality when you return data to a grid. Use a value of false if your OData endpoint doesn't support the OData $inlinecount parameter. The default value is false.

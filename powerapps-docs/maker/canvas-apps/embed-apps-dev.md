@@ -36,11 +36,11 @@ https://apps.powerapps.com/play/[AppID]?source=iframe
 ```
 
 > [!IMPORTANT]
-> As of August 2019, the URI format has changed from https://web.powerapps.com/webplayer to https://apps.powerapps.com/play. Please update any embedded iframes to use the new URI format. References to the previous format will be redirected to the new URI to ensure compatibility.
+> As of August 2019, the URI format has changed from https://make.powerapps.com/webplayer to https://apps.powerapps.com/play. Please update any embedded iframes to use the new URI format. References to the previous format will be redirected to the new URI to ensure compatibility.
 >
 > Previous format:
 > 
-> https\://web.powerapps.com/webplayer/iframeapp?source=iframe&appId=/providers/Microsoft.PowerApps/apps/[AppID]
+> https\://make.powerapps.com/webplayer/iframeapp?source=iframe&appId=/providers/Microsoft.PowerApps/apps/[AppID]
 
 The only thing you have to do is substitute the ID of your app for [AppID] in the URI (including '[' & ']'). We'll show you how to get that value shortly, but first here are all the parameters available in the URI:
 

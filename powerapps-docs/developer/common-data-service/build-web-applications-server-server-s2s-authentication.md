@@ -23,7 +23,7 @@ S2S authentication means you don’t need to use a paid PowerApps user license w
 
  All operations performed by your application or service using S2S will be performed as the application user you provide rather than as the user who is accessing your application. If you want your application to perform data operations on behalf of a specific user, such as the one who is interacting with your application, you can apply impersonation when the custom security role applied to your application service principal has the privileges required. More information: [Impersonate another user](impersonate-another-user.md)  
 
- A web application or service which uses S2S authentication is responsible for controlling access to the data that it has access to. This is typically done using an OpenID Connect provider. More information: <http://openid.net/connect/>.  
+ A web application or service which uses S2S authentication is responsible for controlling access to the data that it has access to. This is typically done using an OpenID Connect provider. More information: <https://openid.net/connect/>.  
 
 ## Server-to-Server authentication scenarios  
  There are two scenarios where you can apply S2S authentication.  

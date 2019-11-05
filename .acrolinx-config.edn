@@ -1,0 +1,2 @@
+{:allowed-branchname-matches ["^acrolinx$"]
+ :allowed-filename-matches ["powerapps-docs/maker/common-data-service"]}

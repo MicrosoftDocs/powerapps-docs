@@ -24,7 +24,7 @@ To use the Online Management API, you must have one of the following admin roles
 - Global administrator
 - Service administrator
 
-For information about these roles, see [About Office 365 admin roles](https://support.office.com/en-us/article/About-Office-365-admin-roles-da585eea-f576-4f55-a1e0-87090b6aaa9d)
+For information about these roles, see [About Office 365 admin roles](https://support.office.com/article/About-Office-365-admin-roles-da585eea-f576-4f55-a1e0-87090b6aaa9d)
 
 ## Service URL
 
@@ -61,8 +61,8 @@ The Online Management API has following standard request and response headers.
 
 | Header | Type | Description  |
 |--------|------|--------------|
-|**Accept-Language**|String|Specifies the preferred language for the response. More information about the header: [Accept-Language (MDN web docs)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Language)|
-|**Authorization**|String|Specifies the credentials to authenticate a user with the Online Management API service. More information about the header: [Authorization (MDN web docs)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Authorization)|
+|**Accept-Language**|String|Specifies the preferred language for the response. More information about the header: [Accept-Language (MDN web docs)](https://developer.mozilla.org/docs/Web/HTTP/Headers/Accept-Language)|
+|**Authorization**|String|Specifies the credentials to authenticate a user with the Online Management API service. More information about the header: [Authorization (MDN web docs)](https://developer.mozilla.org/docs/Web/HTTP/Headers/Authorization)|
 
 See [Authenticate to use the Online Management API](authentication.md) to know about setting these headers in your request.
 

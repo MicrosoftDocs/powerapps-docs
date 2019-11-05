@@ -26,14 +26,14 @@ All
 
 `formContext.getAttribute(arg).setValue(value)`
 
-# Parameters
+## Parameters
 Depends on the type of attribute.
 
 <!-- TODO: 
 
 Change type links from msdn to docs, i.e. https://msdn.microsoft.com/library/dwab3ed2.aspx to /scripting/javascript/reference/number-object-javascript 
 
-or MDN https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number
+or MDN https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number
 -->
 
 | Attribute Type|Parameters Type|

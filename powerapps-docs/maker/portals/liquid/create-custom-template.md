@@ -13,7 +13,7 @@ ms.reviewer:
 
 # Create a custom page template
 
-In this example, we'll create a custom page template by using Liquid and a page template that is based on a web template. [!INCLUDE[proc-more-information](../../../includes/proc-more-information.md)] [Store source content by using web templates](store-content-web-templates.md). Our goal is to build a simple two-column template that uses a [web link set](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/manage-web-links) as left-side navigation, with the page content to the right. 
+In this example, we'll create a custom page template by using Liquid and a page template that is based on a web template. [!INCLUDE[proc-more-information](../../../includes/proc-more-information.md)] [Store source content by using web templates](store-content-web-templates.md). Our goal is to build a simple two-column template that uses a [web link set](../configure/manage-web-links.md) as left-side navigation, with the page content to the right. 
 
 ## Step 1: Create a web template and write the Liquid template code
 

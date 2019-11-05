@@ -62,7 +62,7 @@ For online solutions and services, Azure provides a [Key Vault](https://azure.mi
 It is also advised that you add the domain https://discovery.crmreplication.azure.net/ to the trusted sites list in your browser and to enable pop-ups for this site.  
   
 ## Programming for the Data Export Service  
- The Data Export Service exposes a REST-based API that is divided into two groups: a set of `Metadata` operations for exploring Common Data Service organizational structure, relationships, and connection information; and a set of `Profiles` operations    for configuring and managing each data replication.  This API is fully defined and documented at the following [Swagger](http://swagger.io/) URLs:  
+ The Data Export Service exposes a REST-based API that is divided into two groups: a set of `Metadata` operations for exploring Common Data Service organizational structure, relationships, and connection information; and a set of `Profiles` operations    for configuring and managing each data replication.  This API is fully defined and documented at the following [Swagger](https://swagger.io/) URLs:  
   
 |Swagger endpoint|Description|  
 |----------------------|-----------------|  

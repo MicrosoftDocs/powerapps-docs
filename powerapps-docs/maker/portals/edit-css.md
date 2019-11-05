@@ -17,7 +17,7 @@ Cascading Style Sheets (CSS) allows you to control the formatting of your websit
 
 To open a CSS in code editor:
 
-1.  [Edit the portal](manage-existing-portals.md#edit) to open it in PowerApps Portals Studio.  
+1.  [Edit the portal](manage-existing-portals.md#edit) to open it in PowerApps portals Studio.  
 
 2.  Select **Theme** ![Theme icon](media/theme-icon.png "Theme icon") from the toolbelt on the left side of the screen. The available themes are displayed.  
 
@@ -30,7 +30,7 @@ To open a CSS in code editor:
 
 To upload a new CSS file:
 
-1.  [Edit the portal](manage-existing-portals.md#edit) to open it in PowerApps Portals Studio.  
+1.  [Edit the portal](manage-existing-portals.md#edit) to open it in PowerApps portals Studio.  
 
 2.  Select **Theme** ![Theme icon](media/theme-icon.png "Theme icon") from the toolbelt on the left side of the screen. The available themes are displayed.  
 
