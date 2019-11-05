@@ -2,50 +2,51 @@
   href: /
   topicHref: /
   items:
-  - name: PowerApps
-    tocHref: /powerapps/
-    topicHref: /powerapps/
+  - name: Power Platform
+    tochref: /power-platform/
+    topichref: /power-platform/
     items:
-    # Adding Create app for each type of app
-    - name: Create apps
-      tocHref: /powerapps/maker/common-data-service/
-      topicHref: /powerapps/maker/index
-    - name: Create apps
-      tocHref: /powerapps/maker/model-driven-apps/
-      topicHref: /powerapps/maker/index     
-    - name: Create apps
-      tocHref: /powerapps/maker/canvas-apps/
-      topicHref: /powerapps/maker/index       
-    #  Make sure Create apps appears for topics in developer folder 
-    - name: Create apps
-      tocHref: /powerapps/developer/common-data-service/
-      topicHref: /powerapps/maker/index
-      items: 
-      - name: Common Data Service
-        tocHref: /powerapps/developer/common-data-service/
-        topicHref: /powerapps/maker/common-data-service/index          
-        items:
-        - name: Developer
-          tocHref: /powerapps/developer/common-data-service/
-          topicHref: /powerapps/developer/common-data-service/index
-          items:
-          - name: Organization Service
-            tocHref: /powerapps/developer/common-data-service/org-service/
-            topicHref: /powerapps/developer/common-data-service/org-service/index
-          - name: Web API
-            tocHref: /powerapps/developer/common-data-service/webapi/
-            topicHref: /powerapps/developer/common-data-service/webapi/index
-    - name: Create apps
-      tocHref: /powerapps/developer/model-driven-apps/
-      topicHref: /powerapps/maker/index
+    - name: PowerApps
+      tocHref: /powerapps/
+      topicHref: /powerapps/
       items:
-      - name: Model-driven apps
+      # Adding Create app for each type of app
+      - name: Create apps
+        tocHref: /powerapps/maker/common-data-service/
+        topicHref: /powerapps/maker/index
+      - name: Create apps
+        tocHref: /powerapps/maker/model-driven-apps/
+        topicHref: /powerapps/maker/index     
+      - name: Create apps
+        tocHref: /powerapps/maker/canvas-apps/
+        topicHref: /powerapps/maker/index       
+      #  Make sure Create apps appears for topics in developer folder 
+      - name: Create apps
+        tocHref: /powerapps/developer/common-data-service/
+        topicHref: /powerapps/maker/index
+        items: 
+        - name: Common Data Service
+          tocHref: /powerapps/developer/common-data-service/
+          topicHref: /powerapps/maker/common-data-service/index          
+          items:
+          - name: Developer
+            tocHref: /powerapps/developer/common-data-service/
+            topicHref: /powerapps/developer/common-data-service/index
+            items:
+            - name: Organization Service
+              tocHref: /powerapps/developer/common-data-service/org-service/
+              topicHref: /powerapps/developer/common-data-service/org-service/index
+            - name: Web API
+              tocHref: /powerapps/developer/common-data-service/webapi/
+              topicHref: /powerapps/developer/common-data-service/webapi/index
+      - name: Create apps
         tocHref: /powerapps/developer/model-driven-apps/
-        topicHref: /powerapps/maker/model-driven-apps/index      
+        topicHref: /powerapps/maker/index
         items:
-        - name: Developer
+        - name: Model-driven apps
           tocHref: /powerapps/developer/model-driven-apps/
-          topicHref: /powerapps/developer/model-driven-apps/index
-    - name: Guided Learning
-      tocHref: /powerapps/guided-learning/
-      topicHref: /powerapps/guided-learning/index
+          topicHref: /powerapps/maker/model-driven-apps/index      
+          items:
+          - name: Developer
+            tocHref: /powerapps/developer/model-driven-apps/
+            topicHref: /powerapps/developer/model-driven-apps/index    
