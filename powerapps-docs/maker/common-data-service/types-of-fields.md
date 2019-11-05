@@ -180,6 +180,7 @@ When an image is uploaded, it will be resized as a "thumbnail" image to a maximu
 
 By default,	when an app user adds an image to display to a form or canvas app, the image displayed is the thumbnail image. To display a full image for a canvas app, see [Display a full-sized image on a canvas app form](../canvas-apps/display-full-image-on-form.md).
 
+<!-- 
 ### Add an image field to an entity using the PowerApps site
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
@@ -191,7 +192,7 @@ By default,	when an app user adds an image to display to a form or canvas app, t
    - **Data type**. Select **Image**. 
    - **Primary image**. When selected, the primary image field becomes the image field for the entity. You can only have one primary image for each entity. 
    - **Maximum image size**. The maximum file size that an app user can upload to the record. 10,240 KB is the default maximum size and 10 MB is the maximum size limit. 
-   - **Can store full images**. When selected, in addition to the rescaled thumbnail image described earlier, the full image is stored when uploaded by the user for each record. Full size images are limited to 30 MB.
+   - **Can store full images**. When selected, in addition to the rescaled thumbnail image described earlier, the full image is stored when uploaded by the user for each record. Full size images are limited to 30 MB.  -->
 
 ### Add image support for a form in a custom entity using solution explorer
 1. Open [solution explorer](../model-driven-apps/advanced-navigation.md#solution-explorer). 
