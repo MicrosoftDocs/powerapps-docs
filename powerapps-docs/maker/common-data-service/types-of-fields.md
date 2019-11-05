@@ -244,3 +244,5 @@ Currently, the file data type is only available to canvas apps and flows.
 The **File** field is used for storing binary data. The primary intended use of this field is to store a single image, note, or attachment. However, storage of other forms of binary data is also possible. One or more fields of this data type can be added to an existing standard customizable entity or a custom entity.
 
 The default **Maximum file size** is 32 MB and the largest size you can set is 128 MB. The file size limit can be set individually for each field of file type added to an entity. 
+
+More information for developers working with file data: [File attributes](/powerapps/developer/common-data-service/file-attributes)
