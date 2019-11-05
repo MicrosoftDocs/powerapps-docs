@@ -3,7 +3,7 @@
   topicHref: /
   items:
   - name: Power Platform
-    tochref: /power-platform/
+    href: /power-platform/
     topichref: /power-platform/
     items:
     - name: PowerApps
