@@ -102,5 +102,11 @@ If your environment has been transitioned for at least 4 days, we will look to d
 
 If you find this has been disabled and have a requirement to switch back, raise a support request from your usual channel for evaluation.
 
+### Is there a specific day and time when automatic transitions will take place? 
+
+We don't anticipate any downtime when making this transition. However, we will only make an automatic transition on a Friday, and following the same maintenance timelines outlined within our standard policies and communications. More information: [Maintenance timeline
+](https://docs.microsoft.com/power-platform/admin/policies-communications#maintenance-timeline)
+
+
 
 
