@@ -1006,6 +1006,8 @@
       href: ./model-driven-apps/templates-overview.md
     - name: Use themes to apply organization branding
       href: ./model-driven-apps/create-themes-organization-branding.md
+    - name: Create guided help for your app
+      href: ./common-data-service/create-custom-help-pages.md
     - name: Add reporting to your app
       href: ./model-driven-apps/add-reporting-to-app.md    
       items: 
@@ -1042,6 +1044,8 @@
       href: ./model-driven-apps/change-custom-entity-icons.md
     - name: Distribute an app using solutions
       href: ./model-driven-apps/distribute-model-driven-app.md
+    - name: Enable customizable help
+      href: ./model-driven-apps/use-customizable-help.md  
     - name: Create guided help
       href: ./model-driven-apps/create-guided-help-learning-path.md      
   - name: Transition to Unified Interface
