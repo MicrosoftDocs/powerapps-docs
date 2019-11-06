@@ -1,14 +1,14 @@
 ---
 title: Accessibility properties for canvas apps | Microsoft Docs
 description: Reference information about properties such as TabIndex and Tooltip
-author: fikaradz
+author: chmoncay
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 01/26/2017
-ms.author: fikaradz
+ms.author: chmoncay
 search.audienceType: 
   - maker
 search.app: 
