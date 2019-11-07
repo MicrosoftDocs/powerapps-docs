@@ -1,7 +1,7 @@
 ---
 title: "SolutionComponent Entity Reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the SolutionComponent entity."
-ms.date: 04/01/2019
+description: "Includes schema information and supported messages for the SolutionComponent entity in Common Data Service."
+ms.date: 11/07/2019
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -12,7 +12,6 @@ search.audienceType:
   - developer
 search.app: 
   - PowerApps
-  - D365CE
 ---
 # SolutionComponent Entity Reference
 
@@ -170,6 +169,15 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |210|WebWizard|
 |300|Canvas App|
 |371|Connector|
+|372|Connector|
+|380|Environment Variable Definition|
+|381|Environment Variable Value|
+|400|AI Project Type|
+|401|AI Project|
+|402|AI Configuration|
+|430|Entity Analytics Configuration|
+|431|Attribute Image Configuration|
+|432|Entity Image Configuration|
 
 
 

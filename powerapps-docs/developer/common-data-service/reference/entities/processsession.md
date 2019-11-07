@@ -1,7 +1,7 @@
 ---
 title: "ProcessSession Entity Reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the ProcessSession entity."
-ms.date: 04/01/2019
+description: "Includes schema information and supported messages for the ProcessSession entity in Common Data Service."
+ms.date: 11/07/2019
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -12,7 +12,6 @@ search.audienceType:
   - developer
 search.app: 
   - PowerApps
-  - D365CE
 ---
 # ProcessSession Entity Reference
 
@@ -355,7 +354,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |IsValidForUpdate|False|
 |LogicalName|regardingobjectid|
 |RequiredLevel|None|
-|Targets|account,annotation,appointment,businessunit,businessunitnewsarticle,channelaccessprofile,channelaccessprofilerule,connection,connectionrole,contact,convertrule,customeraddress,customerrelationship,email,expiredprocess,externalparty,externalpartyitem,fax,goal,goalrollupquery,holidaywrapper,kbarticle,kbarticlecomment,kbarticletemplate,knowledgearticle,knowledgebaserecord,letter,mailbox,mailmergetemplate,metric,msdyn_connector,newprocess,phonecall,position,queue,queueitem,recurringappointmentmaster,relationshiprole,report,rollupfield,routingrule,routingruleitem,sharepointdocumentlocation,sharepointsite,sla,socialactivity,socialprofile,subject,systemuser,task,team,template,territory,theme,transactioncurrency,translationprocess,usermapping|
+|Targets|account,annotation,appointment,attributeimageconfig,businessunit,businessunitnewsarticle,channelaccessprofile,channelaccessprofilerule,connection,connectionrole,connector,contact,convertrule,customeraddress,customerrelationship,email,entityimageconfig,environmentvariabledefinition,environmentvariablevalue,expiredprocess,externalparty,externalpartyitem,fax,goal,goalrollupquery,holidaywrapper,kbarticle,kbarticlecomment,kbarticletemplate,knowledgearticle,knowledgebaserecord,letter,mailbox,mailmergetemplate,metric,msdyn_aiconfiguration,msdyn_aifptrainingdocument,msdyn_aimodel,msdyn_aiodimage,msdyn_aiodlabel,msdyn_aiodtrainingboundingbox,msdyn_aiodtrainingimage,msdyn_aitemplate,msdyn_analysiscomponent,msdyn_analysisjob,msdyn_analysisresult,msdyn_analysisresultdetail,msdyn_knowledgearticleimage,msdyn_knowledgearticletemplate,msdyn_solutionhealthrule,msdyn_solutionhealthruleargument,msdyn_solutionhealthruleset,newprocess,phonecall,position,queue,queueitem,recurringappointmentmaster,relationshiprole,report,rollupfield,routingrule,routingruleitem,sharepointdocumentlocation,sharepointsite,sla,socialactivity,socialprofile,subject,systemuser,task,team,template,territory,theme,transactioncurrency,translationprocess,usermapping,workflowbinary|
 |Type|Lookup|
 
 
@@ -1238,8 +1237,6 @@ Same as postfollow entity [processsession_PostFollows](postfollow.md#BKMK_proces
 
 Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related entity. Listed by **SchemaName**.
 
-- [Territory_ProcessSessions](#BKMK_Territory_ProcessSessions)
-- [msdyn_connector_ProcessSession](#BKMK_msdyn_connector_ProcessSession)
 - [theme_ProcessSession](#BKMK_theme_ProcessSession)
 - [usermapping_ProcessSession](#BKMK_usermapping_ProcessSession)
 - [knowledgearticle_ProcessSession](#BKMK_knowledgearticle_ProcessSession)
@@ -1299,19 +1296,31 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [lk_processsessionbase_createdonbehalfby](#BKMK_lk_processsessionbase_createdonbehalfby)
 - [Subject_ProcessSessions](#BKMK_Subject_ProcessSessions)
 - [SocialProfile_ProcessSessions](#BKMK_SocialProfile_ProcessSessions)
+- [Territory_ProcessSessions](#BKMK_Territory_ProcessSessions)
+- [msdyn_knowledgearticleimage_ProcessSession](#BKMK_msdyn_knowledgearticleimage_ProcessSession)
+- [msdyn_knowledgearticletemplate_ProcessSession](#BKMK_msdyn_knowledgearticletemplate_ProcessSession)
+- [attributeimageconfig_ProcessSession](#BKMK_attributeimageconfig_ProcessSession)
+- [entityimageconfig_ProcessSession](#BKMK_entityimageconfig_ProcessSession)
+- [connector_ProcessSession](#BKMK_connector_ProcessSession)
+- [msdyn_aiconfiguration_ProcessSession](#BKMK_msdyn_aiconfiguration_ProcessSession)
+- [msdyn_aimodel_ProcessSession](#BKMK_msdyn_aimodel_ProcessSession)
+- [msdyn_aitemplate_ProcessSession](#BKMK_msdyn_aitemplate_ProcessSession)
+- [msdyn_aifptrainingdocument_ProcessSession](#BKMK_msdyn_aifptrainingdocument_ProcessSession)
+- [msdyn_aiodimage_ProcessSession](#BKMK_msdyn_aiodimage_ProcessSession)
+- [msdyn_aiodlabel_ProcessSession](#BKMK_msdyn_aiodlabel_ProcessSession)
+- [msdyn_aiodtrainingboundingbox_ProcessSession](#BKMK_msdyn_aiodtrainingboundingbox_ProcessSession)
+- [msdyn_aiodtrainingimage_ProcessSession](#BKMK_msdyn_aiodtrainingimage_ProcessSession)
+- [workflowbinary_ProcessSession](#BKMK_workflowbinary_ProcessSession)
+- [environmentvariabledefinition_ProcessSession](#BKMK_environmentvariabledefinition_ProcessSession)
+- [environmentvariablevalue_ProcessSession](#BKMK_environmentvariablevalue_ProcessSession)
+- [msdyn_analysiscomponent_ProcessSession](#BKMK_msdyn_analysiscomponent_ProcessSession)
+- [msdyn_analysisjob_ProcessSession](#BKMK_msdyn_analysisjob_ProcessSession)
+- [msdyn_analysisresult_ProcessSession](#BKMK_msdyn_analysisresult_ProcessSession)
+- [msdyn_analysisresultdetail_ProcessSession](#BKMK_msdyn_analysisresultdetail_ProcessSession)
+- [msdyn_solutionhealthrule_ProcessSession](#BKMK_msdyn_solutionhealthrule_ProcessSession)
+- [msdyn_solutionhealthruleargument_ProcessSession](#BKMK_msdyn_solutionhealthruleargument_ProcessSession)
+- [msdyn_solutionhealthruleset_ProcessSession](#BKMK_msdyn_solutionhealthruleset_ProcessSession)
 
-
-### <a name="BKMK_Territory_ProcessSessions"></a> Territory_ProcessSessions
-
-**Added by**: Application Common Solution
-
-See territory Entity [Territory_ProcessSessions](territory.md#BKMK_Territory_ProcessSessions) One-To-Many relationship.
-
-### <a name="BKMK_msdyn_connector_ProcessSession"></a> msdyn_connector_ProcessSession
-
-**Added by**: Power Connector Solution Solution
-
-See msdyn_connector Entity [msdyn_connector_ProcessSession](msdyn_connector.md#BKMK_msdyn_connector_ProcessSession) One-To-Many relationship.
 
 ### <a name="BKMK_theme_ProcessSession"></a> theme_ProcessSession
 
@@ -1548,6 +1557,150 @@ See subject Entity [Subject_ProcessSessions](subject.md#BKMK_Subject_ProcessSess
 ### <a name="BKMK_SocialProfile_ProcessSessions"></a> SocialProfile_ProcessSessions
 
 See socialprofile Entity [SocialProfile_ProcessSessions](socialprofile.md#BKMK_SocialProfile_ProcessSessions) One-To-Many relationship.
+
+### <a name="BKMK_Territory_ProcessSessions"></a> Territory_ProcessSessions
+
+**Added by**: Application Common Solution
+
+See territory Entity [Territory_ProcessSessions](territory.md#BKMK_Territory_ProcessSessions) One-To-Many relationship.
+
+### <a name="BKMK_msdyn_knowledgearticleimage_ProcessSession"></a> msdyn_knowledgearticleimage_ProcessSession
+
+**Added by**: Knowledge Management Online Features Solution
+
+See msdyn_knowledgearticleimage Entity [msdyn_knowledgearticleimage_ProcessSession](msdyn_knowledgearticleimage.md#BKMK_msdyn_knowledgearticleimage_ProcessSession) One-To-Many relationship.
+
+### <a name="BKMK_msdyn_knowledgearticletemplate_ProcessSession"></a> msdyn_knowledgearticletemplate_ProcessSession
+
+**Added by**: Knowledge Management Features Solution
+
+See msdyn_knowledgearticletemplate Entity [msdyn_knowledgearticletemplate_ProcessSession](msdyn_knowledgearticletemplate.md#BKMK_msdyn_knowledgearticletemplate_ProcessSession) One-To-Many relationship.
+
+### <a name="BKMK_attributeimageconfig_ProcessSession"></a> attributeimageconfig_ProcessSession
+
+**Added by**: Image Configuration Solution
+
+See attributeimageconfig Entity [attributeimageconfig_ProcessSession](attributeimageconfig.md#BKMK_attributeimageconfig_ProcessSession) One-To-Many relationship.
+
+### <a name="BKMK_entityimageconfig_ProcessSession"></a> entityimageconfig_ProcessSession
+
+**Added by**: Image Configuration Solution
+
+See entityimageconfig Entity [entityimageconfig_ProcessSession](entityimageconfig.md#BKMK_entityimageconfig_ProcessSession) One-To-Many relationship.
+
+### <a name="BKMK_connector_ProcessSession"></a> connector_ProcessSession
+
+**Added by**: Power Connector Solution Solution
+
+See connector Entity [connector_ProcessSession](connector.md#BKMK_connector_ProcessSession) One-To-Many relationship.
+
+### <a name="BKMK_msdyn_aiconfiguration_ProcessSession"></a> msdyn_aiconfiguration_ProcessSession
+
+**Added by**: AISolution Solution
+
+See msdyn_aiconfiguration Entity [msdyn_aiconfiguration_ProcessSession](msdyn_aiconfiguration.md#BKMK_msdyn_aiconfiguration_ProcessSession) One-To-Many relationship.
+
+### <a name="BKMK_msdyn_aimodel_ProcessSession"></a> msdyn_aimodel_ProcessSession
+
+**Added by**: AISolution Solution
+
+See msdyn_aimodel Entity [msdyn_aimodel_ProcessSession](msdyn_aimodel.md#BKMK_msdyn_aimodel_ProcessSession) One-To-Many relationship.
+
+### <a name="BKMK_msdyn_aitemplate_ProcessSession"></a> msdyn_aitemplate_ProcessSession
+
+**Added by**: AISolution Solution
+
+See msdyn_aitemplate Entity [msdyn_aitemplate_ProcessSession](msdyn_aitemplate.md#BKMK_msdyn_aitemplate_ProcessSession) One-To-Many relationship.
+
+### <a name="BKMK_msdyn_aifptrainingdocument_ProcessSession"></a> msdyn_aifptrainingdocument_ProcessSession
+
+**Added by**: AI Solution default templates Solution
+
+See msdyn_aifptrainingdocument Entity [msdyn_aifptrainingdocument_ProcessSession](msdyn_aifptrainingdocument.md#BKMK_msdyn_aifptrainingdocument_ProcessSession) One-To-Many relationship.
+
+### <a name="BKMK_msdyn_aiodimage_ProcessSession"></a> msdyn_aiodimage_ProcessSession
+
+**Added by**: AI Solution default templates Solution
+
+See msdyn_aiodimage Entity [msdyn_aiodimage_ProcessSession](msdyn_aiodimage.md#BKMK_msdyn_aiodimage_ProcessSession) One-To-Many relationship.
+
+### <a name="BKMK_msdyn_aiodlabel_ProcessSession"></a> msdyn_aiodlabel_ProcessSession
+
+**Added by**: AI Solution default templates Solution
+
+See msdyn_aiodlabel Entity [msdyn_aiodlabel_ProcessSession](msdyn_aiodlabel.md#BKMK_msdyn_aiodlabel_ProcessSession) One-To-Many relationship.
+
+### <a name="BKMK_msdyn_aiodtrainingboundingbox_ProcessSession"></a> msdyn_aiodtrainingboundingbox_ProcessSession
+
+**Added by**: AI Solution default templates Solution
+
+See msdyn_aiodtrainingboundingbox Entity [msdyn_aiodtrainingboundingbox_ProcessSession](msdyn_aiodtrainingboundingbox.md#BKMK_msdyn_aiodtrainingboundingbox_ProcessSession) One-To-Many relationship.
+
+### <a name="BKMK_msdyn_aiodtrainingimage_ProcessSession"></a> msdyn_aiodtrainingimage_ProcessSession
+
+**Added by**: AI Solution default templates Solution
+
+See msdyn_aiodtrainingimage Entity [msdyn_aiodtrainingimage_ProcessSession](msdyn_aiodtrainingimage.md#BKMK_msdyn_aiodtrainingimage_ProcessSession) One-To-Many relationship.
+
+### <a name="BKMK_workflowbinary_ProcessSession"></a> workflowbinary_ProcessSession
+
+**Added by**: Microsoft Flow Extensions package Solution
+
+See workflowbinary Entity [workflowbinary_ProcessSession](workflowbinary.md#BKMK_workflowbinary_ProcessSession) One-To-Many relationship.
+
+### <a name="BKMK_environmentvariabledefinition_ProcessSession"></a> environmentvariabledefinition_ProcessSession
+
+**Added by**: Environment Variables Solution
+
+See environmentvariabledefinition Entity [environmentvariabledefinition_ProcessSession](environmentvariabledefinition.md#BKMK_environmentvariabledefinition_ProcessSession) One-To-Many relationship.
+
+### <a name="BKMK_environmentvariablevalue_ProcessSession"></a> environmentvariablevalue_ProcessSession
+
+**Added by**: Environment Variables Solution
+
+See environmentvariablevalue Entity [environmentvariablevalue_ProcessSession](environmentvariablevalue.md#BKMK_environmentvariablevalue_ProcessSession) One-To-Many relationship.
+
+### <a name="BKMK_msdyn_analysiscomponent_ProcessSession"></a> msdyn_analysiscomponent_ProcessSession
+
+**Added by**: PowerApps Checker Solution
+
+See msdyn_analysiscomponent Entity [msdyn_analysiscomponent_ProcessSession](msdyn_analysiscomponent.md#BKMK_msdyn_analysiscomponent_ProcessSession) One-To-Many relationship.
+
+### <a name="BKMK_msdyn_analysisjob_ProcessSession"></a> msdyn_analysisjob_ProcessSession
+
+**Added by**: PowerApps Checker Solution
+
+See msdyn_analysisjob Entity [msdyn_analysisjob_ProcessSession](msdyn_analysisjob.md#BKMK_msdyn_analysisjob_ProcessSession) One-To-Many relationship.
+
+### <a name="BKMK_msdyn_analysisresult_ProcessSession"></a> msdyn_analysisresult_ProcessSession
+
+**Added by**: PowerApps Checker Solution
+
+See msdyn_analysisresult Entity [msdyn_analysisresult_ProcessSession](msdyn_analysisresult.md#BKMK_msdyn_analysisresult_ProcessSession) One-To-Many relationship.
+
+### <a name="BKMK_msdyn_analysisresultdetail_ProcessSession"></a> msdyn_analysisresultdetail_ProcessSession
+
+**Added by**: PowerApps Checker Solution
+
+See msdyn_analysisresultdetail Entity [msdyn_analysisresultdetail_ProcessSession](msdyn_analysisresultdetail.md#BKMK_msdyn_analysisresultdetail_ProcessSession) One-To-Many relationship.
+
+### <a name="BKMK_msdyn_solutionhealthrule_ProcessSession"></a> msdyn_solutionhealthrule_ProcessSession
+
+**Added by**: PowerApps Checker Solution
+
+See msdyn_solutionhealthrule Entity [msdyn_solutionhealthrule_ProcessSession](msdyn_solutionhealthrule.md#BKMK_msdyn_solutionhealthrule_ProcessSession) One-To-Many relationship.
+
+### <a name="BKMK_msdyn_solutionhealthruleargument_ProcessSession"></a> msdyn_solutionhealthruleargument_ProcessSession
+
+**Added by**: PowerApps Checker Solution
+
+See msdyn_solutionhealthruleargument Entity [msdyn_solutionhealthruleargument_ProcessSession](msdyn_solutionhealthruleargument.md#BKMK_msdyn_solutionhealthruleargument_ProcessSession) One-To-Many relationship.
+
+### <a name="BKMK_msdyn_solutionhealthruleset_ProcessSession"></a> msdyn_solutionhealthruleset_ProcessSession
+
+**Added by**: PowerApps Checker Solution
+
+See msdyn_solutionhealthruleset Entity [msdyn_solutionhealthruleset_ProcessSession](msdyn_solutionhealthruleset.md#BKMK_msdyn_solutionhealthruleset_ProcessSession) One-To-Many relationship.
 
 ### See also
 

@@ -32,6 +32,8 @@
   href: appointment.md
 - name: AsyncOperation
   href: asyncoperation.md
+- name: AttributeImageConfig
+  href: attributeimageconfig.md
 - name: Audit
   href: audit.md
 - name: BulkDeleteFailure
@@ -56,6 +58,8 @@
   href: connection.md
 - name: ConnectionRole
   href: connectionrole.md
+- name: connector
+  href: connector.md
 - name: Contact
   href: contact.md
 - name: CustomControl
@@ -108,6 +112,8 @@
   href: fieldsecurityprofile.md
 - name: FixedMonthlyFiscalCalendar
   href: fixedmonthlyfiscalcalendar.md
+- name: flowsession
+  href: flowsession.md
 - name: Goal
   href: goal.md
 - name: GoalRollupQuery
@@ -162,18 +168,50 @@
   href: mobileofflineprofileitemassociation.md
 - name: MonthlyFiscalCalendar
   href: monthlyfiscalcalendar.md
+- name: msdyn_AIConfiguration
+  href: msdyn_aiconfiguration.md
+- name: msdyn_AIFpTrainingDocument
+  href: msdyn_aifptrainingdocument.md
+- name: msdyn_AIModel
+  href: msdyn_aimodel.md
+- name: msdyn_AIOdImage
+  href: msdyn_aiodimage.md
+- name: msdyn_AIOdLabel
+  href: msdyn_aiodlabel.md
+- name: msdyn_AIOdTrainingBoundingBox
+  href: msdyn_aiodtrainingboundingbox.md
+- name: msdyn_AIOdTrainingImage
+  href: msdyn_aiodtrainingimage.md
+- name: msdyn_AITemplate
+  href: msdyn_aitemplate.md
+- name: msdyn_analysiscomponent
+  href: msdyn_analysiscomponent.md
+- name: msdyn_analysisjob
+  href: msdyn_analysisjob.md
+- name: msdyn_analysisresult
+  href: msdyn_analysisresult.md
+- name: msdyn_analysisresultdetail
+  href: msdyn_analysisresultdetail.md
 - name: msdyn_componentlayer
   href: msdyn_componentlayer.md
 - name: msdyn_componentlayerdatasource
   href: msdyn_componentlayerdatasource.md
-- name: msdyn_Connector
-  href: msdyn_connector.md
+- name: msdyn_knowledgearticleimage
+  href: msdyn_knowledgearticleimage.md
+- name: msdyn_knowledgearticletemplate
+  href: msdyn_knowledgearticletemplate.md
 - name: msdyn_odatav4ds
   href: msdyn_odatav4ds.md
 - name: msdyn_solutioncomponentdatasource
   href: msdyn_solutioncomponentdatasource.md
 - name: msdyn_solutioncomponentsummary
   href: msdyn_solutioncomponentsummary.md
+- name: msdyn_solutionhealthrule
+  href: msdyn_solutionhealthrule.md
+- name: msdyn_solutionhealthruleargument
+  href: msdyn_solutionhealthruleargument.md
+- name: msdyn_solutionhealthruleset
+  href: msdyn_solutionhealthruleset.md
 - name: msdyn_solutionhistory
   href: msdyn_solutionhistory.md
 - name: msdyn_solutionhistorydatasource
@@ -242,6 +280,8 @@
   href: report.md
 - name: ReportCategory
   href: reportcategory.md
+- name: RibbonMetadataToProcess
+  href: ribbonmetadatatoprocess.md
 - name: Role
   href: role.md
 - name: RollupField
@@ -336,5 +376,7 @@
   href: webresource.md
 - name: Workflow
   href: workflow.md
+- name: workflowbinary
+  href: workflowbinary.md
 - name: WorkflowLog
   href: workflowlog.md
