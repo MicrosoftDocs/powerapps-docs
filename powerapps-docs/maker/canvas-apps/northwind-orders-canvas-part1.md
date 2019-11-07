@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 04/25/2019
+ms.date: 11/06/2019
 ms.author: gregli
 search.audienceType:
   - maker
@@ -47,39 +47,22 @@ Follow step-by-step instructions to create an order gallery in a canvas app for 
     > [!div class="mx-imgBorder"]
     > ![PowerApps Studio](media/northwind-orders-canvas-part1/start-03.png)
 
-1. Enable an [experimental feature](working-with-experimental.md) for showing the result of a formula directly from the formula bar.
-
-    1. On the **File** menu, select **App settings**, and then select **Advanced settings**.
-    1. Scroll to the bottom of the list of features, and then turn on **Enable formula bar result view**:
-
-        > [!div class="mx-imgBorder"]
-        > ![List of experimental features](media/northwind-orders-canvas-part1/start-04.png)
-
-1. In the upper-left corner, select the back arrow to return to the blank canvas.
-
 ## Add the data
 
-1. On the **View** tab, select **Data sources**, and then select **Add data source** in the **Data** pane:
+1. On the **View** tab, select **Data sources**:
 
     > [!div class="mx-imgBorder"]
     > ![Select View, Data sources, Add data source](media/northwind-orders-canvas-part1/datasource-01.png)
 
-1. Select **Common Data Service**.
-
-    If **Common Data Service** doesn't appear in the list of connections, select **New connection**, and then add it.
+1. Type **orders** into the search box:
 
     > [!div class="mx-imgBorder"]
     > ![List of connections](media/northwind-orders-canvas-part1/datasource-02.png)
 
-1. Under **Choose an entity**, type **Orders**, select the **Orders** checkbox, and then select **Connect**:
+1. Select the **Orders** data source to use in your app:
 
     > [!div class="mx-imgBorder"]
     > ![List of entities](media/northwind-orders-canvas-part1/datasource-03.png)
-
-    You've added the **Orders** data source to your app:
-
-    > [!div class="mx-imgBorder"]
-    > ![Data pane](media/northwind-orders-canvas-part1/datasource-04.png)
 
     The **Orders** entity contains many fields of various types:
 
@@ -88,7 +71,7 @@ Follow step-by-step instructions to create an order gallery in a canvas app for 
 
     Each field has a **Display name** and a **Name**, which is sometimes called the logical name. Both names refer to the same thing. In general, you'll use the display name when you build an app, but some cases require the more cryptic **Name**, as noted in a procedure.
 
-1. In PowerApps Studio, close the **Data** pane by selecting the close icon (x) in its upper-right corner.
+1. As we will be working with screens and controls next, in PowerApps Studio switch back to the **Tree View** on the left hand side by pressing the three stacked squares icon. You can return to the **Data Sources** at any time by pressing the cylinder icon.
 
 ## Create the order gallery
 
@@ -97,7 +80,13 @@ Follow step-by-step instructions to create an order gallery in a canvas app for 
     > [!div class="mx-imgBorder"]
     > ![Insert, Gallery, Blank vertical](media/northwind-orders-canvas-part1/orders-01.png)
 
-1. In the formula bar, set the gallery's **Items** property to this formula:
+	The control will be placed on the canvas and a fly out dialog will appear asking which data source to connect to.  
+
+
+    > [!div class="mx-imgBorder"]
+    > ![Set Items property of the gallery](media/northwind-orders-canvas-part1/orders-02.png)
+
+1. We could connect it directly to **Orders** here, but instead we'd like to control the sort order of the gallery.  Ignore the fly out dialog and in the formula bar set the gallery's **Items** property to this formula:
 
     ```powerapps-dot
     Sort( Orders, 'Order Number', Descending )
@@ -106,7 +95,12 @@ Follow step-by-step instructions to create an order gallery in a canvas app for 
     The [**Sort**](functions/function-sort.md) function orders the list so that the newest order (which has the highest order number) appears first.
 
     > [!div class="mx-imgBorder"]
-    > ![Set Items property of the gallery](media/northwind-orders-canvas-part1/orders-02.png)
+    > ![Set Items property of the gallery](media/northwind-orders-canvas-part1/orders-02b.png)
+
+1. After a few moments the Result View will appear below the formula bar.  Pull down on the arrow at the left to see the result of our formula.  Scroll to the right to see the **Order Number** column and ensure it is sorted the way want (highest to lowest).  
+
+    > [!div class="mx-imgBorder"]
+    > ![Set Items property of the gallery](media/northwind-orders-canvas-part1/orders-02c.png)
 
 1. In the **Properties** tab near the right edge, open the **Layout** list:
 
@@ -120,7 +114,10 @@ Follow step-by-step instructions to create an order gallery in a canvas app for 
 
     Two [**Label**](controls/control-text-box.md) controls are added in the gallery's template. By default, these controls show two columns of the **Orders** entity, which you'll change next. The gallery's template is replicated vertically for each record in the entity.
 
-1. If you've closed the **Data** pane, select **Edit** (next to **Fields**) in the **Properties** tab near the right edge.
+1. Select **Edit** (next to **Fields**) in the **Properties** tab near the right edge.
+
+    > [!div class="mx-imgBorder"]
+    > ![Select a layout](media/northwind-orders-canvas-part1/orders-04b.png)
 
 1. In the **Data** pane, select **Title1** (or select the upper label in the gallery's template).
 
