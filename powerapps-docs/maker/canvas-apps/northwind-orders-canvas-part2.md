@@ -101,12 +101,12 @@ In this section, you'll add controls to show a summary of any order that the use
 
 ## Add and arrange fields
 
-1. In the **Properties** tab near the right edge, select **Edit fields** to open the **Fields** pane:
+1. In the **Properties** tab near the right edge, select **Edit fields** to open the **Fields** pane.
 
     > [!div class="mx-imgBorder"]
     > ![Open the Fields pane](media/northwind-orders-canvas-part2/form-05.png)
 
-1. In the **Fields** pane, if any fields are already inserted remove them.  
+1. If the **Fields** pane is not empty, remove the fields that have already been inserted.  
 
     > [!div class="mx-imgBorder"]
     > ![Open the Fields pane](media/northwind-orders-canvas-part2/form-06a.png)
