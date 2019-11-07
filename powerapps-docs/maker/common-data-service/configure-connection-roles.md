@@ -32,7 +32,7 @@ Anyone with write access to the **Connection Role** entity can establish which c
 > For an entity to be available as a record type for a new or existing connection role, the **Enable connections** property must be enabled for the entity. 
 
 ## Enable connection roles for an entity
-1. Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). 
+1. Sign in to [PowerApps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). 
 2. Expand **Data**, and then select **Entities**. 
 3. Select the entity that you want to enable for connection roles, and then on the command bar select **Settings**. 
 4. In the **Settings** pane expand the **Collaboration** area, and then select **Enable connections**.

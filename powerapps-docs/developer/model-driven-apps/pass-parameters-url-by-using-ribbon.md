@@ -48,13 +48,13 @@ Ribbon actions are defined in the `<Actions>` element of a `<CommandDefinition>`
  The following sample shows the URL without parameters:  
   
 ```  
-http://myserver/mypage.aspx  
+https://myserver/mypage.aspx  
 ```  
   
  The following sample shows the parameters included when the ribbon control is presented for the account entity, for an organization called ‘AdventureWorksCycle’, when the user’s language and the organization base language is English, and the GUID for the account record is DBD5DBFB-0666-DC11-A5D9-0003FF9CE217:  
   
 ```  
-http://myserver/mypage.aspx?orgname=AdventureWorksCycle&userlcid=1033&orglcid=1033&type=1&typename=account&id=%7BDBD5DBFB-0666-DC11-A5D9-0003FF9CE217%7D  
+https://myserver/mypage.aspx?orgname=AdventureWorksCycle&userlcid=1033&orglcid=1033&type=1&typename=account&id=%7BDBD5DBFB-0666-DC11-A5D9-0003FF9CE217%7D  
 ```  
   
 ## Use a Querystring parameter in the URL  

@@ -25,7 +25,7 @@ search.app:
 ---
 # Types of fields
 
-The names used for types depends on the designer used. [PowerApps portal](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) uses a convention that includes the way the data is formatted. The solution explorer type uses a name aligned with the database data type with a format modifier. The following table includes the corresponding `AttributeTypeDisplayName` API type.
+The names used for types depends on the designer used. [PowerApps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) uses a convention that includes the way the data is formatted. The solution explorer type uses a name aligned with the database data type with a format modifier. The following table includes the corresponding `AttributeTypeDisplayName` API type.
 
 |Portal Data type |Solution Explorer  type| API type|
 |--|--|--|
@@ -37,6 +37,7 @@ The names used for types depends on the designer used. [PowerApps portal](https:
 |**Decimal Number**|**Decimal Number**|`DecimalType`|
 |**Duration**|**Whole Number**<br />*Duration* Format|`IntegerType`|
 |**Email**|**Single Line of Text**<br />*Email* Format|`StringType`|
+|**File** | **File**   | `FileType`  |
 |**Floating Point Number**|**Floating Point Number**|`DoubleType`|
 |**Image**|**Image**|`ImageType`|
 |**Language**|**Whole Number**<br />*Language* Format|`IntegerType`|
@@ -152,7 +153,6 @@ However, you should be aware that not every lookup behaves this way. There are s
 <a name="BKMK_ImageFields"></a>
 
 ## Image fields  
-
 Use image fields to display a single image per record in the application. Each entity can have one image field. You can add an image field to custom entities but not to standard entities. Some standard entities have image fields defined.
   
 Even though an entity has an image field, displaying that image in a model-driven app requires that you enable two settings. 
@@ -164,7 +164,7 @@ When image display is enabled for an entity, any records that don’t have an im
 > [!div class="mx-imgBorder"] 
 > ![Default entity image](../common-data-service/media/account-record-default-image.png "Default account entity image")
   
-People can choose the default image to upload a picture from their computer. Images must be less than 5120 KB and must be in one of the following formats:  
+People can choose the default image to upload a picture from their computer. Images must be less than 10 MB and must be in one of the following formats:  
   
 - jpg
 - jpeg
@@ -176,7 +176,24 @@ People can choose the default image to upload a picture from their computer. Ima
   
 When the image is uploaded, it will be converted to a .jpg format and all downloaded images will also use this format. If an animated .gif is uploaded, only the first frame is saved.  
   
-When an image is uploaded, it will be resized to a maximum size of 144 pixels by 144 pixels. People should resize or crop the images before they upload them so that they will display well using this size. All images are cropped to be square. If both sides of an image are smaller than 144 pixels, the image will be cropped to be a square with the dimensions of the smaller side.  
+When an image is uploaded, it will be resized as a "thumbnail" image to a maximum size of 144 pixels by 144 pixels. People should resize or crop the images before they upload them so that they will display well using this size. All images are cropped to be square. If both sides of an image are smaller than 144 pixels, the image will be cropped to be a square with the dimensions of the smaller side.  
+
+<!-- 
+By default,	when an app user adds an image to display to a form or canvas app, the image displayed is the thumbnail image. To display a full image for a canvas app, see [Display a full-sized image on a canvas app form](../canvas-apps/display-full-image-on-form.md).
+
+
+### Add an image field to an entity using the PowerApps site
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+
+1. Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
+2.  Select **Data** > **Entities** and then select the entity where you want to add an image field. 
+3. Select **Add field** on the command bar, enter the following properties, and then select **Done**: 
+   - **Display name**. Enter a friendly name for the field. 
+   - **Data type**. Select **Image**. 
+   - **Primary image**. When selected, the primary image field becomes the image field for the entity. You can only have one primary image for each entity. 
+   - **Maximum image size**. The maximum file size that an app user can upload to the record. 10,240 KB is the default maximum size and 10 MB is the maximum size limit. 
+   - **Can store full images**. When selected, in addition to the rescaled thumbnail image described earlier, the full image is stored when uploaded by the user for each record. Full size images are limited to 30 MB.  -->
 
 ### Add image support for a form in a custom entity using solution explorer
 1. Open [solution explorer](../model-driven-apps/advanced-navigation.md#solution-explorer). 
@@ -186,7 +203,8 @@ When an image is uploaded, it will be resized to a maximum size of 144 pixels by
 5. Enter a **Display Name**, such as *Custom entity image*. 
 6. Complete the remaining fields as appropriate. Notice that the **Name**, **Field Requirement**, and **Searchable** fields can’t be changed. Select **Save and Close**. 
 7. On the entity definition next to the **Primary Image** property make sure the value is set to the custom image you created in the previous step. If it's not select it.  
-    ![Primary image property selected](media/primary-image-property.png)
+    > [!div class="mx-imgBorder"] 
+    > ![Primary image property selected](media/primary-image-property.png "Primary image property selected")
 
 8.	Open the form where you want image support, such as the entity main form. 
 9.	On the form editor ribbon, select **Form Properties**. 
@@ -202,7 +220,9 @@ App users can now select the image to display on the form. When an app user open
 > [!IMPORTANT]
 > If the record is a new record that hasn’t been saved the error Invalid Argument is returned when you try to change the image. 
 
-#### Change the image for a record
+### Change the image for a record
+Once an entity form has an image field, app users can change the image for a given record. 
+
 1. Open the app that includes the entity form, and then select the image on the form. 
    > [!div class="mx-imgBorder"] 
    > ![Default entity image](../common-data-service/media/default-entity-image-on-form.png "Default entity image")
@@ -215,3 +235,15 @@ App users can now select the image to display on the form. When an app user open
 More information for developers working with image data:
 - [Entity metadata > Entity images](/powerapps/developer/common-data-service/entity-metadata#entity-images)
 - [Image attributes](/powerapps/developer/common-data-service/image-attributes)
+
+
+## File fields
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+
+Currently, the file data type is only available to canvas apps and flows. 
+
+The **File** field is used for storing binary data. The primary intended use of this field is to store a single image, note, or attachment. However, storage of other forms of binary data is also possible. One or more fields of this data type can be added to an existing standard customizable entity or a custom entity.
+
+The default **Maximum file size** is 32 MB and the largest size you can set is 128 MB. The file size limit can be set individually for each field of file type added to an entity. 
+
+More information for developers working with file data: [File attributes](/powerapps/developer/common-data-service/file-attributes)

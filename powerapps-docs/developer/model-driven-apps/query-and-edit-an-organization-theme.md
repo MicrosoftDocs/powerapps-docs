@@ -26,7 +26,7 @@ You can define and apply visual themes for an organization. This provides a supp
   
  Theme customization is supported in this release only for the web application. The changes made for an organization's theme are not included in solutions exported from the organization. You can define multiple themes, but only one can be set and published as the default theme.  
   
- Video: [Theming](http://go.microsoft.com/fwlink/p/?LinkId=529568)  
+ Video: [Theming](https://go.microsoft.com/fwlink/p/?LinkId=529568)  
   
 <a name="BKMK_QueryTheme"></a>
 

@@ -22,4 +22,4 @@ These are the web applications that trigger the Web jobs that read the data from
 
 Data is stored temporarily in [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] Blob Storage by Web jobs and deleted once the Logic App pipeline has finished execution.
 
-[Azure Recommendations API](https://www.microsoft.com/cognitive-services/en-us/recommendations-api) The Azure Recommendations API is sent with minimal data Product IDs, Transaction IDs, and Account IDs to build the recommendation model. Data is stored with the Recommendations API service until a corresponding model version exists.
+[Azure Recommendations API](https://www.microsoft.com/cognitive-services/recommendations-api) The Azure Recommendations API is sent with minimal data Product IDs, Transaction IDs, and Account IDs to build the recommendation model. Data is stored with the Recommendations API service until a corresponding model version exists.

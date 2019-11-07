@@ -23,7 +23,7 @@ In this topic, you'll learn how to create a custom entity called Product Review 
 To follow this procedure, you must have either a System Administrator or System Customizer security role within Common Data Service.
 
 ## Sign in to PowerApps
-Sign in to PowerApps at [https://web.powerapps.com](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+Sign in to PowerApps at [https://make.powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
 ## Create an entity
 1. In the navigation pane, click or tap **Data** to expand it, and then click or tap **Entities**.

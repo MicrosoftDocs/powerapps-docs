@@ -34,7 +34,7 @@
   
  Web jobs temporarily store data in [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] Blob Storage and delete it once the Logic App pipeline has finished execution.  
   
- [Azure Text Analytics API](https://www.microsoft.com/cognitive-services/en-us/text-analytics-api)  
+ [Azure Text Analytics API](https://www.microsoft.com/cognitive-services/text-analytics-api)  
   
  The [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] Text Analytics API is sent data based on fields that are configured in active Knowledge Search fields or the Topic Model configuration or the Similarity Rule configuration. For example, case entity fields, such as title and description, plus the description field in related notes and activities, are configured in the Knowledge Search Field configuration.  
   
