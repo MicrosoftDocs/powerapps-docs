@@ -6,7 +6,7 @@ manager: shujoshi
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/07/2019
+ms.date: 11/07/2019
 ms.author: shjais
 ms.reviewer:
 ---
@@ -29,6 +29,7 @@ Schema files are available for the following portal types:
 - [Partner portal](https://go.microsoft.com/fwlink/p/?linkid=2019803)
 - [Employee Self-Service portal](https://go.microsoft.com/fwlink/p/?linkid=2019802)
 - [Custom portal](https://go.microsoft.com/fwlink/p/?linkid=2019804)
+- [Common Data Service starter portal](https://go.microsoft.com/fwlink/p/?linkid=2110477)
 
 The default schema files contain information about portal entities, relationships, and uniqueness definitions for each entity. More information: [Export portal configuration data](#export-portal-configuration-data)
 
