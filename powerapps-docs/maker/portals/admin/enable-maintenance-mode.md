@@ -41,7 +41,7 @@ You can enable maintenance mode on your portal to provide a consistent message, 
     - **Custom page URL**: This field is enabled only when you select the option to display a custom HTML page. You must ensure that the page URL you provide is publicly accessible. If the specified HTML page can't be reached, the default page is displayed with a note to the administrators.
 
         > [!NOTE]
-        > The URL should not contain the `x-frame-options:SAMEORIGIN` response header, else page will not load.
+        > The URL should not contain the `x-frame-options:SAMEORIGIN` response header, else the page will not load.
 
 5. Select **Enable**. While maintenance mode is being enabled, the portal restarts and is unavailable for a few minutes. 
 
