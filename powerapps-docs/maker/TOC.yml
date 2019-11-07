@@ -1,11 +1,12 @@
-- name: "Get started: What is PowerApps?"
-  href: ../powerapps-overview.md
+- name: Get started   
   items:
+  - name: What is PowerApps?
+    href: ../powerapps-overview.md
   - name: Sign up for 30-day trial version
     href: signup-for-powerapps.md
   - name: Sign up for Community Plan
     href: dev-community-plan.md
-  - name: "What's new"
+  - name: "What's new?"
     href: ../whats-new.md
 - name: Find and run apps
   href: ../user/index.md
@@ -22,14 +23,16 @@
     href: ../user/open-app-embedded-in-teams.md
   - name: From AppSource
     href: ../user/app-source.md
-  - name: 'Use model-driven apps'
-    href: ../user/use-model-driven-apps.md
+  - name: 'Use model-driven apps'    
     items:
+    - name: Overview
+      href: ../user/use-model-driven-apps.md
     - name: Unified Interface
       href: ../user/unified-interface.md
-    - name: Navigation and basics
-      href: ../user/navigation.md
+    - name: Navigation and basics      
       items:
+      - name: Overview
+        href: ../user/navigation.md
       - name: View your profile
         href: ../user/view-your-user-profile.md
       - name: Find your admin or support person
@@ -813,9 +816,10 @@
           href: ./canvas-apps/component-behavior.md
     - name: Embed canvas apps in your applications
       href: ./canvas-apps/embedding-sdk.md
-- name: Model-driven apps
-  href: ./model-driven-apps/model-driven-app-overview.md
+- name: Model-driven apps  
   items:
+  - name: What are model-driven apps?
+    href: ./model-driven-apps/model-driven-app-overview.md
   - name: Explore sample apps
     href: ./model-driven-apps/overview-model-driven-samples.md
   - name: Create your first app
@@ -1290,12 +1294,14 @@
       href: ./portals/known-issues.md
     - name: PowerApps portals FAQ
       href: ./portals/faq.md
-- name: Common Data Service
-  href: ./common-data-service/data-platform-intro.md
+- name: Common Data Service  
   items:
-  - name: Work with entities
-    href: ./common-data-service/entity-overview.md
+  - name: What is Common Data Service?
+    href: ./common-data-service/data-platform-intro.md
+  - name: Work with entities    
     items:
+    - name: Entity overview
+      href: ./common-data-service/entity-overview.md
     - name: "Create an entity"
       href: ./common-data-service/data-platform-create-entity.md
     - name: "Create a custom entity that has components"
