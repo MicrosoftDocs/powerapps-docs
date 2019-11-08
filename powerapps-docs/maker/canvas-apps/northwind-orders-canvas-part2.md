@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 04/25/2019
+ms.date: 11/06/2019
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -89,30 +89,34 @@ In this section, you'll add controls to show a summary of any order that the use
     > [!div class="mx-imgBorder"]
     > ![Move and resize the Edit form control](media/northwind-orders-canvas-part2/form-03.png)
 
-1. In the formula bar, set the **DataSource** property of the form to this value:
+1. In the **Properties** pane, select the **Data source** drop down.
 
-    ```powerapps-dot
-    Orders
-    ```
+    > [!div class="mx-imgBorder"]
+    > ![Set the DataSource property of the Edit form control](media/northwind-orders-canvas-part2/form-04a.png)
+
+1. Select the **Orders** data source.
 
     > [!div class="mx-imgBorder"]
     > ![Set the DataSource property of the Edit form control](media/northwind-orders-canvas-part2/form-04.png)
 
-    You can set the same property in the **Properties** tab near the right edge, but that approach adds fields that you don't need to the form. If you use the formula bar, the form remains empty.
-
 ## Add and arrange fields
 
-1. In the **Properties** tab near the right edge, select **Edit fields** to open the **Fields** pane:
+1. In the **Properties** tab near the right edge, select **Edit fields** to open the **Fields** pane.
 
     > [!div class="mx-imgBorder"]
     > ![Open the Fields pane](media/northwind-orders-canvas-part2/form-05.png)
 
-1. In the **Fields** pane, select **Add field**, and then select the check boxes for the **Customer** and **Employee** fields.
+1. If the **Fields** pane is not empty, remove the fields that have already been inserted.  
 
     > [!div class="mx-imgBorder"]
-    > ![Add the Customer and Employee fields to the Edit form control](media/northwind-orders-canvas-part2/form-06.png)
+    > ![Open the Fields pane](media/northwind-orders-canvas-part2/form-06a.png)
 
-1. Scroll down until  these fields appear, and then select their check boxes:
+1. After the fields list is empty, select **Add field**, and then select the check boxes for the **Customer** and **Employee** fields.
+
+    > [!div class="mx-imgBorder"]
+    > ![Add the Customer and Employee fields to the Edit form control](media/northwind-orders-canvas-part2/form-06b.png)
+
+1. Scroll down until these fields appear, and then select their check boxes:
 
     - **Notes**
     - **Order Date**
@@ -121,11 +125,14 @@ In this section, you'll add controls to show a summary of any order that the use
     - **Paid Date**
 
     > [!div class="mx-imgBorder"]
-    > ![Add five more fields to the Edit form control](media/northwind-orders-canvas-part2/form-07.png)
+    > ![Add five more fields to the Edit form control](media/northwind-orders-canvas-part2/form-06c.png)
+
+    > [!div class="mx-imgBorder"]
+    > ![Add five more fields to the Edit form control](media/northwind-orders-canvas-part2/form-06d.png)
 
 1. At the bottom of the **Fields** pane, select **Add**, and then close the **Fields** pane.
 
-    The form shows seven fields:
+    The form shows seven fields, which may be in a different order:
 
     > [!div class="mx-imgBorder"]
     > ![Edit form control shows seven fields](media/northwind-orders-canvas-part2/form-08.png)

@@ -1,7 +1,7 @@
 ---
 title: "msdyn_solutioncomponentsummary Entity Reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the msdyn_solutioncomponentsummary entity."
-ms.date: 04/01/2019
+description: "Includes schema information and supported messages for the msdyn_solutioncomponentsummary entity in Common Data Service."
+ms.date: 11/07/2019
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -12,7 +12,6 @@ search.audienceType:
   - developer
 search.app: 
   - PowerApps
-  - D365CE
 ---
 # msdyn_solutioncomponentsummary Entity Reference
 
@@ -55,6 +54,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 - [msdyn_componenttype](#BKMK_msdyn_componenttype)
 - [msdyn_componenttypename](#BKMK_msdyn_componenttypename)
+- [msdyn_connectorinternalid](#BKMK_msdyn_connectorinternalid)
 - [msdyn_createdon](#BKMK_msdyn_createdon)
 - [msdyn_culture](#BKMK_msdyn_culture)
 - [msdyn_deployment](#BKMK_msdyn_deployment)
@@ -134,6 +134,22 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|msdyn_componenttypename|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
+
+
+### <a name="BKMK_msdyn_connectorinternalid"></a> msdyn_connectorinternalid
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName|Connector Internal Id|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|msdyn_connectorinternalid|
 |MaxLength|100|
 |RequiredLevel|None|
 |Type|String|

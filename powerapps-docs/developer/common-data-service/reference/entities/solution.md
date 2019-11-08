@@ -1,7 +1,7 @@
 ---
 title: "Solution Entity Reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the Solution entity."
-ms.date: 04/01/2019
+description: "Includes schema information and supported messages for the Solution entity in Common Data Service."
+ms.date: 11/07/2019
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -12,7 +12,6 @@ search.audienceType:
   - developer
 search.app: 
   - PowerApps
-  - D365CE
 ---
 # Solution Entity Reference
 
@@ -738,6 +737,7 @@ Listed by **SchemaName**.
 - [FK_CanvasApp_Solution](#BKMK_FK_CanvasApp_Solution)
 - [solution_fieldpermission](#BKMK_solution_fieldpermission)
 - [solution_solutioncomponent](#BKMK_solution_solutioncomponent)
+- [solution_privilege](#BKMK_solution_privilege)
 - [solution_parent_solution](#BKMK_solution_parent_solution)
 - [solution_role](#BKMK_solution_role)
 - [Solution_SyncErrors](#BKMK_Solution_SyncErrors)
@@ -787,6 +787,21 @@ Same as solutioncomponent entity [solution_solutioncomponent](solutioncomponent.
 |ReferencedEntityNavigationPropertyName|solution_solutioncomponent|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
+
+
+### <a name="BKMK_solution_privilege"></a> solution_privilege
+
+Same as privilege entity [solution_privilege](privilege.md#BKMK_solution_privilege) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|privilege|
+|ReferencingAttribute|solutionid|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|solution_privilege|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_solution_parent_solution"></a> solution_parent_solution

@@ -1,13 +1,13 @@
 ---
 title: 'Barcode-scanner control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the barcode-scanner control
-author: fikaradz
+author: chmoncay
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.date: 11/25/2018
-ms.author: fikaradz
+ms.author: chmoncay
 ms.reviewer: tapanm
 search.audienceType:
   - maker
