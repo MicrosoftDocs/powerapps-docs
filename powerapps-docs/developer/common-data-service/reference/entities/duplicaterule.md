@@ -1,7 +1,7 @@
 ---
 title: "DuplicateRule Entity Reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the DuplicateRule entity."
-ms.date: 04/01/2019
+description: "Includes schema information and supported messages for the DuplicateRule entity in Common Data Service."
+ms.date: 11/07/2019
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -12,7 +12,6 @@ search.audienceType:
   - developer
 search.app: 
   - PowerApps
-  - D365CE
 ---
 # DuplicateRule Entity Reference
 
@@ -385,7 +384,15 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |150|User Settings|
 |300|Canvas App|
 |301|Callback Registration|
-|371|Connector|
+|372|Connector|
+|380|Environment Variable Definition|
+|381|Environment Variable Value|
+|400|AI Template|
+|401|AI Model|
+|402|AI Configuration|
+|430|Entity Analytics Config|
+|431|AttributeImageConfig|
+|432|EntityImageConfig|
 |950|New Process|
 |951|Translation Process|
 |955|Expired Process|
@@ -531,6 +538,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |4710|Process Session|
 |4711|Expander Event|
 |4712|Process Trigger|
+|4720|Flow Session|
 |4724|Process Stage|
 |4725|Business Process Flow Instance|
 |4800|Web Wizard|
@@ -545,6 +553,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |7101|Publisher|
 |7102|Publisher Address|
 |7103|Solution Component|
+|7104|Solution Component Definition|
 |7105|Dependency|
 |7106|Dependency Node|
 |7107|Invalid Dependency|
@@ -610,12 +619,16 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |9753|Custom Control|
 |9754|Custom Control Resource|
 |9755|Custom Control Default Config|
+|9800|Entity|
+|9808|Attribute|
+|9809|OptionSet|
 |9866|Mobile Offline Profile|
 |9867|Mobile Offline Profile Item|
 |9868|Mobile Offline Profile Item Association|
 |9869|Sync Error|
 |9870|Offline Command Definition|
 |9875|Language Provisioning State|
+|9880|Ribbon Metadata To Process|
 |9890|SolutionHistoryData|
 |9900|Navigation Setting|
 |9910|MultiEntitySearch|
@@ -646,13 +659,28 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |9987|External Party Item|
 |9996|HolidayWrapper|
 |9997|Email Signature|
-|10000|OData v4 Data Source|
-|10001|Solution Component Summary|
-|10002|Solution Component Data Source|
-|10003|Solution History|
-|10004|Solution History Data Source|
-|10005|Component Layer|
-|10006|Component Layer Data Source|
+|10000|Solution Component Summary|
+|10001|Solution Component Data Source|
+|10002|Knowledge Article Image|
+|10003|Knowledge Article Template|
+|10004|OData v4 Data Source|
+|10005|Solution History|
+|10006|Solution History Data Source|
+|10007|Component Layer|
+|10008|Component Layer Data Source|
+|10009|AI Form Processing Document|
+|10010|AI Object Detection Image|
+|10011|AI Object Detection Label|
+|10012|AI Object Detection Bounding Box|
+|10013|AI Object Detection Image Mapping|
+|10015|Workflow Binary|
+|10016|Analysis Component|
+|10017|Analysis Job|
+|10018|Analysis Result|
+|10019|Analysis Result Detail|
+|10020|Solution Health Rule|
+|10021|Solution Health Rule Argument|
+|10022|Solution Health Rule Set|
 
 
 
@@ -834,7 +862,15 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |150|User Settings|
 |300|Canvas App|
 |301|Callback Registration|
-|371|Connector|
+|372|Connector|
+|380|Environment Variable Definition|
+|381|Environment Variable Value|
+|400|AI Template|
+|401|AI Model|
+|402|AI Configuration|
+|430|Entity Analytics Config|
+|431|AttributeImageConfig|
+|432|EntityImageConfig|
 |950|New Process|
 |951|Translation Process|
 |955|Expired Process|
@@ -980,6 +1016,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |4710|Process Session|
 |4711|Expander Event|
 |4712|Process Trigger|
+|4720|Flow Session|
 |4724|Process Stage|
 |4725|Business Process Flow Instance|
 |4800|Web Wizard|
@@ -994,6 +1031,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |7101|Publisher|
 |7102|Publisher Address|
 |7103|Solution Component|
+|7104|Solution Component Definition|
 |7105|Dependency|
 |7106|Dependency Node|
 |7107|Invalid Dependency|
@@ -1059,12 +1097,16 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |9753|Custom Control|
 |9754|Custom Control Resource|
 |9755|Custom Control Default Config|
+|9800|Entity|
+|9808|Attribute|
+|9809|OptionSet|
 |9866|Mobile Offline Profile|
 |9867|Mobile Offline Profile Item|
 |9868|Mobile Offline Profile Item Association|
 |9869|Sync Error|
 |9870|Offline Command Definition|
 |9875|Language Provisioning State|
+|9880|Ribbon Metadata To Process|
 |9890|SolutionHistoryData|
 |9900|Navigation Setting|
 |9910|MultiEntitySearch|
@@ -1095,13 +1137,28 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |9987|External Party Item|
 |9996|HolidayWrapper|
 |9997|Email Signature|
-|10000|OData v4 Data Source|
-|10001|Solution Component Summary|
-|10002|Solution Component Data Source|
-|10003|Solution History|
-|10004|Solution History Data Source|
-|10005|Component Layer|
-|10006|Component Layer Data Source|
+|10000|Solution Component Summary|
+|10001|Solution Component Data Source|
+|10002|Knowledge Article Image|
+|10003|Knowledge Article Template|
+|10004|OData v4 Data Source|
+|10005|Solution History|
+|10006|Solution History Data Source|
+|10007|Component Layer|
+|10008|Component Layer Data Source|
+|10009|AI Form Processing Document|
+|10010|AI Object Detection Image|
+|10011|AI Object Detection Label|
+|10012|AI Object Detection Bounding Box|
+|10013|AI Object Detection Image Mapping|
+|10015|Workflow Binary|
+|10016|Analysis Component|
+|10017|Analysis Job|
+|10018|Analysis Result|
+|10019|Analysis Result Detail|
+|10020|Solution Health Rule|
+|10021|Solution Health Rule Argument|
+|10022|Solution Health Rule Set|
 
 
 

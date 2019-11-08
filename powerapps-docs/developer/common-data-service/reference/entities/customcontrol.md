@@ -1,7 +1,7 @@
 ---
 title: "CustomControl Entity Reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the CustomControl entity."
-ms.date: 04/01/2019
+description: "Includes schema information and supported messages for the CustomControl entity in Common Data Service."
+ms.date: 11/07/2019
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -12,7 +12,6 @@ search.audienceType:
   - developer
 search.app: 
   - PowerApps
-  - D365CE
 ---
 # CustomControl Entity Reference
 
@@ -51,6 +50,7 @@ For internal use only.
 
 These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
+- [AuthoringManifest](#BKMK_AuthoringManifest)
 - [ClientJson](#BKMK_ClientJson)
 - [CompatibleDataTypes](#BKMK_CompatibleDataTypes)
 - [CustomControlId](#BKMK_CustomControlId)
@@ -58,6 +58,22 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 - [Manifest](#BKMK_Manifest)
 - [Name](#BKMK_Name)
 - [Version](#BKMK_Version)
+
+
+### <a name="BKMK_AuthoringManifest"></a> AuthoringManifest
+
+|Property|Value|
+|--------|-----|
+|Description|Authoring Manifest of the CustomControl.|
+|DisplayName|Authoring Manifest|
+|Format|TextArea|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|authoringmanifest|
+|MaxLength|1073741823|
+|RequiredLevel|None|
+|Type|Memo|
 
 
 ### <a name="BKMK_ClientJson"></a> ClientJson
