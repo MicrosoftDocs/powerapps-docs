@@ -1,7 +1,7 @@
 ---
 title: "CanvasApp Entity Reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the CanvasApp entity."
-ms.date: 04/01/2019
+description: "Includes schema information and supported messages for the CanvasApp entity in Common Data Service."
+ms.date: 11/07/2019
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -12,7 +12,6 @@ search.audienceType:
   - developer
 search.app: 
   - PowerApps
-  - D365CE
 ---
 # CanvasApp Entity Reference
 
@@ -64,10 +63,12 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 - [BackgroundColor](#BKMK_BackgroundColor)
 - [BypassConsent](#BKMK_BypassConsent)
 - [CanvasAppId](#BKMK_CanvasAppId)
+- [CdsDependencies](#BKMK_CdsDependencies)
 - [CommitMessage](#BKMK_CommitMessage)
 - [ConnectionReferences](#BKMK_ConnectionReferences)
 - [CreatedByClientVersion](#BKMK_CreatedByClientVersion)
 - [CreatedTime](#BKMK_CreatedTime)
+- [DatabaseReferences](#BKMK_DatabaseReferences)
 - [Description](#BKMK_Description)
 - [DisplayName](#BKMK_DisplayName)
 - [EmbeddedApp](#BKMK_EmbeddedApp)
@@ -259,6 +260,22 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |Type|Uniqueidentifier|
 
 
+### <a name="BKMK_CdsDependencies"></a> CdsDependencies
+
+|Property|Value|
+|--------|-----|
+|Description|Internal use. The app dependency details.|
+|DisplayName||
+|Format|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|cdsdependencies|
+|MaxLength|768000|
+|RequiredLevel|None|
+|Type|Memo|
+
+
 ### <a name="BKMK_CommitMessage"></a> CommitMessage
 
 |Property|Value|
@@ -320,6 +337,22 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |LogicalName|createdtime|
 |RequiredLevel|None|
 |Type|DateTime|
+
+
+### <a name="BKMK_DatabaseReferences"></a> DatabaseReferences
+
+|Property|Value|
+|--------|-----|
+|Description|The database references of the application.|
+|DisplayName||
+|Format|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|databasereferences|
+|MaxLength|768000|
+|RequiredLevel|None|
+|Type|Memo|
 
 
 ### <a name="BKMK_Description"></a> Description

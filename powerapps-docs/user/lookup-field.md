@@ -5,7 +5,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 10/28/2019
+ms.date: 11/06/2019
 ms.author: mkaur
 ms.reviewer: ""
 ms.assetid: 
@@ -56,6 +56,9 @@ To browse a lookup, select the lookup icon (magnifying glass). A full list of it
  
 ## Most recently used record type images
 The most recently used list of records shows an image to help distinguish between record types.
+
+>[!NOTE] 
+>Recent records are not filtered by search term or selected view.
 
   > [!div class="mx-imgBorder"]
   > ![Lookup fields shows image](media/Lookup_03-MRU_Entity_Images_56[1].png "Lookup fields shows image")  

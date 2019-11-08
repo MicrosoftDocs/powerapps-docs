@@ -1,7 +1,7 @@
 ---
 title: "Feedback Entity Reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the Feedback entity."
-ms.date: 04/01/2019
+description: "Includes schema information and supported messages for the Feedback entity in Common Data Service."
+ms.date: 11/07/2019
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -12,7 +12,6 @@ search.audienceType:
   - developer
 search.app: 
   - PowerApps
-  - D365CE
 ---
 # Feedback Entity Reference
 
@@ -903,9 +902,41 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 
 Listed by **SchemaName**.
 
+- [feedback_DuplicateMatchingRecord](#BKMK_feedback_DuplicateMatchingRecord)
+- [feedback_DuplicateBaseRecord](#BKMK_feedback_DuplicateBaseRecord)
 - [Feedback_SyncErrors](#BKMK_Feedback_SyncErrors)
 - [feedback_feedback](#BKMK_feedback_feedback)
 - [feedback_principalobjectattributeaccess](#BKMK_feedback_principalobjectattributeaccess)
+
+
+### <a name="BKMK_feedback_DuplicateMatchingRecord"></a> feedback_DuplicateMatchingRecord
+
+Same as duplicaterecord entity [feedback_DuplicateMatchingRecord](duplicaterecord.md#BKMK_feedback_DuplicateMatchingRecord) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|duplicaterecord|
+|ReferencingAttribute|duplicaterecordid|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|feedback_DuplicateMatchingRecord|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_feedback_DuplicateBaseRecord"></a> feedback_DuplicateBaseRecord
+
+Same as duplicaterecord entity [feedback_DuplicateBaseRecord](duplicaterecord.md#BKMK_feedback_DuplicateBaseRecord) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|duplicaterecord|
+|ReferencingAttribute|baserecordid|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|feedback_DuplicateBaseRecord|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_Feedback_SyncErrors"></a> Feedback_SyncErrors

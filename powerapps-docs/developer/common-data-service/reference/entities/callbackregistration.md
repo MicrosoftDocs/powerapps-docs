@@ -1,7 +1,7 @@
 ---
 title: "CallbackRegistration Entity Reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the CallbackRegistration entity."
-ms.date: 04/01/2019
+description: "Includes schema information and supported messages for the CallbackRegistration entity in Common Data Service."
+ms.date: 11/07/2019
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -12,7 +12,6 @@ search.audienceType:
   - developer
 search.app: 
   - PowerApps
-  - D365CE
 ---
 # CallbackRegistration Entity Reference
 
@@ -53,11 +52,13 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 - [CallbackRegistrationId](#BKMK_CallbackRegistrationId)
 - [EntityName](#BKMK_EntityName)
+- [FilterExpression](#BKMK_FilterExpression)
 - [FilteringAttributes](#BKMK_FilteringAttributes)
 - [Message](#BKMK_Message)
 - [Name](#BKMK_Name)
 - [OwnerId](#BKMK_OwnerId)
 - [OwnerIdType](#BKMK_OwnerIdType)
+- [PostponeUntil](#BKMK_PostponeUntil)
 - [Scope](#BKMK_Scope)
 - [Url](#BKMK_Url)
 - [Version](#BKMK_Version)
@@ -90,6 +91,22 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |LogicalName|entityname|
 |MaxLength|255|
 |RequiredLevel|SystemRequired|
+|Type|String|
+
+
+### <a name="BKMK_FilterExpression"></a> FilterExpression
+
+|Property|Value|
+|--------|-----|
+|Description|condition represented with OData $filter syntax|
+|DisplayName|Filter Expression|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|filterexpression|
+|MaxLength|100000|
+|RequiredLevel|None|
 |Type|String|
 
 
@@ -128,6 +145,10 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |1|Create|
 |2|Delete|
 |3|Update|
+|4|Create or Update|
+|5|Create or Delete|
+|6|Update or Delete|
+|7|Create or Update or Delete|
 
 
 
@@ -174,6 +195,22 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |Type|EntityName|
 
 
+### <a name="BKMK_PostponeUntil"></a> PostponeUntil
+
+|Property|Value|
+|--------|-----|
+|Description|delay represented with OData expression|
+|DisplayName|Postpone Until|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|postponeuntil|
+|MaxLength|100000|
+|RequiredLevel|None|
+|Type|String|
+
+
 ### <a name="BKMK_Scope"></a> Scope
 
 |Property|Value|
@@ -206,7 +243,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |FormatName|Text|
 |IsLocalizable|False|
 |IsValidForForm|True|
-|IsValidForRead|True|
+|IsValidForRead|False|
 |LogicalName|url|
 |MaxLength|2000|
 |RequiredLevel|SystemRequired|
