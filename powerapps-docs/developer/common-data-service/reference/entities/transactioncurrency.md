@@ -1,7 +1,7 @@
 ---
 title: "TransactionCurrency Entity Reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the TransactionCurrency entity."
-ms.date: 04/01/2019
+description: "Includes schema information and supported messages for the TransactionCurrency entity in Common Data Service."
+ms.date: 11/07/2019
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -12,7 +12,6 @@ search.audienceType:
   - developer
 search.app: 
   - PowerApps
-  - D365CE
 ---
 # TransactionCurrency Entity Reference
 
@@ -585,7 +584,6 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 
 Listed by **SchemaName**.
 
-- [TransactionCurrency_Territory](#BKMK_TransactionCurrency_Territory)
 - [TransactionCurrency_Goal](#BKMK_TransactionCurrency_Goal)
 - [TransactionCurrency_SharePointSite](#BKMK_TransactionCurrency_SharePointSite)
 - [TransactionCurrency_QueueItem](#BKMK_TransactionCurrency_QueueItem)
@@ -642,23 +640,7 @@ Listed by **SchemaName**.
 - [TransactionCurrency_RecurringAppointmentMaster](#BKMK_TransactionCurrency_RecurringAppointmentMaster)
 - [transactioncurrency_account](#BKMK_transactioncurrency_account)
 - [TransactionCurrency_recommendeddocument](#BKMK_TransactionCurrency_recommendeddocument)
-
-
-### <a name="BKMK_TransactionCurrency_Territory"></a> TransactionCurrency_Territory
-
-**Added by**: Application Common Solution
-
-Same as territory entity [TransactionCurrency_Territory](territory.md#BKMK_TransactionCurrency_Territory) Many-To-One relationship.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|territory|
-|ReferencingAttribute|transactioncurrencyid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|TransactionCurrency_Territory|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+- [TransactionCurrency_Territory](#BKMK_TransactionCurrency_Territory)
 
 
 ### <a name="BKMK_TransactionCurrency_Goal"></a> TransactionCurrency_Goal
@@ -1497,6 +1479,23 @@ Same as recommendeddocument entity [TransactionCurrency_recommendeddocument](rec
 |IsHierarchical|False|
 |IsCustomizable|False|
 |ReferencedEntityNavigationPropertyName|TransactionCurrency_recommendeddocument|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_TransactionCurrency_Territory"></a> TransactionCurrency_Territory
+
+**Added by**: Application Common Solution
+
+Same as territory entity [TransactionCurrency_Territory](territory.md#BKMK_TransactionCurrency_Territory) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|territory|
+|ReferencingAttribute|transactioncurrencyid|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|TransactionCurrency_Territory|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 

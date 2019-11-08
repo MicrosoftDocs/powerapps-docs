@@ -1,7 +1,7 @@
 ---
 title: "Territory Entity Reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the Territory entity."
-ms.date: 04/01/2019
+description: "Includes schema information and supported messages for the Territory entity in Common Data Service."
+ms.date: 11/07/2019
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -12,7 +12,6 @@ search.audienceType:
   - developer
 search.app: 
   - PowerApps
-  - D365CE
 ---
 # Territory Entity Reference
 
@@ -59,6 +58,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 - [ManagerId](#BKMK_ManagerId)
 - [Name](#BKMK_Name)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
+- [ParentTerritoryId](#BKMK_ParentTerritoryId)
 - [TerritoryId](#BKMK_TerritoryId)
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
 - [TransactionCurrencyId](#BKMK_TransactionCurrencyId)
@@ -162,6 +162,22 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |Type|DateTime|
 
 
+### <a name="BKMK_ParentTerritoryId"></a> ParentTerritoryId
+
+**Added by**: Second Patch for Application Common Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Choose the parent for this territory.|
+|DisplayName|Parent|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|parentterritoryid|
+|RequiredLevel|None|
+|Targets|territory|
+|Type|Lookup|
+
+
 ### <a name="BKMK_TerritoryId"></a> TerritoryId
 
 |Property|Value|
@@ -249,6 +265,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 - [ModifiedOnBehalfByYomiName](#BKMK_ModifiedOnBehalfByYomiName)
 - [OrganizationId](#BKMK_OrganizationId)
 - [OrganizationIdName](#BKMK_OrganizationIdName)
+- [ParentTerritoryIdName](#BKMK_ParentTerritoryIdName)
 - [TransactionCurrencyIdName](#BKMK_TransactionCurrencyIdName)
 - [VersionNumber](#BKMK_VersionNumber)
 
@@ -589,6 +606,24 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |Type|String|
 
 
+### <a name="BKMK_ParentTerritoryIdName"></a> ParentTerritoryIdName
+
+**Added by**: Second Patch for Application Common Solution
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|parentterritoryidname|
+|MaxLength|200|
+|RequiredLevel|None|
+|Type|String|
+
+
 ### <a name="BKMK_TransactionCurrencyIdName"></a> TransactionCurrencyIdName
 
 |Property|Value|
@@ -634,6 +669,7 @@ Listed by **SchemaName**.
 - [territory_connections1](#BKMK_territory_connections1)
 - [territory_connections2](#BKMK_territory_connections2)
 - [territory_system_users](#BKMK_territory_system_users)
+- [territory_parent_territory](#BKMK_territory_parent_territory)
 
 
 ### <a name="BKMK_Territory_SyncErrors"></a> Territory_SyncErrors
@@ -786,6 +822,23 @@ Same as systemuser entity [territory_system_users](systemuser.md#BKMK_territory_
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
+
+### <a name="BKMK_territory_parent_territory"></a> territory_parent_territory
+
+**Added by**: Second Patch for Application Common Solution
+
+Same as territory entity [territory_parent_territory](territory.md#BKMK_territory_parent_territory) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|territory|
+|ReferencingAttribute|parentterritoryid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|territory_parent_territory|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
 <a name="manytoone"></a>
 
 ## Many-To-One Relationships
@@ -799,6 +852,7 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [organization_territories](#BKMK_organization_territories)
 - [TransactionCurrency_Territory](#BKMK_TransactionCurrency_Territory)
 - [system_user_territories](#BKMK_system_user_territories)
+- [territory_parent_territory](#BKMK_territory_parent_territory)
 
 
 ### <a name="BKMK_lk_territorybase_createdby"></a> lk_territorybase_createdby
@@ -842,6 +896,10 @@ See transactioncurrency Entity [TransactionCurrency_Territory](transactioncurren
 **Added by**: System Solution Solution
 
 See systemuser Entity [system_user_territories](systemuser.md#BKMK_system_user_territories) One-To-Many relationship.
+
+### <a name="BKMK_territory_parent_territory"></a> territory_parent_territory
+
+See territory Entity [territory_parent_territory](territory.md#BKMK_territory_parent_territory) One-To-Many relationship.
 
 ### See also
 
