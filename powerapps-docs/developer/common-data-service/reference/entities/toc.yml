@@ -168,22 +168,6 @@
   href: mobileofflineprofileitemassociation.md
 - name: MonthlyFiscalCalendar
   href: monthlyfiscalcalendar.md
-- name: msdyn_AIConfiguration
-  href: msdyn_aiconfiguration.md
-- name: msdyn_AIFpTrainingDocument
-  href: msdyn_aifptrainingdocument.md
-- name: msdyn_AIModel
-  href: msdyn_aimodel.md
-- name: msdyn_AIOdImage
-  href: msdyn_aiodimage.md
-- name: msdyn_AIOdLabel
-  href: msdyn_aiodlabel.md
-- name: msdyn_AIOdTrainingBoundingBox
-  href: msdyn_aiodtrainingboundingbox.md
-- name: msdyn_AIOdTrainingImage
-  href: msdyn_aiodtrainingimage.md
-- name: msdyn_AITemplate
-  href: msdyn_aitemplate.md
 - name: msdyn_analysiscomponent
   href: msdyn_analysiscomponent.md
 - name: msdyn_analysisjob
