@@ -15,9 +15,9 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Web API Global Discovery Service Sample (C#)
+# Discovery Service Web API Sample (C#)
 
-This sample shows how to use the Web API Global discovery Service
+This sample shows how to use the Discovery service Web API 
 
 ## How to run this sample
 
@@ -34,13 +34,13 @@ Instead, it will just use the user credentials and the clientid.
 
 ### Demonstrates
 
-This sample uses a HttpClient to authenticate using ADAL (v2.29) and call the global discovery service to return information about available instances the user can connect to.
+This sample uses a HttpClient to authenticate using ADAL (v2.29) and call the Discovery service to return information about available instances the user can connect to.
 
 The sample depends on the `GetInstances` method and the `Instance` class below:
 
 ```csharp
     /// <summary>
-    /// Uses the global web api discovery service to return instances
+    /// Uses the web api discovery service to return instances
     /// </summary>
     /// <param name="clientId">The Azure AD client (app) registration</param>
     /// <param name="username">The user name</param>
