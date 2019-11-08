@@ -133,12 +133,11 @@ One or more security roles need to be assigned to the app. Users will have acces
  
 ## Share the link to your app
 1. From the **Share this app** dialog box, under **Share the link to your app directly with users** copy the URL that is displayed.
- 
+   > [!div class="mx-imgBorder"] 
+   > ![Share the link](media/share-model-driven-app/share-model-driven-url.png)
+
 2. Select **Close**.
 3. Paste the app URL in a location so that your users can access it, such as by posting it on a SharePoint site or send via email.
-
-> [!div class="mx-imgBorder"] 
-> ![Share the link](media/share-model-driven-app/share-model-driven-url.png)
 
 You can also find the app URL on the **Properties** tab in app designer. 
 
