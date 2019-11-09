@@ -151,7 +151,7 @@ The Power Apps Checker application user in the Common Data Service organization 
 
 ![Enable user from form](media/solution-checker-enable-application-user-form.png)
 
-## Common external conditions that cause Solution Checker to fail
+## Common plugin conditions that cause Solution Checker to fail
 
 When Solution Checker receives and processes analysis requests, it must call the Common Data Service endpoint to retrieve/update relevant job data and export the selected solution(s). Each interaction made by the Solution Checker service with the Common Data Service could potentially trigger one or more plugin steps that have been registered on message submitted in the request. These plugins may in turn introduce conditions that prevent the message from being handled as expected by the Common Data Service and interrupt the ability of Solution Checker to process the requested analysis job. Similar situations can occur when downloading Solution Checker job results or canceling an in-progress analysis job.
 
