@@ -16,7 +16,7 @@ search.app:
 ---
 # Set up data alerts for the Power BI dashboard
 > [!NOTE]
-> This article is part of a tutorial series on using PowerApps, Microsoft Flow, and Power BI with SharePoint Online. Make sure you read the [series introduction](sharepoint-scenario-intro.md) to get a sense of the big picture, as well as related downloads.
+> This article is part of a tutorial series on using PowerApps, Power Automate, and Power BI with SharePoint Online. Make sure you read the [series introduction](sharepoint-scenario-intro.md) to get a sense of the big picture, as well as related downloads.
 
 In this task we'll add an alert in Power BI to let us know if pending projects are taking too long to approve, and a flow that responds when that alert occurs. For more information on alerts, see [Data alerts in Power BI service](https://docs.microsoft.com/power-bi/service-set-data-alerts).
 
@@ -37,12 +37,12 @@ In this task we'll add an alert in Power BI to let us know if pending projects a
 
 The alert won't fire right now even though 56 is above the threshold of 25. It will fire when data is updated, which we'll see when we [run through the scenario end-to-end](sharepoint-scenario-summary.md).
 
-When the alerts fires, Power BI sends email to the creator of the alert, and we'll see how to send additional mail using Microsoft Flow, in the next step.
+When the alerts fires, Power BI sends email to the creator of the alert, and we'll see how to send additional mail using Power Automate, in the next step.
 
 ## Step 2: Create a flow that responds to the alert
 1. Sign into flow.microsoft.com, click or tap **Services**, then **Power BI**.
    
-    ![Power BI in Microsoft Flow](./media/sharepoint-scenario-alerts-flow/07-01-05-power-bi.png)
+    ![Power BI in Power Automate](./media/sharepoint-scenario-alerts-flow/07-01-05-power-bi.png)
 2. Click or tap **Send an e-mail to any audience when a Power BI data alert is triggered**.
    
     ![Send email when a Power BI data alert is triggered](./media/sharepoint-scenario-alerts-flow/07-01-06-alert-flow.png)

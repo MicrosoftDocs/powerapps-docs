@@ -20,7 +20,7 @@ search.app:
 > [!IMPORTANT]
 > This topic is out-of-date and will be updated soon to reflect the latest licensing changes that are applicable starting October 1, 2019. For the latest information on licensing requirements for entities, see the [PowerApps licensing guide](https://go.microsoft.com/fwlink/?linkid=2085130).
 
-Entities that include the following complex server-side logic require users of an app or flow that uses these entities to have a PowerApps Plan 2 or Microsoft Flow Plan 2 license:
+Entities that include the following complex server-side logic require users of an app or flow that uses these entities to have a PowerApps Plan 2 or Power Automate Plan 2 license:
 
 * Code plug-ins. More information: [Plug-in development](/powerapps/developer/common-data-service/plug-ins)
 * Real-time workflows. More information: [Workflow processes](/flow/workflow-processes)

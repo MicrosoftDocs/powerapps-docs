@@ -1644,7 +1644,7 @@ See msdyn_aiodtrainingimage Entity [msdyn_aiodtrainingimage_ProcessSession](msdy
 
 ### <a name="BKMK_workflowbinary_ProcessSession"></a> workflowbinary_ProcessSession
 
-**Added by**: Microsoft Flow Extensions package Solution
+**Added by**: Power Automate Extensions package Solution
 
 See workflowbinary Entity [workflowbinary_ProcessSession](workflowbinary.md#BKMK_workflowbinary_ProcessSession) One-To-Many relationship.
 
