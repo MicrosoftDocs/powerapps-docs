@@ -39,13 +39,13 @@ How long does a feature remain in each stage? This varies from feature to featur
 
 This table may help you decide when you should jump in: 
 
-| Stage | When should I use it? | Can I use it with confidence? | Is it enabled by default for new apps? | 
-|----|----|----|-----|------|
-| **Experimental** | If you're an early adopter, see something useful to you, and would like to help test the feature. | No.&nbsp;Experimental&nbsp;features can radically change or completely disappear at any time. | No.&nbsp;You&nbsp;must&nbsp;explicitly opt in to the feature.  |  
-| **Preview** | New apps automatically include this feature but it can still be turned off.  Start enabling and testing in existing apps because this feature will be eventually turned on for them too. | Yes. This feature is on track to become a permanent part of the product.  | Yes. You may want to turn it off if you run into a problem.  Please report issues; this is the main reason the feature is in Preview. | 
-| **Preview (Final&nbsp;validation)** | For a few features that would have broad impact, we may take the additional step beyond **Preview** of forcing the feature switch on once for existing apps when they are opened in the Studio.  If you encounter an issue, the feature can still be turned off, and your feedback is critical before we take the next step. | Yes. This feature is very close to becoming permanent.  | Yes. You may want to turn it off if you run into a problem.  Please report issues; this is the main reason the feature is in Preview. | 
-| **Shipped** for&nbsp;new&nbsp;apps | All new apps have this feature turned on and it cannot be turned off.  For existing apps where the feature is turned off, the feature will continue to show as a Preview feature until it is turned on.  If turned on and the switch becomes unavailable, you can [restore the app to a previous version](restore-an-app.md) to return to a state before the feature was enabled. | Yes. | Yes.  
-| **Shipped** for&nbsp;all&nbsp;apps | All apps have this feature and it cannot be disabled. | Yes. | Yes.  |  
+| Stage | When should I use it? | Can I use it with confidence?  Is it enabled by default for new apps? | 
+|----|----|----|
+| **Experimental** | If you're an early adopter, see something useful to you, and would like to help test the feature. | No. Experimental features can radically change or completely disappear at any time. For this reason the feature is not enabled by default and you must explicitly opt in to use it. |  
+| **Preview** | New apps automatically include this feature but it can still be turned off.  Start enabling and testing in existing apps because this feature will be eventually turned on for them too.  |Yes.  This feature is on track to become a permanent part of the product. You may want to turn it off if you run into a problem.  Please report issues; this is the main reason the feature is in Preview.  | 
+| **Preview (Final&nbsp;validation)** | For a few features that would have broad impact, we may take the additional step beyond **Preview** of forcing the feature switch on once for existing apps when they are opened in the Studio.  If you encounter an issue, the feature can still be turned off, and your feedback is critical before we take the next step. | Yes. You can use this feature with confidence, it is very close to becoming permanent. You may want to turn it off if you run into a problem.  Please report any issues encountered. |
+| **Shipped** for&nbsp;new&nbsp;apps | All new apps have this feature turned on and it cannot be turned off.  For existing apps where the feature is turned off, the feature will continue to show as a Preview feature until it is turned on.  If turned on and the switch becomes unavailable, you can [restore the app to a previous version](restore-an-app.md) to return to a state before the feature was enabled. | Yes. |
+| **Shipped** for&nbsp;all&nbsp;apps | All apps have this feature and it cannot be disabled. | Yes. | 
 
 ## Documentation
 
@@ -76,10 +76,10 @@ Sometimes a feature needs to be retired.  Often this occurs when there is a new,
 
 Feature deprecation also goes through stages.  Features are unique and not every stage will be used by all features.
 
-| Stage | When should I use it? | Can I use it with confidence? | Is it enabled by default for new apps? | 
-|----|----|----|-----|------|
-| **Deprecated** | Existing apps may continue using this feature for a limited time. You can still turn on the feature for new apps.  It is time to evaluate alternatives.  | Yes.&nbsp;But&nbsp;it&nbsp;will be going away soon. | No.&nbsp;You&nbsp;must&nbsp;explicitly opt in to use the feature and it is not recommended.  |
-| **Deprecated (Final&nbsp;warning)** | For a few features that would have broad impact, we may take the additional step beyond **Deprecated** of forcing the feature switch off once for existing apps the next time they are opened in the Studio.  If there is a issue, the feature can still be turned back on, and your feedback is critical before we take the next step.|  No.  The feature is about to be permanently removed. | No.&nbsp;You&nbsp;must&nbsp;explicitly opt in to use the feature and it is not recommended. |
-| **Removed** for&nbsp;new&nbsp;apps | All new apps have this feature turned off and it cannot be enabled.  For existing apps where the feature is turned on, the feature will continue to show as a Deprecated feature until it is turned off.  If turned off and the feature switch becomes unavailable, you can [restore the app to a previous version](restore-an-app.md) to return to a state before the feature was disabled. | No.  The feature is about to be permanently removed. | No.  The feature is no longer available for new apps. |
-| **Removed** for&nbsp;all&nbsp;apps | The feature is unavailable for all apps. | No. | No.  |  
+| Stage | When should I use it? | Can I use it with confidence?  Is it enabled by default for new apps? | 
+|----|----|----|
+| **Deprecated** | Existing apps may continue using this feature for a limited time. You can still turn on the feature for new apps.  It is time to evaluate alternatives.  | Yes, you can still use the feature with confidence. But it will be going away soon. For this reason you must explicitly opt in to use the feature in new apps and it is not recommended.  |
+| **Deprecated (Final&nbsp;warning)** | For a few features that would have broad impact, we may take the additional step beyond **Deprecated** of forcing the feature switch off once for existing apps the next time they are opened in the Studio.  If there is a issue, the feature can still be turned back on, and your feedback is critical before we take the next step.|  No.  The feature is about to be permanently removed. You must explicitly opt in to use the feature and it is not recommended. |
+| **Removed** for&nbsp;new&nbsp;apps | All new apps have this feature turned off and it cannot be enabled.  For existing apps where the feature is turned on, the feature will continue to show as a Deprecated feature until it is turned off.  If turned off and the feature switch becomes unavailable, you can [restore the app to a previous version](restore-an-app.md) to return to a state before the feature was disabled. | No.  The feature is about to be permanently removed. The feature is no longer available for new apps. |
+| **Removed** for&nbsp;all&nbsp;apps | The feature is unavailable for all apps. | No. |  
 
