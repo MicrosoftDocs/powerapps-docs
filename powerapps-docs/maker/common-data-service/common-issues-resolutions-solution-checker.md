@@ -3,7 +3,7 @@ title: "Common issues and resolutions for Solution Checker | Microsoft Docs" # I
 description: " A list of common issues and resolutions within Solution Checker"
 keywords: ""
 ms.date: 02/11/2019
-ms.service: Power Apps
+ms.service: powerapps
 ms.custom:
   - ""
 ms.topic: article
@@ -33,7 +33,7 @@ Whenever possible, Solution Checker attempts to return a specific error message 
 
 ![Error message bar](media/solution-checker-missing-roles-error.png)
 
-Failures that occur during background processing of the analysis will fail with **'Couldn't be completed'** status and return an error message in the Power Apps portal as well as send email notification to the requestor. 
+Failures that occur during background processing of the analysis will fail with **'Couldn't be completed'** status and return an error message in the Power Apps portal as well as send email notification to the requestor.
 
 ![Error status](media/solution-checker-exception-status.png)
 
@@ -228,7 +228,7 @@ If Solution Checker exports a solution that contains no components to analyze, i
 
 The primary scenario for failure to export a large solution from the Common Data Service environment involves a timeout exception on the export request. This will occur if the request exceeds 20 minutes. Large solutions, such as the Default Solution, may fail to get exported within this timeframe, and the check will not complete successfully. If Solution Checker encounters a timeout during export, it will retry three times before it fails to process the job, so it may take over an hour before you receive a failure notification.
 
-The workaround is to create smaller solutions with fewer components to be analyzed. If the large file size of the solution is due to many plug-in assembly components, please see guidance to [Optimize custom assembly development](../../developer/common-data-service/best-practices/business-logic/optimize-assembly-development.md). 
+The workaround is to create smaller solutions with fewer components to be analyzed. If the large file size of the solution is due to many plug-in assembly components, please see guidance to [Optimize custom assembly development](../../developer/common-data-service/best-practices/business-logic/optimize-assembly-development.md).
 
 > [!IMPORTANT]
 > To minimize false positives, ensure you add dependent customizations. When you create a solution and add these components, include the following:
@@ -238,7 +238,7 @@ The workaround is to create smaller solutions with fewer components to be analyz
 > - When you add HTML web resources, include any dependent scripts that are defined within the HTML web resource.
 > - When you add custom workflows, include the assembly used within the workflow.
 
-## Line number references for issues in HTML resources with embedded JavaScript are not correct 
+## Line number references for issues in HTML resources with embedded JavaScript are not correct
 
 When HTML web resources are processed within Solution Checker, the HTML web resource is processed separately than the JavaScript within the HTML web resource. Due to this, the line number of the violation found within `<script>` of the HTML web resource will not be correct.
 
