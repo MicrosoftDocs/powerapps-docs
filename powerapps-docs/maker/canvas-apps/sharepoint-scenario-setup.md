@@ -1,5 +1,5 @@
 ---
-title: Set up lists for SharePoint Online integration with PowerApps, Microsoft Flow, and Power BI | Microsoft Docs
+title: Set up lists for SharePoint Online integration with PowerApps, Power Automate, and Power BI | Microsoft Docs
 description: In this task, we'll set up SharePoint lists to use as a data source for apps, flows, reports, and dashboards.
 author: NickWaggoner
 manager: kvivek
@@ -14,9 +14,9 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Set up lists for SharePoint Online integration with PowerApps, Microsoft Flow, and Power BI
+# Set up lists for SharePoint Online integration with PowerApps, Power Automate, and Power BI
 > [!NOTE]
-> This article is part of a tutorial series on using PowerApps, Microsoft Flow, and Power BI with SharePoint Online. Make sure you read the [series introduction](sharepoint-scenario-intro.md) to get a sense of the big picture, as well as related downloads.
+> This article is part of a tutorial series on using PowerApps, Power Automate, and Power BI with SharePoint Online. Make sure you read the [series introduction](sharepoint-scenario-intro.md) to get a sense of the big picture, as well as related downloads.
 
 SharePoint has a ton of features for sharing and collaboration, but we will focus on one feature for this scenario: [SharePoint lists](https://support.office.com/article/Introduction-to-lists-0A1C3ACE-DEF0-44AF-B225-CFA8D92C52D7). A list is just a collection of data that you can share with team members and other site users. We'll review the lists used for this scenario, then you can create them in your own SharePoint Online site.
 
