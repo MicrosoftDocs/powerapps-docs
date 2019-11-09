@@ -38,13 +38,13 @@ How long does a feature remain in each stage? This varies from feature to featur
 
 This table may help you decide when you should jump in: 
 
-| Stage | When should I use it? | Can I use it with confidence? | Is it enabled by default for new apps? | 
-|----|----|----|-----|------|
-| **Experimental** | If you're an early adopter, see something useful to you, and would like to help test the feature. | No.&nbsp;Experimental&nbsp;features can radically change or completely disappear at any time. | No.&nbsp;You&nbsp;must&nbsp;explicitly opt in to the feature.  |  
-| **Preview** | New apps automatically include this feature but it can still be turned off.  Start enabling and testing in existing apps because this feature will be eventually turned on for them too. | Yes. This feature is on track to become a permanent part of the product.  | Yes. You may want to turn it off if you run into a problem.  Please report issues; this is the main reason the feature is in Preview. | 
-| **Preview (Final&nbsp;validation)** | For a few features that would have broad impact, we may take the additional step beyond **Preview** of forcing the feature switch on once for existing apps when they are opened in the Studio.  If you encounter an issue, the feature can still be turned off, and your feedback is critical before we take the next step. | Yes. This feature is very close to becoming permanent.  | Yes. You may want to turn it off if you run into a problem.  Please report issues; this is the main reason the feature is in Preview. | 
-| **Shipped** for&nbsp;new&nbsp;apps | All new apps have this feature turned on and it cannot be turned off.  For existing apps where the feature is turned off, the feature will continue to show as a Preview feature until it is turned on.  If turned on and the switch becomes unavailable, you can [restore the app to a previous version](restore-an-app.md) to return to a state before the feature was enabled. | Yes. | Yes.  
-| **Shipped** for&nbsp;all&nbsp;apps | All apps have this feature and it cannot be disabled. | Yes. | Yes.  |  
+| Stage | When should I use it? | Can I use it with confidence? | 
+|----|----|----|
+| **Experimental** | If you're an early adopter, see something useful to you, and would like to help test the feature. | No.&nbsp;Experimental&nbsp;features can radically change or completely disappear at any time. You&nbsp;must&nbsp;explicitly opt in to use the feature. |  
+| **Preview** | New apps automatically include this feature but it can still be turned off.  Start enabling and testing in existing apps because this feature will be eventually turned on for them too.  |Yes.  This feature is on track to become a permanent part of the product. You may want to turn it off if you run into a problem.  Please report issues; this is the main reason the feature is in Preview.  | 
+| **Preview (Final&nbsp;validation)** | For a few features that would have broad impact, we may take the additional step beyond **Preview** of forcing the feature switch on once for existing apps when they are opened in the Studio.  If you encounter an issue, the feature can still be turned off, and your feedback is critical before we take the next step. | Yes. You can use this feature with confidence, it is very close to becoming permanent. You may want to turn it off if you run into a problem.  Please report issues quickly. |
+| **Shipped** for&nbsp;new&nbsp;apps | All new apps have this feature turned on and it cannot be turned off.  For existing apps where the feature is turned off, the feature will continue to show as a Preview feature until it is turned on.  If turned on and the switch becomes unavailable, you can [restore the app to a previous version](restore-an-app.md) to return to a state before the feature was enabled. | Yes. |
+| **Shipped** for&nbsp;all&nbsp;apps | All apps have this feature and it cannot be disabled. | Yes. | 
 
 ## Documentation
 
