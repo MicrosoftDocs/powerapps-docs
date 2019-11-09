@@ -41,7 +41,7 @@ To install a gateway, follow the steps in [Install an on-premises data gateway](
 
 ## View and manage gateway permissions
 
-1. In the left navigation bar of [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), click or tap **Gateways**, and then click or tap a gateway.
+1. In the left navigation bar of [powerapps.com](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), click or tap **Gateways**, and then click or tap a gateway.
 
 2. Add a user to a gateway by clicking or tapping **Users**, specifying a user or group, and then specifying a permission level:
 
@@ -53,7 +53,7 @@ For **Can use** and **Can use + share** permission levels, select the data sourc
 
 ## View and manage gateway connections
 
-1. In the left navigation bar of [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), click or tap **Gateways**, and then click or tap a gateway.
+1. In the left navigation bar of [powerapps.com](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), click or tap **Gateways**, and then click or tap a gateway.
 
 2. Click or tap **Connections**, and then click or tap a connection to view its details, edit the settings, or delete it.
 

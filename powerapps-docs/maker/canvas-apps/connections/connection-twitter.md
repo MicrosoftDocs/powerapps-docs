@@ -233,7 +233,7 @@ Search tweet: Retrieves a collection of relevant tweets matching a specified que
 
 | Name | Data Type | Required | Description |
 | --- | --- | --- | --- |
-| searchQuery |string |yes |Query text (you may use any Twitter supported query operators: http://www.twitter.com/search) |
+| searchQuery |string |yes |Query text (you may use any Twitter supported query operators: https://www.twitter.com/search) |
 | maxResults |integer |no |Maximum number of tweets to retrieve, e.g. {maxResults:5} |
 
 #### Output properties
@@ -382,7 +382,7 @@ When a new tweet appears: Triggers a workflow when a new tweet is posted which m
 
 | Name | Data Type | Required | Description |
 | --- | --- | --- | --- |
-| searchQuery |string |yes |Query text (you may use any Twitter supported query operators: http://www.twitter.com/search) |
+| searchQuery |string |yes |Query text (you may use any Twitter supported query operators: https://www.twitter.com/search) |
 
 #### Output properties
 

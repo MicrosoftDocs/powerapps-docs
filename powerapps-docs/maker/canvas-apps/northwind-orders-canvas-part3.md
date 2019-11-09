@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 04/25/2019
+ms.date: 11/06/2019
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -58,7 +58,7 @@ Before you start this topic, you must install the database as described earlier 
     > [!div class="mx-imgBorder"]
     > ![Default location of order-details gallery](media/northwind-orders-canvas-part3/details-04.png)
 
-1. Close the **Data** pane, and then resize and move the detail gallery to the lower-right corner, below the new title bar:
+1. Close the fly out data source dialog, and then resize and move the detail gallery to the lower-right corner, below the new title bar:
 
     > [!div class="mx-imgBorder"]
     > ![Final location of order-details gallery](media/northwind-orders-canvas-part3/details-05.png)
@@ -314,32 +314,6 @@ In any gallery, you can show data but you can't update it or add records. Under 
     > [!div class="mx-imgBorder"]
     > ![Change label's fill to light blue](media/northwind-orders-canvas-part3/add-details-03.png)
 
-## Add the Order Details data source
-
-1. On the **View** tab, select **Data sources**, and then select **Add data source** in the **Data** pane:
-
-    > [!div class="mx-imgBorder"]
-    > ![Add data source](media/northwind-orders-canvas-part3/add-details-04.png)
-
-1. Select **Common Data Service**:
-
-    > [!div class="mx-imgBorder"]
-    > ![Select Common Data Service](media/northwind-orders-canvas-part3/add-details-05.png)
-
-1. At the top of the **Data** pane, type **order** in the search box, select the **Order Details** check box, and then select **Connect** at the bottom of the pane:
-
-    > [!div class="mx-imgBorder"]
-    > ![Specify Order details entity](media/northwind-orders-canvas-part3/add-details-06.png)
-
-    You've just added another data source to the app:
-
-    > [!div class="mx-imgBorder"]
-    > ![List of data sources](media/northwind-orders-canvas-part3/add-details-07.png)
-
-    You must add this data source because, although the app can read through a one-to-many relationship, the app can't yet write back changes. The app must make changes directly with the related entity.
-
-1. Close the **Data** pane.
-
 ## Select a product
 
 1. On the **Insert** tab, select **Controls** > **Combo box**:
@@ -349,23 +323,12 @@ In any gallery, you can show data but you can't update it or add records. Under 
 
     The [**Combo box**](controls/control-combo-box.md) control appears in the upper-left corner.
 
-1. Set the combo box's **Items** property to this formula:
-
-    ```powerapps-dot
-    Choices( 'Order Details'.Product )
-    ```
+1. In the fly out dialog, select the **Order Products** data source:
 
     > [!div class="mx-imgBorder"]
     > ![Set the combo box's Items property](media/northwind-orders-canvas-part3/add-details-09.png)
 
-    The [**Choices**](functions/function-choices.md) function returns a table of all the possible values for the **Product** field in the **Order Details** entity. This field is a lookup in a many-to-one relationship, so **Choices** returns all the records in the **Order Products** entity.
-
-    > [!NOTE]
-    > You can also use **Choices** with option sets to return a table of all the options. The steps didn't mention this approach, but you used it already when you added the combo box that shows **Order Status** in the summary form.
-
-1. In the **Data** pane, open the **Primary text** list, and then select **nwind_productname**. 
-
-1. Open the **SearchField** list, and then select **nwind_productname**.
+1. In the **Properties** tab for the combo box, select **Edit** (next to **Fields**) to open the **Data** pane.  Ensure that the **Primary text** and **SearchField** are set to **nwind_productname**.
 
     You specify the logical name because the **Data** pane doesn't support display names in this case yet:
 

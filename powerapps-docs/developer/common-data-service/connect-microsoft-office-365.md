@@ -17,7 +17,7 @@ search.app:
 ---
 # Connect with Microsoft Office 365 and Common Data Service
 
-Common Data Service is part of the Office 365 collaboration and productivity tools. The [Microsoft Office 365 portal](http://www.microsoft.com/office365) provides a single sign-on experience for Office 365 customers where they can sign in once and access any Office 365 application, including Common Data Service. In addition, system user accounts in Common Data Service can be provisioned in the [Microsoft Online Services](http://portal.microsoftonline.com/) admin portal.  
+Common Data Service is part of the Office 365 collaboration and productivity tools. The [Microsoft Office 365 portal](https://www.microsoft.com/office365) provides a single sign-on experience for Office 365 customers where they can sign in once and access any Office 365 application, including Common Data Service. In addition, system user accounts in Common Data Service can be provisioned in the [Microsoft Online Services](https://portal.microsoftonline.com/) admin portal.  
   
  Using federation, applications can connect to Common Data Service using the same system user identities and credentials available in an Azure Active Directory based network. More information: [Single sign-on roadmap](https://technet.microsoft.com/library/hh967643.aspx).  
   

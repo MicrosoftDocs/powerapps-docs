@@ -10,7 +10,7 @@ ms.service: powerapps
 ms.devlang: na
 ms.topic: conceptual
 ms.component: model
-ms.date: 03/19/2019
+ms.date: 10/08/2019
 ms.author: matp
 search.audienceType: 
   - maker
@@ -23,21 +23,37 @@ search.app:
 
 [!INCLUDE [powerapps](../../includes/powerapps.md)] apps use role-based security for sharing. The fundamental concept in role-based security is that a security role contains privileges that define a set of actions that can be performed within the app. All app users must be assigned to one or more predefined or custom roles. Or, roles can also be assigned to teams. When a user or team is assigned to one of these roles, the person or team members are granted the set of privileges associated with that role. 
 
-In this topic you perform the tasks for sharing a model-driven app so that others can use it. You learn how to:
+## Prerequisites
+To share an app you must have the [!INCLUDE [powerapps](../../includes/powerapps.md)] Environment Admin or System Admin role. 
+
+## Share your app for basic use
+To add privileges so the app user can run an app within the environment and perform common tasks for the records that they own, use the **Common Data Services User** security role.
+1.	On the [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) site select **Apps**, next to the model-driven app you want to share select **…**, and then select **Share**. 
+	> [!IMPORTANT]
+    > The steps to share a model-driven app are different from a canvas app. For steps to share a canvas app, see [Share a canvas app in PowerApps](../canvas-apps/share-app.md). 
+
+2.	Under **Assign users to the security role** select **Security Users**.
+3.	From the list of enabled users select the users that you want to grant access to your app, and then on the command bar select **Manage Roles**. 
+4.	In the **Manage User Roles** dialog box, select the **Common Data Service User** security role, and then select **OK**. 
+
+    > [!div class="mx-imgBorder"] 
+    > ![](media/share-model-driven-app/select-common-data-service-user.png "Select Common Data Service User")
+
+5. [Add security roles to the app](#add-security-roles-to-the-app)
+6. [Share the link to your app](#share-the-link-to-your-app)
+
+Users with the Common Data Service User security role can now access your app. 
+
+## Share a model-driven app for specific use
+In this section you perform the tasks for sharing a model-driven app using two security roles, each specific to the app users needs. You learn how to:
 - Create a custom security role
 - Assign users to the custom security role
 - Assign the security role to an app
 
-## Prerequisites
-To share an app you must have the [!INCLUDE [powerapps](../../includes/powerapps.md)] Environment Admin or System Admin role. 
+### Tutorial overview 
+The section will follow the company, Contoso, which has a pet grooming business that services dogs and cats. An app that contains a custom entity for tracking the pet grooming business has already been created and published. Now the app must be shared so that the pet grooming staff can use it. To share the app, an administrator or app maker assigns one or more security roles to users and to the app. 
 
-## Sign in to PowerApps
-Sign in to [PowerApps](https://powerapps.microsoft.com/). If you don’t already have a [!INCLUDE [powerapps](../../includes/powerapps.md)] account, select the **Get started free** link.
-
-## Share an app 
-The topic will follow the company, Contoso, which has a pet grooming business that services dogs and cats. An app that contains a custom entity for tracking the pet grooming business has already been created and published. Now the app must be shared so that the pet grooming staff can use it. To share the app, an administrator or app maker assigns one or more security roles to users and to the app. 
-
-## Create or configure a security role
+### Create or configure a security role
 The [!INCLUDE [powerapps](../../includes/powerapps.md)] environment includes [predefined security roles](#about-predefined-security-roles) that reflect common user tasks with access levels defined to match the security best-practice goal of providing access to the minimum amount of business data required to use the app. Remember that the Contoso pet grooming app is based on a custom entity. Because the entity is custom, privileges must be explicitly specified before users may work in it. To do this, you can choose to do one of the following.
 - Expand an existing predefined security role, so that it includes privileges on records based on the custom entity. 
 - Create a custom security role for the purpose of managing privileges for users of the app. 
@@ -48,12 +64,12 @@ Because the environment that will maintain the pet grooming records is also used
 
 For more information about access and scope privileges, see [Security roles](https://docs.microsoft.com/dynamics365/customer-engagement/admin/security-roles-privileges#security-roles).
 
-## Create a custom security role
-1. On the [!INCLUDE [powerapps](../../includes/powerapps.md)] site, select **Apps** > **…**> **Share link**.
+### Create a custom security role
+1. On the [!INCLUDE [powerapps](../../includes/powerapps.md)] site select **Apps**, next to the app you want to share select **…**, and  then select **Share**.
 
 2. From the **Share this app** dialog, under **Create a security role** select **Security Setting**.
 
-3. On the **Settings** page, select **New**.  
+3. On the **All Roles** page, select **New**.  
 
 4. From the security role designer, you select the actions, such as read, write, or delete, and the scope for performing that action. Scope determines how deep or high within the environments hierarchy the user can perform a particular action. In the **Role Name** box enter *Pet Grooming Technicians*.
 
@@ -82,20 +98,19 @@ For more information about access and scope privileges, see [Security roles](htt
 
 14. Select **Save and Close**.
 
-## Assign security roles to users
+### Assign security roles to users
 Security roles control a user’s access to data through a set of access levels and permissions. The combination of access levels and permissions that are included in a specific security role sets limits on the user’s view of data and on the user’s interactions with that data.
 
-### Assign a security role to Pet Grooming Technicians
+#### Assign a security role to Pet Grooming Technicians
 1. From the **Share this app** dialog, under **Assign users to the security role** select **Security Users**.
-2. In the list that is displayed, select the pet groomers.
-3. Select **Manage Roles**.
+2. In the list that is displayed, select the users who are pet groomers, and then on the command bar select **Manage Roles**.
 
     > [!div class="mx-imgBorder"] 
     > ![Manage roles](media/share-model-driven-app/select-users-for-security-roles.png)
 
-4. In the **Manage User Roles** dialog box, select the **Pet Grooming Technicians** security role that you created earlier, and then select **OK**.
+3. In the **Manage User Roles** dialog box, select the **Pet Grooming Technicians** security role that you created earlier, and then select **OK**.
 
-### Assign a security role to Pet Grooming Schedulers
+#### Assign a security role to Pet Grooming Schedulers
 1. From the **Share this app** dialog, under **Assign users to a security role** select **Security Users**.
 2. In the list that is displayed, select the pet grooming schedulers.
 3. Select **Manage Roles**.
@@ -103,13 +118,13 @@ Security roles control a user’s access to data through a set of access levels 
 
 
 ## Add security roles to the app
-Next, one or more security roles need to be assigned to the app. Users will have access to apps based on the security roles they're assigned to.
+One or more security roles need to be assigned to the app. Users will have access to apps based on the security roles they're assigned to.
 1. From the **Share this app** dialog box, under **Add the security role to your app** select **My Apps**.
-2. In the lower-right corner of the app tile of the Contoso Pet Grooming app, select **More options (...)**, and then select **Manage Roles**.
+2. In the lower-right corner of the app tile of the app, select **More options (...)**, and then select **Manage Roles**.
 
     ![Manage roles for the app](media/share-model-driven-app/manage-roles.png)
 
-4. In the **Roles** section, you can choose whether to give app access to all security roles or selected roles. Select the **Pet Grooming Schedulers** and **Pet Grooming Technicians** roles you created earlier.
+4. In the **Roles** section, you can choose whether to give app access to all security roles or selected roles. For basic app access, select the **Common Data Service User** security role. For more specific access, select another standard, or a custom or customized security role. For example, select the **Pet Grooming Schedulers** and **Pet Grooming Technicians** roles you created earlier in this section. 
 
     > [!div class="mx-imgBorder"] 
     > ![Select security roles for the app](media/share-model-driven-app/app-security-roles.png)
@@ -118,12 +133,11 @@ Next, one or more security roles need to be assigned to the app. Users will have
  
 ## Share the link to your app
 1. From the **Share this app** dialog box, under **Share the link to your app directly with users** copy the URL that is displayed.
- 
+   > [!div class="mx-imgBorder"] 
+   > ![Share the link](media/share-model-driven-app/share-model-driven-url.png)
+
 2. Select **Close**.
 3. Paste the app URL in a location so that your users can access it, such as by posting it on a SharePoint site or send via email.
-
-> [!div class="mx-imgBorder"] 
-> ![Share the link](media/share-model-driven-app/share-model-driven-URL.PNG)
 
 You can also find the app URL on the **Properties** tab in app designer. 
 

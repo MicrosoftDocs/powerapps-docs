@@ -36,7 +36,7 @@ System reports are available to all users. Individuals who create or otherwise o
 ## Add reporting to a Unified Interface app
 You can add fetch-based reporting functionality to your app so that users can run, share, create, and edit reports. To do this, you add the report entity to your app's site map. 
 
-1. Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and open an existing app for editing. 
+1. Sign in to [PowerApps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and open an existing app for editing. 
 2. In App Designer, select ![Pencil icon for editing site map](media/ccf-pencil-icon.png) next to **Site Map**. 
 3. In the Sitemap Designer, select **Add** and then select **Area**. 
 4. In the **Title** box, enter a name for the area title, such as *Reports*. 

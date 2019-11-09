@@ -30,7 +30,7 @@ If you create any new solution components in the process of editing the form, fo
 
 ## Access the form editor from the PowerApps site
 
-1. Sign in to [PowerApps](https://web.powerapps.com/). 
+1. Sign in to [PowerApps](https://make.powerapps.com/). 
 
 2. Select **Data** > **Entities** > and then select the entity you want, such as the account entity. 
 

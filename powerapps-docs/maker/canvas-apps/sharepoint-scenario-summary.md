@@ -154,11 +154,11 @@ We have covered a huge amount of ground in this series of tutorials, from buildi
 
 That brings us to the conclusion of our end-to-end walkthrough and this series of tutorials. We encourage you to continue your journey at the following sites:
 
-* [PowerApps](http://www.powerapps.com/)
-* [Microsoft Flow](http://flow.microsoft.com)
-* [Power BI](http://www.powerbi.com)
+* [PowerApps](https://www.powerapps.com/)
+* [Microsoft Flow](https://flow.microsoft.com)
+* [Power BI](https://www.powerbi.com)
 * [Power Users Community](https://powerusers.microsoft.com/)
-* [SharePoint](http://sharepoint.microsoft.com)
+* [SharePoint](https://sharepoint.microsoft.com)
 * [Microsoft Tech Community](https://techcommunity.microsoft.com/)
 
 Let us know in the comments if you have any feedback on this series, suggestions for additions, or ideas for additional content that will help you work with the technologies that we covered.

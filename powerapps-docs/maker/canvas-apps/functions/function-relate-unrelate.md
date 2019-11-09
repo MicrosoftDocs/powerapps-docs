@@ -205,7 +205,7 @@ With these changes, users can clear the selection in **ComboBox1** for a contact
 
 The sample data doesn't include a many-to-many relationship, but you'll create one between the Products entity and the Contacts entity. Users can relate each product to more than one contact and each contact to more than one product.
 
-1. From [this page](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Data** in the left navigation bar, and then select **Entities**.
+1. From [this page](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Data** in the left navigation bar, and then select **Entities**.
 
     ![Open list of entities](media/function-relate-unrelate/entity-list.png)
 

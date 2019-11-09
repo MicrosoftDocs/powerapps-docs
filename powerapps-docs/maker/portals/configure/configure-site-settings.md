@@ -15,7 +15,7 @@ ms.reviewer:
 
 A site setting is a configurable, named value that is used by website code to modify the behavior or visual style of the portal. Typically when a developer creates the website code, they will reference site settings for various components to enable an end user to modify the setting values to alter the website without having to change the code, recompile, and redeploy the website.
 
-The sample portals that are provided with the installation of PowerApps Portals contain several configurable site settings for various styles used to modify many visual elements within the site such as background style, text color, and layout width.
+The sample portals that are provided with the installation of PowerApps portals contain several configurable site settings for various styles used to modify many visual elements within the site such as background style, text color, and layout width.
 You can manage the following types of site settings:
 
 - **Global Portal settings**: These settings apply to all portals associated with the Common Data Service environment in which they are being added.
@@ -59,10 +59,10 @@ You can manage the following types of site settings:
 |Search/Enabled|TRUE|A Boolean value that indicates if search is enabled or not.|
 |search/filters|Content:adx_webpage;Events:adx_event,adx_eventschedule;<br>Blogs:adx_blog,adx_blogpost,adx_blogpostcomment;<br>Forums:adx_communityforum,adx_communityforumthread,adx_communityforumpost;<br>Ideas:adx_ideaforum,adx_idea,adx_ideacomment;<br>Issues:adx_issueforum,adx_issue,adx_issuecomment;Help Desk:incident|A collection of search logical name filter options. Defining a value here will add dropdown filter options to site-wide search. This value should be in the form of name/value pairs, with name and value separated by a colon, and pairs separated by a semicolon.<br>For example: "Forums:adx_communityforum,adx_communityforumthread,adx_communityforumpost;Blogs:adx_blog,adx_blogpost,adx_blogpostcomment".|
 |Search/IndexQueryName|Portal Search|The name of the system view used by the portal search query. Default: Portal Search|
-|search/query|+(@Query) _title:(@Query) _logicalname:adx_webpage~0.9^0.2<br> -_logicalname:adx_webfile~0.9 adx_partialurl:(@Query)<br> _logicalname:adx_blogpost~0.9^0.1 -_logicalname:adx_communityforumthread~0.9|Override query for site search, to apply additional weights and filters. @Query is the query text entered by a user. Lucene query syntax reference: [http://lucene.apache.org/core/old_versioned_docs/versions/2_9_1/queryparsersyntax.html](http://lucene.apache.org/core/old_versioned_docs/versions/2_9_1/queryparsersyntax.html)| 
+|search/query|+(@Query) _title:(@Query) _logicalname:adx_webpage~0.9^0.2<br> -_logicalname:adx_webfile~0.9 adx_partialurl:(@Query)<br> _logicalname:adx_blogpost~0.9^0.1 -_logicalname:adx_communityforumthread~0.9|Override query for site search, to apply additional weights and filters. @Query is the query text entered by a user. Lucene query syntax reference: [https://lucene.apache.org/core/old_versioned_docs/versions/2_9_1/queryparsersyntax.html](https://lucene.apache.org/core/old_versioned_docs/versions/2_9_1/queryparsersyntax.html)| 
 |Search/Stemmer|English|The language used by the portal search's stemming algorithm. Default: English|
 |CustomerSupport/DisplayAllUserActivitiesOnTimeline|FALSE| |
-|Authentication/[Protocol]/[Provider]/AllowContactMappingWithEmail| |Allow auto-association to a contact record based on email. For more information, click [here](https://docs.microsoft.com/en-us/dynamics365/portals/azure-ad-b2c#allow-auto-association-to-a-contact-record-based-on-email).|
+|Authentication/[Protocol]/[Provider]/AllowContactMappingWithEmail| |Allow auto-association to a contact record based on email. For more information, click [here](azure-ad-b2c.md#allow-auto-association-to-a-contact-record-based-on-email).|
 |||
 
 For site settings related to various portal features, see:
@@ -74,10 +74,9 @@ For site settings related to various portal features, see:
 - [WS-Federation](configure-ws-federation-settings.md)
 - [SAML 2.0](configure-saml2-settings.md)
 - [Migrate identity providers to Azure AD B2C](migrate-identity-providers.md)
-- [Search within file attachment content](https://docs.microsoft.com/dynamics365/customer-engagement/portals/search-file-attachment)
-- [Behavior and format of the date and time field](https://docs.microsoft.com/dynamics365/customer-engagement/portals/behavior-format-date-time-field)
-- [Add geolocation](https://docs.microsoft.com/dynamics365/customer-engagement/portals/add-geolocation)
-- [Integrate Field Service](https://docs.microsoft.com/dynamics365/customer-engagement/portals/integrate-field-service)
+- [Search within file attachment content](search-file-attachment.md)
+- [Behavior and format of the date and time field](behavior-format-date-time-field.md)
+- [Add geolocation](add-geolocation.md)
 - [Implementing General Data Protection Regulations](https://docs.microsoft.com/dynamics365/customer-engagement/portals/implement-gdpr)
 - [Enable header and footer output caching](https://docs.microsoft.com/dynamics365/customer-engagement/portals/enable-header-footer-output-caching)
 

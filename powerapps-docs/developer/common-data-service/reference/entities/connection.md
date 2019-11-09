@@ -1,7 +1,7 @@
 ---
 title: "Connection Entity Reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the Connection entity."
-ms.date: 04/01/2019
+description: "Includes schema information and supported messages for the Connection entity in Common Data Service."
+ms.date: 11/07/2019
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -12,7 +12,6 @@ search.audienceType:
   - developer
 search.app: 
   - PowerApps
-  - D365CE
 ---
 # Connection Entity Reference
 
@@ -1062,8 +1061,6 @@ Same as processsession entity [Connection_ProcessSessions](processsession.md#BKM
 
 Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related entity. Listed by **SchemaName**.
 
-- [territory_connections1](#BKMK_territory_connections1)
-- [territory_connections2](#BKMK_territory_connections2)
 - [knowledgearticle_connections1](#BKMK_knowledgearticle_connections1)
 - [knowledgearticle_connections2](#BKMK_knowledgearticle_connections2)
 - [KnowledgeBaseRecord_connections1](#BKMK_KnowledgeBaseRecord_connections1)
@@ -1111,19 +1108,9 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [socialprofile_connections1](#BKMK_socialprofile_connections1)
 - [socialactivity_connections2](#BKMK_socialactivity_connections2)
 - [recurringappointmentmaster_connections2](#BKMK_recurringappointmentmaster_connections2)
+- [territory_connections1](#BKMK_territory_connections1)
+- [territory_connections2](#BKMK_territory_connections2)
 
-
-### <a name="BKMK_territory_connections1"></a> territory_connections1
-
-**Added by**: Application Common Solution
-
-See territory Entity [territory_connections1](territory.md#BKMK_territory_connections1) One-To-Many relationship.
-
-### <a name="BKMK_territory_connections2"></a> territory_connections2
-
-**Added by**: Application Common Solution
-
-See territory Entity [territory_connections2](territory.md#BKMK_territory_connections2) One-To-Many relationship.
 
 ### <a name="BKMK_knowledgearticle_connections1"></a> knowledgearticle_connections1
 
@@ -1312,6 +1299,18 @@ See socialactivity Entity [socialactivity_connections2](socialactivity.md#BKMK_s
 ### <a name="BKMK_recurringappointmentmaster_connections2"></a> recurringappointmentmaster_connections2
 
 See recurringappointmentmaster Entity [recurringappointmentmaster_connections2](recurringappointmentmaster.md#BKMK_recurringappointmentmaster_connections2) One-To-Many relationship.
+
+### <a name="BKMK_territory_connections1"></a> territory_connections1
+
+**Added by**: Application Common Solution
+
+See territory Entity [territory_connections1](territory.md#BKMK_territory_connections1) One-To-Many relationship.
+
+### <a name="BKMK_territory_connections2"></a> territory_connections2
+
+**Added by**: Application Common Solution
+
+See territory Entity [territory_connections2](territory.md#BKMK_territory_connections2) One-To-Many relationship.
 
 ### See also
 

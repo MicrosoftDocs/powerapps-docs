@@ -20,7 +20,7 @@ Add a variety of UI elements to your canvas app, and configure aspects of their 
 
 ## Prerequisites
 
-1. If you don't already have a PowerApps license, [sign up](../signup-for-powerapps.md), and then [sign in](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1. If you don't already have a PowerApps license, [sign up](../signup-for-powerapps.md), and then [sign in](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 1. Under **Make your own app**, hover over **Canvas app from blank**, and then select **Make this app**.
 1. If you're prompted to take the intro tour, select **Next** to get familiar with key areas of the PowerApps interface (or select **Skip**).
 

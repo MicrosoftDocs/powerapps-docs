@@ -152,12 +152,12 @@ You will authenticate and use an <xref:System.Net.Http.HttpClient> to send a `GE
     ```
     To get the `url` value:
 
-    1. From the [https://web.powerapps.com](https://web.powerapps.com) site with the appropriate environment selected, select **Settings** ![Settings button](media/settings-icon.png) and choose **Advanced Customizations**. Then select **Developer resources**.
+    1. From the [https://make.powerapps.com](https://make.powerapps.com) site with the appropriate environment selected, select **Settings** ![Settings button](media/settings-icon.png) and choose **Advanced Customizations**. Then select **Developer resources**.
     1. In the **Developer Resources** page, look for the **Instance Web API** value and copy it. 
 
         It should look something like `https://yourorgname.api.crm.dynamics.com/api/data/v9.1/`. But for this sample, you must trim off the final part (`/api/data/v9.1/`) so that it is just `https://yourorgname.api.crm.dynamics.com`
 
-    For the `userName` and `password` variables, use the same credentials you used to log into the [https://web.powerapps.com](https://web.powerapps.com) site.
+    For the `userName` and `password` variables, use the same credentials you used to log into the [https://make.powerapps.com](https://make.powerapps.com) site.
 
 ## Run the program
 
