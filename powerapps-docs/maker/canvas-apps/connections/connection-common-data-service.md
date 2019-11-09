@@ -17,7 +17,7 @@ search.app:
 
 # Connect to Common Data Service
 
-You can securely store your business data in Common Data Service and build rich apps in PowerApps so that users can manage that data. You can also integrate that data into solutions that include Microsoft Flow, Power BI, and data from Dynamics 365.
+You can securely store your business data in Common Data Service and build rich apps in PowerApps so that users can manage that data. You can also integrate that data into solutions that include Power Automate, Power BI, and data from Dynamics 365.
 
 By default, the Common Data Service connector connects to data in your app's current environment. If your app moves to another environment, the connector connects to data in the new environment. This behavior works well for an app using a single environment or an app that follows an ALM process for moving from Development to Test to Production.
 

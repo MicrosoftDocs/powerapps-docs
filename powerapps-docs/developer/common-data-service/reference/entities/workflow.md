@@ -1686,7 +1686,7 @@ Same as workflow entity [workflow_active_workflow](workflow.md#BKMK_workflow_act
 
 ### <a name="BKMK_regardingobjectid_process"></a> regardingobjectid_process
 
-**Added by**: Microsoft Flow Extensions package Solution
+**Added by**: Power Automate Extensions package Solution
 
 Same as flowsession entity [regardingobjectid_process](flowsession.md#BKMK_regardingobjectid_process) Many-To-One relationship.
 
@@ -1703,7 +1703,7 @@ Same as flowsession entity [regardingobjectid_process](flowsession.md#BKMK_regar
 
 ### <a name="BKMK_workflow_workflowbinary_Process"></a> workflow_workflowbinary_Process
 
-**Added by**: Microsoft Flow Extensions package Solution
+**Added by**: Power Automate Extensions package Solution
 
 Same as workflowbinary entity [workflow_workflowbinary_Process](workflowbinary.md#BKMK_workflow_workflowbinary_Process) Many-To-One relationship.
 
