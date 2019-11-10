@@ -1,15 +1,33 @@
+---
+title: "Discovery Services (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Modify existing code using the Organization SDK for discovery to use Discovery Web API."
+ms.custom: ""
+ms.date: 11/10/2019
+ms.reviewer: ""
+ms.service: powerapps
+ms.topic: "article"
+author: "bpevans" # GitHub ID
+ms.author: "bevans" # MSFT alias of Microsoft employees only
+manager: "miferlan" # MSFT alias of manager or PM counterpart
+search.audienceType:
+  - developer
+search.app:
+  - PowerApps
+  - D365CE
+---
+
 # Modify existing code using the Organization SDK for discovery to use Discovery Web API
 
-The Discovery Service Web API can be used to discover instances for your users. If you currently use Organization Service SDK to discover your instances, you can follow the steps in this document to start consuming the Web API. 
+The Discovery Service Web API can be used to discover instances for your users. If you currently use Organization Service SDK to discover your instances, you can follow the steps in this document to start consuming the Web API.
 A detailed description of the Web API can be found on the [Discovery Service Web API](/powerapps/developer/common-data-service/webapi/discover-url-organization-web-api) page.
- 
+
 If you currently use the Web API, it is recommended that you make sure to point to the global Discovery service endpoint (https://globaldisco.crm.dynamics.com) of the Discovery service.
 The rest of this document describes the changes that might be needed to use the Web API
- 
+
 ## Authentication
-The Discovery Service Web API supports authentication with OAuth 2.0 access tokens. 
+The Discovery Service Web API supports authentication with OAuth 2.0 access tokens.
 If your code uses WS-Trust SAML tokens, you will need to change code to acquire an OAuth 2.0 token from Azure AD, and pass it to the Discovery Service Web API call.
- 
+
 ## OData API calls
 The calls below are supported by the Web API. These follow the OData v4 standard and the Instances API replaces both RetrieveOrganizations and RetrieveOrganization based on the desired scenario and returns the same data.
 
@@ -22,7 +40,7 @@ GET https://globaldisco.crm.dynamics.com/api/discovery/v2.0/Instances
 GET  https://globaldisco.crm.dynamics.com/api/discovery/v2.0/Instances(Region={region})
 ```
 Response
-```javascript 
+```javascript
 {
   "value":[
     {
@@ -49,7 +67,7 @@ GET https://globaldisco.crm.dynamics.com/api/discovery/v2.0/Instances(UniqueName
 ```  
 
 Response
-```javascript 
+```javascript
 {
   "Id":"<GUID>",
   "UniqueName":"myorg",
