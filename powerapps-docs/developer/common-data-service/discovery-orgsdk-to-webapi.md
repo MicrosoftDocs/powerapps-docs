@@ -13,10 +13,14 @@ If your code uses WS-Trust SAML tokens, you will need to change code to acquire 
 ## OData API calls
 The calls below are supported by the Web API. These follow the OData v4 standard and the Instances API replaces both RetrieveOrganizations and RetrieveOrganization based on the desired scenario and returns the same data.
 
--    Get all instances for the user.
+-    Get all instances for the user in all regions.
 ```http  
 GET https://globaldisco.crm.dynamics.com/api/discovery/v2.0/Instances
 ```  
+-    Get all instances for the user in a specific region.
+```http  
+GET  https://globaldisco.crm.dynamics.com/api/discovery/v2.0/Instances(Region={region})
+```
 Response
 ```javascript 
 {
