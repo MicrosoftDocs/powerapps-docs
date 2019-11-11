@@ -1,6 +1,6 @@
 ---
-title: "Rate or vote on a webpage or blog post on a portal | MicrosoftDocs"
-description: "Instructions to enable and manage ratings on a web page or a blog post on a portal."
+title: "Rate or vote on a webpage on a portal | MicrosoftDocs"
+description: "Instructions to enable and manage ratings on a web page on a portal."
 author: sbmjais
 manager: shujoshi
 ms.service: powerapps
@@ -11,9 +11,9 @@ ms.author: shjais
 ms.reviewer:
 ---
 
-# Rate or vote on a webpage or blog post on a portal
+# Rate or vote on a webpage on a portal
 
-Ratings provide users with the ability to rate or vote on a webpage. Ratings can also be enabled for comments on pages or blog posts. By default, this feature is disabled, but it can be enabled on a page-by-page basis.
+Ratings provide users with the ability to rate or vote on a webpage. Ratings can also be enabled for comments on pages. By default, this feature is disabled, but it can be enabled on a page-by-page basis.
 
 Ratings are custom activities and thus can be used in the same way as any other activity such as emails, phone calls, and so on. Because ratings are activities, by using customization you can have ratings appear for any entity you choose that appears and is rendered on the portal, including custom entities.
 
