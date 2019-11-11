@@ -1,9 +1,9 @@
 ---
 title: "Discovery Services (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Modify existing code using the Organization SDK for discovery to use Discovery Web API."
+description: "Use the Discovery Service to obtain information about your business organizations."
 ms.custom: ""
 ms.date: 11/10/2019
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "bpevans" # GitHub ID
