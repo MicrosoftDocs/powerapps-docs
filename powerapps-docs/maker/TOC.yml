@@ -1180,6 +1180,12 @@
           href: ./portals/configure/place-child-nodes.md
         - name: Behavior and format of the date and time field
           href: ./portals/configure/behavior-format-date-time-field.md
+        - name: View email records in portal timeline
+          href: ./portals/configure/view-email-in-timeline.md
+        - name: Rate a webpage
+          href: ./portals/configure/rate-webpage.md
+        - name: Enable header and footer output caching on a portal
+          href: ./portals/configure/enable-header-footer-output-caching.md
         - name: Add chart on a web page in portal
           href: ./portals/configure/add-chart.md
         - name: Work with entity forms

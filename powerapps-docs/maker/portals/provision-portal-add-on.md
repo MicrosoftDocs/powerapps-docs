@@ -24,9 +24,15 @@ To provision a portal:
  
 2. In the navigation column on the left, select **Show all**.
 
-3. Select **All admin centers**.
+3. If you are working with the new admin center, select **All admin centers**. From the list of all admin centers, select **Dynamics 365**.
 
-4. From the list of all admin centers, select **Dynamics 365**.
+    > [!div class="mx-imgBorder"]
+    > ![Open Dynamics 365 Administration Center from new admin center](media/from-new-admin-center.png "Open Dynamics 365 Administration Center from new admin center") 
+
+4. If you are working with the old admin center, expand **Admin centers** in the left navigation column, and then select **Dynamics 365**.
+
+    > [!div class="mx-imgBorder"]
+    > ![Open Dynamics 365 Administration Center from old admin center](media/from-old-admin-center.png "Open Dynamics 365 Administration Center from old admin center") 
 
 5. On the **Dynamics 365 Administration Center** page, select the **Applications** tab.
 
