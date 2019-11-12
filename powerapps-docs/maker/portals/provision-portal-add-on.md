@@ -57,16 +57,16 @@ To provision a portal:
 
 10.  In the **Portal URL** field, enter the subdomain name you want for your portal. You can only use alphanumeric characters or hyphens (-); other characters are not permitted.
 
-    > [!NOTE]
-    > - To change the URL of a portal after it is provisioned, see [change the base URL of a portal](admin/change-base-url.md).
-    > - To link your portal to a custom domain, see [link your portal to a custom domain](admin/add-custom-domain.md).
+     > [!NOTE]
+     > - To change the URL of a portal after it is provisioned, see [change the base URL of a portal](admin/change-base-url.md).
+     > - To link your portal to a custom domain, see [link your portal to a custom domain](admin/add-custom-domain.md).
 
 11.  In the **Dynamics 365 Instance** drop-down list, select the instance you want to link the portal to. This requires System Administrator or System Customizer role in the instance you pick to select it.
 
 12.  In the **Select Portal Language** drop-down list, select the default language for your portal. The available languages will depend on the languages that are installed in your instance. 
     
-    > [!NOTE]
-    > Sample data is only provided in one language, so choosing a default language will also decide how the sample data is translated. Arabic and Hebrew are not supported and will not appear in the list.
+     > [!NOTE]
+     > Sample data is only provided in one language, so choosing a default language will also decide how the sample data is translated. Arabic and Hebrew are not supported and will not appear in the list.
 
 13. In the **Select Portal Administrator** drop-down list, select the user who will configure, customize, and maintain the portal. All users who have the System Administrator role in the organization will appear as options. 
 
