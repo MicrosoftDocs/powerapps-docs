@@ -36,11 +36,11 @@ To provision a portal:
 
 5. On the **Dynamics 365 Administration Center** page, select the **Applications** tab.
 
-6.  Select the application row titled **Portal Add-On**, and then select **Manage.**
+6. Select the application row titled **Portal Add-On**, and then select **Manage.**
 
-7.  In the **General Settings** section, enter a **Name** for your portal. The **Name** will help to identify the portal and can be changed later.
+7. In the **General Settings** section, enter a **Name** for your portal. The **Name** will help to identify the portal and can be changed later.
 
-8.  The **Type** field represents the type of portal subscription (Trial or Production). This is a system field, so it cannot be changed by the user. The value changes based on whether it is trial subscription or paid subscription.
+8. The **Type** field represents the type of portal subscription (Trial or Production). This is a system field, so it cannot be changed by the user. The value changes based on whether it is trial subscription or paid subscription.
 
 9. Optionally, in the **Portal development status** drop-down list, select one of the following development statuses for your portal:
 
@@ -55,18 +55,18 @@ To provision a portal:
     > - This drop-down list is available only for the portals of type production.
     > - This field is used by Microsoft to understand the usage pattern of this portal and does not affect any functionality. If you use different names for development lifecycle, please select the one which is closer in purpose. This can be changed at a later point of time once portal is provisioned.
 
-10.  In the **Portal URL** field, enter the subdomain name you want for your portal. You can only use alphanumeric characters or hyphens (-); other characters are not permitted.
+10. In the **Portal URL** field, enter the subdomain name you want for your portal. You can only use alphanumeric characters or hyphens (-); other characters are not permitted.
 
-     > [!NOTE]
-     > - To change the URL of a portal after it is provisioned, see [change the base URL of a portal](admin/change-base-url.md).
-     > - To link your portal to a custom domain, see [link your portal to a custom domain](admin/add-custom-domain.md).
+    > [!NOTE]
+    > - To change the URL of a portal after it is provisioned, see [change the base URL of a portal](admin/change-base-url.md).
+    > - To link your portal to a custom domain, see [link your portal to a custom domain](admin/add-custom-domain.md).
 
-11.  In the **Dynamics 365 Instance** drop-down list, select the instance you want to link the portal to. This requires System Administrator or System Customizer role in the instance you pick to select it.
+11. In the **Dynamics 365 Instance** drop-down list, select the instance you want to link the portal to. This requires System Administrator or System Customizer role in the instance you pick to select it.
 
-12.  In the **Select Portal Language** drop-down list, select the default language for your portal. The available languages will depend on the languages that are installed in your instance. 
+12. In the **Select Portal Language** drop-down list, select the default language for your portal. The available languages will depend on the languages that are installed in your instance. 
     
-     > [!NOTE]
-     > Sample data is only provided in one language, so choosing a default language will also decide how the sample data is translated. Arabic and Hebrew are not supported and will not appear in the list.
+    > [!NOTE]
+    > Sample data is only provided in one language, so choosing a default language will also decide how the sample data is translated. Arabic and Hebrew are not supported and will not appear in the list.
 
 13. In the **Select Portal Administrator** drop-down list, select the user who will configure, customize, and maintain the portal. All users who have the System Administrator role in the organization will appear as options. 
 
