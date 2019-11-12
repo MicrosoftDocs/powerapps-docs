@@ -29,7 +29,7 @@ Accessing the Discovery Service using the Web API requires authentication with a
 If your application code uses WS-Trust SAML tokens for authentication, you need to change your application code to acquire an OAuth 2.0 token from Azure Active Directory (AD), and then add that token in the Authorization header of the Discovery Service Web API calls. More information: [Use OAuth with Common Data Service](authenticate-oauth.md).
 
 ## OData API calls
-The example HTTP requests shown below are supported by the Discovery Service Web API. These examples use the Instances API to return the same organization data as the RetrieveOrganizations and RetrieveOrganization messages of the .NET API.
+The example HTTP requests shown below are supported by the Discovery Service Web API. These examples use the Instances API to return the same organization data as the <xref:Microsoft.Xrm.Sdk.Discovery.RetrieveOrganizationsRequest> and <xref:Microsoft.Xrm.Sdk.Discovery.RetrieveOrganizationRequest> message requests of the .NET API.
 
 -    Get all instances for the user in all regions.
 ```http  
