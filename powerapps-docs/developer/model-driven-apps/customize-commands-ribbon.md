@@ -34,11 +34,11 @@ search.app:
   
  The SDK describes the process of editing the ribbon by editing the customization.xml file directly. Several people have created ribbon editors that provide a user interface to make editing the ribbon easier. Currently the following projects are available on Codeplex and other locations:  
   
-- [Ribbon Workbench](http://www.develop1.net/public/rwb/ribbonworkbench.aspx)  
+- [Ribbon Workbench](https://www.develop1.net/public/rwb/ribbonworkbench.aspx)  
   
-- [MS CRM 2011 : Pragma Toolkit : Ribbon, Site Map Editor](http://pragmatoolkit.codeplex.com/)  
+- [MS CRM 2011 : Pragma Toolkit : Ribbon, Site Map Editor](https://pragmatoolkit.codeplex.com/)  
   
-- [CRM 2011 Visual Ribbon Editor](http://crmvisualribbonedit.codeplex.com/)  
+- [CRM 2011 Visual Ribbon Editor](https://crmvisualribbonedit.codeplex.com/)  
   
   To obtain support or help to use these programs, contact the program publisher.  
   

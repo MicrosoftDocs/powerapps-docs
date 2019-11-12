@@ -16,7 +16,7 @@ search.app:
 ---
 # Walk end-to-end through the completed SharePoint Online integration scenario
 > [!NOTE]
-> This article is part of a tutorial series on using PowerApps, Microsoft Flow, and Power BI with SharePoint Online. Make sure you read the [series introduction](sharepoint-scenario-intro.md) to get a sense of the big picture, as well as related downloads.
+> This article is part of a tutorial series on using PowerApps, Power Automate, and Power BI with SharePoint Online. Make sure you read the [series introduction](sharepoint-scenario-intro.md) to get a sense of the big picture, as well as related downloads.
 
 We have covered a huge amount of ground in this series of tutorials, from building canvas apps and flows, to creating reports and embedding them in SharePoint. We hope you've learned a lot and have enough exposure to how these technologies integrate, so that you can integrate canvas apps, flows, and reports into SharePoint based on your own needs. Before we finish, we want to walk through the scenario end-to-end and see how all the parts work together.
 
@@ -149,16 +149,16 @@ We have covered a huge amount of ground in this series of tutorials, from buildi
     ![Alert email from Power BI](./media/sharepoint-scenario-summary/09-06-04-email-powerbi.png)
 5. Check the inbox for the person you added in the data alerts flow (Allan DeYoung in our case).
    
-    ![Alert email from Microsoft Flow](./media/sharepoint-scenario-summary/09-06-05-email-flow.png)
+    ![Alert email from Power Automate](./media/sharepoint-scenario-summary/09-06-05-email-flow.png)
 6. Now that you have information on pending projects, you can go back and approve any that have been waiting for your attention.
 
 That brings us to the conclusion of our end-to-end walkthrough and this series of tutorials. We encourage you to continue your journey at the following sites:
 
-* [PowerApps](http://www.powerapps.com/)
-* [Microsoft Flow](http://flow.microsoft.com)
-* [Power BI](http://www.powerbi.com)
+* [PowerApps](https://www.powerapps.com/)
+* [Power Automate](https://flow.microsoft.com)
+* [Power BI](https://www.powerbi.com)
 * [Power Users Community](https://powerusers.microsoft.com/)
-* [SharePoint](http://sharepoint.microsoft.com)
+* [SharePoint](https://sharepoint.microsoft.com)
 * [Microsoft Tech Community](https://techcommunity.microsoft.com/)
 
 Let us know in the comments if you have any feedback on this series, suggestions for additions, or ideas for additional content that will help you work with the technologies that we covered.

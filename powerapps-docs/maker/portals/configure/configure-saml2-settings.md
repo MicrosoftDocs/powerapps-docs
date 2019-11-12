@@ -13,7 +13,7 @@ ms.reviewer:
 
 # Configure SAML 2.0 provider settings for portals
 
-To provide external authentication, you can add one or more [SAML 2.0](http://docs.oasis-open.org/security/saml/Post2.0/sstc-saml-tech-overview-2.0-cd-02.html)–compliant identity providers (IdP). This document describes how to set up various identity providers to integrate with a portal that acts as a service provider.  
+To provide external authentication, you can add one or more [SAML 2.0](https://docs.oasis-open.org/security/saml/Post2.0/sstc-saml-tech-overview-2.0-cd-02.html)–compliant identity providers (IdP). This document describes how to set up various identity providers to integrate with a portal that acts as a service provider.  
 
 ## AD FS (IdP)
 
@@ -84,7 +84,7 @@ Apply portal site settings referencing the above [!include[](../../../includes/p
 > [!Note]
 > A standard [!include[](../../../includes/pn-adfs-short.md)] (IdP) configuration only uses the following settings (with example values):
 > Authentication/SAML2/ADFS/MetadataAddress - <https://adfs.contoso.com/FederationMetadata/2007-06/FederationMetadata.xml>  
-> - Authentication/SAML2/ADFS/AuthenticationType - http://adfs.contoso.com/adfs/services/trust    
+> - Authentication/SAML2/ADFS/AuthenticationType - https://adfs.contoso.com/adfs/services/trust    
 >   -   Use the value of the **entityID** attribute in the root element of the federation metadata (open the **MetadataAddress URL** in a browser that is the value of the above site setting) 
 > - Authentication/SAML2/ADFS/ServiceProviderRealm - https://portal.contoso.com/  
 > - Authentication/SAML2/ADFS/AssertionConsumerServiceUrl - https://portal.contoso.com/signin-saml2  
@@ -99,7 +99,7 @@ Multiple IdP services can be configured by substituting a label for the [provide
 |---------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Authentication/Registration/ExternalLoginEnabled              | Enables or disables external account sign-in and registration. Default: true                                                                                                                                                                                                                                                                                                                                                            |
 | Authentication/SAML2/[provider]/MetadataAddress             | Required. The [WS-Federation](https://msdn.microsoft.com/library/bb498017.aspx) metadata URL of the [!include[](../../../includes/pn-adfs-short.md)] (STS) server. It commonly ends with the path:/FederationMetadata/2007-06/FederationMetadata.xml . Example: `https://adfs.contoso.com/FederationMetadata/2007-06/FederationMetadata.xml`. [!include[](../../../includes/proc-more-information.md)] [WsFederationAuthenticationOptions.MetadataAddress](https://msdn.microsoft.com/library/microsoft.owin.security.wsfederation.wsfederationauthenticationoptions.metadataaddress.aspx) |  
-| Authentication/SAML2/[provider]/AuthenticationType          | Required. The OWIN authentication middleware type. Specify the value of the [entityID](https://docs.microsoft.com/azure/active-directory/develop/active-directory-federation-metadata) attribute at the root of the federation metadata XML. Example: `http://adfs.contoso.com/adfs/services/trust`. [!include[](../../../includes/proc-more-information.md)] [AuthenticationOptions.AuthenticationType](https://msdn.microsoft.com/library/microsoft.owin.security.authenticationoptions.authenticationtype.aspx)                                                            |  
+| Authentication/SAML2/[provider]/AuthenticationType          | Required. The OWIN authentication middleware type. Specify the value of the [entityID](https://docs.microsoft.com/azure/active-directory/develop/active-directory-federation-metadata) attribute at the root of the federation metadata XML. Example: `https://adfs.contoso.com/adfs/services/trust`. [!include[](../../../includes/proc-more-information.md)] [AuthenticationOptions.AuthenticationType](https://msdn.microsoft.com/library/microsoft.owin.security.authenticationoptions.authenticationtype.aspx)                                                            |  
 | Authentication/SAML2/[provider]/ServiceProviderRealm<br>or <br>Authentication/SAML2/[provider]/Wtrealm                      | Required. The [!include[](../../../includes/pn-adfs-short.md)] relying party identifier. Example: `https://portal.contoso.com/`. [!include[](../../../includes/proc-more-information.md)] [WsFederationAuthenticationOptions.Wtrealm](https://msdn.microsoft.com/library/microsoft.owin.security.wsfederation.wsfederationauthenticationoptions.wtrealm.aspx)                       |  
 | Authentication/SAML2/[provider]/AssertionConsumerServiceUrl<br>or<br>Authentication/SAML2/[provider]/Wreply                       | Required. The [!include[](../../../includes/pn-adfs-short.md)] SAML Consumer Assertion endpoint. Example: https://portal.contoso.com/signin-saml2. [!include[](../../../includes/proc-more-information.md)] [WsFederationAuthenticationOptions.Wreply](https://msdn.microsoft.com/library/microsoft.owin.security.wsfederation.wsfederationauthenticationoptions.wreply.aspx)                                                                                                                                                                                                  |  
 | Authentication/SAML2/[provider]/Caption                     | Recommended. The text that the user can display on a sign-in user interface. Default: [provider]. [!include[](../../../includes/proc-more-information.md)] [WsFederationAuthenticationOptions.Caption](https://msdn.microsoft.com/library/microsoft.owin.security.wsfederation.wsfederationauthenticationoptions.caption.aspx)                |  
@@ -115,7 +115,7 @@ Multiple IdP services can be configured by substituting a label for the [provide
 
 ### IdP-initiated sign-in
 
-[!include[](../../../includes/pn-adfs-short.md)] supports the [IdP-initiated single sign-on (SSO)](https://technet.microsoft.com/library/jj127245.aspx) profile of the SAML 2.0 [specification](http://docs.oasis-open.org/security/saml/Post2.0/sstc-saml-tech-overview-2.0-cd-02.html#5.1.4.IdP-Initiated%20SSO:%20POST%20Binding|outline). In order for the portal (service provider) to respond properly to the SAML request initiated by the IdP, the [RelayState](http://blogs.technet.com/b/askds/archive/2012/09/27/ad-fs-2-0-relaystate.aspx) parameter must be encoded properly.  
+[!include[](../../../includes/pn-adfs-short.md)] supports the [IdP-initiated single sign-on (SSO)](https://technet.microsoft.com/library/jj127245.aspx) profile of the SAML 2.0 [specification](https://docs.oasis-open.org/security/saml/Post2.0/sstc-saml-tech-overview-2.0-cd-02.html#5.1.4.IdP-Initiated%20SSO:%20POST%20Binding|outline). In order for the portal (service provider) to respond properly to the SAML request initiated by the IdP, the [RelayState](https://blogs.technet.com/b/askds/archive/2012/09/27/ad-fs-2-0-relaystate.aspx) parameter must be encoded properly.  
 
 The basic string value to be encoded into the SAML RelayState parameter must be in the format **ReturnUrl=/content/sub-content/**, where **/content/sub-content/** is the path to the webpage you want to go to on the portal (service provider). The path can be replaced by any valid webpage on the portal. The string value is encoded and placed into a container string of the format **RPID=&lt;URL encoded RPID&gt;&RelayState=&lt;URL encoded RelayState&gt;**. This entire string is once again encoded and added to another container of the format **<https://adfs.contoso.com/adfs/ls/idpinitiatedsignon.aspx?RelayState=&lt;URL> encoded RPID/RelayState&gt;**.
 
@@ -218,7 +218,7 @@ The previous section describing [!include[](../../../includes/pn-adfs-short.md)]
     This corresponds to the **ServiceProviderRealm** (Wtrealm) site setting value.
 5. At this point, a new application is created. Go to the **Configure** section in the menu.
 
-    Under the **single sign-on** section, update the first **Reply URL** entry to include a path in the URL http://portal.contoso.com/signin-azure-ad.
+    Under the **single sign-on** section, update the first **Reply URL** entry to include a path in the URL https://portal.contoso.com/signin-azure-ad.
 
     This corresponds to the **AssertionConsumerServiceUrl** (Wreply) site setting value.
 
@@ -281,7 +281,7 @@ The Location attribute corresponds to the**AssertionConsumerServiceUrl** (Wreply
 
 ### IdP-initiated sign-in
 
-Shibboleth supports the [IdP initiated SSO](https://wiki.shibboleth.net/confluence/display/SHIB2/IdPUnsolicitedSSO) profile of the SAML 2.0 [specification](http://docs.oasis-open.org/security/saml/Post2.0/sstc-saml-tech-overview-2.0-cd-02.html#5.1.4.IdP-Initiated%20SSO:%20POST%20Binding|outline). For the portal (service provider) to respond properly to the SAML request initiated by the IdP, the RelayState parameter must be encoded properly.  
+Shibboleth supports the [IdP initiated SSO](https://wiki.shibboleth.net/confluence/display/SHIB2/IdPUnsolicitedSSO) profile of the SAML 2.0 [specification](https://docs.oasis-open.org/security/saml/Post2.0/sstc-saml-tech-overview-2.0-cd-02.html#5.1.4.IdP-Initiated%20SSO:%20POST%20Binding|outline). For the portal (service provider) to respond properly to the SAML request initiated by the IdP, the RelayState parameter must be encoded properly.  
 
 The basic string value to be encoded into the SAML RelayState parameter must be in the format **ReturnUrl=/content/sub-content/**, where **/content/sub-content/** is the path to the webpage you want to go to on the portal (service provider). The path can be replaced by any valid webpage on the portal. The full IdP-initiated SSO URL should be in the format <https://idp.contoso.com/idp/profile/SAML2/Unsolicited/SSO?providerId=&lt;URL> encoded provider ID&gt;&target=&lt;URL encoded return path&gt;.
 
@@ -408,17 +408,17 @@ $issuanceTransformRules = @'
 
 @RuleName = Transform [!INCLUDE[pn-ms-windows-short](../../../includes/pn-ms-windows-short.md)] Account Name to Name ID claim
 
-c:[Type == "http://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname"]
+c:[Type == "https://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname"]
 
-=> issue(Type = "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier", Issuer = c.Issuer, OriginalIssuer = c.OriginalIssuer, Value = c.Value, ValueType = c.ValueType, Properties["http://schemas.xmlsoap.org/ws/2005/05/identity/claimproperties/format"] = "urn:oasis:names:tc:SAML:2.0:nameid-format:persistent");
+=> issue(Type = "https://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier", Issuer = c.Issuer, OriginalIssuer = c.OriginalIssuer, Value = c.Value, ValueType = c.ValueType, Properties["https://schemas.xmlsoap.org/ws/2005/05/identity/claimproperties/format"] = "urn:oasis:names:tc:SAML:2.0:nameid-format:persistent");
 
 @RuleTemplate = LdapClaims
 
 @RuleName = Send LDAP Claims
 
-c:[Type == "http://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname", Issuer == "AD AUTHORITY"]
+c:[Type == "https://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname", Issuer == "AD AUTHORITY"]
 
-=> issue(store = "[!INCLUDE[pn-active-directory](../../../includes/pn-active-directory.md)]", types = ("http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname", "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname", "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress"), query = ";givenName,sn,mail;{{0}}", param = c.Value);
+=> issue(store = "[!INCLUDE[pn-active-directory](../../../includes/pn-active-directory.md)]", types = ("https://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname", "https://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname", "https://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress"), query = ";givenName,sn,mail;{{0}}", param = c.Value);
 
 '@ -f $identityProviderValue
 
@@ -426,7 +426,7 @@ $issuanceAuthorizationRules = @'
 
 @RuleTemplate = AllowAllAuthzRule
 
-=> issue(Type = http://schemas.microsoft.com/authorization/claims/permit, Value = true);
+=> issue(Type = https://schemas.microsoft.com/authorization/claims/permit, Value = true);
 
 '@
 

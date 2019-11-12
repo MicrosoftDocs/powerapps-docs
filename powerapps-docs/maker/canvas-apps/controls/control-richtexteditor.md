@@ -1,14 +1,14 @@
 ---
 title: 'Rich text editor control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the Rich text editor control
-author: fikaradz
+author: chmoncay
 manager: kvivek
 ms.service: powerapps
 ms.topic: article
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 05/24/2018
-ms.author: fikaradz
+ms.author: chmoncay
 search.audienceType: 
   - maker
 search.app: 

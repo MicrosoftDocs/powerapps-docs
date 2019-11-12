@@ -30,7 +30,7 @@ Define *business rules* for an entity that apply to all the entity forms and at 
 > [!NOTE]
 > To define a business rule that applies to a form in a model-driven app, see [Create business rules for a model-driven app form](../model-driven-apps/create-business-rules-recommendations-apply-logic-form.md)
 
-You can also use the classic Common Data Service processes, which are workflows and actions. More information: [Microsoft Flow: Use Workflow processes](/flow/workflow-processes) and [Microsoft Flow: Actions overview](/flow/actions).
+You can also use the classic Common Data Service processes, which are workflows and actions. More information: [Power Automate: Use Workflow processes](/flow/workflow-processes) and [Power Automate: Actions overview](/flow/actions).
 
 ## See also
 

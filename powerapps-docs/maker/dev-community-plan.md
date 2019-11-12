@@ -1,6 +1,6 @@
 ---
 title: PowerApps Community Plan -- a free development environment for individual use | Microsoft Docs
-description: Sign up to build skills and learn more about PowerApps, Microsoft Flow, and the Common Data Service.
+description: Sign up to build skills and learn more about PowerApps, Power Automate, and the Common Data Service.
 author: ImadYanni
 manager: kvivek
 
@@ -15,9 +15,9 @@ searchScope:
   - PowerApps
 ---
 # PowerApps Community Plan: a free development environment for individual use
-If you want to build skills and learn more about PowerApps, Microsoft Flow, and the Common Data Service, the PowerApps Community Plan is the right plan for you. The PowerApps Community Plan gives you a free development environment for individual use, where you can:
+If you want to build skills and learn more about PowerApps, Power Automate, and the Common Data Service, the PowerApps Community Plan is the right plan for you. The PowerApps Community Plan gives you a free development environment for individual use, where you can:
 
-* Learn to build business apps and workflows with the full functionality of PowerApps and Microsoft Flow.
+* Learn to build business apps and workflows with the full functionality of PowerApps and Power Automate.
 * Connect to any data source by using our 100+ [out of the box connectors](./canvas-apps/connections-list.md) or by creating your own [custom connectors](./canvas-apps/register-custom-api.md).
 * Explore how you can use [the Common Data Service](https://docs.microsoft.com/common-data-service/entity-reference/introduction) to build powerful business apps with the common data model and [the SDK](https://aka.ms/eek20s).
 * Export the solutions you create in your individual environment, and [list them on AppSource](./canvas-apps/dev-appsource-test-drive.md) so your customers can test-drive them.
@@ -25,13 +25,13 @@ If you want to build skills and learn more about PowerApps, Microsoft Flow, and 
 ## Who can sign up for the PowerApps Community Plan?
 Anyone with a [work or school account](signup-for-powerapps.md#faq) can sign up for the PowerApps Community Plan. But we especially recommend this plan if you:
 
-* Want to build skills and learn more about PowerApps, Microsoft Flow, and the Common Data Service.
+* Want to build skills and learn more about PowerApps, Power Automate, and the Common Data Service.
 * Are interested in building business apps and workflows to distribute on AppSource.
 
 ## Where can I sign up for the PowerApps Community Plan?
-Sign up on the [PowerApps Community Plan website](https://powerapps.microsoft.com/communityplan). If you are an existing user of PowerApps with Office 365 or Dynamics 365, you can also [create an environment for individual use](https://web.powerapps.com/community/signup).
+Sign up on the [PowerApps Community Plan website](https://powerapps.microsoft.com/communityplan). If you are an existing user of PowerApps with Office 365 or Dynamics 365, you can also [create an environment for individual use](https://make.powerapps.com/community/signup).
 
-After signing up for the Community Plan, you will be redirected to the [PowerApps site](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and will land in your individual environment. The environment is named with your name, for example 'John Doe's environment'. If there is already an environment with that name, the individual environment will be named as 'John Doe's (1) environment'.  The following image shows how the environment appears.
+After signing up for the Community Plan, you will be redirected to the [PowerApps site](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and will land in your individual environment. The environment is named with your name, for example 'John Doe's environment'. If there is already an environment with that name, the individual environment will be named as 'John Doe's (1) environment'.  The following image shows how the environment appears.
 
 ![Individual environment for Community Plan](./media/dev-community-plan/individual-environment.png)
 
@@ -114,9 +114,9 @@ If you reach one or more capacity limits, we recommend you purchase a plan that 
 
 **A:** Both PowerApps Plan 2 Trial and PowerApps Community Plan are free, but are created for different purposes:
 
-**PowerApps Plan 2 Trial** gives you PowerApps Plan 2 for 30 days. This is meant for trying out PowerApps, Common Data Service, and Microsoft Flow. Once your trial expires, you can purchase a plan. If you are already using PowerApps with Office 365 or Dynamics 365, this is the right plan to try out the premium functionalities of PowerApps, which are available with PowerApps Plan 2.
+**PowerApps Plan 2 Trial** gives you PowerApps Plan 2 for 30 days. This is meant for trying out PowerApps, Common Data Service, and Power Automate. Once your trial expires, you can purchase a plan. If you are already using PowerApps with Office 365 or Dynamics 365, this is the right plan to try out the premium functionalities of PowerApps, which are available with PowerApps Plan 2.
 
-**PowerApps Community Plan** gives you access to PowerApps premium functionalities, Common Data Service, and Microsoft Flow for individual use. This plan is primarily meant for learning purposes or creating business solutions to be distributed for [AppSource Test Drive](./canvas-apps/dev-appsource-test-drive.md). This plan is perpetually available, but only for learning and building your skills on PowerApps, Common Data Services, and Microsoft Flow.
+**PowerApps Community Plan** gives you access to PowerApps premium functionalities, Common Data Service, and Power Automate for individual use. This plan is primarily meant for learning purposes or creating business solutions to be distributed for [AppSource Test Drive](./canvas-apps/dev-appsource-test-drive.md). This plan is perpetually available, but only for learning and building your skills on PowerApps, Common Data Services, and Power Automate.
 
 **Q:** Can I sign up with my personal account?
 

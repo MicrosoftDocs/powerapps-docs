@@ -212,5 +212,5 @@ Certain entity  forms, such as Account or Contact, out-of-the-box, contain the a
 [Define calculated fields](define-calculated-fields.md)<br />
 [Behavior and format of the Date and Time field](behavior-format-date-time-field.md)<br />
 [Define and query hierarchically related data](define-query-hierarchical-data.md)<br />
-[Video: Rollup and Calculated Fields](http://www.youtube.com/watch?v=RoahCH1p3T8&list=PLC3591A8FE4ADBE07&index=8)<br />
-[Video: Using Power BI](http://www.youtube.com/watch?v=PkQe4BFlBS8&list=PLC3591A8FE4ADBE07&index=3)
+[Video: Rollup and Calculated Fields](https://www.youtube.com/watch?v=RoahCH1p3T8&list=PLC3591A8FE4ADBE07&index=8)<br />
+[Video: Using Power BI](https://www.youtube.com/watch?v=PkQe4BFlBS8&list=PLC3591A8FE4ADBE07&index=3)

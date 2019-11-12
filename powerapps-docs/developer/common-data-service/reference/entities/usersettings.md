@@ -1,7 +1,7 @@
 ---
 title: "UserSettings Entity Reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the UserSettings entity."
-ms.date: 04/01/2019
+description: "Includes schema information and supported messages for the UserSettings entity in Common Data Service."
+ms.date: 11/07/2019
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -12,7 +12,6 @@ search.audienceType:
   - developer
 search.app: 
   - PowerApps
-  - D365CE
 ---
 # UserSettings Entity Reference
 
@@ -52,6 +51,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 - [AddressBookSyncInterval](#BKMK_AddressBookSyncInterval)
 - [AdvancedFindStartupMode](#BKMK_AdvancedFindStartupMode)
 - [AMDesignator](#BKMK_AMDesignator)
+- [AutoCaptureUserStatus](#BKMK_AutoCaptureUserStatus)
 - [AutoCreateContactOnPromote](#BKMK_AutoCreateContactOnPromote)
 - [BusinessUnitId](#BKMK_BusinessUnitId)
 - [CalendarType](#BKMK_CalendarType)
@@ -80,6 +80,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 - [IsAutoDataCaptureEnabled](#BKMK_IsAutoDataCaptureEnabled)
 - [IsDefaultCountryCodeCheckEnabled](#BKMK_IsDefaultCountryCodeCheckEnabled)
 - [IsDuplicateDetectionEnabledWhenGoingOnline](#BKMK_IsDuplicateDetectionEnabledWhenGoingOnline)
+- [IsEmailConversationViewEnabled](#BKMK_IsEmailConversationViewEnabled)
 - [IsGuidedHelpEnabled](#BKMK_IsGuidedHelpEnabled)
 - [IsResourceBookingExchangeSyncEnabled](#BKMK_IsResourceBookingExchangeSyncEnabled)
 - [IsSendAsAllowed](#BKMK_IsSendAsAllowed)
@@ -185,6 +186,22 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |MaxLength|25|
 |RequiredLevel|SystemRequired|
 |Type|String|
+
+
+### <a name="BKMK_AutoCaptureUserStatus"></a> AutoCaptureUserStatus
+
+|Property|Value|
+|--------|-----|
+|Description|Set user status for ADC Suggestions|
+|DisplayName||
+|Format|None|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|autocaptureuserstatus|
+|MaxValue|2147483647|
+|MinValue|-2147483648|
+|RequiredLevel|SystemRequired|
+|Type|Integer|
 
 
 ### <a name="BKMK_AutoCreateContactOnPromote"></a> AutoCreateContactOnPromote
@@ -601,6 +618,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |1|Email messages in response to Dynamics 365 email|
 |2|Email messages from Dynamics 365 Leads, Contacts and Accounts|
 |3|Email messages from Dynamics 365 records that are email enabled|
+|4|No email messages|
 
 
 
@@ -686,6 +704,29 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |Type|Boolean|
 
 #### IsDuplicateDetectionEnabledWhenGoingOnline Options
+
+|Value|Label|
+|-----|-----|
+|1|Yes|
+|0|No|
+
+**DefaultValue**: False
+
+
+
+### <a name="BKMK_IsEmailConversationViewEnabled"></a> IsEmailConversationViewEnabled
+
+|Property|Value|
+|--------|-----|
+|Description|Enable or disable email conversation view on timeline wall selection.|
+|DisplayName||
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|isemailconversationviewenabled|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### IsEmailConversationViewEnabled Options
 
 |Value|Label|
 |-----|-----|

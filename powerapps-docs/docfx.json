@@ -38,10 +38,11 @@
       "contributors_to_exclude": [
         "buck1ey",
         "bishalgoswami",
-        "openpublishingbuild",
-        "sudeepku",
-        "v-thepet",
-        "PRMerger10"
+        "kathleenmcgrath",
+        "marycc",
+        "tinaburden",
+        "almostdunh",
+        "AshleyWoodruff"
       ],
       "breadcrumb_path": "breadcrumb/toc.yml",
       "extendBreadcrumb": true,

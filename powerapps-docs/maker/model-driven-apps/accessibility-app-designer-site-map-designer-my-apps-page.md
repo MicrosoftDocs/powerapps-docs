@@ -21,7 +21,7 @@ search.app:
 
 # Accessibility in PowerApps app designer, site map designer, and My Apps page
 
-Microsoft is committed to making its products and services easier for everyone. More information: [Microsoft accessibility](http://www.microsoft.com/enable/default.aspx)  
+Microsoft is committed to making its products and services easier for everyone. More information: [Microsoft accessibility](https://www.microsoft.com/enable/default.aspx)  
  
 This topic describes the accessibility features available with model-driven apps.  
   
@@ -96,11 +96,11 @@ PowerApps offers keyboard shortcuts to address issues faced by people with limit
  For accessibility information about your browser, visit the following websites:  
   
   
--   [Windows accessibility features](http://www.microsoft.com/enable/products/ie9/default.aspx)  
+-   [Windows accessibility features](https://www.microsoft.com/enable/products/ie9/default.aspx)  
   
--   [Firefox accessibility features](http://support.mozilla.org/kb/accessibility-features-firefox-make-firefox-and-we?redirectlocale=en-US&redirectslug=accessibility)  
+-   [Firefox accessibility features](https://support.mozilla.org/kb/accessibility-features-firefox-make-firefox-and-we?redirectlocale=en-US&redirectslug=accessibility)  
   
--   [Safari accessibility features](http://www.apple.com/accessibility/)  
+-   [Safari accessibility features](https://www.apple.com/accessibility/)  
   
 -   [Google Chrome accessibility technical documentation](https://sites.google.com/a/chromium.org/dev/developers/design-documents/accessibility)
 

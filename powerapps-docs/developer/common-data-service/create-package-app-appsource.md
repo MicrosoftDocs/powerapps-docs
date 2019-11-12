@@ -44,7 +44,7 @@ A package lets you bundle and deploy multiple files related to your app at once.
 
     ```xml
     <?xml version="1.0" encoding="utf-8"?>
-    <Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types">
+    <Types xmlns="https://schemas.openxmlformats.org/package/2006/content-types">
       <Default Extension="xml" ContentType="application/octet-stream" />
       <Default Extension="xaml" ContentType="application/octet-stream" />
       <Default Extension="dll" ContentType="application/octet-stream" />
@@ -95,7 +95,7 @@ Create an *input.xml* file that provides information about your package and the 
   <StartDate>12/01/2017</StartDate>
   <EndDate>01/01/2021</EndDate>
   <SupportedCountries>US,CA</SupportedCountries>
-  <LearnMoreLink>http://www.microsoft.com</LearnMoreLink>
+  <LearnMoreLink>https://www.microsoft.com</LearnMoreLink>
   <Locales>
     <PackageLocale Code="1033" IsDefault="true">
       <Logo>logo32x32.png</Logo>

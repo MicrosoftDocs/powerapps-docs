@@ -17,7 +17,7 @@ search.app:
 ---
 # Subscribe to SDK assembly updates using NuGet
 
-.NET SDK assemblies and some command-line tools are available through a software distribution website called [nuget.org](http://www.nuget.org). Use of NuGet  packages in your application project enables you to keep your project up-to-date with the latest releases of the SDK assemblies and tools. Visual Studio has supported this capability since version 2010 and there is even a standalone NuGet  client for those developers that don’t develop in Visual Studio. Another advantage of using NuGet  packages in your projects is that assembly references and dependencies are automatically taken care of for you.  
+.NET SDK assemblies and some command-line tools are available through a software distribution website called [nuget.org](https://www.nuget.org). Use of NuGet  packages in your application project enables you to keep your project up-to-date with the latest releases of the SDK assemblies and tools. Visual Studio has supported this capability since version 2010 and there is even a standalone NuGet  client for those developers that don’t develop in Visual Studio. Another advantage of using NuGet  packages in your projects is that assembly references and dependencies are automatically taken care of for you.  
   
 <a name="BKMK_GetNuGetPackages"></a>
 
@@ -43,7 +43,7 @@ The NuGet SDK are found under the [crmsdk](https://www.nuget.org/profiles/crmsdk
 |[Microsoft.CrmSdk.XrmTooling.WpfControls](https://www.nuget.org/packages/Microsoft.CrmSdk.XrmTooling.WpfControls/)|Contains the Microsoft.Xrm.Tooling.CrmConnectControl.dll, Microsoft.Xrm.Tooling.Ui.Styles.dll, and Microsoft.Xrm.Tooling.WebResourceUtility.dll assemblies|
 
 ## How to install a package in your project  
- For information about installing NuGet  packages into your project, see [Managing NuGet Packages Using the Dialog](http://docs.nuget.org/docs/start-here/managing-nuget-packages-using-the-dialog).  
+ For information about installing NuGet  packages into your project, see [Managing NuGet Packages Using the Dialog](https://docs.nuget.org/docs/start-here/managing-nuget-packages-using-the-dialog).  
 
 ## Download Tools from Nuget
 
@@ -51,4 +51,4 @@ You can download tools used in development from NuGet using the  powershell scri
   
 ### See also  
  [NuGet Documentation](/nuget/)   
- [Installing NuGet](http://docs.nuget.org/docs/start-here/installing-nuget)
+ [Installing NuGet](https://docs.nuget.org/docs/start-here/installing-nuget)

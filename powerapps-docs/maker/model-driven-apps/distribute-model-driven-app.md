@@ -33,7 +33,7 @@ Model-driven apps are distributed as solution components. After you have created
 ## Add an app to a solution
 In order to distribute your app, you create a solution so the app can be packaged for export.
 
-1. Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1. Sign in to [PowerApps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
 2. Select **Solutions** and then select **New solution**.
 3. Complete the fields on the **New Solution** page, and then select **Save**. More information: [Create a solution](../common-data-service/create-solution.md)
@@ -61,7 +61,7 @@ To distribute your app so it can be imported into other environment or made avai
 ## Import a solution  
 When you receive a solution zip file which contains the app that you want to import, open the solutions component page and import the solution. When the solution has been successfully imported, the app will be available in your environment.
 
-1. Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1. Sign in to [PowerApps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
 2. Select **Solutions** and then on the toolbar select **Import**.
 3. Browse to the file you want to import, and then choose **Next**.

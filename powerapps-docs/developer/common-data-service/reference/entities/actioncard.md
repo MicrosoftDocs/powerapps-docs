@@ -1,7 +1,7 @@
 ---
 title: "ActionCard Entity Reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the ActionCard entity."
-ms.date: 04/01/2019
+description: "Includes schema information and supported messages for the ActionCard entity in Common Data Service."
+ms.date: 11/07/2019
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -12,7 +12,6 @@ search.audienceType:
   - developer
 search.app: 
   - PowerApps
-  - D365CE
 ---
 # ActionCard Entity Reference
 
@@ -62,6 +61,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 - [OwnerId](#BKMK_OwnerId)
 - [OwnerIdType](#BKMK_OwnerIdType)
 - [ParentRegardingObjectId](#BKMK_ParentRegardingObjectId)
+- [ParentRegardingObjectIdData](#BKMK_ParentRegardingObjectIdData)
 - [ParentRegardingObjectTypeCode](#BKMK_ParentRegardingObjectTypeCode)
 - [Priority](#BKMK_Priority)
 - [RecordId](#BKMK_RecordId)
@@ -242,6 +242,22 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Targets||
 |Type|Lookup|
+
+
+### <a name="BKMK_ParentRegardingObjectIdData"></a> ParentRegardingObjectIdData
+
+|Property|Value|
+|--------|-----|
+|Description|Json formatted string for parent regarding object.|
+|DisplayName|ParentRegardingObjectIdData|
+|Format|TextArea|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|parentregardingobjectiddata|
+|MaxLength|8192|
+|RequiredLevel|None|
+|Type|Memo|
 
 
 ### <a name="BKMK_ParentRegardingObjectTypeCode"></a> ParentRegardingObjectTypeCode
