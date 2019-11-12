@@ -1192,6 +1192,10 @@
           href: ./portals/configure/entity-forms.md
         - name: Work with entity lists
           href: ./portals/configure/entity-lists.md
+        - name: Manage websites
+          href: ./portals/configure/websites.md
+        - name:  Create and manage website bindings
+          href: ./portals/configure/website-bindings.md
         - name: Work with web forms
           items:
             - name: Define web form properties
@@ -1260,6 +1264,8 @@
                   href: ./portals/liquid/render-site-header-primary-navigation.md
         - name: OAuth 2.0 implicit grant flow
           href: ./portals/oauth-implicit-grant-flow.md
+        - name: Manage webpages
+          href: ./portals/configure/web-page.md
     - name: User management and security in portal
       items:
         - name: Configure contacts
