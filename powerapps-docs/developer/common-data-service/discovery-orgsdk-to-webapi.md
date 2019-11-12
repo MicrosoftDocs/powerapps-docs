@@ -21,7 +21,8 @@ search.app:
 The Discovery Service APIs can be used by your application to discover business organization instances that the application user has access to. If your application currently uses the .NET API and the SOAP enpoint to discover organization instances, you can follow the steps in this document and convert your application to use the modern Web API and REST endpoint.
 A detailed description of using the Discovery Service with the Web API can be found on the [Discovery Service Web API](/powerapps/developer/common-data-service/webapi/discover-url-organization-web-api) page.
 
-When accessing the Discovery Service, it is recommended that your application use the global Discovery Service endpoint (https://globaldisco.crm.dynamics.com) and not the regional Discovery Service endpoint (which is deprecated).
+When accessing the Discovery Service, it is strongly recommended that your application use the global Discovery Service endpoint (https://globaldisco.crm.dynamics.com) and not the regional Discovery Service endpoint (which is deprecated). The global Discovery Service is only available when using the Web API.
+
 The rest of this document describes the changes that may be needed to call the Discovery Service using the Web API.
 
 ## Authentication
