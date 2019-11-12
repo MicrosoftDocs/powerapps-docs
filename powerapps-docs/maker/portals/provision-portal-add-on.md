@@ -64,7 +64,7 @@ To provision a portal:
 11.  In the **Dynamics 365 Instance** drop-down list, select the instance you want to link the portal to. This requires System Administrator or System Customizer role in the instance you pick to select it.
 
 12.  In the **Select Portal Language** drop-down list, select the default language for your portal. The available languages will depend on the languages that are installed in your instance. 
-
+    
     > [!NOTE]
     > Sample data is only provided in one language, so choosing a default language will also decide how the sample data is translated. Arabic and Hebrew are not supported and will not appear in the list.
 
