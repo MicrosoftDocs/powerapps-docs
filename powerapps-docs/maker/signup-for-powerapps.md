@@ -20,7 +20,7 @@ You can explore all PowerApps capabilities for free by signing up for a PowerApp
 - Extend the capabilities of Office 365 (SharePoint Online, Teams, Excel and more).
 - Create and run canvas apps that connect to Common Data Service and a wide range of more than 200 other data sources, including premium connectors and on-premises data.
 - Create and run model-driven apps.
-- Create automated workflows with Microsoft Flow.
+- Create automated workflows with Power Automate.
 - Create and manage environments and Common Data Service databases.
 
 If you have a PowerApps Plan 1 license or a license through Office 365, you already have access to some of these features; the trial license temporarily expands your access to include all features in the previous list. To find out what capabilities each type of license offers, see the [pricing page](https://powerapps.microsoft.com/pricing/).

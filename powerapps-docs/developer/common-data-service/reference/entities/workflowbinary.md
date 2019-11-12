@@ -17,7 +17,7 @@ search.app:
 
 
 
-**Added by**: Microsoft Flow Extensions package Solution
+**Added by**: Power Automate Extensions package Solution
 
 
 ## Messages

@@ -28,7 +28,10 @@ search.app:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-Use custom help panes and guided tasks to give your Unified Interface application a custom in-product help experience that is tailored to your organization. Use custom help panes to provide entity, form, and language-specific help and guidance that includes rich text, content links, images, and video links. Custom help panes replace the previous learning path guided learning feature used with legacy web client apps.
+Use custom help panes and guided tasks to give your Unified Interface application a custom in-product help experience that is tailored to your organization. Use custom help panes to provide entity, form, and language-specific help and guidance that includes rich text, content links, images, and video links. 
+
+> [!IMPORTANT]
+> Custom help panes replace the previous learning path guided learning feature used with legacy web client apps.
 
 ## Custom help panes and learning path
 The new guided help implementation of custom help panes differs from the previous learning path guided help feature. Both features let you create custom help for your application. However, custom help panes are optimized for the most common guided help scenarios.   
