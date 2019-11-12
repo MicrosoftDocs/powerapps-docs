@@ -1,5 +1,5 @@
 ---
-title: "Use a modern Web API to discover organization instances (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Modify existing code to use the Discovery Service Web API endpoint (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Update your application code to make Discovery Service calls using a modern RESTful Web API."
 ms.custom: ""
 ms.date: 11/10/2019
@@ -16,7 +16,7 @@ search.app:
   - D365CE
 ---
 
-# Use a modern Web API to discover organization instances
+# Modify existing code to use the Discovery Service Web API endpoint
 
 The Discovery Service APIs can be used by your application to discover business organization instances that the application user has access to. If your application currently uses the .NET API and the SOAP enpoint to discover organization instances, you can follow the steps in this document and convert your application to use the modern Web API and REST endpoint.
 A detailed description of using the Discovery Service with the Web API can be found on the [Discovery Service Web API](/powerapps/developer/common-data-service/webapi/discover-url-organization-web-api) page.
