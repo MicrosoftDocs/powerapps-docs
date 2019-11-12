@@ -14,7 +14,7 @@ search.app:
   - D365CE
 ---
 
-# FAQs for admin
+# FAQs for timeline control
 
 ## Records could not be loaded because of unexpected error
 
