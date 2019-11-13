@@ -148,7 +148,7 @@ When you move your Common Data Service environment from one geolocation or tenan
 
 To associate your portal again to relevant organizations:
 
-1. Reset your existing portal host from the existing geolocation or tenant by following the steps in [Reset a portal](reset-portal.md). This will delete your associated portal resources and the portal URL will not be accessible after the operation completes.
+1. Reset your existing portal host from the existing geolocation or tenant by following the steps in [Reset a portal](admin/reset-portal.md). This will delete your associated portal resources and the portal URL will not be accessible after the operation completes.
 
 2. Once your existing portal is reset, go to the new tenant (or to the new geolocation of the existing tenant) and provision a portal available there.
 
@@ -239,7 +239,7 @@ This issue occurs when the authentication connection between Dynamic 365 organiz
 4. Select **On** from the **Portal State** list.
 5. Select **Update**. The portal restarts and will be able to make authentication connection.
 
-However, in certain situations especially if the organization ID has changed after the restore operation (or if you reprovisioned the organization), these mitigation steps will not work. In those situations, you can reset and reprovision the portal against the same instance. For information on how to reset a portal, see [Reset a portal](reset-portal.md).
+However, in certain situations especially if the organization ID has changed after the restore operation (or if you reprovisioned the organization), these mitigation steps will not work. In those situations, you can reset and reprovision the portal against the same instance. For information on how to reset a portal, see [Reset a portal](admin/reset-portal.md).
 
 #### Request to Common Data Service environment has timed out
 
@@ -347,7 +347,7 @@ The portal checker tool will check if login tracking is enabled for your portal 
 
 #### Header output cache is disabled
 
-Disabling header output cache on your portal can lead to performance issues in your portal during high load. More details around this functionality can be found at: [Enable header and footer output caching on a portal](enable-header-footer-output-caching.md)
+Disabling header output cache on your portal can lead to performance issues in your portal during high load. More details around this functionality can be found at: [Enable header and footer output caching on a portal](configure/enable-header-footer-output-caching.md)
 
 The portal checker tool will check if header output cache is disabled on your portal and will show a failed check if it is disabled. To enable it:
 
@@ -359,7 +359,7 @@ The portal checker tool will check if header output cache is disabled on your po
 
 #### Footer output cache is disabled
 
-Disabling footer output cache on your portal can lead to performance issues in your portal during high load. More details around this functionality can be found at: [Enable header and footer output caching on a portal](enable-header-footer-output-caching.md)
+Disabling footer output cache on your portal can lead to performance issues in your portal during high load. More details around this functionality can be found at: [Enable header and footer output caching on a portal](configure/enable-header-footer-output-caching.md)
 
 The portal checker tool will check if footer output cache is disabled on your portal and will show a failed check if it is disabled. To enable it:
 
