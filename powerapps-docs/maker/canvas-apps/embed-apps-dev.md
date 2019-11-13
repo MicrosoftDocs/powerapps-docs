@@ -48,7 +48,7 @@ The only thing you have to do is substitute the ID of your app for [AppID] in th
 * **tenantid** - is an optional parameter to support guest access and determines which tenant to open the app from. 
 * **screenColor** - is used to provide a better app loading experience for your users. This parameter is in the format [RGBA (red value, green value, blue value, alpha)](../canvas-apps/functions/function-colors.md) and controls the screen color while the app loads. It is best to set it to the same color as your app's icon.
 * **source** - does not affect the app, but we suggest you add a descriptive name to refer to the source of the embedding.
-* Lastly, you can add any custom parameters you want using the [Param() function](../canvas-apps/functions/function-param.md), and those values can be consumed by your app. They are added to the end of the URI, such as `[AppID]&amp;param1=value1`. These parameters are read only during launch of the app. If you need to change them, you must relaunch the app. Note that only the first item after [appid] should have a "?"; after that use the "&" as illustrated here. 
+* Lastly, you can add any custom parameters you want using the [Param() function](../canvas-apps/functions/function-param.md), and those values can be consumed by your app. They are added to the end of the URI, such as `[AppID]?param1=value1&param2=value2`. These parameters are read only during launch of the app. If you need to change them, you must relaunch the app. Note that only the first item after [appid] should have a "?"; after that use the "&" as illustrated here. 
 
 ### Get the App ID
 The app ID is available on powerapps.com. For the app you want to embed:
