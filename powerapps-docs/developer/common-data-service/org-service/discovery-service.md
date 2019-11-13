@@ -18,7 +18,7 @@ search.app:
 # Use the Discovery Service with the SDK Assemblies
 
 > [!IMPORTANT]
-> Effective Decempber 1, 2019, the Discovery Service that is accessible via the 2011 SOAP endpoint has been deprecated along with the regional Discovery Web API endpoints. More information: [Important changes (deprecations)](/power-platform/important-changes-coming/). See [Discovery Web API](/powerapps/developer/common-data-service/webapi/discover-url-organization-web-api) and [Modify existing code to use Discovery Web API](../discovery-orgsdk-to-webapi.md) for migration details.
+> Effective December 1, 2019, the Discovery Service that is accessible via the 2011 SOAP endpoint has been deprecated along with the regional Discovery Web API endpoints. More information: [Important changes (deprecations)](/power-platform/important-changes-coming/). See [Discovery Web API](/powerapps/developer/common-data-service/webapi/discover-url-organization-web-api) and [Modify existing code to use Discovery Web API](../discovery-orgsdk-to-webapi.md) for migration details.
 
 [!INCLUDE [cc-discovery-service-description](../includes/cc-discovery-service-description.md)]
 
