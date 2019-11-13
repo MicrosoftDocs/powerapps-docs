@@ -16,7 +16,12 @@ search.app:
 
 # Set up timeline section (control)
 
-The activities in the Timeline that you use to keep track of all your communications with a customer or contact can be customized as per your business or organization requirements.
+The activities in the Timeline that you use to keep track of all your communications with a customer or contact can be customized as per your business or organization requirements. 
+
+  > [!div class="mx-imgBorder"]
+  > ![Timeline view of activities in PowerApps](../../user/media/TimelineViewOfActivity.png "Timeline view of activities in PowerApps")  
+
+To learn more, see [Add an appointment, email, phone call, note, or task activity to the timeline](../../user/add-activities.md).
 
 The customization is categorized into the following areas:
 
@@ -28,23 +33,28 @@ The customization is categorized into the following areas:
 
 The modules are Activities, Posts, and Notes. As a customizer, you can choose which modules you want to show to the users as per your business requirements.
 
-1.	Sign in to the Common Data Service platform.
+1.	Sign in to your `https://<YourOrgURL>.dynamics.com/apps` environment.
 
-2.	Select **Settings** > **Customization** > **Customize the System**. The solution explorer page opens in a new browser window. 
+2. Open a model-driven app, and then on the command bar select **Settings** ![Settings](../model-driven-apps/media/powerapps-gear.png) > **Advanced  Settings**.
 
-3.	 Expand **Entities** under **Components** in the default solution pane.
+3.	Go to **Settings** > **Customization** > **Customize the System**. The solution explorer page opens in a new browser window. 
 
-4.	Select an entity and select **Forms**. For example, select the Account entity.
+4.	 Expand **Entities** under **Components** in the default solution pane.
 
-5.	Select the **Account** record that is of **Main** form. The **Account** form opens in a new browser window.
+5.	Select an entity and select **Forms**. For example, select the Account entity.
 
-6.	Double-click field the **Social Pane** section. The **Activities Tab Properties** dialog is displayed.
+6.	Select the **Account** record that is of **Main** form. The **Account** form opens in a new browser window.
 
-7.	Select **Show selected** option for the **Show these modules** field in the **Filter by** container.
+7.	Double-click the field in the **Social Pane** section. The **Activities Tab Properties** dialog is displayed.
 
-8.	Select the modules you want to display to the users.
+    > [!div class=mx-imgBorder] 
+    > ![Double-click the field in the social pane](media/social-pane-field.png "Double-click the field in the social pane")   
 
-9.	Specify the following in the **Additional Options** container.
+8.	Select **Show selected** option for the **Show these modules** field in the **Filter by** container.
+
+9.	Select the modules you want to display to the users.
+
+10.	Specify the following in the **Additional Options** container.
 
 
     | Field/option | Value |
@@ -58,33 +68,38 @@ The modules are Activities, Posts, and Notes. As a customizer, you can choose wh
     > [!div class=mx-imgBorder] 
     > ![Set up timeline module](media/timeline-module.png "set up timeline module")
 
-10.	Select **OK**, and then select **Save**.
+11.	Select **OK**, and then select **Save**.
 
-11.	Select **Publish** to publish the customizations.
+12.	Select **Publish** to publish the customizations.
 
 ## Customize activity
 
 As a customizer, you can choose for which entities you want to show the activities to the users as per your business requirements.
 
-1.	Sign in to the Common Data Service platform.
+1.	Sign in to your `https://<YourOrgURL>.dynamics.com/apps` environment.
 
-2.	Select **Settings** > **Customization** > **Customize the System**. The solution explorer page opens in a new browser window. 
+2. Open a model-driven app, and then on the command bar select **Settings** ![Settings](../model-driven-apps/media/powerapps-gear.png) > **Advanced  Settings**.
 
-3.	 Expand **Entities** under **Components** in the default solution pane.
+3.	Go to **Settings** > **Customization** > **Customize the System**. The solution explorer page opens in a new browser window.  
 
-4.	Select an entity and select **Forms**. For example, select the Account entity.
+4.	 Expand **Entities** under **Components** in the default solution pane.
 
-5.	Select the **Account** record that is of **Main** form. The **Account** form opens in a new browser window.
+5.	Select an entity and select **Forms**. For example, select the Account entity.
 
-6.	Double-click field the **Social Pane** section. The **Activities Tab Properties** dialog is displayed.
+6.	Select the **Account** record that is of **Main** form. The **Account** form opens in a new browser window.
 
-7.	Select **Show selected** option for the **Show these activities** field in the **Filter by** container.
+7.	Double-click the field in the **Social Pane** section. The **Activities Tab Properties** dialog is displayed.
 
-8.	Select the activities you want to display to the users.
+    > [!div class=mx-imgBorder] 
+    > ![Double-click the field in the social pane](media/social-pane-field.png "Double-click the field in the social pane") 
 
-9.	Select an option from the list for the **Sort timeline by** option in the **Data** container. For example, select the **Last Updated** option.
+8.	Select **Show selected** option for the **Show these activities** field in the **Filter by** container.
 
-10.	Specify the following in the **Additional Options** container.
+9.	Select the activities you want to display to the users.
+
+10.	Select an option from the list for the **Sort timeline by** option in the **Data** container. For example, select the **Last Updated** option.
+
+11.	Specify the following in the **Additional Options** container.
     
     | Field/option | Value |
     |------------------------------------------|--------------------------------------------------------------|
@@ -141,22 +156,24 @@ When you’ve custom activities that you want to show for users using mobile, th
 
 ### Enable for mobile 
 
-1.	Sign in to the Common Data Service platform.
+1.	Sign in to your `https://<YourOrgURL>.dynamics.com/apps` environment.
 
-2.	Select **Settings** > **Customization** > **Customize the System**. The solution explorer page opens in a new browser window. 
+2. Open a model-driven app, and then on the command bar select **Settings** ![Settings](../model-driven-apps/media/powerapps-gear.png) > **Advanced  Settings**.
 
-3.	 Expand **Entities** under **Components** in the default solution pane.
+3.	Go to **Settings** > **Customization** > **Customize the System**. The solution explorer page opens in a new browser window.  
 
-4.	Select an entity form the list. For example, Account.
+4.	 Expand **Entities** under **Components** in the default solution pane.
 
-5.	Scroll down to Outlook & Mobile section, and select the check box for the following options:
+5.	Select an entity form the list. For example, Account.
+
+6.	Scroll down to Outlook & Mobile section, and select the check box for the following options:
 
     -	Enable for mobile (according to your requirements)
     -	Read-only in mobile (according to your requirements)
 
-6.	Select **Save**.
+7.	Select **Save**.
 
-7.	Select **Publish** to publish the customizations.
+8.	Select **Publish** to publish the customizations.
 
 ### Select the modules to display
 

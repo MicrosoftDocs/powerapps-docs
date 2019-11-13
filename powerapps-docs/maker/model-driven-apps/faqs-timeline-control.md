@@ -18,7 +18,7 @@ search.app:
 
 ## Records could not be loaded because of unexpected error
 
-The timeline section retrieves data about and displays in the form cards. By default, the timeline retrieves data for the eight out-of-the-box entities, which are:
+The timeline section retrieves data about and displays in the form cards. By default, the timeline retrieves data for the 10 standard activity entities, which are:
 
 -	Email
 -	Task
@@ -34,14 +34,14 @@ As an administrator when you perform the following procedure, users will see an 
 **Procedure**
 -	Create any additional custom activities
 -	Enable custom activities for mobile
--	Select a **Card From** for all the custom activities 
+-	Select a **Card Form** for all the custom activities 
 
 **Error:** Records could not be loaded because of an unexpected error.
 
    > [!div class=mx-imgBorder] 
    > ![Records could not be loaded because of an unexpected error.](media/timeline-error1.png "Records could not be loaded because of an unexpected error.")
 
-This error is caused as the number of entities for the data retrieval has exceeded the maximum limit of 10.
+This error is caused as the number of activity entities for the data retrieval has exceeded the maximum limit of 10.
 
    > [!div class=mx-imgBorder] 
    > ![Number of link entities in query exceeded maximum limit](media/timeline-error2.png "[Number of link entities in query exceeded maximum limit")
@@ -50,25 +50,30 @@ This error is caused as the number of entities for the data retrieval has exceed
 
 To work around the issue, you must reduce the number of entities to 10 or less. Follow the steps to reduce the entities to 10 or less.
 
-1.	Sign in to the Common Data Service platform.
+1.	Sign in to your `https://<YourOrgURL>.dynamics.com/apps` environment.
 
-2.	Select **Settings** > **Customization** > **Customize the System**. The solution explorer page opens in a new browser window. 
+2. Open a model-driven app, and then on the command bar select **Settings** ![Settings](../model-driven-apps/media/powerapps-gear.png) > **Advanced  Settings**.
 
-3.	 Expand **Entities** under **Components** in the default solution pane.
+3.	Go to **Settings** > **Customization** > **Customize the System**. The solution explorer page opens in a new browser window.
 
-4.	Select an entity and select **Forms**. For example, select the Account entity.
+4.	 Expand **Entities** under **Components** in the default solution pane.
 
-5.	Select the **Account** record that is of **Main** form. The **Account** form opens in a new browser window.
+5.	Select an entity and select **Forms**. For example, select the Account entity.
 
-6.	Double-click field the **Social Pane** section. The **Activities Tab Properties** dialog is displayed.
+6.	Select the **Account** record that is of **Main** form. The **Account** form opens in a new browser window.
 
-7.	Select **Show selected** option for the **Show these activities** field in the **Filter by** container.
+7.	Double-click the field in the **Social Pane** section. The **Activities Tab Properties** dialog is displayed.
 
-8.	Select the activities you want to display to the users.
+    > [!div class=mx-imgBorder] 
+    > ![Double-click the field in the social pane](media/social-pane-field.png "Double-click the field in the social pane") 
 
-9.	Select **OK**, and then select **Save**.
+8.	Select **Show selected** option for the **Show these activities** field in the **Filter by** container.
 
-10.	Select **Publish** to publish the customizations.
+9.	Select the activities you want to display to the users.
+
+10.	Select **OK**, and then select **Save**.
+
+11.	Select **Publish** to publish the customizations.
 
 
 ## Assign or delete button don’t work in the timeline
