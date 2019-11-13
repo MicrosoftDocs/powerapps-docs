@@ -6,7 +6,7 @@ manager: shujoshi
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/12/2019
+ms.date: 11/14/2019
 ms.author: shjais
 ms.reviewer:
 ---
@@ -26,7 +26,7 @@ However, it is also possible to control this by URL path prefix (see the descrip
 Websites are created when you create a new portal. However, advanced website management can be performed from the Portal Management app. 
 
 > [!WARNING]
-> When deleting a website record, the portal entities related to the website (web pages, web files, etc.) will also be deleted. This is generally the desired behavior, as it means an entire website and all its related data can be removed from a organization in a single operation.
+> When you delete a website record, data related to the website record in portal metadata entities, such as webpages and web links, is also deleted. This is generally the desired behavior, as it means an entire website and all its related data can be removed from an organization in a single operation.
 
 1. Open the [Portal Management app](configure-portal.md).
 
