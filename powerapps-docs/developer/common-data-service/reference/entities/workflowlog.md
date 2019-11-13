@@ -184,7 +184,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 ### <a name="BKMK_ErrorText"></a> ErrorText
 
-**Added by**: Microsoft Flow Extensions package Solution
+**Added by**: Power Automate Extensions package Solution
 
 |Property|Value|
 |--------|-----|
@@ -218,7 +218,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 ### <a name="BKMK_IterationCount"></a> IterationCount
 
-**Added by**: Microsoft Flow Extensions package Solution
+**Added by**: Power Automate Extensions package Solution
 
 |Property|Value|
 |--------|-----|
@@ -325,7 +325,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 ### <a name="BKMK_RepetitionCount"></a> RepetitionCount
 
-**Added by**: Microsoft Flow Extensions package Solution
+**Added by**: Power Automate Extensions package Solution
 
 |Property|Value|
 |--------|-----|
@@ -343,7 +343,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 ### <a name="BKMK_RepetitionId"></a> RepetitionId
 
-**Added by**: Microsoft Flow Extensions package Solution
+**Added by**: Power Automate Extensions package Solution
 
 |Property|Value|
 |--------|-----|
@@ -921,13 +921,13 @@ See systemuser Entity [lk_workflowlog_modifiedonbehalfby](systemuser.md#BKMK_lk_
 
 ### <a name="BKMK_lk_workflowlog_flowsession_childworkflow"></a> lk_workflowlog_flowsession_childworkflow
 
-**Added by**: Microsoft Flow Extensions package Solution
+**Added by**: Power Automate Extensions package Solution
 
 See flowsession Entity [lk_workflowlog_flowsession_childworkflow](flowsession.md#BKMK_lk_workflowlog_flowsession_childworkflow) One-To-Many relationship.
 
 ### <a name="BKMK_lk_workflowlog_flowsessions"></a> lk_workflowlog_flowsessions
 
-**Added by**: Microsoft Flow Extensions package Solution
+**Added by**: Power Automate Extensions package Solution
 
 See flowsession Entity [lk_workflowlog_flowsessions](flowsession.md#BKMK_lk_workflowlog_flowsessions) One-To-Many relationship.
 
