@@ -18,7 +18,7 @@ search.app:
 
 # Modify existing code to use the Discovery Service Web API endpoint
 
-The Discovery Service APIs can be used by your application to discover business organization instances that the application user has access to. If your application currently uses the .NET API and the SOAP enpoint to discover organization instances, you can follow the steps in this document and convert your application to use the modern Web API and REST endpoint.
+The Discovery Service APIs can be used by your application to discover business organization instances that the application user has access to. If your application currently uses the Common Data Service Organization Service API and the SOAP endpoint to discover organization instances, you can follow the steps in this document and convert your application to use the modern Web API and REST endpoint.
 A detailed description of using the Discovery Service with the Web API can be found on the [Discovery Service Web API](/powerapps/developer/common-data-service/webapi/discover-url-organization-web-api) page.
 
 When accessing the Discovery Service, it is strongly recommended that your application use the global Discovery Service endpoint (https://globaldisco.crm.dynamics.com) and not the regional Discovery Service endpoint (which is deprecated). The global Discovery Service is only available when using the Web API.
@@ -30,7 +30,7 @@ Accessing the Discovery Service using the Web API requires authentication with a
 If your application code uses WS-Trust SAML tokens for authentication, you need to change your application code to acquire an OAuth 2.0 token from Azure Active Directory (AD), and then add that token in the Authorization header of the Discovery Service Web API calls. More information: [Use OAuth with Common Data Service](authenticate-oauth.md).
 
 ## OData API calls
-The example HTTP requests shown below are supported by the Discovery Service Web API. These examples use the Instances API to return the same organization data as the <xref:Microsoft.Xrm.Sdk.Discovery.RetrieveOrganizationsRequest> and <xref:Microsoft.Xrm.Sdk.Discovery.RetrieveOrganizationRequest> message requests of the .NET API.
+The example HTTP requests shown below are supported by the Discovery Service Web API. These examples use the Instances API to return the same organization data as the <xref:Microsoft.Xrm.Sdk.Discovery.RetrieveOrganizationsRequest> and <xref:Microsoft.Xrm.Sdk.Discovery.RetrieveOrganizationRequest> message requests of the Organization Service API.
 
 -    Get all instances for the user in all regions.
 ```http  
@@ -84,7 +84,7 @@ Response
 ## Mapping of fields
 The table shown below shows the field mapping in the responses returned from the Discovery Service when using the two APIs. These are applicable to all above example calls.
 
-Response field (SOAP, .NET API) |	Response field (REST, Web API)
+Response field (SOAP endpoint) |	Response field (REST endpoint)
 ------------------------------------|---------------------------------
 Endpoints[WebApplication] |	Url
 Endpoints[OrganizationService]	| {ApiUrl}/XRMServices/2011/Organization.svc
@@ -97,7 +97,7 @@ UniqueName|UniqueName
 UrlName|UrlName
 
 ## Deprecated API call
-The .NET API message GetUserIdByExternalId is not supported in the Web API.
+The Organization Service API message GetUserIdByExternalId is not supported in the Web API.
 
 ## See Also
 [Discovery Services](/powerapps/developer/common-data-service/discovery-service)
