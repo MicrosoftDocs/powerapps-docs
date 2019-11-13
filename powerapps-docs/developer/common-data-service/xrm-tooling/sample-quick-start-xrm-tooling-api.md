@@ -29,9 +29,9 @@ Download the sample: [Work with XRM Tooling API](https://github.com/microsoft/Po
 
 ## How to run the sample
 
-1. Download and extract the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/Xrm%20Tooling/Quick%20start%20for%20XRM%20Tooling).  
-1. Open the `Quick start for XRM Tooling\C#\QuickStartXRMToolingWPFClient.sln`  file in Visual Studio.  
-1. Press **F5** to compile and run the program.  
+1. Download and extract the sample so that you have a copy locally.  
+2. Open the `Quick start for XRM Tooling\C#\QuickStartXRMToolingWPFClient.sln`  file in Visual Studio.  
+3. Press **F5** to compile and run the program.  
 
 
 ## Demonstrates
