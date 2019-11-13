@@ -1,9 +1,9 @@
 ---
 title: "Use the Discovery Service with the SDK Assemblies (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Describes how to use the discovery service with the .NET SDK assemblies." # 115-145 characters including spaces. This abstract displays in the search result.
+description: "Describes how to use the Discovery Service with the .NET SDK assemblies." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
-ms.reviewer: ""
+ms.date: 11/11/2019
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
@@ -18,7 +18,7 @@ search.app:
 # Use the Discovery Service with the SDK Assemblies
 
 > [!IMPORTANT]
-> Effective Decempber 1, 2019, the Discovery service that is accessible via the Organization Service SDK has been deprecated along with the regional Discovery Web API endpoints. More information: [Important changes (deprecations)](/power-platform/important-changes-coming/). See [Discovery Web API](/powerapps/developer/common-data-service/webapi/discover-url-organization-web-api) and [Modify existing code to use Discovery Web API](../discovery-orgsdk-to-webapi.md) for migration details.
+> Effective December 1, 2019, the Discovery Service that is accessible via the 2011 SOAP endpoint has been deprecated along with the regional Discovery Web API endpoints. More information: [Important changes (deprecations)](/power-platform/important-changes-coming/). See [Discovery Web API](/powerapps/developer/common-data-service/webapi/discover-url-organization-web-api) and [Modify existing code to use Discovery Web API](../discovery-orgsdk-to-webapi.md) for migration details.
 
 [!INCLUDE [cc-discovery-service-description](../includes/cc-discovery-service-description.md)]
 
