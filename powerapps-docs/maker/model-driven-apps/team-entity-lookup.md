@@ -23,9 +23,9 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Add the team entity as a lookup option in your app
+# Add an entity as a lookup option in your app
 
-With Unified Interface apps, for the team entity to be available in a lookup it must be added to the app. For example, contact records have the ability to be assigned to a user or a team.  
+With Unified Interface apps, for an entity to be available in a lookup it must be added to the app. For example, contact records have the ability to be assigned to a user or a team.  
 
 > [!div class="mx-imgBorder"] 
 > ![](media/entity-lookup-teams.png "Entity lookup with both users and teams available")
