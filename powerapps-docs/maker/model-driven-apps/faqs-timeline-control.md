@@ -87,3 +87,5 @@ To mitigate the issue, unhide the buttons in the command bar definitions.
 ## See also
 
 [Set up timeline control](set-up-timeline-control.md)
+
+[Timeline in the Customer Service Hub app](https://docs.microsoft.com/dynamics365/customer-service/customer-service-hub-user-guide-basics#timeline)
