@@ -59,11 +59,11 @@ The modules are Activities, Posts, and Notes. As a customizer, you can choose wh
 
     | Field/option | Value |
     |------------------------------------------|--------------------------------------------------------------|
-    | Default Module for Create Experience | Notes <br> Select the module for which you want the default create experience in the timeline. |
-    | Show filter pane | Select the checkbox if you want to show the filter pane for the users. |
+    | Default Module for Create Experience | Select the module for which you want the default create experience in the timeline. <br> The default value is **Notes**.  |
+    | Show filter pane | Select the checkbox if you want to display the filter icon for the users. If you leave the check box empty, then there will be no filters for the users. |
     | Expand filter pane by default | Select the checkbox, by default, if you want to show the filter pane in the expanded mode. |
-    | Sort | Descending <br> Select the default sorting order based on which the records are displayed on the timeline. |
-    | Number of results | 10 <br> The maximum number of records that are displayed on timeline. |
+    | Sort | Select the sorting order based on which the records are displayed on the timeline. The sorting is based on the field you choose for Activities. If a field doesn’t exist for the Post, Notes or activity then the sorting is done based on the **Last Updated** field. <br>The default sort order is **Descending**.  |
+    | Number of results | The maximum number of records that are displayed on the timeline before selecting the **More** option. Each time you select the **More** option, timeline displays the configured number of records. Default value is 10 and you can configure a value ranging from 1 to 50. |
 
     > [!div class=mx-imgBorder] 
     > ![Set up timeline module](media/timeline-module.png "set up timeline module")
@@ -103,7 +103,7 @@ As a customizer, you can choose for which entities you want to show the activiti
     
     | Field/option | Value |
     |------------------------------------------|--------------------------------------------------------------|
-    | Display activity header using | Default format. <br> Possible values are Default format and Field Labels. |
+    | Display activity header using | Default format. <br> Possible values are **Default format** and **Field Labels**. |
     | Create activities using | Quick Create Form <br> Select on how you want the users to create activities. Possible values are **Quick Create Form** and **Main Form**. |
     | Display activities using | Select how you want to display the activities. Possible values are **Default Fields** and **Card Form**.  If you select **Card Form**, then you need to select a card form for the activity.  |
     | Select activity | Email <br> Select an activity from the list.  <br> **Note:** This field appears only when you select **Card Form** for the **Display activities using** field.|
@@ -118,7 +118,25 @@ As a customizer, you can choose for which entities you want to show the activiti
 
 ## Customize field sections
 
-In the timeline section, users see a card for each activity (based on the enabled activities). Each card has the following sections:
+In the timeline section, users see a card for each activity (based on the enabled activities). Each card displays certain fields in the collapsed and expanded mode. For example, see Task activity card in collapsed mode and expanded mode. 
+
+Timeline card collapsed mode:
+
+   > [!div class=mx-imgBorder] 
+   > ![Timeline card in collapsed mode](media/timeline-card-collapsed-nocallout.png "Timeline card in collapsed mode")
+
+Timeline card expanded mode:
+
+   > [!div class=mx-imgBorder] 
+   > ![Timeline card in expanded mode](media/timeline-card-expanded-nocallout.png "Timeline card in expanded mode")
+
+The card form contains sections that you can configure to show the fields that matter to your business.
+
+In the card, if you want to show any fields that are important to your business, you can customize the fields. Also, you can move the fields from one section to another section, such as from the Header section to the Detail section. To learn more, see [Customize the card form](#customize-the-card-form).
+
+### Customize the card form
+
+The card form has the following sections:
 
    | Section annotation | Section name | Display columns |
    |------------------------------|--------------------------------------|---------------------------------------|
@@ -127,7 +145,9 @@ In the timeline section, users see a card for each activity (based on the enable
    | C | Details | Fields 3, 4, and 5 from the single column are displayed to the user. The field 5 is displayed only when the user expands the card. |
    | D | Footer | Four | Footer section is never displayed to the user. |
 
-**Card configuration screen**
+For example, see **Task Card form**.
+
+**Task Card configuration screen**
 
    > [!div class=mx-imgBorder] 
    > ![Timeline card configuration](media/customize-field.png "Timeline card configuration")
@@ -146,9 +166,25 @@ Field **5** from the **Details** section are displayed in the collapsed mode.
    > [!div class=mx-imgBorder] 
    > ![Timeline card in expanded mode](media/timeline-card-expanded.png "Timeline card in expanded mode")
 
-In the activity card, if you want to show any fields that are important to your business, you can customize the fields. Also, you can move the fields from one section to another section, such as from the Header section to the Detail section. 
+To customize the card form, follow these steps:
 
-To learn more, see [Add, configure, move, or delete fields on a form](add-move-or-delete-fields-on-form.md).
+1. Sign in to your `https://<YourOrgURL>.dynamics.com/apps` environment.
+
+2. Open a model-driven app, and then on the command bar select **Settings** ![Settings](../model-driven-apps/media/powerapps-gear.png) > **Advanced  Settings**.
+
+3.	Go to **Settings** > **Customization** > **Customize the System**. The solution explorer page opens in a new browser window.  
+
+4.	 Expand **Entities** under **Components** in the default solution pane.
+
+5.	Select an entity and select **Forms**. For example, select the **Task** entity.
+
+6.	Select the **Task Card form** record from the list. The **Task Card form** opens in a new browser window.
+
+7. Add, move, or delete the fields. To learn more, see [Add, configure, move, or delete fields on a form](add-move-or-delete-fields-on-form.md).
+
+8.	Select **OK**, and then select **Save**.
+
+9.	Select **Publish** to publish the customizations.
 
 ## Enable custom activities in timeline for mobile client
 
