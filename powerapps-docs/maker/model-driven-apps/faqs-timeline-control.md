@@ -16,7 +16,7 @@ search.app:
 
 # FAQs for timeline control
 
-## Records could not be loaded because of unexpected error
+## Why do I receive the message "Records could not be loaded because of unexpected error"?
 
 The timeline section retrieves data about and displays in the form cards. By default, the timeline retrieves data for the 10 standard activity entities, which are:
 
@@ -76,7 +76,7 @@ To work around the issue, you must reduce the number of entities to 10 or less. 
 11.	Select **Publish** to publish the customizations.
 
 
-## Assign or delete button don’t work in the timeline
+## Why I can't assign or delete an activity from the timeline
 
 If you use the **HideCustomActions** rule to hide the buttons, such as **Assign** and **Delete** in the ribbon command bar definition, then those buttons that are present in the Timeline control will not work. The buttons in the command bar is same as in the timeline control and hence, when a user selects the assign or delete button in the timeline control, an error message is displayed.
 
