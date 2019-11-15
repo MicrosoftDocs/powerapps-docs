@@ -223,4 +223,4 @@ Follow the steps 1-8 described in the [Customize modules](#customize-modules) se
 
 [FAQs for timeline control](faqs-timeline-control.md)
 
-[Timeline in the Customer Service Hub app](https://docs.microsoft.com/dynamics365/customer-service/customer-service-hub-user-guide-basics#timeline)
+[Timeline section in the Customer Service Hub app](https://docs.microsoft.com/dynamics365/customer-service/customer-service-hub-user-guide-basics#timeline)
