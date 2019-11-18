@@ -1144,6 +1144,8 @@
           href: ./portals/admin/migrate-portal-configuration.md
         - name: About portal lifecycle
           href: ./portals/admin/portal-lifecycle.md
+        - name: Upgrade a portal
+          href: ./portals/admin/upgrade-portal.md
     - name: Advanced portal configuration
       items:
         - name: Overview
@@ -1192,12 +1194,22 @@
           href: ./portals/configure/place-child-nodes.md
         - name: Behavior and format of the date and time field
           href: ./portals/configure/behavior-format-date-time-field.md
+        - name: View email records in portal timeline
+          href: ./portals/configure/view-email-in-timeline.md
+        - name: Rate a webpage
+          href: ./portals/configure/rate-webpage.md
+        - name: Enable header and footer output caching on a portal
+          href: ./portals/configure/enable-header-footer-output-caching.md
         - name: Add chart on a web page in portal
           href: ./portals/configure/add-chart.md
         - name: Work with entity forms
           href: ./portals/configure/entity-forms.md
         - name: Work with entity lists
           href: ./portals/configure/entity-lists.md
+        - name: Manage websites
+          href: ./portals/configure/websites.md
+        - name:  Create and manage website bindings
+          href: ./portals/configure/website-bindings.md
         - name: Work with web forms
           items:
             - name: Define web form properties
@@ -1220,6 +1232,8 @@
               href: ./portals/configure/configure-web-form-subgrid.md
             - name: Add geolocation
               href: ./portals/configure/add-geolocation.md
+        - name: Implement GDPR in portals
+          href: ./portals/configure/implement-gdpr.md
     - name:  Advanced portal customization
       items:
         - name: Work with Liquid templates
@@ -1266,6 +1280,8 @@
                   href: ./portals/liquid/render-site-header-primary-navigation.md
         - name: OAuth 2.0 implicit grant flow
           href: ./portals/oauth-implicit-grant-flow.md
+        - name: Manage webpages
+          href: ./portals/configure/web-page.md
     - name: User management and security in portal
       items:
         - name: Configure contacts
@@ -1450,6 +1466,8 @@
       href: ./common-data-service/solution-history.md      
     - name: Use solution checker
       href: ./common-data-service/use-powerapps-checker.md
+    - name: "Common issues and resolutions: solution checker"
+      href: ./common-data-service/common-issues-resolutions-solution-checker.md
     - name: Use segmented solutions
       href: ./common-data-service/use-segmented-solutions-patches-simplify-updates.md
     - name: Change the solution publisher prefix
