@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 10/16/2016
+ms.date: 11/18/2019
 ms.author: litran
 search.audienceType: 
   - maker
@@ -20,19 +20,19 @@ This article shows you how to delete a canvas app from your PowerApps account an
 ## Delete an app from your account
 1. Open [powerapps.com](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then select **Apps** in the left **Tree view** pane.
    
-    ![](./media/delete-app/file-apps.png)
+    ![Apps](./media/delete-app/file-apps.png)
 2. (optional) Near the upper-right corner, filter the list of apps to show only those apps that you own or only those apps to which you contribute.
    
-    ![](./media/delete-app/filter-list.png)
+    ![Apps filter](./media/delete-app/filter-list.png)
    
     > [!NOTE]
    > If the app that you want to delete doesn't appear, make sure that you're in the right environment.
 3. Select **More Commands** (...) for the app that you want to delete.
    
-    ![](./media/delete-app/app-options.png)
+    ![More Commands](./media/delete-app/app-options.png)
 4. Select the trash-can icon to delete the app.
    
-    ![](./media/delete-app/delete-icon.png)
+    ![Delete](./media/delete-app/delete-icon.png)
    
     > [!NOTE]
    > You must have the **Contributor** permission for an app before you can delete it.
@@ -41,7 +41,7 @@ This article shows you how to delete a canvas app from your PowerApps account an
     > [!IMPORTANT]
    > This action will permanently delete this app not only from your account but also from the accounts of all users with whom this app was shared.
    
-    ![](./media/delete-app/delete-button.png)
+    ![Delete from cloud](./media/delete-app/delete-button.png)
 
 ## More resources
 [Share an app](share-app.md)  
