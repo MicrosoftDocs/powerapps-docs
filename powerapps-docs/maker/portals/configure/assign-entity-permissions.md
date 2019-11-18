@@ -46,7 +46,7 @@ With Contact scope, a signed-in user in the role for which the permission record
 
 On an entity list, this means that a filter will be added to whatever model-driven app views are surfaced by that list, which only retrieves records directly linked to the current user. (Depending on the scenario, this relationship can be thought of as ownership or management rights.)
 
-Entity forms will only allow the appropriate permission for Read, Create, Write, and so on if this relationship exists when the record is loaded. [!INCLUDE[proc-more-information](../../../includes/proc-more-information.md)] [Define entity forms and custom logic within a portal](entity-forms.md).  
+Entity forms will only allow the appropriate permission for Read, Create, Write, and so on if this relationship exists when the record is loaded. [!INCLUDE[proc-more-information](../../../includes/proc-more-information.md)] [Define entity forms](entity-forms.md).  
 
 ### Account scope
 
