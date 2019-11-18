@@ -6,7 +6,7 @@ manager: shujoshi
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/12/2019
+ms.date: 11/18/2019
 ms.author: shjais
 ms.reviewer:
 ---
@@ -16,7 +16,7 @@ ms.reviewer:
 If you provision a portal using the older portal add-on, the domain of your portal will be `microsoftcrmportals.com`. With the release of PowerApps portals, you can now update your Dynamics 365 domain `microsoftcrmportals.com` to the PowerApps portals domain `powerappsportals.com`.
 
 > [!NOTE]
-> The `microsoftcrmportals.com` domain will not be removed and is limited only to the portals provisioned using the older portal add-on.
+> The `microsoftcrmportals.com` domain is deprecated and is limited only to the portals provisioned using the older portal add-on. In deprecation period, this feature will continue to work and is fully supported until it is officially removed. This deprecation notification can span a few years.
 
 1. Open [PowerApps Portals admin center](admin-overview.md).
 
