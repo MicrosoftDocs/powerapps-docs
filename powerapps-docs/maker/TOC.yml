@@ -1220,8 +1220,8 @@
               href: ./portals/configure/configure-web-form-subgrid.md
             - name: Add geolocation
               href: ./portals/configure/add-geolocation.md
-            - name: Implement GDPR in portals
-              href: ./portals/configure/implement-gdpr.md
+        - name: Implement GDPR in portals
+          href: ./portals/configure/implement-gdpr.md
     - name:  Advanced portal customization
       items:
         - name: Work with Liquid templates
