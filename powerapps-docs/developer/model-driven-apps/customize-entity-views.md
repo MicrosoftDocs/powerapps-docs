@@ -213,7 +213,11 @@ SetStateRequest ssreq = new SetStateRequest
     Status = new OptionSetValue(2)
 };
 _serviceProxy.Execute(ssreq);
- ```  
+ ``` 
+ 
+> [!NOTE]
+> The view state, active or inactive, is not included with the view when it is added to a solution. Therefore, when the solution is imported into a target organization, the status will be set to active by default.
+
   
 <a name="BKMK_EditFilterOrSorting"></a>   
 ## Edit filter criteria or configure sorting  
