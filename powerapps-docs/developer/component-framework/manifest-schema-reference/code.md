@@ -29,8 +29,8 @@ Model-driven apps and canvas apps (public preview)
 
 |Name|Description|Type|Required|Available for|
 |--|--|--|--|-----|
-|`path`|Place where the resource files are located|`String`|Yes|Model-driven apps and canvas apps (public preview) (experimental preview)|
-|`order`|The order in which the resource files should load|`Positive integer`|Yes|Model-driven apps and canvas apps (public preview) (experimental preview)|
+|`path`|Place where the resource files are located|`String`|Yes|Model-driven apps and canvas apps (public preview) |
+|`order`|The order in which the resource files should load|`Positive integer`|Yes|Model-driven apps and canvas apps (public preview) |
 
 ## Parent Elements
 
