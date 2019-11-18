@@ -101,13 +101,13 @@ As a customizer, you can choose for which entities you want to show the activiti
 
 11.	Specify the following in the **Additional Options** container.
     
-    | Field/option | Value |
-    |------------------------------------------|--------------------------------------------------------------|
-    | Display activity header using | Default format. <br> Possible values are **Default format** and **Field Labels**. |
-    | Create activities using | Quick Create Form <br> Select on how you want the users to create activities. Possible values are **Quick Create Form** and **Main Form**. |
-    | Display activities using | Select how you want to display the activities. Possible values are **Default Fields** and **Card Form**.  If you select **Card Form**, then you need to select a card form for the activity.  |
-    | Select activity | Email <br> Select an activity from the list.  <br> **Note:** This field appears only when you select **Card Form** for the **Display activities using** field.|
-    | Select Card Form | Email Card form <br> Select a card form from the list.  <br> **Note:** This field appears only when you select **Card Form** for the **Display activities using** field. |
+    | Field/option | Description |Value |
+    |------------------------------------------|------------------------------------------------------------|-------------------|
+    | Display activity header using |  Possible values are **Default format** and **Field Labels**. | Default format |
+    | Create activities using | Select on how you want the users to create activities. Possible values are **Quick Create Form** and **Main Form**. | Quick Create Form |
+    | Display activities using | Select how you want to display the activities. Possible values are **Default Fields** and **Card Form**.  If you select **Card Form**, then you need to select a card form for the activity.  | |
+    | Select activity | Select an activity from the list.  <br><br> **Note:** This field appears only when you select **Card Form** for the **Display activities using** field.| Email |
+    | Select Card Form | Select a card form from the list.  <br><br> **Note:** This field appears only when you select **Card Form** for the **Display activities using** field. | Email Card form |
 
     > [!div class=mx-imgBorder] 
     > ![Customize timeline module](media/timeline-activity1.png "Customize timeline module")
