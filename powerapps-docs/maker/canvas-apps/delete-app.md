@@ -27,7 +27,7 @@ This article shows you how to delete a canvas app from your PowerApps account an
    
     > [!NOTE]
    > If the app that you want to delete doesn't appear, make sure that you're in the right environment.
-3. In the center, select the three dots icon for the app that you want to delete.
+3. Select **More Commands** (...) for the app that you want to delete.
    
     ![](./media/delete-app/app-options.png)
 4. Select the trash-can icon to delete the app.
