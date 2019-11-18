@@ -10,7 +10,7 @@ ms.service: powerapps
 ms.devlang: na
 ms.topic: conceptual
 ms.component: model
-ms.date: 10/08/2019
+ms.date: 11/18/2019
 ms.author: matp
 search.audienceType: 
   - maker
@@ -129,8 +129,13 @@ One or more security roles need to be assigned to the app. Users will have acces
     > [!div class="mx-imgBorder"] 
     > ![Select security roles for the app](media/share-model-driven-app/app-security-roles.png)
 
-5. Select **Save**.
+5. Select **Save**. 
  
+
+    > [!IMPORTANT]
+    > Users granted **Create** or **Write** to the **Model-driven App** privilege have access to all apps in the environment, even when they're not part of any role that has access to the app.
+    > ![Create and Write with Model-driven App privilege](media/app-access-cds.png)
+
 ## Share the link to your app
 1. From the **Share this app** dialog box, under **Share the link to your app directly with users** copy the URL that is displayed.
    > [!div class="mx-imgBorder"] 
