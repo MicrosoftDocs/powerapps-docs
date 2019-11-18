@@ -6,7 +6,7 @@ manager: shujoshi
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/07/2019
+ms.date: 11/18/2019
 ms.author: shjais
 ms.reviewer:
 ---
@@ -24,12 +24,16 @@ To export configuration data, you would need to use the Configuration Migration 
 > - The minimum solution version of portals supported by schema files for configuration migration is 8.4.0.275. However, we recommend that you use the latest solution version.
 
 Schema files are available for the following portal types:
-- [Community portal](https://go.microsoft.com/fwlink/p/?linkid=2019704)
-- [Customer Self-Service portal](https://go.microsoft.com/fwlink/p/?linkid=2019705)
-- [Partner portal](https://go.microsoft.com/fwlink/p/?linkid=2019803)
-- [Employee Self-Service portal](https://go.microsoft.com/fwlink/p/?linkid=2019802)
-- [Custom portal](https://go.microsoft.com/fwlink/p/?linkid=2019804)
-- [Common Data Service starter portal](https://go.microsoft.com/fwlink/p/?linkid=2110477)
+
+- **Portals created in an environment with Common Data Service**
+    - [Custom portal (Blank portal)](https://go.microsoft.com/fwlink/p/?linkid=2110477)
+
+- **Portals created in an environment containing model-driven apps in Dynamics 365**
+    - [Custom portal (Blank portal)](https://go.microsoft.com/fwlink/p/?linkid=2019804)
+    - [Community portal](https://go.microsoft.com/fwlink/p/?linkid=2019704)
+    - [Customer Self-Service portal](https://go.microsoft.com/fwlink/p/?linkid=2019705)
+    - [Partner portal](https://go.microsoft.com/fwlink/p/?linkid=2019803)
+    - [Employee Self-Service portal](https://go.microsoft.com/fwlink/p/?linkid=2019802)
 
 The default schema files contain information about portal entities, relationships, and uniqueness definitions for each entity. More information: [Export portal configuration data](#export-portal-configuration-data)
 
