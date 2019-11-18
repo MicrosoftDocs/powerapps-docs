@@ -2,17 +2,11 @@
 title: "Use connection strings in XRM tooling to connect to Common Data Service (Common Data Service)| Microsoft Docs"
 description: "XRM tooling enables you to connect to your Common Data Service environment by using connection strings"
 ms.custom: ""
-ms.date: 03/27/2019
+ms.date: 11/13/2019
 ms.reviewer: ""
 ms.service: powerapps
-ms.suite: ""
-ms.tgt_pltfrm: ""
 ms.topic: "article"
-applies_to: 
-  - "Dynamics 365 (online)"
-ms.assetid: a98b2fce-df49-4b60-91f4-a4446aa61cd3
-caps.latest.revision: 21
-author: "MattB-msft"
+author: "nkrb"
 ms.author: "nabuthuk"
 manager: "kvivek"
 search.audienceType: 
@@ -90,7 +84,7 @@ CrmServiceClient svc = new CrmServiceClient(ConnectionString);
 
 ## Connection string examples
  
-The following examples show how you can use connection strings for connecting to on-ine deployments and authentication scenarios. The connection string examples for on-premises and IFD deployment instances is now available in the Dynamics 365 Customer Engagement (on-premises) documentation at: [Use connection strings in XRM tooling to connect](/dynamics365/customer-engagement/on-premises/developer/xrm-tooling/use-connection-strings-xrm-tooling-connect) 
+The following examples show how you can use connection strings for connecting to online deployments and authentication scenarios. The connection string examples for on-premises and IFD deployment instances is now available in the Dynamics 365 Customer Engagement (on-premises) documentation at: [Use connection strings in XRM tooling to connect](/dynamics365/customer-engagement/on-premises/developer/xrm-tooling/use-connection-strings-xrm-tooling-connect) 
 
 ### Named account using Office 365  
   
