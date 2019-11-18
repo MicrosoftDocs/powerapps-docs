@@ -19,7 +19,7 @@ search.app:
 
 # Use model-driven apps in PowerApps
 
-A model-driven app has multiple components including dashboards, forms, views, charts, and business processes that together help make the app easy to use. This section provides information on how to navigate around in a model-driven app, work with records, import/export data, and automate processes using Microsoft Flow. 
+A model-driven app has multiple components including dashboards, forms, views, charts, and business processes that together help make the app easy to use. This section provides information on how to navigate around in a model-driven app, work with records, import/export data, and automate processes using Power Automate. 
 
 > [!IMPORTANT]
 > Because canvas apps provide a lot of control over the user experience and can essentially be anything, there isn’t much help documentation on how to *use a canvas app*. If you need help using a canvas app, contact your app maker or PowerApps admin.

@@ -1,7 +1,7 @@
 ---
 title: "AsyncOperation Entity Reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the AsyncOperation entity."
-ms.date: 04/01/2019
+description: "Includes schema information and supported messages for the AsyncOperation entity in Common Data Service."
+ms.date: 11/07/2019
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -12,7 +12,6 @@ search.audienceType:
   - developer
 search.app: 
   - PowerApps
-  - D365CE
 ---
 # AsyncOperation Entity Reference
 
@@ -58,6 +57,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 - [Data](#BKMK_Data)
 - [DependencyToken](#BKMK_DependencyToken)
 - [Depth](#BKMK_Depth)
+- [ExpanderStartTime](#BKMK_ExpanderStartTime)
 - [FriendlyMessage](#BKMK_FriendlyMessage)
 - [HostId](#BKMK_HostId)
 - [MessageName](#BKMK_MessageName)
@@ -84,6 +84,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
 - [WorkflowActivationId](#BKMK_WorkflowActivationId)
+- [Workload](#BKMK_Workload)
 
 
 ### <a name="BKMK_AsyncOperationId"></a> AsyncOperationId
@@ -178,6 +179,22 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |MinValue|0|
 |RequiredLevel|SystemRequired|
 |Type|Integer|
+
+
+### <a name="BKMK_ExpanderStartTime"></a> ExpanderStartTime
+
+|Property|Value|
+|--------|-----|
+|DateTimeBehavior|UserLocal|
+|Description|The datetime when the Expander pipeline started.|
+|DisplayName|Expander Start Time|
+|Format|DateAndTime|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|IsValidForUpdate|False|
+|LogicalName|expanderstarttime|
+|RequiredLevel|None|
+|Type|DateTime|
 
 
 ### <a name="BKMK_FriendlyMessage"></a> FriendlyMessage
@@ -331,6 +348,10 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |90|CascadeAssign|
 |91|CascadeDelete|
 |92|Event Expander Operation|
+|93|Import Solution Metadata|
+|94|Bulk Delete File Attachment|
+|95|Refresh Business Unit for Records Owned By Principal|
+|96|Revoke Inherited Access|
 
 
 
@@ -493,7 +514,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |IsValidForUpdate|False|
 |LogicalName|regardingobjectid|
 |RequiredLevel|None|
-|Targets|account,activitymimeattachment,activitypointer,annotation,annualfiscalcalendar,appointment,attributemap,businessunit,businessunitnewsarticle,calendar,channelaccessprofile,channelaccessprofilerule,connection,connectionrole,contact,convertrule,customeraddress,customerrelationship,displaystring,email,emailserverprofile,entitymap,externalparty,externalpartyitem,fax,fixedmonthlyfiscalcalendar,goal,goalrollupquery,holidaywrapper,import,importdata,importfile,importlog,importmap,interactionforemail,isvconfig,kbarticle,kbarticlecomment,kbarticletemplate,knowledgearticle,knowledgebaserecord,letter,mailbox,mailmergetemplate,metric,monthlyfiscalcalendar,msdyn_connector,organization,phonecall,position,post,postfollow,privilege,quarterlyfiscalcalendar,queue,queueitem,recurringappointmentmaster,relationshiprole,relationshiprolemap,report,role,rollupfield,routingrule,routingruleitem,savedquery,semiannualfiscalcalendar,sharepointdocumentlocation,sharepointsite,similarityrule,sla,socialactivity,socialprofile,subject,systemform,systemuser,task,team,template,territory,theme,transactioncurrency,userform,usermapping,userquery|
+|Targets|account,activitymimeattachment,activitypointer,annotation,annualfiscalcalendar,appointment,attributeimageconfig,attributemap,businessunit,businessunitnewsarticle,calendar,channelaccessprofile,channelaccessprofilerule,connection,connectionrole,connector,contact,convertrule,customeraddress,customerrelationship,displaystring,email,emailserverprofile,entityanalyticsconfig,entityimageconfig,entitymap,environmentvariabledefinition,environmentvariablevalue,externalparty,externalpartyitem,fax,fixedmonthlyfiscalcalendar,flowsession,goal,goalrollupquery,holidaywrapper,import,importdata,importfile,importlog,importmap,interactionforemail,isvconfig,kbarticle,kbarticlecomment,kbarticletemplate,knowledgearticle,knowledgebaserecord,letter,mailbox,mailmergetemplate,metric,monthlyfiscalcalendar,msdyn_aiconfiguration,msdyn_aifptrainingdocument,msdyn_aimodel,msdyn_aiodimage,msdyn_aiodlabel,msdyn_aiodtrainingboundingbox,msdyn_aiodtrainingimage,msdyn_aitemplate,msdyn_analysiscomponent,msdyn_analysisjob,msdyn_analysisresult,msdyn_analysisresultdetail,msdyn_knowledgearticleimage,msdyn_knowledgearticletemplate,msdyn_solutionhealthrule,msdyn_solutionhealthruleargument,msdyn_solutionhealthruleset,organization,phonecall,position,post,postfollow,privilege,quarterlyfiscalcalendar,queue,queueitem,recurringappointmentmaster,relationshiprole,relationshiprolemap,report,role,rollupfield,routingrule,routingruleitem,savedquery,semiannualfiscalcalendar,sharepointdocumentlocation,sharepointsite,similarityrule,sla,socialactivity,socialprofile,subject,systemform,systemuser,task,team,template,territory,theme,transactioncurrency,userform,usermapping,userquery,workflowbinary|
 |Type|Lookup|
 
 
@@ -563,7 +584,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 |Property|Value|
 |--------|-----|
-|Description|Root execution context of the job that triggered async job.|
+|Description|Root execution context of the job that trigerred async job.|
 |DisplayName|RootExecutionContext|
 |Format|TextArea|
 |IsLocalizable|False|
@@ -674,6 +695,23 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Targets|workflow|
 |Type|Lookup|
+
+
+### <a name="BKMK_Workload"></a> Workload
+
+|Property|Value|
+|--------|-----|
+|Description|The workload name.|
+|DisplayName|Workload|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|IsValidForUpdate|False|
+|LogicalName|workload|
+|MaxLength|64|
+|RequiredLevel|None|
+|Type|String|
 
 <a name="read-only-attributes"></a>
 
@@ -1346,8 +1384,6 @@ Same as socialactivity entity [AsyncOperation_SocialActivities](socialactivity.m
 
 Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related entity. Listed by **SchemaName**.
 
-- [Territory_AsyncOperations](#BKMK_Territory_AsyncOperations)
-- [msdyn_connector_AsyncOperations](#BKMK_msdyn_connector_AsyncOperations)
 - [theme_AsyncOperations](#BKMK_theme_AsyncOperations)
 - [usermapping_AsyncOperations](#BKMK_usermapping_AsyncOperations)
 - [interactionforemail_AsyncOperations](#BKMK_interactionforemail_AsyncOperations)
@@ -1423,19 +1459,33 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [Organization_AsyncOperations](#BKMK_Organization_AsyncOperations)
 - [Calendar_AsyncOperations](#BKMK_Calendar_AsyncOperations)
 - [ImportFile_AsyncOperations](#BKMK_ImportFile_AsyncOperations)
+- [Territory_AsyncOperations](#BKMK_Territory_AsyncOperations)
+- [msdyn_knowledgearticleimage_AsyncOperations](#BKMK_msdyn_knowledgearticleimage_AsyncOperations)
+- [msdyn_knowledgearticletemplate_AsyncOperations](#BKMK_msdyn_knowledgearticletemplate_AsyncOperations)
+- [attributeimageconfig_AsyncOperations](#BKMK_attributeimageconfig_AsyncOperations)
+- [entityimageconfig_AsyncOperations](#BKMK_entityimageconfig_AsyncOperations)
+- [entityanalyticsconfig_AsyncOperations](#BKMK_entityanalyticsconfig_AsyncOperations)
+- [connector_AsyncOperations](#BKMK_connector_AsyncOperations)
+- [msdyn_aiconfiguration_AsyncOperations](#BKMK_msdyn_aiconfiguration_AsyncOperations)
+- [msdyn_aimodel_AsyncOperations](#BKMK_msdyn_aimodel_AsyncOperations)
+- [msdyn_aitemplate_AsyncOperations](#BKMK_msdyn_aitemplate_AsyncOperations)
+- [msdyn_aifptrainingdocument_AsyncOperations](#BKMK_msdyn_aifptrainingdocument_AsyncOperations)
+- [msdyn_aiodimage_AsyncOperations](#BKMK_msdyn_aiodimage_AsyncOperations)
+- [msdyn_aiodlabel_AsyncOperations](#BKMK_msdyn_aiodlabel_AsyncOperations)
+- [msdyn_aiodtrainingboundingbox_AsyncOperations](#BKMK_msdyn_aiodtrainingboundingbox_AsyncOperations)
+- [msdyn_aiodtrainingimage_AsyncOperations](#BKMK_msdyn_aiodtrainingimage_AsyncOperations)
+- [flowsession_AsyncOperations](#BKMK_flowsession_AsyncOperations)
+- [workflowbinary_AsyncOperations](#BKMK_workflowbinary_AsyncOperations)
+- [environmentvariabledefinition_AsyncOperations](#BKMK_environmentvariabledefinition_AsyncOperations)
+- [environmentvariablevalue_AsyncOperations](#BKMK_environmentvariablevalue_AsyncOperations)
+- [msdyn_analysiscomponent_AsyncOperations](#BKMK_msdyn_analysiscomponent_AsyncOperations)
+- [msdyn_analysisjob_AsyncOperations](#BKMK_msdyn_analysisjob_AsyncOperations)
+- [msdyn_analysisresult_AsyncOperations](#BKMK_msdyn_analysisresult_AsyncOperations)
+- [msdyn_analysisresultdetail_AsyncOperations](#BKMK_msdyn_analysisresultdetail_AsyncOperations)
+- [msdyn_solutionhealthrule_AsyncOperations](#BKMK_msdyn_solutionhealthrule_AsyncOperations)
+- [msdyn_solutionhealthruleargument_AsyncOperations](#BKMK_msdyn_solutionhealthruleargument_AsyncOperations)
+- [msdyn_solutionhealthruleset_AsyncOperations](#BKMK_msdyn_solutionhealthruleset_AsyncOperations)
 
-
-### <a name="BKMK_Territory_AsyncOperations"></a> Territory_AsyncOperations
-
-**Added by**: Application Common Solution
-
-See territory Entity [Territory_AsyncOperations](territory.md#BKMK_Territory_AsyncOperations) One-To-Many relationship.
-
-### <a name="BKMK_msdyn_connector_AsyncOperations"></a> msdyn_connector_AsyncOperations
-
-**Added by**: Power Connector Solution Solution
-
-See msdyn_connector Entity [msdyn_connector_AsyncOperations](msdyn_connector.md#BKMK_msdyn_connector_AsyncOperations) One-To-Many relationship.
 
 ### <a name="BKMK_theme_AsyncOperations"></a> theme_AsyncOperations
 
@@ -1736,6 +1786,162 @@ See calendar Entity [Calendar_AsyncOperations](calendar.md#BKMK_Calendar_AsyncOp
 ### <a name="BKMK_ImportFile_AsyncOperations"></a> ImportFile_AsyncOperations
 
 See importfile Entity [ImportFile_AsyncOperations](importfile.md#BKMK_ImportFile_AsyncOperations) One-To-Many relationship.
+
+### <a name="BKMK_Territory_AsyncOperations"></a> Territory_AsyncOperations
+
+**Added by**: Application Common Solution
+
+See territory Entity [Territory_AsyncOperations](territory.md#BKMK_Territory_AsyncOperations) One-To-Many relationship.
+
+### <a name="BKMK_msdyn_knowledgearticleimage_AsyncOperations"></a> msdyn_knowledgearticleimage_AsyncOperations
+
+**Added by**: Knowledge Management Online Features Solution
+
+See msdyn_knowledgearticleimage Entity [msdyn_knowledgearticleimage_AsyncOperations](msdyn_knowledgearticleimage.md#BKMK_msdyn_knowledgearticleimage_AsyncOperations) One-To-Many relationship.
+
+### <a name="BKMK_msdyn_knowledgearticletemplate_AsyncOperations"></a> msdyn_knowledgearticletemplate_AsyncOperations
+
+**Added by**: Knowledge Management Features Solution
+
+See msdyn_knowledgearticletemplate Entity [msdyn_knowledgearticletemplate_AsyncOperations](msdyn_knowledgearticletemplate.md#BKMK_msdyn_knowledgearticletemplate_AsyncOperations) One-To-Many relationship.
+
+### <a name="BKMK_attributeimageconfig_AsyncOperations"></a> attributeimageconfig_AsyncOperations
+
+**Added by**: Image Configuration Solution
+
+See attributeimageconfig Entity [attributeimageconfig_AsyncOperations](attributeimageconfig.md#BKMK_attributeimageconfig_AsyncOperations) One-To-Many relationship.
+
+### <a name="BKMK_entityimageconfig_AsyncOperations"></a> entityimageconfig_AsyncOperations
+
+**Added by**: Image Configuration Solution
+
+See entityimageconfig Entity [entityimageconfig_AsyncOperations](entityimageconfig.md#BKMK_entityimageconfig_AsyncOperations) One-To-Many relationship.
+
+### <a name="BKMK_entityanalyticsconfig_AsyncOperations"></a> entityanalyticsconfig_AsyncOperations
+
+**Added by**: Advanced Analytics Infrastructure Solution
+
+See entityanalyticsconfig Entity [entityanalyticsconfig_AsyncOperations](entityanalyticsconfig.md#BKMK_entityanalyticsconfig_AsyncOperations) One-To-Many relationship.
+
+### <a name="BKMK_connector_AsyncOperations"></a> connector_AsyncOperations
+
+**Added by**: Power Connector Solution Solution
+
+See connector Entity [connector_AsyncOperations](connector.md#BKMK_connector_AsyncOperations) One-To-Many relationship.
+
+### <a name="BKMK_msdyn_aiconfiguration_AsyncOperations"></a> msdyn_aiconfiguration_AsyncOperations
+
+**Added by**: AISolution Solution
+
+See msdyn_aiconfiguration Entity [msdyn_aiconfiguration_AsyncOperations](msdyn_aiconfiguration.md#BKMK_msdyn_aiconfiguration_AsyncOperations) One-To-Many relationship.
+
+### <a name="BKMK_msdyn_aimodel_AsyncOperations"></a> msdyn_aimodel_AsyncOperations
+
+**Added by**: AISolution Solution
+
+See msdyn_aimodel Entity [msdyn_aimodel_AsyncOperations](msdyn_aimodel.md#BKMK_msdyn_aimodel_AsyncOperations) One-To-Many relationship.
+
+### <a name="BKMK_msdyn_aitemplate_AsyncOperations"></a> msdyn_aitemplate_AsyncOperations
+
+**Added by**: AISolution Solution
+
+See msdyn_aitemplate Entity [msdyn_aitemplate_AsyncOperations](msdyn_aitemplate.md#BKMK_msdyn_aitemplate_AsyncOperations) One-To-Many relationship.
+
+### <a name="BKMK_msdyn_aifptrainingdocument_AsyncOperations"></a> msdyn_aifptrainingdocument_AsyncOperations
+
+**Added by**: AI Solution default templates Solution
+
+See msdyn_aifptrainingdocument Entity [msdyn_aifptrainingdocument_AsyncOperations](msdyn_aifptrainingdocument.md#BKMK_msdyn_aifptrainingdocument_AsyncOperations) One-To-Many relationship.
+
+### <a name="BKMK_msdyn_aiodimage_AsyncOperations"></a> msdyn_aiodimage_AsyncOperations
+
+**Added by**: AI Solution default templates Solution
+
+See msdyn_aiodimage Entity [msdyn_aiodimage_AsyncOperations](msdyn_aiodimage.md#BKMK_msdyn_aiodimage_AsyncOperations) One-To-Many relationship.
+
+### <a name="BKMK_msdyn_aiodlabel_AsyncOperations"></a> msdyn_aiodlabel_AsyncOperations
+
+**Added by**: AI Solution default templates Solution
+
+See msdyn_aiodlabel Entity [msdyn_aiodlabel_AsyncOperations](msdyn_aiodlabel.md#BKMK_msdyn_aiodlabel_AsyncOperations) One-To-Many relationship.
+
+### <a name="BKMK_msdyn_aiodtrainingboundingbox_AsyncOperations"></a> msdyn_aiodtrainingboundingbox_AsyncOperations
+
+**Added by**: AI Solution default templates Solution
+
+See msdyn_aiodtrainingboundingbox Entity [msdyn_aiodtrainingboundingbox_AsyncOperations](msdyn_aiodtrainingboundingbox.md#BKMK_msdyn_aiodtrainingboundingbox_AsyncOperations) One-To-Many relationship.
+
+### <a name="BKMK_msdyn_aiodtrainingimage_AsyncOperations"></a> msdyn_aiodtrainingimage_AsyncOperations
+
+**Added by**: AI Solution default templates Solution
+
+See msdyn_aiodtrainingimage Entity [msdyn_aiodtrainingimage_AsyncOperations](msdyn_aiodtrainingimage.md#BKMK_msdyn_aiodtrainingimage_AsyncOperations) One-To-Many relationship.
+
+### <a name="BKMK_flowsession_AsyncOperations"></a> flowsession_AsyncOperations
+
+**Added by**: Power Automate Extensions package Solution
+
+See flowsession Entity [flowsession_AsyncOperations](flowsession.md#BKMK_flowsession_AsyncOperations) One-To-Many relationship.
+
+### <a name="BKMK_workflowbinary_AsyncOperations"></a> workflowbinary_AsyncOperations
+
+**Added by**: Power Automate Extensions package Solution
+
+See workflowbinary Entity [workflowbinary_AsyncOperations](workflowbinary.md#BKMK_workflowbinary_AsyncOperations) One-To-Many relationship.
+
+### <a name="BKMK_environmentvariabledefinition_AsyncOperations"></a> environmentvariabledefinition_AsyncOperations
+
+**Added by**: Environment Variables Solution
+
+See environmentvariabledefinition Entity [environmentvariabledefinition_AsyncOperations](environmentvariabledefinition.md#BKMK_environmentvariabledefinition_AsyncOperations) One-To-Many relationship.
+
+### <a name="BKMK_environmentvariablevalue_AsyncOperations"></a> environmentvariablevalue_AsyncOperations
+
+**Added by**: Environment Variables Solution
+
+See environmentvariablevalue Entity [environmentvariablevalue_AsyncOperations](environmentvariablevalue.md#BKMK_environmentvariablevalue_AsyncOperations) One-To-Many relationship.
+
+### <a name="BKMK_msdyn_analysiscomponent_AsyncOperations"></a> msdyn_analysiscomponent_AsyncOperations
+
+**Added by**: PowerApps Checker Solution
+
+See msdyn_analysiscomponent Entity [msdyn_analysiscomponent_AsyncOperations](msdyn_analysiscomponent.md#BKMK_msdyn_analysiscomponent_AsyncOperations) One-To-Many relationship.
+
+### <a name="BKMK_msdyn_analysisjob_AsyncOperations"></a> msdyn_analysisjob_AsyncOperations
+
+**Added by**: PowerApps Checker Solution
+
+See msdyn_analysisjob Entity [msdyn_analysisjob_AsyncOperations](msdyn_analysisjob.md#BKMK_msdyn_analysisjob_AsyncOperations) One-To-Many relationship.
+
+### <a name="BKMK_msdyn_analysisresult_AsyncOperations"></a> msdyn_analysisresult_AsyncOperations
+
+**Added by**: PowerApps Checker Solution
+
+See msdyn_analysisresult Entity [msdyn_analysisresult_AsyncOperations](msdyn_analysisresult.md#BKMK_msdyn_analysisresult_AsyncOperations) One-To-Many relationship.
+
+### <a name="BKMK_msdyn_analysisresultdetail_AsyncOperations"></a> msdyn_analysisresultdetail_AsyncOperations
+
+**Added by**: PowerApps Checker Solution
+
+See msdyn_analysisresultdetail Entity [msdyn_analysisresultdetail_AsyncOperations](msdyn_analysisresultdetail.md#BKMK_msdyn_analysisresultdetail_AsyncOperations) One-To-Many relationship.
+
+### <a name="BKMK_msdyn_solutionhealthrule_AsyncOperations"></a> msdyn_solutionhealthrule_AsyncOperations
+
+**Added by**: PowerApps Checker Solution
+
+See msdyn_solutionhealthrule Entity [msdyn_solutionhealthrule_AsyncOperations](msdyn_solutionhealthrule.md#BKMK_msdyn_solutionhealthrule_AsyncOperations) One-To-Many relationship.
+
+### <a name="BKMK_msdyn_solutionhealthruleargument_AsyncOperations"></a> msdyn_solutionhealthruleargument_AsyncOperations
+
+**Added by**: PowerApps Checker Solution
+
+See msdyn_solutionhealthruleargument Entity [msdyn_solutionhealthruleargument_AsyncOperations](msdyn_solutionhealthruleargument.md#BKMK_msdyn_solutionhealthruleargument_AsyncOperations) One-To-Many relationship.
+
+### <a name="BKMK_msdyn_solutionhealthruleset_AsyncOperations"></a> msdyn_solutionhealthruleset_AsyncOperations
+
+**Added by**: PowerApps Checker Solution
+
+See msdyn_solutionhealthruleset Entity [msdyn_solutionhealthruleset_AsyncOperations](msdyn_solutionhealthruleset.md#BKMK_msdyn_solutionhealthruleset_AsyncOperations) One-To-Many relationship.
 
 ### See also
 

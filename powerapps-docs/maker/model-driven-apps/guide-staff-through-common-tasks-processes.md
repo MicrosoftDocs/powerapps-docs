@@ -45,7 +45,7 @@ For more information about defining business rules for a form in a model-driven 
 
 ## Flows  
   
-Microsoft Flow includes several types of processes, each designed for a different purpose:  
+Power Automate includes several types of processes, each designed for a different purpose:  
 
 -   Automated flows. Create a flow that performs one or more tasks automatically after it's triggered by an event. More information: [Create a flow](/flow/get-started-logic-flow)
     

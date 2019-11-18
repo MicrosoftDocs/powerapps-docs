@@ -1,7 +1,7 @@
 ---
 title: "QueueItem Entity Reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the QueueItem entity."
-ms.date: 04/01/2019
+description: "Includes schema information and supported messages for the QueueItem entity in Common Data Service."
+ms.date: 11/07/2019
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -12,7 +12,6 @@ search.audienceType:
   - developer
 search.app: 
   - PowerApps
-  - D365CE
 ---
 # QueueItem Entity Reference
 
@@ -105,7 +104,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |IsValidForUpdate|False|
 |LogicalName|objectid|
 |RequiredLevel|ApplicationRequired|
-|Targets|activitypointer,appointment,email,fax,knowledgearticle,letter,phonecall,recurringappointmentmaster,socialactivity,task|
+|Targets|activitypointer,appointment,email,fax,knowledgearticle,letter,msdyn_knowledgearticletemplate,phonecall,recurringappointmentmaster,socialactivity,task|
 |Type|Lookup|
 
 
@@ -689,6 +688,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |4216|Social Activity|
 |4251|Recurring Appointment|
 |9953|Knowledge Article|
+|10003|Knowledge Article Template|
 
 
 
@@ -998,6 +998,7 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [RecurringAppointmentMaster_QueueItem](#BKMK_RecurringAppointmentMaster_QueueItem)
 - [Letter_QueueItem](#BKMK_Letter_QueueItem)
 - [lk_queueitembase_modifiedby](#BKMK_lk_queueitembase_modifiedby)
+- [msdyn_knowledgearticletemplate_QueueItems](#BKMK_msdyn_knowledgearticletemplate_QueueItems)
 
 
 ### <a name="BKMK_knowledgearticle_QueueItems"></a> knowledgearticle_QueueItems
@@ -1075,6 +1076,12 @@ See letter Entity [Letter_QueueItem](letter.md#BKMK_Letter_QueueItem) One-To-Man
 ### <a name="BKMK_lk_queueitembase_modifiedby"></a> lk_queueitembase_modifiedby
 
 See systemuser Entity [lk_queueitembase_modifiedby](systemuser.md#BKMK_lk_queueitembase_modifiedby) One-To-Many relationship.
+
+### <a name="BKMK_msdyn_knowledgearticletemplate_QueueItems"></a> msdyn_knowledgearticletemplate_QueueItems
+
+**Added by**: Knowledge Management Features Solution
+
+See msdyn_knowledgearticletemplate Entity [msdyn_knowledgearticletemplate_QueueItems](msdyn_knowledgearticletemplate.md#BKMK_msdyn_knowledgearticletemplate_QueueItems) One-To-Many relationship.
 
 ### See also
 

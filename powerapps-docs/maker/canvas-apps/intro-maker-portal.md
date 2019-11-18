@@ -115,5 +115,5 @@ By selecting options in the header and left navigation bar, you can do more than
 Extend the functionality of your apps by performing these tasks:
 
 - Manage entities, option sets, and data integration in [Common Data Service](../common-data-service/data-platform-intro.md).
-- Configure business logic in [Microsoft Flow](https://docs.microsoft.com/flow/getting-started).
+- Configure business logic in [Power Automate](https://docs.microsoft.com/flow/getting-started).
 - Author, package, and maintain [solutions](../../developer/common-data-service/introduction-solutions.md).

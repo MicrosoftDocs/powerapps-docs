@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 10/25/2019
+ms.date: 10/31/2019
 ms.author: mduelae
 ms.custom: ""
 ms.reviewer: ""
@@ -19,7 +19,7 @@ search.app:
 ---
 # Merge duplicate records 
 
-Duplicate records can creep into your data when you or others enter data manually or import data in bulk. Common Data Service helps you address potential duplicates by providing duplicate detection for accounts and contacts. Your administrator may also set up duplicate detection rules for other situations.  
+Duplicate records can creep into your data when you or others enter data manually or import data in bulk. Common Data Service helps you address potential duplicates by providing duplicate detection for active records such as, accounts and contacts. When you merge a record any related or child records will also be merged. Your administrator may also set up duplicate detection rules for other situations.  
   
 For example, let's say you enter a contact record, Jim Glynn,  along with a mobile phone number.  The duplicate detection rule discovers that you already have a similar record, and displays this dialog box.  
   

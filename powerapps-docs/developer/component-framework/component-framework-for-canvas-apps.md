@@ -42,15 +42,15 @@ To add code components to an app, you need to enable the PowerApps component fra
     
     ![Settings and Admin Center](media/select-admin-center-from-settings.png "Settings and Admin Center") 
 
-3. Select the environment where you want to enable this feature, select the ellipsis (**...**), and then select **Settings**.
+3. Select the **Environments** tab in the left pane and select the environment where you want to enable this feature, select the ellipsis (**...**), and then select **Settings**.
 
 4. Under the **Products** tab, select **Features**.
 
    ![Enable PowerApps component framework](media/enable-pcf-feature.png "Enable PowerApps component framework")
 
-5. From the list of available features, set the switch to **On** under **PowerApps component framework for canvas apps**.
+5. From the list of available features, set the switch to **On** under **PowerApps component framework for canvas apps** and click **Save**.
 
-6. Now, open the app where you want to add the code component and navigate to **File** > **App settings** and select **Advanced settings**.
+6. Now, open the app where you want to add the code component and navigate to **File** > **Settings** and select **Advanced settings**.
 
    ![Enable components for PowerApps component framework](media/enable-components-for-pcf.png "Enable components for PowerApps component framework")
    
@@ -76,15 +76,15 @@ To add code components to a canvas app:
    > [!IMPORTANT]
    > Make sure the solution zip file is already [imported](https://docs.microsoft.com/powerapps/maker/common-data-service/import-update-export-solutions) into Common Data Service before you proceed to the next step.
 
-3. Go to **Insert** > **Components** > **Import component**. 
+3. Go to **Insert** > **Custom** > **Import component**. 
  
     ![Insert components](media/insert-components-import.png "Insert components")
 
-4. Select the **Code (experimental)** tab, add a component from the list, and then select **Import**. This adds the sample component in the **Components** menu.
+4. Select the **Code (experimental)** tab, add a component from the list, and then select **Import**. This adds the sample component in the **Custom** menu.
 
     ![Import sample component](media/import-component-add-sample-component.png "Import sample component")
 
-5. Navigate to **Components** and select the component to add it to the app.
+5. Navigate to **Custom** and select the component to add it to the app.
 
    ![Add sample component](media/add-sample-component-from-list.png "Add sample component")
 
