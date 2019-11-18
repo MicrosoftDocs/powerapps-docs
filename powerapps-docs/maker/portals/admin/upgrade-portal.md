@@ -19,7 +19,7 @@ A portal consists of the following components:
 
 |Component|Description|Update process|
 |---------|-----------|--------------|
-|Portal solutions|Solutions which are installed in Common Data Service environment and contains the metadata entities for any portal.|Updated by customers themselves from the [!INCLUDE[pn-crm-online-admin-center](../includes/pn-crm-online-admin-center.md)] page.|
+|Portal solutions|Solutions which are installed in Common Data Service environment and contains the metadata entities for any portal.|Updated by customers themselves from the Dynamics 365 Administration Center page.|
 |Portal website host|Portal website host is the Portal code which forms the actual website.|Portal website host is updated automatically for all portals.<br>**Note**: A new version of Portal website host is backwards compatible with all supported versions of Portal solutions. However, once a solution version becomes unsupported, it is not certified to run with the new version of Portal website host.|
 |||
 

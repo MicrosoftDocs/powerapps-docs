@@ -66,7 +66,7 @@ When someone registers using an external provider and the portal is configured t
 
 According to the GDPR, portal users must agree to the terms and conditions to allow marketing, profiling, or access to private information. As an administrator, you can publish your own terms and conditions to get consent of the portal user before they are authenticated to the site.
 
-![Portal terms and conditions](media/../gdpr-terms-agreement.png "Portal terms and conditions")
+![Portal terms and conditions](../media/gdpr-terms-agreement.png "Portal terms and conditions")
 
 The following content snippets control the display of terms and conditions on the screen. You can change the text according to your requirements.
 
