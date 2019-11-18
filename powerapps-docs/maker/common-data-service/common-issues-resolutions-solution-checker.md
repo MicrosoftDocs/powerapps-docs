@@ -1,6 +1,6 @@
 ---
-title: "Common issues and resolutions for Solution Checker | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
-description: " A list of common issues and resolutions within Solution Checker"
+title: "Common issues and resolutions for solution checker | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
+description: " A list of common issues and resolutions within solution checker"
 keywords: ""
 ms.date: 02/11/2019
 ms.service: powerapps
@@ -19,17 +19,17 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Common issues and resolutions for Solution Checker
+# Common issues and resolutions for solution checker
 
-This article lists some common issues that you might encounter while using Solution Checker. Where applicable, workarounds are provided.
+This article lists some common issues that you might encounter while using solution checker. Where applicable, workarounds are provided.
 
-## You're unable to use Solution Checker to run analysis or download results
+## You're unable to use solution checker to run analysis or download results
 
-Shortly after submitting a Solution Checker request to run an analysis or download results the operation doesn't complete and an error message is displayed, such as:
+Shortly after submitting a solution checker request to run an analysis or download results the operation doesn't complete and an error message is displayed, such as:
 
 > *"We weren't able to run the check on **[Solution Name]** solution. Try running it again."*
 
-Whenever possible, Solution Checker attempts to return a specific error message with a link to details about the potential cause and resolution steps. Select **'Learn more'** for details.
+Whenever possible, solution checker attempts to return a specific error message with a link to details about the potential cause and resolution steps. Select **'Learn more'** for details.
 
 ![Error message bar](media/solution-checker-missing-roles-error.png)
 
@@ -41,13 +41,13 @@ Selecting the portal notification will link to this page of common issues for fu
 
 ![Failure notification](media/solution-checker-failure-notification.png)
 
-## Solution Checker fails due to unsupported version of PowerApps Checker
+## Solution checker fails due to unsupported version of PowerApps Checker
 
-Solution Checker is a feature enabled by the PowerApps Checker app.  If you have installed a PowerApps Checker app version earlier than version **1.0.0.47**, Solution Checker runs may fail to complete successfully. You should upgrade your PowerApps Checker version from the [!INCLUDE [pn-dyn-365-admin-center](../../includes/pn-dyn-365-admin-center.md)].
+Solution checker is a feature enabled by the PowerApps Checker app.  If you have installed a PowerApps Checker app version earlier than version **1.0.0.47**, solution checker runs may fail to complete successfully. You should upgrade your PowerApps Checker version from the [!INCLUDE [pn-dyn-365-admin-center](../../includes/pn-dyn-365-admin-center.md)].
 
 However, if you have a PowerApps Checker version earlier than version **1.0.0.45** installed, we recommend that you delete the solution and install it again. Due to recent schema changes, upgrade of PowerApps Checker from versions earlier than version **1.0.0.45** may fail.
 
-If you want to keep the past results from Solution Checker, export the results from a previous run or export all Solution Checker data using [Export data to Excel](../../user/export-data-excel.md) to export the data from the following entities:
+If you want to keep the past results from solution checker, export the results from a previous run or export all solution checker data using [Export data to Excel](../../user/export-data-excel.md) to export the data from the following entities:
 
 - Analysis Component
 - Analysis Job
@@ -68,20 +68,20 @@ To install PowerApps Checker back into your Common Data Service environment:
 
 1. As a System Administrator or as a System Customizer, open up your PowerApps portal by going to https://make.powerapps.com/environments.
 2. Select **Solutions**.
-3. On the solution toolbar select **Solution Checker**, and then select **Install**.
+3. On the solution toolbar select **Solution checker**, and then select **Install**.
 
 ## Solution Checker can't access organizations in Administration Mode
 
 Organizations that have been placed into [Administration Mode](https://docs.microsoft.com/dynamics365/customer-engagement/admin/manage-sandbox-instances#administration-mode) purposely restrict access to only users with System Administrator and System Customizer roles. Because the PowerApps Checker application identity has neither of these roles assigned by default, it can't access organizations operating in this mode.
 
-In order to use Solution Checker in this organization, Adminstration Mode must be disabled.
+In order to use solution checker in this organization, Adminstration Mode must be disabled.
 
 ### How to disable administration mode
 
 To disable administration mode for an organization instance:
 
 1. Open the Dynamics 365 instance picker: https://port.crm.dynamics.com/G/Instances/InstancePicker.aspx.
-2. Select the organization instance that has issues running Solution Checker.
+2. Select the organization instance that has issues running solution checker.
 3. Select **ADMIN**.
 
 ![Instance Admin](media/solution-checker-instance-admin.png)
@@ -90,9 +90,9 @@ To disable administration mode for an organization instance:
 
 ![Disable Admin mode](media/solution-checker-instance-disable-admin-mode.png)
 
-5. Run Solution Checker again.
+5. Run solution checker again.
 
-## Solution Checker fails due to missing security roles
+## Solution checker fails due to missing security roles
 
 The application user for Solution Checker requires two security roles assigned in order to provide the necessary privileges to communicate with the Common Data Service organization. If either of these roles are not assigned to the user **'PowerApps Checker'**,  attempts to run analysis, download results, and run cancelation will fail. This occurs most often when customers have automation in place that removes security roles from unexpected users. The following security roles contain minimum required permissions:
 
@@ -110,11 +110,11 @@ To assign missing security roles to the PowerApps Checker user:
 
 ![Required Security Roles](media/solution-checker-required-roles.png)
 
-5. Run Solution Checker again.
+5. Run solution checker again.
 
 ## Solution Checker fails due to restricted access mode
 
-The application user for Solution Checker requires an access mode of **'Non-Interactive'** or **'Read-Write'** in order to communicate with the Common Data Service organization. If the access mode has been changed to another value such as **'Administrative'**, then attempts to run analysis, download results, and run cancelation will fail.
+The application user for solution checker requires an access mode of **'Non-Interactive'** or **'Read-Write'** in order to communicate with the Common Data Service organization. If the access mode has been changed to another value such as **'Administrative'**, then attempts to run analysis, download results, and run cancelation will fail.
 
 To resolve this issue, you must update the **'PowerApps Checker'** application user with 'Non-interactive' access mode.
 
@@ -130,7 +130,7 @@ To update the access mode for the PowerApps Checker user:
 ![Access Mode](media/solution-checker-access-mode.png)
 
 5. Save and close the user form.
-6. Run Solution Checker again.
+6. Run solution checker again.
 
 ## Solution Checker fails due to disabled application user
 
@@ -151,11 +151,11 @@ The PowerApps Checker application user in the Common Data Service organization c
 
 ![Enable user from form](media/solution-checker-enable-application-user-form.png)
 
-## Common plugin conditions that cause Solution Checker to fail
+## Common plugin conditions that cause solution checker to fail
 
-When Solution Checker receives and processes analysis requests, it must call the Common Data Service endpoint to retrieve/update relevant job data and export the selected solution(s). Each interaction made by the Solution Checker service with the Common Data Service could potentially trigger one or more plugin steps that have been registered on message submitted in the request. These plugins may in turn introduce conditions that prevent the message from being handled as expected by the Common Data Service and interrupt the ability of Solution Checker to process the requested analysis job. Similar situations can occur when downloading Solution Checker job results or canceling an in-progress analysis job.
+When solution checker receives and processes analysis requests, it must call the Common Data Service endpoint to retrieve/update relevant job data and export the selected solution(s). Each interaction made by the solution checker service with the Common Data Service could potentially trigger one or more plugin steps that have been registered on message submitted in the request. These plugins may in turn introduce conditions that prevent the message from being handled as expected by the Common Data Service and interrupt the ability of solution checker to process the requested analysis job. Similar situations can occur when downloading solution checker job results or canceling an in-progress analysis job.
 
-Typical Common Data Service operations requested by Solution Checker:
+Typical Common Data Service operations requested by solution checker:
 
 - Retrieve solution, systemuser, and organization entity data
 - Create, update, and retrieve analysis job, analysis component, and analysis result entity data
@@ -163,22 +163,22 @@ Typical Common Data Service operations requested by Solution Checker:
 
 ### Plugin step registered to execute in context of a unlicensed user
 
-When Solution Checker fails due to an "unlicensed user" exception, it is often caused by a triggered plugin step configured to execute in the context of a specific systemuser that is currently unlicensed. Ensure that any plugin steps that could be triggered by Solution Checker execute in context of a licensed user.
+When solution checker fails due to an "unlicensed user" exception, it is often caused by a triggered plugin step configured to execute in the context of a specific systemuser that is currently unlicensed. Ensure that any plugin steps that could be triggered by solution checker execute in context of a licensed user.
 
 >[!IMPORTANT]
 >It is highly recommended that plugin steps be configured to execute in context of the calling user rather than specific users which are subject to assigned license being revoked.
 
 ### Plugin step performs operations that require privileges not granted to PowerApps Checker application user
 
-When Solution Checker fails due to Common Data Service denying access based on a missing privilege, it is often caused by a triggered plugin step that performs operations that require privileges not currently granted to the PowerApps Checker application user. Either reconfigure the plugin step to not execute on the operation invoked by Solution Checker or grant the PowerApps Checker application user the necessary privileges to execute the custom plugin step.
+When solution checker fails due to Common Data Service denying access based on a missing privilege, it is often caused by a triggered plugin step that performs operations that require privileges not currently granted to the PowerApps Checker application user. Either reconfigure the plugin step to not execute on the operation invoked by solution checker or grant the PowerApps Checker application user the necessary privileges to execute the custom plugin step.
 
 ### Plugin step unexpectedly interrupts execution by throwing InvalidPluginExecutionException
 
-When Solution Checker fails due to the error "ISV aborted code", a plugin step was triggered that explicitly interrupted execution by throwing an InvalidPluginExcecutionException. Either reconfigure the plugin step to not execute on the operation invoked by Solution Checker or adjust the plugin implementation not to interrupt execution based on the conditions presented by Solution Checker.
+When solution checker fails due to the error "ISV aborted code", a plugin step was triggered that explicitly interrupted execution by throwing an InvalidPluginExcecutionException. Either reconfigure the plugin step to not execute on the operation invoked by solution checker or adjust the plugin implementation not to interrupt execution based on the conditions presented by solution checker.
 
-## Solution Checker fails due to disabled first-party application in AAD
+## Solution checker fails due to disabled first-party application in AAD
 
-The first-party enterprise application identity used by Solution Checker (PowerApps-Advisor) should not be disabled in Azure Active Directory (AAD). If disabled, the identity cannot authenticate when requesting bearer tokens for Common Data Service and other required resource providers on-behalf of the requesting user.
+The first-party enterprise application identity used by solution checker (PowerApps-Advisor) should not be disabled in Azure Active Directory (AAD). If disabled, the identity cannot authenticate when requesting bearer tokens for Common Data Service and other required resource providers on-behalf of the requesting user.
 
 Follow the below steps to verify that the application identity hasn't been disabled in AAD and if necessary enable the application.
 
@@ -203,30 +203,30 @@ To verify and/or modify the enabled status of the PowerApps-Advisor enterprise a
 ![Enable PowerApps-Advisor app](media/solution-checker-enable-app.png)
 
 8. Select **Save**. The application is now enabled. You may need to wait a few minutes for change to propagate.
-9. Run Solution Checker again.
+9. Run solution checker again.
 
 > [!IMPORTANT]
 > You must have administrator privileges in Azure Active Directory (AAD) in order to edit enterprise applications.
 
-## Solution Checker fails to export solutions with draft Business Process Flow components
+## Solution checker fails to export solutions with draft Business Process Flow components
 
 If a solution contains a business process flow component in draft state that has never been previously activated, then Solution Checker will fail to export the solution for analysis. This error is not unique to Solution Checker and is caused by the business process flow having a dependency on a backing (custom) entity component that doesn't get created until the business process flow is activated for the first time. This issue can also occur if a business process flow is activated from within Solution Explorer.
 
 Reference [KB Article #4337537: Invalid Export - Business Process Entity Missing](https://support.microsoft.com/en-hk/help/4337537/invalid-export-business-process-entity-missing) for details about the issue and steps to resolve.
 
-## Solution Checker fails to export patched solutions
+## Solution cChecker fails to export patched solutions
 
 If a solution has had a [patch](https://docs.microsoft.com/powerapps/developer/common-data-service/create-patches-simplify-solution-updates) applied, Solution Checker will fail to export the solution for analysis. When a solution has had a patch applied, the original solution becomes locked and it can’t be changed or exported as long as there are dependent patches that exist in the organization that identify the solution as the parent solution.
 
 To resolve this issue, clone the solution so that all patches related to the solution are rolled into the newly-created solution. This unlocks the solution and allows the solution to be exported from the system.  For more information, see [Clone a Solution](use-segmented-solutions-patches-simplify-updates.md#clone-a-solution).
 
-## Solution Checker will not analyze empty solutions
+## Solution checker will not analyze empty solutions
 
-If Solution Checker exports a solution that contains no components to analyze, it will terminate further processing and consider the run a failure. Ensure that the selected solution submitted for a Solution Checker analysis contains at least one component.
+If Solution Ccecker exports a solution that contains no components to analyze, it will terminate further processing and consider the run a failure. Ensure that the selected solution submitted for a Solution Checker analysis contains at least one component.
 
 ## Solution Checker fails to export large solutions
 
-The primary scenario for failure to export a large solution from the Common Data Service environment involves a timeout exception on the export request. This will occur if the request exceeds 20 minutes. Large solutions, such as the Default Solution, may fail to get exported within this timeframe, and the check will not complete successfully. If Solution Checker encounters a timeout during export, it will retry three times before it fails to process the job, so it may take over an hour before you receive a failure notification.
+The primary scenario for failure to export a large solution from the Common Data Service environment involves a timeout exception on the export request. This will occur if the request exceeds 20 minutes. Large solutions, such as the Default Solution, may fail to get exported within this time frame, and the check will not complete successfully. If solution checker encounters a timeout during export, it will retry three times before it fails to process the job, so it may take over an hour before you receive a failure notification.
 
 The workaround is to create smaller solutions with fewer components to be analyzed. If the large file size of the solution is due to many plug-in assembly components, please see guidance to [Optimize custom assembly development](../../developer/common-data-service/best-practices/business-logic/optimize-assembly-development.md).
 
@@ -240,15 +240,15 @@ The workaround is to create smaller solutions with fewer components to be analyz
 
 ## Line number references for issues in HTML resources with embedded JavaScript are not correct
 
-When HTML web resources are processed within Solution Checker, the HTML web resource is processed separately than the JavaScript within the HTML web resource. Due to this, the line number of the violation found within `<script>` of the HTML web resource will not be correct.
+When HTML web resources are processed within solution checker, the HTML web resource is processed separately than the JavaScript within the HTML web resource. Due to this, the line number of the violation found within `<script>` of the HTML web resource will not be correct.
 
 ## Web-unsupported-syntax issue for web resources
 
-ECMAScript 6 (2015) or later versions are not currently supported for Solution Checker. When Solution Checker analyzes JavaScript using ECMAScript 6 or later, a web-supported-syntax issue for the web resource is reported.  
+ECMAScript 6 (2015) or later versions are not currently supported for solution checker. When solution checker analyzes JavaScript using ECMAScript 6 or later, a web-supported-syntax issue for the web resource is reported.  
 
 ## Multiple violations reported for plug-ins and workflow activities based on call scope
 
-For plug-in and workflow activity rules where the issue is only relevant in the calling context, the Solution Checker tool starts its analysis at the IPlugin interface implementation and traverses a call graph to detect issues within the scope of that implementation.  In some cases, many call paths may arrive at the same location where the issue is detected.  Since the issue is relevant to the call scope, the tool may report based on that scope to provide a better picture of impact rather than on distinct locations. As a result, multiple issues may reference a single location that should be fixed.
+For plug-in and workflow activity rules where the issue is only relevant in the calling context, the solution checker tool starts its analysis at the IPlugin interface implementation and traverses a call graph to detect issues within the scope of that implementation.  In some cases, many call paths may arrive at the same location where the issue is detected.  Since the issue is relevant to the call scope, the tool may report based on that scope to provide a better picture of impact rather than on distinct locations. As a result, multiple issues may reference a single location that should be fixed.
 
 ## See also
 

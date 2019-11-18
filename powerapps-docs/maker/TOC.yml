@@ -1448,6 +1448,8 @@
       href: ./common-data-service/solution-history.md      
     - name: Use solution checker
       href: ./common-data-service/use-powerapps-checker.md
+    - name: "Common issues and resolutions: solution checker"
+      href: ./common-data-service/common-issues-resolutions-solution-checker.md
     - name: Use segmented solutions
       href: ./common-data-service/use-segmented-solutions-patches-simplify-updates.md
     - name: Change the solution publisher prefix
