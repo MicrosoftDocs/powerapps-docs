@@ -111,7 +111,7 @@ You can find information about size limits on text, hyperlinks, images, and medi
 
 PowerApps per app plan allows individual users to run 2 applications on a single portal for a specific business scenario based on the full capabilities of PowerApps. This plan provides an easy way for users to get started with the platform before broader scale adoption.
 
-After an admin allocates PowerApps per app plan to an environment, they're assigned to users by default when app is shared with them. You can see how an admin allocates per app plans [here](https://docs.microsoft.com/power-platform/admin/capacity-add-on).
+After an admin allocates PowerApps per app plan to an environment, they're assigned to unlicensed users when an app in that environment is shared with them. You can see how an admin allocates per app plans [here](https://docs.microsoft.com/power-platform/admin/capacity-add-on).
 
 Follow these steps to turn off the assigning per app plans for users when an app is shared with them:
 
@@ -123,6 +123,8 @@ The **Auto assign per app passes** toggle appears in all app setting.
 
 > [!NOTE]
 > Disabling the per app plan is currently available for only canvas apps.  Model-driven apps and Portals will have this ability in the future.
+>
+> The ability to control per app plan assignment for an app is only available for apps that are in an environment that had Per app plans allocated in the [Power Platform Admin center](https://admin.powerplatform.microsoft.com).  
 
 ### App Settings
 
