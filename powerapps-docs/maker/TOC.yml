@@ -174,20 +174,30 @@
           items:
             - name: Common Data Service
               href: canvas-apps/connections/connection-common-data-service.md
+            - name: Cloud storage
+              href: canvas-apps/connections/cloud-storage-blob-connections.md
+            - name: Dynamics 365
+              href: canvas-apps/connections/connection-dynamics-crmonline.md
+            - name: Dynamics AX
+              href: canvas-apps/connections/connection-dynamicsax.md
+            - name: Excel
+              href: canvas-apps/connections/connection-excel.md
+            - name: Microsoft Translator
+              href: canvas-apps/connections/connection-microsoft-translator.md
+            - name: Office 365 Outlook
+              href: canvas-apps/connections/connection-office365-outlook.md
+            - name: Office 365 Users
+              href: canvas-apps/connections/connection-office365-users.md
+            - name: Oracle database
+              href: canvas-apps/connections/connection-oracledb.md
+            - name: Power BI
+              href: canvas-apps/connections/connection-powerbi.md
             - name: SharePoint
               href: canvas-apps/connections/connection-sharepoint-online.md
             - name: SQL Server
               href: canvas-apps/connections/connection-azure-sqldatabase.md
-            - name: Dynamics 365
-              href: canvas-apps/connections/connection-dynamics-crmonline.md
-            - name: Office 365 Users
-              href: canvas-apps/connections/connection-office365-users.md
-            - name: Office 365 Outlook
-              href: canvas-apps/connections/connection-office365-outlook.md
-            - name: Excel
-              href: canvas-apps/connections/connection-excel.md
-            - name: Cloud storage
-              href: canvas-apps/connections/cloud-storage-blob-connections.md
+            - name: Twitter
+              href: canvas-apps/connections/connection-twitter.md 
         - name: Add a connection
           href: ./canvas-apps/add-data-connection.md
         - name: Manage connections
