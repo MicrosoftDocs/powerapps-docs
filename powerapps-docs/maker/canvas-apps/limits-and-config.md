@@ -124,7 +124,7 @@ The **Auto assign per app passes** toggle appears in all app setting.
 > [!NOTE]
 > Disabling the per app plan is currently available for only canvas apps.  Model-driven apps and Portals will have this ability in the future.
 >
-> The ability to control per app plan assignment for an app is only available for apps that are in an environment that have Per app plans allocated.  
+> The ability to control per app plan assignment for an app is only available for apps that are in an environment that had Per app plans allocated in https://admin.powerplatform.microsoft.com.  
 
 ### App Settings
 
