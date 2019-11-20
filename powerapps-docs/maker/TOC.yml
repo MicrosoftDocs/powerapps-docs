@@ -365,7 +365,7 @@
           - name: Common properties
             items:
             - name: Accessibility
-              href: ./canvas-apps/controls/properties-accessibility.md.md
+              href: ./canvas-apps/controls/properties-accessibility.md
             - name: Color and border
               href: ./canvas-apps/controls/properties-color-border.md
             - name: Core
