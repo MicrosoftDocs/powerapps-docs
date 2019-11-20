@@ -32,7 +32,7 @@ search.app:
 > [!div class="mx-imgBorder"] 
 > ![](media/icon-in-opportunity-view.png "All Opportunities view with Rating column displaying icons and text value")
   
-Custom icons in list views can display in Unified Interface, classic web client, mobile app, and App for Outlook. 
+Custom icons in list views can display in Unified Interface, legacy web client, mobile app, and App for Outlook. 
   
 ## Add custom graphics and JavaScript as web resources  
   
