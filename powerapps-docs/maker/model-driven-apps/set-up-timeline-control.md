@@ -99,16 +99,16 @@ As a customizer, you can choose for which entities you want to show the activiti
 
 6.	Select the **Account for Interactive experience** record that is of **Main** form type. The **Account Account for Interactive experience** form opens in a new browser window.
 
-   > [!div class=mx-imgBorder] 
-   > ![Select the entity form with interactive experience in the name](media/account-interactive-experience.png "Select the entity form with interactive experience in the name")
+    > [!div class=mx-imgBorder] 
+    > ![Select the entity form with interactive experience in the name](media/account-interactive-experience.png "Select the entity form with interactive experience in the name")
 
-   For Unified Interface, you need to use the form name that has `<Entity> for Interactive experience`. The form names for other entities are as follows:
+    For Unified Interface, you need to use the form name that has `<Entity> for Interactive experience`. The form names for other entities are as follows:
 
-   | Entity | Name |
-   |--------------------------|----------------------------------|
-   | Account | Account for Interactive experience |
-   | Case | Case for Interactive experience |
-   | Contact | Contact for Interactive experience |
+    | Entity | Name |
+    |--------------------------|----------------------------------|
+    | Account | Account for Interactive experience |
+    | Case | Case for Interactive experience |
+    | Contact | Contact for Interactive experience |
 
 7.	Double-click the **Conversation Tabs** field in the **Timeline** section. The **Activities Tab Properties** dialog is displayed.
 
