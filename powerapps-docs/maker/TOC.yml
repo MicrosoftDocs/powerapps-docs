@@ -298,6 +298,8 @@
               href: ./canvas-apps/controls/control-column.md
             - name: Combo box
               href: ./canvas-apps/controls/control-combo-box.md
+            - name: Container (experimental)
+              href: ./canvas-apps/controls/control-container.md
             - name: Data table
               href: ./canvas-apps/controls/control-data-table.md
             - name: Date picker
@@ -358,6 +360,20 @@
               href: ./canvas-apps/controls/control-audio-video.md
             - name: Web barcode scanner (experimental)
               href: ./canvas-apps/controls/control-barcodescanner.md
+          - name: Common properties
+            items:
+            - name: Accessibility
+              href: ./canvas-apps/controls/properties-accessibility.md.md
+            - name: Color and border
+              href: ./canvas-apps/controls/properties-color-border.md
+            - name: Core
+              href: ./canvas-apps/controls/properties-core.md
+            - name: Image
+              href: ./canvas-apps/controls/properties-visual.md
+            - name: Size and location
+              href: ./canvas-apps/controls/properties-size-location.md
+            - name: Text
+              href: ./canvas-apps/controls/properties-text.md
       - name: Configure app functionality
         items:
         - name: Get started with formulas
