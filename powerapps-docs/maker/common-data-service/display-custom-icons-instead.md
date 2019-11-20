@@ -162,7 +162,7 @@ function displayIconTooltip(rowData, userLCID) {
 In the grid list view, custom icons applied to the entity primary field replace the default system generated icon. 
 
 > [!div class="mx-imgBorder"] 
-> ![](media/mobile-primary-field-custom-icon-display.png "Mobile primary field custom icon view")
+> ![](media/mobile-primary-field-custom-icon-display.png "Topic primary field replaces default icon in the custom icon view")
 
 ### Other fields 
 In the grid list view, custom icons applied to a field that isn't the entity primary field display as a secondary icon in addition to the default system generated icon. 
