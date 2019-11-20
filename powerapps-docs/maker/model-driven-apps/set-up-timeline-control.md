@@ -145,7 +145,32 @@ Since, the example considered in this procedure is Account. Let us see the Email
    | Display activity header using | Default format |
    | Display activities using | Default fields |
 
-  
+   > [!div class=mx-imgBorder] 
+   > ![Email activity in timeline](media/timeline-email-activity1.png "Email activity in timeline")
+
+   The default fields for an email activity in the collapsed mode contains the following:
+
+   1. Email from \<Owner\>
+   2. Subject
+   3. Description
+
+After modifying the **Email card** form (from the Email entity), and updating the options in the **Account for Interactive experience** form in the Account entity, you can view see the changes.
+
+   | Field | Value |
+   |---------------------------|---------------------------|
+   | Display activity header using | Field labels |
+   | Display activities using | Card form |
+   | Select activity | Email |
+   | Select card form | Email Card form |
+
+   > [!div class=mx-imgBorder] 
+   > ![Email activity in timeline](media/timeline-email-activity2.png "Email activity in timeline")
+
+   The default fields for an email activity in the collapsed mode contains the following:
+
+   1. \<Owner\> name
+   2. Priority
+   3. Description
 
 ## Customize field sections
 
