@@ -2,7 +2,7 @@
 title: "Display custom icons alongside values in list views with PowerApps | MicrosoftDocs"
 description: "Learn how to display custom icon graphics in a view"
 ms.custom: ""
-ms.date: 02/14/2019
+ms.date: 11/20/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -32,10 +32,9 @@ search.app:
 > [!div class="mx-imgBorder"] 
 > ![](media/icon-in-opportunity-view.png "All Opportunities view with Rating column displaying icons and text value")
   
-> [!NOTE]
->  Grid icons are only shown in the web interface. They are not shown in [!INCLUDE[pn_Outlook_short](../../includes/pn-outlook-short.md)] or the mobile app.  
+Custom icons in list views can display in Unified Interface, classic web client, mobile app, and App for Outlook. 
   
-### Add custom graphics and JavaScript as web resources  
+## Add custom graphics and JavaScript as web resources  
   
 1.  Create the new graphic files needed for your customization. We recommend an icon size of 16x16 pixels (larger images will be scaled down).  
   
@@ -156,7 +155,24 @@ function displayIconTooltip(rowData, userLCID) {
   
  <!-- This results in displaying icons with tooltips in the **Rating** column that depend on the value in each row. The result could look like this:  
   
- ![Custom column graphics example](../customize/media/custom-column-graphics-example.png "Custom column graphics example")  -->
+ ![Custom column graphics example](../customize/media/custom-column-graphics-example.png "Custom column graphics example")  --> 
+
+## Custom icon view display behavior
+### Primary fields 
+In the grid list view, custom icons applied to the entity primary field replace the default system generated icon. 
+
+![Mobile primary field custom icon view](media/mobile-primary-field-custom-icon-display.png)
+
+### Other fields 
+In the grid list view, custom icons applied to a field that isn't the entity primary field display as a secondary icon in addition to the default system generated icon. 
+
+![Not an entity primary field custom icon view](media/card-form-not-primary-field.png)
+
+### Card forms
+Custom icons replace the default system generated icon when the view is configured to use a card form. 
+
+![Card view custom icon view](media/card-view-icon-display.png)
+
  
  ### See also
 [Understand model-driven app views](../model-driven-apps/create-edit-views.md)
