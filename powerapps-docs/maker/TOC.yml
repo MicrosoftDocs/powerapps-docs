@@ -272,6 +272,8 @@
             href: ./canvas-apps/add-images-pictures-audio-video.md
           - name: Add Power BI data
             href: ./canvas-apps/powerapps-custom-visual.md
+          - name: Working with gallery
+            href: ./canvas-apps/show-images-text-gallery-sort-filter.md
           - name: Control reference
             items:
             - name: List of controls and properties
