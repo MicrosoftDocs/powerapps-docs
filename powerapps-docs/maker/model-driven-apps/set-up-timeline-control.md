@@ -39,16 +39,27 @@ The modules are Activities, Posts, and Notes. As a customizer, you can choose wh
 
 3.	Go to **Settings** > **Customization** > **Customize the System**. The solution explorer page opens in a new browser window. 
 
-4.	 Expand **Entities** under **Components** in the default solution pane.
+4.	Expand **Entities** under **Components** in the default solution pane.
 
 5.	Select an entity and select **Forms**. For example, select the Account entity.
 
-6.	Select the **Account** record that is of **Main** form. The **Account** form opens in a new browser window.
+6.	Select the **Account for Interactive experience** record that is of **Main** form type. The **Account Account for Interactive experience** form opens in a new browser window.
 
-7.	Double-click the field in the **Social Pane** section. The **Activities Tab Properties** dialog is displayed.
+   > [!div class=mx-imgBorder] 
+   > ![Select the entity form with interactive experience in the name](media/account-interactive-experience.png "Select the entity form with interactive experience in the name")
+
+   For Unified Interface, you need to use the form name that has `<Entity> for Interactive experience`. The form names for other entities are as follows:
+
+   | Entity | Name |
+   |--------------------------|----------------------------------|
+   | Account | Account for Interactive experience |
+   | Case | Case for Interactive experience |
+   | Contact | Contact for Interactive experience |
+
+7.	Double-click the **Conversation Tabs** field in the **Timeline** section. The **Activities Tab Properties** dialog is displayed.
 
     > [!div class=mx-imgBorder] 
-    > ![Double-click the field in the social pane](media/social-pane-field.png "Double-click the field in the social pane")   
+    > ![Double-click the field in the social pane](media/timeline-conversation-tabs-field.png "Double-click the field in the social pane")   
 
 8.	Select **Show selected** option for the **Show these modules** field in the **Filter by** container.
 
@@ -57,13 +68,13 @@ The modules are Activities, Posts, and Notes. As a customizer, you can choose wh
 10.	Specify the following in the **Additional Options** container.
 
 
-    | Field/option | Value |
-    |------------------------------------------|--------------------------------------------------------------|
-    | Default Module for Create Experience | Select the module for which you want the default create experience in the timeline. <br> The default value is **Notes**.  |
-    | Show filter pane | Select the checkbox if you want to display the filter icon for the users. If you leave the check box empty, then there will be no filters for the users. |
+    | Field/option | Description | Value |
+    |------------------------------------------|--------------------------------------------------------------|---------------------------|
+    | Default Module for Create Experience | Select the module for which you want the default create experience in the timeline. <br><br> The default value is **Notes**.  | Notes |
+    | Show filter pane | Select the checkbox if you want to display the filter icon for the users. If you leave the check box empty, then there will be no filters for the users. |  |
     | Expand filter pane by default | Select the checkbox, by default, if you want to show the filter pane in the expanded mode. |
-    | Sort | Select the sorting order based on which the records are displayed on the timeline. The sorting is based on the field you choose for Activities. If a field doesn’t exist for the Post, Notes or activity then the sorting is done based on the **Last Updated** field. <br>The default sort order is **Descending**.  |
-    | Number of results | The maximum number of records that are displayed on the timeline before selecting the **More** option. Each time you select the **More** option, timeline displays the configured number of records. Default value is 10 and you can configure a value ranging from 1 to 50. |
+    | Sort | Select the sorting order based on which the records are displayed on the timeline. The sorting is based on the field you choose for Activities. If a field doesn’t exist for the Post, Notes or activity then the sorting is done based on the **Last Updated** field. <br><br>The default sort order is **Descending**.  | Descending |
+    | Number of results | The maximum number of records that are displayed on the timeline before selecting the **More** option. Each time you select the **More** option, timeline displays the configured number of records. You can configure a value ranging from 1 to 50. <br><br> The default value is **10**. | 10 |
 
     > [!div class=mx-imgBorder] 
     > ![Set up timeline module](media/timeline-module.png "set up timeline module")
@@ -86,24 +97,35 @@ As a customizer, you can choose for which entities you want to show the activiti
 
 5.	Select an entity and select **Forms**. For example, select the Account entity.
 
-6.	Select the **Account** record that is of **Main** form. The **Account** form opens in a new browser window.
+6.	Select the **Account for Interactive experience** record that is of **Main** form type. The **Account Account for Interactive experience** form opens in a new browser window.
 
-7.	Double-click the field in the **Social Pane** section. The **Activities Tab Properties** dialog is displayed.
+   > [!div class=mx-imgBorder] 
+   > ![Select the entity form with interactive experience in the name](media/account-interactive-experience.png "Select the entity form with interactive experience in the name")
+
+   For Unified Interface, you need to use the form name that has `<Entity> for Interactive experience`. The form names for other entities are as follows:
+
+   | Entity | Name |
+   |--------------------------|----------------------------------|
+   | Account | Account for Interactive experience |
+   | Case | Case for Interactive experience |
+   | Contact | Contact for Interactive experience |
+
+7.	Double-click the **Conversation Tabs** field in the **Timeline** section. The **Activities Tab Properties** dialog is displayed.
 
     > [!div class=mx-imgBorder] 
-    > ![Double-click the field in the social pane](media/social-pane-field.png "Double-click the field in the social pane") 
+    > ![Double-click the field in the social pane](media/timeline-conversation-tabs-field.png "Double-click the field in the social pane") 
 
 8.	Select **Show selected** option for the **Show these activities** field in the **Filter by** container.
 
 9.	Select the activities you want to display to the users.
 
-10.	Select an option from the list for the **Sort timeline by** option in the **Data** container. For example, select the **Last Updated** option.
+10. Select an option from the list for the **Sort timeline by** option in the **Data** container. For example, select the **Last Updated** option.
 
 11.	Specify the following in the **Additional Options** container.
     
     | Field/option | Description |Value |
     |------------------------------------------|------------------------------------------------------------|-------------------|
-    | Display activity header using |  Possible values are **Default format** and **Field Labels**. | Default format |
+    | Display activity header using |  Possible values are **Default format** and **Field Labels**. <br><br> **Note:** <ul><li> If you select **Default format**, then you must always select **Default Fields** for the **Display activities using** field.</li> <li> If you select **Field Labels**, then you can either select the **Default Fields** or **Card Form** for the **Display activities using** field. </li> <li> When you select **Default format** and select **Card Form** for the **Display activities using** field, then the system ignores the **Card Form** value and uses the **Defaults Fields** to display the activities. </li> <ul>| Default format |
     | Create activities using | Select on how you want the users to create activities. Possible values are **Quick Create Form** and **Main Form**. | Quick Create Form |
     | Display activities using | Select how you want to display the activities. Possible values are **Default Fields** and **Card Form**.  If you select **Card Form**, then you need to select a card form for the activity.  | |
     | Select activity | Select an activity from the list.  <br><br> **Note:** This field appears only when you select **Card Form** for the **Display activities using** field.| Email |
@@ -115,6 +137,15 @@ As a customizer, you can choose for which entities you want to show the activiti
 12.	Select **OK**, and then select **Save**.
 
 13.	Select **Publish** to publish the customizations.
+
+Since, the example considered in this procedure is Account. Let us see the Email activity in the Timeline control of an account page.
+
+   | Field | Value |
+   |---------------------------|---------------------------|
+   | Display activity header using | Default format |
+   | Display activities using | Default fields |
+
+  
 
 ## Customize field sections
 
