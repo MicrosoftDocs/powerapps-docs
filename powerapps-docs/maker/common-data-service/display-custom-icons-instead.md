@@ -161,17 +161,20 @@ function displayIconTooltip(rowData, userLCID) {
 ### Primary fields 
 In the grid list view, custom icons applied to the entity primary field replace the default system generated icon. 
 
-![Mobile primary field custom icon view](media/mobile-primary-field-custom-icon-display.png)
+> [!div class="mx-imgBorder"] 
+> ![](media/mobile-primary-field-custom-icon-display.png "Mobile primary field custom icon view")
 
 ### Other fields 
 In the grid list view, custom icons applied to a field that isn't the entity primary field display as a secondary icon in addition to the default system generated icon. 
 
-![Not an entity primary field custom icon view](media/card-form-not-primary-field.png)
+> [!div class="mx-imgBorder"] 
+> ![](media/card-form-not-primary-field.png "Not an entity primary field custom icon view")
 
 ### Card forms
 Custom icons replace the default system generated icon when the view is configured to use a card form. 
 
-![Card view custom icon view](media/card-view-icon-display.png)
+> [!div class="mx-imgBorder"] 
+> ![](media/card-view-icon-display.png "Card view custom icon view")
 
  
  ### See also
