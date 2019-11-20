@@ -168,7 +168,7 @@ After modifying the **Email card** form (from the Email entity), and updating th
 
    The default fields for an email activity in the collapsed mode contains the following:
 
-   1. \<Owner\> name
+   1. Owner \<Name\>
    2. Priority
    3. Description
 
