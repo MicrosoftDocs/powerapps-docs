@@ -6,7 +6,7 @@ manager: shujoshi
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/07/2019
+ms.date: 11/22/2019
 ms.author: shjais
 ms.reviewer:
 ---
@@ -51,14 +51,14 @@ The powerbi tag accepts the following parameters:
 Path of the Power BI report or dashboard. If the Power BI report or dashboard is secure, you must provide the authentication type.
 
 ```
-{% powerbi path:"https://app.powerbi.com/groups/00000000-0000-0000-0000-000000000000/reports/00000000-0000-0000-0000-000000000001/ReportSection01" %}
+{% powerbi authentication_type:"powerbiembedded" path:"https://app.powerbi.com/groups/00000000-0000-0000-0000-000000000000/reports/00000000-0000-0000-0000-000000000001/ReportSection01" %}
 ```
 
 **authentication_type**
 
 Type of authentication required for the Power BI report or dashboard. Valid values for this parameter are:
 
-- **Anonymous**: Allows you to embed publish to web Power BI reports. The default authentication type is Anonymous.
+- **Anonymous**: Allows you to embed publish to web Power BI reports. The default authentication type is Anonymous. When using the authentication type as Anonymous, you must get the Power BI report URL as described at: [Publish to web from Power BI](https://docs.microsoft.com/power-bi/service-publish-to-web)
 
 - **AAD**: Allows you to share secure Power BI reports or dashboards to Power BI Azure Active Directory authenticated users.
 

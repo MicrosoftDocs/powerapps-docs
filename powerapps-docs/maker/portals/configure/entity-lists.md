@@ -157,7 +157,7 @@ Enabling a **Create Action** renders a button above the entity list that, when s
 | Button Label                                                                                                                                                                                                                 | Overrides the HTML label displayed in the Create action button above the list.                                                                                        |
 | Button Tooltip                                                                                                                                                                                                               | Overrides the tooltip text that appears when the user points to the Create action button.                                                                         |
 
-**Create Form dialog box avanced settings**
+**Create Form dialog box advanced settings**
 
 |**Name**               |**Description**                                                                                                                                 |
 |------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
