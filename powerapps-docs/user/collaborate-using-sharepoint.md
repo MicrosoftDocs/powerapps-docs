@@ -38,11 +38,13 @@ By default, the location is set to Documents on Default Site 1.
 
 The document file appears in the **Document Associated Grid** view. 
 
-![Add document to SharePoint](media/add-doc-sharepoint.png)
+> [!div class="mx-imgBorder"] 
+> ![](media/add-doc-sharepoint.png "Add document to SharePoint")
 
 The document also appears on the SharePoint site folder location. 
 
-![Document on SharePoint](media/doc-on-sharepoint.png)
+> [!div class="mx-imgBorder"] 
+> ![](media/doc-on-sharepoint.png "Document on SharePoint")
 
 ## Manage SharePoint locations
 You can create new or edit existing SharePoint locations from a model-driven app.
@@ -53,6 +55,9 @@ The **Edit Location** dialog box appears.
 3. The display name, parent site, and folder name are automatically populated. Enter details about the new location, and then select **Save**.
 4. To add a location, on the command bar, select **Add Location**.
 5. The **Add Location** dialog box appears.
+
+    > [!div class="mx-imgBorder"] 
+    > ![](media/add-location-dialog-box.png "Add location dialog box")
 6. The display name, parent site, and folder name are automatically populated. Change the details if required, and then select **Save**.
 
 ## Actions on documents
