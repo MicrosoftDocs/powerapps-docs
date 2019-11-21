@@ -68,6 +68,8 @@
         href: ../user/track-your-progress-with-dashboard-and-charts.md
       - name: Add Power BI dashboards 
         href: ../user/add-powerbi-dashboards.md
+      - name: Collaborate using SharePoint 
+        href: ../user/collaborate-using-sharepoint.md        
     - name: Search records
       items:
       - name: Compare search and find options
