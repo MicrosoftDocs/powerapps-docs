@@ -26,7 +26,7 @@ Model-driven apps
 
 ## Return Value
 
-**Type**: [Entityreference](../entityreference.md)
+**Type**: [EntityReference](../entityreference.md)
 
 
 ### Related topics

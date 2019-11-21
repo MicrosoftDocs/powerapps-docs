@@ -22,13 +22,13 @@ Code components let you transform fields that traditionally contain text into vi
 
 ## Add a code component to a field
 
-Following the steps in this procedure will change the default label and text box field of the **Budget Amount** field to the slider code component on the Opportunity entity. You can use similar steps to replace an existing field with a code component or configure a code component for a custom field.
+Following the steps below will change the default label and text box field of the **Budget Amount** field to the slider code component on the Opportunity entity. You can use similar steps to replace an existing field with a code component or configure a code component for a custom field.
 
 1. Open solution explorer.
 
 2. Expand **Entities**, expand the entity that you want, such as the **Opportunity** entity, select **Forms**, and then open a form such as the **Main** form.
 
-3. In the form editor, double-click the field where you want to add a code component, such as the **Budget Amount** field on the opportunity main form. Alternatively, you can create a custom field.
+3. In the form editor, double-click the field where you want to add a code component, such as the **Budget Amount** field on the opportunity main form. You can also create a custom field.
 
 4. On the **Field Properties** page, select the **Controls** tab, and then select **Add Control**.
 
@@ -53,17 +53,17 @@ Following the steps in this procedure will change the default label and text box
    > [!div class="mx-imgBorder"] 
    > ![Add custom control properties](../../maker/model-driven-apps/media/ccf-add-properties.png "Add custom control properties")
 
-   - **Min**. Set the minimum accepted value. You can bind a static value that you enter or bind the value to an existing field. In this example **Bind to static value** is **Currency** and the minimum value that can be entered is *zero*.  
+   - **Min**. Set the minimum accepted value. You can bind a static value that you enter or binds the value to an existing field. In this example **Bind to static value** is **Currency** and the minimum value that can be entered is *zero*.  
   
        - **Bind to a static value**. Select the data type, such as a whole number (Whole.None), currency, floating point (FP), or decimal. Next, enter a number that represents the minimum accepted value for the field.  
   
        - **Bind to values on a field**. Select a field from the list that will be used as the minimum accepted value.  
   
-   - **Max**. Set the maximum accepted value for the field. Similar to the Min value, you can bind a static value that you enter or bind the value to an existing field as described earlier. In this example, **Bind to static value** is **Currency** and the maximum value that can be entered is **1 billion**.  
+   - **Max**. Set the maximum accepted value for the field. Similar to the Min value, you can bind a static value that you enter or binds the value to an existing field as described earlier. In this example, **Bind to static value** is **Currency** and the maximum value that can be entered is **1 billion**.  
   
    - **Step**. This represents the unit to increment or decrement when adding to or subtracting from  the current value. For example, for budget amount you can select 100 dollar increments\decrements.  
   
-   - **Hide Default Control**. Selecting this option hides the component so neither the component or the data is displayed in any of the clients that don't support the code component.   
+   - **Hide Default Control**. Hides the component so neither the component or the data is displayed in any of the clients that don't support the code component.   
   
 8. Select **OK**, to close the Field Properties page.  
   
