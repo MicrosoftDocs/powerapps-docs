@@ -42,7 +42,7 @@ Custom icons in list views can display in Unified Interface, legacy web client, 
   
 2.  Write one or more JavaScript functions that establish which icons to show for which values (you'll typically need one function for each column you want to customize). Each function must accept a row data object and a language (LCID) code as input and return an array containing an image name and tooltip text. For an example function, see [Sample JavaScript function](#SampleJavascript), later in this article.  
   
-3.  Sign into your environment as an administrator and open solution explorer.  
+3.  Sign into your environment as an administrator and open [solution explorer](../model-driven-apps/advanced-navigation.md#solution-explorer).  
   
 4.  The **Default Solution** pop-up window opens. Navigate to **Components** > **Web Resources** here.  
   
