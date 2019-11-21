@@ -40,13 +40,13 @@ Custom icons in list views can display in Unified Interface, legacy web client, 
   
 1.  Create the new graphic files needed for your customization. We recommend an icon size of 16x16 pixels (larger images will be scaled down).  
   
-2.  Write one or more JavaScript functions that establish which icons to show for which values (you'll typically need one function for each column you want to customize). Each function must accept a row data object and a language (LCID) code as input and return an array containing an image name and tooltip text. For an example function, see [Sample JavaScript function](#SampleJavascript), later in this topic.  
+2.  Write one or more JavaScript functions that establish which icons to show for which values (you'll typically need one function for each column you want to customize). Each function must accept a row data object and a language (LCID) code as input and return an array containing an image name and tooltip text. For an example function, see [Sample JavaScript function](#SampleJavascript), later in this article.  
   
 3.  Sign into your environment as an administrator and open solution explorer.  
   
 4.  The **Default Solution** pop-up window opens. Navigate to **Components** > **Web Resources** here.  
   
-5.  Now, you'll upload your custom graphics, one at a time, as web resources. Select the **New** button in the toolbar to create a new web resource. Another pop-up window opens to help you create the resource. Do the following:  
+5.  Now, you'll upload your custom graphics, one at a time, as web resources. Select the **New** button in the toolbar to create a new web resource. Another pop-up window opens to help you create the resource. Follow these steps:  
   
     1.  Give the new resource a meaningful **Name**. This is the name that you'll use to refer to each graphic from your JavaScript code.  
   
@@ -90,7 +90,7 @@ Custom icons in list views can display in Unified Interface, legacy web client, 
   
 14. Repeat these steps for each entity, view, and column as needed.  
   
-15. When you are ready, select **Publish All Customizations** to publish  your changes. Then, close the **Default Solution** window.  
+15. When you're ready, select **Publish All Customizations** to publish  your changes. Then, close the **Default Solution** window.  
   
 <a name="SampleJavascript"></a>   
 
@@ -161,19 +161,19 @@ function displayIconTooltip(rowData, userLCID) {
 
 ## Custom icon view display behavior
 ### Primary fields 
-In the grid list view, custom icons applied to the entity primary field replace the default system generated icon. 
+In the grid list view, custom icons applied to the entity primary field replace the default system-generated icon. 
 
 > [!div class="mx-imgBorder"] 
 > ![](media/mobile-primary-field-custom-icon-display.png "Topic primary field replaces default icon in the custom icon view")
 
 ### Other fields 
-In the grid list view, custom icons applied to a field that isn't the entity primary field display as a secondary icon in addition to the default system generated icon. 
+In the grid list view, custom icons applied to a field that isn't the entity primary field display as a secondary icon in addition to the default system-generated icon. 
 
 > [!div class="mx-imgBorder"] 
 > ![](media/card-form-not-primary-field.png "Not an entity primary field custom icon view")
 
 ### Card forms
-Custom icons replace the default system generated icon when the view is configured to use a card form. 
+Custom icons replace the default system-generated icon when the view is configured to use a card form. 
 
 > [!div class="mx-imgBorder"] 
 > ![](media/card-view-icon-display.png "Card view custom icon view")
