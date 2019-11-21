@@ -24,7 +24,7 @@ search.app:
 Manage common document types, such as Word, Excel, and PowerPoint and create folders to save and manage those documents that are seamlessly stored in SharePoint from within a model-driven app. 
 
 > [!NOTE]
-> This feature requires that your system administrator has enabled SharePoint document management. More information: Manage your documents using SharePoint (/power-platform/admin/manage-documents-using-sharepoint)
+> This feature requires that your system administrator has enabled SharePoint document management. More information: [Manage your documents using SharePoint](/power-platform/admin/manage-documents-using-sharepoint)
 
 For account and contact records, a default document location folder is automatically created on SharePoint the first time you go to the **Files** tab. For other standard or custom entity records, go to the **Related** > **Documents** tab. The name of the document location is in this format: <record_name>_<record_id>.
 
