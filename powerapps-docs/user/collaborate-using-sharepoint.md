@@ -31,13 +31,35 @@ For record types that support document management, a default document location (
 By default, the location is set to Documents on Default Site 1.
 
 ## Add a document
-1.	Open an account or contact record and select the Files tab. For other standard or custom entities that are enabled for document management, select the Related tab, and then select Documents.
+1.	Open an account or contact record and select the **Files** tab. For other standard or custom entities that are enabled for document management, select the **Related** tab, and then select **Documents**.
 2.	Choose from the following options. 
-    - To create a new document, select New, and then select the document type you want, such as Word, Excel, or OneNote, enter a name, and the select Save. The blank document opens in a new tab. 
-    - To add an existing document, select Upload, select Choose Dile, browse to and select the file you want, select Open, and the select OK. 
+    - To create a new document, select **New**, and then select the document type you want, such as Word, Excel, or OneNote, enter a name, and the select **Save**. The blank document opens in a new tab. 
+    - To add an existing document, select **Upload**, select **Choose File**, browse to and select the file you want, select **Open**, and then select **OK**. 
 
-The document file appears in the Document Associated Grid view. 
+The document file appears in the **Document Associated Grid** view. 
 
-<!-- insert screenshot --> 
+![Add document to SharePoint](media/add-doc-sharepoint.png)
 
-<!-- continue -->
+The document also appears on the SharePoint site folder location. 
+
+![Document on SharePoint](media/doc-on-sharepoint.png)
+
+## Manage SharePoint locations
+You can create new or edit existing SharePoint locations from a model-driven app.
+
+1. In the **Files** list on the command bar, select **Open Location**, and then select the location.
+2. To edit the location, on the command bar, select **Edit Location** > <location name>.
+The **Edit Location** dialog box appears.
+3. The display name, parent site, and folder name are automatically populated. Enter details about the new location, and then select **Save**.
+4. To add a location, on the command bar, select **Add Location**.
+5. The **Add Location** dialog box appears.
+6. The display name, parent site, and folder name are automatically populated. Change the details if required, and then select **Save**.
+
+## Actions on documents
+When you select one or more documents in the Documents list, you can take the following other common SharePoint actions on the documents:
+- Edit
+- Delete
+- Check in
+- Check out
+- Discard check out
+- Edit properties
