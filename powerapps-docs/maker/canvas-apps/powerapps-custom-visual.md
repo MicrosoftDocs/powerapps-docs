@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 09/23/2019
+ms.date: 11/20/2019
 ms.author: chmoncay
 search.audienceType: 
   - maker
@@ -87,9 +87,11 @@ The following table lists the browser supportability for view, create and modify
 |Microsoft Edge|&check;|&check;|&check;
 |Internet Explorer 11|&check;
 |Google Chrome|&check;|&check;|&check;
-|Safari|&check;
+|Safari \*|&check;
 |Mozilla Firefox
 |All other browsers
+
+\* In Safari, you must enable cross site tracking (**Preferences** > **Privacy**, and clear **Prevent cross site tracking**) to view PowerApps custom visual.
 
 ## Accessibility support
 

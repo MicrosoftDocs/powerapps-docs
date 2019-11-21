@@ -20,8 +20,6 @@ search.app:
 With Common Data Service, XRM tooling enables you to connect to your Common Data Service environment by using connection strings. This is similar to the concept of connection strings used with **SQL Server**. Connection strings have native support in configuration files, including the ability to encrypt the configuration sections for maximum security. This enables you to configure Common Data Service connections at deployment time, and not hard code in your application to connect to your Common Data Service environment.  
 
 
-
-
 <a name="Create"></a> 
 
 ## Create a connection string
@@ -84,7 +82,7 @@ CrmServiceClient svc = new CrmServiceClient(ConnectionString);
 
 ## Connection string examples
  
-The following examples show how you can use connection strings for connecting to online deployments and authentication scenarios. The connection string examples for on-premises and IFD deployment instances is now available in the Dynamics 365 Customer Engagement (on-premises) documentation at: [Use connection strings in XRM tooling to connect](/dynamics365/customer-engagement/on-premises/developer/xrm-tooling/use-connection-strings-xrm-tooling-connect) 
+The following examples show how you can use connection strings for connecting to online deployments and authentication scenarios. The connection string examples for on-premises and IFD deployment instances is now available in the Dynamics 365 Customer Engagement (on-premises) documentation at: [Use connection strings in XRM tooling to connect](/dynamics365/customerengagement/on-premises/developer/xrm-tooling/use-connection-strings-xrm-tooling-connect) 
 
 ### Named account using Office 365  
   
@@ -98,6 +96,7 @@ The following examples show how you can use connection strings for connecting to
 ```  
   
 ### OAuth using named account in Office 365 with UX to prompt for authentication  
+
 Create a new connection to Common Data Service using a UserID or Password via OAuth.
 
 > [!NOTE]
@@ -151,6 +150,7 @@ Create a new connection to Common Data Service using a Application or Client Id 
 ```
 
 ### ClientId or Client Secret based authentication
+
 Create a new connection to Common Data Service using a Application or Client Id and a Client Secret.
 ```xml
 <add name="MyCDSServer" 
