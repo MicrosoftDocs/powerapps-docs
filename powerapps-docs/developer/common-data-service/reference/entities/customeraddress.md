@@ -17,6 +17,10 @@ search.app:
 
 Address and shipping information. Used to store additional addresses for an account or contact.
 
+>[!NOTE]
+>The Customer Address table is updated at the platform level when a change is made to the Account or Contact entities. 
+>Because of this, no separate SDK call will be made to update or create the Customer Address entity. Any code that is triggering 
+>on address updates or creates should be pointing to the Contact or Account entities.
 
 ## Messages
 
