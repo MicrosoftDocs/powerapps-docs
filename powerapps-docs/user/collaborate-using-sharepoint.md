@@ -80,5 +80,5 @@ When you select one or more documents in the Documents list, you can take the fo
 - Yes. The behavior is similar to that of the **Documents** link under the **Related** menu.
 
 *Where can I send my feedback about this change?*
-- You send your feedback to the Dynamics 365 Sales Office and Teams Integration team at this email address: d365_ot_crew@microsoft.com
+- You can send your feedback to the Dynamics 365 Sales Office and Teams Integration team at this email address: d365_ot_crew@microsoft.com
 
