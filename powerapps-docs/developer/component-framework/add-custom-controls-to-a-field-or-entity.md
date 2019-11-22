@@ -53,13 +53,13 @@ Following the steps below will change the default label and text box field of th
    > [!div class="mx-imgBorder"] 
    > ![Add custom control properties](../../maker/model-driven-apps/media/ccf-add-properties.png "Add custom control properties")
 
-   - **Min**. Set the minimum accepted value. You can bind a static value that you enter or binds the value to an existing field. In this example **Bind to static value** is **Currency** and the minimum value that can be entered is *zero*.  
+   - **Min**. Set the minimum accepted value. You can bind a static value that you enter or bind the value to an existing field. In this example **Bind to static value** is **Currency** and the minimum value that can be entered is *zero*.  
   
        - **Bind to a static value**. Select the data type, such as a whole number (Whole.None), currency, floating point (FP), or decimal. Next, enter a number that represents the minimum accepted value for the field.  
   
        - **Bind to values on a field**. Select a field from the list that will be used as the minimum accepted value.  
   
-   - **Max**. Set the maximum accepted value for the field. Similar to the Min value, you can bind a static value that you enter or binds the value to an existing field as described earlier. In this example, **Bind to static value** is **Currency** and the maximum value that can be entered is **1 billion**.  
+   - **Max**. Set the maximum accepted value for the field. Similar to the Min value, you can bind a static value that you enter or bind the value to an existing field as described earlier. In this example, **Bind to static value** is **Currency** and the maximum value that can be entered is **1 billion**.  
   
    - **Step**. This represents the unit to increment or decrement when adding to or subtracting from  the current value. For example, for budget amount you can select 100 dollar increments\decrements.  
   
