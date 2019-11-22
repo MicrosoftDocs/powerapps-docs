@@ -71,8 +71,7 @@ When you select one or more documents in the Documents list, you can take the fo
 
 ## Files tab FAQ
 *Why was the location to access documents moved?* 
-
-    We moved the command to make documents easier to find with fewer clicks.
+- We moved the command to make documents easier to find with fewer clicks.
 
 *Has the Documents tab gone away?*
 
@@ -84,5 +83,5 @@ Yes. The behavior is similar to that of the **Documents** link under the **Relat
 
 *Where do I send my feedback about this change?*
 
-You can send your feedback to the Dynamics 365 Sales Office and Teams Integration team: d365_ot_crew@microsoft.com
+You send your feedback to the Dynamics 365 Sales Office and Teams Integration team at this email address: d365_ot_crew@microsoft.com
 
