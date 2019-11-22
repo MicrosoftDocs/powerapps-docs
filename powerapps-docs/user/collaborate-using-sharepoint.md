@@ -68,3 +68,17 @@ When you select one or more documents in the Documents list, you can take the fo
 - Check out
 - Discard check out
 - Edit properties
+
+## Files tab FAQ
+*Why was the location to access documents moved?* 
+We moved the command to make documents easier to find with fewer clicks.
+
+*Has the Documents tab gone away?*
+No, it hasn’t gone away. Users can still access the documents associated with the record in question the old way, simply by clicking the Related menu and then the Documents link.
+
+*With the change, will subfolders in SharePoint still be created automatically?*
+Yes. The behavior is similar to that of the **Documents** link under the **Related** menu.
+
+*Where do I send my feedback about this change?*
+You can send your feedback to the Dynamics 365 Sales Office and Teams Integration team: d365_ot_crew@microsoft.com
+
