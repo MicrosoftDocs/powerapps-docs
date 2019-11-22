@@ -70,7 +70,8 @@ When you select one or more documents in the Documents list, you can take the fo
 - Edit properties
 
 ## Files tab FAQ
-*Why was the location to access documents moved?* <br />We moved the command to make documents easier to find with fewer clicks.
+*Why was the location to access documents moved?* 
+    We moved the command to make documents easier to find with fewer clicks.
 
 *Has the Documents tab gone away?*
 
