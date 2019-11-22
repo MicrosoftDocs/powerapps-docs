@@ -24,7 +24,7 @@ Polls can be placed on the portal by using the PollPlacement control. This contr
 
 ## Add a poll to the page
 
-Content managers can use [Template tags](custom-templates-dynamic-content.md) to add a poll to any editable content area:  
+Content managers can use [Template tags](../liquid/liquid-overview.md) to add a poll to any editable content area:  
 
 `{% include 'Random Poll' placement:polls.placements[Sidebar] %}`
 
@@ -33,7 +33,7 @@ or
 `{% include 'Poll Template' ad:ads[Wireframe Development] %}`
 
 > [!Note]
-> Example web templates are configured in the starter websites. You can use the Random Poll template to display a random poll from a particular Poll Placement entity, or you can use the Poll Template template to display a specific poll. You can edit these templates or follow their example and create your own by using [Polls](liquid-objects.md#polls). 
+> Example web templates are configured in the starter websites. You can use the Random Poll template to display a random poll from a particular Poll Placement entity, or you can use the Poll Template template to display a specific poll. You can edit these templates or follow their example and create your own by using [Polls](../liquid/liquid-objects.md#polls). 
 
 ## Create a poll placement
 
@@ -45,7 +45,7 @@ To create a new poll placement region:
 
 3. Select **New**.
 
-4. Select the associated **Website**, give the placement a name, and&mdash;optionally&mdash;select the [web templates](store-content-web-templates.md) that will control how it is rendered.
+4. Select the associated **Website**, give the placement a name, and&mdash;optionally&mdash;select the [web templates](../liquid/store-content-web-templates.md) that will control how it is rendered.
 
 5. After the placement has been created, you must associate one or more polls with this placement. On the **Polls** tab of the Poll Placement entity, select **Add Poll Record (+)**. 
 
@@ -66,8 +66,8 @@ A new poll can be created in two ways:
 | Name                | Description                                                                                                                                                                                                                                                                                                                                  |
 |---------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Name                | The descriptive name of the poll.                                                                                                                                                                                                                                                                                                            |
-| Website             | The associated [web templates](store-content-web-templates.md).                                                                                                                                                                                                                                                                |  
-| Web Template        | The associated [web templates](store-content-web-templates.md) that will be used by default to render the poll. This field is optional; if it is blank, the poll will be rendered by using a default template.                                                                                                                     |  
+| Website             | The associated [web templates](../liquid/store-content-web-templates.md).                                                                                                                                                                                                                                                                |  
+| Web Template        | The associated [web templates](../liquid/store-content-web-templates.md) that will be used by default to render the poll. This field is optional; if it is blank, the poll will be rendered by using a default template.                                                                                                                     |  
 | Question            | This is the actual question that is being asked in the poll. The associated poll options are the possible answers that can be selected for this poll.                                                                                                                                                                                             |
 | Submit Button Label | The text that is to be used for the submission button.                                                                                                                                                                                                                                                                                       |
 | Release Date        | Controls the date and time after which the poll will be visible on the portal. If the poll placement is rotating through multiple polls, an unreleased poll will not be shown. If no released polls are associated with a poll placement, nothing will appear. This is useful for controlling the release of time-sensitive content.         |
@@ -119,8 +119,8 @@ The details of the poll voting results are stored in Common Data Service as Poll
 ### See also
 
 [Configure a portal](configure-portal.md)  
-[Add a webpage to render a list of records](add-webpage-render-list-records.md)  
+[About entity lists](entity-lists.md)  
 [Create and run advertisements on a portal](create-run-advertisement.md)  
-[Rate or vote on a webpage or blog post on a portal](rate-webpage-blog-post.md)  
+[Rate or vote on a webpage on a portal](rate-webpage.md)  
 [Redirect to a new URL on a portal](add-redirect-url.md)  
 

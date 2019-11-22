@@ -15,7 +15,7 @@ ms.reviewer:
 
 Publishing states allow for the definition of a content lifecycle in portals website. At a basic level, a publishing state can determine whether an associated entity should be considered visible/published on a portal. In more complex configurations, they can define a multi-stage process for content review and publishing, with security restrictions on each stage.
 
-Publishing states can be used with [web pages](web-page.md), [web files](web-files.md), [web links](manage-web-links.md), [forums](setup-manage-forums.md), and advertisements.
+Publishing states can be used with [web pages](web-page.md), [web files](web-files.md), [web links](manage-web-links.md), forums, and advertisements.
 
 By default, two publishing states are available: Draft and Published. Draft specifies content that should not be visible to non-content-author users, while Published specifies content that should be visible to all portal users (barring other security restrictions). You can modify the default configuration to meet your specific requirements, if desired – by adding new states or renaming states.
 
