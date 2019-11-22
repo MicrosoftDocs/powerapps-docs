@@ -77,7 +77,10 @@ When you select one or more documents in the Documents list, you can take the fo
 - No, it hasn’t gone away. Users can still access the documents associated with the record in question the old way, simply by clicking the Related menu and then the Documents link.
 
 *With the change, will subfolders in SharePoint still be created automatically?*
-- Yes. The behavior is similar to that of the **Documents** link under the **Related** menu.
+- Yes. The behavior is similar to that of the **Documents** link under the **Related** menu. When a user selects the **Files** tab for the first time, the corresponding SharePoint sub-folder is created by the system. 
+
+*Is there a way to add the Files tab to other entities or remove it?*
+- Yes. To add or remove the File tab, follow the steps in this article. [Add the SharePoint documents tab to the main form for an entity](../maker/model-driven-apps/add-documents-tab-entity-main-form.md)  
 
 *Where can I send my feedback about this change?*
 - You can send your feedback to the Dynamics 365 Sales Office and Teams Integration team at this email address: d365_ot_crew@microsoft.com
