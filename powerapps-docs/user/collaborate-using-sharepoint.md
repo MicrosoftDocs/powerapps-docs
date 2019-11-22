@@ -79,6 +79,6 @@ When you select one or more documents in the Documents list, you can take the fo
 *With the change, will subfolders in SharePoint still be created automatically?*
 - Yes. The behavior is similar to that of the **Documents** link under the **Related** menu.
 
-*Where do I send my feedback about this change?*
+*Where can I send my feedback about this change?*
 - You send your feedback to the Dynamics 365 Sales Office and Teams Integration team at this email address: d365_ot_crew@microsoft.com
 
