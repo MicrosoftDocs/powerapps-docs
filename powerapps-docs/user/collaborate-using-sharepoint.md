@@ -71,6 +71,7 @@ When you select one or more documents in the Documents list, you can take the fo
 
 ## Files tab FAQ
 *Why was the location to access documents moved?* 
+
     We moved the command to make documents easier to find with fewer clicks.
 
 *Has the Documents tab gone away?*
