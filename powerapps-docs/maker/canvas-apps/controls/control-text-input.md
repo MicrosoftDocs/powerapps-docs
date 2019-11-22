@@ -50,6 +50,8 @@ The user can specify data by typing into a text-input control. Depending on how 
 
 **[DisabledFill](properties-color-border.md)** – The background color of a control if its **[DisplayMode](properties-core.md)** property is set to **Disabled**.
 
+**EnableSpellCheck** – Whether a text-input control should use the browser spell check function. Windows App doesn't support this property.
+
 **[Fill](properties-color-border.md)** – The background color of a control.
 
 **[FocusedBorderColor](properties-color-border.md)** – The color of a control's border when the control is focused.
