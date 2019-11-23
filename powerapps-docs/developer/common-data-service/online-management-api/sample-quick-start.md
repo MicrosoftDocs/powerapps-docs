@@ -39,7 +39,7 @@ Before you can run this sample, make sure that you have:
 - .NET Framework 4.6.2
 
 To run the sample:
-1. [Download](https://code.msdn.microsoft.com/Sample-Retrieve-Customer-94e4076d) the sample, and extract it.
+1. [Download](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/online-management-api) the sample, and extract it.
 2. Double-click the Visual Studio solution file (.sln) under the C# folder at the extracted location to open the solution in Visual Studio.
 3. In the **Programs.cs** file, specify a different service URL if the region is not North America. For a list of service URL values for worldwide regions, see [Service URL](get-started-online-management-api.md#service-url).
     ```csharp
