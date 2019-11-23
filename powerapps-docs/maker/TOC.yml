@@ -68,6 +68,8 @@
         href: ../user/track-your-progress-with-dashboard-and-charts.md
       - name: Add Power BI dashboards 
         href: ../user/add-powerbi-dashboards.md
+      - name: Collaborate using SharePoint 
+        href: ../user/collaborate-using-sharepoint.md        
     - name: Search records
       items:
       - name: Compare search and find options
@@ -260,6 +262,8 @@
               href: ./canvas-apps/working-with-form-layout.md
             - name: Understand cards
               href: ./canvas-apps/working-with-cards.md
+            - name: Display a full-sized image
+              href: ./canvas-apps/display-full-image-on-form.md              
           - name: Add a list
             items:
             - name: Add a list box, a drop-down list, or radio buttons

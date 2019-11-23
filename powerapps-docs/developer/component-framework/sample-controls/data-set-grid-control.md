@@ -238,7 +238,7 @@ export class TSDataSetGrid
     if (rowRecordId) {
       let entityreference = this.contextObj.parameters.dataSetGrid.records[
         rowRecordId
-      ].getNamedreference();
+      ].getNamedReference();
       let entityFormOptions = {
         entityName: entityreference.name,
         entityId: entityreference.id
