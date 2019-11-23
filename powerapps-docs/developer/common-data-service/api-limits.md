@@ -1,8 +1,8 @@
 ---
 title: "Service Protection API Limits (Common Data Service) | Microsoft Docs" 
-description: "Understand the limits for API requests." 
+description: "Understand the service protection limits for API requests." 
 ms.custom: ""
-ms.date: 10/31/2019
+ms.date: 11/23/2019
 ms.reviewer: "kvivek"
 ms.service: powerapps
 ms.topic: "article"
@@ -18,9 +18,6 @@ search.app:
 # Service Protection API Limits
 
 To ensure consistent availability and performance for everyone we apply some limits to how APIs are used. We limit the number of concurrent connections per user account, the number of API requests per connection, and the amount of execution time that can be used for each connection. These are evaluated within a five minute sliding window. When one of these limits is exceeded, an exception will be thrown by the platform.
-
-> [!NOTE]
-> This is different from [Requests limits and allocations](/power-platform/admin/api-request-limits-allocations). *Request limits and allocations* refers to entitlements based on licensing which do not have in-product enforcement yet. *Service Protection API Limits* will throw exceptions when limits are exceeded.
 
 Service protection API limits help ensure that users running applications cannot interfere with each other based on resource constraints. The limits will not affect normal users of the platform. Only applications that perform a large number of API requests may be affected. The limits provide a level of protection from random and unexpected surges in request volumes that threaten the availability and performance characteristics of the Common Data Service platform.
 
@@ -172,7 +169,7 @@ public class Retry
 
 ### See also
 
+[Administer Power Platform / Licensing and license management / Requests limits and allocations](/power-platform/admin/api-request-limits-allocations)<br />
+[Common Data Service API limits overview](../../maker/common-data-service/api-limits-overview.md)<br />
 [Use Common Data Service Web API](webapi/overview.md)<br />
-[Use Common Data Service Organization Service](org-service/overview.md)<br />
-[Execute batch operations using the Web API](webapi/execute-batch-operations-using-web-api.md)<br />
-[Use ExecuteMultiple to improve performance for bulk data load](org-service/execute-multiple-requests.md)
+[Use Common Data Service Organization Service](org-service/overview.md)
