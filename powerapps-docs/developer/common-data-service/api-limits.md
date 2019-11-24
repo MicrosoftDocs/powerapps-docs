@@ -46,11 +46,6 @@ The combination of **Number of requests** and **Execution time** accounts for th
 
 If your application has the potential to exceed these limits, please apply the guidance given in the [What should I do if my application exceeds the limit?](#what-should-i-do-if-my-application-exceeds-the-limit) section below.
 
-### Examples:
-
-- 10 or fewer concurrent connections should never encounter the **Execution time** limit because it is not possible to exceed the 20 minute combined execution time limit within the 5 minute sliding window. Each of these 10 connections would encounter the 2 minute operation time out before the execution time limit is reached. However, as the number of connections is increased, and depending on the resources required for the operations, the possibility of encountering the **Execution time** limit increases.
-- With 10 concurrent connections, each connection can perform up to 6000 operations within the 5 minute sliding window without encountering the **Number of requests** limit. This represents a total of 60,000 operations during the 5 minute window, or 200 operations per second in total. Up to 720,000 operations per hour without encountering the **Number of requests** limit.
-
 Depending on the nature of the data you are processing, you can adjust the number of concurrent connections to get the maximum throughput.
 
 ## What happens when the limit is exceeded?
