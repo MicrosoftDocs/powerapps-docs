@@ -26,7 +26,7 @@ Since plug-ins and custom workflow activities execute on the server independent 
 ## Limits
 
 > [!IMPORTANT]
-> These limits are applied per web server. Each scale group has multiple web servers that may process each request, so these numbers represent the lowest possible level of throughput due to these limits. We are publishing these numbers to help people understand a maximum level of limits that could be applied. Your actual experience will probably be higher.
+> These limits are applied per web server. Each scale group has multiple web servers that may process each request depending on load balancing. These numbers represent a single web server and therefore the lowest possible level of throughput due to these limits. Your actual throughput should be higher.
 > 
 > You will see significant differences between trial environments and production environments. Trial environments have fewer resources allocated to them so they will encounter these limits more easily than production environments.
 > 
