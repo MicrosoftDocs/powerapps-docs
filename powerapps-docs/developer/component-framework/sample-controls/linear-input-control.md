@@ -241,7 +241,7 @@ Create a local variable for saving the [context](../reference/context.md) and `n
 Implement the logic for the `refreshData` function. As you can see in the sample, we take the value from the `inputElement` and set the value of the component, `innerHTML` property of the `labelElement` and then call the `notifyOutputChanged` so that the changes are cascaded up above the framework layer.
 
 ```TypeScript
-public refreshData(context: ControlFramework.IPropBag<InputsOutputs.IInputBag>) 
+public refreshData(context: ComponentFramework.IPropBag<InputsOutputs.IInputBag>) 
 { 
    this._value = (this.inputElement.value as any)as number; 
    this.labelElement.innerHTML = this.inputElement.value; 
@@ -253,7 +253,7 @@ In the `updateView` method, we get the value of the attribute from the context.p
 
 ```TypeScript
 
-public updateView(context: ControlFramework.IPropBag<InputsOutputs.IInputBag>): void 
+public updateView(context: ComponentFramework.IPropBag<InputsOutputs.IInputBag>): void 
  { 
     this._value = context.parameters.controlValue.raw; 
     this._context = context; 

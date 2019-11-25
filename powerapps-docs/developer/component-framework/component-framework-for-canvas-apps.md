@@ -80,11 +80,11 @@ To add code components to a canvas app:
  
     ![Insert components](media/insert-components-import.png "Insert components")
 
-4. Select the **Code (experimental)** tab, add a component from the list, and then select **Import**. This adds the sample component in the **Custom** menu.
+4. Select the **Code** tab, add a component from the list, and then select **Import**. 
 
     ![Import sample component](media/import-component-add-sample-component.png "Import sample component")
 
-5. Navigate to **Custom** and select the component to add it to the app.
+5. Click the **+** icon on the left pane and expand the code components tab to add the sample component.
 
    ![Add sample component](media/add-sample-component-from-list.png "Add sample component")
 

@@ -77,7 +77,7 @@ export class TSMapControl
     container.appendChild(this._iFrameElement);
   }
   /**
-   * Checks if the url is not null and sets the value to the iFrame source to be loaded inside it and then notifies the ControlFramework that the output has changed
+   * Checks if the url is not null and sets the value to the iFrame source to be loaded inside it and then notifies the ComponentFramework that the output has changed
    * @param mapUrl : The url for the map that needs to be loaded inside the iFrame.
    */
   public renderMap(mapUrl: string) {
