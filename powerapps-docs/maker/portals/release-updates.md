@@ -15,15 +15,18 @@ ms.reviewer:
 
 This topic provides resources where you can learn about the new features that have recently released and new features that will be releasing over the next few months.
 
-## PowerApp portals updates
+## PowerApps portals updates
 
 For information about new features releasing over the next few months that you can use for planning, see:
-- [April 2019 release notes](https://docs.microsoft.com/business-applications-release-notes/April19/microsoft-powerapps/planned-features)
-- [2019 release wave 2 plan](https://docs.microsoft.com/power-platform-release-plan/2019wave2/microsoft-powerapps/planned-features)
+
+- [2019 release wave 2 plan](https://docs.microsoft.com/en-us/power-platform-release-plan/2019wave2/microsoft-powerapps/planned-features#portal-capabilities-for-power-apps)
 
 ## Previous portal updates
 
 Here's a list of features added for Dynamics 365 Portals. For more information updates for Dynamics 365 Portals to date, see [portal capabilities for Microsoft Dynamics 365 Releases](https://support.microsoft.com/help/3181191).
+
+> [!NOTE]
+> PowerApps portals were earlier known as Dynamics 365 Portals.
 
 ### Dynamics 365 Portals version 9.1.4 for the model-driven apps in Dynamics 365
 
