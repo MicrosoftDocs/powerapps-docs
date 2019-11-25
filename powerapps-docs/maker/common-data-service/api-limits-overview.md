@@ -27,9 +27,12 @@ There are two categories of limits that apply for Common Data Service: *Entitlem
 
 These limits represent the number of requests users are entitled to make each day. The allocated limit depends on the type of license assigned to each user.
 
-If any user exceeds request entitlement the administrator would be notified and would be able to assign Power Apps and Power Automate request capacity to that user. Users will not be blocked from using apps for occasional and reasonable overages at this point of time.
+If any user exceeds their request entitlement the administrator would be notified and would be able to assign Power Apps and Power Automate request capacity to that user. Users will not be blocked from using apps for occasional and reasonable overages at this point of time.
 
 For Common Data Service, API requests include all data operations that interact with entity records where records are created, retrieved, updated, or deleted (CRUD). Special operations such as *share* and *assign* are included because they are considered updates. These requests can be from any client or application and using any endpoint. These include, but are not limited to, operations performed by plug-ins, async workflows, and custom controls. There are a small set of system internal operations that are excluded, like login, logout, and system metadata operations.
+
+> [!IMPORTANT]
+> Power Platform API request allocations include use of Power Automate, AI Builder, and Connector APIs. All requests through a connector that result in a Common Data Service request will represent 1 Power Platform request.
 
 For details on these entitlement limits, see [Microsoft Power Platform requests allocations based on licenses](/power-platform/admin/api-request-limits-allocations#microsoft-power-platform-requests-allocations-based-on-licenses).
 
@@ -50,7 +53,7 @@ We limit the number of concurrent connections per user account, the number of AP
 > 
 > Since plug-ins and custom workflow activities execute on the server independent of a logged on user, service protection API limits are not applied against API calls made from plug-in code.
 
-Because service protection limits are usually only encountered by applications that perform a high volume of data operations, we recommend that developers building those applications apply patterns to re-try operations after a period of time that will be returned with the exception. This will allow the application to respond to exceptions the service sends and reduce the total number of requests and achieve the highest possible throughput.
+Because service protection limits are usually only encountered by applications that perform a high volume of data operations, we recommend that developers building those applications apply patterns to re-try operations after a period of time when these exceptions are returned. This will allow the application to respond to exceptions the service sends and reduce the total number of requests and achieve the highest possible throughput.
 
 For information about the specific errors that can be returned and how developers can apply patterns to respond to these errors, see [Service Protection API Limits](../../developer/common-data-service/api-limits.md).
 
