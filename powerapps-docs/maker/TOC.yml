@@ -1319,7 +1319,7 @@
     - name: PowerApps portals FAQ
       href: ./portals/faq.md
     - name: Legacy Adxstudio Portals v7 FAQ
-      href: legacy-portal-faq.md
+      href: ./portals/legacy-portal-faq.md
 - name: Common Data Service  
   items:
   - name: What is Common Data Service?

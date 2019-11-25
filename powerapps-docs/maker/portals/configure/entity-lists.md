@@ -280,6 +280,10 @@ In addition, any actions that are defined for the list will respect the correspo
 
 However, good website design requires that if a user is not in a role that has any permissions for the entity (that is, there will never be a situation where they should see any records), they should not have access to the page at all. Ideally, the page should be protected by using Webpage Access Permissions.
 
+If you have secured an entity list by selecting **Enable Entity Permissions**, and want to display the records level actions that are applicable to the signed in user, you must set the value of **EntityList/ShowRecordLevelActions** site setting to **true**. For example, there are two users: Preston and Teddy. Preston has contact level all access on the Case entity, whereas Teddy has global read access. If an entity list is created to show all the case records, Preston would see all actions (View, Edit, and Delete) on the records that are related his contact. On other records, he would be only have the View permission. On the other hand, Teddy would have only the View permission on all records.
+
+If the **EntityList/ShowRecordLevelActions** site setting is set to **false** and the entity has multiple permissions, all the record level actions are visible. But, when a user tries to perform an action that he is not authorized to, an error is displayed.
+
 ## Adding a view details page
 
 By setting the Web Page for Details View lookup to a webpage, the details of a record listed in the grid can be viewed as read-only or edited, depending on the configuration of the associated form or page.
@@ -320,7 +324,7 @@ Adding the ability to filter records on an entity list is easy: simply enable th
 
 **Enable the entity list filter**
 
-In the Metadata filter section, select the Enabled check box. This will add the Filter area to the entity list when it is displayed. Until you have defined at least one filter type, the box will appear empty.
+In the **Metadata Filter** section, select the **Enabled** check box. This will add the Filter area to the entity list when it is displayed. Until you have defined at least one filter type, the box will appear empty.
 
 You can define how the Filter area on the entity list will be rendered by using the Orientation setting. The default, Horizontal, renders the Filter area above the entity list. Vertical orientation renders the Filter area as a box to the left of the entity list.
 
