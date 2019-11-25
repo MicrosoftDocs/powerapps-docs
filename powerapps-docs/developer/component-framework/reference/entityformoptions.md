@@ -94,7 +94,7 @@ private onRowClick(event: Event): void {
     if (rowRecordId) {
       let entityreference = this.contextObj.parameters.simpleTableGrid.records[
         rowRecordId
-      ].getNamedreference();
+      ].getNamedReference();
       let entityFormOptions = {
         entityName: entityreference.entityType!,
         entityId: entityreference.id
