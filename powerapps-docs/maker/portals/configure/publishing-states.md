@@ -29,9 +29,12 @@ Publishing states can be created, edited, and deleted within portals.
 
 3. Select the website to manage publishing states.
 
-4. Click the down arrow next to the website name and select **Publishing States**. The list of available publishing states is displayed.
+4. Go to the **Publishing States** tab. The list of available publishing states is displayed.
 
-5. To add a new publishing state, select **Add new publishing state**.
+    > [!div class=mx-imgBorder]
+    > ![Manage publishing states](../media/publishing-states.png "Manage publishing states")
+
+5. To add a new publishing state, select **New publishing state**.
 
 6. To edit an existing publishing state, select the publishing state name.
 
@@ -39,15 +42,6 @@ Publishing states can be created, edited, and deleted within portals.
 
 8. Select **Save & Close**.
 
-You can also manage publish states under the **Publishing States** section on the website record.
-
-![Manage publishing states](../media/publishing-states.png "Manage publishing states") 
-
-## Manage publishing states from the portal content editor
-
-While publishing states and their attributes must be managed within portals, portal users with content management permissions can control the state of certain entities (such as web pages and web files) through the portal content editing interface.
-
-![Select publishing state](../media/publishing-states-portal.png "Select publishing state")
 
 ### Publishing state attributes
 
@@ -80,9 +74,10 @@ If the logged-in user who is attempting the change is in any of the roles you as
 
 6. Select **Save** so you can continue adding web roles to it.
 
-7. Under **Web Roles**, browse and add the appropriate web roles.
+    > [!div class=mx-imgBorder]
+    > ![Create publishing state transition rule](../media/publishing-state-transition-rule.png "Create publishing state transition rule")
 
-    ![Create publishing state transition rule](../media/publishing-state-transition-rule.png "Create publishing state transition rule")
+7. On the **Web Roles** tab, select **Add Existing Web Role**. In the **Lookup Records** pane, browse and add the appropriate web roles.
 
 8. Select **Save**.
 
@@ -94,6 +89,7 @@ For example, say you wanted someone in the content publishing role to be able to
 
 To do this, you would create a rule with the grant change permission and apply it to the branch in question (or the home page if the rule is to apply to the entire site). You would then associate this rule with the draft state.
 
-![Create state-based control rule](../media/state-based-control-rule.png "Create state-based control rule")
+> [!div class=mx-imgBorder]
+> ![Create state-based control rule](../media/state-based-control-rule.png "Create state-based control rule")
 
 You would then associate this rule with the appropriate web role, for example, Content publishing. Assuming this web role is not associated with a more permissive rule (i.e. a rule that grants change regardless of publishing state) then users in the content publishing web role will be able to modify pages in the draft state but will not be able to modify pages in the published state.
