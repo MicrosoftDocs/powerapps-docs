@@ -172,12 +172,12 @@ This change informs the PowerApps component framework that these bound fields ne
 
 Additional bound properties may be required or not. This will be enforced during the component configuration when the component is being bound to the form. This can be configured by setting the `required` attribute of the property node in the component manifest. Set the value to false if you don't want to require the component property be bound to a field. 
  
-`ControlFramework.d.ts` needs to be updated to add two fields to `IInputs` interface. This is the format the PowerApps component framework passes the field values. Adding these values to the `IInputs` interface allows your TypeScript file to reference the values and compile successfully.  
+`ComponentFramework.d.ts` needs to be updated to add two fields to `IInputs` interface. This is the format the PowerApps component framework passes the field values. Adding these values to the `IInputs` interface allows your TypeScript file to reference the values and compile successfully.  
 
 ```TypeScript
     export interface IInputs 
-    { latitudeValue: ControlFramework.PropertyTypes.NumberProperty;  
-        longitudeValue: ControlFramework.PropertyTypes.NumberProperty;  
+    { latitudeValue: ComponentFramework.PropertyTypes.NumberProperty;  
+        longitudeValue: ComponentFramework.PropertyTypes.NumberProperty;  
     }  
  ```
 
@@ -188,6 +188,7 @@ The [updateView](../reference/control/updateview.md) method is invoked whenever 
 ### Related topics
 
 [Download sample components](https://go.microsoft.com/fwlink/?linkid=2088525)<br/>
+[How to run the samples](../how-to-run-the-samples.md)<br/>
 [PowerApps component framework manifest schema reference](../manifest-schema-reference/index.md)<br />
 [PowerApps component framework API reference](../reference/index.md)<br />
 [PowerApps component framework overview](../overview.md)
