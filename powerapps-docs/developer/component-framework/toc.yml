@@ -1,4 +1,4 @@
-- name: Get started
+- name: PowerApps component framework
   items: 
   - name: Overview
     href: overview.md
@@ -32,6 +32,8 @@
     href: limitations.md
   - name: Sample components
     items: 
+    - name: How to run the samples?
+      href: how-to-run-the-samples.md
     - name: Increment component
       href: sample-controls/increment-control.md
     - name: Linear input component

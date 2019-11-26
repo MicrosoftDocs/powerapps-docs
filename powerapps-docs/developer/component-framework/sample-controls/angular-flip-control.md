@@ -352,11 +352,6 @@ fieldset[disabled].btn-primary:hover {
 }
 ```
 
-## How to run the samples
-
-[!INCLUDE [how to run the samples](../reference/includes/how-to-run-the-sample.md)]
-
-
 ### Related topics
 
 [PowerApps component framework manifest schema reference](../manifest-schema-reference/index.md)<br />
