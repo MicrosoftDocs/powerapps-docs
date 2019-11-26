@@ -45,6 +45,8 @@ To use the control inside a form, select the "Edit multi-line text" card, and cu
 
 **[DisplayMode](properties-core.md)** – Whether the control allows adding and deleting files (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
 
+**EnableSpellCheck** – Whether the browser spell checker is enabled. Note that the this functionality will provide spell checking only in the default language of the browser.  Power Apps for Windows doesn't support this property.
+
 **[Height](properties-size-location.md)** – The distance between a control's top and bottom edges.
 
 **[TabIndex](properties-accessibility.md)** – Keyboard navigation order in relation to other controls.
