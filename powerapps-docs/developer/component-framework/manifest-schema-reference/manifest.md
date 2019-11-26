@@ -25,11 +25,11 @@ Model-driven apps and canvas apps (experimental preview)
 
 |Element|Description|Occurrences|Available for|
 |--|--|--|-------|
-|[control](control.md)|[!INCLUDE [control-description](includes/control-description.md)]|1 or more|Model-driven apps and canvas apps (experimental preview) (experimental preview)|
-|[type-group](type-group.md)|[!INCLUDE [type-group-description](includes/type-group-description.md)]|0 or more|Model-driven apps and canvas apps (experimental preview) (experimental preview)|
-|[property](property.md)|[!INCLUDE [property-description](includes/property-description.md)]|0 or more|Model-driven apps and canvas apps (experimental preview) (experimental preview)|
+|[control](control.md)|[!INCLUDE [control-description](includes/control-description.md)]|1 or more|Model-driven apps and canvas apps (experimental preview) |
+|[type-group](type-group.md)|[!INCLUDE [type-group-description](includes/type-group-description.md)]|0 or more|Model-driven apps and canvas apps (experimental preview) |
+|[property](property.md)|[!INCLUDE [property-description](includes/property-description.md)]|0 or more|Model-driven apps and canvas apps (experimental preview) |
 |[data-set](data-set.md)|[!INCLUDE [data-set-description](includes/data-set-description.md)]|0 or more|Model-driven apps|
-|[resource](resources.md)|[!INCLUDE [resource-description](includes/resources-description.md)]|1 or more|Model-driven apps and canvas apps (experimental preview) (experimental preview)|
+|[resource](resources.md)|[!INCLUDE [resource-description](includes/resources-description.md)]|1 or more|Model-driven apps and canvas apps (experimental preview) |
 
 ## Example
 

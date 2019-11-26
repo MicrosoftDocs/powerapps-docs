@@ -1,4 +1,4 @@
-- name: "PowerApps component framework"
+- name: Get started
   items: 
   - name: Overview
     href: overview.md
@@ -10,7 +10,7 @@
     href: get-powerapps-cli.md
   - name: Tutorial
     items:
-    - name: Implementing sample component
+    - name: Create your first component
       href: implementing-controls-using-typescript.md
   - name: How-to
     items:

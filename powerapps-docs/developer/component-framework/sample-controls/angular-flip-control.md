@@ -350,8 +350,12 @@ fieldset[disabled].btn-primary:hover {
   border: 1px solid transparent;
   border-radius: 4px;
 }
-
 ```
+
+## How to run the samples
+
+[!INCLUDE [how to run the samples](../reference/includes/how-to-run-the-sample.md)]
+
 
 ### Related topics
 
