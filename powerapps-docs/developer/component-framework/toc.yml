@@ -4,7 +4,7 @@
     href: overview.md
   - name: What are code components
     href: custom-controls-overview.md
-  - name: Availability for canvas apps
+  - name: Code components for canvas apps
     href: component-framework-for-canvas-apps.md
   - name: Get PowerApps CLI
     href: get-powerapps-cli.md
