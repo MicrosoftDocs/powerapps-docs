@@ -15,6 +15,8 @@ applies_to:
 ms.assetid: c003d29d-feef-4209-810e-8f1abe11dd6e
 ---
 
+# How to run the samples
+
 1. Download the [sample components](https://go.microsoft.com/fwlink/?linkid=2088525) so that you have a local copy. Install [PowerApps CLI](https://aka.ms/PowerAppsCLI).
 2. Go into the directory where you have downloaded the folder. 
 3. Open Developer Command Prompt for VS 2017 and go into the sample component folder, which you want to see it in runtime (for example, Increment component).
