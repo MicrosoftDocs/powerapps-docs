@@ -91,7 +91,15 @@ If you encounter a 429 error code you can look for the `Retry-After` HTTP header
 
 ### SDK assemblies
 
-If you are using the SDK assemblies, you can look for the `Retry-After` delay value in the <xref:Microsoft.Xrm.Sdk.OrganizationServiceFault>.<xref:Microsoft.Xrm.Sdk.BaseServiceFault.ErrorDetails> property, using the key `"Retry-After"`. The value returned is a [TimeSpan](/dotnet/api/system.timespan) object.
+> [!NOTE]
+> You do not need to apply these patterns when:
+>
+>  - Your code will run within a plug-in or custom workflow activity. You do not need to apply these patterns because service protection limits are not applied in these cases.
+>  - You use the <xref:Microsoft.Xrm.Tooling.Connector>.<xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient>. These patterns are built-in to that client. This is the recommended class to use for client applications.
+>
+> You need to apply these patterns if you use the <xref:Microsoft.Xrm.Sdk.Client>.<xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy> or <xref:Microsoft.Xrm.Sdk.WebServiceClient>.<xref:Microsoft.Xrm.Sdk.WebServiceClient.OrganizationWebProxyClient> classes.
+
+If you are using the SDK assemblies with the <xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy> or <xref:Microsoft.Xrm.Sdk.WebServiceClient.OrganizationWebProxyClient> classes, you can look for the `Retry-After` delay value in the <xref:Microsoft.Xrm.Sdk.OrganizationServiceFault>.<xref:Microsoft.Xrm.Sdk.BaseServiceFault.ErrorDetails> property, using the key `"Retry-After"`. The value returned is a [TimeSpan](/dotnet/api/system.timespan) object.
 
 ## .NET SDK Assembly Example
 
