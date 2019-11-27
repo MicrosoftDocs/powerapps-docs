@@ -21,7 +21,7 @@ To ensure consistent availability and performance for everyone we apply some lim
 
 Service protection API limits help ensure that users running applications cannot interfere with each other based on resource constraints. The limits will not affect normal users of the platform. Only applications that perform a large number of API requests may be affected. The limits provide a level of protection from random and unexpected surges in request volumes that threaten the availability and performance characteristics of the Common Data Service platform.
 
-Since plug-ins and custom workflow activities execute on the server independent of a logged on user, API calls made from plug-in code will not count against service protection API limits.
+Since plug-ins and custom workflow activities execute on the server independent of a logged on user, API calls made from plug-in code will not count against service protection API limits. 
 
 ## Limits
 
@@ -42,11 +42,15 @@ Within that 5 minute sliding window, there are three aspects that are measured a
 |Execution time|The combined duration for all connections using the same user account| 20 minutes (1200 seconds)|
 |Number of connections|The number of connections using the same user account|52|
 
-The combination of **Number of requests** and **Execution time** accounts for the fact that some operations require more system resources than others. Importing a solution or performing a complex query requires more system resources that creating or updating a single record.
+The combination of **Number of requests** and **Execution time** accounts for the fact that some operations require more system resources than others. Performing a complex query requires more system resources that creating or updating a single record.
+
+While API calls made from plug-in code will not be counted against the number of requests, the execution time of those calls will be applied to the originating call.
+
+Some known long-running system operations, such as ImportSolution, will not have the full execution time included in the calculation of the limit. The contribution of these calls towards the limit calculation is capped at 5 minutes if the actual execution time is greater.
 
 If your application has the potential to exceed these limits, please apply the guidance given in the [What should I do if my application exceeds the limit?](#what-should-i-do-if-my-application-exceeds-the-limit) section below.
 
-Depending on the nature of the data you are processing, you can adjust the number of concurrent connections to get the maximum throughput.
+Depending on the nature of the data you are processing, you can adjust the number of concurrent connections to get the maximum throughput. If each operation is relatively quick, use more connections.
 
 ## What happens when the limit is exceeded?
 
