@@ -28,8 +28,8 @@ search.app:
 With the Discovery Service Web API, you can add standard `$filter` and `$select` parameters to a Web API service request to customize the returned list of instance data.
 
 > [!IMPORTANT]
-> The regional Discovery Service Web API endpoints are deprecated. Applications must switch to using the global Discovery Service endpoint that is documented later in this page.  
-> For Dynamics 365 US Government users, a global Discovery Web API endpoint is available for the **GCC** and **GCC High** users, and the URL is different from the regular global Discovery Service URL. More information: [Dynamics 365 Government URLs](https://docs.microsoft.com/dynamics365/customer-engagement/admin/government/microsoft-dynamics-365-government#dynamics-365-us-government-urls).
+> - The regional Discovery Service Web API endpoints are deprecated. Applications must switch to using the global Discovery Service endpoint that is documented later in this topic.  
+> - For Dynamics 365 US Government users, a global Discovery Web API endpoint is available for the **GCC** and **GCC High** users, and the URL is different from the regular global Discovery Service URL. More information: [Dynamics 365 Government URLs](https://docs.microsoft.com/dynamics365/customer-engagement/admin/government/microsoft-dynamics-365-government#dynamics-365-us-government-urls).
 
   
 ## Information provided by the Discovery Service Web API 
