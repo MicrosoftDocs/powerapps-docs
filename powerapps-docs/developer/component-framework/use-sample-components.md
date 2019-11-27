@@ -1,6 +1,6 @@
 ---
-title: How to run the samples | Microsoft Docs
-description: 
+title: How to use the sample components? (PowerApps Component Framework) | Microsoft Docs
+description: Provides information on how you can use the sample components created using PowerApps Component Framework in your model-driven and canvas apps
 keywords:
 author: Nkrb
 ms.author: nabuthuk
