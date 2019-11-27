@@ -261,9 +261,7 @@
             - name: Understand form layout
               href: ./canvas-apps/working-with-form-layout.md
             - name: Understand cards
-              href: ./canvas-apps/working-with-cards.md
-            - name: Display a full-sized image
-              href: ./canvas-apps/display-full-image-on-form.md              
+              href: ./canvas-apps/working-with-cards.md           
           - name: Add a list
             items:
             - name: Add a list box, a drop-down list, or radio buttons
