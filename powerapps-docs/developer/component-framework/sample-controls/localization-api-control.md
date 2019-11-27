@@ -451,6 +451,6 @@ When this line of code is executed, the PowerApps component framework automatica
 ### Related topics
 
 [Download sample components](https://go.microsoft.com/fwlink/?linkid=2088525)<br/>
-[How to use the sample components](use-sample-components.md)<br/>
+[How to use the sample components](../use-sample-components.md)<br/>
 [PowerApps component framework API reference](../reference/index.md)<br/>
 [PowerApps component framework manifest schema reference](../manifest-schema-reference/index.md)
