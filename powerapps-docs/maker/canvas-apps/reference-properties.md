@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm-msft
-ms.date: 9/20/2019
+ms.date: 11/26/2019
 ms.author: fikaradz
 search.audienceType:
   - maker
@@ -73,6 +73,8 @@ Configure the appearance and behavior of a control by setting one of its propert
 **[List box](controls/control-list-box.md)** – Select one or more items in a list.
 
 **[Microphone](controls/control-microphone.md)** – Record and save sounds in the app or to a data source.
+
+**[Microsoft Stream](controls/control-stream-video.md)** – Play an audio or video clip from **Microsoft Stream**.
 
 **[PDF viewer (experimental)](controls/control-pdf-viewer.md)** – Show the content of a PDF file on the Internet.
 
