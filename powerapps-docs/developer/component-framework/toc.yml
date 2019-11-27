@@ -32,7 +32,7 @@
     href: limitations.md
   - name: Sample components
     items: 
-    - name: How to run the samples?
+    - name: How to use the sample components?
       href: how-to-run-the-samples.md
     - name: Increment component
       href: sample-controls/increment-control.md
