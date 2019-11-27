@@ -22,13 +22,13 @@ search.app:
 
 The Discovery Service is accessed through two different APIs:
 
-- For the Web API: [Discover the URL for your organization using the Web API](webapi/discover-url-organization-web-api.md)
-- For the Organization Service: [Use the Discovery Service with the Microsoft.Xrm.Sdk.Discovery NameSpace](org-service/discovery-service.md)
+- For the Web API (REST): [Discover the URL for your organization using the Web API](webapi/discover-url-organization-web-api.md)
+- For the Organization Service (SOAP): [Use the Discovery Service with the Microsoft.Xrm.Sdk.Discovery NameSpace](org-service/discovery-service.md)
 
 > [!NOTE]
-> The legacy Discovery Service that was accessible via the 2011 SOAP endpoint has been deprecated along with the regional Discovery Service Web API endpoints. See [Important changes (deprecations)](/power-platform/important-changes-coming.md) for more details.
+> The *regional* Discovery Service in Organization Service (SOAP) and Web API (REST) is deprecated. More information: [Important changes (deprecations)](/power-platform/important-changes-coming.md).
 
 ### See Also
 
 [Use the Common Data Service Web API](webapi/overview.md)<br />
-[Modify existing code to use Discovery Service Web API endpoint](discovery-orgsdk-to-webapi.md)
+[Modify your code to use global Discovery Service in Web API](webapi/discovery-orgsdk-to-webapi.md)

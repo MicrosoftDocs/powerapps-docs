@@ -80,7 +80,7 @@
   items:
   - name: Get started
     href: discover-url-organization-web-api.md
-  - name: Modify your code to use Discovery Service Web API endpoint
+  - name: Modify your code to use global Discovery Service in Web API
     href: discovery-orgsdk-to-webapi.md
   - name: Global Discovery Service Sample (C#)
     href: samples/global-discovery-service-csharp.md

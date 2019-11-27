@@ -1,5 +1,5 @@
 ---
-title: "Modify existing code to use the Discovery Service Web API endpoint (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Modify your code to use global Discovery Service in Web API (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Update your application code to make Discovery Service calls using a modern RESTful Web API."
 ms.custom: ""
 ms.date: 11/10/2019
@@ -16,13 +16,13 @@ search.app:
   - D365CE
 ---
 
-# Modify existing code to use the Discovery Service Web API endpoint
+# Modify your code to use global Discovery Service in Web API
 
 The Discovery Service APIs can be used by your application to discover business organization instances that the application user has access to. If your application currently uses the Organization Service API (SOAP) to discover organization instances, you can follow the steps in this topic and convert your application to access organization details using the Web API (REST) with the global Discovery Service URL. If your application accesses the Discovery Service using the Web API with a regional Discovery Service URL, you will need to change the application code from using the regional URL to the global Discovery Service URL.
 
 A detailed description of using the Discovery Service with the Web API can be found on the [Discovery Service Web API](/powerapps/developer/common-data-service/webapi/discover-url-organization-web-api) page.
 
-> [IMPORTANT]
+> [!IMPORTANT]
 > When accessing the Discovery Service, it is strongly recommended that your application use the global Discovery Service endpoint (https://globaldisco.crm.dynamics.com) and not the regional Discovery Service endpoint, which is [deprecated](/power-platform/important-changes-coming#regional-discovery-service-is-deprecated). The global Discovery Service is only available when using the Web API.
 
 The rest of this document describes the changes that may be needed to call the Discovery Service using the Web API.
