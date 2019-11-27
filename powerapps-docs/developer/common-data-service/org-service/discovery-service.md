@@ -18,7 +18,9 @@ search.app:
 # Use the Discovery Service with the SDK Assemblies
 
 > [!IMPORTANT]
-> Effective February 1, 2020, the *regional* Discovery Service in Organization Service (SOAP) and Web API (REST) is deprecated. More information: [Important changes (deprecations)](/power-platform/important-changes-coming/). For information on how to transition to use the global Discovery Service in Web API, see [Modify existing code to use Discovery Web API](../discovery-orgsdk-to-webapi.md).
+> Effective February 1, 2020, the *regional* Discovery Service in Organization Service (SOAP) and Web API (REST) is deprecated. More information: [Important changes (deprecations)](/power-platform/important-changes-coming/).
+
+> For information on how to transition to use the global Discovery Service in Web API, see [Modify existing code to use Discovery Web API](../discovery-orgsdk-to-webapi.md).
 
 [!INCLUDE [cc-discovery-service-description](../includes/cc-discovery-service-description.md)]
 
