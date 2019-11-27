@@ -16,11 +16,12 @@ ms.topic: "article"
 
 All the sample components listed under this section are available to download from [here](https://go.microsoft.com/fwlink/?linkid=2088525).
 
-To try out these sample components, you must first:
+To try out the sample components, you must first:
 - Download the sample components so that you have a local copy
 - Install [PowerApps CLI](https://aka.ms/PowerAppsCLI).
 
-Next, follow the steps below:
+Next, follow the steps below to import and try out the sample components in your model-driven or canvas app:
+
 1. Navigate to the folder on your computer where you have downloaded the sample components, and extract the .zip file.  
 1. Open Developer Command Prompt for Visual Studio 2017 and navigate to the sample component folder in the extracted folder that you want to see it in runtime. For example, navigate to the \<extracted_folder>/TS_IncrementComponent folder.
 1. Run the following command to get all the required dependencies:
