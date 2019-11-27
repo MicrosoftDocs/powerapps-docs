@@ -438,5 +438,6 @@ The ***getSortedColumnsOnView*** method returns the list of columns based on the
 ### Related topics
 
 [Download sample components](https://go.microsoft.com/fwlink/?linkid=2088525)<br/>
+[How to run the samples](../how-to-run-the-samples.md)<br/>
 [PowerApps component framework API reference](../reference/index.md)<br/>
 [PowerApps component framework manifest schema reference](../manifest-schema-reference/index.md)
