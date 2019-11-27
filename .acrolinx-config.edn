@@ -1,0 +1,2 @@
+{:allowed-branchname-matches ["^master$"]
+ :allowed-filename-matches ["powerapps-docs/maker/common-data-service"]}

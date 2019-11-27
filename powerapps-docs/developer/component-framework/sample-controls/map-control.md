@@ -77,7 +77,7 @@ export class TSMapControl
     container.appendChild(this._iFrameElement);
   }
   /**
-   * Checks if the url is not null and sets the value to the iFrame source to be loaded inside it and then notifies the ControlFramework that the output has changed
+   * Checks if the url is not null and sets the value to the iFrame source to be loaded inside it and then notifies the ComponentFramework that the output has changed
    * @param mapUrl : The url for the map that needs to be loaded inside the iFrame.
    */
   public renderMap(mapUrl: string) {
@@ -171,5 +171,6 @@ Ensure you call the `renderMap` function inside the [updateView](../reference/co
 ### Related topics
 
 [Download sample components](https://go.microsoft.com/fwlink/?linkid=2088525)<br/>
+[How to use the sample components](../use-sample-components.md)<br/>
 [PowerApps component framework API reference](../reference/index.md)<br/>
 [PowerApps component framework manifest schema reference](../manifest-schema-reference/index.md)

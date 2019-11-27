@@ -41,14 +41,14 @@ However, web resource dependencies are not limited to just RESX web resources. Y
 
 <a name="attribute-dependencies"></a>
 
-# Attribute dependencies
+## Attribute dependencies
 <!--TODO: Add links to the attribute and attribute.controls collection definitions in the Client API reference -->
 Starting with Model-driven apps, if your JavaScript web resource depends on an entity attribute value that you don’t want to display in the form, you can set the attribute as a dependency for the JavaScript web resource. This means that the attribute will be available within the client API attributes collection so you can get or set the value in your code. When you add a dependency this way, the controls collection of the attribute will be empty because there will be no control on the form.
 
 Before this feature you would need to manually add the attribute to the form and then configure the control to be hidden. Now you can establish this dependency more directly and eliminate the possibility that someone will remove the hidden field from the form. 
 
 
-## See also
+### See also
 [Web resources](web-resources.md)<br />
 [Create accessible web resources](create-accessible-web-resources.md)<br />
 [Webpage (HTML) web resources](webpage-html-web-resources.md)<br />

@@ -6,7 +6,7 @@ manager: shujoshi
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/21/2019
+ms.date: 11/04/2019
 ms.author: shjais
 ms.reviewer:
 ---
@@ -46,6 +46,6 @@ A custom domain can help your customers find your support resources more easily 
 7. Select **Finish** to close the wizard.
 
     > [!Note]
-    > If you want to change your existing custom domain name, you must upload a new SSL certificate and follow the steps in the wizard as mentioned [here](#link-your-portal-to-a-custom-domain).
+    > If you want to change your existing custom domain name, you must upload a new SSL certificate and follow the steps as mentioned in this section.
     
 

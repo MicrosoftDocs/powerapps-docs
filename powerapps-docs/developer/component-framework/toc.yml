@@ -1,16 +1,16 @@
-- name: "PowerApps component framework"
+- name: PowerApps component framework
   items: 
   - name: Overview
     href: overview.md
   - name: What are code components
     href: custom-controls-overview.md
-  - name: Availability for canvas apps
+  - name: Code components for canvas apps
     href: component-framework-for-canvas-apps.md
   - name: Get PowerApps CLI
     href: get-powerapps-cli.md
   - name: Tutorial
     items:
-    - name: Implementing sample component
+    - name: Create your first component
       href: implementing-controls-using-typescript.md
   - name: How-to
     items:
@@ -32,6 +32,8 @@
     href: limitations.md
   - name: Sample components
     items: 
+    - name: How to use the sample components?
+      href: use-sample-components.md
     - name: Increment component
       href: sample-controls/increment-control.md
     - name: Linear input component
@@ -127,7 +129,7 @@
         items:
         - name: getFormattedValue 
           href: reference/entityrecord/getformattedvalue.md
-        - name: getNamedreference
+        - name: getNamedReference
           href: reference/entityrecord/getnamedreference.md
         - name: getRecordId
           href: reference/entityrecord/getrecordid.md

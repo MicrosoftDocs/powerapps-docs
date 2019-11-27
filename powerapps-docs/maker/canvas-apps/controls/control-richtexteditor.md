@@ -1,14 +1,14 @@
 ---
 title: 'Rich text editor control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the Rich text editor control
-author: fikaradz
+author: chmoncay
 manager: kvivek
 ms.service: powerapps
 ms.topic: article
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 05/24/2018
-ms.author: fikaradz
+ms.author: chmoncay
 search.audienceType: 
   - maker
 search.app: 
@@ -44,6 +44,8 @@ To use the control inside a form, select the "Edit multi-line text" card, and cu
 **[AccessibleLabel](properties-accessibility.md)** – Label for screen readers. Should describe the purpose of the attachments.
 
 **[DisplayMode](properties-core.md)** – Whether the control allows adding and deleting files (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
+
+**EnableSpellCheck** – Whether the browser spell checker is enabled. Note that the this functionality will provide spell checking only in the default language of the browser.  Power Apps for Windows doesn't support this property.
 
 **[Height](properties-size-location.md)** – The distance between a control's top and bottom edges.
 

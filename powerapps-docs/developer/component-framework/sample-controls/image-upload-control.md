@@ -292,8 +292,8 @@ export class TSImageUploadControl
 ```XML
 <?xml version="1.0" encoding="utf-8"?>
 <root>
-<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-<xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+<xsd:schema id="root" xmlns="" xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+<xsd:import namespace="https://www.w3.org/XML/1998/namespace" />
 <xsd:element name="root" msdata:IsDataSet="true">
   <xsd:complexType>
 	<xsd:choice maxOccurs="unbounded">
@@ -388,5 +388,6 @@ The `device.pickFile` method opens a dialog box to select files from your comput
 ### Related topics
 
 [Download sample components](https://go.microsoft.com/fwlink/?linkid=2088525)<br/>
+[How to use the sample components](../use-sample-components.md)<br/>
 [PowerApps component framework API reference](../reference/index.md)<br/>
 [PowerApps component framework manifest schema reference](../manifest-schema-reference/index.md)

@@ -24,7 +24,7 @@ Microsoft Teams is a chat-based collaboration platform built on Office 365 techn
 
 ![App embedded in Microsoft Teams](./media/open-app-embedded-in-teams/embedded-app.png)
 
-If you're not signed up for PowerApps, [sign up for free](https://web.powerapps.com/signup?redirect=marketing&email=) before you begin.
+If you're not signed up for PowerApps, [sign up for free](https://make.powerapps.com/signup?redirect=marketing&email=) before you begin.
 
 ## Prerequisites
 
@@ -32,7 +32,7 @@ To follow this procedure, you need an [Office 365 subscription](https://signup.m
 
 ## Sign in to PowerApps
 
-Sign into PowerApps at [https://web.powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+Sign into PowerApps at [https://make.powerapps.com](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
 ## Add an app
 

@@ -27,8 +27,8 @@ This sample shows how to write a plug-in that can access web (network) resources
     - HttpClientPlugin uses [HttpClient Class](/dotnet/api/system.net.http.httpclient)
 1. Open the sample solution in Visual Studio, navigate to the project's properties, and verify the assembly will be signed during the build. Press F6 to build the sample's assembly (WebAccessPlugin.dll).
 1. Run the Plug-in Registration tool and register the assembly in the Common Data Service server's sandbox and database. 
-1. For either plug-in type, when registering a step, specify a web URI string (i.e., `http://www.microsoft.com`) in the unsecure configuration field.
-    - The default value `http://www.bing.com` will be used if none is provided.
+1. For either plug-in type, when registering a step, specify a web URI string (i.e., `https://www.microsoft.com`) in the unsecure configuration field.
+    - The default value `https://www.bing.com` will be used if none is provided.
 1. Using an app or write code to perform the appropriate operation to invoke the message and entity request that you registered the plug-in on.
 1. When the plug-in runs, if the duration of the call exceeds the 15 second limit, it will throw an error. Otherwise it should succeed.
 1. When you are done testing, unregister the assembly and step.
@@ -41,7 +41,7 @@ and write details to the Plugin Trace Log.
 
 - If the `WebClientPlugin` plugin fails, it will write something like the following to the Plugin Trace log:
     ```
-    Downloading the target URI: http://www.bing.com
+    Downloading the target URI: https://www.bing.com
     Exception: Microsoft.Xrm.Sdk.InvalidPluginExecutionException: The timeout elapsed while attempting to issue the request. ---> System.Net.WebException: The operation has timed out
       at System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
       at System.Net.WebClient.DownloadData(Uri address)
@@ -52,7 +52,7 @@ and write details to the Plugin Trace Log.
 
 - If the `HttpClientPlugin` plugin fails, it will write something like the following to the Plugin Trace log:
     ```
-    Downloading the target URI: http://www.bing.com
+    Downloading the target URI: https://www.bing.com
     Inner Exceptions:
       Exception: System.Threading.Tasks.TaskCanceledException: A task was canceled.
     Exception: Microsoft.Xrm.Sdk.InvalidPluginExecutionException: An exception occurred while attempting to issue the request.

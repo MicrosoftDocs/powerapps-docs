@@ -64,7 +64,7 @@ PowerApps, Power BI, some Dynamics 365 apps (model-driven apps), and Azure, wh
 in either of the following:
 
 -   **Common Data Service.** Lets you securely store and manage data that's used
-    by business applications built using PowerApps and Microsoft Flow.
+    by business applications built using PowerApps and Power Automate.
 
 -   **Azure Data Lake Storage Gen2.** Lets you collaborate with people in your
     organization using Power BI, Azure Data, and AI services or custom-built line-of-business applications that read data from the lake. Dataflows that load
@@ -90,7 +90,7 @@ You can choose to trigger a dataflow to run manually or schedule the frequency
 for the Power Platform Dataflow service to run it for you. When a dataflow
 completes a run, its data is available to use. To get dataflow data loaded into
 Common Data Service, the Common Data Service connector can be used in PowerApps,
-Microsoft Flow, Excel, and all other applications that support the Common Data Service
+Power Automate, Excel, and all other applications that support the Common Data Service
 connector. To get from dataflows stored in your organization’s Azure Data Lake
 Storage Gen2 account, you can used the Power Platform Dataflow connector in
 Power BI Desktop or access the files directly in the lake.
@@ -104,7 +104,7 @@ section, you get a tour of how dataflows can be used in an organization.
 
 ### Load data to Common Data Service
 Dataflows can be used to populate entities in the [Common Data
-Service](https://docs.microsoft.com/en-us/powerapps/maker/common-data-service/data-platform-intro)
+Service](https://docs.microsoft.com/powerapps/maker/common-data-service/data-platform-intro)
 that are then used in PowerApps applications. With a few clicks, you can
 integrate data from online and on-premises sources data sources.
 

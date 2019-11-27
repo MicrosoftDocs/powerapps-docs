@@ -1,1 +1,1 @@
-For up-to-date compatibility information about CRM 2015, see [Compatibility with Microsoft Dynamics CRM 2015](https://support.microsoft.com/en-us/kb/3018360).
+For up-to-date compatibility information about CRM 2015, see [Compatibility with Microsoft Dynamics CRM 2015](https://support.microsoft.com/kb/3018360).

@@ -34,7 +34,7 @@ Help Desk provides a user-friendly experience to connect end users with support 
 
 ## Prerequisites
 
-- [Sign up](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) for PowerApps.
+- [Sign up](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) for PowerApps.
 - Must have a valid SharePoint Online license and permission to create lists.
 
 ## Create the HelpDesk SharePoint list
@@ -134,11 +134,11 @@ This list stores the Help Desk tickets.
 
 ## Download the app
 
-1.	[Download](http://pappsfeprodwestuscontent.blob.core.windows.net/sampleapps/helpdesk/docs/HelpDesk(SP_List).zip) the PowerApps package and save it to your machine.
+1.	[Download](https://pappsfeprodwestuscontent.blob.core.windows.net/sampleapps/helpdesk/docs/HelpDesk(SP_List).zip) the PowerApps package and save it to your machine.
 
 ## Create connections
 
-1.	In a web browser, navigate to [web.powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1.	In a web browser, navigate to [make.powerapps.com](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 2.	Sign in by providing the same credentials that you used to sign up.
 3.	In the menu on the left, select **Data** then **Connections**.
 	
@@ -168,7 +168,7 @@ This list stores the Help Desk tickets.
 
 ## Import the app
 
-1. In a web browser, navigate to https://web.powerapps.com.
+1. In a web browser, navigate to https://make.powerapps.com.
 2. Sign in by providing the same credentials that you used to sign up.
 3. In the menu on the left, select **Apps**. 
 4. Click **Import package(preview)**.

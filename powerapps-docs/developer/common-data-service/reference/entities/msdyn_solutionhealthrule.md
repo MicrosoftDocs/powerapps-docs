@@ -1,7 +1,7 @@
 ---
-title: "msdyn_Connector Entity Reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the msdyn_Connector entity."
-ms.date: 04/01/2019
+title: "msdyn_solutionhealthrule Entity Reference (Common Data Service)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the msdyn_solutionhealthrule entity in Common Data Service."
+ms.date: 11/07/2019
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -12,48 +12,47 @@ search.audienceType:
   - developer
 search.app: 
   - PowerApps
-  - D365CE
 ---
-# msdyn_Connector Entity Reference
+# msdyn_solutionhealthrule Entity Reference
 
-Connector Entity to support Solutioning Integration
 
-**Added by**: Power Connector Solution Solution
+
+**Added by**: PowerApps Checker Solution
 
 
 ## Messages
 
 |Message|Web API Operation|SDK Assembly|
 |-|-|-|
-|Assign|PATCH [*org URI*]/api/data/v9.0/msdyn_connectors(*msdyn_connectorid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
-|Create|POST [*org URI*]/api/data/v9.0/msdyn_connectors<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/msdyn_connectors(*msdyn_connectorid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|Assign|PATCH [*org URI*]/api/data/v9.0/msdyn_solutionhealthrules(*msdyn_solutionhealthruleid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+|Create|POST [*org URI*]/api/data/v9.0/msdyn_solutionhealthrules<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Delete|DELETE [*org URI*]/api/data/v9.0/msdyn_solutionhealthrules(*msdyn_solutionhealthruleid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |GrantAccess|<xref href="Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 |IsValidStateTransition|<xref href="Microsoft.Dynamics.CRM.IsValidStateTransition?text=IsValidStateTransition Function" />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 |ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/msdyn_connectors(*msdyn_connectorid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/msdyn_connectors<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|Retrieve|GET [*org URI*]/api/data/v9.0/msdyn_solutionhealthrules(*msdyn_solutionhealthruleid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/msdyn_solutionhealthrules<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 |RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
 |RevokeAccess|<xref href="Microsoft.Dynamics.CRM.RevokeAccess?text=RevokeAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
-|SetState|PATCH [*org URI*]/api/data/v9.0/msdyn_connectors(*msdyn_connectorid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-|Update|PATCH [*org URI*]/api/data/v9.0/msdyn_connectors(*msdyn_connectorid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|SetState|PATCH [*org URI*]/api/data/v9.0/msdyn_solutionhealthrules(*msdyn_solutionhealthruleid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+|Update|PATCH [*org URI*]/api/data/v9.0/msdyn_solutionhealthrules(*msdyn_solutionhealthruleid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
 ## Entity Properties
 
 |Property|Value|
 |--------|-----|
-|CollectionSchemaName|msdyn_Connectors|
-|DisplayCollectionName|Connectors|
-|DisplayName|Connector|
-|EntitySetName|msdyn_connectors|
+|CollectionSchemaName|msdyn_solutionhealthrules|
+|DisplayCollectionName|Solution Health Rules|
+|DisplayName|Solution Health Rule|
+|EntitySetName|msdyn_solutionhealthrules|
 |IsBPFEntity|False|
-|LogicalCollectionName|msdyn_connectors|
-|LogicalName|msdyn_connector|
+|LogicalCollectionName|msdyn_solutionhealthrules|
+|LogicalName|msdyn_solutionhealthrule|
 |OwnershipType|UserOwned|
-|PrimaryIdAttribute|msdyn_connectorid|
+|PrimaryIdAttribute|msdyn_solutionhealthruleid|
 |PrimaryNameAttribute|msdyn_name|
-|SchemaName|msdyn_Connector|
+|SchemaName|msdyn_solutionhealthrule|
 
 <a name="writable-attributes"></a>
 
@@ -62,16 +61,14 @@ Connector Entity to support Solutioning Integration
 These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
-- [IntroducedVersion](#BKMK_IntroducedVersion)
-- [msdyn_ConnectorId](#BKMK_msdyn_ConnectorId)
-- [msdyn_ConnectorType](#BKMK_msdyn_ConnectorType)
 - [msdyn_Description](#BKMK_msdyn_Description)
-- [msdyn_DisplayName](#BKMK_msdyn_DisplayName)
-- [msdyn_IconBrandColor](#BKMK_msdyn_IconBrandColor)
-- [msdyn_IconUri](#BKMK_msdyn_IconUri)
-- [msdyn_Name](#BKMK_msdyn_Name)
-- [msdyn_Operations](#BKMK_msdyn_Operations)
-- [msdyn_Payload](#BKMK_msdyn_Payload)
+- [msdyn_name](#BKMK_msdyn_name)
+- [msdyn_OwningSolutionId](#BKMK_msdyn_OwningSolutionId)
+- [msdyn_ResolutionAction](#BKMK_msdyn_ResolutionAction)
+- [msdyn_solutionhealthruleId](#BKMK_msdyn_solutionhealthruleId)
+- [msdyn_solutionhealthrulesetId](#BKMK_msdyn_solutionhealthrulesetId)
+- [msdyn_uniquename](#BKMK_msdyn_uniquename)
+- [msdyn_Workflow](#BKMK_msdyn_Workflow)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [OwnerId](#BKMK_OwnerId)
 - [OwnerIdType](#BKMK_OwnerIdType)
@@ -98,168 +95,124 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |Type|Integer|
 
 
-### <a name="BKMK_IntroducedVersion"></a> IntroducedVersion
-
-|Property|Value|
-|--------|-----|
-|Description|Version in which the form is introduced.|
-|DisplayName|Introduced Version|
-|FormatName|VersionNumber|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|introducedversion|
-|MaxLength|48|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_msdyn_ConnectorId"></a> msdyn_ConnectorId
-
-|Property|Value|
-|--------|-----|
-|Description|Unique identifier for entity instances|
-|DisplayName|Connector|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|msdyn_connectorid|
-|RequiredLevel|SystemRequired|
-|Type|Uniqueidentifier|
-
-
-### <a name="BKMK_msdyn_ConnectorType"></a> msdyn_ConnectorType
-
-|Property|Value|
-|--------|-----|
-|Description|Connector Type|
-|DisplayName|Connector Type|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|msdyn_connectortype|
-|RequiredLevel|ApplicationRequired|
-|Type|Picklist|
-
-#### msdyn_ConnectorType Options
-
-|Value|Label|
-|-----|-----|
-|0|NotSpecified|
-|1|CustomConnector|
-
-
-
 ### <a name="BKMK_msdyn_Description"></a> msdyn_Description
 
 |Property|Value|
 |--------|-----|
-|Description|Description of the Connector|
+|Description|Rule description.|
 |DisplayName|Description|
-|FormatName|Text|
+|Format|Text|
 |IsLocalizable|False|
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|msdyn_description|
-|MaxLength|1000|
+|MaxLength|2000|
 |RequiredLevel|None|
-|Type|String|
+|Type|Memo|
 
 
-### <a name="BKMK_msdyn_DisplayName"></a> msdyn_DisplayName
+### <a name="BKMK_msdyn_name"></a> msdyn_name
 
 |Property|Value|
 |--------|-----|
-|Description|Display Name of the Connector|
-|DisplayName|Display Name|
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|msdyn_displayname|
-|MaxLength|200|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_msdyn_IconBrandColor"></a> msdyn_IconBrandColor
-
-|Property|Value|
-|--------|-----|
-|Description|Connector Icon Branding Color|
-|DisplayName|Icon Brand Color|
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|msdyn_iconbrandcolor|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_msdyn_IconUri"></a> msdyn_IconUri
-
-|Property|Value|
-|--------|-----|
-|Description|Icon to be used for Connector|
-|DisplayName|IconUri|
-|FormatName|Url|
-|IsLocalizable|False|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|msdyn_iconuri|
-|MaxLength|1000|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_msdyn_Name"></a> msdyn_Name
-
-|Property|Value|
-|--------|-----|
-|Description|Required name of the Connector|
-|DisplayName|Name (Id) of the Connector|
+|Description|The name of the custom entity.|
+|DisplayName|Name|
 |FormatName|Text|
 |IsLocalizable|False|
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|msdyn_name|
-|MaxLength|500|
+|MaxLength|100|
 |RequiredLevel|ApplicationRequired|
 |Type|String|
 
 
-### <a name="BKMK_msdyn_Operations"></a> msdyn_Operations
+### <a name="BKMK_msdyn_OwningSolutionId"></a> msdyn_OwningSolutionId
 
 |Property|Value|
 |--------|-----|
-|Description|Operations supported by Connector. Store Swagger file on Operations.|
-|DisplayName|Operations|
+|Description||
+|DisplayName|OwningSolutionId|
 |FormatName|Text|
 |IsLocalizable|False|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|msdyn_operations|
-|MaxLength|500000|
+|LogicalName|msdyn_owningsolutionid|
+|MaxLength|100|
 |RequiredLevel|None|
 |Type|String|
 
 
-### <a name="BKMK_msdyn_Payload"></a> msdyn_Payload
+### <a name="BKMK_msdyn_ResolutionAction"></a> msdyn_ResolutionAction
 
 |Property|Value|
 |--------|-----|
-|Description|Description of the Connector|
-|DisplayName|Payload|
+|Description||
+|DisplayName|ResolutionAction|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|msdyn_resolutionaction|
+|RequiredLevel|None|
+|Targets|workflow|
+|Type|Lookup|
+
+
+### <a name="BKMK_msdyn_solutionhealthruleId"></a> msdyn_solutionhealthruleId
+
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier for entity instances|
+|DisplayName|Solution Health Rule|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|IsValidForUpdate|False|
+|LogicalName|msdyn_solutionhealthruleid|
+|RequiredLevel|SystemRequired|
+|Type|Uniqueidentifier|
+
+
+### <a name="BKMK_msdyn_solutionhealthrulesetId"></a> msdyn_solutionhealthrulesetId
+
+|Property|Value|
+|--------|-----|
+|Description|Rule set to which the rule belongs to.|
+|DisplayName|Solution Health Rule Set|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|msdyn_solutionhealthrulesetid|
+|RequiredLevel|ApplicationRequired|
+|Targets|msdyn_solutionhealthruleset|
+|Type|Lookup|
+
+
+### <a name="BKMK_msdyn_uniquename"></a> msdyn_uniquename
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName|Unique Name|
 |FormatName|Text|
 |IsLocalizable|False|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|msdyn_payload|
-|MaxLength|500000|
+|LogicalName|msdyn_uniquename|
+|MaxLength|100|
 |RequiredLevel|None|
 |Type|String|
+
+
+### <a name="BKMK_msdyn_Workflow"></a> msdyn_Workflow
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName|Workflow|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|msdyn_workflow|
+|RequiredLevel|ApplicationRequired|
+|Targets|workflow|
+|Type|Lookup|
 
 
 ### <a name="BKMK_OverriddenCreatedOn"></a> OverriddenCreatedOn
@@ -313,7 +266,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 |Property|Value|
 |--------|-----|
-|Description|Status of the Connector|
+|Description|Status of the Solution Health Rule|
 |DisplayName|Status|
 |IsValidForCreate|False|
 |IsValidForForm|True|
@@ -335,7 +288,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 |Property|Value|
 |--------|-----|
-|Description|Reason for the status of the Connector|
+|Description|Reason for the status of the Solution Health Rule|
 |DisplayName|Status Reason|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -389,7 +342,6 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
-- [ComponentState](#BKMK_ComponentState)
 - [CreatedBy](#BKMK_CreatedBy)
 - [CreatedByName](#BKMK_CreatedByName)
 - [CreatedByYomiName](#BKMK_CreatedByYomiName)
@@ -397,7 +349,6 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 - [CreatedOnBehalfBy](#BKMK_CreatedOnBehalfBy)
 - [CreatedOnBehalfByName](#BKMK_CreatedOnBehalfByName)
 - [CreatedOnBehalfByYomiName](#BKMK_CreatedOnBehalfByYomiName)
-- [IsManaged](#BKMK_IsManaged)
 - [ModifiedBy](#BKMK_ModifiedBy)
 - [ModifiedByName](#BKMK_ModifiedByName)
 - [ModifiedByYomiName](#BKMK_ModifiedByYomiName)
@@ -405,39 +356,15 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 - [ModifiedOnBehalfBy](#BKMK_ModifiedOnBehalfBy)
 - [ModifiedOnBehalfByName](#BKMK_ModifiedOnBehalfByName)
 - [ModifiedOnBehalfByYomiName](#BKMK_ModifiedOnBehalfByYomiName)
-- [msdyn_ConnectorIdUnique](#BKMK_msdyn_ConnectorIdUnique)
-- [OverwriteTime](#BKMK_OverwriteTime)
+- [msdyn_resolutionactionName](#BKMK_msdyn_resolutionactionName)
+- [msdyn_solutionhealthrulesetIdName](#BKMK_msdyn_solutionhealthrulesetIdName)
+- [msdyn_WorkflowName](#BKMK_msdyn_WorkflowName)
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
-- [SolutionId](#BKMK_SolutionId)
-- [SupportingSolutionId](#BKMK_SupportingSolutionId)
 - [VersionNumber](#BKMK_VersionNumber)
-
-
-### <a name="BKMK_ComponentState"></a> ComponentState
-
-|Property|Value|
-|--------|-----|
-|Description|For internal use only.|
-|DisplayName|Component State|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|componentstate|
-|RequiredLevel|SystemRequired|
-|Type|Picklist|
-
-#### ComponentState Options
-
-|Value|Label|
-|-----|-----|
-|0|Published|
-|1|Unpublished|
-|2|Deleted|
-|3|Deleted Unpublished|
-
 
 
 ### <a name="BKMK_CreatedBy"></a> CreatedBy
@@ -559,29 +486,6 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |Type|String|
 
 
-### <a name="BKMK_IsManaged"></a> IsManaged
-
-|Property|Value|
-|--------|-----|
-|Description|Indicates whether the solution component is part of a managed solution.|
-|DisplayName|Is Managed|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|ismanaged|
-|RequiredLevel|SystemRequired|
-|Type|Boolean|
-
-#### IsManaged Options
-
-|Value|Label|
-|-----|-----|
-|1|Managed|
-|0|Unmanaged|
-
-**DefaultValue**: False
-
-
-
 ### <a name="BKMK_ModifiedBy"></a> ModifiedBy
 
 **Added by**: Active Solution Solution
@@ -701,32 +605,52 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |Type|String|
 
 
-### <a name="BKMK_msdyn_ConnectorIdUnique"></a> msdyn_ConnectorIdUnique
+### <a name="BKMK_msdyn_resolutionactionName"></a> msdyn_resolutionactionName
 
 |Property|Value|
 |--------|-----|
-|Description|For internal use only.|
+|Description||
 |DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|msdyn_connectoridunique|
-|RequiredLevel|SystemRequired|
-|Type|Uniqueidentifier|
+|LogicalName|msdyn_resolutionactionname|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
 
 
-### <a name="BKMK_OverwriteTime"></a> OverwriteTime
+### <a name="BKMK_msdyn_solutionhealthrulesetIdName"></a> msdyn_solutionhealthrulesetIdName
 
 |Property|Value|
 |--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|For internal use only.|
-|DisplayName|Record Overwrite Time|
-|Format|DateOnly|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|overwritetime|
-|RequiredLevel|SystemRequired|
-|Type|DateTime|
+|LogicalName|msdyn_solutionhealthrulesetidname|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
+
+
+### <a name="BKMK_msdyn_WorkflowName"></a> msdyn_WorkflowName
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|msdyn_workflowname|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_OwnerIdName"></a> OwnerIdName
@@ -813,32 +737,6 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |Type|Lookup|
 
 
-### <a name="BKMK_SolutionId"></a> SolutionId
-
-|Property|Value|
-|--------|-----|
-|Description|Unique identifier of the associated solution.|
-|DisplayName|Solution|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|solutionid|
-|RequiredLevel|SystemRequired|
-|Type|Uniqueidentifier|
-
-
-### <a name="BKMK_SupportingSolutionId"></a> SupportingSolutionId
-
-|Property|Value|
-|--------|-----|
-|Description|For internal use only.|
-|DisplayName|Solution|
-|IsValidForForm|False|
-|IsValidForRead|False|
-|LogicalName|supportingsolutionid|
-|RequiredLevel|None|
-|Type|Uniqueidentifier|
-
-
 ### <a name="BKMK_VersionNumber"></a> VersionNumber
 
 **Added by**: Active Solution Solution
@@ -861,21 +759,22 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 
 Listed by **SchemaName**.
 
-- [msdyn_connector_SyncErrors](#BKMK_msdyn_connector_SyncErrors)
-- [msdyn_connector_DuplicateMatchingRecord](#BKMK_msdyn_connector_DuplicateMatchingRecord)
-- [msdyn_connector_DuplicateBaseRecord](#BKMK_msdyn_connector_DuplicateBaseRecord)
-- [msdyn_connector_AsyncOperations](#BKMK_msdyn_connector_AsyncOperations)
-- [msdyn_connector_MailboxTrackingFolders](#BKMK_msdyn_connector_MailboxTrackingFolders)
-- [msdyn_connector_ProcessSession](#BKMK_msdyn_connector_ProcessSession)
-- [msdyn_connector_BulkDeleteFailures](#BKMK_msdyn_connector_BulkDeleteFailures)
-- [msdyn_connector_PrincipalObjectAttributeAccesses](#BKMK_msdyn_connector_PrincipalObjectAttributeAccesses)
+- [msdyn_solutionhealthrule_SyncErrors](#BKMK_msdyn_solutionhealthrule_SyncErrors)
+- [msdyn_solutionhealthrule_DuplicateMatchingRecord](#BKMK_msdyn_solutionhealthrule_DuplicateMatchingRecord)
+- [msdyn_solutionhealthrule_DuplicateBaseRecord](#BKMK_msdyn_solutionhealthrule_DuplicateBaseRecord)
+- [msdyn_solutionhealthrule_AsyncOperations](#BKMK_msdyn_solutionhealthrule_AsyncOperations)
+- [msdyn_solutionhealthrule_MailboxTrackingFolders](#BKMK_msdyn_solutionhealthrule_MailboxTrackingFolders)
+- [msdyn_solutionhealthrule_ProcessSession](#BKMK_msdyn_solutionhealthrule_ProcessSession)
+- [msdyn_solutionhealthrule_BulkDeleteFailures](#BKMK_msdyn_solutionhealthrule_BulkDeleteFailures)
+- [msdyn_solutionhealthrule_PrincipalObjectAttributeAccesses](#BKMK_msdyn_solutionhealthrule_PrincipalObjectAttributeAccesses)
+- [msdyn_msdyn_solutionhealthrule_msdyn_solutionhealthruleargument_SolutionHealthRule](#BKMK_msdyn_msdyn_solutionhealthrule_msdyn_solutionhealthruleargument_SolutionHealthRule)
 
 
-### <a name="BKMK_msdyn_connector_SyncErrors"></a> msdyn_connector_SyncErrors
+### <a name="BKMK_msdyn_solutionhealthrule_SyncErrors"></a> msdyn_solutionhealthrule_SyncErrors
 
 **Added by**: System Solution Solution
 
-Same as syncerror entity [msdyn_connector_SyncErrors](syncerror.md#BKMK_msdyn_connector_SyncErrors) Many-To-One relationship.
+Same as syncerror entity [msdyn_solutionhealthrule_SyncErrors](syncerror.md#BKMK_msdyn_solutionhealthrule_SyncErrors) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -883,16 +782,16 @@ Same as syncerror entity [msdyn_connector_SyncErrors](syncerror.md#BKMK_msdyn_co
 |ReferencingAttribute|regardingobjectid|
 |IsHierarchical|False|
 |IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|msdyn_connector_SyncErrors|
+|ReferencedEntityNavigationPropertyName|msdyn_solutionhealthrule_SyncErrors|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_msdyn_connector_DuplicateMatchingRecord"></a> msdyn_connector_DuplicateMatchingRecord
+### <a name="BKMK_msdyn_solutionhealthrule_DuplicateMatchingRecord"></a> msdyn_solutionhealthrule_DuplicateMatchingRecord
 
 **Added by**: System Solution Solution
 
-Same as duplicaterecord entity [msdyn_connector_DuplicateMatchingRecord](duplicaterecord.md#BKMK_msdyn_connector_DuplicateMatchingRecord) Many-To-One relationship.
+Same as duplicaterecord entity [msdyn_solutionhealthrule_DuplicateMatchingRecord](duplicaterecord.md#BKMK_msdyn_solutionhealthrule_DuplicateMatchingRecord) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -900,16 +799,16 @@ Same as duplicaterecord entity [msdyn_connector_DuplicateMatchingRecord](duplica
 |ReferencingAttribute|duplicaterecordid|
 |IsHierarchical|False|
 |IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|msdyn_connector_DuplicateMatchingRecord|
+|ReferencedEntityNavigationPropertyName|msdyn_solutionhealthrule_DuplicateMatchingRecord|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_msdyn_connector_DuplicateBaseRecord"></a> msdyn_connector_DuplicateBaseRecord
+### <a name="BKMK_msdyn_solutionhealthrule_DuplicateBaseRecord"></a> msdyn_solutionhealthrule_DuplicateBaseRecord
 
 **Added by**: System Solution Solution
 
-Same as duplicaterecord entity [msdyn_connector_DuplicateBaseRecord](duplicaterecord.md#BKMK_msdyn_connector_DuplicateBaseRecord) Many-To-One relationship.
+Same as duplicaterecord entity [msdyn_solutionhealthrule_DuplicateBaseRecord](duplicaterecord.md#BKMK_msdyn_solutionhealthrule_DuplicateBaseRecord) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -917,16 +816,16 @@ Same as duplicaterecord entity [msdyn_connector_DuplicateBaseRecord](duplicatere
 |ReferencingAttribute|baserecordid|
 |IsHierarchical|False|
 |IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|msdyn_connector_DuplicateBaseRecord|
+|ReferencedEntityNavigationPropertyName|msdyn_solutionhealthrule_DuplicateBaseRecord|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_msdyn_connector_AsyncOperations"></a> msdyn_connector_AsyncOperations
+### <a name="BKMK_msdyn_solutionhealthrule_AsyncOperations"></a> msdyn_solutionhealthrule_AsyncOperations
 
 **Added by**: System Solution Solution
 
-Same as asyncoperation entity [msdyn_connector_AsyncOperations](asyncoperation.md#BKMK_msdyn_connector_AsyncOperations) Many-To-One relationship.
+Same as asyncoperation entity [msdyn_solutionhealthrule_AsyncOperations](asyncoperation.md#BKMK_msdyn_solutionhealthrule_AsyncOperations) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -934,16 +833,16 @@ Same as asyncoperation entity [msdyn_connector_AsyncOperations](asyncoperation.m
 |ReferencingAttribute|regardingobjectid|
 |IsHierarchical|False|
 |IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|msdyn_connector_AsyncOperations|
+|ReferencedEntityNavigationPropertyName|msdyn_solutionhealthrule_AsyncOperations|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_msdyn_connector_MailboxTrackingFolders"></a> msdyn_connector_MailboxTrackingFolders
+### <a name="BKMK_msdyn_solutionhealthrule_MailboxTrackingFolders"></a> msdyn_solutionhealthrule_MailboxTrackingFolders
 
 **Added by**: System Solution Solution
 
-Same as mailboxtrackingfolder entity [msdyn_connector_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_msdyn_connector_MailboxTrackingFolders) Many-To-One relationship.
+Same as mailboxtrackingfolder entity [msdyn_solutionhealthrule_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_msdyn_solutionhealthrule_MailboxTrackingFolders) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -951,16 +850,16 @@ Same as mailboxtrackingfolder entity [msdyn_connector_MailboxTrackingFolders](ma
 |ReferencingAttribute|regardingobjectid|
 |IsHierarchical|False|
 |IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|msdyn_connector_MailboxTrackingFolders|
+|ReferencedEntityNavigationPropertyName|msdyn_solutionhealthrule_MailboxTrackingFolders|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_msdyn_connector_ProcessSession"></a> msdyn_connector_ProcessSession
+### <a name="BKMK_msdyn_solutionhealthrule_ProcessSession"></a> msdyn_solutionhealthrule_ProcessSession
 
 **Added by**: System Solution Solution
 
-Same as processsession entity [msdyn_connector_ProcessSession](processsession.md#BKMK_msdyn_connector_ProcessSession) Many-To-One relationship.
+Same as processsession entity [msdyn_solutionhealthrule_ProcessSession](processsession.md#BKMK_msdyn_solutionhealthrule_ProcessSession) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -968,16 +867,16 @@ Same as processsession entity [msdyn_connector_ProcessSession](processsession.md
 |ReferencingAttribute|regardingobjectid|
 |IsHierarchical|False|
 |IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|msdyn_connector_ProcessSession|
+|ReferencedEntityNavigationPropertyName|msdyn_solutionhealthrule_ProcessSession|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_msdyn_connector_BulkDeleteFailures"></a> msdyn_connector_BulkDeleteFailures
+### <a name="BKMK_msdyn_solutionhealthrule_BulkDeleteFailures"></a> msdyn_solutionhealthrule_BulkDeleteFailures
 
 **Added by**: System Solution Solution
 
-Same as bulkdeletefailure entity [msdyn_connector_BulkDeleteFailures](bulkdeletefailure.md#BKMK_msdyn_connector_BulkDeleteFailures) Many-To-One relationship.
+Same as bulkdeletefailure entity [msdyn_solutionhealthrule_BulkDeleteFailures](bulkdeletefailure.md#BKMK_msdyn_solutionhealthrule_BulkDeleteFailures) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -985,16 +884,16 @@ Same as bulkdeletefailure entity [msdyn_connector_BulkDeleteFailures](bulkdelete
 |ReferencingAttribute|regardingobjectid|
 |IsHierarchical|False|
 |IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|msdyn_connector_BulkDeleteFailures|
+|ReferencedEntityNavigationPropertyName|msdyn_solutionhealthrule_BulkDeleteFailures|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_msdyn_connector_PrincipalObjectAttributeAccesses"></a> msdyn_connector_PrincipalObjectAttributeAccesses
+### <a name="BKMK_msdyn_solutionhealthrule_PrincipalObjectAttributeAccesses"></a> msdyn_solutionhealthrule_PrincipalObjectAttributeAccesses
 
 **Added by**: System Solution Solution
 
-Same as principalobjectattributeaccess entity [msdyn_connector_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_msdyn_connector_PrincipalObjectAttributeAccesses) Many-To-One relationship.
+Same as principalobjectattributeaccess entity [msdyn_solutionhealthrule_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_msdyn_solutionhealthrule_PrincipalObjectAttributeAccesses) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -1002,9 +901,24 @@ Same as principalobjectattributeaccess entity [msdyn_connector_PrincipalObjectAt
 |ReferencingAttribute|objectid|
 |IsHierarchical|False|
 |IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|msdyn_connector_PrincipalObjectAttributeAccesses|
+|ReferencedEntityNavigationPropertyName|msdyn_solutionhealthrule_PrincipalObjectAttributeAccesses|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_msdyn_msdyn_solutionhealthrule_msdyn_solutionhealthruleargument_SolutionHealthRule"></a> msdyn_msdyn_solutionhealthrule_msdyn_solutionhealthruleargument_SolutionHealthRule
+
+Same as msdyn_solutionhealthruleargument entity [msdyn_msdyn_solutionhealthrule_msdyn_solutionhealthruleargument_SolutionHealthRule](msdyn_solutionhealthruleargument.md#BKMK_msdyn_msdyn_solutionhealthrule_msdyn_solutionhealthruleargument_SolutionHealthRule) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_solutionhealthruleargument|
+|ReferencingAttribute|msdyn_solutionhealthrule|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|msdyn_msdyn_solutionhealthrule_msdyn_solutionhealthruleargument_SolutionHealthRule|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 <a name="manytoone"></a>
 
@@ -1012,59 +926,78 @@ Same as principalobjectattributeaccess entity [msdyn_connector_PrincipalObjectAt
 
 Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related entity. Listed by **SchemaName**.
 
-- [lk_msdyn_connector_createdby](#BKMK_lk_msdyn_connector_createdby)
-- [lk_msdyn_connector_createdonbehalfby](#BKMK_lk_msdyn_connector_createdonbehalfby)
-- [lk_msdyn_connector_modifiedby](#BKMK_lk_msdyn_connector_modifiedby)
-- [lk_msdyn_connector_modifiedonbehalfby](#BKMK_lk_msdyn_connector_modifiedonbehalfby)
-- [user_msdyn_connector](#BKMK_user_msdyn_connector)
-- [team_msdyn_connector](#BKMK_team_msdyn_connector)
-- [business_unit_msdyn_connector](#BKMK_business_unit_msdyn_connector)
+- [lk_msdyn_solutionhealthrule_createdby](#BKMK_lk_msdyn_solutionhealthrule_createdby)
+- [lk_msdyn_solutionhealthrule_createdonbehalfby](#BKMK_lk_msdyn_solutionhealthrule_createdonbehalfby)
+- [lk_msdyn_solutionhealthrule_modifiedby](#BKMK_lk_msdyn_solutionhealthrule_modifiedby)
+- [lk_msdyn_solutionhealthrule_modifiedonbehalfby](#BKMK_lk_msdyn_solutionhealthrule_modifiedonbehalfby)
+- [user_msdyn_solutionhealthrule](#BKMK_user_msdyn_solutionhealthrule)
+- [team_msdyn_solutionhealthrule](#BKMK_team_msdyn_solutionhealthrule)
+- [business_unit_msdyn_solutionhealthrule](#BKMK_business_unit_msdyn_solutionhealthrule)
+- [msdyn_msdyn_solutionhealthruleset_msdyn_solutio](#BKMK_msdyn_msdyn_solutionhealthruleset_msdyn_solutio)
+- [msdyn_workflow_msdyn_solutionhealthrule_Workflow](#BKMK_msdyn_workflow_msdyn_solutionhealthrule_Workflow)
+- [msdyn_workflow_msdyn_solutionhealthrule_resolutionaction](#BKMK_msdyn_workflow_msdyn_solutionhealthrule_resolutionaction)
 
 
-### <a name="BKMK_lk_msdyn_connector_createdby"></a> lk_msdyn_connector_createdby
-
-**Added by**: System Solution Solution
-
-See systemuser Entity [lk_msdyn_connector_createdby](systemuser.md#BKMK_lk_msdyn_connector_createdby) One-To-Many relationship.
-
-### <a name="BKMK_lk_msdyn_connector_createdonbehalfby"></a> lk_msdyn_connector_createdonbehalfby
+### <a name="BKMK_lk_msdyn_solutionhealthrule_createdby"></a> lk_msdyn_solutionhealthrule_createdby
 
 **Added by**: System Solution Solution
 
-See systemuser Entity [lk_msdyn_connector_createdonbehalfby](systemuser.md#BKMK_lk_msdyn_connector_createdonbehalfby) One-To-Many relationship.
+See systemuser Entity [lk_msdyn_solutionhealthrule_createdby](systemuser.md#BKMK_lk_msdyn_solutionhealthrule_createdby) One-To-Many relationship.
 
-### <a name="BKMK_lk_msdyn_connector_modifiedby"></a> lk_msdyn_connector_modifiedby
-
-**Added by**: System Solution Solution
-
-See systemuser Entity [lk_msdyn_connector_modifiedby](systemuser.md#BKMK_lk_msdyn_connector_modifiedby) One-To-Many relationship.
-
-### <a name="BKMK_lk_msdyn_connector_modifiedonbehalfby"></a> lk_msdyn_connector_modifiedonbehalfby
+### <a name="BKMK_lk_msdyn_solutionhealthrule_createdonbehalfby"></a> lk_msdyn_solutionhealthrule_createdonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Entity [lk_msdyn_connector_modifiedonbehalfby](systemuser.md#BKMK_lk_msdyn_connector_modifiedonbehalfby) One-To-Many relationship.
+See systemuser Entity [lk_msdyn_solutionhealthrule_createdonbehalfby](systemuser.md#BKMK_lk_msdyn_solutionhealthrule_createdonbehalfby) One-To-Many relationship.
 
-### <a name="BKMK_user_msdyn_connector"></a> user_msdyn_connector
-
-**Added by**: System Solution Solution
-
-See systemuser Entity [user_msdyn_connector](systemuser.md#BKMK_user_msdyn_connector) One-To-Many relationship.
-
-### <a name="BKMK_team_msdyn_connector"></a> team_msdyn_connector
+### <a name="BKMK_lk_msdyn_solutionhealthrule_modifiedby"></a> lk_msdyn_solutionhealthrule_modifiedby
 
 **Added by**: System Solution Solution
 
-See team Entity [team_msdyn_connector](team.md#BKMK_team_msdyn_connector) One-To-Many relationship.
+See systemuser Entity [lk_msdyn_solutionhealthrule_modifiedby](systemuser.md#BKMK_lk_msdyn_solutionhealthrule_modifiedby) One-To-Many relationship.
 
-### <a name="BKMK_business_unit_msdyn_connector"></a> business_unit_msdyn_connector
+### <a name="BKMK_lk_msdyn_solutionhealthrule_modifiedonbehalfby"></a> lk_msdyn_solutionhealthrule_modifiedonbehalfby
 
 **Added by**: System Solution Solution
 
-See businessunit Entity [business_unit_msdyn_connector](businessunit.md#BKMK_business_unit_msdyn_connector) One-To-Many relationship.
+See systemuser Entity [lk_msdyn_solutionhealthrule_modifiedonbehalfby](systemuser.md#BKMK_lk_msdyn_solutionhealthrule_modifiedonbehalfby) One-To-Many relationship.
+
+### <a name="BKMK_user_msdyn_solutionhealthrule"></a> user_msdyn_solutionhealthrule
+
+**Added by**: System Solution Solution
+
+See systemuser Entity [user_msdyn_solutionhealthrule](systemuser.md#BKMK_user_msdyn_solutionhealthrule) One-To-Many relationship.
+
+### <a name="BKMK_team_msdyn_solutionhealthrule"></a> team_msdyn_solutionhealthrule
+
+**Added by**: System Solution Solution
+
+See team Entity [team_msdyn_solutionhealthrule](team.md#BKMK_team_msdyn_solutionhealthrule) One-To-Many relationship.
+
+### <a name="BKMK_business_unit_msdyn_solutionhealthrule"></a> business_unit_msdyn_solutionhealthrule
+
+**Added by**: System Solution Solution
+
+See businessunit Entity [business_unit_msdyn_solutionhealthrule](businessunit.md#BKMK_business_unit_msdyn_solutionhealthrule) One-To-Many relationship.
+
+### <a name="BKMK_msdyn_msdyn_solutionhealthruleset_msdyn_solutio"></a> msdyn_msdyn_solutionhealthruleset_msdyn_solutio
+
+See msdyn_solutionhealthruleset Entity [msdyn_msdyn_solutionhealthruleset_msdyn_solutio](msdyn_solutionhealthruleset.md#BKMK_msdyn_msdyn_solutionhealthruleset_msdyn_solutio) One-To-Many relationship.
+
+### <a name="BKMK_msdyn_workflow_msdyn_solutionhealthrule_Workflow"></a> msdyn_workflow_msdyn_solutionhealthrule_Workflow
+
+**Added by**: System Solution Solution
+
+See workflow Entity [msdyn_workflow_msdyn_solutionhealthrule_Workflow](workflow.md#BKMK_msdyn_workflow_msdyn_solutionhealthrule_Workflow) One-To-Many relationship.
+
+### <a name="BKMK_msdyn_workflow_msdyn_solutionhealthrule_resolutionaction"></a> msdyn_workflow_msdyn_solutionhealthrule_resolutionaction
+
+**Added by**: System Solution Solution
+
+See workflow Entity [msdyn_workflow_msdyn_solutionhealthrule_resolutionaction](workflow.md#BKMK_msdyn_workflow_msdyn_solutionhealthrule_resolutionaction) One-To-Many relationship.
 
 ### See also
 
 [About the Entity Reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
-<xref href="Microsoft.Dynamics.CRM.msdyn_connector?text=msdyn_connector EntityType" />
+<xref href="Microsoft.Dynamics.CRM.msdyn_solutionhealthrule?text=msdyn_solutionhealthrule EntityType" />

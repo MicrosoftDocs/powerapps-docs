@@ -26,16 +26,19 @@ You can search for records across multiple entities by using Relevance search or
 - Categorized search returns search results grouped by entity types, such as accounts, contacts or leads.
 
 Normally, Categorized search is the default search option. However, if Relevance search is enabled by your organization, it becomes the default search experience.  
+  
+## Quick Find (entity-specific Quick Find or multi-entity Categorized Search) 
 
 To find records of one type only, you can use the Quick Find View in the entity's grid.
-  
-## Normal quick find (Categorized search) 
 
-With Categorized you can search records that begin with a specific word or use a wildcard.
+With Categorized Search (also called multi-entity quick find), you can search records that begin with a specific word or use a wildcard.
   
 - **Begins with**: Results include records that begin with a specific word. For example, if you want to search for “Alpine Ski House,” type **alp** in the search box; if you type **ski**, the record won’t show up.  
   
 - **Wildcard**: For example, *ski or *ski\*. 
+
+  > [!NOTE]
+  >  Using a wildcard at the beginning of your Quick Find (single or multi-entity) search query may result in slower performance.
   
 ## Relevance search
   

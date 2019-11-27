@@ -34,6 +34,6 @@ This list below contains all of the Best practices and guidance of client side s
 |[Interact with HTTP and HTTPS resources asynchronously](interact-http-https-resources-asynchronously.md)     |You should interact with HTTP and HTTPS resources asynchronously when writing JavaScript client extensions for model driven apps.         |
 |[Remove deactivated or disabled customizations](remove-deactivated-disabled-configurations.md)     |Deactivated or disabled customizations should be removed from a solution to improve solution management and to decrease the risk of utilizing or managing an outdated component.         |
 
-# See Also
+### See Also
 [Apply business logic using client scripting](../../client-scripting.md) <br />
  

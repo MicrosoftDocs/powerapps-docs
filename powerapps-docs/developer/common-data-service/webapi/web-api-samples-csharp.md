@@ -69,13 +69,13 @@ This C# implementation depends upon the following:
   
 - The standard .NET Framework HTTP messaging classes that are contained in the  [System.Net.Http namespace](/dotnet/api/system.net.http), particularly [HttpClient](/dotnet/api/system.net.http.httpclient), [HttpRequestMessage](/dotnet/api/system.net.http.httprequestmessage), and [HttpResponseMessage](/dotnet/api/system.net.http.httpresponsemessage), are used for HTTP messaging.  
   
-- The Newtonsoft [Json.NET](http://www.newtonsoft.com/json) library which supports the JSON data format.  
+- The Newtonsoft [Json.NET](https://www.newtonsoft.com/json) library which supports the JSON data format.  
   
 #### Json.NET Library
 
-Because C# and most other managed languages do not natively support the JSON data format, the best current approach is to use a library for this functionality. For more information, see [An Introduction to JavaScript Object Notation (JSON) in JavaScript and .NET](https://msdn.microsoft.com/library/bb299886.aspx). Json.NET is a popular choice for .NET projects. It provides a robust, performant, open-source ([MIT licensed](https://opensource.org/licenses/MIT)) framework for serializing, converting, parsing, querying, and formatting JSON data. For more information, see the [Json.NET documentation](http://www.newtonsoft.com/json/help/html/Introduction.htm).  
+Because C# and most other managed languages do not natively support the JSON data format, the best current approach is to use a library for this functionality. For more information, see [An Introduction to JavaScript Object Notation (JSON) in JavaScript and .NET](https://msdn.microsoft.com/library/bb299886.aspx). Json.NET is a popular choice for .NET projects. It provides a robust, performant, open-source ([MIT licensed](https://opensource.org/licenses/MIT)) framework for serializing, converting, parsing, querying, and formatting JSON data. For more information, see the [Json.NET documentation](https://www.newtonsoft.com/json/help/html/Introduction.htm).  
   
-In the C# samples, this library is primarily used to serialize data between .NET objects and HTTP message bodies. Although the library provides several methods to accomplish this task, the approach used by the samples is to create individual [JObject](http://www.newtonsoft.com/json/help/html/T_Newtonsoft_Json_Linq_JObject.htm) instances to represent Common Data Service entity instances (records).  For example, the following code creates the variable `contact1` that represents a Common Data Service <xref href="Microsoft.Dynamics.CRM.contact?text=contact EntityType" /> instance, then supplies values for a select set of properties for this type.  
+In the C# samples, this library is primarily used to serialize data between .NET objects and HTTP message bodies. Although the library provides several methods to accomplish this task, the approach used by the samples is to create individual [JObject](https://www.newtonsoft.com/json/help/html/T_Newtonsoft_Json_Linq_JObject.htm) instances to represent Common Data Service entity instances (records).  For example, the following code creates the variable `contact1` that represents a Common Data Service <xref href="Microsoft.Dynamics.CRM.contact?text=contact EntityType" /> instance, then supplies values for a select set of properties for this type.  
   
 ```csharp  
   
@@ -87,7 +87,7 @@ contact1["jobtitle"] = "Junior Developer";
   
 ```  
   
- The use of the bracket notation in the last statement is equivalent to the [Add](http://www.newtonsoft.com/json/help/html/M_Newtonsoft_Json_Linq_JObject_Add.htm) method. This instantiation could also be accomplished through the use of the [Parse](http://www.newtonsoft.com/json/help/html/M_Newtonsoft_Json_Linq_JObject_Parse.htm) static method:  
+ The use of the bracket notation in the last statement is equivalent to the [Add](https://www.newtonsoft.com/json/help/html/M_Newtonsoft_Json_Linq_JObject_Add.htm) method. This instantiation could also be accomplished through the use of the [Parse](https://www.newtonsoft.com/json/help/html/M_Newtonsoft_Json_Linq_JObject_Parse.htm) static method:  
   
 ```csharp  
   

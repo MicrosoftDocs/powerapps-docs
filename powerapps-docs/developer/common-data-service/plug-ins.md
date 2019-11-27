@@ -43,7 +43,7 @@ People frequently compare workflows and plug-ins as the choices to apply custom 
 
 - Azure service bus integration and Web hooks can be used to push data to external systems where logic can be applied using many different resources.
 
-- Microsoft Flow provides many capabilities that previously were performed using plug-ins.
+- Power Automate provides many capabilities that previously were performed using plug-ins.
 
 You have many options available to you. You should evaluate each of them to understand the best way to meet your requirements.
 

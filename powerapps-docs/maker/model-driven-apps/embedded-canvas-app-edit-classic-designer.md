@@ -34,7 +34,7 @@ An alternate option is to edit the embedded canvas app via the host model-driven
 
 Imagine that you want to edit a canvas app embedded on a form named Account Main Form for the Accounts entity. To do this, follow these steps: 
 
-1.	Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1.	Sign in to [PowerApps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 2.  [Edit the form](create-and-edit-forms.md) named Account Main Form for the Accounts entity. 
 3.  In the command bar, select **Switch to classic** to open the form in the classic form designer.
 4.	In the classic form designer, select the field that is customized to display the embedded canvas app.
@@ -43,7 +43,7 @@ Imagine that you want to edit a canvas app embedded on a form named Account Main
 7.	In the **Field Properties** dialog box, in the list of controls select **Canvas app**.
 8.	In the section below the controls list, select **Customize** to edit the canvas app. This opens the canvas app for editing, in PowerApps Studio, in a new tab.
 	   > [!NOTE]
-       > If opening PowerApps Studio is blocked due to a web browser pop-up blocker you must enable the web.powerapps.com site or temporarily disable the pop-up blocker and then select **Customize** again.
+       > If opening PowerApps Studio is blocked due to a web browser pop-up blocker you must enable the make.powerapps.com site or temporarily disable the pop-up blocker and then select **Customize** again.
 9. When you are done making changes, select the **File** tab, and then select **Save**.
 10. To make your changes available to end-users select **Publish** and then select **Publish this version**.
 

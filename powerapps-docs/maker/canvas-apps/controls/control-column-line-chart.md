@@ -1,13 +1,13 @@
 ---
 title: 'Column chart control and Line chart control: reference | Microsoft Docs'
 description: Information, including properties and examples, about Column chart controls and Line chart controls
-author: fikaradz
+author: chmoncay
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.date: 10/25/2016
-ms.author: fikaradz
+ms.author: chmoncay
 ms.reviewer: tapanm
 search.audienceType: 
   - maker

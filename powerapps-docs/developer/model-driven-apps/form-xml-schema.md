@@ -25,7 +25,7 @@ The following is the schema definition for form customizations for Model-driven 
   
 ```xml  
 <?xml version="1.0"?>  
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"  
+<xs:schema xmlns:xs="https://www.w3.org/2001/XMLSchema"  
            elementFormDefault="qualified"  
            attributeFormDefault="unqualified">  
   <xs:include schemaLocation="RibbonCore.xsd" />  

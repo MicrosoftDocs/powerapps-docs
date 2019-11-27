@@ -20,7 +20,7 @@ search.app:
 > [!IMPORTANT]
 > This topic is out-of-date and will be updated soon to reflect the latest licensing changes that are applicable starting October 1, 2019. For the latest information on licensing requirements for entities, see the [PowerApps licensing guide](https://go.microsoft.com/fwlink/?linkid=2085130).
 
-App makers can use most of the entities available within Common Data Service (including custom entities and entities that are part of the Common Data Model) to create apps and flows for users who have a PowerApps Plan 1 or Microsoft Flow Plan 1 license. In some cases, entities contain complex business logic or are tied to Dynamics 365 applications that require app users to have a specific license. 
+App makers can use most of the entities available within Common Data Service (including custom entities and entities that are part of the Common Data Model) to create apps and flows for users who have a PowerApps Plan 1 or Power Automate Plan 1 license. In some cases, entities contain complex business logic or are tied to Dynamics 365 applications that require app users to have a specific license. 
 
 
 |Entity    |Description    |Requirement    |
@@ -33,7 +33,7 @@ App makers can use most of the entities available within Common Data Service (in
 > Apps and flows that use these entities require the app and flow user to be licensed appropriately-not the maker or developer of the app or flow.
 
 ## Entities with complex business logic
-Entities that include the following complex server-side logic require users of an app or flow that uses these entities to have a PowerApps Plan 2 or Microsoft Flow Plan 2 license:
+Entities that include the following complex server-side logic require users of an app or flow that uses these entities to have a PowerApps Plan 2 or Power Automate Plan 2 license:
 
 * Code plug-ins (for more information, see [Plug-in development](/powerapps/developer/common-data-service/plug-ins))
 * Real-time workflows (for more information, see [Workflow processes](/flow/workflow-processes))

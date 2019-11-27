@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 09/23/2019
+ms.date: 11/20/2019
 ms.author: chmoncay
 search.audienceType: 
   - maker
@@ -72,7 +72,7 @@ The following limitations apply to the PowerApps custom visual:
 - The PowerApps custom visual can't filter the data or send any data back to the report.
 - You'll need to share the PowerApps app separately from your report. Learn about [sharing apps in PowerApps](share-app.md).
 - Power BI Report Server and the mobile app for Power BI do not support the PowerApps custom visual.
-- If you use PowerBIIntegration.Refresh() function, you must use a source that supports [DirectQuery](https://docs.microsoft.com/en-us/power-bi/desktop-directquery-data-sources) and the data connection must be created using DirectQuery method.
+- If you use PowerBIIntegration.Refresh() function, you must use a source that supports [DirectQuery](https://docs.microsoft.com/power-bi/desktop-directquery-data-sources) and the data connection must be created using DirectQuery method.
 - PowerApps in Power BI Desktop provides data to PowerApps Studio when creating apps but not while editing. Use Power BI Web to preview the data while editing apps.
 
 > [!NOTE]
@@ -87,9 +87,11 @@ The following table lists the browser supportability for view, create and modify
 |Microsoft Edge|&check;|&check;|&check;
 |Internet Explorer 11|&check;
 |Google Chrome|&check;|&check;|&check;
-|Safari|&check;
+|Safari \*|&check;
 |Mozilla Firefox
 |All other browsers
+
+\* In Safari, you must enable cross site tracking (**Preferences** > **Privacy**, and clear **Prevent cross site tracking**) to view PowerApps custom visual.
 
 ## Accessibility support
 
@@ -100,7 +102,7 @@ To navigate the PowerApps visual using the keyboard follow these steps:
 3. Use the **Ctrl+Right** key on the keyboard to enter the visual.
 3. Use the  **Tab** key on the keyboard until the desired component of the visual is selected.
 
-For more information see: [Power BI Accessibility Documentation]( https://docs.microsoft.com/en-us/power-bi/desktop-accessibility)
+For more information see: [Power BI Accessibility Documentation]( https://docs.microsoft.com/power-bi/desktop-accessibility)
 
 
 ## Next steps

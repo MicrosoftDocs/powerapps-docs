@@ -1,7 +1,7 @@
 ---
 title: "Organization Entity Reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the Organization entity."
-ms.date: 04/01/2019
+description: "Includes schema information and supported messages for the Organization entity in Common Data Service."
+ms.date: 11/07/2019
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -12,7 +12,6 @@ search.audienceType:
   - developer
 search.app: 
   - PowerApps
-  - D365CE
 ---
 # Organization Entity Reference
 
@@ -78,6 +77,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 - [BlockedAttachments](#BKMK_BlockedAttachments)
 - [BoundDashboardDefaultCardExpanded](#BKMK_BoundDashboardDefaultCardExpanded)
 - [BulkOperationPrefix](#BKMK_BulkOperationPrefix)
+- [BusinessCardOptions](#BKMK_BusinessCardOptions)
 - [BusinessClosureCalendarId](#BKMK_BusinessClosureCalendarId)
 - [CalendarType](#BKMK_CalendarType)
 - [CampaignPrefix](#BKMK_CampaignPrefix)
@@ -85,6 +85,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 - [CasePrefix](#BKMK_CasePrefix)
 - [CategoryPrefix](#BKMK_CategoryPrefix)
 - [ClientFeatureSet](#BKMK_ClientFeatureSet)
+- [ContentSecurityPolicyConfiguration](#BKMK_ContentSecurityPolicyConfiguration)
 - [ContractPrefix](#BKMK_ContractPrefix)
 - [CortanaProactiveExperienceEnabled](#BKMK_CortanaProactiveExperienceEnabled)
 - [CreateProductsWithoutParentInActiveState](#BKMK_CreateProductsWithoutParentInActiveState)
@@ -123,6 +124,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 - [EnableBingMapsIntegration](#BKMK_EnableBingMapsIntegration)
 - [EnableImmersiveSkypeIntegration](#BKMK_EnableImmersiveSkypeIntegration)
 - [EnableLivePersonaCardUCI](#BKMK_EnableLivePersonaCardUCI)
+- [EnableLivePersonCardIntegrationInOffice](#BKMK_EnableLivePersonCardIntegrationInOffice)
 - [EnableLPAuthoring](#BKMK_EnableLPAuthoring)
 - [EnableMicrosoftFlowIntegration](#BKMK_EnableMicrosoftFlowIntegration)
 - [EnablePricingOnCreate](#BKMK_EnablePricingOnCreate)
@@ -179,10 +181,15 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 - [IsAssignedTasksSyncEnabled](#BKMK_IsAssignedTasksSyncEnabled)
 - [IsAuditEnabled](#BKMK_IsAuditEnabled)
 - [IsAutoDataCaptureEnabled](#BKMK_IsAutoDataCaptureEnabled)
+- [IsAutoDataCaptureV2Enabled](#BKMK_IsAutoDataCaptureV2Enabled)
 - [IsAutoSaveEnabled](#BKMK_IsAutoSaveEnabled)
 - [IsBPFEntityCustomizationFeatureEnabled](#BKMK_IsBPFEntityCustomizationFeatureEnabled)
 - [IsConflictDetectionEnabledForMobileClient](#BKMK_IsConflictDetectionEnabledForMobileClient)
 - [IsContactMailingAddressSyncEnabled](#BKMK_IsContactMailingAddressSyncEnabled)
+- [IsContentSecurityPolicyEnabled](#BKMK_IsContentSecurityPolicyEnabled)
+- [IsContextualEmailEnabled](#BKMK_IsContextualEmailEnabled)
+- [IsContextualHelpEnabled](#BKMK_IsContextualHelpEnabled)
+- [IsCustomControlsInCanvasAppsEnabled](#BKMK_IsCustomControlsInCanvasAppsEnabled)
 - [IsDefaultCountryCodeCheckEnabled](#BKMK_IsDefaultCountryCodeCheckEnabled)
 - [IsDelegateAccessEnabled](#BKMK_IsDelegateAccessEnabled)
 - [IsDelveActionHubIntegrationEnabled](#BKMK_IsDelveActionHubIntegrationEnabled)
@@ -210,16 +217,23 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 - [IsMSTeamsEnabled](#BKMK_IsMSTeamsEnabled)
 - [IsMSTeamsSettingChangedByUser](#BKMK_IsMSTeamsSettingChangedByUser)
 - [IsMSTeamsUserSyncEnabled](#BKMK_IsMSTeamsUserSyncEnabled)
+- [IsNewAddProductExperienceEnabled](#BKMK_IsNewAddProductExperienceEnabled)
 - [IsNotesAnalysisEnabled](#BKMK_IsNotesAnalysisEnabled)
 - [IsOfficeGraphEnabled](#BKMK_IsOfficeGraphEnabled)
 - [IsOneDriveEnabled](#BKMK_IsOneDriveEnabled)
+- [IsPAIEnabled](#BKMK_IsPAIEnabled)
+- [IsPDFGenerationEnabled](#BKMK_IsPDFGenerationEnabled)
+- [IsPlaybookEnabled](#BKMK_IsPlaybookEnabled)
 - [IsPresenceEnabled](#BKMK_IsPresenceEnabled)
 - [IsPreviewEnabledForActionCard](#BKMK_IsPreviewEnabledForActionCard)
 - [IsPreviewForAutoCaptureEnabled](#BKMK_IsPreviewForAutoCaptureEnabled)
 - [IsPreviewForEmailMonitoringAllowed](#BKMK_IsPreviewForEmailMonitoringAllowed)
+- [IsPriceListMandatory](#BKMK_IsPriceListMandatory)
+- [IsQuickCreateEnabledForOpportunityClose](#BKMK_IsQuickCreateEnabledForOpportunityClose)
 - [IsReadAuditEnabled](#BKMK_IsReadAuditEnabled)
 - [IsRelationshipInsightsEnabled](#BKMK_IsRelationshipInsightsEnabled)
 - [IsResourceBookingExchangeSyncEnabled](#BKMK_IsResourceBookingExchangeSyncEnabled)
+- [IsSalesAssistantEnabled](#BKMK_IsSalesAssistantEnabled)
 - [IsSOPIntegrationEnabled](#BKMK_IsSOPIntegrationEnabled)
 - [IsTextWrapEnabled](#BKMK_IsTextWrapEnabled)
 - [IsUserAccessAuditEnabled](#BKMK_IsUserAccessAuditEnabled)
@@ -265,6 +279,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 - [OrderPrefix](#BKMK_OrderPrefix)
 - [OrgDbOrgSettings](#BKMK_OrgDbOrgSettings)
 - [OrgInsightsEnabled](#BKMK_OrgInsightsEnabled)
+- [PaiPreviewScenarioEnabled](#BKMK_PaiPreviewScenarioEnabled)
 - [PastExpansionWindow](#BKMK_PastExpansionWindow)
 - [Picture](#BKMK_Picture)
 - [PinpointLanguageCode](#BKMK_PinpointLanguageCode)
@@ -278,6 +293,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 - [PrivReportingGroupId](#BKMK_PrivReportingGroupId)
 - [PrivReportingGroupName](#BKMK_PrivReportingGroupName)
 - [ProductRecommendationsEnabled](#BKMK_ProductRecommendationsEnabled)
+- [QualifyLeadAdditionalOptions](#BKMK_QualifyLeadAdditionalOptions)
 - [QuickFindRecordLimitEnabled](#BKMK_QuickFindRecordLimitEnabled)
 - [QuotePrefix](#BKMK_QuotePrefix)
 - [RecurrenceDefaultNumberOfOccurrences](#BKMK_RecurrenceDefaultNumberOfOccurrences)
@@ -965,6 +981,22 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |Type|String|
 
 
+### <a name="BKMK_BusinessCardOptions"></a> BusinessCardOptions
+
+|Property|Value|
+|--------|-----|
+|Description|BusinessCardOptions|
+|DisplayName|Enable New BusinessCardOptions|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|businesscardoptions|
+|MaxLength|1000|
+|RequiredLevel|SystemRequired|
+|Type|String|
+
+
 ### <a name="BKMK_BusinessClosureCalendarId"></a> BusinessClosureCalendarId
 
 |Property|Value|
@@ -1079,6 +1111,22 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |LogicalName|clientfeatureset|
 |MaxLength|1073741823|
 |RequiredLevel|None|
+|Type|String|
+
+
+### <a name="BKMK_ContentSecurityPolicyConfiguration"></a> ContentSecurityPolicyConfiguration
+
+|Property|Value|
+|--------|-----|
+|Description|Policy configuration for CSP|
+|DisplayName|Content Security Policy Configuration|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|contentsecuritypolicyconfiguration|
+|MaxLength|1073741823|
+|RequiredLevel|SystemRequired|
 |Type|String|
 
 
@@ -1768,6 +1816,29 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |1|Yes|
 |0|No|
 
+**DefaultValue**: True
+
+
+
+### <a name="BKMK_EnableLivePersonCardIntegrationInOffice"></a> EnableLivePersonCardIntegrationInOffice
+
+|Property|Value|
+|--------|-----|
+|Description|Indicates whether the user has enabled or disabled LivePersonCardIntegration in Office.|
+|DisplayName|Indicates whether the user has enabled or disabled LivePersonCardIntegration in Office.|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|enablelivepersoncardintegrationinoffice|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### EnableLivePersonCardIntegrationInOffice Options
+
+|Value|Label|
+|-----|-----|
+|1|Yes|
+|0|No|
+
 **DefaultValue**: False
 
 
@@ -1799,8 +1870,8 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 |Property|Value|
 |--------|-----|
-|Description|Enable Integration with Microsoft Flow|
-|DisplayName|Enable Integration with Microsoft Flow|
+|Description|Enable Integration with Power Automate|
+|DisplayName|Enable Integration with Power Automate|
 |IsValidForForm|False|
 |IsValidForRead|True|
 |LogicalName|enablemicrosoftflowintegration|
@@ -2865,6 +2936,29 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 
 
+### <a name="BKMK_IsAutoDataCaptureV2Enabled"></a> IsAutoDataCaptureV2Enabled
+
+|Property|Value|
+|--------|-----|
+|Description|Indicates whether the V2 feature of Auto Capture should be enabled for the organization.|
+|DisplayName|Enable Auto Capture V2 for this Organization|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|isautodatacapturev2enabled|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### IsAutoDataCaptureV2Enabled Options
+
+|Value|Label|
+|-----|-----|
+|1|Yes|
+|0|No|
+
+**DefaultValue**: False
+
+
+
 ### <a name="BKMK_IsAutoSaveEnabled"></a> IsAutoSaveEnabled
 
 |Property|Value|
@@ -2954,6 +3048,98 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |0|No|
 
 **DefaultValue**: True
+
+
+
+### <a name="BKMK_IsContentSecurityPolicyEnabled"></a> IsContentSecurityPolicyEnabled
+
+|Property|Value|
+|--------|-----|
+|Description|Indicates whether Content Security Policy has been enabled for the organization.|
+|DisplayName|Enable Content Security Policy for this organization|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|iscontentsecuritypolicyenabled|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### IsContentSecurityPolicyEnabled Options
+
+|Value|Label|
+|-----|-----|
+|1|Yes|
+|0|No|
+
+**DefaultValue**: False
+
+
+
+### <a name="BKMK_IsContextualEmailEnabled"></a> IsContextualEmailEnabled
+
+|Property|Value|
+|--------|-----|
+|Description|Indicates whether Contextual email experience is enabled on this organization|
+|DisplayName|Indicates whether Contextual email experience is enabled on this organization|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|iscontextualemailenabled|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### IsContextualEmailEnabled Options
+
+|Value|Label|
+|-----|-----|
+|1|Yes|
+|0|No|
+
+**DefaultValue**: False
+
+
+
+### <a name="BKMK_IsContextualHelpEnabled"></a> IsContextualHelpEnabled
+
+|Property|Value|
+|--------|-----|
+|Description|Select to enable Contextual Help in UCI.|
+|DisplayName|Enables Contextual Help in UCI|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|iscontextualhelpenabled|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### IsContextualHelpEnabled Options
+
+|Value|Label|
+|-----|-----|
+|1|Yes|
+|0|No|
+
+**DefaultValue**: False
+
+
+
+### <a name="BKMK_IsCustomControlsInCanvasAppsEnabled"></a> IsCustomControlsInCanvasAppsEnabled
+
+|Property|Value|
+|--------|-----|
+|Description|Indicates whether Custom Controls in canvas PowerApps feature has been enabled for the organization.|
+|DisplayName|Enable Custom Controls in canvas PowerApps feature for this organization|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|iscustomcontrolsincanvasappsenabled|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### IsCustomControlsInCanvasAppsEnabled Options
+
+|Value|Label|
+|-----|-----|
+|1|Yes|
+|0|No|
+
+**DefaultValue**: False
 
 
 
@@ -3578,6 +3764,29 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 
 
+### <a name="BKMK_IsNewAddProductExperienceEnabled"></a> IsNewAddProductExperienceEnabled
+
+|Property|Value|
+|--------|-----|
+|Description|Indicates whether new add product experience is enabled.|
+|DisplayName|Indicates whether new add product experience is enabled in opportunity form|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|isnewaddproductexperienceenabled|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### IsNewAddProductExperienceEnabled Options
+
+|Value|Label|
+|-----|-----|
+|1|Yes|
+|0|No|
+
+**DefaultValue**: False
+
+
+
 ### <a name="BKMK_IsNotesAnalysisEnabled"></a> IsNotesAnalysisEnabled
 
 |Property|Value|
@@ -3637,6 +3846,68 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |Type|Boolean|
 
 #### IsOneDriveEnabled Options
+
+|Value|Label|
+|-----|-----|
+|1|Yes|
+|0|No|
+
+**DefaultValue**: False
+
+
+
+### <a name="BKMK_IsPAIEnabled"></a> IsPAIEnabled
+
+|Property|Value|
+|--------|-----|
+|Description|Indicates whether PAI feature has been enabled for the organization.|
+|DisplayName|Enable PAI feature for this organization|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|ispaienabled|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### IsPAIEnabled Options
+
+|Value|Label|
+|-----|-----|
+|1|Yes|
+|0|No|
+
+**DefaultValue**: True
+
+
+
+### <a name="BKMK_IsPDFGenerationEnabled"></a> IsPDFGenerationEnabled
+
+|Property|Value|
+|--------|-----|
+|Description|Indicates whether PDF Generation feature has been enabled for the organization.|
+|DisplayName|Enable PDF Generation feature for this organization|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|ispdfgenerationenabled|
+|MaxLength|1000|
+|RequiredLevel|SystemRequired|
+|Type|String|
+
+
+### <a name="BKMK_IsPlaybookEnabled"></a> IsPlaybookEnabled
+
+|Property|Value|
+|--------|-----|
+|Description|Indicates whether playbook feature has been enabled for the organization.|
+|DisplayName|Enable playbook feature for this organization|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|isplaybookenabled|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### IsPlaybookEnabled Options
 
 |Value|Label|
 |-----|-----|
@@ -3739,6 +4010,52 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 
 
+### <a name="BKMK_IsPriceListMandatory"></a> IsPriceListMandatory
+
+|Property|Value|
+|--------|-----|
+|Description|Indicates whether PriceList is mandatory for adding existing products to sales entities.|
+|DisplayName|Indicates whether PriceList is mandatory for adding existing products to sales entities|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|ispricelistmandatory|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### IsPriceListMandatory Options
+
+|Value|Label|
+|-----|-----|
+|1|Yes|
+|0|No|
+
+**DefaultValue**: True
+
+
+
+### <a name="BKMK_IsQuickCreateEnabledForOpportunityClose"></a> IsQuickCreateEnabledForOpportunityClose
+
+|Property|Value|
+|--------|-----|
+|Description|Select whether to use the standard Out-of-box Opportunity Close experience or opt to for a customized experience.|
+|DisplayName|Enable quick create form for opportunity close feature for this organization|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|isquickcreateenabledforopportunityclose|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### IsQuickCreateEnabledForOpportunityClose Options
+
+|Value|Label|
+|-----|-----|
+|1|Yes|
+|0|No|
+
+**DefaultValue**: False
+
+
+
 ### <a name="BKMK_IsReadAuditEnabled"></a> IsReadAuditEnabled
 
 |Property|Value|
@@ -3799,6 +4116,29 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |Type|Boolean|
 
 #### IsResourceBookingExchangeSyncEnabled Options
+
+|Value|Label|
+|-----|-----|
+|1|Yes|
+|0|No|
+
+**DefaultValue**: False
+
+
+
+### <a name="BKMK_IsSalesAssistantEnabled"></a> IsSalesAssistantEnabled
+
+|Property|Value|
+|--------|-----|
+|Description|Indicates whether Sales Assistant mobile app has been enabled for the organization.|
+|DisplayName|Enable Sales Assistant mobile app|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|issalesassistantenabled|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### IsSalesAssistantEnabled Options
 
 |Value|Label|
 |-----|-----|
@@ -4262,8 +4602,8 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 |Property|Value|
 |--------|-----|
-|Description|Environment selected for Integration with Microsoft Flow|
-|DisplayName|Environment selected for Integration with Microsoft Flow|
+|Description|(Deprecated) Environment selected for Integration with Power Automate|
+|DisplayName|(Deprecated) Environment selected for Integration with Power Automate|
 |FormatName|Text|
 |IsLocalizable|False|
 |IsValidForForm|False|
@@ -4599,6 +4939,29 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 
 
+### <a name="BKMK_PaiPreviewScenarioEnabled"></a> PaiPreviewScenarioEnabled
+
+|Property|Value|
+|--------|-----|
+|Description|Indicates whether Preview feature has been enabled for the organization.|
+|DisplayName|Display Preview Feature for this organization|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|paipreviewscenarioenabled|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### PaiPreviewScenarioEnabled Options
+
+|Value|Label|
+|-----|-----|
+|1|Yes|
+|0|No|
+
+**DefaultValue**: True
+
+
+
 ### <a name="BKMK_PastExpansionWindow"></a> PastExpansionWindow
 
 |Property|Value|
@@ -4820,6 +5183,22 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 **DefaultValue**: False
 
+
+
+### <a name="BKMK_QualifyLeadAdditionalOptions"></a> QualifyLeadAdditionalOptions
+
+|Property|Value|
+|--------|-----|
+|Description|Indicates whether prompt should be shown for new Qualify Lead Experience|
+|DisplayName|Enable New Qualify Lead Experience with configuration MDD|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|qualifyleadadditionaloptions|
+|MaxLength|1000|
+|RequiredLevel|SystemRequired|
+|Type|String|
 
 
 ### <a name="BKMK_QuickFindRecordLimitEnabled"></a> QuickFindRecordLimitEnabled
@@ -6965,7 +7344,6 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 
 Listed by **SchemaName**.
 
-- [organization_territories](#BKMK_organization_territories)
 - [lk_principalobjectattributeaccess_organizationid](#BKMK_lk_principalobjectattributeaccess_organizationid)
 - [organization_theme](#BKMK_organization_theme)
 - [organization_UserMapping](#BKMK_organization_UserMapping)
@@ -7035,23 +7413,9 @@ Listed by **SchemaName**.
 - [organization_saved_queries](#BKMK_organization_saved_queries)
 - [organization_tracelog](#BKMK_organization_tracelog)
 - [organization_solution](#BKMK_organization_solution)
-
-
-### <a name="BKMK_organization_territories"></a> organization_territories
-
-**Added by**: Application Common Solution
-
-Same as territory entity [organization_territories](territory.md#BKMK_organization_territories) Many-To-One relationship.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|territory|
-|ReferencingAttribute|organizationid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|organization_territories|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+- [organization_territories](#BKMK_organization_territories)
+- [organization_entityanalyticsconfig](#BKMK_organization_entityanalyticsconfig)
+- [organization_msdyn_solutionhealthruleset](#BKMK_organization_msdyn_solutionhealthruleset)
 
 
 ### <a name="BKMK_lk_principalobjectattributeaccess_organizationid"></a> lk_principalobjectattributeaccess_organizationid
@@ -8085,6 +8449,57 @@ Same as solution entity [organization_solution](solution.md#BKMK_organization_so
 |IsHierarchical|False|
 |IsCustomizable|False|
 |ReferencedEntityNavigationPropertyName|organization_solution|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_organization_territories"></a> organization_territories
+
+**Added by**: Application Common Solution
+
+Same as territory entity [organization_territories](territory.md#BKMK_organization_territories) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|territory|
+|ReferencingAttribute|organizationid|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|organization_territories|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_organization_entityanalyticsconfig"></a> organization_entityanalyticsconfig
+
+**Added by**: Advanced Analytics Infrastructure Solution
+
+Same as entityanalyticsconfig entity [organization_entityanalyticsconfig](entityanalyticsconfig.md#BKMK_organization_entityanalyticsconfig) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|entityanalyticsconfig|
+|ReferencingAttribute|organizationid|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|organization_entityanalyticsconfig|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_organization_msdyn_solutionhealthruleset"></a> organization_msdyn_solutionhealthruleset
+
+**Added by**: Active Solution Solution
+
+Same as msdyn_solutionhealthruleset entity [organization_msdyn_solutionhealthruleset](msdyn_solutionhealthruleset.md#BKMK_organization_msdyn_solutionhealthruleset) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_solutionhealthruleset|
+|ReferencingAttribute|organizationid|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|organization_msdyn_solutionhealthruleset|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 

@@ -83,7 +83,7 @@ When your application exceeds the limit, the error response from the server may 
 
 For a discussion of best practices, see [Azure Architecture Best Practices Transient fault handling](/azure/architecture/best-practices/transient-faults)
 
-[The Polly Project](http://www.thepollyproject.org/) is a library which includes capabilities for dealing with transient faults using execution policies.
+[The Polly Project](https://www.thepollyproject.org/) is a library which includes capabilities for dealing with transient faults using execution policies.
 
 ### HTTP requests with the Web API
 

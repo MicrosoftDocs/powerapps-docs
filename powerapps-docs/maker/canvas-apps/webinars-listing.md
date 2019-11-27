@@ -105,7 +105,7 @@ These webinars can help you to leverage the features and functions of Microsoft 
  [Watch now](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Using-PowerApps-and-Flow-for-Business-Process-Management/m-p/116907)
 
 ### Connector Series ###
-**Optimizing Connectors in PowerApps and Microsoft Flow**
+**Optimizing Connectors in PowerApps and Power Automate**
 <br>by Theresa Palmer-Boroski
 [Watch now](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Optimizing-Connectors-in-PowerApps-and-Microsoft-Flow-by-Theresa/m-p/116874)
 

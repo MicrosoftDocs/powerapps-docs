@@ -1,14 +1,14 @@
 ---
 title: 'Text-input control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the text-input control
-author: fikaradz
+author: chmoncay
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 10/25/2016
-ms.author: fikaradz
+ms.date: 11/22/2019
+ms.author: chmoncay
 search.audienceType: 
   - maker
 search.app: 
@@ -49,6 +49,8 @@ The user can specify data by typing into a text-input control. Depending on how 
 **[DisabledColor](properties-color-border.md)** – The color of text in a control if its **[DisplayMode](properties-core.md)** property is set to **Disabled**.
 
 **[DisabledFill](properties-color-border.md)** – The background color of a control if its **[DisplayMode](properties-core.md)** property is set to **Disabled**.
+
+**EnableSpellCheck** – Whether a text-input control should use the browser spell check function. Power Apps for Windows doesn't support this property.
 
 **[Fill](properties-color-border.md)** – The background color of a control.
 

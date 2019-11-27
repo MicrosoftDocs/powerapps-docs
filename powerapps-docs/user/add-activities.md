@@ -95,7 +95,7 @@ To add an email activity to a record, you must first save the record you are add
 
 
     > [!NOTE]
-    > To list emails in a conversation view, go to **Settings** > **Personalization Settings** > **Email** tab and then select **Show email as a conversation on Timeline**. For more information on personal settings, see [Set personal options](https://docs.microsoft.com/en-us/powerapps/user/set-personal-options#email-tab-options). Once enabled, you can open any form that has a timeline and your emails will be grouped into conversation threads with the latest email at the top.
+    > To list emails in a conversation view, go to **Settings** > **Personalization Settings** > **Email** tab and then select **Show email as a conversation on Timeline**. For more information on personal settings, see [Set personal options](https://docs.microsoft.com/powerapps/user/set-personal-options#email-tab-options). Once enabled, you can open any form that has a timeline and your emails will be grouped into conversation threads with the latest email at the top.
 
    > [!div class="mx-imgBorder"]
    > ![Set personal options](media/emailsettings1.png "Set personal options")
@@ -107,6 +107,9 @@ To add an email activity to a record, you must first save the record you are add
 ## Add an appointment  
 
 To add an appointment activity to a record, you must first save the record you are adding the activity to.  
+
+> [!NOTE]
+> Recurring appointments are not supported on the Dynamics 365 App for Outlook, Dynamics 365 for phones app, and when you run the model-driven apps web client on your mobile phone web browser.
   
 1. Open the record that you want to add the activity to. For example, a contact record.
   

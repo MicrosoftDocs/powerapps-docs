@@ -67,7 +67,7 @@ You can reduce the complexity involved with data integration scenarios by using 
   
 <a name="BKMK_SampleCode"></a>   
 ## Sample code  
- The [Insert or update a record using Upsert](http://go.microsoft.com/fwlink/p/?LinkId=532924) sample [ProductUpsertSample.cs](https://code.msdn.microsoft.com/Insert-or-update-a-record-aa160870/sourcecode?fileId=136218&pathId=1243320355) file contains the following `ProcessUpsert` method to apply the `UpsertRequest` message on the contents of an XML file to create new records or update existing ones.  
+ The [Insert or update a record using Upsert](https://go.microsoft.com/fwlink/p/?LinkId=532924) sample [ProductUpsertSample.cs](https://code.msdn.microsoft.com/Insert-or-update-a-record-aa160870/sourcecode?fileId=136218&pathId=1243320355) file contains the following `ProcessUpsert` method to apply the `UpsertRequest` message on the contents of an XML file to create new records or update existing ones.  
   
 ```csharp
 public void ProcessUpsert(String Filename)
