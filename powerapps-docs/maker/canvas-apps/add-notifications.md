@@ -35,7 +35,7 @@ In an app for which you have the **Contributor** permission, add a PowerApps Not
 > [!NOTE]
 > If you trigger a push notification from a flow, you can send the notification to only one user or security group at a time currently.
 
-1. In [Microsoft Flow](https://flow.microsoft.com), create a trigger that specifies when the push notification is sent.
+1. In [Power Automate](https://flow.microsoft.com), create a trigger that specifies when the push notification is sent.
 
     For example, you might want to send a notification when a record is added to the **Case** entity in the Common Data Service.
 
@@ -134,7 +134,7 @@ PowerAppsNotification.SendPushNotification(
 * Currently, notifications aren't displayed on PowerApps Mobile for Windows Phone.
 * Currently, we don't provide push notifications for users who run apps only in a web browser.
 * Notifications show the generic PowerApps icon instead of a specific app icon.
-* When you use Microsoft Flow, you can send a push notification to only one recipient at a time.
+* When you use Power Automate, you can send a push notification to only one recipient at a time.
 
 For reference information, see [PowerApps Notification reference](https://docs.microsoft.com/connectors/powerappsnotification/).
 

@@ -17,7 +17,7 @@ search.app:
 
 Entity to store the information that is generated when a modern flow or UI flow runs.
 
-**Added by**: Microsoft Flow Extensions package Solution
+**Added by**: Power Automate Extensions package Solution
 
 
 ## Messages

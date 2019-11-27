@@ -1879,13 +1879,13 @@ See msdyn_aiodtrainingimage Entity [msdyn_aiodtrainingimage_AsyncOperations](msd
 
 ### <a name="BKMK_flowsession_AsyncOperations"></a> flowsession_AsyncOperations
 
-**Added by**: Microsoft Flow Extensions package Solution
+**Added by**: Power Automate Extensions package Solution
 
 See flowsession Entity [flowsession_AsyncOperations](flowsession.md#BKMK_flowsession_AsyncOperations) One-To-Many relationship.
 
 ### <a name="BKMK_workflowbinary_AsyncOperations"></a> workflowbinary_AsyncOperations
 
-**Added by**: Microsoft Flow Extensions package Solution
+**Added by**: Power Automate Extensions package Solution
 
 See workflowbinary Entity [workflowbinary_AsyncOperations](workflowbinary.md#BKMK_workflowbinary_AsyncOperations) One-To-Many relationship.
 

@@ -51,7 +51,7 @@ Before you share an app, you must save it to the cloud (not locally) and then pu
     ![Specify users and co-owners](./media/share-app/share-everyone.png)
 
     > [!NOTE]
-    > You can't share an app with a distribution group in your organization or with a user or group outside your organization.
+    > You can't share an app with a distribution group in your organization or with a group outside your organization.
 
 1. If you want to allow those with whom you're sharing the app to edit and share it (in addition to running it), select the **Co-owner** check box.
 
@@ -129,7 +129,7 @@ PowerApps canvas apps can be shared with guest users of an Azure Active Director
 - In Azure Active Directory (Azure AD), enable B2B external collaboration for the tenant. More information: [Enable B2B external collaboration and manage who can invite guests](/azure/active-directory/b2b/delegate-invitations)
     - Enable B2B external collaboration is on by default. However, the settings can be changed by a tenant admin.  For more information about Azure AD B2B, see [What is guest user access in Azure AD B2B?](/azure/active-directory/b2b/what-is-b2b)  
 - Access to an account that can add guest users to an Azure AD tenant. Admins and users with the Guest Inviter role can add guests to a tenant.   
-- The guest user must have a PowerApps license assigned through one of the following tenants:
+- The guest user must have a license with Power Apps use rights that matches the capability of the app assigned through one of the following tenants:
     - The tenant hosting the app being shared.
     - The home tenant of the guest user.
 
@@ -172,10 +172,10 @@ The following table outlines a few core capability differences between PowerApps
 ||
 
 #### Can guests access customized forms in SharePoint?
-Yes. Any user that can access a SharePoint list with a customized form can create and edit items in the list, using the form, without any PowerApps license.
+Yes. Any user that can access a SharePoint list with a customized form can create and edit items in the list, using the form, without any Power Apps license.
 
 #### Can guests access apps embedded in SharePoint? 
-Yes. Though, access to canvas standalone apps require a PowerApps license including apps that are embedded. When embedding a canvas app in SharePoint via the Microsoft PowerApps embed control, enter the app id. To do this, enter the app ID in the **App web link or ID** box. 
+Yes. Though, access to canvas standalone apps require a license with Power Apps use rights that matches the capability of the app, including apps that are embedded. When embedding a canvas app in SharePoint via the Microsoft PowerApps embed control, enter the app id. To do this, enter the app ID in the **App web link or ID** box. 
 
 > [!div class="mx-imgBorder"]  
 > ![Embed canvas app in SharePoint for guests](media/share-app/guest_access_doc_5.PNG "Embed canvas app in SharePoint for guests")
@@ -194,9 +194,9 @@ The same license that’s required for non-guests to run an app. For instance, i
 |                                 | SharePoint customized form | Standalone canvas app using non-premium connectors | Standalone canvas app using premium connectors | Model driven app |
 |---------------------------------|----------------------------|----------------------------------------------------|------------------------------------------------|------------------|
 | SharePoint user (no PA license) | x                          |                                                    |                                                |                  |
-| PowerApps Included w/ Office    | x                          | x                                                  |                                                |                  |
-| PowerApps Per App Plan          | x                          | x                                                  | x                                              | x                |
-| PowerApps Per User Plan         | x                          | x                                                  | x                                              | x                |
+| Power Apps Included w/ Office    | x                          | x                                                  |                                                |                  |
+| Power Apps Per App Plan          | x                          | x                                                  | x                                              | x                |
+| Power Apps Per User Plan         | x                          | x                                                  | x                                              | x                |
 
 
 #### In PowerApps Mobile, how does a guest see apps for their home tenant?

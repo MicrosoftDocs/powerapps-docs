@@ -6,7 +6,7 @@ manager: shujoshi
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/04/2019
+ms.date: 11/11/2019
 ms.author: shjais
 ms.reviewer:
 ---
@@ -20,15 +20,29 @@ If you have purchased an older portal add-on, and want to provision a portal usi
 
 To provision a portal:
 
-1.  Go to the **Dynamics 365 Administration Center** page, and then select the **Applications** tab.
+1. Sign in to [Microsoft 365 admin center](https://admin.microsoft.com).
+ 
+2. In the navigation column on the left, select **Show all**.
 
-2.  Select the application row titled **Portal Add-On**, and then select **Manage.**
+3. If you are working with the new admin center, select **All admin centers**. From the list of all admin centers, select **Dynamics 365**.
 
-3.  In the **General Settings** section, enter a **Name** for your portal. The **Name** will help to identify the portal and can be changed later.
+    > [!div class="mx-imgBorder"]
+    > ![Open Dynamics 365 Administration Center from new admin center](media/from-new-admin-center.png "Open Dynamics 365 Administration Center from new admin center") 
 
-4.  The **Type** field represents the type of portal subscription (Trial or Production). This is a system field, so it cannot be changed by the user. The value changes based on whether it is trial subscription or paid subscription.
+4. If you are working with the old admin center, expand **Admin centers** in the left navigation column, and then select **Dynamics 365**.
 
-5. Optionally, in the **Portal development status** drop-down list, select one of the following development statuses for your portal:
+    > [!div class="mx-imgBorder"]
+    > ![Open Dynamics 365 Administration Center from old admin center](media/from-old-admin-center.png "Open Dynamics 365 Administration Center from old admin center") 
+
+5. On the **Dynamics 365 Administration Center** page, select the **Applications** tab.
+
+6. Select the application row titled **Portal Add-On**, and then select **Manage.**
+
+7. In the **General Settings** section, enter a **Name** for your portal. The **Name** will help to identify the portal and can be changed later.
+
+8. The **Type** field represents the type of portal subscription (Trial or Production). This is a system field, so it cannot be changed by the user. The value changes based on whether it is trial subscription or paid subscription.
+
+9. Optionally, in the **Portal development status** drop-down list, select one of the following development statuses for your portal:
 
     - Prototype
     - Development
@@ -41,22 +55,22 @@ To provision a portal:
     > - This drop-down list is available only for the portals of type production.
     > - This field is used by Microsoft to understand the usage pattern of this portal and does not affect any functionality. If you use different names for development lifecycle, please select the one which is closer in purpose. This can be changed at a later point of time once portal is provisioned.
 
-5.  In the **Portal URL** field, enter the subdomain name you want for your portal. You can only use alphanumeric characters or hyphens (-); other characters are not permitted.
+10. In the **Portal URL** field, enter the subdomain name you want for your portal. You can only use alphanumeric characters or hyphens (-); other characters are not permitted.
 
     > [!NOTE]
     > - To change the URL of a portal after it is provisioned, see [change the base URL of a portal](admin/change-base-url.md).
     > - To link your portal to a custom domain, see [link your portal to a custom domain](admin/add-custom-domain.md).
 
-6.  In the **Dynamics 365 Instance** drop-down list, select the instance you want to link the portal to. This requires System Administrator or System Customizer role in the instance you pick to select it.
+11. In the **Dynamics 365 Instance** drop-down list, select the instance you want to link the portal to. This requires System Administrator or System Customizer role in the instance you pick to select it.
 
-7.  In the **Select Portal Language** drop-down list, select the default language for your portal. The available languages will depend on the languages that are installed in your instance. 
-
+12. In the **Select Portal Language** drop-down list, select the default language for your portal. The available languages will depend on the languages that are installed in your instance. 
+    
     > [!NOTE]
     > Sample data is only provided in one language, so choosing a default language will also decide how the sample data is translated. Arabic and Hebrew are not supported and will not appear in the list.
 
-8. In the **Select Portal Administrator** drop-down list, select the user who will configure, customize, and maintain the portal. All users who have the System Administrator role in the organization will appear as options. 
+13. In the **Select Portal Administrator** drop-down list, select the user who will configure, customize, and maintain the portal. All users who have the System Administrator role in the organization will appear as options. 
 
-9. In the **Portal Audience** section, choose the type of audience who will visit the new portal. This will determine what options of portals you will be given. You can choose:
+14. In the **Portal Audience** section, choose the type of audience who will visit the new portal. This will determine what options of portals you will be given. You can choose:
 
     -   Partner    
         -   Customer Self Service Portal
@@ -74,12 +88,12 @@ To provision a portal:
     -   Employee
         -   Employee Self Service Portal
 
-10. In the **Select portal to be deployed** section, choose what type of portal you want to create. The options you see are based on the audience you selected.
+15. In the **Select portal to be deployed** section, choose what type of portal you want to create. The options you see are based on the audience you selected.
 
     > [!div class="mx-imgBorder"]
     > ![Configure settings for your portal](media/configure-settings-portal.png "Configure settings for your portal")  
 
-11. Select **Submit**, and accept the Terms of Service.
+16. Select **Submit**, and accept the Terms of Service.
     > [!div class="mx-imgBorder"]
     > ![Terms of service](media/terms-of-service.png "Terms of service")  
 

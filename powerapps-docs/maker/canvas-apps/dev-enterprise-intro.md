@@ -25,7 +25,7 @@ As an enterprise developer, empower your organization to build robust, tailored 
 
 - **Build custom connectors**: Develop custom connectors to connect to your organization's data and web services. [Learn more](https://docs.microsoft.com/connectors/custom-connectors/)
 
-- **Build Azure Functions**: Craft Azure Functions to extend apps with custom server-side logic. [Learn more](https://docs.microsoft.com/azure/azure-functions/functions-powerapps-scenario)
+- **Build Azure Functions**: Craft Azure Functions to extend apps with custom server-side logic. [Learn more](https://docs.microsoft.com/azure/azure-functions/app-service-export-api-to-powerapps-and-flow)
 
 - **Embed apps**: Embed apps directly into your website experiences to create integrated solutions, surfacing apps where people in your organization already do their work. [Learn more](embed-apps-dev.md)
 
