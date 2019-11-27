@@ -1,5 +1,5 @@
 ---
-title: 'Microsoft Stream Video control: reference | Microsoft Docs'
+title: 'Microsoft Stream video control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the Microsoft Stream video control
 author: fikaradz
 manager: kvivek
@@ -14,19 +14,11 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Microsoft Stream Video control in PowerApps
+# Microsoft Stream video control in Power Apps
 A video player for Microsoft Stream videos and channels.
 
 ## Description
 The control will allow app users to play videos and browse through channels from the Microsoft Stream service.
-
-## Authentication
-All Microsoft Stream videos require authentication in order to be played.  Ensure that the app user has permission to view the video in order for them to view it in the app.
-
-## iOS and Safari
-The Power Apps iOS player does not support direct playback of videos embedded in the app.  To watch the video, click on the Stream icon to launch the video player in a full-screen mode.
-
-In order to view Microsoft Stream videos in an app in the Safari browser, you will need to turn off the option to [prevent cross-site tracking](https://support.apple.com/en-ca/guide/safari/sfri40732/mac).
 
 ## Key properties
 **StreamUrl** – The URL of the Microsoft Stream video or channel to be shown in the control.
@@ -54,7 +46,11 @@ In order to view Microsoft Stream videos in an app in the Safari browser, you wi
 
 **[Height](properties-size-location.md)** – The distance between a control's top and bottom edges.
 
+**StartTime** – The time after the start of an audio or video clip when the clip starts to play.
+
 **[TabIndex](properties-accessibility.md)** – Keyboard navigation order in relation to other controls.
+
+**[Tooltip](properties-core.md)** – Explanatory text that appears when the user hovers over a control.
 
 **[Visible](properties-core.md)** – Whether a control appears or is hidden.
 
@@ -64,6 +60,34 @@ In order to view Microsoft Stream videos in an app in the Safari browser, you wi
 
 **[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
 
+## Example
+
+### Play an audio or video file from Microsoft Stream
+
+1. On the **File** menu, select **Insert** and then open **Media** drop-down menu. 
+2. Select **Microsoft Stream** from the list of media controls:
+
+    ![Microsoft Stream](./media/control-stream-video/stream-icon.png "Microsoft Stream")
+
+3. Paste the video link inside **Stream URL** property on the left:
+
+    ![Customize StreamUrl property](./media/control-stream-video/stream-url.png "Customize StreamUrl property")
+
+4. Press F5, select the play button of the control that you added.
+
+    > [!NOTE]
+   > **Microsoft Stream** requires authentication to play the video. Ensure the app user has the required permission.
+
+5. Press Esc to exit the preview mode.
+
+## Browser considerations
+
+### iOS
+The Power Apps iOS player does not support direct playback of videos embedded in the app.  To watch the video, click on the Stream icon to launch the video player in a full-screen mode.
+
+### Safari
+
+In order to view Microsoft Stream videos in an app in the Safari browser, you will need to turn off the option to [prevent cross-site tracking](https://support.apple.com/guide/safari/sfri40732/mac).
 
 ## Accessibility guidelines
 ### Audio and video alternatives
