@@ -1,9 +1,9 @@
 ---
 title: "Use the Discovery Service with the SDK Assemblies (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Describes how to use the discovery service with the .NET SDK assemblies." # 115-145 characters including spaces. This abstract displays in the search result.
+description: "Describes how to use the Discovery Service with the .NET SDK assemblies." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
-ms.reviewer: ""
+ms.date: 11/11/2019
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
@@ -16,6 +16,9 @@ search.app:
   - D365CE
 ---
 # Use the Discovery Service with the SDK Assemblies
+
+> [!IMPORTANT]
+> Effective February 1, 2020, the *regional* Discovery Service in Organization Service (SOAP) and Web API (REST) is deprecated. More information: [Important changes (deprecations)](/power-platform/important-changes-coming/). For information on how to transition to use the global Discovery Service in Web API, see [Modify existing code to use Discovery Web API](../discovery-orgsdk-to-webapi.md).
 
 [!INCLUDE [cc-discovery-service-description](../includes/cc-discovery-service-description.md)]
 
