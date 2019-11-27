@@ -74,8 +74,6 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Microphone](controls/control-microphone.md)** – Record and save sounds in the app or to a data source.
 
-**[Microsoft Stream](controls/control-stream-video.md)** – Play an audio or video clip from **Microsoft Stream**.
-
 **[PDF viewer (experimental)](controls/control-pdf-viewer.md)** – Show the content of a PDF file on the Internet.
 
 **[Pen input](controls/control-pen-input.md)** – Draw an image or text, and save it in the app or to a data source.

@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Microsoft Stream video control in Power Apps
+# Microsoft Stream video control in PowerApps
 A video player for Microsoft Stream videos and channels.
 
 ## Description
@@ -60,27 +60,11 @@ The control will allow app users to play videos and browse through channels from
 
 **[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
 
-## Example
+## Considerations
 
-### Play an audio or video file from Microsoft Stream
+### Authentication
 
-1. On the **File** menu, select **Insert** and then open **Media** drop-down menu. 
-2. Select **Microsoft Stream** from the list of media controls:
-
-    ![Microsoft Stream](./media/control-stream-video/stream-icon.png "Microsoft Stream")
-
-3. Paste the video link inside **Stream URL** property on the left:
-
-    ![Customize StreamUrl property](./media/control-stream-video/stream-url.png "Customize StreamUrl property")
-
-4. Press F5, select the play button of the control that you added.
-
-    > [!NOTE]
-   > **Microsoft Stream** requires authentication to play the video. Ensure the app user has the required permission.
-
-5. Press Esc to exit the preview mode.
-
-## Browser considerations
+Microsoft Stream requires authentication to play the video. Ensure the app user has the required permission.
 
 ### iOS
 The Power Apps iOS player does not support direct playback of videos embedded in the app.  To watch the video, click on the Stream icon to launch the video player in a full-screen mode.

@@ -334,8 +334,6 @@
               href: ./canvas-apps/controls/control-list-box.md
             - name: Microphone
               href: ./canvas-apps/controls/control-microphone.md
-            - name: Microsoft Stream
-              href: ./canvas-apps/controls/control-stream-video.md
             - name: PDF viewer (experimental)
               href: ./canvas-apps/controls/control-pdf-viewer.md
             - name: Pen input
