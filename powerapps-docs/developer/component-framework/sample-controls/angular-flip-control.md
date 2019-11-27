@@ -354,7 +354,7 @@ fieldset[disabled].btn-primary:hover {
 
 ### Related topics
 
-[How to run the samples](../how-to-run-the-samples.md)<br/>
+[How to use the sample components](../use-sample-components.md)<br/>
 [PowerApps component framework manifest schema reference](../manifest-schema-reference/index.md)<br />
 [PowerApps component framework API reference](../reference/index.md)<br />
 [PowerApps component framework overview](../overview.md)

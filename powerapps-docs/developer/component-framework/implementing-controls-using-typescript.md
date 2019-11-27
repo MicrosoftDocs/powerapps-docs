@@ -1,5 +1,5 @@
 ---
-title: "Implementing code components using TypeScript | MicrosoftDocs"
+title: "Create your first component using PowerApps Component Framework | MicrosoftDocs"
 description: "How to implement code components using TypeScript"
 manager: kvivek
 ms.date: 10/01/2019
@@ -10,7 +10,7 @@ ms.author: "nabuthuk"
 author: Nkrb
 ---
 
-# Implement components using TypeScript
+# Create your first component using PowerApps Component Framework
 
 This topic walks you through the process of creating a new code component in TypeScript using the PowerApps CLI. In this tutorial we will build a sample linear code component that enables users to change the numeric values using a visual slider instead of typing the values in the field. 
 
