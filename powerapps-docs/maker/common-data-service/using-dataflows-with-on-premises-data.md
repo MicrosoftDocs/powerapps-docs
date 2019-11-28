@@ -25,7 +25,6 @@ search.app:
   - D365CE
 ---
 # Using an on-premises data gateway in Power Platform Dataflows
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 Install an on-premises data gateway to transfer data quickly and securely
 between a Power Platform dataflow and a data source that isn't in the cloud,
