@@ -25,7 +25,6 @@ search.app:
   - D365CE
 ---
 # Create and use dataflows in PowerApps
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 With advanced data preparation available in PowerApps, you can create a
 collection of data called a dataflow, which you can then use to connect with
@@ -67,8 +66,6 @@ and manage them from that environment. In addition, individuals who want to get
 data from your dataflow must have access to the environment in which you created
 it.
 
-> [!NOTE]
-> Creating Dataflows that load data to Azure Data Lake Storage Gen2 in the default environment is currently not supported.
 
 1.  Sign in to PowerApps, and verify which environment you're in, find the environment switcher near the right side of the command bar.
 
