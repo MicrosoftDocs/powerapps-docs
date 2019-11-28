@@ -6,7 +6,7 @@ manager: shujoshi
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/22/2019
+ms.date: 11/28/2019
 ms.author: shjais
 ms.reviewer:
 ---
@@ -691,7 +691,7 @@ The name of the Entity Form you wish to load.
 
 `{% entityform name:My Entity Form %}`
 
-### **webform**
+## webform
 
 Fully renders a PowerApps-configured web form, by name or ID. The webform tag is only available for use in content rendered inside a [web template](store-content-web-templates.md) based page template. Attempting to use the tag inside a Rewrite-based Page Template will not render anything. You may only render a single entityform or webform tag per page. entityform or webform tags after the first will not be rendered.                
 `{% webform name: 'My Web Form' %}`
@@ -703,6 +703,11 @@ Fully renders a PowerApps-configured web form, by name or ID. The webform tag is
 The name of the Web Form you wish to load.
 
 `{% webform name:My Web Form %}`
+
+## substitution
+
+When user has enabled the header and footer caching, and he wants to avoid caching of certain section output, he can use this tag. This tag provides the content block in header or footer where output of the wrapped content block doesn't get cached. This is helpful in the scenarios where user is using an object which can frequently get updated, such as request, page, language, and date. For example, [Enable header and footer output caching on a portal](enable-header-footer-output-caching.md)
+
 
 ### See also
 
