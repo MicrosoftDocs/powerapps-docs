@@ -6,9 +6,9 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.date: 07/12/2017
+ms.date: 11/27/2019
 ms.author: matp
-ms.reviewer: 
+ms.reviewer: tapanm
 search.audienceType: 
   - maker
 search.app: 
@@ -18,6 +18,9 @@ search.app:
 PowerApps lets you quickly generate, customize, share, and run mobile apps with little or no code. By using the Dynamics 365 connector, you can create useful mobile apps to share with your organization in just a few minutes.
 
 By following the steps in this topic, you'll create an app in which users can browse, add, delete, and make updates to contacts in Dynamics 365. Users can run the app [in a browser](../../../user/run-app-browser.md) or [on a mobile device](../../../user/run-app-client.md) such as a phone.
+
+> [!NOTE]
+> We recommend using a more robust [Common Data Service connector](connection-common-data-service) when connecting to Dynamics 365.
 
 ## Prerequisite
 To follow this tutorial, you need a Microsoft Office 365 account that includes a Dynamics 365 subscription.
