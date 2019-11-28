@@ -704,10 +704,6 @@ The name of the Web Form you wish to load.
 
 `{% webform name:My Web Form %}`
 
-## substitution
-
-When user has enabled the header and footer caching, and he wants to avoid caching of certain section output, he can use this tag. This tag provides the content block in header or footer where output of the wrapped content block doesn't get cached. This is helpful in the scenarios where user is using an object which can frequently get updated, such as request, page, language, and date. For example: [Enable header and footer output caching on a portal](../configure/enable-header-footer-output-caching.md)
-
 
 ### See also
 
