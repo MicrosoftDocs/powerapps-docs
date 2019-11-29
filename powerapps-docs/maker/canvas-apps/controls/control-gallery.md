@@ -88,6 +88,8 @@ If a user scrolls the **Flexible height** gallery control before all items are l
 
 [**Filter**( *DataSource*, *Formula* )](../functions/function-filter-lookup.md)
 
+[**Reset**( *Control* )](../functions/function-reset.md) - Will reset your gallery back to it's initial state. Initial state includes scrolling to the first item and selecting the first item or default if present. **Note:** Will not recursively reset all the children of gallery.
+
 ## Examples
 
 ### Show and filter data
