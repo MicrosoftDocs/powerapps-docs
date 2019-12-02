@@ -1,6 +1,6 @@
 ---
-title: "Create and edit One-to-many or Many-to-one entity relationships using PowerApps portal | MicrosoftDocs"
-description: "Learn how to create one-to-many or many-to-one entity relationships using PowerApps portal"
+title: "Create and edit One-to-many or Many-to-one entity relationships using Power Apps portal | MicrosoftDocs"
+description: "Learn how to create one-to-many or many-to-one entity relationships using Power Apps portal"
 ms.custom: ""
 ms.date: 08/27/2019
 ms.reviewer: ""
@@ -21,9 +21,9 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Create and edit One-to-many or Many-to-one entity relationships using PowerApps portal
+# Create and edit One-to-many or Many-to-one entity relationships using Power Apps portal
 
-The [PowerApps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) provides an easy way to create and edit 1:N (one-to-many) or N:1 (many-to-one) relationships for  Common Data Service.
+The [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) provides an easy way to create and edit 1:N (one-to-many) or N:1 (many-to-one) relationships for  Common Data Service.
 
 The portal enables configuring the most common options, but certain options can only be set using solution explorer. More information: 
 - [Create and edit 1:N (one-to-many) or N:1 (many-to-one) relationships](create-edit-1n-relationships.md)
@@ -31,7 +31,7 @@ The portal enables configuring the most common options, but certain options can 
 
 ## View entity relationships
 
-1. From the [PowerApps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select either **Model-driven** or **Canvas** design mode.
+1. From the [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select either **Model-driven** or **Canvas** design mode.
 2. Select **Data** > **Entities** and select the entity that has the relationships you want to view.
 3. With the **Relationships** tab selected, you can select the following views: 
 

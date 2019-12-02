@@ -1,6 +1,6 @@
 ---
 title: Embed an app in Teams  | Microsoft Docs
-description: You can embed an app created in PowerApps in Microsoft Teams to share it.
+description: You can embed an app created in Power Apps in Microsoft Teams to share it.
 author: matthewbolanos
 manager: kvivek
 ms.service: powerapps
@@ -16,7 +16,7 @@ search.app:
 ---
 # Embed an app in Teams
 
-You can share a PowerApps you've created by embedding it directly into Microsoft Teams. When completed, users can select **+** to add your app to any of **your** team channels or conversations in the team you are in. The app appears as a tile under **Tabs for your team**.
+You can share a Power Apps you've created by embedding it directly into Microsoft Teams. When completed, users can select **+** to add your app to any of **your** team channels or conversations in the team you are in. The app appears as a tile under **Tabs for your team**.
 
 An admin can upload the app so it shows up for **all** teams in your tenant under the **All tabs section**. See [Share an app in Microsoft Teams](https://docs.microsoft.com/power-platform/admin/embed-app-teams).
 
@@ -25,7 +25,7 @@ An admin can upload the app so it shows up for **all** teams in your tenant unde
 
 ## Prerequisites
 
-- You need a valid [PowerApps license](https://docs.microsoft.com/power-platform/admin/pricing-billing-skus).
+- You need a valid [Power Apps license](https://docs.microsoft.com/power-platform/admin/pricing-billing-skus).
 - To embed an app into Teams, you need an existing app [created using PowerApps](data-platform-create-app.md).
 
 ## Download the app
@@ -38,7 +38,7 @@ An admin can upload the app so it shows up for **all** teams in your tenant unde
 
     ![App details](./media/embed-teams-app/add-to-teams.png "Add to Teams")
 
-3. In the Add to Teams panel, select **Download**. PowerApps will then generate your Teams manifest file using the app description and logo you've already set in your app.
+3. In the Add to Teams panel, select **Download**. Power Apps will then generate your Teams manifest file using the app description and logo you've already set in your app.
 
     ![App details](./media/embed-teams-app/download-app.png "Download app")
 

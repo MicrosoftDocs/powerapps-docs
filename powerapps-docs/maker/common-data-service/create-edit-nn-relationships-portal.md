@@ -1,5 +1,5 @@
 ---
-title: "Create Many-to-many entity relationships in Common Data Service using PowerApps portal | MicrosoftDocs"
+title: "Create Many-to-many entity relationships in Common Data Service using Power Apps portal | MicrosoftDocs"
 description: "Learn how to create many-to-may relationships"
 ms.custom: ""
 ms.date: 08/27/2019
@@ -22,9 +22,9 @@ search.app:
   - D365CE
 ---
 
-# Create Many-to-many entity relationships in Common Data Service using PowerApps portal
+# Create Many-to-many entity relationships in Common Data Service using Power Apps portal
 
-The [PowerApps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) provides an easy way to create and edit Many-to-many entity relationships for Common Data Service.
+The [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) provides an easy way to create and edit Many-to-many entity relationships for Common Data Service.
 
 The portal enables configuring the most common options, but certain options can only be set using solution explorer. More information: 
 - [Create N:N (many-to-many) entity relationships](create-edit-nn-relationships.md)
@@ -32,7 +32,7 @@ The portal enables configuring the most common options, but certain options can 
 
 ## View Many-to-many entity relationships
 
-1. From the [PowerApps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select either **Model-driven** or **Canvas** design mode.
+1. From the [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select either **Model-driven** or **Canvas** design mode.
 2. Select **Data** > **Entities** and select the entity that has the relationships you want to view.
 3. With the **Relationships** tab selected, you can select the following views: 
 
@@ -72,7 +72,7 @@ The values for these fields are generated for you based on the entities chosen.
 
 Select **OK** to close the **Many-to-many** panel. The relationship will be created when you save changes to the entity. 
 
-Once saved, there nothing that can be changed using [PowerApps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). To edit properties of the relationship for model-driven apps use [solution explorer](create-edit-nn-relationships-solution-explorer.md).
+Once saved, there nothing that can be changed using [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). To edit properties of the relationship for model-driven apps use [solution explorer](create-edit-nn-relationships-solution-explorer.md).
 
 ## Delete relationships
 

@@ -1,5 +1,5 @@
 ---
-title: "Set properties for a model-driven app chart or list included in a dashboard in PowerApps | MicrosoftDocs"
+title: "Set properties for a model-driven app chart or list included in a dashboard in Power Apps | MicrosoftDocs"
 description: "Learn how to set properties for  chart or list included in a dashboard"
 ms.custom: ""
 ms.date: 06/06/2018

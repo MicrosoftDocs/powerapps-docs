@@ -23,7 +23,7 @@ search.app:
 ---
 <!-- 
 Was Mike Carter
-This topic was not migrated it was written for PowerApps 
+This topic was not migrated it was written for Power Apps 
 
 Overlap with content in https://docs.microsoft.com/dynamics365/customer-engagement/developer/introduction-entities
 

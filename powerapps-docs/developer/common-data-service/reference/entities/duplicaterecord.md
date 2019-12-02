@@ -707,85 +707,85 @@ See environmentvariablevalue Entity [environmentvariablevalue_DuplicateBaseRecor
 
 ### <a name="BKMK_msdyn_analysiscomponent_DuplicateMatchingRecord"></a> msdyn_analysiscomponent_DuplicateMatchingRecord
 
-**Added by**: PowerApps Checker Solution
+**Added by**: Power Apps Checker Solution
 
 See msdyn_analysiscomponent Entity [msdyn_analysiscomponent_DuplicateMatchingRecord](msdyn_analysiscomponent.md#BKMK_msdyn_analysiscomponent_DuplicateMatchingRecord) One-To-Many relationship.
 
 ### <a name="BKMK_msdyn_analysiscomponent_DuplicateBaseRecord"></a> msdyn_analysiscomponent_DuplicateBaseRecord
 
-**Added by**: PowerApps Checker Solution
+**Added by**: Power Apps Checker Solution
 
 See msdyn_analysiscomponent Entity [msdyn_analysiscomponent_DuplicateBaseRecord](msdyn_analysiscomponent.md#BKMK_msdyn_analysiscomponent_DuplicateBaseRecord) One-To-Many relationship.
 
 ### <a name="BKMK_msdyn_analysisjob_DuplicateMatchingRecord"></a> msdyn_analysisjob_DuplicateMatchingRecord
 
-**Added by**: PowerApps Checker Solution
+**Added by**: Power Apps Checker Solution
 
 See msdyn_analysisjob Entity [msdyn_analysisjob_DuplicateMatchingRecord](msdyn_analysisjob.md#BKMK_msdyn_analysisjob_DuplicateMatchingRecord) One-To-Many relationship.
 
 ### <a name="BKMK_msdyn_analysisjob_DuplicateBaseRecord"></a> msdyn_analysisjob_DuplicateBaseRecord
 
-**Added by**: PowerApps Checker Solution
+**Added by**: Power Apps Checker Solution
 
 See msdyn_analysisjob Entity [msdyn_analysisjob_DuplicateBaseRecord](msdyn_analysisjob.md#BKMK_msdyn_analysisjob_DuplicateBaseRecord) One-To-Many relationship.
 
 ### <a name="BKMK_msdyn_analysisresult_DuplicateMatchingRecord"></a> msdyn_analysisresult_DuplicateMatchingRecord
 
-**Added by**: PowerApps Checker Solution
+**Added by**: Power Apps Checker Solution
 
 See msdyn_analysisresult Entity [msdyn_analysisresult_DuplicateMatchingRecord](msdyn_analysisresult.md#BKMK_msdyn_analysisresult_DuplicateMatchingRecord) One-To-Many relationship.
 
 ### <a name="BKMK_msdyn_analysisresult_DuplicateBaseRecord"></a> msdyn_analysisresult_DuplicateBaseRecord
 
-**Added by**: PowerApps Checker Solution
+**Added by**: Power Apps Checker Solution
 
 See msdyn_analysisresult Entity [msdyn_analysisresult_DuplicateBaseRecord](msdyn_analysisresult.md#BKMK_msdyn_analysisresult_DuplicateBaseRecord) One-To-Many relationship.
 
 ### <a name="BKMK_msdyn_analysisresultdetail_DuplicateMatchingRecord"></a> msdyn_analysisresultdetail_DuplicateMatchingRecord
 
-**Added by**: PowerApps Checker Solution
+**Added by**: Power Apps Checker Solution
 
 See msdyn_analysisresultdetail Entity [msdyn_analysisresultdetail_DuplicateMatchingRecord](msdyn_analysisresultdetail.md#BKMK_msdyn_analysisresultdetail_DuplicateMatchingRecord) One-To-Many relationship.
 
 ### <a name="BKMK_msdyn_analysisresultdetail_DuplicateBaseRecord"></a> msdyn_analysisresultdetail_DuplicateBaseRecord
 
-**Added by**: PowerApps Checker Solution
+**Added by**: Power Apps Checker Solution
 
 See msdyn_analysisresultdetail Entity [msdyn_analysisresultdetail_DuplicateBaseRecord](msdyn_analysisresultdetail.md#BKMK_msdyn_analysisresultdetail_DuplicateBaseRecord) One-To-Many relationship.
 
 ### <a name="BKMK_msdyn_solutionhealthrule_DuplicateMatchingRecord"></a> msdyn_solutionhealthrule_DuplicateMatchingRecord
 
-**Added by**: PowerApps Checker Solution
+**Added by**: Power Apps Checker Solution
 
 See msdyn_solutionhealthrule Entity [msdyn_solutionhealthrule_DuplicateMatchingRecord](msdyn_solutionhealthrule.md#BKMK_msdyn_solutionhealthrule_DuplicateMatchingRecord) One-To-Many relationship.
 
 ### <a name="BKMK_msdyn_solutionhealthrule_DuplicateBaseRecord"></a> msdyn_solutionhealthrule_DuplicateBaseRecord
 
-**Added by**: PowerApps Checker Solution
+**Added by**: Power Apps Checker Solution
 
 See msdyn_solutionhealthrule Entity [msdyn_solutionhealthrule_DuplicateBaseRecord](msdyn_solutionhealthrule.md#BKMK_msdyn_solutionhealthrule_DuplicateBaseRecord) One-To-Many relationship.
 
 ### <a name="BKMK_msdyn_solutionhealthruleargument_DuplicateMatchingRecord"></a> msdyn_solutionhealthruleargument_DuplicateMatchingRecord
 
-**Added by**: PowerApps Checker Solution
+**Added by**: Power Apps Checker Solution
 
 See msdyn_solutionhealthruleargument Entity [msdyn_solutionhealthruleargument_DuplicateMatchingRecord](msdyn_solutionhealthruleargument.md#BKMK_msdyn_solutionhealthruleargument_DuplicateMatchingRecord) One-To-Many relationship.
 
 ### <a name="BKMK_msdyn_solutionhealthruleargument_DuplicateBaseRecord"></a> msdyn_solutionhealthruleargument_DuplicateBaseRecord
 
-**Added by**: PowerApps Checker Solution
+**Added by**: Power Apps Checker Solution
 
 See msdyn_solutionhealthruleargument Entity [msdyn_solutionhealthruleargument_DuplicateBaseRecord](msdyn_solutionhealthruleargument.md#BKMK_msdyn_solutionhealthruleargument_DuplicateBaseRecord) One-To-Many relationship.
 
 ### <a name="BKMK_msdyn_solutionhealthruleset_DuplicateMatchingRecord"></a> msdyn_solutionhealthruleset_DuplicateMatchingRecord
 
-**Added by**: PowerApps Checker Solution
+**Added by**: Power Apps Checker Solution
 
 See msdyn_solutionhealthruleset Entity [msdyn_solutionhealthruleset_DuplicateMatchingRecord](msdyn_solutionhealthruleset.md#BKMK_msdyn_solutionhealthruleset_DuplicateMatchingRecord) One-To-Many relationship.
 
 ### <a name="BKMK_msdyn_solutionhealthruleset_DuplicateBaseRecord"></a> msdyn_solutionhealthruleset_DuplicateBaseRecord
 
-**Added by**: PowerApps Checker Solution
+**Added by**: Power Apps Checker Solution
 
 See msdyn_solutionhealthruleset Entity [msdyn_solutionhealthruleset_DuplicateBaseRecord](msdyn_solutionhealthruleset.md#BKMK_msdyn_solutionhealthruleset_DuplicateBaseRecord) One-To-Many relationship.
 

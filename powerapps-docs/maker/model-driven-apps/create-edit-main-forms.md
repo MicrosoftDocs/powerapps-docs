@@ -1,5 +1,5 @@
 ---
-title: "Create or edit model-driven app main forms in PowerApps | MicrosoftDocs"
+title: "Create or edit model-driven app main forms in Power Apps | MicrosoftDocs"
 description: "Learn how to create or edit a main form"
 ms.custom: ""
 ms.date: 05/23/2018

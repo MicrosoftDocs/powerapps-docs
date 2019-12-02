@@ -28,7 +28,7 @@ Common Data Service provides a security model that protects data integrity and p
 **Record-based security** focuses on access rights to specific records.
 
 **Field-level security** restricts access to specific high business impact fields in an entity only to specified users or teams.
-Combine role-based security, record-level security, and field-level security to define the overall security rights that users have within your PowerApps application.
+Combine role-based security, record-level security, and field-level security to define the overall security rights that users have within your Power Apps application.
 
 As a developer, you should know that queries in your code run in the context of a user, and will only return records that the user is entitled to read.
 Further, your code will only be able to perform operations based on the privileges assigned to the user account through the security roles or team membership.

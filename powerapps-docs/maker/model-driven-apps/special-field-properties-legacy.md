@@ -1,5 +1,5 @@
 ---
-title: Model-driven app special field properties for main forms in PowerApps | MicrosoftDocs
+title: Model-driven app special field properties for main forms in Power Apps | MicrosoftDocs
 description: Understand the special field properties for main forms
 Keywords: Main forms; Special field properties; Dynamics 365
 author: Mattp123

@@ -1,5 +1,5 @@
 ---
-title: "Configure Bing maps in a model-driven app with PowerApps | MicrosoftDocs"
+title: "Configure Bing maps in a model-driven app with Power Apps | MicrosoftDocs"
 ms.custom: ""
 ms.date: 10/18/2019
 ms.reviewer: ""

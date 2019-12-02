@@ -1,5 +1,5 @@
 ---
-title: "Create or edit a model-driven app system chart in PowerApps | MicrosoftDocs"
+title: "Create or edit a model-driven app system chart in Power Apps | MicrosoftDocs"
 description: "Learn how to create or edit a chart"
 ms.custom: ""
 ms.date: 05/23/2018

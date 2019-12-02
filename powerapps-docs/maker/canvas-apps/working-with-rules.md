@@ -46,13 +46,13 @@ A condition is an expression that evaluates to true or false, such as whether a 
     <br>**Slider1.Value > 70**
 
 ## Add an action
-Actions define what happens when the rule is applied. PowerApps can create actions automatically based on changes you make to controls.
+Actions define what happens when the rule is applied. Power Apps can create actions automatically based on changes you make to controls.
 
 1. Click or tap **Define actions**.
 
     ![Define actions](./media/working-with-rules/rule-define-actions.png)
 
-1. In the confirmation dialog box, click or tap **Let's go** so that PowerApps will capture your next change or changes as one or more actions.
+1. In the confirmation dialog box, click or tap **Let's go** so that Power Apps will capture your next change or changes as one or more actions.
 
 1. Configure one or more controls to match your expectations when the condition is true.
 

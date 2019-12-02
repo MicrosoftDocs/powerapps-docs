@@ -1,13 +1,13 @@
 ---
-title: What's new in PowerApps | Microsoft Docs
-description: Provides information about the PowerApps weekly release and release notes
+title: What's new in Power Apps | Microsoft Docs
+description: Provides information about the Power Apps weekly release and release notes
 author: KumarVivek
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.reviewer: 
-ms.date: 06/17/2019
+ms.date: 11/26/2019
 ms.author: kvivek
 search.audienceType: 
   - maker
@@ -21,13 +21,13 @@ searchScope:
   - PowerApps
 ---
 
-# What's new in PowerApps
+# What's new in Power Apps?
 
 This topic provides resources where you can learn about the new features that have recently released, new features that will be releasing over the next few months, and known limitations.
 
 ## Weekly releases
 
-For information about the new features, fixes, and improvements released in the past few weeks, see [Released versions for Microsoft PowerApps](https://docs.microsoft.com/business-applications-release-notes/powerplatform/released-versions/powerapps).
+For information about the new features, fixes, and improvements released in the past few weeks, see [Released versions for Microsoft Power Apps](https://docs.microsoft.com/business-applications-release-notes/powerplatform/released-versions/powerapps).
 
 To know more about how to browse information in the weekly release notes, read this [blog post](https://powerapps.microsoft.com/blog/stay-tuned-with-the-latest-features-and-fixes-through-powerapps-weekly-release-notes/).
 
@@ -36,9 +36,7 @@ To know more about how to browse information in the weekly release notes, read t
 
 ## Release plan
 
-For information about new features releasing over the next few months that you can use for planning, see:
-- [April 2019 release notes](https://docs.microsoft.com/business-applications-release-notes/April19/microsoft-powerapps/planned-features)
-- [2019 release wave 2 plan](https://docs.microsoft.com/power-platform-release-plan/2019wave2/microsoft-powerapps/planned-features)
+For information about new features releasing over the next few months that you can use for planning, see [2019 release wave 2 plan](https://docs.microsoft.com/power-platform-release-plan/2019wave2/microsoft-powerapps/planned-features)
 
 ## Known limitations
 

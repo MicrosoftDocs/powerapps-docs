@@ -16,7 +16,7 @@ search.app:
 ---
 # Understand data sources for canvas apps in PowerApps
 
-In PowerApps, most canvas apps use external information stored in cloud services called **Data Sources**. A common example is a table in an Excel file stored in OneDrive for Business. Apps access these data sources by using **Connections**.
+In Power Apps, most canvas apps use external information stored in cloud services called **Data Sources**. A common example is a table in an Excel file stored in OneDrive for Business. Apps access these data sources by using **Connections**.
 
 This article discusses the different kinds of data sources and how to work with table data sources.
 
@@ -36,25 +36,25 @@ Data sources other than tables include email, calendars, Twitter, and notificati
 
 Using the **[Gallery](controls/control-gallery.md)**, **[Display form](controls/control-form-detail.md)**, and **[Edit form](controls/control-form-detail.md)** controls, it is easy to create an app that reads and writes data from a data source.  To get started, read the article [Understand data forms](working-with-forms.md).  
 
-When you ask PowerApps to create an app from data, these controls are used. Behind the scenes, the app uses an internal table to store and manipulate the data that comes from the data source.
+When you ask Power Apps to create an app from data, these controls are used. Behind the scenes, the app uses an internal table to store and manipulate the data that comes from the data source.
 
 A special kind of data source is the [Collection](working-with-data-sources.md#collections), which is local to the app and not backed by a connection to a service in the cloud, so the information can not be shared across devices for the same user or between users. Collections can be loaded and saved locally.
 
 ### Kinds of tables
 
-Tables that are internal to a PowerApps app are fixed values, just as a number or a string is a value. Internal tables aren't stored anywhere, they just exist in your app's memory. You can't directly modify the structure and data of a table. What you can do instead is to create a new table through a formula: you use that formula to make a modified copy of the original table.
+Tables that are internal to a Power Apps app are fixed values, just as a number or a string is a value. Internal tables aren't stored anywhere, they just exist in your app's memory. You can't directly modify the structure and data of a table. What you can do instead is to create a new table through a formula: you use that formula to make a modified copy of the original table.
 
-External tables are stored in a data source for later retrieval and sharing.  PowerApps provides "connections" to read and write stored data.  Within a connection, you can access multiple tables of information.  You'll select which tables to use in your app, and each will become a separate *data source*.  
+External tables are stored in a data source for later retrieval and sharing.  Power Apps provides "connections" to read and write stored data.  Within a connection, you can access multiple tables of information.  You'll select which tables to use in your app, and each will become a separate *data source*.  
 
 To learn more, [Working with tables](working-with-tables.md) goes into more detail about internal tables, but it is also applicable to external tables residing in a cloud service.
 
 ## Working with tables
-You can use table data sources the same way that you use an internal PowerApps table.  Just like an internal table, each data source has [records](working-with-tables.md#records), [columns](working-with-tables.md#columns), and properties that you can use in formulas. In addition:
+You can use table data sources the same way that you use an internal Power Apps table.  Just like an internal table, each data source has [records](working-with-tables.md#records), [columns](working-with-tables.md#columns), and properties that you can use in formulas. In addition:
 
 * The data source has the same column names and data types as the underlying table in the connection.
   
     > [!NOTE]
-  > For SharePoint and Excel data sources that contain column names with spaces, PowerApps will replace the spaces with **"\_x0020\_"**. For example, **"Column Name"** in SharePoint or Excel will appear as **"Column_x0020_Name"** in PowerApps when displayed in the data layout or used in a formula.
+  > For SharePoint and Excel data sources that contain column names with spaces, Power Apps will replace the spaces with **"\_x0020\_"**. For example, **"Column Name"** in SharePoint or Excel will appear as **"Column_x0020_Name"** in Power Apps when displayed in the data layout or used in a formula.
 * The data source is loaded from the service automatically when the app is loaded.  You can force the data to refresh by using the **[Refresh](functions/function-refresh.md)** function.
 * As users run an app, they can create, modify, and delete records and push those changes back to the underlying table in the service.
   * Records can be created with the **[Patch](functions/function-patch.md)** and **[Collect](functions/function-clear-collect-clearcollect.md)** functions.  
@@ -64,7 +64,7 @@ You can use table data sources the same way that you use an internal PowerApps t
 * The **[DataSourceInfo](functions/function-datasourceinfo.md)**, **[Defaults](functions/function-defaults.md)**, and **[Validate](functions/function-validate.md)** functions provide information about the data source that you can use to optimize the user experience.
 
 ### Creating data sources
-PowerApps can't be used to create a connected data source, or modify its structure; the data source must already exist in a service somewhere. For example, to create a table in an Excel workbook stored on OneDrive, you first use Excel Online on OneDrive to create a workbook. Next you create a connection to it from your app.  
+Power Apps can't be used to create a connected data source, or modify its structure; the data source must already exist in a service somewhere. For example, to create a table in an Excel workbook stored on OneDrive, you first use Excel Online on OneDrive to create a workbook. Next you create a connection to it from your app.  
 
 However, collection data sources *can* be created and modified inside an app, but are only temporary.
 
@@ -100,7 +100,7 @@ Before making a change to a record, the app should do what it can to make sure t
 * *Immediate feedback to the user*.  The best time to fix a problem is right when it happens, when it is fresh in the user's mind.  Literally with each touch or keystroke, red text can appear that identifies an issue with their entry.
 * *Less network traffic and less user latency*.  More issues detected in the app means fewer conversations over the network to detect and resolve issues.  Each conversation takes time during which the user must wait before they can move on.
 
-PowerApps offers two tools for validation:
+Power Apps offers two tools for validation:
 
 * The data source can provide information about what is and isn't valid.  For example, numbers can have minimum and maximum values, and one or more entries can be required.  You can access this information with the **[DataSourceInfo](functions/function-datasourceinfo.md)** function.  
 * The **[Validate](functions/function-validate.md)** function uses this same information to check the value of a single column or of an entire record.

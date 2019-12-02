@@ -15,13 +15,13 @@ search.app:
   - PowerApps
 ---
 # Overview of canvas-app connectors for PowerApps
-Data is at the core of most apps, including those you build in PowerApps. Data is stored in a *data source*, and you bring that data into your app by creating a *connection*. The connection uses a specific *connector* to talk to the data source. PowerApps has connectors for many popular services and on-premises data sources, including SharePoint, SQL Server, Office 365, Salesforce, and Twitter. To get started adding data to a canvas app, see [Add a data connection in PowerApps](add-data-connection.md).
+Data is at the core of most apps, including those you build in Power Apps. Data is stored in a *data source*, and you bring that data into your app by creating a *connection*. The connection uses a specific *connector* to talk to the data source. Power Apps has connectors for many popular services and on-premises data sources, including SharePoint, SQL Server, Office 365, Salesforce, and Twitter. To get started adding data to a canvas app, see [Add a data connection in PowerApps](add-data-connection.md).
 
 A connector may provide **tables** of data or **actions**. Some connectors provide only tables, some provide only actions, and some provide both. Also your connector may be either a standard or custom connector.
 
 ## Tables
 
-If your connector provides tables, you add your data source and then select the table in the data source that you want to manage. PowerApps both retrieves table data into your app and updates data in your data source for you. For example, you can add a data source that contains a table named **Lessons** and then set the **Items** property of a control, such as a gallery or a form, to this value in the formula bar:
+If your connector provides tables, you add your data source and then select the table in the data source that you want to manage. Power Apps both retrieves table data into your app and updates data in your data source for you. For example, you can add a data source that contains a table named **Lessons** and then set the **Items** property of a control, such as a gallery or a form, to this value in the formula bar:
 
  ![Plain data source Items property](./media/connections-list/ItemPropertyPlain.png)
 
@@ -52,7 +52,7 @@ For more information about how to customize your formula for custom updates, see
 [Patch](functions/function-patch.md)<br>[Collect](functions/function-clear-collect-clearcollect.md)<br>[Update](functions/function-update-updateif.md)
 
 > [!NOTE]
->  **PowerApps doesn't work with dynamic schema**. The phrase dynamic schema refers to the possibility that the same action may return a different table with different columns. Conditions that may cause the columns in the tables to differ include the action input parameters, the user or role that's executing the action, and the group in which the user is working, among others. For example, SQL Server stored procedures may return different columns if run with different inputs. For actions with dynamic schema, the connector documentation shows **The outputs of this operation are dynamic.** as the return value. In contrast, Power Automate works with dynamic schema and might provide a work-around for your scenario.
+>  **Power Apps doesn't work with dynamic schema**. The phrase dynamic schema refers to the possibility that the same action may return a different table with different columns. Conditions that may cause the columns in the tables to differ include the action input parameters, the user or role that's executing the action, and the group in which the user is working, among others. For example, SQL Server stored procedures may return different columns if run with different inputs. For actions with dynamic schema, the connector documentation shows **The outputs of this operation are dynamic.** as the return value. In contrast, Power Automate works with dynamic schema and might provide a work-around for your scenario.
 
 ## Popular connectors
 
@@ -71,9 +71,9 @@ This table has links to more information about our most popular connectors. For 
 ** Applies to Azure Blob, Box, Dropbox, Google Drive, OneDrive and OneDrive for Business
 
 ## Standard and custom connectors
-PowerApps provides *standard* connectors for many commonly used data sources, such as those listed above. If PowerApps has a standard connector for the type of data source that you want to use, you should use that connector. If you want to connect to other types of data sources, such as a service that you've built, see [Register and use custom connectors](../canvas-apps/register-custom-api.md).
+Power Apps provides *standard* connectors for many commonly used data sources, such as those listed above. If Power Apps has a standard connector for the type of data source that you want to use, you should use that connector. If you want to connect to other types of data sources, such as a service that you've built, see [Register and use custom connectors](../canvas-apps/register-custom-api.md).
 
 ## All standard connectors
-See the [Microsoft Connector Reference](https://docs.microsoft.com/connectors/) for a list of all the standard connectors. Premium connectors require PowerApps Plan 1 or Plan 2. For more information, see [PowerApps Plans](https://powerapps.microsoft.com/pricing/).
+See the [Microsoft Connector Reference](https://docs.microsoft.com/connectors/) for a list of all the standard connectors. Premium connectors require Power Apps Plan 1 or Plan 2. For more information, see [Power Apps Plans](https://powerapps.microsoft.com/pricing/).
 
-You can ask questions about a specific connector in the [PowerApps forums](https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1), and you can suggest connectors to add or other improvements to make in [PowerApps Ideas](https://powerusers.microsoft.com/t5/PowerApps-Ideas/idb-p/PowerAppsIdeas).
+You can ask questions about a specific connector in the [Power Apps forums](https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1), and you can suggest connectors to add or other improvements to make in [Power Apps Ideas](https://powerusers.microsoft.com/t5/PowerApps-Ideas/idb-p/PowerAppsIdeas).

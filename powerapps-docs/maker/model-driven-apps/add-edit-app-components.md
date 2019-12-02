@@ -1,6 +1,6 @@
 ---
-title: "Tutorial to add or edit model-driven app components with PowerApps | MicrosoftDocs"
-description: "Use the PowerApps app designer to add or edit components"
+title: "Tutorial to add or edit model-driven app components with Power Apps | MicrosoftDocs"
+description: "Use the Power Apps app designer to add or edit components"
 keywords: ""
 ms.date: 10/15/2018
 ms.service: powerapps
@@ -25,7 +25,7 @@ search.app:
   - D365CE
 ---
 
-# Tutorial: Add or edit model-driven app components in the PowerApps app designer
+# Tutorial: Add or edit model-driven app components in the Power Apps app designer
 
 In this tutorial you learn how to add components to and remove components from a model-driven app. 
 
@@ -80,7 +80,7 @@ The app designer refers to existing metadata in the default solution. You can us
 
      Those dashboards will be added to the **Dashboard** tile on the app designer canvas. The **Dashboard** tile also shows a count of the number of dashboards you added to the app. If you don't select a dashboard, **All** will appear instead of the dashboard count, and all dashboards will be available to users when they use the app.  
   
-     All entities the dashboard uses are also added to the **Entity View** area. For example, if you add the Customer Service Manager dashboard, the Case, Entitlement, and Queue Item entities are added to the Entity View area. For each entity, tiles for its assets are also added. You can use these tiles to add forms, views, and charts. More information:[Add or edit app components in the PowerApps app designer](add-edit-app-components.md#bkmk_AddEntityAssets)   
+     All entities the dashboard uses are also added to the **Entity View** area. For example, if you add the Customer Service Manager dashboard, the Case, Entitlement, and Queue Item entities are added to the Entity View area. For each entity, tiles for its assets are also added. You can use these tiles to add forms, views, and charts. More information:[Add or edit app components in the Power Apps app designer](add-edit-app-components.md#bkmk_AddEntityAssets)   
   
     ![Add entity to the app designer canvas](../model-driven-apps/media/add-entity-app-designer-canvas.png "Add an entity to the app designer canvas")  
   

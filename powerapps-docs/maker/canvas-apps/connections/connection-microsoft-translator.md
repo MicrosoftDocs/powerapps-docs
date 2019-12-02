@@ -27,7 +27,7 @@ This topic shows you how to create the Microsoft Translator connection, use the 
 [!INCLUDE [connection-requirements](../../../includes/connection-requirements.md)]
 
 ## Connect to Microsoft Translator
-1. Open PowerApps, select **New**, and then create a **Blank app**. Choose phone or tablet layout. Tablet layout gives you more workspace:  
+1. Open Power Apps, select **New**, and then create a **Blank app**. Choose phone or tablet layout. Tablet layout gives you more workspace:  
 
    ![Open a blank app](./media/connection-microsoft-translator/blank-app.png)
 2. In the right-hand pane, click or tap **Data** tab, and then click or tap **Add data source**.
