@@ -6,7 +6,7 @@ manager: shujoshi
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/07/2019
+ms.date: 11/28/2019
 ms.author: shjais
 ms.reviewer:
 ---
@@ -51,14 +51,14 @@ The powerbi tag accepts the following parameters:
 Path of the Power BI report or dashboard. If the Power BI report or dashboard is secure, you must provide the authentication type.
 
 ```
-{% powerbi path:"https://app.powerbi.com/groups/00000000-0000-0000-0000-000000000000/reports/00000000-0000-0000-0000-000000000001/ReportSection01" %}
+{% powerbi authentication_type:"powerbiembedded" path:"https://app.powerbi.com/groups/00000000-0000-0000-0000-000000000000/reports/00000000-0000-0000-0000-000000000001/ReportSection01" %}
 ```
 
 **authentication_type**
 
 Type of authentication required for the Power BI report or dashboard. Valid values for this parameter are:
 
-- **Anonymous**: Allows you to embed publish to web Power BI reports. The default authentication type is Anonymous.
+- **Anonymous**: Allows you to embed publish to web Power BI reports. The default authentication type is Anonymous. When using the authentication type as Anonymous, you must get the Power BI report URL as described at: [Publish to web from Power BI](https://docs.microsoft.com/power-bi/service-publish-to-web)
 
 - **AAD**: Allows you to share secure Power BI reports or dashboards to Power BI Azure Active Directory authenticated users.
 
@@ -691,7 +691,7 @@ The name of the Entity Form you wish to load.
 
 `{% entityform name:My Entity Form %}`
 
-### **webform**
+## webform
 
 Fully renders a PowerApps-configured web form, by name or ID. The webform tag is only available for use in content rendered inside a [web template](store-content-web-templates.md) based page template. Attempting to use the tag inside a Rewrite-based Page Template will not render anything. You may only render a single entityform or webform tag per page. entityform or webform tags after the first will not be rendered.                
 `{% webform name: 'My Web Form' %}`
@@ -703,6 +703,7 @@ Fully renders a PowerApps-configured web form, by name or ID. The webform tag is
 The name of the Web Form you wish to load.
 
 `{% webform name:My Web Form %}`
+
 
 ### See also
 
