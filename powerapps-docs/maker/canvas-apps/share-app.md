@@ -211,7 +211,7 @@ Connections for an app are always made in the context of the Azure AD tenant the
 #### Can guests use Microsoft Graph via Microsoft Security Graph connector or a custom connector using Microsoft Graph APIs?
 No, Azure AD guests can't query Microsoft Graph to retrieve information for a tenant in which they’re a guest.
 
-#### What InTune policies apply to guests using my PowerApps?
+#### What InTune policies apply to guests using my Power Apps?
 InTune only applies policies of a user’s home tenant. For instance, if Alice@Contoso.com shares an app with Vikram@Fabrikam.com, InTune continues to apply Fabrikam.com policies on Virkam’s device regardless of the Power Apps he runs.
 
 #### What connectors support guest access?

@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# What are canvas apps in PowerApps?
+# What are canvas apps in Power Apps?
 Design and build a business app from a canvas in Microsoft Power Apps without writing code in a traditional programming language such as C#. Design the app by dragging and dropping elements onto a canvas, just as you would design a slide in PowerPoint. Create Excel-like expressions for specifying logic and working with data. Build apps that integrate business data from a [wide variety of Microsoft and third-party sources](connections-list.md). Share your app so that users can run it in a browser or on a mobile device, and embed your app so that users can run it in SharePoint, Power BI, or Teams.
 
 If you don't need a custom design and your data is in Common Data Service, you can automatically generate a model-driven app from your business data and processes. This type of app can model forms, views, and other components, and the default UI automatically adjusts to phones, laptops, and other devices. For more information about this type of app, see [Overview of building a model-driven app](../model-driven-apps/model-driven-app-overview.md).

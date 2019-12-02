@@ -128,7 +128,7 @@ You can configure the **Price**, **Availability**, and **Colors** fields to appe
 
 ### Forms vs. apps
 
-**Q:** How does a customized form differ from a standalone app that I create from SharePoint or PowerApps?
+**Q:** How does a customized form differ from a standalone app that I create from SharePoint or Power Apps?
 
 **A:** If you customize the form for a SharePoint list, the form doesn't appear as an app in Power Apps Studio or Power Apps Mobile. You can open the form only from the list for which you created it.
 

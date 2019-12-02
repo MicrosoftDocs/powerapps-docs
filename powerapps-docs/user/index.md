@@ -1,5 +1,5 @@
 ---
-title: How do I find and run apps in PowerApps? | Microsoft Docs
+title: How do I find and run apps in Power Apps? | Microsoft Docs
 description: Overview of how to find and run Power Apps apps.
 author: mduelae
 ms.service: powerapps

@@ -94,5 +94,5 @@ If you’re applying these changes to a production system, we recommend that you
   
   
 ## Next Steps  
-[What are model-driven apps in PowerApps?](../../maker/model-driven-apps/model-driven-app-overview.md)
+[What are model-driven apps in Power Apps?](../../maker/model-driven-apps/model-driven-app-overview.md)
 

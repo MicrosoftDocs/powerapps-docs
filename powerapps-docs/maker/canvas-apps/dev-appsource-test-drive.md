@@ -16,7 +16,7 @@ search.app:
 ---
 # Let customers test drive your canvas app on AppSource
 
-Are you passionate about building canvas apps in PowerApps? Do you want to share a canvas app with customers? [AppSource.com](https://appsource.microsoft.com) supports Power Apps Test Drive solutions as a way for you to share apps with customers and generate leads for your business.
+Are you passionate about building canvas apps in Power Apps? Do you want to share a canvas app with customers? [AppSource.com](https://appsource.microsoft.com) supports Power Apps Test Drive solutions as a way for you to share apps with customers and generate leads for your business.
 
 ## What is a Test Drive solution?
 

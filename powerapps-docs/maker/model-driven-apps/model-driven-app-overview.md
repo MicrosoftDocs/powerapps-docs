@@ -18,7 +18,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# What are model-driven apps in PowerApps?
+# What are model-driven apps in Power Apps?
 
 Model-driven app design is a component-focused approach to app development. Model-driven app design doesn’t require code and the apps you make can be simple or very complex.  Unlike canvas app development where the designer has complete control over app layout, with model-driven apps much of the layout is determined for you and largely designated by the components you add to the app. 
 
