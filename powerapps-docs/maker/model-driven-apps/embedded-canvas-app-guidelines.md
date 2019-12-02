@@ -15,7 +15,7 @@ author: "Aneesmsft"
 ms.author: "matp"
 manager: "kvivek"
 tags: 
-  - "PowerApps maker portal impact"
+  - "Power Apps maker portal impact"
 search.audienceType: 
   - maker
 search.app: 
@@ -34,7 +34,7 @@ This topic provides guidelines on working with embedded canvas apps as well as h
 -	When adding an embedded canvas app to a model-driven form always use a required field that is guaranteed to have a value. If your field does not have a value your embedded canvas app will not refresh in response to any change in data on the host model-driven form.
 -	Publishing a model-driven form does not also publish the embedded canvas app.
      - Embedded canvas apps need to be published independent of the host model-driven form. More information: [Publish an app](../canvas-apps/save-publish-app.md#publish-an-app).
--	If opening PowerApps Studio to create or edit an embedded canvas app via the **Customize** button in the canvas app control properties is blocked due to a web browser pop-up blocker, you must enable the make.powerapps.com site or temporarily disable the pop-up blocker and then select **Customize** again.
+-	If opening Power Apps Studio to create or edit an embedded canvas app via the **Customize** button in the canvas app control properties is blocked due to a web browser pop-up blocker, you must enable the make.powerapps.com site or temporarily disable the pop-up blocker and then select **Customize** again.
 -	Embedded canvas apps are not displayed when creating a new record since they need a record context to be passed to them.
 -	The ModelDrivenFormIntegration.Item object is read-only. 
      - To write back data you must use the Common Data Service connector. More information: [Common Data Service](/connectors/commondataservice/)

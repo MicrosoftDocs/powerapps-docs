@@ -64,7 +64,7 @@ Similarly to plug-ins, custom workflow activities can be written to initiate pos
   
 ### Asynchronous Service
 
-Once notified by the service endpoint notification service, the asynchronous service handles posting the  data context of the request message currently being processed by the event execution pipeline to the Azure Service Bus. Each post is performed by a system job of the asynchronous service. A user can view the status of each system job by using the **System Jobs** view of the PowerApps web application.  
+Once notified by the service endpoint notification service, the asynchronous service handles posting the  data context of the request message currently being processed by the event execution pipeline to the Azure Service Bus. Each post is performed by a system job of the asynchronous service. A user can view the status of each system job by using the **System Jobs** view of the Power Apps web application.  
   
 For more information about the asynchronous service see [Asynchronous service](asynchronous-service.md).  
   

@@ -346,7 +346,7 @@
     href: package-deployer/create-packages-package-deployer.md
   - name: Verify quality of solutions and packages
     items:
-    - name: Use the PowerApps checker web API 
+    - name: Use the Power Apps checker web API 
       href: checker/webapi/overview.md
     - name: Invoke the analysis
       href: checker/webapi/analyze.md

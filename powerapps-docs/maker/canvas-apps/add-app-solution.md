@@ -1,6 +1,6 @@
 ---
 title: Create a canvas app in a solution | Microsoft Docs
-description: In PowerApps, create a canvas app in a solution so that you can deploy the app to another environment
+description: In Power Apps, create a canvas app in a solution so that you can deploy the app to another environment
 author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
@@ -28,7 +28,7 @@ To follow the steps in this topic, you must switch to an environment that contai
 
 You can skip this procedure if you already have a solution in which you want to create an app or to which you want to link an app.
 
-1. [Sign in](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) to PowerApps, and then (if necessary) switch to the appropriate environment:
+1. [Sign in](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) to Power Apps, and then (if necessary) switch to the appropriate environment:
 
     - If you want to create an app from within a solution, switch to any environment that contains a Common Data Service database.
     - If you want to link an existing app to a solution, switch to the environment that contains that app.
@@ -75,7 +75,7 @@ You can create a blank canvas app from within a solution. You can't automaticall
     > [!div class="mx-imgBorder"]
     > ![Options to create an app in a solution](./media/add-app-solution/new-option.png "Options to create an app in a solution")
 
-    PowerApps Studio opens with a blank canvas in another browser tab.
+    Power Apps Studio opens with a blank canvas in another browser tab.
 
 1. Create your app (or make at least one change), and then save your changes.
 

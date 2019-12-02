@@ -25,7 +25,7 @@ The **Switch** function evaluates a formula and determines whether the result ma
 **If** and **Switch** are very similar, but you should use the best function for your situation:
 
 * Use **If** to evaluate a single condition. The most common syntax for this function is **If**( *Condition*, *ThenResult*, *DefaultResult* ), which provides the common “if …  then … else …” pattern seen in other programming tools.
-* Use **If** to evaluate multiple unrelated conditions. In PowerApps (unlike Microsoft Excel), you can specify multiple conditions without having to nest **If** formulas.
+* Use **If** to evaluate multiple unrelated conditions. In Power Apps (unlike Microsoft Excel), you can specify multiple conditions without having to nest **If** formulas.
 * Use **Switch** to evaluate a single condition against multiple possible matches. You can also use **If** in this case, but you'd need to repeat the formula for each possible match.
 
 You can use both of these functions in [behavior formulas](../working-with-formulas-in-depth.md) to branch between two or more actions. Only one branch will trigger an action. Conditions and matches are evaluated in order, and they stop if a condition is **true** or a match is found.

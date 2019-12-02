@@ -1,6 +1,6 @@
 ---
 title: "Check for analysis status | Microsoft Docs"
-description: "Learn how to form a GET request using the PowerApps checker web API to check the status of an analysis request job."
+description: "Learn how to form a GET request using the Power Apps checker web API to check the status of an analysis request job."
 ms.custom: ""
 ms.date: 06/04/2019
 ms.service: powerapps
@@ -116,7 +116,7 @@ Content-Type: application/json; charset=utf-8
 
 ### See also
 
-[Use the PowerApps checker web API](overview.md)<br />
+[Use the Power Apps checker web API](overview.md)<br />
 [Retrieve the list of rulesets](retrieve-rulesets.md)<br />
 [Retrieve the list of rules](retrieve-rules.md)<br />
 [Upload a file](upload-file.md)<br />

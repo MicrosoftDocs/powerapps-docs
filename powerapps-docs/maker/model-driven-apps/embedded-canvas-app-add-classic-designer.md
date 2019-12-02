@@ -15,7 +15,7 @@ author: "Aneesmsft"
 ms.author: "matp"
 manager: "kvivek"
 tags: 
-  - "PowerApps maker portal impact"
+  - "Power Apps maker portal impact"
 search.audienceType: 
   - maker
 search.app: 
@@ -45,10 +45,10 @@ Imagine that you want to create a new canvas app and embed it on a main form for
          - Notice that, even though this property appears changeable, changing it has no effect on the embedded canvas app. It is meant only to serve as a reference for you.
      - The **App ID** property specifies the ID of the embedded canvas app. It will be automatically generated and filled-in for you when the canvas app is created.
          - Notice that any change to the **App ID** value breaks the link from the model-driven form to the embedded canvas app.
-12.	Select **Customize** to create or edit the canvas app. This opens PowerApps Studio in a new tab.
+12.	Select **Customize** to create or edit the canvas app. This opens Power Apps Studio in a new tab.
 	   > [!NOTE]
-       > If opening PowerApps Studio is blocked due to a web browser pop-up blocker you must enable the make.powerapps.com site or temporarily disable the pop-up blocker and then select **Customize** again.
-13.	In PowerApps Studio notice that there is a special **ModelDrivenFormIntegration** control in the left pane. This control is responsible for bringing contextual data from the host model-driven form to the embedded canvas app.
+       > If opening Power Apps Studio is blocked due to a web browser pop-up blocker you must enable the make.powerapps.com site or temporarily disable the pop-up blocker and then select **Customize** again.
+13.	In Power Apps Studio notice that there is a special **ModelDrivenFormIntegration** control in the left pane. This control is responsible for bringing contextual data from the host model-driven form to the embedded canvas app.
 14. Observe that a [canvas app form control](../canvas-apps/controls/control-form-detail.md) was automatically added to your embedded canvas app and displays the data being passed to it from the host model-driven form via the ModelDrivenFormIntegration control. 
 15. Select the **View** tab, and then select **Data sources**. Notice that a data source for the parent entity of your host model-driven form, Accounts in this case, was automatically added to your embedded canvas app.
 16. Select the **Form1** control and observe that the **DataSource** property is set to **Accounts**.
@@ -65,7 +65,7 @@ Imagine that you want to create a new canvas app and embed it on a main form for
 22. On the menu, select **Back**.
 23. Select the browser tab that has the classic form designer open. Observe that the **App ID** property of the canvas app control now has a value automatically filled in.
 	> [!NOTE]
-	> - The form designer has a direct link with PowerApps Studio that was opened in another browser tab in an earlier step.
+	> - The form designer has a direct link with Power Apps Studio that was opened in another browser tab in an earlier step.
 	> - The form designer listens for the App ID to be sent to it. 
 	> - The App ID is sent to the form designer when the app is saved.
 24.	On the **Field Properties** dialog box, select the **Display** tab.

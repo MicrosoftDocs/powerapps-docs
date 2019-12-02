@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Container control in PowerApps (experimental)
+# Container control in Power Apps (experimental)
 Provides the ability to create hierarchy.
 
 > [!IMPORTANT]

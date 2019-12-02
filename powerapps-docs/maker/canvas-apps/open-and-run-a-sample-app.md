@@ -19,7 +19,7 @@ In this quickstart, you'll create a canvas app from a sample so that you can exp
 
 Each sample showcases a real-world scenario but uses fictitious data. To store this data, you'll need a cloud-storage account, such as Dropbox, Google Drive, or OneDrive.
 
-If you don't have a license for PowerApps, you can [sign up for free](../signup-for-powerapps.md).
+If you don't have a license for Power Apps, you can [sign up for free](../signup-for-powerapps.md).
 
 ## Open a sample app
 1. Sign in to [PowerApps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
@@ -30,7 +30,7 @@ If you don't have a license for PowerApps, you can [sign up for free](../signup-
 
 1. Click or tap the phone icon to create a version of the app for mobile devices (or leave the tablet icon selected), and then click or tap **Make this app**.
 
-1. In PowerApps Studio, click or tap **Make my own app** in the banner near the top-center of the screen.
+1. In Power Apps Studio, click or tap **Make my own app** in the banner near the top-center of the screen.
 
 	![](./media/open-and-run-a-sample-app/banner.png)
 

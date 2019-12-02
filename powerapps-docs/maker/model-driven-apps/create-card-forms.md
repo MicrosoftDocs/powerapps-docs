@@ -1,5 +1,5 @@
 ---
-title: "Create a card form with PowerApps | MicrosoftDocs"
+title: "Create a card form with Power Apps | MicrosoftDocs"
 description: "Learn how to create and use card forms in PowerApps"
 keywords: ""
 ms.date: 03/05/2019

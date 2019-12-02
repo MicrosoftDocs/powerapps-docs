@@ -1,5 +1,5 @@
 ---
-title: Define data for your model-driven app in PowerApps | MicrosoftDocs
+title: Define data for your model-driven app in Power Apps | MicrosoftDocs
 description: "Understand how to define data for your model-driven app"
 Keywords: data, entity, fields, relationship, attributes, model-driven app
 author: Mattp123

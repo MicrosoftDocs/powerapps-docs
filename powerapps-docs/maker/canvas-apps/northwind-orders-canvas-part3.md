@@ -352,7 +352,7 @@ In any gallery, you can show data but you can't update it or add records. Under 
 1. While holding down the Alt key, select the combo box's down arrow.
 
     > [!TIP]
-    > By holding down the Alt key, you can interact with controls in PowerApps Studio without opening Preview mode.
+    > By holding down the Alt key, you can interact with controls in Power Apps Studio without opening Preview mode.
 
 1. In the list of products that appears, select a product:
 

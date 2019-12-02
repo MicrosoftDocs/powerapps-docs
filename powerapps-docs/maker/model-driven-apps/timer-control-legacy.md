@@ -1,5 +1,5 @@
 ---
-title: "Model-driven app timer control in PowerApps | MicrosoftDocs"
+title: "Model-driven app timer control in Power Apps | MicrosoftDocs"
 description: "Understand how you can use the timer control"
 ms.custom: ""
 ms.date: 06/06/2018

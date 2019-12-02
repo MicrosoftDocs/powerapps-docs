@@ -1,6 +1,6 @@
 ---
 title: Create a relationship between entities by using a lookup field | Microsoft Docs
-description: Step-by-step instructions for how to create a relationship between entities in PowerApps by using a lookup field.
+description: Step-by-step instructions for how to create a relationship between entities in Power Apps by using a lookup field.
 author: lancedMicrosoft
 manager: kvivek
 ms.service: powerapps

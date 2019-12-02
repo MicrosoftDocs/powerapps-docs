@@ -39,7 +39,7 @@ Learning Path facilitates learning and adoption of your apps and organizational 
 
  To create Learning Path content, you must:  
 
-- Be using PowerApps or [!INCLUDE[pn_crm_online_shortest](../../includes/pn-crm-online-shortest.md)].  
+- Be using Power Apps or [!INCLUDE[pn_crm_online_shortest](../../includes/pn-crm-online-shortest.md)].  
 
 - Have opted in for Learning Path. This setting is on by default, but it might have been turned off.  
 
@@ -128,7 +128,7 @@ Learning Path facilitates learning and adoption of your apps and organizational 
 <a name="ConfigureRoles"></a>   
 #### Configure security roles  
 
-1. Sign in to PowerApps with an account that has Learning Path authoring permissions.  
+1. Sign in to Power Apps with an account that has Learning Path authoring permissions.  
 
 2. Open the **Content Library**.  
 

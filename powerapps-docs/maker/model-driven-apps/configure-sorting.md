@@ -1,5 +1,5 @@
 ---
-title: "Sort records in a model-driven app view in PowerApps | MicrosoftDocs"
+title: "Sort records in a model-driven app view in Power Apps | MicrosoftDocs"
 ms.custom: ""
 ms.date: 06/27/2018
 ms.reviewer: ""

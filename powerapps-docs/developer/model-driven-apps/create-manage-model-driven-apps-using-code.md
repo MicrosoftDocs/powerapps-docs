@@ -21,7 +21,7 @@ search.app:
 
 <!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/create-manage-custom-business-apps-using-code -->
 
-In addition to creating a Model-driven app using the PowerApps app designer, you can programmatically create and manage Model-driven apps. 
+In addition to creating a Model-driven app using the Power Apps app designer, you can programmatically create and manage Model-driven apps. 
 
 > [!IMPORTANT]
 > You don't have to write code to build Model-driven apps if you don't need to! The app designer provides a much simpler and intuitive experience for building Model-driven apps without having to write code by providing a tile-based information structure and simplified interface. Check it out here: [Design Model-driven apps by using the app designer](../../maker/model-driven-apps/design-custom-business-apps-using-app-designer.md)  

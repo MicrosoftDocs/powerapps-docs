@@ -1,5 +1,5 @@
 ---
-title: "Create or edit a model-driven app view in PowerApps | MicrosoftDocs"
+title: "Create or edit a model-driven app view in Power Apps | MicrosoftDocs"
 description: "Learn how to create or edit a view"
 ms.custom: ""
 ms.date: 06/11/2018
@@ -59,11 +59,11 @@ search.app:
 
 7.  Select **OK** to close the **Edit Filter Criteria** dialog box and then select **Save and Close** on the view editor.  
   
-8.  Notice that your view is now available from the **Views** tab on the PowerApps site making it available to add to an app.
+8.  Notice that your view is now available from the **Views** tab on the Power Apps site making it available to add to an app.
   
 ### Edit a view  
   
-1.  From the **Views** tab on the PowerApps site, select the **Number of Employees** view.
+1.  From the **Views** tab on the Power Apps site, select the **Number of Employees** view.
   
 2.  Change the **Name** for the view to **Number of Employees with 25 or more employees in Arizona**, and then select **OK**.  
 

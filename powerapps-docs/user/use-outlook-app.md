@@ -1,6 +1,6 @@
 ---
 title: "Use Dynamics 365 App for Outlook | MicrosoftDocs"
-description: "Use Dynamics 365 App for Outlook with PowerApps and Common Data Service."
+description: "Use Dynamics 365 App for Outlook with Power Apps and Common Data Service."
 ms.custom: ""
 author: mduelae
 manager: kvivek

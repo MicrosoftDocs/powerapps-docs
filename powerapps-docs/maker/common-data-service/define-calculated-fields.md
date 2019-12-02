@@ -1,5 +1,5 @@
 ---
-title: "Define calculated fields in PowerApps | MicrosoftDocs"
+title: "Define calculated fields in Power Apps | MicrosoftDocs"
 description: "Learn how to define calculated fields"
 ms.custom: ""
 ms.date: 05/25/2018
@@ -27,7 +27,7 @@ search.app:
 
 Use calculated fields to automate manual calculations used in your business processes. 
 
-For example, a salesperson may want to know the weighted revenue for an opportunity which is based on the estimated revenue from an opportunity multiplied by the probability. Or, they want to automatically apply a discount, if an order is greater than $500. A calculated field can contain values resulting from simple math operations, or conditional operations, such as greater than or if-else, and many others. You can accomplish all this by using PowerApps, no need to write code.  
+For example, a salesperson may want to know the weighted revenue for an opportunity which is based on the estimated revenue from an opportunity multiplied by the probability. Or, they want to automatically apply a discount, if an order is greater than $500. A calculated field can contain values resulting from simple math operations, or conditional operations, such as greater than or if-else, and many others. You can accomplish all this by using Power Apps, no need to write code.  
   
 ## Capabilities
   

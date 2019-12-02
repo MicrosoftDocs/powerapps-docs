@@ -23,7 +23,7 @@ search.app:
 ---
 # RDL sandboxing 
 
-In Common Data Service, reports run in the sandbox mode. This is done by enabling Report Definition Language (RDL) Sandboxing in SQL Server Reporting Services. The RDL Sandboxing lets you detect and restrict the usage of specific types of resources. As a result, certain features in PowerApps model-driven apps may not be available. For more information, see [MSDN: Enabling and Disabling RDL Sandboxing](https://msdn.microsoft.com/library/ee210591.aspx).  
+In Common Data Service, reports run in the sandbox mode. This is done by enabling Report Definition Language (RDL) Sandboxing in SQL Server Reporting Services. The RDL Sandboxing lets you detect and restrict the usage of specific types of resources. As a result, certain features in Power Apps model-driven apps may not be available. For more information, see [MSDN: Enabling and Disabling RDL Sandboxing](https://msdn.microsoft.com/library/ee210591.aspx).  
   
  The current RDL Sandboxing configuration settings in Common Data Service are described in the following sections in this topic.  
     

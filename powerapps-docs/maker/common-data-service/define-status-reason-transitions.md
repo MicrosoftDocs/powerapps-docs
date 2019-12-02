@@ -1,5 +1,5 @@
 ---
-title: "Define status reason transitions with PowerApps | MicrosoftDocs"
+title: "Define status reason transitions with Power Apps | MicrosoftDocs"
 description: "Learn how to define status reason transitions"
 ms.custom: ""
 ms.date: 05/25/2018
@@ -60,7 +60,7 @@ The metadata for the field defines what status values are valid for a given stat
 You can modify the status reason field options for the Case entity and custom entities to define which other status reason options people can choose. The only restriction is that each status reason option for an active status must allow at least one path to an inactive status. Otherwise you could create a condition where it would not be possible to resolve or cancel the case.  
 
 > [!NOTE]
-> Editing the status reason transitions requires using solution explorer. See [Create and edit fields for Common Data Service using PowerApps solution explorer](create-edit-field-solution-explorer.md) for information about how to edit fields.
+> Editing the status reason transitions requires using solution explorer. See [Create and edit fields for Common Data Service using Power Apps solution explorer](create-edit-field-solution-explorer.md) for information about how to edit fields.
   
  When you edit a status reason field the **Edit Status Reason Transitions** button is in the menu. 
 
@@ -81,7 +81,7 @@ The screenshot below provides an example that meets the following requirements:
   
 ### See Also  
 
-[Create and edit fields for Common Data Service using PowerApps solution explorer](create-edit-field-solution-explorer.md)<br />
+[Create and edit fields for Common Data Service using Power Apps solution explorer](create-edit-field-solution-explorer.md)<br />
 [Entity metadata > Entity states](/powerapps/developer/common-data-service/entity-metadata#entity-states)<br />
 [Define custom state model transitions](/dynamics365/customer-engagement/developer/define-custom-state-model-transitions)
 
