@@ -1,5 +1,5 @@
 ---
-title: "Make model-driven app grids (lists) editable by using the Editable Grid custom control with PowerApps | MicrosoftDocs"
+title: "Make model-driven app grids (lists) editable by using the Editable Grid custom control with Power Apps | MicrosoftDocs"
 description: "Learn how to use the editable grid custom control"
 ms.custom: ""
 ms.date: 06/27/2018

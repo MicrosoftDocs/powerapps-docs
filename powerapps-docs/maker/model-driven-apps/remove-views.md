@@ -1,5 +1,5 @@
 ---
-title: "Delete or deactivate a model-driven app view in PowerApps | MicrosoftDocs"
+title: "Delete or deactivate a model-driven app view in Power Apps | MicrosoftDocs"
 description: "Learn how to delete or deactivate a view"
 ms.custom: ""
 ms.date: 06/12/2018

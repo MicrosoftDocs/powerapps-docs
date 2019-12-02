@@ -37,7 +37,7 @@ When writing your formula, keep in mind that records can be processed in any ord
 Several functions that modify data sources, including **Collect**, **Remove**, and **Update**, return the changed data source as their return value.  These return values can be large and consume significant resources if returned for every record of the **ForAll** table.  You may also find that these return values are not what you expect, because **ForAll** can operate in parallel and may separate the side effects of these functions from obtaining their result.  Fortunately, if the return value from **ForAll** is not actually used, which is often the case with data modification functions, then the return value will not be created and there are no resource or ordering concerns.  But if you are using the result of a **ForAll** and one of the functions that returns a data source, think carefully about how you structure the result and try it out first on small data sets.  
 
 ### Alternatives
-Many functions in PowerApps can process more than one value at a time through the use of a single-column table.  For example, the **Len** function can process a table of text values, returning a table of lengths, in the same manner that **ForAll** could.  This can eliminate the need to use **ForAll** in many cases, can be more efficient, and is easier to read.
+Many functions in Power Apps can process more than one value at a time through the use of a single-column table.  For example, the **Len** function can process a table of text values, returning a table of lengths, in the same manner that **ForAll** could.  This can eliminate the need to use **ForAll** in many cases, can be more efficient, and is easier to read.
 
 Another consideration is that **ForAll** is not delegable while other functions may be, such as **Filter**.  
 
@@ -82,9 +82,9 @@ This example also uses a [Microsoft Translator](../connections/connection-micros
 | **ForAll( Expressions, MicrosoftTranslator.Translate( Value, "fr" ) )** |For all the records in the Expressions table, translate the contents of the **Value** column into French (abbreviated "fr"). |<style> img { max-width: none } </style> ![](media/function-forall/translate-fr.png) |
 
 ### Copying a table
-Sometimes you need to filter, shape, sort, and manipulate data.  PowerApps provides a number of functions for doing this, such as **Filter**, **AddColumns**, and **Sort**.  PowerApps treats each table as a value, allowing it to flow through formulas and be consumed easily.      
+Sometimes you need to filter, shape, sort, and manipulate data.  Power Apps provides a number of functions for doing this, such as **Filter**, **AddColumns**, and **Sort**.  Power Apps treats each table as a value, allowing it to flow through formulas and be consumed easily.      
 
-And sometime you will want to make a copy of this result for later use.  Or you will want to move information from one data source to another.  PowerApps provides the **Collect** function to copy data.
+And sometime you will want to make a copy of this result for later use.  Or you will want to move information from one data source to another.  Power Apps provides the **Collect** function to copy data.
 
 But before you make that copy, think carefully if it is really needed.  Many situations can be addressed by filtering and shaping the underlying data source on demand with a formula. Some of the downsides to making a copy include:
 

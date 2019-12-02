@@ -635,5 +635,5 @@ On successful retrieve of the records, the code component has logic to count how
 
 [Download sample components](https://go.microsoft.com/fwlink/?linkid=2088525)<br/>
 [How to use the sample components](../use-sample-components.md)<br/>
-[PowerApps component framework API reference](../reference/index.md)<br/>
-[PowerApps component framework manifest schema reference](../manifest-schema-reference/index.md)
+[Power Apps component framework API reference](../reference/index.md)<br/>
+[Power Apps component framework manifest schema reference](../manifest-schema-reference/index.md)

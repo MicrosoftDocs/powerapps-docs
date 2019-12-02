@@ -1,5 +1,5 @@
 ---
-title: "Create your first component using PowerApps Component Framework | MicrosoftDocs"
+title: "Create your first component using Power Apps Component Framework | MicrosoftDocs"
 description: "How to implement code components using TypeScript"
 manager: kvivek
 ms.date: 10/01/2019
@@ -10,9 +10,9 @@ ms.author: "nabuthuk"
 author: Nkrb
 ---
 
-# Create your first component using PowerApps Component Framework
+# Create your first component using Power Apps Component Framework
 
-This topic walks you through the process of creating a new code component in TypeScript using the PowerApps CLI. In this tutorial we will build a sample linear code component that enables users to change the numeric values using a visual slider instead of typing the values in the field. 
+This topic walks you through the process of creating a new code component in TypeScript using the Power Apps CLI. In this tutorial we will build a sample linear code component that enables users to change the numeric values using a visual slider instead of typing the values in the field. 
 
 The artifacts that are required to build code components are:
 
@@ -126,7 +126,7 @@ export class TSLinearInputComponent
   implements ComponentFramework.StandardControl<IInputs, IOutputs> {
   // Value of the field is stored and used inside the component
   private _value: number;
-  // PowerApps component framework delegate which will be assigned to this object which would be called whenever any update happens.
+  // Power Apps component framework delegate which will be assigned to this object which would be called whenever any update happens.
   private _notifyOutputChanged: () => void;
   // label element created as part of this component
   private labelElement: HTMLLabelElement;
@@ -135,7 +135,7 @@ export class TSLinearInputComponent
   // reference to the component container HTMLDivElement
   // This element contains all elements of our code component example
   private _container: HTMLDivElement;
-  // reference to PowerApps component framework Context object
+  // reference to Power Apps component framework Context object
   private _context: ComponentFramework.Context<IInputs>;
   // Event Handler 'refreshData' reference
   private _refreshData: EventListenerOrEventListenerObject;
@@ -370,7 +370,7 @@ Follow these steps to create and import a [solution](https://docs.microsoft.com/
     > - Under **Code Tools**, check **NuGet targets & Build Tasks**.
 
 6. The generated solution zip file is located in the `Solution\bin\debug` folder.
-7. Manually [import the solution into Common Data Service](https://docs.microsoft.com/powerapps/maker/common-data-service/import-update-export-solutions) using the web portal once the zip file is ready or see the [Authenticating to your organization](import-custom-controls.md#authenticating-to-your-organization) and [Deployment](import-custom-controls.md#deploying-code-components) sections to import using PowerApps CLI commands.
+7. Manually [import the solution into Common Data Service](https://docs.microsoft.com/powerapps/maker/common-data-service/import-update-export-solutions) using the web portal once the zip file is ready or see the [Authenticating to your organization](import-custom-controls.md#authenticating-to-your-organization) and [Deployment](import-custom-controls.md#deploying-code-components) sections to import using Power Apps CLI commands.
 
 ## Adding code components in model-driven apps
 
@@ -383,6 +383,6 @@ To add the code components to a canvas app, follow the steps in the topic [Add c
 ### See also
 
 [Download sample components](https://go.microsoft.com/fwlink/?linkid=2088525)<br/>
-[Update existing PowerApps component framework components](updating-existing-controls.md)<br/>
-[PowerApps component framework API reference](reference/index.md)<br/>
-[PowerApps component framework overview](overview.md)
+[Update existing Power Apps component framework components](updating-existing-controls.md)<br/>
+[Power Apps component framework API reference](reference/index.md)<br/>
+[Power Apps component framework overview](overview.md)

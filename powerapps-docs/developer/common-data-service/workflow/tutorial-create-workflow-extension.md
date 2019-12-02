@@ -248,7 +248,7 @@ Custom workflow activity assemblies are registered using the Plug-in Registratio
 
 You can test your new workflow activity by creating a process that will use it. Use these steps to create the Workflow process described in the [Goal](#goal) section above:
 
-1. Open [PowerApps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)
+1. Open [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)
 1. Select **Solutions**.
 1. Open the **CDS Default Publisher** solution.
 1. In the menu, expand the **...** and choose **Switch to classic**.
@@ -326,7 +326,7 @@ You can test your new workflow activity by creating a process that will use it. 
 
 To distribute a custom workflow activity in a solution, you must add the registered assembly that contains it to an unmanaged solution.
 
-1. Open the unmanaged solution you want to add the assembly to using [PowerApps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)
+1. Open the unmanaged solution you want to add the assembly to using [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)
 1. Select **Add existing** > **Other** > **Plugin assembly**
 
     ![Add existing plugin assembly](media/add-existing-plugin-assembly.png)

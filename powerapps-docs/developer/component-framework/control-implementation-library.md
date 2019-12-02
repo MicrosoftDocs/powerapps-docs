@@ -15,7 +15,7 @@ ms.assetid: 5d100dc3-bd82-4b45-964c-d90eaebc0735
 
 # Component implementation library
 
-Implementing the component library is one of the key step when you are developing code components using PowerApps component framework. Developers can implement component library using TypeScript. Each code component must have a library that includes the definition of a function which returns an object that implements the methods described in the code component interface. 
+Implementing the component library is one of the key step when you are developing code components using Power Apps component framework. Developers can implement component library using TypeScript. Each code component must have a library that includes the definition of a function which returns an object that implements the methods described in the code component interface. 
 
 The object implements the following methods:
 

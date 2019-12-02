@@ -1,5 +1,5 @@
 ---
-title: "Map entity fields in PowerApps | MicrosoftDocs"
+title: "Map entity fields in Power Apps | MicrosoftDocs"
 description: "Learn how to map entity fields"
 ms.custom: ""
 ms.date: 05/29/2018

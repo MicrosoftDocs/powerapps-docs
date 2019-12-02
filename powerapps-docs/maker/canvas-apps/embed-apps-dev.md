@@ -23,10 +23,10 @@ In this topic, we'll show you how to set parameters for app embedding; then we'l
 
 Keep the following restrictions in mind:
 
-- Only PowerApps users in the same tenant can access the embedded app.
-- To access PowerApps using Internet Explorer 11, you must turn off Compatibility View.
+- Only Power Apps users in the same tenant can access the embedded app.
+- To access Power Apps using Internet Explorer 11, you must turn off Compatibility View.
 
-You can also integrate canvas apps into SharePoint Online without using an iframe. More information: [Use the PowerApps web part](https://support.office.com/article/use-the-powerapps-web-part-6285f05e-e441-408a-99d7-aa688195cd1c).
+You can also integrate canvas apps into SharePoint Online without using an iframe. More information: [Use the Power Apps web part](https://support.office.com/article/use-the-powerapps-web-part-6285f05e-e441-408a-99d7-aa688195cd1c).
 
 ## Set URI parameters for your app
 If you have an app you want to embed, the first step is to set parameters for the Uniform Resource Identifier (URI), so that the iframe knows where to find the app. The URI is in the following form:

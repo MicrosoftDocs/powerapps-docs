@@ -30,7 +30,7 @@ There are two designers you can use to create an entity:
 
 |Designer| Description|
 |--|--|
-|[PowerApps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)|Provides an easy streamlined experience, but some special settings are not available.<br />More information: <br />[Tutorial: Create a custom entity that has components in PowerApps](/powerapps/maker/common-data-service/create-custom-entity)<br />[Create and edit entities using PowerApps portal](create-edit-entities-portal.md)|
+|[Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)|Provides an easy streamlined experience, but some special settings are not available.<br />More information: <br />[Tutorial: Create a custom entity that has components in PowerApps](/powerapps/maker/common-data-service/create-custom-entity)<br />[Create and edit entities using Power Apps portal](create-edit-entities-portal.md)|
 |Solution explorer|Not as easy, but provides for more flexibility for less common requirements. <br />More information [Create and edit entities using solution explorer](create-edit-entities-solution-explorer.md)|
 
 > [!NOTE]
@@ -40,9 +40,9 @@ There are two designers you can use to create an entity:
 > - A developer can use [Metadata services](/powerapps/developer/common-data-service/use-web-services#metadata-services) to write a program.
 
 
-## Entity options not available in the PowerApps portal
+## Entity options not available in the Power Apps portal
 
-Information in this topic will help you choose which designer you can use. You can use the PowerApps portal to create the entity unless you need to address any of the following requirements.
+Information in this topic will help you choose which designer you can use. You can use the Power Apps portal to create the entity unless you need to address any of the following requirements.
 
 - Control the customization prefix
 
@@ -50,7 +50,7 @@ Information in this topic will help you choose which designer you can use. You c
 
 - Create organization-owned entity
 
-  By default, the PowerApps portal will create **User or Team** owned entities. Use solution explorer to set ownership to **Organization**. More information: [Entity ownership](types-of-entities.md#entity-ownership)
+  By default, the Power Apps portal will create **User or Team** owned entities. Use solution explorer to set ownership to **Organization**. More information: [Entity ownership](types-of-entities.md#entity-ownership)
 
 - Create an activity entity
 

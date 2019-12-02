@@ -1,5 +1,5 @@
 ---
-title: "Design considerations for model-driven app main forms with PowerApps | MicrosoftDocs"
+title: "Design considerations for model-driven app main forms with Power Apps | MicrosoftDocs"
 description: "Learn how to design main forms"
 ms.custom: ""
 ms.date: 06/27/2018

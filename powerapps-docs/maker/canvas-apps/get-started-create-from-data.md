@@ -1,6 +1,6 @@
 ---
 title: Generate a canvas app from Excel | Microsoft Docs
-description: Use PowerApps to automatically generate a canvas app using an Excel file stored in a cloud-storage account
+description: Use Power Apps to automatically generate a canvas app using an Excel file stored in a cloud-storage account
 author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
@@ -16,11 +16,11 @@ search.app:
 ---
 # Generate a canvas app from Excel in PowerApps
 
-In this topic, you'll automatically generate your first canvas app in PowerApps using data from an Excel table. You'll select an Excel file, generate an app, and then run the app that you generate. Every generated app includes screens to browse records, show record details, and create or update records. By generating an app, you can quickly get a working app using Excel data, and then you can customize the app to better suit your needs. 
+In this topic, you'll automatically generate your first canvas app in Power Apps using data from an Excel table. You'll select an Excel file, generate an app, and then run the app that you generate. Every generated app includes screens to browse records, show record details, and create or update records. By generating an app, you can quickly get a working app using Excel data, and then you can customize the app to better suit your needs. 
 
 The Excel file must be in a cloud-storage account, such as OneDrive, Google Drive, or Dropbox. This topic uses OneDrive for Business.
 
-If you don't have a license for PowerApps, you can [sign up for free](../signup-for-powerapps.md).
+If you don't have a license for Power Apps, you can [sign up for free](../signup-for-powerapps.md).
 
 ## Prerequisites
 
@@ -31,7 +31,7 @@ To follow this topic exactly, download the [Flooring Estimates](https://az787822
 
 ## Generate the app
 
-1. Sign in to [PowerApps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
 1. Under **Make your own app**, hover over **Start from data**, and then select **Make this app**.
 

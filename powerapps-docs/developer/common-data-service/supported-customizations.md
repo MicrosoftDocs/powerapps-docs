@@ -1,6 +1,6 @@
 ---
 title: "Supported Customizations for Common Data Service (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Read how you can customize Common Data Service by using tools that are available in the PowerApps portal or the ones described in docs." # 115-145 characters including spaces. This abstract displays in the search result.
+description: "Read how you can customize Common Data Service by using tools that are available in the Power Apps portal or the ones described in docs." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 01/25/2019
 ms.reviewer: ""
@@ -23,20 +23,20 @@ https://docs.microsoft.com/dynamics365/customer-engagement/developer/supported-e
 
 # Supported Customizations for Common Data Service
 
-You can customize Common Data Service by using tools that are available in the PowerApps portal or that are described in the official documentation. These customizations are supported and can be upgraded.
+You can customize Common Data Service by using tools that are available in the Power Apps portal or that are described in the official documentation. These customizations are supported and can be upgraded.
 
 Customizations made using methods other than those described here are unsupported and could cause problems during updates and upgrades to Common Data Service. For more information, see [Unsupported Customizations](#unsupported-customizations).
 
 Topics covered in technical articles published on Microsoft sites such as docs.microsoft.com, msdn.microsoft.com or technet.microsoft.com are supported, but might not be upgradable.
 
 
-## Customizations using PowerApps portal
+## Customizations using Power Apps portal
 
-There are a variety of tools included with Common Data Service that you can use to customize it. Customizations made using the PowerApps portal tools and web application are fully supported and fully upgradeable.
+There are a variety of tools included with Common Data Service that you can use to customize it. Customizations made using the Power Apps portal tools and web application are fully supported and fully upgradeable.
 
 The following customization methods can be used to produce fully supported customizations:
 
-- Customization in the PowerApps portal or solution explorer. For more information, see [What is Common Data Service?](../../maker/common-data-service/data-platform-intro.md)
+- Customization in the Power Apps portal or solution explorer. For more information, see [What is Common Data Service?](../../maker/common-data-service/data-platform-intro.md)
 
 - Settings in the web application. For more information, see [Administer PowerApps](../../administrator/admin-guide.md).
 

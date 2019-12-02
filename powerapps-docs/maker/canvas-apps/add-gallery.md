@@ -34,7 +34,7 @@ Show a list of items from any data source by adding a **[Gallery](controls/contr
 
     1. Specify a name for your app, select **Phone**, and then select **Create**.
 
-    1. If the **Welcome to PowerApps Studio** dialog box appears, select **Skip**.
+    1. If the **Welcome to Power Apps Studio** dialog box appears, select **Skip**.
 
     1. [Add a connection](add-data-connection.md) to the **FlooringEstimates** table in the Excel file.
 
