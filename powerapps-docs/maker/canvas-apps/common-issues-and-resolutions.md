@@ -16,7 +16,7 @@ search.app:
 ---
 # Common issues and resolutions for PowerApps
 
-This article lists some common issues that you might encounter while using PowerApps. Where applicable, workarounds are provided.
+This article lists some common issues that you might encounter while using Power Apps. Where applicable, workarounds are provided.
 
 1. **Sign-in issue on certain Android mobile devices when using authenticator** (August 21, 2019)
 

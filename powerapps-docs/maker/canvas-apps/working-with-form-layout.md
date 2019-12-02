@@ -16,7 +16,7 @@ search.app:
 ---
 # Understand data-form layout for canvas apps in PowerApps
 
-Easily create an attractive and efficient form when you build a canvas app in PowerApps. For example, consider this basic form for recording sales orders:
+Easily create an attractive and efficient form when you build a canvas app in Power Apps. For example, consider this basic form for recording sales orders:
 
 ![Sample sales order](./media/working-with-form-layout/sales-order.png)
 

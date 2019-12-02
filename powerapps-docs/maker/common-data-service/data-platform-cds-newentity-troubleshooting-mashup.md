@@ -55,7 +55,7 @@ In Power Apps, you access the Query Editor by doing the following:
 
 ## Delete personal data
 
-Most data is deleted automatically within 30 days. For data and metadata around mashups, users must remove all their mashups through PowerApps. All of the associated data and metadata will be deleted within 30 days.
+Most data is deleted automatically within 30 days. For data and metadata around mashups, users must remove all their mashups through Power Apps. All of the associated data and metadata will be deleted within 30 days.
 
 To remove mashups from Power Apps:
 1. Remove the Data Integrator projects, which can be removed from the namesake tab.

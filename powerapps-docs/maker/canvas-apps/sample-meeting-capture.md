@@ -35,7 +35,7 @@ You can run this sample app in your browser, on a tablet, or other device that h
 
 ## How do I build the app myself?
 
-Meeting Capture includes a lot of functionality commonly used in PowerApps. By watching these videos, you can explore this functionality and find out how to implement it so you can implement the same functionality and patterns in your own apps.
+Meeting Capture includes a lot of functionality commonly used in Power Apps. By watching these videos, you can explore this functionality and find out how to implement it so you can implement the same functionality and patterns in your own apps.
 
 - [Export content](https://youtu.be/D6kmeM0UFH0) from Power Apps to OneNote.
 - [Find available meeting times](https://youtu.be/gSD8m6d_Gv0) for attendees.

@@ -28,7 +28,7 @@ The Power Apps team has heard these and many other challenges. They've worked ha
 Power Apps is a Software as a Service (SaaS) platform that's designed to let you quickly build high-functioning apps that you can deploy to the web, SharePoint, Dynamics 365, Teams, Power BI, or a mobile device without any extra work. Because you can deploy them by just giving someone the URL to your published app, they're also just as easy to update.
 
 **Share your apps**  
-Have you ever tried to build an app and then publish it for iOS or Android devices? It's complicated. If you want to deploy a second app or update that existing one, your users must take a lot more steps. Not with PowerApps. Your users install Power Apps Mobile on their devices and sign in. Voila, they have all of the highly functional apps that you have shared with them. In the future, when you update those apps or push new apps out to them, those apps will show up on your users' devices. Mobile apps without the pain of managing devices is a big win for you and your business.
+Have you ever tried to build an app and then publish it for iOS or Android devices? It's complicated. If you want to deploy a second app or update that existing one, your users must take a lot more steps. Not with Power Apps. Your users install Power Apps Mobile on their devices and sign in. Voila, they have all of the highly functional apps that you have shared with them. In the future, when you update those apps or push new apps out to them, those apps will show up on your users' devices. Mobile apps without the pain of managing devices is a big win for you and your business.
 
 **Speaking of mobile**  
 With Power Apps, you can leverage the power of the user's mobile device. You have access to acceleration, the camera, the compass, the connection information, and location signals: all from within your app. This opens up a whole world of possibilities for building apps to get work done. Of course, touch functionality is just automatic in PowerApps: nothing extra to code when you build your app.
@@ -52,7 +52,7 @@ Now that you understand the difference between the two options, the following se
 
 The Power Apps and SharePoint teams have worked together to create a customization story for you to use with SharePoint. If you're like most InfoPath developers, you learned InfoPath to interact with SharePoint. SharePoint is great, but the default forms are a bit pedestrian and don't allow for customization or business logic without InfoPath. Well, that was the old way.
 
-With Power Apps you can now customize your list forms as native functionality. And when you do so, you get the full power of PowerApps. In the screenshot below, you can see an example of a Power Apps form with a Power BI report embedded. The entire solution was done in less than 15 minutes.
+With Power Apps you can now customize your list forms as native functionality. And when you do so, you get the full power of Power Apps. In the screenshot below, you can see an example of a Power Apps form with a Power BI report embedded. The entire solution was done in less than 15 minutes.
 
 ![SharePoint integration](./media/transform-infopath/sharepoint-integration.png)
 
@@ -70,7 +70,7 @@ To get started, follow these steps:
 
 Power Apps will build you an app that you can customize.
 
-Start with a simple custom list that contains just a couple of fields of different types for your first app. This will let you build a solid foundation without being overwhelmed. Don't worry; you'll be a pro in no time and ready to tackle those complex apps. For help walking through this first app, check out this [documentation](app-from-sharepoint.md#generate-an-app-from-within-sharepoint-online) or this community [video](https://youtu.be/BnYe_7fpZRM). The examples below will show common InfoPath tasks and how to do them in PowerApps. Each of these builds on a simple SharePoint list app.
+Start with a simple custom list that contains just a couple of fields of different types for your first app. This will let you build a solid foundation without being overwhelmed. Don't worry; you'll be a pro in no time and ready to tackle those complex apps. For help walking through this first app, check out this [documentation](app-from-sharepoint.md#generate-an-app-from-within-sharepoint-online) or this community [video](https://youtu.be/BnYe_7fpZRM). The examples below will show common InfoPath tasks and how to do them in Power Apps. Each of these builds on a simple SharePoint list app.
 
 ## How do you do that with PowerApps?
 

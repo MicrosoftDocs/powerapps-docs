@@ -31,7 +31,7 @@ Use Power Apps build tools to automate common build and deployment tasks related
   
 ## What are Power Apps build tools?
 
-The Power Apps build tools are a collection of Power Apps specific Azure DevOps build tasks that eliminate the need to manually download custom tooling  and scripts to manage the application lifecycle of PowerApps. The tasks can be used individually to perform a simple task, such as importing a solution into a downstream environment, or used together in a pipeline to orchestrate a scenario, such as ‘Generate Build Artifact,’ ‘Deploy to Test,’ or ‘Harvest Maker Changes.’ The build tasks can largely be categorized into four types:
+The Power Apps build tools are a collection of Power Apps specific Azure DevOps build tasks that eliminate the need to manually download custom tooling  and scripts to manage the application lifecycle of Power Apps. The tasks can be used individually to perform a simple task, such as importing a solution into a downstream environment, or used together in a pipeline to orchestrate a scenario, such as ‘Generate Build Artifact,’ ‘Deploy to Test,’ or ‘Harvest Maker Changes.’ The build tasks can largely be categorized into four types:
 
 - Helper 
 - Quality check 

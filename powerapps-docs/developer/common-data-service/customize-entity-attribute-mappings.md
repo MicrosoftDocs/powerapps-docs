@@ -1,6 +1,6 @@
 ---
 title: "Customize entity and attribute mappings in Power Apps (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn about mapping attributes between entities that have an entity relationship in PowerApps. This lets you set default values for a record that is created in the context of another record." # 115-145 characters including spaces. This abstract displays in the search result.
+description: "Learn about mapping attributes between entities that have an entity relationship in Power Apps. This lets you set default values for a record that is created in the context of another record." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""

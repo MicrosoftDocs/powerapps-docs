@@ -25,7 +25,7 @@ For example, your data should look similar to the following:
 
 ![][9]
 
-You can create and use these charts within PowerApps. Let's get started.
+You can create and use these charts within Power Apps. Let's get started.
 
 ## Prerequisites
 

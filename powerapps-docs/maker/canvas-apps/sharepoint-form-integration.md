@@ -15,7 +15,7 @@ search.app:
   - PowerApps
 ---
 # Understand SharePoint forms integration
-You can now easily [customize any SharePoint list form](customize-list-form.md) in PowerApps. In this article, we'll walk through the details of how these forms work and how you can customize them further.
+You can now easily [customize any SharePoint list form](customize-list-form.md) in Power Apps. In this article, we'll walk through the details of how these forms work and how you can customize them further.
 
 If you've customized a form for a SharePoint list, you've likely noticed that the default generated form works for all operations, like creating, showing, or editing an item. This is accomplished with the help of generated formulas and the **SharePointIntegration** control.
 

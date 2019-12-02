@@ -63,7 +63,7 @@ You must use solution explorer to set entity icons.
   
 ## Community tools
 
-**[Iconator](https://www.xrmtoolbox.com/plugins/MscrmTools.Iconator/)** is a tool that XrmToolbox community developed for PowerApps. See the [Developer tools for Common Data Service](/powerapps/developer/common-data-service/developer-tools) topic for community developed tools.
+**[Iconator](https://www.xrmtoolbox.com/plugins/MscrmTools.Iconator/)** is a tool that XrmToolbox community developed for Power Apps. See the [Developer tools for Common Data Service](/powerapps/developer/common-data-service/developer-tools) topic for community developed tools.
 
 > [!NOTE]
 > The community tools are not a product of Microsoft and does not extend support to the community tools. 

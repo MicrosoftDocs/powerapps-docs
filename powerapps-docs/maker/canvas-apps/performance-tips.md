@@ -1,6 +1,6 @@
 ---
 title: Optimize canvas-app performance | Microsoft Docs
-description: Follow the best practices in this topic to boost the performance of canvas apps that you create in PowerApps. 
+description: Follow the best practices in this topic to boost the performance of canvas apps that you create in Power Apps. 
 author: yingchin
 manager: kvivek
 ms.service: powerapps

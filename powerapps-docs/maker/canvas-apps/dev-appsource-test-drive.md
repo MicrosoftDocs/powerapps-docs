@@ -51,7 +51,7 @@ You now have the tables as data sources in your app.
 ### Step 2: Handling read-only and read-write scenarios
 The data you imported is *static*, therefore read-only. If your app is read-only (i.e. it only displays data to the user), reference the tables directly in the app. For example, if you want to access the **Title** field in the **SiteInspector** table, use **SiteInspector.Title** in your formula.
 
-If your app is read-write, first pull the data from each table into a *collection*, which is a tabular data structure in PowerApps. Then work with the collection rather than the table. To pull data from the **SiteInspector** and **SitePhotos** tables into the **SiteInspectorCollect** and **SitePhotosCollect** collections:
+If your app is read-write, first pull the data from each table into a *collection*, which is a tabular data structure in Power Apps. Then work with the collection rather than the table. To pull data from the **SiteInspector** and **SitePhotos** tables into the **SiteInspectorCollect** and **SitePhotosCollect** collections:
 
 ```powerapps-dot
 ClearCollect( SiteInspectorCollect, SiteInspector ); 

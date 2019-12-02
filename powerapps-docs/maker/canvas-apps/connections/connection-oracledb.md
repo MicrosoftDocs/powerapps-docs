@@ -15,7 +15,7 @@ search.app:
   - PowerApps
 ---
 # Connect to an Oracle database from PowerApps
-List tables, and create, read, update and delete table rows in an Oracle database after you create a connection and build an app in PowerApps. The Oracle Database connection supports full delegation of filtering, sorting, and other functions but not triggers or stored procedures.
+List tables, and create, read, update and delete table rows in an Oracle database after you create a connection and build an app in Power Apps. The Oracle Database connection supports full delegation of filtering, sorting, and other functions but not triggers or stored procedures.
 
 ## Prerequisites
 * Oracle 9 and later

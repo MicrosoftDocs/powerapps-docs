@@ -16,7 +16,7 @@ search.app:
 ---
 # Tutorial: Customize a gallery in PowerApps
 
-In this tutorial, you'll customize a list of records, called a gallery, and make other changes in an app that was generated automatically in Microsoft PowerApps. Users can manage data in the app even if you don't make these changes, but the app will be easier to use if you customize it for your organization's needs.
+In this tutorial, you'll customize a list of records, called a gallery, and make other changes in an app that was generated automatically in Microsoft Power Apps. Users can manage data in the app even if you don't make these changes, but the app will be easier to use if you customize it for your organization's needs.
 
 For example, the gallery for this tutorial matches this graphic by default. The email address is featured more prominently than other types of data, and users can sort and filter the gallery based on text in that address:
 

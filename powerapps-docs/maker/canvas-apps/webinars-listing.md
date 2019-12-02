@@ -15,7 +15,7 @@ search.app:
   - PowerApps
 ---
 # Power Apps webinar listing #
-These webinars can help you to leverage the features and functions of Microsoft PowerApps. Webinars are available on-demand after the live broadcast. Please note that, in some cases, you'll need to re-enter registration details, and then you'll be sent a link to the recording via email. 
+These webinars can help you to leverage the features and functions of Microsoft Power Apps. Webinars are available on-demand after the live broadcast. Please note that, in some cases, you'll need to re-enter registration details, and then you'll be sent a link to the recording via email. 
 
 ## Beginner Webinar Series ##
 **Top 5 Tips for Designing Apps that Mean Business**

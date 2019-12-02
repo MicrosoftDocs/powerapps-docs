@@ -196,7 +196,7 @@ Confirm whether you're displaying the correct field for your control in either o
     > ![Change combo box](./media/dependent-drop-down-lists/combo-box-display-field.png)
 
 **My child drop-down list contains duplicate items.**
-This symptom is likely due to using a **LookUp** column in SharePoint or a **Choices** function in PowerApps. To remove the duplication, wrap a **Distinct** function around the properly returning data. More information: [Distinct function](functions/function-distinct.md).
+This symptom is likely due to using a **LookUp** column in SharePoint or a **Choices** function in Power Apps. To remove the duplication, wrap a **Distinct** function around the properly returning data. More information: [Distinct function](functions/function-distinct.md).
 
 ## Known limitations
 

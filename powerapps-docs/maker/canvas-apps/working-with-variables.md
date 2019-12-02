@@ -65,7 +65,7 @@ You can use formulas for a wide variety of scenarios:
 
 Using formulas to build apps has many advantages:
 
-* If you know Excel, you know PowerApps. The model and formula language are the same.
+* If you know Excel, you know Power Apps. The model and formula language are the same.
 * If you've used other programming tools, think about how much code would be required to accomplish these examples.  In Visual Basic, you'd need to write an event handler for the change event on each text-input control.  The code to perform the calculation in each of these is redundant and could get out of sync, or you'd need to write a common subroutine.  In Power Apps, you accomplished all of that with a single, one-line formula.
 * To understand where **Label1**'s text is coming from, you know exactly where to look: the formula in the **[Text](controls/properties-core.md)** property.  There's no other way to affect the text of this control.  In a traditional programming tool, any event handler or subroutine could change the value of the label, from anywhere in the program.  This can make it hard to track down when and where a variable was changed.
 * If the user changes a slider control and then changes their mind, they can change the slider back to its original value.  And it's as if nothing had ever changed: the app shows the same control values as it did before.  There are no ramifications for experimenting and asking "what if," just as there are none in Excel.  
