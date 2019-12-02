@@ -20,7 +20,7 @@ search.app:
 A file attribute is used for storing file data up to a specified maximum size. A custom or customizable entity can have zero or more file attributes plus a notes (annotation) collection with zero to one attachment in each note. The <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.SchemaName> of the file attribute is `EntityFile`.
 
 > [!NOTE]
-> The new File attribute and enhanced Image attribute capability is currently rolling out to Microsoft data-centers over time. Your organization may or may not have received the update yet. You can periodically check your organization for File attribute support by temporarily adding a new field to a customizable or custom entity and checking if "File" is available in the list of supported field data types. Do this in PowerApps under **Data** > **Entites** or in the classic web application under **Settings** > **Customizations**.
+> The new File attribute and enhanced Image attribute capability is currently rolling out to Microsoft data-centers over time. Your organization may or may not have received the update yet. You can periodically check your organization for File attribute support by temporarily adding a new field to a customizable or custom entity and checking if "File" is available in the list of supported field data types. Do this in Power Apps under **Data** > **Entites** or in the classic web application under **Settings** > **Customizations**.
 
 Web API (REST) | .NET API (SOAP)
 ------- | -------

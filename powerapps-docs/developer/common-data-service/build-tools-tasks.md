@@ -1,6 +1,6 @@
 ---
 title: "Build tools tasks| Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "PowerApps build tools are a collection of PowerApps specific Azure DevOps build tasks that eliminate the need to manually download  tools and scripts to manage the application lifecycle of PowerApps. This topic describes the tasks that are available. " # 115-145 characters including spaces. This abstract displays in the search result.
+description: "Power Apps build tools are a collection of Power Apps specific Azure DevOps build tasks that eliminate the need to manually download  tools and scripts to manage the application lifecycle of PowerApps. This topic describes the tasks that are available. " # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 07/21/2019
 ms.reviewer: "Dean-Haas"
@@ -20,31 +20,31 @@ search.app:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-Several types of build tasks are available as part of the PowerApps build tools to help automate your application lifecycle, using Azure DevOps.
+Several types of build tasks are available as part of the Power Apps build tools to help automate your application lifecycle, using Azure DevOps.
   
 ## Helper task
 
-The PowerApps tools installer is required to be the first task in any build and release pipeline. This task installs a set of PowerApps specific tools required by the agent to run the PowerApps build tasks. This task does not require any additional configuration.
+The Power Apps tools installer is required to be the first task in any build and release pipeline. This task installs a set of Power Apps specific tools required by the agent to run the Power Apps build tasks. This task does not require any additional configuration.
 
 ## Quality check
 
-The PowerApps checker task runs a static analysis check on your solution(s) against a set of best-practice rules to identify any problematic patterns that you might inadvertently have introduced when building your solution.
+The Power Apps checker task runs a static analysis check on your solution(s) against a set of best-practice rules to identify any problematic patterns that you might inadvertently have introduced when building your solution.
 
 | **Parameters** | **Description** |
 | --- | --- |
-| PowerApps checker service  |   Select the service endpoint for PowerApps checker. The service   endpoint is defined under **Service Connections** in **Project Settings**.  **NOTE:** The service connection type that must be used for this specific task only is ‘PowerApps Checker,’ which is a service principals connection. More information on how to configure Service Principals before you can use the  task is available [here](https://aka.ms/buildtoolsconnection).  |
+| Power Apps checker service  |   Select the service endpoint for Power Apps checker. The service   endpoint is defined under **Service Connections** in **Project Settings**.  **NOTE:** The service connection type that must be used for this specific task only is ‘Power Apps Checker,’ which is a service principals connection. More information on how to configure Service Principals before you can use the  task is available [here](https://aka.ms/buildtoolsconnection).  |
 | Location of file to analyze  | Specify whether to reference a local file or a reference file from a Sas url. 
 | Local files to analyze/Sas uri for file to analyze |  Specify the path and file name of the zip files to analyze.   Wildcards can be used. For example, **\*.zip   for all zip files in all sub folders. You can choose to specify the files   directly or reference a File from a Sas uri.   |
 |  Rule set |   Specify which ruleset to apply. The following two rulesets are available:  **Solution Checker:** This is the same ruleset that is run from the [Maker Portal](https://make.powerapps.com/).    **AppSource:** This is the extended ruleset that is used to certify an application before it can be published to [AppSource](https://appsource.microsoft.com/).   |
 
-### Configure service connection for PowerApps checker
+### Configure service connection for Power Apps checker
 
-Before you can configure the PowerApps Checker task, you first need to define the service principals used to connect to the PowerApps checker service. More information about the underlying PowerApps checker service and authentication is available [here](https://docs.microsoft.com/powershell/powerapps/overview?view=pa-ps-latest#get-started-using-the-microsoftpowerappscheckerpowershell-module), however, the steps outlined below cover everything you need to get started.
+Before you can configure the Power Apps Checker task, you first need to define the service principals used to connect to the Power Apps checker service. More information about the underlying Power Apps checker service and authentication is available [here](https://docs.microsoft.com/powershell/powerapps/overview?view=pa-ps-latest#get-started-using-the-microsoftpowerappscheckerpowershell-module), however, the steps outlined below cover everything you need to get started.
 
-The following outlines how to generate the required Azure Active Directory (AAD) application using the [AzureAD PowerShell Module](https://docs.microsoft.com/powershell/module/azuread/?view=azureadps-2.0), add a client secret and then use that to configure the PowerApps checker connection string.
+The following outlines how to generate the required Azure Active Directory (AAD) application using the [AzureAD PowerShell Module](https://docs.microsoft.com/powershell/module/azuread/?view=azureadps-2.0), add a client secret and then use that to configure the Power Apps checker connection string.
 
 > [!NOTE]
-> Privileges to create service principals in an AAD tenant licensed for PowerApps (P1/P2) or D365 CE are required to complete these steps. 
+> Privileges to create service principals in an AAD tenant licensed for Power Apps (P1/P2) or D365 CE are required to complete these steps. 
 
 1. Open a PowerShell command with admin rights.
 ![Powershell command window](media/pscommand.png "Powershell command window")
@@ -108,7 +108,7 @@ Connect-AzureAD
 $tenantId = (Get-AzureADTenantDetail).ObjectId
 
 # Create the AAD application registration using the AzureAD module and the sample script
-$newApp = New-PowerAppsCheckerAzureADApplication -ApplicationDisplayName "PowerApps Checker Client" -TenantId $tenantId
+$newApp = New-PowerAppsCheckerAzureADApplication -ApplicationDisplayName "Power Apps Checker Client" -TenantId $tenantId
 
 # Next step => create a secret via the Admin portal, CLI, or PowerShell module.
  ```
@@ -118,7 +118,7 @@ $newApp = New-PowerAppsCheckerAzureADApplication -ApplicationDisplayName "PowerA
 6. A login dialog appears. Sign in as a user. Note that you might have to sign in twice in some cases.
 7. Once the script is complete, the application ID and tenant is displayed in the command window.
 8. Next, login to [Azure AD](https://portal.azure.com) to get the client secret.
-9. In Microsoft Azure, select **Azure Active Directory –> App Registrations -> PowerApps Checker Client**.
+9. In Microsoft Azure, select **Azure Active Directory –> App Registrations -> Power Apps Checker Client**.
 ![Select checker client in Azure](media/azure-select-checker.png "Azure screenshot")
 10. In the left namigation pane, under **Manage**, select **Certificates & secrets**.
 11. On the **Certificates & secrets** screen, under **Client secrets**, select **New client secret**. 
@@ -127,40 +127,40 @@ $newApp = New-PowerAppsCheckerAzureADApplication -ApplicationDisplayName "PowerA
 ![Copy client secret](media/client-secret-copy.png "Client secret screenshot")
     > [!NOTE]
     > This is the only time that the client secret is displayed
-14. Open the PowerApps checker service connection and paste the client secret into the **Service Principal Key** field, and then click **OK**.
+14. Open the Power Apps checker service connection and paste the client secret into the **Service Principal Key** field, and then click **OK**.
 
-Your connection is now ready to be used by the [PowerApps Checker Build Task](https://aka.ms/buildtoolsdoc). 
+Your connection is now ready to be used by the [Power Apps Checker Build Task](https://aka.ms/buildtoolsdoc). 
 
 ## Solution tasks
 
 This set of tasks perform actions against solutions, and includes the following tasks:
 
-### PowerApps import solution
+### Power Apps import solution
 
 The import solution imports a solution into a target environment.
 
 | **Parameters** | **Description** |
 |----|----|
-| PowerApps environment URL  | The service endpoint for the target environment that you want to import the solution to. For example, *https://powerappsbuildtools.crm.dynamics.com*.  Service endpoints can be defined under **Service Connections** in **Project Settings**. |
+| Power Apps environment URL  | The service endpoint for the target environment that you want to import the solution to. For example, *https://powerappsbuildtools.crm.dynamics.com*.  Service endpoints can be defined under **Service Connections** in **Project Settings**. |
 | Solution input file  | The path and file name of the solution.zip file to import into the target environment. For example: *$(Build.ArtifactStagingDirectory)\$(SolutionName).zip*.
  |
 > [!NOTE] 
 > Variables give you a convenient way to get key bits of data into various parts of your pipeline. A comprehensive list of predefined variables is available [here](https://docs.microsoft.com/azure/devops/pipelines/build/variables?view=azure-devops&tabs=yaml).
 
-### PowerApps export solution
+### Power Apps export solution
 
 The export solution task exports a solution from a source environment.
 
 | **Parameters** | **Description** |
 |----------|-------------|
-| PowerApps environment URL | The service endpoint for the source environment that you want to export the solution from.  Defined under **Service Connections -> Generic Service Connection** in **Project Settings**. |
+| Power Apps environment URL | The service endpoint for the source environment that you want to export the solution from.  Defined under **Service Connections -> Generic Service Connection** in **Project Settings**. |
 | Solution name | The name of the solution to export. Always use the solution ‘Name’. Not the ‘Display Name’. |
 | Solution output file | The path and file name of the solution.zip file to export the source environment to. For example: *$(Build.ArtifactStagingDirectory)\$(SolutionName).zip*. |
 
 > [!NOTE] 
 > Variables give you a convenient way to get key bits of data into various parts of your pipeline. A comprehensive list of predefined variables is available here.
  
-### PowerApps unpack solution
+### Power Apps unpack solution
 
 The unpack solution task takes a compressed solution file and decomposes it into multiple XML files and other files so that these files can be more easily managed by a source control system.
 
@@ -171,7 +171,7 @@ The unpack solution task takes a compressed solution file and decomposes it into
 | Type of solution | The type of solution you want to unpack:  **Unmanaged** (recommended): *Only the unmanaged solution should be unpacked to your repo*, **Managed**, **Both** |
 
 
-### PowerApps pack solution
+### Power Apps pack solution
 
 Packs a solution represented in source control into a solution.zip file that can be imported into an environment.
 
@@ -187,31 +187,31 @@ The publish customizations task publishes all customizations in an environment.
 
 | **Parameters** | **Description** |
 |------------|---------|
-| PowerApps environment URL | The service endpoint for the environment in which you want to publish customizations.  Defined under **Service Connections** in **Project Settings**. |
+| Power Apps environment URL | The service endpoint for the environment in which you want to publish customizations.  Defined under **Service Connections** in **Project Settings**. |
 
-### PowerApps set solution version 
+### Power Apps set solution version 
 
 The set solution version task updates the version of a solution.
 
 | **Parameters** | **Description** |
 |---------------------------|----|
-| PowerApps environment URL  | The service endpoint for the environment where you want to deploy the package.  Defined under **Service Connections** in **Project Settings**. |
+| Power Apps environment URL  | The service endpoint for the environment where you want to deploy the package.  Defined under **Service Connections** in **Project Settings**. |
 | Solution name  | The name of the solution you want to set the Version Number for |
 | Solution Version Number | Version number to set, using format `major.minor.build.revision` e.g. **1.0.0.1** |
 
-### PowerApps deploy package
+### Power Apps deploy package
 
 The deploy package task deploys a package to an environment. Deploying a package as opposed to a single solution file provides an option to deploy multiple solutions, data, and code into an environment.
 
 | **Parameters** | **Description** |
 |---------------------------|----|
-| PowerApps environment URL  | The service endpoint for the target environment that holds the solution you want to update.  Defined under **Service Connections** in **Project Settings**. |
+| Power Apps environment URL  | The service endpoint for the target environment that holds the solution you want to update.  Defined under **Service Connections** in **Project Settings**. |
 
 ## Environment management tasks
 
 Environment management tasks are used to automate common environment management functions, and includes the following tasks:
 
-### PowerApps create environment
+### Power Apps create environment
 
 The create environment task creates an environment.
 
@@ -226,24 +226,24 @@ The create environment task creates an environment.
 | Domain Name | This is the environment specific string that forms part of the URL. For example, for an environment with the following URL: *https://powerappsbuildtasks.crm.dynamics.com*, the domain name would be ‘powerappsbuildtasks’.  NOTE: If you are entering a domain name that is already in use – the task will append a numeric value to the URL, starting with 0. For the example above, the URL could become *https://powerappsbuildtasks0.crm.dynamics.com*. |
 | Friendly name | The friendly name of the environment. |
 
-### PowerApps delete environment
+### Power Apps delete environment
 
 The delete environment task deletes an environment.
 
 | **Parameters** | **Description** |
 |---------|-----------|
-| PowerApps environment URL  | The service endpoint for the environment you want to delete.  Defined under **Service Connections** in **Project Settings**. |
+| Power Apps environment URL  | The service endpoint for the environment you want to delete.  Defined under **Service Connections** in **Project Settings**. |
 
-### PowerApps backup environment
+### Power Apps backup environment
 
 The backup environment task backs up an environment. 
 
 | **Parameters** | **Description** |
 |---------|-----------|
-| PowerApps environment URL  | The service endpoint for the environment you want to backup.  Defined under **Service Connections** in **Project Settings**. |
+| Power Apps environment URL  | The service endpoint for the environment you want to backup.  Defined under **Service Connections** in **Project Settings**. |
 | Backup label  | The label you want to assign to the  backup.  |
 
-### PowerApps copy environment
+### Power Apps copy environment
 
 The copy environment task copies an environment to a target environment. Two types of copy are available: full and minimal. Full copies both data and solution metadata (customizations), whereas minimal only copies solution metadata but not the actual data.
 
@@ -252,5 +252,5 @@ The copy environment task copies an environment to a target environment. Two typ
 
 | **Parameters** | **Description** |
 |---------|-----------|
-| PowerApps source environment URL  | The service endpoint for the environment you want to copy from.  Defined under **Service Connections** in **Project Settings**. |
-| PowerApps target environment URL  | The service endpoint for the environment you want to copy to.  Defined under **Service Connections** in **Project Settings**. |
+| Power Apps source environment URL  | The service endpoint for the environment you want to copy from.  Defined under **Service Connections** in **Project Settings**. |
+| Power Apps target environment URL  | The service endpoint for the environment you want to copy to.  Defined under **Service Connections** in **Project Settings**. |

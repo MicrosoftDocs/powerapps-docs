@@ -37,7 +37,7 @@ In PowerApps, server-side synchronization provides an interface between Common D
   
 - Automatically relate an associated mailbox to the default email profile when a user or a queue is created with the email delivery method set as server-side synchronization.  
   
-- Automatically track Microsoft Exchange emails in PowerApps for a user based on the folder-level tracking rules.  
+- Automatically track Microsoft Exchange emails in Power Apps for a user based on the folder-level tracking rules.  
   
 ### Related topics  
  [Configure folder level tracking rules](configure-exchange-folder-level-tracking-rules.md) 

@@ -13,7 +13,7 @@ author: Nkrb
 
 # Package a code component
 
-This topic describes how to import code components into Common Data Service. After implementing the code components using the PowerApps CLI, the next step is to bundle all the code component elements into a solution file and import the solution file into Common Data Service so that you can see the code components in runtime.
+This topic describes how to import code components into Common Data Service. After implementing the code components using the Power Apps CLI, the next step is to bundle all the code component elements into a solution file and import the solution file into Common Data Service so that you can see the code components in runtime.
 
 To create and import a solution file:
 
@@ -27,7 +27,7 @@ To create and import a solution file:
 3. Once the new solution project is created, refer the **Solution** folder to the location where the created sample component is located. You can add the reference using the command shown below. This reference informs the solution project about which code components should be added during the build. You can add references to multiple components in a single solution project.
 
    ```CLI   
-    pac solution add-reference --path <path to your PowerApps component framework project>
+    pac solution add-reference --path <path to your Power Apps component framework project>
    ```
 
 3. To generate a zip file from the solution project, go into your solution project directory and build the project using the command `msbuild /t:build /restore`. This command uses *MSBuild* to build the solution project by pulling down the *NuGet* dependencies as part of the restore. Use the `/restore` only for the first time when the solution project is built. For every build after that, you can run the command `msbuild`.
@@ -40,11 +40,11 @@ To create and import a solution file:
     > - If you encounter an error that says *Ambiguous project name* when running the `msbuild` command on your solution, ensure that your solution name and project name are not the same.
 
 4. The generated solution files are located inside the `\bin\debug\` folder after the build is successful.
-5. Manually [import the solution into Common Data Service](https://docs.microsoft.com/powerapps/maker/common-data-service/import-update-export-solutions) using the web portal or see the [Authenticating to your organization](#authenticating-to-your-organization) and [Deployment](#deploying-code-components) sections to import using PowerApps CLI commands.
+5. Manually [import the solution into Common Data Service](https://docs.microsoft.com/powerapps/maker/common-data-service/import-update-export-solutions) using the web portal or see the [Authenticating to your organization](#authenticating-to-your-organization) and [Deployment](#deploying-code-components) sections to import using Power Apps CLI commands.
 
 ## Authenticating to your organization
 
-You can deploy the code components directly from the PowerApps CLI by authenticating to the Common Data Service organization and then pushing the updated components. Use the following steps to create the authentication profile, connect to Common Data Service, and push the updated components. 
+You can deploy the code components directly from the Power Apps CLI by authenticating to the Common Data Service organization and then pushing the updated components. Use the following steps to create the authentication profile, connect to Common Data Service, and push the updated components. 
  
 1. Create your authentication profile using the following command: 
  
@@ -113,5 +113,5 @@ If you want to remove a code component from a solution file:
 
 [Add code components to a field or entity in model-driven apps](add-custom-controls-to-a-field-or-entity.md)<br/>
 [Add components to a canvas app](component-framework-for-canvas-apps.md#add-components-to-a-canvas-app)<br/>
-[PowerApps component framework API reference](reference/index.md)<br/>
-[PowerApps component framework overview](overview.md)
+[Power Apps component framework API reference](reference/index.md)<br/>
+[Power Apps component framework overview](overview.md)

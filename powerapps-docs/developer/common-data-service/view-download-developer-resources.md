@@ -1,6 +1,6 @@
 ---
-title: "View or download developer resources for PowerApps and Common Data Service | MicrosoftDocs"
-description: "Find developer resources and service endpoint URLs for PowerApps and Common Data Service"
+title: "View or download developer resources for Power Apps and Common Data Service | MicrosoftDocs"
+description: "Find developer resources and service endpoint URLs for Power Apps and Common Data Service"
 keywords: ""
 ms.date: 06/06/2018
 ms.service: powerapps
@@ -30,7 +30,7 @@ This page provides resources for developers and information about the specific i
 
 ## View the Developer Resources page for your environment
 
-1. From the PowerApps portal select the ![Settings Button](../../administrator/media/settings-button-nav-bar.png) Settings button and choose **Advanced customizations**.
+1. From the Power Apps portal select the ![Settings Button](../../administrator/media/settings-button-nav-bar.png) Settings button and choose **Advanced customizations**.
 
     ![Advanced Customizations](media/advanced-customizations-menu.png)
 
