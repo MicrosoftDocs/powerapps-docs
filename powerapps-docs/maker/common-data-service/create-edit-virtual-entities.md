@@ -42,7 +42,7 @@ Alternatively, developers can build their own data providers. Data providers are
 ## Virtual entity benefits  
   
 - Developers can implement plugins to read external data using the Common Data Service web services and Plug-in Registration tool.  
-- System customizers use PowerApps solution explorer to configure the data source record and create virtual entities that are used to access external data without writing any code.  
+- System customizers use Power Apps solution explorer to configure the data source record and create virtual entities that are used to access external data without writing any code.  
 - End users work with the records created by the virtual entity to view the data in fields, grids, search results, and Fetch XML-based reports and dashboards.  
   
 <a name="AddDataSource"></a> 

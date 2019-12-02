@@ -39,7 +39,7 @@ To follow this topic, you must switch to an [environment](../canvas-apps/working
 
 1. Sign in to [PowerApps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then click or tap the down arrow for **Data** near the left edge.
 
-	![PowerApps home page](./media/data-platform-cds-newentity-pq/sign-in.png)
+	![Power Apps home page](./media/data-platform-cds-newentity-pq/sign-in.png)
 
 1. In the list that appears, click or tap **Data Integration**, and then click or tap **New Project** near the upper-right corner of the window.
 

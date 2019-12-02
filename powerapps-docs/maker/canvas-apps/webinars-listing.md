@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# PowerApps webinar listing #
+# Power Apps webinar listing #
 These webinars can help you to leverage the features and functions of Microsoft PowerApps. Webinars are available on-demand after the live broadcast. Please note that, in some cases, you'll need to re-enter registration details, and then you'll be sent a link to the recording via email. 
 
 ## Beginner Webinar Series ##
@@ -34,15 +34,15 @@ These webinars can help you to leverage the features and functions of Microsoft 
 <br>by Audrie Gordon
 [Watch now](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Getting-Started-with-PowerApp-Forms/m-p/116842)
 
-**Getting started with PowerApps Controls**
+**Getting started with Power Apps Controls**
 <br>by Audrie Gordon
 [Watch now](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Introduction-to-PowerApps-Controls/m-p/116844)
 
-**PowerApps Community Opportunities & Rewards**
+**Power Apps Community Opportunities & Rewards**
 <br> by Audrie Gordon & Mackenzie Lyng
 [Watch Now](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/PowerApps-Community-Opportunities-and-Rewards/m-p/116856)
 
-**Overview of PowerApps Feature Releases for 2017**
+**Overview of Power Apps Feature Releases for 2017**
 <br>by Darshan Desai
 [Watch now](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Overview-of-PowerApps-Feature-Releases-for-2017/m-p/116858)
 
@@ -59,11 +59,11 @@ These webinars can help you to leverage the features and functions of Microsoft 
 <br>by Karthik Bharathy
 [Watch now](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Application-LIfecycle-with-the-new-Save-and-publish-options-in/m-p/116860)
 
-**PowerApps Focus on Using the Lookup Function**
+**Power Apps Focus on Using the Lookup Function**
 <br>by Audrie Gordon
 [Watch now](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/PowerApps-Focus-on-Using-the-Lookup-Function/m-p/116866)
 
-**Using PowerApps and Flow to create Line of Business “portals”**
+**Using Power Apps and Flow to create Line of Business “portals”**
 <br>by Vishwas Lele
 [Watch Now](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Using-PowerApps-and-Flow-to-create-Line-of-Business-portals-by/m-p/116869)
 
@@ -75,41 +75,41 @@ These webinars can help you to leverage the features and functions of Microsoft 
 <br>by Marc-André Lépine
 [Watch Now](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Connector-Series-Shift-Scheduling-Apps-with-PowerApps-StaffHub/m-p/122036)
 
-**PowerApps Administration | Frequently Asked Questions**
+**Power Apps Administration | Frequently Asked Questions**
 <br>by Manas Maheshwari
 [Watch Now](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/PowerApps-Administration-FAQ/m-p/127369#M44)
 
-**Inside the Universal Audit App: See what PowerApps and Flow are capable of by Paul Culmsee**
+**Inside the Universal Audit App: See what Power Apps and Flow are capable of by Paul Culmsee**
 <br>by Paul Culmsee
 [Watch Now](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Inside-the-Universal-Audit-App-See-what-PowerApps-and-Flow-are/m-p/127370#M45)
 
 ## Advanced Webinar Series ##
-**PowerApps formulas**
+**Power Apps formulas**
 <br>by Greg Lindhorst
 [Watch now](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Deep-dive-on-formulas-by-Greg-Lindhorst/m-p/116899)
 
-**Building Server Patching Solutions with PowerApps by Brian Blanchard**
+**Building Server Patching Solutions with Power Apps by Brian Blanchard**
 <br>by Brian Blanchard & Audrie Gordon
 [Watch now](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Building-Server-Patching-Solutions-with-PowerApps-by-Brian/m-p/116901)
 
-**Building Server Patching Solutions with PowerApps by Brian Blanchard (Part 2)**
+**Building Server Patching Solutions with Power Apps by Brian Blanchard (Part 2)**
 <br>by Brian Blanchard & Audrie Gordon
  [Watch now](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Building-Server-Patching-Solutions-with-PowerApps-by-Brian/m-p/116902)
 
-**Click-Through PowerApps Analytics by Vivek Bavishi**
+**Click-Through Power Apps Analytics by Vivek Bavishi**
 <br>by Vivek Bavishi & Audrie Gordon
  [Watch now](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Click-Through-PowerApps-Analytics-by-Vivek-Bavishi/m-p/116906)
 
- **Using PowerApps for Business Process Management (BPM) by Dawid van Heerden**
+ **Using Power Apps for Business Process Management (BPM) by Dawid van Heerden**
 <br>by Dawid van Heerden 
  [Watch now](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Using-PowerApps-and-Flow-for-Business-Process-Management/m-p/116907)
 
 ### Connector Series ###
-**Optimizing Connectors in PowerApps and Power Automate**
+**Optimizing Connectors in Power Apps and Power Automate**
 <br>by Theresa Palmer-Boroski
 [Watch now](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Optimizing-Connectors-in-PowerApps-and-Microsoft-Flow-by-Theresa/m-p/116874)
 
-**Teams + PowerApps Tips and Tricks**
+**Teams + Power Apps Tips and Tricks**
 <br>by Audrie Gordon
 [Watch now](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Teams-PowerApps-Tips-and-Tricks/m-p/116846)
 
@@ -134,7 +134,7 @@ These webinars can help you to leverage the features and functions of Microsoft 
 [Watch now](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Connecting-to-Project-Online-PWA/m-p/116889)
 
 ## SharePoint Series ##
-**Rapidly build applications with PowerApps Studio**
+**Rapidly build applications with Power Apps Studio**
 <br>by Karthik Bharathy
 [Watch now](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Rapidly-build-applications-with-PowerApps-Studio/m-p/116849)
 
@@ -142,11 +142,11 @@ These webinars can help you to leverage the features and functions of Microsoft 
 <br>by Daniel Christian
 [Watch now](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Rebuilding-an-InfoPath-Designer-Form/m-p/116909)
 
-**Tips for InfoPath Designers Transitioning to PowerApps - Part 1**
+**Tips for InfoPath Designers Transitioning to Power Apps - Part 1**
 <br>by Audrie Gordon
 [Watch now](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Tips-for-InfoPath-Designers-Transitioning-to-PowerApps-Part-1/m-p/116910)
 
-**Tips for Transitioning from InfoPath to PowerApps - Part 2**
+**Tips for Transitioning from InfoPath to Power Apps - Part 2**
 <br>by Audrie Gordon
 [Watch now](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Tips-for-InfoPath-Designers-Transitioning-to-PowerApps-Part-2/m-p/116912)
 
@@ -184,6 +184,6 @@ These webinars can help you to leverage the features and functions of Microsoft 
 <br>by Veronica Ward
 [Watch now](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Building-Dialogs-in-PowerApps-by-Veronica-Ward/m-p/117627#M39)
 
-**Look behind the curtain with one of the PowerApps Developers - A closer look at templates: Marie Hoeger**
+**Look behind the curtain with one of the Power Apps Developers - A closer look at templates: Marie Hoeger**
 <br>by Audrie Gordon
 [Watch now](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Developer-Intro-and-Discussing-Templates/m-p/116848)

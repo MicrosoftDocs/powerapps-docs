@@ -38,7 +38,7 @@ To follow this quickstart, you must be assigned to the [Environment Maker](https
 
 1. Under **Choose a table**, select **Accounts**, and then select **Connect**.
 
-1. If the **Welcome to PowerApps Studio** dialog box appears, select **Skip**.
+1. If the **Welcome to Power Apps Studio** dialog box appears, select **Skip**.
 
 Your app opens to the browse screen, which shows a list of accounts in a control called a gallery. Near the top of the screen, a title bar shows icons for refreshing the data in the gallery, sorting the data in the gallery alphabetically, and adding data to the gallery. Under the title bar, a search box provides the option to filter the data in the gallery based on text that you type or paste. 
 

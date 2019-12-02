@@ -1,5 +1,5 @@
 ---
-title: "Export customized entity and field text for translation with PowerApps | MicrosoftDocs"
+title: "Export customized entity and field text for translation with Power Apps | MicrosoftDocs"
 description: "Learn how to export entity and field text for translation"
 ms.custom: ""
 ms.date: 06/19/2018

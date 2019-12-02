@@ -40,7 +40,7 @@ There are different types of forms, and each type has a specific functionality o
   
 <a name="BKMK_FormDifferencesByEntity"></a>   
 ## Updated versus classic entities  
-PowerApps provides many options for designing forms. With Unified Interface, most entities were updated to better suit the responsive interface. Updated entities as well as your own custom entities include support for the Dynamics 365 for tablets client, business process flows, and business rules. When you use these entities, you can design once and deploy to all clients.  
+Power Apps provides many options for designing forms. With Unified Interface, most entities were updated to better suit the responsive interface. Updated entities as well as your own custom entities include support for the Dynamics 365 for tablets client, business process flows, and business rules. When you use these entities, you can design once and deploy to all clients.  
   
 There are still a number of entities, referred to here as classic entities, that retain the appearance and capabilities from earlier versions. These entities are used less often. They are listed here:  
   

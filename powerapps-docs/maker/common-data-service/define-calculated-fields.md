@@ -1,5 +1,5 @@
 ---
-title: "Define calculated fields in PowerApps | MicrosoftDocs"
+title: "Define calculated fields in Power Apps | MicrosoftDocs"
 description: "Learn how to define calculated fields"
 ms.custom: ""
 ms.date: 05/25/2018

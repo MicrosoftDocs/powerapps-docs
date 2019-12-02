@@ -1,5 +1,5 @@
 ---
-title: "Set up the model-driven app notes control to access information about posts in PowerApps | MicrosoftDocs"
+title: "Set up the model-driven app notes control to access information about posts in Power Apps | MicrosoftDocs"
 ms.custom: ""
 ms.date: 05/06/2018
 ms.reviewer: ""
@@ -24,7 +24,7 @@ search.app:
 ---
 # Set up the model-driven app notes control to access information about posts
 
- In PowerApps forms for certain system entities using the [Updated forms](main-form-presentations.md#updated-forms),  the Notes control provides the ability to access information about **Posts**, **Activities**, and **Notes**. For custom entities where you have enabled notes and activities, you will only see **Notes** and **Activities**. To include **Posts** you must enable them for the custom entity.  
+ In Power Apps forms for certain system entities using the [Updated forms](main-form-presentations.md#updated-forms),  the Notes control provides the ability to access information about **Posts**, **Activities**, and **Notes**. For custom entities where you have enabled notes and activities, you will only see **Notes** and **Activities**. To include **Posts** you must enable them for the custom entity.  
   
 ## Enable posts for a custom entity  
   

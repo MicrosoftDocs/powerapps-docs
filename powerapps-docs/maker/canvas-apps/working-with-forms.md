@@ -36,7 +36,7 @@ As this topic describes, combine these controls with formulas to create the over
 * Learn how to [configure a control](add-configure-controls.md) in PowerApps.
 
 ## Explore a generated app
-PowerApps can automatically generate an app based on a data source that you specify. Each app contains three screens with the controls described earlier and formulas that connect them. Run these apps "out of the box," customize them for your specific goals, or examine how they work so that you can learn useful concepts that apply to your own apps. In the following sections, inspect the screens, controls, and formulas that drive a generated app.  
+Power Apps can automatically generate an app based on a data source that you specify. Each app contains three screens with the controls described earlier and formulas that connect them. Run these apps "out of the box," customize them for your specific goals, or examine how they work so that you can learn useful concepts that apply to your own apps. In the following sections, inspect the screens, controls, and formulas that drive a generated app.  
 
 ### Browse screen
 ![Browse screen controls](./media/working-with-forms/afd-browse-screen-basic.png)
@@ -138,13 +138,13 @@ In the right-hand pane, you can show or hide each card, rearrange them, or confi
 ![Edit screen with options pane open](./media/working-with-forms/edit-screen.png)
 
 ## Build an app from scratch
-By understanding how PowerApps generates an app, you can build one yourself that uses the same building blocks and formulas discussed earlier in this topic.
+By understanding how Power Apps generates an app, you can build one yourself that uses the same building blocks and formulas discussed earlier in this topic.
 
 ## Identify test data
 To get the most from this topic, start with a data source with which you can experiment. It should contain test data that you can read and update without concern.
 
 > [!NOTE]
-> If you use a SharePoint list or an Excel table that contains column names with spaces as your data source, PowerApps will replace the spaces with **"\_x0020\_"**. For example, **"Column Name"** in SharePoint or Excel will appear as **"Column_x0020_Name"** in PowerApps when displayed in the data layout or used in a formula.
+> If you use a SharePoint list or an Excel table that contains column names with spaces as your data source, Power Apps will replace the spaces with **"\_x0020\_"**. For example, **"Column Name"** in SharePoint or Excel will appear as **"Column_x0020_Name"** in Power Apps when displayed in the data layout or used in a formula.
 
 To follow the rest of this topic exactly, create a SharePoint list named "Ice Cream" that contains this data:
 
@@ -308,7 +308,7 @@ If **[SubmitForm](functions/function-form.md)** fails for any reason, the **Erro
 
     ![Display form with added "Edit" button](./media/working-with-forms/edit-icecream-error.png)
 
-In an app that PowerApps generates from data, the **[AutoHeight](controls/control-text-box.md)** property on this control is set to *true* so that no space is consumed if no error occurs. The **[Height](controls/properties-size-location.md)** and **[Y](controls/properties-size-location.md)** properties of the **[Edit form](controls/control-form-detail.md)** control are also adjusted dynamically to account for this control growing when an error occurs. For more details, generate an app from existing data, and inspect these properties. The text-box control for errors is very short when no error has occurred, you may need to open the **Advanced** view (available on the **View** tab) to select this control.
+In an app that Power Apps generates from data, the **[AutoHeight](controls/control-text-box.md)** property on this control is set to *true* so that no space is consumed if no error occurs. The **[Height](controls/properties-size-location.md)** and **[Y](controls/properties-size-location.md)** properties of the **[Edit form](controls/control-form-detail.md)** control are also adjusted dynamically to account for this control growing when an error occurs. For more details, generate an app from existing data, and inspect these properties. The text-box control for errors is very short when no error has occurred, you may need to open the **Advanced** view (available on the **View** tab) to select this control.
 
 ![App from data edit form with error text control selected](./media/working-with-forms/edit-assets-error1.png)
 
@@ -324,7 +324,7 @@ The data source is refreshed whenever the user opens the app, but the user might
     ![Refresh the data source](./media/working-with-forms/browse-icecream-refresh.png)
 
 ## Search and sort the gallery
-In the app that PowerApps generated from data, we neglected to discuss two controls at the top of the Browse screen. By using these controls, the user can search for one or more records, sort the list of records in ascending or descending order, or both.
+In the app that Power Apps generated from data, we neglected to discuss two controls at the top of the Browse screen. By using these controls, the user can search for one or more records, sort the list of records in ascending or descending order, or both.
 
 ![Sorting and searching controls on browse screen](./media/working-with-forms/afd-browse-search-sort.png)
 

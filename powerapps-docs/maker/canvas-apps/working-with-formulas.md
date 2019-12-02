@@ -84,13 +84,13 @@ In Excel, you type **=A1+A2** into a cell to show the sum of whatever values cel
 
 In PowerApps, you can achieve a similar result by adding controls to a screen and setting their properties. This example shows a label control named **Label1** and two **[Text input](controls/control-text-input.md)** controls, named **TextInput1** and **TextInput2**.
 
-![Illustration of PowerApps recalculating the sum of two numbers](./media/working-with-formulas/recalc1.png)
+![Illustration of Power Apps recalculating the sum of two numbers](./media/working-with-formulas/recalc1.png)
 
 Regardless of what numbers you type in the text-input controls, the label always shows the sum of those numbers because its **[Text](controls/properties-core.md)** property is set to this formula:
 
 `TextInput1 + TextInput2`
 
-![Animation of PowerApps recalculating the sum of two numbers](./media/working-with-formulas/recalc2.gif)
+![Animation of Power Apps recalculating the sum of two numbers](./media/working-with-formulas/recalc2.gif)
 
 In Excel, you can use conditional-formatting formulas to show, for example, negative values in red. In PowerApps, you can use formulas to determine not only the primary value of a control but also properties such as formatting. In the next example, a formula for the **[Color](controls/properties-color-border.md)** property of the label automatically shows negative values in red. The **[If](functions/function-if.md)** function should look very familiar from Excel:
 

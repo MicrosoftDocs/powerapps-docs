@@ -75,7 +75,7 @@ You can create a blank canvas app from within a solution. You can't automaticall
     > [!div class="mx-imgBorder"]
     > ![Options to create an app in a solution](./media/add-app-solution/new-option.png "Options to create an app in a solution")
 
-    PowerApps Studio opens with a blank canvas in another browser tab.
+    Power Apps Studio opens with a blank canvas in another browser tab.
 
 1. Create your app (or make at least one change), and then save your changes.
 

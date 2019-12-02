@@ -20,7 +20,7 @@ When you use Power Query for Excel to create a custom entity that contains data 
 
 >"Your Azure Active Directory administrator has set a policy that prevents you from using this feature. Please contact your administrator, who can grant permissions for this feature on your behalf."
 
-The error appears if Power Query can't access the organization's data in PowerApps or Common Data Service. This situation arises under two sets of circumstances:
+The error appears if Power Query can't access the organization's data in Power Apps or Common Data Service. This situation arises under two sets of circumstances:
 
 * An Azure Active Directory (Azure AD) tenant administrator has disallowed users' ability to consent to apps that access company data on their behalf.
 * Using an unmanaged Active Directory tenant. An unmanaged tenant is a directory without a global administrator that was created to complete a self-service signup offer. To fix this scenario, users must first convert to a managed tenant and then follow one of the two solutions to this issue. The solutions are described in the next section.

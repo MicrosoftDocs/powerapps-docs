@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Show information about a PowerApps user in a canvas app
+# Show information about a Power Apps user in a canvas app
 
 In PowerApps, show the full name, the email address, and the picture that's associated with the user who's signed in to a canvas app. You can use this information, for example, to automatically fill in a form.
 

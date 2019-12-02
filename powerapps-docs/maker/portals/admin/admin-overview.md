@@ -1,6 +1,6 @@
 ---
-title: "Overview of PowerApps Portals admin center | MicrosoftDocs"
-description: "Information about PowerApps Portals admin center."
+title: "Overview of Power Apps Portals admin center | MicrosoftDocs"
+description: "Information about Power Apps Portals admin center."
 author: sbmjais
 manager: shujoshi
 ms.service: powerapps
@@ -11,13 +11,13 @@ ms.author: shjais
 ms.reviewer:
 ---
 
-# PowerApps Portals admin center
+# Power Apps Portals admin center
 
-The PowerApps Portals admin center allows you perform advanced administrative actions on portals. The admin center is available when a portal is provisioned successfully.
+The Power Apps Portals admin center allows you perform advanced administrative actions on portals. The admin center is available when a portal is provisioned successfully.
 
-## Open PowerApps Portals admin center
+## Open Power Apps Portals admin center
 
-1. Go to the **Recent apps** section on the PowerApps home page and locate your portal.
+1. Go to the **Recent apps** section on the Power Apps home page and locate your portal.
 
     > [!div class=mx-imgBorder]
     > ![Recent apps](../media/recent-apps.png "Recent apps")  
@@ -36,7 +36,7 @@ The PowerApps Portals admin center allows you perform advanced administrative ac
 
 If you are not a global administrator and you try to manage a portal that has already been provisioned, or you resubmit the provisioning if it failed, you must be the owner of the Azure Active Directory (Azure AD) application connected to your portal.
 
-1. Go to the PowerApps Portals admin center and open the **Portal Details** tab.
+1. Go to the Power Apps Portals admin center and open the **Portal Details** tab.
 
 2. Copy the value from the **Application ID** field.
 
@@ -52,4 +52,4 @@ If you are not a global administrator and you try to manage a portal that has al
     > [!Note]
     > This task can be performed either by a global administrator of your organization or the existing owner of this application.
 
-6. After you've added yourself as an owner, reopen the PowerApps Portals admin center page.
+6. After you've added yourself as an owner, reopen the Power Apps Portals admin center page.

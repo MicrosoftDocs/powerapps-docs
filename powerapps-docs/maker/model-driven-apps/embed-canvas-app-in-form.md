@@ -16,7 +16,7 @@ author: "Aneesmsft"
 ms.author: "matp"
 manager: "kvivek"
 tags: 
-  - "PowerApps maker portal impact"
+  - "Power Apps maker portal impact"
 search.audienceType: 
   - maker
 search.app: 

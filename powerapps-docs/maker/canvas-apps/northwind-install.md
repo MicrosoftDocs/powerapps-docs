@@ -23,7 +23,7 @@ Northwind Traders is a fictitious organization that manages orders, products, cu
 
 ## Prerequisites
 
-- A PowerApps license that supports Common Data Service. You can [use a free trial license](../signup-for-powerapps.md) for 30 days.
+- A Power Apps license that supports Common Data Service. You can [use a free trial license](../signup-for-powerapps.md) for 30 days.
 - An environment with a Common Data Service database. You can [create such an environment](https://docs.microsoft.com/power-platform/admin/create-environment) if you have appropriate permissions.
 
 ## Download the solution

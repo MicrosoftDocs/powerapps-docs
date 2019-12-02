@@ -28,10 +28,10 @@ A *language tag* can be in one of three formats:
 | Return value | Description |
 | --- | --- |
 | **"*lg&#8209;RE*"** |*lg* is the two character abbreviation for the language and *RE* is the two character abbreviation for the region.  This is the most common return type.  For example, "en-GB" is returned for Great Britain. |
-| **"*lg*"** |*lg* is the two character abbreviation for the language.  This is the format used when PowerApps has information about the language, but does not have information for the specific region. |
+| **"*lg*"** |*lg* is the two character abbreviation for the language.  This is the format used when Power Apps has information about the language, but does not have information for the specific region. |
 | **"*lg&#8209;scrp&#8209;RE*"** |*lg* is the two character abbreviation for the language, *scrp* is the four character abbreviation for the script, and *RE* is the two character abbreviation for the region. |
 
-PowerApps uses the [IETF BCP-47 language tag](https://tools.ietf.org/html/bcp47) format.  
+Power Apps uses the [IETF BCP-47 language tag](https://tools.ietf.org/html/bcp47) format.  
 
 To see the list of supported language tags, type **Value( "1", )** in the formula bar or advanced view and scroll through the list of locales suggested for the second argument.  
 

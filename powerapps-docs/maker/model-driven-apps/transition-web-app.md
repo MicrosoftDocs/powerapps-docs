@@ -116,6 +116,6 @@ More information: [Design model-driven apps by using the app designer](design-cu
 [Update your apps to Unified Interface](/dynamics365/customer-engagement/admin/update-apps-to-unified-interface) <br />
 [Configure model-driven app interactive experience dashboards](configure-interactive-experience-dashboards.md) <br />
 [Use custom controls for model-driven app data visualizations](use-custom-controls-data-visualizations.md) <br />
-[PowerApps component framework overview](/powerapps/developer/component-framework/overview) <br />
+[Power Apps component framework overview](/powerapps/developer/component-framework/overview) <br />
 [Unified Interface for everybody](/power-platform-release-plan/2019wave2/microsoft-powerapps/unified-interface-app-everybody)
 

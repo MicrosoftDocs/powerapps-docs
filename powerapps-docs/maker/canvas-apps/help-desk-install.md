@@ -134,7 +134,7 @@ This list stores the Help Desk tickets.
 
 ## Download the app
 
-1.	[Download](https://pappsfeprodwestuscontent.blob.core.windows.net/sampleapps/helpdesk/docs/HelpDesk(SP_List).zip) the PowerApps package and save it to your machine.
+1.	[Download](https://pappsfeprodwestuscontent.blob.core.windows.net/sampleapps/helpdesk/docs/HelpDesk(SP_List).zip) the Power Apps package and save it to your machine.
 
 ## Create connections
 
@@ -237,7 +237,7 @@ This list stores the Help Desk tickets.
    > [!TIP]
    > If you have more than one administrator, use a comma to delimit the list of administrators. Example:
    > "admin1@microsoft.com","admin2@microsoft.com".
-   > To ensure the addresses in the AdminList match the format PowerApps expects, select
+   > To ensure the addresses in the AdminList match the format Power Apps expects, select
    > View > Variables > Global > MyProfile and look at the 'Mail' column to see the expected email format.
 
 1. Select **File** > **Save** > **Publish** > **Publish this version**.

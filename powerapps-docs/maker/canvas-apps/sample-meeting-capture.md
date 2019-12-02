@@ -1,6 +1,6 @@
 ---
 title: Meeting Capture sample template | Microsoft Docs
-description: Learn about the Meeting Capture sample template in PowerApps with setup, overview, and deep dives into how the app was built.
+description: Learn about the Meeting Capture sample template in Power Apps with setup, overview, and deep dives into how the app was built.
 author: matthewbolanos
 manager: kvivek
 ms.service: powerapps
@@ -37,7 +37,7 @@ You can run this sample app in your browser, on a tablet, or other device that h
 
 Meeting Capture includes a lot of functionality commonly used in PowerApps. By watching these videos, you can explore this functionality and find out how to implement it so you can implement the same functionality and patterns in your own apps.
 
-- [Export content](https://youtu.be/D6kmeM0UFH0) from PowerApps to OneNote.
+- [Export content](https://youtu.be/D6kmeM0UFH0) from Power Apps to OneNote.
 - [Find available meeting times](https://youtu.be/gSD8m6d_Gv0) for attendees.
 
 Meeting Capture connects to these services in Office 365.

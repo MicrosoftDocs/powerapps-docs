@@ -1,5 +1,5 @@
 ---
-title: "Display custom icons alongside values in list views with PowerApps | MicrosoftDocs"
+title: "Display custom icons alongside values in list views with Power Apps | MicrosoftDocs"
 description: "Learn how to display custom icon graphics in a view"
 ms.custom: ""
 ms.date: 11/20/2019
@@ -27,7 +27,7 @@ search.app:
 
 <a name="GridIcons"></a>   
 
- PowerApps environment administrators and customizers can add graphics to a view and establish the logic used to select a graphic based on the column value using JavaScript. The capability lets you customize list views that display icons alongside text or numerical values. 
+ Power Apps environment administrators and customizers can add graphics to a view and establish the logic used to select a graphic based on the column value using JavaScript. The capability lets you customize list views that display icons alongside text or numerical values. 
 
 This example displays custom icons in a view for the opportunity entity, which is available with certain apps, such as Dynamics 365 Sales. You can display custom icons in views with other standard entities, such as the account or contact entity, as well as custom entities. 
 

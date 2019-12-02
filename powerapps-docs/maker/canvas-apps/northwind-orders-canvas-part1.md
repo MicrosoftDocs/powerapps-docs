@@ -42,10 +42,10 @@ Follow step-by-step instructions to create an order gallery in a canvas app for 
     > [!div class="mx-imgBorder"]
     > ![Canvas app from blank dialog box](media/northwind-orders-canvas-part1/start-02.png)
 
-    PowerApps Studio opens so that you can add data sources and controls to your app:
+    Power Apps Studio opens so that you can add data sources and controls to your app:
 
     > [!div class="mx-imgBorder"]
-    > ![PowerApps Studio](media/northwind-orders-canvas-part1/start-03.png)
+    > ![Power Apps Studio](media/northwind-orders-canvas-part1/start-03.png)
 
 ## Add the data
 
@@ -71,7 +71,7 @@ Follow step-by-step instructions to create an order gallery in a canvas app for 
 
     Each field has a **Display name** and a **Name**, which is sometimes called the logical name. Both names refer to the same thing. In general, you'll use the display name when you build an app, but some cases require the more cryptic **Name**, as noted in a procedure.
 
-1. As we will be working with screens and controls next, in PowerApps Studio switch back to the **Tree View** on the left hand side by pressing the three stacked squares icon. You can return to the **Data Sources** at any time by pressing the cylinder icon.
+1. As we will be working with screens and controls next, in Power Apps Studio switch back to the **Tree View** on the left hand side by pressing the three stacked squares icon. You can return to the **Data Sources** at any time by pressing the cylinder icon.
 
 ## Create the order gallery
 
@@ -218,7 +218,7 @@ In this procedure, you'll add space in the gallery for a label and configure it 
     > [!div class="mx-imgBorder"]
     > ![Set the Color property of the status label](media/northwind-orders-canvas-part1/status-08.png)
 
-    PowerApps prevents you from creating a formula that relies on a hard-coded string for each option in a set because such formulas could produce inappropriate results if the option names are localized. Instead, the **Switch** function determines the color based on whatever string appears in the label based on the user's settings.
+    Power Apps prevents you from creating a formula that relies on a hard-coded string for each option in a set because such formulas could produce inappropriate results if the option names are localized. Instead, the **Switch** function determines the color based on whatever string appears in the label based on the user's settings.
 
     With this formula in place, different status values appear in different colors, as the previous graphic shows.
 

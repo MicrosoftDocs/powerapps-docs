@@ -26,7 +26,7 @@ To get started with cards, see [add a form](add-form.md) and [understand data fo
 
 ## Predefined cards
 
-PowerApps offers a predefined set of cards for strings, numbers, and other data types. In the right-hand pane, you can see the variations available and change the card used for a field:
+Power Apps offers a predefined set of cards for strings, numbers, and other data types. In the right-hand pane, you can see the variations available and change the card used for a field:
 
 ![](./media/working-with-cards/selected-card.png)
 

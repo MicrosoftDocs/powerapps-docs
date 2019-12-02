@@ -35,7 +35,7 @@ Your [next step](#next-steps) after this article is to display and manage data f
 
 1. Specify a name for your app, and then select **Create**.
 
-1. If the **Welcome to PowerApps Studio** dialog box appears, select **Skip**.
+1. If the **Welcome to Power Apps Studio** dialog box appears, select **Skip**.
 
 ## Add data source
 

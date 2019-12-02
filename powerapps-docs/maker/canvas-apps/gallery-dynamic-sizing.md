@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Show items of different heights in a PowerApps gallery
+# Show items of different heights in a Power Apps gallery
 If different items in your data set contain different amounts of data in the same field, you can completely show items that contain more data without adding empty space after items that contain less data. Add and configure a **Flexible height** gallery control so that you can:
 
 * Configure **Label** controls to expand or shrink based on their contents.
@@ -35,7 +35,7 @@ If you've never added controls to a gallery, follow the steps in [Show a list of
 
 2. Upload the Excel file to a cloud-storage account such as OneDrive, Dropbox, or Google Drive.
 
-3. In PowerApps Studio, click or tap **New** on the **File** menu.
+3. In Power Apps Studio, click or tap **New** on the **File** menu.
 
 4. On the **Blank app** tile, click or tap **Phone layout**.
 

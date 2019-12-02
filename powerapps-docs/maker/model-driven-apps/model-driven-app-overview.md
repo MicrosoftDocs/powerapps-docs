@@ -1,6 +1,6 @@
 ---
-title: Overview of building a model-driven app with PowerApps | Microsoft Docs
-description: Step-by-step instructions for creating and configuring an entity to use with a PowerApps app.
+title: Overview of building a model-driven app with Power Apps | Microsoft Docs
+description: Step-by-step instructions for creating and configuring an entity to use with a Power Apps app.
 documentationcenter: na
 author: Mattp123
 manager: kvivek

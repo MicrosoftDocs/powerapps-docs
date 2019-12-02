@@ -26,7 +26,7 @@ Use a collection to store data that users can manage in your app. A collection i
 
 ## Create a multicolumn collection
 
-1. In PowerApps Studio, add a **Text input** control.
+1. In Power Apps Studio, add a **Text input** control.
 
     ![Insert a Text input control](./media/create-update-collection/add-textbox.png)
 

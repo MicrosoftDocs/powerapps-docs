@@ -1,5 +1,5 @@
 ---
-title: "Change model-driven app custom entity icons in PowerApps | MicrosoftDocs"
+title: "Change model-driven app custom entity icons in Power Apps | MicrosoftDocs"
 definition: "Learn how to change the icon for a custom entity"
 ms.custom: ""
 ms.date: 05/17/2018

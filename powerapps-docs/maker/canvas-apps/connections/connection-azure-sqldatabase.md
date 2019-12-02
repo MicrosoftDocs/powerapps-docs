@@ -36,7 +36,7 @@ Connect to SQL Server, in either Azure or an on-premises database, so that you c
   > Gateways and on-premises connections can only be created and used in the user's [default environment](../working-with-environments.md).
 
 ## Generate an app automatically
-1. In PowerApps Studio, click or tap **New** on the **File** menu (along the left edge).
+1. In Power Apps Studio, click or tap **New** on the **File** menu (along the left edge).
    
     ![New option on the File menu](./media/connection-azure-sqldatabase/file-new.png)
 2. Under **Start with your data**, click or tap the right arrow at the end of the row of connectors.
@@ -58,7 +58,7 @@ Connect to SQL Server, in either Azure or an on-premises database, so that you c
 6. Click or tap **Connect**.
 7. Click or tap an option under **Choose a dataset**, click or tap an option under **Choose a table**, and then click or tap **Connect**.
    
-    PowerApps creates an app that shows data on three screens. Heuristics suggest what kind of data to show, but you might need to customize the UI to suit your needs.
+    Power Apps creates an app that shows data on three screens. Heuristics suggest what kind of data to show, but you might need to customize the UI to suit your needs.
 8. Customize the app by using techniques that are similar to those that [Create an app from Excel](../get-started-create-from-data.md) describes, starting with changing the app layout.
 
 ## Build an app from scratch
@@ -82,7 +82,7 @@ Connect to SQL Server, in either Azure or an on-premises database, so that you c
 6. Create an app by using techniques that are similar to those that [Create an app from scratch](../get-started-create-from-blank.md) describes.
 
 ## Update an existing app
-1. In PowerApps Studio, open the app that you want to update.
+1. In Power Apps Studio, open the app that you want to update.
 2. Click or tap **Data sources** on the **View** tab of the ribbon.
 3. In the right-hand pane, click or tap **Add a data source**.
    

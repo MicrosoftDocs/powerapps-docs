@@ -1,5 +1,5 @@
 ---
-title: "Create and edit public or system model-driven app views with PowerApps | MicrosoftDocs"
+title: "Create and edit public or system model-driven app views with Power Apps | MicrosoftDocs"
 description: "Learn now to create or edit views by using the app designer"
 keywords: ""
 ms.date: 11/27/2018
@@ -79,7 +79,7 @@ The following sections describe how to create and edit views in app designer.
 ### Open and add a view in the app designer
 
 The following steps explain how to open and add a view in the app designer.
-1. In PowerApps select **Apps** from the left navigation pane, select **...** next to the app you want, and then select **Edit**. 
+1. In Power Apps select **Apps** from the left navigation pane, select **...** next to the app you want, and then select **Edit**. 
 
 2. In the app designer **Entity View** section, select **Views**.
 

@@ -36,7 +36,7 @@ To make your app responsive, you must take additional steps, but this change is 
 
 ## Understand app and screen dimensions
 
-To make your app's layouts respond to changes in the screen dimensions, you'll write formulas that use the **Width** and **Height** properties of the screen. To show these properties, open an app in PowerApps Studio, and then select a screen. The default formulas for these properties appear on the **Advanced** tab of the right-hand pane.
+To make your app's layouts respond to changes in the screen dimensions, you'll write formulas that use the **Width** and **Height** properties of the screen. To show these properties, open an app in Power Apps Studio, and then select a screen. The default formulas for these properties appear on the **Advanced** tab of the right-hand pane.
 
 **Width** = `Max(App.Width, App.DesignWidth)`
 

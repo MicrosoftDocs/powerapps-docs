@@ -1,5 +1,5 @@
 ---
-title: "Define rollup fields with PowerApps | MicrosoftDocs"
+title: "Define rollup fields with Power Apps | MicrosoftDocs"
 description: "Learn how to define rollup fields"
 ms.custom: ""
 ms.date: 05/23/2018

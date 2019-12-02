@@ -20,7 +20,7 @@ search.app:
 
 # Add an app to Microsoft Teams
 
-Microsoft Teams is a chat-based collaboration platform built on Office 365 technologies. You can customize the Teams experience by adding PowerApps canvas apps to your channels in Teams. In this topic, you learn how to add the Product Showcase sample app to a Teams channel, and then open the app from that channel. 
+Microsoft Teams is a chat-based collaboration platform built on Office 365 technologies. You can customize the Teams experience by adding Power Apps canvas apps to your channels in Teams. In this topic, you learn how to add the Product Showcase sample app to a Teams channel, and then open the app from that channel. 
 
 ![App embedded in Microsoft Teams](./media/open-app-embedded-in-teams/embedded-app.png)
 
@@ -32,7 +32,7 @@ To follow this procedure, you need an [Office 365 subscription](https://signup.m
 
 ## Sign in to PowerApps
 
-Sign into PowerApps at [https://make.powerapps.com](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+Sign into Power Apps at [https://make.powerapps.com](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
 ## Add an app
 
@@ -87,7 +87,7 @@ To remove the app from the channel, choose the **Product Showcase** tab > **Remo
 
 ## Next steps
 
-In this topic, you added the Product Showcase sample app to a Teams channel, and then opened the app from that channel. To learn more about PowerApps, continue to the PowerApps tutorials.
+In this topic, you added the Product Showcase sample app to a Teams channel, and then opened the app from that channel. To learn more about PowerApps, continue to the Power Apps tutorials.
 
 > [!div class="nextstepaction"]
-> [PowerApps Tutorials](../maker/canvas-apps/get-started-create-from-blank.md)
+> [Power Apps Tutorials](../maker/canvas-apps/get-started-create-from-blank.md)

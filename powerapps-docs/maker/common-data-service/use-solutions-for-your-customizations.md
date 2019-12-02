@@ -1,5 +1,5 @@
 ---
-title: "Use the default solution to customize with PowerApps | MicrosoftDocs"
+title: "Use the default solution to customize with Power Apps | MicrosoftDocs"
 description: "Learn how to customize the default solution"
 ms.custom: ""
 ms.date: 10/29/2018
@@ -26,7 +26,7 @@ search.app:
 
 # Use the Common Data Services Default Solution  
   
- All PowerApps environments include the following solutions.
+ All Power Apps environments include the following solutions.
 -	**Common Data Services Default Solution** - This is a base solution that is available for makers to use by default for their customizations in an environment.
 -	**Default Solution** - This is a special solution that contains all customizations from all solutions in an environment. 
 <!-- **Base Custom Controls Core** - This solution includes a core set of controls. Controls are used in user interface elements, such as fields, lists, and views. -->

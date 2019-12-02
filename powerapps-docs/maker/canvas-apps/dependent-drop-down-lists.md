@@ -63,9 +63,9 @@ After that change, you can ignore the **Title** column, or you can [remove it](h
 1. Open the **Incidents** list, and then select **PowerApps** > **Customize forms**.
 
     > [!div class="mx-imgBorder"]
-    > ![Open the Incidents list, and then select PowerApps > Customize forms.](./media/dependent-drop-down-lists/open-form.png "Open the Incidents list, and then select PowerApps > Customize forms.")
+    > ![Open the Incidents list, and then select Power Apps > Customize forms.](./media/dependent-drop-down-lists/open-form.png "Open the Incidents list, and then select Power Apps > Customize forms.")
 
-    A browser tab opens with the default form in PowerApps Studio.
+    A browser tab opens with the default form in Power Apps Studio.
 
 1. (optional) In the **Fields** pane, hover over the **Title** field, select the ellipsis (...) that appears, and then select **Remove**.
 
@@ -202,4 +202,4 @@ This symptom is likely due to using a **LookUp** column in SharePoint or a **Cho
 
 This configuration is available on **Drop down** controls, as well as **Combo box** and **List box** controls that allow one selection at a time. You can't use the **Depends On** configuration for any of those controls if they allow multiple selections. This approach isn't recommended for working with option sets in Common Data Service.
 
-The **Depends On** configuration doesn't support static data or collections. To configure dependent drop-down lists with these sources, edit the expression directly in the formula bar. In addition, PowerApps doesn't support using two choice fields in SharePoint without any matching table of data, and you can't define **Matching field** within this UI.
+The **Depends On** configuration doesn't support static data or collections. To configure dependent drop-down lists with these sources, edit the expression directly in the formula bar. In addition, Power Apps doesn't support using two choice fields in SharePoint without any matching table of data, and you can't define **Matching field** within this UI.

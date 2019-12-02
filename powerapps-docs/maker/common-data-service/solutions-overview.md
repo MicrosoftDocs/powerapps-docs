@@ -1,5 +1,5 @@
 ---
-title: "Work with solutions in PowerApps | MicrosoftDocs"
+title: "Work with solutions in Power Apps | MicrosoftDocs"
 description: "Learn how solutions are distributed"
 ms.custom: ""
 ms.date: 09/30/2019

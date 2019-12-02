@@ -50,7 +50,7 @@ There are two designers you can use to create alternate keys:
 
 |Designer| Description|
 |--|--|
-|[PowerApps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)|Provides an easy streamlined experience, but some options are not available.<br />More information: [Define alternate keys using PowerApps portal](define-alternate-keys-portal.md)|
+|[Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)|Provides an easy streamlined experience, but some options are not available.<br />More information: [Define alternate keys using Power Apps portal](define-alternate-keys-portal.md)|
 |Solution explorer|Not as easy, but provides for more flexibility for less common requirements.<br />More information: [Define alternate keys using solution explorer](define-alternate-keys-solution-explorer.md) |
 
 > [!NOTE]
@@ -60,7 +60,7 @@ There are two designers you can use to create alternate keys:
 
 Information in this topic will help you choose which designer you can use. 
 
-You should use the [PowerApps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) to create alternate keys unless you need to address any of the following requirements:
+You should use the [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) to create alternate keys unless you need to address any of the following requirements:
 
 - Create an alternate key within a solution other than the Common Data Service default solution
 - You want to easily track the system job created that tracks the progress of creating the supporting indexes
@@ -115,7 +115,7 @@ If the system job fails, locate the system job to view any errors. The system jo
   
 ### See also  
 
-[Define alternate keys using PowerApps portal](define-alternate-keys-portal.md)<br />
+[Define alternate keys using Power Apps portal](define-alternate-keys-portal.md)<br />
 [Define alternate keys using solution explorer](define-alternate-keys-solution-explorer.md)<br />
 [Developer Documentation: Define alternate keys for an entity](/dynamics365/customer-engagement/developer/define-alternate-keys-entity)<br />
 [Developer Documentation: Use an alternate key to create a record](/dynamics365/customer-engagement/developer/use-alternate-key-create-record)

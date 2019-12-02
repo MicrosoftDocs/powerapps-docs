@@ -51,7 +51,7 @@ If you're not signed up for PowerApps, [sign up for free](https://make.powerapps
 
     ![Open app for editing](./media/customize-layout-sharepoint/open-app.png)
 
-1. If the **Welcome to PowerApps Studio** dialog box appears, select **Skip**.
+1. If the **Welcome to Power Apps Studio** dialog box appears, select **Skip**.
 
 ## Change the layout
 

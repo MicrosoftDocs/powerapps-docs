@@ -23,7 +23,7 @@ In PowerApps, you can create a canvas app that accesses information in Microsoft
 
 In your app, you'll use [formulas](working-with-formulas.md) to create, update, and manipulate records and tables. You'll probably read and write data to an external [data source](working-with-data-sources.md), which is an extended table. In addition, you might create one or more internal tables, which are called [collections](working-with-data-sources.md#collections).
 
-You can build a variety of formulas that take the name of a table as an argument, just as a formula in Excel takes one or more cell references as arguments. Some formulas in PowerApps return a table that reflects the other arguments that you specify. For example, you might create a formula:
+You can build a variety of formulas that take the name of a table as an argument, just as a formula in Excel takes one or more cell references as arguments. Some formulas in Power Apps return a table that reflects the other arguments that you specify. For example, you might create a formula:
 
 * to update a record in a table by specifying that table as one of multiple arguments for the **[Patch](functions/function-patch.md)** function
 * to add, remove, and rename columns in a table by specifying that table as an argument for the **[AddColumns](functions/function-table-shaping.md)**, **[DropColumns](functions/function-table-shaping.md)**, or **[RenameColumns](functions/function-table-shaping.md)** function. None of those functions modifies the original table. Instead, the function returns another table based on the other arguments that you specify.
@@ -58,7 +58,7 @@ All values within a column are of the same data type. In the above example, the 
 You may have referred to columns as "fields" in other tools.
 
 > [!NOTE]
-> For SharePoint and Excel data sources that contain column names with spaces, PowerApps will replace the spaces with **"\_x0020\_"**. For example, **"Column Name"** in SharePoint or Excel will appear as **"Column_x0020_Name"** in PowerApps when displayed in the data layout or used in a formula.
+> For SharePoint and Excel data sources that contain column names with spaces, Power Apps will replace the spaces with **"\_x0020\_"**. For example, **"Column Name"** in SharePoint or Excel will appear as **"Column_x0020_Name"** in Power Apps when displayed in the data layout or used in a formula.
 
 ### Table
 A table comprises one or more records, each with multiple fields that have consistent names across the records.
@@ -116,9 +116,9 @@ Let's walk through some simple examples.
 
 ## Table functions and control properties
 
-Consider the **Lower** function. If the variable **welcome** contains the text string **"Hello, World"**, the formula **Lower( welcome )** returns **"hello, world"**.  This function doesn't, in any way, change the value in that variable. **Lower** is a pure function in that it only processes input and produces output. That's all; it has no side effects. All functions in Excel and most functions in PowerApps are pure functions, which allow the workbook or the app to be recalculated automatically.
+Consider the **Lower** function. If the variable **welcome** contains the text string **"Hello, World"**, the formula **Lower( welcome )** returns **"hello, world"**.  This function doesn't, in any way, change the value in that variable. **Lower** is a pure function in that it only processes input and produces output. That's all; it has no side effects. All functions in Excel and most functions in Power Apps are pure functions, which allow the workbook or the app to be recalculated automatically.
 
-PowerApps offers a set of functions that operate on tables in the same manner. These functions take tables as input and filter, sort, transform, reduce, and summarize entire tables of data. In fact, **Lower** and many other functions that typically take a single value can also take a single-column table as input.
+Power Apps offers a set of functions that operate on tables in the same manner. These functions take tables as input and filter, sort, transform, reduce, and summarize entire tables of data. In fact, **Lower** and many other functions that typically take a single value can also take a single-column table as input.
 
 * **[Sort](functions/function-sort.md)**, **[Filter](functions/function-filter-lookup.md)** - Sorts and filters records.
 * **[FirstN](functions/function-first-last.md)**, **[LastN](functions/function-first-last.md)** - Returns the first N or last N records of the table.
@@ -220,7 +220,7 @@ For example, take a table of **Products**:
 
 ![](media/working-with-tables/requested.png)
 
-To create this example table in your app, insert a button, set its **OnSelect** property to this formula, and then select the button (click it while you hold down the Alt key in PowerApps Studio):
+To create this example table in your app, insert a button, set its **OnSelect** property to this formula, and then select the button (click it while you hold down the Alt key in Power Apps Studio):
 
 ```powerapps-dot
 Set( Products,

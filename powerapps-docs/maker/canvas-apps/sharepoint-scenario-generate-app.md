@@ -18,7 +18,7 @@ search.app:
 > [!NOTE]
 > This article is part of a tutorial series on using PowerApps, Power Automate, and Power BI with SharePoint Online. Make sure you read the [series introduction](sharepoint-scenario-intro.md) to get a sense of the big picture, as well as related downloads.
 
-Now that the SharePoint lists are in place, we can build and customize our first app. PowerApps is integrated with SharePoint, so it's easy to generate a basic *three screen app* directly from a list. This app allows you to view summary and detailed information for each list item, update existing list items, and create new list items. If you create an app directly from a list, the app appears as a *view* for that list. You can then run that app in a browser, as well as on a mobile phone.
+Now that the SharePoint lists are in place, we can build and customize our first app. Power Apps is integrated with SharePoint, so it's easy to generate a basic *three screen app* directly from a list. This app allows you to view summary and detailed information for each list item, update existing list items, and create new list items. If you create an app directly from a list, the app appears as a *view* for that list. You can then run that app in a browser, as well as on a mobile phone.
 
 > [!TIP]
 > The [download package](https://aka.ms/o4ia0f) for this scenario includes a finished version of this app: project-requests-app.msapp.
@@ -29,19 +29,19 @@ Now that the SharePoint lists are in place, we can build and customize our first
    
     ![Create an app](./media/sharepoint-scenario-generate-app/02-01-01-create-app.png)
 
-2. Give the app a name, like "Project Requests app", then click or tap **Create**. When the app is ready, it opens in PowerApps Studio.
+2. Give the app a name, like "Project Requests app", then click or tap **Create**. When the app is ready, it opens in Power Apps Studio.
    
     ![Specify a name for the app](./media/sharepoint-scenario-generate-app/02-01-02-create-app-name.png)
 
-## Step 2: Review the app in PowerApps Studio
+## Step 2: Review the app in Power Apps Studio
 
-1. In PowerApps Studio, the left navigation bar by default shows a hierarchical view of the screens and controls in the app.
+1. In Power Apps Studio, the left navigation bar by default shows a hierarchical view of the screens and controls in the app.
    
-    ![PowerApps Studio with hierarchical view](./media/sharepoint-scenario-generate-app/02-02-01-studio-screens-hierarchy.png)
+    ![Power Apps Studio with hierarchical view](./media/sharepoint-scenario-generate-app/02-02-01-studio-screens-hierarchy.png)
 
 2. Click or tap the thumbnail icon to switch views.
    
-    ![PowerApps Studio view selector](./media/sharepoint-scenario-generate-app/02-02-02-studio-view-selector.png)
+    ![Power Apps Studio view selector](./media/sharepoint-scenario-generate-app/02-02-02-studio-view-selector.png)
 
 3. Click or tap each screen to view it in the middle pane. There are three screens:
    
@@ -51,7 +51,7 @@ Now that the SharePoint lists are in place, we can build and customize our first
     
     (c). The **edit/create** screen, where you edit an existing item or create a new one.
       
-      ![PowerApps Studio with thumbnail view](./media/sharepoint-scenario-generate-app/02-02-03-studio-screens-thumbnails.png)
+      ![Power Apps Studio with thumbnail view](./media/sharepoint-scenario-generate-app/02-02-03-studio-screens-thumbnails.png)
 
 ## Step 3: Customize the app's browse screen
 
@@ -83,7 +83,7 @@ Now that the SharePoint lists are in place, we can build and customize our first
    
     ![Formula bar](./media/sharepoint-scenario-generate-app/02-03-04-formula.png)
    
-    This allows you to sort and search by the **Title** field, instead of the default that PowerApps picked. See [Formula deep-dive](#formula-deep-dive) for more information.
+    This allows you to sort and search by the **Title** field, instead of the default that Power Apps picked. See [Formula deep-dive](#formula-deep-dive) for more information.
 
 6. Click or tap **File**, then **Save**. Click or tap ![Back to app icon](./media/sharepoint-scenario-generate-app/icon-back-to-app.png) to go back to the app.
 
@@ -131,7 +131,7 @@ Now that the SharePoint lists are in place, we can build and customize our first
 This is a pretty simple app, and we only made a few basic customizations, but you can see it's possible to quickly build something interesting. We're going to move on to the next task, but look around the app a little more if you want, and see how the controls and formulas work together to drive app behavior.
 
 ## Formula deep-dive
-This section is optional, but it will help you understand more about how formulas work. In step 3 of this task, we modified the formula for the **Items** property of **BrowseGallery1**. Specifically, we changed the sort and search to use the **Title** field, instead of the field that PowerApps picked. Here's the modified formula:
+This section is optional, but it will help you understand more about how formulas work. In step 3 of this task, we modified the formula for the **Items** property of **BrowseGallery1**. Specifically, we changed the sort and search to use the **Title** field, instead of the field that Power Apps picked. Here's the modified formula:
 
 **SortByColumns ( Filter ( 'Project Requests', StartsWith ( Title, TextSearchBox1.Text ) ),
  "Title", If ( SortDescending1, Descending, Ascending ) )**

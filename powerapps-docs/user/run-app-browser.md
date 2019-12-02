@@ -22,7 +22,7 @@ search.app:
 When you create an app, or someone shares an app with you, you can run that app on Windows, iOS, Android, or in a web browser. In this topic, you'll learn how to run a canvas or model-driven app in a web browser from the [Dynamics 365 Home page](https://home.dynamics.com).
 
 To follow this quickstart, you need:
-- A PowerApps license. This is available with a PowerApps plan, such as the [PowerApps Plan 2 trial](https://docs.microsoft.com/powerapps/maker/signup-for-powerapps), or any of the [Microsoft Office 365](https://signup.microsoft.com/Signup?OfferId=467eab54-127b-42d3-b046-3844b860bebf&dl=O365_BUSINESS_PREMIUM&ali=1) or [Dynamics 365](https://dynamics.microsoft.com/pricing/) plans that include PowerApps. 
+- A Power Apps license. This is available with a Power Apps plan, such as the [Power Apps Plan 2 trial](https://docs.microsoft.com/powerapps/maker/signup-for-powerapps), or any of the [Microsoft Office 365](https://signup.microsoft.com/Signup?OfferId=467eab54-127b-42d3-b046-3844b860bebf&dl=O365_BUSINESS_PREMIUM&ali=1) or [Dynamics 365](https://dynamics.microsoft.com/pricing/) plans that include PowerApps. 
 - Access to an app that you built or that someone else built and shared with you.
 - Access to a supported web browser and operating system.
    - For canvas apps, see: [System requirements, limits, and configuration values](../maker/canvas-apps/limits-and-config.md)

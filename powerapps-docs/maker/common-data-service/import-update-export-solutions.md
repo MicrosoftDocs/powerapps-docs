@@ -87,7 +87,7 @@ search.app:
 <a name="BKMK_ExportSolutions"></a>   
 
 ## Export solutions  
- We recommend that you create an unmanaged solution to use for exporting your customizations. Then, export your customizations periodically so that you have a backup in case anything happens. You cannot export managed solutions. You can either export solutions from PowerApps or you can export using the classic experience. 
+ We recommend that you create an unmanaged solution to use for exporting your customizations. Then, export your customizations periodically so that you have a backup in case anything happens. You cannot export managed solutions. You can either export solutions from Power Apps or you can export using the classic experience. 
  
 > [!IMPORTANT]
 > Exporting the Default Solution is not supported. 

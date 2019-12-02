@@ -1,5 +1,5 @@
 ---
-title: Run a model-driven app on a mobile device with PowerApps | Microsoft Docs
+title: Run a model-driven app on a mobile device with Power Apps | Microsoft Docs
 description: Learn how to run a model-driven app on a mobile device.
 author: Mattp123
 manager: kvivek
@@ -26,7 +26,7 @@ To follow this procedure, if you're not signed up for PowerApps, [sign up for fr
 
 ## Run the model-driven app
 
-Model-driven apps don't run in the PowerApps mobile app. Instead, you run a model-driven app on a mobile device using either the Dynamics 365 mobile app or in the phone's web browser. 
+Model-driven apps don't run in the Power Apps mobile app. Instead, you run a model-driven app on a mobile device using either the Dynamics 365 mobile app or in the phone's web browser. 
 
 ### Use the mobile app
 Install the Dynamics 365 for phones or Dynamics 365 for tablets app from your device’s app store. More information: [Install Dynamics 365 for phones and tablets](https://docs.microsoft.com/dynamics365/customer-engagement/mobile-app/install-dynamics-365-for-phones-and-tablets)

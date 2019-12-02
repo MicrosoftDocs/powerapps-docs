@@ -19,7 +19,7 @@ search.app:
 ---
 
 # Discover apps via AppSource
-The apps you build and publish with PowerApps are discovered and used in Dynamics 365 on the web. It displays all of your apps -- the apps that you've specifically chosen to use (that is, by launching from a share email or opening from AppSource) or that an admin has provisioned for you. This includes all of your apps from PowerApps, as well as Dynamics 365 applications from Microsoft. You can search for apps, filter by environment, and pin the apps you use most frequently to the top of the page.
+The apps you build and publish with Power Apps are discovered and used in Dynamics 365 on the web. It displays all of your apps -- the apps that you've specifically chosen to use (that is, by launching from a share email or opening from AppSource) or that an admin has provisioned for you. This includes all of your apps from PowerApps, as well as Dynamics 365 applications from Microsoft. You can search for apps, filter by environment, and pin the apps you use most frequently to the top of the page.
 
   ![Apps on Dynamics 365](./media/app-source/apps-dynamics365.png)
 
@@ -28,6 +28,6 @@ Microsoft AppSource is now embedded in the [Dynamics 365](https://home.dynamics.
 
 ![Apps on Dynamics 365](./media/app-source/getmoreapps.png)
 
-Apps built with PowerApps and shared with a security group or the entire company with **User** permission will appear here, instead of cluttering your home page by default. When you get an app from AppSource, it will then appear on the home page and be easily accessible throughout the experience.
+Apps built with Power Apps and shared with a security group or the entire company with **User** permission will appear here, instead of cluttering your home page by default. When you get an app from AppSource, it will then appear on the home page and be easily accessible throughout the experience.
 
   ![Apps on Dynamics 365](./media/app-source/appsource.png)

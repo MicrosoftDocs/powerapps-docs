@@ -24,9 +24,9 @@ In this tutorial, we'll walk through the steps to create this form. We'll also l
 
 ## Before you start
 
-If you're new to PowerApps (or have only generated apps automatically), you'll want to [build an app from scratch](get-started-create-from-blank.md) before you dive into this topic. By building an app from scratch, you'll become familiar with required concepts, such as adding data sources and controls, that are mentioned but not explained in this topic.
+If you're new to Power Apps (or have only generated apps automatically), you'll want to [build an app from scratch](get-started-create-from-blank.md) before you dive into this topic. By building an app from scratch, you'll become familiar with required concepts, such as adding data sources and controls, that are mentioned but not explained in this topic.
 
-This topic is written as though you have a data source that's named **Sales order** and that contains the fields in the previous graphic. If you have a PowerApps Plan 2 license or a [trial license](../signup-for-powerapps.md) and system administrator or system customizer permissions, you can [create an entity](../common-data-service/data-platform-create-entity.md) in Common Data Service and add similar fields. 
+This topic is written as though you have a data source that's named **Sales order** and that contains the fields in the previous graphic. If you have a Power Apps Plan 2 license or a [trial license](../signup-for-powerapps.md) and system administrator or system customizer permissions, you can [create an entity](../common-data-service/data-platform-create-entity.md) in Common Data Service and add similar fields. 
 
 ## Add a gallery
 

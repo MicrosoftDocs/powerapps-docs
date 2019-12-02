@@ -26,7 +26,7 @@ If you encounter a problem with a canvas app that was created in PowerApps, you 
 
 1. Under **Diagnostics**, select **Session details**.
 
-    ![Get a session ID from PowerApps Studio](media/get-sessionid/studio.png)
+    ![Get a session ID from Power Apps Studio](media/get-sessionid/studio.png)
 
 ### When running an app in a browser
 1. In the upper-right corner, select the gear icon.
