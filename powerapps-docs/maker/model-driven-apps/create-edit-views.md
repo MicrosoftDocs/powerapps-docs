@@ -1,5 +1,5 @@
 ---
-title: "Create or edit a model-driven app view in PowerApps | MicrosoftDocs"
+title: "Create or edit a model-driven app view in Power Apps | MicrosoftDocs"
 description: "Learn how to create or edit a view"
 ms.custom: ""
 ms.date: 06/11/2018
@@ -27,7 +27,7 @@ search.app:
 
 <a name="BKMK_CreatingAndEditingViews"></a>   
 
-With PowerApps apps, use views to define how a list of records for a specific entity is displayed in the application. A view defines:
+With Power Apps apps, use views to define how a list of records for a specific entity is displayed in the application. A view defines:
 
 - The columns to display
 - How wide each column should be
@@ -83,7 +83,7 @@ You can create custom public views. You can delete any custom public views you c
 
 ## Places where you can access the view editor to create or edit views
 
-- PowerApps site: You can access the view designer in the **Model-driven** area > **Data** > **Entities** > **View** tab. Open an existing view or create a new one. More information: [Create or edit a view](create-and-edit-views.md)
+- Power Apps site: You can access the view designer in the **Model-driven** area > **Data** > **Entities** > **View** tab. Open an existing view or create a new one. More information: [Create or edit a view](create-and-edit-views.md)
 - App Designer: If you’re working in an app, you may want to use the App Designer, which provides a simple and intuitive UI with drag-and-drop capabilities for created views. More information: [Tutorial: Create and edit public or system views by using the app designer](create-edit-views-app-designer.md)
 - Solution explorer: If you’re already experienced with Dynamics 365, you may want to use the solution explorer. More information: [Navigate to advanced app making and customization areas](advanced-navigation.md#solution-explorer)
  

@@ -21,7 +21,7 @@ An experimental control that shows the content of a PDF file.
 Show text, graphics, and other content in a PDF file by adding this type of control and setting its **Document** property to the URL, enclosed in double quotation marks, of the file that you want to show.
 
 ## Limitations
-1. The security architecture of PowerApps requires the PDF Viewer to support only HTTPS links, not HTTP.  
+1. The security architecture of Power Apps requires the PDF Viewer to support only HTTPS links, not HTTP.  
 
 2. The **Document** property must link directly to the PDF file. Server redirects or HTML views of the document aren't supported.
 

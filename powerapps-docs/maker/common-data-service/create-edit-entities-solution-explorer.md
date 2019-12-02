@@ -23,7 +23,7 @@ search.app:
 
 # Create and edit entities using solution explorer
 
-You can easily create an entity using the PowerApps portal for most common situations, but not all capabilities are implemented there. When you need to meet the requirements described in [Create and edit entities in Common Data Service](create-edit-entities.md), you can achieve them by creating or editing entities using the Solution Explorer.
+You can easily create an entity using the Power Apps portal for most common situations, but not all capabilities are implemented there. When you need to meet the requirements described in [Create and edit entities in Common Data Service](create-edit-entities.md), you can achieve them by creating or editing entities using the Solution Explorer.
 
 ## Open solution explorer
 

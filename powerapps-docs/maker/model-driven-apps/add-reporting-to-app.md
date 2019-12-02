@@ -17,12 +17,12 @@ search.app:
 ---
 # Add reporting features to your model-driven app
 
-PowerApps apps can include reports that provide useful business information to the user. These reports are based on SQL Server Reporting Services and provide the same set of features that are available for typical SQL Server Reporting Services reports.
+Power Apps apps can include reports that provide useful business information to the user. These reports are based on SQL Server Reporting Services and provide the same set of features that are available for typical SQL Server Reporting Services reports.
 
 > [!div class="mx-imgBorder"] 
 > ![](media/progress-against-goals-report.png "Progress against goals standard report")
 
-System reports are available to all users. Individuals who create or otherwise own reports can share them with specific colleagues or teams, or can make the reports available to the organization, so that all users can run them. These reports use FetchXML queries that are proprietary to Common Data Service and retrieve data to build the report. Reports that you create in a PowerApps app are Fetch-based reports.
+System reports are available to all users. Individuals who create or otherwise own reports can share them with specific colleagues or teams, or can make the reports available to the organization, so that all users can run them. These reports use FetchXML queries that are proprietary to Common Data Service and retrieve data to build the report. Reports that you create in a Power Apps app are Fetch-based reports.
 
 > [!NOTE]
 > Report features don't work with canvas apps or model-driven apps running on mobile devices, such as tablets and phones. 
@@ -68,7 +68,7 @@ You can create a new report in one of two ways:
 Standard entity reports, such as the Accounts Summary report for the account entity, are available to all app users. Users who own reports can share them with specific colleagues or teams. System administrators and system customizers can make reports available with organization-wide visibility, so that all users can use them. For information about how to share a report, see [Share a report with other users and teams](../../user/work-with-reports.md#share-a-report-with-other-users-or-teams). 
 
 ## Reports in solutions
-Reports are solution aware. Adding a report as a component to a solution makes it become a single unit of software that extends PowerApps functionality and the user interface. Only reports that are visible to the organization can be added to solutions.
+Reports are solution aware. Adding a report as a component to a solution makes it become a single unit of software that extends Power Apps functionality and the user interface. Only reports that are visible to the organization can be added to solutions.
 
 To find if a report is viewable to the organization: In the list of reports, open a model-driven app, select a report, and then select **Edit**. On the **Administration** tab, see if **Viewable By** is set to **Organization**. 
 

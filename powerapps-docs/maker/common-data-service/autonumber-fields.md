@@ -67,7 +67,7 @@ Autonumber fields have a default seed value of 1000, but you may set a custom se
 
 ## Create an autonumber field
   
-1.  Sign in to the [PowerApps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1.  Sign in to the [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
   
 2.  On the left pane expand **Data** and select **Entities**.
   
@@ -89,4 +89,4 @@ Autonumber fields have a default seed value of 1000, but you may set a custom se
 9. Select **Done**.
 
 ## See also
- [Create and edit fields for Common Data Service using PowerApps portal](create-edit-field-portal.md)
+ [Create and edit fields for Common Data Service using Power Apps portal](create-edit-field-portal.md)

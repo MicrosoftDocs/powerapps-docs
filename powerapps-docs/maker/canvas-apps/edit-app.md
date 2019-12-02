@@ -15,7 +15,7 @@ search.app:
   - PowerApps
 ---
 # Edit a canvas app in PowerApps
-Edit any canvas app that you built, that you own, or for which you have **Can edit** permissions. You can edit an app in PowerApps Studio. If you try to edit an app that's open for editing elsewhere, a message tells you whether you already have it open or another user does.
+Edit any canvas app that you built, that you own, or for which you have **Can edit** permissions. You can edit an app in Power Apps Studio. If you try to edit an app that's open for editing elsewhere, a message tells you whether you already have it open or another user does.
 
 ## Verify your permissions
 1. Sign in to [PowerApps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then click or tap **Apps** in the **File** menu (on the left edge).

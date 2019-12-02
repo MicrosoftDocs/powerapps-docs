@@ -1,6 +1,6 @@
 ---
 title: Customize a SharePoint list form | Microsoft Docs
-description: Use PowerApps to customize the form with which users create and update entries in a SharePoint list.
+description: Use Power Apps to customize the form with which users create and update entries in a SharePoint list.
 author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
@@ -16,12 +16,12 @@ search.app:
 ---
 # Customize a SharePoint list form by using PowerApps
 
-You can easily customize the form for a SharePoint list by opening PowerApps in a browser. You don't need to write traditional code, such as C#, or download another app, such as InfoPath. When you publish your changes, the form is embedded within the SharePoint list for use by all of its users. In PowerApps, you can also review analytics reports, easily create conditional formatting, and connect to other data sources.
+You can easily customize the form for a SharePoint list by opening Power Apps in a browser. You don't need to write traditional code, such as C#, or download another app, such as InfoPath. When you publish your changes, the form is embedded within the SharePoint list for use by all of its users. In Power Apps, you can also review analytics reports, easily create conditional formatting, and connect to other data sources.
 
 To follow the steps in this topic, you'll create a simple list so that you can see how customization works, and then you can apply the same concepts to your own list.
 
 > [!NOTE]
-> - If the **Customize forms** option isn't available or doesn't work correctly for your list, it might contain data types that [PowerApps doesn't support](connections/connection-sharepoint-online.md#known-issues). Also, you can't move your form to a different list or [environment](working-with-environments.md). 
+> - If the **Customize forms** option isn't available or doesn't work correctly for your list, it might contain data types that [Power Apps doesn't support](connections/connection-sharepoint-online.md#known-issues). Also, you can't move your form to a different list or [environment](working-with-environments.md). 
 > - Custom forms for lists are only supported in generic lists. Support for generic document libraries is coming soon. Custom list and library templates are currently not supported; including but not limited to lists such as Announcements, Contacts and Tasks.
 
 ## Create a list
@@ -40,12 +40,12 @@ On a SharePoint site, create a list, and then add these columns to that list:
 
 1. In the command bar, select **PowerApps**, and then select **Customize form**.
 
-    PowerApps Studio opens in the same browser tab.
+    Power Apps Studio opens in the same browser tab.
 
-1. If the **Welcome to PowerApps Studio** dialog box opens, select **Skip**.
+1. If the **Welcome to Power Apps Studio** dialog box opens, select **Skip**.
 
 > [!div class="mx-imgBorder"]
-> ![In the command bar, select PowerApps, and then select Customize form. PowerApps Studio opens in the same browser tab. If the Welcome to PowerApps Studio dialog box opens, select Skip.](./media/customize-list-form/create-form.gif)
+> ![In the command bar, select Power Apps, and then select Customize form. Power Apps Studio opens in the same browser tab. If the Welcome to Power Apps Studio dialog box opens, select Skip.](./media/customize-list-form/create-form.gif)
 
 ## Move and remove a field
 
@@ -128,9 +128,9 @@ You can configure the **Price**, **Availability**, and **Colors** fields to appe
 
 ### Forms vs. apps
 
-**Q:** How does a customized form differ from a standalone app that I create from SharePoint or PowerApps?
+**Q:** How does a customized form differ from a standalone app that I create from SharePoint or Power Apps?
 
-**A:** If you customize the form for a SharePoint list, the form doesn't appear as an app in PowerApps Studio or PowerApps Mobile. You can open the form only from the list for which you created it.
+**A:** If you customize the form for a SharePoint list, the form doesn't appear as an app in Power Apps Studio or Power Apps Mobile. You can open the form only from the list for which you created it.
 
 **Q:** When should I customize a form to manage data in a SharePoint list, and when should I create a standalone app?
 
@@ -164,12 +164,12 @@ You can configure the **Price**, **Availability**, and **Colors** fields to appe
 
 1. Open your list, select **PowerApps** on the command bar, and then select **Customize forms**.
 
-1. In PowerApps Studio, select **File**, and then select **See all versions**. The **Versions** page opens in a new browser tab.
+1. In Power Apps Studio, select **File**, and then select **See all versions**. The **Versions** page opens in a new browser tab.
 
     > [!NOTE]
     > If you don't see the **See all versions** button, select **Save**. The button should appear.
 
-1. Without closing the **Versions** page or the browser tab, go back to the **Save** page in the other browser tab, click or tap the arrow at the top of the left navigation pane, and then click or tap **Back to SharePoint** to unlock your form and close PowerApps Studio.
+1. Without closing the **Versions** page or the browser tab, go back to the **Save** page in the other browser tab, click or tap the arrow at the top of the left navigation pane, and then click or tap **Back to SharePoint** to unlock your form and close Power Apps Studio.
 
 1. Go back to the **Versions** page in the other browser tab, locate the version that you want to restore, and then select **Restore**.
 
@@ -190,7 +190,7 @@ You can configure the **Price**, **Availability**, and **Colors** fields to appe
 
 **A:** Anyone with SharePoint permissions to manage, design, or edit the associated list.
 
-**Q:** Do I need a PowerApps license to create or use custom list forms?
+**Q:** Do I need a Power Apps license to create or use custom list forms?
 
 **A:** You need an [Office 365 plan that includes PowerApps](https://docs.microsoft.com/power-platform/admin/pricing-billing-skus#licenses).
 
@@ -200,9 +200,9 @@ You can configure the **Price**, **Availability**, and **Colors** fields to appe
 
 **Q:** As an administrator, how do I get a list of all customized forms in my organization?
 
-**A:** If you're a tenant administrator for PowerApps or you have environment-administrator permissions on the default PowerApps environment of your organization, do the following:
+**A:** If you're a tenant administrator for Power Apps or you have environment-administrator permissions on the default Power Apps environment of your organization, do the following:
 
-1. In the [PowerApps admin center](https://admin.powerapps.com), select the default environment for your organization from the list of environments.
+1. In the [Power Apps admin center](https://admin.powerapps.com), select the default environment for your organization from the list of environments.
 
 1. At the top of the default environment page, select **Resources**.
 

@@ -1,5 +1,5 @@
 ---
-title: "Use custom controls for model-driven app data visualizations in PowerApps | MicrosoftDocs"
+title: "Use custom controls for model-driven app data visualizations in Power Apps | MicrosoftDocs"
 description: "Learn how to use custom controls for fields"
 ms.custom: ""
 ms.date: 06/07/2018

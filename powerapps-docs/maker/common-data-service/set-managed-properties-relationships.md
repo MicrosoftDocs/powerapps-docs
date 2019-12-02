@@ -1,5 +1,5 @@
 ---
-title: "Set managed properties for relationships in PowerApps | MicrosoftDocs"
+title: "Set managed properties for relationships in Power Apps | MicrosoftDocs"
 description: "Learn how to set managed properties for an entity relationship"
 ms.custom: ""
 ms.date: 06/20/2018

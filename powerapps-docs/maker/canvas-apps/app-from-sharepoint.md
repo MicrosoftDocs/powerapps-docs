@@ -1,6 +1,6 @@
 ---
 title: Generate a canvas app from a SharePoint list | Microsoft Docs
-description: In PowerApps, automatically generate a canvas app to manage data in a SharePoint list
+description: In Power Apps, automatically generate a canvas app to manage data in a SharePoint list
 author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
@@ -14,9 +14,9 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Generate a canvas app in PowerApps from a SharePoint list
+# Generate a canvas app in Power Apps from a SharePoint list
 
-In this topic, you'll use PowerApps to automatically generate a canvas app based on items in a SharePoint list. You can generate the app from within PowerApps or SharePoint Online. From within PowerApps, you can generate the app based on a list in an on-premises SharePoint site if you [connect to it](connections/connection-sharepoint-online.md#create-a-connection) through a data gateway.
+In this topic, you'll use Power Apps to automatically generate a canvas app based on items in a SharePoint list. You can generate the app from within Power Apps or SharePoint Online. From within Power Apps, you can generate the app based on a list in an on-premises SharePoint site if you [connect to it](connections/connection-sharepoint-online.md#create-a-connection) through a data gateway.
 
 The app that you generate will contain three screens:
 
@@ -32,7 +32,7 @@ You can apply the concepts and techniques in this topic to any list in SharePoin
 The principles of generating an app won't change even if you create a list that's far more complex, with many columns of various types such as text, dates, numbers, and currency.
 
 > [!IMPORTANT]
-> PowerApps doesn't support all types of SharePoint data. For more information, see [Known issues](connections/connection-sharepoint-online.md#known-issues).
+> Power Apps doesn't support all types of SharePoint data. For more information, see [Known issues](connections/connection-sharepoint-online.md#known-issues).
 
 ## Generate an app from within PowerApps
 
@@ -74,7 +74,7 @@ If you create an app of a custom list from the SharePoint Online command bar, th
 
     ![Name the app](./media/app-from-sharepoint/app-name.png)
 
-    A new tab appears in your web browser that shows the app that you automatically generated based on your SharePoint list. The app appears in PowerApps Studio, where you can customize it.
+    A new tab appears in your web browser that shows the app that you automatically generated based on your SharePoint list. The app appears in Power Apps Studio, where you can customize it.
 
     ![Default app](./media/app-from-sharepoint/default-app.png)
 
@@ -87,10 +87,10 @@ If you create an app of a custom list from the SharePoint Online command bar, th
 
     - To remove the view from SharePoint, select **Remove this view**.
 
-        To remove the app from PowerApps, [delete the app](delete-app.md).
+        To remove the app from Power Apps, [delete the app](delete-app.md).
 
 > [!NOTE]
-> Apps created from the SharePoint list currently do not show in the PowerApps Mobile.
+> Apps created from the SharePoint list currently do not show in the Power Apps Mobile.
 
 ## Next steps
 In this topic, you created an app to manage data in a SharePoint list. As a next step, generate an app from a more complex list, and then customize the app (starting with the browse screen) to better suit your needs.

@@ -1,6 +1,6 @@
 ---
 title: Create a chart in a canvas app | Microsoft Docs
-description: In PowerApps, show categories of data as line charts, pie charts, or bar charts in a canvas app
+description: In Power Apps, show categories of data as line charts, pie charts, or bar charts in a canvas app
 author: fikaradz
 manager: kvivek
 ms.service: powerapps
@@ -25,11 +25,11 @@ For example, your data should look similar to the following:
 
 ![][9]
 
-You can create and use these charts within PowerApps. Let's get started.
+You can create and use these charts within Power Apps. Let's get started.
 
 ## Prerequisites
 
-* [Sign up](../signup-for-powerapps.md) for PowerApps, and then [sign in](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) using the same credentials that you used to sign up.
+* [Sign up](../signup-for-powerapps.md) for Power Apps, and then [sign in](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) using the same credentials that you used to sign up.
 * Create an app from a [template](get-started-test-drive.md), from [data](get-started-create-from-data.md), or from [scratch](get-started-create-from-blank.md).
 * Learn how to [configure a control](add-configure-controls.md) in PowerApps.
 * Download [ChartData.zip](https://pwrappssamples.blob.core.windows.net/samples/ChartData.zip), which contains sample data as an XML file. Follow the steps in this topic to import it directly into your app. As an alternative, decompress the .zip file, open the XML file in Excel, and save it to a [cloud-storage account](connections/cloud-storage-blob-connections.md).

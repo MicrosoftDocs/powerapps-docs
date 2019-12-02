@@ -1,5 +1,5 @@
 ---
-title: "Configure model-driven app interactive experience dashboards in PowerApps | Microsoft Docs"
+title: "Configure model-driven app interactive experience dashboards in Power Apps | Microsoft Docs"
 description: "Know how to configure interactive experience dashboards in PowerApps"
 keywords: Interactive dashboards; Customer Service; Microsoft Dynamics 365; Interactive service hub
 author: Mattp123

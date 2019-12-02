@@ -1,5 +1,5 @@
 ---
-title: "Disable auto-save in a model-driven app with PowerApps | MicrosoftDocs"
+title: "Disable auto-save in a model-driven app with Power Apps | MicrosoftDocs"
 ms.custom: ""
 ms.date: 06/18/2018
 ms.reviewer: ""

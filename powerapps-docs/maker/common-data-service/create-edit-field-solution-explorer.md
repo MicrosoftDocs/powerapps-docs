@@ -1,5 +1,5 @@
 ---
-title: "Create and edit fields for Common Data Service using PowerApps solution explorer | MicrosoftDocs"
+title: "Create and edit fields for Common Data Service using Power Apps solution explorer | MicrosoftDocs"
 ms.custom: ""
 ms.date: 05/18/2018
 ms.reviewer: ""
@@ -20,13 +20,13 @@ search.app:
   - "PowerApps"
   - D365CE
 ---
-# Create and edit fields for Common Data Service using PowerApps solution explorer
+# Create and edit fields for Common Data Service using Power Apps solution explorer
 
 Solution explorer provides one way to Create and edit fields for Common Data Service.
 
-The [PowerApps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) enables configuring the most common options, but certain options can only be set using solution explorer. <br />More information: 
+The [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) enables configuring the most common options, but certain options can only be set using solution explorer. <br />More information: 
 - [Create and edit fields for Common Data Service](create-edit-fields.md)
-- [Create and edit fields for Common Data Service using PowerApps portal](create-edit-field-portal.md)
+- [Create and edit fields for Common Data Service using Power Apps portal](create-edit-field-portal.md)
   
 ## Open solution explorer
 
@@ -263,7 +263,7 @@ Any of the fields that provide direct text input have an IME Mode. The Input Met
 
 ### See also  
 [Create and edit fields for Common Data Service](create-edit-fields.md)<br />
-[Create and edit fields for Common Data Service using PowerApps portal](create-edit-field-portal.md)<br />
+[Create and edit fields for Common Data Service using Power Apps portal](create-edit-field-portal.md)<br />
 [Types of fields and field data types](types-of-fields.md)<br />
 [Define calculated fields to automate manual calculations](define-calculated-fields.md)<br />
 [Define rollup fields that aggregate values](define-rollup-fields.md)<br />
