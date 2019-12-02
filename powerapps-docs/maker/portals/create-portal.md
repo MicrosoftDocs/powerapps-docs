@@ -1,5 +1,5 @@
 ---
-title: Create a portal in PowerApps | Microsoft Docs
+title: Create a portal in Power Apps | Microsoft Docs
 description: Instructions to create a portal in PowerApps.
 author: sbmjais
 manager: shujoshi
@@ -13,13 +13,13 @@ ms.reviewer:
 
 # Create a Common Data Service starter portal
 
-With the capability to build a portal in PowerApps, you can create a website for external and internal users enabling them to interact with data stored in Common Data Service.
+With the capability to build a portal in Power Apps, you can create a website for external and internal users enabling them to interact with data stored in Common Data Service.
 
 These are some benefits of creating a portal:
 
-- Because the data is stored in Common Data Service, you don't need to create a connection from PowerApps as you do with data sources such as SharePoint, model-driven apps in Dynamics 365, or Salesforce. You need only to specify the entities that you want to show or manage in the portal.
+- Because the data is stored in Common Data Service, you don't need to create a connection from Power Apps as you do with data sources such as SharePoint, model-driven apps in Dynamics 365, or Salesforce. You need only to specify the entities that you want to show or manage in the portal.
 
-- You can design the portal through the WYSIWYG PowerApps portals Studio by adding and configuring components on the webpages.
+- You can design the portal through the WYSIWYG Power Apps portals Studio by adding and configuring components on the webpages.
 
 You can create a portal either in a new environment or in your existing environment.
 
@@ -27,7 +27,7 @@ If you choose to create your portal in a new environment using the **Create new 
 
 If you choose to create your portal in an existing environment without portal pre-requisites, the pre-requisites are installed first and then the portal is created. In this method, the portal provisioning can take some time and you’ll be notified when the portal is provisioned.
 
-Based on the selected environment in PowerApps, you can create a Common Data Service starter portal or a portal in an environment containing model-driven apps in Dynamics 365.
+Based on the selected environment in Power Apps, you can create a Common Data Service starter portal or a portal in an environment containing model-driven apps in Dynamics 365.
 
 > [!NOTE]
 > When you create a portal, a few solutions are installed and sample data is imported.
@@ -66,7 +66,7 @@ After the portal is provisioned successfully, the status is updated and the port
 > [!div class=mx-imgBorder]
 > ![Portal provisioned](media/recent-apps.png "Portal provisioned")
 
-To edit the portal in PowerApps portals Studio, see [Edit a portal](manage-existing-portals.md#edit).
+To edit the portal in Power Apps portals Studio, see [Edit a portal](manage-existing-portals.md#edit).
 
 > [!NOTE]
 > - You can create a maximum of five portals in a tenant. However, there can only be one portal of each type created in an environment.
@@ -75,7 +75,7 @@ To edit the portal in PowerApps portals Studio, see [Edit a portal](manage-exist
 > - If you have provisioned a portal using the older portal add-on, you can still customize and manage it from [make.powerapps.com](https://make.powerapps.com).
 > - Provisioning portals from [make.powerapps.com](https://make.powerapps.com) does not consume the older portal add-ons. Also, these portals are not listed under the **Applications** tab on the **Dynamics 365 Administration Center** page.
 > - A Common Data Service starter portal cannot be created from the **Dynamics 365 Administration Center** page.
-> - PowerApps portals is not available in the France region.
+> - Power Apps portals is not available in the France region.
 
 ## Create new environment
 
@@ -97,12 +97,12 @@ Follow these steps when you create an environment using the option provided in t
 3.  Select the currency and language for the data stored in the database. You cannot change the currency or language once the database is created. When you're done, select **Create my database**. The database is created with the starter portal that enables you to quickly get started with sample content once the portal is provisioned.
 
     > [!NOTE]
-    > The **Include starter portal** option is available only when you create an environment using the option provided in the **Portal from blank** window. This option is not available when you create an environment from PowerApps admin center.
+    > The **Include starter portal** option is available only when you create an environment using the option provided in the **Portal from blank** window. This option is not available when you create an environment from Power Apps admin center.
 
     > [!div class=mx-imgBorder]
     > ![create new database](media/create-new-database.png "Create new database") 
 
-    It might take several minutes to create the database on Common Data Service. Once the database is created, the new environment is selected in the list of environments on the PowerApps home page and the Portal Management app is created. This app is not the actual portal but a model-driven companion app that allows you to perform advance configuration activities. You can now proceed with creating the portal for designing the external-facing website.
+    It might take several minutes to create the database on Common Data Service. Once the database is created, the new environment is selected in the list of environments on the Power Apps home page and the Portal Management app is created. This app is not the actual portal but a model-driven companion app that allows you to perform advance configuration activities. You can now proceed with creating the portal for designing the external-facing website.
 
     > [!div class=mx-imgBorder]
     > ![portal management app](media/portal-mgmt-app.png "Portal management app")
@@ -110,7 +110,7 @@ Follow these steps when you create an environment using the option provided in t
 4. After creating the environment and database, under **Make your own app**, select **Portal from blank**. 
 
     > [!NOTE]
-    > If the database is created and you are still getting the create database prompt, you must refresh the PowerApps home page before selecting the **Portal from blank** tile.
+    > If the database is created and you are still getting the create database prompt, you must refresh the Power Apps home page before selecting the **Portal from blank** tile.
 
 
 ## Portal provisioning notifications

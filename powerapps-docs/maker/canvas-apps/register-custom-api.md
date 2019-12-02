@@ -27,7 +27,7 @@ Sometimes though, you might want to call APIs, services, and systems that aren't
 
 * [Create a custom connector from scratch](https://docs.microsoft.com/connectors/custom-connectors/define-blank)
 
-* [Use a custom connector from a PowerApps app](https://docs.microsoft.com/connectors/custom-connectors/use-custom-connector-powerapps)
+* [Use a custom connector from a Power Apps app](https://docs.microsoft.com/connectors/custom-connectors/use-custom-connector-powerapps)
 
 * [Share custom connectors in your organization](https://docs.microsoft.com/connectors/custom-connectors/share)
 

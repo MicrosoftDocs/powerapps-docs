@@ -17,7 +17,7 @@ search.app:
 ---
 # Optimistic concurrency
 
-On a multi-threaded and multi-user system like PowerApps, operations and data changes often happen in parallel. A problem arises when two or more update or delete operations on the same piece of data happen at the same time. This situation could potentially result in data loss. The optimistic concurrency feature provides the ability for your applications to detect whether an entity record has changed on the server in the time between when your application retrieved the record and when it tries to update or delete that record.  
+On a multi-threaded and multi-user system like Power Apps, operations and data changes often happen in parallel. A problem arises when two or more update or delete operations on the same piece of data happen at the same time. This situation could potentially result in data loss. The optimistic concurrency feature provides the ability for your applications to detect whether an entity record has changed on the server in the time between when your application retrieved the record and when it tries to update or delete that record.  
   
  Optimistic concurrency is supported on all out-of-box entities enabled for offline sync and all custom entities. You can determine if an entity supports optimistic concurrency by retrieving the entity’s metadata using code or by viewing the metadata using the [Metadata Browser](browse-your-metadata.md), and check if the attribute **IsOptimisticConcurrencyEnabled** is set to `true`. For custom entities, this property is set to `true` by default.  
   

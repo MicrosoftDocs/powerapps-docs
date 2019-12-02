@@ -40,5 +40,5 @@ Type: `string | Date | number | boolean |` [Entityreference](../entityreference.
 ### Related topics
 
 [Entity](../entity.md)<br/>
-[PowerApps component framework API reference](../../reference/index.md)<br/>
-[PowerApps component framework overview](../../overview.md)
+[Power Apps component framework API reference](../../reference/index.md)<br/>
+[Power Apps component framework overview](../../overview.md)

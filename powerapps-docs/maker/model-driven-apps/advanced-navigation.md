@@ -1,5 +1,5 @@
 ---
-title: "Navigating to my apps, solution explorer, and settings in PowerApps | Microsoft Docs"
+title: "Navigating to my apps, solution explorer, and settings in Power Apps | Microsoft Docs"
 description: "Know how to locate advanced app making and customization areas in PowerApps"
 keywords: 
 author: Mattp123
@@ -26,7 +26,7 @@ search.app:
 
 # Navigate to advanced model-driven app making and customization areas
 
-This topic describes how to access advanced customization and administration areas that are available within a PowerApps environment.
+This topic describes how to access advanced customization and administration areas that are available within a Power Apps environment.
 
 ## Solutions
 The solutions area is where you can view, edit, create, import, export, and delete managed and unmanaged solutions. 
@@ -35,7 +35,7 @@ The solutions area is where you can view, edit, create, import, export, and dele
 2.	On the left navigation pane select **Solutions**. 
 
 ## Solution explorer
-Use solution explorer to perform app making and customization tasks that can’t be completed from the PowerApps home page.
+Use solution explorer to perform app making and customization tasks that can’t be completed from the Power Apps home page.
 
 1.	Sign in to [PowerApps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). 
 2.	On the left navigation pane select **Solutions**.  
@@ -64,7 +64,7 @@ Use the settings area to configure environment settings, activate or deactivate 
 First, see if the setting you need is in the ![Settings icon](media/powerapps-gear.png)  > **Advanced customizations** menu.
 
 To find settings not available from **Advanced customizations**:  
-1.	From a PowerApps model-driven app, select **Settings** ![Settings](../model-driven-apps/media/powerapps-gear.png) on the app toolbar, and then select **Advanced Settings**. 
+1.	From a Power Apps model-driven app, select **Settings** ![Settings](../model-driven-apps/media/powerapps-gear.png) on the app toolbar, and then select **Advanced Settings**. 
 2.	Select **Settings**, and then select the settings area that you want.
 
     > [!div class="mx-imgBorder"] 
@@ -72,4 +72,4 @@ To find settings not available from **Advanced customizations**:
 
 ## See also
 [Create or edit a model-driven app by using the app designer](create-edit-app.md)
-[Create or edit apps in PowerApps Studio for web](../canvas-apps/create-app-browser.md)
+[Create or edit apps in Power Apps Studio for web](../canvas-apps/create-app-browser.md)

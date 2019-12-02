@@ -34,9 +34,9 @@ The instructions apply to the following model-driven apps in Dynamics 365:
 
 - Dynamics 365 Project Service Automation
 
-## Run the PowerApps Solution Checker on your solutions
+## Run the Power Apps Solution Checker on your solutions
 
-The [PowerApps solution checker](https://docs.microsoft.com/powerapps/maker/common-data-service/use-powerapps-checker) performs a rich static analysis check on your solutions against a set of best practice rules to quickly identify problematic patterns. After the check completes, you receive a detailed report that lists the issues identified, the
+The [Power Apps solution checker](https://docs.microsoft.com/powerapps/maker/common-data-service/use-powerapps-checker) performs a rich static analysis check on your solutions against a set of best practice rules to quickly identify problematic patterns. After the check completes, you receive a detailed report that lists the issues identified, the
 components and code affected, and links to documentation that describes how to
 resolve each issue.
 
@@ -91,7 +91,7 @@ Unified Interface.
 
 ## Identify replacements for deprecated client API code and features
 
-Based on the outputs of the **PowerApps Solution Checker** and the information
+Based on the outputs of the **Power Apps Solution Checker** and the information
 contained in [Important changes (deprecations) coming](https://docs.microsoft.com/power-platform/important-changes-coming) on deprecated client APIs and
 features, you should have a good understanding of the customizations and features that
 either need to be corrected or replaced in your Unified Interface project.
@@ -162,7 +162,7 @@ Interface are the following:
 
 ### What are model-driven apps?
 
-**Model-driven apps** are a type of app you can create using PowerApps that helps you provide tailored experience to your users depending on their role in the organization. For example, a salesperson can have a completely different experience than a customer service representative through different model-driven apps even though they are using data from the same environment. Multiple model-driven apps can be created in a Common Data Service environment. More information: [What are model-driven apps?](https://docs.microsoft.com/powerapps/maker/model-driven-apps/model-driven-app-overview)
+**Model-driven apps** are a type of app you can create using Power Apps that helps you provide tailored experience to your users depending on their role in the organization. For example, a salesperson can have a completely different experience than a customer service representative through different model-driven apps even though they are using data from the same environment. Multiple model-driven apps can be created in a Common Data Service environment. More information: [What are model-driven apps?](https://docs.microsoft.com/powerapps/maker/model-driven-apps/model-driven-app-overview)
 
 The Dynamics 365 first-party apps listed earlier are examples of model-driven apps.
 
@@ -255,7 +255,7 @@ processes for each group or role.
 -   Leverage **Reference Panels** on forms to bundle multiple views, quick
     views, and KB search feature in a single place.
 
--   Leverage the [PowerApps Component
+-   Leverage the [Power Apps Component
     Framework](https://docs.microsoft.com/powerapps/developer/component-framework/overview)
     to add even more custom controls. You can get some from the community or from partners and ISVs.
 

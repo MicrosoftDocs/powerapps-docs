@@ -25,7 +25,7 @@ search.app:
 ---
 # Access a model-driven app view definition in PowerApps
 
- In this topic you open a view definition to display properties and options to configure the view. There are several ways you can access view definitions in PowerApps. 
+ In this topic you open a view definition to display properties and options to configure the view. There are several ways you can access view definitions in Power Apps. 
   
   
 ## Open a view for editing in the latest view designer

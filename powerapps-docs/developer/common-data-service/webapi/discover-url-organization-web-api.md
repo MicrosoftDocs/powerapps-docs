@@ -28,7 +28,7 @@ search.app:
 With the Web API discovery service, you can use standard `$filter` and `$select` parameters to a Web API service request to customize the returned list of instance data.
 <!-- TODO should only talk about the global discovery service -->
 
-## Global discovery service
+## Global Discovery service
 
 In addition to datacenter specific Discovery services, that are available on the 2011 (SOAP) endpoint and through the Web API, there is also a Web API only Global Discovery service that spans all operational datacenters. For more information about the Discovery service on the 2011 endpoint see [Discovery Service](../org-service/discovery-service.md)
 

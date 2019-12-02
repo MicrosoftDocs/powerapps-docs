@@ -1,6 +1,6 @@
 ---
 title: Generate a canvas app from Common Data Service | Microsoft Docs
-description: In PowerApps, automatically generate a canvas app to manage data in Common Data Service
+description: In Power Apps, automatically generate a canvas app to manage data in Common Data Service
 author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
@@ -16,9 +16,9 @@ search.app:
 ---
 # Generate a canvas app from Common Data Service in PowerApps
 
-In PowerApps, automatically generate a canvas app based on a list of sample accounts in [Common Data Service](../common-data-service/data-platform-intro.md). In this app, you can browse all accounts, show details of a single account, and create, update, or delete an account.
+In Power Apps, automatically generate a canvas app based on a list of sample accounts in [Common Data Service](../common-data-service/data-platform-intro.md). In this app, you can browse all accounts, show details of a single account, and create, update, or delete an account.
 
-If you're not signed up for PowerApps, [sign up for free](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) before you start.
+If you're not signed up for Power Apps, [sign up for free](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) before you start.
 
 ## Prerequisites
 
@@ -38,7 +38,7 @@ To follow this quickstart, you must be assigned to the [Environment Maker](https
 
 1. Under **Choose a table**, select **Accounts**, and then select **Connect**.
 
-1. If the **Welcome to PowerApps Studio** dialog box appears, select **Skip**.
+1. If the **Welcome to Power Apps Studio** dialog box appears, select **Skip**.
 
 Your app opens to the browse screen, which shows a list of accounts in a control called a gallery. Near the top of the screen, a title bar shows icons for refreshing the data in the gallery, sorting the data in the gallery alphabetically, and adding data to the gallery. Under the title bar, a search box provides the option to filter the data in the gallery based on text that you type or paste. 
 

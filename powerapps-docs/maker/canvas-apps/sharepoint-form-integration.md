@@ -15,7 +15,7 @@ search.app:
   - PowerApps
 ---
 # Understand SharePoint forms integration
-You can now easily [customize any SharePoint list form](customize-list-form.md) in PowerApps. In this article, we'll walk through the details of how these forms work and how you can customize them further.
+You can now easily [customize any SharePoint list form](customize-list-form.md) in Power Apps. In this article, we'll walk through the details of how these forms work and how you can customize them further.
 
 If you've customized a form for a SharePoint list, you've likely noticed that the default generated form works for all operations, like creating, showing, or editing an item. This is accomplished with the help of generated formulas and the **SharePointIntegration** control.
 
@@ -29,7 +29,7 @@ The default generated form consists of the following controls and their correspo
 
     * **Data Source** - The list for which the form has been customized.
 
-    * **Item** - The selected item from the list. This is set to First() item in the list for your convenience when working in PowerApps Studio.
+    * **Item** - The selected item from the list. This is set to First() item in the list for your convenience when working in Power Apps Studio.
 
         **If(IsBlank(SharePointIntegration.Selected) || IsEmpty(SharePointIntegration.Selected),First('*YourListName*'),SharePointIntegration.Selected)**
 
@@ -63,7 +63,7 @@ The default generated form consists of the following controls and their correspo
 
         **ResetForm(SharePointForm1)**
 
-These defaults ensure that the form works when running within SharePoint - they change the PowerApps form mode as the user interacts with it in SharePoint, and they ensure that the changes are submitted to SharePoint.
+These defaults ensure that the form works when running within SharePoint - they change the Power Apps form mode as the user interacts with it in SharePoint, and they ensure that the changes are submitted to SharePoint.
 
 ## Understand the SharePointIntegration control
 The **SharePointIntegration** control communicates user actions between SharePoint and PowerApps.
@@ -71,7 +71,7 @@ The **SharePointIntegration** control communicates user actions between SharePoi
 ![](./media/sharepoint-form-integration/sharepointintegration-object.png)
 
 >[!NOTE]
->You can access the properties for the **SharePointIntegration** control only when the form is running in SharePoint, not when you're customizing the form in PowerApps Studio. These properties may not be available in **OnStart** or **OnVisible**. 
+>You can access the properties for the **SharePointIntegration** control only when the form is running in SharePoint, not when you're customizing the form in Power Apps Studio. These properties may not be available in **OnStart** or **OnVisible**. 
 
 The **SharePointIntegration** control has the following properties:
 

@@ -1,5 +1,5 @@
 ---
-title: "Create or edit a model-driven app using the app designer in PowerApps | MicrosoftDocs"
+title: "Create or edit a model-driven app using the app designer in Power Apps | MicrosoftDocs"
 description: "Learn how to create or edit apps using the app designer"
 keywords: ""
 ms.date: 02/05/2019
@@ -32,7 +32,7 @@ In this topic you learn the basics of how to create and edit a model-driven app 
 
 ## Prerequisites
 Verify the following prerequisites before you start creating an app:
-- A PowerApps environment. More information: [Create an environment](https://docs.microsoft.com/powerapps/administrator/create-environment)
+- A Power Apps environment. More information: [Create an environment](https://docs.microsoft.com/powerapps/administrator/create-environment)
 - System administrator or system customizer security role. More information: [About predefined security roles](https://docs.microsoft.com/powerapps/maker/model-driven-apps/share-model-driven-app#about-predefined-security-roles)
  
 <a name="createApp"></a>   

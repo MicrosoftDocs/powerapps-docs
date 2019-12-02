@@ -1,5 +1,5 @@
 ---
-title: iFrame properties for model-driven app Main forms in PowerApps | MicrosoftDocs
+title: iFrame properties for model-driven app Main forms in Power Apps | MicrosoftDocs
 description: Understand the iFrame properties for Main forms
 Keywords: Main form; iFrame properties; Dynamics 365
 author: Mattp123

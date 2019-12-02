@@ -2,7 +2,7 @@
 title: "Execute multiple requests using the Organization service (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "ExecuteMultipleRequest message supports higher throughput bulk message passing scenarios in Common Data Service." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 11/27/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.topic: "article"
@@ -112,8 +112,9 @@ There are several constraints related to the use of the <xref:Microsoft.Xrm.Sdk.
 -   **No recursion is allowed** <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest> cannot invoke <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest>. An <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest> found in the request collection will generate a fault for that request item.  
   
 -   **Maximum batch size** There is a limit to how many requests can be added to a request collection. If that limit is exceeded, a fault is thrown before the first request is ever executed. A limit of 1000 requests is typical though this maximum amount can be set for the Common Data Service deployment.
-  
--   **Throttling of concurrent calls** For Common Data Service there is a limit of 2 concurrent <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest> executions per organization. If that limit is exceeded, a *Server Busy* fault is thrown before the first request is ever executed. 
+
+> [!NOTE]
+> There was once a limit on the number of concurrent ExecuteMultiple requests. The limit was 2. This was removed because service protection limits made it unnecessary. For more information: [Service Protection API Limits](../api-limits.md).
 
   
 <a name="fault"></a>

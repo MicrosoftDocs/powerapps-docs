@@ -3,9 +3,9 @@
   items:
   - name: Getting started
     items:
-    - name: What's the role of a PowerApps administrator?
+    - name: What's the role of a Power Apps administrator?
       href: overview-role-powerapps-admin.md
-    - name: PowerApps enterprise deployment whitepaper
+    - name: Power Apps enterprise deployment whitepaper
       href: admin-powerapps-enterprise-deployment.md
   - name: Licensing
     items:
@@ -15,7 +15,7 @@
       href: signup-question-and-answer.md
     - name: Purchase PowerApps
       href: signup-for-powerapps-admin.md
-#    - name: PowerApps for US Government
+#    - name: Power Apps for US Government
 #      href: powerapps-for-us-govt.md 
   - name: Manage PowerApps
     items:
@@ -25,7 +25,7 @@
       href: admin-manage-apps.md
     - name: Move an app between tenants or environments
       href: environment-and-tenant-migration.md
-    - name: PowerShell support for PowerApps (preview)
+    - name: PowerShell support for Power Apps (preview)
       href: powerapps-powershell.md
     - name: Activity logging for PowerApps
       href: https://docs.microsoft.com/power-platform/admin/logging-powerapps
@@ -41,7 +41,7 @@
         href: powerapps-gdpr-dsr-guide-systemlogs.md
       - name: Data integrations for Common Data Service
         href: data-integration-gdpr-dsr-guide.md
-      - name: PowerApps customer data
+      - name: Power Apps customer data
         href: powerapps-gdpr-dsr-guide.md
         items:
         - name: Export data

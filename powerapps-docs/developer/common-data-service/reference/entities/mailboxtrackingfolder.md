@@ -722,43 +722,43 @@ See environmentvariablevalue Entity [environmentvariablevalue_MailboxTrackingFol
 
 ### <a name="BKMK_msdyn_analysiscomponent_MailboxTrackingFolders"></a> msdyn_analysiscomponent_MailboxTrackingFolders
 
-**Added by**: PowerApps Checker Solution
+**Added by**: Power Apps Checker Solution
 
 See msdyn_analysiscomponent Entity [msdyn_analysiscomponent_MailboxTrackingFolders](msdyn_analysiscomponent.md#BKMK_msdyn_analysiscomponent_MailboxTrackingFolders) One-To-Many relationship.
 
 ### <a name="BKMK_msdyn_analysisjob_MailboxTrackingFolders"></a> msdyn_analysisjob_MailboxTrackingFolders
 
-**Added by**: PowerApps Checker Solution
+**Added by**: Power Apps Checker Solution
 
 See msdyn_analysisjob Entity [msdyn_analysisjob_MailboxTrackingFolders](msdyn_analysisjob.md#BKMK_msdyn_analysisjob_MailboxTrackingFolders) One-To-Many relationship.
 
 ### <a name="BKMK_msdyn_analysisresult_MailboxTrackingFolders"></a> msdyn_analysisresult_MailboxTrackingFolders
 
-**Added by**: PowerApps Checker Solution
+**Added by**: Power Apps Checker Solution
 
 See msdyn_analysisresult Entity [msdyn_analysisresult_MailboxTrackingFolders](msdyn_analysisresult.md#BKMK_msdyn_analysisresult_MailboxTrackingFolders) One-To-Many relationship.
 
 ### <a name="BKMK_msdyn_analysisresultdetail_MailboxTrackingFolders"></a> msdyn_analysisresultdetail_MailboxTrackingFolders
 
-**Added by**: PowerApps Checker Solution
+**Added by**: Power Apps Checker Solution
 
 See msdyn_analysisresultdetail Entity [msdyn_analysisresultdetail_MailboxTrackingFolders](msdyn_analysisresultdetail.md#BKMK_msdyn_analysisresultdetail_MailboxTrackingFolders) One-To-Many relationship.
 
 ### <a name="BKMK_msdyn_solutionhealthrule_MailboxTrackingFolders"></a> msdyn_solutionhealthrule_MailboxTrackingFolders
 
-**Added by**: PowerApps Checker Solution
+**Added by**: Power Apps Checker Solution
 
 See msdyn_solutionhealthrule Entity [msdyn_solutionhealthrule_MailboxTrackingFolders](msdyn_solutionhealthrule.md#BKMK_msdyn_solutionhealthrule_MailboxTrackingFolders) One-To-Many relationship.
 
 ### <a name="BKMK_msdyn_solutionhealthruleargument_MailboxTrackingFolders"></a> msdyn_solutionhealthruleargument_MailboxTrackingFolders
 
-**Added by**: PowerApps Checker Solution
+**Added by**: Power Apps Checker Solution
 
 See msdyn_solutionhealthruleargument Entity [msdyn_solutionhealthruleargument_MailboxTrackingFolders](msdyn_solutionhealthruleargument.md#BKMK_msdyn_solutionhealthruleargument_MailboxTrackingFolders) One-To-Many relationship.
 
 ### <a name="BKMK_msdyn_solutionhealthruleset_MailboxTrackingFolders"></a> msdyn_solutionhealthruleset_MailboxTrackingFolders
 
-**Added by**: PowerApps Checker Solution
+**Added by**: Power Apps Checker Solution
 
 See msdyn_solutionhealthruleset Entity [msdyn_solutionhealthruleset_MailboxTrackingFolders](msdyn_solutionhealthruleset.md#BKMK_msdyn_solutionhealthruleset_MailboxTrackingFolders) One-To-Many relationship.
 

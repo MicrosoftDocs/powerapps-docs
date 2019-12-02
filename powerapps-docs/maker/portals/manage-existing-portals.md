@@ -1,5 +1,5 @@
 ---
-title: Manage existing portals in PowerApps | Microsoft Docs
+title: Manage existing portals in Power Apps | Microsoft Docs
 description: Instructions to manage a portal in PowerApps.
 author: sbmjais
 manager: shujoshi
@@ -13,7 +13,7 @@ ms.reviewer:
 
 # Manage existing portals in PowerApps
 
-Once you've created a portal, it is visible under the **Recent apps** section on the PowerApps home page.
+Once you've created a portal, it is visible under the **Recent apps** section on the Power Apps home page.
 
 > [!div class=mx-imgBorder]
 > ![recent apps](media/recent-apps.png "Recent apps")  
@@ -25,7 +25,7 @@ To manage an app, select **More Commands** (**…**) for the portal and choose a
 
 ## Edit
 
-Opens the [PowerApps portals Studio](portal-designer-anatomy.md) to edit the content and components of the portal.  
+Opens the [Power Apps portals Studio](portal-designer-anatomy.md) to edit the content and components of the portal.  
 
 > [!div class=mx-imgBorder]
 > ![portal maker](media/portal-maker.png "Portal maker")  
@@ -37,7 +37,7 @@ Opens the portal to browse the website. This helps you to see the portal as it w
 > [!div class=mx-imgBorder]
 > ![portal website](media/portal-website.png "Portal website")  
 
-Alternately, you can also open the portal to browse the website by selecting **Browse website** in the [PowerApps portals Studio](portal-designer-anatomy.md) to view the changes you have made to the website. The website opens in a new tab with URL of the website.
+Alternately, you can also open the portal to browse the website by selecting **Browse website** in the [Power Apps portals Studio](portal-designer-anatomy.md) to view the changes you have made to the website. The website opens in a new tab with URL of the website.
 
 ## Share
 
@@ -86,7 +86,7 @@ Your portal should work anonymously and should be accessible by the external use
 
 ## Settings
 
-Displays the portal settings and allows you to change the name of the portal. You can also perform advanced actions such as administering the portal though the PowerApps Portals admin center and working with site settings. Settings provides links to the PowerApps Portals admin center and Site settings. More information: [Advanced portal administration](admin/admin-overview.md) and [Configure site settings](configure/configure-site-settings.md).  
+Displays the portal settings and allows you to change the name of the portal. You can also perform advanced actions such as administering the portal though the Power Apps Portals admin center and working with site settings. Settings provides links to the Power Apps Portals admin center and Site settings. More information: [Advanced portal administration](admin/admin-overview.md) and [Configure site settings](configure/configure-site-settings.md).  
 
 > [!div class=mx-imgBorder]
 > ![portal settings](media/portal-settings.png "Portal settings")  

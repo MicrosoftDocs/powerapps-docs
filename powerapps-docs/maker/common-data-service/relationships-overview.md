@@ -1,6 +1,6 @@
 ---
-title: "Entity overview in PowerApps | MicrosoftDocs"
-description: "Learn how to create and edit entities using PowerApps portal"
+title: "Entity overview in Power Apps | MicrosoftDocs"
+description: "Learn how to create and edit entities using Power Apps portal"
 ms.custom: ""
 ms.date: 07/25/2018
 ms.reviewer: ""
@@ -32,4 +32,4 @@ Entity relationships define the ways that entity records can be associated with 
 
 ## See also
 [Create a relationship between entities](data-platform-entity-lookup.md) <br/>
-[Create Many-to-many entity relationships in Common Data Service using PowerApps portal](create-edit-nn-relationships-portal.md)
+[Create Many-to-many entity relationships in Common Data Service using Power Apps portal](create-edit-nn-relationships-portal.md)

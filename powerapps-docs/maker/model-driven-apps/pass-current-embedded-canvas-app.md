@@ -15,7 +15,7 @@ author: "Aneesmsft"
 ms.author: "matp"
 manager: "kvivek"
 tags: 
-  - "PowerApps maker portal impact"
+  - "Power Apps maker portal impact"
 search.audienceType: 
   - maker
 search.app: 
@@ -47,10 +47,10 @@ Imagine that you want to add an embedded canvas app on an account main form and 
          - Notice that, even though this property appears changeable, changing it has no effect on the embedded canvas app. It is meant only to serve as a reference for you.
      - The **App ID** property specifies the ID of the embedded canvas app. It will be automatically generated and filled-in for you when the canvas app is created.
          - Notice that any change to the **App ID** value breaks the link from the model-driven form to the embedded canvas app.
-10.	Select **Customize** to create or edit the canvas app. This opens PowerApps Studio in a new tab.
+10.	Select **Customize** to create or edit the canvas app. This opens Power Apps Studio in a new tab.
 	   > [!NOTE]
-       > If opening PowerApps Studio is blocked due to a web browser pop-up blocker you must enable the make.powerapps.com site or temporarily disable the pop-up blocker and then select **Customize** again.
-11.	In PowerApps Studio notice that there is a special **ModelDrivenFormIntegration** control in the left pane. This control is responsible for bringing contextual data from the host model-driven form to the embedded canvas app.
+       > If opening Power Apps Studio is blocked due to a web browser pop-up blocker you must enable the make.powerapps.com site or temporarily disable the pop-up blocker and then select **Customize** again.
+11.	In Power Apps Studio notice that there is a special **ModelDrivenFormIntegration** control in the left pane. This control is responsible for bringing contextual data from the host model-driven form to the embedded canvas app.
 12.	Select the **Gallery1** control and observe that the **Items** property is set to **ModelDrivenFormIntegration.Data**.
       > [!NOTE]
       > ModelDrivenFormIntegration.Data is a list of records. In this example it has only one record. To directly reference the record you can use the First function. For example, *First(ModelDrivenFormIntegration.Data).Name*.
@@ -64,7 +64,7 @@ Imagine that you want to add an embedded canvas app on an account main form and 
     -  Saving an app for the first time automatically publishes the app.
 	  -  On subsequent saves, select **Publish** and then select **Publish this version** to make your changes available.
 20.	On the menu, select **Back** and then select the browser tab that has the form editor open. Observe that the **App ID** property of the canvas app control now has a value automatically filled in. Note the following: 
-    - 	The form editor has a direct link with PowerApps Studio that was opened in another browser tab in an earlier step.
+    - 	The form editor has a direct link with Power Apps Studio that was opened in another browser tab in an earlier step.
     - 	The form editor "listens" for the **App ID** to be sent to it.
     - 	The **App ID** is sent to the form editor when the app is saved.
 21.	On the **Field Properties** dialog box, select the **Display** tab.

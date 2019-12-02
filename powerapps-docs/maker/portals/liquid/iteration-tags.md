@@ -396,4 +396,4 @@ Defines a range of numbers to loop through.
 [Control flow tags](control-flow-tags.md)
 [Variable tags](variable-tags.md)
 [Template tags](template-tags.md)
-[PowerApps common data service entity tags](portals-entity-tags.md)
+[Power Apps common data service entity tags](portals-entity-tags.md)

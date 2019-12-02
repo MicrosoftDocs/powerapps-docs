@@ -1,5 +1,5 @@
 ---
-title: "Configure an entity for feedback with PowerApps | MicrosoftDocs"
+title: "Configure an entity for feedback with Power Apps | MicrosoftDocs"
 description: "Learn how to enable feedback for an entity"
 ms.custom: ""
 ms.date: 05/18/2018

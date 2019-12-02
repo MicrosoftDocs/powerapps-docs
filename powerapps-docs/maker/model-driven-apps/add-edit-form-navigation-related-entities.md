@@ -1,5 +1,5 @@
 ---
-title: "Add model-driven app form navigation for related entities in PowerApps | MicrosoftDocs"
+title: "Add model-driven app form navigation for related entities in Power Apps | MicrosoftDocs"
 description: Learn how to add form navigation for related entities
 ms.custom: ""
 ms.date: 06/18/2018

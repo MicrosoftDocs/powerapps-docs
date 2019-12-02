@@ -1,6 +1,6 @@
 ---
-title: "View or download developer resources for PowerApps and Common Data Service | MicrosoftDocs"
-description: "Find developer resources and service endpoint URLs PowerApps and Common Data Service"
+title: "View or download developer resources for Power Apps and Common Data Service | MicrosoftDocs"
+description: "Find developer resources and service endpoint URLs Power Apps and Common Data Service"
 keywords: ""
 ms.date: 09/25/2019
 ms.service: powerapps
@@ -26,7 +26,7 @@ This page provides resources for developers and information about the specific i
 
 ## View the Developer Resources page for your environment
 
-1. From the PowerApps portal select the ![Settings Button](../../administrator/media/settings-button-nav-bar.png) Settings button and choose **Advanced customizations**.
+1. From the Power Apps portal select the ![Settings Button](../../administrator/media/settings-button-nav-bar.png) Settings button and choose **Advanced customizations**.
 
     ![Advanced Customizations](media/advanced-customizations-menu.png)
 
@@ -39,11 +39,11 @@ This section provides links for developers to find resources. The following reso
 
 |Link |Description|
 |---------|---------|
-|[Developer Center](https://go.microsoft.com/fwlink/?LinkId=551006).|Start here for developer docs on PowerApps and Common Data Service.|
-|[PowerApps Community/Forums](https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1)|Ask and answer questions in the PowerApps community.|
+|[Developer Center](https://go.microsoft.com/fwlink/?LinkId=551006).|Start here for developer docs on Power Apps and Common Data Service.|
+|[Power Apps Community/Forums](https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1)|Ask and answer questions in the Power Apps community.|
 |[NuGet Packages](https://www.nuget.org/profiles/crmsdk)|Discover NuGet packages to add SDK assemblies to your projects.|
 |[Download Tools](/powerapps/developer/common-data-service/download-tools-nuget)|Tools that you will need are available to download from NuGet. Use the PowerShell script on this page to get the latest versions.|
-|[Sample Code](https://go.microsoft.com/fwlink/?LinkId=553007)|A GitHub repo for PowerApps samples.|
+|[Sample Code](https://go.microsoft.com/fwlink/?LinkId=553007)|A GitHub repo for Power Apps samples.|
 |[Developer Overview](https://go.microsoft.com/fwlink/?LinkId=550995)|Link to a topic providing an overview for developers.|
 
 ## Connect your apps to this instance of Common Data Service

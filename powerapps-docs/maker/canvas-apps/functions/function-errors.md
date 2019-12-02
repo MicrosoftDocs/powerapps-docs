@@ -76,7 +76,7 @@ To make this change in the data source, the **[Patch](function-patch.md)** funct
 
 where **Gallery.Updates** evaluates to **{ Quantity: 90 }**, since only the **Quantity** property has been modified.
 
-Unfortunately, just before the **[Patch](function-patch.md)** function was invoked, somebody else modifies the **Quantity** for Chocolate to 80.  PowerApps will detect this and not allow the conflicting change to occur.  You can check for this situation with the formula:
+Unfortunately, just before the **[Patch](function-patch.md)** function was invoked, somebody else modifies the **Quantity** for Chocolate to 80.  Power Apps will detect this and not allow the conflicting change to occur.  You can check for this situation with the formula:
 
 * **IsEmpty( Errors( IceCream, EditRecord ) )**
 

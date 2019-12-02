@@ -1,6 +1,6 @@
 ---
-title: Portal PowerApps portals Studio anatomy | Microsoft Docs
-description: Learn about the anatomy of PowerApps portals Studio.
+title: Portal Power Apps portals Studio anatomy | Microsoft Docs
+description: Learn about the anatomy of Power Apps portals Studio.
 author: sbmjais
 manager: shujoshi
 ms.service: powerapps
@@ -11,11 +11,11 @@ ms.author: shjais
 ms.reviewer:
 ---
 
-# PowerApps portals Studio anatomy
+# Power Apps portals Studio anatomy
 
-You can use PowerApps portals Studio to create and customize your website. It contains various options to add and configure webpages, components, forms, and lists. The anatomy of PowerApps portals Studio is as follows:
+You can use Power Apps portals Studio to create and customize your website. It contains various options to add and configure webpages, components, forms, and lists. The anatomy of Power Apps portals Studio is as follows:
 
-![PowerApps portals Studio anatomy](media/maker-anatomy.png "PowerApps portals Studio anatomy")  
+![Power Apps portals Studio anatomy](media/maker-anatomy.png "Power Apps portals Studio anatomy")  
 
 | **Annotation** | **Name**        | **Description**                                                                              |
 |----------------|-----------------|----------------------------------------------------------------------------------------------|

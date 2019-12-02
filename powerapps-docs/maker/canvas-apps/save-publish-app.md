@@ -20,7 +20,7 @@ Whenever you save changes to a canvas app, you automatically publish them only f
 For information about how to share an app, see [Share an app](share-app.md).
 
 ## Save changes to an app
-In PowerApps Studio, click or tap **Save** on the **File** menu (on the left edge), and then follow either of these steps:
+In Power Apps Studio, click or tap **Save** on the **File** menu (on the left edge), and then follow either of these steps:
 
 * If you've never saved the app before, provide a name for it, and then click or tap **Save**.
 
@@ -29,12 +29,12 @@ In PowerApps Studio, click or tap **Save** on the **File** menu (on the left edg
 
     ![Save updated app](./media/save-publish-app/save-app.png)
 
-PowerApps can also periodically save the app every 2 minutes. If you have saved the app once, PowerApps will continue to save a version of the app periodically without requiring the user to press or tap the Save action. Authors can enable or disable the **Auto save** setting from the **Account** tab on the **File** menu.
+Power Apps can also periodically save the app every 2 minutes. If you have saved the app once, Power Apps will continue to save a version of the app periodically without requiring the user to press or tap the Save action. Authors can enable or disable the **Auto save** setting from the **Account** tab on the **File** menu.
 
 ![Auto save setting](./media/save-publish-app/autosave.png)
 
 ## Publish an app
-1. In PowerApps Studio, click or tap **Save** on the **File** menu (on the left edge), and then click or tap **Publish this version**.
+1. In Power Apps Studio, click or tap **Save** on the **File** menu (on the left edge), and then click or tap **Publish this version**.
 
     ![Publish app](./media/save-publish-app/publish-app.png)
 2. In the **Publish** dialog box, tap or click **Publish this version** to publish the app to all users with whom the app is shared.
@@ -42,7 +42,7 @@ PowerApps can also periodically save the app every 2 minutes. If you have saved 
    ![Review Publish](./media/save-publish-app/publish-review.png)
 
    > [!NOTE]
-   > Whenever you publish a canvas app, your app will be upgraded to run on the latest version of PowerApps – which means it will get   the benefit of all the latest features and performance upgrades we’ve added since you last published. If you haven’t published an update in several months, you’ll likely see an immediate performance benefit from republishing now.
+   > Whenever you publish a canvas app, your app will be upgraded to run on the latest version of Power Apps – which means it will get   the benefit of all the latest features and performance upgrades we’ve added since you last published. If you haven’t published an update in several months, you’ll likely see an immediate performance benefit from republishing now.
 
 ## Identify the live version
 In [powerapps.com](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), click or tap **Apps** on the **File** menu (on the left edge), click or tap the details icon for an app, and then click or tap the **Versions** tab.
