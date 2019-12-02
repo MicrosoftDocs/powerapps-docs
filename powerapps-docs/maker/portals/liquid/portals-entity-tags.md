@@ -1,23 +1,23 @@
 ---
-title: "Use PowerApps Common Data Service entity tags for a portal | MicrosoftDocs"
-description: "Learn about PowerApps Common Data Service entity tags available in portal."
+title: "Use Power Apps Common Data Service entity tags for a portal | MicrosoftDocs"
+description: "Learn about Power Apps Common Data Service entity tags available in portal."
 author: sbmjais
 manager: shujoshi
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/07/2019
+ms.date: 11/28/2019
 ms.author: shjais
 ms.reviewer:
 ---
 
-# PowerApps Common Data Service entity tags
+# Power Apps Common Data Service entity tags
 
-PowerApps entity tags are used to load and display PowerApps data, or use other PowerApps portals framework services. These tags are PowerApps-specific extensions to the Liquid language.
+Power Apps entity tags are used to load and display Power Apps data, or use other Power Apps portals framework services. These tags are PowerApps-specific extensions to the Liquid language.
 
 ## chart
 
-Adds a PowerApps chart to a web page. The chart tag can be added in the Copy field on a Web Page or in the Source field on a Web Template. For steps to add a PowerApps chart to a web page, see [Add a chart to a web page in portal](../configure/add-chart.md).
+Adds a Power Apps chart to a web page. The chart tag can be added in the Copy field on a Web Page or in the Source field on a Web Template. For steps to add a Power Apps chart to a web page, see [Add a chart to a web page in portal](../configure/add-chart.md).
 
 ```
 {% chart id:"EE3C733D-5693-DE11-97D4-00155DA3B01E" viewid:"00000000-0000-0000-00AA-000010001006" %}
@@ -40,7 +40,7 @@ ID of the entity when opened in view editor.
 Adds the Power BI dashboards and reports within pages. The tag can be added in the **Copy** field on a web page or in the **Source** field on a web template. For steps to add a Power BI report or dashboard to a webpage in portal, see [Add a Power BI report or dashboard to a webpage in portal](../admin/add-powerbi-report.md).
 
 > [!NOTE]
-> For the tag to work, you must [enable Power BI integration](../admin/set-up-power-bi-integration.md) from PowerApps Portals admin center. If the Power BI integration is not enabled, dashboard or report will not be displayed.
+> For the tag to work, you must [enable Power BI integration](../admin/set-up-power-bi-integration.md) from Power Apps Portals admin center. If the Power BI integration is not enabled, dashboard or report will not be displayed.
 
 ### Parameters
 
@@ -51,14 +51,14 @@ The powerbi tag accepts the following parameters:
 Path of the Power BI report or dashboard. If the Power BI report or dashboard is secure, you must provide the authentication type.
 
 ```
-{% powerbi path:"https://app.powerbi.com/groups/00000000-0000-0000-0000-000000000000/reports/00000000-0000-0000-0000-000000000001/ReportSection01" %}
+{% powerbi authentication_type:"powerbiembedded" path:"https://app.powerbi.com/groups/00000000-0000-0000-0000-000000000000/reports/00000000-0000-0000-0000-000000000001/ReportSection01" %}
 ```
 
 **authentication_type**
 
 Type of authentication required for the Power BI report or dashboard. Valid values for this parameter are:
 
-- **Anonymous**: Allows you to embed publish to web Power BI reports. The default authentication type is Anonymous.
+- **Anonymous**: Allows you to embed publish to web Power BI reports. The default authentication type is Anonymous. When using the authentication type as Anonymous, you must get the Power BI report URL as described at: [Publish to web from Power BI](https://docs.microsoft.com/power-bi/service-publish-to-web)
 
 - **AAD**: Allows you to share secure Power BI reports or dashboards to Power BI Azure Active Directory authenticated users.
 
@@ -134,7 +134,7 @@ If you've assigned a role to a Power BI report, and didn't specify the **roles**
 
 ## editable
 
-Renders a given PowerApps portals CMS object as editable on the portal, for users with content editing permission for that object. Editable objects include [page](liquid-objects.md#page), [snippets](liquid-objects.md#snippets), and [weblinks](liquid-objects.md#weblinks).  
+Renders a given Power Apps portals CMS object as editable on the portal, for users with content editing permission for that object. Editable objects include [page](liquid-objects.md#page), [snippets](liquid-objects.md#snippets), and [weblinks](liquid-objects.md#weblinks).  
 
 ```
 {% editable page 'adx_copy' type: 'html', title: 'Page Copy', escape: false, liquid: true %}
@@ -279,7 +279,7 @@ Loaded entity list {{ entitylist.adx_name }}.
 
 **language\_code**
 
-A PowerApps integer language code to select the entity list localized labels to be loaded. If no language\_code is provided, the default language of the portal application PowerApps connection will be used.
+A Power Apps integer language code to select the entity list localized labels to be loaded. If no language\_code is provided, the default language of the portal application Power Apps connection will be used.
 
 ```
 {% entitylist name:"My Entity List", language_code:1033 %}
@@ -291,7 +291,7 @@ Loaded entity list {{ entitylist.adx_name }}.
 
 ## entityview
 
-Loads a given PowerApps view, by name or ID. The properties of the view ߝ view column metadata, paginated result records, etc. can then be accessed using an [entityview object](liquid-objects.md#entityview) that will be available within the tag block.  
+Loads a given Power Apps view, by name or ID. The properties of the view ߝ view column metadata, paginated result records, etc. can then be accessed using an [entityview object](liquid-objects.md#entityview) that will be available within the tag block.  
 
 If the view is loaded successfully, the content within the block will be rendered. If the view is not found, the block content will not be rendered.
 
@@ -329,7 +329,7 @@ Loaded default view of the entity list associated with the current page, with {{
 
 ### Parameters
 
-Provide **either** id **or** logical\_name with name to select the PowerApps view to load. If neither is provided, and the entityview tag is nested within an entitylist tag, the default view of the enclosing entitylist will be loaded.
+Provide **either** id **or** logical\_name with name to select the Power Apps view to load. If neither is provided, and the entityview tag is nested within an entitylist tag, the default view of the enclosing entitylist will be loaded.
 
 **id**
 
@@ -355,7 +355,7 @@ Loaded entity view {{ entityview.name }} using view query string request paramet
 
 **logical\_name**
 
-The PowerApps entity logical name of the view to be loaded. Must be used in combination with name.
+The Power Apps entity logical name of the view to be loaded. Must be used in combination with name.
 
 ```
 {% entityview logical_name:'contact', name:"Active Contacts" %}
@@ -367,7 +367,7 @@ Loaded entity view with {{ entityview.total_records }} total records.
 
 **name**
 
-The PowerApps name of the view to be loaded. Must be used in combination with logical\_name.
+The Power Apps name of the view to be loaded. Must be used in combination with logical\_name.
 
 ```
 {% entityview logical_name:'contact', name:"Active Contacts" %}
@@ -522,7 +522,7 @@ Loaded entity view with {{ entityview.total_records }} total records to which th
 
 **language\_code**
 
-A PowerApps integer language code to select the entity view localized labels (column header labels, etc.) to be loaded. If no language\_code is provided, the default language of the portal application PowerApps connection will be used.
+A Power Apps integer language code to select the entity view localized labels (column header labels, etc.) to be loaded. If no language\_code is provided, the default language of the portal application Power Apps connection will be used.
 
 If entityview is used within an entitylist block, entityview will inherit its language code configuration from entitylist.
 
@@ -631,7 +631,7 @@ This parameter supports [the Lucene Query Parser syntax](https://lucene.apache.o
 
 **logical\_names**
 
-The PowerApps entity logical names to which matching results will be restricted, as a comma-delimited string. If not provided, all matching entities will be returned.
+The Power Apps entity logical names to which matching results will be restricted, as a comma-delimited string. If not provided, all matching entities will be returned.
 
 ```
 {% searchindex query: request.params.query, logical_names: 'kbarticle,incident' %}
@@ -691,7 +691,7 @@ The name of the Entity Form you wish to load.
 
 `{% entityform name:My Entity Form %}`
 
-### **webform**
+## webform
 
 Fully renders a PowerApps-configured web form, by name or ID. The webform tag is only available for use in content rendered inside a [web template](store-content-web-templates.md) based page template. Attempting to use the tag inside a Rewrite-based Page Template will not render anything. You may only render a single entityform or webform tag per page. entityform or webform tags after the first will not be rendered.                
 `{% webform name: 'My Web Form' %}`
@@ -703,6 +703,7 @@ Fully renders a PowerApps-configured web form, by name or ID. The webform tag is
 The name of the Web Form you wish to load.
 
 `{% webform name:My Web Form %}`
+
 
 ### See also
 

@@ -57,7 +57,7 @@ Plug-ins and custom workflow activities developed for a Common Data Service solu
 
 ### Move Plug-ins/Custom Workflow Activities into Multiple Assemblies
 
-PowerApps and Dynamics 365 (online) has an assembly size constraint of 16 MB which cannot be changed. If your assembly size is nearing 16 MB, consider moving plug-in/custom workflow activities into multiple assemblies.
+Power Apps and Dynamics 365 (online) has an assembly size constraint of 16 MB which cannot be changed. If your assembly size is nearing 16 MB, consider moving plug-in/custom workflow activities into multiple assemblies.
 
 <a name='problem'></a>
 

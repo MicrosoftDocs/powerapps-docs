@@ -35,7 +35,7 @@ You can view details about solution operations from the **Solutions** area of a 
      > ![](media/solution-history-sitemap.png "Solution History area")
 
      > [!NOTE]
-     > To get to the **Settings** area from a PowerApps unified interface model-driven app, select **Settings** ![Settings](../model-driven-apps/media/powerapps-gear.png) on the app toolbar, and then select **Advanced Settings**. 
+     > To get to the **Settings** area from a Power Apps unified interface model-driven app, select **Settings** ![Settings](../model-driven-apps/media/powerapps-gear.png) on the app toolbar, and then select **Advanced Settings**. 
 
 2. By default, the **Custom Solutions History** view is displayed. The following views are available from the **Solutions History** area. 
 - **All Solutions History**. Displays solution history for both internal system and custom solutions. 

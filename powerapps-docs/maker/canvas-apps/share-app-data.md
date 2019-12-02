@@ -24,7 +24,7 @@ You must share the data so that users can run and even modify your app. Users wh
 This topic shows you how to share data in an Excel spreadsheet using Dropbox, OneDrive, and Google Drive. To create an app that displays data from an Excel file, see [Create an app from a set of data](get-started-create-from-data.md).
 
 ## Share data in Dropbox
-1. Sign in to Dropbox using the same account that you used to create a connection from PowerApps to Dropbox.
+1. Sign in to Dropbox using the same account that you used to create a connection from Power Apps to Dropbox.
 2. Select the folder that contains the Excel file, and then select **Share**:  
    
     ![Share command](./media/share-app-data/dropbox-share.png)
@@ -37,7 +37,7 @@ This topic shows you how to share data in an Excel spreadsheet using Dropbox, On
 For more information, see [Sharing folders on Dropbox](https://www.dropbox.com/en/help/19).
 
 ## Share data in OneDrive
-1. Sign in to OneDrive using the same account that you used when you created a connection from PowerApps to OneDrive.
+1. Sign in to OneDrive using the same account that you used when you created a connection from Power Apps to OneDrive.
 2. Select the folder that contains the file, and then select **Share**:  
    
     ![Share command](./media/share-app-data/onedrive-share.png)
@@ -54,7 +54,7 @@ For more information, see [Sharing folders on Dropbox](https://www.dropbox.com/e
 For more information, see [Share OneDrive files and folders](https://support.office.com/article/Share-OneDrive-files-and-folders-and-change-permissions-9fcc2f7d-de0c-4cec-93b0-a82024800c07).
 
 ## Share data in Google Drive
-1. Sign in to Google Drive using the same account with which you created a connection from PowerApps to Google Drive.
+1. Sign in to Google Drive using the same account with which you created a connection from Power Apps to Google Drive.
 2. Right-click the folder that stores your Excel file, and then select **Share**.  
    
     ![Share command](./media/share-app-data/googledrive-share.png)

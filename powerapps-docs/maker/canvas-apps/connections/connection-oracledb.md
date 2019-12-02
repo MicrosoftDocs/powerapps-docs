@@ -15,7 +15,7 @@ search.app:
   - PowerApps
 ---
 # Connect to an Oracle database from PowerApps
-List tables, and create, read, update and delete table rows in an Oracle database after you create a connection and build an app in PowerApps. The Oracle Database connection supports full delegation of filtering, sorting, and other functions but not triggers or stored procedures.
+List tables, and create, read, update and delete table rows in an Oracle database after you create a connection and build an app in Power Apps. The Oracle Database connection supports full delegation of filtering, sorting, and other functions but not triggers or stored procedures.
 
 ## Prerequisites
 * Oracle 9 and later
@@ -26,13 +26,13 @@ List tables, and create, read, update and delete table rows in an Oracle databas
 ### Install an on-premises data gateway
 To install a gateway, follow the steps in [this tutorial](../gateway-management.md).
 
-An on-premises data gateway acts as a bridge, providing quick and secure data transfer between on-premises data (data that isn't in the cloud) and the Power BI, Power Automate, Logic Apps, and PowerApps services. You can use the same gateway with multiple services and multiple data sources. For more information, see [Understand gateways](../gateway-reference.md).
+An on-premises data gateway acts as a bridge, providing quick and secure data transfer between on-premises data (data that isn't in the cloud) and the Power BI, Power Automate, Logic Apps, and Power Apps services. You can use the same gateway with multiple services and multiple data sources. For more information, see [Understand gateways](../gateway-reference.md).
 
 ### Install Oracle client
 On the same computer as the on-premises data gateway, install the [64-bit ODAC 12c Release 4 (12.1.0.2.4) for Windows x64](https://www.oracle.com/technetwork/database/windows/downloads/index-090165.html). Otherwise, an error will appear if you try to create or use the connection, as the list of known issues describes.
 
 ## Create an app from a table in an Oracle database
-1. In PowerApps Studio, click or tap **New** on the **File** menu (near the left edge).
+1. In Power Apps Studio, click or tap **New** on the **File** menu (near the left edge).
    
    ![New option](./media/connection-oracledb/new-app.png)
 2. Under **Start with your data**, click or tap the arrow.
@@ -68,7 +68,7 @@ On the same computer as the on-premises data gateway, install the [64-bit ODAC 1
     
     ![New](./media/connection-oracledb/connect-button.png)
 
-PowerApps creates an app that has three screens and shows data from the table that you selected:
+Power Apps creates an app that has three screens and shows data from the table that you selected:
 
 * **BrowseScreen1**, which lists all entries in the table.
 * **DetailScreen1**, which provides more info about a single entry.

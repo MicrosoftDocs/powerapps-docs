@@ -22,7 +22,7 @@ The **Rich text editor** control provides the app user a WYSIWYG editing area fo
 
 Control allows copied rich text (i.e from web browser or Word) to be pasted into the control.  
 
-Control's intended use is to format text and does not guarantee to preserve the integrity of the input HTML.  All script, style, object and other potentially compromising tags will be removed by the editor.  This means that if rich text was created outside of PowerApps, it may not look the same as in the product where it was created.
+Control's intended use is to format text and does not guarantee to preserve the integrity of the input HTML.  All script, style, object and other potentially compromising tags will be removed by the editor.  This means that if rich text was created outside of Power Apps, it may not look the same as in the product where it was created.
 
 Currently supported features include:
 - Bold, Italic, Underline

@@ -15,7 +15,7 @@ author: "Aneesmsft"
 ms.author: "matp"
 manager: "kvivek"
 tags: 
-  - "PowerApps maker portal impact"
+  - "Power Apps maker portal impact"
 search.audienceType: 
   - maker
 search.app: 
@@ -30,7 +30,7 @@ Use the new form designer to create, edit, or configure forms for model-driven a
 > The new model-driven form designer does not currently support editing card forms. More information: [Form types](types-forms.md)
 
 ## Create a form 
-1. Sign in to [PowerApps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). 
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). 
 2. On the left navigation pane, expand **Data**, and then select **Entities**. 
 3. Select an entity, such as the account entity, and then select the **Forms** tab. 
 4. Select **Add form**, and then select one of the following
@@ -41,7 +41,7 @@ Use the new form designer to create, edit, or configure forms for model-driven a
 5. When you are done making changes to the form, select **Save** to save the form, or select **Publish** if you want to save and make your changes visible to app users.  
 
 ## Edit a form 
-1. Sign in to [PowerApps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). 
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). 
 2. On the left navigation pane, expand **Data**, and then select **Entities**. 
 3. Select an entity, such as the account entity, and then select the **Forms** tab.
 4. Select the form name that you want to edit.  

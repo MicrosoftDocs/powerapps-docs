@@ -1,6 +1,6 @@
 ---
-title: Create a custom entity that has components with PowerApps | Microsoft Docs
-description: Topic with step-by-step instructions for creating and configuring an entity to use with a PowerApps app.
+title: Create a custom entity that has components with Power Apps | Microsoft Docs
+description: Topic with step-by-step instructions for creating and configuring an entity to use with a Power Apps app.
 author: Mattp123
 manager: kvivek
 ms.service: powerapps
@@ -17,7 +17,7 @@ search.app:
 
 # Create a custom entity that has components in PowerApps
 
-With PowerApps you tailor your app to closely fit your organization’s industry, nomenclature, and unique business processes. PowerApps app development includes adding standard "out-of-box" entities or creating custom entities. An entity defines the information you want to track in the form of records, which typically include properties such as company name, location, products, email, and phone. 
+With Power Apps you tailor your app to closely fit your organization’s industry, nomenclature, and unique business processes. Power Apps app development includes adding standard "out-of-box" entities or creating custom entities. An entity defines the information you want to track in the form of records, which typically include properties such as company name, location, products, email, and phone. 
 
 In this topic you create an entity and then add or customize key components such as fields, relationships, views, and forms. You learn how to:
 
@@ -31,7 +31,7 @@ The topic will follow the company, Contoso, which is a pet grooming business tha
 
 ## Prerequisites
 
-Sign in to [PowerApps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). If you don’t already have a PowerApps account, select the **Get started free** link from [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). If you don’t already have a Power Apps account, select the **Get started free** link from [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
 ## Create a custom entity
 

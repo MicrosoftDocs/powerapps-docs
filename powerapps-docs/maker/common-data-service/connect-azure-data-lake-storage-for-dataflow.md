@@ -37,7 +37,7 @@ There are some advantages to configuring dataflows to store their definitions an
 
 ## Requirements
 To use Azure Data Lake Storage Gen2 for dataflows, you need the following:
-- A PowerApps environment. Any PowerApps plan will allow you to create dataflows with Azure Data Lake Storage Gen2 as a destination. You will need to be authorized in the environment as a maker. 
+- A Power Apps environment. Any Power Apps plan will allow you to create dataflows with Azure Data Lake Storage Gen2 as a destination. You will need to be authorized in the environment as a maker. 
 - An Azure subscription. You need an Azure subscription to use Azure Data Lake Storage Gen2.
 - A resource group. Use a resource group you already have, or create a new one.
 - An Azure storage account. The storage account must have the Data Lake Storage Gen2 feature enabled.
@@ -47,8 +47,8 @@ To use Azure Data Lake Storage Gen2 for dataflows, you need the following:
 
 ## Prepare your Azure Data Lake Storage Gen2 for Power Platform Dataflows
 Before you configure your environment with an Azure Data Lake Storage Gen2 account, you must create and configure a storage account. Here are the requirements for Power Platform Dataflows:
-1.	The storage account must be created in the same Azure Active Directory tenant as your PowerApps tenant.
-2.	We recommend that the storage account is created in the same region as the PowerApps environment you plan to use it in. To determine where your PowerApps environment is, contact your environment admin.
+1.	The storage account must be created in the same Azure Active Directory tenant as your Power Apps tenant.
+2.	We recommend that the storage account is created in the same region as the Power Apps environment you plan to use it in. To determine where your Power Apps environment is, contact your environment admin.
 3.	The storage account must have the Hierarchical Name Space feature enabled.
 4.	You must be granted an Owner role on the storage account.
 
@@ -61,13 +61,13 @@ Follow the steps in [Create an Azure Data Lake Storage Gen2 storage account](htt
 3.	We recommend that you set the replication setting to Read-access geo-redundant storage (RA-GRS).
 
 ## Connect your Azure Data Lake Storage Gen2 to PowerApps
-Once you've set up your Azure Data Lake Storage Gen2 account in the Azure portal, you are ready to connect it to a specific dataflow or a PowerApps environment. Connecting the lake to an environment allows other makers and admins in the environment to create dataflows that store their data in your organization's lake as well. 
+Once you've set up your Azure Data Lake Storage Gen2 account in the Azure portal, you are ready to connect it to a specific dataflow or a Power Apps environment. Connecting the lake to an environment allows other makers and admins in the environment to create dataflows that store their data in your organization's lake as well. 
 
 To connect your Azure Data Lake Storage Gen2 account with the dataflow, follow these steps:
-1.	Sign in to [PowerApps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and verify which environment you're in. The environment switcher is located on the right side of the header. 
+1.	Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and verify which environment you're in. The environment switcher is located on the right side of the header. 
 2. On the left navigation pane, select the down arrow next to **Data**.
 
-   ![PowerApps maker portal Data tab](media/powerapps-portal-data.png)
+   ![Power Apps maker portal Data tab](media/powerapps-portal-data.png)
 
 3. In the list that appears, select **Dataflows** and then on the command bar select **New dataflow**.
 
@@ -130,4 +130,4 @@ For more information about the Common Data Model, see these articles:
 - [Common Data Model folders](https://go.microsoft.com/fwlink/?linkid=2045304)
 - [CDM model file definition](https://go.microsoft.com/fwlink/?linkid=2045521)
 
-You can ask questions in the [PowerApps Community](https://go.microsoft.com/fwlink/?linkid=2099971).
+You can ask questions in the [Power Apps Community](https://go.microsoft.com/fwlink/?linkid=2099971).

@@ -1,5 +1,5 @@
 ---
-title: "Query and visualize hierarchical data with PowerApps | MicrosoftDocs"
+title: "Query and visualize hierarchical data with Power Apps | MicrosoftDocs"
 description: "Learn how to query and visualize hierarchical related data"
 ms.custom: ""
 ms.date: 06/20/2018

@@ -23,7 +23,7 @@ Northwind Traders is a fictitious organization that manages orders, products, cu
 
 ## Prerequisites
 
-- A PowerApps license that supports Common Data Service. You can [use a free trial license](../signup-for-powerapps.md) for 30 days.
+- A Power Apps license that supports Common Data Service. You can [use a free trial license](../signup-for-powerapps.md) for 30 days.
 - An environment with a Common Data Service database. You can [create such an environment](https://docs.microsoft.com/power-platform/admin/create-environment) if you have appropriate permissions.
 
 ## Download the solution
@@ -35,7 +35,7 @@ This [solution](../../developer/common-data-service/introduction-solutions.md) f
 
 ## Install the solution
 
-1. Sign in to [PowerApps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then ensure that you're working in an environment that contains a Common Data Service database.
+1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then ensure that you're working in an environment that contains a Common Data Service database.
 
 1. In the left navigation pane, select **Solutions**, and then select **Import** in the toolbar near the top of the screen:
 

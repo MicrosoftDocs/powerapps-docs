@@ -56,7 +56,7 @@ The option to export data to an Excel PivotTable isn’t available in all record
   
 ## Tips  
   
-- In PowerApps, currency values are exported to Excel as numbers. After you complete the export, see the Excel Help topic “Display numbers as currency" to format the data as currency.
+- In Power Apps, currency values are exported to Excel as numbers. After you complete the export, see the Excel Help topic “Display numbers as currency" to format the data as currency.
   
 - The date and time values that you see in the app show up only as Date when you export the file to Excel, but the cell actually shows both the date and time.  
   

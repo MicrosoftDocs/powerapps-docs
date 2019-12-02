@@ -28,7 +28,7 @@ You can use Power Automate to create logic that performs one or more tasks when 
 
 ## Create a flow
 
-1. Sign in to [PowerApps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
 1. In the left navigation bar, select **Business logic**, and then select **Flows**.
 
@@ -40,9 +40,9 @@ You can use Power Automate to create logic that performs one or more tasks when 
 
 1. In the search box, type **PowerApps**, and then select the **PowerApps** icon.
 
-    ![Create a PowerApps trigger](./media/using-logic-flows/set-trigger.png)
+    ![Create a Power Apps trigger](./media/using-logic-flows/set-trigger.png)
     
-1. On the next page, select the PowerApps icon again, and then select **New step**.
+1. On the next page, select the Power Apps icon again, and then select **New step**.
 
 1. In the box that says **Search connectors and actions**, specify an action for your flow, as in this example:
 
@@ -63,7 +63,7 @@ You can use Power Automate to create logic that performs one or more tasks when 
 
    1. Select the input box for a field in your list (such as **Title**), select **See more** in the dynamic-content pane, and then select **Ask in PowerApps**. 
 
-       ![Add Ask in PowerApps parameter to Title field](./media/using-logic-flows/ask-in-powerapps.png)
+       ![Add Ask in Power Apps parameter to Title field](./media/using-logic-flows/ask-in-powerapps.png)
 
 1. (optional) Specify one or more additional steps, such as sending approval mail to an address that you specify or creating a related entry in another data source.
 
@@ -85,7 +85,7 @@ You can use Power Automate to create logic that performs one or more tasks when 
 1. In the pane that appears, select the flow that you created in the previous procedure.
 
     > [!NOTE]
-   > If the flow that you created isn't available, confirm whether PowerApps is set to the environment in which you created the flow.
+   > If the flow that you created isn't available, confirm whether Power Apps is set to the environment in which you created the flow.
 
     ![Add a flow from the customization pane](./media/using-logic-flows/add-flow-from-pane.png)
 
