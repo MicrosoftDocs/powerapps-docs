@@ -22,13 +22,13 @@ Web Templates can be included in other content or combined with other templates 
 |           |                                                                                                                                                                                                                                                                                 |
 |-----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |   Name    |                                                                         The name of the template. Used to reference this template when it is included in other content, or extended by other templates.                                                                         |
-|  Source   |                                  The source content of the template. In PowerApps, a source code editor with syntax highlighting and other code editing features is provided for this field.                                  |
+|  Source   |                                  The source content of the template. In Power Apps, a source code editor with syntax highlighting and other code editing features is provided for this field.                                  |
 | MIME Type | Optionally provides a MIME type for the content of the template. If none is provided, a type of text/html is assumed. This value will only be used in cases where the template is associated with a Page Template, and controls the rendering of all content for that template. |
 |           |                                                                                                                                                                                                                                                                                 |
 
 ## Web templates as page templates
 
-Web Templates can be used in conjunction with page templates to create new templates for the Power Apps portals content management system. This can be done entirely within PowerApps, without the need to write .NET code or redeploy your portal application.
+Web Templates can be used in conjunction with page templates to create new templates for the Power Apps portals content management system. This can be done entirely within Power Apps, without the need to write .NET code or redeploy your portal application.
 
 To create a new page template based on a web template, select a **Type** of Web Template when creating a new Page Template record. Then select a **Web Template**.
 

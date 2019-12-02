@@ -22,7 +22,7 @@ search.app:
 
 After the app is created and then shared with you, you can run that app on a variety of popular mobile devices such as Windows, iOS, Android, or in a web browser. In this topic, you'll learn how to run a model-driven app on a mobile device. 
 
-To follow this procedure, if you're not signed up for PowerApps, [sign up for free](https://make.powerapps.com/signup?redirect=marketing&email=) before you begin. Also, make sure you have access to an app that you created or that someone else created and shared with you.
+To follow this procedure, if you're not signed up for Power Apps, [sign up for free](https://make.powerapps.com/signup?redirect=marketing&email=) before you begin. Also, make sure you have access to an app that you created or that someone else created and shared with you.
 
 ## Run the model-driven app
 

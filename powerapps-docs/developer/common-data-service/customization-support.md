@@ -37,7 +37,7 @@ The way your organization works is unique. Some organizations have well-defined 
 
 Changing the Common Data Service components, such as entities, views, fields, charts, and dashboards to build apps that work the way you want is called *customization*.  
  
-When you build and customize your apps using the tools in PowerApps, you’re adding or updating the metadata or data used by features that depend on the metadata. Because we know the kinds of data used to create apps, we can take this data into account and add new features to your Common Data Service environment without breaking your apps. <!-- This way you should always be able to apply an update rollup or upgrade to the latest version and enjoy the best new features.  -->
+When you build and customize your apps using the tools in Power Apps, you’re adding or updating the metadata or data used by features that depend on the metadata. Because we know the kinds of data used to create apps, we can take this data into account and add new features to your Common Data Service environment without breaking your apps. <!-- This way you should always be able to apply an update rollup or upgrade to the latest version and enjoy the best new features.  -->
 
 <!--  
 > **Customize or Configure?**   

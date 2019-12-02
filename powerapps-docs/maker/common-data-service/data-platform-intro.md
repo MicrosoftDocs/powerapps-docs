@@ -46,7 +46,7 @@ Dynamics 365 applications, such as Dynamics 365 Sales, Dynamics 365 Customer Ser
 
 ## Integrating Data into the Common Data Service
 
-Building an app typically involves data from more than one source, while this can sometimes be done at the application level, there are also cases where integrating this data together into a common store allows for an easier app building experience, and a single set of logic to maintain and operate over the data. The Common Data Service allows data to be integrated from multiple sources into a single store which can then be used in PowerApps, Flow and Power BI along with data already available from the Dynamics 365 applications.
+Building an app typically involves data from more than one source, while this can sometimes be done at the application level, there are also cases where integrating this data together into a common store allows for an easier app building experience, and a single set of logic to maintain and operate over the data. The Common Data Service allows data to be integrated from multiple sources into a single store which can then be used in Power Apps, Flow and Power BI along with data already available from the Dynamics 365 applications.
 
 * **Scheduled integration with other systems** &ndash; Data which is kept within another application can be regularly synchronized with the Common Data Service to allow you to leverage other applications data in PowerApps.
 * **Transform and import data using PowerQuery** &ndash; Transforming data when importing into the Common Data Service can be done through PowerQuery from many online data sources, a common tool used across Excel and Power BI.

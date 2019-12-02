@@ -20,7 +20,7 @@ search.app:
 
 # How do I find and run apps?
 
-No need to manually work on a task to get your work done. With PowerApps, you can create and use a canvas app or model-driven app to get your work done quickly. Once you create an app, you can share the app with your organization. 
+No need to manually work on a task to get your work done. With Power Apps, you can create and use a canvas app or model-driven app to get your work done quickly. Once you create an app, you can share the app with your organization. 
 
 [Canvas apps](/powerapps/maker/canvas-apps/getting-started) give you a lot of control over the user experience of the app. An app maker can use templates to create a canvas app, or they can configure the app any way they like. A canvas app, like its name, is a blank canvas, so you can create an app to fit the needs of users in your organization.
 

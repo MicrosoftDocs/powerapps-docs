@@ -26,7 +26,7 @@ search.app:
 ---
 # Create and design model-driven app forms 
 
-With PowerApps, forms provide the user interface that people use to interact with the data they need to do their work. It's important that the forms people use are designed to allow them to find or enter the information they need efficiently. 
+With Power Apps, forms provide the user interface that people use to interact with the data they need to do their work. It's important that the forms people use are designed to allow them to find or enter the information they need efficiently. 
 
 In the default solution or an unmanaged solution, you can create new forms or edit existing forms for all entities that allow form customization. 
 In an unmanaged solution, you can edit the managed properties for an unmanaged custom entity that was created for the solution.

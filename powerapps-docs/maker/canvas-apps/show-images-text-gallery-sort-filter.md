@@ -17,7 +17,7 @@ search.app:
 # Show, sort, and filter data in a Power Apps gallery
 Create a gallery to show images and text about several products, and sort and filter that information.
 
-In PowerApps, you can use a gallery to show several related items, just as you see in a catalog. Galleries are great for showing information about products, such as names and prices. In this topic, we create a gallery and sort and filter the information using Excel-like functions. Also, when an item is selected, a border is placed around the item.
+In Power Apps, you can use a gallery to show several related items, just as you see in a catalog. Galleries are great for showing information about products, such as names and prices. In this topic, we create a gallery and sort and filter the information using Excel-like functions. Also, when an item is selected, a border is placed around the item.
 
 > [!NOTE]
 > This topic uses a tablet app. You can use a phone app but you will need to resize some of the controls.
@@ -25,7 +25,7 @@ In PowerApps, you can use a gallery to show several related items, just as you s
 > 
 
 ### Prerequisites
-* [Sign up](../signup-for-powerapps.md) for PowerApps, and then [sign in](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) using the same credentials that you used to sign up.
+* [Sign up](../signup-for-powerapps.md) for Power Apps, and then [sign in](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) using the same credentials that you used to sign up.
 * Create a tablet app from a [template](get-started-test-drive.md), from [data](get-started-create-from-data.md), or from [scratch](get-started-create-from-blank.md).
 * Learn how to [configure a control](add-configure-controls.md).
 * These steps use the [CreateFirstApp](https://pwrappssamples.blob.core.windows.net/samples/CreateFirstApp.zip) as sample input data, which includes .jpg images. The zip file includes an XML file that can be converted to Excel. Otherwise, Power Apps automatically reads the files in the .zip files and imports it successfully. You can download and use this sample data, or import your own.

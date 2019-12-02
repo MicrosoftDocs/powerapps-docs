@@ -15,7 +15,7 @@ search.app:
   - PowerApps
 ---
 # Send a push notification in PowerApps
-Push notifications are used in mobile apps for consumer and business scenarios primarily to engage app users and help them prioritize key tasks. In PowerApps, you can send notifications by using the Power Apps Notification connector. You can send native push notifications to any app that you create in PowerApps. We plan to add more notification types in the future.
+Push notifications are used in mobile apps for consumer and business scenarios primarily to engage app users and help them prioritize key tasks. In Power Apps, you can send notifications by using the Power Apps Notification connector. You can send native push notifications to any app that you create in PowerApps. We plan to add more notification types in the future.
 
 ![Example of what a push notification looks like](./media/add-notifications/pic1-notification-screenshot.png)
 

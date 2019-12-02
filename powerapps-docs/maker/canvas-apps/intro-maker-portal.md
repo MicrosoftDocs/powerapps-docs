@@ -51,7 +51,7 @@ For more information, see [Environments overview](../../administrator/environmen
 
 ## Choose an app type
 
-In PowerApps, you can create and run these types of apps:
+In Power Apps, you can create and run these types of apps:
 
 - **Canvas apps** support designing custom UI and connecting to data from a variety of sources.
 - **Model-driven apps** have a standard UI and connect to data only in Common Data Service. However, you can more easily create other elements such as views, dashboards, and different types of business logic.

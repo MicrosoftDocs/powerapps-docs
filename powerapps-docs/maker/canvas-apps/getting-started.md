@@ -27,7 +27,7 @@ To get started, automatically generate an app from one of these sources, among o
 - [SharePoint](app-from-sharepoint.md)
 - [Excel](get-started-create-from-data.md)
 
-[Sign in](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) to PowerApps, and then select **Start from data** or a sample app, such as **Service Desk** or **Budget Tracker**.
+[Sign in](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) to Power Apps, and then select **Start from data** or a sample app, such as **Service Desk** or **Budget Tracker**.
 
 ![Power Apps site](./media/getting-started/create-page-samples.png)
 

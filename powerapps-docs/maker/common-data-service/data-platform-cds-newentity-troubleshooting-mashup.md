@@ -47,7 +47,7 @@ The advantage of this approach (versus the tenant-wide solution) is that this so
 
 Users can update mashups and other information (such as query names and mashup metadata) through the Query Editor and through the **Options** dialog box that's accessible from the Query Editor.
 
-In PowerApps, you access the Query Editor by doing the following:
+In Power Apps, you access the Query Editor by doing the following:
 1. Go to the **Data** pane, expand it, and then select **Entities**. 
 2. Select the ellipsis (...), and then select **Edit Queries**.
 3. In the ribbon, select the **Options** button, and then select the **Export Diagnostics** button.
@@ -74,7 +74,7 @@ To export personal data, users can do the following:
 2. In the ribbon, select the **Options** button.
 3. Select the **Export Diagnostics** button.
 
-In PowerApps, you can access the Query Editor by doing the following:
+In Power Apps, you can access the Query Editor by doing the following:
 1. Go to the **Data** pane, expand it, and then select **Entities**.
 2. Select the ellipsis (...), and then select **Edit Queries**. 
 3. In the ribbon, select the **Options** button, and then select the **Export Diagnostics** button.

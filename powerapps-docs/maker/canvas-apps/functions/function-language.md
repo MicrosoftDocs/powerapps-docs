@@ -66,7 +66,7 @@ A simple approach to localization is to create an Excel spreadsheet mapping an a
     For our purposes, we only need to look at the language of the locale and not the region.  If regional considerations were important, we could have included the full language tag value in the table above. 
 2. Use the **Insert** ribbon, **Table** command, to make this into a proper Excel table.  By default, it will be named **Table1** but you can name it whatever you like with the **Table Tools/Design** ribbon and the **Table Name:** text box on the far left hand side.
 3. Save the Excel file to your local file system.   
-4. In PowerApps, in the right-hand pane, click or tap the **Data Sources** tab, and then click or tap **Add data source**.
+4. In Power Apps, in the right-hand pane, click or tap the **Data Sources** tab, and then click or tap **Add data source**.
 5. Click or tap **Add static data to your app**, click or tap the Excel file that you saved, and then click or tap **Open**.
 6. Select the table that you created, and then click or tap **Connect**.
 
@@ -81,7 +81,7 @@ Be aware that translated strings in other languages could be significantly longe
 ### Translation service
 You can translate text on demand using a translation service, such as the Microsoft Translator service:  
 
-1. In PowerApps, in the right-hand pane, click or tap the **Data Sources** tab, and then click or tap **Add data source**.
+1. In Power Apps, in the right-hand pane, click or tap the **Data Sources** tab, and then click or tap **Add data source**.
 2. Click or tap **Microsoft Translator**.
 
 In your app, wherever you would have used the text **"Hello"** before, use this formula instead:

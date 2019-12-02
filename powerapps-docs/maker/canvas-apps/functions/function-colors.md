@@ -1,6 +1,6 @@
 ---
 title: Color enumeration and ColorFade, ColorValue, and RGBA functions | Microsoft Docs
-description: Reference information for the Color enumeration and ColorFade, ColorValue, and RGBA functions in PowerApps, including syntax and examples
+description: Reference information for the Color enumeration and ColorFade, ColorValue, and RGBA functions in Power Apps, including syntax and examples
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps

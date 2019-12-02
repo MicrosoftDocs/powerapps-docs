@@ -1,6 +1,6 @@
 ---
 title: Generate a canvas app from a SharePoint list | Microsoft Docs
-description: In PowerApps, automatically generate a canvas app to manage data in a SharePoint list
+description: In Power Apps, automatically generate a canvas app to manage data in a SharePoint list
 author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
@@ -16,7 +16,7 @@ search.app:
 ---
 # Generate a canvas app in Power Apps from a SharePoint list
 
-In this topic, you'll use Power Apps to automatically generate a canvas app based on items in a SharePoint list. You can generate the app from within Power Apps or SharePoint Online. From within PowerApps, you can generate the app based on a list in an on-premises SharePoint site if you [connect to it](connections/connection-sharepoint-online.md#create-a-connection) through a data gateway.
+In this topic, you'll use Power Apps to automatically generate a canvas app based on items in a SharePoint list. You can generate the app from within Power Apps or SharePoint Online. From within Power Apps, you can generate the app based on a list in an on-premises SharePoint site if you [connect to it](connections/connection-sharepoint-online.md#create-a-connection) through a data gateway.
 
 The app that you generate will contain three screens:
 
@@ -87,7 +87,7 @@ If you create an app of a custom list from the SharePoint Online command bar, th
 
     - To remove the view from SharePoint, select **Remove this view**.
 
-        To remove the app from PowerApps, [delete the app](delete-app.md).
+        To remove the app from Power Apps, [delete the app](delete-app.md).
 
 > [!NOTE]
 > Apps created from the SharePoint list currently do not show in the Power Apps Mobile.

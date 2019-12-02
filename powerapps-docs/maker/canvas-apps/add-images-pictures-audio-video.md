@@ -20,7 +20,7 @@ This topic shows you how to embed multimedia files in your canvas app, upload pe
 
 ## Prerequisites
 
-[Sign up](../signup-for-powerapps.md) for PowerApps, and then [sign in](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) using the same credentials that you used to sign up.
+[Sign up](../signup-for-powerapps.md) for Power Apps, and then [sign in](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) using the same credentials that you used to sign up.
 
 ## Add media from a file or the cloud
 
@@ -61,7 +61,7 @@ You can choose the kind of media file to add (for example, images, video, or aud
 
 2. After the video is published, copy its URL.
 
-3. From PowerApps, add the **Video** control from **Insert > Media**.
+3. From Power Apps, add the **Video** control from **Insert > Media**.
 
 4. Set the **Media** property to the URL that you copied.
 
@@ -124,7 +124,7 @@ In this scenario, you learn how to upload pen drawings to your data source, OneD
 
 3. Save the Excel file to OneDrive for Business as **SavePen.xlsx**.
 
-4. In PowerApps, create a [blank app](get-started-create-from-blank.md).
+4. In Power Apps, create a [blank app](get-started-create-from-blank.md).
 
 5. In your app, add the OneDrive for Business account as a [data source](add-data-connection.md):
 

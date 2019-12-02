@@ -53,7 +53,7 @@ If it is an appropriate solution, then follow these tips to minimize the impact 
 
 ### Virtual Entities
 
-Most commonly Retrieve and RetrieveMultiple is called within plug-ins to retrieve data from external sources. The data from the external sources are rendered within Power Apps or used to work/manipulate existing data. Dynamics 365 (online), version 9.0 introduces a feature called [Virtual Entities](/dynamics365/customer-engagement/developer/virtual-entities/get-started-ve) which allows integration of data residing in external systems by seamlessly representing that data as entities in PowerApps, without replication of data and often without custom coding. Review the [Virtual Entities](/dynamics365/customer-engagement/developer/virtual-entities/get-started-ve) documentation for further information about the capabilities, limitations, and configuration.
+Most commonly Retrieve and RetrieveMultiple is called within plug-ins to retrieve data from external sources. The data from the external sources are rendered within Power Apps or used to work/manipulate existing data. Dynamics 365 (online), version 9.0 introduces a feature called [Virtual Entities](/dynamics365/customer-engagement/developer/virtual-entities/get-started-ve) which allows integration of data residing in external systems by seamlessly representing that data as entities in Power Apps, without replication of data and often without custom coding. Review the [Virtual Entities](/dynamics365/customer-engagement/developer/virtual-entities/get-started-ve) documentation for further information about the capabilities, limitations, and configuration.
 
 ### Retrieve Caution
 

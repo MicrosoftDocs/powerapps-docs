@@ -1,6 +1,6 @@
 ---
-title: Integrate PowerApps, Power Automate, and Power BI with SharePoint Online (Introduction) | Microsoft Docs
-description: 'This series of tutorials explores how to build out a basic canvas app for project management based on SharePoint lists and three key technologies that integrate with SharePoint Online: PowerApps, Power Automate, and Power BI.'
+title: Integrate Power Apps, Power Automate, and Power BI with SharePoint Online (Introduction) | Microsoft Docs
+description: 'This series of tutorials explores how to build out a basic canvas app for project management based on SharePoint lists and three key technologies that integrate with SharePoint Online: Power Apps, Power Automate, and Power BI.'
 author: NickWaggoner
 manager: kvivek
 ms.service: powerapps
@@ -14,8 +14,8 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Integrate PowerApps, Power Automate, and Power BI with SharePoint Online
-Do you have SharePoint Online and want to better automate and streamline your business processes? Have you worked with PowerApps, Power Automate, or Power BI, but you're not sure how to use them with SharePoint Online? You've come to the right place! This series of tutorials explores how to build out a basic canvas app for project management based on SharePoint lists and three key technologies that integrate with SharePoint Online: PowerApps, Power Automate, and Power BI. These technologies work together, making it easy to *measure* your business, *act* on the results, and *automate* your workflows. When you're done with this series, you will have a cool scenario like the following:
+# Integrate Power Apps, Power Automate, and Power BI with SharePoint Online
+Do you have SharePoint Online and want to better automate and streamline your business processes? Have you worked with Power Apps, Power Automate, or Power BI, but you're not sure how to use them with SharePoint Online? You've come to the right place! This series of tutorials explores how to build out a basic canvas app for project management based on SharePoint lists and three key technologies that integrate with SharePoint Online: Power Apps, Power Automate, and Power BI. These technologies work together, making it easy to *measure* your business, *act* on the results, and *automate* your workflows. When you're done with this series, you will have a cool scenario like the following:
 
 ![Diagram of completed scenario](./media/sharepoint-scenario-intro/composite-with-background.png)
 
@@ -23,7 +23,7 @@ Do you have SharePoint Online and want to better automate and streamline your bu
 In this series of tutorials, the company Contoso has a SharePoint Online site where they manage the lifecycle of projects, from request, to approval, to development, to final review. A *project requestor*, such as a department head, requests an IT project by adding an item to a SharePoint list. A *project approver*, such as an IT manager, reviews the project, and then approves it or rejects it. If approved, the project is assigned to a *project manager*, and additional detail is added to a second list through the same app. A *business analyst* reviews current and completed projects using a Power BI report embedded in SharePoint.  Power Automate is used to send approval email and respond to Power BI alerts.
 
 ## Getting started quickly
-The scenario we present in this series of tutorials is simple compared to a full-blown project management and analysis app, but it still takes some time to complete all the tasks. If you just want a quick introduction to using PowerApps, Power Automate, and Power BI with SharePoint, check out the following articles:
+The scenario we present in this series of tutorials is simple compared to a full-blown project management and analysis app, but it still takes some time to complete all the tasks. If you just want a quick introduction to using Power Apps, Power Automate, and Power BI with SharePoint, check out the following articles:
 
 * **PowerApps**: [Generate an app from within SharePoint using PowerApps](app-from-sharepoint.md#generate-an-app-from-within-sharepoint-online) and [Generate an app to manage data in a SharePoint list](app-from-sharepoint.md)
 * **Power Automate**: [Wait for approval in Power Automate](https://docs.microsoft.com/flow/wait-for-approvals)

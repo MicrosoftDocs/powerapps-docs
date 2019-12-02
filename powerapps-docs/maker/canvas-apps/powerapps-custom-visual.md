@@ -67,7 +67,7 @@ Let's look at the steps required to use the Power Apps custom visual in your Pow
 
 The following limitations apply to the Power Apps custom visual:
 
-- If you change the data fields associated with the visual, you must edit the app from within the Power BI service by selecting the ellipsis (...) and then selecting **Edit**. Otherwise, the changes won't be propagated to PowerApps, and the app will behave in unexpected ways.
+- If you change the data fields associated with the visual, you must edit the app from within the Power BI service by selecting the ellipsis (...) and then selecting **Edit**. Otherwise, the changes won't be propagated to Power Apps, and the app will behave in unexpected ways.
 - The Power Apps custom visual can't trigger a refresh of Power BI reports and Power BI data sources from within Power BI Desktop. If you write back data from the app to the same data source as the report, your changes won't be reflected immediately in Power BI Desktop. Changes are reflected on the next scheduled refresh.
 - The Power Apps custom visual can't filter the data or send any data back to the report.
 - You'll need to share the Power Apps app separately from your report. Learn about [sharing apps in PowerApps](share-app.md).

@@ -31,9 +31,9 @@ Selecting the **Free Trial** link from the app listing above launches the associ
 ![Sample App Web Player](./media/dev-appsource-test-drive/sample-app-web-player.png)
 
 ## How do I build a Test Drive solution?
-Building an app for a Test Drive solution is just like building any app in PowerApps, but you use embedded data instead of external data connections. Using embedded data reduces the barrier of deploying the app to your customer, so there is zero friction for them to try it out. The full solution that you ultimately distribute to customers typically includes data connections, but embedded data works well for a Test Drive solution.
+Building an app for a Test Drive solution is just like building any app in Power Apps, but you use embedded data instead of external data connections. Using embedded data reduces the barrier of deploying the app to your customer, so there is zero friction for them to try it out. The full solution that you ultimately distribute to customers typically includes data connections, but embedded data works well for a Test Drive solution.
 
-Power Apps natively supports building apps with embedded data, so you just need sample data for your app to use. This data should be captured in an Excel file as one or more tables. In PowerApps, you then pull the data from the Excel tables into the app and work with it there, rather than through an external connection. The three-step process below shows you how to pull data in and use that data in your app.
+Power Apps natively supports building apps with embedded data, so you just need sample data for your app to use. This data should be captured in an Excel file as one or more tables. In Power Apps, you then pull the data from the Excel tables into the app and work with it there, rather than through an external connection. The three-step process below shows you how to pull data in and use that data in your app.
 
 ### Step 1: Import data into the app
 Assume you have an Excel file with two tables: **SiteInspector** and **SitePhotos**.

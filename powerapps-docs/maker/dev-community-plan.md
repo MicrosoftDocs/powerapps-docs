@@ -1,6 +1,6 @@
 ---
 title: Power Apps Community Plan -- a free development environment for individual use | Microsoft Docs
-description: Sign up to build skills and learn more about PowerApps, Power Automate, and the Common Data Service.
+description: Sign up to build skills and learn more about Power Apps, Power Automate, and the Common Data Service.
 author: ImadYanni
 manager: kvivek
 
@@ -15,7 +15,7 @@ searchScope:
   - PowerApps
 ---
 # Power Apps Community Plan: a free development environment for individual use
-If you want to build skills and learn more about PowerApps, Power Automate, and the Common Data Service, the Power Apps Community Plan is the right plan for you. The Power Apps Community Plan gives you a free development environment for individual use, where you can:
+If you want to build skills and learn more about Power Apps, Power Automate, and the Common Data Service, the Power Apps Community Plan is the right plan for you. The Power Apps Community Plan gives you a free development environment for individual use, where you can:
 
 * Learn to build business apps and workflows with the full functionality of Power Apps and Power Automate.
 * Connect to any data source by using our 100+ [out of the box connectors](./canvas-apps/connections-list.md) or by creating your own [custom connectors](./canvas-apps/register-custom-api.md).
@@ -25,7 +25,7 @@ If you want to build skills and learn more about PowerApps, Power Automate, and 
 ## Who can sign up for the Power Apps Community Plan?
 Anyone with a [work or school account](signup-for-powerapps.md#faq) can sign up for the Power Apps Community Plan. But we especially recommend this plan if you:
 
-* Want to build skills and learn more about PowerApps, Power Automate, and the Common Data Service.
+* Want to build skills and learn more about Power Apps, Power Automate, and the Common Data Service.
 * Are interested in building business apps and workflows to distribute on AppSource.
 
 ## Where can I sign up for the Power Apps Community Plan?
@@ -114,9 +114,9 @@ If you reach one or more capacity limits, we recommend you purchase a plan that 
 
 **A:** Both Power Apps Plan 2 Trial and Power Apps Community Plan are free, but are created for different purposes:
 
-**Power Apps Plan 2 Trial** gives you Power Apps Plan 2 for 30 days. This is meant for trying out PowerApps, Common Data Service, and Power Automate. Once your trial expires, you can purchase a plan. If you are already using Power Apps with Office 365 or Dynamics 365, this is the right plan to try out the premium functionalities of PowerApps, which are available with Power Apps Plan 2.
+**Power Apps Plan 2 Trial** gives you Power Apps Plan 2 for 30 days. This is meant for trying out Power Apps, Common Data Service, and Power Automate. Once your trial expires, you can purchase a plan. If you are already using Power Apps with Office 365 or Dynamics 365, this is the right plan to try out the premium functionalities of Power Apps, which are available with Power Apps Plan 2.
 
-**Power Apps Community Plan** gives you access to Power Apps premium functionalities, Common Data Service, and Power Automate for individual use. This plan is primarily meant for learning purposes or creating business solutions to be distributed for [AppSource Test Drive](./canvas-apps/dev-appsource-test-drive.md). This plan is perpetually available, but only for learning and building your skills on PowerApps, Common Data Services, and Power Automate.
+**Power Apps Community Plan** gives you access to Power Apps premium functionalities, Common Data Service, and Power Automate for individual use. This plan is primarily meant for learning purposes or creating business solutions to be distributed for [AppSource Test Drive](./canvas-apps/dev-appsource-test-drive.md). This plan is perpetually available, but only for learning and building your skills on Power Apps, Common Data Services, and Power Automate.
 
 **Q:** Can I sign up with my personal account?
 

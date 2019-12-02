@@ -32,7 +32,7 @@ You can start to build your app from Microsoft tools where your data lives, such
 - [From a SharePoint list](canvas-apps/app-from-sharepoint.md#generate-an-app-from-within-sharepoint-online)
 - [From a Power BI dashboard](canvas-apps/embed-powerapps-powerbi.md)
 
-Creating a canvas app is easy; with PowerApps, you can find or create your app in several ways:
+Creating a canvas app is easy; with Power Apps, you can find or create your app in several ways:
 
 - [From data](canvas-apps/app-from-sharepoint.md)
 - [From a sample](canvas-apps/open-and-run-a-sample-app.md)

@@ -16,7 +16,7 @@ search.app:
 ---
 # Create responsive layouts in canvas apps
 
-Before you build a canvas app in PowerApps, you specify whether to tailor the app for a phone or a tablet. This choice determines the size and shape of the canvas on which you'll build your app.
+Before you build a canvas app in Power Apps, you specify whether to tailor the app for a phone or a tablet. This choice determines the size and shape of the canvas on which you'll build your app.
 
 After you make that choice, you can make a few more choices if you select **File** > **App settings** > **Screen size + orientation**. You can choose portrait or landscape orientation and screen size (tablet only). You can also lock or unlock the aspect ratio and support device rotation (or not).
 

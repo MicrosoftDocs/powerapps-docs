@@ -29,7 +29,7 @@ Web resources are typically used by developers to extend an app using files that
 
 > [!TIP]
 > For an in-depth discussion of web resources, see [Developer Documentation: Web resources for model-driven apps](/powerapps/developer/model-driven-apps/web-resources).<br /> 
-> For information on web resource dependencies added in PowerApps, see [Developer Documentation: Web resource dependencies](/dynamics365/customer-engagement/developer/web-resources).
+> For information on web resource dependencies added in Power Apps, see [Developer Documentation: Web resource dependencies](/dynamics365/customer-engagement/developer/web-resources).
    
 <a name="BKMK_WhatAreWebResources"></a>
 

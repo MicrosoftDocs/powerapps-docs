@@ -60,7 +60,7 @@ custom entity schema or leverage the Common Data Model’s standard entities.
 The Common Data Model is a shared data language for business and analytical
 applications to use. The Common Data Model metadata system enables consistency
 of data and its meaning across applications and business processes such as
-PowerApps, Power BI, some Dynamics 365 apps (model-driven apps), and Azure, which store data in conformance with the Common Data Model. A dataflow’s resulting entities can then be stored
+Power Apps, Power BI, some Dynamics 365 apps (model-driven apps), and Azure, which store data in conformance with the Common Data Model. A dataflow’s resulting entities can then be stored
 in either of the following:
 
 -   **Common Data Service.** Lets you securely store and manage data that's used
@@ -89,7 +89,7 @@ Once you’ve created and saved a dataflow, you will need to run it in the cloud
 You can choose to trigger a dataflow to run manually or schedule the frequency
 for the Power Platform Dataflow service to run it for you. When a dataflow
 completes a run, its data is available to use. To get dataflow data loaded into
-Common Data Service, the Common Data Service connector can be used in PowerApps,
+Common Data Service, the Common Data Service connector can be used in Power Apps,
 Power Automate, Excel, and all other applications that support the Common Data Service
 connector. To get from dataflows stored in your organization’s Azure Data Lake
 Storage Gen2 account, you can used the Power Platform Dataflow connector in

@@ -24,7 +24,7 @@ Microsoft Teams is a chat-based collaboration platform built on Office 365 techn
 
 ![App embedded in Microsoft Teams](./media/open-app-embedded-in-teams/embedded-app.png)
 
-If you're not signed up for PowerApps, [sign up for free](https://make.powerapps.com/signup?redirect=marketing&email=) before you begin.
+If you're not signed up for Power Apps, [sign up for free](https://make.powerapps.com/signup?redirect=marketing&email=) before you begin.
 
 ## Prerequisites
 
@@ -87,7 +87,7 @@ To remove the app from the channel, choose the **Product Showcase** tab > **Remo
 
 ## Next steps
 
-In this topic, you added the Product Showcase sample app to a Teams channel, and then opened the app from that channel. To learn more about PowerApps, continue to the Power Apps tutorials.
+In this topic, you added the Product Showcase sample app to a Teams channel, and then opened the app from that channel. To learn more about Power Apps, continue to the Power Apps tutorials.
 
 > [!div class="nextstepaction"]
 > [Power Apps Tutorials](../maker/canvas-apps/get-started-create-from-blank.md)

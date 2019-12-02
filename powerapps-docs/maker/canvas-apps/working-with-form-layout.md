@@ -1,6 +1,6 @@
 ---
 title: Understand data-form layout for canvas apps | Microsoft Docs
-description: In PowerApps, create great-looking form layouts in canvas apps by using rows and columns.
+description: In Power Apps, create great-looking form layouts in canvas apps by using rows and columns.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -193,7 +193,7 @@ In summary, what are the differences when **Snap to columns** is on versus off?
 | Cards automatically re-layout between rows (more on this later) |Yes |No |
 
 ## Set width and height
-As with everything in PowerApps, the form's layout is governed by properties on the card controls. As already described, you can change the values of these properties by dragging controls to different locations or dragging grab handles to resize controls. But you'll discover situations in which you'll want to understand and manipulate these properties more precisely, especially when making your forms dynamic with formulas.
+As with everything in Power Apps, the form's layout is governed by properties on the card controls. As already described, you can change the values of these properties by dragging controls to different locations or dragging grab handles to resize controls. But you'll discover situations in which you'll want to understand and manipulate these properties more precisely, especially when making your forms dynamic with formulas.
 
 ### Basic Layout: X, Y, and Width
 The **X** and **Y** properties control the position of cards. When we work with controls on the raw canvas, these properties provide an absolute position. In a form, these properties have a different meaning:

@@ -16,7 +16,7 @@ search.app:
 ---
 # Customize a SharePoint list form by using PowerApps
 
-You can easily customize the form for a SharePoint list by opening Power Apps in a browser. You don't need to write traditional code, such as C#, or download another app, such as InfoPath. When you publish your changes, the form is embedded within the SharePoint list for use by all of its users. In PowerApps, you can also review analytics reports, easily create conditional formatting, and connect to other data sources.
+You can easily customize the form for a SharePoint list by opening Power Apps in a browser. You don't need to write traditional code, such as C#, or download another app, such as InfoPath. When you publish your changes, the form is embedded within the SharePoint list for use by all of its users. In Power Apps, you can also review analytics reports, easily create conditional formatting, and connect to other data sources.
 
 To follow the steps in this topic, you'll create a simple list so that you can see how customization works, and then you can apply the same concepts to your own list.
 
@@ -45,7 +45,7 @@ On a SharePoint site, create a list, and then add these columns to that list:
 1. If the **Welcome to Power Apps Studio** dialog box opens, select **Skip**.
 
 > [!div class="mx-imgBorder"]
-> ![In the command bar, select PowerApps, and then select Customize form. Power Apps Studio opens in the same browser tab. If the Welcome to Power Apps Studio dialog box opens, select Skip.](./media/customize-list-form/create-form.gif)
+> ![In the command bar, select Power Apps, and then select Customize form. Power Apps Studio opens in the same browser tab. If the Welcome to Power Apps Studio dialog box opens, select Skip.](./media/customize-list-form/create-form.gif)
 
 ## Move and remove a field
 

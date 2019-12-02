@@ -27,7 +27,7 @@ search.app:
 # Create and use dataflows in PowerApps
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-With advanced data preparation available in PowerApps, you can create a
+With advanced data preparation available in Power Apps, you can create a
 collection of data called a dataflow, which you can then use to connect with
 business data from various sources, clean the data, transform it, and then load
 it to Common Data Service or your organization’s Azure Data Lake Gen2 storage
@@ -70,7 +70,7 @@ it.
 > [!NOTE]
 > Creating Dataflows that load data to Azure Data Lake Storage Gen2 in the default environment is currently not supported.
 
-1.  Sign in to PowerApps, and verify which environment you're in, find the environment switcher near the right side of the command bar.
+1.  Sign in to Power Apps, and verify which environment you're in, find the environment switcher near the right side of the command bar.
 
     ![Environment switcher](media/environment-switcher.png)
 

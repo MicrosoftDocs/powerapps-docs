@@ -22,7 +22,7 @@ ms.reviewer:
 
 - If you are reusing the URL of a recently deleted portal to create a new portal, it will have some delay for runtime to setup. This is because the purge of previous resources would still be in progress and may take from 30 minutes to 1 hour for the new portal to setup on Azure. The portal will also not be available for editing during this time and may show errors when launched in studio for editing.
 
-- When switching an environment in PowerApps, the portals within an environment may not show up immediately in **Apps** or **Recent Apps** list. This happens particularly on environments that are created in a different region than their tenant. The workaround is to use browser refresh or wait for some time for portal to show up in the apps list.
+- When switching an environment in Power Apps, the portals within an environment may not show up immediately in **Apps** or **Recent Apps** list. This happens particularly on environments that are created in a different region than their tenant. The workaround is to use browser refresh or wait for some time for portal to show up in the apps list.
 
 - If you keep the portal settings pane open in Power Apps home page while resetting the portal from Power Apps Portals admin center, a user will see the "Something went wrong" error message in the portal settings pane, as portal is not available.
 

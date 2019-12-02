@@ -30,7 +30,7 @@ In this procedure, you'll create an entity in [Common Data Service](data-platfor
 
 You can also filter, transform, and combine data before you load it into a new or existing entity.
 
-If you don't have a license for PowerApps, you can [sign up for free](../signup-for-powerapps.md).
+If you don't have a license for Power Apps, you can [sign up for free](../signup-for-powerapps.md).
 
 ## Prerequisites
 To follow this topic, you must switch to an [environment](../canvas-apps/working-with-environments.md) in which you can create entities.

@@ -1,6 +1,6 @@
 ---
 title: Understand data cards | Microsoft Docs
-description: In PowerApps, use form cards to collect and display information from a data source.
+description: In Power Apps, use form cards to collect and display information from a data source.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -102,7 +102,7 @@ We can do the same thing on the second screen of this app, where we use a **Disp
 ## Interact with a form
 After you unlock a card, you can change how it interacts with the form that contains it.
 
-Below are some guidelines for how controls should work with their card and how the cards should work with the form. These are only guidelines. As with any control in PowerApps, you can create formulas that reference any other control in PowerApps, and that's no less true for cards and controls within cards. Be creative: you can create an app in many ways.  
+Below are some guidelines for how controls should work with their card and how the cards should work with the form. These are only guidelines. As with any control in Power Apps, you can create formulas that reference any other control in Power Apps, and that's no less true for cards and controls within cards. Be creative: you can create an app in many ways.  
 
 ### DataField property
 The most important property on the card is the **[DataField](controls/control-card.md)** property.  This property drives validation, what field is updated, and other aspects of the card.

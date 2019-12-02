@@ -1,6 +1,6 @@
 ---
 title: Install and configure the Help Desk sample for canvas apps | Microsoft Docs
-description: Step-by-step instructions for, in PowerApps, installing and configuring the Help Desk sample for canvas apps.
+description: Step-by-step instructions for, in Power Apps, installing and configuring the Help Desk sample for canvas apps.
 author: matthewbolanos
 manager: kvivek
 ms.service: powerapps
@@ -16,7 +16,7 @@ search.app:
 ---
 # Install and configure the Help Desk sample in PowerApps
 
-Step-by-step instructions for, in PowerApps, installing and configuring the Help Desk sample for canvas apps.
+Step-by-step instructions for, in Power Apps, installing and configuring the Help Desk sample for canvas apps.
 
 Estimated time to complete these steps: **10-15 minutes**
 

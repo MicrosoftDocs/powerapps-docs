@@ -1,6 +1,6 @@
 ---
 title: Format a table in Excel | Microsoft Docs
-description: To use Excel data in PowerApps, you must format the data as a table. Adding "image" keyword in column names
+description: To use Excel data in Power Apps, you must format the data as a table. Adding "image" keyword in column names
 author: yifwang
 manager: kvivek
 ms.service: powerapps
@@ -15,7 +15,7 @@ search.app:
   - PowerApps
 ---
 # Format a table in Excel and naming tips
-In PowerApps, you can create a canvas app based on Excel data only if it's formatted as a table. By following this content, you'll learn how to format a table in Excel and some tips of naming Excel columns.
+In Power Apps, you can create a canvas app based on Excel data only if it's formatted as a table. By following this content, you'll learn how to format a table in Excel and some tips of naming Excel columns.
 
 ## How to format a table in Excel
 You can convert your data to a table by selecting **Format as Table** in the **Home** tab of Excel.

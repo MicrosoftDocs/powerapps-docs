@@ -15,7 +15,7 @@ searchScope:
 ---
 # Explore Power Apps for free for 30 days
 
-You can explore all Power Apps capabilities for free by signing up for a Power Apps Plan 2 license that expires after 30 days. If you don't have any license for PowerApps, the trial plan provides temporary access to these and other features:
+You can explore all Power Apps capabilities for free by signing up for a Power Apps Plan 2 license that expires after 30 days. If you don't have any license for Power Apps, the trial plan provides temporary access to these and other features:
 
 - Extend the capabilities of Office 365 (SharePoint Online, Teams, Excel and more).
 - Create and run canvas apps that connect to Common Data Service and a wide range of more than 200 other data sources, including premium connectors and on-premises data.
@@ -47,7 +47,7 @@ To start a free, 30-day trial of Power Apps Plan 2 from an existing license, [si
 
 ## Get a license from scratch
 
-Regardless of whether you have a license for PowerApps, you can start a free, 30-day trial of Power Apps Plan 2 by following these steps:
+Regardless of whether you have a license for Power Apps, you can start a free, 30-day trial of Power Apps Plan 2 by following these steps:
 
 1. Open the [Power Apps site](https://powerapps.microsoft.com), and then select **Sign up free**.
 

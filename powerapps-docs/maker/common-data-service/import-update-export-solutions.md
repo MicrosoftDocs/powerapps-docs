@@ -128,7 +128,7 @@ search.app:
 <a name="BKMK_SettingsOptionsOnSolutionExport"></a>  
  
 ## Settings options for solution export  
- If you export the solution from PowerApps, please disregard this section. The following table shows the options available when you export a solution from the classic experience.  
+ If you export the solution from Power Apps, please disregard this section. The following table shows the options available when you export a solution from the classic experience.  
   
 |Group|Setting|Description|  
 |-----------|-------------|-----------------|  

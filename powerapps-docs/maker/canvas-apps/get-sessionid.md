@@ -15,7 +15,7 @@ search.app:
   - PowerApps
 ---
 # Get a session ID or a canvas-app ID
-If you encounter a problem with a canvas app that was created in PowerApps, you can help Microsoft troubleshoot the problem much more effectively if you provide them with a session ID, an app ID, or both for that problem.
+If you encounter a problem with a canvas app that was created in Power Apps, you can help Microsoft troubleshoot the problem much more effectively if you provide them with a session ID, an app ID, or both for that problem.
 
 ## Get the session ID
 

@@ -16,7 +16,7 @@ search.app:
 ---
 # Create a canvas app to manage projects
 > [!NOTE]
-> This article is part of a tutorial series on using PowerApps, Power Automate, and Power BI with SharePoint Online. Make sure you read the [series introduction](sharepoint-scenario-intro.md) to get a sense of the big picture, as well as related downloads.
+> This article is part of a tutorial series on using Power Apps, Power Automate, and Power BI with SharePoint Online. Make sure you read the [series introduction](sharepoint-scenario-intro.md) to get a sense of the big picture, as well as related downloads.
 
 In this task, we'll build a canvas app from scratch. This app allows a user to assign a manager to projects and to update project details. You will see some of the same controls and formulas you saw in the first app, but you will build more of the app yourself this time. The process is more complex, but you'll learn more, so we think it's a fair trade-off.
 
@@ -406,7 +406,7 @@ Now that the app is complete, let's run it to see how it works. We'll add a link
    
     ![Power Apps in Office 365 app launcher](./media/sharepoint-scenario-build-app/04-07-02a-waffle.png)
 
-2. In PowerApps, click or tap the ellipsis (**. . .**) for **Project Management app**, then **Open**.
+2. In Power Apps, click or tap the ellipsis (**. . .**) for **Project Management app**, then **Open**.
    
     ![Select Project Management app](./media/sharepoint-scenario-build-app/04-07-02b-select-app.png)
 

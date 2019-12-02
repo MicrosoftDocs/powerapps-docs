@@ -1,6 +1,6 @@
 ---
 title: Create a dependent drop-down list in a canvas app | Microsoft Docs
-description: In PowerApps, create a drop-down list that filters another drop-down list in a canvas app.
+description: In Power Apps, create a drop-down list that filters another drop-down list in a canvas app.
 author: emcoope-msft
 manager: kvivek
 ms.service: powerapps

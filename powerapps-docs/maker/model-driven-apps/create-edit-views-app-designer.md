@@ -30,7 +30,7 @@ search.app:
 
 In this topic you perform several tasks required to work with views, such as create a public view, add an existing view to an app, and change columns, filters, and sort order for a view.
 
-In PowerApps, views define how records for a specific entity are  displayed. A view defines the following:
+In Power Apps, views define how records for a specific entity are  displayed. A view defines the following:
 -  The columns (attributes) to display
 -  The width of the columns
 -  How the records are sorted by default

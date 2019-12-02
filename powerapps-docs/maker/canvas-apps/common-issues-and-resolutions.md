@@ -43,11 +43,11 @@ This article lists some common issues that you might encounter while using Power
 
 1. **Republishing apps** (Aug. 2, 2018)
 
-    If you haven't updated your app in several months, republish it to sync with the most recent version of PowerApps, which includes performance improvements and other fixes.
+    If you haven't updated your app in several months, republish it to sync with the most recent version of Power Apps, which includes performance improvements and other fixes.
 
 1. <a name="out-of-memory"></a>**Browser running out of memory** (July 23, 2018)
 
-    If you run out of memory while using PowerApps, please consider downloading a 64-bit version of Chrome, Microsoft Edge, or Internet Explorer.
+    If you run out of memory while using Power Apps, please consider downloading a 64-bit version of Chrome, Microsoft Edge, or Internet Explorer.
 
 1. **Launching a website from an embedded app** (May 10, 2018)
 
@@ -79,7 +79,7 @@ This article lists some common issues that you might encounter while using Power
 
 1. **Release 2.0.700 on Android devices**
 
-    If you install release 2.0.700 on an Android device and then can't open apps (or an app stops responding), uninstall PowerApps, restart the device, and then reinstall PowerApps.
+    If you install release 2.0.700 on an Android device and then can't open apps (or an app stops responding), uninstall Power Apps, restart the device, and then reinstall PowerApps.
 
 1. **"Empty" gallery when opening an app**
 

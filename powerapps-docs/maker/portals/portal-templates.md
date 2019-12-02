@@ -13,7 +13,7 @@ ms.reviewer:
 
 # Portal templates
 
-Based on the selected environment in PowerApps, you can create a Common Data Service starter portal or a portal in an environment containing model-driven apps in Dynamics 365.
+Based on the selected environment in Power Apps, you can create a Common Data Service starter portal or a portal in an environment containing model-driven apps in Dynamics 365.
 
 ## Environment with Common Data Service
 

@@ -197,7 +197,7 @@ In this procedure, you'll add space in the gallery for a label and configure it 
 
     Each option in a set has a name that appears if you show it in a label. These names can be localized, and the app recognizes the same option whether an English user selects **Apple**, a French user selects **Pomme**, or a Spanish user selects **Manzana**. For this reason, you can't create a formula that relies on a hard-coded string for an option, as this topic demonstrates later.
 
-    In formulas, you must surround **Order Status** with single quotation marks because it contains a space. However, that name functions the same way as any other name in PowerApps, such as **Customer** or **Company**, does.
+    In formulas, you must surround **Order Status** with single quotation marks because it contains a space. However, that name functions the same way as any other name in Power Apps, such as **Customer** or **Company**, does.
 
 1. On the **Home** tab, increase the font size of the status label to 20 points, and right align the text:
 

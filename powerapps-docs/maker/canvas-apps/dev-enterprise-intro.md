@@ -17,7 +17,7 @@ search.app:
 
 # Canvas apps for enterprise developers, partners, and ISVs
 
-As a developer, you can extend canvas apps in PowerApps, enabling even more powerful solutions for organizations and customers.
+As a developer, you can extend canvas apps in Power Apps, enabling even more powerful solutions for organizations and customers.
 
 ## Canvas apps for enterprise developers
 
