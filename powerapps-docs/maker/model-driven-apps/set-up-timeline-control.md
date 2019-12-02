@@ -242,6 +242,15 @@ To customize the card form, follow these steps:
 
 9.	Select **Publish** to publish the customizations.
 
+## Enable custom activity in timeline
+
+While you create a custom entity, you might want to show the custom entity as an activity for your users in the timeline. To show the custom entity as an activity, you need to enable certain options during the creation of a custom entity.
+
+> [!Note]
+> Ensure to enable the custom entity as an activity before you save the entity. After you save the custom entity, you can't enable the entity as an activity and display for your users in the **Timeline** control.
+
+To enable a custom activity in timeline, follow these steps.
+
 ## Enable custom activities in timeline for mobile client
 
 When you’ve custom activities that you want to show for users using mobile, then you must enable it. Follow these steps to enable.
