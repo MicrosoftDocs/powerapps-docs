@@ -29,17 +29,11 @@ All
 ## Parameters
 Depends on the type of attribute.
 
-<!-- TODO: 
-
-Change type links from msdn to docs, i.e. https://msdn.microsoft.com/library/dwab3ed2.aspx to /scripting/javascript/reference/number-object-javascript 
-
-or MDN https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number
--->
 
 | Attribute Type|Parameters Type|
 -------|------|
 | boolean| [Boolean](https://msdn.microsoft.com/library/t7bkhaz6.aspx) |
-| datetime|[Date](https://msdn.microsoft.com/library/cd9w2te4.aspx) <br/><br/>In UCI date values are assumed to be UTC.<br/>In Web Client date values are assumed to be in the user's time zone.|
+| datetime|[Date](https://msdn.microsoft.com/library/cd9w2te4.aspx) <br/><br/>In the Unified Interface, date values are assumed to be UTC.<br/>In the legacy web client, date values are assumed to be in the user's time zone.|
 | decimal| [Number](https://msdn.microsoft.com/library/dwab3ed2.aspx)|
 | double| [Number](https://msdn.microsoft.com/library/dwab3ed2.aspx) |
 | Integer|[Number](https://msdn.microsoft.com/library/dwab3ed2.aspx)|
