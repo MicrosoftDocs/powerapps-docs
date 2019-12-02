@@ -34,7 +34,7 @@ Solution checker works with unmanaged solutions that can be exported from an env
 ## Enable the solution checker
 The Solution checker is enabled by default in every Common Data Service environment. A **Solution checker** menu item is available when you select an unmanaged solution in the **Solutions** area of Power Apps. If the **Run** option is not available in the **Solution checker** menu,  you can enable it by installing the Power Apps checker solution. To install it, follow these steps:   
 
-1. Sign in to [PowerApps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select the Common Data Service environment where you want to enable the solution checker. 
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select the Common Data Service environment where you want to enable the solution checker. 
 2. On the left navigation pane, select **Solutions**.
 3. On the toolbar, select **Solution checker** and then select **Install** – this opens the Microsoft AppSource page. You need to allow pop-up windows if your browser blocks the page from opening. 
 
@@ -61,7 +61,7 @@ When you install the Power Apps checker these solution specific components are c
 ## Run the solution checker
 After you install the Power Apps checker in your environment, a **Solution checker** menu item is available when you select an unmanaged solution in the **Solutions** area of Power Apps. 
 
-1. Sign in to [PowerApps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). 
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). 
 2. In the left pane, select **Solutions**. 
 3. Next to the unmanaged solution that you want to analyze, select **...**, point to **Solution checker**, and then select **Run**. 
 

@@ -31,7 +31,7 @@ To follow this topic exactly, download the [Flooring Estimates](https://az787822
 
 ## Generate the app
 
-1. Sign in to [PowerApps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
 1. Under **Make your own app**, hover over **Start from data**, and then select **Make this app**.
 

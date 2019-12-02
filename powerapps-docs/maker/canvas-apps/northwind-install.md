@@ -35,7 +35,7 @@ This [solution](../../developer/common-data-service/introduction-solutions.md) f
 
 ## Install the solution
 
-1. Sign in to [PowerApps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then ensure that you're working in an environment that contains a Common Data Service database.
+1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then ensure that you're working in an environment that contains a Common Data Service database.
 
 1. In the left navigation pane, select **Solutions**, and then select **Import** in the toolbar near the top of the screen:
 

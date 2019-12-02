@@ -32,7 +32,7 @@ This topic explains how to add an embedded canvas app and pass a list of records
 
 Let's say you want to add an embedded canvas app on an account main form and pass a list of contacts related to the current account record to the embedded canvas app. To do this, follow these steps:
 
-1.	Sign in to [PowerApps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and open the form editor for a main form of an entity, such as the account entity.
+1.	Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and open the form editor for a main form of an entity, such as the account entity.
 2.	Select the section on the form where you want the embedded canvas app to appear.
 3.	With the section selected, on the **Insert** tab, in the **Control** group, select **Sub-Grid**.
 4.	In the **Set Properties** dialog box, select the **Display** tab, and then in the **Name** box enter a name for the grid control.

@@ -28,7 +28,7 @@ When you build an app from Common Data Service, you don't need to create a conne
 
 ## Open a blank app
 
-1. Sign in to [PowerApps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
 1. Under **Make your own app**, select **Canvas app from blank**.
 

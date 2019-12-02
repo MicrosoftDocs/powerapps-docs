@@ -24,7 +24,7 @@ search.app:
 You can configure a sub-grid on a form to display a list of records or a chart. Select **Show Chart Only** on the **Display** tab to show a chart instead of a list.  
 
 You can access **Sub-Grid properties** from the Power Apps site. 
-1.  On the [PowerApps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) site, select **Model-driven** (lower left of the navigation pane).  
+1.  On the [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) site, select **Model-driven** (lower left of the navigation pane).  
 
      ![Model-driven design mode](media/model-driven-switch.png)
 

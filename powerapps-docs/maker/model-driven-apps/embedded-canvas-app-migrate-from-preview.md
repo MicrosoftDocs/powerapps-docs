@@ -30,7 +30,7 @@ search.app:
 
 To migrate an embedded canvas app on a model-driven form created using the public preview release to the latest, makers first need to create a new embedded canvas app using the latest release. Makers can then copy over the controls from the existing embedded canvas app to the new one, add required data sources and update broken references, if any. Detailed steps are provided below.
 
-1. Sign in to [PowerApps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 2. Open the embedded canvas app created using the public preview release for editing in Power Apps Studio. For steps on editing a canvas app see: [Edit a canvas app](../canvas-apps/edit-app.md).
 3. In a new browser tab, follow the steps to [add a new embedded canvas app on a model-driven form](embedded-canvas-app-add-classic-designer.md).
 4. Copy the controls from the embedded canvas app created using the public preview release to the new embedded canvas app, one screen at a time using the steps below.
