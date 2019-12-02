@@ -36,7 +36,7 @@ System Administrator privileges are required to enable the Power Apps component 
 
 To add code components to an app, you need to enable the Power Apps component framework feature in each environment where you want to use them. To enable an environment to use code components inside its apps:
 
-1. Sign in to [PowerApps](https://powerapps.microsoft.com/).
+1. Sign in to [Power Apps](https://powerapps.microsoft.com/).
 
 2. Select the **Settings** icon and then select **Admin Center**.
     

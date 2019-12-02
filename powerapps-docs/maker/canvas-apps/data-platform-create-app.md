@@ -26,7 +26,7 @@ To follow this quickstart, you must be assigned to the [Environment Maker](https
 
 ## Generate an app
 
-1. Sign in to [PowerApps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and, if necessary, switch environments as specified earlier in this topic.
+1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and, if necessary, switch environments as specified earlier in this topic.
 
 1. Under **Make your own app**, hover over **Start from data**, and then select **Make this app**.
 

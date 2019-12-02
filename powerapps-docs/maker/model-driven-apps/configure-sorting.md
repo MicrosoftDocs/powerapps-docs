@@ -26,7 +26,7 @@ search.app:
 
  When you create or edit a view you can configure the sort order for either ascending or descending.   
   
-1.  Sign in to [PowerApps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
+1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
 
 2.  Expand **Data**, select **Entities**, and then select the entity that you want, such as **Accounts**.   
