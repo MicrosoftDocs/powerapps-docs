@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Connect to Office 365 Users connection from PowerApps
+# Connect to Office 365 Users connection from Power Apps
 ![Office 365 Users](./media/connection-office365-users/office365icon.png)
 
 Office 365 Users lets you access user profiles in your organization using your Office 365 account. You can perform various actions such as get your profile, a user's profile, a user's manager or direct reports.

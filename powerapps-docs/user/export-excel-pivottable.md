@@ -50,13 +50,13 @@ The option to export data to an Excel PivotTable isn’t available in all record
   
 5. If you see the security warning **External Data Connections have been disabled**, select **Enable Content**.  
   
-6. To refresh data in the file, on the **Data** tab, select **Refresh from PowerApps**.  
+6. To refresh data in the file, on the **Data** tab, select **Refresh from Power Apps**.  
   
 7. Drag the fields from the PivotTable Field List to the PivotTable. For more information, see Excel Help.  
   
 ## Tips  
   
-- In PowerApps, currency values are exported to Excel as numbers. After you complete the export, see the Excel Help topic “Display numbers as currency" to format the data as currency.
+- In Power Apps, currency values are exported to Excel as numbers. After you complete the export, see the Excel Help topic “Display numbers as currency" to format the data as currency.
   
 - The date and time values that you see in the app show up only as Date when you export the file to Excel, but the cell actually shows both the date and time.  
   

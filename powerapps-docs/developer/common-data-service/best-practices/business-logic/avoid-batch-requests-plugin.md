@@ -13,7 +13,7 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 1/15/2019
+ms.date: 11/27/2019
 ms.author: jowells
 search.audienceType: 
   - developer
@@ -31,14 +31,8 @@ search.app:
 
 ## Symptoms
 
-The following are possible effects when using <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest> or <xref:Microsoft.Xrm.Sdk.Messages.ExecuteTransactionRequest> message request classes within the context of a plug-in or workflow activity:
+Due to their long-running nature, using <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest> or <xref:Microsoft.Xrm.Sdk.Messages.ExecuteTransactionRequest> message request classes within the context of a plug-in or workflow activity expose sandbox-isolated plug-in types to the two-minute (2000-ms) channel timeout exception and can degrade the user experience for synchronous registrations.
 
-- Due to their long-running nature, batch request messages expose sandbox-isolated plug-in types to the two-minute (2000-ms) channel timeout exception and can degrade the user experience for synchronous registrations.
-
-- Batch requests are subject to concurrency throttling, which can cause unnecessary server busy exceptions when the plug-in is executed by multiple threads. There is a limit of two concurrent `ExecuteMultiple` operations per online instance.
-
-    > [!NOTE]
-    > For on-premises deployments, the [ExecuteAsyncPerOrMaxConnectionsPerServer](/dotnet/api/microsoft.xrm.sdk.deployment.throttlesettings.executeasyncmaxconnectionsperserver) setting enables the same throttling.  By default, it is not defined for on-premises.
 
 <a name='guidance'></a>
 

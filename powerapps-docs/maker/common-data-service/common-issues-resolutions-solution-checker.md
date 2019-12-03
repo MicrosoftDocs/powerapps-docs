@@ -33,7 +33,7 @@ Whenever possible, solution checker attempts to return a specific error message 
 
 ![Error message bar](media/solution-checker-missing-roles-error.png)
 
-Failures that occur during background processing of the analysis will fail with **'Couldn't be completed'** status and return an error message in the PowerApps portal as well as send email notification to the requestor.
+Failures that occur during background processing of the analysis will fail with **'Couldn't be completed'** status and return an error message in the Power Apps portal as well as send email notification to the requestor.
 
 ![Error status](media/solution-checker-exception-status.png)
 
@@ -41,11 +41,11 @@ Selecting the portal notification will link to this page of common issues for fu
 
 ![Failure notification](media/solution-checker-failure-notification.png)
 
-## Solution checker fails due to unsupported version of PowerApps Checker
+## Solution checker fails due to unsupported version of Power Apps Checker
 
-Solution checker is a feature enabled by the PowerApps Checker app.  If you have installed a PowerApps Checker app version earlier than version **1.0.0.47**, solution checker runs may fail to complete successfully. You should upgrade your PowerApps Checker version from the [!INCLUDE [pn-dyn-365-admin-center](../../includes/pn-dyn-365-admin-center.md)].
+Solution checker is a feature enabled by the Power Apps Checker app.  If you have installed a Power Apps Checker app version earlier than version **1.0.0.47**, solution checker runs may fail to complete successfully. You should upgrade your Power Apps Checker version from the [!INCLUDE [pn-dyn-365-admin-center](../../includes/pn-dyn-365-admin-center.md)].
 
-However, if you have a PowerApps Checker version earlier than version **1.0.0.45** installed, we recommend that you delete the solution and install it again. Due to recent schema changes, upgrade of PowerApps Checker from versions earlier than version **1.0.0.45** may fail.
+However, if you have a Power Apps Checker version earlier than version **1.0.0.45** installed, we recommend that you delete the solution and install it again. Due to recent schema changes, upgrade of Power Apps Checker from versions earlier than version **1.0.0.45** may fail.
 
 If you want to keep the past results from solution checker, export the results from a previous run or export all solution checker data using [Export data to Excel](../../user/export-data-excel.md) to export the data from the following entities:
 
@@ -54,25 +54,25 @@ If you want to keep the past results from solution checker, export the results f
 - Analysis Result
 - Analysis Result Detail
 
-### How to uninstall PowerApps Checker
+### How to uninstall Power Apps Checker
 
-To uninstall the PowerApps Checker solution:
+To uninstall the Power Apps Checker solution:
 
-1. As a System Administrator or as a System Customizer, open the PowerApps portal by going to https://make.powerapps.com/environments.
+1. As a System Administrator or as a System Customizer, open the Power Apps portal by going to https://make.powerapps.com/environments.
 2. Select **Solutions**.
-3. Select **PowerApps Checker**, and then on the solutions toolbar select **Delete**.
+3. Select **Power Apps Checker**, and then on the solutions toolbar select **Delete**.
 
-### How to install PowerApps Checker
+### How to install Power Apps Checker
 
-To install PowerApps Checker back into your Common Data Service environment:
+To install Power Apps Checker back into your Common Data Service environment:
 
-1. As a System Administrator or as a System Customizer, open up your PowerApps portal by going to https://make.powerapps.com/environments.
+1. As a System Administrator or as a System Customizer, open up your Power Apps portal by going to https://make.powerapps.com/environments.
 2. Select **Solutions**.
 3. On the solution toolbar select **Solution checker**, and then select **Install**.
 
 ## Solution Checker can't access organizations in Administration Mode
 
-Organizations that have been placed into [Administration Mode](https://docs.microsoft.com/dynamics365/customer-engagement/admin/manage-sandbox-instances#administration-mode) purposely restrict access to only users with System Administrator and System Customizer roles. Because the PowerApps Checker application identity has neither of these roles assigned by default, it can't access organizations operating in this mode.
+Organizations that have been placed into [Administration Mode](https://docs.microsoft.com/dynamics365/customer-engagement/admin/manage-sandbox-instances#administration-mode) purposely restrict access to only users with System Administrator and System Customizer roles. Because the Power Apps Checker application identity has neither of these roles assigned by default, it can't access organizations operating in this mode.
 
 In order to use solution checker in this organization, Adminstration Mode must be disabled.
 
@@ -94,17 +94,17 @@ To disable administration mode for an organization instance:
 
 ## Solution checker fails due to missing security roles
 
-The application user for Solution Checker requires two security roles assigned in order to provide the necessary privileges to communicate with the Common Data Service organization. If either of these roles are not assigned to the user **'PowerApps Checker'**,  attempts to run analysis, download results, and run cancelation will fail. This occurs most often when customers have automation in place that removes security roles from unexpected users. The following security roles contain minimum required permissions:
+The application user for Solution Checker requires two security roles assigned in order to provide the necessary privileges to communicate with the Common Data Service organization. If either of these roles are not assigned to the user **'Power Apps Checker'**,  attempts to run analysis, download results, and run cancelation will fail. This occurs most often when customers have automation in place that removes security roles from unexpected users. The following security roles contain minimum required permissions:
 
 - Export Customizations
 - Solution Checker
 
 ### How to assign missing security roles
 
-To assign missing security roles to the PowerApps Checker user:
+To assign missing security roles to the Power Apps Checker user:
 
 1. Open your Common Data Service organization and navigate to **Settings** > **Security** > **Users**.
-2. Select the **'PowerApps Checker'** user from the list of users.
+2. Select the **'Power Apps Checker'** user from the list of users.
 3. Select **MANAGE ROLES** on the command bar.
 4. Select **'Export Customizations'** and **'Solution Checker'** role checkboxes, and then select **OK**.
 
@@ -116,14 +116,14 @@ To assign missing security roles to the PowerApps Checker user:
 
 The application user for solution checker requires an access mode of **'Non-Interactive'** or **'Read-Write'** in order to communicate with the Common Data Service organization. If the access mode has been changed to another value such as **'Administrative'**, then attempts to run analysis, download results, and run cancelation will fail.
 
-To resolve this issue, you must update the **'PowerApps Checker'** application user with 'Non-interactive' access mode.
+To resolve this issue, you must update the **'Power Apps Checker'** application user with 'Non-interactive' access mode.
 
 ### How to update user access mode
 
-To update the access mode for the PowerApps Checker user:
+To update the access mode for the Power Apps Checker user:
 
 1. Open your Common Data Service organization and navigate to **Settings** > **Security** > **Users**.
-2. Select the **'PowerApps Checker'** user from the list of users and double-click to open the user form.
+2. Select the **'Power Apps Checker'** user from the list of users and double-click to open the user form.
 3. Scroll to the **'Administration'** > **'Client Access License (CAL) Information'** section of the form.
 4. Select **'Non-interactive'** in the **Access Mode** drop-down control.
 
@@ -134,14 +134,14 @@ To update the access mode for the PowerApps Checker user:
 
 ## Solution Checker fails due to disabled application user
 
-The PowerApps Checker application user in the Common Data Service organization containing solutions to be analyzed must be enabled. If the application user becomes disabled, requests to analyze solutions in the same organization will fail. If receiving this error message, first verify that the PowerApps Checker application user is indeed disabled. Then follow the mitigation steps provided below.
+The Power Apps Checker application user in the Common Data Service organization containing solutions to be analyzed must be enabled. If the application user becomes disabled, requests to analyze solutions in the same organization will fail. If receiving this error message, first verify that the Power Apps Checker application user is indeed disabled. Then follow the mitigation steps provided below.
 
 ![Disabled user status](media/solution-checker-disabled-application-user.png)
 
-### How to enable the PowerApps Checker application user
+### How to enable the Power Apps Checker application user
 
 1. In the Power Platform Admin center, select the environment and go to **Settings** > **User's + Permissions**  > **Users**.
-2. In the **Application Users** view, select the checkmark next to the PowerApps Checker Application user.
+2. In the **Application Users** view, select the checkmark next to the Power Apps Checker Application user.
 3. On the Actions toolbar, select **Enable**
 
 ![Enable user from view](media/solution-checker-enable-application-user-view.png)
@@ -168,9 +168,9 @@ When solution checker fails due to an "unlicensed user" exception, it is often c
 >[!IMPORTANT]
 >It is highly recommended that plugin steps be configured to execute in context of the calling user rather than specific users which are subject to assigned license being revoked.
 
-### Plugin step performs operations that require privileges not granted to PowerApps Checker application user
+### Plugin step performs operations that require privileges not granted to Power Apps Checker application user
 
-When solution checker fails due to Common Data Service denying access based on a missing privilege, it is often caused by a triggered plugin step that performs operations that require privileges not currently granted to the PowerApps Checker application user. Either reconfigure the plugin step to not execute on the operation invoked by solution checker or grant the PowerApps Checker application user the necessary privileges to execute the custom plugin step.
+When solution checker fails due to Common Data Service denying access based on a missing privilege, it is often caused by a triggered plugin step that performs operations that require privileges not currently granted to the Power Apps Checker application user. Either reconfigure the plugin step to not execute on the operation invoked by solution checker or grant the Power Apps Checker application user the necessary privileges to execute the custom plugin step.
 
 ### Plugin step unexpectedly interrupts execution by throwing InvalidPluginExecutionException
 

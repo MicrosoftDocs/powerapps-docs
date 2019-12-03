@@ -24,7 +24,7 @@ search.app:
 
 # Change the solution publisher prefix
 
-Every customization you make is part of a solution. Every solution has a publisher. By default, the solution you will work with in PowerApps will be the **Common Data Services Default Solution** which is associated with the **Common Data Service Default Publisher**.
+Every customization you make is part of a solution. Every solution has a publisher. By default, the solution you will work with in Power Apps will be the **Common Data Services Default Solution** which is associated with the **Common Data Service Default Publisher**.
 
 The default customization prefix will be randomly assigned for this publisher, for example it could be `cr8a3`. This means that the name of every new item of metadata created for your organization will have this prepended to the names used to uniquely identify the items. If you create a new entity named **Animal**, the unique name used by Common Data Service would be `cr8a3_animal`. The same is true for any new fields (attributes), relationships, or optionset options.
 
@@ -38,7 +38,7 @@ For this reason, many people like to change the solution publisher prefix so tha
 
 ## Change the solution publisher prefix for the Common Data Service Default Publisher  
 
- 1. In the PowerApps portal, select **Model-driven** in the bottom left corner.
+ 1. In the Power Apps portal, select **Model-driven** in the bottom left corner.
  2. Click **Advanced** in the left navigation to open the **Common Data Services Default Solution**
  3. In the solution explorer, select the **Information** area in the left navigation.
  4. Click the **Publisher** link to open the **Common Data Service Default Publisher** form.
@@ -49,7 +49,7 @@ For this reason, many people like to change the solution publisher prefix so tha
 
 People who distribute their solutions will typically work within a solution that they create rather than the **Common Data Services Default Solution**. The customization prefix is usually set when they create the solution. You can change the customization prefix for another unmanaged solution you are working with by following these steps: 
 
- 1. In the PowerApps portal, select **Model-driven** in the bottom left corner.
+ 1. In the Power Apps portal, select **Model-driven** in the bottom left corner.
  2. Click **Advanced** in the left navigation to open the **Common Data Services Default Solution**
  3. Edit the URL of the page to remove everything after `dynamics.com` and reload the page.
  4. Navigate to **Settings** > **Customization** > **Customizations**. 

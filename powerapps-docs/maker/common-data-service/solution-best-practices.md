@@ -1,5 +1,5 @@
 ---
-title: "Solutions best practices in PowerApps | MicrosoftDocs"
+title: "Solutions best practices in Power Apps | MicrosoftDocs"
 description: "Learn about best practices when you work with solutions"
 ms.custom: ""
 ms.date: 10/08/2019

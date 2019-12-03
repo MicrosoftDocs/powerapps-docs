@@ -14,14 +14,14 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Timer control in PowerApps
+# Timer control in Power Apps
 A control that can determine how your app responds after a certain amount of time passes.
 
 ## Description
 Timers can, for example, determine how long a control appears or change other properties of a control after a certain amount of time has passed.
 
 > [!NOTE]
-> In PowerApps Studio, timers run only in Preview mode.
+> In Power Apps Studio, timers run only in Preview mode.
 
 
 ## Key properties

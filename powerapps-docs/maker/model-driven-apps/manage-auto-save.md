@@ -1,5 +1,5 @@
 ---
-title: "Disable auto-save in a model-driven app with PowerApps | MicrosoftDocs"
+title: "Disable auto-save in a model-driven app with Power Apps | MicrosoftDocs"
 ms.custom: ""
 ms.date: 06/18/2018
 ms.reviewer: ""
@@ -57,7 +57,7 @@ Auto-save helps app users focus on their work without having to manage saving da
 > [!NOTE]
 >  Auto-save will be disabled for the form, but data will still be saved when you select the ![Auto save button](media/auto-save-icon.png "Auto save button") button in the lower-right corner. If you attempt to navigate away from a form or close a form where data has been changed they will get prompt to save their changes before they are allowed to navigate away or close the form.  
   
-1.  Sign in to [PowerApps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
+1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
 2.  Expand **Data**, select **Entities**, select the entity that you want, and then select the **Forms** tab.  
   

@@ -16,7 +16,7 @@ author: "Aneesmsft"
 ms.author: "matp"
 manager: "kvivek"
 tags: 
-  - "PowerApps maker portal impact"
+  - "Power Apps maker portal impact"
 search.audienceType: 
   - maker
 search.app: 
@@ -40,9 +40,9 @@ After you have added an embedded canvas app to your model-driven form, learn how
 For guidelines on working with embedded canvas apps as well as helpful tips to troubleshoot any issues you might encounter, please refer to: [Guidelines on working with embedded canvas apps](embedded-canvas-app-guidelines.md).
 
 ## See also
-[What are canvas apps in PowerApps?](../canvas-apps/getting-started.md) <br />
-[Add and configure a canvas-app control in PowerApps](../canvas-apps/add-configure-controls.md) <br />
-[Overview of canvas-app connectors for PowerApps](../canvas-apps/connections-list.md) <br />
+[What are canvas apps in Power Apps?](../canvas-apps/getting-started.md) <br />
+[Add and configure a canvas-app control in Power Apps](../canvas-apps/add-configure-controls.md) <br />
+[Overview of canvas-app connectors for Power Apps](../canvas-apps/connections-list.md) <br />
 [Add an embedded canvas app on a model-driven form](embedded-canvas-app-add-classic-designer.md) <br />
 [Edit a canvas app embedded on a model-driven form](embedded-canvas-app-edit-classic-designer.md) <br />
 [Customize the screen size and orientation of a canvas app embedded on a model-driven form](embedded-canvas-app-customize-screen.md) <br />

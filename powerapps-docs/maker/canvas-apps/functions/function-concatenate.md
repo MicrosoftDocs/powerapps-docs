@@ -1,6 +1,6 @@
 ---
 title: Concat and Concatenate functions | Microsoft Docs
-description: Reference information, including syntax and examples, for the Concat and Concatenate functions in PowerApps
+description: Reference information, including syntax and examples, for the Concat and Concatenate functions in Power Apps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Concat and Concatenate functions in PowerApps
+# Concat and Concatenate functions in Power Apps
 
 Concatenates individual strings of text and strings in [tables](../working-with-tables.md).
 

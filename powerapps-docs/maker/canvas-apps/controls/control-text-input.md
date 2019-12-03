@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Text input control in PowerApps
+# Text input control in Power Apps
 A box in which the user can type text, numbers, and other data.
 
 ## Description

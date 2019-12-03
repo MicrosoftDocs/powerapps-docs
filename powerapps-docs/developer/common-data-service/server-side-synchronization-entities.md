@@ -17,7 +17,7 @@ search.app:
 ---
 # Server-side synchronization entities
 
-In PowerApps, server-side synchronization provides an interface between Common Data Service and one or more Exchange servers or POP3 servers for incoming email, and one or more SMTP or Exchange servers for outgoing email. It retrieves and evaluates emails for relevance to Common Data Service and accordingly creates corresponding email activities in Common Data Service. It also picks emails from Common Data Service and sends them through the configured email server for users and queues. It also allows synchronization of appointments, contacts, and tasks with  Exchange Server 2010 and Exchange Server 2013.  
+In Power Apps, server-side synchronization provides an interface between Common Data Service and one or more Exchange servers or POP3 servers for incoming email, and one or more SMTP or Exchange servers for outgoing email. It retrieves and evaluates emails for relevance to Common Data Service and accordingly creates corresponding email activities in Common Data Service. It also picks emails from Common Data Service and sends them through the configured email server for users and queues. It also allows synchronization of appointments, contacts, and tasks with  Exchange Server 2010 and Exchange Server 2013.  
   
  With the centralized email configuration, the Common Data Service entity model allows having common user interface (UI) settings (like user name, password, email address, and synchronization methods) for users, queues, and forward mailboxes. Each user or a queue can have mailboxes, which can be monitored through either server-side synchronization or Microsoft Dynamics 365 for Outlook. The [EmailServerProfile](/powerapps/developer/common-data-service/reference/entities/emailserverprofile) entity represents the email server profile for an organization. The [Mailbox](/powerapps/developer/common-data-service/reference/entities/mailbox) entity represents the appointments, contacts, and tasks delivery method of the mailbox. Currently, the user entity is restricted to have only one mailbox record per user and the queues entity to have only one mailbox record per queue, as shown in the following illustration.  
   
@@ -37,7 +37,7 @@ In PowerApps, server-side synchronization provides an interface between Common D
   
 - Automatically relate an associated mailbox to the default email profile when a user or a queue is created with the email delivery method set as server-side synchronization.  
   
-- Automatically track Microsoft Exchange emails in PowerApps for a user based on the folder-level tracking rules.  
+- Automatically track Microsoft Exchange emails in Power Apps for a user based on the folder-level tracking rules.  
   
 ### Related topics  
  [Configure folder level tracking rules](configure-exchange-folder-level-tracking-rules.md) 

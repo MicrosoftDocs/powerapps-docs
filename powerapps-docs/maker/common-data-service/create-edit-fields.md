@@ -32,8 +32,8 @@ There are two designers you can use to create or edit fields:
 
 |Designer| Description|
 |--|--|
-|[PowerApps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)|Provides an easy streamlined experience, but some special settings are not available.<br />More information: [Create and edit fields for Common Data Service using PowerApps portal](create-edit-field-portal.md)|
-|Solution explorer|Not as easy, but provides for more flexibility for less common requirements.<br />More information: [Create and edit fields for Common Data Service using PowerApps solution explorer](create-edit-field-solution-explorer.md) |
+|[Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)|Provides an easy streamlined experience, but some special settings are not available.<br />More information: [Create and edit fields for Common Data Service using Power Apps portal](create-edit-field-portal.md)|
+|Solution explorer|Not as easy, but provides for more flexibility for less common requirements.<br />More information: [Create and edit fields for Common Data Service using Power Apps solution explorer](create-edit-field-solution-explorer.md) |
 
 > [!NOTE]
 > You can also create fields in your environment using the following:
@@ -44,7 +44,7 @@ There are two designers you can use to create or edit fields:
 
 Information in this topic will help you choose which designer you can use. 
 
-You should use the PowerApps portal to Create and edit fields for Common Data Service unless you need to address any of the following requirements:
+You should use the Power Apps portal to Create and edit fields for Common Data Service unless you need to address any of the following requirements:
 
 - Create a Customer Lookup field. 
    - More information: [Different types of lookups](types-of-fields.md#different-types-of-lookups)
@@ -67,7 +67,7 @@ You should use the PowerApps portal to Create and edit fields for Common Data Se
    - More information: [Set managed properties for fields](set-managed-properties-for-field.md)
 
 > [!NOTE]
-> You can create a Lookup field in the PowerApps portal or in solution explorer by creating a One-to-many relationship on the entity. But only solution explorer offers the option to create this relationship while creating a field.
+> You can create a Lookup field in the Power Apps portal or in solution explorer by creating a One-to-many relationship on the entity. But only solution explorer offers the option to create this relationship while creating a field.
 
 ## Community tools
 
@@ -78,8 +78,8 @@ You should use the PowerApps portal to Create and edit fields for Common Data Se
 > If you have questions pertaining to the tool, please contact the publisher. More Information: [XrmToolBox](https://www.xrmtoolbox.com).
 
 ### See also  
-[Create and edit fields for Common Data Service using PowerApps portal](create-edit-field-portal.md)<br />
-[Create and edit fields for Common Data Service using PowerApps solution explorer](create-edit-field-solution-explorer.md)<br />
+[Create and edit fields for Common Data Service using Power Apps portal](create-edit-field-portal.md)<br />
+[Create and edit fields for Common Data Service using Power Apps solution explorer](create-edit-field-solution-explorer.md)<br />
 [Types of fields and field data types](types-of-fields.md)<br />
 [Developer Documentation: Work with attribute metadata](/dynamics365/customer-engagement/developer/org-service/work-attribute-metadata)
  

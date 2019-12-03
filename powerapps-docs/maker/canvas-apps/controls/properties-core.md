@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Core properties in PowerApps
+# Core properties in Power Apps
 Configure whether the user can see and interact with a control.
 
 ### Properties

@@ -1,5 +1,5 @@
 ---
-title: Share a model-driven app with PowerApps | Microsoft Docs
+title: Share a model-driven app with Power Apps | Microsoft Docs
 description: Learn how to share a model-driven app
 documentationcenter: ''
 author: Mattp123
@@ -19,7 +19,7 @@ search.app:
   - D365CE
 ---
 
-# Share a model-driven app with PowerApps
+# Share a model-driven app with Power Apps
 
 [!INCLUDE [powerapps](../../includes/powerapps.md)] apps use role-based security for sharing. The fundamental concept in role-based security is that a security role contains privileges that define a set of actions that can be performed within the app. All app users must be assigned to one or more predefined or custom roles. Or, roles can also be assigned to teams. When a user or team is assigned to one of these roles, the person or team members are granted the set of privileges associated with that role. 
 
@@ -28,9 +28,9 @@ To share an app you must have the [!INCLUDE [powerapps](../../includes/powerapps
 
 ## Share your app for basic use
 To add privileges so the app user can run an app within the environment and perform common tasks for the records that they own, use the **Common Data Services User** security role.
-1.	On the [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) site select **Apps**, next to the model-driven app you want to share select **…**, and then select **Share**. 
+1.	On the [Power Apps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) site select **Apps**, next to the model-driven app you want to share select **…**, and then select **Share**. 
 	> [!IMPORTANT]
-    > The steps to share a model-driven app are different from a canvas app. For steps to share a canvas app, see [Share a canvas app in PowerApps](../canvas-apps/share-app.md). 
+    > The steps to share a model-driven app are different from a canvas app. For steps to share a canvas app, see [Share a canvas app in Power Apps](../canvas-apps/share-app.md). 
 
 2.	Under **Assign users to the security role** select **Security Users**.
 3.	From the list of enabled users select the users that you want to grant access to your app, and then on the command bar select **Manage Roles**. 

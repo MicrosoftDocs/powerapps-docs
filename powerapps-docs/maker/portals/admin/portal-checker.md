@@ -40,7 +40,7 @@ For a list of common issues diagnosed by the portal checker tool, see [Common po
 
 To run portal checker:
 
-1.	Open [PowerApps Portals admin center](admin-overview.md).
+1.	Open [Power Apps Portals admin center](admin-overview.md).
 
 2.	Go to **Run Portal Checker**.
 

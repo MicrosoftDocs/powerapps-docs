@@ -14,14 +14,14 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Add images to Excel from PowerApps
+# Add images to Excel from Power Apps
 Create an app automatically in which users can show, add, or delete images from files or drawings from a **Pen** control. The app is based on an Excel file that you create and upload to a cloud-storage account.
 
 ## Prerequisites
 
 * Familiarity with [adding and configuring controls](add-configure-controls.md).
 * Familiarity with [configuring Excel data as a table](https://support.office.com/article/Format-an-Excel-table-6789619F-C889-495C-99C2-2F971C0E2370?ui=en-US&rs=en-US&ad=US).
-* A [PowerApps connection](add-data-connection.md) to a cloud-storage account (such as Dropbox, OneDrive, or Google Drive) in which you can store an Excel file.
+* A [Power Apps connection](add-data-connection.md) to a cloud-storage account (such as Dropbox, OneDrive, or Google Drive) in which you can store an Excel file.
 
 ## Create the data source and the app
 1. In Excel, add **Caption** and **Image [image]** to any two cells that are side by side (for example, A1 and B1) and that are just above two empty cells.
@@ -29,7 +29,7 @@ Create an app automatically in which users can show, add, or delete images from 
    
     ![Create a table](./media/add-images-to-excel/create-table.png)
 3. Save the file (for example, as **ImageDemo**), and upload it to your cloud-storage account.
-4. In PowerApps, click or tap **New** on the **File** menu (along the left edge if you haven't yet opened an app), and then click or tap **Phone layout** in the tile for your cloud-storage account.
+4. In Power Apps, click or tap **New** on the **File** menu (along the left edge if you haven't yet opened an app), and then click or tap **Phone layout** in the tile for your cloud-storage account.
    
     ![Select your cloud-storage account](./media/add-images-to-excel/select-account.png)
 5. Under **Choose an Excel file**, click or tap the file that you created.
