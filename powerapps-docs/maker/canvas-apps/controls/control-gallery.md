@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 05/25/2017
+ms.date: 12/02/2019
 ms.author: chmoncay
 search.audienceType:
   - maker
@@ -87,6 +87,11 @@ If a user scrolls the **Flexible height** gallery control before all items are l
 ## Related functions
 
 [**Filter**( *DataSource*, *Formula* )](../functions/function-filter-lookup.md)
+
+[**Reset**( *Control* )](../functions/function-reset.md) - Resets your gallery back to it's initial state. Initial state includes scrolling to the first item and selecting the first item or default if present. 
+
+  > [!NOTE]
+  > **Reset** control does not recursively reset all the children of the gallery.
 
 ## Examples
 

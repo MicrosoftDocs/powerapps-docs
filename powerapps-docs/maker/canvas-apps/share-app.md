@@ -73,7 +73,7 @@ Before you share an app, you must save it to the cloud (not locally) and then pu
 
 1. At the bottom of the share panel, select **Share**.
 
-    Everyone with whom you shared the app can run it in Power Apps Mobile on a mobile device or in AppSource on [Dynamics 365](https://home.dynamics.com) in a browser. Co-owners can edit and share the app in [PowerApps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+    Everyone with whom you shared the app can run it in Power Apps Mobile on a mobile device or in AppSource on [Dynamics 365](https://home.dynamics.com) in a browser. Co-owners can edit and share the app in [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
     If you sent an email invitation, everyone with whom you shared the app can run it by selecting a link in the invitation.
 

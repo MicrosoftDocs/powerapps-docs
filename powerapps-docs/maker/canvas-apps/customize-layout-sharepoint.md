@@ -45,7 +45,7 @@ If you're not signed up for Power Apps, [sign up for free](https://make.powerapp
 
 ## Open the generated app
 
-1. Sign in to [PowerApps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then select **Apps** near the left edge.
+1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then select **Apps** near the left edge.
 
 1. Find the app that you generated, select the ellipsis icon (**...**) for it, and then select **Edit**.
 

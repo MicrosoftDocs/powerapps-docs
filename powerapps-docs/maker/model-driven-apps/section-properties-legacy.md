@@ -28,7 +28,7 @@ search.app:
  Headers and footers are similar to sections but cannot be removed. If they don’t contain anything they will not be shown. 
 
 You can access **Section properties** from the Power Apps site. 
-1. Sign in to [PowerApps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
 2.  Expand **Data**, select **Entities**, select the entity that you want, and then select the **Forms** tab. 
 

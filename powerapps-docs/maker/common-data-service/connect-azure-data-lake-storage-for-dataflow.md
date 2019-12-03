@@ -64,7 +64,7 @@ Follow the steps in [Create an Azure Data Lake Storage Gen2 storage account](htt
 Once you've set up your Azure Data Lake Storage Gen2 account in the Azure portal, you are ready to connect it to a specific dataflow or a Power Apps environment. Connecting the lake to an environment allows other makers and admins in the environment to create dataflows that store their data in your organization's lake as well. 
 
 To connect your Azure Data Lake Storage Gen2 account with the dataflow, follow these steps:
-1.	Sign in to [PowerApps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and verify which environment you're in. The environment switcher is located on the right side of the header. 
+1.	Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and verify which environment you're in. The environment switcher is located on the right side of the header. 
 2. On the left navigation pane, select the down arrow next to **Data**.
 
    ![Power Apps maker portal Data tab](media/powerapps-portal-data.png)

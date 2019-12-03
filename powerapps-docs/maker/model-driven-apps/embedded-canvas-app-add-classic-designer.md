@@ -28,7 +28,7 @@ This topic explains how to embed a new canvas app on a model-driven form.
 
 Imagine that you want to create a new canvas app and embed it on a main form for the Accounts entity. To do this, follow these steps: 
 
-1.	Sign in to [PowerApps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1.	Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 2.  [Create or edit the main form](create-and-edit-forms.md) of an entity, Accounts entity in our example. 
 3.  In the command bar, select **Switch to classic** to open the form in the classic form designer.
 4.	In the classic form designer, select the section on the form where you want the embedded canvas app to appear.
