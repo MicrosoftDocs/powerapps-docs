@@ -284,8 +284,8 @@ You can create an entity either in [classic mode](#classic-mode) or [PowerApps](
 
 10. Scroll up to the the **Entity Definition**, section and select the **Define as an activity entity** check box. This option enables the entity as an activity. 
 
-   > [!Note]
-   > Only during the creation of the entity, you can enable this option. Once the entity is created, you can't update this check box.
+    > [!Note]
+    > Only during the creation of the entity, you can enable this option. Once the entity is created, you can't update this check box.
 
 11. Ensure that the **Display in Activity Menus** check box is also selected.
 
