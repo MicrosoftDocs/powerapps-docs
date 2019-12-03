@@ -1,5 +1,5 @@
 ---
-title: "Specify properties for model-driven unified interface apps in PowerApps | MicrosoftDocs"
+title: "Specify properties for model-driven unified interface apps in Power Apps | MicrosoftDocs"
 description: "Learn how to configure the grid control for your app"
 keywords: ""
 ms.date: 06/03/2019

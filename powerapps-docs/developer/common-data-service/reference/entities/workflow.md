@@ -1720,7 +1720,7 @@ Same as workflowbinary entity [workflow_workflowbinary_Process](workflowbinary.m
 
 ### <a name="BKMK_msdyn_workflow_msdyn_solutionhealthrule_Workflow"></a> msdyn_workflow_msdyn_solutionhealthrule_Workflow
 
-**Added by**: PowerApps Checker Solution
+**Added by**: Power Apps Checker Solution
 
 Same as msdyn_solutionhealthrule entity [msdyn_workflow_msdyn_solutionhealthrule_Workflow](msdyn_solutionhealthrule.md#BKMK_msdyn_workflow_msdyn_solutionhealthrule_Workflow) Many-To-One relationship.
 
@@ -1737,7 +1737,7 @@ Same as msdyn_solutionhealthrule entity [msdyn_workflow_msdyn_solutionhealthrule
 
 ### <a name="BKMK_msdyn_workflow_msdyn_solutionhealthrule_resolutionaction"></a> msdyn_workflow_msdyn_solutionhealthrule_resolutionaction
 
-**Added by**: PowerApps Checker Solution
+**Added by**: Power Apps Checker Solution
 
 Same as msdyn_solutionhealthrule entity [msdyn_workflow_msdyn_solutionhealthrule_resolutionaction](msdyn_solutionhealthrule.md#BKMK_msdyn_workflow_msdyn_solutionhealthrule_resolutionaction) Many-To-One relationship.
 

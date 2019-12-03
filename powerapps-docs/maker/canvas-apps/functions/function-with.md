@@ -1,6 +1,6 @@
 ---
 title: With function | Microsoft Docs
-description: Reference information, including syntax, for the With function in PowerApps
+description: Reference information, including syntax, for the With function in Power Apps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# With function in PowerApps
+# With function in Power Apps
 Calculates values and performs actions for a single [record](../working-with-tables.md#records), including inline records of named values.
 
 ## Description

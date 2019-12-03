@@ -25,9 +25,11 @@ To secure these features, entity permissions allow for granular rights to be gra
 
 2. Go to **Portals** &gt; **Web Roles** and open the web role you want to add the permissions to. 
 
-3. Select **Add** to add an existing entity permission to a web role. 
+3. Under **Related**, select **Entity Permissions**.
 
-4. Select **New** to create a new Entity Permission record.
+4. Select **Add Existing Entity Permission** to add an existing entity permission to a web role. 
+
+4. Browse for an entity permission or select **New Entity Permission** to create a new Entity Permission record.
 
     ![Add entity permissions to a web role](../media/add-entity-permission-web-role.png "Add entity permissions to a web role")  
 
@@ -46,7 +48,7 @@ With Contact scope, a signed-in user in the role for which the permission record
 
 On an entity list, this means that a filter will be added to whatever model-driven app views are surfaced by that list, which only retrieves records directly linked to the current user. (Depending on the scenario, this relationship can be thought of as ownership or management rights.)
 
-Entity forms will only allow the appropriate permission for Read, Create, Write, and so on if this relationship exists when the record is loaded. [!INCLUDE[proc-more-information](../../../includes/proc-more-information.md)] [Define entity forms and custom logic within a portal](entity-forms.md).  
+Entity forms will only allow the appropriate permission for Read, Create, Write, and so on if this relationship exists when the record is loaded. [!INCLUDE[proc-more-information](../../../includes/proc-more-information.md)] [Define entity forms](entity-forms.md).  
 
 ### Account scope
 

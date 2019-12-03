@@ -419,7 +419,7 @@ In your Visual Studio project perform the following steps:
 
 ## Troubleshooting
 
-If you have any troubles running these samples, you can download all the PowerApps samples from the GitHub repository at [https://github.com/Microsoft/PowerApps-Samples](https://github.com/Microsoft/PowerApps-Samples).
+If you have any troubles running these samples, you can download all the Power Apps samples from the GitHub repository at [https://github.com/Microsoft/PowerApps-Samples](https://github.com/Microsoft/PowerApps-Samples).
 
 This sample is based on the [SimpleWebApi](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/webapi/C%23/SimpleWebApi) located in the `PowerApps-Samples-master\PowerApps-Samples-master\cds\webapi\C#\SimpleWebApi` folder.
 

@@ -1,5 +1,5 @@
 ---
-title: "OnPreStageChange Event (Client API reference) in model-driven apps in PowerApps| MicrosoftDocs"
+title: "OnPreStageChange Event (Client API reference) in model-driven apps in Power Apps| MicrosoftDocs"
 ms.date: 10/10/2019
 ms.service: crm-online
 ms.topic: reference

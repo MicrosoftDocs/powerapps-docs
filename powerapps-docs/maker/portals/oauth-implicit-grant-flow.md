@@ -124,11 +124,11 @@ You must register the client ID with the portal for which this flow is allowed. 
 
 ## Sample code
 
-You can use the following sample code to get started with using OAuth 2.0 Implicit Grant with PowerApps portals APIs.
+You can use the following sample code to get started with using OAuth 2.0 Implicit Grant with Power Apps portals APIs.
 
 ### Use Portal OAuth token with an external Web API
 
-This sample is an ASP.NET based project and is used to validate the ID token issued by PowerApps portals. The complete sample can be found here: [Use Portal OAuth token with an external Web API](https://github.com/microsoft/PowerApps-Samples/tree/master/portals/ExternalWebApiConsumingPortalOAuthTokenSample).
+This sample is an ASP.NET based project and is used to validate the ID token issued by Power Apps portals. The complete sample can be found here: [Use Portal OAuth token with an external Web API](https://github.com/microsoft/PowerApps-Samples/tree/master/portals/ExternalWebApiConsumingPortalOAuthTokenSample).
 
 ### Authorize Endpoint sample
 
@@ -136,4 +136,4 @@ This sample shows how authorize endpoint returns the ID token as a fragment in t
 
 ### Token Endpoint sample
 
-This sample shows how you can use the getAuthenticationToken function to fetch an ID token using the Token endpoint in PowerApps portals. The sample can be found here: [Token Endpoint sample](https://github.com/microsoft/PowerApps-Samples/blob/master/portals/TokenEndpoint.js).
+This sample shows how you can use the getAuthenticationToken function to fetch an ID token using the Token endpoint in Power Apps portals. The sample can be found here: [Token Endpoint sample](https://github.com/microsoft/PowerApps-Samples/blob/master/portals/TokenEndpoint.js).

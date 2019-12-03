@@ -61,9 +61,9 @@ export class TSImageUploadControl
   implements ComponentFramework.StandardControl<IInputs, IOutputs> {
   // Value of the field is stored and used inside the control
   private _value: string | null;
-  // PowerApps component framework framework context, "Input Properties" containing the parameters, control metadata and interface functions.
+  // Power Apps component framework framework context, "Input Properties" containing the parameters, control metadata and interface functions.
   private _context: ComponentFramework.Context<IInputs>;
-  // PowerApps component framework framework delegate which will be assigned to this object which would be called whenever an update happens.
+  // Power Apps component framework framework delegate which will be assigned to this object which would be called whenever an update happens.
   private _notifyOutputChanged: () => void;
   // Control's container
   private controlContainer: HTMLDivElement;
@@ -388,5 +388,6 @@ The `device.pickFile` method opens a dialog box to select files from your comput
 ### Related topics
 
 [Download sample components](https://go.microsoft.com/fwlink/?linkid=2088525)<br/>
-[PowerApps component framework API reference](../reference/index.md)<br/>
-[PowerApps component framework manifest schema reference](../manifest-schema-reference/index.md)
+[How to use the sample components](../use-sample-components.md)<br/>
+[Power Apps component framework API reference](../reference/index.md)<br/>
+[Power Apps component framework manifest schema reference](../manifest-schema-reference/index.md)

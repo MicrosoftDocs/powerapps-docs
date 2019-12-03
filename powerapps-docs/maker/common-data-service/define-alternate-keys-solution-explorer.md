@@ -25,9 +25,9 @@ search.app:
 
 Solution explorer provides one way to view and create alternate keys for Common Data Service.
 
-The [PowerApps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) enables configuring the most common options, but certain options can only be set using solution explorer. <br />More information: 
+The [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) enables configuring the most common options, but certain options can only be set using solution explorer. <br />More information: 
 - [Define alternate keys to reference records](define-alternate-keys-reference-records.md)<br />
-- [Define alternate keys using PowerApps portal](define-alternate-keys-portal.md)
+- [Define alternate keys using Power Apps portal](define-alternate-keys-portal.md)
 
 ## Open solution explorer
 
@@ -66,5 +66,5 @@ While [viewing alternate keys](#view-alternate-keys), select ![Delete](media/del
 ### See also
 
 [Define alternate keys to reference records](define-alternate-keys-reference-records.md)<br />
-[Define alternate keys using PowerApps portal](define-alternate-keys-portal.md)<br />
+[Define alternate keys using Power Apps portal](define-alternate-keys-portal.md)<br />
 [Developer Documentation: Define alternate keys for an entity](/dynamics365/customer-engagement/developer/define-alternate-keys-entity)

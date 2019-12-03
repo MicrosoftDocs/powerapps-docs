@@ -1,6 +1,6 @@
 - name: Get started   
   items:
-  - name: What is PowerApps?
+  - name: What is Power Apps?
     href: ../powerapps-overview.md
   - name: Sign up for 30-day trial version
     href: signup-for-powerapps.md
@@ -68,6 +68,8 @@
         href: ../user/track-your-progress-with-dashboard-and-charts.md
       - name: Add Power BI dashboards 
         href: ../user/add-powerbi-dashboards.md
+      - name: Collaborate using SharePoint 
+        href: ../user/collaborate-using-sharepoint.md        
     - name: Search records
       items:
       - name: Compare search and find options
@@ -116,7 +118,7 @@
   items:
   - name: Overview
     href: index.md
-  - name: Sign in to PowerApps
+  - name: Sign in to Power Apps
     href: ./canvas-apps/intro-maker-portal.md
 - name: Canvas apps
   items:
@@ -174,20 +176,30 @@
           items:
             - name: Common Data Service
               href: canvas-apps/connections/connection-common-data-service.md
+            - name: Cloud storage
+              href: canvas-apps/connections/cloud-storage-blob-connections.md
+            - name: Dynamics 365
+              href: canvas-apps/connections/connection-dynamics-crmonline.md
+            - name: Dynamics AX
+              href: canvas-apps/connections/connection-dynamicsax.md
+            - name: Excel
+              href: canvas-apps/connections/connection-excel.md
+            - name: Microsoft Translator
+              href: canvas-apps/connections/connection-microsoft-translator.md
+            - name: Office 365 Outlook
+              href: canvas-apps/connections/connection-office365-outlook.md
+            - name: Office 365 Users
+              href: canvas-apps/connections/connection-office365-users.md
+            - name: Oracle database
+              href: canvas-apps/connections/connection-oracledb.md
+            - name: Power BI
+              href: canvas-apps/connections/connection-powerbi.md
             - name: SharePoint
               href: canvas-apps/connections/connection-sharepoint-online.md
             - name: SQL Server
               href: canvas-apps/connections/connection-azure-sqldatabase.md
-            - name: Dynamics 365
-              href: canvas-apps/connections/connection-dynamics-crmonline.md
-            - name: Office 365 Users
-              href: canvas-apps/connections/connection-office365-users.md
-            - name: Office 365 Outlook
-              href: canvas-apps/connections/connection-office365-outlook.md
-            - name: Excel
-              href: canvas-apps/connections/connection-excel.md
-            - name: Cloud storage
-              href: canvas-apps/connections/cloud-storage-blob-connections.md
+            - name: Twitter
+              href: canvas-apps/connections/connection-twitter.md 
         - name: Add a connection
           href: ./canvas-apps/add-data-connection.md
         - name: Manage connections
@@ -249,7 +261,7 @@
             - name: Understand form layout
               href: ./canvas-apps/working-with-form-layout.md
             - name: Understand cards
-              href: ./canvas-apps/working-with-cards.md
+              href: ./canvas-apps/working-with-cards.md           
           - name: Add a list
             items:
             - name: Add a list box, a drop-down list, or radio buttons
@@ -262,6 +274,8 @@
             href: ./canvas-apps/add-images-pictures-audio-video.md
           - name: Add Power BI data
             href: ./canvas-apps/powerapps-custom-visual.md
+          - name: Working with gallery
+            href: ./canvas-apps/show-images-text-gallery-sort-filter.md
           - name: Control reference
             items:
             - name: List of controls and properties
@@ -288,6 +302,8 @@
               href: ./canvas-apps/controls/control-column.md
             - name: Combo box
               href: ./canvas-apps/controls/control-combo-box.md
+            - name: Container (experimental)
+              href: ./canvas-apps/controls/control-container.md
             - name: Data table
               href: ./canvas-apps/controls/control-data-table.md
             - name: Date picker
@@ -348,6 +364,20 @@
               href: ./canvas-apps/controls/control-audio-video.md
             - name: Web barcode scanner (experimental)
               href: ./canvas-apps/controls/control-barcodescanner.md
+          - name: Common properties
+            items:
+            - name: Accessibility
+              href: ./canvas-apps/controls/properties-accessibility.md
+            - name: Color and border
+              href: ./canvas-apps/controls/properties-color-border.md
+            - name: Core
+              href: ./canvas-apps/controls/properties-core.md
+            - name: Image
+              href: ./canvas-apps/controls/properties-visual.md
+            - name: Size and location
+              href: ./canvas-apps/controls/properties-size-location.md
+            - name: Text
+              href: ./canvas-apps/controls/properties-text.md
       - name: Configure app functionality
         items:
         - name: Get started with formulas
@@ -794,7 +824,7 @@
         href: ./canvas-apps/sharepoint-scenario-summary.md
     - name: Cognitive Services
       href: ./canvas-apps/cognitive-services-api.md
-    - name: Transform your InfoPath forms to PowerApps
+    - name: Transform your InfoPath forms to Power Apps
       href: ./canvas-apps/transform-infopath.md
   - name: For developers
     items:
@@ -1066,7 +1096,7 @@
       href: ./model-driven-apps/checklist-transition-unified-interface.md
     - name: "FAQs: Unified Interface transition"
       href: ./model-driven-apps/faqs-transition-unified-interface.md    
-  - name: Accessibility in PowerApps app designer
+  - name: Accessibility in Power Apps app designer
     href: ./model-driven-apps/Accessibility-app-designer-site-map-designer-my-apps-page.md
   - name: Customize Dynamics 365 App for Outlook
     href: ./model-driven-apps/app-for-outlook-customize.md
@@ -1076,8 +1106,10 @@
 
 - name: Portals
   items:
-    - name: What is PowerApps portals?
+    - name: What is Power Apps portals?
       href: ./portals/overview.md
+    - name: Release updates
+      href: ./portals/release-updates.md
     - name: Design and build a portal
       items:
         - name: Portal templates
@@ -1088,7 +1120,7 @@
           href: ./portals/create-dynamics-portal.md
         - name: Provision a portal using the older portal add-on
           href: ./portals/provision-portal-add-on.md
-        - name: PowerApps portals Studio anatomy
+        - name: Power Apps portals Studio anatomy
           href: ./portals/portal-designer-anatomy.md
         - name: Supported web browsers for portal designer
           href: ./portals/supported-browser.md
@@ -1134,7 +1166,7 @@
           href: ./portals/admin/manage-auth-key.md
         - name: Set up IP address restriction
           href: ./portals/admin/ip-address-restrict.md
-        - name: Update to PowerApps portals domain
+        - name: Update to Power Apps portals domain
           href: ./portals/admin/update-portal-domain.md
         - name: Clear the server-side cache
           href: ./portals/admin/clear-server-side-cache.md
@@ -1142,6 +1174,8 @@
           href: ./portals/admin/migrate-portal-configuration.md
         - name: About portal lifecycle
           href: ./portals/admin/portal-lifecycle.md
+        - name: Upgrade a portal
+          href: ./portals/admin/upgrade-portal.md
     - name: Advanced portal configuration
       items:
         - name: Overview
@@ -1190,12 +1224,22 @@
           href: ./portals/configure/place-child-nodes.md
         - name: Behavior and format of the date and time field
           href: ./portals/configure/behavior-format-date-time-field.md
+        - name: View email records in portal timeline
+          href: ./portals/configure/view-email-in-timeline.md
+        - name: Rate a webpage
+          href: ./portals/configure/rate-webpage.md
+        - name: Enable header and footer output caching on a portal
+          href: ./portals/configure/enable-header-footer-output-caching.md
         - name: Add chart on a web page in portal
           href: ./portals/configure/add-chart.md
         - name: Work with entity forms
           href: ./portals/configure/entity-forms.md
         - name: Work with entity lists
           href: ./portals/configure/entity-lists.md
+        - name: Manage websites
+          href: ./portals/configure/websites.md
+        - name:  Create and manage website bindings
+          href: ./portals/configure/website-bindings.md
         - name: Work with web forms
           items:
             - name: Define web form properties
@@ -1218,6 +1262,14 @@
               href: ./portals/configure/configure-web-form-subgrid.md
             - name: Add geolocation
               href: ./portals/configure/add-geolocation.md
+        - name: Implement GDPR in portals
+          href: ./portals/configure/implement-gdpr.md
+        - name: Create and run advertisements
+          href: ./portals/configure/create-run-advertisement.md
+        - name: Gather feedback by using polls
+          href: ./portals/configure/gather-feedback-poll.md
+        - name: Create and manage publishing states
+          href: ./portals/configure/publishing-states.md
     - name:  Advanced portal customization
       items:
         - name: Work with Liquid templates
@@ -1246,7 +1298,7 @@
                   href: ./portals/liquid/variable-tags.md
                 - name: Template tags
                   href: ./portals/liquid/template-tags.md
-                - name: PowerApps common data service entity tags
+                - name: Common Data Service entity tags
                   href: ./portals/liquid/portals-entity-tags.md
             - name: Available Liquid filters
               href: ./portals/liquid/liquid-filters.md
@@ -1264,6 +1316,8 @@
                   href: ./portals/liquid/render-site-header-primary-navigation.md
         - name: OAuth 2.0 implicit grant flow
           href: ./portals/oauth-implicit-grant-flow.md
+        - name: Manage webpages
+          href: ./portals/configure/web-page.md
     - name: User management and security in portal
       items:
         - name: Configure contacts
@@ -1292,8 +1346,10 @@
           href: ./portals/manage-sharepoint-documents.md
     - name: Known issues
       href: ./portals/known-issues.md
-    - name: PowerApps portals FAQ
+    - name: Power Apps portals FAQ
       href: ./portals/faq.md
+    - name: Legacy Adxstudio Portals v7 FAQ
+      href: ./portals/legacy-portal-faq.md
 - name: Common Data Service  
   items:
   - name: What is Common Data Service?
@@ -1318,13 +1374,13 @@
       href: ./common-data-service/create-edit-virtual-entities.md
     - name: Virtual entity OData v4 data provider
       href: ./common-data-service/virtual-entity-odata-provider-requirements.md
-    - name: Define alternate keys using PowerApps portal
+    - name: Define alternate keys using Power Apps portal
       href: ./common-data-service/define-alternate-keys-portal.md
     - name: Define alternate keys using solution explorer
       href: ./common-data-service/define-alternate-keys-solution-explorer.md
     - name: "How to guides: Entity"
       items:
-      - name: How to create entities using PowerApps portal
+      - name: How to create entities using Power Apps portal
         href: ./common-data-service/create-edit-entities-portal.md
       - name: How to create entities using solution explorer
         href: ./common-data-service/create-edit-entities-solution-explorer.md
@@ -1363,7 +1419,7 @@
       href: ./common-data-service/create-edit-1n-relationships-portal.md
     - name: Create one-to-many entity relationships using solution explorer
       href: ./common-data-service/create-edit-1n-relationships-solution-explorer.md
-    - name: Create many-to-many entity relationships using PowerApps portal
+    - name: Create many-to-many entity relationships using Power Apps portal
       href: ./common-data-service/create-edit-nn-relationships-portal.md
     - name: Set managed properties for entity relationships
       href: ./common-data-service/set-managed-properties-relationships.md
@@ -1375,9 +1431,9 @@
       href: ./common-data-service/configure-connection-roles.md
     - name: "How-to guides: Relationships"
       items:
-      - name: How to create many-to-many relationships using PowerApps portal
+      - name: How to create many-to-many relationships using Power Apps portal
         href: ./common-data-service/create-edit-nn-relationships-portal.md
-      - name: How to create many-to-many relationships using PowerApps solution explorer
+      - name: How to create many-to-many relationships using Power Apps solution explorer
         href: ./common-data-service/create-edit-nn-relationships-solution-explorer.md
       - name: How to set managed properties for relationships
         href: ./common-data-service/set-managed-properties-relationships.md
@@ -1406,11 +1462,11 @@
         href: ./common-data-service/create-edit-fields.md
       - name: How to manage fields
         href: ./common-data-service/data-platform-manage-fields.md
-      - name: How to create fields using PowerApps portal
+      - name: How to create fields using Power Apps portal
         href: ./common-data-service/create-edit-field-portal.md
-      - name: How to create fields using PowerApps solution explorer
+      - name: How to create fields using Power Apps solution explorer
         href: ./common-data-service/create-edit-field-solution-explorer.md
-      - name: How to create an option set using PowerApps portal
+      - name: How to create an option set using Power Apps portal
         href: ./common-data-service/custom-picklists.md
       - name: How to create global option sets using solution explorer
         href: ./common-data-service/create-edit-global-option-sets-solution-explorer.md
@@ -1448,6 +1504,8 @@
       href: ./common-data-service/solution-history.md      
     - name: Use solution checker
       href: ./common-data-service/use-powerapps-checker.md
+    - name: "Common issues and resolutions: solution checker"
+      href: ./common-data-service/common-issues-resolutions-solution-checker.md
     - name: Use segmented solutions
       href: ./common-data-service/use-segmented-solutions-patches-simplify-updates.md
     - name: Change the solution publisher prefix
@@ -1486,12 +1544,14 @@
     href: ./common-data-service/import-translated-entity-field-text.md
   - name: Security in Common Data Service
     href: /power-platform/admin/wp-security
+  - name: API limits overview
+    href: ./common-data-service/api-limits-overview.md
   - name: For developers
     href: ../developer/common-data-service/overview.md
     # href: ../developer/common-data-service/TOC.yml  changing this to have developer TOC rather than buried in maker toc
 - name: AI Builder
   items:
-  - name: Use AI Builder in PowerApps
+  - name: Use AI Builder in Power Apps
     href: ../use-ai-builder.md
 - name: Learn from others
   items:
@@ -1509,7 +1569,7 @@
     href: ./canvas-apps/common-issues-and-resolutions.md
   - name: Get a session or app ID
     href: ./canvas-apps/get-sessionid.md
-  - name: Troubleshoot startup issues for PowerApps
+  - name: Troubleshoot startup issues for Power Apps
     href: troubleshooting-startup-issues.md
   - name: Troubleshoot Power Query
     href: ./common-data-service/data-platform-cds-newentity-troubleshooting-mashup.md

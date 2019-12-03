@@ -15,7 +15,7 @@ author: "Aneesmsft"
 ms.author: "matp"
 manager: "kvivek"
 tags: 
-  - "PowerApps maker portal impact"
+  - "Power Apps maker portal impact"
 search.audienceType: 
   - maker
 search.app: 
@@ -118,7 +118,7 @@ You can move a field on a form using drag and drop or cut and paste actions.
 5. In the **New field** dialog, select the **Data type** and configure any other required properties of the field.
 
      > [!NOTE]
-     >   -  Some field types are not available when you create a field from within the form designer. If a field type you want is not available, you can follow the steps outlined in [Create and edit fields for Common Data Service using PowerApps portal](../common-data-service/create-edit-field-portal.md)
+     >   -  Some field types are not available when you create a field from within the form designer. If a field type you want is not available, you can follow the steps outlined in [Create and edit fields for Common Data Service using Power Apps portal](../common-data-service/create-edit-field-portal.md)
 
 6. Select **Done** to create a new field on the entity. The field appears in the **Fields** pane.
 7. If you want to add the newly created field to the form, follow the steps outlined in the [**Add fields to a form**](add-move-or-delete-fields-on-form.md#add-fields-to-a-form) section.

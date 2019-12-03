@@ -1,6 +1,6 @@
 ---
-title: Model-driven apps in PowerApps Developer Overview | Microsoft Docs
-description: "Learn how developers can add value to model-driven apps; tutorial; introduction for model-apps developer in PowerApps"
+title: Model-driven apps in Power Apps Developer Overview | Microsoft Docs
+description: "Learn how developers can add value to model-driven apps; tutorial; introduction for model-apps developer in Power Apps"
 services: ''
 author: JimDaly
 manager: kvivek
@@ -11,7 +11,7 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 10/31/2018
+ms.date: 12/01/2019
 ms.author: jdaly
 search.audienceType: 
   - developer
@@ -22,15 +22,14 @@ search.app:
 
 # Model-driven apps Developer Guide
 
-PowerApps offers users, businesses, partners, independent software vendors (ISVs), and systems integrators (SIs) a powerful platform for building line-of-business apps. The new addition to PowerApps in this release are Model-driven apps built using the new Common Data Service. Common Data Service now contains the core functionality of the applications. With Model-driven apps, you can build apps that use the same extensibility capabilities as those applications.
-
 Model-driven apps are primarily a no-code or low-code component focused approach to app development. The value developers can provide is by extending the application. Before you start writing code, begin with [learning how to build Model-driven apps](/powerapps/maker/model-driven-apps/model-driven-app-components) and what options can be applied without code.
 
 > [!NOTE]
 > Model-driven apps connect to Common Data Service. For information about how developers can add value at the service level, see [Common Data Service Developer Overview](../common-data-service/overview.md).
-> Content in this section will refer only to extensions developers can do that apply to the experience for users of Model-driven apps. 
+>
+> Content in this section will refer only to extensions developers can do that apply to the experience for users of model-driven apps. 
 
-If you are new to the Common Data Service applications, the topics in this section provides a high-level overview of the important concepts to help developers get started working with Model-driven apps. 
+If you are new to the Common Data Service applications, the topics in this section provides a high-level overview of the important concepts to help developers get started working with model-driven apps. 
 
 > [!div class="nextstepaction"]
 > [Get started](supported-customizations.md)
@@ -38,8 +37,8 @@ If you are new to the Common Data Service applications, the topics in this secti
 ### Related topics
 
 [Understand Model-driven apps components](/powerapps/maker/model-driven-apps/model-driven-app-components)<br/>
-[Create your first Model-driven app](/powerapps/maker/model-driven-apps/build-first-model-driven-app)
+[Create your first model-driven app](/powerapps/maker/model-driven-apps/build-first-model-driven-app)
 
 ### See also
 
-[PowerApps for developers](/powerapps/#pivot=home&panel=developer)
+[Power Apps for developers](/powerapps/#pivot=home&panel=developer)

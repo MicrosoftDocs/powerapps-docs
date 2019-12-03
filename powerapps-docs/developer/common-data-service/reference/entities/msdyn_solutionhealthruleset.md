@@ -17,7 +17,7 @@ search.app:
 
 Represents a set that owns a number of solution health rules.
 
-**Added by**: PowerApps Checker Solution
+**Added by**: Power Apps Checker Solution
 
 
 ## Messages

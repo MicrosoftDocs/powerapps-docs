@@ -1,5 +1,5 @@
 ---
-title: PowerApps for enterprise developers, partners, and ISVs | Microsoft Docs
+title: Power Apps for enterprise developers, partners, and ISVs | Microsoft Docs
 description: An introduction to developing solutions with canvas apps.
 author: ImadYanni
 manager: kvivek
@@ -17,11 +17,11 @@ search.app:
 
 # Canvas apps for enterprise developers, partners, and ISVs
 
-As a developer, you can extend canvas apps in PowerApps, enabling even more powerful solutions for organizations and customers.
+As a developer, you can extend canvas apps in Power Apps, enabling even more powerful solutions for organizations and customers.
 
 ## Canvas apps for enterprise developers
 
-As an enterprise developer, empower your organization to build robust, tailored solutions on PowerApps:
+As an enterprise developer, empower your organization to build robust, tailored solutions on Power Apps:
 
 - **Build custom connectors**: Develop custom connectors to connect to your organization's data and web services. [Learn more](https://docs.microsoft.com/connectors/custom-connectors/)
 
@@ -35,8 +35,8 @@ As an enterprise developer, empower your organization to build robust, tailored 
 
 As a Microsoft partner or Independent Software Vendor (ISV), accelerate customer adoption by extending your products to integrate with your customers' data and business processes:
 
-- **Build and certify custom connectors**: Bring your product into the Microsoft cloud by building a connector that enables PowerApps to talk to your service. [Learn more](https://docs.microsoft.com/connectors/custom-connectors/submit-certification)
+- **Build and certify custom connectors**: Bring your product into the Microsoft cloud by building a connector that enables Power Apps to talk to your service. [Learn more](https://docs.microsoft.com/connectors/custom-connectors/submit-certification)
 
-- **List your solution on AppSource**: Generate new leads for your business by building an app with PowerApps and publishing it to AppSource for new customers to test-drive. [Learn more](dev-appsource-test-drive.md)
+- **List your solution on AppSource**: Generate new leads for your business by building an app with Power Apps and publishing it to AppSource for new customers to test-drive. [Learn more](dev-appsource-test-drive.md)
 
-- **Get started today for free**: Sign-up for the PowerApps Community Plan for free and start building apps in a dedicated individual environment. [Learn more](../dev-community-plan.md)
+- **Get started today for free**: Sign-up for the Power Apps Community Plan for free and start building apps in a dedicated individual environment. [Learn more](../dev-community-plan.md)

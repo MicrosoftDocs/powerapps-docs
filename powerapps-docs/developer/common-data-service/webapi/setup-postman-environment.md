@@ -27,7 +27,7 @@ You can use a Postman environment to save a set of variables that you use to con
 
 ## Prerequisites
 
-* Have a PowerApps Common Data Service environment that you can connect to. 
+* Have a Power Apps Common Data Service environment that you can connect to. 
 * Download and install the [Postman desktop application](https://www.getpostman.com/apps).
 
 <a name="bkmk_connectcds"></a> 

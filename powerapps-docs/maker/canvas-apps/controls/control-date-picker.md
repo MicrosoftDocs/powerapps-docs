@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Date Picker control in PowerApps
+# Date Picker control in Power Apps
 A control that the user can click or tap to specify a date.
 
 ## Description

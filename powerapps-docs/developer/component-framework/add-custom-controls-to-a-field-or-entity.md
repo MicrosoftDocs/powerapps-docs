@@ -22,13 +22,13 @@ Code components let you transform fields that traditionally contain text into vi
 
 ## Add a code component to a field
 
-Following the steps in this procedure will change the default label and text box field of the **Budget Amount** field to the slider code component on the Opportunity entity. You can use similar steps to replace an existing field with a code component or configure a code component for a custom field.
+Following the steps below will change the default label and text box field of the **Budget Amount** field to the slider code component on the Opportunity entity. You can use similar steps to replace an existing field with a code component or configure a code component for a custom field.
 
 1. Open solution explorer.
 
 2. Expand **Entities**, expand the entity that you want, such as the **Opportunity** entity, select **Forms**, and then open a form such as the **Main** form.
 
-3. In the form editor, double-click the field where you want to add a code component, such as the **Budget Amount** field on the opportunity main form. Alternatively, you can create a custom field.
+3. In the form editor, double-click the field where you want to add a code component, such as the **Budget Amount** field on the opportunity main form. You can also create a custom field.
 
 4. On the **Field Properties** page, select the **Controls** tab, and then select **Add Control**.
 
@@ -63,7 +63,7 @@ Following the steps in this procedure will change the default label and text box
   
    - **Step**. This represents the unit to increment or decrement when adding to or subtracting from  the current value. For example, for budget amount you can select 100 dollar increments\decrements.  
   
-   - **Hide Default Control**. Selecting this option hides the component so neither the component or the data is displayed in any of the clients that don't support the code component.   
+   - **Hide Default Control**. Hides the component so neither the component or the data is displayed in any of the clients that don't support the code component.   
   
 8. Select **OK**, to close the Field Properties page.  
   
@@ -92,5 +92,5 @@ To add a code component like data-set component or simple table component to a g
 ### See also
 
 [Implementing components in TypeScript](implementing-controls-using-typescript.md)<br/>
-[PowerApps component framework API reference](reference/index.md)<br/>
-[PowerApps component framework overview](overview.md)
+[Power Apps component framework API reference](reference/index.md)<br/>
+[Power Apps component framework overview](overview.md)

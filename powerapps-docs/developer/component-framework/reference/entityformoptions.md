@@ -94,7 +94,7 @@ private onRowClick(event: Event): void {
     if (rowRecordId) {
       let entityreference = this.contextObj.parameters.simpleTableGrid.records[
         rowRecordId
-      ].getNamedreference();
+      ].getNamedReference();
       let entityFormOptions = {
         entityName: entityreference.entityType!,
         entityId: entityreference.id
@@ -106,5 +106,5 @@ private onRowClick(event: Event): void {
 
 ### Related topics
 
-[PowerApps component framework API reference](../reference/index.md)<br/>
-[PowerApps component framework overview](../overview.md)
+[Power Apps component framework API reference](../reference/index.md)<br/>
+[Power Apps component framework overview](../overview.md)

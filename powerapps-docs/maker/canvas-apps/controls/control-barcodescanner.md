@@ -14,7 +14,7 @@ search.audienceType:
 search.app:
   - PowerApps
 ---
-# Web barcode-scanner control (experimental) in PowerApps
+# Web barcode-scanner control (experimental) in Power Apps
 
 The legacy barcode-scanning control, which is obsolete but might be useful for scanning codes in a web browser.
 

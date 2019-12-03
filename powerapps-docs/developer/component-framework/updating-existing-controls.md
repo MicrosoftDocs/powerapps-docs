@@ -1,7 +1,7 @@
 ---
-title: Update existing code components using PowerApps component framework tooling| Microsoft Docs
-description: Update components using the PowerApps component framework tooling
-keywords: PowerApps component framework, code component, component Framework
+title: Update existing code components using Power Apps component framework tooling| Microsoft Docs
+description: Update components using the Power Apps component framework tooling
+keywords: Power Apps component framework, code component, component Framework
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
@@ -14,16 +14,16 @@ ms.assetid: d2cbf58a-9112-45c2-b823-2c07a310714c
 ---
 # Update existing code components 
 
-If you are a PowerApps component framework Private Preview participant for model-driven apps and have already built code components, you need to make some minor updates to make it compatible with the new ALM-centric project structures. 
+If you are a Power Apps component framework Private Preview participant for model-driven apps and have already built code components, you need to make some minor updates to make it compatible with the new ALM-centric project structures. 
 
-A few changes are required to use the new PowerApps CLI tooling with your existing PowerApps component framework code components.
+A few changes are required to use the new Power Apps CLI tooling with your existing Power Apps component framework code components.
 
 > [!NOTE]
-> This topic is applicable only for updating code components for model-driven apps because the PowerApps CLI tooling is not available at the time of private preview for the model-driven apps.  
+> This topic is applicable only for updating code components for model-driven apps because the Power Apps CLI tooling is not available at the time of private preview for the model-driven apps.  
 
 ## Creating an empty project
 
-Use PowerApps CLI to create a new empty project for your code component. More information: [Create components using tooling](create-custom-controls-using-pcf.md)
+Use Power Apps CLI to create a new empty project for your code component. More information: [Create components using tooling](create-custom-controls-using-pcf.md)
 
 Once the project is created, migrate your code component source to the new project:
 
@@ -61,7 +61,7 @@ If you have created a component using the older version of the tooling and want 
 
 1. Update your existing projects to use the latest modules.
  
-   - Update the version tag in your `pcfproj` located within your PowerApps component framework project folder as follows:
+   - Update the version tag in your `pcfproj` located within your Power Apps component framework project folder as follows:
 
       ```XML
       <Packagereference Include="Microsoft.PowerApps.MSBuild.Pcf" Version="1.*"/>
@@ -76,7 +76,7 @@ If you have created a component using the older version of the tooling and want 
       > After making the above changes, run the command `msbuild /t:restore` to update your project to the correct version.
 
 
-   - Update the version tag in your `package.json` file located within your PowerApps component framework project folder:
+   - Update the version tag in your `package.json` file located within your Power Apps component framework project folder:
 
       ```JSON
       "devDependencies":{
@@ -122,7 +122,7 @@ The build tools expect the component source to be exported using standard ES6 mo
 
 ## Using generated manifest typing file
 
-Legacy projects require manually creating and editing an `inputsOutputs.d.ts` typing file, which is typically located under the `private_typing` subfolder. The PowerApps CLI tooling now automatically generates this file upon build. 
+Legacy projects require manually creating and editing an `inputsOutputs.d.ts` typing file, which is typically located under the `private_typing` subfolder. The Power Apps CLI tooling now automatically generates this file upon build. 
 
 Code-gen ensures that `type` definitions used in the component source code stay in sync with `types` defined in the component manifest file.
 
@@ -167,6 +167,6 @@ To use the new typing file:
 
 ### See also
 
-[Limitations of PowerApps component framework](limitations.md)<br/>
-[PowerApps component framework API reference](reference/index.md)<br/>
-[PowerApps component framework overview](overview.md)
+[Limitations of Power Apps component framework](limitations.md)<br/>
+[Power Apps component framework API reference](reference/index.md)<br/>
+[Power Apps component framework overview](overview.md)

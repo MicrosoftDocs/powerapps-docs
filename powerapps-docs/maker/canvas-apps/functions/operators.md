@@ -1,6 +1,6 @@
 ---
 title: Operators | Microsoft Docs
-description: Reference information, including syntax and examples, for the operators in PowerApps
+description: Reference information, including syntax and examples, for the operators in Power Apps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Operators in PowerApps
+# Operators in Power Apps
 
 Some of these operators are dependent on the language of the author.  See [Global apps](../global-apps.md) for more information.
 
@@ -74,7 +74,7 @@ For nested galleries, **[ThisItem](operators.md#thisitem-operator)** refers to t
 ## Parent operator
 Some controls host other controls. For example, **[Screen](../controls/control-screen.md)**, **[Gallery](../controls/control-gallery.md)**, **[Card](../controls/control-card.md)**, **[Edit form](../controls/control-form-detail.md)**, and **[Display form](../controls/control-form-detail.md)** controls are all containers for controls. We call the hosting control the "parent" of the controls within.
 
-Any control in PowerApps can be referenced by name from anywhere within the app. **Screen1** may be the name of a screen in your app. To retrieve the background color of this screen, you can use **Screen1.Fill**.
+Any control in Power Apps can be referenced by name from anywhere within the app. **Screen1** may be the name of a screen in your app. To retrieve the background color of this screen, you can use **Screen1.Fill**.
 
 Controls on this screen have another option. They can use a relative reference: **Parent.Fill**. The **[Parent](operators.md#parent-operator)** operator refers to the control that hosts this control, making available all of its properties. Using **[Parent](operators.md#parent-operator)** is helpful because it doesn't depend on the name of the control. You can copy and paste a container control without needing to adjust any references within the container. This operator also makes the relationship between child and parent controls clearer when reading formulas.
 

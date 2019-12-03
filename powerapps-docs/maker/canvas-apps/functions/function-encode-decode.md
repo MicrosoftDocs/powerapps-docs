@@ -1,6 +1,6 @@
 ---
 title: EncodeUrl and PlainText functions | Microsoft Docs
-description: Reference information, including syntax and examples, for the EncodeUrl and PlainText functions in PowerApps
+description: Reference information, including syntax and examples, for the EncodeUrl and PlainText functions in Power Apps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# EncodeUrl and PlainText functions in PowerApps
+# EncodeUrl and PlainText functions in Power Apps
 Encodes and decodes strings.
 
 ## Description

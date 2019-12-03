@@ -1,5 +1,5 @@
 ---
-title: "Export data to Excel in PowerApps | MicrosoftDocs"
+title: "Export data to Excel in Power Apps | MicrosoftDocs"
 ms.custom: ""
 author: mduelae
 manager: kvivek
@@ -35,8 +35,8 @@ You can export data to a standard Excel file that you can use on any device such
 |                                   Number                                   |                                                             Shows as Number without group separator                                                             |
 |                                  Currency                                  |                                                         Shows as Number and does not include dollar sign ($)                                                         |
 |                          Date only, Date and Time                          |                                                                       Shows as Date only                                                                        |
-|                       Calculated and Roll-up fields                        | Editable in Excel but can’t be imported back to PowerApps |
-|                               Secured fields                               | Editable in Excel but can’t be imported back to PowerApps |
+|                       Calculated and Roll-up fields                        | Editable in Excel but can’t be imported back to Power Apps |
+|                               Secured fields                               | Editable in Excel but can’t be imported back to Power Apps |
   
 ## See which type of export works best for you  
   

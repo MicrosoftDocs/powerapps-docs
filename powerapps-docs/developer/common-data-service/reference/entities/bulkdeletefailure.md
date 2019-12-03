@@ -675,43 +675,43 @@ See environmentvariablevalue Entity [environmentvariablevalue_BulkDeleteFailures
 
 ### <a name="BKMK_msdyn_analysiscomponent_BulkDeleteFailures"></a> msdyn_analysiscomponent_BulkDeleteFailures
 
-**Added by**: PowerApps Checker Solution
+**Added by**: Power Apps Checker Solution
 
 See msdyn_analysiscomponent Entity [msdyn_analysiscomponent_BulkDeleteFailures](msdyn_analysiscomponent.md#BKMK_msdyn_analysiscomponent_BulkDeleteFailures) One-To-Many relationship.
 
 ### <a name="BKMK_msdyn_analysisjob_BulkDeleteFailures"></a> msdyn_analysisjob_BulkDeleteFailures
 
-**Added by**: PowerApps Checker Solution
+**Added by**: Power Apps Checker Solution
 
 See msdyn_analysisjob Entity [msdyn_analysisjob_BulkDeleteFailures](msdyn_analysisjob.md#BKMK_msdyn_analysisjob_BulkDeleteFailures) One-To-Many relationship.
 
 ### <a name="BKMK_msdyn_analysisresult_BulkDeleteFailures"></a> msdyn_analysisresult_BulkDeleteFailures
 
-**Added by**: PowerApps Checker Solution
+**Added by**: Power Apps Checker Solution
 
 See msdyn_analysisresult Entity [msdyn_analysisresult_BulkDeleteFailures](msdyn_analysisresult.md#BKMK_msdyn_analysisresult_BulkDeleteFailures) One-To-Many relationship.
 
 ### <a name="BKMK_msdyn_analysisresultdetail_BulkDeleteFailures"></a> msdyn_analysisresultdetail_BulkDeleteFailures
 
-**Added by**: PowerApps Checker Solution
+**Added by**: Power Apps Checker Solution
 
 See msdyn_analysisresultdetail Entity [msdyn_analysisresultdetail_BulkDeleteFailures](msdyn_analysisresultdetail.md#BKMK_msdyn_analysisresultdetail_BulkDeleteFailures) One-To-Many relationship.
 
 ### <a name="BKMK_msdyn_solutionhealthrule_BulkDeleteFailures"></a> msdyn_solutionhealthrule_BulkDeleteFailures
 
-**Added by**: PowerApps Checker Solution
+**Added by**: Power Apps Checker Solution
 
 See msdyn_solutionhealthrule Entity [msdyn_solutionhealthrule_BulkDeleteFailures](msdyn_solutionhealthrule.md#BKMK_msdyn_solutionhealthrule_BulkDeleteFailures) One-To-Many relationship.
 
 ### <a name="BKMK_msdyn_solutionhealthruleargument_BulkDeleteFailures"></a> msdyn_solutionhealthruleargument_BulkDeleteFailures
 
-**Added by**: PowerApps Checker Solution
+**Added by**: Power Apps Checker Solution
 
 See msdyn_solutionhealthruleargument Entity [msdyn_solutionhealthruleargument_BulkDeleteFailures](msdyn_solutionhealthruleargument.md#BKMK_msdyn_solutionhealthruleargument_BulkDeleteFailures) One-To-Many relationship.
 
 ### <a name="BKMK_msdyn_solutionhealthruleset_BulkDeleteFailures"></a> msdyn_solutionhealthruleset_BulkDeleteFailures
 
-**Added by**: PowerApps Checker Solution
+**Added by**: Power Apps Checker Solution
 
 See msdyn_solutionhealthruleset Entity [msdyn_solutionhealthruleset_BulkDeleteFailures](msdyn_solutionhealthruleset.md#BKMK_msdyn_solutionhealthruleset_BulkDeleteFailures) One-To-Many relationship.
 

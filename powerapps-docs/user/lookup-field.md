@@ -47,6 +47,11 @@ To search a lookup, select the textbox and type your search criteria. If recent 
 
   > [!div class="mx-imgBorder"]
   > ![Browse a lookup field](media/MRU.png "Browse a lookup field")  
+  
+>[!NOTE]   
+> The default search result for lookup search is, begins with. This means results include records that begin with a specific word. For example, if you want to search for **Alpine Ski House**, type **alp** in the search box; if you type **ski**, the record will not show up in the search result.
+>
+> For a wildcard search use asterisks: For example, type *ski or *ski.
 
 ## Browse in a lookup field
 To browse a lookup, select the lookup icon (magnifying glass). A full list of items will be shown in the dropdown.

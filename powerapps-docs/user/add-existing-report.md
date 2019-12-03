@@ -1,6 +1,6 @@
 ---
-title: Add a report from outside PowerApps| Microsoft Docs
-description: Add a report from outside PowerApps
+title: Add a report from outside Power Apps| Microsoft Docs
+description: Add a report from outside Power Apps
 author: mduelae
 manager: kvivek
 ms.service: powerapps
@@ -17,9 +17,9 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Add a report from outside PowerApps
+# Add a report from outside Power Apps
 
-If you’ve created a custom report outside of the system, you can easily add it to PowerApps.
+If you’ve created a custom report outside of the system, you can easily add it to Power Apps.
 
 For information about how to create a custom report, see [Reporting and Analytics Guide](https://docs.microsoft.com/dynamics365/customer-engagement/analytics/get-started-writing-reports).
 

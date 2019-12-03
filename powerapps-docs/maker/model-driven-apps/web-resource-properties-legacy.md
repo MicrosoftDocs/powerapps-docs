@@ -1,5 +1,5 @@
 ---
-title: Web resource properties for model-driven app main forms in PowerApps | MicrosoftDocs
+title: Web resource properties for model-driven app main forms in Power Apps | MicrosoftDocs
 description: Understand the Web resource properties for Main forms
 Keywords: Main form; Web resource properties; Dynamics 365
 author: Mattp123
