@@ -536,7 +536,42 @@ This issue occurs when the **Access Denied** site marker is available, but is po
 3.	Find the **Access Denied** site marker record.
 4.	Update the **Page** field to point to an active Access Denied page of your portal.
 
-### Profile web form is not available for contact entity.
+### Profile web form is not available for contact entity
 
 Profile page is one of the common pages used in your portal for all profile related issues. This page shows a form that can be used by users to update their profile. Form used on this page comes from the **Profile Web Page** main form available in the Contact entity. This form is created in your Common Data Service environment when portal is provisioned. This error is displayed when the **Profile** web form is either deleted or disabled in your portal. This form is mandatory and deleting or disabling this form can break the whole website displaying runtime error on portal. This is an irreparable state and requires portal to be reinstalled in the environment.
 
+### Published state is not available for this website
+
+To fix this issue, ensure that the publishing state entity **Published** is available and active.
+
+### Published state is not visible
+
+To fix this issue, ensure that the publishing state entity **Published** has the **isVisible** check box is selected.
+
+### List of entities with search result having invalid URL
+
+To fix this issue, ensure that your entity has appropriate security permission.
+
+### List of entities with CMS security check failed
+
+To fix this issue, ensure that your entity has proper search page.
+
+### Web file is not active
+
+To fix this issue, ensure that the web file is in active state.
+
+### The partial URL of web file is misconfigured
+
+To fix this issue, ensure that the partial URL is the file name with Home as the root page.
+
+### Web file doesn't have a file attachment
+
+To fix this issue, add the corresponding CSS file in the notes section of the web file.
+
+### File attachment doesn't have content
+
+To fix this issue, add the CSS file with entire content in the notes section of the web file.
+
+### MIME type of file is not text/css
+
+To fix this issue, ensure that there are no plugins or flows which overrides the MIME type of the CSS file(s).
