@@ -32,8 +32,11 @@ Forms that load slowly can reduce productivity and user adoption. Follow these r
  Think about the interaction the user will have with the form and the amount of data that must be displayed within it.  
   
  **Keep the number of fields to a minimum**  
- The more fields you have in a form, the more data that needs to be transferred over the Internet or intranet to view each record.  
-  
+ The more fields you have in a form, the more data that needs to be transferred over the Internet or intranet to view each record.
+ 
+ **Design for performance**  
+ When designing forms and pages, put what is most important at the top to make it most easily accessible for your users. Move infrequently used components to other tabs on a form, use role-based forms instead of showing & hiding components, and make sure that different workflows have dedicated dashboards and views. Feel free to use sections to organize your controls – this won’t make your forms slower.
+ 
 <a name="BKMK_FormScripts"></a>   
 ## Form scripts  
  When you have customizations using form scripts make sure that the developer understands these strategies to improve performance.  
