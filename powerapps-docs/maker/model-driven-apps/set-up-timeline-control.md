@@ -251,6 +251,77 @@ While you create a custom entity, you might want to show the custom entity as an
 
 To enable a custom activity in timeline, follow these steps.
 
+[Step 1: Create an entity](#step1-create-an-entity)
+
+[Step 2: Add entity to the model-driven app](#step2-add-entity-to-the-model-driven-app)
+
+### Step 1: Create an entity
+
+You can create an entity either in [classic mode](#classic-mode) or [PowerApps](#powerapps). 
+
+#### Classic mode
+
+1.	Sign in to your `https://<YourOrgURL>.dynamics.com/apps` environment.
+
+2. Open a model-driven app, and then on the command bar select **Settings** ![Settings](../model-driven-apps/media/powerapps-gear.png) > **Advanced  Settings**.
+
+3.	Go to **Settings** > **Customization** > **Customize the System**. The solution explorer page opens in a new browser window.  
+
+4.	Select **Entities** under **Components** in the default solution pane.
+
+5. Select **New** to create an entity. A new browser window is displayed.
+
+6. Enter the required fields as described in the [Create an entity](https://docs.microsoft.com/dynamics365/customerengagement/on-premises/customize/create-entities) topic. 
+
+   > [!Note]
+   > The [Create an entity](https://docs.microsoft.com/dynamics365/customerengagement/on-premises/customize/create-entities) topic is even applicable to the Dynamics 365 model-driven apps.
+
+7. Select the areas where you want to display the custom entity.
+
+8. Scroll down to the **Communication & Collaboration** section and select the required options.
+
+9. Scroll down to the **Data Services** section and select **Allow quick create** check box. This option allows you open the entity in a quick create form.
+
+10. Scroll up to the the **Entity Definition**, section and select the **Define as an activity entity** check box. This option enables the entity as an activity. 
+
+   > [!Note]
+   > Only during the creation of the entity, you can enable this option. Once the entity is created, you can't update this check box.
+
+11. Ensure that the **Display in Activity Menus** check box is also selected.
+
+    > [!Note]
+    > This option ensures that the activity is listed in the **Timeline** control menu.
+
+    > [!div class=mx-imgBorder] 
+    > ![Display activity](media/display-activity-classicmode.png "Display activity")
+
+12. Select **Save**.
+
+13. Select **Publish** to publish the customizations.
+
+#### PowerApps
+
+Follow the [Create a custom entity](../common-data-service/data-platform-create-entity.md) topic to create an entity using the PowerApps.
+
+After step 3 in the [Create an entity](../common-data-service/data-platform-create-entity.md#create-an-entity), before saving creating the entity, ensure you perform the following:
+
+1. Expand **More settings** > **Entity type and ownership**.
+
+2. Select **Activity entity** option from the **Choose entity type** drop-down list.
+
+3. Ensure **Display in Activity menus** check box is selected.
+
+4. Expand **Create and update settings**.
+
+5. Select the **Enable quick create forms** check box.
+
+    > [!div class=mx-imgBorder] 
+    > ![Display activity](media/display-activity-pa.png "Display activity")
+
+6. Select any other required option and then select **Create**.
+
+### Step 2: Add entity to the model-driven app
+
 ## Enable custom activities in timeline for mobile client
 
 When you’ve custom activities that you want to show for users using mobile, then you must enable it. Follow these steps to enable.
