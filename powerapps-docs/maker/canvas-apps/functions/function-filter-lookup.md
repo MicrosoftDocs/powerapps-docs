@@ -1,6 +1,6 @@
 ---
 title: Filter, Search, and LookUp functions | Microsoft Docs
-description: Reference information, including syntax and examples, for the Filter and LookUp functions in PowerApps
+description: Reference information, including syntax and examples, for the Filter and LookUp functions in Power Apps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Filter, Search, and LookUp functions in PowerApps
+# Filter, Search, and LookUp functions in Power Apps
 Finds one or more [records](../working-with-tables.md#records) in a [table](../working-with-tables.md).
 
 ## Description
@@ -30,7 +30,7 @@ The **Search** function finds records in a table that contain a string in one of
 
 **Filter** and **Search** return a table that contains the same columns as the original table and the records that match the criteria. **LookUp** returns only the first record found, after applying a formula to reduce the record to a single value. If no records are found, **Filter** and **Search** return an [empty](function-isblank-isempty.md) table, and **LookUp** returns *blank*.  
 
-[Tables](../working-with-tables.md) are a value in PowerApps, just like a string or number. They can be passed to and returned from functions.  **Filter**, **Search**, and **LookUp** don't modify a table. Instead, they take a table as an argument and return a table, a record, or a single value from it. See [working with tables](../working-with-tables.md) for more details.
+[Tables](../working-with-tables.md) are a value in Power Apps, just like a string or number. They can be passed to and returned from functions.  **Filter**, **Search**, and **LookUp** don't modify a table. Instead, they take a table as an argument and return a table, a record, or a single value from it. See [working with tables](../working-with-tables.md) for more details.
 
 [!INCLUDE [delegation](../../../includes/delegation.md)]
 

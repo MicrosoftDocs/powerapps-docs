@@ -1,5 +1,5 @@
 ---
-title: "Create or edit model-driven app main forms in PowerApps | MicrosoftDocs"
+title: "Create or edit model-driven app main forms in Power Apps | MicrosoftDocs"
 description: "Learn how to create or edit a main form"
 ms.custom: ""
 ms.date: 05/23/2018
@@ -35,7 +35,7 @@ Make sure that you have the System Administrator or System Customizer security r
 
 ## How to create or edit a main form
   
-1.   Sign in to [PowerApps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1.   Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
 
 > [!IMPORTANT]

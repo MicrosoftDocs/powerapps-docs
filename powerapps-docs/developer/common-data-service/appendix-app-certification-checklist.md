@@ -40,7 +40,7 @@ The following checklist provides the list of validations performed by Microsoft 
 <td>Code Validation</td>
 <td>
 <ul>
-<li>Code validation for Canvas apps will be done through <a href="https://docs.microsoft.com/powerapps/maker/canvas-apps/accessibility-checker">Accessibility Checker tool</a> in PowerApps to check for the following:
+<li>Code validation for Canvas apps will be done through <a href="https://docs.microsoft.com/powerapps/maker/canvas-apps/accessibility-checker">Accessibility Checker tool</a> in Power Apps to check for the following:
 <ul>
 <li>Static formula errors and warnings: If any issues found then certification team will share the feedback to resolve and resubmit to AppSource.</li>
 <li>Runtime errors: May occur once the app is opened in Run mode to view. Any issues found will be reported through email.</li>
@@ -56,7 +56,7 @@ The following checklist provides the list of validations performed by Microsoft 
 <td>Deployment Validation</td>
 <td>
 <ul>
-<li>Solution will be installed to a PowerApps studio using <a href="https://docs.microsoft.com/powerapps/developer/common-data-service/package-deployer/create-packages-package-deployer">Package Deployer</a>. Installed canvas apps will be manually located in the solution as well as on Apps section after installation and will make sure the app is opened in edit and run mode. Canvas App will be manually deleted from PowerApps studio to validate successful uninstallation</li>
+<li>Solution will be installed to a Power Apps studio using <a href="https://docs.microsoft.com/powerapps/developer/common-data-service/package-deployer/create-packages-package-deployer">Package Deployer</a>. Installed canvas apps will be manually located in the solution as well as on Apps section after installation and will make sure the app is opened in edit and run mode. Canvas App will be manually deleted from Power Apps studio to validate successful uninstallation</li>
 <li>Check the canvas app successfully connects through the connectors provided by the publishers. For example, Common Data Service or any other connections.</li>
 <li>Check all Common Data Service components (entities, web resources, plug-ins and other components) are available in the solution.</li>
 <li>Manually uninstall the solution and check if all the components associated to the managed solution is removed.</li>
@@ -77,7 +77,7 @@ The following checklist provides the list of validations performed by Microsoft 
 <td>
 <ul>
 <li>Check whether canvas app connects to any external data source or connections that require access, and proper connection details to be shared in E2E document.</li>
-<li>Check canvas app connects to any external connections out of PowerApps connectors.</li>
+<li>Check canvas app connects to any external connections out of Power Apps connectors.</li>
 <li>Check any custom code provided inside Package Deployer. Validate the code before approving the app to AppSource.</li>
 <li>Manually validate the code to see if the custom code is retrieving any customer data from target environment.</li>
 </ul>
@@ -103,7 +103,7 @@ The following checklist provides the list of validations performed by Microsoft 
 <td>Deployment Validation</td>
 <td>
 <ul>
-<li>Canvas app will be manually installed to a PowerApps studio using import Apps feature. Installed canvas apps will be manually located in the Apps section after installation and will make sure the app is opened in edit and run mode. Canvas app will be manually deleted from PowerApps studio to validate successful uninstallation.</li>
+<li>Canvas app will be manually installed to a Power Apps studio using import Apps feature. Installed canvas apps will be manually located in the Apps section after installation and will make sure the app is opened in edit and run mode. Canvas app will be manually deleted from Power Apps studio to validate successful uninstallation.</li>
 <li>Check that the canvas app successfully connects the connectors provided by the publishers.</li>
 </ul>
 </td>

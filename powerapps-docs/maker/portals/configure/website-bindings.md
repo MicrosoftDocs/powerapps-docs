@@ -17,7 +17,7 @@ In a portal, the default method of selecting a website is finding a website by m
 
 ## Manage website bindings
 
-Website bindings can be created, edited, and deleted within  PowerApps portals. 
+Website bindings can be created, edited, and deleted within  Power Apps portals. 
 
 1. Open the [Portal Management app](configure-portal.md).
 

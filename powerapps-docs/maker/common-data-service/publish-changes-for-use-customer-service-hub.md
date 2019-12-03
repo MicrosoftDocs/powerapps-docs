@@ -1,5 +1,5 @@
 ---
-title: "Publish changes in PowerApps | MicrosoftDocs"
+title: "Publish changes in Power Apps | MicrosoftDocs"
 description: "Learn how to publish changes made to an app"
 ms.custom: ""
 ms.date: 10/29/2018

@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Pie chart control in PowerApps
+# Pie chart control in Power Apps
 A control that shows relative values in comparison to each other.
 
 ## Description

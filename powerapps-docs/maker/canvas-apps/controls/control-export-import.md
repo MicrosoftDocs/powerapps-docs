@@ -14,11 +14,11 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Export control and Import control in PowerApps
-Controls for exporting data to a local file and then importing that data into another app in PowerApps.
+# Export control and Import control in Power Apps
+Controls for exporting data to a local file and then importing that data into another app in Power Apps.
 
 ## Description
-If you want to create more than one app that uses the same data but not share that data outside those apps, you can export it and import it by using an **Export** control and an **Import** control. When you export data, you create a compressed file that you can copy to another machine, but you can't read it in any program other than PowerApps.
+If you want to create more than one app that uses the same data but not share that data outside those apps, you can export it and import it by using an **Export** control and an **Import** control. When you export data, you create a compressed file that you can copy to another machine, but you can't read it in any program other than Power Apps.
 
 ## Warning
 Enabling this functionality in your app may expose it to security vulnerabilities and data leakage.  It is recommended to advise users to import only recognized and trusted files and only export data that is not confidential or sensitive.

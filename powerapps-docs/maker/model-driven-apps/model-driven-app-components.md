@@ -1,5 +1,5 @@
 ---
-title: Understand model-driven app components in PowerApps | MicrosoftDocs
+title: Understand model-driven app components in Power Apps | MicrosoftDocs
 description: "Understand various components of a model-driven app such as data, UI, logic, and visualization."
 Keywords: fields, attributes, model-driven app
 author: Mattp123

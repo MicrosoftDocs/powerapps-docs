@@ -1,6 +1,6 @@
 ---
 title: Relate and Unrelate functions | Microsoft Docs
-description: Reference information, including syntax and an example, for the Relate and Unrelate functions in PowerApps
+description: Reference information, including syntax and an example, for the Relate and Unrelate functions in Power Apps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Relate and Unrelate functions in PowerApps
+# Relate and Unrelate functions in Power Apps
 
 Relate and unrelate records of two entities through a one-to-many or many-to-many relationship.
 
@@ -33,7 +33,7 @@ These functions never create or delete a record. They only relate or unrelate tw
 You can use these functions only in [behavior formulas](../working-with-formulas-in-depth.md).
 
 > [!NOTE]
-> These functions are part of a preview feature, and their behavior is available only when the **Relational data, option sets, and other new features for CDS** feature is enabled. This is an app-level setting that's enabled by default for new apps. To find this feature switch, open the **File** menu, select **App settings**, and then select **Advanced settings**. Your feedback is very valuable to us - please let us know what you think in the [PowerApps community forums](https://powerusers.microsoft.com/t5/Expressions-and-Formulas/bd-p/How-To).
+> These functions are part of a preview feature, and their behavior is available only when the **Relational data, option sets, and other new features for CDS** feature is enabled. This is an app-level setting that's enabled by default for new apps. To find this feature switch, open the **File** menu, select **App settings**, and then select **Advanced settings**. Your feedback is very valuable to us - please let us know what you think in the [Power Apps community forums](https://powerusers.microsoft.com/t5/Expressions-and-Formulas/bd-p/How-To).
 
 ## Syntax
 
@@ -49,7 +49,7 @@ You can use these functions only in [behavior formulas](../working-with-formulas
 
 ## Examples
 
-Consider a **Products** entity with the following relationships as seen in the [PowerApps portal's entity viewer](../../common-data-service/create-edit-entities-portal.md):
+Consider a **Products** entity with the following relationships as seen in the [Power Apps portal's entity viewer](../../common-data-service/create-edit-entities-portal.md):
 
 | Relationship display name | Related entity | Relationship type |
 | --- | --- |

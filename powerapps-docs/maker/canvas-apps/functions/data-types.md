@@ -158,7 +158,7 @@ However, that function returns **Saturday, September 8, 2001 18:46:40** if you u
 To convert to a Unix time, divide the result from **Value** by 1,000:
 <br>**RoundDown( Value( UnixTime ) / 1000, 0 )**
 
-If you need the Unix time in a **Date** value for further calculations or display within PowerApps, use this formula:
+If you need the Unix time in a **Date** value for further calculations or display within Power Apps, use this formula:
 <br>**DateAdd( Date( 1970,1,1 ), UnixTime, Seconds )**
 
 ### SQL Server

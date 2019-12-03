@@ -13,7 +13,7 @@ ms.reviewer: nkrb
 
 # Implementing the FacePile component
 
-This sample shows how to use React to create components using PowerApps component framework.  The facepile sample component is implemented based on React and the Office UI Fabric React components. The code may not reveal the best practices for the mentioned third-party libraries.
+This sample shows how to use React to create components using Power Apps component framework.  The facepile sample component is implemented based on React and the Office UI Fabric React components. The code may not reveal the best practices for the mentioned third-party libraries.
 
 > [!div class="mx-imgBorder"]
 > ![React Facepile](../media/react-facepile.png "React Facepile")
@@ -24,7 +24,7 @@ Model-driven apps and canvas apps (public preview)
 
 
 > [!IMPORTANT]
-> Although the PowerApps host applications work on top of React, the version of React you bundle will not communicate with the host version, nor is it dependent on that version. A new copy of React (or any third-party library you bundle with your component) will be loaded into the host page for every instance of that control, so be mindful of how large you are making your page(s) as you add components. We will have a solution to this issue in a future release.
+> Although the Power Apps host applications work on top of React, the version of React you bundle will not communicate with the host version, nor is it dependent on that version. A new copy of React (or any third-party library you bundle with your component) will be loaded into the host page for every instance of that control, so be mindful of how large you are making your page(s) as you add components. We will have a solution to this issue in a future release.
 
 ## Manifest
 
@@ -44,13 +44,13 @@ Model-driven apps and canvas apps (public preview)
 
 ## overview
 
-This sample provides examples on how to add dependencies for third-party libraries and Office UI Fabric, showcasing how to utilize the Office UI Fabric components for React for UI and perform bi-directional data-binding between the PowerApps component framework and the React state model.
+This sample provides examples on how to add dependencies for third-party libraries and Office UI Fabric, showcasing how to utilize the Office UI Fabric components for React for UI and perform bi-directional data-binding between the Power Apps component framework and the React state model.
 
 The component sample consists of three Office UI Fabric components: a facepile, a slider, a check box, and a drop-down list. When you move the slider, the number of faces in the facepile changes. The check box components whether the faces fade in and out or simply appear or disappear, and the options in the drop-down list control the size of the faces. If there is no value set, the number of faces defaults to 3.
 
 - When the component is loaded, the slider is set to the bound attribute value. The `context.parameters.[property_name].attributes` property contains the associated metadata.
-- An event handler is passed in the React component's props; this will allow the React component to notify the host PowerApps component framework control that a value has changed. The event handler then determines if a call to the **notifyOutputEvents** method is necessary.
-- Sliding the slider will cause React to update the bound value and call the passed in event handler. Inside that handler, if a call is made to the **notifyOutputEvents** method, then the control's [getOutputs](../reference/control/getoutputs.md) method will be called asynchronously and will flow to the PowerApps component framework. 
+- An event handler is passed in the React component's props; this will allow the React component to notify the host Power Apps component framework control that a value has changed. The event handler then determines if a call to the **notifyOutputEvents** method is necessary.
+- Sliding the slider will cause React to update the bound value and call the passed in event handler. Inside that handler, if a call is made to the **notifyOutputEvents** method, then the control's [getOutputs](../reference/control/getoutputs.md) method will be called asynchronously and will flow to the Power Apps component framework. 
 - The framework host updates the bound attribute value, and the updated value flows to the component, triggering the control’s [updateView](../reference/control/updateview.md) method. The control then rerenders the React component with the new value.
 
 
@@ -415,6 +415,7 @@ export const TestImages = {
 
 ### Related topics
 
-[PowerApps component framework manifest schema reference](../manifest-schema-reference/index.md)<br />
-[PowerApps component framework API reference](../reference/index.md)<br />
-[PowerApps component framework overview](../overview.md)
+[How to use the sample components](../use-sample-components.md)<br/>
+[Power Apps component framework manifest schema reference](../manifest-schema-reference/index.md)<br />
+[Power Apps component framework API reference](../reference/index.md)<br />
+[Power Apps component framework overview](../overview.md)

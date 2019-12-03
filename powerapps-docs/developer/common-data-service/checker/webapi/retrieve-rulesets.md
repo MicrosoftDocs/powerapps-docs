@@ -1,6 +1,6 @@
 ---
 title: "Retrieve the list of rulesets | Microsoft Docs"
-description: "Read how to form a GET request using the PowerApps checker web API to retrieve the list of rulesets available."
+description: "Read how to form a GET request using the Power Apps checker web API to retrieve the list of rulesets available."
 ms.custom: ""
 ms.date: 06/04/2019
 ms.service: powerapps
@@ -84,7 +84,7 @@ Content-Type: application/json; charset=utf-8
 
 ### See also
 
-[Use the PowerApps checker web API](overview.md)<br />
+[Use the Power Apps checker web API](overview.md)<br />
 [Retrieve the list of rules](retrieve-rules.md)<br />
 [Upload a file](upload-file.md)<br />
 [Invoke analysis](analyze.md)<br />

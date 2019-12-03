@@ -43,7 +43,7 @@ For webpages that have page ratings enabled and the developer has applied the co
 
 ## Manage ratings
 
-The ratings for webpages can be viewed, modified, or deleted within PowerApps portals.
+The ratings for webpages can be viewed, modified, or deleted within Power Apps portals.
 
 1. Open the [Portal Management app](configure-portal.md).
 

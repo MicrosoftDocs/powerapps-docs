@@ -48,7 +48,7 @@ You can’t export data to a dynamic worksheet in Excel for all record types. If
   
 6. If you see the security warning **External Data Connections have been disabled**, select **Enable Content**.  
   
-7. To refresh data in the file, on the **Data** tab, select **Refresh from PowerApps**.  
+7. To refresh data in the file, on the **Data** tab, select **Refresh from Power Apps**.  
   
    > [!NOTE]
    > If you have a phone number that starts with **+** or **–** (for example +1-123-456-7890), when you refresh the dynamic worksheet, the phone number field will not display the number correctly.   
@@ -61,7 +61,7 @@ You can’t export data to a dynamic worksheet in Excel for all record types. If
   
 - Some system views, such as Accounts: No Campaign Activities in Last 3 Months, can be exported only to a static Excel worksheet.  
   
-- In PowerApps, currency values are exported to Excel as numbers. To format the data as currency after you have completed the export, see the Excel Help topic titled “Display numbers as currency."
+- In Power Apps, currency values are exported to Excel as numbers. To format the data as currency after you have completed the export, see the Excel Help topic titled “Display numbers as currency."
 
 - The date and time values that you see in the app show up only as Date when you export the file to Excel, but the cell actually shows both the date and time.  
   

@@ -1903,43 +1903,43 @@ See environmentvariablevalue Entity [environmentvariablevalue_AsyncOperations](e
 
 ### <a name="BKMK_msdyn_analysiscomponent_AsyncOperations"></a> msdyn_analysiscomponent_AsyncOperations
 
-**Added by**: PowerApps Checker Solution
+**Added by**: Power Apps Checker Solution
 
 See msdyn_analysiscomponent Entity [msdyn_analysiscomponent_AsyncOperations](msdyn_analysiscomponent.md#BKMK_msdyn_analysiscomponent_AsyncOperations) One-To-Many relationship.
 
 ### <a name="BKMK_msdyn_analysisjob_AsyncOperations"></a> msdyn_analysisjob_AsyncOperations
 
-**Added by**: PowerApps Checker Solution
+**Added by**: Power Apps Checker Solution
 
 See msdyn_analysisjob Entity [msdyn_analysisjob_AsyncOperations](msdyn_analysisjob.md#BKMK_msdyn_analysisjob_AsyncOperations) One-To-Many relationship.
 
 ### <a name="BKMK_msdyn_analysisresult_AsyncOperations"></a> msdyn_analysisresult_AsyncOperations
 
-**Added by**: PowerApps Checker Solution
+**Added by**: Power Apps Checker Solution
 
 See msdyn_analysisresult Entity [msdyn_analysisresult_AsyncOperations](msdyn_analysisresult.md#BKMK_msdyn_analysisresult_AsyncOperations) One-To-Many relationship.
 
 ### <a name="BKMK_msdyn_analysisresultdetail_AsyncOperations"></a> msdyn_analysisresultdetail_AsyncOperations
 
-**Added by**: PowerApps Checker Solution
+**Added by**: Power Apps Checker Solution
 
 See msdyn_analysisresultdetail Entity [msdyn_analysisresultdetail_AsyncOperations](msdyn_analysisresultdetail.md#BKMK_msdyn_analysisresultdetail_AsyncOperations) One-To-Many relationship.
 
 ### <a name="BKMK_msdyn_solutionhealthrule_AsyncOperations"></a> msdyn_solutionhealthrule_AsyncOperations
 
-**Added by**: PowerApps Checker Solution
+**Added by**: Power Apps Checker Solution
 
 See msdyn_solutionhealthrule Entity [msdyn_solutionhealthrule_AsyncOperations](msdyn_solutionhealthrule.md#BKMK_msdyn_solutionhealthrule_AsyncOperations) One-To-Many relationship.
 
 ### <a name="BKMK_msdyn_solutionhealthruleargument_AsyncOperations"></a> msdyn_solutionhealthruleargument_AsyncOperations
 
-**Added by**: PowerApps Checker Solution
+**Added by**: Power Apps Checker Solution
 
 See msdyn_solutionhealthruleargument Entity [msdyn_solutionhealthruleargument_AsyncOperations](msdyn_solutionhealthruleargument.md#BKMK_msdyn_solutionhealthruleargument_AsyncOperations) One-To-Many relationship.
 
 ### <a name="BKMK_msdyn_solutionhealthruleset_AsyncOperations"></a> msdyn_solutionhealthruleset_AsyncOperations
 
-**Added by**: PowerApps Checker Solution
+**Added by**: Power Apps Checker Solution
 
 See msdyn_solutionhealthruleset Entity [msdyn_solutionhealthruleset_AsyncOperations](msdyn_solutionhealthruleset.md#BKMK_msdyn_solutionhealthruleset_AsyncOperations) One-To-Many relationship.
 

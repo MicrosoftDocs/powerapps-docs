@@ -1,6 +1,6 @@
 ---
 title: IsMatch, Match, and MatchAll functions | Microsoft Docs
-description: Reference information, including syntax, for the IsMatch, Match, and MatchAll functions in PowerApps
+description: Reference information, including syntax, for the IsMatch, Match, and MatchAll functions in Power Apps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# IsMatch, Match, and MatchAll functions in PowerApps
+# IsMatch, Match, and MatchAll functions in Power Apps
 Tests for a match or extracts portions of a text string based on a pattern.
 
 ## Description
@@ -105,7 +105,7 @@ The pattern that these functions use is a [regular expression](https://en.wikipe
 
 Regular expressions are very powerful, available in many programming languages, and used for a wide variety of purposes. They can also often look like a random sequence of punctuation marks. This article doesn't describe all aspects of regular expressions, but a wealth of information, tutorials, and tools are available on the web.  
 
-Regular expressions come in different dialects, and PowerApps uses a variant of the JavaScript dialect. See [regular-expression syntax](https://msdn.microsoft.com/library/1400241x.aspx) for an introduction to the syntax. Named sub-matches (sometimes called named capture groups) are supported:
+Regular expressions come in different dialects, and Power Apps uses a variant of the JavaScript dialect. See [regular-expression syntax](https://msdn.microsoft.com/library/1400241x.aspx) for an introduction to the syntax. Named sub-matches (sometimes called named capture groups) are supported:
 
 - Named sub-matches: **(?&lt;*name*&gt; ...)**
 - Named backreferences: **\\k&lt;*name*&gt;**

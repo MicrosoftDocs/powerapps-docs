@@ -86,4 +86,4 @@ Hello, stranger.
 [Iteration tags](iteration-tags.md)<br>
 [Variable tags](variable-tags.md)<br>
 [Template tags](template-tags.md)<br>
-[PowerApps common data service entity tags](portals-entity-tags.md)
+[Power Apps common data service entity tags](portals-entity-tags.md)

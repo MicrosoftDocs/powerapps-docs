@@ -1,16 +1,16 @@
-- name: "PowerApps component framework"
+- name: Power Apps component framework
   items: 
   - name: Overview
     href: overview.md
   - name: What are code components
     href: custom-controls-overview.md
-  - name: Availability for canvas apps
+  - name: Code components for canvas apps
     href: component-framework-for-canvas-apps.md
-  - name: Get PowerApps CLI
+  - name: Get Power Apps CLI
     href: get-powerapps-cli.md
   - name: Tutorial
     items:
-    - name: Implementing sample component
+    - name: Create your first component
       href: implementing-controls-using-typescript.md
   - name: How-to
     items:
@@ -32,6 +32,8 @@
     href: limitations.md
   - name: Sample components
     items: 
+    - name: How to use the sample components?
+      href: use-sample-components.md
     - name: Increment component
       href: sample-controls/increment-control.md
     - name: Linear input component
@@ -64,7 +66,7 @@
       href: sample-controls/webapi-control.md
   - name: Reference
     items:
-    - name: PowerApps component framework 
+    - name: Power Apps component framework 
       href: reference/index.md
       items: 
       - name: Client

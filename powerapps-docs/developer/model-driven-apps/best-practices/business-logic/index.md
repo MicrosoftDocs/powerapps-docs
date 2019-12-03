@@ -1,6 +1,6 @@
 ---
 title: "Developers: Best practices and guidance of client side scripting for model-driven apps | Microsoft Docs"
-description: Best practices and guidance of client side scripting for developers of model-driven apps in PowerApps.
+description: Best practices and guidance of client side scripting for developers of model-driven apps in Power Apps.
 services: ''
 suite: powerapps
 documentationcenter: na

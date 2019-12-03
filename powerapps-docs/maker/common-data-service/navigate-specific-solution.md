@@ -1,5 +1,5 @@
 ---
-title: "Navigate to a specific solution with PowerApps | MicrosoftDocs"
+title: "Navigate to a specific solution with Power Apps | MicrosoftDocs"
 description: "Learn how to locate and open a specific solution in your environment"
 ms.custom: ""
 ms.date: 10/29/2018

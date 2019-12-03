@@ -1,7 +1,7 @@
 ---
-title: "PowerApps component framework overview | Microsoft Docs"
-description: "Use the PowerApps component framework to create code components to provide enhanced experiences for people to view and work with data in forms, views, and dashboards."
-keywords: "Component Framework, code components, PowerApps controls"
+title: "Power Apps component framework overview | Microsoft Docs"
+description: "Use the Power Apps component framework to create code components to provide enhanced experiences for people to view and work with data in forms, views, and dashboards."
+keywords: "Component Framework, code components, Power Apps controls"
 author: nkrb 
 manager: kvivek
 ms.date: 09/05/2019
@@ -14,9 +14,9 @@ ms.assetid: 7923e36d-3640-49f7-9f2f-c97358a632db
 ms.author: nabuthuk
 ---
 
-# PowerApps component framework overview
+# Power Apps component framework overview
 
-PowerApps component framework empowers professional developers and app makers to create code components for model-driven apps and canvas apps (experimental preview) to provide an enhanced user experience for the users to view and work with data in forms, views, and dashboards. For example:
+Power Apps component framework empowers professional developers and app makers to create code components for model-driven apps and canvas apps (experimental preview) to provide an enhanced user experience for the users to view and work with data in forms, views, and dashboards. For example:
 
 - Replace a field that displays a numeric text value with a `dial` or `slider` code component.
 - Transform a list into an entirely different visual experience bound to the data set like a `Calendar` or `Map`.
@@ -28,7 +28,7 @@ PowerApps component framework empowers professional developers and app makers to
 > - Canvas apps only support the *field* type of code components, and not the *dataset* type.
 
 
-Use PowerApps component framework to create code components that can be used across the full breadth of PowerApps capabilities. Unlike HTML web resources, code components are rendered as a part of the same context, load at the same time as any other components, providing a seamless experience for the users. Developers can bundle all the HTML, CSS, and TypeScript or JavaScript files into a single solution package file. Code components can be reused many times across different entities and forms.
+Use Power Apps component framework to create code components that can be used across the full breadth of Power Apps capabilities. Unlike HTML web resources, code components are rendered as a part of the same context, load at the same time as any other components, providing a seamless experience for the users. Developers can bundle all the HTML, CSS, and TypeScript or JavaScript files into a single solution package file. Code components can be reused many times across different entities and forms.
 
 Code components have access to a rich set of framework APIs that expose capabilities like component lifecycle management, contextual data and metadata access, seamless server access via Web API, utility and data formatting methods, device features like camera, location and microphone, along with easy-to-invoke UX elements like dialogs, lookups, and full-page rendering.  
 
@@ -39,5 +39,5 @@ Developers and app makers can use modern web practices and also harness the powe
 [What are code components](custom-controls-overview.md)<br/>
 [Availability for canvas apps](component-framework-for-canvas-apps.md)<br/>
 [Create and build a code component](create-custom-controls-using-pcf.md)<br/>
-[PowerApps for developers](https://docs.microsoft.com/powerapps/#pivot=home&panel=developer)
+[Power Apps for developers](https://docs.microsoft.com/powerapps/#pivot=home&panel=developer)
 

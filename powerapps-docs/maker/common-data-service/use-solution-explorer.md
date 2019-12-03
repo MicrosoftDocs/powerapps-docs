@@ -1,5 +1,5 @@
 ---
-title: "Use solutions in PowerApps | MicrosoftDocs"
+title: "Use solutions in Power Apps | MicrosoftDocs"
 description: "Learn how to use solution to create or customize apps"
 ms.custom: ""
 ms.date: 10/28/2019
@@ -17,15 +17,15 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Use solutions in PowerApps
+# Use solutions in Power Apps
 
- Within PowerApps, you can view a list of solutions by selecting **Solutions** in the left navigation. You can then select a solution to view all of its components. 
+ Within Power Apps, you can view a list of solutions by selecting **Solutions** in the left navigation. You can then select a solution to view all of its components. 
  
 > [!div class="mx-imgBorder"]  
 > ![Demo solution with all components](media/solution-all-items-list.PNG "Demo solution with all components")  
  
 > [!NOTE]
->  The solutioning experience is available only online and for environment version 9.1.0.267 and later. To check your version, please go to …[PowerApps admin center](https://admin.powerapps.com/)> **Environments** > select your environment > **Details** tab. For earlier version environments, selecting a solution opens it in the classic experience.  
+>  The solutioning experience is available only online and for environment version 9.1.0.267 and later. To check your version, please go to …[Power Apps admin center](https://admin.powerapps.com/)> **Environments** > select your environment > **Details** tab. For earlier version environments, selecting a solution opens it in the classic experience.  
  
  You can browse through all the components in a solution by scrolling through the items. If there are more then 100 items in the list you can select **Load the next 100 items** to see more. 
  
@@ -81,7 +81,7 @@ search.app:
 
 ## Classic solution explorer
 
-In PowerApps, you can view the classic solution explorer by selecting **Solutions** in the left navigation pane, and then selecting **Switch to classic** in the command bar. Classic solution explorer is the one that was previously available through the **Settings > Advanced customizations** area in PowerApps. 
+In Power Apps, you can view the classic solution explorer by selecting **Solutions** in the left navigation pane, and then selecting **Switch to classic** in the command bar. Classic solution explorer is the one that was previously available through the **Settings > Advanced customizations** area in Power Apps. 
 
 ## Known limitations
 
@@ -92,7 +92,7 @@ The following limitations apply to the use of canvas apps, flows, and custom con
 - Connections require authentication and consent, which requires an interactive user session and therefore cannot be transported via solutions. After importing your solution, play the app to authenticate connections. You can also create the connections in the target enviornment prior to importing the solution. 
 -	Canvas apps shared as co-owner to an Azure Active Directory (AAD) security group can't be added to solutions. Unshare the app before adding it to a solution.
 -	Canvas apps won't display in the classic solution explorer. Use the modern experience.
--	Canvas app access (CRUD and security) is managed entirely in PowerApps and not in the Common Data Service database.
+-	Canvas app access (CRUD and security) is managed entirely in Power Apps and not in the Common Data Service database.
 - Database operations such as backup, restore, and copy are not supported for canvas apps and flows. These operations can corrupt canvas apps and flows.
 - Deleting a managed solution does not rollback to a different canvas app version. Instead, all versions of the app are deleted.
 - Importing a solution containing a flow will not automatically create or associate required connections. The flow must be edited to fix the connections.

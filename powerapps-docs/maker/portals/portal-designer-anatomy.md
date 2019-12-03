@@ -1,21 +1,21 @@
 ---
-title: Portal PowerApps portals Studio anatomy | Microsoft Docs
-description: Learn about the anatomy of PowerApps portals Studio.
+title: Portal Power Apps portals Studio anatomy | Microsoft Docs
+description: Learn about the anatomy of Power Apps portals Studio.
 author: sbmjais
 manager: shujoshi
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/07/2019
+ms.date: 11/29/2019
 ms.author: shjais
 ms.reviewer:
 ---
 
-# PowerApps portals Studio anatomy
+# Power Apps portals Studio anatomy
 
-You can use PowerApps portals Studio to create and customize your website. It contains various options to add and configure webpages, components, forms, and lists. The anatomy of PowerApps portals Studio is as follows:
+You can use Power Apps portals Studio to create and customize your website. It contains various options to add and configure webpages, components, forms, and lists. The anatomy of Power Apps portals Studio is as follows:
 
-![PowerApps portals Studio anatomy](media/maker-anatomy.png "PowerApps portals Studio anatomy")  
+![Power Apps portals Studio anatomy](media/maker-anatomy.png "Power Apps portals Studio anatomy")  
 
 | **Annotation** | **Name**        | **Description**                                                                              |
 |----------------|-----------------|----------------------------------------------------------------------------------------------|
@@ -25,3 +25,5 @@ You can use PowerApps portals Studio to create and customize your website. It co
 | 4              | Footer          | Displays auto-save status and allows you to open source code editor.                         |
 | 5              | Properties pane | Displays properties of webpage and selected components and allows you edit them as required. |
 
+> [!NOTE]
+> Editing a portal through Power Apps portals Studio will temporarily cause poor portal performance due to multiple background processes. For example, the clear cache process runs and reloads data from Common Data Service.

@@ -1,6 +1,6 @@
 ---
 title: "Publish your app on AppSource (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn about how to publish your PowerApps on Microsoft AppSource so that subscribers can find it, try it, and buy it." # 115-145 characters including spaces. This abstract displays in the search result.
+description: "Learn about how to publish your Power Apps on Microsoft AppSource so that subscribers can find it, try it, and buy it." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 03/20/2019
 ms.reviewer: ""
@@ -17,7 +17,7 @@ search.app:
 ---
 # Publish your app on AppSource
 
-Publish your app on [Microsoft AppSource](https://appsource.microsoft.com) so that app subscribers can find it, try it, and buy it. The apps you build and publish with PowerApps are discovered and used in Dynamics 365 on the web. More information: [Discover apps via AppSource](/powerapps/user/app-source). 
+Publish your app on [Microsoft AppSource](https://appsource.microsoft.com) so that app subscribers can find it, try it, and buy it. The apps you build and publish with Power Apps are discovered and used in Dynamics 365 on the web. More information: [Discover apps via AppSource](/powerapps/user/app-source). 
 
 ## Prepare for submitting your app on AppSource
 

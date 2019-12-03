@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Attachments control in PowerApps
+# Attachments control in Power Apps
 A control that allows users to download files to their device, as well as upload and delete files from a SharePoint list or a Common Data Service entity.
 
 ## Limitations

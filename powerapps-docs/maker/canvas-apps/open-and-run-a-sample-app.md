@@ -1,6 +1,6 @@
 ---
 title: Use a sample app | Microsoft Docs
-description: Step-by-step instructions for creating a canvas app based on a sample in PowerApps
+description: Step-by-step instructions for creating a canvas app based on a sample in Power Apps
 author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
@@ -14,15 +14,15 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Create a canvas app from a sample in PowerApps
+# Create a canvas app from a sample in Power Apps
 In this quickstart, you'll create a canvas app from a sample so that you can explore design possibilities and discover concepts that you can apply as you develop your own canvas apps.
 
 Each sample showcases a real-world scenario but uses fictitious data. To store this data, you'll need a cloud-storage account, such as Dropbox, Google Drive, or OneDrive.
 
-If you don't have a license for PowerApps, you can [sign up for free](../signup-for-powerapps.md).
+If you don't have a license for Power Apps, you can [sign up for free](../signup-for-powerapps.md).
 
 ## Open a sample app
-1. Sign in to [PowerApps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
 1. In the list of sample apps, hover over a sample app (such as **Cost Estimator**) with your mouse.
 
@@ -30,7 +30,7 @@ If you don't have a license for PowerApps, you can [sign up for free](../signup-
 
 1. Click or tap the phone icon to create a version of the app for mobile devices (or leave the tablet icon selected), and then click or tap **Make this app**.
 
-1. In PowerApps Studio, click or tap **Make my own app** in the banner near the top-center of the screen.
+1. In Power Apps Studio, click or tap **Make my own app** in the banner near the top-center of the screen.
 
 	![](./media/open-and-run-a-sample-app/banner.png)
 
@@ -46,7 +46,7 @@ If you don't have a license for PowerApps, you can [sign up for free](../signup-
 	- Capture details such as address and square footage, and calculate the price based on discounts and tax rates.
 	- Filter a list of appointments to show those for which estimates have been created, for which estimates haven't been created, or all appointments.
 	
-1. When you finish exploring the app, close Preview mode by pressing Esc (or by clicking or tapping the close icon near the upper-right corner, under the title bar for PowerApps).
+1. When you finish exploring the app, close Preview mode by pressing Esc (or by clicking or tapping the close icon near the upper-right corner, under the title bar for Power Apps).
 
 ## Save the app
 1. Near the upper-left corner, click or tap the **File** tab.
