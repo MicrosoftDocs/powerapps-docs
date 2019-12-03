@@ -14,7 +14,7 @@ search.audienceType:
 search.app:
   - PowerApps
 ---
-# Controls and properties in PowerApps
+# Controls and properties in Power Apps
 
 Configure the appearance and behavior of a control by setting one of its properties. Each type of control has a different set of properties. Some properties, such as **Height** and **Width**, are common to almost every type of control, but other properties, such as **CheckboxSize**, are specific to one type of control.
 
@@ -56,7 +56,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Entity form](entity-form-control.md)** - Experimental feature: Add dynamic forms in which users can view, navigate, and edit relational data from the Common Data Service.
 
-**[Export](controls/control-export-import.md)** – Export data for use elsewhere in PowerApps.
+**[Export](controls/control-export-import.md)** – Export data for use elsewhere in Power Apps.
 
 **[Gallery](controls/control-gallery.md)** – Show a list of records that can contain multiple types of data.
 
@@ -66,7 +66,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Image](controls/control-image.md)** – Show an image from, for example, a local file or a data source.
 
-**[Import](controls/control-export-import.md)** – Import data from elsewhere in PowerApps.
+**[Import](controls/control-export-import.md)** – Import data from elsewhere in Power Apps.
 
 **[Line chart](controls/control-column-line-chart.md)** – Show values as data points relative to two axes.
 

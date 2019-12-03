@@ -31,7 +31,7 @@ For a deeper dive into this screen's default functionality, see the [email-scree
 
 ## Prerequisite
 
-Familiarity with how to add and configure screens and other controls as you [create an app in PowerApps](../data-platform-create-app-scratch.md).
+Familiarity with how to add and configure screens and other controls as you [create an app in Power Apps](../data-platform-create-app-scratch.md).
 
 ## Default functionality
 
@@ -158,5 +158,5 @@ Follow the steps outlined in the "Show event attendees" section of [Calendar scr
 ## Next steps
 
 * [View the reference documentation for this screen](./email-screen-reference.md).
-* [Learn more about the Office 365 Users connector in PowerApps](../connections/connection-office365-users.md).
-* [See all available connections in PowerApps](../connections-list.md).
+* [Learn more about the Office 365 Users connector in Power Apps](../connections/connection-office365-users.md).
+* [See all available connections in Power Apps](../connections-list.md).

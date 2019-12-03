@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Char function in PowerApps
+# Char function in Power Apps
 
 Translates a character code into a string.
 

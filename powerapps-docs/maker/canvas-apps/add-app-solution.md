@@ -59,7 +59,7 @@ You can skip this procedure if you already have a solution in which you want to 
 
 You can create a blank canvas app from within a solution. You can't automatically generate a three-screen app or customize a template or sample app from within a solution.
 
-1. [Sign in](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) to PowerApps.
+1. [Sign in](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) to Power Apps.
 
 1. If necessary, switch to the environment that contains the solution in which you want to create a canvas app.
 
@@ -90,7 +90,7 @@ You can create a blank canvas app from within a solution. You can't automaticall
 
 If you want to link an app to a solution, both must be in the same environment, and the app must have been created from within a solution.
 
-1. [Sign in](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) to PowerApps.
+1. [Sign in](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) to Power Apps.
 
 1. If necessary, switch to the environment that contains the solution to which you want to link an app.
 
@@ -115,7 +115,7 @@ If you want to link an app to a solution, both must be in the same environment, 
 
 ## Known limitations
 
-For information about known limitations, see [Use solutions in PowerApps](../common-data-service/use-solution-explorer.md#known-limitations). 
+For information about known limitations, see [Use solutions in Power Apps](../common-data-service/use-solution-explorer.md#known-limitations). 
 
 ## Next steps
 

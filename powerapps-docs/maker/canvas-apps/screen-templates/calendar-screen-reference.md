@@ -1,6 +1,6 @@
 ---
 title: Reference for the calendar-screen template for canvas apps | Microsoft Docs
-description: Understand details of how the calendar-screen template for canvas apps works in PowerApps.
+description: Understand details of how the calendar-screen template for canvas apps works in Power Apps.
 author: emcoope-msft
 manager: kvivek
 ms.service: powerapps
@@ -30,7 +30,7 @@ This topic highlights some significant controls and explains the expressions or 
 
 ## Prerequisite
 
-Familiarity with how to add and configure screens and other controls as you [create an app in PowerApps](../data-platform-create-app-scratch.md).
+Familiarity with how to add and configure screens and other controls as you [create an app in Power Apps](../data-platform-create-app-scratch.md).
 
 ## Calendar drop-down
 
@@ -321,5 +321,5 @@ Familiarity with how to add and configure screens and other controls as you [cre
 ## Next steps
 
 - [Learn more about this screen](./calendar-screen-overview.md)
-- [Learn more about the Office 365 Outlook connector in PowerApps](../connections/connection-office365-outlook.md)
-- [Learn more about the Office 365 Users connector in PowerApps](../connections/connection-office365-users.md)
+- [Learn more about the Office 365 Outlook connector in Power Apps](../connections/connection-office365-outlook.md)
+- [Learn more about the Office 365 Users connector in Power Apps](../connections/connection-office365-users.md)

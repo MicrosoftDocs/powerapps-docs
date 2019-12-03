@@ -35,7 +35,7 @@ If you’re viewing a managed solution, you can’t create new forms or edit exi
 
 <a name="BKMK_TypesOfForms"></a> 
 ## Type of forms
-There are different types of forms, and each type has a specific functionality or use. More information: [Type of forms in PowerApps](types-forms.md).  
+There are different types of forms, and each type has a specific functionality or use. More information: [Type of forms in Power Apps](types-forms.md).  
 
   
 <a name="BKMK_FormDifferencesByEntity"></a>   

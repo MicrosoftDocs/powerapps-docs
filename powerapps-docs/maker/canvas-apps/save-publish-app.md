@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Save and publish a canvas app in PowerApps
+# Save and publish a canvas app in Power Apps
 Whenever you save changes to a canvas app, you automatically publish them only for yourself and anyone else who has permissions to edit the app. When you finish making changes, you must explicitly publish them to make them available to everyone with whom the app is shared.
 
 For information about how to share an app, see [Share an app](share-app.md).

@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Data table control in PowerApps
+# Data table control in Power Apps
 Shows a set of data in a tabular format.
 
 ## Description

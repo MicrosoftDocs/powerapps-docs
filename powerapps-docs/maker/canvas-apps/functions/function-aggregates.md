@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Average, Max, Min, StdevP, Sum, and VarP functions in PowerApps
+# Average, Max, Min, StdevP, Sum, and VarP functions in Power Apps
 Aggregate functions that summarize a set of numbers.
 
 ## Description

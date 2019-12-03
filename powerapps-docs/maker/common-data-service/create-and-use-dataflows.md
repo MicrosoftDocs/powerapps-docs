@@ -1,6 +1,6 @@
 ---
 title: "Create and use dataflows in Power Apps | MicrosoftDocs"
-description: "Learn how to create and use dataflows in PowerApps"
+description: "Learn how to create and use dataflows in Power Apps"
 ms.custom: ""
 ms.date: 08/05/2019
 ms.reviewer: ""
@@ -24,7 +24,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Create and use dataflows in PowerApps
+# Create and use dataflows in Power Apps
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 With advanced data preparation available in Power Apps, you can create a

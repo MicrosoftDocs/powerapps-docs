@@ -14,10 +14,10 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Connect to SQL Server from PowerApps
+# Connect to SQL Server from Power Apps
 ![SQL Server icon](./media/connection-azure-sqldatabase/sqlicon.png)
 
-Connect to SQL Server, in either Azure or an on-premises database, so that you can display information from it in PowerApps.
+Connect to SQL Server, in either Azure or an on-premises database, so that you can display information from it in Power Apps.
 
 ## Prerequisites
 
@@ -62,7 +62,7 @@ Connect to SQL Server, in either Azure or an on-premises database, so that you c
 8. Customize the app by using techniques that are similar to those that [Create an app from Excel](../get-started-create-from-data.md) describes, starting with changing the app layout.
 
 ## Build an app from scratch
-1. Sign in to [powerapps.com](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) with the same account that you used to sign up for PowerApps.
+1. Sign in to [powerapps.com](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) with the same account that you used to sign up for Power Apps.
 2. In the left navigation bar, click or tap **Connections**:  
    
     ![Manage connections](./media/connection-azure-sqldatabase/manage-connections.png)

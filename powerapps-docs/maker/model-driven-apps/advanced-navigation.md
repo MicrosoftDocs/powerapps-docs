@@ -1,6 +1,6 @@
 ---
 title: "Navigating to my apps, solution explorer, and settings in Power Apps | Microsoft Docs"
-description: "Know how to locate advanced app making and customization areas in PowerApps"
+description: "Know how to locate advanced app making and customization areas in Power Apps"
 keywords: 
 author: Mattp123
 ms.author: matp

@@ -1,6 +1,6 @@
 ---
 title: Operators | Microsoft Docs
-description: Reference information, including syntax and examples, for the operators in PowerApps
+description: Reference information, including syntax and examples, for the operators in Power Apps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Operators in PowerApps
+# Operators in Power Apps
 
 Some of these operators are dependent on the language of the author.  See [Global apps](../global-apps.md) for more information.
 

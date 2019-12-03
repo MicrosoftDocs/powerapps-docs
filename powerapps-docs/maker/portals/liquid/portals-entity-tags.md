@@ -13,7 +13,7 @@ ms.reviewer:
 
 # Power Apps Common Data Service entity tags
 
-Power Apps entity tags are used to load and display Power Apps data, or use other Power Apps portals framework services. These tags are PowerApps-specific extensions to the Liquid language.
+Power Apps entity tags are used to load and display Power Apps data, or use other Power Apps portals framework services. These tags are Power Apps-specific extensions to the Liquid language.
 
 ## chart
 
@@ -676,7 +676,7 @@ The size of the result page to be returned. If not provided, a default size of 1
 
 ## entityform
 
-Fully renders a PowerApps-configured entity forms, by name or ID.  
+Fully renders a Power Apps-configured entity forms, by name or ID.  
 
 > [!Note]
 > The entityform tag is only available for use in content rendered inside a <em>[web template](store-content-web-templates.md)–</em>based page template. Attempting to use the tag inside a Rewrite-based Page Template will not render anything. You may only render a single entityform or webform tag per page. entityform or webform tags after the first will not be rendered.       
@@ -693,7 +693,7 @@ The name of the Entity Form you wish to load.
 
 ## webform
 
-Fully renders a PowerApps-configured web form, by name or ID. The webform tag is only available for use in content rendered inside a [web template](store-content-web-templates.md) based page template. Attempting to use the tag inside a Rewrite-based Page Template will not render anything. You may only render a single entityform or webform tag per page. entityform or webform tags after the first will not be rendered.                
+Fully renders a Power Apps-configured web form, by name or ID. The webform tag is only available for use in content rendered inside a [web template](store-content-web-templates.md) based page template. Attempting to use the tag inside a Rewrite-based Page Template will not render anything. You may only render a single entityform or webform tag per page. entityform or webform tags after the first will not be rendered.                
 `{% webform name: 'My Web Form' %}`
 
 ### Parameters

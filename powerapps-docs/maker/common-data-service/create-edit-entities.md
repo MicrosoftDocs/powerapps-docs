@@ -30,7 +30,7 @@ There are two designers you can use to create an entity:
 
 |Designer| Description|
 |--|--|
-|[Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)|Provides an easy streamlined experience, but some special settings are not available.<br />More information: <br />[Tutorial: Create a custom entity that has components in PowerApps](/powerapps/maker/common-data-service/create-custom-entity)<br />[Create and edit entities using Power Apps portal](create-edit-entities-portal.md)|
+|[Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)|Provides an easy streamlined experience, but some special settings are not available.<br />More information: <br />[Tutorial: Create a custom entity that has components in Power Apps](/powerapps/maker/common-data-service/create-custom-entity)<br />[Create and edit entities using Power Apps portal](create-edit-entities-portal.md)|
 |Solution explorer|Not as easy, but provides for more flexibility for less common requirements. <br />More information [Create and edit entities using solution explorer](create-edit-entities-solution-explorer.md)|
 
 > [!NOTE]
@@ -87,6 +87,6 @@ Information in this topic will help you choose which designer you can use. You c
 ### See also
 
 [Create and edit entities using solution explorer](create-edit-entities-solution-explorer.md)<br />
-[Tutorial: Create a custom entity that has components in PowerApps](/powerapps/maker/common-data-service/create-custom-entity)<br />
+[Tutorial: Create a custom entity that has components in Power Apps](/powerapps/maker/common-data-service/create-custom-entity)<br />
 [Edit an entity](edit-entities.md)<br />
 [Developer Documentation: Create a custom entity](/dynamics365/customer-engagement/developer/org-service/create-custom-entity)

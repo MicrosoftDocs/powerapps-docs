@@ -26,7 +26,7 @@ An admin can upload the app so it shows up for **all** teams in your tenant unde
 ## Prerequisites
 
 - You need a valid [Power Apps license](https://docs.microsoft.com/power-platform/admin/pricing-billing-skus).
-- To embed an app into Teams, you need an existing app [created using PowerApps](data-platform-create-app.md).
+- To embed an app into Teams, you need an existing app [created using Power Apps](data-platform-create-app.md).
 
 ## Download the app
 

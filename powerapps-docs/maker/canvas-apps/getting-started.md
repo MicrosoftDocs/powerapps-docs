@@ -42,7 +42,7 @@ Run your own apps - and any apps shared with you - on Windows, in a [web browser
 
 ## Learn more
 * Explore the step-by-step, conceptual, and reference topics in the navigation pane on the left.
-* Check out the [webinars](webinars-listing.md) that you can access on-demand to help you leverage the features and functions of PowerApps.
+* Check out the [webinars](webinars-listing.md) that you can access on-demand to help you leverage the features and functions of Power Apps.
 * Review [coding standards](https://aka.ms/powerappscanvasguidelines) for maximizing app performance and keeping apps easier to maintain.
 
 ## Share your experience
@@ -52,5 +52,5 @@ Run your own apps - and any apps shared with you - on Windows, in a [web browser
 
 ## Next steps
 - [Sign up for a free license.](../signup-for-powerapps.md)
-- [Sign in to PowerApps.](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)
+- [Sign in to Power Apps.](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)
 - [Open a sample app.](open-and-run-a-sample-app.md)

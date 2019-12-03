@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Calendar and Clock functions in PowerApps
+# Calendar and Clock functions in Power Apps
 Retrieves calendar and clock information about the current locale.
 
 ## Description

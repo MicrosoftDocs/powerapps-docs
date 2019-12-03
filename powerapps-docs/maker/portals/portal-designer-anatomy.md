@@ -26,4 +26,4 @@ You can use Power Apps portals Studio to create and customize your website. It c
 | 5              | Properties pane | Displays properties of webpage and selected components and allows you edit them as required. |
 
 > [!NOTE]
-> Editing a portal through PowerApps portals Studio will temporarily cause poor portal performance due to multiple background processes. For example, the clear cache process runs and reloads data from Common Data Service.
+> Editing a portal through Power Apps portals Studio will temporarily cause poor portal performance due to multiple background processes. For example, the clear cache process runs and reloads data from Common Data Service.

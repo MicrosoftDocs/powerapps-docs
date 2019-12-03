@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Manage canvas-app connections in PowerApps
+# Manage canvas-app connections in Power Apps
 In [powerapps.com](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), create a connection to one or more data sources, delete a connection, or update its credentials.
 
 Your canvas app's data connection can connect to SharePoint, SQL Server, Office 365, OneDrive for Business, Salesforce, Excel, and many other [data sources](connections-list.md).
@@ -29,7 +29,7 @@ Your next step after this article is to display and manage data from the data so
 * Connect to Twilio, and send an SMS message from your app.
 
 ## Prerequisites
-1. [Sign up](../signup-for-powerapps.md) for PowerApps.
+1. [Sign up](../signup-for-powerapps.md) for Power Apps.
 2. Sign in to [powerapps.com](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) using the same credentials that you used to sign up.
 
 ## Background on data connections

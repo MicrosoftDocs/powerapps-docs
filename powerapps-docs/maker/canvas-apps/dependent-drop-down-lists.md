@@ -43,7 +43,7 @@ A **Locations** list shows the departments at each location.
 | Pembroke       | Produce          |
 | Pembroke       | Floral           |
 
-An **Incidents** list shows contact information and information about each incident. Create the Date column as a **Date** column, but create the other columns as **Single line of text** columns to simplify configuration and avoid [delegation](./delegation-overview.md) warnings in Microsoft PowerApps.
+An **Incidents** list shows contact information and information about each incident. Create the Date column as a **Date** column, but create the other columns as **Single line of text** columns to simplify configuration and avoid [delegation](./delegation-overview.md) warnings in Microsoft Power Apps.
 
 | First Name | Last Name | Phone Number     | Location | Department | Description       | Date      |
 |------------|-----------|------------------|----------------|------------|-------------------------|-----------|

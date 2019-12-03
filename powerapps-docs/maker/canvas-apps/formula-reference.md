@@ -1,6 +1,6 @@
 ---
 title: Functions, signals, and enumerations | Microsoft Docs
-description: Reference information for functions, signals, and enumerations in PowerApps.
+description: Reference information for functions, signals, and enumerations in Power Apps.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Formula reference for PowerApps
+# Formula reference for Power Apps
 Formulas combine many elements.  Listed below are:
 
 * **Functions** take parameters, perform an operation, and return a value. For example, **Sqrt(25)** returns **5**. Functions are modeled after Microsoft Excel functions.  Some functions have side effects, such as **SubmitForm**, which are appropriate only in a [behavior formula](working-with-formulas-in-depth.md) such as **Button.OnSelect**.

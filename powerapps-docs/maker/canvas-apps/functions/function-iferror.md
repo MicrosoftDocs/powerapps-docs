@@ -1,6 +1,6 @@
 ---
 title: IfError function | Microsoft Docs
-description: Reference information, including syntax and examples, for the IfError function in PowerApps
+description: Reference information, including syntax and examples, for the IfError function in Power Apps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -15,7 +15,7 @@ search.app:
   - PowerApps
 ---
 
-# IfError function in PowerApps
+# IfError function in Power Apps
 
 Detects errors and provides an alternative value or takes action.
 

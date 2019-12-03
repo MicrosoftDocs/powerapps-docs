@@ -1,6 +1,6 @@
 ---
 title: Manage existing portals in Power Apps | Microsoft Docs
-description: Instructions to manage a portal in PowerApps.
+description: Instructions to manage a portal in Power Apps.
 author: sbmjais
 manager: shujoshi
 ms.service: powerapps
@@ -11,7 +11,7 @@ ms.author: shjais
 ms.reviewer:
 ---
 
-# Manage existing portals in PowerApps
+# Manage existing portals in Power Apps
 
 Once you've created a portal, it is visible under the **Recent apps** section on the Power Apps home page.
 

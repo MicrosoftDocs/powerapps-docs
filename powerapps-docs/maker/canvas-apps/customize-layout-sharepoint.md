@@ -1,6 +1,6 @@
 ---
 title: Tutorial - Customize a gallery in a generated app | Microsoft Docs
-description: In this tutorial, you customize the data that appears in the gallery and other elements of an app that was generated automatically in PowerApps.
+description: In this tutorial, you customize the data that appears in the gallery and other elements of an app that was generated automatically in Power Apps.
 author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Tutorial: Customize a gallery in PowerApps
+# Tutorial: Customize a gallery in Power Apps
 
 In this tutorial, you'll customize a list of records, called a gallery, and make other changes in an app that was generated automatically in Microsoft Power Apps. Users can manage data in the app even if you don't make these changes, but the app will be easier to use if you customize it for your organization's needs.
 

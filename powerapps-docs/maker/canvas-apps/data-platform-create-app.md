@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Generate a canvas app from Common Data Service in PowerApps
+# Generate a canvas app from Common Data Service in Power Apps
 
 In Power Apps, automatically generate a canvas app based on a list of sample accounts in [Common Data Service](../common-data-service/data-platform-intro.md). In this app, you can browse all accounts, show details of a single account, and create, update, or delete an account.
 

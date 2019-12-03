@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Camera control in PowerApps
+# Camera control in Power Apps
 A control with which the user can take photos by using the camera on the device.
 
 ## Description

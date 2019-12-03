@@ -17,7 +17,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Use solutions in PowerApps
+# Use solutions in Power Apps
 
  Within Power Apps, you can view a list of solutions by selecting **Solutions** in the left navigation. You can then select a solution to view all of its components. 
  

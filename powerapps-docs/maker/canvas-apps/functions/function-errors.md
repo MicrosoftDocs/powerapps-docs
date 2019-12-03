@@ -1,6 +1,6 @@
 ---
 title: Errors function | Microsoft Docs
-description: Reference information, including syntax and examples, for the Errors function in PowerApps
+description: Reference information, including syntax and examples, for the Errors function in Power Apps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Errors function in PowerApps
+# Errors function in Power Apps
 Provides error information for previous changes to a [data source](../working-with-data-sources.md).
 
 ## Overview
