@@ -34,12 +34,6 @@
     items: 
     - name: How to use the sample components?
       href: use-sample-components.md
-    - name: Increment component
-      href: sample-controls/increment-control.md
-    - name: Linear input component
-      href: sample-controls/linear-input-control.md
-    - name: Localization API component
-      href: sample-controls/localization-api-control.md
     - name: Angular Flip component
       href: sample-controls/angular-flip-control.md
     - name: Control State API component
@@ -52,6 +46,12 @@
       href: sample-controls/iframe-control.md
     - name: Image upload component
       href: sample-controls/image-upload-control.md
+    - name: Increment component
+      href: sample-controls/increment-control.md
+    - name: Linear input component
+      href: sample-controls/linear-input-control.md
+    - name: Localization API component
+      href: sample-controls/localization-api-control.md
     - name: Map component
       href: sample-controls/map-control.md
     - name: Navigation API component
