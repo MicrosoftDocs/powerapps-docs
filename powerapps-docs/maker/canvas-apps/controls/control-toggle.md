@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Toggle control in PowerApps
+# Toggle control in Power Apps
 A control that the user can turn on or off by moving its handle.
 
 ## Description

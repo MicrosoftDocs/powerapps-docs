@@ -20,10 +20,10 @@ search.app:
 # Run a canvas app on a mobile device
 When you create an app, or someone shares an app with you, you can run that app on Windows, iOS, Android, or in a web browser. In this topic, you'll learn how to run a canvas app on a mobile device. Apps running on a mobile device can take advantage of the device's capabilities, such as location services and camera.
 
-To follow this procedure, if you're not signed up for PowerApps, [sign up for free](https://make.powerapps.com/signup?redirect=marketing&email=) before you begin, and then download PowerApps from the [App Store](https://itunes.apple.com/app/powerapps/id1047318566?mt=8) or [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.msapps) onto an iPhone, iPad, or Android device running a [supported operating system](../maker/canvas-apps/limits-and-config.md). Also, make sure you have access to a canvas app that you created or that someone else created and shared with you.
+To follow this procedure, if you're not signed up for Power Apps, [sign up for free](https://make.powerapps.com/signup?redirect=marketing&email=) before you begin, and then download Power Apps from the [App Store](https://itunes.apple.com/app/powerapps/id1047318566?mt=8) or [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.msapps) onto an iPhone, iPad, or Android device running a [supported operating system](../maker/canvas-apps/limits-and-config.md). Also, make sure you have access to a canvas app that you created or that someone else created and shared with you.
 
-## Open PowerApps and sign in
-Open PowerApps on your mobile device and sign in using your Azure Active Directory credentials.
+## Open Power Apps and sign in
+Open Power Apps on your mobile device and sign in using your Azure Active Directory credentials.
 
 ![Login user](./media/run-app-client/run-client-login.png)
 
@@ -46,7 +46,7 @@ The following filters are available:
 
     ![Mark as Favorite](./media/run-app-client/favorite.png)
 
-After you filter your apps, you can sort the filtered list by the date the apps were most recently opened or modified, or alphabetically by name. These preferences are retained when you close and reopen PowerApps.
+After you filter your apps, you can sort the filtered list by the date the apps were most recently opened or modified, or alphabetically by name. These preferences are retained when you close and reopen Power Apps.
 
 ![Sort menu](./media/run-app-client/sort-menu.png)
 
@@ -59,7 +59,7 @@ If you filtered your apps, it will search the filtered list.
 ## Run an app
 To run a canvas app on a mobile device, tap the app tile. If someone else created a canvas app and shared it with you in an email, you can run the app by tapping the link in the email.
 
-If this is the first time you're using PowerApps, a screen shows the swipe gesture to close the app.
+If this is the first time you're using Power Apps, a screen shows the swipe gesture to close the app.
 
 ![Launch app](./media/run-app-client/run-client-app.png)
 

@@ -1,6 +1,6 @@
 ---
 title: Remove and RemoveIf functions | Microsoft Docs
-description: Reference information, including syntax and examples, for the Remove and RemoveIf functions in PowerApps
+description: Reference information, including syntax and examples, for the Remove and RemoveIf functions in Power Apps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Remove and RemoveIf functions in PowerApps
+# Remove and RemoveIf functions in Power Apps
 Removes [records](../working-with-tables.md#records) from a [data source](../working-with-data-sources.md).
 
 ## Description

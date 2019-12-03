@@ -1,6 +1,6 @@
 ---
 title: Overview of the Office 365 Outlook connection | Microsoft Docs
-description: Reference information, including examples, for the Office 365 Outlook connection to PowerApps
+description: Reference information, including examples, for the Office 365 Outlook connection to Power Apps
 author: lancedMicrosoft
 manager: kvivek
 ms.service: powerapps
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Connect to Office 365 Outlook from PowerApps
+# Connect to Office 365 Outlook from Power Apps
 ![Office 365 Outlook](./media/connection-office365-outlook/office365icon.png)
 
 If you connect to Office 365 Outlook, you can show, send, delete, and reply to email messages, in addition to other tasks.

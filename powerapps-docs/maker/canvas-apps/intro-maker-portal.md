@@ -14,9 +14,9 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Sign in to PowerApps for the first time
+# Sign in to Power Apps for the first time
 
-When you sign in to [PowerApps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), the site offers you a variety of options for creating your own apps, opening apps that you or others have created, and performing related tasks. These tasks range from the most simple, such as identifying the license or licenses that give you access, to more advanced capabilities, such as creating custom connections to specific data sources.
+When you sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), the site offers you a variety of options for creating your own apps, opening apps that you or others have created, and performing related tasks. These tasks range from the most simple, such as identifying the license or licenses that give you access, to more advanced capabilities, such as creating custom connections to specific data sources.
 
 You can select options in three general areas:
 
@@ -36,7 +36,7 @@ For best results, start by ensuring that the home page is set to the right envir
 
 ## Choose an environment
 
-Whether you're creating an app, a flow, a data connection, or an entity in Common Data Service, much of what you do in PowerApps is contained in a specific environment. Environments create boundaries between different types of work; for example, an organization might have separate environments for different departments. Many organizations use environments to separate apps that are still being developed from those that are ready for widespread use. You might have access to multiple environments or only one and, if you have appropriate permissions, you might be able to create your own environments.
+Whether you're creating an app, a flow, a data connection, or an entity in Common Data Service, much of what you do in Power Apps is contained in a specific environment. Environments create boundaries between different types of work; for example, an organization might have separate environments for different departments. Many organizations use environments to separate apps that are still being developed from those that are ready for widespread use. You might have access to multiple environments or only one and, if you have appropriate permissions, you might be able to create your own environments.
 
 To verify which environment you're in, find the environment switcher near the right side of the header.
 
@@ -51,7 +51,7 @@ For more information, see [Environments overview](../../administrator/environmen
 
 ## Choose an app type
 
-In PowerApps, you can create and run these types of apps:
+In Power Apps, you can create and run these types of apps:
 
 - **Canvas apps** support designing custom UI and connecting to data from a variety of sources.
 - **Model-driven apps** have a standard UI and connect to data only in Common Data Service. However, you can more easily create other elements such as views, dashboards, and different types of business logic.
@@ -87,7 +87,7 @@ You can find more information about either canvas apps or model-driven apps in t
 
     ![List of model-driven apps with an ellipsis menu open](media/intro-maker-portal/help-icon.png)
 
-Both options show links to this documentation set, the PowerApps Community (where you can share information with users in other organizations), and the PowerApps blog (where the newest features are announced).
+Both options show links to this documentation set, the Power Apps Community (where you can share information with users in other organizations), and the Power Apps blog (where the newest features are announced).
 
 ## Other common tasks
 
@@ -99,14 +99,14 @@ By selecting options in the header and left navigation bar, you can do more than
 
     For more information, see [Find and run apps](../../user/index.md).
 
-- Select the gear icon to perform tasks such as connecting to data sources, identifying your PowerApps license or licenses, and opening the page where you can perform administrative tasks.
+- Select the gear icon to perform tasks such as connecting to data sources, identifying your Power Apps license or licenses, and opening the page where you can perform administrative tasks.
 
     For more information, see these topics:
 
   - [Overview of canvas-app connectors](connections-list.md)
   - [Build and certify custom connectors for canvas apps](register-custom-api.md)
   - [Manage an on-premises data gateway](gateway-management.md)
-  - [Administer PowerApps](../../administrator/index.md)
+  - [Administer Power Apps](../../administrator/index.md)
   - [Licensing overview](../../administrator/pricing-billing-skus.md)
   - [Overview of building a model-driven app](../model-driven-apps/model-driven-app-overview.md)
 

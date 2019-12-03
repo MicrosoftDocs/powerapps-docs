@@ -1,6 +1,6 @@
 ---
 title: Understand data-form layout for canvas apps | Microsoft Docs
-description: In PowerApps, create great-looking form layouts in canvas apps by using rows and columns.
+description: In Power Apps, create great-looking form layouts in canvas apps by using rows and columns.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -14,9 +14,9 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Understand data-form layout for canvas apps in PowerApps
+# Understand data-form layout for canvas apps in Power Apps
 
-Easily create an attractive and efficient form when you build a canvas app in PowerApps. For example, consider this basic form for recording sales orders:
+Easily create an attractive and efficient form when you build a canvas app in Power Apps. For example, consider this basic form for recording sales orders:
 
 ![Sample sales order](./media/working-with-form-layout/sales-order.png)
 
@@ -24,9 +24,9 @@ In this tutorial, we'll walk through the steps to create this form. We'll also l
 
 ## Before you start
 
-If you're new to PowerApps (or have only generated apps automatically), you'll want to [build an app from scratch](get-started-create-from-blank.md) before you dive into this topic. By building an app from scratch, you'll become familiar with required concepts, such as adding data sources and controls, that are mentioned but not explained in this topic.
+If you're new to Power Apps (or have only generated apps automatically), you'll want to [build an app from scratch](get-started-create-from-blank.md) before you dive into this topic. By building an app from scratch, you'll become familiar with required concepts, such as adding data sources and controls, that are mentioned but not explained in this topic.
 
-This topic is written as though you have a data source that's named **Sales order** and that contains the fields in the previous graphic. If you have a PowerApps Plan 2 license or a [trial license](../signup-for-powerapps.md) and system administrator or system customizer permissions, you can [create an entity](../common-data-service/data-platform-create-entity.md) in Common Data Service and add similar fields. 
+This topic is written as though you have a data source that's named **Sales order** and that contains the fields in the previous graphic. If you have a Power Apps Plan 2 license or a [trial license](../signup-for-powerapps.md) and system administrator or system customizer permissions, you can [create an entity](../common-data-service/data-platform-create-entity.md) in Common Data Service and add similar fields. 
 
 ## Add a gallery
 
@@ -193,7 +193,7 @@ In summary, what are the differences when **Snap to columns** is on versus off?
 | Cards automatically re-layout between rows (more on this later) |Yes |No |
 
 ## Set width and height
-As with everything in PowerApps, the form's layout is governed by properties on the card controls. As already described, you can change the values of these properties by dragging controls to different locations or dragging grab handles to resize controls. But you'll discover situations in which you'll want to understand and manipulate these properties more precisely, especially when making your forms dynamic with formulas.
+As with everything in Power Apps, the form's layout is governed by properties on the card controls. As already described, you can change the values of these properties by dragging controls to different locations or dragging grab handles to resize controls. But you'll discover situations in which you'll want to understand and manipulate these properties more precisely, especially when making your forms dynamic with formulas.
 
 ### Basic Layout: X, Y, and Width
 The **X** and **Y** properties control the position of cards. When we work with controls on the raw canvas, these properties provide an absolute position. In a form, these properties have a different meaning:

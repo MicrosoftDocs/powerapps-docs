@@ -1,5 +1,5 @@
 ---
-title: "Optimize model-driven app form performance in PowerApps | MicrosoftDocs"
+title: "Optimize model-driven app form performance in Power Apps | MicrosoftDocs"
 description: "Learn how to avoid form designs that cause a form to load slowly"
 ms.custom: ""
 ms.date: 06/27/2018

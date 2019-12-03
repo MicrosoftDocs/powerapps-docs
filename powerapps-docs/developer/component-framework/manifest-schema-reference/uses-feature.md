@@ -52,6 +52,6 @@ The table below shows the relationship of these settings to what happens in the 
 
 ### Related topics
 
-[PowerApps component framework manifest schema reference](index.md)<br/>
-[PowerApps component framework API reference](../reference/index.md)<br/>
-[PowerApps component framework overview](../overview.md)
+[Power Apps component framework manifest schema reference](index.md)<br/>
+[Power Apps component framework API reference](../reference/index.md)<br/>
+[Power Apps component framework overview](../overview.md)

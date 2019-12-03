@@ -1,6 +1,6 @@
 ---
 title: SetFocus function | Microsoft Docs
-description: Reference information, including syntax, for the SetFocus function in PowerApps
+description: Reference information, including syntax, for the SetFocus function in Power Apps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# SetFocus function in PowerApps
+# SetFocus function in Power Apps
 Moves input focus to a specific control. 
 
 ## Description
