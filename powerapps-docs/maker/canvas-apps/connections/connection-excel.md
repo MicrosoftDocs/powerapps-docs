@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Connect to Excel from PowerApps
+# Connect to Excel from Power Apps
 ![Excel](./media/connection-excel/excelicon.png)
 
 Excel is *kind of* a connection. To display Excel data in your app:

@@ -1,6 +1,6 @@
 ---
 title: ForAll function | Microsoft Docs
-description: Reference information, including syntax and examples, for the ForEach function in PowerApps
+description: Reference information, including syntax and examples, for the ForEach function in Power Apps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# ForAll function in PowerApps
+# ForAll function in Power Apps
 Calculates values and performs actions for all [records](../working-with-tables.md#records) of a [table](../working-with-tables.md).
 
 ## Description

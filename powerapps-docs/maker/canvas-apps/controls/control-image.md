@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Image control in PowerApps
+# Image control in Power Apps
 A control that shows an image from, for example, a local file or a data source.
 
 ## Description

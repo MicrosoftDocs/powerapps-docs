@@ -29,7 +29,7 @@ Add **Activities** in the **Timeline** wall to keep track of all your communicat
 - An email with an attached image will be shown inline with the body of the email.
 
   > [!div class="mx-imgBorder"]
-  > ![Timeline view of activities in Power Apps](media/TimelineViewOfActivity.png "Timeline view of activities in PowerApps")  
+  > ![Timeline view of activities in Power Apps](media/TimelineViewOfActivity.png "Timeline view of activities in Power Apps")  
  
 ## Add an activity from the nav bar
  
@@ -38,7 +38,7 @@ The fastest way to add an activity is to use the shortcut on the nav bar and the
 1. On the nav bar, select the **plus sign** ![Create record button](media/create-record-button.png "Create record button"), and then select **Activities**. 
 
    > [!div class="mx-imgBorder"]
-   > ![Shortcut to add an activity in Power Apps](media/QuickCreate.png "Shortcut to add an activity in PowerApps")  
+   > ![Shortcut to add an activity in Power Apps](media/QuickCreate.png "Shortcut to add an activity in Power Apps")  
  
 2. Choose the type of activity you want to add.
 
@@ -55,7 +55,7 @@ The fastest way to add an activity is to use the shortcut on the nav bar and the
 
 
    > [!div class="mx-imgBorder"]
-   > ![Add a phone activity in Power Apps](media/addphonecall.png "Add a phone activity in PowerApps")
+   > ![Add a phone activity in Power Apps](media/addphonecall.png "Add a phone activity in Power Apps")
   
 3. Fill in the **Subject** of the call.
 

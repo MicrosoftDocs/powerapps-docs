@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Color enumeration and ColorFade, ColorValue, and RGBA functions in PowerApps
+# Color enumeration and ColorFade, ColorValue, and RGBA functions in Power Apps
 
 Use built-in color values, define custom colors, and use the alpha channel.
 

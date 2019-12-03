@@ -1,6 +1,6 @@
 ---
 title: App object | Microsoft Docs
-description: Reference information, including syntax and examples, for the App object in PowerApps
+description: Reference information, including syntax and examples, for the App object in Power Apps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# App object in PowerApps
+# App object in Power Apps
 
 Provides information about the currently running app and control over the app's behavior.
 
@@ -77,7 +77,7 @@ The confirmation dialog box appears in any situation where data could be lost, a
   - Swiping to switch to a different app in Power Apps Mobile.
   - Selecting the back button on an Android device.
 
-The exact look of the confirmation dialog box might vary across devices and versions of PowerApps.
+The exact look of the confirmation dialog box might vary across devices and versions of Power Apps.
 
 The confirmation dialog box doesn't appear in Power Apps Studio.
 

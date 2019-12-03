@@ -32,7 +32,7 @@ If you have a Power Apps Plan 1 license or a license through Office 365, you alr
 
 To find out which license or licenses you already have, try to [sign in to Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) with your work or school credentials.
 
-- If you can't sign in, you don't have any Power Apps licenses, and you'll need to [start a trial](#get-a-license-from-scratch) if you want any access to PowerApps.
+- If you can't sign in, you don't have any Power Apps licenses, and you'll need to [start a trial](#get-a-license-from-scratch) if you want any access to Power Apps.
 
     > [!IMPORTANT]
     > You can't sign in by using a personal email address, such as one that ends in outlook.com, hotmail.com, or gmail.com. For more information, see [What email address can I use?](#what-email-address-can-i-use) later in this topic.

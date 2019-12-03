@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Timer control in PowerApps
+# Timer control in Power Apps
 A control that can determine how your app responds after a certain amount of time passes.
 
 ## Description

@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# List Box control in PowerApps
+# List Box control in Power Apps
 A list in which the user can select one or multiple items.
 
 ## Description

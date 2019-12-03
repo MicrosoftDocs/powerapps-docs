@@ -1,6 +1,6 @@
 ---
 title: On-premises data gateway | Microsoft Docs
-description: This article is an overview of the on-premises data gateway for PowerApps.
+description: This article is an overview of the on-premises data gateway for Power Apps.
 author: arthiriyer
 manager: kvivek
 ms.service: powerapps

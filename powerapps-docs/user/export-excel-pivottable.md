@@ -50,7 +50,7 @@ The option to export data to an Excel PivotTable isn’t available in all record
   
 5. If you see the security warning **External Data Connections have been disabled**, select **Enable Content**.  
   
-6. To refresh data in the file, on the **Data** tab, select **Refresh from PowerApps**.  
+6. To refresh data in the file, on the **Data** tab, select **Refresh from Power Apps**.  
   
 7. Drag the fields from the PivotTable Field List to the PivotTable. For more information, see Excel Help.  
   

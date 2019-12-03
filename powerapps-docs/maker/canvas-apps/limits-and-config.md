@@ -1,6 +1,6 @@
 ---
 title: System requirements, limits, and configuration values for canvas apps | Microsoft Docs
-description: System requirements, limits, and configuration values for canvas apps built in PowerApps
+description: System requirements, limits, and configuration values for canvas apps built in Power Apps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -15,7 +15,7 @@ search.app:
   - PowerApps
 ---
 # System requirements, limits, and configuration values for canvas apps
-This topic contains device platform and web browser requirements, as well as limits and configuration values for PowerApps.
+This topic contains device platform and web browser requirements, as well as limits and configuration values for Power Apps.
 
 ## Supported platforms for running canvas apps using the Power Apps app
 

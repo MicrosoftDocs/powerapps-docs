@@ -1,6 +1,6 @@
 ---
 title: Table function | Microsoft Docs
-description: Reference information, including syntax and examples, for the Table function in PowerApps
+description: Reference information, including syntax and examples, for the Table function in Power Apps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Table function in PowerApps
+# Table function in Power Apps
 Creates a temporary [table](../working-with-tables.md).
 
 ## Description

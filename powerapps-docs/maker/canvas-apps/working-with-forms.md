@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Understand canvas-app forms in Microsoft PowerApps
+# Understand canvas-app forms in Microsoft Power Apps
 
 Add three types of controls to a canvas app so that the user can browse for a record, display details about that record, and edit or create a record:
 
@@ -33,7 +33,7 @@ As this topic describes, combine these controls with formulas to create the over
 ## Prerequisites
 
 * [Sign up](../signup-for-powerapps.md) for Power Apps, and then [sign in](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) by providing the same credentials that you used to sign up.
-* Learn how to [configure a control](add-configure-controls.md) in PowerApps.
+* Learn how to [configure a control](add-configure-controls.md) in Power Apps.
 
 ## Explore a generated app
 Power Apps can automatically generate an app based on a data source that you specify. Each app contains three screens with the controls described earlier and formulas that connect them. Run these apps "out of the box," customize them for your specific goals, or examine how they work so that you can learn useful concepts that apply to your own apps. In the following sections, inspect the screens, controls, and formulas that drive a generated app.  

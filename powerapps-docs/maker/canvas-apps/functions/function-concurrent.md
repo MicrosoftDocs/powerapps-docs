@@ -1,6 +1,6 @@
 ---
 title: Concurrent function | Microsoft Docs
-description: Reference information, including syntax, for the Concurrent function in PowerApps
+description: Reference information, including syntax, for the Concurrent function in Power Apps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Concurrent function in PowerApps
+# Concurrent function in Power Apps
 Evaluates multiple formulas concurrently with one another.
 
 ## Description

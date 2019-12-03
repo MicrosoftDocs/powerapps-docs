@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Optimize canvas-app performance in PowerApps
+# Optimize canvas-app performance in Power Apps
 Microsoft is working hard to improve the performance of all apps that run on the Power Apps platform. 
 But you can follow the best practices in this topic to boost the performance of apps that you create.
 

@@ -1,6 +1,6 @@
 ---
 title: Shuffle function | Microsoft Docs
-description: Reference information, including syntax and an example, for the Shuffle function in PowerApps
+description: Reference information, including syntax and an example, for the Shuffle function in Power Apps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Shuffle function in PowerApps
+# Shuffle function in Power Apps
 Randomly reorders the [records](../working-with-tables.md#records) of a [table](../working-with-tables.md).
 
 ## Description

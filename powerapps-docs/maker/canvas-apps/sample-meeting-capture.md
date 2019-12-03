@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Set up and learn about the Meeting Capture sample template in PowerApps
+# Set up and learn about the Meeting Capture sample template in Power Apps
 
 ## Overview
 

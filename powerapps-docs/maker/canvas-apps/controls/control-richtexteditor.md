@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Rich text editor control in PowerApps
+# Rich text editor control in Power Apps
 Allows end users to format text inside a WYSIWYG editing area.  Output format is HTML.
 
 ## Description

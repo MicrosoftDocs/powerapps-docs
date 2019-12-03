@@ -37,7 +37,7 @@ In this topic, you'll use data in your Azure SQL Database to create an app with 
 
 1. Sign into [Azure Portal](https://portal.azure.com).
 2. Navigate to your SQL Database.
-3. Select PowerApps.
+3. Select Power Apps.
 
     
     ![Power Apps option in SQL Database options](./media/app-from-azure-sql-database/powerapps-link-azure-portal.png "Power Apps option inside SQL Database")

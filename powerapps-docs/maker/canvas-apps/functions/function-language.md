@@ -1,6 +1,6 @@
 ---
 title: Language function | Microsoft Docs
-description: Reference information, including syntax and examples, for the Language function in PowerApps
+description: Reference information, including syntax and examples, for the Language function in Power Apps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Language function in PowerApps
+# Language function in Power Apps
 Returns the language tag of the current user.
 
 ## Description

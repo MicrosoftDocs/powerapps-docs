@@ -24,7 +24,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Type of model-driven app forms in PowerApps
+# Type of model-driven app forms in Power Apps
 
  There are different types of forms and each type has a specific functionality or use. The following table describes the types of forms available.  
   

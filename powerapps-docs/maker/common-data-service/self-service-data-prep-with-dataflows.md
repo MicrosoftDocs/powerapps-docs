@@ -36,7 +36,7 @@ search.app:
 As the volume of data continues to grow, so does the challenge of shaping that
 data into well-structured, actionable information. You want data that’s ready for
 apps, AI workloads, or analytics so that you can quickly turn volumes of
-data into actionable insights. With self-service data prep in the PowerApps
+data into actionable insights. With self-service data prep in the Power Apps
 portal, you can transform and load data to Common Data Service or your organization’s
 Azure Data Lake Storage Gen2 account with just a few clicks.
 
@@ -129,7 +129,7 @@ For more information about Azure Data Lake Storage Gen2 and dataflows
 integration, including how to create dataflows that reside in your
 organization's Azure Data Lake, see [Connect Azure Data Lake Storage Gen2 for dataflow storage](connect-azure-data-lake-storage-for-dataflow.md).
 
-## Summary of self-service data prep for big data in PowerApps
+## Summary of self-service data prep for big data in Power Apps
 There are multiple scenarios and examples where dataflows can enable you to get
 better control—and faster insights—from your business data. Other people in
 your organization can leverage dataflows either via Common Data Service, the

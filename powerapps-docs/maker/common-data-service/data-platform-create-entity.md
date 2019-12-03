@@ -1,6 +1,6 @@
 ---
 title: Create a custom entity | Microsoft Docs
-description: Learn how to create a custom entity in PowerApps.
+description: Learn how to create a custom entity in Power Apps.
 author: Mattp123
 ms.service: powerapps
 ms.component: cds
@@ -22,7 +22,7 @@ In this topic, you'll learn how to create a custom entity called Product Review 
 ## Prerequisites
 To follow this procedure, you must have either a System Administrator or System Customizer security role within Common Data Service.
 
-## Sign in to PowerApps
+## Sign in to Power Apps
 Sign in to Power Apps at [https://make.powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
 ## Create an entity

@@ -1,6 +1,6 @@
 ---
 title: Understand accessibility app designer, site map designer, and My Apps page in Power Apps | Microsoft Docs
-description: Know about accessibility in model-driven apps with app designer, site map designer, and My Apps page in PowerApps
+description: Know about accessibility in model-driven apps with app designer, site map designer, and My Apps page in Power Apps
 keywords: App designer; site map designer; my apps; Dynamics 365
 author: Mattp123
 ms.author: matp

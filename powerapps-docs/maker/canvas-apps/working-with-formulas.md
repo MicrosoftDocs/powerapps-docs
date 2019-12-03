@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Get started with canvas-app formulas in PowerApps
+# Get started with canvas-app formulas in Power Apps
 
 Configure your canvas app with formulas that not only calculate values and perform other tasks (as they do in Excel) but also respond to user input (as an app requires).
 
@@ -30,7 +30,7 @@ This topic provides only an overview of working with formulas. Browse the [formu
 ## Prerequisites
 
 * [Sign up](../signup-for-powerapps.md) for Power Apps, and then [sign in](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) by providing the same credentials that you used to sign up.
-* Learn how to [configure a control](add-configure-controls.md) in PowerApps.
+* Learn how to [configure a control](add-configure-controls.md) in Power Apps.
 
 ## Show a simple value
 
@@ -148,6 +148,6 @@ Initially, this view shows the most important properties.  To reveal all the pro
 
 ## Formula syntax
 
-As you type a formula in the formula bar, different syntax elements appear in different colors to improve readability and help you understand long formulas. Here is the color code list in PowerApps.
+As you type a formula in the formula bar, different syntax elements appear in different colors to improve readability and help you understand long formulas. Here is the color code list in Power Apps.
 
 ![syntax highlighting](./media/working-with-formulas/syntax-highlighting.png)

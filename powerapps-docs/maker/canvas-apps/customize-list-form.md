@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Customize a SharePoint list form by using PowerApps
+# Customize a SharePoint list form by using Power Apps
 
 You can easily customize the form for a SharePoint list by opening Power Apps in a browser. You don't need to write traditional code, such as C#, or download another app, such as InfoPath. When you publish your changes, the form is embedded within the SharePoint list for use by all of its users. In Power Apps, you can also review analytics reports, easily create conditional formatting, and connect to other data sources.
 
@@ -108,7 +108,7 @@ You can configure the **Price**, **Availability**, and **Colors** fields to appe
 
     - **Use the default SharePoint form** - When a user opens your list and selects **New** in the command bar, the default form for the list will appear.
 
-    - **Use a custom form created in PowerApps** - When a user opens your list and selects **New** in the command bar, your custom form will appear. (As an alternative, you can publish the form again in PowerApps.)
+    - **Use a custom form created in Power Apps** - When a user opens your list and selects **New** in the command bar, your custom form will appear. (As an alternative, you can publish the form again in Power Apps.)
 
     You can toggle back and forth between options, as needed.
 
@@ -196,7 +196,7 @@ You can configure the **Price**, **Availability**, and **Colors** fields to appe
 
 **Q:** What happens when guest users access a list that has a custom form?
 
-**A:** Guest users get an error message if they try to access a list form that's been customized using PowerApps.
+**A:** Guest users get an error message if they try to access a list form that's been customized using Power Apps.
 
 **Q:** As an administrator, how do I get a list of all customized forms in my organization?
 

@@ -1,6 +1,6 @@
 ---
 title: And, Or, and Not functions | Microsoft Docs
-description: Reference information, including syntax and examples, for the And, Or, and Not functions in PowerApps
+description: Reference information, including syntax and examples, for the And, Or, and Not functions in Power Apps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -15,7 +15,7 @@ search.app:
   - PowerApps
 ---
 
-# And, Or, and Not functions in PowerApps
+# And, Or, and Not functions in Power Apps
 
 Boolean logic functions, commonly used to manipulate the results of comparisons and tests.
 
