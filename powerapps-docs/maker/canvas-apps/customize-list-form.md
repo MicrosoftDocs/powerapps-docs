@@ -192,7 +192,7 @@ You can configure the **Price**, **Availability**, and **Colors** fields to appe
 
 **Q:** Do I need a Power Apps license to create or use custom list forms?
 
-**A:** You need an [Office 365 plan that includes PowerApps](https://docs.microsoft.com/power-platform/admin/pricing-billing-skus#licenses).
+**A:** You need an [Office 365 plan that includes Power Apps](https://docs.microsoft.com/power-platform/admin/pricing-billing-skus#licenses).
 
 **Q:** What happens when guest users access a list that has a custom form?
 

@@ -106,4 +106,4 @@ Power Apps offers keyboard shortcuts to address issues faced by people with limi
 
 ## See also
 
-[Use keyboard shortcuts in PowerApps](/powerapps/user/keyboard-shortcuts)
+[Use keyboard shortcuts in Power Apps](/powerapps/user/keyboard-shortcuts)

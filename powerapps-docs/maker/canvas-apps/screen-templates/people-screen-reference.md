@@ -27,7 +27,7 @@ This topic highlights some significant controls and explains the expressions or 
 
 ## Prerequisite
 
-Familiarity with how to add and configure screens and other controls as you [create an app in PowerApps](../data-platform-create-app-scratch.md).
+Familiarity with how to add and configure screens and other controls as you [create an app in Power Apps](../data-platform-create-app-scratch.md).
 
 ## Text search box
 

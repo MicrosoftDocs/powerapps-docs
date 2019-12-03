@@ -163,7 +163,7 @@ This article provided an overview of self-service data prep in the Power Apps po
 and the ways you can use it. The following topics go into more detail about
 common usage scenarios for dataflows:
 
--   [Creating and using dataflows in PowerApps](https://go.microsoft.com/fwlink/?linkid=2100076)
+-   [Creating and using dataflows in Power Apps](https://go.microsoft.com/fwlink/?linkid=2100076)
 
 -   [Add data to an entity in Common Data Service](https://go.microsoft.com/fwlink/?linkid=2100075)
 

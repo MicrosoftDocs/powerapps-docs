@@ -32,7 +32,7 @@ Based on the selected environment in Power Apps, you can create a Common Data Se
 > [!NOTE]
 > When you create a portal, a few solutions are installed and sample data is imported.
 
-More information on working with environments: [Working with environments and Microsoft PowerApps](https://docs.microsoft.com/powerapps/maker/canvas-apps/working-with-environments)
+More information on working with environments: [Working with environments and Microsoft Power Apps](https://docs.microsoft.com/powerapps/maker/canvas-apps/working-with-environments)
 
 More information on available portal templates: [Portal templates](portal-templates.md)
 

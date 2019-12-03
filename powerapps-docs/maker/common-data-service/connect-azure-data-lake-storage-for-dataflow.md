@@ -118,7 +118,7 @@ This article provided guidance about how to connect an Azure Data Lake Storage G
 
 For more information about dataflows, the Common Data Model, and Azure Data Lake Storage Gen2, see these articles:
 - [Self-service data prep with dataflows](https://go.microsoft.com/fwlink/?linkid=2099972)
-- [Creating and using dataflows in PowerApps](https://go.microsoft.com/fwlink/?linkid=2100076)
+- [Creating and using dataflows in Power Apps](https://go.microsoft.com/fwlink/?linkid=2100076)
 - [Connect Azure Data Lake Storage Gen2 for dataflow storage](https://go.microsoft.com/fwlink/?linkid=2099973)
 - [Add data to an entity in Common Data Service](https://go.microsoft.com/fwlink/?linkid=2100075)
 

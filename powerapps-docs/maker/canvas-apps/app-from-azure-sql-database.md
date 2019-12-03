@@ -103,10 +103,10 @@ Power Apps can connect to the SQL Database **Allow access to Azure services** co
 In this quickstart, you created an app using data from your SQL Database using the Azure portal. As a next step, customize the app with controls, images, and logic to better suit your business needs.
 
 > [!div class="nextstepaction"]
-> [Design the canvas app interface in PowerApps](add-configure-controls.md)
+> [Design the canvas app interface in Power Apps](add-configure-controls.md)
 
 ## See also
 
-- [Share a canvas app in PowerApps](share-app.md) </br>
-- [Add a data connection to a canvas app in PowerApps](add-data-connection.md#add-data-source)</br>
-- [Microsoft Learn: Customize a canvas app in PowerApps](https://docs.microsoft.com/learn/modules/customize-apps-in-powerapps/)
+- [Share a canvas app in Power Apps](share-app.md) </br>
+- [Add a data connection to a canvas app in Power Apps](add-data-connection.md#add-data-source)</br>
+- [Microsoft Learn: Customize a canvas app in Power Apps](https://docs.microsoft.com/learn/modules/customize-apps-in-powerapps/)

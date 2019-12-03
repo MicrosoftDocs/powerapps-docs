@@ -53,7 +53,7 @@ If you encounter a problem with a canvas app that was created in Power Apps, you
     ![Get a session ID from an embedded app](media/get-sessionid/embedded.png)
 
 ## Get an app ID
-1. [Sign in to PowerApps](https://powerapps.microsoft.com).
+1. [Sign in to Power Apps](https://powerapps.microsoft.com).
 
 1. Near the left edge, select **Apps**.
 

@@ -80,6 +80,6 @@ You can add, import, or export snapshots of reports as part of a solution. In mo
 ## Related topics
 [Work with reports](/powerapps/user/work-with-reports)<br/>
 [Create a report using the Report Wizard](/powerapps/user/create-report-with-wizard)<br/>
-[Add a report from outside PowerApps](/powerapps/user/add-existing-report)<br/>
+[Add a report from outside Power Apps](/powerapps/user/add-existing-report)<br/>
 [Edit the default filter of a report](/powerapps/user/edit-report-filter)<br/>
 [Troubleshoot reports](/powerapps/user/troubleshoot-reports)

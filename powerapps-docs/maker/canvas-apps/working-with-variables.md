@@ -42,11 +42,11 @@ Apps that you create in Power Apps behave very much like Excel. Instead of updat
 
 For example, you can replicate the Excel behavior in an app by adding a **[Label](controls/control-text-box.md)** control, named **Label1**, and two **[Text input](controls/control-text-input.md)** controls, named **TextInput1** and **TextInput2**. If you then set the **[Text](controls/properties-core.md)** property of **Label1** to **TextInput1 + TextInput2**, it will always show the sum of whatever numbers are in **TextInput1** and **TextInput2** automatically.
 
-![Calculating the sum of two numbers in PowerApps](media/working-with-variables/recalc1.png)
+![Calculating the sum of two numbers in Power Apps](media/working-with-variables/recalc1.png)
 
 Notice that the **Label1** control is selected, showing its **[Text](controls/properties-core.md)** formula in the formula bar at the top of the screen. Here we find the formula **TextInput1 + TextInput2**. This formula creates a dependency between these controls, just as dependencies are created between cells in an Excel workbook.  Let's change the value of **TextInput1**:
 
-![Animation of calculating the sum of two numbers in PowerApps](media/working-with-variables/recalc2.gif)
+![Animation of calculating the sum of two numbers in Power Apps](media/working-with-variables/recalc2.gif)
 
 The formula for **Label1** has been automatically recalculated, showing the new value.
 
