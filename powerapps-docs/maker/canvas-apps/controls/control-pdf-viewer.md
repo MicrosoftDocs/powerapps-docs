@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# PDF viewer control (experimental) in PowerApps
+# PDF viewer control (experimental) in Power Apps
 An experimental control that shows the content of a PDF file.
 
 ## Description

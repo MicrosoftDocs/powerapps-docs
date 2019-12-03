@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Transform your InfoPath form to PowerApps
+# Transform your InfoPath form to Power Apps
 
 Are you a builder of great things in InfoPath who's looking to learn how to deliver those great things on a more robust platform?
 
@@ -31,7 +31,7 @@ Power Apps is a Software as a Service (SaaS) platform that's designed to let you
 Have you ever tried to build an app and then publish it for iOS or Android devices? It's complicated. If you want to deploy a second app or update that existing one, your users must take a lot more steps. Not with Power Apps. Your users install Power Apps Mobile on their devices and sign in. Voila, they have all of the highly functional apps that you have shared with them. In the future, when you update those apps or push new apps out to them, those apps will show up on your users' devices. Mobile apps without the pain of managing devices is a big win for you and your business.
 
 **Speaking of mobile**  
-With Power Apps, you can leverage the power of the user's mobile device. You have access to acceleration, the camera, the compass, the connection information, and location signals: all from within your app. This opens up a whole world of possibilities for building apps to get work done. Of course, touch functionality is just automatic in PowerApps: nothing extra to code when you build your app.
+With Power Apps, you can leverage the power of the user's mobile device. You have access to acceleration, the camera, the compass, the connection information, and location signals: all from within your app. This opens up a whole world of possibilities for building apps to get work done. Of course, touch functionality is just automatic in Power Apps: nothing extra to code when you build your app.
 
 **Get out of the box**  
 With InfoPath, you normally work with data from one source. However, things got tricky if you wanted to update another source (such as a SharePoint list in another site collection) or connect to external services. Concepts such as code behind kept you awake at night. Power Apps is designed to allow you to work with multiple data sources and service connections in one app. Currently, [more than 200 connectors](connections-list.md#all-standard-connectors) support a combination of on-premises and cloud data, including Microsoft Office 365 and Azure services such as Power Automate and Dynamics 365. You can also connect to a multitude of third-party services such as Dropbox, Google, Salesforce, Slack, and other popular targets.
@@ -44,7 +44,7 @@ Power Apps is a great tool for making your SharePoint experience better in two w
 
 **Customizing a SharePoint form** is great if you want to customize how users add, view, or edit items in a list that they use for their everyday work. Clicking **Customize Forms** will create a single-screen &quot;forms app&quot; that will change modes (new/edit/view) based on context. SharePoint manages these apps; their permissions are the same as the list permissions for editing/viewing.
 
-**Creating a Power Apps canvas app from SharePoint** allows you to run the app by itself on a mobile device. You can also embed the app in a SharePoint page. Clicking this will create a three-screen app (browse list, view details, and create/update an item). The permission/sharing model for these apps isn't tied to SharePoint but instead is managed from PowerApps.
+**Creating a Power Apps canvas app from SharePoint** allows you to run the app by itself on a mobile device. You can also embed the app in a SharePoint page. Clicking this will create a three-screen app (browse list, view details, and create/update an item). The permission/sharing model for these apps isn't tied to SharePoint but instead is managed from Power Apps.
 
 Now that you understand the difference between the two options, the following section will give you an overview of using each.
 
@@ -74,7 +74,7 @@ Start with a simple custom list that contains just a couple of fields of differe
 
 ## How do you do that with Power Apps?
 
-Now that you know the fundamental concepts, let's go further. With your first app under your belt, this section will help you apply some of the common InfoPath concepts in PowerApps.
+Now that you know the fundamental concepts, let's go further. With your first app under your belt, this section will help you apply some of the common InfoPath concepts in Power Apps.
 
 **Hide/show/lock a field based on a value**  
 Successful forms often enforce strong business logic by, for example, changing the state of a field based on a value or an action. With Power Apps, you can set the **DisplayMode** property of a control to **Edit** or **View** to specify whether a user can change the field. You can also use a simple **If** formula to do so conditionally. First, select the card that you want to edit, and then select the lock icon. This step unlocks the card so that you can change the value.
@@ -120,12 +120,12 @@ You can send an email message from Power Apps in many ways, but the easiest is t
 
 You can send more complex message (for example, as part of a SharePoint approval workflow) by using Power Automate and connecting your app to the flow that you create. Once you connect your app to Power Automate, you've opened up the full power of a workflow engine that, like Power Apps, is very well connected to external data and services. For more information about how to connect Power Apps and Power Automate, check out this [documentation](using-logic-flows.md).
 
-If you still haven't found the email option you're looking for, you can also leverage the Power Apps connectors for Benchmark Email, Gmail, MailChimp, Outlook.com, SendGrid, or SMTP. Connectivity is the beauty of PowerApps.
+If you still haven't found the email option you're looking for, you can also leverage the Power Apps connectors for Benchmark Email, Gmail, MailChimp, Outlook.com, SendGrid, or SMTP. Connectivity is the beauty of Power Apps.
 
 **Workflows**  
 It's hard to talk about business apps and business logic without a workflow engine. The good news is the Power Apps team didn't reinvent the wheel and give you another workflow engine. Instead, they provide you with a robust connector to the Power Automate service. You can automate processes and tasks across more than [200 different services](https://flow.microsoft.com/connectors/) through their easy-to-use workflow engine. For more information about how to connect Power Apps and Power Automate, check out this [documentation](using-logic-flows.md).
 
-**Variables with PowerApps**  
+**Variables with Power Apps**  
 When you build solutions, it's natural to think variables must be involved. Power Apps offers multiple types of variables, but use them only when necessary. Instead of thinking about getting data, storing it in a variable, and then referencing that variable, think about just referencing that data directly. You can better understand this model if you compare it to Excel. In Excel, Total isn't a variable; it's the sum of other fields. So, if you want to use that value elsewhere on the sheet, you specify the cell in which you calculated the total. The [documentation](working-with-variables.md) has a great explanation of all of this. Be open to a different thought process.
 
 If you still need a variable (there are many cases that you do), this will help you understand the different options. Keep in mind that, with Power Apps, you don't have to define variables. Just use a function to specify a name and a value to store, and your variable is created. You can view the variables you've created by selecting **Variables** on the **View** tab. Variables are held in memory, and their values are lost when you close the app. You can create these types of variables:

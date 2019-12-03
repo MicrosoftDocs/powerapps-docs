@@ -106,7 +106,7 @@ By selecting options in the header and left navigation bar, you can do more than
   - [Overview of canvas-app connectors](connections-list.md)
   - [Build and certify custom connectors for canvas apps](register-custom-api.md)
   - [Manage an on-premises data gateway](gateway-management.md)
-  - [Administer PowerApps](../../administrator/index.md)
+  - [Administer Power Apps](../../administrator/index.md)
   - [Licensing overview](../../administrator/pricing-billing-skus.md)
   - [Overview of building a model-driven app](../model-driven-apps/model-driven-app-overview.md)
 

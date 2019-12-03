@@ -1,6 +1,6 @@
 ---
 title: "Import, update, and export solutions | MicrosoftDocs"
-description: "Learn how to import, update, and export a solution in PowerApps"
+description: "Learn how to import, update, and export a solution in Power Apps"
 ms.custom: ""
 ms.date: 09/30/2019
 ms.reviewer: ""
@@ -92,7 +92,7 @@ search.app:
 > [!IMPORTANT]
 > Exporting the Default Solution is not supported. 
 
-### Export from PowerApps
+### Export from Power Apps
   
 1.  Select **Solutions** from the left navigation.   
   

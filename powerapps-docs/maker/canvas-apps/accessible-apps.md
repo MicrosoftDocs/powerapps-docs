@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Create accessible canvas apps in PowerApps
+# Create accessible canvas apps in Power Apps
 An accessible canvas app will allow users with vision, hearing and other impairments to successfully use the app.  In addition to being a requirement for many governments and organizations, following the below guidelines increases usability for all users, regardless of their abilities.
 
 Use the **[Accessibility Checker](accessibility-checker.md)** to help review potential accessibility issues in your app. 
@@ -64,4 +64,4 @@ If you have a signature field that uses the PenInput control you need to enable 
 Related:
 - [Accessibility properties](controls/properties-accessibility.md)
 - [Use the Accessibility checker](accessibility-checker.md)
-- [Accessible colors in PowerApps](accessible-apps-color.md)
+- [Accessible colors in Power Apps](accessible-apps-color.md)

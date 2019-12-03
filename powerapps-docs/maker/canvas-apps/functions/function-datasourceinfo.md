@@ -1,6 +1,6 @@
 ---
 title: DataSourceInfo function | Microsoft Docs
-description: Reference information, including syntax and examples, for the DataSourceInfo function in PowerApps
+description: Reference information, including syntax and examples, for the DataSourceInfo function in Power Apps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# DataSourceInfo function in PowerApps
+# DataSourceInfo function in Power Apps
 Provides information about a [data source](../working-with-data-sources.md).
 
 ## Overview

@@ -60,7 +60,7 @@ With a gateway, you can connect to on-premises data through these connections:
     [Find the right Power Apps plan page](https://powerapps.microsoft.com/pricing/).
 
 -   Gateways and on-premises connections can only be created and used in the
-    user's default environment. More information: [Working with environments and Microsoft PowerApps](../canvas-apps/working-with-environments.md).
+    user's default environment. More information: [Working with environments and Microsoft Power Apps](../canvas-apps/working-with-environments.md).
 
 ## Install a gateway
 1.  In the left navigation pane of [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Gateways**.
@@ -116,9 +116,9 @@ You can change the enterprise gateway used for a given dataflow and change the g
     - To share a connection, select **Share** and then add or remove users.
 
       > [!NOTE]
-      > You can only share some types of connections, such as a SQL Server connection. For more information, see [Share canvas-app resources in PowerApps](../canvas-apps/share-app-resources.md). <br />
+      > You can only share some types of connections, such as a SQL Server connection. For more information, see [Share canvas-app resources in Power Apps](../canvas-apps/share-app-resources.md). <br />
       >
-      > For more information about how to manage a connection, see [Manage canvas-app connections in PowerApps](../canvas-apps/add-manage-connections.md).
+      > For more information about how to manage a connection, see [Manage canvas-app connections in Power Apps](../canvas-apps/add-manage-connections.md).
 
 
 ## Limitations
@@ -142,7 +142,7 @@ gateway service for your network, see [Understand on-premises data gateways](../
 
 ## Next steps
 
-- [Create and use dataflows in PowerApps](create-and-use-dataflows.md)
+- [Create and use dataflows in Power Apps](create-and-use-dataflows.md)
 
 - [Add data to an entity in Common Data Service by using Power Query](data-platform-cds-newentity-pq.md)
 

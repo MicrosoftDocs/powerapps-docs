@@ -25,7 +25,7 @@ Model-driven app design is a component-focused approach to app development. In t
 > [!TIP]
 > To learn all about building model-driven apps, start here: [Understand model-driven app components](model-driven-app-components.md). 
 
-## Sign in to PowerApps
+## Sign in to Power Apps
 Sign in to [Power Apps](https://make.powerapps.com/). If you don’t already have a [!INCLUDE [powerapps](../../includes/powerapps.md)] account, select the **Get started free** link. 
 
 ## Create your model-driven app

@@ -12,7 +12,7 @@ search.app:
   - PowerApps
 ---
 
-# Review a canvas app for accessibility in PowerApps
+# Review a canvas app for accessibility in Power Apps
 
 Users who have vision, hearing, or other impairments can use your canvas app more easily and successfully if you consider accessibility as you design how the app looks and behaves. If you're not sure how to make your app more accessible, you can run the Accessibility checker in Power Apps Studio. This tool not only finds potential accessibility issues but also explains why each might be a potential problem for users who have a specific disability and offers suggestions on how to resolve each issue.
 The Accessibility checker detects screen-reader and keyboard issues for you, and you can find information about how to fix color-contrast issues  by using [accessible colors](accessible-apps-color.md).

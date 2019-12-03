@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# How to link SharePoint lists using a lookup field in PowerApps
+# How to link SharePoint lists using a lookup field in Power Apps
 
 This tutorial shows how you can connect two SharePoint lists with a lookup field in a canvas app.
 

@@ -37,7 +37,7 @@ The default generated form consists of the following controls and their correspo
 
         **ResetForm(SharePointForm1); RequestHide()**
 
-* **SharePointIntegration** - The control responsible for communicating user actions between SharePoint and PowerApps.
+* **SharePointIntegration** - The control responsible for communicating user actions between SharePoint and Power Apps.
 
     * **Data Source** - The list for which the form has been customized.
 
@@ -66,7 +66,7 @@ The default generated form consists of the following controls and their correspo
 These defaults ensure that the form works when running within SharePoint - they change the Power Apps form mode as the user interacts with it in SharePoint, and they ensure that the changes are submitted to SharePoint.
 
 ## Understand the SharePointIntegration control
-The **SharePointIntegration** control communicates user actions between SharePoint and PowerApps.
+The **SharePointIntegration** control communicates user actions between SharePoint and Power Apps.
 
 ![](./media/sharepoint-form-integration/sharepointintegration-object.png)
 

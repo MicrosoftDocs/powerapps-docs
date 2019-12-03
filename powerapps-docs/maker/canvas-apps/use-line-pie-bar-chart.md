@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Show data in a line, pie, or bar chart in PowerApps
+# Show data in a line, pie, or bar chart in Power Apps
 
 Use line charts, pie charts, and bar charts to display your data in a canvas app. When you work with charts, the data that you import should be structured based on these criteria:
 
@@ -31,7 +31,7 @@ You can create and use these charts within Power Apps. Let's get started.
 
 * [Sign up](../signup-for-powerapps.md) for Power Apps, and then [sign in](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) using the same credentials that you used to sign up.
 * Create an app from a [template](get-started-test-drive.md), from [data](get-started-create-from-data.md), or from [scratch](get-started-create-from-blank.md).
-* Learn how to [configure a control](add-configure-controls.md) in PowerApps.
+* Learn how to [configure a control](add-configure-controls.md) in Power Apps.
 * Download [ChartData.zip](https://pwrappssamples.blob.core.windows.net/samples/ChartData.zip), which contains sample data as an XML file. Follow the steps in this topic to import it directly into your app. As an alternative, decompress the .zip file, open the XML file in Excel, and save it to a [cloud-storage account](connections/cloud-storage-blob-connections.md).
 
 ## Import the sample data

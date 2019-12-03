@@ -1,6 +1,6 @@
 ---
 title: Select function | Microsoft Docs
-description: Reference information, including syntax, for the Select function in PowerApps
+description: Reference information, including syntax, for the Select function in Power Apps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Select function in PowerApps
+# Select function in Power Apps
 Simulates a select action on a control, causing the **OnSelect** formula to be evaluated.
 
 ## Description

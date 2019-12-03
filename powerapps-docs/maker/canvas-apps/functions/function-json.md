@@ -1,6 +1,6 @@
 ---
 title: JSON function | Microsoft Docs
-description: Reference information, including syntax, for the JSON function in PowerApps
+description: Reference information, including syntax, for the JSON function in Power Apps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# JSON function in PowerApps
+# JSON function in Power Apps
 
 Generates a JSON text string for a table, a record, or a value.
 

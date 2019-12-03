@@ -21,7 +21,7 @@ As a developer, you can extend canvas apps in Power Apps, enabling even more pow
 
 ## Canvas apps for enterprise developers
 
-As an enterprise developer, empower your organization to build robust, tailored solutions on PowerApps:
+As an enterprise developer, empower your organization to build robust, tailored solutions on Power Apps:
 
 - **Build custom connectors**: Develop custom connectors to connect to your organization's data and web services. [Learn more](https://docs.microsoft.com/connectors/custom-connectors/)
 

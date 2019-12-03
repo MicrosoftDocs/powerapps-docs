@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Install and configure the Expense Report sample for canvas apps in PowerApps
+# Install and configure the Expense Report sample for canvas apps in Power Apps
 
 Step-by-step instructions for installing and configuring the Expense Report sample. You can also preview the sample app [here](https://aka.ms/previewmyexpenses).
 
@@ -32,7 +32,7 @@ Track expense reports from submission to approval. Tally line items as individua
 
 ## Prerequisites
 
-- [Sign up](../signup-for-powerapps.md) for PowerApps.
+- [Sign up](../signup-for-powerapps.md) for Power Apps.
 
 ## Create the Expenses list
 

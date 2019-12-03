@@ -58,7 +58,7 @@ With the latest release, adding an embedded canvas app on a model-driven form is
 To migrate an embedded canvas app on a model-driven form that uses a list of records related to the current (main form) record, please follow the steps below.
 
 1. Follow the steps in the section above to migrate embedded canvas apps on model-driven forms created using the public preview release to the latest.
-2. Using the Common Data Service connector, add a datasource for the related entity to the app. To learn how add a data source in a canvas app please refer to [Add a data connection to a canvas app in PowerApps](../canvas-apps/add-data-connection.md).
+2. Using the Common Data Service connector, add a datasource for the related entity to the app. To learn how add a data source in a canvas app please refer to [Add a data connection to a canvas app in Power Apps](../canvas-apps/add-data-connection.md).
 3. When using the datasource of the related entity for a control such as [Gallery](../canvas-apps/controls/control-gallery.md) or [Data table](../canvas-apps/controls/control-data-table.md), use the **[Filter](../canvas-apps/functions/function-filter-lookup.md)** function to filter the records to the ones that are related to the current (main form) record. The current (main form) record is available via **ModelDrivenFormIntegration.Item**.
 	> [!NOTE]
 	> The embedded canvas app has full access to record from the host model-driven form via ModelDrivenFormIntegration.Item. 

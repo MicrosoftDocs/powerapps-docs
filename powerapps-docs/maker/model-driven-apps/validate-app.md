@@ -75,6 +75,6 @@ Publish an app to make it available to users.
 > - You can't publish an app until you save it.  
 
 ## Next steps  
-[Share a model-driven app with PowerApps](https://docs.microsoft.com/powerapps/maker/model-driven-apps/share-model-driven-app) <br/>
+[Share a model-driven app with Power Apps](https://docs.microsoft.com/powerapps/maker/model-driven-apps/share-model-driven-app) <br/>
  [Run a model-driven app on a mobile device](https://docs.microsoft.com/powerapps/user/run-app-client-model-driven)   
  

@@ -46,7 +46,7 @@ The following filters are available:
 
     ![Mark as Favorite](./media/run-app-client/favorite.png)
 
-After you filter your apps, you can sort the filtered list by the date the apps were most recently opened or modified, or alphabetically by name. These preferences are retained when you close and reopen PowerApps.
+After you filter your apps, you can sort the filtered list by the date the apps were most recently opened or modified, or alphabetically by name. These preferences are retained when you close and reopen Power Apps.
 
 ![Sort menu](./media/run-app-client/sort-menu.png)
 

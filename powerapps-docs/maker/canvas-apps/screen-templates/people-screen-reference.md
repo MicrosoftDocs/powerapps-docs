@@ -1,6 +1,6 @@
 ---
 title: People-screen template reference | Microsoft Docs
-description: Understand details of how the people-screen template for canvas apps works in PowerApps
+description: Understand details of how the people-screen template for canvas apps works in Power Apps
 author: emcoope-msft
 manager: kvivek
 ms.service: powerapps
@@ -27,7 +27,7 @@ This topic highlights some significant controls and explains the expressions or 
 
 ## Prerequisite
 
-Familiarity with how to add and configure screens and other controls as you [create an app in PowerApps](../data-platform-create-app-scratch.md).
+Familiarity with how to add and configure screens and other controls as you [create an app in Power Apps](../data-platform-create-app-scratch.md).
 
 ## Text search box
 

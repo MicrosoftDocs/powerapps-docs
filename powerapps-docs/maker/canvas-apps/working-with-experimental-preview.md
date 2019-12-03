@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Understand experimental, preview, and deprecated features in PowerApps
+# Understand experimental, preview, and deprecated features in Power Apps
 
 With every release, we make changes and add features to make Power Apps the best tool to fit your needs. We move the product forward.  
 

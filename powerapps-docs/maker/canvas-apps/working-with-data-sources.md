@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Understand data sources for canvas apps in PowerApps
+# Understand data sources for canvas apps in Power Apps
 
 In Power Apps, most canvas apps use external information stored in cloud services called **Data Sources**. A common example is a table in an Excel file stored in OneDrive for Business. Apps access these data sources by using **Connections**.
 

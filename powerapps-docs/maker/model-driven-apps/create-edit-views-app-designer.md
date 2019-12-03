@@ -43,8 +43,8 @@ Typically, views are classified into three types:
 
 More information: [Understand views](create-edit-views.md)
 
-## Create a public view in PowerApps
-As an app maker, you can create and edit public views by using PowerApps.
+## Create a public view in Power Apps
+As an app maker, you can create and edit public views by using Power Apps.
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
 
@@ -177,7 +177,7 @@ When you edit a public or system  view, you must save and publish your changes b
 
 
 ## Community tools
-**View Layout Replicator** and **View Designer** are tools that XrmToolbox community developed for PowerApps.
+**View Layout Replicator** and **View Designer** are tools that XrmToolbox community developed for Power Apps.
 
 More information: [Developer tools](/powerapps/developer/common-data-service/developer-tools).
 

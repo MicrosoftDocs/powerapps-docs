@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Slider control in PowerApps
+# Slider control in Power Apps
 A control with which the user can specify a value by dragging a handle.
 
 ## Description

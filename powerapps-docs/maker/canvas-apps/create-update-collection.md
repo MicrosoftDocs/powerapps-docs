@@ -21,8 +21,8 @@ Use a collection to store data that users can manage in your app. A collection i
 ## Prerequisites
 
 - [Sign up](../signup-for-powerapps.md) for Power Apps, and then [sign in](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) by providing the same credentials that you used to sign up.
-- Create an app or open an existing app in PowerApps.
-- Learn how to [configure a control](add-configure-controls.md) in PowerApps.
+- Create an app or open an existing app in Power Apps.
+- Learn how to [configure a control](add-configure-controls.md) in Power Apps.
 
 ## Create a multicolumn collection
 

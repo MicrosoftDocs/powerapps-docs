@@ -14,8 +14,8 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Overview of canvas-app connectors for PowerApps
-Data is at the core of most apps, including those you build in Power Apps. Data is stored in a *data source*, and you bring that data into your app by creating a *connection*. The connection uses a specific *connector* to talk to the data source. Power Apps has connectors for many popular services and on-premises data sources, including SharePoint, SQL Server, Office 365, Salesforce, and Twitter. To get started adding data to a canvas app, see [Add a data connection in PowerApps](add-data-connection.md).
+# Overview of canvas-app connectors for Power Apps
+Data is at the core of most apps, including those you build in Power Apps. Data is stored in a *data source*, and you bring that data into your app by creating a *connection*. The connection uses a specific *connector* to talk to the data source. Power Apps has connectors for many popular services and on-premises data sources, including SharePoint, SQL Server, Office 365, Salesforce, and Twitter. To get started adding data to a canvas app, see [Add a data connection in Power Apps](add-data-connection.md).
 
 A connector may provide **tables** of data or **actions**. Some connectors provide only tables, some provide only actions, and some provide both. Also your connector may be either a standard or custom connector.
 
@@ -31,13 +31,13 @@ You can specify the data that your app retrieves by customizing the **Items** pr
 
 For more information about how to customize your formula with tables, see these topics:
 
-  [Understand data sources in PowerApps](working-with-data-sources.md)<br> 
+  [Understand data sources in Power Apps](working-with-data-sources.md)<br> 
   [Generate an app from Excel data](get-started-create-from-data.md)<br> 
   [Create an app from scratch](get-started-create-from-blank.md)<br>
-  [Understand tables and records in PowerApps](working-with-tables.md)
+  [Understand tables and records in Power Apps](working-with-tables.md)
 
   > [!NOTE]
-  > To connect to data in an Excel workbook, it must be hosted in a cloud-storage service such as OneDrive. For more information, see [Connect to cloud-storage from PowerApps](connections/cloud-storage-blob-connections.md).
+  > To connect to data in an Excel workbook, it must be hosted in a cloud-storage service such as OneDrive. For more information, see [Connect to cloud-storage from Power Apps](connections/cloud-storage-blob-connections.md).
 
 ## Actions
 

@@ -38,7 +38,7 @@ The following customization methods can be used to produce fully supported custo
 
 - Customization in the Power Apps portal or solution explorer. For more information, see [What is Common Data Service?](../../maker/common-data-service/data-platform-intro.md)
 
-- Settings in the web application. For more information, see [Administer PowerApps](../../administrator/admin-guide.md).
+- Settings in the web application. For more information, see [Administer Power Apps](../../administrator/admin-guide.md).
 
 - Reporting Services. For more information, see [Add reporting to your model-driven app](/powerapps/maker/model-driven-apps/add-reporting-to-app).
 

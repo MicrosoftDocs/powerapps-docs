@@ -16,14 +16,14 @@ search.app:
 ---
 # Start a flow in a canvas app
 
-You can use Power Automate to create logic that performs one or more tasks when an event occurs in a canvas app. For example, configure a button so that, when a user selects it, an item is created in a SharePoint list, an email or meeting request is sent, a file is added to the cloud, or all of these. You can configure any control in the app to start the flow, which continues to run even if you close PowerApps.
+You can use Power Automate to create logic that performs one or more tasks when an event occurs in a canvas app. For example, configure a button so that, when a user selects it, an item is created in a SharePoint list, an email or meeting request is sent, a file is added to the cloud, or all of these. You can configure any control in the app to start the flow, which continues to run even if you close Power Apps.
 
 > [!NOTE]
 > When a user runs a flow from within an app, that user must have permission to perform the tasks that are specified in the flow. Otherwise, the flow will fail.
 
 ## Prerequisites
 
-- [Sign up](../signup-for-powerapps.md) for PowerApps.
+- [Sign up](../signup-for-powerapps.md) for Power Apps.
 - Learn how to [configure a control](add-configure-controls.md).
 
 ## Create a flow
@@ -61,7 +61,7 @@ You can use Power Automate to create logic that performs one or more tasks when 
    
        ![Specify list](./media/using-logic-flows/list-fields.png)
 
-   1. Select the input box for a field in your list (such as **Title**), select **See more** in the dynamic-content pane, and then select **Ask in PowerApps**. 
+   1. Select the input box for a field in your list (such as **Title**), select **See more** in the dynamic-content pane, and then select **Ask in Power Apps**. 
 
        ![Add Ask in Power Apps parameter to Title field](./media/using-logic-flows/ask-in-powerapps.png)
 

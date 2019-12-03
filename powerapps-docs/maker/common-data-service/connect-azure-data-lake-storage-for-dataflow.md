@@ -60,7 +60,7 @@ Follow the steps in [Create an Azure Data Lake Storage Gen2 storage account](htt
 2.	Make sure you enable the hierarchical namespace feature. 
 3.	We recommend that you set the replication setting to Read-access geo-redundant storage (RA-GRS).
 
-## Connect your Azure Data Lake Storage Gen2 to PowerApps
+## Connect your Azure Data Lake Storage Gen2 to Power Apps
 Once you've set up your Azure Data Lake Storage Gen2 account in the Azure portal, you are ready to connect it to a specific dataflow or a Power Apps environment. Connecting the lake to an environment allows other makers and admins in the environment to create dataflows that store their data in your organization's lake as well. 
 
 To connect your Azure Data Lake Storage Gen2 account with the dataflow, follow these steps:
@@ -118,7 +118,7 @@ This article provided guidance about how to connect an Azure Data Lake Storage G
 
 For more information about dataflows, the Common Data Model, and Azure Data Lake Storage Gen2, see these articles:
 - [Self-service data prep with dataflows](https://go.microsoft.com/fwlink/?linkid=2099972)
-- [Creating and using dataflows in PowerApps](https://go.microsoft.com/fwlink/?linkid=2100076)
+- [Creating and using dataflows in Power Apps](https://go.microsoft.com/fwlink/?linkid=2100076)
 - [Connect Azure Data Lake Storage Gen2 for dataflow storage](https://go.microsoft.com/fwlink/?linkid=2099973)
 - [Add data to an entity in Common Data Service](https://go.microsoft.com/fwlink/?linkid=2100075)
 
