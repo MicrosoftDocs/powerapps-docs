@@ -322,6 +322,27 @@ After step 3 in the [Create an entity](../common-data-service/data-platform-crea
 
 ### Step 2: Add entity to the model-driven app
 
+After you create the entity and enable it as an activity, you need to add the entity to the model-driven app.
+
+1.	Sign in to your `https://<YourOrgURL>.dynamics.com/apps` environment.
+
+2. Select the ellipsis (**...**) on a model-driven app tile. For example, **Customer Service Hub** app tile.
+
+3. Select **OPEN IN APP DESIGNER**. The App Designer opens in a new tab.
+
+4. Look for the custom entity you created under **Entity View** in the canvas area.
+
+5. Select **Forms**. The option is displayed in the components pane.
+
+6. Select the check box under under **Quick Create Forms** area. This option uses the quick create form when the user selects **+** button in the **Timeline** control.
+
+    > [!div class=mx-imgBorder] 
+    > ![Display activity](media/app-designer-activity.png "Display activity")
+
+7. Select **Save**.
+
+8. Select **Publish**.
+
 ## Enable custom activities in timeline for mobile client
 
 When you’ve custom activities that you want to show for users using mobile, then you must enable it. Follow these steps to enable.
