@@ -248,9 +248,23 @@ To customize the card form, follow these steps:
 
 7. Add, move, or delete the fields. To learn more, see [Add, configure, move, or delete fields on a form](add-move-or-delete-fields-on-form.md).
 
+   In this procedure, we'll modify **Email Card**. 
+
+   > [!div class=mx-imgBorder] 
+   > ![Email card configuration](media/customize-field-email1.png "Email card configuration")
+
+   In the **Header** section, **Created on** field is replaced with **Priority**.
+
+   Similarly, in the **Details** section, the **Priority** field is removed and the **Subject** field is moved up.
+
 8.	Select **OK**, and then select **Save**.
 
 9.	Select **Publish** to publish the customizations.
+
+Now, you can view the changes in the Timeline control. In the collapsed mode, you can view the changes made to the card.
+
+   > [!div class=mx-imgBorder] 
+   > ![Email card configuration](media/email2.png "Email card configuration")
 
 ## Enable custom activity in timeline
 
