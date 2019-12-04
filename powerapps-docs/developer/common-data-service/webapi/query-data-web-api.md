@@ -516,7 +516,7 @@ GET [Organization URI]/api/data/v9.1/accounts?$select=name,revenue
 > [!NOTE]
 >  The count value does not represent the total number of entities in the system. It is limited by the maximum number of entities that  can be returned. More information: [Limits on number of entities returned](#bkmk_limits)
 >
-> If you want to retrieve the total number of records for an entity beyond 5000, use the <xref href="Microsoft.Dynamics.CRM.RetrieveTotalRecordCount?text=RetrieveTotalRecordCount  Function" />
+> If you want to retrieve the total number of records for an entity beyond 5000, use the <xref href="Microsoft.Dynamics.CRM.RetrieveTotalRecordCount?text=RetrieveTotalRecordCount  Function" />.
   
  The response `@odata.count` property will contain the number of entities that match the filter criteria irrespective of an `odata.maxpagesize` preference limitation.  
   
