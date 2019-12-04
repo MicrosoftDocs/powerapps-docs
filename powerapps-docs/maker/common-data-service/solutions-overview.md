@@ -36,9 +36,7 @@ More information: [Whitepaper: Solution Lifecycle Management](https://www.micros
 
 <a name="BKMK_SolutionComponents"></a>   
 ### Components  
- A component represents something that you can potentially customize. Anything that can be included in a solution is a component. 
-
-To view the components included in a solution, in solution explorer go to **Settings** > **Solutions** and then open the solution you want. The components are listed in the **Components** list. 
+ A component represents something that you can potentially customize. Anything that can be included in a solution is a component. To view the components included in a solution, in solution explorer go to **Settings** > **Solutions** and then open the solution you want. The components are listed in the **Components** list. 
 
 > [!div class="mx-imgBorder"] 
 > ![Components in solution](media/components-in-solution.png "Components in solution")
