@@ -186,51 +186,51 @@ Default string for the activities are as follows:
 
 ## Customize field sections
 
-In the timeline section, users see a card for each activity (based on the enabled activities). Each card displays certain fields in the collapsed and expanded mode. For example, see Task activity card in collapsed mode and expanded mode. 
+In the timeline section, users see a card for each activity (based on the enabled activities). Each card displays certain fields in the collapsed and expanded mode. For example, see **Email** activity card in collapsed mode and expanded mode. 
 
-Timeline card collapsed mode:
+Email card collapsed mode:
 
    > [!div class=mx-imgBorder] 
-   > ![Timeline card in collapsed mode](media/timeline-card-collapsed-nocallout.png "Timeline card in collapsed mode")
+   > ![Timeline card in collapsed mode](media/email.png "Timeline card in collapsed mode")
 
 Timeline card expanded mode:
 
    > [!div class=mx-imgBorder] 
-   > ![Timeline card in expanded mode](media/timeline-card-expanded-nocallout.png "Timeline card in expanded mode")
+   > ![Timeline card in expanded mode](media/email-expanded.png "Timeline card in expanded mode")
 
 In the card, if you want to show any fields that are important to your business, you can customize the fields. Also, you can move the fields from one section to another section, such as from the **Header** section to the **Detail** section. To learn more, see [Customize the card form](#customize-the-card-form).
 
 ### Customize the card form
 
-The card form has the following sections:
+Any card form has the following sections:
 
    | Section annotation | Section name | Display columns |
    |------------------------------|--------------------------------------|---------------------------------------|
    | A | ColorStrip | ColorStrip section is never displayed to the user. |
-   | B | Header | Fields 1 and 2 in from the two columns are displayed to the user. |
-   | C | Details | Fields 3, 4, and 5 from the single column are displayed to the user. The field 5 is displayed only when the user expands the card. |
-   | D | Footer | Four | Footer section is never displayed to the user. |
+   | B | Header | Fields 1 and 2 in are displayed to the user. |
+   | C | Details | Fields 3, 4, and 5 are displayed to the user, where fields 3 and 4 are displayed in the collapsed mode and field 5 is displayed in the expanded mode. |
+   | D | Footer | Footer section is never displayed to the user. |
 
-For example, see **Task Card form**.
+For example, see **Email form**.
 
-**Task Card configuration screen**
+**Email configuration screen**
 
    > [!div class=mx-imgBorder] 
-   > ![Timeline card configuration](media/customize-field.png "Timeline card configuration")
+   > ![Email card configuration](media/customize-field-email.png "Email card configuration")
 
-**Timeline card collapsed mode**
+**Email card collapsed mode**
 
 Fields **1**, **2** from the **Header** section and fields **3** and **4** from the **Details** section are displayed in the collapsed mode.
 
    > [!div class=mx-imgBorder] 
-   > ![Timeline card in collapsed mode](media/timeline-card-collapsed.png "Timeline card in collapsed mode")
+   > ![Email card in collapsed mode](media/email-card-collapsed.png "Email card in collapsed mode")
 
-**Timeline card expanded mode**
+**Email card expanded mode**
 
-Field **5** from the **Details** section are displayed in the collapsed mode.
+Field **5** from the **Details** section is displayed in the collapsed mode.
 
    > [!div class=mx-imgBorder] 
-   > ![Timeline card in expanded mode](media/timeline-card-expanded.png "Timeline card in expanded mode")
+   > ![Email card in expanded mode](media/email-card-expanded.png "Email card in expanded mode")
 
 To customize the card form, follow these steps:
 
