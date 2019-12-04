@@ -172,6 +172,18 @@ After modifying the **Email card** form (from the Email entity), and updating th
    2. Priority
    3. Description
 
+Default string for the activities are as follows:
+
+| Activity | Default string | Image |
+|----------------|--------------------------------|------------------------------|
+| Appointment | `Appointment from <Owner Name>`| ![Appointment](media/appointment.png "Appointment") |
+| Email | `Email from <Owner Name>` | ![Email](media/email.png "Email") |
+| Phone Call | `Phone Call from <Owner Name>` <br> When agent initiates a call.| ![Phone Call](media/phonecall-owner.png "Phone Call") | 
+| | `Phone Call from <Contact>` <br> When customer initiates a call. | ![Phone Call](media/phonecall-contact.png "Phone Call") |
+| Task | `Task modified by <Owner Name>` | ![Task](media/task.png "Task") |
+| Note | `Note modified by <Owner Name>` | ![Note](media/note.png "Note") |
+| Post | `Post by <Owner Name>` | ![Post](media/post.png "Post") |
+
 ## Customize field sections
 
 In the timeline section, users see a card for each activity (based on the enabled activities). Each card displays certain fields in the collapsed and expanded mode. For example, see Task activity card in collapsed mode and expanded mode. 
@@ -186,9 +198,7 @@ Timeline card expanded mode:
    > [!div class=mx-imgBorder] 
    > ![Timeline card in expanded mode](media/timeline-card-expanded-nocallout.png "Timeline card in expanded mode")
 
-The card form contains sections that you can configure to show the fields that matter to your business.
-
-In the card, if you want to show any fields that are important to your business, you can customize the fields. Also, you can move the fields from one section to another section, such as from the Header section to the Detail section. To learn more, see [Customize the card form](#customize-the-card-form).
+In the card, if you want to show any fields that are important to your business, you can customize the fields. Also, you can move the fields from one section to another section, such as from the **Header** section to the **Detail** section. To learn more, see [Customize the card form](#customize-the-card-form).
 
 ### Customize the card form
 
