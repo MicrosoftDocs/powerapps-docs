@@ -174,7 +174,7 @@ After modifying the **Email card** form (from the Email entity), and updating th
 
 Default string for the activities are as follows:
 
-| Activity | Default string | Image |
+| Activity | Default fields | Image |
 |----------------|--------------------------------|------------------------------|
 | Appointment | `Appointment from <Owner Name>`| ![Appointment](media/appointment.png "Appointment") |
 | Email | `Email from <Owner Name>` | ![Email](media/email.png "Email") |
