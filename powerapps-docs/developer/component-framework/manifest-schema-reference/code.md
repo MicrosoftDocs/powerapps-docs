@@ -31,6 +31,8 @@ Model-driven apps and canvas apps (public preview)
 |--|--|--|--|-----|
 |`path`|Place where the resource files are located|`String`|Yes|Model-driven apps and canvas apps (public preview) (experimental preview)|
 |`order`|The order in which the resource files should load|`Positive integer`|Yes|Model-driven apps and canvas apps (public preview) (experimental preview)|
+|`path`|Place where the resource files are located|`String`|Yes|Model-driven apps and canvas apps (experimental preview) |
+|`order`|The order in which the resource files should load|`Positive integer`|Yes|Model-driven apps and canvas apps (experimental preview) |
 
 ## Parent Elements
 
@@ -48,6 +50,6 @@ Model-driven apps and canvas apps (public preview)
 
 ### Related topics
 
-[PowerApps component framework manifest schema reference](index.md)<br/>
-[PowerApps component framework API reference](../reference/index.md)<br/>
-[PowerApps component framework overview](../overview.md)
+[Power Apps component framework manifest schema reference](index.md)<br/>
+[Power Apps component framework API reference](../reference/index.md)<br/>
+[Power Apps component framework overview](../overview.md)

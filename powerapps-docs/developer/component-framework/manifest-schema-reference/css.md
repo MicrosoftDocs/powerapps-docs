@@ -30,6 +30,8 @@ Model-driven apps and canvas apps (public preview)
 |--|--|--|--|-----|
 |`path`|Relative path w.r.t manifest where CSS files are located|`string`|Yes|Model-driven apps and canvas apps (public preview) (experimental preview)|
 |`order`|The order in which the CSS files Should load|`Positive integer`|Optional|Model-driven apps and canvas apps (public preview) (experimental preview)|
+|`path`|Relative path w.r.t manifest where CSS files are located|`string`|Yes|Model-driven apps and canvas apps (experimental preview) |
+|`order`|The order in which the CSS files Should load|`Positive integer`|Optional|Model-driven apps and canvas apps (experimental preview) |
 
 ## Parent Elements
 
@@ -48,6 +50,6 @@ Model-driven apps and canvas apps (public preview)
 
 ### Related topics
 
-[PowerApps component framework manifest schema reference](index.md)<br/>
-[PowerApps component framework API reference](../reference/index.md)<br/>
-[PowerApps component framework overview](../overview.md)
+[Power Apps component framework manifest schema reference](index.md)<br/>
+[Power Apps component framework API reference](../reference/index.md)<br/>
+[Power Apps component framework overview](../overview.md)

@@ -1,5 +1,5 @@
 ---
-title: Use solution checker to validate your apps in PowerApps | Microsoft Docs
+title: Use solution checker to validate your apps in Power Apps | Microsoft Docs
 description: Use the solution checker to validate your solution.
 author: Mattp123
 manager: kvivek
@@ -15,7 +15,7 @@ search.app:
   - D365CE
 ---
 
-# Use solution checker to validate your model-driven apps in PowerApps
+# Use solution checker to validate your model-driven apps in Power Apps
 
 To deliver on complex business requirements, model-driven app makers often can end up with highly advanced solutions that customize and extend the Common Data Service platform. With advanced implementations comes an increased risk where performance, stability, and reliability issues become introduced, which can negatively impact the user experience. Identifying and understanding how to resolve these issues can be complicated and time consuming. With the solution checker feature, you can perform a rich static analysis check on your solutions against a set of best practice rules and quickly identify these problematic patterns. After the check completes, you receive a detailed report that lists the issues identified, the components and code affected, and links to documentation that describes how to resolve each issue.
 
@@ -28,13 +28,13 @@ The solution checker analyzes these solution components:
 Solution checker works with unmanaged solutions that can be exported from an environment. 
 
 > [!NOTE]
-> - This topic explains how to run solution checker from the PowerApps maker portal. A PowerShell module is also available that you can use to interact directly with the service. The Microsoft.PowerApps.Checker.PowerShell module can be used for analysis of managed and unmanaged solutions for supported versions of on-premises and online environments, or to automate and integrate the service into your build and release pipelines. More information: [Microsoft.PowerApps.Checker.PowerShell Overview]( /powershell/powerapps/overview?view=pa-ps-latest#get-started-using-the-microsoftpowerappscheckerpowershell-module) 
+> - This topic explains how to run solution checker from the Power Apps maker portal. A PowerShell module is also available that you can use to interact directly with the service. The Microsoft.PowerApps.Checker.PowerShell module can be used for analysis of managed and unmanaged solutions for supported versions of on-premises and online environments, or to automate and integrate the service into your build and release pipelines. More information: [Microsoft.PowerApps.Checker.PowerShell Overview]( /powershell/powerapps/overview?view=pa-ps-latest#get-started-using-the-microsoftpowerappscheckerpowershell-module) 
 > - Solution checker doesn't work with solutions that contain JavaScript using ECMAScript 6 (2015) or later versions. When JavaScript using one of these versions is detected, a JS001 syntax issue for the web resource is reported.
 
 ## Enable the solution checker
-The Solution checker is enabled by default in every Common Data Service environment. A **Solution checker** menu item is available when you select an unmanaged solution in the **Solutions** area of PowerApps. If the **Run** option is not available in the **Solution checker** menu,  you can enable it by installing the PowerApps checker solution. To install it, follow these steps:   
+The Solution checker is enabled by default in every Common Data Service environment. A **Solution checker** menu item is available when you select an unmanaged solution in the **Solutions** area of Power Apps. If the **Run** option is not available in the **Solution checker** menu,  you can enable it by installing the Power Apps checker solution. To install it, follow these steps:   
 
-1. Sign in to [PowerApps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select the Common Data Service environment where you want to enable the solution checker. 
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select the Common Data Service environment where you want to enable the solution checker. 
 2. On the left navigation pane, select **Solutions**.
 3. On the toolbar, select **Solution checker** and then select **Install** – this opens the Microsoft AppSource page. You need to allow pop-up windows if your browser blocks the page from opening. 
 
@@ -43,25 +43,25 @@ The Solution checker is enabled by default in every Common Data Service environm
 
 4. Select **Free Trial** on the AppSource page. 
 
-5. If you agree, accept the terms and conditions and select the environment to install the PowerApps checker solution. 
-6. When the installation is complete, refresh the **Solution** list on the PowerApps site to verify that the solution checker is available.  
+5. If you agree, accept the terms and conditions and select the environment to install the Power Apps checker solution. 
+6. When the installation is complete, refresh the **Solution** list on the Power Apps site to verify that the solution checker is available.  
 7. To check a solution, [Run the solution checker](#run-the-solution-checker).
 
 
-<!-- ### Components created with the PowerApps checker
-When you install the PowerApps checker these solution specific components are created. 
+<!-- ### Components created with the Power Apps checker
+When you install the Power Apps checker these solution specific components are created. 
 - Entities: The entities that are created are required to store the results of solution analysis and the status of analysis jobs in your environment.
    - Analysis Component
    - Analysis Job
    - Analysis Result
 - System job: A system job is created so admins can remove solution analysis data from the environment. The job contains a configuration value, currently set to remove the solution analysis data after 60 days, which an administrator can override. 
 - Security Roles: Two security roles, **Export Customizations**, and **Solution Checker** are created. These roles are required to export the solution for analysis, and storing the analysis results to the entities in your environment.
-- User principle: The **PowerApps Advisor** user is created that allows the checker to authenticate with your Common Data Service environment and assign the two security roles, Export Customizations and Solution Checker. The PowerApps Advisor is an application user and does not consume a license.  -->
+- User principle: The **Power Apps Advisor** user is created that allows the checker to authenticate with your Common Data Service environment and assign the two security roles, Export Customizations and Solution Checker. The Power Apps Advisor is an application user and does not consume a license.  -->
 
 ## Run the solution checker
-After you install the PowerApps checker in your environment, a **Solution checker** menu item is available when you select an unmanaged solution in the **Solutions** area of PowerApps. 
+After you install the Power Apps checker in your environment, a **Solution checker** menu item is available when you select an unmanaged solution in the **Solutions** area of Power Apps. 
 
-1. Sign in to [PowerApps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). 
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). 
 2. In the left pane, select **Solutions**. 
 3. Next to the unmanaged solution that you want to analyze, select **...**, point to **Solution checker**, and then select **Run**. 
 
@@ -78,7 +78,7 @@ After you install the PowerApps checker in your environment, a **Solution checke
     
     - During this time you will notice a **Running…** state in the **Solution check** column of the **Solution** list. 
     
-    - You'll receive an email notification and a notification in the **Notifications** area of the PowerApps site when the check is completed.  
+    - You'll receive an email notification and a notification in the **Notifications** area of the Power Apps site when the check is completed.  
 
 5.	[View the report](#review-the-solution-checker-report) when the check is completed.
 

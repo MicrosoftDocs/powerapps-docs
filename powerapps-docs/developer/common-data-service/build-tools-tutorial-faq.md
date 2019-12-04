@@ -1,6 +1,6 @@
 ---
 title: "Build tools tutorial and FAQ| Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "PowerApps build tools are a collection of PowerApps specific Azure DevOps build tasks that eliminate the need to manually download  scripts to manage the development of PowerApps. This topic describes the tutorial and FAQs that you can access to learn more about these tools. " # 115-145 characters including spaces. This abstract displays in the search result.
+description: "Power Apps build tools are a collection of Power Apps specific Azure DevOps build tasks that eliminate the need to manually download  scripts to manage the development of Power Apps. This topic describes the tutorial and FAQs that you can access to learn more about these tools. " # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 07/21/2019
 ms.reviewer: "Dean-Haas"
@@ -20,7 +20,7 @@ search.app:
 
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
-Use the tutorial and FAQs to learn more about the PowerApps build tools for Azure DevOps. 
+Use the tutorial and FAQs to learn more about the Power Apps build tools for Azure DevOps. 
 
 ## Hands-on-lab
 
@@ -42,17 +42,17 @@ The hand-on lab provides a tutorial with step-by-step instructions on how to bui
 
 ## Frequently asked question (FAQ)
 
-**Do the PowerApps build tools only work for PowerApps?**  
+**Do the Power Apps build tools only work for Power Apps?**  
 
-*The PowerApps Build Tools work for both PowerApps and model-driven apps in Dynamics 365 such as Dynamics 365 Sales and Dynamics 365 Customer Service. Separate build tasks are available for Microsoft Dynamics for Finance and Operations.*
+*The Power Apps Build Tools work for both Power Apps and model-driven apps in Dynamics 365 such as Dynamics 365 Sales and Dynamics 365 Customer Service. Separate build tasks are available for Microsoft Dynamics for Finance and Operations.*
 
 **Can I include Flow and Canvas Apps?**
 
 *Yes, Flows and Canvas apps are solution aware so if these are added to your solution, they can participate in the lifecycle of your app.  However, some steps still require manual configurations. This will be addressed later this year when we introduce environment variables and connectors.*
 
-**How much do the PowerApps build tools cost?**
+**How much do the Power Apps build tools cost?**
 
-*The PowerApps Build Tools are available at no cost. However, a valid subscription to Azure DevOps is required to utilize the Build Tools. More information is available [here](https://azure.microsoft.com/pricing/details/devops/azure-devops-services/).*
+*The Power Apps Build Tools are available at no cost. However, a valid subscription to Azure DevOps is required to utilize the Build Tools. More information is available [here](https://azure.microsoft.com/pricing/details/devops/azure-devops-services/).*
 
 **I can see the extension, but why don’t I have an option to install it?**
 

@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Card control in PowerApps
+# Card control in Power Apps
 Provides the display and editing experience for a single field of a **[Display form](control-form-detail.md)** or **[Edit form](control-form-detail.md)** control.
 
 ## Description

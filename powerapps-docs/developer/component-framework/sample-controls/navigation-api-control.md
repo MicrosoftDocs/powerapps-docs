@@ -12,7 +12,7 @@ author: Nkrb
 
 # Implementing Navigation API component
 
-This sample component explores the various methods available as part of the PowerApps component framework navigation API. In this sample, you create a series of input elements of type buttons which calls into the respective methods of the navigation API that matches with the value displayed.  
+This sample component explores the various methods available as part of the Power Apps component framework navigation API. In this sample, you create a series of input elements of type buttons which calls into the respective methods of the navigation API that matches with the value displayed.  
 
 > [!div class="mx-imgBorder"]
 > ![Navigation API component](../media/navigation-api-control.png "Navigation API component")
@@ -47,7 +47,7 @@ Model-driven apps
 ```TypeScript
 import {IInputs, IOutputs} from "./generated/ManifestTypes";
 export class TSNavigationAPI implements ComponentFramework.StandardControl<IInputs, IOutputs> {
-// PowerApps component framework framework delegate which will be assigned to this object which would be called whenever an update happens. 
+// Power Apps component framework framework delegate which will be assigned to this object which would be called whenever an update happens. 
 private _notifyOutputChanged: () => void;
 // Reference to the div element that hold together all the HTML elements that we are creating as part of this control
 private divElement: HTMLDivElement;
@@ -240,6 +240,7 @@ This sample opens a new window and loads the microsoft.com home page on clicking
 ### Related topics
 
 [Download sample components](https://go.microsoft.com/fwlink/?linkid=2088525)<br/>
-[PowerApps component framework API reference](../reference/index.md)<br/>
-[PowerApps component framework manifest schema reference](../manifest-schema-reference/index.md)
+[How to use the sample components](../use-sample-components.md)<br/>
+[Power Apps component framework API reference](../reference/index.md)<br/>
+[Power Apps component framework manifest schema reference](../manifest-schema-reference/index.md)
 

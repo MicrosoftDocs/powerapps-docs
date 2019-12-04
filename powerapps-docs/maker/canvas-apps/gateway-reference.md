@@ -1,6 +1,6 @@
 ---
 title: On-premises data gateway | Microsoft Docs
-description: This article is an overview of the on-premises data gateway for PowerApps.
+description: This article is an overview of the on-premises data gateway for Power Apps.
 author: arthiriyer
 manager: kvivek
 ms.service: powerapps
@@ -17,7 +17,7 @@ search.app:
 
 # What is an on-premises data gateway?
 
-The on-premises data gateway acts as a bridge to provide quick and secure data transfer between on-premises data (data that isn't in the cloud) and several Microsoft cloud services. These cloud services include Power BI, PowerApps, Microsoft Flow, Azure Analysis Services, and Azure Logic Apps. By using a gateway, organizations can keep databases and other data sources on their on-premises networks, yet securely use that on-premises data in cloud services.
+The on-premises data gateway acts as a bridge to provide quick and secure data transfer between on-premises data (data that isn't in the cloud) and several Microsoft cloud services. These cloud services include Power BI, Power Apps, Power Automate, Azure Analysis Services, and Azure Logic Apps. By using a gateway, organizations can keep databases and other data sources on their on-premises networks, yet securely use that on-premises data in cloud services.
 
 ## How the gateway works
 

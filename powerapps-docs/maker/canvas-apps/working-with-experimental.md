@@ -1,6 +1,6 @@
 ---
 redirect_url: working-with-experimental-preview
-title: Understand preview and experimental features | Microsoft Docs
+title: Understand experimental, preview, and experimental features | Microsoft Docs
 description: Test and start to adopt new features.
 author: gregli-msft
 manager: kvivek
@@ -8,16 +8,16 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 03/20/2019
+ms.date: 11/08/2019
 ms.author: gregli
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 ---
-# Understand experimental and preview features in PowerApps
+# Understand experimental, preview, and deprecated features in Power Apps
 
-With every release, we make changes and add features to make PowerApps the best tool to fit your needs. We move the product forward.  
+With every release, we make changes and add features to make Power Apps the best tool to fit your needs. We move the product forward.  
 
 We take backward compatibility very seriously. However, with any change or improvement, we might introduce an unintended side effect, and your app might not work exactly the way it did before.
 
@@ -31,30 +31,28 @@ Features move through three stages on their way to becoming official parts of th
 1. **Preview**:  This feature is almost done and is stable. Start to migrate existing apps to it now.
 1. **Shipped**:  This feature is done. All apps have this feature enabled, and you can't turn it off.
 
-At each stage, the number of people who use the feature rises, helping us to validate that the feature is what you need and that we're not introducing unintended side effects.
+At each stage, the number of people who use the feature increases, helping us to validate that the feature is what you need and that we're not introducing unintended side effects.
 
-**Your feedback is critical to this process.**  Please post your feedback in the [PowerApps Community Forum](https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1).
+**Your feedback is critical to this process.**  Please post your feedback in the [Power Apps Community Forum](https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1).
 
-How long does a feature remain in each stage? This varies from feature to feature. We look at many factors, including the number of apps that use the feature, the number of issues reported, and how urgently the feature is needed. Features can remain in a stage for weeks to many months.
+How long does a feature remain in each stage? This varies from feature to feature. We look at many factors, including the number of apps that use the feature, the number of issues reported, and how urgently the feature is needed. Features can remain in a stage for weeks to many months.  We may also skip some stages if we don't believe it would be helpful.
 
 This table may help you decide when you should jump in: 
 
-| Stage | When should I use it? | Can I use it with confidence? | Is it enabled by default for new apps? | 
-|----|----|----|-----|------|
-| **Experimental** | If you're an early adopter, see something useful to you, and would like to help test the feature. | No.  Experimental features can radically change or completely disappear at any time. | No. You must explicitly opt in to the feature.  |  
-| **Preview** | New apps automatically include this feature.  Start enabling and testing in existing apps because this feature will be eventually turned on for them too. | Yes. This feature is on track to become a permanent part of the product.  | Yes. You may want to turn it off if you run into a problem.  Please report issues; this is the main reason the feature is in Preview. | 
-| **Shipped** (no longer appears in **Advanced settings**) | All apps have this feature. | Yes. | Yes.  Most can't be disabled.  |  
-
-Toward the end of Preview, we might enable the feature for all apps one time, and we mark it as being in **final validation**.  This change gives the most people a last chance to try out the feature while they can still turn it off. Timely feedback is critical in this period because, in the next stage, the feature is fully shipped, and you can't turn it off.
-
-In the final transition to **Shipped**, we may remove the Preview switch in apps for which the feature is already turned on, effectively turning the feature on permanently. This change will apply to most apps because the feature will have been on by default before that point. For apps where the feature is turned off, the Preview switch will still be available for you to turn on, test with the feature, and turn off within the same session of PowerApps Studio. However, if you save the app when the switch is turned on, it won't be available when the app is reloaded, so you can't turn the feature off again. At that point, you can [restore the app to a previous version](restore-an-app.md) to return the app to a state before the feature was turned on.
+| Stage | When should I use it? | Can I use it with confidence?  Is it enabled by default for new apps? | 
+|----|----|----|
+| **Experimental** | If you're an early adopter, see something useful to you, and would like to help test the feature. | No. Experimental features can radically change or completely disappear at any time. For this reason the feature is not enabled by default and you must explicitly opt in to use it. |  
+| **Preview** | New apps automatically include this feature but it can still be turned off.  Start enabling and testing in existing apps because this feature will be eventually turned on for them too.  |Yes.  This feature is on track to become a permanent part of the product. You may want to turn it off if you run into a problem.  Please report issues; this is the main reason the feature is in Preview.  | 
+| **Preview (Final&nbsp;validation)** | For a few features that would have broad impact, we may take the additional step beyond **Preview** of forcing the feature switch on once for existing apps when they are opened in the Studio.  If you encounter an issue, the feature can still be turned off, and your feedback is critical before we take the next step. | Yes. You can use this feature with confidence, it is very close to becoming permanent. You may want to turn it off if you run into a problem.  Please report any issues encountered. |
+| **Shipped** for&nbsp;new&nbsp;apps | All new apps have this feature turned on and it cannot be turned off.  For existing apps where the feature is turned off, the feature will continue to show as a Preview feature until it is turned on.  If turned on and the switch becomes unavailable, you can [restore the app to a previous version](restore-an-app.md) to return to a state before the feature was enabled. | Yes. |
+| **Shipped** for&nbsp;all&nbsp;apps | All apps have this feature and it cannot be disabled. | Yes. | 
 
 ## Documentation
 
 Where can you find information about these features?  We treat Preview features as finished features, and you can learn more about them just as you do any other product features: 
-- [PowerApps documentation](https://docs.microsoft.com/powerapps/maker/canvas-apps/getting-started). We'll provide the basics on the new feature: the benefits, how to get started, and reference information.
-- [PowerApps community forum](https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1).  Others will explore the new feature along with you. Learn from their experience, and share yours.
-- [PowerApps blog](https://powerapps.microsoft.com/blog/).  Often, but not always, a blog post accompanies a new feature.
+- [Power Apps documentation](https://docs.microsoft.com/powerapps/maker/canvas-apps/getting-started). We'll provide the basics on the new feature: the benefits, how to get started, and reference information.
+- [Power Apps community forum](https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1).  Others will explore the new feature along with you. Learn from their experience, and share yours.
+- [Power Apps blog](https://powerapps.microsoft.com/blog/).  Often, but not always, a blog post accompanies a new feature.
 
 Experimental features are different.  They are works in progress, and we don't consider them finished. The short description in the **App settings** pane (see below) might be the only information about them. Experimental features don't normally appear in the documentation. The community forum is likely your best source of information.  In some cases, an early blog post describes the feature.  If you aren't finding enough information, ask in the forums, or wait for the feature to move to the Preview stage.
 
@@ -71,3 +69,17 @@ In some cases, you might need to close and reopen the app after you change a set
 At the top of the **Advanced settings** panel, you can find settings for fully shipped features that aren't preview or experimental and that you can completely depend on. 
 
 These settings are specific to each app, so changing a toggle switch affects only the app that's currently open. If you create an app, these switches revert to their default settings for that app.
+
+## Feature deprecation
+
+Sometimes a feature needs to be retired.  Often this occurs when there is a new, better way to accomplish a task.  Unpopular features are also pruned too as all features require some overhead to keep up with product changes around them.
+
+Feature deprecation also goes through stages.  Features are unique and not every stage will be used by all features.
+
+| Stage | When should I use it? | Can I use it with confidence?  Is it enabled by default for new apps? | 
+|----|----|----|
+| **Deprecated** | Existing apps may continue using this feature for a limited time. You can still turn on the feature for new apps.  It is time to evaluate alternatives.  | Yes, you can still use the feature with confidence. But it will be going away soon. For this reason you must explicitly opt in to use the feature in new apps and it is not recommended.  |
+| **Deprecated (Final&nbsp;warning)** | For a few features that would have broad impact, we may take the additional step beyond **Deprecated** of forcing the feature switch off once for existing apps the next time they are opened in the Studio.  If there is a issue, the feature can still be turned back on, and your feedback is critical before we take the next step.|  No.  The feature is about to be permanently removed. You must explicitly opt in to use the feature and it is not recommended. |
+| **Removed** for&nbsp;new&nbsp;apps | All new apps have this feature turned off and it cannot be enabled.  For existing apps where the feature is turned on, the feature will continue to show as a Deprecated feature until it is turned off.  If turned off and the feature switch becomes unavailable, you can [restore the app to a previous version](restore-an-app.md) to return to a state before the feature was disabled. | No.  The feature is about to be permanently removed. The feature is no longer available for new apps. |
+| **Removed** for&nbsp;all&nbsp;apps | The feature is unavailable for all apps. | No. |  
+

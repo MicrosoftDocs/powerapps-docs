@@ -664,9 +664,9 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />CanvasAppsExpectedFileMissing<br />**Hex**:<br />80072356<br />**Number**:<br />-2147015850|The solution specified an expected assets file but that file was missing or invalid.|
 > |**Name**:<br />CanvasAppsInvalidSolutionFileContent<br />**Hex**:<br />80072354<br />**Number**:<br />-2147015852|The request to import a canvas app should contain at least one asset file.|
 > |**Name**:<br />CanvasAppsNotEnabled<br />**Hex**:<br />80072351<br />**Number**:<br />-2147015855|Creation and editing of Canvas Apps is not enabled.|
-> |**Name**:<br />CanvasAppsServiceRequestClientFailure<br />**Hex**:<br />80072352<br />**Number**:<br />-2147015854|The request to the PowerApps service failed with a client failure.|
-> |**Name**:<br />CanvasAppsServiceRequestServerFailure<br />**Hex**:<br />80072353<br />**Number**:<br />-2147015853|The request to the PowerApps service failed with a server failure.|
-> |**Name**:<br />CanvasAppsUnexpectedCanvasAppId<br />**Hex**:<br />80072355<br />**Number**:<br />-2147015851|The request to the PowerApps service resulted in a new canvasappid when the previously existing value was expected.|
+> |**Name**:<br />CanvasAppsServiceRequestClientFailure<br />**Hex**:<br />80072352<br />**Number**:<br />-2147015854|The request to the Power Apps service failed with a client failure.|
+> |**Name**:<br />CanvasAppsServiceRequestServerFailure<br />**Hex**:<br />80072353<br />**Number**:<br />-2147015853|The request to the Power Apps service failed with a server failure.|
+> |**Name**:<br />CanvasAppsUnexpectedCanvasAppId<br />**Hex**:<br />80072355<br />**Number**:<br />-2147015851|The request to the Power Apps service resulted in a new canvasappid when the previously existing value was expected.|
 > |**Name**:<br />CanvasAppVersionDoesNotMatchLatestPublishedVersion<br />**Hex**:<br />80072358<br />**Number**:<br />-2147015848|The latest published version of the canvas app does not match the version known by the Dynamics service.|
 > |**Name**:<br />CanvasAppVersionMissingOrInvalid<br />**Hex**:<br />80072357<br />**Number**:<br />-2147015849|The app version of the canvas app was not set or was an invalid value.|
 > |**Name**:<br />CAPolicyValidationFailedLateBind<br />**Hex**:<br />80072561<br />**Number**:<br />-2147015327|The user is in an admin restricted location.|

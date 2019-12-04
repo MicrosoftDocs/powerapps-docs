@@ -21,6 +21,9 @@ This sample component renders a table with two columns. The left column shows th
 
 Model-driven apps
 
+> ![!NOTE]
+> When you debug the table component using the command `npm start`, the component is not rendered in the test harness. This is because the component uses the `context.utils.getEntityMetadata`  method which is not supported by the Power Apps CLI tooling yet.
+
 ## Manifest
 
 ```xml
@@ -439,5 +442,6 @@ The callback method injects this information as HTML into a div rendered on the 
 ### Related topics
 
 [Download sample components](https://go.microsoft.com/fwlink/?linkid=2088525)<br/>
-[PowerApps component framework API reference](../reference/index.md)<br/>
-[PowerApps component framework manifest schema reference](../manifest-schema-reference/index.md)
+[How to use the sample components](../use-sample-components.md)<br/>
+[Power Apps component framework API reference](../reference/index.md)<br/>
+[Power Apps component framework manifest schema reference](../manifest-schema-reference/index.md)

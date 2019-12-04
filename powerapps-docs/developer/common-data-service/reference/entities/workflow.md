@@ -1686,7 +1686,7 @@ Same as workflow entity [workflow_active_workflow](workflow.md#BKMK_workflow_act
 
 ### <a name="BKMK_regardingobjectid_process"></a> regardingobjectid_process
 
-**Added by**: Microsoft Flow Extensions package Solution
+**Added by**: Power Automate Extensions package Solution
 
 Same as flowsession entity [regardingobjectid_process](flowsession.md#BKMK_regardingobjectid_process) Many-To-One relationship.
 
@@ -1703,7 +1703,7 @@ Same as flowsession entity [regardingobjectid_process](flowsession.md#BKMK_regar
 
 ### <a name="BKMK_workflow_workflowbinary_Process"></a> workflow_workflowbinary_Process
 
-**Added by**: Microsoft Flow Extensions package Solution
+**Added by**: Power Automate Extensions package Solution
 
 Same as workflowbinary entity [workflow_workflowbinary_Process](workflowbinary.md#BKMK_workflow_workflowbinary_Process) Many-To-One relationship.
 
@@ -1720,7 +1720,7 @@ Same as workflowbinary entity [workflow_workflowbinary_Process](workflowbinary.m
 
 ### <a name="BKMK_msdyn_workflow_msdyn_solutionhealthrule_Workflow"></a> msdyn_workflow_msdyn_solutionhealthrule_Workflow
 
-**Added by**: PowerApps Checker Solution
+**Added by**: Power Apps Checker Solution
 
 Same as msdyn_solutionhealthrule entity [msdyn_workflow_msdyn_solutionhealthrule_Workflow](msdyn_solutionhealthrule.md#BKMK_msdyn_workflow_msdyn_solutionhealthrule_Workflow) Many-To-One relationship.
 
@@ -1737,7 +1737,7 @@ Same as msdyn_solutionhealthrule entity [msdyn_workflow_msdyn_solutionhealthrule
 
 ### <a name="BKMK_msdyn_workflow_msdyn_solutionhealthrule_resolutionaction"></a> msdyn_workflow_msdyn_solutionhealthrule_resolutionaction
 
-**Added by**: PowerApps Checker Solution
+**Added by**: Power Apps Checker Solution
 
 Same as msdyn_solutionhealthrule entity [msdyn_workflow_msdyn_solutionhealthrule_resolutionaction](msdyn_solutionhealthrule.md#BKMK_msdyn_workflow_msdyn_solutionhealthrule_resolutionaction) Many-To-One relationship.
 

@@ -1,5 +1,5 @@
 ---
-title: getNamedreference | Microsoft Docs
+title: getNamedReference | Microsoft Docs
 description: 
 keywords:
 ms.author: nabuthuk
@@ -12,7 +12,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: f879cb97-34d2-49ed-bef3-4df0af972b19
 ---
-# getNamedreference
+# getNamedReference
 
 [!INCLUDE[./includes/getnamedreference-description.md](./includes/getnamedreference-description.md)]
 
@@ -22,15 +22,15 @@ Model-driven apps
 
 ## Syntax
 
-`getNamedreference()`
+`getNamedReference()`
 
 ## Return Value
 
-**Type**: [Entityreference](../entityreference.md)
+**Type**: [EntityReference](../entityreference.md)
 
 
 ### Related topics
 
 [Entityrecord](../entityrecord.md)<br/>
-[PowerApps component framework API reference](../../reference/index.md)<br/>
-[PowerApps component framework overview](../../overview.md)
+[Power Apps component framework API reference](../../reference/index.md)<br/>
+[Power Apps component framework overview](../../overview.md)

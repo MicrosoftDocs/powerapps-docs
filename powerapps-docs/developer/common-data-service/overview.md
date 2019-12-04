@@ -17,7 +17,7 @@ search.app:
 
 # Common Data Service Developer Guide
 
-PowerApps offers users, businesses, independent software vendors (ISVs), and systems integrators (SIs) a powerful platform for building line-of-business apps. **Common Data Service** is the underlying data platform for PowerApps that contains the core functionality such as server-side logic (plug-ins and workflows), business process flows, a highly sophisticated security model, and an extensible platform for developers to build apps. 
+Power Apps offers users, businesses, independent software vendors (ISVs), and systems integrators (SIs) a powerful platform for building line-of-business apps. **Common Data Service** is the underlying data platform for Power Apps that contains the core functionality such as server-side logic (plug-ins and workflows), business process flows, a highly sophisticated security model, and an extensible platform for developers to build apps. 
 
 There are many aspects to how developers can contribute to creating apps that use Common Data Service. While it is possible to build an application with code using Common Data Service as your data source, most projects will use either [model-driven apps](/powerapps/maker/model-driven-apps/model-driven-app-overview) or [canvas apps](/powerapps/maker/canvas-apps/getting-started) to generate the experience that people will use. 
 
@@ -46,5 +46,5 @@ Common Data Service is not available for on-premise deployments at this time. Co
 
 ### See also
 
-[PowerApps for developers](/powerapps/#pivot=home&panel=developer)<br/>
+[Power Apps for developers](/powerapps/#pivot=home&panel=developer)<br/>
 [Model-driven apps Developer Guide](../model-driven-apps/overview.md)

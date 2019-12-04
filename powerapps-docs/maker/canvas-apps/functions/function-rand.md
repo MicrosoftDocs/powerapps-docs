@@ -1,6 +1,6 @@
 ---
 title: Rand function | Microsoft Docs
-description: Reference information, including syntax, for the Rand function in PowerApps
+description: Reference information, including syntax, for the Rand function in Power Apps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Rand function in PowerApps
+# Rand function in Power Apps
 Returns a pseudo-random number.
 
 ## Description

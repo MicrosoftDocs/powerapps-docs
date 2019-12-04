@@ -30,5 +30,5 @@ Model-driven apps
 ### Related topics
 
 [Dataset](../dataset.md)<br/>
-[PowerApps component framework API reference](../../reference/index.md)<br/>
-[PowerApps component framework overview](../../overview.md)
+[Power Apps component framework API reference](../../reference/index.md)<br/>
+[Power Apps component framework overview](../../overview.md)

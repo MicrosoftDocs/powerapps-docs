@@ -1,5 +1,5 @@
 ---
-title: "Define rollup fields with PowerApps | MicrosoftDocs"
+title: "Define rollup fields with Power Apps | MicrosoftDocs"
 description: "Learn how to define rollup fields"
 ms.custom: ""
 ms.date: 05/23/2018
@@ -28,7 +28,7 @@ search.app:
 
 Rollup fields help users obtain insights into data by monitoring key business metrics. A rollup field contains an aggregate value computed over the records related to a specified record. This includes regular entities and activity entities such as emails and appointments.
 
-In more complex scenarios, you can aggregate data over the hierarchy of records. As an administrator or customizer, you can define rollup fields by using the customization tools in PowerApps, without needing to write code.  
+In more complex scenarios, you can aggregate data over the hierarchy of records. As an administrator or customizer, you can define rollup fields by using the customization tools in Power Apps, without needing to write code.  
   
 <a name="BKMK_benefitsandcapabilities"></a> 
  

@@ -6,7 +6,7 @@ manager: shujoshi
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/04/2019
+ms.date: 11/18/2019
 ms.author: shjais
 ms.reviewer:
 ---
@@ -157,7 +157,7 @@ Enabling a **Create Action** renders a button above the entity list that, when s
 | Button Label                                                                                                                                                                                                                 | Overrides the HTML label displayed in the Create action button above the list.                                                                                        |
 | Button Tooltip                                                                                                                                                                                                               | Overrides the tooltip text that appears when the user points to the Create action button.                                                                         |
 
-**Create Form dialog box avanced settings**
+**Create Form dialog box advanced settings**
 
 |**Name**               |**Description**                                                                                                                                 |
 |------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -320,7 +320,7 @@ Adding the ability to filter records on an entity list is easy: simply enable th
 
 **Enable the entity list filter**
 
-In the Metadata filter section, select the Enabled check box. This will add the Filter area to the entity list when it is displayed. Until you have defined at least one filter type, the box will appear empty.
+In the **Metadata Filter** section, select the **Enabled** check box. This will add the Filter area to the entity list when it is displayed. Until you have defined at least one filter type, the box will appear empty.
 
 You can define how the Filter area on the entity list will be rendered by using the Orientation setting. The default, Horizontal, renders the Filter area above the entity list. Vertical orientation renders the Filter area as a box to the left of the entity list.
 
@@ -488,16 +488,27 @@ Use the Entity List Calendar view to render an entity list as a calendar, with e
 
 To display records by using a calendar, those records need to include at a minimum a date field. For events to have exact start and end times, the appropriate fields need to be in place, and so on. Assuming these fields are configured, an Entity List Calendar view will appear on the portal.
 
-## Enhanced view filter for entity lists
+## Entity list OData feeds
 
 If enabled, an entity can be published to an OData feed. The OData protocol is an application-level protocol for interacting with data via RESTful web services. Data from this feed can be viewed in a web browser, consumed by a client-side web application, or imported into [!INCLUDE[pn-excel-short](../../../includes/pn-excel-short.md)].
 
-## Entity list OData feeds
+> [!Note]
+> The OData feed that is published is anonymous and does not have any authorization checks; therefore, it is important not to enable oData feeds for data that is unsuitable for anonymous portal access.
+
+## Enhanced view filter for entity lists
 
 You can use Entity Permissions if you want to secure records, but if you want to simply provide a filter as part of the set of filter options that is relevant to the current portal user, you can use the Entity List feature. This feature supports filtering of the current user, user's parent account, or website at any depth. Simply build the view filter to match any single contact record and the code will replace its value with the actual value at runtime&mdash;no need to assign values to fields in the Filter Conditions section.
 
-> [!Note]
-> The OData feed that is published is anonymous and does not have any authorization checks; therefore, it is important not to enable oData feeds for data that is unsuitable for anonymous portal access.
+- The control will find all condition elements where uitype="contact" and set the value to the actual value of the current portal user's contact ID.
+- The control will find all condition elements where uitype="account" and set the value to the actual value of the current portal user's parent account ID.
+- The control will find all condition elements where uitype="adx_website" and set the value to the actual value of the current website ID.
+
+Example View Filter Criteria
+
+The following image shows an arbitrary contact assigned to a filter condition, this contact happens to be a stub 'dummy' contact but this could be any contact record. The ID of this record will be replaced by the actual value of the ID of the user viewing the page. If the user is not logged in then no records will be returned. This provides greater flexibility in filtering the data based on the user and website contextually.
+
+> [!NOTE]
+> If you are filtering by current portal user's contact or parent account then it is recommended that you associate a [Web Page Access Control Rule](webpage-access-control.md) to the Web Page to force the user to sign in. You would create a [Web Role](create-web-roles.md) with "Authenticated Users Role" checked. Create a Web Page Access Control Rule with "Restrict Read" right and associate the Web Role. This will force users to be signed in to view the page and therefore allow the data to be filled accordingly.
 
 ### See also
 

@@ -25,7 +25,7 @@ search.app:
 ---
 # Types of fields
 
-The names used for types depends on the designer used. [PowerApps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) uses a convention that includes the way the data is formatted. The solution explorer type uses a name aligned with the database data type with a format modifier. The following table includes the corresponding `AttributeTypeDisplayName` API type.
+The names used for types depends on the designer used. [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) uses a convention that includes the way the data is formatted. The solution explorer type uses a name aligned with the database data type with a format modifier. The following table includes the corresponding `AttributeTypeDisplayName` API type.
 
 |Portal Data type |Solution Explorer  type| API type|
 |--|--|--|
@@ -59,8 +59,8 @@ The names used for types depends on the designer used. [PowerApps portal](https:
 |**Whole Number**|**Whole Number**<br />*None* Format|`IntegerType`|
 
 For more descriptions for each type you can add or edit, see the topic for the corresponding designer:
- - [Create and edit fields for Common Data Service using PowerApps portal: Field Data types](create-edit-field-portal.md#field-data-types)
- - [Create and edit fields for Common Data Service using PowerApps solution explorer: Field Data types](create-edit-field-solution-explorer.md#field-data-types)
+ - [Create and edit fields for Common Data Service using Power Apps portal: Field Data types](create-edit-field-portal.md#field-data-types)
+ - [Create and edit fields for Common Data Service using Power Apps solution explorer: Field Data types](create-edit-field-solution-explorer.md#field-data-types)
 
 For more information about how field data types are defined in the API, see [Attribute metadata](/powerapps/developer/common-data-service/entity-attribute-metadata)
 
@@ -182,11 +182,11 @@ When an image is uploaded, it will be resized as a "thumbnail" image to a maximu
 By default,	when an app user adds an image to display to a form or canvas app, the image displayed is the thumbnail image. To display a full image for a canvas app, see [Display a full-sized image on a canvas app form](../canvas-apps/display-full-image-on-form.md).
 
 
-### Add an image field to an entity using the PowerApps site
+### Add an image field to an entity using the Power Apps site
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-1. Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
+1. Sign in to [Power Apps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 2.  Select **Data** > **Entities** and then select the entity where you want to add an image field. 
 3. Select **Add field** on the command bar, enter the following properties, and then select **Done**: 
    - **Display name**. Enter a friendly name for the field. 

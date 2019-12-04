@@ -1870,8 +1870,8 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 |Property|Value|
 |--------|-----|
-|Description|Enable Integration with Microsoft Flow|
-|DisplayName|Enable Integration with Microsoft Flow|
+|Description|Enable Integration with Power Automate|
+|DisplayName|Enable Integration with Power Automate|
 |IsValidForForm|False|
 |IsValidForRead|True|
 |LogicalName|enablemicrosoftflowintegration|
@@ -3124,8 +3124,8 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 |Property|Value|
 |--------|-----|
-|Description|Indicates whether Custom Controls in canvas PowerApps feature has been enabled for the organization.|
-|DisplayName|Enable Custom Controls in canvas PowerApps feature for this organization|
+|Description|Indicates whether Custom Controls in canvas Power Apps feature has been enabled for the organization.|
+|DisplayName|Enable Custom Controls in canvas Power Apps feature for this organization|
 |IsValidForForm|False|
 |IsValidForRead|True|
 |LogicalName|iscustomcontrolsincanvasappsenabled|
@@ -4602,8 +4602,8 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 |Property|Value|
 |--------|-----|
-|Description|(Deprecated) Environment selected for Integration with Microsoft Flow|
-|DisplayName|(Deprecated) Environment selected for Integration with Microsoft Flow|
+|Description|(Deprecated) Environment selected for Integration with Power Automate|
+|DisplayName|(Deprecated) Environment selected for Integration with Power Automate|
 |FormatName|Text|
 |IsLocalizable|False|
 |IsValidForForm|False|

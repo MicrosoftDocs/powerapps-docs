@@ -30,6 +30,11 @@ Model-driven apps and canvas apps (public preview)
 |[property](property.md)|[!INCLUDE [property-description](includes/property-description.md)]|0 or more|Model-driven apps and canvas apps (public preview) (experimental preview)|
 |[data-set](data-set.md)|[!INCLUDE [data-set-description](includes/data-set-description.md)]|0 or more|Model-driven apps|
 |[resource](resources.md)|[!INCLUDE [resource-description](includes/resources-description.md)]|1 or more|Model-driven apps and canvas apps (public preview) (experimental preview)|
+|[control](control.md)|[!INCLUDE [control-description](includes/control-description.md)]|1 or more|Model-driven apps and canvas apps (experimental preview) |
+|[type-group](type-group.md)|[!INCLUDE [type-group-description](includes/type-group-description.md)]|0 or more|Model-driven apps and canvas apps (experimental preview) |
+|[property](property.md)|[!INCLUDE [property-description](includes/property-description.md)]|0 or more|Model-driven apps and canvas apps (experimental preview) |
+|[data-set](data-set.md)|[!INCLUDE [data-set-description](includes/data-set-description.md)]|0 or more|Model-driven apps|
+|[resource](resources.md)|[!INCLUDE [resource-description](includes/resources-description.md)]|1 or more|Model-driven apps and canvas apps (experimental preview) |
 
 ## Example
 
@@ -48,6 +53,6 @@ Model-driven apps and canvas apps (public preview)
 
 ### Related topics
 
-[PowerApps component framework manifest schema reference](index.md)<br/>
-[PowerApps component framework API reference](../reference/index.md)<br/>
-[PowerApps component framework overview](../overview.md)
+[Power Apps component framework manifest schema reference](index.md)<br/>
+[Power Apps component framework API reference](../reference/index.md)<br/>
+[Power Apps component framework overview](../overview.md)

@@ -1,6 +1,6 @@
 ---
-title: "About PowerApps portals lifecycle | MicrosoftDocs"
-description: "Information about PowerApps portals lifecycle and converting it from trial to production."
+title: "About Power Apps portals lifecycle | MicrosoftDocs"
+description: "Information about Power Apps portals lifecycle and converting it from trial to production."
 author: sbmjais
 manager: shujoshi
 ms.service: powerapps
@@ -23,13 +23,13 @@ The first portal is free to be created in an environment in a tenant. If you nee
 
 ### Trial portal
 
-A portal is always created as a trial portal. You can convert it to production from the PowerApps Portals admin center if you have the required licenses. For information on converting a trial portal to production, see [Convert a trial portal to production](#convert-a-trial-portal-to-production).
+A portal is always created as a trial portal. You can convert it to production from the Power Apps Portals admin center if you have the required licenses. For information on converting a trial portal to production, see [Convert a trial portal to production](#convert-a-trial-portal-to-production).
 
-To convert a trial portal to production, the environment should have required add-ons for external users, or a license for internal users. For more information on licensing, see [PowerApps and Microsoft Flow licensing FAQs](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq) and [PowerApps portals licensing](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#can-you-share-more-details-regarding-the-new-powerapps-portals-licensing).
+To convert a trial portal to production, the environment should have required add-ons for external users, or a license for internal users. For more information on licensing, see [Power Apps and Power Automate licensing FAQs](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq) and [Power Apps portals licensing](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#can-you-share-more-details-regarding-the-new-power-apps-portals-licensing).
 
 ### Suspended portal
 
-You will continue to see notifications in the PowerApps Portals admin center about the expiration of your trial portal. Trial portals expire after 30 days. If you don't convert your portal to production within the trial period, the portal is shut down and placed on the suspended status. You won't be able to access your portal after its expiration.
+You will continue to see notifications in the Power Apps Portals admin center about the expiration of your trial portal. Trial portals expire after 30 days. If you don't convert your portal to production within the trial period, the portal is shut down and placed on the suspended status. You won't be able to access your portal after its expiration.
 
 However, the suspended portal can still be converted to production within seven days of suspension. 
 
@@ -39,14 +39,14 @@ If you don't convert your portal to production within the seven-day suspension p
 
 ## Convert a trial portal to production
 
-You can convert a trial portal to production from the notifications displayed in the PowerApps Portals admin center.
+You can convert a trial portal to production from the notifications displayed in the Power Apps Portals admin center.
 
 > [!NOTE]
 > You must be assigned one of the following roles to convert a trial portal to production:
 > - Global administrator
 > - System administrator
 
-When you open the [PowerApps Portals admin center](admin-overview.md) and navigate to the [Portal Details](portal-details.md) tab, you'll see the notification about the trial expiration displayed below the **Type** field.
+When you open the [Power Apps Portals admin center](admin-overview.md) and navigate to the [Portal Details](portal-details.md) tab, you'll see the notification about the trial expiration displayed below the **Type** field.
 
 > [!div class=mx-imgBorder]
 > ![Trial notification on Portal Details tab](../media/admin-center-convert-notif.png "Trial notification on Portal Details tab")

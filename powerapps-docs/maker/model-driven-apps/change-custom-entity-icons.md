@@ -1,5 +1,5 @@
 ---
-title: "Change model-driven app custom entity icons in PowerApps | MicrosoftDocs"
+title: "Change model-driven app custom entity icons in Power Apps | MicrosoftDocs"
 definition: "Learn how to change the icon for a custom entity"
 ms.custom: ""
 ms.date: 05/17/2018
@@ -63,7 +63,7 @@ You must use solution explorer to set entity icons.
   
 ## Community tools
 
-**[Iconator](https://www.xrmtoolbox.com/plugins/MscrmTools.Iconator/)** is a tool that XrmToolbox community developed for PowerApps. See the [Developer tools for Common Data Service](/powerapps/developer/common-data-service/developer-tools) topic for community developed tools.
+**[Iconator](https://www.xrmtoolbox.com/plugins/MscrmTools.Iconator/)** is a tool that XrmToolbox community developed for Power Apps. See the [Developer tools for Common Data Service](/powerapps/developer/common-data-service/developer-tools) topic for community developed tools.
 
 > [!NOTE]
 > The community tools are not a product of Microsoft and does not extend support to the community tools. 

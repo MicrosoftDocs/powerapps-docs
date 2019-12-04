@@ -549,13 +549,13 @@ See msdyn_aiodtrainingimage Entity [msdyn_aiodtrainingimage_PrincipalObjectAttri
 
 ### <a name="BKMK_flowsession_PrincipalObjectAttributeAccesses"></a> flowsession_PrincipalObjectAttributeAccesses
 
-**Added by**: Microsoft Flow Extensions package Solution
+**Added by**: Power Automate Extensions package Solution
 
 See flowsession Entity [flowsession_PrincipalObjectAttributeAccesses](flowsession.md#BKMK_flowsession_PrincipalObjectAttributeAccesses) One-To-Many relationship.
 
 ### <a name="BKMK_workflowbinary_PrincipalObjectAttributeAccesses"></a> workflowbinary_PrincipalObjectAttributeAccesses
 
-**Added by**: Microsoft Flow Extensions package Solution
+**Added by**: Power Automate Extensions package Solution
 
 See workflowbinary Entity [workflowbinary_PrincipalObjectAttributeAccesses](workflowbinary.md#BKMK_workflowbinary_PrincipalObjectAttributeAccesses) One-To-Many relationship.
 
@@ -573,43 +573,43 @@ See environmentvariablevalue Entity [environmentvariablevalue_PrincipalObjectAtt
 
 ### <a name="BKMK_msdyn_analysiscomponent_PrincipalObjectAttributeAccesses"></a> msdyn_analysiscomponent_PrincipalObjectAttributeAccesses
 
-**Added by**: PowerApps Checker Solution
+**Added by**: Power Apps Checker Solution
 
 See msdyn_analysiscomponent Entity [msdyn_analysiscomponent_PrincipalObjectAttributeAccesses](msdyn_analysiscomponent.md#BKMK_msdyn_analysiscomponent_PrincipalObjectAttributeAccesses) One-To-Many relationship.
 
 ### <a name="BKMK_msdyn_analysisjob_PrincipalObjectAttributeAccesses"></a> msdyn_analysisjob_PrincipalObjectAttributeAccesses
 
-**Added by**: PowerApps Checker Solution
+**Added by**: Power Apps Checker Solution
 
 See msdyn_analysisjob Entity [msdyn_analysisjob_PrincipalObjectAttributeAccesses](msdyn_analysisjob.md#BKMK_msdyn_analysisjob_PrincipalObjectAttributeAccesses) One-To-Many relationship.
 
 ### <a name="BKMK_msdyn_analysisresult_PrincipalObjectAttributeAccesses"></a> msdyn_analysisresult_PrincipalObjectAttributeAccesses
 
-**Added by**: PowerApps Checker Solution
+**Added by**: Power Apps Checker Solution
 
 See msdyn_analysisresult Entity [msdyn_analysisresult_PrincipalObjectAttributeAccesses](msdyn_analysisresult.md#BKMK_msdyn_analysisresult_PrincipalObjectAttributeAccesses) One-To-Many relationship.
 
 ### <a name="BKMK_msdyn_analysisresultdetail_PrincipalObjectAttributeAccesses"></a> msdyn_analysisresultdetail_PrincipalObjectAttributeAccesses
 
-**Added by**: PowerApps Checker Solution
+**Added by**: Power Apps Checker Solution
 
 See msdyn_analysisresultdetail Entity [msdyn_analysisresultdetail_PrincipalObjectAttributeAccesses](msdyn_analysisresultdetail.md#BKMK_msdyn_analysisresultdetail_PrincipalObjectAttributeAccesses) One-To-Many relationship.
 
 ### <a name="BKMK_msdyn_solutionhealthrule_PrincipalObjectAttributeAccesses"></a> msdyn_solutionhealthrule_PrincipalObjectAttributeAccesses
 
-**Added by**: PowerApps Checker Solution
+**Added by**: Power Apps Checker Solution
 
 See msdyn_solutionhealthrule Entity [msdyn_solutionhealthrule_PrincipalObjectAttributeAccesses](msdyn_solutionhealthrule.md#BKMK_msdyn_solutionhealthrule_PrincipalObjectAttributeAccesses) One-To-Many relationship.
 
 ### <a name="BKMK_msdyn_solutionhealthruleargument_PrincipalObjectAttributeAccesses"></a> msdyn_solutionhealthruleargument_PrincipalObjectAttributeAccesses
 
-**Added by**: PowerApps Checker Solution
+**Added by**: Power Apps Checker Solution
 
 See msdyn_solutionhealthruleargument Entity [msdyn_solutionhealthruleargument_PrincipalObjectAttributeAccesses](msdyn_solutionhealthruleargument.md#BKMK_msdyn_solutionhealthruleargument_PrincipalObjectAttributeAccesses) One-To-Many relationship.
 
 ### <a name="BKMK_msdyn_solutionhealthruleset_PrincipalObjectAttributeAccesses"></a> msdyn_solutionhealthruleset_PrincipalObjectAttributeAccesses
 
-**Added by**: PowerApps Checker Solution
+**Added by**: Power Apps Checker Solution
 
 See msdyn_solutionhealthruleset Entity [msdyn_solutionhealthruleset_PrincipalObjectAttributeAccesses](msdyn_solutionhealthruleset.md#BKMK_msdyn_solutionhealthruleset_PrincipalObjectAttributeAccesses) One-To-Many relationship.
 

@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/maker/canvas-apps/working-with-environments.md",
+      "redirect_url": "/power-platform/admin/working-with-environments",
+      "redirect_document_id": "false"
+    },    
+    {
       "source_path": "powerapps-docs/developer/component-framework/updating-tooling.md",
       "redirect_url": "get-powerapps-cli#update-microsoft-powerapps-cli-to-the-latest-version",
       "redirect_document_id": "false"

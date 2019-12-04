@@ -1,6 +1,6 @@
 ---
-title: Troubleshooting startup issues for PowerApps | Microsoft Docs
-description: This troubleshooting guide helps fix common configuration problems that prevent PowerApps from starting.
+title: Troubleshooting startup issues for Power Apps | Microsoft Docs
+description: This troubleshooting guide helps fix common configuration problems that prevent Power Apps from starting.
 author: matthewbolanos
 manager: kvivek
 ms.service: powerapps
@@ -14,9 +14,9 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Troubleshooting startup issues for PowerApps
+# Troubleshooting startup issues for Power Apps
 
-This troubleshooting topic helps fix the following two common configuration problems that prevent PowerApps from starting:
+This troubleshooting topic helps fix the following two common configuration problems that prevent Power Apps from starting:
 
 - When you receive a “Hmmm … We couldn’t sign you in” error message and identifier that resembles the following image:
 
@@ -51,7 +51,7 @@ If you experience one of the issues that's described in this section, check out 
 | AadError                                                                      | Azure Active Directory Errors | Azure Active Directory Errors | Azure Active Directory Errors |
 
 ## Resolution 1: Enable storage of local data in your browser
-PowerApps stores some data locally in your browser, including user identity and preferences. PowerApps can’t function if the browser is configured to disallow this.
+Power Apps stores some data locally in your browser, including user identity and preferences. Power Apps can’t function if the browser is configured to disallow this.
 
 ### Instructions for Internet Explorer 11
 
@@ -71,7 +71,7 @@ PowerApps stores some data locally in your browser, including user identity and 
     12. On the browser toolbar, select the gear icon.
     13. Open Internet Explorer.
 
-- **Option 2: Create exceptions to enable local data for PowerApps and associated services**
+- **Option 2: Create exceptions to enable local data for Power Apps and associated services**
     1. Open Internet Explorer.
     2. On the browser toolbar, select the gear icon.
     3. Select **Internet Options**.
@@ -102,7 +102,7 @@ PowerApps stores some data locally in your browser, including user identity and 
     7. Select Manage exceptions and make sure that there are no exceptions for **https://create.powerapps.com**, **https://\*.create.powerapps.com**, **https://make.\*.powerapps.com**, **https://make.powerapps.com**, and **https://login.microsoftonline.com**. If there are such exceptions, remove them by clicking on the x sign for the corresponding rows.
     8. Select **Done**.
     
-- **Option 2: Create exceptions to allow local data for PowerApps and associated services**
+- **Option 2: Create exceptions to allow local data for Power Apps and associated services**
       
     1. On the browser toolbar, select **More**.
     2. Select **Settings**.
@@ -114,9 +114,9 @@ PowerApps stores some data locally in your browser, including user identity and 
 
 ## Resolution 2: Configure Trust Zones for Internet Explorer and Edge
 
-Internet Explorer and Edge use *Trust Zones*. Problems can occur if services on which PowerApps relies are in different Trust Zones in your browser settings. While these settings apply to both Internet Explorer and Edge, the easiest way to access them is from Internet Explorer. (You might need assistance from your IT administrator to change some of these settings.)
+Internet Explorer and Edge use *Trust Zones*. Problems can occur if services on which Power Apps relies are in different Trust Zones in your browser settings. While these settings apply to both Internet Explorer and Edge, the easiest way to access them is from Internet Explorer. (You might need assistance from your IT administrator to change some of these settings.)
 
-- **Option 1: Add the required PowerApps domains to the Trusted Sites zone**
+- **Option 1: Add the required Power Apps domains to the Trusted Sites zone**
     1. On the browser toolbar, select the gear icon.
     2. Select **Internet Options**.
     3. Select the **Security** tab.
@@ -134,7 +134,7 @@ Internet Explorer and Edge use *Trust Zones*. Problems can occur if services on 
     9. Close all Internet Explorer and Edge windows.
  
 
-- **Option 2: Remove all the PowerApps domains from the Trusted Sites zone**
+- **Option 2: Remove all the Power Apps domains from the Trusted Sites zone**
     1. On the browser toolbar, select the gear icon.
     2. Select **Internet Options**.
     3. Select the **Security** tab.
@@ -151,7 +151,7 @@ Internet Explorer and Edge use *Trust Zones*. Problems can occur if services on 
 
 ## Resolution 3: Azure Active Directory Errors
 
-Azure Active Directory (Azure AD) is the technology on which the PowerApps ecosystem relies for user authentication and authorization.
+Azure Active Directory (Azure AD) is the technology on which the Power Apps ecosystem relies for user authentication and authorization.
 
 The error page that you see might contain additional information that can help diagnose and fix the problem.
 
