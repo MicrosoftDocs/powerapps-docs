@@ -31,7 +31,7 @@
   - name: Troubleshooting
     items:
     - name: Limitations
-     href: limitations.md
+      href: limitations.md
   - name: Sample components
     items: 
     - name: How to use the sample components?
