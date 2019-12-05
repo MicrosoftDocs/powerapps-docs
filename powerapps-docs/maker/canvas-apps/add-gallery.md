@@ -14,13 +14,13 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Show a list of items in PowerApps
+# Show a list of items in Power Apps
 
 Show a list of items from any data source by adding a **[Gallery](controls/control-gallery.md)** control to your canvas app. This topic uses Excel as the data source. Filter the list by configuring the **Gallery** control to show only those items that match the filter criterion in a **[Text input](controls/control-text-input.md)** control.
 
 ## Prerequisites
 
-- Learn how to [add and configure a control](add-configure-controls.md) in PowerApps.
+- Learn how to [add and configure a control](add-configure-controls.md) in Power Apps.
 
 - Set up the sample data:
     1. Download [this Excel file](https://az787822.vo.msecnd.net/documentation/get-started-from-data/FlooringEstimates.xlsx), which contains sample data for this tutorial.
@@ -28,13 +28,13 @@ Show a list of items from any data source by adding a **[Gallery](controls/contr
     2. Upload the Excel file to a [cloud-storage account](connections/cloud-storage-blob-connections.md), such as OneDrive for Business.
 
 - Open a blank app:
-    1. [Sign in to PowerApps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+    1. [Sign in to Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
     1. Under **Make your own app**, select **Canvas app from blank**.
 
     1. Specify a name for your app, select **Phone**, and then select **Create**.
 
-    1. If the **Welcome to PowerApps Studio** dialog box appears, select **Skip**.
+    1. If the **Welcome to Power Apps Studio** dialog box appears, select **Skip**.
 
     1. [Add a connection](add-data-connection.md) to the **FlooringEstimates** table in the Excel file.
 

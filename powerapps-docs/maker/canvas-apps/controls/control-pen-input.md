@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Pen input control in PowerApps
+# Pen input control in Power Apps
 A control in which the user can draw, erase, and highlight areas of an image.
 
 ## Description

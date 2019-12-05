@@ -1,6 +1,6 @@
 ---
 title: Value function | Microsoft Docs
-description: Reference information, including syntax, for the Value function in PowerApps
+description: Reference information, including syntax, for the Value function in Power Apps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Value function in PowerApps
+# Value function in Power Apps
 Converts a string of text to a number.
 
 ## Description

@@ -1,7 +1,7 @@
 ---
 title: "Publish code components on AppSource | Microsoft Docs"
 description: "After you have tested your code components and want it to distribute to others to use it, you must publish it on Microsoft AppSource."
-keywords: "Component Framework, code components, PowerApps controls"
+keywords: "Component Framework, code components, Power Apps controls"
 author: nkrb 
 manager: kvivek
 ms.date: 06/09/2019

@@ -1,6 +1,6 @@
 ---
 title: Create a report using the Report Wizard| Microsoft Docs
-description: Create a report using the Report Wizard in PowerApps
+description: Create a report using the Report Wizard in Power Apps
 author: mduelae
 manager: kvivek
 ms.service: powerapps

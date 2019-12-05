@@ -1,6 +1,6 @@
 ---
-title: "Implement General Data Protection Regulations in PowerApps portals  | MicrosoftDocs"
-description: "Learn how to implement General Data Protection Regulations in PowerApps portals."
+title: "Implement General Data Protection Regulations in Power Apps portals  | MicrosoftDocs"
+description: "Learn how to implement General Data Protection Regulations in Power Apps portals."
 author: sbmjais
 manager: shujoshi
 ms.service: powerapps
@@ -11,7 +11,7 @@ ms.author: shjais
 ms.reviewer:
 ---
 
-# Implementing General Data Protection Regulations in your PowerApps portals
+# Implementing General Data Protection Regulations in your Power Apps portals
 
 The General Data Protection Regulation (GDPR) is a legal act of the European Union (EU), which protects data for all individuals within the EU. With GDPR, people can control the use of their personal data in Common Data Service.
 

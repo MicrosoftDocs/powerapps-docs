@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Microphone control in PowerApps
+# Microphone control in Power Apps
 A control that allows app users to record sounds from their device.
 
 ## Description

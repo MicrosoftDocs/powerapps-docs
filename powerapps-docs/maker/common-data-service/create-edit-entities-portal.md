@@ -1,6 +1,6 @@
 ---
-title: "Create and edit entities using PowerApps portal | MicrosoftDocs"
-description: "Learn how to create and edit entities using PowerApps portal"
+title: "Create and edit entities using Power Apps portal | MicrosoftDocs"
+description: "Learn how to create and edit entities using Power Apps portal"
 ms.custom: ""
 ms.date: 05/30/2018
 ms.reviewer: ""
@@ -23,9 +23,9 @@ search.app:
   - D365CE
 ---
 
-# Create and edit entities using PowerApps portal
+# Create and edit entities using Power Apps portal
 
-The [PowerApps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) provides an easy way to create and edit entities for  Common Data Service.
+The [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) provides an easy way to create and edit entities for  Common Data Service.
 
 The portal enables configuring the most common options, but certain options can only be set using solution explorer. More information: 
 - [Create and edit entities in Common Data Service](create-edit-entities.md)
@@ -33,7 +33,7 @@ The portal enables configuring the most common options, but certain options can 
 
 ## View entities
 
-1. From the [PowerApps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select either **Model-driven** or **Canvas** design mode.
+1. From the [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select either **Model-driven** or **Canvas** design mode.
 2. Select **Data** > **Entities**
 
 ![View entities](media/view-entities-portal.png)
@@ -138,7 +138,7 @@ As someone with the system administrator security role, you can delete custom en
 
 While [viewing entities](#view-entities), select the entity and select **Delete entity** from the menu or the context menu.
 
-![Delete an entity using the PowerApps portal](media/delete-entity-powerapps-portal.png)
+![Delete an entity using the Power Apps portal](media/delete-entity-powerapps-portal.png)
 
 If the entity has dependencies that prevent it from being deleted you will see an error message. To identify and remove any dependencies, you will need to use the solution explorer. More information [Identify entity dependencies](create-edit-entities-solution-explorer.md#identify-entity-dependencies)
 

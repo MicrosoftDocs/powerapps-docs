@@ -1,5 +1,5 @@
 ---
-title: "Create or edit a model-driven app system chart in PowerApps | MicrosoftDocs"
+title: "Create or edit a model-driven app system chart in Power Apps | MicrosoftDocs"
 description: "Learn how to create or edit a chart"
 ms.custom: ""
 ms.date: 05/23/2018
@@ -27,7 +27,7 @@ search.app:
 
 In this topic you learn how to create a system chart. System charts are organization-owned charts, which makes them available to anyone with access to read the data running the app. System charts can’t be assigned or shared with specific app users.  
   
-1. Sign in to [PowerApps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
     > [!IMPORTANT]
     > “If the **Model-driven** design mode isn't available, you may need to [Create an environment](https://docs.microsoft.com/powerapps/administrator/create-environment).     

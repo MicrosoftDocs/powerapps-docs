@@ -1,5 +1,5 @@
 ---
-title: Tab properties for for model-driven app forms in PowerApps | MicrosoftDocs
+title: Tab properties for for model-driven app forms in Power Apps | MicrosoftDocs
 description: Understand the tab properties for main forms
 Keywords: Tab properties; Dynamics 365; Main forms
 author: matp
@@ -25,8 +25,8 @@ search.app:
   
  Tabs contain up to three columns and the width of each column can be set to a percentage of the total width. When you create a new tab, each column is pre-populated with a section.  
 
-You can access **Tab properties** from the PowerApps site. 
-1.  On the [PowerApps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) site, select **Model-driven** (lower left of the navigation pane).  
+You can access **Tab properties** from the Power Apps site. 
+1.  On the [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) site, select **Model-driven** (lower left of the navigation pane).  
 
      ![Model-driven design mode](media/model-driven-switch.png)
 

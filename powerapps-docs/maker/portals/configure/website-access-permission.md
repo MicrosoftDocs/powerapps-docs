@@ -1,5 +1,5 @@
 ---
-title: "Create website access permissions in PowerApps portals | MicrosoftDocs"
+title: "Create website access permissions in Power Apps portals | MicrosoftDocs"
 description: "Learn how to create and associate website access permissions to elements in a portal."
 author: sbmjais
 manager: shujoshi
@@ -33,8 +33,10 @@ To create a website access permission and add it to a web role:
 
 4. Under **General**, enter name, website, and select the required permissions.
 
-5. Under **Web Roles**, select and add the web role to associate the permission with.
+    ![Create website access permission](../media/website-access-permission.png "Create website access permission")
+
+5. Under **Web Roles**, select **Add Existing Web Role**, and add the web role to associate the permission with.
 
 6. Save the changes.
 
-    ![Create website access permission](../media/website-access-permission.png "Create website access permission")  
+    

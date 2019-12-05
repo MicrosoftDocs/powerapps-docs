@@ -1,6 +1,6 @@
 ---
 title: Find function | Microsoft Docs
-description: Reference information, including syntax and examples, for the Find function in PowerApps
+description: Reference information, including syntax and examples, for the Find function in Power Apps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Find function in PowerApps
+# Find function in Power Apps
 Finds a string of text, if it exists, within another string.
 
 ## Description
