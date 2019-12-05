@@ -39,7 +39,7 @@ For a developer who will contribute to projects it is important that they unders
 
 ## Content for on-premises deployments
 
-Common Data Service is not available for on-premise deployments at this time. Content in this guide does not include information about options that are only available for on-premises or internet facing deployments (IFD). For information related to these options, see the [Developer Guide for Dynamics 365 Customer Engagement (on-premises))](/dynamics365/customer-engagement/on-premises/developer/overview).
+Common Data Service is not available for on-premise deployments at this time. Content in this guide does not include information about options that are only available for on-premises or internet facing deployments (IFD). For information related to these options, see the [Developer Guide for Dynamics 365 Customer Engagement (on-premises)](/dynamics365/customerengagement/on-premises/developer/overview).
 
 > [!div class="nextstepaction"]
 > [Get started](get-started-cds-developers.md)
