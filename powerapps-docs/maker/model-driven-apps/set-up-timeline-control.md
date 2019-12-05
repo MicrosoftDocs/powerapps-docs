@@ -43,7 +43,7 @@ The modules are Activities, Posts, and Notes. As a customizer, you can choose wh
 
 5.	Select an entity and select **Forms**. For example, select the Account entity.
 
-6.	Select the **Account for Interactive experience** record that is of **Main** form type. The **Account Account for Interactive experience** form opens in a new browser window.
+6.	Select the **Account for Interactive experience** record that is of **Main** form type. The **Account for Interactive experience** form opens in a new browser window.
 
    > [!div class=mx-imgBorder] 
    > ![Select the entity form with interactive experience in the name](media/account-interactive-experience.png "Select the entity form with interactive experience in the name")
@@ -138,7 +138,7 @@ As a customizer, you can choose for which entities you want to show the activiti
 
 13.	Select **Publish** to publish the customizations.
 
-Since, the example considered in this procedure is Account. Let us see the Email activity in the Timeline control of an account page.
+Since the example considered in this procedure is Account. Let us see the Email activity in the Timeline control of an account page.
 
    | Field | Value |
    |---------------------------|---------------------------|
@@ -306,7 +306,7 @@ You can create an entity either in [classic mode](#classic-mode) or [PowerApps](
 
 9. Scroll down to the **Data Services** section and select **Allow quick create** check box. This option allows you open the entity in a quick create form.
 
-10. Scroll up to the the **Entity Definition**, section and select the **Define as an activity entity** check box. This option enables the entity as an activity. 
+10. Scroll up to the **Entity Definition**, section and select the **Define as an activity entity** check box. This option enables the entity as an activity. 
 
     > [!Note]
     > Only during the creation of the entity, you can enable this option. Once the entity is created, you can't update this check box.

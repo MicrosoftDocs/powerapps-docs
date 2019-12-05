@@ -60,12 +60,17 @@ To work around the issue, you must reduce the number of entities to 10 or less. 
 
 5.	Select an entity and select **Forms**. For example, select the Account entity.
 
-6.	Select the **Account** record that is of **Main** form. The **Account** form opens in a new browser window.
+6.	Select the **Account for Interactive experience** record that is of **Main** form type. The **Account for Interactive experience** form opens in a new browser window.
 
-7.	Double-click the field in the **Social Pane** section. The **Activities Tab Properties** dialog is displayed.
+   > [!div class=mx-imgBorder] 
+   > ![Select the entity form with interactive experience in the name](media/account-interactive-experience.png "Select the entity form with interactive experience in the name")
+
+   For Unified Interface, you need to use the form name that has `<Entity> for Interactive experience`.
+
+7.	Double-click the **Conversation Tabs** field in the **Timeline** section. The **Activities Tab Properties** dialog is displayed.
 
     > [!div class=mx-imgBorder] 
-    > ![Double-click the field in the social pane](media/social-pane-field.png "Double-click the field in the social pane") 
+    > ![Double-click the field in the social pane](media/timeline-conversation-tabs-field.png "Double-click the field in the social pane")  
 
 8.	Select **Show selected** option for the **Show these activities** field in the **Filter by** container.
 
@@ -76,7 +81,7 @@ To work around the issue, you must reduce the number of entities to 10 or less. 
 11.	Select **Publish** to publish the customizations.
 
 
-## Why I can't assign or delete an activity from the timeline
+## Why I can't assign or delete an activity from the timeline?
 
 If you use the **HideCustomActions** rule to hide the buttons, such as **Assign** and **Delete** in the ribbon command bar definition, then those buttons that are present in the Timeline control will not work. The buttons in the command bar is same as in the timeline control and hence, when a user selects the assign or delete button in the timeline control, an error message is displayed.
 
