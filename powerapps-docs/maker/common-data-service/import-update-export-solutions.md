@@ -54,6 +54,6 @@ search.app:
 <a name="BKMK_UpdateSolutions"></a>   
 
 ### See also
-[Update solutions](update-solutions.md) 
+[Update solutions](update-solutions.md) <br />
 [Export solutions](export-solutions.md)
 

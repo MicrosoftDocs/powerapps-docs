@@ -58,6 +58,6 @@ There are times when you may wish to install an update to an existing managed so
 <a name="BKMK_ExportSolutions"></a>   
 
 ### See also
-[Export solutions](export-solutions.md) 
-[Distribute solutions and patches](use-segmented-solutions-patches-simplify-updates.md) 
+[Export solutions](export-solutions.md) <br />
+[Distribute solutions and patches](use-segmented-solutions-patches-simplify-updates.md) <br />
 [Import solutions](import-update-export-solutions.md)
