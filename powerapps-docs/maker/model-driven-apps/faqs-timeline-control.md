@@ -94,3 +94,5 @@ To mitigate the issue, unhide the buttons in the command bar definitions.
 [Set up timeline control](set-up-timeline-control.md)
 
 [Timeline section in the Customer Service Hub app](https://docs.microsoft.com/dynamics365/customer-service/customer-service-hub-user-guide-basics#timeline)
+
+[Add an appointment, email, phone call, note, or task activity to the timeline](../../user/add-activities.md)
