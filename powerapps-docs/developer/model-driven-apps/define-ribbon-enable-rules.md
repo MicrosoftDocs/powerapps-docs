@@ -136,7 +136,7 @@ function EnableRule()
  Uses the `<OrRule>` element. The `OrRule` lets you override the default AND comparison for multiple enable rule types. Use the `OrRule` element to define several possible valid combinations to check.
 
 ### Outlook Item Tracking Rule
- Uses the `<OutlookItemTrackingRule>` element. Use the `TrackedInCrm` attribute for this element to determine whether the record is being tracked in PowerApps.  
+ Uses the `<OutlookItemTrackingRule>` element. Use the `TrackedInCrm` attribute for this element to determine whether the record is being tracked in Power Apps.  
 
 ### Outlook Version Rule
  Uses the `<OutlookVersionRule>` element. Use this to enable a ribbon element for a specific version of [!INCLUDE[pn_MS_Outlook_Full](../../includes/pn-ms-outlook-full.md)] as follows:  

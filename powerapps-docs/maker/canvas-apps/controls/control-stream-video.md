@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Microsoft Stream video control in PowerApps
+# Microsoft Stream video control in Power Apps
 A video player for Microsoft Stream videos and channels.
 
 ## Description

@@ -1,5 +1,5 @@
 ---
-title: Use Cognitive Services in PowerApps | Microsoft Docs
+title: Use Cognitive Services in Power Apps | Microsoft Docs
 description: Build a basic canvas app that uses the Azure Cognitive Services Text Analytics API to analyze text.
 author: lancedMicrosoft
 manager: kvivek
@@ -14,11 +14,11 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Use Cognitive Services in PowerApps
+# Use Cognitive Services in Power Apps
 This article shows you how to build a basic canvas app that uses the [Azure Cognitive Services Text Analytics API](https://docs.microsoft.com/azure/cognitive-services/text-analytics/overview) to analyze text. We'll show you how to set up the Text Analytics API, and connect to it with the [Text Analytics connector](https://docs.microsoft.com/connectors/cognitiveservicestextanalytics/). Then we'll show you how to create a canvas app that calls the API.
 
 > [!NOTE]
-> If you are new to building apps in PowerApps, we recommend reading [Create an app from scratch](get-started-create-from-blank.md) before diving into this article.
+> If you are new to building apps in Power Apps, we recommend reading [Create an app from scratch](get-started-create-from-blank.md) before diving into this article.
 
 ## Introduction to Azure Cognitive Services
 Azure Cognitive Services are a set of APIs, SDKs, and services available to make your applications more intelligent, engaging, and discoverable. These services enable you to easily add intelligent features – such as emotion and video detection; facial, speech and vision recognition; and speech and language understanding – into your applications.
@@ -60,16 +60,16 @@ The API is available as a free preview, and it is associated with an Azure subsc
     ![API keys](./media/cognitive-services-api/azure-keys.png)
 
 ## Build the app
-Now that you have the Text Analytics API up and running, you connect to it from PowerApps, and build an app that calls the API. This is a single screen app that provides functionality similar to the demo on the Text Analytics API page. Let's get started on building this!
+Now that you have the Text Analytics API up and running, you connect to it from Power Apps, and build an app that calls the API. This is a single screen app that provides functionality similar to the demo on the Text Analytics API page. Let's get started on building this!
 
 ### Create the app and add a connection
-First, you create a blank phone app and add a connection with the **Text Analytics** connector. If you need more information about these tasks, see [Create an app from scratch](get-started-create-from-blank.md) and [Manage your connections in PowerApps](add-manage-connections.md).
+First, you create a blank phone app and add a connection with the **Text Analytics** connector. If you need more information about these tasks, see [Create an app from scratch](get-started-create-from-blank.md) and [Manage your connections in Power Apps](add-manage-connections.md).
 
 1. In [powerapps.com](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), choose **Start from blank** > ![Phone app icon](./media/cognitive-services-api/icon-phone-app.png) (phone) > **Make this app**.
 
     ![Start from blank](./media/cognitive-services-api/start-from-blank.png)
 
-2. In the middle pane of the PowerApps Studio, choose **connect to data**.
+2. In the middle pane of the Power Apps Studio, choose **connect to data**.
 
 3. On the **Data** panel, click or tap **New connection** > **Text Analytics**.
 

@@ -37,7 +37,7 @@ There are two designers you can use to create and edit 1:N (one-to-many) or N:1 
 
 |Designer| Description|
 |--|--|
-|[PowerApps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)|Provides an easy streamlined experience, but some special settings are not available.<br />More information: [Create Many-to-many entity relationships in Common Data Service using PowerApps portal](create-edit-nn-relationships-portal.md)|
+|[Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)|Provides an easy streamlined experience, but some special settings are not available.<br />More information: [Create Many-to-many entity relationships in Common Data Service using Power Apps portal](create-edit-nn-relationships-portal.md)|
 |Solution explorer|Not as easy, but provides for more flexibility for less common requirements.<br />More information: [Create N:N (many-to-many) entity relationships in Common Data Service using solution explorer](create-edit-nn-relationships-solution-explorer.md) |
 
 > [!NOTE]
@@ -47,7 +47,7 @@ There are two designers you can use to create and edit 1:N (one-to-many) or N:1 
 
 Information in this topic will help you choose which designer you can use. 
 
-You should use the PowerApps portal to create and edit Many-to-many (N:N) entity relationships unless you need to address any of the following requirements:
+You should use the Power Apps portal to create and edit Many-to-many (N:N) entity relationships unless you need to address any of the following requirements:
 
 - Configure navigation pane options for model-driven apps.
 - Hide the relationship from Advanced find in model-driven apps.
@@ -55,7 +55,7 @@ You should use the PowerApps portal to create and edit Many-to-many (N:N) entity
 ## See also
 
 [Create and edit relationships between entities](create-edit-entity-relationships.md)<br />
-[Create Many-to-many entity relationships in Common Data Service using PowerApps portal](create-edit-nn-relationships-portal.md)<br />
+[Create Many-to-many entity relationships in Common Data Service using Power Apps portal](create-edit-nn-relationships-portal.md)<br />
 [Create N:N (many-to-many) entity relationships in Common Data Service using solution explorer](create-edit-nn-relationships-solution-explorer.md)<br />
 [Developer documentation: Customize entity relationship metadata](https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-entity-relationship-metadata)<br />
 [Developer documentation: Entity relationship eligibility](https://docs.microsoft.com/dynamics365/customer-engagement/developer/entity-relationship-eligibility)

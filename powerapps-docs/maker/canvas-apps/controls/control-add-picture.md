@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Add picture control in PowerApps
+# Add picture control in Power Apps
 Takes a photo or loads images from the local device.
 
 ## Description

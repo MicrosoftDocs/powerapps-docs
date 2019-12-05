@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Screen control in PowerApps
+# Screen control in Power Apps
 
 A UI element that contains one or more other controls in an app.
 

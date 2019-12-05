@@ -1,6 +1,6 @@
 ---
 title: Day, Month, Year, Hour, Minute, Second, and Weekday functions | Microsoft Docs
-description: Reference information, including syntax and examples, for the Day, Month, Year, Hour, Minute, Second, and Weekday functions in PowerApps
+description: Reference information, including syntax and examples, for the Day, Month, Year, Hour, Minute, Second, and Weekday functions in Power Apps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Day, Month, Year, Hour, Minute, Second, and Weekday functions in PowerApps
+# Day, Month, Year, Hour, Minute, Second, and Weekday functions in Power Apps
 Returns individual components of a Date/Time value.
 
 ## Description

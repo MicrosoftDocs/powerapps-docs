@@ -53,7 +53,7 @@ As the image above shows, the browser window opens with four sections. The code 
 
 ## Watch mode in test harness
 
-The test harness supports the `watch` mode, which you can take advantage of for PowerApps component framework projects. To enable `watch` mode, start the test harness using the command `npm start watch`. In `watch` mode, the changes made to any of the following component assets are automatically reflected in the test harness without having to restart it:
+The test harness supports the `watch` mode, which you can take advantage of for Power Apps component framework projects. To enable `watch` mode, start the test harness using the command `npm start watch`. In `watch` mode, the changes made to any of the following component assets are automatically reflected in the test harness without having to restart it:
 
 1.	`index.ts` file.
 2.	`ControlManifest.Input.xml` file.
@@ -87,5 +87,5 @@ Use the Fiddler AutoResponder to debug your code components quickly. Install [Fi
 
 ### Related topics
 
-[PowerApps component framework API reference](reference/index.md)<br/>
-[PowerApps component framework overview](overview.md)
+[Power Apps component framework API reference](reference/index.md)<br/>
+[Power Apps component framework overview](overview.md)

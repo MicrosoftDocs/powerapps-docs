@@ -33,7 +33,7 @@ To follow the steps in this tutorial exactly, first create an Excel file using t
     | Sunday | noon-2pm |Singh |Morgan |
     | Sunday | 2pm-4pm |Batye |Nguyen |
 
-2. Format that data as a table, named **Schedule**, so that PowerApps can parse the information.
+2. Format that data as a table, named **Schedule**, so that Power Apps can parse the information.
 
     For more information, see [Format a table in Excel](how-to-excel-tips.md).
 
@@ -44,7 +44,7 @@ To follow the steps in this tutorial exactly, first create an Excel file using t
 
 ## Open a blank app
 
-1. Sign in to [PowerApps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
 1. Under **Make your own app**, select **Canvas app from blank**.
 
@@ -58,9 +58,9 @@ To follow the steps in this tutorial exactly, first create an Excel file using t
     > [!div class="mx-imgBorder"]
     >![Specify name and format of app](./media/get-started-create-from-blank/excel-demo.png)
 
-    PowerApps Studio creates a blank app for phones.
+    Power Apps Studio creates a blank app for phones.
 
-1. If the **Welcome to PowerApps Studio** dialog box opens, select **Skip**.
+1. If the **Welcome to Power Apps Studio** dialog box opens, select **Skip**.
 
 ## Connect to data
 
