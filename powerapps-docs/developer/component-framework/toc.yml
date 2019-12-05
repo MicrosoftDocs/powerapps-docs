@@ -1,4 +1,4 @@
-- name: PowerApps component framework
+- name: Power Apps component framework
   items: 
   - name: Overview
     href: overview.md
@@ -6,7 +6,7 @@
     href: custom-controls-overview.md
   - name: Code components for canvas apps
     href: component-framework-for-canvas-apps.md
-  - name: Get PowerApps CLI
+  - name: Get Power Apps CLI
     href: get-powerapps-cli.md
   - name: Tutorial
     items:
@@ -66,7 +66,7 @@
       href: sample-controls/webapi-control.md
   - name: Reference
     items:
-    - name: PowerApps component framework 
+    - name: Power Apps component framework 
       href: reference/index.md
       items: 
       - name: Client

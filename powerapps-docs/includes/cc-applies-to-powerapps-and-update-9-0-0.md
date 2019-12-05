@@ -1,1 +1,1 @@
-Applies to PowerApps and Dynamics 365 (online), version 9.x
+Applies to Power Apps and Dynamics 365 (online), version 9.x

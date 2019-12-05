@@ -15,4 +15,4 @@ applies_to:
 ms.assetid: ba6d60a5-671a-4006-984a-0149f8649432
 ---
 
-Provides all the properties and methods available in the PowerApps component framework.
+Provides all the properties and methods available in the Power Apps component framework.

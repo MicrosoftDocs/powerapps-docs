@@ -1,6 +1,6 @@
 ---
 title: "Delete a model-driven app | MicrosoftDocs"
-description: "Learn how to delete or remove a model-driven app from your PowerApps environment."
+description: "Learn how to delete or remove a model-driven app from your Power Apps environment."
 keywords: ""
 ms.date: 10/08/2019
 ms.service: powerapps
@@ -32,7 +32,7 @@ Delete or remove apps that are obsolete in your environment.
 > [!IMPORTANT]
 > If the model-driven app was installed in the default solution as part of a managed solution, see [Delete a model-driven app that was installed as part of a managed solution](#delete-a-model-driven-app-that-was-installed-as-part-of-a-managed-solution).
 
-1. Sign in to [PowerApps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 2. On the left navigation, select **Apps**. 
 3. Select the app that you want to delete, and then select **Delete** on the command bar.
 4. In the confirmation message that appears, select **Delete**.
@@ -49,7 +49,7 @@ To delete a model-driven app that was installed in the environment as part of a 
 
 ### Delete a managed solution 
 All the components of a managed solution are deleted by deleting the solution.
-1.	Sign in to [PowerApps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). 
+1.	Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). 
 2.	On the left navigation, select **Solutions**.
 3.	In the **Solutions** list, select the managed solution you want to delete and then on the toolbar select **Delete**. 
 

@@ -1,6 +1,6 @@
 ---
 title: Text function | Microsoft Docs
-description: Reference information, including syntax and examples, for the Text function in PowerApps
+description: Reference information, including syntax and examples, for the Text function in Power Apps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -14,14 +14,14 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Text function in PowerApps
+# Text function in Power Apps
 Converts any value and formats a number or date/time value to a string of text.
 
 ## Description
 The **Text** function formats a number or a date/time value based on one of these types of arguments:
 
 * A predefined date/time format, which you specify by using the **DateTimeFormat** enumeration. For dates and times, this approach is preferred as it automatically adjusts to each user's language and region.
-* A custom format, which comprises a string of placeholders that define, for example, whether numbers show a decimal separator and dates show the full name of the month, the month as an abbreviation, or the month as a number. PowerApps supports a subset of the placeholders that Microsoft Excel does. In this string, the language placeholder specifies the language in which to interpret the other placeholders. If the custom format includes a period, for example, the language-format placeholder specifies whether the period is a decimal separator (ja-JP) or a thousands separator (es-ES).
+* A custom format, which comprises a string of placeholders that define, for example, whether numbers show a decimal separator and dates show the full name of the month, the month as an abbreviation, or the month as a number. Power Apps supports a subset of the placeholders that Microsoft Excel does. In this string, the language placeholder specifies the language in which to interpret the other placeholders. If the custom format includes a period, for example, the language-format placeholder specifies whether the period is a decimal separator (ja-JP) or a thousands separator (es-ES).
 
 See [working with dates and times](../show-text-dates-times.md) for more information.
 

@@ -45,7 +45,7 @@ Every entity in Common Data Service includes an **Owner** field. This field can'
 
 To show that field in the **Account** entity:
 
-1. Open [this PowerApps site](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1. Open [this Power Apps site](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 1. In the left navigation bar, select **Data** > **Entities**.
 1. In the list of entities, select **Account**.
 1. In the upper-right corner, open the filter list (which is set to **Default** by default), and then select **All**.

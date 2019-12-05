@@ -1,5 +1,5 @@
 ---
-title: "Define calculated fields in PowerApps | MicrosoftDocs"
+title: "Define calculated fields in Power Apps | MicrosoftDocs"
 description: "Learn how to define calculated fields"
 ms.custom: ""
 ms.date: 05/25/2018
@@ -27,7 +27,7 @@ search.app:
 
 Use calculated fields to automate manual calculations used in your business processes. 
 
-For example, a salesperson may want to know the weighted revenue for an opportunity which is based on the estimated revenue from an opportunity multiplied by the probability. Or, they want to automatically apply a discount, if an order is greater than $500. A calculated field can contain values resulting from simple math operations, or conditional operations, such as greater than or if-else, and many others. You can accomplish all this by using PowerApps, no need to write code.  
+For example, a salesperson may want to know the weighted revenue for an opportunity which is based on the estimated revenue from an opportunity multiplied by the probability. Or, they want to automatically apply a discount, if an order is greater than $500. A calculated field can contain values resulting from simple math operations, or conditional operations, such as greater than or if-else, and many others. You can accomplish all this by using Power Apps, no need to write code.  
   
 ## Capabilities
   
@@ -54,9 +54,9 @@ For example, a salesperson may want to know the weighted revenue for an opportun
 
 ## Create a calculated field
 
-Use the field editor to specify a calculated field. In this example we will use [PowerApps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) but the steps are similar using solution explorer. More information: [Create and edit fields](create-edit-fields.md)
+Use the field editor to specify a calculated field. In this example we will use [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) but the steps are similar using solution explorer. More information: [Create and edit fields](create-edit-fields.md)
   
-1. Open [PowerApps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)
+1. Open [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)
 1. Expand **Data** > **Entities**.  
 1. Select the entity you want and choose **Fields**. Choose **Add Field**.  
 1. Provide the required information for the field, including the **Display name**, **Name** and **Data type**. 

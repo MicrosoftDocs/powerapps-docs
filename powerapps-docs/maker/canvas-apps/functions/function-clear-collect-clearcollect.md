@@ -1,6 +1,6 @@
 ---
 title: Collect, Clear, and ClearCollect functions | Microsoft Docs
-description: Reference information, including syntax and examples, for the Collect, Clear, and ClearCollect functions in PowerApps
+description: Reference information, including syntax and examples, for the Collect, Clear, and ClearCollect functions in Power Apps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Collect, Clear, and ClearCollect functions in PowerApps
+# Collect, Clear, and ClearCollect functions in Power Apps
 
 Creates and clears [collections](../working-with-data-sources.md#collections) and adds [records](../working-with-tables.md#records) to any [data source](../working-with-data-sources.md).
 
@@ -32,7 +32,7 @@ When used with a collection, additional [columns](../working-with-tables.md#colu
 
 If the data source doesn't already exist, a collection is created.
 
-Collections are sometimes used to hold global variables or make a temporary copy of a data source. PowerApps are based on formulas that automatically recalculate as the user interacts with an app. Collections do not enjoy this benefit and their use can make your app harder to create and understand. Before using a collection in this manner, review [working with variables](../working-with-variables.md).
+Collections are sometimes used to hold global variables or make a temporary copy of a data source. Power Apps are based on formulas that automatically recalculate as the user interacts with an app. Collections do not enjoy this benefit and their use can make your app harder to create and understand. Before using a collection in this manner, review [working with variables](../working-with-variables.md).
 
 You can also use the **[Patch](function-patch.md)** function to create records in a data source.
 

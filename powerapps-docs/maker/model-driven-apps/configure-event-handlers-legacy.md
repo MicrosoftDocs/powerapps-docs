@@ -1,5 +1,5 @@
 ---
-title: Configure event handlers for model-driven app Main forms in PowerApps | MicrosoftDocs
+title: Configure event handlers for model-driven app Main forms in Power Apps | MicrosoftDocs
 description: Understand how to configure event handlers
 author: Mattp123
 ms.author: matp
@@ -16,7 +16,7 @@ search.app:
 ---
 # Configure model-driven app form event handlers
 
- Form event handlers for PowerApps forms can be configured for the following areas in a form:  
+ Form event handlers for Power Apps forms can be configured for the following areas in a form:  
   
 |Element|Event|Description|  
 |-------------|-----------|-----------------|  

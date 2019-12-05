@@ -1,6 +1,6 @@
 ---
 title: "Developers: Get started with Common Data Service | Microsoft Docs"
-description: Learn how developers can add value using Common Data Service in PowerApps.
+description: Learn how developers can add value using Common Data Service in Power Apps.
 suite: powerapps
 author: JimDaly
 manager: ryjones
