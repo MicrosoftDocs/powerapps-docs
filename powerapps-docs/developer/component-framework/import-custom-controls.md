@@ -95,7 +95,7 @@ After you have successfully created an authentication profile, you can start pus
    > [!NOTE]
    > The publisher prefix that you use with the `push` command should match the publisher prefix of your solution in which the components will be included.
 
-## How to create a solution project based on an existing solution in Common Data Service
+## Create a solution project based on an existing solution in Common Data Service
 
 To create a solution project based on an existing solution in Common Data Service, run the command `pac solution clone`. To do so:
 
@@ -108,7 +108,7 @@ To create a solution project based on an existing solution in Common Data Servic
 
 More information: [Settings options](https://docs.microsoft.com/dotnet/api/microsoft.crm.sdk.messages.exportsolutionrequest?view=dynamics-general-ce-9)
 
-## How to create a plug-in project and add a reference to it in your solution 
+## Create a plug-in project and add a reference to it in your solution 
 
 Power Apps CLI now supports creating a plug-in project and packaging it in a solution by adding a reference to the plug-in project. The `pac plugin init` command creates the template files (csproj, Plugin.cs & ServiceHelper.cs) in the directory. To do so: 
 
@@ -136,7 +136,7 @@ Power Apps CLI now supports creating a plug-in project and packaging it in a sol
     msbuild
     ```
 
-## How to remove components from a solution
+## Remove components from a solution
 
 If you want to remove a code component from a solution file:
 
