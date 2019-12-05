@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Optimize canvas-app performance in PowerApps
+# Optimize canvas-app performance in Power Apps
 Microsoft is working hard to improve the performance of all apps that run on the Power Apps platform. 
 But you can follow the best practices in this topic to boost the performance of apps that you create.
 
@@ -103,7 +103,7 @@ As [this list](delegation-list.md) shows, different data sources support delegat
 
 ![Use delegation](./media/performance-tips/perfdelegation1.png)
 
-For example, SharePoint lists support delegation from the [**Filter**](functions/function-filter-lookup.md) function but not the [**Search**](functions/function-filter-lookup.md) function. So you should use **Filter** instead of **Search** to find items in a gallery if the SharePoint list contains more than 500 items. For more tips, see [Working with large SharePoint lists in PowerApps](https://powerapps.microsoft.com/blog/powerapps-now-supports-working-with-more-than-256-items-in-sharepoint-lists/) (blog post). 
+For example, SharePoint lists support delegation from the [**Filter**](functions/function-filter-lookup.md) function but not the [**Search**](functions/function-filter-lookup.md) function. So you should use **Filter** instead of **Search** to find items in a gallery if the SharePoint list contains more than 500 items. For more tips, see [Working with large SharePoint lists in Power Apps](https://powerapps.microsoft.com/blog/powerapps-now-supports-working-with-more-than-256-items-in-sharepoint-lists/) (blog post). 
 
 ## Use Delayed Load
 Turn on the [experimental feature](working-with-experimental.md) for Delayed Load if your app has more than 10 screens, no rules, and many controls that are on multiple screens and that are directly bound to the data source. If you build this type of app and don’t enable this feature, app performance may suffer because the controls in all screens must be populated even on screens that aren’t open. Also, all screens of the app must be updated whenever the data source changes, such as when the user adds a record.

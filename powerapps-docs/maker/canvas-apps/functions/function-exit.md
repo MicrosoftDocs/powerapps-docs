@@ -1,6 +1,6 @@
 ---
 title: Exit function | Microsoft Docs
-description: Reference information, including syntax and examples, for the Exit function in PowerApps
+description: Reference information, including syntax and examples, for the Exit function in Power Apps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Exit function in PowerApps
+# Exit function in Power Apps
 Exits the currently running app.
 
 ## Description

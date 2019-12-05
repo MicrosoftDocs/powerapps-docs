@@ -1,6 +1,6 @@
 ---
 title: Trim and TrimEnds functions | Microsoft Docs
-description: Reference information, including syntax and an example, for the Trim and TrimEnds functions in PowerApps
+description: Reference information, including syntax and an example, for the Trim and TrimEnds functions in Power Apps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Trim and TrimEnds functions in PowerApps
+# Trim and TrimEnds functions in Power Apps
 Removes extra spaces from a string of text.
 
 ## Description

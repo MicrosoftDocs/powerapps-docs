@@ -1,6 +1,6 @@
 ---
 title: System requirements, limits, and configuration values for canvas apps | Microsoft Docs
-description: System requirements, limits, and configuration values for canvas apps built in PowerApps
+description: System requirements, limits, and configuration values for canvas apps built in Power Apps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -15,7 +15,7 @@ search.app:
   - PowerApps
 ---
 # System requirements, limits, and configuration values for canvas apps
-This topic contains device platform and web browser requirements, as well as limits and configuration values for PowerApps.
+This topic contains device platform and web browser requirements, as well as limits and configuration values for Power Apps.
 
 ## Supported platforms for running canvas apps using the Power Apps app
 
@@ -109,27 +109,4 @@ You can find information about size limits on text, hyperlinks, images, and medi
 
 ## Power Apps per app plan
 
-Power Apps per app plan allows individual users to run 2 applications on a single portal for a specific business scenario based on the full capabilities of Power Apps. This plan provides an easy way for users to get started with the platform before broader scale adoption.
-
-After an admin allocates Power Apps per app plan to an environment, they're assigned to unlicensed users when an app in that environment is shared with them. You can see how an admin allocates per app plans [here](https://docs.microsoft.com/power-platform/admin/capacity-add-on).
-
-Follow these steps to turn off the assigning per app plans for users when an app is shared with them:
-
-- Choose the **App**.
-- Select **Settings**.
-- Change the **Auto assign per app passes** toggle under **Pass assignment**.
-
-The **Auto assign per app passes** toggle appears in all app setting.
-
-> [!NOTE]
-> Disabling the per app plan is currently available for only canvas apps.  Model-driven apps and Portals will have this ability in the future.
->
-> The ability to control per app plan assignment for an app is only available for apps that are in an environment that had Per app plans allocated in the [Power Platform Admin center](https://admin.powerplatform.microsoft.com).  
-
-### App Settings
-
-![Canvas app settings](./media/limits-and-config/app_settings.png "Canvas app settings")
-
-### Pass assignment
-
-![Canvas app settings pass assignment](./media/limits-and-config/app_settings_pass_assignment.png "Canvas app settings pass assignment")
+The information is now available in [Power Apps per app plan](/power-platform/admin/signup-for-powerapps-admin#power-apps-per-app-plan) section in the Power Platform admin guide.

@@ -154,7 +154,7 @@ We have covered a huge amount of ground in this series of tutorials, from buildi
 
 That brings us to the conclusion of our end-to-end walkthrough and this series of tutorials. We encourage you to continue your journey at the following sites:
 
-* [PowerApps](https://www.powerapps.com/)
+* [Power Apps](https://www.powerapps.com/)
 * [Power Automate](https://flow.microsoft.com)
 * [Power BI](https://www.powerbi.com)
 * [Power Users Community](https://powerusers.microsoft.com/)

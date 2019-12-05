@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Customize a canvas-app form in PowerApps
+# Customize a canvas-app form in Power Apps
 
 In a canvas app, customize a **Display form** control and an **Edit form** control so that they show the data that matters most and in the most intuitive order to help users easily understand and update the data.
 
@@ -28,7 +28,7 @@ If you're unfamiliar with canvas-pps, see [What are canvas apps?](getting-starte
 
 ## Show and hide cards
 
-1. Sign in to [PowerApps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then open the app that you generated and customized.
+1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then open the app that you generated and customized.
 
 1. In the left navigation bar, type or paste **D** in the search bar to filter the list of elements, and then select **DetailForm1**.
 

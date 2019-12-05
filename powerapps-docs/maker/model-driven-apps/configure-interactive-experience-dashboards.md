@@ -1,6 +1,6 @@
 ---
 title: "Configure model-driven app interactive experience dashboards in Power Apps | Microsoft Docs"
-description: "Know how to configure interactive experience dashboards in PowerApps"
+description: "Know how to configure interactive experience dashboards in Power Apps"
 keywords: Interactive dashboards; Customer Service; Microsoft Dynamics 365; Interactive service hub
 author: Mattp123
 ms.author: matp
@@ -144,7 +144,7 @@ The following illustration shows the flyout dialog with the list of the availabl
   
 ### Configure a multi-stream interactive dashboard using the 4-column layout  
  
-1.	Sign in to [PowerApps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). 
+1.	Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). 
   
 2.  Select **Data** > **Entities** > select the entity you want. 
 
@@ -198,7 +198,7 @@ The following illustration is an example of a fully configured chart panel and s
   
 #### Edit or delete individual streams of an existing dashboard  
   
-1. Sign in to [PowerApps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).   
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).   
   
 2. Select **Data** > **Entities** > select the entity you want. Select the **Dashboards** tab.  
   
@@ -221,7 +221,7 @@ The following illustration is an example of a fully configured chart panel and s
 
 For example, instead of selecting an entity, some fields in the entity-specific dashboard are preset to the entity for which you are creating the dashboard.  
   
-1.	Sign in to [PowerApps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1.	Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
 2.  Select **Data** > **Entities** > select the entity you want. 
 

@@ -1,6 +1,6 @@
 ---
 title: "Create a card form with Power Apps | MicrosoftDocs"
-description: "Learn how to create and use card forms in PowerApps"
+description: "Learn how to create and use card forms in Power Apps"
 keywords: ""
 ms.date: 03/05/2019
 ms.service: powerapps
@@ -34,14 +34,14 @@ Card forms are used in views for Unified Interface apps. Card forms are designed
 Although card forms can be created and edited in the same way as other form types, card forms are added to apps differently. Instead of adding a form as an app component, custom card forms are added to views by using the **Read Only Grid** control. 
 
 ## Create a card form
-1. To create a card form, sign in to [PowerApps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). 
+1. To create a card form, sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). 
 2. Expand **Data**, select **Entities**, select the entity you want, and then select the **Forms** tab.
 3. On the toolbar select **Add form**, and then select **Card form**. Alternatively, you can open an existing **Form type** that's a **Card** form to edit it.
 4. Add the fields that you want. We recommend that you limit the number of fields so that the form displays well on small screens. 
 5. Select **Save** and then select **Publish**. 
 
 ## Add a card form to a view 
-1. Sign in to [PowerApps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 2. Expand **Data**, select the entity you want, and then select the **Views** tab.
 3. Select the view that you want, and then on the view designer toolbar, select **Switch to classic**.
 4. Select **Custom Controls** from the **Common Tasks** pane.

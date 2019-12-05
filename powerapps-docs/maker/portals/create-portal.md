@@ -1,6 +1,6 @@
 ---
 title: Create a portal in Power Apps | Microsoft Docs
-description: Instructions to create a portal in PowerApps.
+description: Instructions to create a portal in Power Apps.
 author: sbmjais
 manager: shujoshi
 ms.service: powerapps
@@ -29,13 +29,16 @@ If you choose to create your portal in an existing environment without portal pr
 
 Based on the selected environment in Power Apps, you can create a Common Data Service starter portal or a portal in an environment containing model-driven apps in Dynamics 365.
 
-More information on working with environments: [Working with environments and Microsoft PowerApps](https://docs.microsoft.com/powerapps/maker/canvas-apps/working-with-environments)
+> [!NOTE]
+> When you create a portal, a few solutions are installed and sample data is imported.
+
+More information on working with environments: [Working with environments and Microsoft Power Apps](https://docs.microsoft.com/powerapps/maker/canvas-apps/working-with-environments)
 
 More information on available portal templates: [Portal templates](portal-templates.md)
 
 To create a portal:
 
-1.  Sign in to [PowerApps](https://make.powerapps.com).  
+1.  Sign in to [Power Apps](https://make.powerapps.com).  
 
 2.  Under **Make your own app**, select **Portal from blank**.
 

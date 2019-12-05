@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Generate a canvas app from Excel in PowerApps
+# Generate a canvas app from Excel in Power Apps
 
 In this topic, you'll automatically generate your first canvas app in Power Apps using data from an Excel table. You'll select an Excel file, generate an app, and then run the app that you generate. Every generated app includes screens to browse records, show record details, and create or update records. By generating an app, you can quickly get a working app using Excel data, and then you can customize the app to better suit your needs. 
 
@@ -31,7 +31,7 @@ To follow this topic exactly, download the [Flooring Estimates](https://az787822
 
 ## Generate the app
 
-1. Sign in to [PowerApps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
 1. Under **Make your own app**, hover over **Start from data**, and then select **Make this app**.
 

@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Button control in PowerApps
+# Button control in Power Apps
 A control that the user can click or tap to interact with the app.
 
 ## Description

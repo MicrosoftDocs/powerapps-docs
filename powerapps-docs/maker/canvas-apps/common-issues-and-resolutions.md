@@ -1,6 +1,6 @@
 ---
 title: Common issues and resolutions for Power Apps | Microsoft Docs
-description: A list of common issues and resolutions within PowerApps.
+description: A list of common issues and resolutions within Power Apps.
 author: KumarVivek
 manager: kvivek
 ms.service: powerapps
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Common issues and resolutions for PowerApps
+# Common issues and resolutions for Power Apps
 
 This article lists some common issues that you might encounter while using Power Apps. Where applicable, workarounds are provided.
 
@@ -79,7 +79,7 @@ This article lists some common issues that you might encounter while using Power
 
 1. **Release 2.0.700 on Android devices**
 
-    If you install release 2.0.700 on an Android device and then can't open apps (or an app stops responding), uninstall Power Apps, restart the device, and then reinstall PowerApps.
+    If you install release 2.0.700 on an Android device and then can't open apps (or an app stops responding), uninstall Power Apps, restart the device, and then reinstall Power Apps.
 
 1. **"Empty" gallery when opening an app**
 

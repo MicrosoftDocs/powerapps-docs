@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Using multimedia files in PowerApps
+# Using multimedia files in Power Apps
 
 This topic shows you how to embed multimedia files in your canvas app, upload pen drawings to a data source, and show images from a data source in your canvas app. The data source used in this topic is an Excel file in OneDrive for Business.
 

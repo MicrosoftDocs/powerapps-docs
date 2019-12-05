@@ -1,6 +1,6 @@
 ---
 title: Set function | Microsoft Docs
-description: Reference information, including syntax and examples, for the Set function in PowerApps
+description: Reference information, including syntax and examples, for the Set function in Power Apps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Set function in PowerApps
+# Set function in Power Apps
 Sets the value of a global variable.
 
 ## Overview

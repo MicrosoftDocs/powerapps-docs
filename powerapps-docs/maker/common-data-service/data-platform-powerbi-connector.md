@@ -28,7 +28,7 @@ To use Power BI with the Common Data Service, you need the following:
 
 ## Finding your Common Data Service Environment URL
 
-1. Open [PowerApps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select the environment you're going to connect to and click the **settings gear** in the top right corner, and click **Advanced customizations**
+1. Open [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select the environment you're going to connect to and click the **settings gear** in the top right corner, and click **Advanced customizations**
 
     ![Common Data Service Environment](./media/data-platform-cds-powerbi-connector/CDSEnv1.png "Common Data Service Environment")
 

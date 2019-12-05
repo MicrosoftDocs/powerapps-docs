@@ -28,8 +28,8 @@ Standard and custom entities within Common Data Service provide a secure and clo
 
 * **Easy to manage** &ndash; Both the metadata and data are stored in the cloud. You don't need to worry about the details of how they're stored.
 * **Easy to secure** &ndash; Data is securely stored so that users can see it only if you grant them access. Role-based security allows you to control access to entities for different users within your organization.
-* **Access your Dynamics 365 Data** &ndash; Data from your Dynamics 365 applications is also stored within the Common Data Service allowing you to quickly build apps which leverage your Dynamics 365 data and extend your apps using PowerApps.
-* **Rich metadata** &ndash; Data types and relationships are leveraged directly within PowerApps.
+* **Access your Dynamics 365 Data** &ndash; Data from your Dynamics 365 applications is also stored within the Common Data Service allowing you to quickly build apps which leverage your Dynamics 365 data and extend your apps using Power Apps.
+* **Rich metadata** &ndash; Data types and relationships are leveraged directly within Power Apps.
 * **Logic and validation** &ndash; Define calculated fields, business rules, workflows, and business process flows to ensure data quality and drive business processes.
 * **Productivity tools** &ndash; Entities are available within the add-ins for Microsoft Excel to increase productivity and ensure data accessibility.
 
@@ -39,7 +39,7 @@ Dynamics 365 applications, such as Dynamics 365 Sales, Dynamics 365 Customer Ser
 
 * **Build Apps against your Dynamics 365 Data** &ndash; Build apps quickly against your business data within Power Apps or using the Pro Developer SDK.
 * **Manage reusable Business logic and rules** &ndash; Business Rules and logic already defined in your Dynamics 365 entities are applied to your Power Apps to ensure data consistency regardless of how your users are accessing the data or through which app.
-* **Reusable skills across Dynamics 365 and PowerApps** &ndash; Users with skills previously in Power Apps or Dynamics 365 can now leverage those skills across the Common Data Service platform. Creating entities, forms, charts, etc are now common across your applications.
+* **Reusable skills across Dynamics 365 and Power Apps** &ndash; Users with skills previously in Power Apps or Dynamics 365 can now leverage those skills across the Common Data Service platform. Creating entities, forms, charts, etc are now common across your applications.
 
     > [!NOTE]
     > Finance and Operations apps currently requires the configuration of the [Data Integrator](/power-platform/admin/data-integrator) to make your business data from Finance and Operations apps available in Common Data Service.
@@ -48,7 +48,7 @@ Dynamics 365 applications, such as Dynamics 365 Sales, Dynamics 365 Customer Ser
 
 Building an app typically involves data from more than one source, while this can sometimes be done at the application level, there are also cases where integrating this data together into a common store allows for an easier app building experience, and a single set of logic to maintain and operate over the data. The Common Data Service allows data to be integrated from multiple sources into a single store which can then be used in Power Apps, Flow and Power BI along with data already available from the Dynamics 365 applications.
 
-* **Scheduled integration with other systems** &ndash; Data which is kept within another application can be regularly synchronized with the Common Data Service to allow you to leverage other applications data in PowerApps.
+* **Scheduled integration with other systems** &ndash; Data which is kept within another application can be regularly synchronized with the Common Data Service to allow you to leverage other applications data in Power Apps.
 * **Transform and import data using PowerQuery** &ndash; Transforming data when importing into the Common Data Service can be done through PowerQuery from many online data sources, a common tool used across Excel and Power BI.
 * **One time import of data** &ndash; Simple import and export of Excel and CSV files can be used for a one time or infrequent import of data into the Common Data Service.
 
@@ -76,7 +76,7 @@ Entities within Common Data Service can leverage rich server-side logic and vali
 Common Data Service has a rich security model to protect the data integrity and privacy of users while promoting efficient data access and collaboration. You can combine business units, role-based security, record-based security, and field-based security to define the overall access to information that users have in a Common Data Service environment. More information: [Security in Common Data Service](/power-platform/admin/wp-security) 
 
 ## Developer capabilities
-In addition to the features available through the [PowerApps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) portal, Common Data Service also includes features for developers to programmatically access metadata and data to create entities and business logic, as well as interact with data. For more information, see [Common Data Service Developer Overview](../../developer/common-data-service/overview.md)
+In addition to the features available through the [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) portal, Common Data Service also includes features for developers to programmatically access metadata and data to create entities and business logic, as well as interact with data. For more information, see [Common Data Service Developer Overview](../../developer/common-data-service/overview.md)
 
 ## Next steps
 To get started using Common Data Service:

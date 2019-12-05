@@ -12,7 +12,7 @@ ms.author: tapanm
 ms.reviewer:
 ---
 
-# Overview of creating apps in PowerApps
+# Overview of creating apps in Power Apps
 
 Power Apps is a high-productivity development platform for business apps, and it has four major components:
 

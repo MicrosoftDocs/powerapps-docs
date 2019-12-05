@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Combo box control in PowerApps
+# Combo box control in Power Apps
 A control that allows users to make selections from provided choices.  Supports search and multiple selections.
 
 ## Description

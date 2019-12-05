@@ -186,7 +186,7 @@ By default,	when an app user adds an image to display to a form or canvas app, t
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-1. Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
+1. Sign in to [Power Apps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 2.  Select **Data** > **Entities** and then select the entity where you want to add an image field. 
 3. Select **Add field** on the command bar, enter the following properties, and then select **Done**: 
    - **Display name**. Enter a friendly name for the field. 

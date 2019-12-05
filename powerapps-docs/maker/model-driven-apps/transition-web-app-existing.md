@@ -152,7 +152,7 @@ With your application showcasing the Unified Interface, you can start validating
 > The current version of Common Data Service and model-driven apps in Dynamics 365 still include several deprecated features. You should review your application for any deprecated features and replace as necessary with new capabilities. More information: [Important changes (deprecations) coming](/dynamics365/get-started/whats-new/customer-engagement/important-changes-coming)
 
 > [!TIP]
-> The Power Apps Checker tool assists in quality checking of your solution's components.  More information: [Use solution checker to validate your model-driven apps in PowerApps](../common-data-service/use-powerapps-checker.md)
+> The Power Apps Checker tool assists in quality checking of your solution's components.  More information: [Use solution checker to validate your model-driven apps in Power Apps](../common-data-service/use-powerapps-checker.md)
 
 ## Next steps
 Based on your findings, your implementation team or partner can estimate the amount of effort needed to transition your application into the Unified Interface and also identify potential usability improvements. With multiple new features and capabilities available in Unified Interface there is opportunity to increase value for your application users. 

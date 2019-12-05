@@ -1110,6 +1110,8 @@
   items:
     - name: What is Power Apps portals?
       href: ./portals/overview.md
+    - name: Release updates
+      href: ./portals/release-updates.md
     - name: Design and build a portal
       items:
         - name: Portal templates
@@ -1264,6 +1266,12 @@
               href: ./portals/configure/add-geolocation.md
         - name: Implement GDPR in portals
           href: ./portals/configure/implement-gdpr.md
+        - name: Create and run advertisements
+          href: ./portals/configure/create-run-advertisement.md
+        - name: Gather feedback by using polls
+          href: ./portals/configure/gather-feedback-poll.md
+        - name: Create and manage publishing states
+          href: ./portals/configure/publishing-states.md
     - name:  Advanced portal customization
       items:
         - name: Work with Liquid templates
@@ -1342,6 +1350,8 @@
       href: ./portals/known-issues.md
     - name: Power Apps portals FAQ
       href: ./portals/faq.md
+    - name: Legacy Adxstudio Portals v7 FAQ
+      href: ./portals/legacy-portal-faq.md
 - name: Common Data Service  
   items:
   - name: What is Common Data Service?

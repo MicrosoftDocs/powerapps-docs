@@ -1,6 +1,6 @@
 ---
 title: Choices function | Microsoft Docs
-description: Reference information, including syntax, for the Choices function in PowerApps
+description: Reference information, including syntax, for the Choices function in Power Apps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Choices function in PowerApps
+# Choices function in Power Apps
 Returns a table of the possible values for a lookup column.
 
 ## Description

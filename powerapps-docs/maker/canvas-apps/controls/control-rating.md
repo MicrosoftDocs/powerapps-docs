@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Rating control in PowerApps
+# Rating control in Power Apps
 A control with which users can indicate a value between 1 and a maximum number that you specify.
 
 ## Description

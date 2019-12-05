@@ -8,7 +8,7 @@ featureFlags:
 - clicktale
 ms.service: powerapps
 ms.custom:
- - powerapps-hub
+ - PowerApps-hub
 ---
 <div id="main"
    class="v2">

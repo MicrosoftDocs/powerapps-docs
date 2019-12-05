@@ -34,9 +34,9 @@ The principles of generating an app won't change even if you create a list that'
 > [!IMPORTANT]
 > Power Apps doesn't support all types of SharePoint data. For more information, see [Known issues](connections/connection-sharepoint-online.md#known-issues).
 
-## Generate an app from within PowerApps
+## Generate an app from within Power Apps
 
-1. Sign in to [PowerApps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
 1. Under **Make your own app**, hover over **Start from data**, and then select **Make this app**.
 

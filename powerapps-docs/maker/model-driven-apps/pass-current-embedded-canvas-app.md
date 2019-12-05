@@ -32,7 +32,7 @@ This topic explains how to add an embedded canvas app and pass the current (main
 
 Imagine that you want to add an embedded canvas app on an account main form and pass the current account record to the embedded canvas app. To do this, follow these steps: 
 
-1.	Sign in to [PowerApps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and open the form editor for a main form of an entity, such as the account entity. 
+1.	Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and open the form editor for a main form of an entity, such as the account entity. 
 2.	Select the section on the form where you want the embedded canvas app to appear.
 3.	Using the field explorer pane, add a required field, such as **Account Name**.
       > [!IMPORTANT]

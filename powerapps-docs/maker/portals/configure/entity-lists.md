@@ -157,7 +157,7 @@ Enabling a **Create Action** renders a button above the entity list that, when s
 | Button Label                                                                                                                                                                                                                 | Overrides the HTML label displayed in the Create action button above the list.                                                                                        |
 | Button Tooltip                                                                                                                                                                                                               | Overrides the tooltip text that appears when the user points to the Create action button.                                                                         |
 
-**Create Form dialog box avanced settings**
+**Create Form dialog box advanced settings**
 
 |**Name**               |**Description**                                                                                                                                 |
 |------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -320,7 +320,7 @@ Adding the ability to filter records on an entity list is easy: simply enable th
 
 **Enable the entity list filter**
 
-In the Metadata filter section, select the Enabled check box. This will add the Filter area to the entity list when it is displayed. Until you have defined at least one filter type, the box will appear empty.
+In the **Metadata Filter** section, select the **Enabled** check box. This will add the Filter area to the entity list when it is displayed. Until you have defined at least one filter type, the box will appear empty.
 
 You can define how the Filter area on the entity list will be rendered by using the Orientation setting. The default, Horizontal, renders the Filter area above the entity list. Vertical orientation renders the Filter area as a box to the left of the entity list.
 

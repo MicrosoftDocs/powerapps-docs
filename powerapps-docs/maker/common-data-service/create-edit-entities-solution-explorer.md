@@ -198,5 +198,5 @@ More information: [Create and edit virtual entities that contain data from an ex
 
 ### See also
 [Create and edit entities in Common Data Service](create-edit-entities.md)<br />
-[Tutorial: Create a custom entity that has components in PowerApps](/powerapps/maker/common-data-service/create-custom-entity)<br />
+[Tutorial: Create a custom entity that has components in Power Apps](/powerapps/maker/common-data-service/create-custom-entity)<br />
 [Create a solution](create-solution.md)

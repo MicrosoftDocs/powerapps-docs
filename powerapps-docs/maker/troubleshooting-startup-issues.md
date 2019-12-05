@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Troubleshooting startup issues for PowerApps
+# Troubleshooting startup issues for Power Apps
 
 This troubleshooting topic helps fix the following two common configuration problems that prevent Power Apps from starting:
 
