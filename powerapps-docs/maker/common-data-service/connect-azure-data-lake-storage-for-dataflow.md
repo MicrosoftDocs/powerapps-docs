@@ -2,7 +2,7 @@
 title: "Connect Azure Data Lake Storage Gen2 for dataflow storage | MicrosoftDocs"
 description: "Learn how to connect Azure Data Lake Storage Gen2 for dataflow storage"
 ms.custom: ""
-ms.date: 09/05/2019
+ms.date: 12/05/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -26,10 +26,10 @@ search.app:
 ---
 # Connect Azure Data Lake Storage Gen2 for dataflow storage
 
-> [!IMPORTANT]
-> Dataflow with Analytical entities feature utilizes the Export to data lake service, which may offer varying levels of compliance, privacy, security, and data location commitments. Please see the corresponding [technical documentation](https://go.microsoft.com/fwlink/?linkid=2109088) for the **Export to data lake** service for further details.
-
 You can configure dataflows to store their data in your organization’s Azure Data Lake Storage Gen2 account. This article describes the general steps necessary to do so, and provides guidance and best practices along the way. 
+
+> [!IMPORTANT]
+> Dataflow with Analytical entities feature utilizes the Export to data lake service, which may offer varying levels of compliance, privacy, security, and data location commitments. Please see the corresponding [blog article](https://go.microsoft.com/fwlink/?linkid=2109088) for the **Export to data lake** service for further details.
 
 There are some advantages to configuring dataflows to store their definitions and datafiles in your data lake, including the following:
 - Azure Data Lake Storage Gen2 provides an enormously scalable storage facility for data.
