@@ -1,7 +1,7 @@
 ---
 title: Create and build a code component| Microsoft Docs
-description: Start creating a component using the PowerApps component framework tooling
-keywords: PowerApps component framework, code components, Component Framework
+description: Start creating a component using the Power Apps component framework tooling
+keywords: Power Apps component framework, code components, Component Framework
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
@@ -15,11 +15,11 @@ ms.assetid: d2cbf58a-9112-45c2-b823-2c07a310714c
 
 # Create and build a code component
 
-This topic demonstrates how to create and deploy code components using PowerApps CLI. Ensure that you have installed [Microsoft PowerApps CLI](https://aka.ms/PowerAppsCLI).
+This topic demonstrates how to create and deploy code components using Power Apps CLI. Ensure that you have installed [Microsoft Power Apps CLI](https://aka.ms/PowerAppsCLI).
 
 ## Create a new component
 
-To begin, open **Developer Command Prompt for VS 2017** after installing PowerApps CLI.
+To begin, open **Developer Command Prompt for VS 2017** after installing Power Apps CLI.
 
 1. In the Developer Command Prompt for VS 2017, create a new folder on your local machine, for example, *C:\Users\your name\Documents\My_code_Component* using the command `mkdir <Specify the folder name>`.
 2. Go to the newly created folder using the command `cd <specify your new folder path>`.
@@ -28,7 +28,7 @@ To begin, open **Developer Command Prompt for VS 2017** after installing PowerAp
     `pac pcf init --namespace <specify your namespace here> --name <Name of the code component> --template <component type>`
  
    > [!NOTE]
-   > Currently, PowerApps CLI supports two types of components: **field** and **dataset** for model-driven apps.  For canvas apps, only the **field** type is supported for this experimental preview.
+   > Currently, Power Apps CLI supports two types of components: **field** and **dataset** for model-driven apps.  For canvas apps, only the **field** type is supported for this experimental preview.
 
 4. To retrieve all the required project dependencies, run the command `npm install`.
 5. Open your project folder `C:\Users\<your name>\Documents\<My_code_Component>` in any developer environment of your choice and get started with your code component development. The quickest way to get started is by running `code .` from your command prompt once you are in the `C:\Users\<your name>\Documents\<My_code_Component>` directory. This command opens your component project in Visual Studio Code.
@@ -60,7 +60,7 @@ Once you're done implementing the component logic in TypeScript, you need to bun
 
 **Publisher Prefix**
 
-If a component is created using a PowerApps CLI tooling version lower than 0.4.3,  you will hit an error while trying to re-import the solution file into Common Data Service. The error is thrown because the newly imported component name is now being appended with the publisher prefix to ensure its uniqueness and to avoid collisions.
+If a component is created using a Power Apps CLI tooling version lower than 0.4.3,  you will hit an error while trying to re-import the solution file into Common Data Service. The error is thrown because the newly imported component name is now being appended with the publisher prefix to ensure its uniqueness and to avoid collisions.
 
 **Workaround**:
 
@@ -82,5 +82,5 @@ If a component is created using a PowerApps CLI tooling version lower than 0.4.3
 [Package a code component](import-custom-controls.md)<br/>
 [Add code components to a field or entity](add-custom-controls-to-a-field-or-entity.md)<br/>
 [Updating existing code components](updating-existing-controls.md)<br/>
-[PowerApps component framework API reference](reference/index.md)<br/>
-[PowerApps component framework overview](overview.md)
+[Power Apps component framework API reference](reference/index.md)<br/>
+[Power Apps component framework overview](overview.md)

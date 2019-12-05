@@ -1,5 +1,5 @@
 ---
-title: Quick view control properties for model-driven app main forms in PowerApps | MicrosoftDocs
+title: Quick view control properties for model-driven app main forms in Power Apps | MicrosoftDocs
 description: Understand the quick view control properties for main forms
 Keywords: Quick view control properties; Dynamics 365; Main forms
 author: Mattp123
@@ -26,8 +26,8 @@ A quick view control on a model-driven app form displays data from a record that
 > [!div class="mx-imgBorder"] 
 > ![Contact quick view form on the account form](media/quick-view-form-contact.png "Contact quick view form on the account form")  
 
-You can access **Quick view control properties** from the PowerApps site. 
-1.  Sign in to [PowerApps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
+You can access **Quick view control properties** from the Power Apps site. 
+1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
 
 2.  Expand **Data**, select **Entities**, select the entity that you want, and then select the **Forms** tab. 

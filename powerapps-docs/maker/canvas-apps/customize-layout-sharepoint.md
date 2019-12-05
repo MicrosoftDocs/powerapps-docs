@@ -1,6 +1,6 @@
 ---
 title: Tutorial - Customize a gallery in a generated app | Microsoft Docs
-description: In this tutorial, you customize the data that appears in the gallery and other elements of an app that was generated automatically in PowerApps.
+description: In this tutorial, you customize the data that appears in the gallery and other elements of an app that was generated automatically in Power Apps.
 author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
@@ -14,9 +14,9 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Tutorial: Customize a gallery in PowerApps
+# Tutorial: Customize a gallery in Power Apps
 
-In this tutorial, you'll customize a list of records, called a gallery, and make other changes in an app that was generated automatically in Microsoft PowerApps. Users can manage data in the app even if you don't make these changes, but the app will be easier to use if you customize it for your organization's needs.
+In this tutorial, you'll customize a list of records, called a gallery, and make other changes in an app that was generated automatically in Microsoft Power Apps. Users can manage data in the app even if you don't make these changes, but the app will be easier to use if you customize it for your organization's needs.
 
 For example, the gallery for this tutorial matches this graphic by default. The email address is featured more prominently than other types of data, and users can sort and filter the gallery based on text in that address:
 
@@ -35,9 +35,9 @@ You'll also add a scroll bar so that users who don't have touch screens or mouse
 > * Change the screen title
 > * Show a scroll bar
 
-This tutorial starts with an app that was generated from a specific data source. However, the same concepts apply to any app that you generate in PowerApps, whether from a SharePoint list, an Excel table, or some other data source.
+This tutorial starts with an app that was generated from a specific data source. However, the same concepts apply to any app that you generate in Power Apps, whether from a SharePoint list, an Excel table, or some other data source.
 
-If you're not signed up for PowerApps, [sign up for free](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) before you start.
+If you're not signed up for Power Apps, [sign up for free](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) before you start.
 
 ## Prerequisites
 
@@ -45,13 +45,13 @@ If you're not signed up for PowerApps, [sign up for free](https://make.powerapps
 
 ## Open the generated app
 
-1. Sign in to [PowerApps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then select **Apps** near the left edge.
+1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then select **Apps** near the left edge.
 
 1. Find the app that you generated, select the ellipsis icon (**...**) for it, and then select **Edit**.
 
     ![Open app for editing](./media/customize-layout-sharepoint/open-app.png)
 
-1. If the **Welcome to PowerApps Studio** dialog box appears, select **Skip**.
+1. If the **Welcome to Power Apps Studio** dialog box appears, select **Skip**.
 
 ## Change the layout
 

@@ -1,5 +1,5 @@
 ---
-title: "Import translated entity and field text with PowerApps | MicrosoftDocs"
+title: "Import translated entity and field text with Power Apps | MicrosoftDocs"
 description: "Learn how to import translated entity and field text"
 ms.custom: ""
 ms.date: 06/19/2018
@@ -45,7 +45,7 @@ If you have customized entity or field text, such as field labels or drop-down l
 
 ## Community tools
 
-[Easy Translator](https://www.xrmtoolbox.com/plugins/MsCrmTools.Translator/) is a tool that XrmToolBox community developed for PowerApps. Use Easy Translator to export and import translations with contextual information. 
+[Easy Translator](https://www.xrmtoolbox.com/plugins/MsCrmTools.Translator/) is a tool that XrmToolBox community developed for Power Apps. Use Easy Translator to export and import translations with contextual information. 
 
 > [!NOTE]
 > The community tools are not supported by Microsoft. 

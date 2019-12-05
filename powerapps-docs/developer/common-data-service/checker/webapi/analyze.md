@@ -1,6 +1,6 @@
 ---
 title: "Invoke analysis | Microsoft Docs"
-description: "Learn how to form a POST request using the PowerApps checker web API to initiate the analysis request job."
+description: "Learn how to form a POST request using the Power Apps checker web API to initiate the analysis request job."
 ms.custom: ""
 ms.date: 06/04/2019
 ms.service: powerapps
@@ -108,7 +108,7 @@ Location: [Geographical URI]/api/status/9E378E56-6F35-41E9-BF8B-C0CC88E2B832&api
 
 ### See also
 
-[Use the PowerApps checker web API](overview.md)<br />
+[Use the Power Apps checker web API](overview.md)<br />
 [Retrieve the list of rulesets](retrieve-rulesets.md)<br />
 [Retrieve the list of rules](retrieve-rules.md)<br />
 [Upload a file](upload-file.md)<br />

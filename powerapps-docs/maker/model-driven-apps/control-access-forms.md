@@ -1,5 +1,5 @@
 ---
-title: "Control access to model-driven app forms in PowerApps | MicrosoftDocs"
+title: "Control access to model-driven app forms in Power Apps | MicrosoftDocs"
 description: "Learn how to control access to main forms"
 ms.custom: ""
 ms.date: 06/18/2019

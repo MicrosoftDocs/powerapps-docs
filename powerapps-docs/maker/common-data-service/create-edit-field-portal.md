@@ -1,5 +1,5 @@
 ---
-title: "Create and edit fields for Common Data Service using PowerApps portal | MicrosoftDocs"
+title: "Create and edit fields for Common Data Service using Power Apps portal | MicrosoftDocs"
 ms.custom: ""
 ms.date: 08/13/2019
 ms.reviewer: ""
@@ -20,17 +20,17 @@ search.app:
   - "PowerApps"
   - D365CE
 ---
-# Create and edit fields for Common Data Service using PowerApps portal
+# Create and edit fields for Common Data Service using Power Apps portal
 
-The [PowerApps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) provides an easy way to create and edit entity fields with the Common Data Service.
+The [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) provides an easy way to create and edit entity fields with the Common Data Service.
 
 The portal enables configuring the most common options, but certain options can only be set using solution explorer. <br />More information: 
 - [Create and edit fields for Common Data Service](create-edit-fields.md)
-- [Create and edit fields for Common Data Service using PowerApps solution explorer](create-edit-field-solution-explorer.md)
+- [Create and edit fields for Common Data Service using Power Apps solution explorer](create-edit-field-solution-explorer.md)
 
 ## View fields
 
-1. From the [PowerApps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select either **Model-driven** or **Canvas** design mode.
+1. From the [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select either **Model-driven** or **Canvas** design mode.
 2. Select **Data** > **Entities** and select the entity that has the fields you want to view.
 3. With the **Fields** tab selected, you can select the following views: 
 
@@ -228,7 +228,7 @@ Any of the fields that provide direct text input have an IME Mode. The Input Met
 
 ### See also  
 [Create and edit fields for Common Data Service](create-edit-fields.md)<br />
-[Create and edit fields for Common Data Service using PowerApps solution explorer](create-edit-field-solution-explorer.md)<br />
+[Create and edit fields for Common Data Service using Power Apps solution explorer](create-edit-field-solution-explorer.md)<br />
 [Types of fields and field data types](types-of-fields.md)<br />
 [Define calculated fields to automate manual calculations](define-calculated-fields.md)<br />
 [Define rollup fields that aggregate values](define-rollup-fields.md)<br />

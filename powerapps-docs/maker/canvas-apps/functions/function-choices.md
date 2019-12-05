@@ -1,6 +1,6 @@
 ---
 title: Choices function | Microsoft Docs
-description: Reference information, including syntax, for the Choices function in PowerApps
+description: Reference information, including syntax, for the Choices function in Power Apps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Choices function in PowerApps
+# Choices function in Power Apps
 Returns a table of the possible values for a lookup column.
 
 ## Description
@@ -47,7 +47,7 @@ At this time, you can use lookup columns only with SharePoint and Common Data Se
 
     Many entities, such as **Accounts**, are created.
 
-    **Note**: Entity names are singular on make.powerapps.com and plural in PowerApps Studio.
+    **Note**: Entity names are singular on make.powerapps.com and plural in Power Apps Studio.
 
     ![A partial list of the fields from the Account entity in Common Data Service for Apps, highlighting that "Primary Contact" is a lookup field](media/function-choices/entity-account.png)
 

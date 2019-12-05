@@ -1,6 +1,6 @@
 ---
 title: Create a canvas app from a template | Microsoft Docs
-description: Step-by-step instructions for creating a canvas app automatically based on a PowerApps template.
+description: Step-by-step instructions for creating a canvas app automatically based on a Power Apps template.
 author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
@@ -14,17 +14,17 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Create a canvas app from a template in PowerApps
+# Create a canvas app from a template in Power Apps
 
 Create a canvas app automatically based on a template for a specific scenario, such as tracking budgets and scheduling vacations, and then run the app to understand its default behavior.
 
 To create an app from a template, you need a cloud-storage account (such as DropBox, OneDrive, or Google Drive) to store the template's sample data.
 
-If you don't have a license for PowerApps, you can [sign up for free](../signup-for-powerapps.md).
+If you don't have a license for Power Apps, you can [sign up for free](../signup-for-powerapps.md).
 
 ## Create an app
 
-1. Sign in to [PowerApps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
 1. Under **Make your own app**, hover over **Start from data**, and then click or tap **Make this app**.
 
@@ -36,7 +36,7 @@ If you don't have a license for PowerApps, you can [sign up for free](../signup-
 
 4. In the list of templates, click or tap a template, and then click or tap **Use** (near the lower-right corner).
 
-    ![Open a PowerApps template](./media/get-started-test-drive/open-template.png)
+    ![Open a Power Apps template](./media/get-started-test-drive/open-template.png)
 
     The sample data is copied to your cloud-storage account, the app is created, and its home page appears.
 

@@ -23,9 +23,9 @@ search.app:
   - "PowerApps"
   - D365CE
 ---
-# Access a model-driven app view definition in PowerApps
+# Access a model-driven app view definition in Power Apps
 
- In this topic you open a view definition to display properties and options to configure the view. There are several ways you can access view definitions in PowerApps. 
+ In this topic you open a view definition to display properties and options to configure the view. There are several ways you can access view definitions in Power Apps. 
   
   
 ## Open a view for editing in the latest view designer
@@ -33,7 +33,7 @@ search.app:
 > [!IMPORTANT]
 > The latest version of the view designer is currently in preview. Some features like advanced filtering, custom controls, and column properties are not yet supported. To accomplish these tasks, [Open a view for editing in solution explorer](#open-a-view-for-editing-in-solution-explorer).
 
-1.  Sign in to [PowerApps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
+1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
 
     > [!IMPORTANT]

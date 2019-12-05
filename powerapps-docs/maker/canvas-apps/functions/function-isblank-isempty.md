@@ -1,6 +1,6 @@
 ---
 title: Blank, Coalesce, IsBlank, and IsEmpty functions | Microsoft Docs
-description: Reference information, including syntax and examples, for the Blank, Coalesce, IsBlank, and IsEmpty functions in PowerApps
+description: Reference information, including syntax and examples, for the Blank, Coalesce, IsBlank, and IsEmpty functions in Power Apps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -15,13 +15,13 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Blank, Coalesce, IsBlank, and IsEmpty functions in PowerApps
+# Blank, Coalesce, IsBlank, and IsEmpty functions in Power Apps
 Tests whether a value is blank or a [table](../working-with-tables.md) contains no [records](../working-with-tables.md#records), and provides a way to create *blank* values.
 
 ## Overview
-*Blank* is a placeholder for "no value" or "unknown value."  For example, a **[Combo box](../controls/control-combo-box.md)** control's **Selected** property is *blank* if the user hasn't made a selection. Many data sources can store and return NULL values, which are represented in PowerApps as *blank*.
+*Blank* is a placeholder for "no value" or "unknown value."  For example, a **[Combo box](../controls/control-combo-box.md)** control's **Selected** property is *blank* if the user hasn't made a selection. Many data sources can store and return NULL values, which are represented in Power Apps as *blank*.
 
-Any property or calculated value in PowerApps can be *blank*.  For example, a Boolean value normally has one of two values: **true** or **false**.  But in addition to these two, it can also be *blank* indicating that the state is not known.  This is similar to Microsoft Excel, where a worksheet cell starts out as blank with no contents but can hold the values **TRUE** or **FALSE** (among others). At any time, the contents of the cell can again be cleared, returning it to a *blank* state.
+Any property or calculated value in Power Apps can be *blank*.  For example, a Boolean value normally has one of two values: **true** or **false**.  But in addition to these two, it can also be *blank* indicating that the state is not known.  This is similar to Microsoft Excel, where a worksheet cell starts out as blank with no contents but can hold the values **TRUE** or **FALSE** (among others). At any time, the contents of the cell can again be cleared, returning it to a *blank* state.
 
 *Empty string* refers to a string that contains no characters.  The [**Len** function](function-len.md) returns zero for such a string and it can be written in a formulas as  two double quotes with nothing in between `""`.  Some controls and data sources use an empty string to indicate a "no value" condition.  To simplify app creation, the **IsBlank** and **Coalesce** functions test for both *blank* values or empty strings.    
 

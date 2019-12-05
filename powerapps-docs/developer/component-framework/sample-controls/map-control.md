@@ -44,7 +44,7 @@ export class TSMapControl
   implements ComponentFramework.StandardControl<IInputs, IOutputs> {
   // HTML IFrame element that will be used to render the map
   private _iFrameElement: HTMLIFrameElement;
-  // PowerApps component framework framework delegate which will be assigned to this object which would be called whenever an update happens.
+  // Power Apps component framework framework delegate which will be assigned to this object which would be called whenever an update happens.
   private _notifyOutputChanged: () => void;
   // reference to ComponentFramework Context object
   private _context: ComponentFramework.Context<IInputs>;
@@ -172,5 +172,5 @@ Ensure you call the `renderMap` function inside the [updateView](../reference/co
 
 [Download sample components](https://go.microsoft.com/fwlink/?linkid=2088525)<br/>
 [How to use the sample components](../use-sample-components.md)<br/>
-[PowerApps component framework API reference](../reference/index.md)<br/>
-[PowerApps component framework manifest schema reference](../manifest-schema-reference/index.md)
+[Power Apps component framework API reference](../reference/index.md)<br/>
+[Power Apps component framework manifest schema reference](../manifest-schema-reference/index.md)

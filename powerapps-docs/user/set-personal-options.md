@@ -26,7 +26,7 @@ Change your display settings in an app to suit your preferences. For example, yo
     
 ## To set personal options  
   
-1.  Select the **Settings** button ![Options button for PowerApps](media/options-button.png "Options button for PowerApps") in the upper-right corner of the screen.  
+1.  Select the **Settings** button ![Options button for Power Apps](media/options-button.png "Options button for Power Apps") in the upper-right corner of the screen.  
   
 2.  Select **Personalization Settings**.  
   
