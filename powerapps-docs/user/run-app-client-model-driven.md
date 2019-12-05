@@ -37,7 +37,7 @@ Install the Dynamics 365 for phones or Dynamics 365 for tablets app from your de
  ![Mobile app for phones](media/run-app-client-model-driven/mobile-app-for-phone.png)
 
 ### Run in your tablet's browser
-Go to the [Dynamics 365 home page](https://home.dynamics.com) or enter the app URL directly into your tablet's web browser and follow the directions on your screen to load the app. More information: [Run an app in a web browser](run-app-browser.md)
+Go to the [Dynamics 365 home page](https://home.dynamics.com) or enter the app URL directly into your tablet's web browser and follow the directions on your screen to load the app. More information: [What's supported](https://docs.microsoft.com/en-us/dynamics365/mobile-app/support-phones-tablets#supported-tablets-to-run-model-driven-apps-in-your-web-browser)
 
 
 ## Next steps
