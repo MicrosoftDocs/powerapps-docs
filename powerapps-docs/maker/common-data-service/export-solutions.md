@@ -118,5 +118,5 @@ search.app:
 More information:   [Service Calendar Appearance Configuration](https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-dev/service-calendar-appearance-configuration)|
 
 ### See also
-[Import solutions](import-update-export-solutions.md) 
+[Import solutions](import-update-export-solutions.md) <br />
 [Update solutions](update-solutions.md)
