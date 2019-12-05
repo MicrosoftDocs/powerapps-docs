@@ -47,31 +47,31 @@ To create and import a solution file:
     > - If you encounter an error that says *Ambiguous project name* when running the `msbuild` command on your solution, ensure that your solution name and project name are not the same.
 
 4. The generated solution files are located inside the `\bin\debug\` folder after the build is successful.
-5. Manually [import the solution into Common Data Service](https://docs.microsoft.com/powerapps/maker/common-data-service/import-update-export-solutions) using the web portal or see the [Authenticating to your organization](#authenticating-to-your-organization) and [Deployment](#deploying-code-components) sections to import using Power Apps CLI commands.
+5. Manually [import the solution into Common Data Service](https://docs.microsoft.com/powerapps/maker/common-data-service/import-update-export-solutions) using the web portal or see the [connecting to your environment](#connecting-to-your-environment) and [Deployment](#deploying-code-components) sections to import using Power Apps CLI commands.
 
-## Authenticating to your organization
+## Connecting to your environment
 
-You can deploy the code components directly from the Power Apps CLI by authenticating to the Common Data Service organization and then pushing the updated components. Use the following steps to create the authentication profile, connect to Common Data Service, and push the updated components. 
+You can deploy the code components directly from the Power Apps CLI by connecting to the Common Data Service environment and then pushing the updated components. Use the following steps to create the authentication profile, connect to Common Data Service, and push the updated components. 
  
-1. Create your authentication profile using the following command: 
+1. Create your authentication profile using the command: 
  
     ```CLI
-    pac auth create --url <your Common Data Service org’s url> 
+    pac auth create --url <your Common Data Service environment url> 
     ```
  
-2. If you previously created an authentication profile, you can view all the existing profiles using the following command: 
+2. If you have previously created an authentication profile, you can view all the existing profiles using the command: 
 
    ```CLI
     pac auth list 
    ```
  
-3. To switch between the previously created authentication profiles, use the following command: 
+3. To switch between the previously created authentication profiles, use the command: 
    
    ```CLI
     Pac auth select --index <index of the active profile>
     ``` 
 
-4. To get the basic information about the organization, use the following command. The connection will be made using the default authentication profile. 
+4. To get the basic information about the environment, use the following command. The connection will be made using the default authentication profile. 
 
     ```CLI
     pac org who 
@@ -117,7 +117,7 @@ Power Apps CLI now supports creating a plug-in project and packaging it in a sol
 3.	Run the command 
 
      ```CLI
-     pac auth create –url <your organization url>
+     pac auth create –url <your environment url>
      ```
 4.	Run the command to create the plug-in project
 

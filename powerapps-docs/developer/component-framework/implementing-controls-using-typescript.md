@@ -370,7 +370,7 @@ Follow these steps to create and import a [solution](https://docs.microsoft.com/
     > - Under **Code Tools**, check **NuGet targets & Build Tasks**.
 
 6. The generated solution zip file is located in the `Solution\bin\debug` folder.
-7. Manually [import the solution into Common Data Service](https://docs.microsoft.com/powerapps/maker/common-data-service/import-update-export-solutions) using the web portal once the zip file is ready or see the [Authenticating to your organization](import-custom-controls.md#authenticating-to-your-organization) and [Deployment](import-custom-controls.md#deploying-code-components) sections to import using Power Apps CLI commands.
+7. Manually [import the solution into Common Data Service](https://docs.microsoft.com/powerapps/maker/common-data-service/import-update-export-solutions) using the web portal once the zip file is ready or see the [Connecting to your environment](import-custom-controls.md#connecting-to-your-environment) and [Deployment](import-custom-controls.md#deploying-code-components) sections to import using Power Apps CLI commands.
 
 ## Adding code components in model-driven apps
 
