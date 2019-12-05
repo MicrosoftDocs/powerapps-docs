@@ -38,7 +38,7 @@ Power Apps component framework empowers professional developers and app makers t
 - Support for modern web practices.
 - Optimizes for performance.
 - Reusability
-- Bundle all pieces into a single solution file.
+- Bundle all files into a single solution file.
 
 ## Related topics
 

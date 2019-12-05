@@ -95,6 +95,47 @@ After you have successfully created an authentication profile, you can start pus
    > [!NOTE]
    > The publisher prefix that you use with the `push` command should match the publisher prefix of your solution in which the components will be included.
 
+## How to create a solution project based on an existing solution in Common Data Service
+
+To create a solution project based on an existing solution in Common Data Service, run the command `pac solution clone`. To do so:
+
+1. Ensure that you have a valid authentication profile created.
+2. Run the command 
+
+   ```CLI
+   pac solution clone –name(-n) <name of the solution to be exported> --version(-v) <version of your solution> --include(-i) <settings that should be included>
+   ```
+
+More information: [Settings options](https://docs.microsoft.com/dotnet/api/microsoft.crm.sdk.messages.exportsolutionrequest?view=dynamics-general-ce-9)
+
+## How to create a plug-in project and add a reference to it in your solution 
+
+Power Apps CLI now supports creating a plug-in project and packaging it in a solution by adding a reference to the plug-in project. The `pac plugin init` command creates the template files (csproj, Plugin.cs & ServiceHelper.cs) in the directory. To do so: 
+
+1.	Ensure that you have a valid authentication profile created.
+2.	Navigate to the root directory where you want the project to be created.
+3.	Run the command 
+
+     ```CLI
+     pac auth create –url <your organization url>
+     ```
+4.	Run the command to create the plug-in project
+
+    ```CLI
+    pac plugin init
+    ```
+
+5.	Add a reference to your solution project  using the following command so that the plug-in project gets built when the solution is built.
+
+    ```CLI
+    pac solution add-reference –path <path to your plugin project>
+    ```
+
+6.	Run the command to build the solution and the referenced plug-in.
+    ```CLI
+    msbuild
+    ```
+
 ## How to remove components from a solution
 
 If you want to remove a code component from a solution file:
