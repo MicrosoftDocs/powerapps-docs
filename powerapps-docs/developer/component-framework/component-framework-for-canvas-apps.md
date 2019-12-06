@@ -58,7 +58,7 @@ To add code components to an app, you need to enable the Power Apps component fr
 
 ## Implementing code components
 
-After you enable the Power Apps component framework feature in your environment, you can start implementing the logic for code components. The [implement sample component](implementing-controls-using-typescript.md) topic demonstrates the step-by-step process to create code components implementing the custom logic and manifest file, running the debugging process, creating a solution zip file, and importing the solution into Common Data Service.
+After you enable the Power Apps component framework feature in your environment, you can start implementing the logic for code components. The [Create your first code component](implementing-controls-using-typescript.md) topic demonstrates the step-by-step process to create code components implementing the custom logic and manifest file, running the debugging process, creating a solution zip file, and importing the solution into Common Data Service.
 
 > [!NOTE]
 > Implementing code components is the same for both model-driven apps and canvas apps (experimental preview). The only difference is adding the code components. 
@@ -102,5 +102,5 @@ When you update the code components, we specify the *version* attribute in the m
 ## See also
 
 [Power Apps component framework overview](overview.md)<br/>
-[Implement sample component](implementing-controls-using-typescript.md)
+[Create your first code component](implementing-controls-using-typescript.md)
 

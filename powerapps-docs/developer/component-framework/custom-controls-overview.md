@@ -18,9 +18,9 @@ You add code components by including them in a solution and then import it into 
 
 Code components consist of three elements:
 
-1. [Manifest](#manifest)
-2. [Component implementation library](#component-implementation-library)
-3. [Resources](#resources)
+- [Manifest](#manifest)
+- [Component implementation library](#component-implementation-library)
+- [Resources](#resources)
 
 ## Manifest
 
