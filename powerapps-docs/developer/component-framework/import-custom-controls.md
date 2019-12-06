@@ -110,6 +110,9 @@ More information: [Settings options](https://docs.microsoft.com/dotnet/api/micro
 
 ## Create a plug-in project and add a reference to it in your solution 
 
+> [!NOTE]
+> The plug-in commands are still in public preview. Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
+
 Power Apps CLI now supports creating a plug-in project and packaging it in a solution by adding a reference to the plug-in project. The `pac plugin init` command creates the template files (csproj, Plugin.cs & ServiceHelper.cs) in the directory. To do so: 
 
 1.	Ensure that you have a valid authentication profile created.
