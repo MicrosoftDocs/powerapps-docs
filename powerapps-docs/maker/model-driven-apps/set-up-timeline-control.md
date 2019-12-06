@@ -16,7 +16,7 @@ search.app:
 
 # Set up timeline section (control)
 
-The activities in the Timeline that you use to keep track of all your communications with a customer or contact can be customized as per your business or organization requirements.
+The activities in Timeline that you use to keep track of all your communications with a customer or contact can be customized as per your business or organization requirements.
 
   > [!div class="mx-imgBorder"]
   > ![Timeline view of activities in PowerApps](../../user/media/TimelineViewOfActivity.png "Timeline view of activities in PowerApps")  
