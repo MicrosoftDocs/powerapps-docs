@@ -17,7 +17,7 @@ This topic describes how to import code components into Common Data Service. Aft
 
 To create and import a solution file:
 
-1. Create a new folder inside the cdsproj folder and name it **Solution** (or any name of your choice) using the command `mkdir Solutions`. Navigate into the directory using the command `cd Solutions`.
+1. Create a new folder inside the folder that has the `cdsproj` file and name it as **Solutions** (or any name of your choice) using the command `mkdir Solutions`. Navigate into the directory using the command `cd Solutions`.
 
 2. Create a new solutions project using the following command. The solution project is used for bundling the code component into a solution zip file that is used for importing into Common Data Service.
    
@@ -56,7 +56,7 @@ You can deploy the code components directly from the Power Apps CLI by connectin
 1. Create your authentication profile using the command: 
  
     ```CLI
-    pac auth create --url <your Common Data Service environment url> 
+    pac auth create --url <https://xyz.crm.dynamics.com> 
     ```
  
 2. If you have previously created an authentication profile, you can view all the existing profiles using the command: 
@@ -110,6 +110,9 @@ More information: [Settings options](https://docs.microsoft.com/dotnet/api/micro
 
 ## Create a plug-in project and add a reference to it in your solution 
 
+> [!NOTE]
+> The plug-in commands are still in public preview. Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
+
 Power Apps CLI now supports creating a plug-in project and packaging it in a solution by adding a reference to the plug-in project. The `pac plugin init` command creates the template files (csproj, Plugin.cs & ServiceHelper.cs) in the directory. To do so: 
 
 1.	Ensure that you have a valid authentication profile created.
@@ -117,7 +120,7 @@ Power Apps CLI now supports creating a plug-in project and packaging it in a sol
 3.	Run the command 
 
      ```CLI
-     pac auth create –url <your environment url>
+     pac auth create –url <https://xyz.crm.dynamics.com>
      ```
 4.	Run the command to create the plug-in project
 
