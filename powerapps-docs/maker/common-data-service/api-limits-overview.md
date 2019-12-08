@@ -2,7 +2,7 @@
 title: "API limits overview (Common Data Service) | Microsoft Docs" 
 description: "Understand the limits for Common Data Service API requests." 
 ms.custom: ""
-ms.date: 11/23/2019
+ms.date: 12/08/2019
 ms.reviewer: "kvivek"
 ms.service: powerapps
 ms.topic: "article"
@@ -29,7 +29,7 @@ These limits represent the number of requests users are entitled to make each da
 
 If any user exceeds their request entitlement the administrator would be notified and would be able to assign Power Apps and Power Automate request capacity to that user. Users will not be blocked from using apps for occasional and reasonable overages at this point of time.
 
-For Common Data Service, API requests include all data operations that interact with entity records where records are created, retrieved, updated, or deleted (CRUD). Special operations such as *share* and *assign* are included because they are considered updates. These requests can be from any client or application and using any endpoint. These include, but are not limited to, operations performed by plug-ins, async workflows, and custom controls. There are a small set of system internal operations that are excluded, like login, logout, and system metadata operations.
+For Common Data Service, API requests include all data operations that interact with entity records where records are created, retrieved, updated, or deleted (CRUD). Special operations such as *share* and *assign* are included because they are considered updates. These requests can be from any client or application and using any endpoint. These include, but are not limited to, operations performed by plug-ins, async workflows, custom controls, and $batch (ExecuteMultiple) operations. There are a small set of system internal operations that are excluded, like login, logout, and system metadata operations.
 
 > [!IMPORTANT]
 > Power Platform API request allocations include use of Power Automate, AI Builder, and Connector APIs. All requests through a connector that result in a Common Data Service request will represent 1 Power Platform request.
