@@ -1,12 +1,12 @@
 ---
 title: Run apps in a web browser | Microsoft Docs
 description: In this topic, you learn how to run apps in a web browser
-author: Mattp123
+author: mduelae
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 8/21/2019
-ms.author: matp
+ms.date: 12/05/2019
+ms.author: mkaur
 manager: "kvivek"
 ms.custom: ""
 ms.reviewer: ""
@@ -19,7 +19,12 @@ search.app:
 ---
 
 # Run an app in a web browser
-When you create an app, or someone shares an app with you, you can run that app on Windows, iOS, Android, or in a web browser. In this topic, you'll learn how to run a canvas or model-driven app in a web browser from the [Dynamics 365 Home page](https://home.dynamics.com).
+When you create an app, or someone shares an app with you, you can run that app on the Dynamics 365 mobile app or in a web browser on a tablet. In this topic, you'll learn how to run a canvas or model-driven app in a web browser on a tablet from the [Dynamics 365 Home page](https://home.dynamics.com).
+
+For full functionality and optimized experience, we strongly recommend that you use the Dynamics 365 for phones and tablets mobile app. If you don't have the Dynamics 365 for phones and tablets app installed, you can still use the web browser on your tablet, as long as your device has sufficiently high screen resolution. For more information: [What's supported](https://docs.microsoft.com/dynamics365/mobile-app/support-phones-tablets#supported-devices-for-the-mobile-app).
+
+> [!NOTE]
+> Using the web browser on your phone to run your model-driven apps isn't supported; you must use the Dynamics 365 for phones app.
 
 To follow this quickstart, you need:
 - A Power Apps license. This is available with a Power Apps plan, such as the [Power Apps Plan 2 trial](https://docs.microsoft.com/powerapps/maker/signup-for-powerapps), or any of the [Microsoft Office 365](https://signup.microsoft.com/Signup?OfferId=467eab54-127b-42d3-b046-3844b860bebf&dl=O365_BUSINESS_PREMIUM&ali=1) or [Dynamics 365](https://dynamics.microsoft.com/pricing/) plans that include Power Apps. 
@@ -41,7 +46,7 @@ If you've recently installed the app, it might not immediately appear in the lis
 
 
 ## Run an app from a URL
-You can save an app's URL as a bookmark in your browser and run it by selecting the bookmark, or you can send a URL as a link through email. If someone else created an app and shared it with you in an email, you can run the app by selecting the link in the email. When running an app using a URL, you may be prompted to sign in using your Azure Active Directory credentials.
+You can save an app's URL as a bookmark in your tablet's browser and run it by selecting the bookmark, or you can send a URL as a link through email. If someone else created an app and shared it with you in an email, you can run the app by selecting the link in the email. When running an app using a URL, you may be prompted to sign in using your Azure Active Directory credentials.
 
 ![](./media/run-app-browser/web-login.png)
 
