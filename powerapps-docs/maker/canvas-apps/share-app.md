@@ -133,6 +133,9 @@ Power Apps canvas apps can be shared with guest users of an Azure Active Directo
     - The tenant hosting the app being shared.
     - The home tenant of the guest user.
 
+> [!NOTE]
+> Power Apps Per App Plans are scoped to apps in a specific environment, so they cannot be recognized across tenants. Power Apps included with Office and Power Apps Per User Plans are not bound to a specific environment so they are recognized across tenants in guest scenarios. 
+
 ### Steps to grant guest access
 1. Select **New guest user** to add guest users in Azure AD. More information: [Quickstart: Add a new guest user in Azure AD](/azure/active-directory/b2b/b2b-quickstart-add-guest-users-portal).
     > [!div class="mx-imgBorder"] 
