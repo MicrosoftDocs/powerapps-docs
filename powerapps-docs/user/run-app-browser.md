@@ -21,6 +21,8 @@ search.app:
 # Run an app in a web browser
 When you create an app, or someone shares an app with you, you can run that app on the Dynamics 365 mobile app or in a web browser on a tablet. In this topic, you'll learn how to run a canvas or model-driven app in a web browser on a tablet from the [Dynamics 365 Home page](https://home.dynamics.com).
 
+For full functionality and optimized experience, we strongly recommend that you use the Dynamics 365 for phones and tablets mobile app. If you don't have the Dynamics 365 for phones and tablets app installed, you can still use the web browser on your tablet, as long as your device has sufficiently high screen resolution. For more information: [What's supported](https://docs.microsoft.com/en-us/dynamics365/mobile-app/support-phones-tablets#supported-devices-for-the-mobile-app).
+
 > [!NOTE]
 > Using the web browser on your phone to run your model-driven apps isn't supported; you must use the Dynamics 365 for phones app.
 
