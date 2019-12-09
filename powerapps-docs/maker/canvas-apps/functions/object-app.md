@@ -1,6 +1,6 @@
 ---
 title: App object | Microsoft Docs
-description: Reference information, including syntax and examples, for the App object in PowerApps
+description: Reference information, including syntax and examples, for the App object in Power Apps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# App object in PowerApps
+# App object in Power Apps
 
 Provides information about the currently running app and control over the app's behavior.
 
@@ -58,7 +58,7 @@ Nobody wants to lose unsaved changes. Use the **ConfirmExit** and **ConfirmExitM
 > **ConfirmExit** doesn't work in apps that are embedded in, for example, Power BI and SharePoint.
 
 > [!NOTE]
-> At present, these properties can reference controls on only the first screen if the **Delayed load** preview feature is enabled (which it is by default for new apps). If references are made, PowerApps Studio doesn't show an error, but the resulting published app doesn't open in PowerApps Mobile or a browser. We're actively working to lift this limitation. In the meantime, you can turn off **Delayed load** in **File** > **App settings** > **Advanced settings** (under **Preview features**).
+> At present, these properties can reference controls on only the first screen if the **Delayed load** preview feature is enabled (which it is by default for new apps). If references are made, Power Apps Studio doesn't show an error, but the resulting published app doesn't open in Power Apps Mobile or a browser. We're actively working to lift this limitation. In the meantime, you can turn off **Delayed load** in **File** > **App settings** > **Advanced settings** (under **Preview features**).
 
 ### ConfirmExit
 
@@ -72,14 +72,14 @@ The confirmation dialog box appears in any situation where data could be lost, a
 - If the app is running in a browser:
   - Closing the browser or the browser tab in which the app is running.
   - Selecting the browser's back button.
-- If the app is running in PowerApps Mobile (iOS or Android):
+- If the app is running in Power Apps Mobile (iOS or Android):
   - Running the [**Launch**](function-param.md) function.<br>The **Launch** function doesn't trigger the dialog box in a browser because another tab opens so that data isn't lost.
-  - Swiping to switch to a different app in PowerApps Mobile.
+  - Swiping to switch to a different app in Power Apps Mobile.
   - Selecting the back button on an Android device.
 
-The exact look of the confirmation dialog box might vary across devices and versions of PowerApps.
+The exact look of the confirmation dialog box might vary across devices and versions of Power Apps.
 
-The confirmation dialog box doesn't appear in PowerApps Studio.
+The confirmation dialog box doesn't appear in Power Apps Studio.
 
 ### ConfirmExitMessage
 

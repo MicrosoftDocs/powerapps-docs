@@ -43,7 +43,7 @@ In this tutorial, we:
 3. Name the Excel file **SavePen.xlsx**, and save the file to your cloud storage account (OneDrive for Business, Dropbox, and so on).
 
 ## Create an app with the pen control
-1. In PowerApps, create a [blank app](get-started-create-from-blank.md).
+1. In Power Apps, create a [blank app](get-started-create-from-blank.md).
 2. In your app, add the cloud storage account as a [data source](add-data-connection.md). Once added as a data source, add **SavePen.xlsx** as a connection, and then select the **Drawings** table:  
    ![Connect](./media/tutorial-working-with-images-in-excel/savepen.png)  
    
@@ -71,7 +71,7 @@ In another example, you can save images in a cloud storage account, and then use
 In this example, we use the [CreateFirstApp.zip](https://pwrappssamples.blob.core.windows.net/samples/CreateFirstApp.zip) that contains some .jpeg files.
 
 > [!NOTE]
-> When displaying images from an Excel file, the path to these images must use forward slashes. When PowerApps saves images to an Excel table (as with the previous steps), the path uses backslashes. So, you can also use the **SavePen_images** from the previous example. If you do, change the paths in the Excel table to use forward slashes instead of backslashes. Otherwise, the images will not display.  
+> When displaying images from an Excel file, the path to these images must use forward slashes. When Power Apps saves images to an Excel table (as with the previous steps), the path uses backslashes. So, you can also use the **SavePen_images** from the previous example. If you do, change the paths in the Excel table to use forward slashes instead of backslashes. Otherwise, the images will not display.  
 
 1. Download [CreateFirstApp.zip](https://pwrappssamples.blob.core.windows.net/samples/CreateFirstApp.zip), and extract the **Assets** folder to your cloud storage account.
 2. In an Excel spreadsheet, create a table that looks similar to the following:
@@ -94,5 +94,5 @@ In the Excel table, the image path can also be the URL to an image. Download the
 ## Learn more
 [Add an image, a video, or a sound](add-images-pictures-audio-video.md)  
 [Show data in a line, pie, or bar chart in your app](use-line-pie-bar-chart.md)  
-[Understand tables and records in PowerApps](working-with-tables.md)
+[Understand tables and records in Power Apps](working-with-tables.md)
 

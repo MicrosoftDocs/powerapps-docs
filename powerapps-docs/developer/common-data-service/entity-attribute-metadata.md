@@ -22,7 +22,7 @@ search.app:
   - D365CE
 ---
 
-<!-- This topic was not migrated it was written for PowerApps 
+<!-- This topic was not migrated it was written for Power Apps 
 Was Mike Carter
 Overlap with https://docs.microsoft.com/dynamics365/customer-engagement/developer/introduction-entity-attributes
 

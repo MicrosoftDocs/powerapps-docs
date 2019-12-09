@@ -58,7 +58,7 @@ Entities have more managed properties than any other type of solution component.
 
 ## Field managed properties
 
-See [Create and edit fields for Common Data Service using PowerApps solution explorer](create-edit-field-solution-explorer.md) for information about how to edit fields.
+See [Create and edit fields for Common Data Service using Power Apps solution explorer](create-edit-field-solution-explorer.md) for information about how to edit fields.
 
 While [viewing fields](create-edit-field-solution-explorer.md#view-fields), select a custom field from an unmanaged solution and then choose **More Actions** >  **Managed Properties** on the menu bar.
 
@@ -94,6 +94,6 @@ With relationships, the only managed property is **Can Be Customized**. This sin
 
 [Managed properties](solutions-overview.md#managed-properties)<br />
 [Create and edit entities using solution explorer](create-edit-entities-solution-explorer.md)<br />
-[Create and edit fields for Common Data Service using PowerApps solution explorer](create-edit-field-solution-explorer.md)<br />
+[Create and edit fields for Common Data Service using Power Apps solution explorer](create-edit-field-solution-explorer.md)<br />
 [Create and edit 1:N (one-to-many) or N:1 (many-to-one) entity relationships using solution explorer](create-edit-1n-relationships-solution-explorer.md)<br />
 [Create N:N (many-to-many) entity relationships in Common Data Service using solution explorer](create-edit-nn-relationships-solution-explorer.md)

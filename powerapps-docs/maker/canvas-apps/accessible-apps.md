@@ -14,13 +14,13 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Create accessible canvas apps in PowerApps
+# Create accessible canvas apps in Power Apps
 An accessible canvas app will allow users with vision, hearing and other impairments to successfully use the app.  In addition to being a requirement for many governments and organizations, following the below guidelines increases usability for all users, regardless of their abilities.
 
 Use the **[Accessibility Checker](accessibility-checker.md)** to help review potential accessibility issues in your app. 
 
 ## Layout and color
-Common sense and uncomplicated design helps apps be more accessible to all users.  When doing heavy customization of apps take note of the below suggestions.  PowerApps themes are by default accessible.
+Common sense and uncomplicated design helps apps be more accessible to all users.  When doing heavy customization of apps take note of the below suggestions.  Power Apps themes are by default accessible.
 - Ensure all elements are clearly visible and text is of sufficient size.  All content must be easily read and understood by the naked eye.
 - Avoid using the visibility property of items to bring an element into view.  If you need to show something conditionally, create the content in a new screen and navigate to it and back.
 - Ensure input elements are labeled on the screen. **[AccessibilityLabel](controls/properties-accessibility.md)** property defines what the screen reader will announce.
@@ -36,12 +36,12 @@ For keyboard navigation (with or without the screen reader) ensure that a logica
 - Avoid setting tab index higher than zero.
 
 ## Screen reader support
-The following software combinations are the supported recommendations for consuming PowerApps with a screen reader:
+The following software combinations are the supported recommendations for consuming Power Apps with a screen reader:
 
 - **Windows**: Microsoft Edge / Narrator
 - **macOS**: Safari / VoiceOver
-- **Android**: PowerApps app / Talkback
-- **iOS**: PowerApps app / VoiceOver
+- **Android**: Power Apps app / Talkback
+- **iOS**: Power Apps app / VoiceOver
 
 To ensure a satisfying experience with the screen reader it is recommended to:
 
@@ -64,4 +64,4 @@ If you have a signature field that uses the PenInput control you need to enable 
 Related:
 - [Accessibility properties](controls/properties-accessibility.md)
 - [Use the Accessibility checker](accessibility-checker.md)
-- [Accessible colors in PowerApps](accessible-apps-color.md)
+- [Accessible colors in Power Apps](accessible-apps-color.md)

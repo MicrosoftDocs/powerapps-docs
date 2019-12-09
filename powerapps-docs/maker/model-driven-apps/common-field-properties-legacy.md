@@ -1,5 +1,5 @@
 ---
-title: Model-driven app common field properties in PowerApps | MicrosoftDocs
+title: Model-driven app common field properties in Power Apps | MicrosoftDocs
 description: Understand the Common field properties for Main form
 Keywords: Main form; Common field properties; Dynamics 365
 author: Mattp123

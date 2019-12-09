@@ -1,17 +1,17 @@
 ---
 title: Frequently asked questions | Microsoft Docs
-description: Frequently asked questions in PowerApps portals.
+description: Frequently asked questions in Power Apps portals.
 author: sbmjais
 manager: shujoshi
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/14/2019
+ms.date: 12/03/2019
 ms.author: shjais
 ms.reviewer:
 ---
 
-# PowerApps portals FAQ
+# Power Apps portals FAQ
 
 We have compiled a list of frequently asked questions and provided brief answers to help you get to your information quickly.
 
@@ -71,7 +71,7 @@ Sometimes the database creation can take time and the correct status might not r
 > [!div class=mx-imgBorder]
 > ![Data not ready](media/data-not-ready.png "Data not ready")
 
-If you keep getting the create database prompt or your data isn't quite ready prompt, you can try refreshing the PowerApps home page before selecting the **Portal from blank** tile.
+If you keep getting the create database prompt or your data isn't quite ready prompt, you can try refreshing the Power Apps home page before selecting the **Portal from blank** tile.
 
 ### I'm getting an error that I don't have required permissions to create Azure Active Directory applications.
 
@@ -162,7 +162,7 @@ When a Common Data Service environment is restored from a backup, various change
 
 - If the organization ID is the same after the restore operation and portal solutions are also available:
 
-1. Open [PowerApps Portals admin center](admin/admin-overview.md).
+1. Open [Power Apps Portals admin center](admin/admin-overview.md).
 2. Go to the **Portal Details** tab.
 3. In the **Portal State** drop-down list, choose **Off**.
 4. Select **Update**. 
@@ -178,7 +178,7 @@ When a Common Data Service environment is restored from a backup, various change
 
 When you change the URL of your Common Data Service environment, your portal will stop working because it cannot identify the Common Data Service environment URL anymore. To fix this issue:
 
-1. Open [PowerApps Portals admin center](admin/admin-overview.md).
+1. Open [Power Apps Portals admin center](admin/admin-overview.md).
 2. Go to **Portal Actions** > **Update Dynamics 365 URL**.
 3. Follow the instructions in the wizard.
 
@@ -224,7 +224,7 @@ Below is a list of most common causes and their corresponding mitigation steps:
 
 This happens when the URL of Common Data Service environment is changed by a user after portal is provisioned against the organization. To fix this issue, update the Dynamics 365 URL:
 
-1. Open [PowerApps Portals admin center](admin/admin-overview.md).
+1. Open [Power Apps Portals admin center](admin/admin-overview.md).
 2. Go to **Portal Actions** > **Update Dynamics 365 URL**. Once this action is successfully executed, your Common Data Service environment URL will be updated and portal will start working.
 
 #### Common Data Service environment connected to your portal is in administration mode
@@ -237,7 +237,7 @@ If this is the cause, you can disable administration mode by performing actions 
 
 This issue occurs when the authentication connection between Dynamic 365 organization and portal is broken because either Common Data Service environment was restored from a backup or was deleted and recreated from a backup. To fix this issue:
 
-1. Open [PowerApps Portals admin center](admin/admin-overview.md).
+1. Open [Power Apps Portals admin center](admin/admin-overview.md).
 2. In the **Portal Details** tab, select **Off** from the **Portal State** list.
 3. Select **Update**.
 4. Select **On** from the **Portal State** list.
@@ -249,7 +249,7 @@ However, in certain situations especially if the organization ID has changed aft
 
 This issue is typically a transient issue which can occur if the API requests to your Common Data Service environment has timed out. This issue will automatically mitigate itself once the API requests starts working. To mitigate this issue, you can also try restarting the portal:
 
-1. Open [PowerApps Portals admin center](admin/admin-overview.md).
+1. Open [Power Apps Portals admin center](admin/admin-overview.md).
 2. Go to **Portal Actions** > **Restart**.
 
 If restarting the portal doesn't work and this issue is occurring for a long period of time, please contact Microsoft support for help.
@@ -273,7 +273,7 @@ However, there are situations in which portal will not be able to recreate websi
   - **Website**: Select the website record which you want to be rendered on portal
   - **Sitename**: Type in the hostname of your portal i.e Portal URL without https:// in the beginning. If your Portal is using custom domain name, then use custom domain name here.
   - Leave all other fields blank.
-3. Once website binding record is recreated, restart your portal from PowerApps Portals admin center.
+3. Once website binding record is recreated, restart your portal from Power Apps Portals admin center.
 
 #### An unexpected error has occurred while trying to connect to your Common Data Service environment
 
@@ -283,7 +283,7 @@ If portal reset and reprovision doesn't solve this issue, please reach out to Mi
 
 ### Portal is not displaying updated data from Common Data Service environment
 
-Any data displayed on portal is rendered from the portal cache. This cache gets updated whenever data in Common Data Service environment is updated. However, this process is asynchronous and can take upto 15 minutes. If the changes are made in the metadata entity of portal, for example, web pages, web files, content snippet, site setting, and so on, it is advised to clear cache manually or restart the portal from PowerApps Portals admin center. For information on how to clear cache, see [Clear the server-side cache for a portal](admin/clear-server-side-cache.md). 
+Any data displayed on portal is rendered from the portal cache. This cache gets updated whenever data in Common Data Service environment is updated. However, this process is asynchronous and can take upto 15 minutes. If the changes are made in the metadata entity of portal, for example, web pages, web files, content snippet, site setting, and so on, it is advised to clear cache manually or restart the portal from Power Apps Portals admin center. For information on how to clear cache, see [Clear the server-side cache for a portal](admin/clear-server-side-cache.md). 
 
 However, if you are seeing stale data for a long time in non-portal metadata entities, it can be because of variety of issues listed below:
 
@@ -293,13 +293,13 @@ If you are seeing stale data only for certain entities and not for everything, t
 
 If you run the Portal checker (self-service diagnostic) tool, it will list down Object Type code of all the entities which are referenced on portal in entity list or entity forms and web forms and are not enabled for change tracking. Browse your metadata by using the steps mentioned at [Browse the metadata for your organization](https://docs.microsoft.com/dynamics365/customerengagement/on-premises/developer/browse-your-metadata)
 
-If you are experiencing stale data issue in any of these entities, you can enable change tracking by using PowerApps Portals admin center. UI or Dynamics 365 API. More information:  [Enable change tracking for an entity](https://docs.microsoft.com/dynamics365/customerengagement/on-premises/developer/use-change-tracking-synchronize-data-external-systems#enable-change-tracking-for-an-entity)
+If you are experiencing stale data issue in any of these entities, you can enable change tracking by using Power Apps Portals admin center. UI or Dynamics 365 API. More information:  [Enable change tracking for an entity](https://docs.microsoft.com/dynamics365/customerengagement/on-premises/developer/use-change-tracking-synchronize-data-external-systems#enable-change-tracking-for-an-entity)
 
 #### Organization not enabled for change tracking
 
 Apart from each entity being enabled for change tracking, organizations on a whole has to be enabled for change tracking as well. An organization is enabled for change tracking when a portal provisioning request is submitted. However, this can break if an organization is restored from an old database or reset. To fix this issue:
 
-1. Open [PowerApps Portals admin center](admin/admin-overview.md).
+1. Open [Power Apps Portals admin center](admin/admin-overview.md).
 2. In the **Portal Details** tab, select **Off** from the **Portal State** list.
 3. Select **Update**.
 4. Select **On** from the **Portal State** list.
@@ -401,4 +401,177 @@ To avoid this, you can perform the following steps:
 2. While loading a JavaScript file on demand on any page, use `<async>` or `<defer>` HTML attribute to load the file asynchronously.
 3. While loading a CSS file on demand, you can use `<preload>` HTML attribute (https://www.w3.org/TR/preload/) or JavaScript based approach since preload is not supported on all the browsers yet.
 
+#### Entity form lookup configuration 
 
+Enabling a lookup to render as a drop-down mode in entity forms or web forms can be performance intensive if the amount of records shown in the drop-down exceed 200 and are changed frequently. This option should only be used for static lookups, such as country list and state list, having a limited number of records.
+
+If this option is enabled for lookups which can have large number of records, it will slow down the load time of the webpage on which entity form is available. If this page is used by a lot of users and is loaded a lot of times, it can slow down the whole website and the website resources would be used to render this page. For these situations, full lookup experience should be used or a custom HTML control which calls an AJAX endpoint (created using web templates) should be built for the desired look and feel.
+
+#### Number of web roles
+
+Web roles are used in portals to enable role-based access control. Typically, the number of web roles in a portal are limited as the number of different combinations of permissions would be limited as well. If the number of web roles exceed 100 in your portal, it can cause performance issues which can affect all pages of your portal.
+
+### An active Home site marker is not available for this portal
+
+This issue occurs when the **Home** site marker is not available in your portal configuration. To fix this issue:
+
+1.	Open the [Portal Management app](configure/configure-portal.md).
+2.	In the left pane, select **Site Markers**.
+3.	Create a new site marker with following values: 
+  - **Name**: Home
+  - **Website**: Select the website of your portal host.
+  - **Page**: Select the webpage record that is set as the home page of your portal.
+
+### The Home site marker is not pointing to any webpage
+
+This issue occurs when the **Home** site marker is available but is not pointing to any webpage. To fix this issue:
+
+1.	Open the [Portal Management app](configure/configure-portal.md).
+2.	In the left pane, select **Site Markers**.
+3.	Find the **Home** site marker record.
+4.	Update the **Page** field to point to an active home page of your portal.
+
+### The Home site marker is pointing to a deactivated web page
+
+This issue occurs when the **Home** site marker is available, but is pointing to a deactivated webpage. To fix this issue:
+
+1.	Open the [Portal Management app](configure/configure-portal.md).
+2.	In the left pane, select **Site Markers**.
+3.	Find the **Home** site marker record.
+4.	Update the **Page** field to point to an active home page of your portal.
+
+### The Home site marker is not pointing to home page of the portal
+
+This issue occurs when the **Home** site marker is available, but is pointing to a webpage that is not a home page of your portal. To fix this issue:
+
+1.	Open the [Portal Management app](configure/configure-portal.md).
+2.	In the left pane, select **Site Markers**.
+3.	Find the **Home** site marker record.
+4.	Update the **Page** field to point to an active home page of your portal.
+
+### An active Profile site marker is not available for this portal
+
+This issue occurs when the **Profile** site marker is not available in your portal configuration. To fix this issue:
+
+1.	Open the [Portal Management app](configure/configure-portal.md).
+2.	In the left pane, select **Site Markers**.
+3.	Create a new site marker with following values: 
+  - **Name**: Profile
+  - **Website**: Select the website of your portal host.
+  - **Page**: Select the webpage record that is set as the profile page of your portal.
+
+### The Profile site marker is not pointing to any webpage
+
+This issue occurs when the **Profile** site marker is available but is not pointing to any webpage. To fix this issue:
+
+1.	Open the [Portal Management app](configure/configure-portal.md).
+2.	In the left pane, select **Site Markers**.
+3.	Find the **Profile** site marker record.
+4.	Update the **Page** field to point to an active profile page of your portal.
+
+### The Profile site marker is pointing to a deactivated web page
+
+This issue occurs when the **Profile** site marker is available, but is pointing to a deactivated webpage. To fix this issue:
+
+1.	Open the [Portal Management app](configure/configure-portal.md).
+2.	In the left pane, select **Site Markers**.
+3.	Find the **Profile** site marker record.
+4.	Update the **Page** field to point to an active profile page of your portal.
+
+### An active Page Not Found site marker is not available for this portal
+
+This issue occurs when the **Page Not Found** site marker is not available in your portal configuration. To fix this issue:
+
+1.	Open the [Portal Management app](configure/configure-portal.md).
+2.	In the left pane, select **Site Markers**.
+3.	Create a new site marker with following values: 
+  - **Name**: Page Not Found
+  - **Website**: Select the website of your portal host.
+  - **Page**: Select the webpage record that is set as the Page Not Found page of your portal.
+
+### The Page Not Found site marker is not pointing to any webpage
+
+This issue occurs when the **Page Not Found** site marker is available but is not pointing to any webpage. To fix this issue:
+
+1.	Open the [Portal Management app](configure/configure-portal.md).
+2.	In the left pane, select **Site Markers**.
+3.	Find the **Page Not Found** site marker record.
+4.	Update the **Page** field to point to an active Page Not Found page of your portal.
+
+### The Page Not Found site marker is pointing to a deactivated web page
+
+This issue occurs when the **Page Not Found** site marker is available, but is pointing to a deactivated webpage. To fix this issue:
+
+1.	Open the [Portal Management app](configure/configure-portal.md).
+2.	In the left pane, select **Site Markers**.
+3.	Find the **Page Not Found** site marker record.
+4.	Update the **Page** field to point to an active Page Not Found page of your portal.
+
+### An active Access Denied site marker is not available for this portal
+
+This issue occurs when the **Access Denied** site marker is not available in your portal configuration. To fix this issue:
+
+1.	Open the [Portal Management app](configure/configure-portal.md).
+2.	In the left pane, select **Site Markers**.
+3.	Create a new site marker with following values: 
+  - **Name**: Access Denied
+  - **Website**: Select the website of your portal host.
+  - **Page**: Select the webpage record that is set as the Access Denied page of your portal.
+
+### The Access Denied site marker is not pointing to any webpage
+
+This issue occurs when the **Access Denied** site marker is available but is not pointing to any webpage. To fix this issue:
+
+1.	Open the [Portal Management app](configure/configure-portal.md).
+2.	In the left pane, select **Site Markers**.
+3.	Find the **Access Denied** site marker record.
+4.	Update the **Page** field to point to an active Access Denied page of your portal.
+
+### The Access Denied site marker is pointing to a deactivated web page
+
+This issue occurs when the **Access Denied** site marker is available, but is pointing to a deactivated webpage (root or content page can be deactivated). To fix this issue:
+
+1.	Open the [Portal Management app](configure/configure-portal.md).
+2.	In the left pane, select **Site Markers**.
+3.	Find the **Access Denied** site marker record.
+4.	Update the **Page** field to point to an active Access Denied page of your portal.
+
+### Profile web form is not available for contact entity
+
+Profile page is one of the common pages used in your portal for all profile related issues. This page shows a form that can be used by users to update their profile. Form used on this page comes from the **Profile Web Page** main form available in the Contact entity. This form is created in your Common Data Service environment when portal is provisioned. This error is displayed when the **Profile** web form is either deleted or disabled in your portal. This form is mandatory and deleting or disabling this form can break the whole website displaying runtime error on portal. This is an irreparable state and requires portal to be reinstalled in the environment.
+
+### Published state is not available for this website
+
+To fix this issue, ensure that the publishing state entity **Published** is available and active.
+
+### Published state is not visible
+
+To fix this issue, ensure that the publishing state entity **Published** has the **isVisible** check box is selected.
+
+### List of entities with search result having invalid URL
+
+To fix this issue, ensure that your entity has appropriate security permission.
+
+### List of entities with CMS security check failed
+
+To fix this issue, ensure that your entity has proper search page.
+
+### Web file is not active
+
+To fix this issue, ensure that the web file is in active state.
+
+### The partial URL of web file is misconfigured
+
+To fix this issue, ensure that the partial URL is the file name with Home as the root page.
+
+### Web file doesn't have a file attachment
+
+To fix this issue, add the corresponding CSS file in the notes section of the web file.
+
+### File attachment doesn't have content
+
+To fix this issue, add the CSS file with entire content in the notes section of the web file.
+
+### MIME type of file is not text/css
+
+To fix this issue, ensure that there are no plugins or flows which overrides the MIME type of the CSS file(s).

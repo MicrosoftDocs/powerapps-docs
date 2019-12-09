@@ -1,6 +1,6 @@
 ---
 title: IfError function | Microsoft Docs
-description: Reference information, including syntax and examples, for the IfError function in PowerApps
+description: Reference information, including syntax and examples, for the IfError function in Power Apps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -15,14 +15,14 @@ search.app:
   - PowerApps
 ---
 
-# IfError function in PowerApps
+# IfError function in Power Apps
 
 Detects errors and provides an alternative value or takes action.
 
 ## Description
 
 > [!NOTE]
-> This function is part of an experimental feature and is subject to change. The behavior that this topic describes is available only when the *Formula-level error management* feature is turned on. This app-level setting is off by default. To turn this feature on, open the *File* tab, select *App settings* in the left hand menu, and then select *Experimental features*. Your feedback is very valuable to us - please let us know what you think in the [PowerApps community forums](https://powerusers.microsoft.com/t5/Expressions-and-Formulas/bd-p/How-To).
+> This function is part of an experimental feature and is subject to change. The behavior that this topic describes is available only when the *Formula-level error management* feature is turned on. This app-level setting is off by default. To turn this feature on, open the *File* tab, select *App settings* in the left hand menu, and then select *Experimental features*. Your feedback is very valuable to us - please let us know what you think in the [Power Apps community forums](https://powerusers.microsoft.com/t5/Expressions-and-Formulas/bd-p/How-To).
 
 The **IfError** function tests one or more values until it finds an error result . If the function finds an error, the function returns a corresponding value. Otherwise, the function returns a default value. In either case, the function might return a string to show, a formula to evaluate, or another form of result. The **IfError** function resembles the **If** function: **IfError** tests for errors, while **If** tests for **true**.
 

@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Color and border properties in PowerApps
+# Color and border properties in Power Apps
 
 ## Overview
 

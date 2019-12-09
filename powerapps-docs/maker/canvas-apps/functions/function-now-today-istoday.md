@@ -1,6 +1,6 @@
 ---
 title: Now, Today, and IsToday functions | Microsoft Docs
-description: Reference information, including syntax and examples, for the Now, Today, and IsToday functions in PowerApps
+description: Reference information, including syntax and examples, for the Now, Today, and IsToday functions in Power Apps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Now, Today, and IsToday functions in PowerApps
+# Now, Today, and IsToday functions in Power Apps
 Returns the current date and time, and tests whether a date/time value is today.
 
 ## Description

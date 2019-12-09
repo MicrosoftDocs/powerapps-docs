@@ -76,7 +76,7 @@ To find an app, search your phone’s online store.
 1. On the command bar, select **Import from Excel** or **Import from CSV**.
 
    > [!div class="mx-imgBorder"]
-   > ![Main menu in PowerApps](media/import.png "Main menu in PowerApps")
+   > ![Main menu in Power Apps](media/import.png "Main menu in Power Apps")
   
 2. Browse to the folder where you saved the file that contains the export of your contacts. Select the file, select **Open**, and then select **Next**.  
   

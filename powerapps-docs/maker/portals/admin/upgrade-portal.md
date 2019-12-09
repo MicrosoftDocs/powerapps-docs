@@ -29,7 +29,7 @@ As part of any Portal release, Portal website hosts are updated automatically to
 
 ### Portal website host update
 
-If you are running a production version of Portal (you can see it on PowerApps Portals admin center), there will not be any downtime to your live Portal when your Portal is updated. However, if you are running a trial version of Portal, there will be around 6-10 minutes of downtime and you will not be able to access your Portal.
+If you are running a production version of Portal (you can see it on Power Apps Portals admin center), there will not be any downtime to your live Portal when your Portal is updated. However, if you are running a trial version of Portal, there will be around 6-10 minutes of downtime and you will not be able to access your Portal.
 
 ### Portal solution update
 
@@ -47,7 +47,7 @@ You can enable development or test portal to receive an early upgrade ahead of a
 
 To enable a portal for early upgrade:
 
-1.	Open [PowerApps Portals admin center](admin-overview.md).
+1.	Open [Power Apps Portals admin center](admin-overview.md).
 
 2.	On the **Portal Actions** tab, select **Enable portal for early upgrade**.
 

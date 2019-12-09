@@ -1,6 +1,6 @@
 ---
 title: Work with reports | Microsoft Docs
-description: Work with reports in PowerApps
+description: Work with reports in Power Apps
 author: mduelae
 manager: kvivek
 ms.service: powerapps

@@ -18,9 +18,9 @@ search.app:
 # Create Client applications
 
 You can create client applications without writing code using canvas and model-driven apps.
-More information: [Overview of creating apps in PowerApps](../../maker/index.md)
+More information: [Overview of creating apps in Power Apps](../../maker/index.md)
 
-If the PowerApps options do not meet your requirements, you can create a client application using code.
+If the Power Apps options do not meet your requirements, you can create a client application using code.
 
 ## Connecting to Common Data Service
 

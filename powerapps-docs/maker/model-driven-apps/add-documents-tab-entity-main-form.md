@@ -29,7 +29,7 @@ Adding a tab on an entity main form to display SharePoint documents helps users 
 > To use this feature you must enable document management. More information: [Manage your documents using SharePoint](/dynamics365/customer-engagement/admin/manage-documents-using-sharepoint)
 
 ## Add the documents tab in the FormXML 
-1.	Create a new solution. Sign-in to PowerApps and go to **Solutions**, select **New solution** and then enter the required and optional information. More information: [Create a solution](../common-data-service/create-solution.md)
+1.	Create a new solution. Sign-in to Power Apps and go to **Solutions**, select **New solution** and then enter the required and optional information. More information: [Create a solution](../common-data-service/create-solution.md)
 2. Add the entity to the solution where you want to add the documents tab on the main form. All standard and custom entities are supported. More information: [Add an existing component to a solution](/powerapps/maker/common-data-service/use-solution-explorer#add-an-existing-component-to-a-solution)
 3. Include the form for the entity in the solution, such as the main form for the account entity. Next to the entity, select **...**, and then select **Edit**. Select the **Forms** tab. If the form you want is missing, add it.   
 
@@ -40,7 +40,7 @@ Adding a tab on an entity main form to display SharePoint documents helps users 
    ![Add a field to the tab](media/add-field-to-tab.png)
 6. Rename the tab label. To do this, select **New Tab**, and in the right properties pane replace **New Tab** with something more descriptive, such as *Files*.
 7. Select **Save**, select **Publish**, and then close the form designer. 
-8. From the PowerApps maker home page, select **Solutions**, select the solution, and the select **Export** to export the solution as an unmanaged solution. More information: [Export solutions](../common-data-service/import-update-export-solutions.md#export-solutions) 
+8. From the Power Apps maker home page, select **Solutions**, select the solution, and the select **Export** to export the solution as an unmanaged solution. More information: [Export solutions](../common-data-service/import-update-export-solutions.md#export-solutions) 
 9. Extract the solution and open the customization.xml file with an XML or text editor. 
 10. In the customization.xml search for **label description="Files"** (or whatever you named the tab label in the previous step).
 11. Scroll down to the control id="*field name*" element, such as **control id="address1_city"** and replace the entire element with the [XML sample](#xml-sample-for-adding-the-documents-tab-to-a-form) in this topic. 

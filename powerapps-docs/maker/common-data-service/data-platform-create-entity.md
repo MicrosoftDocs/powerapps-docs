@@ -1,6 +1,6 @@
 ---
 title: Create a custom entity | Microsoft Docs
-description: Learn how to create a custom entity in PowerApps.
+description: Learn how to create a custom entity in Power Apps.
 author: Mattp123
 ms.service: powerapps
 ms.component: cds
@@ -15,15 +15,15 @@ search.app:
 ---
 
 # Create a custom entity
-In PowerApps, an *entity* defines information that you want to track in the form of records, which typically include properties such as company name, location, products, email, and phone. You can then surface that data by developing an app that refers to the entity. PowerApps offers standard "out-of-the-box" entities to cover typical scenarios within an organization (such as tracking appointments), but there may be times when you need to create custom entities to store data that's specific to your organization.
+In Power Apps, an *entity* defines information that you want to track in the form of records, which typically include properties such as company name, location, products, email, and phone. You can then surface that data by developing an app that refers to the entity. Power Apps offers standard "out-of-the-box" entities to cover typical scenarios within an organization (such as tracking appointments), but there may be times when you need to create custom entities to store data that's specific to your organization.
 
 In this topic, you'll learn how to create a custom entity called Product Review that you can use to create an app that displays ratings and comments for products that your company sells.
 
 ## Prerequisites
 To follow this procedure, you must have either a System Administrator or System Customizer security role within Common Data Service.
 
-## Sign in to PowerApps
-Sign in to PowerApps at [https://make.powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+## Sign in to Power Apps
+Sign in to Power Apps at [https://make.powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
 ## Create an entity
 1. In the navigation pane, click or tap **Data** to expand it, and then click or tap **Entities**.
@@ -40,7 +40,7 @@ Sign in to PowerApps at [https://make.powerapps.com](https://make.powerapps.com/
 
     Observe that the following boxes are autopopulated as you enter a display name:
 
-    * **Plural display name** - This box is autopopulated when you enter a display name, but you can change it if needed. The plural display name is the name of the entity in the Common Data Service WebAPI and is used when interacting with this entity from PowerApps or Flow.
+    * **Plural display name** - This box is autopopulated when you enter a display name, but you can change it if needed. The plural display name is the name of the entity in the Common Data Service WebAPI and is used when interacting with this entity from Power Apps or Flow.
     * **Name** - This box is also autopopulated when you enter a display name. The prefix was set up when the environment was created and ensures that the entities you create can be exported and imported into other environments without conflicting with other entity names. You can change this prefix by updating the prefix on your Publisher for the Common Data Service Default Solution. To keep existing apps from breaking, you cannot change the name after saving the entity.
 
        > [!NOTE]
@@ -106,4 +106,4 @@ In this topic, you learned how to create a custom entity called Product Review t
 > [Create a relationship](data-platform-entity-lookup.md)
 
 ## Privacy notice
-With the Microsoft PowerApps common data model, Microsoft collects and stores custom entity and field names in our diagnostic systems. We use this knowledge to improve the common data model for our customers. The entity and field names that app Creators create help us understand scenarios that are common across the Microsoft PowerApps community and ascertain gaps in the service’s standard entity coverage, such as schemas related to organizations. The data in the database tables associated with these entities is not accessed or used by Microsoft or replicated outside of the region in which the database is provisioned. Note, however, that the custom entity and field names may be replicated across regions and are deleted in accordance with our data retention policies. Microsoft is committed to your privacy as described further in our [Trust Center](https://www.microsoft.com/trustcenter/Privacy/default.aspx).
+With the Microsoft Power Apps common data model, Microsoft collects and stores custom entity and field names in our diagnostic systems. We use this knowledge to improve the common data model for our customers. The entity and field names that app Creators create help us understand scenarios that are common across the Microsoft Power Apps community and ascertain gaps in the service’s standard entity coverage, such as schemas related to organizations. The data in the database tables associated with these entities is not accessed or used by Microsoft or replicated outside of the region in which the database is provisioned. Note, however, that the custom entity and field names may be replicated across regions and are deleted in accordance with our data retention policies. Microsoft is committed to your privacy as described further in our [Trust Center](https://www.microsoft.com/trustcenter/Privacy/default.aspx).

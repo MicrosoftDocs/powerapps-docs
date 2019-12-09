@@ -13,7 +13,7 @@ ms.reviewer:
 
 # Render the entity list associated with the current page
 
-Render the Entity List associated with the current page as a paginated sortable table. Uses [entitylist](liquid-objects.md#entitylist), [entityview](liquid-objects.md#entityview), [PowerApps Common Data Service entity tags](portals-entity-tags.md), [page](liquid-objects.md#page), and [request](liquid-objects.md#request) parameters, and includes search and multiple view selection.  
+Render the Entity List associated with the current page as a paginated sortable table. Uses [entitylist](liquid-objects.md#entitylist), [entityview](liquid-objects.md#entityview), [Power Apps Common Data Service entity tags](portals-entity-tags.md), [page](liquid-objects.md#page), and [request](liquid-objects.md#request) parameters, and includes search and multiple view selection.  
 
 ```xml
 {% entitylist id:page.adx_entitylist.id %}
