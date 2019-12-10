@@ -40,7 +40,7 @@ Adding a tab on an entity main form to display SharePoint documents helps users 
    ![Add a field to the tab](media/add-field-to-tab.png)
 6. Rename the tab label. To do this, select **New Tab**, and in the right properties pane replace **New Tab** with something more descriptive, such as *Files*.
 7. Select **Save**, select **Publish**, and then close the form designer. 
-8. From the Power Apps maker home page, select **Solutions**, select the solution, and the select **Export** to export the solution as an unmanaged solution. More information: [Export solutions](../common-data-service/import-update-export-solutions.md#export-solutions) 
+8. From the Power Apps maker home page, select **Solutions**, select the solution, and the select **Export** to export the solution as an unmanaged solution. More information: [Export solutions](../common-data-service/export-solutions.md) 
 9. Extract the solution and open the customization.xml file with an XML or text editor. 
 10. In the customization.xml search for **label description="Files"** (or whatever you named the tab label in the previous step).
 11. Scroll down to the control id="*field name*" element, such as **control id="address1_city"** and replace the entire element with the [XML sample](#xml-sample-for-adding-the-documents-tab-to-a-form) in this topic. 
