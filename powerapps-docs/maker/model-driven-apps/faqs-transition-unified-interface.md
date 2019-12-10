@@ -55,7 +55,7 @@ There won't be any change to your environment if you haven't approved the sugges
 > [!NOTE]
 > After October 1, 2020, all environments will be updated to Unified Interface as per the October 2020 release wave.
 
-### My auto transition date is within 48 hours and I can’t change the date within the portal. How can I stop transition taking place?
+### My auto transition date is within 48 hours and I can’t change the date within the portal. How can I stop the transition from taking place?
 
 The ability to change the transition date for an environment is available only until 48 hours prior to transition. To stop the process after this period, raise a support case. 
 
