@@ -140,7 +140,9 @@
       href: ./canvas-apps/sample-meeting-capture.md
   - name: Create your first app
     items:
-    - name: 1 - Create an app from data
+    - name: 1 - Create an app from a template
+      href: ./canvas-apps/get-started-test-drive.md
+    - name: 2 - Create an app using data
       items:
       - name: From Common Data Service
         href: ./canvas-apps/data-platform-create-app.md
@@ -158,14 +160,12 @@
         href: ./canvas-apps/customize-forms-sharepoint.md
       - name: 3 - Cards
         href: ./canvas-apps/customize-card.md
-    - name: 3 - Create an app yourself
-      items:
-      - name: From Common Data Service
-        href: ./canvas-apps/data-platform-create-app-scratch.md
-      - name: From Excel
-        href: ./canvas-apps/get-started-create-from-blank.md
-    - name: Create an app from a template
-      href: ./canvas-apps/get-started-test-drive.md
+  - name: Create an app from scratch
+    items:
+    - name: From Common Data Service
+      href: ./canvas-apps/data-platform-create-app-scratch.md
+    - name: From Excel
+      href: ./canvas-apps/get-started-create-from-blank.md
   - name: Design and build an app
     items:
       - name: Connect to data
