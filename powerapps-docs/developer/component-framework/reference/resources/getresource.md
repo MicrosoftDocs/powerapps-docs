@@ -33,7 +33,6 @@ Model-driven apps
 |success|`(data: string) => void`|No|The success callback. Resource data is returned in base 64 encoded format.|
 |failure|`() => void`|No|The failure callback.|
 
-
 ### Related topics
 
 [Resources](../resources.md)<br/>
