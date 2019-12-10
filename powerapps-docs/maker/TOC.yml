@@ -170,7 +170,7 @@
     items:
       - name: Connect to data
         items:
-        - name: List of connections
+        - name: Connections Overview
           href: ./canvas-apps/connections-list.md
         - name: Popular connectors
           items:
