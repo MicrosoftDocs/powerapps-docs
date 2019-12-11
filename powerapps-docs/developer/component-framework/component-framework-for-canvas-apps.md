@@ -1,5 +1,5 @@
 ---
-title: Power Apps component framework for canvas apps  | Microsoft Docs
+title: Code components for canvas apps  | Microsoft Docs
 description: Create code components for canvas apps
 keywords:
 ms.author: nabuthuk
@@ -13,7 +13,7 @@ ms.topic: "article"
 ms.assetid: 5d100dc3-bd82-4b45-964c-d90eaebc0735
 ---
 
-# Power Apps component framework for canvas apps
+# Code components for canvas apps
 
 > [!IMPORTANT]
 > This feature is still experimental and disabled by default. For more information, see [Experimental and preview features](../../maker/canvas-apps/working-with-experimental.md).

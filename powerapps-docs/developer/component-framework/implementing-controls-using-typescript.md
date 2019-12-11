@@ -14,13 +14,16 @@ author: Nkrb
 
  In this tutorial, we demonstrate how to build a linear slider code component that enables users to change the numeric values using a visual slider instead of typing the values in the field. 
 
-The elements that are required to build the linear code components are:
+The following steps are required to build a linear slider code component:
 
-1. [Create a new component project](#creating-a-new-component-project)
-2. [Implementing manifest](#implementing-manifest)
-3. [Implement component logic using TypeScript](#implementing-component-logic)
-4. [Add style to the code components](#adding-style-to-the-code-component)
-5. [Packaging code components](#packaging-your-code-components)
+[!div class="checklist"]
+- [Create a new component project](#creating-a-new-component-project)
+- [Implementing manifest](#implementing-manifest)
+- [Implement component logic using TypeScript](#implementing-component-logic)
+- [Add style to the code components](#adding-style-to-the-code-component)
+- [Packaging code components](#packaging-your-code-components)
+- [Adding component to a model-driven app](#adding-code-components-in-model-driven-apps)
+- [Adding component to a canvas app](#adding-code-components-to-a-canvas-app)
 
 ## Creating a new component project
 
@@ -76,6 +79,7 @@ Make changes to the predefined manifest file, as shown here:
      ```XML
       <property name="sliderValue" display-name-key="sliderValue_Display_Key" description-key="sliderValue_Desc_Key" of-type-group="numbers" usage="bound" required="true" />
       ```
+
 3. The [resources](manifest-schema-reference/resources.md) node defines the visualization of the code component. It contains all the resources that build the visualization and styling of the code component. The [code](manifest-schema-reference/code.md) is specified as a child element under the resources element. Define the [resources](manifest-schema-reference/resources.md) as shown here:
 
    - **code**: Refers to the path where all the resource files are located.

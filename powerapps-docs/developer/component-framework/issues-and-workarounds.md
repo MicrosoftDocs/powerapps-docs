@@ -1,5 +1,5 @@
 ---
-title: Known issues and workarounds (Power Apps Component Framework) | Microsoft Docs
+title: Common issues and workarounds (Power Apps Component Framework) | Microsoft Docs
 description: Provides information on know issues and workarounds some come across while working with Power Apps component framework and CLI
 keywords:
 author: Nkrb
@@ -12,7 +12,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ---
 
-# Known issues and workarounds
+# Common issues and workarounds
+
+Here are some common issues that you might come across while using the Power Apps component framework and Power Apps CLI.
 
 **Msbuild error MSB4036**
 
@@ -70,4 +72,4 @@ If a component is created using the CLI version lower than 0.4.3, you will encou
         </CRMSharedFeed>  
         </packageSourceCredentials>  
        </configuration>
-    ```
+     ```
