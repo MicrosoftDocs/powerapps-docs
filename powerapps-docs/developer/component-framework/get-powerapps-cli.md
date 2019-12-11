@@ -15,11 +15,13 @@ ms.assetid: f393f227-7a88-4f25-9036-780b3bf14070
 
 # Get tooling for Power Apps component framework
 
-Use **Microsoft Power Apps CLI** (command-line interface) to create, debug, and deploy code components using Power Apps component framework. Power Apps CLI enables developers to create code components quickly. In the future it will be expanded to include support for additional development and application lifecycle management (ALM) experiences. 
+Use **Microsoft Power Apps CLI** (command-line interface) to create, debug, and deploy code components using Power Apps component framework. Power Apps CLI enables developers to create code components quickly. In the future, it will be expanded to include support for additional development and application lifecycle management (ALM) experiences. 
 
 ## What is Microsoft Power Apps CLI 
 
-Microsoft Power Apps CLI is a simple, single-stop developer command-line interface that empowers the developers and app makers to create code components. Power Apps CLI tooling is the first step toward a comprehensive ALM story where the enterprise developers and ISVs can create, build, debug, and publish their extensions and customizations quickly and efficiently.  
+Microsoft Power Apps CLI is a simple, single-stop developer command-line interface that empowers the developers and app makers to create code components. 
+
+Power Apps CLI tooling is the first step toward a comprehensive ALM story where the enterprise developers and ISVs can create, build, debug, and publish their extensions and customizations quickly and efficiently.  
 
 ## Install Microsoft Power Apps CLI
 
@@ -50,18 +52,18 @@ This table lists some common commands used in the CLI
 
 |Command|Description|Examples|
 |------|-----------|--------|
-|**pcf**|Commands for working with Power Apps component framework. It has the following parameters: <br/> - **init**: Initializes the code component project. It has the following parameters: <br/> - *namespace*: Namespace of the code component. <br/> - *name*: Name of the code component. <br/> - *template*: Field or dataset <br/> - **push**: Pushes the code component to the Common Data Service instance with all the latest changes. It has the following parameters:<br/> - *publisher-prefix*: Customization prefix value for the Common Data Service solution publisher.<br/> - *verbosity*: Verbosity level for MSBuild when building the temporary solution wrapper.| `pac pcf init --namespace <specify your namespace here> --name <Name of the code component> --template <component type>` <br/> <br/> `pac pcf push --publisher-prefix <your publisher prefix>`|
-|**solution**|Commands for working with Common Data Service projects. It has the following parameters: <br/> - **init**: Initializes a directory with the solution project. It has the following parameters: <br/> - *publisher-name*: Publisher name of the organization. <br/> - *publisher-prefix*: Publisher prefix of the organization. <br/> - **add-reference**: Sets the reference path to the component project folder by passing the `path` parameter.<br/> - **clone**: Creates a solution project based up on the existing solution project by passing the following parameters `name`, `version`, and `include`|`pac solution init --publisher-name <enter your publisher name> --publisher-prefix <enter your publisher prefix>` <br/><br/> `pac solution add-reference --path <path to your Power Apps component framework project>`<br/><br/> `pac solution clone –name<name of the solution to be exported> --version <version of your solution> --include <settings that should be included>`|
-|**auth**|Commands to authenticate to Common Data Service. It has the following parameters: <br/> - **create**: Creates the authentication profile for your organization by passing the `url` parameter. You need to provide the organization url for the `url` parameter. <br/> - **list**: Provides the list of authentication profiles. <br/> - **select**: Provides a way to switch between previously created authentication profiles by passing the `index` parameter.<br/> - **clear**: Clears all the authentication profiles crated locally.<br/> - **delete**: Deletes a particular authentication profile by passing the `index` parameter.|`pac auth create --url <your Common Data Service org’s url>` <br/> <br/> `pac auth list` <br/><br/> `Pac auth select --index <index of the active profile>`|
-|**telemetry**|Manages the telemetry settings. It has the following parameters: <br/> - **enable**: Enables the telemetry option. <br/> -  **disable**: Disables the telemetry option.<br/> - **status**: Shows the current status of the telemetry.|`pac telemetry enable` <br/><br/> `pac telemetry disable`|
-|**org**|Command to work with Common Data Service. It has a parameter `who` which displays the information about the current Common Data Service environment.|`pac org who`|
+|**pcf**|Commands for working with Power Apps component framework. It has the following parameters: <br/> - **init**: Initializes the code component project. <br/> - **namespace**: Namespace of the code component. <br/> - **name**: Name of the code component. <br/> - **template**: Field or dataset <br/> - **push**: Pushes the code component to the Common Data Service instance with all the latest changes.| `pac pcf init --namespace <specify your namespace here> --name <Name of the code component> --template <component type>` <br/> <br/> `pac pcf push --publisher-prefix <your publisher prefix>`|
+|**solution**|Commands for working with Common Data Service projects. It has the following parameters: <br/> - **init**: Initializes the solution project.<br/> - **publisher-name**: Publisher name of the organization. <br/> - **publisher-prefix**: Publisher prefix of the organization. <br/> - **add-reference**: Sets the reference path to the component project folder by passing the `path` parameter.<br/> - **clone**: Creates a solution project based up on the existing solution project by passing the following parameters `name`, `version`, and `include`|`pac solution init --publisher-name <enter your publisher name> --publisher-prefix <enter your publisher prefix>` <br/><br/> `pac solution add-reference --path <path to your Power Apps component framework project>`<br/><br/> `pac solution clone –name<name of the solution to be exported> --version <version of your solution> --include <settings that should be included>`|
+|**auth**|Commands to authenticate to Common Data Service. It has the following parameters: <br/> - **create**: Creates the authentication profile for your organization by passing the `url` parameter. You need to pass the organization url for the `url` parameter. <br/> - **list**: Provides the list of authentication profiles. <br/> - **select**: Provides a way to switch between previously created authentication profiles by passing the `index` parameter.|`pac auth create --url <your Common Data Service org’s url>` <br/> <br/> `pac auth list` <br/><br/> `Pac auth select --index <index of the active profile>`|
+|**telemetry**|Manages the telemetry settings. It has the following parameters: Enable and disable.|`pac telemetry enable` <br/><br/> `pac telemetry disable`|
+|**org**|Command to work with Common Data Service.|`pac org who`|
 |**plugin**|Manages to create a plug-in project|`pac plugin init`|
 
 ## Uninstall Microsoft Power Apps CLI
 
 To uninstall the Power Apps CLI tooling, run the MSI from [here](https://aka.ms/PowerAppsCLI). 
 
-If you are a Private Preview participant and have an older version of CLI, follow these steps:
+If you are a **Private Preview** participant and have an older version of CLI, follow these steps:
 
 1. To find out where the Power Apps CLI is installed, open a command prompt and type `where pac`.
 1. Delete the PowerAppsCLI folder.
