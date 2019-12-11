@@ -72,7 +72,7 @@ We will update the portal with the date to confirm. Notification e-mails will al
 
 Check out the supporting content available on the [community site](https://community.dynamics.com/365/unified-interface/). We also have a [transition checklist](https://aka.ms/UIChecklist) to help you plan effectively. Review it carefully to ensure that you are comfortable with the transition to Unified Interface.
 
-### My environment has been transitioned, but I am finding blocking issues for my users and wish to move back to the legacy web client. Is this possible?
+### My environment has been transitioned, but I am finding blocking issues for my users and want to move back to the legacy web client. Is this possible?
 
 Yes, you will still be able to switch back to the legacy web client for up to 10 days post transition. You can make the [switch manually](https://docs.microsoft.com/power-platform/admin/enable-unified-interface-only) for the first 4 days or after that point, raise a support request from your usual channel as the manual switch will be disabled. 
 
