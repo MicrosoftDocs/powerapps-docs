@@ -58,7 +58,9 @@ To add code components to an app, you need to enable the Power Apps component fr
 
 ## Implementing code components
 
-After you enable the Power Apps component framework feature in your environment, you can start implementing the logic for code components. The [Create your first code component](implementing-controls-using-typescript.md) topic demonstrates the step-by-step process to create code components implementing the custom logic and manifest file, running the debugging process, creating a solution zip file, and importing the solution into Common Data Service.
+After you enable the Power Apps component framework feature in your environment, you can start implementing the logic for code components.
+
+ The [Create your first code component](implementing-controls-using-typescript.md) topic demonstrates the step-by-step process to create code components.
 
 > [!NOTE]
 > Implementing code components is the same for both model-driven apps and canvas apps (experimental preview). The only difference is adding the code components. 
@@ -90,7 +92,7 @@ To add code components to a canvas app:
 
 ## Delete a code component 
 
-To delete a code component from a canvas app, select the code component that you want to delete and then select the **Delete** button on the menu. When the code component is deleted from the app, all the code component elements are deleted from the app and the app package. 
+To delete a code component from a canvas app, select the code component that you want to delete and then select the **Delete** button on the menu. When the code component is deleted from the app, all the code component elements get deleted from the app and the app package. 
 
 ## Update existing code components
 
