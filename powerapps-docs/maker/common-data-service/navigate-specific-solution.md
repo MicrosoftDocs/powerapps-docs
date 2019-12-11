@@ -36,5 +36,5 @@ If your organization already has a specific solution you should work in, this is
  
 
  ## See also
-[Create a solution](create-solution.md) 
+[Create a solution](create-solution.md) <br />
 [Use the Common Data Services Default Solution](use-solutions-for-your-customizations.md)
