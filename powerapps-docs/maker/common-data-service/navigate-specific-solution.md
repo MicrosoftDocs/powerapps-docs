@@ -2,7 +2,7 @@
 title: "Navigate to a specific solution with Power Apps | MicrosoftDocs"
 description: "Learn how to locate and open a specific solution in your environment"
 ms.custom: ""
-ms.date: 10/29/2018
+ms.date: 12/11/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -26,13 +26,15 @@ search.app:
 
 # Navigate to a specific solution
 
-If your organization already has a specific solution you should work in, this is how you can find it. To create a new solution, see [Create your own solution](create-solution.md).  
+If your organization already has a specific solution you should work in, this is how you can find it.   
   
 ## Open a solution  
   
-1. Select **Solutions** from the left navigation to see a list of solutions in your environment.
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and then select **Solutions** from the left navigation to see a list of solutions in your environment.
   
-2. Select the solution that you want to work in or view all the components contained within it. More information: [Add Components](solutions-overview.md)  
+2. Select the solution that you want to work in or view all the components contained within it. 
+ 
 
- ## Next steps
-[Monitor and manage workflow processes](/flow/monitor-manage-processes)
+ ## See also
+[Create a solution](create-solution.md) 
+[Use the Common Data Services Default Solution](use-solutions-for-your-customizations.md)
