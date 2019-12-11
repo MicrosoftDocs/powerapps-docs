@@ -16,7 +16,6 @@ author: Nkrb
 
 The following steps are required to build a linear slider code component:
 
-[!div class="checklist"]
 - [Create a new component project](#creating-a-new-component-project)
 - [Implementing manifest](#implementing-manifest)
 - [Implement component logic using TypeScript](#implementing-component-logic)
