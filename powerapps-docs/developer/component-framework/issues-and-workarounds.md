@@ -30,7 +30,7 @@ Here are some common issues that you might come across while using the Power App
 1. Under Code Tools, check **NuGet targets & Build Tasks**.
 
 > [!NOTE]
-> We will be constantly adding known issues and workarounds as we encounter during the development process. If you encounter an issue and have a workaround and you think that is helpful, raise the issue [here](https://powerusers.microsoft.com/t5/Power-Apps-Component-Framework/bd-p/pa_component_framework) so that we will review and add it to the list.
+> We will be constantly adding common issues and workarounds as we come across during the development process. If you encounter an issue and have a workaround and you think that is helpful, raise the issue [here](https://powerusers.microsoft.com/t5/Power-Apps-Component-Framework/bd-p/pa_component_framework) or raise a pull request so that we can review and add it to the list.
 
 **Publisher Prefix**
 
