@@ -87,7 +87,7 @@ If you encounter any blocking items, log them using your standard support proces
 
 ### What is the standard reminder procedure throughout this process?
 
-Microsoft will send the following communication:
+Communication will be in waves, at least 30 days prior to the suggested timeframe, but you can sign in to the portal (<https://runone.powerappsportals.com>) at any time to view the status. Microsoft will send the following communication:
 
 -	Initial message for each environment that has a suggested transition date.
 -	If you have approved the date, you will receive a reminder message 2 days before the dates are locked within the portal. 
