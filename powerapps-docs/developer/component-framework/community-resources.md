@@ -22,9 +22,9 @@ The following is a list of community resources created by the Power Apps communi
 
 ## Code components gallery
 
-The [PCF gallery](https://pcf.gallery/) is a collection of code components created by the Power Apps platform community. It has a wide range of code components that may fit in for your business case. Make sure that you review the licensing terms and the source code before you compile the code using the Power Apps CLI and import them into your organization.
+The [PCF gallery](https://pcf.gallery/) is a collection of code components created by the Power Apps platform community. It has a wide range of code components that may fit in for your business case. 
 
-Code component run in the context of the end user who is using the component and can perform any action that user has permissions including accessing, capturing and modifying the data. 
+Code component run in the context of the end user who is using the component and can perform any action that may include accessing, capturing and modifying the data. Make sure that you review the licensing terms and the source code before you compile the code using the Power Apps CLI and import them into your organization.
 
 ![Component gallery](media/pcf-gallery.PNG "Components gallery")
 
@@ -42,10 +42,10 @@ The following is the list of blogs created by Power Apps community.
 - [How to configure Node.js and Typescript into your environment](https://capuanodanilo.com/2019/06/11/how-to-configure-node-js-and-typescript-into-your-environment-to-develop-powerapps-component-frameworks-pcf)
 - [Power Apps component framework – Frosting on the Cake](https://stevemordue.com/powerapps-component-framework-frosting-on-the-cake/)
 - [Public availability of Power Apps component framework – An important milestone](https://crmindian.com/2019/04/24/public-availability-of-powerapps-component-framework-an-important-milestone-for-powerapps-and-d365/)
-- [Trade your views with Datacards](https://www.linkedin.com/pulse/trade-your-crm-views-datacards-manny-grewal/)
 - [Work with code components using Power Apps component framework](https://powermaverick.dev/2019/05/18/create-custom-controls-using-powerapp-component-framework)
 
 ## Videos
+The following is the list of videos created by Power Apps community.
 
 - [Build your own code components](https://www.youtube.com/watch?v=S3Z_IUf1ncg)
 - [Code components for canvas apps](https://www.youtube.com/watch?v=bMSCkcb4xAQ&feature=emb_logo)
