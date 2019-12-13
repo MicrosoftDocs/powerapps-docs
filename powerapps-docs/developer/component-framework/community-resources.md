@@ -52,12 +52,12 @@ The following is the list of videos created by Power Apps community.
 - [Code components for canvas apps](https://www.youtube.com/watch?v=bMSCkcb4xAQ&feature=emb_logo)
 - [Easier debugging with sourcemaps and Fiddler](https://www.youtube.com/watch?v=Ov-m5FBUj9g&feature=youtu.be)
 - [Getting started with code components](https://www.youtube.com/watch?v=ylhVZUlGgQw)
-- [Power Apps Component framework Academy- Getting started](https://www.youtube.com/watch?v=YJ9hrKxAhTU)  
-- [Power Apps Component framework Academy- Working with manifest file](https://www.youtube.com/watch?v=qbSpDVTxt7U&t=5s)
-- [Power Apps Component framework Academy- Dataset components](https://www.youtube.com/watch?v=OEiM97nTD0w)
-- [Power Apps Component framework Academy- Importing into your organization](https://www.youtube.com/watch?v=2uO2L2xTPkc)
-- [Power Apps Component framework Academy - Using React and Office UI fabric](https://www.youtube.com/watch?v=e7JNgGlI3nE)
-- [Power Apps Component framework Academy- Usage of additional frameworks](https://www.youtube.com/watch?v=cOPyyDdsEjQ)
+- [Power Apps Component framework Academy: Getting started](https://www.youtube.com/watch?v=YJ9hrKxAhTU)  
+- [Power Apps Component framework Academy: Working with manifest file](https://www.youtube.com/watch?v=qbSpDVTxt7U&t=5s)
+- [Power Apps Component framework Academy: Dataset components](https://www.youtube.com/watch?v=OEiM97nTD0w)
+- [Power Apps Component framework Academy: Importing into your organization](https://www.youtube.com/watch?v=2uO2L2xTPkc)
+- [Power Apps Component framework Academy: Using React and Office UI fabric](https://www.youtube.com/watch?v=e7JNgGlI3nE)
+- [Power Apps Component framework Academy: Usage of additional frameworks](https://www.youtube.com/watch?v=cOPyyDdsEjQ)
 - [Power Apps component framework code components](https://www.youtube.com/watch?v=FxWF-LCCB4g&feature=youtu.be)
 
 
