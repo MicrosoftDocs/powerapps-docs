@@ -25,9 +25,11 @@ The Power Apps component framework gallery (<https://pcf.gallery/>) is a collect
 
 Make sure that you review the licensing terms and the source code before you download. See, [How to run the samples](use-sample-components.md) topic on how to create a solution package and import into Common Data Service.
 
-Code component run in the context of the end user who is using the component and can perform any action that may include accessing, capturing and modifying the data. 
+> [!WARNING]
+> Code component run in the context of the end user who is using the component and can perform any action that may include accessing, capturing and modifying the data. 
 
-![Component gallery](media/pcf-gallery.PNG "Components gallery")
+> [!div class="mx-imgBorder"]
+> ![Component gallery](media/pcf-gallery.PNG "Components gallery")
 
 
 ## Blogs
