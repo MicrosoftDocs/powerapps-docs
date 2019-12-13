@@ -32,4 +32,4 @@ To view all activities in a portal Timeline:
     > [!IMPORTANT]
     > Preparing customizations may take some time. If you see a message that the browser page has become unresponsive, wait for the page to become responsive, and don't close it.
 
-3. Since this is a portal metadata change , [clear the server-side cache](../admin/clear-server-side-cache) to ensure the updated data is displayed on the portal.
+3. Since this is a portal metadata change , [clear the server-side cache](../admin/clear-server-side-cache.md) to ensure the updated data is displayed on the portal.
