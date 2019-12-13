@@ -63,4 +63,4 @@ The following is the list of videos created by Power Apps community.
 
 ## Tools
 
-The [code components builder](https://www.xrmtoolbox.com/plugins/Maverick.PCF.Builder/) is XrmToolBox tool that lets you create code components in visual manner using the Power Apps CLI.
+The [Custom Control Builder](https://www.xrmtoolbox.com/plugins/Maverick.PCF.Builder/) is a tool from XrmToolBox that lets you create code components in visual manner using the Power Apps CLI.
