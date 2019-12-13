@@ -24,7 +24,9 @@ The following is a list of community resources created by the Power Apps communi
 
 The [PCF gallery](https://pcf.gallery/) is a collection of code components created by the Power Apps platform community. It has a wide range of code components that may fit in for your business case. 
 
-Code component run in the context of the end user who is using the component and can perform any action that may include accessing, capturing and modifying the data. Make sure that you review the licensing terms and the source code before you compile the code using the Power Apps CLI and import them into your organization.
+Make sure that you review the licensing terms and the source code before you download. See, [How to run the samples](use-sample-components.md) topic on how to create a solution package and import into Common Data Service.
+
+Code component run in the context of the end user who is using the component and can perform any action that may include accessing, capturing and modifying the data. 
 
 ![Component gallery](media/pcf-gallery.PNG "Components gallery")
 
@@ -37,7 +39,6 @@ The following is the list of blogs created by Power Apps community.
 - [Beyond the Power Apps component framework](https://www.itaintboring.com/dynamics-crm/beyond-the-powerapps-component-framework)
 - [Beyond the citizen developer: Why pros see promise in Microsoft's Power Apps component framework](https://msdynamicsworld.com/story/beyond-citizen-developer-why-pros-see-promise-microsofts-powerapps-component-framework)
 - [Create code components](https://debajmecrm.com/2019/04/26/in-depth-end-end-walkthrough-develop-your-custom-controls-using-power-apps-component-framework-and-use-it-on-your-crm-interface/)
-- [Deep dive into app experience](https://www.nz365guy.com/deep-dive-into-app-experience-with-clay-wesener/)
 - [Editing the DOM with supported code components](https://www.magnetismsolutions.com/blog/adammurchison/2019/05/29/editing-the-dom-with-supported-dynamics-365-custom-controls)
 - [How to configure Node.js and Typescript into your environment](https://capuanodanilo.com/2019/06/11/how-to-configure-node-js-and-typescript-into-your-environment-to-develop-powerapps-component-frameworks-pcf)
 - [Power Apps component framework – Frosting on the Cake](https://stevemordue.com/powerapps-component-framework-frosting-on-the-cake/)
@@ -51,7 +52,12 @@ The following is the list of videos created by Power Apps community.
 - [Code components for canvas apps](https://www.youtube.com/watch?v=bMSCkcb4xAQ&feature=emb_logo)
 - [Easier debugging with sourcemaps and Fiddler](https://www.youtube.com/watch?v=Ov-m5FBUj9g&feature=youtu.be)
 - [Getting started with code components](https://www.youtube.com/watch?v=ylhVZUlGgQw)
-- [PCF Academy](https://www.youtube.com/channel/UCjXCqDkRAGFAtu2JlWr3Epg)  
+- [PCF Academy- Getting started](https://www.youtube.com/watch?v=YJ9hrKxAhTU)  
+- [PCF Academy- Working with manifest file](https://www.youtube.com/watch?v=qbSpDVTxt7U&t=5s)
+- [PCF Academy- Dataset components](https://www.youtube.com/watch?v=OEiM97nTD0w)
+- [PCF Academy- Importing into your organization](https://www.youtube.com/watch?v=2uO2L2xTPkc)
+- [PCF Academy - Using React and Office UI fabric](https://www.youtube.com/watch?v=e7JNgGlI3nE)
+- [PCF Academy- Usage of additional frameworks](https://www.youtube.com/watch?v=cOPyyDdsEjQ)
 - [Power Apps component framework code components](https://www.youtube.com/watch?v=FxWF-LCCB4g&feature=youtu.be)
 
 
