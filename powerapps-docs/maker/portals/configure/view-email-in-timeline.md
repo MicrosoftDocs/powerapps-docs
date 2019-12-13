@@ -1,5 +1,5 @@
 ---
-title: "View all activities in a portal Timeline | MicrosoftDocs"
+title: "View activities in a portal timeline | MicrosoftDocs"
 description: "Instructions to view all activities in a portal Timeline."
 author: tapanm-msft
 manager: kumarvivek
@@ -11,7 +11,7 @@ ms.author: dileeps
 ms.reviewer: tapanm
 ---
 
-# View all activities in a portal Timeline
+# View activities in a portal timeline
 
 While working on a case or interacting with a customer, you might create an activity such as an appointment, an email or a phone call. When you navigate to the Timeline in your support portal, you might not find this activity because by default all activities are not displayed in portal Timeline. 
 
