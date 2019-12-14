@@ -33,6 +33,14 @@ If you intend to transport customizations or extensions between different Common
 > [!NOTE]
 > For detailed information about how to effectively use solutions for a successful application lifecycle management (ALM) implementation, see [Whitepaper: Solution Lifecycle Management](https://www.microsoft.com/download/details.aspx?id=57777)
 
+## Storage Spaces Direct overview
+
+Storage Spaces Direct is included in Windows Server 2019 Datacenter, Windows Server 2016 Datacenter, and Windows Server Insider Preview Builds. 
+
+|       |       |
+|   -   |   -   |
+| **Troubleshooting**<br><ul><li>[Troubleshooting scenarios](https://docs.microsoft.com/en-us/windows-server/storage/storage-spaces/troubleshooting-storage-spaces)</li><li>[Troubleshoot health and operational states](https://docs.microsoft.com/en-us/windows-server/storage/storage-spaces/storage-spaces-states)</li><li>[Collect diagnostic data with Storage Spaces Direct](https://docs.microsoft.com/en-us/windows-server/storage/storage-spaces/data-collection)</li><li>[Storage-class memory health management](https://docs.microsoft.com/en-us/windows-server/storage/storage-spaces/storage-class-memory-health)</li> | **Recent blog posts**<br><ul><li>[13.7 million IOPS with Storage Spaces Direct: the new industry record for hyper-converged infrastructure](https://blogs.technet.microsoft.com/filecab/2018/10/30/windows-server-2019-and-intel-optane-dc-persistent-memory/)</li><li>[Hyper-converged infrastructure in Windows Server 2019 - the countdown clock starts now!](https://blogs.technet.microsoft.com/filecab/2018/10/02/hci-the-countdown-clock-starts-now/)</li><li>[Five big announcements from the Windows Server Summit](https://blogs.technet.microsoft.com/filecab/2018/06/27/windows-server-summit-recap)</li><li>[10,000 Storage Spaces Direct clusters and counting...](https://blogs.technet.microsoft.com/filecab/2018/03/27/storage-spaces-direct-momentum/)</li> |
+
 ## Managed and unmanaged solutions
 
 There are two types of solutions: *managed* and *unmanaged*.
@@ -109,6 +117,21 @@ From [home.dynamics.com](https://home.dynamics.com/)
 > Whenever you create a new solution component that will be included in this solution, use this solution, or another solution associated with the same solution publisher to add it.
 > Solution components created in the context of a solution associated to a different solution publisher can be added to this solution, but they may have inconsistent customization prefix values set.
 
+## Deleting volumes in Storage Spaces Direct
+
+This topic provides instructions for deleting volumes in on a [Storage Spaces Direct](https://docs.microsoft.com/en-us/windows-server/storage/storage-spaces/storage-spaces-direct-overview) cluster by using Windows Admin Center.
+
+Watch a quick video on how to delete a volume.
+
+> [!VIDEO https://www.youtube-nocookie.com/embed/DbjF8r2F6Jo]
+
+To delete a volume in Windows Admin Center:
+
+1. In Windows Admin Center, connect to a Storage Spaces Direct cluster, and then select **Volumes** from the **Tools** pane.
+2. On the Volumes page, select the **Inventory** tab, and then select the volume that you want to delete.
+4. At the top of the volumes detail page, select **Delete**.
+5. In the confirmations dialog, select the check box to confirm that you want to delete the volume, and select **Delete**.
+
 ## Solution layering
 
 It is possible for two managed solutions to be installed which contradict each other or for some customizations applied to the environment to override a managed solution. How does this work?
@@ -156,6 +179,33 @@ A solution file is a single binary file that does not lend itself to source code
 The *SolutionPackager* tool resolves the problem of source code control and team development of solution files. The tool identifies individual components in the compressed solution file and extracts them out to individual files. The tool can also re-create a solution file by packing the files that had been previously extracted. This enables multiple people to work independently on a single solution and extract their changes into a common location. Because each component in the solution file is broken into multiple files, it becomes possible to merge customizations without overwriting prior changes. A secondary use of the SolutionPackager tool is that it can be invoked from an automated build process to generate a compressed solution file from previously extracted component files without needing an active Common Data Service instance.
 
 More information: [Solution tools for team development](/dynamics365/customer-engagement/developer/solution-tools-team-development)
+
+## FAQ
+
+## Compare Azure Stack Hub and Azure Stack HCI
+
+As your organization digitally transforms, you may find that you can move faster by using public cloud services to build on modern architectures and refresh legacy apps. However, for reasons that include technological and regulatory obstacles, many workloads must remain on-premises. The following table helps you determine which Microsoft hybrid cloud strategy provides what you need where you need it, delivering cloud innovation for workloads wherever they are.
+
+| Azure Stack Hub | Azure Stack HCI |
+| --------------- | --------------- |
+| New skills, innovative processes | Same skills, familiar processes |
+| Azure services in your datacenter | Connect your datacenter to Azure services |
+
+### When to use Azure Stack Hub
+
+| Azure Stack Hub | Azure Stack HCI |
+| --------------- | --------------- |
+| Use Azure Stack Hub for self-service Infrastructure-as-a-Service (IaaS), with strong isolation and precise usage tracking and chargeback for multiple colocated tenants. Ideal for service providers and enterprise private clouds. Templates from the Azure Marketplace. | Azure Stack HCI doesn't natively enforce or provide for multi-tenancy. |
+| Use Azure Stack Hub to develop and run apps that rely on Platform-as-a-Service (PaaS) services like Web Apps, Functions, or Event Hubs on-premises. These services run on Azure Stack exactly like they do in Azure, providing a consistent hybrid development and runtime environment. | Azure Stack HCI doesn't run PaaS services on-premises. |
+| Use Azure Stack Hub to modernize app deployment and operation with DevOps practices like infrastructure as code, continuous integration and continuous deployment (CI/CD), and convenient features like Azure-consistent VM Extensions. Ideal for Dev and DevOps teams. | Azure Stack HCI doesn't natively include any DevOps tooling. |
+
+### When to use Azure Stack HCI
+
+| Azure Stack Hub | Azure Stack HCI |
+| --------------- | --------------- |
+| Azure Stack Hub requires minimum 4 nodes and its own network switches. | Use Azure Stack HCI for the minimum footprint for remote offices and branches. Start with just 2 server nodes and switchless back-to-back networking for peak simplicity and affordability. Hardware offers start at 4 drives, 64 GB of memory, well under $10k / node. |
+| Azure Stack Hub constrains Hyper V configurability and feature set for consistency with Azure. | Use Azure Stack HCI for no-frills Hyper-V virtualization for classic enterprise apps like Exchange, SharePoint, and SQL Server, and to virtualize Windows Server roles like File Server, DNS, DHCP, IIS, and AD. Unrestricted access to all Hyper-V features like Shielded VMs.|
+| Azure Stack Hub doesn't expose these infrastructural technologies. | Use Azure Stack HCI to use software-defined infrastructure in place of aging storage arrays or network appliances, without major rearchitecture. Built-in Hyper-V, Storage Spaces Direct, and Software-Defined Networking (SDN) are directly accessible and manageable. |
 
 ### See also
 
