@@ -19,6 +19,12 @@ search.app:
 
 All Common Data Service records have unique identifiers defined as GUIDs. These are the primary key for each entity. When you need to integrate with an external data store, you might be able to add a column to the external database tables to contain a reference to the unique identifier in Common Data Service. This allows you to have a local reference to link to the Common Data Service record. However, sometimes you can’t modify the external database. With alternate keys you can now define an attribute in a Common Data Service entity to correspond to a unique identifier (or unique combination of columns) used by the external data store. This alternate key can be used to uniquely identify a record in Common Data Service in place of the primary key. You must be able to define which attributes represent a unique identity for your records. Once you identify the attributes that are unique to the entity, you can declare them as alternate keys through the customization user interface (UI) or in the code. This topic provides information about defining alternate keys in the data model.  
 
+Some of the benefits of the alternate keys feature include:
+
+- Faster lookup of the records.
+- More robust bulk data operations, especially in Dynamics 365 (online).
+- Simplified programming with data imported from external systems without Dynamics 365 record IDs.
+
 <a name="BKMK_Declare"></a>
 
 ## Create alternate keys  
@@ -58,6 +64,32 @@ You should be aware of the following constraints when creating alternate keys:
 
 <a name="BKMK_crud"></a>   
 
+## International features of Excel 2004
+
+The following topics describe the international features that are available in Excel 2004.
+
+### Using phonetic guides
+
+Users can add phonetic guides to Japanese data that has been entered in a cell. The phonetic character string that was used to enter the Japanese data is used to apply phonetic guides. To display the phonetic guides on the screen, on the Format menu, point to Phonetic Guide, and then click Show Phonetic Fields. 
+
+If the displayed phonetic guides are incorrect, users can revise them. Select the cell that shows the incorrect phonetic guides. To revise phonetic guides, on the Format menu, point to Phonetic Guide, and then click Edit. Users can change the phonetic guides by using the same method they use to enter a character string.
+
+Users can change the type, alignment, and font of phonetic guides. Three types of phonetic guides are available: 
+
+- Hiragana
+- Full-width katakana
+- Half-width katakana
+
+Users can change the alignment as follows:
+
+| Alignment | Result |
+|-----------|--------|
+| None | All phonetic guides are combined and aligned along the left edge of the cell. |
+| Left (default) | Positioned along the left edge of the kanji to which the phonetic guides apply. |
+| Center | Centered against the kanji to which the guides apply. |
+| Distributed | Set with equal spacing against both edges of the kanji to which the guides apply. |
+
+
 ## Retrieve and delete alternate keys  
 
 If you need to retrieve or delete alternate keys, you can use the customization UI to do this, without writing any code. However, the SDK provides the following two messages to programmatically retrieve and delete alternate keys.  
@@ -68,6 +100,19 @@ If you need to retrieve or delete alternate keys, you can use the customization 
 |<xref:Microsoft.Xrm.Sdk.Messages.DeleteEntityKeyRequest>|Deletes the specified alternate key.|  
 
 To retrieve all the keys for an entity, use the new <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.Keys> property of `EntityMetadata` (<xref href="Microsoft.Dynamics.CRM.EntityMetadata?text=EntityMetadata EntityType" /> or <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata> class). It gets an array of keys for an entity.  
+
+### Setting up Remote Desktop Connection for Mac
+
+To access the Exchange Server by using Remote Desktop Connection Client for Mac:
+
+1. Open Remote Desktop Connection Client for Mac. 
+2. In the Computer box, type the name of the Windows-based server or personal computer to use remotely.
+3. Click Connect.
+4. To log on, type your user name, password, and domain name.
+5. On the remote computer, open Outlook.
+
+> [!IMPORTANT]
+> Custom help panes replace the previous learning path guided learning feature used with legacy web client apps.
 
 <a name="BKMK_index"></a>   
 
