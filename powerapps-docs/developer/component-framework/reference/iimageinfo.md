@@ -1,5 +1,5 @@
 ---
-title: IImageInfo | Microsoft Docs
+title: ImageInfo | Microsoft Docs
 description: 
 keywords:
 ms.author: nabuthuk
@@ -13,7 +13,9 @@ ms.topic: "article"
 ms.assetid: 16691acb-a58c-4ca6-b6a8-58c76c9db1ca
 ---
 
-# IImageInfo
+# ImageInfo
+
+The structure returned by `getCellImageInfo` and propagated down to the component to display conditional images.
 
 ## Available for 
 

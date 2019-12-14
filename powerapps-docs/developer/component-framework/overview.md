@@ -16,7 +16,7 @@ ms.author: nabuthuk
 
 # Power Apps component framework overview
 
-Power Apps component framework empowers professional developers and app makers to create code components for model-driven apps and canvas apps (experimental preview) to provide an enhanced user experience for the users to view and work with data in forms, views, and dashboards. For example:
+Power Apps component framework empowers professional developers and app makers to create code components for model-driven and canvas apps (experimental preview) to provide enhanced user experience for the users to work with data on forms, views, and dashboards. For example:
 
 - Replace a field that displays a numeric text value with a `dial` or `slider` code component.
 - Transform a list into an entirely different visual experience bound to the data set like a `Calendar` or `Map`.
@@ -27,13 +27,17 @@ Power Apps component framework empowers professional developers and app makers t
 > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
 > - Canvas apps only support the *field* type of code components, and not the *dataset* type.
 
-## How its different from webresources
+## How is it different from webresources
 
- Unlike HTML web resources, code components are rendered as a part of the same context, load at the same time as any other components, providing a seamless experience for the users. Developers can bundle all the HTML, CSS, and TypeScript or JavaScript files into a single [solution](https://docs.microsoft.com/dynamics365/customer-engagement/customize/solutions-overview) package file and moved across environments and can be shipped via [AppSource](https://appsource.microsoft.com/marketplace/apps?page=1&product=dynamics-365). Code components can be reused many times across different entities and forms. Use Power Apps component framework to create code components that can be used across the full breadth of Power Apps capabilities.
+Unlike HTML web resources, code components are rendered as a part of the same context, load at the same time as any other components, providing a seamless experience for the users. 
+
+Developers can bundle all the HTML, CSS, and TypeScript files into a single [solution](https://docs.microsoft.com/dynamics365/customer-engagement/customize/solutions-overview) package file and move across environments and also shipped via [AppSource](https://appsource.microsoft.com/marketplace/apps?page=1&product=dynamics-365). 
+
+Code components can be reused many times across different entities and forms. Use Power Apps component framework to create code components that can be used across the full breadth of Power Apps capabilities.
 
 ## Advantages 
 
-- Access to a rich set of framework APIs that expose capabilities like component lifecycle management, contextual data and metadata. 
+- Access to a rich set of framework APIs that expose capabilities like component lifecycle management, contextual data, and metadata. 
 - Seamless server access via Web API, utility and data formatting methods, device features like camera, location and microphone, along with easy-to-invoke UX elements like dialogs, lookups, and full-page rendering.  
 - Support for modern web practices.
 - Optimizes for performance.
