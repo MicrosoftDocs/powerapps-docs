@@ -28,7 +28,7 @@ To create and import a solution file:
    > [!NOTE]
    > The `publisher-name` and `publisher-prefix` values must be unique to your environment.
  
-3. Once the new solution project is created, refer the **Solution** folder to the location where the created sample component is located. You can add the reference using the command shown below. This reference informs the solution project about which code components should be added during the build. You can add references to multiple components in a single solution project.
+3. Once the new solution project is created, refer the **Solutions** folder to the location where the created sample component is located. You can add the reference using the command shown below. This reference informs the solution project about which code components should be added during the build. You can add references to multiple components in a single solution project.
 
    ```CLI   
     pac solution add-reference --path <path to your Power Apps component framework project>
@@ -110,10 +110,8 @@ More information: [Settings options](https://docs.microsoft.com/dotnet/api/micro
 
 ## Create a plug-in project and add a reference to it in your solution 
 
-> [!IMPORTANT]
-> - The plug-in commands are still in public preview. 
-> - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
-
+> [!NOTE]
+> The plugin command is in public preview and 
 Power Apps CLI now supports creating a plug-in project and packaging it in a solution by adding a reference to the plug-in project. The `pac plugin init` command creates the template files (csproj, Plugin.cs & ServiceHelper.cs) in the directory. To do so: 
 
 1.	Ensure that you have a valid authentication profile created.
