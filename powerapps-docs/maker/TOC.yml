@@ -170,7 +170,7 @@
     items:
       - name: Connect to data
         items:
-        - name: List of connections
+        - name: Connections Overview
           href: ./canvas-apps/connections-list.md
         - name: Popular connectors
           items:
@@ -1224,8 +1224,8 @@
           href: ./portals/configure/place-child-nodes.md
         - name: Behavior and format of the date and time field
           href: ./portals/configure/behavior-format-date-time-field.md
-        - name: View email records in portal timeline
-          href: ./portals/configure/view-email-in-timeline.md
+        - name: View activities in a portal timeline
+          href: ./portals/configure/view-all-activities-in-portal-timeline.md
         - name: Rate a webpage
           href: ./portals/configure/rate-webpage.md
         - name: Enable header and footer output caching on a portal
