@@ -21,6 +21,14 @@ Power Apps offers users, businesses, independent software vendors (ISVs), and sy
 
 There are many aspects to how developers can contribute to creating apps that use Common Data Service. While it is possible to build an application with code using Common Data Service as your data source, most projects will use either [model-driven apps](/powerapps/maker/model-driven-apps/model-driven-app-overview) or [canvas apps](/powerapps/maker/canvas-apps/getting-started) to generate the experience that people will use. 
 
+| Column One | Column Two | Column Three | Column Four | Column Five |
+| -- | -- | -- | -- | -- |
+| Row 1/1 | Row 1/2 | Row 1/3 | Row 1//4 | Row 1/5 |
+| Row 2/1 | Row 2/2 | Row 2/3 | Row 2//4 | Row 2/5 |
+| Row 3/1 | Row 2/2 | Row 3/3 | Row 3//4 | Row 3/5 |
+
+![Screenshot showing overview of the Business Application Platform.](./media/data-platform-cds-intro/platform.png "Platform Overview")
+
 ## Working with model-driven apps
 
 Model-driven apps are built on Common Data Service, and can only connect to a Common Data Service environment. All the data that defines a model-driven app is stored within Common Data Service.
