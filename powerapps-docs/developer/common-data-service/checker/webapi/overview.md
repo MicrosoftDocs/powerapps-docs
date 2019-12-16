@@ -2,7 +2,7 @@
 title: "Use the Power Apps checker web API | Microsoft Docs"
 description: "The Power Apps checker Web API provides a development experience that can be used across a wide variety of programming languages, platforms, and devices"
 ms.custom: ""
-ms.date: 06/3/2019
+ms.date: 12/12/2019
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -23,14 +23,7 @@ search.app:
 ---
 # Use the Power Apps checker web API
 
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../../../includes/cc-beta-prerelease-disclaimer.md)]
-
 The Power Apps checker web API provides a mechanism to run static analysis checks against customizations and extensions to the Common Data Service platform. It is available for makers and developers to perform rich static analysis checks on their solutions against a set of best practice rules to quickly identify problematic patterns. The service provides the logic for the [solution checker feature](../../../../maker/common-data-service/use-powerapps-checker.md) in the Power Apps maker [portal](https://make.powerapps.com) and is included as part of the automation for [applications submitted to AppSource](../../publish-app-appsource.md). Interacting with the service directly in this manner allows for analysis of solutions that are included as part of on-premise (all supported versions) and online environments.
-
- > [!IMPORTANT]
- >
- > - The web API for Power Apps checker is a preview feature.
- > - [!INCLUDE[cc_preview_features_definition](../../../../includes/cc-preview-features-definition.md)]
 
 <a name="bkmk_altApproaches"></a>
 
