@@ -41,6 +41,14 @@ For a developer who will contribute to projects it is important that they unders
 
 Common Data Service is not available for on-premise deployments at this time. Content in this guide does not include information about options that are only available for on-premises or internet facing deployments (IFD). For information related to these options, see the [Developer Guide for Dynamics 365 Customer Engagement (on-premises)](/dynamics365/customerengagement/on-premises/developer/overview).
 
+Header 1 | Header 2 | Header 3 | Header 4 | Header 5 
+------------ | ------------- | ------------ | ------------- | -------------
+Content C1R1 | Content C2R1 | Content C3R1 | Content C4R1 | Content C5R1
+Content C1R2 | Content C2R2 | Content C3R2 | Content C4R2 | Content C5R2
+Content C1R3 | Content C2R3 | Content C3R3 | Content C4R3 | Content C5R3
+
+<img width="800" alt="Power Apps UI" src="https://user-images.githubusercontent.com/56741717/70944919-e4e10200-2008-11ea-9f40-16d8ed7798b0.PNG">
+
 > [!div class="nextstepaction"]
 > [Get started](get-started-cds-developers.md)
 
