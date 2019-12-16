@@ -1,6 +1,6 @@
 ---
 title: "Work with alternate keys (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "The topic explains about how to create alternate keys for an entity. Alternate keys can be created programmatically or by using the customization tools" # 115-145 characters including spaces. This abstract displays in the search result.
+description: "The topic explains about to create alternate keys for an entity. Alternate keys can be created programmatically or by using the customization tools" # 115-145 characters including spaces. This abstract appears in the search result.
 ms.custom: ""
 ms.date: 06/04/2019
 ms.reviewer: ""
@@ -17,7 +17,7 @@ search.app:
 ---
 # Work with alternate keys
 
-All Common Data Service records have unique identifiers defined as GUIDs. These are the primary key for each entity. When you need to integrate with an external data store, you might be able to add a column to the external database tables to contain a reference to the unique identifier in Common Data Service. This allows you to have a local reference to link to the Common Data Service record. However, sometimes you can’t modify the external database. With alternate keys you can now define an attribute in a Common Data Service entity to correspond to a unique identifier (or unique combination of columns) used by the external data store. This alternate key can be used to uniquely identify a record in Common Data Service in place of the primary key. You must be able to define which attributes represent a unique identity for your records. Once you identify the attributes that are unique to the entity, you can declare them as alternate keys through the customization user interface (UI) or in the code. This topic provides information about defining alternate keys in the data model.  
+All Common Data Service records have unique identifiers defined as GUIDs. These are the primary key for each entity. When you want to integrate with an external data store, you might be able to add a column to the external database tables to contain a reference to the unique identifier in Common Data Service. In this way you can have a local reference to link to the Common Data Service record. However, sometimes you can’t modify the external database. With alternate keys you can now define an attribute in a Common Data Service entity to correspond to a unique identifier (or unique combination of columns) used by the external data store. This alternate key can be used to uniquely identify a record in Common Data Service in place of the primary key. You must be able to define which attributes represent a unique identity for your records. Once you identify the attributes that are unique to the entity, you can declare them as alternate keys through the customization user interface (UI) or in the code. This topic provides information about defining alternate keys in the data model.  
 
 <a name="BKMK_Declare"></a>
 
@@ -25,7 +25,7 @@ All Common Data Service records have unique identifiers defined as GUIDs. These 
 
 You can create alternate keys programmatically or by using the customizations tools. For more information about using the customization tools, see [Define alternate keys to reference CRM records](https://technet.microsoft.com/library/29e53691-0b18-4fde-a1d0-7490aa227898.aspx).  
 
-To define alternate keys programmatically, you first have to create an object of type <xref:Microsoft.Xrm.Sdk.Metadata.EntityKeyMetadata> (or use <xref href="Microsoft.Dynamics.CRM.EntityKeyMetadata?text=EntityKeyMetadata EntityType" /> if working with Web API). This class contains the key attributes. Once the key attributes are set, you can use `CreateEntityKey` to create the keys for an entity. This message takes the entity name and `EntityKeyMetadata` values as input to create the key.  
+To define alternate keys programmatically, you first have to create an object of type <xref:Microsoft.Xrm.Sdk.Metadata.EntityKeyMetadata> (or use <xref href="Microsoft.Dynamics.CRM.EntityKeyMetadata?text=EntityKeyMetadata EntityType" /> if working with Web API). This class contains the key attributes. After the key attributes are set, you can use `CreateEntityKey` to create the keys for an entity. This message takes the entity name and `EntityKeyMetadata` values as input to create the key.  
 
 You should be aware of the following constraints when creating alternate keys:  
 
