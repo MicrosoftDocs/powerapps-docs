@@ -22,6 +22,8 @@ search.app:
   - D365CE
 ---
 
+Ron Hale-Evans was here
+
 # Introduction to solutions
 
 *Solutions* are how customizers and developers author, package, and maintain units of software that extend Common Data Service. For example, Dynamics 365 for Sales, Marketing, Customer Service apps are composed of solutions. Customizers and developers distribute solutions so that organizations can use Common Data Service to install and uninstall the business functionality defined by the solution.
