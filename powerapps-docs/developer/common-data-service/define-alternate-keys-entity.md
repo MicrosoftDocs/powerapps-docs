@@ -15,6 +15,9 @@ search.app:
   - PowerApps
   - D365CE
 ---
+
+Ron Hale-Evans was here
+
 # Work with alternate keys
 
 All Common Data Service records have unique identifiers defined as GUIDs. These are the primary key for each entity. When you need to integrate with an external data store, you might be able to add a column to the external database tables to contain a reference to the unique identifier in Common Data Service. This allows you to have a local reference to link to the Common Data Service record. However, sometimes you can’t modify the external database. With alternate keys you can now define an attribute in a Common Data Service entity to correspond to a unique identifier (or unique combination of columns) used by the external data store. This alternate key can be used to uniquely identify a record in Common Data Service in place of the primary key. You must be able to define which attributes represent a unique identity for your records. Once you identify the attributes that are unique to the entity, you can declare them as alternate keys through the customization user interface (UI) or in the code. This topic provides information about defining alternate keys in the data model.  
