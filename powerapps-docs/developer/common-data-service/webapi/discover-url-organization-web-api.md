@@ -43,7 +43,7 @@ In addition to datacenter specific Discovery services, that are available on the
  Organization information is stored in the `Instance` entity of the Discovery service.  To see the kind of information contained in that entity, send an HTTP GET request to the service for one of your instances.  
   
 ```http  
-GET https://globaldisco.crm.dynamics.com/api/discovery/v1.0/Instances(UniqueName='myorg')  
+GET https://globaldisco.crm.dynamics.com/api/discovery/v2.0/Instances(UniqueName='myorg')  
 ```  
   
 In the above example, the global Discovery service of Common Data Service is used to obtain the organization information of the instance with a unique name of "myorg". More details about this request is expanded upon later in this topic.  
@@ -87,20 +87,20 @@ The Discovery service Web API supports the CORS standard for cross-origin access
 -   Get the details of a specific instance. If you leave out the GUID, all instances that the authenticated user has access to are returned.  
   
     ```http      
-    GET https://globaldisco.crm.dynamics.com/api/discovery/v1.0/Instances(<guid>)
+    GET https://globaldisco.crm.dynamics.com/api/discovery/v2.0/Instances(<guid>)
     GET https://disco.crm.dynamics.com/api/discovery/v9.0/Instances(<guid>)  
     ```  
   
 -   You can use the UniqueName attribute as an alternate key.  
   
     ```http  
-    GET https://globaldisco.crm.dynamics.com/api/discovery/v1.0/Instances(UniqueName='myorg')  
+    GET https://globaldisco.crm.dynamics.com/api/discovery/v2.0/Instances(UniqueName='myorg')  
     ```  
   
 -   Retrieve a list of available instances, filtered by production type.  
   
     ```http  
-    GET https://globaldisco.crm.dynamics.com/api/discovery/v1.0/Instances?$select=DisplayName,Description&$filter=Type+eq+0   
+    GET https://globaldisco.crm.dynamics.com/api/discovery/v2.0/Instances?$select=DisplayName,Description&$filter=Type+eq+0   
     ```  
   
 -   Retrieve a specific instance's ID property value.  
