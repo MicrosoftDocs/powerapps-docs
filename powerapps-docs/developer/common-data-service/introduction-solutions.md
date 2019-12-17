@@ -24,11 +24,11 @@ search.app:
 
 # Introduction to solutions
 
-*Solutions* are how customizers and developers author, package, and maintain units of software that extend Common Data Service. For example, Dynamics 365 for Sales, Marketing, Customer Service apps are composed of solutions. Customizers and developers distribute solutions so that organizations can use Common Data Service to install and uninstall the business functionality defined by the solution.
+*Solutions* are how customizers and developers author, package, and maintain units of software that extend Common Data Service. Dynamics 365 for Sales, Marketing, and Customer Service apps, for example, are composed of solutions. Customizers and developers distribute solutions so that organizations can use Common Data Service to install and uninstall the business functionality defined by the solution.
 
-Every customization that you make to Common Data Service, or to a previously installed solution, is part of a solution. Every change you apply is tracked and any dependencies can be calculated. When you export a managed solution, it contains all the changes that have been applied for that solution into a file that you can then import into a different Common Data Service environment.
+Every customization that you make to Common Data Service or to a previously installed solution is part of a solution. Every change you apply is tracked and any dependencies can be calculated. When you export a managed solution, it contains all the changes applied for that solution into a file that you can import into a different Common Data Service environment.
 
-If you intend to transport customizations or extensions between different Common Data Service environments or distribute solutions using AppSource, you must understand the solution framework.
+You must understand the solution framework if you intend to transport customizations or extensions between different Common Data Service environments or distribute solutions by using AppSource. 
 
 > [!NOTE]
 > For detailed information about how to effectively use solutions for a successful application lifecycle management (ALM) implementation, see [Whitepaper: Solution Lifecycle Management](https://www.microsoft.com/download/details.aspx?id=57777)
@@ -38,63 +38,63 @@ If you intend to transport customizations or extensions between different Common
 There are two types of solutions: *managed* and *unmanaged*.
 
 A **managed** solution is a completed solution that is intended to be distributed and installed. 
-- You cannot edit the components of a managed solution.
-- You cannot export a managed solution.
-- You can add unmanaged customizations to components of a managed solution. When you do this, you create a dependency between your unmanaged customizations and the managed solution. When a dependency exists, the managed solution cannot be uninstalled until you remove the dependency.
-- When a managed solution is deleted (uninstalled), all the customizations and extensions included with it are removed.
+- You can't edit the components of a managed solution.
+- You can't export a managed solution.
+- You can add unmanaged customizations to components of a managed solution. When you do this, you create a dependency between your unmanaged customizations and the managed solution. When a dependency exists, the managed solution can't be uninstalled until you remove the dependency.
+- When a managed solution is removed (uninstalled), so are all included customizations and extensions.
 
   > [!IMPORTANT]
-  > When you uninstall a managed solution, the following data is lost: data stored in custom entities that are part of the managed solution and data stored in custom attributes that are part of the managed solution on other entities that are not part of the managed solution.
+  > When you uninstall a managed solution, you lose data stored in custom entities that are part of the managed solution. You also lose  data stored in custom attributes that are part of the managed solution on other entities that aren't part of the managed solution.
 
 An **unmanaged** solution is one that is still under development or isn’t intended to be distributed. 
-- While a solution is unmanaged, you can continue to add and remove components to it. 
+- While a solution is unmanaged, you can continue to add and remove components. 
 - You can export an unmanaged solution to transport unmanaged customizations from one environment to another.
-- When an unmanaged solution is deleted, only the solution container of any customizations included in it is deleted. All the unmanaged customizations remain in effect and belong to the default solution. 
+- When an unmanaged solution is deleted, only the solution container of any included customizations is deleted. All unmanaged customizations remain in effect and belong to the default solution. 
 - When the unmanaged solution is complete and you want to distribute it, export it as a managed solution.
 
   > [!NOTE]
-  > You cannot import a managed solution into the same environment that contains the originating unmanaged solution. To test a managed solution, you need a separate environment to import it into.
+  > You can't import a managed solution into the same environment that contains the originating unmanaged solution. To test a managed solution, you need a separate environment to import it into.
 
 ## Solution publishers
 
-Each solution is linked to a solution publisher. The solution publisher provides information about how to contact the publisher as well a customization prefix value. The default value is `new`.
+Each solution is linked to a solution publisher. The solution publisher provides information about how to contact the publisher as well as a customization prefix value. New is the default valueF.
 
 When any schema changes are included as part of a solution, the solution publisher customization prefix is prepended to the name of the schema items. Any custom actions also have this value appended to them. This is valuable because it allows for easy recognition of which solution added the schema item or custom action. It is not required for all schema items and custom actions in a solution to use the same customization prefix, but it is strongly recommended.
 
 > [!IMPORTANT]
-> Before you start creating a solution, you should create a solution publisher record and create a new solution linked to it. You should make sure the customization prefix represents a value that makes sense for you. 
+> Before you start creating a solution, first create a solution publisher record and link a new solution linked. Make sure the customization prefix represents a value that makes sense for you. 
 
-Your choice of solution publisher is important in case you want to publish an update to a solution you have shipped. An update can only be applied to a managed solution with the same publisher as the original managed solution. 
+Your choice of solution publisher is important in case you want to publish an update to an already shipped solution. An update can only be applied to a managed solution with the same publisher as the original managed solution. 
 
-More information: [Maintain managed solutions > Create managed solution updates](/dynamics365/customer-engagement/developer/maintain-managed-solutions#create-managed-solution-updates)
+For more information, see [Maintain managed solutions > Create managed solution updates](/dynamics365/customer-engagement/developer/maintain-managed-solutions#create-managed-solution-updates)
 
 ## Create a solution publisher and solution 
 
-To create a  solution publisher and a solution you need to navigate to the Common Data Service Customization area.
+To create a solution publisher and a solution, go to the Common Data Service Customization area.
 
 From [powerapps.com](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)
 
-1. Select the *Waffle* icon at the top left corner
+1. Select the *Waffle* icon at the top-left corner.
 2. In the fly out, select **All apps**.
 3. Look for the **Common Data Service - custom app**.
- You may want to click the ellipses (...) and choose **Pin this app** so it will be easier to navigate to next time.
-4. Click the **Common Data Service - custom app** app and select it.
-5. Navigate to **Settings** > **Customization** > **Customizations**.
+ You may want to click ellipses (...) and select **Pin this app** so it will be easier to go to it next time.
+4. Click **Common Data Service - custom app**.
+5. Go to **Settings** > **Customization** > **Customizations**.
 
 From [home.dynamics.com](https://home.dynamics.com/)
 
-1. Look for the **Common Data Service - custom** tile and click it.
-2. Navigate to **Settings** > **Customization** > **Customizations**.
+1. Look for and select the **Common Data Service - custom** tile.
+2. Go to **Settings** > **Customization** > **Customizations**.
 
 ### Create a solution publisher
 
-1. From the customizations area, select **Publishers**.
+1. In the customizations area, select **Publishers**.
 2. Click **New**.
-3. In the publisher form enter a **Display Name**. A **Name** value will be generated based on the display name. You can accept the generated value or specify a new one.
-4. In the **prefix** field, specify the customization prefix that should be appended to any custom schema items you add when developing your solution. The default value is `new`. Choose a value that represents your organization and will help people identify which components installed in their system came from your solution.
+3. In the publisher form enter a **Display Name**. A **Name** value will be generated based on the display name. Accept the generated value or specify a new one.
+4. In the **prefix** field, specify the customization prefix that should be appended to any custom schema items you add when developing your solution. New is the default value. Choose a value that represents your organization and will help people identify which components installed in their system came from your solution.
 5. An **Option Value Prefix** value will be generated based on your choice for customization prefix. This is a value that will be appended to any values for option set options you add to attributes in your solution. This value will help identify any options you add to your solution.
-6. In the **Contact Details** section of the form, you may add any contact information you want to provide for people who install your solution.
-7. Click **Save and Close** when you are done.
+6. In the **Contact Details** section of the form, add any contact information you want to provide for people who install your solution.
+7. Click **Save and Close** when you're done.
 
 ### Create a solution
 
