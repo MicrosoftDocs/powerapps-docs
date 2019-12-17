@@ -15,6 +15,14 @@ search.app:
   - D365CE
 ---
 
+| 1 | 2 | 3 | 4 | 5 |
+|---|---|---|---|---|
+| a | a | a | a | a |
+| b | b | b | b | b |
+| c | c | c | c | c |
+
+![Ron Hale-Evans](http://ron.ludism.org/Ron4Web.jpg "Ron Hale-Evans")
+
 # Common Data Service Developer Guide
 
 Power Apps offers users, businesses, independent software vendors (ISVs), and systems integrators (SIs) a powerful platform for building line-of-business apps. **Common Data Service** is the underlying data platform for Power Apps that contains the core functionality such as server-side logic (plug-ins and workflows), business process flows, a highly sophisticated security model, and an extensible platform for developers to build apps. 
