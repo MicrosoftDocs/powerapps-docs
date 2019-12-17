@@ -1,5 +1,5 @@
 ---
-title: "Use keyboard shortcuts in PowerApps| MicrosoftDocs"
+title: "Use keyboard shortcuts in Power Apps| MicrosoftDocs"
 ms.custom: ""
 author: mduelae
 manager: kvivek
@@ -18,7 +18,7 @@ search.app:
   - D365CE
 
 ---
-# Use keyboard shortcuts in PowerApps
+# Use keyboard shortcuts in Power Apps
 
 Keyboard shortcuts give you an alternate way to do common tasks instead of using your mouse or tapping with your finger. They help in seamless navigation of the interface. The following keyboard shortcuts apply across apps. 
 

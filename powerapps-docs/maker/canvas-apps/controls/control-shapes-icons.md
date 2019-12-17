@@ -14,7 +14,7 @@ search.audienceType:
 search.app:
   - PowerApps
 ---
-# Shape controls and Icon controls in PowerApps
+# Shape controls and Icon controls in Power Apps
 Graphics for which you can configure appearance and behavior properties.
 
 ## Description

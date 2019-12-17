@@ -1,5 +1,5 @@
 ---
-title: "Show or hide model-driven app form elements with PowerApps | MicrosoftDocs"
+title: "Show or hide model-driven app form elements with Power Apps | MicrosoftDocs"
 description: "Learn how to display or hide from elements, such as tabs, sections, or fields"
 ms.custom: ""
 ms.date: 06/11/2018

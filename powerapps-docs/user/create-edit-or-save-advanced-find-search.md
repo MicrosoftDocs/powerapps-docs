@@ -1,5 +1,5 @@
 ---
-title: "Create, edit, or save an Advanced Find search in Model-driven PowerApps| MicrosoftDocs"
+title: "Create, edit, or save an Advanced Find search in Model-driven Power Apps| MicrosoftDocs"
 ms.custom: ""
 author: mduelae
 manager: kvivek

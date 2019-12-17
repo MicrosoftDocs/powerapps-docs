@@ -1,6 +1,6 @@
 ---
-title: "Fields overview in PowerApps | MicrosoftDocs"
-description: "Learn about fields in PowerApps portal"
+title: "Fields overview in Power Apps | MicrosoftDocs"
+description: "Learn about fields in Power Apps portal"
 ms.custom: ""
 ms.date: 07/25/2018
 ms.reviewer: ""

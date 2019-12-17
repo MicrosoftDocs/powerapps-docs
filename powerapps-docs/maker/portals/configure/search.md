@@ -1,5 +1,5 @@
 ---
-title: "Global search in PowerApps portals | MicrosoftDocs"
+title: "Global search in Power Apps portals | MicrosoftDocs"
 description: "Learn how global search works in a portal."
 author: sbmjais
 manager: shujoshi
@@ -13,7 +13,7 @@ ms.reviewer:
 
 # Search
 
-In PowerApps portals, you can search for records across multiple entities by using portal’s global search functionality. You can also search within records of entity lists using entity list search functionality. 
+In Power Apps portals, you can search for records across multiple entities by using portal’s global search functionality. You can also search within records of entity lists using entity list search functionality. 
 
 Entity list search functionality in the portal uses FetchXML in the back end to search the columns defined in the entity list and then display the results. 
 
@@ -31,7 +31,7 @@ Among the benefits of global search are its ability to:
 
 In global search, the better the match, the higher it appears in the results. A match has a higher relevancy if more words from the search term are found in close proximity to each other. The smaller the amount of text where the search words are found, the higher the relevancy. For example, if you find the search words in a company name and address, it might be a better match than the same words found in a large article, far apart from each other. Because the results are returned in a single list, you can see a mix of records displayed one after another, with matched works highlighted. 
 
-The following sections detail how global search works in PowerApps portals and describe the various configuration options available.
+The following sections detail how global search works in Power Apps portals and describe the various configuration options available.
 
 ## Entities searchable in portal global search
 
@@ -183,7 +183,7 @@ You can invoke portal global search from liquid templates by using the searchind
 
 ## Update search index
 
-Search index updates in PowerApps portals happen automatically like the cache invalidation. Keep these important things in mind, though:
+Search index updates in Power Apps portals happen automatically like the cache invalidation. Keep these important things in mind, though:
 
 - All search-enabled entities must have the Change Notification metadata flag enabled, otherwise the portal will not be notified of the changes and the search index will not be updated.
 

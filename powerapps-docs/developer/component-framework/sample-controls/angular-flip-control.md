@@ -12,7 +12,7 @@ author: Nkrb
 
 # Implementing Flip component
 
-This sample shows how to use third-party libraries to create components in PowerApps component framework.  The flip sample component is implemented based on angular.js, angular-ui, angular-animate, angular-sanitize, bootstrap. The code may not reveal the best practices for the mentioned third-party libraries.
+This sample shows how to use third-party libraries to create components in Power Apps component framework.  The flip sample component is implemented based on angular.js, angular-ui, angular-animate, angular-sanitize, bootstrap. The code may not reveal the best practices for the mentioned third-party libraries.
 
 > [!div class="mx-imgBorder"]
 > ![Angular Flip](../media/angular-flip.png "Angular Flip")
@@ -38,13 +38,13 @@ Model-driven apps and canvas apps (experimental preview)
 
 ## overview
 
-This sample provides examples on how to add dependencies for third-party libraries, showcasing how to perform data-binding between PowerApps component framework, component model and third-party inner data model in bi-direction.
+This sample provides examples on how to add dependencies for third-party libraries, showcasing how to perform data-binding between Power Apps component framework, component model and third-party inner data model in bi-direction.
 
 The flip component sample consists of a label and a button. When you click on the button, the text on the label toggles.
 
 - When the component is loaded, the label shows the text based on the bind attribute value. The `context.parameters.[property_name].attributes` contains the associated metadata.
 - For TwoOptions fields, `context.parameters.[property_name].Options` will include both true and false value option. 
-- Clicking on the Flip button, the label will update value using **notifyOutputEvents** method, [getOutputs](../reference/control/getoutputs.md) method will be called asynchronously and will flow to PowerApps component framework. 
+- Clicking on the Flip button, the label will update value using **notifyOutputEvents** method, [getOutputs](../reference/control/getoutputs.md) method will be called asynchronously and will flow to Power Apps component framework. 
 - ClientAPI updates the bind attribute value, and the updated value flows to the component label. You can also use `ClientAPI` to update an attribute value to trigger control’s [updateView](../reference/control/updateview.md) method. The component then updates the third-party model and the label gets updated.
 
 
@@ -212,7 +212,7 @@ export class JSAngularJSFlipControl
     }
   }
   /**
-   * Update value in PowerApps component framework
+   * Update value in Power Apps component framework
    * @param newValue new value
    */
   private updateOutputIfNeeded(newValue: boolean): void {
@@ -350,11 +350,11 @@ fieldset[disabled].btn-primary:hover {
   border: 1px solid transparent;
   border-radius: 4px;
 }
-
 ```
 
 ### Related topics
 
-[PowerApps component framework manifest schema reference](../manifest-schema-reference/index.md)<br />
-[PowerApps component framework API reference](../reference/index.md)<br />
-[PowerApps component framework overview](../overview.md)
+[How to use the sample components](../use-sample-components.md)<br/>
+[Power Apps component framework manifest schema reference](../manifest-schema-reference/index.md)<br />
+[Power Apps component framework API reference](../reference/index.md)<br />
+[Power Apps component framework overview](../overview.md)

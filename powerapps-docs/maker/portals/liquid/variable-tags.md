@@ -70,4 +70,4 @@ Hello, DAVE BOWMAN.
 [Control flow tags](control-flow-tags.md)<br>
 [Iteration tags](iteration-tags.md)<br>
 [Template tags](template-tags.md)<br>
-[PowerApps common data service entity tags](portals-entity-tags.md)
+[Power Apps common data service entity tags](portals-entity-tags.md)

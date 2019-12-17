@@ -15,6 +15,7 @@ ms.assetid: 0a11feb1-0b7d-4591-b7b3-8e45d4e58805
 
 # Metadata
 
+Provides all the metadata information about the attributes
 
 ## Available for 
 
@@ -24,13 +25,19 @@ Model-driven apps
 
 ### DisplayName
 
+The display name of the attribute.
+
 **Type**: `string`
 
 ### LogicalName 
 
+The logical name of the attribute.
+
 **Type**: `string`
 
 ### IsSecured
+
+Defines whether the attribute is secured or not.
 
 **Type**: `boolean`
 
@@ -40,9 +47,13 @@ Model-driven apps
 
 ### Description
 
+The description of the attribute.
+
 **Type**: `string`
 
 ### RequiredLevel
+
+Defines whether the attribute is required or not.
 
 **Type**: `RequiredLevel`
 
@@ -59,5 +70,5 @@ The `RequiredLevel` has following values:
 
 ### Related topics
 
-[PowerApps component framework API reference](../reference/index.md)<br/>
-[PowerApps component framework overview](../overview.md)
+[Power Apps component framework API reference](../reference/index.md)<br/>
+[Power Apps component framework overview](../overview.md)

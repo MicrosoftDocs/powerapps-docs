@@ -1,7 +1,7 @@
 ---
-title: Update existing code components using PowerApps component framework tooling| Microsoft Docs
-description: Update components using the PowerApps component framework tooling
-keywords: PowerApps component framework, code component, component Framework
+title: Update existing code components using Power Apps component framework tooling| Microsoft Docs
+description: Update components using the Power Apps component framework tooling
+keywords: Power Apps component framework, code component, component Framework
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
@@ -14,16 +14,16 @@ ms.assetid: d2cbf58a-9112-45c2-b823-2c07a310714c
 ---
 # Update existing code components 
 
-If you are a PowerApps component framework Private Preview participant for model-driven apps and have already built code components, you need to make some minor updates to make it compatible with the new ALM-centric project structures. 
+If you are a Power Apps component framework Private Preview participant for model-driven apps and have already built code components, you need to make some minor updates to make it compatible with the new ALM-centric project structures. 
 
-A few changes are required to use the new PowerApps CLI tooling with your existing PowerApps component framework code components.
+A few changes are required to use the new Power Apps CLI tooling with your existing Power Apps component framework code components.
 
 > [!NOTE]
-> This topic is applicable only for updating code components for model-driven apps because the PowerApps CLI tooling is not available at the time of private preview for the model-driven apps.  
+> This topic is applicable only for updating code components for model-driven apps because the Power Apps CLI tooling is not available at the time of private preview for the model-driven apps.  
 
 ## Creating an empty project
 
-Use PowerApps CLI to create a new empty project for your code component. More information: [Create components using tooling](create-custom-controls-using-pcf.md)
+Use Power Apps CLI to create a new empty project for your code component. More information: [Create components using tooling](create-custom-controls-using-pcf.md)
 
 Once the project is created, migrate your code component source to the new project:
 
@@ -61,7 +61,7 @@ If you have created a component using the older version of the tooling and want 
 
 1. Update your existing projects to use the latest modules.
  
-   - Update the version tag in your `pcfproj` located within your PowerApps component framework project folder as follows:
+   - Update the version tag in your `pcfproj` located within your Power Apps component framework project folder as follows:
 
       ```XML
       <Packagereference Include="Microsoft.PowerApps.MSBuild.Pcf" Version="1.*"/>
@@ -76,7 +76,7 @@ If you have created a component using the older version of the tooling and want 
       > After making the above changes, run the command `msbuild /t:restore` to update your project to the correct version.
 
 
-   - Update the version tag in your `package.json` file located within your PowerApps component framework project folder:
+   - Update the version tag in your `package.json` file located within your Power Apps component framework project folder:
 
       ```JSON
       "devDependencies":{
@@ -122,7 +122,7 @@ The build tools expect the component source to be exported using standard ES6 mo
 
 ## Using generated manifest typing file
 
-Legacy projects require manually creating and editing an `inputsOutputs.d.ts` typing file, which is typically located under the `private_typing` subfolder. The PowerApps CLI tooling now automatically generates this file upon build. 
+Legacy projects require manually creating and editing an `inputsOutputs.d.ts` typing file, which is typically located under the `private_typing` subfolder. The Power Apps CLI tooling now automatically generates this file upon build. 
 
 Code-gen ensures that `type` definitions used in the component source code stay in sync with `types` defined in the component manifest file.
 
@@ -137,36 +137,9 @@ To use the new typing file:
 3. Rename all references of **InputsOutputs.IOutputBag** to **IOutputs**.
 4. Build the project to generate a new **ManifestTypes.d.ts** file using the command `npm run build`.
 
-## Troubleshooting and workarounds
-
-1. If you get a 1ES notification asking how pcf-scripts are being used, note that these scripts are only used to build the code components but they are not bundled or used by the resulting component.  
-2. If you have previously created a code component using the tooling version 0.1.817.1 or earlier and want to ensure that the latest build and debug modules are being used, make updates to the package.json as shown:
-   
-    ```JSON
-     "dependencies": { "@types/node": "^10.12.18", "@types/powerapps-component-framework": "1.1.0"}, "devDependencies": { "pcf-scripts": "~0", "pcf-start": "~0" } 
-    ```
-3. The user gets the error `Failed to retrieve information about Microsoft.PowerApps.MSBuild.Pcf from remote s​ource <Feed Url>` when the build fails for authorization issues. Here is the workaround for this:
-
-   - Open the NuGet.Config file from **%APPDATA%\NuGet**. The feed from which the user is getting the error should be present in this file. 
-   - Remove the feed from the NuGet.Config file or generate a PAT token and add it to the Nuget.Config file. For example:
-
-     ```XML
-     <?xml version="1.0" encoding="utf-8"?>  
-     <configuration>  
-     <packageSources>  
-         <add key="CRMSharedFeed" value="https://dynamicscrm.pkgs.visualstudio.com/_packaging/CRMSharedFeed/nuget/v3/index.json" />  
-      </packageSources>  
-     <packageSourceCredentials>  
-      <CRMSharedFeed>  
-      <add key="Username" value="anything" />  
-      <add key="Password" value="User PAT" />  
-    </CRMSharedFeed>  
-     </packageSourceCredentials>  
-   </configuration>
-     ```
 
 ### See also
 
-[Limitations of PowerApps component framework](limitations.md)<br/>
-[PowerApps component framework API reference](reference/index.md)<br/>
-[PowerApps component framework overview](overview.md)
+[Limitations of Power Apps component framework](limitations.md)<br/>
+[Power Apps component framework API reference](reference/index.md)<br/>
+[Power Apps component framework overview](overview.md)

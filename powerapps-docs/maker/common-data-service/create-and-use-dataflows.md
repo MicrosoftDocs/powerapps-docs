@@ -1,8 +1,8 @@
 ---
-title: "Create and use dataflows in PowerApps | MicrosoftDocs"
-description: "Learn how to create and use dataflows in PowerApps"
+title: "Create and use dataflows in Power Apps | MicrosoftDocs"
+description: "Learn how to create and use dataflows in Power Apps"
 ms.custom: ""
-ms.date: 08/05/2019
+ms.date: 12/05/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -24,27 +24,27 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Create and use dataflows in PowerApps
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-With advanced data preparation available in PowerApps, you can create a
+# Create and use dataflows in Power Apps
+
+With advanced data preparation available in Power Apps, you can create a
 collection of data called a dataflow, which you can then use to connect with
 business data from various sources, clean the data, transform it, and then load
 it to Common Data Service or your organization’s Azure Data Lake Gen2 storage
 account.
 
 A dataflow is a collection of entities (entities are similar to tables)
-that are created and managed in environments in the PowerApps service. You can
+that are created and managed in environments in the Power Apps service. You can
 add and edit entities in your dataflow, as well as manage data refresh
 schedules, directly from the environment in which your dataflow was created.
 
-Once you create a dataflow in the PowerApps portal, you can get data from it
+Once you create a dataflow in the Power Apps portal, you can get data from it
 using the Common Data Service connector or Power BI Desktop Dataflow connector, depending on
 which destination you chose when creating the dataflow.
 
 There are three primary steps to using a dataflow:
 
-1.  Author the dataflow in the PowerApps portal. You select the destination
+1.  Author the dataflow in the Power Apps portal. You select the destination
     to load the output data to, the source to get the data from, and the Power
     Query steps to transform the data using Microsoft tools that are
     designed to make doing so straightforward.
@@ -67,10 +67,8 @@ and manage them from that environment. In addition, individuals who want to get
 data from your dataflow must have access to the environment in which you created
 it.
 
-> [!NOTE]
-> Creating Dataflows that load data to Azure Data Lake Storage Gen2 in the default environment is currently not supported.
 
-1.  Sign in to PowerApps, and verify which environment you're in, find the environment switcher near the right side of the command bar.
+1.  Sign in to Power Apps, and verify which environment you're in, find the environment switcher near the right side of the command bar.
 
     ![Environment switcher](media/environment-switcher.png)
 
