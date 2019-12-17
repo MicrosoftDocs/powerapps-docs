@@ -16,6 +16,8 @@
     href: send-email.md
   - name: 'Send bulk email and monitor results'
     href: send-bulk-email-monitor-results.md
+  - name: Upload, retrieve and download attachments
+    href: upload-retrieve-download-attachment.md
   - name: 'Work with activity party records'
     href: work-activity-party-records.md
 - name: Appointments
