@@ -18,13 +18,13 @@ search.app:
 
 # Create a queue
 
-This sample shows how to create a simple queue and set the required attributes using the [IOrganizationService.Create](https://docs.microsoft.com/en-us/dotnet/api/microsoft.xrm.sdk.iorganizationservice.create?view=dynamics-general-ce-9) message.
+This sample shows how to create a simple queue and set the required attributes using the [IOrganizationService.Create](https://docs.microsoft.com/dotnet/api/microsoft.xrm.sdk.iorganizationservice.create?view=dynamics-general-ce-9) message.
 
 You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/CreateQueue).
 
 ## How to run this sample
 
-See [How to run samples](https://github.com/microsoft/PowerApps-Samples/blob/master/cds/README.md) for information about how to run this sample.
+[!include[cc-how-to-run-samples](../../includes/cc-how-to-run-samples.md)]
 
 ## What this sample does
 

@@ -27,7 +27,7 @@ Power Apps component framework empowers professional developers and app makers t
 > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
 > - Canvas apps only support the *field* type of code components, and not the *dataset* type.
 
-## How is it different from webresources
+## How is it different from web resources
 
 Unlike HTML web resources, code components are rendered as a part of the same context, load at the same time as any other components, providing a seamless experience for the users. 
 
