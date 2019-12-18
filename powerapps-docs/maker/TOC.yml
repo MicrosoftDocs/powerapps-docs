@@ -261,7 +261,7 @@
             - name: Understand form layout
               href: ./canvas-apps/working-with-form-layout.md
             - name: Understand cards
-              href: ./canvas-apps/working-with-cards.md           
+              href: ./canvas-apps/working-with-cards.md              
           - name: Add a list
             items:
             - name: Add a list box, a drop-down list, or radio buttons
@@ -1490,8 +1490,12 @@
       href: ./common-data-service/use-solution-explorer.md
     - name: Use the Common Data Services default solution
       href: ./common-data-service/use-solutions-for-your-customizations.md
-    - name: Import, update, and export solutions
+    - name: Import solutions
       href: ./common-data-service/import-update-export-solutions.md
+    - name: Update solutions
+      href: ./common-data-service/update-solutions.md
+    - name: Export solutions
+      href: ./common-data-service/export-solutions.md      
     - name: Navigate to a specific solution
       href: ./common-data-service/navigate-specific-solution.md
     - name: Create a solution

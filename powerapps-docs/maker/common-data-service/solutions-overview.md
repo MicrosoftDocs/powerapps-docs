@@ -2,7 +2,7 @@
 title: "Work with solutions in Power Apps | MicrosoftDocs"
 description: "Learn how solutions are distributed"
 ms.custom: ""
-ms.date: 09/30/2019
+ms.date: 12/04/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -36,7 +36,12 @@ More information: [Whitepaper: Solution Lifecycle Management](https://www.micros
 
 <a name="BKMK_SolutionComponents"></a>   
 ### Components  
- A component represents something that you can potentially customize. Anything that can be included in a solution is a component. The following is a list of components that you can view in a solution:  
+ A component represents something that you can potentially customize. Anything that can be included in a solution is a component. To view the components included in a solution, in solution explorer go to **Settings** > **Solutions** and then open the solution you want. The components are listed in the **Components** list. 
+
+> [!div class="mx-imgBorder"] 
+> ![Components in solution](media/components-in-solution.png "Components in solution")
+
+<!-- The following is a list of components that you can view in a solution:  
   
 -   AI Model
 
@@ -102,7 +107,7 @@ More information: [Whitepaper: Solution Lifecycle Management](https://www.micros
 
 -   Virtual Entity Data Source
   
--   Web Resource  
+-   Web Resource  -->
   
  Some components are nested within other components. For example, an entity contains forms, views, charts, fields, entity relationships, messages, and business rules. Each of those components requires an entity to exist. A field can’t exist outside of an entity. We say that the field is dependent on the entity. There are actually twice as many types of components as shown in the preceding list, but most of them are not nested within other components and not visible in the application.  
   
