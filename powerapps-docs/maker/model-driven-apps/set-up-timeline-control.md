@@ -278,9 +278,9 @@ While you create a custom entity, you might want to show the custom entity as an
 
 To enable a custom activity in timeline, follow these steps.
 
-[Step 1: Create an entity](#step1-create-an-entity)
+[Step 1: Create an entity](#step-1-create-an-entity)
 
-[Step 2: Add entity to the model-driven app](#step2-add-entity-to-the-model-driven-app)
+[Step 2: Add entity to the model-driven app](#step-2-add-entity-to-the-model-driven-app)
 
 ### Step 1: Create an entity
 
