@@ -62,7 +62,7 @@ To create an application registration in Azure AD, follow these steps.
 ## Application User creation
 To create an unlicensed "application user" in your Dynamics 365 organization, follow these steps. This application user will be given access to your organization's data on behalf of the end user who is using your application.
 
-1. Navigate to your D365 organization
+1. Navigate to your Common Data Service organization
 2. Navigate to **Settings** > **Security** > **Users**
 3. Choose **Application Users** in the view filter
 4. Select **+ New**
