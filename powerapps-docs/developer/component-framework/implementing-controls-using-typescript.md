@@ -1,5 +1,5 @@
 ---
-title: "Implementing code components using TypeScript | MicrosoftDocs"
+title: "Create your first component using Power Apps Component Framework | MicrosoftDocs"
 description: "How to implement code components using TypeScript"
 manager: kvivek
 ms.date: 10/01/2019
@@ -10,17 +10,19 @@ ms.author: "nabuthuk"
 author: Nkrb
 ---
 
-# Implement components using TypeScript
+# Create your first component using Power Apps Component Framework
 
-This topic walks you through the process of creating a new code component in TypeScript using the PowerApps CLI. In this tutorial we will build a sample linear code component that enables users to change the numeric values using a visual slider instead of typing the values in the field. 
+ In this tutorial, we demonstrate how to build a linear slider code component that enables users to change the numeric values using a visual slider instead of typing the values in the field. 
 
-The artifacts that are required to build code components are:
+The following steps are required to build a linear slider code component:
 
-1. [Create a new component project](#creating-a-new-component-project)
-2. [Implementing manifest](#implementing-manifest)
-3. [Implement component logic using TypeScript](#implementing-component-logic)
-4. [Add style to the code components](#adding-style-to-the-code-component)
-5. [Packaging code components](#packaging-your-code-components)
+- [Create a new component project](#creating-a-new-component-project)
+- [Implementing manifest](#implementing-manifest)
+- [Implement component logic using TypeScript](#implementing-component-logic)
+- [Add style to the code components](#adding-style-to-the-code-component)
+- [Packaging code components](#packaging-your-code-components)
+- [Adding component to a model-driven app](#adding-code-components-in-model-driven-apps)
+- [Adding component to a canvas app](#adding-code-components-to-a-canvas-app)
 
 ## Creating a new component project
 
@@ -56,7 +58,7 @@ Make changes to the predefined manifest file, as shown here:
    - **Version**: Version of the component. Whenever you update the component, you need to update the version to see the latest changes in the runtime.
    - **display-name-key**: Name of the code component that is displayed on the UI.
    - **description-name-key**: Description of the code component that is displayed on the UI.
-   - **control-type**: The code component type. Only *standard* type of code components are supported.
+   - **control-type**: The code component type. Only *standard* types of code components are supported.
 
      ```XML
       <?xml version="1.0" encoding="utf-8" ?>
@@ -76,6 +78,7 @@ Make changes to the predefined manifest file, as shown here:
      ```XML
       <property name="sliderValue" display-name-key="sliderValue_Display_Key" description-key="sliderValue_Desc_Key" of-type-group="numbers" usage="bound" required="true" />
       ```
+
 3. The [resources](manifest-schema-reference/resources.md) node defines the visualization of the code component. It contains all the resources that build the visualization and styling of the code component. The [code](manifest-schema-reference/code.md) is specified as a child element under the resources element. Define the [resources](manifest-schema-reference/resources.md) as shown here:
 
    - **code**: Refers to the path where all the resource files are located.
@@ -126,7 +129,7 @@ export class TSLinearInputComponent
   implements ComponentFramework.StandardControl<IInputs, IOutputs> {
   // Value of the field is stored and used inside the component
   private _value: number;
-  // PowerApps component framework delegate which will be assigned to this object which would be called whenever any update happens.
+  // Power Apps component framework delegate which will be assigned to this object which would be called whenever any update happens.
   private _notifyOutputChanged: () => void;
   // label element created as part of this component
   private labelElement: HTMLLabelElement;
@@ -135,7 +138,7 @@ export class TSLinearInputComponent
   // reference to the component container HTMLDivElement
   // This element contains all elements of our code component example
   private _container: HTMLDivElement;
-  // reference to PowerApps component framework Context object
+  // reference to Power Apps component framework Context object
   private _context: ComponentFramework.Context<IInputs>;
   // Event Handler 'refreshData' reference
   private _refreshData: EventListenerOrEventListenerObject;
@@ -325,7 +328,7 @@ Developers and app makers can define their styling to represent their code compo
 
 ## Debugging your code component
 
-Once you are done implementing your code component logic, run the following command to start the debugging process. More information: [Debug code components](debugging-custom-controls.md)
+Once you're done implementing the code component logic, run the following command to start the debugging process. More information: [Debug code components](debugging-custom-controls.md)
 
 ```CLI
 npm start
@@ -370,7 +373,7 @@ Follow these steps to create and import a [solution](https://docs.microsoft.com/
     > - Under **Code Tools**, check **NuGet targets & Build Tasks**.
 
 6. The generated solution zip file is located in the `Solution\bin\debug` folder.
-7. Manually [import the solution into Common Data Service](https://docs.microsoft.com/powerapps/maker/common-data-service/import-update-export-solutions) using the web portal once the zip file is ready or see the [Authenticating to your organization](import-custom-controls.md#authenticating-to-your-organization) and [Deployment](import-custom-controls.md#deploying-code-components) sections to import using PowerApps CLI commands.
+7. Manually [import the solution into Common Data Service](https://docs.microsoft.com/powerapps/maker/common-data-service/import-update-export-solutions) using the web portal once the zip file is ready or automatically using the [Power Apps Build Tools](https://marketplace.visualstudio.com/items?itemName=microsoft-IsvExpTools.PowerApps-BuildTools).
 
 ## Adding code components in model-driven apps
 
@@ -383,6 +386,6 @@ To add the code components to a canvas app, follow the steps in the topic [Add c
 ### See also
 
 [Download sample components](https://go.microsoft.com/fwlink/?linkid=2088525)<br/>
-[Update existing PowerApps component framework components](updating-existing-controls.md)<br/>
-[PowerApps component framework API reference](reference/index.md)<br/>
-[PowerApps component framework overview](overview.md)
+[Update existing Power Apps component framework components](updating-existing-controls.md)<br/>
+[Power Apps component framework API reference](reference/index.md)<br/>
+[Power Apps component framework overview](overview.md)

@@ -17,7 +17,7 @@ search.app:
 
 
 
-**Added by**: PowerApps Checker Solution
+**Added by**: Power Apps Checker Solution
 
 
 ## Messages

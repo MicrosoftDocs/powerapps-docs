@@ -1,6 +1,6 @@
 ---
 title: "Developers: Best practices and guidance around working with data for the Common Data Service | Microsoft Docs"
-description: Best practices and guidance around working with data for developers of the Common Data Service in PowerApps.
+description: Best practices and guidance around working with data for developers of the Common Data Service in Power Apps.
 services: ''
 suite: powerapps
 documentationcenter: na
@@ -28,7 +28,7 @@ This list below contains all of the best practices and guidance around integrati
 
 |Best Practice  |Description  |
 |---------|---------|
-|[API Limits (Common Data Service)](../../api-limits.md)     |Understand the limits for API requests.         |
+|[Service Protection API Limits (Common Data Service)](../../api-limits.md)     |Understand the limits for API requests.         |
 
 ### See Also
 [Work with data using code in Common Data Service (PowerApps)](../../work-with-data-cds.md)<br />

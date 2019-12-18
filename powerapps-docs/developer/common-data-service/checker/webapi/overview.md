@@ -1,8 +1,8 @@
 ---
-title: "Use the PowerApps checker web API | Microsoft Docs"
-description: "The PowerApps checker Web API provides a development experience that can be used across a wide variety of programming languages, platforms, and devices"
+title: "Use the Power Apps checker web API | Microsoft Docs"
+description: "The Power Apps checker Web API provides a development experience that can be used across a wide variety of programming languages, platforms, and devices"
 ms.custom: ""
-ms.date: 06/3/2019
+ms.date: 12/12/2019
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -21,16 +21,9 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Use the PowerApps checker web API
+# Use the Power Apps checker web API
 
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../../../includes/cc-beta-prerelease-disclaimer.md)]
-
-The PowerApps checker web API provides a mechanism to run static analysis checks against customizations and extensions to the Common Data Service platform. It is available for makers and developers to perform rich static analysis checks on their solutions against a set of best practice rules to quickly identify problematic patterns. The service provides the logic for the [solution checker feature](../../../../maker/common-data-service/use-powerapps-checker.md) in the PowerApps maker [portal](https://make.powerapps.com) and is included as part of the automation for [applications submitted to AppSource](../../publish-app-appsource.md). Interacting with the service directly in this manner allows for analysis of solutions that are included as part of on-premise (all supported versions) and online environments.
-
- > [!IMPORTANT]
- >
- > - The web API for PowerApps checker is a preview feature.
- > - [!INCLUDE[cc_preview_features_definition](../../../../includes/cc-preview-features-definition.md)]
+The Power Apps checker web API provides a mechanism to run static analysis checks against customizations and extensions to the Common Data Service platform. It is available for makers and developers to perform rich static analysis checks on their solutions against a set of best practice rules to quickly identify problematic patterns. The service provides the logic for the [solution checker feature](../../../../maker/common-data-service/use-powerapps-checker.md) in the Power Apps maker [portal](https://make.powerapps.com) and is included as part of the automation for [applications submitted to AppSource](../../publish-app-appsource.md). Interacting with the service directly in this manner allows for analysis of solutions that are included as part of on-premise (all supported versions) and online environments.
 
 <a name="bkmk_altApproaches"></a>
 
@@ -74,7 +67,7 @@ Refer to the following topics for documentation on the individual APIs:
 
 ## Determine a geography
 
-When interacting with the PowerApps checker service, files are temporarily stored in Azure along with the reports that are generated. By using a geography specific API, you can control where the data is stored. It is suggested to use the same geography for each API call in the analysis lifecycle. Each geography may have a different version at any given point in time due to our multi-stage safe deployment approach and doing this ensures full version compatibility. It also may reduce execution time as the data will not have to travel as far of a distance in some cases. The following are the available geographies:
+When interacting with the Power Apps checker service, files are temporarily stored in Azure along with the reports that are generated. By using a geography specific API, you can control where the data is stored. It is suggested to use the same geography for each API call in the analysis lifecycle. Each geography may have a different version at any given point in time due to our multi-stage safe deployment approach and doing this ensures full version compatibility. It also may reduce execution time as the data will not have to travel as far of a distance in some cases. The following are the available geographies:
 
 |Azure datacenter|Name|Geography|Base URI|
 |---|---|---|---|
@@ -106,7 +99,7 @@ If not provided, the latest API version will be used by default. Using an explic
 
 ## Rulesets and rules
 
-PowerApps checker requires a list of rules when run. These rules can be provided in the form of individual rules or a grouping of rules, referred to as a *ruleset*. A ruleset is a convenient way to specify a group of rules instead of having to specify each rule individually. For example, the solution checker feature uses a ruleset named *Solution Checker*. As new rules are added or removed, the service will include these changes automatically without requiring any change by the consuming application. If you require that the list of rules not change automatically as described above, then the rules can be specified individually.
+Power Apps checker requires a list of rules when run. These rules can be provided in the form of individual rules or a grouping of rules, referred to as a *ruleset*. A ruleset is a convenient way to specify a group of rules instead of having to specify each rule individually. For example, the solution checker feature uses a ruleset named *Solution Checker*. As new rules are added or removed, the service will include these changes automatically without requiring any change by the consuming application. If you require that the list of rules not change automatically as described above, then the rules can be specified individually.
 Rulesets can have one or more rules with no limit. A rule can be in no or multiple rulesets. You can get a list of all rulesets by calling the API as follows: `[Geographical URL]/api/ruleset`. This endpoint is open and does not require authentication.
 
 ### Solution checker ruleset
@@ -137,7 +130,7 @@ The tenant ID is the value of the `ObjectId` property that is returned from `Get
 
 ## Authentication and authorization
 
- Querying for rules and rulesets do not require an OAuth token, but all of the other APIs do require the token. The APIs do support authorization discovery by calling any of the APIs that require a token. The response will be an unauthorized HTTP status code of 401 with a WWW-Authenticate header, the authorization URI, and the resource ID. You should also provide your tenant ID in the `x-ms-tenant-id` header. Refer to [PowerApps Checker authentication and authorization](/powershell/powerapps/overview#powerapps-checker-authentication-and-authorization) for more information. Below is an example of the response header returned from an API request:
+ Querying for rules and rulesets do not require an OAuth token, but all of the other APIs do require the token. The APIs do support authorization discovery by calling any of the APIs that require a token. The response will be an unauthorized HTTP status code of 401 with a WWW-Authenticate header, the authorization URI, and the resource ID. You should also provide your tenant ID in the `x-ms-tenant-id` header. Refer to [Power Apps Checker authentication and authorization](/powershell/powerapps/overview#powerapps-checker-authentication-and-authorization) for more information. Below is an example of the response header returned from an API request:
 
 ```http
 WWW-Authenticate →Bearer authorization_uri="https://login.microsoftonline.com/0082fff7-33c5-44c9-920c-c2009943fd1e", resource_id="https://api.advisor.powerapps.com/"

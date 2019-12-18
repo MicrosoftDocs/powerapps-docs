@@ -1,5 +1,5 @@
 ---
-title: "Delete fields in PowerApps | MicrosoftDocs"
+title: "Delete fields in Power Apps | MicrosoftDocs"
 description: "Learn how to delete fields"
 ms.custom: ""
 ms.date: 06/20/2018

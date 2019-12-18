@@ -1,5 +1,5 @@
 ---
-title: Build your first model-driven app from scratch with PowerApps | Microsoft Docs
+title: Build your first model-driven app from scratch with Power Apps | Microsoft Docs
 description: Learn how to build a simple model-driven app
 documentationcenter: ''
 author: Mattp123
@@ -20,17 +20,17 @@ search.app:
 ---
 
 # Build your first model-driven app from scratch
-Model-driven app design is a component-focused approach to app development. In this topic, you simplify how to create a model-driven app by using one of the standard entities that's available in your PowerApps environment.
+Model-driven app design is a component-focused approach to app development. In this topic, you simplify how to create a model-driven app by using one of the standard entities that's available in your Power Apps environment.
 
 > [!TIP]
 > To learn all about building model-driven apps, start here: [Understand model-driven app components](model-driven-app-components.md). 
 
-## Sign in to PowerApps
-Sign in to [PowerApps](https://make.powerapps.com/). If you don’t already have a [!INCLUDE [powerapps](../../includes/powerapps.md)] account, select the **Get started free** link. 
+## Sign in to Power Apps
+Sign in to [Power Apps](https://make.powerapps.com/). If you don’t already have a [!INCLUDE [powerapps](../../includes/powerapps.md)] account, select the **Get started free** link. 
 
 ## Create your model-driven app
 
-1.	Select the environment you want, or go to the [PowerApps admin center](https://admin.powerapps.com/) to create a new one.
+1.	Select the environment you want, or go to the [Power Apps admin center](https://admin.powerapps.com/) to create a new one.
 
   > [!IMPORTANT]
   > If the **Model-driven** design mode isn't available, you may need to [Create an environment](https://docs.microsoft.com/powerapps/administrator/create-environment).   

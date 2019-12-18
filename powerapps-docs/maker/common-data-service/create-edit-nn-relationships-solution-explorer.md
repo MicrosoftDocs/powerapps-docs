@@ -26,9 +26,9 @@ search.app:
 
 Solution explorer provides one way to create and edit N:N (many-to-many) for Common Data Service.
 
-The [PowerApps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) enables configuring the most common options, but certain options can only be set using solution explorer. More information:
+The [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) enables configuring the most common options, but certain options can only be set using solution explorer. More information:
 - [Create Many-to-many (N:N) entity relationships](create-edit-nn-relationships.md)
-- [Create Many-to-many entity relationships in Common Data Service using PowerApps portal](create-edit-nn-relationships-portal.md)
+- [Create Many-to-many entity relationships in Common Data Service using Power Apps portal](create-edit-nn-relationships-portal.md)
 
   
 ## Open solution explorer
@@ -107,5 +107,5 @@ Deleting the relationship will delete the relationship entity created. All data 
 ### See also
 
 [Create Many-to-many (N:N) entity relationships](create-edit-nn-relationships.md)<br />
-[Create Many-to-many entity relationships in Common Data Service using PowerApps portal](create-edit-nn-relationships-portal.md)<br />
+[Create Many-to-many entity relationships in Common Data Service using Power Apps portal](create-edit-nn-relationships-portal.md)<br />
 [Create and edit 1:N (one-to-many) or N:1 (many-to-one) entity relationships](create-edit-1n-relationships.md)

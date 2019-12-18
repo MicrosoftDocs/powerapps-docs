@@ -1,5 +1,5 @@
 ---
-title: "Specify a model-driven app default view in PowerApps | MicrosoftDocs"
+title: "Specify a model-driven app default view in Power Apps | MicrosoftDocs"
 description: "Learn how to specify a default view"
 ms.custom: ""
 ms.date: 06/12/2018

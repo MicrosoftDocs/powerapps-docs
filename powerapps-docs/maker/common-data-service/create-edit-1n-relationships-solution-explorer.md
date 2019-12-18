@@ -1,6 +1,6 @@
 ---
 title: "Create and edit 1:N (one-to-many) or N:1 (many-to-one) entity relationships using solution explorer | MicrosoftDocs"
-description: "Learn how to create one-to-many or many-to-one entity relationships using PowerApps solution explorer"
+description: "Learn how to create one-to-many or many-to-one entity relationships using Power Apps solution explorer"
 ms.custom: ""
 ms.date: 10/28/2018
 ms.reviewer: ""
@@ -26,9 +26,9 @@ search.app:
 
 Solution explorer provides one way to create and edit 1:N (one-to-many) or N:1 (many-to-one) entity relationships for Common Data Service.
 
-The [PowerApps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) enables configuring the most common options, but certain options can only be set using solution explorer. More information: 
+The [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) enables configuring the most common options, but certain options can only be set using solution explorer. More information: 
 - [Create 1:N (one-to-many) or N:1 (many-to-one) relationships](create-edit-1n-relationships.md)
-- [Create and edit 1:N (one-to-many) or N:1 (many-to-one) entity relationships in PowerApps portal](create-edit-1n-relationships-portal.md)
+- [Create and edit 1:N (one-to-many) or N:1 (many-to-one) entity relationships in Power Apps portal](create-edit-1n-relationships-portal.md)
   
 ## Open solution explorer
 
@@ -230,6 +230,6 @@ Because of parental relationships there are some limitations you should keep in 
 
 [Create and edit relationships between entities](create-edit-entity-relationships.md)<br />
 [Create and edit 1:N (one-to-many) or N:1 (many-to-one) relationships](create-edit-1n-relationships.md)<br />
-[Create and edit 1:N (one-to-many) or N:1 (many-to-one) entity relationships in PowerApps portal](create-edit-1n-relationships-portal.md)<br />
+[Create and edit 1:N (one-to-many) or N:1 (many-to-one) entity relationships in Power Apps portal](create-edit-1n-relationships-portal.md)<br />
 [Create N:N (many-to-many) relationships](create-edit-nn-relationships.md)
 

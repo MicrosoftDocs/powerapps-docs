@@ -6,7 +6,7 @@ manager: shujoshi
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/07/2019
+ms.date: 11/11/2019
 ms.author: shjais
 ms.reviewer:
 ---
@@ -24,7 +24,7 @@ As a portal administrator, you can configure your portal to display a proper mes
 
 You can enable maintenance mode on your portal to provide a consistent message, instead of dealing with unpredictable behavior when your website is under scheduled maintenance. This will provide a better experience for your portal users.
 
-1. Open [PowerApps Portals admin center](admin-overview.md).
+1. Open [Power Apps Portals admin center](admin-overview.md).
 
 3. Go to **Portal Actions** > **Enable maintenance mode**.
 
@@ -40,6 +40,9 @@ You can enable maintenance mode on your portal to provide a consistent message, 
 
     - **Custom page URL**: This field is enabled only when you select the option to display a custom HTML page. You must ensure that the page URL you provide is publicly accessible. If the specified HTML page can't be reached, the default page is displayed with a note to the administrators.
 
+        > [!NOTE]
+        > The custom maintenance page uses IFrame to display the page. Hence, the page should not contain the `x-frame-options:SAMEORIGIN` response header, else the page will not load.
+
 5. Select **Enable**. While maintenance mode is being enabled, the portal restarts and is unavailable for a few minutes. 
 
     > [!div class=mx-imgBorder]
@@ -51,7 +54,7 @@ After enabling maintenance mode for your portal, you can update the maintenance 
 
 You can also choose to disable maintenance mode on your portal when the scheduled maintenance of your website is complete. Your portal users can now browse and access all web pages as usual.
 
-1. Open [PowerApps Portals admin center](admin-overview.md).
+1. Open [Power Apps Portals admin center](admin-overview.md).
 
 2. Go to **Portal Actions** > **Configure or disable maintenance mode**.
 

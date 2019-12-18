@@ -14,8 +14,8 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Connect to Dynamics 365 from PowerApps
-PowerApps lets you quickly generate, customize, share, and run mobile apps with little or no code. By using the Dynamics 365 connector, you can create useful mobile apps to share with your organization in just a few minutes.
+# Connect to Dynamics 365 from Power Apps
+Power Apps lets you quickly generate, customize, share, and run mobile apps with little or no code. By using the Dynamics 365 connector, you can create useful mobile apps to share with your organization in just a few minutes.
 
 By following the steps in this topic, you'll create an app in which users can browse, add, delete, and make updates to contacts in Dynamics 365. Users can run the app [in a browser](../../../user/run-app-browser.md) or [on a mobile device](../../../user/run-app-client.md) such as a phone.
 
@@ -23,7 +23,7 @@ By following the steps in this topic, you'll create an app in which users can br
 To follow this tutorial, you need a Microsoft Office 365 account that includes a Dynamics 365 subscription.
 
 ## Create a connection
-1. [Sign in to PowerApps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1. [Sign in to Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 2. In the left navigation pane, click **Connections**.
    
     ![Connection option on File menu](./media/connection-dynamics-crmonline/file-connections.png)
@@ -41,19 +41,19 @@ To follow this tutorial, you need a Microsoft Office 365 account that includes a
     A connection is created.
 
 ## Generate an app automatically
-1. [Sign in to PowerApps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then click **New app** near the lower-left corner.
+1. [Sign in to Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then click **New app** near the lower-left corner.
    
     ![New app](./media/connection-dynamics-crmonline/new-app.png)
 2. Under **Start with your data**, click **Phone layout** on the **Dynamics 365** tile.
    
-    ![PowerApps select Dynamics 365 connector](./media/connection-dynamics-crmonline/phonelayout.png)
+    ![Power Apps select Dynamics 365 connector](./media/connection-dynamics-crmonline/phonelayout.png)
 3. Under **Connections**, select the connection that you want, and then choose a dataset, which corresponds to the instance of Dynamics 365 that you'll manage in the app.
 4. Under **Choose a table**, click **Contacts**, and then click **Connect**.
 5. In the left navigation bar, click or tap an icon in the upper-right corner to switch to the thumbnail view.
    
     ![Toggle the views](./media/connection-dynamics-crmonline/toggle-view.png)
 
-PowerApps generates a three-screen app based on contact records.
+Power Apps generates a three-screen app based on contact records.
 
 * **BrowseScreen1**. This screen appears by default when users open the app. In the left navigation bar, a thumbnail for this screen appears above the other two screens.
 * **DetailScreen1**. This screen appears when users click an item in **BrowseScreen1**.  In the left navigation bar, a thumbnail for **DetailScreen1** appears between the other two screens.

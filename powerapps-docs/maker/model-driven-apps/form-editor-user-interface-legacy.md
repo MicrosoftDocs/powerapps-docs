@@ -1,6 +1,6 @@
 ---
-title: Overview of the model-driven app form editor user interface for PowerApps | MicrosoftDocs
-description: Know the form editor user interface to edit forms in PowerApps
+title: Overview of the model-driven app form editor user interface for Power Apps | MicrosoftDocs
+description: Know the form editor user interface to edit forms in Power Apps
 author: Mattp123
 applies_to: 
   - "Dynamics 365 (online)"

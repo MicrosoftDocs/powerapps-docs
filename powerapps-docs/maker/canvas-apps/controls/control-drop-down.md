@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Drop down control in PowerApps
+# Drop down control in Power Apps
 A list that shows only the first item unless the user opens it.
 
 ## Description

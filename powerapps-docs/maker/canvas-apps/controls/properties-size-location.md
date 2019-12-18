@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Size and location properties in PowerApps
+# Size and location properties in Power Apps
 ## Overview
 Configure how big a control (or an element of a control) is and where it is in relation to the screen it's on.
 

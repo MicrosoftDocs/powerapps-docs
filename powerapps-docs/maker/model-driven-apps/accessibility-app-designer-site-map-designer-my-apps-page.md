@@ -1,6 +1,6 @@
 ---
-title: Understand accessibility app designer, site map designer, and My Apps page in PowerApps | Microsoft Docs
-description: Know about accessibility in model-driven apps with app designer, site map designer, and My Apps page in PowerApps
+title: Understand accessibility app designer, site map designer, and My Apps page in Power Apps | Microsoft Docs
+description: Know about accessibility in model-driven apps with app designer, site map designer, and My Apps page in Power Apps
 keywords: App designer; site map designer; my apps; Dynamics 365
 author: Mattp123
 ms.author: matp
@@ -19,14 +19,14 @@ search.app:
   - D365CE
 ---
 
-# Accessibility in PowerApps app designer, site map designer, and My Apps page
+# Accessibility in Power Apps app designer, site map designer, and My Apps page
 
 Microsoft is committed to making its products and services easier for everyone. More information: [Microsoft accessibility](https://www.microsoft.com/enable/default.aspx)  
  
 This topic describes the accessibility features available with model-driven apps.  
   
 ## Keyboard shortcuts  
-PowerApps offers keyboard shortcuts to address issues faced by people with limited dexterity or motion disabilities.  
+Power Apps offers keyboard shortcuts to address issues faced by people with limited dexterity or motion disabilities.  
   
 |My Apps page|||  
 |------------------|-|-|  
@@ -106,4 +106,4 @@ PowerApps offers keyboard shortcuts to address issues faced by people with limit
 
 ## See also
 
-[Use keyboard shortcuts in PowerApps](/powerapps/user/keyboard-shortcuts)
+[Use keyboard shortcuts in Power Apps](/powerapps/user/keyboard-shortcuts)

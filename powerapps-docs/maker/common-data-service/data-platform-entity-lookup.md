@@ -1,6 +1,6 @@
 ---
 title: Create a relationship between entities by using a lookup field | Microsoft Docs
-description: Step-by-step instructions for how to create a relationship between entities in PowerApps by using a lookup field.
+description: Step-by-step instructions for how to create a relationship between entities in Power Apps by using a lookup field.
 author: lancedMicrosoft
 manager: kvivek
 ms.service: powerapps
@@ -131,7 +131,7 @@ For more information on defaults and custom behaviors: [Configure entity relatio
 If you [create an app automatically](../canvas-apps/data-platform-create-app.md) from an entity that contains a lookup field, it appears as a **Drop down** control that contains data from the **Primary name** field of the entity.
 
 ## Add 1:N and N:N relationships for canvas apps
-Use the **Relate** function to link two records through a one-to-many or many-to-many relationship in Common Data Service. More information: [Relate and Unrelate functions in PowerApps](../canvas-apps/functions/function-relate-unrelate.md)
+Use the **Relate** function to link two records through a one-to-many or many-to-many relationship in Common Data Service. More information: [Relate and Unrelate functions in Power Apps](../canvas-apps/functions/function-relate-unrelate.md)
 
 ## Next steps
 * [Generate an app by using a Common Data Service database](../canvas-apps/data-platform-create-app.md)

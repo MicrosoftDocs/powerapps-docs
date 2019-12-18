@@ -1,6 +1,6 @@
 ---
 title: System requirements, limits, and configuration values for canvas apps | Microsoft Docs
-description: System requirements, limits, and configuration values for canvas apps built in PowerApps
+description: System requirements, limits, and configuration values for canvas apps built in Power Apps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -15,9 +15,9 @@ search.app:
   - PowerApps
 ---
 # System requirements, limits, and configuration values for canvas apps
-This topic contains device platform and web browser requirements, as well as limits and configuration values for PowerApps.
+This topic contains device platform and web browser requirements, as well as limits and configuration values for Power Apps.
 
-## Supported platforms for running canvas apps using the PowerApps app
+## Supported platforms for running canvas apps using the Power Apps app
 
 | **Minimum required** | **Recommended** |
 | --- | --- |
@@ -26,7 +26,7 @@ This topic contains device platform and web browser requirements, as well as lim
 | Windows 8.1 or later (PC only) |Windows 10 Fall Creators Update with at least 8 GB of RAM)|
 
 > [!NOTE]
-> We currently don't support new features on Windows platform for PowerApps app. Features such as the Improved Common Data Service option and guest access are not available on this platform. We recommend using a web player on Windows to leverage the full set of capabilities. Updates to the PowerApps app for Windows platform will be announced in future.
+> We currently don't support new features on Windows platform for Power Apps app. Features such as the Improved Common Data Service option and guest access are not available on this platform. We recommend using a web player on Windows to leverage the full set of capabilities. Updates to the Power Apps app for Windows platform will be announced in future.
 
 ## Supported browsers for running canvas apps
 
@@ -38,7 +38,7 @@ This topic contains device platform and web browser requirements, as well as lim
 | Mozilla Firefox (latest version) |Windows 7 SP1, 8.1, and 10 <br> Android 5 or later <br>iOS 8 or later <br>macOS |
 | Apple Safari (latest version) |iOS 8 or later <br>macOS |
 
-## Supported browsers for PowerApps Studio
+## Supported browsers for Power Apps Studio
 
 | **Browser** | **Operating system** |
 | --- | --- |
@@ -58,14 +58,14 @@ These limits apply to each single outgoing request:
 > The retry value may vary. For certain error conditions, it's not necessary to retry.
 
 ## IP addresses
-Requests from PowerApps use IP addresses that depend on the region of the [environment](../../administrator/environments-overview.md) that the app is in. We don't publish fully qualified domain names available for PowerApps scenarios.
+Requests from Power Apps use IP addresses that depend on the region of the [environment](../../administrator/environments-overview.md) that the app is in. We don't publish fully qualified domain names available for Power Apps scenarios.
 
 Calls made from an API connected through an app (for example, the SQL API or the SharePoint API) come from the IP address specified later in this topic.
 
 You should use these addresses if, for example, you must whitelist IP addresses for an Azure SQL database.
 
 > [!IMPORTANT]
->   If you have existing configurations, please update them as soon as possible before September 30, 2018 so they include and match the IP addresses in this list for the regions where your PowerApps apps exist.
+>   If you have existing configurations, please update them as soon as possible before September 30, 2018 so they include and match the IP addresses in this list for the regions where your Power Apps apps exist.
 
 | Region | Outbound IP |
 | --- | --- |
@@ -82,7 +82,7 @@ You should use these addresses if, for example, you must whitelist IP addresses 
 | United States (Early Access)  | 13.71.195.32 - 13.71.195.47, 52.161.102.22, 13.66.140.128 - 13.66.140.143, 52.183.78.157 |
 
 ## Required services
-This list identifies all services to which PowerApps Studio talks and their usages. Your network must **not** block these services.
+This list identifies all services to which Power Apps Studio talks and their usages. Your network must **not** block these services.
 
 | Domain(s) | Protocols | Uses |
 | --- | --- | --- |
@@ -98,36 +98,15 @@ This list identifies all services to which PowerApps Studio talks and their usag
 | \*.flow.microsoft.com | https | create.powerapps.com, make.powerapps.com, content.powerapps.com, and make.powerapps.com |
 | *.dynamics.com | https | Common Data Service |
 | vortex.data.microsoft.com |https |Telemetry |
-| localhost | https | PowerApps Mobile
+| localhost | https | Power Apps Mobile
 
 > [!NOTE]
-> If you're using a VPN, it must be configured to exclude localhost from tunneling for PowerApps Mobile.
+> If you're using a VPN, it must be configured to exclude localhost from tunneling for Power Apps Mobile.
 
 ## Size limits
 
 You can find information about size limits on text, hyperlinks, images, and media in [Data types](functions/data-types.md#text-hyperlink-image-and-media).
 
-## PowerApps per app plan
+## Power Apps per app plan
 
-PowerApps per app plan allows individual users to run 2 applications on a single portal for a specific business scenario based on the full capabilities of PowerApps. This plan provides an easy way for users to get started with the platform before broader scale adoption.
-
-After an admin allocates PowerApps per app plan to an environment, they're assigned to users by default when app is shared with them. You can see how an admin allocates per app plans [here](https://docs.microsoft.com/power-platform/admin/capacity-add-on).
-
-Follow these steps to turn off the assigning per app plans for users when an app is shared with them:
-
-- Choose the **App**.
-- Select **Settings**.
-- Change the **Auto assign per app passes** toggle under **Pass assignment**.
-
-The **Auto assign per app passes** toggle appears in all app setting.
-
-> [!NOTE]
-> Disabling the per app plan is currently available for only canvas apps.  Model-driven apps and Portals will have this ability in the future.
-
-### App Settings
-
-![Canvas app settings](./media/limits-and-config/app_settings.png "Canvas app settings")
-
-### Pass assignment
-
-![Canvas app settings pass assignment](./media/limits-and-config/app_settings_pass_assignment.png "Canvas app settings pass assignment")
+The information is now available in [Power Apps per app plan](/power-platform/admin/signup-for-powerapps-admin#power-apps-per-app-plan) section in the Power Platform admin guide.

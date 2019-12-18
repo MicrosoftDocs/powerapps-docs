@@ -1,6 +1,6 @@
 ---
 title: EndsWith and StartsWith functions | Microsoft Docs
-description: Reference information, including syntax and examples for the EndsWith and StartsWith functions in PowerApps
+description: Reference information, including syntax and examples for the EndsWith and StartsWith functions in Power Apps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# EndsWith and StartsWith functions in PowerApps
+# EndsWith and StartsWith functions in Power Apps
 Tests whether a text string begins or ends another text string.
 
 ## Description

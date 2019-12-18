@@ -1,6 +1,6 @@
 ---
 title: Create a canvas app from scratch using Common Data Service | Microsoft Docs
-description: In PowerApps, create a canvas app to add, update, and delete records in Common Data Service.
+description: In Power Apps, create a canvas app to add, update, and delete records in Common Data Service.
 author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
@@ -18,17 +18,17 @@ search.app:
 
 Build a canvas app to manage data that's stored in Common Data Service, using standard entities (which are built in), custom entities (which your organization creates), or both.
 
-When you build an app from Common Data Service, you don't need to create a connection from PowerApps, as you do with data sources such as SharePoint, Dynamics 365, or Salesforce. You need only to specify the entities that you want to show or manage in the app.
+When you build an app from Common Data Service, you don't need to create a connection from Power Apps, as you do with data sources such as SharePoint, Dynamics 365, or Salesforce. You need only to specify the entities that you want to show or manage in the app.
 
 ## Prerequisites
 
-- Before you create an app from scratch, familiarize yourself with PowerApps basics by [generating an app](data-platform-create-app.md) and then customizing that app's [gallery](customize-layout-sharepoint.md), [forms](customize-forms-sharepoint.md), and [cards](customize-card.md).
+- Before you create an app from scratch, familiarize yourself with Power Apps basics by [generating an app](data-platform-create-app.md) and then customizing that app's [gallery](customize-layout-sharepoint.md), [forms](customize-forms-sharepoint.md), and [cards](customize-card.md).
 - [Switch to an environment](working-with-environments.md) in which a database has been created with sample data. If you have an appropriate license, you can [create an environment](../../administrator/create-environment.md) to meet this need.
 - To create an app, you must be assigned to the [Environment Maker](https://docs.microsoft.com/power-platform/admin/database-security#predefined-security-roles) security role.
 
 ## Open a blank app
 
-1. Sign in to [PowerApps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
 1. Under **Make your own app**, select **Canvas app from blank**.
 

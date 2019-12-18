@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Date Picker control in PowerApps
+# Date Picker control in Power Apps
 A control that the user can click or tap to specify a date.
 
 ## Description
@@ -84,6 +84,8 @@ If you add a **Date Picker** control instead of a **[Text input](control-text-in
 **[PaddingTop](properties-size-location.md)** – The distance between text in a control and the top edge of that control.
 
 **[Size](properties-text.md)** – The font size of the text that appears on a control.
+
+**StartOfWeek** – The day of the week to display in the first day column of the date-picker control.
 
 **StartYear** – The earliest year to which the user can set the value of a date-picker control.
 

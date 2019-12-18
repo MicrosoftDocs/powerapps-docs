@@ -1,5 +1,5 @@
 ---
-title: iFrame properties for model-driven app Main forms in PowerApps | MicrosoftDocs
+title: iFrame properties for model-driven app Main forms in Power Apps | MicrosoftDocs
 description: Understand the iFrame properties for Main forms
 Keywords: Main form; iFrame properties; Dynamics 365
 author: Mattp123
@@ -25,7 +25,7 @@ You can add iFrames to a form to integrate content from another website within a
 
 To view IFrame properties, follow these steps.
 
-1.  Sign in to [PowerApps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
 2.  Expand **Data**, select **Entities**, select the entity that you want, and then select the **Forms** tab. 
 
