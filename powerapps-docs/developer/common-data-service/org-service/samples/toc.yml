@@ -80,16 +80,16 @@
   items: 
   - name: Synchronize data with external systems using change tracking
     href: synchronize-data-external-systems-using-change-tracking.md   
--name: Charts & dashboards
- items:
- - name: Assign chart to another user
-   href: assign-chart-to-another-user.md
- - name: Assign a user-owned dashboard to another user
-   href: assign-dashboard-to-another-user.md
- - name: Create, retrieve, update and delete a dashboard
-   href: create-retrieve-update-delete-dashboard.md
- - name: Create, retrieve, update and delete chart
-   href: create-retrieve-update-delete-chart.md 
+- name: Charts & dashboards
+  items:
+  - name: Assign chart to another user
+    href: assign-chart-to-another-user.md
+  - name: Assign a user-owned dashboard to another user
+    href: assign-dashboard-to-another-user.md
+  - name: Create, retrieve, update and delete a dashboard
+    href: create-retrieve-update-delete-dashboard.md
+  - name: Create, retrieve, update and delete chart
+    href: create-retrieve-update-delete-chart.md 
 - name: Connections
   items:
   - name: Create a connection
