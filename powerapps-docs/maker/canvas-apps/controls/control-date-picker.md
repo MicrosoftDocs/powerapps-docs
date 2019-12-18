@@ -85,6 +85,8 @@ If you add a **Date Picker** control instead of a **[Text input](control-text-in
 
 **[Size](properties-text.md)** – The font size of the text that appears on a control.
 
+**StartOfWeek** – The day of the week to display in the first day column of the date-picker control.
+
 **StartYear** – The earliest year to which the user can set the value of a date-picker control.
 
 **[TabIndex](properties-accessibility.md)** – Keyboard navigation order in relation to other controls.
