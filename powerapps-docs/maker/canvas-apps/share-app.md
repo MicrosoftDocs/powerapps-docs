@@ -200,6 +200,7 @@ The same license that’s required for non-guests to run an app. For instance, i
 | Power Apps Included w/ Office    | x                          | x                                                  |                                                |                  |
 | Power Apps Per App Plan          | x                          | x                                                  | x                                              | x                |
 | Power Apps Per User Plan         | x                          | x                                                  | x                                              | x                |
+
 More details around pricing and capabilities of various plans can be found in [Microsoft Power Apps and Power Automate Licensing Guide](https://go.microsoft.com/fwlink/?linkid=2085130).
 
 #### In Power Apps Mobile, how does a guest see apps for their home tenant?
