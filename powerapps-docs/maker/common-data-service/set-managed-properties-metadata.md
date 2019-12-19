@@ -45,7 +45,7 @@ For unmanaged components, you can view and change the managed properties. For ma
 
 The managed properties page is displayed. 
 
-> [!div class="mx-imgBorder"] 
+> [!div class="mx-imgBorder" height="1144" width="600"] 
 > ![Managed properties pane](media/managed-properties-dialog.png "Managed properties pane")
   
 Entities have more managed properties than any other type of solution component. If the entity is customizable, you can set the following options:  
