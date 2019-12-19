@@ -40,13 +40,13 @@ For unmanaged components, you can view and change the managed properties. For ma
 2.	Open the solution that you want. 
 3.	From the list of components in the solution, select **…** next to the unmanaged entity that you want to view or edit the managed properties, and then select **Managed properties**. 
 
-> [!div class="mx-imgBorder"] 
-> ![Entity managed properties command](media/entity-managed-properties.png "Entity managed properties command")
+    > [!div class="mx-imgBorder"] 
+    > ![Entity managed properties command](media/entity-managed-properties.png "Entity managed properties command")
 
-The managed properties page is displayed. 
+    The managed properties page is displayed. 
 
-> [!div class="mx-imgBorder"] 
-> <img src="media/managed-properties-dialog.png" alt="Managed properties pane" height="572" width="300">
+    > [!div class="mx-imgBorder"] 
+    > <img src="media/managed-properties-dialog.png" alt="Managed properties pane" height="572" width="300">
 
 <!-- [Managed properties pane](media/managed-properties-dialog.png "Managed properties pane") -->
   
