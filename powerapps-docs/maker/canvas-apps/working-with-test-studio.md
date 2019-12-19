@@ -127,7 +127,7 @@ Now that we have a test case, with an assertion, we can playback the test to val
     ![Publish changes](./media/working-with-test-studio/publish-button.png)
 
     > [!NOTE]
-    > You must publish the app changes from Test Studio in order to play the recording back with recent changes. If you skip, the recording does plays back the previous version of published app with test case or suite as selected. 
+    > You must publish the app changes from Test Studio in order to play the recording back with recent changes. If you skip, the recording  plays back previous version of published app with test case or suite as selected. 
     >
     > ![Play without publishing](./media/working-with-test-studio/publish-test-studio-changes.png)
 
