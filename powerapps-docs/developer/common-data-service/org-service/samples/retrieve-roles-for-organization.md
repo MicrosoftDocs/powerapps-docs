@@ -28,7 +28,7 @@ You can download the sampple from [here](https://github.com/microsoft/PowerApps-
 
 ## What this sample does
 
-The [IOrganizationService.RetrieveMultiple](https://docs.microsoft.com/en-us/dotnet/api/microsoft.xrm.sdk.iorganizationservice.retrievemultiple?view=dynamics-general-ce-9) message is intended to be used in a scenario where it contains data  that is needed to retrieve a collection of records.
+The [IOrganizationService.RetrieveMultiple](https://docs.microsoft.com/dotnet/api/microsoft.xrm.sdk.iorganizationservice.retrievemultiple?view=dynamics-general-ce-9) message is intended to be used in a scenario where it contains data  that is needed to retrieve a collection of records.
 
 ## How this sample works
 
