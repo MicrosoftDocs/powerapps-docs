@@ -37,8 +37,8 @@ For unmanaged components, you can view and change the managed properties. For ma
 
 ## Entity managed properties
 1.	Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select **Solutions** from the left pane. 
-2.	Open the solution that you want, such as the *Default Solution*. 
-3.	From the list of components in the solution, select **…** next to the entity that you want to view or edit the managed properties, and then select **Managed properties**. 
+2.	Open the solution that you want. 
+3.	From the list of components in the solution, select **…** next to the unmanaged entity that you want to view or edit the managed properties, and then select **Managed properties**. 
 
 > [!div class="mx-imgBorder"] 
 > ![Entity managed properties command](media/entity-managed-properties.png "Entity managed properties command")
