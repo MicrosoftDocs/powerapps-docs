@@ -280,3 +280,7 @@ Other example of expressions you could use in these events are
 
 Along with the standard functions available in Power Apps, below are common functions that you will typically use when authoring tests. 
 
+- [Select](./functions/function-select.md)
+- [SetProperty](./functions/function-setproperty.md)
+- [Assert](./functions/function-assert.md)
+- [Trace](./functions/function-trace.md)
