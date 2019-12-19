@@ -39,6 +39,9 @@ Let's look at the steps required to use the Power Apps custom visual in your Pow
 
     If you create a new app, Power Apps creates a simple app with the required components already set up.
 
+    > [!NOTE]
+    > You must create a new app from Power Apps custom visual in Power BI report for *PowerBIIntegration.Refresh()* function to be available in the app.
+
     ![New app](./media/powerapps-custom-visual/new-app.png)
 
 4. Now in Power Apps Studio, you can use the data fields you set in step 2. The `PowerBIIntegration` object acts like any other Power Apps read-only data source or collection. You can use the object to populate any control, or join and filter with other data sources.
@@ -70,8 +73,8 @@ The following limitations apply to the Power Apps custom visual:
 - The Power Apps custom visual can't filter the data or send any data back to the report.
 - You'll need to share the Power Apps app separately from your report. Learn about [sharing apps in Power Apps](share-app.md).
 - Power BI Report Server and the mobile app for Power BI do not support the Power Apps custom visual.
-- Following limitations apply when using PowerBIIntegration.Refresh() function:
-    - You must author the app from Power Apps custom visual in Power BI report for this function to be available.
+- Following limitations apply when using *PowerBIIntegration.Refresh()* function:
+    - You must create a new app from Power Apps custom visual in Power BI report for this function to be available in the app.
     - You must use a source that supports [DirectQuery](https://docs.microsoft.com/power-bi/desktop-directquery-data-sources) and the data connection must be created using DirectQuery method.
 - Power Apps in Power BI Desktop provides data to Power Apps Studio when creating apps but not while editing. Use Power BI Web to preview the data while editing apps.
 
