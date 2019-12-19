@@ -39,6 +39,7 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 1. Checks for the current version of the org.
 
 ### Demonstrate
+
 1. The `Annotation` method instantiate an annotation object.
 1. The `IOrganizationService` method creates and upload the annotation object
 

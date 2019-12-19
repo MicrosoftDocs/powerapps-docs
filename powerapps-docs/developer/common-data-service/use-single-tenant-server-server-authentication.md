@@ -62,17 +62,14 @@ To create an application registration in Azure AD, follow these steps.
 ## Application User creation
 To create an unlicensed "application user" in your Dynamics 365 organization, follow these steps. This application user will be given access to your organization's data on behalf of the end user who is using your application.
 
-1. Navigate to the Azure Active Directory admin center
-2. In the left navigation panel, choose **Users**
-3. Select **+ New user**
-4. In the **User** form, enter a name and username for the new user and select **Create**. Make sure the username contains the organization domain URL of your D365 tenant (i.e., someuser@myorg.onmicrosoft.com). You can exit Azure AD now.
-5. Navigate to your D365 organization
-6. Navigate to **Settings** > **Security** > **Users**
-7. Choose **Application Users** in the view filter
-8. Select **+ New**
-9. In the **New User** form, enter the required information. These values must be identical to those values for the new user you created in the Azure tenant. <br />![New app user](media/S2S-new-appuser.PNG)
-10. If all goes well, after selecting **SAVE**, the **Application ID URI** and **Azure AD Object Id** fields will auto-populate with their correct values
-11. Before exiting the user form, choose **MANAGE ROLES** and assign a security role to this application user so that the application user can access the desired organization data.
+1. Navigate to your Common Data Service organization
+2. Navigate to **Settings** > **Security** > **Users**
+3. Choose **Application Users** in the view filter
+4. Select **+ New**
+5. Change to the **Applcation User** form
+5. In the **Applcation User** form, enter the required information. The user information must not match a user that exists Azure Active Directory. <br />![New app user](media/S2S-new-appuser.PNG)
+6. If all goes well, after selecting **SAVE**, the **Application ID URI** and **Azure AD Object Id** fields will auto-populate with their correct values
+7. Before exiting the user form, choose **MANAGE ROLES** and assign a security role to this application user so that the application user can access the desired organization data.
 
 > [!IMPORTANT]
 > When developing a real-world application using S2S, you should use a custom security role which can be stored in a solution and distributed along with your application.

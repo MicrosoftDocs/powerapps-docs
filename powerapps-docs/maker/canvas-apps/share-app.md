@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 08/09/2019
+ms.date: 12/18/2019
 ms.author: tapanm
 search.audienceType: 
   - maker
@@ -201,6 +201,7 @@ The same license that’s required for non-guests to run an app. For instance, i
 | Power Apps Per App Plan          | x                          | x                                                  | x                                              | x                |
 | Power Apps Per User Plan         | x                          | x                                                  | x                                              | x                |
 
+More details around pricing and capabilities of various plans can be found in [Microsoft Power Apps and Power Automate Licensing Guide](https://go.microsoft.com/fwlink/?linkid=2085130).
 
 #### In Power Apps Mobile, how does a guest see apps for their home tenant?
 Any user that has accessed an canvas app, on their mobile device, that’s published in an Azure AD tenant that isn’t their home tenant must sign-out of Power Apps and sign back in to Power Apps Mobile.  
