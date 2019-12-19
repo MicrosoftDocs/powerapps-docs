@@ -154,7 +154,7 @@ Since the example considered in this procedure is Account. Let us see the Email 
    2. Subject
    3. Description
 
-After modifying the **Email card** form (from the Email entity), and updating the options in the **Account for Interactive experience** form in the Account entity, you can view see the changes.
+After modifying the **Email card** form (from the **Email** entity) and updating the options in the **Account for Interactive experience** form in the **Account** entity, you can view see the changes.
 
    | Field | Value |
    |---------------------------|---------------------------|
@@ -208,7 +208,7 @@ Any card form has the following sections:
    |------------------------------|--------------------------------------|---------------------------------------|
    | A | ColorStrip | ColorStrip section is never displayed to the user. |
    | B | Header | Fields 1 and 2 in are displayed to the user. |
-   | C | Details | Fields 3, 4, and 5 are displayed to the user, where fields 3 and 4 are displayed in the collapsed mode and field 5 is displayed in the expanded mode. |
+   | C | Details | Fields 3, 4, and 5 are displayed to the user where Fields 3 and 4 are displayed in the collapsed mode and Field 5 is displayed in the expanded mode. |
    | D | Footer | Footer section is never displayed to the user. |
 
 For example, see **Email form**.
@@ -220,7 +220,7 @@ For example, see **Email form**.
 
 **Email card collapsed mode**
 
-Fields **1**, **2** from the **Header** section and fields **3** and **4** from the **Details** section are displayed in the collapsed mode.
+Fields **1** and **2** from the **Header** section and Fields **3** and **4** from the **Details** section are displayed in the collapsed mode.
 
    > [!div class=mx-imgBorder] 
    > ![Email card in collapsed mode](media/email-card-collapsed.png "Email card in collapsed mode")
@@ -234,34 +234,34 @@ Field **5** from the **Details** section is displayed in the collapsed mode.
 
 To customize the card form, follow these steps:
 
-1. Sign in to your `https://<YourOrgURL>.dynamics.com/apps` environment.
+1.  Sign in to your `https://<YourOrgURL>.dynamics.com/apps` environment.
 
-2. Open a model-driven app, and then on the command bar select **Settings** ![Settings](../model-driven-apps/media/powerapps-gear.png "Settings") > **Advanced  Settings**.
+2.  Open a model-driven app, and then on the command bar select **Settings** ![Settings](../model-driven-apps/media/powerapps-gear.png "Settings") > **Advanced  Settings**.
 
 3.	Go to **Settings** > **Customization** > **Customize the System**. The solution explorer page opens in a new browser window.  
 
-4.	 Expand **Entities** under **Components** in the default solution pane.
+4.	Expand **Entities** under **Components** in the default solution pane.
 
 5.	Select an entity and select **Forms**. For example, select the **Task** entity.
 
 6.	Select the **Task Card form** record from the list. The **Task Card form** opens in a new browser window.
 
-7. Add, move, or delete the fields. To learn more, see [Add, configure, move, or delete fields on a form](add-move-or-delete-fields-on-form.md).
+7.  Add, move, or delete the fields. To learn more, see [Add, configure, move, or delete fields on a form](add-move-or-delete-fields-on-form.md).
 
    In this procedure, we'll modify **Email Card**. 
 
    > [!div class=mx-imgBorder] 
    > ![Email card configuration](media/customize-field-email1.png "Email card configuration")
 
-   In the **Header** section, **Created on** field is replaced with **Priority**.
+   In the **Header** section, the **Created on** field is replaced with **Priority**.
 
-   Similarly, in the **Details** section, the **Priority** field is removed and the **Subject** field is moved up.
+   Similarly, in the **Details** section, the **Priority** field is removed, and the **Subject** field is moved up.
 
 8.	Select **OK**, and then select **Save**.
 
 9.	Select **Publish** to publish the customizations.
 
-Now, you can view the changes in the Timeline control. In the collapsed mode, you can view the changes made to the card.
+Now, you can view the changes in the **Timeline** control. In the collapsed mode, you can view the changes made to the card.
 
    > [!div class=mx-imgBorder] 
    > ![Email card configuration](media/email2.png "Email card configuration")
@@ -284,19 +284,19 @@ To enable a custom activity in timeline, follow these steps.
 
 ### Step 1: Create an entity
 
-You can create an entity either in [classic mode](#classic-mode) or [PowerApps](#powerapps). 
+You can create an entity either in [classic mode](#classic-mode) or [Power Apps](#powerapps). 
 
 #### Classic mode
 
 1.	Sign in to your `https://<YourOrgURL>.dynamics.com/apps` environment.
 
-2. Open a model-driven app, and then on the command bar select **Settings** ![Settings](../model-driven-apps/media/powerapps-gear.png) > **Advanced  Settings**.
+2.  Open a model-driven app, and then on the command bar select **Settings** ![Settings](../model-driven-apps/media/powerapps-gear.png) > **Advanced  Settings**.
 
 3.	Go to **Settings** > **Customization** > **Customize the System**. The solution explorer page opens in a new browser window.  
 
 4.	Select **Entities** under **Components** in the default solution pane.
 
-5. Select **New** to create an entity. A new browser window is displayed.
+5.  Select **New** to create an entity. A new browser window is displayed.
 
 6. Enter the required fields as described in the [Create an entity](https://docs.microsoft.com/dynamics365/customerengagement/on-premises/customize/create-entities) topic. 
 
@@ -330,13 +330,13 @@ You can create an entity either in [classic mode](#classic-mode) or [PowerApps](
 
 Follow the [Create a custom entity](../common-data-service/data-platform-create-entity.md) topic to create an entity using the PowerApps.
 
-After step 3 in the [Create an entity](../common-data-service/data-platform-create-entity.md#create-an-entity), before saving creating the entity, ensure you perform the following:
+After Step 3 in the [Create an entity](../common-data-service/data-platform-create-entity.md#create-an-entity), before saving creating the entity, ensure you perform the following:
 
 1. Expand **More settings** > **Entity type and ownership**.
 
-2. Select **Activity entity** option from the **Choose entity type** drop-down list.
+2. Select the **Activity entity** option from the **Choose entity type** drop-down list.
 
-3. Ensure **Display in Activity menus** check box is selected.
+3. Ensure the **Display in Activity menus** check box is selected.
 
 4. Expand **Create and update settings**.
 
@@ -351,7 +351,7 @@ After step 3 in the [Create an entity](../common-data-service/data-platform-crea
 
 After you create the entity and enable it as an activity, you need to add the entity to the model-driven app.
 
-1.	Sign in to your `https://<YourOrgURL>.dynamics.com/apps` environment.
+1. Sign in to your `https://<YourOrgURL>.dynamics.com/apps` environment.
 
 2. Select the ellipsis (**...**) on a model-driven app tile. For example, **Customer Service Hub** app tile.
 
@@ -378,15 +378,15 @@ When you’ve custom activities that you want to show for users using mobile, th
 
 1.	Sign in to your `https://<YourOrgURL>.dynamics.com/apps` environment.
 
-2. Open a model-driven app, and then on the command bar select **Settings** ![Settings](../model-driven-apps/media/powerapps-gear.png) > **Advanced  Settings**.
+2.  Open a model-driven app, and then on the command bar select **Settings** ![Settings](../model-driven-apps/media/powerapps-gear.png) > **Advanced  Settings**.
 
 3.	Go to **Settings** > **Customization** > **Customize the System**. The solution explorer page opens in a new browser window.  
 
-4.	 Expand **Entities** under **Components** in the default solution pane.
+4.	Expand **Entities** under **Components** in the default solution pane.
 
 5.	Select an entity form the list. For example, Account.
 
-6.	Scroll down to Outlook & Mobile section, and select the check box for the following options:
+6.	Scroll down to **Outlook & Mobile** section, and select the check box for the following options:
 
     -	Enable for mobile (according to your requirements)
     -	Read-only in mobile (according to your requirements)
@@ -398,7 +398,7 @@ When you’ve custom activities that you want to show for users using mobile, th
 ### Select the modules to display
 
 After you select **Enable for mobile** and **Read-only in mobile** options (as per your requirement) for an entity, you need to select the module to display in the timeline. Select **Show all** if you want to show all the modules or select **Show selected** if you want to show one or more modules as per your business requirement. If you select **Show selected**, choose the modules you want to display.
-Follow the steps 1-8 described in the [Customize modules](#customize-modules) section, and then save and publish the customizations.
+Follow the Steps 1-8 described in the [Customize modules](#customize-modules) section, and then save and publish the customizations.
 
    > [!div class=mx-imgBorder] 
    > ![Select Timeline modules to display](media/timeline-activity.png "Select Timeline modules to display")
