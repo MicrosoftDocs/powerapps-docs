@@ -16,7 +16,7 @@ search.app:
 
 # Set up timeline section (control)
 
-The activities in Timeline that you use to keep track of all your communications with a customer or contact can be customized as per your business or organization requirements.
+The activities that you use in Timeline to keep track of all your communications with a customer or contact can be customized according to your business or organization requirements.
 
   > [!div class="mx-imgBorder"]
   > ![Timeline view of activities in PowerApps](../../user/media/TimelineViewOfActivity.png "Timeline view of activities in PowerApps")  
@@ -35,15 +35,15 @@ The modules are Activities, Posts, and Notes. As a customizer, you can choose wh
 
 1.	Sign in to your `https://<YourOrgURL>.dynamics.com/apps` environment.
 
-2. Open a model-driven app, and then on the command bar select **Settings** ![Settings](../model-driven-apps/media/powerapps-gear.png) > **Advanced  Settings**.
+2.  Open a model-driven app, and then on the command bar, select **Settings** ![Settings](../model-driven-apps/media/powerapps-gear.png "Settings") > **Advanced  Settings**.
 
 3.	Go to **Settings** > **Customization** > **Customize the System**. The solution explorer page opens in a new browser window. 
 
 4.	Expand **Entities** under **Components** in the default solution pane.
 
-5.	Select an entity and select **Forms**. For example, select the Account entity.
+5.	Select an entity and select **Forms**. For example, select the **Account** entity.
 
-6.	Select the **Account for Interactive experience** record that is of **Main** form type. The **Account for Interactive experience** form opens in a new browser window.
+6.	Select the **Account for Interactive experience** record that is a **Main** form type. The **Account for Interactive experience** form opens in a new browser window.
 
    > [!div class=mx-imgBorder] 
    > ![Select the entity form with interactive experience in the name](media/account-interactive-experience.png "Select the entity form with interactive experience in the name")
@@ -61,7 +61,7 @@ The modules are Activities, Posts, and Notes. As a customizer, you can choose wh
     > [!div class=mx-imgBorder] 
     > ![Double-click the field in the social pane](media/timeline-conversation-tabs-field.png "Double-click the field in the social pane")   
 
-8.	Select **Show selected** option for the **Show these modules** field in the **Filter by** container.
+8.	Select the **Show selected** option for the **Show these modules** field in the **Filter by** container.
 
 9.	Select the modules you want to display to the users.
 
@@ -71,10 +71,10 @@ The modules are Activities, Posts, and Notes. As a customizer, you can choose wh
     | Field/option | Description | Value |
     |------------------------------------------|--------------------------------------------------------------|---------------------------|
     | Default Module for Create Experience | Select the module for which you want the default create experience in the timeline. <br><br> The default value is **Notes**.  | Notes |
-    | Show filter pane | Select the checkbox if you want to display the filter icon for the users. If you leave the check box empty, then there will be no filters for the users. |  |
+    | Show filter pane | Select the checkbox if you want to display the filter icon for the users. If you leave the check box empty, there will be no filters for the users. |  |
     | Expand filter pane by default | Select the checkbox, by default, if you want to show the filter pane in the expanded mode. |
-    | Sort | Select the sorting order based on which the records are displayed on the timeline. The sorting is based on the field you choose for Activities. If a field doesn’t exist for the Post, Notes or activity then the sorting is done based on the **Last Updated** field. <br><br>The default sort order is **Descending**.  | Descending |
-    | Number of results | The maximum number of records that are displayed on the timeline before selecting the **More** option. Each time you select the **More** option, timeline displays the configured number of records. You can configure a value ranging from 1 to 50. <br><br> The default value is **10**. | 10 |
+    | Sort | Select the sorting order based on which the records are displayed on the timeline. The sorting is based on the field you choose for Activities. If a field doesn’t exist for the Post, Notes, or Activity, then the sorting is done based on the **Last Updated** field. <br><br>The default sort order is **Descending**.  | Descending |
+    | Number of results | The maximum number of records that are displayed on the timeline before selecting the **More** option. Each time you select the **More** option, the timeline displays the configured number of records. You can configure a value ranging from 1 to 50. <br><br> The default value is **10**. | 10 |
 
     > [!div class=mx-imgBorder] 
     > ![Set up timeline module](media/timeline-module.png "set up timeline module")
@@ -85,19 +85,19 @@ The modules are Activities, Posts, and Notes. As a customizer, you can choose wh
 
 ## Customize activity
 
-As a customizer, you can choose for which entities you want to show the activities to the users as per your business requirements.
+As a customizer, you can choose which entities that you want to show activities to users as per your business requirements.
 
 1.	Sign in to your `https://<YourOrgURL>.dynamics.com/apps` environment.
 
-2. Open a model-driven app, and then on the command bar select **Settings** ![Settings](../model-driven-apps/media/powerapps-gear.png) > **Advanced  Settings**.
+2.  Open a model-driven app, and then on the command bar select **Settings** ![Settings](../model-driven-apps/media/powerapps-gear.png "Settings") > **Advanced Settings**.
 
 3.	Go to **Settings** > **Customization** > **Customize the System**. The solution explorer page opens in a new browser window.  
 
-4.	 Expand **Entities** under **Components** in the default solution pane.
+4.	Expand **Entities** under **Components** in the default solution pane.
 
-5.	Select an entity and select **Forms**. For example, select the Account entity.
+5.	Select an entity and select **Forms**. For example, select the **Account** entity.
 
-6.	Select the **Account for Interactive experience** record that is of **Main** form type. The **Account Account for Interactive experience** form opens in a new browser window.
+6.	Select the **Account for Interactive experience** record that is a **Main** form type. The **Account Account for Interactive experience** form opens in a new browser window.
 
     > [!div class=mx-imgBorder] 
     > ![Select the entity form with interactive experience in the name](media/account-interactive-experience.png "Select the entity form with interactive experience in the name")
@@ -115,7 +115,7 @@ As a customizer, you can choose for which entities you want to show the activiti
     > [!div class=mx-imgBorder] 
     > ![Double-click the field in the social pane](media/timeline-conversation-tabs-field.png "Double-click the field in the social pane") 
 
-8.	Select **Show selected** option for the **Show these activities** field in the **Filter by** container.
+8.	Select the **Show selected** option for the **Show these activities** field in the **Filter by** container.
 
 9.	Select the activities you want to display to the users.
 
