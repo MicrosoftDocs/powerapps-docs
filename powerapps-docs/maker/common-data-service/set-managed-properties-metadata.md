@@ -2,7 +2,7 @@
 title: "Set managed properties in Common Data Service metadata | MicrosoftDocs"
 description: "Learn how to set managed properties for metadata items in a solution"
 ms.custom: ""
-ms.date: 05/30/2018
+ms.date: 12/19/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -27,20 +27,26 @@ search.app:
 
 Managed properties only apply when you include metadata with a managed solution and import it into another environment. These settings allow a solution maker to have some control over the level of customization that they want to allow people who install their managed solution to have. 
 
+For unmanaged components, you can view and change the managed properties. For managed components, you can view but not change the managed properties. 
+
 > [!TIP]
 > It is generally a good idea to allow people to extend metadata in your solution that works with business data. This will allow them to tailor your solution to their needs in the same way that they can for standard entities.
 >
 >For metadata that provides functionality to support your solution but does not contain business data, it is a good idea to limit what customizations are allowed.
 
-Setting managed properties must be done using solution explorer.
-
-[!INCLUDE [cc_navigate-solution-from-powerapps-portal](../../includes/cc_navigate-solution-from-powerapps-portal.md)]
 
 ## Entity managed properties
+1.	Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select **Solutions** from the left pane. 
+2.	Open the solution that you want, such as the *Default Solution*. 
+3.	From the list of components in the solution, select **…** next to the entity that you want to view or edit the managed properties, and then select **Managed properties**. 
 
-While [viewing entities](create-edit-entities-solution-explorer.md#view-entities), select the entity and select **Managed Properties** on the menu bar.  This will open the **Set Managed Properties** dialog.
+> [!div class="mx-imgBorder"] 
+> ![Entity managed properties command](media/entity-managed-properties.png "Entity managed properties command")
 
-![Set entity managed properties](media/set-managed-properties.png)
+The managed properties page is displayed. 
+
+> [!div class="mx-imgBorder"] 
+> ![Managed properties pane](media/managed-properties-dialog.png "Managed properties pane")
   
 Entities have more managed properties than any other type of solution component. If the entity is customizable, you can set the following options:  
 
