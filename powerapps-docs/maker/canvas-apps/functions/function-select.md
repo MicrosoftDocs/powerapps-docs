@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 06/11/2018
+ms.date: 12/19/2018
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -86,3 +86,36 @@ A control can't **Select** itself directly or indirectly through other controls.
 	Use individual controls in the gallery to take actions that differ from the gallery's default action.
 
 	![An animation that shows the default value of the OnSelect property for a gallery control, as well as a control that takes a different action](media/function-select/gallery-select.gif)
+
+## Select function for Test Studio
+
+For tests, the select action will fail if the control you are trying to select is not available on the current screen. 
+
+The select function can also be used to specify the row to select in a gallery and the control to select within that row of the gallery.
+
+### Syntax
+
+*Select(Control, Row, Child Control)*
+
+- *Control* – Required. The control to select on behalf of the user.
+- *Row* – Not required. The row in a gallery control to select on behalf of the user. 
+- *Child Control* - Not required. The child control to select in the row of a gallery on behalf of the user. 
+
+### Examples
+
+- *Button*
+
+    ```Select(button1)```
+
+- *Gallery*	
+
+    ```Select(Gallery1, Row1)```
+
+    Simulates a user selecting Row1 in Gallery1. 
+
+- *Gallery*	
+
+    ```Select(Gallery1, Row1, ChildControl1)```
+
+    Simulates a user selecting ChildConttrol1 in Row1 of Gallery1. 
+
