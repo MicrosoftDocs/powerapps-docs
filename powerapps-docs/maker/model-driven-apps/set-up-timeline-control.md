@@ -138,7 +138,7 @@ As a customizer, you can choose which entities that you want to show activities 
 
 13.	Select **Publish** to publish the customizations.
 
-Since the example considered in this procedure is Account. Let us see the Email activity in the Timeline control of an account page.
+Since the example considered in this procedure is **Account**, let us see the **Email** activity in the **Timeline** control of an account page.
 
    | Field | Value |
    |---------------------------|---------------------------|
