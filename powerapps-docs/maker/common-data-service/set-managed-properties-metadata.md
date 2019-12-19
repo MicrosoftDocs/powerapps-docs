@@ -54,13 +54,13 @@ Entities have more managed properties than any other type of solution component.
 
 |Option|Description|
 |--|--|
-|**Can be customized** |Controls all the other options. If this option is `False`, none of the other settings apply. When it is `True`, you can specify the other customization options. When `False`, it is equivalent to setting all other options to false.|
+|**Allow customizations** |Controls all the other options. If this option is `False`, none of the other settings apply. When it is `True`, you can specify the other customization options. When `False`, it is equivalent to setting all other options to false.|
 |**Display name can be modified**|Whether the entity display name can be modified.|
 |**Can Change Additional Properties** |Applies to anything not covered by other options.|
 |**New forms can be created**|Whether new forms can be created for the entity.|
 |**New charts can be created**|Whether new charts can be created for the entity.|
 |**New views can be created** |Whether new views can be created for the entity.|
-|**Can Change Hierarchical Relationship**|Whether Hierarchial Relationships settings can be changed. More information: [Define and query hierarchically related data](define-query-hierarchical-data.md)|
+|**Can Change Hierarchical Relationship**|Whether Hierarchical Relationships settings can be changed. More information: [Define and query hierarchically related data](define-query-hierarchical-data.md)|
 |**Can Change Tracking Be Enabled** |Whether the entity **Change Tracking** property can be changed.|
 |**Can Enable sync to external search index** |Whether the entity can be configured to enable relevance search. More information: [Configure Relevance Search to improve search results and performance](/dynamics365/customer-engagement/admin/configure-relevance-search-organization) |
 
@@ -82,7 +82,7 @@ If the field is customizable, you set the following options to **True** or **Fal
   
 - **Display name can be modified**
 - **Can change requirement level** 
-- **Can change Additional Properties** : This property controls any other customizations that do not have a specific managed property.
+- **Can change Additional Properties**: This property controls any other customizations that do not have a specific managed property.
 
 Setting all the individual options to **False**, is equivalent to setting **Can be customized** to **False**.  
 
