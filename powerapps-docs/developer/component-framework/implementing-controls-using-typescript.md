@@ -10,7 +10,7 @@ ms.author: "nabuthuk"
 author: Nkrb
 ---
 
-# Create your first component using Power Apps Component Framework
+# Create your first component 
 
  In this tutorial, we demonstrate how to build a linear slider code component that enables users to change the numeric values using a visual slider instead of typing the values in the field. 
 

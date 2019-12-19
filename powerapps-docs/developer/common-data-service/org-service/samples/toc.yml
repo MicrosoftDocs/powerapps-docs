@@ -16,8 +16,22 @@
     href: send-email.md
   - name: 'Send bulk email and monitor results'
     href: send-bulk-email-monitor-results.md
+  - name: Upload, retrieve and download attachments
+    href: upload-retrieve-download-attachment.md
   - name: 'Work with activity party records'
     href: work-activity-party-records.md
+- name: Adminstration & security
+  items:
+  - name: Associate security role to team
+    href: associate-security-role-team.md
+  - name: Determine whether a user has a role
+    href: determine-whether-user-has-role.md
+  - name: Remove a role for a user
+    href: remove-role-for-user.md
+  - name: Retrieve license information
+    href: retrieve-license-information.md
+  - name: Retrieve roles for an organization
+    href: retrieve-roles-for-organization.md
 - name: Appointments
   items:
   - name: 'Book an appointment'
@@ -67,7 +81,19 @@
 - name: Change tracking
   items: 
   - name: Synchronize data with external systems using change tracking
-    href: synchronize-data-external-systems-using-change-tracking.md      
+    href: synchronize-data-external-systems-using-change-tracking.md   
+- name: Charts & dashboards
+  items:
+  - name: Assign chart to another user
+    href: assign-chart-to-another-user.md
+  - name: Assign a user-owned dashboard to another user
+    href: assign-dashboard-to-another-user.md
+  - name: Create, retrieve, update and delete a dashboard
+    href: create-retrieve-update-delete-dashboards.md
+  - name: Create, retrieve, update and delete chart
+    href: create-retrieve-update-delete-charts.md 
+  - name: Retrieve all charts attached to an entity
+    href: retrieve-charts-attached-to-entity.md
 - name: Connections
   items:
   - name: Create a connection
@@ -90,8 +116,16 @@
   items:
   - name: Create a custom activity
     href: create-custom-activity.md
+  - name: Dump attribute metadata to a file
+    href: dump-attribute-metadata.md
   - name: Dump entity metadata to a file
     href: dump-entity-metadata-file.md
+  - name: Dump entity privilege information to a file
+    href: dump-entity-priviliges.md
+  - name: Dump entity relationships information to a file
+    href: dump-entity-relationships.md
+  - name: Dump picklist information to a file
+    href: dump-picklist-information.md
   - name: Retrieve valid status transitions
     href: retrieve-valid-status-transitions.md
 - name: Duplicate Detection
