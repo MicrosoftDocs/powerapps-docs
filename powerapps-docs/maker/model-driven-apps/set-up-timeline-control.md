@@ -164,7 +164,7 @@ After modifying the **Email card** form (from the Email entity), and updating th
    | Select card form | Email Card form |
 
    > [!div class=mx-imgBorder] 
-   > ![Email activity in timeline](media/timeline-email-activity2.png "Email activity in timeline")
+   > ![Email activity in Timeline](media/timeline-email-activity2.png "Email activity in Timeline")
 
    The default fields for an email activity in the collapsed mode contains the following:
 
@@ -236,7 +236,7 @@ To customize the card form, follow these steps:
 
 1. Sign in to your `https://<YourOrgURL>.dynamics.com/apps` environment.
 
-2. Open a model-driven app, and then on the command bar select **Settings** ![Settings](../model-driven-apps/media/powerapps-gear.png) > **Advanced  Settings**.
+2. Open a model-driven app, and then on the command bar select **Settings** ![Settings](../model-driven-apps/media/powerapps-gear.png "Settings") > **Advanced  Settings**.
 
 3.	Go to **Settings** > **Customization** > **Customize the System**. The solution explorer page opens in a new browser window.  
 
