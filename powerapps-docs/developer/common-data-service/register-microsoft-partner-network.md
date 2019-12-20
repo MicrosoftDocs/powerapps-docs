@@ -15,7 +15,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Step 2: Register for Microsoft Partner Center account
+# Step 1: Register for Microsoft Partner Center account
 
 If you are not already a member of the Microsoft Partner Center, you must become a member by enrolling at <https://aka.ms/joinmarketplace>.
 
