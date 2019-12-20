@@ -70,7 +70,7 @@ When testing canvas app using Test Studio, consider the following best practices
 
 2. **Keep test cases small.**
 
-    While a single test case can support testing all functionality in your app, we recommend that you avoid writing a monolithic test case and try to divide it into multiple test cases. Each test case could test a specific feature or functionality in your app. A large test case testing multiple features with failed assertion may cause testing to fail with rest functionality remaining untested. Using multiple test cases contained in test suite allows other functionality to get tested regardless if a previous test case failed. This strategy also makes it easier to isolate test failures.
+    While a single test case can support testing all functionality in your app, we recommend that you avoid writing a monolithic test case and try to divide it into multiple test cases. Each test case could test a specific feature or functionality in your app. A failed assertion in a large test case may cause other functionality to remain untested. Using multiple test cases contained in test suite allows other functionality to get tested regardless if a previous test case failed. This strategy also makes it easier to isolate test failures.
 
 3. **Keep expressions to a single test action.**
 
@@ -91,5 +91,5 @@ While work to provide full control coverage in Power Apps Test Studio is in prog
 - Components.
 - Code components written in the Power Apps Component Framework.
 - Nested galleries.
-- Support for controls not listed in this article.
+- Support for controls not listed in the [Select](./functions/function-select.md) and [SetProperty](./functions/function-setproperty.md) functions.
 - Person type columns in SharePoint.
