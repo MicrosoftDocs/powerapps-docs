@@ -23,3 +23,8 @@ Trace is an optional test expression that can be used to provide additional info
 *Trace(message)*
 
 - *Message* – Required. A text value that creates a record in the Traces table in the TestCaseResult record. 
+
+### See Also
+
+[Test Studio Overview](../test-studio.md) <br>
+[Working with Test Studio](../working-with-test-studio.md)
