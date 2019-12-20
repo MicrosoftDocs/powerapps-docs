@@ -122,6 +122,6 @@ We don't anticipate any downtime when making this transition. However, we will o
 
 ### Are environments from all data centers included within this transition service?
 
-At present, environments from specific data centers, such as Government Community Cloud (GCC), have not been included within the portal. We are looking to provide some suggested transition dates for these by June, 2020. Customers who want to make the move to Unified Interface can always [switch manually](/power-platform/admin/enable-unified-interface-only#how-to-enable-unified-interface-only-mode) at any time before October 1, 2020.
+At present, environments from specific data centers, such as Government Community Cloud (GCC), have not been included within the portal. We'll provide suggested transition dates for these environments by June, 2020. Customers who want to make the move to Unified Interface can always [switch manually](/power-platform/admin/enable-unified-interface-only#how-to-enable-unified-interface-only-mode) at any time before October 1, 2020.
 
 
