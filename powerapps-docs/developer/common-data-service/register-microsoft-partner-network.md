@@ -1,5 +1,5 @@
 ---
-title: "Step 2: Register for Microsoft Partner Network account (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Step 1: Register for Microsoft Partner Center account (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "App builders must be members of Microsoft Partner Network (MPN) to publish apps on AppSource." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
@@ -15,14 +15,14 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Step 2: Register for Microsoft Partner Network account
+# Step 2: Register for Microsoft Partner Center account
 
-If you are not already a member of the Microsoft Partner Network (MPN), you must become a member by enrolling at [https://partners.microsoft.com/PartnerProgram/simplifiedenrollment.aspx](https://partners.microsoft.com/PartnerProgram/simplifiedenrollment.aspx).
+If you are not already a member of the Microsoft Partner Center, you must become a member by enrolling at <https://aka.ms/joinmarketplace>.
 
-MPN members are provided with an MPN ID that is required for publishing apps on AppSource. MPN membership is free.
+You must be a member of Partner Center to publish apps on AppSource.
 
 > [!div class="nextstepaction"]
-> [Step 3: Create a managed solution for your app](create-solution-app-appsource.md)
+> [Step 2: Create a managed solution for your app](create-solution-app-appsource.md)
 
 ### See also 
 
