@@ -23,7 +23,7 @@ Publish your app on [Microsoft AppSource](https://appsource.microsoft.com) so th
 
 Use the following steps to prepare for submitting your app to be listed on Microsoft AppSource:
 
-> [Step 1: Create a commercial marketplace publisher profile](https://aka.ms/joinmarketplace)
+> [Step 1: Create a Microsoft Partner Center account](register-microsoft-partner-network.md)
 > 
 > [Step 2: Create a managed solution for your app](create-solution-app-appsource.md)
 > 
