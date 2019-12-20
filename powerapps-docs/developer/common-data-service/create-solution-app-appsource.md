@@ -1,21 +1,21 @@
 ---
-title: "Step 3: Create a managed solution for your app (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Step 2: Create a managed solution for your app (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about how to create a managed solution for your app to include all the components. This is required for publishing an app to Appsource." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 12/20/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.topic: "article"
-author: "shmcarth" # GitHub ID
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
+author: "KumarVivek" # GitHub ID
+ms.author: "kvivek" # MSFT alias of Microsoft employees only
+manager: "annbe" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# Step 3: Create a managed solution for your app
+# Step 2: Create a managed solution for your app
 
 Create a managed solution to include all the components for your app. You might find these topics helpful as you plan and create a managed solution to package your app components:
 - [Introduction to solutions](introduction-solutions.md)
@@ -48,5 +48,5 @@ You will have a solution file (example: *SampleSolution.zip*) and optionally a d
 
 
 > [!div class="nextstepaction"]
-> [Step 4: Create an AppSource package for your app](create-package-app-appsource.md) 
+> [Step 2: Create an AppSource package for your app](create-package-app-appsource.md) 
   
