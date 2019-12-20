@@ -43,6 +43,8 @@ If you add a **Date Picker** control instead of a **[Text input](control-text-in
 
 **[Color](properties-color-border.md)** – The color of text in a control.
 
+**DateTimeZone** – Whether to display the date in **UTC** or the user's **Local** time.
+
 **[DisplayMode](properties-core.md)** – Whether the control allows user input (Edit), only displays data (View), or is disabled (Disabled).
 
 **[DisabledBorderColor](properties-color-border.md)** – The color of a control's border if the control's **[DisplayMode](properties-core.md)** property is set to **Disabled**.
@@ -70,6 +72,8 @@ If you add a **Date Picker** control instead of a **[Text input](control-text-in
 **IconBackground** – The background color of a the date picker icon.
 
 **InputTextPlaceholder** – Instructional text that appears if no dates are entered.
+
+**IsEditable** – Whether the datepicker text can be edited. If false, the date can only be changed by using the calendar.
 
 **[Italic](properties-text.md)** – Whether the text in a control is italic.
 
