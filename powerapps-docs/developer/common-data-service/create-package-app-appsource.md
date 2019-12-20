@@ -1,21 +1,21 @@
 ---
-title: "Step 4: Create an AppSource package for your app (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Step 3: Create an AppSource package for your app (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about how to create an AppSource package (.zip file) to include your solution and demo data files along with other required files." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
 ms.service: powerapps
 ms.topic: "article"
-author: "shmcarth" # GitHub ID
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
+author: "KumarVivek" # GitHub ID
+ms.author: "kvivek" # MSFT alias of Microsoft employees only
+manager: "annbe" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# Step 4: Create an AppSource package for your app
+# Step 3: Create an AppSource package for your app
 
 You must create an AppSource package (.zip file) to include your solution and demo data files along with other required files. An AppSource package consists of the following files:
 
@@ -136,4 +136,4 @@ The final step is to add all the components that you created earlier into a sing
  
 
 > [!div class="nextstepaction"]
-> [Step 5: Store your AppSource Package on Azure Storage](store-appsource-package-azure-storage.md) 
+> [Step 4: Store your AppSource Package on Azure Storage](store-appsource-package-azure-storage.md) 
