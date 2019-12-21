@@ -48,5 +48,5 @@ You will have a solution file (example: *SampleSolution.zip*) and optionally a d
 
 
 > [!div class="nextstepaction"]
-> [Step 2: Create an AppSource package for your app](create-package-app-appsource.md) 
+> [Step 3: Create an AppSource package for your app](create-package-app-appsource.md) 
   
