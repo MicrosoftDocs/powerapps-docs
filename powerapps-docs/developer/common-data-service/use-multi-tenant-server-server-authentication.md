@@ -165,7 +165,7 @@ In this scenario any Common Data Service tenant can potentially use your multi-t
   
     When you create this user the values for these fields will be retrieved from Azure AD based on the **Application ID** value when you save the user.  
   
-5. Associate the application user with the custom security role you created in [Create a security role for the application user](#bkmk_CreateSecurityRole). More information: [Create users in Dynamics 365 (online) and assign security roles](/dynamics365/customer-engagement/admin/create-users-assign-online-security-roles)  
+5. Associate the application user with the custom security role you created in [Create a security role for the application user](#bkmk_CreateSecurityRole). More information: [Create users and assign security roles](/dynamics365/customer-engagement/admin/create-users-assign-online-security-roles)  
   
 <a name="bkmk_TestUsingYourTenant"></a>  
  
