@@ -54,9 +54,12 @@ Sign in to Power Apps at [https://make.powerapps.com](https://make.powerapps.com
 
     c. Open the **More settings** section and expand the **Description** accordion. You may enter a description for your entity if you wish (descriptions are helpful if other people will use this entity). 
 
-    d. Select **Activity** entity option from the **Choose entity type** drop-down list to enable an entity as an activity before you create the entity.
+    d. Select **Activity** entity option from the **Choose entity type** drop-down list to enable an entity as an activity.
 
     e. Ensure **Display in Activity menus** check box is selected. This option ensures the activity is made available in the activity menu.
+
+      > [!Note]
+      > Ensure to the **Display in Activity menus** option before you create the entity.
 
     f. Expand **Create and update settings** and select the **Enable quick create forms** check box. This option ensures, you can use the quick create form to crete a record.
     
