@@ -2,7 +2,7 @@
 title: "FAQs: Transition to Unified Interface | MicrosoftDocs"
 description: "FAQs related to the transition process for moving users from the legacy web client to Unified Interface."
 ms.custom: ""
-ms.date: 12/09/2019
+ms.date: 12/20/2019
 ms.reviewer: "kvivek"
 ms.service: powerapps
 ms.topic: "article"
@@ -33,7 +33,7 @@ Do the following:
 
 ### I see my environment has a date suggested for transition. Can I change this date?
 
-Yes, this is possible if you have the **global admin** or **Dynamics 365 service administrator** role for the tenant. 
+Yes, this is possible if you have the **global admin**, **Dynamics 365 service administrator**, or **Power Platform administrator** role for the tenant. 
 
 The dates associated to your environment is a suggestion that requires approval to go ahead. Please approve if the date works for your organization.  
 
@@ -64,7 +64,7 @@ The ability to change the transition date for an environment is available only u
 
 ### I have environments without a scheduled date. Can I update these to include a date?
 
-Yes, if you have a **global admin** or **Dynamics 365 service administrator** role for the tenant, select the environment, and select a date by clicking on the reschedule transition date button.
+Yes, if you have a **global admin**, **Dynamics 365 service administrator**, or **Power Platform administrator** role for the tenant, select the environment, and select a date by clicking on the reschedule transition date button.
 
 We will update the portal with the date to confirm. Notification e-mails will also be sent to the global tenant admins as you get close to the transition date. This will follow the standard reminder procedure detailed within this document.
 
@@ -120,6 +120,8 @@ If you find this has been disabled and have a requirement to switch back, raise 
 We don't anticipate any downtime when making this transition. However, we will only make a transition on a Friday, following the same maintenance timelines outlined within our standard policies and communications. More information: [Maintenance timeline
 ](https://docs.microsoft.com/power-platform/admin/policies-communications#maintenance-timeline)
 
+### Are environments from all data centers included within this transition service?
 
+At present, environments from specific data centers, such as Government Community Cloud (GCC), have not been included within the portal. We'll provide suggested transition dates for these environments by June, 2020. Customers who want to make the move to Unified Interface can always [switch manually](/power-platform/admin/enable-unified-interface-only#how-to-enable-unified-interface-only-mode) at any time before October 1, 2020.
 
 

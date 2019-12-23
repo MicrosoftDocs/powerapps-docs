@@ -1,13 +1,11 @@
 ---
 title: "openWebResource (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
+ms.date: 12/20/2019
 ms.service: powerapps
 ms.topic: "reference"
-applies_to: "Dynamics 365 (online)"
-ms.assetid: 798dc921-1e80-42bc-b8ca-2056728bcba4
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "amyla"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
@@ -29,7 +27,7 @@ search.app:
 |Name |Type |Required |Description |
 |---|---|---|---|
 |webResourceName|String|Yes|Name of the HTML web resource to open.|
-|windowOptions|Object|No|Window options for opening the web resource. The object contains the following attributes:<br/>- **height**: (Optional) Number. Height of the window to open in pixels.<br/>- **openInNewWindow**: Boolean. Indicates whether to open the web resource in a new window.<br/>- **width**: (Optional) Number. Width of the window to open in pixels.|
+|windowOptions|Object|No|Window options for opening the web resource. The object contains the following attributes:<br/>- **height**: (Optional) Number. Height of the window to open in pixels.<br/>- **width**: (Optional) Number. Width of the window to open in pixels.|
 |data|String|No|Data to be passed into the data parameter.|
 
 ## Remarks
@@ -52,7 +50,7 @@ An HTML web resource can accept the parameter values described in [Pass paramete
 - Open an HTML web resource, setting the windowOptions:
 
   ```
-  var windowOptions = { openInNewWindow: true, height: 400, width: 400 }
+  var windowOptions = { height: 400, width: 400 }
   Xrm.Navigation.openWebResource("new_webResource.htm",windowOptions);
   ```
 
