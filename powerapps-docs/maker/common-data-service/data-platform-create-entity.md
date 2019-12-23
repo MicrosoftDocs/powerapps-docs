@@ -5,7 +5,7 @@ author: Mattp123
 ms.service: powerapps
 ms.component: cds
 ms.topic: quickstart
-ms.date: 05/01/2018
+ms.date: 12/23/2019
 ms.author: matp
 search.audienceType: 
   - maker
@@ -53,8 +53,14 @@ Sign in to Power Apps at [https://make.powerapps.com](https://make.powerapps.com
     Also, observe that the primary field also has its own **Name** box, which functions similarly to the entity name described above. The primary field name is autopopulated when a display name is entered, uses the same prefix as the entity, and cannot be changed after the entity is created.
 
     c. Open the **More settings** section and expand the **Description** accordion. You may enter a description for your entity if you wish (descriptions are helpful if other people will use this entity). 
+
+    d. Select **Activity** entity option from the **Choose entity type** drop-down list to enable an entity as an activity before you create the entity.
+
+    e. Ensure **Display in Activity menus** check box is selected. This option ensures the activity is made available in the activity menu.
+
+    f. Expand **Create and update settings** and select the **Enable quick create forms** check box. This option ensures, you can use the quick create form to crete a record.
     
-    d. When you're done, click **Create**.
+    g. When you're done, click **Create**.
      
     ![New Entity](./media/data-platform-cds-create-entity/newentitypanel.png "New Entity Panel")
 
