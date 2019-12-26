@@ -6,9 +6,9 @@ manager: shujoshi
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/07/2019
+ms.date: 12/26/2019
 ms.author: shjais
-ms.reviewer:
+ms.reviewer: tapanm
 ---
 
 # About portal lifecycle
@@ -36,6 +36,15 @@ However, the suspended portal can still be converted to production within seven 
 ### Deleted portal
 
 If you don't convert your portal to production within the seven-day suspension period, the portal is deleted. The portal data is not deleted from the environment, but the space used by the portal in an environment will be released, and you can create a new portal.
+
+> [!NOTE]
+> Following conditions apply to portals [provisioned using portal add-on plan](provision-portal-add-on.md) purchased earlier:
+>
+    > - Trial add-on portal: <br> Expires at the completion of 30 days trial period, followed by suspension for 7 days. The portal is deleted after suspension period ends. Trial add-on portal can still be converted to production during trial or suspended period. 
+>
+    > - Production add-on portal: <br>	Expires at the completion of purchased license period, followed by suspension for 7 days. The portal is deleted after suspension period ends. You can extend the license of a production add-on portal while the portal is in configured or suspended state. If suspended, the portal can be converted to configured state after extending the license period.
+>
+    > - Reset add-on portal: <br> Follow the steps to [reset](reset-portal.md) the portal provisioned using a previously purchased older portal add-on plan.
 
 ## Convert a trial portal to production
 
