@@ -80,7 +80,7 @@ To convert your trial portal to production:
     > [!div class=mx-imgBorder]
     > ![Trial to production confirmation](../media/trial-to-prod-confirm.png "Trial to production confirmation")
 
-## Considerations for older add-on portals
+## Considerations for old add-on licensed portals
 
 Following conditions apply to portals [provisioned using portal add-on plan](../provision-portal-add-on.md) purchased earlier:
 
