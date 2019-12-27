@@ -78,7 +78,7 @@ Trial add-on portal expires after 30 days. Expired portal is suspended for 7 day
 Production add-on portal expires at the end of purchased license period. Expired portal is suspended for 7 days. The portal is deleted after suspension period ends. You can extend the license of a production add-on portal while the portal is in configured or suspended state. If suspended, the portal can be converted to configured state after extending the license period.
 
 > [!IMPORTANT]
-> Suspension or deletion of a portal may cause functionality loss. Ensure timely license period extension of production add-on portal nearing expiry to avoid suspension or deletion.
+> Suspension or deletion of a portal may cause functionality loss. Ensure timely license period extension of add-on portal nearing expiry to avoid suspension or deletion.
 
 ### Reset add-on portal
 
