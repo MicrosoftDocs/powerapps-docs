@@ -6,7 +6,7 @@ manager: shujoshi
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 12/20/2019
+ms.date: 12/27/2019
 ms.author: shjais
 ms.reviewer: tapanm
 ---
@@ -16,6 +16,10 @@ ms.reviewer: tapanm
 We have compiled a list of frequently asked questions and provided brief answers to help you get to your information quickly.
 
 ## General
+
+### When is old add-on portal in suspended state?
+
+Portal [provisioned using portal add-on plan](provision-portal-add-on.md) purchased earlier is suspended at the end of expiration. The expiry period is 30 days for trial portals and may vary for purchased licensed portals for production. Suspended portal is deleted after 7 days. For more details, read the [portal lifecycle](./admin/portal-lifecycle#considerations-for-old-add-on-licensed-portals) for old add-on portals.
 
 ### How do I redirect a user to a default page after signing in?
 
