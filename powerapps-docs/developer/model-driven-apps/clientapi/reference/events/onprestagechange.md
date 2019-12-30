@@ -33,6 +33,8 @@ An execution context object is passed to event handlers for this event. You can 
 
 This client API is only supported on the unified client. The legacy web client does not support this client API.
 
+onPreStageChange is only supported for single entity Business Process Flows. It is not supported for cross-entity processes.
+
 ## Methods supported for this event
 - **formContext.data.process**.[addOnPreStageChange](../formcontext-data-process/eventhandlers/addOnPreStageChange.md) method to add event handlers for this event.
 - **formContext.data.process**.[removeOnPreStageChange](../formcontext-data-process/eventhandlers/removeOnPreStageChange.md) method to remove event handlers for this event. 
