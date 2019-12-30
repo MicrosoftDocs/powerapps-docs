@@ -65,17 +65,17 @@ To convert your trial portal to production:
     > [!div class=mx-imgBorder]
     > ![Trial to production confirmation](../media/trial-to-prod-confirm.png "Trial to production confirmation")
 
-## Considerations for old add-on licensed portals
+## Considerations for add-on portals
 
 Following conditions apply to portals [provisioned using portal add-on plan](../provision-portal-add-on.md) purchased earlier:
 
 ### Trial add-on portal
 
-Trial add-on portal expires after 30 days. Expired portal is suspended for 7 days. The portal is deleted after suspension period ends. Trial add-on portal can still be converted to production during trial or suspended period.
+Trial add-on portal expires after 30 days. Expired portal is suspended for 7 days. The portal is deleted after suspension period ends. Trial add-on portal can still be converted to production during configured or suspended period.
 
 ### Production add-on portal
 
-Production add-on portal expires at the end of purchased license period. Expired portal is suspended for 7 days. The portal is deleted after suspension period ends. You can extend the license of a production add-on portal while the portal is in configured or suspended state. If suspended, the portal can be converted to configured state after extending the license period.
+Production add-on portal expires at the end of purchased license period. Suspension period for a production add-on portal may vary depending on the purchased license plan. The portal is deleted after suspension period ends. You can extend the license of a production add-on portal while the portal is in configured or suspended state. If suspended, the portal can be converted to configured state after extending the license period.
 
 > [!IMPORTANT]
 > Suspension or deletion of a portal may cause functionality loss. Ensure timely license period extension of add-on portal nearing expiry to avoid suspension or deletion.

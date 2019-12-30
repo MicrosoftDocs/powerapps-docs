@@ -17,9 +17,9 @@ We have compiled a list of frequently asked questions and provided brief answers
 
 ## General
 
-### When is an old add-on portal in suspended state?
+### When is an add-on portal in suspended state?
 
-Portal [provisioned using portal add-on plan](provision-portal-add-on.md) purchased earlier is suspended at the end of expiration. This expiration period is 30 days for trial portals while it may vary for an add-on portal in production with a purchased license. Suspended portal is deleted after 7 days. For more details, read the [portal lifecycle](./admin/portal-lifecycle.md#considerations-for-old-add-on-licensed-portals) for old add-on portals.
+Portal [provisioned using portal add-on plan](provision-portal-add-on.md) purchased earlier is suspended at the end of expiration. This expiration period is 30 days for trial portals while it may vary for an add-on portal in production with a purchased license. Suspended trial portal is deleted after 7 days while suspension period may vary for production portal. For more details, read the [portal lifecycle](./admin/portal-lifecycle.md#considerations-for-add-on-portals) for add-on portals.
 
 ### How do I redirect a user to a default page after signing in?
 
