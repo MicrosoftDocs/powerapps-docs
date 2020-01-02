@@ -18,7 +18,7 @@ search.app:
 
 # Sample: Import files as web resources 
 
-This sample shows how to import files as web resources. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/Nava_samplecode/cds/orgsvc/C%23/ImportWebResources).
+This sample shows how to import files as web resources. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/ImportWebResources).
 
 ## How to run this sample
 

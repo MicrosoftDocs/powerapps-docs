@@ -20,7 +20,7 @@ search.app:
 
 This topic shows how to programmatically create a custom user-owned entity called **Bank Account** and add four different types of attributes to it.
 
-You can also create organization-owned custom entities. More information: [Entity ownership](https://docs.microsoft.com/dynamics365/customerengagement/on-premises/developer/introduction-entities#entity-ownership). You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/Nava_samplecode/cds/orgsvc/C%23/CreateUpdateEntityMetadata).
+You can also create organization-owned custom entities. More information: [Entity ownership](https://docs.microsoft.com/dynamics365/customerengagement/on-premises/developer/introduction-entities#entity-ownership). You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/CreateUpdateEntityMetadata).
 
 ## How to run this sample
 
