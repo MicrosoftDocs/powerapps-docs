@@ -139,7 +139,7 @@
 - name: Entity records
   items: 
   - name: Assign a record to a team
-    href: assign-record-to-team.md
+    href: assign-records-to-team.md
   - name: Create and update records with related records
     href: create-update-records-with-related-records.md
   - name: Early-bound entity operations
@@ -151,7 +151,7 @@
   - name: Insert or update a record using Upsert
     href: insert-update-record-upsert.md
   - name: Merge two records
-    href: merge-two-records
+    href: merge-two-records.md
   - name: Serialize and deserialize an entity
     href: serialize-deserialize-entity.md
   - name: Set and retrieve entity images
@@ -210,7 +210,7 @@
   - name: Clean up history for a queue
     href: clean-up-history-queue-early-bound.md
   - name: Delete a queue
-    href: delete-queues
+    href: delete-queues.md
   - name: Release a queue item to the queue
     href: release-queue-item-queue-early-bound.md
   - name: Specify a queue item to work on
