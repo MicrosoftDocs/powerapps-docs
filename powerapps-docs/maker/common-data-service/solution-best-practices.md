@@ -29,7 +29,7 @@ This topic describes best practices when you work with solutions.
 
 
 ## Use a single managed solution to manage a model-driven app 
-To update the app that was included in the managed solution, use update or patch solutions. Don’t install different managed solutions into an environment that have the same model-driven app. More information: [Update solutions](import-update-export-solutions.md#update-solutions) and [Use segmented solutions and patches to export selected entity assets](use-segmented-solutions-patches-simplify-updates.md) 
+To update the app that was included in the managed solution, use update or patch solutions. Don’t install different managed solutions into an environment that have the same model-driven app. More information: [Update solutions](update-solutions.md) and [Use segmented solutions and patches to export selected entity assets](use-segmented-solutions-patches-simplify-updates.md) 
 
 
 ## Use security roles to manage app access
