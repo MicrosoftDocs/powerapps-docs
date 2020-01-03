@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 12/18/2019
+ms.date: 01/02/2020
 ms.author: tapanm
 search.audienceType: 
   - maker
@@ -95,57 +95,45 @@ You can change permissions for a user or a security group by selecting their nam
 
 ### Can I share with Office 365 Groups?
 
-Yes. However, an Office 365 Group must be security enabled. Until the group is
-security enabled it cannot be used to share access to an app. Security
-enablement ensures these groups can receive security tokens for authentication
-purposes to access apps or resources.
+Yes. However, the [Office 365 group](https://docs.microsoft.com/office365/admin/create-groups/compare-groups#office-365-groups) must be security enabled. Enabling security ensures the Office 365 group can receive security tokens for authentication to access apps or resources.
 
 ### How do I confirm if an Office 365 Group is security enabled?
 
-1.  Prerequisites
-    1.  [Have access to the Azure AD
-        cmdlets](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fazure%2Factive-directory%2Fusers-groups-roles%2Fgroups-settings-v2-cmdlets%23next-steps&data=02%7C01%7Calaug%40microsoft.com%7Cfdcb8abd8a8a4e7fe03208d785b6c156%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637124892278060416&sdata=X8zUi1l5UMZTNPxy%2BMvKbbxPAhP4CoISe2Uu7W4KHps%3D&reserved=0)
+1. Ensure you have access to the [Azure AD cmdlets](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-settings-v2-cmdlets).
 
-2.  Get the Office 365 Group object id from Azure Active directory: In
-    [https://portal.azure.com](https://portal.azure.com/) \> Azure Active
-    Directory \> Groups \> Select the group you want to confirm is security
-    enabled \> Copy the Object Id.
+1. Go to [Azure Portal](https://portal.azure.com/) \> Azure Active
+    Directory \> Groups \> Select the appropriate group \> Copy the Object Id.
 
-3.  In PowerShell use the command "Connect-AzureAD".
+1. [Connect to Azure AD](https://docs.microsoft.com/powershell/module/azuread/connect-azuread) using PowerShell:
 
-![](media/share-app/azure_cmdlet_connect.png)
+    ![Connect-AzureAD](media/share-app/azure_cmdlet_connect.png)
 
-1.  In PowerShell use the command "Get-AzureADGroup -ObjectId \<objectID\> \|
-    select \*.
+1. Get the [group details](https://docs.microsoft.com/powershell/module/AzureAD/Get-AzureADGroup) using ```Get-AzureADGroup -ObjectId \<ObjectID\> \|
+    select \*```.
 
-2.  Look at the value set for the property "SecurityEnabled". It must be set to
-    True.
+1. Ensure the value for property **SecurityEnabled** is set to **True**:
 
-![](media/share-app/azure_cmdlet_get_azuread_group_details.png)
+    ![Check SecurityEnabled property](media/share-app/azure_cmdlet_get_azuread_group_details.png)
 
 ### How do I make an Office 365 Group security enabled?
 
-1.  Prerequisites
-    1.  [Have access to the Azure AD
-        cmdlets](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fazure%2Factive-directory%2Fusers-groups-roles%2Fgroups-settings-v2-cmdlets%23next-steps&data=02%7C01%7Calaug%40microsoft.com%7Cfdcb8abd8a8a4e7fe03208d785b6c156%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637124892278070410&sdata=%2Bzxj%2BFQVGkFoR8Qicp%2BOYw%2FVLJR2IOp%2F5rzE%2FxnxQvk%3D&reserved=0)
+> [!NOTE]
+> You must be the owner of the Office 365 group to enable security.
 
-    2.  You must be an owner of the Office 365 Group you want make security
-        enabled.
+1. Ensure you have access to the [Azure AD cmdlets](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-settings-v2-cmdlets).
 
-    3.  Get the Office 365 Group object id from Azure Active directory: In
-        [https://portal.azure.com](https://portal.azure.com/) \> Azure Active
-        Directory \> Groups \> Select the group you want to confirm is security
-        enabled \> copy the Object Id.
+1. Go to [Azure Portal](https://portal.azure.com/) \> Azure Active
+    Directory \> Groups \> Select the appropriate group \> Copy the Object Id.
 
-    4.  In PowerShell use the command "Connect-AzureAD".
+1. [Connect to Azure AD](https://docs.microsoft.com/powershell/module/azuread/connect-azuread) using PowerShell: ```Connect-AzureAD```.
 
-    5.  In PowerShell use the command "Set-AzureADGroup -ObjectId \<object id of
-        Office Group\> -SecurityEnabled \$True".
+1. Using PowerShell cmdlet [Set-AzureADGroup](https://docs.microsoft.com/powershell/module/AzureAD/Set-AzureADGroup), set the **SecurityEnabled** property to **True**: 
 
-![](media/share-app/azure_cmdlet_set_security_enabled.png)
+    ```Set-AzureADGroup -ObjectId <ObjectID> -SecurityEnabled $True```
 
-1.  After about a minute you can discover this group in the Power Apps sharing
-    panel and share apps with this group.
+    ![Set SecurityEnabled to True](media/share-app/azure_cmdlet_set_security_enabled.png)
+
+After a while, you can discover this group in the Power Apps sharing panel and share apps with this group.
 
 ## Manage entity permissions
 
