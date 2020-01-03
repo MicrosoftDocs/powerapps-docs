@@ -42,9 +42,8 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 
 ### Demonstrate
 
-1. The `AddPrincipalToQueueRequest` method adds the team to the queue.
+The `AddPrincipalToQueueRequest` method adds the team to the queue.
+
 ### Clean up
 
-1. Display an option to delete the sample data in [Setup](#setup).
-
-    The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the records to achieve the same result.
+Display an option to delete the sample data in [Setup](#setup). The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the records to achieve the same result.

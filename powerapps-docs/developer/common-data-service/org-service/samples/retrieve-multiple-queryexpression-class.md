@@ -37,11 +37,13 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 
 ### Setup
 
-1. Checks for the current version of the org.
+Checks for the current version of the org.
 
 ### Demonstrate
+
 1. Creates multiple accounts with primary contacts.
 1. The `QueryExpression` class creates a query expression specifying the link entity alias and the columns of the link entity that you want to return.
+
 ### Clean up
 
-1. No clean up is required.
+No clean up is required.
