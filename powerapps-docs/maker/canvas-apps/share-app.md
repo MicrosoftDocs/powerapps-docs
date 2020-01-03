@@ -93,11 +93,11 @@ You can change permissions for a user or a security group by selecting their nam
 
 - Every member of a security group has the same permission for an app as the overall group does. However, you can specify greater permissions for one or more members of that group to allow them greater access. For example, you can give Security Group A permission to run an app, but you can also give User B, who belongs to that group, **Co-owner** permission. Every member of the security group can run the app, but only User B can edit it. If you give Security Group A **Co-owner** permission and User B permission to run the app, that user can still edit the app.
 
-### Can I share with Office 365 Groups?
+### Share an app with Office 365 Groups
 
-Yes. However, the [Office 365 group](https://docs.microsoft.com/office365/admin/create-groups/compare-groups#office-365-groups) must be security enabled. Enabling security ensures the Office 365 group can receive security tokens for authentication to access apps or resources.
+You can share an app with [Office 365 groups](https://docs.microsoft.com/office365/admin/create-groups/compare-groups#office-365-groups). However, the group must be security enabled. Enabling security ensures the Office 365 group can receive security tokens for authentication to access apps or resources.
 
-### How do I confirm if an Office 365 Group is security enabled?
+Follow these steps to check if an Office 365 group has security enabled:
 
 1. Ensure you have access to the [Azure AD cmdlets](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-settings-v2-cmdlets).
 
@@ -108,30 +108,19 @@ Yes. However, the [Office 365 group](https://docs.microsoft.com/office365/admin/
 
     ![Connect-AzureAD](media/share-app/azure_cmdlet_connect.png)
 
-1. Get the [group details](https://docs.microsoft.com/powershell/module/AzureAD/Get-AzureADGroup) using ```Get-AzureADGroup -ObjectId \<ObjectID\> \|
-    select \*```.
-
-1. Ensure the value for property **SecurityEnabled** is set to **True**:
+1. Get the [group details](https://docs.microsoft.com/powershell/module/AzureAD/Get-AzureADGroup) using ```Get-AzureADGroup -ObjectId <ObjectID\> |
+    select *```. <br> In the output, ensure the property **SecurityEnabled** is set to **True**:
 
     ![Check SecurityEnabled property](media/share-app/azure_cmdlet_get_azuread_group_details.png)
 
-### How do I make an Office 365 Group security enabled?
+If the group is not security enabled, you can enable it enable it using PowerShell cmdlet [Set-AzureADGroup](https://docs.microsoft.com/powershell/module/AzureAD/Set-AzureADGroup) by setting the **SecurityEnabled** property to **True**: 
+
+```Set-AzureADGroup -ObjectId <ObjectID> -SecurityEnabled $True```
+
+![Set SecurityEnabled to True](media/share-app/azure_cmdlet_set_security_enabled.png)
 
 > [!NOTE]
 > You must be the owner of the Office 365 group to enable security.
-
-1. Ensure you have access to the [Azure AD cmdlets](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-settings-v2-cmdlets).
-
-1. Go to [Azure Portal](https://portal.azure.com/) \> Azure Active
-    Directory \> Groups \> Select the appropriate group \> Copy the Object Id.
-
-1. [Connect to Azure AD](https://docs.microsoft.com/powershell/module/azuread/connect-azuread) using PowerShell: ```Connect-AzureAD```.
-
-1. Using PowerShell cmdlet [Set-AzureADGroup](https://docs.microsoft.com/powershell/module/AzureAD/Set-AzureADGroup), set the **SecurityEnabled** property to **True**: 
-
-    ```Set-AzureADGroup -ObjectId <ObjectID> -SecurityEnabled $True```
-
-    ![Set SecurityEnabled to True](media/share-app/azure_cmdlet_set_security_enabled.png)
 
 After a while, you can discover this group in the Power Apps sharing panel and share apps with this group.
 
