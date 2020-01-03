@@ -34,7 +34,8 @@ This sample shows how to create a connection role that can be used for accounts 
 In order to simulate the scenario described in [What this sample does](#what-this-sample-does), the sample will do the following:
 
 ### Setup
-1. Checks for the current version of the org.
+
+Checks for the current version of the org.
 
 ### Demonstrate
 1. Defines some anonymous types to define the range of possible connection property values.
@@ -43,5 +44,4 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 
 ### Clean up
 
-1. Display an option to delete the records in [Setup](#setup).
-    The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the records to achieve the same result.
+Display an option to delete the records in [Setup](#setup). The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the records to achieve the same result.
