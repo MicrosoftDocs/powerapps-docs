@@ -6,7 +6,7 @@ manager: shujoshi
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 12/27/2019
+ms.date: 01/03/2020
 ms.author: shjais
 ms.reviewer: tapanm
 ---
@@ -199,6 +199,12 @@ It is advisable to use this only when you are developing a portal. Once your por
 When you enable diagnostic logging, you can search for particular errors that users report by using the Activity ID shown on the generic error page. The Activity ID is logged along with the error details and is useful to find the actual issue.
 
 ## Portal administration and management
+
+### Do portals use any static content from CDNs (Content Delivery Network) that I need to whitelist?
+
+Yes. Portals now use public static assets from CDN that includes default JavaScript and CSS files for presentation that earlier rendered as part of the portal app. You must whitelist the following CDN URL to render portals successfully:
+
+    https://content.powerapps.com/resource/powerappsportal
 
 ### How do I use a custom login provider on my portal?
 
