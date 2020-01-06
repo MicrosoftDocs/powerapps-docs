@@ -52,7 +52,7 @@ By default, a test suite and test case are created for you in Test Studio. Test 
 
 ## Create a test case
 
-Depending on how you want to organize or group or your tests together, you can create multiple test cases in a test suite. Each case can test a specific feature or a subset of functionalities in your app.
+Depending on how you want to organize or group your tests together, you can create multiple test cases in a test suite. Each case can test a specific feature or a subset of functionalities in your app.
 
 1. Select a test suite.
 2. Select **New Case** in the top menu to create a new case.
@@ -62,7 +62,7 @@ Depending on how you want to organize or group or your tests together, you can c
 
 ## Record a test case
 
-A test case consists of test steps that contain actions. Test actions are written using Power Apps expressions that perform a task. There are two ways to create test steps in the Test Studio. You can use the recorder to automatically generate the test steps as you interact with your app. After you record, you can update the test case, add new steps, delete steps, and write test assertions to validate the result of your test.
+A test case consists of test steps that contain actions. Test actions are written using Power Apps expressions that perform a task. You can use the recorder to automatically generate the test steps as you interact with your app. After you record, you can update the test case, add new steps, delete steps, and write test assertions to validate the result of your test.
 
 > [!NOTE]
 > Only published app plays in record mode. Publish any recent changes to the app before you start recording a test case. Recording without publishing recent changes causes last published version of the app to play in record mode.
@@ -118,7 +118,7 @@ To add test steps and test assertions in Kudos app:
 
 6. Select **Insert a step above** from the top menu or by selecting the option from the active row. This creates an empty step.
 
-7. Enter an expression or formula in the action input to trace and write the *kudosBeforeTest* value to the test results record.
+7. Enter an expression or formula in the action input to [Trace](./functions/function-trace.md) and write the *kudosBeforeTest* value to the test results record.
 
     ```Trace("kudosBeforeTest : " & kudosBeforeTest);```
 
@@ -144,7 +144,8 @@ Before you play the recording back with recent changes, you must publish the app
 
 ![Play without publishing](./media/working-with-test-studio/publish-test-studio-changes.png)
 
-If you skip, the recording  plays back previous version of published app with test case or suite as selected.
+    > [!IMPORTANT]
+    > If you skip, the recording  play back will not contain your recent test changes. The last published test case or suite will play  against the app.
 
 1. Click **Publish**. This automatically saves and publishes your test.
 
