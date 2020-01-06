@@ -23,9 +23,9 @@ Build end-to-end UI tests for your Canvas app using Test Studio. Maintain your a
 
 Testing is an important part of the Software Development Life Cycle (SDLC). Testing can help ensure the quality of the app delivered to customers. It can identify issues or defects early in the release process and provides an opportunity to fix these issues to make the app more reliable before releasing changes. Depending on the size and usage of the app, manual testing of new changes may be enough. However, as the app grows in complexity and usage, you may need to consider a test strategy instead of manual testing. If the app is mission-critical, even a small mistake can have a significant impact.
 
-Increased app changes can result in longer testing cycle. Eventually, regression testing of the app may be longer than the time spent to develop new features. In fast paced development, thoroughly testing every feature in the app becomes a bottleneck to releasing software updates. One option to reduce the time taken during test cycle and on regression testing is test automation. Test automation can help you test your app with minimal effort, reducing testing time and identifying critical issues before release.
+Increased app changes can result in longer testing cycles. Eventually, regression testing of the app may be longer than the time spent to develop new features. In fast paced development, thoroughly testing every feature in the app becomes a bottleneck to releasing software updates. One option to reduce the time taken during a test cycle and on regression testing is test automation. Test automation can help you test your app with minimal effort, reducing testing time and identifying critical issues before release.
 
-Power Apps Test Studio is a low-code solution to write, organize, and automate tests for canvas apps. In Test Studio, you can write tests using  Power Apps expressions or use a recorder to save app interaction to automatically generate the expressions. You can play written tests back within the Test Studio to validate app functionality. As testing in Test Studio finishes, you can also run the tests in a web browser and build the automated tests into your app deployment process.
+Power Apps Test Studio is a low-code solution to write, organize, and automate tests for canvas apps. In Test Studio, you can write tests using Power Apps expressions or use a recorder to save app interaction to automatically generate the expressions. You can play written tests back within the Test Studio to validate app functionality, and also run the tests in a web browser and build the automated tests into your app deployment process.
 
 ![Test Studio](./media/test-studio/test-studio.png)
 
@@ -38,7 +38,7 @@ Following section explains key Test Studio terminology:
 
 ### Test Cases
 
-Test cases are made up of a series of instructions or actions, called test steps. Test cases are executed to validate your app, or specific features in your app, are working as you expect. For example, you would like to ensure that only expenses with associated actual cost can be submitted. A test case can help verify this condition or requirement is always met.
+Test cases are made up of a series of instructions or actions, called test steps. Test cases are executed to validate your app, or specific features in your app, are working as you expect. For example, in an Expense app, you would like to ensure that only expenses with associated actual cost can be submitted. A test case can help verify this condition or requirement is always met.
 
 In the Test Studio, test steps are written using the Power Apps expression language. Test expressions can consist of both the functions available when building your app and additional expressions to support automated testing.
 
