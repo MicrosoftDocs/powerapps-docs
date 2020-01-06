@@ -20,7 +20,7 @@ search.app:
 
 This sample shows how to assign a record to a team by using the [AssignRequest](https://docs.microsoft.com/dotnet/api/microsoft.crm.sdk.messages.assignrequest?view=dynamics-general-ce-9) message.
 
-You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/Nava_samplecode/cds/orgsvc/C%23/AssignRecordToTeam).
+You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/AssignRecordToTeam).
 
 ## How to run this sample
 
@@ -44,6 +44,4 @@ The `AssignRequest` message assigns the account record created for the sample to
 
 ### Clean up
 
-1. Displays an option to delete all the data created in the sample.
-
-The deletion is optional in case you want to examine the data created by the sample. You can manually delete the data to achieve same results.
+Displays an option to delete all the data created in the sample. The deletion is optional in case you want to examine the data created by the sample. You can manually delete the data to achieve same results.

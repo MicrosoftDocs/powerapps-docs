@@ -20,7 +20,7 @@ search.app:
 
 This sample shows how to serialize early-bound and late-bound entity instances into an XML format, and how to de-serialize from an XML format to an early-bound entity instance.
 
-You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/Nava_samplecode/cds/orgsvc/C%23/SerializeDeserializeEntity).
+You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/SerializeDeserializeEntity).
 
 ## How to run this sample
 
@@ -46,7 +46,5 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 
 ### Clean up
 
-1. Display an option to delete the records created in the [Setup](#setup).
-
-    The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the records to achieve the same result.
+Display an option to delete the records created in the [Setup](#setup). The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the records to achieve the same result.
 
