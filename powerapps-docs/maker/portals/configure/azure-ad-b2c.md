@@ -517,8 +517,8 @@ Customers who have contact records with emails associated then launch a website 
 
 **Name**: Authentication/[Protocol]/[Provider]/AllowContactMappingWithEmail
 
-**Description**: Specifies whether contacts are mapped to a corresponding email. When set to true, this setting associates a unique contact record with a matching email address, and then automatically assigns the external identity provider to the contact after the user has successfully signed in. By default, it is set to false.
+**Description**: Specifies whether contacts are mapped to a corresponding email. When set to true, this setting associates a unique contact record with a matching email address, and then automatically assigns the external identity provider to the contact after the user has successfully signed in. By default, it is set to *false*.
 
 **Name**: Authentication/UserManager/UserValidator/RequireUniqueEmail
 
-**Description**: Specifies whether a unique email address is needed for validating the user. When an existing contact email address is used to sign-in, the setting must be set to false. By default, it is set to true that may cause sign-in attempts to fail for contact records with email address already present.
+**Description**: Specifies whether a unique email address is needed for validating the user. When an existing contact email address is used to sign-in, the setting must be set to false. By default, it is set to *true* that may cause sign-in attempts to fail for contact records with email address already present.
