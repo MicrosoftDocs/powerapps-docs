@@ -6,9 +6,9 @@ manager: shujoshi
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/18/2019
+ms.date: 12/20/2019
 ms.author: shjais
-ms.reviewer:
+ms.reviewer: tapanm
 ---
 
 # Migrate portal configuration
@@ -40,7 +40,12 @@ The default schema files contain information about portal entities, relationship
 After exporting the configuration data, you must import it into the target environment. More information: [Import portal configuration data](#import-portal-configuration-data)
 
 > [!NOTE]
-> The schema files are provided to reduce the effort required to build a schema from scratch. Schema can be tailored for your implementation using standard ways provided by the tool. Schema files can be loaded in the Configuration Migration tool and altered to add, remove, and modify entities, attributes, and so on.
+> The Configuration Migration tool uses schema to export and import configuration data. The tool does not migrate entities or entity schema. Migration may fail with missing elements such as entities and fields when configuration data has mismatch with selected schema.
+>
+> During export, ensure the source environment contains portal entities as specified in Configuration Migration tool schema file. You can still alter the schema files to add, remove, and modify entities, attributes, and so on to migrate subset of configuration data.
+>
+> During import, ensure the destination environment contains the same portal type already installed with any additional customizations such as entities, fields, forms or views imported separately as solutions.
+
 
 ## Export portal configuration data
 
