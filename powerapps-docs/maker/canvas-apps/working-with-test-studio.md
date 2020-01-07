@@ -144,8 +144,8 @@ Before you play the recording back with recent changes, you must publish the app
 
 ![Play without publishing](./media/working-with-test-studio/publish-test-studio-changes.png)
 
-    > [!IMPORTANT]
-    > If you skip, the recording  play back will not contain your recent test changes. The last published test case or suite will play  against the app.
+> [!IMPORTANT]
+> If you skip, the recording  play back will not contain your recent test changes. The last published test case or suite will play  against the app.
 
 1. Click **Publish**. This automatically saves and publishes your test.
 
@@ -252,7 +252,7 @@ In this quickstart, you'll create two custom entities in Common Data Service dat
 3. Input an expression to process the results of your test. The following sample saves each test case results to the custom AppTestResults entity in Common Data Service. The test results can optionally be stored to SQL, SharePoint, or any other data source. You may need to set or increase the Trace field in your data source as required.
 
     > [!NOTE]
-    > The following samples require a [Common Data Service connection](https://docs.microsoft.com/connectors/commondataservice/). You can create a [simple app](data-platform-create-app.md) or [build an app from scratch](data-platform-create-app-scratch.md) using Common Data Service. Also, refer to the [Patch](./functions/function-patch.md) function reference more details to modify records of a data source used in following samples.
+    > The following samples require a [Common Data Service connection](https://docs.microsoft.com/connectors/commondataservice/). You can create a [simple app](data-platform-create-app.md) or [build an app from scratch](data-platform-create-app-scratch.md) using Common Data Service. Also, refer to the [Patch](./functions/function-patch.md) function reference for more details to modify records of a data source used in following samples.
 
     ```
     //Save to Common Data Service
