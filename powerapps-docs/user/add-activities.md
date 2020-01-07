@@ -184,5 +184,12 @@ Manage activities directly from the timeline wall including assigning an activit
 > [!div class="mx-imgBorder"]
 > ![Manage Activities.png](media/ManageActivities.png "ManageActivities.png")
 
+## See also
 
+[Set up timeline control](../maker/model-driven-apps/set-up-timeline-control.md)
 
+[FAQs for timeline control](../maker/model-driven-apps/faqs-timeline-control.md)
+
+[FAQs about Activities and the Timeline Wall](faq-for-timeline-and-activity.md)
+
+[Timeline section in the Customer Service Hub app](https://docs.microsoft.com/dynamics365/customer-service/customer-service-hub-user-guide-basics#timeline)
