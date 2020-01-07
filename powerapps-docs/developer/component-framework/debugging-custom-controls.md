@@ -9,9 +9,10 @@ ms.assetid: 18e88d702-3349-4022-a7d8-a9adf52cd34f
 ms.author: "nabuthuk"
 author: Nkrb
 ---
+
 # Debug code components
 
-Once you're done implementing the code component logic, you can start testing and debugging the code component using the `npm start` command. This command builds the code component and opens it in the local test harness.
+After implementing the code component logic, you can start testing and debugging the code component using the `npm start` command. This command builds the code component and opens it in the local test harness.
 
 > [!div class="mx-imgBorder"]
 > ![Test harness 1](media/test-harness-1.png "Test harness 1")

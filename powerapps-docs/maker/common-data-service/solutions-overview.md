@@ -39,7 +39,9 @@ More information: [Whitepaper: Solution Lifecycle Management](https://www.micros
  A component represents something that you can potentially customize. Anything that can be included in a solution is a component. To view the components included in a solution, in solution explorer go to **Settings** > **Solutions** and then open the solution you want. The components are listed in the **Components** list. 
 
 > [!div class="mx-imgBorder"] 
-> ![Components in solution](media/components-in-solution.png "Components in solution")
+> ![Components in solution](media/components-in-solution.png "Components in solution") 
+
+To view a list of component types that can be added to any solution, see [ComponentType Options](../../developer/common-data-service/reference/entities/solutioncomponent.md#componenttype-options).
 
 <!-- The following is a list of components that you can view in a solution:  
   

@@ -47,6 +47,4 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 1. The `RetrieveDependentComponentsRequest` retrieves all the dependencies for the component. If there are no dependencies we can ignore this component. If there are dependencies upon this solution component, and the solution itself is managed, then you will be unable to delete the solution.
 ### Clean up
 
-1. Display an option to delete the solutions created in [Setup](#setup).
-
-    The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the records to achieve the same result.
+Display an option to delete the solutions created in [Setup](#setup). The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the records to achieve the same result.
