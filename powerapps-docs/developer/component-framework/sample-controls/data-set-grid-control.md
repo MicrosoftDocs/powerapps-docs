@@ -29,7 +29,7 @@ Model-driven apps
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <manifest>
-	<control namespace="SampleNamespace" constructor="TSDataSetGrid" version="1.0.0" display-name-key="TS_DataSetGrid_Display_Key" description-key="TSIncrementControl_Desc_Key" control-type="standard">
+	<control namespace="SampleNamespace" constructor="TSDataSetGrid" version="1.0.0" display-name-key="TS_DataSetGrid_Display_Key" description-key="TSDataSetGrid_Desc_Key" control-type="standard">
 		<data-set name="dataSetGrid" display-name-key="DataSetGridProperty_Display_Key">
 		</data-set>
 		<resources>
@@ -438,6 +438,6 @@ The ***getSortedColumnsOnView*** method returns the list of columns based on the
 ### Related topics
 
 [Download sample components](https://go.microsoft.com/fwlink/?linkid=2088525)<br/>
-[How to run the samples](../how-to-run-the-samples.md)<br/>
-[PowerApps component framework API reference](../reference/index.md)<br/>
-[PowerApps component framework manifest schema reference](../manifest-schema-reference/index.md)
+[How to use the sample components](../use-sample-components.md)<br/>
+[Power Apps component framework API reference](../reference/index.md)<br/>
+[Power Apps component framework manifest schema reference](../manifest-schema-reference/index.md)

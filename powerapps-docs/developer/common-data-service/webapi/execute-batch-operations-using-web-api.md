@@ -2,7 +2,7 @@
 title: "Execute batch operations using the Web API (Common Data Service)| Microsoft Docs"
 description: "Batch operation lets you group multiple operations in a single HTTP request. Read how to execute batch operations using the Web API"
 ms.custom: ""
-ms.date: 07/13/2019
+ms.date: 12/10/2019
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -213,7 +213,9 @@ For more information about preference headers, see [Header Prefer](https://docs.
 
 ## Reference URIs in an operation
 
-You can use `$parameter` such as `$1`, `$2`, etc to reference URIs used in an earlier changeset in a batch request. This section shows various examples on how `$parameter` can be used in the request body of a batch operation to reference URIs.
+You can use `$parameter` such as `$1`, `$2`, etc to reference URIs returned for new entities created earlier in the same changeset in a batch request. For more information see the OData v4.0 specification: [11.7.3.1 Referencing Requests in a Change Set](http://docs.oasis-open.org/odata/odata/v4.0/os/part1-protocol/odata-v4.0-os-part1-protocol.html#_Toc372793752).
+
+This section shows various examples on how `$parameter` can be used in the request body of a batch operation to reference URIs.
 
 ### Reference URIs in request body
 

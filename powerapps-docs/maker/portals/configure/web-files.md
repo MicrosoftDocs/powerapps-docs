@@ -1,5 +1,5 @@
 ---
-title: "Create and manage web files in PowerApps portals | MicrosoftDocs"
+title: "Create and manage web files in Power Apps portals | MicrosoftDocs"
 description: "Learn how to create and manage web files in a portal."
 author: sbmjais
 manager: shujoshi
@@ -19,7 +19,7 @@ To store the actual contents of a given file, portals uses the attachment featur
 
 ## Manage web files
 
-Web files can be created, edited, and deleted within PowerApps portals.
+Web files can be created, edited, and deleted within Power Apps portals.
 
 1. Open the [Portal Management app](configure-portal.md).
 

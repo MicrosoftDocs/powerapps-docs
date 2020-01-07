@@ -1,5 +1,5 @@
 ---
-title: "Open the model-driven app form editor in PowerApps | MicrosoftDocs"
+title: "Open the model-driven app form editor in Power Apps | MicrosoftDocs"
 ms.custom: ""
 ms.date: 06/27/2018
 ms.reviewer: ""
@@ -28,9 +28,9 @@ The form editor is where you design forms by dropping components such as section
  
 If you create any new solution components in the process of editing the form, for example web resources, the names of the components will use the solution publisher customization prefix for the default solution and these components will only be included in the default solution. If you want any new solution components to be included in a specific unmanaged solution, you should open the form editor through that unmanaged solution.  
 
-## Access the form editor from the PowerApps site
+## Access the form editor from the Power Apps site
 
-1. Sign in to [PowerApps](https://make.powerapps.com/). 
+1. Sign in to [Power Apps](https://make.powerapps.com/). 
 
 2. Select **Data** > **Entities** > and then select the entity you want, such as the account entity. 
 

@@ -30,12 +30,11 @@ Model-driven apps
 | Parameter Name|Type|Required|Description|
 | ------------- |----|--------|-----------|
 |id|`String`|Yes|The resource string identifier.|
-|success|`String`|No|The success callback. Resource data is returned in base 64 encoded format.|
-|failure|`String`|No|The failure callback.|
-
+|success|`(data: string) => void`|No|The success callback. Resource data is returned in base 64 encoded format.|
+|failure|`() => void`|No|The failure callback.|
 
 ### Related topics
 
 [Resources](../resources.md)<br/>
-[PowerApps component framework API reference](../../reference/index.md)<br/>
-[PowerApps component framework overview](../../overview.md)
+[Power Apps component framework API reference](../../reference/index.md)<br/>
+[Power Apps component framework overview](../../overview.md)

@@ -1,5 +1,5 @@
 ---
-title: "Change navigation within a model-driven app form in PowerApps | MicrosoftDocs"
+title: "Change navigation within a model-driven app form in Power Apps | MicrosoftDocs"
 description: "Learn how to change the navigation within a form"
 ms.custom: ""
 ms.date: 06/06/2018

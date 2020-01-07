@@ -2,7 +2,7 @@
 title: "Set managed properties in Common Data Service metadata | MicrosoftDocs"
 description: "Learn how to set managed properties for metadata items in a solution"
 ms.custom: ""
-ms.date: 05/30/2018
+ms.date: 12/19/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -27,38 +27,46 @@ search.app:
 
 Managed properties only apply when you include metadata with a managed solution and import it into another environment. These settings allow a solution maker to have some control over the level of customization that they want to allow people who install their managed solution to have. 
 
+For unmanaged components, you can view and change the managed properties. For managed components, you can view but not change the managed properties. 
+
 > [!TIP]
 > It is generally a good idea to allow people to extend metadata in your solution that works with business data. This will allow them to tailor your solution to their needs in the same way that they can for standard entities.
 >
 >For metadata that provides functionality to support your solution but does not contain business data, it is a good idea to limit what customizations are allowed.
 
-Setting managed properties must be done using solution explorer.
-
-[!INCLUDE [cc_navigate-solution-from-powerapps-portal](../../includes/cc_navigate-solution-from-powerapps-portal.md)]
 
 ## Entity managed properties
+1.	Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select **Solutions** from the left pane. 
+2.	Open the solution that you want. 
+3.	From the list of components in the solution, select **…** next to the unmanaged entity that you want to view or edit the managed properties, and then select **Managed properties**. 
 
-While [viewing entities](create-edit-entities-solution-explorer.md#view-entities), select the entity and select **Managed Properties** on the menu bar.  This will open the **Set Managed Properties** dialog.
+    > [!div class="mx-imgBorder"] 
+    > ![Entity managed properties command](media/entity-managed-properties.png "Entity managed properties command")
 
-![Set entity managed properties](media/set-managed-properties.png)
+    The managed properties page is displayed. 
+
+    > [!div class="mx-imgBorder"] 
+    > <img src="media/managed-properties-dialog.png" alt="Managed properties pane" height="572" width="300">
+
+<!-- [Managed properties pane](media/managed-properties-dialog.png "Managed properties pane") -->
   
 Entities have more managed properties than any other type of solution component. If the entity is customizable, you can set the following options:  
 
 |Option|Description|
 |--|--|
-|**Can be customized** |Controls all the other options. If this option is `False`, none of the other settings apply. When it is `True`, you can specify the other customization options. When `False`, it is equivalent to setting all other options to false.|
+|**Allow customizations** |Controls all the other options. If this option is `False`, none of the other settings apply. When it is `True`, you can specify the other customization options. When `False`, it is equivalent to setting all other options to false.|
 |**Display name can be modified**|Whether the entity display name can be modified.|
 |**Can Change Additional Properties** |Applies to anything not covered by other options.|
 |**New forms can be created**|Whether new forms can be created for the entity.|
 |**New charts can be created**|Whether new charts can be created for the entity.|
 |**New views can be created** |Whether new views can be created for the entity.|
-|**Can Change Hierarchical Relationship**|Whether Hierarchial Relationships settings can be changed. More information: [Define and query hierarchically related data](define-query-hierarchical-data.md)|
+|**Can Change Hierarchical Relationship**|Whether Hierarchical Relationships settings can be changed. More information: [Define and query hierarchically related data](define-query-hierarchical-data.md)|
 |**Can Change Tracking Be Enabled** |Whether the entity **Change Tracking** property can be changed.|
 |**Can Enable sync to external search index** |Whether the entity can be configured to enable relevance search. More information: [Configure Relevance Search to improve search results and performance](/dynamics365/customer-engagement/admin/configure-relevance-search-organization) |
 
 ## Field managed properties
 
-See [Create and edit fields for Common Data Service using PowerApps solution explorer](create-edit-field-solution-explorer.md) for information about how to edit fields.
+See [Create and edit fields for Common Data Service using Power Apps solution explorer](create-edit-field-solution-explorer.md) for information about how to edit fields.
 
 While [viewing fields](create-edit-field-solution-explorer.md#view-fields), select a custom field from an unmanaged solution and then choose **More Actions** >  **Managed Properties** on the menu bar.
 
@@ -74,7 +82,7 @@ If the field is customizable, you set the following options to **True** or **Fal
   
 - **Display name can be modified**
 - **Can change requirement level** 
-- **Can change Additional Properties** : This property controls any other customizations that do not have a specific managed property.
+- **Can change Additional Properties**: This property controls any other customizations that do not have a specific managed property.
 
 Setting all the individual options to **False**, is equivalent to setting **Can be customized** to **False**.  
 
@@ -94,6 +102,6 @@ With relationships, the only managed property is **Can Be Customized**. This sin
 
 [Managed properties](solutions-overview.md#managed-properties)<br />
 [Create and edit entities using solution explorer](create-edit-entities-solution-explorer.md)<br />
-[Create and edit fields for Common Data Service using PowerApps solution explorer](create-edit-field-solution-explorer.md)<br />
+[Create and edit fields for Common Data Service using Power Apps solution explorer](create-edit-field-solution-explorer.md)<br />
 [Create and edit 1:N (one-to-many) or N:1 (many-to-one) entity relationships using solution explorer](create-edit-1n-relationships-solution-explorer.md)<br />
 [Create N:N (many-to-many) entity relationships in Common Data Service using solution explorer](create-edit-nn-relationships-solution-explorer.md)

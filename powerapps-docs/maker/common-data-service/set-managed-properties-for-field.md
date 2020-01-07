@@ -1,5 +1,5 @@
 ---
-title: "Set managed properties for fields in PowerApps | MicrosoftDocs"
+title: "Set managed properties for fields in Power Apps | MicrosoftDocs"
 description: "Learn how to set managed properties for a field"
 ms.custom: ""
 ms.date: 06/19/2018

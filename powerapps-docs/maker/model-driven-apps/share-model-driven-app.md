@@ -1,5 +1,5 @@
 ---
-title: Share a model-driven app with PowerApps | Microsoft Docs
+title: Share a model-driven app with Power Apps | Microsoft Docs
 description: Learn how to share a model-driven app
 documentationcenter: ''
 author: Mattp123
@@ -10,7 +10,7 @@ ms.service: powerapps
 ms.devlang: na
 ms.topic: conceptual
 ms.component: model
-ms.date: 11/18/2019
+ms.date: 12/17/2019
 ms.author: matp
 search.audienceType: 
   - maker
@@ -19,7 +19,7 @@ search.app:
   - D365CE
 ---
 
-# Share a model-driven app with PowerApps
+# Share a model-driven app with Power Apps
 
 [!INCLUDE [powerapps](../../includes/powerapps.md)] apps use role-based security for sharing. The fundamental concept in role-based security is that a security role contains privileges that define a set of actions that can be performed within the app. All app users must be assigned to one or more predefined or custom roles. Or, roles can also be assigned to teams. When a user or team is assigned to one of these roles, the person or team members are granted the set of privileges associated with that role. 
 
@@ -28,9 +28,9 @@ To share an app you must have the [!INCLUDE [powerapps](../../includes/powerapps
 
 ## Share your app for basic use
 To add privileges so the app user can run an app within the environment and perform common tasks for the records that they own, use the **Common Data Services User** security role.
-1.	On the [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) site select **Apps**, next to the model-driven app you want to share select **…**, and then select **Share**. 
+1.	On the [Power Apps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) site select **Apps**, next to the model-driven app you want to share select **…**, and then select **Share**. 
 	> [!IMPORTANT]
-    > The steps to share a model-driven app are different from a canvas app. For steps to share a canvas app, see [Share a canvas app in PowerApps](../canvas-apps/share-app.md). 
+    > The steps to share a model-driven app are different from a canvas app. For steps to share a canvas app, see [Share a canvas app in Power Apps](../canvas-apps/share-app.md). 
 
 2.	Under **Assign users to the security role** select **Security Users**.
 3.	From the list of enabled users select the users that you want to grant access to your app, and then on the command bar select **Manage Roles**. 
@@ -163,7 +163,11 @@ These predefined roles are available with a [!INCLUDE [powerapps](../../includes
 
 *Privilege is global scope unless specified otherwise.
 
-## Next steps
+## Use Azure Active Directory groups to manage access
+Administrators can use their organization’s Azure Active Directory (Azure AD) groups to manage access rights for licensed Common Data Service users. Both types of Azure AD groups—Office and Security—can be used to secure user-access rights to an app. More information: [About group teams](/power-platform/admin/manage-teams.md#about-group-teams) 
+
+
+### See also
 [Run a model-driven app on a mobile device](../../user/run-app-client-model-driven.md)
 
 

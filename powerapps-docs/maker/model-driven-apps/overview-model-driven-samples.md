@@ -55,7 +55,7 @@ In order to play or edit model-driven sample apps, the apps must first be provis
 - If customizations were made to the sample app, there may be [dependencies](https://docs.microsoft.com/dynamics365/customer-engagement/developer/dependency-tracking-solution-components), which must be removed before deleting the solution.
 
 ### Steps
-1. Login to the [PowerApps admin portal](https://admin.powerapps.com).
+1. Login to the [Power Apps admin portal](https://admin.powerapps.com).
 
 2. Select an environment.
 

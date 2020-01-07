@@ -1,5 +1,5 @@
 ---
-title: "Assign model-driven app form order in PowerApps | MicrosoftDocs"
+title: "Assign model-driven app form order in Power Apps | MicrosoftDocs"
 description: "Learn how to assign the default form in your app"
 ms.custom: ""
 ms.date: 03/07/2019

@@ -15,9 +15,9 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Understand experimental, preview, and deprecated features in PowerApps
+# Understand experimental, preview, and deprecated features in Power Apps
 
-With every release, we make changes and add features to make PowerApps the best tool to fit your needs. We move the product forward.  
+With every release, we make changes and add features to make Power Apps the best tool to fit your needs. We move the product forward.  
 
 We take backward compatibility very seriously. However, with any change or improvement, we might introduce an unintended side effect, and your app might not work exactly the way it did before.
 
@@ -33,7 +33,7 @@ Features move through three stages on their way to becoming official parts of th
 
 At each stage, the number of people who use the feature increases, helping us to validate that the feature is what you need and that we're not introducing unintended side effects.
 
-**Your feedback is critical to this process.**  Please post your feedback in the [PowerApps Community Forum](https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1).
+**Your feedback is critical to this process.**  Please post your feedback in the [Power Apps Community Forum](https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1).
 
 How long does a feature remain in each stage? This varies from feature to feature. We look at many factors, including the number of apps that use the feature, the number of issues reported, and how urgently the feature is needed. Features can remain in a stage for weeks to many months.  We may also skip some stages if we don't believe it would be helpful.
 
@@ -50,9 +50,9 @@ This table may help you decide when you should jump in:
 ## Documentation
 
 Where can you find information about these features?  We treat Preview features as finished features, and you can learn more about them just as you do any other product features: 
-- [PowerApps documentation](https://docs.microsoft.com/powerapps/maker/canvas-apps/getting-started). We'll provide the basics on the new feature: the benefits, how to get started, and reference information.
-- [PowerApps community forum](https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1).  Others will explore the new feature along with you. Learn from their experience, and share yours.
-- [PowerApps blog](https://powerapps.microsoft.com/blog/).  Often, but not always, a blog post accompanies a new feature.
+- [Power Apps documentation](https://docs.microsoft.com/powerapps/maker/canvas-apps/getting-started). We'll provide the basics on the new feature: the benefits, how to get started, and reference information.
+- [Power Apps community forum](https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1).  Others will explore the new feature along with you. Learn from their experience, and share yours.
+- [Power Apps blog](https://powerapps.microsoft.com/blog/).  Often, but not always, a blog post accompanies a new feature.
 
 Experimental features are different.  They are works in progress, and we don't consider them finished. The short description in the **App settings** pane (see below) might be the only information about them. Experimental features don't normally appear in the documentation. The community forum is likely your best source of information.  In some cases, an early blog post describes the feature.  If you aren't finding enough information, ask in the forums, or wait for the feature to move to the Preview stage.
 

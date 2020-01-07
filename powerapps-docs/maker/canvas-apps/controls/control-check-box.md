@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Check box control in PowerApps
+# Check box control in Power Apps
 A control that the user can select or clear to set its value to **true** or **false**.
 
 ## Description

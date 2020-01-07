@@ -1,6 +1,6 @@
 ---
-title: "Create and manage page templates in PowerApps portals | MicrosoftDocs"
-description: "Learn how to create and manage page templates in PowerApps portals."
+title: "Create and manage page templates in Power Apps portals | MicrosoftDocs"
+description: "Learn how to create and manage page templates in Power Apps portals."
 author: sbmjais
 manager: shujoshi
 ms.service: powerapps

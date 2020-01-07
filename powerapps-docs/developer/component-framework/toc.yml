@@ -1,4 +1,4 @@
-- name: PowerApps component framework
+- name: Power Apps component framework
   items: 
   - name: Overview
     href: overview.md
@@ -6,13 +6,13 @@
     href: custom-controls-overview.md
   - name: Code components for canvas apps
     href: component-framework-for-canvas-apps.md
-  - name: Get PowerApps CLI
+  - name: Get Power Apps CLI
     href: get-powerapps-cli.md
   - name: Tutorial
     items:
     - name: Create your first component
       href: implementing-controls-using-typescript.md
-  - name: How-to
+  - name: How-to guides
     items:
     - name: Create and build a code component 
       href: create-custom-controls-using-pcf.md
@@ -28,18 +28,16 @@
       href: updating-existing-controls.md
     - name: Publish code components on AppSource
       href: publish-components-app-source.md
-  - name: Limitations
-    href: limitations.md
+  - name: Troubleshooting
+    items:
+    - name: Common issues and workarounds
+      href: issues-and-workarounds.md
+    - name: Limitations
+      href: limitations.md
   - name: Sample components
     items: 
-    - name: How to run the samples?
-      href: how-to-run-the-samples.md
-    - name: Increment component
-      href: sample-controls/increment-control.md
-    - name: Linear input component
-      href: sample-controls/linear-input-control.md
-    - name: Localization API component
-      href: sample-controls/localization-api-control.md
+    - name: How to use the sample components?
+      href: use-sample-components.md
     - name: Angular Flip component
       href: sample-controls/angular-flip-control.md
     - name: Control State API component
@@ -52,6 +50,12 @@
       href: sample-controls/iframe-control.md
     - name: Image upload component
       href: sample-controls/image-upload-control.md
+    - name: Increment component
+      href: sample-controls/increment-control.md
+    - name: Linear input component
+      href: sample-controls/linear-input-control.md
+    - name: Localization API component
+      href: sample-controls/localization-api-control.md
     - name: Map component
       href: sample-controls/map-control.md
     - name: Navigation API component
@@ -66,7 +70,7 @@
       href: sample-controls/webapi-control.md
   - name: Reference
     items:
-    - name: PowerApps component framework 
+    - name: Power Apps component framework 
       href: reference/index.md
       items: 
       - name: Client
@@ -332,7 +336,7 @@
         href: manifest-schema-reference/feature-usage.md
       - name: uses-feature
         href: manifest-schema-reference/uses-feature.md
-  - name: Community Resources
-    href: https://powerusers.microsoft.com/t5/PowerApps-Component-Framework/Community-content-sample-components-blogs-etc-Link-to-this-page/m-p/280710#M100
+  - name: Community resources
+    href: community-resources.md
   - name: Share your feedback
     href: share-your-feedback-for-pcf.md

@@ -13,7 +13,7 @@ ms.reviewer:
 
 # Set up Power BI integration
 
-Power BI is one of the best tools to deliver insights with simple and interactive visualization. To view dashboards and reports from Power BI on web pages in a portal, you must enable Power BI visualization from the PowerApps Portals admin center. You can also embed dashboards and reports created in the new workspace of Power BI by enabling the Power BI Embedded service integration.
+Power BI is one of the best tools to deliver insights with simple and interactive visualization. To view dashboards and reports from Power BI on web pages in a portal, you must enable Power BI visualization from the Power Apps Portals admin center. You can also embed dashboards and reports created in the new workspace of Power BI by enabling the Power BI Embedded service integration.
 
 > [!NOTE]
 > - You must have an appropriate Power BI license.
@@ -23,7 +23,7 @@ Power BI is one of the best tools to deliver insights with simple and interactiv
 
 Enabling Power BI visualization allows you to embed dashboards and reports on web pages in a portal by using the powerbi Liquid tag.
 
-1.	Open [PowerApps Portals admin center](admin-overview.md).
+1.	Open [Power Apps Portals admin center](admin-overview.md).
 
 2.	Go to **Set up Power BI integration** > **Enable Power BI visualization**.
 
@@ -36,7 +36,7 @@ Customizers can use the [powerbi](../liquid/portals-entity-tags.md#powerbi) Liqu
 
 ### Disable Power BI visualization
 
-1.	Open [PowerApps Portals admin center](admin-overview.md).
+1.	Open [Power Apps Portals admin center](admin-overview.md).
 
 2.	Go to **Set up Power BI integration** > **Disable Power BI visualization**.
 
@@ -49,14 +49,14 @@ Customizers can use the [powerbi](../liquid/portals-entity-tags.md#powerbi) Liqu
 
 Enabling the Power BI Embedded service allows you to embed dashboards and reports created in the new workspace of Power BI. The dashboards and reports are embedded on webpages in a portal by using the powerbi Liquid tag.
 
-**Prerequisites**: Before enabling the Power BI Embedded service, ensure that you have created your dashboards and reports in the new workspace in Power BI. After creating the workspace, provide admin access to the global administrator so the workspaces are displayed in the PowerApps Portals admin center. For more information on creating new workspaces and adding access to them, see [Create the new workspaces in Power BI](https://docs.microsoft.com/power-bi/service-create-the-new-workspaces).
+**Prerequisites**: Before enabling the Power BI Embedded service, ensure that you have created your dashboards and reports in the new workspace in Power BI. After creating the workspace, provide admin access to the global administrator so the workspaces are displayed in the Power Apps Portals admin center. For more information on creating new workspaces and adding access to them, see [Create the new workspaces in Power BI](https://docs.microsoft.com/power-bi/service-create-the-new-workspaces).
 
 **Power BI Embedded service limitations**: For information on limitations, see [Considerations and limitations](https://docs.microsoft.com/power-bi/developer/embed-service-principal#considerations-and-limitations).
 
 > [!NOTE]
 > Ensure that Power BI visualization is enabled for the powerbi Liquid tag to work.
 
-1. Open [PowerApps Portals admin center](admin-overview.md).
+1. Open [Power Apps Portals admin center](admin-overview.md).
 
 2. Go to **Set up Power BI integration** > **Enable Power BI Embedded service**.
 
@@ -106,7 +106,7 @@ After enabling the Power BI Embedded service integration, you must create a secu
 
 **Step 2: Add a group member**
 
-**Prerequisite**: Before adding a member to the security group, you must have the portal's application ID with you. The portal's application ID is available on the **Portal Details** tab in [PowerApps Portals admin center](admin-overview.md).
+**Prerequisite**: Before adding a member to the security group, you must have the portal's application ID with you. The portal's application ID is available on the **Portal Details** tab in [Power Apps Portals admin center](admin-overview.md).
 
 1. Sign in to the [Azure portal](https://portal.azure.com) using a Global administrator account for the directory.
 
@@ -151,7 +151,7 @@ Customizers can now use the [powerbi](../liquid/portals-entity-tags.md#powerbi) 
 
 ### Manage the Power BI Embedded service
 
-1. Open [PowerApps Portals admin center](admin-overview.md).
+1. Open [Power Apps Portals admin center](admin-overview.md).
 
 2. Go to **Set up Power BI integration** > **Manage Power BI Embedded service**.
 
@@ -170,7 +170,7 @@ Customizers can now use the [powerbi](../liquid/portals-entity-tags.md#powerbi) 
 
 ### Disable the Power BI Embedded service
 
-1.	Open [PowerApps Portals admin center](admin-overview.md).
+1.	Open [Power Apps Portals admin center](admin-overview.md).
 
 2.	Go to **Set up Power BI integration** > **Manage Power BI Embedded service**.
 

@@ -1,5 +1,5 @@
 ---
-title: "Manage web pages in PowerApps portals | MicrosoftDocs"
+title: "Manage web pages in Power Apps portals | MicrosoftDocs"
 description: "Learn how to manage web pages in a portal."
 author: sbmjais
 manager: shujoshi
@@ -19,7 +19,7 @@ Web pages also form the basis for including other, specialized entity types in t
 
 ## Manage web pages
 
-Web pages can be created, edited, and deleted from the PowerApps portals Studio. However, advanced customization can be performed from the Portal Management app.  
+Web pages can be created, edited, and deleted from the Power Apps portals Studio. However, advanced customization can be performed from the Portal Management app.  
 
 1. Open the [Portal Management app](configure-portal.md).
 

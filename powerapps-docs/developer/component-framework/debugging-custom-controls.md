@@ -9,9 +9,10 @@ ms.assetid: 18e88d702-3349-4022-a7d8-a9adf52cd34f
 ms.author: "nabuthuk"
 author: Nkrb
 ---
+
 # Debug code components
 
-Once you're done implementing the code component logic, you can start testing and debugging the code component using the `npm start` command. This builds the code component and opens it in the local test harness.
+After implementing the code component logic, you can start testing and debugging the code component using the `npm start` command. This command builds the code component and opens it in the local test harness.
 
 > [!div class="mx-imgBorder"]
 > ![Test harness 1](media/test-harness-1.png "Test harness 1")
@@ -53,7 +54,7 @@ As the image above shows, the browser window opens with four sections. The code 
 
 ## Watch mode in test harness
 
-The test harness supports the `watch` mode, which you can take advantage of for PowerApps component framework projects. To enable `watch` mode, start the test harness using the command `npm start watch`. In `watch` mode, the changes made to any of the following component assets are automatically reflected in the test harness without having to restart it:
+The test harness supports the `watch` mode, which you can take advantage of for Power Apps component framework projects. To enable `watch` mode, start the test harness using the command `npm start watch`. In `watch` mode, the changes made to any of the following component assets are automatically reflected in the test harness without having to restart it:
 
 1.	`index.ts` file.
 2.	`ControlManifest.Input.xml` file.
@@ -62,7 +63,9 @@ The test harness supports the `watch` mode, which you can take advantage of for 
 
 ## Debug code components using native browsers
 
-You can use the browser’s debugging capabilities to observe the component behavior. Each browser provides you with a debugging tool to help you debug your code natively in the browser. Typically, you can activate debugging in your browser by pressing the **F12** key to display the native developer tool used for debugging.
+You can use the browser’s debugging capabilities to observe the component behavior. Each browser provides you with a debugging tool to help you debug your code natively in the browser. 
+
+Typically, you can activate debugging in your browser by pressing the **F12** key to display the native developer tool used for debugging.
 
 For example, on **Microsoft Edge**:
 
@@ -87,5 +90,5 @@ Use the Fiddler AutoResponder to debug your code components quickly. Install [Fi
 
 ### Related topics
 
-[PowerApps component framework API reference](reference/index.md)<br/>
-[PowerApps component framework overview](overview.md)
+[Power Apps component framework API reference](reference/index.md)<br/>
+[Power Apps component framework overview](overview.md)

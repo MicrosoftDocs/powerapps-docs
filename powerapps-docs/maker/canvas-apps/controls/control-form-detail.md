@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Edit form and Display form controls in PowerApps
+# Edit form and Display form controls in Power Apps
 Display, edit, and create a record in a data source.
 
 ## Description

@@ -35,7 +35,7 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 
 ### Setup
 
-1. Checks for the current version of the org.
+Checks for the current version of the org.
 
 
 ### Demonstrate
@@ -45,6 +45,6 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 
 ### Clean up
 
-1. This sample creates no records. No cleanup is required.
+This sample creates no records. No cleanup is required.
 
 
