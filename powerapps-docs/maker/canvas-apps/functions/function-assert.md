@@ -16,7 +16,9 @@ search.app:
 ---
 # Assert function in Power Apps Test Studio
 
-An assertion is a condition or an expression that evaluates to true or false in a test. If the expression returns false, the test case will fail. Assertions are used to validate the expected result of a test or test step, against the actual result and to fail the test if the condition is false. 
+An assertion is a condition or an expression that evaluates to true or false in a test. If the expression returns false, the test case will fail. Assertions are used to validate the expected result of a test or test step, against the actual result and to fail the test if the condition is false. Assertions can be used to validate the state of controls in your app such as label values, list box selections and other control properties.  
+
+Assertion messages, for both passed and failed assertions, are also contained in a Traces table in the TestCaseResult record. 
 
 ## Syntax
 
@@ -26,9 +28,11 @@ An assertion is a condition or an expression that evaluates to true or false in 
 - *Message* – Not Required. A message that describes the assertion failure. 
 
 
-## Example
+## Examples
 
-```Assert(kudosAfterTest = kudosBeforeTest + 1, "Kudos count incorrect. Expected : " & kudosBeforeTest + 1  & " Actual :" & kudosAfterTest)```
+```Assert(lblResult.Text = "Success", "lblResult value Expected : Success , Actual : " & lblResult.Text)```<br>
+```Assert(ListBox1.Selected.Value = "Success", "ListBox1 selection Expected : Success,  Actual : " & ListBox1.Selected.Value)```<br>
+```Assert(kudosAfterTest = kudosBeforeTest + 1, "Kudos count. Expected : " & kudosBeforeTest + 1  & " Actual :" & kudosAfterTest)```
 
 ### See Also
 

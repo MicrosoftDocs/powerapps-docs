@@ -89,17 +89,15 @@ A control can't **Select** itself directly or indirectly through other controls.
 
 ## Select function for Test Studio
 
-For tests, the select action will fail if the control you are trying to select is not available on the current screen. 
-
-The select function can also be used to specify the row to select in a gallery and the control to select within that row of the gallery.
+The select function can also be used to specify the row or column to select in a gallery and the control to select within that row or column of the gallery.
 
 ### Syntax
 
-*Select(Control, Row, Child Control)*
+*Select(Control, Row or column, Child Control)*
 
 - *Control* – Required. The control to select on behalf of the user.
-- *Row* – Not required. The row in a gallery control to select on behalf of the user. 
-- *Child Control* - Not required. The child control to select in the row of a gallery on behalf of the user. 
+- *Row or column* – Not required. The row or column in a gallery control to select on behalf of the user. 
+- *Child Control* - Not required. The child control of the control identified in the 'control' parameter to select. 
 
 ### Examples
 

@@ -20,7 +20,7 @@ The SetProperty function simulates interactions with input controls as if the us
 
 ## Syntax
 
-*Select(Control Property, value)*
+*SetProperty(Control Property, value)*
 
 - *Control Property* – Required. The control property to set on behalf of the user.
 - *Value* – Required. The value of the property to set on behalf of the user. 
@@ -38,12 +38,12 @@ The SetProperty function simulates interactions with input controls as if the us
 | DatePicker	| SelectedDate	| ```SetProperty(DatePicker1.SelectedDate, Date(2020,3,10))```
 | Radio	| Selected	| ```SetProperty(Radio1.Selected, "Yes")```
 | Radio | SelectedText | ```SetProperty(Radio1.SelectedText, "Yes")```
-| Dropdown | Selected | ```SetProperty(Dropdown1.Selected, {Value:"Sample Value"})```
-| Dropdown | SelectedText | ```SetProperty(Dropdown1.SelectedText, {Value:"value"})```
-| Combobox | Selected | ```SetProperty(Dropdown1.Selected, {Value:"Sample Value"})```
-| Combobox | SelectedItems | ```SetProperty(ComboBox1.SelectedItems, Table({Value:"Sample Value"},({Value:"Sample Value"}))```
-| ListBox | Selected | ```SetProperty(Listbox1.Selected, {'Value':"Sample Value"})```
-| ListBox | SelectedText | ```SetProperty(Listbox1. SelectedText, {'Value':"Sample text"})```
+| Dropdown | Selected | ```SetProperty(Dropdown1.Selected, {Value:"Sample value"})```
+| Dropdown | SelectedText | ```SetProperty(Dropdown1.SelectedText, {Value:"Sample value"})```
+| Combobox | Selected | ```SetProperty(Dropdown1.Selected, {Value:"Sample value"})```
+| Combobox | SelectedItems | ```SetProperty(ComboBox1.SelectedItems, Table({Value:"Sample value"},({Value:"Sample value"}))```
+| ListBox | Selected | ```SetProperty(Listbox1.Selected, {'Value':"Sample value"})```
+| ListBox | SelectedText | ```SetProperty(Listbox1. SelectedText, {'Value':"Sample value"})```
 | ListBox | SelectedItems | ```SetProperty(Listbox1.SelectedItems, Table({Value:"Sample value"},({Value:"Sample value"}))```
 | ListBox | SelectedItemsText | ```SetProperty(Listbox1.SelectedItemsText, Table({Value:"Sample value"},({Value:"Sample value"}))```
 
