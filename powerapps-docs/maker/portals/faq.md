@@ -202,7 +202,7 @@ When you enable diagnostic logging, you can search for particular errors that us
 
 ### Do portals use any static content from CDNs (Content Delivery Network) that I need to whitelist?
 
-Yes. Portals now use public static assets from CDN that includes default JavaScript and CSS files for presentation that earlier rendered as part of the portal app. You must whitelist the following CDN URL to render portals successfully:
+Yes. Portals use out of the box Portal's static assets from Azure CDN that includes default JavaScript and CSS files for presentation that earlier rendered as part of the portal app. You must whitelist the following CDN URL to render portals successfully:
 
     https://content.powerapps.com/resource/powerappsportal
 
