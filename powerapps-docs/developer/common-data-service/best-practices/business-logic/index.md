@@ -39,6 +39,7 @@ This list below contains all of the guidance and best practices regarding the pl
 |[Set KeepAlive to false when interacting with external hosts in a plug-in](set-keepalive-false-interacting-external-hosts-plugin.md)     |KeepAlive property set to true in the HTTP request header or not explicitly defined as false can cause increased execution times of plug-ins.         |
 |[Set Timeout when making external calls in a plug-in](set-timeout-for-external-calls-from-plug-ins.md)     |Limit the time period that external calls will expect a response within plug-ins.|   
 |[Use InvalidPluginExecutionException in plug-ins and workflow activities](use-invalidpluginexecutionexception-plugin-workflow-activities.md)     |Use InvalidPluginExecutionException when raising errors within the context of a plug-in or workflow activity.         |
+|[Verify certification dependencies for plug-ins making outbound calls](verify-certification-dependencies.md)|Ensure that any certificates that your code depends on for outbound calls has a valid chain of certificates.|
 
 ### See Also
 
