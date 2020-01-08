@@ -2,7 +2,7 @@
 title: "Perform conditional operations using the Web API (Common Data Service)| Microsoft Docs"
 description: "Read how to create conditions that decide whether and how to perform certain operations using the Web API"
 ms.custom: ""
-ms.date: 08/31/2019
+ms.date: 01/08/2020
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -48,16 +48,9 @@ Queries which expand collection-valued navigation properties may return cached d
 
 ## Conditional retrievals
 
-Etags enable you to optimize record retrievals whenever you access the same record multiple times. If you have previously retrieved a record, you can pass the ETag value with the `If-None-Match` header to request data to be retrieved only if it has changed since the last time it was retrieved. If the data has changed, the request returns an HTTP status of 200 (OK) with the latest data in the body of the request. If the data hasn’t changed, the HTTP status code 304 (Not Modified) is returned to indicate that the entity hasn’t been modified. The following example message pair returns data for an account entity with the `accountid` equal to `00000000-0000-0000-0000-000000000001` when the data hasn’t changed since it was last retrieved.  
+Etags enable you to optimize record retrievals whenever you access the same record multiple times. If you have previously retrieved a record, you can pass the ETag value with the `If-None-Match` header to request data to be retrieved only if it has changed since the last time it was retrieved. If the data has changed, the request returns an HTTP status of `200 (OK)` with the latest data in the body of the request. If the data hasn’t changed, the HTTP status code `304 (Not Modified)` is returned to indicate that the entity hasn’t been modified. 
 
-> [!NOTE]
-> Conditional retrieval works only for entities that have optimistic concurrency enabled. Check if an entity has optimistic concurrency enabled using the Web API request shown below. Entities that have optimistic concurrency enabled will have <xref href="Microsoft.Xrm.Sdk.Metadata.EntityMetadata.IsOptimisticConcurrencyEnabled?text=EntityMetadata.IsOptimisticConcurrencyEnabled" /> property set to `true`.
-
-> ```HTTP
-> GET [Organization URI]/api/data/v9.0/EntityDefinitions(LogicalName='<Entity Logical Name>')?$select=IsOptimisticConcurrencyEnabled
-> ```
-<!-- TODO:
-> For more information about optimistic concurrency, see [Reduce potential data loss using optimistic concurrency](../org-service/reduce-potential-data-loss-using-optimistic-concurrency.md).   -->
+The following example message pair returns data for an account entity with the `accountid` equal to `00000000-0000-0000-0000-000000000001` when the data hasn’t changed since it was last retrieved when the Etag value was `W/"468026"`
 
  **Request**  
 ```http  
@@ -74,6 +67,20 @@ HTTP/1.1 304 Not Modified
 Content-Type: application/json; odata.metadata=minimal  
 OData-Version: 4.0  
 ```  
+
+The following sections describe limitations to using conditional retrievals.
+
+### Entity must have optimistic concurrency enabled
+
+Check if an entity has optimistic concurrency enabled using the Web API request shown below. Entities that have optimistic concurrency enabled will have <xref href="Microsoft.Xrm.Sdk.Metadata.EntityMetadata.IsOptimisticConcurrencyEnabled?text=EntityMetadata.IsOptimisticConcurrencyEnabled" /> property set to `true`.
+
+```http
+GET [Organization URI]/api/data/v9.0/EntityDefinitions(LogicalName='<Entity Logical Name>')?$select=IsOptimisticConcurrencyEnabled
+```
+
+### Query must not include $expand
+
+The Etag can only detect if the single record that is being retrieved has changed. When you use `$expand` in your query, additional records may be returned and it is not possible to detect whether or not any of those records have changed. If the query includes `$expand` it will never return `304 Not Modified`.
   
 <a name="bkmk_limitUpsertOperations"></a>
   
