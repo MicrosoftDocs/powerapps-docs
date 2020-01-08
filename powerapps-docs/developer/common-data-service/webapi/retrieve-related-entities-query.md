@@ -2,7 +2,7 @@
 title: "Retrieve related entity records with a query (Common Data Service)| Microsoft Docs"
 description: "ead how you can retrieve related entity records by expanding the navigation properties."
 ms.custom: ""
-ms.date: 07/15/2019
+ms.date: 01/08/2020
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -31,7 +31,9 @@ Use the `$expand` system query option in the navigation properties to control wh
 If you include only the name of the navigation property, you’ll receive all the properties for related records. You can limit the properties returned for related records using the `$select` system query option in parentheses after the navigation property name. Use this for both single-valued and collection-valued navigation properties.  
 
 > [!NOTE]
->  To retrieve related entities for an entity instance, see [Retrieve related entities for an entity by expanding navigation properties](retrieve-entity-using-web-api.md#bkmk_expandRelated).  
+>  - To retrieve related entities for an entity instance, see [Retrieve related entities for an entity by expanding navigation properties](retrieve-entity-using-web-api.md#bkmk_expandRelated). 
+> - Queries which expand collection-valued navigation properties may return cached data for those properties that doesn’t reflect recent changes. It is recommended to use `If-None-Match` header with value `null` to override browser caching. See [HTTP Headers](compose-http-requests-handle-errors.md#bkmk_headers) for more details.
+> 
 
 <a bkmk="bkmk_retrieverelatedentityexpandsinglenavprop"></a>
 
