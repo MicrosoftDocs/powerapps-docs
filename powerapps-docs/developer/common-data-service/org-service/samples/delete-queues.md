@@ -16,7 +16,7 @@ search.app:
   - D365CE
 ---
 
-# Delete a queue
+# Delete a queue (early bound)
 
 This sample shows how to delete a simple queue using the [IOrganizationService.Delete](https://docs.microsoft.com/dotnet/api/microsoft.xrm.sdk.iorganizationservice.delete?view=dynamics-general-ce-9) message.
 
