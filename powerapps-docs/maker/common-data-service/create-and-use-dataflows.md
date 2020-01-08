@@ -67,6 +67,8 @@ and manage them from that environment. In addition, individuals who want to get
 data from your dataflow must have access to the environment in which you created
 it.
 
+> [!NOTE]
+> Creating dataflows is currently not available with Power Apps Community Plan licenses.
 
 1.  Sign in to Power Apps, and verify which environment you're in, find the environment switcher near the right side of the command bar.
 
