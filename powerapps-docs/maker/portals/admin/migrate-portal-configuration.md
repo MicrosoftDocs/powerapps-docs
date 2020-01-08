@@ -2,11 +2,11 @@
 title: "Migrate portal configuration | MicrosoftDocs"
 description: "Learn how to migrate portal configuration."
 author: sbmjais
-manager: shujoshi
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 12/20/2019
+ms.date: 01/08/2020
 ms.author: shjais
 ms.reviewer: tapanm
 ---
@@ -82,9 +82,6 @@ You can export portal configuration data from a source system by using portal-sp
 
     > [!div class=mx-imgBorder]
     > ![Progress of configuration data export](../media/export-config-status.png "Progress of configuration data export")
-
-    > [!IMPORTANT]
-    > The Configuration Migration tool does not support filtering of records in an entity. By default, all the records in the selected entity will be exported. Therefore, if you have created more than one website record, all website records will be exported.
 
 9.	Select **Exit** to close the tool.
 
