@@ -27,7 +27,7 @@ This list below contains all of the guidance and best practices regarding the pl
 
 |Best Practice  |Description  |
 |---------|---------|
-|[Avoid usage of batch request types in plug-ins and workflow activities](avoid-batch-requests-plugin.md)     |You shouldn't use ExecuteMultipleRequest or ExecuteTransactionRequest message request classes within the context of a plug-in or workflow activity.         |
+|[Avoid usage of batch request types in plug-ins and workflow activities](avoid-batch-requests-plugin.md)|You shouldn't use ExecuteMultipleRequest or ExecuteTransactionRequest message request classes within the context of a plug-in or workflow activity.|
 |[Develop IPlugin implementations as stateless](develop-iplugin-implementations-stateless.md)     |Members of classes that implement IPlugin are exposed to potential thread-safety issues which could lead to data inconsistency or performance problems.         |
 |[Do not duplicate plug-in step registration](do-not-duplicate-plugin-step-registration.md)     |Duplicate plug-in step registration will cause the plug-in to fire multiple times on the same message/event.         |
 |[Do not use parallel execution within plug-ins and workflow activities](do-not-use-parallel-execution-in-plug-ins.md)|Multi or parallel threading within plug-ins or custom workflow activities is not supported.|

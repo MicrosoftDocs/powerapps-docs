@@ -40,15 +40,16 @@ You may get this error when your plug-in makes an https call to an external reso
 
 ## Guidance
 
+You should verify that the site you want to connect with has a valid chain of certificates. Use one of the online test tools such as [Qualys SSL Labs SSL Server Test](https://www.ssllabs.com/ssltest/analyze.html) to verify that the site provides a valid chain of certificates.
 
 
 <a name='additional'></a>
 
 ## Additional information
 
-When the code in your sandbox plug-in attempts to connect to an external endpoint using https the CDS Sandbox will start TLS/SSL negotiation. The endpoint presents a certificate to use for encryption. If the certificate is within a list of known ROOT certificate authorities trusted by the CDS sandbox, the negotiation can proceed.
+When the code in your plug-in running in the sandbox attempts to connect to an external endpoint using https, the CDS Sandbox will start SSL/TLS negotiation. The endpoint presents a certificate to use for encryption. If the certificate is within a list of known ROOT certificate authorities trusted by the CDS sandbox, the negotiation can proceed.
 
-If the certificate is not within the list, the site may provide an intermediary certificate
+If the certificate is not within the list, the site may provide one or more an intermediate (or chain) certificates. If this chain of certificates is not valid, SSL/TLS communication cannot be established. 
 
 
 <a name='seealso'></a>
