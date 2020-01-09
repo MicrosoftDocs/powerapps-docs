@@ -2,13 +2,13 @@
 title: "Enable Azure storage for portals | MicrosoftDocs"
 description: "Instructions to enable Azure storage for portals to take advantage of the greater file storage capability of Azure."
 author: sbmjais
-manager: shujoshi
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/11/2019
+ms.date: 01/07/2020
 ms.author: shjais
-ms.reviewer:
+ms.reviewer: tapanm
 ---
 
 # Enable Azure Storage
@@ -50,7 +50,7 @@ In the [Portal Management app](configure/configure-portal.md), go to **Settings*
 
 You must add cross-origin resource sharing (CORS) rule on your Azure Storage account as follows, otherwise you will see the regular attachment icon rather than the cloud icon:
 
-- **Allowed origins**: Specify your domain. For example, `http://contoso.crm.dynamics.com`.
+- **Allowed origins**: Specify your domain. For example, `https://contoso.crm.dynamics.com`.
 - **Allowed verbs**: GET, PUT, DELETE, HEAD, POST
 - **Allowed headers**: Specify the request headers that the origin domain may specify on the CORS request. For example, x-ms-meta-data\*, x-ms-meta-target\*. 
 - **Exposed headers**: Specify the response headers that may be sent in the response to the CORS request and exposed by the browser to the request issuer. For example, x-ms-meta-\*.
