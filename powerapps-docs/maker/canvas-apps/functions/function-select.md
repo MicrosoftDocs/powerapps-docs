@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 12/19/2018
+ms.date: 01/08/2020
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -34,12 +34,36 @@ You can use **Select** only in [behavior formulas](../working-with-formulas-in-d
 
 A control can't **Select** itself directly or indirectly through other controls.
 
+The select function can also be used in repeating container controls such as gallery. For example, it can be used to specify the row or column to select in a gallery and the control to select within that row or column of the gallery.
+
 ## Syntax
 **Select**( *Control* )
 
 * *Control* – Required.  The control to select on behalf of the user.
 
+**Select**( *Control, Row or column, Child Control* )
+
+- *Control* – Required. The control to select on behalf of the user.
+- *Row or column* – Not required. The number of row or column (starting with 1) in a gallery control to select on behalf of the user.
+- *Child Control* - Not required. The child control of the control identified in the 'control' parameter to select. 
+
 ## Examples
+
+- *Button*
+
+    ```Select(button1)```
+
+- *Gallery*	
+
+    ```Select(Gallery1, Row1)```
+
+    Simulates a user selecting Row1 in Gallery1. 
+
+- *Gallery*	
+
+    ```Select(Gallery1, Row1, ChildControl1)```
+
+    Simulates a user selecting ChildConttrol1 in Row1 of Gallery1.
 
 #### Basic usage
 
@@ -86,34 +110,3 @@ A control can't **Select** itself directly or indirectly through other controls.
 	Use individual controls in the gallery to take actions that differ from the gallery's default action.
 
 	![An animation that shows the default value of the OnSelect property for a gallery control, as well as a control that takes a different action](media/function-select/gallery-select.gif)
-
-## Select function for Test Studio
-
-The select function can also be used to specify the row or column to select in a gallery and the control to select within that row or column of the gallery.
-
-### Syntax
-
-*Select(Control, Row or column, Child Control)*
-
-- *Control* – Required. The control to select on behalf of the user.
-- *Row or column* – Not required. The row or column in a gallery control to select on behalf of the user. 
-- *Child Control* - Not required. The child control of the control identified in the 'control' parameter to select. 
-
-### Examples
-
-- *Button*
-
-    ```Select(button1)```
-
-- *Gallery*	
-
-    ```Select(Gallery1, Row1)```
-
-    Simulates a user selecting Row1 in Gallery1. 
-
-- *Gallery*	
-
-    ```Select(Gallery1, Row1, ChildControl1)```
-
-    Simulates a user selecting ChildConttrol1 in Row1 of Gallery1. 
-
