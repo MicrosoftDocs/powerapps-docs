@@ -35,7 +35,7 @@ More information: [Whitepaper: Solution Lifecycle Management](https://www.micros
   
 
 <a name="BKMK_SolutionComponents"></a>   
-### Components  
+## Components  
  A component represents something that you can potentially customize. Anything that can be included in a solution is a component. To view the components included in a solution, in solution explorer go to **Settings** > **Solutions** and then open the solution you want. The components are listed in the **Components** list. 
 
 > [!div class="mx-imgBorder"] 
@@ -116,7 +116,7 @@ To view a list of component types that can be added to any solution, see [Compon
  The purpose of having components is to keep track of any limitations on what can be customized using managed properties and all the dependencies so that it can be exported, imported, and (in managed solutions) deleted without leaving anything behind.  
   
 <a name="BKMK_ManagedAndUnmanagedSolutions"></a>   
-### Managed and unmanaged solutions  
+## Managed and unmanaged solutions  
  There are **managed** and **unmanaged** solutions. A **managed** solution cannot be modified and can be uninstalled after it is imported. All the components of that solution are deleted by uninstalling the solution.  
   
  When you import an **unmanaged** solution, you add all the components of that solution into your environment. You can’t delete the components by uninstalling the solution.  
@@ -151,11 +151,11 @@ To view a list of component types that can be added to any solution, see [Compon
  This is what you actually see in your environment. The default system solution plus any managed solutions, plus any unmanaged customizations you have applied.  
   
 <a name="BKMK_ManagedProperties"></a>   
-### Managed properties  
+## Managed properties  
  Some components can’t be customized. These components in the system solution have metadata that prevents you from customizing them. These are called **managed properties**. The publisher of a managed solution can also set the managed properties to prevent you from customizing their solution in ways they don’t want you to.  
   
 <a name="BKMK_Dependencies"></a>   
-### Solution dependencies  
+## Solution dependencies  
  Because of the way that managed solutions are layered, some managed solutions can be dependent on solution components in other managed solutions. Some solution publishers will take advantage of this to build solutions that are modular. You may need to install a “base” managed solution first and then you can install a second managed solution that will further customize the components in the base managed solution. The second managed solution depends on solution components that are part of the first solution.  
   
  The system tracks these dependencies between solutions. If you try to install a solution that requires a base solution that isn’t installed, you won’t be able to install the solution. You will get a message saying that the solution requires another solution to be installed first. Similarly, because of the dependencies, you can’t uninstall the base solution while a solution that depends on it is still installed. You have to uninstall the dependent solution before you can uninstall the base solution.  
