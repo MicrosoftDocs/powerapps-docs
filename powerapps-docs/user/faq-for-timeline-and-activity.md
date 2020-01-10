@@ -46,7 +46,12 @@ Timeline Wall performance can be improved by optimizing how much data is returne
 
 When you select the **Print Preview** option in Dynamics 365 the **Timeline Wall** will not show in the available list. You will see **Notes** but it will not show tasks or emails.
 
+## See also
 
+[Set up timeline control](../maker/model-driven-apps/set-up-timeline-control.md)
 
+[FAQs for timeline control](../maker/model-driven-apps/faqs-timeline-control.md)
 
+[Add an appointment, email, phone call, note, or task activity to the timeline](add-activities.md)
 
+[Timeline section in the Customer Service Hub app](https://docs.microsoft.com/dynamics365/customer-service/customer-service-hub-user-guide-basics#timeline)
