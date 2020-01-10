@@ -201,7 +201,7 @@ You can add the following components on a webpage:
         > ![iframe properties](media/iframe-props.png "IFrame properties")  
 
 > [!NOTE]
-> You can also add [Power Virtual Agent](docs.microsoft.com/power-virtual-agents/fundamentals-what-is-power-virtual-agents) bot to the  IFrame similarly using steps described in [add bot to your web site](docs.microsoft.com/power-virtual-agents/publication-connect-bot-to-web-channels#custom-website).
+> You can also add [Power Virtual Agent](https://docs.microsoft.com/power-virtual-agents/fundamentals-what-is-power-virtual-agents) bot to the  IFrame similarly using steps described in [add bot to your web site](https://docs.microsoft.com/power-virtual-agents/publication-connect-bot-to-web-channels#custom-website).
 
 ### Add form
 
