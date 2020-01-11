@@ -6,7 +6,7 @@ manager: shujoshi
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 12/27/2019
+ms.date: 01/10/2020
 ms.author: shjais
 ms.reviewer: tapanm
 ---
@@ -16,6 +16,19 @@ ms.reviewer: tapanm
 We have compiled a list of frequently asked questions and provided brief answers to help you get to your information quickly.
 
 ## General
+
+### What is the difference between Power Apps portals, Dynamics 365 portals and add-on portals?
+
+The full capabilities of Dynamics 365 Portals, previously offered only as an add-on to model-driven apps in Dynamics 365, are now available completely standalone inside of Power Apps.
+
+- [Create a starter](create-portal.md) portal describes how to create such **Power Apps portal**. 
+- You can also [create a portal](create-dynamics-portal.md) similarly in an environment that already contains **model-driven Dynamics 365 apps**.
+
+    [Portal templates](portal-templates.md) lists default portal features and  portal templates available across environments with Common Data Service or model-driven apps in Dynamics 365. 
+
+- [Provisioning a portal using portal add-on](provision-portal-add-on.md) walks through how to create a portal if you want to provision a portal using previously purchased **portal add-on** including available portal types you can choose from.
+
+Power Apps licensing FAQ explains how Power Apps portals licensing differs from [Dynamics 365 portals](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#what-is-the-difference-between-power-apps-portals-and-dynamics-365-portals-in-terms-of-licensing) and [add-on portals](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#can-i-purchase-power-apps-portals-add-on-licenses-with-my-existing-power-apps-p1-or-p2-plans-or-do-i-have-to-upgrade-to-the-new-plans-to-benefit-from-the-new-portal-capability).
 
 ### When is an add-on portal in suspended state?
 
