@@ -20,7 +20,7 @@ search.app:
 
 This sample shows how to retrieve filters for Outlook.
 
-You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/CreateUpdateEmailableEntity).
+You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/CreartRetrieveOutlookFilters).
 
 ## How to run this sample
 

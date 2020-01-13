@@ -27,7 +27,7 @@ This sample requires an additional user that isn't available in your system. Cre
 **Security Role**: User without any roles assigned<br/>
 **UserName**: dpark@yourorg.onmicrosoft.com<br/>
 
-You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/AssociateSecurityRoleToTeam)
+You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/AssociateSecurityRoleToUser)
 
 ## How to run this sample
 

@@ -17,7 +17,7 @@ search.app:
 ---
 # Publish reports
 
-This sample shows how to publish a report by creating a **Report** record and the related records that make it visible..
+This sample shows how to publish a report by creating a **Report** record and the related records that make it visible. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/PublishReport).
 
 ## How to run this sample
 

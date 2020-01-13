@@ -18,7 +18,7 @@ search.app:
 
 # Update a connection role (early bound)
 
-This sample shows how to modify the properties of the connection role, such as a role name, description, and category.
+This sample shows how to modify the properties of the connection role, such as a role name, description, and category. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/UpdateConnectionRole).
 
 ## How to run this sample
 

@@ -18,7 +18,7 @@ search.app:
 
 # Work with attribute metadata
 
-This sample shows how to perform various actions on attributes.
+This sample shows how to perform various actions on attributes. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/WorkWithAttributes).
 
 ## How to run this sample
 
