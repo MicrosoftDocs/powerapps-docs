@@ -1,6 +1,6 @@
 ---
 title: Connect to Common Data Service | Microsoft Docs
-description: Learn how to connect to Common Data Service and use it for building apps in PowerApps.
+description: Learn how to connect to Common Data Service and use it for building apps in Power Apps.
 author: tapanm-msft
 manager: kvivek
 ms.service: powerapps

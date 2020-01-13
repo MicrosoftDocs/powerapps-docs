@@ -1,6 +1,6 @@
 ---
 title: Round, RoundDown, and RoundUp functions | Microsoft Docs
-description: Reference information, including syntax, for the Round, RoundDown, and RoundUp functions in PowerApps
+description: Reference information, including syntax, for the Round, RoundDown, and RoundUp functions in Power Apps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Round, RoundDown, and RoundUp functions in PowerApps
+# Round, RoundDown, and RoundUp functions in Power Apps
 Rounds a number.
 
 ## Description

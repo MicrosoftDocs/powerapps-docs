@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Connect to Twitter from PowerApps
+# Connect to Twitter from Power Apps
 ![Twitter](./media/connection-twitter/twittericon.png)
 
 Twitter lets you post tweets and get tweets, timeline, friends, and followers from your Twitter account.

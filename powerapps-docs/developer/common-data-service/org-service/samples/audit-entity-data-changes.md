@@ -20,6 +20,7 @@ search.app:
 This sample shows how to enable and disable auditing on an entity and its attributes, retrieve the data change history of the audited entity, and delete the audit records. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/AuditEntityData).
 
 ## How to run this sample
+
 [!include[cc-how-to-run-samples](../../includes/cc-how-to-run-samples.md)]
 
 ## What this sample does
@@ -44,6 +45,4 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 
 ### Clean up
 
-1. Display an option to delete the sample data that is created in [Setup](#setup).
-
-    The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the records to achieve the same result.
+Display an option to delete the sample data that is created in [Setup](#setup). The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the records to achieve the same result.

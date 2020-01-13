@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 11/20/2019
+ms.date: 12/02/2019
 ms.author: chmoncay
 search.audienceType: 
   - maker
@@ -23,9 +23,7 @@ Power BI enables data insights and better decision-making, while Power Apps enab
 
 Let's look at the steps required to use the Power Apps custom visual in your Power BI report.
 
-1. Get the custom visual from [AppSource](https://appsource.microsoft.com/product/power-bi-visuals/WA104381378?tab=Overview) or directly import it in the Power BI service.
-
-    ![Custom visual in marketplace](./media/powerapps-custom-visual/powerapps-store.png) 
+1. Power Apps custom visual is available by default in the Power BI service. If you are using Power BI Desktop and don’t see it, you must upgrade to the latest version of Power BI Desktop.
 
 2. Add the Power Apps visual to your report, and set the data fields associated with it.
 
@@ -37,9 +35,12 @@ Let's look at the steps required to use the Power Apps custom visual in your Pow
 
     ![New or existing app](./media/powerapps-custom-visual/create-new-or-choose-app.png)
 
-    If you choose to use an existing app, the visual prompts you to open the app in Power Apps. The visual then sets up the required components in your app so that Power BI can send data to PowerApps.
+    If you choose to use an existing app, the visual prompts you to open the app in Power Apps. The visual then sets up the required components in your app so that Power BI can send data to Power Apps.
 
     If you create a new app, Power Apps creates a simple app with the required components already set up.
+
+    > [!NOTE]
+    > You must create a new app from Power Apps custom visual in Power BI report for the `PowerBIIntegration.Refresh()` function to be available in the app.
 
     ![New app](./media/powerapps-custom-visual/new-app.png)
 
@@ -70,9 +71,11 @@ The following limitations apply to the Power Apps custom visual:
 - If you change the data fields associated with the visual, you must edit the app from within the Power BI service by selecting the ellipsis (...) and then selecting **Edit**. Otherwise, the changes won't be propagated to Power Apps, and the app will behave in unexpected ways.
 - The Power Apps custom visual can't trigger a refresh of Power BI reports and Power BI data sources from within Power BI Desktop. If you write back data from the app to the same data source as the report, your changes won't be reflected immediately in Power BI Desktop. Changes are reflected on the next scheduled refresh.
 - The Power Apps custom visual can't filter the data or send any data back to the report.
-- You'll need to share the Power Apps app separately from your report. Learn about [sharing apps in PowerApps](share-app.md).
-- Power BI Report Server and the mobile app for Power BI do not support the Power Apps custom visual.
-- If you use PowerBIIntegration.Refresh() function, you must use a source that supports [DirectQuery](https://docs.microsoft.com/power-bi/desktop-directquery-data-sources) and the data connection must be created using DirectQuery method.
+- You'll need to share the Power Apps app separately from your report. Learn about [sharing apps in Power Apps](share-app.md).
+- Power BI Report Server does not support the Power Apps custom visual.
+- Following limitations apply when using the `PowerBIIntegration.Refresh()` function:
+    - You must create a new app from Power Apps custom visual in Power BI report for this function to be available in the app.
+    - You must use a source that supports [DirectQuery](https://docs.microsoft.com/power-bi/desktop-directquery-data-sources) and the data connection must be created using DirectQuery method.
 - Power Apps in Power BI Desktop provides data to Power Apps Studio when creating apps but not while editing. Use Power BI Web to preview the data while editing apps.
 
 > [!NOTE]

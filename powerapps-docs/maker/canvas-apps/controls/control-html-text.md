@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# HTML text control in PowerApps
+# HTML text control in Power Apps
 A box that shows text and converts HTML tags to formatting.
 
 ## Description

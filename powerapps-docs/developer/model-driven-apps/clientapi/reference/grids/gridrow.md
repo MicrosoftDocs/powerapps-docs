@@ -29,7 +29,7 @@ var gridRow = myRows.get(arg);
 
 |Name|Description|Available for|
 |--|--|--|
-|data|A collection containing the [GridRowData](gridrowdata.md) for the GridRow. See [Collections (Client API reference)](../collections.md) for information on the methods available for accessing data in a collection.|Read-only and editable grids|
+|data|An object containing the [GridRowData](gridrowdata.md) for the GridRow.|Read-only and editable grids|
 
 
 ## Methods

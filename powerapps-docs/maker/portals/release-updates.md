@@ -1,6 +1,6 @@
 ---
-title: "Release updates in PowerApps portals | MicrosoftDocs"
-description: "Learn about release updates of PowerApps portals."
+title: "Release updates in Power Apps portals | MicrosoftDocs"
+description: "Learn about release updates of Power Apps portals."
 author: sbmjais
 manager: shujoshi
 ms.service: powerapps
@@ -15,7 +15,7 @@ ms.reviewer:
 
 This topic provides resources where you can learn about the new features that have recently released and new features that will be releasing over the next few months.
 
-## PowerApps portals updates
+## Power Apps portals updates
 
 For information about new features releasing over the next few months that you can use for planning, see:
 
@@ -26,7 +26,7 @@ For information about new features releasing over the next few months that you c
 Here's a list of features added for Dynamics 365 Portals. For more information updates for Dynamics 365 Portals to date, see [portal capabilities for Microsoft Dynamics 365 Releases](https://support.microsoft.com/help/3181191).
 
 > [!NOTE]
-> PowerApps portals were earlier known as Dynamics 365 Portals.
+> Power Apps portals were earlier known as Dynamics 365 Portals.
 
 ### Dynamics 365 Portals version 9.1.4 for the model-driven apps in Dynamics 365
 
@@ -88,7 +88,7 @@ Dynamics 365 Portals version 8.4.1 for the model-driven apps in Dynamics 365 bri
 Dynamics 365 Portals version 8.4 for the model-driven apps in Dynamics 365 brings in a bunch of bug fixes, as well as performance improvements, along with the following features:
 
 - **Access portal error logs**: As a portal developer, you can now access detailed error logs for any issues on your portal. This helps you to debug the issues while developing the portal. Once your portal is live, you can configure the portal to send all application errors to an Azure Blob storage account owned by you. This will help you to debug the issues reported by your customers. More information: [Access portal error logs](admin/view-portal-error-log.md)
-- **Renew portal authentication key**: A portal connects to Common Data Service environment using Azure active directory application. To do this, it requires an authentication key connected to Azure Active Directory application. This key is added when you provision your portal and it must be renewed every two years. This version of portal brings in the capability for administrators to be notified about key expiration and renew this key from PowerApps Portals admin center. More information: [Renew portal authentication key](admin/manage-auth-key.md)
+- **Renew portal authentication key**: A portal connects to Common Data Service environment using Azure active directory application. To do this, it requires an authentication key connected to Azure Active Directory application. This key is added when you provision your portal and it must be renewed every two years. This version of portal brings in the capability for administrators to be notified about key expiration and renew this key from Power Apps Portals admin center. More information: [Renew portal authentication key](admin/manage-auth-key.md)
 - **Implement General Data Protection Regulation in portals**: As a portal administrator, you can now configure your portal to meet the GDPR standards. You can also provide certain terms and conditions that must be agreed by the portal users to use a portal. You can also setup checks such as, if a portal is accessed by a minor user, the user must have parental consent to access the portal. Implementing GDPR allows obtaining consent from portal users regarding use of their personal data, identifying minor users, and obtaining parental consent for minor users. More information: [Implement GDPR in portals](configure/implement-gdpr.md)
 
 ### Dynamics 365 Portals version 8.3 for the model-driven apps in Dynamics 365

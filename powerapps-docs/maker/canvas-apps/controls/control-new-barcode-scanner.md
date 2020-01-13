@@ -22,17 +22,6 @@ Scans barcodes, QR codes, and data-matrix codes on an Android or iOS device. Not
 
 The control opens a native scanner on an Android or iOS device. The scanner automatically detects a barcode, a QR code, or a data-matrix code when in view. The control doesn't support scanning in a web browser.
 
-The control supports QR codes, data-matrix codes, and these types of barcodes:
-
-- UPC A
-- UPC E
-- EAN 8
-- EAN 13
-- CODE 39
-- CODE 128
-- ITF
-- PDF 417
-
 ## Key properties
 
 **Value** – Output property that contains the text value of the code that was scanned most recently.
@@ -42,6 +31,8 @@ The control supports QR codes, data-matrix codes, and these types of barcodes:
 **OnScan** – How an app responds when a barcode is successfully scanned.
 
 ## Additional properties
+
+**BarcodeType** - The barcode type to scan. You can target multiple barcode types by concatenating them. Ex. BarcodeType.Code128 & BarcodeType.Code39  **Default: Auto**
 
 **[BorderColor](properties-color-border.md)** – The color of a control's border.
 
@@ -76,3 +67,26 @@ The same guidelines for the **[Button](control-button.md)** control apply to the
 * The barcode scanner is a button that doesn't display the scan result. Consider showing the scan result with a **[Label](control-text-box.md)** control. Set the label's **[Text](properties-core.md)** property to the barcode scanner's **Value** property. Set the label's **[Live](properties-accessibility.md)** property to **Polite** so that screen-reader users are notified of changes. This change makes the scanned value accessible to everyone, regardless of visual ability.
 
 * Users who have visual and motor disabilities might prefer not to point the camera at a barcode. Consider adding another form of input, such as a **[Text input](control-text-input.md)** control, for users to enter barcodes.
+
+## Barcode Availability by Device
+
+| Barcode Type | Android | iOS |
+|--------------|:-------:|:---:|
+|QR_CODE|✔|✔|
+|DATA_MATRIX|✔|✔|
+|UPC_A|✔|✔|
+|UPC_E|✔|✔|
+|EAN_8|✔|✔|
+|EAN_13|✔|✔|
+|CODE_39|✔|✔|
+|CODE_93|✔|✔|
+|CODE_128|✔|✔|
+|CODABAR|✔|✖|
+|ITF|✔|✔|
+|RSS14|✔|✖|
+|PDF_417|✔|✔|
+|RSS_EXPANDED|✔|✖|
+|MSI|✖|✖|
+|AZTEC|✔|✔|
+
+**NOTE:** PDF_417 and AZTEC are not supported in Auto mode

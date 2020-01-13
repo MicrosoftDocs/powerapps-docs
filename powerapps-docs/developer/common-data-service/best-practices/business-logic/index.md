@@ -1,6 +1,6 @@
 ---
 title: "Developers: Best practices and guidance regarding plug-in and workflow development for the Common Data Service | Microsoft Docs"
-description: Best practices and guidance regarding plug-in and workflow development for developers of the Common Data Service in PowerApps.
+description: Best practices and guidance regarding plug-in and workflow development for developers of the Common Data Service in Power Apps.
 services: ''
 suite: powerapps
 documentationcenter: na
@@ -27,7 +27,7 @@ This list below contains all of the guidance and best practices regarding the pl
 
 |Best Practice  |Description  |
 |---------|---------|
-|[Avoid usage of batch request types in plug-ins and workflow activities](avoid-batch-requests-plugin.md)     |You shouldn't use ExecuteMultipleRequest or ExecuteTransactionRequest message request classes within the context of a plug-in or workflow activity.         |
+|[Avoid usage of batch request types in plug-ins and workflow activities](avoid-batch-requests-plugin.md)|You shouldn't use ExecuteMultipleRequest or ExecuteTransactionRequest message request classes within the context of a plug-in or workflow activity.|
 |[Develop IPlugin implementations as stateless](develop-iplugin-implementations-stateless.md)     |Members of classes that implement IPlugin are exposed to potential thread-safety issues which could lead to data inconsistency or performance problems.         |
 |[Do not duplicate plug-in step registration](do-not-duplicate-plugin-step-registration.md)     |Duplicate plug-in step registration will cause the plug-in to fire multiple times on the same message/event.         |
 |[Do not use parallel execution within plug-ins and workflow activities](do-not-use-parallel-execution-in-plug-ins.md)|Multi or parallel threading within plug-ins or custom workflow activities is not supported.|
@@ -39,6 +39,7 @@ This list below contains all of the guidance and best practices regarding the pl
 |[Set KeepAlive to false when interacting with external hosts in a plug-in](set-keepalive-false-interacting-external-hosts-plugin.md)     |KeepAlive property set to true in the HTTP request header or not explicitly defined as false can cause increased execution times of plug-ins.         |
 |[Set Timeout when making external calls in a plug-in](set-timeout-for-external-calls-from-plug-ins.md)     |Limit the time period that external calls will expect a response within plug-ins.|   
 |[Use InvalidPluginExecutionException in plug-ins and workflow activities](use-invalidpluginexecutionexception-plugin-workflow-activities.md)     |Use InvalidPluginExecutionException when raising errors within the context of a plug-in or workflow activity.         |
+|[Verify certification dependencies for plug-ins making outbound calls](verify-certification-dependencies.md)|Ensure that any certificates that your code depends on for outbound calls has a valid chain of certificates.|
 
 ### See Also
 

@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Install and configure the Help Desk sample in PowerApps
+# Install and configure the Help Desk sample in Power Apps
 
 Step-by-step instructions for, in Power Apps, installing and configuring the Help Desk sample for canvas apps.
 
@@ -34,7 +34,7 @@ Help Desk provides a user-friendly experience to connect end users with support 
 
 ## Prerequisites
 
-- [Sign up](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) for PowerApps.
+- [Sign up](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) for Power Apps.
 - Must have a valid SharePoint Online license and permission to create lists.
 
 ## Create the HelpDesk SharePoint list

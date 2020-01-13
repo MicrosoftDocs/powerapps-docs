@@ -140,7 +140,9 @@
       href: ./canvas-apps/sample-meeting-capture.md
   - name: Create your first app
     items:
-    - name: 1 - Create an app from data
+    - name: 1 - Create an app from a template
+      href: ./canvas-apps/get-started-test-drive.md
+    - name: 2 - Create an app using data
       items:
       - name: From Common Data Service
         href: ./canvas-apps/data-platform-create-app.md
@@ -158,19 +160,17 @@
         href: ./canvas-apps/customize-forms-sharepoint.md
       - name: 3 - Cards
         href: ./canvas-apps/customize-card.md
-    - name: 3 - Create an app yourself
-      items:
-      - name: From Common Data Service
-        href: ./canvas-apps/data-platform-create-app-scratch.md
-      - name: From Excel
-        href: ./canvas-apps/get-started-create-from-blank.md
-    - name: Create an app from a template
-      href: ./canvas-apps/get-started-test-drive.md
+  - name: Create an app from scratch
+    items:
+    - name: From Common Data Service
+      href: ./canvas-apps/data-platform-create-app-scratch.md
+    - name: From Excel
+      href: ./canvas-apps/get-started-create-from-blank.md
   - name: Design and build an app
     items:
       - name: Connect to data
         items:
-        - name: List of connections
+        - name: Connections Overview
           href: ./canvas-apps/connections-list.md
         - name: Popular connectors
           items:
@@ -261,7 +261,7 @@
             - name: Understand form layout
               href: ./canvas-apps/working-with-form-layout.md
             - name: Understand cards
-              href: ./canvas-apps/working-with-cards.md           
+              href: ./canvas-apps/working-with-cards.md              
           - name: Add a list
             items:
             - name: Add a list box, a drop-down list, or radio buttons
@@ -1028,6 +1028,10 @@
         items:
         - name: Set up the Notes control
           href: ./model-driven-apps/notes-control-legacy.md
+        - name: Set up timeline control
+          href: ./model-driven-apps/set-up-timeline-control.md
+        - name: FAQs for timeline control
+          href: ./model-driven-apps/faqs-timeline-control.md           
         - name: Quick view control properties
           href: ./model-driven-apps/quick-view-control-properties-legacy.md
         - name: Additional controls for Dynamics 365 for phones and tablets
@@ -1224,8 +1228,8 @@
           href: ./portals/configure/place-child-nodes.md
         - name: Behavior and format of the date and time field
           href: ./portals/configure/behavior-format-date-time-field.md
-        - name: View email records in portal timeline
-          href: ./portals/configure/view-email-in-timeline.md
+        - name: View activities in a portal timeline
+          href: ./portals/configure/view-all-activities-in-portal-timeline.md
         - name: Rate a webpage
           href: ./portals/configure/rate-webpage.md
         - name: Enable header and footer output caching on a portal
@@ -1490,8 +1494,12 @@
       href: ./common-data-service/use-solution-explorer.md
     - name: Use the Common Data Services default solution
       href: ./common-data-service/use-solutions-for-your-customizations.md
-    - name: Import, update, and export solutions
+    - name: Import solutions
       href: ./common-data-service/import-update-export-solutions.md
+    - name: Update solutions
+      href: ./common-data-service/update-solutions.md
+    - name: Export solutions
+      href: ./common-data-service/export-solutions.md      
     - name: Navigate to a specific solution
       href: ./common-data-service/navigate-specific-solution.md
     - name: Create a solution

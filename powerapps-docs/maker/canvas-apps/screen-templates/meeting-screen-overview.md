@@ -27,7 +27,7 @@ For a deeper dive into this screen's default functionality, see the [meeting-scr
 
 ## Prerequisite
 
-Familiarity with how to add and configure screens and other controls as you [create an app in PowerApps](../data-platform-create-app-scratch.md).
+Familiarity with how to add and configure screens and other controls as you [create an app in Power Apps](../data-platform-create-app-scratch.md).
 
 ## Default functionality
 

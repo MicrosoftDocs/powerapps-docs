@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Add a scrolling screen to a canvas app in PowerApps
+# Add a scrolling screen to a canvas app in Power Apps
 
 In a canvas app, create a screen that users can scroll to show different items. For example, create a phone app that shows data in several charts, which users can display if they scroll.
 

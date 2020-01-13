@@ -8,7 +8,7 @@ featureFlags:
 - clicktale
 ms.service: powerapps
 ms.custom:
- - powerapps-hub
+ - PowerApps-hub
 ---
 <div id="main"
    class="v2">
@@ -228,14 +228,13 @@ ms.custom:
                                     <hr/>
                                     <ul>
                                        <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/getting-started">What are canvas apps?</a></p>
-                                       <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/data-platform-create-app">Generate an app automatically</a></p>
-                                       <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/data-platform-create-app-scratch">Build an app yourself</a></p>
-                                       <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/open-and-run-a-sample-app">Customize a sample app</a></p>
-                                       <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/customize-list-form">Customize a SharePoint form</a></p>
+                                       <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/open-and-run-a-sample-app">Create a sample app</a></p>
+                                       <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/data-platform-create-app-scratch">Build an app from scratch</a></p>
                                        <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/connections-list">Connectors</a></p>
                                        <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/common-data-service/data-platform-create-business-rule">Apply business logic</a></p>
-                                       <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/reference-properties">Controls reference</a></p>
-                                       <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/formula-reference">Formula reference</a></p>
+                                       <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/add-configure-controls">Design the interface</a></p>
+                                       <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/working-with-formulas">Configure app functionality</a></p>
+                                       <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/edit-app">Manage an app</a></p>
                                        <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/share-app">Share an app</a></p>
                                     </ul>
                                  </div>

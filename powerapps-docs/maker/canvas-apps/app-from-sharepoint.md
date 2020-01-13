@@ -1,24 +1,24 @@
 ---
-title: Generate a canvas app from a SharePoint list | Microsoft Docs
-description: In Power Apps, automatically generate a canvas app to manage data in a SharePoint list
+title: Create a canvas app from a SharePoint list | Microsoft Docs
+description: In Power Apps, automatically create a canvas app to manage data in a SharePoint list
 author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 10/24/2018
+ms.date: 12/05/2019
 ms.author: tapanm
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 ---
-# Generate a canvas app in Power Apps from a SharePoint list
+# Create a canvas app in Power Apps from a SharePoint list
 
-In this topic, you'll use Power Apps to automatically generate a canvas app based on items in a SharePoint list. You can generate the app from within Power Apps or SharePoint Online. From within Power Apps, you can generate the app based on a list in an on-premises SharePoint site if you [connect to it](connections/connection-sharepoint-online.md#create-a-connection) through a data gateway.
+In this topic, you'll use Power Apps to create a canvas app based on items in a SharePoint list. You can create the app from within Power Apps or SharePoint Online. From within Power Apps, you can create the app based on a list in an on-premises SharePoint site if you [connect to it](connections/connection-sharepoint-online.md#create-a-connection) through a data gateway.
 
-The app that you generate will contain three screens:
+The app that you create will contain three screens:
 
 - In the browse screen, you can scroll through all items in the list.
 - In the details screen, you can show all information about a single item in the list.
@@ -34,7 +34,7 @@ The principles of generating an app won't change even if you create a list that'
 > [!IMPORTANT]
 > Power Apps doesn't support all types of SharePoint data. For more information, see [Known issues](connections/connection-sharepoint-online.md#known-issues).
 
-## Generate an app from within PowerApps
+## Create an app from within Power Apps
 
 1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
@@ -62,7 +62,7 @@ The principles of generating an app won't change even if you create a list that'
 
     You'll probably want to make more changes before you use this app or share it with others. As a best practice, save your work so far by pressing Ctrl-S before you proceed. Give your app a name, and then select **Save**.
 
-## Generate an app from within SharePoint Online
+## Create an app from within SharePoint Online
 
 If you create an app of a custom list from the SharePoint Online command bar, the app appears as a view of that list. You can also run the app on an iOS or Android device, in addition to a web browser.
 
@@ -74,7 +74,7 @@ If you create an app of a custom list from the SharePoint Online command bar, th
 
     ![Name the app](./media/app-from-sharepoint/app-name.png)
 
-    A new tab appears in your web browser that shows the app that you automatically generated based on your SharePoint list. The app appears in Power Apps Studio, where you can customize it.
+    A new tab appears in your web browser that shows the app that you created based on your SharePoint list. The app appears in Power Apps Studio, where you can customize it.
 
     ![Default app](./media/app-from-sharepoint/default-app.png)
 
@@ -93,7 +93,7 @@ If you create an app of a custom list from the SharePoint Online command bar, th
 > Apps created from the SharePoint list currently do not show in the Power Apps Mobile.
 
 ## Next steps
-In this topic, you created an app to manage data in a SharePoint list. As a next step, generate an app from a more complex list, and then customize the app (starting with the browse screen) to better suit your needs.
+In this topic, you created an app to manage data in a SharePoint list. As a next step, create an app from a more complex list, and then customize the app (starting with the browse screen) to better suit your needs.
 
 > [!div class="nextstepaction"]
 > [Customize a default browse screen](customize-layout-sharepoint.md)

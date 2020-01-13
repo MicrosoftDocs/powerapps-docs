@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Understand canvas-app variables in PowerApps
+# Understand canvas-app variables in Power Apps
 
 If you've used another programming tool, such as Visual Basic or JavaScript, you may be asking: **Where are the variables?** Power Apps is a little different and requires a different approach. Instead of reaching for a variable when you build a canvas app, ask yourself: **What would I do in Excel?**
 
@@ -24,7 +24,7 @@ In some cases, you'll need to use variables in Power Apps, which extends Excel's
 
 In general, avoid using variables. But sometimes only a variable can enable the experience you want. Variables are implicitly created and typed when they appear in functions that set their values. 
 
-## Translate Excel into PowerApps
+## Translate Excel into Power Apps
 
 ### Excel
 
@@ -36,17 +36,17 @@ In the following example, cell **A3** is set to the formula **A1+A2**. If **A1**
 
 Excel doesn't have variables. The value of a cell that contains a formula changes based on its input, but there's no way to remember the result of a formula and store it in a cell or anywhere else. If you change a cell's value, the entire spreadsheet may change, and any previously calculated values are lost. An Excel user can copy and paste cells, but that's under the user's manual control and isn't possible with formulas.
 
-### PowerApps
+### Power Apps
 
 Apps that you create in Power Apps behave very much like Excel. Instead of updating cells, you can add controls wherever you want on a screen and name them for use in formulas.
 
 For example, you can replicate the Excel behavior in an app by adding a **[Label](controls/control-text-box.md)** control, named **Label1**, and two **[Text input](controls/control-text-input.md)** controls, named **TextInput1** and **TextInput2**. If you then set the **[Text](controls/properties-core.md)** property of **Label1** to **TextInput1 + TextInput2**, it will always show the sum of whatever numbers are in **TextInput1** and **TextInput2** automatically.
 
-![Calculating the sum of two numbers in PowerApps](media/working-with-variables/recalc1.png)
+![Calculating the sum of two numbers in Power Apps](media/working-with-variables/recalc1.png)
 
 Notice that the **Label1** control is selected, showing its **[Text](controls/properties-core.md)** formula in the formula bar at the top of the screen. Here we find the formula **TextInput1 + TextInput2**. This formula creates a dependency between these controls, just as dependencies are created between cells in an Excel workbook.  Let's change the value of **TextInput1**:
 
-![Animation of calculating the sum of two numbers in PowerApps](media/working-with-variables/recalc2.gif)
+![Animation of calculating the sum of two numbers in Power Apps](media/working-with-variables/recalc2.gif)
 
 The formula for **Label1** has been automatically recalculated, showing the new value.
 
@@ -319,4 +319,4 @@ Let's recreate our adding machine by using a collection:
 12. Preview again by pressing the F5 key, enter numbers in the text-input control, and select buttons. Select the **Save** button. Close and reload the app, and select the **Load** button to reload your collection.
 
 > [!NOTE]
-> **SaveData** and **LoadData** function in Power Apps Mobile but not Power Apps Studio or the web player for PowerApps.
+> **SaveData** and **LoadData** function in Power Apps Mobile but not Power Apps Studio or the web player for Power Apps.

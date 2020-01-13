@@ -1,6 +1,6 @@
 ---
 title: User function | Microsoft Docs
-description: Reference information, including syntax, for the User function in PowerApps
+description: Reference information, including syntax, for the User function in Power Apps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# User function in PowerApps
+# User function in Power Apps
 Returns information about the current user.
 
 ## Description

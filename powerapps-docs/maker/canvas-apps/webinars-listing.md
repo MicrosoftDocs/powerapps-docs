@@ -26,11 +26,11 @@ These webinars can help you to leverage the features and functions of Microsoft 
 <br>by Audrie Gordon
 [Register and watch now](https://info.microsoft.com/US-EAD-WBNR-FY17-02Feb-28-GettingStartedwithPowerAppsGalleries300759_01Registration-ForminBody.html)
 
-**Get started with formulas in PowerApps**
+**Get started with formulas in Power Apps**
 <br>by Audrie Gordon
 [Register and watch now](https://info.microsoft.com/US-EAD-WBNR-FY17-03Mar-14-GettingStartedwithPowerAppsFormulas300770_01Registration-ForminBody.html)
 
-**Get started with forms in PowerApps**
+**Get started with forms in Power Apps**
 <br>by Audrie Gordon
 [Watch now](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Getting-Started-with-PowerApp-Forms/m-p/116842)
 
@@ -55,7 +55,7 @@ These webinars can help you to leverage the features and functions of Microsoft 
 [Watch now](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Getting-Started-New-Office-Graph-Templates-Part-2-by-Emma-Cooper/m-p/116840)
 
 ## Intermediate Webinar Series ##
-**Application Lifecycle with the new Save and publish options in PowerApps**
+**Application Lifecycle with the new Save and publish options in Power Apps**
 <br>by Karthik Bharathy
 [Watch now](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Application-LIfecycle-with-the-new-Save-and-publish-options-in/m-p/116860)
 
@@ -71,7 +71,7 @@ These webinars can help you to leverage the features and functions of Microsoft 
 <br>by Laura Rodgers
 [Watch Now](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Laura-Rogers-from-IWMentor-Shares-Best-Practices-for-Production/m-p/116871)
 
-**Connector Series | Microsoft StaffHub (Shift Planning) Apps with PowerApps**
+**Connector Series | Microsoft StaffHub (Shift Planning) Apps with Power Apps**
 <br>by Marc-André Lépine
 [Watch Now](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Connector-Series-Shift-Scheduling-Apps-with-PowerApps-StaffHub/m-p/122036)
 
@@ -113,11 +113,11 @@ These webinars can help you to leverage the features and functions of Microsoft 
 <br>by Audrie Gordon
 [Watch now](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Teams-PowerApps-Tips-and-Tricks/m-p/116846)
 
-**Tips for Connecting to Excel on OneDrive for Business from PowerApps**
+**Tips for Connecting to Excel on OneDrive for Business from Power Apps**
 <br>by Audrie Gordon
 [Watch now](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Pro-tips-for-connecting-to-Excel-from-PowerApps-by-Audrie-Gordon/m-p/116881)
 
-**Connecting to on-premises data from PowerApps**
+**Connecting to on-premises data from Power Apps**
 <br>by Archana Nair and Dimah Zaidalkilani
 [Watch now](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Connecting-to-On-Premises-Data-from-PowerApps/m-p/116885)
 
@@ -125,7 +125,7 @@ These webinars can help you to leverage the features and functions of Microsoft 
 <br> by Audrie Gordon
 [Watch Now](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Using-the-Planner-Connector/m-p/116886)
 
-**The Power of Office Graph with PowerApps**
+**The Power of Office Graph with Power Apps**
 <br>by Audrie Gordon
 [Watch now](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/The-Power-of-Office-Graph-with-PowerApps/m-p/116888)
 
@@ -138,7 +138,7 @@ These webinars can help you to leverage the features and functions of Microsoft 
 <br>by Karthik Bharathy
 [Watch now](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Rapidly-build-applications-with-PowerApps-Studio/m-p/116849)
 
-**Rebuilding an InfoPath Designer form in PowerApps**
+**Rebuilding an InfoPath Designer form in Power Apps**
 <br>by Daniel Christian
 [Watch now](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Rebuilding-an-InfoPath-Designer-Form/m-p/116909)
 
@@ -180,7 +180,7 @@ These webinars can help you to leverage the features and functions of Microsoft 
 <br>by Veronica Ward
 [Watch now](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Building-Apps-for-Adoption-and-Usability-with-Veronica-Ward/m-p/117625#M38)
 
-**Building Dialogs or Pop-up Messages in PowerApps**
+**Building Dialogs or Pop-up Messages in Power Apps**
 <br>by Veronica Ward
 [Watch now](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Building-Dialogs-in-PowerApps-by-Veronica-Ward/m-p/117627#M39)
 

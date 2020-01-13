@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Column chart and Line chart controls in PowerApps
+# Column chart and Line chart controls in Power Apps
 Controls that show data as graphs with x- and y-axes.
 
 ## Description

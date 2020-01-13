@@ -1,6 +1,6 @@
 ---
 title: Patch function | Microsoft Docs
-description: Reference information, including syntax and examples, for the Patch function in PowerApps
+description: Reference information, including syntax and examples, for the Patch function in Power Apps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Patch function in PowerApps
+# Patch function in Power Apps
 Modifies or creates one or more [records](../working-with-tables.md#records) in a [data source](../working-with-data-sources.md), or merges records outside of a data source.
 
 Use the **Patch** function to modify records in complex situations, such as when you perform updates that require no user interaction or use forms that span multiple screens.
