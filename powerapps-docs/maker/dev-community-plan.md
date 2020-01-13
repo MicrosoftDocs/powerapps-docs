@@ -61,6 +61,7 @@ With the individual environment, you get the following functionality:
 | Create and run applications on the Common Data Service |Yes |
 | Model your data in the Common Data Service |Yes |
 | Create a database in the Common Data Service |Yes |
+| Create and use dataflows |No |
 | **Management** | |
 | Add co-workers as environment makers and admins |No |
 | Add co-workers to the database roles |No |
