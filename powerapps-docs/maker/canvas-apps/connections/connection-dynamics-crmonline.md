@@ -17,10 +17,10 @@ search.app:
 # Connect to Dynamics 365 from Power Apps
 Power Apps lets you quickly generate, customize, share, and run mobile apps with little or no code. By using the Dynamics 365 connector, you can create useful mobile apps to share with your organization in just a few minutes.
 
-By following the steps in this topic, you'll create an app in which users can browse, add, delete, and make updates to contacts in Dynamics 365. Users can run the app [in a browser](../../../user/run-app-browser.md) or [on a mobile device](../../../user/run-app-client.md) such as a phone.
+By following the steps in this topic, you'll create an app in which users can browse, add, delete, and make updates to contacts in model-driven apps in Dynamics 365 (Dynamics 365 Sales, Dynamics 365 Customer Service, Dynamics 365 Field Service, Dynamics 365 Marketing, and Dynamics 365 Project Service Automation). Users can run the app [in a browser](../../../user/run-app-browser.md) or [on a mobile device](../../../user/run-app-client.md) such as a phone.
 
 > [!NOTE]
-> We recommend using a more robust [Common Data Service connector](connection-common-data-service.md) when connecting to Dynamics 365.
+> We recommend using a more robust [Common Data Service connector](connection-common-data-service.md) when connecting to model-driven apps in Dynamics 365.
 
 ## Prerequisite
 To follow this tutorial, you need a Microsoft Office 365 account that includes a Dynamics 365 subscription.
