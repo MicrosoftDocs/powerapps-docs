@@ -25,7 +25,7 @@
   - name: Assign security role to team
     href: associate-security-role-team.md
   - name: Associate security role to a user
-    href: associate-security-role-to-user.md
+    href: associate-security-role-user.md
   - name: Determine whether a user has a role
     href: determine-whether-user-has-role.md
   - name: Remove a role for a user
