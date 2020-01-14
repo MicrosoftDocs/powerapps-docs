@@ -139,7 +139,7 @@
           href: reference/entityrecord/getrecordid.md
         - name: getValue
           href: reference/entityrecord/getvalue.md
-      - name: Entityreference
+      - name: EntityReference
         href: reference/entityreference.md
       - name: Factory
         href: reference/factory.md
