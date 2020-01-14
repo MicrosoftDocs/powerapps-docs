@@ -1,5 +1,5 @@
 ---
-title: Power Apps component framework for canvas apps  | Microsoft Docs
+title: Code components for canvas apps  | Microsoft Docs
 description: Create code components for canvas apps
 keywords:
 ms.author: nabuthuk
@@ -13,7 +13,7 @@ ms.topic: "article"
 ms.assetid: 5d100dc3-bd82-4b45-964c-d90eaebc0735
 ---
 
-# Power Apps component framework for canvas apps
+# Code components for canvas apps
 
 <!--[!IMPORTANT]
 > This feature is still experimental and disabled by default. For more information, see [Experimental and preview features](../../maker/canvas-apps/working-with-experimental.md).-->
@@ -58,7 +58,9 @@ To add code components to an app, you need to enable the Power Apps component fr
 
 ## Implementing code components
 
-After you enable the Power Apps component framework feature in your environment, you can start implementing the logic for code components. The [implement sample component](implementing-controls-using-typescript.md) topic demonstrates the step-by-step process to create code components implementing the custom logic and manifest file, running the debugging process, creating a solution zip file, and importing the solution into Common Data Service.
+After you enable the Power Apps component framework feature in your environment, you can start implementing the logic for code components.
+
+ The [Create your first code component](implementing-controls-using-typescript.md) topic demonstrates the step-by-step process to create code components.
 
 > [!NOTE]
 > Implementing code components is the same for both model-driven apps and canvas apps (public preview). The only difference is adding the code components. 
@@ -90,11 +92,11 @@ To add code components to a canvas app:
 
 ## Delete a code component 
 
-To delete a code component from a canvas app, select the code component that you want to delete and then select the **Delete** button on the menu. When the code component is deleted from the app, all the code component elements are deleted from the app and the app package. 
+To delete a code component from a canvas app, select the code component that you want to delete and then select the **Delete** button on the menu. When the code component is deleted from the app, all the code component elements get deleted from the app and the app package. 
 
 ## Update existing code components
 
-When you update the code components, we specify the *version* attribute in the manifest file, so the latest changes get reflected in the runtime. For canvas apps, when you update the existing code components, you don't need to update the *version* attribute. By design, the canvas apps pick up the latest code component and display it in runtime. Only a single version of the same component can exist in canvas apps.
+Whenever you update the code components and want to see the changes in runtime, you need to bump the `version` attribute in the manifest file. It is recommended to always bump  the version of the component whenever you make changes.
 
 > [!NOTE]
 > Existing code components are updated only when the app is closed or reopened in Power Apps Studio. When you reopen the app, it asks you to update the code components. Simply deleting the code components or adding the code component back into the app doesn't update the components.
@@ -102,5 +104,5 @@ When you update the code components, we specify the *version* attribute in the m
 ## See also
 
 [Power Apps component framework overview](overview.md)<br/>
-[Implement sample component](implementing-controls-using-typescript.md)
+[Create your first code component](implementing-controls-using-typescript.md)
 

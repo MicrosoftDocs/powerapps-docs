@@ -137,33 +137,6 @@ To use the new typing file:
 3. Rename all references of **InputsOutputs.IOutputBag** to **IOutputs**.
 4. Build the project to generate a new **ManifestTypes.d.ts** file using the command `npm run build`.
 
-## Troubleshooting and workarounds
-
-1. If you get a 1ES notification asking how pcf-scripts are being used, note that these scripts are only used to build the code components but they are not bundled or used by the resulting component.  
-2. If you have previously created a code component using the tooling version 0.1.817.1 or earlier and want to ensure that the latest build and debug modules are being used, make updates to the package.json as shown:
-   
-    ```JSON
-     "dependencies": { "@types/node": "^10.12.18", "@types/powerapps-component-framework": "1.1.0"}, "devDependencies": { "pcf-scripts": "~0", "pcf-start": "~0" } 
-    ```
-3. The user gets the error `Failed to retrieve information about Microsoft.PowerApps.MSBuild.Pcf from remote s​ource <Feed Url>` when the build fails for authorization issues. Here is the workaround for this:
-
-   - Open the NuGet.Config file from **%APPDATA%\NuGet**. The feed from which the user is getting the error should be present in this file. 
-   - Remove the feed from the NuGet.Config file or generate a PAT token and add it to the Nuget.Config file. For example:
-
-     ```XML
-     <?xml version="1.0" encoding="utf-8"?>  
-     <configuration>  
-     <packageSources>  
-         <add key="CRMSharedFeed" value="https://dynamicscrm.pkgs.visualstudio.com/_packaging/CRMSharedFeed/nuget/v3/index.json" />  
-      </packageSources>  
-     <packageSourceCredentials>  
-      <CRMSharedFeed>  
-      <add key="Username" value="anything" />  
-      <add key="Password" value="User PAT" />  
-    </CRMSharedFeed>  
-     </packageSourceCredentials>  
-   </configuration>
-     ```
 
 ### See also
 

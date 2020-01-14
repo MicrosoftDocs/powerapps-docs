@@ -87,7 +87,7 @@ In Power Apps, you can view the classic solution explorer by selecting **Solutio
 
 The following limitations apply to the use of canvas apps, flows, and custom connectors in solutions. 
 
-- Canvas app triggered flows are not available in solutions.
+- Canvas app button triggered flows are currently not supported in solutions. Create the app and flow outside of a solution, and export the .msapp file to migrate canvas apps with an embedded button triggered flow. 
 - If a canvas app is packaged in a managed solution, it can't be edited and re-published in the target environment. Use unmanaged solutions if the apps require editing in the target environment. 
 - Connections require authentication and consent, which requires an interactive user session and therefore cannot be transported via solutions. After importing your solution, play the app to authenticate connections. You can also create the connections in the target enviornment prior to importing the solution. 
 -	Canvas apps shared as co-owner to an Azure Active Directory (AAD) security group can't be added to solutions. Unshare the app before adding it to a solution.

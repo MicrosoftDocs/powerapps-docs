@@ -2,7 +2,7 @@
 title: "Connect Azure Data Lake Storage Gen2 for dataflow storage | MicrosoftDocs"
 description: "Learn how to connect Azure Data Lake Storage Gen2 for dataflow storage"
 ms.custom: ""
-ms.date: 09/05/2019
+ms.date: 12/05/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -26,9 +26,10 @@ search.app:
 ---
 # Connect Azure Data Lake Storage Gen2 for dataflow storage
 
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
-
 You can configure dataflows to store their data in your organization’s Azure Data Lake Storage Gen2 account. This article describes the general steps necessary to do so, and provides guidance and best practices along the way. 
+
+> [!IMPORTANT]
+> Dataflow with Analytical entities feature utilizes the Export to data lake service, which may offer varying levels of compliance, privacy, security, and data location commitments. For more information about the **Export to data lake** service, see the [blog article](https://go.microsoft.com/fwlink/?linkid=2109088).
 
 There are some advantages to configuring dataflows to store their definitions and datafiles in your data lake, including the following:
 - Azure Data Lake Storage Gen2 provides an enormously scalable storage facility for data.
@@ -37,7 +38,7 @@ There are some advantages to configuring dataflows to store their definitions an
 
 ## Requirements
 To use Azure Data Lake Storage Gen2 for dataflows, you need the following:
-- A Power Apps environment. Any Power Apps plan will allow you to create dataflows with Azure Data Lake Storage Gen2 as a destination. You will need to be authorized in the environment as a maker. 
+- A Power Apps environment. Any Power Apps plan will allow you to create dataflows with Azure Data Lake Storage Gen2 as a destination. You'll need to be authorized in the environment as a maker. 
 - An Azure subscription. You need an Azure subscription to use Azure Data Lake Storage Gen2.
 - A resource group. Use a resource group you already have, or create a new one.
 - An Azure storage account. The storage account must have the Data Lake Storage Gen2 feature enabled.
@@ -78,7 +79,7 @@ To connect your Azure Data Lake Storage Gen2 account with the dataflow, follow t
    ![Select analytical entities](media/select-analytical-entities.png)
 
 ## Select the storage account to use for dataflow storage
-If a storage account has not yet been associated with the environment, a **Link to data lake** dialog box appears. You will need to sign in and find the data lake you created in the previous steps. In this example, no data lake is associated with the environment and so a prompt occurs to add one. 
+If a storage account has not yet been associated with the environment, a **Link to data lake** dialog box appears. You'll need to sign in and find the data lake you created in the previous steps. In this example, no data lake is associated with the environment and so a prompt occurs to add one. 
 
 
 1. Select storage account.
@@ -103,6 +104,11 @@ There are a few considerations and limitations to keep in mind when working with
 
 > [!IMPORTANT]
 > You shouldn't change files created by dataflows in your organization’s lake or add files to a dataflow’s **CDM Folder**. Changing files might damage dataflows or alter their behavior and is not supported. Power Platform Dataflows only grants read access to files it creates in the lake. If you authorize other people or services to the filesystem used by Power Platform Dataflows, only grant them read access to files or folders in that filesystem.
+
+## Privacy notice
+By enabling the creation of dataflows with Analytical entities in your organization, via the **Export to data lake** service, details about the Azure Data Lake storage account, such as the name of the storage account, will be sent to and stored in the Export to data lake service, which is currently located outside the PowerApps compliance boundary and may employ lesser or different privacy and security measures than those typically in PowerApps. Note that you may remove the data lake association at any time to discontinue use of this functionality and your Azure Data Lake storage account details will be removed from the **Export to data lake** service.
+Further information about Export to data lake, is available in [this article.](https://go.microsoft.com/fwlink/?linkid=2109088)
+
 
 ## Frequently asked questions
 *What if I had previously created dataflows in my organization’s Azure Data Lake Storage Gen2 and would like to change their storage location?*

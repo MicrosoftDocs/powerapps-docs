@@ -6,9 +6,9 @@ manager: shujoshi
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 12/03/2019
+ms.date: 12/27/2019
 ms.author: shjais
-ms.reviewer:
+ms.reviewer: tapanm
 ---
 
 # Power Apps portals FAQ
@@ -16,6 +16,10 @@ ms.reviewer:
 We have compiled a list of frequently asked questions and provided brief answers to help you get to your information quickly.
 
 ## General
+
+### When is an add-on portal in suspended state?
+
+Portal [provisioned using portal add-on plan](provision-portal-add-on.md) purchased earlier is suspended at the end of expiration. This expiration period is 30 days for trial portals while it may vary for an add-on portal in production with a purchased license. Suspended trial portal is deleted after 7 days while suspension period may vary for production portal. For more details, read the [portal lifecycle](./admin/portal-lifecycle.md#considerations-for-add-on-portals) for add-on portals.
 
 ### How do I redirect a user to a default page after signing in?
 
@@ -110,11 +114,7 @@ Internal users of an organization that use portals for accessing authenticated p
 
 ### How do I get a portal subscription?
 
-You can get a portal subscription by either of the following ways:
-
-- One portal add-on is provided along with the purchase of a certain type and quantity of user license. Details are available in the Dynamics 365 pricing and licensing guide. It is important to note that you get only one portal add-on with user licenses even if you have bought multiple type or quantity of valid licenses.
-
-- Additional portal subscriptions can be purchased by purchasing a Portal Add-on subscription. This subscription is an add-on subscription and is available to be purchased if you have the appropriate Dynamics 365 licenses.
+[Power Apps portals](overview.md) are now available completely standalone inside of Power Apps. You no longer need to acquire license to provision a portal. User access to the portal requires license depending on persona type. Read more details at [Power Apps portals licensing FAQ](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#can-you-share-more-details-regarding-the-new-power-apps-portals-licensing).
 
 ### How do I change the audience and type of a portal after it is provisioned?
 

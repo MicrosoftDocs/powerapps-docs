@@ -65,7 +65,7 @@ All
 
 In web client the **addNotification** method displays a notification with the messages you specified and two standard buttons: **Apply** and **Dismiss**. Clicking **Apply** executes the action you define; clicking **Dismiss** closes the notification message.
 
-In UCI:
+In the Unified Interface:
 
 - There is no **Dismiss** button.
 - The **Apply** button only appears when the notification level is set to **RECOMMENDATION**, not **ERROR**.

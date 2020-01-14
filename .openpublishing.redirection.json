@@ -1,6 +1,26 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/maker/canvas-apps/add-images-to-excel.md",
+      "redirect_url": "add-images-pictures-audio-video",
+      "redirect_document_id": "false"
+    },    
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/tutorial-working-with-images-in-excel.md",
+      "redirect_url": "add-images-pictures-audio-video",
+      "redirect_document_id": "false"
+    },    
+    {
+      "source_path": "powerapps-docs/developer/common-data-service/fill-app-submission-form-appsource.md",
+      "redirect_url": "register-microsoft-partner-network",
+      "redirect_document_id": "false"
+    },    
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/view-email-in-timeline.md",
+      "redirect_url": "view-all-activities-in-portal-timeline",
+      "redirect_document_id": "false"
+    }, 
+    {
       "source_path": "powerapps-docs/maker/canvas-apps/working-with-environments.md",
       "redirect_url": "/power-platform/admin/working-with-environments",
       "redirect_document_id": "false"

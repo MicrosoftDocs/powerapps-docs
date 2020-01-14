@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 03/26/2019
+ms.date: 12/05/2019
 ms.author: tapanm
 search.audienceType: 
   - maker
@@ -16,7 +16,7 @@ search.app:
 ---
 # Create a canvas app from scratch based on Excel data
 
-Create your own canvas app from scratch based on Excel data, formatted as a table, and then add data from other sources if you want. By following this tutorial, you'll create an app that contains two screens. On one screen, users can browse through a set of records. On the other screen, users can create a record, update one or more fields in a record, or delete an entire record. This approach takes more time than [generating an app automatically](get-started-create-from-data.md) does, but app makers who have more experience can use it to build the best app for their needs.
+Create your own canvas app from scratch based on Excel data, formatted as a table, and then add data from other sources if you want. By following this tutorial, you'll create an app that contains two screens. On one screen, users can browse through a set of records. On the other screen, users can create a record, update one or more fields in a record, or delete an entire record. This approach takes more time than [creating a basic app from Excel](get-started-create-from-data.md) does, but app makers who have more experience can use it to build the best app for their needs.
 
 ## Prerequisites
 

@@ -31,7 +31,6 @@ search.app:
 
 
 # Self-service data prep with dataflows
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 As the volume of data continues to grow, so does the challenge of shaping that
 data into well-structured, actionable information. You want data that’s ready for
