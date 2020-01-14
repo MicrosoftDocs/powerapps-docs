@@ -286,7 +286,7 @@
     href: use-aggregation-fetchxml.md
   - name: Use FetchXML with a paging cookie
     href: use-fetchxml-paging-cookie.md
-- name: Webresources
+- name: Web resources
   items:
   - name: Import files as web resources
     href: import-files-as-web-resources.md
