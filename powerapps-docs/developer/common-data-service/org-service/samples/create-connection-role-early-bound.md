@@ -38,6 +38,7 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 Checks for the current version of the org.
 
 ### Demonstrate
+
 1. Defines some anonymous types to define the range of possible connection property values.
 2. Creates a connection role for account and contact entity.
 3. Creates a connection role object type code record for account and contact entity.
