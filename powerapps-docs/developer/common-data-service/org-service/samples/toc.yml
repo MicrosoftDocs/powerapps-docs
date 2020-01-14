@@ -10,10 +10,10 @@
     href: promote-email-message.md
   - name: 'Retrieve email attachments for an email template'
     href: retrieve-email-attachments-email-template.md
-  - name: 'Send an email using a template'
-    href: send-email-template.md
   - name: 'Send an email'
     href: send-email.md
+  - name: 'Send an email using a template'
+    href: send-email-template.md
   - name: 'Send bulk email and monitor results'
     href: send-bulk-email-monitor-results.md
   - name: Upload, retrieve and download attachments
@@ -22,8 +22,10 @@
     href: work-activity-party-records.md
 - name: Adminstration & security
   items:
-  - name: Associate security role to team
+  - name: Assign security role to team
     href: associate-security-role-team.md
+  - name: Associate security role to a user
+    href: associate-security-role-to-user.md
   - name: Determine whether a user has a role
     href: determine-whether-user-has-role.md
   - name: Remove a role for a user
@@ -108,6 +110,8 @@
     href: query-connection-roles-entity-type-code-early-bound.md
   - name: Query connections by reciprocal roles
     href: query-connections-reciprocal-roles-early-bound.md
+  - name: Update a connection role
+    href: update-connection-role.md
 - name: Currency
   items:       
   - name: Retrieve currency exchange rate
@@ -116,6 +120,12 @@
   items:
   - name: Create a custom activity
     href: create-custom-activity.md
+  - name: Create and retrieve entity relationships
+    href: create-retrieve-entity-relationships.md
+  - name: Create and update an emailable entity
+    href: create-update-emailable-entity.md
+  - name: Create and update entity metadata
+    href: create-update-entity-metadata.md
   - name: Dump attribute metadata to a file
     href: dump-attribute-metadata.md
   - name: Dump entity metadata to a file
@@ -126,8 +136,16 @@
     href: dump-entity-relationships.md
   - name: Dump picklist information to a file
     href: dump-picklist-information.md
+  - name: Dump global option set information to a file
+    href: dump-global-option-set.md
+  - name: Export ribbon definitions
+    href: export-ribbon-definitions.md
   - name: Retrieve valid status transitions
     href: retrieve-valid-status-transitions.md
+  - name: Work with attributes
+    href: work-with-attributes.md
+  - name: Work with option sets
+    href: work-with-option-sets.md
 - name: Duplicate Detection
   items:
   - name: Detect multiple duplicate records
@@ -138,6 +156,8 @@
     href: use-duplicate-detection-when-creating-and-updating-records.md      
 - name: Entity records
   items: 
+  - name: Assign a record to a new owner
+    href: assign-record-to-new-owner.md
   - name: Assign a record to a team
     href: assign-records-to-team.md
   - name: Create and update records with related records
@@ -166,15 +186,14 @@
     href: upload-retrieve-download-attachment.md
   - name: Use optimistic concurrency with update and delete operations
     href: use-optimistic-concurrency-update-delete-operations.md 
- 
 - name: Field Level Security
   items:
+  - name: Enable field security for an entity
+    href: enable-field-security-entity.md
   - name: Retrieve field permissions
     href: retrieve-field-permissions.md
   - name: Retrieve field sharing records
     href: retrieve-field-sharing-records.md
-  - name: Enable field security for an entity
-    href: enable-field-security-entity.md
 - name: Goal management
   items:
   - name: Rollup goal data for a custom period against the target revenue
@@ -213,6 +232,8 @@
     href: delete-queues.md
   - name: Release a queue item to the queue
     href: release-queue-item-queue-early-bound.md
+  - name: Share a queue
+    href: share-queue.md
   - name: Specify a queue item to work on
     href: specify-queue-item-work-early-bound.md
 - name: SharePoint
@@ -223,6 +244,8 @@
   items:
   - name: Execute multiple requests
     href: execute-multiple-requests.md
+  - name: Execute multiple requests in trnasaction
+    hre4f: execute-multiple-transaction.md
 - name: Solutions
   items:
   - name: Work with solutions
