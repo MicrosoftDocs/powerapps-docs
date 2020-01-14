@@ -210,6 +210,10 @@
     href: export-import-data-map.md
   - name: Import data using complex data map
     href: import-data-complex-data-map.md
+- name: Outlook
+  items:
+  - name: Create and retrieve Outlook filters
+    href: create-retrieve-outlook-filters.md
 - name: Plug-ins
   items:
   - name: Create a basic plug-in
@@ -236,6 +240,14 @@
     href: share-queue.md
   - name: Specify a queue item to work on
     href: specify-queue-item-work-early-bound.md
+- name: Reports
+  items:
+  - name: Get report history limit
+    href: get-report-history-limit.md
+  - name: Make report available or unavailable to organization
+    href: make-report-available-to-organization.md
+  - name: Publish a report
+    href: publish-report.md
 - name: SharePoint
   items:    
   - name: Retrieve absolute URL and site collection URL of a location record
