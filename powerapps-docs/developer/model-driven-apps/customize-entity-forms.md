@@ -65,14 +65,58 @@ Forms provide the user interface (UI) that people use to create, view, or edit e
 |        `Type`         |       `<forms>` element `type` attribute        |                                                       Valid values for forms are:<br /><br /> -   2: `main`<br />-   5: `mobile`<br />-   6: `quick`<br />-   7: `quickCreate`                                                        |
 
 <a name="BKMK_CreateAndEditForms"></a>   
+
 ## Create and edit forms  
+
  You can only create new forms for an entity where <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata>. <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.CanCreateForms> allows it.  
 
  You can create new forms using either a <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or the <xref:Microsoft.Crm.Sdk.Messages.CopySystemFormRequest>. When using <xref:Microsoft.Crm.Sdk.Messages.CopySystemFormRequest> or using **Save As** in the form editor, note that there is no inheritance between forms. Therefore, changes to the base form aren’t automatically applied to any forms created from it.  
 
  Editing the form definitions from an exported managed solution and then re-importing the solution is a supported method to edit entity forms. When manually editing forms we strongly recommend you use an XML editor that allows for schema validation. More information: [Edit the Customizations XML File with Schema Validation](edit-customizations-xml-file-schema-validation.md)  
 
+## Open main form as dialog using client API
+
+To open a main form as a dialog programmatically, you need to invoke the call using the [Xrm.Navigation.navigateTo](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/xrm-navigation/navigateto) method. The [Xrm.Navigation.navigateTo](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/xrm-navigation/navigateto) API method allows you to open the dialog with several options including the size and position.
+
+> [!NOTE]
+> [Xrm.Navigation.openForm](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/xrm-navigation/openform) method is not supported to open main form as a dialog.
+
+## Examples
+
+### Open a new record
+
+In this example, the dialog opens an account form for creating a new record in the center using up 50% of the available window as a modal on top of the form it was invoked/called from.
+
+`Xrm.Navigation.navigateTo({pageType:"entityrecord", entityName:"account", formType:2}, {target: 2, position: 1, width: {value: 50, unit:"%"}});`
+
+### Open an existing record
+
+In this example, the dialog opens an existing account record using the account entity id to open in the dialog over the contact form.  Replace the entity id to a record you want to open in the dialog.
+
+`Xrm.Navigation.navigateTo({pageType:"entityrecord", entityName:"account", formType:2, entityId:"xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"}, {target: 2, position: 1, width: {value: 80, unit:"%"}});`
+
+### Open a new record on the side pane
+
+In this example, the dialog opens a new record on the right corner using the pixel options.
+
+`Xrm.Navigation.navigateTo({pageType:"entityrecord", entityName:"account", formType:2}, {target: 2, position: 2, width: {value: 500, unit:"px"}});`
+
+### Main form dialog with callback 
+
+This example shoes how a main form dialog is invoked with a callback method after saving a record and closing the dialog.
+
+```Javascript
+Xrm.Navigation.navigateTo({pageType:"entityrecord", entityName:"account", formType:2},{target: 2, position: 2, width: {value: 80, unit:"%"}}).then(
+    function (retVal) {
+        console.log(retVal.savedEntityReference[0].id + ", " + retVal.savedEntityReference[0].name)
+    },
+    function (error) {
+        console.log(error);
+    });
+```
+
 ### See also  
+
  [Create and design forms](../../maker/model-driven-apps/create-design-forms.md)   
  [SystemForm Entity](../common-data-service/reference/entities/systemform.md)  
  [Form XML Schema](form-xml-schema.md)
