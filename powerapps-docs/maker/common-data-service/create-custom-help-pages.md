@@ -67,7 +67,7 @@ To author custom help panes, you need the following:
 
 > [!IMPORTANT]
 > You can enable custom help panes or customizable help, but not both at the same time. Confirm that **Use custom Help for customizable entities** and **Append parameters to URL** are both set to **No**.  
-> Some environments m****ay require that you also set **Enable Learning Path** to **Yes**.
+> Some environments may require that you also set **Enable Learning Path** to **Yes**.
  
 ## Context-sensitive custom help
 Each help pane is unique for these contexts: 
