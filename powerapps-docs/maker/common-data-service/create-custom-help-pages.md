@@ -60,7 +60,7 @@ To author custom help panes, you need the following:
 1. Open a model-driven app, and then on the command bar select **Settings** ![Settings](../model-driven-apps/media/powerapps-gear.png) > **Advanced  Settings**.
 2. Go to **Settings** > **System** > **Administration**.  
 3. On the **Administration** page, select **System Settings**.
-4. On the **General** tab, under **Set custom Help URL**, select **Yes** for **Enable Custom Help Panes and Guided Tasks**, and then select **OK**.
+4. On the **General** tab, under **Set custom Help URL**, select **Yes** for *both* **Enable Learning Path** and **Enable Custom Help Panes and Guided Tasks**, and then select **OK**.
 
     > [!div class="mx-imgBorder"] 
     > ![Enable custom help panes](media/enable-custom-help-panes.png "Enable custom help panes")
@@ -91,9 +91,6 @@ By default, a help pane stays open and on the help content you first opened it w
     - Enter text by typing directly in the help pane area. 
     - Format text by using the rich text commands, such as bold, italic, strikethrough, and create lists. 
     - Select the **Insert** tab to add sections, video, images, links, coach marks, and balloon help. 
-<!-- confirm the image is safe for use
-    > [!div class="mx-imgBorder"] 
-    > ![Custom help pane edit](media/custom-help-pane-edit.png)  -->
 4.	To save your changes, select **Save**.  
 
 ### Free-form text
