@@ -85,25 +85,25 @@ To open a main form as a dialog programmatically, you need to invoke the call us
 
 ### Open a new record
 
-In this example, the dialog opens an account form for creating a new record in the center using up 50% of the available window as a modal on top of the form it was invoked/called from.
+In this example, the dialog opens an account form for creating a new record. The dialog pops up in the center using up 50% of the available window as a modal on top of the form it was invoked or called from.
 
 `Xrm.Navigation.navigateTo({pageType:"entityrecord", entityName:"account", formType:2}, {target: 2, position: 1, width: {value: 50, unit:"%"}});`
 
 ### Open an existing record
 
-In this example, the dialog opens an existing account record using the account entity id to open in the dialog over the contact form.  Replace the entity id to a record you want to open in the dialog.
+In this example, the dialog opens an existing account record using the account entity id value to open in the dialog over the contact form. Replace the entity id to a record you want to open in the dialog.
 
 `Xrm.Navigation.navigateTo({pageType:"entityrecord", entityName:"account", formType:2, entityId:"xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"}, {target: 2, position: 1, width: {value: 80, unit:"%"}});`
 
 ### Open a new record on the side pane
 
-In this example, the dialog opens a new record on the right corner using the pixel options.
+In this example, the dialog opens a new record in the right corner of the window. This can be achieved by using the pixel options.
 
 `Xrm.Navigation.navigateTo({pageType:"entityrecord", entityName:"account", formType:2}, {target: 2, position: 2, width: {value: 500, unit:"px"}});`
 
 ### Main form dialog with callback 
 
-This example shoes how a main form dialog is invoked with a callback method after saving a record and closing the dialog.
+This example shows how a main form dialog is invoked with a callback method after saving a record and closing the dialog.
 
 ```Javascript
 Xrm.Navigation.navigateTo({pageType:"entityrecord", entityName:"account", formType:2},{target: 2, position: 2, width: {value: 80, unit:"%"}}).then(
