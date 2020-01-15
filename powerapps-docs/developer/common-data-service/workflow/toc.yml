@@ -12,3 +12,5 @@
   href: sample-update-next-birthday-using-custom-workflow-activity.md
 - name: "Sample: Calculate a credit score with a custom workflow activity"
   href: sample-calculate-credit-score-custom-workflow-activity.md
+- name: "Sample: Workflow operations"
+  href: sample-workflow-operations.md
