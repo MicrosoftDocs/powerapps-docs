@@ -1,6 +1,6 @@
 ---
 title: "Sample: Query connection role by entity type code(Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "This sample shows how to query a xonncetion ro" # 115-145 characters including spaces. This abstract displays in the search result.
+description: "This sample shows how to query a connection ro" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
@@ -15,7 +15,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Sample: Query connection roles by entity type code
+# Sample: Query connection roles by entity type code (early bound)
 
 This sample shows how to use a query to find a connection role for an account entity by specifying an entity type code. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/QueryRoleByEntityType).
 

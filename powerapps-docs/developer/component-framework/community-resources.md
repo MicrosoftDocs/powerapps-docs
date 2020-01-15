@@ -31,7 +31,6 @@ Make sure that you review the licensing terms and the source code before you dow
 > [!div class="mx-imgBorder"]
 > ![Component gallery](media/pcf-gallery.PNG "Components gallery")
 
-
 ## Blogs
 
 The following is the list of blogs created by Power Apps community.
@@ -47,6 +46,7 @@ The following is the list of blogs created by Power Apps community.
 - [Work with code components using Power Apps component framework](https://powermaverick.dev/2019/05/18/create-custom-controls-using-powerapp-component-framework)
 
 ## Videos
+
 The following is the list of videos created by Power Apps community.
 
 - [Build your own code components](https://www.youtube.com/watch?v=S3Z_IUf1ncg)
@@ -54,14 +54,15 @@ The following is the list of videos created by Power Apps community.
 - [Easier debugging with sourcemaps and Fiddler](https://www.youtube.com/watch?v=Ov-m5FBUj9g&feature=youtu.be)
 - [Getting started with code components](https://www.youtube.com/watch?v=ylhVZUlGgQw)
 - [Power Apps component framework Academy: Getting started](https://www.youtube.com/watch?v=YJ9hrKxAhTU)  
-- [Power Apps component framework Academy: Working with manifest file](https://www.youtube.com/watch?v=qbSpDVTxt7U&t=5s)
+- [Power Apps component framework Academy: Deep dive manifest file for field template](https://www.youtube.com/watch?time_continue=522&v=w40zqSsYEy0)
 - [Power Apps component framework Academy: Dataset components](https://www.youtube.com/watch?v=OEiM97nTD0w)
 - [Power Apps component framework Academy: Importing into your organization](https://www.youtube.com/watch?v=2uO2L2xTPkc)
 - [Power Apps component framework Academy: Using React and Office UI fabric](https://www.youtube.com/watch?v=e7JNgGlI3nE)
 - [Power Apps component framework Academy: Usage of additional frameworks](https://www.youtube.com/watch?v=cOPyyDdsEjQ)
+- [Power Apps component framework Academy: Working with manifest file](https://www.youtube.com/watch?v=qbSpDVTxt7U&t=5s)
 - [Power Apps component framework code components](https://www.youtube.com/watch?v=FxWF-LCCB4g&feature=youtu.be)
 
 
 ## Tools
 
-The [Custom Control Builder](https://www.xrmtoolbox.com/plugins/Maverick.PCF.Builder/) is a tool from XrmToolBox that lets you create code components in visual manner using the Power Apps CLI.
+The [Code component builder](https://www.xrmtoolbox.com/plugins/Maverick.PCF.Builder/) is a tool from XrmToolBox that lets you create code components in visual manner using the Power Apps CLI.
