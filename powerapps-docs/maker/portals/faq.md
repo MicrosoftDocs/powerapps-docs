@@ -42,7 +42,7 @@ Create Power Apps portals with add-on based license:
 
 - [Provisioning a portal using portal add-on](provision-portal-add-on.md) walks through how to create a portal if you want to provision a portal using previously purchased **portal add-on** including available portal types you can choose from.
 
-See [Power Apps portals licensing FAQ](docs.microsoft.com/en-us/power-platform/admin/powerapps-flow-licensing-faq#what-is-the-difference-between-power-apps-portals-and-dynamics-365-portals-in-terms-of-licensing) for licensing differences between add-on based licenses and capacity-based licenses.
+See [Power Apps portals licensing FAQ](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#what-is-the-difference-between-power-apps-portals-and-dynamics-365-portals-in-terms-of-licensing) for licensing differences between add-on based licenses and capacity-based licenses.
 
 ### When is an add-on portal in suspended state?
 
