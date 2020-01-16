@@ -91,6 +91,7 @@ While work to provide full control coverage in Power Apps Test Studio is in prog
 - Components.
 - Code components written in the Power Apps Component Framework.
 - Nested galleries.
-- Media controls
+- Media controls.
+- Formula-level-error management experimental feature needs to be turned on for the app.
 - Support for controls not listed in the [Select](./functions/function-select.md) and [SetProperty](./functions/function-setproperty.md) functions.
-- Person type columns in SharePoint.
+- Person type columns.

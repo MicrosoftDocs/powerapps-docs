@@ -16,7 +16,7 @@ search.app:
 ---
 # SetProperty function in Power Apps Test Studio
 
-The SetProperty function simulates interactions with input controls as if the user had entered or set a value on the control. The following properties can be set using the SetProperty function.
+The SetProperty function simulates interactions with input controls as if the user had entered or set a value on the control. This function is only available if you are writing tests in the Power Apps Test Studio. The following properties can be set using the SetProperty function.
 
 ## Syntax
 
@@ -43,7 +43,9 @@ The SetProperty function simulates interactions with input controls as if the us
 | Combobox | Selected | ```SetProperty(Dropdown1.Selected, {Value:"Sample value"})```
 | Combobox | SelectedItems | ```SetProperty(ComboBox1.SelectedItems, Table({Value:"Sample value"},({Value:"Sample value"}))```
 | ListBox | Selected | ```SetProperty(Listbox1.Selected, {'Value':"Sample value"})```
-| ListBox | SelectedText | ```SetProperty(Listbox1. SelectedText, {'Value':"Sample value"})```
 | ListBox | SelectedItems | ```SetProperty(Listbox1.SelectedItems, Table({Value:"Sample value"},({Value:"Sample value"}))```
-| ListBox | SelectedItemsText | ```SetProperty(Listbox1.SelectedItemsText, Table({Value:"Sample value"},({Value:"Sample value"}))```
 
+### See Also
+
+[Test Studio Overview](../test-studio.md) <br>
+[Working with Test Studio](../working-with-test-studio.md)
