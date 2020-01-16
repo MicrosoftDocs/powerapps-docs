@@ -19,7 +19,7 @@ We have compiled a list of frequently asked questions and provided brief answers
 
 ### What is the difference between Power Apps portals, Dynamics 365 portals and add-on portals?
 
-Power Apps portals launched on October 1, 2019. Effective with this launch, Dynamics 365 portals are now called as Power Apps portals. In other words, all portals are now referred to as **Power Apps portals**. 
+With the launch of Power Apps portals on October 1, 2019, Dynamics 365 portals are called as Power Apps portals. In other words, all portals are referred to as **Power Apps portals**.
 
 One of the major changes introduced in portals after October 1, 2019 is the licensing model. Earlier, portals were licensed add-ons to Dynamics 365 apps while certain Dynamics 365 licenses included a default portal add-on. After October 1, 2019, portals are [licensed based on usage](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#can-you-share-more-details-regarding-the-new-power-apps-portals-licensing). All existing portals will be part of a transition period based on current customer contract after which they will need to be converted to new licensing model.
 
