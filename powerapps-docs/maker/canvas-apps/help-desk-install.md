@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: sample
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 10/29/2019
+ms.date: 01/15/2020
 ms.author: mabolan
 search.audienceType: 
   - maker
@@ -227,7 +227,7 @@ This list stores the Help Desk tickets.
 
 ### Update admin list
 
-1. Select the **LoginScreen**.
+1. Select the **app**.
 2. Select **OnStart** in the dropdown.
 3. Expand the formula window and find the **AdminList** collection.
 4. Replace <strong>user@microsoft.com</strong> with your HelpDesk administrator(s).

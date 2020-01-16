@@ -139,7 +139,7 @@
           href: reference/entityrecord/getrecordid.md
         - name: getValue
           href: reference/entityrecord/getvalue.md
-      - name: Entityreference
+      - name: EntityReference
         href: reference/entityreference.md
       - name: Factory
         href: reference/factory.md
@@ -195,6 +195,8 @@
           href: reference/linking/getlinkedentities.md
       - name: LookupOptions
         href: reference/lookupoptions.md
+      - name: Metadata
+        href: reference/metadata.md
       - name: Mode
         href: reference/mode.md
         items:
@@ -253,6 +255,8 @@
           href: reference/popupservice/setpopupsid.md
         - name: updatePopup
           href: reference/popupservice/updatepopup.md
+      - name: Position
+        href: reference/position.md
       - name: Property
         href: reference/property.md
       - name: RetrieveMultipleResponse
