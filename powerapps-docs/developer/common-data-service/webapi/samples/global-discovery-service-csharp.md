@@ -1,23 +1,23 @@
 ---
-title: "Web API Global Discovery Service Sample (C#) (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "This sample shows how to use the Web API global discovery service" # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Global Discovery Service Sample (C#) (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "This sample shows how to access the global Discovery Service using the OData V4 RESTful API" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 11/11/2019
+ms.date: 1/16/2020
 ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 ms.reviewer: "susikka"
-manager: "ryjones" # MSFT alias of manager or PM counterpart
+manager: "kvivek" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# Discovery Service Web API Sample (C#)
+# Global Discovery Service Sample (C#)
 
-This sample shows how to use the Discovery Service Web API 
+This sample shows how to access the Discovery Service using the OData V4 RESTful API.
 
 ## How to run this sample
 
@@ -40,7 +40,7 @@ The sample depends on the `GetInstances` method and the `Instance` class below:
 
 ```csharp
     /// <summary>
-    /// Uses the Web API Discovery Service to return instances
+    /// Uses the Discovery Service to return organization instances.
     /// </summary>
     /// <param name="clientId">The Azure AD client (app) registration</param>
     /// <param name="username">The user name</param>
@@ -87,7 +87,7 @@ The sample depends on the `GetInstances` method and the `Instance` class below:
 
 ```csharp
 /// <summary>
-  /// Object returned by the discovery service
+  /// Object returned from the Discovery Service.
   /// </summary>
   class Instance
   {
