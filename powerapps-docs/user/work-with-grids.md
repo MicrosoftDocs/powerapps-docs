@@ -1,5 +1,5 @@
 ---
-title: "Work with grids | MicrosoftDocs"
+title: "Filter data on grids | MicrosoftDocs"
 author: mduelae
 manager: kvivek
 ms.service: powerapps
@@ -15,7 +15,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Work with grids 
+# Filter data on grids 
 
 Grids in Unified Interface have been improved to increase the amount of data that can be seen on your screen. Grids also have improved filtering options which include remembering your last filter and sorts order. 
 
@@ -49,4 +49,6 @@ You can also open primary field and lookup fields in new tab or window.
    > [!div class="mx-imgBorder"]
    > ![Open in a new window](media/newtab.png "[Open in a new window")
 
+# Filter on a grid
 
+On a grid such as Accounts or Contacts you can filter the data
