@@ -84,7 +84,7 @@ On success, returns a promise that contains an array of JSON objects (**entities
 
 ## Examples
 
-Most of the scenarios/examples mentioned in [Query Data using the Web API](../../../../common-data-service/webapi/query-data-web-api.md) can be achieved using the **retrieveMutipleRecords** method. Some of the examples are listed below.
+Most of the scenarios/examples mentioned in [Query Data using the Web API](../../../../common-data-service/webapi/query-data-web-api.md) can be achieved using the **retrieveMultipleRecords** method. Some of the examples are listed below.
 
 ### Basic retrieve multiple
 
@@ -105,6 +105,50 @@ Xrm.WebApi.retrieveMultipleRecords("account", "?$select=name&$top=3").then(
 );
 ```
 
+### Retrieve or filter by lookup properties
+For most single-valued navigation properties you will find a computed, read-only property that uses the following naming convention: `_<name>_value` where the `<name>` the name of the single-valued navigation property. However, for mobile clients in offline mode, this syntax is not supported, and the single-value navigation property name should be used instead. 
+
+More information: [Lookup properties](../../../../common-data-service/webapi/web-api-types-operations.md#bkmk_lookupProperties)
+
+Here are code examples for both the scenarios:
+
+#### For online scenario (connected to server)
+
+This example queries the accounts entity set and uses the `$select` and `$filter` system query options to return the name and primarycontactid property for accounts that have a primary contact:
+
+```JavaScript
+Xrm.WebApi.retrieveMultipleRecords("account", "?$select=name,_primarycontactid_value&$filter=_primarycontactid_value ne null").then(
+    function success(result) {
+        for (var i = 0; i < result.entities.length; i++) {
+            console.log(result.entities[i]);
+        }                    
+        // perform additional operations on retrieved records
+    },
+    function (error) {
+        console.log(error.message);
+        // handle error conditions
+    }
+);
+```
+
+#### For mobile offine scenario
+
+This example queries the accounts entity set and uses the `$select` and `$filter` system query options to return the name and primarycontactid property for accounts that have a primary contact when working in the offline mode:
+
+```JavaScript
+Xrm.WebApi.retrieveMultipleRecords("account", "?$select=name,primarycontactid&$filter=primarycontactid ne null'").then(
+    function success(result) {
+        for (var i = 0; i < result.entities.length; i++) {
+            console.log(result.entities[i]);
+        }                    
+        // perform additional operations on retrieved records
+    },
+    function (error) {
+        console.log(error.message);
+        // handle error conditions
+    }
+);
+```
 ### Specify the number of entities to return in a page
 
 The following example demonstrates the use of the `maxPageSize` parameter to specify the number of records (3) to be displayed in a page.
