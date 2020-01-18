@@ -79,7 +79,7 @@ Results attribute in provided variable (such as 'resultVariable' in above sample
 
 ### XML attribute
 
-XML attribute in provided variable (such as “resultVariable” in above sample) holds the resultant query which can be used to get data from Common Data Service. This attribute is useful for debugging purpose when you want to understand how entity permission is getting applied on this *fetchxml* tag.  
+XML attribute in provided variable (such as 'resultVariable' in above sample) holds the resultant query which can be used to get data from Common Data Service. This attribute is useful for debugging purpose when you want to understand how entity permission is getting applied on this *fetchxml* tag.  
 
 ## include
 
