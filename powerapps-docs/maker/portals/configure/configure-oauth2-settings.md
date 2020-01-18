@@ -30,7 +30,10 @@ In general, if an OAuth provider uses app settings that require a redirect URI v
 
 ### Google
 
-[Google OAuth2 API Credentials Instructions](https://developers.google.com/accounts/docs/OpenIDConnect#appsetup)  
+> [!NOTE]
+> [Google legacy API](https://developers.google.com/people/legacy) and [Google+ API](https://developers.google.com/people/legacy) are deprecated. We strongly recommend that existing callers migrate to [Google People API](https://developers.google.com/people).
+
+Following these steps to configure your Power Apps portal with [Google OAuth2 API Credentials](https://developers.google.com/accounts/docs/OpenIDConnect#appsetup) for user authentication.
 
 1. Open [Google Developers Console](https://console.developers.google.com/).  
 1. Create an API project or open an existing project.
@@ -53,9 +56,6 @@ In general, if an OAuth provider uses app settings that require a redirect URI v
 1. Type **Authorized redirect URIs** as the Power Apps portal URL followed by **/signin-google**. For example, if portal URL is https://contoso.powerappsportals.com, authorized redirect URIs field should be https://contoso.powerappsportals.com/signin-google. 
 1. Select **Create**.
 1. Copy **client ID** and **client secret** from **OAuth client** dialog box and configure [OAuth2 site settings](https://docs.microsoft.com/powerapps/maker/portals/configure/configure-oauth2-settings#create-site-settings-by-using-oauth2) in Power Apps portals.
-
-> [!NOTE]
-> [Google legacy API](developers.google.com/people/legacy) and [Google+ API](developers.google.com/people/legacy) are deprecated. We strongly recommend that existing callers migrate to [Google People API](developers.google.com/people).
 
 ### Facebook app settings
 
