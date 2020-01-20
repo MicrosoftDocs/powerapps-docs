@@ -106,7 +106,7 @@ Xrm.WebApi.retrieveMultipleRecords("account", "?$select=name&$top=3").then(
 ```
 
 ### Retrieve or filter by lookup properties
-For most single-valued navigation properties you will find a computed, read-only property that uses the following naming convention: `_<name>_value` where the `<name>` the name of the single-valued navigation property. However, for mobile clients in offline mode, this syntax is not supported, and the single-value navigation property name should be used instead. 
+For most single-valued navigation properties you will find a computed, read-only property that uses the following naming convention: `_<name>_value` where the `<name>` is the name of the single-valued navigation property. However, for mobile clients in offline mode, this syntax is not supported, and the single-value navigation property name should be used instead. 
 
 More information: [Lookup properties](../../../../common-data-service/webapi/web-api-types-operations.md#bkmk_lookupProperties)
 
