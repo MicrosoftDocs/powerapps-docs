@@ -1,6 +1,6 @@
 ---
 title: "retrieveMultipleRecords (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
+ms.date: 01/20/2019
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
