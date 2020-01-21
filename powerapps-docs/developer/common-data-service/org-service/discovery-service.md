@@ -18,7 +18,7 @@ search.app:
 # Use the Discovery Service with the SDK Assemblies
 
 > [!IMPORTANT]
-> Effective February 1, 2020, the *regional* Discovery Service is deprecated. More information: [Important changes (deprecations)](/power-platform/important-changes-coming/).
+> Effective March 2, 2020, the *regional* Discovery Service will be [deprecated](/power-platform/important-changes-coming#regional-discovery-service-is-deprecated).
 > 
 > For information on how to transition to use the *global* Discovery Service, see [Modify your code to use global Discovery Service](../webapi/discovery-orgsdk-to-webapi.md).
 
