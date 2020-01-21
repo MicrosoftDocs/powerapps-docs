@@ -20,12 +20,9 @@ search.app:
 Grids in Unified Interface have been improved to increase the amount of data that can be seen on your screen. There are many different filtering options that are avilable. The type of data in the column determines which filter options are available. For example, the **Full Name** column in the **Contacts** grid will have different filter options than the **Activity Type** column in the **Activites** Gird.
 
 
-
    > [!div class="mx-imgBorder"]
    > ![Grids filtering](media/filter-options.png "Grids filtering")
 
-
-When a gird is retrieving data, you will see a loading indicator letting you know the system is working on retrieving data.
 
 When you filter data on a grid the page remembers the filter, sort, and the page state when you navigate away and then come back to the page. This includes quick find, column filtering, page number, and more. The navigation outside the page opens with the initial state.
 
