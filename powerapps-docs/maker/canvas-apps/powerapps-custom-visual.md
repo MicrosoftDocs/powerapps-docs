@@ -72,7 +72,7 @@ The following limitations apply to the Power Apps custom visual:
 - The Power Apps custom visual can't trigger a refresh of Power BI reports and Power BI data sources from within Power BI Desktop. If you write back data from the app to the same data source as the report, your changes won't be reflected immediately in Power BI Desktop. Changes are reflected on the next scheduled refresh.
 - The Power Apps custom visual can't filter the data or send any data back to the report.
 - You'll need to share the Power Apps app separately from your report. Learn about [sharing apps in Power Apps](share-app.md).
-- Power BI Report Server and the mobile app for Power BI do not support the Power Apps custom visual.
+- Power BI Report Server does not support the Power Apps custom visual.
 - Following limitations apply when using the `PowerBIIntegration.Refresh()` function:
     - You must create a new app from Power Apps custom visual in Power BI report for this function to be available in the app.
     - You must use a source that supports [DirectQuery](https://docs.microsoft.com/power-bi/desktop-directquery-data-sources) and the data connection must be created using DirectQuery method.
