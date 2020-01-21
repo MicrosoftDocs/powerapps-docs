@@ -25,7 +25,7 @@ Grids in Unified Interface have been improved to increase the amount of data tha
 
 ## Date filter
 
-The **Date** filter on grids is a very powerful filter. There are many different filters to choose from, such as **On** to seach by exact date orselect filter such as **Next X fiscal year** or **In fiscal period** to searc by year.
+The **Date** filter on grids is a very powerful filter. There are many different filters to choose from, such as **On** to seach by exact date or select filter such as **Next X fiscal year** or **In fiscal period** to search by year.
 
    > [!div class="mx-imgBorder"]
    > ![Grids filtering](media/date-filter.png "Grids filtering")
