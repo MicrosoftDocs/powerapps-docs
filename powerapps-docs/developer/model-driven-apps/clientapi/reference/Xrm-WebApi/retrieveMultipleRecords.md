@@ -1,6 +1,6 @@
 ---
 title: "retrieveMultipleRecords (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
+ms.date: 01/20/2019
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -84,7 +84,7 @@ On success, returns a promise that contains an array of JSON objects (**entities
 
 ## Examples
 
-Most of the scenarios/examples mentioned in [Query Data using the Web API](../../../../common-data-service/webapi/query-data-web-api.md) can be achieved using the **retrieveMutipleRecords** method. Some of the examples are listed below.
+Most of the scenarios/examples mentioned in [Query Data using the Web API](../../../../common-data-service/webapi/query-data-web-api.md) can be achieved using the **retrieveMultipleRecords** method. Some of the examples are listed below.
 
 ### Basic retrieve multiple
 
@@ -104,6 +104,7 @@ Xrm.WebApi.retrieveMultipleRecords("account", "?$select=name&$top=3").then(
     }
 );
 ```
+
 
 ### Specify the number of entities to return in a page
 
