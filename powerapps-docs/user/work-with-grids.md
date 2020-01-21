@@ -21,7 +21,7 @@ Grids in Unified Interface have been improved to increase the amount of data tha
 
 When grids area retrieving data, you will see a loading indicator letting you know the system is working on retrieving data.
 
-The main grid page remembers the filter, sort, and the page state when you navigate away and back. This includes quick find, column filtering, page number, and more. The navigation outside the page opens with the initial state.
+When you filter data on a grid the page remembers the filter, sort, and the page state when you navigate away and then come back to the page. This includes quick find, column filtering, page number, and more. The navigation outside the page opens with the initial state.
 
 
    > [!div class="mx-imgBorder"]
@@ -37,7 +37,7 @@ The jump bar uses the first sorted field. If no sort change has been made, the j
 The you can filter the **Activity Type** field and select multiple filtering type. Also, related entity fields like owner, status, and reason can be filtered.
 
    > [!div class="mx-imgBorder"]
-   > ![Grids filtering](media/grid-activity-type-column-filter.gif "Grids filtering")
+   > ![Grids filtering](media/grid-activity-type-column-filter.png "Grids filtering")
    
 When you select the hierarchy icon, it will navigate to the hierarchy form.
 
