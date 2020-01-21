@@ -15,11 +15,17 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Filter data on grids 
+# Use filters on a grid
 
-Grids in Unified Interface have been improved to increase the amount of data that can be seen on your screen. Grids also have improved filtering options which include remembering your last filter and sorts order. 
+Grids in Unified Interface have been improved to increase the amount of data that can be seen on your screen. There are many different filtering options that are avilable. The type of data in the column determines which filter options are available. For example, the **Full Name** column in the **Contacts** grid will have different filter options than the **Activity Type** column in the **Activites** Gird.
 
-When grids area retrieving data, you will see a loading indicator letting you know the system is working on retrieving data.
+
+
+   > [!div class="mx-imgBorder"]
+   > ![Grids filtering](media/filter-options.png "Grids filtering")
+
+
+When a gird is retrieving data, you will see a loading indicator letting you know the system is working on retrieving data.
 
 When you filter data on a grid the page remembers the filter, sort, and the page state when you navigate away and then come back to the page. This includes quick find, column filtering, page number, and more. The navigation outside the page opens with the initial state.
 
@@ -32,12 +38,7 @@ The jump bar uses the first sorted field. If no sort change has been made, the j
 
    > [!div class="mx-imgBorder"]
    > ![Grids remember state](media/jumpbar-filter-on-sorted-column.gif "Grids remember state")
-   
-
-The you can filter the **Activity Type** field and select multiple filtering type. Also, related entity fields like owner, status, and reason can be filtered.
-
-   > [!div class="mx-imgBorder"]
-   > ![Grids filtering](media/grid-activity-type-column-filter.png "Grids filtering")
+  
    
 When you select the hierarchy icon, it will navigate to the hierarchy form.
 
@@ -49,6 +50,4 @@ You can also open primary field and lookup fields in new tab or window.
    > [!div class="mx-imgBorder"]
    > ![Open in a new window](media/newtab.png "[Open in a new window")
 
-# Filter on a grid
 
-On a grid such as Accounts or Contacts you can filter the data
