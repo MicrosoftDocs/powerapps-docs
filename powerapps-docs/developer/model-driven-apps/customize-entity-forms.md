@@ -74,30 +74,34 @@ Forms provide the user interface (UI) that people use to create, view, or edit e
 
  Editing the form definitions from an exported managed solution and then re-importing the solution is a supported method to edit entity forms. When manually editing forms we strongly recommend you use an XML editor that allows for schema validation. More information: [Edit the Customizations XML File with Schema Validation](edit-customizations-xml-file-schema-validation.md)  
 
-## Open main form as dialog using client API
+## Open main form dialog using client API
 
-To open the main form as a dialog using client API, you need to invoke the call using the [Xrm.Navigation.navigateTo](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/xrm-navigation/navigateto) method. The [Xrm.Navigation.navigateTo](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/xrm-navigation/navigateto) API method allows you to open the dialog with several options, including the size and position.
+To open the main form dialog using client API, you need to invoke the call using the [Xrm.Navigation.navigateTo](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/xrm-navigation/navigateto) method. The [Xrm.Navigation.navigateTo](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/xrm-navigation/navigateto) API method allows you to open the dialog with several options, including the size and position.
 
 > [!NOTE]
-> [Xrm.Navigation.openForm](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/xrm-navigation/openform) method is not supported to open main form as a dialog.
+> [Xrm.Navigation.openForm](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/xrm-navigation/openform) method is not supported to open main form dialog.
 
 ## Examples
 
 ### Open a new record
 
-In this example, the dialog opens an account form for creating a new record. The dialog pops up in the center using up 50% of the available window as a modal on top of the main form it was invoked or called from.
+In this example, the dialog opens a new account form for creating a new record. The dialog pops up in the center using up 50% of the available window as a modal on top of the form it was invoked or called from.
 
 ```JavaScript
 Xrm.Navigation.navigateTo({pageType:"entityrecord", entityName:"account", formType:2}, {target: 2, position: 1, width: {value: 50, unit:"%"}});
 ```
+> [!div class="mx-imgBorder"]
+> ![Open a new record](media/open-new-record-mfd.png "Open a new record")
 
 ### Open an existing record
 
-In this example, the dialog opens an existing account record using the account entity id value over the contact form. Replace the entity id with any record id value you want to open in the dialog.
+In this example, the dialog opens an existing account record using the account entity id value over the contact form. Replace the entity id with any record id value if you want to open the record in the dialog.
 
 ```JavaScript
 Xrm.Navigation.navigateTo({pageType:"entityrecord", entityName:"account", formType:2, entityId:"xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"}, {target: 2, position: 1, width: {value: 80, unit:"%"}});
 ```
+> [!div class="mx-imgBorder"]
+> ![Open an existing record](media/open-existing-record-mfd.png "Open an existing record")
 
 ### Open a new record on the side pane
 
@@ -106,8 +110,10 @@ In this example, the dialog opens a new record in the right corner of the window
 ```JavaScript
 Xrm.Navigation.navigateTo({pageType:"entityrecord", entityName:"account", formType:2}, {target: 2, position: 2, width: {value: 500, unit:"px"}});
 ```
+> [!div class="mx-imgBorder"]
+> ![Open an existing record on side pane](media/open-record-side-pane-mfd.png "Open an existing record on side pane")
 
-### Open main form as dialog with callback method
+### Open main form dialog with callback method
 
 This example shows how a main form dialog is invoked with a callback method after saving a record and closing the dialog.
 
