@@ -76,7 +76,7 @@ Forms provide the user interface (UI) that people use to create, view, or edit e
 
 ## Open main form as dialog using client API
 
-To open a main form as a dialog programmatically, you need to invoke the call using the [Xrm.Navigation.navigateTo](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/xrm-navigation/navigateto) method. The [Xrm.Navigation.navigateTo](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/xrm-navigation/navigateto) API method allows you to open the dialog with several options including the size and position.
+To open the main form as a dialog using client API, you need to invoke the call using the [Xrm.Navigation.navigateTo](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/xrm-navigation/navigateto) method. The [Xrm.Navigation.navigateTo](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/xrm-navigation/navigateto) API method allows you to open the dialog with several options, including the size and position.
 
 > [!NOTE]
 > [Xrm.Navigation.openForm](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/xrm-navigation/openform) method is not supported to open main form as a dialog.
@@ -85,23 +85,29 @@ To open a main form as a dialog programmatically, you need to invoke the call us
 
 ### Open a new record
 
-In this example, the dialog opens an account form for creating a new record. The dialog pops up in the center using up 50% of the available window as a modal on top of the form it was invoked or called from.
+In this example, the dialog opens an account form for creating a new record. The dialog pops up in the center using up 50% of the available window as a modal on top of the main form it was invoked or called from.
 
-`Xrm.Navigation.navigateTo({pageType:"entityrecord", entityName:"account", formType:2}, {target: 2, position: 1, width: {value: 50, unit:"%"}});`
+```JavaScript
+Xrm.Navigation.navigateTo({pageType:"entityrecord", entityName:"account", formType:2}, {target: 2, position: 1, width: {value: 50, unit:"%"}});
+```
 
 ### Open an existing record
 
-In this example, the dialog opens an existing account record using the account entity id value to open in the dialog over the contact form. Replace the entity id to a record you want to open in the dialog.
+In this example, the dialog opens an existing account record using the account entity id value over the contact form. Replace the entity id with any record id value you want to open in the dialog.
 
-`Xrm.Navigation.navigateTo({pageType:"entityrecord", entityName:"account", formType:2, entityId:"xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"}, {target: 2, position: 1, width: {value: 80, unit:"%"}});`
+```JavaScript
+Xrm.Navigation.navigateTo({pageType:"entityrecord", entityName:"account", formType:2, entityId:"xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"}, {target: 2, position: 1, width: {value: 80, unit:"%"}});
+```
 
 ### Open a new record on the side pane
 
 In this example, the dialog opens a new record in the right corner of the window. This can be achieved by using the pixel options.
 
-`Xrm.Navigation.navigateTo({pageType:"entityrecord", entityName:"account", formType:2}, {target: 2, position: 2, width: {value: 500, unit:"px"}});`
+```JavaScript
+Xrm.Navigation.navigateTo({pageType:"entityrecord", entityName:"account", formType:2}, {target: 2, position: 2, width: {value: 500, unit:"px"}});
+```
 
-### Main form dialog with callback 
+### Open main form as dialog with callback method
 
 This example shows how a main form dialog is invoked with a callback method after saving a record and closing the dialog.
 
@@ -119,4 +125,5 @@ Xrm.Navigation.navigateTo({pageType:"entityrecord", entityName:"account", formTy
 
  [Create and design forms](../../maker/model-driven-apps/create-design-forms.md)   
  [SystemForm Entity](../common-data-service/reference/entities/systemform.md)  
- [Form XML Schema](form-xml-schema.md)
+ [Form XML Schema](form-xml-schema.md)<br/>
+ [Xrm.Navigation.navigateTo](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/xrm-navigation/navigateto)
