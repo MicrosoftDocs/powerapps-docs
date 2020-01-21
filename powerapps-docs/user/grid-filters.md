@@ -31,7 +31,7 @@ The **Date** filter on grids is a very powerful filter. There are many different
    > ![Grids filtering](media/date-filter.png "Grids filtering")
 
 
-## Filter navigation 
+## Grid and filter navigation 
 
 When you filter data on a grid the page remembers the filter, sort, and the page state when you navigate away and then come back to the page. This includes quick find, column filtering, page number, and more. The navigation outside the page opens with the initial state.
 
