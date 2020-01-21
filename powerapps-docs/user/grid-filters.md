@@ -23,6 +23,15 @@ Grids in Unified Interface have been improved to increase the amount of data tha
    > [!div class="mx-imgBorder"]
    > ![Grids filtering](media/filter-options.png "Grids filtering")
 
+## Date filter
+
+The **Date** filter on grids is a very powerful filter. There are many different filters to choose from, such as **On** to seach by exact date orselect filter such as **Next X fiscal year** or **In fiscal period** to searc by year.
+
+   > [!div class="mx-imgBorder"]
+   > ![Grids filtering](media/date-filter.png "Grids filtering")
+
+
+## Filter navigation 
 
 When you filter data on a grid the page remembers the filter, sort, and the page state when you navigate away and then come back to the page. This includes quick find, column filtering, page number, and more. The navigation outside the page opens with the initial state.
 
