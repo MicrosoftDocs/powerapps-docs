@@ -74,9 +74,9 @@ Forms provide the user interface (UI) that people use to create, view, or edit e
 
  Editing the form definitions from an exported managed solution and then re-importing the solution is a supported method to edit entity forms. When manually editing forms we strongly recommend you use an XML editor that allows for schema validation. More information: [Edit the Customizations XML File with Schema Validation](edit-customizations-xml-file-schema-validation.md)  
 
-## Open main form dialog using client API
+## Open main form in a dialog using client API
 
-To open the main form dialog using client API, you need to invoke the call using the [Xrm.Navigation.navigateTo](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/xrm-navigation/navigateto) method. The [Xrm.Navigation.navigateTo](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/xrm-navigation/navigateto) API method allows you to open the dialog with several options, including the size and position.
+To open the main form in a dialog using client API, you need to invoke the call using the [Xrm.Navigation.navigateTo](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/xrm-navigation/navigateto) method. The [Xrm.Navigation.navigateTo](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/xrm-navigation/navigateto) API method allows you to open the dialog with several options, including the size and position.
 
 > [!NOTE]
 > [Xrm.Navigation.openForm](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/xrm-navigation/openform) method is not supported to open main form dialog.
@@ -113,7 +113,7 @@ Xrm.Navigation.navigateTo({pageType:"entityrecord", entityName:"account", formTy
 > [!div class="mx-imgBorder"]
 > ![Open an existing record on side pane](media/open-record-side-pane-mfd.png "Open an existing record on side pane")
 
-### Open main form dialog with callback method
+### Open main form in a dialog with callback method
 
 This example shows how a main form dialog is invoked with a callback method after saving a record and closing the dialog.
 
