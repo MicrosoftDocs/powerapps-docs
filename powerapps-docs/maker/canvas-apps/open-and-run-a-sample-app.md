@@ -33,7 +33,7 @@ If you don't have a license for Power Apps, you can [sign up for free](../signup
 1. Update the app name and select **Create** to create the app.
 
     > [!NOTE]
-    > Certain apps may be available in only phone or tablet layouts. Read [create responsive layouts in canvas apps](create-responsive-layout.md) for more details regarding layouts. If sample app you selected has phone or tablet as options, select a layout of your choice.
+    > Some sample apps may be available in only phone or tablet layouts. Read [create responsive layouts in canvas apps](create-responsive-layout.md) for more details regarding layouts. If sample app you selected has phone or tablet as options, select a layout of your choice.
 
 1. Open Preview mode by pressing F5 (or by selecting the play button near the upper-right corner).
 
