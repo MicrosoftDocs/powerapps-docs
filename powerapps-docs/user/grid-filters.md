@@ -22,13 +22,22 @@ Grids in Unified Interface have been improved to increase the amount of data tha
 
    > [!div class="mx-imgBorder"]
    > ![Grids filtering](media/filter-options.png "Grids filtering")
+   
+   
+## Lookup field column
+
+When you use the filter for a lookup column, you can select from a list of records rather manually type in the data. For example, on the **Account** lookup column you can select an acccout name from the list to filter by. 
+
+   > [!div class="mx-imgBorder"]
+   > ![Lookup filtering](media/lookup-fileter.png "Lookup filtering")
+
 
 ## Date filter
 
 The **Date** filter on grids is a very powerful filter. There are many different filters to choose from, such as **On** to seach by exact date or select filter such as **Next X fiscal year** or **In fiscal period** to search by year.
 
    > [!div class="mx-imgBorder"]
-   > ![Grids filtering](media/date-filter.png "Grids filtering")
+   > ![Date filtering](media/date-filter.png "Date filtering")
 
 
 ## Grid and filter navigation 
