@@ -28,7 +28,7 @@ Update the control version (minor) in control manifest. eg. 1.0.0 to 1.0.1. Ever
 Lots of great examples from the community are available on the [Power Apps Community Forums](https://powerusers.microsoft.com/t5/Power-Apps-Component-Framework/Community-content-sample-components-blogs-etc-Link-to-this-page/td-p/280710).
 
 ## How to use rich data types in PCF controls such as Collections?
-Currently this feature is unsupported. However, there is a [JSON function](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/functions/function-json) in Canvas-based Power Apps that allows app makers to stringify their data.
+Currently this feature is unsupported. However, there is a [JSON function](https://docs.microsoft.com/powerapps/maker/canvas-apps/functions/function-json) in Canvas-based Power Apps that allows app makers to stringify their data.
 
 1. Pass your collection into that function
 2. Pass the string representation of your collection data that is returned from the JSON function into one of your component's string properties
