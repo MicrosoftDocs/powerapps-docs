@@ -17,7 +17,7 @@ search.app:
 ---
 # Use filters on a grid
 
-Grids in Unified Interface have been improved to increase the amount of data that can be seen on your screen. There are many different filtering options that are avilable. The type of data in the column determines which filter options are available. For example, the **Full Name** column in the **Contacts** grid will have different filter options than the **Activity Type** column in the **Activites** Gird.
+Grids in the Unified Interface have been improved to increase the amount of data that can be seen on your screen. There are many different filtering options that are avilable. The type of data in the column determines which filter options are available. For example, the **Full Name** column in the **Contacts** grid will have different filter options than the **Activity Type** column in the **Activities** gird.
 
 
    > [!div class="mx-imgBorder"]
@@ -26,7 +26,7 @@ Grids in Unified Interface have been improved to increase the amount of data tha
    
 ## Lookup field column
 
-When you filter on a lookup column, you can select from a list of records to filter by rather manually typing in data. For example, on a **Account** lookup column select the acccout names from the list of records to filter by.
+When you filter on a lookup column, you can select from a list of records to filter by rather manually typing in data. For example, on an **Account** lookup column select the account names from the list of records to filter by.
 
    > [!div class="mx-imgBorder"]
    > ![Lookup filtering](media/lookup-filter.png "Lookup filtering")
@@ -34,7 +34,7 @@ When you filter on a lookup column, you can select from a list of records to fil
 
 ## Date filter
 
-The **Date** filter on grids is a very powerful filter. There are many different filters to choose from, such as **On** to seach by exact date or select filter such as **Next X fiscal year** or **In fiscal period** to search by year.
+The **Date** filter on grids is a robust filter. There are many different filters to choose from, such as **On** to seach by exact date or select filter such as **Next X fiscal year** or **In fiscal period** to search by year or quarter.
 
    > [!div class="mx-imgBorder"]
    > ![Date filtering](media/date-filter.png "Date filtering")
@@ -42,7 +42,7 @@ The **Date** filter on grids is a very powerful filter. There are many different
 
 ## Grid and filter navigation 
 
-When you filter data on a grid the page remembers the filter, sort, and the page state when you navigate away and then come back to the page. This includes quick find, column filtering, page number, and more. The navigation outside the page opens with the initial state.
+When you filter data on a grid, the main grid page remembers the filter, sort, and the page state when you navigate away and then come back to the page. This includes quick find, column filtering, page number, and more. The navigation outside the page opens with the initial state.
 
 
    > [!div class="mx-imgBorder"]
@@ -66,11 +66,11 @@ You can also open primary field and lookup fields in new tab or window.
    > ![Open in a new window](media/newtab.png "[Open in a new window")
 
 
-## Search a view on a grid
+## Use search on a grid
 
-When you use the **Search this view** option on a grid, the system searchs for data in the view that you are in. 
+When you use the **Search this view** option on a grid page, the system searchs for data in the view that you are in. 
 
-1. Go to the **Contacts** grid and from the list of view selct **My Active Contacts**.
+1. Go to the **Contacts** grid and from the list of view select **My Active Contacts**.
 
     > [!div class="mx-imgBorder"]
     > ![My active contact view](media/myactive-contacts-view.png "My active contact view")
