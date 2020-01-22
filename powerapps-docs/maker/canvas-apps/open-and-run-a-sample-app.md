@@ -17,7 +17,7 @@ search.app:
 # Create a canvas app from a sample in Power Apps
 In this quickstart, you'll create a canvas app from a sample so that you can explore design possibilities and discover concepts that you can apply as you develop your own canvas apps.
 
-Each sample showcases a real-world scenario but uses fictitious data. To store this data, you'll need a cloud-storage account, such as Dropbox, Google Drive, or OneDrive.
+Each sample showcases a real-world scenario but uses fictitious data. 
 
 If you don't have a license for Power Apps, you can [sign up for free](../signup-for-powerapps.md).
 
@@ -29,12 +29,6 @@ If you don't have a license for Power Apps, you can [sign up for free](../signup
 	![](./media/open-and-run-a-sample-app/cost-estimator.png)
 
 1. Click or tap the phone icon to create a version of the app for mobile devices (or leave the tablet icon selected), and then click or tap **Make this app**.
-
-1. In Power Apps Studio, click or tap **Make my own app** in the banner near the top-center of the screen.
-
-	![](./media/open-and-run-a-sample-app/banner.png)
-
-1. Specify the cloud-storage account where you want to store the fictitious data for this app, and then provide credentials for that account.
 
 1. Open Preview mode by pressing F5 (or by clicking or tapping the play button near the upper-right corner).
 
@@ -58,7 +52,7 @@ If you don't have a license for Power Apps, you can [sign up for free](../signup
 1. Near the left edge, click or tap **Save**. 
 
 ## Next steps
-In this quickstart, you created your own app based on a sample that uses fictitious data stored in your cloud account. For more help learning how to create an app, you can also automatically generate an app based on data in other sources such as Common Data Service, SharePoint, or Excel.
+In this quickstart, you created a sample that uses fictitious data. For more help learning how to create an app, you can also automatically generate an app based on data in other sources such as Common Data Service, SharePoint, or Excel.
 
 > [!div class="nextstepaction"]
 > [Generate an app](data-platform-create-app.md)
