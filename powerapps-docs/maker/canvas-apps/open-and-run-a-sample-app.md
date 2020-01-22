@@ -1,14 +1,14 @@
 ---
 title: Use a sample app | Microsoft Docs
 description: Step-by-step instructions for creating a canvas app based on a sample in Power Apps
-author: tapanm-msft
+author: wimcoor
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: 
-ms.date: 03/11/2018
-ms.author: tapanm
+ms.reviewer: tapanm
+ms.date: 01/22/2020
+ms.author: wimcoor
 search.audienceType: 
   - maker
 search.app: 
@@ -24,15 +24,20 @@ If you don't have a license for Power Apps, you can [sign up for free](../signup
 ## Open a sample app
 1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
-1. In the list of sample apps, hover over a sample app (such as **Cost Estimator**) with your mouse.
+1. Select **All templates**.
 
-	![](./media/open-and-run-a-sample-app/cost-estimator.png)
+1. Choose a sample app from the list of sample apps, such as **Cost Estimator**.
 
-1. Click or tap the phone icon to create a version of the app for mobile devices (or leave the tablet icon selected), and then click or tap **Make this app**.
+	![](./media/open-and-run-a-sample-app/cost-estimator-app.png)
 
-1. Open Preview mode by pressing F5 (or by clicking or tapping the play button near the upper-right corner).
+1. Update the app name and select **Create** to create the app.
 
-	![](./media/open-and-run-a-sample-app/open-preview.png)
+    > [!NOTE]
+    > Certain apps may be available in only phone or tablet layouts. Read [create responsive layouts in canvas apps](create-responsive-layout.md) for more details regarding layouts. If sample app you selected has phone or tablet as options, select a layout of your choice.
+
+1. Open Preview mode by pressing F5 (or by selecting the play button near the upper-right corner).
+
+	![](./media/open-and-run-a-sample-app/open-preview-app.png)
 
 	Each sample represents a different scenario with a variety of screens and other controls. If you opened the Cost Estimator sample, you can use the default app to perform these tasks:
 
@@ -43,11 +48,11 @@ If you don't have a license for Power Apps, you can [sign up for free](../signup
 1. When you finish exploring the app, close Preview mode by pressing Esc (or by clicking or tapping the close icon near the upper-right corner, under the title bar for Power Apps).
 
 ## Save the app
-1. Near the upper-left corner, click or tap the **File** tab.
+1. Near the upper-left corner, select **File** tab.
 
-1. In the **App settings** page, review the default settings.
+1. In the **Settings** page, review the default settings.
 
-	![](./media/open-and-run-a-sample-app/app-settings.png)
+	![](./media/open-and-run-a-sample-app/settings-app.png)
 
 1. Near the left edge, click or tap **Save**. 
 
