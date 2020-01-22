@@ -80,7 +80,7 @@ When you use the **Search this view** option on a grid, the system searchs for d
     > [!div class="mx-imgBorder"]
     > ![Search view](media/search-view.png "Search view")
 
-The system will search for data in the **My Active Contacts** view and when search data is display it will show the same set of columns that is in your current view.
+The system will search for data in the **My Active Contacts** view and when search data is displayed, it will show the same set of columns that is in your current view.
 
    > [!div class="mx-imgBorder"]
    > ![Search view](media/search-view2.png "Search view")
