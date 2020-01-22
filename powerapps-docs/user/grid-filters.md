@@ -26,7 +26,7 @@ Grids in Unified Interface have been improved to increase the amount of data tha
    
 ## Lookup field column
 
-When you use the filter for a lookup column, you can select from a list of records rather manually type in the data. For example, on the **Account** lookup column you can select an acccout name from the list to filter by. 
+When you filter on a lookup column, you can select from a list of records to filter by rather manually type in the data. For example, on the **Account** lookup column you can select an acccout name to filter by.
 
    > [!div class="mx-imgBorder"]
    > ![Lookup filtering](media/lookup-filter.png "Lookup filtering")
