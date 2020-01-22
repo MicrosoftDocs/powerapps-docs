@@ -66,3 +66,25 @@ You can also open primary field and lookup fields in new tab or window.
    > ![Open in a new window](media/newtab.png "[Open in a new window")
 
 
+## Search a view on a grid
+
+When you use the **Search this view** option on a grid, the system searchs for data in the view that you are in. 
+
+1. Go to the **Contacts** grid and from the list of view selct **My Active Contacts**.
+
+    > [!div class="mx-imgBorder"]
+    > ![My active contact view](media/myactive-contacts-view.png "My active contact view")
+    
+2. Select **Search this view** to search for data in the current view that you are in.
+
+    > [!div class="mx-imgBorder"]
+    > ![Search view](media/search-view.png "Search view")
+
+The system will search for data in the **My Active Contacts** view and when search data is display it will show the same set of columns that is in your current view.
+
+   > [!div class="mx-imgBorder"]
+   > ![Search view](media/search-view2.png "Search view")
+
+
+
+ 
