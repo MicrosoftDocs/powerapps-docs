@@ -23,7 +23,7 @@ The Discovery Service APIs can be used by your application to discover business 
 A detailed description of using the Discovery Service with the RESTful API can be found on the [Discover the URL for your organization](/powerapps/developer/common-data-service/webapi/discover-url-organization-web-api) page.
 
 > [!IMPORTANT]
-> When accessing the Discovery Service, it is strongly recommended that your application use the *global* Discovery Service endpoint (https://globaldisco.crm.dynamics.com) and not the *regional* Discovery Service endpoint, which is [deprecated](/power-platform/important-changes-coming#regional-discovery-service-is-deprecated). The global Discovery Service is only available when using the RESTful API.
+> When accessing the Discovery Service, it is strongly recommended that your application use the *global* Discovery Service endpoint (https://globaldisco.crm.dynamics.com) and not the *regional* Discovery Service endpoint, which will be [deprecated](/power-platform/important-changes-coming#regional-discovery-service-is-deprecated) on March 2, 2020. The global Discovery Service is only available when using the RESTful API.
 
 The rest of this document describes the changes that may be needed to call the Discovery Service using the RESTful API.
 
