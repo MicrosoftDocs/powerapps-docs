@@ -91,7 +91,8 @@ To view rollup jobs:
 ## Online recalculation option
 If you hover over the rollup field on the form, you can see the time of the last rollup and you can refresh the rollup value by choosing the Refresh icon next to the field, as shown below:  
 
-![Rollup field on the account form](media/rollup-field-on-account-form.png)
+> [!div class="mx-imgBorder"] 
+> ![Rollup field on the account form](media/rollup-field-on-account-form.png)
   
 
 There are a few considerations you should keep in mind when using the online recalculation option (manual refresh on the form):  
