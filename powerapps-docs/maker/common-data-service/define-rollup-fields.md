@@ -89,7 +89,7 @@ To view rollup jobs:
 **Calculate Rollup Field** is a recurring job that does incremental calculations of all rollup fields in the existing records for a specified entity. There is only one **Calculate Rollup Field** job per entity. The incremental calculations mean that the **Calculate Rollup Field** job processes the records that were created, updated or deleted after the last **Mass Calculate Rollup Field** job finished execution. The default maximum recurrence setting is one hour. The job is automatically created when the first rollup field on an entity is created and deleted when the last rollup field is deleted.  
 
 ## Online recalculation option
-If you hover over the rollup field on the form, you can see the time of the last rollup and you can refresh the rollup value by choosing the Refresh icon next to the field, as shown below:  
+You can refresh the rollup value by choosing the **Recalculate** icon next to the field, as shown below:  
 
 > [!div class="mx-imgBorder"] 
 > ![Rollup field on the account form](media/rollup-field-on-account-form.png)
