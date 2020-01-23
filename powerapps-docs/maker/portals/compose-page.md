@@ -1,13 +1,13 @@
 ---
 title: Compose webpages | Microsoft Docs
 description: Instructions to compose webpages in portal.
-author: sbmjais
-manager: kvivek
+author: tapanm-msft
+manager: kumarvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 01/10/2020
-ms.author: shjais
+ms.author: tapanm
 ms.reviewer: tapanm
 ---
 

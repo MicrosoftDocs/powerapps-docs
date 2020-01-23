@@ -1,13 +1,13 @@
 ---
 title: "Use custom JavaScript for a portal | MicrosoftDocs"
 description: "Instructions to add custom JavaScript to a form in a portal"
-author: sbmjais
-manager: shujoshi
+author: tapanm-msft
+manager: kumarvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 11/04/2019
-ms.author: shjais
+ms.author: tapanm
 ms.reviewer:
 ---
 

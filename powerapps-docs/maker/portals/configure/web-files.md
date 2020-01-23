@@ -1,13 +1,13 @@
 ---
 title: "Create and manage web files in Power Apps portals | MicrosoftDocs"
 description: "Learn how to create and manage web files in a portal."
-author: sbmjais
-manager: shujoshi
+author: tapanm-msft
+manager: kumarvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 11/04/2019
-ms.author: shjais
+ms.author: tapanm
 ms.reviewer:
 ---
 

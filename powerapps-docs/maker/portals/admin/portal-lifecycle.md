@@ -1,13 +1,13 @@
 ---
 title: "About Power Apps portals lifecycle | MicrosoftDocs"
 description: "Information about Power Apps portals lifecycle and converting it from trial to production."
-author: sbmjais
-manager: shujoshi
+author: tapanm-msft
+manager: kumarvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 12/26/2019
-ms.author: shjais
+ms.author: tapanm
 ms.reviewer: tapanm
 ---
 

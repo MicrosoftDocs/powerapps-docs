@@ -1,13 +1,13 @@
 ---
 title: "Manage web links | MicrosoftDocs"
 description: "Instructions to manage web links."
-author: sbmjais
-manager: shujoshi
+author: tapanm-msft
+manager: kumarvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 11/04/2019
-ms.author: shjais
+ms.author: tapanm
 ms.reviewer:
 ---
 
