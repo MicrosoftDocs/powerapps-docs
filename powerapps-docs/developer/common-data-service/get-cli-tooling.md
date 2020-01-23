@@ -13,9 +13,9 @@ ms.topic: "article"
 ms.assetid: f393f227-7a88-4f25-9036-780b3bf14070
 ---
 
-## What is Microsoft Power Apps CLI 
+# What is Microsoft Power Apps CLI 
 
-Microsoft Power Apps CLI is a simple, single-stop developer command-line interface that empowers the developers and app makers to create code components. 
+Microsoft Power Apps CLI is a simple, single-stop developer command-line interface that empowers developers and app makers to create code components. 
 
 Power Apps CLI tooling is the first step toward a comprehensive ALM story where the enterprise developers and ISVs can create, build, debug, and publish their extensions and customizations quickly and efficiently.  
 
