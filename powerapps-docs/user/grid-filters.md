@@ -67,10 +67,9 @@ You can also open primary field and lookup fields in new tab or window.
 
 
 ## Use search on a grid
-
 When you use the **Search this view** option on a grid page, the system searchs for data in the view that you are in. 
 
-1. Go to the **Contacts** grid and from the list of view select **My Active Contacts**.
+1. For example, go to the **Contacts** grid and from the list of view select **My Active Contacts**.
 
     > [!div class="mx-imgBorder"]
     > ![My active contact view](media/myactive-contacts-view.png "My active contact view")
@@ -85,6 +84,9 @@ The system will search for data in the **My Active Contacts** view and when sear
    > [!div class="mx-imgBorder"]
    > ![Search view](media/search-view2.png "Search view")
 
-
-
+### Use quick find search experience
+To switch back to the old quick find search experience that uses an entity's quick find view definition when a search is performd, you will need admin permissions. 
  
+1. From the upper-right corner select the **Gear** icon (![Gear icon](media/selection-rule-gear-button.png)). Then select **Advanced settings**. 
+2. Go to **Settings** > **Administration** > **System Settings**.
+3. on the **General** tab, under **Set up Quick Find** select **Yes** for **Use quick find view of an entity for searching on grids and sub-grids**.
