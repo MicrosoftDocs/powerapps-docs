@@ -2,7 +2,7 @@
 title: Frequently asked questions | Microsoft Docs
 description: Frequently asked questions in Power Apps portals.
 author: tapanm-msft
-manager: kumarvivek
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
