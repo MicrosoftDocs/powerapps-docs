@@ -2,7 +2,7 @@
 title: "Overview of Power Apps Portals admin center | MicrosoftDocs"
 description: "Information about Power Apps Portals admin center."
 author: tapanm-msft
-manager: kumarvivek
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 

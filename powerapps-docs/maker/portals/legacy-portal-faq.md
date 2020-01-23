@@ -2,7 +2,7 @@
 title: "Frequently asked questions for legacy Adxstudio Portals v7 | MicrosoftDocs"
 description: "Frequently asked questions for legacy Adxstudio Portals v7"
 author: tapanm-msft
-manager: kumarvivek
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 

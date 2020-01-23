@@ -2,7 +2,7 @@
 title: "Use control flow tags for a portal | MicrosoftDocs"
 description: "Learn about control flow tags available in portal."
 author: tapanm-msft
-manager: kumarvivek
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 

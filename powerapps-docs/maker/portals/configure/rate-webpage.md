@@ -2,7 +2,7 @@
 title: "Rate or vote on a webpage on a portal | MicrosoftDocs"
 description: "Instructions to enable and manage ratings on a web page on a portal."
 author: tapanm-msft
-manager: kumarvivek
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 

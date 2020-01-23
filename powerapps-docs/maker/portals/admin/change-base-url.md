@@ -2,7 +2,7 @@
 title: "Change the base URL of a portal | MicrosoftDocs"
 description: "Learn how to change the base URL of a portal."
 author: tapanm-msft
-manager: kumarvivek
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 

@@ -2,7 +2,7 @@
 title: "Configure a conditional step type for a portal | MicrosoftDocs"
 description: "Instructions to add and configure a conditional step type for a portal."
 author: tapanm-msft
-manager: kumarvivek
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 

@@ -2,7 +2,7 @@
 title: "Place child nodes by using shortcuts for a portal  | MicrosoftDocs"
 description: "Instructions to place child nodes by using shortcuts for portals."
 author: tapanm-msft
-manager: kumarvivek
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 

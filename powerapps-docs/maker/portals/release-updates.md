@@ -2,7 +2,7 @@
 title: "Release updates in Power Apps portals | MicrosoftDocs"
 description: "Learn about release updates of Power Apps portals."
 author: tapanm-msft
-manager: kumarvivek
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 

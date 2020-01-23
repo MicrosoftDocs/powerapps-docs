@@ -2,7 +2,7 @@
 title: "Create and manage page templates in Power Apps portals | MicrosoftDocs"
 description: "Learn how to create and manage page templates in Power Apps portals."
 author: tapanm-msft
-manager: kumarvivek
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 

@@ -2,7 +2,7 @@
 title: "Store source content by using web templates on a portal | MicrosoftDocs"
 description: "Instructions to store content by using web templates on a portal."
 author: tapanm-msft
-manager: kumarvivek
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 

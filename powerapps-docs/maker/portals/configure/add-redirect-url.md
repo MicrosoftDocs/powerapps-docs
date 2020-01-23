@@ -2,7 +2,7 @@
 title: "Redirect to a new URL on a portal | MicrosoftDocs"
 description: "Instructions to create a redirect URL to redirect a user to another page in a site."
 author: tapanm-msft
-manager: kumarvivek
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 

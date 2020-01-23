@@ -2,7 +2,7 @@
 title: "Add geolocation to a managed form in a portal | MicrosoftDocs"
 description: "Instructions to add geolocation to a managed form."
 author: tapanm-msft
-manager: kumarvivek
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 

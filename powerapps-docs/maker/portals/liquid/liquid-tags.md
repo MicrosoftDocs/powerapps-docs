@@ -2,7 +2,7 @@
 title: "Use Liquid tags for a portal | MicrosoftDocs"
 description: "Learn about the available liquid tags in a portal."
 author: tapanm-msft
-manager: kumarvivek
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 

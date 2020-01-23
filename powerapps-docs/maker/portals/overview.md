@@ -2,7 +2,7 @@
 title:  What is Power Apps portals? | Microsoft Docs
 description: Design and build websites using Power Apps which allow external users to interact with the data stored in the Common Data Service.
 author: tapanm-msft
-manager: kumarvivek
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 

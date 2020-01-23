@@ -2,7 +2,7 @@
 title: "Migrate portal configuration | MicrosoftDocs"
 description: "Learn how to migrate portal configuration."
 author: tapanm-msft
-manager: kumarvivek
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 

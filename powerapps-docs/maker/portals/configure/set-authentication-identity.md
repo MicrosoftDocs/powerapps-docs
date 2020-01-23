@@ -2,7 +2,7 @@
 title: "Set authentication identity for a portal  | MicrosoftDocs"
 description: "Instructions to set authentication identity for a portal."
 author: tapanm-msft
-manager: kumarvivek
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 

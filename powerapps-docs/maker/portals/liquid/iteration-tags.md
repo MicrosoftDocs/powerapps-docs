@@ -2,7 +2,7 @@
 title: "Use iteration tags for a portal | MicrosoftDocs"
 description: "Learn about iteration tags available in portal"
 author: tapanm-msft
-manager: kumarvivek
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 

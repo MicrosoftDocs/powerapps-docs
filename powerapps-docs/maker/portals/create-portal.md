@@ -2,7 +2,7 @@
 title: Create a portal in Power Apps | Microsoft Docs
 description: Instructions to create a portal in Power Apps.
 author: tapanm-msft
-manager: kumarvivek
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 

@@ -2,7 +2,7 @@
 title: "Define entity forms | MicrosoftDocs"
 description: "Instructions to create entity forms in a portal."
 author: tapanm-msft
-manager: kumarvivek
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 

@@ -2,7 +2,7 @@
 title: "Use hybrid navigation to render page hierarchy for a portal | MicrosoftDocs"
 description: "Instructions to use hybrid navigation to render page hierarchy for a portal."
 author: tapanm-msft
-manager: kumarvivek
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 

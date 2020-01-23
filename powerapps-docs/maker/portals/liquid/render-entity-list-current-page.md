@@ -2,7 +2,7 @@
 title: "Render the entity list associated with the current page in a portal | MicrosoftDocs"
 description: "Sample code to render the entity list associated with the current page in a portal."
 author: tapanm-msft
-manager: kumarvivek
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 

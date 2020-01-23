@@ -2,7 +2,7 @@
 title: "Use template tags for a portal | MicrosoftDocs"
 description: "Learn about template tags available in portal"
 author: tapanm-msft
-manager: kumarvivek
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 

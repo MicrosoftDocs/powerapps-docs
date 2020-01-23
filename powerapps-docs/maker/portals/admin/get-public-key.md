@@ -2,7 +2,7 @@
 title: "Download public key of a portal | MicrosoftDocs"
 description: "Learn how to download public key of a portal."
 author: tapanm-msft
-manager: kumarvivek
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 

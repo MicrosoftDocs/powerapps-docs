@@ -2,7 +2,7 @@
 title: "Set up Power BI integration with your portal | MicrosoftDocs"
 description: "Learn how to set up Power BI integration with your portal."
 author: tapanm-msft
-manager: kumarvivek
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 

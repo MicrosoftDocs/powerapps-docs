@@ -2,7 +2,7 @@
 title: "Search within file attachment content in a portal | MicrosoftDocs"
 description: "Learn how to configure your portal to search within file attachment content in a portal."
 author: tapanm-msft
-manager: kumarvivek
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 

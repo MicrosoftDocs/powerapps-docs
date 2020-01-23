@@ -2,7 +2,7 @@
 title: "Configure web form properties for a portal | MicrosoftDocs"
 description: "Instructions to configure web form properties for a portal."
 author: tapanm-msft
-manager: kumarvivek
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 

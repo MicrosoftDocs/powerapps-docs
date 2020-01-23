@@ -2,7 +2,7 @@
 title: "Identify and fix customer issues with a portal | MicrosoftDocs"
 description: "Learn to identify and fix customer issues with a portal."
 author: tapanm-msft
-manager: kumarvivek
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 

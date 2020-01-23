@@ -2,7 +2,7 @@
 title: "Manage web links | MicrosoftDocs"
 description: "Instructions to manage web links."
 author: tapanm-msft
-manager: kumarvivek
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 

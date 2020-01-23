@@ -2,7 +2,7 @@
 title: "Upgrade a portal | MicrosoftDocs"
 description: "Learn how to upgrade a portal."
 author: tapanm-msft
-manager: kumarvivek
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 

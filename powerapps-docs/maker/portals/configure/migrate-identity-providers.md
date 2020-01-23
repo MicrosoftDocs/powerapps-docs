@@ -2,7 +2,7 @@
 title: "Migrate identity providers to Azure AD B2C | MicrosoftDocs"
 description: "Learn how to migrate identity providers to Azure AD B2C."
 author: tapanm-msft
-manager: kumarvivek
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 

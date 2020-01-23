@@ -2,7 +2,7 @@
 title: "Create web roles for a portal | MicrosoftDocs"
 description: "Instructions to create web roles for a portal."
 author: tapanm-msft
-manager: kumarvivek
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 

@@ -2,7 +2,7 @@
 title: "Gather feedback by using polls on a portal | MicrosoftDocs"
 description: "Instructions to create polls on a portal and gather feedback by using them."
 author: tapanm-msft
-manager: kumarvivek
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 

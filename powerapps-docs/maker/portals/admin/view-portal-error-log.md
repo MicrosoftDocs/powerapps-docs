@@ -2,7 +2,7 @@
 title: "Viewing portal error logs and storing them in Azure Blob storage | MicrosoftDocs"
 description: "Learn how to view portal error logs and store them in your Azure Blob storage account."
 author: tapanm-msft
-manager: kumarvivek
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 

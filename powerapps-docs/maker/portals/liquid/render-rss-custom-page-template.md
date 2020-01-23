@@ -2,7 +2,7 @@
 title: "Render an RSS feed using custom page template for a portal | MicrosoftDocs"
 description: "Instructions to create a custom page template and use it to render an RSS feed."
 author: tapanm-msft
-manager: kumarvivek
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 

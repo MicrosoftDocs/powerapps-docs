@@ -2,7 +2,7 @@
 title: "Azure AD B2C provider settings for portals | MicrosoftDocs"
 description: "Instructions to enable Azure AD B2C provider settings for portals."
 author: tapanm-msft
-manager: kumarvivek
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 

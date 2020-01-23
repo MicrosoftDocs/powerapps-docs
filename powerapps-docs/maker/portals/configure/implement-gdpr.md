@@ -2,7 +2,7 @@
 title: "Implement General Data Protection Regulations in Power Apps portals  | MicrosoftDocs"
 description: "Learn how to implement General Data Protection Regulations in Power Apps portals."
 author: tapanm-msft
-manager: kumarvivek
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 

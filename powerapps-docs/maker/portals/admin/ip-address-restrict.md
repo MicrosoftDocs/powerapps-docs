@@ -2,7 +2,7 @@
 title: "Restrict access to a portal by using IP address | MicrosoftDocs"
 description: "Instructions to restrict portal access by IP address."
 author: tapanm-msft
-manager: kumarvivek
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 

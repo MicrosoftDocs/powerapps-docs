@@ -2,7 +2,7 @@
 title: "Create a custom page template by using Liquid and a web template page template for a portal | MicrosoftDocs"
 description: "Instructions to create a custom page template by using Liquid operators."
 author: tapanm-msft
-manager: kumarvivek
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 

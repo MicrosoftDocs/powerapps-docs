@@ -2,7 +2,7 @@
 title: "Configure notes on entity forms and web forms for a portal | MicrosoftDocs"
 description: "Instructions to add and configure notes on entity forms and web forms in a portal."
 author: tapanm-msft
-manager: kumarvivek
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 

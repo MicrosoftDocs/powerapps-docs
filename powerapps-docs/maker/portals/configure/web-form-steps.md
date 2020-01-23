@@ -2,7 +2,7 @@
 title: "Configure a web form steps for a portal | MicrosoftDocs"
 description: "Instructions to create a web form step for a web form on a portal."
 author: tapanm-msft
-manager: kumarvivek
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
