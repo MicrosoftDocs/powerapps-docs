@@ -431,6 +431,8 @@
     items:
     - name: Download tools from NuGet 
       href: download-tools-nuget.md
+    - name: Install Powe Apps CLI
+      href: get-cli-tooling.md
   - name: Community Tools
     href: community-tools.md
   - name: Testing tools
