@@ -2,7 +2,7 @@
 title: "View activities in a portal timeline | MicrosoftDocs"
 description: "Instructions to view all activities in a portal Timeline."
 author: tapanm-msft
-manager: kumarvivek
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
