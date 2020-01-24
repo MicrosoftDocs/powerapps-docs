@@ -15,7 +15,7 @@ ms.assetid: 0a11feb1-0b7d-4591-b7b3-8e45d4e58805
 
 # Metadata
 
-Provides all the metadata information about the attributes
+Provides all the metadata information about the attributes.
 
 ## Available for 
 

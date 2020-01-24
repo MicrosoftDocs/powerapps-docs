@@ -16,7 +16,7 @@ search.app:
   - D365CE
 ---
 
-# Create a queue
+# Create a queue (early bound)
 
 This sample shows how to create a simple queue and set the required attributes using the [IOrganizationService.Create](https://docs.microsoft.com/dotnet/api/microsoft.xrm.sdk.iorganizationservice.create?view=dynamics-general-ce-9) message.
 

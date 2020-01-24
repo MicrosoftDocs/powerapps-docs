@@ -16,7 +16,7 @@ search.app:
   - D365CE
 ---
 
-#  Merge two record
+# Merge two record
 
 This sample shows how to merge two record. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/MergeTwoRecords).
 

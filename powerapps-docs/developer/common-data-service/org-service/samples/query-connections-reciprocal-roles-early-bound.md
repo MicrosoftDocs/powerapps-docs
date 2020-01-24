@@ -15,7 +15,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Sample: Query connections by reciprocal roles
+# Sample: Query connections by reciprocal roles (early bound)
 
 <!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/sample-query-connections-reciprocal-roles-early-bound -->
 
@@ -34,6 +34,7 @@ This sample shows how to create matching roles and then find a matching role for
 In order to simulate the scenario described in [What this sample does](#what-this-sample-does), the sample will do the following:
 
 ### Setup
+
 1. Checks for the current version of the org.
 2. Defines some anonymous types to define the range of possible connection property values.
 3. The `ConnectionRole`creates the primary connection role instance.

@@ -73,3 +73,12 @@ If a component is created using the CLI version lower than 0.4.3, you will encou
         </packageSourceCredentials>  
        </configuration>
      ```
+
+**Web resource size is too big**
+
+Error  **Import Solution Failed: Web resource content size is too big**.
+
+**Workaround**
+
+1. When you're creating the `bundle.js` file from the CLI tooling, it bundles lot of components which makes the file large. Remove some of the components that are not necessary. 
+2. Build the component in `production` mode by modifying the `node_modules/pcf-scripts/webpackconfig.js` file.
