@@ -1508,7 +1508,7 @@
       href: ./common-data-service/use-solutions-for-your-customizations.md
     - name: Import solutions
       href: ./common-data-service/import-update-export-solutions.md
-    - name: Update solutions
+    - name: Update or upgrade solutions
       href: ./common-data-service/update-solutions.md
     - name: Export solutions
       href: ./common-data-service/export-solutions.md      

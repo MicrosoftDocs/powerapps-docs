@@ -1,6 +1,6 @@
 ---
-title: "Import, update and upgrade a solution | MicrosoftDocs"
-description: "Learn how to import, update and upgrade a solution in Power Apps"
+title: "Update or upgrade a solution | MicrosoftDocs"
+description: "Learn how to update or upgrade a solution in Power Apps"
 ms.custom: ""
 ms.date: 01/24/2020
 ms.reviewer: ""
@@ -23,38 +23,7 @@ search.app:
   - D365CE
 ---
 
-# Import, update, and upgrade a solution  
-[!INCLUDE [applies-to-on-premises](../includes/applies-to-on-premises.md)] [Import, update, and export solutions](/powerapps/maker/common-data-service/import-update-export-solutions)
-
-This topic describes how to import, update, and upgrade a solution. 
-  
-## Import a solution
-You can import solutions manually using the steps below. Only import solutions that you've obtained from a trusted source. Customizations might include code that can send data to external sources. 
-
-1. [!INCLUDE[proc_settings_solutions](../includes/proc-settings-solutions.md)]  
-
-2. In the solutions list menu, choose **Import**.  
-
-3. In the **Import Solution** dialog, **Select Solution Package** step browse to the compressed (.zip or .cab) file that contains the solution you want to import.  
-
-4. Choose **Next**.  
-
-5. You can view information about the solution before you choose **Import**.  
-
-6. You may need to wait a few moments while the solution import completes. If it is successful, you can view the results and choose **Close**.  
-
-   If you have imported any changes that require publishing, you must publish customizations before they will be available. 
-
-   If the import isn’t successful, you will see a report showing any errors or warnings that were captured. You can choose **Download Log File** to capture details about what caused the import to fail. The most common cause for a solution import to fail is that the solution did not contain some required solution components.  
-
-   When you download the log file, you will find an XML file that you can open using [!INCLUDE[pn_MS_Excel_Full](../includes/pn-ms-excel-full.md)] and view the contents.  
-
-> [!NOTE]
->  You can’t edit an active routing rule set. Therefore, if you’re importing a solution that includes an active routing rule set into an organization where the rule already exists with the same ID, the solution import will fail. [!INCLUDE[proc_more_information](../includes/proc-more-information.md)] [Create rules to automatically route cases](../../../customer-service/create-rules-automatically-route-cases.md)  
-
-<a name="BKMK_UpdateSolutions"></a>   
-
-## Update or upgrade a solution  
+# Update or upgrade a solution  
 There are times when you may wish to install an update to an existing managed solution. The procedure is similar to installing a new managed solution, except you will get some different options. If you are updating a solution you got from someone else, you should get guidance from the solution publisher about which options you should choose.  
 
 1. [!INCLUDE[proc_settings_solutions](../includes/proc-settings-solutions.md)]  
