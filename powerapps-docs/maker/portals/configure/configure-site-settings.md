@@ -1,13 +1,13 @@
 ---
 title: "Configure site settings for a portal | MicrosoftDocs"
 description: "Instructions to add and configure site settings for a portal and global settings for all portals in your organization."
-author: sbmjais
-manager: shujoshi
+author: tapanm-msft
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 10/18/2019
-ms.author: shjais
+ms.author: tapanm
 ms.reviewer:
 ---
 

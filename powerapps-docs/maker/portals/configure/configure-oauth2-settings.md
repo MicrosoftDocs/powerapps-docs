@@ -2,7 +2,7 @@
 title: "Configure OAuth2 provider settings for a portal  | MicrosoftDocs"
 description: "Instructions to add and configure OAuth2 provider settings for a portal."
 author: tapanm-msft
-manager: kumarvivek
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
