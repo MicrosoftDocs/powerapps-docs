@@ -352,6 +352,8 @@
               href: ./canvas-apps/controls/control-shapes-icons.md
             - name: Slider
               href: ./canvas-apps/controls/control-slider.md
+            - name: Stream Video
+              href: ./canvas-apps/controls/control-stream-video.md
             - name: Label
               href: ./canvas-apps/controls/control-text-box.md
             - name: Text input
@@ -418,6 +420,8 @@
             href: ./canvas-apps/functions/object-app.md
           - name: Asin
             href: ./canvas-apps/functions/function-trig.md
+          - name: Assert
+            href: ./canvas-apps/functions/function-assert.md
           - name: AsType
             href: ./canvas-apps/functions/function-astype-istype.md
           - name: Atan
@@ -660,6 +664,8 @@
             href: ./canvas-apps/functions/function-set.md
           - name: SetFocus
             href: ./canvas-apps/functions/function-setfocus.md
+          - name: SetProperty
+            href: ./canvas-apps/functions/function-setproperty.md
           - name: ShowColumns
             href: ./canvas-apps/functions/function-table-shaping.md
           - name: Shuffle
@@ -700,6 +706,8 @@
             href: ./canvas-apps/functions/function-dateadd-datediff.md
           - name: Today
             href: ./canvas-apps/functions/function-now-today-istoday.md
+          - name: Trace
+            href: ./canvas-apps/functions/function-trace.md
           - name: Trim
             href: ./canvas-apps/functions/function-trim.md
           - name: TrimEnds
@@ -792,6 +800,12 @@
           href: ./canvas-apps/set-aspect-ratio-portrait-landscape.md
         - name: Create responsive layout
           href: ./canvas-apps/create-responsive-layout.md
+  - name: Test an app with Test Studio
+    items:
+    - name: Test Studio Overview
+      href: ./canvas-apps/test-studio.md
+    - name: Working with Test Studio
+      href: ./canvas-apps/working-with-test-studio.md
   - name: Customize a SharePoint list form
     items:
       - name: Make basic changes

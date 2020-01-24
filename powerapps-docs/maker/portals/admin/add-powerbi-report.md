@@ -1,13 +1,13 @@
 ---
 title: "Add a Power BI report or dashboard to a web page in a portal | MicrosoftDocs"
 description: "Instructions to add a Power BI report or dashboard to a web page in the portal."
-author: sbmjais
-manager: shujoshi
+author: tapanm-msft
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 11/22/2019
-ms.author: shjais
+ms.author: tapanm
 ms.reviewer:
 ---
 

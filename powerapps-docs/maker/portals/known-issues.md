@@ -1,13 +1,13 @@
 ---
 title: Known issues in Power Apps portals | Microsoft Docs
 description: Learn about the known issues in Power Apps portals 
-author: sbmjais
-manager: shujoshi
+author: tapanm-msft
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/07/2019
-ms.author: shjais
+ms.date: 01/17/2020
+ms.author: tapanm
 ms.reviewer:
 ---
 
@@ -15,6 +15,8 @@ ms.reviewer:
 
 
 ## General issues
+
+- Due to ongoing compatibility issues between the updated Yahoo YDN OAuth provider endpoint and Power Apps portals, users are temporarily unable to authenticate with [Yahoo identity provider](./configure/configure-oauth2-settings.md#yahoo-ydn-app-settings).
 
 - The **Modified Date** for the app might be incorrect because these are pre-provisioned apps and could have been provisioned earlier.
 

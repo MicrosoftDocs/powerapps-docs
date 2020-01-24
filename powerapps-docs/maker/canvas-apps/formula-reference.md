@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 08/15/2019
+ms.date: 12/19/2019
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -44,6 +44,8 @@ Other elements include:
 **[App](functions/object-app.md)** – Provides information about the currently running app and control over the app's behavior.
 
 **[Asin](functions/function-trig.md)** – Returns the arcsine of a number, in radians.
+
+**[Assert](functions/function-assert.md)** – Evaluates to true or false in a test.
 
 **[AsType](functions/function-astype-istype.md)** – Treats a record reference as a specific entity type.
 
@@ -301,6 +303,8 @@ Other elements include:
 
 **[SetFocus](functions/function-setfocus.md)** – Moves input focus to a specific control.
 
+**[SetPropertry](functions/function-setproperty.md)** – Simulates interactions with input controls.
+
 **[ShowColumns](functions/function-table-shaping.md)** – Returns a table with only selected columns.
 
 **[Shuffle](functions/function-shuffle.md)** – Randomly reorders the records of a table.
@@ -343,6 +347,8 @@ Other elements include:
 **[TimeZoneOffset](functions/function-dateadd-datediff.md)** – Returns the difference between UTC and the user's local time in minutes.
 
 **[Today](functions/function-now-today-istoday.md)** – Returns the current date/time value.
+
+**[Trace](functions/function-trace.md)** - Provide additional information in your test results.
 
 **[Trim](functions/function-trim.md)** – Removes extra spaces from the ends and interior of a string of text.
 

@@ -1,14 +1,14 @@
 ---
 title: "Add azure storage web resource to a form | MicrosoftDocs"
 description: "Steps to add azure storage web resource to a form to enable uploading attachments to Azure Storage."
-author: sbmjais
-manager: shujoshi
+author: tapanm-msft
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/11/2019
-ms.author: shjais
-ms.reviewer:
+ms.date: 01/07/2020
+ms.author: tapanm
+ms.reviewer: tapanm
 ---
 
 # Add the Azure Storage web resource to a form
@@ -62,7 +62,7 @@ The paper-clip icon has been replaced with a cloud icon to denote that this file
 
 > [!Note]
 > You must add cross-origin resource sharing (CORS) rule on your Azure Storage account as follows, otherwise you will see the regular attachment icon rather than the cloud icon.
-> - **Allowed origins**: Specify your domain. For example, `http://contoso.crm.dynamics.com`.
+> - **Allowed origins**: Specify your domain. For example, `https://contoso.crm.dynamics.com`.
 > - **Allowed verbs**: GET, PUT, DELETE, HEAD, POST
 > - **Allowed headers**: Specify the request headers that the origin domain may specify on the CORS request. For example, x-ms-meta-data\*, x-ms-meta-target\*. For this scenario, you must specify *, otherwise the web resource will not render properly.
 > - **Exposed headers**: Specify the response headers that may be sent in the response to the CORS request and exposed by the browser to the request issuer. For example, x-ms-meta-\*.

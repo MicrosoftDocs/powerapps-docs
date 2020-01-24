@@ -1,13 +1,13 @@
 ---
 title: Portal templates available in Power Apps | Microsoft Docs
 description: Learn about various portal templates available in Power Apps.
-author: sbmjais
-manager: shujoshi
+author: tapanm-msft
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 11/07/2019
-ms.author: shjais
+ms.author: tapanm
 ms.reviewer:
 ---
 
