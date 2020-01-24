@@ -29,7 +29,7 @@ search.app:
 > [!IMPORTANT]
 > Exporting the Default Solution is not supported. 
 
-### Export from Power Apps
+## Export from Power Apps
   
 1.  Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select **Solutions** from the left navigation.   
   
@@ -48,7 +48,7 @@ search.app:
 
 The export can take several minutes to complete. Once finished, the export .zip file is available in the download folder specified by your web browser.
 
-### Export from the classic experience
+## Export from the classic experience
 
 1.  Select **Solutions** from the left navigation and then select **Switch to classic**. 
   
