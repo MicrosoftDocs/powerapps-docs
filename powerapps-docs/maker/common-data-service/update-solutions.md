@@ -26,13 +26,13 @@ search.app:
 # Update or upgrade a solution  
 There are times when you may wish to install an update to an existing managed solution. The procedure is similar to installing a new managed solution, except you will get some different options. If you are updating a solution you got from someone else, you should get guidance from the solution publisher about which options you should choose.  
 
-1. [!INCLUDE[proc_settings_solutions](../includes/proc-settings-solutions.md)]  
+1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select **Solutions** from the left navigation.  
 
-2. In the solutions list menu choose **Import**.  
+2. On the command bar select **Import**.  
 
-3. In the **Import Solution** dialog, **Select Solution Package** step browse to the compressed (.zip or .cab) file that contains the solution you want to update.  
+3. In the **Select Solution Package** page, select **Browse** to locate the compressed (.zip or .cab) file that contains the solution you want to update.  
 
-4. Choose **Next**.  
+4. Select **Next**.  
 
 5. You can view information about the solution before you choose **Next**. This page will display a yellow bar saying **This solution package contains an update for a solution that is already installed**.  
 
