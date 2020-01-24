@@ -1,9 +1,8 @@
 ---
-title: "getMax (Client API reference)| MicrosoftDocs"
-ms.date: 10/31/2018
+title: "getMin (Client API reference)| MicrosoftDocs"
+ms.date: 01/24/2019
 ms.service: powerapps
 ms.topic: "reference"
-applies_to: "Dynamics 365 (online)"
 ms.assetid: 9a04b52a-2bc7-4572-bd3e-8b9622602092
 author: "KumarVivek"
 ms.author: "kvivek"
@@ -14,7 +13,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# getMax (Client API reference)
+# getMin (Client API reference)
 
 
 
