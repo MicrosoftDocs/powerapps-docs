@@ -36,7 +36,7 @@ There are times when you may wish to install an update to an existing managed so
 
 5. You can view information about the solution before you choose **Next**. This page will display a yellow bar saying **This solution package contains an update for a solution that is already installed**.  
 
-6. You will have the following Solution Action options:  
+6. Select from the following solution action options:  
    - **Upgrade (recommended)**
         This option upgrades your solution to the latest version and rolls up all previous patches in one step.  Any components associated to the previous solution version that are not in the newer solution version will be deleted. This option is the recommended option as it will ensure that your resulting configuration state is consistent with the importing solution including removal of components that are no longer part of the solution.
         
@@ -46,7 +46,7 @@ There are times when you may wish to install an update to an existing managed so
    - **Update (not recommended)**
         This option replaces your solution with this version.  Components that are not in the newer solution will not be deleted and will remain in the system.  This option is not recommended as your destination environment will differ in configuration from your source environment and could cause issues that are difficult to reproduce and diagnose.
         
-7. You will have the following customization options:
+7. Select from the following customization options:
 
    - **Maintain customizations (recommended)**  
 
@@ -56,13 +56,13 @@ There are times when you may wish to install an update to an existing managed so
 
         Selecting this option will overwrite or remove any unmanaged customizations previously performed on components included in this solution. This option does not affect components that support merge behavior (forms, sitemap, ribbon, app modules).  Components that have other managed solutions on top of the existing solution you are replacing do also still remain on top and are not affected by this option.  
 
-8. You will have the following option available to enable for Post Import Actions:
+8. Decide whether to enable the following option for post import actions:
    - **Enable any SDK message processing steps included in the solution**  
         Selecting this option will enable plugins and workflows that are included in the solution.
         
-9. Choose **Next**.  
+9. Select **Next**.  
 
-10. You may need to wait a few moments while the solution import completes. If it is successful, you can view the results and choose **Close**.  
+10. You may need to wait a few moments while the solution import completes. If it is successful, you can view the results and select **Close**.  
 
    If you have imported any changes that require publishing, you must publish customizations before they will be available. 
 
