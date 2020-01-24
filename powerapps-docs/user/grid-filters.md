@@ -89,4 +89,4 @@ To switch back to the old quick find search experience that uses an entity's qui
  
 1. From the upper-right corner select the **Gear** icon (![Gear icon](media/selection-rule-gear-button.png)). Then select **Advanced settings**. 
 2. Go to **Settings** > **Administration** > **System Settings**.
-3. on the **General** tab, under **Set up Quick Find** select **Yes** for **Use quick find view of an entity for searching on grids and sub-grids**.
+3. on the **General** tab, under **Set up Quick Find** select **Yes**, for **Use quick find view of an entity for searching on grids and sub-grids**.
