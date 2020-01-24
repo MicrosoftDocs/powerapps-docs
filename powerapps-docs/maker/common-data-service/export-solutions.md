@@ -72,7 +72,7 @@ The export can take several minutes to complete. Once finished, the export .zip 
 
 <a name="BKMK_SettingsOptionsOnSolutionExport"></a>  
  
-## Settings options for solution export  
+### Settings options for solution export  
  If you export the solution from Power Apps, please disregard this section. The following table shows the options available when you export a solution from the classic experience.  
   
 |Group|Setting|Description|  
