@@ -1,14 +1,14 @@
 ---
 title: Frequently asked questions | Microsoft Docs
 description: Frequently asked questions in Power Apps portals.
-author: sbmjais
-manager: shujoshi
+author: tapanm-msft
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 12/27/2019
-ms.author: shjais
-ms.reviewer: tapanm
+ms.date: 01/17/2020
+ms.author: tapanm
+ms.reviewer: 
 ---
 
 # Power Apps portals FAQ
@@ -16,6 +16,29 @@ ms.reviewer: tapanm
 We have compiled a list of frequently asked questions and provided brief answers to help you get to your information quickly.
 
 ## General
+
+### What is the difference between Power Apps portals, Dynamics 365 portals and add-on portals?
+
+With the launch of Power Apps portals on October 1, 2019, Dynamics 365 portals are called as Power Apps portals. In other words, all portals are referred to as **Power Apps portals**.
+
+One of the major changes introduced in portals after October 1, 2019 is the licensing model. Earlier, portals were licensed add-ons to Dynamics 365 apps while certain Dynamics 365 licenses included a default portal add-on. After October 1, 2019, portals are [licensed based on usage](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#can-you-share-more-details-regarding-the-new-power-apps-portals-licensing). All existing portals will be part of a transition period based on current customer contract after which they will need to be converted to a new licensing model.
+
+You can check the type of a portal from the [Power Apps Portals admin center](./admin/admin-overview.md):
+
+![Power Apps portals type](./media/power-apps-portals-type.png)
+
+For add-on portals, the portal type has 'add-on' suffix added. For example, a production add-on portal type lists as 'Production (add-on)'.
+
+There is no difference in functionality between Power Apps portals with capacity-based licenses and add-on based licenses. However, provisioning method for portals with capacity-based licenses and add-on based licenses is different.
+
+You can create Power Apps portal with capacity-based license using steps described in following articles:
+
+- [Create a Common Data Service starter portal](create-portal.md)
+- [Create a portal with Dynamics 365 environment](create-dynamics-portal.md)
+
+To create Power Apps portal with add-on based license, see [provisioning a portal using portal add-on](provision-portal-add-on.md).
+
+See [Power Apps portals licensing FAQ](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#what-is-the-difference-between-power-apps-portals-and-dynamics-365-portals-in-terms-of-licensing) for licensing differences between add-on based licenses and capacity-based licenses.
 
 ### When is an add-on portal in suspended state?
 

@@ -256,8 +256,7 @@ byte[]
 In the above request, the next block of data is being uploaded. After all image data has been received by the web service, a thumbnail image is automatically created by the web service.
 
 ### See also  
-[Sample: Set and retrieve entity images](/dynamics365/customer-engagement/developer/sample-set-retrieve-entity-images)
 [File attributes](file-attributes.md)  
 [Introduction to Entities in Dynamics 365](/dynamics365/customer-engagement/developer/introduction-entities)   
- [Introduction to entity attributes in Dynamics 365](/dynamics365/customer-engagement/developer/introduction-entity-attributes)   
- [Sample: Set and retrieve entity images](/dynamics365/customer-engagement/developer/sample-set-retrieve-entity-images)
+[Introduction to entity attributes in Dynamics 365](/dynamics365/customer-engagement/developer/introduction-entity-attributes)   
+[Sample: Set and retrieve entity images](/dynamics365/customerengagement/on-premises/developer/sample-set-retrieve-entity-images)

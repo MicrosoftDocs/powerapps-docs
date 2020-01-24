@@ -1,13 +1,13 @@
 ---
 title: "Configure OAuth2 provider settings for a portal  | MicrosoftDocs"
 description: "Instructions to add and configure OAuth2 provider settings for a portal."
-author: sbmjais
-manager: shujoshi
+author: tapanm-msft
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/18/2019
-ms.author: shjais
+ms.date: 01/17/2020
+ms.author: tapanm
 ms.reviewer:
 ---
 
@@ -96,6 +96,9 @@ In general, if an OAuth provider uses app settings that require a redirect URI v
 3. Select **Add Application**.
 
 ### Yahoo! YDN App settings
+
+> [!NOTE]
+> Due to ongoing compatibility issues between the updated Yahoo YDN OAuth provider endpoint and Power Apps portals, users are temporarily unable to authenticate with Yahoo identity provider.
 
 1. Open [Yahoo! Developer Network](https://developer.yahoo.com/apps).
 2. Select **Create an App**.
