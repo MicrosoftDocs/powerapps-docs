@@ -1,13 +1,13 @@
 ---
 title: "Restrict access to a portal by using IP address | MicrosoftDocs"
 description: "Instructions to restrict portal access by IP address."
-author: sbmjais
-manager: shujoshi
+author: tapanm-msft
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 10/07/2019
-ms.author: shjais
+ms.author: tapanm
 ms.reviewer:
 ---
 

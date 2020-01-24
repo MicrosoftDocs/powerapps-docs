@@ -1,13 +1,13 @@
 ---
 title: "Invite contacts to your portal  | MicrosoftDocs"
 description: "Instructions to create and configure invitations in a portal."
-author: sbmjais
-manager: shujoshi
+author: tapanm-msft
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 11/04/2019
-ms.author: shjais
+ms.author: tapanm
 ms.reviewer:
 ---
 
