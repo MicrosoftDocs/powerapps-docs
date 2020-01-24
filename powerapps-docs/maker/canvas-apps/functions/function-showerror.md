@@ -66,11 +66,11 @@ Note: This function was previously named **ShowError** when it could only displa
 
 4. Change the type of message to indicate an error.  Add a second argument to our formula:
 
-	**Notify( "Hello, World", NotificationType.Error, 30000 )**
+	**Notify( "Hello, World", NotificationType.Error )**
 
 5. Click or press the button.
 
-	Now each time the button is clicked, the message **Hello, World** is displayed to the user as an error.  It will dismiss automatically in 30 seconds (30,000 milliseconds) if the user does not dismiss it themslves or press the button again.
+	Now each time the button is clicked, the message **Hello, World** is displayed to the user as an error.  It will dismiss automatically in 10 seconds (default timeout) if the user does not dismiss it themslves or press the button again.
 
 	![In the authoring environment, showing Button.OnSelect calling Notify and displaying the resulting Hello, World message as a red banner message for the user](media/function-showerror/hello-world-error.png)
 
