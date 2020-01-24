@@ -27,18 +27,18 @@ search.app:
 
  You can import solutions manually using the steps below. Only import solutions that you've obtained from a trusted source. Customizations might include code that can send data to external sources.   
   
-1.  Select **Solutions** from the left navigation.  
+1.  Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select **Solutions** from the left navigation.  
   
-2.  In the solutions list menu, select **Import**.  
+2.  On the command bar, select **Import**.  
 
     > [!div class="mx-imgBorder"]  
     > ![Import solution](media/solution-import.png "Import solution") 
   
-3.  In the **Import Solution** dialog **Select Solution Package** step, select **Choose file** and browse to the compressed (.zip or .cab) file that contains the solution you want to import. 
+3.  On the **Select Solution Package** page, select **Browse** to locate the compressed (.zip or .cab) file that contains the solution you want to import. 
   
 4.  Select **Next**.  
   
-5.  View information about the solution. Select **Import**.  
+5.  Information about the solution is displayed. Select **Import**.  
   
 6. You may need to wait a few moments while the import completes. View the results and then select **Close**.  
   

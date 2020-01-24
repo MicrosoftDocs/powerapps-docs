@@ -30,7 +30,7 @@ There are times when you may wish to install an update to an existing managed so
 
 2. On the command bar, select **Import**.  
 
-3. In the **Select Solution Package** page, select **Browse** to locate the compressed (.zip or .cab) file that contains the solution you want to update.  
+3. On the **Select Solution Package** page, select **Browse** to locate the compressed (.zip or .cab) file that contains the solution you want to update.  
 
 4. Select **Next**.  
 
