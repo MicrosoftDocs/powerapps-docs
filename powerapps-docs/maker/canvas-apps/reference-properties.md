@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm-msft
-ms.date: 11/26/2019
+ms.date: 01/24/2020
 ms.author: fikaradz
 search.audienceType:
   - maker
@@ -93,6 +93,8 @@ Configure the appearance and behavior of a control by setting one of its propert
 **[Shape](controls/control-shapes-icons.md)** – Display arrows and geometric shapes, such as rectangles.
 
 **[Slider](controls/control-slider.md)** – Specify a value by dragging a handle.
+
+**[Stream Video](controls/control-stream-video.md)** – Play videos and browse through channels from the Microsoft Stream service.
 
 **[Label](controls/control-text-box.md)** – Shows data such as text, numbers, dates, or currency,
 
