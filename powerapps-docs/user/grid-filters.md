@@ -15,7 +15,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Use filters on a grid
+# Use grid filters 
 
 Grids in the Unified Interface have been improved to increase the amount of data that can be seen on your screen. There are many different filtering options that are avilable. The type of data in the column determines which filter options are available. For example, the **Full Name** column in the **Contacts** grid will have different filter options than the **Activity Type** column in the **Activities** gird.
 
