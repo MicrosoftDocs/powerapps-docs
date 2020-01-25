@@ -67,3 +67,18 @@ Legend:
 5. **Search the view**: Enter text in the search field above the list to show only those records in the current view that contain your text.
 6. **Filtering and paging**: Select a letter to show only those records whose names start with that letter. If the list contains more records than can be shown on one page, use the paging arrows at the bottom of the list to move forward and backward through the pages.
 
+## Working with record views
+
+Record views show all the details about a single record and sometimes also provide special features for working with it. Usually you'll open a record view by selecting a record that appears in a list view, but you can also open a record view by following a link from a related record.
+
+![A typical record view](media/form-view.png "A typical record view")
+
+Legend:
+
+1. **Tabs**: Most record views are divided into tab. Each tab provides a collection of related fields from the record. When tabs are available, they're listed below the record name. Select any tab name to go to that tab. The current tab is shown underlined.
+2. **Related**: Nearly all types of records show a **Related** tab after you have saved them at least once. This tab is actually a drop-down list that you can use to find other types of records that use or reference the displayed record. 
+When you choose an entity name from the **Related** drop-down list, a new tab named for that entity opens, showing a list of all related records of that type. The **Related** tab remains available, and you can still use it to find other types of records that reference the current one.
+3. **Command bar**: Use the commands in the command bar to operate on the current record or perform a task related to the record. The available commands vary based on the record type, but you can typically use the command bar to go live, delete the record, refresh the page, email a link to the record, reassign the record owner, or export the record by using a Word template.
+4. **Heading bar**: Some record views display a few especially important fields in the heading bar, opposite the record name. These are typically fields that are fundamental to working with records of the current type (such as a the record name or record owner).
+5. **View and edit all field values**: In the main body of the record view, you'll find all of the fields related to the current tab, form view, and record type. Fields marked with a red asterisk are required, and you can't save the record without their having valid values. Fields marked with a blue plus sign are especially important or recommended, but are not strictly required. Fields showing a lock icon are read-only and can't be edited.
+
