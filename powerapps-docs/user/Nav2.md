@@ -98,3 +98,20 @@ The reference panel is a great way to get work done without moving away from the
 
 <div class="embeddedvideo"><iframe src="https://www.microsoft.com/videoplayer/embed/d8224c3f-6e20-4b8e-9d0d-b0f5602c7708" frameborder="0" allowfullscreen=""></iframe></div>
 
+## Notifications 
+
+There are three types of notifications that are shown on a form: Informational, Warning and Error. Notifications are always available at the top of the form, just above the header.
+
+When you select the error notification, it will take you to the field on the form where the error occurred.
+
+![Example of notifications](media/notifications.png "Example of notifications")
+
+If there is only one notification you will see a single line.
+
+![Example of single notifications](media/single_notification.png "Example of single notifications")
+
+If there is more than one notification, you will see the number of notifications. Select the chevron, to view each message.
+
+![Example of multiple notifications](media/multiple_notification.png "Example of multiple notifications")
+
+
