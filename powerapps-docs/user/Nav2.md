@@ -82,3 +82,19 @@ When you choose an entity name from the **Related** drop-down list, a new tab na
 4. **Heading bar**: Some record views display a few especially important fields in the heading bar, opposite the record name. These are typically fields that are fundamental to working with records of the current type (such as a the record name or record owner).
 5. **View and edit all field values**: In the main body of the record view, you'll find all of the fields related to the current tab, form view, and record type. Fields marked with a red asterisk are required, and you can't save the record without their having valid values. Fields marked with a blue plus sign are especially important or recommended, but are not strictly required. Fields showing a lock icon are read-only and can't be edited.
 
+## Record set navigation 
+Navigate through multiple records with preset views and queries. The record-focused navigation improves productivity by allowing users to jump from record to record in the list and easily navigate back without losing their working list.
+
+> [!div class="mx-imgBorder"]
+> ![Record set navigation](media/recordset1.png "Record set navigation")
+
+## Reference panel
+The reference panel is a great way to get work done without moving away from the screen you’re on. You can look up other related things, such as cases or opportunities for an account, within the context of the record you’re viewing without navigating to other screen.
+
+> [!div class="mx-imgBorder"]
+> ![Reference panel](media/reference-panel1.png "Reference panel")
+
+ Watch this video to learn more about the Reference Panel:
+
+<div class="embeddedvideo"><iframe src="https://www.microsoft.com/videoplayer/embed/d8224c3f-6e20-4b8e-9d0d-b0f5602c7708" frameborder="0" allowfullscreen=""></iframe></div>
+
