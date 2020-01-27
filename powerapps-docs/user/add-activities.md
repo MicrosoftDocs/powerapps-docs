@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 10/03/2019
+ms.date: 02/03/2020
 ms.author: mduelae
 ms.custom: ""
 ms.reviewer: ""
@@ -29,7 +29,16 @@ Add **Activities** in the **Timeline** wall to keep track of all your communicat
 - An email with an attached image will be shown inline with the body of the email.
 
   > [!div class="mx-imgBorder"]
-  > ![Timeline view of activities in Power Apps](media/TimelineViewOfActivity.png "Timeline view of activities in Power Apps")  
+  > ![Timeline view of activities in Power Apps](media/TimelineViewOfActivity.png "Timeline view of activities in Power Apps")
+
+  1. Search Records
+  2. Take notes
+  3. Add info and activities
+  4. Filter
+  5. More commands
+  6. Activity status
+  7. Activity icons
+  8. Date and time   
  
 ## Add an activity from the nav bar
  

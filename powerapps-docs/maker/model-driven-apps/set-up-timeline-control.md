@@ -1,7 +1,7 @@
 ---
 title: "Set up the timeline control (section) in PowerApps | MicrosoftDocs"
 description: "Learn how to set up the timeline control (section) in PowerApps"
-ms.date: 12/23/2019
+ms.date: 02/03/2020
 ms.service: powerapps
 author: "kabala123"
 ms.assetid: 7F495EE1-1208-49DA-9B02-17855CEB2FDF
@@ -19,7 +19,16 @@ search.app:
 The activities that you use in Timeline to keep track of all your communications with a customer or contact can be customized according to your business or organization requirements.
 
   > [!div class="mx-imgBorder"]
-  > ![Timeline view of activities in PowerApps](../../user/media/TimelineViewOfActivity.png "Timeline view of activities in PowerApps")  
+  > ![Timeline view of activities in PowerApps](../../user/media/TimelineViewOfActivity.png "Timeline view of activities in PowerApps")
+
+  1. Search Records
+  2. Take notes
+  3. Add info and activities
+  4. Filter
+  5. More commands
+  6. Activity status
+  7. Activity icons
+  8. Date and time
 
 To learn more, see [Add an appointment, email, phone call, note, or task activity to the timeline](../../user/add-activities.md).
 
@@ -192,6 +201,12 @@ Email card collapsed mode:
 
    > [!div class=mx-imgBorder] 
    > ![Timeline card in collapsed mode](media/email.png "Timeline card in collapsed mode")
+
+Email card hover mode:
+
+   > [!div class=mx-imgBorder] 
+   > ![Timeline card in collapsed mode](media/email-hover.png "Timeline card in collapsed mode")
+
 
 Timeline card expanded mode:
 
