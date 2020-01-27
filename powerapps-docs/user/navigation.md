@@ -106,6 +106,13 @@ When you select the error notification, it will take you to the field on the for
 
 ![Example of notifications](media/notifications.png "Example of notifications")
 
+Legend:
+
+1. **Info**: The notification is informational.
+2. **Warn**: The notification is a warning. 
+3. **Error**: The notification is an error. 
+
+
 If there is only one notification you will see a single line.
 
 ![Example of single notifications](media/single_notification.png "Example of single notifications")
