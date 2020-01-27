@@ -79,13 +79,13 @@ Forms provide the user interface (UI) that people use to create, view, or edit e
 To open the main form in a dialog using client API, you need to invoke the call using the [Xrm.Navigation.navigateTo](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/xrm-navigation/navigateto) method. The [Xrm.Navigation.navigateTo](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/xrm-navigation/navigateto) API method allows you to open the dialog with several options, including the size and position.
 
 > [!NOTE]
-> [Xrm.Navigation.openForm](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/xrm-navigation/openform) method is not supported to open main form dialog.
+> [Xrm.Navigation.openForm](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/xrm-navigation/openform) method is not supported to open a main form as a dialog.
 
 ## Examples
 
 ### Open a new record
 
-In this example, the dialog opens a new account form for creating a new record. The dialog pops up in the center using up 50% of the available window as a modal on top of the form it was invoked or called from.
+In this example, the dialog opens a new account form for creating a new record. The dialog pops up in the center using up to 50% of the available window as a modal on top of the form it was invoked or called from.
 
 ```JavaScript
 Xrm.Navigation.navigateTo({pageType:"entityrecord", entityName:"account", formType:2}, {target: 2, position: 1, width: {value: 50, unit:"%"}});
@@ -95,7 +95,7 @@ Xrm.Navigation.navigateTo({pageType:"entityrecord", entityName:"account", formTy
 
 ### Open an existing record
 
-In this example, the dialog opens an existing account record using the account entity id value over the contact form. Replace the entity id with any record id value if you want to open the record in the dialog.
+In this example, the dialog opens an existing account record using the account entity id value over the contact form. Replace the entity id with any record id value you want to open the record in the dialog.
 
 ```JavaScript
 Xrm.Navigation.navigateTo({pageType:"entityrecord", entityName:"account", formType:2, entityId:"xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"}, {target: 2, position: 1, width: {value: 80, unit:"%"}});
