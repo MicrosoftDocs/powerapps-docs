@@ -113,10 +113,12 @@ Legend:
 3. **Error**: The notification is an error. 
 
 
+### Single notification
 If there is only one notification you will see a single line.
 
 ![Example of single notifications](media/single_notification.png "Example of single notifications")
 
+### Multiple notifications
 If there is more than one notification, you will see the number of notifications. Select the chevron, to view each message.
 
 ![Example of multiple notifications](media/multiple_notification.png "Example of multiple notifications")
