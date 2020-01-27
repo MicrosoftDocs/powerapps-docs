@@ -257,9 +257,9 @@ To customize the card form, follow these steps:
 
 4.	Expand **Entities** under **Components** in the default solution pane.
 
-5.	Select an entity and select **Forms**. For example, select the **Task** entity.
+5.	Select an entity and select **Forms**. For example, select the **Email** entity.
 
-6.	Select the **Task Card form** record from the list. The **Task Card form** opens in a new browser window.
+6.	Select the **Email Card form** record from the list. The **Email Card form** opens in a new browser window.
 
 7.  Add, move, or delete the fields. To learn more, see [Add, configure, move, or delete fields on a form](add-move-or-delete-fields-on-form.md).
 
