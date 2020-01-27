@@ -223,6 +223,15 @@ When you enable diagnostic logging, you can search for particular errors that us
 
 ## Portal administration and management
 
+### Do portals use any static content from CDNs (Content Delivery Network) that I need to whitelist?
+
+Yes. Power Apps portals uses out of the box portal's static assets from Azure CDN that includes default JavaScript and CSS files for presentation that earlier rendered as part of the portal app. You must whitelist the following CDN URL to render portals successfully:
+
+    https://content.powerapps.com/resource/powerappsportal
+
+> [!NOTE]
+> Power Apps portals hosted in Microsoft Government Cloud do not use CDN.
+
 ### How do I use a custom login provider on my portal?
 
 Portals supports any custom login provider that provides support for standard authentication protocols. We support OpenIdConnect, SAML2, and WS-Federation protocols for any custom IDP. OAuth 2 is supported only for a fixed set of known IDPs. For more information on how to set up an IDP configuration, see [Configure portal authentication](configure/configure-portal-authentication.md).
