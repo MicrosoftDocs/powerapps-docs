@@ -3,14 +3,14 @@ title: "Export to data lake | MicrosoftDocs"
 description: "Learn how to export entity data to an Azure data lake in Power Apps"
 ms.custom: ""
 ms.date: 01/28/2020
-ms.reviewer: ""
+ms.reviewer: "Mattp123"
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to: 
   - "powerapps"
-author: "Mattp123"
+author: "sabinn-msft"
 ms.assetid: 
 ms.author: "matp"
 manager: "kvivek"
@@ -25,17 +25,19 @@ search.app:
 
 The export to data lake service is a pipeline to continuously export data from Common Data Service to Azure data lake. The export to data lake service is designed for enterprise big data analytics by delivering scalable high availability with disaster recover capabilities. Data is stored in the Common Data Model (CDM) format, which provides semantic consistency across apps and deployments. 
 
+![Export to data lake overview](media/export-data-lake-start.png)
+
 Export to data lake provides these features: 
 - Link or unlink the Common Data Service environment to a data lake in your Azure subscription. 
 - Continuous replication of entities to Azure data lake.
 - Initial write followed by incremental writes for data and metadata. 
-- Replicates standard and custom entities. 
+- Replicates both standard and custom entities. 
 - Replicates create, update, and delete operations. 
 - Continuous snapshot updates for large analytics scenarios. 
 - Facilitates metadata discovery and interoperability between data producers and consumers such as Power BI, Azure Data Factory, Azure Databricks, and Azure Machine Learning service.
 
 ## How data and metadata are exported
-The export to data lake service supports initial and incremental writes for entity data and metadata. Any data or metadata changes in Common Data Service is automatically pushed to the data lake without any additional action. This is a push, rather than pull operation. Changes are pushed to the destination without the need to set up refresh intervals. 
+The export to data lake service supports initial and incremental writes for entity data and metadata. Any data or metadata changes in Common Data Service are automatically pushed to the data lake without any additional action. This is a push, rather than pull operation. Changes are pushed to the destination without the need to set up refresh intervals. 
 
 Both standard and custom entities can be exported. Notice that the change tracking entity attribute in Common Data Service is used to keep the data synchronized in an efficient manner by detecting what data has changed since it was initially extracted or last synchronized. 
 
@@ -62,7 +64,7 @@ Follow the steps in the [Create an Azure Storage account](/azure/storage/blobs
    - **Subscription**. Select your subscription. 
    - **Resource group**. Select the resource group that contains the Storagev2 (general purpose v2) storage account.
    - **Storage account**. Select the Storagev2 (general purpose v2) storage account to use for the export. 
-4. Select the entities that you want to export to the data lake, and then select **Save**. Only entities with change tracking enabled can be exported. More information: [Enable change tracking](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/admin/enable-change-tracking-control-data-synchronization)
+4. Select the entities that you want to export to the data lake, and then select **Save**. Only entities with change tracking enabled can be exported. More information: [Enable change tracking](/dynamics365/customer-engagement/admin/enable-change-tracking-control-data-synchronization)
 
    > [!div class="mx-imgBorder"] 
    > ![Select entities for export](media/export-data-lake-select-entity.png)
