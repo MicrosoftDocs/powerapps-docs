@@ -72,7 +72,7 @@ The modules are Activities, Posts, and Notes. As a customizer, you can choose wh
 
 8.	Select the **Show selected** option for the **Show these modules** field in the **Filter by** container.
 
-9.	Select the modules you want to display to the users.
+9.	Select the modules you want to display to the users. Select only the modules that are required by your organization.
 
 10.	Specify the following in the **Additional Options** container.
 
@@ -82,7 +82,7 @@ The modules are Activities, Posts, and Notes. As a customizer, you can choose wh
     | Default Module for Create Experience | Select the module for which you want the default create experience in the timeline. <br><br> The default value is **Notes**.  | Notes |
     | Show filter pane | Select the checkbox if you want to display the filter icon for the users. If you leave the check box empty, there will be no filters for the users. |  |
     | Expand filter pane by default | Select the checkbox, by default, if you want to show the filter pane in the expanded mode. |
-    | Sort | Select the sorting order based on which the records are displayed on the timeline. The sorting is based on the field you choose for Activities. If a field doesn’t exist for the Post, Notes, or Activity, then the sorting is done based on the **Last Updated** field. <br><br>The default sort order is **Descending**.  | Descending |
+    | Sort | Select the sorting order based on which the records are displayed on the timeline. The sorting is based on the field you choose for Activities. If a field doesn’t exist for the Post, Notes, or Activity, then the sorting is done based on the **Last Updated** field. <br><br> The default sort order is **Descending**.  <br><br> **Note:** changing the sort order will not change the time property visualized in the timeline control. To customize the timeline card form see, [Customize the card form](#Customize-the-card-form).  | Descending |
     | Number of results | The maximum number of records that are displayed on the timeline before selecting the **More** option. Each time you select the **More** option, the timeline displays the configured number of records. You can configure a value ranging from 1 to 50. <br><br> The default value is **10**. | 10 |
 
     > [!div class=mx-imgBorder] 
@@ -94,7 +94,7 @@ The modules are Activities, Posts, and Notes. As a customizer, you can choose wh
 
 ## Customize activity
 
-As a customizer, you can choose which entities that you want to show activities to users as per your business requirements.
+As a customizer, you can choose which entities you want to show activities to users as per your business requirements. For an better performance select only the activities that are specific to business, and unselect the activities that aren't used.
 
 1.	Sign in to your `https://<YourOrgURL>.dynamics.com/apps` environment.
 
