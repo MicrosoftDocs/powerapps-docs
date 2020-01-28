@@ -2,7 +2,7 @@
 title: "Audit user access (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Support for the ability to audit user access, including user identification, access time, and client type." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 01/27/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.topic: "article"
@@ -37,7 +37,7 @@ Common Data Service support the ability to audit user access. The information th
   
 -   `AuditAction.UserAccessAuditStopped`  
   
- `UserAccessviaWeb` indicates access from the Common Data Service web application or Dynamics 365 for Outlook. `UserAccessviaWebServices` indicates a web service request from the SDK. The `AuditAction` enumeration is available to your code when you include `OptionSets.cs` or `OptionSets.vb` in your application’s project.  
+ `UserAccessviaWeb` indicates access from the Common Data Service web application or Dynamics 365 for Outlook. `UserAccessviaWebServices` indicates a web service request from the SDK. The `AuditAction` enumeration is available to your code when you include `OptionSets.cs` in your application’s project.  
   
 ### See also  
  [Audit data changes](/powerapps/developer/common-data-service/auditing-overview)   
