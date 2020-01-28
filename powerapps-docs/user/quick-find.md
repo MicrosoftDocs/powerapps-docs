@@ -38,7 +38,7 @@ Multi-entity Quick Find is also known as Categorized Search. To start a Categori
   
 2.  Type your search words in the search box and then select **Search** button.   
 
-Categorized Search returns results grouped by entity types, such as Accounts, Leads, or Contacts.
+Categorized Search returns results grouped by entity types, such as accounts or contacts.
 
    > [!div class="mx-imgBorder"]
    > ![Categorized Search Results](media/categorized-search-results.png "Categorized Search Results Page") 
