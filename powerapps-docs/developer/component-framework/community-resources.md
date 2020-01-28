@@ -64,7 +64,6 @@ The following is the list of videos created by Power Apps community.
 - [Power Apps component framework Academy: Working with manifest file](https://www.youtube.com/watch?v=qbSpDVTxt7U&t=5s)
 - [Power Apps component framework code components](https://www.youtube.com/watch?v=FxWF-LCCB4g&feature=youtu.be)
 
-
 ## Tools
 
 The [Code component builder](https://www.xrmtoolbox.com/plugins/Maverick.PCF.Builder/) is a tool from XrmToolBox that lets you create code components in visual manner using the Power Apps CLI.
