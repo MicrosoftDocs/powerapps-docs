@@ -83,16 +83,16 @@ To unlink all linked entities, on the Power Apps maker portal Export to data lak
 
 ## View your data in the Azure data lake
 1. Sign into [Azure](https://portal.azure.com), select the storage account, and then on the left navigation pane, select **Storage Explorer**. 
-2. Expand **File Systems**, and then select commondataservice-<environment-name>-org-<organizationId>. 
+2. Expand **File Systems**, and then select `commondataservice-<environment-name>-org-<organizationId>`. 
 
 The model.json file, along with name and version, provides a list of entities that have been exported to the lake. The model.json file also includes the initial sync status and completed time. 
 
-A folder for each entity exported to the data lake is displayed that includes snapshot command-delimted format (csv) files. 
+A folder for each entity exported to the data lake is displayed that includes snapshot command-delimited format (csv) files. 
    > [!div class="mx-imgBorder"] 
    > ![Entity data in lake](media/entity-data-in-lake.png) 
 
 ### Continuous snapshot updates
-Common Data Service data can continuously change through create, update, and delete transactions. Snapshots provide a read-only snapshot copy of data that’s updated at a regular interval, which is every hour. This ensures that at any given point, a user can reliably consume data in the lake.   
+Common Data Service data can continuously change through create, update, and delete transactions. Snapshots provide a read-only snapshot copy of data that’s updated at a regular interval, which is every hour. This ensures that at any given point, a data analytics consumer can reliably consume data in the lake.   
 
 ![Continuous snapshot  updates](media/snapshot-updates.png)
 
@@ -101,7 +101,7 @@ When entities are added as part of the initial export, the entity data is writte
 Here is an example of Account.csv partitioned file and snapshot folder in the lake.
 ![Accounts entity snapshot](media/export-data-lake-account-snapshots.png) 
 
-Changes in Common Data Service are continuously pushed to the corresponding csv files using the trickle feed engine. This is the T2 interval, where another snapshot is taken. *Entity*-T2.csv, such as Accounts-T2.csv and Contacts-T2.csv (assuming there’re changes for both these entities) and model.json are updated to the new snapshot files. Any new person who view snapshot data from T2 onwards is directed to the newer snapshot files. This way, the original snapshot viewer may continue to work on the older snapshot T1 files while newer viewers can read the latest updates. This is useful in scenarios with longer running downstream processes. 
+Changes in Common Data Service are continuously pushed to the corresponding csv files using the trickle feed engine. This is the T2 interval, where another snapshot is taken. *Entity*-T2.csv, such as Accounts-T2.csv and Contacts-T2.csv (assuming there’re changes for both these entities) and model.json are updated to the new snapshot files. Any new person who views snapshot data from T2 onwards is directed to the newer snapshot files. This way, the original snapshot viewer may continue to work on the older snapshot T1 files while newer viewers can read the latest updates. This is useful in scenarios with longer running downstream processes. 
 
 Here is an example of the model.json file, which always points to the latest time-stamped account snapshot file. 
 
