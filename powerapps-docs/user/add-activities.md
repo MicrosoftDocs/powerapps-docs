@@ -72,7 +72,7 @@ The fastest way to add an activity is to use the shortcut on the nav bar and the
   
      The **Call To** field is automatically populated with the record you added the phone call activity to. You can select a different record if needed.  
   
-4. By default, the direction is set to **Outgoing**. You can change it to **Incoming** by selecting **Outgoing**. 
+4. By default, the direction is set to **Outgoing**. You can change it to **Incoming** by selecting **Outgoing**.
   
 5. When you're done filling in the form, select **Save** to save the activity.  
   
@@ -145,7 +145,7 @@ You can also easily add notes in the activities area.
    > [!div class="mx-imgBorder"]
    > ![Add a note](media/addnote.png "Add a note")
 
-Once the note has been added, you can delete or edit the note.
+Once the note has been added, you can delete or edit the note. Select the note or hover the cursor on the note to see the edit and delete icons.
 
 
 > [!div class="mx-imgBorder"]
@@ -182,16 +182,17 @@ Quickly filter activities, notes or posts in the timeline wall by record type or
 
 - In the **Timeline** wall, select **Open Filter Pane** funnel icon.
 
-> [!div class="mx-imgBorder"]
-> ![Filter pane in the Timeline ](media/filterpane.png "Filter pane in the Timeline")
+
+![Filter pane in the Timeline ](media/timeline-filter2.png "Filter pane in the Timeline") ![Filter pane in the Timeline ](media/timeline-filter5.png "Filter pane in the Timeline")
 
 
 ## Manage Activities
 Manage activities directly from the timeline wall including assigning an activity to another person, deleting or closing an activity, add an activity to a queue, opening an associated record or editing notes and posts.
 
-
-> [!div class="mx-imgBorder"]
-> ![Manage Activities.png](media/ManageActivities.png "ManageActivities.png")
+  ![Timeline command bar options](media/timeline-options1.png "Timeline command bar options")
+  ![Timeline command bar options](media/timeline-options2.png "Timeline command bar options")
+  ![Timeline command bar options](media/timeline-options3.png "Timeline command bar options")
+  ![Timeline command bar options](media/timeline-options4.png "Timeline command bar options")
 
 ## See also
 
