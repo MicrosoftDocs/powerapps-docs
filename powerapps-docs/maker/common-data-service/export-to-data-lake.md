@@ -32,7 +32,7 @@ Export to data lake provides these features:
 - Continuous replication of entities to Azure data lake.
 - Initial write followed by incremental writes for data and metadata. 
 - Replicates both standard and custom entities. 
-- Replicates create, update, and delete operations. 
+- Replicates create, update, and delete transactions. 
 - Continuous snapshot updates for large analytics scenarios. 
 - Facilitates metadata discovery and interoperability between data producers and consumers such as Power BI, Azure Data Factory, Azure Databricks, and Azure Machine Learning service.
 
