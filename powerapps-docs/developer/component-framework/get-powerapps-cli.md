@@ -17,6 +17,8 @@ ms.assetid: f393f227-7a88-4f25-9036-780b3bf14070
 
 Use **Microsoft Power Apps CLI** (command-line interface) to create, debug, and deploy code components using Power Apps component framework. Power Apps CLI enables developers to create code components quickly. In the future, it will be expanded to include support for additional development and application life cycle management (ALM) experiences. More information: [Install Power Apps CLI](../common-data-service/powerapps-cli.md)
 
+> [!IMPORTANT]
+> To deploy your code component using Power Apps CLI, you must have a Common Data Service environment with system administrator or system customizer privileges.
 
 ### See also
 

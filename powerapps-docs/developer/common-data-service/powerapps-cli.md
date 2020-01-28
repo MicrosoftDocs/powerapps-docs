@@ -1,5 +1,5 @@
 ---
-title: Microsoft Power Apps CLI | Microsoft Docs
+title: Install Power Apps CLI | Microsoft Docs
 description: "Get the Microsoft Power Apps CLI to create, debug, and deploy code components using Power Apps component framework."
 keywords: Power Apps CLI, code components, component framework, CLI
 ms.author: nabuthuk
@@ -13,15 +13,15 @@ ms.topic: "article"
 ms.assetid: f393f227-7a88-4f25-9036-780b3bf14070
 ---
 
-# What is Microsoft Power Apps CLI 
+# What is Microsoft Power Apps CLI? 
 
 Microsoft Power Apps CLI is a simple, single-stop developer command-line interface that empowers developers and app makers to create code components. 
 
-Power Apps CLI tooling is the first step toward a comprehensive ALM story where the enterprise developers and ISVs can create, build, debug, and publish their extensions and customizations quickly and efficiently.  
+Power Apps CLI tooling is the first step toward a comprehensive application life cycle management (ALM) story where the enterprise developers and ISVs can create, build, debug, and publish their extensions and customizations quickly and efficiently.  
 
-## Install Microsoft Power Apps CLI
+## Install Power Apps CLI
 
-To get Microsoft Power Apps CLI, do the following:
+To get Power Apps CLI, do the following:
 
 1. Install [Npm](https://www.npmjs.com/get-npm) (comes with Node.js) or [Node.js](https://nodejs.org/en/) (comes with npm). We recommend LTS (Long Term Support) version 10.15.3 or higher.
 
@@ -31,7 +31,8 @@ To get Microsoft Power Apps CLI, do the following:
    - Option 1: Install [Visual Studio 2017](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2017) or later.
    - Option 2: Install [.NET Core 3.1 SDK](https://dotnet.microsoft.com/download/dotnet-core/current) and then install [Visual Studio Code](https://code.visualstudio.com/Download).
 
-1. Install [Microsoft Power Apps CLI](https://aka.ms/PowerAppsCLI).
+1. Install [Power Apps CLI](https://aka.ms/PowerAppsCLI).
+
 1. To take advantage of all the latest capabilities, update the Power Apps CLI tooling to the latest version using this command:
 
     ```CLI
@@ -39,8 +40,7 @@ To get Microsoft Power Apps CLI, do the following:
     ```
 
 > [!NOTE]
-> - To deploy your code component using Power Apps CLI, you must have a Common Data Service environment with system administrator or system customizer privileges.
-> - Currently, Power Apps CLI is supported only on Windows 10.
+> Currently, Power Apps CLI is supported only on Windows 10.
 
 ## Common commands
 
@@ -56,15 +56,24 @@ This table lists some common commands used in the CLI:
 |**plugin**|Manages to create a plug-in project|`pac plugin init`|
 
 
-## Uninstall Microsoft Power Apps CLI
+## Uninstall Power Apps CLI
 
 To uninstall the Power Apps CLI tooling, run the MSI from [here](https://aka.ms/PowerAppsCLI).
 
 If you are a **Private Preview** participant and have an older version of CLI, follow these steps:
 
 1. To find out where the Power Apps CLI is installed, open a command prompt and type `where pac`.
+
 1. Delete the PowerAppsCLI folder.
+
 1. Open the Environment Variables tool by running the command `rundll32 sysdm.cpl,EditEnvironmentVariables` in the command prompt.
+
 1. Double-click `Path` under the `User variable for...` section.
+
 1. Select the row containing the PowerAppsCLI path and select the **Delete** button on the right-hand side.
+
 1. Select **OK** twice.
+
+### See also
+
+[Power Apps component framework](/powerapps/developer/component-framework/overview)
