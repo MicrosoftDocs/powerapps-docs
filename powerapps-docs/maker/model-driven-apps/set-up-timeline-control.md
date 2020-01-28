@@ -162,6 +162,8 @@ Since the example considered in this procedure is **Account**, let us see the **
    1. Email from \<Owner\>
    2. Subject
    3. Description
+   4. Activity status
+   5. Date and time
 
 After modifying the **Email card** form (from the **Email** entity) and updating the options in the **Account for Interactive experience** form in the **Account** entity, you can view see the changes.
 
@@ -180,6 +182,7 @@ After modifying the **Email card** form (from the **Email** entity) and updating
    1. Owner \<Name\>
    2. Priority
    3. Description
+   4. Activity status
 
 Default string for the activities are as follows:
 
@@ -195,20 +198,20 @@ Default string for the activities are as follows:
 
 ## Customize field sections
 
-In the timeline section, users see a card for each activity (based on the enabled activities). Each card displays certain fields in the collapsed and expanded mode. For example, see **Email** activity card in collapsed mode and expanded mode. 
+In the timeline section, users see a card for each activity (based on the enabled activities). Each card displays certain fields in the collapsed and expanded mode. For example, see **Email** activity card in collapsed mode, hover mode, and expanded mode. 
 
-Email card collapsed mode:
+**Email card collapsed mode**: By default, the activity cards are in collapsed mode.
+
 
    > [!div class=mx-imgBorder] 
    > ![Timeline card in collapsed mode](media/email.png "Timeline card in collapsed mode")
 
-Email card hover mode:
+**Email card hover mode**: When you hover your cursor, you can see the few commands that are specific to each of the activity card types.
 
    > [!div class=mx-imgBorder] 
    > ![Timeline card in collapsed mode](media/email-hover.png "Timeline card in collapsed mode")
 
-
-Timeline card expanded mode:
+**Timeline card expanded mode**: When you select on card, it gets expanded with few commands that are specific to each of the activity card types.
 
    > [!div class=mx-imgBorder] 
    > ![Timeline card in expanded mode](media/email-expanded.png "Timeline card in expanded mode")
@@ -240,9 +243,16 @@ Fields **1** and **2** from the **Header** section and Fields **3** and **4** fr
    > [!div class=mx-imgBorder] 
    > ![Email card in collapsed mode](media/email-card-collapsed.png "Email card in collapsed mode")
 
+**Email card hover mode**
+
+Fields **1** and **2** from the **Header** section and Fields **3** and **4** from the **Details** section are displayed in the hover mode.
+
+   > [!div class=mx-imgBorder] 
+   > ![Email card in collapsed mode](media/email-card-hover.png "Email card in collapsed mode")
+
 **Email card expanded mode**
 
-Field **5** from the **Details** section is displayed in the collapsed mode.
+Field **5** from the **Details** section is displayed in the expanded mode.
 
    > [!div class=mx-imgBorder] 
    > ![Email card in expanded mode](media/email-card-expanded.png "Email card in expanded mode")
