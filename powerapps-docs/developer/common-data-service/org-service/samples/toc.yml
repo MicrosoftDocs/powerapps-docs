@@ -28,6 +28,8 @@
     href: associate-security-role-user.md
   - name: Determine whether a user has a role
     href: determine-whether-user-has-role.md
+  - name: Disable or enable a user
+    href: disable-a-user.md
   - name: Remove a role for a user
     href: remove-role-for-user.md
   - name: Retrieve license information
