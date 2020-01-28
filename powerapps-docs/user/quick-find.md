@@ -33,8 +33,8 @@ Multi-entity Quick Find is also known as Categorized Search. To start a Categori
 
 1.  From the top nav bar, select the **Search** button.  
 
-   > [!div class="mx-imgBorder"]
-   > ![Global Search Button](media/global-search-button.png "Global Search Button")   
+     > [!div class="mx-imgBorder"]
+     > ![Global Search Button](media/global-search-button.png "Global Search Button")   
   
 2.  Type your search words in the search box and then select **Search** button.   
 
