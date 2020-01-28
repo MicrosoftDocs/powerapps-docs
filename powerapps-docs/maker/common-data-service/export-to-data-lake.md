@@ -83,7 +83,7 @@ To unlink all linked entities, on the Power Apps maker portal Export to data lak
 
 ## View your data in the Azure data lake
 1. Sign into [Azure](https://portal.azure.com), select the storage account, and then on the left navigation pane, select **Storage Explorer**. 
-2. Expand **File Systems**, and then select commondataservice-*environmentName*-org-*organizationId*. 
+2. Expand **File Systems**, and then select commondataservice-*environmentName*-org-*Id*. 
 
 The model.json file, along with name and version, provides a list of entities that have been exported to the lake. The model.json file also includes the initial sync status and completed time. 
 
