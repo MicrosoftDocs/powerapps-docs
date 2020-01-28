@@ -112,7 +112,7 @@ In Power Apps, solutions are leveraged to transport apps and components from one
 
 ### Import the Export to Data Lake Core solution 
 1.	From the Power Apps maker portal, select the environment where you want to distribute the export to data lake configuration.
-2.	On the left navigation pane, select the **Solutions**, select **Open AppSource**, search for the solution named **Export to Data Lake Core**, and then import the solution.
+2.	On the left navigation pane, select **Solutions**, select **Open AppSource**, search for the solution named **Export to Data Lake Core**, and then import the solution.
 
 ### Add an export to data lake configuration to a solution
 
