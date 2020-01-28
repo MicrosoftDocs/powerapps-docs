@@ -90,8 +90,8 @@ If your organization has turned on both search options then you can select a def
  
 1.  From the top nav bar, select the **Search** button.  
 
-   > [!div class="mx-imgBorder"]
-   > ![Global Search Button](media/global-search-button.png "Global Search Button") 
+    > [!div class="mx-imgBorder"]
+    > ![Global Search Button](media/global-search-button.png "Global Search Button") 
   
 2.  Type your search words in the search box and then select **Search** button.   
 
