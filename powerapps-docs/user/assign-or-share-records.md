@@ -46,7 +46,7 @@ Use the **Share** option if you want to keep ownership of the record but let som
 
 ## Use advanced find to reassign records
 
-Use advanced find to search for records and then reassign them to someone else. For more information on advanced find, see [Create, edit, or save an Advanced Find search](create-edit-or-save-advanced-find-search.md).
+Use advanced find to search for records and then reassign them to someone else. For more information on advanced find, see [Create, edit, or save an Advanced Find search](advanced-find.md).
 
 
 1. On the command bar, select **Advanced Find**.
