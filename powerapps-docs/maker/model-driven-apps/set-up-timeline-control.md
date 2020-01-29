@@ -206,7 +206,7 @@ In the timeline section, users see a card for each activity (based on the enable
    > [!div class=mx-imgBorder] 
    > ![Timeline card in collapsed mode](media/email.png "Timeline card in collapsed mode")
 
-**Email card hover mode**: When you hover your cursor, you can see the few commands that are specific to each of the activity card types.
+**Email card hover mode**: When you hover your cursor, you can see few commands that are specific to each of the activity card types.
 
    > [!div class=mx-imgBorder] 
    > ![Timeline card in collapsed mode](media/email-hover.png "Timeline card in collapsed mode")
