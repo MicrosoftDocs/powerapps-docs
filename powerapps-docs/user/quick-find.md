@@ -52,7 +52,7 @@ With Categorized Search, you can search for records that begin with a specific w
   
 ## Filter Categorized Search results 
   
--   To filter results by a record type, select **Filter with** list and select a record type.  
+-   To filter results by a record type, select **Filter with** list and  then select a record type.  
 
     > [!div class="mx-imgBorder"]
     > ![Filtering Categorized Search Results](media/filter-categorized-search-results.png "Filtering Categorized Search Results")  
