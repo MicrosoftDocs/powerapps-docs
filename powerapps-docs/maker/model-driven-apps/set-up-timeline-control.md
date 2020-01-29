@@ -94,7 +94,7 @@ The modules are Activities, Posts, and Notes. As a customizer, you can choose wh
 
 ## Customize activity
 
-As a customizer, you can choose which entities you want to show activities to users as per your business requirements. For an better performance select only the activities that are specific to business, and unselect the activities that aren't used.
+As a customizer, you can choose which entities you want to show activities to users as per your business requirements. For better performance select only the activities that are specific to business, and unselect the activities that aren't used.
 
 1.	Sign in to your `https://<YourOrgURL>.dynamics.com/apps` environment.
 
