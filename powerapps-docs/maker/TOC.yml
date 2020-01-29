@@ -72,12 +72,14 @@
         href: ../user/collaborate-using-sharepoint.md        
     - name: Search records
       items:
-      - name: Compare search and find options
-        href: ../user/search-and-find.md
-      - name: Search for records
-        href: ../user/search-records.md
-      - name: Use advanced find
-        href: ../user/create-edit-or-save-advanced-find-search.md
+      - name: Compare search options
+        href: ../user/search.md
+      - name: Relevance Search
+        href: ../user/relevance-search.md
+      - name: Quick Find
+        href: ../user/quick-find.md
+      - name: Advanced Find
+        href: ../user/advanced-find.md
     - name: Import and export data
       items:
       - name: Import data
@@ -352,6 +354,8 @@
               href: ./canvas-apps/controls/control-shapes-icons.md
             - name: Slider
               href: ./canvas-apps/controls/control-slider.md
+            - name: Stream Video
+              href: ./canvas-apps/controls/control-stream-video.md
             - name: Label
               href: ./canvas-apps/controls/control-text-box.md
             - name: Text input
