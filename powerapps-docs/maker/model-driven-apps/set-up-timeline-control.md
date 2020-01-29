@@ -395,6 +395,25 @@ After you create the entity and enable it as an activity, you need to add the en
 
 8. Select **Publish**.
 
+## Enable rich-text editor for notes in timeline
+
+Rich-text editor enables users to create rich and well-formatted content for the notes with emphasis. The editor brings common word processor features. To learn more, see [](https://docs.microsoft.com/dynamics365/customer-service/customer-service-hub-user-guide-basics#take-a-note).
+
+You need to enable the rich-text editor for your users. To enable, follow the steps:
+
+1.	Sign in to your `https://<YourOrgURL>.dynamics.com/apps` environment.
+
+2. Open a model-driven app, and then on the command bar select **Settings** ![Settings](../model-driven-apps/media/powerapps-gear.png) > **Administration** > **System Settings**.
+
+3. In the **System Settings** dialog, under the **General** tab, scroll down and select the check box for the **Use rich text to make it easier to format notes created in Timeline.** field.
+
+4. Select **OK**.
+
+    > [!div class=mx-imgBorder] 
+    > ![Enable rich-text editor](media/timeline-note-enable-rich-text-editor.png "Enable rich-text editor")
+
+The rich-text editor is enabled for your users. Ask your users to sign in to the Dynamics 365 model-driven app, and the users can see the rich-text editor in the while creating a note.
+
 ## Enable custom activities in timeline for mobile client
 
 When you’ve custom activities that you want to show for users using mobile, then you must enable it. Follow these steps to enable.
@@ -403,7 +422,7 @@ When you’ve custom activities that you want to show for users using mobile, th
 
 1.	Sign in to your `https://<YourOrgURL>.dynamics.com/apps` environment.
 
-2.  Open a model-driven app, and then on the command bar select **Settings** ![Settings](../model-driven-apps/media/powerapps-gear.png) > **Advanced  Settings**.
+2. Open a model-driven app, and then on the command bar select **Settings** ![Settings](../model-driven-apps/media/powerapps-gear.png) > **Advanced  Settings**.
 
 3.	Go to **Settings** > **Customization** > **Customize the System**. The solution explorer page opens in a new browser window.  
 
