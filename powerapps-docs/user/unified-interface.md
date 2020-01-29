@@ -31,6 +31,8 @@ For an overview of Unified Interface in model-driven apps, watch this video: [In
 
 ## Navigation
 
+The menu options let you swiftly navigate the different apps in the system. They provide quick access to recently viewed records and pinned favorites.
+
 ![Navigation controls, expanded view](media/nav-expanded.png "Navigation controls, expanded view")
 
 Legend:
