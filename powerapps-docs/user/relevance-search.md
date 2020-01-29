@@ -134,7 +134,7 @@ All lookups, option sets, and record types are text-based facets. For example, t
   > [!div class="mx-imgBorder"]
   > ![Text-based facet in Relevance Search](media/relevance-search-text-based-facets.png "Text-based facet in Relevance Search")  
   
-Filters in these facets are sorted in descending order by count. The top four facet values are displayed by default. When there are more than four facet values, you'll see a **SHOW MORE** link that you can select to expand the list and see up to 15 top facet values. Select each value to filter the search results to show only records where the field has the value you've selected. For example, if you select **Kim Abercrombie**, the search results will show all records where the owner is Kim Abercrombie. When you select a Lookup or Option Set facet value, search results are filtered to only include records with the value that you specified.  
+Filters in these facets are sorted in descending order by count. The top four facet values are displayed by default. When there are more than four facet values, you'll see a **SHOW MORE** link that you can select to expand the list and see up to fifteen top facet values. Select each value to filter the search results to show only records where the field has the value you've selected. For example, if you select **Jim Glynn**, the search results will show all records where the owner is Jim Glynn. When you select a lookup or option set facet value, search results are filtered to only include records with the value that you specified.  
   
 ### Date and Time facets  
 Like other facets, you can use date and time facets to filter and see search results for a specific time. To select a range of values, drag the slider or select one of the vertical columns.  
@@ -147,9 +147,9 @@ Like other facets, you can use date and time facets to filter and see search res
 ## Configure facets and filters    
   
 > [!NOTE]
->  The system customizer can set the default experience for all entities, but you can configure your own facets and filters.  
+>  A system customizer can set the default experience for all entities, but you can configure your own facets and filters.  
   
-1. In the upper-right corner of the page, select **Settings** and then select **Personalization Settings**.  
+1. In the upper-right, select **Settings** and then select **Personalization Settings**.  
   
    > [!div class="mx-imgBorder"]
    > ![Personalization Settings](media/personalization-settings.png "Personalization Settings")    
