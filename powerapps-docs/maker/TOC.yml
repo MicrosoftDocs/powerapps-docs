@@ -31,7 +31,7 @@
       href: ../user/unified-interface.md
     - name: Navigation and basics      
       items:
-      - name: Overview
+      - name: Basic navigation
         href: ../user/navigation.md
       - name: View your profile
         href: ../user/view-your-user-profile.md
