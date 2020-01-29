@@ -428,24 +428,24 @@ Follow the Steps 1-8 described in the [Customize modules](#customize-modules) se
    > [!div class=mx-imgBorder] 
    > ![Select Timeline modules to display](media/timeline-activity.png "Select Timeline modules to display")
 
-## Enable rich-text editor for notes in timeline
+## Enable or disable rich-text editor for notes in timeline
 
-Rich-text editor enables users to create rich and well-formatted content for the notes with emphasis. The editor brings common word processor features. To learn more, see [](https://docs.microsoft.com/dynamics365/customer-service/customer-service-hub-user-guide-basics#take-a-note).
+Rich-text editor enables users to create rich and well-formatted content for the notes with emphasis. The editor brings common word processor features. To learn more, see [Take notes](https://docs.microsoft.com/dynamics365/customer-service/customer-service-hub-user-guide-basics#take-a-note).
 
-You need to enable the rich-text editor for your users. To enable, follow the steps:
+The feature is enabled by default. If you want to disable and enable later for your users, follow the steps:
 
 1.	Sign in to your `https://<YourOrgURL>.dynamics.com/apps` environment.
 
 2. Open a model-driven app, and then on the command bar select **Settings** ![Settings](../model-driven-apps/media/powerapps-gear.png) > **Administration** > **System Settings**.
 
-3. In the **System Settings** dialog, under the **General** tab, scroll down and select the check box for the **Use rich text to make it easier to format notes created in Timeline.** field.
+3. In the **System Settings** dialog, under the **General** tab, scroll down and select or unselect the check box for the **Use rich text to make it easier to format notes created in Timeline.** field.
 
 4. Select **OK**.
 
     > [!div class=mx-imgBorder] 
     > ![Enable rich-text editor](media/timeline-note-enable-rich-text-editor.png "Enable rich-text editor")
 
-The rich-text editor is enabled for your users. Ask your users to sign in to the Dynamics 365 model-driven app, and the users can see the rich-text editor in the while creating a note.   
+The rich-text editor is enabled or disabled for your users based on the check box selection. 
 
 ## See also
 
