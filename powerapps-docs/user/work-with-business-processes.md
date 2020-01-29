@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 03/01/2019
+ms.date: 01/29/2020
 ms.author: mduelae
 ms.custom: ""
 ms.reviewer: ""
@@ -21,16 +21,20 @@ search.app:
 
 Business processes help everyone follow best practices, even for situations that don't occur very often. Where available, business processes provide a step-by-step timeline for the stages of a process at the top of the relevant record. You open the menu for the active stage, enter each field of required and business-critical data, and then select the next stage when you're ready to work with it. Some business processes can be completed in the time it takes to make a single phone call, while others might take several weeks.
 
+
 For exmaple, as you work on a new customer record, the business process flow helps you see each step that you need to take to create the new record and fill out the required information according to your organizations business process. 
 
-The process bar can be docked to the right side of the screen for easy reference as you work with a customer record. 
 
 > [!div class="mx-imgBorder"]
-> ![Business process bar](media/BPdock.png "Business process bar")
+> ![Business process bar](media/business-process.png "Business process bar")
+
+
+
+The process bar can also be docked to the right side of the screen for easy reference as you work with a customer record. 
+
+> [!div class="mx-imgBorder"]
+> ![Business process bar](media/bpdock.gif "Business process bar")
  
-
-> [!div class="mx-imgBorder"]
-> ![Business process bar](media/BPdocked.png "Business process bar")
 
 For more information on how to create and manage business process flows, see [Business process flows overview](/flow/business-process-flows-overview).
   
