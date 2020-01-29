@@ -36,7 +36,7 @@ Multi-entity Quick Find is also known as Categorized Search.
      > [!div class="mx-imgBorder"]
      > ![Global Search Button](media/global-search-button.png "Global Search Button")   
   
-2.  Type your search words in the search box and then select **Search** button. Categorized Search returns results grouped by entity types, such as accounts or contacts.
+2.  Type your search words in the search box and then select the **Search** button. Categorized Search returns results grouped by entity types, such as accounts or contacts.
 
      > [!div class="mx-imgBorder"]
      > ![Categorized Search Results](media/categorized-search-results.png "Categorized Search Results Page") 
