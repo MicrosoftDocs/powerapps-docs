@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 1/27/2020
+ms.date: 1/28/2020
 ms.author: mduelae
 ms.custom: ""
 ms.reviewer: ""
@@ -57,7 +57,7 @@ Relevance Search brings the following enhancements and benefits:
   > [!NOTE]
   > Relevance Search is configured to require matches to any (instead of all) of the criteria in a query, which may result in results different from your expectations. This is especially true when boolean operators are included in the query.
 
-## Enabling Relevance Search
+## Enable Relevance Search
 
 Relevance Search is disabled by default. Your administrator needs to enable it for the organization, thus allowing all users in the organization to use it. After Relevance Search is enabled, you might have to wait up to an hour or more, depending on the size of your organization, before you start seeing Relevance Search results for your apps. Smaller changes in indexed data can take up to 15 minutes to show up in your system.
 
@@ -90,8 +90,8 @@ If your organization has turned on both search options then you can select a def
  
 1.  From the top nav bar, select the **Search** button.  
 
-   > [!div class="mx-imgBorder"]
-   > ![Global Search Button](media/global-search-button.png "Global Search Button") 
+    > [!div class="mx-imgBorder"]
+    > ![Global Search Button](media/global-search-button.png "Global Search Button") 
   
 2.  Type your search words in the search box and then select **Search** button.   
 
@@ -134,7 +134,7 @@ All lookups, option sets, and record types are text-based facets. For example, t
   > [!div class="mx-imgBorder"]
   > ![Text-based facet in Relevance Search](media/relevance-search-text-based-facets.png "Text-based facet in Relevance Search")  
   
-Filters in these facets are sorted in descending order by count. The top four facet values are displayed by default. When there are more than four facet values, you'll see a **SHOW MORE** link that you can select to expand the list and see up to 15 top facet values. Select each value to filter the search results to show only records where the field has the value you've selected. For example, if you select **Kim Abercrombie**, the search results will show all records where the owner is Kim Abercrombie. When you select a Lookup or Option Set facet value, search results are filtered to only include records with the value that you specified.  
+Filters in these facets are sorted in descending order by count. The top four facet values are displayed by default. When there are more than four facet values, you'll see a **SHOW MORE** link that you can select to expand the list and see up to fifteen top facet values. Select each value to filter the search results to show only records where the field has the value you've selected. For example, if you select **Jim Glynn**, the search results will show all records where the owner is Jim Glynn. When you select a lookup or option set facet value, search results are filtered to only include records with the value that you specified.  
   
 ### Date and Time facets  
 Like other facets, you can use date and time facets to filter and see search results for a specific time. To select a range of values, drag the slider or select one of the vertical columns.  
@@ -147,9 +147,9 @@ Like other facets, you can use date and time facets to filter and see search res
 ## Configure facets and filters    
   
 > [!NOTE]
->  The system customizer can set the default experience for all entities, but you can configure your own facets and filters.  
+>  A system customizer can set the default experience for all entities, but you can configure your own facets and filters.  
   
-1. In the upper-right corner of the page, select **Settings** and then select **Personalization Settings**.  
+1. In the upper-right, select **Settings** and then select **Personalization Settings**.  
   
    > [!div class="mx-imgBorder"]
    > ![Personalization Settings](media/personalization-settings.png "Personalization Settings")    
@@ -165,7 +165,7 @@ Like other facets, you can use date and time facets to filter and see search res
   
    - For the selected entity, select up to four facet fields. By default, the first four facetable fields in the **Quick Find** view for the selected entity are selected in the list. At any time, you can only have four fields selected as facets.  
   
-     You can update multiple entities at one time. When you select **OK**, the changes for all entities that you've configured are saved. To revert to the default behavior for an entity that you previously configured, select **Default**.  
+   You can update multiple entities at one time. When you select **OK**, the changes for all entities that you've configured are saved. To revert to the default behavior for an entity that you previously configured, select **Default**.  
   
    > [!NOTE]
    > - If a system customizer deletes a field or makes it no longer searchable, and you've saved a facet for that field, it will no longer show up as a facet.  
