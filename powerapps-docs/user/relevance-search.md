@@ -57,7 +57,7 @@ Relevance Search brings the following enhancements and benefits:
   > [!NOTE]
   > Relevance Search is configured to require matches to any (instead of all) of the criteria in a query, which may result in results different from your expectations. This is especially true when boolean operators are included in the query.
 
-## Enabling Relevance Search
+## Enable Relevance Search
 
 Relevance Search is disabled by default. Your administrator needs to enable it for the organization, thus allowing all users in the organization to use it. After Relevance Search is enabled, you might have to wait up to an hour or more, depending on the size of your organization, before you start seeing Relevance Search results for your apps. Smaller changes in indexed data can take up to 15 minutes to show up in your system.
 
