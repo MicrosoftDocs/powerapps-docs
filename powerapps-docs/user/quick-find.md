@@ -22,26 +22,24 @@ search.app:
 
 ## Single-entity Quick Find
 
-Single-entity Quick Find is used to find records of one type only. This search option can be accessed from within a view:
+Single-entity Quick Find is used to find records of one type only. This search option is available from within a view. 
 
    > [!div class="mx-imgBorder"]
    > ![Single-entity Quick Find](media/single-quick-find-search-box.png "Single-entity Quick Find Search Box") 
 
 ## Multi-entity Quick Find (Categorized Search)
 
-Multi-entity Quick Find is also known as Categorized Search. To start a Categorized Search:
+Multi-entity Quick Find is also known as Categorized Search. 
 
-1.  From the top nav bar, select the **Search** button.  
+1.  To start a Categorized Search, from the top nav bar, select the **Search** button.  
 
      > [!div class="mx-imgBorder"]
      > ![Global Search Button](media/global-search-button.png "Global Search Button")   
   
-2.  Type your search words in the search box and then select **Search** button.   
+2.  Type your search words in the search box and then select the **Search** button. Categorized Search returns results grouped by entity types, such as accounts or contacts.
 
-Categorized Search returns results grouped by entity types, such as accounts or contacts.
-
-   > [!div class="mx-imgBorder"]
-   > ![Categorized Search Results](media/categorized-search-results.png "Categorized Search Results Page") 
+     > [!div class="mx-imgBorder"]
+     > ![Categorized Search Results](media/categorized-search-results.png "Categorized Search Results Page") 
 
 With Categorized Search, you can search for records that begin with a specific word or use a wildcard.
   
@@ -54,9 +52,12 @@ With Categorized Search, you can search for records that begin with a specific w
   
 ## Filter Categorized Search results 
   
--   To filter results by one record type, on the search screen, choose a record type from the **Filter with:** drop-down box.  
-  
--   To search against all record types, choose **None** in the **Filter with:** drop-down box.  
+-   To filter results by a record type, choose a record type from the **Filter with** list. 
 
     > [!div class="mx-imgBorder"]
     > ![Filtering Categorized Search Results](media/filter-categorized-search-results.png "Filtering Categorized Search Results")  
+
+  
+-   To search against all record types, choose **None** from the **Filter with** list.  
+
+

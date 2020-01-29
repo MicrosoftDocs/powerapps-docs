@@ -90,8 +90,8 @@ If your organization has turned on both search options then you can select a def
  
 1.  From the top nav bar, select the **Search** button.  
 
-   > [!div class="mx-imgBorder"]
-   > ![Global Search Button](media/global-search-button.png "Global Search Button") 
+    > [!div class="mx-imgBorder"]
+    > ![Global Search Button](media/global-search-button.png "Global Search Button") 
   
 2.  Type your search words in the search box and then select **Search** button.   
 
@@ -165,7 +165,7 @@ Like other facets, you can use date and time facets to filter and see search res
   
    - For the selected entity, select up to four facet fields. By default, the first four facetable fields in the **Quick Find** view for the selected entity are selected in the list. At any time, you can only have four fields selected as facets.  
   
-     You can update multiple entities at one time. When you select **OK**, the changes for all entities that you've configured are saved. To revert to the default behavior for an entity that you previously configured, select **Default**.  
+   You can update multiple entities at one time. When you select **OK**, the changes for all entities that you've configured are saved. To revert to the default behavior for an entity that you previously configured, select **Default**.  
   
    > [!NOTE]
    > - If a system customizer deletes a field or makes it no longer searchable, and you've saved a facet for that field, it will no longer show up as a facet.  
