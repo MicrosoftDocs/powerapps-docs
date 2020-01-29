@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 04/14/2017
+ms.date: 01/29/2020
 ms.author: lanced
 search.audienceType: 
   - maker
@@ -93,5 +93,5 @@ Power Apps creates an app that has three screens and shows data from the table t
 3. Table '[Tablename]' does not define any key columns.
    
     This error appears if you're connecting to a table that doesn't have a primary key, which the Oracle Database connection requires.
-4. As of this writing, stored procedures, tables with composite keys, and nested object types in tables aren't supported.
+4. As of this writing, stored procedures, tables with composite keys, and nested object types in tables aren't directly supported in Power Apps. However, stored procedures using Power Automate are supported.
 
