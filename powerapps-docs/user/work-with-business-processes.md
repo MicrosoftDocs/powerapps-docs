@@ -36,7 +36,7 @@ The process bar can also be docked to the right side of the screen for easy refe
 > ![Business process bar](media/bpdock.gif "Business process bar")
  
 
-For more information on how to create and manage business process flows, see [Business process flows overview](/flow/business-process-flows-overview).
+For more information on how to create and manage business process flows, see [Create a business rule for an entity](https://docs.microsoft.com/powerapps/maker/common-data-service/data-platform-create-business-rule).
   
  
 ## What if your business processes looks different from these examples?  
