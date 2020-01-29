@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 03/19/2018
+ms.date: 01/29/2020
 ms.author: tapanm
 search.audienceType: 
   - maker
@@ -24,21 +24,45 @@ If you don't have a license for Power Apps, you can [sign up for free](../signup
 
 ## Create an app
 
-1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+There are multiple ways to create an app from available templates. You can start based on template layout or template type. In other words, using **New app** option with layout specific templates, or using **All templates** with entire list of all available templates.
 
-1. Under **Make your own app**, hover over **Start from data**, and then click or tap **Make this app**.
+### Create an app from template based on layout
 
-    ![Make this app tile](./media/get-started-test-drive/make-this-app.png)
+1. Sign in to [Power Apps](https://make.powerapps.com).
 
-1. On the **App templates** tile, click or tap **Phone layout** or **Tablet layout**.
+1. Select **Apps** from left navigation. Select the **New app** drop down menu and then select **Canvas**.
+
+    ![New canvas app](./media/get-started-test-drive/new-canvas-app.png)
+
+    This opens [Power Apps Studio](https://docs.microsoft.com/powerapps/powerapps-overview#power-apps-for-app-makerscreators) in a new tab.
+
+1. On the **App templates** tile, select **Phone layout** or **Tablet layout**.
 
     ![App from template tile](./media/get-started-test-drive/template-tile.png)
 
-4. In the list of templates, click or tap a template, and then click or tap **Use** (near the lower-right corner).
+1. In the list of templates, select a template, and then select **Use** (near the lower-right corner).
 
     ![Open a Power Apps template](./media/get-started-test-drive/open-template.png)
 
     The sample data is copied to your cloud-storage account, the app is created, and its home page appears.
+
+    If **Use** button is disabled, ensure you have selected a data source for the app. You can select the data source by selecting **Choose** at the bottom.
+    
+    ![Choose data source](./media/get-started-test-drive/choose-data-source.png)
+    
+    ![Select a data source](./media/get-started-test-drive/data-source-selector.png)
+
+### Create an app based on template type
+
+In order to create an app from a template, you can also use **All templates** from the Power Apps Studio home page or use **Create** option from left navigation. Once you see a list of all available templates, you can choose template of your choice.
+
+>[!NOTE] Ensure the template you select is tagged **Canvas app**.
+
+Depending on template you select, you can choose layout from options of Phone or Tablet.
+
+![Service desk example](./media/get-started-test-drive/service-desk-example.png)
+
+![Cost estimator example](./media/get-started-test-drive/cost-estimator-example.png)
 
 ## Run the app
 An app from a template opens in the default workspace, where you'll spend most of your time customizing. Before you make any changes to the app, explore how the app works in **Preview** mode.
