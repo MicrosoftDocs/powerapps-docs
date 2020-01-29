@@ -79,7 +79,7 @@ Once you have set up data export to the Azure data lake in your subscription, yo
    ![Select entity for export](media/select-entity-export.png)
 
 
-To unlink all linked entities, on the Power Apps maker portal Export to data lake area, select Unlink data lake. 
+To unlink all linked entities, on the Power Apps maker portal Export to data lake area, select **Unlink data lake**. 
 
 ## View your data in the Azure data lake
 1. Sign into [Azure](https://portal.azure.com), select the storage account, and then on the left navigation pane, select **Storage Explorer**. 
@@ -121,7 +121,7 @@ In Power Apps, solutions are leveraged to transport apps and components from one
 
 1.	From the Power Apps maker portal, select the environment where you want to distribute the export to data lake configuration, and then on the left navigation pane select **Solutions**. 
 2.	Select **New solution**, provide a name, select a publisher, and then specify a version number.  
-3.	Open the solution you just created, select **Add existing** > **Other** > **Export to data lake config**. 
+3.	Open the solution you created in the previous step, select **Add existing** > **Other** > **Export to data lake config**. 
 4.	Select the linked data lake configurations that you want, and then select **Add**. 
 5.	In the **Solutions** area, select the solution, on the command bar select **Export**. 
 6.	In the **Before you export** pane, select **Publish** to publish all changes before you export, and then select **Next**. 
