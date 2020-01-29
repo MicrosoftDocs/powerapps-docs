@@ -31,11 +31,9 @@ For exmaple, as you work on a new customer record, the business process flow hel
 The process bar can be docked to the right side of the screen for easy reference as you work with a customer record. 
 
 > [!div class="mx-imgBorder"]
-> ![Business process bar](media/BPdock.png "Business process bar")
+> ![Business process bar](media/BPdock.gif "Business process bar")
  
 
-> [!div class="mx-imgBorder"]
-> ![Business process bar](media/BPdocked.png "Business process bar")
 
 For more information on how to create and manage business process flows, see [Business process flows overview](/flow/business-process-flows-overview).
   
