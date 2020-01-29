@@ -1,12 +1,12 @@
 ---
-title: "Create, edit, or save an Advanced Find search in Model-driven Power Apps| MicrosoftDocs"
+title: "Advanced Find| MicrosoftDocs"
 ms.custom: ""
 author: mduelae
 manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 11/16/2018
+ms.date: 1/27/2020
 ms.author: mduelae
 ms.custom: ""
 ms.reviewer: ""
@@ -33,8 +33,6 @@ Find the records you want in your app by using the Advanced Find search option. 
   
        At the bottom of the **Select** list, the **Related** section shows related record types. For example, most record types have a related Notes record type. To select fields from a related record type, select field and a new **Select** link appears.  
 
-
-
 3. Specify the columns to include in the search results.  
   
    1.  Select **Edit Columns**, and then select **Add Columns**.  
@@ -53,5 +51,4 @@ Find the records you want in your app by using the Advanced Find search option. 
   
    4.  Select **OK**.  
   
-5. Select **Results**.  
-  
+5. Select **Results**.
