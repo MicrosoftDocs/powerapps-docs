@@ -28,7 +28,7 @@ The supported providers are:
 
 In general, if an OAuth provider uses app settings that require a redirect URI value, specify <https://portal.contoso.com/or> https://portal.contoso.com/signin-\[provider\] depending on how the provider performs redirect URI validation (some providers require the full URL path to be specified along with the domain name). Substitute the name of the provider in place of \[provider\] in the redirect URI.
 
-### Google
+## Google People API settings
 
 > [!NOTE]
 > [Google+ API](https://developers.google.com/people/legacy) is deprecated. We strongly recommend that you migrate to [Google People API](https://developers.google.com/people).
@@ -57,7 +57,7 @@ Following these steps to configure your Power Apps portal with [Google's OAuth 2
 1. Select **Create**.
 1. Copy **client ID** and **client secret** from **OAuth client** dialog box and configure [OAuth2 site settings](https://docs.microsoft.com/powerapps/maker/portals/configure/configure-oauth2-settings#create-site-settings-by-using-oauth2) in Power Apps portals.
 
-### Facebook app settings
+## Facebook app settings
 
 1. Open [Facebook Developers App Dashboard](https://developers.facebook.com/apps)  
 2. Select **Add a New App**.
@@ -84,7 +84,7 @@ Following these steps to configure your Power Apps portal with [Google's OAuth 2
 3. Select **I accept** to accept Terms and Conditions.
 4. Go to **Settings** &gt;**API settings**, and then set the redirect URL as https://portal.contoso.com/signin-microsoft 
 
-### Twitter apps settings
+## Twitter apps settings
 
 1. Open [Twitter Application Management](https://apps.twitter.com/). 
 2. Select **Create New App**.
@@ -95,7 +95,7 @@ Following these steps to configure your Power Apps portal with [Google's OAuth 2
 
 3. Select **Create your Twitter application**.
 
-### LinkedIn app settings
+## LinkedIn app settings
 
 1. Open [LinkedIn Developer Network](https://www.linkedin.com/secure/developer).  
 2. Select **Add New Application**.
@@ -107,7 +107,7 @@ Following these steps to configure your Power Apps portal with [Google's OAuth 2
 
 3. Select **Add Application**.
 
-### Yahoo! YDN App settings
+## Yahoo! YDN App settings
 
 > [!NOTE]
 > Due to ongoing compatibility issues between the updated Yahoo YDN OAuth provider endpoint and Power Apps portals, users are temporarily unable to authenticate with Yahoo identity provider.
