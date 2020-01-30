@@ -27,7 +27,7 @@ If you don't have a license for Power Apps, you can [sign up for free](../signup
 
 There are multiple ways to create an app from available templates. You can start based on template layout or template type. In other words, using **New app** option with layout specific templates, or using **All templates** with entire list of all available templates.
 
-### Create an app from a template based on layout
+### Start creating an app from a template based on app layout
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
@@ -53,15 +53,15 @@ There are multiple ways to create an app from available templates. You can start
     
     ![Select a data source](./media/get-started-test-drive/data-source-selector.png)
 
-### Create an app based on template type
+### Start creating an app based on template type
 
-In order to create an app from a template, you can also use **All templates** from the Power Apps Studio home page or use **Create** option from left navigation. Once you see a list of all available templates, you can choose template of your choice.
+In order to create an app from a template, you can also use **All templates** from the Power Apps Studio home page or use **Create** option from left navigation. Once you see a list of all available templates, you can choose template of your choice. You must first sign in to [Power Apps](https://make.powerapps.com).
 
-- **Create** from left navigation:
+- Sign into [Power Apps](https://make.powerapps.com) and select **Create** from left navigation:
 
     ![Create option](./media/get-started-test-drive/create-button.png)
 
-- **All templates** from Power Apps Studio home:
+- Alternatively, sign into [Power Apps](https://make.powerapps.com) and select **All templates** from Power Apps Studio home:
 
     ![All templates](./media/get-started-test-drive/home-button.png)
 
