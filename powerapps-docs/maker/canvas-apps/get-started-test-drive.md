@@ -27,7 +27,7 @@ If you don't have a license for Power Apps, you can [sign up for free](../signup
 
 There are multiple ways to create an app from available templates. You can start based on template layout or template type. In other words, using **New app** option with layout specific templates, or using **All templates** with entire list of all available templates.
 
-### Create an app from template based on layout
+### Create an app from a template based on layout
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
@@ -65,9 +65,8 @@ In order to create an app from a template, you can also use **All templates** fr
 
     ![All templates](./media/get-started-test-drive/home-button.png)
 
-
-
-> [!NOTE] Ensure the template you select is tagged **Canvas app**.
+> [!NOTE]
+> Ensure the template you select is tagged **Canvas app**.
 
 Depending on template you select, you can choose layout from options of Phone or Tablet.
 
