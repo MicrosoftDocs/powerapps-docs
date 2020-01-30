@@ -21,7 +21,7 @@ search.app:
   - D365CE
 ---
 
-# Export entity data to Azure data lake
+# Export entity data to Azure data lake gen 2
 
 The export to data lake service is a pipeline to continuously export data from Common Data Service to Azure data lake. The export to data lake service is designed for enterprise big data analytics by delivering scalable high availability with disaster recover capabilities. Data is stored in the Common Data Model (CDM) format, which provides semantic consistency across apps and deployments. 
 
@@ -51,11 +51,14 @@ Follow the steps in the [Create an Azure Storage account](/azure/storage/blobs
 - The storage account must have the **Hierarchical namespace** feature enabled. 
 - You must be granted an owner role on the storage account. 
 - To link the Common Data Service environment to Azure data lake, you must be a Common Data Service administrator. 
+- Only entities that have change tracking enabled can be exported. 
 
 > [!NOTE]
 > - The storage account must be created in the same Azure AD tenant as your PowerApps tenant.  
 > - The storage account must be created in the same region as the PowerApps environment you will use the feature in.  
 > - We recommend that you set replication to read-access geo-redundant storage (RA-GRS). More information: [Read-access geo-redundant storage](/azure/storage/common/storage-redundancy-grs#read-access-geo-redundant-storage) 
+
+    ![Storage account properties](media/storage-account-properties.png)
 
 ## Set up linked entities for export
 1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand **Data**, and then select **Entities**. 
