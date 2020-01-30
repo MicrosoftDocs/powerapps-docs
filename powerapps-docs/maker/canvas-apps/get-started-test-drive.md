@@ -68,6 +68,8 @@ In order to create an app from a template, you can also use **All templates** fr
     > [!NOTE]
     > Ensure the template you select is tagged **Canvas app**.
 
+1. Select a template.
+
 1. If applicable, choose an app layout.
 
     Depending on template you select, you can choose layout from options of Phone or Tablet.
