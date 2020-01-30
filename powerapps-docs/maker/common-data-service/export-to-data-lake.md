@@ -23,13 +23,13 @@ search.app:
 
 # Export entity data to Azure data lake gen 2
 
-The export to data lake service is a pipeline to continuously export data from Common Data Service to Azure data lake. The export to data lake service is designed for enterprise big data analytics by delivering scalable high availability with disaster recover capabilities. Data is stored in the Common Data Model (CDM) format, which provides semantic consistency across apps and deployments. 
+The export to data lake service is a pipeline to continuously export data from Common Data Service to Azure data lake gen 2. The export to data lake service is designed for enterprise big data analytics by delivering scalable high availability with disaster recover capabilities. Data is stored in the Common Data Model (CDM) format, which provides semantic consistency across apps and deployments. 
 
 ![Export to data lake overview](media/export-data-lake-start.png)
 
 Export to data lake provides these features: 
-- Link or unlink the Common Data Service environment to a data lake in your Azure subscription. 
-- Continuous replication of entities to Azure data lake.
+- Link or unlink the Common Data Service environment to a data lake gen 2 in your Azure subscription. 
+- Continuous replication of entities to Azure data lake gen 2.
 - Initial write followed by incremental writes for data and metadata. 
 - Replicates both standard and custom entities. 
 - Replicates create, update, and delete transactions. 
@@ -50,7 +50,7 @@ Follow the steps in the [Create an Azure Storage account](/azure/storage/blobs
 - Set your storage type as **Storagev2 (general purpose v2)**. 
 - The storage account must have the **Hierarchical namespace** feature enabled. 
 - You must be granted an owner role on the storage account. 
-- To link the Common Data Service environment to Azure data lake, you must be a Common Data Service administrator. 
+- To link the Common Data Service environment to Azure data lake gen 2, you must be a Common Data Service administrator. 
 - Only entities that have change tracking enabled can be exported. 
 
 > [!NOTE]
@@ -60,7 +60,7 @@ Follow the steps in the [Create an Azure Storage account](/azure/storage/blobs
 
     ![Storage account properties](media/storage-account-properties.png)
 
-## Set up linked entities for export
+## Select and export Common Data Service entity data to Azure data lake gen 2
 1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand **Data**, and then select **Entities**. 
 2. On the command bar, select **Export to data lake**, and then on the **Export to data lake** page, select **New link to data lake**. 
 3. Select each of the following settings, and then select **Next**: 
@@ -72,19 +72,19 @@ Follow the steps in the [Create an Azure Storage account](/azure/storage/blobs
    > [!div class="mx-imgBorder"] 
    > ![Select entities for export](media/export-data-lake-select-entity.png)
 
-Your Common Data Service environment is linked to the Azure data lake storage account. The file system in the Azure storage account is created with a folder for each entity selected to replicate to the data lake. 
+Your Common Data Service environment is linked to the Azure data lake gen 2 storage account. The file system in the Azure storage account is created with a folder for each entity selected to replicate to the data lake. 
 
 ## Manage entity data to the data lake
-Once you have set up data export to the Azure data lake in your subscription, you can manage the export of entity data to the data lake in one of two ways. 
+Once you have set up data export to the Azure data lake gen 2 in your subscription, you can manage the export of entity data to the data lake in one of two ways. 
 
 - On the Power Apps maker portal **Export to data lake** area, select **Manage entities** on the command bar to add or remove one or more linked entities.
 - On the Power Apps maker portal **Entities** area, select **…** next to an entity, and then select the linked data lake where you want to export entity data. 
    ![Select entity for export](media/select-entity-export.png)
 
 
-To unlink all linked entities, on the Power Apps maker portal Export to data lake area, select **Unlink data lake**. 
+To unlink all linked entities, on the Power Apps maker portal **Export to data lake area**, select **Unlink data lake**. 
 
-## View your data in the Azure data lake
+## View your data in the Azure data lake gen 2
 1. Sign into [Azure](https://portal.azure.com), select the storage account, and then on the left navigation pane, select **Storage Explorer**. 
 2. Expand **File Systems**, and then select commondataservice-*environmentName*-org-*Id*. 
 
