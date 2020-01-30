@@ -47,18 +47,18 @@ All create, update, delete (CrUD) operations are exported from Common Data Servi
 Before you can export Common Data Service data to a data lake, you must create and configure an Azure StorageV2 (general purpose v2) storage account. 
 
 Follow the steps in the [Create an Azure Storage account](/azure/storage/blobs/data-lake-storage-quickstart-create-account) article and note these requirements: 
+- You must be granted an owner role on the storage account. 
 - Set your storage type as **Storagev2 (general purpose v2)**. 
 - The storage account must have the **Hierarchical namespace** feature enabled. 
-- You must be granted an owner role on the storage account. 
-- To link the Common Data Service environment to Azure data lake gen 2, you must be a Common Data Service administrator. 
-- Only entities that have change tracking enabled can be exported. 
+ - We recommend that you set replication to read-access geo-redundant storage (RA-GRS). More information: [Read-access geo-redundant storage](/azure/storage/common/storage-redundancy-grs#read-access-geo-redundant-storage) 
+>   ![Storage account properties](media/storage-account-properties.png)
 
 > [!NOTE]
 > - The storage account must be created in the same Azure AD tenant as your PowerApps tenant.  
 > - The storage account must be created in the same region as the PowerApps environment you will use the feature in.  
-> - We recommend that you set replication to read-access geo-redundant storage (RA-GRS). More information: [Read-access geo-redundant storage](/azure/storage/common/storage-redundancy-grs#read-access-geo-redundant-storage) 
+>  - To link the Common Data Service environment to Azure data lake gen 2, you must be a Common Data Service administrator. 
+>  - Only entities that have change tracking enabled can be exported. 
 
-    ![Storage account properties](media/storage-account-properties.png)
 
 ## Select and export Common Data Service entity data to Azure data lake gen 2
 1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand **Data**, and then select **Entities**. 
