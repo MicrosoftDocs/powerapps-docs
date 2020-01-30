@@ -338,7 +338,7 @@ An ordinary intersect entity has only the four basic properties required to main
 
 *Complex types* are keyless named structured types consisting of a set of properties. Complex types are commonly used as property values in model entities, or as parameters or return values for operations.  
   
-<xref:Microsoft.Dynamics.CRM.ComplexTypeIndex> lists all the system complex types. *Complex types* are keyless named structured types consisting of a set of properties. They’re commonly used as property values in model entities, or as parameters or return values for operations. The following is the <xref href="Microsoft.Dynamics.CRM.WhoAmIResponse?text=WhoAmIResponse ComplexType" /> from the $metadata.  
+<xref:Microsoft.Dynamics.CRM.ComplexTypeIndex> lists all the system complex types. The following is the <xref href="Microsoft.Dynamics.CRM.WhoAmIResponse?text=WhoAmIResponse ComplexType" /> from the $metadata.  
   
 ```xml  
 <ComplexType Name="WhoAmIResponse">  
