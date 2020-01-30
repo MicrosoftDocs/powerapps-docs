@@ -2,7 +2,7 @@
 title: Frequently asked questions | Microsoft Docs
 description: Frequently asked questions in Power Apps portals.
 author: tapanm-msft
-manager: kumarvivek
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
@@ -222,6 +222,15 @@ It is advisable to use this only when you are developing a portal. Once your por
 When you enable diagnostic logging, you can search for particular errors that users report by using the Activity ID shown on the generic error page. The Activity ID is logged along with the error details and is useful to find the actual issue.
 
 ## Portal administration and management
+
+### Do portals use any static content from CDNs (Content Delivery Network) that I need to whitelist?
+
+Yes. Power Apps portals uses out of the box portal's static assets from Azure CDN that includes default JavaScript and CSS files for presentation that earlier rendered as part of the portal app. You must whitelist the following CDN URL to render portals successfully:
+
+    https://content.powerapps.com/resource/powerappsportal
+
+> [!NOTE]
+> Power Apps portals hosted in Microsoft Government Cloud do not use CDN.
 
 ### How do I use a custom login provider on my portal?
 
