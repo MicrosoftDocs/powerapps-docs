@@ -45,7 +45,7 @@ There are multiple ways to create an app from available templates. You can start
 
     ![Open a Power Apps template](./media/get-started-test-drive/open-template.png)
 
-    The sample data is copied to your cloud-storage account, the app is created, and its home page appears.
+    The Power Apps Studio opens in new tab and the app gets created.
 
     If **Use** button is disabled, ensure you have selected a data source for the app. You can select the data source by selecting **Choose** at the bottom.
     
@@ -57,28 +57,30 @@ There are multiple ways to create an app from available templates. You can start
 
 In order to create an app from a template, you can also use **All templates** from the Power Apps Studio home page or use **Create** option from left navigation. Once you see a list of all available templates, you can choose template of your choice. You must first sign in to [Power Apps](https://make.powerapps.com).
 
-- Sign into [Power Apps](https://make.powerapps.com) and select **Create** from left navigation:
+1. Sign into [Power Apps](https://make.powerapps.com) and select **Create** from left navigation:
 
     ![Create option](./media/get-started-test-drive/create-button.png)
 
-- Alternatively, sign into [Power Apps](https://make.powerapps.com) and select **All templates** from Power Apps Studio home:
+    Alternatively, sign into [Power Apps](https://make.powerapps.com) and select **All templates** from Power Apps Studio home:
 
     ![All templates](./media/get-started-test-drive/home-button.png)
 
-> [!NOTE]
-> Ensure the template you select is tagged **Canvas app**.
+    > [!NOTE]
+    > Ensure the template you select is tagged **Canvas app**.
 
-Depending on template you select, you can choose layout from options of Phone or Tablet.
+1. If applicable, choose an app layout.
 
-Example of a template with Tablet or Phone layout choice:
+    Depending on template you select, you can choose layout from options of Phone or Tablet.
 
-![Service desk example](./media/get-started-test-drive/service-desk-example.png)
+    Example of a template with Tablet or Phone layout choice:
 
-Example of a template with fixed layout:
+    ![Service desk example](./media/get-started-test-drive/service-desk-example.png)
 
-![Cost estimator example](./media/get-started-test-drive/cost-estimator-example.png)
+    Example of a template with fixed layout:
 
-Once you select the **Create** button after providing app name, the Power Apps Studio opens in new tab and the app gets created. 
+    ![Cost estimator example](./media/get-started-test-drive/cost-estimator-example.png)
+
+1. Edit the app name as required and then select the **Create** button. The Power Apps Studio opens in new tab and the app gets created.
 
 ## Run the app
 An app from a template opens in the default workspace, where you'll spend most of your time customizing. Before you make any changes to the app, explore how the app works in **Preview** mode.
