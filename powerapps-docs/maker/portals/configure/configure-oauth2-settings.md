@@ -31,15 +31,15 @@ In general, if an OAuth provider uses app settings that require a redirect URI v
 ### Google
 
 > [!NOTE]
-> [Google legacy API](https://developers.google.com/people/legacy) and [Google+ API](https://developers.google.com/people/legacy) are deprecated. We strongly recommend that existing callers migrate to [Google People API](https://developers.google.com/people).
+> [Google+ API](https://developers.google.com/people/legacy) is deprecated. We strongly recommend that you migrate to [Google People API](https://developers.google.com/people).
 
-Following these steps to configure your Power Apps portal with [Google OAuth2 API Credentials](https://developers.google.com/accounts/docs/OpenIDConnect#appsetup) for user authentication.
+Following these steps to configure your Power Apps portal with [Google's OAuth 2.0 authentication] for user authentication.
 
 1. Open [Google Developers Console](https://console.developers.google.com/).  
 1. Create an API project or open an existing project.
-1. Select **ENABLE APIS AND SERVICES**.
+1. Select **ENABLE APIS AND SERVICES** from dashboard of APIs and Services.
 1. Search and enable API **Google People API**.
-1. Select **Credentials** on left navigation menu.
+1. Inside **Google APIs**, select **Credentials** on left navigation.
 1. Select **CONFIGURE CONSENT SCREEN**.
 1. Select **External** user type.
 1. Select **Create**.
@@ -52,7 +52,7 @@ Following these steps to configure your Power Apps portal with [Google OAuth2 AP
 1. Select **OAuth client ID** from the **Create credentials** drop down menu.
 1. Select application type as **Web application**.
 1. Type **Name** for the OAuth Client ID.
-1. Type your Power Apps portal URL in **Authorized domains** list.
+1. Type your Power Apps portal URL in **Authorized JavaScript Origins** list.
 1. Type **Authorized redirect URIs** as the Power Apps portal URL followed by **/signin-google**. For example, if portal URL is https://contoso.powerappsportals.com, authorized redirect URIs field should be https://contoso.powerappsportals.com/signin-google. 
 1. Select **Create**.
 1. Copy **client ID** and **client secret** from **OAuth client** dialog box and configure [OAuth2 site settings](https://docs.microsoft.com/powerapps/maker/portals/configure/configure-oauth2-settings#create-site-settings-by-using-oauth2) in Power Apps portals.
