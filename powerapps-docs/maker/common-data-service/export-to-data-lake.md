@@ -104,7 +104,7 @@ When entities are added as part of the initial export, the entity data is writte
 Here is an example of Account.csv partitioned file and snapshot folder in the lake.
 ![Accounts entity snapshot](media/export-data-lake-account-snapshots.png) 
 
-Changes in Common Data Service are continuously pushed to the corresponding csv files using the trickle feed engine. This is the T2 interval, where another snapshot is taken. *Entity*-T2.csv, such as Accounts-T2.csv and Contacts-T2.csv (assuming there’re changes for both these entities) and model.json are updated to the new snapshot files. Any new person who views snapshot data from T2 onwards is directed to the newer snapshot files. This way, the original snapshot viewer may continue to work on the older snapshot T1 files while newer viewers can read the latest updates. This is useful in scenarios with longer running downstream processes. 
+Changes in Common Data Service are continuously pushed to the corresponding csv files using the trickle feed engine. This is the T2 interval, where another snapshot is taken. *Entity*-T2.csv, such as Accounts-T2.csv and Contacts-T2.csv (assuming there are changes for both these entities) and model.json are updated to the new snapshot files. Any new person who views snapshot data from T2 onwards is directed to the newer snapshot files. This way, the original snapshot viewer may continue to work on the older snapshot T1 files while newer viewers can read the latest updates. This is useful in scenarios with longer running downstream processes. 
 
 Here is an example of the model.json file, which always points to the latest time-stamped account snapshot file. 
 
