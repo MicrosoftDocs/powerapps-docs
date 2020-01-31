@@ -1,5 +1,5 @@
 ---
-title: "Preview Insert email template while composing an email in Dynamics 365 Sales (Dynamics 365 Sales) | MicrosoftDocs"
+title: "Preview Insert email template while composing an email in model-driven apps | MicrosoftDocs"
 description: "Insert a preformatted email message while composing an email."
 ms.date: 02/03/2020
 ms.service:

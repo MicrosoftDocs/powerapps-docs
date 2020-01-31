@@ -1,5 +1,5 @@
 ---
-title: "Preview  Send email using the enhanced email experience in Dynamics 365 Sales (Dynamics 365 Sales) | MicrosoftDocs"
+title: "Preview  Send email using the enhanced email experience in model-driven apps | MicrosoftDocs"
 description: "Use the enhanced email experience to compose an email without leaving the context of what you are working on."
 ms.date: 02/03/2020
 ms.service:
