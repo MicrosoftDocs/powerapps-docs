@@ -227,7 +227,7 @@ More information:
 
 #### Use the Web API to retrieve options
 
-The Web API provides a RESTful style for querying option values. You can retreive local or global options by retrieving the attributes within an entity. The following example returns the [OptionSetMetadata](/dynamics365/customer-engagement/web-api/optionsetmetadata) for the options included in the [Account](reference/entities/account.md).[AccountCategoryCode property](reference/entities/account.md#BKMK_AccountCategoryCode).
+The Web API provides a RESTful style for querying option values. You can retrieve local or global options by retrieving the attributes within an entity. The following example returns the [OptionSetMetadata](/dynamics365/customer-engagement/web-api/optionsetmetadata) for the options included in the [Account](reference/entities/account.md).[AccountCategoryCode property](reference/entities/account.md#BKMK_AccountCategoryCode).
 
 `GET <organization url>/api/data/v9.0/EntityDefinitions(LogicalName='account')/Attributes(LogicalName='accountcategorycode')/Microsoft.Dynamics.CRM.PicklistAttributeMetadata?$select=LogicalName&$expand=OptionSet`
 

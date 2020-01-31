@@ -154,7 +154,7 @@ While it is important not to reduce the benefit of a Common Data Service system 
  
 If every time we create a task we also update the user record with the number of tasks they currently have allocated, that could introduce a secondary level of blocking as the user record would also now be heavily contended. It would add another resource that each request may need to block and wait for, despite not necessarily being critical to the action. In that example, consider carefully whether storing the count of tasks against the user is important or if the count can be calculated on demand or stored elsewhere such as using hierarchy and rollup field capabilities in Common Data Service natively. 
 
-![Problem example showing unecessary updates](media/only-update-things-you-need-to.png)
+![Problem example showing unnecessary updates](media/only-update-things-you-need-to.png)
 
 As will be shown later, updating system user records can have negative consequences from a scalability perspective. 
 

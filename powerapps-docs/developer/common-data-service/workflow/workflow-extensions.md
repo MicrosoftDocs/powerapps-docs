@@ -288,7 +288,7 @@ protected override void Execute(CodeActivityContext context)
 
 You will use the Plug-in Registration Tool (PRT) to register assemblies containing custom workflow activities. This is the same tool you use to register plug-ins. For both plug-ins and custom workflow activities, you must register the assembly which will upload it to the environment. However, you do not register steps for custom workflow activities.
 
-For custom workflow activites you must specify the following properties to control what is displayed in the workflow process designer.
+For custom workflow activities you must specify the following properties to control what is displayed in the workflow process designer.
 
 |Field|Description|
 |--|--|
@@ -321,7 +321,7 @@ tracingService.Trace("{0} {1} {2}.","Add","your","message");
 ```
 
 More information:
- - [Debug Workflow Activities](debug-workflow-activites.md)
+ - [Debug Workflow Activities](debug-workflow-activities.md)
  - [Use Tracing](../debug-plug-in.md#use-tracing)
  - [View trace logs](../tutorial-write-plug-in.md#view-trace-logs)
 
