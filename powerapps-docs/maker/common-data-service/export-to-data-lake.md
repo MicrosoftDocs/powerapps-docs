@@ -25,7 +25,7 @@ search.app:
 
 The export to data lake service is a pipeline to continuously export data from Common Data Service to Azure data lake gen 2. The export to data lake service is designed for enterprise big data analytics by delivering scalable high availability with disaster recover capabilities. Data is stored in the Common Data Model (CDM) format, which provides semantic consistency across apps and deployments. 
 
-![Export to data lake overview](media/export-data-lake-start.png)
+![Export to data lake overview](media/export-data-lake-overview.png)
 
 Export to data lake provides these features: 
 - Link or unlink the Common Data Service environment to a data lake gen 2 in your Azure subscription. 
