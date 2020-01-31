@@ -40,6 +40,10 @@ Following these steps to configure your Power Apps portal with [Google's OAuth 2
 1. Select **ENABLE APIS AND SERVICES** from dashboard of APIs and Services.
 1. Search and enable API **Google People API**.
 1. Inside **Google APIs**, select **Credentials** on left navigation.
+
+    > [!NOTE]
+    > If you have consent screen configured already with portals top level domain, you can skip steps 6 through 14 and directly move to step 15. However, go through step 11 before moving to step 15 if your consent screen is configured but portals top level domain is not added.
+
 1. Select **CONFIGURE CONSENT SCREEN**.
 1. Select **External** user type.
 1. Select **Create**.
@@ -53,7 +57,7 @@ Following these steps to configure your Power Apps portal with [Google's OAuth 2
 1. Select application type as **Web application**.
 1. Type **Name** for the OAuth Client ID.
 1. Type your Power Apps portal URL in **Authorized JavaScript Origins** list.
-1. Type **Authorized redirect URIs** as the Power Apps portal URL followed by **/signin-google**. For example, if portal URL is https://contoso.powerappsportals.com, authorized redirect URIs field should be https://contoso.powerappsportals.com/signin-google. 
+1. Type **Authorized redirect URIs** as the Power Apps portal URL followed by **/signin-google**. For example, if portal URL is https://contoso.powerappsportals.com, authorized redirect URIs field should be https://contoso.powerappsportals.com/signin-google.
 1. Select **Create**.
 1. Copy **client ID** and **client secret** from **OAuth client** dialog box and configure [OAuth2 site settings](https://docs.microsoft.com/powerapps/maker/portals/configure/configure-oauth2-settings#create-site-settings-by-using-oauth2) in Power Apps portals.
 
