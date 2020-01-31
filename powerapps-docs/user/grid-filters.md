@@ -19,71 +19,73 @@ search.app:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
 
-
-Grids in the Unified Interface have been improved to increase the amount of data that can be seen on your screen. There are many different filtering options that are available. The type of data in the column determines which filter options are available. For example, the **Full Name** column in the **Contacts** grid will have different filter options than the **Activity Type** column in the **Activities** gird.
+Grids in the Unified Interface have been improved to increase the amount of data you can see on your screen. Now you can choose from many different filtering options for a column; the type of data in the column determines which filter options are available. For example, the **Full Name** column in the **Contacts** grid has different filter options than the **Activity Type** column in the **Activities** grid.
 
    > [!div class="mx-imgBorder"]
-   > ![Grids filtering](media/filter-options.png "Grids filtering")
+   > ![Grid filtering](media/filter-options.png "Grid filtering")
 
 ## Lookup field column
 
-When you filter on a lookup column, you can select from a list of records to filter by rather then manually typing in data. For example, on an **Primary Contact** lookup column select the contact name from the list of records to filter by.
+When you filter on a lookup column, you can select from a list of records to filter by rather than manually typing in the data. For example, on a **Primary Contact** lookup column, you can select the contact name from the list of records to filter by.
 
    > [!div class="mx-imgBorder"]
    > ![Lookup filtering](media/lookup-filter.png "Lookup filtering")
 
 ## Date filter
 
-The **Date** filter on grids is a robust filter. There are many different filters to choose from, such as **On** to search by exact date or select filter such as **Next X fiscal year** or **In fiscal period** to search by year or quarter.
+The robust **Date** filter includes many different values to choose from, such as **On** to search by an exact date, or **Next X fiscal year** or **In fiscal period** to search by year or quarter.
 
    > [!div class="mx-imgBorder"]
    > ![Date filtering](media/date-filter.png "Date filtering")
 
 ## Grid and filter navigation
 
-When you filter data on a grid, the main grid page remembers the filter, sort, and the page state when you navigate away and then come back to the page. This includes quick find, column filtering, page number, and more. The navigation outside the page opens with the initial state.
+When you filter data on a grid, the main grid page remembers the filter, sort order, and the page state when you navigate away and then return to the page. This includes quick find, column filtering, page number, and more. 
 
    > [!div class="mx-imgBorder"]
-   > ![Grids remember state](media/grid-remember-state-on-back-navigate.gif "Grids remember state")
+   > ![Navigating back to the page opens it in the same state](media/grid-remember-state-on-back-navigate.gif "Navigating back to the page opens it in the same state")
 
-The jump bar uses the first sorted field. If no sort change has been made, the jump bar uses the primary field. 
+The page jump bar uses the first sorted field. If no change has been made to the sort order, the jump bar uses the primary field.<
 
    > [!div class="mx-imgBorder"]
-   > ![Grids remember state](media/jumpbar-filter-on-sorted-column.gif "Grids remember state")
+   > ![Select a filter on the jump bar](media/jumpbar-filter-on-sorted-column.gif "Select a filter on the jump bar")
   
-When you select the hierarchy icon, it will navigate to the hierarchy form.
+When you select the hierarchy icon, you navigate to the hierarchy view.
 
    > [!div class="mx-imgBorder"]
    > ![Hierarchy icon](media/grid-row-hierarchy-icon.png "Hierarchy icon")
 
-You can also open primary field and lookup fields in new tab or window.
+You can also open primary field and lookup fields in a new tab or window.
 
    > [!div class="mx-imgBorder"]
    > ![Open in a new window](media/newtab.png "[Open in a new window")
 
 ## Use search on a grid
 
-When you use the **Search this view** option on a grid page, the system searchs for data in the view that you are in. 
+When you use the **Search this view** option on a grid page, the system searches for data in the view that you're currently in. In the following example, you perform a search on the **Contacts** grid.
 
-1. For example, go to the **Contacts** grid and from the list of view select **My Active Contacts**.
-
-    > [!div class="mx-imgBorder"]
-    > ![My active contact view](media/myactive-contacts-view.png "My active contact view")
-
-2. Select **Search this view** to search for data in the current view that you are in.
+1. Go to the **Contacts** grid, and then select **My Active Contacts** from the list of views.
 
     > [!div class="mx-imgBorder"]
-    > ![Search view](media/search-view.png "Search view")
+    > ![My active contact view](media/myactive-contacts-view.png "My Active Contacts view")
 
-The system will search for data in the **My Active Contacts** view and when search data is displayed, it will show the same set of columns that is in your current view.
+2. Select **Search this view** to search for data in the view you're in.
+
+    > [!div class="mx-imgBorder"]
+    > ![Search view](media/search-view.png "Search this view")
+
+The system searches for data in the **My Active Contacts** view and displays search results by using the same set of columns that are used in your current view.
 
    > [!div class="mx-imgBorder"]
-   > ![Search view](media/search-view2.png "Search view")
+   > ![Search view](media/search-view2.png "Search results from the Search this view command")
 
-### Use quick find search experience
 
-To switch back to the old quick find search experience that uses an entity's quick find view definition when a search is performed, you will need admin permissions.
+### Use the quick-find search experience
 
-1. From the upper-right corner select the **Gear** icon (![Gear icon](media/selection-rule-gear-button.png)). Then select **Advanced Settings**.
+To switch back to the old quick-find search experience that uses an entity's quick-find view definition to perform searches, you'll need admin permissions.
+
+1. In the upper-right corner, select the gear icon ![Gear icon](media/selection-rule-gear-button.png), and then select **Advanced Settings**.
+
 2. Go to **Settings** > **Administration** > **System Settings**.
-3. on the **General** tab, under **Set up Quick Find** select, **Yes** for **Use quick find view of an entity for searching on grids and sub-grids**.
+
+3. On the **General** tab, under **Set up Quick Find**, select **Yes** for **Use quick find view of an entity for searching on grids and sub-grids**.
