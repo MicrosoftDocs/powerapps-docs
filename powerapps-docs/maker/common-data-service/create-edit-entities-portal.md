@@ -44,7 +44,7 @@ You can filter the entities you see using the following views in a list:
  |View|Description|
  |--|--|
  |**All**| Shows all the entities|
- |**Managed**| Shows only managed and standard entities
+ |**Managed**| Shows only managed and standard entities|
  |**Custom**|Shows only custom entities|
  |**Default**|Shows only the standard entities |
 
