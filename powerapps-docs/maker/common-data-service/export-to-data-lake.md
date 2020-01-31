@@ -64,7 +64,7 @@ Follow the steps in the [Create an Azure Storage account](/azure/storage/blobs
 1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand **Data**, and then select **Entities**. 
 2. On the command bar, select **Export to data lake**, and then on the **Export to data lake** page, select **New link to data lake**. 
 3. Select each of the following settings, and then select **Next**: 
-   - **Subscription**. Select your subscription. 
+   - **Subscription**. Select your Azure subscription. 
    - **Resource group**. Select the resource group that contains the Storagev2 (general purpose v2) storage account.
    - **Storage account**. Select the Storagev2 (general purpose v2) storage account to use for the export. 
 4. Select the entities that you want to export to the data lake, and then select **Save**. Only entities with change tracking enabled can be exported. More information: [Enable change tracking](/dynamics365/customer-engagement/admin/enable-change-tracking-control-data-synchronization)
