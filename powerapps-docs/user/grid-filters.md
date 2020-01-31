@@ -19,7 +19,6 @@ search.app:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
 
-<!--note from editor: Renee said the disclaimer you use above is just fine. My edits to this next paragraph are suggested just to make it flow a bit better.-->
 Grids in the Unified Interface have been improved to increase the amount of data you can see on your screen. Now you can choose from many different filtering options for a column; the type of data in the column determines which filter options are available. For example, the **Full Name** column in the **Contacts** grid has different filter options than the **Activity Type** column in the **Activities** grid.
 
    > [!div class="mx-imgBorder"]
@@ -41,17 +40,17 @@ The robust **Date** filter includes many different values to choose from, such a
 
 ## Grid and filter navigation
 
-When you filter data on a grid, the main grid page remembers the filter, sort order, and the page state when you navigate away and then return to the page. The page state <!--note from editor: Edit okay? I was a bit confused about what "This" referred to.-->includes quick find, column filtering, page number, and more. <!--note from editor: This next sentence seems to contradict the previous point, that when you navigate back to the page it's in the state you left it, not necessarily its "initial state." I guess I don't know what "initial state" means here.-->The navigation outside the page opens with the initial state.<!--note from editor: Can you give this graphic and the next two different alt text strings? I'm not exactly sure what to suggest because I don't clearly see the difference between them. The first seems to be demonstrating that the page state is the same when the user navigates back (so maybe the alt text could be something like "Navigating back to the page opens it in the same state" or something similar?). Remember to describe it well enough for people who aren't looking at the graphics.-->
+When you filter data on a grid, the main grid page remembers the filter, sort order, and the page state when you navigate away and then return to the page. This includes quick find, column filtering, page number, and more. 
 
    > [!div class="mx-imgBorder"]
-   > ![Grids remember state](media/grid-remember-state-on-back-navigate.gif "Grid remember state")
+   > ![Navigating back to the page opens it in the same state](media/grid-remember-state-on-back-navigate.gif "Navigating back to the page opens it in the same state")
 
-The jump bar <!--note from editor: I don't know what a jump bar is, and not sure how it "uses" a field or why it matters.-->uses the first sorted field. If no change has been made to the sort order, the jump bar uses the primary field.<!--note from editor: The alt text for the following graphic will be a good place to reinforce the point of this paragraph. "The remembered page is accessed by the field it was sorted by or by the primary field."?--> 
+The page jump bar uses the first sorted field. If no change has been made to the sort order, the jump bar uses the primary field.<
 
    > [!div class="mx-imgBorder"]
-   > ![Grids remember state](media/jumpbar-filter-on-sorted-column.gif "Grid remember state")
+   > ![Select a filter on the jump bar](media/jumpbar-filter-on-sorted-column.gif "Select a filter on the jump bar")
   
-When you select the hierarchy icon, you navigate to the hierarchy form.<!--note from editor: Would it be accurate to call this a hierarchy view? I can't quite picture what a hierarchy form is.-->
+When you select the hierarchy icon, you navigate to the hierarchy view.
 
    > [!div class="mx-imgBorder"]
    > ![Hierarchy icon](media/grid-row-hierarchy-icon.png "Hierarchy icon")
@@ -80,12 +79,12 @@ The system searches for data in the **My Active Contacts** view and displays sea
    > [!div class="mx-imgBorder"]
    > ![Search view](media/search-view2.png "Search results from the Search this view command")
 
-<!--note from editor: Is there a reason not to have this next section be an H2? It isn't really a subset of the previous H2.-->
-## Use the quick-find search experience
+
+### Use the quick-find search experience
 
 To switch back to the old quick-find search experience that uses an entity's quick-find view definition to perform searches, you'll need admin permissions.
 
-1. In the upper-right corner, select the <!--note from editor: I assume there's no tooltip for the gear icon at all? If there is, you'll want to use that and drop the word "icon". So if the tooltip says "Gear", it should be "...select ***Gear** [icon link], and then select...". If it says "Settings", then this should be "...select **Settings** [icon link], and then select..."-->gear icon ![Gear icon](media/selection-rule-gear-button.png), and then select **Advanced Settings**.
+1. In the upper-right corner, select the gear icon ![Gear icon](media/selection-rule-gear-button.png), and then select **Advanced Settings**.
 
 2. Go to **Settings** > **Administration** > **System Settings**.
 
