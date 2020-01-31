@@ -80,7 +80,7 @@ OData-Version: 4.0
         "innererror": {
             "message": "A record was not created or updated because a duplicate of the current record already exists.",
             "type": "Microsoft.Crm.CrmException",
-            [ Stack Trace and internal exception details ommitted for brevity]
+            [ Stack Trace and internal exception details omitted for brevity]
         }
     }
 }
@@ -127,7 +127,7 @@ OData-Version: 4.0
         "innererror": {
             "message": "A record was not created or updated because a duplicate of the current record already exists.",
             "type": "Microsoft.Crm.CrmException",
-            [ Stack Trace and internal exception details ommitted for brevity]
+            [ Stack Trace and internal exception details omitted for brevity]
         }
     }
 }
