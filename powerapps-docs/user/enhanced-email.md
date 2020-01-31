@@ -14,7 +14,7 @@ manager: annbe
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
 
-The enhanced email experience in model-driven apps allows sales reps to compose an email without leaving the record they’re working on. With the enhanced email experience, you can:
+The enhanced email experience in model-driven apps allows you to compose an email without leaving the record they’re working on. With the enhanced email experience, you can:
 
 - Navigate to different pages without losing the email content.
 - Minimize the email window to get back to the records you were working on.
