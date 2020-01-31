@@ -321,7 +321,7 @@ tracingService.Trace("{0} {1} {2}.","Add","your","message");
 ```
 
 More information:
- - [Debug Workflow Activities](debug-workflow-activities.md)
+ - [Debug Workflow Activities](debug-workflow-activites.md)
  - [Use Tracing](../debug-plug-in.md#use-tracing)
  - [View trace logs](../tutorial-write-plug-in.md#view-trace-logs)
 
