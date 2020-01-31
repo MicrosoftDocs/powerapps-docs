@@ -5,7 +5,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 10/03/2019
+ms.date: 02/03/2019
 ms.author: mkaur
 ms.reviewer: ""
 ms.assetid: 
@@ -75,6 +75,7 @@ Record views show all the details about a single record and sometimes also provi
 
 Legend:
 
+
 1. **Tabs**: Most record views are divided into tabs. Each tab provides a collection of related fields from the record. When tabs are available, they're listed below the record name. Select any tab name to go to that tab. The current tab is shown underlined.
 2. **Related**: Nearly all types of records show a **Related** tab after you've saved them at least once. This tab is actually a drop-down list that you can use to find other types of records that use or reference the displayed record. 
 When you choose an entity name from the **Related** drop-down list, a new tab named for that entity opens, showing a list of all related records of that type. The **Related** tab remains available, and you can still use it to find other types of records that reference the current one.
@@ -113,6 +114,7 @@ Legend:
 1. **Info**: The notification is informational.
 2. **Warn**: The notification is a warning. 
 3. **Error**: The notification is an error. 
+
 
 
 ### Single notification
