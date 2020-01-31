@@ -40,7 +40,7 @@ The robust **Date** filter includes many different values to choose from, such a
 
 ## Grid and filter navigation
 
-When you filter data on a grid, the main grid page remembers the filter, sort order, and the page state when you navigate away and then return to the page. This includes quick find, column filtering, page number, and more. 
+When you filter data on a grid, the main grid page remembers the filter, sort order, and the page state when you navigate away and then return to the page. This works the same when data is filtered on quick find, column filtering, page number, and more. 
 
    > [!div class="mx-imgBorder"]
    > ![Navigating back to the page opens it in the same state](media/grid-remember-state-on-back-navigate.gif "Navigating back to the page opens it in the same state")
