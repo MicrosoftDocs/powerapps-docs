@@ -1,6 +1,6 @@
 ---
 title: "Quick start for using an existing environment to validate your legacy web client app with the Unified Interface | MicrosoftDocs"
-description: "Learn how to plan and execute your transistion from legacy web client to the Unified Interface"
+description: "Learn how to plan and execute your transition from legacy web client to the Unified Interface"
 ms.custom: ""
 ms.date: 09/11/2019
 ms.reviewer: ""
