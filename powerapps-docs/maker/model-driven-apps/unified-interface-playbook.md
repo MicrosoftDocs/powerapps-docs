@@ -1,6 +1,6 @@
 ---
 title: "Unified Interface Playbook | MicrosoftDocs"
-description: "Learn how to plan and execute your transistion from the legacy web client to the Unified Interface"
+description: "Learn how to plan and execute your transition from the legacy web client to the Unified Interface"
 ms.custom: ""
 ms.date: 08/29/2019
 ms.reviewer: ""
