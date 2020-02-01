@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 10/03/2019
+ms.date: 02/03/2020
 ms.author: mduelae
 ms.custom: ""
 ms.reviewer: ""
@@ -63,7 +63,7 @@ The **Create a new record** command or **Quick create** makes it fast and easy t
  
 This is an early-access feature. You can opt in early to enable these features in your environment. This will allow you to test these features and then adopt them across your environments. For information on how to enable these features, see [Opt in to 2020 release wave 1 updates](https://docs.microsoft.com/en-us/power-platform/admin/opt-in-early-access-updates).
 
-User's on early-access, will see the **Save** and **Save & Close** option on command bar when you create a new record or edit an existing record. 
+User's on early-access, will see the **Save** and **Save & Close** option on command bar when you create a new record or edit an existing record. It also available on the bottom right corner.
 
 > [!div class="mx-imgBorder"] 
 > ![Save option on a record](media/saveoptionalwaysvisible.png "Save option on a record")
