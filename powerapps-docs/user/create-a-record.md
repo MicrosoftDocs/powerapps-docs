@@ -52,8 +52,20 @@ The **Create a new record** command or **Quick create** makes it fast and easy t
   
 3. Fill in the appropriate details for new contact and then select **Save and Close**.
 
+   > [!NOTE]
+    > If you have unsaved changes and try to go to another record or form, a **Unsaved changes** dialog box will pop-up. If you select **Save and continue**, it will attempt to save your information and open the page you wanted to go to. If you choose to save and continue and there is an error on a field, the dialog will close and you will remain on the page to fix the error before you can navigate away.
+
     > [!div class="mx-imgBorder"] 
     > ![Create new button](media/newrecord3.png "Create new button")
 
-    > [!NOTE]
-    > If you have unsaved changes and try to go to another record or form, a **Unsaved changes** dialog box will pop-up. If you select **Save and continue**, it will attempt to save your information and open the page you wanted to go to. If you choose to save and continue and there is an error on a field, the dialog will close and you will remain on the page to fix the error before you can navigate away.
+ 
+ ### Save option for early-acess
+ 
+This is an early-access feature. You can opt in early to enable these features in your environment. This will allow you to test these features and then adopt them across your environments. For information on how to enable these features, see [Opt in to 2020 release wave 1 updates](https://docs.microsoft.com/en-us/power-platform/admin/opt-in-early-access-updates).
+
+Early-access customer, will see the **Save** and **Save & Close** option on command bar you create a new record or edit an existing record. 
+
+> [!div class="mx-imgBorder"] 
+> ![Save option on a record](media/saveoptionalwaysvisible.png "Save option on a record")
+
+
