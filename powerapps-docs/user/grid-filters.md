@@ -17,7 +17,7 @@ search.app:
 ---
 # Use grid filters 
 
-[!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
+User's on early-access, will see the **Save** and **Save & Close** option on command bar when you create a new record or edit an existing record. It also available on the bottom right corner.
 
 Grids in the Unified Interface have been improved to increase the amount of data you can see on your screen. Now you can choose from many different filtering options for a column; the type of data in the column determines which filter options are available. For example, the **Full Name** column in the **Contacts** grid has different filter options than the **Activity Type** column in the **Activities** grid.
 
