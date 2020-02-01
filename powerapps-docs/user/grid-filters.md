@@ -17,7 +17,7 @@ search.app:
 ---
 # Use grid filters 
 
-User's on early-access, will see the **Save** and **Save & Close** option on command bar when you create a new record or edit an existing record. It also available on the bottom right corner.
+This is an early-access feature. You can opt in early to enable these features in your environment. This will allow you to test these features and then adopt them across your environments. For information on how to enable these features, see [Opt in to 2020 release wave 1 updates](https://docs.microsoft.com/en-us/power-platform/admin/opt-in-early-access-updates).
 
 Grids in the Unified Interface have been improved to increase the amount of data you can see on your screen. Now you can choose from many different filtering options for a column; the type of data in the column determines which filter options are available. For example, the **Full Name** column in the **Contacts** grid has different filter options than the **Activity Type** column in the **Activities** grid.
 
