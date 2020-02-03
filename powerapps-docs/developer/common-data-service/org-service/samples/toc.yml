@@ -258,8 +258,8 @@
   items:
   - name: Execute multiple requests
     href: execute-multiple-requests.md
-  - name: Execute multiple requests in trnasaction
-    hre4f: execute-multiple-transaction.md
+  - name: Execute multiple requests in transaction
+    href: execute-multiple-transaction.md
 - name: Solutions
   items:
   - name: Work with solutions

@@ -53,7 +53,10 @@
       "feedback_system": "GitHub",
       "feedback_github_repo": "MicrosoftDocs/powerapps-docs",
       "feedback_product_url": "https://ideas.powerapps.com",
-      "search.appverid": "met150"
+      "search.appverid": "met150",
+      "search.app": [
+        "PowerApps"
+      ]
     },
     "fileMetadata": {
       "bilingual_type": {
