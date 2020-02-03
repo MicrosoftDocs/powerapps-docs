@@ -24,7 +24,7 @@ The following is a selected list of community tools distributed via the XrmToolB
 |Tool  |Description  |
 |---------|---------|
 |[Attribute Manager](https://www.xrmtoolbox.com/plugins/DLaB.Xrm.AttributeManager/)|Used to rename/delete/or change the type of an attribute.|
-[Chromium Metadata Browser for Dynamics 365 & Power Apps](https://community.dynamicslabs.io/feed/metadata-browser) is a browser extension developed for Dynamics 365 Customer Engagement (online) and Power Apps. It works with Microsoft Edge and Google Chrome browsers. 
+|[Chromium Metadata Browser for Dynamics 365 & Power Apps](https://community.dynamicslabs.io/feed/metadata-browser)| Browse metadata such as entities, attributes, relationships, option sets of Common Data Service instances. It works with Microsoft Edge and Google Chrome browsers. 
 |[Early Bound Generator](https://www.xrmtoolbox.com/plugins/DLaB.Xrm.EarlyBoundGenerator/)|Generates Early Bound Entities/Option Sets/Actions. Uses CrmSvcUtil from the SDK, and shows command line used to create the classes.|
 |[Export to Excel](https://www.xrmtoolbox.com/plugins/Ryr.XrmToolBox.ExportToExcel/)|Easily export records from the selected view/fetchxml to Excel.|
 |[FetchXML Builder](https://www.xrmtoolbox.com/plugins/Cinteros.Xrm.FetchXmlBuilder/)|Create and test FetchXml Queries|
