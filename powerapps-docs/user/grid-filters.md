@@ -35,8 +35,8 @@ Grids in the Unified Interface have been improved to increase the amount of data
 
    > 2. On the **Formats** tab change the number, currency, time, and date value back to the default setting.
 
-        > [!div class="mx-imgBorder"] 
-        > ![Format settings](media/default-format.png "format settings")
+   > [!div class="mx-imgBorder"] 
+   > ![Format settings](media/default-format.png "format settings")
 
 ## Lookup field column
 
