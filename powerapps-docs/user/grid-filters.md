@@ -46,7 +46,7 @@ When you filter data on a grid, the main grid page remembers the filter, sort or
    > [!div class="mx-imgBorder"]
    > ![Navigating back to the page opens it in the same state](media/grid-remember-state-on-back-navigate.gif "Navigating back to the page opens it in the same state")
 
-The page jump bar uses the first sorted field. If no change has been made to the sort order, the jump bar uses the primary field.<
+The page jump bar uses the first sorted field. If no change has been made to the sort order, the jump bar uses the primary field.
 
    > [!div class="mx-imgBorder"]
    > ![Select a filter on the jump bar](media/jumpbar-filter-on-sorted-column.gif "Select a filter on the jump bar")
