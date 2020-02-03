@@ -25,8 +25,8 @@ search.app:
 # Solution publisher overview
 
 Every app you create or customization you make is part of a solution. Every solution has a publisher. You specify the publisher when you create a solution. 
-
-![Select solution publisher](media/solution-publisher-select.png)
+> [!div class="mx-imgBorder"] 
+> <img src="media/solution-publisher-select.png" alt="Select solution publisher" height="731" width="416">
 
 The solution publisher specifies who developed the app. The prefix provides a quick way to understand which solution added the item. For this reason, you should create a solution publisher and specify a prefix that is meaningful, such as salesapp_Contoso. This is especially important when viewing metadata items included from imported solutions. 
 
