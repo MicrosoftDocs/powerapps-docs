@@ -2,7 +2,7 @@
 title: "Import solutions | MicrosoftDocs"
 description: "Learn how to import a solution in Power Apps"
 ms.custom: ""
-ms.date: 09/30/2019
+ms.date: 01/30/2020
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
