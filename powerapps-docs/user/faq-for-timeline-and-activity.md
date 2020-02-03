@@ -46,9 +46,9 @@ Timeline Wall performance can be improved by optimizing how much data is returne
 
 When you select the **Print Preview** option in Dynamics 365 the **Timeline Wall** will not show in the available list. You will see **Notes** but it will not show tasks or emails.
 
-## Why I can't see other users activities and records in the My activities stream in the dashboard
+## Why I can't see other users activities and records in the My activities stream in the dashboard?
 
-**My activities** stream in the dashboard shows the records and activities that are owned by you (user). For example, user A see records and activities that are owned by A, and user B see records and activities that are owned by B.
+**My activities** stream in the dashboard shows the records and activities that are owned by you (user). For example, user **A** see records and activities that are owned by **A**, and user **B** see records and activities that are owned by **B**.
 
 ## See also
 
