@@ -51,7 +51,7 @@ Compose an email using the enhanced experience:
 
 > [!IMPORTANT]
 > - The enhanced email experience is available only for email activities created from the **Timeline** section of a model-driven app. 
-> - The enhanced email pop-up window opens only when the height and width of your screen size is at least 600 x 840 pixels or greater. If lower, you will be taken to the standard form instead of the enhanced email experience. 
+> - The enhanced email pop-up window opens only when the height and width of your screen size is at least 400 x 650 pixels or greater. If lower, you will be taken to the standard form instead of the enhanced email experience. 
 
 ### See also
 
