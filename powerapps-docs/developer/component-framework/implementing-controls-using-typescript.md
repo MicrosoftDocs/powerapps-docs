@@ -387,6 +387,6 @@ To add the code components to a canvas app, follow the steps in the topic [Add c
 
 [Download sample components](https://go.microsoft.com/fwlink/?linkid=2088525)<br/>
 [Update existing Power Apps component framework components](updating-existing-controls.md)<br/>
-[Power Apps build tools](https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/build-tools-overview)<br/>
+[Power Apps build tools](https://docs.microsoft.com/powerapps/developer/common-data-service/build-tools-overview)<br/>
 [Power Apps component framework API reference](reference/index.md)<br/>
 [Power Apps component framework overview](overview.md)
