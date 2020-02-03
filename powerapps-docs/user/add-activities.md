@@ -38,7 +38,7 @@ Add **Activities** in the **Timeline** wall to keep track of all your communicat
   5. More commands
   6. Activity status
   7. Activity icons
-  8. Date and time   
+  8. Date and time
  
 ## Add an activity from the nav bar
  
