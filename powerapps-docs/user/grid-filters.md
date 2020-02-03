@@ -94,7 +94,7 @@ To switch back to the old quick-find search experience that uses an entity's qui
 
 ## Known issue
 
-If you change the default display format for number, currency, time, or date then when you filter data on a grid the filter may work but the filter will not display your selected number, currency, time, or date format or the filter may not work at all. 
+If you change the default display format for number, currency, time, or date then when you filter data on a grid, the filter will not display in your selected display format. Filters will still display in the system default format and in some cases filtering may not work at all. 
 
 To fix the issue, set the display format for number, currency, time, and date back to the default setting. 
 
