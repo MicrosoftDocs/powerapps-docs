@@ -35,7 +35,7 @@ The solution publisher specifies who developed the app. The prefix can provide a
 > ![Fundraiser solution publisher prefix](media/fundraiser-sample-app-prefix.png)
 
 > [!NOTE]
-> When you change the solution publisher prefix, you should do it before you create any new apps or metadata items. You can't change the names of metadata items. 
+> When you change a solution publisher prefix, you should do it before you create any new apps or metadata items. You can't change the names of metadata items. 
 
 ## Common Data Services Default Solution
 The default solution in Power Apps is the Common Data Services Default Solution, which is associated with the Common Data Service Default Publisher. The default publisher prefix will be randomly assigned for this publisher, for example it could be *cr8a3*. This means that the name of every new item of metadata created in the default solution will have this prepended to the names used to uniquely identify the items. If you create a new entity named *Animal*, the unique name used by Common Data Service would be *cr8a3_animal*. The same is true for any new fields (attributes), relationships, or optionset options. If you will be customizing the default solution, consider changing the publisher prefix. 
