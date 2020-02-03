@@ -78,7 +78,7 @@ Forms provide the user interface (UI) that people use to create, view, or edit e
 
 To open the main form in a dialog using client API, you need to invoke the call using the [Xrm.Navigation.navigateTo](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/xrm-navigation/navigateto) method. The [Xrm.Navigation.navigateTo](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/xrm-navigation/navigateto) API method allows you to open the dialog with several options, including the size and position.
 
-> [IMPORTANT]
+> [!IMPORTANT]
 > - Open main form in a dialog using client API is still in preview.
 > - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 
