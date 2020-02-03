@@ -24,6 +24,19 @@ Grids in the Unified Interface have been improved to increase the amount of data
 
    > [!div class="mx-imgBorder"]
    > ![Grid filtering](media/filter-options.png "Grid filtering")
+   
+   
+   > [!NOTE]
+   > If you change the default display format for number, currency, time, or date and then filter data on a grid, the filter will not show your selected display format. The filters will still display in the system default format and in some cases filtering may not work at all. 
+
+   > To fix the issue, set the display format for number, currency, time, and date back to the default setting. 
+
+   > 1. In the upper-right corner, select the gear icon ![Gear icon](media/selection-rule-gear-button.png), and then select **Personalization Settings**.
+
+   > 2. On the **Formats** tab change the number, currency, time, and date value back to the default setting.
+
+        > [!div class="mx-imgBorder"] 
+        > ![Format settings](media/default-format.png "format settings")
 
 ## Lookup field column
 
