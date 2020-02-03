@@ -89,6 +89,11 @@ If you use the **HideCustomActions** rule to hide buttons, such as **Assign** an
 
 To mitigate the issue, unhide the buttons in the command bar definitions.
 
+
+## Why my users see different activities and records in their My activities stream in the dashboard
+
+**My activities** stream in the dashboard shows the records and activities that are owned by a particular user. For example, user A see records and activities that are owned by A, and user B see records and activities that are owned by B.
+
 ## See also
 
 [Set up timeline control](set-up-timeline-control.md)
