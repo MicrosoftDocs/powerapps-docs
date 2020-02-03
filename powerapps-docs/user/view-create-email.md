@@ -11,6 +11,7 @@ manager: shujoshi
 ---
 [!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
 
+
 # View and create email through the Activities grid
 
 Dynamics 365 model-driven apps let you interact with customers through email. The email functionality allows you to:
