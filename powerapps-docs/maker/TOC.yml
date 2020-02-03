@@ -1532,7 +1532,7 @@
       href: ./common-data-service/common-issues-resolutions-solution-checker.md
     - name: Use segmented solutions
       href: ./common-data-service/use-segmented-solutions-patches-simplify-updates.md
-    - name: Change the solution publisher prefix
+    - name: Solution publisher overview
       href: ./common-data-service/change-solution-publisher-prefix.md
     - name: Set managed properties in metadata
       href: ./common-data-service/set-managed-properties-metadata.md
