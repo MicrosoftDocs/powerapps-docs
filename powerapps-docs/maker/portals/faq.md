@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 01/17/2020
+ms.date: 03/27/2020
 ms.author: tapanm
 ms.reviewer: 
 ---
@@ -16,6 +16,10 @@ ms.reviewer:
 We have compiled a list of frequently asked questions and provided brief answers to help you get to your information quickly.
 
 ## General
+
+### Does Power Apps portals support TLS 1.2?
+
+Power Apps portals version 8.3 onwards supports [TLS 1.2](https://support.microsoft.com/help/4041984/portal-capabilities-for-microsoft-dynamics-365-version-8-3-2-85-releas).
 
 ### What is the difference between Power Apps portals, Dynamics 365 portals and add-on portals?
 
