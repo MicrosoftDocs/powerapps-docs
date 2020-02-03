@@ -103,4 +103,4 @@ To fix the issue, set the display format for number, currency, time, and date ba
 2. On the **Formats** tab change the number, currency, time, and date value back to the default setting.
 
     > [!div class="mx-imgBorder"] 
-    > ![Format settings](media/defalut-format.png "format settings")
+    > ![Format settings](media/default-format.png "format settings")
