@@ -18,46 +18,44 @@ search.app:
   - D365CE
 ---
 
-# Using Quick Find to search for records
+# Using quick find to search for records
 
-## Single-entity Quick Find
+## Single-entity quick find
 
-Single-entity Quick Find is used to find records of one type only. This search option is available from within a view. 
+Single-entity quick find is used to find records of only one type. This search option is available from within a view. 
 
    > [!div class="mx-imgBorder"]
-   > ![Single-entity Quick Find](media/single-quick-find-search-box.png "Single-entity Quick Find Search Box") 
+   > ![Single-entity Quick Find](media/single-quick-find-search-box.png "Single-entity quick find search box") 
 
-## Multi-entity Quick Find (Categorized Search)
+## Multiple-entity quick find (categorized search)
 
-Multi-entity Quick Find is also known as Categorized Search. 
+Multiple-entity quick find is also known as categorized search. 
 
-1.  To start a Categorized Search, from the top nav bar, select the **Search** button.  
-
-     > [!div class="mx-imgBorder"]
-     > ![Global Search Button](media/global-search-button.png "Global Search Button")   
-  
-2.  Type your search words in the search box and then select the **Search** button. Categorized Search returns results grouped by entity types, such as accounts or contacts.
+1.  To start a categorized search, from the top nav bar, select **Search**.  
 
      > [!div class="mx-imgBorder"]
-     > ![Categorized Search Results](media/categorized-search-results.png "Categorized Search Results Page") 
-
-With Categorized Search, you can search for records that begin with a specific word or use a wildcard.
+     > ![Global Search Button](media/global-search-button.png "Global search")
   
-- **Begins with**: Results include records that begin with a specific word. For example, if you want to search for “Alpine Ski House,” type **alp** in the search box; if you type **ski**, the record won’t show up.  
+2.  Type your search words in the search box, and then select **Search**. Categorized search returns results grouped by entity types, such as accounts or contacts.
+
+     > [!div class="mx-imgBorder"]
+     > ![Categorized Search Results](media/categorized-search-results.png "Categorized search results page") 
+
+With categorized search, you can search for records that begin with a specific word or use a wildcard character.
+  
+- **Begins with**: Results include records that begin with a specific word. For example, if you want to search for "Alpine Ski House," type **alp** in the search box; if you type **ski**, the record won't show up.  
   
 - **Wildcard**: For example, *ski or *ski\*. 
 
   > [!NOTE]
-  >  Using a wildcard at the beginning of your Quick Find (single or multi-entity) search query may result in slower performance.
+  >  Using a wildcard at the beginning of your quick find (single or multiple-entity) search query might result in slower performance.
   
-## Filter Categorized Search results 
+## Filter categorized search results 
   
 -   To filter results by a record type, choose a record type from the **Filter with** list. 
 
     > [!div class="mx-imgBorder"]
-    > ![Filtering Categorized Search Results](media/filter-categorized-search-results.png "Filtering Categorized Search Results")  
+    > ![Filtering Categorized Search Results](media/filter-categorized-search-results.png "Filtering categorized search results")  
 
   
--   To search against all record types, choose **None** from the **Filter with** list.  
-
-
+-   To search all record types, choose **None** from the **Filter with** list.  

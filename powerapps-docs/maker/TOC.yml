@@ -31,7 +31,7 @@
       href: ../user/unified-interface.md
     - name: Navigation and basics      
       items:
-      - name: Overview
+      - name: Basic navigation
         href: ../user/navigation.md
       - name: View your profile
         href: ../user/view-your-user-profile.md
@@ -1564,8 +1564,10 @@
     href: ./common-data-service/data-platform-powerbi-connector.md
   - name: Translate customized entity and field text
     href: ./common-data-service/export-customized-entity-field-text-translation.md
-  - name: Import translated entity and field text into an app
+  - name: Import translated entity and field text
     href: ./common-data-service/import-translated-entity-field-text.md
+  - name: Export to data lake
+    href: ./common-data-service/export-to-data-lake.md    
   - name: Security in Common Data Service
     href: /power-platform/admin/wp-security
   - name: API limits overview

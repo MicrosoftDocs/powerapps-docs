@@ -43,7 +43,7 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 
 ### Demonstrate
 1. The `Account` method creates an account record. 
-1. The `CreateRequest` method creates operation by supressing duplicate detection.
+1. The `CreateRequest` method creates operation by suppressing duplicate detection.
 1. The `UpdateRequest` method updates the retrieved account record with new account number.
 
 ### Clean up
