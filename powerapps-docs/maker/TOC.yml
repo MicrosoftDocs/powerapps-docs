@@ -43,15 +43,20 @@
         href: ../user/screen-reader.md
       - name: Keyboard shortcuts
         href: ../user/keyboard-shortcuts.md
-    - name: Work with records
+    - name: Work with records and activities
       items:
       - name: Create a record
         href: ../user/create-a-record.md
       - name: Add activities to the timeline
         href: ../user/add-activities.md
-        items:
-        - name: FAQ about activities
-          href: ../user/faq-for-timeline-and-activity.md
+      - name: FAQ about activities
+        href: ../user/faq-for-timeline-and-activity.md
+      - name: View and create email through the Activities grid
+        href: ../user/view-create-email.md
+      - name: Send email using the enhanced email experience
+        href: ../user/enhanced-email.md
+      - name: Insert an email template
+        href: ../user/insert-email-template.md
       - name: Use the lookup field on a record
         href: ../user/lookup-field.md
       - name: View a profile card
