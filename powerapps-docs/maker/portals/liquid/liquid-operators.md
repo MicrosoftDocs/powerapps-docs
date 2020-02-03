@@ -1,13 +1,13 @@
 ---
 title: "Use Liquid operators for a portal | MicrosoftDocs"
 description: "Learn about the available liquid operators in a portal."
-author: sbmjais
-manager: shujoshi
+author: tapanm-msft
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 10/07/2019
-ms.author: shjais
+ms.author: tapanm
 ms.reviewer:
 ---
 

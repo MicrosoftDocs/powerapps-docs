@@ -18,6 +18,18 @@ search.app:
 
 This article lists some common issues that you might encounter while using Power Apps. Where applicable, workarounds are provided.
 
+1. **Camera images when imported via Edge are flipped** (January 20, 2020)
+
+    When using the camera and the Edge browser, the image may be flipped.  This is due to an Edge defect.  To mitigate this issue, please use the new Edge Chromium or a different browser.
+    
+1. **Camera images do not contain meta-data information** (January 20, 2020)
+
+    When using the camera control, the image does not contain meta-data information. This is due to a limitation of how we take images with the camera. To mitigate this, use the [Add Picture control](controls/control-add-picture.md).
+
+1. **Images added from iOS do not contain meta-data information** (January 20, 2020)
+
+    When using the Add Picture control on iOS, images imported by using the camera or gallery do not contain meta-data.  
+
 1. **Sign-in issue on certain Android mobile devices when using authenticator** (August 21, 2019)
 
     In certain devices and scenarios, you may experience sign-in failures when using authenticator. This is due to the OEM limiting this functionality. For more details on the error and possible mitigations, see [here](https://github.com/AzureAD/azure-activedirectory-library-for-android/wiki/ADALError:-BROKER_AUTHENTICATOR_NOT_RESPONDING).    
