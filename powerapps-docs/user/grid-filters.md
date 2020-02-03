@@ -90,3 +90,17 @@ To switch back to the old quick-find search experience that uses an entity's qui
 2. Go to **Settings** > **Administration** > **System Settings**.
 
 3. On the **General** tab, under **Set up Quick Find**, select **Yes** for **Use quick find view of an entity for searching on grids and sub-grids**.
+
+
+## Known issue
+
+If you change the default display format for number, currency, time, or date then when you filter data on a grid the filter may work but the filter will not display your selected number, currency, time, or date format or the filter may not work at all. 
+
+To fix the issue, set the display format for number, currency, time, and date back to the default setting. 
+
+1. In the upper-right corner, select the gear icon ![Gear icon](media/selection-rule-gear-button.png), and then select **Personalization Settings**.
+
+2. On the **Formats** tab change the number, currency, time, and date value back to the default setting.
+
+    > [!div class="mx-imgBorder"] 
+    > ![Format settings](media/defalut-format.png "format settings")
