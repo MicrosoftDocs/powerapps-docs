@@ -103,7 +103,7 @@ While building a one-to-many or a many-to-one relationship, you can also set adv
 
 ![Advanced behavior](./media/data-platform-cds-newrelationship/advanced-1.png "Advanced behavior")
 
-These options are also referred to as cascading behaviors because they cascade down the hierarchy of related entities. For example, it may be desireable to delete the related tests and homework of a student if a student is removed from the system. This type of behavior is called a parental relationship.
+These options are also referred to as cascading behaviors because they cascade down the hierarchy of related entities. For example, it may be desirable to delete the related tests and homework of a student if a student is removed from the system. This type of behavior is called a parental relationship.
 
 On the other hand, you may decide that you don't want  actions to cascade down the hierarchy. For example, in the teacher to class relationship you may decide that the child entity (class) should *not* be deleted when a parent (teacher) is deleted. This is called a referential relationship.
 
