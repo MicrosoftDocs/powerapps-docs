@@ -98,19 +98,21 @@ To add an email activity to a record, you must first save the record you are add
   
 4. To add an attachment to the email, save the email. Then, in the **Attachments** section, select **+** to add an attachment.  
   
-5. To use a template for the email body, on the command bar, click **Insert Template**, and then select the template.   
+5. To use a template for the email body, on the command bar, select **Insert Template**, and then select the template. For more information on inserting an email template, see [Insert an email template](insert-email-template.md). 
   
 6. When you're done filling in the form, select **Send**. 
 
 
-    > [!NOTE]
-    > To list emails in a conversation view, go to **Settings** > **Personalization Settings** > **Email** tab and then select **Show email as a conversation on Timeline**. For more information on personal settings, see [Set personal options](https://docs.microsoft.com/powerapps/user/set-personal-options#email-tab-options). Once enabled, you can open any form that has a timeline and your emails will be grouped into conversation threads with the latest email at the top.
+
+### List emails in a conversation view
+
+To list emails in a conversation view, go to **Settings** > **Personalization Settings** > **Email** tab and then select **Show email as a conversation on Timeline**. For more information on personal settings, see [Set personal options](https://docs.microsoft.com/powerapps/user/set-personal-options#email-tab-options). Once enabled, you can open any form that has a timeline and your emails will be grouped into conversation threads with the latest email at the top.
 
    > [!div class="mx-imgBorder"]
    > ![Set personal options](media/emailsettings1.png "Set personal options")
    
-    > [!div class="mx-imgBorder"]
-    > ![Set personal options email](media/emailsettings2.png "Set personal options for email")
+   > [!div class="mx-imgBorder"]
+   > ![Set personal options email](media/emailsettings2.png "Set personal options for email")
 
   
 ## Add an appointment  
