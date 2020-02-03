@@ -1,7 +1,7 @@
 ---
 title: "FAQs for timeline control (section) in Power Apps | MicrosoftDocs"
 description: "FAQs for timeline control (section) in Power Apps"
-ms.date: 12/23/2019
+ms.date: 02/03/2020
 ms.service: powerapps
 author: "kabala123"
 ms.assetid: 7F495EE1-1208-49DA-9B02-17855CEB2FDF
