@@ -22,12 +22,14 @@ search.app:
 
 Grids in the Unified Interface have been improved to increase the amount of data you can see on your screen. Now you can choose from many different filtering options for a column; the type of data in the column determines which filter options are available. For example, the **Full Name** column in the **Contacts** grid has different filter options than the **Activity Type** column in the **Activities** grid.
 
-   > [!div class="mx-imgBorder"]
-   > ![Grid filtering](media/filter-options.png "Grid filtering")
-   
    
    > [!NOTE]
    > Do not change the default display format for time, number, currency, time, or date as this causes a issue. For more info, see [Known issue](https://docs.microsoft.com/powerapps/user/grid-filters#known-issue).
+
+   > [!div class="mx-imgBorder"]
+   > ![Grid filtering](media/filter-options.png "Grid filtering")
+   
+
 
 ## Lookup field column
 
