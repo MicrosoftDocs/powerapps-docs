@@ -25,10 +25,14 @@ search.app:
 # Solution publisher overview
 
 Every app you create or customization you make is part of a solution. Every solution has a publisher. You specify the publisher when you create a solution. 
+
 > [!div class="mx-imgBorder"] 
 > <img src="media/solution-publisher-select.png" alt="Select solution publisher" height="731" width="416">
 
-The solution publisher specifies who developed the app. The prefix provides a quick way to understand which solution added the item. For this reason, you should create a solution publisher and specify a prefix that is meaningful, such as salesapp_Contoso. This is especially important when viewing metadata items included from imported solutions. 
+The solution publisher specifies who developed the app. The prefix can provide a quick way to understand which solution added the item. For these reasons, you should create a solution publisher and specify a prefix that is meaningful. This is especially important when viewing metadata items included from imported solutions. For example, the solution that contains the fundraiser sample app uses *sample* as the publisher prefix. 
+
+> [!div class="mx-imgBorder"] 
+> ![Fundraiser solution publisher prefix](media/fundraiser-sample-app-prefix.png)
 
 > [!NOTE]
 > When you change the solution publisher prefix, you should do it before you create any new apps or metadata items. You can't change the names of metadata items. 
@@ -38,7 +42,7 @@ The default solution in Power Apps is the Common Data Services Default Solution,
 
 ## Create a solution publisher
 1.	In the Power Apps portal, select Settings (gear), and then select Advanced settings. 
-2.	Select Settings > Customizations > Publishers. 
+2.	Select **Settings** > **Customizations** > **Publishers**. 
 3.	In the **Publisher Main View** command bar, select **New**. 
 4.	Enter the required information: 
    - **Display Name**. Enter the display name for the publisher. 
