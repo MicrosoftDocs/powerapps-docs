@@ -79,5 +79,5 @@ The following steps detail how to create an email.
 
 ### See also
 
-[Set up enhanced email](set-up-enhanced-email.md)<br>
+[Set up enhanced email](https://docs.microsoft.com/power-platform/admin/system-settings-dialog-box-email-tab)<br>
 [Insert an email template](insert-email-template.md)

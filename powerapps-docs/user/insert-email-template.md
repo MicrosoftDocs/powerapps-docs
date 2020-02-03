@@ -10,7 +10,7 @@ ms.author: shjais
 manager: shujoshi
 ---
 
-# Preview: Insert an email template
+# Insert an email template
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
 
@@ -48,5 +48,5 @@ If you try to insert an email template on a device with smaller screen size, you
 
 ### See also
 
-[Set up enhanced email](set-up-enhanced-email.md)<br>
+[Set up enhanced email](https://docs.microsoft.com/power-platform/admin/system-settings-dialog-box-email-tab)<br>
 [Compose and send email using the enhanced email experience](enhanced-email.md)
