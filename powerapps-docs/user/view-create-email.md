@@ -10,9 +10,9 @@ ms.author: lalexms
 manager: shujoshi
 ---
 
-# View and create email
+# View and create email through the Activities grid
 
-Dynamics 365 model-driven apps let agents interact with customers through email. Email functionality allows agents to:
+Dynamics 365 model-driven apps let you interact with customers through email. The email functionality allows you to:
 
 - View and respond to emails. 
 
@@ -28,7 +28,7 @@ Dynamics 365 model-driven apps let agents interact with customers through email.
 
 To view your email:
 
-1. In the model-driven app's sitemap, go to **Service** > **Activities**. 
+1. In the model-driven app's sitemap, select **Activities**. 
 
 2. Select the **All Activities** drop-down, and then select **My Received Emails**.
 
@@ -40,7 +40,7 @@ To view your email:
 
 The following steps detail how to create an email.
 
-1. In the model-driven app's sitemap, go to **Service** > **Activities**.
+1. In the model-driven app's sitemap, select **Activities**.
 
 2. On the command bar, select **Email**. A new email window opens.
 
@@ -48,7 +48,7 @@ The following steps detail how to create an email.
 
     The **From** field is automatically populated based on the currently logged-in user.
 
-3. Write your email directly in the composer or select **Insert Template** to search for and apply a template.
+3. Write your email directly in the composer or select **Insert Template** to search for and apply a template. For more information on inserting an email template, see [Insert an email template](insert-email-template.md).
 
 4. To compose your email in a full-screen window, select the expand icon.
 
