@@ -9,6 +9,7 @@ author: lalexms
 ms.author: lalexms
 manager: shujoshi
 ---
+[!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
 
 # View and create email through the Activities grid
 
