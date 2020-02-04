@@ -36,9 +36,11 @@ Checks for the current version of the org.
 
 ### Demonstrate
 
-The `SavedQuery` method creates and retrieves the offline filter. In your Outlook client , this will appear in the System filters tab under **File** > **CRM** > **Synchronize** > **Outlook Filters**.
+1. The `fetchXml` method creates asn retrieves offline filter. In your Outlook client, this will appear in System Filters tab under **File -> CRM -> Synchronize -> Outlook Filters**.
+2. The `InstantiateFiltersRequest` method activates the selected offline templates for the current user.
+3. The `ResetUserFilterRequest` method resets the current user's offline templates to the defaults.
 
 ### Clean up
 
-No Clean up is required for this sample.
+Display an option to delete the sample data that is created in [Setup](#setup). The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the records to achieve the same result.
 

@@ -24,7 +24,7 @@ Grids in the Unified Interface have been improved to increase the amount of data
 
    
    > [!NOTE]
-   > Do not change the default display format for time, number, currency, time, or date as this causes a issue. For more info, see [Known issue](https://docs.microsoft.com/powerapps/user/grid-filters#known-issue).
+   > Do not change the default display format for time, number, currency, time, or date as this causes an issue. For more information, see [Known issue](https://docs.microsoft.com/powerapps/user/grid-filters#known-issue).
 
    > [!div class="mx-imgBorder"]
    > ![Grid filtering](media/filter-options.png "Grid filtering")
