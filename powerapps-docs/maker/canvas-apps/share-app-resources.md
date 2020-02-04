@@ -1,14 +1,14 @@
 ---
 title: Share resources used in your canvas app | Microsoft Docs
 description: Understand how you share resources that your canvas app uses in Power Apps
-author: archnair
+author: lancedMicrosoft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 06/28/2016
-ms.author: archanan
+ms.date: 02/03/2020
+ms.author: lanced
 search.audienceType: 
   - maker
 search.app: 
@@ -34,11 +34,13 @@ You can also share your connections, custom connectors and on-premises data gate
 
 ## Connections
 
-Some types of connections, such as SQL Server, are shared automatically, but others require users to create their own connections to the data source or sources in the app.
+Connections such as SQL Server with SQL or Windows authentication are automatically shared with the app when you share the app with other users. Other connections require users to create their own connections such as OneDrive for Business or SQL Server with Azure AD authentication.
 
-On [powerapps.com](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), you can determine whether a connection will be shared automatically, and you can update sharing permissions. In the left navigation bar, click or tap **Manage**, click or tap **Connections**, and then click or tap a connection. If the **Share** tab appears, the connection will be shared automatically.
+You can determine whether a connection is automatically shared as part of the app when you share the app with other users; allowing you to update sharing permissions. To do this, go to make.powerapps.com and select **Data** -> **Connections** from left navigation. Then select the required connection. If the **Share** button appears on top navigation or if the **Share** option displays when you select *More Commands* (...), the selected connection can be shared with other users.
 
-  ![Share tab in connection details page](./media/share-app-resources/shared-connections.png)
+  ![No share for OneDrive for Business](./media/share-app-resources/shared-connections-odb.png)
+
+  ![Share SQL auth connection to SQL Server](./media/share-app-resources/shared-connections-sqlauth.png)
 
 ## On-premises data gateways
 If you create and share an app that includes data from an on-premises source, the [on-premises data gateway](gateway-management.md) itself and certain types of connections to that gateway will be shared automatically. For any connection that isn’t shared automatically, you can share it manually (as the previous section shows) or let the app prompt users to create their own connections. To show the connection or connections with which a gateway has been configured:
