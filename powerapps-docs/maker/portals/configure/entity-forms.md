@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/22/2019
+ms.date: 02/04/2020
 ms.author: tapanm
 ms.reviewer:
 ---
@@ -183,6 +183,37 @@ The form's map control requires additional configuration to tell it what the IDs
 > [!Note]
 > - The address field in a read-only entity form is replaced with the map when geolocation is enabled.
 > - The Geolocation section is not visible in the German Sovereign Cloud environment. If a user has enabled geolocation by using a different form, it will not be displayed during rendering on portal.
+
+## Request validation
+
+[Request validation](https://docs.microsoft.com/aspnet/whitepapers/request-validation), a feature of ASP.NET since version 1.1, prevents the server from accepting content containing un-encoded HTML. This feature is designed to help prevent some script-injection attacks whereby client script code or HTML can be unknowingly submitted to a server, stored, and then presented to other users. We still strongly recommend that you validate all input data and HTML encode it when appropriate.
+
+By default, request validation is enabled on portal resulting in following error if you enter script code without HTML encoding inside entity form fields:
+
+```
+We're sorry, but something went wrong. Please try again, and if this persists, contact the website administrator. 
+Error ID # [GUID]
+We've been notified about this issue and we'll take a look at it shortly. Thank you for your patience.
+```
+
+To disable request validation, follow these steps:
+
+1. Go to [portal settings](https://docs.microsoft.com/powerapps/maker/portals/manage-existing-portals#settings) and select **Site Settings**.
+
+1. Select **New**.
+
+1. Type the name as **DisableValidationWebTemplate**.
+
+1. Select appropriate web site record.
+
+1. Type the value as **true**. By default, setting is **false** that enables request validation.
+
+1. Type appropriate description.
+
+1. Select **Save & Close**. 
+
+> [!CAUTION]
+> When request validation is disabled, content can be submitted to a page. You must ensure that content is properly encoded or processed.
 
 ### See also
 
