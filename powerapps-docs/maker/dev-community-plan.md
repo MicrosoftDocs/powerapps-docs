@@ -78,7 +78,7 @@ With the individual environment, you get the following functionality:
 | Database size |200 MB |
 | File storage |2GB |
 
-You cannot apply add-ons to the quantities that we include. If you hit capacity limits, we recommend purchasing Power Apps Plan 2. Learn more about it from the [Power Apps pricing page](https://powerapps.microsoft.com/pricing/).
+You cannot apply add-ons to the quantities that we include. If you hit capacity limits, we recommend purchasing Power Apps Per User Plan. Learn more about it from the [Power Apps pricing page](https://powerapps.microsoft.com/pricing/).
 
 > [!NOTE]
 > The capacity of the individual environment, whether or not it's used, doesn't contribute to your company's overall quota.
