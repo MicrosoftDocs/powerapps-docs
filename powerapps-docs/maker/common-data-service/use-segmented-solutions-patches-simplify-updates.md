@@ -28,8 +28,8 @@ search.app:
 To gain tighter control over what you distribute in solutions and solution patches, use solution segmentation. Depending on the complexity of your app, segmentation of the solution can be as simple as everything in a single solution to segmenting by component type, such as entities in one solution, canvas apps in another, and plugins in a third. To create the segmented solutions, you can use the solutions area in Power Apps, without writing code.  
 
 There are three main ways to segment solutions: 
-- Make you solutions segmented as you build a new app. To do this you add specific components to control what goes into the solution. More information: [Create a segmented solution with entity assets](#create-a-segmented-solution-with-entity-assets)
-- Make segmented solutions to build and  release minor updates to a solution. To do this you clone a patch. More information: [Create a solution patch](#create-a-solution-patch)
+- Make solutions segmented as you build a new app. To do this you add specific components to control what goes into the solution. More information: [Create a segmented solution with entity assets](#create-a-segmented-solution-with-entity-assets)
+- Make segmented solutions to build and release minor updates to a solution. To do this you clone a patch. More information: [Create a solution patch](#create-a-solution-patch)
 - Make segmented solutions to build and release major updates to a solution. To do this, you clone the solution. More information: [Clone a solution](#clone-a-solution)
 
 ## When to plan for segmentation 
