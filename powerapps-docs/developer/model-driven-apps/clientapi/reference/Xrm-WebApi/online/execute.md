@@ -132,7 +132,7 @@ Sdk.WinOpportunityRequest.prototype.getMetadata = function () {
 
 var opportunityClose = {
     "opportunityid@odata.bind": "/opportunities(c60e0283-5bf2-e311-945f-6c3be5a8dd64)",
-    "description": "Product and maintainance for 2018",
+    "description": "Product and maintenance for 2018",
     "subject": "Contract for 2018"
 }
 

@@ -26,7 +26,9 @@ context of the publisher set for the solution that the option set is created in.
 This prefix helps reduce the chance of creating duplicate option sets for a managed solution, 
 and in any option sets that are defined in organizations where your managed solution is installed. For more information, 
 see [Merge option set options](../understand-managed-solutions-merged.md#merge-option-set-options).  
- 
+
+You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/WorkWithOptionSets).
+
 ## Messages Request Classes  
 
 Use the following message request classes to work with global option sets

@@ -250,7 +250,7 @@ OData supports a wide range of data types but Common Data Service doesn’t use 
 |ManagedProperty|Not applicable|For internal use only.|  
 |Memo|Edm.String|Sequence of UTF-8 characters|  
 |Money|Edm.Decimal|Numeric values with fixed precision and scale|  
-|Owner|Single-valued navigation property|A reference to the <xref href="Microsoft.Dynamics.CRM.principal?text=principal EntityType" />. Both systemuser and team entity types inherit their ownerid property from the prinicipal entity type.|  
+|Owner|Single-valued navigation property|A reference to the <xref href="Microsoft.Dynamics.CRM.principal?text=principal EntityType" />. Both systemuser and team entity types inherit their ownerid property from the principal entity type.|  
 |Picklist|Edm.Int32|Signed 32-bit integer|  
 |State|Edm.Int32|Signed 32-bit integer|  
 |Status|Edm.Int32|Signed 32-bit integer|  

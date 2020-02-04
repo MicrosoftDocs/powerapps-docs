@@ -12,7 +12,7 @@ author: Nkrb
 
 # Implementing table component
 
-This sample component renders a table with two columns. The left column shows the name of the API method or property, and the right column shows the value returned by the API. You can open this component on the different type of devices or modify your language or user settings to see the values adjust correctly in the table.
+This sample component renders a table with two columns. The left column shows the name of the API method or property, and the right column shows the value returned by the API. You can open this component on the different type of devices or modify your language or user settings to see the values adjust correctly in the table. You can download the sample component from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/TS_TableControl).
 
 > [!div class="mx-imgBorder"]
 > ![Table component](../media/table-control.png "Table component")

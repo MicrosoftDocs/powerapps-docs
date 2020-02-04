@@ -119,7 +119,7 @@ The following special messages can also be used:
 
 ## DuplicateRuleCondition Special messages
 
-[DuplicateRuleCondition](/reference/entities/duplicaterulecondition.md) is a child entity to `DuplicateRule`. Access to retrieve or modify these entities is dependant on access to the `DuplicateRule` it is associated with. More information: [DuplicateRuleCondition Messages](/reference/entities/duplicaterulecondition.md#messages).
+[DuplicateRuleCondition](/reference/entities/duplicaterulecondition.md) is a child entity to `DuplicateRule`. Access to retrieve or modify these entities is dependent on access to the `DuplicateRule` it is associated with. More information: [DuplicateRuleCondition Messages](/reference/entities/duplicaterulecondition.md#messages).
 
 The following special messages can also be used:
 
