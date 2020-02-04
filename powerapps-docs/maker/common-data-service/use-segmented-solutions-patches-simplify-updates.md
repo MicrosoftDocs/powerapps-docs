@@ -41,7 +41,7 @@ In addition to having more control over what’s in a solution, you’ll be able
   
 -   A patch can have only one parent solution, but a parent solution can have one or more patches.  
   
--   A patch is created for unmanaged solution. You can’t create a patch for a managed solution.  
+-   A patch is created for an unmanaged solution. You can’t create a patch for a managed solution.  
   
 -   When you export a patch to a target system, you should export it as a managed patch. Don’t use unmanaged patches in production environments.  
   
@@ -70,14 +70,15 @@ In addition to having more control over what’s in a solution, you’ll be able
 3.  Open the solution you just created. On the command bar, select **Add Existing**, and then select **Entity**.  
   
 4.  In the **Add existing entities** pane, select one or more entities you want to add to the solution, such as a standard entity like contact, and a custom entity. Select **Next**.  
-   > [!div class="mx-imgBorder"] 
-   > ![Add existing entities](media/add-existing-entities1.png)
+    > [!div class="mx-imgBorder"] 
+    > ![Add existing entities](media/add-existing-entities1.png)
+
 5.  In the **Select entities** pane, you can choose from the assets to include. 
     - **Include all components**. This option includes all components *and* metadata associated with the entity. This can include other entities or entity components such as business process flows, reports, connections, and queues. 
     - **Include entity metadata**. This option includes *only* the metadata associated with the entity. Metadata includes the entity attributes, such as auditing, duplicate detection, or change tracking. 
     - **Select components**. This option lets you individually select each individual component that’s associated with the entity, such as fields, relationships, business rules, views, forms, and charts. 
-     > [!div class="mx-imgBorder"] 
-     > ![Select entity components](media/add-existing-entities2.png)
+      > [!div class="mx-imgBorder"] 
+      > ![Select entity components](media/add-existing-entities2.png)
   
 6.  Select **Add**.  
 
@@ -125,8 +126,10 @@ Start by opening an unmanaged solution you created. Choose the **Entity** compon
 1. Go to the Power Apps portal, and then select **Solutions**.   
   
 2. In the solutions list, select an unmanaged solution to create a patch for. On the command bar, select **Clone**, and then select **Clone a Patch**. The right pane that opens contains the base solution’s name and the patch version number. Select **Save**.  
-   ![Clone a patch](media/clone-a-patch.png)
-3. In the solutions list, find and open the newly created patch. Notice that the unique name of the solution has been appended with the word **_Patch_***hexnumber*. Just like with the base solution, add the components and assets you want.  
+   > [!div class="mx-imgBorder"] 
+   > <img src="media/clone-a-patch.png" alt="Clone a patch" height="735" width="408">
+ 
+3. In the solutions list, find and open the newly created patch. Notice that the unique name of the solution has been appended with _Patch_*hexnumber*. Just like with the base solution, add the components and assets you want.  
   
 #### Create a patch using solution explorer
  The following illustrations provide an example of creating a patch for an existing solution. Start by selecting **Clone a Patch** (in the compressed view, the **Clone a Patch** icon is depicted as two small squares, as shown below).  
@@ -157,7 +160,7 @@ Start by opening an unmanaged solution you created. Choose the **Entity** compon
   
 1. Go to the Power Apps portal, and then select **Solutions**.   
   
-2.  In the solutions list, select an unmanaged solution to create a clone. On the command bar, select **Clone**, and then select **Clone Solution**. The right pane that opens containsing the base solution’s name and the new version number. Select **Save**.  
+2.  In the solutions list, select an unmanaged solution to create a clone. On the command bar, select **Clone**, and then select **Clone Solution**. The right pane displays the base solution’s name and the new version number. Select **Save**.  
   
   
 ## Next steps  
