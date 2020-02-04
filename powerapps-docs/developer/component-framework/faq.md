@@ -6,8 +6,8 @@ ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.topic: "index-page"
 ms.assetid: 9f940264-d7d5-4930-8052-1bd582445d37
-ms.author: "nabuthuk"
-author: Nkrb
+ms.author: "grhurl"
+author: ghurlman
 ---
 
 # FAQ
@@ -16,7 +16,9 @@ author: Nkrb
 
 ## Component changes are not reflected after the updated solution import?
 
-Update the control version (minor) in control manifest. eg. 1.0.0 to 1.0.1. Every update in the control needs a control version bump to be reflected on the CDS server.
+Update the control version (minor or patch) in control manifest. eg. 1.0.0 to 1.0.1. Every update in the control needs a control version bump to be reflected on the CDS server.
+
+Please note that incrementing the major version number (eg 1.0 to 2.0) is not supported as an upgrade; a new solution must be created if you wish to increment the major version number.
 
 ## What are the things to be considered from a performance perspective?
 
@@ -42,7 +44,7 @@ It is not possible to define multiple components in a single manifest file.
 
 This is not supported at this time. Currently, you can only call dialog boxes using the [Navigation](reference/navigation.md) method in Model-based Power Apps.
 
-## How can I calling other components from within another component?
+## How can I call other components from within another component?
 
 This is not supported natively by the framework.
 
