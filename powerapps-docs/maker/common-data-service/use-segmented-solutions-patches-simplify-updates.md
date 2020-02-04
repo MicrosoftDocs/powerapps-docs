@@ -28,8 +28,8 @@ search.app:
 To gain tighter control over what you distribute in solutions and solution patches, use solution segmentation. Depending on the complexity of your app, segmentation of the solution can be as simple as everything in a single solution to segmenting by component type, such as entities in one solution, canvas apps in another, and plugins in a third. To create the segmented solutions, you can use the solutions area in Power Apps, without writing code.  
 
 There are three main ways to segment solutions: 
-- Make solutions segmented as you build a new app. To do this you add specific components to control what goes into the solution. More information: [Create a segmented solution with entity assets](#create-a-segmented-solution-with-entity-assets)
-- Make segmented solutions to build and release minor updates to a solution. To do this you clone a patch. More information: [Create a solution patch](#create-a-solution-patch)
+- Make solutions segmented as you build a new app. To do this, you add specific components to control what goes into the solution. More information: [Create a segmented solution with entity assets](#create-a-segmented-solution-with-entity-assets)
+- Make segmented solutions to build and release minor updates to a solution. To do this, you clone a patch. More information: [Create a solution patch](#create-a-solution-patch)
 - Make segmented solutions to build and release major updates to a solution. To do this, you clone the solution. More information: [Clone a solution](#clone-a-solution)
 
 ## When to plan for segmentation 
@@ -66,22 +66,22 @@ In addition to having more control over what’s in a solution, you’ll be able
  A solution’s version has the following format: major.minor.build.revision. A patch must have a higher build or revision number than the parent solution. It can’t have a higher major or minor version. For example, for a base solution version 3.1.5.7, a patch could be a version 3.1.5.8 or version 3.1.7.0, but not version 3.2.0.0. A cloned solution must have the version number greater than or equal to the version number of the base solution. For example, for a base solution version 3.1.5.7, a cloned solution could be a version 3.2.0.0, or version 3.1.5.7. In the UI, you can only set the major and minor version values for a cloned solution, and the build or revision values for a patch.  
   
 ## Create a segmented solution with entity assets 
- To create a segmented solution, start with creating an unmanaged solution and adding the existing resources. You can add multiple system or custom entities, and for each entity, choose the assets you want to include in the solution. The wizard-like setup takes you step-by-step through the process of adding entity assets.  
+ To create a segmented solution, start with creating an unmanaged solution and adding the existing resources. You can add multiple system or custom entities, and for each entity, choose the assets you want to include in the solution. The wizard-like setup takes you step by step through the process of adding entity assets.  
   
 1. Go to the Power Apps portal and then select **Solutions**.  
   
 2.  Select **New solution** and create a solution. Enter information in the required fields. Select **Create**.  
   
-3.  Open the solution you just created. On the command bar, select **Add Existing**, and then select **Entity**.  
+3.  Open the solution you created. On the command bar, select **Add Existing**, and then select **Entity**.  
   
 4.  In the **Add existing entities** pane, select one or more entities you want to add to the solution, such as a standard entity like contact, and a custom entity. Select **Next**.  
     > [!div class="mx-imgBorder"] 
     > ![Add existing entities](media/add-existing-entities1.png)
 
 5.  In the **Select entities** pane, you can choose from the assets to include. 
-    - **Include all components**. This option includes all components *and* metadata associated with the entity. This can include other entities or entity components such as business process flows, reports, connections, and queues. 
+    - **Include all components**. This option includes all components *and* metadata associated with the entity. It can include other entities or entity components such as business process flows, reports, connections, and queues. 
     - **Include entity metadata**. This option includes *only* the metadata associated with the entity. Metadata includes the entity attributes, such as auditing, duplicate detection, or change tracking. 
-    - **Select components**. This option lets you individually select each individual component that’s associated with the entity, such as fields, relationships, business rules, views, forms, and charts. 
+    - **Select components**. This option lets you individually select each component that’s associated with the entity, such as fields, relationships, business rules, views, forms, and charts. 
       > [!div class="mx-imgBorder"] 
       > ![Select entity components](media/add-existing-entities2.png)
   
@@ -146,17 +146,17 @@ Start by opening an unmanaged solution you created. Choose the **Entity** compon
   
  ![Use Clone To Patch dialog.](media/solution-segmentation-clone-patch-dialog-admin.png "Use Clone To Patch dialog.")  
   
- The following screenshot shows the base solution **SegmentedSolutionExample**, version **1.0.1.0** and the patch **SegmentedSolutionExample_Patch**, version **1.0.2.0**.  
+ The following screenshot shows the base solution **SegmentedSolutionExample**, version **1.0.1.0**, and the patch **SegmentedSolutionExample_Patch**, version **1.0.2.0**.  
   
  > [!div class="mx-imgBorder"] 
  > ![A grid with solutions and patches.](media/solution-segmentation-solution-patch-grid-admin.png "A grid with solutions and patches.")  
   
- In the patch we added a new custom entity called `Book`, and included all assets of the `Book` entity in the patch.  
+ In the patch, we added a new custom entity called `Book`, and included all assets of the `Book` entity in the patch.  
   
  ![Add custom entity in the patch.](media/solution-segmentation-add-book-patch-admin.png "Add custom entity in the patch.")  
   
 ## Clone a solution  
- When you clone an unmanaged solution, the original solution and all patches related to the solution are rolled up into a newly-created version of the original solution. After cloning, the new solution version contains the original entities plus any components or entities that are added in a patch. 
+ When you clone an unmanaged solution, the original solution and all patches related to the solution are rolled up into a newly created version of the original solution. After cloning, the new solution version contains the original entities plus any components or entities that are added in a patch. 
 
 ![Clone a solution](media/cloned-solution.png)
 
