@@ -55,6 +55,10 @@ Developers are app makers who can write code to extend business app creation and
 
 Dynamics 365 applications, such as Dynamics 365 Sales, Dynamics 365 Customer Service, Dynamics 365 Marketing also use the underlying data platform (Common Data Service) used by Power Apps to store and secure data. This enables you to build apps using Power Apps and Common Data Service directly against your core business data already used within Dynamics 365 without the need for integration. More information: [Dynamics 365 and Common Data Service](maker/common-data-service/data-platform-intro.md#dynamics-365-and-common-data-service)
 
+## Power Apps US Government plans
+
+Power Apps US Government consists of several plans for US government organizations to address the unique and evolving requirements of the United States public sector. The Power Apps GCC environment provides compliance with federal requirements for cloud services, including FedRAMP High, DoD DISA IL2, and requirements for criminal justice systems (CJI data types). More information: [Power Apps US Government](/power-platform/admin/powerapps-us-government)
+
 ## Try Power Apps for free
 
 You can try Power Apps for free by signing up either for a [30 day trial](maker/signup-for-powerapps.md) or [community plan](maker/dev-community-plan.md).
