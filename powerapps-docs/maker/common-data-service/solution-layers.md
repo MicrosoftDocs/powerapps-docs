@@ -30,6 +30,11 @@ Managed and unmanaged solutions exist at different layers within a Common Data S
 
 ![Solution layers](media/solution-layers.png)
 
+## Solution merge behavior
+When you prepare your managed solution for distribution, remember that an environment may have multiple solutions installed or that other solutions may be installed in the future. Construct a solution that follows best practices so that your solution will not interfere with other solutions.
+
+The processes that Common Data Service uses to merge customizations emphasize maintaining the functionality of the solution. While every effort is made to preserve the presentation, some incompatibilities between customizations may require that the computed resolution will change some presentation details in favor of maintaining the customization functionality. More information: [Understand how managed solutions are merged](../../developer/common-data-service/understand-managed-solutions-merged.md)
+
 ## View the solution layers for a component
 The solution layers feature allows you to view all component changes that occur due to solution changes over time. Within a solution layer, you can drill down to view specific changed and unchanged property details for a component. You can access solution layers from the **Components** list or from the **Dependency Details** dialog box in solution explorer. 
 
