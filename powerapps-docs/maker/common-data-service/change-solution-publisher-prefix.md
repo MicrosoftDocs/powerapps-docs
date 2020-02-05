@@ -45,13 +45,13 @@ The default solution in Power Apps is the Common Data Services Default Solution,
 2.	On the command bar, select **New solution**, in the right pane select the **Publisher** drop down list, and then select **+ Publisher**. 
     > [!div class="mx-imgBorder"] 
     > <img src="media/create-new-pubisher.png" alt="Create a new publisher" height="738" width="400">
-   3.	In the **New Publisher** form, enter the required and optional information: 
+3.	In the **New Publisher** form, enter the required and optional information: 
    - **Display Name**. Enter the display name for the publisher. 
    - **Name**. Enter the unique name for the publisher. 
    - **Prefix**. Enter the publisher prefix you want. 
    -	**Option Value Prefix**. This field generates a number based on the publisher prefix. This number is used when you add options to option sets and provides an indicator of which solution was used to add the option. 
    - **Contact Details**. Optionally, you can add contact and address information.
-1. Select **Save and Close**.
+4. Select **Save and Close**.
 
 ## Change a solution publisher
 You can change a solution publisher for an unmanaged solution by following these steps:
