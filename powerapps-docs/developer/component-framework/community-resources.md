@@ -52,19 +52,19 @@ The following is the list of videos created by Power Apps community.
 
 |Name|Description|
 |------|-------|
-|[Build your own code components](https://www.youtube.com/watch?v=S3Z_IUf1ncg)| See how to build code components in model-driven and canvas apps using the Power Apps component framework.| 
-|[Code components for canvas apps](https://www.youtube.com/watch?v=bMSCkcb4xAQ&feature=emb_logo)| See how to develop and use code components in canvas apps.|
-|[Develop code components](https://www.youtube.com/watch?v=FxWF-LCCB4g&feature=youtu.be)| See how to develop code components using the Power Apps component framework in detail.|
-|[Easier debugging with sourcemaps and Fiddler](https://www.youtube.com/watch?v=Ov-m5FBUj9g&feature=youtu.be)|See how to debug code components easily and quick using Fiddler and sourcemaps.|
-|[Getting started with code components](https://www.youtube.com/watch?v=ylhVZUlGgQw)| Overview of Power Apps component framework and how to develop code components in model-driven and canvas apps.|
-|[Power Apps component framework Academy: Getting started](https://www.youtube.com/watch?v=YJ9hrKxAhTU)| Overview of Power Apps component framework in detail.|
-|[Power Apps component framework: Deep dive manifest file for dataset template](https://www.youtube.com/watch?v=TsTrYaOGaGo&feature=youtu.be)| See how a manifest file is defined for dataset type code components.|
-|[Power Apps component framework Academy: Deep dive manifest file for field template](https://www.youtube.com/watch?time_continue=522&v=w40zqSsYEy0)| See how manifest file is defined for field type code components.|
+|[Build your own code components](https://www.youtube.com/watch?v=S3Z_IUf1ncg)| Learn how to build code components in model-driven and canvas apps using the Power Apps component framework.| 
+|[Code components for canvas apps](https://www.youtube.com/watch?v=bMSCkcb4xAQ&feature=emb_logo)| Learn how to develop and use code components in canvas apps.|
+|[Develop code components](https://www.youtube.com/watch?v=FxWF-LCCB4g&feature=youtu.be)| This video shows the requirements for developing code components using Power Apps component framework and demonstrates a step by step approach for creating your first code component.|
+|[Easier debugging with sourcemaps and Fiddler](https://www.youtube.com/watch?v=Ov-m5FBUj9g&feature=youtu.be)|Learn how to debug minified production code using Fiddler and sourcemaps.|
+|[Getting started with code components](https://www.youtube.com/watch?v=ylhVZUlGgQw)| Introductory video on Power Apps component framework and basics of building code components.|
+|[Power Apps component framework Academy: Getting started](https://www.youtube.com/watch?v=YJ9hrKxAhTU)| Introductory video on how to build your first code component.|
+|[Power Apps component framework: Deep dive manifest file for dataset template](https://www.youtube.com/watch?v=TsTrYaOGaGo&feature=youtu.be)| Learn how define a manifest file for dataset type code components.|
+|[Power Apps component framework Academy: Deep dive manifest file for field template](https://www.youtube.com/watch?time_continue=522&v=w40zqSsYEy0)| Learn how to define a manifest file for field type code components.|
 |[Power Apps component framework Academy: Dataset components](https://www.youtube.com/watch?v=OEiM97nTD0w)| Learn more detail about dataset components and how different methods of dataset API are utilized.|
-|[Power Apps component framework Academy: Importing into your organization](https://www.youtube.com/watch?v=2uO2L2xTPkc)| See how to package and import code components into Common Data Service.|
-|[Power Apps component framework Academy: Using React and Office UI fabric](https://www.youtube.com/watch?v=e7JNgGlI3nE)| See how to use React and UI fabric in code components.|
-|[Power Apps component framework Academy: Usage of additional frameworks](https://www.youtube.com/watch?v=cOPyyDdsEjQ)| See how to use additional frameworks in building code components.|
-[Power Apps component framework Academy: Working with manifest file](https://www.youtube.com/watch?v=qbSpDVTxt7U&t=5s)| Overview of manifest file and various methods that need to be defined for developing code components in the manifest file.|
+|[Power Apps component framework Academy: Importing into your organization](https://www.youtube.com/watch?v=2uO2L2xTPkc)| Learn how to package and import code components into Common Data Service.|
+|[Power Apps component framework Academy: Using React and Office UI fabric](https://www.youtube.com/watch?v=e7JNgGlI3nE)| Learn how to use React and UI fabric in code components.|
+|[Power Apps component framework Academy: Usage of additional frameworks](https://www.youtube.com/watch?v=cOPyyDdsEjQ)| Learn how to use additional frameworks in building code components.|
+[Power Apps component framework Academy: Working with manifest file](https://www.youtube.com/watch?v=qbSpDVTxt7U&t=5s)| Introductory video on manifest file and various methods that need to be defined for developing code components in the manifest file.|
 
 
 ## Tools
