@@ -44,7 +44,7 @@ The default solution in Power Apps is the Common Data Services Default Solution,
 1.	In the Power Apps portal, select **Solutions**. 
 2.	On the command bar, select **New solution**, in the right pane select the **Publisher** drop down list, and then select **+ Publisher**. 
     > [!div class="mx-imgBorder"] 
-    > !<img src="media/create-new-pubisher.png" alt="Create a new publisher" height="738" width="400">
+    > <img src="media/create-new-pubisher.png" alt="Create a new publisher" height="738" width="400">
    3.	In the **New Publisher** form, enter the required and optional information: 
    - **Display Name**. Enter the display name for the publisher. 
    - **Name**. Enter the unique name for the publisher. 
