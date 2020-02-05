@@ -57,7 +57,12 @@ The `CascadeConfiguration` (<xref:Microsoft.Xrm.Sdk.Metadata.CascadeConfiguratio
 |Reparent|See [About the reparent action](#about-the-reparent-action) later.|Active<br />Cascade<br />NoCascade<br />UserOwned|  
 |Share|When the referenced entity record is shared with another user.|Active<br />Cascade<br />NoCascade<br />UserOwned|  
 |Unshare|When sharing is removed for the referenced entity record.|Active<br />Cascade<br />NoCascade<br />UserOwned|  
-  
+
+> [!NOTE]
+> When executing an assign, any workflows or business rules that are currently active on the records will automatically be 
+> deactivated when the reassignment occurs. The new owner of the record will need to reactivate the workflow or business rule 
+> if they wish to continue using it.
+
 <a name="BKMK_ReparentAction"></a>   
 ### About the reparent action  
  The reparent action is very similar to the share action except that it deals with the inherited read access rights instead of explicit read access rights. The reparent action is when you change the value of the referencing attribute in a parental relationship. When a reparent action occurs, the desired scope of the inherited read access rights for related entities might change. The cascade actions related to the reparent action refer to changes to read access rights for the entity record and any entity records related to it.  
