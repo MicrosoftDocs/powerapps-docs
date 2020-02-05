@@ -1,13 +1,13 @@
 ---
 title: Create and manage webpages | Microsoft Docs
 description: Instructions to create and manage webpages in portal.
-author: sbmjais
-manager: shujoshi
+author: tapanm-msft
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 10/07/2019
-ms.author: shjais
+ms.author: tapanm
 ms.reviewer:
 ---
 
@@ -16,11 +16,11 @@ ms.reviewer:
 A webpage is a document that is identified by a unique URL in a website. It is one of the core objects of the website and builds a hierarchy of the website through parent and child relationships to other webpages.
 
 > [!NOTE]
-> If you customize your portal using PowerApps portals Studio, the website users would notice a performance impact. We recommended you to do the changes during non-peak hours on a live portal.
+> If you customize your portal using Power Apps portals Studio, the website users would notice a performance impact. We recommended you to do the changes during non-peak hours on a live portal.
 
 ## Create webpage
 
-1.  [Edit the portal](manage-existing-portals.md#edit) to open it in PowerApps portals Studio.  
+1.  [Edit the portal](manage-existing-portals.md#edit) to open it in Power Apps portals Studio.  
 
 2.  From the command bar, select **New page** and either choose a page from **Layouts** or **Fixed layouts**.
 
@@ -61,7 +61,7 @@ If you are working with a portal created in an environment containing model-driv
 
 ## Manage webpage
 
-1.  [Edit the portal](manage-existing-portals.md#edit) to open it in PowerApps portals Studio.  
+1.  [Edit the portal](manage-existing-portals.md#edit) to open it in Power Apps portals Studio.  
 
 2.  Select **Pages** ![pages icon](media/pages-icon.png "Pages icon") from the toolbelt on the left side of the screen.  
 

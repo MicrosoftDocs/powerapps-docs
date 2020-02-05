@@ -1,13 +1,13 @@
 ---
 title: "Use variable tags for a portal | MicrosoftDocs"
 description: "Learn about variable tags available in portal"
-author: sbmjais
-manager: shujoshi
+author: tapanm-msft
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 10/07/2019
-ms.author: shjais
+ms.author: tapanm
 ms.reviewer:
 ---
 
@@ -70,4 +70,4 @@ Hello, DAVE BOWMAN.
 [Control flow tags](control-flow-tags.md)<br>
 [Iteration tags](iteration-tags.md)<br>
 [Template tags](template-tags.md)<br>
-[PowerApps common data service entity tags](portals-entity-tags.md)
+[Power Apps common data service entity tags](portals-entity-tags.md)

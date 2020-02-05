@@ -12,9 +12,9 @@ author: Nkrb
 
 # Implementing increment component
 
-This sample component shows how to bind data with PowerApps component framework and error handling. This component renders as a textbox with an `Increment` button in the runtime. The text box shows the current value and the `Increment` button is clickable. Whenever you click on the button, the value within the textbox is increased by 1. The increment value can be changed to any number you wish.
+This sample component shows how to bind data with Power Apps component framework and error handling. This component renders as a textbox with an `Increment` button in the runtime. The text box shows the current value and the `Increment` button is clickable. Whenever you click on the button, the value within the textbox is increased by 1. The increment value can be changed to any number you wish.
 
-To implement this component, the first thing you need to define the [Manifest](../manifest-schema-reference/manifest.md) file, and then implement the custom logic in TypeScript.
+To implement this component, the first thing you need to define the [Manifest](../manifest-schema-reference/manifest.md) file, and then implement the custom logic in TypeScript. You can download the sample component from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/TS_IncrementControl).
 
 > [!div class="mx-imgBorder"]
 > ![Increment component](../media/increment-control.png "Increment component")
@@ -53,7 +53,7 @@ export class TSIncrementControl
   implements ComponentFramework.StandardControl<IInputs, IOutputs> {
   // Value of the field is stored and used inside the control
   private _value: number;
-  // PowerApps component framework framework delegate which will be assigned to this object which would be called whenever an update happens.
+  // Power Apps component framework framework delegate which will be assigned to this object which would be called whenever an update happens.
   private _notifyOutputChanged: () => void;
   // label element created as part of this control
   private label: HTMLInputElement;
@@ -242,16 +242,16 @@ export class TSIncrementControl
 </root>
 ```
 
-When you click on the button, the value in the text box is increased by 1. The updated value will flow to PowerApps component framework through `notifyOutputChanged` method.
+When you click on the button, the value in the text box is increased by 1. The updated value will flow to Power Apps component framework through `notifyOutputChanged` method.
 
 > [!NOTE]
 > You can change the increment value when you are configuring the component to the field on the form.
 
-Edit the value in the text box, and if it is a valid integer, then it updates the value to PowerApps component framework. You can continuously click the `Increment` button and update it. If it’s an invalid integer, an error message pops out.
+Edit the value in the text box, and if it is a valid integer, then it updates the value to Power Apps component framework. You can continuously click the `Increment` button and update it. If it’s an invalid integer, an error message pops out.
 
 ### Related topics
 
 [Download sample components](https://go.microsoft.com/fwlink/?linkid=2088525)<br/>
 [How to use the sample components](../use-sample-components.md)<br/>
-[PowerApps component framework API reference](../reference/index.md)<br/>
-[PowerApps component framework manifest schema reference](../manifest-schema-reference/index.md)
+[Power Apps component framework API reference](../reference/index.md)<br/>
+[Power Apps component framework manifest schema reference](../manifest-schema-reference/index.md)

@@ -1,13 +1,13 @@
 ---
 title: Work with templates | Microsoft Docs
 description: Instructions to work with templates in portal.
-author: sbmjais
-manager: shujoshi
+author: tapanm-msft
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 10/07/2019
-ms.author: shjais
+ms.author: tapanm
 ms.reviewer:
 ---
 
@@ -25,7 +25,7 @@ The built-in templates are available according to the portal you provision. You 
 
 To open a template in code editor:
 
-1.  [Edit the portal](manage-existing-portals.md#edit) to open it in PowerApps portals Studio.  
+1.  [Edit the portal](manage-existing-portals.md#edit) to open it in Power Apps portals Studio.  
 
 2.  Select **Templates** ![templates icon](media/templates-icon.png "Templates icon") from the toolbelt on the left side of the screen. The available templates are displayed.  
 

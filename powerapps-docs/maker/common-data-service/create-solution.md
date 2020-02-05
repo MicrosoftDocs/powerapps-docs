@@ -29,7 +29,7 @@ Because the default solution contains all the solutions components, it may be ea
   
  For more information about solution concepts, see [Working with solutions](solutions-overview.md).  
   
-1.  Sign in to [PowerApps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select **Solutions** from the left navigation. 
+1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select **Solutions** from the left navigation. 
   
 2.  Select **New solution** and then complete the required fields for the solution.
   
@@ -37,7 +37,7 @@ Because the default solution contains all the solutions components, it may be ea
     |-----------|-----------------|  
     |**Display Name**|The name shown in the list of solutions. You can change this later.|  
     |**Name**|The unique name of the solution. This is generated using the value you enter in the Display Name field. You can edit this before you save the solution, but after you save the solution, you can’t change it.|  
-    |**Publisher**|You can select the default publisher or create a new publisher. Unless you plan to distribute your solution, you should just use the default publisher for your organization.|  
+    |**Publisher**|You can select the default publisher or create a new publisher. We recommend that you create a publisher for your organization to use consistently across your environments that you will use the solution in. More information: [Change the solution publisher prefix for any publisher](change-solution-publisher-prefix.md#change-the-solution-publisher-prefix-for-any-publisher) |  
     |**Version**|Enter a number for the version of your solution. This is only important if you export your solution. The version number will be included in the file name when you export the solution.|  
   
 3.  Select **Save**.  

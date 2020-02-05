@@ -1,13 +1,13 @@
 ---
 title: "Overview of Portal Management app | MicrosoftDocs"
 description: "Information about Portal Management app."
-author: sbmjais
-manager: shujoshi
+author: tapanm-msft
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 10/07/2019
-ms.author: shjais
+ms.author: tapanm
 ms.reviewer:
 ---
 
@@ -15,7 +15,7 @@ ms.reviewer:
 
 The Portal Management app allows you perform advanced configuration actions on your portal. The app is available after the database on Common Data Service is created successfully.
 
-To open the Portal Management app, go to the **Your apps** section on the PowerApps home page, locate the Portal Management app, and select it.
+To open the Portal Management app, go to the **Your apps** section on the Power Apps home page, locate the Portal Management app, and select it.
 
 > [!div class=mx-imgBorder]
 > ![Portal Management app](../media/portal-mgmt.png "Portal Management app")

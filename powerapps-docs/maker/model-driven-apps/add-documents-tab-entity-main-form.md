@@ -2,7 +2,7 @@
 title: "Add the Documents tab to the main form for an entity | MicrosoftDocs"
 description: "Learn how to add the Documents tab to the main form for an entity"
 s.custom: 
-ms.date: 09/05/2019
+ms.date: 01/06/2020
 ms.reviewer: 
 ms.service: crm-online
 ms.suite: 
@@ -18,7 +18,7 @@ search.audienceType:
 search.app: 
   - D365CE
 ---
-# Add the SharePoint documents tab to the main form for an entity
+# Add or remove the SharePoint documents tab to the main form for any entity
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 Adding a tab on an entity main form to display SharePoint documents helps users discover and use the SharePoint integration features that are available in a model-driven app. 
@@ -29,7 +29,7 @@ Adding a tab on an entity main form to display SharePoint documents helps users 
 > To use this feature you must enable document management. More information: [Manage your documents using SharePoint](/dynamics365/customer-engagement/admin/manage-documents-using-sharepoint)
 
 ## Add the documents tab in the FormXML 
-1.	Create a new solution. Sign-in to PowerApps and go to **Solutions**, select **New solution** and then enter the required and optional information. More information: [Create a solution](../common-data-service/create-solution.md)
+1.	Create a new solution. Sign-in to Power Apps and go to **Solutions**, select **New solution** and then enter the required and optional information. More information: [Create a solution](../common-data-service/create-solution.md)
 2. Add the entity to the solution where you want to add the documents tab on the main form. All standard and custom entities are supported. More information: [Add an existing component to a solution](/powerapps/maker/common-data-service/use-solution-explorer#add-an-existing-component-to-a-solution)
 3. Include the form for the entity in the solution, such as the main form for the account entity. Next to the entity, select **...**, and then select **Edit**. Select the **Forms** tab. If the form you want is missing, add it.   
 
@@ -40,7 +40,7 @@ Adding a tab on an entity main form to display SharePoint documents helps users 
    ![Add a field to the tab](media/add-field-to-tab.png)
 6. Rename the tab label. To do this, select **New Tab**, and in the right properties pane replace **New Tab** with something more descriptive, such as *Files*.
 7. Select **Save**, select **Publish**, and then close the form designer. 
-8. From the PowerApps maker home page, select **Solutions**, select the solution, and the select **Export** to export the solution as an unmanaged solution. More information: [Export solutions](../common-data-service/import-update-export-solutions.md#export-solutions) 
+8. From the Power Apps maker home page, select **Solutions**, select the solution, and the select **Export** to export the solution as an unmanaged solution. More information: [Export solutions](../common-data-service/export-solutions.md) 
 9. Extract the solution and open the customization.xml file with an XML or text editor. 
 10. In the customization.xml search for **label description="Files"** (or whatever you named the tab label in the previous step).
 11. Scroll down to the control id="*field name*" element, such as **control id="address1_city"** and replace the entire element with the [XML sample](#xml-sample-for-adding-the-documents-tab-to-a-form) in this topic. 
@@ -82,6 +82,16 @@ Adding a tab on an entity main form to display SharePoint documents helps users 
     </parameters> 
   </control> 
 ```
+
+## Remove the documents tab
+1.	 Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), in the left pane expand **Data**, and then select **Entities**. 
+2.	Select the entity you want, select the **Forms** tab, and then open the form where the file tab needs to be removed. 
+3. Select the **Files** tab, and then on the form designer toolbar, select **Delete**. 
+
+    ![Delete files tab](media/delete-files-tab.png)
+
+4. On the form designer toolbar, select **Publish**.
+
 
 ### See also
 [Manage your documents using SharePoint](/dynamics365/customer-engagement/admin/manage-documents-using-sharepoint)

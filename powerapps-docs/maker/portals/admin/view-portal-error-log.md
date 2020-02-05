@@ -1,19 +1,19 @@
 ---
 title: "Viewing portal error logs and storing them in Azure Blob storage | MicrosoftDocs"
 description: "Learn how to view portal error logs and store them in your Azure Blob storage account."
-author: sbmjais
-manager: shujoshi
+author: tapanm-msft
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 10/07/2019
-ms.author: shjais
+ms.author: tapanm
 ms.reviewer:
 ---
 
 # View portal error logs
 
-As a portal administrator or developer, you can use PowerApps portals to create a website for your customers. One common task for a developer is to debug issues while developing the portal. To help debug, you can access detailed error logs for any issues on your portal. There are multiple ways that you can get error logs for your portals.
+As a portal administrator or developer, you can use Power Apps portals to create a website for your customers. One common task for a developer is to debug issues while developing the portal. To help debug, you can access detailed error logs for any issues on your portal. There are multiple ways that you can get error logs for your portals.
 
 ## Custom error
 
@@ -35,7 +35,7 @@ More information on custom error: [Displaying a Custom Error Page](https://docs.
 
 You can disable custom errors on portals to display the detailed exception message if any server-side exception occurs in your portal.
 
-1. Open [PowerApps Portals admin center](admin-overview.md).
+1. Open [Power Apps Portals admin center](admin-overview.md).
 
 2. Go to **Portal Actions** > **Disable custom errors**.
 
@@ -48,7 +48,7 @@ You can disable custom errors on portals to display the detailed exception messa
 
 You can enable custom errors on portals to display a professional-looking page instead of YSOD. This page provides meaningful information if any exception occurs in the application.
 
-1. Open [PowerApps Portals admin center](admin-overview.md).
+1. Open [Power Apps Portals admin center](admin-overview.md).
 
 2. Go to **Portal Actions** > **Enable custom errors**.
 
@@ -89,14 +89,14 @@ This is a custom error, please file a support ticket with screenshot of error by
 
 ## Access portal error logs
 
-After developing and publishing the portal, you still need to be able to access portal logs to debug issues reported by your customers. To access the logs, you can configure your portal to send all application errors to an Azure Blob storage account that you own. By accessing portal error logs, you can respond to customer queries efficiently because you have details of the issue. To get portal error logs into your Azure Blob storage, you must enable diagnostic logging from the PowerApps Portals admin center.
+After developing and publishing the portal, you still need to be able to access portal logs to debug issues reported by your customers. To access the logs, you can configure your portal to send all application errors to an Azure Blob storage account that you own. By accessing portal error logs, you can respond to customer queries efficiently because you have details of the issue. To get portal error logs into your Azure Blob storage, you must enable diagnostic logging from the Power Apps Portals admin center.
 
 > [!NOTE]
 > If you change the Common Data Service instance that your portal is connected to, diagnostic logging is disabled. You must enable diagnostic logging again.
 
 ### Enable diagnostic logging
 
-1. Open [PowerApps Portals admin center](admin-overview.md).
+1. Open [Power Apps Portals admin center](admin-overview.md).
 
 2. Go to **Portal Actions** > **Enable diagnostic logging**.
 
@@ -133,7 +133,7 @@ When diagnostic logging is enabled successfully, the following action becomes av
  
 ### Update diagnostic logging
 
-1. Open [PowerApps Portals admin center](admin-overview.md).
+1. Open [Power Apps Portals admin center](admin-overview.md).
 
 2. Go to **Portal Actions** > **Update diagnostic logging configuration**.
 
@@ -161,7 +161,7 @@ When diagnostic logging is enabled successfully, the following action becomes av
 
 ### Disable diagnostic logging
 
-1. Open [PowerApps Portals admin center](admin-overview.md).
+1. Open [Power Apps Portals admin center](admin-overview.md).
 
 2. Go to **Portal Actions** > **Disable diagnostic logging**.
 

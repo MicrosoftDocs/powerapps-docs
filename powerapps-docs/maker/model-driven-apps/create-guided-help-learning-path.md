@@ -39,7 +39,7 @@ Learning Path facilitates learning and adoption of your apps and organizational 
 
  To create Learning Path content, you must:  
 
-- Be using PowerApps or [!INCLUDE[pn_crm_online_shortest](../../includes/pn-crm-online-shortest.md)].  
+- Be using Power Apps or [!INCLUDE[pn_crm_online_shortest](../../includes/pn-crm-online-shortest.md)].  
 
 - Have opted in for Learning Path. This setting is on by default, but it might have been turned off.  
 
@@ -59,7 +59,7 @@ Learning Path facilitates learning and adoption of your apps and organizational 
 ## Turn on Learning Path for your organization  
  Learning Path is an optional feature that can be turned on or off for your organization. You can display Learning Path content included with [!INCLUDE[pn_crm_shortest](../../includes/pn-crm-shortest.md)], create your own Learning Path content for your users, or both.  
 
-1. Sign in to [PowerApps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) or [!INCLUDE[pn_crm_shortest](../../includes/pn-crm-shortest.md)] with an admin account.  
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) or [!INCLUDE[pn_crm_shortest](../../includes/pn-crm-shortest.md)] with an admin account.  
 
 2. Go to **Settings**, and then select **Administration** under **System**. More information: [Settings](/powerapps/maker/model-driven-apps/advanced-navigation#settings)
 
@@ -128,7 +128,7 @@ Learning Path facilitates learning and adoption of your apps and organizational 
 <a name="ConfigureRoles"></a>   
 #### Configure security roles  
 
-1. Sign in to PowerApps with an account that has Learning Path authoring permissions.  
+1. Sign in to Power Apps with an account that has Learning Path authoring permissions.  
 
 2. Open the **Content Library**.  
 

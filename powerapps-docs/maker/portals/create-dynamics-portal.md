@@ -1,13 +1,13 @@
 ---
 title: Create a portal in an environment containing model-driven apps in Dynamics 365 | Microsoft Docs
 description: Instructions to create a a portal in an environment containing model-driven apps in Dynamics 365.
-author: sbmjais
-manager: shujoshi
+author: tapanm-msft
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 10/07/2019
-ms.author: shjais
+ms.author: tapanm
 ms.reviewer:
 ---
 
@@ -15,7 +15,7 @@ ms.reviewer:
 
 If you select an environment that contains model-driven apps in Dynamics 365 (such as Dynamics 365 Sales and Dynamics 365 Customer Service), you can create the portals mentioned in [Portal templates](portal-templates.md).
 
-1.	Sign in to [PowerApps](https://make.powerapps.com).
+1.	Sign in to [Power Apps](https://make.powerapps.com).
 
 2.	Select **Create** on the left pane and enter **portal** in the **Search templates** field to display all Dynamics 365 portal templates.
 
@@ -32,4 +32,5 @@ If you select an environment that contains model-driven apps in Dynamics 365 (su
 > - Provisioning portals from [make.powerapps.com](https://make.powerapps.com) does not consume the older portal add-ons. Also, these portals are not listed under the **Applications** tab on the **Dynamics 365 Administration Center** page.
 > - A Common Data Service starter portal cannot be created from the **Dynamics 365 Administration Center** page.
 > - To disable portal creation in a tenant, see [Disable portal creation in a tenant](create-portal.md#disable-portal-creation-in-a-tenant).
+> - When you create a portal, a few solutions are installed and sample data is imported.
 

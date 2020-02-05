@@ -1,13 +1,13 @@
 ---
 title: "Rate or vote on a webpage on a portal | MicrosoftDocs"
 description: "Instructions to enable and manage ratings on a web page on a portal."
-author: sbmjais
-manager: shujoshi
+author: tapanm-msft
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 11/11/2019
-ms.author: shjais
+ms.author: tapanm
 ms.reviewer:
 ---
 
@@ -43,7 +43,7 @@ For webpages that have page ratings enabled and the developer has applied the co
 
 ## Manage ratings
 
-The ratings for webpages can be viewed, modified, or deleted within PowerApps portals.
+The ratings for webpages can be viewed, modified, or deleted within Power Apps portals.
 
 1. Open the [Portal Management app](configure-portal.md).
 

@@ -1,13 +1,13 @@
 ---
 title: "Add record-based security by using Entity Permissions for a portal | MicrosoftDocs"
 description: "Instructions to add an entity permission and assign web roles to it."
-author: sbmjais
-manager: shujoshi
+author: tapanm-msft
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 11/04/2019
-ms.author: shjais
+ms.author: tapanm
 ms.reviewer:
 ---
 
@@ -25,9 +25,11 @@ To secure these features, entity permissions allow for granular rights to be gra
 
 2. Go to **Portals** &gt; **Web Roles** and open the web role you want to add the permissions to. 
 
-3. Select **Add** to add an existing entity permission to a web role. 
+3. Under **Related**, select **Entity Permissions**.
 
-4. Select **New** to create a new Entity Permission record.
+4. Select **Add Existing Entity Permission** to add an existing entity permission to a web role. 
+
+4. Browse for an entity permission or select **New Entity Permission** to create a new Entity Permission record.
 
     ![Add entity permissions to a web role](../media/add-entity-permission-web-role.png "Add entity permissions to a web role")  
 

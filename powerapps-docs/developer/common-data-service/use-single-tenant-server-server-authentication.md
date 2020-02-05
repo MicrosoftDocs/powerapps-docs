@@ -2,13 +2,13 @@
 title: "Use Single-Tenant server-to-server authentication (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Describes how to access D365 data from an application or service without explicit user authentication." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 2/21/2019
+ms.date: 12/20/2019
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "paulliew" # GitHub ID
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
+ms.author: "pehecke" # MSFT alias of Microsoft employees only
+manager: "kvivek" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
@@ -17,9 +17,9 @@ search.app:
 ---
 # Use Single-Tenant server-to-server authentication
 
-The single-tenant server-to-server scenario typically applies for enterprise organizations who have multiple Common Data Service environments using Active Directory Federation Services (AD FS) for authentication. However, it can also be applied by environments when the application won't be distributed to other environments.  
+The single-tenant server-to-server scenario typically applies for enterprise organizations that have multiple Common Data Service environments using Active Directory Federation Services (AD FS) for authentication. However, it can also be applied by environments when the application won't be distributed to other environments.  
   
- An enterprise can create a web application or service to connect to any Common Data Service environments associated with a single Azure Active Directory (AD) tenant.
+ An enterprise can create a web application or service to connect to any Common Data Service environments associated with a single Azure Active Directory (Azure AD) tenant.
   
 ## Differences from multi-tenant scenario  
  Creating a web application or service for a single-tenant server-to-server authentication is similar to that used for a multi-tenant organization but there are some important differences.  
@@ -37,22 +37,38 @@ In the [See also](#bkmk_seealso) section at the end of this article, there are l
   
 - An Azure AD tenant to use when registering the provided sample application.
 - A Common Data Service subscription that is associated with the Azure AD tenant.
-- Administrator privileges in the Azure AD tenant and D365 organization.
+- Administrator privileges in the Azure AD tenant and Common Data Service environment.
 
 <a name="bkmk_registration"></a>
 ## Azure application registration
 To create an application registration in Azure AD, follow these steps.
 
-1. Navigate to https://admin.microsoft.com and sign in, or from your D365 organization web page select the application launcher in the top left corner.
+1. Navigate to https://admin.microsoft.com and sign in, or from your Common Data Service environment web page, select the application launcher in the top left corner.
 2. Choose **Admin** > **Admin centers** > **Azure Active Directory**
 3. From the left panel, choose **Azure Active Directory** > **App registrations (Preview)**
 4. Choose **+ New registration**
-5. In the **Register an application** form provide a name for your app, select **Accounts in this organizational directory only**, and choose **Register**. A redirect URI is not needed for this walkthrough and the provided sample code.<br /> ![Register an application form](media/S2S-app-registration-started.PNG)
-6. On the **Overview** page, select **API permissions** <br >![App registration permissions](media/S2S-app-registration-completed.PNG)
+5. In the **Register an application** form provide a name for your app, select **Accounts in this organizational directory only**, and choose **Register**. A redirect URI is not needed for this walkthrough and the provided sample code.
+
+    > [!div class="mx-imgBorder"]
+    > ![Register an application form](media/S2S-app-registration-started.PNG)
+
+6. On the **Overview** page, select **API permissions** 
+
+    > [!div class="mx-imgBorder"]
+    > ![App registration permissions](media/S2S-app-registration-completed.PNG)
+
 7. Choose **+ Add a permission**
 8. In the **Microsoft APIs** tab, choose **Dynamics CRM**
-9. In the **Request API permission** form, select **Delegated permissions**, check **user_impersonation**, and select **Add permissions** <br />![Setting API permissions](media/S2S-api-permission-started.PNG)
-10. On the **API permissions** page below **Grant consent**, select **Grant admin consent for "org-name"** and when prompted choose **Yes** <br />![Granting API permissions](media/S2S-api-permission-completed.PNG)
+9. In the **Request API permission** form, select **Delegated permissions**, check **user_impersonation**, and select **Add permissions** 
+
+    > [!div class="mx-imgBorder"]
+    > ![Setting API permissions](media/S2S-api-permission-started.PNG)
+
+10. On the **API permissions** page below **Grant consent**, select **Grant admin consent for "org-name"** and when prompted choose **Yes** 
+
+    > [!div class="mx-imgBorder"]
+    > ![Granting API permissions](media/S2S-api-permission-completed.PNG)
+
 11. Select **Overview** in the navigation panel, record the **Display name**, **Application ID**, and **Directory ID** values of the app registration. You will provide these later in the code sample.
 12. In the navigation panel, select **Certificates & secrets**
 13. Below **Client secrets**, choose **+ New client secret** to create a secret
@@ -60,27 +76,66 @@ To create an application registration in Azure AD, follow these steps.
 
 <a name="bkmk_appuser"></a>
 ## Application User creation
-To create an unlicensed "application user" in your Dynamics 365 organization, follow these steps. This application user will be given access to your organization's data on behalf of the end user who is using your application.
+To create an unlicensed "application user" in your environment, follow these steps. This application user will be given access to your environment's data on behalf of the end user who is using your application.
 
-1. Navigate to the Azure Active Directory admin center
-2. In the left navigation panel, choose **Users**
-3. Select **+ New user**
-4. In the **User** form, enter a name and username for the new user and select **Create**. Make sure the username contains the organization domain URL of your D365 tenant (i.e., someuser@myorg.onmicrosoft.com). You can exit Azure AD now.
-5. Navigate to your D365 organization
-6. Navigate to **Settings** > **Security** > **Users**
-7. Choose **Application Users** in the view filter
-8. Select **+ New**
-9. In the **New User** form, enter the required information. These values must be identical to those values for the new user you created in the Azure tenant. <br />![New app user](media/S2S-new-appuser.PNG)
-10. If all goes well, after selecting **SAVE**, the **Application ID URI** and **Azure AD Object Id** fields will auto-populate with their correct values
-11. Before exiting the user form, choose **MANAGE ROLES** and assign a security role to this application user so that the application user can access the desired organization data.
+1. Navigate to your Common Data Service environment (https://*[org]*.crm.dynamics.com).
+2. Navigate to **Settings** > **Security** > **Users**.
+3. Choose **Application Users** in the view filter.
+4. Select **+ New**.
+5. In the **Application User** form, enter the required information. 
+
+    1. The user name information must not match a user that exists in the Azure Active Directory.
+    1. In the **Application ID** field, enter the application ID of the app you registered earlier in the Azure AD.
+
+    > [!div class="mx-imgBorder"]
+    > ![New app user](media/S2S-new-appuser1.png)
+
+6. If all goes well, after selecting **SAVE**, the **Application ID URI** and **Azure AD Object Id** fields will auto-populate with correct values.
+
+    > [!div class="mx-imgBorder"]
+    > ![New app user](media/S2S-new-appuser.PNG)
+
+7. Before exiting the user form, choose **MANAGE ROLES** and assign a security role to this application user so that the application user can access the desired organization data.
 
 > [!IMPORTANT]
 > When developing a real-world application using S2S, you should use a custom security role which can be stored in a solution and distributed along with your application.
 
+## Enable or disable application users
+When application users are created, they are automatically enabled. The default Application User form shows the **Status** in the form footer; the **Status** field can't be updated.  
+
+In an event that an application user’s status is disabled and you need to enable it, you can perform the following steps to customize the Application User form to allow update to the **Status** field. You can also use these steps to disable an application user that is no longer used.
+
+1. Remove the **Status** field from the Application User form footer.
+    1. Navigate to your Common Data Service environment (https://*[org]*.crm.dynamics.com).
+    1. Navigate to **Settings** > **Customizations** > **Customize the System**.
+    1. In the left pane, select **Entities** > **User** > **Forms**.
+    1. Select **Application User** in the list of forms
+    1. Select **Footer** in the actions bar.
+    1. Click on the Status grid, and then select Remove in the actions bar.
+
+    > [!div class="mx-imgBorder"]
+    > ![Remove Status field from the Application User form](media/remove-status-app-user.png "Remove Status field from the Application User form")
+
+1. Add the **Status** field to a new section in the body of the Application User form.
+    1. Select **Body** in the actions bar.
+    1. On the **Insert** tab, select **Section** > **One Column**.
+    1. Under **Field Explorer** locate the **Status** field, and drag and drop the **Status** field into the new section area.
+ 
+    > [!div class="mx-imgBorder"]
+    > ![Add Status field to the Application User form](media/add-status-app-user.png "Add Status field to the Application User form")
+
+1. Save and publish the customizations
+
+Now, you can navigate to the application user and update the **Status** field as required to enable or disable the application user.
+
+> [!CAUTION]
+> Disabling an application user will break all the integration scenarios that use the application user.
+
+
 <a name="bkmk_coding"></a>
 ## Application coding and execution
 
-Follow these steps to download, build, and execute the sample application. The sample calls the WebAPI to return a list of the top 3 accounts (by name) in the organization.
+Follow these steps to download, build, and execute the sample application. The sample calls the Web API to return a list of the top 3 accounts (by name) in the organization.
 
 1. Download the Visual Studio 2017 SingleTenantS2S [sample](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/webapi/C%23/SingleTenantS2S).
 2. Update the App.config file with your app registration and server key values.

@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 10/03/2019
+ms.date: 02/03/2020
 ms.author: mduelae
 ms.custom: ""
 ms.reviewer: ""
@@ -29,7 +29,16 @@ Add **Activities** in the **Timeline** wall to keep track of all your communicat
 - An email with an attached image will be shown inline with the body of the email.
 
   > [!div class="mx-imgBorder"]
-  > ![Timeline view of activities in PowerApps](media/TimelineViewOfActivity.png "Timeline view of activities in PowerApps")  
+  > ![Timeline view of activities in Power Apps](media/TimelineViewOfActivity.png "Timeline view of activities in Power Apps")
+
+  1. Search Records
+  2. Take notes
+  3. Add info and activities
+  4. Filter
+  5. More commands
+  6. Activity status
+  7. Activity icons
+  8. Date and time
  
 ## Add an activity from the nav bar
  
@@ -38,7 +47,7 @@ The fastest way to add an activity is to use the shortcut on the nav bar and the
 1. On the nav bar, select the **plus sign** ![Create record button](media/create-record-button.png "Create record button"), and then select **Activities**. 
 
    > [!div class="mx-imgBorder"]
-   > ![Shortcut to add an activity in PowerApps](media/QuickCreate.png "Shortcut to add an activity in PowerApps")  
+   > ![Shortcut to add an activity in Power Apps](media/QuickCreate.png "Shortcut to add an activity in Power Apps")  
  
 2. Choose the type of activity you want to add.
 
@@ -55,7 +64,7 @@ The fastest way to add an activity is to use the shortcut on the nav bar and the
 
 
    > [!div class="mx-imgBorder"]
-   > ![Add a phone activity in PowerApps](media/addphonecall.png "Add a phone activity in PowerApps")
+   > ![Add a phone activity in Power Apps](media/addphonecall.png "Add a phone activity in Power Apps")
   
 3. Fill in the **Subject** of the call.
 
@@ -63,7 +72,7 @@ The fastest way to add an activity is to use the shortcut on the nav bar and the
   
      The **Call To** field is automatically populated with the record you added the phone call activity to. You can select a different record if needed.  
   
-4. By default, the direction is set to **Outgoing**. You can change it to **Incoming** by selecting **Outgoing**. 
+4. By default, the direction is set to **Outgoing**. You can change it to **Incoming** by selecting **Outgoing**.
   
 5. When you're done filling in the form, select **Save** to save the activity.  
   
@@ -89,19 +98,21 @@ To add an email activity to a record, you must first save the record you are add
   
 4. To add an attachment to the email, save the email. Then, in the **Attachments** section, select **+** to add an attachment.  
   
-5. To use a template for the email body, on the command bar, click **Insert Template**, and then select the template.   
+5. To use a template for the email body, on the command bar, select **Insert Template**, and then select the template. For more information on inserting an email template, see [Insert an email template](insert-email-template.md). 
   
 6. When you're done filling in the form, select **Send**. 
 
 
-    > [!NOTE]
-    > To list emails in a conversation view, go to **Settings** > **Personalization Settings** > **Email** tab and then select **Show email as a conversation on Timeline**. For more information on personal settings, see [Set personal options](https://docs.microsoft.com/powerapps/user/set-personal-options#email-tab-options). Once enabled, you can open any form that has a timeline and your emails will be grouped into conversation threads with the latest email at the top.
+
+### List emails in a conversation view
+
+To list emails in a conversation view, go to **Settings** > **Personalization Settings** > **Email** tab and then select **Show email as a conversation on Timeline**. For more information on personal settings, see [Set personal options](https://docs.microsoft.com/powerapps/user/set-personal-options#email-tab-options). Once enabled, you can open any form that has a timeline and your emails will be grouped into conversation threads with the latest email at the top.
 
    > [!div class="mx-imgBorder"]
    > ![Set personal options](media/emailsettings1.png "Set personal options")
    
-    > [!div class="mx-imgBorder"]
-    > ![Set personal options email](media/emailsettings2.png "Set personal options for email")
+   > [!div class="mx-imgBorder"]
+   > ![Set personal options email](media/emailsettings2.png "Set personal options for email")
 
   
 ## Add an appointment  
@@ -136,7 +147,7 @@ You can also easily add notes in the activities area.
    > [!div class="mx-imgBorder"]
    > ![Add a note](media/addnote.png "Add a note")
 
-Once the note has been added, you can delete or edit the note.
+Once the note has been added, you can delete or edit the note. Select the note or hover the cursor on the note to see the edit and delete icons.
 
 
 > [!div class="mx-imgBorder"]
@@ -173,16 +184,24 @@ Quickly filter activities, notes or posts in the timeline wall by record type or
 
 - In the **Timeline** wall, select **Open Filter Pane** funnel icon.
 
-> [!div class="mx-imgBorder"]
-> ![Filter pane in the Timeline ](media/filterpane.png "Filter pane in the Timeline")
+
+![Filter pane in the Timeline ](media/timeline-filter2.png "Filter pane in the Timeline") ![Filter pane in the Timeline ](media/timeline-filter5.png "Filter pane in the Timeline")
 
 
 ## Manage Activities
 Manage activities directly from the timeline wall including assigning an activity to another person, deleting or closing an activity, add an activity to a queue, opening an associated record or editing notes and posts.
 
+  ![Timeline command bar options](media/timeline-options1.png "Timeline command bar options")
+  ![Timeline command bar options](media/timeline-options2.png "Timeline command bar options")
+  ![Timeline command bar options](media/timeline-options3.png "Timeline command bar options")
+  ![Timeline command bar options](media/timeline-options4.png "Timeline command bar options")
 
-> [!div class="mx-imgBorder"]
-> ![Manage Activities.png](media/ManageActivities.png "ManageActivities.png")
+## See also
 
+[Set up timeline control](../maker/model-driven-apps/set-up-timeline-control.md)
 
+[FAQs for timeline control](../maker/model-driven-apps/faqs-timeline-control.md)
 
+[FAQs about Activities and the Timeline Wall](faq-for-timeline-and-activity.md)
+
+[Timeline section in the Customer Service Hub app](https://docs.microsoft.com/dynamics365/customer-service/customer-service-hub-user-guide-basics#timeline)

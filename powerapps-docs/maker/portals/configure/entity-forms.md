@@ -1,13 +1,13 @@
 ---
 title: "Define entity forms | MicrosoftDocs"
 description: "Instructions to create entity forms in a portal."
-author: sbmjais
-manager: shujoshi
+author: tapanm-msft
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/04/2019
-ms.author: shjais
+ms.date: 11/22/2019
+ms.author: tapanm
 ms.reviewer:
 ---
 
@@ -104,7 +104,7 @@ To secure your forms, you must create entity permissions that determine access a
 |Associate Current Portal User|	Indicates the currently logged in user’s record should be associated with the target entity record.|
 |Target Entity Portal User Lookup Attribute|	The logical name of the attribute on the target entity that stores the portal user.|
 |Is Activity Party|	Boolean value indicating whether or not the Target Entity Portal User Lookup Attribute is an Activity Party type.|
-|Attach File|	Select to have the form include a file upload control to the bottom of the form to allow a file to be attached to the record.|
+|Attach File|	Select to have the form include a file upload control to the bottom of the form to allow a file to be attached to the record. You must select **Enable Entity Permissions** and assign the Create, Append, and Append To permissions to the Annotation entity for allowing a user to attach files to the form. More information: [Assign entity permissions](assign-entity-permissions.md)<br>**Note**: If a user does not have appropriate permissions to upload a file or Enable Entity Permissions is not selected, the option to upload a file will not be displayed on the form.|
 |Attach File Storage Location|	Options: Note Attachment, Azure Blob Storage. If your organization is configured to use Azure Storage, you can choose to storage uploaded files for this Entity Form there. Otherwise, files with be stored as Note Attachments.|
 |Allow Multiple Files|Boolean value indicating whether or not the user can upload more than one file.|
 |Accept|	The accept attribute specifies the MIME types of files that the server accepts through file upload. To specify more than one value, separate the values with a comma (e.g. audio/*,video/*,image/*).|

@@ -14,7 +14,7 @@ author: nkrb
 
 This sample component renders as an `Upload` button to upload the image and a default image when the component loads for the first time. When you click on the `Upload`, a file explorer pops up to pick an image.
  
-The selected image renders within the component. Meanwhile, the `Remove` button is shown if we need to reset. When you click on the `Remove` button, the default image is displayed.  
+The selected image renders within the component. Meanwhile, the `Remove` button is shown if we need to reset. When you click on the `Remove` button, the default image is displayed.  You can download the sample component from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/TS_ImageUploadControl).
 
 > [!div class="mx-imgBorder"]
 > ![Image Upload component](../media/image-upload-control.png "Image Upload component")
@@ -61,9 +61,9 @@ export class TSImageUploadControl
   implements ComponentFramework.StandardControl<IInputs, IOutputs> {
   // Value of the field is stored and used inside the control
   private _value: string | null;
-  // PowerApps component framework framework context, "Input Properties" containing the parameters, control metadata and interface functions.
+  // Power Apps component framework framework context, "Input Properties" containing the parameters, control metadata and interface functions.
   private _context: ComponentFramework.Context<IInputs>;
-  // PowerApps component framework framework delegate which will be assigned to this object which would be called whenever an update happens.
+  // Power Apps component framework framework delegate which will be assigned to this object which would be called whenever an update happens.
   private _notifyOutputChanged: () => void;
   // Control's container
   private controlContainer: HTMLDivElement;
@@ -389,5 +389,5 @@ The `device.pickFile` method opens a dialog box to select files from your comput
 
 [Download sample components](https://go.microsoft.com/fwlink/?linkid=2088525)<br/>
 [How to use the sample components](../use-sample-components.md)<br/>
-[PowerApps component framework API reference](../reference/index.md)<br/>
-[PowerApps component framework manifest schema reference](../manifest-schema-reference/index.md)
+[Power Apps component framework API reference](../reference/index.md)<br/>
+[Power Apps component framework manifest schema reference](../manifest-schema-reference/index.md)

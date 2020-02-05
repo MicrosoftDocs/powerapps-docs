@@ -1,14 +1,14 @@
 ---
 title: Compose webpages | Microsoft Docs
 description: Instructions to compose webpages in portal.
-author: sbmjais
-manager: shujoshi
+author: tapanm-msft
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/07/2019
-ms.author: shjais
-ms.reviewer:
+ms.date: 01/10/2020
+ms.author: tapanm
+ms.reviewer: tapanm
 ---
 
 # Compose a page
@@ -28,11 +28,11 @@ After adding the required webpages and managing their hierarchy in the sitemap, 
     - Breadcrumb
 
 > [!NOTE]
-> If you customize your portal using PowerApps portals Studio, the website users would notice a performance impact. We recommended you to do the changes during non-peak hours on a live portal. 
+> If you customize your portal using Power Apps portals Studio, the website users would notice a performance impact. We recommended you to do the changes during non-peak hours on a live portal. 
 
 ## Use the WYSIWYG editor
 
-1.  [Edit the portal](manage-existing-portals.md#edit) to open it in PowerApps portals Studio.  
+1.  [Edit the portal](manage-existing-portals.md#edit) to open it in Power Apps portals Studio.  
 
 2.  Select the page on which you want to add the component.
 
@@ -59,7 +59,7 @@ After adding the required webpages and managing their hierarchy in the sitemap, 
 
 Sections allow you to define a structure for your page and arrange portal components accordingly. Once you add sections to your page, you can add portal components inside the sections as per the requirement.
 
-1.	[Edit the portal](manage-existing-portals.md#edit) to open it in PowerApps portals Studio.
+1.	[Edit the portal](manage-existing-portals.md#edit) to open it in Power Apps portals Studio.
 
 2.	Select the page on which you want to add a section.
 
@@ -110,7 +110,7 @@ You can add the following components on a webpage:
 
 ### Add text box
 
-1.  [Edit the portal](manage-existing-portals.md#edit) to open it in PowerApps portals Studio.  
+1.  [Edit the portal](manage-existing-portals.md#edit) to open it in Power Apps portals Studio.  
 
 2.  Select the page on which you want to add the component.
 
@@ -139,7 +139,7 @@ You can add the following components on a webpage:
 
 ### Add image
 
-1.  [Edit the portal](manage-existing-portals.md#edit) to open it in PowerApps portals Studio.  
+1.  [Edit the portal](manage-existing-portals.md#edit) to open it in Power Apps portals Studio.  
 
 2.  Select the page on which you want to add the component.
 
@@ -176,7 +176,7 @@ You can add the following components on a webpage:
 
 ### Add IFrame
 
-1.  [Edit the portal](manage-existing-portals.md#edit) to open it in PowerApps portals Studio.  
+1.  [Edit the portal](manage-existing-portals.md#edit) to open it in Power Apps portals Studio.  
 
 2.  Select the page on which you want to add the component.
 
@@ -192,19 +192,22 @@ You can add the following components on a webpage:
 
     - **Height**: Enter the height of the IFrame.
 
-    - **Link**: Enter the URL of the website to be displayed in the IFrame. Only secured links are accepted—that is, https:// is mandatory. By default, <https://www.bing.com> is available as the value.
+        > [!NOTE]
+        > You can also select the IFrame on the canvas and drag the handles to resize it.
 
+    - **Link**: Enter the URL of the website to be displayed in the IFrame. Only secured links are accepted—that is, https:// is mandatory. By default, <https://www.bing.com> is available as the value.
+    
         > [!div class=mx-imgBorder]
         > ![iframe properties](media/iframe-props.png "IFrame properties")  
 
-    > [!NOTE]
-    > You can also select the IFrame on the canvas and drag the handles to resize it.
+> [!NOTE]
+> You can also add [Power Virtual Agent](https://docs.microsoft.com/power-virtual-agents/fundamentals-what-is-power-virtual-agents) bot to the  IFrame similarly using steps described in [add bot to your web site](https://docs.microsoft.com/power-virtual-agents/publication-connect-bot-to-web-channels#custom-website).
 
 ### Add form
 
 Form is a data-driven configuration that you use to add a form to collect data in the portal without the need for a developer to surface the form in the portal. [Forms are created in Common Data Service](https://docs.microsoft.com/powerapps/maker/model-driven-apps/form-designer-overview) and you can use them into webpages in the portal or in conjunction with lists to build out complete web applications.  
 
-1.  [Edit the portal](manage-existing-portals.md#edit) to open it in PowerApps portals Studio.  
+1.  [Edit the portal](manage-existing-portals.md#edit) to open it in Power Apps portals Studio.  
 
 2.  Select the page on which you want to add the component.
 
@@ -259,7 +262,7 @@ Form is a data-driven configuration that you use to add a form to collect data i
 
 List is a data-driven configuration that you use to add a webpage that will render a list of records without the need for a developer to surface the grid in the portal. Lists use [Common Data Service views](https://docs.microsoft.com/powerapps/maker/model-driven-apps/create-and-edit-views) to display records on the portal.  
 
-1.  [Edit the portal](manage-existing-portals.md#edit) to open it in PowerApps portals Studio.  
+1.  [Edit the portal](manage-existing-portals.md#edit) to open it in Power Apps portals Studio.  
 
 2.  Select the page on which you want to add the component.
 
@@ -303,7 +306,7 @@ List is a data-driven configuration that you use to add a webpage that will rend
 
 ### Add breadcrumb
 
-1.  [Edit the portal](manage-existing-portals.md#edit) to open it in PowerApps portals Studio.  
+1.  [Edit the portal](manage-existing-portals.md#edit) to open it in Power Apps portals Studio.  
 
 2.  Select the page on which you want to add the component.
 
@@ -319,7 +322,7 @@ By default, the menu on the website is created automatically based on the hierar
 
 After you create the web link set:
 
-1.	[Edit the portal](manage-existing-portals.md#edit) to open it in PowerApps portals Studio.
+1.	[Edit the portal](manage-existing-portals.md#edit) to open it in Power Apps portals Studio.
 
 2.	Select the header component. 
 

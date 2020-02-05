@@ -1,19 +1,19 @@
 ---
-title: "Global search in PowerApps portals | MicrosoftDocs"
+title: "Global search in Power Apps portals | MicrosoftDocs"
 description: "Learn how global search works in a portal."
-author: sbmjais
-manager: shujoshi
+author: tapanm-msft
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/04/2019
-ms.author: shjais
+ms.date: 01/30/2020
+ms.author: tapanm
 ms.reviewer:
 ---
 
 # Search
 
-In PowerApps portals, you can search for records across multiple entities by using portal’s global search functionality. You can also search within records of entity lists using entity list search functionality. 
+In Power Apps portals, you can search for records across multiple entities by using portal’s global search functionality. You can also search within records of entity lists using entity list search functionality. 
 
 Entity list search functionality in the portal uses FetchXML in the back end to search the columns defined in the entity list and then display the results. 
 
@@ -31,7 +31,7 @@ Among the benefits of global search are its ability to:
 
 In global search, the better the match, the higher it appears in the results. A match has a higher relevancy if more words from the search term are found in close proximity to each other. The smaller the amount of text where the search words are found, the higher the relevancy. For example, if you find the search words in a company name and address, it might be a better match than the same words found in a large article, far apart from each other. Because the results are returned in a single list, you can see a mix of records displayed one after another, with matched works highlighted. 
 
-The following sections detail how global search works in PowerApps portals and describe the various configuration options available.
+The following sections detail how global search works in Power Apps portals and describe the various configuration options available.
 
 ## Entities searchable in portal global search
 
@@ -183,7 +183,7 @@ You can invoke portal global search from liquid templates by using the searchind
 
 ## Update search index
 
-Search index updates in PowerApps portals happen automatically like the cache invalidation. Keep these important things in mind, though:
+Search index updates in Power Apps portals happen automatically like the cache invalidation. Keep these important things in mind, though:
 
 - All search-enabled entities must have the Change Notification metadata flag enabled, otherwise the portal will not be notified of the changes and the search index will not be updated.
 
@@ -217,35 +217,23 @@ In the following example, we will remove the Case entity from portal global sear
 
 To block the Case entity from getting indexed, you must rename the view of the Case entity that defines the record set to be indexed by the portal (defined by the Search/IndexQueryName site setting). By default, the name of that view is Portal Search.
 
-1.	Open the [Portal Management app](configure-portal.md).
+1.	Go to https://make.powerapps.com and select Solutions. 
 
-2.  Select the **Settings** icon from the toolbar at the top of the page and then select **Advanced Settings**.
+    ![Solutions](../media/solutions-page.png)
 
-2.	Go to **Settings** > **Customization** > **Customize the System**.
+1. Search for **Default Solution** and select Edit to open.
 
-    ![Customize the system](../media/customize-system.png "Customize the system")
+    ![Edit solution](../media/edit-solution.png)
 
-3.	In the customization dialog, go to **Components** > **Entities** > **Case** in the left navigation pane. 
+1. Search and edit **Case** entity to see its components. 
 
-4.	Expand the **Case** entity and select **Views**.
+1. Select **Views** tab and then select **Portal Search** to open it in a view editor.
 
-5.	Select the **Portal Search** view from the list and open it in view editor.
+1. In the view editor, rename the view according to your requirement. Ensure the new name doesn't have the *Portal Search* term. 
 
-    ![Case view](../media/case-view.png "Case view")
+1. Save and publish the changes and close the view editor.
 
-6.	In the view editor, select **View Properties**.
-
-    ![View editor](../media/view-editor.png "View editor")
-
-7.	Rename the view according to the requirement. Ensure that the new name doesn't have the “Portal Search” term in it.
-
-    ![View properties](../media/view-properties.png "View properties")
-
-8.	Save the changes and close the view editor.
-
-9.	Select **Publish All Customizations**.
-
-10.	Rebuild the full index as described in the [Rebuild full search index](#rebuild-full-search-index) section.
+1. Rebuild the full index as described in the [Rebuild full search index](#rebuild-full-search-index) section.
 
 > [!NOTE]
 > In this example, we are making changes in an unmanaged layer by directly editing the view. You can also do this via a managed solution.

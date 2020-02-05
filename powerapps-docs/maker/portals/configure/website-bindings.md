@@ -1,13 +1,13 @@
 ---
 title: "Create and manage website bindings in portals | MicrosoftDocs"
 description: "Learn how to create and manage website bindings in portals."
-author: sbmjais
-manager: shujoshi
+author: tapanm-msft
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 11/12/2019
-ms.author: shjais
+ms.author: tapanm
 ms.reviewer:
 ---
 
@@ -17,7 +17,7 @@ In a portal, the default method of selecting a website is finding a website by m
 
 ## Manage website bindings
 
-Website bindings can be created, edited, and deleted within  PowerApps portals. 
+Website bindings can be created, edited, and deleted within  Power Apps portals. 
 
 1. Open the [Portal Management app](configure-portal.md).
 

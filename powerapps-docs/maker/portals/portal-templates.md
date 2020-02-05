@@ -1,19 +1,19 @@
 ---
-title: Portal templates available in PowerApps | Microsoft Docs
-description: Learn about various portal templates available in PowerApps.
-author: sbmjais
-manager: shujoshi
+title: Portal templates available in Power Apps | Microsoft Docs
+description: Learn about various portal templates available in Power Apps.
+author: tapanm-msft
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 11/07/2019
-ms.author: shjais
+ms.author: tapanm
 ms.reviewer:
 ---
 
 # Portal templates
 
-Based on the selected environment in PowerApps, you can create a Common Data Service starter portal or a portal in an environment containing model-driven apps in Dynamics 365.
+Based on the selected environment in Power Apps, you can create a Common Data Service starter portal or a portal in an environment containing model-driven apps in Dynamics 365.
 
 ## Environment with Common Data Service
 

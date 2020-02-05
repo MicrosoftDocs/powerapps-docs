@@ -68,7 +68,7 @@ In this example, you'll create a menu component that resembles this graphic and 
 
 ![Final gallery](./media/create-component/menu-instance.png)
 
-1. In PowerApps Studio, create a blank app.
+1. In Power Apps Studio, create a blank app.
 
 1. In the left navigation bar, open the list of components, and then select **New component**.
 
@@ -179,7 +179,7 @@ So far, you've created a component and added it to an app. Next, you'll create a
 ## Known limitations
 
 - As of this writing, data sources aren't saved with components, so forms and data tables are disabled.
-- PowerApps doesn't support collections in components.
+- Power Apps doesn't support collections in components.
 - You can't insert a component into a gallery, a form, or a data card.
 - A master instance of a component is a local master and scoped to the app. If you change a master instance, only copies of the component within the app will reflect the change. Copies in other apps will remain the same unless you import the component library again. All master instances in those apps will be automatically detected and updated.
 - You can't package media files when you import a component.

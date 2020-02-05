@@ -1,6 +1,6 @@
 ---
-title: "View or download developer resources for PowerApps and Common Data Service | MicrosoftDocs"
-description: "Find developer resources and service endpoint URLs for PowerApps and Common Data Service"
+title: "View or download developer resources for Power Apps and Common Data Service | MicrosoftDocs"
+description: "Find developer resources and service endpoint URLs for Power Apps and Common Data Service"
 keywords: ""
 ms.date: 06/06/2018
 ms.service: powerapps
@@ -30,7 +30,7 @@ This page provides resources for developers and information about the specific i
 
 ## View the Developer Resources page for your environment
 
-1. From the PowerApps portal select the ![Settings Button](../../administrator/media/settings-button-nav-bar.png) Settings button and choose **Advanced customizations**.
+1. From the Power Apps portal select the ![Settings Button](../../administrator/media/settings-button-nav-bar.png) Settings button and choose **Advanced customizations**.
 
     ![Advanced Customizations](media/advanced-customizations-menu.png)
 
@@ -76,15 +76,15 @@ More information: [Azure integration](/powerapps/developer/common-data-service/a
 
 Because people may have access to multiple Common Data Service environments, the discovery services allow for retrieving the available environments that a person can access based on their user credentials.
 
-### Discovery Web API
+### Discovery RESTful API
 
-This is the endpoint address for the RESTful OData v4 version of the discovery service to use for your instance. You can also download the service document here.
+This is the endpoint address for the RESTful OData v4 version of the Discovery Service to use for your instance. You can also download the service document here.
 More information: [Developer Documentation: Discover the URL for your organization using the Web API](/powerapps/developer/common-data-service/webapi/discover-url-organization-web-api)
 
 
 ### Discovery Service
 
-This is the endpoint address for the SOAP version of the discovery service to use for your instance. You can also download the service document here.
+This is the endpoint address for the SOAP version of the Discovery Service to use for your instance. You can also download the service document here.
 More information: [Developer Documentation: Discover the URL for your organization using the Organization Service](/powerapps/developer/common-data-service/org-service/discovery-service)
   
   

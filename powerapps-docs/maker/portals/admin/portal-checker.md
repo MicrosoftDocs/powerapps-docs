@@ -1,13 +1,13 @@
 ---
 title: "Identify and fix customer issues with a portal | MicrosoftDocs"
 description: "Learn to identify and fix customer issues with a portal."
-author: sbmjais
-manager: shujoshi
+author: tapanm-msft
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 10/07/2019
-ms.author: shjais
+ms.author: tapanm
 ms.reviewer:
 ---
 
@@ -40,7 +40,7 @@ For a list of common issues diagnosed by the portal checker tool, see [Common po
 
 To run portal checker:
 
-1.	Open [PowerApps Portals admin center](admin-overview.md).
+1.	Open [Power Apps Portals admin center](admin-overview.md).
 
 2.	Go to **Run Portal Checker**.
 

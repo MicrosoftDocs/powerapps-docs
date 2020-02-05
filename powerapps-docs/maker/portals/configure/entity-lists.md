@@ -1,13 +1,13 @@
 ---
 title: "Add a webpage to render a list of records on a portal | MicrosoftDocs"
 description: "Instructions to add and configure entity lists to render a list of records on a portal."
-author: sbmjais
-manager: shujoshi
+author: tapanm-msft
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 01/02/2020
-ms.author: shjais
+ms.date: 02/05/2020
+ms.author: tapanm
 ms.reviewer:
 ---
 
@@ -324,7 +324,7 @@ Adding the ability to filter records on an entity list is easy: simply enable th
 
 **Enable the entity list filter**
 
-In the Metadata filter section, select the Enabled check box. This will add the Filter area to the entity list when it is displayed. Until you have defined at least one filter type, the box will appear empty.
+In the **Metadata Filter** section, select the **Enabled** check box. This will add the Filter area to the entity list when it is displayed. Until you have defined at least one filter type, the box will appear empty.
 
 You can define how the Filter area on the entity list will be rendered by using the Orientation setting. The default, Horizontal, renders the Filter area above the entity list. Vertical orientation renders the Filter area as a box to the left of the entity list.
 

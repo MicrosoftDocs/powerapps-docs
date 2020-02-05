@@ -1,13 +1,13 @@
 ---
 title: "Restrict access to a portal by using IP address | MicrosoftDocs"
 description: "Instructions to restrict portal access by IP address."
-author: sbmjais
-manager: shujoshi
+author: tapanm-msft
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 10/07/2019
-ms.author: shjais
+ms.author: tapanm
 ms.reviewer:
 ---
 
@@ -34,7 +34,7 @@ Once you add an IP address to the restriction list, the portal will be accessibl
 > [!NOTE]
 > You must specify a public IP address that can be accessed by the portal. Private IP address can't be accessed by the portal.
 
-1.	Open [PowerApps Portals admin center](admin-overview.md).
+1.	Open [Power Apps Portals admin center](admin-overview.md).
 
 2.	Go to **Set up IP address restriction**. A list of IP addresses and their type is displayed.
 
@@ -58,7 +58,7 @@ Once you add an IP address to the restriction list, the portal will be accessibl
 
 To remove access to a portal from a previously allowed IP address, you can remove the IP address from the list. If you remove all IP addresses, the portal will be accessible from all IP addresses.
 
-1.	Open [PowerApps Portals admin center](admin-overview.md).
+1.	Open [Power Apps Portals admin center](admin-overview.md).
 
 2.	Go to **Set up IP address restriction**. A list of IP addresses and their type is displayed.
 

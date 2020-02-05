@@ -1,6 +1,6 @@
 ---
-title: "PowerApps component framework API reference | MicrosoftDocs"
-description: "The topic provides PowerApps component framework API reference."
+title: "Power Apps component framework API reference | MicrosoftDocs"
+description: "The topic provides Power Apps component framework API reference."
 ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.topic: "index-page"
@@ -10,12 +10,14 @@ author: "nkrb"
 ms.author: "nabuthuk"
 manager: "kvivek"
 ---
-# PowerApps component framework API reference
+# Power Apps component framework API reference
 
-This section contains reference documentation for creating code components using the PowerApps component framework.
+This section contains reference documentation for creating code components using the Power Apps component framework.
 
 > [!IMPORTANT]
-> The **Available for** tab shows which APIs are supported by model-driven apps and canvas apps (experimental preview). It is recommended to check the **Available for** section for each individual API methods whether it is supported or not. For example, the **client** API is supported for both model-driven apps and canvas apps, but the  **isOffline** method in **client** API supports only model-driven apps.
+> - The **Available for** tab shows which APIs are supported by model-driven apps and canvas apps (experimental preview). It is recommended to check the **Available for** section for each individual API methods whether it is supported or not. For example, the **client** API is supported for both model-driven apps and canvas apps, but the  **isOffline** method in **client** API supports only model-driven apps.
+>
+> - Using the `Xrm object` methods that are not exposed by the framework for developing code components is not supported.
 
 |Name|Description|Available for|
 |----|-----------|

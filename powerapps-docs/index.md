@@ -1,19 +1,19 @@
 ---
 layout: HubPage
-title: Microsoft PowerApps Documentation | Microsoft Docs
-description: Microsoft PowerApps Documentation
+title: Microsoft Power Apps Documentation | Microsoft Docs
+description: Microsoft Power Apps Documentation
 searchScope:
   - "PowerApps"
 featureFlags: 
 - clicktale
 ms.service: powerapps
 ms.custom:
- - powerapps-hub
+ - PowerApps-hub
 ---
 <div id="main"
    class="v2">
    <div class="container">
-      <h1>PowerApps Documentation</h1>
+      <h1>Power Apps Documentation</h1>
       <ul class="pivots">
          <li>
             <a href="#home"></a>
@@ -36,8 +36,8 @@ ms.custom:
                                              </div>
                                           </div>
                                           <div class="cardText">
-                                             <h3>What is PowerApps?</h3>
-                                             <p>Get started on documentation with an overview about PowerApps.</p>
+                                             <h3>What is Power Apps?</h3>
+                                             <p>Get started on documentation with an overview about Power Apps.</p>
                                           </div>
                                        </div>
                                     </div>
@@ -74,8 +74,8 @@ ms.custom:
                                              </div>
                                           </div>
                                           <div class="cardText">
-                                             <h3>Learn PowerApps</h3>
-                                             <p>Explore learning paths on Microsoft Learn that provide step-by-step guidance to learn PowerApps. It's free!</p>
+                                             <h3>Learn Power Apps</h3>
+                                             <p>Explore learning paths on Microsoft Learn that provide step-by-step guidance to learn Power Apps. It's free!</p>
                                           </div>
                                        </div>
                                     </div>
@@ -94,7 +94,7 @@ ms.custom:
                                           </div>
                                           <div class="cardText">
                                              <h3>Blog</h3>
-                                             <p>Read the official PowerApps blog to know about the latest PowerApps features and announcements.</p>
+                                             <p>Read the official Power Apps blog to know about the latest Power Apps features and announcements.</p>
                                           </div>
                                        </div>
                                     </div>
@@ -113,7 +113,7 @@ ms.custom:
                                           </div>
                                           <div class="cardText">
                                              <h3>Community</h3>
-                                             <p>Connect with peers, share ideas, and learn from experts in the PowerApps community forum.</p>
+                                             <p>Connect with peers, share ideas, and learn from experts in the Power Apps community forum.</p>
                                           </div>
                                        </div>
                                     </div>
@@ -132,7 +132,7 @@ ms.custom:
                                           </div>
                                           <div class="cardText">
                                              <h3>Licensing</h3>
-                                             <p>Understand various licensing options for PowerApps.</p>
+                                             <p>Understand various licensing options for Power Apps.</p>
                                           </div>
                                        </div>
                                     </div>
@@ -209,7 +209,7 @@ ms.custom:
                      class="cardsF">
                      <li>
                         <div class="container">
-                           <p>App makers can manage their organization's mission-critical data by quickly creating custom business apps without writing code. You can create three types of apps in PowerApps: <strong>Canvas app</strong>, <strong>Model-driven app</strong>, and <strong>Portal</strong>. <strong>Common Data Service</strong> is the data platform that lets you securely store and manage data used by business apps. More information: <a href="/powerapps/maker">Create apps</a>.</p>
+                           <p>App makers can manage their organization's mission-critical data by quickly creating custom business apps without writing code. You can create three types of apps in Power Apps: <strong>Canvas app</strong>, <strong>Model-driven app</strong>, and <strong>Portal</strong>. <strong>Common Data Service</strong> is the data platform that lets you securely store and manage data used by business apps. More information: <a href="/powerapps/maker">Create apps</a>.</p>
                            <hr/>
                            <br/>
                         </div>
@@ -228,14 +228,13 @@ ms.custom:
                                     <hr/>
                                     <ul>
                                        <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/getting-started">What are canvas apps?</a></p>
-                                       <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/data-platform-create-app">Generate an app automatically</a></p>
-                                       <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/data-platform-create-app-scratch">Build an app yourself</a></p>
-                                       <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/open-and-run-a-sample-app">Customize a sample app</a></p>
-                                       <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/customize-list-form">Customize a SharePoint form</a></p>
+                                       <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/open-and-run-a-sample-app">Create a sample app</a></p>
+                                       <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/data-platform-create-app-scratch">Build an app from scratch</a></p>
                                        <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/connections-list">Connectors</a></p>
                                        <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/common-data-service/data-platform-create-business-rule">Apply business logic</a></p>
-                                       <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/reference-properties">Controls reference</a></p>
-                                       <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/formula-reference">Formula reference</a></p>
+                                       <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/add-configure-controls">Design the interface</a></p>
+                                       <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/working-with-formulas">Configure app functionality</a></p>
+                                       <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/edit-app">Manage an app</a></p>
                                        <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/share-app">Share an app</a></p>
                                     </ul>
                                  </div>
@@ -284,11 +283,11 @@ ms.custom:
                                  <div class="cardText">
                                     <h3 style="font-size: 1.15rem">Portals</h3>
                                     <hr/>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/portals/overview">What is PowerApps portals?</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/portals/overview">What is Power Apps portals?</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/portals/create-portal">Create a portal</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/portals/manage-existing-portals">Manage existing portals</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/portals/admin/admin-overview">Portal administration</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/portals/faq">PowerApps portals FAQ</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/portals/faq">Power Apps portals FAQ</a></p>
                                  </div>
                               </div>
                            </div>
@@ -328,7 +327,7 @@ ms.custom:
                      class="cardsF">
                      <li>
                         <div class="container">
-                           <p>Admins can use the PowerApps and Power Platform Admin centers to secure data, manage environments, and monitor usage.</p>
+                           <p>Admins can use the Power Platform Admin center to secure data, manage environments, and monitor usage.</p>
                            <hr/>
                            <br/>
                         </div>
@@ -349,6 +348,7 @@ ms.custom:
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/power-platform/admin/get-help-support">Get Help + Support</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/power-platform/admin/preview-april-2019-updates">Opt in to 2019 release wave 2</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/power-platform/admin/admin-settings">Manage settings</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="https://aka.ms/powerappsadminwhitepaper">Whitepaper: Administering a low-code development platform</a></p>
                                  </div>
                               </div>
                            </div>
@@ -387,7 +387,7 @@ ms.custom:
                                     <hr/>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/power-platform/admin/pricing-billing-skus">Licensing overview</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/common-data-service/data-platform-entity-licenses">License requirements for entities</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/power-platform/admin/powerapps-us-government">PowerApps US Government</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/power-platform/admin/powerapps-us-government">Power Apps US Government</a></p>
                                  </div>
                               </div>
                            </div>
@@ -485,7 +485,7 @@ ms.custom:
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/model-driven-apps/customize-visualizations-dashboards">Customize visualizations and dashboards</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/model-driven-apps/client-scripting">Apply business logic using client scripting</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/model-driven-apps/customize-commands-ribbon">Customize commands and ribbon</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/component-framework/overview">Build custom components (PowerApps component framework)</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/component-framework/overview">Build custom components (Power Apps component framework)</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/model-driven-apps/create-manage-model-driven-apps-using-code">Create, manage, and publish app</a></p>
                                  </div>
                               </div>
@@ -596,13 +596,14 @@ ms.custom:
                                     <h3 style="font-size: 1.15rem">Package and distribute apps/extensions</h3>
                                     <hr/>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/introduction-solutions">Using solutions</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/build-tools-overview">PowerApps build tools for Azure DevOps</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/build-tools-overview">Power Apps build tools for Azure DevOps</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/compress-extract-solution-file-solutionpackager">SolutionPackager tool</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/package-deployer/create-packages-package-deployer">Package Deployer tool</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/checker/webapi/overview">Use the PowerApps checker</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/checker/webapi/overview">Use the Power Apps checker</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/isv-app-management">ISV app management and monitoring</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/publish-app-appsource">Publish your app on AppSource</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="https://www.microsoft.com/download/details.aspx?id=57777">Whitepaper: ALM using solutions</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/powerapps-cli"> Get Power Apps CLI</a></p>
                                  </div>
                               </div>
                            </div>

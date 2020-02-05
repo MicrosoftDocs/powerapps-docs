@@ -15,7 +15,7 @@ ms.assetid: 3b875f06-0fd9-49fa-bc34-939d00e17185
 
 # Implementing formatting API component
 
-This sample component explores the various methods available as part of the PowerApps component framework formatting API. In this sample, you create a series of input elements which calls into the respective methods of the formatting API that matches with the value displayed.
+This sample component explores the various methods available as part of the Power Apps component framework formatting API. In this sample, you create a series of input elements which calls into the respective methods of the formatting API that matches with the value displayed. You can download the sample component from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/TS_FormattingAPI).
 
 > [!div class="mx-imgBorder"]
 > ![Formatting API component](../media/formatting-api.png "Formatting API component")
@@ -45,7 +45,7 @@ Model-driven apps and canvas apps (experimental preview)
 import { IInputs, IOutputs } from "./generated/ManifestTypes";
 export class FormattingAPI
   implements ComponentFramework.StandardControl<IInputs, IOutputs> {
-  // PowerApps component framework framework delegate which will be assigned to this object which would be called whenever an update happens.
+  // Power Apps component framework framework delegate which will be assigned to this object which would be called whenever an update happens.
   private _notifyOutputChanged: () => void;
   // reference to the div element that holds together all the HTML elements that we are creating as part of this control
   private divElement: HTMLDivElement;
@@ -284,7 +284,7 @@ export class FormattingAPI
 
 [Download sample components](https://go.microsoft.com/fwlink/?linkid=2088525)<br/>
 [How to use the sample components](../use-sample-components.md)<br/>
-[PowerApps component framework API reference](../reference/index.md)<br/>
-[PowerApps component framework manifest schema reference](../manifest-schema-reference/index.md)
+[Power Apps component framework API reference](../reference/index.md)<br/>
+[Power Apps component framework manifest schema reference](../manifest-schema-reference/index.md)
 
 

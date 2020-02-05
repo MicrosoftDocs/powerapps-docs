@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Power BI tile control in PowerApps
+# Power BI tile control in Power Apps
 
 A control that shows a [Power BI](https://powerbi.microsoft.com) tile inside an app.
 

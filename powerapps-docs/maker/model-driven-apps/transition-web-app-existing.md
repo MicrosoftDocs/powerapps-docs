@@ -1,6 +1,6 @@
 ---
 title: "Quick start for using an existing environment to validate your legacy web client app with the Unified Interface | MicrosoftDocs"
-description: "Learn how to plan and execute your transistion from legacy web client to the Unified Interface"
+description: "Learn how to plan and execute your transition from legacy web client to the Unified Interface"
 ms.custom: ""
 ms.date: 09/11/2019
 ms.reviewer: ""
@@ -59,7 +59,7 @@ The process for validating your legacy web client app in an existing environment
 If you’ve recently switched the **Use Unified Interface only** mode to **On** in your development environment, such as instructed by following the [Quick start for transitioning your Dynamics 365 legacy web client application to Unified Interface](transition-web-app.md) topic, you must turn the setting back to **Off** so you can run the existing legacy web client apps.
 
 ### Create a new solution that's based on the default solution
-1. Sign in to the [PowerApps maker portal](https://make.powerapps.com).   
+1. Sign in to the [Power Apps maker portal](https://make.powerapps.com).   
 2. From the list of environments, select the environment you want.  
 3. On the left navigation pane, select **Solutions**. 
 4. On the menu bar, select **New solution**. 
@@ -92,7 +92,7 @@ A new window opens in the browser with your new model-driven app that contains a
 > [!div class="mx-imgBorder"] 
 > ![New Unified Interface app](media/new-unified-interface-app.png "New Unified Interface app")
 
-Notice that when you go back to the browser tab with the PowerApps maker portal **Solutions** area, your new model-driven app and a similarly named sitemap client extension are both part of the solution you created.  
+Notice that when you go back to the browser tab with the Power Apps maker portal **Solutions** area, your new model-driven app and a similarly named sitemap client extension are both part of the solution you created.  
 
 > [!div class="mx-imgBorder"] 
 > ![Solution assets](media/solution-assets.png "Solution assets")
@@ -152,7 +152,7 @@ With your application showcasing the Unified Interface, you can start validating
 > The current version of Common Data Service and model-driven apps in Dynamics 365 still include several deprecated features. You should review your application for any deprecated features and replace as necessary with new capabilities. More information: [Important changes (deprecations) coming](/dynamics365/get-started/whats-new/customer-engagement/important-changes-coming)
 
 > [!TIP]
-> The PowerApps Checker tool assists in quality checking of your solution's components.  More information: [Use solution checker to validate your model-driven apps in PowerApps](../common-data-service/use-powerapps-checker.md)
+> The Power Apps Checker tool assists in quality checking of your solution's components.  More information: [Use solution checker to validate your model-driven apps in Power Apps](../common-data-service/use-powerapps-checker.md)
 
 ## Next steps
 Based on your findings, your implementation team or partner can estimate the amount of effort needed to transition your application into the Unified Interface and also identify potential usability improvements. With multiple new features and capabilities available in Unified Interface there is opportunity to increase value for your application users. 
@@ -165,9 +165,9 @@ More information: [Design model-driven apps by using the app designer](design-cu
 [Unified Interface Playbook](unified-interface-playbook.md) <br />
 [Approaching a user experience and Unified Interface transition](approaching-unified-interface.md) <br />
 [About Unified Interface](/dynamics365/customer-engagement/admin/about-unified-interface) <br />
-[What are model-driven apps in PowerApps?](model-driven-app-overview.md) <br />
+[What are model-driven apps in Power Apps?](model-driven-app-overview.md) <br />
 [Update your apps to Unified Interface](/dynamics365/customer-engagement/admin/update-apps-to-unified-interface) <br />
 [Configure model-driven app interactive experience dashboards](configure-interactive-experience-dashboards.md) <br />
 [Use custom controls for model-driven app data visualizations](use-custom-controls-data-visualizations.md) <br />
-[PowerApps component framework overview](/powerapps/developer/component-framework/overview) <br />
+[Power Apps component framework overview](/powerapps/developer/component-framework/overview) <br />
 [Unified Interface for everybody](/power-platform-release-plan/2019wave2/microsoft-powerapps/unified-interface-app-everybody)

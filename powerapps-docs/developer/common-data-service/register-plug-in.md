@@ -72,7 +72,7 @@ You can view information about registered assemblies in the application solution
 
 ![All Solutions internal](media/all-solutions-internal-view.png)
 
-There you can find all the assemblies that are registered for this environment.
+After selecting the name of the Default Solution in the internal solution list, you can find all the assemblies that are registered for this environment.
 
 ![View all registered assemblies](media/view-plug-in-assemblies-default-solution.png)
 
@@ -129,7 +129,7 @@ More information: [Use FetchXML with FetchExpression](org-service/entity-operati
 
 As described in [View registered assemblies](#view-registered-assemblies), the assembly registration you created was added to the system **Default Solution**. You should add your assembly to an unmanaged solution so you can distribute it to other organizations.
 
-Within the unmanaged solution you are using, use solution explorer to navigate to **Plug-in Assemblies**. In the list menu, select **Add Existing**.
+Within the unmanaged solution you are using, use solution explorer to navigate to **Plug-in Assemblies**. In the list menu, select **Add Existing**. Note that in the following figures, a custom solution named Common Data Service Default Solution is used.
 
 ![Add Existing plug-in assembly](media/add-existing-plug-in-assembly.png)
 
@@ -289,7 +289,7 @@ The PRT provides commands to unregister assemblies, types, steps, and images. Se
 
 These are delete operations on the [PluginAssembly](reference/entities/pluginassembly.md), [PluginType](reference/entities/plugintype.md), [SdkMessageProcessingStep](reference/entities/sdkmessageprocessingstep.md), and [SdkMessageProcessingStepImage](reference/entities/sdkmessageprocessingstepimage.md) entities.
 
-You can also delete **Plug-in Assemblies** and **Sdk Message Processing Steps** in the solution explorer to achieve the same result.
+You can also delete **Plug-in Assemblies** and **Sdk Message Processing Steps** in the solution explorer to achieve the same result. In the figure below, a custom solution named Common Data Service Default Solution is shown.
 
 ![Deleting step in solution explorer](media/delete-sdk-message-processing-step.png)
 

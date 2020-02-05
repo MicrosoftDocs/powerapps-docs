@@ -38,13 +38,12 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 3. The `QueryExpression` retrieves the default business unit for the creation of the team and role.
 4. Creates a new example team and role required for the sample.
 5. Retrieves the `prvReadQueue` and `prvAppendToQueue` privileges.
-6. The `AddPrivilegeRoleRequest` method adds the `prvReadQueue` abd `prvAppendToQueue` privileges to the example role.
+6. The `AddPrivilegeRoleRequest` method adds the `prvReadQueue` and `prvAppendToQueue` privileges to the example role.
 
 ### Demonstrate
 
-1. The `AddPrincipalToQueueRequest` method adds the team to the queue.
+The `AddPrincipalToQueueRequest` method adds the team to the queue.
+
 ### Clean up
 
-1. Display an option to delete the sample data in [Setup](#setup).
-
-    The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the records to achieve the same result.
+Display an option to delete the sample data in [Setup](#setup). The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the records to achieve the same result.

@@ -23,7 +23,7 @@ This walkthrough describes the process of registering and configuring the simple
   
 ## Prerequisites  
   
-- PowerApps Common Data Service  
+- Power Apps Common Data Service  
   
 - You must have a Common Data Service system user account with administrator role for the Office 365.  
   
@@ -276,7 +276,7 @@ Finally, you can click on **Logout** button to logout.
   
     ```javascript  
     //Set these variables to match your environment  
-    var organizationURI = "https://[organization name].crm.dynamics.com"; //The URL to connect to PowerApps Common Data Service  
+    var organizationURI = "https://[organization name].crm.dynamics.com"; //The URL to connect to Power Apps Common Data Service  
     var tenant = "[xxx.onmicrosoft.com]"; //The name of the Azure AD organization you use  
     var clientId = "[client id]"; //The ClientId you got when you registered the application  
     var pageUrl = "https://localhost:[PORT #]/SimpleSPA.html"; //The URL of this page in your development environment when debugging.  

@@ -1,5 +1,5 @@
 ---
-title: "Add model-driven app form navigation for related entities in PowerApps | MicrosoftDocs"
+title: "Add model-driven app form navigation for related entities in Power Apps | MicrosoftDocs"
 description: Learn how to add form navigation for related entities
 ms.custom: ""
 ms.date: 06/18/2018
@@ -27,7 +27,7 @@ search.app:
 
 In this topic, you use the form navigation pane that is used to add links to related entities. When an app user clicks one of these links in a record, the associated view for the entity is displayed.   
   
-1.  Sign in to [PowerApps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
+1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
   
     > [!IMPORTANT]

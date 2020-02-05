@@ -1,20 +1,20 @@
 ---
 title: Select function | Microsoft Docs
-description: Reference information, including syntax, for the Select function in PowerApps
+description: Reference information, including syntax, for the Select function in Power Apps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 06/11/2018
+ms.date: 01/08/2020
 ms.author: gregli
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 ---
-# Select function in PowerApps
+# Select function in Power Apps
 Simulates a select action on a control, causing the **OnSelect** formula to be evaluated.
 
 ## Description
@@ -26,7 +26,7 @@ If you want one or more controls in the gallery to perform different actions fro
 
 **Select** queues the target **OnSelect** for later processing, which may happen after the current formula has finished being evaluated. **Select** doesn't cause the target **OnSelect** to evaluate immediately, nor does **Select** wait for **OnSelect** to finish being evaluated.
 
-**Select** can't cross the boundaries of container controls, such as a gallery or a form. Controls within a container control can only be the subject of a **Select** function in formulas that are inside the same container control. You can't use **Select** across screens.
+You can't use **Select** across screens.
 
 You can use **Select** only with controls that have an **OnSelect** property.
 
@@ -34,12 +34,36 @@ You can use **Select** only in [behavior formulas](../working-with-formulas-in-d
 
 A control can't **Select** itself directly or indirectly through other controls.
 
+The select function can also be used with a gallery. For example, it can be used to specify the row or column to select in a gallery and the control to select within that row or column of the gallery. When you select a row or column, the gallery selection changes and the **OnSelect** formula on the gallery control is evaluated. If a control within the row or column is provided, the **OnSelect** formula for the child control will be evaluated. 
+
 ## Syntax
 **Select**( *Control* )
 
 * *Control* – Required.  The control to select on behalf of the user.
 
+**Select**( *Control, Row or column, Child Control* )
+
+- *Control* – Required. The control to select on behalf of the user.
+- *Row or column* – Not required. The number of row or column (starting with 1) in a gallery control to select on behalf of the user.
+- *Child Control* - Not required. The child control of the control identified in the 'control' parameter to select. 
+
 ## Examples
+
+- *Button*
+
+    ```Select(button1)```
+
+- *Gallery*	
+
+    ```Select(Gallery1, 1)```
+
+    Simulates a user selecting row 1 or column 1 in Gallery1. 
+
+- *Gallery*	
+
+    ```Select(Gallery1, 1, ChildControl1)```
+
+    Simulates a user selecting ChildConttrol1 in row 1 or column 1 of Gallery1.
 
 #### Basic usage
 
@@ -86,3 +110,12 @@ A control can't **Select** itself directly or indirectly through other controls.
 	Use individual controls in the gallery to take actions that differ from the gallery's default action.
 
 	![An animation that shows the default value of the OnSelect property for a gallery control, as well as a control that takes a different action](media/function-select/gallery-select.gif)
+
+7. On the same screen, add a **Button** control, and set its **OnSelect** property to this formula:
+
+	**Select( Gallery1,2,Image1 )**
+
+8. While holding down the Alt key, select the button.
+   
+     A **Image Selected** notification appears across the top of your app. The button click simulated selecting the image in row 2 of the gallery.  
+

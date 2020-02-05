@@ -346,7 +346,7 @@
     href: package-deployer/create-packages-package-deployer.md
   - name: Verify quality of solutions and packages
     items:
-    - name: Use the PowerApps checker web API 
+    - name: Use the Power Apps checker web API 
       href: checker/webapi/overview.md
     - name: Invoke the analysis
       href: checker/webapi/analyze.md
@@ -361,15 +361,13 @@
   - name: Publish your app on AppSource
     href: publish-app-appsource.md
     items:
-    - name: 'Step 1: Fill the app submission form on AppSource'
-      href: fill-app-submission-form-appsource.md
-    - name: 'Step 2: Register for Microsoft Partner Network account'
+    - name: 'Step 1: Create a Microsoft Partner Center account'
       href: register-microsoft-partner-network.md
-    - name: 'Step 3: Create a managed solution for your app'
+    - name: 'Step 2: Create a managed solution for your app'
       href: create-solution-app-appsource.md
-    - name: 'Step 4: Create an AppSource package for your app'
+    - name: 'Step 3: Create an AppSource package for your app'
       href: create-package-app-appsource.md
-    - name: 'Step 5: Store your AppSource Package on Azure Storage and generate a URL with SAS key'
+    - name: 'Step 4: Store your AppSource Package on Azure Storage and generate a URL with SAS key'
       href: store-appsource-package-azure-storage.md
     - name: 'Next steps: Submit your app on Partner Center'
       href: next-steps-submit-app-cloud-partner-portal.md
@@ -433,6 +431,8 @@
     items:
     - name: Download tools from NuGet 
       href: download-tools-nuget.md
+    - name: Install Power Apps CLI
+      href: powerapps-cli.md
   - name: Community Tools
     href: community-tools.md
   - name: Testing tools

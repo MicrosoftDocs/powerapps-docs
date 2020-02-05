@@ -14,11 +14,14 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Microsoft Stream video control in PowerApps
+# Microsoft Stream video control in Power Apps
 A video player for Microsoft Stream videos and channels.
 
 ## Description
 The control will allow app users to play videos and browse through channels from the Microsoft Stream service.
+
+## Limitations
+The control is currently not supported in the native Windows player for Power Apps.  It works successfully in web browsers as well as the Android and iOS Power Apps players.
 
 ## Key properties
 **StreamUrl** – The URL of the Microsoft Stream video or channel to be shown in the control.

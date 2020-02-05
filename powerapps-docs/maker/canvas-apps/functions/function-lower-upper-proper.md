@@ -1,6 +1,6 @@
 ---
 title: Lower, Upper, and Proper functions | Microsoft Docs
-description: Reference information, including syntax and examples, for the Lower, Upper, and Proper functions in PowerApps
+description: Reference information, including syntax and examples, for the Lower, Upper, and Proper functions in Power Apps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Lower, Upper, and Proper functions in PowerApps
+# Lower, Upper, and Proper functions in Power Apps
 Converts letters in a string of text to all lowercase, all uppercase, or proper case.
 
 ## Description

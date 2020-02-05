@@ -1,13 +1,13 @@
 ---
 title: "Configure notes on entity forms and web forms for a portal | MicrosoftDocs"
 description: "Instructions to add and configure notes on entity forms and web forms in a portal."
-author: sbmjais
-manager: shujoshi
+author: tapanm-msft
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 10/07/2019
-ms.author: shjais
+ms.author: tapanm
 ms.reviewer:
 ---
 
@@ -57,7 +57,7 @@ Just like with subgrids, adding notes to your managed forms on the portal is eas
 | Error Message         | Overrides the message shown when an error occurs while trying to load the list of notes.                                                                     |
 | Access Denied Message | Overrides the message shown when the user does not have sufficient permissions to view the list of notes.                                                    |
 | Empty Message         | Overrides the message shown when the current entity does not have any notes that can be viewed.                                                              |
-| List Orders           | Allows you to set the order in which notes will be displayed. The List Orders setting allows you to set the following: <ul><li>Attribute: the logical name of the column by which you wish to sort</li><li>Alias: the alias for the attribute in the query</li><li>Direction: Ascending (smallest to largest, or first to last), or Descending (largest to smallest, or last to first).</li></ul> ![Set attributes for list orders](media/set-attributes-list-orders.png "Set attributes for list orders") To add a sorting rule, select "Column" (4) and fill in the details. List Orders will be processed in order from the top of the list having highest priority.|
+| List Orders           | Allows you to set the order in which notes will be displayed. The List Orders setting allows you to set the following: <ul><li>Attribute: the logical name of the column by which you wish to sort</li><li>Alias: the alias for the attribute in the query</li><li>Direction: Ascending (smallest to largest, or first to last), or Descending (largest to smallest, or last to first).</li></ul>  ![Set attributes for list orders](media/set-attributes-list-orders.png "Set attributes for list orders")   To add a sorting rule, select "Column" (4) and fill in the details. List Orders will be processed in order from the top of the list having highest priority.|
 ||
 
 

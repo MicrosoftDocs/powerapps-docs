@@ -1,6 +1,6 @@
 ---
 title: "Developers: Best practices and guidance around working with data for the Common Data Service | Microsoft Docs"
-description: Best practices and guidance around working with data for developers of the Common Data Service in PowerApps.
+description: Best practices and guidance around working with data for developers of the Common Data Service in Power Apps.
 services: ''
 suite: powerapps
 documentationcenter: na

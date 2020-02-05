@@ -3124,8 +3124,8 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 |Property|Value|
 |--------|-----|
-|Description|Indicates whether Custom Controls in canvas PowerApps feature has been enabled for the organization.|
-|DisplayName|Enable Custom Controls in canvas PowerApps feature for this organization|
+|Description|Indicates whether Custom Controls in canvas Power Apps feature has been enabled for the organization.|
+|DisplayName|Enable Custom Controls in canvas Power Apps feature for this organization|
 |IsValidForForm|False|
 |IsValidForRead|True|
 |LogicalName|iscustomcontrolsincanvasappsenabled|
