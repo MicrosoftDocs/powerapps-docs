@@ -11,7 +11,9 @@ manager: shujoshi
 ---
 
 
-# View and create email through the Activities grid
+# Preview: View and create email through the Activities grid
+
+View and create email through the Activities grid is an early-access feature. You can opt in early to enable these features in your environment. This will allow you to test these features and then adopt them across your environments. For information on how to enable these features, see [Opt in to 2020 release wave 1 updates](https://docs.microsoft.com/power-platform/admin/opt-in-early-access-updates).
 
 Dynamics 365 model-driven apps let you interact with customers through email. The email functionality allows you to:
 
@@ -26,8 +28,6 @@ Dynamics 365 model-driven apps let you interact with customers through email. Th
 - Preview templates before applying them. 
 
 
-> [!IMPORTANT]
-> View and create email through the Activities grid is an early-access feature. You can opt in early to enable these features in your environment. This will allow you to test these features and then adopt them across your environments. For information on how to enable these features, see [Opt in to 2020 release wave 1 updates](https://docs.microsoft.com/power-platform/admin/opt-in-early-access-updates).
 
 ## View your email
 
