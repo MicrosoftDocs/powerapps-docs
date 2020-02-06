@@ -36,11 +36,9 @@ In this topic, you create or edit filters by performing the following tasks:
 
 -   [Edit or remove a filter condition](create-edit-view-filters.md#edit-or-remove-a-filter-condition)
 
--   [Add or edit conditions to the filter](create-edit-view-filters.md#add-or-edit-conditions-to-the-filter)
-
 -   [Open the filter editor](create-edit-view-filters.md#open-the-filter-editor)
 
--   [Add a condition to a filter](create-edit-view-filters.md#add-a-condition-to-a-filter)
+-   [Add conditions to a filter](create-edit-view-filters.md#add-conditions-to-a-filter)
 
 -   [Add a group condition to a filter](create-edit-view-filters.md#add-a-group-condition-to-a-filter)
 
@@ -79,7 +77,7 @@ In this topic, you create or edit filters by performing the following tasks:
     > [!div class="mx-imgBorder"] 
     > ![Filters editor](media/edit-create-filters.png)
 
-### Add a condition to a filter
+### Add conditions to a filter
 
 1. In the filters editor, select **Add > Add row**.
 
