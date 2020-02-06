@@ -66,6 +66,24 @@ You can also open primary field and lookup fields in a new tab or window.
 
    > [!div class="mx-imgBorder"]
    > ![Open in a new window](media/newtab.png "[Open in a new window")
+   
+   
+### Known issue
+
+If you change the default display format for number, currency, time, or date and then filter data on a grid, the filter will not show your selected display format. The filters will still display in the system default format and in some cases filtering may not work at all. 
+
+To fix the issue, set the display format for number, currency, time, and date back to the default setting. 
+
+1. In the upper-right corner, select the gear icon ![Gear icon](media/selection-rule-gear-button.png), and then select **Personalization Settings**.
+
+2. On the **Formats** tab change the number, currency, time, and date value back to the default setting.
+
+    > [!div class="mx-imgBorder"] 
+    > ![Format settings](media/default-format.png "format settings")
+    
+    
+  We are working on the issue, please check back for availability. 
+
 
 ## Use search on a grid
 
@@ -98,20 +116,5 @@ To switch back to the old quick-find search experience that uses an entity's qui
 3. On the **General** tab, under **Set up Quick Find**, select **Yes** for **Use quick find view of an entity for searching on grids and sub-grids**.
 
 
-## Known issue
-
-If you change the default display format for number, currency, time, or date and then filter data on a grid, the filter will not show your selected display format. The filters will still display in the system default format and in some cases filtering may not work at all. 
-
-To fix the issue, set the display format for number, currency, time, and date back to the default setting. 
-
-1. In the upper-right corner, select the gear icon ![Gear icon](media/selection-rule-gear-button.png), and then select **Personalization Settings**.
-
-2. On the **Formats** tab change the number, currency, time, and date value back to the default setting.
-
-    > [!div class="mx-imgBorder"] 
-    > ![Format settings](media/default-format.png "format settings")
-    
-    
-  We are working on the issue, please check back for availability. 
 
 
