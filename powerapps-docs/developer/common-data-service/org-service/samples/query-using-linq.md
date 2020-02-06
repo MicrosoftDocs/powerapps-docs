@@ -17,7 +17,7 @@ search.app:
 ---
 # Sample: Query data using LINQ
 
-These samples show how to query business data using [Language-Integrated Query (LINQ)](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/linq/introduction-to-linq-queries).
+These samples show how to query business data using [Language-Integrated Query (LINQ)](https://docs.microsoft.com/dotnet/csharp/programming-guide/concepts/linq/introduction-to-linq-queries). You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/QueriesUsingLINQ). 
 
 ## How to run this sample
 
