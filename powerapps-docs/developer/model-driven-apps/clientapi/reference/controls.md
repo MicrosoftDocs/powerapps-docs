@@ -312,6 +312,18 @@ These are the methods available for the timer control.
 
 A web resource control has the same set of methods available as the iframe control. See [iframe control type](#iframe-control-type)
 
+The Sliverlight web resource has these additional methods: 
+<table>
+<tr>
+<td>
+<ul>
+<li><a href="controls/getData.md" data-raw-source="[getData](controls/getData.md)">getData</a></li>
+<li><a href="controls/setData.md" data-raw-source="[setData](controls/setData.md)">setData</a></li>
+</ul>
+</td>
+</tr>
+</table>
+
 
 ### Related topics
 
