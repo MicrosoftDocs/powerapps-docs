@@ -1,7 +1,7 @@
 ---
 title: "Create or edit filters in model-driven app views | MicrosoftDocs"
 description: "Learn how to create and edit filters or views for your app"
-keywords: ""
+keywords: "expression builder"
 ms.date: 2/04/2020
 ms.service: powerapps
 ms.custom: 
@@ -30,13 +30,13 @@ search.app:
 
 <a name="BKMK_CreateOrEditViewFilters"></a>   
 
-The filters in a Power Apps view are important to the value provided by the view. Which filters are applied determine which records appear in the list by default. You can add or edit a filter for the columns that you include in a view by selecting the column and selecting **Filter by**. You can also use the Filters editor in the view designer. Use the Filters editor to add or edit filters for any fields in the view entity or any fields in a related entity. 
+The filters in a Power Apps view are important to the value provided by the view. Which filters are applied determine which records appear in the list by default. You can add or edit a filter for the columns that you include in a view by selecting the column and selecting **Filter by**. You can also use the expression builder in the view designer. Use the expression builder to add or edit filters for any fields in the view entity or any fields in a related entity. 
 
 In this topic, you create or edit filters by performing the following tasks:
 
 -   [Edit or remove a filter condition](create-edit-view-filters.md#edit-or-remove-a-filter-condition)
 
--   [Open the filter editor](create-edit-view-filters.md#open-the-filter-editor)
+-   [Open the expression builder](create-edit-view-filters.md#open-the-expression-builder)
 
 -   [Add conditions to a filter](create-edit-view-filters.md#add-conditions-to-a-filter)
 
@@ -70,16 +70,16 @@ In this topic, you create or edit filters by performing the following tasks:
 
 8. To remove a condition, select Remove filter. The condition is removed without confirmation.
 
-### Open the filter editor
+### Open the expression builder
 
 - On the View properties panel, select **Edit filters**.
 
     > [!div class="mx-imgBorder"] 
-    > ![Filters editor](media/edit-create-filters.png)
+    > ![Expression builder](media/edit-create-filters.png)
 
 ### Add conditions to a filter
 
-1. In the filters editor, select **Add > Add row**.
+1. In the expression builder, select **Add > Add row**.
 
 2. Select a field for the condition.
 
@@ -96,7 +96,7 @@ In this topic, you create or edit filters by performing the following tasks:
 
 ### Add a group condition to a filter
 
-1. In the filters editor, select **Add > Add group**.
+1. In the expression builder, select **Add > Add group**.
 
 2. Select the relational operator **Or** for the group. **And** is the default relational operator.
 
@@ -113,7 +113,7 @@ In this topic, you create or edit filters by performing the following tasks:
 
 ### Add a related entity to a condition
 
-1. In the filters editor, select **Add > Add related entity**.
+1. In the expression builder, select **Add > Add related entity**.
 
 2. Select a field from the related entity for the condition. You can select fields that have a Many to One, One to Many, or Many to Many relationships with the view entity.
 
@@ -126,7 +126,7 @@ In this topic, you create or edit filters by performing the following tasks:
 
 ### Group conditions of a filter
 
-1. In the filters editor, select the checkbox for the conditions that you want to group.
+1. In the expression builder, select the checkbox for the conditions that you want to group.
 
 2. Select the More commands menu for one of the conditions, and select **Make group**.
 
