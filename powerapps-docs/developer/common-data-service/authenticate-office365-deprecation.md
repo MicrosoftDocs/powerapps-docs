@@ -19,7 +19,7 @@ search.app:
 # Use of Office365 authentication with the WS-Trust security protocol
 
 Use of the WS-Trust authentication security protocol when connecting to Common
-Data Service in the Power Platform is no longer recommended and has been
+Data Service is no longer recommended and has been
 deprecated; see the [announcement](/power-platform/important-changes-coming#deprecation-of-office365-authentication-type-and-organizationserviceproxy-class-for-connecting-to-common-data-service). 
 
 This change
