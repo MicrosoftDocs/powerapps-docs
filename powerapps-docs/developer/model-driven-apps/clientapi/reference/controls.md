@@ -281,6 +281,7 @@ These are the methods available for the timer control.
 <tr>
 <td>
 <ul>
+<li><a href="controls/getContentWindow.md" data-raw-source="[getContentWindow](controls/getContentWindow.md)">getContentWindow</a></li>
 <li><a href="controls/getControlType.md" data-raw-source="[getControlType](controls/getControlType.md)">getControlType</a></li>
 <li><a href="controls/getDisabled.md" data-raw-source="[getDisabled](controls/getDisabled.md)">getDisabled</a></li>
 <li><a href="controls/getLabel.md" data-raw-source="[getLabel](controls/getLabel.md)">getLabel</a></li>
