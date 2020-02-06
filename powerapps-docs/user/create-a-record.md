@@ -63,11 +63,11 @@ The **Create a new record** command or **Quick create** makes it fast and easy t
  
 This is an early-access feature. You can opt in early to enable these features in your environment. This will allow you to test these features and then adopt them across your environments. For information on how to enable these features, see [Opt in to 2020 release wave 1 updates](https://docs.microsoft.com/power-platform/admin/opt-in-early-access-updates).
 
-Use the **Save** or **Save & Close** button on command bar when you edit an existing record. 
+Use the **Save** or **Save & Close** button on command bar when you edit an existing record. Before this release, the **Save** option was only available on the bottom right corner.
 
 1. From the left navigation pane, select the record type that you want to edit. For example, select **Accounts**.
 2. Open the account record that you want to edit and make your changes to the record.
-3. To save your changes, on the command bar, select **Save** or **Save & Close**. The **Save** option is also available on the bottom right corner.
+3. To save your changes, on the command bar, select **Save** or **Save & Close**. The **Save** option is still available on the bottom right corner.
 
     > [!div class="mx-imgBorder"] 
     > ![Save option on a record](media/saveoptionalwaysvisible.png "Save option on a record")
