@@ -214,7 +214,7 @@ If a solution contains a business process flow component in draft state that has
 
 Reference [KB Article #4337537: Invalid Export - Business Process Entity Missing](https://support.microsoft.com/en-hk/help/4337537/invalid-export-business-process-entity-missing) for details about the issue and steps to resolve.
 
-## Solution cChecker fails to export patched solutions
+## Solution Checker fails to export patched solutions
 
 If a solution has had a [patch](https://docs.microsoft.com/powerapps/developer/common-data-service/create-patches-simplify-solution-updates) applied, Solution Checker will fail to export the solution for analysis. When a solution has had a patch applied, the original solution becomes locked and it can’t be changed or exported as long as there are dependent patches that exist in the organization that identify the solution as the parent solution.
 
