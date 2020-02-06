@@ -20,7 +20,9 @@ search.app:
 
 Use of the WS-Trust authentication security protocol when connecting to Common
 Data Service in the Power Platform is no longer recommended and has been
-deprecated; see the [announcement](/power-platform/important-changes-coming#deprecation-of-office365-authentication-type-and-organizationserviceproxy-class-for-connecting-to-common-data-service). This change
+deprecated; see the [announcement](/power-platform/important-changes-coming#deprecation-of-office365-authentication-type-and-organizationserviceproxy-class-for-connecting-to-common-data-service). 
+
+This change
 impacts custom client applications that use “Office365” authentication and the
 [Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy](/dotnet/api/microsoft.xrm.sdk.client.organizationserviceproxy)
 or
