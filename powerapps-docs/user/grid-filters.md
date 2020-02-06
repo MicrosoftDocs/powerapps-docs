@@ -72,6 +72,13 @@ The robust **Date** filter includes many different values to choose from, such a
    > [!div class="mx-imgBorder"]
    > ![Date filtering](media/date-filter.png "Date filtering")
 
+### Filter the list of activities
+
+You can filter the list of activities to see only the ones you’re interested in. For example, you can further limit the activities you are seeing in a view by using the activity type filter. The activity type filter allows you to filter activities based on the type, such as email, task, phone call, and so on.
+
+
+   > [!div class="mx-imgBorder"]
+   > ![Activities filter](media/activity_filter.png "Activities filter")
 
 ### Use search on a grid
 
