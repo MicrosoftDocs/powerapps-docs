@@ -19,9 +19,6 @@ search.app:
 
 Grids in the Unified Interface have been improved to increase the amount of data you can see on your screen. Now you can choose from many different filtering options for a column; the type of data in the column determines which filter options are available. For example, the **Full Name** column in the **Contacts** grid has different filter options than the **Activity Type** column in the **Activities** grid.
 
-   
-   > [!NOTE]
-   > Do not change the default display format for time, number, currency, time, or date as this causes an issue. For more information, see [Known issue](https://docs.microsoft.com/powerapps/user/grid-filters#known-issue).
 
    > [!div class="mx-imgBorder"]
    > ![Grid filtering](media/filter-options.png "Grid filtering")
@@ -53,6 +50,10 @@ You can also open primary field and lookup fields in a new tab or window.
 ## Early-access features
 
 This section is for early-access features. You can opt in early to enable these features in your environment. This will allow you to test these features and then adopt them across your environments. For information on how to enable these features, see [Opt in to 2020 release wave 1 updates](https://docs.microsoft.com/power-platform/admin/opt-in-early-access-updates).
+
+
+   > [!NOTE]
+   > Do not change the default display format for time, number, currency, time, or date as this causes an issue. For more information, see [Known issue](https://docs.microsoft.com/powerapps/user/grid-filters#known-issue).
 
 ### Lookup field column
 
