@@ -24,7 +24,7 @@ deprecated; see the [announcement](/power-platform/important-changes-coming#depr
 impacts custom client applications that use “Office365” authentication and the
 [Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy](/dotnet/api/microsoft.xrm.sdk.client.organizationserviceproxy)
 or
-[Microsoft.Xrm.Tooling.Connector.CrmServiceClient](dotnet/api/microsoft.xrm.tooling.connector.crmserviceclient)
+[Microsoft.Xrm.Tooling.Connector.CrmServiceClient](/dotnet/api/microsoft.xrm.tooling.connector.crmserviceclient)
 classes. If your applications use this type of authentication protocol and API,
 continue reading below to learn more about the recommended authentication
 changes to be made to your application’s code.
@@ -37,7 +37,7 @@ workflow activities, or on-premises/IFD service connections.
 
 - If your code employs user account and password credentials for authentication with Common Data Service or an application, you are likely using the WS-Trust security protocol. Some examples are shown below, though this list is not fully inclusive.
 
-  - When using the [CrmServiceClient](dotnet/api/microsoft.xrm.tooling.connector.crmserviceclient) class with a connection string:
+  - When using the [CrmServiceClient](/dotnet/api/microsoft.xrm.tooling.connector.crmserviceclient) class with a connection string:
 
     `connectionString="AuthType=Office365; Username=jsmith\@contoso.onmicrosoft.com;Password=passcode;Url=https://contoso.crm.dynamics.com"`
 
@@ -52,7 +52,7 @@ using (OrganizationServiceProxy organizationServiceProxy =
 
 - If you are using the `OrganizationServiceProxy` class at all in your code, you are using WS-Trust.
 
-- If you are using [CrmServiceClient](dotnet/api/microsoft.xrm.tooling.connector.crmserviceclient).`OrganizationServiceProxy` in your code, you are using WS-Trust.
+- If you are using [CrmServiceClient](/dotnet/api/microsoft.xrm.tooling.connector.crmserviceclient).`OrganizationServiceProxy` in your code, you are using WS-Trust.
 
 ## What should I do to fix my application code if affected?
 
@@ -64,9 +64,9 @@ Service.
 
   If you are passing the `OrganizationServiceProxy` instance around to various methods, or returning the instance from a function, replace all occurrences of the type `OrganizationServiceProxy` with the [IOrganizationService](/dotnet/api/microsoft.xrm.sdk.iorganizationservice?view=dynamics-general-ce-9) interface. This interface exposes all the core methods used to communicate with Common Data Service.
 
-  When invoking the constructor, it is recommend you add the NuGet package [Microsoft.CrmSdk.XrmTooling.CoreAssembly](https://www.nuget.org/packages/Microsoft.CrmSdk.XrmTooling.CoreAssembly/) to your project and replace all use of `OrganizationServiceProxy` class constructors with [CrmServiceClient](dotnet/api/microsoft.xrm.tooling.connector.crmserviceclient) class constructors. You will need to alter your coding pattern here, however, for simplicity `CrmServiceClient` supports connection strings in addition to complex constructors and the ability to provide external authentication handlers. `CrmServiceClient` implements `IOrganizationService`, therefore your new authentication code will be portable to the rest of your application code. You can find examples on the use of `CrmServiceClient` in the [PowerApps-Samples](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23) repository.
+  When invoking the constructor, it is recommend you add the NuGet package [Microsoft.CrmSdk.XrmTooling.CoreAssembly](https://www.nuget.org/packages/Microsoft.CrmSdk.XrmTooling.CoreAssembly/) to your project and replace all use of `OrganizationServiceProxy` class constructors with [CrmServiceClient](/dotnet/api/microsoft.xrm.tooling.connector.crmserviceclient) class constructors. You will need to alter your coding pattern here, however, for simplicity `CrmServiceClient` supports connection strings in addition to complex constructors and the ability to provide external authentication handlers. `CrmServiceClient` implements `IOrganizationService`, therefore your new authentication code will be portable to the rest of your application code. You can find examples on the use of `CrmServiceClient` in the [PowerApps-Samples](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23) repository.
 
-- If your code is using [CrmServiceClient](dotnet/api/microsoft.xrm.tooling.connector.crmserviceclient) with the “Office365” authentication
+- If your code is using [CrmServiceClient](/dotnet/api/microsoft.xrm.tooling.connector.crmserviceclient) with the “Office365” authentication
     type:
 
     An example of this is a connections string that looks like this:
@@ -89,7 +89,7 @@ Service.
 
     - When we announce it, update to the latest [Microsoft.CrmSdk.XrmTooling.CoreAssembly](https://www.nuget.org/packages/Microsoft.CrmSdk.XrmTooling.CoreAssembly/) NuGet package that includes auto redirect support. This library will redirect an authentication type of Office365 to OAuth and use the example AppId and Redirect URI automatically. This capability is planned for the 9.2.x version of the Microsoft.CrmSdk.XrmTooling.CoreAssembly package.
 
-- If you are accessing the [CrmServiceClient](dotnet/api/microsoft.xrm.tooling.connector.crmserviceclient).`OrganizationServiceProxy` property:
+- If you are accessing the [CrmServiceClient](/dotnet/api/microsoft.xrm.tooling.connector.crmserviceclient).`OrganizationServiceProxy` property:
 
      Remove all use of that property in your code. `CrmServiceClient` implements `IOrganizationService` and exposes everything that is settable for the organization service proxy.
 
