@@ -17,8 +17,6 @@ search.app:
 ---
 # Use grid filters 
 
-[!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
-
 
 Grids in the Unified Interface have been improved to increase the amount of data you can see on your screen. Now you can choose from many different filtering options for a column; the type of data in the column determines which filter options are available. For example, the **Full Name** column in the **Contacts** grid has different filter options than the **Activity Type** column in the **Activities** grid.
 
@@ -30,22 +28,10 @@ Grids in the Unified Interface have been improved to increase the amount of data
    > ![Grid filtering](media/filter-options.png "Grid filtering")
    
 
-
-## Lookup field column
-
-When you filter on a lookup column, you can select from a list of records to filter by rather than manually typing in the data. For example, on a **Primary Contact** lookup column, you can select the contact name from the list of records to filter by.
-
-   > [!div class="mx-imgBorder"]
-   > ![Lookup filtering](media/lookup-filter.png "Lookup filtering")
-
-## Date filter
-
-The robust **Date** filter includes many different values to choose from, such as **On** to search by an exact date, or **Next X fiscal year** or **In fiscal period** to search by year or quarter.
-
-   > [!div class="mx-imgBorder"]
-   > ![Date filtering](media/date-filter.png "Date filtering")
-
 ## Grid and filter navigation
+
+> [!IMPORTANT]
+  > The **Save** and **Save & Close** is an  early-access feature. You can opt in early to enable these features in your environment. This will allow you to test these features and then adopt them across your environments. For information on how to enable these features, see [Opt in to 2020 release wave 1 updates](https://docs.microsoft.com/power-platform/admin/opt-in-early-access-updates).
 
 When you filter data on a grid, the main grid page remembers the filter, sort order, and the page state when you navigate away and then return to the page. This works the same when data is filtered on quick find, column filtering, page number, and more. 
 
@@ -67,7 +53,27 @@ You can also open primary field and lookup fields in a new tab or window.
    > [!div class="mx-imgBorder"]
    > ![Open in a new window](media/newtab.png "[Open in a new window")
 
-## Use search on a grid
+
+## Early-access features
+
+This section is for early-access features. You can opt in early to enable these features in your environment. This will allow you to test these features and then adopt them across your environments. For information on how to enable these features, see [Opt in to 2020 release wave 1 updates](https://docs.microsoft.com/power-platform/admin/opt-in-early-access-updates).
+
+### Lookup field column
+
+When you filter on a lookup column, you can select from a list of records to filter by rather than manually typing in the data. For example, on a **Primary Contact** lookup column, you can select the contact name from the list of records to filter by.
+
+   > [!div class="mx-imgBorder"]
+   > ![Lookup filtering](media/lookup-filter.png "Lookup filtering")
+
+### Date filter
+
+The robust **Date** filter includes many different values to choose from, such as **On** to search by an exact date, or **Next X fiscal year** or **In fiscal period** to search by year or quarter.
+
+   > [!div class="mx-imgBorder"]
+   > ![Date filtering](media/date-filter.png "Date filtering")
+
+
+### Use search on a grid
 
 When you use the **Search this view** option on a grid page, the system searches for data in the view that you're currently in. In the following example, you perform a search on the **Contacts** grid.
 
@@ -87,7 +93,7 @@ The system searches for data in the **My Active Contacts** view and displays sea
    > ![Search view](media/search-view2.png "Search results from the Search this view command")
 
 
-### Use the quick-find search experience
+#### Use the quick-find search experience
 
 To switch back to the old quick-find search experience that uses an entity's quick-find view definition to perform searches, you'll need admin permissions.
 
@@ -98,7 +104,7 @@ To switch back to the old quick-find search experience that uses an entity's qui
 3. On the **General** tab, under **Set up Quick Find**, select **Yes** for **Use quick find view of an entity for searching on grids and sub-grids**.
 
 
-## Known issue
+### Known issue
 
 If you change the default display format for number, currency, time, or date and then filter data on a grid, the filter will not show your selected display format. The filters will still display in the system default format and in some cases filtering may not work at all. 
 
