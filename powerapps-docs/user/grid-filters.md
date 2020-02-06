@@ -47,7 +47,7 @@ You can also open primary field and lookup fields in a new tab or window.
    > ![Open in a new window](media/newtab.png "[Open in a new window")
 
 
-## Early-access features
+## Preview: New grid filters and search features
 
 This section is for early-access features. You can opt in early to enable these features in your environment. This will allow you to test these features and then adopt them across your environments. For information on how to enable these features, see [Opt in to 2020 release wave 1 updates](https://docs.microsoft.com/power-platform/admin/opt-in-early-access-updates).
 
