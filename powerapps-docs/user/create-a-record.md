@@ -59,11 +59,10 @@ The **Create a new record** command or **Quick create** makes it fast and easy t
     > ![Create new button](media/newrecord3.png "Create new button")
 
  
- ### Save option for early-acess
- 
-[!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
+ ### Save option for early-access
 
-This is an early-access feature. You can opt in early to enable these features in your environment. This will allow you to test these features and then adopt them across your environments. For information on how to enable these features, see [Opt in to 2020 release wave 1 updates](https://docs.microsoft.com/power-platform/admin/opt-in-early-access-updates).
+> [!IMPORTANT]
+    > The **Save** and **Save & Close** is an  early-access feature. You can opt in early to enable these features in your environment. This will allow you to test these features and then adopt them across your environments. For information on how to enable these features, see [Opt in to 2020 release wave 1 updates](https://docs.microsoft.com/power-platform/admin/opt-in-early-access-updates).
 
 User's on early-access, will see the **Save** and **Save & Close** option on command bar when you create a new record or edit an existing record. It also available on the bottom right corner.
 
