@@ -15,7 +15,7 @@ ms.assetid: 356561d0-a36b-4b93-8b76-3e1abf9414e9
 
 # Implementing data-set component
 
-This sample component shows how to change the user experience of interacting with the dataset. For example, you only see the home page grid on an entity homepage as a table. You can build your code component that can display the data as per your choice. This sample shows the records as tiles instead of the regular tabular grid.
+This sample component shows how to change the user experience of interacting with the dataset. For example, you only see the home page grid on an entity homepage as a table. You can build your code component that can display the data as per your choice. This sample shows the records as tiles instead of the regular tabular grid. You can download the sample component from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/TS_DataSetGrid).
 
 > [!div class="mx-imgBorder"]
 > ![Data Set Grid component](../media/data-set-grid.png "Data Set Grid component")
