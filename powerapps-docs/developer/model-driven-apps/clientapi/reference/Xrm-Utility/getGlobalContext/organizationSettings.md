@@ -50,7 +50,23 @@ Returns the ID of the base currency for the current organization.
 
 **Type**: String
 
-**Description**: ID of the base currency.
+**Description**: ID of the base currency. This is deprecated; use `organizationSettings.baseCurrency` instead to get the name along with the ID of the base currency.
+
+## baseCurrency 
+
+Returns a lookup object containing the ID, name, and entity type of the base currency for the current organization.
+
+### Syntax
+
+`organizationSettings.baseCurrency`
+ 
+### Return Value
+
+**Type**: Object
+
+**Description**: Object containing the `id`, `name`, and `entityType` of the base currency. For example:
+
+`{id: "e7dd9bc6-d239-ea11-a813-000d3a35b14a", entityType: "transactioncurrency", name: "US Dollar"}`
 
 ## defaultCountryCode 
 

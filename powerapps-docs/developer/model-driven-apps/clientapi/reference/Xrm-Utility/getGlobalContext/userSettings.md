@@ -138,6 +138,22 @@ Returns an array of strings that represent the GUID values of each of the securi
 
 `["0d3dd20a-17a6-e711-a94e-000d3a1a7a9b", "ff42d20a-17a6-e711-a94e-000d3a1a7a9b"]`
 
+## roles 
+
+Returns a collection of lookup objects containing the GUID and name of each of the security role privilege that the user is associated with or any teams that the user is associated with.
+
+### Syntax
+
+`userSettings.roles`
+ 
+### Return Value
+
+**Type**: Array of objects
+
+**Description**: Object containing the `id` and `name` of each of the security role privilege that the user is associated with or any teams that the user is associated with.
+
+`{id: "e7dd9bc6-d239-ea11-a813-000d3a35b14a", entityType: "transactioncurrency", name: "US Dollar"}`
+
 ## transactionCurrencyId 
 
 Returns the transaction currency ID for the current user.
