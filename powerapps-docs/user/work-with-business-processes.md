@@ -42,4 +42,4 @@ The process bar can also be docked to the right side of the screen for easy refe
 The system comes with business processes for common tasks. However, most organizations customize these processes to match the way they do things. Or, you might have added processes to the system that have been customized for your industry or business goals. In other words, what you see here may not exactly match the process bars you see on your system. But regardless, the process bars work the same for everyone. You enter data in the fields, and then move the customer to the next stage.
 
 
-For more information on how to create and manage business process flows, see [Create a business rule for an entity](https://docs.microsoft.com/powerapps/maker/common-data-service/data-platform-create-business-rule).
+For more information on to how to apply custom business logic with business rules and flows, see [Apply custom business logic with business rules and flows in model-driven app](https://docs.microsoft.com/powerapps/maker/model-driven-apps/guide-staff-through-common-tasks-processes).
