@@ -17,7 +17,6 @@ search.app:
 ---
 # Use grid filters 
 
-
 Grids in the Unified Interface have been improved to increase the amount of data you can see on your screen. Now you can choose from many different filtering options for a column; the type of data in the column determines which filter options are available. For example, the **Full Name** column in the **Contacts** grid has different filter options than the **Activity Type** column in the **Activities** grid.
 
    
@@ -29,9 +28,6 @@ Grids in the Unified Interface have been improved to increase the amount of data
    
 
 ## Grid and filter navigation
-
-> [!IMPORTANT]
-  > The **Save** and **Save & Close** is an  early-access feature. You can opt in early to enable these features in your environment. This will allow you to test these features and then adopt them across your environments. For information on how to enable these features, see [Opt in to 2020 release wave 1 updates](https://docs.microsoft.com/power-platform/admin/opt-in-early-access-updates).
 
 When you filter data on a grid, the main grid page remembers the filter, sort order, and the page state when you navigate away and then return to the page. This works the same when data is filtered on quick find, column filtering, page number, and more. 
 
