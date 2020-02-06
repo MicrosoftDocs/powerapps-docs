@@ -1019,7 +1019,7 @@
         - name: Choose and configure columns in views
           href: ./model-driven-apps/choose-and-configure-columns.md
         - name: Create or edit filters in app views
-          href: ./model-driven-apps/create-edit-view-filterss.md
+          href: ./model-driven-apps/create-edit-view-filters.md
         - name: "How to guides: Views"
           items:
           - name: How to make grids editable
