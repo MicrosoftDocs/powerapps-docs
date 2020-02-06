@@ -61,7 +61,7 @@ The `CascadeConfiguration` (<xref:Microsoft.Xrm.Sdk.Metadata.CascadeConfiguratio
 > [!NOTE]
 > When executing an assign, any workflows or business rules that are currently active on the records will automatically be 
 > deactivated when the reassignment occurs. The new owner of the record will need to reactivate the workflow or business rule 
-> if they wish to continue using it.
+> if they want to continue using it.
 
 <a name="BKMK_ReparentAction"></a>   
 ### About the reparent action  
