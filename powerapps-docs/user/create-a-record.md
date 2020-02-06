@@ -69,7 +69,7 @@ Use the **Save** or **Save & Close** button on command bar when you edit an exis
 2. Open the account record that you want to edit and make your changes to the record.
 3. To save your changes, on the command bar, select **Save** or **Save & Close**. The **Save** option is also available on the bottom right corner.
 
-> [!div class="mx-imgBorder"] 
-> ![Save option on a record](media/saveoptionalwaysvisible.png "Save option on a record")
+    > [!div class="mx-imgBorder"] 
+    > ![Save option on a record](media/saveoptionalwaysvisible.png "Save option on a record")
 
 
