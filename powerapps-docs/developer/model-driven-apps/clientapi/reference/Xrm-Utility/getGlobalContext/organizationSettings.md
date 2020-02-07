@@ -42,7 +42,7 @@ Returns attributes and their values as `key:value` pairs that are available for 
 
 Returns the ID of the base currency for the current organization.
 
-Deprecated; use [organizationSettings.baseCurrency](baseCurrency) instead to access the display name along with the ID of the base currency.
+Deprecated; use [organizationSettings.baseCurrency](#basecurrency) instead to access the display name along with the ID of the base currency.
 
 ### Syntax
 

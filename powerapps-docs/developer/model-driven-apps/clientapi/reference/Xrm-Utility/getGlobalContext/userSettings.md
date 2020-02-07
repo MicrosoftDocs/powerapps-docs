@@ -120,7 +120,7 @@ Returns a collection of lookup objects containing the GUID and display name of e
 
 **Type**: Array of objects
 
-**Description**: Object containing the `id` and `name` of each of the security role privilege that the user is associated with or any teams that the user is associated with.
+**Description**: Object containing `id` and `name` of each of the security role or teams that the user is associated with.
 
 ## securityRolePrivileges 
 
@@ -140,7 +140,7 @@ Returns an array of strings that represent the GUID values of each of the securi
 
 Returns an array of strings that represent the GUID values of each of the security role or teams that the user is associated with. 
 
-Deprecated; use [roles](#roles) instead to view the display names of security roles or teams along with the ID.
+Deprecated; use [userSettings.roles](#roles) instead to view the display names of security roles or teams along with the ID.
 
 ### Syntax
 
@@ -174,7 +174,7 @@ Returns a lookup object containing the ID, display name, and entity type of the 
 
 Returns the transaction currency ID for the current user.
 
-Deprecated; use [transactionCurrency](#transactionCurrency) instead to access the display name along with the ID.
+Deprecated; use [userSettings.transactionCurrency](#transactioncurrency) instead to access the display name along with the ID.
 
 ### Syntax
 
