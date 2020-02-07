@@ -106,7 +106,7 @@ This example adds a record to the **Order** table in SQL Server.  It then uses t
 
 ```powerapps-dot
 With( 
-    Match( "PT2H1M39S", "PT(?:<hours>\d+)H)?(?:(?<minutes>\d+)M)?(?:(?<seconds>\d+)S)?" ),
+    Match( "PT2H1M39S", "PT(?:(?<hours>\d+)H)?(?:(?<minutes>\d+)M)?(?:(?<seconds>\d+)S)?" ),
     Time( Value( hours ), Value( minutes ), Value( seconds ) )
 )
 // Result: 2:01 AM (as shown in a label control, use the Text function to see the seconds)

@@ -180,7 +180,7 @@ Then you can simply use **Radius** anywhere that you can use a number, and it wi
 
 `Pi() * Power( Radius, 2 )`
 
-If you give a context variable the same name as a global variable or a collection, the context variable takes precedence. However, you can still reference the global variable or collection if you use the [disambiguation operator](functions/operators.md#disambiguation-operator) **@[Radius]**.
+If you give a context variable the same name as a global variable or a collection, the context variable takes precedence. However, you can still reference the global variable or collection if you use the [disambiguation operator](functions/operators.md#disambiguation-operator) **[@Radius]**.
 
 ## Use a context variable
 
