@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 07/24/2017
+ms.date: 02/07/2020
 ms.author: gregli
 search.audienceType: 
   - maker
