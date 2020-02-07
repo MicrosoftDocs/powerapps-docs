@@ -45,24 +45,7 @@ You can also open primary field and lookup fields in a new tab or window.
 
    > [!div class="mx-imgBorder"]
    > ![Open in a new window](media/newtab.png "[Open in a new window")
-   
-<!--note from editor: This section is repeated later in the topic. Is that okay?-->   
-### Known issue
-
-If you change the default display format for number, currency, time, or date and then filter data on a grid, the filter won't show your selected display format. The filters will still be displayed in the system default format, and in some cases filtering might not work at all. 
-
-To fix the issue, set the display format for number, currency, time, and date back to the default setting. 
-
-1. In the upper-right corner, select the gear icon ![Gear icon](media/selection-rule-gear-button.png), and then select **Personalization Settings**.
-
-2. On the **Formats** tab, change the number, currency, time, and date value back to the default setting.
-
-    > [!div class="mx-imgBorder"] 
-    > ![Format settings](media/default-format.png "Format settings")
-    
-We're working on this issue, please check back for availability.<!--note from editor: I don't know what "availability" means here. Can this say "please check back for information about the availability of a fix." or something similar?-->
-
-
+  
 
 ## Preview: New grid filters and search option
 
@@ -94,8 +77,8 @@ You can filter the list of activities to see only the ones you're interested in.
    > [!div class="mx-imgBorder"]
    > ![Activities filter](media/activity_filter.png "Activities filter")
 
-<!--note from editor: If you do want to repeat this section, is it okay that the link in line 73 jumps back up to the first occurrence of the text? Also, is it intentional to have this heading be level 4 instead of 3 like the previous one was?-->
-#### Known issue
+
+### Known issue
 
 If you change the default display format for number, currency, time, or date and then filter data on a grid, the filter won't show your selected display format. The filters will still be displayed in the system default format, and in some cases filtering might not work at all. 
 
@@ -108,8 +91,8 @@ To fix the issue, set the display format for number, currency, time, and date ba
     > [!div class="mx-imgBorder"] 
     > ![Format settings](media/default-format.png "Format settings")
     
-    
-We're working on the issue, please check back for availability.<!--note from editor: I don't know what "availability" means here. Can this say "please check back for information about the availability of a fix." or something similar?-->
+We're working on this issue, please check back for information about the availability of a fix.
+
   
 ### Use search on a grid
 
