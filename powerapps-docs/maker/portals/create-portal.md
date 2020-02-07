@@ -72,7 +72,7 @@ After the portal is provisioned successfully, the status is updated and the port
 To edit the portal in Power Apps portals Studio, see [Edit a portal](manage-existing-portals.md#edit).
 
 > [!NOTE]
-> - There can be only be one portal of each type and language created in an environment. 
+> - There can be only one portal of each type and for a language created in an environment.
 > - If you don't have sufficient privileges to provision a portal, an error is displayed. You must have the System Administrator role in Common Data Service to create a portal. You must also have the **Access Mode** set to **Read-Write** under **Client Access License (CAL) Information** in the user record.
 > - If you have purchased an older portal add-on, and want to provision a portal using the add-on, you must go to the **Dynamics 365 Administration Center** page. More information: [Provision a portal using the older portal add-on](provision-portal-add-on.md)
 > - If you have provisioned a portal using the older portal add-on, you can still customize and manage it from [make.powerapps.com](https://make.powerapps.com).
