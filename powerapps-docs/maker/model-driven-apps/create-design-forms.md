@@ -1,7 +1,7 @@
 ---
 title: "Create and design model-driven app forms | MicrosoftDocs"
 ms.custom: ""
-ms.date: 12/06/2018
+ms.date: 01/30/2020
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -37,6 +37,8 @@ If you’re viewing a managed solution, you can’t create new forms or edit exi
 ## Type of forms
 There are different types of forms, and each type has a specific functionality or use. More information: [Type of forms in Power Apps](types-forms.md).  
 
+## Main form dialogs (Preview)
+With the client API, you can use main form dialogs so users can open a related record entity on a parent or base form without navigating away from the form. More information: [Open main form in a dialog using client API](../../developer/model-driven-apps/customize-entity-forms.md#open-main-form-in-a-dialog-using-client-api) 
   
 <a name="BKMK_FormDifferencesByEntity"></a>   
 ## Updated versus classic entities  
@@ -52,6 +54,7 @@ There are still a number of entities, referred to here as classic entities, that
 |Price List|Queue Item|Quote Product|Rollup Field|Rollup Query|  
 |Saved View|Service|Service Activity|SharePoint Site|Site|  
 |Territory|Unit|Unit Group|||  
+
   
 ## Form display FAQ
 

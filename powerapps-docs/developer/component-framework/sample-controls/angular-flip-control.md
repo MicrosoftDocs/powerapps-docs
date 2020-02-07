@@ -12,7 +12,7 @@ author: Nkrb
 
 # Implementing Flip component
 
-This sample shows how to use third-party libraries to create components in Power Apps component framework.  The flip sample component is implemented based on angular.js, angular-ui, angular-animate, angular-sanitize, bootstrap. The code may not reveal the best practices for the mentioned third-party libraries.
+This sample shows how to use third-party libraries to create components in Power Apps component framework.  The flip sample component is implemented based on angular.js, angular-ui, angular-animate, angular-sanitize, bootstrap. The code may not reveal the best practices for the mentioned third-party libraries. You can download the sample component from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/TS_AngularJSFlipControl).
 
 > [!div class="mx-imgBorder"]
 > ![Angular Flip](../media/angular-flip.png "Angular Flip")

@@ -41,16 +41,17 @@ The solution publisher specifies who developed the app. The prefix can provide a
 The default solution in Power Apps is the Common Data Services Default Solution, which is associated with the Common Data Service Default Publisher. The default publisher prefix will be randomly assigned for this publisher, for example it could be *cr8a3*. This means that the name of every new item of metadata created in the default solution will have this prepended to the names used to uniquely identify the items. If you create a new entity named *Animal*, the unique name used by Common Data Service would be *cr8a3_animal*. The same is true for any new fields (attributes), relationships, or optionset options. If you will be customizing the default solution, consider changing the publisher prefix. 
 
 ## Create a solution publisher
-1.	In the Power Apps portal, select **Settings** (gear), and then select **Advanced settings**. 
-2.	Select **Settings** > **Customizations** > **Publishers**. 
-3.	In the **Publisher Main View** command bar, select **New**. 
-4.	Enter the required information: 
+1.	In the Power Apps portal, select **Solutions**. 
+2.	On the command bar, select **New solution**, in the right pane select the **Publisher** drop down list, and then select **+ Publisher**. 
+    > [!div class="mx-imgBorder"] 
+    > <img src="media/create-new-pubisher.png" alt="Create a new publisher" height="738" width="400">
+3.	In the **New Publisher** form, enter the required and optional information: 
    - **Display Name**. Enter the display name for the publisher. 
    - **Name**. Enter the unique name for the publisher. 
    - **Prefix**. Enter the publisher prefix you want. 
    -	**Option Value Prefix**. This field generates a number based on the publisher prefix. This number is used when you add options to option sets and provides an indicator of which solution was used to add the option. 
    - **Contact Details**. Optionally, you can add contact and address information.
-5. Select **Save and Close**.
+4. Select **Save and Close**.
 
 ## Change a solution publisher
 You can change a solution publisher for an unmanaged solution by following these steps:
