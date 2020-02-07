@@ -19,7 +19,7 @@ We have compiled a list of frequently asked questions and provided brief answers
 
 ### Does Power Apps portals support TLS 1.2?
 
-Power Apps portals version 8.3 onwards supports [TLS 1.2](https://support.microsoft.com/help/4041984/portal-capabilities-for-microsoft-dynamics-365-version-8-3-2-85-releas).
+Power Apps portals version 8.3 and later supports [TLS 1.2](https://support.microsoft.com/help/4041984/portal-capabilities-for-microsoft-dynamics-365-version-8-3-2-85-releas).
 
 ### What is the difference between Power Apps portals, Dynamics 365 portals and add-on portals?
 
