@@ -56,6 +56,20 @@ Because all data types support *blank*, the **Boolean** and **Two option** data 
 
 All four of these data types are based on a [Unicode](https://en.wikipedia.org/wiki/Unicode) text string.
 
+### Embedded text
+
+Embedded text strings in a formula are enclosed in double quotation marks.  Use two double quotes together to represent a single double quote in the text string.  For example, using the following formula in the **OnSelect** property of a [**Button**](../controls/control-button.md) control:
+
+```powerapps-dot
+Notify( "Jane said ""Hello, World!""" )
+```
+
+results in:
+
+![pop up notification with the message Jane said "Hello, World"](media/data-types/literal-string.png)
+
+Single quotation marks are not used for [identifier names](operators.md#identifier-names) that contain special characters and have no significance within a text string.  
+
 ### Image and Media resources
 
 Through the **File** menu, you can add image, video, and audio files as app resources. The name of the imported file becomes the resource name in the app. In this graphic, the Northwind Traders logo, which is named **nwindlogo**, has been added to an app:
