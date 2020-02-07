@@ -46,32 +46,31 @@ You can also open primary field and lookup fields in a new tab or window.
    > [!div class="mx-imgBorder"]
    > ![Open in a new window](media/newtab.png "[Open in a new window")
    
-   
+<!--note from editor: This section is repeated later in the topic. Is that okay?-->   
 ### Known issue
 
-If you change the default display format for number, currency, time, or date and then filter data on a grid, the filter will not show your selected display format. The filters will still display in the system default format and in some cases filtering may not work at all. 
+If you change the default display format for number, currency, time, or date and then filter data on a grid, the filter won't show your selected display format. The filters will still be displayed in the system default format, and in some cases filtering might not work at all. 
 
 To fix the issue, set the display format for number, currency, time, and date back to the default setting. 
 
 1. In the upper-right corner, select the gear icon ![Gear icon](media/selection-rule-gear-button.png), and then select **Personalization Settings**.
 
-2. On the **Formats** tab change the number, currency, time, and date value back to the default setting.
+2. On the **Formats** tab, change the number, currency, time, and date value back to the default setting.
 
     > [!div class="mx-imgBorder"] 
-    > ![Format settings](media/default-format.png "format settings")
+    > ![Format settings](media/default-format.png "Format settings")
     
-    
-  We are working on the issue, please check back for availability. 
+We're working on this issue, please check back for availability.<!--note from editor: I don't know what "availability" means here. Can this say "please check back for information about the availability of a fix." or something similar?-->
 
 
 
 ## Preview: New grid filters and search option
 
-This section is for early-access features. You can opt in early to enable these features in your environment. This will allow you to test these features and then adopt them across your environments. For information on how to enable these features, see [Opt in to 2020 release wave 1 updates](https://docs.microsoft.com/power-platform/admin/opt-in-early-access-updates).
+This section is for early-access features. You can opt in early to enable these features in your environment. This will allow you to test these features and then adopt them across your environments. For information about how to enable these features, see [Opt in to 2020 release wave 1 updates](https://docs.microsoft.com/power-platform/admin/opt-in-early-access-updates).
 
 
    > [!NOTE]
-   > Do not change the default display format for time, number, currency, time, or date as this causes an issue. For more information, see [Known issue](https://docs.microsoft.com/powerapps/user/grid-filters#known-issue).
+   > Don't change the default display format for time, number, currency, time, or date, because this causes an issue. For more information, see [Known issue](https://docs.microsoft.com/powerapps/user/grid-filters#known-issue).
 
 ### Lookup field column
 
@@ -89,28 +88,28 @@ The robust **Date** filter includes many different values to choose from, such a
 
 ### Filter the list of activities
 
-You can filter the list of activities to see only the ones you’re interested in. For example, you can further limit the activities you are seeing in a view by using the activity type filter. The activity type filter allows you to filter activities based on the type, such as email, task, phone call, and so on.
+You can filter the list of activities to see only the ones you're interested in. For example, you can further limit the activities you are seeing in a view by using the activity type filter. The activity type filter allows you to filter activities based on the type, such as email, task, phone call, and so on.
 
 
    > [!div class="mx-imgBorder"]
    > ![Activities filter](media/activity_filter.png "Activities filter")
 
-
+<!--note from editor: If you do want to repeat this section, is it okay that the link in line 73 jumps back up to the first occurrence of the text? Also, is it intentional to have this heading be level 4 instead of 3 like the previous one was?-->
 #### Known issue
 
-If you change the default display format for number, currency, time, or date and then filter data on a grid, the filter will not show your selected display format. The filters will still display in the system default format and in some cases filtering may not work at all. 
+If you change the default display format for number, currency, time, or date and then filter data on a grid, the filter won't show your selected display format. The filters will still be displayed in the system default format, and in some cases filtering might not work at all. 
 
 To fix the issue, set the display format for number, currency, time, and date back to the default setting. 
 
 1. In the upper-right corner, select the gear icon ![Gear icon](media/selection-rule-gear-button.png), and then select **Personalization Settings**.
 
-2. On the **Formats** tab change the number, currency, time, and date value back to the default setting.
+2. On the **Formats** tab, change the number, currency, time, and date value back to the default setting.
 
     > [!div class="mx-imgBorder"] 
-    > ![Format settings](media/default-format.png "format settings")
+    > ![Format settings](media/default-format.png "Format settings")
     
     
-We are working on the issue, please check back for availability. 
+We're working on the issue, please check back for availability.<!--note from editor: I don't know what "availability" means here. Can this say "please check back for information about the availability of a fix." or something similar?-->
   
 ### Use search on a grid
 
