@@ -64,7 +64,7 @@ Embedded text strings in a formula are enclosed in double quotation marks.  Use 
 Notify( "Jane said ""Hello, World!""" )
 ```
 
-results in a banner when the button is pressed, where the first and last double quotes are omitted (as they delimit the text string) and the doubled double quotes around **Hello, World!** are replaced with a single double quote:
+results in a banner when the button is pressed, where the first and last double quotes are omitted (as they delimit the text string) and the repeated double quotes around **Hello, World!** are replaced with a single double quote:
 
 ![pop up notification with the message Jane said "Hello, World"](media/data-types/literal-string.png)
 
