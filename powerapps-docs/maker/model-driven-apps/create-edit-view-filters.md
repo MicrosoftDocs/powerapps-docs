@@ -29,8 +29,8 @@ search.app:
 # Create or edit filters in model-driven app views
 
 <a name="BKMK_CreateOrEditViewFilters"></a>   
-<!--SELF: Alt text needs fixing. Try to find UI examples re: "View properties". Also how to word "view entity"? Check with fellow eds re: "More commands"; style guide implies it should be "Select **More (...)** -->
-The filters in a Power Apps view are important to the value provided by the view. Which filters are applied determine which records appear in the list by default. You can add or edit a filter for the columns that you include in a view by selecting the column and selecting **Filter by**. You can also use the expression builder in the view designer. Use the expression builder to add or edit filters for any fields in the view entity or any fields in a related entity. 
+
+The filters in a Power Apps view are important to the value provided by the view. The filters you apply <!--note from editor: Edit suggested.-->determine which records appear in the list by default. You can add or edit a filter for the columns that you include in a view by selecting the column and selecting **Filter by**. You can also use the expression builder in the view designer. Use the expression builder to add or edit filters for any fields in the view entity<!--note from editor: Does this mean "entity in the current view"? I find "view entity" leads me down the wrong path, but maybe this won't be confusing for your readers.--> or any fields in a related entity. 
 
 In this topic, you create or edit filters by performing the following tasks:
 
@@ -47,7 +47,7 @@ In this topic, you create or edit filters by performing the following tasks:
 -   [Group conditions of a filter](create-edit-view-filters.md#group-conditions-of-a-filter)
 
 ## Edit or remove a filter condition
-<!--note from editor: In step 3, edit assumes "View properties" is in the UI. If it isn't, it should just be "view properties-->
+<!--note from editor: In these procedures, edits to "View properties" assumes that string is in the UI. If it isn't, it should just be "view properties", regular type.-->
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
 2. Expand **Data**, select **Entities**, select the entity that you want, and then select the **Views** tab.
@@ -60,7 +60,7 @@ In this topic, you create or edit filters by performing the following tasks:
 4. On the **View properties** panel, select a filter condition.
 
     > [!div class="mx-imgBorder"] 
-    > ![Edit filters](media/edit-filter-viewpanel.png)
+    > ![Edit filters](media/edit-filter-viewpanel.png "Edit filters")
 
 5. Select the conditional operator that you want to use.
 
@@ -75,7 +75,7 @@ In this topic, you create or edit filters by performing the following tasks:
 - On the **View properties** panel, select **Edit filters**.
 
     > [!div class="mx-imgBorder"] 
-    > ![Expression builder](media/edit-create-filters.png)
+    > ![Expression builder](media/edit-create-filters.png "Expression builder")
 
 ### Add conditions to a filter
 
@@ -90,7 +90,7 @@ In this topic, you create or edit filters by performing the following tasks:
     Some filter conditions don't require a comparison value for the condition. For example, the operator **Contains data** doesn't require a comparison value. With other filter conditions, you choose the comparison value from an option set. For example, the **Status** field has an option set that contains the values **Active** and **Inactive**.
 
     > [!div class="mx-imgBorder"] 
-    > ![Filter condition](media/add-condition-filter.png)
+    > ![Filter condition](media/add-condition-filter.png "Filter condition")
 
 5. Select **OK**.
 
@@ -107,15 +107,15 @@ In this topic, you create or edit filters by performing the following tasks:
 5. Specify the second clause of the grouped condition.
 
     > [!div class="mx-imgBorder"] 
-    > ![Group condition filter](media/add-group-filter.png)
+    > ![Group condition filter](media/add-group-filter.png "Group condition filter")
 
     You can select **Collapse** to display the group as a conditional expression.
 
 ### Add a related entity to a condition
-<!--note from editor: Edit in step 2 assumes these aren't UI strings (if they are, please make them bold). -->
+
 1. In the expression builder, select **Add** > **Add related entity**.
 
-2. Select a field from the related entity for the condition. You can select fields that have a many-to-one, one-to-many, or many-to-many relationship with the view entity.
+2. Select a field from the related entity <!--note from editor: Is something missing here? I'd expect you'd need to choose the related entity before you select one of its fields.-->for the condition. You can select fields that have a many-to-one, one-to-many, or many-to-many relationship with the view entity.<!--note from editor: I made these relationships regular type, but if they're literally in the UI they should be bold.-->
 
 3. Select a conditional operator.
 
@@ -125,15 +125,15 @@ In this topic, you create or edit filters by performing the following tasks:
     > ![Related entity filter](media/add-relatedentity-filter.png "Related entity filter")
 
 ### Group conditions of a filter
-
+<!--note from editor: Edit assumes the tooltip for the ellipsis is "More commands."-->
 1. In the expression builder, select the check box for the conditions that you want to group.
 
-2. Select the More commands menu for one of the conditions, and select **Make group**.
+2. Select **More commands** (...) for one of the conditions, and then select **Make group**.
 
-3. To ungroup a group, select More commands menu for the group, and select **Ungroup**
+3. To ungroup a group, select **More commands** (...) for the group, and then select **Ungroup**
 
     > [!div class="mx-imgBorder"] 
-    > ![Grouped condition filter](media/group-conditions-filter.png)
+    > ![Grouped condition filter](media/group-conditions-filter.png "Grouped condition filter")
 
 ### Next steps
 [Choose and configure columns](choose-and-configure-columns.md)  
