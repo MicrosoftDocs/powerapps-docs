@@ -56,7 +56,8 @@ There are a number of standard connection roles already configured in Common Dat
 In this view you can see all the connection roles that are available for this environment and you can edit them here.
 
 > [!NOTE]
-> If you want to distribute connection roles with a solution, make sure they are included in the solution you want to distribute. More information: [Add connection roles to a solution](#add-connection-roles-to-a-solution)
+> If you want to distribute connection roles with a solution, make sure they are included in the solution you want to distribute. The connection role state is not included with the connection role when it is added to a solution. Therefore, when the solution is imported into a target organization, the status will be set to active by default.
+More information: [Add connection roles to a solution](#add-connection-roles-to-a-solution)
 
 ## View connection roles in the solution explorer.
 
