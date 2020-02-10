@@ -184,12 +184,12 @@ Canvas apps use the included time-zone information in **Datetimeoffset** fields 
 Canvas apps read and write values of the [**Time**](https://docs.microsoft.com/sql/t-sql/data-types/time-transact-sql) data type in SQL Server as text strings in the [ISO 8601 duration format](https://en.wikipedia.org/wiki/ISO_8601#Durations). For example, you must parse this string format and use the [**Time**](function-date-time.md) function to convert the text string **"PT2H1M39S"** to a **Time** value:
 
 ```powerapps-dot
-First(
-    ForAll(
-        MatchAll( "PT2H1M39S", "PT(?:(?<hours>\d+)H)?(?:(?<minutes>\d+)M)?(?:(?<seconds>\d+)S)?" ),
-        Time( Value( hours ), Value( minutes ), Value( seconds ) )
-    )
-).Value
+With( 
+    Match( "PT2H1M39S", "PT(?:(?<hours>\d+)H)?(?:(?<minutes>\d+)M)?(?:(?<seconds>\d+)S)?" ),
+    Time( Value( hours ), Value( minutes ), Value( seconds ) )
+)
+// Result: 2:01 AM (as shown in a label control, use the Text function to see the seconds)
+
 ```
 
 ### Mixing date and time information
