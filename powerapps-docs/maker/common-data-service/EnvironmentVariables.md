@@ -38,7 +38,7 @@ Benefits of using environment variables:
 ## How do they work?
 Environment variables can be created and managed through the modern solution interface or by [using code](https://docs.microsoft.com/powerapps/developer/common-data-service/work-with-data-cds). A separate JSON file is created within your solution package for the values, which can also be managed in source control and modified in a build pipeline. Export to and import from Excel is supported. After creating environment variables, you can use them as inputs within plug-ins, flows, and other components. 
 
-### Create an environment variable
+### Create an environment variable in Power Apps
 1. Sign in to Power Apps, and then on the left panes select **Solutions**. 
 2. On the command bar, select **New** and then select **Environment variable**. 
 3. On the left pane, complete the **Name** and **Data Type** fields and then select **Save**. 
