@@ -1,13 +1,13 @@
 ---
 title: "getGlobalContext.organizationSettings (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
+ms.date: 02/06/2020
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: badf4f82-cb47-4864-aa43-bb777d04de4d
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "amyla"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
@@ -42,6 +42,8 @@ Returns attributes and their values as `key:value` pairs that are available for 
 
 Returns the ID of the base currency for the current organization.
 
+Deprecated; use [organizationSettings.baseCurrency](#basecurrency) instead to access the display name along with the ID of the base currency.
+
 ### Syntax
 
 `organizationSettings.baseCurrencyId`
@@ -50,7 +52,23 @@ Returns the ID of the base currency for the current organization.
 
 **Type**: String
 
-**Description**: ID of the base currency.
+**Description**: ID of the base currency. 
+
+## baseCurrency 
+
+Returns a lookup object containing the ID, name, and entity type of the base currency for the current organization.
+
+### Syntax
+
+`organizationSettings.baseCurrency`
+ 
+### Return Value
+
+**Type**: Lookup Object
+
+**Description**: Object containing the `id`, `name`, and `entityType` of the base currency. For example:
+
+`{id: "e7dd9bc6-d239-ea11-a813-000d3a35b14a", entityType: "transactioncurrency", name: "US Dollar"}`
 
 ## defaultCountryCode 
 

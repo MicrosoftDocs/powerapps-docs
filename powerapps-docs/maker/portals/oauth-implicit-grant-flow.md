@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/07/2019
+ms.date: 01/24/2020
 ms.author: tapanm
 ms.reviewer:
 ---
@@ -16,6 +16,14 @@ ms.reviewer:
 This feature allows a customer to make client-side calls to external APIs and secure them by using OAuth implicit grant flow. It provides an endpoint to obtain secure access tokens that will contain user identity information to be used by external APIs for authorization following OAuth 2.0 implicit grant flow. The identity information of a signed-in user is passed in a secured manner to the external AJAX calls. This will not only help developers to pass authentication context but will also help users to secure their APIs by using this mechanism.
 
 OAuth 2.0 implicit grant flow supports endpoints that a client can call to get an ID token. Two endpoints are used for this purpose: [authorize](#authorize-endpoint-details) and [token](#token-endpoint-details).
+
+> [!NOTE]
+> Power Apps portals supports following OpenIdConnect flows and response types:
+>
+> - **Implicit Flow** with response types *id_token* or *id_token token*.
+> - **Hybrid Flow** with response type *code id_token*.
+>
+> **Authorization Code Flow** with response type *code* is **not supported**. For more information, read [OpenID Connect](https://openid.net/specs/openid-connect-core-1_0.html#Authentication) documentation for authentication.
 
 ## Authorize endpoint details 
 

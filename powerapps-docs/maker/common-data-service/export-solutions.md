@@ -2,7 +2,7 @@
 title: "Export solutions | MicrosoftDocs"
 description: "Learn how to export a solution in Power Apps"
 ms.custom: ""
-ms.date: 09/30/2019
+ms.date: 01/30/2020
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -29,18 +29,26 @@ search.app:
 > [!IMPORTANT]
 > Exporting the Default Solution is not supported. 
 
-### Export from Power Apps
+## Export from Power Apps
   
-1.  Select **Solutions** from the left navigation.   
+1.  Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select **Solutions** from the left navigation.   
   
-2.  In the list, select the solution you want to export and then select **Export**. 
+2.  In the list of solutions, select the unmanaged solution you want to export, and then select **Export**. Notice that you can't export managed solutions. 
 
-3.  Select the package type **As unmanaged** or **As managed**. This will start your export, which can take several minutes to complete. Once finished, the export .zip file is available in the download folder specified by your web browser.
+3. The **Before you export** right pane appears. Choose from the following options, and then select **Next**:  
+    - **Publish all changes**. Solution components must be published  before they can be exported. 
+    - **Check for issues**. Run the solution checker against the solution to detect performance and stability issues.
 
-    > [!div class="mx-imgBorder"]  
-    > ![Export solution](media/solution-export.png "Export solution") 
+4.  The **Export this solution** right pane appears. Enter or select from the following options, and then select **Export**:  
+    - **Version number**: Power Apps automatically increments your solution version while displaying the current version. You can accept the default version or enter your own. 
+    - **Export as**: Select the package type, either **Managed** or **Unmanaged**. 
 
-### Export from the classic experience
+   <!-- UI has changed  [!div class="mx-imgBorder"]  
+    > ![Export solution](media/solution-export.png "Export solution")  -->
+
+The export can take several minutes to complete. Once finished, the export .zip file is available in the download folder specified by your web browser.
+
+## Export from the classic experience
 
 1.  Select **Solutions** from the left navigation and then select **Switch to classic**. 
   
@@ -64,7 +72,7 @@ search.app:
 
 <a name="BKMK_SettingsOptionsOnSolutionExport"></a>  
  
-## Settings options for solution export  
+### Settings options for solution export  
  If you export the solution from Power Apps, please disregard this section. The following table shows the options available when you export a solution from the classic experience.  
   
 |Group|Setting|Description|  
@@ -115,7 +123,7 @@ search.app:
 |Auto-Tag Interval|Normal polling frequency used for email auto-tagging in Outlook.|  
 |ISV Config|Service Calendar Appearance Configuration|You can define visual styles for service calendars.
 
-More information:   [Service Calendar Appearance Configuration](https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-dev/service-calendar-appearance-configuration)|
+More information:   [Service Calendar Appearance Configuration](https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-dev/service-calendar-appearance-configuration)
 
 ### See also
 [Import solutions](import-update-export-solutions.md) <br />

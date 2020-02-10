@@ -86,7 +86,7 @@ At this time, you can use lookup columns only with SharePoint and Common Data Se
 
      ![A canvas screen with a form control. The Combo box control within the Primary Contact card is selected, and the Items property with the formula Choices( Accounts.'Primary Contact' ) appears](media/function-choices/accounts-primary-contact.png)
 
-1. On the **Home** tab, select **New screen**, and then select **Blank**.
+1. For illustration purposes, we can view the complete table returned by the **Choices** function in a **Data table** control.  On the **Home** tab, select **New screen**, and then select **Blank**.
 
 1. On the **Insert** tab, select **Data table**.
 

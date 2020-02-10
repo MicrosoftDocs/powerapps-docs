@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 01/17/2020
+ms.date: 02/03/2020
 ms.author: tapanm
 ms.reviewer: 
 ---
@@ -16,6 +16,10 @@ ms.reviewer:
 We have compiled a list of frequently asked questions and provided brief answers to help you get to your information quickly.
 
 ## General
+
+### Does Power Apps portals support TLS 1.2?
+
+Power Apps portals version 8.3 and later supports [TLS 1.2](https://support.microsoft.com/help/4041984/portal-capabilities-for-microsoft-dynamics-365-version-8-3-2-85-releas).
 
 ### What is the difference between Power Apps portals, Dynamics 365 portals and add-on portals?
 
@@ -222,6 +226,15 @@ It is advisable to use this only when you are developing a portal. Once your por
 When you enable diagnostic logging, you can search for particular errors that users report by using the Activity ID shown on the generic error page. The Activity ID is logged along with the error details and is useful to find the actual issue.
 
 ## Portal administration and management
+
+### Do portals use any static content from CDNs (Content Delivery Network) that I need to whitelist?
+
+Yes. Power Apps portals uses out of the box portal's static assets from Azure CDN that includes default JavaScript and CSS files for presentation that earlier rendered as part of the portal app. You must whitelist the following CDN URL to render portals successfully:
+
+    https://content.powerapps.com/resource/powerappsportal
+
+> [!NOTE]
+> Power Apps portals hosted in Microsoft Government Cloud do not use CDN.
 
 ### How do I use a custom login provider on my portal?
 

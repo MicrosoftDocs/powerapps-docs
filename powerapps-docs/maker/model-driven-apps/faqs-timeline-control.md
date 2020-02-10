@@ -1,7 +1,7 @@
 ---
 title: "FAQs for timeline control (section) in Power Apps | MicrosoftDocs"
 description: "FAQs for timeline control (section) in Power Apps"
-ms.date: 12/23/2019
+ms.date: 02/03/2020
 ms.service: powerapps
 author: "kabala123"
 ms.assetid: 7F495EE1-1208-49DA-9B02-17855CEB2FDF
@@ -88,6 +88,11 @@ If you use the **HideCustomActions** rule to hide buttons, such as **Assign** an
 **You do not have permission to perform this action. Please contact your system administrator.**
 
 To mitigate the issue, unhide the buttons in the command bar definitions.
+
+
+## Why my users see different activities and records in their My activities stream in the dashboard?
+
+**My activities** stream in the dashboard shows the records and activities that are owned by a particular user. For example, user **A** see records and activities that are owned by **A**, and user **B** see records and activities that are owned by **B**.
 
 ## See also
 
