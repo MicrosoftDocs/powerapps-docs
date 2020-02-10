@@ -71,6 +71,7 @@ Both the environmentvariabledefinition and environmentvariablevalue entities are
 - If using Excel to import environment variables, be sure to pre-pend the publisher prefix to the SchemaName.
 
 ### See also
+[Power Apps Blog: Environment variables available in preview!](https://powerapps.microsoft.com/blog/environment-variables-available-in-preview/)
 [Use plug-ins to extend business processes](https://docs.microsoft.com/powerapps/developer/common-data-service/plug-ins) </BR>
 [Web API samples](https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/web-api-samples) </BR>
 [Create Canvas app from scratch using Common Data Service.](https://docs.microsoft.com/powerapps/maker/canvas-apps/data-platform-create-app-scratch) </BR>
