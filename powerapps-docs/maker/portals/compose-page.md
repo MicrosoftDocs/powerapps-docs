@@ -1,14 +1,14 @@
 ---
 title: Compose webpages | Microsoft Docs
 description: Instructions to compose webpages in portal.
-author: sbmjais
-manager: shujoshi
+author: tapanm-msft
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/07/2019
-ms.author: shjais
-ms.reviewer:
+ms.date: 01/10/2020
+ms.author: tapanm
+ms.reviewer: tapanm
 ---
 
 # Compose a page
@@ -192,13 +192,16 @@ You can add the following components on a webpage:
 
     - **Height**: Enter the height of the IFrame.
 
-    - **Link**: Enter the URL of the website to be displayed in the IFrame. Only secured links are accepted—that is, https:// is mandatory. By default, <https://www.bing.com> is available as the value.
+        > [!NOTE]
+        > You can also select the IFrame on the canvas and drag the handles to resize it.
 
+    - **Link**: Enter the URL of the website to be displayed in the IFrame. Only secured links are accepted—that is, https:// is mandatory. By default, <https://www.bing.com> is available as the value.
+    
         > [!div class=mx-imgBorder]
         > ![iframe properties](media/iframe-props.png "IFrame properties")  
 
-    > [!NOTE]
-    > You can also select the IFrame on the canvas and drag the handles to resize it.
+> [!NOTE]
+> You can also add [Power Virtual Agent](https://docs.microsoft.com/power-virtual-agents/fundamentals-what-is-power-virtual-agents) bot to the  IFrame similarly using steps described in [add bot to your web site](https://docs.microsoft.com/power-virtual-agents/publication-connect-bot-to-web-channels#custom-website).
 
 ### Add form
 

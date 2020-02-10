@@ -17,9 +17,9 @@ search.app:
 ---
 # Sample: Retrieve valid status transitions
 
- This sample shows how to retrieve valid state transitions regardless of whether custom state transitions have been defined for the entity. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/RetrieveValidTransitions).
+This sample shows how to retrieve valid state transitions regardless of whether custom state transitions have been defined for the entity. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/RetrieveValidTransitions).
  
- ## How to run this sample
+## How to run this sample
 
 [!include[cc-how-to-run-samples](../../includes/cc-how-to-run-samples.md)]
 
@@ -37,6 +37,7 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 1. The `MetadataFilterExpression` method checks for the entity metadata.
 
 ### Demonstrate
+
 1. The `MetadataFilterExpression` method retrieves the status options for the `Incident` entity.
 1. The `RetrieveMetadataChangeRequest` method retrieves the metadata.
 1. The `GetValidStatusOptions` method gets the valid status transitions for each status option.

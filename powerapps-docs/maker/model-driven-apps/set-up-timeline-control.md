@@ -1,7 +1,7 @@
 ---
 title: "Set up the timeline control (section) in PowerApps | MicrosoftDocs"
 description: "Learn how to set up the timeline control (section) in PowerApps"
-ms.date: 12/23/2019
+ms.date: 02/03/2020
 ms.service: powerapps
 author: "kabala123"
 ms.assetid: 7F495EE1-1208-49DA-9B02-17855CEB2FDF
@@ -19,7 +19,16 @@ search.app:
 The activities that you use in Timeline to keep track of all your communications with a customer or contact can be customized according to your business or organization requirements.
 
   > [!div class="mx-imgBorder"]
-  > ![Timeline view of activities in PowerApps](../../user/media/TimelineViewOfActivity.png "Timeline view of activities in PowerApps")  
+  > ![Timeline view of activities in PowerApps](../../user/media/TimelineViewOfActivity.png "Timeline view of activities in PowerApps")
+
+  1. Search Records
+  2. Take notes
+  3. Add info and activities
+  4. Filter
+  5. More commands
+  6. Activity status
+  7. Activity icons
+  8. Date and time
 
 To learn more, see [Add an appointment, email, phone call, note, or task activity to the timeline](../../user/add-activities.md).
 
@@ -63,7 +72,7 @@ The modules are Activities, Posts, and Notes. As a customizer, you can choose wh
 
 8.	Select the **Show selected** option for the **Show these modules** field in the **Filter by** container.
 
-9.	Select the modules you want to display to the users.
+9.	Select the modules you want to display to the users. Select only the modules that are required by your organization.
 
 10.	Specify the following in the **Additional Options** container.
 
@@ -73,7 +82,7 @@ The modules are Activities, Posts, and Notes. As a customizer, you can choose wh
     | Default Module for Create Experience | Select the module for which you want the default create experience in the timeline. <br><br> The default value is **Notes**.  | Notes |
     | Show filter pane | Select the checkbox if you want to display the filter icon for the users. If you leave the check box empty, there will be no filters for the users. |  |
     | Expand filter pane by default | Select the checkbox, by default, if you want to show the filter pane in the expanded mode. |
-    | Sort | Select the sorting order based on which the records are displayed on the timeline. The sorting is based on the field you choose for Activities. If a field doesn’t exist for the Post, Notes, or Activity, then the sorting is done based on the **Last Updated** field. <br><br>The default sort order is **Descending**.  | Descending |
+    | Sort | Select the sorting order based on which the records are displayed on the timeline. The sorting is based on the field you choose for Activities. If a field doesn’t exist for the Post, Notes, or Activity, then the sorting is done based on the **Last Updated** field. <br><br> The default sort order is **Descending**.  <br><br> **Note:** changing the sort order will not change the time property visualized in the timeline control. To customize the timeline card form see, [Customize the card form](#customize-the-card-form).  | Descending |
     | Number of results | The maximum number of records that are displayed on the timeline before selecting the **More** option. Each time you select the **More** option, the timeline displays the configured number of records. You can configure a value ranging from 1 to 50. <br><br> The default value is **10**. | 10 |
 
     > [!div class=mx-imgBorder] 
@@ -85,7 +94,7 @@ The modules are Activities, Posts, and Notes. As a customizer, you can choose wh
 
 ## Customize activity
 
-As a customizer, you can choose which entities that you want to show activities to users as per your business requirements.
+As a customizer, you can choose which entities you want to show activities to users as per your business requirements. For a better performance, select only the activities that are specific to business, and unselect the activities that aren't used.
 
 1.	Sign in to your `https://<YourOrgURL>.dynamics.com/apps` environment.
 
@@ -153,6 +162,8 @@ Since the example considered in this procedure is **Account**, let us see the **
    1. Email from \<Owner\>
    2. Subject
    3. Description
+   4. Activity status
+   5. Date and time
 
 After modifying the **Email card** form (from the **Email** entity) and updating the options in the **Account for Interactive experience** form in the **Account** entity, you can view see the changes.
 
@@ -171,6 +182,7 @@ After modifying the **Email card** form (from the **Email** entity) and updating
    1. Owner \<Name\>
    2. Priority
    3. Description
+   4. Activity status
 
 Default string for the activities are as follows:
 
@@ -186,14 +198,20 @@ Default string for the activities are as follows:
 
 ## Customize field sections
 
-In the timeline section, users see a card for each activity (based on the enabled activities). Each card displays certain fields in the collapsed and expanded mode. For example, see **Email** activity card in collapsed mode and expanded mode. 
+In the timeline section, users see a card for each activity (based on the enabled activities). Each card displays certain fields in the collapsed and expanded mode. For example, see **Email** activity card in collapsed mode, hover mode, and expanded mode. 
 
-Email card collapsed mode:
+**Email card collapsed mode**: By default, the activity cards are in collapsed mode.
+
 
    > [!div class=mx-imgBorder] 
    > ![Timeline card in collapsed mode](media/email.png "Timeline card in collapsed mode")
 
-Timeline card expanded mode:
+**Email card hover mode**: When you hover your cursor, you can see few commands that are specific to each of the activity card types.
+
+   > [!div class=mx-imgBorder] 
+   > ![Timeline card in collapsed mode](media/email-hover.png "Timeline card in collapsed mode")
+
+**Timeline card expanded mode**: When you select on card, it gets expanded with few commands that are specific to each of the activity card types.
 
    > [!div class=mx-imgBorder] 
    > ![Timeline card in expanded mode](media/email-expanded.png "Timeline card in expanded mode")
@@ -225,9 +243,16 @@ Fields **1** and **2** from the **Header** section and Fields **3** and **4** fr
    > [!div class=mx-imgBorder] 
    > ![Email card in collapsed mode](media/email-card-collapsed.png "Email card in collapsed mode")
 
+**Email card hover mode**
+
+Fields **1** and **2** from the **Header** section and Fields **3** and **4** from the **Details** section are displayed in the hover mode.
+
+   > [!div class=mx-imgBorder] 
+   > ![Email card in collapsed mode](media/email-card-hover.png "Email card in collapsed mode")
+
 **Email card expanded mode**
 
-Field **5** from the **Details** section is displayed in the collapsed mode.
+Field **5** from the **Details** section is displayed in the expanded mode.
 
    > [!div class=mx-imgBorder] 
    > ![Email card in expanded mode](media/email-card-expanded.png "Email card in expanded mode")
@@ -242,9 +267,9 @@ To customize the card form, follow these steps:
 
 4.	Expand **Entities** under **Components** in the default solution pane.
 
-5.	Select an entity and select **Forms**. For example, select the **Task** entity.
+5.	Select an entity and select **Forms**. For example, select the **Email** entity.
 
-6.	Select the **Task Card form** record from the list. The **Task Card form** opens in a new browser window.
+6.	Select the **Email Card form** record from the list. The **Email Card form** opens in a new browser window.
 
 7.  Add, move, or delete the fields. To learn more, see [Add, configure, move, or delete fields on a form](add-move-or-delete-fields-on-form.md).
 
@@ -378,7 +403,7 @@ When you’ve custom activities that you want to show for users using mobile, th
 
 1.	Sign in to your `https://<YourOrgURL>.dynamics.com/apps` environment.
 
-2.  Open a model-driven app, and then on the command bar select **Settings** ![Settings](../model-driven-apps/media/powerapps-gear.png) > **Advanced  Settings**.
+2. Open a model-driven app, and then on the command bar select **Settings** ![Settings](../model-driven-apps/media/powerapps-gear.png) > **Advanced  Settings**.
 
 3.	Go to **Settings** > **Customization** > **Customize the System**. The solution explorer page opens in a new browser window.  
 
@@ -402,6 +427,25 @@ Follow the Steps 1-8 described in the [Customize modules](#customize-modules) se
 
    > [!div class=mx-imgBorder] 
    > ![Select Timeline modules to display](media/timeline-activity.png "Select Timeline modules to display")
+
+## Enable or disable rich-text editor for notes in timeline
+
+Rich-text editor enables users to create rich and well-formatted content for the notes with emphasis. The editor brings common word processor features. To learn more, see [Take notes](https://docs.microsoft.com/dynamics365/customer-service/customer-service-hub-user-guide-basics#take-a-note).
+
+The feature is enabled by default. If you want to disable and enable later for your users, follow the steps:
+
+1.	Sign in to your `https://<YourOrgURL>.dynamics.com/apps` environment.
+
+2. Open a model-driven app, and then on the command bar select **Settings** ![Settings](../model-driven-apps/media/powerapps-gear.png) > **Administration** > **System Settings**.
+
+3. In the **System Settings** dialog, under the **General** tab, scroll down and select or unselect the check box for the **Use rich text to make it easier to format notes created in Timeline.** field.
+
+4. Select **OK**.
+
+    > [!div class=mx-imgBorder] 
+    > ![Enable rich-text editor](media/timeline-note-enable-rich-text-editor.png "Enable rich-text editor")
+
+The rich-text editor is enabled or disabled for your users based on the check box selection. 
 
 ## See also
 

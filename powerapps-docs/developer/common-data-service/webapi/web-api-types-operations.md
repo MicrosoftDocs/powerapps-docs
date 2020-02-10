@@ -250,7 +250,7 @@ OData supports a wide range of data types but Common Data Service doesn’t use 
 |ManagedProperty|Not applicable|For internal use only.|  
 |Memo|Edm.String|Sequence of UTF-8 characters|  
 |Money|Edm.Decimal|Numeric values with fixed precision and scale|  
-|Owner|Single-valued navigation property|A reference to the <xref href="Microsoft.Dynamics.CRM.principal?text=principal EntityType" />. Both systemuser and team entity types inherit their ownerid property from the prinicipal entity type.|  
+|Owner|Single-valued navigation property|A reference to the <xref href="Microsoft.Dynamics.CRM.principal?text=principal EntityType" />. Both systemuser and team entity types inherit their ownerid property from the principal entity type.|  
 |Picklist|Edm.Int32|Signed 32-bit integer|  
 |State|Edm.Int32|Signed 32-bit integer|  
 |Status|Edm.Int32|Signed 32-bit integer|  
@@ -338,7 +338,7 @@ An ordinary intersect entity has only the four basic properties required to main
 
 *Complex types* are keyless named structured types consisting of a set of properties. Complex types are commonly used as property values in model entities, or as parameters or return values for operations.  
   
-<xref:Microsoft.Dynamics.CRM.ComplexTypeIndex> lists all the system complex types. *Complex types* are keyless named structured types consisting of a set of properties. They’re commonly used as property values in model entities, or as parameters or return values for operations. The following is the <xref href="Microsoft.Dynamics.CRM.WhoAmIResponse?text=WhoAmIResponse ComplexType" /> from the $metadata.  
+<xref:Microsoft.Dynamics.CRM.ComplexTypeIndex> lists all the system complex types. The following is the <xref href="Microsoft.Dynamics.CRM.WhoAmIResponse?text=WhoAmIResponse ComplexType" /> from the $metadata.  
   
 ```xml  
 <ComplexType Name="WhoAmIResponse">  

@@ -1,6 +1,6 @@
 ---
 title: "Sample: Convert fax to ask (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Sample that showcases how to convert a faxt into a task " # 115-145 characters including spaces. This abstract displays in the search result.
+description: "Sample that showcases how to convert a fax into a task " # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
@@ -51,4 +51,5 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 
 ### Clean up
 
-Displays an option to delete all the data created in the sample. The deletion is optional in case you want to examine the data created by the sample. You can manually delete the data to achieve same results.
+1. Displays an option to delete all the data created in the sample.
+2. The deletion is optional in case you want to examine the data created by the sample. You can manually delete the data to achieve same results.

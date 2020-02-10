@@ -31,8 +31,10 @@
       href: ../user/unified-interface.md
     - name: Navigation and basics      
       items:
-      - name: Overview
+      - name: Basic navigation
         href: ../user/navigation.md
+      - name: Use grid filters
+        href: ../user/grid-filters.md
       - name: View your profile
         href: ../user/view-your-user-profile.md
       - name: Find your admin or support person
@@ -43,15 +45,20 @@
         href: ../user/screen-reader.md
       - name: Keyboard shortcuts
         href: ../user/keyboard-shortcuts.md
-    - name: Work with records
+    - name: Work with records and activities
       items:
       - name: Create a record
         href: ../user/create-a-record.md
       - name: Add activities to the timeline
         href: ../user/add-activities.md
-        items:
-        - name: FAQ about activities
-          href: ../user/faq-for-timeline-and-activity.md
+      - name: FAQ about activities
+        href: ../user/faq-for-timeline-and-activity.md
+      - name: View and create email through the Activities grid
+        href: ../user/view-create-email.md
+      - name: Send email using the enhanced email experience
+        href: ../user/enhanced-email.md
+      - name: Insert an email template
+        href: ../user/insert-email-template.md
       - name: Use the lookup field on a record
         href: ../user/lookup-field.md
       - name: View a profile card
@@ -72,12 +79,14 @@
         href: ../user/collaborate-using-sharepoint.md        
     - name: Search records
       items:
-      - name: Compare search and find options
-        href: ../user/search-and-find.md
-      - name: Search for records
-        href: ../user/search-records.md
-      - name: Use advanced find
-        href: ../user/create-edit-or-save-advanced-find-search.md
+      - name: Compare search options
+        href: ../user/search.md
+      - name: Relevance Search
+        href: ../user/relevance-search.md
+      - name: Quick Find
+        href: ../user/quick-find.md
+      - name: Advanced Find
+        href: ../user/advanced-find.md
     - name: Import and export data
       items:
       - name: Import data
@@ -352,6 +361,8 @@
               href: ./canvas-apps/controls/control-shapes-icons.md
             - name: Slider
               href: ./canvas-apps/controls/control-slider.md
+            - name: Stream Video
+              href: ./canvas-apps/controls/control-stream-video.md
             - name: Label
               href: ./canvas-apps/controls/control-text-box.md
             - name: Text input
@@ -418,6 +429,8 @@
             href: ./canvas-apps/functions/object-app.md
           - name: Asin
             href: ./canvas-apps/functions/function-trig.md
+          - name: Assert
+            href: ./canvas-apps/functions/function-assert.md
           - name: AsType
             href: ./canvas-apps/functions/function-astype-istype.md
           - name: Atan
@@ -660,6 +673,8 @@
             href: ./canvas-apps/functions/function-set.md
           - name: SetFocus
             href: ./canvas-apps/functions/function-setfocus.md
+          - name: SetProperty
+            href: ./canvas-apps/functions/function-setproperty.md
           - name: ShowColumns
             href: ./canvas-apps/functions/function-table-shaping.md
           - name: Shuffle
@@ -700,6 +715,8 @@
             href: ./canvas-apps/functions/function-dateadd-datediff.md
           - name: Today
             href: ./canvas-apps/functions/function-now-today-istoday.md
+          - name: Trace
+            href: ./canvas-apps/functions/function-trace.md
           - name: Trim
             href: ./canvas-apps/functions/function-trim.md
           - name: TrimEnds
@@ -792,6 +809,12 @@
           href: ./canvas-apps/set-aspect-ratio-portrait-landscape.md
         - name: Create responsive layout
           href: ./canvas-apps/create-responsive-layout.md
+  - name: Test an app with Test Studio
+    items:
+    - name: Test Studio Overview
+      href: ./canvas-apps/test-studio.md
+    - name: Working with Test Studio
+      href: ./canvas-apps/working-with-test-studio.md
   - name: Customize a SharePoint list form
     items:
       - name: Make basic changes
@@ -1496,7 +1519,7 @@
       href: ./common-data-service/use-solutions-for-your-customizations.md
     - name: Import solutions
       href: ./common-data-service/import-update-export-solutions.md
-    - name: Update solutions
+    - name: Update or upgrade solutions
       href: ./common-data-service/update-solutions.md
     - name: Export solutions
       href: ./common-data-service/export-solutions.md      
@@ -1516,7 +1539,7 @@
       href: ./common-data-service/common-issues-resolutions-solution-checker.md
     - name: Use segmented solutions
       href: ./common-data-service/use-segmented-solutions-patches-simplify-updates.md
-    - name: Change the solution publisher prefix
+    - name: Solution publisher overview
       href: ./common-data-service/change-solution-publisher-prefix.md
     - name: Set managed properties in metadata
       href: ./common-data-service/set-managed-properties-metadata.md
@@ -1548,8 +1571,10 @@
     href: ./common-data-service/data-platform-powerbi-connector.md
   - name: Translate customized entity and field text
     href: ./common-data-service/export-customized-entity-field-text-translation.md
-  - name: Import translated entity and field text into an app
+  - name: Import translated entity and field text
     href: ./common-data-service/import-translated-entity-field-text.md
+  - name: Export to data lake
+    href: ./common-data-service/export-to-data-lake.md    
   - name: Security in Common Data Service
     href: /power-platform/admin/wp-security
   - name: API limits overview

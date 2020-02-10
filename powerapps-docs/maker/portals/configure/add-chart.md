@@ -1,13 +1,13 @@
 ---
 title: "Add a chart to a webpage in a portal | MicrosoftDocs"
 description: "Instructions to add a chart created in a model-driven app to a webpage in the portal."
-author: sbmjais
-manager: shujoshi
+author: tapanm-msft
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/04/2019
-ms.author: shjais
+ms.date: 01/29/2020
+ms.author: tapanm
 ms.reviewer:
 ---
 
@@ -47,21 +47,20 @@ You can also specify the ID of a view (saved query) to filter the query. For exa
 
 You must open the view editor to get the view ID to be used with the Liquid chart tag.
  
-1.	Go to the target entity, for example, **Sales** > **Leads**.
-2.	Select the view you want from the view drop-down header.
-3.	Select **View** from the toolbar. The View window opens.
+1. Go to make.powerapps.com and select the appropriate environment.
+1. In the left navigation bar, select Data > Entities.
+1. Select the appropriate entity and go to 'Views' tab.
+1. You can see the list of views. Go to options (...) and select 'Edit View'.
+1. Copy the id value from the View window's address bar.
 
-    ![View the leads in the view editor](../media/dynamics365-chart-view.png "View the leads in the view editor")
+    ![View ID of the form](../media/dynamics365-chart-viewid.png)
 
-4. Copy the **id** value from the View window's URL.
+1. Paste this ID into your Liquid chart tag declaration for the viewid parameter, for example:
 
-    ![Get view id from the view editor](../media/dynamics365-chart-viewid.png "Get the view ID from the view editor")
-
-5. Paste this ID into your Liquid chart tag declaration for the viewid parameter, for example:
-
+    ```
     <!—Leads by Source – Open Leads -->
-
-    {% chart id:"EE3C733D-5693-DE11-97D4-00155DA3B01E" viewid:"00000000-0000-0000-00AA-000010001006" %}
+    {% chart id:"EE3C733D-5693-DE11-97D4-00155DA3B01E" viewid:"00000000-0000-0000-00AA-000010001004" %}
+    ```
 
 ## Entity permission requirement
 
