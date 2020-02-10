@@ -41,19 +41,17 @@ Environment variables can be created and managed through the modern solution int
 ### Create an environment variable in Power Apps
 1. Sign in to Power Apps, and then on the left panes select **Solutions**. 
 2. On the command bar, select **New** and then select **Environment variable**. 
-3. On the left pane, complete the **Name** and **Data Type** fields and then select **Save**. 
+3. On the left pane, complete the following fields, and then select **Save**:  
+   - **Display name**. Enter a name for the environment variable. 
+   - **Name**. The unique name is automatically generated from the **Display name**, but you can change it. 
+   - **Data Type**. Select from **Decimal number**, **Text**, **JSON**, or a **Two option** field. 
+   - **Default Value**. This field is part of the environment variable definition entity and is not required. Set a default value for the production environments or when the values don't need to be changed for different environments. 
+   - **Current Value**. Also known as the override value. This field is optional and is a part of the environment variable value entity. Set the value when you'd like to override the default value in your current environment. Remove the value from your solution if you don't want to use it in the next environment. The values are also separated into a separate JSON file within the solution.zip file that is exported. 
 
+      Separation of default value and current value allows you to service the definition and the default value separately from the current value. It also allows us to extend the functionality in the future to support multiple values scoped to a specific run time context.
 
-## Default value
-This field is part of the environment variable definition entity and is not required. Set a default value for the production environments or when the values don't need to be changed for different environments.
-
-## Value
-Also known as the current value or the override value, this field is optional and is a part of the environment variable value entity. Set the value when you'd like to override the default value in your current environment. Remove the value from your solution if you don't want to use it in the next environment. The values are also separated into a separate JSON file within the solution.zip file that is exported. 
-
->[!NOTE]
-> A value can't exist without a definition. The interface only allows creation of one value per definition. 
-
-Separation of default value and current value allows you to service the definition and the default value separately from the current value. It also allows us to extend the functionality in the future to support multiple values scoped to a specific run time context.
+      >[!NOTE]
+      > A value can't exist without a definition. The interface only allows creation of one value per definition. 
 
 ## Notifications
 A notification is displayed when the environment variables do not have any values. This is a reminder to set the values so that components dependent on variables do not fail. It also allows partners to ship variables without values and the customer is prompted to input the values.
