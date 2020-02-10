@@ -113,7 +113,7 @@ search.app:
 
 | Shortcut | Action |
 |--|--|
-| Alt or Ctrl+Shift | Hide design elements so that you can interact with controls as if the app were running.<br>After initiating a resize or reposition of a control, adding these keys overrides any snap points. |
+| Alt or Ctrl+Shift | 1. Before selecting a control, hide design elements so that you can interact with controls as the app's user would.<br>2. After initiating a resize or reposition of a control, holding down these keys overrides any snap points. |
 
 Like an Excel spreadsheet, canvas apps are live and operating even when they are being edited.  There is no need to change to preview mode in order to exercise your app, making the edit and test cycle much faster.  But this poses a problem: how do we differentiate selecting a button control so that it can be resized from selecting a button control to exercise the logic in our app?
 
