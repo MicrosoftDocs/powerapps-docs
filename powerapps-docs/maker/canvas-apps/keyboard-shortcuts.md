@@ -117,13 +117,13 @@ search.app:
 
 Like an Excel spreadsheet, canvas apps are live and operating even when they are being edited.  There is no need to change to preview mode in order to exercise your app, making the edit and test cycle much faster.  But this poses a problem: how do we differentiate selecting a button control so that it can be resized from selecting a button control to exercise the logic in our app?
 
-When in design mode, by default selecting an object is for editing: moving, resizing, changing properties, and otherwise configuring the object.  This default can be overridden by holding down the Alt or Ctrl+Shift keys before initiating the selection which treats the selection as if a user of the app had done it.  
+When in design mode, by default selecting an object is for editing: moving, resizing, changing properties, and otherwise configuring the object.  This default can be overridden by holding down the Alt or Ctrl+Shift keys *before* initiating the selection which treats the selection as if a user of the app had done it.  
 
-In the following animation, a button control is first selected for editing.  Adorners appear around the control and the formula bar shows the **OnSelect** property, ready to be edited.  The button is then released.  While the Alt key is depressed, the button control is again selected, but this time the **OnSelect** property is evaluated and the notification is displayed, just as if the button was selected in a running app.  
+In the following animation, a button control is first selected for editing.  Adorners appear around the control and the formula bar shows the **OnSelect** property, ready to be edited.  The button is then released.  *With the Alt key first depressed*, the button control is again selected, but this time the **OnSelect** property is evaluated and the notification is displayed, just as if the button was selected in a running app.  
 
 ![Animation showing the effect of starting by holding down the alt key select a button control](media/keyboard-shortcuts/alt-select.gif)
 
-The Alt key can also be used after a control has been selected to override snap points.  The next animation shows the resize of a data card within an [**Edit form**](controls/control-form-detail.md) control.  Initially, the resizing is restricted to specific snap points.  Later, without releasing the mouses button, the Alt key is depressed as well as the mouse button. The addition of the Alt key overrides the snap points and any width can be obtained with the mouse. 
+The Alt key can also be used *after* a control has been selected to override snap points for moving and resizing.  The next animation shows the resize of a data card within an [**Edit form**](controls/control-form-detail.md) control.  Initially, the resizing is restricted to specific snap points.  Later, *without releasing the mouses button*, the Alt key is depressed in addition to the mouse button. The addition of the Alt key overrides the snap points and any width can be obtained with the mouse. 
 
 ![Animation showing the effect of adding the alt key to the resize of a data card](media/keyboard-shortcuts/alt-fine-control.gif)
 
