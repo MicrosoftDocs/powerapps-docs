@@ -48,10 +48,8 @@ There are a number of standard connection roles already configured in Common Dat
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then on the left pane select  **Solutions**. 
 2. Open the unmanaged solution you want. 
 3. On the command bar, select **Add existing**, and then select **Connection role**. 
+   The list of available connection roles are displayed. 
 4. Select **Cancel** to close the **Add existing connection Roles** dialog without adding a connection role to the solution.
-
-   > [!div class="mx-imgBorder"] 
-    > ![Connection roles in the Business Management settings](media/navigate-settings-connection-roles.png "Connection roles in the Business Management settings")
 
 > [!NOTE]
 > - If you want to distribute connection roles with a solution, make sure they are included in the solution you want to distribute. More information: [Add connection roles to a solution](#add-connection-roles-to-a-solution)
@@ -61,10 +59,11 @@ There are a number of standard connection roles already configured in Common Dat
 
 Most of the connection roles you can see in the **Settings** area are defined within the *internal* **Default Solution** (not to be confused with the **Common Data Services Default Solution**). This internal **Default Solution** contains all the customizations in the system. To view the **Default Solution** choose the **All Solutions - Internal** view. 
 
-1. ign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and than on the command bar select **Settings** ![Settings](media/powerapps-gear.png), and then select **Advanced Settings**.
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and than on the command bar select **Settings** ![Settings](media/powerapps-gear.png), and then select **Advanced Settings**.
 2. Navigate to **Settings** > **Business** > **Business Management** and then select **Connection Roles**.
 
-    [!INCLUDE [cc_navigate-solution-from-powerapps-portal](../../includes/cc_navigate-solution-from-powerapps-portal.md)]
+   > [!div class="mx-imgBorder"] 
+   > ![Connection roles in the Business Management settings](media/navigate-settings-connection-roles.png "Connection roles in the Business Management settings")
 
 In this view you can see all the connection roles that are available for this environment and you can edit them here.
 
@@ -115,14 +114,14 @@ The default **Connection Role Category** values are:
 
 You can add new categories or modify existing ones by editing the **Category** global option set. More information: [Create and edit global option sets for Common Data Service (picklists)](create-edit-global-option-sets.md)
 
-### Select record types
+#### Select record types
 
 Select which record types should be available to connect.
 
 > [!NOTE]
 > Although **All** is selected by default, make sure you consider which types are appropriate for the connection role you are adding.
 
-### Matching connection roles
+#### Matching connection roles
 
 In this optional step, you can define any roles that be applied in a reciprocal manner. It is not required, but connections are more meaningful if these are defined.
 
