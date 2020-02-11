@@ -70,7 +70,7 @@ In this view you can see all the connection roles that are available for this en
 ## Add connection roles to a solution
 Because connection roles are *solution aware*, which means that they can be included in a solution, you can also add connection roles to a solution you distribute.
 
-Generally it is not recommended to edit components in the internal **Default Solution**. Within the solution you have created to work in, you can use the **Add Existing** command in the **Solutions** area to bring any of the default connection roles into your solution.
+Generally it is not recommended to edit components in the internal **Default Solution**. Within the solution you have created to work in, you can use the **Add Existing** command in the **Solutions** area to bring any of the active connection roles into your solution.
 
 > [!div class="mx-imgBorder"] 
 > ![Add existing connection role](media/add-existing-connection-role.png)
