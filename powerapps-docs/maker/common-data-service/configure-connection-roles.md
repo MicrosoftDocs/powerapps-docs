@@ -53,7 +53,6 @@ There are a number of standard connection roles already configured in Common Dat
 
 > [!NOTE]
 > - If you want to distribute connection roles with a solution, make sure they are included in the solution you want to distribute. More information: [Add connection roles to a solution](#add-connection-roles-to-a-solution)
-> - The connection role status is not included with the connection role when it is exported from a solution. Therefore, when the solution is imported into a target organization, the status will be set to active by default. 
 
 ### View and edit connection roles in the solution explorer
 
@@ -76,6 +75,10 @@ Generally it is not recommended to edit components in the internal **Default Sol
 > ![Add existing connection role](media/add-existing-connection-role.png)
 
 Once you add the connection role to your solution, you can edit it wherever it is visible.
+
+> [!NOTE]
+> The connection role status is not included with the connection role when it is exported from a solution. Therefore, when the solution is imported into a target environment, the status will be set to active by default. 
+
 
 ## Create a connection role
 
