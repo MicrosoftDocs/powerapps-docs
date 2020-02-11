@@ -43,35 +43,38 @@ Anyone with write access to the **Connection Role** entity can establish which c
 
 ## View connection roles
 
-There are a number of standard connection roles already configured in Common Data Service. To view them you need to go to the settings area. 
+There are a number of standard connection roles already configured in Common Data Service.  
 
-### Navigate to the settings area
-
-1. In a model-driven app select **Settings** > **Advanced Settings**. 
-2. Navigate to **Settings** > **Business** > **Business Management** and then select **Connection Roles**.
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then on the left pane select  **Solutions**. 
+2. Open the unmanaged solution you want. 
+3. On the command bar, select **Add existing**, and then select **Connection role**. 
+4. Select **Cancel** to close the **Add existing connection Roles** dialog without adding a connection role to the solution.
 
    > [!div class="mx-imgBorder"] 
     > ![Connection roles in the Business Management settings](media/navigate-settings-connection-roles.png "Connection roles in the Business Management settings")
-
-In this view you can see all the connection roles that are available for this environment and you can edit them here.
 
 > [!NOTE]
 > - If you want to distribute connection roles with a solution, make sure they are included in the solution you want to distribute. More information: [Add connection roles to a solution](#add-connection-roles-to-a-solution)
 > - The connection role status is not included with the connection role when it is exported from a solution. Therefore, when the solution is imported into a target organization, the status will be set to active by default. 
 
-## View connection roles in the solution explorer.
+### View connection roles in the solution explorer
 
-Because connection roles are *solution aware*, which means that they can be included in a solution, you can also add connection roles to a solution you distribute.
+Most of the connection roles you can see in the **Settings** area are defined within the *internal* **Default Solution** (not to be confused with the **Common Data Services Default Solution**). This internal **Default Solution** contains all the customizations in the system. To view the **Default Solution** choose the **All Solutions - Internal** view. 
 
-[!INCLUDE [cc_navigate-solution-from-powerapps-portal](../../includes/cc_navigate-solution-from-powerapps-portal.md)]
+1. ign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and than on the command bar select **Settings** ![Settings](media/powerapps-gear.png), and then select **Advanced Settings**.
+2. Navigate to **Settings** > **Business** > **Business Management** and then select **Connection Roles**.
 
-Most of the connection roles you can see in the **Settings** area are defined within the *internal* **Default Solution** (not to be confused with the **Common Data Services Default Solution**). This internal **Default Solution** contains all the customizations in the system. To view the **Default Solution** choose the **All Solutions - Internal** view.
+    [!INCLUDE [cc_navigate-solution-from-powerapps-portal](../../includes/cc_navigate-solution-from-powerapps-portal.md)]
+
+In this view you can see all the connection roles that are available for this environment and you can edit them here.
 
 ## Add connection roles to a solution
+Because connection roles are *solution aware*, which means that they can be included in a solution, you can also add connection roles to a solution you distribute.
 
-Generally it is not recommended to edit components in the internal **Default Solution**. Within the **Common Data Services Default Solution** or any solution you have created to work in, you can use the **Add Existing** command to bring any of the default connection roles into your solution.
+Generally it is not recommended to edit components in the internal **Default Solution**. Within the solution you have created to work in, you can use the **Add Existing** command in the **Solutions** area to bring any of the default connection roles into your solution.
 
-![Add existing connection role](media/add-existing-connection-role.png)
+> [!div class="mx-imgBorder"] 
+> ![Add existing connection role](media/add-existing-connection-role.png)
 
 Once you add the connection role to your solution, you can edit it wherever it is visible.
 
@@ -80,10 +83,13 @@ Once you add the connection role to your solution, you can edit it wherever it i
 > [!IMPORTANT]
 > If you intend to distribute a solution that includes new connection roles or changes to the existing connection roles you must add them to the solution you will distribute. Editing or adding new connection roles using the **Settings** area will add these connection roles to the internal **Default Solution** and will not include them in the solution you will distribute unless you first add it to your solution. More information [Add connection roles to a solution](#add-connection-roles-to-a-solution)
 
-In the **Connection Roles** list, select one of the connection roles to edit it.
-There are three steps to define a connection role which are clearly called out in the form.
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and then on the left pane select **Solutions**. 
+2. Open the unmanaged solution your want, and then on the command bar select **New** > **Other** > **Connection role**. 
+3. In the **Connection Roles** list, select one of the connection roles to edit it.
+4. Complete the three steps on the form to [Describe the connection role](#describe-the-connection-role).
 
-![Create Connection Role form](media/create-connection-role-form.png)
+   > [!div class="mx-imgBorder"] 
+   > ![Create Connection Role form](media/create-connection-role-form.png)
 
 ### Describe the connection role
 
