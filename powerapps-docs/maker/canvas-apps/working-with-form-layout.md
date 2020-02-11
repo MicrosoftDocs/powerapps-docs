@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 06/17/2017
+ms.date: 02/10/2020
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -172,13 +172,9 @@ The result for the complete third address line:
 Note that many of the cards start out with dynamic formulas for their properties. For example, the Text input control that we resized and moved above had a **Width** property based on the width of its parent. When you move or resize a control, these dynamic formulas are replaced with static values. If you want, you can restore the dynamic formulas by using the formula bar.
 
 ## Turning off Snap to columns
-Sometimes you'll want finer control than the standard 12 columns can provide. For these cases, you can turn off **Snap to columns** and then position cards manually. The form will continue snapping to 12 columns, but you can also hold down the Alt key to manually position and size a card as you wish.
+Sometimes you'll want finer control than the standard 12 columns can provide. For these cases, you can turn off **Snap to columns** and then position cards manually. The form will continue snapping to 12 columns, but you can also hold down the Alt or Ctrl+Shift keys after starting a resize or reposition to override the snap points.  For more details, see [alternate behavior keyboard shortcuts](keyboard-shortcuts.md#alternate-behavior). 
 
-In our example, the four components that make up the third line of the address all have exactly the same width. But this may not be the best layout, as city names are longer than state abbreviations, and the Text input box for countries/regions is short due to the length of its label.
-
-To optimize this space, turn off **Snap to columns** in the right-hand pane and then hold down the Alt key while sizing and positioning these cards. Whenever you hold down the Alt key, all controls show black captions. This behavior is by design to show you control names.
-
-![Positioning and sizing with the ALT key held down](./media/working-with-form-layout/delivery-address-alt-resize.png)
+In our example, the four components that make up the third line of the address all have exactly the same width. But this may not be the best layout, as city names are longer than state abbreviations, and the Text input box for countries/regions is short due to the length of its label.  To optimize this space, turn off **Snap to columns** in the right-hand pane and then hold down the Alt or Ctrl+Shift keys after starting to size and position these cards. For
 
 After careful positioning, the result has appropriate sizes for each field and even spacing horizontally between fields:
 
@@ -189,7 +185,7 @@ In summary, what are the differences when **Snap to columns** is on versus off?
 | Behavior | Snap to columns On | Snap to columns Off |
 | --- | --- | --- |
 | Resize snaps to |Number of columns you select:<br>1, 2, 3, 4, 6, or 12 |12 columns |
-| Resize snap can be overriden |No |Yes, with Alt key |
+| Resize snap can be overriden |No |Yes, with Alt or Ctrl+Shift keys after starting the resize |
 | Cards automatically re-layout between rows (more on this later) |Yes |No |
 
 ## Set width and height
