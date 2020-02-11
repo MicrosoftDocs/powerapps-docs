@@ -1,7 +1,6 @@
-- name: Power Apps best practices guidance
+- name: Power Apps guidance
   href: /powerapps/guidance
-- name: Get started
-  href: overview.md   
+- name: Get started    
   items:
   - name: Overview
     href: overview.md
