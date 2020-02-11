@@ -54,7 +54,7 @@ There are a number of standard connection roles already configured in Common Dat
 > [!NOTE]
 > - If you want to distribute connection roles with a solution, make sure they are included in the solution you want to distribute. More information: [Add connection roles to a solution](#add-connection-roles-to-a-solution)
 
-### View and edit connection roles in the solution explorer
+### View and edit connection roles using the classic experience
 
 Most of the connection roles you can see in the **Settings** area are defined within the *internal* **Default Solution** (not to be confused with the **Common Data Services Default Solution**). This internal **Default Solution** contains all the customizations in the system. To view the **Default Solution** choose the **All Solutions - Internal** view. 
 
