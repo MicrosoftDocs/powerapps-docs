@@ -213,9 +213,9 @@ Your portal will be restarted and start working again.
 
 ## Debugging and fixing problems
 
-### The portal performance has degraded significantly after we integrated portal with several new synchronous plugins.
+### Performance of the portal has degraded significantly after integration with several new synchronous plugins.
 
-Avoid making synchronous calls directly from portal to Common Data Service. We recommend that you configure the sync plugins on Common Data Service instead.
+Avoid making synchronous calls directly from the portal to Common Data Service. We recommend that you configure the sync plugins on Common Data Service instead.
 
 ### When accessing my portal, I see a generic error page. How can I see the actual error?
 
