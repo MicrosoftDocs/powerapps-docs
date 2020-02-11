@@ -1,0 +1,80 @@
+### YamlMime:Landing
+
+title: Power Apps guidance
+summary: Power Apps guidance documentation provides best practice information from the team that builds Power Apps and the folks that work with our enterprise customers. We'll add and update information as they become available. 
+
+metadata:
+  title: Power Apps guidance
+  description: Provides best practice information from the team that builds Power Apps and the folks that work with our enterprise customers.
+  services: service
+  ms.service: powerapps 
+  ms.subservice: subservice
+  ms.topic: landing-page 
+  ms.collection: collection
+  author: KumarVivek
+  ms.author: kvivek
+  ms.date: 02/11/2020 
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+  # Card 
+  - title: Power Apps guidance
+    linkLists:
+       - linkListType: overview
+         links:
+          - text: Overview
+            url: overview.md
+
+
+  # Card
+  - title: Power Apps architecture
+    linkLists:
+       - linkListType: how-to-guide
+         links:
+          - text: TO DO
+            url: overview.md
+          - text: TO DO
+            url: overview.md
+
+          
+  # Card
+  - title: Data management
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: TO DO
+            url: overview.md
+          - text: TO DO
+            url: overview.md
+
+  # Card
+  - title: Build apps
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: TO DO
+            url: overview.md
+          - text: TO DO
+            url: overview.md
+
+  # Card
+  - title: Power Apps for enterprises
+    linkLists:
+      - linkListType: reference
+        links:
+          - text: TO DO
+            url: overview.md
+          - text: TO DO
+            url: overview.md
+
+  # Card
+  - title: Power Apps customer stories
+    linkLists:
+      - linkListType: reference
+        links:
+          - text: TO DO
+            url: overview.md
+          - text: TO DO
+            url: overview.md
