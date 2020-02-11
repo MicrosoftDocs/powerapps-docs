@@ -213,6 +213,10 @@ Your portal will be restarted and start working again.
 
 ## Debugging and fixing problems
 
+### The portal performance has degraded significantly after we integrated portal with several new synchronous plugins.
+
+Avoid making synchronous calls directly from portal to Common Data Service. We recommend that you configure the sync plugins on Common Data Service instead.
+
 ### When accessing my portal, I see a generic error page. How can I see the actual error?
 
 Whenever a server error occurs while trying to render a portal, a generic error page is displayed to end users along with the timestamp and activity ID of the error. Portal administrators can configure their portal to get the actual error details, which are helpful in debugging and fixing issues. To see the actual error:
