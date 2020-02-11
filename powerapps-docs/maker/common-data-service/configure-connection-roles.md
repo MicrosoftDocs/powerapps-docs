@@ -55,7 +55,7 @@ There are a number of standard connection roles already configured in Common Dat
 > - If you want to distribute connection roles with a solution, make sure they are included in the solution you want to distribute. More information: [Add connection roles to a solution](#add-connection-roles-to-a-solution)
 > - The connection role status is not included with the connection role when it is exported from a solution. Therefore, when the solution is imported into a target organization, the status will be set to active by default. 
 
-### View connection roles in the solution explorer
+### View and edit connection roles in the solution explorer
 
 Most of the connection roles you can see in the **Settings** area are defined within the *internal* **Default Solution** (not to be confused with the **Common Data Services Default Solution**). This internal **Default Solution** contains all the customizations in the system. To view the **Default Solution** choose the **All Solutions - Internal** view. 
 
@@ -77,15 +77,14 @@ Generally it is not recommended to edit components in the internal **Default Sol
 
 Once you add the connection role to your solution, you can edit it wherever it is visible.
 
-## Create or edit connection roles.
+## Create a connection role
 
 > [!IMPORTANT]
 > If you intend to distribute a solution that includes new connection roles or changes to the existing connection roles you must add them to the solution you will distribute. Editing or adding new connection roles using the **Settings** area will add these connection roles to the internal **Default Solution** and will not include them in the solution you will distribute unless you first add it to your solution. More information [Add connection roles to a solution](#add-connection-roles-to-a-solution)
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and then on the left pane select **Solutions**. 
 2. Open the unmanaged solution your want, and then on the command bar select **New** > **Other** > **Connection role**. 
-3. In the **Connection Roles** list, select one of the connection roles to edit it.
-4. Complete the three steps on the form to [Describe the connection role](#describe-the-connection-role).
+3. Complete the three steps on the form to [Describe the connection role](#describe-the-connection-role).
 
    > [!div class="mx-imgBorder"] 
    > ![Create Connection Role form](media/create-connection-role-form.png)
