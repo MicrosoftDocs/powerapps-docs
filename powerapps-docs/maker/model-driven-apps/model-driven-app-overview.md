@@ -10,7 +10,7 @@ ms.service: powerapps
 ms.devlang: na
 ms.topic: conceptual
 ms.component: model
-ms.date: 08/09/2018
+ms.date: 02/12/2020
 ms.author: matp
 search.audienceType: 
   - maker
