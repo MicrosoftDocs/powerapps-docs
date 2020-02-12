@@ -30,7 +30,7 @@ search.app:
 
 <a name="BKMK_CreateOrEditViewFilters"></a>   
 
-The filters in a Power Apps view are important to the value provided by the view. The filters you apply <!--note from editor: Edit suggested.-->determine which records appear in the list by default. You can add or edit a filter for the columns that you include in a view by selecting the column and selecting **Filter by**. You can also use the expression builder in the view designer. Use the expression builder to add or edit filters for any fields in the view entity<!--note from editor: Does this mean "entity in the current view"? I find "view entity" leads me down the wrong path, but maybe this won't be confusing for your readers.--> or any fields in a related entity. 
+The filters in a Power Apps view are important to the value provided by the view. The filters you apply determine which records appear in the list by default. You can add or edit a filter for the columns that you include in a view by selecting the column and selecting **Filter by**. You can also use the expression builder in the view designer. Use the expression builder to add or edit filters for any fields of the entity in the current view or any fields in a related entity. 
 
 In this topic, you create or edit filters by performing the following tasks:
 
@@ -47,17 +47,17 @@ In this topic, you create or edit filters by performing the following tasks:
 -   [Group conditions of a filter](create-edit-view-filters.md#group-conditions-of-a-filter)
 
 ## Edit or remove a filter condition
-<!--note from editor: In these procedures, edits to "View properties" assumes that string is in the UI. If it isn't, it should just be "view properties", regular type.-->
+
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
 2. Expand **Data**, select **Entities**, select the entity that you want, and then select the **Views** tab.
 
-3. Select a view to open it. The **View properties** panel lists existing filters.
+3. Select a view to open it. The view properties panel lists existing filters.
 
     > [!div class="mx-imgBorder"] 
     > ![View panel filters](media/views-panel-filters.png "View panel filters")
 
-4. On the **View properties** panel, select a filter condition.
+4. On the view properties panel, select a filter condition.
 
     > [!div class="mx-imgBorder"] 
     > ![Edit filters](media/edit-filter-viewpanel.png "Edit filters")
@@ -68,11 +68,11 @@ In this topic, you create or edit filters by performing the following tasks:
 
 7. Select **Apply**.
 
-8. To remove a condition, select **Remove filter**. The condition is removed without confirmation.
+8. To remove a condition, select **Close**. The condition is removed without confirmation.
 
 ### Open the expression builder
 
-- On the **View properties** panel, select **Edit filters**.
+- On the view properties panel, select **Edit filters**.
 
     > [!div class="mx-imgBorder"] 
     > ![Expression builder](media/edit-create-filters.png "Expression builder")
@@ -115,17 +115,19 @@ In this topic, you create or edit filters by performing the following tasks:
 
 1. In the expression builder, select **Add** > **Add related entity**.
 
-2. Select a field from the related entity <!--note from editor: Is something missing here? I'd expect you'd need to choose the related entity before you select one of its fields.-->for the condition. You can select fields that have a many-to-one, one-to-many, or many-to-many relationship with the view entity.<!--note from editor: I made these relationships regular type, but if they're literally in the UI they should be bold.-->
+2. Select a field from the current entity that is related to another entity. The entity related to the field is shown in parenthesis. You can select fields that have a many-to-one, one-to-many, or many-to-many relationship with the related entity.
 
-3. Select a conditional operator.
+3. Select a field of the related entity for the condition.
 
-4. Select or enter a comparison value.
+4. Select a conditional operator.
+
+5. Select or enter a comparison value.
 
     > [!div class="mx-imgBorder"] 
     > ![Related entity filter](media/add-relatedentity-filter.png "Related entity filter")
 
 ### Group conditions of a filter
-<!--note from editor: Edit assumes the tooltip for the ellipsis is "More commands."-->
+
 1. In the expression builder, select the check box for the conditions that you want to group.
 
 2. Select **More commands** (...) for one of the conditions, and then select **Make group**.
