@@ -32,6 +32,8 @@ Delete or remove apps that are obsolete in your environment.
 > [!IMPORTANT]
 > If the model-driven app was installed in the default solution as part of a managed solution, see [Delete a model-driven app that was installed as part of a managed solution](#delete-a-model-driven-app-that-was-installed-as-part-of-a-managed-solution).
 
+> First party model-driven apps cannot be deleted. They can be hidden from users by not making these apps accessible to any of the security roles
+
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 2. On the left navigation, select **Apps**. 
 3. Select the app that you want to delete, and then select **Delete** on the command bar.
