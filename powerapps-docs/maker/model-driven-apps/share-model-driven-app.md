@@ -38,8 +38,12 @@ Sharing a model-driven app involves two primary steps. First, associate a one or
 1. Visit https://make.powerapps.com
 2. Select a model-driven app and click **Share**.
 3. Select the app then choose a security role from the list.
+    > [!div class="mx-imgBorder"] 
+    > ![](media/share-model-driven-app/share-app.png "Assign a role to the app")
 4. Search for a user
 5. Select the user then select a role from the list.
+    > [!div class="mx-imgBorder"] 
+    > ![](media/share-model-driven-app/share-user.png "Assign a role to the user")
 6. Click **Share**.
 
 ### Share the link to your app
@@ -64,6 +68,8 @@ For more information about access and scope privileges, see [Security roles](htt
 2. Select the app then expand the list of security roles.
 
 3. Click **Manage security roles.**
+    > [!div class="mx-imgBorder"] 
+    > ![](media/share-model-driven-app/manage-roles.png "Manage roles")
 
 4. On the **All Roles** page, select **Common data service user** then click **Actions** then **Copy Role.** 
 
