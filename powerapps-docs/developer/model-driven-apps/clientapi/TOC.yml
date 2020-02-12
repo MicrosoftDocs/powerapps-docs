@@ -22,7 +22,7 @@
       - name: Grid OnSave event
         href: ./reference/events/grid-onsave.md
       - name: OnLookupTagClick event
-        href: ./reference/events/onlookuptagclickevent.md
+        href: ./reference/events/onlookuptagclick.md
       - name: OnProcessStatusChange event
         href: ./reference/events/onprocessstatuschange.md
       - name: OnPreProcessStatusChange event
