@@ -30,7 +30,7 @@ search.app:
 
 <a name="BKMK_CreateOrEditViewFilters"></a>   
 
-The filters in a Power Apps view are important to the value provided by the view. Which filters are applied determine which records appear in the list by default. You can add or edit a filter for the columns that you include in a view by selecting the column and selecting **Filter by**. You can also use the expression builder in the view designer. Use the expression builder to add or edit filters for any fields in the view entity or any fields in a related entity. 
+The filters in a Power Apps view are important to the value provided by the view. The filters you apply determine which records appear in the list by default. You can add or edit a filter for the columns that you include in a view by selecting the column and selecting **Filter by**. You can also use the expression builder in the view designer. Use the expression builder to add or edit filters for any fields of the entity in the current view or any fields in a related entity. 
 
 In this topic, you create or edit filters by performing the following tasks:
 
@@ -52,15 +52,15 @@ In this topic, you create or edit filters by performing the following tasks:
 
 2. Expand **Data**, select **Entities**, select the entity that you want, and then select the **Views** tab.
 
-3. Select a view to open it. The View properties panel lists existing filters.
+3. Select a view to open it. The view properties panel lists existing filters.
 
     > [!div class="mx-imgBorder"] 
-    > ![View panel filters](media/views-panel-filters.png)
+    > ![View panel filters](media/views-panel-filters.png "View panel filters")
 
-4. On the View properties panel, select a filter condition.
+4. On the view properties panel, select a filter condition.
 
     > [!div class="mx-imgBorder"] 
-    > ![Edit filters](media/edit-filter-viewpanel.png)
+    > ![Edit filters](media/edit-filter-viewpanel.png "Edit filters")
 
 5. Select the conditional operator that you want to use.
 
@@ -68,18 +68,18 @@ In this topic, you create or edit filters by performing the following tasks:
 
 7. Select **Apply**.
 
-8. To remove a condition, select Remove filter. The condition is removed without confirmation.
+8. To remove a condition, select **Close**. The condition is removed without confirmation.
 
 ### Open the expression builder
 
-- On the View properties panel, select **Edit filters**.
+- On the view properties panel, select **Edit filters**.
 
     > [!div class="mx-imgBorder"] 
-    > ![Expression builder](media/edit-create-filters.png)
+    > ![Expression builder](media/edit-create-filters.png "Expression builder")
 
 ### Add conditions to a filter
 
-1. In the expression builder, select **Add > Add row**.
+1. In the expression builder, select **Add** > **Add row**.
 
 2. Select a field for the condition.
 
@@ -87,53 +87,55 @@ In this topic, you create or edit filters by performing the following tasks:
 
 4. Select a comparison value.  
 
-    Some filter conditions do not require a comparison value for the condition. For example, the operator **Contains data** does not require a comparison value. With other filter conditions, you choose the comparison value from an option set. For example, the status field has an option set that contains the values Active and Inactive.
+    Some filter conditions don't require a comparison value for the condition. For example, the operator **Contains data** doesn't require a comparison value. With other filter conditions, you choose the comparison value from an option set. For example, the **Status** field has an option set that contains the values **Active** and **Inactive**.
 
     > [!div class="mx-imgBorder"] 
-    > ![Filter condition](media/add-condition-filter.png)
+    > ![Filter condition](media/add-condition-filter.png "Filter condition")
 
 5. Select **OK**.
 
 ### Add a group condition to a filter
 
-1. In the expression builder, select **Add > Add group**.
+1. In the expression builder, select **Add** > **Add group**.
 
 2. Select the relational operator **Or** for the group. **And** is the default relational operator.
 
 3. Specify the first clause of the grouped condition. Select the field, conditional operator, and comparison value.
 
-4. Select **Add > Add group**
+4. Select **Add** > **Add group**
 
 5. Specify the second clause of the grouped condition.
 
     > [!div class="mx-imgBorder"] 
-    > ![Group condition filter](media/add-group-filter.png)
+    > ![Group condition filter](media/add-group-filter.png "Group condition filter")
 
     You can select **Collapse** to display the group as a conditional expression.
 
 ### Add a related entity to a condition
 
-1. In the expression builder, select **Add > Add related entity**.
+1. In the expression builder, select **Add** > **Add related entity**.
 
-2. Select a field from the related entity for the condition. You can select fields that have a Many to One, One to Many, or Many to Many relationships with the view entity.
+2. Select a field from the current entity that is related to another entity. The entity related to the field is shown in parenthesis. You can select fields that have a many-to-one, one-to-many, or many-to-many relationship with the related entity.
 
-3. Select a conditional operator.
+3. Select a field of the related entity for the condition.
 
-4. Select or enter a comparison value.
+4. Select a conditional operator.
+
+5. Select or enter a comparison value.
 
     > [!div class="mx-imgBorder"] 
-    > ![Related entity filter](media/add-relatedentity-filter.png)
+    > ![Related entity filter](media/add-relatedentity-filter.png "Related entity filter")
 
 ### Group conditions of a filter
 
-1. In the expression builder, select the checkbox for the conditions that you want to group.
+1. In the expression builder, select the check box for the conditions that you want to group.
 
-2. Select the More commands menu for one of the conditions, and select **Make group**.
+2. Select **More commands** (...) for one of the conditions, and then select **Make group**.
 
-3. To ungroup a group, select More commands menu for the group, and select **Ungroup**
+3. To ungroup a group, select **More commands** (...) for the group, and then select **Ungroup**
 
     > [!div class="mx-imgBorder"] 
-    > ![Grouped condition filter](media/group-conditions-filter.png)
+    > ![Grouped condition filter](media/group-conditions-filter.png "Grouped condition filter")
 
 ### Next steps
 [Choose and configure columns](choose-and-configure-columns.md)  
