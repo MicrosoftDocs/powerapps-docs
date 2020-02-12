@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 08/09/2019
+ms.date: 01/02/2020
 ms.author: tapanm
 search.audienceType: 
   - maker
@@ -93,6 +93,37 @@ You can change permissions for a user or a security group by selecting their nam
 
 - Every member of a security group has the same permission for an app as the overall group does. However, you can specify greater permissions for one or more members of that group to allow them greater access. For example, you can give Security Group A permission to run an app, but you can also give User B, who belongs to that group, **Co-owner** permission. Every member of the security group can run the app, but only User B can edit it. If you give Security Group A **Co-owner** permission and User B permission to run the app, that user can still edit the app.
 
+### Share an app with Office 365 Groups
+
+You can share an app with [Office 365 groups](https://docs.microsoft.com/office365/admin/create-groups/compare-groups#office-365-groups). However, the group must be security enabled. Enabling security ensures the Office 365 group can receive security tokens for authentication to access apps or resources.
+
+Follow these steps to check if an Office 365 group has security enabled:
+
+1. Ensure you have access to the [Azure AD cmdlets](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-settings-v2-cmdlets).
+
+1. Go to [Azure Portal](https://portal.azure.com/) \> Azure Active
+    Directory \> Groups \> Select the appropriate group \> Copy the Object Id.
+
+1. [Connect to Azure AD](https://docs.microsoft.com/powershell/module/azuread/connect-azuread) using PowerShell:
+
+    ![Connect-AzureAD](media/share-app/azure_cmdlet_connect.png)
+
+1. Get the [group details](https://docs.microsoft.com/powershell/module/AzureAD/Get-AzureADGroup) using ```Get-AzureADGroup -ObjectId <ObjectID\> |
+    select *```. <br> In the output, ensure the property **SecurityEnabled** is set to **True**:
+
+    ![Check SecurityEnabled property](media/share-app/azure_cmdlet_get_azuread_group_details.png)
+
+If the group is not security enabled, you can enable it enable it using PowerShell cmdlet [Set-AzureADGroup](https://docs.microsoft.com/powershell/module/AzureAD/Set-AzureADGroup) by setting the **SecurityEnabled** property to **True**: 
+
+```Set-AzureADGroup -ObjectId <ObjectID> -SecurityEnabled $True```
+
+![Set SecurityEnabled to True](media/share-app/azure_cmdlet_set_security_enabled.png)
+
+> [!NOTE]
+> You must be the owner of the Office 365 group to enable security.
+
+After a while, you can discover this group in the Power Apps sharing panel and share apps with this group.
+
 ## Manage entity permissions
 
 ### Common Data Service
@@ -132,6 +163,9 @@ Power Apps canvas apps can be shared with guest users of an Azure Active Directo
 - The guest user must have a license with Power Apps use rights that matches the capability of the app assigned through one of the following tenants:
     - The tenant hosting the app being shared.
     - The home tenant of the guest user.
+
+> [!NOTE]
+> Power Apps Per App Plans are scoped to apps in a specific environment, so they cannot be recognized across tenants. Power Apps included with Office and Power Apps Per User Plans are not bound to a specific environment so they are recognized across tenants in guest scenarios. 
 
 ### Steps to grant guest access
 1. Select **New guest user** to add guest users in Azure AD. More information: [Quickstart: Add a new guest user in Azure AD](/azure/active-directory/b2b/b2b-quickstart-add-guest-users-portal).
@@ -198,6 +232,7 @@ The same license that’s required for non-guests to run an app. For instance, i
 | Power Apps Per App Plan          | x                          | x                                                  | x                                              | x                |
 | Power Apps Per User Plan         | x                          | x                                                  | x                                              | x                |
 
+More details around pricing and capabilities of various plans can be found in [Microsoft Power Apps and Power Automate Licensing Guide](https://go.microsoft.com/fwlink/?linkid=2085130).
 
 #### In Power Apps Mobile, how does a guest see apps for their home tenant?
 Any user that has accessed an canvas app, on their mobile device, that’s published in an Azure AD tenant that isn’t their home tenant must sign-out of Power Apps and sign back in to Power Apps Mobile.  

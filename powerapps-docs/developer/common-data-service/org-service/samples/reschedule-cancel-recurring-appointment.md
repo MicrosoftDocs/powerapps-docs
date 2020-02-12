@@ -43,10 +43,9 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 ### Demonstrate
 
 1. The `QueryExpression` message queries the individual appointment instance that falls on or after 10 days from today. Basically this will be the second instance in the recurring appointment series.
-3. The `RescheduleRequest` message updates the schedule start and end dates of the appointment.
-4. The `SetStateRequest` message cancels the last instance of the appointment. The status of this appointment instance is set to `canceled`. You can view this appointment instance under the `All Activities` view.
+2. The `RescheduleRequest` message updates the schedule start and end dates of the appointment.
+3. The `SetStateRequest` message cancels the last instance of the appointment. The status of this appointment instance is set to `canceled`. You can view this appointment instance under the `All Activities` view.
 
 ### Clean up
 
-1. Display an option to delete the sample data created in [Setup](#setup).
-    The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the records to achieve the same result.
+Display an option to delete the sample data created in [Setup](#setup). The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the records to achieve the same result.

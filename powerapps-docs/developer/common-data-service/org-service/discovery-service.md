@@ -1,14 +1,14 @@
 ---
 title: "Use the Discovery Service with the SDK Assemblies (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Describes how to use the discovery service with the .NET SDK assemblies." # 115-145 characters including spaces. This abstract displays in the search result.
+description: "Describes how to use the Discovery Service with the APIs available in the SDK assemblies." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
-ms.reviewer: ""
+ms.date: 1/16/2020
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
+manager: "kvivek" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
@@ -17,10 +17,14 @@ search.app:
 ---
 # Use the Discovery Service with the SDK Assemblies
 
+> [!IMPORTANT]
+> Effective March 2, 2020, the *regional* Discovery Service will be [deprecated](/power-platform/important-changes-coming#regional-discovery-service-is-deprecated).
+> 
+> For information on how to transition to use the *global* Discovery Service, see [Modify your code to use global Discovery Service](../webapi/discovery-orgsdk-to-webapi.md).
+
 [!INCLUDE [cc-discovery-service-description](../includes/cc-discovery-service-description.md)]
 
-
-To use the discovery service using the SDK assemblies, add a reference to the `Microsoft.Xrm.Sdk.dll` assembly to your Visual Studio project, and then add a `using` statement to access the <xref:Microsoft.Xrm.Sdk.Discovery> namespace. 
+To access the Discovery Service using the SDK assembly APIs, add a reference to the `Microsoft.Xrm.Sdk.dll` assembly in your Visual Studio project, and then add a `using` statement to access the <xref:Microsoft.Xrm.Sdk.Discovery> namespace.
 
 The <xref:Microsoft.Xrm.Sdk.WebServiceClient.DiscoveryWebProxyClient> implements the <xref:Microsoft.Xrm.Sdk.Discovery.IDiscoveryService> interface.
 
@@ -33,7 +37,7 @@ When you instantiate the <xref:Microsoft.Xrm.Sdk.WebServiceClient.DiscoveryWebPr
 [!INCLUDE [regional-discovery-services](../../../includes/regional-discovery-services.md)]
 
 > [!NOTE]
-> If you do not know the user's region, you need to loop through the available regions until you get results. The Web API provides a single global discovery service. More information: [Discover the URL for your organization using the Web API](../webapi/discover-url-organization-web-api.md)
+> If you do not know the user's region, you need to loop through the available regions until you get results. A single global Discovery Service is also available. More information: [Discover the URL for your organization](../webapi/discover-url-organization-web-api.md)
 
 ## Discovery service messages
 
@@ -160,4 +164,4 @@ Endpoints:
 ### See also
 
 [Discovery Services](../discovery-service.md)<br />
-[Discover the URL for your organization using the Web API](../webapi/discover-url-organization-web-api.md)
+[Discover the URL for your organization](../webapi/discover-url-organization-web-api.md)

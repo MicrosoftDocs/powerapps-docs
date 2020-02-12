@@ -40,7 +40,7 @@ Sign in to [Power Apps](https://make.powerapps.com/). If you don’t already hav
 
 3.	On the **Create a New App** page, enter the following details, and then select **Done**: 
   - **Name**: Enter a name for the app, such as *My first app*. 
-  - **Unique Name**: By default, the unique name uses the name your specify in the **Name** box without spaces and preceeded by the publisher prefix and an underscore (_). For example, *crecf_Myfirstapp*. More information: [Change the solution publisher prefix](../common-data-service/change-solution-publisher-prefix.md)
+  - **Unique Name**: By default, the unique name uses the name your specify in the **Name** box without spaces and preceded by the publisher prefix and an underscore (_). For example, *crecf_Myfirstapp*. More information: [Change the solution publisher prefix](../common-data-service/change-solution-publisher-prefix.md)
   - **Description**: Type a short description of what the app is or does, such as *This is my first app*.
 For information about the additional app properties, see [Create an app](create-edit-app.md#create-an-app).
 

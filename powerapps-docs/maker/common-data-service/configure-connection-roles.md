@@ -1,7 +1,7 @@
 ---
 title: "Configure connection roles | MicrosoftDocs"
 ms.custom: ""
-ms.date: 10/17/2019
+ms.date: 02/11/2020
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -56,7 +56,8 @@ There are a number of standard connection roles already configured in Common Dat
 In this view you can see all the connection roles that are available for this environment and you can edit them here.
 
 > [!NOTE]
-> If you want to distribute connection roles with a solution, make sure they are included in the solution you want to distribute. More information: [Add connection roles to a solution](#add-connection-roles-to-a-solution)
+> - If you want to distribute connection roles with a solution, make sure they are included in the solution you want to distribute. More information: [Add connection roles to a solution](#add-connection-roles-to-a-solution)
+> - The connection role status is not included with the connection role when it is exported from a solution. Therefore, when the solution is imported into a target organization, the status will be set to active by default. 
 
 ## View connection roles in the solution explorer.
 

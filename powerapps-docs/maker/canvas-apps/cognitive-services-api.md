@@ -6,8 +6,8 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: 
-ms.date: 12/08/2017
+ms.reviewer: tapanm
+ms.date: 01/17/2020
 ms.author: lanced
 search.audienceType: 
   - maker
@@ -124,9 +124,8 @@ With that background, let's add the formula for the **OnSelect** property of the
 ```powerapps-dot
 If( chkLanguage.Value = true,
     ClearCollect( languageCollect, 
-        TextAnalytics.DetectLanguage(
+        TextAnalytics.DetectLanguageV2(
             {
-                numberOfLanguagesToDetect: 1, 
                 text: tiTextToAnalyze.Text
             }
         ).detectedLanguages.name
@@ -135,7 +134,7 @@ If( chkLanguage.Value = true,
 
 If( chkPhrases.Value = true,
     ClearCollect( phrasesCollect, 
-        TextAnalytics.KeyPhrases(
+        TextAnalytics.KeyPhrasesV2(
             {
                 language: "en", 
                 text: tiTextToAnalyze.Text
@@ -146,7 +145,7 @@ If( chkPhrases.Value = true,
 
 If( chkSentiment.Value = true,
     ClearCollect( sentimentCollect, 
-        TextAnalytics.DetectSentiment(
+        TextAnalytics.DetectSentimentV2(
             {
                 language: "en", 
                 text: tiTextToAnalyze.Text
@@ -183,7 +182,7 @@ To display the results of the API calls, reference the appropriate collection in
    
     The **First()** function returns the first (and in this case only) record in **languageCollect**, and the app displays the **name** (the only field) associated with that record.
 
-2. Set the **Text** property of the sentiment label to: `"The sentiment score is " & Round(First(sentimentCollect.Value).Value, 3)\*100 & "% positive."`.
+2. Set the **Text** property of the sentiment label to: `"The sentiment score is " & Round(First(sentimentCollect.Value).Value, 3)*100 & "% positive."`.
    
     This formula also uses the **First()** function, gets the **Value** (0-1) from the first and only record, then formats it as a percentage.
 

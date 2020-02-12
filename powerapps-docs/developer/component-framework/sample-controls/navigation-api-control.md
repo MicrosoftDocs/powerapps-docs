@@ -12,7 +12,7 @@ author: Nkrb
 
 # Implementing Navigation API component
 
-This sample component explores the various methods available as part of the Power Apps component framework navigation API. In this sample, you create a series of input elements of type buttons which calls into the respective methods of the navigation API that matches with the value displayed.  
+This sample component explores the various methods available as part of the Power Apps component framework navigation API. In this sample, you create a series of input elements of type buttons which calls into the respective methods of the navigation API that matches with the value displayed. You can download the sample component from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/TS_NavigationAPI).
 
 > [!div class="mx-imgBorder"]
 > ![Navigation API component](../media/navigation-api-control.png "Navigation API component")

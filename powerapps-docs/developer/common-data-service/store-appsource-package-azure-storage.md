@@ -1,8 +1,8 @@
 ---
-title: "Step 5: Store your AppSource Package on Azure Storage and generate a URL with SAS key (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Step 4: Store your AppSource Package on Azure Storage and generate a URL with SAS key (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "To maintain security of your files, all app developers must store their AppSource package file in a Microsoft Azure Blob storage account, and use a Shared Access Signature (SAS) key to share the package file. Your package file is retrieved from your Azure Storage location for certification, and then for AppSource trials." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 12/20/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.topic: "article"
@@ -15,7 +15,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Step 5: Store your AppSource Package on Azure Storage and generate a URL with SAS key
+# Step 4: Store your AppSource Package on Azure Storage and generate a URL with SAS key
 
 Microsoft Azure Storage is a Microsoft-managed cloud service that provides storage that is highly available, secure, durable, scalable, and redundant. More information: [Introduction to Microsoft Azure Storage](https://docs.microsoft.com/azure/storage/common/storage-introduction).
 

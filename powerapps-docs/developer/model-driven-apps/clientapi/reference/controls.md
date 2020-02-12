@@ -75,24 +75,27 @@ These are the methods available for an IFRAME control.
 <tr>
 <td>
 <ul>
+<li><a href="controls/getContentWindow.md" data-raw-source="[getContentWindow](controls/getContentWindow.md)">getContentWindow</a></li>
 <li><a href="controls/getControlType.md" data-raw-source="[getControlType](controls/getControlType.md)">getControlType</a></li>
 <li><a href="controls/getDisabled.md" data-raw-source="[getDisabled](controls/getDisabled.md)">getDisabled</a></li>
 <li><a href="controls/getInitialUrl.md" data-raw-source="[getInitialUrl](controls/getInitialUrl.md)">getInitialUrl</a></li>
 <li><a href="controls/getLabel.md" data-raw-source="[getLabel](controls/getLabel.md)">getLabel</a></li>
-<li><a href="controls/getName.md" data-raw-source="[getName](controls/getName.md)">getName</a></li>
+
 </ul>
 </td>
 <td>
 <ul>
+<li><a href="controls/getName.md" data-raw-source="[getName](controls/getName.md)">getName</a></li>  
 <li><a href="controls/getObject.md" data-raw-source="[getObject](controls/getObject.md)">getObject</a></li>
 <li><a href="controls/getParent.md" data-raw-source="[getParent](controls/getParent.md)">getParent</a></li>
 <li><a href="controls/getSrc.md" data-raw-source="[getSrc](controls/getSrc.md)">getSrc</a></li>
 <li><a href="controls/getVisible.md" data-raw-source="[getVisible](controls/getVisible.md)">getVisible</a></li>
-<li><a href="controls/setDisabled.md" data-raw-source="[setDisabled](controls/setDisabled.md)">setDisabled</a></li>
+
 </ul>
 </td>
 <td>
 <ul>
+<li><a href="controls/setDisabled.md" data-raw-source="[setDisabled](controls/setDisabled.md)">setDisabled</a></li>
 <li><a href="controls/setFocus.md" data-raw-source="[setFocus](controls/setFocus.md)">setFocus</a></li>
 <li><a href="controls/setLabel.md" data-raw-source="[setLabel](controls/setLabel.md)">setLabel</a></li>
 <li><a href="controls/setSrc.md" data-raw-source="[setSrc](controls/setSrc.md)">setSrc</a></li>
@@ -281,6 +284,7 @@ These are the methods available for the timer control.
 <tr>
 <td>
 <ul>
+
 <li><a href="controls/getControlType.md" data-raw-source="[getControlType](controls/getControlType.md)">getControlType</a></li>
 <li><a href="controls/getDisabled.md" data-raw-source="[getDisabled](controls/getDisabled.md)">getDisabled</a></li>
 <li><a href="controls/getLabel.md" data-raw-source="[getLabel](controls/getLabel.md)">getLabel</a></li>
@@ -311,6 +315,18 @@ These are the methods available for the timer control.
 ## webresource control type
 
 A web resource control has the same set of methods available as the iframe control. See [iframe control type](#iframe-control-type)
+
+The Sliverlight web resource has these additional methods: 
+<table>
+<tr>
+<td>
+<ul>
+<li><a href="controls/getData.md" data-raw-source="[getData](controls/getData.md)">getData</a></li>
+<li><a href="controls/setData.md" data-raw-source="[setData](controls/setData.md)">setData</a></li>
+</ul>
+</td>
+</tr>
+</table>
 
 
 ### Related topics

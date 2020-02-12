@@ -12,7 +12,7 @@
     items:
     - name: Create your first component
       href: implementing-controls-using-typescript.md
-  - name: How-to
+  - name: How-to guides
     items:
     - name: Create and build a code component 
       href: create-custom-controls-using-pcf.md
@@ -28,18 +28,16 @@
       href: updating-existing-controls.md
     - name: Publish code components on AppSource
       href: publish-components-app-source.md
-  - name: Limitations
-    href: limitations.md
+  - name: Troubleshooting
+    items:
+    - name: Common issues and workarounds
+      href: issues-and-workarounds.md
+    - name: Limitations
+      href: limitations.md
   - name: Sample components
     items: 
     - name: How to use the sample components?
       href: use-sample-components.md
-    - name: Increment component
-      href: sample-controls/increment-control.md
-    - name: Linear input component
-      href: sample-controls/linear-input-control.md
-    - name: Localization API component
-      href: sample-controls/localization-api-control.md
     - name: Angular Flip component
       href: sample-controls/angular-flip-control.md
     - name: Control State API component
@@ -52,6 +50,12 @@
       href: sample-controls/iframe-control.md
     - name: Image upload component
       href: sample-controls/image-upload-control.md
+    - name: Increment component
+      href: sample-controls/increment-control.md
+    - name: Linear input component
+      href: sample-controls/linear-input-control.md
+    - name: Localization API component
+      href: sample-controls/localization-api-control.md
     - name: Map component
       href: sample-controls/map-control.md
     - name: Navigation API component
@@ -135,7 +139,7 @@
           href: reference/entityrecord/getrecordid.md
         - name: getValue
           href: reference/entityrecord/getvalue.md
-      - name: Entityreference
+      - name: EntityReference
         href: reference/entityreference.md
       - name: Factory
         href: reference/factory.md
@@ -191,6 +195,8 @@
           href: reference/linking/getlinkedentities.md
       - name: LookupOptions
         href: reference/lookupoptions.md
+      - name: Metadata
+        href: reference/metadata.md
       - name: Mode
         href: reference/mode.md
         items:
@@ -249,6 +255,8 @@
           href: reference/popupservice/setpopupsid.md
         - name: updatePopup
           href: reference/popupservice/updatepopup.md
+      - name: Position
+        href: reference/position.md
       - name: Property
         href: reference/property.md
       - name: RetrieveMultipleResponse
@@ -332,7 +340,7 @@
         href: manifest-schema-reference/feature-usage.md
       - name: uses-feature
         href: manifest-schema-reference/uses-feature.md
-  - name: Community Resources
-    href: https://powerusers.microsoft.com/t5/PowerApps-Component-Framework/Community-content-sample-components-blogs-etc-Link-to-this-page/m-p/280710#M100
+  - name: Community resources
+    href: community-resources.md
   - name: Share your feedback
     href: share-your-feedback-for-pcf.md

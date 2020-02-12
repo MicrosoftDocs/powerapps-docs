@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 7/22/2019
+ms.date: 1/20/2020
 ms.author: mduelae
 ms.custom: ""
 ms.reviewer: ""
@@ -46,7 +46,7 @@ Use the **Share** option if you want to keep ownership of the record but let som
 
 ## Use advanced find to reassign records
 
-Use advanced find to search for records and then reassign them to someone else. For more information on advanced find, see [Create, edit, or save an Advanced Find search](create-edit-or-save-advanced-find-search.md).
+Use advanced find to search for records and then reassign them to someone else. For more information on advanced find, see [Create, edit, or save an Advanced Find search](advanced-find.md).
 
 
 1. On the command bar, select **Advanced Find**.
@@ -74,7 +74,7 @@ Use advanced find to search for records and then reassign them to someone else. 
  4. On the **Reassign Records** dialog box choose how to want to reassign all the records and then select **OK**.
  
   > [!NOTE]
-   > The **Reassign Records** option will reassign all records regardless of their status. Inactive and active records will be reassigned to the other user or team.
+   > The **Reassign Records** option will reassign all records regardless of their status. Inactive and active records will be reassigned to the other user or team. This will also deactivate all activated processes including business rules and workflows when the record is reassigned to another user or team. The new owner must active the processes which must be used.
  
    > [!div class="mx-imgBorder"]
    > ![Reassign all records to user or team](media/assign6.png "Reassign all records to user or team")

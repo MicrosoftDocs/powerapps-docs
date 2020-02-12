@@ -1,14 +1,14 @@
 ---
 title: "Add azure storage web resource to a form | MicrosoftDocs"
 description: "Steps to add azure storage web resource to a form to enable uploading attachments to Azure Storage."
-author: sbmjais
-manager: shujoshi
+author: tapanm-msft
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/11/2019
-ms.author: shjais
-ms.reviewer:
+ms.date: 01/07/2020
+ms.author: tapanm
+ms.reviewer: tapanm
 ---
 
 # Add the Azure Storage web resource to a form
@@ -62,7 +62,7 @@ The paper-clip icon has been replaced with a cloud icon to denote that this file
 
 > [!Note]
 > You must add cross-origin resource sharing (CORS) rule on your Azure Storage account as follows, otherwise you will see the regular attachment icon rather than the cloud icon.
-> - **Allowed origins**: Specify your domain. For example, `http://contoso.crm.dynamics.com`.
+> - **Allowed origins**: Specify your domain. For example, `https://contoso.crm.dynamics.com`.
 > - **Allowed verbs**: GET, PUT, DELETE, HEAD, POST
 > - **Allowed headers**: Specify the request headers that the origin domain may specify on the CORS request. For example, x-ms-meta-data\*, x-ms-meta-target\*. For this scenario, you must specify *, otherwise the web resource will not render properly.
 > - **Exposed headers**: Specify the response headers that may be sent in the response to the CORS request and exposed by the browser to the request issuer. For example, x-ms-meta-\*.
@@ -82,13 +82,15 @@ If the attached file is an image, the control will display the image as a thumbn
 The [cross-origin resource sharing (CORS)](https://www.w3.org/TR/cors/) protocol consists of a set of headers that indicates whether a response can be shared with another domain.
 The following site settings are used to configure CORS:
 
-|                 Name                  |                                                                            Description                                                                            |
-|---------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| HTTP/Access-Control-Allow-Credentials | The only valid value for this header is true (case-sensitive). If you don't need credentials, omit this header entirely (rather than setting its value to false). |
-|   HTTP/Access-Control-Allow-Headers   |                                                   A comma-delimited list of the supported HTTP request headers.                                                   |
-|   HTTP/Access-Control-Allow-Methods   |                                      A comma-delimited list of the allowed HTTP request methods such as GET, POST, OPTIONS.                                       |
-|   HTTP/Access-Control-Allow-Origin    |                   To allow any resource to access your resources, you can specify \*. Otherwise, specify the URI that can access the resources.                   |
-|  HTTP/Access-Control-Expose-Headers   |                A comma-delimited list of HTTP header names other than the simple response headers that the resource might use and can be exposed.                 |
-|      HTTP/Access-Control-Max-Age      |                                                       Maximum number of seconds the results can be cached.                                                        |
-|                                       |                                                                                                                                                                   |
-
+| Site Setting | Request Header | Description |
+|-|-|-|
+| HTTP/Access-Control-Allow-Credentials | Access-Control-Allow-Credentials | The only valid value for this header is true (case-sensitive). If you don't need credentials, omit this header entirely (rather than setting its value to false). 
+| HTTP/Access-Control-Allow-Headers | Access-Control-Allow-Headers | A comma-delimited list of the supported HTTP request headers.
+| HTTP/Access-Control-Allow-Methods | Access-Control-Allow-Methods | A comma-delimited list of the allowed HTTP request methods such as GET, POST, OPTIONS.
+| HTTP/Access-Control-Allow-Origin | Access-Control-Allow-Origin | To allow any resource to access your resources, you can specify \*. Otherwise, specify the URI that can access the resources.                   |
+|  HTTP/Access-Control-Expose-Headers | Access-Control-Expose-Headers | A comma-delimited list of HTTP header names other than the simple response headers that the resource might use and can be exposed.
+| HTTP/Access-Control-Max-Age | Access-Control-Max-Age |  Maximum number of seconds the results can be cached.
+| HTTP/Content-Security-Policy | Content-Security-Policy | Controls resources the user agent is allowed to load for a given page.
+| HTTP/Content-Security-Policy-Report-Only | Content-Security-Policy-Report-Only | Allows web developers to experiment with policies by monitoring, but not enforcing, their effects. These violation reports consist of JSON documents sent via an HTTP POST request to the specified URI.
+| HTTP/X-Frame-Options | X-Frame-Options | Indicates whether a browser should be allowed to render a page in a *\<frame\>*, *\<iframe\>*, *\<embed\>* or *\<object\>*.
+| HTTP/X-Content-Type-Options | X-Content-Type-Options | Disables MIME sniffing and forces browser to use the type given in *Content-Type*.

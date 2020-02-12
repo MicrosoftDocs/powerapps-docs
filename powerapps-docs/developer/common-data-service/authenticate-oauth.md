@@ -162,7 +162,7 @@ The following is an example of a custom class derived from <xref:System.Net.Http
 
 ```csharp
   /// <summary>  
-  ///Custom HTTP message handler that uses OAuth authentication thru ADAL.  
+  ///Custom HTTP message handler that uses OAuth authentication through ADAL.  
   /// </summary>  
   class OAuthMessageHandler : DelegatingHandler
   {

@@ -54,15 +54,13 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 1. The `ExportSolutionRequest` method exports the created solution in the [Setup](#setup).
 1. The `DeleteSolutionRequest` method deletes the solution and the components.
 
-
 ### Demonstrate
+
 1. The `querySDKSamplePublisher` method checks whether the publisher is already in the system.
 1. The `querySampleSolutionResults` method checks whether the solution is already in the system.
-1. The `ExportSolutionRequest` method exports the solution. 
+1. The `ExportSolutionRequest` method exports the solution.
 1. The `ImportSolutionRequest` method imports the solution.
 
 ### Clean up
 
-1. Displays an option to delete all the data created in the sample.
-
-The deletion is optional in case you want to examine the data created by the sample. You can manually delete the data to achieve same results.
+Displays an option to delete all the data created in the sample. The deletion is optional in case you want to examine the data created by the sample. You can manually delete the data to achieve same results.

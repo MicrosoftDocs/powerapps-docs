@@ -228,14 +228,13 @@ ms.custom:
                                     <hr/>
                                     <ul>
                                        <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/getting-started">What are canvas apps?</a></p>
-                                       <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/data-platform-create-app">Generate an app automatically</a></p>
-                                       <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/data-platform-create-app-scratch">Build an app yourself</a></p>
-                                       <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/open-and-run-a-sample-app">Customize a sample app</a></p>
-                                       <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/customize-list-form">Customize a SharePoint form</a></p>
+                                       <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/open-and-run-a-sample-app">Create a sample app</a></p>
+                                       <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/data-platform-create-app-scratch">Build an app from scratch</a></p>
                                        <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/connections-list">Connectors</a></p>
                                        <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/common-data-service/data-platform-create-business-rule">Apply business logic</a></p>
-                                       <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/reference-properties">Controls reference</a></p>
-                                       <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/formula-reference">Formula reference</a></p>
+                                       <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/add-configure-controls">Design the interface</a></p>
+                                       <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/working-with-formulas">Configure app functionality</a></p>
+                                       <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/edit-app">Manage an app</a></p>
                                        <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/share-app">Share an app</a></p>
                                     </ul>
                                  </div>
@@ -349,6 +348,7 @@ ms.custom:
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/power-platform/admin/get-help-support">Get Help + Support</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/power-platform/admin/preview-april-2019-updates">Opt in to 2019 release wave 2</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/power-platform/admin/admin-settings">Manage settings</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="https://aka.ms/powerappsadminwhitepaper">Whitepaper: Administering a low-code development platform</a></p>
                                  </div>
                               </div>
                            </div>
@@ -603,6 +603,7 @@ ms.custom:
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/isv-app-management">ISV app management and monitoring</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/publish-app-appsource">Publish your app on AppSource</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="https://www.microsoft.com/download/details.aspx?id=57777">Whitepaper: ALM using solutions</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/powerapps-cli"> Get Power Apps CLI</a></p>
                                  </div>
                               </div>
                            </div>

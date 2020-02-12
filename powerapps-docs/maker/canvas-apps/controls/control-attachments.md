@@ -86,7 +86,7 @@ An **Attachments** control lets you open, add, and delete files from a SharePoin
 
     The Attachments field associated with the SharePoint list will appear in the form.
 
-[Learn how to add and configure a control].(../add-configure-controls.md)
+[Learn how to add and configure a control](../add-configure-controls.md)
 
 
 ## Accessibility guidelines

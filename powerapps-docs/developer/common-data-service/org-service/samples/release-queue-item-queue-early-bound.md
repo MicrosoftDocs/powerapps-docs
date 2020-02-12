@@ -20,7 +20,7 @@ search.app:
 <!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/sample-release-queue-item-queue-early-bound
 Couldn't each of the operations in this series of samples be added to just one sample?
  -->
- This sample shows how to use [ReleaseToQueueRequest](https://docs.microsoft.com/dotnet/api/microsoft.crm.sdk.messages.releasetoqueuerequest?view=dynamics-general-ce-9) to dissociate a user from a queue item that he or she worked on and release a queue item back to the queue. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/ReleaseQueueItems).
+This sample shows how to use [ReleaseToQueueRequest](https://docs.microsoft.com/dotnet/api/microsoft.crm.sdk.messages.releasetoqueuerequest?view=dynamics-general-ce-9) to dissociate a user from a queue item that he or she worked on and release a queue item back to the queue. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/ReleaseQueueItems).
 
 ## How to run this sample
 
@@ -43,10 +43,8 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 
 ### Demonstrate
 
-1. The `ReleaseToQueueRequest` message removes worker from queue item to release queued object from worker's queue.
+The `ReleaseToQueueRequest` message removes worker from queue item to release queued object from worker's queue.
 
 ### Clean up
 
-1. Display an option to delete the sample data created in [Setup](#setup).
-
-    The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the records to achieve the same result.
+Display an option to delete the sample data created in [Setup](#setup). The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the records to achieve the same result.

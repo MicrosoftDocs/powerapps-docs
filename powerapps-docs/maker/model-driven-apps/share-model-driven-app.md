@@ -10,7 +10,7 @@ ms.service: powerapps
 ms.devlang: na
 ms.topic: conceptual
 ms.component: model
-ms.date: 11/18/2019
+ms.date: 12/17/2019
 ms.author: matp
 search.audienceType: 
   - maker
@@ -163,7 +163,11 @@ These predefined roles are available with a [!INCLUDE [powerapps](../../includes
 
 *Privilege is global scope unless specified otherwise.
 
-## Next steps
+## Use Azure Active Directory groups to manage access
+Administrators can use their organization’s Azure Active Directory (Azure AD) groups to manage access rights for licensed Common Data Service users. Both types of Azure AD groups—Office and Security—can be used to secure user-access rights to an app. More information: [About group teams](/power-platform/admin/manage-teams.md#about-group-teams) 
+
+
+### See also
 [Run a model-driven app on a mobile device](../../user/run-app-client-model-driven.md)
 
 

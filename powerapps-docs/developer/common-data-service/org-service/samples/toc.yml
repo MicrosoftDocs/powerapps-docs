@@ -10,14 +10,32 @@
     href: promote-email-message.md
   - name: 'Retrieve email attachments for an email template'
     href: retrieve-email-attachments-email-template.md
-  - name: 'Send an email using a template'
-    href: send-email-template.md
   - name: 'Send an email'
     href: send-email.md
+  - name: 'Send an email using a template'
+    href: send-email-template.md
   - name: 'Send bulk email and monitor results'
     href: send-bulk-email-monitor-results.md
+  - name: Upload, retrieve and download attachments
+    href: upload-retrieve-download-attachment.md
   - name: 'Work with activity party records'
     href: work-activity-party-records.md
+- name: Adminstration & security
+  items:
+  - name: Assign security role to team
+    href: associate-security-role-team.md
+  - name: Associate security role to a user
+    href: associate-security-role-user.md
+  - name: Determine whether a user has a role
+    href: determine-whether-user-has-role.md
+  - name: Disable or enable a user
+    href: disable-a-user.md
+  - name: Remove a role for a user
+    href: remove-role-for-user.md
+  - name: Retrieve license information
+    href: retrieve-license-information.md
+  - name: Retrieve roles for an organization
+    href: retrieve-roles-for-organization.md
 - name: Appointments
   items:
   - name: 'Book an appointment'
@@ -67,7 +85,19 @@
 - name: Change tracking
   items: 
   - name: Synchronize data with external systems using change tracking
-    href: synchronize-data-external-systems-using-change-tracking.md      
+    href: synchronize-data-external-systems-using-change-tracking.md   
+- name: Charts & dashboards
+  items:
+  - name: Assign chart to another user
+    href: assign-chart-to-another-user.md
+  - name: Assign a user-owned dashboard to another user
+    href: assign-dashboard-to-another-user.md
+  - name: Create, retrieve, update and delete a dashboard
+    href: create-retrieve-update-delete-dashboards.md
+  - name: Create, retrieve, update and delete chart
+    href: create-retrieve-update-delete-charts.md 
+  - name: Retrieve all charts attached to an entity
+    href: retrieve-charts-attached-to-entity.md
 - name: Connections
   items:
   - name: Create a connection
@@ -82,6 +112,8 @@
     href: query-connection-roles-entity-type-code-early-bound.md
   - name: Query connections by reciprocal roles
     href: query-connections-reciprocal-roles-early-bound.md
+  - name: Update a connection role
+    href: update-connection-role.md
 - name: Currency
   items:       
   - name: Retrieve currency exchange rate
@@ -90,10 +122,32 @@
   items:
   - name: Create a custom activity
     href: create-custom-activity.md
+  - name: Create and retrieve entity relationships
+    href: create-retrieve-entity-relationships.md
+  - name: Create and update an emailable entity
+    href: create-update-emailable-entity.md
+  - name: Create and update entity metadata
+    href: create-update-entity-metadata.md
+  - name: Dump attribute metadata to a file
+    href: dump-attribute-metadata.md
   - name: Dump entity metadata to a file
     href: dump-entity-metadata-file.md
+  - name: Dump entity privilege information to a file
+    href: dump-entity-priviliges.md
+  - name: Dump entity relationships information to a file
+    href: dump-entity-relationships.md
+  - name: Dump picklist information to a file
+    href: dump-picklist-information.md
+  - name: Dump global option set information to a file
+    href: dump-global-option-set.md
+  - name: Export ribbon definitions
+    href: export-ribbon-definitions.md
   - name: Retrieve valid status transitions
     href: retrieve-valid-status-transitions.md
+  - name: Work with attributes
+    href: work-with-attributes.md
+  - name: Work with option sets
+    href: work-with-option-sets.md
 - name: Duplicate Detection
   items:
   - name: Detect multiple duplicate records
@@ -103,29 +157,45 @@
   - name: Use duplicate detection when creating and updating records
     href: use-duplicate-detection-when-creating-and-updating-records.md      
 - name: Entity records
-  items:
+  items: 
+  - name: Assign a record to a new owner
+    href: assign-record-to-new-owner.md
+  - name: Assign a record to a team
+    href: assign-records-to-team.md
+  - name: Create and update records with related records
+    href: create-update-records-with-related-records.md
   - name: Early-bound entity operations
     href: early-bound-entity-operations.md
   - name: Late-bound entity operations
     href: late-bound-entity-operations.md
-  - name: Use optimistic concurrency with update and delete operations
-    href: use-optimistic-concurrency-update-delete-operations.md        
+  - name: Initialize a record from an existing record
+    href: initialize-record-from-existing-record.md
+  - name: Insert or update a record using Upsert
+    href: insert-update-record-upsert.md
+  - name: Merge two records
+    href: merge-two-records.md
+  - name: Serialize and deserialize an entity
+    href: serialize-deserialize-entity.md
+  - name: Set and retrieve entity images
+    href: set-retrieve-entity-images.md
   - name: Share a record using an access team
     href: share-record-using-access-team.md
   - name: Share records using GrantAccess, ModifyAccess and RevokeAccess messages
     href: share-records-using-grantaccess-modifyaccess-revokeaccess-messages.md
+  - name: Validate and ser state of an entity
+    href: validate-record-state.md
   - name: Upload, retrieve, and download an attachment
     href: upload-retrieve-download-attachment.md
-  - name: Insert or update a record using Upsert
-    href: insert-update-record-upsert.md
+  - name: Use optimistic concurrency with update and delete operations
+    href: use-optimistic-concurrency-update-delete-operations.md 
 - name: Field Level Security
   items:
+  - name: Enable field security for an entity
+    href: enable-field-security-entity.md
   - name: Retrieve field permissions
     href: retrieve-field-permissions.md
   - name: Retrieve field sharing records
     href: retrieve-field-sharing-records.md
-  - name: Enable field security for an entity
-    href: enable-field-security-entity.md
 - name: Goal management
   items:
   - name: Rollup goal data for a custom period against the target revenue
@@ -142,6 +212,10 @@
     href: export-import-data-map.md
   - name: Import data using complex data map
     href: import-data-complex-data-map.md
+- name: Outlook
+  items:
+  - name: Create and retrieve Outlook filters
+    href: create-retrieve-outlook-filters.md
 - name: Plug-ins
   items:
   - name: Create a basic plug-in
@@ -149,19 +223,33 @@
   - name: Modify query in PreOperation stage
     href: modify-query-preoperation-stage.md
   - name: Web access from a plug-in
-    href: web-access-plugin.md    
+    href: web-access-plugin.md     
 - name: Queues
   items:
   - name: Add a record to a queue
     href: add-record-queue-early-bound.md
   - name: Add a security principal (user or team) to a queue 
     href: add-security-principal-user-team-queue-early-bound.md
+  - name: Create a queue
+    href: create-queues.md
   - name: Clean up history for a queue
     href: clean-up-history-queue-early-bound.md
+  - name: Delete a queue
+    href: delete-queues.md
   - name: Release a queue item to the queue
     href: release-queue-item-queue-early-bound.md
+  - name: Share a queue
+    href: share-queue.md
   - name: Specify a queue item to work on
     href: specify-queue-item-work-early-bound.md
+- name: Reports
+  items:
+  - name: Get report history limit
+    href: get-report-history-limit.md
+  - name: Make report available or unavailable to organization
+    href: make-report-available-to-organization.md
+  - name: Publish a report
+    href: publish-report.md
 - name: SharePoint
   items:    
   - name: Retrieve absolute URL and site collection URL of a location record
@@ -170,6 +258,8 @@
   items:
   - name: Execute multiple requests
     href: execute-multiple-requests.md
+  - name: Execute multiple requests in transaction
+    href: execute-multiple-transaction.md
 - name: Solutions
   items:
   - name: Work with solutions
@@ -182,6 +272,8 @@
     href: retrieve-time-zone-information.md
 - name: Query Data
   items:
+  - name: Query data using LINQ
+    href: query-using-linq.md
   - name: Use QueryExpression with a paging cookie
     href: use-queryexpression-with-a-paging-cookie.md
   - name: Retrieve multiple with the QueryExpression class
@@ -198,5 +290,11 @@
     href: use-aggregation-fetchxml.md
   - name: Use FetchXML with a paging cookie
     href: use-fetchxml-paging-cookie.md
+- name: Web resources
+  items:
+  - name: Import files as web resources
+    href: import-files-as-web-resources.md
+- name: Workflow operations
+  href: workflow-operations.md
 - name: Access the Discovery service
   href: access-discovery-service.md

@@ -1,14 +1,14 @@
 ---
 title: Frequently asked questions | Microsoft Docs
 description: Frequently asked questions in Power Apps portals.
-author: sbmjais
-manager: shujoshi
+author: tapanm-msft
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/14/2019
-ms.author: shjais
-ms.reviewer:
+ms.date: 02/03/2020
+ms.author: tapanm
+ms.reviewer: 
 ---
 
 # Power Apps portals FAQ
@@ -16,6 +16,37 @@ ms.reviewer:
 We have compiled a list of frequently asked questions and provided brief answers to help you get to your information quickly.
 
 ## General
+
+### Does Power Apps portals support TLS 1.2?
+
+Power Apps portals version 8.3 and later supports [TLS 1.2](https://support.microsoft.com/help/4041984/portal-capabilities-for-microsoft-dynamics-365-version-8-3-2-85-releas).
+
+### What is the difference between Power Apps portals, Dynamics 365 portals and add-on portals?
+
+With the launch of Power Apps portals on October 1, 2019, Dynamics 365 portals are called as Power Apps portals. In other words, all portals are referred to as **Power Apps portals**.
+
+One of the major changes introduced in portals after October 1, 2019 is the licensing model. Earlier, portals were licensed add-ons to Dynamics 365 apps while certain Dynamics 365 licenses included a default portal add-on. After October 1, 2019, portals are [licensed based on usage](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#can-you-share-more-details-regarding-the-new-power-apps-portals-licensing). All existing portals will be part of a transition period based on current customer contract after which they will need to be converted to a new licensing model.
+
+You can check the type of a portal from the [Power Apps Portals admin center](./admin/admin-overview.md):
+
+![Power Apps portals type](./media/power-apps-portals-type.png)
+
+For add-on portals, the portal type has 'add-on' suffix added. For example, a production add-on portal type lists as 'Production (add-on)'.
+
+There is no difference in functionality between Power Apps portals with capacity-based licenses and add-on based licenses. However, provisioning method for portals with capacity-based licenses and add-on based licenses is different.
+
+You can create Power Apps portal with capacity-based license using steps described in following articles:
+
+- [Create a Common Data Service starter portal](create-portal.md)
+- [Create a portal with Dynamics 365 environment](create-dynamics-portal.md)
+
+To create Power Apps portal with add-on based license, see [provisioning a portal using portal add-on](provision-portal-add-on.md).
+
+See [Power Apps portals licensing FAQ](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#what-is-the-difference-between-power-apps-portals-and-dynamics-365-portals-in-terms-of-licensing) for licensing differences between add-on based licenses and capacity-based licenses.
+
+### When is an add-on portal in suspended state?
+
+Portal [provisioned using portal add-on plan](provision-portal-add-on.md) purchased earlier is suspended at the end of expiration. This expiration period is 30 days for trial portals while it may vary for an add-on portal in production with a purchased license. Suspended trial portal is deleted after 7 days while suspension period may vary for production portal. For more details, read the [portal lifecycle](./admin/portal-lifecycle.md#considerations-for-add-on-portals) for add-on portals.
 
 ### How do I redirect a user to a default page after signing in?
 
@@ -110,11 +141,7 @@ Internal users of an organization that use portals for accessing authenticated p
 
 ### How do I get a portal subscription?
 
-You can get a portal subscription by either of the following ways:
-
-- One portal add-on is provided along with the purchase of a certain type and quantity of user license. Details are available in the Dynamics 365 pricing and licensing guide. It is important to note that you get only one portal add-on with user licenses even if you have bought multiple type or quantity of valid licenses.
-
-- Additional portal subscriptions can be purchased by purchasing a Portal Add-on subscription. This subscription is an add-on subscription and is available to be purchased if you have the appropriate Dynamics 365 licenses.
+[Power Apps portals](overview.md) are now available completely standalone inside of Power Apps. You no longer need to acquire license to provision a portal. User access to the portal requires license depending on persona type. Read more details at [Power Apps portals licensing FAQ](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#can-you-share-more-details-regarding-the-new-power-apps-portals-licensing).
 
 ### How do I change the audience and type of a portal after it is provisioned?
 
@@ -199,6 +226,15 @@ It is advisable to use this only when you are developing a portal. Once your por
 When you enable diagnostic logging, you can search for particular errors that users report by using the Activity ID shown on the generic error page. The Activity ID is logged along with the error details and is useful to find the actual issue.
 
 ## Portal administration and management
+
+### Do portals use any static content from CDNs (Content Delivery Network) that I need to whitelist?
+
+Yes. Power Apps portals uses out of the box portal's static assets from Azure CDN that includes default JavaScript and CSS files for presentation that earlier rendered as part of the portal app. You must whitelist the following CDN URL to render portals successfully:
+
+    https://content.powerapps.com/resource/powerappsportal
+
+> [!NOTE]
+> Power Apps portals hosted in Microsoft Government Cloud do not use CDN.
 
 ### How do I use a custom login provider on my portal?
 
@@ -401,4 +437,177 @@ To avoid this, you can perform the following steps:
 2. While loading a JavaScript file on demand on any page, use `<async>` or `<defer>` HTML attribute to load the file asynchronously.
 3. While loading a CSS file on demand, you can use `<preload>` HTML attribute (https://www.w3.org/TR/preload/) or JavaScript based approach since preload is not supported on all the browsers yet.
 
+#### Entity form lookup configuration 
 
+Enabling a lookup to render as a drop-down mode in entity forms or web forms can be performance intensive if the amount of records shown in the drop-down exceed 200 and are changed frequently. This option should only be used for static lookups, such as country list and state list, having a limited number of records.
+
+If this option is enabled for lookups which can have large number of records, it will slow down the load time of the webpage on which entity form is available. If this page is used by a lot of users and is loaded a lot of times, it can slow down the whole website and the website resources would be used to render this page. For these situations, full lookup experience should be used or a custom HTML control which calls an AJAX endpoint (created using web templates) should be built for the desired look and feel.
+
+#### Number of web roles
+
+Web roles are used in portals to enable role-based access control. Typically, the number of web roles in a portal are limited as the number of different combinations of permissions would be limited as well. If the number of web roles exceed 100 in your portal, it can cause performance issues which can affect all pages of your portal.
+
+### An active Home site marker is not available for this portal
+
+This issue occurs when the **Home** site marker is not available in your portal configuration. To fix this issue:
+
+1.	Open the [Portal Management app](configure/configure-portal.md).
+2.	In the left pane, select **Site Markers**.
+3.	Create a new site marker with following values: 
+  - **Name**: Home
+  - **Website**: Select the website of your portal host.
+  - **Page**: Select the webpage record that is set as the home page of your portal.
+
+### The Home site marker is not pointing to any webpage
+
+This issue occurs when the **Home** site marker is available but is not pointing to any webpage. To fix this issue:
+
+1.	Open the [Portal Management app](configure/configure-portal.md).
+2.	In the left pane, select **Site Markers**.
+3.	Find the **Home** site marker record.
+4.	Update the **Page** field to point to an active home page of your portal.
+
+### The Home site marker is pointing to a deactivated web page
+
+This issue occurs when the **Home** site marker is available, but is pointing to a deactivated webpage. To fix this issue:
+
+1.	Open the [Portal Management app](configure/configure-portal.md).
+2.	In the left pane, select **Site Markers**.
+3.	Find the **Home** site marker record.
+4.	Update the **Page** field to point to an active home page of your portal.
+
+### The Home site marker is not pointing to home page of the portal
+
+This issue occurs when the **Home** site marker is available, but is pointing to a webpage that is not a home page of your portal. To fix this issue:
+
+1.	Open the [Portal Management app](configure/configure-portal.md).
+2.	In the left pane, select **Site Markers**.
+3.	Find the **Home** site marker record.
+4.	Update the **Page** field to point to an active home page of your portal.
+
+### An active Profile site marker is not available for this portal
+
+This issue occurs when the **Profile** site marker is not available in your portal configuration. To fix this issue:
+
+1.	Open the [Portal Management app](configure/configure-portal.md).
+2.	In the left pane, select **Site Markers**.
+3.	Create a new site marker with following values: 
+  - **Name**: Profile
+  - **Website**: Select the website of your portal host.
+  - **Page**: Select the webpage record that is set as the profile page of your portal.
+
+### The Profile site marker is not pointing to any webpage
+
+This issue occurs when the **Profile** site marker is available but is not pointing to any webpage. To fix this issue:
+
+1.	Open the [Portal Management app](configure/configure-portal.md).
+2.	In the left pane, select **Site Markers**.
+3.	Find the **Profile** site marker record.
+4.	Update the **Page** field to point to an active profile page of your portal.
+
+### The Profile site marker is pointing to a deactivated web page
+
+This issue occurs when the **Profile** site marker is available, but is pointing to a deactivated webpage. To fix this issue:
+
+1.	Open the [Portal Management app](configure/configure-portal.md).
+2.	In the left pane, select **Site Markers**.
+3.	Find the **Profile** site marker record.
+4.	Update the **Page** field to point to an active profile page of your portal.
+
+### An active Page Not Found site marker is not available for this portal
+
+This issue occurs when the **Page Not Found** site marker is not available in your portal configuration. To fix this issue:
+
+1.	Open the [Portal Management app](configure/configure-portal.md).
+2.	In the left pane, select **Site Markers**.
+3.	Create a new site marker with following values: 
+  - **Name**: Page Not Found
+  - **Website**: Select the website of your portal host.
+  - **Page**: Select the webpage record that is set as the Page Not Found page of your portal.
+
+### The Page Not Found site marker is not pointing to any webpage
+
+This issue occurs when the **Page Not Found** site marker is available but is not pointing to any webpage. To fix this issue:
+
+1.	Open the [Portal Management app](configure/configure-portal.md).
+2.	In the left pane, select **Site Markers**.
+3.	Find the **Page Not Found** site marker record.
+4.	Update the **Page** field to point to an active Page Not Found page of your portal.
+
+### The Page Not Found site marker is pointing to a deactivated web page
+
+This issue occurs when the **Page Not Found** site marker is available, but is pointing to a deactivated webpage. To fix this issue:
+
+1.	Open the [Portal Management app](configure/configure-portal.md).
+2.	In the left pane, select **Site Markers**.
+3.	Find the **Page Not Found** site marker record.
+4.	Update the **Page** field to point to an active Page Not Found page of your portal.
+
+### An active Access Denied site marker is not available for this portal
+
+This issue occurs when the **Access Denied** site marker is not available in your portal configuration. To fix this issue:
+
+1.	Open the [Portal Management app](configure/configure-portal.md).
+2.	In the left pane, select **Site Markers**.
+3.	Create a new site marker with following values: 
+  - **Name**: Access Denied
+  - **Website**: Select the website of your portal host.
+  - **Page**: Select the webpage record that is set as the Access Denied page of your portal.
+
+### The Access Denied site marker is not pointing to any webpage
+
+This issue occurs when the **Access Denied** site marker is available but is not pointing to any webpage. To fix this issue:
+
+1.	Open the [Portal Management app](configure/configure-portal.md).
+2.	In the left pane, select **Site Markers**.
+3.	Find the **Access Denied** site marker record.
+4.	Update the **Page** field to point to an active Access Denied page of your portal.
+
+### The Access Denied site marker is pointing to a deactivated web page
+
+This issue occurs when the **Access Denied** site marker is available, but is pointing to a deactivated webpage (root or content page can be deactivated). To fix this issue:
+
+1.	Open the [Portal Management app](configure/configure-portal.md).
+2.	In the left pane, select **Site Markers**.
+3.	Find the **Access Denied** site marker record.
+4.	Update the **Page** field to point to an active Access Denied page of your portal.
+
+### Profile web form is not available for contact entity
+
+Profile page is one of the common pages used in your portal for all profile related issues. This page shows a form that can be used by users to update their profile. Form used on this page comes from the **Profile Web Page** main form available in the Contact entity. This form is created in your Common Data Service environment when portal is provisioned. This error is displayed when the **Profile** web form is either deleted or disabled in your portal. This form is mandatory and deleting or disabling this form can break the whole website displaying runtime error on portal. This is an irreparable state and requires portal to be reinstalled in the environment.
+
+### Published state is not available for this website
+
+To fix this issue, ensure that the publishing state entity **Published** is available and active.
+
+### Published state is not visible
+
+To fix this issue, ensure that the publishing state entity **Published** has the **isVisible** check box is selected.
+
+### List of entities with search result having invalid URL
+
+To fix this issue, ensure that your entity has appropriate security permission.
+
+### List of entities with CMS security check failed
+
+To fix this issue, ensure that your entity has proper search page.
+
+### Web file is not active
+
+To fix this issue, ensure that the web file is in active state.
+
+### The partial URL of web file is misconfigured
+
+To fix this issue, ensure that the partial URL is the file name with Home as the root page.
+
+### Web file doesn't have a file attachment
+
+To fix this issue, add the corresponding CSS file in the notes section of the web file.
+
+### File attachment doesn't have content
+
+To fix this issue, add the CSS file with entire content in the notes section of the web file.
+
+### MIME type of file is not text/css
+
+To fix this issue, ensure that there are no plugins or flows which overrides the MIME type of the CSS file(s).

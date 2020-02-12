@@ -80,7 +80,7 @@ Xrm.WebApi.online.executeMultiple(requests).then(successCallback, errorCallback)
 <td>successCallback</td>
 <td>Function</td>
 <td>No</td>
-<td><p>A function to call when operation is executed suucessfully. An array of response objects are passed to the function where weach response object has the following attributes:</p>
+<td><p>A function to call when operation is executed successfully. An array of response objects are passed to the function where each response object has the following attributes:</p>
 <ul>
 <li><b>body</b>: (Optional). Object. Response body.</li>
 <li><b>headers</b>: Object. Response headers.</li>
