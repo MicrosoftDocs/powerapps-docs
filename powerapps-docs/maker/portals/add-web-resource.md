@@ -18,8 +18,7 @@ Attachments uploaded to Azure Storage instead of directly to Common Data Service
 To enable attachments from a particular form to be uploaded into Azure Storage, you must add a web resource to that form and you must [configure Azure Storage for your organization](enable-azure-storage.md).
 
 > [!NOTE]
-> - In this example, the form is added to the Lead form for the Lead entity. We recommend using caution when editing existing forms.
-> - Azure blob storage web resource only works with attachments in *notes* and not in *portal comments*.
+In this example, the form is added to the Lead form for the Lead entity. We recommend using caution when editing existing forms.
 
 When a file (for example, attachments.zip) is uploaded to Azure Storage by using the portal, it is represented by a note on an entity and a placeholder for the attachment.
 

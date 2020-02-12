@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 01/07/2020
+ms.date: 02/12/2020
 ms.author: tapanm
 ms.reviewer: tapanm
 ---
@@ -18,6 +18,8 @@ Azure Storage integration for portals enables you to take advantage of the great
 You must create a storage account with **Resource manager** as the deployment model. [!include[More information](../../includes/proc-more-information.md)] [Create an Azure storage account](https://docs.microsoft.com/azure/storage/storage-create-storage-account#create-a-storage-account).
 
 After the storage account is running, portals require certain global settings that tell the application how to locate your storage account. In the Portal Management app, go to **Settings** > **New**, and add a new setting named **FileStorage/CloudStorageAccount**.
+
+Azure storage integration only works with **Notes** configured in Entity Form Metadata. Azure Blob as a storage is not used if you use **Portal Comments** that can be setup using **Timeline**. Though Portal Comments also provide capability for files to be uploaded as attachments, these files are only stored in Common Data Service.
 
 > [!NOTE]
 > The maximum file upload size is 125 MB.
