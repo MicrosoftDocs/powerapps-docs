@@ -31,6 +31,9 @@ Add **Activities** in the **Timeline** wall to keep track of all your communicat
   > [!div class="mx-imgBorder"]
   > ![Timeline view of activities in Power Apps](media/TimelineViewOfActivity.png "Timeline view of activities in Power Apps")
 
+
+Legend:
+
   1. Search Records
   2. Take notes
   3. Add info and activities
