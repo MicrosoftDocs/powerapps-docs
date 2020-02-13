@@ -16,7 +16,7 @@ search.app:
 
 # OnLookupTagClick Event (Client API reference)
 
-This event occurs when the the user clicks the tag in a lookup control. 
+This event occurs when the the user clicks the red tag in a lookup control. 
 
 An execution context object is passed to event handlers for this event. You can use the [getEventArgs](../executioncontext/getEventArgs.md) method to retrieve an object that has the **getTagValue** method. 
 
