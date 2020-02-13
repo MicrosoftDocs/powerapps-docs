@@ -9,8 +9,9 @@
   - name: "What's new?"
     href: ../whats-new.md
   - name: "Learning Catalog"
-    href: ../learning catalog/learning-catalog.md
     items: 
+    - name: "Learning Catalog"
+      href: ../learning catalog/learning-catalog.md
     - name: Business Decision Maker
       href: ../learning catalog/learning-catalog-bdm.md
     - name: Application Maker
