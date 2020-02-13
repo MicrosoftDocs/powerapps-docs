@@ -106,10 +106,12 @@ To add an email activity to a record, you must first save the record you are add
 
 ### List emails in a conversation view
 
-To list emails in a conversation view, go to **Settings** > **Personalization Settings** > **Email** tab and then select **Show email as a conversation on Timeline**. For more information on personal settings, see [Set personal options](https://docs.microsoft.com/powerapps/user/set-personal-options#email-tab-options). Once enabled, you can open any form that has a timeline and your emails will be grouped into conversation threads with the latest email at the top.
+1. To list emails in a conversation view, go to **Settings** > **Personalization Settings**.
 
    > [!div class="mx-imgBorder"]
    > ![Set personal options](media/emailsettings1.png "Set personal options")
+
+2. on the **Email** tab and select **Show email as a conversation on Timeline**. For more information on personal settings, see [Set personal options](https://docs.microsoft.com/powerapps/user/set-personal-options#email-tab-options). Once enabled, you can open any form that has a timeline and your emails will be grouped into conversation threads with the latest email at the top.
    
    > [!div class="mx-imgBorder"]
    > ![Set personal options email](media/emailsettings2.png "Set personal options for email")
@@ -146,6 +148,7 @@ You can also easily add notes in the activities area.
 
 > [!NOTE]
 > You can also add a note by selecting **Add info and activities**  ![Add activities](media/add-activity-button.png "Add activities button") > **Note**.
+
    > [!div class="mx-imgBorder"]
    > ![Add a note](media/addnote.png "Add a note")
 
@@ -174,7 +177,7 @@ To edit or delete the note once it has been saved, select the note and then sele
 
 You can refresh the timeline wall to see the most up to date information.
 
-In the **Timeline** wall, select ![More button ](media/MoreButton.png "More button") and then select **Refresh Timeline**.
+In the **Timeline** section, select ![More button ](media/MoreButton.png "More button") and then select **Refresh Timeline**.
 
 > [!div class="mx-imgBorder"]
 > ![Refresh the Timeline ](media/refresh.png "Refresh the Timeline")
@@ -184,7 +187,7 @@ In the **Timeline** wall, select ![More button ](media/MoreButton.png "More butt
 
 Quickly filter activities, notes or posts in the timeline wall by record type or activity type and date using the filter pane. You can select multiple filters and filter options at the same time. You can filter and see activity due date, modified date, or by the status of the activity.
 
-- In the **Timeline** wall, select **Open Filter Pane** funnel icon.
+- In the **Timeline** section, select **Open Filter Pane** and select how you want to filter the activities.
 
 
 ![Filter pane in the Timeline ](media/timeline-filter2.png "Filter pane in the Timeline") ![Filter pane in the Timeline ](media/timeline-filter5.png "Filter pane in the Timeline")
