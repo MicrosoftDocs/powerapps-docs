@@ -59,9 +59,9 @@ The fastest way to add an activity is to use the shortcut on the nav bar and the
  
 ## Add a phone call  
   
-1. Open the record that you want to add the activity to. For example, a contact record.
+1. Open the record that you want to add the activity to. For example, open a contact record.
   
-2. In the **Timeline** area, select **Add info and activities** ![Add activities](media/add-activity-button.png "Add activities button")> **Phone Call**. 
+2. In the **Timeline** section, select **Add info and activities** ![Add activities](media/add-activity-button.png "Add activities button") > **Phone Call**. 
 
 
    > [!div class="mx-imgBorder"]
@@ -81,7 +81,7 @@ The fastest way to add an activity is to use the shortcut on the nav bar and the
   
 1. Open the record that you want to add the activity to. For example, a contact record.
   
-2. In the **Timeline** area, select **Add info and activities** ![Add activities](media/add-activity-button.png "Add activities button") > **Task**.
+2. In the **Timeline** section, select **Add info and activities** ![Add activities](media/add-activity-button.png "Add activities button") > **Task**.
   
 3. The **Owner** field is set to the current user by default. If you want to reassign the task, select the lookup icon, and then select another user or team.  
   
@@ -93,7 +93,7 @@ To add an email activity to a record, you must first save the record you are add
   
 1. Open the record that you want to add the activity to. For example, a contact record.
   
-2. In the **Timeline** area, select **Add info and activities** ![Add activities](media/add-activity-button.png "Add activities button") > **Email**. 
+2. In the **Timeline** section, select **Add info and activities** ![Add activities](media/add-activity-button.png "Add activities button") > **Email**. 
 
 3. Fill in the subject of the email and use the space provided to write the email.
   
@@ -123,32 +123,34 @@ To add an appointment activity to a record, you must first save the record you a
 > [!NOTE]
 > Recurring appointments are not supported on the Dynamics 365 App for Outlook, Dynamics 365 for phones app, and when you run the model-driven apps web client on your mobile phone web browser.
   
-1. Open the record that you want to add the activity to. For example, a contact record.
+1. Open the record that you want to add the activity to. For example, open a contact record.
   
-2. In the **Timeline** wall, select  **plus sign** > **Appointment**.  
+2.  In the **Timeline** section, select **Add info and activities** ![Add activities](media/add-activity-button.png "Add activities button") > **Appointment**.  
   
-3. Use the tooltips to fill in the required information.
+3. Fill in the **Subject** of the appointment and set the **Start Time** and **End Time**.
   
-4. When you're done filling in the form, select **Save** to save the appointment.
+4. When you're done filing in all appointment details, select **Save and Close** to save the appointment.
 
 ## Add notes
 
 You can also easily add notes in the activities area.
   
-1. Open the record that you want to add the activity to. For example, a contact record.
+1. Open the record that you want to add the activity to. For example, open a contact record.
   
-2. In the **Timeline** wall, start entering your notes. Use **Add an attachment** to add any attachments to the note.
+2. In the **Timeline** section, select where it says **Enter a note**.
 
-3. When you're done filling in the form, select **Add Note** to save the note.
+3. Add a title for you note and add your notes.
 
+4. Use **Add an attachment** to add any attachments to the note.
+
+3. Selct **Add Note** to save it.
 
 > [!NOTE]
-> You can also add a note using the **plus sign** in the upper section of the **Timeline** wall.
-
+> You can also add a note by selecting **Add info and activities**  ![Add activities](media/add-activity-button.png "Add activities button") > **Note**.
    > [!div class="mx-imgBorder"]
    > ![Add a note](media/addnote.png "Add a note")
 
-Once the note has been added, you can delete or edit the note. Select the note or hover the cursor on the note to see the edit and delete icons.
+To edit or delete the note later, select the note and then select **Edit this note** or **Delete note**. 
 
 
 > [!div class="mx-imgBorder"]
