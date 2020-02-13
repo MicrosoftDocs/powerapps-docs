@@ -54,14 +54,14 @@ The fastest way to add an activity is to use the shortcut on the nav bar and the
  
 3. Fill in the required information. Use the **Regarding** field to associate the activity with a record.
 
-4. When you're done, select **Save and Close** or **Save & Create New. 
+4. When you're done, select **Save and Close** or **Save & Create New**. 
 
  
 ## Add a phone call  
   
 1. Open the record that you want to add the activity to. For example, a contact record.
   
-2. In the **Timeline** wall, select  **plus sign** > **Phone Call**. 
+2. In the **Timeline** area, select **Add info and activities** ![Add activities](media/add-activity-button.png "Add activities button")> **Phone Call**. 
 
 
    > [!div class="mx-imgBorder"]
@@ -69,23 +69,23 @@ The fastest way to add an activity is to use the shortcut on the nav bar and the
   
 3. Fill in the **Subject** of the call.
 
-     In the **Notes** area, provide a summary of the conversation with the customer. 
+     In the **Description** area, provide a summary of the conversation with the customer. 
   
      The **Call To** field is automatically populated with the record you added the phone call activity to. You can select a different record if needed.  
   
 4. By default, the direction is set to **Outgoing**. You can change it to **Incoming** by selecting **Outgoing**.
   
-5. When you're done filling in the form, select **Save** to save the activity.  
+5. When you're done filling in the form, select **Save and Close** to save the activity.  
   
 ## Add a task  
   
 1. Open the record that you want to add the activity to. For example, a contact record.
   
-2. In the **Timeline** wall, select  **plus sign** > **Task**.
+2. In the **Timeline** area, select **Add info and activities** ![Add activities](media/add-activity-button.png "Add activities button") > **Task**.
   
 3. The **Owner** field is set to the current user by default. If you want to reassign the task, select the lookup icon, and then select another user or team.  
   
-4. When you're done filling in the form, select **Save** to save the activity. 
+4. When you're done filling in the form, select **Save and Close** to save the activity. 
   
 ## Add an email  
 
@@ -93,11 +93,11 @@ To add an email activity to a record, you must first save the record you are add
   
 1. Open the record that you want to add the activity to. For example, a contact record.
   
-2. In the **Timeline** wall, select  **plus sign** > **E-mail**. 
+2. In the **Timeline** area, select **Add info and activities** ![Add activities](media/add-activity-button.png "Add activities button") > **Email**. 
 
 3. Fill in the subject of the email and use the space provided to write the email.
   
-4. To add an attachment to the email, save the email. Then, in the **Attachments** section, select **+** to add an attachment.  
+4. To add an attachment to the email, save the email. Then, on the command bar select **Attach File** > **Choose File** and select the tile you want to attach.
   
 5. To use a template for the email body, on the command bar, select **Insert Template**, and then select the template. For more information on inserting an email template, see [Insert an email template](insert-email-template.md). 
   
