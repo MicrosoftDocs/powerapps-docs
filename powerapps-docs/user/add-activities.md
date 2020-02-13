@@ -75,34 +75,33 @@ The fastest way to add an activity is to use the shortcut on the nav bar and the
   
 4. By default, the direction is set to **Outgoing**. You can change it to **Incoming** by selecting **Outgoing**.
   
-5. When you're done filling in the form, select **Save and Close** to save the activity.  
+5. When you're done filling in the form, select **Save and Close** to save the phone call activity.  
   
 ## Add a task  
   
-1. Open the record that you want to add the activity to. For example, a contact record.
+1. Open the record that you want to add the activity to. For example, open a contact record.
   
 2. In the **Timeline** section, select **Add info and activities** ![Add activities](media/add-activity-button.png "Add activities button") > **Task**.
   
 3. The **Owner** field is set to the current user by default. If you want to reassign the task, select the lookup icon, and then select another user or team.  
   
-4. When you're done filling in the form, select **Save and Close** to save the activity. 
+4. When you're done filling in the task information, select **Save and Close** to save . 
   
 ## Add an email  
 
 To add an email activity to a record, you must first save the record you are adding the activity to.  
   
-1. Open the record that you want to add the activity to. For example, a contact record.
+1. Open the record that you want to add the activity to. For example, open a contact record.
   
 2. In the **Timeline** section, select **Add info and activities** ![Add activities](media/add-activity-button.png "Add activities button") > **Email**. 
 
 3. Fill in the subject of the email and use the space provided to write the email.
   
-4. To add an attachment to the email, save the email. Then, on the command bar select **Attach File** > **Choose File** and select the tile you want to attach.
+4. To add an attachment to the email, save the email. Then, on the command bar select **Attach File** > **Choose File** and then select the file that you want to attach to the email.
   
 5. To use a template for the email body, on the command bar, select **Insert Template**, and then select the template. For more information on inserting an email template, see [Insert an email template](insert-email-template.md). 
   
-6. When you're done filling in the form, select **Send**. 
-
+6. When you're done composing in the email, on the command bar select **Send**. 
 
 
 ### List emails in a conversation view
@@ -118,7 +117,7 @@ To list emails in a conversation view, go to **Settings** > **Personalization Se
   
 ## Add an appointment  
 
-To add an appointment activity to a record, you must first save the record you are adding the activity to.  
+To add an appointment activity to a record, you must first save the record you are adding the appointment activity to.  
 
 > [!NOTE]
 > Recurring appointments are not supported on the Dynamics 365 App for Outlook, Dynamics 365 for phones app, and when you run the model-driven apps web client on your mobile phone web browser.
@@ -129,7 +128,7 @@ To add an appointment activity to a record, you must first save the record you a
   
 3. Fill in the **Subject** of the appointment and set the **Start Time** and **End Time**.
   
-4. When you're done filing in all appointment details, select **Save and Close** to save the appointment.
+4. When you're done filling in the appointment details, select **Save and Close** to save the appointment.
 
 ## Add notes
 
@@ -137,20 +136,20 @@ You can also easily add notes in the activities area.
   
 1. Open the record that you want to add the activity to. For example, open a contact record.
   
-2. In the **Timeline** section, select where it says **Enter a note**.
+2. In the **Timeline** section, select the **Enter a note** area.
 
-3. Add a title for you note and add your notes.
+3. Add a title for the note and add the notes details.
 
-4. Use **Add an attachment** to add any attachments to the note.
+4. To add attachments to the note select **Add an attachment**.
 
-3. Selct **Add Note** to save it.
+3. When you done, selct **Add Note** to save it.
 
 > [!NOTE]
 > You can also add a note by selecting **Add info and activities**  ![Add activities](media/add-activity-button.png "Add activities button") > **Note**.
    > [!div class="mx-imgBorder"]
    > ![Add a note](media/addnote.png "Add a note")
 
-To edit or delete the note later, select the note and then select **Edit this note** or **Delete note**. 
+To edit or delete the note once it has been saved, select the note and then select **Edit this note** or **Delete note**. 
 
 
 > [!div class="mx-imgBorder"]
@@ -158,13 +157,13 @@ To edit or delete the note later, select the note and then select **Edit this no
 
 ## Add a post 
 
-1. Open the record that you want to add a post to. For example, a contact record.
+1. Open the record that you want to add a post to. For example, open a contact record.
 
-2. In the **Timeline** wall, select  **plus sign** > **Post**. 
+2. In the **Timeline** section, select **Add info and activities** ![Add activities](media/add-activity-button.png "Add activities button") > **Post**. 
 
-3. Enter your post in the text field 
+3. Enter details of the post in the text field.
 
-4. When you're done filling in the form, select **Add** to save the post.
+4. When you're done, select **Add** to save the post.
 
 > [!div class="mx-imgBorder"]
 > ![Update a post](media/post.png "Add a post")
