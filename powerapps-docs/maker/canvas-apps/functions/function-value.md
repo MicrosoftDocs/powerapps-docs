@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 11/07/2015
+ms.date: 02/06/2020
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -49,5 +49,5 @@ The user running these formulas is located in the United States and has selected
 | **Value( "123,456", "es-ES" )** |"es-ES" is the language tag for Spanish in Spain.  In Spain, a comma is the decimal separator. |123.456 |
 | **Value( "12.34%" )** |The percentage sign at the end of the string indicates that this is a percentage. |0.1234 |
 | **Value( "$ 12.34" )** |The currency symbol for the current language is ignored. |12.34 |
-| **Value( "24e3" )** |Scientific notation for 12 x 10<sup>3</sup>. |24000 |
+| **Value( "24e3" )** |Scientific notation for 24 x 10<sup>3</sup>. |24000 |
 

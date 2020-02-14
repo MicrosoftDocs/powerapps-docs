@@ -30,13 +30,13 @@ The portal enables configuring the most common options, but certain options can 
 
 ## View fields
 
-1. From the [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select either **Model-driven** or **Canvas** design mode.
-2. Select **Data** > **Entities** and select the entity that has the fields you want to view.
-3. With the **Fields** tab selected, you can select the following views: 
+1. From the [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Data** > **Entities** and select the entity that has the fields you want to view.
+2. With the **Fields** tab selected, you can select the following views: 
 
  |View|Description|
  |--|--|
  |**All**| Shows all the fields for the entity|
+ |**Managed**| Shows only managed and standard fields for the entity|
  |**Custom**|Shows only custom fields for the entity|
  |**Default**|Shows only the standard fields for the entity|
 <!-- TODO: What is the actual difference between All and Default? -->
@@ -47,7 +47,6 @@ While viewing fields, in the command bar, click **Add field** which will show th
 
 ![Field Properties](media/field-properties.png)
 
-
 Initially, just three field properties are available:
 
  |Property|Description|
@@ -55,6 +54,10 @@ Initially, just three field properties are available:
  |**Display Name**|The text to be displayed for the field in the user interface.|
  |**Name**|The unique name across your environment. A name will be generated for you based on the display name that you've entered, but you can edit it before saving. Once a field is created the name cannot be changed as it may be referenced in your applications or code. The name will have the customization prefix for your **Common Data Service Default Publisher** prepended to it.|
  |**Data type**|Controls how values are stored as well as how they are formatted in some applications. Once a field is saved, you cannot change the data type with the exception of converting text fields to autonumber fields.|
+ |**Required**| A record can't be saved without data in this field. |
+ |**Searchable**| This field appears in Advanced Find and is available when customizing views. |
+ |**Calculated or Rollup**| Use to automate manual calculations. Use values, dates, or text.|
+ |**Advanced Options**| Add a description, and specify a maximum length and IME mode for the field.
 
 You can set additional options depending on your choice of **Data type**.
 
@@ -117,8 +120,10 @@ More information: [Behavior and format of the Date and Time field](behavior-form
 |--|--|
 |**Currency**|A money value for any currencies configured for the environment. You can set a level of precision or choose to base the precision on a specific currency or a single standard precision used by the organization.More information: [Using currency fields](types-of-fields.md#using-currency-fields)|
 |**Decimal Number**| A decimal value with up to 10 points of precision. More information: [Using the right type of number](types-of-fields.md#using-the-right-type-of-number)|
+|**File**| For storing binary data.|
 |**Floating Point Number**|A floating point number with up to 5 points of precision. More information: [Using the right type of number](types-of-fields.md#using-the-right-type-of-number)|
 |**Image**|Displays a single image per record in the application. Each entity can have one image field. The **Name** you enter when creating an image field will be ignored. Image fields are always named 'EntityImage'.|
+|**Lookup**| Creates a reference to a single record for a single target record type.|
 |**Multi Select Option Set**|Displays a list of options where more than one can be selected.|
 |<a name="multi-line-field"></a> **Multiline Text**|A text value intended to be displayed in a multi-line textbox. Limited to a maximum of 1,048,576 characters. You can also set a lower [Max Length](#max-length). |
 |**Option Set**|Displays a list of options where only one can be selected.|

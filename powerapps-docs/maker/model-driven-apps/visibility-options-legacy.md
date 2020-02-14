@@ -30,7 +30,10 @@ search.app:
 > [!NOTE]
 >  Hiding form elements is not a recommended way to enforce security. There are several ways people can view all the elements and data in the form when elements are hidden. 
   
- Rather than designing forms that depend on scripts to control visibility of options, consider whether a business process flow, a dialog, or switching to a different form may be better suited to meet your requirements. If you do use scripts, make sure that any element that might be hidden is hidden by default. Only show it with scripts when your logic calls for it. This way it will not be displayed in presentations that do not support scripts.  
+ Rather than designing forms that depend on scripts to control visibility of options, consider whether a business process flow, a dialog, or switching to a different form may be better suited to meet your requirements. If you do use scripts, make sure that any element that might be hidden is hidden by default. Only show it with scripts when your logic calls for it. This way it will not be displayed in presentations that do not support scripts.
+ 
+ > [!NOTE]
+> In the Unified Interface, for sections where fields don’t span more than one column, hiding a field in the section moves the field below up on the form. If a field spans more than two columns in a section, hiding a field in the section that has a control across from it will not move the field below it up on the form. You will see additional white space where the hidden field is in the section.
 
 ## Next steps
 

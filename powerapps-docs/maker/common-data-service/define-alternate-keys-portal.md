@@ -31,9 +31,8 @@ The portal enables configuring the most common options, but certain options can 
 
 ## View alternate keys
 
-1. From the [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select either **Model-driven** or **Canvas** design mode.
-2. Select **Data** > **Entities** and select the entity that you want to view.
-3. Select **Keys** to view a list of any alternate keys that are defined.
+1. From the [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Data** > **Entities** and select the entity that you want to view.
+2. Select **Keys** to view a list of any alternate keys that are defined.
 
     ![View alternate keys](media/view-alternate-keys-portal.png)
 

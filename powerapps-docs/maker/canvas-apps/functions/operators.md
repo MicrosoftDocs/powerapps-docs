@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 07/24/2017
+ms.date: 02/07/2020
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -51,6 +51,25 @@ Some of these operators are dependent on the language of the author.  See [Globa
 |                             **Parent**                              |         [Parent operator](#parent-operator)         |                                                                               **Parent.Fill**                                                                                |                                                                                                           Access to properties of a control container                                                                                                            |
 |                            **ThisItem**                             |       [ThisItem operator](#thisitem-operator)       |                                                                            **ThisItem.FirstName**                                                                            |                                                                                                          Access to fields of a Gallery or form control                                                                                                           |
 
+## Identifier names
+
+The names of variables, data sources, columns, and other objects can contain any [Unicode](https://en.wikipedia.org/wiki/Unicode).
+
+Use single quotes around a name that contains a space or other special character.  Use two single quotes together to represent one single quote in the name.  Names that do not contain special characters do not require single quotes.
+
+Here are some example column names you might encounter in a table, and how they are represented in a formula:
+
+| Column name in a database   | Column reference in a formula |
+|-----------------------------|-------------------------------|
+| SimpleName                  | ```SimpleName``` |
+| NameWith123Numbers          | ```NameWith123Numbers``` |
+| Name with spaces            | ```'Name with spaces'``` |
+| Name with "double" quotes   | ```'Name with "double" quotes'``` |
+| Name with 'single' quotes   | ```'Name with ''single'' quotes'``` |
+| Name with an @ at sign      | ```'Name with an @ at sign'``` |
+
+Double quotes are used to [designate text strings](data-types.md#embedded-text).    
+
 ## in and exactin operators
 You can use the **[in](operators.md#in-and-exactin-operators)** and **[exactin](operators.md#in-and-exactin-operators)** operators to find a string in a [data source](../working-with-data-sources.md), such as a collection or an imported table. The **[in](operators.md#in-and-exactin-operators)** operator identifies matches regardless of case, and the **[exactin](operators.md#in-and-exactin-operators)** operator identifies matches only if they're capitalized the same way. Here's an example:
 
@@ -67,7 +86,7 @@ You can use the **[in](operators.md#in-and-exactin-operators)** and **[exactin](
 ## ThisItem operator
 You can show data in **[Gallery](../controls/control-gallery.md)**, **[Edit form](../controls/control-form-detail.md)**, or **[Display form](../controls/control-form-detail.md)** controls by binding it to a table or a collection.  These controls are a container for other cards and controls.  Each card or control within the container can access the bound data through the **[ThisItem](operators.md#thisitem-operator)** operator.   
 
-You use the **[ThisItem](operators.md#thisitem-operator)** operator to specify the [column](../working-with-tables.md#columns) of data that each card or control within the outer control. For example, that operator in the product gallery for [Show images and text in a gallery](../show-images-text-gallery-sort-filter.md) specified that the image control showed the product design, the upper label showed the product name, and the lower label showed the number of units in stock.
+Use the **[ThisItem](operators.md#thisitem-operator)** operator to specify the [column](../working-with-tables.md#columns) of data to be displayed in each card or control within the outer control. For example, that operator in the product gallery for [Show images and text in a gallery](../show-images-text-gallery-sort-filter.md) specified that the image control showed the product design, the upper label showed the product name, and the lower label showed the number of units in stock.
 
 For nested galleries, **[ThisItem](operators.md#thisitem-operator)** refers to the innermost gallery's items. Assuming the row fields in the inner and outer galleries don't conflict, you can also use the unqualified field (column) names directly. This approach enables rules in an inner gallery to refer to an outer gallery's items.
 
