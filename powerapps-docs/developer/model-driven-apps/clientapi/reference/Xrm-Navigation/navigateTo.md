@@ -14,7 +14,6 @@ search.app:
 ---
 # navigateTo (Client API reference)
 
-
 [!INCLUDE[./includes/navigateTo-description.md](./includes/navigateTo-description.md)]
 
 
@@ -38,8 +37,16 @@ search.app:
 <td>pageInput</td>
 <td>Object</td>
 <td>Yes</td>
-<td><p>Input about the page to navigate to. The object definition changes depending on the type of page to navigate to: <i>entity list</i> or <i>HTML web resource</i>.</p>
-<p><strong>entity list</strong>
+<td><p>Input about the page to navigate to. The object definition changes depending on the type of page to navigate to: <i>entity record</i>, <i>entity list</i> or <i>HTML web resource</i>.</p>
+<p><strong>Entity record</strong>
+<p>The object contains the following attributes:</p>
+<ul>
+<li><strong>pageType</strong>: String. Specify "entityrecord".</li>
+<li><strong>entityName</strong>: String. The logical name of the entity to load in the form.</li>
+<li><strong>formType</strong>: (Optional) Integer. The ID of the form type. If you don't specify it, navigates to the create form.</li>
+<li><strong>entityId</strong>: (Optional) String. The ID of the entity record to load. If you don't specify it, navigates to the create form.</li>
+</ul>
+<p><strong>Entity list</strong>
 <p>The object contains the following attributes:</p>
 <ul>
 <li><strong>pageType</strong>: String. Specify "entitylist".</li>
