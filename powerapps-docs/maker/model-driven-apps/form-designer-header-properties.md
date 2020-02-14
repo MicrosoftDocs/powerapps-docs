@@ -28,7 +28,7 @@ search.app:
 Makers can control the density of model-driven app form headers to match the needs of anyone using the form.
 
 > [!NOTE]
-> This feature is only available with environments that opt in to the early preview of 2019 release wave 2 features. More information: [Early opt-in to 2019 release wave 2](https://docs.microsoft.com/power-platform/admin/preview-october-2019-updates) 
+> This feature is only available with environments that opt in to the early preview of 2019 release wave 2 features.  
 
 ## High-density header
 
