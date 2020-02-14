@@ -27,9 +27,6 @@ search.app:
 
 Makers can control the density of model-driven app form headers to match the needs of anyone using the form.
 
-> [!NOTE]
-> This feature is only available with environments that opt in to the early preview of 2019 release wave 2 features.  
-
 ## High-density header
 
 High-density form header ensures that key information is always visible to users. Using high-density header, the record title never truncates. Even long record titles are displayed using multiple lines. Similarly, high-density header also ensures that up to four field values are directly visible in the header and never truncated or hidden.  
