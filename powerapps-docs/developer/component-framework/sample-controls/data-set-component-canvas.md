@@ -218,7 +218,6 @@ private getColumnWidthDistribution(context: ComponentFramework.Context<IInputs>,
 	return widthDistribution;
 
 }
-
 private createTableHeader(columnsOnView: DataSetInterfaces.Column[], widthDistribution: string[]): HTMLTableSectionElement {
 
 	let tableHeader: HTMLTableSectionElement = document.createElement("thead");
@@ -246,7 +245,6 @@ private createTableHeader(columnsOnView: DataSetInterfaces.Column[], widthDistri
 	tableHeader.appendChild(tableHeaderRow);
 	return tableHeader;
 }
-
 private createSearchBar(context: ComponentFramework.Context<IInputs>) {
 	let container = document.createElement("div");
 	let input = document.createElement("input");
@@ -278,7 +276,6 @@ private createSearchBar(context: ComponentFramework.Context<IInputs>) {
 
 	return container;
 }
-
 private createTableBody(columnsOnView: DataSetInterfaces.Column[], widthDistribution: string[], gridParam: DataSet): HTMLTableSectionElement {
 
 	let tableBody: HTMLTableSectionElement = document.createElement("tbody");
