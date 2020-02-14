@@ -34,13 +34,15 @@ You can also share your connections, custom connectors and on-premises data gate
 
 ## Connections
 
-Some connections (such as SQL Server with SQL or Windows authentication) are automatically shared with the app when you share the app with other users. Other connections require users to create their own connections (such as OneDrive for Business or SQL Server with Azure AD authentication).
+Some connections (such as SQL Server with SQL or Windows authentication) are automatically shared (implicitly) with the app when you share the app with other users. Other connections require users to create their own connections (such as OneDrive for Business or SQL Server with Azure AD authentication).
 
 You can determine whether a connection is automatically shared as part of the app when you share the app with other users; allowing you to update sharing permissions. To do this, go to make.powerapps.com and select **Data** -> **Connections** from left navigation. Then select the required connection. If the **Share** button appears on top navigation or if the **Share** option displays when you select *More Commands* (...), the selected connection can be shared with other users.
 
   ![No share for OneDrive for Business](./media/share-app-resources/shared-connections-odb.png)
 
   ![Share SQL auth connection to SQL Server](./media/share-app-resources/shared-connections-sqlauth.png)
+
+### Implicit sharing
 
 When you share an app that uses a connection that can be shared, the app connection is **implicitly shared** along with the app. For example, following message appears when you go to make.powerapps.com, select **Apps**, choose an app that uses such connection, select *More Commands* (...) and then select **Share**:
 
