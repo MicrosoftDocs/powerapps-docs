@@ -146,17 +146,18 @@ You can also easily add notes in the activities area.
 
 3. When you done, selct **Add Note** to save it.
 
-> [!NOTE]
-> You can also add a note by selecting **Add info and activities**  ![Add activities](media/add-activity-button.png "Add activities button") > **Note**.
-
    > [!div class="mx-imgBorder"]
    > ![Add a note](media/addnote.png "Add a note")
 
-To edit or delete the note once it has been saved, select the note and then select **Edit this note** or **Delete note**. 
+> [!NOTE]
+> You can also add a note by selecting **Add info and activities**  ![Add activities](media/add-activity-button.png "Add activities button") > **Note**.
 
+### Edit or delete a note
 
-> [!div class="mx-imgBorder"]
-> ![Update a note](media/addnote2.png "Update a note")
+- To edit or delete the note once it has been created, select the note and then select **Edit this note** or **Delete note**. 
+
+  > [!div class="mx-imgBorder"]
+  > ![Update a note](media/addnote2.png "Update a note")
 
 ## Add a post 
 
@@ -168,8 +169,8 @@ To edit or delete the note once it has been saved, select the note and then sele
 
 4. When you're done, select **Add** to save the post.
 
-> [!div class="mx-imgBorder"]
-> ![Update a post](media/post.png "Add a post")
+  > [!div class="mx-imgBorder"]
+  > ![Update a post](media/post.png "Add a post")
   
   Once you save the post, it will appear at the top of the timeline wall.
   
@@ -179,8 +180,8 @@ You can refresh the timeline wall to see the most up to date information.
 
 In the **Timeline** section, select ![More button ](media/MoreButton.png "More button") and then select **Refresh Timeline**.
 
-> [!div class="mx-imgBorder"]
-> ![Refresh the Timeline ](media/refresh.png "Refresh the Timeline")
+  > [!div class="mx-imgBorder"]
+  > ![Refresh the Timeline ](media/refresh.png "Refresh the Timeline")
 
 
 ## Use the filter pane
@@ -189,8 +190,8 @@ Quickly filter activities, notes or posts in the timeline wall by record type or
 
 - In the **Timeline** section, select **Open Filter Pane** and select how you want to filter the activities.
 
-
-![Filter pane in the Timeline ](media/timeline-filter2.png "Filter pane in the Timeline") ![Filter pane in the Timeline ](media/timeline-filter5.png "Filter pane in the Timeline")
+  > [!div class="mx-imgBorder"]
+  > ![Filter pane in the Timeline ](media/timeline-filter2.png "Filter pane in the Timeline") ![Filter pane in the Timeline ](media/timeline-filter5.png "Filter pane in the Timeline")
 
 
 ## Manage Activities
