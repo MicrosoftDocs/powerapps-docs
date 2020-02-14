@@ -58,8 +58,7 @@ The fastest way to add an activity is to use the shortcut on the nav bar and the
 
 ## Add an activity from within a record
 
-The other way to add an activity is by open record that you want to add an activity to. Once the record is open, in the **Timeline** section, selct **Add info and activities** ![Add activities](media/add-activity-button.png "Add activities button") and choose the activity that you want to add.
-
+You can also open the record that you want to add an acticity to and then in the **Timeline** section, selct **Add info and activities** ![Add activities](media/add-activity-button.png "Add activities button") and choose the activity that you want to add.
 
 
 ### Add a phone call  
