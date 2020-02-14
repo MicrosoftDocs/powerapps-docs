@@ -169,8 +169,8 @@ You can also easily add notes in the activities area.
 
 4. When you're done, select **Add** to save the post.
 
-  > [!div class="mx-imgBorder"]
-  > ![Update a post](media/post.png "Add a post")
+   > [!div class="mx-imgBorder"]
+   > ![Update a post](media/post.png "Add a post")
   
   Once you save the post, it will appear at the top of the timeline wall.
   
