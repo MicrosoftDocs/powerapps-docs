@@ -15,7 +15,7 @@ ms.assetid: 356561d0-a36b-4b93-8b76-3e1abf9414e9
 
 # Implementing data-set component for canvas apps
 
-This sample showcases how to create a simple dataset component, view’s column metadata binding, record binding, more records from paging and record navigation to form. Additionally, this sample shows how to work with exposed APIs.
+This sample shows how to create a simple dataset component for canvas apps. It also showcases how to utilize dataset API methods to get view’s column metadata binding, record binding, paging and record navigation. 
 
  You can download the sample component from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/TS_DataSetGrid).
 
