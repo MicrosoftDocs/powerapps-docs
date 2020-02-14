@@ -297,17 +297,17 @@ private createTableBody(columnsOnView: DataSetInterfaces.Column[], widthDistribu
 			});
 			tableBody.appendChild(tableRecordRow);
 		}
-	}
+	} 
 	else {
-		let tableRecordRow: HTMLTableRowElement = document.createElement("tr");
-		let tableRecordCell: HTMLTableCellElement = document.createElement("td");
-		tableRecordCell.classList.add("No_Record_Style");
-		tableRecordCell.colSpan = columnsOnView.length;
-		tableRecordCell.innerText = this.contextObj.resources.getString("PCF_TSTableGrid_No_Record_Found");
-		tableRecordRow.appendChild(tableRecordCell)
-		tableBody.appendChild(tableRecordRow);
-	}
-	return tableBody;
+	 let tableRecordRow: HTMLTableRowElement = document.createElement("tr");
+	 let tableRecordCell: HTMLTableCellElement = document.createElement("td");
+	 tableRecordCell.classList.add("No_Record_Style");
+	 tableRecordCell.colSpan = columnsOnView.length;
+	 tableRecordCell.innerText = this.contextObj.resources.getString("PCF_TSTableGrid_No_Record_Found");
+	 tableRecordRow.appendChild(tableRecordCell)
+	 tableBody.appendChild(tableRecordRow);
+	 }
+	 return tableBody;
 }
 
 /**
@@ -575,11 +575,11 @@ Data record navigation can be done with a few extra configurations in the canvas
 
 Using this API along with the `dataset_property_name_selected property`, the user can update the page context with the selected records. This works with canvas’s `UpdateContext` and `Navigate` function.
  
-## Sizing
+### Sizing
 
 This sample also showcases how the component listens to the container resize. The `trackContainerResize` method should be called within the `init` method so that the `mode.allocatedWidth` and `mode.allocatedHeight` will be provided each time when the `updateView` is being called. If this method is not called initially, then they don't have `allocatedWidth` and `allocatedHeight` provided. If the allocatedHeight is –1, that means there is no limit on height. The component should adjust its height based on the provided width.
 
-### Dataset API methods that aren't supported in canvas apps (experimental preview)
+## Dataset API methods that aren't supported in canvas apps (experimental preview)
 
 **Filter & SortStatus**
 
