@@ -273,23 +273,18 @@ private createSearchBar(context: ComponentFramework.Context<IInputs>) {
 	}).bind(this));
 	container.appendChild(input);
 	container.appendChild(button);
-
 	return container;
 }
 private createTableBody(columnsOnView: DataSetInterfaces.Column[], widthDistribution: string[], gridParam: DataSet): HTMLTableSectionElement {
-
 	let tableBody: HTMLTableSectionElement = document.createElement("tbody");
-
 	if (gridParam.sortedRecordIds.length > 0) {
 		for (let currentRecordId of gridParam.sortedRecordIds) {
-
 			let tableRecordRow: HTMLTableRowElement = document.createElement("tr");
 			tableRecordRow.classList.add("SimpleTable_TableRow_Style");
 			tableRecordRow.addEventListener("click", this.onRowClick.bind(this));
 
 			// Set the recordId on the row dom
 			tableRecordRow.setAttribute(RowRecordId, gridParam.records[currentRecordId].getRecordId());
-
 			columnsOnView.forEach(function (columnItem, index) {
 				let tableRecordCell = document.createElement("td");
 				tableRecordCell.classList.add("SimpleTable_TableCell_Style");
@@ -300,7 +295,6 @@ private createTableBody(columnsOnView: DataSetInterfaces.Column[], widthDistribu
 				tableRecordCell.appendChild(innerDiv);
 				tableRecordRow.appendChild(tableRecordCell);
 			});
-
 			tableBody.appendChild(tableRecordRow);
 		}
 	}
@@ -313,10 +307,8 @@ private createTableBody(columnsOnView: DataSetInterfaces.Column[], widthDistribu
 		tableRecordRow.appendChild(tableRecordCell)
 		tableBody.appendChild(tableRecordRow);
 	}
-
 	return tableBody;
 }
-
 
 /**
  * Row Click Event handler for the associated row when being clicked
