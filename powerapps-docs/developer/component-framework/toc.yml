@@ -45,7 +45,7 @@
     - name: Data Set Grid component for model-driven apps
       href: sample-controls/data-set-grid-control.md
     - name: Data Set component for canvas apps
-      href: data-set-component-canvas.md
+      href: sample-controls/data-set-component-canvas.md
     - name: Formatting API component
       href: sample-controls/formatting-api-control.md
     - name: IFRAME component

@@ -5,7 +5,7 @@ keywords:
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 10/01/2019
+ms.date: 02/18/2020
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -22,6 +22,9 @@ This sample showcases how to create a simple dataset component, view’s column 
 ## Available for 
 
 Model-driven apps and canvas apps (experimental preview).
+
+> [!NOTE]
+> Some of the dataset API methods that are supported in model-driven apps are still not supported in canvas apps. See, [Dataset component for model-driven apps](data-set-grid-control.md) to learn more about dataset type components are implemented in model-driven apps.
 
 ## Manifest 
 
