@@ -56,8 +56,13 @@ The fastest way to add an activity is to use the shortcut on the nav bar and the
 
 4. When you're done, select **Save and Close** or **Save & Create New**. 
 
- 
-## Add a phone call  
+## Add an activity from within a record
+
+The other way to add an activity is by open record that you want to add an activity to. Once the record is open, in the **Timeline** section, selct **Add info and activities** ![Add activities](media/add-activity-button.png "Add activities button") and choose the activity that you want to add.
+
+
+
+### Add a phone call  
   
 1. Open the record that you want to add the activity to. For example, open a contact record.
   
@@ -77,7 +82,7 @@ The fastest way to add an activity is to use the shortcut on the nav bar and the
   
 5. When you're done filling in the form, select **Save and Close** to save the phone call activity.  
   
-## Add a task  
+### Add a task  
   
 1. Open the record that you want to add the activity to. For example, open a contact record.
   
@@ -87,7 +92,7 @@ The fastest way to add an activity is to use the shortcut on the nav bar and the
   
 4. When you're done filling in the task information, select **Save and Close** to save . 
   
-## Add an email  
+### Add an email  
 
 To add an email activity to a record, you must first save the record you are adding the activity to.  
   
@@ -98,13 +103,16 @@ To add an email activity to a record, you must first save the record you are add
 3. Fill in the subject of the email and use the space provided to write the email.
   
 4. To add an attachment to the email, save the email. Then, on the command bar select **Attach File** > **Choose File** and then select the file that you want to attach to the email.
+
+   > [!NOTE]
+   > An email with an attached image will be shown inline with the body of the email.
   
 5. To use a template for the email body, on the command bar, select **Insert Template**, and then select the template. For more information on inserting an email template, see [Insert an email template](insert-email-template.md). 
   
 6. When you're done composing in the email, on the command bar select **Send**. 
 
 
-### List emails in a conversation view
+#### List emails in a conversation view
 
 1. To list emails in a conversation view, go to **Settings** > **Personalization Settings**.
 
@@ -117,7 +125,7 @@ To add an email activity to a record, you must first save the record you are add
    > ![Set personal options email](media/emailsettings2.png "Set personal options for email")
 
   
-## Add an appointment  
+### Add an appointment  
 
 To add an appointment activity to a record, you must first save the record you are adding the appointment activity to.  
 
@@ -132,7 +140,7 @@ To add an appointment activity to a record, you must first save the record you a
   
 4. When you're done filling in the appointment details, select **Save and Close** to save the appointment.
 
-## Add notes
+### Add notes
 
 You can also easily add notes in the activities area.
   
@@ -152,14 +160,14 @@ You can also easily add notes in the activities area.
 > [!NOTE]
 > You can also add a note by selecting **Add info and activities**  ![Add activities](media/add-activity-button.png "Add activities button") > **Note**.
 
-### Edit or delete a note
+#### Edit or delete a note
 
 - To edit or delete the note once it has been created, select the note and then select **Edit this note** or **Delete note**. 
 
   > [!div class="mx-imgBorder"]
   > ![Update a note](media/addnote2.png "Update a note")
 
-## Add a post 
+### Add a post 
 
 1. Open the record that you want to add a post to. For example, open a contact record.
 
