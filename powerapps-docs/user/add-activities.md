@@ -144,7 +144,7 @@ You can also easily add notes in the activities area.
 
 4. To add attachments to the note select **Add an attachment**.
 
-3. When you done, selct **Add Note** to save it.
+3. When you done, select **Add Note** to save it.
 
    > [!div class="mx-imgBorder"]
    > ![Add a note](media/addnote.png "Add a note")
