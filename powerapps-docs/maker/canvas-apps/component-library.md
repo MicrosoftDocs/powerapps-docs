@@ -15,11 +15,9 @@ search.app:
 
 # Component library in canvas app
 
-In the [overview](create-component) article for creating components, you are introduced to components inside canvas app. While you can create components inside an app and reuse them inside the same or any other app, you can also create a library of components that can be reused. This enables app makers to share and update components with other makers by creating component libraries. 
+In the [overview](create-component.md) article for creating components, you are introduced to components inside canvas app. While you can create components inside an app and reuse them inside the same or any other app, you can also create a library of components that can be reused. This enables app makers to share and update components with other makers by creating component libraries. 
 
-Component libraries are containers of component definitions that make it easy to discover and search for components, publish updates across environments, and notify app makers of available component updates. Data source references are also supported in components.
-
-You can use components in gallery controls and forms. Components can also use collections. When you export an app with components that include related media files, the media files are exported with the control.
+Component libraries are containers of component definitions that make it easy to discover and search for components, publish updates across environments, and notify app makers of available component updates. 
 
 Solution awareness of canvas components and apps that use them is also enabled through component libraries. Migrating an app and its dependencies across environments is now possible through Common Data Service solutions. Canvas apps and component libraries are handled very similarly and modeled under the same 'CanvasApp' entity.
 
@@ -47,11 +45,58 @@ The steps to create components inside a component library are same as creating c
 
 1. Go to make.powerapps.com, select **Apps** in left navigation, select **Component Libraries** and then select **New component library**.
 
-1. Follow the steps to create components from the [components overview example](create-component.md#create-an-example-component) topic.
+1. Name the component library as *Menu components*; you can also provide a different name of your choice.
 
-1. After you completed the components creation and testing, save the component library. 
+1. Follow the steps to create components from the [components overview example](create-component.md#create-an-example-component) topic. Note that you don't have to open Power Apps Studio or create a new blank app, since you already have created a new component library. Start with step 2. 
+
+    After following steps to create components, follow next set of steps to also add screen the steps to create output property. Since all this is to reuse the components for testing, you can use the same component library.
+
+1. After you completed the components creation and testing, save the component library by selecting **File** menu and then selecting **Save**. 
+
+    When you select **Save** after making a change to the component library, you also have an option to save a **Version note**. This version note becomes useful when reviewing versions of a component library and upgrading the components used in apps from this component library.
+
+    ![Version note when saving component library](./media/component-library/save-component-libray-version-note.png)
+
+1. Saved component library can be published. Since only published component library updates are available for apps that consume a component library, select **Publish** to publish the component library version:
+
+    ![Publish component library version](./media/component-library/publish-component-library.png)
+
+## Import component library
+
+After you create a component library and publish, apps can consume the components from this component library by importing the library. 
+
+To do this, edit an existing app or create a new app by browsing to make.powerapps.com and from **Apps** on the left navigation, use **New** and then **Canvas app**; or select **Edit** for any existing app from the **More Commands** (...) drop down menu.
+
+After the Canvas App Studio opens, you select **Insert** or the **+** on the left navigation and then select **Get more components** to list the component libraries available in current environment:
+
+![Get more components](./media/component-library/get-more-components.png)
+
+This opens the list of component libraries available in current environment on right side of the screen. You can select a component library such as *Menu components* in above example and then select **Import**:
+
+![Import components](./media/component-library/components.png)
+
+Notice you can select and import more than one component and across different component libraries. 
+
+Components added from the component libraries are listed in the **Insert** navigation under section **Library components**:
+
+![Library components](./media/component-library/library-components.png)
+
+## Update a component library
+
+You can modify existing component library and save any changes with additional version notes. However, the updated component library version must be published for use in existing apps that use the component library. Example component library steps above explain how to publish a component library after saving it.
+
+Once you publish component library changes, if you edit an existing app that uses components from this library, you are automatically notified of updated components being available:
+
+![Update available](./media/component-library/update-available.png)
+
+Once you select **Review**, you are presented with option to update the component:
+
+![Update component](./media/component-library/update-components.png)
 
 ## Component library permissions
 
 Sharing a component library works the same way you share a canvas app. When you share a component library, you are allowing others to reuse the component library. Once shared, others can edit the component library and import components from this shared component library for creating and editing apps.
 
+## Known limitations
+
+Read [known limitations](create-component.md#known-limitations) applicable to components and component library.

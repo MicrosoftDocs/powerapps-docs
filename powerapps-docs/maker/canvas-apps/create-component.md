@@ -21,7 +21,7 @@ Components are useful in building larger apps that have similar control patterns
 
 ## Components in canvas app
 
-You can create a component from within an app, or by creating a new component inside a component library. 
+You can create a component from within an app as explained in this article, or by creating a new component inside a [component library](component-library.md). 
 
 To create a component within an app, go to **Insert** menu, select **Custom** drop down menu and then select **New Component**:
 
@@ -50,20 +50,6 @@ Think of a component as an encapsulated black box with properties as the interfa
 
 Components don't support the **UpdateContext** function, but you can create and update variables in a component by using the **Set** function. The scope of these variables is limited to the component, but you can access them from outside the component by leveraging custom output properties.
 
-## Import and export
-
-To import one or more components from one app into another, select **Import components** in the drop-down list of components. 
-
-![Import export component](./media/create-component/import-export-components-option.png)
-
-A dialog box lists all apps that contain components that you have permission to edit. Select an app, and then select **Import** to import the most recent published version of all of the components in that app. After you import at least one component, you can edit your copy and delete any that you don’t need.
-
-![Import components dialog box](./media/create-component/import-component-screen.png)
-
-You can save an app with existing components to a file locally and then reuse this file by importing it. This allows you export all components of an app and then import to another app. 
-
-If the app contains a modified version of the same component, you're prompted to decide whether to replace the modified version or cancel the import. 
-
 ## Custom properties
 
 A component can receive input values and emit data if you create one or more custom properties. These scenarios are advanced and require you to understand formulas and binding contracts.
@@ -79,6 +65,9 @@ This walkthrough further explains these concepts.
 In this example, you'll create a menu component that resembles this graphic and in which you can change the text and use in multiple screens, apps, or both:
 
 ![Final gallery](./media/create-component/menu-instance-new.png)
+
+> [!NOTE]
+> We recommend that you use [component library](component-library.md) when creating components for reuse. Updating components inside an app only makes the component updates available only inside the app. When you import components from one app to another, new updates to components in original app do not propagate to the app that imported those components earlier. When using component library, you get prompted to update components if components inside a library are updated and published.
 
 1. Go to make.powerapps.com and create a blank app.
 
@@ -185,6 +174,20 @@ So far, you've created a component and added it to an app. Next, you'll create a
 1. While holding down the Alt key, select each item in the menu.
 
     The **Label** control reflects the menu item that you selected most recently.
+
+## Import and export components
+
+To import one or more components from one app into another, select **Import components** from either **Insert** menu and then using **Custom** drop down, or by using **Components** in tree view on the left navigation.
+
+A dialog box lists all apps that contain components that you have permission to edit. Select an app, and then select **Import** to import the most recent published version of all of the components in that app. After you import at least one component, you can edit your copy and delete any that you don’t need.
+
+![Import components dialog box](./media/create-component/import-component-screen.png)
+
+You can save an app with existing components to a file locally and then reuse this file by importing it. This allows you export all components of an app and then import to another app. 
+
+If the app contains a modified version of the same component, you're prompted to decide whether to replace the modified version or cancel the import. 
+
+After you create components in an app, other apps can consume the components from this app by importing them.
 
 ## Known limitations
 
