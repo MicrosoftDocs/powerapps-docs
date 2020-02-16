@@ -177,6 +177,8 @@ So far, you've created a component and added it to an app. Next, you'll create a
 
 ## Import and export components
 
+### Import components from another app
+
 To import one or more components from one app into another, select **Import components** from either **Insert** menu and then using **Custom** drop down, or by using **Components** in tree view on the left navigation.
 
 A dialog box lists all apps that contain components that you have permission to edit. Select an app, and then select **Import** to import the most recent published version of all of the components in that app. After you import at least one component, you can edit your copy and delete any that you don’t need.
@@ -189,10 +191,46 @@ If the app contains a modified version of the same component, you're prompted to
 
 After you create components in an app, other apps can consume the components from this app by importing them.
 
+### Export components from your app
+
+You can export components to file and download them for import to another app. To do this, select **Export components** option from **Components** section in left navigation tree view:
+
+![Export components treeview](./media/create-component/export-components-treeview.png)
+
+Alternatively, you can also use **Insert** menu and then select **Custom** drop down. 
+
+![Export components insert menu](./media/create-component/export-components-insert-menu.png)
+
+Once you select to export a component, you are presented with the option to download the exported component file:
+
+![Download component](./media/create-component/download-component.png)
+
+Downloaded component file has extension of *.msapp*. 
+
+### Import components from exported components file
+
+To import components from an exported components file, select **Import components** from either **Insert** menu and then using **Custom** drop down, or by using **Components** in tree view on the left navigation. From the components dialog box, select **Import file** instead of selecting any other components or apps:
+
+![Import component file](./media/create-component/import-component-file.png)
+
+From the **Open** dialog box, browse to the location of the component file and select **Open**. This imports the component inside the app for reuse.
+
+### Import components from exported app
+
+You can save an app locally using **File** -> **Save As** option:
+
+![Save app](./media/create-component/save-app-locally.png)
+
+Once you save the app, you can reuse the components of this app using the same method of importing components from file. To do this, follow the steps explained in importing components from exported components file section above.
+
 ## Known limitations
 
-- As of this writing, data sources aren't saved with components, so forms and data tables are disabled.
-- Power Apps doesn't support collections in components.
-- You can't insert a component into a gallery, a form, or a data card.
+- You cannot save data sources, forms and data tables with components.
+- Use of collections in components is not supported.
+- You cannot insert a component into a gallery, a form, or a data card.
 - A master instance of a component is a local master and scoped to the app. If you change a master instance, only copies of the component within the app will reflect the change. Copies in other apps will remain the same unless you import the component library again. All master instances in those apps will be automatically detected and updated.
-- You can't package media files when you import a component.
+- You cannot package media files when you import a component.
+
+## Next steps
+
+Learn [component library](component-library.md) to create a repository of reusable components.

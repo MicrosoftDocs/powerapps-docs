@@ -99,4 +99,15 @@ Sharing a component library works the same way you share a canvas app. When you 
 
 ## Known limitations
 
-Read [known limitations](create-component.md#known-limitations) applicable to components and component library.
+- [Known limitations](create-component.md#known-limitations) applicable to components also applies to component library.
+- You cannot import components using component library from locally saved component library file. If you try to import a locally saved component library using **File** -> **Save As** -> **This Computer** and download the component library file as an app, following error message appears: 
+
+    ![Import component library file](./media/component-library/import-component-library-file.png)
+
+## Next steps
+
+Learn [behavior formulas](component-behavior.md) for canvas app.
+
+### See also
+
+Read canvas app [components overview](create-component.md) and working with components in an app.
