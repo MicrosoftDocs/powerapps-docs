@@ -30,10 +30,10 @@ To determine which button was clicked to perform the save, use the getSaveMode m
 
 You can cancel the save action by using the preventDefault method within the event arguments object. The preventDefault method which is accessible by using the getEventArgs method that is part of the execution context. Execution context is automatically passed to the form event handler.
 
-[!NOTE]
-OnSave events are synchronous and it is not recommended to use asynchronous code in an OnSave handler that needs an action to be taken or handled on the response. This causes issues if the response handler expects the app context to remain the same as it was when the asynchronous code was started.
-
-For example, there may be code in an OnSave handler to make a network request, stop the form save (through preventDefault), and then close theform if the request is successful. Before the response from the request is receieved, the user may have navigated to a different page. In this case, the user may see an unexpected unsaved chages disalog from the page they are on when the response is received.
+> [!NOTE]
+> OnSave events are synchronous, and it isn't recommended to use asynchronous code in an OnSave event handler that needs an action to be taken or handled on the response. This causes issues if the response handler expects the app context to remain the same as it was when the asynchronous code was started.
+> 
+> For example, there may be code in an OnSave event handler to make a network request, stop the form save (using the preventDefault method), and then close the form if the request is successful. Before the response from the request is receieved, the user may have navigated to a different page. In this case, the user may see an unexpected unsaved changes dialog from the page they are on when the response is received.
 
 ### Related topic
 [Grid OnSave Event](grid-onsave.md)  
