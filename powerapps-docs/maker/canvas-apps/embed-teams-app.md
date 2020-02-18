@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 10/29/2019
+ms.date: 02/18/2020
 ms.author: mabolan
 search.audienceType: 
   - maker
