@@ -11,7 +11,7 @@ ms.author: v-lshann
 
 Did you just get a new application to use? 
 
-The following catalog is organized from core knowledge to specific domains, and from most basic to most advanced. If content exists in multiple formats, we'll let you know, so that you can choose the training format that best meets your needs. For more information, see Training content formats. 
+The following catalog is organized from core knowledge to specific domains, and from most basic to most advanced. If content exists in multiple formats, we'll let you know, so that you can choose the training format that best meets your needs. 
  
 
 ## Get started
