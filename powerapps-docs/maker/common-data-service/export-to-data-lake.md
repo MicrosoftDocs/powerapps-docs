@@ -23,7 +23,7 @@ search.app:
 
 # Export entity data to Azure Data Lake Storage Gen2
 
-The Export to Data Lake service<!--from editor: I realize this is a bold edit, but both Writing and Cloud Style Guides call for service names to be title case. A good side effect of doing this is the caps will help keep things straight when the phrase is used as a modifier later on.--> is a pipeline to continuously export data from Common Data Service to Azure Data Lake Storage Gen2. The Export to Data Lake service is designed for enterprise big data analytics by delivering scalable high availability with disaster recovery capabilities. Data is stored in the Common Data Model format, which provides semantic consistency across apps and deployments. 
+The Export to Data Lake service is a pipeline to continuously export data from Common Data Service to Azure Data Lake Storage Gen2. The Export to Data Lake service is designed for enterprise big data analytics by delivering scalable high availability with disaster recovery capabilities. Data is stored in the Common Data Model format, which provides semantic consistency across apps and deployments. 
 <!--edits for the following graphic via Cloud Style Guide: "Azure Data Lake Gen2" in three places, "Common Data Model folder" (without the CDM abbreviation) for the graphic on the right. Also please note, I replicated alt text to the "index" field for the graphic, so it would show up as a tooltip. I believe that was the custom when I worked in Dynamics in 2017.-->
 ![Export to data lake overview](media/export-data-lake-overview.png "Export to Data Lake overview")
 
