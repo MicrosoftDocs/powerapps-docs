@@ -1,13 +1,13 @@
 ---
 title: "Add dynamic content and create custom templates for a portal | MicrosoftDocs"
 description: "Learn how to use Liquid, an open-source template language, into your portals."
-author: sbmjais
-manager: shujoshi
+author: tapanm-msft
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 10/07/2019
-ms.author: shjais
+ms.author: tapanm
 ms.reviewer:
 ---
 

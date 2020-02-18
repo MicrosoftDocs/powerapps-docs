@@ -1,6 +1,6 @@
 ---
 title: "Approaching a user experience and Unified Interface transition | MicrosoftDocs"
-description: "Learn how to plan and execute your transistion from the legacy web client to the Unified Interface"
+description: "Learn how to plan and execute your transition from the legacy web client to the Unified Interface"
 ms.custom: ""
 ms.date: 07/24/2019
 ms.reviewer: ""

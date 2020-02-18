@@ -40,7 +40,7 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 
 ### Demonstrate
 
-1. Get's the organization's ID from the system user record and retrieves organization record.
+1. Gets the organization's ID from the system user record and retrieves organization record.
 2. Enables auditing on the organization, including auditing for user access.
 3. Makes an update request to the account entity to be tracked by auditing.
 4. set the organization and account auditing flags back to old values and retrieve them if they were actually changed.

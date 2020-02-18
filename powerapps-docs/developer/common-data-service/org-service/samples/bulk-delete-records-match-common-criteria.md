@@ -38,9 +38,9 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 1. Checks for the current version of the org.
 2. Creates an sample account record.
 3. Queries for a system user to send an email to, after the bulk delete operation completes.
-3. The `BulkDeleteRequest` creates the bulk delete process and set the request properties.
-4. The `InspectBulkDeleteOperation` method inspects and display the information about the created `BulkDeleteOperation`.
-5. The `RetrieveBulkDeleteOperation` method retrieves the `BulkDeleteOperation`.
+4. The `BulkDeleteRequest` creates the bulk delete process and set the request properties.
+5. The `InspectBulkDeleteOperation` method inspects and display the information about the created `BulkDeleteOperation`.
+6. The `RetrieveBulkDeleteOperation` method retrieves the `BulkDeleteOperation`.
 
 ### Demonstrate
 

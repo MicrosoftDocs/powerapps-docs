@@ -1,19 +1,85 @@
 ---
 title: "Use template tags for a portal | MicrosoftDocs"
 description: "Learn about template tags available in portal"
-author: sbmjais
-manager: shujoshi
+author: tapanm-msft
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/07/2019
-ms.author: shjais
+ms.date: 01/24/2020
+ms.author: tapanm
 ms.reviewer:
 ---
 
 # Template tags
 
 Template tags control the output of a template in various ways, and allow the combination of multiple templates into a single output.
+
+## fetchxml
+
+Allows user to query data from CDS and render the results in a page.
+
+> [!NOTE]
+> You can learn more about querying the data using fetchxml at [use FetchXML to query data](https://docs.microsoft.com/powerapps/developer/common-data-service/use-fetchxml-construct-query).
+
+```
+{% fetchxml resultVariable %}
+<!— Fetchxml query -->
+...
+{% endfetchxml %}
+```
+
+### Results attribute
+
+Results attribute in provided variable (such as 'resultVariable' in above sample) holds FetchXML query results and a few other attributes.
+
+- *Entities*
+
+    This attribute contains the result of fetchxml query. You can iterate the result and use it in your webtemplate.
+
+    ```
+    <table> 
+    {% for entityVariable in resultVariable.results.entities %} 
+    <tr> 
+    <td>Attribut-1: {{ entityVariable.attribute1 }}</td> 
+    <td>Attribut-2: {{ entityVariable.attribute2 }}</td> 
+    </tr> 
+    {% endfor %} 
+    </table> 
+    ```
+
+- *EntityName*
+
+    Gets the logical name of the entity.
+
+- *ExtensionData*
+
+    Gets the structure that contains extra data.
+
+- *MinActiveRowVersion*
+
+    Gets the lowest active row version value.
+
+- *MoreRecords*
+
+    Gets whether there are more records available.
+
+- *PagingCookie*
+
+    Gets the current paging information.
+
+- *TotalRecordCount*
+
+    Gets the total number of records in the collection. <br/>
+    ReturnTotalRecordCount was true when the query was executed.
+
+- *TotalRecordCountLimitExceeded*
+
+    Gets whether the results of the query exceeds the total record count.
+
+### XML attribute
+
+XML attribute in provided variable (such as 'resultVariable' in above sample) holds the resultant query which can be used to get data from Common Data Service. This attribute is useful for debugging purpose when you want to understand how entity permission is getting applied on this *fetchxml* tag.  
 
 ## include
 

@@ -11,7 +11,7 @@ author: Nkrb
 ---
 # Implementing a IFRAME component
 
-This sample describes how to bind a code component to different fields on the form and use the value of these fields as input properties to the component.  
+This sample describes how to bind a code component to different fields on the form and use the value of these fields as input properties to the component. You can download the sample component from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/TS_IFrameControl).
 
 > [!div class="mx-imgBorder"]
 > ![IFRAME component](../media/iframe-control.png "IFRAME component")
