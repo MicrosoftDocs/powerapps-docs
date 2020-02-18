@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 10/29/2019
+ms.date: 02/18/2020
 ms.author: mabolan
 search.audienceType: 
   - maker
@@ -56,6 +56,21 @@ An admin can upload the app so it shows up for **all** teams in your tenant unde
 ## Publish the app to the Teams catalogue
 
 If you are an admin, you can also [publish the app](https://docs.microsoft.com/microsoftteams/tenant-apps-catalog-teams) to the Microsoft Teams catalogue.
+
+## Improve the performance of your app
+
+You can optionally preload your app within Teams to increase performance.
+
+1. Sign in to [make.powerapps.com](https://make.powerapps.com), and then select **Apps** in the menu.
+
+2. Select **More actions** (...) for the app you want to share in Teams, and then select **Settings**.
+
+3. In the Settings panel, toggle **Preload app for enhanced performance** to **Yes**. Power Apps will then preload your app whenever it is embedded in Teams.
+
+    ![App details](./media/embed-teams-app/preload-app.png "Preload app for enhanced performance")
+
+4. For the changes to take effect, re-import your app into Teams.
+
 
 ### See also
 
