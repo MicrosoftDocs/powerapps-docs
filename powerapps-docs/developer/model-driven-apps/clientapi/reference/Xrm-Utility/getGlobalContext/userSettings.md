@@ -36,7 +36,7 @@ Returns the date formatting information for the current user.
 
 **Type**: Object
 
-**Description**: An object with informatiuon about date formatting such as **FirstDayOfWeek**, **LongDatePattern**, **MonthDayPattern**, **TimeSeparator**, and so on.
+**Description**: An object with information about date formatting such as **FirstDayOfWeek**, **LongDatePattern**, **MonthDayPattern**, **TimeSeparator**, and so on.
 
 ## defaultDashboardId 
 
