@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 01/17/2020
+ms.date: 02/03/2020
 ms.author: tapanm
 ms.reviewer: 
 ---
@@ -16,6 +16,10 @@ ms.reviewer:
 We have compiled a list of frequently asked questions and provided brief answers to help you get to your information quickly.
 
 ## General
+
+### Does Power Apps portals support TLS 1.2?
+
+Power Apps portals version 8.3 and later supports [TLS 1.2](https://support.microsoft.com/help/4041984/portal-capabilities-for-microsoft-dynamics-365-version-8-3-2-85-releas).
 
 ### What is the difference between Power Apps portals, Dynamics 365 portals and add-on portals?
 
@@ -208,6 +212,10 @@ When you change the URL of your Common Data Service environment, your portal wil
 Your portal will be restarted and start working again.
 
 ## Debugging and fixing problems
+
+### Performance of entity forms: Actions such as create/update/delete on entity forms take a lot of time to complete or timeout.
+
+This can happen due to multiple reason depending on your data and customizations done on that entity within Common Data Service. When troubleshooting such performance related issue on record actions from portals, ensure that there are no synchronous plugins registered on those events that may possibly cause these delays. Wherever possible, try to implement them asynchronously so that they do not hold or delay the transaction.
 
 ### When accessing my portal, I see a generic error page. How can I see the actual error?
 

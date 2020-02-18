@@ -1,5 +1,6 @@
 ---
 title: "Basic navigation in a model-driven app | MicrosoftDocs"
+description: Basic navigation in a model-driven app. This explains how to find and open an app, and how to work with its common user interface elements including lists, forms, and business processes.
 author: mduelae
 manager: kvivek
 ms.service: powerapps
@@ -46,11 +47,11 @@ It's easy to get around and get back to your favorite or most-used records. The 
 Legend:
 
 1. **App selector**: Open this menu to move between apps.
-1. **Collapse/expand button**: Select this to collapse the navigator to allow more room for the main part of the page. If the navigator is already collapsed, select this button to expand it again.
-1. **Recent records**: Expand this entry to view a list of records you were recently using. Select a record here to open it. Select the push-pin icon next to a record listed here to add it to your favorites (pinned records).
-1. **Favorite records**: Expand this entry to view and open your favorite (pinned) records. Use the **Recent records** list to add records here. Select the remove-pin icon next to a record listed here to remove it from this list.
-1. **Entity navigator**: This area lists each entity and dashboard available for the current work area. Select any entry here to open the named dashboard or list view for that entity.
-1. **Work-area selector**: Open this menu to move to another work area. The current work area is named here.
+2. **Collapse/expand button**: Select this to collapse the navigator to allow more room for the main part of the page. If the navigator is already collapsed, select this button to expand it again.
+3. **Recent records**: Expand this entry to view a list of records you were recently using. Select a record here to open it. Select the push-pin icon next to a record listed here to add it to your favorites (pinned records).
+4. **Favorite records**: Expand this entry to view and open your favorite (pinned) records. Use the **Recent records** list to add records here. Select the remove-pin icon next to a record listed here to remove it from this list.
+5. **Entity navigator**: This area lists each entity and dashboard available for the current work area. Select any entry here to open the named dashboard or list view for that entity.
+6. **Work-area selector**: Open this menu to move to another work area. The current work area is named here.
 
 ## Working with list views
 

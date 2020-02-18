@@ -168,6 +168,8 @@
         href: reference/controls/clearOptions.md
       - name: getAttribute
         href: reference/controls/getAttribute.md
+      - name: getContentWindow
+        href: reference/controls/getContentWindow.md
       - name: getControl
         href: reference/controls/getControl.md
       - name: getControlType

@@ -52,7 +52,7 @@ The **Create a new record** command or **Quick create** makes it fast and easy t
   
 3. Fill in the appropriate details for new contact and then select **Save and Close**.
 
-   > [!NOTE]
+    > [!NOTE]
     > If you have unsaved changes and try to go to another record or form, a **Unsaved changes** dialog box will pop-up. If you select **Save and continue**, it will attempt to save your information and open the page you wanted to go to. If you choose to save and continue and there is an error on a field, the dialog will close and you will remain on the page to fix the error before you can navigate away.
 
     > [!div class="mx-imgBorder"] 
@@ -61,9 +61,12 @@ The **Create a new record** command or **Quick create** makes it fast and easy t
  
  ## Preview: Use the Save or Save & Close option when editing a record 
  
-This is an early-access feature. You can opt in early to enable these features in your environment. This will allow you to test these features and then adopt them across your environments. For information on how to enable these features, see [Opt in to 2020 release wave 1 updates](https://docs.microsoft.com/power-platform/admin/opt-in-early-access-updates).
-
 Use the **Save** or **Save & Close** button on command bar when you edit an existing record. Before this release, the **Save** option was only available on the bottom right corner.
+
+> [!NOTE]
+> This is an early access feature. You can opt in early to enable this feature in your environment, which will allow you to test these features and then adopt them across your environments. 
+> For information on how to enable these features, see [Opt in to 2020 release wave 1 updates](https://docs.microsoft.com/power-platform/admin/opt-in-early-access-updates).
+
 
 1. From the left navigation pane, select the record type that you want to edit. For example, select **Accounts**.
 2. Open the account record that you want to edit and make your changes to the record.
