@@ -11,19 +11,19 @@
   - name: "Learning Catalog"
     items: 
     - name: "Learning Catalog"
-      href: learning-catalog/learning-catalog.md
+      href: ../learning-catalog/learning-catalog.md
     - name: Business Decision Maker
-      href: learning-catalog/learning-catalog-bdm.md
+      href: ../learning-catalog/learning-catalog-bdm.md
     - name: Application Maker
-      href: learning-catalog/learning-catalog-app-maker.md
+      href: ../learning-catalog/learning-catalog-app-maker.md
     - name: Developer
-      href: learning-catalog/learning-catalog-developer.md
+      href: ../learning-catalog/learning-catalog-developer.md
     - name: Adminstrator
-      href: learning-catalog/learning-catalog-administrator.md
+      href: ../learning-catalog/learning-catalog-administrator.md
     - name: Functional Consultant
-      href: learning-catalog/learning-catalog-functional-consultant.md
+      href: ../learning-catalog/learning-catalog-functional-consultant.md
     - name: Solution Architect
-      href: learning-catalog/learning-catalog-solution-architect.md
+      href: ../learning-catalog/learning-catalog-solution-architect.md
 - name: Find and run apps
   href: ../user/index.md
   items:
