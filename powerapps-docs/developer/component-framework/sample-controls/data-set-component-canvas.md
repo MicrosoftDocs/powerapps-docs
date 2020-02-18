@@ -15,16 +15,20 @@ ms.assetid: 356561d0-a36b-4b93-8b76-3e1abf9414e9
 
 # Implementing data-set component for canvas apps
 
-This sample shows how to create a dataset component for canvas apps. The dataset component also showcases how to utilize dataset API methods to get view’s column metadata binding, record binding, paging, and record navigation. 
+This sample shows how to create a dataset component for canvas apps. The dataset component also showcases how to use the dataset API methods to get view’s column metadata binding, record binding, paging, and record navigation. 
 
  You can download the sample component from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/TS_DataSetGrid).
 
+> [!div class="mx-imgBorder"]
+> ![Data set grid control](../media/data-set-grid-control-canvas.png)
+
 ## Available for 
 
-Model-driven apps and canvas apps (experimental preview).
+Model-driven apps and canvas apps (public preview).
 
 > [!NOTE]
-> Some of the dataset API methods are still not supported in canvas apps. See, [Dataset component for model-driven apps](data-set-grid-control.md) to learn more about how dataset type components are implemented in model-driven apps.
+> Some of the dataset API methods are still not supported in canvas apps. See, [individual API documentation] for availability details.
+> See, [Dataset component for model-driven apps](data-set-grid-control.md) to learn more about how dataset type components are implemented in model-driven apps.
 
 ## Manifest 
 
@@ -551,8 +555,7 @@ private onLoadPreviousButtonClick(event: Event): void {
 </root>
 ```
 
-
-In this sample, the column information can be extracted using the  `context.parameters.[dataset_property_name].columns`. It’s an array type. The ways to access them are exactly same in canvas and model-driven apps.
+In this sample, the column information is extracted using the  `context.parameters.[dataset_property_name].columns`. It’s an array type. The ways to access them are the same for both canvas and model-driven apps.
 
 ### Record binding
 
@@ -563,11 +566,17 @@ In this sample, the column information can be extracted using the  `context.para
 
 ### Load more pages of data
 
-The `context.parameters.[dataset_property_name].paging` method provides the  paging functionality. The Load Next button is shown if it has next page data. User can also go back to previous pages using Load Prev button. 
+The `context.parameters.[dataset_property_name].paging` method provides paging functionality. The `Load Next` button is shown if it has next page data. Users can go back to the previous pages using the `Load Prev` button. 
 
 ### PropertySets
 
 In this sample component, two property sets are defined in its manifest, `samplePropertySet` and `samplePropertySet2`. Users can see two empty columns before adding any column fields to the component. These are the property-set columns, which can be used to access columns defined in the corresponding property using the expression input. For a property-set, the corresponding column order will be 0.
+
+> [!div class="mx-imgBorder"]
+> ![Property Set Configuration](../media/property-set-configuration.png)
+
+> [!div class="mx-imgBorder"]
+> ![Property Set view fields](../media/property-set-view-fields.png)
 
 ### Navigation
 
@@ -577,17 +586,17 @@ Using this API along with the `dataset_property_name_selected property`, the use
  
 ### Sizing
 
-This sample also showcases how the component listens to the container resize. The `trackContainerResize` method should be called within the `init` method so that the `mode.allocatedWidth` and `mode.allocatedHeight` will be provided each time when the `updateView` is being called. If this method is not called initially, then they don't have `allocatedWidth` and `allocatedHeight` provided. If the allocatedHeight is –1, that means there is no limit on height. The component should adjust its height based on the provided width.
+This sample also showcases how the component listens to the container resize. The `trackContainerResize` method should be called within the `init` method so that the `mode.allocatedWidth` and `mode.allocatedHeight` will be provided each time when the `updateView` is being called. If this method is not called initially, they don't have `allocatedWidth` and `allocatedHeight` values provided. If the `allocatedHeight` is –1, that means there is no limit on height. The component should adjust its height based on the provided width.
 
-## Dataset API methods that aren't supported in canvas apps (experimental preview)
+## Dataset API methods that aren't supported in canvas apps (public preview)
 
 **Filter & SortStatus**
 
-In this experimental preview for canvas apps, only a limited set of [filtering](../reference/filtering.md) and [sortStatus](../reference/sortstatus.md) methods are supported. Filter and sort can be applied to dataset on primary type columns except for the GUID. Filter and sorting can be applied in the same way as in model-driven apps. To retrieve the dataset with filtering and sorting information, call the methods in `context.parameters.[dataset_property_name].filtering` and `context.parameters.[dataset_property_name].sorting`, then invoke the `context.parameters.[dataset_property_name].refresh()`.
+In this preview for canvas apps, only a limited set of [filtering](../reference/filtering.md) and [sortStatus](../reference/sortstatus.md) methods are supported. Filter and sort can be applied to dataset on primary type columns except for the GUID. Filter and sorting can be applied in the same way as in model-driven apps. To retrieve the dataset with filtering and sorting information, call the methods in `context.parameters.[dataset_property_name].filtering` and `context.parameters.[dataset_property_name].sorting`, then invoke the `context.parameters.[dataset_property_name].refresh()`.
 
 **View**
 
-In model-driven apps, views are needed for dataset components to get the columns information. In canvas apps, views are used as a filter, and it’s up to the app maker to decide which columns to be added for each of the component. View can be selected after a source is selected for the dataset component. Selecting a view will apply the view’s filter to the source. The view name and view id can be retrieved using the `context.parameters.[dataset_property_name].getTitle()` and `context.parameters.[dataset_property_name].getViewId()` methods.
+In model-driven apps, views are required for dataset components to get the column's information. In canvas apps, views are used as a filter. It’s up to the app maker to decide which columns to be added for each of the component. A view can be selected after a source is selected for the dataset component. This is applicable only when you choose Common Data Service as a source. Selecting a view applies the view’s filter to the source. The view name and view id can be retrieved using the `context.parameters.[dataset_property_name].getTitle()` and `context.parameters.[dataset_property_name].getViewId()` methods.
 
 
 ### Related topics
