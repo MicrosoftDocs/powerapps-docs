@@ -28,7 +28,7 @@ Find the right online training, in person workshops, and events for your role as
         :::column-end:::
     :::column:::
 
-    ### Application Makers
+    ### App makers
 
     Are you interested in quickly creating custom business apps without writing code? 
 
@@ -69,7 +69,7 @@ Find the right online training, in person workshops, and events for your role as
 :::row:::
     :::column:::
 
-    ### Functional Consultants
+    ### Functional consultants
 
     Are you an implementation expert for a business domain? 
 
@@ -84,7 +84,7 @@ Find the right online training, in person workshops, and events for your role as
         :::column-end:::
     :::column:::
 
-    ### Solution Architects
+    ### Solution architects
 
     Do you design solutions that meet your customers' needs and budgets?
 
