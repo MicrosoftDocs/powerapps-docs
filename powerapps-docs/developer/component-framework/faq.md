@@ -16,20 +16,23 @@ author: ghurlman
 
 ## Component changes are not reflected after the updated solution import?
 
-Update the control version (minor or patch) in control manifest. eg. 1.0.0 to 1.0.1. Every update in the control needs a control version bump to be reflected on the CDS server.
+Update the component version (minor or patch) in component manifest. eg. 1.0.0 to 1.0.1. Every update in the component needs a component version bump to be reflected on the CDS server.
 
-Please note that incrementing the major version number (eg 1.0 to 2.0) is not supported as an upgrade; a new solution must be created if you wish to increment the major version number.
+Please note:
+
+* Incrementing the major version number (eg 1.0 to 2.0) is not supported as an upgrade; a new solution must be created if you wish to increment the major version number.
+* Only three version sections are supported (i.e. MAJOR.MINOR.PATCH). These version number sections should be between 0 and 65536.
 
 ## What are the things to be considered from a performance perspective?
 
 1. Be mindful of the data you are trying to load into your component. If your user will truly need access to hundreds or thousands of data items, implement methods of filtering and paging to limit how much data is being loaded at any one time.
-2. Batch your network calls. Rather than making a call for each data item you want to show, either get all that information in a single call, or design your component such that the user has to do something (such as clicking on a button) to initiate loading of one item's detail data.
-3. If a component is likely to have more than one instance of itself on a single screen or form, try to have your code be aware of that and not repeat work that can be shared across all instances.
+2. Batch your network calls, and make any network calls asyncronous. Rather than making a call for each data item you want to show, either get all that information in a single call, or design your component such that the user has to do something (such as clicking on a button) to initiate loading of one item's detail data.
+3. Ensure that you are cleaning up your resources in the `destroy` function. Things like open network calls and connections and event handlers need to be cleaned up in order to not lead to slow performance.
 
-## Where can I find some good examples of PCF controls?
+## Where can I find some good examples of PCF components?
 Lots of great examples from the community are available on the [Power Apps Community Forums](https://powerusers.microsoft.com/t5/Power-Apps-Component-Framework/Community-content-sample-components-blogs-etc-Link-to-this-page/td-p/280710).
 
-## How to use rich data types in PCF controls such as Collections?
+## How to use rich data types in PCF components such as Collections?
 Currently this feature is unsupported. However, there is a [JSON function](https://docs.microsoft.com/powerapps/maker/canvas-apps/functions/function-json) in Canvas-based Power Apps that allows app makers to stringify their data.
 
 1. Pass your collection into that function
@@ -46,7 +49,7 @@ This is not supported at this time. Currently, you can only call dialog boxes us
 
 ## How can I call other components from within another component?
 
-This is not supported natively by the framework.
+This is not supported natively by the framework. You can use one of a number of 3rd party libaries to enable this functionality in your components.
 
 ## Can I bundle font resources?
 
