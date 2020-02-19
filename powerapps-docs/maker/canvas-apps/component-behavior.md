@@ -4,7 +4,7 @@ description: Trigger an app to perform one or more tasks when a component-based 
 author: yifwang
 ms.service: powerapps
 ms.topic: article
-ms.date: 9/30/2019
+ms.date: 02/19/2020
 ms.author: yifwang
 ms.reviewer: tapanm
 search.audienceType:
@@ -55,3 +55,8 @@ Besides resetting a component instance from the outside of the component, there 
 This is an example of reviewing order numbers and updating the numbers. The numeric up and down component is used to increase or decrease number of orders. When selecting the gallery on the left, the default number of numeric up and down component is reset to display the order number of selected tool. "**Raise OnReset when value changes**" made it possible to reset the default value when the input changes. 
 
 To do so, check "**Raise OnReset when value changes**" of the default input property. **OnReset** of the component is set to **Set(_numericValue,'Numeric up down'.DefaultValue)**. _numericValue is the variable to store the value of the current order value. And set the **Default** of the text input control to **If(IsBlank(_numericValue), 'Numeric up down'.DefaultValue, _numericValue)**. 
+
+### See also
+
+- [Canvas app components overview](create-component.md)
+- [Canvas app components library](component-library.md)
