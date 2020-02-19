@@ -19,8 +19,6 @@ In the [overview](create-component.md) article for creating components, you are 
 
 Component libraries are containers of component definitions that make it easy to discover and search for components, publish updates across environments, and notify app makers of available component updates. 
 
-Solution awareness of canvas components and apps that use them is also enabled through component libraries. Migrating an app and its dependencies across environments is now possible through Common Data Service solutions. Canvas apps and component libraries are handled very similarly and modeled under the same 'CanvasApp' entity.
-
 ## Difference between an app and a component library
 
 When you create a component library, the tree view on left navigation by default displays components. When you create an app, this view shows screens instead of components. 
@@ -103,6 +101,8 @@ Sharing a component library works the same way you share a canvas app. When you 
 - You cannot import components using component library from locally saved component library file. If you try to import a locally saved component library using **File** -> **Save As** -> **This Computer** and download the component library file as an app, following error message appears: 
 
     ![Import component library file](./media/component-library/import-component-library-file.png)
+
+- You cannot add component libraries to a [solution](add-app-solution.md).
 
 ## Next steps
 
