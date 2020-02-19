@@ -64,7 +64,7 @@ ms.custom:
                               </a>
                            </li>
                            <li>
-                              <a href="https://docs.microsoft.com/learn/browse/?products=powerapps&resource_type=learning%20path">
+                              <a href="/powerapps/learning-catalog/get-started">
                                  <div class="cardSize">
                                     <div class="cardPadding">
                                        <div class="card">
@@ -74,8 +74,8 @@ ms.custom:
                                              </div>
                                           </div>
                                           <div class="cardText">
-                                             <h3>Learn Power Apps</h3>
-                                             <p>Explore learning paths on Microsoft Learn that provide step-by-step guidance to learn Power Apps. It's free!</p>
+                                             <h3>Learning catalog</h3>
+                                             <p>Find the right online training, in person workshops, and events for your role as a user of Power Apps.</p>
                                           </div>
                                        </div>
                                     </div>
