@@ -32,6 +32,9 @@ The screens inside a component library are available for testing only. This prov
 
 As [components overview](create-component.md) explains, you can preview component library components using the screens inside the library with the play option. When you select component tab, the play option is disabled. Component library does not display when using Power Apps mobile.
 
+> [!NOTE]
+> Component library discussed in this article is different from the Power Apps Component Framework that enables developers and makers to create code components for model-driven and canvas apps. For more information, read [Power Apps Component Framework overview](https://docs.microsoft.com/powerapps/developer/component-framework/overview).
+
 ## Working with component library
 
 You can create a new component library or edit an existing component library from the same interface by browsing to make.powerapps.com and selecting **Component Libraries**:

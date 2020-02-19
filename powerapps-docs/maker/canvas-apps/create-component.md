@@ -42,6 +42,9 @@ Components available inside the app are listed under **Custom** category in list
 
 ![Insert components to the app](./media/create-component/insert-components.png)
 
+> [!NOTE]
+> Components discussed in this article are different from the Power Apps Component Framework that enables developers and makers to create code components for model-driven and canvas apps. For more information, read [Power Apps Component Framework overview](https://docs.microsoft.com/powerapps/developer/component-framework/overview).
+
 ## Scope
 
 Think of a component as an encapsulated black box with properties as the interface. You can't access controls in the component from outside of the component, and you can't refer to anything outside of the component from inside the component. Scope restrictions keep the data contract of a component simple and cohesive, and it helps enable seamless component-definition updates, especially across apps with component libraries. You can update the data contract of the component by creating one or more custom properties.
@@ -61,7 +64,7 @@ An input property is how a component receives data to be used in the component. 
 
 Output properties can emit data or component state. For example, the **Selected** property on a **Gallery** control is an output property. When you create an output property, you can determine what other controls can refer to the component state.
 
-This walkthrough further explains these concepts.
+This walk-through further explains these concepts.
 
 ## Create an example component
 
