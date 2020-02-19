@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.reviewer: 
-ms.date: 11/26/2019
+ms.date: 02/18/2020
 ms.author: kvivek
 search.audienceType: 
   - maker
