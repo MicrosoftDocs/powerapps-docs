@@ -15,13 +15,16 @@ search.app:
 
 # Create a component for canvas apps
 
-Components are reusable building blocks for canvas apps so that app makers can create custom controls to use in an app or across apps. Advanced features, such as custom properties, enable complex capabilities in components. This article introduces component concepts and some examples.
+> [!IMPORTANT]
+> This feature is still in public preview. For more information, see [Experimental and preview features](working-with-experimental.md).
 
-Components are useful in building larger apps that have similar control patterns. If you update a component definition, all instances in the app reflect your changes. You can also improve performance by using one or more components because you don't copy and paste controls, which duplicates overhead. Components also facilitates collaborative development and standardizes look-and-feel in an organization.
+Components are reusable building blocks for canvas apps so that app makers can create custom controls to use in an app. Components can be reused across apps using [component library](component-library.md). Components can utilize advanced features, such as custom properties and enable complex capabilities. This article introduces component concepts and some examples.
+
+Components are useful in building larger apps that have similar control patterns. If you update a component definition inside the app, all instances in the app reflect your changes. You can also improve performance by using one or more components because you don't copy and paste controls, which duplicates overhead. Components also facilitates collaborative development and standardizes look-and-feel in an organization when you use a [component library](component-library.md).
 
 ## Components in canvas app
 
-You can create a component from within an app as explained in this article, or by creating a new component inside a [component library](component-library.md). 
+You can create a component from within an app as explained in this article, or by creating a new component inside a [component library](component-library.md). A component library should be used for requirements to use components across multiple app screens. You can also copy the existing components into an existing or a new component library.
 
 To create a component within an app, go to **Insert** menu, select **Custom** drop down menu and then select **New Component**:
 
@@ -41,14 +44,14 @@ Components available inside the app are listed under **Custom** category in list
 
 ## Scope
 
-Think of a component as an encapsulated black box with properties as the interface. You can't access controls in the component from outside of the component, and you can't refer to anything outside of the component from inside the component. If you try, an error appears. Scope restrictions keep the data contract of a component simple and cohesive, and it helps enable seamless component-definition updates, especially across apps. You can update the data contract of the component by creating one or more custom properties.
+Think of a component as an encapsulated black box with properties as the interface. You can't access controls in the component from outside of the component, and you can't refer to anything outside of the component from inside the component. Scope restrictions keep the data contract of a component simple and cohesive, and it helps enable seamless component-definition updates, especially across apps with component libraries. You can update the data contract of the component by creating one or more custom properties.
 
 > [!NOTE]
-> You cannot **preview** components from components section or the component library like the way you can preview an app using the play button on top right side of the Power Apps Studio. In order to experience the components, you must use components inside an app. Component library does not display when using Power Apps mobile.
+> You cannot **preview** components from components section or the component library like the way you can preview an app using the play button on top right side of the Power Apps Studio. In order to experience the components, you must use components inside an app. Component library does not display when using [Power Apps mobile](https://powerapps.microsoft.com/downloads/).
 
 ## Variables
 
-Components don't support the **UpdateContext** function, but you can create and update variables in a component by using the **Set** function. The scope of these variables is limited to the component, but you can access them from outside the component by leveraging custom output properties.
+Components don't support the [**UpdateContext**](./functions/function-updatecontext.md) function, but you can create and update variables in a component by using the [**Set**](functions/function-set.md) function. The scope of these variables is limited to the component, but you can access them from outside the component by leveraging custom output properties.
 
 ## Custom properties
 

@@ -15,21 +15,22 @@ search.app:
 
 # Component library in canvas app
 
+> [!IMPORTANT]
+> This feature is still in public preview. For more information, see [Experimental and preview features](working-with-experimental.md).
+
 In the [overview](create-component.md) article for creating components, you are introduced to components inside canvas app. While you can create components inside an app and reuse them inside the same or any other app, you can also create a library of components that can be reused. This enables app makers to share and update components with other makers by creating component libraries. 
 
 Component libraries are containers of component definitions that make it easy to discover and search for components, publish updates across environments, and notify app makers of available component updates. 
 
 ## Difference between an app and a component library
 
+A component library provides a centralized and managed repository of components for reusability. 
+
 When you create a component library, the tree view on left navigation by default displays components. When you create an app, this view shows screens instead of components. 
 
-The screens inside a component library are available for testing only. A component library cannot be used as an app even if you configure multiple screens. If you want to use components that you created inside a component library, you must create an app that uses the component library. And you can share this app with others like any other canvas app.
+The screens inside a component library are available for testing only. This provides library creators a way to quickly test the created components on actual screen and also validate the update behavior as components are enhanced over time. In order to use the components from component library you must create an app that uses component library.
 
-Components available inside the app are listed under **Custom** category in list of components inside tree view; whereas components available from imported component libraries are listed under **Library components** category:
-
-![Insert components to the app](./media/component-library/insert-components.png)
-
-As mentioned in [components overview](create-component.md), you cannot **preview** components from components section or the component library like the way you can preview an app using the play button on top right side of the Power Apps Studio. In order to experience the components, you must use components inside an app. Component library does not display when using Power Apps mobile.
+As [components overview](create-component.md) explains, you can preview component library components using the screens inside the library with the play option. When you select component tab, the play option is disabled. Component library does not display when using Power Apps mobile.
 
 ## Working with component library
 
@@ -39,7 +40,7 @@ You can create a new component library or edit an existing component library fro
 
 ## Create an example component library
 
-The steps to create components inside a component library are same as creating components inside an app. In this example, you'll create a component library first and then reuse the steps for creating components from [components overview example](create-component.md#create-an-example-component). Once you create the required components and test the functionality using those steps, you'll use the component library to reuse the components in a new app.
+The steps to create components inside a component library are same as creating components inside an app. In this example, you'll create a component library first and then reuse the steps for creating components from [components overview example](create-component.md#create-an-example-component). Once you create the required components and preview as you walk through the example, you'll use the component library to provide the reusable components in a new app.
 
 1. Go to make.powerapps.com, select **Apps** in left navigation, select **Component Libraries** and then select **New component library**.
 
@@ -55,11 +56,14 @@ The steps to create components inside a component library are same as creating c
 
     ![Version note when saving component library](./media/component-library/save-component-libray-version-note.png)
 
+    > [!TIP]
+    > Version note is useful when reviewing versions of a component library and for the app makers using your component library to review changes and update apps consuming these components as needed.   
+
 1. Saved component library can be published. Since only published component library updates are available for apps that consume a component library, select **Publish** to publish the component library version:
 
     ![Publish component library version](./media/component-library/publish-component-library.png)
 
-## Import component library
+## Import from a component library
 
 After you create a component library and publish, apps can consume the components from this component library by importing the library. 
 
@@ -73,17 +77,20 @@ This opens the list of component libraries available in current environment on r
 
 ![Import components](./media/component-library/components.png)
 
+> [!NOTE]
+> If maker doesn't see the component library listed in import section, ensure the component library is shared with the maker. For more details, read [component library permissions](component-library.md#component-library-permissions). 
+
 Notice you can select and import more than one component and across different component libraries. 
 
-Components added from the component libraries are listed in the **Insert** navigation under section **Library components**:
+Components available inside the app are listed under **Custom** category in list of components inside tree view; whereas components available from imported component libraries are listed under **Library components** category:
 
-![Library components](./media/component-library/library-components.png)
+![Insert components to the app](./media/component-library/insert-components.png)
 
 ## Update a component library
 
 You can modify existing component library and save any changes with additional version notes. However, the updated component library version must be published for use in existing apps that use the component library. Example component library steps above explain how to publish a component library after saving it.
 
-Once you publish component library changes, if you edit an existing app that uses components from this library, you are automatically notified of updated components being available:
+After you publish component library changes, maker of the apps using the library gets to review the update when the app is opened for editing. Maker is automatically notified of updated components being available and can choose to update to latest:
 
 ![Update available](./media/component-library/update-available.png)
 
@@ -91,9 +98,11 @@ Once you select **Review**, you are presented with option to update the componen
 
 ![Update component](./media/component-library/update-components.png)
 
+Select **Update** to update the components.
+
 ## Component library permissions
 
-Sharing a component library works the same way you share a canvas app. When you share a component library, you are allowing others to reuse the component library. Once shared, others can edit the component library and import components from this shared component library for creating and editing apps.
+Sharing a component library works the same way you share a canvas app. When you share a component library, you are allowing others to reuse the component library. Once shared, others can edit the component library and import components from this shared component library for creating and editing apps. If shared as co-owner, user can use, edit, share component library but not delete or change owner.
 
 ## Known limitations
 
