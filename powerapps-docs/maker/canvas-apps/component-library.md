@@ -116,6 +116,12 @@ Sharing a component library works the same way you share a canvas app. When you 
 
 - You cannot add component libraries to a [solution](add-app-solution.md).
 
+- If you import a component from a component library, you cannot edit it inside the consuming app. If you select **Edit component**, you are presented with an option to create a copy of the component inside current app for you to make changes: 
+
+    ![Edit library component](./media/component-library/edit-library-component.png)
+
+    If you select **Create a copy**, the component is copied to the local app and behaves same as any other component inside an app instead of a component library.
+
 ## Next steps
 
 Learn [behavior formulas](component-behavior.md) for canvas app.
