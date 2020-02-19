@@ -28,7 +28,7 @@ To share an app you must have the [!INCLUDE [powerapps](../../includes/powerapps
 
 ## Share your app for basic use
 To add privileges so the app user can run an app within the environment and perform common tasks for the records that they own, use the **Common Data Services User** security role.
-1.	On the [Power Apps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) site select **Apps**, next to the model-driven app you want to share select **…**, and then select **Share**. 
+1.	On the [Power Apps]https://make.powerapps.com) site select **Apps**, next to the model-driven app you want to share select **…**, and then select **Share**. 
 	> [!IMPORTANT]
     > The steps to share a model-driven app are different from a canvas app. For steps to share a canvas app, see [Share a canvas app in Power Apps](../canvas-apps/share-app.md). 
 
