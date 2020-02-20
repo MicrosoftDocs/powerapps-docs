@@ -180,7 +180,7 @@ So far, you've created a component and added it to an app. Next, you'll create a
 ## Import and export components
 
 > [!NOTE]
-> This feature will be deprecated. [Component libraries](component-library.md) are the recommended way to reuse the components across the apps. When using content library, an app maintains dependencies on the components it uses. The app maker will be alerted when the updates to dependent components become available. Hence, all new reusable components should be created within the component libraries instead.
+> This feature will be deprecated. [Component libraries](component-library.md) are the recommended way to reuse the components across the apps. When using component library, an app maintains dependencies on the components it uses. The app maker will be alerted when the updates to dependent components become available. Hence, all new reusable components should be created within the component libraries instead.
 
 ### Import components from another app
 
