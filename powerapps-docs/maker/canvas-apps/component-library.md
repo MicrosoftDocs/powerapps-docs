@@ -4,7 +4,7 @@ description: Library of reusable components for canvas apps
 author: yifwang
 ms.service: powerapps
 ms.topic: article
-ms.date: 02/15/2020
+ms.date: 02/20/2020
 ms.author: yifwang
 ms.reviewer: tapanm
 search.audienceType:
@@ -23,7 +23,7 @@ In the [overview](create-component.md) article for creating components, you are 
 Component libraries are containers of component definitions that make it easy to discover and search for components, publish updates across environments, and notify app makers of available component updates. 
 
 > [!NOTE]
-> Component libraries are the recommended way to reuse components across apps. Each app maintains dependencies on the component libraries uses. The app maker is be alerted when updates to dependent components become available. An earlier Power Apps feature allowed [importing components from one canvas app to another](create-component.md?#import-and-export-components). This feature will be deprecated. Hence, all new reusable components should be created within component libraries instead.
+> Component libraries are the recommended way to reuse components across apps. When using content library, an app maintains dependencies on the components it uses. The app maker will be alerted when the updates to dependent components become available. Hence, all new reusable components should be created within the component libraries instead. An earlier Power Apps feature that allowed [importing components from one canvas app to another](create-component.md?#import-and-export-components) will be deprecated.
 
 ## Difference between an app and a component library
 
@@ -71,9 +71,9 @@ The steps to create components inside a component library are same as creating c
 
 ## Import from a component library
 
-After you create a component library and publish, apps can consume the components from this component library by importing the library. 
+After you create a component library and publish, apps can consume the components from this component library by importing the library. You can also [share a component library](component-library.md#component-library-permissions).
 
-To do this, edit an existing app or create a new app by browsing to make.powerapps.com and from **Apps** on the left navigation, use **New** and then **Canvas app**; or select **Edit** for any existing app from the **More Commands** (...) drop down menu.
+To import from a component library, edit an existing app or create a new app by browsing to make.powerapps.com and from **Apps** on the left navigation, use **New** and then **Canvas app**; or select **Edit** for any existing app from the **More Commands** (...) drop down menu.
 
 After the Canvas App Studio opens, you select **Insert** or the **+** on the left navigation and then select **Get more components** to list the component libraries available in current environment:
 
@@ -117,7 +117,7 @@ Sharing a component library works the same way you share a canvas app. When you 
 
     ![Import component library file](./media/component-library/import-component-library-file.png)
 
-- You cannot add component libraries to a [solution](add-app-solution.md).
+- You cannot add existing component libraries to a [solution](add-app-solution.md). However, you can create new component libraries for solutions using add component library flow.
 
 - If you import a component from a component library, you cannot edit it inside the consuming app. If you select **Edit component**, you are presented with an option to create a copy of the component inside current app for you to make changes: 
 

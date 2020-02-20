@@ -4,7 +4,7 @@ description: Introduction to reusable components for canvas apps
 author: yifwang
 ms.service: powerapps
 ms.topic: article
-ms.date: 02/15/2020
+ms.date: 02/20/2020
 ms.author: yifwang
 ms.reviewer: tapanm
 search.audienceType:
@@ -180,7 +180,7 @@ So far, you've created a component and added it to an app. Next, you'll create a
 ## Import and export components
 
 > [!NOTE]
-> This feature will be deprecated. [Component libraries](component-library.md) are the recommended way to reuse components across apps. When using content library, each app maintains dependencies on the component libraries uses. The app maker is be alerted when updates to dependent components become available. Hence, all new reusable components should be created within component libraries instead.
+> This feature will be deprecated. [Component libraries](component-library.md) are the recommended way to reuse the components across the apps. When using content library, an app maintains dependencies on the components it uses. The app maker will be alerted when the updates to dependent components become available. Hence, all new reusable components should be created within the component libraries instead.
 
 ### Import components from another app
 
@@ -232,7 +232,7 @@ Once you save the app, you can reuse the components of this app using the same m
 
 - You cannot save data sources, forms and data tables with components.
 - Use of collections in components is not supported.
-- You cannot insert a component into a gallery or a a form.
+- You cannot insert a component into a gallery or a form.
 - A master instance of a component is a local master and scoped to the app. If you change a master instance, only copies of the component within the app will reflect the change. Copies in other apps will remain the same unless you import the component library again. All master instances in those apps will be automatically detected and updated.
 - You cannot package media files when you import a component.
 
