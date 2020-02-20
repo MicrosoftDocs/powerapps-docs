@@ -213,6 +213,10 @@ Your portal will be restarted and start working again.
 
 ## Debugging and fixing problems
 
+### Performance of entity forms: Actions such as create/update/delete on entity forms take a lot of time to complete or timeout.
+
+This can happen due to multiple reason depending on your data and customizations done on that entity within Common Data Service. When troubleshooting such performance related issue on record actions from portals, ensure that there are no synchronous plugins registered on those events that may possibly cause these delays. Wherever possible, try to implement them asynchronously so that they do not hold or delay the transaction.
+
 ### When accessing my portal, I see a generic error page. How can I see the actual error?
 
 Whenever a server error occurs while trying to render a portal, a generic error page is displayed to end users along with the timestamp and activity ID of the error. Portal administrators can configure their portal to get the actual error details, which are helpful in debugging and fixing issues. To see the actual error:
