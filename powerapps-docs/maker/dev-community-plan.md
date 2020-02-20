@@ -1,14 +1,13 @@
 ---
 title: Power Apps Community Plan -- a free development environment for individual use | Microsoft Docs
 description: Sign up to build skills and learn more about Power Apps, Power Automate, and the Common Data Service.
-author: ImadYanni
+author: dileepsinghmsft
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: conceptual
-ms.custom: canvas
+ms.custom:
 ms.date: 04/30/2019
-ms.author: iyanni
+ms.author: dileeps
 ms.reviewer:
 searchScope:
   - GetStarted
@@ -78,7 +77,7 @@ With the individual environment, you get the following functionality:
 | Database size |200 MB |
 | File storage |2GB |
 
-You cannot apply add-ons to the quantities that we include. If you hit capacity limits, we recommend purchasing Power Apps Plan 2. Learn more about it from the [Power Apps pricing page](https://powerapps.microsoft.com/pricing/).
+You cannot apply add-ons to the quantities that we include. If you hit capacity limits, we recommend purchasing Power Apps Per User Plan. Learn more about it from the [Power Apps pricing page](https://powerapps.microsoft.com/pricing/).
 
 > [!NOTE]
 > The capacity of the individual environment, whether or not it's used, doesn't contribute to your company's overall quota.
@@ -111,11 +110,11 @@ If you reach one or more capacity limits, we recommend you purchase a plan that 
 
 **A:** No, you can only have one individual environment, which is created for you by Power Apps when you sign up for the Community Plan.
 
-**Q:** What's the difference between Power Apps Plan 2 Trial and Power Apps Community Plan; and which one should I sign up for?
+**Q:** What's the difference between Power Apps Plan Trial and Power Apps Community Plan; and which one should I sign up for?
 
-**A:** Both Power Apps Plan 2 Trial and Power Apps Community Plan are free, but are created for different purposes:
+**A:** Both Power Apps Plan Trial and Power Apps Community Plan are free, but are created for different purposes:
 
-**Power Apps Plan 2 Trial** gives you Power Apps Plan 2 for 30 days. This is meant for trying out Power Apps, Common Data Service, and Power Automate. Once your trial expires, you can purchase a plan. If you are already using Power Apps with Office 365 or Dynamics 365, this is the right plan to try out the premium functionalities of Power Apps, which are available with Power Apps Plan 2.
+**Power Apps Plan Trial** gives you Power Apps Plan 2 for 30 days. This is meant for trying out Power Apps, Common Data Service, and Power Automate. Once your trial expires, you can purchase a plan. If you are already using Power Apps with Office 365 or Dynamics 365, this is the right plan to try out the premium functionalities of Power Apps, which are available with Power Apps Per User Plan.
 
 **Power Apps Community Plan** gives you access to Power Apps premium functionalities, Common Data Service, and Power Automate for individual use. This plan is primarily meant for learning purposes or creating business solutions to be distributed for [AppSource Test Drive](./canvas-apps/dev-appsource-test-drive.md). This plan is perpetually available, but only for learning and building your skills on Power Apps, Common Data Services, and Power Automate.
 

@@ -32,7 +32,7 @@ The following checklist provides the list of validations performed by Microsoft 
 <td><ul>
 <li>Check for app registration type: Free, Trial or Contact me. If registered in Contact me then publisher need to enable test drive.</li>
 <li>Verify the submitted <a href="https://docs.microsoft.com/powerapps/developer/common-data-service/create-package-app-appsource">package</a> contains all the artifacts required to publish on AppSource.</li>
-<li>Download the end-to-end (E2E) functional document from Cloud Partner Portal and validate if document is updated with functional scenarios and user/admin journey.</li>
+<li>Download the end-to-end (E2E) functional document from <a href="https://partner.microsoft.com/dashboard">Partner Center</a> and validate if document is updated with functional scenarios and user/admin journey.</li>
 </ul>
 </td>
 </tr>
@@ -40,7 +40,7 @@ The following checklist provides the list of validations performed by Microsoft 
 <td>Code Validation</td>
 <td>
 <ul>
-<li>Code validation for Canvas apps will be done through <a href="https://docs.microsoft.com/powerapps/maker/canvas-apps/accessibility-checker">Accessibility Checker tool</a> in Power Apps to check for the following:
+<li>Code validation for canvas apps will be done through <a href="https://docs.microsoft.com/powerapps/maker/canvas-apps/accessibility-checker">Accessibility Checker tool</a> in Power Apps to check for the following:
 <ul>
 <li>Static formula errors and warnings: If any issues found then certification team will share the feedback to resolve and resubmit to AppSource.</li>
 <li>Runtime errors: May occur once the app is opened in Run mode to view. Any issues found will be reported through email.</li>
@@ -68,7 +68,7 @@ The following checklist provides the list of validations performed by Microsoft 
 <td>
 <ul>
 <li>Validate the functionality of the app based on the functional document shared by the publisher. All the features that are implemented in the app should pass.</li>
-<li>Publisher should submit E2E functional document through Cloud Partner Portal or can share video links through emails.</li>
+<li>Publisher should submit E2E functional document through <a href="https://partner.microsoft.com/dashboard">Partner Center</a>  or can share video links through emails.</li>
 <li>If app requires any license configuration, certification team will share the instance details for publisher to update the required license.</li>
 </ul></td>
 </tr>
@@ -84,7 +84,7 @@ The following checklist provides the list of validations performed by Microsoft 
 </td>
 </tr>
 <tr>
-<td rowspan=5><a href="https://docs.microsoft.com/powerapps/maker/canvas-apps/getting-started">Canvas apps</a> and <a href="https://docs.microsoft.com/flow/getting-started">flows</a> that connect to data sources <i>other</i> than Common Data Service
+<td rowspan=5><a href="https://docs.microsoft.com/powerapps/maker/canvas-apps/getting-started">canvas apps</a> and <a href="https://docs.microsoft.com/flow/getting-started">flows</a> that connect to data sources <i>other</i> than Common Data Service
 </td>
 <td>Sanity Check</td>
 <td><ul>
@@ -128,7 +128,9 @@ For information on best practices for creating:
 - Canvas apps, see [Canvas App Coding Standard and Guidelines](https://aka.ms/powerappscanvasguidelines)
 - Model-driven apps, see [Understand model-driven app components](https://docs.microsoft.com/powerapps/maker/model-driven-apps/model-driven-app-components)
 
-  
+### See also
+
+[Partner Center documentation](https://docs.microsoft.com/partner-center/)
 
 
 

@@ -1,13 +1,13 @@
 ---
 title: "Enable multiple-language portal support | MicrosoftDocs"
 description: "Instructions to enable multiple languages for a portal and create content in multiple languages."
-author: sbmjais
-manager: shujoshi
+author: tapanm-msft
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 11/04/2019
-ms.author: shjais
+ms.author: tapanm
 ms.reviewer:
 ---
 
@@ -27,6 +27,8 @@ To enable multiple languages for a portal, follow these steps:
    ![Add a new portal language](../media/add-new-portal-language.png "Add a new portal language")
 
    ![Set default language for your portal](../media/set-default-language-portal.png "Set default language for your portal")
+
+   ![Supported languages](../media/supported-languages.png "Supported languages")
 
 > [!Note]
 > If you activate new languages after the portal has been provisioned, you can [import the metadata translations](../admin/import-metadata-translation.md) to get the metadata translated for the newly activated languages.

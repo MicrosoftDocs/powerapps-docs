@@ -28,6 +28,8 @@
     href: associate-security-role-user.md
   - name: Determine whether a user has a role
     href: determine-whether-user-has-role.md
+  - name: Disable or enable a user
+    href: disable-a-user.md
   - name: Remove a role for a user
     href: remove-role-for-user.md
   - name: Retrieve license information
@@ -256,8 +258,8 @@
   items:
   - name: Execute multiple requests
     href: execute-multiple-requests.md
-  - name: Execute multiple requests in trnasaction
-    hre4f: execute-multiple-transaction.md
+  - name: Execute multiple requests in transaction
+    href: execute-multiple-transaction.md
 - name: Solutions
   items:
   - name: Work with solutions
@@ -270,6 +272,8 @@
     href: retrieve-time-zone-information.md
 - name: Query Data
   items:
+  - name: Query data using LINQ
+    href: query-using-linq.md
   - name: Use QueryExpression with a paging cookie
     href: use-queryexpression-with-a-paging-cookie.md
   - name: Retrieve multiple with the QueryExpression class

@@ -13,7 +13,7 @@ author: Nkrb
 # Implementing table grid component
 
 This sample showcases how to create a simple dataset component, view’s column metadata binding, record binding, more records from paging and record navigation to form.
-The component header columns and internal record values are bound to the existing views.
+The component header columns and internal record values are bound to the existing views. You can download the sample component from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/TS_TableGrid).
 
 > [!div class="mx-imgBorder"]
 > ![Table Grid component](../media/table-grid-control.png "Table Grid component")

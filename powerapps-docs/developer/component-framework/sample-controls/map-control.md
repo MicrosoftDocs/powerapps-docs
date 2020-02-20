@@ -12,7 +12,7 @@ author: Nkrb
 
 # Implementing map component
 
-This sample component changes the user experience of interacting with address fields on the form. Along with the text values of the address, this component provides the ability to visually identify a particular address on a map without navigating to another tab or screen. 
+This sample component changes the user experience of interacting with address fields on the form. Along with the text values of the address, this component provides the ability to visually identify a particular address on a map without navigating to another tab or screen. You can download the sample component from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/TS_MapControl).
 
 > [!div class="mx-imgBorder"]
 > ![Map component](../media/map-control.png "Map component")

@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 9/23/2019
+ms.date: 1/29/2020
 ms.author: mduelae
 ms.custom: ""
 ms.reviewer: ""
@@ -31,16 +31,18 @@ For an overview of Unified Interface in model-driven apps, watch this video: [In
 
 ## Navigation
 
-The menu options let you swiftly navigate the different apps in the system. They provide quick access to recently viewed records and pinned favorites. 
+The menu options let you swiftly navigate the different apps in the system. They provide quick access to recently viewed records and pinned favorites.
 
-> [!div class="mx-imgBorder"]
-> ![Model-driven app nav](media/nav.png "Model-driven app nav")
+![Navigation controls, expanded view](media/nav-expanded.png "Navigation controls, expanded view")
 
-1. Site map is expanded and persists by default.
-2. The subarea that you are currently in is highlighted to indicate where in the app.
-3. **Recent** and **Pinned** items are at the top for easy access. 
-4. Use the Area switcher to switch between apps.
-5. Icons have unique colors on the command bar to show differentiation between commands.
+Legend:
+
+1. **App selector**: Open this menu to move between apps.
+1. **Collapse/expand button**: Select this to collapse the navigator to allow more room for the main part of the page. If the navigator is already collapsed, select this button to expand it again.
+1. **Recent records**: Expand this entry to view a list of records you were recently using. Select an record here to open it. Select the push-pin icon next to a record listed here to added to your favorites (pinned records).
+1. **Favorite records**: Expand this entry to view and open your favorite (pinned) records. Use the **Recent records** list to add records here. Select the remove-pin icon next to a record listed here to remove it from this list.
+1. **Entity navigator**: This area lists each entity and dashboard available for the current work area. Select any entry here to open the named dashboard or list-view for that entity.
+1. **Work-area selector**: Open this menu to move to another work area. The current work area is named here.
 
 For more information, see [Basic navigation in a model-driven app](navigation.md).
 

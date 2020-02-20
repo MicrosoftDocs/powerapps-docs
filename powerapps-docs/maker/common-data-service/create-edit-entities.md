@@ -39,7 +39,6 @@ There are two designers you can use to create an entity:
 > - Use Power Query to create new entities and fill them with data. More information: [Add data to an entity in the Common Data Service by using Power Query](/powerapps/maker/common-data-service/data-platform-cds-newentity-pq).
 > - A developer can use [Metadata services](/powerapps/developer/common-data-service/use-web-services#metadata-services) to write a program.
 
-
 ## Entity options not available in the Power Apps portal
 
 Information in this topic will help you choose which designer you can use. You can use the Power Apps portal to create the entity unless you need to address any of the following requirements.
@@ -47,14 +46,6 @@ Information in this topic will help you choose which designer you can use. You c
 - Control the customization prefix
 
   Part of the name of any custom entity you create is the customization prefix. This is set based on the solution publisher for the solution you’re working in. If you care about the customization prefix, make sure that you are working in an unmanaged solution where the customization prefix is the one you want for this entity. More information [Change the solution publisher prefix](change-solution-publisher-prefix.md).
-
-- Create organization-owned entity
-
-  By default, the Power Apps portal will create **User or Team** owned entities. Use solution explorer to set ownership to **Organization**. More information: [Entity ownership](types-of-entities.md#entity-ownership)
-
-- Create an activity entity
-
-  An activity entity is a special kind of entity that tracks actions for which an entry can be made on a calendar. More information: [Activity entities](types-of-entities.md#activity-entities).
 
 - Change the icons for a custom entity
 
@@ -68,18 +59,12 @@ Information in this topic will help you choose which designer you can use. You c
 
   |Option   |Description  |
   |---------|---------|
-  |**Access Teams**|Create team templates for this entity. |
-  |**Allow quick create**|After you have created and published a **Quick Create Form** for this entity, people will have the option to create a new record using the **Create** button in the navigation pane. More information: [Create and design forms](../model-driven-apps/create-design-forms.md)<br /><br /> When this is enabled for a custom activity entity, the custom activity will be visible in the group of activity entities when people use the **Create** button in the navigation pane. However, because activities don’t support quick create forms, the main form will be used when the custom entity icon is clicked.|
   |**Areas that display this entity**|In the web application choose one of the available sitemap areas to display this entity. This does not apply to model-driven apps.|
   |**Auditing**|When auditing is enabled for your organization, this allows for changes to entity records to be captured over time. When you enable auditing for an entity, auditing is also enabled on all its fields. You can select or clear fields that you want to enable auditing on.|
-  |**Change Tracking**|Enables data synchronization in a performant way by detecting what data has changed since the data was initially extracted or last synchronized.  |
   |**Color**|Set a color to be used for the entity in model-driven apps.|
   |**Document management**|After other tasks have been performed to enable document management for your organization, enabling this feature allows for this entity to participate in integration with SharePoint. |
-  |**Duplicate Detection**|If duplicate detection is enabled for your organization, enabling this allows you to create duplicate detection rules for this entity.|
   |**Enable for mobile**|Make this entity available to the Dynamics 365 for phones and tablets apps. You also have the option to make this entity **Read-only in mobile**.<br /><br /> If the forms for an entity require an extension not supported in Dynamics 365 for phones and tablets apps use this setting to ensure that mobile app users can’t edit the data for these entities.|
   |**Enable for phone express**|Make this entity available to the Dynamics 365 for phones app.|
-  |**Mail merge**|People can use this entity with mail merge.|
-  |**Offline capability for Dynamics 365 for Outlook**|Whether data in this entity will be available while the Dynamics 365 for Outlook application is not connected to the network.|
   |**Reading pane in Dynamics 365 for Outlook**|Whether the entity will be visible in the reading pane for the Dynamics 365 for Outlook app.|
   |**Use custom Help**|When enabled, set a Help URL to control what page users will see when they click the help button in the application. Use this to provide guidance specific to your company processes for the entity.|
 

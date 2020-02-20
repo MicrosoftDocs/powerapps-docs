@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 11/18/2019
+ms.date: 02/05/2020
 ms.author: aheaney
 search.audienceType: 
   - maker
@@ -40,6 +40,9 @@ You do not need to enable this in your app like other experimental features. Tes
 5. Select **Open tests** to open the Test Studio for this application. This  opens Test Studio in a new browser tab.
 
     ![Open Test Studio](./media/working-with-test-studio/open-tests.png)
+
+> [!NOTE]
+> Tests are published and stored in the app package. Exporting and importing a canvas app package to another environment will also include all the test definitions such as Test Suites and Test Cases you have created. 
 
 ## Create a test suite
 

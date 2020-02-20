@@ -33,7 +33,9 @@ You can also filter, transform, and combine data before you load it into a new o
 If you don't have a license for Power Apps, you can [sign up for free](../signup-for-powerapps.md).
 
 ## Prerequisites
-To follow this topic, you must switch to an [environment](../canvas-apps/working-with-environments.md) in which you can create entities.
+Before you start to follow this topic:
+- Switch to an [environment](../canvas-apps/working-with-environments.md) in which you can create entities.
+- You must have a Power Apps per user plan or Power Apps per app plan.
 
 ## Specify the source data
 

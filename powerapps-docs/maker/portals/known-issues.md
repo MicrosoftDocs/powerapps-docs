@@ -2,7 +2,7 @@
 title: Known issues in Power Apps portals | Microsoft Docs
 description: Learn about the known issues in Power Apps portals 
 author: tapanm-msft
-manager: kumarvivek
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
