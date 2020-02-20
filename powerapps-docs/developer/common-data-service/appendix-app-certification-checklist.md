@@ -27,10 +27,10 @@ The following checklist provides the list of validations performed by Microsoft 
 <th>Certification checklist</th>
 </tr>
 <tr>
-<td rowspan=5><a href="https://docs.microsoft.com/powerapps/maker/model-driven-apps/model-driven-app-overview">Model-driven apps</a>, <a href="https://docs.microsoft.com/powerapps/maker/canvas-apps/getting-started">canvas apps</a>, and <a href="https://docs.microsoft.com/flow/getting-started">flows</a> that connect to Common Data Service<br/></td>
+<td rowspan=5><a href="https://docs.microsoft.com/powerapps/maker/model-driven-apps/model-driven-app-overview">Model-driven apps</a>, <a href="https://docs.microsoft.com/powerapps/maker/canvas-apps/getting-started">canvas apps</a>, and <a href="https://docs.microsoft.com/en-us/power-automate/getting-started">flows</a> that connect to Common Data Service<br/></td>
 <td>Sanity Check</td>
 <td><ul>
-<li>Check for app registration type: Free, Trial or Contact me. If registered in Contact me then publisher need to enable test drive.</li>
+<li>Check for app registration type: Free, Trial or Contact me.</li>
 <li>Verify the submitted <a href="https://docs.microsoft.com/powerapps/developer/common-data-service/create-package-app-appsource">package</a> contains all the artifacts required to publish on AppSource.</li>
 <li>Download the end-to-end (E2E) functional document from <a href="https://partner.microsoft.com/dashboard">Partner Center</a> and validate if document is updated with functional scenarios and user/admin journey.</li>
 </ul>
@@ -46,8 +46,9 @@ The following checklist provides the list of validations performed by Microsoft 
 <li>Runtime errors: May occur once the app is opened in Run mode to view. Any issues found will be reported through email.</li>
 <li>Accessibility errors and warnings: All Accessibility errors should be resolved as per Solution Checker guidelines.</li>
 </ul></li>
-<li>Code Validation for Common Data Service solution will be done through <a href="https://experienceisv.microsoftcrmportals.com/precertification/#/">OnDemand Code Analysis (ODCA)</a> tool.</li>
-<li>Issues reported from ODCA will be manually validated for correctness and false positive issues will be reduced to low severity.</li>
+<li>Code Validation for Common Data Service solution will be done utilizing <a href="https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/checker/webapi/overview">Power Apps Checker</a>.</li>
+<li>Issues reported from Power Apps Checker will be manually validated for correctness and false positive issues will be reduced to low severity.</li>
+<li>The quality of the solution and packages are validated against the AppSource certification <a href="https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/checker/webapi/retrieve-rulesets">ruleset</a>. 
 <li>Generated report is shared with the publisher through email.</li>
 </ul>
 </td>
@@ -84,7 +85,7 @@ The following checklist provides the list of validations performed by Microsoft 
 </td>
 </tr>
 <tr>
-<td rowspan=5><a href="https://docs.microsoft.com/powerapps/maker/canvas-apps/getting-started">canvas apps</a> and <a href="https://docs.microsoft.com/flow/getting-started">flows</a> that connect to data sources <i>other</i> than Common Data Service
+<td rowspan=5><a href="https://docs.microsoft.com/powerapps/maker/canvas-apps/getting-started">Canvas apps</a> and <a href="https://docs.microsoft.com/en-us/power-automate/getting-started">flows</a> that connect to data sources <i>other</i> than Common Data Service
 </td>
 <td>Sanity Check</td>
 <td><ul>
