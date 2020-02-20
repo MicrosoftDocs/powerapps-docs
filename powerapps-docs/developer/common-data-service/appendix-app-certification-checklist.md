@@ -27,7 +27,7 @@ The following checklist provides the list of validations performed by Microsoft 
 <th>Certification checklist</th>
 </tr>
 <tr>
-<td rowspan=5><a href="https://docs.microsoft.com/powerapps/maker/model-driven-apps/model-driven-app-overview">Model-driven apps</a>, <a href="https://docs.microsoft.com/powerapps/maker/canvas-apps/getting-started">canvas apps</a>, and <a href="https://docs.microsoft.com/en-us/power-automate/getting-started">flows</a> that connect to Common Data Service<br/></td>
+<td rowspan=5><a href="https://docs.microsoft.com/powerapps/maker/model-driven-apps/model-driven-app-overview">Model-driven apps</a>, <a href="https://docs.microsoft.com/powerapps/maker/canvas-apps/getting-started">canvas apps</a>, and <a href="https://docs.microsoft.com/power-automate/getting-started">flows</a> that connect to Common Data Service<br/></td>
 <td>Sanity Check</td>
 <td><ul>
 <li>Check for app registration type: Free, Trial or Contact me.</li>
@@ -46,9 +46,9 @@ The following checklist provides the list of validations performed by Microsoft 
 <li>Runtime errors: May occur once the app is opened in Run mode to view. Any issues found will be reported through email.</li>
 <li>Accessibility errors and warnings: All Accessibility errors should be resolved as per Solution Checker guidelines.</li>
 </ul></li>
-<li>Code Validation for Common Data Service solution will be done utilizing <a href="https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/checker/webapi/overview">Power Apps Checker</a>.</li>
+<li>Code Validation for Common Data Service solution will be done utilizing <a href="https://docs.microsoft.com/powerapps/developer/common-data-service/checker/webapi/overview">Power Apps Checker</a>.</li>
 <li>Issues reported from Power Apps Checker will be manually validated for correctness and false positive issues will be reduced to low severity.</li>
-<li>The quality of the solution and packages are validated against the AppSource certification <a href="https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/checker/webapi/retrieve-rulesets">ruleset</a>. 
+<li>The quality of the solution and packages are validated against the AppSource certification <a href="https://docs.microsoft.com/powerapps/developer/common-data-service/checker/webapi/retrieve-rulesets">ruleset</a>. 
 <li>Generated report is shared with the publisher through email.</li>
 </ul>
 </td>
