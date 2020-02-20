@@ -22,6 +22,8 @@ Power Apps component framework empowers professional developers and app makers t
 - Transform a list into an entirely different visual experience bound to the data set like a `Calendar` or `Map`.
 
 > [!IMPORTANT]
+> - PowerApps component framework is in public preview for canvas apps, and in GA for model-driven apps. This implies that all the APIs that are supported for model-driven apps might not be supported on canvas apps yet.
+> - By default PowerApps component framework is enabled for model-driven apps. To enable this feature for canvas apps, see [Availability for canvas apps](component-framework-for-canvas-apps.md).
 > - Power Apps component framework is in experimental preview for canvas apps, and in GA for model-driven apps. This implies that all the APIs that are supported for model-driven apps might not be supported on canvas apps yet.
 > - By default Power Apps component framework is enabled for model-driven apps. To enable this feature for canvas apps, see [Code components for canvas apps](component-framework-for-canvas-apps.md).
 > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]

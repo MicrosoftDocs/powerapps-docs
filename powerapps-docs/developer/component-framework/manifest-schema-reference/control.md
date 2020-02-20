@@ -22,7 +22,7 @@ ms.assetid: 4dacd337-c9df-458e-86f3-bfb3ab543ea7
 
 ## Available for
 
-Model-driven apps and canvas apps (experimental preview)
+Model-driven apps and canvas apps (public preview)
 
 ## Attributes
 
@@ -34,6 +34,7 @@ Model-driven apps and canvas apps (experimental preview)
 |`description-key`|Defines the description of the component that will be seen on the UI.|`string`|No|Model-driven apps and canvas apps (experimental preview) |
 |`display-name-key`|Defines the name of the control that is displayed on the UI.|`string`|Yes|Model-driven apps and canvas apps (experimental preview)  |  
 |`preview-image`|Image that will be used on the customization screens to show a preview of the component.|`string`|No|Model-driven apps|
+|`version`|Defines the version of the component defined in [Semantic Versioning](https://semver.org)|`string`|Yes|Model-driven apps and canvas apps (public preview) (experimental preview)|
 |`version`|Defines the version of the component defined in [Semantic Versioning](https://semver.org)|`string`|Yes|Model-driven apps and canvas apps (experimental preview) |
 <!--|`hidden`|Defines whether the component should be hidden or not|[!INCLUDE [booleantype-description](includes/booleantype-description.md)]| No|Model-driven apps|-->
 
