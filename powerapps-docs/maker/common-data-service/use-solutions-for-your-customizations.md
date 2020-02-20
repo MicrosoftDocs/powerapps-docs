@@ -2,7 +2,7 @@
 title: "Use the default solution to customize with Power Apps | MicrosoftDocs"
 description: "Learn how to customize the default solution"
 ms.custom: ""
-ms.date: 10/29/2018
+ms.date: 02/20/2020
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -24,23 +24,29 @@ search.app:
   - D365CE
 ---
 
-# Use the Common Data Services Default Solution  
-  
- All Power Apps environments include the following solutions.
--	**Common Data Services Default Solution** - This is a base solution that is available for makers to use by default for their customizations in an environment.
--	**Default Solution** - This is a special solution that contains all customizations from all solutions in an environment. 
-<!-- **Base Custom Controls Core** - This solution includes a core set of controls. Controls are used in user interface elements, such as fields, lists, and views. -->
+# Use a solution to customize
+We recommend that you create a solution to manage your customizations. If you don’t use a custom solution, you'll be working in a default solution. There are two default solutions in every Common Data Service environment:  
+- Common Data Service Default Solution. This is a base solution that is available for makers to use by default for their customizations in an environment. The Common Data Service Default Solution is useful when you want to evaluate or learn Power Apps.  
+- Default Solution. This is a special solution that contains all components in the system. The default solution is useful for discovering all of the components and configurations in your system.  
+
+## Why you shouldn’t use the default solutions to manage customizations
+There are a few reasons why you shouldn’t create apps and make customizations in either of the default solutions:  
+- The Default Solution contains all components and customizations from all solutions in the environment. 
+- By default, all enabled users in an environment can create apps and customize components in the Common Data Services Default Solution. 
+- It is difficult to locate or identify the customizations you have made in the environment using either default solution. 
+- Using either default solution, when creating components will also use the default publisher assigned to it. This may result in the wrong publisher prefix being applied to some components. 
+- The Default Solution can’t be exported. Therefore, you can’t distribute the Default Solution to another environment. 
 
 Notice that if you have installed or imported other applications or solutions, additional solutions may be available in the solutions list. 
 
-By default,  when you build or customize a model-driven app, you work with the solution called Common Data Services Default Solution. You can open the Common Data Services Default Solution to view and edit the components that are contained in it. To do this, follow these steps.
+<!-- By default,  when you build or customize a model-driven app, you work with the solution called Common Data Services Default Solution. You can open the Common Data Services Default Solution to view and edit the components that are contained in it. To do this, follow these steps.
  
 1.  On the left navigation pane select **Solutions**.
 
 2.  In the list of solutions, select **Common Data Services Default Solution**.
   
 > [!TIP]
->  If you plan to distribute the applications your make, consider changing the publisher customization prefix. More information: [Solution publisher prefix](change-solution-publisher-prefix.md).  
+>  If you plan to distribute the applications your make, consider changing the publisher customization prefix. More information: [Solution publisher prefix](change-solution-publisher-prefix.md).  -->
   
 <a name="BKMK_PrivacyNotice"></a>   
 
