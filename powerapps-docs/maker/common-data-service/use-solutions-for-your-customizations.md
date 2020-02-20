@@ -37,9 +37,9 @@ There are a few reasons why you shouldn’t create apps and make customizations 
 - Using either default solution, when creating components will also use the default publisher assigned to it. This may result in the wrong publisher prefix being applied to some components. 
 - The Default Solution can’t be exported. Therefore, you can’t distribute the Default Solution to another environment. 
 
-Notice that if you have installed or imported other applications or solutions, additional solutions may be available in the solutions list. 
+<!-- Notice that if you have installed or imported other applications or solutions, additional solutions may be available in the solutions list. 
 
-<!-- By default,  when you build or customize a model-driven app, you work with the solution called Common Data Services Default Solution. You can open the Common Data Services Default Solution to view and edit the components that are contained in it. To do this, follow these steps.
+By default,  when you build or customize a model-driven app, you work with the solution called Common Data Services Default Solution. You can open the Common Data Services Default Solution to view and edit the components that are contained in it. To do this, follow these steps.
  
 1.  On the left navigation pane select **Solutions**.
 
