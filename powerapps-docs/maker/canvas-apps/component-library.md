@@ -13,20 +13,23 @@ search.app:
   - PowerApps
 ---
 
-# Component library in canvas app
+# Component library
 
 > [!IMPORTANT]
 > This feature is still in public preview. For more information, see [Experimental and preview features](working-with-experimental.md).
 
-In the [overview](create-component.md) article for creating components, you are introduced to components inside canvas app. While you can create components inside an app and reuse them inside the same or any other app, you can also create a library of components that can be reused. This enables app makers to share and update components with other makers by creating component libraries. 
+In the [overview](create-component.md) article for creating components, you are introduced to components inside canvas app. While you can create components inside an app, you can also create a library of components that can be reused. By creating a component library, an app maker can easily share and update one or more components with other makers.
 
 Component libraries are containers of component definitions that make it easy to discover and search for components, publish updates across environments, and notify app makers of available component updates. 
+
+> [!NOTE]
+> Component libraries are the recommended way to reuse components across apps. Each app maintains dependencies on the component libraries uses. The app maker is be alerted when updates to dependent components become available. An earlier Power Apps feature allowed [importing components from one canvas app to another](create-component.md?#import-and-export-components). This feature will be deprecated. Hence, all new reusable components should be created within component libraries instead.
 
 ## Difference between an app and a component library
 
 A component library provides a centralized and managed repository of components for reusability. 
 
-When you create a component library, the tree view on left navigation by default displays components. When you create an app, this view shows screens instead of components. 
+When you create a component library, **Insert** pane on left navigation by default displays components. When you create an app, this view shows screens instead of components. 
 
 The screens inside a component library are available for testing only. This provides library creators a way to quickly test the created components on actual screen and also validate the update behavior as components are enhanced over time. In order to use the components from component library you must create an app that uses component library.
 
@@ -37,7 +40,7 @@ As [components overview](create-component.md) explains, you can preview componen
 
 ## Working with component library
 
-You can create a new component library or edit an existing component library from the same interface by browsing to make.powerapps.com and selecting **Component Libraries**:
+You can create a new component library or edit an existing component library from the same interface by browsing to make.powerapps.com, selecting **Apps** and then selecting **Component Libraries**:
 
 ![Create or edit component library](./media/component-library/create-edit-component-library.png)
 
@@ -60,7 +63,7 @@ The steps to create components inside a component library are same as creating c
     ![Version note when saving component library](./media/component-library/save-component-libray-version-note.png)
 
     > [!TIP]
-    > Version note is useful when reviewing versions of a component library and for the app makers using your component library to review changes and update apps consuming these components as needed.   
+    > Version note is useful when reviewing versions of a component library and for the app makers using your component library to review changes and update apps consuming these components as needed. Read [update a component library](component-library.md?#update-a-component-library) for more details.   
 
 1. Saved component library can be published. Since only published component library updates are available for apps that consume a component library, select **Publish** to publish the component library version:
 
@@ -76,7 +79,7 @@ After the Canvas App Studio opens, you select **Insert** or the **+** on the lef
 
 ![Get more components](./media/component-library/get-more-components.png)
 
-This opens the list of component libraries available in current environment on right side of the screen. You can select a component library such as *Menu components* in above example and then select **Import**:
+This opens the list of component libraries available in current environment on right side of the screen. You can select individual components from a component library, or use **Select all** to import all of the components from the library at once:
 
 ![Import components](./media/component-library/components.png)
 
@@ -85,7 +88,7 @@ This opens the list of component libraries available in current environment on r
 
 Notice you can select and import more than one component and across different component libraries. 
 
-Components available inside the app are listed under **Custom** category in list of components inside tree view; whereas components available from imported component libraries are listed under **Library components** category:
+Components available inside the app are listed under **Custom** category in list of components in the **Insert** pane; whereas components available from imported component libraries are listed under **Library components** category:
 
 ![Insert components to the app](./media/component-library/insert-components.png)
 
@@ -120,7 +123,7 @@ Sharing a component library works the same way you share a canvas app. When you 
 
     ![Edit library component](./media/component-library/edit-library-component.png)
 
-    If you select **Create a copy**, the component is copied to the local app and behaves same as any other component inside an app instead of a component library.
+    If you select **Create a copy**, the component is copied to the local app. The local copy of the component appears under the **Custom** category in the **Insert** pane. This local copy of the component will not receive updates if a new version of the originating component library is subsequently published.
 
 ## Next steps
 

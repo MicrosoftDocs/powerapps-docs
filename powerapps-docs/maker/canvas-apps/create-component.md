@@ -26,17 +26,13 @@ Components are useful in building larger apps that have similar control patterns
 
 You can create a component from within an app as explained in this article, or by creating a new component inside a [component library](component-library.md). A component library should be used for requirements to use components across multiple app screens. You can also copy the existing components into an existing or a new component library.
 
-To create a component within an app, go to **Insert** menu, select **Custom** drop down menu and then select **New Component**:
+To create a component within an app, go to **Tree View**, select **Components** tab and then select **New Component**:
 
-![Insert new custom component](./media/create-component/insert-new-component.png)
-
-Alternatively, you can go to **Tree View**, select **Components** tab and then select **New Component**:
-
-![Insert new custom component using tree view](./media/create-component/insert-new-component-treeview.png)
+![Create new custom component using tree view](./media/create-component/insert-new-component-treeview.png)
 
 Regardless of which approach you take, an empty canvas appears, where you can add controls as part of the component definition. If you edit a component in the canvas, you'll update instances of the same component in other app screens and other apps.
 
-If you select a screen, you can select a component from the list of existing components in the left navigation bar or the **Custom** menu on the **Insert** tab. When you select a component, you insert an instance of that component onto the screen, just as you insert a control.
+If you select a screen, you can select a component from the list of existing components in the left navigation. When you select a component, you insert an instance of that component onto the screen, just as you insert a control.
 
 Components available inside the app are listed under **Custom** category in list of components inside tree view; whereas components available from imported component libraries are listed under **Library components** category:
 
@@ -47,10 +43,10 @@ Components available inside the app are listed under **Custom** category in list
 
 ## Scope
 
-Think of a component as an encapsulated black box with properties as the interface. You can't access controls in the component from outside of the component, and you can't refer to anything outside of the component from inside the component. Scope restrictions keep the data contract of a component simple and cohesive, and it helps enable seamless component-definition updates, especially across apps with component libraries. You can update the data contract of the component by creating one or more custom properties.
+Think of a component as an encapsulated black box with properties as the interface. You can't access controls in the component from outside of the component, and you can't refer to anything outside of the component from inside the component. Data sources are an exception as they are shared between app and its components. Scope restrictions keep the data contract of a component simple and cohesive, and it helps enable seamless component-definition updates, especially across apps with component libraries. You can update the data contract of the component by creating one or more custom properties.
 
 > [!NOTE]
-> You cannot **preview** components from components section or the component library like the way you can preview an app using the play button on top right side of the Power Apps Studio. In order to experience the components, you must use components inside an app. Component library does not display when using [Power Apps mobile](https://powerapps.microsoft.com/downloads/).
+> You can insert instances of components into a screen within a component library, and preview that screen for testing purposes. Also, note that the component library does not display when using [Power Apps mobile](https://powerapps.microsoft.com/downloads/).
 
 ## Variables
 
@@ -79,7 +75,7 @@ In this example, you'll create a menu component that resembles this graphic and 
 
 1. In the **Tree View**, select **Components** and then select **New Component** to create a new component.
 
-    ![Insert new custom component using tree view](./media/create-component/insert-new-component-treeview.png)
+    ![Create new custom component using tree view](./media/create-component/insert-new-component-treeview.png)
 
 1. Select the new component in left navigation, then select ellipsis (...) and select **Rename**. Type or paste the name as **MenuComponent**.
 
@@ -183,6 +179,9 @@ So far, you've created a component and added it to an app. Next, you'll create a
 
 ## Import and export components
 
+> [!NOTE]
+> This feature will be deprecated. [Component libraries](component-library.md) are the recommended way to reuse components across apps. When using content library, each app maintains dependencies on the component libraries uses. The app maker is be alerted when updates to dependent components become available. Hence, all new reusable components should be created within component libraries instead.
+
 ### Import components from another app
 
 To import one or more components from one app into another, select **Import components** from either **Insert** menu and then using **Custom** drop down, or by using **Components** in tree view on the left navigation.
@@ -233,7 +232,7 @@ Once you save the app, you can reuse the components of this app using the same m
 
 - You cannot save data sources, forms and data tables with components.
 - Use of collections in components is not supported.
-- You cannot insert a component into a gallery, a form, or a data card.
+- You cannot insert a component into a gallery or a a form.
 - A master instance of a component is a local master and scoped to the app. If you change a master instance, only copies of the component within the app will reflect the change. Copies in other apps will remain the same unless you import the component library again. All master instances in those apps will be automatically detected and updated.
 - You cannot package media files when you import a component.
 
