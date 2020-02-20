@@ -40,5 +40,12 @@ To delete a model-driven app that was installed in the default solution as part 
 
 Don’t directly delete an app or app’s site map from the default environment that was installed as part of a managed solution. Doing so can lead to failure of a solution upgrade or solution updates for the solution used to install the app. An example of directly deleting a model-driven app would be opening the default solution in Solution Explorer and going to **Model-driven Apps**, selecting the app, and then selecting **Delete**.
 
+## Never use "include all components"
+Using "include all components" while adding an entity to a solution can result in huge problems in the future.
+You should only include those components of an entity you actually add or change.
+
+## Deploy Power Automate Flows in unmanaged solution
+Since Power Automate Flows need to be handled manually after a depoyment (connections to the CDS needs to be updated) they should be deployed unmanaged.
+
 ### See also
 [Solutions overview](solutions-overview.md)
