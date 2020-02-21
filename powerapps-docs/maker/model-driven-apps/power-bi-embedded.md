@@ -16,3 +16,11 @@ search.app:
 # Power BI embedded best practices 
 
 TO DO: Add content
+
+TODO:
+- Current capabilites:
+    - User dashboard with Power BI dashboard reference
+    - User dashboard with Poewr BI tile as component
+    - Model app form with Power BI report embedded
+- Guidance on using multiple workspace to separate PROD environment data from other environment data
+- Guidance on sharing Power BI dashboards/reports with groups to ease rollout of system dashboard
