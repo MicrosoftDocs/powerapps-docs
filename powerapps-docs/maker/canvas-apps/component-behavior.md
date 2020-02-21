@@ -1,6 +1,6 @@
 ---
 title: Behavior formulas for components | Microsoft Docs
-description: Trigger an app to perform one or more tasks when a component-based action occurs.
+description: Do one or more tasks in canvas app when a component-based action occurs.
 author: yifwang
 ms.service: powerapps
 ms.topic: article
@@ -18,7 +18,9 @@ search.app:
 > [!IMPORTANT]
 > This feature is still in public preview. For more information, see [Experimental and preview features](working-with-experimental.md).
 
-Specify one or more [behavior formulas](working-with-formulas-in-depth.md) that run when an event triggers a change in component instances. For example, set a component's **OnReset** property to one or more formulas that perform initialization, clear input, and reset values when the **Reset** function runs on the component instances.
+Specify one or more [behavior formulas](working-with-formulas-in-depth.md) that run when an event triggers a change in component instances. 
+
+For example, set a component's **OnReset** property to one or more formulas that do initialization, clear input. And reset values when the **Reset** function runs on the component instances.
 
 ## OnReset
 
@@ -43,7 +45,7 @@ To trigger reset, go to a screen and insert an instance of the component. Add a 
 
 ## Update OnReset using custom property
 
-Besides resetting a component instance from the outside of the component, there is another method to trigger the OnReset from the inside. "**Raise OnReset when value changes**" is an option when creating a custom input property, and it allows the value changes of this property to trigger OnReset of the component. This method is designed to set and reset default value easily. 
+Besides resetting a component instance from the outside of the component, there's another method to trigger the OnReset from the inside. "**Raise OnReset when value changes**" is an option when creating a custom input property. And it allows the value changes of this property to trigger OnReset of the component. This method is designed to set and reset default value easily. 
 
 > ![OnReset example](./media/component-behavior/property-trigger.png)
 
@@ -52,7 +54,7 @@ Besides resetting a component instance from the outside of the component, there 
 > [!div class="mx-imgBorder"]
 > ![OnReset example](./media/component-behavior/updateordernumber2.gif)
 
-This is an example of reviewing order numbers and updating the numbers. The numeric up and down component is used to increase or decrease number of orders. When selecting the gallery on the left, the default number of numeric up and down component is reset to display the order number of selected tool. "**Raise OnReset when value changes**" made it possible to reset the default value when the input changes. 
+Example above shows reviewing order numbers and updating the numbers. The numeric up and down component is used to increase or decrease number of orders. When selecting the gallery on the left, the default number of numeric up and down component is reset to display the order number of selected tool. "**Raise OnReset when value changes**" made it possible to reset the default value when the input changes. 
 
 To do so, check "**Raise OnReset when value changes**" of the default input property. **OnReset** of the component is set to **Set(_numericValue,'Numeric up down'.DefaultValue)**. _numericValue is the variable to store the value of the current order value. And set the **Default** of the text input control to **If(IsBlank(_numericValue), 'Numeric up down'.DefaultValue, _numericValue)**. 
 
