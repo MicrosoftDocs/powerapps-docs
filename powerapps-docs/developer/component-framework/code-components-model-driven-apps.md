@@ -22,13 +22,13 @@ Power Apps component framework gives developers the ability to extend the visual
 
 ## Implementing code components
 
-Before you start creating code components, make sure that you have installed all the prerequisites that are required to develop components using Power Apps component franework. 
+Before you start creating code components, make sure that you have installed all the prerequisites that are required to develop components using Power Apps component framework. 
 
 The [create your first code component](implementing-controls-using-typescript.md) topic demonstrates the step-by-step process to create code components.
 
 ## Add code components to model-driven apps
 
-To add code components to field or an entity for model-driven apps, see [Add code components to model-driven apps](add-custom-controls-to-a-field-or-entity.md).
+To add code components to a field or an entity for model-driven apps, see [Add code components to model-driven apps](add-custom-controls-to-a-field-or-entity.md).
 
 ## Update existing code components
 
