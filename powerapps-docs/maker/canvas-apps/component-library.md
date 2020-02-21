@@ -31,7 +31,7 @@ A component library provides a centralized and managed repository of components 
 
 When you create a component library, **Insert** pane on left navigation by default displays components. When you create an app, this view shows screens instead of components. 
 
-The screens inside a component library are available for testing only. This provides library creators a way to quickly test the created components on actual screen and also validate the update behavior as components are enhanced over time. In order to use the components from component library you must create an app that uses component library.
+The screens inside a component library are available for testing only. This provides library creators a way to quickly test the created components on actual screen and also validate the update behavior as components are enhanced over time. In order to use the components from component library, you must create an app that uses component library.
 
 As [components overview](create-component.md) explains, you can preview component library components using the screens inside the library with the play option. When you select component tab, the play option is disabled. Component library does not display when using Power Apps mobile.
 
@@ -40,7 +40,7 @@ As [components overview](create-component.md) explains, you can preview componen
 
 ## Working with component library
 
-You can create a new component library or edit an existing component library from the same interface by browsing to make.powerapps.com, selecting **Apps** and then selecting **Component Libraries**:
+You can create a new component library or edit an existing component library from the same interface by browsing to [make.powerapps.com](https://make.powerapps.com), selecting **Apps** and then selecting **Component Libraries**:
 
 ![Create or edit component library](./media/component-library/create-edit-component-library.png)
 
@@ -48,7 +48,9 @@ You can create a new component library or edit an existing component library fro
 
 The steps to create components inside a component library are same as creating components inside an app. In this example, you'll create a component library first and then reuse the steps for creating components from [components overview example](create-component.md#create-an-example-component). Once you create the required components and preview as you walk through the example, you'll use the component library to provide the reusable components in a new app.
 
-1. Go to make.powerapps.com, select **Apps** in left navigation, select **Component Libraries** and then select **New component library**.
+1. Sign-in to [make.powerapps.com](https://make.powerapps.com).
+
+1. select **Apps** in left navigation, select **Component Libraries** and then select **New component library**.
 
 1. Name the component library as *Menu components*; you can also provide a different name of your choice.
 
@@ -73,7 +75,7 @@ The steps to create components inside a component library are same as creating c
 
 After you create a component library and publish, apps can consume the components from this component library by importing the library. You can also [share a component library](component-library.md#component-library-permissions).
 
-To import from a component library, edit an existing app or create a new app by browsing to make.powerapps.com and from **Apps** on the left navigation, use **New** and then **Canvas app**; or select **Edit** for any existing app from the **More Commands** (...) drop down menu.
+To import from a component library, edit an existing app or create a new app by browsing to [make.powerapps.com](https://make.powerapps.com) and from **Apps** on the left navigation, use **New** and then **Canvas app**; or select **Edit** for any existing app from the **More Commands** (...) drop down menu.
 
 After the Canvas App Studio opens, you select **Insert** or the **+** on the left navigation and then select **Get more components** to list the component libraries available in current environment:
 

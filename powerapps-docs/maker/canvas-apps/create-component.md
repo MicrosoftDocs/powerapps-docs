@@ -30,7 +30,7 @@ To create a component within an app, go to **Tree View**, select **Components** 
 
 ![Create new custom component using tree view](./media/create-component/insert-new-component-treeview.png)
 
-Regardless of which approach you take, an empty canvas appears, where you can add controls as part of the component definition. If you edit a component in the canvas, you'll update instances of the same component in other app screens and other apps.
+After you select **New component**, an empty canvas appears, where you can add controls as part of the component definition. If you edit a component in the canvas, you'll update instances of the same component in other app screens. Apps that reuse an already created component can also receive component updates after you publish component changes.
 
 If you select a screen, you can select a component from the list of existing components in the left navigation. When you select a component, you insert an instance of that component onto the screen, just as you insert a control.
 
@@ -48,30 +48,32 @@ Think of a component as an encapsulated black box with properties as the interfa
 > [!NOTE]
 > You can insert instances of components into a screen within a component library, and preview that screen for testing purposes. Also, note that the component library does not display when using [Power Apps mobile](https://powerapps.microsoft.com/downloads/).
 
-## Variables
-
-Components don't support the [**UpdateContext**](./functions/function-updatecontext.md) function, but you can create and update variables in a component by using the [**Set**](functions/function-set.md) function. The scope of these variables is limited to the component, but you can access them from outside the component by leveraging custom output properties.
-
 ## Custom properties
 
-A component can receive input values and emit data if you create one or more custom properties. These scenarios are advanced and require you to understand formulas and binding contracts.
+A component can receive input values and emit data if you create one or more custom properties. These scenarios are advanced and require you to understand [formulas](formula-reference.md) and binding contracts.
 
-An input property is how a component receives data to be used in the component. Input properties appear in the **Properties** tab of the right-hand pane if an instance of the component is selected. You can configure input properties with expressions or formulas, just as you configure standard properties in other controls. Other controls have input properties, such as the **Default** property of a **Text input** control.
+**Input property** is how a component receives data to be used in the component. Input properties appear in the **Properties** tab of the right-hand pane if an instance of the component is selected. You can configure input properties with expressions or formulas, just as you configure standard properties in other controls. Other controls have input properties, such as the **Default** property of a **Text input** control.
 
-Output properties can emit data or component state. For example, the **Selected** property on a **Gallery** control is an output property. When you create an output property, you can determine what other controls can refer to the component state.
+**Output property** can emit data or component state. For example, the **Selected** property on a **Gallery** control is an output property. When you create an output property, you can determine what other controls can refer to the component state.
 
-This walk-through further explains these concepts.
+The following walk-through further explains these concepts.
 
 ## Create an example component
 
-In this example, you'll create a menu component that resembles this graphic and in which you can change the text and use in multiple screens, apps, or both:
+In this example, you'll create a menu component that resembles the following graphic and in which you can change the text and use it in multiple screens, apps, or both:
 
 ![Final gallery](./media/create-component/menu-instance-new.png)
 
 > [!NOTE]
-> We recommend that you use [component library](component-library.md) when creating components for reuse. Updating components inside an app only makes the component updates available only inside the app. When you import components from one app to another, new updates to components in original app do not propagate to the app that imported those components earlier. When using component library, you get prompted to update components if components inside a library are updated and published.
+> We recommend that you use [component library](component-library.md) when creating components for reuse. Updating components inside an app only makes the component updates available inside the app. When you import components from one app to another, new updates to components in original app do not propagate to the app that imported those components earlier. When using component library, you get prompted to update components if components inside a library are updated and published.
 
-1. Go to make.powerapps.com and create a blank app.
+### Create a new component
+
+1. Sign-in to [make.powerapps.com](https://make.powerapps.com).
+
+1. Select **Apps** and select **Canvas app from blank**. 
+
+1. Provide an app name, select any layout and then select **Create**.
 
 1. In the **Tree View**, select **Components** and then select **New Component** to create a new component.
 
@@ -79,11 +81,11 @@ In this example, you'll create a menu component that resembles this graphic and 
 
 1. Select the new component in left navigation, then select ellipsis (...) and select **Rename**. Type or paste the name as **MenuComponent**.
 
-1. Optional - in the right-hand pane, set the component's width to **150** and its height to **250**, and then select **New custom property**. You can also set the height & width to any other value as appropriate.
+1. In the right-hand pane, set the component's width to **150** and its height to **250**, and then select **New custom property**. You can also set the height & width to any other value as appropriate.
 
     ![New property](./media/create-component/new-property.png)
 
-1. In the **Display name**, **Property name**, and **Description** boxes, type or paste **Items**.
+1. In the **Display name**, **Property name**, and **Description** boxes, type or paste text as *Items*.
 
     ![Display name, property name, description boxes](./media/create-component/property-names.png)
 
@@ -123,6 +125,8 @@ In this example, you'll create a menu component that resembles this graphic and 
 
 1. Optional - set the **Gallery** control's **BorderThickness** property to **1**  and its **TemplateSize** property to **50**. You can also update values for border thickness and template size to any other value as appropriate.
 
+### Add component to a screen
+
 Next, you'll add the component to a screen and specify a table of strings for the component to show.
 
 1. In the left navigation bar, select the list of screens, and then select the default screen.
@@ -144,6 +148,8 @@ Next, you'll add the component to a screen and specify a table of strings for th
     This instance resembles this graphic, but you can customize the text and other properties of each instance.
 
     ![Final gallery](./media/create-component/menu-instance-new.png)
+
+### Use output property
 
 So far, you've created a component and added it to an app. Next, you'll create an output property that reflects the item that the user selects in the menu.
 
@@ -235,6 +241,7 @@ Once you save the app, you can reuse the components of this app using the same m
 - You cannot insert a component into a gallery or a form.
 - A master instance of a component is a local master and scoped to the app. If you change a master instance, only copies of the component within the app will reflect the change. Copies in other apps will remain the same unless you import the component library again. All master instances in those apps will be automatically detected and updated.
 - You cannot package media files when you import a component.
+- Components don't support the [**UpdateContext**](./functions/function-updatecontext.md) function, but you can create and update variables in a component by using the [**Set**](functions/function-set.md) function. The scope of these variables is limited to the component, but you can access them from outside the component by leveraging custom output properties.
 
 ## Next steps
 
