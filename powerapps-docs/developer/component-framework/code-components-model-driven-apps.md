@@ -15,14 +15,16 @@ ms.assetid: 5d100dc3-bd82-4b45-964c-d90eaebc0735
 
 # Code components for model-driven apps
 
-Power Apps component framework gives developers the ability to extend the visualizations in model-driven apps. Professional developers can create, debug, import, and add code componments to model-driven apps using [Power Apps CLI](get-powerapps-cli.md). 
+Power Apps component framework gives developers the ability to extend the visualizations in model-driven apps. Professional developers can create, debug, import, and add code componments to model-driven apps using [Power Apps CLI](get-powerapps-cli.md). You can add code components to fields, grids and sub grids in model-driven apps. 
 
 > [!div class="mx-imgBorder"] 
 > ![Custom slider control](../../maker/model-driven-apps/media/slider-control.PNG "Slider control for a field")
 
+> [!div class="mx-imgBorder"]
+> ![Data Set Grid component](media/data-set-grid.png "Data Set Grid component")
 
 > [!IMPORTANT]
-> By default, Power Apps component framework is enabled for model-driven apps. See [Code components for canvas apps](component-framework-for-canvas-apps.md) to learn how to enable Power Apps component framework for canvas apps.
+> Power Apps component framework is enabled for model-driven apps is enabled by default. See [Code components for canvas apps](component-framework-for-canvas-apps.md) to learn how to enable Power Apps component framework for canvas apps.
 
 ## Implementing code components
 
@@ -32,7 +34,7 @@ The [create your first code component](implementing-controls-using-typescript.md
 
 ## Add code components to model-driven apps
 
-To add code components to a field or an entity for model-driven apps, see [Add code components to model-driven apps](add-custom-controls-to-a-field-or-entity.md).
+To add code components to a field or an entity in model-driven apps, see [Add code components to model-driven apps](add-custom-controls-to-a-field-or-entity.md).
 
 > [!div class="mx-imgBorder"] 
 > ![Add linear slider control](../../maker/model-driven-apps/media/add-slider.PNG "Add linear slider control")
