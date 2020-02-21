@@ -14,13 +14,16 @@ author: Nkrb
 
 Code components are a type of solution components, which means they can be included in a solution file and installed in different environments. More information: [Package and distribute extensions using solutions](https://docs.microsoft.com/dynamics365/customer-engagement/developer/package-distribute-extensions-use-solutions).
 
-You add code components by including them in a solution and then import it into Common Data Service. Once the components are in Common Data Service, system administrators and system customizers can configure fields, subgrids, views, and dashboard subgrids to use in place of default components. You can also add these code components in canvas apps. 
+You add code components by including them in a solution and then import it into Common Data Service. Once the components are in Common Data Service, system administrators and system customizers can configure fields, subgrids, views, and dashboard subgrids to use in place of default components. You can add these code components to both **model-driven and canvas apps**. 
 
 Code components consist of three elements:
 
 - [Manifest](#manifest)
 - [Component implementation](#component-implementation)
 - [Resources](#resources)
+
+> [!NOTE]
+> The definition and implementation of code components using Power Apps component framework is same for both model-driven and canvas apps. The only difference between both is the configuration part. 
 
 ## Manifest
 
@@ -91,6 +94,20 @@ Developers should implement the [destroy](reference/control/destroy.md) method, 
 ## Resources
 
 Each code component should have a resource file to construct its visualization. You can define a resource file in the manifest. The resource node in the manifest file refers to the resources that the component requires to implement its visualization. More information: [resources element](manifest-schema-reference/resources.md)
+
+## Implementing code components
+
+Before you start creating code components, make sure that you have installed all the prerequisites that are required to develop components using Power Apps component franework. 
+
+The [create your first code component](implementing-controls-using-typescript.md) topic demonstrates the step-by-step process to create code components.
+
+## Add code components to model-driven apps
+
+To add code components to field or an entity for model-driven apps, see [Add code components to model-driven apps](add-custom-controls-to-a-field-or-entity.md).
+
+## Update existing code components
+
+Whenever you update the code components and want to see the changes in runtime, you need to bump the version attribute in the manifest file. It is recommended to always bump the version of the component whenever you make changes.
 
 ### Related topics
 

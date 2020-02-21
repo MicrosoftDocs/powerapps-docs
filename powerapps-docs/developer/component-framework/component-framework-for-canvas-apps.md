@@ -62,13 +62,7 @@ After you enable the Power Apps component framework feature in your environment,
 
  The [Create your first code component](implementing-controls-using-typescript.md) topic demonstrates the step-by-step process to create code components.
 
-> [!NOTE]
-> Implementing code components is the same for both model-driven apps and canvas apps (experimental preview). The only difference is adding the code components. 
-
 ## Add components to a canvas app
-
-> [!NOTE]
-> To add code components to a field or an entity for model-driven apps, see [Add code components to model-driven apps](add-custom-controls-to-a-field-or-entity.md)
 
 To add code components to a canvas app:
 
