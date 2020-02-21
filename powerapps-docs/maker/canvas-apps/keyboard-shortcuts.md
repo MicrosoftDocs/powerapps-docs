@@ -26,6 +26,7 @@ search.app:
 | Ctrl+O (or Alt+F) | Open a file. |
 | Ctrl+Shift+S (or Alt+P) | Save the app with a different name. |
 | Ctrl+S | Save the app with the same name or for the first time. |
+| Ctrl+Shift+P | Save and activate the publish dialog. |
 | F12 | Download the app file (.msapp). |
 | Alt+F | Open the **File** menu. |
 
