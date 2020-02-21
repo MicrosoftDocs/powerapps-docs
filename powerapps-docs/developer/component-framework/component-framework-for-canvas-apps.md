@@ -29,9 +29,6 @@ In this experimental preview, Power Apps component framework enables app makers 
 
 System Administrator privileges are required to enable the Power Apps component feature in the environment.
 
-> [!IMPORTANT]
-> By default, Power Apps component framework is enabled for model-driven apps.
-
 ## Enable Power Apps component framework feature
 
 To add code components to an app, you need to enable the Power Apps component framework feature in each environment where you want to use them. To enable an environment to use code components inside its apps:

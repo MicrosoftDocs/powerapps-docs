@@ -1,0 +1,40 @@
+---
+title: Code components for model-driven apps  | Microsoft Docs
+description: Create code components for canvas apps
+keywords:
+ms.author: nabuthuk
+author: Nkrb
+manager: kvivek
+ms.date: 11/26/2019
+ms.service: "powerapps"
+ms.suite: ""
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+ms.assetid: 5d100dc3-bd82-4b45-964c-d90eaebc0735
+---
+
+# Code components for model-driven apps
+
+Power Apps component framework gives developers the ability to extend the visualizations in model-driven apps. Professional developers can create, debug, import, and add code componments to model-driven apps using [Power Apps CLI](get-powerapps-cli.md). 
+
+> [!IMPORTANT]
+> By default, Power Apps component framework is enabled for model-driven apps. See [Code components for canvas apps](component-frameowrk-for-canvas-apps.md) to learn how to enable Power Apps component framework for canvas apps.
+
+## Implementing code components
+
+Before you start creating code components, make sure that you have installed all the prerequisites that are required to develop components using Power Apps component franework. 
+
+The [create your first code component](implementing-controls-using-typescript.md) topic demonstrates the step-by-step process to create code components.
+
+## Add code components to model-driven apps
+
+To add code components to field or an entity for model-driven apps, see [Add code components to model-driven apps](add-custom-controls-to-a-field-or-entity.md).
+
+## Update existing code components
+
+Whenever you update the code components and want to see the changes in runtime, you need to bump the version attribute in the manifest file. It is recommended to always bump the version of the component whenever you make changes.
+
+## See also
+
+[Power Apps component framework overview](overview.md)<br/>
+[Create your first code component](implementing-controls-using-typescript.md)
