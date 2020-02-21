@@ -29,7 +29,10 @@ Every app you create or customization you make is part of a solution. Every solu
 > [!div class="mx-imgBorder"] 
 > <img src="media/solution-publisher-select.png" alt="Select solution publisher" height="731" width="416">
 
-The solution publisher specifies who developed the app. The prefix can provide a quick way to understand which solution added the item. For these reasons, you should create a solution publisher and specify a prefix that is meaningful. This is especially important when viewing metadata items included from imported solutions. For example, the solution that contains the fundraiser sample app uses *sample* as the publisher prefix. 
+The solution publisher indicates who developed the app. For this reason, you should create a solution publisher that is meaningful. You can view the solution publisher for a solution by selecting **Settings** from the **Solutions** area in Power Apps.
+
+## Solution publisher prefix
+A solution publisher includes a prefix. The prefix can help determine which publisher is responsible for the component. For example, the solution that contains the fundraiser sample app uses *sample* as the publisher prefix. 
 
 > [!div class="mx-imgBorder"] 
 > ![Fundraiser solution publisher prefix](media/fundraiser-sample-app-prefix.png)
