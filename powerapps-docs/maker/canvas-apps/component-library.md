@@ -56,7 +56,7 @@ The steps to create components inside a component library are same as creating c
 
 1. Follow the steps to create components from the [components overview example](create-component.md#create-an-example-component) topic. Note that you don't have to open Power Apps Studio or create a new blank app, since you already have created a new component library. Start with step 2. 
 
-    After following steps to create components, follow next set of steps to also add screen the steps to create output property. Since all this is to reuse the components for testing, you can use the same component library.
+    After following steps to create components, follow next set of steps to also [add components to a screen](create-component.md#add-component-to-a-screen) the steps to [create output property](create-component.md#create-and-use-output-property). Since all this is to reuse the components for testing, you can use the same component library.
 
 1. After you completed the components creation and testing, save the component library by selecting **File** menu and then selecting **Save**. 
 
@@ -75,7 +75,7 @@ The steps to create components inside a component library are same as creating c
 
 After you create a component library and publish, apps can consume the components from this component library by importing the library. You can also [share a component library](component-library.md#component-library-permissions).
 
-To import from a component library, edit an existing app or create a new app by browsing to [make.powerapps.com](https://make.powerapps.com) and from **Apps** on the left navigation, use **New** and then **Canvas app**; or select **Edit** for any existing app from the **More Commands** (...) drop down menu.
+To import from a component library, edit an existing app or create a new app by signing-in to [make.powerapps.com](https://make.powerapps.com) and from **Apps** on the left navigation, use **New** and then **Canvas app**; or select **Edit** for any existing app from the **More Commands** (...) drop down menu.
 
 After the Canvas App Studio opens, you select **Insert** or the **+** on the left navigation and then select **Get more components** to list the component libraries available in current environment:
 
@@ -96,7 +96,7 @@ Components available inside the app are listed under **Custom** category in list
 
 ## Update a component library
 
-You can modify existing component library and save any changes with additional version notes. However, the updated component library version must be published for use in existing apps that use the component library. Example component library steps above explain how to publish a component library after saving it.
+You can modify existing component library and save any changes with additional version notes. However, the updated component library version must be published for use in existing apps that use the component library. [Example component library](component-library.md#create-an-example-component-library) steps above explain how to publish a component library after saving it.
 
 After you publish component library changes, maker of the apps using the library gets to review the update when the app is opened for editing. Maker is automatically notified of updated components being available and can choose to update to latest:
 
@@ -105,6 +105,8 @@ After you publish component library changes, maker of the apps using the library
 Once you select **Review**, you are presented with option to update the component:
 
 ![Update component](./media/component-library/update-components.png)
+
+Notice the version note you added when publishing component library version shows up here. 
 
 Select **Update** to update the components.
 

@@ -149,7 +149,7 @@ Next, you'll add the component to a screen and specify a table of strings for th
 
     ![Final gallery](./media/create-component/menu-instance-new.png)
 
-### Use output property
+### Create and use output property
 
 So far, you've created a component and added it to an app. Next, you'll create an output property that reflects the item that the user selects in the menu.
 
