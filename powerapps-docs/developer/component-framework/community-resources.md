@@ -65,6 +65,7 @@ The following is the list of videos created by Power Apps community.
 |[Power Apps component framework Academy: Using React and Office UI fabric](https://www.youtube.com/watch?v=e7JNgGlI3nE)| Learn how to use React and UI fabric in code components.|
 |[Power Apps component framework Academy: Usage of additional frameworks](https://www.youtube.com/watch?v=cOPyyDdsEjQ)| Learn how to use additional frameworks in building code components.|
 [Power Apps component framework Academy: Working with manifest file](https://www.youtube.com/watch?v=qbSpDVTxt7U&t=5s)| Introductory video on manifest file and various methods that need to be defined for developing code components in the manifest file.|
+|[Power Apps component framework: What it is for Dynamics 365](https://youtu.be/3LnPaKtfKhw)|If you have ever lamented over the limitations of custom form components in Microsoft Dynamics 365, this tutorial will open your eyes to a whole new world of possibilities.|
 
 
 ## Tools
