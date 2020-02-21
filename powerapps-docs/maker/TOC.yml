@@ -8,6 +8,22 @@
     href: dev-community-plan.md
   - name: "What's new?"
     href: ../whats-new.md
+  - name: "Learning catalog"
+    items: 
+    - name: "Learning catalog"
+      href: ../learning-catalog/get-started.md
+    - name: Business Decision Maker
+      href: ../learning-catalog/bdm.md
+    - name: App maker
+      href: ../learning-catalog/app-maker.md
+    - name: Developer
+      href: ../learning-catalog/developer.md
+    - name: Administrator
+      href: ../learning-catalog/administrator.md
+    - name: Functional consultant
+      href: ../learning-catalog/functional-consultant.md
+    - name: Solution architect
+      href: ../learning-catalog/solution-architect.md
 - name: Find and run apps
   href: ../user/index.md
   items:
