@@ -18,7 +18,7 @@ ms.assetid: 5d100dc3-bd82-4b45-964c-d90eaebc0735
 Power Apps component framework gives developers the ability to extend the visualizations in model-driven apps. Professional developers can create, debug, import, and add code componments to model-driven apps using [Power Apps CLI](get-powerapps-cli.md). 
 
 > [!IMPORTANT]
-> By default, Power Apps component framework is enabled for model-driven apps. See [Code components for canvas apps](component-frameowrk-for-canvas-apps.md) to learn how to enable Power Apps component framework for canvas apps.
+> By default, Power Apps component framework is enabled for model-driven apps. See [Code components for canvas apps](component-framework-for-canvas-apps.md) to learn how to enable Power Apps component framework for canvas apps.
 
 ## Implementing code components
 
