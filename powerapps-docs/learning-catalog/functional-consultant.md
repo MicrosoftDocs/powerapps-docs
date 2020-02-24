@@ -7,7 +7,7 @@ ms.date: 01/27/2020
 ms.author: v-lshann
 ---
 
-# Functional application sonsultant learning catalog
+# Functional application consultant learning catalog
 
 Are you an implementation expert for a business domain? 
 
