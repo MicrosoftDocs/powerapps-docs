@@ -21,7 +21,7 @@ Power Apps component framework gives developers the ability to extend the visual
 > ![Custom slider control](../../maker/model-driven-apps/media/slider-control.PNG "Slider control for a field")
 
 > [!div class="mx-imgBorder"]
-> ![Data Set Grid component](media/data-set-grid.png "Data Set Grid component")
+> ![Data Set Grid component](media/add-dataset-component.png "Data Set Grid component")
 
 > [!IMPORTANT]
 > Power Apps component framework is enabled for model-driven apps by default. See [Code components for canvas apps](component-framework-for-canvas-apps.md) to learn how to enable Power Apps component framework for canvas apps.
