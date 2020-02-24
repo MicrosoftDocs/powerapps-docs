@@ -11,7 +11,7 @@ ms.author: v-lshann
 
 Are you an implementation expert for a business domain? 
 
-The following catalog is organized from core knowledge to specific domains, and from most basic to most advanced. If content exists in multiple formats, we'll let you know, so that you can choose the training format that best meets your needs. For more information, see Training content formats. 
+The following catalog is organized from core knowledge to specific domains, and from most basic to most advanced. If content exists in multiple formats, we'll let you know, so that you can choose the training format that best meets your needs. 
 
 For functional consultants, our job-task analysis research showed that everyone must understand the core content set as well as a domain area. 
 
