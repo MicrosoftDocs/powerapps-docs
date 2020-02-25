@@ -30,7 +30,8 @@ Be sure to check out documentation specific to each sample app for more details.
 
 In order to play or edit model-driven sample apps, the apps must first be provisioned in a Common Data Service database. First create a trial environment and database and be sure to select **Depoly sample apps and data**.
 
-![Create database](media/overview-model-driven-samples/create-database1.png)
+> [!div class="mx-imgBorder"] 
+> ![Create database](media/overview-model-driven-samples/create-database1.png)
 
 > [!IMPORTANT]
 > This option installs all available sample apps in your database. Sample apps are for educational and demonstration purposes and we do not recommend installing them in production databases. 
@@ -39,11 +40,12 @@ In order to play or edit model-driven sample apps, the apps must first be provis
 
 1. Sign in to [powerapps.com](https://powerapps.com)  
 
-2. From the **Create** page, hover over the sample app and click **Make this app**.
+2. From the **Create** page, select the sample app and click **Create**.
 
 ![Model Sample App](media/overview-model-driven-samples/model-driven-create-page-sample.png)
 
-3. The App designer will open providing multiple options for customizing the app. 
+3. The App designer will open providing multiple options for customizing the app.
+
 4. For additional customization options, click **Advanced** from the left navigation in the portal.
 
 ## Remove sample apps and data 
