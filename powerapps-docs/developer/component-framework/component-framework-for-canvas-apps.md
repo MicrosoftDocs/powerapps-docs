@@ -95,7 +95,7 @@ Whenever you update the code components and want to see the changes in runtime, 
 
 ## Licensing
 
-During the canvas apps (experimental preview), there is no restriction for developers to build code components using external services. From GA, using code components in canvas apps requires a license.
+Until Power Apps component framework for canvas apps (public preview), there is no restriction for developers to build code components using external services. From GA, using code components in canvas apps requires a license.
 
 > [!NOTE]
 > Licensing is only required when you use code components in canvas apps. Model-driven apps doesn’t require any license for using code components.
@@ -104,12 +104,12 @@ During the canvas apps (experimental preview), there is no restriction for devel
 
 Code components are classified into two types:
 
-1. **Premium components**: Code components that rely on external services to function via component implementation code are known as **premium** components. 
-2. **Non-premium components**: All other basic components which work directly against the data provided by the app are known as **non-premium** components.
+1. **Premium components**: Code components that rely on external services to function via component implementation code are known as premium components. 
+2. **Non-premium components**: All other basic components which work directly against the data provided by the app are known as non-premium components.
 
 In other words, for end users inline with the premium or custom connectors, code components accessing external service requires end users to have Power Apps premium license. Code components which are used for visualization purpose and just consume the data or API’s from the connectors available in the app doesn't require any license. 
 
-### What licenses does a user require?
+### What license does a user require?
 
 A Common Data Service license is required for all professional developers to build code components.
 
