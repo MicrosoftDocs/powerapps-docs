@@ -14,6 +14,9 @@ author: Nkrb
 
 Code components are a type of solution components, which means they can be included in a solution file and installed in different environments. More information: [Package and distribute extensions using solutions](https://docs.microsoft.com/dynamics365/customer-engagement/developer/package-distribute-extensions-use-solutions).
 
+> [!div class="mx-imgBorder"] 
+> ![Code components](media/code-components.gif "Code components")
+
 You add code components by including them in a solution and then import it into Common Data Service. Once the components are in Common Data Service, system administrators and system customizers can configure fields, subgrids, views, and dashboard subgrids to use in place of default components. You can add these code components to both **model-driven and canvas apps**. 
 
 Code components consist of three elements:
