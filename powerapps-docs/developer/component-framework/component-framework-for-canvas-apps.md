@@ -95,23 +95,17 @@ Whenever you update the code components and want to see the changes in runtime, 
 
 ## Licensing
 
-Until Power Apps component framework for canvas apps (public preview), there is no restriction for developers to build code components using external services. From GA, using code components in canvas apps requires a license.
-
-> [!NOTE]
-> Licensing is only required when you use code components in canvas apps. Model-driven apps doesn’t require any license for using code components.
-
-### What are premium components?
-
-Code components are classified into two types:
+With the Power Apps component framework going GA on canvas apps, we will categorize code components into the following: 
 
 1. **Premium components**: Code components that rely on external services to function via component implementation code are known as premium components. 
 2. **Non-premium components**: All other basic components which work directly against the data provided by the app are known as non-premium components.
 
-In other words, for end users inline with the premium or custom connectors, code components accessing external service requires end users to have Power Apps premium license. Code components which are used for visualization purpose and just consume the data or API’s from the connectors available in the app doesn't require any license. 
+App makers need to have **Power Apps license** to import and add code components to canvas app from Common Data Service. End users with no **Power Apps license** will be able to use the apps containing the non-premium code components. However inline with the custom connectors, if there is a premium code component accessing external service, user will require a Power Apps license. 
 
-### What license does a user require?
+> [!NOTE]
+> Licensing requirement for premium code components applies to end users only on canvas apps. Model-driven apps users can access all code components as they already have Power Apps license.
 
-A Common Data Service license is required for all professional developers to build code components.
+In other words, end users need **Office 365** license to use non-premium code components in canvas apps. To use premium code component, end users need to have a Power Apps license.
 
 ### How to identity a component as premium component?
 
