@@ -21,7 +21,7 @@ Update the component version (minor or patch) in the component manifest file (fo
 Every update in the component needs a component version bump to be reflected on the Common Data Service server.
 
 > [!NOTE]
-> - A new solutio must be created everytime if you wish to have a major version bump. Incrementing the major version number (eg 1.0 to 2.0) is not supported as an upgrade.
+> - A new solution must be created everytime if you wish to have a major version bump. Incrementing the major version number (eg 1.0 to 2.0) is not supported as an upgrade.
 > - Only three version sections are supported (i.e. MAJOR.MINOR.PATCH). These version number sections should be between 0 and 65536.
 
 ### What are the things to be considered from a performance perspective?
