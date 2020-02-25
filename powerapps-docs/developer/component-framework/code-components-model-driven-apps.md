@@ -5,7 +5,7 @@ keywords:
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 11/26/2019
+ms.date: 02/24/2020
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
