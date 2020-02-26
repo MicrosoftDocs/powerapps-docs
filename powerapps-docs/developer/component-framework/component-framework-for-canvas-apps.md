@@ -97,8 +97,8 @@ Whenever you update the code components and want to see the changes in runtime, 
 
 With the Power Apps component framework going GA on canvas apps, we will categorize code components into the following: 
 
-1. **Premium components**: Code components that rely on external services to function via component implementation code are known as premium components. 
-2. **Non-premium components**: All other basic components which work directly against the data provided by the app are known as non-premium components.
+- **Premium components**: Code components that rely on external services to function via component implementation code are known as premium components. 
+- **Non-premium components**: All other basic components which work directly against the data provided by the app are known as non-premium components.
 
 App makers need to have **Power Apps license** to import and add code components to canvas app from Common Data Service. End users with no **Power Apps license** will be able to use the apps containing the non-premium code components. However inline with the custom connectors, if there is a premium code component accessing external service, user will require a Power Apps license. 
 
