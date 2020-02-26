@@ -25,7 +25,9 @@ search.app:
 ---
 
 # Use a solution to customize
-We recommend that you create a solution to manage your customizations. If you don’t use a custom solution, you'll be working in a default solution. There are two default solutions in every Common Data Service environment:  
+We recommend that you create a solution to manage your customizations. With a custom solution, you can easily find just the solution components you’ve customized, consistently apply your solution publisher prefix, and export for distribution to other environments.  
+
+If you don’t use a custom solution, you'll be working in a default solution in the unmanaged layer. There are two default solutions in every Common Data Service environment:  
 - Common Data Service Default Solution. This is a base solution that is available for makers to use by default for their customizations in an environment. The Common Data Service Default Solution is useful when you want to evaluate or learn Power Apps.  
 - Default Solution. This is a special solution that contains all components in the system. The default solution is useful for discovering all of the components and configurations in your system.  
 
