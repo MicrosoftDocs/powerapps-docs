@@ -1,1 +1,1 @@
-Gets the current page context. 
+Gets the page context as an object representing the page. 

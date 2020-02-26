@@ -27,7 +27,7 @@ search.app:
 
 ## Returns
 
-The method returns an `input` object with the following attributes depending on whether you are currently on the *entity form* or *entity list*:
+The method returns an object with the `input` property. The `input` property is an object with the following attributes depending on whether you are currently on the *entity form* or *entity list*:
 
 ### Entity form
 
@@ -36,8 +36,8 @@ The method returns an `input` object with the following attributes depending on 
 |pageType|String|The current page type. The value returned is "entityrecord".|
 |entityName|String|Logical name of the entity currently displayed.|
 |entityId|String|ID of the entity record currently displayed in the form.|
-|createFromEntity|Lookup|Optional. The parent record that provides default values based on mapped attribute values. The lookup object has the following String properties: `entityType`, `id`, and `name`.|
-|formId|String|Optional. ID of the currently displayed form.|
+|createFromEntity|Lookup|The parent record that provides default values based on mapped attribute values. The lookup object has the following String properties: `entityType`, `id`, and `name`.|
+|formId|String|ID of the currently displayed form.|
 
 
 ### Entity list
@@ -49,7 +49,8 @@ The method returns an `input` object with the following attributes depending on 
 |viewId|String|ID of the view currently displayed.|
 |viewType|String|Type of the view currently displayed. Possible values are "savedquery" or "userquery".|
 
-
+> [!NOTE]
+> Only the `pageType` and `entityName` parameters will return values every time; all other parameters will return values only if specified by the logic that opened the page.
 
 ### Related topics
 
