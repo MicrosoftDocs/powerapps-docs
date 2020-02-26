@@ -21,17 +21,13 @@ search.app:
 
 Create and manage private documents from within Common Data Service apps using OneDrive for Business. For more information on OneDrive for Business, see  [What is OneDrive for Business?](https://support.office.com/article/What-is-OneDrive-for-Business-187f90af-056f-47c0-9656-cc0ddca7fdc2)
 
- You might use [!INCLUDE[pn_onedrive_for_business](../includes/pn-onedrive-for-business.md)] to start and work on a document privately, such as for a draft sales pitch. When the draft is far enough along, move it to an [!INCLUDE[pn_Office_365](../includes/pn-office-365.md)] group for team collaboration. You have lots of storage space (1 TB or more) with [!INCLUDE[pn_onedrive_for_business](../includes/pn-onedrive-for-business.md)], and documents stored there are automatically synced to your desktop and mobile devices. For example, if you put a presentation in Customer Engagement (on-premises) that's stored on [!INCLUDE[pn_onedrive](../includes/pn-onedrive.md)] linked with an opportunity, that presentation is synced to all devices running [!INCLUDE[pn_onedrive](../includes/pn-onedrive.md)].  
 
+Before you can use OneDrive for Business, it must be enabled by your system administrator. More information:
 
- Before you can use [!INCLUDE[pn_onedrive_for_business](../includes/pn-onedrive-for-business.md)], it must be enabled by your system administrator. [!include[](../includes/proc-more-information.md)]  
+-   [Find your administrator or support person](find-admin.md)  
 
--   [Find your Dynamics 365 Customer Engagement administrator or support person](../basics/find-administrator-support.md)  
+-   [Enable OneDrive for Business](https://docs.microsoft.com/power-platform/admin/enable-onedrive-for-business)  
 
--   [Enable OneDrive for Business](../admin/connect-onedrive-business.md)  
-
-> [!IMPORTANT]
-> [!INCLUDE[cc_feature_requires_office_365](../includes/cc-feature-requires-office-365.md)]  
 
 ## The first time you view your documents  
 
