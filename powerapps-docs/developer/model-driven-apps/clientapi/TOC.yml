@@ -21,6 +21,8 @@
         href: ./reference/events/grid-onrecordselect.md
       - name: Grid OnSave event
         href: ./reference/events/grid-onsave.md
+      - name: OnLookupTagClick event
+        href: ./reference/events/onlookuptagclick.md
       - name: OnProcessStatusChange event
         href: ./reference/events/onprocessstatuschange.md
       - name: OnPreProcessStatusChange event
@@ -152,6 +154,8 @@
         href: reference/controls/addCustomView.md
       - name: addNotification
         href: reference/controls/addNotification.md
+      - name: addOnLookupTagClick
+        href: reference/controls/addOnLookupTagClick.md
       - name: addOnPostSearch
         href: reference/controls/addOnPostSearch.md
       - name: addOnResultOpened
@@ -214,6 +218,8 @@
         href: reference/controls/openSearchResult.md
       - name: refresh
         href: reference/controls/refresh.md
+      - name: removeOnLookupTagClick
+        href: reference/controls/removeOnLookupTagClick.md
       - name: removeOnPostSearch
         href: reference/controls/removeOnPostSearch.md
       - name: removeOnResultOpened

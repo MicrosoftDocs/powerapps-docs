@@ -457,7 +457,7 @@ protected String updateOptionLabelList(EntityQueryExpression entityQueryExpressi
 ### See also  
  [Write Applications and Server Extensions](/dynamics365/customer-engagement/developer/extend-dynamics-365-server)   
  [Offline Use of the Dynamics 365 Services](/dynamics365/customer-engagement/developer/org-service/offline-use-services)   
- [Sample: Query Metadata and Detect Changes](/dynamics365/customer-engagement/developer/org-service/sample-query-metadata-detect-changes)   
+ [Sample: Query Metadata and Detect Changes](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/MetadataQuery)   
  [Extend the Metadata Model for Dynamics 365](/dynamics365/customer-engagement/developer/org-service/use-organization-service-metadata)   
  [Customize Entity Metadata](/dynamics365/customer-engagement/developer/customize-entity-metadata)   
  [Customize Entity Attribute Metadata](/dynamics365/customer-engagement/developer/customize-entity-attribute-metadata)   
