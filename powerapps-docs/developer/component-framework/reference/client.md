@@ -37,8 +37,8 @@ Disables the scrolling capabilities for the components.
 
 |Method | Description |Available for|
 | ------------- |-------------|------|
-|[getClient](client/getclient.md)|[!INCLUDE [getclient-description](client/includes/getclient-description.md)]|Model-driven apps and canvas apps (experimental preview)|
-|[getFormFactor](client/getformfactor.md)|[!INCLUDE [getformfactor-description](client/includes/getformfactor-description.md)]|Model-driven apps and canvas apps (experimental preview)|
+|[getClient](client/getclient.md)|[!INCLUDE [getclient-description](client/includes/getclient-description.md)]|Model-driven apps and canvas apps (public preview)|
+|[getFormFactor](client/getformfactor.md)|[!INCLUDE [getformfactor-description](client/includes/getformfactor-description.md)]|Model-driven apps and canvas apps (public preview)|
 |[isOffline](client/isoffline.md)|[!INCLUDE [isoffline-description](client/includes/isoffline-description.md)]|Model-driven apps|
 
 ## Example 

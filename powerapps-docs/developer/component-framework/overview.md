@@ -16,18 +16,16 @@ ms.author: nabuthuk
 
 # Power Apps component framework overview
 
-Power Apps component framework empowers professional developers and app makers to create code components for model-driven and canvas apps (experimental preview) to provide enhanced user experience for the users to work with data on forms, views, and dashboards. For example:
+Power Apps component framework empowers professional developers and app makers to create code components for model-driven and canvas apps (public preview) to provide enhanced user experience for the users to work with data on forms, views, and dashboards. For example:
 
 - Replace a field that displays a numeric text value with a `dial` or `slider` code component.
 - Transform a list into an entirely different visual experience bound to the data set like a `Calendar` or `Map`.
 
 > [!IMPORTANT]
-> - PowerApps component framework is in public preview for canvas apps, and in GA for model-driven apps. This implies that all the APIs that are supported for model-driven apps might not be supported on canvas apps yet.
+> - PowerApps component framework is in public preview for canvas apps, and is generally available for model-driven apps. This implies that all the APIs that are supported for model-driven apps might not be supported on canvas apps yet.
 > - By default PowerApps component framework is enabled for model-driven apps. To enable this feature for canvas apps, see [Availability for canvas apps](component-framework-for-canvas-apps.md).
-> - Power Apps component framework is in experimental preview for canvas apps, and in GA for model-driven apps. This implies that all the APIs that are supported for model-driven apps might not be supported on canvas apps yet.
 > - By default Power Apps component framework is enabled for model-driven apps. To enable this feature for canvas apps, see [Code components for canvas apps](component-framework-for-canvas-apps.md).
 > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
-> - Canvas apps only support the *field* type of code components, and not the *dataset* type.
 > - Power Apps component framework works only on Unified Interface and not on the web client. 
 > - Power Apps component framework doesn't work for on-premises instances. 
 
