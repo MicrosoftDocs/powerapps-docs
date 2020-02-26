@@ -50,14 +50,13 @@ Code components can be reused many times across different entities and forms. Us
 
 ## Licensing
 
-Power Apps component framework licensing requirements are inline with existing connectors and components and is based on the type of data and connections used in your app. More information: [Power Apps licensing overview](https://docs.microsoft.com/power-platform/admin/pricing-billing-skus). To align with the licensing requirements, we will be classifying code components into two types:
+Power Apps component framework licensing requirements are inline with existing connectors and components and is based on the type of data and connections used in your app. More information: [Power Apps pricing](https://powerapps.microsoft.com/en-us/pricing/). To align with the licensing requirements, we will be classifying code components into two types:
 
 - Code components that connect to external services or data directly and not through connectors. When these components are used in an app, the app becomes premium, and end users are required to have Power Apps licenses.
-- Code components that don't connect to external services or data. When these components are used in an app that uses standard features, the app remains standard, and end users are required to have **Power Apps for Office 365** licenses.
+- Code components that don't connect to external services or data. When these components are used in an app that uses standard features, the app remains standard, and end users are required to have minimum **Power Apps for Office 365** licenses.
 
 > [!NOTE]
-> Licensing is only required if you want to use code components in canvas apps.
-> If you are currently using code components in model-driven apps connected to Common Data Service, there is no need for licensing, as end users are already assigned with Power Apps licenses.
+> If you are currently using code components in model-driven apps connected to Common Data Service, there are no changes w.r.t licensing as model driven apps connected to CDS requires Power Apps licenses today.
 
 With the general availability of the framework, code component developers will be able to classify components as part of the component manifest to allow makers to see which components are premium.
 
