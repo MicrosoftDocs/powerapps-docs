@@ -19,7 +19,7 @@ search.app:
 ---
 # Use OneDrive for Business 
 
-With [!INCLUDE[pn_crm_online_shortest](../includes/pn-crm-online-shortest.md)], you can use the right storage option for the right situation. For example, you can store your private documents by using the new [!INCLUDE[pn_onedrive_for_business](../includes/pn-onedrive-for-business.md)] option. For collaborative storage, you can use [!INCLUDE[pn_office_365_groups](../includes/pn-office-365-groups.md)] and for public documents use [!INCLUDE[pn_SharePoint_short](../includes/pn-sharepoint-short.md)].  
+Create and manage private documents from within Common Data Service apps using OneDrive for Business. For more information on OneDrive for Business, see  [What is OneDrive for Business?](https://support.office.com/article/What-is-OneDrive-for-Business-187f90af-056f-47c0-9656-cc0ddca7fdc2)
 
  You might use [!INCLUDE[pn_onedrive_for_business](../includes/pn-onedrive-for-business.md)] to start and work on a document privately, such as for a draft sales pitch. When the draft is far enough along, move it to an [!INCLUDE[pn_Office_365](../includes/pn-office-365.md)] group for team collaboration. You have lots of storage space (1 TB or more) with [!INCLUDE[pn_onedrive_for_business](../includes/pn-onedrive-for-business.md)], and documents stored there are automatically synced to your desktop and mobile devices. For example, if you put a presentation in Customer Engagement (on-premises) that's stored on [!INCLUDE[pn_onedrive](../includes/pn-onedrive.md)] linked with an opportunity, that presentation is synced to all devices running [!INCLUDE[pn_onedrive](../includes/pn-onedrive.md)].  
 
