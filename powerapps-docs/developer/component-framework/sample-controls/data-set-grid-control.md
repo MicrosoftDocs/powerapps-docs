@@ -24,6 +24,9 @@ This sample component shows how to change the user experience of interacting wit
 
 Model-driven apps
 
+> [!NOTE]
+> Some of the dataset API methods are still not supported in canvas apps. See, [Dataset component for canvas apps](data-set-component-canvas.md) to learn more about how dataset type components are implemented in canvas apps.
+
 ## Manifest 
 
 ```xml
