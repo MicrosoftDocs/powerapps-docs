@@ -130,6 +130,8 @@ Sharing a component library works the same way you share a canvas app. When you 
     ![Edit library component](./media/component-library/edit-library-component.png)
 
     If you select **Create a copy**, the component is copied to the local app. The local copy of the component appears under the **Custom** category in the **Insert** pane. This local copy of the component won't receive updates if a new version of the originating component library is published later.
+    
+- When a component is added to an app from the component library and the theme of the app is updated, the component becomes a local app component and is no longer associated to the master component in the component library.
 
 ## Next steps
 
