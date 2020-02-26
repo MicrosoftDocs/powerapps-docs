@@ -20,10 +20,6 @@ With the release of Power Apps component framework, you can now create your own 
 
    > [!NOTE]
    > Support for shared libraries across components using library nodes in the component manifest is not yet supported. We are reviewing this and will be adding this capability in future release.
-4. Defining multiple components in a single manifest file is not yet supported.
-5. Calling out processes and actions are not supported yet. You can only call dialog boxes using the [Navigation](reference/navigation.md) method.
-6. Calling one component  from another code component is not yet supported.
-7. Currently font resource (.tff) is not yet supported.
 
 ## Related topics
 

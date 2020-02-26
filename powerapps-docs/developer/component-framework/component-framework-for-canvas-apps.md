@@ -27,10 +27,8 @@ In this public preview, PowerApps component framework enables app makers to crea
 
 ## Prerequisites
 
-System Administrator privileges are required to enable the Power Apps component feature in the environment.
-
-> [!IMPORTANT]
-> By default, Power Apps component framework is enabled for model-driven apps.
+1. A Common Data Service license is required. More information: [Power Apps component framework licensing](#licensing)
+2. System Administrator privileges are required to enable the Power Apps component feature in the environment.
 
 ## Enable Power Apps component framework feature
 
@@ -62,13 +60,7 @@ After you enable the Power Apps component framework feature in your environment,
 
  The [Create your first code component](implementing-controls-using-typescript.md) topic demonstrates the step-by-step process to create code components.
 
-> [!NOTE]
-> Implementing code components is the same for both model-driven apps and canvas apps (public preview). The only difference is adding the code components. 
-
 ## Add components to a canvas app
-
-> [!NOTE]
-> To add code components to a field or an entity for model-driven apps, see [Add code components to model-driven apps](add-custom-controls-to-a-field-or-entity.md)
 
 To add code components to a canvas app:
 
@@ -100,6 +92,24 @@ Whenever you update the code components and want to see the changes in runtime, 
 
 > [!NOTE]
 > Existing code components are updated only when the app is closed or reopened in Power Apps Studio. When you reopen the app, it asks you to update the code components. Simply deleting the code components or adding the code component back into the app doesn't update the components.
+
+## Licensing
+
+With the Power Apps component framework going GA on canvas apps, we will categorize code components into the following: 
+
+- **Premium components**: Code components that rely on external services to function via component implementation code are known as premium components. 
+- **Non-premium components**: All other basic components which work directly against the data provided by the app are known as non-premium components.
+
+App makers need to have **Power Apps license** to import and add code components to canvas app from Common Data Service. End users with no **Power Apps license** will be able to use the apps containing the non-premium code components. However inline with the custom connectors, if there is a premium code component accessing external service, user will require a Power Apps license. 
+
+> [!NOTE]
+> Licensing requirement for premium code components applies to end users only on canvas apps. Model-driven apps users can access all code components as they already have Power Apps license.
+
+In other words, end users need **Office 365** license to use non-premium code components in canvas apps. To use premium code component, end users need to have a Power Apps license.
+
+### How to identity a component as premium component?
+
+We will introduce the metadata manifest flags for the developers to characterize their component category so that the app makers and end users are notified and are aware of the requirements as they use these in the app.
 
 ## See also
 

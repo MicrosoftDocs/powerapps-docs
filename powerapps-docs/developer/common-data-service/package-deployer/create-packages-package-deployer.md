@@ -143,7 +143,7 @@ Common Data Service provides you with a Visual Studio template for creating thes
 
    ```  
 
-    `<filestoimportnode>` node  
+    `<filestoimport>` node  
     Contains an array of `<configimportfile>` and `<zipimportdetails>` nodes that are used to describe individual files and zip files respectively to be imported.  
 
     `<configimportfile>` node  
