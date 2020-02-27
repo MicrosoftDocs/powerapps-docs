@@ -19,7 +19,9 @@ search.app:
 ---
 # Use OneDrive for Business 
 
-Create and manage private documents from within Common Data Service apps using OneDrive for Business. For more information on OneDrive for Business, see  [What is OneDrive for Business?](https://support.office.com/article/What-is-OneDrive-for-Business-187f90af-056f-47c0-9656-cc0ddca7fdc2)
+Create and manage private documents from within Common Data Service apps using OneDrive for Business. 
+
+For more information on OneDrive for Business, see  [What is OneDrive for Business?](https://support.office.com/article/What-is-OneDrive-for-Business-187f90af-056f-47c0-9656-cc0ddca7fdc2)
 
 
 Before you can use OneDrive for Business, it must be enabled by your system administrator. More information:
