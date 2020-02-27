@@ -19,7 +19,7 @@ ms.assetid: 66599c2f-6651-4b27-92da-a38897acdfb5
 
 ## Available for
 
-Model-driven apps and canvas apps (experimental preview)
+Model-driven apps and canvas apps (public preview)
 
 ## Parent Elements
 

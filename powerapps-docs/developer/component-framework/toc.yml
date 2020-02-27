@@ -48,8 +48,10 @@
       href: sample-controls/angular-flip-control.md
     - name: Control State API component
       href: sample-controls/control-state-api.md
-    - name: Data Set Grid component
+    - name: Data Set Grid component for model-driven apps
       href: sample-controls/data-set-grid-control.md
+    - name: Data Set component for canvas apps
+      href: sample-controls/data-set-component-canvas.md
     - name: Formatting API component
       href: sample-controls/formatting-api-control.md
     - name: IFRAME component
