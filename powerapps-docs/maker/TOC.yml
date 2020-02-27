@@ -879,8 +879,10 @@
       href: ./canvas-apps/dev-appsource-test-drive.md
     - name: Create a component
       items:
-        - name: Overview
+        - name: Components overview
           href: ./canvas-apps/create-component.md
+        - name: Component library
+          href: ./canvas-apps/component-library.md
         - name: Behavior formulas
           href: ./canvas-apps/component-behavior.md
     - name: Embed canvas apps in your applications
