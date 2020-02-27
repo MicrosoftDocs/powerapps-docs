@@ -93,15 +93,15 @@ Here are some common issues that you might come across while using the Power App
 
       ***Expected Behavior*** 
 
-        ```TypeScript
-         long  = dataSet.records[currentRecordId].getValue("Longitude") //based on property set in manifest"-122.3514661"
-        ```
+      ```TypeScript
+      long  = dataSet.records[currentRecordId].getValue("Longitude") //based on property set in manifest"-122.3514661"
+      ```
 
       ***Current Workaround***
 
-        ```TypeScript
-        lat = dataSet.records[currentRecordId].getValue("Address_x0020_1_x003a__x0020_Latitude")//based on the dataset column name
-        ```
+      ```TypeScript
+      lat = dataSet.records[currentRecordId].getValue("Address_x0020_1_x003a__x0020_Latitude")//based on the dataset column name
+      ```
 
 6. **Power Apps component framework Datasets SharePoint issue**
 
