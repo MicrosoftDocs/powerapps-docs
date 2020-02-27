@@ -127,5 +127,4 @@ Guid accountId = service.Create(account);
 
  [Create Early-Bound Entity Classes with the Code Generation Tool (CrmSvcUtil.exe)](/dynamics365/customer-engagement/developer/create-early-bound-entity-classes-code-generation-tool)<br />
  [Use the Early Bound Entity Classes for Create, Update and Delete](/dynamics365/customer-engagement/developer/use-entity-class-create-update-delete)<br />
- [Troubleshooting Tips](/dynamics365/customer-engagement/developer/troubleshooting-tips)<br />
  [Run a simple program using Web services](/dynamics365/customer-engagement/developer/simple-program-web-services)
