@@ -45,11 +45,12 @@ Before you can use OneDrive for Business, it must be enabled by your system admi
      > [!div class="mx-imgBorder"]
      > ![Open the Documents tab and select OneDrive](media/onedrive_menu.png "Open the Documents tab and select OneDrive")
 
-   After OneDrive for Business is enabled, you'll see the following dialog box when you go to the Documents tab to view documents in Common Data Service and upload a file to OneDrive, or when you attempt to create a new document or folder.  
+4. After OneDrive for Business is enabled, you'll see the following dialog box when you go to the Documents tab to view documents in Common Data Service and upload a file to OneDrive, or when you attempt to create a new document or folder.  
 
-   ![Change your OneDrive folder](media/setup_onedrive.png "Change your OneDrive folder")  
+    > [!div class="mx-imgBorder"]
+    > ![Change your OneDrive folder](media/setup_onedrive.png "Change your OneDrive folder")  
 
-   Select **Change folder location** to pick a new location to store OneDrive documents, or select **Continue** to accept the default folder location.
+5. Select **Change folder location** to pick a new location to store OneDrive documents, or select **Continue** to accept the default folder location.
 
   
 ## View existing OneDrive documents  
