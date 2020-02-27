@@ -33,25 +33,25 @@ Before you can use OneDrive for Business, it must be enabled by your system admi
 
 ## The first time you view your documents  
 
-1. Go to the record for which you want to view the associated documents. For example, select **Sales** > **Leads**.
+1. Open the record for which you want to view the associated documents. For example, open a contact record.
 
-2. If you're using the web app, on the command bar, select the down arrow beside the record name, and then select **Documents**. 
+2.  One the open record select the **Related** tab, and then select **Documents**.
 
-   ![Navigate to related documents of a record](media/go-to-related-documents.png "Navigate to related documents for a record")
+     > [!div class="mx-imgBorder"]
+     > ![Open the Documents tab in a record ](media/onedrive_nav.png "Open the Documents tab in a record")
 
-   If you're using a mobile-optimized app, select the **Related** tab, and then select **Documents**.
+3.  Select **Document Location** > **One Drive**.
 
-   ![Open the Documents tab in a record in a mobile-optimized app](media/open-documents-tab-in-form.png "Open the Documents tab in a record in a mobile-optimized app")
+     > [!div class="mx-imgBorder"]
+     > ![Open the Documents tab and select OneDrive](media/onedrive_menu.png "Open the Documents tab and select OneDrive")
 
-   After [!INCLUDE[pn_onedrive_for_business](../includes/pn-onedrive-for-business.md)] is enabled, you'll see the following dialog box when you go to the Document Associated Grid to view documents in Customer Engagement (on-premises) and upload a file to [!INCLUDE[pn_onedrive](../includes/pn-onedrive.md)], or when you attempt to create a new document or folder.  
+   After OneDrive for Business is enabled, you'll see the following dialog box when you go to the Documents tab to view documents in Common Data Service and upload a file to OneDrive, or when you attempt to create a new document or folder.  
 
-   ![Change your OneDrive folder](../basics/media/onedrive-first-time.png "Change your OneDrive folder")  
+   ![Change your OneDrive folder](/media/onedrive_setup.png "Change your OneDrive folder")  
 
-   Select **Change folder location** to pick a new location to store [!INCLUDE[pn_onedrive](../includes/pn-onedrive.md)] documents, or select **Continue** to accept the default folder location: \Dynamics365. 
+   Select **Change folder location** to pick a new location to store OneDrive documents, or select **Continue** to accept the default folder location.
 
-   > [!NOTE]
-   >  The default folder location is set to \CRM for users who haven't upgraded to the [!include[](../includes/pn-crm-9-0-0-online.md)]. 
-
+  
 ## View existing OneDrive documents  
  Open the Document Associated Grid. The following example is for Opportunities, but works the same for all record types.  
 
