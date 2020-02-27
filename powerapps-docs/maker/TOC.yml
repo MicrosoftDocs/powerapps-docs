@@ -1561,8 +1561,6 @@
       href: ./common-data-service/use-segmented-solutions-patches-simplify-updates.md
     - name: Set managed properties in metadata
       href: ./common-data-service/set-managed-properties-metadata.md
-    - name: Publish changes
-      href: ./common-data-service/publish-changes-for-use-customer-service-hub.md
     - name: Best practices
       href: ./common-data-service/solution-best-practices.md
   - name: Work with dataflows
