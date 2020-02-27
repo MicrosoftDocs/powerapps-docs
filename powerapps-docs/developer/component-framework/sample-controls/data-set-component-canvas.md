@@ -27,7 +27,7 @@ This sample shows how to create a dataset component for canvas apps. The dataset
 Model-driven apps and canvas apps (public preview).
 
 > [!NOTE]
-> Some of the dataset API methods are still not supported in canvas apps. See, [individual API documentation] for availability details.
+> Some of the dataset API methods are still not supported in canvas apps. See, [individual API documentation](../reference/index.md) for availability details.
 > See, [Dataset component for model-driven apps](data-set-grid-control.md) to learn more about how dataset type components are implemented in model-driven apps.
 
 ## Manifest 
