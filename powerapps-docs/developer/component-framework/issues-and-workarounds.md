@@ -82,3 +82,29 @@ Error  **Import Solution Failed: Web resource content size is too big**.
 
 1. When you're creating the `bundle.js` file from the CLI tooling, it bundles lot of components which makes the file large. Remove some of the components that are not necessary. 
 2. Build the component in `production` mode by modifying the `node_modules/pcf-scripts/webpackconfig.js` file.
+
+**Power Apps component framework Datasets getValue by property alias doesn't work**
+
+Power Apps component framework dataset APIs getValue function only searches record by the dataset column name and not the property alias set in the manifest. Attempting to get value by property alias will return an empty value.
+
+**Workaround**
+
+Use the dataset column name (component can get the dataset column name by searching the column array using the alias). 
+
+***Expected Behavior*** 
+
+long  = dataSet.records[currentRecordId].getValue("Longitude") //based on property set in manifest
+"-122.3514661"
+
+***Current Workaround***
+
+lat = dataSet.records[currentRecordId].getValue("Address_x0020_1_x003a__x0020_Latitude")//based on the dataset column name
+
+**Power Apps component framework Datasets Sharepoint issue**
+
+Power Apps component framework dataset component currently does not properly show the records from SharePoint. While the network request will succeed with the correct data records returned, the deserialization fails and an empty dataset is returned.
+
+**Workaround**
+
+No workaround as of now. We are working on pushing a fix to our deployment trains.
+

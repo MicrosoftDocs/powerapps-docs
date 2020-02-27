@@ -50,7 +50,7 @@ Code components can be reused many times across different entities and forms. Us
 Power Apps component framework licensing requirements are inline with existing connectors and components and is based on the type of data and connections used in your app. More information: [Power Apps pricing](https://powerapps.microsoft.com/en-us/pricing/). To align with the licensing requirements, we will be classifying code components into two types:
 
 - Code components that connect to external services or data directly and not through connectors. When these components are used in an app, the app becomes premium, and end users are required to have **Power Apps** licenses.
-- Code components that don't connect to external services or data. When these components are used in an app that uses standard features, the app remains standard, and end users are required to have minimum **Power Apps for Office 365** licenses.
+- Code components that don't connect to external services or data. When these components are used in an app that uses standard features, the app remains standard, and end users are required to be licensed at minimum for **Office 365**.
 
 > [!NOTE]
 > If you are currently using code components in model-driven apps connected to Common Data Service, end users will require **Power Apps** licenses.
