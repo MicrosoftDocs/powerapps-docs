@@ -15,9 +15,6 @@ ms.assetid: 5d100dc3-bd82-4b45-964c-d90eaebc0735
 
 # Code components for canvas apps
 
-<!--[!IMPORTANT]
-> This feature is still experimental and disabled by default. For more information, see [Experimental and preview features](../../maker/canvas-apps/working-with-experimental.md).-->
-
 Power Apps component framework enables app makers to create code components to use in an app or across the apps. More information: [Power Apps component framework overview](overview.md) 
 
 In this public preview, PowerApps component framework enables app makers to create code components, debug, import, and add them to canvas apps using the PowerApps CLI tooling. Only specific APIs are supported in this public preview. We recommend you to check each API to determine whether it supports canvas apps. 
@@ -27,10 +24,8 @@ In this public preview, PowerApps component framework enables app makers to crea
 
 ## Prerequisites
 
-System Administrator privileges are required to enable the Power Apps component feature in the environment.
-
-> [!IMPORTANT]
-> By default, Power Apps component framework is enabled for model-driven apps.
+1. A Power Apps license is required. More information: [Power Apps component framework licensing](overview.md#licensing)
+2. System Administrator privileges are required to enable the Power Apps component feature in the environment.
 
 ## Enable Power Apps component framework feature
 
@@ -62,13 +57,7 @@ After you enable the Power Apps component framework feature in your environment,
 
  The [Create your first code component](implementing-controls-using-typescript.md) topic demonstrates the step-by-step process to create code components.
 
-> [!NOTE]
-> Implementing code components is the same for both model-driven apps and canvas apps (public preview). The only difference is adding the code components. 
-
 ## Add components to a canvas app
-
-> [!NOTE]
-> To add code components to a field or an entity for model-driven apps, see [Add code components to model-driven apps](add-custom-controls-to-a-field-or-entity.md)
 
 To add code components to a canvas app:
 

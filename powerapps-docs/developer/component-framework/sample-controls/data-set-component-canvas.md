@@ -17,7 +17,7 @@ ms.assetid: 356561d0-a36b-4b93-8b76-3e1abf9414e9
 
 This sample shows how to create a dataset component for canvas apps. The dataset component also showcases how to use the dataset API methods to get view’s column metadata binding, record binding, paging, and record navigation. 
 
- You can download the sample component from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/TS_DataSetGrid).
+ You can download the sample component from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/TS_PropertSetTableControl).
 
 > [!div class="mx-imgBorder"]
 > ![Data set grid control](../media/data-set-grid-control-canvas.png)

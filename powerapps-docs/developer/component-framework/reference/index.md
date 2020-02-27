@@ -15,7 +15,7 @@ manager: "kvivek"
 This section contains reference documentation for creating code components using the Power Apps component framework.
 
 > [!IMPORTANT]
-> - The **Available for** tab shows which APIs are supported by model-driven apps and canvas apps (experimental preview). It is recommended to check the **Available for** section for each individual API methods whether it is supported or not. For example, the **client** API is supported for both model-driven apps and canvas apps, but the  **isOffline** method in **client** API supports only model-driven apps.
+> - The **Available for** tab shows which APIs are supported by model-driven apps and canvas apps (public preview). It is recommended to check the **Available for** section for each individual API methods whether it is supported or not. For example, the **client** API is supported for both model-driven apps and canvas apps, but the  **isOffline** method in **client** API supports only model-driven apps.
 >
 > - Using the `Xrm object` methods that are not exposed by the framework for developing code components is not supported.
 
