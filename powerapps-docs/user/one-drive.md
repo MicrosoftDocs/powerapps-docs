@@ -53,7 +53,7 @@ Before you can use OneDrive for Business, it must be enabled by your system admi
 5. Select **Change folder location** to pick a new location to store OneDrive documents, or select **Continue** to accept the default folder location.
 
   
-## View existing OneDrive documents  
+## View existing OneDrive documents  -- VERIFY THIS
  
  
 1. Open the Document Associated Grid for a record. For example, open a contact record.
@@ -70,7 +70,7 @@ Before you can use OneDrive for Business, it must be enabled by your system admi
    |           [!INCLUDE[pn_onedrive](../includes/pn-onedrive.md)]            |                       Documents stored in [!INCLUDE[pn_onedrive_for_business](../includes/pn-onedrive-for-business.md)]                        |
    |                              Shared with me                              |     Documents that others shared with you that are associated with this Customer Engagement (on-premises) record     |
 
-## Create a new document
+## Create a new document ---- VERIFY THIS
 
 To create a new SharePoint or OneDrive document in Common Data Service:
 
