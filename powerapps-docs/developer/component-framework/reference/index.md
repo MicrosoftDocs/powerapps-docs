@@ -25,7 +25,7 @@ This section contains reference documentation for creating code components using
 |[Column](column.md)|[!INCLUDE [column-description](includes/column-description.md)]|Model-driven apps and canvas apps (public preview)|
 |[ConditionExpression](conditionexpression.md)|[!INCLUDE [conditionexpression-description](includes/conditionexpression-description.md)]|Model-driven apps|
 |[Context](context.md)|[!INCLUDE [context-description](includes/context-description.md)]|Model-driven apps and canvas apps (public preview)|
-|[DataSet](dataset.md)|[!INCLUDE [dataset-description](includes/dataset-description.md)]|Model-driven apps|
+|[DataSet](dataset.md)|[!INCLUDE [dataset-description](includes/dataset-description.md)]|Model-driven apps and canvas apps (public preview)|
 |[DateFormattingInfo](dateformattinginfo.md)|[!INCLUDE [dateformattinginfo-description](includes/dateformattinginfo-description.md)]|Model-driven apps|
 |[Device](device.md)|[!INCLUDE [device-description](includes/device-description.md)]|Model-driven apps and canvas apps (public preview)|
 |[EntityRecord](entityrecord.md)|[!INCLUDE [entityrecord-description](includes/entityrecord-description.md)]|Model-driven apps|
