@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.date: 01/15/2019
+ms.date: 02/28/2020
 ms.author: kvivek
 ms.reviewer: kvivek
 searchScope:
