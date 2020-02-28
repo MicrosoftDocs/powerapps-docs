@@ -62,5 +62,22 @@ Because the default solution contains all the solutions components, it may be ea
 > [!IMPORTANT]
 >  If you plan to include appointments in solutions, we strongly recommend that you don’t include only appointments and only recurring appointments in separate solutions. If you install and uninstall separate solutions with different appointment types, you’ll encounter a SQL Server error and you’ll have to re-create the appointments. 
 
-## See also
+## Publish changes 
+
+ Certain customizations that make changes to the user interface require that they be published before people can use them in the application. 
+ 
+### Publish your customizations
+
+1.  Select **Solutions** from the left navigation.
+
+2.  Select the solution that you want to publish to open it.
+
+3.  From the list of commands, select **Publish all customizations**.  
+
+![Publish all customizations](media/publish-all-customizations.PNG "Publish all customizations")  
+  
+> [!IMPORTANT]
+>  Preparing customizations may take some time. If you see a message that the browser page has become unresponsive, wait for the page to become responsive, and don't close it.  
+
+### See also
  [Use solutions](use-solution-explorer.md)
