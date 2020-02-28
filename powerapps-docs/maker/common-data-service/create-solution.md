@@ -25,7 +25,7 @@ search.app:
 ---
 # Create a solution
 
-To locate and work with just the components you’ve customized, create a separate solution and do all your customization there. This makes it easy to export a backup of your solution. Then, always remember to work in the context of the custom solution as you add, edit, and create components.   
+To locate and work with just the components you’ve customized, create a solution and do all your customization there. Then, always remember to work in the context of the custom solution as you add, edit, and create components. This makes it easy to export your solution for import to another environment or as a backup.   
   
 For more information about solution concepts, see [Working with solutions](solutions-overview.md).  
   
