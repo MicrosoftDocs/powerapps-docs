@@ -96,12 +96,6 @@ To create a new document and save it in OneDrive:
 
 4. Enter a document name, and then select **Save**.  
 
-   The document is created and opened in the [!INCLUDE[pn_Office_365](../includes/pn-office-365.md)] Online application.  
-
-
-> [!NOTE]
-> If you're are using the mobile-optimized app on tablets and phones, the document is opened within the Office app such as [!INCLUDE[pn_MS_Powerpoint](../includes/pn-ms-powerpoint.md)] or [!INCLUDE[pn_ms_Word_short](../includes/pn-ms-word-short.md)].
-
 
 ## Things to consider 
 
