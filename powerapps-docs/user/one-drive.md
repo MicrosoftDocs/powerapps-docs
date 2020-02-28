@@ -71,10 +71,10 @@ Before you can use OneDrive for Business, it must be enabled by your system admi
 
    |                            Document Location                             |                                                                  Description                                                                   |
    |--------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|
-   |                                All Locatoins                                 | All document locations associated with this app record. |
-   | [!INCLUDE[pn_SharePoint_short](../includes/pn-sharepoint-short.md)] site |                   Documents stored in your default [!INCLUDE[pn_SharePoint_short](../includes/pn-sharepoint-short.md)] site                    |
-   |           [!INCLUDE[pn_onedrive](../includes/pn-onedrive.md)]            |                       Documents stored in [!INCLUDE[pn_onedrive_for_business](../includes/pn-onedrive-for-business.md)]                        |
-   |                              Shared with me                              |     Documents that others shared with you that are associated with this app record     |
+   |                               OneDrive                                 | Documents stored in OneDrive for Business |
+   | Documents on Default Site |                   Documents stored in your default SharePoint site                    |
+   |           Shared with me            |                       Documents that others shared with you that are associated with this app record                        |
+   |                              All Locations                            |     All document locations associated with this app record     |
 
 ## Create a new document ---- VERIFY THIS
 
