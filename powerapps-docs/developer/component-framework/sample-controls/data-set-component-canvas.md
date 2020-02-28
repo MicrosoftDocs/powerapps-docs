@@ -561,12 +561,6 @@ In this sample component, two property sets are defined in its manifest, `sample
 > [!div class="mx-imgBorder"]
 > ![Property Set view fields](../media/property-set-view-fields.png)
 
-### Navigation
-
-Data record navigation can be done with a few extra configurations in the canvas app. Component’s `OnSelect` property is bound to `context.parameters.[dataset_property_name].openDatasetItem(entityReference)`.
-
-Using this API along with the `dataset_property_name_selected property`, the user can update the page context with the selected records. This works with canvas’s `UpdateContext` and `Navigate` function.
- 
 ### Sizing
 
 This sample also showcases how the component listens to the container resize. The `trackContainerResize` method should be called within the `init` method so that the `mode.allocatedWidth` and `mode.allocatedHeight` will be provided each time when the `updateView` is being called. If this method is not called initially, they don't have `allocatedWidth` and `allocatedHeight` values provided. If the `allocatedHeight` is –1, that means there is no limit on height. The component should adjust its height based on the provided width.
@@ -580,7 +574,6 @@ In this preview for canvas apps, only a limited set of [filtering](../reference/
 **View**
 
 In model-driven apps, views are required for dataset components to get the column's information. In canvas apps, views are used as a filter. It’s up to the app maker to decide which columns to be added for each of the component. A view can be selected after a source is selected for the dataset component. This is applicable only when you choose Common Data Service as a source. Selecting a view applies the view’s filter to the source. The view name and view id can be retrieved using the `context.parameters.[dataset_property_name].getTitle()` and `context.parameters.[dataset_property_name].getViewId()` methods.
-
 
 ### Related topics
 
