@@ -2,7 +2,7 @@
 title: "Create a solution | MicrosoftDocs"
 description: "Learn how to create a solution"
 ms.custom: ""
-ms.date: 10/30/2018
+ms.date: 02/28/2020
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -25,9 +25,9 @@ search.app:
 ---
 # Create a solution
 
-Because the default solution contains all the solutions components, it may be easier for you to locate just the solution components that you’ve customized if you create a separate solution and do all your customization there. This also makes it easy to export a backup of your solution as a smaller file. If you choose to do this, you must always remember to add any of the solution components you edit to this solution. When you create new solution components, you should always create them in the context of this solution. This way the solution publisher customization prefix will be applied consistently. After you have created solution components in your solution, or added existing solution components to that solution, you can also edit them in the default solution if you wish.  
+To locate and work with just the components you’ve customized, create a separate solution and do all your customization there. This makes it easy to export a backup of your solution. Then, always remember to work in the context of the custom solution as you add, edit, and create components.   
   
- For more information about solution concepts, see [Working with solutions](solutions-overview.md).  
+For more information about solution concepts, see [Working with solutions](solutions-overview.md).  
   
 1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select **Solutions** from the left navigation. 
   
