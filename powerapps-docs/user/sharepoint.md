@@ -19,8 +19,14 @@ search.app:
 ---
 # Manage your SharePoint documents and document locations 
 
-With Dynamics 365 Customer Engagement (on-premises), you can store your documents on SharePoint and manage them from within your app.
+With Common Data Service, you can store your documents on SharePoint and manage them from within your app.
 
-The documents that you create in Customer Engagement are stored on SharePoint, and are automatically synced to your desktop and mobile devices.
+The documents that you create in your app are stored on SharePoint, and are automatically synced to your desktop and mobile devices.
+
+Before you can use OSharePoint to store the document, it must be enabled by your system administrator. More information:
+
+-   [Find your administrator or support person](find-admin.md)  
+
+-   [Manage your documents using SharePoint](https://docs.microsoft.com/power-platform/admin/manage-documents-using-sharepoint)  
 
 
