@@ -55,9 +55,9 @@ Before you can use OneDrive for Business, it must be enabled by your system admi
   
 ## View existing OneDrive documents 
  
-1. Open a record. For example, open a contact record.
+1. Open a record and go to the Document Associated Grid. For example, open a contact record.
 
-2. On the open record, select the **Related** tab, and then select **Documents**.
+2. On the open contact record, select the **Related** tab, and then select **Documents**.
  
     > [!div class="mx-imgBorder"]
     > ![Open the Documents tab in a record ](media/onedrive_nav.png "Open the Documents tab in a record")
@@ -76,15 +76,23 @@ Before you can use OneDrive for Business, it must be enabled by your system admi
    |           Shared with me            |                       Documents that others shared with you that are associated with this app record                        |
    |                              All Locations                            |     All document locations associated with this app record     |
 
-## Create a new document ---- VERIFY THIS
+## Create a new document 
 
-To create a new SharePoint or OneDrive document in Common Data Service:
+To create a new document and save it in OneDrive:
 
-1. Go to the Document Associated Grid.  
+1. Open a record and go to the Document Associated Grid. For example, open a contact record.
+
+2. On the open contact record, select the **Related** tab, and then select **Documents**.
+ 
+    > [!div class="mx-imgBorder"]
+    > ![Open the Documents tab in a record ](media/onedrive_nav.png "Open the Documents tab in a record")
 
 2. Select **Document Location**, and change the location to **OneDrive**.
 
 3. Select **New**, and then choose a document type such as PowerPoint or Word. 
+
+    > [!div class="mx-imgBorder"]
+    > ![Creat a new documents ](media/onedrive_new_doc.png "Creat a new documents ")
 
 4. Enter a document name, and then select **Save**.  
 
