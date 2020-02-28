@@ -35,7 +35,7 @@ Before you can use OneDrive for Business, it must be enabled by your system admi
 
 1. Open the record for which you want to view the associated documents. For example, open a contact record.
 
-2.  One the open record select the **Related** tab, and then select **Documents**.
+2.  On the open record, select the **Related** tab, and then select **Documents**.
 
      > [!div class="mx-imgBorder"]
      > ![Open the Documents tab in a record ](media/onedrive_nav.png "Open the Documents tab in a record")
@@ -53,12 +53,11 @@ Before you can use OneDrive for Business, it must be enabled by your system admi
 5. Select **Change folder location** to pick a new location to store OneDrive documents, or select **Continue** to accept the default folder location.
 
   
-## View existing OneDrive documents  -- VERIFY THIS
+## View existing OneDrive documents 
  
- 
-1. Open the Document Associated Grid for a record. For example, open a contact record.
+ 1. Open a record. For example, open a contact record.
 
-2. One the open record, select **Documents** > **Document Location** to filter the document list.
+ 2. On the open record, select the **Related** tab, and then select **Documents**.
 
 3. Select a location as described in the following table:  
 
