@@ -29,4 +29,17 @@ Before you can use OSharePoint to store the document, it must be enabled by your
 
 -   [Manage your documents using SharePoint](https://docs.microsoft.com/power-platform/admin/manage-documents-using-sharepoint)  
 
+## Where do you access the documents from?
+
+For record types that support document management, open the record, select the **Related** tab, and then select **Documents**.
+
+   > [!div class="mx-imgBorder"]
+   > ![Open the Documents tab in a record ](media/onedrive_nav.png "Open the Documents tab in a record")
+
+When SharePoint is enabled, by default, the location is set to Documents on **Documents on Default Site 1**.
+
+   > [!div class="mx-imgBorder"]
+   > ![Default location](media/sharepoint_defualtsite.png "Default location")
+
+
 
