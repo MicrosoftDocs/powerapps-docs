@@ -55,19 +55,26 @@ Before you can use OneDrive for Business, it must be enabled by your system admi
   
 ## View existing OneDrive documents 
  
- 1. Open a record. For example, open a contact record.
+1. Open a record. For example, open a contact record.
 
- 2. On the open record, select the **Related** tab, and then select **Documents**.
+2. On the open record, select the **Related** tab, and then select **Documents**.
+ 
+    > [!div class="mx-imgBorder"]
+    > ![Open the Documents tab in a record ](media/onedrive_nav.png "Open the Documents tab in a record")
+ 
+3. Select **Document Location** to filter the document list.
 
-3. Select a location as described in the following table:  
+    > [!div class="mx-imgBorder"]
+    > ![Open the Documents Location](media/onedrive_doc_location.png "Open the DocumentsLocation")
 
+4.  Select a location as described in the following table:  
 
    |                            Document Location                             |                                                                  Description                                                                   |
    |--------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|
-   |                                All files                                 | All document locations associated with this app record. |
+   |                                All Locatoins                                 | All document locations associated with this app record. |
    | [!INCLUDE[pn_SharePoint_short](../includes/pn-sharepoint-short.md)] site |                   Documents stored in your default [!INCLUDE[pn_SharePoint_short](../includes/pn-sharepoint-short.md)] site                    |
    |           [!INCLUDE[pn_onedrive](../includes/pn-onedrive.md)]            |                       Documents stored in [!INCLUDE[pn_onedrive_for_business](../includes/pn-onedrive-for-business.md)]                        |
-   |                              Shared with me                              |     Documents that others shared with you that are associated with this Customer Engagement (on-premises) record     |
+   |                              Shared with me                              |     Documents that others shared with you that are associated with this app record     |
 
 ## Create a new document ---- VERIFY THIS
 
