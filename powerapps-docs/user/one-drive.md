@@ -54,42 +54,31 @@ Before you can use OneDrive for Business, it must be enabled by your system admi
 
   
 ## View existing OneDrive documents  
- Open the Document Associated Grid. The following example is for Opportunities, but works the same for all record types.  
+ 
+ 
+1. Open the Document Associated Grid for a record. For example, open a contact record.
 
-1. Select **Sales** > **Opportunities**  
+2. One the open record, select **Documents** > **Document Location** to filter the document list.
 
-2. Choose an opportunity from the drop-down menu, and then select **Documents**.  
-
-    > [!div class="mx-imgBorder"] 
-    > ![Create record button](media/newrecord1.png "Create record button")
-  
-
-    Customer Engagement (on-premises) now organizes documents in a consolidated view.  
-
-    ![List of documents on OneDrive for Business](media/list-of-documents-in-onedrive.png "List of documents on OneDrive")
-
-3. Select **Document Location** to filter the document list.  
-
-     ![Choose a document location](../basics/media/onedrive-choose-document-location.PNG "Choose a document location")  
-
-4. Select a location as described in the following table:  
+3. Select a location as described in the following table:  
 
 
    |                            Document Location                             |                                                                  Description                                                                   |
    |--------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|
-   |                                All files                                 | All document locations associated with this Customer Engagement (on-premises) record (only available in the web app) |
+   |                                All files                                 | All document locations associated with this app record. |
    | [!INCLUDE[pn_SharePoint_short](../includes/pn-sharepoint-short.md)] site |                   Documents stored in your default [!INCLUDE[pn_SharePoint_short](../includes/pn-sharepoint-short.md)] site                    |
    |           [!INCLUDE[pn_onedrive](../includes/pn-onedrive.md)]            |                       Documents stored in [!INCLUDE[pn_onedrive_for_business](../includes/pn-onedrive-for-business.md)]                        |
    |                              Shared with me                              |     Documents that others shared with you that are associated with this Customer Engagement (on-premises) record     |
 
-## Create a new document  
- To create a new [!INCLUDE[pn_SharePoint_short](../includes/pn-sharepoint-short.md)] or [!INCLUDE[pn_onedrive](../includes/pn-onedrive.md)] document in Customer Engagement (on-premises):  
+## Create a new document
+
+To create a new SharePoint or OneDrive document in Common Data Service:
 
 1. Go to the Document Associated Grid.  
 
 2. Select **Document Location**, and change the location to **OneDrive**.
 
-3. Select **New**, and then choose a document type such as [!INCLUDE[pn_MS_Powerpoint](../includes/pn-ms-powerpoint.md)] or [!INCLUDE[pn_ms_Word_short](../includes/pn-ms-word-short.md)].  
+3. Select **New**, and then choose a document type such as PowerPoint or Word. 
 
 4. Enter a document name, and then select **Save**.  
 
@@ -99,19 +88,11 @@ Before you can use OneDrive for Business, it must be enabled by your system admi
 > [!NOTE]
 > If you're are using the mobile-optimized app on tablets and phones, the document is opened within the Office app such as [!INCLUDE[pn_MS_Powerpoint](../includes/pn-ms-powerpoint.md)] or [!INCLUDE[pn_ms_Word_short](../includes/pn-ms-word-short.md)].
 
-## Change your OneDrive folder settings (web app only)
- You can change the location of your [!INCLUDE[pn_onedrive](../includes/pn-onedrive.md)] documents and rename the folder used for [!INCLUDE[pn_onedrive](../includes/pn-onedrive.md)].  
 
-1. Select **Settings** > **Document Management** > **OneDrive for Business Folder Settings**.  
+## Things to consider 
 
-2. Enter a new location for Customer Engagement (on-premises) to store [!INCLUDE[pn_onedrive](../includes/pn-onedrive.md)] files, and then select **OK**.  
+Be aware of the following regarding OneDrive for Business in Common Data Service:
 
-   > [!NOTE]
-   >  The [!INCLUDE[pn_onedrive](../includes/pn-onedrive.md)] folder is renamed, and all existing files will now be associated with the new folder.  
+- OneDrive storage folders are created in the user's current Common Data Service language. If the language changes, new folders will be created in the new language. Old folders will remain in the previous language.  
 
-## Things to consider  
- Be aware of the following regarding [!INCLUDE[pn_onedrive_for_business](../includes/pn-onedrive-for-business.md)] in Customer Engagement (on-premises):  
-
-- [!INCLUDE[pn_onedrive](../includes/pn-onedrive.md)] storage folders are created in the user's current Customer Engagement (on-premises) language. If the language changes, new folders will be created in the new language. Old folders will remain in the previous language.  
-
-- There may be a delay between when the documents are shared in [!INCLUDE[pn_onedrive](../includes/pn-onedrive.md)] and when they're available to other users.  
+- There may be a delay between when the documents are shared in OneDrive and when they're available to other users. 
