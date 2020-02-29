@@ -83,28 +83,53 @@ Converting your app to use the new Power Apps Option sets and Two option data ty
 
 Previously there were separate *_myfield* and *_myfield_label fields* used for an Option set, and now there is just a single *myfield* that can be used both for locale independent comparisons and to obtain the locale specific label. 
 
-#### Data cards - remove and re-add
+#### Option set Data cards - remove and re-add
 It's best to remove existing data cards and re-add them to work with your Option set.  For example, if you are working with the Account entity and the Category Option set, you'll see that the DataField property of the data card was set to *_accountcategorycode_label*. In the field list you can see that the data card has a type of String.
 
 ![OptionSet with old style name](./media/use-native-cds-connector/OptionSet-with-old-style-name.png)
 
-With the Improve swtich on you no longer see *_accountcategorycode_label*.  It has been replaced by *accountcategorycode*.  And your card will now be marked as "custom" and you'll have errors.  Remove the old data card and re-add the Option Set.  The new data card is Option set aware.
+With the "Improve" switch on you no longer see *_accountcategorycode_label*.  It has been replaced by *accountcategorycode*.  And your card will now be marked as "custom" and you'll have errors.  Remove the old data card and re-add the Option Set.  The new data card is Option set aware.
 
 ![OptionSet with old style name](./media/use-native-cds-connector/OptionSet-with-new-style-name.png)
 
-#### Expressions - edit to use new syntax
+#### Option Set Filter expressions - edit to use new syntax
 
 Previously, if you wanted to use an Option Set value in a Filter expression you would need to use the *value* field.  For example:
 
 ```powerapps-dot
 Filter(Account,'Category Value' = 1)
 ```
-You will need to edit this formula.  We no longer use the option set numeric value.  This expression should be updated to look like the following:
+You will need to edit this formula.  We no longer use the Option set text identifer for the value.  This expression should be updated to look like the following:
 
 ```powerapps-dot
 Filter(Account, Category= ‘Category (Accounts)’.’Preferred Customer’)
 ```
-Where 'Category(Accounts)' is the name of enum used in the Categroy field of the Accounts entity. Note this is a local option set.  You can read more about local and global option sets here. 
+Where 'Category(Accounts)' is the name of enum used in the Category field of the Accounts entity. Note this is a local option set.  You can read more about local and global option sets here: [Global option sets.](https://docs.microsoft.com/en-us/powerapps/maker/common-data-service/create-edit-global-option-sets)
+
+#### Option Set Patch statements - edit to use new syntax
+Similar to Filter expressions, Patch statements must be updated as well.  The previous way to patch an option set is shown here:
+
+```powerapps-dot
+Patch( Accounts, First(Accounts), { ‘Category Value’: 1 } ) )
+```
+You will need to update your statements to follow this form:
+
+```powerapps-dot
+Patch( Accounts, First(Accounts), { Category: ‘Category (Accounts)’.’Preferred Customer’ } )
+```
+
+#### Option Set Disambiguation - clarify with the disambiguation operator
+If the display name of a Option set **field** and the name of the Option set **itself** are the same, you'll need to disambiguate the formula. For example:
+
+```powerapps-dot
+Filter(Accounts, 'Category Code' = [@’Category Code’].'Preferred Customer')
+```
+
+
+
+
+
+
 
 
 
