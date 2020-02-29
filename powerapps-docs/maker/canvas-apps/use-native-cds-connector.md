@@ -59,7 +59,7 @@ This setting is at the top of the Setting page.  If the “Improve data source e
 4.	Save your application. 
 Note:  If your application is extremely large, adding your data source connections back may take a while.  Please do not close the application during this process.
 
-# Converting canvas apps with the Dynamics 365 connector
+## Converting canvas apps with the Dynamics 365 connector
 To convert your app that currently uses the Dynamics 365 connector you will need to drop and re-add your connections to your data sources.  Use the steps below to convert your connections to your data sources.
 1.	Ensure that the “Improve data source experience and Common Data Service views” feature is turned “On.”
 2.	Remove your existing Dynamics 365 data source connections.
@@ -67,7 +67,7 @@ To convert your app that currently uses the Dynamics 365 connector you will need
 4.	Save your application.
 
 
-## Possible errors and suggestions at this step
+### Possible errors and suggestions at this step
 It’s possible to have errors as you convert if you were not using Display Names, if you were using GUID strings, or if you were using an option set fields. 
 1.	For control name clashes, change the name of the control to be different and unique.  This is usually the simplest fix. 
 2.	For field and entity display name conflicts you may see a formula that is expecting an entity but is resolving to a more locally scoped field name. Use the square bracket with a “@” symbol to indicate a global scope so it resolves to the entity (e.g., [@entityName].)
@@ -75,9 +75,9 @@ It’s possible to have errors as you convert if you were not using Display Name
 4.	GUIDs.  If you were using a static GUID string such as “015e45e1044e49f388115be07f2ee116”, convert it to function that returns a GUID object (e.g, GUID(“015e45e1044e49f388115be07f2ee116”)) 
 5.	Lookups.  If you were using Lookup functions to get first level lookup values such as: Lookup (Lookup (Contacts, ‘contactID’ = ThisItem.ContactID”) consider using ThisItem.PrimaryContacts (where PrimaryContacts is the name of the entity) instead.  
 
-# Detailed Examples
+## Detailed Examples
 
-# Option Sets
+### Option Sets
 
 Converting your app to use the new Power Apps Option sets and Two option data types along with the controls that support them can be one of the biggest sources of change when upgrading your app to use the new Improved data source experience.      
 
@@ -85,6 +85,9 @@ Previously there were separate *_myfield* and *_myfield_label fields* used for a
 
 ## Remove data cards bound to Option sets and re-add
 It's best to remove existing data cards and re-add them to work with your Option set.  For example, if you are working with the Account entity and the Category Option set, you'll see that the DataField property of the data card was set to *_accountcategory_label*. In the field list you can see that the data card has a type of String.
+
+![OptionSet with old style name](../images/OptionSet with old style name.png)
+
 
 
 
