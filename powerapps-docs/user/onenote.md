@@ -36,11 +36,27 @@ Before you can use OneNote, it must be enabled by your system administrator. Mor
     > [!div class="mx-imgBorder"]
     > ![Open the Documents tab in a record ](media/onedrive_nav.png "Open the Documents tab in a record")
 
-2. Select **Document Location**, and select the location where you wnat to save the OneNote. For more information, see [View existing OneDrive documents](one-drive.md#view-existing-onedrive-documents).
+3. Select **Document Location**, and select the location where you wnat to save the OneNote. For more information, see [View existing OneDrive documents](one-drive.md#view-existing-onedrive-documents).
 
-3. Select **New**, and then select **OneNote**. 
+4. Select **New**, and then select **OneNote**. 
 
     > [!div class="mx-imgBorder"]
     > ![Creat a new OneNote](media/onenote.png "Creat a new OneNote")
 
-4. Enter a document name, and then select **Save**.  
+5. Enter a name for the OneNote, and then select **Save**. A new notebook is created and opened.
+
+## Open an existing OneNote
+
+1. Open a record and go to the Document Associated Grid. For example, open a contact record.
+
+2. On the open record, select the **Related** tab, and then select **Documents**.
+ 
+    > [!div class="mx-imgBorder"]
+    > ![Open the Documents tab in a record ](media/onedrive_nav.png "Open the Documents tab in a record")
+
+3. Select **Document Location**, and select the location of your notebook. For example, if your notebook is stored on OneDrive then choose OneDrive. For more information, see [View existing OneDrive documents](one-drive.md#view-existing-onedrive-documents).
+
+4. Select your notebook to start adding notes.
+ 
+    > [!div class="mx-imgBorder"]
+    > ![Open an existing OneNote notebook](media/existing_onenote.png "Open an existing OneNote notebook")
