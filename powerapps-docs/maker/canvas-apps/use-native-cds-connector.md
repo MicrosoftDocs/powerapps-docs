@@ -238,7 +238,7 @@ If( IsType( ThisItem, [@Faxes] ), "Fax",
     "Unknown")
 ```
  
- ![Polymorphic-And-AsType-in-Gallery](./media/use-native-cds-connector/Polymorphic-And-AsType-in-Gallery.png)
+ ![Polymorphic-IsType](./media/use-native-cds-connector/Polymorphic-IsType.png)
  
 #### 5. Access the list of Notes for a record.
 When you create an entity, you can enable attachments. If you select the check box for enabling attachments, you'll create a Regarding relationship with the Notes entity, as this graphic shows for the Accounts entity:
