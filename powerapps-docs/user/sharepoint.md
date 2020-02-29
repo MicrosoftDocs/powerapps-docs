@@ -115,7 +115,7 @@ You can create new or edit existing SharePoint locations from your app in Common
 
 2. Select **Edit Location** and select a SharePoint site location.
 
-The **Edit Location** dialog box appears.
+   The **Edit Location** dialog box appears.
 
    > [!div class="mx-imgBorder"]
    > ![Edit Location](media/edit_location.png "Edit Location")
@@ -127,7 +127,7 @@ The **Edit Location** dialog box appears.
 1. Open a record and select the **Related** tab and then select **Documents**.
 2. Select **Add Location**. 
 
-The **Add Location** dialog box appears.
+   The **Add Location** dialog box appears.
 
    > [!div class="mx-imgBorder"]
    > ![Add Location](media/add_location.png "Add Location")
