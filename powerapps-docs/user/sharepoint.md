@@ -31,15 +31,54 @@ Before you can use OSharePoint to store the document, it must be enabled by your
 
 ## Where do you access the documents from?
 
-For record types that support document management, open the record, select the **Related** tab, and then select **Documents**.
+1. For record types that support document management, open the record, select the **Related** tab, and then select **Documents**.
 
    > [!div class="mx-imgBorder"]
    > ![Open the Documents tab in a record ](media/onedrive_nav.png "Open the Documents tab in a record")
 
-When SharePoint is enabled, by default, the location is set to Documents on **Documents on Default Site 1**.
+2. Select **Document Location** > **Documents on Default Site 1**. When SharePoint is enabled, by default, the location is set to  **Documents on Default Site 1**.
 
    > [!div class="mx-imgBorder"]
    > ![Default location](media/sharepoint_defualtsite.png "Default location")
 
 
+## Create a new document 
 
+To create a new document and save it in SharePoint:
+
+1. Open a record and go to the Document Associated Grid. For example, open a contact record.
+
+2. On the open record, select the **Related** tab, and then select **Documents**.
+ 
+    > [!div class="mx-imgBorder"]
+    > ![Open the Documents tab in a record ](media/onedrive_nav.png "Open the Documents tab in a record")
+
+2. Select **Document Location**, and change the location to **Documents on Default Site 1**.
+
+3. Select **New**, and then choose a document type such as Word, Excel, PowerPoint and so on. 
+
+    > [!div class="mx-imgBorder"]
+    > ![Creat a new documents ](media/onedrive_new_doc.png "Creat a new documents ")
+
+4. Enter a document name, and then select **Save**.  
+
+## Create a new folder 
+
+To create a new folder in the SharePoint site:
+
+
+To create a new document and save it in SharePoint:
+
+1. Open a record and go to the Document Associated Grid. For example, open a contact record.
+
+2. On the open record, select the **Related** tab, and then select **Documents**.
+ 
+    > [!div class="mx-imgBorder"]
+    > ![Open the Documents tab in a record ](media/onedrive_nav.png "Open the Documents tab in a record")
+
+2. Select **Document Location**, and change the location to **Documents on Default Site 1**.
+
+3. Select **New**, and then choose **Folder**.
+
+    > [!div class="mx-imgBorder"]
+    > ![Creat a new documents ](media/onedrive_new_doc.png "Creat a new documents ")
