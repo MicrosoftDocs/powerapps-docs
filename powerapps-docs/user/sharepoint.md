@@ -79,3 +79,28 @@ To create a new folder in the default SharePoint site location:
 
     > [!div class="mx-imgBorder"]
     > ![Creat a new folder](media/Sharepoint_new_folder.png "Creat a new folder")
+    
+ 4. Enter a folder name, and then select **Save**.  
+ 
+ 
+ ## Upload a document
+
+To upload existing document to SharePoint from your app:
+
+1. Go to the record you want to create the document for, select the **Related** tab > **Documents**.
+ 
+2. Select **Upload.**
+
+   > [!div class="mx-imgBorder"]
+   > ![Upload documents](media/upload_doc.png "Upload documents")
+
+3. Choose the file you want to upload. You can choose only one file at a time.
+
+   The document is created in the folder of the current document location you're in.
+
+   > [!Note]
+   > You can upload a file of up to 50 MB. If your internet connection is slow, you might get an error while uploading large files.
+
+4. If files with the same name exist in SharePoint, select whether you want to overwrite the files.
+
+5. Select **OK**.
