@@ -64,21 +64,18 @@ To create a new document and save it in SharePoint:
 
 ## Create a new folder 
 
-To create a new folder in the SharePoint site:
-
-
-To create a new document and save it in SharePoint:
+To create a new folder in the default SharePoint site location:
 
 1. Open a record and go to the Document Associated Grid. For example, open a contact record.
 
 2. On the open record, select the **Related** tab, and then select **Documents**.
  
     > [!div class="mx-imgBorder"]
-    > ![Open the Documents tab in a record ](media/onedrive_nav.png "Open the Documents tab in a record")
+    > ![Open the Documents tab in a record](media/onedrive_nav.png "Open the Documents tab in a record")
 
 2. Select **Document Location**, and change the location to **Documents on Default Site 1**.
 
 3. Select **New**, and then choose **Folder**.
 
     > [!div class="mx-imgBorder"]
-    > ![Creat a new documents ](media/onedrive_new_doc.png "Creat a new documents ")
+    > ![Creat a new folder](media/Sharepoint_new_folder.png "Creat a new folder")
