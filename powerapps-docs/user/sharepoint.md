@@ -87,7 +87,7 @@ To create a new folder in the default SharePoint site location:
 
 To upload existing document to SharePoint from your app:
 
-1. Go to the record you want to create the document for, select the **Related** tab > **Documents**.
+1. Go to the record you want to create the document for, select the **Related** tab and then select **Documents**.
  
 2. Select **Upload.**
 
@@ -96,7 +96,7 @@ To upload existing document to SharePoint from your app:
 
 3. Choose the file you want to upload. You can choose only one file at a time.
 
-   The document is created in the folder of the current document location you're in.
+   The document is created in the current document location you're in.
 
    > [!Note]
    > You can upload a file of up to 50 MB. If your internet connection is slow, you might get an error while uploading large files.
@@ -104,3 +104,24 @@ To upload existing document to SharePoint from your app:
 4. If files with the same name exist in SharePoint, select whether you want to overwrite the files.
 
 5. Select **OK**.
+
+## Manage SharePoint locations
+
+You can create new or edit existing SharePoint locations from your app in Common Data Service.
+
+1. Open a record and select the **Related** tab and then select **Documents**.
+
+2. Select **Edit Location**. The **Edit Location** dialog box appears.
+
+   > [!div class="mx-imgBorder"]
+   > ![Edit Location](media/edit_location.png "Edit Location")
+
+3. The display name, parent site, and folder name are automatically populated. Enter details about the new location, and then select **Save**.
+
+4. To add a location, on the command bar, select **Add Location**. The **Add Location** dialog box appears.
+
+   > [!div class="mx-imgBorder"]
+   > ![Add Location](media/add_location.png "Add Location")
+
+5. The display name, parent site, and folder name are automatically populated. Change the details if required, and then select **Save**.
+
