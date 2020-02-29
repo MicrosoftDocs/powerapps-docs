@@ -92,7 +92,15 @@
       - name: Add Power BI dashboards 
         href: ../user/add-powerbi-dashboards.md
       - name: Collaborate using SharePoint 
-        href: ../user/collaborate-using-sharepoint.md        
+        href: ../user/collaborate-using-sharepoint.md 
+    - name: Collaboration
+      items:
+      - name: Use OneDrive for Business     
+        href: ../user/one-drive.md.md
+      - name: Take notes using OneNote      
+        href: ../user/onenote.md  
+      - name: Manage SharePoint documents    
+        href: ../user/sharepoint.md
     - name: Search records
       items:
       - name: Compare search options
