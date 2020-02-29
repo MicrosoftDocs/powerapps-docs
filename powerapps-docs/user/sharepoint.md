@@ -109,19 +109,28 @@ To upload existing document to SharePoint from your app:
 
 You can create new or edit existing SharePoint locations from your app in Common Data Service.
 
+### Edit a location
+
 1. Open a record and select the **Related** tab and then select **Documents**.
 
-2. Select **Edit Location**. The **Edit Location** dialog box appears.
+2. Select **Edit Location** and select a SharePoint site location.
+
+The **Edit Location** dialog box appears.
 
    > [!div class="mx-imgBorder"]
    > ![Edit Location](media/edit_location.png "Edit Location")
 
 3. The display name, parent site, and folder name are automatically populated. Enter details about the new location, and then select **Save**.
 
-4. To add a location, on the command bar, select **Add Location**. The **Add Location** dialog box appears.
+### Add a new location
+
+1. Open a record and select the **Related** tab and then select **Documents**.
+2. Select **Add Location**. 
+
+The **Add Location** dialog box appears.
 
    > [!div class="mx-imgBorder"]
    > ![Add Location](media/add_location.png "Add Location")
 
-5. The display name, parent site, and folder name are automatically populated. Change the details if required, and then select **Save**.
+3. The display name, parent site, and folder name are automatically populated. Change the details if required, and then select **Save**.
 
