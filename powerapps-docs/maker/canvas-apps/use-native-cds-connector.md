@@ -243,7 +243,7 @@ If( IsType( ThisItem, [@Faxes] ), "Fax",
 #### 5. Access the list of Notes for a record.
 When you create an entity, you can enable attachments. If you select the check box for enabling attachments, you'll create a Regarding relationship with the Notes entity, as this graphic shows for the Accounts entity:
 
-![Gallery with Regarding](./media/use-native-cds-connector/Polymorphic-With-Regarding.png)
+![Notes-Field](./media/use-native-cds-connector/Notes-Field.png)
  
 Filter to see the Notes: 
 You can't read or filter based on the Regarding field. However, the reverse Notes one-to-many relationship is available, so to list all the Notes associated to an Account entity, you can use the following formula:
