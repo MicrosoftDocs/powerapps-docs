@@ -238,20 +238,20 @@ If( IsType( ThisItem, [@Faxes] ), "Fax",
     "Unknown")
 ```
  
- ![Notes-Field](./media/use-native-cds-connector/Notes-Field.png)
+ ![Polymorphic-And-AsType-in-Gallery](./media/use-native-cds-connector/Polymorphic-And-AsType-in-Gallery.png)
  
 #### 5. Access the list of Notes for a record.
 When you create an entity, you can enable attachments. If you select the check box for enabling attachments, you'll create a Regarding relationship with the Notes entity, as this graphic shows for the Accounts entity:
 
 ![Notes-Field](./media/use-native-cds-connector/Notes-Field.png)
  
-Filter to see the Notes: 
+##### Filtering 
 You can't read or filter based on the Regarding field. However, the reverse Notes one-to-many relationship is available, so to list all the Notes associated to an Account entity, you can use the following formula:
 
 ```powerapps-dot
 First( Accounts ).Notes
 ```
-Patch to Notes field:
+##### Patch 
 You can't set the Notes field on an entity by using Patch. In order to add a record to an entity's Notes table, you can use the Relate function. But the note should first be created, as in this example:
 
 ```powerapps-dot
