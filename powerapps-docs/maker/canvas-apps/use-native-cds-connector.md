@@ -156,19 +156,23 @@ Using the Patch function with Two option should work 'as is.'  It supports direc
 
 
 ### Polymorphic lookups
-If your application referenced polymorphic fields, then use these guidelines to migrate your application. Polymorphic lookups, from the same field, support references to a restricted set of multiple entities.  Similar to references in other languages, a record reference is a pointer to a specific record in a specific entity. A record reference carries with it the entity information allowing it to point to a record in several different other entities, which differs from a normal lookup that can only point to records in one entity.  For instance, the Owner field in an entity can refer to a record in the Users entity or the Teams entity. The same lookup field in different records could refer to records in different entities. 
+If your application referenced polymorphic fields, then use these guidelines to migrate your application. Polymorphic lookups, from the same field, support references to a restricted set of multiple entities.  Similar to references in other languages, a record reference is a pointer to a specific record in a specific entity. A record reference carries with it the entity information allowing it to point to a record in several different other entities, which differs from a normal lookup that can only point to records in one entity.  
+
+#### 1. Access, Set, and Filter on the Owner field of a record
+For instance, the Owner field in an entity can refer to a record in the Users entity or the Teams entity. The same lookup field in different records could refer to records in different entities. 
  
 ![Polymorphic Owner field](./media/use-native-cds-connector/Polymorphic1.png)
  
-#### Polymorphic with Filter and Patch 
+##### Polymorphic with Filter and Patch 
 Record references can be used just like a full record 
 ```powerapps-dot
 Filter( Accounts, Owner = First( Teams ) )
 Patch( Accounts, First( Accounts ), { Owner: First( Users ) })
 ```
 
-#### Polymorphic with a Gallery displaying Owner name: 
-Since a reference can point to different entities, we must be more specific about what we want. You cannot use ThisItem.Owner.Name, as the name field in the Team entity is Team Name, and the name field in the User entity is Full Name. Power Apps won’t know which type of lookup you're referring to, until you run the app. 
+##### Polymorphic with a Gallery displaying Owner name: 
+Since a reference can point to different entities, we must be more specific about what we want. You cannot use **ThisItem.Owner.Name**, as the name field in the **Team** entity is **Team Name**, and the name field in the **User** entity is **Full Name**. Power Apps won’t know which type of lookup you're referring to, until you run the app. 
+
 To overcome this, 
 
 1. You will need to add the data sources for the entity types that Owner could be (in this case, Users and Teams) 
@@ -191,59 +195,68 @@ If( IsType( ThisItem.Owner,  [@Teams]),
 
 We use the global disambiguation operator for [@Teams] and [@Users] to ensure that you reference the global entity type.  In this case it's not technically necessary.  But it is good practice to always be clear. One-to-many relationships often conflict in the gallery's record scope, and this practice avoids that confusion.
  
-ii.	 Access and set the Company Name field (a Customer data type) of the Contacts entity.
-Customer lookup field is another polymorphic lookup that's very similar to Owner. Owner is limited to one per entity, but entities can include zero, one, or more Customer lookup fields. The Contacts system entity includes the Company Name field, which is a Customer lookup field. Please refer to this link for more details. 
+#### 2. Access and set the Company Name field (a Customer data type) of the Contacts entity.
+Customer lookup field is another polymorphic lookup that's very similar to Owner. You can only have one Owner field per entity. But an entity can include zero, one, or more Customer lookup fields. The Contacts system entity includes the Company Name field, which is a Customer lookup field. See this [article](https://docs.microsoft.com/powerapps/maker/canvas-apps/working-with-references#show-the-fields-of-a-customer) for more details.  
  
-iii.	 Access and set the Regarding field of activity entities such as Faxes, Phone Calls, Email Messages, etc.
-Regarding Polymorphic lookups are not just limited to Accounts and Contacts. The list of entities is extensible with custom entities. 
-As an example, the Faxes entity has a polymorphic Regarding lookup field, which can refer to Accounts, Contacts, and other entities. If you have a gallery with data source set to Faxes, you can use the following formula to display the name associated with the Regarding lookup field. 
+#### 3. Access and set the Regarding field of activity entities such as Faxes, Phone Calls, Email Messages, etc.
+Regarding Polymorphic lookups are not just limited to Accounts and Contacts. The list of entities is extensible with custom entities. For example, the Faxes entity has a polymorphic Regarding lookup field, which can refer to Accounts, Contacts, and other entities. If you have a gallery with data source set to Faxes, you can use the following formula to display the name associated with the Regarding lookup field. 
  
+ ```powerapps-dot
 If( IsBlank( ThisItem.Regarding ), "",
     IsType( ThisItem.Regarding, [@Accounts] ),
         "Account: " & AsType( ThisItem.Regarding, [@Accounts] ).'Account Name',
     IsType( ThisItem.Regarding, [@Contacts] ),
         "Contacts: " & AsType( ThisItem.Regarding, [@Contacts] ).'Full Name',
-    ""
-)
+    "" )
+```
+
+![Gallery with Regarding](./media/use-native-cds-connector/Polymorphic-With-Regarding.png)
  
  
- 
-Please refer to these links to understand Regarding lookup fields and Regarding relationships in detail. 
-iv.	 Access the list of all Activities for a record.
-In Common Data Service, entities such as Faxes, Tasks, Emails, Notes, Phone Calls, Letters, and Chats are designated as activities. You can also create your own custom activity entities.
+Please refer to these links to understand [Regarding lookup fields](https://docs.microsoft.com/powerapps/maker/canvas-apps/working-with-references#understand-regarding-lookup-fields) and [Regarding relationships](https://docs.microsoft.com/powerapps/maker/canvas-apps/working-with-references#understand-regarding-relationships) in detail. 
+
+#### 4. Access the list of all Activities for a record.
+In Common Data Service, entities such as Faxes, Tasks, Emails, Notes, Phone Calls, Letters, and Chats are designated as [activities](https://docs.microsoft.com/powerapps/developer/common-data-service/activity-entities). You can also create your own [custom activity entities](https://docs.microsoft.com/powerapps/developer/common-data-service/custom-activities) .
 In a canvas app, you can either show activities of a specific type such as Faxes or Taxes, or all activities associated with an entity such as account. You need to add the Activities entity as well as other individual entities whose data you plan to display in the canvas app. 
-Also, whenever you add a record to say the Tasks entity, the system also creates a record in the Activity entity with the fields that are common across all activity entities.
+Also, whenever you add a record to, for example the Tasks entity, the system also creates a record in the Activity entity with the fields that are common across all activity entities.
  
-You can read more about Activity entity here. 
+You can read more about Activity entity [here](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/working-with-references#activity-entity). 
  
 In the below example, as you select an Account, all the Activities associated with that account will be displayed. 
+ 
+![Polymorphic Activities](./media/use-native-cds-connector/Polymorphic-Activities.png) 
  
 The records are being displayed from the Activity entity, but you can nevertheless use the IsType function to identify which kind of activity they are. Again, before you use IsType with an entity type, you must add the necessary data source.
  
 By using this formula, you can show the record type in a label control within the gallery:
+
+ ```powerapps-dot
 If( IsType( ThisItem, [@Faxes] ), "Fax",
     IsType( ThisItem, [@'Phone Calls'] ), "Phone Call",
     IsType( ThisItem, [@'Email Messages'] ), "Email Message",
     IsType( ThisItem, [@Chats] ), "Chat",
-    "Unknown"
-)
+    "Unknown")
+```
  
+ ![Notes-Field](./media/use-native-cds-connector/Notes-Field.png)
  
- 
-v.	 Access the list of Notes for a record.
+#### 5. Access the list of Notes for a record.
 When you create an entity, you can enable attachments. If you select the check box for enabling attachments, you'll create a Regarding relationship with the Notes entity, as this graphic shows for the Accounts entity:
- 
+
+![Gallery with Regarding](./media/use-native-cds-connector/Polymorphic-With-Regarding.png)
  
 Filter to see the Notes: 
 You can't read or filter based on the Regarding field. However, the reverse Notes one-to-many relationship is available, so to list all the Notes associated to an Account entity, you can use the following formula:
- 
+
+```powerapps-dot
 First( Accounts ).Notes
- 
+```
 Patch to Notes field:
 You can't set the Notes field on an entity by using Patch. In order to add a record to an entity's Notes table, you can use the Relate function. But the note should first be created, as in this example:
- 
-Relate( ThisItem.Notes, Patch( Notes, Defaults( Notes ), { Title: "A new note", isdocument:'Is Document (Notes)'.No } ) )
 
+```powerapps-dot
+Relate( ThisItem.Notes, Patch( Notes, Defaults( Notes ), { Title: "A new note", isdocument:'Is Document (Notes)'.No } ) )
+```
 
 
 
