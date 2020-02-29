@@ -134,3 +134,15 @@ You can create new or edit existing SharePoint locations from your app in Common
 
 3. The display name, parent site, and folder name are automatically populated. Change the details if required, and then select **Save**.
 
+## Files tab FAQ
+*Why was the location to access documents moved?* 
+- We moved the command to make documents easier to find with fewer clicks.
+
+*Has the Documents tab gone away?*
+- No, it hasn’t gone away. Users can still access the documents associated with the record in question the old way, simply by clicking the Related menu and then the Documents link.
+
+*With the change, will subfolders in SharePoint still be created automatically?*
+- Yes. The behavior is similar to that of the **Documents** link under the **Related** menu. When a user selects the **Files** tab for the first time, the corresponding SharePoint sub-folder is created by the system. 
+
+*Is there a way to add the Files tab to other entities or remove it?*
+- Yes. To add or remove the File tab, follow the steps in this article. [Add the SharePoint documents tab to the main form for an entity](../maker/model-driven-apps/add-documents-tab-entity-main-form.md)  
