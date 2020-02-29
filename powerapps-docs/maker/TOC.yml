@@ -94,7 +94,7 @@
     - name: Collaboration
       items:
       - name: Use OneDrive for Business     
-        href: ../user/one-drive.md.md
+        href: ../user/one-drive.md
       - name: Take notes using OneNote      
         href: ../user/onenote.md  
       - name: Manage SharePoint documents    
