@@ -24,7 +24,7 @@ Formulas combine many elements.  Listed below are:
 
 Other elements include:
 
-* [All operators](functions/operators.md)
+* [Operators and identifiers](functions/operators.md)
 * [Controls and their properties](reference-properties.md)
 * [Data types](functions/data-types.md)
 

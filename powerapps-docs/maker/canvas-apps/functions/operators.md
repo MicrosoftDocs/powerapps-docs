@@ -1,20 +1,20 @@
 ---
-title: Operators | Microsoft Docs
-description: Reference information, including syntax and examples, for the operators in Power Apps
+title: Operators and Identifiers | Microsoft Docs
+description: Reference information, including syntax and examples, for the operators and identifiers in Power Apps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 02/07/2020
+ms.date: 02/29/2020
 ms.author: gregli
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 ---
-# Operators in Power Apps
+# Operators and Identifiers in Power Apps
 
 Some of these operators are dependent on the language of the author.  See [Global apps](../global-apps.md) for more information.
 
@@ -51,25 +51,6 @@ Some of these operators are dependent on the language of the author.  See [Globa
 |                             **Parent**                              |         [Parent operator](#parent-operator)         |                                                                               **Parent.Fill**                                                                                |                                                                                                           Access to properties of a control container                                                                                                            |
 |                            **ThisItem**                             |       [ThisItem operator](#thisitem-operator)       |                                                                            **ThisItem.FirstName**                                                                            |                                                                                                          Access to fields of a Gallery or form control                                                                                                           |
 
-## Identifier names
-
-The names of variables, data sources, columns, and other objects can contain any [Unicode](https://en.wikipedia.org/wiki/Unicode).
-
-Use single quotes around a name that contains a space or other special character.  Use two single quotes together to represent one single quote in the name.  Names that do not contain special characters do not require single quotes.
-
-Here are some example column names you might encounter in a table, and how they are represented in a formula:
-
-| Column name in a database   | Column reference in a formula |
-|-----------------------------|-------------------------------|
-| SimpleName                  | ```SimpleName``` |
-| NameWith123Numbers          | ```NameWith123Numbers``` |
-| Name with spaces            | ```'Name with spaces'``` |
-| Name with "double" quotes   | ```'Name with "double" quotes'``` |
-| Name with 'single' quotes   | ```'Name with ''single'' quotes'``` |
-| Name with an @ at sign      | ```'Name with an @ at sign'``` |
-
-Double quotes are used to [designate text strings](data-types.md#embedded-text).    
-
 ## in and exactin operators
 You can use the **[in](operators.md#in-and-exactin-operators)** and **[exactin](operators.md#in-and-exactin-operators)** operators to find a string in a [data source](../working-with-data-sources.md), such as a collection or an imported table. The **[in](operators.md#in-and-exactin-operators)** operator identifies matches regardless of case, and the **[exactin](operators.md#in-and-exactin-operators)** operator identifies matches only if they're capitalized the same way. Here's an example:
 
@@ -96,6 +77,67 @@ Some controls host other controls. For example, **[Screen](../controls/control-s
 Any control in Power Apps can be referenced by name from anywhere within the app. **Screen1** may be the name of a screen in your app. To retrieve the background color of this screen, you can use **Screen1.Fill**.
 
 Controls on this screen have another option. They can use a relative reference: **Parent.Fill**. The **[Parent](operators.md#parent-operator)** operator refers to the control that hosts this control, making available all of its properties. Using **[Parent](operators.md#parent-operator)** is helpful because it doesn't depend on the name of the control. You can copy and paste a container control without needing to adjust any references within the container. This operator also makes the relationship between child and parent controls clearer when reading formulas.
+
+## Identifier names
+
+The names of variables, data sources, columns, and other objects can contain any [Unicode](https://en.wikipedia.org/wiki/Unicode).
+
+Use single quotes around a name that contains a space or other special character.  Use two single quotes together to represent one single quote in the name.  Names that do not contain special characters do not require single quotes.
+
+Here are some example column names you might encounter in a table, and how they are represented in a formula:
+
+| Column name in a database   | Column reference in a formula |
+|-----------------------------|-------------------------------|
+| SimpleName                  | ```SimpleName``` |
+| NameWith123Numbers          | ```NameWith123Numbers``` |
+| Name with spaces            | ```'Name with spaces'``` |
+| Name with "double" quotes   | ```'Name with "double" quotes'``` |
+| Name with 'single' quotes   | ```'Name with ''single'' quotes'``` |
+| Name with an @ at sign      | ```'Name with an @ at sign'``` |
+
+Double quotes are used to [designate text strings](data-types.md#embedded-text).  
+
+## Display names and logical names
+Some data sources such as SharePoint and Common Data Service have two different names to refer to the same table or column of data:
+
+* **Logical name** - A name that is guaranteed to be unique, does not change after being created, usually does not allow spaces or other special characters, and is not localized into different languages.  As a result the name can be somewhat cryptic.  These names are used by professional developers.  For example **cra3a_customfield**.  This name may also be referred to as **schema name** or just **name**.
+
+* **Display name** - A name that is user friendly and intended to be seen by end users.  This name may not be unique, may change over time, may contain spaces and any Unicode character, and may be localized into different languages.  Corresponding to the example above, the display name may be **Custom Field** with a space inbetween the words.
+ 
+Since display names are easier to understand, Canvas apps will suggest them as choices and not suggest logical names.  Although logical names are not suggested, they can still be used if typed in directly.
+
+For example, imagine you have added a **Custom Field** to an entity in Common Data Service.  A logical name will be assigned for you by the system which you can modify only when creating the field.  The result would look similar to:
+
+> [!div class="mx-imgBorder"]  
+> ![Accounts entity with Custom Field added, showing a display name of "Custom Field" and a logical name of "cr5e3_customfield"](media/operators/customfield_portal.png)
+
+When authoring a reference to a field of Accounts, the suggestion will be made to use **'Custom Field'** since this is the display name.  Note that the single quotes must be used because this name has a space in it:
+
+> [!div class="mx-imgBorder"]  
+> ![Studio formula bar showing suggestions for field names of Accounts with the display name 'Custom Field' highlighted](media/operators/customfield_suggest_display.png)
+
+After selecting the suggestion, 'Custom Field' is shown in the formula bar and the data is retrieved: 
+
+> [!div class="mx-imgBorder"]  
+> ![Studio formula bar showing the use of the display name 'Custom Field' for the field](media/operators/customfield_display.png)
+
+Although it is not suggested, we could also use the logical name for this field.  This will result in the same data being retrieved.  Note that no single quotes are required since this name does not contain spaces or special characters:
+
+> [!div class="mx-imgBorder"]  
+> ![Studio formula bar showing the use of the logical name cr5e3_customfield for the field](media/operators/customfield_logical.png)
+
+Behind the scenes, a mapping is maintained between the display names seen in formulas and the underlying logical names.  Since logical names must be used to interact with the data source, this mapping is used to convert from the current display name to the logical name automatically and that is what is seen in the network traffic.  This mapping is also used to convert back to logical names in order to switch into new display names, for example if a display name changes or a maker in a different language edits the app.
+
+> [!NOTE] 
+> Logical names are not translated when moving an app between environments.  For Common Data Service system entity and field names this should not be a problem as logical names are consistent across environments.  But any custom fields, such as **cra3a_customfield** in this example above, may have a different environment prefix (**cra3a** in this case).  Display names are preferred as they can be matched against display names in the new environment. 
+
+## Name disambiguation
+Since display names are not unique, the same display name may appear more than once in the same entity.  When this happens, the logical name will be added to the end of the display name in parenthesis for one of more of the conflicting names.  Building on the example above, if there was a second field with the same display name of **Custom Field** with a logical name of **cra3a_customfieldalt** then the suggestions would show:
+
+> [!div class="mx-imgBorder"]  
+> ![Studio formula bar showing the use of the logical name cr5e3_customfieldalt to disambiguate the two versions of "Custom Field"](media/operators/customfield_suggest_alt.png)
+
+Name disambiguation strings are added in other situations where name conflicts occur, such as the names of entities, option sets, and other Common Data Service items. 
 
 ## Disambiguation operator
 Some functions create [record scopes](../working-with-tables.md#record-scope) for accessing the fields of table while processing each record, such as **Filter**, **AddColumns**, and **Sum**.  Field names added with the record scope override the same names from elsewhere in the app.  When this happens, you can still access values from outside the record scope with the **@** disambiguation operator:
