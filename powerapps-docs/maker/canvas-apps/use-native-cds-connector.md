@@ -86,7 +86,7 @@ Previously there were separate *_myfield* and *_myfield_label fields* used for a
 ## Remove data cards bound to Option sets and re-add
 It's best to remove existing data cards and re-add them to work with your Option set.  For example, if you are working with the Account entity and the Category Option set, you'll see that the DataField property of the data card was set to *_accountcategory_label*. In the field list you can see that the data card has a type of String.
 
-![OptionSet with old style name](../images/OptionSet with old style name.png)
+![OptionSet with old style name](./images/OptionSet with old style name.png)
 
 
 
