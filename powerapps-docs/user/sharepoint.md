@@ -23,7 +23,7 @@ With Common Data Service, you can store your documents on SharePoint and manage 
 
 The documents that you create in your app are stored on SharePoint, and are automatically synced to your desktop and mobile devices.
 
-Before you can use OSharePoint to store the document, it must be enabled by your system administrator. More information:
+Before you can use SharePoint to store documents, it must be enabled by your system administrator. More information:
 
 -   [Find your administrator or support person](find-admin.md)  
 
