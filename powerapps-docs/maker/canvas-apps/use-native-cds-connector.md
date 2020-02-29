@@ -14,9 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Use native Common Data Service connector
-
-# Upgrade your Common Data Service based app to the Improved experience for faster speeds and stability.
+# Common Data Service and the Improved data source experience
 
 If you created a canvas app with a Common Data Service connector prior to November 2019, then you may not have the benefit of the most current version of the Common Data Service.  The **Improved** experience switch unlocks significant speed gains, increased reliability, and features such as access to Common Data Service Views and File and Image field attributes. 
 The “Improve data source experience and Common Data Service views” feature option appears in the Advanced settings section.   The “Relational data, option sets, and other new features for Common Data Service” now appears in the Deprecated features section.
@@ -47,7 +45,7 @@ It’s possible that some of the newly shown display names conflict with the dis
 
 ##### Possible errors and suggestions at this step
 It’s possible to have errors at this stage if you were using an option set field or hard coded GUID text values.  
-1.	Option Set values.  If you were using an option set field with a text identifier for the option set value, you should instead use the dot notation to reference the option set value. For instance:  Change Patch (Accounts, OptionSet1 = “12345”) to Change Patch (Accounts, OptionSet.Item1) where Item1 corresponds to the “12345” value.
+1.	Option Set values.  If you were using an option set field with a text identifier for the option set value, you should instead use the dot notation to reference the option set value. For instance:  Change Patch (Accounts, OptionSet1 = “12345”) to Change Patch (Accounts, OptionSet.Item1) where Item1 corresponds to the “12345” value.  See the detailed example on converting Option sets below.
 2.	GUIDs.  If you were using a static GUID string such as “015e45e1044e49f388115be07f2ee116”, convert it to function that returns a GUID object (e.g, GUID(“015e45e1044e49f388115be07f2ee116”)) 
 3.	Lookups.  If you were using Lookup functions to get first level lookup values such as: Lookup (Lookup (Contacts, ‘contactID’ = ThisItem.ContactID”) consider using ThisItem.PrimaryContacts (where PrimaryContacts is the name of the entity) instead.  
    
@@ -76,4 +74,19 @@ It’s possible to have errors as you convert if you were not using Display Name
 3.	Option Set values.  If you were using an option set field with a text identifier for the option set value, you should instead use the dot notation to reference the option set value. For instance:  Change Patch (Accounts, OptionSet1 = “12345”) to Change Patch (Accounts, OptionSet.Item1) where Item1 corresponds to the “12345” value.
 4.	GUIDs.  If you were using a static GUID string such as “015e45e1044e49f388115be07f2ee116”, convert it to function that returns a GUID object (e.g, GUID(“015e45e1044e49f388115be07f2ee116”)) 
 5.	Lookups.  If you were using Lookup functions to get first level lookup values such as: Lookup (Lookup (Contacts, ‘contactID’ = ThisItem.ContactID”) consider using ThisItem.PrimaryContacts (where PrimaryContacts is the name of the entity) instead.  
+
+# Detailed Examples
+
+# Option Sets
+
+Converting your app to use the new Power Apps Option sets and Two option data types along with the controls that support them can be one of the biggest sources of change when upgrading your app to use the new Improved data source experience.      
+
+Previously there were separate *_myfield* and *_myfield_label fields* used for an Option set, and now there is just a single *myfield* that can be used both for locale independent comparisons and to obtain the locale specific label. 
+
+## Remove data cards bound to Option sets and re-add
+It's best to remove existing data cards and re-add them to work with your Option set.  For example, if you are working with the Account entity and the Category Option set, you'll see that the DataField property of the data card was set to *_accountcategory_label*. In the field list you can see that the data card has a type of String.
+
+
+
+
 
