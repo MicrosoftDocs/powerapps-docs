@@ -17,7 +17,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Use OneNote in your Common Data Service app
+# Take notes using OneNote 
 
 Use OneNote to take or review notes, ideas, plans and research from the Document Associated Grid of a record in Common Data Service.
 
