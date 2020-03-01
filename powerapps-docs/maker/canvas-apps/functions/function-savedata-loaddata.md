@@ -50,7 +50,7 @@ The device's built in app sandbox facilities are used to isolate saved data from
 
 ### Simple offline example
 
-This example creates a very simple app to capture the name and picture of items you have around you while offline, storing the results in the device's local storage for later use.
+This example creates a very simple app to capture the name and picture of items you have around you while offline, storing the results in the device's local storage for later use.  Since it uses **LoadData** and **SaveData** that do not run on the web, you must have a device with you to work through this example.
 
 1. Create a blank canvas app with a tablet layout.
 
