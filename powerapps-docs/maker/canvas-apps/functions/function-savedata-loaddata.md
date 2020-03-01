@@ -57,7 +57,9 @@ The device's built in app sandbox facilities are used to isolate saved data from
     > ![A text input and camera control added to a blank screen](media/function-savedata-loaddata/simple-text-camera.png)
 
 1. Add a [**Button**](../controls/control-button.md) control.
+
 2. Double click the control to change the button text to **Add Item** (or modify the **Text** property).
+
 3. Set the **OnSeelct** property to the formula to add an item to our collection:
     ```powerapps-dot
     Collect( MyItems, { Item: TextInput1.Text, Picture: Camera1.Photo } )
