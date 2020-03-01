@@ -48,7 +48,9 @@ The device's built in app sandbox facilities are used to isolate saved data from
 | **SaveData( LocalCache, "MyCache" )** | Save the **LocalCache** collection to the user's device under the name "MyCache", suitable for **LoadData** to retrieve later. | Data is saved to the local device. |
 | **LoadData( LocalCache, "MyCache" )** | Loads the **LocalCache** collection to the user's device under the name "MyCache", previously stored with a call to **SaveData**.  | Data is loaded from the local device. |   
 
-### Simple offline
+### Simple offline example
+
+This example creates a very simple app to capture the name and picture of items you have around you while offline, storing the results in the device's local storage for later use.
 
 1. Create a blank canvas app with a tablet layout.
 
@@ -107,6 +109,7 @@ The device's built in app sandbox facilities are used to isolate saved data from
 1. Open your app on a device such as a phone or tablet.  **SaveData** and **LoadData** cannot be used in Studio or in a web browser.  Refresh your app list if you don't see your app immediately, it can take a few seconds for the app to appear on your device.  Signing out and back in to your account can help too.
     > [!div class="mx-imgBorder"] 
     > ![App running with no items added](media/function-savedata-loaddata/simple-mobile.png) 
+    Once your app has been downloaded, you can disconnect from the network and run the app offline.
 
 1. Enter the name and take a picture of an item.
 
@@ -130,7 +133,7 @@ The device's built in app sandbox facilities are used to isolate saved data from
     > [!div class="mx-imgBorder"] 
     > ![App running with six items restored after calling the LoadData function twice](media/function-savedata-loaddata/simple-mobile-load2.png) 
  
-### More advanced offline
+### More advanced offline example
 
 For a detailed example, see the article on [simple offline capabilities](../offline-apps.md).
 
