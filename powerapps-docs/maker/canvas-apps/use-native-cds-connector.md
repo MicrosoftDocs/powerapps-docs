@@ -45,7 +45,7 @@ It’s possible that some of the newly shown display names conflict with the dis
 
 ##### Possible errors and suggestions at this step
 It’s possible to have errors at this stage if you were using an option set field or hard coded GUID text values.  
-1.	Option Set values.  If you were using an option set field with a text identifier for the option set value, you should instead use the dot notation to reference the option set value. For instance:  Change Patch (Accounts, OptionSet1 = “12345”) to Change Patch (Accounts, OptionSet.Item1) where Item1 corresponds to the “12345” value.  See the detailed example on converting Option sets below.
+1.	Option Set values.  If you were using an option set field with a text identifier for the option set value, you should instead use the dot notation to reference the option set value. For instance:  Change Patch (Accounts, OptionSet1 = “12345”) to Change Patch (Accounts, OptionSet.Item1) where Item1 corresponds to the “12345” value.  See the Detailed Examples section below for more information. 
 2.	GUIDs.  If you were using a static GUID string such as “015e45e1044e49f388115be07f2ee116”, convert it to function that returns a GUID object (e.g, GUID(“015e45e1044e49f388115be07f2ee116”)) 
 3.	Lookups.  If you were using Lookup functions to get first level lookup values such as: Lookup (Lookup (Contacts, ‘contactID’ = ThisItem.ContactID”) consider using ThisItem.PrimaryContacts (where PrimaryContacts is the name of the entity) instead.  
    
@@ -71,9 +71,10 @@ To convert your app that currently uses the Dynamics 365 connector you will need
 It’s possible to have errors as you convert if you were not using Display Names, if you were using GUID strings, or if you were using an option set fields. 
 1.	For control name clashes, change the name of the control to be different and unique.  This is usually the simplest fix. 
 2.	For field and entity display name conflicts you may see a formula that is expecting an entity but is resolving to a more locally scoped field name. Use the square bracket with a “@” symbol to indicate a global scope so it resolves to the entity (e.g., [@entityName].)
-3.	Option Set values.  If you were using an option set field with a text identifier for the option set value, you should instead use the dot notation to reference the option set value. For instance:  Change Patch (Accounts, OptionSet1 = “12345”) to Change Patch (Accounts, OptionSet.Item1) where Item1 corresponds to the “12345” value.
+3.	Option Set values.  If you were using an option set field with a text identifier for the option set value, you should instead use the dot notation to reference the option set value. For instance:  Change Patch (Accounts, OptionSet1 = “12345”) to Change Patch (Accounts, OptionSet.Item1) where Item1 corresponds to the “12345” value.  See the Detailed Examples section below for more information. 
 4.	GUIDs.  If you were using a static GUID string such as “015e45e1044e49f388115be07f2ee116”, convert it to function that returns a GUID object (e.g, GUID(“015e45e1044e49f388115be07f2ee116”)) 
 5.	Lookups.  If you were using Lookup functions to get first level lookup values such as: Lookup (Lookup (Contacts, ‘contactID’ = ThisItem.ContactID”) consider using ThisItem.PrimaryContacts (where PrimaryContacts is the name of the entity) instead.  
+6. For any Polymorphic references, refer to the Detailed Examples section below. 
 
 ## Detailed Examples
 
