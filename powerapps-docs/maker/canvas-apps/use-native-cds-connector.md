@@ -16,7 +16,7 @@ search.app:
 ---
 # Common Data Service and the Improved data source experience
 
-If you created a canvas app with a Common Data Service connector prior to November 2019, then you may not have the benefit of the most current version of the Common Data Service.  The **Improved** experience switch unlocks significant speed gains, increased reliability, and features such as access to Common Data Service Views and File and Image field attributes. 
+If you created a canvas app with a Common Data Service connector prior to November 2019, then you may not have the benefit of the most current version of the Common Data Service.  The **Improve data source experience and Common Data Service views** switch unlocks significant speed gains, increased reliability, and features such as access to Common Data Service Views and File and Image field attributes. 
 The “Improve data source experience and Common Data Service views” feature option appears in the Advanced settings section.   The “Relational data, option sets, and other new features for Common Data Service” now appears in the Deprecated features section.
 ## How do I upgrade my canvas app?
 Upgrade your app by inspecting the settings of the options and then following the directions below.
