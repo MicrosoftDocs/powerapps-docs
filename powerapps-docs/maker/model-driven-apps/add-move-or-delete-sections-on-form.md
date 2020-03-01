@@ -108,7 +108,8 @@ You can move sections using drag and drop or cut and paste actions.
     >   - If you delete a section by mistake, on the command bar, select **Undo** to revert the form to its previous state. 
     >   - You can't delete a section that contains a field that is required or locked. 
     >   - You can't delete a section that is locked. 
-    >   - A tab needs to have at least one section in each tab column. If you delete the last remaining section in a tab column a new section will be automatically added. 
+    >   - A tab needs to have at least one section in each tab column. If you delete the last remaining section in a tab column a new section will be automatically added.
+    >   - In the Unified Interface, sections won't be rendered if you have selected to hide them including the title and the border.  This is different than the legacy web client, and is by design to ensure proper rendering of the form across differing view ports from extra wide to narrow.
 
 ### See also
 [Overview of the model-driven form designer](form-designer-overview.md)  
