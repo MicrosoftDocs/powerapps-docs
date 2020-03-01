@@ -28,7 +28,7 @@ You can't use these functions inside a browser, either when authoring the app in
 
 These functions are limited by the amount of available app memory because they operate on an in-memory collection. Available memory can vary depending on the device and operating system, the memory that the Power Apps player uses, and the complexity of the app in terms of screens and controls. If you store more than a few megabytes of data, test your app with expected scenarios on the devices on which you expect the app to run. You should generally expect to have between 30 and 70 megabytes of available memory.  
 
-**LoadData** fills a collection but does not define the collection's structure.  Include a **[Collect](function-clear-collect-clearcollect.md)** or **[ClearCollect](function-clear-collect-clearcollect.md)** function call anywhere within your app.  You do not need to actually call these functions as their mere presence is enough to define the structure of the collection.  
+**LoadData** fills a collection but does not define the collection's structure.  Include a **[Collect](function-clear-collect-clearcollect.md)** or **[ClearCollect](function-clear-collect-clearcollect.md)** function call anywhere within your app.  You do not need to actually call these functions as their mere presence is enough to define the structure of the collection.  For more information read about [creating and removing variables](../working-with-variables.md#create-and-remove-variables).
 
 The loaded data will be appended to the collection. Use the **[Clear](function-clear-collect-clearcollect.md)** function before calling **LoadData** if you want to start with an empty collection.
 
@@ -39,7 +39,7 @@ The device's built in app sandbox facilities are used to isolate saved data from
 
 * *Collection* - Required.  Collection to be stored or loaded.
 * *Name* - Required.  Name of the storage. You must use the same name to save and load the same set of data. The name space isn't shared with other apps or users.
-* *IgnoreNonexistentFile* - Optional. Boolean (**true**/**false**) value that indicates whether **LoadData** function should display or ignore errors when it can't locate a matching file. If you specify **false**, errors will be displayed. If you specify **true**, errors will be ignored, which is useful for offline scenarios. **SaveData** may create a file if the device is offline (that is, if the **Connection.Connected** status is **false**).
+* *IgnoreNonexistentFile* - Optional. A Boolean value what to do if the file does not already exist.  Use *false* (default) to return an error and *true* to suppress the error.   
 
 ## Examples
 
@@ -50,9 +50,11 @@ The device's built in app sandbox facilities are used to isolate saved data from
 
 ### Simple offline example
 
-This example creates a very simple app to capture the name and picture of items you have around you while offline, storing the results in the device's local storage for later use.  Since it uses **LoadData** and **SaveData** that do not run on the web, you must have a device with you to work through this example.
+This example creates a very simple app to capture the name and picture of everyday items while offline.  It stores the information in the device's local storage for later use, allowing the app to close or the device to restart without losing data.  
 
-1. Create a blank canvas app with a tablet layout.
+You must have a device to work through this example as it uses **LoadData** and **SaveData** that do not function on the web.
+
+1. Create a blank canvas app with a tablet layout.  For more details read [creating an app from a template](../get-started-test-drive.md) and select **Tablet layout** under **Blank app**.  
 
 1. Add a [**Text input**](../controls/control-text-input.md) control and a [**Camera**](../controls/control-camera.md) control and arrange them roughly as shown:
     > [!div class="mx-imgBorder"]  
@@ -60,9 +62,9 @@ This example creates a very simple app to capture the name and picture of items 
 
 1. Add a [**Button**](../controls/control-button.md) control.
 
-2. Double click the control to change the button text to **Add Item** (or modify the **Text** property).
+2. Double click the button control to change the button text to **Add Item** (or modify the **Text** property).
 
-3. Set the **OnSeelct** property to the formula to add an item to our collection:
+3. Set the **OnSeelct** property of the button control to this formula which will add an item to our collection:
     ```powerapps-dot
     Collect( MyItems, { Item: TextInput1.Text, Picture: Camera1.Photo } )
     ```
@@ -71,9 +73,9 @@ This example creates a very simple app to capture the name and picture of items 
 
 1. Add a **Button** control.
 
-2. Double click the control to change the button text to **Save Data** (or modify the **Text** property).
+2. Double click the button control to change the button text to **Save Data** (or modify the **Text** property).
 
-3. Set the **OnSeelct** property to the formula to save our collection to the local device:
+3. Set the **OnSeelct** property of the button control to this formula in order to save our collection to the local device:
     ```powerapps-dot
     SaveData( MyItems, "LocalSavedItems" )
     ```
@@ -82,9 +84,9 @@ This example creates a very simple app to capture the name and picture of items 
 
 1. Add a **Button** control.
 
-2. Double click the control to change the button text to **Load Data** (or modify the **Text** property).
+2. Double click the button control to change the button text to **Load Data** (or modify the **Text** property).
 
-3. Set the **OnSeelct** property to the formula to load our collection from the local device:
+3. Set the **OnSeelct** property of the button control to this formula in order to load our collection from the local device:
     ```powerapps-dot
     LoadData( MyItems, "LocalSavedItems" )
     ``` 
@@ -98,7 +100,7 @@ This example creates a very simple app to capture the name and picture of items 
 1. When prompted, select the **MyItems** collection as the data source for this gallery.  This will set the **Items** property of the **Gallery** control: 
     > [!div class="mx-imgBorder"] 
     > ![Gallery selection of data source](media/function-savedata-loaddata/simple-gallery-collection.png)
-    The image control in the gallery template should default to **ThisItem.Picture** and the label controls should default to **ThisItem.Item**.
+    The image control in the gallery template should default its **Image** property to **ThisItem.Picture** and the label controls should both default their **Text** properties to **ThisItem.Item**.  Check these formulas if after adding items in the following steps you don't see anything in the gallery. 
 
 1. Position the control to the right of the other controls: 
     > [!div class="mx-imgBorder"] 
