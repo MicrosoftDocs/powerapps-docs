@@ -14,16 +14,20 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Common Data Service and the Improved data source experience
+# Common Data Service and the improved data source experience
 
-If you created a canvas app with a Common Data Service connector prior to November 2019, then you may not have the benefit of the most current version of the Common Data Service.  The **Improve data source experience and Common Data Service views** switch unlocks significant speed gains, increased reliability, and features such as access to Common Data Service Views and File and Image field attributes. 
-The “Improve data source experience and Common Data Service views” feature option appears in the Advanced settings section.   The “Relational data, option sets, and other new features for Common Data Service” now appears in the Deprecated features section.
+If you created a canvas app with a Common Data Service connector prior to November 2019, then you might not have the benefit of the most current version of the Common Data Service. The **Improve data source experience and Common Data Service views** switch unlocks significant speed gains, increased reliability, and features such as access to Common Data Service views and File and Image field attributes.
+
+The **Improve data source experience and Common Data Service views** option appears in the Advanced settings section.   The “Relational data, option sets, and other new features for Common Data Service” now appears in the Deprecated features section.
+
 ## How do I upgrade my canvas app?
 Upgrade your app by inspecting the settings of the options and then following the directions below.
-### A.	“Improve data source experience and Common Data Service views” is already “On”
-If the “Improve data source experience and Common Data Service views” feature is “On” then you have previously converted your canvas app to use this new feature or you started an app when the default setting for this feature was “On.”  You are already there.  If it isn’t already, you may want to turn on the “Explicit Column Selection” feature “On” as well.
-Note that as this feature is not supported on Windows Player, authors working with Power Apps Windows Player will need to turn the “Improve data source … “ feature “Off.”
-### B.	“Relational data, option sets and other new features for CDS” feature is “Off”
+
+### a.	**Improve data source experience and Common Data Service views** is already enabled
+If the **Improve data source experience and Common Data Service views** option is already enabled (“On”) then you have previously converted your canvas app to use this new feature or you started an app when the default setting for this feature was “On.”  You are already there.  If it isn’t already, you may want to enable the **Explicit Column Selection** feature as well.
+Note that as this feature is not supported on Windows Player, authors working with Power Apps Windows Player will need to turn the **Improve data source…** feature “Off.”
+
+### b.	“Relational data, option sets and other new features for CDS” feature is “Off”
 Check in the Deprecated features section for this setting.  If the “Relational data, option sets and other new features for CDS” in your app is “Off” then use the steps below as a first step in the conversion.  If you can’t see this option or if it’s already “On”, continue to the next section.
 #### First, turn “Use display names” ON
 1.	Turn on “Use display names” (if it is not already on.)
@@ -45,9 +49,9 @@ It’s possible that some of the newly shown display names conflict with the dis
 
 ##### Possible errors and suggestions at this step
 It’s possible to have errors at this stage if you were using an option set field or hard coded GUID text values.  
-1.	Option Set values.  If you were using an option set field with a text identifier for the option set value, you should instead use the dot notation to reference the option set value. For instance:  Change Patch (Accounts, OptionSet1 = “12345”) to Change Patch (Accounts, OptionSet.Item1) where Item1 corresponds to the “12345” value.  See the Detailed Examples section below for more information. 
-2.	GUIDs.  If you were using a static GUID string such as “015e45e1044e49f388115be07f2ee116”, convert it to function that returns a GUID object (e.g, GUID(“015e45e1044e49f388115be07f2ee116”)) 
-3.	Lookups.  If you were using Lookup functions to get first level lookup values such as: Lookup (Lookup (Contacts, ‘contactID’ = ThisItem.ContactID”) consider using ThisItem.PrimaryContacts (where PrimaryContacts is the name of the entity) instead.  
+-	Option Set values.  If you were using an option set field with a text identifier for the option set value, you should instead use the dot notation to reference the option set value. For instance:  Change Patch (Accounts, OptionSet1 = “12345”) to Change Patch (Accounts, OptionSet.Item1) where Item1 corresponds to the “12345” value.  See the Detailed Examples section below for more information. 
+-	GUIDs.  If you were using a static GUID string such as “015e45e1044e49f388115be07f2ee116”, convert it to function that returns a GUID object (e.g, GUID(“015e45e1044e49f388115be07f2ee116”)) 
+-	Lookups.  If you were using Lookup functions to get first level lookup values such as: Lookup (Lookup (Contacts, ‘contactID’ = ThisItem.ContactID”) consider using ThisItem.PrimaryContacts (where PrimaryContacts is the name of the entity) instead.  
    
 ### C.	“Improve data source experience and Common Data Service views“ is “Off”
 
