@@ -56,21 +56,31 @@ The device's built in app sandbox facilities are used to isolate saved data from
     > [!div class="mx-imgBorder"]  
     > ![A text input and camera control added to a blank screen](media/function-savedata-loaddata/simple-text-camera.png)
 
-1. Add a [**Button**](../controls/control-button.md) control, double click the control to change the button text to **Add Item** (or modify the Text property), and set the **OnSeelct** property to the formula to add an item to our collection:
+1. Add a [**Button**](../controls/control-button.md) control.
+2. Double click the control to change the button text to **Add Item** (or modify the **Text** property).
+3. Set the **OnSeelct** property to the formula to add an item to our collection:
     ```powerapps-dot
     Collect( MyItems, { Item: TextInput1.Text, Picture: Camera1.Photo } )
     ```
     > [!div class="mx-imgBorder"] 
     > ![A button control added with the text "Add Item" and the OnSelect property set](media/function-savedata-loaddata/simple-additem.png)
 
-1. Add a **Button** control, double click the control to change the button text to **Save Data** (or modify the Text property), and set the **OnSeelct** property to the formula to save our collection to the local device:
+1. Add a **Button** control.
+
+2. Double click the control to change the button text to **Save Data** (or modify the **Text** property).
+
+3. Set the **OnSeelct** property to the formula to save our collection to the local device:
     ```powerapps-dot
     SaveData( MyItems, "LocalSavedItems" )
     ```
     > [!div class="mx-imgBorder"] 
     > ![A button control added with the text "Save Data" and the OnSelect property set](media/function-savedata-loaddata/simple-savedata.png)
 
-1. Add a **Button** control, double click the control to change the button text to **Load Data** (or modify the Text property), and set the **OnSeelct** property to the formula to load our collection from the local device:
+1. Add a **Button** control.
+
+2. Double click the control to change the button text to **Load Data** (or modify the **Text** property).
+
+3. Set the **OnSeelct** property to the formula to load our collection from the local device:
     ```powerapps-dot
     LoadData( MyItems, "LocalSavedItems" )
     ``` 
@@ -92,23 +102,25 @@ The device's built in app sandbox facilities are used to isolate saved data from
 
 1. Save your app.  If it is the first time it has been saved, there is no need to publish it; if not, also publish the app.
 
-1. Open your app in a mobile device player.  **SaveData** and **LoadData** cannot be used in Studio or in a web browser.  It may take a few minutes for the app to appear on your device.
+1. Open your app on a device such as a phone or tablet.  **SaveData** and **LoadData** cannot be used in Studio or in a web browser.  Refresh your app list if you don't see your app immediately, it can take a few seconds for the app to appear on your device.  Signing out and back in to your account can help too.
     > [!div class="mx-imgBorder"] 
     > ![App running with no items added](media/function-savedata-loaddata/simple-mobile.png) 
 
-1. Enter the name, take a picture of an item, and select the **Add Item** button.  Do this a couple of times to load up the collection.
+1. Enter the name and take a picture of an item.
+
+2. Select the **Add Item** button.  Repeat adding items a couple of times to load up your collection.
     > [!div class="mx-imgBorder"] 
     > ![App running with three items added](media/function-savedata-loaddata/simple-mobile-with3.png) 
 
-1. Select the **Save Data** button.
+1. Select the **Save Data** button.  This will save the data in your collection to your local device.
 
-1. Close the app.  You collection will be lost including all item names and pictures.
+1. Close the app.  You collection in memory will be lost including all item names and pictures, but they will still be there in the device's storage.
 
-1. Launch the app again.  The collection will again be empty.
+1. Launch the app again.  The collection in memory will again show as empty in the gallery.
     > [!div class="mx-imgBorder"] 
     > ![App again running with no items added](media/function-savedata-loaddata/simple-mobile.png) 
 
-1. Select the **Load Data** button.  The collection will be repopulated from the stored data and your items will be back.
+1. Select the **Load Data** button.  The collection will be repopulated from the stored data on your device and your items will be back in the gallery.
     > [!div class="mx-imgBorder"] 
     > ![App running with three items restored after calling the LoadData function](media/function-savedata-loaddata/simple-mobile-load1.png) 
 
