@@ -51,54 +51,70 @@ The device's built in app sandbox facilities are used to isolate saved data from
 ### Simple offline
 
 1. Create a blank canvas app with a tablet layout.
+
 1. Add a [**Text input**](../controls/control-text-input.md) control and a [**Camera**](../controls/control-camera.md) control and arrange them roughly as shown:
-> [!div class="mx-imgBorder"]  
-> ![A text input and camera control added to a blank screen](media/function-savedata-loaddata/simple-text-camera.png)
+    > [!div class="mx-imgBorder"]  
+    > ![A text input and camera control added to a blank screen](media/function-savedata-loaddata/simple-text-camera.png)
+
 1. Add a [**Button**](../controls/control-button.md) control, double click the control to change the button text to **Add Item** (or modify the Text property), and set the **OnSeelct** property to the formula to add an item to our collection:
-```powerapps-dot
-Collect( MyItems, { Item: TextInput1.Text, Picture: Camera1.Photo } )
-```
-> [!div class="mx-imgBorder"] 
-> ![A button control added with the text "Add Item" and the OnSelect property set](media/function-savedata-loaddata/simple-additem.png)
+    ```powerapps-dot
+    Collect( MyItems, { Item: TextInput1.Text, Picture: Camera1.Photo } )
+    ```
+    > [!div class="mx-imgBorder"] 
+    > ![A button control added with the text "Add Item" and the OnSelect property set](media/function-savedata-loaddata/simple-additem.png)
+
 1. Add a **Button** control, double click the control to change the button text to **Save Data** (or modify the Text property), and set the **OnSeelct** property to the formula to save our collection to the local device:
-```powerapps-dot
-SaveData( MyItems, "LocalSavedItems" )
-```
-> [!div class="mx-imgBorder"] 
-> ![A button control added with the text "Save Data" and the OnSelect property set](media/function-savedata-loaddata/simple-savedata.png)
+    ```powerapps-dot
+    SaveData( MyItems, "LocalSavedItems" )
+    ```
+    > [!div class="mx-imgBorder"] 
+    > ![A button control added with the text "Save Data" and the OnSelect property set](media/function-savedata-loaddata/simple-savedata.png)
+
 1. Add a **Button** control, double click the control to change the button text to **Load Data** (or modify the Text property), and set the **OnSeelct** property to the formula to load our collection from the local device:
-```powerapps-dot
-LoadData( MyItems, "LocalSavedItems" )
-``` 
-> [!div class="mx-imgBorder"] 
-> ![A button control added with the text "Load Data" and the OnSelect property set](media/function-savedata-loaddata/simple-loaddata.png)
+    ```powerapps-dot
+    LoadData( MyItems, "LocalSavedItems" )
+    ``` 
+    > [!div class="mx-imgBorder"] 
+    > ![A button control added with the text "Load Data" and the OnSelect property set](media/function-savedata-loaddata/simple-loaddata.png)
+
 1. Add a [**Gallery**](../controls/control-gallery.md) control with a Vertical layout that includes a picture and text: 
-> [!div class="mx-imgBorder"] 
-> ![Gallery variety selection, "Vertical" selected with image and text areas](media/function-savedata-loaddata/simple-gallery-add.png)
+    > [!div class="mx-imgBorder"] 
+    > ![Gallery variety selection, "Vertical" selected with image and text areas](media/function-savedata-loaddata/simple-gallery-add.png)
+
 1. When prompted, select the **MyItems** collection as the data source for this gallery.  This will set the **Items** property of the **Gallery** control: 
-> [!div class="mx-imgBorder"] 
-> ![Gallery selection of data source](media/function-savedata-loaddata/simple-gallery-collection.png)
+    > [!div class="mx-imgBorder"] 
+    > ![Gallery selection of data source](media/function-savedata-loaddata/simple-gallery-collection.png)
+    The image control in the gallery template should default to **ThisItem.Picture** and the label controls should default to **ThisItem.Item**.
+
 1. Position the control to the right of the other controls: 
-> [!div class="mx-imgBorder"] 
-> ![Gallery re-positioned to the right of the screen](media/function-savedata-loaddata/simple-gallery-placed.png)
+    > [!div class="mx-imgBorder"] 
+    > ![Gallery re-positioned to the right of the screen](media/function-savedata-loaddata/simple-gallery-placed.png)
+
 1. Save your app.  If it is the first time it has been saved, there is no need to publish it; if not, also publish the app.
+
 1. Open your app in a mobile device player.  **SaveData** and **LoadData** cannot be used in Studio or in a web browser.  It may take a few minutes for the app to appear on your device.
-> [!div class="mx-imgBorder"] 
-> ![App running with no items added](media/function-savedata-loaddata/simple-mobile.png) 
+    > [!div class="mx-imgBorder"] 
+    > ![App running with no items added](media/function-savedata-loaddata/simple-mobile.png) 
+
 1. Enter the name, take a picture of an item, and select the **Add Item** button.  Do this a couple of times to load up the collection.
-> [!div class="mx-imgBorder"] 
-> ![App running with three items added](media/function-savedata-loaddata/simple-mobile-with3.png) 
+    > [!div class="mx-imgBorder"] 
+    > ![App running with three items added](media/function-savedata-loaddata/simple-mobile-with3.png) 
+
 1. Select the **Save Data** button.
+
 1. Close the app.  You collection will be lost including all item names and pictures.
+
 1. Launch the app again.  The collection will again be empty.
-> [!div class="mx-imgBorder"] 
-> ![App again running with no items added](media/function-savedata-loaddata/simple-mobile.png) 
+    > [!div class="mx-imgBorder"] 
+    > ![App again running with no items added](media/function-savedata-loaddata/simple-mobile.png) 
+
 1. Select the **Load Data** button.  The collection will be repopulated from the stored data and your items will be back.
-> [!div class="mx-imgBorder"] 
-> ![App running with three items restored after calling the LoadData function](media/function-savedata-loaddata/simple-mobile-load1.png) 
+    > [!div class="mx-imgBorder"] 
+    > ![App running with three items restored after calling the LoadData function](media/function-savedata-loaddata/simple-mobile-load1.png) 
+
 1. Select the **Load Data** button again.  The stored data will be appended to the end of the collection and a scroll bar will appear on the gallery.  If you would like to replace rather than append, use the **Clear** function first to clear out the collection before calling the **LoadData** function.
-> [!div class="mx-imgBorder"] 
-> ![App running with six items restored after calling the LoadData function twice](media/function-savedata-loaddata/simple-mobile-load2.png) 
+    > [!div class="mx-imgBorder"] 
+    > ![App running with six items restored after calling the LoadData function twice](media/function-savedata-loaddata/simple-mobile-load2.png) 
  
 ### More advanced offline
 
