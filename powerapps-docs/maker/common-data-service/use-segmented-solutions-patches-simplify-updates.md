@@ -25,9 +25,9 @@ search.app:
 ---
 # Use segmented solutions 
 
-To gain tighter control over what you distribute in solution updates, use solution segmentation. <!-- Depending on the complexity of your app, segmentation of the solution can be as simple as everything in a single solution to segmenting by component type, such as entities in one solution, canvas apps in another, and plugins in a third. --> To create a segmented solution, you can use the **Solutions** area in Power Apps.  
+Use solution segmentation so that you only include entity components that are updated when you distribute solution updates. <!-- Depending on the complexity of your app, segmentation of the solution can be as simple as everything in a single solution to segmenting by component type, such as entities in one solution, canvas apps in another, and plugins in a third. --> To create a segmented solution, you can use the **Solutions** area in Power Apps.  
 
-Entities can be segmented, while  other components, such as apps and flows, can't be segmented. You can segment a solution when you select from the following options to add an existing entity to the solution: 
+You can segment a solution when you select from the following options to add an existing entity to the solution: 
 - Include no components.   
 - **Select components**. You can segment your solution by individually select each component that’s associated with the entity, such as fields, relationships, business rules, views, forms, and charts. Use this option to select only the components that have been added or changed with the entity, such as a a new custom field or form.  
 - **Include entity metadata**. This option includes no components, such as related entities, but  does include *all* the metadata associated with the entity. Metadata includes the entity attributes, such as auditing, duplicate detection, or change tracking. 
