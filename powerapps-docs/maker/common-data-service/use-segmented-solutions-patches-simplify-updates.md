@@ -25,17 +25,16 @@ search.app:
 ---
 # Use segmented solutions 
 
-Use solution segmentation so that you only include entity components that are updated when you distribute solution updates. <!-- Depending on the complexity of your app, segmentation of the solution can be as simple as everything in a single solution to segmenting by component type, such as entities in one solution, canvas apps in another, and plugins in a third. --> To create a segmented solution, you can use the **Solutions** area in Power Apps.  
+Use solution segmentation so that you only include entity components that are updated when you distribute solution updates. With solution segmentation, you export solution updates with selected entity assets, such as entity fields, forms, and views, rather than entire entities with all the assets. <!-- Depending on the complexity of your app, segmentation of the solution can be as simple as everything in a single solution to segmenting by component type, such as entities in one solution, canvas apps in another, and plugins in a third. --> To create a segmented solution, you use the **Solutions** area in Power Apps.  
 
 You can segment a solution when you select from the following options to add an existing entity to the solution: 
 - Include no components.   
-- **Select components**. You can segment your solution by individually select each component that’s associated with the entity, such as fields, relationships, business rules, views, forms, and charts. Use this option to select only the components that have been added or changed with the entity, such as a a new custom field or form.  
+- **Select components**. You can segment your solution by individually selecting each component that’s associated with the entity, such as fields, relationships, business rules, views, forms, and charts. Use this option to select only the components that have been added or changed with the entity, such as a new custom field or adding a form.  
 - **Include entity metadata**. This option includes no components, such as related entities, but  does include *all* the metadata associated with the entity. Metadata includes the entity attributes, such as auditing, duplicate detection, or change tracking. 
 - **Include all components**. This option includes all components *and* metadata associated with the entity. It can include other entities or entity components such as business process flows, reports, connections, and queues. You should only use this option when you are distributing an unmanaged entity that doesn't exist in the target environment. 
 
-
     > [!WARNING]
-    > When you update a solution only include the components that you intend to update. If you add components to your solution that you didn't intend to, after your update is imported to the target environment you can cause unexpected behavior in the existing component that now lies underneath the layer you introduced with your solution update. For example, if you add a view for an entity that is not updated and the view in the existing layer has customizations, the existing customizations may become inactive. For more information, see [Solution layers](solution-layers.md).
+    > Don't add components to your solution that you didn't intend to. When your update is imported to the target environment a solution with unintended components can cause unexpected behavior to the existing components that now lay below the layer you introduced with your solution update. For example, if you add a view for an entity that is not updated and the view in the existing layer has customizations, the existing customizations may become inactive. For more information, see [Solution layers](solution-layers.md).
 
 <!-- The below was from Per but I don't think it fits in this topic that is only about solution segmentation with entities. 
 Similar to the planning that goes into how you model the data that goes into your app, planning for segmentation should be considered before you distribute your solution. Segmenting solutions from a single solution into multiple solutions a month or two years after the initial app has been built can be complex and is prone to cause issues.  -->
@@ -106,8 +105,6 @@ Start by opening an unmanaged solution you created. Choose the **Entity** compon
  > ![Solution with entities.](media/solution-segmentation-solution-entities-admin.png "Solution with entities.")  
   
 ## Solutions as patches
-With solution segmentation, you can export solution patches with selected entity assets, such as entity fields, forms, and views, rather than entire entities with all the assets. 
-
 In addition to having more control over what’s in a solution, you’ll be able to control what goes into the patch. You can create a patch for a parent solution and export it as a minor update to the base solution. When you clone a solution, the system rolls up all related patches into the base solution and creates a new version.  
   
  When you’re working with patches and cloned solutions, keep the following information in mind:  
