@@ -2,7 +2,7 @@
 title: "Create a solution | MicrosoftDocs"
 description: "Learn how to create a solution"
 ms.custom: ""
-ms.date: 10/30/2018
+ms.date: 02/28/2020
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -25,9 +25,9 @@ search.app:
 ---
 # Create a solution
 
-Because the default solution contains all the solutions components, it may be easier for you to locate just the solution components that you’ve customized if you create a separate solution and do all your customization there. This also makes it easy to export a backup of your solution as a smaller file. If you choose to do this, you must always remember to add any of the solution components you edit to this solution. When you create new solution components, you should always create them in the context of this solution. This way the solution publisher customization prefix will be applied consistently. After you have created solution components in your solution, or added existing solution components to that solution, you can also edit them in the default solution if you wish.  
+To locate and work with just the components you’ve customized, create a solution and do all your customization there. Then, always remember to work in the context of the custom solution as you add, edit, and create components. This makes it easy to export your solution for import to another environment or as a backup.   
   
- For more information about solution concepts, see [Working with solutions](solutions-overview.md).  
+For more information about solution concepts, see [Working with solutions](solutions-overview.md).  
   
 1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select **Solutions** from the left navigation. 
   
@@ -62,5 +62,22 @@ Because the default solution contains all the solutions components, it may be ea
 > [!IMPORTANT]
 >  If you plan to include appointments in solutions, we strongly recommend that you don’t include only appointments and only recurring appointments in separate solutions. If you install and uninstall separate solutions with different appointment types, you’ll encounter a SQL Server error and you’ll have to re-create the appointments. 
 
-## See also
+## Publish changes 
+
+ Certain customizations that make changes to the user interface require that they be published before people can use them in the application. 
+ 
+### Publish your customizations
+
+1.  Select **Solutions** from the left navigation.
+
+2.  Select the solution that you want to publish to open it.
+
+3.  From the list of commands, select **Publish all customizations**.  
+
+![Publish all customizations](media/publish-all-customizations.PNG "Publish all customizations")  
+  
+> [!IMPORTANT]
+>  Preparing customizations may take some time. If you see a message that the browser page has become unresponsive, wait for the page to become responsive, and don't close it.  
+
+### See also
  [Use solutions](use-solution-explorer.md)
