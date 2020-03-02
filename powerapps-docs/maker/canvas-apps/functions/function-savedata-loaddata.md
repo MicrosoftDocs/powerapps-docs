@@ -32,7 +32,7 @@ These functions depend on the collection being implicitly defined with the prese
 
 The loaded data will be appended to the collection. Use the **[Clear](function-clear-collect-clearcollect.md)** function before calling **LoadData** if you want to start with an empty collection.
 
-The device's built in app sandbox facilities are used to isolate saved data from other apps.  The device may also encrypt the data or use a mobile device management tool such as [Microsoft Intune](https://www.microsoft.com/en-us/microsoft-365/enterprise-mobility-security/microsoft-intune) to encrypt.
+The device's built in app sandbox facilities are used to isolate saved data from other apps.  The device may also encrypt the data or you can use a mobile device management tool such as [Microsoft Intune](https://www.microsoft.com/en-us/microsoft-365/enterprise-mobility-security/microsoft-intune) to encrypt if desired.
 
 ## Syntax
 **SaveData**( *Collection*, *Name* )<br>**LoadData**( *Collection*, *Name* [, *IgnoreNonexistentFile* ])
