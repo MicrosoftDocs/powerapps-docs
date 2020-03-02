@@ -25,7 +25,7 @@ search.app:
 ---
 # Use segmented solutions 
 
-To gain tighter control over what you distribute in solution updates and solution patches, use solution segmentation. <!-- Depending on the complexity of your app, segmentation of the solution can be as simple as everything in a single solution to segmenting by component type, such as entities in one solution, canvas apps in another, and plugins in a third. --> To create a segmented solution, you can use the **Solutions** area in Power Apps.  
+To gain tighter control over what you distribute in solution updates, use solution segmentation. <!-- Depending on the complexity of your app, segmentation of the solution can be as simple as everything in a single solution to segmenting by component type, such as entities in one solution, canvas apps in another, and plugins in a third. --> To create a segmented solution, you can use the **Solutions** area in Power Apps.  
 
 Entities can be segmented, while  other components, such as apps and flows, can't be segmented. You can segment a solution when you select from the following options to add an existing entity to the solution: 
 - Include no components.   
@@ -35,7 +35,7 @@ Entities can be segmented, while  other components, such as apps and flows, can'
 
 
 > [!WARNING]
-> When you update a solution only include the components that you intend to update. If you add components to your solution that you didn't intend to, after your update is imported to the target environment you can cause unexpected behavior in the existing component that now lies underneath the layer you introduced with your solution update. For example, if you add a view for an entity that is not updated and the view in the existing layer has customizations, the existing customizations may become inactive. 
+> When you update a solution only include the components that you intend to update. If you add components to your solution that you didn't intend to, after your update is imported to the target environment you can cause unexpected behavior in the existing component that now lies underneath the layer you introduced with your solution update. For example, if you add a view for an entity that is not updated and the view in the existing layer has customizations, the existing customizations may become inactive. For more information, see [Solution layers](solution-layers.md).
 
 <!-- The below was from Per but I don't think it fits in this topic that is only about solution segmentation with entities. 
 Similar to the planning that goes into how you model the data that goes into your app, planning for segmentation should be considered before you distribute your solution. Segmenting solutions from a single solution into multiple solutions a month or two years after the initial app has been built can be complex and is prone to cause issues.  -->
