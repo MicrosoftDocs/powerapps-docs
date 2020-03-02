@@ -28,7 +28,7 @@ You can't use these functions inside a browser, either when authoring the app in
 
 These functions are limited by the amount of available app memory because they operate on an in-memory collection. Available memory can vary depending on the device and operating system, the memory that the Power Apps player uses, and the complexity of the app in terms of screens and controls. If you store more than a few megabytes of data, test your app with expected scenarios on the devices on which you expect the app to run. You should generally expect to have between 30 and 70 megabytes of available memory.  
 
-**LoadData** fills a collection but does not define the collection's structure.  Include a **[Collect](function-clear-collect-clearcollect.md)** or **[ClearCollect](function-clear-collect-clearcollect.md)** function call anywhere within your app.  You do not need to actually call these functions as their mere presence is enough to define the structure of the collection.  For more information read about [creating and removing variables](../working-with-variables.md#create-and-remove-variables).
+These functions depend on the collection being implicitly defined with the presence of a **[Collect](function-clear-collect-clearcollect.md)** or **[ClearCollect](function-clear-collect-clearcollect.md)** function call in any formula within your app.  You do not actually need to call **Collect** or **ClearCollect** to load data into the collection in order to define it, which is the common case when using **LoadData** after a previous **SaveData**.  All that is needed is the presence of these functions in a formula to implicitly define the structure of the collection.  For more information see [creating and removing variables](../working-with-variables.md#create-and-remove-variables).
 
 The loaded data will be appended to the collection. Use the **[Clear](function-clear-collect-clearcollect.md)** function before calling **LoadData** if you want to start with an empty collection.
 
@@ -50,7 +50,7 @@ The device's built in app sandbox facilities are used to isolate saved data from
 
 ### Simple offline example
 
-This example creates a very simple app to capture the name and picture of everyday items while offline.  It stores the information in the device's local storage for later use, allowing the app to close or the device to restart without losing data.  
+This very simple example captures and stores the name and picture of everyday items while offline.  It stores the information in the device's local storage for later use, allowing the app to be closed or the device to restart without losing data.  
 
 You must have a device to work through this example as it uses the **LoadData** and **SaveData** functions that do not operate when in a web browser.
 
