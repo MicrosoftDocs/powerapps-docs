@@ -59,9 +59,9 @@ For example, imagine that you've created a new custom entity that doesn't exist 
     - **Select components**. This option lets you individually select each component that’s associated with the entity, such as fields, relationships, business rules, views, forms, and charts. 
     - Don't include any components. 
 
-     For this example, because *Custom entity* has never been imported into the target environment, next to **Custom entity** select **Include all components**. Under **Account**, choose **Select components**.  
-     > [!div class="mx-imgBorder"] 
-     > ![Add existing entities](media/add-existing-entities1.png)
+      For this example, because *Custom entity* has never been imported into the target environment, next to **Custom entity** select **Include all components**. Under **Account**, choose **Select components**.  
+      > [!div class="mx-imgBorder"] 
+      > ![Add existing entities](media/add-existing-entities1.png)
   
 6.  Since only the *topten* custom field is new to the account  entity, select **Top Ten**, and then select **Add**.  
      > [!div class="mx-imgBorder"] 
