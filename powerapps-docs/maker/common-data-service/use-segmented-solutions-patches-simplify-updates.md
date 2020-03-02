@@ -104,8 +104,8 @@ Start by opening an unmanaged solution you created. Choose the **Entity** compon
  > [!div class="mx-imgBorder"] 
  > ![Solution with entities.](media/solution-segmentation-solution-entities-admin.png "Solution with entities.")  
   
-## Solutions as patches
-In addition to having more control over what’s in a solution, you’ll be able to control what goes into the patch. You can create a patch for a parent solution and export it as a minor update to the base solution. When you clone a solution, the system rolls up all related patches into the base solution and creates a new version.  
+## Solution patches and clones
+You can create a patch for a parent solution and export it as a minor update to the base solution. When you clone a solution, the system rolls up all related patches into the base solution and creates a new version.  
   
  When you’re working with patches and cloned solutions, keep the following information in mind:  
   
