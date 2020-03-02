@@ -50,7 +50,7 @@ The device's built in app sandbox facilities are used to isolate saved data from
 
 ### Simple offline example
 
-This very simple example captures and stores the name and picture of everyday items while offline.  It stores the information in the device's local storage for later use, allowing the app to be closed or the device to restart without losing data.  
+This very simple example captures and stores the names and pictures of everyday items while offline.  It stores the information in the device's local storage for later use, allowing the app to be closed or the device to restart without losing data.  
 
 You must have a device to work through this example as it uses the **LoadData** and **SaveData** functions that do not operate when in a web browser.
 
@@ -129,7 +129,7 @@ You must have a device to work through this example as it uses the **LoadData** 
     > [!div class="mx-imgBorder"] 
     > ![App again running with no items added](media/function-savedata-loaddata/simple-mobile.png) 
 
-1. Select the **Load Data** button.  The collection will be repopulated from the stored data on your device and your items will be back in the gallery.
+1. Select the **Load Data** button.  The collection will be repopulated from the stored data on your device and your items will be back in the gallery.  Note that the collection was empty before this button calls the **LoadData** function; there was no need to call **Collect** or **ClearCollect** before loading the data from storage.
     > [!div class="mx-imgBorder"] 
     > ![App running with three items restored after calling the LoadData function](media/function-savedata-loaddata/simple-mobile-load1.png) 
 
