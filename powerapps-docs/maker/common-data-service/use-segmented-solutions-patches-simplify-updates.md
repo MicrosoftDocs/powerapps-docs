@@ -104,7 +104,7 @@ Start by opening an unmanaged solution you created. Choose the **Entity** compon
  > [!div class="mx-imgBorder"] 
  > ![Solution with entities.](media/solution-segmentation-solution-entities-admin.png "Solution with entities.")  
   
-## Solution patches and clones
+## Solution patches 
 A patch contains only the changes for a parent managed solution, such as adding or editing components and assets. When patches are imported, they’re layered on top of the parent solution. When you clone a solution, the system rolls up all related patches into the base solution and creates a new version.  
   
  When you’re working with patches and cloned solutions, keep the following information in mind:  
