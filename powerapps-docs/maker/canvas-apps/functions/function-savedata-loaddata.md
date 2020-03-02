@@ -39,20 +39,20 @@ The device's built in app sandbox facilities are used to isolate saved data from
 
 * *Collection* - Required.  Collection to be stored or loaded.
 * *Name* - Required.  Name of the storage. You must use the same name to save and load the same set of data. The name space isn't shared with other apps or users.
-* *IgnoreNonexistentFile* - Optional. A Boolean value what to do if the file does not already exist.  Use *false* (default) to return an error and *true* to suppress the error.   
+* *IgnoreNonexistentFile* - Optional. A Boolean value indicating what to do if the file does not already exist.  Use *false* (default) to return an error and *true* to suppress the error.   
 
 ## Examples
 
 | Formula | Description | Result |
 | --- | --- | --- |
 | **SaveData( LocalCache, "MyCache" )** | Save the **LocalCache** collection to the user's device under the name "MyCache", suitable for **LoadData** to retrieve later. | Data is saved to the local device. |
-| **LoadData( LocalCache, "MyCache" )** | Loads the **LocalCache** collection to the user's device under the name "MyCache", previously stored with a call to **SaveData**.  | Data is loaded from the local device. |   
+| **LoadData( LocalCache, "MyCache" )** | Loads the **LocalCache** collection from the user's device under the name "MyCache", previously stored with a call to **SaveData**.  | Data is loaded from the local device. |   
 
 ### Simple offline example
 
 This example creates a very simple app to capture the name and picture of everyday items while offline.  It stores the information in the device's local storage for later use, allowing the app to close or the device to restart without losing data.  
 
-You must have a device to work through this example as it uses **LoadData** and **SaveData** that do not function on the web.
+You must have a device to work through this example as it uses the **LoadData** and **SaveData** functions that do not operate when in a web browser.
 
 1. Create a blank canvas app with a tablet layout.  For more details read [creating an app from a template](../get-started-test-drive.md) and select **Tablet layout** under **Blank app**.  
 
@@ -71,7 +71,7 @@ You must have a device to work through this example as it uses **LoadData** and 
     > [!div class="mx-imgBorder"] 
     > ![A button control added with the text "Add Item" and the OnSelect property set](media/function-savedata-loaddata/simple-additem.png)
 
-1. Add a **Button** control.
+1. Add another **Button** control.
 
 2. Double click the button control to change the button text to **Save Data** (or modify the **Text** property).
 
@@ -82,7 +82,9 @@ You must have a device to work through this example as it uses **LoadData** and 
     > [!div class="mx-imgBorder"] 
     > ![A button control added with the text "Save Data" and the OnSelect property set](media/function-savedata-loaddata/simple-savedata.png)
 
-1. Add a **Button** control.
+	It is tempting to test the button, and it won't hurt anything if you want to try, but you will only see an error as we are authoring in a web browser.  You must first save the app and open on a device before we can test this formula which we will do in the steps to follow.
+
+1. Add a third **Button** control.
 
 2. Double click the button control to change the button text to **Load Data** (or modify the **Text** property).
 
@@ -93,7 +95,7 @@ You must have a device to work through this example as it uses **LoadData** and 
     > [!div class="mx-imgBorder"] 
     > ![A button control added with the text "Load Data" and the OnSelect property set](media/function-savedata-loaddata/simple-loaddata.png)
 
-1. Add a [**Gallery**](../controls/control-gallery.md) control with a Vertical layout that includes a picture and text: 
+1. Add a [**Gallery**](../controls/control-gallery.md) control with a Vertical layout that includes a picture and text areas: 
     > [!div class="mx-imgBorder"] 
     > ![Gallery variety selection, "Vertical" selected with image and text areas](media/function-savedata-loaddata/simple-gallery-add.png)
 
