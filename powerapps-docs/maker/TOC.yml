@@ -569,6 +569,8 @@
             href: ./canvas-apps/functions/function-hashtags.md
           - name: Hour
             href: ./canvas-apps/functions/function-datetime-parts.md
+          - name: Identifiers
+            href: ./canvas-apps/functions/operators.md
           - name: If
             href: ./canvas-apps/functions/function-if.md
           - name: IfError
