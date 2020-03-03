@@ -10,7 +10,7 @@ ms.service: powerapps
 ms.devlang: na
 ms.topic: conceptual
 ms.component: model
-ms.date: 12/17/2019
+ms.date: 2/28/2020
 ms.author: matp
 search.audienceType: 
   - maker
@@ -84,6 +84,9 @@ For more information about access and scope privileges, see [Security roles](htt
 
 8. Select the **Customization** tab, and then in the privileges list select the **Read** privilege next to **Model-driven App** so that organization scope ![Organization global scope](media/share-model-driven-app/organizational-scope-privilege.png) is selected.
 
+    > [!div class="mx-imgBorder"] 
+    > ![Select security roles for the app](media/app-access-specific-use.png)
+
 9. Select **Save and Close**. 
 
 10. On the security role designer, in the **Role Name** box enter *Pet Grooming Schedulers*. 
@@ -133,7 +136,7 @@ One or more security roles need to be assigned to the app. Users will have acces
  
 
     > [!IMPORTANT]
-    > Users granted **Create** or **Write** to the **Model-driven App** privilege have access to all apps in the environment, even when they're not part of any role that has access to the app.
+    > Users granted **Read**, **Create**, and **Write** to the **Model-driven App** privilege have access to all apps in the environment, even when they're not part of any role that has access to the app.
     > ![Create and Write with Model-driven App privilege](media/app-access-cds.png)
 
 ## Share the link to your app
