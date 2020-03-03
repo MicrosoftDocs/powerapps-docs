@@ -95,10 +95,10 @@
       items:
       - name: Use OneDrive for Business     
         href: ../user/one-drive.md
-      - name: Take notes using OneNote      
+      - name: Take notes by using OneNote      
         href: ../user/onenote.md  
-      - name: Manage SharePoint documents    
-        href: ../user/sharepoint.md
+      - name: Collaborate using SharePoint  
+        href: ../user/collaborate-using-sharepoint.md
     - name: Search records
       items:
       - name: Compare search options
