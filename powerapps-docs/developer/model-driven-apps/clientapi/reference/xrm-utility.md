@@ -1,13 +1,11 @@
 ---
 title: "Xrm.Utility (Client API reference)| MicrosoftDocs"
-ms.date: 10/31/2018
+ms.date: 02/25/2020
 ms.service: powerapps
 ms.topic: "reference"
-applies_to: "Dynamics 365 (online)"
-ms.assetid: c044f7b8-7803-45fb-b99c-df01800c3b2a
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "amyla"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
@@ -29,6 +27,7 @@ Provides a container for useful methods.
 |[getEntityMetadata](xrm-utility/getEntityMetadata.md) |[!INCLUDE[./xrm-utility/includes/getEntityMetadata-description.md](./xrm-utility/includes/getEntityMetadata-description.md)]|
 |[getGlobalContext](xrm-utility/getGlobalContext.md) |[!INCLUDE[./xrm-utility/includes/getGlobalContext-description.md](./xrm-utility/includes/getGlobalContext-description.md)]|
 |[getLearningPathAttributeName](xrm-utility/getLearningPathAttributeName.md) |[!INCLUDE[./xrm-utility/includes/getLearningPathAttributeName-description.md](./xrm-utility/includes/getLearningPathAttributeName-description.md)]|
+|[getPageContext](xrm-utility/getPageContext.md) |[!INCLUDE[./xrm-utility/includes/getPageContext-description.md](./xrm-utility/includes/getPageContext-description.md)]|
 |[getResourceString](xrm-utility/getResourceString.md) |[!INCLUDE[./xrm-utility/includes/getResourceString-description.md](./xrm-utility/includes/getResourceString-description.md)]|
 |[invokeProcessAction](xrm-utility/invokeProcessAction.md) |[!INCLUDE[./xrm-utility/includes/invokeProcessAction-description.md](./xrm-utility/includes/invokeProcessAction-description.md)]|
 |[lookupObjects](xrm-utility/lookupObjects.md) |[!INCLUDE[./xrm-utility/includes/lookupObjects-description.md](./xrm-utility/includes/lookupObjects-description.md)]|
