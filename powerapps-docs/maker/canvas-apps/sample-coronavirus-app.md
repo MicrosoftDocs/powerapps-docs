@@ -3,23 +3,15 @@
 Step-by-step instructions for installing and configuring the Coronavirus
 Information app for Power Apps.
 
- 
-
 Estimated time to complete these steps: **20-25 minutes**
 
- 
-
 ## Overview of the app
-
- 
 
 The Coronavirus Information app provides a user-friendly experience to connect
 end users with information about the Coronavirus. Quickly get updates on
 internal company news, get answers to frequently asked questions, and get access
 to important information like links and emergency contacts. This app requires a
 small amount of setup to make it your own.
-
- 
 
 **Prerequisites**
 
@@ -28,12 +20,6 @@ small amount of setup to make it your own.
     Power Apps.
 
 -   Must have a valid SharePoint Online license and permission to create lists.
-
--   A public SharePoint site where you can store the data for the app.
-
- 
-
-![A screenshot of a cell phone Description automatically generated](media/21af3a789515705a79dbd211dc60d5ac.png)
 
  
 
@@ -52,11 +38,18 @@ aka.ms/CoronaInformationSolution.
  
 
 **Create a new SharePoint site**
+All the data needed for the app will live inside of SharePoint lists, so we will first need to create a new SharePoint site.
+1.	Login to www.sharepoint.com
+2.	Select Create site
+3.	Select Team site
+4.	Give your site a Name and Description
+5.	Set the Privacy settings to public so that everyone in the company can get the necessary information.
+6.	Select Next.
+7.	Optionally add additional owners.
+8.	Select Finish.
 
-**All of the data needed for the app**
 
 **Create the SharePoint lists for app**
-
 The app requires multiple lists that store all the data. To automate the
 creation of the SharePoint lists, you can leverage the DeploySPLists flow we
 have provided.
@@ -64,11 +57,8 @@ have provided.
  
 
 Import the flow
-
 1.  Navigate to [flow.microsoft.com](http://flow.microsoft.com)
-
 2.  Select **My flows** from the left nav
-
 3.  Select the **Import** button in the command bar
 
 4.  Upload the **DeploySPList.zip** package from the GitHub repository.
