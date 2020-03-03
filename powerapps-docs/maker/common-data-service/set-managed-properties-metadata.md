@@ -2,7 +2,7 @@
 title: "Set managed properties in Common Data Service metadata | MicrosoftDocs"
 description: "Learn how to set managed properties for metadata items in a solution"
 ms.custom: ""
-ms.date: 12/19/2019
+ms.date: 03/03/2020
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -27,13 +27,12 @@ search.app:
 
 Managed properties only apply when you include metadata with a managed solution and import it into another environment. These settings allow a solution maker to have some control over the level of customization that they want to allow people who install their managed solution to have. 
 
-For unmanaged components, you can view and change the managed properties. For managed components, you can view but not change the managed properties. 
+For unmanaged components, you can view and change the managed properties in the unmanaged layer of your development environment. Then, when you import the managed solution that contains the components, you can view but not change their managed properties.
 
-> [!TIP]
-> It is generally a good idea to allow people to extend metadata in your solution that works with business data. This will allow them to tailor your solution to their needs in the same way that they can for standard entities.
->
->For metadata that provides functionality to support your solution but does not contain business data, it is a good idea to limit what customizations are allowed.
+> [!NOTE]
+> For most development environments, locking down managed properties so that solution components can’t be customized is recommended. However, if you’re an ISV, it’s generally a good idea to allow people to modify some of the components in your solution, such as allowing the business required attribute to be toggled for a field. Alternatively, you can set managed properties so that a web resource can’t be modified. 
 
+Notice that once managed properties for a component are set to allow customizations (unlocked) you can’t change it to locked.  However, you can set managed properties for a component from a locked state to an unlocked state. 
 
 ## Entity managed properties
 1.	Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select **Solutions** from the left pane. 
