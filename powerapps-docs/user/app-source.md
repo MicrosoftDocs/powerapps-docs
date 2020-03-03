@@ -26,7 +26,7 @@ The apps you build and publish with Power Apps are discovered and used in Dynami
 ## Find apps via the AppSource organization gallery
 Microsoft AppSource is now embedded in the [Dynamics 365](https://home.dynamics.com) home page and throughout the common navigation. It now includes a private gallery of apps available to you within your company. Select **Get more apps** from the home page or task pane, and navigate to the **My Organization** tab to see apps that are available to you.
 
-![Apps on Dynamics 365](media/app-source/getmoreapps_1.png)
+![Apps on Dynamics 365](media/getmoreapps_1.png)
 
 
 Apps built with Power Apps and shared with a security group or the entire company with **User** permission will appear here, instead of cluttering your home page by default. When you get an app from AppSource, it will then appear on the home page and be easily accessible throughout the experience.
