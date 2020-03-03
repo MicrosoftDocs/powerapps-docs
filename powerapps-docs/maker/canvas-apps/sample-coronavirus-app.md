@@ -1,4 +1,4 @@
-**Crisis Communication**
+# Coronoa virus: Crisis Communication
 
 Step-by-step instructions for installing and configuring the Coronavirus
 Information app for Power Apps.
@@ -9,7 +9,7 @@ Estimated time to complete these steps: **20-25 minutes**
 
  
 
-**Overview of the app**
+## Overview of the app
 
  
 
