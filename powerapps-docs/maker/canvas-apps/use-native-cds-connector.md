@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 02/27/2020
+ms.date: 03/03/2020
 ms.author: lanced
 search.audienceType: 
   - maker
