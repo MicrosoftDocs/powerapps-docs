@@ -169,6 +169,8 @@
       href: ./canvas-apps/help-desk-install.md
     - name: Meeting Capture app
       href: ./canvas-apps/sample-meeting-capture.md
+    - name: Corona virus app
+      href: ./canvas-apps/sample-coronavirus-app.md
   - name: Create your first app
     items:
     - name: 1 - Create an app from a template
