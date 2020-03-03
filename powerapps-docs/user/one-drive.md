@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 02/26/2020
+ms.date: 03/02/2020
 ms.author: mduelae
 ms.custom: ""
 ms.reviewer: ""
@@ -31,7 +31,7 @@ Before you can use OneDrive for Business, it must be enabled by your system admi
 
 ## The first time you view your documents  
 
-1. Open the record for which you want to view the associated documents<!--note from editor: Should this be "Open a record and go to the **Document Associated Grid** view."? (Which is an edit I made to be consistent with collaborate-using-sharepoint.md.) Or perhaps all similar occurrences be changed to match this one?-->. For example, open a contact record.
+1. Open a record and go to the **Document Associated Grid** view. For example, open a contact record.
 
 2.  On the open record, select the **Related** tab, and then select **Documents**.
 
@@ -74,10 +74,10 @@ Before you can use OneDrive for Business, it must be enabled by your system admi
    | Shared with me            | Documents that others shared with you that are associated with this record<!--note from editor: Edit okay? I haven't seen an "app record" defined.-->    |
    |  All Locations            |     All document locations associated with this record     |
 
-5. After<!--Style Guide--> you select a location, you'll see the documents saved in that location.
+5. After you select a location, you'll see the documents saved in that location.
 
 ## Create a new document and save it to OneDrive
-<!--note from editor: "save to" is via Style Guide. -->
+
 1. Open a record and go to the **Document Associated Grid** view. For example, open a contact record.
 
 2. On the open record, select the **Related** tab, and then select **Documents**.
@@ -101,4 +101,4 @@ Be aware of the following regarding OneDrive for Business in Common Data Service
 
 - OneDrive storage folders are created in the user's current Common Data Service language. If the language changes, new folders will be created in the new language. Old folders will remain in the previous language.  
 
-- There might<!--Style Guide--> be a delay between when the documents are shared in OneDrive and when they're available to other users. 
+- There might be a delay between when the documents are shared in OneDrive and when they're available to other users. 
