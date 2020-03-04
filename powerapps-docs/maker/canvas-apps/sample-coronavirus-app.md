@@ -137,7 +137,7 @@ Share
 |-|-|-|
 | CI_LogosAssets| To hold logo, and/or other images to be referenced from the app. The logo will be referenced in Power Apps by a direct link or via the ID number of the desired Logo. | Library for related logo(s) and other image assets for the [App Name] app. |
 | CI_configAdminSetup | For feature configuration by the Admin of the tool. **Note**: This list should be read only to all members who are not admins. | Admin configuration list for the [App Name] app.
-| CI_Contacts | Using the default Contacts Content type to capture information about contacts. (No people picker included – so may require maintenance to ensure data is up to date.)  **Note**: This depends on the global contact list type as a default content type in the list. | Contacts List for the [App Name] app.                                                         |
+| CI_Contacts | Using the default Contacts Content type to capture information about contacts. (No people picker included – so may require maintenance to ensure data is up to date.)  **Note**: This depends on the global contact list type as a default content type in the list. | Contacts List for the [App Name] app.|
 | CI_CompanyNews || Collection of Company News Items. | List for the management of news items visible in the [App Name] app. The Deprecated column can be used to filter news items out of the app (retaining them as a record). | 
 | CI_FAQ  | Frequently asked questions. | Frequently Asked Questions for the [App Name] app. The Deprecated column can be used to filter FAQ items out of the app (retaining them as a record). |
 | CI_UsefullLinks | Useful hyperlinks list | Useful hyperlinks list for the [App Name] app. The Deprecated column can be used to filter hyperlink items out of the app (retaining them as a record). |
@@ -288,8 +288,8 @@ Complete all of the fields and select **Save** once you are done.
 |-|-|-|
 | Admin email | AdminContactEmail | Used to notify others who is administering the application. |
 | Logo URL | Logo | The logo of your app which will appear in the top left corner. |
-| AAD group ID | AADGroupID | Used to send notifications to end-users about internal company updates via the *Notify users on new crisis communication news* flow. |                                                         |
-| Teams channel ID | TeamsChannelID | Used to push help requests to the central response teams' Team channel. |                                                         |
+| AAD group ID | AADGroupID | Used to send notifications to end-users about internal company updates via the *Notify users on new crisis communication news* flow. |  
+| Teams channel ID | TeamsChannelID | Used to push help requests to the central response teams' Team channel. | 
 | APP URL | AppURL | The location of the app so that the *Notify users on new crisis communication news* flow can redirect users after selecting **Read more**. | 
 | Government RSS Feed | GovernmentRSSFeed | Used to populate the world news feature within the app. Useful if you want to provide additional information to your employees from a trusted source. |
 | Notification method | PreferredSentNotification | Used by the *Notify users on new crisis communication news* flow to determine which distribution channel it should use when sending out notifications. |
@@ -316,9 +316,80 @@ Complete all of the fields and select **Save** once you are done.
    the channel ID would be `19%3ab2fa9fc20f3042a9b63fc5890e1813f8%40thread.tacv2`.
 1. Copy and paste this ID into the **Teams channel ID** field within the admin application.
 
-### Test the Crisis Communication app
+### Setup emergency contacts
+1. Navigate to **Company Contacts**
+1. Select **Create new contact**
+1. Complete the form with the contact details
 
-Test the app to make sure it works:
+![Creating a new emergency contact](media/sample-crisis-communication-app/12-Create-contact.png)
+
+| **Field name** | **Logical name in SharePoint** | **Purpose** |
+|-|-|-|
+| Full name | FullName | The name of the contact. |
+| E-mail | E-mail | The email that will shown for the contact. |
+| Country | Country | The country for the contact. This will be used to group the contacts, so can use this field for other groupings if countries doesn't make sense for you |
+| Comments | Comments | Shows additional information about the contact; useful to describe when to reach out to this contact. |
+| Deprecated | Deprecated | Allows you to hide an existing emergency contact. |
+
+### Setup initial company news
+1. Navigate to **Company News**
+1. Select **Create new post**
+1. Complete the form.
+
+![Creating a new post](media/sample-crisis-communication-app/13-Create-post.png)
+
+| **Field name** | **Logical name in SharePoint** | **Purpose** |
+|-|-|-|
+| Title | Title | The title of the update. |
+| Details | Details | The full update. You can use HTML in this field. |
+| Blurb | Blurb | A short message about the update. This will be used in the *Notify users on new crisis communication news* flow and in the gallery of updates. |
+| Deprecated | Deprecated | Allows you to hide an existing post. |
+
+### Setup helpful tips
+1. Navigate to **Helpful tips**.
+1. Select **New tip**.
+1. Complete the form.
+
+![Creating a new helpful tip](media/sample-crisis-communication-app/14-Create-Tip.png)
+
+| **Field name** | **Logical name in SharePoint** | **Purpose** |
+|-|-|-|
+| Title | Title | The title of the helpful tip. |
+| Resource URL | ResourceURL | An link to additional reading material. (optional) |
+| Sub title | SubTitle | A sub title for the tip. (optional) |
+| Description | Description | The full description of the helpful tip. |
+| Deprecated | Deprecated | Allows you to hide an helpful tip. |
+
+### Setup links
+1. Navigate to **Links**.
+1. Select **Create new link**.
+1. Complete the form.
+
+![Creating a new link](media/sample-crisis-communication-app/15-Create-Link.png)
+
+| **Field name** | **Logical name in SharePoint** | **Purpose** |
+|-|-|-|
+| Title | Title | The text of the link. |
+| URL | URL | The URL of the link. |
+| Description | Description | Additional details about the link. (optional) |
+| Deprecated | Deprecated | Allows you to hide a link. |
+
+### Setup FAQs
+1. Navigate to **FAQ**.
+1. Select **Create new FAQ**.
+1. Complete the form.
+
+![Creating a new FAQ](media/sample-crisis-communication-app/16-Create-FAQ.png)
+
+| **Field name** | **Logical name in SharePoint** | **Purpose** |
+|-|-|-|
+| Title | Title | The question of the FAQ. |
+| Rank | Rank | The order of the FAQ. |
+| Answer | Answer | The answer to the FAQ |
+| Deprecated | Deprecated | Allows you to hide an FAQ. |
+
+## Test the Crisis Communication app
+Now that you've successfully setup all of the data, you can now test the app to make sure it works:
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 2. Select **Apps** from the left navigation.
