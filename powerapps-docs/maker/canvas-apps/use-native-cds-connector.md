@@ -1,5 +1,5 @@
 ---
-title: Use native Common Data Service connector | Microsoft Docs
+title: Upgrade to use native Common Data Service connector | Microsoft Docs
 description: 
 author: tapanm-msft
 manager: kvivek
@@ -67,7 +67,7 @@ Note:  If your application is extremely large, adding your data source connectio
 To convert your app that currently uses the Dynamics 365 connector you will need to drop and re-add your connections to your data sources.  Use the steps below to convert your connections to your data sources.
 1.	Ensure that the “Improve data source experience and Common Data Service views” feature is turned “On.”
 2.	Remove your existing Dynamics 365 data source connections.
-3.	Re-add your connections to your data sources to the Common Data Service using the new data source selection experience.
+3.	Re-add your connections to your data sources to the Common Data Service using the new data source selection experience. If any of your connections to an entity is cross enviroment (other than current), Select the Entity category and then the elipses "..."  icon.  This will let you change the environment. You can then select an entity from a different environment to add to your application. Cross tenant connections do not work with the improved native connector.  You will need to use data integration to access data cross-tenant.
 4.	Save your application.
 
 
