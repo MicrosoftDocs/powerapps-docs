@@ -1,6 +1,6 @@
 ---
 title: Crisis communication app - sample template | Microsoft Docs
-description: Learn about the Crisis communication sample template in Power Apps with setup, overview, and deep dives into how the app is built.
+description: Learn about the Crisis communication sample template in Power Apps.
 author: matthewbolanos
 manager: kvivek
 ms.service: powerapps
@@ -17,13 +17,13 @@ search.app:
 
 # Set up and learn about the Crisis Communication sample app template in Power Apps
 
-Step-by-step instructions for installing and configuring the Crisis Comunication app for Power Apps.
+Step-by-step instructions for installing and configuring the Crisis Communication app for Power Apps.
 
 Estimated time to complete these steps: **20-25 minutes**
 
 ## Overview of the app
 
-The Coronavirus Information app provides a user-friendly experience to connect
+The *Coronavirus Information* app provides a user-friendly experience to connect
 end users with information about the Coronavirus. Quickly get updates on
 internal company news, get answers to frequently asked questions, and get access
 to important information like links and emergency contacts. This app requires a
@@ -43,9 +43,9 @@ small amount of setup to make it your own.
 
 ## Create a new SharePoint site
 
-All the data needed for the app will live inside of SharePoint lists, so we will first need to create a new SharePoint site.
+The data for the app will live in SharePoint lists. We'll first need to create new SharePoint site to get started.
 
-1. Login to [SharePoint Online](https://www.sharepoint.com).
+1. Sign in to [SharePoint Online](https://www.sharepoint.com).
 1. Select Create site and select next:
 
     ![Sample SharePoint site](media/sharepoint-site.png)
@@ -66,7 +66,7 @@ All the data needed for the app will live inside of SharePoint lists, so we will
 ## Create the SharePoint lists for app
 
 The app requires multiple lists that store all the data. To automate the
-creation of the SharePoint lists, you can leverage the *DeploySPLists* flow available from the downloaded [assets package](#prerequisites).
+creation of the SharePoint lists, you can use the *DeploySPLists* flow available from the downloaded [assets package](#prerequisites).
 
 ### Import the flow
 
@@ -88,8 +88,8 @@ creation of the SharePoint lists, you can leverage the *DeploySPLists* flow avai
     ![Create a new connection](media/create-connection.png)
 
 1. Search for the name of the connection, for example *SharePoint*.
-1. Select the desired connection and complete the necessary steps.
-1. Select **Save** once you have selected a connection.
+1. Select the appropriate connection.
+1. Select **Save**.
 1. Select **Import**.
 
 ### Edit the flow
@@ -125,7 +125,7 @@ Share
 |-|-|-|-|
 | CI_LogosAssets | 101 | To hold logo, and/or other images to be referenced from the app. The logo will be referenced in Power Apps by a direct link or via the ID number of the desired Logo. | Library for related logo(s) and other image assets for the [App Name] app. |
 | CI_configAdminSetup | 100 | For feature configuration by the Admin of the tool. **Note**: This list should be read only to all members who are not admins. | Admin configuration list for the [App Name] app.
-| CI_Contacts | 100 | Using the default Contacts Content type to capture information about contacts. (No people picker included – so may require maintenance to ensure data is up-to-date.)  **Note**: This depends on the global contact list type as a default content type in the list. | Contacts List for the [App Name] app.                                                         |
+| CI_Contacts | 100 | Using the default Contacts Content type to capture information about contacts. (No people picker included – so may require maintenance to ensure data is up to date.)  **Note**: This depends on the global contact list type as a default content type in the list. | Contacts List for the [App Name] app.                                                         |
 | CI_CompanyNews | 100 | Collection of Company News Items. | List for the management of news items visible in the [App Name] app. The Deprecated column can be used to filter news items out of the app (retaining them as a record). | 
 | CI_FAQ | 100 | Frequently asked questions. | Frequently Asked Questions for the [App Name] app. The Deprecated column can be used to filter FAQ items out of the app (retaining them as a record). |
 | CI_UsefullLinks | 100 | Useful hyperlinks list | Useful hyperlinks list for the [App Name] app. The Deprecated column can be used to filter hyperlink items out of the app (retaining them as a record). |
@@ -171,7 +171,7 @@ connect it to your new data sources.
 
     ![Data sources](media/data-sources.png)
 
-1. **Remove** of the existing SharePoint lists in side of the app since they do
+1. **Remove** existing SharePoint lists inside of the app as they do
     not point to your current SharePoint site:
 
     ![Remove data sources](media/remove-data-source.png)
@@ -200,7 +200,7 @@ connect it to your new data sources.
 
 ### Create initial content for the app
 
-To create initial content for you app, please refer to the **administration doc
+To create initial content for your app, refer to the **administration doc
 article**. Before proceeding to the next step, be sure to *add your admin
 settings*.
 
@@ -208,8 +208,7 @@ settings*.
 
 ### Test the Coronavirus Reference app
 
-Now that you have your app deployed and your content added, you can now test
-your app to make sure that it works.
+Test the app to make sure it works:
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 2. Select **Apps** from the left navigation.
@@ -217,11 +216,11 @@ your app to make sure that it works.
 
 ## Import and setup the notification flow
 
-The app leverages a flow to send notifications to end users whenever there is a new company update.
+The app uses a flow to send notifications to end users whenever there is a new company update.
 
 ### Import the news notification flow
 
-1. Navigate to [flow.microsoft.com](http://flow.microsoft.com)
+1. Navigate to [flow.microsoft.com](https://flow.microsoft.com)
 1. Select **My flows** from the left navigation.
 1. Select the **Import** button in the command bar.
 1. Upload the **NotifyUsersOfCoronavirusNews.zip** package from the GitHub
@@ -243,9 +242,9 @@ The app leverages a flow to send notifications to end users whenever there is a 
 
     ![Notifications](media/notifications.png)
 
-1. Select the desired connection and complete the necessary steps.
+1. Select the appropriate connection.
 1. If you are creating a connection to **PowerApps Notifications (preview),**
-    you will see the following dialog.
+    you'll see the following dialog:
 
     ![Notifications dialog](media/notifications-dialog.png)
 
