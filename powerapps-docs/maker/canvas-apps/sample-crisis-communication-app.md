@@ -275,7 +275,7 @@ To manage the app you just imported, you'll want to repeat the same steps for th
 1. Add the lists from your own SharePoint site. Start by
     searching for SharePoint in the search bar:
 
-    ![Search SharePoint](media/sharepoint.png)
+    ![Search SharePoint](media/sample-crisis-communication-app/sharepoint.png)
 
 1. Select **SharePoint** and choose a connection:
 
@@ -292,8 +292,8 @@ To manage the app you just imported, you'll want to repeat the same steps for th
 
 1. **Save** and **Publish** the admin app.
 
-
 ## Create initial content for the app
+
 Now that you have successfully imported both the Crisis Communication app and its admin app, you
 can now start creating the initial content. To start, open up the Crisis Communication Admin app.
 
@@ -307,6 +307,7 @@ also setup key settings for the accompanying flows.
   by editing the SharePoint lists manually.
 
 ### Setup key parameters under Admin Settings
+
 To initialize your app, you need to provide all of the required fields by navigating to **Admin Settings**.
 
 Complete all of the fields and select **Save** once you are done.
@@ -333,6 +334,7 @@ Complete all of the fields and select **Save** once you are done.
 1. Paste the ID into the **AAD group ID** field within the admin application.
 
 ### Setup emergency contacts
+
 1. Navigate to **Company Contacts**
 1. Select **Create new contact**
 1. Complete the form with the contact details
@@ -346,6 +348,7 @@ Complete all of the fields and select **Save** once you are done.
 | Deprecated | Deprecated | Allows you to hide an existing emergency contact. |
 
 ### Setup initial company news
+
 1. Navigate to **Company News**
 1. Select **Create new post**
 1. Complete the form.
@@ -358,6 +361,7 @@ Complete all of the fields and select **Save** once you are done.
 | Deprecated | Deprecated | Allows you to hide an existing post. |
 
 ### Setup helpful tips
+
 1. Navigate to **Helpful tips**.
 1. Select **New tip**.
 1. Complete the form.
@@ -371,6 +375,7 @@ Complete all of the fields and select **Save** once you are done.
 | Deprecated | Deprecated | Allows you to hide an helpful tip. |
 
 ### Setup links
+
 1. Navigate to **Links**.
 1. Select **Create new link**.
 1. Complete the form.
@@ -383,6 +388,7 @@ Complete all of the fields and select **Save** once you are done.
 | Deprecated | Deprecated | Allows you to hide a link. |
 
 ### Setup FAQs
+
 1. Navigate to **FAQ**.
 1. Select **Create new FAQ**.
 1. Complete the form.
@@ -395,6 +401,7 @@ Complete all of the fields and select **Save** once you are done.
 | Deprecated | Deprecated | Allows you to hide an FAQ. |
 
 ## Test and share the app
+
 Now that you've successfully setup all of the data, you can now test the app to make sure it works:
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
@@ -477,12 +484,12 @@ The app uses a flow to send notifications to end users whenever there is a new c
 
 1. Select **Save** to commit your changes.
 
-
 > [!NOTE]
 > You may receive an error if one of your connections has not been authorized yet.
   If this happens, please open the card with the unauthorized connection and reauthorize.
 
 ### Test the news notification flow
+
 To test the news notification flow, go back to the admin app and create a new internal company update.
 Afterwards, all of the users within your distribution list will receive an update by your preferred notification
 preference.
@@ -501,43 +508,43 @@ If needed, download [Power BI Desktop](https://powerbi.microsoft.com/downloads).
 the 'CI_Employee Status' SharePoint list created before, so let's get to it first. Open the list in your site and select List
 Settings under the settings icon:
 
-![Employee Status List Settings](media/sample-crisis-communication-app/PBI-001-SharePointList-ListSettings.PNG)
+![Employee Status List Settings](media/sample-crisis-communication-app/001-SharePointList-ListSettings-nolines.PNG)
 
 Take a note of the site name and the list id on the browser address bar:
 
-![Employee Status List and Site Id](media/sample-crisis-communication-app/PBI-002-SharePointList-AddressAndId.PNG)
+![Employee Status List and Site Id](media/sample-crisis-communication-app/002-SharePointList-AddressAndId-nolines.PNG)
 
 At this point we are ready to open the Power BI report; launch Power BI and open the 'Presence status report.pbix'
 file. Move the mouse over the right side of the CI_Employee Status data source until you see the ellipsis, select
 it and select the 'Edit query' option:
 
-![Edit Query](media/sample-crisis-communication-app/PBI-003-PowerBI-EditQuery.PNG)
+![Edit Query](media/sample-crisis-communication-app/003-PowerBI-EditQuery-nolines.PNG)
 
 Once the Power Query editor is opened, right-click the CI_Employee Status data source, and select "Advanced Editor":
 
-![Power Query Advanced Editor](media/sample-crisis-communication-app/PBI-004-PowerQuery-AdvancedEditor.PNG)
+![Power Query Advanced Editor](media/sample-crisis-communication-app/004-PowerQuery-AdvancedEditor-nolines.PNG)
 
 Here is where we will use the site name and list id from the SharePoint list: copy the new SharePoint site in the
-table (1), and the list id in the three places where we have a GUID (2), and select Done.
+table, and the list id in the three places where we have a GUID as highlighted, and select Done.
 
-![Power Query Advanced Editor Updates](media/sample-crisis-communication-app/PBI-005-PowerQuery-AdvancedEditorUpdates.PNG)
+![Power Query Advanced Editor Updates](media/sample-crisis-communication-app/005-PowerQuery-AdvancedEditorUpdates-nolines.PNG)
 
 Finally, select 'Close & Apply' to update the report to pull data from your SharePoint list.
 
-![Power Query Close and Apply](media/sample-crisis-communication-app/PBI-006-PowerQuery-CloseAndApply.PNG)
+![Power Query Close and Apply](media/sample-crisis-communication-app/006-PowerQuery-CloseAndApply-nolines.PNG)
 
 We now have a Power BI report that shows both the geographical information for office absences for the current day, and
 a trend of such absences over many days. We can now publish the report so other people in the organization can see it.
 
-![Power BI Publish Report](media/sample-crisis-communication-app/PBI-007-PowerBI-Publish.PNG)
-
-
+![Power BI Publish Report](media/sample-crisis-communication-app/007-PowerBI-Publish-nolines.PNG)
 
 ## Integrate your app into Teams
+
 Now that you have a functioning app that has been shared with everyone, you can deploy the app using Teams and create
 a crisis management team within Microsoft Teams to respond to issues.
 
 ### Deploy the app to the app bar
+
 If you are a Teams admin, you can push the app to all of your users within the Teams app bar.
 
 ![App in Teams](media/sample-crisis-communication-app/19-App-in-Teams.png)
@@ -545,31 +552,44 @@ If you are a Teams admin, you can push the app to all of your users within the T
 1. Sign in to [Power Apps](https://make.powerapps.com).
 1. Select **Apps** from the left navigation.
 1. Select the **...** menu for the **Crisis Communication** app.
-1. Select **Add to Teams**
-![Add to Teams](media/sample-crisis-communication-app/24-Add-to-Teams.png)
-1. Select **Download app**
-![Download app](media/sample-crisis-communication-app/25-Download-App.png)
+1. Select **Add to Teams**.
+
+    ![Add to Teams](media/sample-crisis-communication-app/24-Add-to-Teams.png)
+
+1. Select **Download app**.
+
+    ![Download app](media/sample-crisis-communication-app/25-Download-App.png)
+
 1. Open **Teams**
 1. Navigate to **Apps** from the left app bar.
 1. Select **Upload a custom app**.
 1. If you are a Teams admin, you will see the ability to upload an app for your entire tenant. Select **Upload for Contoso**.
-![Upload](media/sample-crisis-communication-app/26-Upload-for-Contoso.png)
+
+    ![Upload](media/sample-crisis-communication-app/26-Upload-for-Contoso.png)
+
 1. Upload the file that you downloaded from Power Apps.
 1. Navigate to the [Teams admin center](https://admin.teams.microsoft.com/dashboard)
 1. Select **Setup Policies** under **Teams apps** in the left navigation.
-![App setup policies](media/sample-crisis-communication-app/27-Setup-Policies.png)
-1. Select **Global (Org-wide setup)**
-1. Select **Add apps**
-![Add app](media/sample-crisis-communication-app/28-Add-App.png)
+
+    ![App setup policies](media/sample-crisis-communication-app/27-Setup-Policies.png)
+
+1. Select **Global (Org-wide setup)**.
+1. Select **Add apps**.
+
+    ![Add app](media/sample-crisis-communication-app/28-Add-App.png)
+
 1. Search for and select the **Crisis Information** app you uploaded.
-![Add pinned app](media/sample-crisis-communication-app/29-Add-Pinned-App.png)
-1. Select **Add*.
+
+    ![Add pinned app](media/sample-crisis-communication-app/29-Add-Pinned-App.png)
+
+1. Select **Add**.
 1. Select **Save**.
 
 > [!NOTE]
 > It may take up to 24 hours for users to see the app automatically pinned in their app bar.
 
 ### Create a central crisis management Teams team
+
 To coordinate your crisis response, you'll want to create a central Teams team for your crisis management team
 and populate it with all of the relevant information.
 
@@ -577,7 +597,8 @@ and populate it with all of the relevant information.
 1. Select **Teams** from the left app bar
 1. Select **Join or create a Team**
 1. Select **Create team** and complete the remaining steps
-![Create team](media/sample-crisis-communication-app/23-Create-Team.png)
+
+    ![Create team](media/sample-crisis-communication-app/23-Create-Team.png)
 
 Once you've successfully created your team, you can pin relevant information as tabs. For example,
 you may want to pin the crisis management admin app or the Power BI report to your team. To add the admin app as a tab:
@@ -585,14 +606,14 @@ you may want to pin the crisis management admin app or the Power BI report to yo
 1. Select the **+** button
 1. Search for and select **Power Apps**
 1. Search for and select **Crisis Information Admin**
-![Pin app](media/sample-crisis-communication-app/32-Pin-Teams-app.png)
+
+    ![Pin app](media/sample-crisis-communication-app/32-Pin-Teams-app.png)
+
 1. Select **Save**
 
 To add the Power BI report:
+
 1. Select the **+** button.
-1. Search for and select **Power BI**
-1. Search for and select your Power BI report
-1. Select **Save**
-
-
-
+1. Search for and select **Power BI**.
+1. Search for and select your Power BI report.
+1. Select **Save**.
