@@ -47,7 +47,7 @@ The work effort here will vary based upon the complexity of your environment. We
 The strategic direction of the Unified Interface is already in the public domain through events such as:
 - [MBAS: BRK2073 Microsoft Power Apps: Run one UI – the future of canvas, model-driven, and Unified Interface in Power Apps](https://powerusers.microsoft.com/t5/MBAS-Gallery/Microsoft-PowerApps-Run-one-UI-the-future-of-canvas-model-driven/td-p/301580)
 - [BRK3031 Implementation Best Practices for Dynamics 365: Making the move to modern Unified Interface](https://powerusers.microsoft.com/t5/Microsoft-Business-Applications/Implementation-Best-Practices-for-Dynamics-365-Making-the-move/m-p/299928)
-- [Applications/Implementation-Best-Practices-for-Dynamics-365-Makingthe-move/m-p/299928 ](https://powerusers.microsoft.com/t5/Microsoft-Business-Applications/Implementation-Best-Practices-for-Dynamics-365-Making-the-move/m-p/299928)
+
 
 ### As an on-premises customer looking to move to the cloud, what is the best approach to adopt Unified Interface?
 
