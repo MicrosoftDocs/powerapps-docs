@@ -24,7 +24,7 @@ search.app:
   - D365CE
 ---
 
-# Solution patches 
+# Create solution patches 
 A patch contains only the changes for a parent managed solution, such as adding or editing components and assets. When patches are imported, they’re layered on top of the parent solution. When you clone a solution, the system rolls up all related patches into the base solution and creates a new version.  
   
  When you’re working with patches and cloned solutions, keep the following information in mind:  
