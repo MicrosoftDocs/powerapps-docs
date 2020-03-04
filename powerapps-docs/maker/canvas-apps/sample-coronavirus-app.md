@@ -315,8 +315,6 @@ also setup key settings for the accompanying flows.
 ### Setup key parameters under Admin Settings
 To initialize your app, you need to provide all of the required fields by navigating to **Admin Settings**.
 
-![Admin app](media/sample-crisis-communication-app/10-Admin-Settings.png)
-
 Complete all of the fields and select **Save** once you are done.
 
 | **Field name** | **Logical name in SharePoint** | **Purpose** |
@@ -345,8 +343,6 @@ Complete all of the fields and select **Save** once you are done.
 1. Select **Create new contact**
 1. Complete the form with the contact details
 
-![Creating a new emergency contact](media/sample-crisis-communication-app/12-Create-contact.png)
-
 | **Field name** | **Logical name in SharePoint** | **Purpose** |
 |-|-|-|
 | Full name | FullName | The name of the contact. |
@@ -360,8 +356,6 @@ Complete all of the fields and select **Save** once you are done.
 1. Select **Create new post**
 1. Complete the form.
 
-![Creating a new post](media/sample-crisis-communication-app/13-Create-post.png)
-
 | **Field name** | **Logical name in SharePoint** | **Purpose** |
 |-|-|-|
 | Title | Title | The title of the update. |
@@ -373,8 +367,6 @@ Complete all of the fields and select **Save** once you are done.
 1. Navigate to **Helpful tips**.
 1. Select **New tip**.
 1. Complete the form.
-
-![Creating a new helpful tip](media/sample-crisis-communication-app/14-Create-Tip.png)
 
 | **Field name** | **Logical name in SharePoint** | **Purpose** |
 |-|-|-|
@@ -389,8 +381,6 @@ Complete all of the fields and select **Save** once you are done.
 1. Select **Create new link**.
 1. Complete the form.
 
-![Creating a new link](media/sample-crisis-communication-app/15-Create-Link.png)
-
 | **Field name** | **Logical name in SharePoint** | **Purpose** |
 |-|-|-|
 | Title | Title | The text of the link. |
@@ -402,8 +392,6 @@ Complete all of the fields and select **Save** once you are done.
 1. Navigate to **FAQ**.
 1. Select **Create new FAQ**.
 1. Complete the form.
-
-![Creating a new FAQ](media/sample-crisis-communication-app/16-Create-FAQ.png)
 
 | **Field name** | **Logical name in SharePoint** | **Purpose** |
 |-|-|-|
