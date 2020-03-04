@@ -268,7 +268,7 @@ Now that you have successfully imported both the Crisis Communication app and it
 can now start creating the initial content. To start, open up the Crisis Communication Admin app.
 
 
-![Admin app](sample-crisis-communication-app/09-Admin-App.png)
+![Admin app](media/sample-crisis-communication-app/09-Admin-App.png)
 
 The admin application allows you to customize all of the information within the Crisis communication app and
 also setup key settings for the accompanying flows.
@@ -280,7 +280,7 @@ also setup key settings for the accompanying flows.
 ### Setup key parameters under Admin Settings
 To initialize your app, you need to provide all of the required fields by navigating to **Admin Settings**.
 
-![Admin app](sample-crisis-communication-app/10-Admin-Settings.png)
+![Admin app](media/sample-crisis-communication-app/10-Admin-Settings.png)
 
 Complete all of the fields and select **Save** once you are done.
 
@@ -302,7 +302,7 @@ Complete all of the fields and select **Save** once you are done.
 1. Search for and select your distrobution group.
 1. Copy the **Object Id** field.
 
-![Getting the AAD ID in Azure](sample-crisis-communication-app/11-AAD-Group-ID.png)
+![Getting the AAD ID in Azure](media/sample-crisis-communication-app/11-AAD-Group-ID.png)
 
 1. Paste the ID into the **AAD group ID** field within the admin application.
 
