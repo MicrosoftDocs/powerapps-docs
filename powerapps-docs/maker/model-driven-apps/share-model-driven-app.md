@@ -10,7 +10,7 @@ ms.service: powerapps
 ms.devlang: na
 ms.topic: conceptual
 ms.component: model
-ms.date: 12/17/2019
+ms.date: 03/04/2020
 ms.author: matp
 search.audienceType: 
   - maker
@@ -33,7 +33,7 @@ Generally model-driven apps contain custom entities and other custom configurati
 > [!NOTE]
 > This step can be skipped if existing roles grant access to the data in your app. 
 
-## Share a model-driven app 
+## Preview: Share a model-driven app 
 Sharing a model-driven app involves two primary steps. First, associate a one or more security role(s) with the app then assign the security role(s) to users. 
 1. Visit https://make.powerapps.com
 2. Select a model-driven app and click **Share**.
