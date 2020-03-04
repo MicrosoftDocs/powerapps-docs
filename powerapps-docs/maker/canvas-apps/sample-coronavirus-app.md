@@ -65,7 +65,7 @@ The data for the app will live in SharePoint lists. We'll first need to create n
 The app requires multiple lists that store all the data. To automate the
 creation of the SharePoint lists, you can use the *DeploySPLists* flow available from the downloaded [assets package](#prerequisites).
 
-### Import the flow
+### Import the SharePoint list deployment flow
 
 1. Go to [flow.microsoft.com](https://flow.microsoft.com)
 1. Select **My flows** from the left navigation.
@@ -89,7 +89,7 @@ creation of the SharePoint lists, you can use the *DeploySPLists* flow available
 1. Select **Save**.
 1. Select **Import**.
 
-### Edit the flow
+### Edit the SharePoint list deployment flow
 
 1. Once the import is done, go back to **My flows** and refresh the list of
     Flows
@@ -104,15 +104,25 @@ creation of the SharePoint lists, you can use the *DeploySPLists* flow available
 
 1. Select **Save** to commit your changes.
 
-### Run the flow
+### Run the SharePoint list deployment flow
 
 1. Go back to the detail screen for the **DeploySPList flow.**
 1. Select **Run** from the command bar.
 1. Select **Continue** to and then **Run flow** to trigger the flow.
 
+> [!NOTE]
+> You may receive an error stating that location services are required.
+  If this happens, please allow location services to Power Automate and refresh the page before trying again.
+
     ![Sign in to run the flow](media/sign-in-flow.png)
 
     ![Run the flow](media/run-flow.png)
+
+
+> [!NOTE]
+> - All list columns listed above should be considered as dependencies.
+    Please protect the lists from accidental schema changes (for example, adding
+    new columns is allowed, but deleting columns may break the app.)
 
 The flow will then create the following SharePoint lists within your defined
 Share
@@ -145,7 +155,7 @@ connect it to your new data sources.
 1. Sign in to [Power Apps](https://make.powerapps.com).
 1. Select **Apps** from the left navigation.
 1. Select **Import** from the command bar.
-1. Upload the **CrisisCommunicationApp.zip** file from the GitHub repository:
+1. Upload the **CrisisCommunication.zip** file from the GitHub repository:
 
     ![Import app package](media/import-app.png)
 
@@ -186,18 +196,67 @@ connect it to your new data sources.
 
     ![SharePoint site URL](media/site-url.png)
 
-1. Select all the SharePoint lists and select **Connect**:
+1. Select all the SharePoint lists and libraries and select **Connect**:
 
     ![Connect to SharePoint lists](media/sharepoint-lists.png)
 
 1. **Save** and **Publish** the app.
 
 ## Import and setup the admin app
+To manage the app you just imported, you'll want to repeat the same steps for the admin app.
+
+1. Sign in to [Power Apps](https://make.powerapps.com).
+1. Select **Apps** from the left navigation.
+1. Select **Import** from the command bar.
+1. Upload the **CrisisCommunicationAdminApp.zip** file from the GitHub repository:
+
+    ![Import app package](media/import-app.png)
+
+1. Select **Import**.
+
+### Update the SharePoint connections
+
+1. Go back to the **Apps** list.
+1. Select **More Commands** (...) for **Crisis Communication Admin App** app.
+1. Select **Edit** from the contextual menu:
+
+    ![Edit app](media/sample-crisis-communication-app/08-Edit-Admin-App.png)
+
+1. **Sign in** or create any necessary connections and select **Allow**:
+
+1. Navigate to the data sources in the left pane:
+
+    ![Data sources](media/data-sources.png)
+
+1. **Remove** existing SharePoint lists inside of the app as they do
+    not point to your current SharePoint site:
+
+    ![Remove data sources](media/remove-data-source.png)
+
+1. Add the lists from your own SharePoint site. Start by
+    searching for SharePoint in the search bar:
+
+    ![Search SharePoint](media/sharepoint.png)
+
+1. Select **SharePoint** and choose a connection:
+
+    ![SharePoint connection](media/sharepoint-connection.png)
+
+1. Copy and paste the URL to your SharePoint site in the text field and select
+    **Connect**:
+
+    ![SharePoint site URL](media/site-url.png)
+
+1. Select all the SharePoint lists and libraries and select **Connect**:
+
+    ![Connect to SharePoint lists](media/sharepoint-lists.png)
+
+1. **Save** and **Publish** the admin app.
 
 ### Create initial content for the app
 
 To create initial content for your app, refer to the **administration doc
-article**. Before proceeding to the next step, be sure to *add your admin
+article**. Before proceeding to the next step, be sure to at least *add your admin
 settings*.
 
 ### Test the Crisis Communication app
@@ -217,10 +276,10 @@ The app uses a flow to send notifications to end users whenever there is a new c
 1. Navigate to [flow.microsoft.com](https://flow.microsoft.com)
 1. Select **My flows** from the left navigation.
 1. Select the **Import** button in the command bar.
-1. Upload the **NotifyUsersOfCrisisNews.zip** package from the GitHub
+1. Upload the **CrisisCommunicationNewsNotification.zip** package from the GitHub
     repository:
 
-    ![Upload NotifyUsersOfCrisisNews.zip](media/upload-news-notification.png)
+    ![Upload CrisisCommunicationNewsNotification.zip](media/upload-news-notification.png)
 
 1. Add connections for the new Flow by selecting the **Select during import**
     link for each connection and completing the form:
@@ -267,7 +326,7 @@ The app uses a flow to send notifications to end users whenever there is a new c
 ### Edit the news notification flow
 
 1. Once the import is done, go back to **My flows**.
-1. Select the newly imported flow **Notify users of crisis news**.
+1. Select the newly imported flow **Notify users on new crisis communication news**.
 1. Select **Edit** from the command bar.
 1. Open the card called **When a new item is posted**
 1. Change the **Site Address** to the name of your SharePoint site.
@@ -282,4 +341,12 @@ The app uses a flow to send notifications to end users whenever there is a new c
 
 1. Select **Save** to commit your changes.
 
-Test the news notification flow.
+
+> [!NOTE]
+> You may receive an error if one of your connections has not been authorized yet.
+  If this happens, please open the card with the unauthorized connection and reauthorize.
+
+### Edit the news notification flow
+To test the news notification flow, go back to the admin app and create a new internal company update.
+Afterwards, all of the users within your distribution list will receive an update by your preferred notification
+preference.
