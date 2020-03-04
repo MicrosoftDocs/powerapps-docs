@@ -47,7 +47,7 @@ The following is the list of videos created by Power Apps community.
 |[Power Apps component framework Academy: Deep dive manifest file for field template](https://www.youtube.com/watch?time_continue=522&v=w40zqSsYEy0)| Learn how to define a manifest file for field type code components.|
 |[Power Apps component framework Academy: Dataset components](https://www.youtube.com/watch?v=OEiM97nTD0w)| Learn more detail about dataset components and how different methods of dataset API are utilized.|
 |[Power Apps component framework Academy: Importing into your organization](https://www.youtube.com/watch?v=2uO2L2xTPkc)| Learn how to package and import code components into Common Data Service.|
-|[Power Apps component framewrok revolution](https://youtu.be/_SjEQ-7LK_Q)|Learn how component framework has enhanced the visualization in model-driven and canvas apps|
+|[Power Apps component framework revolution](https://youtu.be/_SjEQ-7LK_Q)|Learn how component framework has enhanced the visualization in model-driven and canvas apps|
 |[Power Apps component framework Academy: Using React and Office UI fabric](https://www.youtube.com/watch?v=e7JNgGlI3nE)| Learn how to use React and UI fabric in code components.|
 |[Power Apps component framework Academy: Usage of additional frameworks](https://www.youtube.com/watch?v=cOPyyDdsEjQ)| Learn how to use additional frameworks in building code components.|
 [Power Apps component framework Academy: Working with manifest file](https://www.youtube.com/watch?v=qbSpDVTxt7U&t=5s)| Introductory video on manifest file and various methods that need to be defined for developing code components in the manifest file.|

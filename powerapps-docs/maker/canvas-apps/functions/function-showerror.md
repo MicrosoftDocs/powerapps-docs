@@ -54,9 +54,11 @@ Note: This function was previously named **ShowError** when it could only displa
 
 1. Add a **Button** control to your screen.
 
-2. Set the **OnSelect** property of the **Button** to:
+2. Set the **OnSelect** property of the **Button** to the formula:
 
-	**Notify( "Hello, World" )**
+    ```powerapps-dot
+	Notify( "Hello, World" )
+    ```
 
 3. Click or press the button.  
 
@@ -66,7 +68,9 @@ Note: This function was previously named **ShowError** when it could only displa
 
 4. Change the type of message to indicate an error.  Add a second argument to our formula:
 
-	**Notify( "Hello, World", NotificationType.Error )**
+    ```powerapps-dot
+	Notify( "Hello, World", NotificationType.Error )
+    ```
 
 5. Click or press the button.
 
@@ -76,7 +80,9 @@ Note: This function was previously named **ShowError** when it could only displa
 
 4. Change the type of message to indicate a warning.  Change the second argument in our formula:
 
-	**Notify( "Hello, World", NotificationType.Warning, 4000 )**
+    ```powerapps-dot
+	Notify( "Hello, World", NotificationType.Warning, 4000 )
+    ```
 
 5. Click or press the button.
 
@@ -86,7 +92,9 @@ Note: This function was previously named **ShowError** when it could only displa
 
 4. Change the type of message to indicate success.  Change the second argument in our formula:
 
-	**Notify( "Hello, World", NotificationType.Success, 0 )**
+    ```powerapps-dot
+	Notify( "Hello, World", NotificationType.Success, 0 )
+    ```
 
 5. Click or press the button.
 
