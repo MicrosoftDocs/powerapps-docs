@@ -166,7 +166,7 @@ connect it to your new data sources.
 1. Select **Import** from the command bar.
 1. Upload the **CrisisCommunication.zip** file from the GitHub repository:
 
-    ![Import app package](media/import-app.png)
+    ![Import app package](media/sample-crisis-communication-app/31-Import-App.png)
 
 1. Select **Import**.
 
@@ -522,17 +522,23 @@ If you are a Teams admin, you can push the app to all of your users within the T
 1. Select **Apps** from the left navigation.
 1. Select the **...** menu for the **Crisis Communication** app.
 1. Select **Add to Teams**
+![Add to Teams](media/sample-crisis-communication-app/24-Add-to-Teams.png)
 1. Select **Download app**
+![Download app](media/sample-crisis-communication-app/25-Download-App.png)
 1. Open **Teams**
 1. Navigate to **Apps** from the left app bar.
 1. Select **Upload a custom app**.
 1. If you are a Teams admin, you will see the ability to upload an app for your entire tenant. Select **Upload for Contoso**.
+![Upload](media/sample-crisis-communication-app/26-Upload-for-Contoso.png)
 1. Upload the file that you downloaded from Power Apps.
 1. Navigate to the [Teams admin center](https://admin.teams.microsoft.com/dashboard)
 1. Select **Setup Policies** under **Teams apps** in the left navigation.
+![App setup policies](media/sample-crisis-communication-app/27-Setup-Policies.png)
 1. Select **Global (Org-wide setup)**
 1. Select **Add apps**
+![Add app](media/sample-crisis-communication-app/28-Add-App.png)
 1. Search for and select the **Crisis Information** app you uploaded.
+![Add pinned app](media/sample-crisis-communication-app/29-Add-Pinned-App.png)
 1. Select **Add*.
 1. Select **Save**.
 
@@ -547,6 +553,7 @@ and populate it with all of the relevant information.
 1. Select **Teams** from the left app bar
 1. Select **Join or create a Team**
 1. Select **Create team** and complete the remaining steps
+![Create team](media/sample-crisis-communication-app/23-Create-Team.png)
 
 Once you've successfully created your team, you can pin relevant information as tabs. For example,
 you may want to pin the crisis management admin app or the Power BI report to your team. To add the admin app as a tab:
@@ -554,6 +561,7 @@ you may want to pin the crisis management admin app or the Power BI report to yo
 1. Select the **+** button
 1. Search for and select **Power Apps**
 1. Search for and select **Crisis Information Admin**
+![Pin app](media/sample-crisis-communication-app/32-Pin-Teams-app.png)
 1. Select **Save**
 
 To add the Power BI report:
