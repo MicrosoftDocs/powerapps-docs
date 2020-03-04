@@ -31,9 +31,11 @@ You can check the type of a portal from the [Power Apps Portals admin center](./
 
 ![Power Apps portals type](./media/power-apps-portals-type.png)
 
-For add-on portals, the portal type has 'add-on' suffix added. For example, a production add-on portal type lists as 'Production (add-on)'.
+Additional differences between Power Apps portals with capacity-based licenses and add-on based licenses:
 
-Power Apps portals has a [different caching mechanism](https://powerapps.microsoft.com/en-us/blog/publishing-changes-to-powerapps-portals/) in comparison with add-on based licenses portals. However, provisioning method is different for portals with capacity-based licenses from add-on based licenses.
+- For add-on portals, the portal type has 'add-on' suffix added. For example, a production add-on portal type lists as 'Production (add-on)'.
+- Power Apps portals have a [different caching mechanism](https://powerapps.microsoft.com/en-us/blog/publishing-changes-to-powerapps-portals/) in comparison with add-on based licenses portals.
+- Provisioning method is different for portals with capacity-based licenses from add-on based licenses.
 
 You can create Power Apps portal with capacity-based license using steps described in following articles:
 
