@@ -20,7 +20,7 @@ search.app:
 
 Provides methods to get or set information about the view selector of the subgrid control. If the subgrid control is not configured to display the view selector, calling the **ViewSelector** methods will throw an error.
 
-ViewSelector is available only for read-only grids. ViewSelector is returned by the **gridContext**.[getViewSelector](gridcontrol/getViewSelector.md) method.
+ViewSelector is returned by the **gridContext**.[getViewSelector](gridcontrol/getViewSelector.md) method.
 
 ```JavaScript
 var viewSelector = gridContext.getViewSelector();

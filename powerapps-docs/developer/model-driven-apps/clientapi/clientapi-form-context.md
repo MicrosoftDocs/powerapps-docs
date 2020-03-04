@@ -111,6 +111,8 @@ reference)](reference/collections.md).
 
 [getFormContext method](reference/executioncontext/getFormContext.md)<br/>
 [getGlobalContext method](reference/xrm-utility/getGlobalContext.md)<br/>
+[getAttribute method](reference/attributes.md)<br/>
+[getControl method](reference/controls/getcontrol.md)<br/>
 [Execution context methods](reference/execution-context.md) 
 
  

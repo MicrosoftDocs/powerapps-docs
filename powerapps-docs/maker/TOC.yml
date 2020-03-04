@@ -8,6 +8,22 @@
     href: dev-community-plan.md
   - name: "What's new?"
     href: ../whats-new.md
+  - name: "Learning catalog"
+    items: 
+    - name: "Learning catalog"
+      href: ../learning-catalog/get-started.md
+    - name: Business Decision Maker
+      href: ../learning-catalog/bdm.md
+    - name: App maker
+      href: ../learning-catalog/app-maker.md
+    - name: Developer
+      href: ../learning-catalog/developer.md
+    - name: Administrator
+      href: ../learning-catalog/administrator.md
+    - name: Functional consultant
+      href: ../learning-catalog/functional-consultant.md
+    - name: Solution architect
+      href: ../learning-catalog/solution-architect.md
 - name: Find and run apps
   href: ../user/index.md
   items:
@@ -75,8 +91,14 @@
         href: ../user/track-your-progress-with-dashboard-and-charts.md
       - name: Add Power BI dashboards 
         href: ../user/add-powerbi-dashboards.md
-      - name: Collaborate using SharePoint 
-        href: ../user/collaborate-using-sharepoint.md        
+    - name: Collaboration
+      items:
+      - name: Use OneDrive for Business     
+        href: ../user/one-drive.md
+      - name: Take notes by using OneNote      
+        href: ../user/onenote.md  
+      - name: Collaborate using SharePoint  
+        href: ../user/collaborate-using-sharepoint.md
     - name: Search records
       items:
       - name: Compare search options
@@ -547,6 +569,8 @@
             href: ./canvas-apps/functions/function-hashtags.md
           - name: Hour
             href: ./canvas-apps/functions/function-datetime-parts.md
+          - name: Identifiers
+            href: ./canvas-apps/functions/operators.md
           - name: If
             href: ./canvas-apps/functions/function-if.md
           - name: IfError
@@ -863,8 +887,10 @@
       href: ./canvas-apps/dev-appsource-test-drive.md
     - name: Create a component
       items:
-        - name: Overview
+        - name: Components overview
           href: ./canvas-apps/create-component.md
+        - name: Component library
+          href: ./canvas-apps/component-library.md
         - name: Behavior formulas
           href: ./canvas-apps/component-behavior.md
     - name: Embed canvas apps in your applications
@@ -1018,6 +1044,8 @@
           href: ./model-driven-apps/create-edit-views-app-designer.md
         - name: Choose and configure columns in views
           href: ./model-driven-apps/choose-and-configure-columns.md
+        - name: Create or edit filters in app views
+          href: ./model-driven-apps/create-edit-view-filters.md
         - name: "How to guides: Views"
           items:
           - name: How to make grids editable
@@ -1515,18 +1543,20 @@
     items:
     - name: Use solutions
       href: ./common-data-service/use-solution-explorer.md
-    - name: Use the Common Data Services default solution
+    - name: Use a solution to customize
       href: ./common-data-service/use-solutions-for-your-customizations.md
+    - name: Solution publisher overview
+      href: ./common-data-service/change-solution-publisher-prefix.md
+    - name: Create a solution
+      href: ./common-data-service/create-solution.md
     - name: Import solutions
       href: ./common-data-service/import-update-export-solutions.md
     - name: Update or upgrade solutions
       href: ./common-data-service/update-solutions.md
     - name: Export solutions
       href: ./common-data-service/export-solutions.md      
-    - name: Navigate to a specific solution
-      href: ./common-data-service/navigate-specific-solution.md
-    - name: Create a solution
-      href: ./common-data-service/create-solution.md
+    - name: How managed solutions are merged
+      href: ./common-data-service/how-managed-solutions-merged.md
     - name: Use environment variables
       href: ./common-data-service/EnvironmentVariables.md
     - name: View solution layers
@@ -1539,12 +1569,8 @@
       href: ./common-data-service/common-issues-resolutions-solution-checker.md
     - name: Use segmented solutions
       href: ./common-data-service/use-segmented-solutions-patches-simplify-updates.md
-    - name: Solution publisher overview
-      href: ./common-data-service/change-solution-publisher-prefix.md
     - name: Set managed properties in metadata
       href: ./common-data-service/set-managed-properties-metadata.md
-    - name: Publish changes
-      href: ./common-data-service/publish-changes-for-use-customer-service-hub.md
     - name: Best practices
       href: ./common-data-service/solution-best-practices.md
   - name: Work with dataflows
