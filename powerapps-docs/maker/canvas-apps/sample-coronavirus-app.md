@@ -211,6 +211,41 @@ connect it to your new data sources.
 
 1. **Save** and **Publish** the app.
 
+### Update the request help Flow
+This flow will send an adaptive card to a central Teams team requesting help.
+
+    ![Import app package](media/sample-crisis-communication-app/media/21-Request-Help.png)
+
+
+Before completing these step, first create a Teams team for your crisis management team. Once you do, you can get the ID for it
+and bring it into your flow. If you need help creating a Teams team, jump to [Create a central crisis management Teams team]() NEEDS A LINK
+
+1. Navigate to the Teams channel that you want to post all of your help requests to
+1. Select the **...** menu for the channel.
+1. Select **Get link to channel**
+
+![Get link to channel](media/sample-crisis-communication-app/17-Get-link-to-channel.png)
+
+1. Copy link and paste it in a text editor
+
+![Copy link](media/sample-crisis-communication-app/18-Copy-link.png)
+
+1. Extract the Team ID, which is everything after `groupId=` and before `&tenantId=`. For example,
+   for this URL, `https://teams.microsoft.com/l/channel/19%3ab2fa9fc20f3042a9b63fc5890e1813f8%40thread.tacv2/General?groupId=8bc7c0c2-0d4c-4fb8-af99-32da74c9237b&tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47`,
+   the channel ID would be `8bc7c0c2-0d4c-4fb8-af99-32da74c9237b`.
+1. Extract the channel ID, which is everything after `https://teams.microsoft.com/l/channel/` and before `/General`. For example,
+   for this URL, `https://teams.microsoft.com/l/channel/19%3ab2fa9fc20f3042a9b63fc5890e1813f8%40thread.tacv2/General?groupId=8bc7c0c2-0d4c-4fb8-af99-32da74c9237b&tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47`,
+   the channel ID would be `19%3ab2fa9fc20f3042a9b63fc5890e1813f8%40thread.tacv2`.
+1. Navigate to [flow.microsoft.com](https://flow.microsoft.com)
+1. Select **My flows** from the left navigation.
+1. Select **...** for **CrisisCommunication.RequestHelp** and select **Edit**.
+    ![Edit app](media/sample-crisis-communication-app/20-Edit-Flow.png)
+1. Open the **Team Id** card.
+1. Paste the Team ID into the **Value** field.
+1. Open the **Channel ID** card.
+1. Paste the Channel ID into the **Value** field.
+    ![Set Team IDs](media/sample-crisis-communication-app/22-Set-Team-IDs.png)
+
 ## Import and setup the admin app
 To manage the app you just imported, you'll want to repeat the same steps for the admin app.
 
@@ -289,7 +324,6 @@ Complete all of the fields and select **Save** once you are done.
 | Admin email | AdminContactEmail | Used to notify others who is administering the application. |
 | Logo URL | Logo | The logo of your app which will appear in the top left corner. |
 | AAD group ID | AADGroupID | Used to send notifications to end-users about internal company updates via the *Notify users on new crisis communication news* flow. |  
-| Teams channel ID | TeamsChannelID | Used to push help requests to the central response teams' Team channel. | 
 | APP URL | AppURL | The location of the app so that the *Notify users on new crisis communication news* flow can redirect users after selecting **Read more**. | 
 | Government RSS Feed | GovernmentRSSFeed | Used to populate the world news feature within the app. Useful if you want to provide additional information to your employees from a trusted source. |
 | Notification method | PreferredSentNotification | Used by the *Notify users on new crisis communication news* flow to determine which distribution channel it should use when sending out notifications. |
@@ -305,16 +339,6 @@ Complete all of the fields and select **Save** once you are done.
 ![Getting the AAD ID in Azure](media/sample-crisis-communication-app/11-AAD-Group-ID.png)
 
 1. Paste the ID into the **AAD group ID** field within the admin application.
-
-#### Finding the Teams channel ID of your response Team
-1. Navigate to the Teams channel that you want to post all of your help requests to
-1. Select the **...** menu for the channel.
-1. Select **Get link to channel**
-1. Copy link and paste it in a text editor
-1. Extract the channel ID, which is everything after `https://teams.microsoft.com/l/channel/` and before `/General`. For example,
-   for this URL, `https://teams.microsoft.com/l/channel/19%3ab2fa9fc20f3042a9b63fc5890e1813f8%40thread.tacv2/General?groupId=8bc7c0c2-0d4c-4fb8-af99-32da74c9237b&tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47`,
-   the channel ID would be `19%3ab2fa9fc20f3042a9b63fc5890e1813f8%40thread.tacv2`.
-1. Copy and paste this ID into the **Teams channel ID** field within the admin application.
 
 ### Setup emergency contacts
 1. Navigate to **Company Contacts**
@@ -388,12 +412,14 @@ Complete all of the fields and select **Save** once you are done.
 | Answer | Answer | The answer to the FAQ |
 | Deprecated | Deprecated | Allows you to hide an FAQ. |
 
-## Test the Crisis Communication app
+## Test and share the app
 Now that you've successfully setup all of the data, you can now test the app to make sure it works:
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 2. Select **Apps** from the left navigation.
 3. Select **Crisis Communication** to play the app. 
+
+Once you've successfully tested the app, you can share the app with everyone in your company.
 
 ## Import and setup the notification flow
 
@@ -474,7 +500,65 @@ The app uses a flow to send notifications to end users whenever there is a new c
 > You may receive an error if one of your connections has not been authorized yet.
   If this happens, please open the card with the unauthorized connection and reauthorize.
 
-### Edit the news notification flow
+### Test the news notification flow
 To test the news notification flow, go back to the admin app and create a new internal company update.
 Afterwards, all of the users within your distribution list will receive an update by your preferred notification
 preference.
+
+> [!NOTE]
+> If you run into errors, make sure that you have successfully entered in your distribution group's ID in the admin
+  settings within the admin app.
+
+## Integrate your app into Teams
+Now that you have a functioning app that has been shared with everyone, you can deploy the app using Teams and create
+a crisis management team within Microsoft Teams to respond to issues.
+
+### Deploy the app to the app bar
+If you are a Teams admin, you can push the app to all of your users within the Teams app bar.
+
+![App in Teams](media/sample-crisis-communication-app/19-App-in-Teams.png)
+
+1. Sign in to [Power Apps](https://make.powerapps.com).
+1. Select **Apps** from the left navigation.
+1. Select the **...** menu for the **Crisis Communication** app.
+1. Select **Add to Teams**
+1. Select **Download app**
+1. Open **Teams**
+1. Navigate to **Apps** from the left app bar.
+1. Select **Upload a custom app**.
+1. If you are a Teams admin, you will see the ability to upload an app for your entire tenant. Select **Upload for Contoso**.
+1. Upload the file that you downloaded from Power Apps.
+1. Navigate to the [Teams admin center](https://admin.teams.microsoft.com/dashboard)
+1. Select **Setup Policies** under **Teams apps** in the left navigation.
+1. Select **Global (Org-wide setup)**
+1. Select **Add apps**
+1. Search for and select the **Crisis Information** app you uploaded.
+1. Select **Add*.
+1. Select **Save**.
+
+> [!NOTE]
+> It may take up to 24 hours for users to see the app automatically pinned in their app bar.
+
+### Create a central crisis management Teams team
+To coordinate your crisis response, you'll want to create a central Teams team for your crisis management team
+and populate it with all of the relevant information.
+
+1. Navigate to Teams
+1. Select **Teams** from the left app bar
+1. Select **Join or create a Team**
+1. Select **Create team** and complete the remaining steps
+
+Once you've successfully created your team, you can pin relevant information as tabs. For example,
+you may want to pin the crisis management admin app or the Power BI report to your team. To add the admin app as a tab:
+
+1. Select the **+** button
+1. Search for and select **Power Apps**
+1. Search for and select **Crisis Information Admin**
+1. Select **Save**
+
+To add the Power BI report:
+1. Select the **+** button.
+1. Search for and select **Power BI**
+1. Search for and select your Power BI report
+1. Select **Save**
+
