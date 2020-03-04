@@ -509,6 +509,48 @@ preference.
 > If you run into errors, make sure that you have successfully entered in your distribution group's ID in the admin
   settings within the admin app.
 
+
+## Monitor office absences with Power BI
+Once you have the app deployed and people start to notify that they will be out of the office for various reasons (such
+as being sick or working from home) you can now use a Power BI report to track how many and where those people are located.
+
+To start, you can use the sample report 'Presence status report.pbix' available from the downloaded [assets package](#prerequisites).
+If needed, download Power BI Desktop from https://powerbi.microsoft.com/downloads/. We will also need some information from
+the 'CI_Employee Status' SharePoint list created before, so let's get to it first. Open the list in your site and select List
+Settings under the settings icon:
+
+![Employee Status List Settings](media/sample-crisis-communication-app/PBI-001-SharePointList-ListSettings.PNG)
+
+Take a note of the site name and the list id on the browser address bar:
+
+![Employee Status List and Site Id](media/sample-crisis-communication-app/PBI-002-SharePointList-AddressAndId.PNG)
+
+At this point we are ready to open the Power BI report; launch Power BI and open the 'Presence status report.pbix'
+file. Move the mouse over the right side of the CI_Employee Status data source until you see the ellipsis, select
+it and select the 'Edit query' option:
+
+![Edit Query](media/sample-crisis-communication-app/PBI-003-PowerBI-EditQuery.PNG)
+
+Once the Power Query editor is opened, right-click the CI_Employee Status data source, and select "Advanced Editor":
+
+![Power Query Advanced Editor](media/sample-crisis-communication-app/PBI-004-PowerQuery-AdvancedEditor.PNG)
+
+Here is where we will use the site name and list id from the SharePoint list: copy the new SharePoint site in the
+table (1), and the list id in the three places where we have a GUID (2), and select Done.
+
+![Power Query Advanced Editor Updates](media/sample-crisis-communication-app/PBI-005-PowerQuery-AdvancedEditorUpdates.PNG)
+
+Finally, select 'Close & Apply' to update the report to pull data from your SharePoint list.
+
+![Power Query Close and Apply](media/sample-crisis-communication-app/PBI-006-PowerQuery-CloseAndApply.PNG)
+
+We now have a Power BI report that shows both the geographical information for office absences for the current day, and
+a trend of such absences over many days. We can now publish the report so other people in the organization can see it.
+
+![Power BI Publish Report](media/sample-crisis-communication-app/PBI-007-PowerBI-Publish.PNG)
+
+
+
 ## Integrate your app into Teams
 Now that you have a functioning app that has been shared with everyone, you can deploy the app using Teams and create
 a crisis management team within Microsoft Teams to respond to issues.
@@ -569,4 +611,6 @@ To add the Power BI report:
 1. Search for and select **Power BI**
 1. Search for and select your Power BI report
 1. Select **Save**
+
+
 
