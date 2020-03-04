@@ -23,8 +23,8 @@ Estimated time to complete these steps: **20-25 minutes**
 
 ## Overview of the app
 
-The *Coronavirus Information* app provides a user-friendly experience to connect
-end users with information about the Coronavirus. Quickly get updates on
+The *Crisis Communication* app provides a user-friendly experience to connect
+end users with information about a crisis. Quickly get updates on
 internal company news, get answers to frequently asked questions, and get access
 to important information like links and emergency contacts. This app requires a
 small amount of setup to make it your own.
@@ -36,10 +36,7 @@ small amount of setup to make it your own.
     Power Apps.
 - You must have a valid SharePoint Online license and permission to create lists.
 - You must have a public SharePoint site where you can store the data for the app.
-
-    ![Sample SharePoint site](media/sharepoint-site.png)
-    
-- Download the assets from [aka.ms/CoronaInformationSolution](https://aka.ms/CoronaInformationSolution).
+- Download the assets from [aka.ms/CrisisCommunicationSolution](https://aka.ms/CrisisCommunicationSolution).
 
 ## Create a new SharePoint site
 
@@ -48,16 +45,16 @@ The data for the app will live in SharePoint lists. We'll first need to create n
 1. Sign in to [SharePoint Online](https://www.sharepoint.com).
 1. Select Create site and select next:
 
-    ![Sample SharePoint site](media/sharepoint-site.png)
+    ![Sample SharePoint site](media/sample-crisis-communication-app/01-Create-Site.png)
 
 1. Select Team site:
 
-    ![Team site](media/team-site.png)
+    ![Team site](media/sample-crisis-communication-app/02-Team-Site.png)
 
 1. Give your site a Name and Description.
 1. Set the Privacy settings to public so that everyone in the company can get the necessary information:
 
-    ![Site settings](media/site-settings.png)
+    ![Site settings](media/sample-crisis-communication-app/03-Privacy-Settings.png)
 
 1. Select Next.
 1. Optionally add additional owners.
@@ -101,10 +98,9 @@ creation of the SharePoint lists, you can use the *DeploySPLists* flow available
 1. Open the card called **Variable – Target Site for Lists**.
 1. Change the value to the name of your SharePoint site.
 1. Open the card called **Variable – App name**.
-1. Change the value to the name of your app; by default, it is "Coronavirus
-    Info".
+1. Change the value to the name of your app; by default, it is "Crisis Communication".
 
-    ![Flow parameters](media/flow-settings.png)
+    ![Flow parameters](media/sample-crisis-communication-app/04-Flow-Settings.png)
 
 1. Select **Save** to commit your changes.
 
@@ -121,16 +117,16 @@ creation of the SharePoint lists, you can use the *DeploySPLists* flow available
 The flow will then create the following SharePoint lists within your defined
 Share
 
-| **Display Title** | **Template** | **Purpose** | **Description** |
-|-|-|-|-|
-| CI_LogosAssets | 101 | To hold logo, and/or other images to be referenced from the app. The logo will be referenced in Power Apps by a direct link or via the ID number of the desired Logo. | Library for related logo(s) and other image assets for the [App Name] app. |
-| CI_configAdminSetup | 100 | For feature configuration by the Admin of the tool. **Note**: This list should be read only to all members who are not admins. | Admin configuration list for the [App Name] app.
-| CI_Contacts | 100 | Using the default Contacts Content type to capture information about contacts. (No people picker included – so may require maintenance to ensure data is up to date.)  **Note**: This depends on the global contact list type as a default content type in the list. | Contacts List for the [App Name] app.                                                         |
-| CI_CompanyNews | 100 | Collection of Company News Items. | List for the management of news items visible in the [App Name] app. The Deprecated column can be used to filter news items out of the app (retaining them as a record). | 
-| CI_FAQ | 100 | Frequently asked questions. | Frequently Asked Questions for the [App Name] app. The Deprecated column can be used to filter FAQ items out of the app (retaining them as a record). |
-| CI_UsefullLinks | 100 | Useful hyperlinks list | Useful hyperlinks list for the [App Name] app. The Deprecated column can be used to filter hyperlink items out of the app (retaining them as a record). |
-| CI_Employee | 100 | Tracking current employee presence status. Examples: *working from home*; *out sick*; *on personal leave*; and *out on vacation*.  **Note**: *coming to work* is assumed and not included in the list options. | Useful hyperlinks list for the [App Name] app. The Deprecated column can be used to filter links items out of the app (retaining them as a record). |
-| CI_HelpfulTips      | 100          | Users may contribute helpful tips to peers. | List for the management of shared tips for the [App Name] App. The Deprecated column can be used to remove tips from the app views (retaining them as a record in SPO).  |
+| **Display Title**| **Purpose** | **Description** |
+|-|-|-|
+| CI_LogosAssets| To hold logo, and/or other images to be referenced from the app. The logo will be referenced in Power Apps by a direct link or via the ID number of the desired Logo. | Library for related logo(s) and other image assets for the [App Name] app. |
+| CI_configAdminSetup | For feature configuration by the Admin of the tool. **Note**: This list should be read only to all members who are not admins. | Admin configuration list for the [App Name] app.
+| CI_Contacts | Using the default Contacts Content type to capture information about contacts. (No people picker included – so may require maintenance to ensure data is up to date.)  **Note**: This depends on the global contact list type as a default content type in the list. | Contacts List for the [App Name] app.                                                         |
+| CI_CompanyNews || Collection of Company News Items. | List for the management of news items visible in the [App Name] app. The Deprecated column can be used to filter news items out of the app (retaining them as a record). | 
+| CI_FAQ  | Frequently asked questions. | Frequently Asked Questions for the [App Name] app. The Deprecated column can be used to filter FAQ items out of the app (retaining them as a record). |
+| CI_UsefullLinks | Useful hyperlinks list | Useful hyperlinks list for the [App Name] app. The Deprecated column can be used to filter hyperlink items out of the app (retaining them as a record). |
+| CI_Employee | Tracking current employee presence status. Examples: *working from home*; *out sick*; *on personal leave*; and *out on vacation*.  **Note**: *coming to work* is assumed and not included in the list options. | Useful hyperlinks list for the [App Name] app. The Deprecated column can be used to filter links items out of the app (retaining them as a record). |
+| CI_HelpfulTips             | Users may contribute helpful tips to peers. | List for the management of shared tips for the [App Name] App. The Deprecated column can be used to remove tips from the app views (retaining them as a record in SPO).  |
 
 
 > [!NOTE]
@@ -149,7 +145,7 @@ connect it to your new data sources.
 1. Sign in to [Power Apps](https://make.powerapps.com).
 1. Select **Apps** from the left navigation.
 1. Select **Import** from the command bar.
-1. Upload the **Coronavirusapp.zip** file from the GitHub repository:
+1. Upload the **CrisisCommunicationApp.zip** file from the GitHub repository:
 
     ![Import app package](media/import-app.png)
 
@@ -158,10 +154,10 @@ connect it to your new data sources.
 ### Update the SharePoint connections
 
 1. Go back to the **Apps** list.
-1. Select **More Commands** (...) for **Coronavirus Info** app.
+1. Select **More Commands** (...) for **Crisis Communication** app.
 1. Select **Edit** from the contextual menu:
 
-    ![Edit app](media/edit-app.png)
+    ![Edit app](media/sample-crisis-communication-app/05-Edit-App.png)
 
 1. **Sign in** or create any necessary connections and select **Allow**:
 
@@ -204,15 +200,13 @@ To create initial content for your app, refer to the **administration doc
 article**. Before proceeding to the next step, be sure to *add your admin
 settings*.
 
-==> @Matthew: What is 'administration doc article? 
-
-### Test the Coronavirus Reference app
+### Test the Crisis Communication app
 
 Test the app to make sure it works:
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 2. Select **Apps** from the left navigation.
-3. Select **Coronavirus Reference** to play the app. 
+3. Select **Crisis Communication** to play the app. 
 
 ## Import and setup the notification flow
 
@@ -223,10 +217,10 @@ The app uses a flow to send notifications to end users whenever there is a new c
 1. Navigate to [flow.microsoft.com](https://flow.microsoft.com)
 1. Select **My flows** from the left navigation.
 1. Select the **Import** button in the command bar.
-1. Upload the **NotifyUsersOfCoronavirusNews.zip** package from the GitHub
+1. Upload the **NotifyUsersOfCrisisNews.zip** package from the GitHub
     repository:
 
-    ![Upload NotifyUsersOfCoronavirusNews.zip](media/upload-news-notification.png)
+    ![Upload NotifyUsersOfCrisisNews.zip](media/upload-news-notification.png)
 
 1. Add connections for the new Flow by selecting the **Select during import**
     link for each connection and completing the form:
@@ -249,13 +243,13 @@ The app uses a flow to send notifications to end users whenever there is a new c
     ![Notifications dialog](media/notifications-dialog.png)
 
 1. To get the ID, navigate to your **Apps** list.
-1. Select the **More Commands** (...) for the **Coronavirus Reference** app and select details:
+1. Select the **More Commands** (...) for the **Crisis Communication** app and select details:
 
-    ![More command](media/ellipsis.png)
+    ![More command](media/sample-crisis-communication-app/06-App-Details.png)
 
 1. Copy the **App ID**:
 
-    ![App ID](media/app-id.png)
+    ![App ID](media/sample-crisis-communication-app/07-App-ID.png)
 
 1. Paste the **App ID** into the connection creation dialog and select
     **Create**:
@@ -273,7 +267,7 @@ The app uses a flow to send notifications to end users whenever there is a new c
 ### Edit the news notification flow
 
 1. Once the import is done, go back to **My flows**.
-1. Select the newly imported flow **Notify users of coronavirus news**.
+1. Select the newly imported flow **Notify users of crisis news**.
 1. Select **Edit** from the command bar.
 1. Open the card called **When a new item is posted**
 1. Change the **Site Address** to the name of your SharePoint site.
