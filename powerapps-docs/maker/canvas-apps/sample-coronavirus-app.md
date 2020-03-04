@@ -29,6 +29,13 @@ internal company news, get answers to frequently asked questions, and get access
 to important information like links and emergency contacts. This app requires a
 small amount of setup to make it your own.
 
+During this walk through, you will learn how to:
+- Create a location for your data
+- Import both the Crisis Communication app and its admin app
+- Create content for the app
+- Import flows to send notifications to users
+- Create a centrally managed Teams team to aggregate data and to effectively respond to issues
+
 ## Prerequisites
 
 - [Sign
@@ -38,10 +45,11 @@ small amount of setup to make it your own.
 - You must have a public SharePoint site where you can store the data for the app.
 - Download the assets from [aka.ms/CrisisCommunicationSolution](https://aka.ms/CrisisCommunicationSolution).
 
-## Create a new SharePoint site
+## Create a home for your data
 
 The data for the app will live in SharePoint lists. We'll first need to create new SharePoint site to get started.
 
+### Create a SharePoint site
 1. Sign in to [SharePoint Online](https://www.sharepoint.com).
 1. Select Create site and select next:
 
@@ -60,13 +68,11 @@ The data for the app will live in SharePoint lists. We'll first need to create n
 1. Optionally add additional owners.
 1. Select Finish.
 
-## Create the SharePoint lists for app
-
+### Create the SharePoint lists for app
 The app requires multiple lists that store all the data. To automate the
 creation of the SharePoint lists, you can use the *DeploySPLists* flow available from the downloaded [assets package](#prerequisites).
 
-### Import the SharePoint list deployment flow
-
+#### Import the SharePoint list deployment flow
 1. Go to [flow.microsoft.com](https://flow.microsoft.com)
 1. Select **My flows** from the left navigation.
 1. Select the **Import** button in the command bar.
@@ -89,7 +95,7 @@ creation of the SharePoint lists, you can use the *DeploySPLists* flow available
 1. Select **Save**.
 1. Select **Import**.
 
-### Edit the SharePoint list deployment flow
+#### Edit the SharePoint list deployment flow
 
 1. Once the import is done, go back to **My flows** and refresh the list of
     Flows
@@ -104,7 +110,7 @@ creation of the SharePoint lists, you can use the *DeploySPLists* flow available
 
 1. Select **Save** to commit your changes.
 
-### Run the SharePoint list deployment flow
+#### Run the SharePoint list deployment flow
 
 1. Go back to the detail screen for the **DeploySPList flow.**
 1. Select **Run** from the command bar.
@@ -145,10 +151,13 @@ Share
     new columns is allowed, but deleting columns may break the app.)
 > - Use caution when deleting list items; deleting list items deletes historical records. You can toggle deprecation value from *No* to *Yes* to drop records from contacts, news, FAQs or links.
 
-## Import and setup the app
+## Import and setup the Crisis Communication app
 
 Now that all the SharePoint lists are created, you can now import the app and
 connect it to your new data sources.
+
+> [!NOTE]
+> If you do not want to use the admin app, you can also edit these same properties by editing the SharePoint lists manually.
 
 ### Import the app
 
@@ -253,11 +262,59 @@ To manage the app you just imported, you'll want to repeat the same steps for th
 
 1. **Save** and **Publish** the admin app.
 
-### Create initial content for the app
 
-To create initial content for your app, refer to the **administration doc
-article**. Before proceeding to the next step, be sure to at least *add your admin
-settings*.
+## Create initial content for the app
+Now that you have successfully imported both the Crisis Communication app and its admin app, you
+can now start creating the initial content. To start, open up the Crisis Communication Admin app.
+
+
+![Admin app](sample-crisis-communication-app/09-Admin-App.png)
+
+The admin application allows you to customize all of the information within the Crisis communication app and
+also setup key settings for the accompanying flows.
+
+> [!NOTE]
+> As a reminder, if you do not want to use the admin app, you can also edit these same properties
+  by editing the SharePoint lists manually.
+
+### Setup key parameters under Admin Settings
+To initialize your app, you need to provide all of the required fields by navigating to **Admin Settings**.
+
+![Admin app](sample-crisis-communication-app/10-Admin-Settings.png)
+
+Complete all of the fields and select **Save** once you are done.
+
+| **Field name** | **Logical name in SharePoint** | **Purpose** |
+|-|-|-|
+| Admin email | AdminContactEmail | Used to notify others who is administering the application. |
+| Logo URL | Logo | The logo of your app which will appear in the top left corner. |
+| AAD group ID | AADGroupID | Used to send notifications to end-users about internal company updates via the *Notify users on new crisis communication news* flow. |                                                         |
+| Teams channel ID | TeamsChannelID | Used to push help requests to the central response teams' Team channel. |                                                         |
+| APP URL | AppURL | The location of the app so that the *Notify users on new crisis communication news* flow can redirect users after selecting **Read more**. | 
+| Government RSS Feed | GovernmentRSSFeed | Used to populate the world news feature within the app. Useful if you want to provide additional information to your employees from a trusted source. |
+| Notification method | PreferredSentNotification | Used by the *Notify users on new crisis communication news* flow to determine which distribution channel it should use when sending out notifications. |
+| Feature flags | Feature1...8 | Used to disable or enable each feature within the application. |
+
+#### Finding the AAD of your distribution group
+1. Navigate to [aad.portal.azure.com](aad.portal.azure.com)
+1. Select **Azure Active Directory** from the left navigation.
+1. Select **Groups**.
+1. Search for and select your distrobution group.
+1. Copy the **Object Id** field.
+
+![Getting the AAD ID in Azure](sample-crisis-communication-app/11-AAD-Group-ID.png)
+
+1. Paste the ID into the **AAD group ID** field within the admin application.
+
+#### Finding the Teams channel ID of your response Team
+1. Navigate to the Teams channel that you want to post all of your help requests to
+1. Select the **...** menu for the channel.
+1. Select **Get link to channel**
+1. Copy link and paste it in a text editor
+1. Extract the channel ID, which is everything after `https://teams.microsoft.com/l/channel/` and before `/General`. For example,
+   for this URL, `https://teams.microsoft.com/l/channel/19%3ab2fa9fc20f3042a9b63fc5890e1813f8%40thread.tacv2/General?groupId=8bc7c0c2-0d4c-4fb8-af99-32da74c9237b&tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47`,
+   the channel ID would be `19%3ab2fa9fc20f3042a9b63fc5890e1813f8%40thread.tacv2`.
+1. Copy and paste this ID into the **Teams channel ID** field within the admin application.
 
 ### Test the Crisis Communication app
 
