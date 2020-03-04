@@ -78,17 +78,17 @@ creation of the SharePoint lists, you can use the *DeploySPLists* flow available
 1. Select the **Import** button in the command bar.
 1. Upload the **DeploySPList.zip** package from the GitHub repository.
 
-    ![Import package](media/import-package.png)
+    ![Import package](media/sample-crisis-communication-app/import-package.png)
 
 1. Add a SharePoint connection for the new Flow by selecting the **Select during import** link and completing the form.
 
-    ![Import settings](media/import-settings.png)
+    ![Import settings](media/sample-crisis-communication-app/import-settings.png)
 
 1. If you need to create a new SharePoint connection, start by selecting
  **Create new** in the import setup pane.
 1. Select **New connection** in the command bar:
 
-    ![Create a new connection](media/create-connection.png)
+    ![Create a new connection](media/sample-crisis-communication-app/create-connection.png)
 
 1. Search for the name of the connection, for example *SharePoint*.
 1. Select the appropriate connection.
@@ -116,19 +116,13 @@ creation of the SharePoint lists, you can use the *DeploySPLists* flow available
 1. Select **Run** from the command bar.
 1. Select **Continue** to and then **Run flow** to trigger the flow.
 
+    ![Sign in to run the flow](media/sample-crisis-communication-app/sign-in-flow.png)
+
+    ![Run the flow](media/sample-crisis-communication-app/run-flow.png)
+
 > [!NOTE]
 > You may receive an error stating that location services are required.
   If this happens, please allow location services to Power Automate and refresh the page before trying again.
-
-    ![Sign in to run the flow](media/sign-in-flow.png)
-
-    ![Run the flow](media/run-flow.png)
-
-
-> [!NOTE]
-> - All list columns listed above should be considered as dependencies.
-    Please protect the lists from accidental schema changes (for example, adding
-    new columns is allowed, but deleting columns may break the app.)
 
 The flow will then create the following SharePoint lists within your defined
 Share
@@ -143,7 +137,6 @@ Share
 | CI_UsefullLinks | Useful hyperlinks list | Useful hyperlinks list for the [App Name] app. The Deprecated column can be used to filter hyperlink items out of the app (retaining them as a record). |
 | CI_Employee | Tracking current employee presence status. Examples: *working from home*; *out sick*; *on personal leave*; and *out on vacation*.  **Note**: *coming to work* is assumed and not included in the list options. | Useful hyperlinks list for the [App Name] app. The Deprecated column can be used to filter links items out of the app (retaining them as a record). |
 | CI_HelpfulTips             | Users may contribute helpful tips to peers. | List for the management of shared tips for the [App Name] App. The Deprecated column can be used to remove tips from the app views (retaining them as a record in SPO).  |
-
 
 > [!NOTE]
 > - All list columns listed above should be considered as dependencies.
@@ -180,41 +173,41 @@ connect it to your new data sources.
 
 1. **Sign in** or create any necessary connections and select **Allow**:
 
-    ![Allow connections](media/allow-connections.png)
+    ![Allow connections](media/sample-crisis-communication-app/allow-connections.png)
 
 1. Navigate to the data sources in the left pane:
 
-    ![Data sources](media/data-sources.png)
+    ![Data sources](media/sample-crisis-communication-app/data-sources.png)
 
 1. **Remove** existing SharePoint lists inside of the app as they do
     not point to your current SharePoint site:
 
-    ![Remove data sources](media/remove-data-source.png)
+    ![Remove data sources](media/sample-crisis-communication-app/remove-data-source.png)
 
 1. Add the lists from your own SharePoint site. Start by
     searching for SharePoint in the search bar:
 
-    ![Search SharePoint](media/sharepoint.png)
+    ![Search SharePoint](media/sample-crisis-communication-app/sharepoint.png)
 
 1. Select **SharePoint** and choose a connection:
 
-    ![SharePoint connection](media/sharepoint-connection.png)
+    ![SharePoint connection](media/sample-crisis-communication-app/sharepoint-connection.png)
 
 1. Copy and paste the URL to your SharePoint site in the text field and select
     **Connect**:
 
-    ![SharePoint site URL](media/site-url.png)
+    ![SharePoint site URL](media/sample-crisis-communication-app/site-url.png)
 
 1. Select all the SharePoint lists and libraries and select **Connect**:
 
-    ![Connect to SharePoint lists](media/sharepoint-lists.png)
+    ![Connect to SharePoint lists](media/sample-crisis-communication-app/sharepoint-lists.png)
 
 1. **Save** and **Publish** the app.
 
 ### Update the request help Flow
 This flow will send an adaptive card to a central Teams team requesting help.
 
-    ![Import app package](media/sample-crisis-communication-app/media/21-Request-Help.png)
+![Import app package](media/sample-crisis-communication-app/21-Request-Help.png)
 
 
 Before completing these step, first create a Teams team for your crisis management team. Once you do, you can get the ID for it
@@ -224,21 +217,23 @@ and bring it into your flow. If you need help creating a Teams team, jump to [Cr
 1. Select the **...** menu for the channel.
 1. Select **Get link to channel**
 
-![Get link to channel](media/sample-crisis-communication-app/17-Get-link-to-channel.png)
+    ![Get link to channel](media/sample-crisis-communication-app/17-Get-link-to-channel.png)
 
 1. Copy link and paste it in a text editor
 
-![Copy link](media/sample-crisis-communication-app/18-Copy-link.png)
+    ![Copy link](media/sample-crisis-communication-app/18-Copy-link.png)
 
-1. Extract the Team ID, which is everything after `groupId=` and before `&tenantId=`. For example,
-   for this URL, `https://teams.microsoft.com/l/channel/19%3ab2fa9fc20f3042a9b63fc5890e1813f8%40thread.tacv2/General?groupId=8bc7c0c2-0d4c-4fb8-af99-32da74c9237b&tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47`,
-   the channel ID would be `8bc7c0c2-0d4c-4fb8-af99-32da74c9237b`.
-1. Extract the channel ID, which is everything after `https://teams.microsoft.com/l/channel/` and before `/General`. For example,
-   for this URL, `https://teams.microsoft.com/l/channel/19%3ab2fa9fc20f3042a9b63fc5890e1813f8%40thread.tacv2/General?groupId=8bc7c0c2-0d4c-4fb8-af99-32da74c9237b&tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47`,
-   the channel ID would be `19%3ab2fa9fc20f3042a9b63fc5890e1813f8%40thread.tacv2`.
+1. Extract the Team ID, which is everything after `groupId=` and before `&tenantId=`. <br> For example, in the following URL, the channel ID would be `8bc7c0c2-0d4c-4fb8-af99-32da74c9237b`:
+   
+   `https://teams.microsoft.com/l/channel/19%3ab2fa9fc20f3042a9b63fc5890e1813f8%40thread.tacv2/General?groupId=8bc7c0c2-0d4c-4fb8-af99-32da74c9237b&tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47`,
+   
+1. Extract the channel ID, which is everything after `https://teams.microsoft.com/l/channel/` and before `/General`. <br> For example, in the following URL, the channel ID would be `19%3ab2fa9fc20f3042a9b63fc5890e1813f8%40thread.tacv2`:
+   
+   `https://teams.microsoft.com/l/channel/19%3ab2fa9fc20f3042a9b63fc5890e1813f8%40thread.tacv2/General?groupId=8bc7c0c2-0d4c-4fb8-af99-32da74c9237b&tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47`,
+   
 1. Navigate to [flow.microsoft.com](https://flow.microsoft.com)
 1. Select **My flows** from the left navigation.
-1. Select **...** for **CrisisCommunication.RequestHelp** and select **Edit**.
+1. Select **More commands** (...)  for **CrisisCommunication.RequestHelp** and select **Edit**.
     ![Edit app](media/sample-crisis-communication-app/20-Edit-Flow.png)
 1. Open the **Team Id** card.
 1. Paste the Team ID into the **Value** field.
@@ -254,7 +249,7 @@ To manage the app you just imported, you'll want to repeat the same steps for th
 1. Select **Import** from the command bar.
 1. Upload the **CrisisCommunicationAdminApp.zip** file from the GitHub repository:
 
-    ![Import app package](media/import-app.png)
+    ![Import app package](media/sample-crisis-communication-app/import-app.png)
 
 1. Select **Import**.
 
@@ -270,12 +265,12 @@ To manage the app you just imported, you'll want to repeat the same steps for th
 
 1. Navigate to the data sources in the left pane:
 
-    ![Data sources](media/data-sources.png)
+    ![Data sources](media/sample-crisis-communication-app/data-sources.png)
 
 1. **Remove** existing SharePoint lists inside of the app as they do
     not point to your current SharePoint site:
 
-    ![Remove data sources](media/remove-data-source.png)
+    ![Remove data sources](media/sample-crisis-communication-app/remove-data-source.png)
 
 1. Add the lists from your own SharePoint site. Start by
     searching for SharePoint in the search bar:
@@ -284,16 +279,16 @@ To manage the app you just imported, you'll want to repeat the same steps for th
 
 1. Select **SharePoint** and choose a connection:
 
-    ![SharePoint connection](media/sharepoint-connection.png)
+    ![SharePoint connection](media/sample-crisis-communication-app/sharepoint-connection.png)
 
 1. Copy and paste the URL to your SharePoint site in the text field and select
     **Connect**:
 
-    ![SharePoint site URL](media/site-url.png)
+    ![SharePoint site URL](media/sample-crisis-communication-app/site-url.png)
 
 1. Select all the SharePoint lists and libraries and select **Connect**:
 
-    ![Connect to SharePoint lists](media/sharepoint-lists.png)
+    ![Connect to SharePoint lists](media/sample-crisis-communication-app/sharepoint-lists.png)
 
 1. **Save** and **Publish** the admin app.
 
@@ -301,7 +296,6 @@ To manage the app you just imported, you'll want to repeat the same steps for th
 ## Create initial content for the app
 Now that you have successfully imported both the Crisis Communication app and its admin app, you
 can now start creating the initial content. To start, open up the Crisis Communication Admin app.
-
 
 ![Admin app](media/sample-crisis-communication-app/09-Admin-App.png)
 
@@ -314,8 +308,6 @@ also setup key settings for the accompanying flows.
 
 ### Setup key parameters under Admin Settings
 To initialize your app, you need to provide all of the required fields by navigating to **Admin Settings**.
-
-![Admin app](media/sample-crisis-communication-app/10-Admin-Settings.png)
 
 Complete all of the fields and select **Save** once you are done.
 
@@ -330,13 +322,13 @@ Complete all of the fields and select **Save** once you are done.
 | Feature flags | Feature1...8 | Used to disable or enable each feature within the application. |
 
 #### Finding the AAD of your distribution group
-1. Navigate to [aad.portal.azure.com](aad.portal.azure.com)
+1. Navigate to [aad.portal.azure.com](https://aad.portal.azure.com)
 1. Select **Azure Active Directory** from the left navigation.
 1. Select **Groups**.
 1. Search for and select your distrobution group.
 1. Copy the **Object Id** field.
 
-![Getting the AAD ID in Azure](media/sample-crisis-communication-app/11-AAD-Group-ID.png)
+    ![Getting the AAD ID in Azure](media/sample-crisis-communication-app/11-AAD-Group-ID.png)
 
 1. Paste the ID into the **AAD group ID** field within the admin application.
 
@@ -344,8 +336,6 @@ Complete all of the fields and select **Save** once you are done.
 1. Navigate to **Company Contacts**
 1. Select **Create new contact**
 1. Complete the form with the contact details
-
-![Creating a new emergency contact](media/sample-crisis-communication-app/12-Create-contact.png)
 
 | **Field name** | **Logical name in SharePoint** | **Purpose** |
 |-|-|-|
@@ -360,8 +350,6 @@ Complete all of the fields and select **Save** once you are done.
 1. Select **Create new post**
 1. Complete the form.
 
-![Creating a new post](media/sample-crisis-communication-app/13-Create-post.png)
-
 | **Field name** | **Logical name in SharePoint** | **Purpose** |
 |-|-|-|
 | Title | Title | The title of the update. |
@@ -373,8 +361,6 @@ Complete all of the fields and select **Save** once you are done.
 1. Navigate to **Helpful tips**.
 1. Select **New tip**.
 1. Complete the form.
-
-![Creating a new helpful tip](media/sample-crisis-communication-app/14-Create-Tip.png)
 
 | **Field name** | **Logical name in SharePoint** | **Purpose** |
 |-|-|-|
@@ -389,8 +375,6 @@ Complete all of the fields and select **Save** once you are done.
 1. Select **Create new link**.
 1. Complete the form.
 
-![Creating a new link](media/sample-crisis-communication-app/15-Create-Link.png)
-
 | **Field name** | **Logical name in SharePoint** | **Purpose** |
 |-|-|-|
 | Title | Title | The text of the link. |
@@ -402,8 +386,6 @@ Complete all of the fields and select **Save** once you are done.
 1. Navigate to **FAQ**.
 1. Select **Create new FAQ**.
 1. Complete the form.
-
-![Creating a new FAQ](media/sample-crisis-communication-app/16-Create-FAQ.png)
 
 | **Field name** | **Logical name in SharePoint** | **Purpose** |
 |-|-|-|
@@ -433,27 +415,27 @@ The app uses a flow to send notifications to end users whenever there is a new c
 1. Upload the **CrisisCommunicationNewsNotification.zip** package from the GitHub
     repository:
 
-    ![Upload CrisisCommunicationNewsNotification.zip](media/upload-news-notification.png)
+    ![Upload CrisisCommunicationNewsNotification.zip](media/sample-crisis-communication-app/upload-news-notification.png)
 
 1. Add connections for the new Flow by selecting the **Select during import**
     link for each connection and completing the form:
 
-    ![Select during import](media/select-during-import.png)
+    ![Select during import](media/sample-crisis-communication-app/select-during-import.png)
 
 1. If you need to create a new connection, start by selecting **Create new** in the import setup pane.
 1. Select **New connection** in the command bar:
 
-    ![Create a new connection](media/create-connection.png)
+    ![Create a new connection](media/sample-crisis-communication-app/create-connection.png)
 
 1. Search for the name of the connection; for example, **PowerApps Notification (preview)**:
 
-    ![Notifications](media/notifications.png)
+    ![Notifications](media/sample-crisis-communication-app/notifications.png)
 
 1. Select the appropriate connection.
 1. If you are creating a connection to **PowerApps Notifications (preview),**
     you'll see the following dialog:
 
-    ![Notifications dialog](media/notifications-dialog.png)
+    ![Notifications dialog](media/sample-crisis-communication-app/notifications-dialog.png)
 
 1. To get the ID, navigate to your **Apps** list.
 1. Select the **More Commands** (...) for the **Crisis Communication** app and select details:
@@ -467,7 +449,7 @@ The app uses a flow to send notifications to end users whenever there is a new c
 1. Paste the **App ID** into the connection creation dialog and select
     **Create**:
 
-    ![Paste app ID](media/target-app-id.png)
+    ![Paste app ID](media/sample-crisis-communication-app/target-app-id.png)
 
 1. Once you've created your new connection, go back to the **Import setup**
     panel and select the **Refresh list** button.
@@ -475,7 +457,7 @@ The app uses a flow to send notifications to end users whenever there is a new c
     **Save**.
 1. Select **Import** once you're done adding all of your connections.
 
-    ![Import connections](media/imported-connections.png)
+    ![Import connections](media/sample-crisis-communication-app/imported-connections.png)
 
 ### Edit the news notification flow
 
@@ -491,7 +473,7 @@ The app uses a flow to send notifications to end users whenever there is a new c
 1. Open the card called **Initialize variable – Read more text**.
 1. Change the **Value** to “Read more” in your native language.
 
-    ![Flow settings](media/flow-options.png)
+    ![Flow settings](media/sample-crisis-communication-app/flow-options.png)
 
 1. Select **Save** to commit your changes.
 
@@ -509,13 +491,13 @@ preference.
 > If you run into errors, make sure that you have successfully entered in your distribution group's ID in the admin
   settings within the admin app.
 
-
 ## Monitor office absences with Power BI
+
 Once you have the app deployed and people start to notify that they will be out of the office for various reasons (such
 as being sick or working from home) you can now use a Power BI report to track how many and where those people are located.
 
 To start, you can use the sample report 'Presence status report.pbix' available from the downloaded [assets package](#prerequisites).
-If needed, download Power BI Desktop from https://powerbi.microsoft.com/downloads/. We will also need some information from
+If needed, download [Power BI Desktop](https://powerbi.microsoft.com/downloads). We will also need some information from
 the 'CI_Employee Status' SharePoint list created before, so let's get to it first. Open the list in your site and select List
 Settings under the settings icon:
 
