@@ -330,4 +330,4 @@ Relate( ThisItem.Notes, Patch( Notes, Defaults( Notes ), { Title: "A new note", 
 
 ### See also
 
-[What is Common Data Service?](../../common-data-service/data-platform-intro.md)
+[What is Common Data Service?](https://docs.microsoft.com/powerapps/maker/common-data-service/data-platform-intro)
