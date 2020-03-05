@@ -39,4 +39,4 @@ The Common Data Service connector is more robust than the Dynamics 365 connector
 
 ### Common Data Service and the improved data source experience
 
-If you created a canvas app with a Common Data Service connector prior to November 2019, then you might not have the benefit of the most current version of the Common Data Service. The [**Improve data source experience and Common Data Service views**](../use-native-cds-connector.md) option unlocks significant speed gains, increased reliability, and features such as access to Common Data Service views and File and Image field attributes.
+If you created a canvas app with a Common Data Service connector prior to November 2019, then you might not have the benefit of the most current version of the Common Data Service. Read [Common Data Service connection improvements](../use-native-cds-connector.md) for more details and to upgrade your connection.
