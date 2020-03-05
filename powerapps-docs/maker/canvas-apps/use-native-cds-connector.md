@@ -279,7 +279,7 @@ The following example shows that as you select an Account, all the Activities as
  
 ![Polymorphic Activities](./media/use-native-cds-connector/Polymorphic-Activities.png) 
  
-The records are being displayed from the Activity entity, but you can still use the [IsType](\functions\function-astype-istype.md) function to identify which kind of activity they are. Again, before you use IsType with an entity type, you must add the necessary data source.
+The records are being displayed from the Activity entity, but you can still use the [IsType](./functions/function-astype-istype.md) function to identify which kind of activity they are. Again, before you use IsType with an entity type, you must add the necessary data source.
  
 By using this formula, you can show the record type in a label control within the gallery:
 
