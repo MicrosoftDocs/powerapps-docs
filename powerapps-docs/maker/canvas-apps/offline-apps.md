@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 01/31/2019
+ms.date: 02/29/2020
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -20,8 +20,10 @@ search.app:
 Mobile users often need to be productive even when they have limited or no connectivity. When you build a canvas app, you can perform these tasks:
 
 - Open Power Apps Mobile and run apps when offline.
-- Determine when an app is offline, online, or in a metered connection by using the [Connection](../canvas-apps/functions/signals.md#connection) signal object.
-- Use [collections](../canvas-apps/create-update-collection.md) and leverage functions such as [LoadData and SaveData](../canvas-apps/functions/function-savedata-loaddata.md) for basic data storage when offline.
+- Determine when an app is offline, online, or in a metered connection by using the [Connection](functions/signals.md#connection) signal object.
+- Use [collections](create-update-collection.md) and leverage the [**LoadData** and **SaveData**](functions/function-savedata-loaddata.md) functions for basic data storage when offline.
+
+This article includes an example using Twitter data.  An even simpler example that doesn't require a connection is included in the [**LoadData** and **SaveData** function reference](functions/function-savedata-loaddata.md).
 
 ## Limitations
 

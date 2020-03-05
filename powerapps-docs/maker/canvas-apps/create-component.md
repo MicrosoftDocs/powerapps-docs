@@ -39,7 +39,7 @@ Components available inside the app are listed under **Custom** category in list
 ![Insert components to the app](./media/create-component/insert-components.png)
 
 > [!NOTE]
-> Components discussed in this article are different from the Power Apps Component Framework that enables developers and makers to create code components for model-driven and canvas apps. For more information, read [Power Apps Component Framework overview](https://docs.microsoft.com/powerapps/developer/component-framework/overview).
+> Components discussed in this article are different from the Power Apps component framework that enables developers and makers to create code components for model-driven and canvas apps. For more information, read [Power Apps component framework overview](https://docs.microsoft.com/powerapps/developer/component-framework/overview).
 
 ## Scope
 

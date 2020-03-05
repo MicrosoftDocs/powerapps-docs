@@ -91,8 +91,14 @@
         href: ../user/track-your-progress-with-dashboard-and-charts.md
       - name: Add Power BI dashboards 
         href: ../user/add-powerbi-dashboards.md
-      - name: Collaborate using SharePoint 
-        href: ../user/collaborate-using-sharepoint.md        
+    - name: Collaboration
+      items:
+      - name: Use OneDrive for Business     
+        href: ../user/one-drive.md
+      - name: Take notes by using OneNote      
+        href: ../user/onenote.md  
+      - name: Collaborate using SharePoint  
+        href: ../user/collaborate-using-sharepoint.md
     - name: Search records
       items:
       - name: Compare search options
@@ -163,6 +169,8 @@
       href: ./canvas-apps/help-desk-install.md
     - name: Meeting Capture app
       href: ./canvas-apps/sample-meeting-capture.md
+    - name: Crisis communication app
+      href: ./canvas-apps/sample-crisis-communication-app.md
   - name: Create your first app
     items:
     - name: 1 - Create an app from a template
@@ -567,6 +575,8 @@
             href: ./canvas-apps/functions/function-hashtags.md
           - name: Hour
             href: ./canvas-apps/functions/function-datetime-parts.md
+          - name: Identifiers
+            href: ./canvas-apps/functions/operators.md
           - name: If
             href: ./canvas-apps/functions/function-if.md
           - name: IfError
@@ -1539,7 +1549,7 @@
     items:
     - name: Use solutions
       href: ./common-data-service/use-solution-explorer.md
-    - name: Use the Common Data Services default solution
+    - name: Use a solution to customize
       href: ./common-data-service/use-solutions-for-your-customizations.md
     - name: Solution publisher overview
       href: ./common-data-service/change-solution-publisher-prefix.md
@@ -1551,6 +1561,8 @@
       href: ./common-data-service/update-solutions.md
     - name: Export solutions
       href: ./common-data-service/export-solutions.md      
+    - name: Create solution patches
+      href: ./common-data-service/solution-patches.md         
     - name: How managed solutions are merged
       href: ./common-data-service/how-managed-solutions-merged.md
     - name: Use environment variables
