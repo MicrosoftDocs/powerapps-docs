@@ -1,6 +1,6 @@
 ---
 title: "clearGlobalNotification (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
+ms.date: 03/04/2020
 ms.service: powerapps
 ms.topic: "reference"
 author: "KumarVivek"
@@ -61,7 +61,7 @@ On success, returns a promise object.
 
 ## Examples
 
-The following example shows how to add a notification and the close it automatically after 5 seconds.
+The following example shows how to add a notification and then close it automatically after 5 seconds.
 
 ```JavaScript
 // define notification object
