@@ -136,8 +136,8 @@ This is how the notification will appear in the app:
 // define action object
 var myAction =
 {
-actionLabel: "Learn more", 
-eventHandler: function () {
+  actionLabel: "Learn more", 
+  eventHandler: function () {
         Xrm.Navigation.openUrl("https://docs.microsoft.com/powerapps/");
         // perform other operations as required on clicking
     }
