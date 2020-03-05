@@ -28,9 +28,9 @@ You can control which of your managed solution components are customizable by us
 
 Managed properties are intended to protect your solution from modifications that may cause it to break. Managed properties do not provide digital rights management (DRM), or capabilities to license your solution or control who may install it.
 
-You apply managed properties when the solution is unmanaged. The managed properties will take effect after you package the managed solution and install it in a different environment. After the managed solution is imported, the managed properties can't be updated except by an update of the solution by the original publisher. 
+You apply managed properties when the solution is unmanaged in the unmanaged layer of your development environment. The managed properties will take effect after you package the managed solution and install it in a different environment. After the managed solution is imported, the managed properties can't be updated except by an update of the solution by the original publisher. 
 
-You view and change the managed properties in the unmanaged layer of your development environment. Most solution components have a **Managed properties** menu item available when viewing a list of solution components. When you import the managed solution that contains the components, you can view but not change their managed properties.
+Most solution components have a **Managed properties** menu item available when viewing a list of solution components. When you import the managed solution that contains the components, you can view but not change their managed properties.
 
 ## View and edit entity managed properties
 1.	Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select **Solutions** from the left pane. 
@@ -95,7 +95,6 @@ You can view and edit managed properties for many other solution components, suc
 While viewing entity relationships in [solution explorer](../model-driven-apps/advanced-navigation.md#solution-explorer), select a relationship from an unmanaged solution and then choose **More Actions** > **Managed Properties** on the menu bar.
   
 With relationships, the only managed property is **Can Be Customized**. This single setting controls all changes that can be made to the entity relationship. 
-
 
 ### See also
 
