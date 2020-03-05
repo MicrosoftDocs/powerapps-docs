@@ -50,7 +50,7 @@ search.app:
 <li>3: Warning</li>
 <li>4: Information</li></ul></li>
 <li><b>message</b>: String. The message to display in the notification.</li>
-<li><b>showCloseButton</b>: (Optional) Boolean. Indicates whether or not the user can close or dismiss the notification. If you don't specify this parameter, users can close or dismiss the message by default.</li>
+<li><b>showCloseButton</b>: (Optional) Boolean. Indicates whether or not the user can close or dismiss the notification. If you don't specify this parameter, users can close or dismiss the notification by default.</li>
 <li><b>type</b>: Number. Defines the type of notification. Currently, only a value of 2 is supported, which displays a message bar at the top of the app.</li>
 </ul></td>
 </tr>
