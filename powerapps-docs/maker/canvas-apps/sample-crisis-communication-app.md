@@ -15,7 +15,7 @@ search.app:
   - PowerApps
 ---
 
-# Set up and learn about the Crisis Communication sample app template in Power Apps
+# Set up and learn about the Crisis Communication sample template in Power Apps
 
 Step-by-step instructions for installing and configuring the Crisis Communication app for Power Apps.
 
@@ -50,7 +50,8 @@ During this walk through, you will learn how to:
 The data for the app will live in SharePoint lists. We'll first need to create new SharePoint site to get started.
 
 ### Create a SharePoint site
-1. Sign in to [SharePoint Online](https://www.sharepoint.com).
+
+1. Sign in to [Office online](https://www.office.com) and select **SharePoint**.
 1. Select Create site and select next:
 
     ![Sample SharePoint site](media/sample-crisis-communication-app/01-Create-Site.png)
@@ -124,8 +125,7 @@ creation of the SharePoint lists, you can use the *DeploySPLists* flow available
 > You may receive an error stating that location services are required.
   If this happens, please allow location services to Power Automate and refresh the page before trying again.
 
-The flow will then create the following SharePoint lists within your defined
-Share
+The flow will then create the following SharePoint lists within your SharePoint site:
 
 | **Display Title**| **Purpose** | **Description** |
 |-|-|-|
@@ -535,7 +535,7 @@ Once the Power Query editor is opened, right-click the **CI_Employee Status** da
 ![Power Query Advanced Editor](media/sample-crisis-communication-app/004-PowerQuery-AdvancedEditor-nolines.PNG)
 
 Here is where we will use the site name and list id from the SharePoint list: copy the new SharePoint site in the
-table, and the list id in the three places where we have a GUID as highlighted, and select Done.
+table, and the list id in the three places where we have a GUID as highlighted, and select **Done**.
 
 ![Power Query Advanced Editor Updates](media/sample-crisis-communication-app/005-PowerQuery-AdvancedEditorUpdates-nolines.PNG)
 
