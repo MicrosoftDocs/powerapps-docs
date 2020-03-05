@@ -64,8 +64,6 @@ For more information about access and scope privileges, see [Security roles](htt
 1. On the [!INCLUDE [powerapps](../../includes/powerapps.md)] site select **Apps**, next to the app you want to share select **…**, and  then select **Share**.
 
 2. Select the app then expand the list of security roles.
-=======
-2. From the **Share this app** dialog, under **Create a security role** select **Security Setting**.
 
 3. On the **All Roles** page, select **New**.  
 
