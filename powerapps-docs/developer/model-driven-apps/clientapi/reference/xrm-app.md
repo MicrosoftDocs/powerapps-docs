@@ -10,24 +10,16 @@ search.audienceType:
   - developer
 search.app: 
   - PowerApps
-  - D365CE
 ---
 # Xrm.App (Client API reference)
-
-
 
 Provides app-related methods. 
 
 |Method |Description |
 |---|---|
-|[navigateTo](xrm-navigation/navigateTo.md)|[!INCLUDE[xrm-navigation/includes/navigateTo-description.md](xrm-navigation/includes/navigateTo-description.md)]|
-|[openAlertDialog](xrm-navigation/openAlertDialog.md)|[!INCLUDE[xrm-navigation/includes/openAlertDialog-description.md](xrm-navigation/includes/openAlertDialog-description.md)]|
-|[openConfirmDialog](xrm-navigation/openConfirmDialog.md)|[!INCLUDE[xrm-navigation/includes/openConfirmDialog-description.md](xrm-navigation/includes/openConfirmDialog-description.md)]|
-|[openErrorDialog](xrm-navigation/openErrorDialog.md)|[!INCLUDE[xrm-navigation/includes/openErrorDialog-description.md](xrm-navigation/includes/openErrorDialog-description.md)]|
-|[openFile](xrm-navigation/openFile.md)|[!INCLUDE[xrm-navigation/includes/openFile-description.md](xrm-navigation/includes/openFile-description.md)]|
-|[openForm](xrm-navigation/openForm.md)|[!INCLUDE[xrm-navigation/includes/openForm-description.md](xrm-navigation/includes/openForm-description.md)]|
-|[openUrl](xrm-navigation/openUrl.md)|[!INCLUDE[xrm-navigation/includes/openUrl-description.md](xrm-navigation/includes/openUrl-description.md)]|
-|[openWebResource](xrm-navigation/openWebResource.md)|[!INCLUDE[xrm-navigation/includes/openWebResource-description.md](xrm-navigation/includes/openWebResource-description.md)]|
+|[addGlobalNotification](xrm-app/addGlobalNotification.md)|[!INCLUDE[xrm-app/includes/addGlobalNotification-description.md](xrm-app/includes/addGlobalNotification-description.md)]|
+|[clearGlobalNotification](xrm-app/clearGlobalNotification.md)|[!INCLUDE[xrm-app/includes/clearGlobalNotification-description.md](xrm-app/includes/clearGlobalNotification-description.md)]|
+
 
 ### Related topics
 
