@@ -205,21 +205,21 @@ connect it to your new data sources.
 1. **Save** and **Publish** the app.
 
 ### Update the request help Flow
+
 This flow will send an adaptive card to a central Teams team requesting help.
 
 ![Import app package](media/sample-crisis-communication-app/21-Request-Help.png)
 
-
 Before completing these step, first create a Teams team for your crisis management team. Once you do, you can get the ID for it
-and bring it into your flow. If you need help creating a Teams team, jump to [Create a central crisis management Teams team]() NEEDS A LINK
+and bring it into your flow. If you need help creating a Teams team, jump to [Create a central crisis management Teams team](#create-a-central-crisis-management-teams-team).
 
-1. Navigate to the Teams channel that you want to post all of your help requests to
+1. Navigate to the Teams channel that you want to post all of your help requests to.
 1. Select the **...** menu for the channel.
-1. Select **Get link to channel**
+1. Select **Get link to channel**.
 
     ![Get link to channel](media/sample-crisis-communication-app/17-Get-link-to-channel.png)
 
-1. Copy link and paste it in a text editor
+1. Copy link and paste it in a text editor.
 
     ![Copy link](media/sample-crisis-communication-app/18-Copy-link.png)
 
@@ -231,7 +231,7 @@ and bring it into your flow. If you need help creating a Teams team, jump to [Cr
    
    `https://teams.microsoft.com/l/channel/19%3ab2fa9fc20f3042a9b63fc5890e1813f8%40thread.tacv2/General?groupId=8bc7c0c2-0d4c-4fb8-af99-32da74c9237b&tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47`,
    
-1. Navigate to [flow.microsoft.com](https://flow.microsoft.com)
+1. Navigate to [flow.microsoft.com](https://flow.microsoft.com).
 1. Select **My flows** from the left navigation.
 1. Select **More commands** (...)  for **CrisisCommunication.RequestHelp** and select **Edit**.
     ![Edit app](media/sample-crisis-communication-app/20-Edit-Flow.png)
@@ -261,7 +261,7 @@ To manage the app you just imported, you'll want to repeat the same steps for th
 
     ![Edit app](media/sample-crisis-communication-app/08-Edit-Admin-App.png)
 
-1. **Sign in** or create any necessary connections and select **Allow**:
+1. **Sign in** or create any necessary connections and select **Allow**.
 
 1. Navigate to the data sources in the left pane:
 
@@ -337,13 +337,15 @@ Complete all of the fields and select **Save** once you are done.
 
 1. Navigate to **Company Contacts**
 1. Select **Create new contact**
-1. Complete the form with the contact details
+1. Complete the form with the contact details.
+
+*List schema:*
 
 | **Field name** | **Logical name in SharePoint** | **Purpose** |
 |-|-|-|
 | Full name | FullName | The name of the contact. |
 | E-mail | E-mail | The email that will shown for the contact. |
-| Country | Country | The country for the contact. This will be used to group the contacts, so can use this field for other groupings if countries doesn't make sense for you |
+| Country | Country | The country for the contact. This will be used to group the contacts, so can use this field for other groupings if countries doesn't make sense for you. |
 | Comments | Comments | Shows additional information about the contact; useful to describe when to reach out to this contact. |
 | Deprecated | Deprecated | Allows you to hide an existing emergency contact. |
 
@@ -352,6 +354,8 @@ Complete all of the fields and select **Save** once you are done.
 1. Navigate to **Company News**
 1. Select **Create new post**
 1. Complete the form.
+
+*List schema:*
 
 | **Field name** | **Logical name in SharePoint** | **Purpose** |
 |-|-|-|
@@ -365,6 +369,8 @@ Complete all of the fields and select **Save** once you are done.
 1. Navigate to **Helpful tips**.
 1. Select **New tip**.
 1. Complete the form.
+
+*List schema:*
 
 | **Field name** | **Logical name in SharePoint** | **Purpose** |
 |-|-|-|
@@ -380,6 +386,8 @@ Complete all of the fields and select **Save** once you are done.
 1. Select **Create new link**.
 1. Complete the form.
 
+*List schema:*
+
 | **Field name** | **Logical name in SharePoint** | **Purpose** |
 |-|-|-|
 | Title | Title | The text of the link. |
@@ -392,6 +400,8 @@ Complete all of the fields and select **Save** once you are done.
 1. Navigate to **FAQ**.
 1. Select **Create new FAQ**.
 1. Complete the form.
+
+*List schema:*
 
 | **Field name** | **Logical name in SharePoint** | **Purpose** |
 |-|-|-|
@@ -471,12 +481,12 @@ The app uses a flow to send notifications to end users whenever there is a new c
 1. Once the import is done, go back to **My flows**.
 1. Select the newly imported flow **Notify users on new crisis communication news**.
 1. Select **Edit** from the command bar.
-1. Open the card called **When a new item is posted**
+1. Open the card called **When a new item is posted**.
 1. Change the **Site Address** to the name of your SharePoint site.
-1. Change the **List name** to **CI_CompanyNews**
+1. Change the **List name** to **CI_CompanyNews**.
 1. Open the card called **Get the admin config settings**.
 1. Change the **Site Address** to the name of your SharePoint site.
-1. Change the **List name** to **CI_configAdminSetup**
+1. Change the **List name** to **CI_configAdminSetup**.
 1. Open the card called **Initialize variable – Read more text**.
 1. Change the **Value** to “Read more” in your native language.
 
@@ -491,7 +501,7 @@ The app uses a flow to send notifications to end users whenever there is a new c
 ### Test the news notification flow
 
 To test the news notification flow, go back to the admin app and create a new internal company update.
-Afterwards, all of the users within your distribution list will receive an update by your preferred notification
+Later, all of the users within your distribution list will receive an update by your preferred notification
 preference.
 
 > [!NOTE]
@@ -505,22 +515,22 @@ as being sick or working from home) you can now use a Power BI report to track h
 
 To start, you can use the sample report 'Presence status report.pbix' available from the downloaded [assets package](#prerequisites).
 If needed, download [Power BI Desktop](https://powerbi.microsoft.com/downloads). We will also need some information from
-the 'CI_Employee Status' SharePoint list created before, so let's get to it first. Open the list in your site and select List
+the **CI_Employee Status** SharePoint list created before, so let's get to it first. Open the list in your site and select List
 Settings under the settings icon:
 
 ![Employee Status List Settings](media/sample-crisis-communication-app/001-SharePointList-ListSettings-nolines.PNG)
 
-Take a note of the site name and the list id on the browser address bar:
+Take a note of the **site name** and the **list id** on the browser address bar:
 
 ![Employee Status List and Site Id](media/sample-crisis-communication-app/002-SharePointList-AddressAndId-nolines.PNG)
 
-At this point we are ready to open the Power BI report; launch Power BI and open the 'Presence status report.pbix'
-file. Move the mouse over the right side of the CI_Employee Status data source until you see the ellipsis, select
+At this point we are ready to open the Power BI report; launch Power BI and open the **Presence status report.pbix**
+file. Move the mouse over the right side of the **CI_Employee Status** data source until you see the ellipsis, select
 it and select the 'Edit query' option:
 
 ![Edit Query](media/sample-crisis-communication-app/003-PowerBI-EditQuery-nolines.PNG)
 
-Once the Power Query editor is opened, right-click the CI_Employee Status data source, and select "Advanced Editor":
+Once the Power Query editor is opened, right-click the **CI_Employee Status** data source, and select the **Advanced Editor**:
 
 ![Power Query Advanced Editor](media/sample-crisis-communication-app/004-PowerQuery-AdvancedEditor-nolines.PNG)
 
@@ -529,7 +539,7 @@ table, and the list id in the three places where we have a GUID as highlighted, 
 
 ![Power Query Advanced Editor Updates](media/sample-crisis-communication-app/005-PowerQuery-AdvancedEditorUpdates-nolines.PNG)
 
-Finally, select 'Close & Apply' to update the report to pull data from your SharePoint list.
+Select **Close & Apply** to update the report to pull data from your SharePoint list.
 
 ![Power Query Close and Apply](media/sample-crisis-communication-app/006-PowerQuery-CloseAndApply-nolines.PNG)
 
@@ -593,23 +603,23 @@ If you are a Teams admin, you can push the app to all of your users within the T
 To coordinate your crisis response, you'll want to create a central Teams team for your crisis management team
 and populate it with all of the relevant information.
 
-1. Navigate to Teams
-1. Select **Teams** from the left app bar
-1. Select **Join or create a Team**
-1. Select **Create team** and complete the remaining steps
+1. Navigate to Teams.
+1. Select **Teams** from the left app bar.
+1. Select **Join or create a Team**.
+1. Select **Create team** and complete the remaining steps.
 
     ![Create team](media/sample-crisis-communication-app/23-Create-Team.png)
 
 Once you've successfully created your team, you can pin relevant information as tabs. For example,
 you may want to pin the crisis management admin app or the Power BI report to your team. To add the admin app as a tab:
 
-1. Select the **+** button
-1. Search for and select **Power Apps**
-1. Search for and select **Crisis Information Admin**
+1. Select the **+** button.
+1. Search for and select **Power Apps**.
+1. Search for and select **Crisis Information Admin**.
 
     ![Pin app](media/sample-crisis-communication-app/32-Pin-Teams-app.png)
 
-1. Select **Save**
+1. Select **Save**.
 
 To add the Power BI report:
 
@@ -617,3 +627,7 @@ To add the Power BI report:
 1. Search for and select **Power BI**.
 1. Search for and select your Power BI report.
 1. Select **Save**.
+
+## Next steps
+- [Formula reference](https://docs.microsoft.com/powerapps/maker/canvas-apps/formula-reference)
+- [Controls reference](https://docs.microsoft.com/powerapps/maker/canvas-apps/reference-properties)
