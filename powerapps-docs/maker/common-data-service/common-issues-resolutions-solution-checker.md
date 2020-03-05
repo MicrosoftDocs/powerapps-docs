@@ -218,7 +218,7 @@ Reference [KB Article #4337537: Invalid Export - Business Process Entity Missing
 
 If a solution has had a [patch](https://docs.microsoft.com/powerapps/developer/common-data-service/create-patches-simplify-solution-updates) applied, Solution Checker will fail to export the solution for analysis. When a solution has had a patch applied, the original solution becomes locked and it can’t be changed or exported as long as there are dependent patches that exist in the organization that identify the solution as the parent solution.
 
-To resolve this issue, clone the solution so that all patches related to the solution are rolled into the newly-created solution. This unlocks the solution and allows the solution to be exported from the system.  For more information, see [Clone a Solution](use-segmented-solutions-patches-simplify-updates.md#clone-a-solution).
+To resolve this issue, clone the solution so that all patches related to the solution are rolled into the newly-created solution. This unlocks the solution and allows the solution to be exported from the system.  For more information, see  [Clone a Solution](solution-patches.md#clone-a-solution).
 
 ## Solution checker will not analyze empty solutions
 
