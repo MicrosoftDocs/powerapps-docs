@@ -46,7 +46,7 @@ In addition, you may want to enable the **Explicit Column Selection** feature:
 Check *Deprecated features* section under *Advanced settings*.  If set to *Off*, proceed with the following instructions as a first step in the conversion. 
 
 > [!IMPORTANT]
-> If you don't see **Relational data, option sets and other new features for Common Data Service** in *Advanced settings*, or if it’s already *On*, skip the following steps and continue to the [next section](#add-link-to-next-section).
+> If you don't see **Relational data, option sets and other new features for Common Data Service** in *Advanced settings*, or if it’s already *On*, skip the following steps and continue to the [next section](#improve-data-source-experience-and-common-data-service-views-is-off).
 
 - **Step 1**: Turn **Use display names** feature **On**:
     
@@ -76,7 +76,7 @@ Check *Deprecated features* section under *Advanced settings*.  If set to *Off*,
     It’s possible to have errors at this stage if you are using an option set field or hard coded GUID text values.  <br><br> 
     
     - *Option Set values*: If you are using an option set field with a text identifier for the option set value, use the dot notation instead to reference the option set value. For example, change `Patch(Accounts, OptionSet1 = “12345”)` to `Patch(Accounts, OptionSet.Item1)` where `Item1` corresponds to the `12345` value. <br>
-    See the [Detailed Examples](#add-link-for-details) section for more information.
+    See the [Detailed Examples](#detailed-examples) section for more information.
     - *GUIDs*: If you are using a static GUID string such as `015e45e1044e49f388115be07f2ee116`, convert it to a function that returns a GUID object; for example `GUID(“015e45e1044e49f388115be07f2ee116”)`. 
     - *Lookups*: If you are using Lookup functions to get first level lookup values such as `Lookup(Contacts, ‘contactID’ = ThisItem.ContactID”)`, consider using `ThisItem.PrimaryContacts` (where PrimaryContacts is the name of the entity) instead.
 
@@ -111,7 +111,7 @@ It’s possible to have errors as you convert if you were not using Display Name
 - If control name conflicts, change the name of the control to be different and unique. 
 - For field and entity display name conflicts, you may see a formula that is expecting an entity but is resolving to a more locally scoped field name. Use the square bracket with an *@* symbol to indicate a global scope so it resolves to the entity; for example, **[@entityName]**.
 - *Option Set values*: If you are using an option set field with a text identifier for the option set value, use the dot notation instead to reference the option set value. For example, change `Patch(Accounts, OptionSet1 = “12345”)` to `Patch(Accounts, OptionSet.Item1)` where `Item1` corresponds to the `12345` value. <br>
-See the [Detailed Examples](#add-link-for-details) section for more information.
+See the [Detailed Examples](#detailed-examples) section for more information.
 - *GUIDs*: If you are using a static GUID string such as `015e45e1044e49f388115be07f2ee116`, convert it to a function that returns a GUID object; for example `GUID(“015e45e1044e49f388115be07f2ee116”)`. 
 - *Lookups*: If you are using Lookup functions to get first level lookup values such as `Lookup(Contacts, ‘contactID’ = ThisItem.ContactID”)`, consider using `ThisItem.PrimaryContacts` (where PrimaryContacts is the name of the entity) instead.
 - For any Polymorphic references, refer to the Detailed Examples section below. 
@@ -273,13 +273,13 @@ In Common Data Service, entities such as Faxes, Tasks, Emails, Notes, Phone Call
 
 In a canvas app, you can either show activities of a specific type such as Faxes or Taxes, or all activities associated with an entity such as account. You need to add the Activities entity as well as other individual entities whose data you plan to display in the canvas app.
 
-Each time you add a record to, for example the Tasks entity, a record in the Activity entity with the fields common across all activity entities is created. Read [activity entity](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/working-with-references#activity-entity) for more details.
+Each time you add a record to, for example the Tasks entity, a record in the Activity entity with the fields common across all activity entities is created. Read [activity entity](https://docs.microsoft.com/powerapps/maker/canvas-apps/working-with-references#activity-entity) for more details.
 
 The following example shows that as you select an Account, all the Activities associated with that account will be displayed:
  
 ![Polymorphic Activities](./media/use-native-cds-connector/Polymorphic-Activities.png) 
  
-The records are being displayed from the Activity entity, but you can still use the [IsType](.\functions\function-astype-istype.md) function to identify which kind of activity they are. Again, before you use IsType with an entity type, you must add the necessary data source.
+The records are being displayed from the Activity entity, but you can still use the [IsType](\functions\function-astype-istype.md) function to identify which kind of activity they are. Again, before you use IsType with an entity type, you must add the necessary data source.
  
 By using this formula, you can show the record type in a label control within the gallery:
 
