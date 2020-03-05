@@ -298,15 +298,15 @@ If( IsType( ThisItem, [@Faxes] ), "Fax",
     IsType( ThisItem, [@Chats] ), "Chat",
     "Unknown")
 ```
- 
+
  ![Polymorphic-IsType](./media/use-native-cds-connector/Polymorphic-IsType.png)
- 
+
 #### Access the list of Notes for a record
 
 When you create an entity, you can enable attachments. If you select the check box for enabling attachments, you'll create a Regarding relationship with the Notes entity, as this graphic shows for the Accounts entity:
 
 ![Notes-Field](./media/use-native-cds-connector/Notes-Field.png)
- 
+
 ##### Filtering
 
 You can't read or filter based on the Regarding field. However, the reverse Notes one-to-many relationship is available. To list all the Notes associated to an Account entity, you can use the following formula:
@@ -324,10 +324,10 @@ Relate( ThisItem.Notes, Patch( Notes, Defaults( Notes ), { Title: "A new note", 
 ```
 
 ## Next steps
+
 - [Formula reference](https://docs.microsoft.com/powerapps/maker/canvas-apps/formula-reference)
 - [Controls reference](https://docs.microsoft.com/powerapps/maker/canvas-apps/reference-properties)
 
 ### See also
 
 [What is Common Data Service?](../../common-data-service/data-platform-intro.md)
-
