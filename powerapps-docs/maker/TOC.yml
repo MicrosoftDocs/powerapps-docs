@@ -209,9 +209,9 @@
           items:
             - name: Common Data Service
               items:
-              - name: Common Data Service connection overview
+              - name: Overview
                 href: canvas-apps/connections/connection-common-data-service.md
-              - name: Common Data Service connection improvements
+              - name: Improvements
                 href: canvas-apps/use-native-cds-connector.md
             - name: Cloud storage
               href: canvas-apps/connections/cloud-storage-blob-connections.md
