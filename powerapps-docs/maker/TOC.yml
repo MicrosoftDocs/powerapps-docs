@@ -201,6 +201,8 @@
           items:
             - name: Common Data Service
               href: canvas-apps/connections/connection-common-data-service.md
+            - name: Common Data Service improvements
+              href: canvas-apps/connections/use-native-cds-connector.md
             - name: Cloud storage
               href: canvas-apps/connections/cloud-storage-blob-connections.md
             - name: Dynamics 365
