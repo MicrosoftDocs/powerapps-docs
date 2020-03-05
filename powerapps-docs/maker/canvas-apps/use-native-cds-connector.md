@@ -321,7 +321,13 @@ You can't set the Notes field on an entity by using Patch. To add a record to an
 
 ```powerapps-dot
 Relate( ThisItem.Notes, Patch( Notes, Defaults( Notes ), { Title: "A new note", isdocument:'Is Document (Notes)'.No } ) )
+```
+
+## Next steps
+- [Formula reference](https://docs.microsoft.com/powerapps/maker/canvas-apps/formula-reference)
+- [Controls reference](https://docs.microsoft.com/powerapps/maker/canvas-apps/reference-properties)
 
 ### See also
 
 [What is Common Data Service?](../../common-data-service/data-platform-intro.md)
+
