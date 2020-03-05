@@ -18,7 +18,13 @@ search.app:
 
 ## Overview
 
-If you created a canvas app with a Common Data Service connector prior to November 2019, then you might not have the benefit of the most current version of the Common Data Service. The **Improve data source experience and Common Data Service views** option unlocks significant speed gains, increased reliability, and features such as access to Common Data Service views and File and Image field attributes.
+If you created a canvas app with a Common Data Service connector before November 2019, then you might not have the benefit of the most current version of the Common Data Service. 
+
+The **Improve data source experience and Common Data Service views** option has following benefits:
+
+1. Significant speed gains.
+2. Increased reliability.
+3. Access to Common Data Service **views** and **File and Image field attributes**.
 
 The **Improve data source experience and Common Data Service views** option appears in the Advanced settings section:
 
@@ -32,9 +38,9 @@ Upgrade your app by inspecting the settings of the features and then by followin
 
 ### *Improve data source experience and Common Data Service views* is On:
 
-Either you have already converted your canvas app to use this feature, or you started an app with default setting of *On* for this feature. No further actions required. 
+Either you already converted your canvas app to use this feature, or you started an app with default setting of *On* for this feature. No further actions required. 
 
-In addition, you may want to enable the **Explicit Column Selection** feature:
+You may also want to enable the **Explicit Column Selection** feature:
 
 ![Explicit column selection](media/use-native-cds-connector/explicit-column-selection.png)
 
@@ -43,7 +49,7 @@ In addition, you may want to enable the **Explicit Column Selection** feature:
 
 ### *Relational data, option sets and other new features for Common Data Service* is Off:
 
-Check *Deprecated features* section under *Advanced settings*.  If set to *Off*, proceed with the following instructions as a first step in the conversion. 
+Check *Deprecated features* section under *Advanced settings*.  If set to *Off*, continue with the following instructions as a first step in the conversion. 
 
 > [!IMPORTANT]
 > If you don't see **Relational data, option sets and other new features for Common Data Service** in *Advanced settings*, or if it’s already *On*, skip the following steps and continue to the [next section](#improve-data-source-experience-and-common-data-service-views-is-off).
@@ -52,15 +58,17 @@ Check *Deprecated features* section under *Advanced settings*.  If set to *Off*,
     
     1. Turn **Use display names** feature *On*.
     1. Wait for the health monitor to finish analyzing your app.
-    1. Save, close, and re-open your app.
+    1. Save, close, and reopen your app.
     1. Resolve all formula errors.
-    1. Save, close, and re-open your app.
+    1. Save, close, and reopen your app.
     
     *Possible errors and suggestions*:
     
     It’s possible that some of the newly shown display names may conflict with the display names for other entities, fields, or controls. For example, you may have a control and a field with the same name. You can change the name of the control with a unique value to fix.
     
-    For field and entity display name conflicts you, may see a formula that is expecting an entity but is resolving to a more locally scoped field name. Use the square bracket with an **@** symbol to indicate a global scope so it resolves to the entity; for example, **[@entityName]**.
+    For any field and entity display name conflict, you may see a formula that expects an entity but resolves to a locally scoped field name.
+
+    Use the square bracket with an **@** symbol to indicate a global scope so it resolves to the entity; for example, **[@entityName]**.
     
     
 - **Step 2**: Turn **Relational data, option sets and other new features for Common Data Service** and **Use GUID data types instead of strings** features **On**:
@@ -69,16 +77,16 @@ Check *Deprecated features* section under *Advanced settings*.  If set to *Off*,
     1. Turn **Use GUID data types instead of strings** feature *On*.
     1. Wait for the health monitor to finish analyzing your app.
     1. Resolve all formula errors.
-    1. Save, close, and re-open your app.  
+    1. Save, close, and reopen your app.  
     
     *Possible errors and suggestions*:
     
-    It’s possible to have errors at this stage if you are using an option set field or hard coded GUID text values.  <br><br> 
+    It’s possible to have errors at this stage if you're using an option set field or hard-coded GUID text values.  <br><br> 
     
-    - *Option Set values*: If you are using an option set field with a text identifier for the option set value, use the dot notation instead to reference the option set value. For example, change `Patch(Accounts, OptionSet1 = “12345”)` to `Patch(Accounts, OptionSet.Item1)` where `Item1` corresponds to the `12345` value. <br>
+    - *Option Set values*: If you're using an option set field with a text identifier for the option set value, use the dot notation instead to reference the option set value. For example, change `Patch(Accounts, OptionSet1 = “12345”)` to `Patch(Accounts, OptionSet.Item1)` where `Item1` corresponds to the `12345` value. <br>
     See the [Detailed Examples](#detailed-examples) section for more information.
-    - *GUIDs*: If you are using a static GUID string such as `015e45e1044e49f388115be07f2ee116`, convert it to a function that returns a GUID object; for example `GUID(“015e45e1044e49f388115be07f2ee116”)`. 
-    - *Lookups*: If you are using Lookup functions to get first level lookup values such as `Lookup(Contacts, ‘contactID’ = ThisItem.ContactID”)`, consider using `ThisItem.PrimaryContacts` (where PrimaryContacts is the name of the entity) instead.
+    - *GUIDs*: If you're using a static GUID string such as `015e45e1044e49f388115be07f2ee116`, convert it to a function that returns a GUID object; for example `GUID(“015e45e1044e49f388115be07f2ee116”)`. 
+    - *Lookups*: If you're using Lookup functions to get first-level lookup values such as `Lookup(Contacts, ‘contactID’ = ThisItem.ContactID”)`, consider using `ThisItem.PrimaryContacts` (where PrimaryContacts is the name of the entity) instead.
 
 ### *Improve data source experience and Common Data Service views* is Off:
 
@@ -106,14 +114,14 @@ To convert your app that uses the Dynamics 365 connector, you'll need to remove 
 
 *Possible errors and suggestions*:
 
-It’s possible to have errors as you convert if you were not using Display Names, if you were using GUID strings, or if you were using an option set fields.
+It’s possible to have errors as you convert if: you aren't using Display Names, if you are using GUID strings, or if you are using an option set field.
 
 - If control name conflicts, change the name of the control to be different and unique. 
 - For field and entity display name conflicts, you may see a formula that is expecting an entity but is resolving to a more locally scoped field name. Use the square bracket with an *@* symbol to indicate a global scope so it resolves to the entity; for example, **[@entityName]**.
 - *Option Set values*: If you are using an option set field with a text identifier for the option set value, use the dot notation instead to reference the option set value. For example, change `Patch(Accounts, OptionSet1 = “12345”)` to `Patch(Accounts, OptionSet.Item1)` where `Item1` corresponds to the `12345` value. <br>
 See the [Detailed Examples](#detailed-examples) section for more information.
 - *GUIDs*: If you are using a static GUID string such as `015e45e1044e49f388115be07f2ee116`, convert it to a function that returns a GUID object; for example `GUID(“015e45e1044e49f388115be07f2ee116”)`. 
-- *Lookups*: If you are using Lookup functions to get first level lookup values such as `Lookup(Contacts, ‘contactID’ = ThisItem.ContactID”)`, consider using `ThisItem.PrimaryContacts` (where PrimaryContacts is the name of the entity) instead.
+- *Lookups*: If you are using Lookup functions to get first-level lookup values such as `Lookup(Contacts, ‘contactID’ = ThisItem.ContactID”)`, consider using `ThisItem.PrimaryContacts` (where PrimaryContacts is the name of the entity) instead.
 - For any Polymorphic references, refer to the Detailed Examples section below. 
 
 ## Detailed Examples
@@ -122,11 +130,11 @@ Converting your app to use the new **Option sets** and **Two options** data type
 
 ### Option Sets
 
-Separate `_myfield` and `_myfield_label` fields were used for an Option set earlier. Now, there is a single `myfield` that can be used both for locale independent comparisons and to obtain the locale specific label.
+Separate `_myfield` and `_myfield_label` fields were used for an Option set earlier. Now, there is a single `myfield` that can be used both for locale-independent comparisons and to obtain the locale-specific label.
 
 #### Removing and adding Option set Data cards
 
-We recommended to remove existing data cards and add them back to work with your Option set. For example, if you are working with the Account entity and the Category Option set, you'll see that the *DataField* property of the data card was set to `_accountcategorycode_label`. In the field list you can see that the data card has a type of *String*:
+It's recommended to remove existing data cards and add them back to work with your Option set. For example, if you are working with the Account entity and the Category Option set, you'll see that the *DataField* property of the data card was set to `_accountcategorycode_label`. In the field list you can see that the data card has a type of *String*:
 
 ![OptionSet with old style name](./media/use-native-cds-connector/OptionSet-with-old-style-name.png)
 
@@ -142,7 +150,7 @@ Previously, if you wanted to use an Option Set value in a Filter expression you 
 Filter(Account,'Category Value' = "1")
 ```
 
-You'll need to edit this formula. Option set text identifer is no longer used for the value. This expression should be updated to look like the following:
+You'll need to edit this formula. Option set text identifer is no longer used for the value. This expression should be updated to look the following:
 
 ```powerapps-dot
 Filter(Account, Category= ‘Category (Accounts)’.’Preferred Customer’)
@@ -166,7 +174,7 @@ Patch( Accounts, First(Accounts), { Category: ‘Category (Accounts)’.’Prefe
 
 #### Option Set disambiguation
 
-If the display name of a Option set **field** and the name of the Option set are the same, you'll need to disambiguate the formula. To continue using the Accounts Category Code example, the **@** implies to use the Option Set, not the field.
+If the display name of an Option set **field** and the name of the Option set are the same, you'll need to disambiguate the formula. To continue using the Accounts Category Code example, the **@** implies to use the Option Set, not the field.
 
 ```powerapps-dot
 Filter(Accounts, 'Category Code' = [@’Category Code’].'Preferred Customer')
@@ -180,7 +188,7 @@ You should remove existing data cards and add them back to work with your Two Op
 
 ![Two Option Set - old style](./media/use-native-cds-connector/TwoOptionSet-Old.png)
 
-With the new *Improved data source experience and Common Data Service views* feature, your card will now be marked as **custom** and you'll see errors.  Remove the old data card and add the Option Set back.  Once re-added, by default, you'll see an edit control with two options.  
+With the new *Improved data source experience and Common Data Service views* feature, your card will now be marked as **custom** and you'll see errors.  Remove the old data card and add the Option Set back. You'll see an edit control with two options by default after you add.
 
 ![TwoOptionSet-New](./media/use-native-cds-connector/TwoOptionSet-New.png)
 
@@ -248,11 +256,11 @@ Global disambiguation operator for `[@Teams]` and `[@Users]` is used to ensure t
  
 #### Access and set the Company Name field (a Customer data type) of the Contacts entity
 
-Customer lookup field is another polymorphic lookup that's very similar to Owner. You can only have one Owner field per entity. But an entity can include zero, one, or more Customer lookup fields. The Contacts system entity includes the Company Name field, which is a Customer lookup field. Read [show the fields of a customer](https://docs.microsoft.com/powerapps/maker/canvas-apps/working-with-references#show-the-fields-of-a-customer) for more details.
+Customer lookup field is another polymorphic lookup that's similar to Owner. You can only have one Owner field per entity. But an entity can include zero, one, or more Customer lookup fields. The Contacts system entity includes the Company Name field, which is a Customer lookup field. Read [show the fields of a customer](https://docs.microsoft.com/powerapps/maker/canvas-apps/working-with-references#show-the-fields-of-a-customer) for more details.
  
 #### Access and set the Regarding field of activity entities such as Faxes, Phone Calls, Email Messages
 
-Polymorphic lookups are not just limited to Accounts and Contacts. The list of entities is extensible with custom entities. For example, the Faxes entity has a polymorphic Regarding lookup field, which can refer to Accounts, Contacts, and other entities. If you have a gallery with data source set to Faxes, you can use the following formula to display the name associated with the Regarding lookup field. 
+Polymorphic lookups aren't limited to Accounts and Contacts. The list of entities is extensible with custom entities. For example, the Faxes entity has a polymorphic Regarding lookup field, which can refer to Accounts, Contacts, and other entities. If you have a gallery with data source set to Faxes, you can use the following formula to display the name associated with the Regarding lookup field. 
  
  ```powerapps-dot
 If( IsBlank( ThisItem.Regarding ), "",
@@ -271,15 +279,15 @@ Read [Regarding lookup fields](https://docs.microsoft.com/powerapps/maker/canvas
 
 In Common Data Service, entities such as Faxes, Tasks, Emails, Notes, Phone Calls, Letters, and Chats are designated as [activities](https://docs.microsoft.com/powerapps/developer/common-data-service/activity-entities). You can also create your own [custom activity entities](https://docs.microsoft.com/powerapps/developer/common-data-service/custom-activities).
 
-In a canvas app, you can either show activities of a specific type such as Faxes or Taxes, or all activities associated with an entity such as account. You need to add the Activities entity as well as other individual entities whose data you plan to display in the canvas app.
+You can show activities of a specific type (such as Faxes or Taxes), or all activities associated with an entity such as account. Add the Activities entity and other individual entities whose data you plan to display in the canvas app.
 
-Each time you add a record to, for example the Tasks entity, a record in the Activity entity with the fields common across all activity entities is created. Read [activity entity](https://docs.microsoft.com/powerapps/maker/canvas-apps/working-with-references#activity-entity) for more details.
+Each time you add a record to (for example the Tasks entity), a record in the Activity entity with the fields common across all activity entities is created. Read [activity entity](https://docs.microsoft.com/powerapps/maker/canvas-apps/working-with-references#activity-entity) for more details.
 
 The following example shows that as you select an Account, all the Activities associated with that account will be displayed:
  
 ![Polymorphic Activities](./media/use-native-cds-connector/Polymorphic-Activities.png) 
  
-The records are being displayed from the Activity entity, but you can still use the [IsType](./functions/function-astype-istype.md) function to identify which kind of activity they are. Again, before you use IsType with an entity type, you must add the necessary data source.
+The records are being displayed from the Activity entity. But you can still use the [IsType](./functions/function-astype-istype.md) function to identify which kind of activity they are. Again, before you use IsType with an entity type, you must add the necessary data source.
  
 By using this formula, you can show the record type in a label control within the gallery:
 
@@ -309,7 +317,7 @@ First( Accounts ).Notes
 
 ##### Patch
 
-You can't set the Notes field on an entity by using Patch. In order to add a record to an entity's Notes table, you can use the Relate function. But the note should first be created, as in this example:
+You can't set the Notes field on an entity by using Patch. To add a record to an entity's Notes table, you can use the Relate function. Create the note first, as in this example:
 
 ```powerapps-dot
 Relate( ThisItem.Notes, Patch( Notes, Defaults( Notes ), { Title: "A new note", isdocument:'Is Document (Notes)'.No } ) )
