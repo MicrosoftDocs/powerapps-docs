@@ -29,7 +29,7 @@ internal company news, get answers to frequently asked questions, and get access
 to important information like links and emergency contacts. This app requires a
 small amount of setup to make it your own.
 
-During this walk through, you will learn how to:
+In this walk through, you'll learn how to:
 - Create a location for your data
 - Import both the Crisis Communication app and its admin app
 - Create content for the app
@@ -144,7 +144,7 @@ The flow will then create the following SharePoint lists within your SharePoint 
     new columns is allowed, but deleting columns may break the app.)
 > - Use caution when deleting list items; deleting list items deletes historical records. You can toggle deprecation value from *No* to *Yes* to drop records from contacts, news, FAQs or links.
 
-## Import and setup the Crisis Communication app
+## Import and set up the Crisis Communication app
 
 Now that all the SharePoint lists are created, you can now import the app and
 connect it to your new data sources.
@@ -210,8 +210,8 @@ This flow will send an adaptive card to a central Teams team requesting help.
 
 ![Import app package](media/sample-crisis-communication-app/21-Request-Help.png)
 
-Before completing these step, first create a Teams team for your crisis management team. Once you do, you can get the ID for it
-and bring it into your flow. If you need help creating a Teams team, jump to [Create a central crisis management Teams team](#create-a-central-crisis-management-teams-team).
+Before completing the following step, first create a Teams team for your crisis management team. Once you do, you can get the ID for it
+and bring it into your flow. If you need help with creating a Teams team, jump to [Create a central crisis management Teams team](#create-a-central-crisis-management-teams-team).
 
 1. Navigate to the Teams channel that you want to post all of your help requests to.
 1. Select the **...** menu for the channel.
@@ -241,8 +241,8 @@ and bring it into your flow. If you need help creating a Teams team, jump to [Cr
 1. Paste the Channel ID into the **Value** field.
     ![Set Team IDs](media/sample-crisis-communication-app/22-Set-Team-IDs.png)
 
-## Import and setup the admin app
-To manage the app you just imported, you'll want to repeat the same steps for the admin app.
+## Import and set up the admin app
+To manage the app you imported, you'll want to repeat the same steps for the admin app.
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 1. Select **Apps** from the left navigation.
@@ -294,8 +294,9 @@ To manage the app you just imported, you'll want to repeat the same steps for th
 
 ## Create initial content for the app
 
-Now that you have successfully imported both the Crisis Communication app and its admin app, you
-can now start creating the initial content. To start, open up the Crisis Communication Admin app.
+You have successfully imported both the Crisis Communication app and its admin app.
+
+You can now start creating the initial content. To start, open up the Crisis Communication Admin app.
 
 ![Admin app](media/sample-crisis-communication-app/09-Admin-App.png)
 
@@ -310,13 +311,13 @@ also setup key settings for the accompanying flows.
 
 To initialize your app, you need to provide all of the required fields by navigating to **Admin Settings**.
 
-Complete all of the fields and select **Save** once you are done.
+Complete all of the fields and select **Save**.
 
 | **Field name** | **Logical name in SharePoint** | **Purpose** |
 |-|-|-|
-| Admin email | AdminContactEmail | Used to notify others who is administering the application. |
-| Logo URL | Logo | The logo of your app which will appear in the top left corner. |
-| AAD group ID | AADGroupID | Used to send notifications to end-users about internal company updates via the *Notify users on new crisis communication news* flow. |  
+| Admin email | AdminContactEmail | Used to notify others who are administering the application. |
+| Logo URL | Logo | The logo of your app that will appear in the top-left corner. |
+| AAD group ID | AADGroupID | Used to send notifications to end users about internal company updates via the *Notify users on new crisis communication news* flow. |  
 | APP URL | AppURL | The location of the app so that the *Notify users on new crisis communication news* flow can redirect users after selecting **Read more**. | 
 | Government RSS Feed | GovernmentRSSFeed | Used to populate the world news feature within the app. Useful if you want to provide additional information to your employees from a trusted source. |
 | Notification method | PreferredSentNotification | Used by the *Notify users on new crisis communication news* flow to determine which distribution channel it should use when sending out notifications. |
@@ -326,7 +327,7 @@ Complete all of the fields and select **Save** once you are done.
 1. Navigate to [aad.portal.azure.com](https://aad.portal.azure.com)
 1. Select **Azure Active Directory** from the left navigation.
 1. Select **Groups**.
-1. Search for and select your distrobution group.
+1. Search for and select your distribution group.
 1. Copy the **Object Id** field.
 
     ![Getting the AAD ID in Azure](media/sample-crisis-communication-app/11-AAD-Group-ID.png)
@@ -345,7 +346,7 @@ Complete all of the fields and select **Save** once you are done.
 |-|-|-|
 | Full name | FullName | The name of the contact. |
 | E-mail | E-mail | The email that will shown for the contact. |
-| Country | Country | The country for the contact. This will be used to group the contacts, so can use this field for other groupings if countries doesn't make sense for you. |
+| Country | Country | The country for the contact. This will be used to group the contacts, so can use this field for other groupings if countries don't make sense for you. |
 | Comments | Comments | Shows additional information about the contact; useful to describe when to reach out to this contact. |
 | Deprecated | Deprecated | Allows you to hide an existing emergency contact. |
 
@@ -378,7 +379,7 @@ Complete all of the fields and select **Save** once you are done.
 | Resource URL | ResourceURL | An link to additional reading material. (optional) |
 | Sub title | SubTitle | A sub title for the tip. (optional) |
 | Description | Description | The full description of the helpful tip. |
-| Deprecated | Deprecated | Allows you to hide an helpful tip. |
+| Deprecated | Deprecated | Allows you to hide a helpful tip. |
 
 ### Setup links
 
@@ -416,11 +417,11 @@ Now that you've successfully setup all of the data, you can now test the app to 
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 2. Select **Apps** from the left navigation.
-3. Select **Crisis Communication** to play the app. 
+3. Select **Crisis Communication** to play the app.
 
 Once you've successfully tested the app, you can share the app with everyone in your company.
 
-## Import and setup the notification flow
+## Import and set up the notification flow
 
 The app uses a flow to send notifications to end users whenever there is a new company update.
 
@@ -524,7 +525,7 @@ Take a note of the **site name** and the **list id** on the browser address bar:
 
 ![Employee Status List and Site Id](media/sample-crisis-communication-app/002-SharePointList-AddressAndId-nolines.PNG)
 
-At this point we are ready to open the Power BI report; launch Power BI and open the **Presence status report.pbix**
+At this point, we are ready to open the Power BI report; launch Power BI and open the **Presence status report.pbix**
 file. Move the mouse over the right side of the **CI_Employee Status** data source until you see the ellipsis, select
 it and select the 'Edit query' option:
 
