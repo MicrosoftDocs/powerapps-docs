@@ -45,7 +45,9 @@ Events occur in Custom Engagement forms and grids whenever a form or grid loads,
 - [PostSearch](events/postsearch.md)
 
 ## Lookup control event
+- [OnLookupTagClick](events/onlookuptagclick.md)
 - [PreSearch](events/presearch.md)
+
 
 ## Process events
 - [OnProcessStatusChange](events/onprocessstatuschange.md)

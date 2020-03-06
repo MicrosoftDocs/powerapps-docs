@@ -28,7 +28,7 @@ Use the **Patch** function to modify one or more records of a data source.  The 
 
 Use **Patch** with the **[Defaults](function-defaults.md)** function to create records. Use this behavior to build a [single screen](../working-with-data-sources.md) for both creating and editing records. For example, this formula creates a record for a customer named Contoso:
 
-`Patch( Customers, Defaults( Customer ), { Name: “Contoso” } )`
+`Patch( Customers, Defaults( Customers ), { Name: “Contoso” } )`
 
 Even if you're not working with a data source, you can use **Patch** to merge two or more records. For example, this formula merges two records into one that identifies both the phone number and the location for Contoso:
 

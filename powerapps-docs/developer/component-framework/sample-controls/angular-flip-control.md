@@ -19,7 +19,7 @@ This sample shows how to use third-party libraries to create components in Power
 
 ## Available for 
 
-Model-driven apps and canvas apps (experimental preview) 
+Model-driven apps and canvas apps (public preview) 
 
 ## Manifest
 

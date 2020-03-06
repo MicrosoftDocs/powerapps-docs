@@ -153,3 +153,6 @@ If you created a custom form and added the notes section to it, be sure to selec
 ## Notes configuration for web forms
 
 Web form notes are configured in the same way as [entity form notes](#notes-configuration-for-entity-forms). You must first create a metadata record for the Web Form Step that has notes, and then add the notes configuration metadata.
+
+> [!NOTE]
+> Notes description must be prefixed with *WEB* (that is 'WEB' keyword with asterisk (*) before and after) in order to display on the portal.

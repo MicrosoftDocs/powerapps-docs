@@ -33,8 +33,7 @@ The portal enables configuring the most common options, but certain options can 
 
 ## View entities
 
-1. From the [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select either **Model-driven** or **Canvas** design mode.
-2. Select **Data** > **Entities**
+1. From the [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Data** > **Entities**.
 
 ![View entities](media/view-entities-portal.png)
 
@@ -45,6 +44,7 @@ You can filter the entities you see using the following views in a list:
  |View|Description|
  |--|--|
  |**All**| Shows all the entities|
+ |**Managed**| Shows only managed and standard entities|
  |**Custom**|Shows only custom entities|
  |**Default**|Shows only the standard entities |
 
@@ -63,23 +63,33 @@ Enter data for the following fields
 |**Display name**|This is the singular name for the entity that will be shown in the app. This can be changed later.|
 |**Plural display name**|This is the plural name for the entity that will be shown in the app. This can be changed later.|
 |**Name**|This field is pre-populated based on the **Display name** you enter. It includes the customization prefix for the Common Data Service solution publisher. You cannot change this after the entity is saved.|
+|**Primary Name**|This is the only field visible at this point.| Edit it if you want to change the **Display Name**or **Name** of the field.
+|**Display name**|This is the main user-friendly text identifier for your record (typically a name or a number). The value of this field is shown to users when they need to select from a list of records.
+|**Name**|This field is pre-populated based on the **Display name** you enter. It includes the customization prefix for the Common Data Service solution publisher. You cannot change this after the entity is saved.|
+
+Select **Enable Attachments** to append notes and files to records for this entity.
+
+Select **More settings**. These settings are optional for an entity.
+
+|Field|Description|
+|--|--|
 |**Description**|Provide a meaningful description of the purpose of the entity.|
+|**Entity type and ownership**|Switch the entity type to Activity Entity to create entities that can manage tasks. The type of **Ownership** defines who can perform operations on a record.|
+|**Collaboration**|Enable features to help users to more easily work together on this entity.|
+|**Create and Update Settings**|You can enable quick create forms, giving your app a streamlined data entry experience. Duplicate detection lets you set duplicate detection policies and create duplicate detection rules. Change tracking provides a way to keep data synchronized in a performant way.|
+|**Dynamics 365 for Outlook**|Configure how this entity appears in Outlook.|
 
-Select **Next** to continue, this will close the **New entity** panel and display the list of fields.
+Select **Create** to continue, this will close the **New entity** panel and display the list of fields.
 
-The **Primary Name**field is the only field visible at this point. Select the **Primary Name** field to edit it if you want to change the **Display Name**or **Name** of the field. The default values are shown below:
+The **Primary Name** field of the entity is displayed in the list of fields. Select the **Primary Name** field to edit it if you want to change the **Display Name**or **Name** of the field. The default values are shown below:
 
 ![Primary Name panel](media/primary-name-panel.png)
-
-Select **Save Entity** to create the entity or continue editing the entity.
-
-![Save entity](media/save-entity-portal.png)
 
 ## Edit an entity
 
 While [viewing entities](#view-entities), select the entity you want to edit.
 
-Select Settings from the menu if you want to edit the **Display name**, **Plural display name** or **Description** for the entity.
+Select **Settings** from the menu if you want to edit the **Display name**, **Plural display name** or **Description** for the entity.
 
 ![Entity Settings](media/entity-settings-portal.png)
 
@@ -87,7 +97,7 @@ For other items choose from the tabs.
 
 ### Fields
 
-See[Create and edit fields](create-edit-fields.md)
+See [Create and edit fields](create-edit-fields.md)
 
 ### Relationships
 
@@ -136,7 +146,7 @@ As someone with the system administrator security role, you can delete custom en
 > [!NOTE]
 > The only way to recover data from an entity that was deleted is to restore the database from a point before the entity was deleted. More information: [Backup and restore instances](/dynamics365/customer-engagement/admin/backup-restore-instances)
 
-While [viewing entities](#view-entities), select the entity and select **Delete entity** from the menu or the context menu.
+While [viewing entities](#view-entities), select the entity and select **Delete entity** from the menu.
 
 ![Delete an entity using the Power Apps portal](media/delete-entity-powerapps-portal.png)
 
