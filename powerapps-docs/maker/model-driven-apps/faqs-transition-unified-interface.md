@@ -22,13 +22,13 @@ This topic provides answers to the most common questions about Unified Interface
 
 ## FAQs: Unified Interface and legacy web client
 
-### Why should I move to the Unified Interface?
+### Why should I move to Unified Interface?
 
 Microsoft's vision of a productive workplace requires a modern interface that includes the features and improvements contained in Unified Interface, which provides a more consistent user experience, improved performance and increased user efficiency. For more information, see [Unified Interface playbook.](https://docs.microsoft.com/powerapps/maker/model-driven-apps/unified-interface-playbook)
 
 ### Are my ISVs compatible?
 
-ISVs have been notified to take action on the transition to the Unified Interface. Contact your ISV directly regarding their timeline for Unified Interface compatibility.
+ISVs have been notified to take action on the transition to Unified Interface. Contact your ISV directly regarding their timeline for Unified Interface compatibility.
 
 ### What is the retraining effort?
 
@@ -44,14 +44,14 @@ The work effort here will vary based upon the complexity of your environment. We
 
 ### Where can I find public information about the Unified Interface direction?
 
-The strategic direction of the Unified Interface is already in the public domain through events such as:
+The strategic direction of Unified Interface is already in the public domain through events such as:
 - [MBAS: BRK2073 Microsoft Power Apps: Run one UI – the future of canvas, model-driven, and Unified Interface in Power Apps](https://powerusers.microsoft.com/t5/MBAS-Gallery/Microsoft-PowerApps-Run-one-UI-the-future-of-canvas-model-driven/td-p/301580)
 - [BRK3031 Implementation Best Practices for Dynamics 365: Making the move to modern Unified Interface](https://powerusers.microsoft.com/t5/Microsoft-Business-Applications/Implementation-Best-Practices-for-Dynamics-365-Making-the-move/m-p/299928)
 
 
 ### As an on-premises customer looking to move to the cloud, what is the best approach to adopt Unified Interface?
 
-It is highly recommended to plan your move to the Unified Interface at the same time as you migrate to the cloud. Begin testing of your legacy web client within the Unified Interface and once migrated, confirmed Unified Interface compatibility before you release to your user community. This will reduce the training effort and allow users to adopt some of the new features and capabilities the Unified Interface has to offer. For more information, please speak with your Microsoft representative.
+It is highly recommended to plan your move to Unified Interface at the same time as you migrate to the cloud. Begin testing of your legacy web client within Unified Interface and once migrated, confirmed Unified Interface compatibility before you release to your user community. This will reduce the training effort and allow users to adopt some of the new features and capabilities Unified Interface has to offer. For more information, please speak with your Microsoft representative.
 
 ### When will ISVs be notified of the need to move to Unified Interface?
 
@@ -81,7 +81,7 @@ We see a risk in staying on legacy web client because our investment and strateg
 
 Visit our ideas portal (<https://powerusers.microsoft.com/t5/PowerApps-Ideas/idb-p/PowerAppsIdeas>), select **Suggest an idea**, and label the item with the 'Unified Interface' category.
 
-### Is there any supporting content to help me plan and execute my transition to the Unified Interface?
+### Is there any supporting content to help me plan and execute my transition to Unified Interface?
 
 Yes, we have a new community group (<https://community.dynamics.com/365/unified-interface/>) that provides useful content, interactive forum, and blog to see all the latest updates and information about Unified Interface.
 
@@ -103,7 +103,7 @@ Review our [deprecation notification page](https://docs.microsoft.com/power-plat
 
 ### Where can I find further information on the transition service?
 
-To help accelerate momentum for transition, we are providing a suggested target date for environments to be switched from the legacy web client to the Unified Interface via our transition service. Customers will need to approve the date prior to any action and then will receive a series of communication reminder messages as the date draws closer. Dates can also be rescheduled if they are not suitable for the business up until the October 1, 2020 deadline. For more information, see **FAQs: Transitioning to Unified Interface** later in this topic.
+To help accelerate momentum for transition, we are providing a suggested target date for environments to be switched from the legacy web client to Unified Interface via our transition service. Customers will need to approve the date prior to any action and then will receive a series of communication reminder messages as the date draws closer. Dates can also be rescheduled if they are not suitable for the business up until the October 1, 2020 deadline. For more information, see **FAQs: Transitioning to Unified Interface** later in this topic.
 
 
 ## FAQs: Transitioning to Unified Interface
