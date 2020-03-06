@@ -540,6 +540,8 @@ table, and the list id in the three places where we have a GUID as highlighted, 
 
 ![Power Query Advanced Editor Updates](media/sample-crisis-communication-app/005-PowerQuery-AdvancedEditorUpdates-nolines.PNG)
 
+If you see any connection errors after updating the connection information, you may need to update the credentials used to connect to the SharePoint list. To do so, select **File** menu, select **Options and settings** Data source settings menu, and then select **Edit permissions**. Make sure the *credential type* is set to *Organizational account*, and use the credentials to access the SharePoint list.
+
 Select **Close & Apply** to update the report to pull data from your SharePoint list.
 
 ![Power Query Close and Apply](media/sample-crisis-communication-app/006-PowerQuery-CloseAndApply-nolines.PNG)
@@ -548,6 +550,8 @@ We now have a Power BI report that shows both the geographical information for o
 a trend of such absences over many days. We can now publish the report so other people in the organization can see it.
 
 ![Power BI Publish Report](media/sample-crisis-communication-app/007-PowerBI-Publish-nolines.PNG)
+
+Your report is now published. You can share it with others in your organization. You can also [schedule the report refresh frequency](https://docs.microsoft.com/power-bi/refresh-scheduled-refresh).
 
 ## Integrate your app into Teams
 
@@ -630,5 +634,6 @@ To add the Power BI report:
 1. Select **Save**.
 
 ## Next steps
+
 - [Formula reference](https://docs.microsoft.com/powerapps/maker/canvas-apps/formula-reference)
 - [Controls reference](https://docs.microsoft.com/powerapps/maker/canvas-apps/reference-properties)
