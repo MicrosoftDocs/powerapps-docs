@@ -18,17 +18,17 @@ search.app:
 
 # FAQs: Transition to Unified Interface
 
-This topic provides answers to the most common questions about Unified Interface and the transition options for moving users from the legacy web client to Unified Interface.
+This topic provides answers to the most common questions about Unified Interface and about transitioning from the legacy web client to Unified Interface.
 
 ## FAQs: Unified Interface and legacy web client
 
 ### Why should I move to the Unified Interface?
 
-Microsoft's vision of a productive workplace requires a modern interface that includes the features and improvements contained in the Unified Interface The Unified Interface provides a more consistent user experience, improved performance and increased user efficiency. For more information please take a look at our [Unified Interface playbook.](https://docs.microsoft.com/powerapps/maker/model-driven-apps/unified-interface-playbook)
+Microsoft's vision of a productive workplace requires a modern interface that includes the features and improvements contained in Unified Interface, which provides a more consistent user experience, improved performance and increased user efficiency. For more information, see [Unified Interface playbook.](https://docs.microsoft.com/powerapps/maker/model-driven-apps/unified-interface-playbook)
 
 ### Are my ISVs compatible?
 
-ISVs have been notified to take action on the transition to the Unified Interface. Please contact your ISV directly regarding their timeline for Unified Interface compatibility.
+ISVs have been notified to take action on the transition to the Unified Interface. Contact your ISV directly regarding their timeline for Unified Interface compatibility.
 
 ### What is the retraining effort?
 
@@ -55,27 +55,27 @@ It is highly recommended to plan your move to the Unified Interface at the same 
 
 ### When will ISVs be notified of the need to move to Unified Interface?
 
-ISVs have been notified to take action on the transition to the Unified Interface. Please contact your ISV directly regarding their timeline for Unified Interface compatibility.
+ISVs have been notified to take action on the transition to Unified Interface. Contact your ISV directly regarding their timeline for Unified Interface compatibility.
 
 ### How are language translations handled?
 
-The process for language translation is primarily unchanged, with the exception of the Sitemap. Sitemap areas, groups and sub-areas are localized within the sitemap editor.
+The process for language translation is primarily unchanged, with the exception of the sitemap. Sitemap areas, groups, and subareas are localized within the sitemap editor.
 
 ### I don't have budget or resources to do a project. Is the deadline a fixed date?
 
-We are locked to move away from the legacy web client by October 1, 2020. It is recommended to conduct some testing as soon as possible to understand the complexity of the project for your organization to get compatible. In most cases extensive redesign should not be required to move forward quickly and start seeing user benefit. Please let Microsoft know any feedback that could stop your transition by creating a support case.
+We're locked to move away from the legacy web client by October 1, 2020. We recommend to conduct some testing as soon as possible to understand the complexity of the project for your organization to get compatible. In most cases, extensive redesign should not be required to move forward quickly and start seeing user benefit. Contact Microsoft to provide any feedback that could stop your transition by creating a support case.
 
-### We are working on transitioning to Unified Interface, but have hit some issues - how can we report them to Microsoft?
+### We're working on transitioning to Unified Interface, but have hit some issues; how can we report to Microsoft?
 
-Please review our [resources](https://community.dynamics.com/365/unified-interface/) to help with guidance and log a support case following your standard procedure. You can also notify your partner, Microsoft representative and/or FastTrack team (if applicable).
+Review our [resources](https://community.dynamics.com/365/unified-interface/) to help with guidance and log a support case following your standard procedure. You can also notify your partner, Microsoft representative, or FastTrack team (if applicable).
 
 ### When should I start moving to Unified Interface?
 
-You can move right away; we already have many customers transitioned in production to Unified Interface. Please start your testing as soon as possible. Access our Community site: <https://community.dynamics.com/365/unified-interface/> for helpful content. Please use the standard support procedure to log any issues.
+You can move right away; we already have many customers transitioned in production to Unified Interface. Start your testing as soon as possible. Access our Community site: <https://community.dynamics.com/365/unified-interface/> for helpful content. Use the Standard Support procedure to log any issues.
 
 ### What are the risks associated with moving to Unified Interface?
 
-We see a risk in staying on legacy web client because our investment and strategic direction in on Unified Interface. If you are now planning to start the transition, you should review our [community site](https://community.dynamics.com/365/unified-interface/) and [quick start guides.](https://docs.microsoft.com/en-us/powerapps/maker/model-driven-apps/transition-web-app-existing) This will help you identify gaps (if any) and have a plan to fix those before you do a full deployment.
+We see a risk in staying on legacy web client because our investment and strategic direction is on Unified Interface. If you are now planning to start the transition, review our [community site](https://community.dynamics.com/365/unified-interface/) and [quick start guides](https://docs.microsoft.com/powerapps/maker/model-driven-apps/transition-web-app-existing). This will help you identify gaps (if any) and have a plan to fix those before you do a full deployment.
 
 ### I have a new feature idea for Unified Interface; where do I log it?
 
@@ -123,15 +123,15 @@ Do the following:
 
 Yes, this is possible if you have the **global admin**, **Dynamics 365 service administrator**, or **Power Platform administrator** role for the tenant. 
 
-The dates associated to your environment is a suggestion that requires approval to go ahead. Please approve if the date works for your organization.  
+The dates associated to your environment is a suggestion that requires approval to go ahead. Approve if the date works for your organization.  
 
 To change the date, select the drop-down icon next to the environment and view the record. Tenant admin roles will then be able to reschedule the transition date to an earlier or later date.
 
 To reschedule to an earlier date, update the existing date to your preferred option in the list. You can also [switch manually](transition-web-app.md) if our dates are not suitable. 
  
-To schedule to a later date, select the reschedule transition date button. Suggested dates will be available in the drop down. Once approved, the date will be updated in the portal accordingly. Please then accept the updated date if you would like your environment to be transitioned. 
+To schedule to a later date, select the reschedule transition date button. Suggested dates will be available in the drop-down. Once approved, the date will be updated in the portal accordingly. Accept the updated date if you would like your environment to be transitioned. 
  
-Date changes will be reviewed and granted if the date is prior to October 1, 2020. The date will be updated within the portal once confirmed. 
+Date changes will be reviewed and granted if the date is before October 1, 2020. The date will be updated within the portal once confirmed. 
 
 > [!NOTE]
 > If you have an approved transition and the scheduled date is within 48 hours, you'll not be able to change the date. Likewise, you can't request a date after October 1, 2020 as the legacy web client will no longer be available then.
