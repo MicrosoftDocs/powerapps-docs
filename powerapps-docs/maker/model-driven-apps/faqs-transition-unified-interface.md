@@ -30,9 +30,9 @@ Microsoft's vision of a productive workplace requires a modern interface that in
 
 ISVs have been notified to take action on the transition to the Unified Interface. Contact your ISV directly regarding their timeline for Unified Interface compatibility.
 
-### What is the re-training effort?
+### What is the retraining effort?
 
-From a technology standpoint the re-training should be minimal as your business logic and schema remain unchanged. Re-training should focus on what's new within the navigation and the overall look and feel. Further training may be required if you have made a business decision to alter the design to optimize for the new capabilities and features.
+From a technology standpoint the retraining should be minimal as your business logic and schema remain unchanged. Retraining should focus on what's new within the navigation and the overall look and feel. Further training may be required if you have made a business decision to alter the design to optimize for the new capabilities and features.
 
 ### Will I need to re-create my solution customizations?
 
@@ -40,7 +40,7 @@ No, you should not have to recreate any customizations, provided you have follow
 
 ### How long will it take to transition/what is the work effort?
 
-The work effort here will vary based upon the complexity of your environment. We recommend getting started with a pilot/POC model-driven app to begin testing. From there you can work with the business to plan a full Unified Interface rollout. See the [Unified Interface Playbook](https://docs.microsoft.com/powerapps/maker/model-driven-apps/unified-interface-playbook) and [planning checklist](https://aka.ms/UIChecklist) for additional guidance on getting started and our [white paper](https://download.microsoft.com/download/A/F/3/AF3D45A7-4F38-41BE-8956-1DF7A4A5AFDB/approaching-unified-interface-transition.pdf).
+The work effort here will vary based upon the complexity of your environment. We recommend getting started with a pilot/POC model-driven app to begin testing. From there, you can work with the business to plan a full Unified Interface rollout. See the [Unified Interface Playbook](https://docs.microsoft.com/powerapps/maker/model-driven-apps/unified-interface-playbook) and [planning checklist](https://aka.ms/UIChecklist) for additional guidance on getting started and our [white paper](https://download.microsoft.com/download/A/F/3/AF3D45A7-4F38-41BE-8956-1DF7A4A5AFDB/approaching-unified-interface-transition.pdf).
 
 ### Where can I find public information about the Unified Interface direction?
 
@@ -63,7 +63,7 @@ The process for language translation is primarily unchanged, with the exception 
 
 ### I don't have budget or resources to do a project. Is the deadline a fixed date?
 
-We're locked to move away from the legacy web client by October 1, 2020. We recommend to conduct some testing as soon as possible to understand the complexity of the project for your organization to get compatible. In most cases, extensive redesign should not be required to move forward quickly and start seeing user benefit. Contact Microsoft to provide any feedback that could stop your transition by creating a support case.
+We're locked to move away from the legacy web client by October 1, 2020. We recommend conducting some testing as soon as possible to understand the complexity of the project for your organization to get compatible. In most cases, extensive redesign should not be required to move forward quickly and start seeing user benefit. Contact Microsoft to provide any feedback that could stop your transition by creating a support case.
 
 ### We're working on transitioning to Unified Interface, but have hit some issues; how can we report to Microsoft?
 
@@ -85,7 +85,7 @@ Visit our ideas portal (<https://powerusers.microsoft.com/t5/PowerApps-Ideas/idb
 
 Yes, we have a new community group (<https://community.dynamics.com/365/unified-interface/>) that provides useful content, interactive forum, and blog to see all the latest updates and information about Unified Interface.
 
-### How does this move impact on-premises customers and what will happen when the web client is deprecated (do web client forms become unsupported)?
+### How does this move impact on-premises customer and what will happen when the web client is deprecated (do web client forms become unsupported)?
 
 This announcement is only in effect for online customers at present. We will continue to support the legacy web client for on-premises deployments.
 
@@ -103,7 +103,7 @@ Review our [deprecation notification page](https://docs.microsoft.com/power-plat
 
 ### Where can I find further information on the transition service?
 
-To help accelerate momentum for transition we are providing a suggested target date for environments to be switched from the legacy web client to the Unified Interface via our transition service. Customers will need to approve the date prior to any action and then will receive a series of communication reminder messages as the date draws closer. Dates can also be rescheduled if they are not suitable for the business up until the October 1, 2020 deadline. For more information, see **FAQs: Transitioning to Unified Interface** later in this topic.
+To help accelerate momentum for transition, we are providing a suggested target date for environments to be switched from the legacy web client to the Unified Interface via our transition service. Customers will need to approve the date prior to any action and then will receive a series of communication reminder messages as the date draws closer. Dates can also be rescheduled if they are not suitable for the business up until the October 1, 2020 deadline. For more information, see **FAQs: Transitioning to Unified Interface** later in this topic.
 
 
 ## FAQs: Transitioning to Unified Interface
