@@ -24,7 +24,7 @@ search.app:
   - D365CE
 ---
 # Set managed properties in Common Data Service metadata 
-You can control which of your managed solution components are customizable by using managed properties. You should allow customization for solution components where it makes sense. This lets organizations customize your solution to their unique requirements. Limit or eliminate customization of critical solution components that provide the core functionality of your solution so that you can predictably support and maintain it.
+You can control which of your managed solution components are customizable by using managed properties. ISVs should allow customization for solution components where it makes sense. This lets organizations customize your solution to their unique requirements. Limit or eliminate customization of critical solution components that provide the core functionality of your solution so that you can predictably support and maintain it. For most non-ISV development environments, we recommend that you don't allow customization for your managed solution components. 
 
 Managed properties are intended to protect your solution from modifications that may cause it to break. Managed properties do not provide digital rights management (DRM), or capabilities to license your solution or control who may install it.
 
