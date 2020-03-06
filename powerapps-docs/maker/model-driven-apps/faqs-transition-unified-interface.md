@@ -40,7 +40,7 @@ No, you should not have to recreate any customizations, provided you have follow
 
 ### How long will it take to transition/what is the work effort?
 
-The work effort here will vary based upon the complexity of your environment. We recommend getting started with a pilot/POC model-driven app to begin testing. From there you can work with the business to plan a full Unified Interface rollout. See the [Unified Interface Playbook](https://docs.microsoft.com/powerapps/maker/model-driven-apps/unified-interface-playbook) and [planning checklist](https://aka.ms/UIChecklist) for additional guidance on getting started and our [white paper](http://download.microsoft.com/download/A/F/3/AF3D45A7-4F38-41BE-8956-1DF7A4A5AFDB/approaching-unified-interface-transition.pdf).
+The work effort here will vary based upon the complexity of your environment. We recommend getting started with a pilot/POC model-driven app to begin testing. From there you can work with the business to plan a full Unified Interface rollout. See the [Unified Interface Playbook](https://docs.microsoft.com/powerapps/maker/model-driven-apps/unified-interface-playbook) and [planning checklist](https://aka.ms/UIChecklist) for additional guidance on getting started and our [white paper](https://download.microsoft.com/download/A/F/3/AF3D45A7-4F38-41BE-8956-1DF7A4A5AFDB/approaching-unified-interface-transition.pdf).
 
 ### Where can I find public information about the Unified Interface direction?
 
