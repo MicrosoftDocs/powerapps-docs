@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: sample
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 03/04/2020
+ms.date: 03/05/2020
 ms.author: mabolan
 search.audienceType: 
   - maker
@@ -489,7 +489,7 @@ The app uses a flow to send notifications to end users whenever there is a new c
 1. Change the **Site Address** to the name of your SharePoint site.
 1. Change the **List name** to **CI_configAdminSetup**.
 1. Open the card called **Initialize variable – Read more text**.
-1. Change the **Value** to “Read more” in your native language.
+1. Change the **Value** to "Read more" in your native language.
 
     ![Flow settings](media/sample-crisis-communication-app/flow-options.png)
 
@@ -540,6 +540,21 @@ table, and the list id in the three places where we have a GUID as highlighted, 
 
 ![Power Query Advanced Editor Updates](media/sample-crisis-communication-app/005-PowerQuery-AdvancedEditorUpdates-nolines.PNG)
 
+If you see any connection errors after updating the connection information, you may need to update the credentials used to connect to the SharePoint list. Follow these steps to update the connection:
+
+1. Select **File** menu, **Options and settings** and then select **Data source settings**:
+
+    ![Data source settings](media/sample-crisis-communication-app/PBI-1-DataSourceSettings.PNG)
+
+1. Select **Edit permissions**:
+
+    ![Edit permissions](media/sample-crisis-communication-app/PBI-2-DataSourceSettings-EditPermissions.PNG)
+
+1. Ensure the *Credentials* type is set to *Organizational account*,
+and use the credentials to access the SharePoint list.
+
+    ![Edit permissions](media/sample-crisis-communication-app/PBI-3-OrganizationalAccount.PNG)
+
 Select **Close & Apply** to update the report to pull data from your SharePoint list.
 
 ![Power Query Close and Apply](media/sample-crisis-communication-app/006-PowerQuery-CloseAndApply-nolines.PNG)
@@ -548,6 +563,8 @@ We now have a Power BI report that shows both the geographical information for o
 a trend of such absences over many days. We can now publish the report so other people in the organization can see it.
 
 ![Power BI Publish Report](media/sample-crisis-communication-app/007-PowerBI-Publish-nolines.PNG)
+
+Your report is now published. You can share it with others in your organization. You can also [schedule the report refresh frequency](https://docs.microsoft.com/power-bi/refresh-scheduled-refresh).
 
 ## Integrate your app into Teams
 
@@ -630,5 +647,6 @@ To add the Power BI report:
 1. Select **Save**.
 
 ## Next steps
+
 - [Formula reference](https://docs.microsoft.com/powerapps/maker/canvas-apps/formula-reference)
 - [Controls reference](https://docs.microsoft.com/powerapps/maker/canvas-apps/reference-properties)

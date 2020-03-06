@@ -29,6 +29,9 @@ The **User** function returns a [record](../working-with-tables.md#records) of i
 > [!NOTE]
 > The information returned is for the current Power Apps user.  It will match the "Account" information that is displayed in the Power Apps players and studio, which can be found outside of any authored apps.  This may not match the current user's information in Office 365 or other services.
 
+> [!NOTE]
+> If you published your application with a User function prior to March 2020, you may find that it, intermitently, will not retrieve photos. The issues were fixed in the late March 2020 release.  To take advantage of the updated implementation, simply re-open your application, save it, and republish it.  
+
 ## Syntax
 **User**()
 
