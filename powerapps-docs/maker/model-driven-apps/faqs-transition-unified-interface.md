@@ -30,7 +30,7 @@ Microsoft's vision of a productive workplace requires a modern interface that in
 
 ISVs have been notified to take action on the transition to the Unified Interface. Contact your ISV directly regarding their timeline for Unified Interface compatibility.
 
-### What is the retraining effort?
+### What is the re-training effort?
 
 From a technology standpoint the re-training should be minimal as your business logic and schema remain unchanged. Re-training should focus on what's new within the navigation and the overall look and feel. Further training may be required if you have made a business decision to alter the design to optimize for the new capabilities and features.
 
