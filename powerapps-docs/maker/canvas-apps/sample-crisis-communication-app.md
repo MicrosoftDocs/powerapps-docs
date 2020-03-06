@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: sample
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 03/05/2020
+ms.date: 03/06/2020
 ms.author: mabolan
 search.audienceType: 
   - maker
@@ -157,7 +157,7 @@ connect it to your new data sources.
 1. Sign in to [Power Apps](https://make.powerapps.com).
 1. Select **Apps** from the left navigation.
 1. Select **Import** from the command bar.
-1. Upload the **CrisisCommunication.zip** file from the GitHub repository:
+1. Upload the **CrisisCommunicationGCC.zip** file from the GitHub repository:
 
     ![Import app package](media/sample-crisis-communication-app/31-Import-App.png)
 
@@ -230,18 +230,31 @@ and bring it into your flow. If you need help with creating a Teams team, jump t
 1. Extract the channel ID, which is everything after `https://teams.microsoft.com/l/channel/` and before `/General`. <br> For example, in the following URL, the channel ID would be `19%3ab2fa9fc20f3042a9b63fc5890e1813f8%40thread.tacv2`:
    
    `https://teams.microsoft.com/l/channel/19%3ab2fa9fc20f3042a9b63fc5890e1813f8%40thread.tacv2/General?groupId=8bc7c0c2-0d4c-4fb8-af99-32da74c9237b&tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47`,
-   
+
 1. Navigate to [flow.microsoft.com](https://flow.microsoft.com).
+
 1. Select **My flows** from the left navigation.
-1. Select **More commands** (...)  for **CrisisCommunication.RequestHelp** and select **Edit**.
+
+1. Select **More commands** (...)  for **CrisisCommunication.Request** and select **Edit**.
+
     ![Edit app](media/sample-crisis-communication-app/20-Edit-Flow.png)
+
 1. Open the **Team Id** card.
+
 1. Paste the Team ID into the **Value** field.
+
 1. Open the **Channel ID** card.
+
 1. Paste the Channel ID into the **Value** field.
+
     ![Set Team IDs](media/sample-crisis-communication-app/22-Set-Team-IDs.png)
 
+1. Scroll down to the **Get Time** actions and update the action for **Convert time zone** with your choice of source and destination times:
+
+    ![Convert time zone](media/sample-crisis-communication-app/convert-time-zone.png)
+
 ## Import and set up the admin app
+
 To manage the app you imported, you'll want to repeat the same steps for the admin app.
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
@@ -317,10 +330,10 @@ Complete all of the fields and select **Save**.
 |-|-|-|
 | Admin email | AdminContactEmail | Used to notify others who are administering the application. |
 | Logo URL | Logo | The logo of your app that will appear in the top-left corner. |
-| AAD group ID | AADGroupID | Used to send notifications to end users about internal company updates via the *Notify users on new crisis communication news* flow. |  
-| APP URL | AppURL | The location of the app so that the *Notify users on new crisis communication news* flow can redirect users after selecting **Read more**. | 
+| AAD group ID | AADGroupID | Used to send notifications to end users about internal company updates via the *Notify users on new crisis communication news GCC* flow. |  
+| APP URL | AppURL | The location of the app so that the *Notify users on new crisis communication news GCC* flow can redirect users after selecting **Read more**. | 
 | Government RSS Feed | GovernmentRSSFeed | Used to populate the world news feature within the app. Useful if you want to provide additional information to your employees from a trusted source. |
-| Notification method | PreferredSentNotification | Used by the *Notify users on new crisis communication news* flow to determine which distribution channel it should use when sending out notifications. |
+| Notification method | PreferredSentNotification | Used by the *Notify users on new crisis communication news GCC* flow to determine which distribution channel it should use when sending out notifications. |
 | Feature flags | Feature1...8 | Used to disable or enable each feature within the application. |
 
 #### Finding the AAD of your distribution group
@@ -362,7 +375,7 @@ Complete all of the fields and select **Save**.
 |-|-|-|
 | Title | Title | The title of the update. |
 | Details | Details | The full update. You can use HTML in this field. |
-| Blurb | Blurb | A short message about the update. This will be used in the *Notify users on new crisis communication news* flow and in the gallery of updates. |
+| Blurb | Blurb | A short message about the update. This will be used in the *Notify users on new crisis communication news GCC* flow and in the gallery of updates. |
 | Deprecated | Deprecated | Allows you to hide an existing post. |
 
 ### Setup helpful tips
@@ -430,7 +443,7 @@ The app uses a flow to send notifications to end users whenever there is a new c
 1. Navigate to [flow.microsoft.com](https://flow.microsoft.com)
 1. Select **My flows** from the left navigation.
 1. Select the **Import** button in the command bar.
-1. Upload the **CrisisCommunicationNewsNotification.zip** package from the GitHub
+1. Upload the **CrisisCommunicationNewsNotificationGCC.zip** package from the GitHub
     repository:
 
     ![Upload CrisisCommunicationNewsNotification.zip](media/sample-crisis-communication-app/upload-news-notification.png)
@@ -480,7 +493,7 @@ The app uses a flow to send notifications to end users whenever there is a new c
 ### Edit the news notification flow
 
 1. Once the import is done, go back to **My flows**.
-1. Select the newly imported flow **Notify users on new crisis communication news**.
+1. Select the newly imported flow **Notify users on new crisis communication news GCC**.
 1. Select **Edit** from the command bar.
 1. Open the card called **When a new item is posted**.
 1. Change the **Site Address** to the name of your SharePoint site.
