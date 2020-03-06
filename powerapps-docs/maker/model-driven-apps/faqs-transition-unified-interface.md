@@ -175,11 +175,11 @@ If you encounter any blocking items, log them using your standard support proces
 
 ### What is the standard reminder procedure throughout this process?
 
-Communication will be in waves, at least 30 days prior to the suggested timeframe, but you can sign in to the portal (<https://runone.powerappsportals.com>) at any time to view the status. Microsoft will send the following communication:
+Communication will be in waves, at least 30 days prior to the suggested time frame, but you can sign in to the portal (<https://runone.powerappsportals.com>) at any time to view the status. Microsoft will send the following communication:
 
 -    Initial message for each environment that has a suggested transition date.
--    If you have approved the date, you will receive a reminder message 2 days before the dates are locked within the portal. 
--    Final reminder will be sent 2 days before the transition. This will state the transition date is locked and will go ahead with the transition.
+-    If you have approved the date, you will receive a reminder message two days before the dates are locked within the portal. 
+-    Final reminder will be sent two days before the transition. This will state the transition date is locked and will go ahead with the transition.
 -    Post transition, there will be a closing message to confirm success (or if an issue occurred)
 
 Messages can be seen using the following channels:
@@ -191,7 +191,7 @@ Messages can be seen using the following channels:
 
 ### I have requested a date to postpone but still receiving e-mails and Message Center posts that my environment is set to transition. Should I be concerned?
 
-Our first recommendation is to check the transition portal (<https://runone.powerappsportals.com/>) as this will be the single source of truth for all of your environments. If the date is updated, then it is highly likely that our communication system sent the message before we updated the communications list. 
+Our first recommendation is to check the transition portal (<https://runone.powerappsportals.com/>) as it will be the single source of truth for all of your environments. If the date is updated, then it is highly likely that our communication system sent the message before we updated the communications list. 
 
 If the date in the portal isn't updated to your new date, raise a support request following your standard procedure.
 
@@ -201,15 +201,15 @@ Only admin-approved dates will be transitioned.
 
 If your environment has been transitioned for at least 10 days, we will look to disable the manual switch back to the legacy web client. 
 
-If you find this has been disabled and have a requirement to switch back, raise a [standard support request](https://admin.powerplatform.microsoft.com/support?referer=mbssupport) and set the problem type to be "Transition from legacy web client to Unified Interface."
+If you find this has been disabled and have a requirement to switch  back, raise a [standard support request](https://admin.powerplatform.microsoft.com/support?referer=mbssupport) and set the problem type to be "Transition from legacy web client to Unified Interface."
 
-### Is there a specific day and time when approved transitions will take place? 
+### Is there a specific day and time when approved transitions will take place?
 
 We don't anticipate any downtime when making this transition. However, we will only make a transition on a Friday, following the same maintenance timelines outlined within our standard policies and communications. More information: [Maintenance timeline
 ](https://docs.microsoft.com/power-platform/admin/policies-communications#maintenance-timeline)
 
 ### Are environments from all data centers included within this transition service?
 
-At present, environments from specific data centers, such as Government Community Cloud (GCC), have not been included within the portal. We'll provide suggested transition dates for these environments by June, 2020. Customers who want to make the move to Unified Interface can always [switch manually](/power-platform/admin/enable-unified-interface-only#how-to-enable-unified-interface-only-mode) at any time before October 1, 2020.
+At present, environments from specific data centers, such as Government Community Cloud (GCC), have not been included within the portal. We'll provide suggested transition dates for these environments by June 2020. Customers who want to make the move to Unified Interface can always [switch manually](/power-platform/admin/enable-unified-interface-only#how-to-enable-unified-interface-only-mode) at any time before October 1, 2020.
 
 
