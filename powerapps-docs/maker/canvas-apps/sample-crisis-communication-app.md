@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: sample
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 03/04/2020
+ms.date: 03/05/2020
 ms.author: mabolan
 search.audienceType: 
   - maker
@@ -489,7 +489,7 @@ The app uses a flow to send notifications to end users whenever there is a new c
 1. Change the **Site Address** to the name of your SharePoint site.
 1. Change the **List name** to **CI_configAdminSetup**.
 1. Open the card called **Initialize variable – Read more text**.
-1. Change the **Value** to “Read more” in your native language.
+1. Change the **Value** to "Read more" in your native language.
 
     ![Flow settings](media/sample-crisis-communication-app/flow-options.png)
 
@@ -540,7 +540,20 @@ table, and the list id in the three places where we have a GUID as highlighted, 
 
 ![Power Query Advanced Editor Updates](media/sample-crisis-communication-app/005-PowerQuery-AdvancedEditorUpdates-nolines.PNG)
 
-If you see any connection errors after updating the connection information, you may need to update the credentials used to connect to the SharePoint list. To do so, select **File** menu, select **Options and settings** Data source settings menu, and then select **Edit permissions**. Make sure the *credential type* is set to *Organizational account*, and use the credentials to access the SharePoint list.
+If you see any connection errors after updating the connection information, you may need to update the credentials used to connect to the SharePoint list. Follow these steps to update the connection:
+
+1. Select **File** menu, **Options and settings** and then select **Data source settings**:
+
+    ![Data source settings](media/sample-crisis-communication-app/PBI-1-DataSourceSettings.PNG)
+
+1. Select **Edit permissions**:
+
+    ![Edit permissions](media/sample-crisis-communication-app/PBI-2-DataSourceSettings-EditPermissions.PNG)
+
+1. Ensure the *Credentials* type is set to *Organizational account*,
+and use the credentials to access the SharePoint list.
+
+    ![Edit permissions](media/sample-crisis-communication-app/PBI-3-OrganizationalAccount.PNG)
 
 Select **Close & Apply** to update the report to pull data from your SharePoint list.
 
