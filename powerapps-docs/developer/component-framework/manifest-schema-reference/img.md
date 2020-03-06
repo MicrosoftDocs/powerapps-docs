@@ -40,7 +40,10 @@ Model-driven apps
 ### Example
 
 ```XML
-<img path="img/default.png" />
+<resources>
+   <code path="index.ts" order="1" />
+	  <img path="img/default.png" />
+ </resources>
 ```
 
 ### Related topics

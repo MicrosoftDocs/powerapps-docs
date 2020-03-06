@@ -14,15 +14,16 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Customize a SharePoint list form by using Power Apps
+# Customize a SharePoint list or library form by using Power Apps
 
-You can easily customize the form for a SharePoint list by opening Power Apps in a browser. You don't need to write traditional code, such as C#, or download another app, such as InfoPath. When you publish your changes, the form is embedded within the SharePoint list for use by all of its users. In Power Apps, you can also review analytics reports, easily create conditional formatting, and connect to other data sources.
+You can easily customize the form for a SharePoint list or SharePoint document library by opening Power Apps in a browser. You don't need to write traditional code, such as C#, or download another app, such as InfoPath. When you publish your changes, the form is embedded within the SharePoint list for use by all of its users. In Power Apps, you can also review analytics reports, easily create conditional formatting, and connect to other data sources.
 
 To follow the steps in this topic, you'll create a simple list so that you can see how customization works, and then you can apply the same concepts to your own list.
 
 > [!NOTE]
 > - If the **Customize forms** option isn't available or doesn't work correctly for your list, it might contain data types that [Power Apps doesn't support](connections/connection-sharepoint-online.md#known-issues). Also, you can't move your form to a different list or [environment](working-with-environments.md). 
 > - Custom forms for lists are only supported in generic lists. Support for generic document libraries is coming soon. Custom list and library templates are currently not supported; including but not limited to lists such as Announcements, Contacts and Tasks.
+> - Custom forms for document libraries only supports editing custom metadata. Editing or managing file(s) is not supported.
 
 ## Create a list
 

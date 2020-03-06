@@ -211,7 +211,9 @@ function getReportURL(action,fileName,id) {
 ```  
 
 ### See also   
- [Set field values using parameters passed to a form](set-field-values-using-parameters-passed-form.md)   
+
+ [Set field values using parameters passed to a form](set-field-values-using-parameters-passed-form.md)<br/>
+ [Xrm.Navigation.openUrl](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/xrm-navigation/openurl)<br/>
  [Configure a form to accept custom querystring parameters](configure-form-accept-custom-querystring-parameters.md)    
  [Customize the Ribbon](customize-commands-ribbon.md)<br/>
  [Client scripting using JavaScript](client-scripting.md)<br/>

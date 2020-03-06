@@ -2,7 +2,7 @@
 title: "FAQs: Transition to Unified Interface | MicrosoftDocs"
 description: "FAQs related to the transition process for moving users from the legacy web client to Unified Interface."
 ms.custom: ""
-ms.date: 12/20/2019
+ms.date: 02/26/2020
 ms.reviewer: "kvivek"
 ms.service: powerapps
 ms.topic: "article"
@@ -74,7 +74,7 @@ Check out the supporting content available on the [community site](https://commu
 
 ### My environment has been transitioned, but I am finding blocking issues for my users and want to move back to the legacy web client. Is this possible?
 
-Yes, you will still be able to switch back to the legacy web client for up to 10 days post transition. You can make the [switch manually](https://docs.microsoft.com/power-platform/admin/enable-unified-interface-only) for the first 4 days or after that point, raise a support request from your usual channel as the manual switch will be disabled. 
+Yes, you will still be able to switch back to the legacy web client for up to 10 days post transition. You can make the [switch manually](https://docs.microsoft.com/power-platform/admin/enable-unified-interface-only) for the first 10 days or raise a [standard support request](https://admin.powerplatform.microsoft.com/support?referer=mbssupport) and set the problem type to be "Transition from legacy web client to Unified Interface" as the manual switch will be disabled. 
 
 > [!NOTE]
 > The 10 days need to be prior to October 1, 2020 as the legacy web client will no longer be available after that date.
@@ -111,9 +111,9 @@ Only admin-approved dates will be transitioned.
 
 ### If I already have an environment transitioned to Unified Interface, will I still be able to switch back to the legacy web client manually?
 
-If your environment has been transitioned for at least 4 days, we will look to disable the manual switch back to the legacy web client. 
+If your environment has been transitioned for at least 10 days, we will look to disable the manual switch back to the legacy web client. 
 
-If you find this has been disabled and have a requirement to switch back, raise a support request from your usual channel for evaluation.
+If you find this has been disabled and have a requirement to switch back, raise a [standard support request](https://admin.powerplatform.microsoft.com/support?referer=mbssupport) and set the problem type to be "Transition from legacy web client to Unified Interface."
 
 ### Is there a specific day and time when approved transitions will take place? 
 
