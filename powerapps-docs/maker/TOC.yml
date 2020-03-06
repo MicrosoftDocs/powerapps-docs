@@ -305,6 +305,14 @@
             href: ./canvas-apps/use-line-pie-bar-chart.md
           - name: Add multimedia
             href: ./canvas-apps/add-images-pictures-audio-video.md
+          - name: Add augmented reality features
+            items:
+            - name: Augmented reality scenarios
+              href: ./canvas-apps/add-augmented-reality.md
+            - name: Create a sample augmented reality app
+              href: ./canvas-apps/augmented-reality-quickstart.md
+            - name: Use example augmented reality apps
+              href: ./canvas-apps/augmented-reality-example-apps.md
           - name: Add Power BI data
             href: ./canvas-apps/powerapps-custom-visual.md
           - name: Working with gallery
