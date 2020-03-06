@@ -208,7 +208,11 @@
         - name: Popular connectors
           items:
             - name: Common Data Service
-              href: canvas-apps/connections/connection-common-data-service.md
+              items:
+              - name: Overview
+                href: canvas-apps/connections/connection-common-data-service.md
+              - name: Improvements
+                href: canvas-apps/use-native-cds-connector.md
             - name: Cloud storage
               href: canvas-apps/connections/cloud-storage-blob-connections.md
             - name: Dynamics 365
