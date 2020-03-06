@@ -308,7 +308,7 @@
           - name: Add augmented reality features
             items:
             - name: Augmented reality scenarios
-              href: ./canvas-apps/add-augmented-reality.md
+              href: ./canvas-apps/add-augmented-mixed-reality.md
             - name: Create a sample augmented reality app
               href: ./canvas-apps/augmented-reality-quickstart.md
             - name: Use example augmented reality apps
