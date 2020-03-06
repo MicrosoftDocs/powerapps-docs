@@ -162,7 +162,7 @@ The following is an example of a custom class derived from <xref:System.Net.Http
 
 ```csharp
   /// <summary>  
-  ///Custom HTTP message handler that uses OAuth authentication thru ADAL.  
+  ///Custom HTTP message handler that uses OAuth authentication through ADAL.  
   /// </summary>  
   class OAuthMessageHandler : DelegatingHandler
   {
@@ -370,7 +370,7 @@ string serviceUrl = "https://yourorg.crm.dynamics.com";
 string clientId = "<your app id>";
 string secret = "<your app secret>";
 
-AuthenticationContext authContext = new AuthenticationContext("https://login.microsoftonline.com/common", false);
+AuthenticationContext authContext = new AuthenticationContext("https://login.microsoftonline.com/<Tenant-ID-here>");
 ClientCredential credential = new ClientCredential(clientId, secret);
 
 AuthenticationResult result = authContext.AcquireToken(serviceUrl, credential);

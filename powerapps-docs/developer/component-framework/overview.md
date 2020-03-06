@@ -16,16 +16,17 @@ ms.author: nabuthuk
 
 # Power Apps component framework overview
 
-Power Apps component framework empowers professional developers and app makers to create code components for model-driven and canvas apps (experimental preview) to provide enhanced user experience for the users to work with data on forms, views, and dashboards. For example:
+Power Apps component framework empowers professional developers and app makers to create code components for model-driven and canvas apps (public preview) to provide enhanced user experience for the users to work with data on forms, views, and dashboards. For example:
 
 - Replace a field that displays a numeric text value with a `dial` or `slider` code component.
 - Transform a list into an entirely different visual experience bound to the data set like a `Calendar` or `Map`.
 
 > [!IMPORTANT]
-> - Power Apps component framework is in experimental preview for canvas apps, and in GA for model-driven apps. This implies that all the APIs that are supported for model-driven apps might not be supported on canvas apps yet.
+> - PowerApps component framework is in public preview for canvas apps, and is generally available for model-driven apps. This implies that all the APIs that are supported for model-driven apps might not be supported on canvas apps yet.
 > - By default Power Apps component framework is enabled for model-driven apps. To enable this feature for canvas apps, see [Code components for canvas apps](component-framework-for-canvas-apps.md).
 > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
-> - Canvas apps only support the *field* type of code components, and not the *dataset* type.
+> - Power Apps component framework works only on Unified Interface and not on the web client. 
+> - Power Apps component framework doesn't work for on-premises instances. 
 
 ## How is it different from web resources
 
@@ -43,6 +44,18 @@ Code components can be reused many times across different entities and forms. Us
 - Optimizes for performance.
 - Reusability
 - Bundle all files into a single solution file.
+
+## Licensing
+
+Power Apps component framework licensing requirements are inline with existing connectors and components and is based on the type of data and connections used in your app. More information: [Power Apps pricing](https://powerapps.microsoft.com/pricing/). To align with the licensing requirements, we will be classifying code components into two types:
+
+- Code components that connect to external services or data directly and not through connectors. When these components are used in an app, the app becomes premium, and end users are required to have **Power Apps** licenses.
+- Code components that don't connect to external services or data. When these components are used in an app that uses standard features, the app remains standard, and end users are required to be licensed at minimum for **Office 365**.
+
+> [!NOTE]
+> If you are currently using code components in model-driven apps connected to Common Data Service, end users will require **Power Apps** licenses.
+
+With the general availability of the framework, code component developers will be able to classify components as part of the component manifest to allow makers to see which components are premium.
 
 ## Related topics
 

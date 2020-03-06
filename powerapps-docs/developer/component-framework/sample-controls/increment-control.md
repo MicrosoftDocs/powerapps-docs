@@ -14,14 +14,14 @@ author: Nkrb
 
 This sample component shows how to bind data with Power Apps component framework and error handling. This component renders as a textbox with an `Increment` button in the runtime. The text box shows the current value and the `Increment` button is clickable. Whenever you click on the button, the value within the textbox is increased by 1. The increment value can be changed to any number you wish.
 
-To implement this component, the first thing you need to define the [Manifest](../manifest-schema-reference/manifest.md) file, and then implement the custom logic in TypeScript.
+To implement this component, the first thing you need to define the [Manifest](../manifest-schema-reference/manifest.md) file, and then implement the custom logic in TypeScript. You can download the sample component from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/TS_IncrementControl).
 
 > [!div class="mx-imgBorder"]
 > ![Increment component](../media/increment-control.png "Increment component")
 
 ## Available for 
 
-Model-driven apps and canvas apps (experimental preview) 
+Model-driven apps and canvas apps (public preview) 
 
 ## Manifest
 

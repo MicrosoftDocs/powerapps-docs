@@ -2,7 +2,7 @@
 title: "Image attributes (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about image attributes that store image data, supporting attributes, retrieving image data, and Uploading image data." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/01/2019
+ms.date: 02/11/2020
 ms.reviewer: ""
 ms.service: powerapps
 ms.topic: "article"
@@ -18,6 +18,8 @@ search.app:
 # Image attributes
 
 Certain system entities and all custom entities support images. Those entities that do support images can contain both a thumbnail and a full-size primary image. The thumbnail image can be seen in the web application when viewing the entity's form data. There can be multiple image attributes in an entity instance but there can be only one primary image. However, you can change the primary image from one image to another by setting [IsPrimaryImage](https://docs.microsoft.com/dotnet/api/microsoft.xrm.sdk.metadata.imageattributemetadata.isprimaryimage?view=dynamics-general-ce-9#Microsoft_Xrm_Sdk_Metadata_ImageAttributeMetadata_IsPrimaryImage) for that attribute to `true`. Each full-sized image attribute is limited to 30 MB in size. The <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.SchemaName> of the entity image attribute is `EntityImage`. More information: [Entity images](/dynamics365/customer-engagement/developer/introduction-entities#entity-images).
+
+Thumbail images and image metadata are stored in Common Data Service, which includes the information needed to retrieve the full image. Full images are stored in file storage on the Azure blob to reduce data storage consumption.
 
 Web API (REST) | .NET API (SOAP) 
 ------- | -------
@@ -256,8 +258,7 @@ byte[]
 In the above request, the next block of data is being uploaded. After all image data has been received by the web service, a thumbnail image is automatically created by the web service.
 
 ### See also  
-[Sample: Set and retrieve entity images](/dynamics365/customer-engagement/developer/sample-set-retrieve-entity-images)
 [File attributes](file-attributes.md)  
 [Introduction to Entities in Dynamics 365](/dynamics365/customer-engagement/developer/introduction-entities)   
- [Introduction to entity attributes in Dynamics 365](/dynamics365/customer-engagement/developer/introduction-entity-attributes)   
- [Sample: Set and retrieve entity images](/dynamics365/customer-engagement/developer/sample-set-retrieve-entity-images)
+[Introduction to entity attributes in Dynamics 365](/dynamics365/customer-engagement/developer/introduction-entity-attributes)   
+[Sample: Set and retrieve entity images](/dynamics365/customerengagement/on-premises/developer/sample-set-retrieve-entity-images)

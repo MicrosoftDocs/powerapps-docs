@@ -37,11 +37,11 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 
 ### Setup
 
-1. Checks for the current version of the org.
+Checks for the current version of the org.
 
 ### Demonstrate
 
-1. The `newSavedQuery` method creates a query for retrieving all organization-owned visualizations that are attached to the account entity.
+The `newSavedQuery` method creates a query for retrieving all organization-owned visualizations that are attached to the account entity.
 
 
 ### Clean up

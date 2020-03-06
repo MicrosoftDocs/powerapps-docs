@@ -1,6 +1,16 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/maker/canvas-apps/add-images-to-excel.md",
+      "redirect_url": "add-images-pictures-audio-video",
+      "redirect_document_id": "false"
+    },    
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/tutorial-working-with-images-in-excel.md",
+      "redirect_url": "add-images-pictures-audio-video",
+      "redirect_document_id": "false"
+    },    
+    {
       "source_path": "powerapps-docs/developer/common-data-service/fill-app-submission-form-appsource.md",
       "redirect_url": "register-microsoft-partner-network",
       "redirect_document_id": "false"
@@ -1579,6 +1589,21 @@
     {
       "source_path": "powerapps/maker/canvas-apps/release-notes.md",
       "redirect_url": "/powerapps/whats-new",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "powerapps-docs/developer/common-data-service/understand-managed-solutions-merged.md",
+      "redirect_url": "../../maker/common-data-service/how-managed-solutions-merged",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "powerapps-docs/maker/common-data-service/navigate-specific-solution.md",
+      "redirect_url": "use-solution-explorer",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "powerapps-docs/maker/common-data-service/publish-changes-for-use-customer-service-hub.md",
+      "redirect_url": "create-solution#publish-changes",
       "redirect_document_id": true
     }
   ]

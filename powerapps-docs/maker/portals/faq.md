@@ -1,14 +1,14 @@
 ---
 title: Frequently asked questions | Microsoft Docs
 description: Frequently asked questions in Power Apps portals.
-author: sbmjais
-manager: shujoshi
+author: tapanm-msft
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 12/20/2019
-ms.author: shjais
-ms.reviewer: tapanm
+ms.date: 03/04/2020
+ms.author: tapanm
+ms.reviewer: 
 ---
 
 # Power Apps portals FAQ
@@ -16,6 +16,39 @@ ms.reviewer: tapanm
 We have compiled a list of frequently asked questions and provided brief answers to help you get to your information quickly.
 
 ## General
+
+### Does Power Apps portals support TLS 1.2?
+
+Power Apps portals version 8.3 and later supports [TLS 1.2](https://support.microsoft.com/help/4041984/portal-capabilities-for-microsoft-dynamics-365-version-8-3-2-85-releas).
+
+### What is the difference between Power Apps portals, Dynamics 365 portals and add-on portals?
+
+With the launch of Power Apps portals on October 1, 2019, Dynamics 365 portals are called as Power Apps portals. In other words, all portals are referred to as **Power Apps portals**.
+
+One of the major changes introduced in portals after October 1, 2019 is the licensing model. Earlier, portals were licensed add-ons to Dynamics 365 apps while certain Dynamics 365 licenses included a default portal add-on. After October 1, 2019, portals are [licensed based on usage](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#can-you-share-more-details-regarding-the-new-power-apps-portals-licensing). All existing portals will be part of a transition period based on current customer contract after which they will need to be converted to a new licensing model.
+
+You can check the type of a portal from the [Power Apps Portals admin center](./admin/admin-overview.md):
+
+![Power Apps portals type](./media/power-apps-portals-type.png)
+
+Additional differences between Power Apps portals with capacity-based licenses and add-on based licenses:
+
+- For add-on portals, the portal type has 'add-on' suffix added. For example, a production add-on portal type lists as 'Production (add-on)'.
+- Power Apps portals have a [different caching mechanism](https://powerapps.microsoft.com/en-us/blog/publishing-changes-to-powerapps-portals/) in comparison with add-on based licenses portals.
+- Provisioning method is different for portals with capacity-based licenses from add-on based licenses.
+
+You can create Power Apps portal with capacity-based license using steps described in following articles:
+
+- [Create a Common Data Service starter portal](create-portal.md)
+- [Create a portal with Dynamics 365 environment](create-dynamics-portal.md)
+
+To create Power Apps portal with add-on based license, see [provisioning a portal using portal add-on](provision-portal-add-on.md).
+
+See [Power Apps portals licensing FAQ](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#what-is-the-difference-between-power-apps-portals-and-dynamics-365-portals-in-terms-of-licensing) for licensing differences between add-on based licenses and capacity-based licenses.
+
+### When is an add-on portal in suspended state?
+
+Portal [provisioned using portal add-on plan](provision-portal-add-on.md) purchased earlier is suspended at the end of expiration. This expiration period is 30 days for trial portals while it may vary for an add-on portal in production with a purchased license. Suspended trial portal is deleted after 7 days while suspension period may vary for production portal. For more details, read the [portal lifecycle](./admin/portal-lifecycle.md#considerations-for-add-on-portals) for add-on portals.
 
 ### How do I redirect a user to a default page after signing in?
 
@@ -182,6 +215,10 @@ Your portal will be restarted and start working again.
 
 ## Debugging and fixing problems
 
+### Performance of entity forms: Actions such as create/update/delete on entity forms take a lot of time to complete or timeout.
+
+This can happen due to multiple reason depending on your data and customizations done on that entity within Common Data Service. When troubleshooting such performance related issue on record actions from portals, ensure that there are no synchronous plugins registered on those events that may possibly cause these delays. Wherever possible, try to implement them asynchronously so that they do not hold or delay the transaction.
+
 ### When accessing my portal, I see a generic error page. How can I see the actual error?
 
 Whenever a server error occurs while trying to render a portal, a generic error page is displayed to end users along with the timestamp and activity ID of the error. Portal administrators can configure their portal to get the actual error details, which are helpful in debugging and fixing issues. To see the actual error:
@@ -195,6 +232,15 @@ It is advisable to use this only when you are developing a portal. Once your por
 When you enable diagnostic logging, you can search for particular errors that users report by using the Activity ID shown on the generic error page. The Activity ID is logged along with the error details and is useful to find the actual issue.
 
 ## Portal administration and management
+
+### Do portals use any static content from CDNs (Content Delivery Network) that I need to whitelist?
+
+Yes. Power Apps portals uses out of the box portal's static assets from Azure CDN that includes default JavaScript and CSS files for presentation that earlier rendered as part of the portal app. You must whitelist the following CDN URL to render portals successfully:
+
+    https://content.powerapps.com/resource/powerappsportal
+
+> [!NOTE]
+> Power Apps portals hosted in Microsoft Government Cloud do not use CDN.
 
 ### How do I use a custom login provider on my portal?
 

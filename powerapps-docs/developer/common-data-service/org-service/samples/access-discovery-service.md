@@ -23,7 +23,7 @@ This sample code shows how to use the discovery service with SDK assemblies. You
 
 This sample will not open dialog to prompt you for connection information.
 
-If you have set `Username` and `Password` values in the App.config connection strings it will use them. Otherwise, set the `username` and `password` variables in the `SampleProgram.Main` method.
+If you have set  and  values in the App.config connection strings, it will use them. Otherwise, set the `username` and `password` variables in the `SampleProgram.Main` method.
 
 ## What this sample does
 

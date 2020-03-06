@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 08/15/2019
+ms.date: 12/19/2019
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -24,7 +24,7 @@ Formulas combine many elements.  Listed below are:
 
 Other elements include:
 
-* [All operators](functions/operators.md)
+* [Operators and identifiers](functions/operators.md)
 * [Controls and their properties](reference-properties.md)
 * [Data types](functions/data-types.md)
 
@@ -44,6 +44,8 @@ Other elements include:
 **[App](functions/object-app.md)** – Provides information about the currently running app and control over the app's behavior.
 
 **[Asin](functions/function-trig.md)** – Returns the arcsine of a number, in radians.
+
+**[Assert](functions/function-assert.md)** – Evaluates to true or false in a test.
 
 **[AsType](functions/function-astype-istype.md)** – Treats a record reference as a specific entity type.
 
@@ -201,7 +203,7 @@ Other elements include:
 
 **[Ln](functions/function-numericals.md)** – Returns the natural log.
 
-**[LoadData](functions/function-savedata-loaddata.md)** – Loads a collection from Power Apps private storage.
+**[LoadData](functions/function-savedata-loaddata.md)** – Loads a collection from a local device's storage.
 
 **[Location](functions/signals.md)** – Returns your location as a map coordinate by using the Global Positioning System (GPS) and other information.
 
@@ -289,7 +291,7 @@ Other elements include:
 **[RoundUp](functions/function-round.md)** – Rounds up to the smallest next number.
 
 ## S
-**[SaveData](functions/function-savedata-loaddata.md)** – Saves a collection to Power Apps private storage.
+**[SaveData](functions/function-savedata-loaddata.md)** – Saves a collection to a local device's storage.
 
 **[Search](functions/function-filter-lookup.md)** – Finds records in a table that contain a string in one of their columns.  
 
@@ -300,6 +302,8 @@ Other elements include:
 **[Set](functions/function-set.md)** – Sets the value of a global variable.
 
 **[SetFocus](functions/function-setfocus.md)** – Moves input focus to a specific control.
+
+**[SetPropertry](functions/function-setproperty.md)** – Simulates interactions with input controls.
 
 **[ShowColumns](functions/function-table-shaping.md)** – Returns a table with only selected columns.
 
@@ -343,6 +347,8 @@ Other elements include:
 **[TimeZoneOffset](functions/function-dateadd-datediff.md)** – Returns the difference between UTC and the user's local time in minutes.
 
 **[Today](functions/function-now-today-istoday.md)** – Returns the current date/time value.
+
+**[Trace](functions/function-trace.md)** - Provide additional information in your test results.
 
 **[Trim](functions/function-trim.md)** – Removes extra spaces from the ends and interior of a string of text.
 

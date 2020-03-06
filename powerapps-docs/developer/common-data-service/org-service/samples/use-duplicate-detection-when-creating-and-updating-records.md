@@ -43,11 +43,9 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 
 ### Demonstrate
 1. The `Account` method creates an account record. 
-1. The `CreateRequest` method creates operation by supressing duplicate detection.
+1. The `CreateRequest` method creates operation by suppressing duplicate detection.
 1. The `UpdateRequest` method updates the retrieved account record with new account number.
 
 ### Clean up
 
-1. Displays an option to delete all the data created in the sample.
-
-The deletion is optional in case you want to examine the data created by the sample. You can manually delete the data to achieve same results.
+Displays an option to delete all the data created in the sample. The deletion is optional in case you want to examine the data created by the sample. You can manually delete the data to achieve same results.

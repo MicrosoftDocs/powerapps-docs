@@ -68,7 +68,7 @@ The rest of the information available is provided by the <xref:Microsoft.Xrm.Sdk
 For plug-ins all the properties of this class provide useful information you may need to access in your code. 
 
 > [!NOTE]
-> For custom workflow activites these properties are generally not used.
+> For custom workflow activities these properties are generally not used.
 
 Two of the most important are the <xref:Microsoft.Xrm.Sdk.IExecutionContext.InputParameters> and <xref:Microsoft.Xrm.Sdk.IExecutionContext.OutputParameters> properties.
 

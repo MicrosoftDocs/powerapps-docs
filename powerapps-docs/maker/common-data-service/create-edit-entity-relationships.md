@@ -102,6 +102,16 @@ These are the actions that can trigger certain behaviors:
 |**Merge**|What should happen when a primary entity record is merged?|Cascade All<br />Cascade None|
 |**Rollup View**|What is the desired behavior of the rollup view associated with this relationship? |Cascade All<br />Cascade Active<br />Cascade User-owned<br />Cascade None|
 
+> [!NOTE]
+> Assign, Delete, Merge, and Reparent actions will not execute in the following situations:
+> - If the original parent record and requested action contain the same values. Example: Attempting to trigger an Assign and 
+>   choosing a contact that is already the owner of the record
+> - Attempting to perform an action on a parent record that is already running a cascading action
+
+> [!NOTE]
+> When executing an assign, any workflows or business rules that are currently active on the records will automatically be 
+> deactivated when the reassignment occurs. The new owner of the record will need to reactivate the workflow or business rule 
+> if they want to continue using it.
 
 ### Parental entity relationships
 Each pair of entities that are eligible to have a 1:N relationship can have multiple 1:N relationships between them. Yet usually only one of those relationships can be considered a parental entity relationship.

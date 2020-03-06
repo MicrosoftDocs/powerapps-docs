@@ -17,7 +17,7 @@ This topic describes how to import code components into Common Data Service. Aft
 
 To create and import a solution file:
 
-1. Create a new folder inside the folder that has the `cdsproj` file and name it as **Solutions** (or any name of your choice) using the command `mkdir Solutions`. Navigate into the directory using the command `cd Solutions`.
+1. Create a new folder inside the folder that has the `pcfproj` file and name it as **Solutions** (or any name of your choice) using the command `mkdir Solutions`. Navigate into the directory using the command `cd Solutions`.
 
 2. Create a new solutions project using the following command. The solution project is used for bundling the code component into a solution zip file that is used for importing into Common Data Service.
    
@@ -68,7 +68,7 @@ You can deploy the code components directly from the Power Apps CLI by connectin
 3. To switch between the previously created authentication profiles, use the command: 
    
    ```CLI
-    Pac auth select --index <index of the active profile>
+    pac auth select --index <index of the active profile>
     ``` 
 
 4. To get the basic information about the environment, use the following command. The connection will be made using the default authentication profile. 
@@ -77,7 +77,7 @@ You can deploy the code components directly from the Power Apps CLI by connectin
     pac org who 
     ```
  
-5. To delete a particular authentication profile, use the command `pac auth delete --index < index of the profile >`. 
+5. To delete a particular authentication profile, use the command `pac auth delete --index <index of the profile>`. 
 6. If you want to clear all the authentication profiles from your local machine, use the command `pac auth clear`. This action is irreversible because it completely deletes the `authprofile.json` file and token cache file from your local machine. 
 
 ## Deploying code components 

@@ -1,14 +1,14 @@
 ---
 title: "Enable Azure storage for portals | MicrosoftDocs"
 description: "Instructions to enable Azure storage for portals to take advantage of the greater file storage capability of Azure."
-author: sbmjais
-manager: shujoshi
+author: tapanm-msft
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/11/2019
-ms.author: shjais
-ms.reviewer:
+ms.date: 02/12/2020
+ms.author: tapanm
+ms.reviewer: tapanm
 ---
 
 # Enable Azure Storage
@@ -19,6 +19,8 @@ You must create a storage account with **Resource manager** as the deployment mo
 
 After the storage account is running, portals require certain global settings that tell the application how to locate your storage account. In the Portal Management app, go to **Settings** > **New**, and add a new setting named **FileStorage/CloudStorageAccount**.
 
+Azure storage integration only works with **Notes** configured in Entity Form Metadata. Azure Blob as a storage is not used if you use **Portal Comments** that can be setup using **Timeline**. Though Portal Comments also provide capability for files to be uploaded as attachments, these files are only stored in Common Data Service.
+ 
 > [!NOTE]
 > The maximum file upload size is 125 MB.
 
@@ -50,7 +52,7 @@ In the [Portal Management app](configure/configure-portal.md), go to **Settings*
 
 You must add cross-origin resource sharing (CORS) rule on your Azure Storage account as follows, otherwise you will see the regular attachment icon rather than the cloud icon:
 
-- **Allowed origins**: Specify your domain. For example, `http://contoso.crm.dynamics.com`.
+- **Allowed origins**: Specify your domain. For example, `https://contoso.crm.dynamics.com`.
 - **Allowed verbs**: GET, PUT, DELETE, HEAD, POST
 - **Allowed headers**: Specify the request headers that the origin domain may specify on the CORS request. For example, x-ms-meta-data\*, x-ms-meta-target\*. 
 - **Exposed headers**: Specify the response headers that may be sent in the response to the CORS request and exposed by the browser to the request issuer. For example, x-ms-meta-\*.
