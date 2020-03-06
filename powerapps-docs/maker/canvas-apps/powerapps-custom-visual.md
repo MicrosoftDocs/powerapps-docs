@@ -77,7 +77,7 @@ The following limitations apply to the Power Apps custom visual:
     - You must create a new app from Power Apps custom visual in Power BI report for this function to be available in the app.
     - You must use a source that supports [DirectQuery](https://docs.microsoft.com/power-bi/desktop-directquery-data-sources) and the data connection must be created using DirectQuery method.
 - Power Apps in Power BI Desktop provides data to Power Apps Studio when creating apps but not while editing. Use Power BI Web to preview the data while editing apps.
-- The Power BI mobile app does not support microphone control in PowerApps visuals.
+- The Power BI mobile app does not support microphone control in Power Apps visuals.
 
 > [!NOTE]
 > We recommend that you first publish your report to the Power BI service and then create or modify apps.
