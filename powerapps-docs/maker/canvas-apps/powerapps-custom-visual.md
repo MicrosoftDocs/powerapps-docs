@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 12/02/2019
+ms.date: 03/06/2020
 ms.author: chmoncay
 search.audienceType: 
   - maker
@@ -23,7 +23,7 @@ Power BI enables data insights and better decision-making, while Power Apps enab
 
 Let's look at the steps required to use the Power Apps custom visual in your Power BI report.
 
-1. Power Apps custom visual is available by default in the Power BI service. If you are using Power BI Desktop and don’t see it, you must upgrade to the latest version of Power BI Desktop.
+1. Power Apps custom visual is available by default in the Power BI service. If you are using Power BI Desktop and don't see it, you must upgrade to the latest version of Power BI Desktop.
 
 2. Add the Power Apps visual to your report, and set the data fields associated with it.
 
@@ -77,6 +77,7 @@ The following limitations apply to the Power Apps custom visual:
     - You must create a new app from Power Apps custom visual in Power BI report for this function to be available in the app.
     - You must use a source that supports [DirectQuery](https://docs.microsoft.com/power-bi/desktop-directquery-data-sources) and the data connection must be created using DirectQuery method.
 - Power Apps in Power BI Desktop provides data to Power Apps Studio when creating apps but not while editing. Use Power BI Web to preview the data while editing apps.
+- The Power BI mobile app does not support microphone control in PowerApps visuals.
 
 > [!NOTE]
 > We recommend that you first publish your report to the Power BI service and then create or modify apps.
