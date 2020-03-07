@@ -157,7 +157,10 @@ connect it to your new data sources.
 1. Sign in to [Power Apps](https://make.powerapps.com).
 1. Select **Apps** from the left navigation.
 1. Select **Import** from the command bar.
-1. Upload the **CrisisCommunicationGCC.zip** file from the GitHub repository:
+1. Upload the **CrisisCommunication.zip** file from the GitHub repository:
+
+    > [!NOTE]
+    > If your tenant is in GCC environment, use **CrisisCommunicationGCC.zip**.
 
     ![Import app package](media/sample-crisis-communication-app/31-Import-App.png)
 
@@ -330,10 +333,10 @@ Complete all of the fields and select **Save**.
 |-|-|-|
 | Admin email | AdminContactEmail | Used to notify others who are administering the application. |
 | Logo URL | Logo | The logo of your app that will appear in the top-left corner. |
-| AAD group ID | AADGroupID | Used to send notifications to end users about internal company updates via the *Notify users on new crisis communication news GCC* flow. |  
-| APP URL | AppURL | The location of the app so that the *Notify users on new crisis communication news GCC* flow can redirect users after selecting **Read more**. | 
+| AAD group ID | AADGroupID | Used to send notifications to end users about internal company updates via the *Notify users on new crisis communication news* flow. |  
+| APP URL | AppURL | The location of the app so that the *Notify users on new crisis communication news* flow can redirect users after selecting **Read more**. | 
 | Government RSS Feed | GovernmentRSSFeed | Used to populate the world news feature within the app. Useful if you want to provide additional information to your employees from a trusted source. |
-| Notification method | PreferredSentNotification | Used by the *Notify users on new crisis communication news GCC* flow to determine which distribution channel it should use when sending out notifications. |
+| Notification method | PreferredSentNotification | Used by the *Notify users on new crisis communication news* flow to determine which distribution channel it should use when sending out notifications. |
 | Feature flags | Feature1...8 | Used to disable or enable each feature within the application. |
 
 #### Finding the AAD of your distribution group
@@ -375,7 +378,7 @@ Complete all of the fields and select **Save**.
 |-|-|-|
 | Title | Title | The title of the update. |
 | Details | Details | The full update. You can use HTML in this field. |
-| Blurb | Blurb | A short message about the update. This will be used in the *Notify users on new crisis communication news GCC* flow and in the gallery of updates. |
+| Blurb | Blurb | A short message about the update. This will be used in the *Notify users on new crisis communication news* flow and in the gallery of updates. |
 | Deprecated | Deprecated | Allows you to hide an existing post. |
 
 ### Setup helpful tips
@@ -443,8 +446,11 @@ The app uses a flow to send notifications to end users whenever there is a new c
 1. Navigate to [flow.microsoft.com](https://flow.microsoft.com)
 1. Select **My flows** from the left navigation.
 1. Select the **Import** button in the command bar.
-1. Upload the **CrisisCommunicationNewsNotificationGCC.zip** package from the GitHub
+1. Upload the **CrisisCommunicationNewsNotification.zip** package from the GitHub
     repository:
+
+    > [!NOTE]
+    > If your tenant is in GCC environment, use **CrisisCommunicationNewsNotificationGCC.zip**.
 
     ![Upload CrisisCommunicationNewsNotification.zip](media/sample-crisis-communication-app/upload-news-notification.png)
 
@@ -493,7 +499,11 @@ The app uses a flow to send notifications to end users whenever there is a new c
 ### Edit the news notification flow
 
 1. Once the import is done, go back to **My flows**.
-1. Select the newly imported flow **Notify users on new crisis communication news GCC**.
+1. Select the newly imported flow **Notify users on new crisis communication news**.
+
+    > [!NOTE]
+    > If you uploaded GCC package, the flow name is **Notify users on new crisis communication news GCC**.
+
 1. Select **Edit** from the command bar.
 1. Open the card called **When a new item is posted**.
 1. Change the **Site Address** to the name of your SharePoint site.
