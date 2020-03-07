@@ -50,7 +50,7 @@ search.app:
 <li>3: Warning</li>
 <li>4: Information</li></ul></li>
 <li><b>message</b>: String. The message to display in the notification.</li>
-<li><b>showCloseButton</b>: (Optional) Boolean. Indicates whether or not the user can close or dismiss the notification. If you don't specify this parameter, users can close or dismiss the notification by default.</li>
+<li><b>showCloseButton</b>: (Optional) Boolean. Indicates whether or not the user can close or dismiss the notification. If you don't specify this parameter, users can't close or dismiss the notification by default.</li>
 <li><b>type</b>: Number. Defines the type of notification. Currently, only a value of 2 is supported, which displays a message bar at the top of the app.</li>
 </ul></td>
 </tr>
@@ -75,7 +75,7 @@ On success, returns a promise object containing a GUID value to uniquely identif
 
 ## Examples
 
-### Display an error notification that can be closed or dismissed by user
+### Display an error notification that can't be closed or dismissed by user
 
 ```JavaScript
 // define notification object
@@ -98,11 +98,11 @@ Xrm.App.addGlobalNotification(notification).then(
 );
 ```
 
-This is how the notification will appear in the app:
+This is how the error notification will appear in the app:
 
 ![Example error notification](media/add-global-error.png "Example error notification")
 
-### Display a warning notification that can't be closed or dismissed by user
+### Display a warning notification that can be closed or dismissed by user
 
 ```JavaScript
 // define notification object
@@ -111,7 +111,7 @@ var notification =
   type: 2,
   level: 3, //warning
   message: "Test warning notification",
-  showCloseButton: false
+  showCloseButton: true
 }
 
 Xrm.App.addGlobalNotification(notification).then(
@@ -126,7 +126,7 @@ Xrm.App.addGlobalNotification(notification).then(
 );
 ```
 
-This is how the notification will appear in the app:
+This is how the warning notification will appear in the app:
 
 ![Example warning notification](media/add-global-warning.png "Example warning notification")
 
@@ -164,7 +164,7 @@ Xrm.App.addGlobalNotification(notification).then(
 );
 ```
 
-This is how the notification will appear in the app:
+This is how the information notification will appear in the app:
 
 ![Example information notification](media/add-global-information.png "Example information notification")
 
