@@ -1,6 +1,6 @@
 ---
 title: "addGlobalNotification (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
+ms.date: 03/06/2020
 ms.service: powerapps
 ms.topic: "reference"
 author: "KumarVivek"
