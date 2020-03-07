@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: sample
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 03/05/2020
+ms.date: 03/06/2020
 ms.author: mabolan
 search.audienceType: 
   - maker
@@ -159,6 +159,9 @@ connect it to your new data sources.
 1. Select **Import** from the command bar.
 1. Upload the **CrisisCommunication.zip** file from the GitHub repository:
 
+    > [!NOTE]
+    > If your tenant is in GCC environment, use **CrisisCommunicationGCC.zip**.
+
     ![Import app package](media/sample-crisis-communication-app/31-Import-App.png)
 
 1. Select **Import**.
@@ -230,18 +233,31 @@ and bring it into your flow. If you need help with creating a Teams team, jump t
 1. Extract the channel ID, which is everything after `https://teams.microsoft.com/l/channel/` and before `/General`. <br> For example, in the following URL, the channel ID would be `19%3ab2fa9fc20f3042a9b63fc5890e1813f8%40thread.tacv2`:
    
    `https://teams.microsoft.com/l/channel/19%3ab2fa9fc20f3042a9b63fc5890e1813f8%40thread.tacv2/General?groupId=8bc7c0c2-0d4c-4fb8-af99-32da74c9237b&tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47`,
-   
+
 1. Navigate to [flow.microsoft.com](https://flow.microsoft.com).
+
 1. Select **My flows** from the left navigation.
-1. Select **More commands** (...)  for **CrisisCommunication.RequestHelp** and select **Edit**.
+
+1. Select **More commands** (...)  for **CrisisCommunication.Request** and select **Edit**.
+
     ![Edit app](media/sample-crisis-communication-app/20-Edit-Flow.png)
+
 1. Open the **Team Id** card.
+
 1. Paste the Team ID into the **Value** field.
+
 1. Open the **Channel ID** card.
+
 1. Paste the Channel ID into the **Value** field.
+
     ![Set Team IDs](media/sample-crisis-communication-app/22-Set-Team-IDs.png)
 
+1. Scroll down to the **Get Time** actions and update the action for **Convert time zone** with your choice of source and destination times:
+
+    ![Convert time zone](media/sample-crisis-communication-app/convert-time-zone.png)
+
 ## Import and set up the admin app
+
 To manage the app you imported, you'll want to repeat the same steps for the admin app.
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
@@ -433,6 +449,9 @@ The app uses a flow to send notifications to end users whenever there is a new c
 1. Upload the **CrisisCommunicationNewsNotification.zip** package from the GitHub
     repository:
 
+    > [!NOTE]
+    > If your tenant is in GCC environment, use **CrisisCommunicationNewsNotificationGCC.zip**.
+
     ![Upload CrisisCommunicationNewsNotification.zip](media/sample-crisis-communication-app/upload-news-notification.png)
 
 1. Add connections for the new Flow by selecting the **Select during import**
@@ -481,6 +500,10 @@ The app uses a flow to send notifications to end users whenever there is a new c
 
 1. Once the import is done, go back to **My flows**.
 1. Select the newly imported flow **Notify users on new crisis communication news**.
+
+    > [!NOTE]
+    > If you uploaded GCC package, the flow name is **Notify users on new crisis communication news GCC**.
+
 1. Select **Edit** from the command bar.
 1. Open the card called **When a new item is posted**.
 1. Change the **Site Address** to the name of your SharePoint site.
@@ -645,6 +668,8 @@ To add the Power BI report:
 1. Search for and select **Power BI**.
 1. Search for and select your Power BI report.
 1. Select **Save**.
+
+***Disclaimer:*** *This app is a sample and may be used with Microsoft Power Apps and Teams for dissemination of reference information only. This app is not intended or made available for use as a medical device, clinical support, diagnostic tool, or other technology intended to be used in the diagnosis, cure, mitigation, treatment, or prevention of disease or other conditions, and no license or right is granted by Microsoft to use this app for such purposes.  This app is not designed or intended to be a substitute for professional medical advice, diagnosis, treatment, or judgement and should not be used as such.  Customer bears the sole risk and responsibility for any use of this app.  Microsoft does not warrant that the app or any materials provided in connection therewith will be sufficient for any medical purposes or meet the health or medical requirements of any person.*  
 
 ## Next steps
 
