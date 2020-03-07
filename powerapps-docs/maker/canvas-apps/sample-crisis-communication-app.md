@@ -164,6 +164,7 @@ connect it to your new data sources.
 
     ![Import app package](media/sample-crisis-communication-app/31-Import-App.png)
 
+1. Add Microsoft Teams and Office 365 User's connections by selecting the Select during import link and completing the form.
 1. Select **Import**.
 
 ### Update the SharePoint connections
