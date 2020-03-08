@@ -207,6 +207,12 @@ connect it to your new data sources.
 
 1. **Save** and **Publish** the app.
 
+> [!NOTE]
+> This app records a users location and stores it in SharePoint to record where users are
+  setting their status. To disable, change `Patch()` function the **OnSelect** property of the **btnDateRange** so
+  that you send SharePoint `Blank() ` instead of `Location.Latitude` and `Location.Longitude`.
+  ![Import app package](media/sample-crisis-communication-app/location-override.png)
+
 ### Update the request help Flow
 
 This flow will send an adaptive card to a central Teams team requesting help.
