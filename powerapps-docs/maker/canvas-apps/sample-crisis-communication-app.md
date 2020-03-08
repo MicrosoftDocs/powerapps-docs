@@ -208,9 +208,12 @@ connect it to your new data sources.
 1. **Save** and **Publish** the app.
 
 > [!NOTE]
-> This app records a users location and stores it in SharePoint to record where users are
-  setting their status. To disable, change `Patch()` function the **OnSelect** property of the **btnDateRange** so
-  that you send SharePoint `Blank() ` instead of `Location.Latitude` and `Location.Longitude`.
+> This app records a users location and stores it in your SharePoint site whenever a user
+  sets their status. This allows your crisis management team to view this data in a Power BI report.
+  To disable this functionality, follow these steps:
+  1. Search for the **btnDateRange** control
+  1. Open the **OnSelect** property of the **btnDateRante** control in the formula bar.
+  1. Change `Location.Latitude` and `Location.Longitude` to `Blank() `.
   ![Import app package](media/sample-crisis-communication-app/location-override.png)
 
 ### Update the request help Flow
