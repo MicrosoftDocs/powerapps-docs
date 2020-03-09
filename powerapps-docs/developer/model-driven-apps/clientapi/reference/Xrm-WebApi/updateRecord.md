@@ -167,13 +167,13 @@ Xrm.WebApi.offline.updateRecord("account", "5531d753-95af-e711-a94e-000d3a11e605
 
 To update association to the related entities of type Activity, set the value of single-valued navigation properties using the `@odata.bind` annotation to another record.
 
-**Update Opportunity field on task**
+**Update related opportunity field on task**
 
 ```JavaScript
 // define the data to update a record
 var data =
     {
-        "new_realtedopportunities_task@odata.bind": "/opportunities(61a0e5b9-88df-e311-b8e5-6c3be5a8b200)"
+        "new_relatedopportunities_task@odata.bind": "/opportunities(61a0e5b9-88df-e311-b8e5-6c3be5a8b200)"
     }
 // update the record
 Xrm.WebApi.updateRecord("task", "5531d753-95af-e711-a94e-000d3a11e605", data).then(
