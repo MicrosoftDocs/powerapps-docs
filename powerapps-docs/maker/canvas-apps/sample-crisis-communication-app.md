@@ -208,10 +208,12 @@ connect it to your new data sources.
 
 1. **Save** and **Publish** the app.
 
-> [!NOTE]
-> This app records a users location and stores it in your SharePoint site whenever a user
-  sets their status. This allows your crisis management team to view this data in a Power BI report.
-  To disable this functionality, follow these steps:
+#### Disable location updates
+
+This app records a users location and stores it in your SharePoint site whenever a user sets their status. This allows your crisis management team to view this data in a Power BI report.
+
+To disable this functionality, follow these steps:
+
   1. Search for the **btnDateRange** control
   1. Open the **OnSelect** property of the **btnDateRante** control in the formula bar.
   1. Copy and paste the following snippet in the formula bar for **OnSelect** property:
