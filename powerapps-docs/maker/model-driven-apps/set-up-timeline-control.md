@@ -1,7 +1,7 @@
 ---
 title: "Set up the timeline control (section) in PowerApps | MicrosoftDocs"
 description: "Learn how to set up the timeline control (section) in PowerApps"
-ms.date: 02/03/2020
+ms.date: 13/03/2020
 ms.service: powerapps
 author: "kabala123"
 ms.assetid: 7F495EE1-1208-49DA-9B02-17855CEB2FDF
@@ -81,7 +81,7 @@ The modules are Activities, Posts, and Notes. As a customizer, you can choose wh
     |------------------------------------------|--------------------------------------------------------------|---------------------------|
     | Default Module for Create Experience | Select the module for which you want the default create experience in the timeline. <br><br> The default value is **Notes**.  | Notes |
     | Show filter pane | Select the checkbox if you want to display the filter icon for the users. If you leave the check box empty, there will be no filters for the users. |  |
-    | Expand filter pane by default | Select the checkbox, by default, if you want to show the filter pane in the expanded mode. |
+    | Expand filter pane by default | Select the checkbox, by default, if you want to show the filter pane in the expanded mode. <br><br> **Note:** When your agents zoom out in the browser, the filter pane and the timeline records are displayed in two columns. Even though you've cleared **Expand filter pane by default** check box, the filter pane is displayed to your agents. |
     | Sort | Select the sorting order based on which the records are displayed on the timeline. The sorting is based on the field you choose for Activities. If a field doesn’t exist for the Post, Notes, or Activity, then the sorting is done based on the **Last Updated** field. <br><br> The default sort order is **Descending**.  <br><br> **Note:** changing the sort order will not change the time property visualized in the timeline control. To customize the timeline card form see, [Customize the card form](#customize-the-card-form).  | Descending |
     | Number of results | The maximum number of records that are displayed on the timeline before selecting the **More** option. Each time you select the **More** option, the timeline displays the configured number of records. You can configure a value ranging from 1 to 50. <br><br> The default value is **10**. | 10 |
 
@@ -238,7 +238,7 @@ For example, see **Email form**.
 
 **Email card collapsed mode**
 
-Fields **1** and **2** from the **Header** section and Fields **3** and **4** from the **Details** section are displayed in the collapsed mode.
+Fields **1** and **2** from the **Header** section and Fields **3** and **4** from the **Details** section are displayed in the collapsed mode. Fields **3** and **4** in the collapsed mode doesn't show contents in rich text.
 
    > [!div class=mx-imgBorder] 
    > ![Email card in collapsed mode](media/email-card-collapsed.png "Email card in collapsed mode")
@@ -252,7 +252,7 @@ Fields **1** and **2** from the **Header** section and Fields **3** and�
 
 **Email card expanded mode**
 
-Field **5** from the **Details** section is displayed in the expanded mode.
+Field **5** from the **Details** section is displayed in the expanded mode. Field **3** in the expanded mode doesn't shown contents in rich text, whereas field **4** in the expanded mode shows contents in rich text.
 
    > [!div class=mx-imgBorder] 
    > ![Email card in expanded mode](media/email-card-expanded.png "Email card in expanded mode")

@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 02/13/2020
+ms.date: 13/03/2020
 ms.author: mduelae
 ms.custom: ""
 ms.reviewer: ""
@@ -199,6 +199,9 @@ In the **Timeline** section, select ![More button ](media/MoreButton.png "More b
 Quickly filter activities, notes or posts in the timeline wall by record type or activity type and date using the filter pane. You can select multiple filters and filter options at the same time. You can filter and see activity due date, modified date, or by the status of the activity.
 
 - In the **Timeline** section, select **Open Filter Pane** and select how you want to filter the activities.
+
+ > [!Note]
+ > When you zoom out in the browser, the filter pane and the timeline records are displayed in two columns. To learn more, see [Filter pane appears in two column mode](../maker/model-driven-apps/faqs-timeline-control.md).
 
   > [!div class="mx-imgBorder"]
   > ![Filter pane in the Timeline ](media/timeline-filter2.png "Filter pane in the Timeline") ![Filter pane in the Timeline ](media/timeline-filter5.png "Filter pane in the Timeline")
