@@ -238,7 +238,7 @@ For example, see **Email form**.
 
 **Email card collapsed mode**
 
-Fields **1** and **2** from the **Header** section and Fields **3** and **4** from the **Details** section are displayed in the collapsed mode. Fields **3** and **4** in the collapsed mode doesn't show contents in rich text.
+Fields **1** and **2** from the **Header** section and Fields **3** and **4** from the **Details** section are displayed in the collapsed mode. Fields **3** and **4** in the collapsed mode doesn't show contents in the rich text format.
 
    > [!div class=mx-imgBorder] 
    > ![Email card in collapsed mode](media/email-card-collapsed.png "Email card in collapsed mode")
@@ -252,7 +252,7 @@ Fields **1** and **2** from the **Header** section and Fields **3** and�
 
 **Email card expanded mode**
 
-Field **5** from the **Details** section is displayed in the expanded mode. Field **3** in the expanded mode doesn't shown contents in rich text, whereas field **4** in the expanded mode shows contents in rich text.
+Field **5** from the **Details** section is displayed in the expanded mode. Field **3** in the expanded mode doesn't shown contents in the rich text format, whereas field **4** in the expanded mode shows contents in the rich text format.
 
    > [!div class=mx-imgBorder] 
    > ![Email card in expanded mode](media/email-card-expanded.png "Email card in expanded mode")
