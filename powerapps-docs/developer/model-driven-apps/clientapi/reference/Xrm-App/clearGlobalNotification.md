@@ -1,6 +1,6 @@
 ---
 title: "clearGlobalNotification (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 03/04/2020
+ms.date: 03/09/2020
 ms.service: powerapps
 ms.topic: "reference"
 author: "KumarVivek"
@@ -18,7 +18,7 @@ search.app:
 [!INCLUDE[./includes/clearGlobalNotification-description.md](./includes/clearGlobalNotification-description.md)]
 
 > [!NOTE]
-> This is a preview feature.
+> This is a preview feature, and is supported only on Unified Interface.
 
 ## Syntax
 
