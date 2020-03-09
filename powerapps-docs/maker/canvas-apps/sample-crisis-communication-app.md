@@ -216,7 +216,7 @@ connect it to your new data sources.
   1. Open the **OnSelect** property of the **btnDateRante** control in the formula bar.
   1. Copy and paste the following snippet in the formula bar for **OnSelect** property:
 
-  ```PowerAppsDot
+  ```
   UpdateContext({locSaveDates: true});
 
 // Store the output properties of the calendar in static variables and collections.
