@@ -164,6 +164,7 @@ connect it to your new data sources.
 
     ![Import app package](media/sample-crisis-communication-app/31-Import-App.png)
 
+1. Complete the **Import Setup** for **Microsoft Teams Connection** and **Office 365 Users Connection** by selecting the appropriate connections using *Select during import* hyperlink. You may have to create [new connection](add-data-connection.md) if it already doesn't exist.
 1. Select **Import**.
 
 ### Update the SharePoint connections
@@ -206,6 +207,81 @@ connect it to your new data sources.
     ![Connect to SharePoint lists](media/sample-crisis-communication-app/sharepoint-lists.png)
 
 1. **Save** and **Publish** the app.
+
+#### Disable location updates
+
+This app records a users location and stores it in your SharePoint site whenever a user sets their status. This allows your crisis management team to view this data in a Power BI report.
+
+To disable this functionality, follow these steps:
+
+  1. Search for the **btnDateRange** control
+  1. Open the **OnSelect** property of the **btnDateRante** control in the formula bar.
+  1. Copy and paste the following snippet in the formula bar for **OnSelect** property:
+
+  ```
+  UpdateContext({locSaveDates: true});
+
+// Store the output properties of the calendar in static variables and collections.
+Set(varStartDate,First(Sort(Filter(selectedDates,ComponentId=CalendarDatePicker_1.Id),Date,Ascending)).Date);
+Set(varEndDate,First(Sort(Filter(selectedDates,ComponentId=CalendarDatePicker_1.Id),Date,Descending)).Date);
+
+// Create a new record for work status for each date selected in the date range.
+ForAll(
+    Filter(
+        RenameColumns(selectedDates,"Date","DisplayDate"),
+        ComponentId=CalendarDatePicker_1.Id,
+        !(DisplayDate in colDates.Date)
+    ),
+    Patch('CI_Employee Status',Defaults('CI_Employee Status'),
+        {
+            Title: varUser.userPrincipalName,
+            Date: DisplayDate,
+            Notes: "",
+            PresenceStatus: LookUp(Choices('CI_Employee Status'.PresenceStatus),Value=WorkStatus_1.Selected.Value),
+            
+             
+            Latitude: Blank(),
+            Longitude: Blank()
+        }
+    )
+);
+
+// Update existing dates with the new status.
+ForAll(
+    AddColumns(
+        Filter(
+            RenameColumns(selectedDates,"Date","DisplayDate"),
+            ComponentId=CalendarDatePicker_1.Id,
+            DisplayDate in colDates.Date
+        ),
+        
+        // Get the current record for each existing date.
+        "LookUpId",LookUp(RenameColumns(colDates,"ID","DateId"),And(Title=varUser.userPrincipalName,Date=DisplayDate)).DateId
+    ),
+    Patch('CI_Employee Status',LookUp('CI_Employee Status',ID=LookUpId),
+        {
+            PresenceStatus: LookUp(Choices('CI_Employee Status'.PresenceStatus),Value=WorkStatus_1.Selected.Value)
+        }
+    )
+);
+
+If(
+    IsEmpty(Errors('CI_Employee Status')),
+    Notify("You successfully submitted your work status.",NotificationType.Success,5000);
+    
+    // Update the list of work status for the logged-in user.
+    ClearCollect(colDates,Filter('CI_Employee Status',Title=varUser.userPrincipalName));
+    
+    Navigate('Share to Team Screen',LookUp(colStyles,Key="navigation_transition").Value),
+    
+    Notify(
+        LookUp(colTranslations,Locale=varLanguage).WorkStatusError,
+        NotificationType.Warning
+    )
+);
+
+UpdateContext({locSaveDates: false})
+```
 
 ### Update the request help Flow
 
