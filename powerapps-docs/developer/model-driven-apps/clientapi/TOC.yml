@@ -595,6 +595,13 @@
           href: reference/grids/viewselector/isVisible.md
         - name: setCurrentView
           href: reference/grids/viewselector/setCurrentView.md
+    - name: Xrm.App
+      href: reference/xrm-app.md
+      items:
+      - name: addGlobalNotification
+        href: reference/xrm-app/addGlobalNotification.md
+      - name: clearGlobalNotification
+        href: reference/xrm-app/clearGlobalNotification.md
     - name: Xrm.Device
       href: reference/xrm-device.md
       items:
