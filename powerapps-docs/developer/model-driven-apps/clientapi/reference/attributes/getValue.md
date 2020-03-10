@@ -7,7 +7,7 @@ applies_to: "Dynamics 365 (online)"
 ms.assetid: acc78a1e-212a-4eef-88c5-8272f9ba3009
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "amyla"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 

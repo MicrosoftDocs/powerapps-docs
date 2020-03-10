@@ -7,8 +7,8 @@ ms.service:
   - PowerApps
 ms.topic: article
 ms.assetid: fbb7ff68-e4be-d8c2-069f-6a4a69665b56
-author: JimDaly # GitHub ID
-ms.author: jdaly # MSFT alias of Microsoft employees only
+author: Nkrb # GitHub ID
+ms.author: nabuthuk # MSFT alias of Microsoft employees only
 manager: shilpas # MSFT alias of manager or PM counterpart
 ms.reviewer: 
 search.audienceType: 

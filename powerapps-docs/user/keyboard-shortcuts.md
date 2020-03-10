@@ -27,7 +27,7 @@ Keyboard shortcuts give you an alternate way to do common tasks instead of using
 
 ## Form shortcuts
 
-<!--does the N/A mean not available? If so, why include them? -->
+
 
 
 |Task  | Unified Interface |
@@ -148,8 +148,6 @@ Interactive dashboards enable new functionality, such as filtering, sorting, and
 |Move to the first element in a chart | Tab |
 |Move to the next data point | Right (→) arrow key **OR** Down (↓) arrow key|
 |Move to the previous data point | Left (←) arrow key **OR**  Up (↑) arrow key|
-|Move to the first data point | Home |
-|Move to the last data point | End |
 |Move to the **See More** button in a Tag chart | Tab |
 |Move back from the **See More** button to the tags in a Tag chart | Shift+Tab |
 |Filter the dashboard when the focus is on a data point in an interactive dashboard | Enter **Or** Spacebar |
