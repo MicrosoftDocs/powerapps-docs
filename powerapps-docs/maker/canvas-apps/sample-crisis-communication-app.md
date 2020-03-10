@@ -405,15 +405,19 @@ To initialize your app, you need to provide all of the required fields by naviga
 
 Complete all of the fields and select **Save**.
 
-| **Field name** | **Logical name in SharePoint** | **Purpose** |
-|-|-|-|
-| Admin email | AdminContactEmail | Used to notify others who are administering the application. |
-| Logo URL | Logo | The logo of your app that will appear in the top-left corner. |
-| AAD group ID | AADGroupID | Used to send notifications to end users about internal company updates via the *Notify users on new crisis communication news* flow. |  
-| APP URL | AppURL | The location of the app so that the *Notify users on new crisis communication news* flow can redirect users after selecting **Read more**. | 
-| Government RSS Feed | GovernmentRSSFeed | Used to populate the world news feature within the app. Useful if you want to provide additional information to your employees from a trusted source. |
-| Notification method | PreferredSentNotification | Used by the *Notify users on new crisis communication news* flow to determine which distribution channel it should use when sending out notifications. |
-| Feature flags | Feature1...8 | Used to disable or enable each feature within the application. |
+| **Field name** | **Logical name in SharePoint** | **Purpose** | **Example** |
+|-|-|-|-|
+| Admin email | AdminContactEmail | Used to notify others who are administering the application.  | admin@contoso.com |
+| Logo URL | Logo | The logo of your app that will appear in the top-left corner. | https://contoso.com/logo.png |
+| AAD group ID | AADGroupID | Used to send notifications to end users about internal company updates via the *Notify users on new crisis communication news* flow. Follow the instructions below to get the AAD ID of your group. | c0ddf873-b4fe-4602-b3a9-502dd944c8d5 |
+| APP URL | AppURL | The location of the end-user app so that the *Notify users on new crisis communication news* flow can redirect users after selecting **Read more**. | https://apps.preview.powerapps.com/play/<app URL>?tenantId=<tenant ID>
+| Government RSS Feed | GovernmentRSSFeed | Used to populate the world news feature within the app. Useful if you want to provide additional information to your employees from a trusted source. | https://www.who.int/rss-feeds/news-english.xml |
+| Notification method | PreferredSentNotification | Used by the *Notify users on new crisis communication news* flow to determine which distribution channel it should use when sending out notifications. This field is required. | Email, Teams notification, Push notification |
+| Feature flags | Feature1...8 | Used to disable or enable each feature within the application. |  |
+
+> [!NOTE]
+> Please note that Teams and push notifications for notification method are currently not supported in GCC.
+
 
 #### Finding the AAD of your distribution group
 1. Navigate to [aad.portal.azure.com](https://aad.portal.azure.com)
