@@ -26,10 +26,12 @@ search.app:
 
 # Create solution updates and patches 
 You use the **Clone solution** feature to create a significant update to an unmanaged solution. When you clone a solution, the system rolls up all related patches into the base unmanaged solution and creates a new version. When you clone a solution, the version number you specify includes the major and minor positions. 
+
     > [!div class="mx-imgBorder"] 
     > !<img src="media/clone-solution.png" alt="Clone a patch major and minor version" height="560" width="307"> 
 
 You use the **Clone a patch** feature to create a less significant update to an unmanaged solution. A patch contains only the changes used to update the solution, such as adding or editing components and assets. When patches are imported, they’re layered on top of the parent managed solution. When you clone a patch, the version number you specify includes the build and revision positions. 
+
     > [!div class="mx-imgBorder"] 
     > !<img src="media/clone-a-patch2.png" alt="Clone a patch build and revision version" height="560" width="307">
 
