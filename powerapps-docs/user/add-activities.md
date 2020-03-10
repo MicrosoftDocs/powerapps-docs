@@ -201,7 +201,8 @@ Quickly filter activities, notes or posts in the timeline wall by record type or
 - In the **Timeline** section, select **Open Filter Pane** and select how you want to filter the activities.
 
  > [!Note]
- > When you zoom out in the browser, the filter pane and the timeline records are displayed in two columns. To learn more, see [Filter pane appears in two column mode](../maker/model-driven-apps/faqs-timeline-control.md).
+ > When you zoom out in the browser, the filter pane and the timeline records are displayed in two columns. 
+ > When the timeline is displayed on more than one column, the filter pane is displayed as a column alongside the timeline records. To learn more, see [Filter pane appears in two column mode](../maker/model-driven-apps/faqs-timeline-control.md#why-my-agents-see-the-filter-pane-even-when-the-expand-filter-pane-by-default-check-box-is-cleared). 
 
   > [!div class="mx-imgBorder"]
   > ![Filter pane in the Timeline ](media/timeline-filter2.png "Filter pane in the Timeline") ![Filter pane in the Timeline ](media/timeline-filter5.png "Filter pane in the Timeline")
