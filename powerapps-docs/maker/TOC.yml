@@ -1042,8 +1042,6 @@
       - name: Work with views
         href: ./model-driven-apps/create-edit-views.md
         items:
-        - name: "Create or edit a view"
-          href: ./model-driven-apps/create-and-edit-views.md
         - name: "Access a view definition"
           href: ./model-driven-apps/accessing-view-definitions.md
         - name: Create and edit views
