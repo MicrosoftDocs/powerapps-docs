@@ -36,6 +36,9 @@ In this walk through, you'll learn how to:
 - Import flows to send notifications to users
 - Create a centrally managed Teams team to aggregate data and to effectively respond to issues
 
+> [!NOTE]
+> The Crisis Communication sample template is also available for the Power Apps and Power Automate US Government plans. The service URLs for Power Apps and Power Automate US Government version are different from the commercial version. More information: [Power Apps US Government service URLs](https://docs.microsoft.com/power-platform/admin/powerapps-us-government#power-apps-us-government-service-urls) and [Power Automate US Government service URLs](https://docs.microsoft.com/power-automate/us-govt).
+
 ## Prerequisites
 
 - [Sign
@@ -123,7 +126,7 @@ creation of the SharePoint lists, you can use the *DeploySPLists* flow available
 
 > [!NOTE]
 > You may receive an error stating that location services are required.
-  If this happens, please allow location services to Power Automate and refresh the page before trying again.
+  If this happens, allow location services to Power Automate and refresh the page before trying again.
 
 The flow will then create the following SharePoint lists within your SharePoint site:
 
@@ -140,7 +143,7 @@ The flow will then create the following SharePoint lists within your SharePoint 
 
 > [!NOTE]
 > - All list columns listed above should be considered as dependencies.
-    Please protect the lists from accidental schema changes (for example, adding
+    Protect the lists from accidental schema changes (for example, adding
     new columns is allowed, but deleting columns may break the app.)
 > - Use caution when deleting list items; deleting list items deletes historical records. You can toggle deprecation value from *No* to *Yes* to drop records from contacts, news, FAQs or links.
 
@@ -164,6 +167,7 @@ connect it to your new data sources.
 
     ![Import app package](media/sample-crisis-communication-app/31-Import-App.png)
 
+1. Complete the **Import Setup** for **Microsoft Teams Connection** and **Office 365 Users Connection** by selecting the appropriate connections using *Select during import* hyperlink. You may have to create [new connection](add-data-connection.md) if it already doesn't exist.
 1. Select **Import**.
 
 ### Update the SharePoint connections
@@ -206,6 +210,81 @@ connect it to your new data sources.
     ![Connect to SharePoint lists](media/sample-crisis-communication-app/sharepoint-lists.png)
 
 1. **Save** and **Publish** the app.
+
+#### Disable location updates
+
+This app records a users location and stores it in your SharePoint site whenever a user sets their status. This allows your crisis management team to view this data in a Power BI report.
+
+To disable this functionality, follow these steps:
+
+  1. Search for the **btnDateRange** control
+  1. Open the **OnSelect** property of the **btnDateRante** control in the formula bar.
+  1. Copy and paste the following snippet in the formula bar for **OnSelect** property:
+
+  ```
+  UpdateContext({locSaveDates: true});
+
+// Store the output properties of the calendar in static variables and collections.
+Set(varStartDate,First(Sort(Filter(selectedDates,ComponentId=CalendarDatePicker_1.Id),Date,Ascending)).Date);
+Set(varEndDate,First(Sort(Filter(selectedDates,ComponentId=CalendarDatePicker_1.Id),Date,Descending)).Date);
+
+// Create a new record for work status for each date selected in the date range.
+ForAll(
+    Filter(
+        RenameColumns(selectedDates,"Date","DisplayDate"),
+        ComponentId=CalendarDatePicker_1.Id,
+        !(DisplayDate in colDates.Date)
+    ),
+    Patch('CI_Employee Status',Defaults('CI_Employee Status'),
+        {
+            Title: varUser.userPrincipalName,
+            Date: DisplayDate,
+            Notes: "",
+            PresenceStatus: LookUp(Choices('CI_Employee Status'.PresenceStatus),Value=WorkStatus_1.Selected.Value),
+            
+             
+            Latitude: Blank(),
+            Longitude: Blank()
+        }
+    )
+);
+
+// Update existing dates with the new status.
+ForAll(
+    AddColumns(
+        Filter(
+            RenameColumns(selectedDates,"Date","DisplayDate"),
+            ComponentId=CalendarDatePicker_1.Id,
+            DisplayDate in colDates.Date
+        ),
+        
+        // Get the current record for each existing date.
+        "LookUpId",LookUp(RenameColumns(colDates,"ID","DateId"),And(Title=varUser.userPrincipalName,Date=DisplayDate)).DateId
+    ),
+    Patch('CI_Employee Status',LookUp('CI_Employee Status',ID=LookUpId),
+        {
+            PresenceStatus: LookUp(Choices('CI_Employee Status'.PresenceStatus),Value=WorkStatus_1.Selected.Value)
+        }
+    )
+);
+
+If(
+    IsEmpty(Errors('CI_Employee Status')),
+    Notify("You successfully submitted your work status.",NotificationType.Success,5000);
+    
+    // Update the list of work status for the logged-in user.
+    ClearCollect(colDates,Filter('CI_Employee Status',Title=varUser.userPrincipalName));
+    
+    Navigate('Share to Team Screen',LookUp(colStyles,Key="navigation_transition").Value),
+    
+    Notify(
+        LookUp(colTranslations,Locale=varLanguage).WorkStatusError,
+        NotificationType.Warning
+    )
+);
+
+UpdateContext({locSaveDates: false})
+```
 
 ### Update the request help Flow
 
@@ -329,15 +408,19 @@ To initialize your app, you need to provide all of the required fields by naviga
 
 Complete all of the fields and select **Save**.
 
-| **Field name** | **Logical name in SharePoint** | **Purpose** |
-|-|-|-|
-| Admin email | AdminContactEmail | Used to notify others who are administering the application. |
-| Logo URL | Logo | The logo of your app that will appear in the top-left corner. |
-| AAD group ID | AADGroupID | Used to send notifications to end users about internal company updates via the *Notify users on new crisis communication news* flow. |  
-| APP URL | AppURL | The location of the app so that the *Notify users on new crisis communication news* flow can redirect users after selecting **Read more**. | 
-| Government RSS Feed | GovernmentRSSFeed | Used to populate the world news feature within the app. Useful if you want to provide additional information to your employees from a trusted source. |
-| Notification method | PreferredSentNotification | Used by the *Notify users on new crisis communication news* flow to determine which distribution channel it should use when sending out notifications. |
-| Feature flags | Feature1...8 | Used to disable or enable each feature within the application. |
+| **Field name** | **Logical name in SharePoint** | **Purpose** | **Example** |
+|-|-|-|-|
+| Admin email | AdminContactEmail | Used to notify others who are administering the application.  | admin@contoso.com |
+| Logo URL | Logo | The logo of your app that will appear in the top-left corner. | https://contoso.com/logo.png |
+| AAD group ID | AADGroupID | Used to send notifications to end users about internal company updates via the *Notify users on new crisis communication news* flow. Follow the instructions below to get the AAD ID of your group. | c0ddf873-b4fe-4602-b3a9-502dd944c8d5 |
+| APP URL | AppURL | The location of the end-user app so that the *Notify users on new crisis communication news* flow can redirect users after selecting **Read more**. | https://apps.preview.powerapps.com/play/<app URL>?tenantId=<tenant ID>
+| Government RSS Feed | GovernmentRSSFeed | Used to populate the world news feature within the app. Useful if you want to provide additional information to your employees from a trusted source. | https://www.who.int/rss-feeds/news-english.xml |
+| Notification method | PreferredSentNotification | Used by the *Notify users on new crisis communication news* flow to determine which distribution channel it should use when sending out notifications. This field is required. | Email, Teams notification, Push notification |
+| Feature flags | Feature1...8 | Used to disable or enable each feature within the application. |  |
+
+> [!NOTE]
+> Teams notification and push notification are currently not supported in GCC.
+
 
 #### Finding the AAD of your distribution group
 1. Navigate to [aad.portal.azure.com](https://aad.portal.azure.com)

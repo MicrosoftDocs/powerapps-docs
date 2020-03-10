@@ -1,5 +1,5 @@
 ---
-title: "Create solution patches | MicrosoftDocs"
+title: "Create solution updates and patches | MicrosoftDocs"
 description: "Learn how to create solution patches"
 ms.custom: ""
 ms.date: 02/04/2020
@@ -24,9 +24,19 @@ search.app:
   - D365CE
 ---
 
-# Create solution patches 
-A patch contains only the changes for a parent managed solution, such as adding or editing components and assets. When patches are imported, they’re layered on top of the parent solution. When you clone a solution, the system rolls up all related patches into the base solution and creates a new version.  
-  
+# Create solution updates and patches 
+You use the **Clone solution** feature to create a significant update for an unmanaged solution. When you clone a solution, the system rolls up all related patches into the base unmanaged solution and creates a new version. When you clone a solution, the version number you specify includes the major and minor positions. 
+
+   > [!div class="mx-imgBorder"]
+   > <img src="media/clone-solution.png" alt="Clone a patch major and minor version" height="560" width="307"> 
+
+You use the **Clone a patch** feature to create a less significant update for an unmanaged solution. A patch contains only the changes used to update the solution, such as adding or editing components and assets. When patches are imported, they’re layered on top of the parent managed solution. When you clone a patch, the version number you specify includes the build and revision positions. 
+
+   > [!div class="mx-imgBorder"] 
+   > <img src="media/clone-a-patch2.png" alt="Clone a patch build and revision version" height="560" width="307">
+
+For more information about version numbers, see [Understanding version numbers for cloned solutions and patches](#understanding-version-numbers-for-cloned-solutions-and-patches) in this article.
+
  When you’re working with patches and cloned solutions, keep the following information in mind:  
   
 -   A patch represents an incremental minor update to the parent solution. A patch can add or update components and assets in the parent solution when installed on the target system, but it can’t delete any components or assets from the parent solution.  
@@ -49,10 +59,6 @@ A patch contains only the changes for a parent managed solution, such as adding 
   
 -   A cloned solution represents a replacement of the base solution when it’s installed on the target system as a managed solution. Typically, you use a cloned solution to ship a major update to the preceding solution.  
   
-## Understanding version numbers for cloned solutions and patches  
- A solution’s version has the following format: major.minor.build.revision. A patch must have a higher build or revision number than the parent solution. It can’t have a higher major or minor version. For example, for a base solution version 3.1.5.7, a patch could be a version 3.1.5.8 or version 3.1.7.0, but not version 3.2.0.0. A cloned solution must have the version number greater than or equal to the version number of the base solution. For example, for a base solution version 3.1.5.7, a cloned solution could be a version 3.2.0.0, or version 3.1.5.7. In the UI, you can only set the major and minor version values for a cloned solution, and the build or revision values for a patch.  
-  
-
 ## Create a solution patch  
  A patch contains changes to the parent solution, such as adding or editing components and assets. You don’t have to include the parent’s components unless you plan to edit them.  
   
@@ -96,6 +102,9 @@ A patch contains only the changes for a parent managed solution, such as adding 
 1. Go to the Power Apps portal, and then select **Solutions**.   
   
 2.  In the solutions list, select an unmanaged solution to create a clone. On the command bar, select **Clone**, and then select **Clone Solution**. The right pane displays the base solution’s name and the new version number. Select **Save**.  
+
+## Understanding version numbers for cloned solutions and patches  
+ A solution’s version has the following format: major.minor.build.revision. A patch must have a higher build or revision number than the parent solution. It can’t have a higher major or minor version. For example, for a base solution version 3.1.5.7, a patch could be a version 3.1.5.8 or version 3.1.7.0, but not version 3.2.0.0. A cloned solution must have the version number greater than or equal to the version number of the base solution. For example, for a base solution version 3.1.5.7, a cloned solution could be a version 3.2.0.0, or version 3.1.5.7. When you clone a solution or patch, you set the major and minor version values for a cloned solution, and the build or revision values for a patch.  
   
 ### See also
 [Solutions overview](solutions-overview.md)
