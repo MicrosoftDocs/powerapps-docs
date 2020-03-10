@@ -42,7 +42,8 @@ In order to play or edit model-driven sample apps, the apps must first be provis
 
 2. From the **Create** page, select the sample app and click **Create**.
 
-![Model Sample App](media/overview-model-driven-samples/model-driven-create-page-sample.png)
+> [!div class="mx-imgBorder"] 
+> ![Model Sample App](media/overview-model-driven-samples/model-driven-create-page-sample.png)
 
 3. The App designer will open providing multiple options for customizing the app.
 

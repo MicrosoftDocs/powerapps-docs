@@ -117,7 +117,8 @@ From the same unmanaged solution that you exported the translations from, in the
 
 <!-- ![Import translations](media/import-translations.png) -->
 
-![Import selected file](media/import-translated-text-dialog.png)
+> [!div class="mx-imgBorder"] 
+> ![Import selected file](media/import-translated-text-dialog.png)
 
 Select the file that contains the compressed translated text and select **Import**.
 
