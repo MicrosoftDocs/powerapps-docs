@@ -1,7 +1,7 @@
 ---
 title: "Set up the timeline control (section) in PowerApps | MicrosoftDocs"
 description: "Learn how to set up the timeline control (section) in PowerApps"
-ms.date: 13/03/2020
+ms.date: 03/10/2020
 ms.service: powerapps
 author: "kabala123"
 ms.assetid: 7F495EE1-1208-49DA-9B02-17855CEB2FDF
