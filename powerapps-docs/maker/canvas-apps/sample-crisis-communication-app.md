@@ -126,7 +126,7 @@ creation of the SharePoint lists, you can use the *DeploySPLists* flow available
 
 > [!NOTE]
 > You may receive an error stating that location services are required.
-  If this happens, please allow location services to Power Automate and refresh the page before trying again.
+  If this happens, allow location services to Power Automate and refresh the page before trying again.
 
 The flow will then create the following SharePoint lists within your SharePoint site:
 
@@ -143,7 +143,7 @@ The flow will then create the following SharePoint lists within your SharePoint 
 
 > [!NOTE]
 > - All list columns listed above should be considered as dependencies.
-    Please protect the lists from accidental schema changes (for example, adding
+    Protect the lists from accidental schema changes (for example, adding
     new columns is allowed, but deleting columns may break the app.)
 > - Use caution when deleting list items; deleting list items deletes historical records. You can toggle deprecation value from *No* to *Yes* to drop records from contacts, news, FAQs or links.
 
@@ -419,7 +419,7 @@ Complete all of the fields and select **Save**.
 | Feature flags | Feature1...8 | Used to disable or enable each feature within the application. |  |
 
 > [!NOTE]
-> Please note that Teams and push notifications for notification method are currently not supported in GCC.
+> Teams notification and push notification are currently not supported in GCC.
 
 
 #### Finding the AAD of your distribution group
