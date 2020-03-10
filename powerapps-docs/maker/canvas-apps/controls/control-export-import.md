@@ -110,7 +110,7 @@ The export functionality isn't supported in web browsers.
 
 ## Example
 1. Add a **[Button](control-button.md)** control, and set its **[OnSelect](properties-core.md)** property to this formula: <br>
-   ```powerapps
+   ```
    ClearCollect(Products, {Name:"Europa", Price:"10.99"}, {Name:"Ganymede", Price:"12.49"}, {Name:"Callisto", Price:"11.79"})
    ```
    For more details, read [adding, naming, and configuring a control](../add-configure-controls.md), **[ClearCollect](../functions/function-clear-collect-clearcollect.md)** and [other functions](../formula-reference.md).
