@@ -4,8 +4,8 @@ description: "Use InvalidPluginExecutionException when raising errors within the
 services: ''
 suite: powerapps
 documentationcenter: na
-author: jowells
-manager: austinj
+author: JimDaly
+manager: ryjones
 editor: ''
 tags: ''
 ms.service: powerapps
@@ -13,8 +13,8 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 1/15/2019
-ms.author: jowells
+ms.date: 3/5/2020
+ms.author: JimDaly
 search.audienceType: 
   - developer
 search.app: 
@@ -31,72 +31,22 @@ search.app:
 
 ## Symptoms
 
-If a synchronous plug-in returns an exception other than <xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException> back to the platform, the error dialog box is displayed to the user with the message of the exception <xref:System.Exception.Message> and the stack trace. This provides an unfriendly user experience in what is likely already a frustrating situation.
+If a synchronous plug-in returns an exception other than <xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException> back to the platform, in a Power Apps client an error  is displayed to the user with the message of the exception <xref:System.Exception.Message> and the stack trace. This provides an unfriendly user experience in what is likely already a frustrating situation.
+
+If you are using <xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException> to intentionally cancel the operation because of data validation logic issue, you should provide guidance applicable to the application user so that they can correct the issue and continue.
+
+If the error is unexpected, it is still recommended to catch the error and convert it into a <xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException> so that applications can show a friendly error message with guidance to help a user or technical staff quickly identify the issue.
 
 <a name='guidance'></a>
 
 ## Guidance
 
-We recommend that plug-ins only return an <xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException> back to the platform for the following reasons:
+Plug-ins should only return an <xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException> for the following reasons:
 
-- Surfacing a friendly message to the user
+- Show a useful message to the user
 - Avoiding event log/trace file bloat
 
-Unhandled exceptions of other types should only occur when unexpected errors are encountered at runtime. The following are examples of valid approaches.
-
-- Throw unguarded InvalidPluginExecutionException
-
-    ```csharp
-    public void Execute(IServiceProvider serviceProvider)
-    {
-        // Invocation of a valid scenario that throws an appropriate exception type
-        ThrowPluginException();
-    }
-    
-    private void ThrowPluginException()
-    {
-        throw new InvalidPluginExecutionException("Throwing a plug-in exception in a member method body");
-    }
-    ```
-
-- Guarded exceptions handled or thrown as new InvalidPluginExecutionException
-
-    ```csharp
-    public void Execute(IServiceProvider serviceProvider)
-    {
-        try
-        {
-            ThrowGuardedMemberException();
-        }
-        catch (CustomException ex)
-        {
-            throw new InvalidPluginExecutionException("Unable to save the contact. This is likely caused by..."), ex);
-        }
-    
-        // Invocation of a valid scenario in a member method
-        HandleMemberException();
-    }
-    
-    private void HandleMemberException()
-    {
-        try
-        {
-            // Invocation of a scenario where CustomException is thrown
-            ThrowGuardedMemberException();
-        }
-        catch (CustomException ex)
-        {
-            // Handle the exception.
-            // Note - Debug.WriteLine is likely not the appropriate way to handle the exception. This is for demonstration purposes only
-            Debug.WriteLine(ex.Message);
-        }
-    }
-    
-    private void ThrowGuardedMemberException()
-    {
-        throw new CustomException("Throwing a custom exception in a guarded member");
-    }
-    ```
+Failure to convert the message into a <xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException> will result in an `IsvUnExpected` error with no message displayed to the user from a Power Apps client.
 
 <a name='problem'></a>
 
@@ -105,52 +55,10 @@ Unhandled exceptions of other types should only occur when unexpected errors are
 > [!WARNING]
 > These patterns should be avoided.
 
-- Unguarded exception thrown
+Do not use HTML within error message text. 
 
-    ```csharp
-    public void Execute(IServiceProvider serviceProvider)
-    {
-        // Invocation of a scenario where violation occurs during an unguarded throw
-        UnguardedMemberThrowException();
-    }
-    
-    private void UnguardedMemberThrowException()
-    {
-        throw new CustomException("Throwing an unguarded custom exception in a member method body");
-    }
-    ```
+Web applications which access CDS data should HTML encode any error message text before they display it to a user. This will prevent any HTML in your message from rendered as you intend. It will just show the HTML code.
 
-- Guarded exception thrown with unguarded rethrow
-
-    ```csharp
-    public void Execute(IServiceProvider serviceProvider)
-    {
-        // Invocation of a scenario where violation occurs during an unguarded rethrow
-        UnguardedMemberRethrowException();
-    }
-    
-    private void UnguardedMemberRethrowException()
-    {
-        try
-        {
-            // Guarded invoking of a method member that throws a custom exception
-            GuardedMemberThrowException();
-        }
-        catch (CustomException ex)
-        {
-            // Handle and rethrow
-            Debug.WriteLine(ex.Message);
-    
-            // This is where the issue occurs
-            throw;
-        }
-    }
-    
-    private void GuardedMemberThrowException()
-    {
-        throw new CustomException("Throwing a guarded custom exception in a member method body");
-    }
-    ```
 
 <a name='seealso'></a>
 
