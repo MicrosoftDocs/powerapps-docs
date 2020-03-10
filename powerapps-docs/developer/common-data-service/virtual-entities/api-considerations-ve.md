@@ -9,7 +9,7 @@ applies_to:
 ms.assetid: d329dade-16c5-46e9-8dec-4b8efb996dea
 author: "mayadumesh" # GitHub ID
 ms.author: "jdaly"
-manager: "amyla"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
