@@ -95,9 +95,9 @@ To mitigate the issue, unhide the buttons in the command bar definitions.
 **My activities** stream in the dashboard shows the records and activities that are owned by a particular user. For example, user **A** see records and activities that are owned by **A**, and user **B** see records and activities that are owned by **B**.
 
 
-## Why my agents see the filter pane even when cleared the Expand filter pane by default check box?
+## Why my agents see the filter pane even when the Expand filter pane by default check box is cleared?
 
-When your agents zoom out in the browser, the filter pane and the timeline records are displayed in two columns. Even though you've cleared **Expand filter pane by default** check box in the Timeline configurations, the filter pane is displayed to your agents.
+When the timeline is displayed on more than one column, the filter pane is displayed as a column alongside the timeline records. Even though you've cleared **Expand filter pane by default** check box in the Timeline configurations, the filter pane will always be displayed to your agents.
 
 ## See also
 
