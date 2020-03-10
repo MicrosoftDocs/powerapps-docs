@@ -13,7 +13,7 @@ caps.latest.revision: 22
 author: "JimDaly" # GitHub ID
 ms.author: "jdaly"
 ms.reviewer: "susikka"
-manager: "amyla"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
