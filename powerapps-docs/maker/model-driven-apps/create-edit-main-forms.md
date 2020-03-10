@@ -44,18 +44,18 @@ Make sure that you have the System Administrator or System Customizer security r
     To edit an existing main form, select any form with the **Type** of **Main**.
   
 3.  Change the form design in any of the following ways, as needed:
-    -    Add a tab to a form
-    -    Add a section to a form
-    -    Add a field to a form
-    -    Add or edit a sub-grid on a form
-    -    Edit form headers and footers
-    -    Remove a tab section field
+    - Add a tab to a form
+    - Add a section to a form
+    - Add a field to a form
+    - Add or edit a sub-grid on a form
+    - Edit form headers and footers
+    - Remove a tab section field
     
-4.    Edit the properties for parts of the form, as needed:
-    -    Edit form properties
-    -    Edit form field properties
-    -    Edit tab properties
-    -    Edit section properties
+4.  Edit the properties for parts of the form, as needed:
+    - Edit form properties
+    - Edit form field properties
+    - Edit tab properties
+    - Edit section properties
 
 5.    When you finish editing the form, select **Save** > **Save As**, enter a name for the form, and then select **OK**.
 
