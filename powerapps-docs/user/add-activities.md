@@ -58,7 +58,7 @@ The fastest way to add an activity is to use the shortcut on the nav bar and the
 
 ## Add an activity from within a record
 
-You can also open a record and then add an a ctivity to the record. 
+You can also open a record and then add an activity to the record. 
 
    > [!div class="mx-imgBorder"]
    > ![Shortcut to add an activity in Power Apps](media/add_new_activity_from_record.gif "Shortcut to add an activity in Power Apps") 
