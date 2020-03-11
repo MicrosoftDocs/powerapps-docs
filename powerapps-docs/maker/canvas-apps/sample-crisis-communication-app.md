@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: sample
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 03/06/2020
+ms.date: 03/11/2020
 ms.author: mabolan
 search.audienceType: 
   - maker
@@ -48,11 +48,10 @@ In this walk through, you'll learn how to:
 - You must have a public SharePoint site where you can store the data for the app.
 - Download the assets from [aka.ms/CrisisCommunicationSolution](https://aka.ms/CrisisCommunicationSolution).
 
-
-> [!NOTE]
-> If you have feedback or issues about the app, please follow these these links:
-  - [aka.ms/crisis-communication-feedback](https://aka.ms/crisis-communication-feedback)
-  - [aka.ms/crisis-communication-issues](https://aka.ms/crisis-communication-issues)
+> [!IMPORTANT]
+> For any feedback or issues related to the **Crisis Communication sample template or app**, please use the following links:
+> - **[Feedback](https://aka.ms/crisis-communication-feedback)**
+> - **[Issues](ttps://aka.ms/crisis-communication-issues)**
 
 ## Create a home for your data
 
@@ -184,7 +183,7 @@ connect it to your new data sources.
 
     ![Edit app](media/sample-crisis-communication-app/05-Edit-App.png)
 
-1. **Sign in** or create any necessary connections and select **Allow**:
+1. **Sign in** or create any necessary connections and select **Allow**.
 
 1. Navigate to the data sources in the left pane:
 
@@ -217,7 +216,7 @@ connect it to your new data sources.
 
 #### Enable location updates
 
-This app  allows you to records users location and store it in your SharePoint site whenever a user sets their status. This allows your crisis management team to view this data in a Power BI report.
+This app allows you to record a user's location and store it in your SharePoint site whenever a user sets their status. Your crisis management team can view this data in a Power BI report.
 
 To enable this functionality, follow these steps:
 
@@ -757,22 +756,25 @@ To add the Power BI report:
 1. Search for and select your Power BI report.
 1. Select **Save**.
 
-## Frequently asked questions
-1. **What licence do I need to run this solution?**
-    The app within his solution only uses connectors that come with Office, so a seeded Power Apps
-    license from Office is sufficient to run and play the end-user and admin apps. If you want to use the Power BI report that's
-    packaged as part of this solution, you will need to have a Power BI license.
+## FAQ
+
+1. **What licenses do I need to run this solution?**
+
+    - The solution in this app uses Office connectors. Hence, a seeded Power Apps license from Office is sufficient to run and play the user and admin apps. Read more at [Power Platform licensing overview](https://docs.microsoft.com/power-platform/admin/pricing-billing-skus). 
+    - If you want to use the Power BI report (packaged as part of the solution), you will need to have a Power BI license. Read more at [Power BI pricing](https://powerbi.microsoft.com/pricing/).
 
 1. **Where should I go if I have feedback about the solution?**
-    We'd love to hear about experience deploying and customizing this solution. To share your experience,
-    please go to [aka.ms/crisis-communication-feedback](https://aka.ms/crisis-communication-feedback).
 
-1. **I appear to have a bug with the app; where should I go?**
-   Tl file a bug with the solution, please go to [aka.ms/crisis-communication-issues](https://aka.ms/crisis-communication-issues).
+    We'd love to hear about experience deploying and customizing this solution. To share your experience,
+    go to [aka.ms/crisis-communication-feedback](https://aka.ms/crisis-communication-feedback).
+
+1. **It looks like I found a bug with the app; where should I go?**
+
+   To file a bug with the solution, go to [aka.ms/crisis-communication-issues](https://aka.ms/crisis-communication-issues).
 
 1. **What features are currently not supported in GCC?**
-    The Power Automate bot connector for Teams and the Push Notification connector are currently not available for GCC.
-    Please use the email option to alert users about internal news updates.
+
+    The Power Automate bot connector for Teams and the Push Notification connector are currently not available for GCC. Use the email option to alert users about internal news updates for GCC instead.
 
 ***Disclaimer:*** *This app is a sample and may be used with Microsoft Power Apps and Teams for dissemination of reference information only. This app is not intended or made available for use as a medical device, clinical support, diagnostic tool, or other technology intended to be used in the diagnosis, cure, mitigation, treatment, or prevention of disease or other conditions, and no license or right is granted by Microsoft to use this app for such purposes.  This app is not designed or intended to be a substitute for professional medical advice, diagnosis, treatment, or judgement and should not be used as such.  Customer bears the sole risk and responsibility for any use of this app.  Microsoft does not warrant that the app or any materials provided in connection therewith will be sufficient for any medical purposes or meet the health or medical requirements of any person.*  
 
