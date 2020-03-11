@@ -1,5 +1,5 @@
 ---
-title: "Create solution updates and patches | MicrosoftDocs"
+title: "Create solution updates  | MicrosoftDocs"
 description: "Learn how to create solution patches"
 ms.custom: ""
 ms.date: 02/04/2020
@@ -24,13 +24,19 @@ search.app:
   - D365CE
 ---
 
-# Create solution updates and patches 
-You use the **Clone solution** feature to create a significant update for an unmanaged solution. When you clone a solution, the system rolls up all related patches into the base unmanaged solution and creates a new version. When you clone a solution, the version number you specify includes the major and minor positions. 
+# Create solution updates  
+There are three ways to update a solution. 
+- Update the solution in-place (recommended). In most situations, use the original solution to make updates, such as adding components. Then, use the update logic to determine how you want to apply the update when you import the managed solution into the target environment. This is the simplist method to use when updating a solution. More information: [Apply an update or upgrade for a solution](update-solutions.md) 
+- Clone the solution. You can use the **Clone solution** feature to create a significant update for an unmanaged solution. When you clone a solution, the system rolls up all related patches into the base unmanaged solution and creates a new version. Using clone solution to update a solution isn't recommended because it effectively branches your solution source and loses the prior history of the solution. 
+- You use the **Clone a patch** feature to create a less significant update for an unmanaged solution. A patch contains only the changes used to update the solution, such as adding or editing components and assets. When patches are imported, they’re layered on top of the parent managed solution. Using clone a patch to update a solution isn't recommended because it effectively branches your solution source and loses the prior history of the solution. However, clone a patch can be used to create a small update that can be imported quickley to minimize downtime. 
+
+## Creating updates using clone solution and clone to patch
+When you clone a solution, the version number you specify includes the major and minor positions. 
 
    > [!div class="mx-imgBorder"]
    > <img src="media/clone-solution.png" alt="Clone a patch major and minor version" height="560" width="307"> 
 
-You use the **Clone a patch** feature to create a less significant update for an unmanaged solution. A patch contains only the changes used to update the solution, such as adding or editing components and assets. When patches are imported, they’re layered on top of the parent managed solution. When you clone a patch, the version number you specify includes the build and revision positions. 
+ When you clone a patch, the version number you specify includes the build and revision positions. 
 
    > [!div class="mx-imgBorder"] 
    > <img src="media/clone-a-patch2.png" alt="Clone a patch build and revision version" height="560" width="307">
