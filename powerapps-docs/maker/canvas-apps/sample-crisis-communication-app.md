@@ -49,7 +49,7 @@ In this walk through, you'll learn how to:
 - Download the assets from [aka.ms/CrisisCommunicationSolution](https://aka.ms/CrisisCommunicationSolution).
 
 > [!IMPORTANT]
-> For any feedback or issues related to the **Crisis Communication sample template or app**, please use the following links:
+> For any feedback or issues related to the **Crisis Communication app**, please use the following links:
 > - **[Feedback](https://aka.ms/crisis-communication-feedback)**
 > - **[Issues](https://aka.ms/crisis-communication-issues)**
 
