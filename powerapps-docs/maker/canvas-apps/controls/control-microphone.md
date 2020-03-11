@@ -105,6 +105,7 @@ In this example, we'll directly connect a **Microphone** control with an **Audio
     ```powerapps-dot
     Microphone1.Audio
     ```
+
 1. Preview the app.
 1. Select the **Microphone** control to begin recording.
 1. Say a message.
@@ -119,16 +120,19 @@ In this example, we'll create a gallery of audio clips stored in a collection th
     ```powerapps-dot
     Collect( MySounds, MyMic.Audio )
     ```
+
 1. Add a **Gallery** control, move it below **MyMic**.
 1. Set the **[Items](properties-core.md)** property for the gallery to this formula:
     ```powerapps-dot
     MySounds
     ```
+
 1. In the template for the **Custom gallery** control, add an **[Audio](control-audio-video.md)** control.
 1. Set the audio control's **Media** property to this formula:
     ```powerapps-dot
     ThisItem.Url
     ```
+
 1. Press F5 to preview the app.
 1. Click or tap **MyMic** to start recording, and then click or tap it again to stop recording.
 1. In the **Gallery** control, click or tap the play button in the **Audio** control to play back your recording.
@@ -138,6 +142,7 @@ In this example, we'll create a gallery of audio clips stored in a collection th
     ```powerapps-dot
     Remove( MySounds, ThisItem )
     ```
+
 1. press F5, and then remove a recording by clicking or tapping the corresponding **Button** control.
 
 Use the **[SaveData](../functions/function-savedata-loaddata.md)** function to save the recordings locally or the **[Patch](../functions/function-patch.md)** function to update a data source.
