@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/04/2020
+ms.date: 03/11/2020
 ms.author: tapanm
 ms.reviewer:
 ---
@@ -49,51 +49,51 @@ To secure your forms, you must create entity permissions that determine access a
 |-----|----------|
 |Name|The descriptive name of the record. This field is required.|
 |Entity Name|The name of the entity from which the form will be loaded from. This field is required.|
-|Form Name|	The name of the Form on the target entity that is to be rendered. This field is required.|
-|Tab Name|	Optional name of a Tab on a Form for a specified entity that is to be rendered.|
-|Mode|One of the following values:<ul><li>Insert</li><li>Edit</li><li>ReadOnly</li></ul>Selecting _Insert_ indicates the form should insert a new record upon submission. Specifying _Edit_ indicates the form should edit an existing record. Selecting _ReadOnly_ indicates the form should display an existing record’s non editable form. _Edit_ and _ReadOnly_ requires that a source record exist and parameters specified in the 'Record Source Type' and 'Record ID Query String Parameter Name' fields to select the appropriate record when the form is loaded in the portal.|
+|Form Name|    The name of the Form on the target entity that is to be rendered. This field is required.|
+|Tab Name|    Optional name of a Tab on a Form for a specified entity that is to be rendered.|
+|Mode|One of the following values:<ul><li>Insert</li><li>Edit</li><li>ReadOnly</li></ul>Selecting _Insert_ indicates the form should insert a new record upon submission. Specifying _Edit_ indicates the form should edit an existing record. Selecting _ReadOnly_ indicates the form should display an existing record's non editable form. _Edit_ and _ReadOnly_ requires that a source record exist and parameters specified in the 'Record Source Type' and 'Record ID Query String Parameter Name' fields to select the appropriate record when the form is loaded in the portal.|
 |Record Source Type|One of the following values:<ul><li>Query String</li><li>Current Portal User</li><li>Record Associated to Current Portal User</li></ul>Selecting _Query String_ requires a parameter name that must be provided in the query string of the URL to the form. This can be specified in the 'Record ID Query String Parameter Name' field.<br>Selecting _Current Portal User_ will retrieve the portal user record for the current authenticated user.<br>Selecting _Record Associated to Current Portal User_ will retrieve the portal user record for the current authenticated user and then retrieve the record for the given relationship as specified by the 'Relationship Name' field.|
-|Record ID Query String Parameter Name|	A parameter name provided in the query string of the URL to the Web Page containing this Entity Form.|
-|Relationship Name|	Required when Record Source Type is Record Associated to Current Portal User. The logical name of the relationship between the current portal user record and the target record. This must return the same entity type specified by the Entity Name field.|
-|Allow Create If Null|	An optional boolean value available when Record Source Type is Record Associated to Current Portal User. Indicates that if the related record does not exist, allow the user to create it the first time, otherwise an exception will be thrown if the record does not already exist as the form needs a record to data bind to.|
-|Enable Entity Permissions|	Will Cause the form to respect Entity Permissions. The default is false for backwards compatibility reasons. If set to true, explicit permissions are REQUIRED for any user wanting to access the form.|
+|Record ID Query String Parameter Name|    A parameter name provided in the query string of the URL to the Web Page containing this Entity Form.|
+|Relationship Name|    Required when Record Source Type is Record Associated to Current Portal User. The logical name of the relationship between the current portal user record and the target record. This must return the same entity type specified by the Entity Name field.|
+|Allow Create If Null|    An optional boolean value available when Record Source Type is Record Associated to Current Portal User. Indicates that if the related record does not exist, allow the user to create it the first time, otherwise an exception will be thrown if the record does not already exist as the form needs a record to data bind to.|
+|Enable Entity Permissions|    Will Cause the form to respect Entity Permissions. The default is false for backwards compatibility reasons. If set to true, explicit permissions are REQUIRED for any user wanting to access the form.|
 |||
 
 ### Form Options
 
 |Name|Description|
 |----|---------|
-|Add Captcha|	Displays captcha.|
-|Show Captcha for Authenticated users|	Displays captcha for authenticated users.|
-|Validation Group|	The group name assigned to input controls for evaluating valid input of named groups.|
-|Auto Generate Steps From Tabs|	Indicates that multiple tabs on an entity form will be displayed with each tab as a sequential step starting with the first tab and continue until all tabs have been navigated to and upon final submission a record is inserted. By default, it is not selected. The default value indicates that only one tab or form is to be rendered for the current step. If the Tab Name is not specified, then the first tab is displayed.|
-|Render Web Resources Inline|	Eliminates the iframe that encompasses a web resource in an entity form.|
-|ToolTips Enabled|	The tooltip is set using the description of the attribute on the target entity.|
-|Show Unsupported Fields|	All fields are currently supported. This is reserved for potential changes Common Data Service may make to field types.|
-|Set Recommended Fields as Required| 	Makes all attributes required that have the field requirement level set to 'Business Recommended'.|
-|Make All Fields Required| 	Makes all fields required regardless of the field requirement level.|
-|Validation Summary CSS Class|	CSS Class name assigned to the validation summary. Default is 'validation-summary alert alert-error alert-block'|
-|Enable Validation Summary Links|	A boolean value of true or false that indicates whether anchor links should be rendered in the validation summary to scroll to the field containing an error. Default value is true.|
-|Validation Summary Link Text|	The label assigned to the validation summary links. Default value is 'click here'.|
-|Validation Summary Header Text|	The label assigned to the validation summary header.|
-|Instructions|	Instructions to work with the form.|
-|Record Not Found Message|	Message to be displayed when a record is not found.|
+|Add Captcha|    Displays captcha.|
+|Show Captcha for Authenticated users|    Displays captcha for authenticated users.|
+|Validation Group|    The group name assigned to input controls for evaluating valid input of named groups.|
+|Auto Generate Steps From Tabs|    Indicates that multiple tabs on an entity form will be displayed with each tab as a sequential step starting with the first tab and continue until all tabs have been navigated to and upon final submission a record is inserted. By default, it is not selected. The default value indicates that only one tab or form is to be rendered for the current step. If the Tab Name is not specified, then the first tab is displayed.|
+|Render Web Resources Inline|    Eliminates the iframe that encompasses a web resource in an entity form.|
+|ToolTips Enabled|    The tooltip is set using the description of the attribute on the target entity.|
+|Show Unsupported Fields|    All fields are currently supported. This is reserved for potential changes Common Data Service may make to field types.|
+|Set Recommended Fields as Required|     Makes all attributes required that have the field requirement level set to 'Business Recommended'.|
+|Make All Fields Required|     Makes all fields required regardless of the field requirement level.|
+|Validation Summary CSS Class|    CSS Class name assigned to the validation summary. Default is 'validation-summary alert alert-error alert-block'|
+|Enable Validation Summary Links|    A boolean value of true or false that indicates whether anchor links should be rendered in the validation summary to scroll to the field containing an error. Default value is true.|
+|Validation Summary Link Text|    The label assigned to the validation summary links. Default value is 'click here'.|
+|Validation Summary Header Text|    The label assigned to the validation summary header.|
+|Instructions|    Instructions to work with the form.|
+|Record Not Found Message|    Message to be displayed when a record is not found.|
 |||
 
 ### On Success Settings
 
 |Name|Description|
 |----|----------|
-|On Success|	One of the following values:<ul><li>Display Success Message (Default)</li><li>Redirect</li></ul>|
-|Hide Form on Success|	Requires On Success set to Display Success Message. When selected, the form is hidden upon successful submission of the form.|
-|Success Message|	Requires On Success set to Display Success Message. The message displayed to the user upon successful submission. If one is not specified a default message (Submission completed successfully") will be displayed. For each language pack installed and enabled for the organization a field will be available to enter the message in the associated language.|
+|On Success|    One of the following values:<ul><li>Display Success Message (Default)</li><li>Redirect</li></ul>|
+|Hide Form on Success|    Requires On Success set to Display Success Message. When selected, the form is hidden upon successful submission of the form.|
+|Success Message|    Requires On Success set to Display Success Message. The message displayed to the user upon successful submission. If one is not specified a default message (Submission completed successfully") will be displayed. For each language pack installed and enabled for the organization a field will be available to enter the message in the associated language.|
 |External URL|Requires On Success set to Redirect. Specify a URL to an external resource on the web.
 |or Web Page|Requires On Success set to Redirect. Select a Web Page from the current website.|
-|Append Existing Query String|	Requires On Success set to Redirect. When selected, the existing query string parameters will be added to the target URL prior to redirection.|
-|Append Record ID To Query String| 	Requires On Success set to Redirect. When selected, the ID of the record created is appended to the query string of the URL being redirected to.|
-|Record ID Query String Parameter Name| 	Requires On Success set to Redirect. The name of the ID parameter in the query string of the URL being redirected to.|
-|Append Custom Query String|	Requires On Success set to Redirect. A custom string that can be appended to the existing Query String of the redirect URL.|
-|Append Attribute Value to Query String - Parameter Name|	Requires On Success set to Redirect. A name to give to the parameter that correlates to the attribute value on the target entity that gets appended to the Query String of the redirect URL.|
+|Append Existing Query String|    Requires On Success set to Redirect. When selected, the existing query string parameters will be added to the target URL prior to redirection.|
+|Append Record ID To Query String|     Requires On Success set to Redirect. When selected, the ID of the record created is appended to the query string of the URL being redirected to.|
+|Record ID Query String Parameter Name|     Requires On Success set to Redirect. The name of the ID parameter in the query string of the URL being redirected to.|
+|Append Custom Query String|    Requires On Success set to Redirect. A custom string that can be appended to the existing Query String of the redirect URL.|
+|Append Attribute Value to Query String - Parameter Name|    Requires On Success set to Redirect. A name to give to the parameter that correlates to the attribute value on the target entity that gets appended to the Query String of the redirect URL.|
 |Append Attribute Value to Query String - Attribute Logical Name|Requires On Success set to Redirect. A logical name of an attribute on the target entity to get the value to be appended to the Query String of the redirect URL.|
 |||
 
@@ -101,21 +101,21 @@ To secure your forms, you must create entity permissions that determine access a
 
 |Name|Description|
 |----|----------|
-|Associate Current Portal User|	Indicates the currently logged in user’s record should be associated with the target entity record.|
-|Target Entity Portal User Lookup Attribute|	The logical name of the attribute on the target entity that stores the portal user.|
-|Is Activity Party|	Boolean value indicating whether or not the Target Entity Portal User Lookup Attribute is an Activity Party type.|
-|Attach File|	Select to have the form include a file upload control to the bottom of the form to allow a file to be attached to the record. You must select **Enable Entity Permissions** and assign the Create, Append, and Append To permissions to the Annotation entity for allowing a user to attach files to the form. More information: [Assign entity permissions](assign-entity-permissions.md)<br>**Note**: If a user does not have appropriate permissions to upload a file or Enable Entity Permissions is not selected, the option to upload a file will not be displayed on the form.|
-|Attach File Storage Location|	Options: Note Attachment, Azure Blob Storage. If your organization is configured to use Azure Storage, you can choose to storage uploaded files for this Entity Form there. Otherwise, files with be stored as Note Attachments.|
+|Associate Current Portal User|    Indicates the currently logged in user's record should be associated with the target entity record.|
+|Target Entity Portal User Lookup Attribute|    The logical name of the attribute on the target entity that stores the portal user.|
+|Is Activity Party|    Boolean value indicating whether or not the Target Entity Portal User Lookup Attribute is an Activity Party type.|
+|Attach File |  Select to have the form include a file upload control at the bottom of the form to allow a file to be attached to the record. <br> **Note**: Portals with [version 9.2.2.x and later](https://support.microsoft.com/help/4541765/power-apps-portals-version-9-2-2-x-release) do not require enabling **Enable Entity Permissions** on the entity form to attach files. However, if you have it selected, you must ensure that appropriate privileges are provided on the parent entity and the annotation entity to display the **Attach File** button on the form. Annotation entity must have at least **Create** and **Append** privileges and the parent entity must have the corresponding **AppendTo** privilege. Depending on whether you have a create or update form, you may also need **Create**, **Read** and **Write** privileges to complete the scenario of the form. |
+|Attach File Storage Location|    Options: Note Attachment, Azure Blob Storage. If your organization is configured to use Azure Storage, you can choose to storage uploaded files for this Entity Form there. Otherwise, files with be stored as Note Attachments.|
 |Allow Multiple Files|Boolean value indicating whether or not the user can upload more than one file.|
-|Accept|	The accept attribute specifies the MIME types of files that the server accepts through file upload. To specify more than one value, separate the values with a comma (e.g. audio/*,video/*,image/*).|
-|Label|	The text displayed next to the file upload control. For each language pack installed and enabled for the organization a field will be available to enter the message in the associated language.|
+|Accept|    The accept attribute specifies the MIME types of files that the server accepts through file upload. To specify more than one value, separate the values with a comma (e.g. audio/*,video/*,image/*).|
+|Label|    The text displayed next to the file upload control. For each language pack installed and enabled for the organization a field will be available to enter the message in the associated language.|
 |Attach File Required| Makes the attachment of a file required to proceed.|
 |Required Error Message|The message displayed during form validation if Is Required is true and the user has not attached a file. For each language pack installed and enabled for the organization a field will be available to enter the message in the associated language.|
-|Restrict Files to Accepted Types|	Forces validation on the Accept field. If not selected, the Accept attribute will only be used as a suggestion for the file upload dialog.|
+|Restrict Files to Accepted Types|    Forces validation on the Accept field. If not selected, the Accept attribute will only be used as a suggestion for the file upload dialog.|
 |File Type Error Message|The message displayed during form validation if Restrict Files to Accepted Types is true and the user has attempted to upload an invalid file type. For each language pack installed and enabled for the organization a field will be available to enter the message in the associated language.|
-|Maximum File Size (in kilobytes)|	Forces validation on the maximum allowed size of the uploaded file.|
-|File Size Error Message|	The message displayed during form validation if Maximum File Size (in kilobytes) is true and the user has attempted to upload a file that is too large. For each language pack installed and enabled for the organization a field will be available to enter the message in the associated language.|
-|Custom JavaScript|	A custom block of JavaScript that will added to the bottom of the page just before the closing form tag element. The HTML input id of an entity field is set to the logical name of the attribute. This makes selecting a field, setting values, or other client-side manipulation easy with jQuery.<br>`$(document).ready(function() {   $(“#address1_stateorprovince”).val(“Saskatchewan”);});`|
+|Maximum File Size (in kilobytes)|    Forces validation on the maximum allowed size of the uploaded file.|
+|File Size Error Message|    The message displayed during form validation if Maximum File Size (in kilobytes) is true and the user has attempted to upload a file that is too large. For each language pack installed and enabled for the organization a field will be available to enter the message in the associated language.|
+|Custom JavaScript|    A custom block of JavaScript that will added to the bottom of the page just before the closing form tag element. The HTML input id of an entity field is set to the logical name of the attribute. This makes selecting a field, setting values, or other client-side manipulation easy with jQuery.<br>`$(document).ready(function() {   $("#address1_stateorprovince").val("Saskatchewan");});`|
 |||
 
 ### Entity Reference
@@ -130,14 +130,14 @@ This provides a way to associate the current record being created or updated by 
 |Relationship Name|The Relationship Definition Name for a given relationship between two entity types.|
 |Entity Logical Name|The logical name of the reference entity.|
 |Target Lookup Attribute Logical Name|Logical name of the lookup attribute on the target entity being created or updated.|
-|Populate Lookup Field|	If the lookup regarding the reference entity is on the form, checking this value will populate the field on the form with the value retrieved using the setting below.|
-|Reference Entity Source Type|	One of the following values:<ul><li>Query String</li><li>Current Portal User</li><li>Result From Previous Step</li></ul> Selecting _Query String_ requires a parameter name that must be provided in the query string of the URL to the form. This can be specified in the **Query String Name** field. If this parameter is the primary key then select Yes for the **Query String Is Primary Key**, otherwise select No and provide the logical name of the attribute on the target entity to query by specified in the **Query Attribute Logical Name** field.  Selecting Current Portal User will retrieve the contact record for the current authenticated user. Selecting Result From Previous Step will retrieve the record created as a result of the step prior to the current step or from a specific step based on the step associated with the Entity Source Step.|
-|Reference Entity Step|	The Web Form Step record of a previous step to retrieve the entity created or edited in that step to associate it with the record for this current step.|
-|Query String Name|	Parameter name provided in the Query String of the URL to the Web Page containing the Web Form.|
-|Query String Is Primary Key|	Yes indicates the Query String value is the Primary Key value. No indicates the Query String value is an attribute type other than the Primary Key.|
-|Query Attribute Logical Name|	Logical name of the attribute to query the record.|
-|Show ReadOnly Details|	Indicates that a form should be rendered at the top of the page displaying read-only information pertaining to the reference record. Requires a Form Name.|
-|Form Name|	The name of the form on the reference entity that should be used to display read-only details.|
+|Populate Lookup Field|    If the lookup regarding the reference entity is on the form, checking this value will populate the field on the form with the value retrieved using the setting below.|
+|Reference Entity Source Type|    One of the following values:<ul><li>Query String</li><li>Current Portal User</li><li>Result From Previous Step</li></ul> Selecting _Query String_ requires a parameter name that must be provided in the query string of the URL to the form. This can be specified in the **Query String Name** field. If this parameter is the primary key then select Yes for the **Query String Is Primary Key**, otherwise select No and provide the logical name of the attribute on the target entity to query by specified in the **Query Attribute Logical Name** field.  Selecting Current Portal User will retrieve the contact record for the current authenticated user. Selecting Result From Previous Step will retrieve the record created as a result of the step prior to the current step or from a specific step based on the step associated with the Entity Source Step.|
+|Reference Entity Step|    The Web Form Step record of a previous step to retrieve the entity created or edited in that step to associate it with the record for this current step.|
+|Query String Name|    Parameter name provided in the Query String of the URL to the Web Page containing the Web Form.|
+|Query String Is Primary Key|    Yes indicates the Query String value is the Primary Key value. No indicates the Query String value is an attribute type other than the Primary Key.|
+|Query Attribute Logical Name|    Logical name of the attribute to query the record.|
+|Show ReadOnly Details|    Indicates that a form should be rendered at the top of the page displaying read-only information pertaining to the reference record. Requires a Form Name.|
+|Form Name|    The name of the form on the reference entity that should be used to display read-only details.|
 |||
 
 
