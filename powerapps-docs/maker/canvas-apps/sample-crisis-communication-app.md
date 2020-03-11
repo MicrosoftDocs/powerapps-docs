@@ -48,6 +48,12 @@ In this walk through, you'll learn how to:
 - You must have a public SharePoint site where you can store the data for the app.
 - Download the assets from [aka.ms/CrisisCommunicationSolution](https://aka.ms/CrisisCommunicationSolution).
 
+
+> [!NOTE]
+> If you have feedback or issues about the app, please follow these these links:
+  - [aka.ms/crisis-communication-feedback](https://aka.ms/crisis-communication-feedback)
+  - [aka.ms/crisis-communication-issues](https://aka.ms/crisis-communication-issues)
+
 ## Create a home for your data
 
 The data for the app will live in SharePoint lists. We'll first need to create new SharePoint site to get started.
@@ -180,8 +186,6 @@ connect it to your new data sources.
 
 1. **Sign in** or create any necessary connections and select **Allow**:
 
-    ![Allow connections](media/sample-crisis-communication-app/allow-connections.png)
-
 1. Navigate to the data sources in the left pane:
 
     ![Data sources](media/sample-crisis-communication-app/data-sources.png)
@@ -211,11 +215,11 @@ connect it to your new data sources.
 
 1. **Save** and **Publish** the app.
 
-#### Disable location updates
+#### Enable location updates
 
-This app records a users location and stores it in your SharePoint site whenever a user sets their status. This allows your crisis management team to view this data in a Power BI report.
+This app  allows you to records users location and store it in your SharePoint site whenever a user sets their status. This allows your crisis management team to view this data in a Power BI report.
 
-To disable this functionality, follow these steps:
+To enable this functionality, follow these steps:
 
   1. Search for the **btnDateRange** control
   1. Open the **OnSelect** property of the **btnDateRante** control in the formula bar.
@@ -243,8 +247,8 @@ ForAll(
             PresenceStatus: LookUp(Choices('CI_Employee Status'.PresenceStatus),Value=WorkStatus_1.Selected.Value),
             
              
-            Latitude: Blank(),
-            Longitude: Blank()
+            Latitude: Location.Latitude,
+            Longitude: Location.Longitude
         }
     )
 );
@@ -342,7 +346,7 @@ To manage the app you imported, you'll want to repeat the same steps for the adm
 1. Sign in to [Power Apps](https://make.powerapps.com).
 1. Select **Apps** from the left navigation.
 1. Select **Import** from the command bar.
-1. Upload the **CrisisCommunicationAdminApp.zip** file from the GitHub repository:
+1. Upload the **CrisisCommunicationAdmin.zip** file from the GitHub repository:
 
     ![Import app package](media/sample-crisis-communication-app/import-app.png)
 
@@ -618,7 +622,8 @@ preference.
 ## Monitor office absences with Power BI
 
 Once you have the app deployed and people start to notify that they will be out of the office for various reasons (such
-as being sick or working from home) you can now use a Power BI report to track how many and where those people are located.
+as being sick or working from home) you can now use a Power BI report to track how many and where those people are located. Please 
+note that you need to [enable location tracking](#enable-location-updates) to make the map control work.
 
 To start, you can use the sample report 'Presence status report.pbix' available from the downloaded [assets package](#prerequisites).
 If needed, download [Power BI Desktop](https://powerbi.microsoft.com/downloads). We will also need some information from
@@ -751,6 +756,23 @@ To add the Power BI report:
 1. Search for and select **Power BI**.
 1. Search for and select your Power BI report.
 1. Select **Save**.
+
+## Frequently asked questions
+1. **What licence do I need to run this solution?**
+    The app within his solution only uses connectors that come with Office, so a seeded Power Apps
+    license from Office is sufficient to run and play the end-user and admin apps. If you want to use the Power BI report that's
+    packaged as part of this solution, you will need to have a Power BI license.
+
+1. **Where should I go if I have feedback about the solution?**
+    We'd love to hear about experience deploying and customizing this solution. To share your experience,
+    please go to [aka.ms/crisis-communication-feedback](https://aka.ms/crisis-communication-feedback).
+
+1. **I appear to have a bug with the app; where should I go?**
+   Tl file a bug with the solution, please go to [aka.ms/crisis-communication-issues](https://aka.ms/crisis-communication-issues).
+
+1. **What features are currently not supported in GCC?**
+    The Power Automate bot connector for Teams and the Push Notification connector are currently not available for GCC.
+    Please use the email option to alert users about internal news updates.
 
 ***Disclaimer:*** *This app is a sample and may be used with Microsoft Power Apps and Teams for dissemination of reference information only. This app is not intended or made available for use as a medical device, clinical support, diagnostic tool, or other technology intended to be used in the diagnosis, cure, mitigation, treatment, or prevention of disease or other conditions, and no license or right is granted by Microsoft to use this app for such purposes.  This app is not designed or intended to be a substitute for professional medical advice, diagnosis, treatment, or judgement and should not be used as such.  Customer bears the sole risk and responsibility for any use of this app.  Microsoft does not warrant that the app or any materials provided in connection therewith will be sufficient for any medical purposes or meet the health or medical requirements of any person.*  
 
