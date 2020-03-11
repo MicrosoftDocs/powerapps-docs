@@ -22,7 +22,7 @@ search.app:
 
 ## Syntax
 
-`contextObj.setDisplayState(state);`
+`tabObj.setDisplayState(state);`
 
 ## Parameter
 
