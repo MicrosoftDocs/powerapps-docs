@@ -37,7 +37,7 @@ In this walk through, you'll learn how to:
 - Create a centrally managed Teams team to aggregate data and to effectively respond to issues
 
 > [!NOTE]
-> The Crisis Communication sample template is also available for the Power Apps and Power Automate US Government plans. The service URLs for Power Apps and Power Automate US Government version are different from the commercial version. More information: [Power Apps US Government service URLs](https://docs.microsoft.com/power-platform/admin/powerapps-us-government#power-apps-us-government-service-urls) and [Power Automate US Government service URLs](https://docs.microsoft.com/power-automate/us-govt).
+> The Crisis Communication sample template is also available for the Power Apps and Power Automate US Government plans. The service URLs for Power Apps and Power Automate US Government version are different from the commercial version. More information: [Power Apps US Government service URLs](https://docs.microsoft.com/power-platform/admin/powerapps-us-government#power-apps-us-government-service-urls) and [Power Automate US Government service URLs](https://docs.microsoft.com/power-automate/us-govt#power-automate-us-government-service-urls).
 
 ## Prerequisites
 
