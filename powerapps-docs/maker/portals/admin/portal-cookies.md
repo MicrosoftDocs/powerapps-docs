@@ -13,7 +13,7 @@ ms.reviewer: tapanm
  
 # Cookies used by Power Apps portals
 
-A cookie is a small file sent from the web site and stored on visitor's computer by the browser the visitor uses to browse the web site. A single web session may use multiple cookies depending on the architecture and configuration of the web site.
+A cookie is a small file sent from the web site to visitor's device by the browser. A single web session may use multiple cookies.
 
 Power Apps portals also use cookies to store information for various purposes. The following section lists and describes the cookies that Power Apps portals uses:
 
@@ -23,7 +23,7 @@ Added automatically by Azure websites and ensures that requests are load balance
 
 ###  ASP.Net Session Id
 
-Used to maintain the session of a logged in user so that the user doesn't need to sign in again. This is a session cookie - not persistent; and is deleted once session closes.
+Used to maintain the session of a logged in user to avoid repeated sign-in. The cookie isn't persistent and is deleted after session closes.
 
 ### Dynamics 365 Portal Analytics
 
@@ -31,11 +31,11 @@ Critical service cookie to analyze service usage anonymously and aggregated for 
 
 ### ContextLanguageCode
 
-Stores the default language of the user accessing portal within a session and across webpages. This is a session cookie. In other words, a short term cookie. And is deleted when web site session closes.
+Stores the default language of the user accessing portal within a session and across webpages. The cookie is deleted after session closes.
 
 ### .AspNet.ApplicationCookie
 
-Used to identify user sessions. A single user session begins when a user browses portal for the first time and ends when the session is closed. [Authentication site settings](https://docs.microsoft.com/powerapps/maker/portals/configure/set-authentication-identity) can be used to change session expiry time span.
+Used to identify user sessions. A user session starts when a user browses portal for the first time. And ends when the session is closed. [Authentication site settings](https://docs.microsoft.com/powerapps/maker/portals/configure/set-authentication-identity) can be used to change session expiry time span.
 
 ### __RequestVerificationToken 
 
