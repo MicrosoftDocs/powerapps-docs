@@ -1,5 +1,9 @@
 ---
+<<<<<<< HEAD
 title: "Create solution updates  | MicrosoftDocs"
+=======
+title: "Create solution updates and patches | MicrosoftDocs"
+>>>>>>> 718e423d9df71499c8631172b57123b6a117026c
 description: "Learn how to create solution patches"
 ms.custom: ""
 ms.date: 02/04/2020
