@@ -51,7 +51,7 @@ In this walk through, you'll learn how to:
 > [!IMPORTANT]
 > For any feedback or issues related to the **Crisis Communication sample template or app**, please use the following links:
 > - **[Feedback](https://aka.ms/crisis-communication-feedback)**
-> - **[Issues](ttps://aka.ms/crisis-communication-issues)**
+> - **[Issues](https://aka.ms/crisis-communication-issues)**
 
 ## Create a home for your data
 
