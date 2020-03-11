@@ -11,13 +11,13 @@ ms.author: nenandw
 ms.reviewer: tapanm
 ---
  
-# Cookies used by Power Apps portals
+# Cookies in Power Apps portals
 
 A cookie is a small file sent from the web site to visitor's device by the browser. A single web session may use multiple cookies.
 
 Power Apps portals also use cookies to store information for various purposes. The following section lists and describes the cookies that Power Apps portals uses:
 
-## Portal cookie names and description
+## Names and descriptions of cookies used by portals
 
 #### ARRAffinity
 
