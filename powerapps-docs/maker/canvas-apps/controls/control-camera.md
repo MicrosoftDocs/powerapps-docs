@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.date: 10/25/2016
+ms.date: 03/11/2020
 ms.author: chmoncay
 ms.reviewer: tapanm
 search.audienceType: 
@@ -22,6 +22,14 @@ If you add this control, the user can update a data source with one or more phot
 
 ## Key properties
 **Camera** – On a device that has more than one camera, the numeric ID of the camera that the app uses.
+
+**OnStream** – How the app responds when the **Stream** property is updated.
+
+**Photo** – The image captured when the user takes a picture.  Captured media is referenced by a URI, see the [data type documentation](../functions/data-types.md#uris-for-images-and-other-media) for more information.  
+
+**Stream** – Automatically updated image based on the **StreamRate** property.
+
+**StreamRate** – How often to update the image on the **Stream** property, in milliseconds.  This value can range from 100 (1/10th of a second) to 3,600,000 (1 hour).
 
 ## Additional properties
 **[AccessibleLabel](properties-accessibility.md)** – Label for screen readers. Should describe the purpose of taking a picture.
@@ -45,14 +53,6 @@ If you add this control, the user can update a data source with one or more phot
 **[Height](properties-size-location.md)** – The distance between a control's top and bottom edges.
 
 **[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
-
-**OnStream** – How the app responds when the **Stream** property is updated.
-
-**Photo** – The image captured  when the user takes a picture.
-
-**Stream** – Automatically updated image based on the **StreamRate** property.
-
-**StreamRate** – How often to update the image on the **Stream** property, in milliseconds.  This value can range from 100 (1/10th of a second) to 3,600,000 (1 hour).
 
 **[TabIndex](properties-accessibility.md)** – Keyboard navigation order in relation to other controls.
 

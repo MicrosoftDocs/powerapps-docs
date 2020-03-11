@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 10/25/2016
+ms.date: 03/11/2020
 ms.author: chmoncay
 search.audienceType: 
   - maker
@@ -20,12 +20,16 @@ A control that allows app users to record sounds from their device.
 ## Description
 App users can make audio recordings if the device where the app is running has a microphone.
 
-Audio is stored in 3gp format in Android, AAC format in iOS, and OGG format in web browsers.
+Recorded audio can be played back with the [**Audio**](control-audio-video.md) control, temporarily put in a variable or collection, or stored in a database.
+
+Audio is stored in 3gp format for Android, AAC format for iOS, and OGG format for web browsers.
 
 ## Key properties
 **Mic** – On a device that has more than one microphone, the numeric ID of the microphone that the app uses.
 
 **OnStop** – How the app responds when the user stops recording with a microphone control.
+
+**Audio** – The audio clip captured when the user records with the device's microphone. Captured media is referenced by a URI, see the [data type documentation](../functions/data-types.md#uris-for-images-and-other-media) for more information.  
 
 ## Additional properties
 **[AccessibleLabel](properties-accessibility.md)** – Label for screen readers. Should describe the purpose of the microphone.
@@ -92,22 +96,51 @@ Audio is stored in 3gp format in Android, AAC format in iOS, and OGG format in w
 [**Patch**( *DataSource*, *BaseRecord*, *ChangeRecord* )](../functions/function-patch.md)
 
 ## Example
-### Add sounds to a Custom gallery control
-1. Add a **Microphone**, name it **MyMic**, and set its **OnStop** property to this formula:<br>
-   **Collect(MySounds, MyMic.Audio)**
+### Simple direct playback
+In this example, we'll directly connect a **Microphone** control with an **Audio** control for immediate playback.
 
-    Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
+1. Add a **Microphone** control to your app. Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
+1. Add an **Audio** control to your app.
+1. Set the **Audio** control's **Media** property to the formula:
+    ```powerapps-dot
+    Microphone1.Audio
+    ```
+1. Preview the app.
+1. Select the **Microphone** control to begin recording.
+1. Say a message.
+1. Select the **Micophone** control again to end the recording.
+1. Select the **Audio** control to hear the recording.  
 
-    Want more information about the **[Collect](../functions/function-clear-collect-clearcollect.md)** function or [other functions](../formula-reference.md)?
-2. Add a **Custom gallery** control, move it below **MyMic**, and set the **[Items](properties-core.md)** property for the **Custom gallery** control to **MySounds**.
-3. In the template for the **Custom gallery** control, add an **[Audio](control-audio-video.md)** control, and set its **Media** property to **ThisItem.Url**.
-4. Press F5, click or tap **MyMic** to start recording, and then click or tap it again to stop recording.
-5. In the **Custom gallery** control, click or tap the play button in the **[Audio](control-audio-video.md)** control to play back your recording.
-6. Add as many recordings as you want, and then return to the default workspace by pressing Esc.
-7. (optional) In the template for the **Custom gallery** control, add a **[Button](control-button.md)** control, set its **[OnSelect](properties-core.md)** property to **Remove(MySounds, ThisItem)**, press F5, and then remove a recording by clicking or tapping the corresponding **Button** control.
+### Add sounds to a Gallery control
+In this example, we'll create a gallery of audio clips stored in a collection that can be individually selected for play back. 
+
+1. Add a **Microphone** control, name it **MyMic**.  Don't know how to [add, name, and configure a control](../add-configure-controls.md)? 
+1. Set its **OnStop** property to this formula using the **[Collect](../functions/function-clear-collect-clearcollect.md)** function:
+    ```powerapps-dot
+    Collect( MySounds, MyMic.Audio )
+    ```
+1. Add a **Gallery** control, move it below **MyMic**.
+1. Set the **[Items](properties-core.md)** property for the gallery to this formula:
+    ```powerapps-dot
+    MySounds
+    ```
+1. In the template for the **Custom gallery** control, add an **[Audio](control-audio-video.md)** control.
+1. Set the audio control's **Media** property to this formula:
+    ```powerapps-dot
+    ThisItem.Url
+    ```
+1. Press F5 to preview the app.
+1. Click or tap **MyMic** to start recording, and then click or tap it again to stop recording.
+1. In the **Gallery** control, click or tap the play button in the **Audio** control to play back your recording.
+1. Add as many recordings as you want, and then return to the default workspace by pressing the Esc key.
+1. (optional) In the template for the **Gallery** control, add a **[Button](control-button.md)** control.
+1. Set its **[OnSelect](properties-core.md)** property to the formula:
+    ```powerapps-dot
+    Remove( MySounds, ThisItem )
+    ```
+1. press F5, and then remove a recording by clicking or tapping the corresponding **Button** control.
 
 Use the **[SaveData](../functions/function-savedata-loaddata.md)** function to save the recordings locally or the **[Patch](../functions/function-patch.md)** function to update a data source.
-
 
 ## Accessibility guidelines
 The same guidelines for **[Button](control-button.md)**  apply because **Microphone** is just a specialized button. In addition, consider the following:

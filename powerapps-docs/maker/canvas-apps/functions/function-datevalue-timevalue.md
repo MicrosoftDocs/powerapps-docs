@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 11/07/2015
+ms.date: 03/11/2020
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -81,7 +81,7 @@ If you typed **10/11/2014 1:50:24.765 PM** into a text-input control named **Sta
     The label would show **Monday, November 10, 2014 1:50:24 PM**.
 * **Text(DateTimeValue(Start.Text), "dddd, mmmm dd, yyyy hh:mm:ss.fff AM/PM")**
   
-    The label would show **Saturday, October 11, 2014 01:50:24:765 PM** if your computer were set to the **en** locale.
+    The label would show **Saturday, October 11, 2014 01:50:24.765 PM** if your computer were set to the **en** locale.
   
     As an alternative, you can specify **hh:mm:ss.f** or **hh:mm:ss.ff** to round the time to the nearest tenth or hundredth of a second.
 
