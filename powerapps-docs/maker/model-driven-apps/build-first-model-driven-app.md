@@ -32,11 +32,12 @@ Sign in to [Power Apps](https://make.powerapps.com/). If you don’t already hav
 
 1.	Select the environment you want, or go to the [Power Apps admin center](https://admin.powerapps.com/) to create a new one.
 
-  > [!IMPORTANT]
-  > If the **Model-driven** design mode isn't available, you may need to [Create an environment](https://docs.microsoft.com/powerapps/administrator/create-environment).   
+2.  On the **Home** page, select **Model-driven app from blank**.
 
-2. On the **Home** page, select **Model-driven app from blank**.
-<!-- ![Start-from-blank_model](media/build-first-model-driven-app/start-from-blank-model-driven.png) -->
+    > [!div class="mx-imgBorder"] 
+    > ![Start-from-blank_model](media/build-first-model-driven-app/start-from-blank-model-driven.png)
+
+3.  Select **Create**.
 
 3.	On the **Create a New App** page, enter the following details, and then select **Done**: 
   - **Name**: Enter a name for the app, such as *My first app*. 
@@ -44,35 +45,40 @@ Sign in to [Power Apps](https://make.powerapps.com/). If you don’t already hav
   - **Description**: Type a short description of what the app is or does, such as *This is my first app*.
 For information about the additional app properties, see [Create an app](create-edit-app.md#create-an-app).
 
-    > [!div class="mx-imgBorder"] 
-    > ![](media/create-new-app.png "Create a new app") 
+  > [!div class="mx-imgBorder"] 
+  > ![Create a new app](media/create-new-app.png)
 
 
 ## Add components to your app
 From the app designer you add components to your app.
-1.	Select the **Open the Site Map Designer** arrow to open the sitemap designer. 
+1.	Select the **Open the Site Map Designer** edit button to open the sitemap designer.
 
-    ![Create-new-sitemap](media/build-first-model-driven-app/new-sitemap.png)
+      > [!div class="mx-imgBorder"] 
+      > ![Create-new-sitemap](media/build-first-model-driven-app/new-sitemap.png)
 
 2.	On the sitemap designer select **New Subarea**, in the right pane select the **Properties** tab, and then select the following properties.
   - **Type**: Entity
   - **Entity**: Account
 
-    ![Add components to sitemap](media/build-first-model-driven-app/sitemap.png)
+    > [!div class="mx-imgBorder"] 
+    > ![Add components to sitemap](media/build-first-model-driven-app/sitemap.png)
 
 3.	Select **Save And Close**.
 4.	On the app designer canvas select **Forms**, and then on the right pane under the **Main Forms** group select the **Account** form.
 
-    ![Account main form](media/build-first-model-driven-app/main-form.png)
+      > [!div class="mx-imgBorder"] 
+      > ![Account main form](media/build-first-model-driven-app/main-form.png)
 
-5.	On the app designer canvas select **Views**, and then select the **Active Accounts**, **All Accounts**, and **My Active Accounts** views.
+5.	On the app designer canvas select **Views**, and then select the **Active Accounts**, **All Accounts**, and **My Active Accounts** views.<!-- All checkbox seems to be selected by default -->
 
-    ![Account views](media/build-first-model-driven-app/views.png)
+      > [!div class="mx-imgBorder"] 
+      > ![Account views](media/build-first-model-driven-app/views.png)
 
 6. On the app designer canvas select **Charts**, and then select the **Accounts by Industry** chart.
 7. On the app designer toolbar, select **Save**.
 
-    ![App designer toolbar save](media/build-first-model-driven-app/app-designer-toolbar.png)
+      > [!div class="mx-imgBorder"] 
+      > ![App designer toolbar save](media/build-first-model-driven-app/app-designer-toolbar.png)
  
 <!-- ##  Validate your app
 This step checks for component dependencies that are required for the app to work, but haven't yet been added to the app. 
@@ -89,7 +95,8 @@ On the app designer toolbar, select **Publish**.
 
 After publishing the app it's ready for you to run or share with others.
 
-![Simple account entity app](media/build-first-model-driven-app/accounts-quickstart-app.png)
+  > [!div class="mx-imgBorder"] 
+  > ![Simple account entity app](media/build-first-model-driven-app/accounts-quickstart-app.png)
 
 ## Next steps
 In this topic, you built a simple model-driven app. 

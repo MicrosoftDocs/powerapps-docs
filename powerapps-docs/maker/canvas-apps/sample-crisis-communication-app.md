@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: sample
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 03/04/2020
+ms.date: 03/11/2020
 ms.author: mabolan
 search.audienceType: 
   - maker
@@ -36,6 +36,9 @@ In this walk through, you'll learn how to:
 - Import flows to send notifications to users
 - Create a centrally managed Teams team to aggregate data and to effectively respond to issues
 
+> [!NOTE]
+> The Crisis Communication sample template is also available for the Power Apps and Power Automate US Government plans. The service URLs for Power Apps and Power Automate US Government version are different from the commercial version. More information: [Power Apps US Government service URLs](https://docs.microsoft.com/power-platform/admin/powerapps-us-government#power-apps-us-government-service-urls) and [Power Automate US Government service URLs](https://docs.microsoft.com/power-automate/us-govt#power-automate-us-government-service-urls).
+
 ## Prerequisites
 
 - [Sign
@@ -44,6 +47,11 @@ In this walk through, you'll learn how to:
 - You must have a valid SharePoint Online license and permission to create lists.
 - You must have a public SharePoint site where you can store the data for the app.
 - Download the assets from [aka.ms/CrisisCommunicationSolution](https://aka.ms/CrisisCommunicationSolution).
+
+> [!IMPORTANT]
+> For any feedback or issues related to the **Crisis Communication app**, please use the following links:
+> - **[Feedback](https://aka.ms/crisis-communication-feedback)**
+> - **[Issues](https://aka.ms/crisis-communication-issues)**
 
 ## Create a home for your data
 
@@ -123,7 +131,7 @@ creation of the SharePoint lists, you can use the *DeploySPLists* flow available
 
 > [!NOTE]
 > You may receive an error stating that location services are required.
-  If this happens, please allow location services to Power Automate and refresh the page before trying again.
+  If this happens, allow location services to Power Automate and refresh the page before trying again.
 
 The flow will then create the following SharePoint lists within your SharePoint site:
 
@@ -140,7 +148,7 @@ The flow will then create the following SharePoint lists within your SharePoint 
 
 > [!NOTE]
 > - All list columns listed above should be considered as dependencies.
-    Please protect the lists from accidental schema changes (for example, adding
+    Protect the lists from accidental schema changes (for example, adding
     new columns is allowed, but deleting columns may break the app.)
 > - Use caution when deleting list items; deleting list items deletes historical records. You can toggle deprecation value from *No* to *Yes* to drop records from contacts, news, FAQs or links.
 
@@ -159,8 +167,12 @@ connect it to your new data sources.
 1. Select **Import** from the command bar.
 1. Upload the **CrisisCommunication.zip** file from the GitHub repository:
 
+    > [!NOTE]
+    > If your tenant is in GCC environment, use **CrisisCommunicationGCC.zip**.
+
     ![Import app package](media/sample-crisis-communication-app/31-Import-App.png)
 
+1. Complete the **Import Setup** for **Microsoft Teams Connection** and **Office 365 Users Connection** by selecting the appropriate connections using *Select during import* hyperlink. You may have to create [new connection](add-data-connection.md) if it already doesn't exist.
 1. Select **Import**.
 
 ### Update the SharePoint connections
@@ -171,9 +183,7 @@ connect it to your new data sources.
 
     ![Edit app](media/sample-crisis-communication-app/05-Edit-App.png)
 
-1. **Sign in** or create any necessary connections and select **Allow**:
-
-    ![Allow connections](media/sample-crisis-communication-app/allow-connections.png)
+1. **Sign in** or create any necessary connections and select **Allow**.
 
 1. Navigate to the data sources in the left pane:
 
@@ -204,6 +214,81 @@ connect it to your new data sources.
 
 1. **Save** and **Publish** the app.
 
+#### Enable location updates
+
+This app allows you to record a user's location and store it in your SharePoint site whenever a user sets their status. Your crisis management team can view this data in a Power BI report.
+
+To enable this functionality, follow these steps:
+
+  1. Search for the **btnDateRange** control
+  1. Open the **OnSelect** property of the **btnDateRante** control in the formula bar.
+  1. Copy and paste the following snippet in the formula bar for **OnSelect** property:
+
+  ```
+  UpdateContext({locSaveDates: true});
+
+// Store the output properties of the calendar in static variables and collections.
+Set(varStartDate,First(Sort(Filter(selectedDates,ComponentId=CalendarDatePicker_1.Id),Date,Ascending)).Date);
+Set(varEndDate,First(Sort(Filter(selectedDates,ComponentId=CalendarDatePicker_1.Id),Date,Descending)).Date);
+
+// Create a new record for work status for each date selected in the date range.
+ForAll(
+    Filter(
+        RenameColumns(selectedDates,"Date","DisplayDate"),
+        ComponentId=CalendarDatePicker_1.Id,
+        !(DisplayDate in colDates.Date)
+    ),
+    Patch('CI_Employee Status',Defaults('CI_Employee Status'),
+        {
+            Title: varUser.userPrincipalName,
+            Date: DisplayDate,
+            Notes: "",
+            PresenceStatus: LookUp(Choices('CI_Employee Status'.PresenceStatus),Value=WorkStatus_1.Selected.Value),
+            
+             
+            Latitude: Location.Latitude,
+            Longitude: Location.Longitude
+        }
+    )
+);
+
+// Update existing dates with the new status.
+ForAll(
+    AddColumns(
+        Filter(
+            RenameColumns(selectedDates,"Date","DisplayDate"),
+            ComponentId=CalendarDatePicker_1.Id,
+            DisplayDate in colDates.Date
+        ),
+        
+        // Get the current record for each existing date.
+        "LookUpId",LookUp(RenameColumns(colDates,"ID","DateId"),And(Title=varUser.userPrincipalName,Date=DisplayDate)).DateId
+    ),
+    Patch('CI_Employee Status',LookUp('CI_Employee Status',ID=LookUpId),
+        {
+            PresenceStatus: LookUp(Choices('CI_Employee Status'.PresenceStatus),Value=WorkStatus_1.Selected.Value)
+        }
+    )
+);
+
+If(
+    IsEmpty(Errors('CI_Employee Status')),
+    Notify("You successfully submitted your work status.",NotificationType.Success,5000);
+    
+    // Update the list of work status for the logged-in user.
+    ClearCollect(colDates,Filter('CI_Employee Status',Title=varUser.userPrincipalName));
+    
+    Navigate('Share to Team Screen',LookUp(colStyles,Key="navigation_transition").Value),
+    
+    Notify(
+        LookUp(colTranslations,Locale=varLanguage).WorkStatusError,
+        NotificationType.Warning
+    )
+);
+
+UpdateContext({locSaveDates: false})
+```
+
 ### Update the request help Flow
 
 This flow will send an adaptive card to a central Teams team requesting help.
@@ -230,24 +315,37 @@ and bring it into your flow. If you need help with creating a Teams team, jump t
 1. Extract the channel ID, which is everything after `https://teams.microsoft.com/l/channel/` and before `/General`. <br> For example, in the following URL, the channel ID would be `19%3ab2fa9fc20f3042a9b63fc5890e1813f8%40thread.tacv2`:
    
    `https://teams.microsoft.com/l/channel/19%3ab2fa9fc20f3042a9b63fc5890e1813f8%40thread.tacv2/General?groupId=8bc7c0c2-0d4c-4fb8-af99-32da74c9237b&tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47`,
-   
+
 1. Navigate to [flow.microsoft.com](https://flow.microsoft.com).
+
 1. Select **My flows** from the left navigation.
-1. Select **More commands** (...)  for **CrisisCommunication.RequestHelp** and select **Edit**.
+
+1. Select **More commands** (...)  for **CrisisCommunication.Request** and select **Edit**.
+
     ![Edit app](media/sample-crisis-communication-app/20-Edit-Flow.png)
+
 1. Open the **Team Id** card.
+
 1. Paste the Team ID into the **Value** field.
+
 1. Open the **Channel ID** card.
+
 1. Paste the Channel ID into the **Value** field.
+
     ![Set Team IDs](media/sample-crisis-communication-app/22-Set-Team-IDs.png)
 
+1. Scroll down to the **Get Time** actions and update the action for **Convert time zone** with your choice of source and destination times:
+
+    ![Convert time zone](media/sample-crisis-communication-app/convert-time-zone.png)
+
 ## Import and set up the admin app
+
 To manage the app you imported, you'll want to repeat the same steps for the admin app.
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 1. Select **Apps** from the left navigation.
 1. Select **Import** from the command bar.
-1. Upload the **CrisisCommunicationAdminApp.zip** file from the GitHub repository:
+1. Upload the **CrisisCommunicationAdmin.zip** file from the GitHub repository:
 
     ![Import app package](media/sample-crisis-communication-app/import-app.png)
 
@@ -313,15 +411,19 @@ To initialize your app, you need to provide all of the required fields by naviga
 
 Complete all of the fields and select **Save**.
 
-| **Field name** | **Logical name in SharePoint** | **Purpose** |
-|-|-|-|
-| Admin email | AdminContactEmail | Used to notify others who are administering the application. |
-| Logo URL | Logo | The logo of your app that will appear in the top-left corner. |
-| AAD group ID | AADGroupID | Used to send notifications to end users about internal company updates via the *Notify users on new crisis communication news* flow. |  
-| APP URL | AppURL | The location of the app so that the *Notify users on new crisis communication news* flow can redirect users after selecting **Read more**. | 
-| Government RSS Feed | GovernmentRSSFeed | Used to populate the world news feature within the app. Useful if you want to provide additional information to your employees from a trusted source. |
-| Notification method | PreferredSentNotification | Used by the *Notify users on new crisis communication news* flow to determine which distribution channel it should use when sending out notifications. |
-| Feature flags | Feature1...8 | Used to disable or enable each feature within the application. |
+| **Field name** | **Logical name in SharePoint** | **Purpose** | **Example** |
+|-|-|-|-|
+| Admin email | AdminContactEmail | Used to notify others who are administering the application.  | admin@contoso.com |
+| Logo URL | Logo | The logo of your app that will appear in the top-left corner. | https://contoso.com/logo.png |
+| AAD group ID | AADGroupID | Used to send notifications to end users about internal company updates via the *Notify users on new crisis communication news* flow. Follow the instructions below to get the AAD ID of your group. | c0ddf873-b4fe-4602-b3a9-502dd944c8d5 |
+| APP URL | AppURL | The location of the end-user app so that the *Notify users on new crisis communication news* flow can redirect users after selecting **Read more**. | https://apps.preview.powerapps.com/play/<app URL>?tenantId=<tenant ID>
+| Government RSS Feed | GovernmentRSSFeed | Used to populate the world news feature within the app. Useful if you want to provide additional information to your employees from a trusted source. | https://www.who.int/rss-feeds/news-english.xml |
+| Notification method | PreferredSentNotification | Used by the *Notify users on new crisis communication news* flow to determine which distribution channel it should use when sending out notifications. This field is required. | Email, Teams notification, Push notification |
+| Feature flags | Feature1...8 | Used to disable or enable each feature within the application. |  |
+
+> [!NOTE]
+> Teams notification and push notification are currently not supported in GCC.
+
 
 #### Finding the AAD of your distribution group
 1. Navigate to [aad.portal.azure.com](https://aad.portal.azure.com)
@@ -433,6 +535,9 @@ The app uses a flow to send notifications to end users whenever there is a new c
 1. Upload the **CrisisCommunicationNewsNotification.zip** package from the GitHub
     repository:
 
+    > [!NOTE]
+    > If your tenant is in GCC environment, use **CrisisCommunicationNewsNotificationGCC.zip**.
+
     ![Upload CrisisCommunicationNewsNotification.zip](media/sample-crisis-communication-app/upload-news-notification.png)
 
 1. Add connections for the new Flow by selecting the **Select during import**
@@ -481,6 +586,10 @@ The app uses a flow to send notifications to end users whenever there is a new c
 
 1. Once the import is done, go back to **My flows**.
 1. Select the newly imported flow **Notify users on new crisis communication news**.
+
+    > [!NOTE]
+    > If you uploaded GCC package, the flow name is **Notify users on new crisis communication news GCC**.
+
 1. Select **Edit** from the command bar.
 1. Open the card called **When a new item is posted**.
 1. Change the **Site Address** to the name of your SharePoint site.
@@ -489,7 +598,7 @@ The app uses a flow to send notifications to end users whenever there is a new c
 1. Change the **Site Address** to the name of your SharePoint site.
 1. Change the **List name** to **CI_configAdminSetup**.
 1. Open the card called **Initialize variable – Read more text**.
-1. Change the **Value** to “Read more” in your native language.
+1. Change the **Value** to "Read more" in your native language.
 
     ![Flow settings](media/sample-crisis-communication-app/flow-options.png)
 
@@ -512,7 +621,8 @@ preference.
 ## Monitor office absences with Power BI
 
 Once you have the app deployed and people start to notify that they will be out of the office for various reasons (such
-as being sick or working from home) you can now use a Power BI report to track how many and where those people are located.
+as being sick or working from home) you can now use a Power BI report to track how many and where those people are located. Please 
+note that you need to [enable location tracking](#enable-location-updates) to make the map control work.
 
 To start, you can use the sample report 'Presence status report.pbix' available from the downloaded [assets package](#prerequisites).
 If needed, download [Power BI Desktop](https://powerbi.microsoft.com/downloads). We will also need some information from
@@ -540,6 +650,21 @@ table, and the list id in the three places where we have a GUID as highlighted, 
 
 ![Power Query Advanced Editor Updates](media/sample-crisis-communication-app/005-PowerQuery-AdvancedEditorUpdates-nolines.PNG)
 
+If you see any connection errors after updating the connection information, you may need to update the credentials used to connect to the SharePoint list. Follow these steps to update the connection:
+
+1. Select **File** menu, **Options and settings** and then select **Data source settings**:
+
+    ![Data source settings](media/sample-crisis-communication-app/PBI-1-DataSourceSettings.PNG)
+
+1. Select **Edit permissions**:
+
+    ![Edit permissions](media/sample-crisis-communication-app/PBI-2-DataSourceSettings-EditPermissions.PNG)
+
+1. Ensure the *Credentials* type is set to *Organizational account*,
+and use the credentials to access the SharePoint list.
+
+    ![Edit permissions](media/sample-crisis-communication-app/PBI-3-OrganizationalAccount.PNG)
+
 Select **Close & Apply** to update the report to pull data from your SharePoint list.
 
 ![Power Query Close and Apply](media/sample-crisis-communication-app/006-PowerQuery-CloseAndApply-nolines.PNG)
@@ -548,6 +673,8 @@ We now have a Power BI report that shows both the geographical information for o
 a trend of such absences over many days. We can now publish the report so other people in the organization can see it.
 
 ![Power BI Publish Report](media/sample-crisis-communication-app/007-PowerBI-Publish-nolines.PNG)
+
+Your report is now published. You can share it with others in your organization. You can also [schedule the report refresh frequency](https://docs.microsoft.com/power-bi/refresh-scheduled-refresh).
 
 ## Integrate your app into Teams
 
@@ -629,6 +756,29 @@ To add the Power BI report:
 1. Search for and select your Power BI report.
 1. Select **Save**.
 
+## FAQ
+
+1. **What licenses do I need to run this solution?**
+
+    - The solution in this app uses Office connectors. Hence, a seeded Power Apps license from Office is sufficient to run and play the user and admin apps. Read more at [Power Platform licensing overview](https://docs.microsoft.com/power-platform/admin/pricing-billing-skus). 
+    - If you want to use the Power BI report (packaged as part of the solution), you will need to have a Power BI license. Read more at [Power BI pricing](https://powerbi.microsoft.com/pricing/).
+
+1. **Where should I go if I have feedback about the solution?**
+
+    We'd love to hear about experience deploying and customizing this solution. To share your experience,
+    go to [aka.ms/crisis-communication-feedback](https://aka.ms/crisis-communication-feedback).
+
+1. **It looks like I found a bug with the app; where should I go?**
+
+   To file a bug with the solution, go to [aka.ms/crisis-communication-issues](https://aka.ms/crisis-communication-issues).
+
+1. **What features are currently not supported in GCC?**
+
+    The Power Automate bot connector for Teams and the Push Notification connector are currently not available for GCC. Use the email option to alert users about internal news updates for GCC instead.
+
+***Disclaimer:*** *This app is a sample and may be used with Microsoft Power Apps and Teams for dissemination of reference information only. This app is not intended or made available for use as a medical device, clinical support, diagnostic tool, or other technology intended to be used in the diagnosis, cure, mitigation, treatment, or prevention of disease or other conditions, and no license or right is granted by Microsoft to use this app for such purposes.  This app is not designed or intended to be a substitute for professional medical advice, diagnosis, treatment, or judgement and should not be used as such.  Customer bears the sole risk and responsibility for any use of this app.  Microsoft does not warrant that the app or any materials provided in connection therewith will be sufficient for any medical purposes or meet the health or medical requirements of any person.*  
+
 ## Next steps
+
 - [Formula reference](https://docs.microsoft.com/powerapps/maker/canvas-apps/formula-reference)
 - [Controls reference](https://docs.microsoft.com/powerapps/maker/canvas-apps/reference-properties)

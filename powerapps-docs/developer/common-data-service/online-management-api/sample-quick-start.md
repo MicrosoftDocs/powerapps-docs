@@ -7,7 +7,7 @@ ms.topic: conceptual
 ms.assetid: 63600a55-a1f0-491f-83f6-b3252566d27e
 author: KumarVivek
 ms.author: kvivek
-manager: amyla
+manager: annbe
 search.audienceType: 
   - developer
 search.app: 
