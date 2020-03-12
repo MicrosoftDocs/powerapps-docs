@@ -85,7 +85,7 @@ The following checklist provides the list of validations performed by Microsoft 
 </td>
 </tr>
 <tr>
-<td rowspan=5><a href="https://docs.microsoft.com/powerapps/maker/canvas-apps/getting-started">Canvas apps</a> and <a href="https://docs.microsoft.com/en-us/power-automate/getting-started">flows</a> that connect to data sources <i>other</i> than Common Data Service
+<td rowspan=5><a href="https://docs.microsoft.com/powerapps/maker/canvas-apps/getting-started">Canvas apps</a> and <a href="https://docs.microsoft.com/power-automate/getting-started">flows</a> that connect to data sources <i>other</i> than Common Data Service
 </td>
 <td>Sanity Check</td>
 <td><ul>

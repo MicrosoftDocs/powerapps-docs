@@ -8,8 +8,8 @@ ms.custom:
   - ""
 ms.topic: article
 ms.assetid: c2cc39d2-e540-0800-f04f-3fa66df21191
-author: JimDaly # GitHub ID
-ms.author: jdaly # MSFT alias of Microsoft employees only
+author: Nkrb # GitHub ID
+ms.author: nabuthuk # MSFT alias of Microsoft employees only
 manager: shilpas # MSFT alias of manager or PM counterpart
 ms.reviewer: 
 search.audienceType: 

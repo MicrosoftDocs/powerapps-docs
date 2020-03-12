@@ -6,7 +6,7 @@ ms.topic: "reference"
 ms.assetid: 0206c43b-b1fc-490d-a867-1d75331885a8
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "amyla"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 

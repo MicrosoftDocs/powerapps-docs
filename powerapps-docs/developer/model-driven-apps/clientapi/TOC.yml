@@ -21,6 +21,8 @@
         href: ./reference/events/grid-onrecordselect.md
       - name: Grid OnSave event
         href: ./reference/events/grid-onsave.md
+      - name: OnLookupTagClick event
+        href: ./reference/events/onlookuptagclick.md
       - name: OnProcessStatusChange event
         href: ./reference/events/onprocessstatuschange.md
       - name: OnPreProcessStatusChange event
@@ -152,6 +154,8 @@
         href: reference/controls/addCustomView.md
       - name: addNotification
         href: reference/controls/addNotification.md
+      - name: addOnLookupTagClick
+        href: reference/controls/addOnLookupTagClick.md
       - name: addOnPostSearch
         href: reference/controls/addOnPostSearch.md
       - name: addOnResultOpened
@@ -214,6 +218,8 @@
         href: reference/controls/openSearchResult.md
       - name: refresh
         href: reference/controls/refresh.md
+      - name: removeOnLookupTagClick
+        href: reference/controls/removeOnLookupTagClick.md
       - name: removeOnPostSearch
         href: reference/controls/removeOnPostSearch.md
       - name: removeOnResultOpened
@@ -589,6 +595,13 @@
           href: reference/grids/viewselector/isVisible.md
         - name: setCurrentView
           href: reference/grids/viewselector/setCurrentView.md
+    - name: Xrm.App
+      href: reference/xrm-app.md
+      items:
+      - name: addGlobalNotification
+        href: reference/xrm-app/addGlobalNotification.md
+      - name: clearGlobalNotification
+        href: reference/xrm-app/clearGlobalNotification.md
     - name: Xrm.Device
       href: reference/xrm-device.md
       items:
@@ -677,6 +690,8 @@
           href: reference/xrm-utility/getGlobalContext/prependOrgName.md
       - name: getLearningPathAttributeName
         href: reference/xrm-utility/getLearningPathAttributeName.md
+      - name: getPageContext
+        href: reference/xrm-utility/getPageContext.md
       - name: getResourceString
         href: reference/xrm-utility/getResourceString.md
       - name: invokeProcessAction

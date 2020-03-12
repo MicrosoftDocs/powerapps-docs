@@ -85,11 +85,13 @@ The solution explorer is a comprehensive tool used for advanced model-driven app
 
 ![Solution explorer](media/model-driven-app-overview/solutionexplorer-entitiescollapsed.png)
 
-To open solution explorer, select **Model-driven** on the left pane of [!INCLUDE [powerapps](../../includes/powerapps.md)].
+To open solution explorer, 
 
-  ![Select Model-driven](media/model-driven-app-overview/app-type-picker-mod.png)
+1. On the [!INCLUDE [powerapps](../../includes/powerapps.md)] Home page, select **Settings**, and then select **Advanced Settings**.
 
-Then select the **Advanced** tab.
+2. On the Dynamics 365 Business Management page, select **Settings**, select **Customizations**, and then select **Customize the System**.
+
+  ![Select Model-driven](media/model-driven-app-overview/app-settings-solutions-explorer.png)
 
 More information: [Advanced app making and customization](advanced-navigation.md)
 
