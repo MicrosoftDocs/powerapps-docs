@@ -1,11 +1,11 @@
 ---
-title: Run a canvas-based app on a mobile device | Microsoft Docs
-description: Learn how to run a canvas app on a mobile device.
+title: Run a canvas app or a custom model-driven app on a mobile device | Microsoft Docs
+description: Learn how to run a canvas app or a custom model-driven app on a mobile device.
 author: Mattp123
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 11/16/2018
+ms.date: 03/12/2020
 ms.author: matp
 ms.custom: ""
 ms.reviewer: ""
@@ -17,8 +17,11 @@ search.app:
   - D365CE
 ---
 
-# Run a canvas app on a mobile device
-When you create an app, or someone shares an app with you, you can run that app on Windows, iOS, Android, or in a web browser. In this topic, you'll learn how to run a canvas app on a mobile device. Apps running on a mobile device can take advantage of the device's capabilities, such as location services and camera.
+# Run a canvas app or a custom model-driven app on a mobile device
+When you create an app, or someone shares an app with you, you can run that app on Windows, iOS, Android, or in a web browser. In this topic, you'll learn how to run a canvas app or a custom model-driven on a mobile device. Apps running on a mobile device can take advantage of the device's capabilities, such as location services and camera.
+
+> [!NOTE]
+> Dynamics 365 model-driven apps don't run in the Power Apps mobile app. Instead, you use the Dynamics 365 for phones and tablets app. For more information, see [Run Dynamics 365 model-driven apps on a mobile device](run-app-client-model-driven.md).
 
 To follow this procedure, if you're not signed up for Power Apps, [sign up for free](https://make.powerapps.com/signup?redirect=marketing&email=) before you begin, and then download Power Apps from the [App Store](https://itunes.apple.com/app/powerapps/id1047318566?mt=8) or [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.msapps) onto an iPhone, iPad, or Android device running a [supported operating system](../maker/canvas-apps/limits-and-config.md). Also, make sure you have access to a canvas app that you created or that someone else created and shared with you.
 
