@@ -25,7 +25,7 @@ When you create an app, or someone shares an app with you, you can run that app 
 Legend:
 
 1. **Canvas apps**
-2. **Customer model-driven apps**
+2. **Custom model-driven apps**
 
 To follow this procedure, if you're not signed up for Power Apps, [sign up for free](https://make.powerapps.com/signup?redirect=marketing&email=) before you begin, and then download Power Apps from the [App Store](https://itunes.apple.com/app/powerapps/id1047318566?mt=8) or [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.msapps) onto an iPhone, iPad, or Android device running a [supported operating system](../maker/canvas-apps/limits-and-config.md). Also, make sure you have access to a canvas app that you created or that someone else created and shared with you.
 
