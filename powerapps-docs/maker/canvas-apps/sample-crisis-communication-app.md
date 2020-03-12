@@ -369,7 +369,7 @@ and bring it into your flow. If you need help with creating a Teams team, jump t
 
     ![Convert time zone](media/sample-crisis-communication-app/convert-time-zone.png)
 
-# Optional: Configure shared inbox
+## Optional: Configure shared inbox
 
 The **CrisisCommunication.Request** flow pulls requests from your inbox before sending them to Teams. If you would like to send request emails to a shared inbox, follow these steps.
 
