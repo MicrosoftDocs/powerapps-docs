@@ -71,10 +71,10 @@ This table has links to more information about our most popular connectors. For 
 ** Applies to Azure Blob, Box, Dropbox, Google Drive, OneDrive and OneDrive for Business
 
 ## Standard and custom connectors
-Power Apps provides *standard* connectors for many commonly used data sources, such as those listed above. If Power Apps has a standard connector for the type of data source that you want to use, you should use that connector. If you want to connect to other types of data sources, such as a service that you've built, see [Register and use custom connectors](../canvas-apps/register-custom-api.md).
+Power Apps provides *standard* connectors for many commonly used data sources. If Power Apps has a standard connector for the type of data source that you want to use, you should use that connector. If you want to connect to other types of data sources, such as a service that you've built, see [Register and use custom connectors](../canvas-apps/register-custom-api.md).
 
 ## All standard connectors
-See the [Microsoft Connector Reference](https://docs.microsoft.com/connectors/) for a list of all the standard connectors. Premium connectors require Power Apps per app plan or Power Apps per user plan. For more information, see [Power Apps Plans](https://powerapps.microsoft.com/pricing/).
+Standard connectors do not require special licensing. For more information, see [Power Apps Plans](https://powerapps.microsoft.com/pricing/).
 
 You can ask questions about a specific connector in the [Power Apps forums](https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1), and you can suggest connectors to add or other improvements to make in [Power Apps Ideas](https://powerusers.microsoft.com/t5/PowerApps-Ideas/idb-p/PowerAppsIdeas).
 
