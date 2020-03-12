@@ -1,12 +1,12 @@
 ---
 title: Run a canvas app or a custom model-driven app on a mobile device | Microsoft Docs
 description: Learn how to run a canvas app or a custom model-driven app on a mobile device.
-author: Mattp123
+author: mduelae
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: quickstart
 ms.date: 03/12/2020
-ms.author: matp
+ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
 ms.assetid: 
