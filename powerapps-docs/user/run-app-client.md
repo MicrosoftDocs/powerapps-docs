@@ -21,7 +21,7 @@ search.app:
 When you create an app, or someone shares an app with you, you can run that app on Windows, iOS, Android, or in a web browser. In this topic, you'll learn how to run a canvas app or a custom model-driven on a mobile device. Apps running on a mobile device can take advantage of the device's capabilities, such as location services and camera.
 
 > [!NOTE]
-> Dynamics 365 model-driven apps don't run in the Power Apps mobile app. Instead, you use the Dynamics 365 for phones and tablets app. For more information, see [Run Dynamics 365 model-driven apps on a mobile device](run-app-client-model-driven.md).
+> Model-driven apps for Dynamics 365 don't run in the Power Apps mobile app. Instead, you use the Dynamics 365 for phones and tablets app. For more information, see [Run Dynamics 365 model-driven apps on a mobile device](run-app-client-model-driven.md).
 
 To follow this procedure, if you're not signed up for Power Apps, [sign up for free](https://make.powerapps.com/signup?redirect=marketing&email=) before you begin, and then download Power Apps from the [App Store](https://itunes.apple.com/app/powerapps/id1047318566?mt=8) or [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.msapps) onto an iPhone, iPad, or Android device running a [supported operating system](../maker/canvas-apps/limits-and-config.md). Also, make sure you have access to a canvas app that you created or that someone else created and shared with you.
 
@@ -80,7 +80,6 @@ You can pin an app to the home screen of your device for quick access. Tap the e
 To close an app, use your finger to swipe from the left edge of the app to the right. On Android devices, you can also press the Back button and then confirm that you intended to close the app.
 
 ## Next steps
-In this topic, you learned how to run a canvas app on a mobile device. You can also run model-driven apps on a mobile device.
-
+In this topic, you learned how to run a canvas app and custom model-driven app on a mobile device. Next, learn how to use a custom model-driven app on a mobile device. 
 > [!div class="nextstepaction"]
-> [Run a model-driven app on a mobile device](run-app-client-model-driven.md)
+> [Use a custom model-driven app on a mobile device](use-custom-model-driven-app-on-mobile.md)
