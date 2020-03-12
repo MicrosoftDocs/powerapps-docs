@@ -1,6 +1,6 @@
 ---
-title: Run a custom model-driven app on a mobile device | Microsoft Docs
-description: Learn how to run a model-driven app on a mobile device.
+title: How to use a custom model-driven app on a mobile device | Microsoft Docs
+description: Learn how to use a custome model-driven app on a mobile device.
 author: mduelae
 manager: kvivek
 ms.service: powerapps
@@ -18,7 +18,7 @@ search.app:
   - D365CE
 ---
 
-# Run a custom Dynamics 365 model-driven app on a mobile device
+# Use a custom model-driven app on a mobile device
 
 
 
