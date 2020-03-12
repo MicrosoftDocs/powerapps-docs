@@ -471,7 +471,7 @@ Complete all of the fields and select **Save**.
 
 | **Field name** | **Logical name in SharePoint** | **Purpose** | **Example** |
 |-|-|-|-|
-| Admin email | AdminContactEmail | This is where email requests are sent. They should be set to your email address. If you would like to send notifications to another inbox please follow [optional shared inbox configuration](#optional:-configure-shared-inbox). | admin@contoso.com |
+| Admin email | AdminContactEmail | This is where email requests are sent. They should be set to your email address. If you would like to send notifications to another inbox please follow [optional shared inbox configuration](#optional-configure-shared-inbox). | admin@contoso.com |
 | Logo URL | Logo | The logo of your app that will appear in the top-left corner. | https://contoso.com/logo.png |
 | AAD group ID | AADGroupID | Used to send notifications to end users about internal company updates via the *Notify users on new crisis communication news* flow. Follow the instructions below to get the AAD ID of your group. | c0ddf873-b4fe-4602-b3a9-502dd944c8d5 |
 | APP URL | AppURL | The location of the end-user app so that the *Notify users on new crisis communication news* flow can redirect users after selecting **Read more**. | https://apps.preview.powerapps.com/play/<app URL>?tenantId=<tenant ID>
@@ -680,7 +680,7 @@ preference.
 
 Once you have the app deployed and people start to notify that they will be out of the office for various reasons (such
 as being sick or working from home) you can now use a Power BI report to track how many and where those people are located. Please 
-note that you need to [enable location tracking](#optional:-enable-location-updates) to make the map control work.
+note that you need to [enable location tracking](#optional-enable-location-updates) to make the map control work.
 
 To start, you can use the sample report 'Presence status report.pbix' available from the downloaded [assets package](#prerequisites).
 If needed, download [Power BI Desktop](https://powerbi.microsoft.com/downloads). We will also need some information from
