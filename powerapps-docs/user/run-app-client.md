@@ -54,6 +54,8 @@ The following filters are available:
 
 * **Favorites**: Displays apps that you've marked by tapping the ellipsis (...) on the app tile, and then tapping **Favorite**. To remove an app from this list, tap the ellipsis (...) on the app tile, and then tap **Unfavorite**.
 
+* **Featured apps**:
+
     ![Mark as Favorite](./media/run-app-client/favorite.png)
 
 After you filter your apps, you can sort the filtered list by the date the apps were most recently opened or modified, or alphabetically by name. These preferences are retained when you close and reopen Power Apps.
