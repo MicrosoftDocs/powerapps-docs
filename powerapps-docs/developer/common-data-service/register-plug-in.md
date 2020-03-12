@@ -42,6 +42,7 @@ Content in this topic describes the steps **in bold** above and supports the fol
 - [Tutorial: Debug a plug-in](tutorial-debug-plug-in.md)
 - [Tutorial: Update a plug-in](tutorial-update-plug-in.md)
 
+
 ## Plugin registration tool (PRT)
 
 You will use the Plugin Registration Tool (PRT) to register your plug-in assemblies and steps.
@@ -190,6 +191,13 @@ There are two modes of execution asynchronous, and synchronous.
 |**Synchronous**|Plug-ins execute immediately according to the stage of execution and execution order. The entire operation will wait until they complete.|
 
 Asynchronous plug-ins can only be registered for the **PostOperation** stage. For more information about how system jobs work, see [Asynchronous service](asynchronous-service.md)
+
+To execute a plug-in when a target entity instance changes, register the plugin as indicated in the table below.
+
+|Target entity| Register on this entity|
+|--|--|
+| customeraddress, leadaddress, publisheraddress, competitoraddress| account, contact |        
+
 
 ### Deployment
 
