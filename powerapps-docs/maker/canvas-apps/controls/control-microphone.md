@@ -184,7 +184,7 @@ Consider adding an alternative form of input for users with speech disabilities 
 
 ### Color contrast
 
-- Read the [standard color contrast requirements](../accessible-apps-color.md)
+- Read the [standard color contrast requirements](../accessible-apps-color.md).
 - Ensure adequate color contrast between [Image](properties-visual.md) and the button text and icon (if applicable).
 
 ### Screen reader support
