@@ -20,6 +20,13 @@ search.app:
 # Run a canvas app or a custom model-driven app on a mobile device
 When you create an app, or someone shares an app with you, you can run that app on Windows, iOS, Android, or in a web browser. In this topic, you'll learn how to run a canvas app or a custom model-driven on a mobile device. Apps running on a mobile device can take advantage of the device's capabilities, such as location services and camera.
 
+![Power Apps mobile](media/powerappsmobile.png)
+
+Legend:
+
+1. **Canvas apps**
+2. **Customer model-driven apps**
+
 > [!NOTE]
 > Model-driven apps for Dynamics 365 don't run in the Power Apps mobile app. Instead, you use the Dynamics 365 for phones and tablets app. For more information, see [Run Dynamics 365 model-driven apps on a mobile device](run-app-client-model-driven.md).
 
