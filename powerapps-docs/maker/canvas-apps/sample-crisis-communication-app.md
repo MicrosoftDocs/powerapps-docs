@@ -43,7 +43,7 @@ In this walk through, you'll learn how to:
 
 Watch how to use Crisis Communication solution:
 
-> [!VIDEO https://www.youtube.com/watch?v=23SypLXiOTw]
+> [!VIDEO https://www.youtube.com/embed/23SypLXiOTw]
 
 ## Prerequisites
 
@@ -63,7 +63,7 @@ Watch how to use Crisis Communication solution:
 
 Watch how to build and deploy Crisis Communication app:
 
-> [!VIDEO https://www.youtube.com/watch?v=Wykrwf9dZ-Y]
+> [!VIDEO https://www.youtube.com/embed/Wykrwf9dZ-Y]
 
 ## Create a home for your data
 
