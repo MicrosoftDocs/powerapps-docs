@@ -2,7 +2,7 @@
 title: "Export to data lake | MicrosoftDocs"
 description: "Learn how to export entity data to an Azure data lake in Power Apps"
 ms.custom: ""
-ms.date: 01/28/2020
+ms.date: 03/04/2020
 ms.reviewer: "Mattp123"
 ms.service: powerapps
 ms.suite: ""
@@ -73,6 +73,10 @@ Follow the steps in the [Create an Azure Storage account](/azure/storage/blobs
    - **Subscription**. Select your Azure subscription. 
    - **Resource group**. Select the resource group that contains the Storage v2 (general-purpose v2) storage account.
    - **Storage account**. Select the Storage v2 (general-purpose v2) storage account to use for the export. 
+
+    > [!NOTE]
+    > As part of linking the Common Data Service environment to a data lake, you grant the Export to Data Lake service access to your storage account. Ensure that you followed the [prerequisites](#prerequisites) of creating and configuring the Azure data lake storage account, and granting yourself an owner role on the storage account. Additionally, you grant the Power Platform Dataflows service access to your storage account. More information: [Self-service data prep with dataflows](self-service-data-prep-with-dataflows.md).  
+
 4. Select the entities that you want to export to the data lake, and then select **Save**. Only entities with change tracking enabled can be exported. More information: [Enable change tracking](/dynamics365/customer-engagement/admin/enable-change-tracking-control-data-synchronization)
 
    > [!div class="mx-imgBorder"] 
