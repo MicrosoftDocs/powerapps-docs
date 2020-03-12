@@ -226,9 +226,12 @@ connect it to your new data sources.
 
 1. **Save** and **Publish** the app.
 
-#### Optionally enable location updates
+#### Optional: Enable location updates
 
-This app allows you to record a user's location and store it in your SharePoint site whenever a user sets their status.  Your crisis management team can view this data in a Power BI report. This step is optional, if you do not want to track user location, please ignore these steps.
+This app allows you to record a user's location and store it in your SharePoint site whenever a user sets their status.  Your crisis management team can view this data in a Power BI report. 
+
+> [!NOTE]
+> Enabling location updates is optional. You can skip this section if you do not want to track user location.
 
 To enable this functionality, follow these steps:
 
@@ -366,29 +369,32 @@ and bring it into your flow. If you need help with creating a Teams team, jump t
 
     ![Convert time zone](media/sample-crisis-communication-app/convert-time-zone.png)
 
-# Optionally configure shared inbox
-The request flow pulls requests from your inbox before sending them to Teams.
-If you would like to send these emails to a shared inbox, follow these steps.
+# Optional: Configure shared inbox
 
-1. Open the **CrisisCommunication.Request** flow in edit mode.
-1. Select **...** from the **When an email arrives V3**
-1. Select **Delete**
+The **CrisisCommunication.Request** flow pulls requests from your inbox before sending them to Teams. If you would like to send request emails to a shared inbox, follow these steps.
 
- ![Select from](media/sample-crisis-communication-app/33-delete-connector.png)
+> [!NOTE]
+> Configuring shared inbox is optional. You can skip this section if you do not want to send request emails to a shared inbox.
 
-1. Search for and select **When a new email arrives in a shared mailbox (V2)**
-1. Provide the address of your shared inbox in **Mailbox Address**
+1. Open the **CrisisCommunication.Request** flow in *edit* mode.
+1. Select **...** from the **When an email arrives V3**.
+1. Select **Delete**:
+
+     ![Delete connector](media/sample-crisis-communication-app/33-delete-connector.png)
+
+1. Search for and select **When a new email arrives in a shared mailbox (V2)**.
+1. Enter the shared inbox address in **Mailbox Address**.
 1. Open the **Comments** card.
-1. Select the **Add a dynamic value** button for **Value**
-1. Search for and select **Body**.
+1. Select the **Add a dynamic value** button for **Value**.
+1. Search for and select **Body**:
 
- ![Select from](media/sample-crisis-communication-app/35-body.png)
+     ![Select body](media/sample-crisis-communication-app/35-body.png)
 
 1. Open the **Get user profile card (V2)** card.
-1. Select the **Add a dynamic value** button
-1. Search for and select **From**.
+1. Select the **Add a dynamic value** button.
+1. Search for and select **From**:
 
- ![Select from](media/sample-crisis-communication-app/3-from.png)
+     ![Select from](media/sample-crisis-communication-app/34-from.png)
 
 ## Import and set up the admin app
 
@@ -465,7 +471,7 @@ Complete all of the fields and select **Save**.
 
 | **Field name** | **Logical name in SharePoint** | **Purpose** | **Example** |
 |-|-|-|-|
-| Admin email | AdminContactEmail | This is where email requests are sent; it should be set to your email address. If you would like to send notifications to another inbox please follow [these steps](#optionally-configure-shared-inbox). | admin@contoso.com |
+| Admin email | AdminContactEmail | This is where email requests are sent. They should be set to your email address. If you would like to send notifications to another inbox please follow [optional shared inbox configuration](#optional:-configure-shared-inbox). | admin@contoso.com |
 | Logo URL | Logo | The logo of your app that will appear in the top-left corner. | https://contoso.com/logo.png |
 | AAD group ID | AADGroupID | Used to send notifications to end users about internal company updates via the *Notify users on new crisis communication news* flow. Follow the instructions below to get the AAD ID of your group. | c0ddf873-b4fe-4602-b3a9-502dd944c8d5 |
 | APP URL | AppURL | The location of the end-user app so that the *Notify users on new crisis communication news* flow can redirect users after selecting **Read more**. | https://apps.preview.powerapps.com/play/<app URL>?tenantId=<tenant ID>
@@ -674,7 +680,7 @@ preference.
 
 Once you have the app deployed and people start to notify that they will be out of the office for various reasons (such
 as being sick or working from home) you can now use a Power BI report to track how many and where those people are located. Please 
-note that you need to [enable location tracking](#optionally-enable-location-updates) to make the map control work.
+note that you need to [enable location tracking](#optional:-enable-location-updates) to make the map control work.
 
 To start, you can use the sample report 'Presence status report.pbix' available from the downloaded [assets package](#prerequisites).
 If needed, download [Power BI Desktop](https://powerbi.microsoft.com/downloads). We will also need some information from
