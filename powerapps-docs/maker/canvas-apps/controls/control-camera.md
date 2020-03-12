@@ -116,7 +116,7 @@ Consider adding an alternative form of input for users with visual disabilities.
 
 ### Color contrast
 
-There must be adequate color contrast between[FocusedBorderColor](properties-color-border.md) and the outside color.
+There must be adequate color contrast between [FocusedBorderColor](properties-color-border.md) and the outside color.
 
 ### Screen reader support
 
