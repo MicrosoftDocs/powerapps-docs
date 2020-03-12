@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: sample
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 03/11/2020
+ms.date: 03/12/2020
 ms.author: mabolan
 search.audienceType: 
   - maker
@@ -39,6 +39,12 @@ In this walk through, you'll learn how to:
 > [!NOTE]
 > The Crisis Communication sample template is also available for the Power Apps and Power Automate US Government plans. The service URLs for Power Apps and Power Automate US Government version are different from the commercial version. More information: [Power Apps US Government service URLs](https://docs.microsoft.com/power-platform/admin/powerapps-us-government#power-apps-us-government-service-urls) and [Power Automate US Government service URLs](https://docs.microsoft.com/power-automate/us-govt#power-automate-us-government-service-urls).
 
+## Demo: Crisis Communication app
+
+Watch how to use Crisis Communication solution:
+
+> [!VIDEO https://www.youtube.com/embed/23SypLXiOTw]
+
 ## Prerequisites
 
 - [Sign
@@ -52,6 +58,12 @@ In this walk through, you'll learn how to:
 > For any feedback or issues related to the **Crisis Communication app**, please use the following links:
 > - **[Feedback](https://aka.ms/crisis-communication-feedback)**
 > - **[Issues](https://aka.ms/crisis-communication-issues)**
+
+## Demo: Build and deploy Crisis Communication app
+
+Watch how to build and deploy Crisis Communication app:
+
+> [!VIDEO https://www.youtube.com/embed/Wykrwf9dZ-Y]
 
 ## Create a home for your data
 
