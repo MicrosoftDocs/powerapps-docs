@@ -13,7 +13,7 @@ applies_to:
 ms.assetid: feb3e634-7c60-46fd-8b92-3f5682b1570b
 author: "shmcarth" # GitHub ID
 ms.author: "jdaly"
-manager: "amyla"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 

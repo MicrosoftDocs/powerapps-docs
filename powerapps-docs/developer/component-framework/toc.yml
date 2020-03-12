@@ -3,9 +3,13 @@
   - name: Overview
     href: overview.md
   - name: What are code components
-    href: custom-controls-overview.md
-  - name: Code components for canvas apps
-    href: component-framework-for-canvas-apps.md
+    items:
+    - name: Overview
+      href: custom-controls-overview.md
+    - name: Code components for model-driven apps
+      href: code-components-model-driven-apps.md
+    - name: Code components for canvas apps
+      href: component-framework-for-canvas-apps.md
   - name: Get Power Apps CLI
     href: get-powerapps-cli.md
   - name: Tutorial
@@ -34,6 +38,8 @@
       href: issues-and-workarounds.md
     - name: Limitations
       href: limitations.md
+  - name: FAQs
+    href: faq.md
   - name: Sample components
     items: 
     - name: How to use the sample components?
@@ -42,8 +48,10 @@
       href: sample-controls/angular-flip-control.md
     - name: Control State API component
       href: sample-controls/control-state-api.md
-    - name: Data Set Grid component
+    - name: Data Set Grid component for model-driven apps
       href: sample-controls/data-set-grid-control.md
+    - name: Data Set component for canvas apps
+      href: sample-controls/data-set-component-canvas.md
     - name: Formatting API component
       href: sample-controls/formatting-api-control.md
     - name: IFRAME component
@@ -340,7 +348,13 @@
         href: manifest-schema-reference/feature-usage.md
       - name: uses-feature
         href: manifest-schema-reference/uses-feature.md
-  - name: Community resources
-    href: community-resources.md
+  - name: Resources
+    items:
+    - name: Community resources
+      href: community-resources.md
+    - name: Community forum
+      href: https://aka.ms/PCFForum
+    - name: Feature ideas
+      href: https://aka.ms/PCFIdea
   - name: Share your feedback
     href: share-your-feedback-for-pcf.md

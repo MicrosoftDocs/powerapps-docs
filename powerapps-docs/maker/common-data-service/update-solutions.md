@@ -1,5 +1,5 @@
 ---
-title: "Update or upgrade a solution | MicrosoftDocs"
+title: "Apply an update or upgrade for a solution | MicrosoftDocs"
 description: "Learn how to update or upgrade a solution in Power Apps"
 ms.custom: ""
 ms.date: 01/24/2020
@@ -23,7 +23,7 @@ search.app:
   - D365CE
 ---
 
-# Update or upgrade a solution  
+# Apply an update or upgrade for a solution  
 There are times when you may wish to install an update to an existing managed solution. The procedure is similar to installing a new managed solution, except you will get some different options. If you are updating a solution you got from someone else, you should get guidance from the solution publisher about which options you should choose.  
 
 1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select **Solutions** from the left navigation.  

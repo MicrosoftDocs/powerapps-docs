@@ -31,7 +31,7 @@ new `OptionMetadata` instance. When you define an option, it will contain an opt
 context of the publisher set for the solution that the option set is created in. 
 This prefix helps reduce the chance of creating duplicate option sets for a managed solution, 
 and in any option sets that are defined in organizations where your managed solution is installed. For more information, 
-see [Merge option set options](../understand-managed-solutions-merged.md#merge-option-set-options).
+see [Merge option set options](../../../maker/common-data-service/how-managed-solutions-merged.md#merge-option-set-options).
 
  ## Messages  
  The following table lists the messages that you can use with global option sets.  

@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.date: 01/15/2019
+ms.date: 02/28/2020
 ms.author: kvivek
 ms.reviewer: kvivek
 searchScope:
@@ -15,7 +15,7 @@ searchScope:
 ---
 # Explore Power Apps for free for 30 days
 
-You can explore all Power Apps capabilities for free by signing up for a Power Apps Plan 2 license that expires after 30 days. If you don't have any license for Power Apps, the trial plan provides temporary access to these and other features:
+You can explore all Power Apps capabilities for free by signing up for a Power Apps trial plan that expires after 30 days. If you don't have any license for Power Apps, the trial plan provides temporary access to these and other features:
 
 - Extend the capabilities of Office 365 (SharePoint Online, Teams, Excel and more).
 - Create and run canvas apps that connect to Common Data Service and a wide range of more than 200 other data sources, including premium connectors and on-premises data.
@@ -23,10 +23,11 @@ You can explore all Power Apps capabilities for free by signing up for a Power A
 - Create automated workflows with Power Automate.
 - Create and manage environments and Common Data Service databases.
 
-If you have a Power Apps Plan 1 license or a license through Office 365, you already have access to some of these features; the trial license temporarily expands your access to include all features in the previous list. To find out what capabilities each type of license offers, see the [pricing page](https://powerapps.microsoft.com/pricing/).
+If you have a Power Apps license or a license through Office 365, you already have access to some of these features; the trial license temporarily expands your access to include all features in the previous list. To find out what capabilities each type of license offers, see the [pricing page](https://powerapps.microsoft.com/pricing/).
 
 > [!NOTE]
-> If you're an administrator, see [Purchase Power Apps for your organization](../administrator/signup-for-powerapps-admin.md) or [Power Apps in your organization Q&A](../administrator/signup-question-and-answer.md).
+> - If you're an administrator, see [Purchase Power Apps for your organization](../administrator/signup-for-powerapps-admin.md) or [Power Apps in your organization Q&A](../administrator/signup-question-and-answer.md).
+> - Beginning January 2020, self-service purchase, subscription, and license management capabilities for Power Platform products (Power BI, Power Apps, and Power Automate) are available for commercial cloud customers in the United States. For more information, including steps to enable or disable self-service purchasing in your organization, see [Self-service purchase FAQ](https://docs.microsoft.com/microsoft-365/commerce/subscriptions/self-service-purchase-faq?view=o365-worldwide).
 
 ## Identify your current license
 
