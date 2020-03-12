@@ -378,11 +378,17 @@ If you would like to send these emails to a shared inbox, follow these steps.
 
 1. Search for and select **When a new email arrives in a shared mailbox (V2)**
 1. Provide the address of your shared inbox in **Mailbox Address**
+1. Open the **Comments** card.
+1. Select the **Add a dynamic value** button for **Value**
+1. Search for and select **Body**.
+
+ ![Select from](media/sample-crisis-communication-app/35-body.png)
+
 1. Open the **Get user profile card (V2)** card.
 1. Select the **Add a dynamic value** button
 1. Search for and select **From**.
 
- ![Select from](media/sample-crisis-communication-app/34-from.png)
+ ![Select from](media/sample-crisis-communication-app/3-from.png)
 
 ## Import and set up the admin app
 
