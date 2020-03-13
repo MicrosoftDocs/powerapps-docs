@@ -60,11 +60,17 @@ Legend
 
 ### Pin favorite records
 
-The **Pinned** and **Recent** provides quick access to your records that you have recently used or pinned to favorites.  
+The **Pinned** and **Recent** provides quick access to your records that you have recently used or pinned to favorites. 
+Use the **Recent** records list to pin favorite records.  
 
-1. To pin a record, from the site map ![Site map icon](media/pa_mobile_sitemap_icon.png "Site map icon") select, **Recent** ![Recent record icon](media/pa_mobile_recent_icon.png "Recent records icon").
+1. From the site map ![Site map icon](media/pa_mobile_sitemap_icon.png "Site map icon") select, **Recent** ![Recent record icon](media/pa_mobile_recent_icon.png "Recent records icon").
+
+2. On the **Recent** records screen, select the push-pin icon next to a record listed here to add it to your favorites (pinned records).
 
 
-Go Use the **Recent** records list to add records here. Select the remove-pin icon next to a record listed here to remove it from this list.
+> [!div class="mx-imgBorder"]
+> ![Pin record to favorites](media/pa_mobile_pin_to_fav.png "Pin record to favorites").
+
+list to pin favorite records. Select the remove-pin icon next to a record listed here to remove it from this list.
 
 Select a record here to open it. Select the push-pin icon next to a record listed here to add it to your favorites (pinned records).
