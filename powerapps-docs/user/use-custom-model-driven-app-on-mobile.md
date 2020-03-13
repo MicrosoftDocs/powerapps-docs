@@ -70,6 +70,6 @@ Use the **Recent** records list to pin favorite records.
 > [!div class="mx-imgBorder"]
 > ![Pin record to favorites](media/pa_mobile_pin_to_fav.png "Pin record to favorites").
 
- 3. Select the remove-pin icon ![Remove pin icon](media/ pa_mobile_remove_pin_icon.png "Remove pin icon") next to a record to remove it from pinned favorites list.
+ 3. Select the remove-pin icon ![Remove pin icon](media/pa_mobile_remove_pin_icon.png "Remove pin icon") next to a record to remove it from pinned favorites list.
 
 
