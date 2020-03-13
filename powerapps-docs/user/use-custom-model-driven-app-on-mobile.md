@@ -50,10 +50,10 @@ Legend
 
 1. **App selector**: Open this menu to move between apps.
 2. **Home screen**: Select this to go back to the Home screen.
-3. **Profile**: Sign out or reconfigure the app. 
+3. **Profile**: Go to the Profile sceen to sign out or reconfigure the app. 
 4. **Recent records**: View a list of records you were recently using. Select a record here to open it. Select the push-pin icon next to a record listed here to add it to your favorites (pinned records).
 5. **Pinned recrods**: Vew and open your favorite (pinned) records. Use the **Recent** records list to add records here. Select the remove-pin icon next to a record listed here to remove it from this list.
-6. **Entity navigator**: This area list the entity available in the app.
+6. **Entity navigator**: This area lists the entity available in the app.
 7. **Help**: Access help content for more information on how to use the Power Apps mobile app.
 8. **Offline Status**: Work with your data in offline mode even when you don't have internet access. For more information, see [Work offline on your mobile device](https://docs.microsoft.com/dynamics365/mobile-app/work-in-offline-mode).
 9. **Settings**: Access settings.
