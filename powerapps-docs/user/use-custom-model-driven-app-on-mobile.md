@@ -67,10 +67,9 @@ Use the **Recent** records list to pin favorite records.
 
 2. On the **Recent** records screen, select the push-pin icon next to a record listed here to add it to your favorites (pinned records).
 
-
 > [!div class="mx-imgBorder"]
 > ![Pin record to favorites](media/pa_mobile_pin_to_fav.png "Pin record to favorites").
 
-list to pin favorite records. Select the remove-pin icon next to a record listed here to remove it from this list.
+ 3. Select the remove-pin icon ![Remove pin icon](media/ pa_mobile_remove_pin_icon.png "Remove pin icon") next to a record to remove it from pinned favorites list.
 
-Select a record here to open it. Select the push-pin icon next to a record listed here to add it to your favorites (pinned records).
+
