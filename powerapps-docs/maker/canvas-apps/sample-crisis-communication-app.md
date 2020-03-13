@@ -843,5 +843,5 @@ To add the Power BI report:
 
 ## Feedback
 
-- [Feedback about Crisis Communication sample template](https://aka.ms/crisis-communication-feedback)**
-- [Report an issue with Crisis Communication app](https://aka.ms/crisis-communication-issues)**
+- For **Feedback** about the *Crisis Communication sample template*, go to [aka.ms/crisis-communication-feedback](aka.ms/crisis-communication-feedback).
+- To **Report an Issue** with the *Crisis Communication app*, go to [aka.ms/crisis-communication-issues](https://aka.ms/crisis-communication-issues).
