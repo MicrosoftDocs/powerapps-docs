@@ -22,9 +22,9 @@ search.app:
 
 Use the Power Apps mobile app to run your custom model-driven apps on your phone.
 
-## Navigation 
+## Home screen 
 
-It's easy to get around in the Power Apps mobile app. The following illustration shows the primary navigation elements. 
+It's easy to get around in the Power Apps mobile app. The following illustration shows the primary navigation elements on the Home screen. 
 
 ![Navigation controls, expanded view](media/pa_mobile_main_nav.png "Navigation controls, expanded view")
 
@@ -38,3 +38,11 @@ Legend:
 5. **Sort**: Sort records.
 6. **Search**: Search for app records in Common Data Service.
 7. **More**: Access more commands.
+
+
+### Site map 
+
+Use the site map to accces entites, favorite or most-used records. other apps, and settings.
+
+![Site map screen](media/pa_mobile_sitemap.png "Site map screen")
+
