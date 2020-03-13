@@ -841,7 +841,7 @@ To add the Power BI report:
 - [Formula reference](https://docs.microsoft.com/powerapps/maker/canvas-apps/formula-reference)
 - [Controls reference](https://docs.microsoft.com/powerapps/maker/canvas-apps/reference-properties)
 
-## Feedback
+## Issues & Feedback
 
-- For **Feedback** about the *Crisis Communication sample template*, go to [aka.ms/crisis-communication-feedback](aka.ms/crisis-communication-feedback).
+- For **Feedback** about the *Crisis Communication sample template*, go to [aka.ms/crisis-communication-feedback](https://aka.ms/crisis-communication-feedback).
 - To **Report an Issue** with the *Crisis Communication app*, go to [aka.ms/crisis-communication-issues](https://aka.ms/crisis-communication-issues).
