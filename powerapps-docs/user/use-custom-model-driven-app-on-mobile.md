@@ -65,11 +65,19 @@ Use the **Recent** records list to pin favorite records.
 
 1. From the site map ![Site map icon](media/pa_mobile_sitemap_icon.png "Site map icon") select, **Recent** ![Recent record icon](media/pa_mobile_recent_icon.png "Recent records icon").
 
-2. On the **Recent** records screen, select the push-pin icon next to a record listed here to add it to your favorites (pinned records).
+2. On the **Recent** records screen, select the push-pin icon next to a record to add it to your favorites (pinned records).
 
 > [!div class="mx-imgBorder"]
 > ![Pin record to favorites](media/pa_mobile_pin_to_fav.png "Pin record to favorites").
 
- 3. Select the remove-pin icon ![Remove pin icon](media/pa_mobile_remove_pin_icon.png "Remove pin icon") next to a record to remove it from pinned favorites list.
+ 3. Select the remove-pin icon ![Remove pin icon](media/pa_mobile_remove_pin_icon.png "Remove pin icon") next to a record to remove it from favorites (pinned records).
 
+### Add a record quickly
+
+
+1. From the Home screen, select ![Create record button](media/create-record-button.png "Create record button").
+2. Fill in the fields, and then select **Save** Or, to save and create another record, select ![More commands icon](media/pa_mobile_more_commands_icon.png "More commnads icon") then select **Save and Create new**.
+
+> [!div class="mx-imgBorder"]
+> ![Create a record](media/quickcreate.png "Create a record").
 
