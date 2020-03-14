@@ -33,17 +33,17 @@ Format of the recorded audio:
 
 - *3gp* format for *Android*.
 - *AAC* format for *iOS*.
-- *OGG* format for the *web browsers.
+- *OGG* format for *web browsers*.
 
 Captured media is referenced by a text string URI. For more information, read the [data type documentation](../functions/data-types.md#uris-for-images-and-other-media).
 
 ## Key properties
 
+**Audio** – The audio clip captured when the user records with the device's microphone. 
+
 **Mic** – Numeric ID of the microphone on a device that has more than one microphone.
 
 **OnStop** – How the app responds when the user stops recording with a microphone control.
-
-**Audio** – The audio clip captured when the user records with the device's microphone. Captured media is referenced by a URI. For more information, see the [data type documentation](../functions/data-types.md#uris-for-images-and-other-media)
 
 ## Additional properties
 
