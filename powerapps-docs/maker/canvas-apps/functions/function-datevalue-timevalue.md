@@ -41,9 +41,7 @@ Dates must be in one of these formats:
 To convert from numeric date, month and year components, read [Date](function-date-time.md). <br>
 To convert from numeric hour, minute and second components, read [Time](function-date-time.md).
 
-Read [working with dates and times](../show-text-dates-times.md) for more information.
-
-To convert numbers, see the [Value](function-value.md) function.
+Read [working with dates and times](../show-text-dates-times.md) and the [dates and times section of the data types reference](data-types.md#date-time-and-datetime) for more information.
 
 ## Syntax
 
@@ -58,41 +56,66 @@ To convert numbers, see the [Value](function-value.md) function.
 
 ### DateValue
 
-If you type **10/11/2014** into a text-input control named **Startdate**, and then set the [Text](../controls/properties-core.md) property of a label to this function:
+If you type **10/11/2014** into a text-input control named **Startdate**, and then set the [Text](../controls/properties-core.md) property of a label to these formulas:
 
-- **Text(DateValue(Startdate.Text), DateTimeFormat.LongDate)**
-  
+- Converting a date from a string in the user's locale and showing the result as a long date.
+
+    ```powerapps-dot
+    Text( DateValue( Startdate.Text ), DateTimeFormat.LongDate )
+    ```
+
     Device set to **en** locale shows the label as **Saturday, October 11, 2014**.
   
     > [!NOTE]
     > You can use several options with **DateTimeFormat** compared to **LongDateTime**. To display a list of options, type the parameter followed by an exclamation sign (**!**) in the formula bar.
 
-- **Text(DateValue(Startdate.Text, "fr"), DateTimeFormat.LongDate)**
+- Converting a date from a string in the French locale and showing the result as a long date.  In this case, the months and day of the month are interpreted differently from English.
+
+    ```powerapps-dot
+    Text( DateValue( Startdate.Text, "fr" ), DateTimeFormat.LongDate )
+    ```
   
     Device set to **en** locale shows the label as **Monday, November 10, 2014**.
 
 If you typed **October 20, 2014** instead:
 
-- **DateDiff(DateValue(Startdate.Text), Today())**
+- Converting a date from a string in the user's locale and calculating the difference between two days, in days
+
+    ```powerapps-dot
+    DateDiff( DateValue( Startdate.Text ), Today() )
+    ```
   
     Device set to **en** locale shows the label as **9**, indicating the number of days between October 11 and October 20. The [DateDiff](function-dateadd-datediff.md) function can also show the difference in months, quarters, or years.
 
 ### DateTimeValue
 
-If you typed **10/11/2014 1:50:24.765 PM** into a text-input control named **Start**, and then set the [Text](../controls/properties-core.md) property of a label to this function:
+If you typed **10/11/2014 1:50:24.765 PM** into a text-input control named **Start**, and then set the [Text](../controls/properties-core.md) property of a label to these formula:
 
-- **Text(DateTimeValue(Start.Text), DateTimeFormat.LongDateTime)**
-  
+- Converting both a date and time string in the current locale. 
+ 
+    ```powerapps-dot
+    Text( DateTimeValue( Start.Text ), DateTimeFormat.LongDateTime )
+    ```    
+    
     Device set to **en** locale shows the label as **Saturday, October 11, 2014 1:50:24 PM**.
   
   > [!NOTE]
   > You can use several options with **DateTimeFormat** compared to **LongDateTime**. To display a list of options, type the parameter followed by an exclamation sign (**!**) in the formula bar.
 
-- **Text(DateTimeValue(Start.Text, "fr"), DateTimeFormat.LongDateTime)**
+- Converting both a date and time string in the French locale.  Note that the month and day of the month are interpreted differently.
+
+    ```powerapps-dot
+    Text( DateTimeValue( Start.Text, "fr"), DateTimeFormat.LongDateTime )
+    ```
   
     Device set to **en** locale shows the label as **Monday, November 10, 2014 1:50:24 PM**.
 
-- **Text(DateTimeValue(Start.Text), "dddd, mmmm dd, yyyy hh:mm:ss.fff AM/PM")**
+
+- Converting both a date and time string in the user's locale, and displaying the result with a fractional second.
+
+    ```powerapps-dot
+    Text( DateTimeValue( Start.Text ), "dddd, mmmm dd, yyyy hh:mm:ss.fff AM/PM" )
+    ```
   
     Device set to **en** locale shows the label as **Saturday, October 11, 2014 01:50:24.765 PM**.
   
@@ -100,9 +123,14 @@ If you typed **10/11/2014 1:50:24.765 PM** into a text-input control named **Sta
 
 ### TimeValue
 
-Name a text-input control **FinishedAt**, and set the [Text](../controls/properties-core.md) property of a label to this function:
+Name a text-input control **FinishedAt**, and set the [Text](../controls/properties-core.md) property of a label to this formula:
 
-**If(TimeValue(FinishedAt.Text)<TimeValue("5:00:00.000 PM"), "You made it!", "Too late!")**
+```powerapps-dot
+If( TimeValue( FinishedAt.Text ) < TimeValue( "5:00:00.000 PM" ), 
+    "You made it!", 
+    "Too late!"
+)
+```
 
 - If you type **4:59:59.999 PM** in the **FinishedAt** control, the label shows "*You made it!*"
 - If you type **5:00:00.000 PM** in the **FinishedAt** control, the label shows "*Too late!*"
