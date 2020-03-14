@@ -72,7 +72,16 @@ Use the **Recent** records list to pin favorite records.
 
  3. Select the remove-pin icon ![Remove pin icon](media/pa_mobile_remove_pin_icon.png "Remove pin icon") next to a record to remove it from favorites (pinned records).
 
-### Add a record quickly
+### Go back to Home
+
+- To get back to the Home screen, select ![Back icon](media/pa_mobile_back_icon.png "Back icon").
+- When you have naviaged a few level aways from the home screen, press and hold ![Back icon](media/pa_mobile_back_icon.png "Back icon") to go back to the Home sceen. 
+
+> [!div class="mx-imgBorder"]
+> ![Go back to the home screen](media/pa_mobile_back_to_home.png "Go back to home sceen").
+
+
+## Add a record quickly
 
 1. From the Home screen, select ![Create record button](media/create-record-button.png "Create record button").
 2. Fill in the fields, and then select **Save**.
@@ -90,7 +99,7 @@ Use the **Recent** records list to pin favorite records.
 > [!div class="mx-imgBorder"]
 > ![View saved records](media/pa_mobile_record_saved.png "View saved record").
 
-### View commands for a record
+## View commands for a record
 
 1. From the Home screeen select a record to open it.
 2. Commands that you can preform on the record are at the bottom of the screen. Select **More** to access more commands.
@@ -98,7 +107,7 @@ Use the **Recent** records list to pin favorite records.
 > [!div class="mx-imgBorder"]
 > ![Commands on a record](media/commnads_on_open_record.png "Commands on a record").
 
-### Edit a record
+## Edit a record
 
 1. From the Home screeen select a record that you want to edit.
 2. When you are done editing the record, select **Save**. To cancel your changes, select **Discard**.
