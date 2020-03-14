@@ -97,5 +97,12 @@ Use the **Recent** records list to pin favorite records.
 > [!div class="mx-imgBorder"]
 > ![View saved records](media/pa_mobile_record_saved.png "View saved record").
 
+### Edit a record
+
+1. Open the record that you want to edit.
+2. When you are done editing the record, select **Save**. To cancel your changes, select **Canccel**.
+
+> [!div class="mx-imgBorder"]
+> ![Edit a record](media/pa_mobile_edit_record.png "Edit a record").
 
 
