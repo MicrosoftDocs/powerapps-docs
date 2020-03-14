@@ -40,4 +40,4 @@ In summary, the Unified Interface Playbook documents will help you:
 | [Chapter 4: Optimize](https://download.microsoft.com/download/A/F/3/AF3D45A7-4F38-41BE-8956-1DF7A4A5AFDB/playbook-ch4-optimize.pptx)  | PowerPoint  |
 
 ### See also
-[Dynamics 365 Project Service Automation Upgrade playbook](http://aka.ms/PSAUCIUpgrade)
+[Dynamics 365 Project Service Automation Upgrade playbook](https://aka.ms/PSAUCIUpgrade)
