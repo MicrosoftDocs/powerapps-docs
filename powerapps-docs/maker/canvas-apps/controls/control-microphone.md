@@ -113,7 +113,8 @@ Captured media is referenced by a text string URI. For more information, read th
 
 In this example, we'll directly connect a **Microphone** control with an **Audio** control for immediate playback:
 
-1. [Add](../add-configure-controls.md) a **Microphone** control to your app.
+1. [Add](../add-configure-controls.md) a **Microphone** control to your app.  By default it will be named **Microphone1**; you will need to adjust the formula that follows if it is different.  
+1. If prompted, authorize the use of your device's microphone in order to test your app while authoring.  
 1. Add an **Audio** control to your app.
 1. Set the **Audio** control's **Media** property to the formula:
 
