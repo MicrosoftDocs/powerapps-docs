@@ -14,10 +14,12 @@ Kit](https://powerapps.microsoft.com/blog/powerapps-employee-experience-starter-
 
 - You must have access to [Azure Portal](https://portal.azure.com).
 - You must have the permissions to [create Azure resources](https://docs.microsoft.com/azure/role-based-access-control/quickstart-assign-role-user-portal).
-- Optional: 
-    - Download and install Kudos app from [Employee Experience Starter
+
+### Optional
+
+- Download and install Kudos app from [Employee Experience Starter
 Kit](https://powerapps.microsoft.com/blog/powerapps-employee-experience-starter-kit).
-    - You can also use an existing app.
+- You can also use an existing app.
 
 ## Create an Application Insights resource
 
@@ -28,19 +30,19 @@ Application Insights resource to store the events.
 
 1. Search for Application Insights:
 
-    ![Azure Application Insights](media/azureappinsights.png)
+    ![Azure Application Insights](./media/application-insights/azureappinsights.png)
 
 1. Create an Application Insights resource:
 
-    ![Add a Azure Application Insights resource](media/azureappinsights-add.png)
+    ![Add a Azure Application Insights resource](./media/application-insights/azureappinsights-add.png)
 
 1. Enter the appropriate values and select **Review + create**. For more details, read [Create an Application Insights resource](https://docs.microsoft.com/azure/azure-monitor/app/create-new-resource). 
 
-    ![Create a resource](media/createresource.png)
+    ![Create a resource](./media/application-insights/createresource.png)
 
 1. After the Application Insights instance is created, you'll see the instance overview. Copy the **Instrumentation Key**. You'll need this key to configure your app.
 
-    ![Copy Instrumentation Key](media/instrumentation-key.png)
+    ![Copy Instrumentation Key](./media/application-insights/instrumentation-key.png)
 
 ## Connect your app to Application Insights
 
@@ -48,14 +50,14 @@ Application Insights resource to store the events.
 
 1. Select **Apps** from the left navigation. From the list of apps, select the **Kudos** app and then select **Edit**:
 
-    ![Edit Kudos App](media/edit-kudos-app.png)
+    ![Edit Kudos App](./media/application-insights/edit-kudos-app.png)
 
     > [!NOTE]
     > You can also [create](open-and-run-a-sample-app.md) a new app or [edit](edit-app.md) any existing app instead.
 
 1. Select **App** object from the left navigation tree view and paste the **Instrumentation Key**:
 
-    ![Add Instrumentation Key](media/add-instrumentation-key.png)
+    ![Add Instrumentation Key](./media/application-insights/add-instrumentation-key.png)
 
 1. **Save** & **Publish** your app.
 
@@ -80,7 +82,6 @@ app in Power Apps Studio.
 
     > [!NOTE]
     > **Users** view shows usage details of the app, such as:
-    > 
     > - Number of users that viewed the app.
     > - Number of sessions by the users for the app.
     > - Number of events logged for the app.
@@ -91,11 +92,11 @@ app in Power Apps Studio.
 
 1. Select one of the user sessions to drill into specific details. You can see information such as the session length and the screens visited:
 
-    ![Usage details for users](media/appinsights-users.gif)
+    ![Usage details for users](./media/application-insights/appinsights-users.gif)
 
 1. Select the **Events** view in left navigation pane under **Usage** section. You can see a summary of all the screens viewed across all app sessions:
 
-    ![Event details for the app](media/appInsights-events.gif)
+    ![Event details for the app](./media/application-insights/appInsights-events.gif)
 
 > [!TIP]
 > Some of the additional Application Insights features you can use are:  
@@ -115,110 +116,114 @@ You can write custom traces directly to Application Insights and start to analyz
 
 Tracing can also help diagnose issues as you can send a trail of information as your users browse through your app and perform different actions.
 
-When sending custom trace information to Application Insights from your app,
-there are 3 severities you can associate with the trace message. These
-severities are Information, Warning or Error. Depending on your scenario, you
-can choose to send trace message with either of these severities, so you query
-the data and take specific actions based on the message severity.
+There are 3 severities for trace messages when sending custom trace information to Application Insights from your app:
 
-**Note**: If you are logging any personnel data, you will need to consider any
-data compliance obligations, such as GDPR, that you may also need to implement. 
+- **Information**
+- **Warning**
+- **Error**
 
-You will now update your app and create a new component to gather customer
-feedback on each screen of the app. You will write the events to App Insights.
+Depending on your scenario, you can choose to send trace message with the appropriate severity. You can query the data and take specific actions based on the message severity.
 
-1.  Select the components option in the Tree view
+> [!NOTE]
+> If you are logging any personnel data, you will need to consider any
+data compliance obligations, such as GDPR, that you may also need to implement.
 
-![A screenshot of a cell phone Description automatically generated](media/6546b89d737b92f7317edfc26aad4804.png)
+You'll now update your app and create a new component to collect feedback on each screen of the app. You'll write the events to Application Insights.
 
-1.  Create a New component and resize the width and height
+1. Sign in to [Power Apps](https://make.powerapps.com).
 
-![A screenshot of a cell phone Description automatically generated](media/4eae9c80e22cdfcd14f78b8071c363ee.png)
+1. Select **Apps** from the left navigation. From the list of apps, select the **Kudos** app and then select **Edit**.
 
-1.  Add a smile and frown icon to the component
+    > [!NOTE]
+    > You can also [create](open-and-run-a-sample-app.md) a new app or [edit](edit-app.md) any existing app instead.
 
-![A screenshot of a social media post Description automatically generated](media/087d0df17fba50c8b6e4f18f572acc85.png)
+1. Select the **Components** option in the **Tree view**:
 
-1.  Create a new custom input property using the screen data type. This allows
-    us to capture the screen name the component is placed on, and we can log
-    this information to Application Insights.
+    ![Components](./media/application-insights/new-component.png)
 
-![A screenshot of a cell phone Description automatically generated](media/da3f1dddda108473f505ca9598e6fb75.png)
+1. Select **New component**, and then resize the width to 200, height to 75:
 
-1.  Rename the component and icons.
+    ![Height and width](./media/application-insights/resize-component.png)
 
-![A screenshot of a cell phone Description automatically generated](media/753671f65a0786af697db03c195c951b.png)
+1. Select **Insert** from the menu and then select **Icons** to add *Emoji - Frown* and *Emoji - Smile* icons:
 
-1.  Select the FrownIcon and enter the below expression in the OnSelect event of
-    the control. As well as the Trace message, we will send the User name,
-    email, the screen the feedback was received on and a feedback value of -1 to
-    indicate the frown to App Insights.
+    ![Add icons](./media/application-insights/add-icons.png)
 
->   Trace(
+1. Select **New custom property** to create a custom property:
 
->   "App Feedback",
+    ![Create custom property](./media/application-insights/create-custom-property.png)
 
->   TraceSeverity.Information,
+1. Enter property *Name* and *Display name* such as *FeedbackSceen*.
 
->   {
+1. Enter property *Description*.
 
->   UserName: User().FullName,
+1. Select **Property type** a **Input** and **Data type** as **Screen**:
 
->   UserEmail: User().Email,
+    ![Custom property](./media/application-insights/custom-input-property.png)
 
->   Screen: FeedbackComponent.FeedbackScreen.Name,
+    > [!NOTE]
+    > Input property allows you to capture the screen name and it's component so that you can log this information to Application Insights.
 
->   FeedbackValue: "-1"
+1. Select the component on the **Tree View**, then select the **More actions** (**...**) and then select **Rename** to rename the component with a meaningful name such as *FeedbackComponent*.
 
->   }
+    ![Rename component and cons](./media/application-insights/rename-component-icons.png)
 
->   );
+1. Select icons, select **More actions** (**...**) and then select **Rename** to rename the icons with a meaningful names, such as *FrownIcon* and *SmileIcon*.
 
->   Notify("Thanks for you feedback!");
+1. Select the *FrownIcon*, select the **OnSelect** property and then enter the following expression in the formula bar:
 
-![A screenshot of a social media post Description automatically generated](media/196035c955068fed0667773318b31fde.png)
+    ```
+    Trace(
+       "App Feedback",
+       TraceSeverity.Information,
+           {
+             UserName: User().FullName,
+             UserEmail: User().Email,
+             Screen: FeedbackComponent.FeedbackScreen.Name,
+             FeedbackValue: "-1"
+           }
+         );
+    Notify("Thanks for you feedback!");
+    ```
 
-1.  Select the SmileIcon and enter the below expression in the OnSelect event of
-    the control. For the smile, we will send a feedback value of 1.
+    ![Frown icon formula](./media/application-insights/frownicon-formula.png)
 
-Trace(
+    > [!NOTE]
+    > The formula expression sends *UserName*, *UserEmail*, *Screen* and the *Feedback* (with the value *-1*) to Application Insights.
 
-"App Feedback",
+1. Select the *SmileIcon*, select the **OnSelect** property and then enter the following expression in the formula bar:
+    
+    ```
+    Trace(
+       "App Feedback",
+       TraceSeverity.Information,
+           {
+             UserName: User().FullName,
+             UserEmail: User().Email,
+             Screen: FeedbackComponent.FeedbackScreen.Name,
+             FeebackValue: "1"
+           }
+         );
+    Notify("Thanks for you feedback!");
+    ```
 
-TraceSeverity.Information,
+1. Add the component to one of the screens in your app:
 
-{
+    ![Add feedback component](./media/application-insights/add-feedback-component.png)
 
-UserName: User().FullName,
+1. Select **Save** and then select **Publish** to save & publish your app.
 
-UserEmail: User().Email,
-
-Screen: FeedbackComponent.FeedbackScreen.Name,
-
-FeebackValue: "1"
-
-}
-
-);
-
-Notify("Thanks for you feedback!");
-
-1.  Add the component to one of the screens in your application.
-
-![A screenshot of a social media post Description automatically generated](media/9e675ab1b619e24030a6835132273abf.png)
-
-1.  Save & Publish your app.
-
-2.  Play the published app and send a Smile and Frown feedback from your
+1. Play the published app, and send a smile and a frown feedback from your
     screens.
 
-\*\* Note: Telemetry events will only get sent to Application Insights when you
-play the published app. Playing the preview app in the Studio will not send
-events to Application Insights.
+    > [!IMPORTANT]
+    > You must play the published app to send events to Application
+    Insights. Events are not sent to Application Insights when you preview the
+    app in Power Apps Studio.
 
-![A screenshot of a cell phone Description automatically generated](media/faf6dc92e7372593c8c009347e4bbe5a.png)
+    ![Play published app](./media/application-insights/play-published-app.png)
 
-Analyze the information in App Insights
+## Analyze the information in Application Insights
 
 You can now begin to analyze the information you sent using the Trace function
 from your application in App Insights.
@@ -227,16 +232,16 @@ from your application in App Insights.
 
 2.  Select the App Insights resource you created earlier
 
-![A screenshot of a computer Description automatically generated](media/0ae9a50a8fc0b142da873c574d4d4a38.png)
+![A screenshot of a computer Description automatically generated](./media/application-insights/0ae9a50a8fc0b142da873c574d4d4a38.png)
 
 1.  Select Logs in the left tree menu.
 
-![A screenshot of a social media post Description automatically generated](media/16cbc2b8fb2cfe3b75b133937e83ea1e.png)
+![A screenshot of a social media post Description automatically generated](./media/application-insights/16cbc2b8fb2cfe3b75b133937e83ea1e.png)
 
 1.  Type the below query and select Run. The feedback received from your app are
     returned.
 
-![A screenshot of a social media post Description automatically generated](media/9229bc871d9fe8f1c46f829d3fe67ab0.png)
+![A screenshot of a social media post Description automatically generated](./media/application-insights/9229bc871d9fe8f1c46f829d3fe67ab0.png)
 
 1.  Select a row in the results and expand the custom dimensions field. The
     values for Screen, UserName, UserEmail and FeedbackValue for the OnSelect
@@ -244,7 +249,7 @@ from your application in App Insights.
     There are also some additional values recorded for each event sent to
     Application Insights, such as the AppId, AppName and AppSessionId.
 
-![A screenshot of a social media post Description automatically generated](media/c52dd2ea4d94082ce1032376ea3e0399.png)
+![A screenshot of a social media post Description automatically generated](./media/application-insights/c52dd2ea4d94082ce1032376ea3e0399.png)
 
 1.  Using the below query, you can extend the properties of the JSON custom
     dimensions and present them columns in the results view.
@@ -276,7 +281,7 @@ traces
 
 \| order by timestamp desc
 
-![A screenshot of a social media post Description automatically generated](media/c489903a35fe02d39f1b8467abf1e1af.png)
+![A screenshot of a social media post Description automatically generated](./media/application-insights/c489903a35fe02d39f1b8467abf1e1af.png)
 
 Export the information to Power BI
 
@@ -288,24 +293,24 @@ for further analysis and data presentation to stakeholders.
 2.  Select "Export to Power BI (M query)" option. This download a Power BI query
     file to your machine. Open the file and copy the query.
 
-![A screenshot of a social media post Description automatically generated](media/fb45b10cf5ed2b4ec683ac9aa2c7803a.png)
+![A screenshot of a social media post Description automatically generated](./media/application-insights/fb45b10cf5ed2b4ec683ac9aa2c7803a.png)
 
 1.  Open Power BI.
 
 2.  Select "Get Data" and "Blank Query" menu option.
 
-![A screenshot of a cell phone Description automatically generated](media/ac6f1be345b6bbbc5cbad7002cc6f0f0.png)
+![A screenshot of a cell phone Description automatically generated](./media/application-insights/ac6f1be345b6bbbc5cbad7002cc6f0f0.png)
 
 1.  In the query window, select "Advanced editor". Paste the query from step 2
     into the window and select "Done" followed by "Close & Apply".
 
-![A screenshot of a social media post Description automatically generated](media/5c3bc2f7be5ad75cfee2bb8f31f6999e.png)
+![A screenshot of a social media post Description automatically generated](./media/application-insights/5c3bc2f7be5ad75cfee2bb8f31f6999e.png)
 
 1.  With my data, I can create charts and visualizations in Power BI to
     represent feedback received in my app, and make data-based decisions and
     actions.
 
-![](media/c5743349347f61ad5215440e625453ad.png)
+![](./media/application-insights/c5743349347f61ad5215440e625453ad.png)
 
 Default event context and dimensions
 
