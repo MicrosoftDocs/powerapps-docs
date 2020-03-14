@@ -74,8 +74,8 @@ Use the **Recent** records list to pin favorite records.
 
 ### Go back to Home
 
-- To get back to the Home screen, select ![Back icon](media/pa_mobile_back_icon.png "Back icon").
-- When you have naviaged a few level aways from the home screen, press and hold ![Back icon](media/pa_mobile_back_icon.png "Back icon") to go back to the Home sceen. 
+- To get back to the Home screen from a record, select ![Back icon](media/pa_mobile_back_icon.png "Back icon").
+- When you have navigated a few level away from the Home screen, press and hold ![Back icon](media/pa_mobile_back_icon.png "Back icon") to go back to the Home sceen. 
 
 > [!div class="mx-imgBorder"]
 > ![Go back to the home screen](media/pa_mobile_back_to_home.png "Go back to home sceen").
