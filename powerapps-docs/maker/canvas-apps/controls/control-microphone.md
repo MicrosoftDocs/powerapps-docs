@@ -16,7 +16,7 @@ search.app:
 ---
 # Microphone control in Power Apps
 
-A control that allows app users to record sounds from their device.
+A control that enables app users to record sounds from their device.
 
 ## Description
 
@@ -24,8 +24,8 @@ Use the **Microphone** control to capture audio with a device's microphone.  The
 
 The most recently recorded audio clip is available through the **Audio** property. With this property, recorded audio can be:
 
-- **Played back with the Audio control.**  Use the [**Audio**](control-audio-video.md) to listen to the recording.  See the [**examples**](#examples) for more details.  
-- **Temporarily put in a variable or a collection.**  Use the Use the [**Set**](../functions/function-set.md) or [**Collect**](../functions/function-clear-collect-clearcollect.md) functions to store audio clips in a variable or a collection.  Be careful with how many audio clips you hold in a collection at the same time as they can be large and the device's memory can be limited.  Use the [**SaveData**](../functions/function-savedata-loaddata.md) and [**LoadData**](../functions/function-savedata-loaddata.md) functions to move audio clips to the local storage on the device and for [offline scenarios](../offline-apps.md).
+- **Played back with the Audio control.**  Use the [**Audio**](control-audio-video.md) control to listen to the recording.  See the [**examples**](#examples) for more details.  
+- **Temporarily put in a variable or a collection.**  Use the [**Set**](../functions/function-set.md) or [**Collect**](../functions/function-clear-collect-clearcollect.md) functions to store audio clips in a variable or a collection.  Be careful with how many audio clips you hold in a collection at the same time as they can be large and the device's memory can be limited.  Use the [**SaveData**](../functions/function-savedata-loaddata.md) and [**LoadData**](../functions/function-savedata-loaddata.md) functions to move audio clips to the local storage on the device and for [offline scenarios](../offline-apps.md).
 - **Stored in a database.**  Use the [**Patch**](../functions/function-patch.md) function to store audio clips in a database.
 - **Transmitted as a base64 encoded text string.**  Use the [**JSON**](../functions/function-json.md) function to base64 encode audio clips.
 
@@ -117,7 +117,7 @@ In this example, we'll directly connect a **Microphone** control with an **Audio
 1. Add an **Audio** control to your app.
 1. Set the **Audio** control's **Media** property to the formula:
 
-    ```
+    ```powerapps-dot
     Microphone1.Audio
     ```
 
@@ -135,7 +135,7 @@ In this example, we'll create a gallery of audio clips stored in a collection th
 
 1. Set its **OnStop** property to this formula using the [Collect](../functions/function-clear-collect-clearcollect.md) function:
 
-    ```
+    ```powerapps-dot
     Collect( MySounds, MyMic.Audio )
     ```
 
@@ -143,7 +143,7 @@ In this example, we'll create a gallery of audio clips stored in a collection th
 
 1. Set the [Items](properties-core.md) property for the gallery to this formula:
 
-    ```
+    ```powerapps-dot
     MySounds
     ```
 
@@ -151,7 +151,7 @@ In this example, we'll create a gallery of audio clips stored in a collection th
 
 1. Set the audio control's **Media** property to this formula:
 
-    ```
+    ```powerapps-dot
     ThisItem.Url
     ```
 
@@ -167,7 +167,7 @@ In this example, we'll create a gallery of audio clips stored in a collection th
 
 1. Set its [OnSelect](properties-core.md) property to the formula:
 
-    ```
+    ```powerapps-dot
     Remove( MySounds, ThisItem )
     ```
 
