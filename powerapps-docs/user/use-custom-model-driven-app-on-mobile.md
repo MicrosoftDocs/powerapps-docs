@@ -102,7 +102,7 @@ Use the **Recent** records list to pin favorite records.
 ## View commands for a record
 
 1. From the Home screeen select a record to open it.
-2. Commands that you can preform on the record are at the bottom of the screen. Select **More** to access more commands.
+2. Commands that you can perform on the record are at the bottom of the screen. Select **More** to access more commands.
 
 > [!div class="mx-imgBorder"]
 > ![Commands on a record](media/commnads_on_open_record.png "Commands on a record").
