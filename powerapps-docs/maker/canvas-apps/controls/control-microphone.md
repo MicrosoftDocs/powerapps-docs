@@ -20,17 +20,22 @@ A control that allows app users to record sounds from their device.
 
 ## Description
 
-App users can record audio using the microphone on a device running the app. Recorded audio can be:
+Use the **Microphone** control to capture audio with a device's microphone.  The device must have a microphone and the user must authorize the app to use the microphone.  The microphone control is supported when running in a web browser.  
 
-- Played back with the [Audio](control-audio-video.md) control.
-- Temporarily put in a variable or a collection.
-- Stored in a database.
+The most recently captured audio clip is available through the **Audio** property. Recorded audio can be:
+
+- Played back with the [**Audio**](control-audio-video.md) control.  The **Audio** property can be used as the input to the **Audio** control to listen to the recording; see the [**examples**](#examples) for more details.  
+- Temporarily put in a variable or a collection.  Use the [**Collect**](../functions/function-clear-collect-clearcollect.md) function to store audio clips in a collection.  Be careful with how many audio clips you hold in a collection at the same time as they can be large and the device's memory can be limited.  Use the [**SaveData**](../functions/function-savedata-loaddata.md) and [**LoadData**](../functions/function-savedata-loaddata.md) functions to move audio clips to the local storage on the device and for [offline scenarios](../offline-apps.md).
+- Stored in a database.  Use the [**Patch**](../functions/function-patch.md) function to store audio clips in a database.
+- Transmitted as a base64 encoded text string.  Use the [**JSON**](../functions/function-json.md) function to base64 encode audio clips.
 
 Format of the recorded audio:
 
 - *3gp* format for *Android*.
 - *AAC* format for *iOS*.
 - *OGG* format for the *web browsers.
+
+Captured media is referenced by a text string URI. For more information, read the [data type documentation](../functions/data-types.md#uris-for-images-and-other-media).
 
 ## Key properties
 
@@ -106,7 +111,7 @@ Format of the recorded audio:
 
 [*Patch( DataSource, BaseRecord, ChangeRecord*)](../functions/function-patch.md)
 
-## Example
+## Examples
 
 ### Simple direct playback
 
