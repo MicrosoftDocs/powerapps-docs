@@ -71,15 +71,6 @@ Use the **Recent** records list to pin favorite records.
 > ![Pin record to favorites](media/pa_mobile_pin_to_fav.png "Pin record to favorites").
 
  3. Select the remove-pin icon ![Remove pin icon](media/pa_mobile_remove_pin_icon.png "Remove pin icon") next to a record to remove it from favorites (pinned records).
- 
-### View command for a record
-
-1. From the Home screeen select a record to open it.
-2. Commands that you can preform on the record are at the bottom of the screen. Select **More** to access more commands.
-
-> [!div class="mx-imgBorder"]
-> ![Commands on a record](media/commnads_on_open_record.png "Commands on a record").
-
 
 ### Add a record quickly
 
@@ -97,9 +88,17 @@ Use the **Recent** records list to pin favorite records.
 > [!div class="mx-imgBorder"]
 > ![View saved records](media/pa_mobile_record_saved.png "View saved record").
 
+### View commands for a record
+
+1. From the Home screeen select a record to open it.
+2. Commands that you can preform on the record are at the bottom of the screen. Select **More** to access more commands.
+
+> [!div class="mx-imgBorder"]
+> ![Commands on a record](media/commnads_on_open_record.png "Commands on a record").
+
 ### Edit a record
 
-1. Open the record that you want to edit.
+1. From the Home screeen select a record that you want to edit.
 2. When you are done editing the record, select **Save**. To cancel your changes, select **Canccel**.
 
 > [!div class="mx-imgBorder"]
