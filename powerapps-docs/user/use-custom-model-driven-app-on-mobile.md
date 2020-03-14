@@ -75,13 +75,17 @@ Use the **Recent** records list to pin favorite records.
 ### Add a record quickly
 
 1. From the Home screen, select ![Create record button](media/create-record-button.png "Create record button").
-2. Fill in the fields, and then select **Save**. Or, to save and open the recrod that you  created, select ![More commands icon](media/pa_mobile_more_commands_icon.png "More commnads icon") and then select **Save and Open**.
+2. Fill in the fields, and then select **Save**.
+
+
+> [!NOTE]
+> -  To save and open the recrod that you  created, select ![More commands icon](media/pa_mobile_more_commands_icon.png "More commnads icon") and then select **Save and Open**.
+> - To save and create another record, select ![More commands icon](media/pa_mobile_more_commands_icon.png "More commnads icon") and then select **Save and Create new**.
 
 > [!div class="mx-imgBorder"]
 > ![Create a record](media/quickcreate.png "Create a record").
 
-> [!NOTE]
-> To save and create another record, select ![More commands icon](media/pa_mobile_more_commands_icon.png "More commnads icon") and then select **Save and Create new**.
+
 
 3. Once the record is created, you can view the new record. 
 
