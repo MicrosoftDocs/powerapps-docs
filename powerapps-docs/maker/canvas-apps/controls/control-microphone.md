@@ -22,12 +22,12 @@ A control that allows app users to record sounds from their device.
 
 Use the **Microphone** control to capture audio with a device's microphone.  The device must have a microphone and the user must authorize the app to use the microphone.  The microphone control is supported when running in a web browser.  
 
-The most recently captured audio clip is available through the **Audio** property. Recorded audio can be:
+The most recently recorded audio clip is available through the **Audio** property. With this property, recorded audio can be:
 
-- Played back with the [**Audio**](control-audio-video.md) control.  The **Audio** property can be used as the input to the **Audio** control to listen to the recording; see the [**examples**](#examples) for more details.  
-- Temporarily put in a variable or a collection.  Use the [**Collect**](../functions/function-clear-collect-clearcollect.md) function to store audio clips in a collection.  Be careful with how many audio clips you hold in a collection at the same time as they can be large and the device's memory can be limited.  Use the [**SaveData**](../functions/function-savedata-loaddata.md) and [**LoadData**](../functions/function-savedata-loaddata.md) functions to move audio clips to the local storage on the device and for [offline scenarios](../offline-apps.md).
-- Stored in a database.  Use the [**Patch**](../functions/function-patch.md) function to store audio clips in a database.
-- Transmitted as a base64 encoded text string.  Use the [**JSON**](../functions/function-json.md) function to base64 encode audio clips.
+- **Played back with the Audio control.**  Use the [**Audio**](control-audio-video.md) to listen to the recording.  See the [**examples**](#examples) for more details.  
+- **Temporarily put in a variable or a collection.**  Use the Use the [**Set**](../functions/function-set.md) or [**Collect**](../functions/function-clear-collect-clearcollect.md) functions to store audio clips in a variable or a collection.  Be careful with how many audio clips you hold in a collection at the same time as they can be large and the device's memory can be limited.  Use the [**SaveData**](../functions/function-savedata-loaddata.md) and [**LoadData**](../functions/function-savedata-loaddata.md) functions to move audio clips to the local storage on the device and for [offline scenarios](../offline-apps.md).
+- **Stored in a database.**  Use the [**Patch**](../functions/function-patch.md) function to store audio clips in a database.
+- **Transmitted as a base64 encoded text string.**  Use the [**JSON**](../functions/function-json.md) function to base64 encode audio clips.
 
 Format of the recorded audio:
 
@@ -106,10 +106,6 @@ Captured media is referenced by a text string URI. For more information, read th
 [X](properties-size-location.md) – The distance between the left edge of a control and the left edge of its parent container or screen.
 
 [Y](properties-size-location.md) – The distance between the top edge of a control and the top edge of the parent container or screen.
-
-## Related functions
-
-[*Patch( DataSource, BaseRecord, ChangeRecord*)](../functions/function-patch.md)
 
 ## Examples
 
