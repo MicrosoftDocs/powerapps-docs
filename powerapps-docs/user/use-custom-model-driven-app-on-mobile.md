@@ -71,9 +71,17 @@ Use the **Recent** records list to pin favorite records.
 > ![Pin record to favorites](media/pa_mobile_pin_to_fav.png "Pin record to favorites").
 
  3. Select the remove-pin icon ![Remove pin icon](media/pa_mobile_remove_pin_icon.png "Remove pin icon") next to a record to remove it from favorites (pinned records).
+ 
+### View command for a record
+
+1. From the Home screeen select a record to open it.
+2. Commands that you can preform on the record are at the bottom of the screen. Select ![More commands icon](media/pa_mobile_more_commands_icon.png "More commnads icon") to access more commands.
+
+> [!div class="mx-imgBorder"]
+> ![Commands on a record](media/commnads_on_open_record.png "Commands on a record").
+
 
 ### Add a record quickly
-
 
 1. From the Home screen, select ![Create record button](media/create-record-button.png "Create record button").
 2. Fill in the fields, and then select **Save**.
@@ -88,3 +96,6 @@ Use the **Recent** records list to pin favorite records.
 
 > [!div class="mx-imgBorder"]
 > ![View saved records](media/pa_mobile_record_saved.png "View saved record").
+
+
+
