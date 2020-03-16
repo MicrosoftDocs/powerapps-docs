@@ -57,6 +57,58 @@ An admin can upload the app so it shows up for **all** teams in your tenant unde
 
 If you are an admin, you can also [publish the app](https://docs.microsoft.com/microsoftteams/tenant-apps-catalog-teams) to the Microsoft Teams catalogue.
 
+## Consume context from Teams
+
+To build more deeply integrated apps within Teams, you can leverage Teams context variables using the `Param()` function.
+For example, if you wanted to change the background of your canvas app based on the user's theme within Teams, you could
+use the following formula for a screen's **Fill** property:
+
+```
+Switch(
+        Param("theme"),
+        "dark",
+        RGBA(
+            32,
+            31,
+            31,
+            1
+        ),
+        "contrast",
+        RGBA(
+            0,
+            0,
+            0,
+            1
+        ),
+        RGBA(
+            243,
+            242,
+            241,
+            1
+        )
+    )
+```
+
+To test the app, publish it and then play it within Teams.
+
+We currently support the following context variables from Teams:
+
+- locale
+- channelId
+- channelType
+- chatId
+- groupId
+- hostClientType
+- subEntityId
+- teamId
+- teamType
+- theme
+- userTeamRole
+
+> [!NOTE]
+> This feature was added in March of 2020. If you had embedded your app within Teams before this, you may need to re-add your
+app to Teams to get this functionality.
+
 ## Improve the performance of your app
 
 You can optionally preload your app within Teams to increase performance.
@@ -70,6 +122,12 @@ You can optionally preload your app within Teams to increase performance.
     ![App details](./media/embed-teams-app/preload-app.png "Preload app for enhanced performance")
 
 4. For the changes to take effect, re-import your app into Teams.
+
+
+> [!NOTE]
+> This allows users to download the app file while authentication is being completed in embedded scenarios. It does not 
+    allow your app to be run until authentication is complete. This ensures that your app data will not
+    be available to unauthenticated users.
 
 
 ### See also
