@@ -102,7 +102,7 @@ For these examples, you'll need a device with a camera. To test your app, use a 
     Camera1.Photo
     ```
 
-    > ![!NOTE]
+    > [!NOTE]
     > Replace camera control name *Camera1* as appropriate.
 
 1. Press F5 to preview your app.

@@ -147,4 +147,4 @@ If clicking anywhere in a gallery item is meant to select it, there must be adeq
 - If clicking anywhere in a gallery item is meant to select it, there must also be way for keyboard users to select the gallery item. For example, adding a [Button](control-button.md) that has its **OnSelect** property set to **Select(Parent)**.
 
     > [!NOTE]
-  > Controls outside the gallery are not considered in the keyboard navigation order within the gallery. [TabIndex](properties-accessibility.md)**f controls inside a gallery are scoped. See [accessibility properties](properties-accessibility.md) to learn more.
+  > Controls outside the gallery are not considered in the keyboard navigation order within the gallery. [TabIndex](properties-accessibility.md) controls inside a gallery are scoped. See [accessibility properties](properties-accessibility.md) to learn more.

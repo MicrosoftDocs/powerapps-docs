@@ -122,7 +122,7 @@ In this example, we'll directly connect a **Microphone** control with an **Audio
     Microphone1.Audio
     ```
 
-    > ![!NOTE]
+    > [!NOTE]
     > Replace microphone control name *Microphone1* as appropriate.
 
 1. Preview the app.
