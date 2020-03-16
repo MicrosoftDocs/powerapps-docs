@@ -90,7 +90,7 @@ For these examples, you'll need a device with a camera. To test your app, use a 
 
 ### Simple display of a captured picture
 
-1. [Add](../add-configure-controls.md) a **Camera** control.  By default, it will be named **Camera1**.
+1. [Add](../add-configure-controls.md) a **Camera** control.
 
 1. Authorize the app to use device's camera if prompted.
 
