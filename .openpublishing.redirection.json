@@ -1605,6 +1605,11 @@
       "source_path": "powerapps-docs/maker/common-data-service/publish-changes-for-use-customer-service-hub.md",
       "redirect_url": "create-solution#publish-changes",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/embed-powerapps-powerbi.md",
+      "redirect_url": "https://docs.microsoft.com/power-bi/visuals/power-bi-visualization-powerapp",
+      "redirect_document_id": true
     }
   ]
 }
