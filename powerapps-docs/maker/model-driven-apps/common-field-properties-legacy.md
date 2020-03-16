@@ -30,8 +30,9 @@ The portal enables configuring the most common options, but certain options can 
 
 2. Select the field that you want to view.
 
-    > [!div class="mx-imgBorder"] 
-    > ![Common field properties in Power Apps portal](media/common-field-prop-powerapps.png)
+    > [!div class="mx-imgBorder"]
+    > <img src="media/common-field-prop-powerapps.png" alt="Common field properties in Power Apps portal" height="658" width="300">
+
 
 The following table describes the common properties of fields. Certain types of fields have special properties. These are described in [Create and edit fields for Common Data Service](../common-data-service/create-edit-field-portal.md).
 
@@ -53,7 +54,7 @@ Fields in a form display controls people use to view or edit data in an entity r
 
 You can access **Common field properties** in solution explorer. Under **Components**, expand **Entities**, expand the entity you want, and then select **Forms**. In the list of forms, open the form of type **Main**. Then double-click one of the fields to view Common field properties.
 
-![Common field properties in solution explorer](media/common-field-properties.png)
+![Common field properties in solution explorer](media/common-field-properties.png "Common field properties in solution explorer")
   
 The following table describes properties that all fields have. Certain types of fields have special properties. These are described in [Special field properties](special-field-properties-legacy.md).  
   
