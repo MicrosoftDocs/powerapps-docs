@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 03/11/2020
+ms.date: 03/16/2020
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -41,7 +41,10 @@ Dates must be in one of these formats:
 To convert from numeric date, month and year components, read [Date](function-date-time.md). <br>
 To convert from numeric hour, minute and second components, read [Time](function-date-time.md).
 
-Read [working with dates and times](../show-text-dates-times.md) and the [dates and times section of the data types reference](data-types.md#date-time-and-datetime) for more information.
+For more information, read:
+
+- [Working with date and time](../show-text-dates-times.md).
+- [Date/time and data types](data-types.md#date-time-and-datetime).
 
 ## Syntax
 
@@ -58,7 +61,7 @@ Read [working with dates and times](../show-text-dates-times.md) and the [dates 
 
 If you type **10/11/2014** into a text-input control named **Startdate**, and then set the [Text](../controls/properties-core.md) property of a label to these formulas:
 
-- Converting a date from a string in the user's locale and showing the result as a long date.
+- Convert a date from a string in the user's locale and show the result as a long date.
 
     ```powerapps-dot
     Text( DateValue( Startdate.Text ), DateTimeFormat.LongDate )
@@ -69,7 +72,7 @@ If you type **10/11/2014** into a text-input control named **Startdate**, and th
     > [!NOTE]
     > You can use several options with **DateTimeFormat** compared to **LongDateTime**. To display a list of options, type the parameter followed by an exclamation sign (**!**) in the formula bar.
 
-- Converting a date from a string in the French locale and showing the result as a long date.  In this case, the months and day of the month are interpreted differently from English.
+- Convert date from a string in the French locale and show the result as a long date. In this example, the months and day of the month are interpreted differently from English.
 
     ```powerapps-dot
     Text( DateValue( Startdate.Text, "fr" ), DateTimeFormat.LongDate )
@@ -79,7 +82,7 @@ If you type **10/11/2014** into a text-input control named **Startdate**, and th
 
 If you typed **October 20, 2014** instead:
 
-- Converting a date from a string in the user's locale and calculating the difference between two days, in days
+- Convert a date from a string in the user's locale and calculate the difference between two days, in days
 
     ```powerapps-dot
     DateDiff( DateValue( Startdate.Text ), Today() )
@@ -89,9 +92,9 @@ If you typed **October 20, 2014** instead:
 
 ### DateTimeValue
 
-If you typed **10/11/2014 1:50:24.765 PM** into a text-input control named **Start**, and then set the [Text](../controls/properties-core.md) property of a label to these formula:
+If you typed **10/11/2014 1:50:24.765 PM** into a text-input control named **Start**, and then set the [Text](../controls/properties-core.md) property of a label to the following formula:
 
-- Converting both a date and time string in the current locale. 
+- Convert both a date and time string in the current locale.
  
     ```powerapps-dot
     Text( DateTimeValue( Start.Text ), DateTimeFormat.LongDateTime )
@@ -102,7 +105,7 @@ If you typed **10/11/2014 1:50:24.765 PM** into a text-input control named **Sta
   > [!NOTE]
   > You can use several options with **DateTimeFormat** compared to **LongDateTime**. To display a list of options, type the parameter followed by an exclamation sign (**!**) in the formula bar.
 
-- Converting both a date and time string in the French locale.  Note that the month and day of the month are interpreted differently.
+- Convert both a date and time string in the French locale. Month and day of the month are interpreted differently.
 
     ```powerapps-dot
     Text( DateTimeValue( Start.Text, "fr"), DateTimeFormat.LongDateTime )
@@ -110,8 +113,7 @@ If you typed **10/11/2014 1:50:24.765 PM** into a text-input control named **Sta
   
     Device set to **en** locale shows the label as **Monday, November 10, 2014 1:50:24 PM**.
 
-
-- Converting both a date and time string in the user's locale, and displaying the result with a fractional second.
+- Convert both a date and time string in the user's locale, and display the result with a fractional second.
 
     ```powerapps-dot
     Text( DateTimeValue( Start.Text ), "dddd, mmmm dd, yyyy hh:mm:ss.fff AM/PM" )
