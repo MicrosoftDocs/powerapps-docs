@@ -26,7 +26,7 @@ Use the Power Apps mobile app to run your custom model-driven apps on your phone
 
 It's easy to get around in the Power Apps mobile app. The following illustration shows the primary navigation elements on the Home screen. 
 
-![Navigation controls, expanded view](media/pa_mobile_main_nav.png "Navigation controls, expanded view")
+![Navigation controls, expanded view](media/pa_mobile_main_nav_android.png "Navigation controls, expanded view")
 
 
 Legend:
