@@ -48,7 +48,7 @@ The return value of **Patch** is the record that you modified or created.  If yo
 Note however that the return value of Patch does not provide a value for fields of a related entity.  
 * For example, using
 ```powerapps-dot 
-'Set(MyAccount, Patch(Accounts, First(Account), 'Account Name': "Ben");
+Set(MyAccount, Patch(Accounts, First(Account), 'Account Name': "Ben");
 ```
 then 
 ```powerapps-dot
