@@ -34,10 +34,8 @@ Legend:
 1. **Site map**: Open the menu move between apps, get to your favorite and recently used records, access settings and more.
 2. **Search**: Search for app records in Common Data Service.
 3. **Quick Create**: Create a new record and quickly enter almost any type of information into the system.
-4. **Select**: Select multiple records from the current view.
-5. **Sort**: Sort records.
-6. **Search**: Search for app records in Common Data Service.
-7. **More**: Access more commands.
+4. **Global commands**: Access global commands customized by your admin.
+5. **More**: Access more commands for the record such as sort, search, delete, refresh and more.
 
 
 ### Site map screen
