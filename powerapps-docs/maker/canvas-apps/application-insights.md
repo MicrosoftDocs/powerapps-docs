@@ -1,3 +1,20 @@
+---
+title: Analyze app telemetry using Application Insights | Microsoft Docs
+description: How to analyze app telemetry using Application Insights
+author: tapanm-msft
+manager: kvivek
+ms.service: powerapps
+ms.topic: conceptual
+ms.custom: canvas
+ms.reviewer: tapanm
+ms.date: 03/17/2020
+ms.author: aheaney
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
+---
+
 # Analyze app telemetry using Application Insights
 
 You can connect your app with [Application Insights](https://docs.microsoft.com/azure/azure-monitor/app/app-insights-overview), a feature of [Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/overview). Application Insights is an extensible Application Performance Management (APM) service for developers and DevOps professionals.
@@ -5,25 +22,24 @@ You can connect your app with [Application Insights](https://docs.microsoft.com/
 With your app connected to Applications Insights, you can collect
 information to help you drive better business decisions and improve the quality of your apps.
 
-In this quickstart, you'll instrument a canvas app called Kudos. This helps you explore, discover telemetry concepts and apply them to your own canvas
+In this quickstart, you'll instrument a canvas app called Kudos. This helps you explore, discover telemetry concepts, and apply them to your own canvas
 apps. The sample Kudos app is part of a suite of employee engagement apps
 available for download from [Employee Experience Starter
 Kit](https://powerapps.microsoft.com/blog/powerapps-employee-experience-starter-kit).
 
 ## Prerequisites
 
-- You must have access to [Azure Portal](https://portal.azure.com).
+- You must have access to [Azure portal](https://portal.azure.com).
 - You must have the permissions to [create Azure resources](https://docs.microsoft.com/azure/role-based-access-control/quickstart-assign-role-user-portal).
 
 ### Optional
 
 - Download and install Kudos app from [Employee Experience Starter
-Kit](https://powerapps.microsoft.com/blog/powerapps-employee-experience-starter-kit).
-- You can also use an existing app.
+Kit](https://powerapps.microsoft.com/blog/powerapps-employee-experience-starter-kit). You can also use an existing app instead.
 
 ## Create an Application Insights resource
 
-Before you can send telemetry for an app, you will need to create an Azure
+Before you can send telemetry for an app, you'll need to create an Azure
 Application Insights resource to store the events.
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
@@ -34,7 +50,7 @@ Application Insights resource to store the events.
 
 1. Create an Application Insights resource:
 
-    ![Add a Azure Application Insights resource](./media/application-insights/azureappinsights-add.png)
+    ![Add an Azure Application Insights resource](./media/application-insights/azureappinsights-add.png)
 
 1. Enter the appropriate values and select **Review + create**. For more details, read [Create an Application Insights resource](https://docs.microsoft.com/azure/azure-monitor/app/create-new-resource). 
 
@@ -102,7 +118,7 @@ app in Power Apps Studio.
 > Some of the additional Application Insights features you can use are:  
 > - [**Funnels**](https://docs.microsoft.com/azure/azure-monitor/app/usage-funnels)
 > - [**Cohorts**](https://docs.microsoft.com/azure/azure-monitor/app/usage-cohorts)
-> - [**Impact analysis**](https://docs.microsoft.com/en-us/azure/azure-monitor/app/usage-impact)
+> - [**Impact analysis**](https://docs.microsoft.com/azure/azure-monitor/app/usage-impact)
 > - [**Retention analysis**](https://docs.microsoft.com/azure/azure-monitor/app/usage-retention)
 > - [**Usage flows**](https://docs.microsoft.com/azure/azure-monitor/app/usage-flows)
 
@@ -157,7 +173,7 @@ You'll now update your app and create a new component to collect feedback on eac
 
 1. Enter property *Description*.
 
-1. Select **Property type** a **Input** and **Data type** as **Screen**:
+1. Select **Property type** as **Input** and **Data type** as **Screen**:
 
     ![Custom property](./media/application-insights/custom-input-property.png)
 
@@ -170,7 +186,7 @@ You'll now update your app and create a new component to collect feedback on eac
 
 1. Select icons, select **More actions** (**...**) and then select **Rename** to rename the icons with a meaningful names, such as *FrownIcon* and *SmileIcon*.
 
-1. Select the *FrownIcon*, select the **OnSelect** property and then enter the following expression in the formula bar:
+1. Select the *FrownIcon*, select the **OnSelect** property, and then enter the following expression in the formula bar:
 
     ```
     Trace(
@@ -191,7 +207,7 @@ You'll now update your app and create a new component to collect feedback on eac
     > [!NOTE]
     > The formula expression sends *UserName*, *UserEmail*, *Screen* and the *Feedback* (with the value *-1*) to Application Insights.
 
-1. Select the *SmileIcon*, select the **OnSelect** property and then enter the following expression in the formula bar:
+1. Select the *SmileIcon*, select the **OnSelect** property, and then enter the following expression in the formula bar:
     
     ```
     Trace(
@@ -223,9 +239,9 @@ You'll now update your app and create a new component to collect feedback on eac
 
     ![Play published app](./media/application-insights/play-published-app.png)
 
-## Analyze the information in Application Insights
+## Analyze data in Application Insights
 
-You can now begin to analyze the information you sent using the [Trace](#create-custom-trace-events) function from your application in App Insights.
+You can now begin to analyze the data you sent using the [Trace](#create-custom-trace-events) function from your application in App Insights.
 
 1. Sign in to the [Azure portal](https://portal.azure.com/) and open the Application Insights resource you created [earlier](#create-an-application-insights-resource):
 
@@ -247,96 +263,83 @@ You can now begin to analyze the information you sent using the [Trace](#create-
 
 1. Select a row in the results and expand the *custom dimensions* field. 
 
-    The values for **Screen**, **UserName**, **UserEmail** and **FeedbackValue** for the **OnSelect** event of the smile or frown icon in your component have been recorded. <br>
+    The values for **Screen**, **UserName**, **UserEmail**, and **FeedbackValue** for the **OnSelect** event of the smile or frown icon in your component have been recorded. <br>
     There are also some additional values recorded for each event sent to
-    Application Insights; such as the **AppId**, **AppName** and **AppSessionId**.
+    Application Insights; such as the **appId**, **appName** and **appSessionId**.
 
     ![Expand custom dimensions](./media/application-insights/expand-custom-dimensions.png)
 
-1.  Using the below query, you can extend the properties of the JSON custom
-    dimensions and present them columns in the results view.
+1. With the following example query, you can extend the properties of the JSON custom dimensions and project the columns in the results view.
 
-    Log queries are extremely powerful, and you can use them to join multiple
-    tables, aggregate large amounts of data and perform complex operations. You
-    can learn more about Log
-    queries [here](https://docs.microsoft.com/en-us/azure/azure-monitor/log-query/log-query-overview). 
+    ```powerappsfl
+    traces
+        | extend customdims = parse_json(customDimensions)
+        | where message == "App Feedback"
+        | project timestamp
+            , message
+            , AppName = customdims.['ms-appName']
+            , AppId = customdims.['ms-appId']
+            , FeedbackFrom = customdims.UserEmail
+            , Screen = customdims.Screen
+            , FeedbackValue = customdims.FeedbackValue
+        | order by timestamp desc
+    ```
 
-traces
+    ![Extend customDimensions query](./media/application-insights/custom-dimensions-extend-query.png)
 
-\| extend customdims = parse_json(customDimensions)
+    > [!TIP]
+    > *Log queries* are extremely powerful. You can use them to join multiple
+    tables, aggregate large amounts of data and perform complex operations. For more information, read [Log
+    queries](https://docs.microsoft.com/azure/azure-monitor/log-query/log-query-overview).
 
-\| where message == "App Feedback"
+## Export data to Power BI
 
-\| project timestamp
+You can export your Application Insights data and query results to Power BI for analysis and data presentation.
 
-, message
+1. Sign in to the [Azure portal](https://portal.azure.com/) and open the Application Insights resource you created [earlier](#create-an-application-insights-resource):
 
-, AppName = customdims.['ms-appName']
+1. Select **Logs** under **Monitoring** from left navigation pane:
 
-, AppId = customdims.['ms-appId']
+1. From the log analytics query window, select **Export** drop down menu.
 
-, FeedbackFrom = customdims.UserEmail
+1. Select **Export to Power BI (M query)** option. This will download a Power BI query file to your machine:
 
-, Screen = customdims.Screen
+    ![Export Power BI query](./media/application-insights/export-powerbi-query.png)
 
-, FeedbackValue = customdims.FeedbackValue
+1. Open the downloaded file in a text editor and copy the query to clipboard.
 
-\| order by timestamp desc
+1. Open Power BI.
 
-![A screenshot of a social media post Description automatically generated](./media/application-insights/c489903a35fe02d39f1b8467abf1e1af.png)
+1. Select **Get Data** drop-down menu in **Home** ribbon and then select  **Blank Query**:
 
-Export the information to Power BI
+    ![Power BI blank query](./media/application-insights/powerbi-blank-query.png)
 
-You can also export your Application Insights data and query results to Power BI
-for further analysis and data presentation to stakeholders.
+1. In the query window, select **Advanced Editor**. Paste the query from step 5 into the window, select **Done**, and then select **Close & Apply**:
 
-1.  From the log analytics query window, select export.
+    ![Power BI advance query](./media/application-insights/powerbi-advance-query.png)
 
-2.  Select "Export to Power BI (M query)" option. This download a Power BI query
-    file to your machine. Open the file and copy the query.
+1. You can also create charts and visualizations in Power BI to represent feedback received in your app. And make data-based decisions and actions.
 
-![A screenshot of a social media post Description automatically generated](./media/application-insights/fb45b10cf5ed2b4ec683ac9aa2c7803a.png)
+    ![Charts and visualizations](./media/application-insights/powerbi-feedback.png)
 
-1.  Open Power BI.
+## Default event context and dimensions
 
-2.  Select "Get Data" and "Blank Query" menu option.
-
-![A screenshot of a cell phone Description automatically generated](./media/application-insights/ac6f1be345b6bbbc5cbad7002cc6f0f0.png)
-
-1.  In the query window, select "Advanced editor". Paste the query from step 2
-    into the window and select "Done" followed by "Close & Apply".
-
-![A screenshot of a social media post Description automatically generated](./media/application-insights/5c3bc2f7be5ad75cfee2bb8f31f6999e.png)
-
-1.  With my data, I can create charts and visualizations in Power BI to
-    represent feedback received in my app, and make data-based decisions and
-    actions.
-
-![](./media/application-insights/c5743349347f61ad5215440e625453ad.png)
-
-Default event context and dimensions
-
-In order to track what a user does over time, Application Insights needs an ID
+To track what a user does over time, Application Insights needs an ID
 for each user or session. The following IDs are included in every trace or
 screen view event sent.
 
 | Event property | Represents                                                 |
-|----------------|------------------------------------------------------------|
-| User_Id        | The AAD user object id of the end user of the application. |
-| Session_Id     | The Power Apps player session id.                          |
+|-|--|
+| User_Id | The AAD user object ID of the end user of the application. |
+| Session_Id | The Power Apps player session ID. |
 
-In addition to these properties, a set of default dimensions are also added to
-the customDimensions property on each event. These can be used to identify the
-application and application sessions the events occurred in. If you log addition
-custom data using the trace function, they will also appear in the custom
-dimensions.
+A set of default dimensions is also added to the *customDimensions* property on each event. These dimensions can be used to identify the application and application sessions the events occurred in. If you log addition custom data using the trace function, they'll also appear in the custom dimensions.
 
 | Dimension Name  | Represents                                            |
 |-----------------|-------------------------------------------------------|
-| ms-appId        | The Application Id of the app that sent the event     |
+| ms-appId        | The Application ID of the app that sent the event     |
 | ms-appName      | The Application name of the app that sent the event   |
-| ms-tenantId     | The Tenant Id related to the app that sent the event. |
+| ms-tenantId     | The Tenant ID related to the app that sent the event. |
 | ms-isTest       | If the event was sent during the execution of a test. |
-| ms-appSessionId | The application session Id.                           |
+| ms-appSessionId | The application session ID.                           |
 
- 

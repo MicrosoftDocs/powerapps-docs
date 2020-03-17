@@ -879,6 +879,8 @@
       href: ./canvas-apps/cognitive-services-api.md
     - name: Transform your InfoPath forms to Power Apps
       href: ./canvas-apps/transform-infopath.md
+    - name: Analyze app telemetry using Application Insights
+      href: ./canvas-apps/application-insights.md
   - name: For developers
     items:
     - name: Canvas apps for enterprise developers, partners, and ISVs
