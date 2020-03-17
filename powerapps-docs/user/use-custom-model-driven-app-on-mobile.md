@@ -67,6 +67,7 @@ Use the **Recent** records list to pin favorite records.
 
 3. To view the newly pinned records, select ![Go back icon](media/mobile_go_back_icon.png "Go back icon") > **Pinned** ![Pinned favorites icon](media/mobile_pinned_favs_icon.png "Pinned favorites icon")
 
+
    > [!div class="mx-imgBorder"]
    > ![Pin record to favorites](media/pin_favs.gif "Pin record to favorites").
 
