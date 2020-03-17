@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: sample
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 03/12/2020
+ms.date: 03/17/2020
 ms.author: mabolan
 search.audienceType: 
   - maker
@@ -235,117 +235,117 @@ This app allows you to record a user's location and store it in your SharePoint 
 
 To enable this functionality, follow these steps:
 
-  1. Search for the **btnDateRange** control
-  1. Open the **OnSelect** property of the **btnDateRante** control in the formula bar.
-  1. Copy and paste the following snippet in the formula bar for **OnSelect** property:
+1. Search for the **btnDateRange** control
+1. Open the **OnSelect** property of the **btnDateRante** control in the formula bar.
+1. Copy and paste the following snippet in the formula bar for **OnSelect** property:
 
-> [!NOTE]
-> This code snippet is intended to work with versions of the solution that are older than 2020.03.16.
+    > [!NOTE]
+    > The following snippet is intended to work with versions of the solution that are older than 2020.03.16.
 
 
-  ```
-    UpdateContext({locSaveDates: true});
-// Store the output properties of the calendar in static variables and collections.
-ClearCollect(submittedDates,Sort(Filter(selectedDates,ComponentId=CalendarComponent.Id),Date,Ascending));
-Set(varStartDate,First(submittedDates).Date);
-Set(varEndDate,First(Sort(submittedDates,Date,Descending)).Date);
-// Create a new record for work status for each date selected in the date range.
-ForAll(
-    Filter(
-        RenameColumns(submittedDates,"Date","DisplayDate"),
-        ComponentId=CalendarComponent.Id,
-        !(DisplayDate in colDates.Date)
-    ),
-    Patch('CI_Employee Status',Defaults('CI_Employee Status'),
-        {
-            Title: varUser.userPrincipalName,
-            Date: DisplayDate,
-            Notes: "",
-            PresenceStatus: LookUp(colWorkStatus,Value=WorkStatusComponent.Selected.Value)
-            
-            // To implement location, add a comma to the line above and uncomment the lines below for latitude and longitude.
-            // Latitude: Text(Location.Latitude),
-            // Longitude: Text(Location.Longitude)
-        }
-    )
-);
-    // Update existing dates with the new status.
+    ```
+        UpdateContext({locSaveDates: true});
+    // Store the output properties of the calendar in static variables and collections.
+    ClearCollect(submittedDates,Sort(Filter(selectedDates,ComponentId=CalendarComponent.Id),Date,Ascending));
+    Set(varStartDate,First(submittedDates).Date);
+    Set(varEndDate,First(Sort(submittedDates,Date,Descending)).Date);
+    // Create a new record for work status for each date selected in the date range.
     ForAll(
-        AddColumns(
-            Filter(
-                RenameColumns(submittedDates,"Date","DisplayDate"),
-                ComponentId=CalendarComponent.Id,
-                DisplayDate in colDates.Date
-            ),
-            
-            // Get the current record for each existing date.
-            "LookUpId",LookUp(RenameColumns(colDates,"ID","DateId"),And(Title=varUser.userPrincipalName,Date=DisplayDate)).DateId
+        Filter(
+            RenameColumns(submittedDates,"Date","DisplayDate"),
+            ComponentId=CalendarComponent.Id,
+            !(DisplayDate in colDates.Date)
         ),
-        Patch('CI_Employee Status',LookUp('CI_Employee Status',ID=LookUpId),
+        Patch('CI_Employee Status',Defaults('CI_Employee Status'),
             {
+                Title: varUser.userPrincipalName,
+                Date: DisplayDate,
+                Notes: "",
                 PresenceStatus: LookUp(colWorkStatus,Value=WorkStatusComponent.Selected.Value)
+                
+                // To implement location, add a comma to the line above and uncomment the lines below for latitude and longitude.
+                // Latitude: Text(Location.Latitude),
+                // Longitude: Text(Location.Longitude)
             }
         )
     );
-    If(
-        IsEmpty(Errors('CI_Employee Status')),
-        
-        // Update the list of work status for the logged-in user.
-        ClearCollect(colDates,Filter('CI_Employee Status',Title=varUser.userPrincipalName));
-        // Send an email receipt to the logged-in user.
-        UpdateContext(
-            {
-                locReceiptSuccess: 
-                Office365Outlook.SendEmailV2(
-                    // To: send an email to oneself
-                    varUser.mail,
-                    // Subject
-                    Proper(WorkStatusComponent.Selected.Value) & ": " & varStartDate & If(varStartDate<>varEndDate," - " & varEndDate),
-                    // Body
-                    WorkStatusComponent.Selected.DateRangeReceipt & ": " &
-                    // Create a bulleted list of dates
-                    "<ul>" & 
-                        Concat(submittedDates,"<li>" & Date & Char(10)) &
-                    "</ul>"
-                )
-            }
+        // Update existing dates with the new status.
+        ForAll(
+            AddColumns(
+                Filter(
+                    RenameColumns(submittedDates,"Date","DisplayDate"),
+                    ComponentId=CalendarComponent.Id,
+                    DisplayDate in colDates.Date
+                ),
+                
+                // Get the current record for each existing date.
+                "LookUpId",LookUp(RenameColumns(colDates,"ID","DateId"),And(Title=varUser.userPrincipalName,Date=DisplayDate)).DateId
+            ),
+            Patch('CI_Employee Status',LookUp('CI_Employee Status',ID=LookUpId),
+                {
+                    PresenceStatus: LookUp(colWorkStatus,Value=WorkStatusComponent.Selected.Value)
+                }
+            )
         );
         If(
-            locReceiptSuccess,
-            Notify("You successfully submitted your work status. An email has been sent to you with a summary.",NotificationType.Success,3000),
-            Notify("There was an error sending an email summary, but you successfully submitted your work status.",NotificationType.Success,3000);
+            IsEmpty(Errors('CI_Employee Status')),
+            
+            // Update the list of work status for the logged-in user.
+            ClearCollect(colDates,Filter('CI_Employee Status',Title=varUser.userPrincipalName));
+            // Send an email receipt to the logged-in user.
+            UpdateContext(
+                {
+                    locReceiptSuccess: 
+                    Office365Outlook.SendEmailV2(
+                        // To: send an email to oneself
+                        varUser.mail,
+                        // Subject
+                        Proper(WorkStatusComponent.Selected.Value) & ": " & varStartDate & If(varStartDate<>varEndDate," - " & varEndDate),
+                        // Body
+                        WorkStatusComponent.Selected.DateRangeReceipt & ": " &
+                        // Create a bulleted list of dates
+                        "<ul>" & 
+                            Concat(submittedDates,"<li>" & Date & Char(10)) &
+                        "</ul>"
+                    )
+                }
+            );
+            If(
+                locReceiptSuccess,
+                Notify("You successfully submitted your work status. An email has been sent to you with a summary.",NotificationType.Success,3000),
+                Notify("There was an error sending an email summary, but you successfully submitted your work status.",NotificationType.Success,3000);
+            );
+            
+            Navigate('Share to Team Screen',LookUp(colStyles,Key="navigation_transition").Value),
+            
+            // Case: Error submitting work status
+            Notify(varString.WorkStatusError,NotificationType.Warning)
         );
-        
-        Navigate('Share to Team Screen',LookUp(colStyles,Key="navigation_transition").Value),
-        
-        // Case: Error submitting work status
-        Notify(varString.WorkStatusError,NotificationType.Warning)
-    );
-    UpdateContext({locSaveDates: false})
-```
+        UpdateContext({locSaveDates: false})
+    ```
 
 ### Optional: Add additional work status
-If you want to add more work statuses beyond "work from home" and "out of office" you
-can do that by completing the following steps. To begin, you need to update your SharePoint site.
 
-1. Go back to your SharePoint site and select **Site contents**
-1. Select **CI_Employee Status**
-1. If the **PresenceStatus** column is not present, start by selecting **Add column**
-1. Select **Show/hide columns**
+If you want to add more work statuses beyond *work from home* and *out of office*, you can do that by completing the following steps. To begin, you need to update your SharePoint site.
+
+1. Go back to your SharePoint site and select **Site contents**.
+1. Select **CI_Employee Status**.
+1. If the **PresenceStatus** column is not present, start by selecting **Add column**.
+1. Select **Show/hide columns**.
 
     ![Show/hide columns](media/sample-crisis-communication-app/36-hide-show-columns.png)
 
-1. Check **PresenceStatus**
-1. Select **Apply**
-1. You now want to edit the **PresenceStatus** column, start by selecting the column
+1. Check **PresenceStatus**.
+1. Select **Apply**.
+1. You now want to edit the **PresenceStatus** column, start by selecting the column:
 
     ![Show presence](media/sample-crisis-communication-app/37-show-presence.png)
 
-1. Then select **Column settings**, **Edit**
+1. Then select **Column settings**, **Edit**:
 
     ![Show presence](media/sample-crisis-communication-app/38-edit-column.png)
 
-1. Add your additional work statuses in the **Choices** field
+1. Add your additional work statuses in the **Choices** field.
 
 > [!NOTE]
 > Please record the name of your new choices. You will need to use them in subsequent steps.
@@ -353,28 +353,28 @@ can do that by completing the following steps. To begin, you need to update your
 Now you need to make a few adjustments to the app itself to show your new work status.
 
 1. Open the app in the canvas studio.
-1. Select the **Work Status Screen**
-1. Set the formula bar to the **OnVisible** function
+1. Select the **Work Status Screen**.
+1. Set the formula bar to the **OnVisible** function:
 
     ![Show presence](media/sample-crisis-communication-app/39-onvisible-for-screen.png)
 
-1. Edit the following template and replace the values with your own.
+1. Edit the following template and replace the values with your own:
 
-```
-    ,"<Name of option in SharePoint list; case sensitive>",
-    Table(
-        {
-            Icon: <Image file>,
-            DateRangeQuestion: "Select the dates you will be <Name of status>.",
-            DateRangeReceipt: "You are currently <Name of status>.",
-            ShareToTeamEmail: "I will be <Name of status> on these dates",
-            AutoReplyMessage: "I will be <Name of status> on these dates"
-        }
-    )
-```
+    ```
+        ,"<Name of option in SharePoint list; case sensitive>",
+        Table(
+            {
+                Icon: <Image file>,
+                DateRangeQuestion: "Select the dates you will be <Name of status>.",
+                DateRangeReceipt: "You are currently <Name of status>.",
+                ShareToTeamEmail: "I will be <Name of status> on these dates",
+                AutoReplyMessage: "I will be <Name of status> on these dates"
+            }
+        )
+    ```
+
 1. Replace the `/* TEMPLATE FOR ADDITIONAL WORK STATUS OPTIONS */` comment with the template.
-1. Finally, **Save** and **Publish** the app.
-
+1. **Save** and **Publish** the app.
 
 ### Update the request help Flow
 
