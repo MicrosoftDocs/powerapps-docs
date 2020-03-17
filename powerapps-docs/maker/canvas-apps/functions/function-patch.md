@@ -45,6 +45,21 @@ Then specify one or more change records, each of which contains new property val
 
 The return value of **Patch** is the record that you modified or created.  If you created a record, the return value may include properties that the data source generated automatically.
 
+Note however that the return value of Patch does not provide a value for fields of a related entity.  
+* For example, using
+```powerapps-dot 
+'Set(MyAccount, Patch(Accounts, First(Account), 'Account Name': "Ben");
+```
+then 
+```powerapps-dot
+MyAccount.’Primary Contact’.’Full Name’
+```
+will not yield a full name.
+* To access fields of a related entity makers can use a separate lookup like this: 
+```powerapps-dot
+LookUp(Accounts, Account = MyAccount.Account).'Primary Contact'.'Full Name'
+```
+
 When you update a data source, one or more issues may arise. Use the **[Errors](function-errors.md)** function to identify and examine issues, as [Working with Data Sources](../working-with-data-sources.md) describes.
 
 Related functions include the **[Update](function-update-updateif.md)** function, which you can use to replace an entire record, and the **[Collect](function-clear-collect-clearcollect.md)** function, which you can use to create a record.  You can use the **[UpdateIf](function-update-updateif.md)** function to modify specific properties of multiple records based on a condition.
