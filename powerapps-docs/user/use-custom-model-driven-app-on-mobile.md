@@ -69,8 +69,8 @@ Use the **Recent** records list to pin favorite records.
 
 3. To view the newly pinned records, select ![Go back icon](media/mobile_go_back_icon.png "Go back icon") > **Pinned** ![Pinned favorites icon](media/mobile_pinned_favs_icon.png "Pinned favorites icon")
 
-> [!div class="mx-imgBorder"]
-> ![Pin record to favorites](media/pin_favs.gif "Pin record to favorites").
+  > [!div class="mx-imgBorder"]
+  > ![Pin record to favorites](media/pin_favs.gif "Pin record to favorites").
 
 #### Unpinn a record
 
@@ -78,8 +78,8 @@ Use the **Recent** records list to pin favorite records.
 
 2. Select the remove-pin icon ![Remove pin icon](media/pa_mobile_remove_pin_icon.png "Remove pin icon") next to a record to remove it from favorites (pinned records).
  
- > [!div class="mx-imgBorder"]
- > ![Unpin a record](media/unpin_favs.gif "Unpin a record").
+  > [!div class="mx-imgBorder"]
+  > ![Unpin a record](media/unpin_favs.gif "Unpin a record").
  
 
 ### Go back to Home
