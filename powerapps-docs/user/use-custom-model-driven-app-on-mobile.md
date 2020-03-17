@@ -74,12 +74,12 @@ Use the **Recent** records list to pin favorite records.
 
 #### Unpinn a record
 
- 1.  From the site map ![Site map icon](media/pa_mobile_sitemap_icon.png "Site map icon") select, **Pinned** ![Pinned favorites icon](media/mobile_pinned_favs_icon.png "Pinned favorites icon").
+1. From the site map ![Site map icon](media/pa_mobile_sitemap_icon.png "Site map icon") select, **Pinned** ![Pinned favorites icon](media/mobile_pinned_favs_icon.png "Pinned favorites icon").
 
- 2. Select the remove-pin icon ![Remove pin icon](media/pa_mobile_remove_pin_icon.png "Remove pin icon") next to a record to remove it from favorites (pinned records).
+2. Select the remove-pin icon ![Remove pin icon](media/pa_mobile_remove_pin_icon.png "Remove pin icon") next to a record to remove it from favorites (pinned records).
  
  > [!div class="mx-imgBorder"]
-> ![Unpin a record](media/unpin_favs.gif "Unpin a record").
+ > ![Unpin a record](media/unpin_favs.gif "Unpin a record").
  
 
 ### Go back to Home
