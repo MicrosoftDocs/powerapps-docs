@@ -42,7 +42,7 @@ Legend:
 
 From the Home sceen, select the site map ![Site map icon](media/pa_mobile_sitemap_icon.png "Site map icon") to accces entites, favorite or most-used records, other apps, and settings.
 
-![Site map screen](media/pa_mobile_sitemap.png "Site map screen")
+![Site map screen](media/pa_mobile_sitemap_android.png "Site map screen")
 
 Legend
 
