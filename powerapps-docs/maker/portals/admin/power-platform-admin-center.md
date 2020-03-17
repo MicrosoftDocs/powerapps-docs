@@ -11,11 +11,11 @@ ms.author: nenandw
 ms.reviewer: tapanm
 ---
 
-## Manage portals from Power Platform admin center
+# Manage portals from Power Platform admin center
 
 You can now manage portals in the Power Platform admin center.
 
-### Manage all portals for a tenant
+## Manage all portals for a tenant
 
 To see a list of all portals for your tenant:
 
@@ -23,9 +23,9 @@ To see a list of all portals for your tenant:
 
 1. Select **Resources** and then **Portals** from the left-side menu.
 
-    ![Portals option on Power Portals admin center](..\media\portals-on-ppac.png)
+    ![Portals option on Power Portals admin center](../media/portals-on-ppac.png)
 
-### Environment all portals for an environment
+## Environment all portals for an environment
 
 Follow these steps to see a list of all portals for your environment.
 
@@ -37,9 +37,9 @@ Follow these steps to see a list of all portals for your environment.
 
 You'll see a list of Portals installed in the selected environment.
 
-![Environments on Power Platform admin center](..\media\environments-on-ppac.png)
+![Environments on Power Platform admin center](../media/environments-on-ppac.png)
 
-#### Portal types
+### Portal types
 
 The following table explains different types of portals that you can see listed on admin center with descriptions:
 
@@ -50,7 +50,7 @@ The following table explains different types of portals that you can see listed 
 | Production (add-on) | Production portal based on add-on license.                                          |
 | Trial (add-on)      | Trial portal based on add-on license.                                               |
 
-#### Portal status
+### Portal status
 
 A portal can be in *Configured*, *Suspended*, or *Not-configured* status. The following table describes each status:
 
