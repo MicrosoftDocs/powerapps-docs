@@ -1235,6 +1235,8 @@
           href: ./portals/admin/portal-lifecycle.md
         - name: Upgrade a portal
           href: ./portals/admin/upgrade-portal.md
+        - name: Cookies used by portal
+          href: ./portals/admin/portal-cookies.md
     - name: Advanced portal configuration
       items:
         - name: Overview

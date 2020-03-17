@@ -36,7 +36,8 @@ The app designer refers to existing metadata in the default solution. You can us
 ## App designer layout  
  The app designer has two main areas. On the left side is the canvas where you add app components.  
   
-![App designer canvas](../model-driven-apps/media/app-designer-canvas-pane.png)
+ > [!div class="mx-imgBorder"]
+ > ![App designer canvas](../model-driven-apps/media/app-designer-canvas-pane.png "App designer canvas")
 
  On the right side are tabs that you'll use to select components and set component properties.  
  
@@ -82,7 +83,8 @@ The app designer refers to existing metadata in the default solution. You can us
   
      All entities the dashboard uses are also added to the **Entity View** area. For example, if you add the Customer Service Manager dashboard, the Case, Entitlement, and Queue Item entities are added to the Entity View area. For each entity, tiles for its assets are also added. You can use these tiles to add forms, views, and charts. More information: [Add or edit app components in the Power Apps app designer](add-edit-app-components.md#bkmk_AddEntityAssets)   
   
-    ![Add entity to the app designer canvas](../model-driven-apps/media/add-entity-app-designer-canvas.png "Add an entity to the app designer canvas")  
+    > [!div class="mx-imgBorder"]
+    > ![Add entity to the app designer canvas](../model-driven-apps/media/add-entity-app-designer-canvas.png "Add an entity to the app designer canvas")  
   
 4.  If the dashboard you want doesn't exist in the default solution, create a dashboard by selecting **Create New** on the **Components** tab to the right of the canvas.  
   

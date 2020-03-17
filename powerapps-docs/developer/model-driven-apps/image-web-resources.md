@@ -2,7 +2,7 @@
 title: "Image web resources (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about using image web resources to make images available for use" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 03/11/2020
 ms.reviewer: ""
 ms.service: powerapps
 ms.topic: "article"
@@ -16,8 +16,6 @@ search.app:
   - D365CE
 ---
 # Image web resources
-
-<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/image-web-resources -->
 
 Use image web resources to make images available for use in Model-driven apps.  
 
@@ -42,6 +40,9 @@ There are 5 types of image web resources:
 - Background images that are used by CSS web resources.  
 
 Use Vector Format (SVG) web resources for any icon presented in the application. Vector images are defined as Scalable Vector Graphics (SVG) an XML-based vector image format. The advantage of vector images over other image web resources is that they scale. You can define one vector image and re-use it rather than provide multiple sizes of images. You will use these in with a new <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.IconVectorName> property to define the icon for a custom entity instead of the `IconLargeName`, `IconMediumName`, or `IconSmallName` properties.
+
+> [!NOTE]
+> Vector Format (SVG) web resources are treated like the [Script (JScript)](/powerapps/developer/model-driven-apps/script-jscript-web-resources) web resources, and carry the same security risks as Script (JScript) web resources because SVG files allow JScript embedding.
   
 <a name="BKMK_Limitations"></a>   
 ## Limitations of image web resources  
