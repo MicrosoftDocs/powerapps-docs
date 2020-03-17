@@ -67,12 +67,20 @@ Use the **Recent** records list to pin favorite records.
 
 2. On the **Recent** records screen, select the push-pin icon next to a record to add it to your favorites (pinned records).
 
-3. Go back to the **Pinned** record sceen to see the records that you pinned.
+3. To view the newly pinned records, select ![Go back icon](media/mobile_go_back_icon.png "Go back icon") > ![Pinned favorites icon](media/mobile_pinned_favs_icon.png "Pinned favorites icon")
 
 > [!div class="mx-imgBorder"]
 > ![Pin record to favorites](media/pin_favs.gif "Pin record to favorites").
 
- 3. Select the remove-pin icon ![Remove pin icon](media/pa_mobile_remove_pin_icon.png "Remove pin icon") next to a record to remove it from favorites (pinned records).
+#### Unpinn a record
+
+ 1.  From the site map ![Site map icon](media/pa_mobile_sitemap_icon.png "Site map icon") select, **Pinned** ![Pinned favorites icon](media/mobile_pinned_favs_icon.png "Pinned favorites icon").
+
+ 2. Select the remove-pin icon ![Remove pin icon](media/pa_mobile_remove_pin_icon.png "Remove pin icon") next to a record to remove it from favorites (pinned records).
+ 
+ > [!div class="mx-imgBorder"]
+> ![Unpin a record](media/unpin_favs.gif "Unpin a record").
+ 
 
 ### Go back to Home
 
