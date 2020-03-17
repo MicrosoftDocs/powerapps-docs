@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 10/21/2015
+ms.date: 03/16/2020
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -17,52 +17,43 @@ search.app:
 # Patch function in Power Apps
 Modifies or creates one or more [records](../working-with-tables.md#records) in a [data source](../working-with-data-sources.md), or merges records outside of a data source.
 
-Use the **Patch** function to modify records in complex situations, such as when you perform updates that require no user interaction or use forms that span multiple screens.
+Use the **Patch** function to modify records in complex situations. Such as, when you do updates that require no user interaction or use forms that span multiple screens.
 
-In less complex situations, you can use the **Edit form** control to update records in a data source more easily. When you add an **Edit form** control, you provide users with a form to fill in and then save the changes to a data source. For more information, see [Understand data forms](../working-with-forms.md).
+To update records in a data source more easily for simple changes, use the **Edit form** control instead. When you add an **Edit form** control, you provide users with a form to fill in and then save the changes to a data source. For more information, see [Understand data forms](../working-with-forms.md).
 
 ## Overview
 Use the **Patch** function to modify one or more records of a data source.  The values of specific [fields](../working-with-tables.md#elements-of-a-table) are modified without affecting other properties. For example, this formula changes the phone number for a customer named Contoso:
 
-`Patch( Customers, First( Filter( Customers, Name = "Contoso" ) ), { Phone: “1-212-555-1234” } )`
+`Patch( Customers, First( Filter( Customers, Name = "Contoso" ) ), { Phone: "1-212-555-1234" } )`
 
 Use **Patch** with the **[Defaults](function-defaults.md)** function to create records. Use this behavior to build a [single screen](../working-with-data-sources.md) for both creating and editing records. For example, this formula creates a record for a customer named Contoso:
 
-`Patch( Customers, Defaults( Customers ), { Name: “Contoso” } )`
+`Patch( Customers, Defaults( Customers ), { Name: "Contoso" } )`
 
 Even if you're not working with a data source, you can use **Patch** to merge two or more records. For example, this formula merges two records into one that identifies both the phone number and the location for Contoso:
 
-`Patch( { Name: "Contoso", Phone: “1-212-555-1234” }, { Name: "Contoso", Location: “Midtown”  } )`
+`Patch( { Name: "Contoso", Phone: "1-212-555-1234" }, { Name: "Contoso", Location: "Midtown"  } )`
 
 ## Description
 ### Modify or create a record in a data source
 To use this function with a data source, specify the data source, and then specify a base record:
 
-* To modify a record, the base record needs to have come from a data source.  The base record may have come through a gallery's **[Items](../controls/properties-core.md)** property, been placed in a [context variable](../working-with-variables.md#use-a-context-variable), or come through some other path. But you should be able to trace the base record back to the data source.  This is important as the record will include additional information to help find the record again for modification.  
+* To modify a record, the base record needs to have come from a data source.  The base record may have come through a gallery's **[Items](../controls/properties-core.md)** property, been placed in a [context variable](../working-with-variables.md#use-a-context-variable), or come through some other path. But, you can trace the base record back to the data source.  This is important as the record will include additional information to help find the record again for modification.  
 * To create a record, use the **[Defaults](function-defaults.md)** function to create a base record with default values.  
 
 Then specify one or more change records, each of which contains new property values that override property values in the base record. Change records are processed in order from the beginning of the argument list to the end, with later property values overriding earlier ones.
 
-The return value of **Patch** is the record that you modified or created.  If you created a record, the return value may include properties that the data source generated automatically.
+The return value of **Patch** is the record that you modified or created.  If you created a record, the return value may include properties that the data source generated automatically. However, the return value doesn't provide a value for fields of a related entity.  
 
-Note however that the return value of Patch does not provide a value for fields of a related entity.  
-* For example, using
-```powerapps-dot 
-Set(MyAccount, Patch(Accounts, First(Account), 'Account Name': "Ben");
-```
-then if you use:
-```powerapps-dot
-MyAccount.’Primary Contact’.’Full Name’
-```
-will not yield a full name.
-* To access fields of a related entity makers can use a separate lookup like this: 
+For example, you use `Set(MyAccount, Patch(Accounts, First(Account), 'Account Name': "Example name");` and then `MyAccount.'Primary Contact'.'Full Name'`. You can't yield a full name in this case. Instead, to access the fields of a related entity, use a separate lookup such as:
+
 ```powerapps-dot
 LookUp(Accounts, Account = MyAccount.Account).'Primary Contact'.'Full Name'
 ```
 
 When you update a data source, one or more issues may arise. Use the **[Errors](function-errors.md)** function to identify and examine issues, as [Working with Data Sources](../working-with-data-sources.md) describes.
 
-Related functions include the **[Update](function-update-updateif.md)** function, which you can use to replace an entire record, and the **[Collect](function-clear-collect-clearcollect.md)** function, which you can use to create a record.  You can use the **[UpdateIf](function-update-updateif.md)** function to modify specific properties of multiple records based on a condition.
+Related functions include the **[Update](function-update-updateif.md)** function to replace an entire record, and the **[Collect](function-clear-collect-clearcollect.md)** function to create a record.  Use the **[UpdateIf](function-update-updateif.md)** function to modify specific properties of multiple records based on a condition.
 
 ### Modify or create a set of records in a data source
 **Patch** can also be used to create or modify multiple records with a single call.
@@ -72,7 +63,7 @@ Instead of passing a single base record, a table of base records can be provided
 When using **Patch** in this manner, the return value is also a table with each record corresponding one-for-one with the base and change records.
 
 ### Merge records outside of a data source
-Specify two or more records that you want to merge. Records are processed in order from the beginning of the argument list to the end, with later property values overriding earlier ones.
+Specify two or more records that you want to merge. Records are processed in the order from the beginning of the argument list to the end, with later property values overriding earlier ones.
 
 **Patch** returns the merged record and doesn't modify its arguments or records in any data sources.
 
@@ -105,7 +96,7 @@ In these examples, you'll modify or create a record in a data source, named **Ic
 | Formula | Description | Result |
 | --- | --- | --- |
 | **Patch(&nbsp;IceCream,<br>First( Filter( IceCream, Flavor = "Chocolate" ) ), {&nbsp;Quantity:&nbsp;400&nbsp;} )** |Modifies a record in the **IceCream** data source:<ul><li> The **ID** column of the record to modify contains the value of **1**. (The **Chocolate** record has that ID.)</li><li>The value in the **Quantity** column changes to **400**. |{&nbsp;ID:&nbsp;1, Flavor:&nbsp;"Chocolate", Quantity:&nbsp;400 }<br><br>The **Chocolate** entry in the **IceCream** data source has been modified. |
-| **Patch( IceCream, Defaults(&nbsp;IceCream ), {&nbsp;Flavor:&nbsp;“Strawberry”&nbsp;}&nbsp;)** |Creates a record in the **IceCream** data source:<ul><li>The **ID** column contains the value **3**, which the data source generates automatically.</li><li>The **Quantity** column contains **0**, which is the default value for that column in the **IceCream** data source, as the **[Defaults](function-defaults.md)** function specifies.<li>The **Flavor** column contains the value of **Strawberry**.</li> |{ ID:&nbsp;3, Flavor:&nbsp;“Strawberry”, Quantity:&nbsp;0&nbsp;}<br><br>The **Strawberry** entry in the **IceCream** data source has been created. |
+| **Patch( IceCream, Defaults(&nbsp;IceCream ), {&nbsp;Flavor:&nbsp;"Strawberry"&nbsp;}&nbsp;)** |Creates a record in the **IceCream** data source:<ul><li>The **ID** column contains the value **3**, which the data source generates automatically.</li><li>The **Quantity** column contains **0**, which is the default value for that column in the **IceCream** data source, as the **[Defaults](function-defaults.md)** function specifies.<li>The **Flavor** column contains the value of **Strawberry**.</li> |{ ID:&nbsp;3, Flavor:&nbsp;"Strawberry", Quantity:&nbsp;0&nbsp;}<br><br>The **Strawberry** entry in the **IceCream** data source has been created. |
 
 After the previous formulas have been evaluated, the data source ends with these values:
 
