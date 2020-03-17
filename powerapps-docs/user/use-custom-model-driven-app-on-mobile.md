@@ -88,7 +88,7 @@ Use the **Recent** records list to pin favorite records.
 
 
 > [!div class="mx-imgBorder"]
-> ![Create a record](media/quickcreate.png "Create a record").
+> ![Create a record](media/quickcreate_mobile.png "Create a record").
 
 > [!NOTE]
 > -  To save and open the recrod that you  created, select ![More commands icon](media/pa_mobile_more_commands_icon.png "More commnads icon") and then select **Save and Open**.
