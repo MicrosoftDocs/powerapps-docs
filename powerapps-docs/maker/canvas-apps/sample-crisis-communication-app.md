@@ -226,7 +226,7 @@ connect it to your new data sources.
 
 1. **Save** and **Publish** the app.
 
-#### Optional: Enable location updates
+### Optional: Enable location updates
 
 This app allows you to record a user's location and store it in your SharePoint site whenever a user sets their status.  Your crisis management team can view this data in a Power BI report. 
 
@@ -239,34 +239,41 @@ To enable this functionality, follow these steps:
   1. Open the **OnSelect** property of the **btnDateRante** control in the formula bar.
   1. Copy and paste the following snippet in the formula bar for **OnSelect** property:
 
+> [!NOTE]
+> This code snippet is intended to work with versions of the solution that are older than 2020.03.16.
+
+
   ```
     UpdateContext({locSaveDates: true});
-    // Store the output properties of the calendar in static variables and collections.
-    Set(varStartDate,First(Sort(Filter(selectedDates,ComponentId=CalendarComponent.Id),Date,Ascending)).Date);
-    Set(varEndDate,First(Sort(Filter(selectedDates,ComponentId=CalendarComponent.Id),Date,Descending)).Date);
-    // Create a new record for work status for each date selected in the date range.
-    ForAll(
-        Filter(
-            RenameColumns(selectedDates,"Date","DisplayDate"),
-            ComponentId=CalendarComponent.Id,
-            !(DisplayDate in colDates.Date)
-        ),
-        Patch('CI_Employee Status',Defaults('CI_Employee Status'),
-            {
-                Title: varUser.userPrincipalName,
-                Date: DisplayDate,
-                Notes: "",
-                PresenceStatus: LookUp(colWorkStatus,Value=WorkStatusComponent.Selected.Value),
-                Latitude: Text(Location.Latitude),
-                Longitude: Text(Location.Longitude)
-            }
-        )
-    );
+// Store the output properties of the calendar in static variables and collections.
+ClearCollect(submittedDates,Sort(Filter(selectedDates,ComponentId=CalendarComponent.Id),Date,Ascending));
+Set(varStartDate,First(submittedDates).Date);
+Set(varEndDate,First(Sort(submittedDates,Date,Descending)).Date);
+// Create a new record for work status for each date selected in the date range.
+ForAll(
+    Filter(
+        RenameColumns(submittedDates,"Date","DisplayDate"),
+        ComponentId=CalendarComponent.Id,
+        !(DisplayDate in colDates.Date)
+    ),
+    Patch('CI_Employee Status',Defaults('CI_Employee Status'),
+        {
+            Title: varUser.userPrincipalName,
+            Date: DisplayDate,
+            Notes: "",
+            PresenceStatus: LookUp(colWorkStatus,Value=WorkStatusComponent.Selected.Value)
+            
+            // To implement location, add a comma to the line above and uncomment the lines below for latitude and longitude.
+            // Latitude: Text(Location.Latitude),
+            // Longitude: Text(Location.Longitude)
+        }
+    )
+);
     // Update existing dates with the new status.
     ForAll(
         AddColumns(
             Filter(
-                RenameColumns(selectedDates,"Date","DisplayDate"),
+                RenameColumns(submittedDates,"Date","DisplayDate"),
                 ComponentId=CalendarComponent.Id,
                 DisplayDate in colDates.Date
             ),
@@ -290,35 +297,84 @@ To enable this functionality, follow these steps:
             {
                 locReceiptSuccess: 
                 Office365Outlook.SendEmailV2(
+                    // To: send an email to oneself
                     varUser.mail,
-                    Proper(WorkStatusComponent.Selected.Value) & ": " & varStartDate & " - " & varEndDate,
-                    Switch(
-                        WorkStatusComponent.Selected.Value,
-                        "working from home",varString.WorkStatusMessageHome,
-                        "out of office",varString.WorkStatusMessageOutOfOffice
-                    ) & ": " &
+                    // Subject
+                    Proper(WorkStatusComponent.Selected.Value) & ": " & varStartDate & If(varStartDate<>varEndDate," - " & varEndDate),
+                    // Body
+                    WorkStatusComponent.Selected.DateRangeReceipt & ": " &
                     // Create a bulleted list of dates
                     "<ul>" & 
-                        Concat(Sort(Filter(selectedDates,ComponentId=CalendarComponent.Id),Date),"<li>" & Date & Char(10)) &
+                        Concat(submittedDates,"<li>" & Date & Char(10)) &
                     "</ul>"
                 )
             }
         );
         If(
             locReceiptSuccess,
-            Notify("You successfully submitted your work status. An email has been sent to you with a summary.",NotificationType.Success,5000),
-            Notify("There was an error sending an email summary, but you successfully submitted your work status.",NotificationType.Success,5000);
+            Notify("You successfully submitted your work status. An email has been sent to you with a summary.",NotificationType.Success,3000),
+            Notify("There was an error sending an email summary, but you successfully submitted your work status.",NotificationType.Success,3000);
         );
         
         Navigate('Share to Team Screen',LookUp(colStyles,Key="navigation_transition").Value),
         
-        Notify(
-            varString.WorkStatusError,
-            NotificationType.Warning
-        )
+        // Case: Error submitting work status
+        Notify(varString.WorkStatusError,NotificationType.Warning)
     );
     UpdateContext({locSaveDates: false})
 ```
+
+### Optional: Add additional work status
+If you want to add more work statuses beyond "work from home" and "out of office" you
+can do that by completing the following steps. To begin, you need to update your SharePoint site.
+
+1. Go back to your SharePoint site and select **Site contents**
+1. Select **CI_Employee Status**
+1. If the **PresenceStatus** column is not present, start by selecting **Add column**
+1. Select **Show/hide columns**
+
+    ![Show/hide columns](media/sample-crisis-communication-app/36-hide-show-columns.png)
+
+1. Check **PresenceStatus**
+1. Select **Apply**
+1. You now want to edit the **PresenceStatus** column, start by selecting the column
+
+    ![Show presence](media/sample-crisis-communication-app/37-show-presence.png)
+
+1. Then select **Column settings**, **Edit**
+
+    ![Show presence](media/sample-crisis-communication-app/38-edit-column.png)
+
+1. Add your additional work statuses in the **Choices** field
+
+> [!NOTE]
+> Please record the name of your new choices. You will need to use them in subsequent steps.
+
+Now you need to make a few adjustments to the app itself to show your new work status.
+
+1. Open the app in the canvas studio.
+1. Select the **Work Status Screen**
+1. Set the formula bar to the **OnVisible** function
+
+    ![Show presence](media/sample-crisis-communication-app/39-onvisible-for-screen.png)
+
+1. Edit the following template and replace the values with your own.
+
+```
+    ,"<Name of option in SharePoint list; case sensitive>",
+    Table(
+        {
+            Icon: <Image file>,
+            DateRangeQuestion: "Select the dates you will be <Name of status>.",
+            DateRangeReceipt: "You are currently <Name of status>.",
+            ShareToTeamEmail: "I will be <Name of status> on these dates",
+            AutoReplyMessage: "I will be <Name of status> on these dates"
+        }
+    )
+```
+1. Replace the `/* TEMPLATE FOR ADDITIONAL WORK STATUS OPTIONS */` comment with the template.
+1. Finally, **Save** and **Publish** the app.
+
 
 ### Update the request help Flow
 
