@@ -50,7 +50,7 @@ Note however that the return value of Patch does not provide a value for fields 
 ```powerapps-dot 
 Set(MyAccount, Patch(Accounts, First(Account), 'Account Name': "Ben");
 ```
-then 
+then if you use:
 ```powerapps-dot
 MyAccount.’Primary Contact’.’Full Name’
 ```
