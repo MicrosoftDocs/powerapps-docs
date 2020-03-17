@@ -80,7 +80,7 @@ Use the **Recent** records list to pin favorite records.
    > ![Unpin a record](media/unpin_favs.gif "Unpin a record").
  
 
-### Go back to Home
+### Go back 
 
 - To get back to the Home screen when you are in a record, select ![Back icon](media/pa_mobile_back_icon.png "Back icon").
 - At any point, press and hold ![Back icon](media/pa_mobile_back_icon.png "Back icon") to go back to the Home sceen. 
