@@ -104,7 +104,7 @@ Because only Common Data Service System Administrators are authorized to perform
   
 ```csharp  
   
-//Reference Azure AD authentication Library (ADAL)    
+//Reference Azure AD authentication Library (ADAL v2.29)    
 using Microsoft.IdentityModel.Clients.ActiveDirectory;  
    . . .  
     string yourAppClientID = "[app-associated-GUID]";   //Your AAD-registered AppId   
