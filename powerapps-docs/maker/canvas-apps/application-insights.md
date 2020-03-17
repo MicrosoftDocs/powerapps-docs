@@ -225,31 +225,33 @@ You'll now update your app and create a new component to collect feedback on eac
 
 ## Analyze the information in Application Insights
 
-You can now begin to analyze the information you sent using the Trace function
-from your application in App Insights.
+You can now begin to analyze the information you sent using the [Trace](#create-custom-trace-events) function from your application in App Insights.
 
-1.  Sign in to the [Azure portal](https://portal.azure.com/)
+1. Sign in to the [Azure portal](https://portal.azure.com/) and open the Application Insights resource you created [earlier](#create-an-application-insights-resource):
 
-2.  Select the App Insights resource you created earlier
+    ![Select application insights](./media/application-insights/select-app-insights.png)
 
-![A screenshot of a computer Description automatically generated](./media/application-insights/0ae9a50a8fc0b142da873c574d4d4a38.png)
+1. Select **Logs** under **Monitoring** from left navigation pane:
 
-1.  Select Logs in the left tree menu.
+    ![Select Logs](./media/application-insights/select-logs.png)
 
-![A screenshot of a social media post Description automatically generated](./media/application-insights/16cbc2b8fb2cfe3b75b133937e83ea1e.png)
+1. Enter the following query and select **Run**. The feedback received from your app is returned:
 
-1.  Type the below query and select Run. The feedback received from your app are
-    returned.
+    ```powerappsfl
+    traces
+    | where message == "App Feedback"
+    | order by timestamp
+    ```
 
-![A screenshot of a social media post Description automatically generated](./media/application-insights/9229bc871d9fe8f1c46f829d3fe67ab0.png)
+    ![View app feedback](./media/application-insights/view-app-feedback.png)
 
-1.  Select a row in the results and expand the custom dimensions field. The
-    values for Screen, UserName, UserEmail and FeedbackValue for the OnSelect
-    event of the smile or frown icon in your component have being recorded.
+1. Select a row in the results and expand the *custom dimensions* field. 
+
+    The values for **Screen**, **UserName**, **UserEmail** and **FeedbackValue** for the **OnSelect** event of the smile or frown icon in your component have been recorded. <br>
     There are also some additional values recorded for each event sent to
-    Application Insights, such as the AppId, AppName and AppSessionId.
+    Application Insights; such as the **AppId**, **AppName** and **AppSessionId**.
 
-![A screenshot of a social media post Description automatically generated](./media/application-insights/c52dd2ea4d94082ce1032376ea3e0399.png)
+    ![Expand custom dimensions](./media/application-insights/expand-custom-dimensions.png)
 
 1.  Using the below query, you can extend the properties of the JSON custom
     dimensions and present them columns in the results view.
