@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 02/13/2020
+ms.date: 03/10/2020
 ms.author: mduelae
 ms.custom: ""
 ms.reviewer: ""
@@ -58,7 +58,7 @@ The fastest way to add an activity is to use the shortcut on the nav bar and the
 
 ## Add an activity from within a record
 
-You can also open a record and then add an a ctivity to the record. 
+You can also open a record and then add an activity to the record. 
 
    > [!div class="mx-imgBorder"]
    > ![Shortcut to add an activity in Power Apps](media/add_new_activity_from_record.gif "Shortcut to add an activity in Power Apps") 
@@ -199,6 +199,10 @@ In the **Timeline** section, select ![More button ](media/MoreButton.png "More b
 Quickly filter activities, notes or posts in the timeline wall by record type or activity type and date using the filter pane. You can select multiple filters and filter options at the same time. You can filter and see activity due date, modified date, or by the status of the activity.
 
 - In the **Timeline** section, select **Open Filter Pane** and select how you want to filter the activities.
+
+ > [!Note]
+ > When you zoom out in the browser, the filter pane and the timeline records are displayed in two columns. 
+ > When the timeline is displayed on more than one column, the filter pane is displayed as a column alongside the timeline records. To learn more, see [Filter pane appears in two column mode](../maker/model-driven-apps/faqs-timeline-control.md#why-my-agents-see-the-filter-pane-even-when-the-expand-filter-pane-by-default-check-box-is-cleared). 
 
   > [!div class="mx-imgBorder"]
   > ![Filter pane in the Timeline ](media/timeline-filter2.png "Filter pane in the Timeline") ![Filter pane in the Timeline ](media/timeline-filter5.png "Filter pane in the Timeline")

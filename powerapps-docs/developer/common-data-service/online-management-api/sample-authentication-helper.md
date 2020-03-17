@@ -8,7 +8,7 @@ applies_to: Dynamics 365 for Customer Engagement (online)
 ms.assetid: a96fff7c-814e-4fa1-98b6-7a2875ee0234
 author: KumarVivek
 ms.author: kvivek
-manager: amyla
+manager: annbe
 search.audienceType: 
   - developer
 search.app: 
