@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: sample
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 03/12/2020
+ms.date: 03/16/2020
 ms.author: mabolan
 search.audienceType: 
   - maker
@@ -453,6 +453,8 @@ To manage the app you imported, you'll want to repeat the same steps for the adm
 You have successfully imported both the Crisis Communication app and its admin app.
 
 You can now start creating the initial content. To start, open up the Crisis Communication Admin app.
+
+If you have GCC environment, you need to enable GCC mode. For more information, read [how to configure mobile clients for GCC environments](https://docs.microsoft.com/power-platform/admin/powerapps-us-government#configure-mobile-clients).
 
 ![Admin app](media/sample-crisis-communication-app/09-Admin-App.png)
 
