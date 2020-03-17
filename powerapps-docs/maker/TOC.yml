@@ -1199,6 +1199,8 @@
           href: ./portals/admin/admin-overview.md
         - name: Portal details
           href: ./portals/admin/portal-details.md
+        - name: Portal administration from Power Platform Admin Center
+          href: ./portals/admin/power-platform-admin-center.md
         - name: Download public key of portal
           href: ./portals/admin/get-public-key.md
         - name: View portal error logs
