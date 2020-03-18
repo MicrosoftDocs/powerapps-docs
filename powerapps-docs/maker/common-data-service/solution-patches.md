@@ -32,18 +32,6 @@ You can create a patch for a parent solution and export it as a minor update to 
 
 
 ## Creating updates using clone solution and clone to patch
-When you clone a solution, the version number you specify includes the major and minor positions. 
-
-   > [!div class="mx-imgBorder"]
-   > <img src="media/clone-solution.png" alt="Clone a patch major and minor version" height="560" width="307"> 
-
- When you clone a patch, the version number you specify includes the build and revision positions. 
-
-   > [!div class="mx-imgBorder"] 
-   > <img src="media/clone-a-patch2.png" alt="Clone a patch build and revision version" height="560" width="307">
-
-For more information about version numbers, see [Clone solution and clone patch version numbers](#clone-solution-and-clone-patch-version-numbers) in this article.
-
  When you’re working with patches and cloned solutions, keep the following information in mind:  
   
 -   A patch represents an incremental minor update to the parent solution. A patch can add or update components and assets in the parent solution when installed on the target system, but it can’t delete any components or assets from the parent solution.  
@@ -65,6 +53,18 @@ For more information about version numbers, see [Clone solution and clone patch 
 -   When you clone a base solution, all child patches are rolled up into the base solution and it becomes a new version. You can add, edit, or delete components and assets in the cloned solution.  
   
 -   A cloned solution represents a replacement of the base solution when it’s installed on the target system as a managed solution. Typically, you use a cloned solution to ship a major update to the preceding solution.  
+
+When you clone a solution, the version number you specify includes the major and minor positions. 
+
+   > [!div class="mx-imgBorder"]
+   > <img src="media/clone-solution.png" alt="Clone a patch major and minor version" height="560" width="307"> 
+
+ When you clone a patch, the version number you specify includes the build and revision positions. 
+
+   > [!div class="mx-imgBorder"] 
+   > <img src="media/clone-a-patch2.png" alt="Clone a patch build and revision version" height="560" width="307">
+
+For more information about version numbers, see [Clone solution and clone patch version numbers](#clone-solution-and-clone-patch-version-numbers) in this article.
   
 ## Create a solution patch  
  A patch contains changes to the parent solution, such as adding or editing components and assets. You don’t have to include the parent’s components unless you plan to edit them.  
