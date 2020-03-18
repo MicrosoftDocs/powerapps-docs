@@ -105,10 +105,6 @@ Use the **Recent** records list to pin favorite records.
 > - To save and create another record, select ![More commands icon](media/pa_mobile_more_commands_icon.png "More commnads icon") and then select **Save and Create new**.
 
 
-
-> [!div class="mx-imgBorder"]
-> ![View saved records](media/pa_mobile_record_saved.png "View saved record").
-
 ## View commands for a record
 
 1. From the Home screeen select a record to open it.
