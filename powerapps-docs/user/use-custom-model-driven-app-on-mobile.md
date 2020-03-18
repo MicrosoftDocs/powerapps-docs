@@ -36,7 +36,7 @@ Legend:
 3. **Quick Create**: Create a new record and quickly enter almost any type of information into the system.
 4. **Global commands**: Access global commands customized by your admin.
 5. **More**: Access more commands for the record(s) that you're currently working on such as sort, search, delete, refresh and more.
-
+6. **Sort records**: Sort and view records alphabetially.
 
 ### Site map screen
 
