@@ -36,7 +36,7 @@ There are times when you need to update an existing managed solution. To update 
 ## Apply the upgrade or update in the target environment
 The procedure to import the updated solution is similar to installing a new managed solution, except you will get some different options. If you are updating a solution you got from someone else, you should get guidance from the solution publisher about which options you should choose.  
 
-1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select **Solutions** from the left navigation.  
+1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select the target environment you want, and then select **Solutions** from the left navigation.  
 
 2. On the command bar, select **Import**.  
 
@@ -80,10 +80,10 @@ The procedure to import the updated solution is similar to installing a new mana
 If you chose to stage for upgrade, or if the system had an issue completing an upgrade, you will see that you have the original solution still installed in your system as well as a new solution that has the same solution name as the base solution suffixed with \_Upgrade.  To complete the upgrade, select the base solution in the solution list and select **Apply Solution Upgrade**.  This will uninstall all previous patches and the base solution then rename the \_Upgrade solution to be the same name as the previous base solution.  Any components that were in the original solution and patches that are not present in the \_Upgrade solution will be deleted as part of this process.
 
 ## Understanding version numbers for updates
-A solution’s version has the following format: major.minor.build.revision. An update must have a higher build or revision number than the parent solution. For example, for a base solution version 3.1.5.7, a small update could be a version 3.1.5.8 or a slightly more signficant update could have version 3.1.7.0. A substantially more signficant update could be version 3.2.0.0.
+A solution’s version has the following format: major.minor.build.revision. An update must have a higher major, minor, build or revision number than the parent solution. For example, for a base solution version 3.1.5.7, a small update could be a version 3.1.5.8 or a slightly more signficant update could have version 3.1.7.0. A substantially more signficant update could be version 3.2.0.0.
 
 
 ### See also
-[Add solution components](create-solution.md#add-solution-components)
+[Add solution components](create-solution.md#add-solution-components) <br />
 [Export solutions](export-solutions.md) <br />
 [Import solutions](import-update-export-solutions.md)
