@@ -25,13 +25,11 @@ search.app:
 ---
 
 # Create solution updates  
-There are three ways to create an update a solution. 
-- Update the solution in-place (recommended). In most situations, use the original solution to make updates, such as when adding new components. Then, use the update logic to determine how you want to apply the update when you import the managed solution into the target environment. This is the simplist method to use when updating a solution. More information: [Apply an update or upgrade for a solution](update-solutions.md) 
-- Clone solution. You can use the **Clone solution** feature to create a significant update for an unmanaged solution. When you clone a solution, the system rolls up all related patches into the base unmanaged solution and creates a new version. Using clone solution to update a solution isn't recommended because it limits team development and increases complexity when storing your solution in a source control system. 
-- Clone a patch. You use the **Clone a patch** feature to create a less significant update for an unmanaged solution. A patch contains only the changes used to update the solution, such as adding or editing components and assets. When patches are imported, they’re layered on top of the parent managed solution. Using clone a patch to update a solution isn't recommended because it limits team development and increases complexity when storing your solution in a source control system. However, clone a patch can be used to create a small update that can be imported quickley to minimize downtime. 
+You can create a patch for a parent solution and export it as a minor update to the base solution. When you clone a solution, the system rolls up all related patches into the base solution and creates a new version.
 
-## Update a solution
-To update solution, open the unmanaged solution in your development environment and create new or add and remove the existing components that you want. More information: [Create components in a solution](use-solution-explorer.md#create-components-in-a-solution) and [Add existing components in a solution](use-solution-explorer.md#add-an-existing-component-to-a-solution)
+> [!WARNING]
+> Using clone a patch and clone solution to update a solution isn't recommended because it limits team development and increases complexity when storing your solution in a source control system. For information about how to update a solution, see [Upgrade or update a solution](update-solutions.md).
+
 
 ## Creating updates using clone solution and clone to patch
 When you clone a solution, the version number you specify includes the major and minor positions. 
@@ -112,8 +110,8 @@ For more information about version numbers, see [Understanding version numbers f
   
 2.  In the solutions list, select an unmanaged solution to create a clone. On the command bar, select **Clone**, and then select **Clone Solution**. The right pane displays the base solution’s name and the new version number. Select **Save**.  
 
-## Understanding version numbers for cloned solutions and patches  
- A solution’s version has the following format: major.minor.build.revision. A patch must have a higher build or revision number than the parent solution. It can’t have a higher major or minor version. For example, for a base solution version 3.1.5.7, a patch could be a version 3.1.5.8 or version 3.1.7.0, but not version 3.2.0.0. A cloned solution must have the version number greater than or equal to the version number of the base solution. For example, for a base solution version 3.1.5.7, a cloned solution could be a version 3.2.0.0, or version 3.1.5.7. When you clone a solution or patch, you set the major and minor version values for a cloned solution, and the build or revision values for a patch.  
+## Clone solution and clone patch version numbers
+A patch must have a higher build or revision number than the parent solution. It can’t have a higher major or minor version. For example, for a base solution with version 3.1.5.7, a patch could be a version 3.1.5.8 or version 3.1.7.0, but not version 3.2.0.0. A cloned solution must have the version number greater than or equal to the version number of the base solution. For example, for a base solution version 3.1.5.7, a cloned solution could be a version 3.2.0.0, or version 3.1.5.7. When you clone a solution or patch, you set the major and minor version values for a cloned solution, and the build or revision values for a patch.  
   
 ### See also
-[Solutions overview](solutions-overview.md)
+[Upgrade or update a solution](update-solutions.md)
