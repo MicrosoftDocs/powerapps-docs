@@ -684,6 +684,8 @@
           href: reference/xrm-utility/getGlobalContext/getCurrentAppUrl.md
         - name: getVersion
           href: reference/xrm-utility/getGlobalContext/getVersion.md
+        - name: getWebResourceUrl
+          href: reference/xrm-utility/getGlobalContext/getWebResourceUrl.md
         - name: isOnPremises
           href: reference/xrm-utility/getGlobalContext/isOnPremises.md
         - name: prependOrgName
