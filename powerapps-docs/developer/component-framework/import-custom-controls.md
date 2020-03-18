@@ -71,7 +71,7 @@ You can deploy the code components directly from the Power Apps CLI by connectin
     pac auth select --index <index of the active profile>
     ``` 
 
-4. To get the basic information about the environment, use the following command. The connection will be made using the default authentication profile. 
+4. To get the basic information about the environment, run the following command. The connection will be made using the default authentication profile. 
 
     ```CLI
     pac org who 
@@ -103,7 +103,7 @@ To create a solution project based on an existing solution in Common Data Servic
 2. Run the command 
 
    ```CLI
-   pac solution clone –name(-n) <name of the solution to be exported> --version(-v) <version of your solution> --include(-i) <settings that should be included>
+   pac solution clone --name(-n) <name of the solution to be exported> --version(-v) <version of your solution> --include(-i) <settings that should be included>
    ```
 
 More information: [Settings options](https://docs.microsoft.com/dotnet/api/microsoft.crm.sdk.messages.exportsolutionrequest?view=dynamics-general-ce-9)
@@ -114,26 +114,26 @@ More information: [Settings options](https://docs.microsoft.com/dotnet/api/micro
 > The plugin command is in public preview and 
 Power Apps CLI now supports creating a plug-in project and packaging it in a solution by adding a reference to the plug-in project. The `pac plugin init` command creates the template files (csproj, Plugin.cs & ServiceHelper.cs) in the directory. To do so: 
 
-1.	Ensure that you have a valid authentication profile created.
-2.	Navigate to the root directory where you want the project to be created.
-3.	Run the command 
+1. Ensure that you have a valid authentication profile created.
+2. Navigate to the root directory where you want the project to be created.
+3. Run the command 
 
      ```CLI
-     pac auth create –url <https://xyz.crm.dynamics.com>
+     pac auth create --url <https://xyz.crm.dynamics.com>
      ```
-4.	Run the command to create the plug-in project
+4. Run the command to create the plug-in project
 
     ```CLI
     pac plugin init
     ```
 
-5.	Add a reference to your solution project  using the following command so that the plug-in project gets built when the solution is built.
+5. Add a reference to your solution project  using the following command so that the plug-in project gets built when the solution is built.
 
     ```CLI
-    pac solution add-reference –path <path to your plugin project>
+    pac solution add-reference --path <path to your plug-in project>
     ```
 
-6.	Run the command to build the solution and the referenced plug-in.
+6. Run the command to build the solution and the referenced plug-in.
     ```CLI
     msbuild
     ```
@@ -157,7 +157,7 @@ If you want to remove a code component from a solution file:
    </ItemGroup>
    ```
 
-2. Perform a rebuild (or clean) using the following command:
+2. Rebuild again using the command:
    
     ```CLI
     msbuild /t:rebuild

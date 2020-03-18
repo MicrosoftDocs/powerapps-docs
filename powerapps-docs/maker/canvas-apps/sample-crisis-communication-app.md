@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: sample
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 03/11/2020
+ms.date: 03/18/2020
 ms.author: mabolan
 search.audienceType: 
   - maker
@@ -39,6 +39,12 @@ In this walk through, you'll learn how to:
 > [!NOTE]
 > The Crisis Communication sample template is also available for the Power Apps and Power Automate US Government plans. The service URLs for Power Apps and Power Automate US Government version are different from the commercial version. More information: [Power Apps US Government service URLs](https://docs.microsoft.com/power-platform/admin/powerapps-us-government#power-apps-us-government-service-urls) and [Power Automate US Government service URLs](https://docs.microsoft.com/power-automate/us-govt#power-automate-us-government-service-urls).
 
+## Demo: Crisis Communication app
+
+Watch how to use Crisis Communication solution:
+
+> [!VIDEO https://www.youtube.com/embed/23SypLXiOTw]
+
 ## Prerequisites
 
 - [Sign
@@ -52,6 +58,12 @@ In this walk through, you'll learn how to:
 > For any feedback or issues related to the **Crisis Communication app**, please use the following links:
 > - **[Feedback](https://aka.ms/crisis-communication-feedback)**
 > - **[Issues](https://aka.ms/crisis-communication-issues)**
+
+## Demo: Build and deploy Crisis Communication app
+
+Watch how to build and deploy Crisis Communication app:
+
+> [!VIDEO https://www.youtube.com/embed/Wykrwf9dZ-Y]
 
 ## Create a home for your data
 
@@ -214,80 +226,155 @@ connect it to your new data sources.
 
 1. **Save** and **Publish** the app.
 
-#### Enable location updates
+### Optional: Enable location updates
 
-This app allows you to record a user's location and store it in your SharePoint site whenever a user sets their status. Your crisis management team can view this data in a Power BI report.
+This app allows you to record a user's location and store it in your SharePoint site whenever a user sets their status.  Your crisis management team can view this data in a Power BI report. 
+
+> [!NOTE]
+> Enabling location updates is optional. You can skip this section if you do not want to track user location.
 
 To enable this functionality, follow these steps:
 
-  1. Search for the **btnDateRange** control
-  1. Open the **OnSelect** property of the **btnDateRante** control in the formula bar.
-  1. Copy and paste the following snippet in the formula bar for **OnSelect** property:
+1. Search for the **btnDateRange** control
+1. Open the **OnSelect** property of the **btnDateRante** control in the formula bar.
+1. Copy and paste the following snippet in the formula bar for **OnSelect** property:
 
-  ```
-  UpdateContext({locSaveDates: true});
+    > [!NOTE]
+    > The following snippet is intended to work with versions of the solution that are older than 2020.03.16.
 
-// Store the output properties of the calendar in static variables and collections.
-Set(varStartDate,First(Sort(Filter(selectedDates,ComponentId=CalendarDatePicker_1.Id),Date,Ascending)).Date);
-Set(varEndDate,First(Sort(Filter(selectedDates,ComponentId=CalendarDatePicker_1.Id),Date,Descending)).Date);
 
-// Create a new record for work status for each date selected in the date range.
-ForAll(
-    Filter(
-        RenameColumns(selectedDates,"Date","DisplayDate"),
-        ComponentId=CalendarDatePicker_1.Id,
-        !(DisplayDate in colDates.Date)
-    ),
-    Patch('CI_Employee Status',Defaults('CI_Employee Status'),
-        {
-            Title: varUser.userPrincipalName,
-            Date: DisplayDate,
-            Notes: "",
-            PresenceStatus: LookUp(Choices('CI_Employee Status'.PresenceStatus),Value=WorkStatus_1.Selected.Value),
-            
-             
-            Latitude: Location.Latitude,
-            Longitude: Location.Longitude
-        }
-    )
-);
-
-// Update existing dates with the new status.
-ForAll(
-    AddColumns(
+    ```
+        UpdateContext({locSaveDates: true});
+    // Store the output properties of the calendar in static variables and collections.
+    ClearCollect(submittedDates,Sort(Filter(selectedDates,ComponentId=CalendarComponent.Id),Date,Ascending));
+    Set(varStartDate,First(submittedDates).Date);
+    Set(varEndDate,First(Sort(submittedDates,Date,Descending)).Date);
+    // Create a new record for work status for each date selected in the date range.
+    ForAll(
         Filter(
-            RenameColumns(selectedDates,"Date","DisplayDate"),
-            ComponentId=CalendarDatePicker_1.Id,
-            DisplayDate in colDates.Date
+            RenameColumns(submittedDates,"Date","DisplayDate"),
+            ComponentId=CalendarComponent.Id,
+            !(DisplayDate in colDates.Date)
         ),
-        
-        // Get the current record for each existing date.
-        "LookUpId",LookUp(RenameColumns(colDates,"ID","DateId"),And(Title=varUser.userPrincipalName,Date=DisplayDate)).DateId
-    ),
-    Patch('CI_Employee Status',LookUp('CI_Employee Status',ID=LookUpId),
-        {
-            PresenceStatus: LookUp(Choices('CI_Employee Status'.PresenceStatus),Value=WorkStatus_1.Selected.Value)
-        }
-    )
-);
+        Patch('CI_Employee Status',Defaults('CI_Employee Status'),
+            {
+                Title: varUser.userPrincipalName,
+                Date: DisplayDate,
+                Notes: "",
+                PresenceStatus: LookUp(colWorkStatus,Value=WorkStatusComponent.Selected.Value)
+                
+                // To implement location, add a comma to the line above and uncomment the lines below for latitude and longitude.
+                // Latitude: Text(Location.Latitude),
+                // Longitude: Text(Location.Longitude)
+            }
+        )
+    );
+        // Update existing dates with the new status.
+        ForAll(
+            AddColumns(
+                Filter(
+                    RenameColumns(submittedDates,"Date","DisplayDate"),
+                    ComponentId=CalendarComponent.Id,
+                    DisplayDate in colDates.Date
+                ),
+                
+                // Get the current record for each existing date.
+                "LookUpId",LookUp(RenameColumns(colDates,"ID","DateId"),And(Title=varUser.userPrincipalName,Date=DisplayDate)).DateId
+            ),
+            Patch('CI_Employee Status',LookUp('CI_Employee Status',ID=LookUpId),
+                {
+                    PresenceStatus: LookUp(colWorkStatus,Value=WorkStatusComponent.Selected.Value)
+                }
+            )
+        );
+        If(
+            IsEmpty(Errors('CI_Employee Status')),
+            
+            // Update the list of work status for the logged-in user.
+            ClearCollect(colDates,Filter('CI_Employee Status',Title=varUser.userPrincipalName));
+            // Send an email receipt to the logged-in user.
+            UpdateContext(
+                {
+                    locReceiptSuccess: 
+                    Office365Outlook.SendEmailV2(
+                        // To: send an email to oneself
+                        varUser.mail,
+                        // Subject
+                        Proper(WorkStatusComponent.Selected.Value) & ": " & varStartDate & If(varStartDate<>varEndDate," - " & varEndDate),
+                        // Body
+                        WorkStatusComponent.Selected.DateRangeReceipt & ": " &
+                        // Create a bulleted list of dates
+                        "<ul>" & 
+                            Concat(submittedDates,"<li>" & Date & Char(10)) &
+                        "</ul>"
+                    )
+                }
+            );
+            If(
+                locReceiptSuccess,
+                Notify("You successfully submitted your work status. An email has been sent to you with a summary.",NotificationType.Success,3000),
+                Notify("There was an error sending an email summary, but you successfully submitted your work status.",NotificationType.Success,3000);
+            );
+            
+            Navigate('Share to Team Screen',LookUp(colStyles,Key="navigation_transition").Value),
+            
+            // Case: Error submitting work status
+            Notify(varString.WorkStatusError,NotificationType.Warning)
+        );
+        UpdateContext({locSaveDates: false})
+    ```
 
-If(
-    IsEmpty(Errors('CI_Employee Status')),
-    Notify("You successfully submitted your work status.",NotificationType.Success,5000);
-    
-    // Update the list of work status for the logged-in user.
-    ClearCollect(colDates,Filter('CI_Employee Status',Title=varUser.userPrincipalName));
-    
-    Navigate('Share to Team Screen',LookUp(colStyles,Key="navigation_transition").Value),
-    
-    Notify(
-        LookUp(colTranslations,Locale=varLanguage).WorkStatusError,
-        NotificationType.Warning
-    )
-);
+### Optional: Add additional work status
 
-UpdateContext({locSaveDates: false})
-```
+If you want to add more work statuses beyond *work from home* and *out of office*, you can do that by completing the following steps. To begin, you need to update your SharePoint site.
+
+1. Go back to your SharePoint site and select **Site contents**.
+1. Select **CI_Employee Status**.
+1. If the **PresenceStatus** column is not present, start by selecting **Add column**.
+1. Select **Show/hide columns**.
+
+    ![Show/hide columns](media/sample-crisis-communication-app/36-hide-show-columns.png)
+
+1. Check **PresenceStatus**.
+1. Select **Apply**.
+1. You now want to edit the **PresenceStatus** column, start by selecting the column:
+
+    ![Show presence](media/sample-crisis-communication-app/37-show-presence.png)
+
+1. Then select **Column settings**, **Edit**:
+
+    ![Show presence](media/sample-crisis-communication-app/38-edit-column.png)
+
+1. Add your additional work statuses in the **Choices** field.
+
+> [!NOTE]
+> Please record the name of your new choices. You will need to use them in subsequent steps.
+
+Now you need to make a few adjustments to the app itself to show your new work status.
+
+1. Open the app in the canvas studio.
+1. Select the **Work Status Screen**.
+1. Set the formula bar to the **OnVisible** function:
+
+    ![Show presence](media/sample-crisis-communication-app/39-onvisible-for-screen.png)
+
+1. Edit the following template and replace the values with your own:
+
+    ```
+        ,"<Name of option in SharePoint list; case sensitive>",
+        Table(
+            {
+                Icon: <Image file>,
+                DateRangeQuestion: "Select the dates you will be <Name of status>.",
+                DateRangeReceipt: "You are currently <Name of status>.",
+                ShareToTeamEmail: "I will be <Name of status> on these dates",
+                AutoReplyMessage: "I will be <Name of status> on these dates"
+            }
+        )
+    ```
+
+1. Replace the `/* TEMPLATE FOR ADDITIONAL WORK STATUS OPTIONS */` comment with the template.
+1. **Save** and **Publish** the app.
 
 ### Update the request help Flow
 
@@ -337,6 +424,33 @@ and bring it into your flow. If you need help with creating a Teams team, jump t
 1. Scroll down to the **Get Time** actions and update the action for **Convert time zone** with your choice of source and destination times:
 
     ![Convert time zone](media/sample-crisis-communication-app/convert-time-zone.png)
+
+## Optional: Configure shared inbox
+
+The **CrisisCommunication.Request** flow pulls requests from your inbox before sending them to Teams. If you would like to send request emails to a shared inbox, follow these steps.
+
+> [!NOTE]
+> Configuring shared inbox is optional. You can skip this section if you do not want to send request emails to a shared inbox.
+
+1. Open the **CrisisCommunication.Request** flow in *edit* mode.
+1. Select **...** from the **When an email arrives V3**.
+1. Select **Delete**:
+
+     ![Delete connector](media/sample-crisis-communication-app/33-delete-connector.png)
+
+1. Search for and select **When a new email arrives in a shared mailbox (V2)**.
+1. Enter the shared inbox address in **Mailbox Address**.
+1. Open the **Comments** card.
+1. Select the **Add a dynamic value** button for **Value**.
+1. Search for and select **Body**:
+
+     ![Select body](media/sample-crisis-communication-app/35-body.png)
+
+1. Open the **Get user profile card (V2)** card.
+1. Select the **Add a dynamic value** button.
+1. Search for and select **From**:
+
+     ![Select from](media/sample-crisis-communication-app/34-from.png)
 
 ## Import and set up the admin app
 
@@ -396,6 +510,8 @@ You have successfully imported both the Crisis Communication app and its admin a
 
 You can now start creating the initial content. To start, open up the Crisis Communication Admin app.
 
+If you have GCC environment, you need to enable GCC mode. For more information, read [how to configure mobile clients for GCC environments](https://docs.microsoft.com/power-platform/admin/powerapps-us-government#configure-mobile-clients).
+
 ![Admin app](media/sample-crisis-communication-app/09-Admin-App.png)
 
 The admin application allows you to customize all of the information within the Crisis communication app and
@@ -413,7 +529,7 @@ Complete all of the fields and select **Save**.
 
 | **Field name** | **Logical name in SharePoint** | **Purpose** | **Example** |
 |-|-|-|-|
-| Admin email | AdminContactEmail | Used to notify others who are administering the application.  | admin@contoso.com |
+| Admin email | AdminContactEmail | This is where email requests are sent. They should be set to your email address. If you would like to send notifications to another inbox please follow [optional shared inbox configuration](#optional-configure-shared-inbox). | admin@contoso.com |
 | Logo URL | Logo | The logo of your app that will appear in the top-left corner. | https://contoso.com/logo.png |
 | AAD group ID | AADGroupID | Used to send notifications to end users about internal company updates via the *Notify users on new crisis communication news* flow. Follow the instructions below to get the AAD ID of your group. | c0ddf873-b4fe-4602-b3a9-502dd944c8d5 |
 | APP URL | AppURL | The location of the end-user app so that the *Notify users on new crisis communication news* flow can redirect users after selecting **Read more**. | https://apps.preview.powerapps.com/play/<app URL>?tenantId=<tenant ID>
@@ -622,7 +738,10 @@ preference.
 
 Once you have the app deployed and people start to notify that they will be out of the office for various reasons (such
 as being sick or working from home) you can now use a Power BI report to track how many and where those people are located. Please 
-note that you need to [enable location tracking](#enable-location-updates) to make the map control work.
+note that you need to [enable location tracking](#optional-enable-location-updates) to make the map control work. 
+
+> [!IMPORTANT]
+> For the Power BI report to work, you must have at least one entry in the **CI_Employee Status** list.
 
 To start, you can use the sample report 'Presence status report.pbix' available from the downloaded [assets package](#prerequisites).
 If needed, download [Power BI Desktop](https://powerbi.microsoft.com/downloads). We will also need some information from
@@ -776,7 +895,12 @@ To add the Power BI report:
 
     The Power Automate bot connector for Teams and the Push Notification connector are currently not available for GCC. Use the email option to alert users about internal news updates for GCC instead.
 
-***Disclaimer:*** *This app is a sample and may be used with Microsoft Power Apps and Teams for dissemination of reference information only. This app is not intended or made available for use as a medical device, clinical support, diagnostic tool, or other technology intended to be used in the diagnosis, cure, mitigation, treatment, or prevention of disease or other conditions, and no license or right is granted by Microsoft to use this app for such purposes.  This app is not designed or intended to be a substitute for professional medical advice, diagnosis, treatment, or judgement and should not be used as such.  Customer bears the sole risk and responsibility for any use of this app.  Microsoft does not warrant that the app or any materials provided in connection therewith will be sufficient for any medical purposes or meet the health or medical requirements of any person.*  
+## Issues & Feedback
+
+- For **Feedback** about the *Crisis Communication sample template*, go to [aka.ms/crisis-communication-feedback](https://aka.ms/crisis-communication-feedback).
+- To **Report an Issue** with the *Crisis Communication app*, go to [aka.ms/crisis-communication-issues](https://aka.ms/crisis-communication-issues).
+
+***Disclaimer:*** *This app is a sample and may be used with Microsoft Power Apps and Teams for dissemination of reference information only. This app is not intended or made available for use as a medical device, clinical support, diagnostic tool, or other technology intended to be used in the diagnosis, cure, mitigation, treatment, or prevention of disease or other conditions, and no license or right is granted by Microsoft to use this app for such purposes.  This app is not designed or intended to be a substitute for professional medical advice, diagnosis, treatment, or judgement and should not be used as such.  Customer bears the sole risk and responsibility for any use of this app.  Microsoft does not warrant that the app or any materials provided in connection therewith will be sufficient for any medical purposes or meet the health or medical requirements of any person.* 
 
 ## Next steps
 
