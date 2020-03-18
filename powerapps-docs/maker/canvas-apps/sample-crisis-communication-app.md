@@ -417,7 +417,7 @@ and bring it into your flow. More information about creating a Teams team: [Crea
 
     ![Convert time zone settings](media/sample-crisis-communication-app/convert-time-zone.png)
 
-## Optional: Configure a shared inbox
+## Optional: Configure a shared inbox<a name="optional-configure-shared-inbox"></a>
 
 The CrisisCommunication.Request flow pulls requests from your inbox before sending them to Teams. If you'd prefer to send request emails to a shared inbox, follow these steps.
 
@@ -828,7 +828,7 @@ If you're a Teams admin, you can push the app to all your users in the Teams app
 > [!NOTE]
 > It can take up to 24 hours for users to see the app automatically pinned in their app bar.
 
-### Create a central crisis management team in Teams
+### Create a central crisis management team in Teams<a name="create-a-central-crisis-management-teams-team"></a>
 
 To coordinate your crisis response, you'll want to create a central crisis management team in Teams
 and populate it with all relevant information.
