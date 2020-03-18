@@ -1,5 +1,5 @@
 ---
-title: "Create solution updates  | MicrosoftDocs"
+title: "Create solution patches  | MicrosoftDocs"
 description: "Learn how to create solution patches"
 ms.custom: ""
 ms.date: 02/04/2020
@@ -24,7 +24,7 @@ search.app:
   - D365CE
 ---
 
-# Create solution updates  
+# Create solution patches  
 You can create a patch for a parent solution and export it as a minor update to the base solution. When you clone a solution, the system rolls up all related patches into the base solution and creates a new version.
 
 > [!WARNING]
