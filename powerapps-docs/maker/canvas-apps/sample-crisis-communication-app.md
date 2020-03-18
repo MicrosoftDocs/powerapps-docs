@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: sample
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 03/16/2020
+ms.date: 03/18/2020
 ms.author: mabolan
 search.audienceType: 
   - maker
@@ -720,10 +720,11 @@ To test the news notification flow, go to the admin app and create a new interna
 ## Monitor office absences with Power BI
 
 After you've deployed the app and people start to send notifications that they'll be out of the office for various reasons (such
-as being sick or working from home), you can use a Power BI report to track how many people have sent notifications and where they're located. Note that you need to [enable location tracking](#optional-enable-location-updates) to make the map control work.
+as being sick or working from home), you can use a Power BI report to track how many people have sent notifications and where they're located.  
+Note that you need to [enable location tracking](#optional-enable-location-updates) to make the map control work. 
 
-To start, you can use the sample report Presence status report.pbix, available from the downloaded [assets package](#prerequisites).
-If needed, download [Power BI Desktop](https://powerbi.microsoft.com/downloads).
+> [!IMPORTANT]
+> For the Power BI report to work, you must have at least one entry in the **CI_Employee Status** list.
 
 We'll need some information from
 the **CI_Employee Status** SharePoint list we created earlier, so let's get to it first. Open the list in your site, and then select **List Settings** under the **Settings** icon.
