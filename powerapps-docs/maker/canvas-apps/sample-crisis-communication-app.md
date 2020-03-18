@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: sample
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 03/16/2020
+ms.date: 03/18/2020
 ms.author: mabolan
 search.audienceType: 
   - maker
@@ -738,7 +738,10 @@ preference.
 
 Once you have the app deployed and people start to notify that they will be out of the office for various reasons (such
 as being sick or working from home) you can now use a Power BI report to track how many and where those people are located. Please 
-note that you need to [enable location tracking](#optional-enable-location-updates) to make the map control work.
+note that you need to [enable location tracking](#optional-enable-location-updates) to make the map control work. 
+
+> [!IMPORTANT]
+> For the Power BI report to work, you must have at least one entry in the **CI_Employee Status** list.
 
 To start, you can use the sample report 'Presence status report.pbix' available from the downloaded [assets package](#prerequisites).
 If needed, download [Power BI Desktop](https://powerbi.microsoft.com/downloads). We will also need some information from
