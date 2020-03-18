@@ -1,5 +1,5 @@
 ---
-title: "Create solution updates and patches | MicrosoftDocs"
+title: "Create solution updates  | MicrosoftDocs"
 description: "Learn how to create solution patches"
 ms.custom: ""
 ms.date: 02/04/2020
@@ -24,13 +24,20 @@ search.app:
   - D365CE
 ---
 
-# Create solution updates and patches 
-You use the **Clone solution** feature to create a significant update for an unmanaged solution. When you clone a solution, the system rolls up all related patches into the base unmanaged solution and creates a new version. When you clone a solution, the version number you specify includes the major and minor positions. 
+# Create solution updates  
+You can create a patch for a parent solution and export it as a minor update to the base solution. When you clone a solution, the system rolls up all related patches into the base solution and creates a new version.
+
+> [!WARNING]
+> Using clone a patch and clone solution to update a solution isn't recommended because it limits team development and increases complexity when storing your solution in a source control system. For information about how to update a solution, see [Upgrade or update a solution](update-solutions.md).
+
+
+## Creating updates using clone solution and clone to patch
+When you clone a solution, the version number you specify includes the major and minor positions. 
 
    > [!div class="mx-imgBorder"]
    > <img src="media/clone-solution.png" alt="Clone a patch major and minor version" height="560" width="307"> 
 
-You use the **Clone a patch** feature to create a less significant update for an unmanaged solution. A patch contains only the changes used to update the solution, such as adding or editing components and assets. When patches are imported, they’re layered on top of the parent managed solution. When you clone a patch, the version number you specify includes the build and revision positions. 
+ When you clone a patch, the version number you specify includes the build and revision positions. 
 
    > [!div class="mx-imgBorder"] 
    > <img src="media/clone-a-patch2.png" alt="Clone a patch build and revision version" height="560" width="307">
@@ -103,8 +110,8 @@ For more information about version numbers, see [Understanding version numbers f
   
 2.  In the solutions list, select an unmanaged solution to create a clone. On the command bar, select **Clone**, and then select **Clone Solution**. The right pane displays the base solution’s name and the new version number. Select **Save**.  
 
-## Understanding version numbers for cloned solutions and patches  
- A solution’s version has the following format: major.minor.build.revision. A patch must have a higher build or revision number than the parent solution. It can’t have a higher major or minor version. For example, for a base solution version 3.1.5.7, a patch could be a version 3.1.5.8 or version 3.1.7.0, but not version 3.2.0.0. A cloned solution must have the version number greater than or equal to the version number of the base solution. For example, for a base solution version 3.1.5.7, a cloned solution could be a version 3.2.0.0, or version 3.1.5.7. When you clone a solution or patch, you set the major and minor version values for a cloned solution, and the build or revision values for a patch.  
+## Clone solution and clone patch version numbers
+A patch must have a higher build or revision number than the parent solution. It can’t have a higher major or minor version. For example, for a base solution with version 3.1.5.7, a patch could be a version 3.1.5.8 or version 3.1.7.0, but not version 3.2.0.0. A cloned solution must have the version number greater than or equal to the version number of the base solution. For example, for a base solution version 3.1.5.7, a cloned solution could be a version 3.2.0.0, or version 3.1.5.7. When you clone a solution or patch, you set the major and minor version values for a cloned solution, and the build or revision values for a patch.  
   
 ### See also
-[Solutions overview](solutions-overview.md)
+[Upgrade or update a solution](update-solutions.md)
