@@ -42,7 +42,7 @@ When you clone a solution, the version number you specify includes the major and
    > [!div class="mx-imgBorder"] 
    > <img src="media/clone-a-patch2.png" alt="Clone a patch build and revision version" height="560" width="307">
 
-For more information about version numbers, see [Understanding version numbers for cloned solutions and patches](#understanding-version-numbers-for-cloned-solutions-and-patches) in this article.
+For more information about version numbers, see [Clone solution and clone patch version numbers](#clone-solution-and-clone-patch-version-numbers) in this article.
 
  When you’re working with patches and cloned solutions, keep the following information in mind:  
   
