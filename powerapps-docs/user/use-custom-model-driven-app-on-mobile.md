@@ -79,14 +79,12 @@ Use the **Recent** records list to pin favorite records.
    > [!div class="mx-imgBorder"]
    > ![Unpin a record](media/unpin_favs.gif "Unpin a record").
  
+## Change views
 
-## Go back 
-
-- To get back to the Home screen when you are in a record, select **Back** ![Back icon](media/pa_mobile_back_icon.png "Back icon").
-- At any point, press and hold the **Back** ![Back icon](media/pa_mobile_back_icon.png "Back icon") to go back to the Home sceen. 
+- From the Home sceen, select the down arrow ![Change view icon](media/mobile_view_selector_icon.png "Change view icon) next to the current view and then select a new view.
 
    > [!div class="mx-imgBorder"]
-   > ![Go back to the home screen](media/go_back_home.gif "Go back to home sceen").
+   > ![Unpin a record](media/pa_mobile_change_view.gif "Unpin a record").
 
 
 ## Add a record quickly
@@ -126,5 +124,12 @@ Use the **Recent** records list to pin favorite records.
    > ![Edit a record](media/pa_mobile_edit_record.gif "Edit a record").
    
    
-   
+## Go back 
+
+- To get back to the Home screen when you are in a record, select **Back** ![Back icon](media/pa_mobile_back_icon.png "Back icon").
+- At any point, press and hold the **Back** ![Back icon](media/pa_mobile_back_icon.png "Back icon") to go back to the Home sceen. 
+
+   > [!div class="mx-imgBorder"]
+   > ![Go back to the home screen](media/go_back_home.gif "Go back to home sceen").
+
 
