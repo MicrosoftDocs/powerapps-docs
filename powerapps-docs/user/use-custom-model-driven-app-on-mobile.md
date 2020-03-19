@@ -124,6 +124,6 @@ Use the **Recent** records list to pin favorite records.
 2. When you are done editing the record, select **Save**. To cancel your changes, select **Discard**.
 
    > [!div class="mx-imgBorder"]
-   > ![Edit a record](media/pa_mobile_edit_record.png "Edit a record").
+   > ![Edit a record](media/pa_mobile_edit_record.gif "Edit a record").
 
 
