@@ -83,8 +83,8 @@ Use the **Recent** records list to pin favorite records.
 
 ### Go back 
 
-- To get back to the Home screen when you are in a record, select ![Back icon](media/pa_mobile_back_icon.png "Back icon").
-- At any point, press and hold ![Back icon](media/pa_mobile_back_icon.png "Back icon") to go back to the Home sceen. 
+- To get back to the Home screen when you are in a record, select **Back** ![Back icon](media/pa_mobile_back_icon.png "Back icon").
+- At any point, press and hold the **Back** ![Back icon](media/pa_mobile_back_icon.png "Back icon") to go back to the Home sceen. 
 
    > [!div class="mx-imgBorder"]
    > ![Go back to the home screen](media/go_back_home.gif "Go back to home sceen").
@@ -92,7 +92,7 @@ Use the **Recent** records list to pin favorite records.
 
 ## Add a record quickly
 
-1. From the Home screen, select ![Create record button](media/create-record-button.png "Create record button").
+1. From the Home screen, select **New** ![Create record button](media/create-record-button.png "Create record button").
 2. Fill in the fields, and then select **Save**.
 3. Once the record is created, you can view the new record. 
 
@@ -101,8 +101,8 @@ Use the **Recent** records list to pin favorite records.
    > ![Create a record](media/pamobile_add_record.gif "Create a record").
 
 
--  To save and open the recrod that you  created, select ![More commands icon](media/pa_mobile_more_commands_icon.png "More commnads icon") and then select **Save and Open**.
-- To save and create another record, select ![More commands icon](media/pa_mobile_more_commands_icon.png "More commnads icon") and then select **Save and Create new**.
+-  To save and open the recrod that you  created, at the topc right select **More** ![More commands icon](media/pa_mobile_more_commands_icon.png "More commnads icon") and then select **Save and Open**.
+- To save and create another record, at the top right select the **More** ![More commands icon](media/pa_mobile_more_commands_icon.png "More commnads icon") and then select **Save and Create new**.
 
    > [!div class="mx-imgBorder"]
    > ![Create a record](media/pa_mobile_save_create_new.gif "Create a record").
@@ -111,11 +111,12 @@ Use the **Recent** records list to pin favorite records.
 
 ## View commands for a record
 
-1. From the Home screeen select a record to open it.
-2. Commands that you can perform on the record are at the bottom of the screen. Select **More** to access more commands.
+1. From the Home screeen open a record.
+2. On the open record, select select **More** ![More record commands icon"](media/access_record_commands_icon.png "More record commands icon") to access more commands.
+
 
 > [!div class="mx-imgBorder"]
-> ![Commands on a record](media/commnads_on_open_record.png "Commands on a record").
+> ![Commands on a record](media/pa_mobile_view_record_commands.gif "Commands on a record").
 
 ## Edit a record
 
