@@ -15,7 +15,7 @@ search.app:
   - PowerApps
 ---
 
-### Augmented reality fit and finish
+# Augmented reality fit and finish
 
 You can use AR in your app to let users see how a particular item might fit within a specified space. To do that you need to use the following controls:
 

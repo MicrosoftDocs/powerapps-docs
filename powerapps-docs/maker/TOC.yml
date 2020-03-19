@@ -322,14 +322,14 @@
             - name: View in AR
               href: ./canvas-apps/augmented-reality-component-view-ar.md
             - name: View shape in AR
-              href: ./canvas-apps/augmented-reality-components-view-shape.md
+              href: ./canvas-apps/augmented-reality-component-view-shape.md
           - name: Add geospatial components
             items:
             - name: Geospatial components
               href: ./canvas-apps/geospatial-overview.md
             - name: Input address
               href: ./canvas-apps/geospatial-component-input-address.md
-            - name: Measure in AR - distance
+            - name: Map
               href: ./canvas-apps/geospatial-component-map.md
           - name: Add Power BI data
             href: ./canvas-apps/powerapps-custom-visual.md

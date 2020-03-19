@@ -73,5 +73,5 @@ Tooltip | Descriptive text that appears when a user navigates to the map compone
 
 
 ## Other geospatial components
-- [Addres input](geospatial-component-input-address.md)
+- [Address input](geospatial-component-input-address.md)
 

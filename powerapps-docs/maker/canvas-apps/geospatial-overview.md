@@ -36,7 +36,7 @@ The following pre-built components can be used to solve your AR scenarios:
 
 1. You need to be [enrolled in the Experience Dynamics Insider Program](#enroll-in-the-mixed-reality-in-power-apps-dynamics-365-insider-program-internal).
 1. You need a PowerApps license that supports Common Data Service. If you [identify your current license](/powerapps/maker/signup-for-powerapps#identify-your-current-license) does not support CDS, you can sign up for a [free trial license for 30 days](http://web.powerapps.com/trial). Please note that in some circumstances this step may take 30 to 60 minutes. Please check periodically after requesting a trial license.
-2. If you don’t have one already, you will need to [create an environment with Common Data Service instance installed](/power-platform/admin/create-environment). You will need to have system administrator privileges for this step.
+2. If you don't have one already, you will need to [create an environment with Common Data Service instance installed](/power-platform/admin/create-environment). You will need to have system administrator privileges for this step.
 3. [Enable the PowerApps component framework](/powerapps/developer/component-framework/component-framework-for-canvas-apps#enable-power-apps-component-framework-feature) in your environment for canvas apps.
 
 
@@ -50,10 +50,10 @@ You need to be enrolled in the Dynamics 365 insider program to gain access to th
 1. visit https://experience.dynamics.com
 2. Select **Insider Program" 
 3. sign in
-4. answer “yes” when asked to grant the Experience Dynamics Portal access
+4. answer "yes" when asked to grant the Experience Dynamics Portal access
 5. complete and update your profile
-6. you’ll be redirected to the Insider portal landing page
-7. click the “Apply Now” button
+6. you'll be redirected to the Insider portal landing page
+7. click the "Apply Now" button
 8. accept the Terms and Conditions (you must scroll to the bottom)
 9. Send an email (mrceg@microsoft.com) so we can approve your membership
 
@@ -72,17 +72,11 @@ After you've been added to the program, you'll need to download and import the s
 5. [Import the two solutions into your environment](/powerapps/maker/common-data-service/import-update-export-solutions).
 
 
-## Scenarios
-
-
-
-
-### Whatever other scenario
-
-Describe what this scenario achieves, what the controls are that are needed.
-
-
-
-
 ## Next steps
 Explore [example AR apps](augmented-reality-example-apps.md) and see what sorts of scenarios AR controls can help solve
+Explore the augmented reality controls:
+- [View in 3D](augmented-reality-component-view-3d.md)
+- [View in augmented reality](augmented-reality-component-view-ar.md)
+- [Measure in augmented reality - distance](augmented-reality-component-measure-distance.md)
+- [Measure in augmented reality - advanced](augmented-reality-component-measure-advanced.md)
+- [View shape in augmented reality](augmented-reality-component-view-shape.md)
