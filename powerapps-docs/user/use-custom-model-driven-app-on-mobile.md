@@ -37,13 +37,14 @@ Legend:
 5. **More**: Access more commands for the record(s) that you're working like sort, search, delete, refresh and more.
 6. **Sort records**: Sort and view records alphabetically.
 
-## Site map screen
+## Site map 
 
 From the Home screen, select the site map ![Site map icon](media/pa_mobile_sitemap_icon.png "Site map icon") to access entities, favorite or most-used records, other apps, and settings.
 
-   > [!div class="mx-imgBorder"]
-   > ![Site map scren](media/pa_mobile_site_map.gif "Site map sceen").
 
+![Site map scren](media/pa_mobile_site_map.gif "Site map sceen").
+
+The following illustration shows the primary navigation elements on the site map screen. 
 
 ![Site map screen](media/pa_mobile_sitemap_android.png "Site map screen")
 
