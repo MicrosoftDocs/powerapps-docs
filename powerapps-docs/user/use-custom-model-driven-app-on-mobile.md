@@ -111,7 +111,7 @@ Use the **Recent** records list to pin favorite records.
 
 ## View commands for a record
 
-1. From the Home screeen open a record.
+1. From the Home screeen, open a record.
 2. On the open record, select select **More** ![More record commands icon"](media/access_record_commands_icon.png "More record commands icon") to access more commands.
 
 
@@ -120,7 +120,7 @@ Use the **Recent** records list to pin favorite records.
 
 ## Edit a record
 
-1. From the Home screeen select a record that you want to edit.
+1. From the Home screeen, open a record to edit it. 
 2. When you are done editing the record, select **Save**. To cancel your changes, select **Discard**.
 
 > [!div class="mx-imgBorder"]
