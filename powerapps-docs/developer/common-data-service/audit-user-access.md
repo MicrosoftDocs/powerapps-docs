@@ -3,7 +3,7 @@ title: "Audit user access (Common Data Service) | Microsoft Docs" # Intent and p
 description: "Support for the ability to audit user access, including user identification, access time, and client type." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 01/27/2019
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "paulliew" # GitHub ID

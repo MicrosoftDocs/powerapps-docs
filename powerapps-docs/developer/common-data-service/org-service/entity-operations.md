@@ -3,7 +3,7 @@ title: "Entity Operations using the Organization service (Common Data Service) |
 description: "Learn about the Entity class used for data operations using the Common Data Service organization service" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" # GitHub ID

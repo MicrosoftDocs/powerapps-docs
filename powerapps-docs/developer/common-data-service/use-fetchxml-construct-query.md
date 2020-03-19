@@ -3,7 +3,7 @@ title: "Use FetchXML to query data (Common Data Service) | Microsoft Docs" # Int
 description: "FetchXML is a proprietary query language that is used in Common Data Service. It’s based on a schema that describes the capabilities of the language." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 07/23/2019
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" # GitHub ID

@@ -3,7 +3,7 @@ title: "Sample: Use Dynamics 365 for Outlook methods (Common Data Service)| Micr
 description: "This sample shows how to use the methods available in the `Microsoft.Crm.Outlook.Sdk.dll` assembly."
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "sriharibs" # GitHub ID
