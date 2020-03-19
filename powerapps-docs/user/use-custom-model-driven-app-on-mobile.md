@@ -81,7 +81,8 @@ Use the **Recent** records list to pin favorite records.
  
 ## Change views
 
-- From the Home sceen, select the down arrow ![Change view icon](media/mobile_view_selector_icon.png "Change view icon) next to the current view and then select a new view.
+- From the Home sceen, select the down arrow ![Change view icon](media/mobile_view_selector_icon.png "Change view icon") next to the current view and then select a new view.
+
 
    > [!div class="mx-imgBorder"]
    > ![Unpin a record](media/pa_mobile_change_view.gif "Unpin a record").
