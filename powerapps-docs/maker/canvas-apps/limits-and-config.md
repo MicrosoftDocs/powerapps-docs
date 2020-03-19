@@ -99,8 +99,7 @@ This list identifies all services to which Power Apps Studio talks and their usa
 | \*.dynamics.com | https | Common Data Service |
 | vortex.data.microsoft.com |https |Telemetry |
 | localhost | https | Power Apps Mobile|
-| api.bap.microsoft.com | https | Environment permissions management|
-| api.businessappdiscovery.microsoft.com | https | Environment permissions management|
+| api.bap.microsoft.com<br/>api.businessappdiscovery.microsoft.com | https | Environment permissions management|
 
 > [!NOTE]
 > If you're using a VPN, it must be configured to exclude localhost from tunneling for Power Apps Mobile.
