@@ -112,7 +112,7 @@ Use the **Recent** records list to pin favorite records.
 ## View commands for a record
 
 1. From the Home screeen, open a record.
-2. On the open record, select select **More** ![More record commands icon"](media/access_record_commands_icon.png "More record commands icon") to access more commands.
+2. On the open record, select **More** ![More record commands icon"](media/access_record_commands_icon.png "More record commands icon") to access more commands.
 
 
    > [!div class="mx-imgBorder"]
