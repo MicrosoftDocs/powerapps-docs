@@ -17,10 +17,9 @@ search.app:
   - PowerApps
   - D365CE
 ---
+# Use custom model-driven apps on Power Apps mobile 
 
-# Use a custom model-driven app on a mobile device
-
-Use the Power Apps mobile app to run your custom model-driven apps on your phone.
+Use the Power Apps mobile app to run your custom model-driven apps on your mobile device.
 
 ## Home screen 
 
