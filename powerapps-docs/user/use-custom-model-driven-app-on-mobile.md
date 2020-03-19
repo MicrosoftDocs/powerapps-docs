@@ -35,11 +35,11 @@ Legend:
 3. **Quick Create**: Create a new record and quickly enter almost any type of information into the system.
 4. **Global commands**: Access global commands customized by your admin.
 5. **More**: Access more commands for the record(s) that you're currently working on such as sort, search, delete, refresh and more.
-6. **Sort records**: Sort and view records alphabetially.
+6. **Sort records**: Sort and view records alphabetically.
 
 ## Site map screen
 
-From the Home sceen, select the site map ![Site map icon](media/pa_mobile_sitemap_icon.png "Site map icon") to accces entites, favorite or most-used records, other apps, and settings.
+From the Home screen, select the site map ![Site map icon](media/pa_mobile_sitemap_icon.png "Site map icon") to access entities, favorite or most-used records, other apps, and settings.
 
 ![Site map screen](media/pa_mobile_sitemap_android.png "Site map screen")
 
@@ -47,9 +47,9 @@ Legend
 
 1. **App selector**: Open this menu to move between apps.
 2. **Home screen**: Select this to go back to the Home screen.
-3. **Profile**: Go to the Profile sceen to sign out or reconfigure the app. 
+3. **Profile**: Go to the Profile screen to sign out or reconfigure the app. 
 4. **Recent records**: View a list of records you were recently using. 
-5. **Pinned recrods**: Vew and open your favorite (pinned) records. 
+5. **Pinned records**: View and open your favorite (pinned) records. 
 6. **Entity navigator**: This area lists the entity available in the app.
 7. **Help**: Access help content for more information on how to use the Power Apps mobile app.
 8. **Offline Status**: Work with your data in offline mode even when you don't have internet access. For more information, see [Work offline on your mobile device](https://docs.microsoft.com/dynamics365/mobile-app/work-in-offline-mode).
@@ -81,7 +81,7 @@ Use the **Recent** records list to pin favorite records.
  
 ## Change views
 
-- From the Home sceen, select the down arrow ![Change view icon](media/mobile_view_selector_icon.png "Change view icon") next to the current view and then select a new view.
+- From the Home screen, select the down arrow ![Change view icon](media/mobile_view_selector_icon.png "Change view icon") next to the current view and then select a new view.
 
 
    > [!div class="mx-imgBorder"]
@@ -99,7 +99,7 @@ Use the **Recent** records list to pin favorite records.
    > ![Create a record](media/pamobile_add_record.gif "Create a record").
 
 
--  To save and open the recrod that you  created, at the topc right select **More** ![More commands icon](media/pa_mobile_more_commands_icon.png "More commnads icon") and then select **Save and Open**.
+-  To save and open the record that you  created, at the topic right select **More** ![More commands icon](media/pa_mobile_more_commands_icon.png "More commnads icon") and then select **Save and Open**.
 - To save and create another record, at the top right select the **More** ![More commands icon](media/pa_mobile_more_commands_icon.png "More commnads icon") and then select **Save and Create new**.
 
    > [!div class="mx-imgBorder"]
@@ -109,7 +109,7 @@ Use the **Recent** records list to pin favorite records.
 
 ## View commands for a record
 
-1. From the Home screeen, open a record.
+1. From the Home screen, open a record.
 2. On the open record, select **More** ![More record commands icon"](media/access_record_commands_icon.png "More record commands icon") to access more commands.
 
 
@@ -118,7 +118,7 @@ Use the **Recent** records list to pin favorite records.
 
 ## Edit a record
 
-1. From the Home screeen, open a record that you want to edit. 
+1. From the Home screen, open a record that you want to edit. 
 2. When you are done editing the record, select **Save**. To cancel your changes, select **Discard**.
 
    > [!div class="mx-imgBorder"]
@@ -128,7 +128,7 @@ Use the **Recent** records list to pin favorite records.
 ## Go back 
 
 - To get back to the Home screen when you are in a record, select **Back** ![Back icon](media/pa_mobile_back_icon.png "Back icon").
-- At any point, press and hold the **Back** ![Back icon](media/pa_mobile_back_icon.png "Back icon") to go back to the Home sceen. 
+- At any point, press and hold the **Back** ![Back icon](media/pa_mobile_back_icon.png "Back icon") to go back to the Home screen. 
 
    > [!div class="mx-imgBorder"]
    > ![Go back to the home screen](media/go_back_home.gif "Go back to home sceen").
