@@ -19,7 +19,9 @@ search.app:
 ---
 # Use custom model-driven apps on the Power Apps mobile app
 
-Use the Power Apps mobile app to run your custom model-driven apps on your mobile device. to install the app, see [Run a canvas app or a custom model-driven app on a mobile device](run-app-client.md).
+Use the Power Apps mobile app to run your custom model-driven apps on your mobile device. 
+
+For more information on how to install the app, see [Run a canvas app or a custom model-driven app on a mobile device](run-app-client.md).
 
 ## Home screen 
 
