@@ -37,7 +37,7 @@ Legend:
 5. **More**: Access more commands for the record(s) that you're currently working on such as sort, search, delete, refresh and more.
 6. **Sort records**: Sort and view records alphabetially.
 
-### Site map screen
+## Site map screen
 
 From the Home sceen, select the site map ![Site map icon](media/pa_mobile_sitemap_icon.png "Site map icon") to accces entites, favorite or most-used records, other apps, and settings.
 
@@ -55,7 +55,7 @@ Legend
 8. **Offline Status**: Work with your data in offline mode even when you don't have internet access. For more information, see [Work offline on your mobile device](https://docs.microsoft.com/dynamics365/mobile-app/work-in-offline-mode).
 9. **Settings**: Access settings.
 
-### Pin favorite records
+## Pin favorite records
 
 The **Pinned** and **Recent** provides quick access to your records that you have recently used or pinned to favorites. 
 Use the **Recent** records list to pin favorite records.  
@@ -70,7 +70,7 @@ Use the **Recent** records list to pin favorite records.
    > [!div class="mx-imgBorder"]
    > ![Pin record to favorites](media/pin_favs.gif "Pin record to favorites").
 
-#### Unpinn a record
+### Unpinn a record
 
 1. From the site map ![Site map icon](media/pa_mobile_sitemap_icon.png "Site map icon") select, **Pinned** ![Pinned favorites icon](media/mobile_pinned_favs_icon.png "Pinned favorites icon").
 
@@ -80,7 +80,7 @@ Use the **Recent** records list to pin favorite records.
    > ![Unpin a record](media/unpin_favs.gif "Unpin a record").
  
 
-### Go back 
+## Go back 
 
 - To get back to the Home screen when you are in a record, select **Back** ![Back icon](media/pa_mobile_back_icon.png "Back icon").
 - At any point, press and hold the **Back** ![Back icon](media/pa_mobile_back_icon.png "Back icon") to go back to the Home sceen. 
