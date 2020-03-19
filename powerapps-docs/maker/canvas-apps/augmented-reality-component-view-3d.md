@@ -24,7 +24,7 @@ Users of your app may want to view existing 3D models. The 3D model viewer lets 
 
 
 
-## List of augmented reality controls
+## Other augmented reality controls
 - [View in 3D](augmented-reality-component-view-3d.md)
 - [View in augmented reality](augmented-reality-component-view-ar.md)
 - [Measure in augmented reality - distance](augmented-reality-component-measure-distance.md)

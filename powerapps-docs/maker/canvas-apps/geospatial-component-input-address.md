@@ -22,12 +22,9 @@ search.app:
 
 
 
-## List of augmented reality controls
-- [View in 3D](augmented-reality-component-view-3d.md)
-- [View in augmented reality](augmented-reality-component-view-ar.md)
-- [Measure in augmented reality - distance](augmented-reality-component-measure-distance.md)
-- [Measure in augmented reality - advanced](augmented-reality-component-measure-advanced.md)
-- [View shape in augmented reality](augmented-reality-component-view-shape.md)
+
+## Other geospatial components
+- [Map](geospatial-component-map.md)
 
 ## Next steps
 Explore [example AR apps](augmented-reality-example-apps.md) and see what sorts of scenarios AR controls can help solve
