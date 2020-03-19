@@ -73,7 +73,7 @@ You can perform the following actions for a single entity:
     - Filter the displayed privilege using the `PrivilegeId`.
 
 > [!NOTE]
-> When viewing the entity detail properties, you’ll see that many complex properties are expandable. The most useful value is displayed with a link that allows toggling to a more detailed view. The detailed view reflects the structure of the data if you were to retrieve it programmatically. The detailed view also reveals other relevant data that can be retrieved in the same area, for example, if any localized labels are present for **Display Name** properties.
+> When viewing the entity detail properties, you'll see that many complex properties are expandable. The most useful value is displayed with a link that allows toggling to a more detailed view. The detailed view reflects the structure of the data if you were to retrieve it programmatically. The detailed view also reveals other relevant data that can be retrieved in the same area, for example, if any localized labels are present for **Display Name** properties.
 
 > [!TIP]
 > To copy text from the page, simply select the text and use the Ctrl+C keyboard shortcut or the context menu **Copy** command.
@@ -90,4 +90,4 @@ You can perform the following actions for a single entity:
 
  [Developer Tools for Common Data Service](developer-tools.md)<br />
  [Customize Entity Metadata](customize-entity-metadata.md)<br />
- 
+  

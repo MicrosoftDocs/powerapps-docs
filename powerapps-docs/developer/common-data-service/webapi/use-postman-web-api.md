@@ -3,7 +3,7 @@ title: "Use Postman with Common Data Service Web API (Developer Guide for Common
 description: "Learn how to use Postman to work with Common Data Service Web API"
 ms.custom: 
 ms.date: 04/22/2019
-ms.reviewer: 
+"pehecke"
 ms.service: powerapps
 ms.suite: 
 ms.tgt_pltfrm: 
@@ -25,7 +25,7 @@ There are a number of third-party tools that allow you to authenticate to Common
 
 Use Postman to perform ad hoc queries or to verify the behavior of operations without writing a program. This section covers information on how to configure a Postman environment that connects to your Common Data Service instance and use Postman to perform operations with the Web API.
 
-Postman offers many other capabilities beyond those covered in this content. More information: [First 5 things to try if you’re new to Postman](https://blog.getpostman.com/2018/04/11/first-5-things-to-try-if-youre-new-to-postman/)
+Postman offers many other capabilities beyond those covered in this content. More information: [First 5 things to try if you're new to Postman](https://blog.getpostman.com/2018/04/11/first-5-things-to-try-if-youre-new-to-postman/)
 
 ## In this section
 

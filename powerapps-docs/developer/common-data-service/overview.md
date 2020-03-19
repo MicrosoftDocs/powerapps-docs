@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: article
 ms.date: 03/27/2019
 ms.author: jdaly
-ms.reviewer: kvivek
+ms.reviewer: "pehecke"
 search.audienceType: 
   - developer
 search.app: 

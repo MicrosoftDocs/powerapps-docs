@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
-ms.reviewer: "susikka"
+ms.reviewer: "pehecke"
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer

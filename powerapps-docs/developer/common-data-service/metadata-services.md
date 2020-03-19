@@ -8,7 +8,7 @@ ms.service: powerapps
 ms.topic: "article"
 author: "mayadumesh"
 ms.author: "jdaly"
-ms.reviewer: "kvivek"
+ms.reviewer: "pehecke"
 manager: "ryjones"
 search.audienceType: 
   - developer
