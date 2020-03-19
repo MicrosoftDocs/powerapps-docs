@@ -91,4 +91,4 @@ To close an app, use your finger to swipe from the left edge of the app to the r
 ## Next steps
 In this topic, you learned how to run a canvas app and custom model-driven app on a mobile device. Next, learn how to use a custom model-driven app on a mobile device. 
 > [!div class="nextstepaction"]
-> [Use a custom model-driven app on a mobile device](use-custom-model-driven-app-on-mobile.md)
+> [Use custom model-driven apps on the Power Apps mobile app](use-custom-model-driven-app-on-mobile.md)
