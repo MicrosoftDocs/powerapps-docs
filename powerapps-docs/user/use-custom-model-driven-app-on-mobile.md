@@ -100,9 +100,13 @@ Use the **Recent** records list to pin favorite records.
    > [!div class="mx-imgBorder"]
    > ![Create a record](media/pamobile_add_record.gif "Create a record").
 
-> [!NOTE]
-> -  To save and open the recrod that you  created, select ![More commands icon](media/pa_mobile_more_commands_icon.png "More commnads icon") and then select **Save and Open**.
-> - To save and create another record, select ![More commands icon](media/pa_mobile_more_commands_icon.png "More commnads icon") and then select **Save and Create new**.
+
+-  To save and open the recrod that you  created, select ![More commands icon](media/pa_mobile_more_commands_icon.png "More commnads icon") and then select **Save and Open**.
+- To save and create another record, select ![More commands icon](media/pa_mobile_more_commands_icon.png "More commnads icon") and then select **Save and Create new**.
+
+   > [!div class="mx-imgBorder"]
+   > ![Create a record](media/pa_mobile_save_create_new.gif "Create a record").
+
 
 
 ## View commands for a record
