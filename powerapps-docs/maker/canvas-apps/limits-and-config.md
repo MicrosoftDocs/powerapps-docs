@@ -96,9 +96,11 @@ This list identifies all services to which Power Apps Studio talks and their usa
 | \*.azureedge.net |https | create.powerapps.com, make.powerapps.com, content.powerapps.com, and make.powerapps.com |
 | \*.blob.core.windows.net |https | Blob storage |
 | \*.flow.microsoft.com | https | create.powerapps.com, make.powerapps.com, content.powerapps.com, and make.powerapps.com |
-| *.dynamics.com | https | Common Data Service |
+| \*.dynamics.com | https | Common Data Service |
 | vortex.data.microsoft.com |https |Telemetry |
-| localhost | https | Power Apps Mobile
+| localhost | https | Power Apps Mobile|
+| api.bap.microsoft.com | https | Environment permissions management|
+| api.businessappdiscovery.microsoft.com | https | Environment permissions management|
 
 > [!NOTE]
 > If you're using a VPN, it must be configured to exclude localhost from tunneling for Power Apps Mobile.
