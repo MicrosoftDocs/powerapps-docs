@@ -119,7 +119,7 @@ Use the **Recent** records list to pin favorite records.
 
 ## Edit a record
 
-1. From the Home screeen, open a record to edit it. 
+1. From the Home screeen, open a record that you want to edit. 
 2. When you are done editing the record, select **Save**. To cancel your changes, select **Discard**.
 
    > [!div class="mx-imgBorder"]
