@@ -115,15 +115,15 @@ Use the **Recent** records list to pin favorite records.
 2. On the open record, select select **More** ![More record commands icon"](media/access_record_commands_icon.png "More record commands icon") to access more commands.
 
 
-> [!div class="mx-imgBorder"]
-> ![Commands on a record](media/pa_mobile_view_record_commands.gif "Commands on a record").
+   > [!div class="mx-imgBorder"]
+   > ![Commands on a record](media/pa_mobile_view_record_commands.gif "Commands on a record").
 
 ## Edit a record
 
 1. From the Home screeen, open a record to edit it. 
 2. When you are done editing the record, select **Save**. To cancel your changes, select **Discard**.
 
-> [!div class="mx-imgBorder"]
-> ![Edit a record](media/pa_mobile_edit_record.png "Edit a record").
+   > [!div class="mx-imgBorder"]
+   > ![Edit a record](media/pa_mobile_edit_record.png "Edit a record").
 
 
