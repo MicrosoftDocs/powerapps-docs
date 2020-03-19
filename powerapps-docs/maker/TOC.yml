@@ -305,14 +305,32 @@
             href: ./canvas-apps/use-line-pie-bar-chart.md
           - name: Add multimedia
             href: ./canvas-apps/add-images-pictures-audio-video.md
-          - name: Add augmented reality features
+          - name: Add augmented reality components
             items:
-            - name: Augmented reality scenarios
-              href: ./canvas-apps/add-augmented-mixed-reality.md
+            - name: Augmented reality components
+              href: ./canvas-apps/augmented-reality-overview.md
             - name: Create a sample augmented reality app
               href: ./canvas-apps/augmented-reality-quickstart.md
             - name: Use example augmented reality apps
               href: ./canvas-apps/augmented-reality-example-apps.md
+            - name: Measure in AR - advanced
+              href: ./canvas-apps/augmented-reality-component-measure-advanced.md
+            - name: Measure in AR - distance
+              href: ./canvas-apps/augmented-reality-component-measure-distance.md
+            - name: View in 3D
+              href: ./canvas-apps/augmented-reality-component-view-3d.md
+            - name: View in AR
+              href: ./canvas-apps/augmented-reality-component-view-ar.md
+            - name: View shape in AR
+              href: ./canvas-apps/augmented-reality-components-view-shape.md
+          - name: Add geospatial components
+            items:
+            - name: Geospatial components
+              href: ./canvas-apps/geospatial-overview.md
+            - name: Input address
+              href: ./canvas-apps/geospatial-component-input-address.md
+            - name: Measure in AR - distance
+              href: ./canvas-apps/geospatial-component-map.md
           - name: Add Power BI data
             href: ./canvas-apps/powerapps-custom-visual.md
           - name: Working with gallery

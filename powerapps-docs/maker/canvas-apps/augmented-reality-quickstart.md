@@ -1,14 +1,14 @@
 ---
-title: Use a sample app | Microsoft Docs
-description: Step-by-step instructions for creating a canvas app based on a sample in Power Apps
-author: wimcoor
-manager: kvivek
+title: 
+description: 
+author: iaanw
+manager: shellha
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 01/22/2020
-ms.author: wimcoor
+ms.date: 3/19/2020
+ms.author: iawilt
 search.audienceType: 
   - maker
 search.app: 
