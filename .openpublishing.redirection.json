@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/maker/model-driven-apps/create-and-edit-views.md",
+      "redirect_url": "create-edit-views-app-designer",
+      "redirect_document_id": "false"
+    },    
+    {
       "source_path": "powerapps-docs/maker/canvas-apps/add-images-to-excel.md",
       "redirect_url": "add-images-pictures-audio-video",
       "redirect_document_id": "false"
