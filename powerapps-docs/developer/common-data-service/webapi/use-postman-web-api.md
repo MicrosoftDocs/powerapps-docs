@@ -3,7 +3,7 @@ title: "Use Postman with Common Data Service Web API (Developer Guide for Common
 description: "Learn how to use Postman to work with Common Data Service Web API"
 ms.custom: 
 ms.date: 04/22/2019
-"pehecke"
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.suite: 
 ms.tgt_pltfrm: 
@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: 5829C16D-417D-4A82-9093-C576ADB683D1
 caps.latest.revision: 7
 author: susikka
-ms.author: susikka
+ms.author: "Sushant.Sikka"
 manager: shujoshi
 search.audienceType: 
   - developer
