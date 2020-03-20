@@ -3,7 +3,7 @@ title: "Work with alternate keys (Common Data Service) | Microsoft Docs" # Inten
 description: "The topic explains about how to create alternate keys for an entity. Alternate keys can be created programmatically or by using the customization tools" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 03/16/2020
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID

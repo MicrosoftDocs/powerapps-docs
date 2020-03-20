@@ -1560,9 +1560,7 @@
     - name: Update or upgrade solutions
       href: ./common-data-service/update-solutions.md
     - name: Export solutions
-      href: ./common-data-service/export-solutions.md      
-    - name: Create solution patches
-      href: ./common-data-service/solution-patches.md         
+      href: ./common-data-service/export-solutions.md               
     - name: How managed solutions are merged
       href: ./common-data-service/how-managed-solutions-merged.md
     - name: Use environment variables
@@ -1581,6 +1579,10 @@
       href: ./common-data-service/set-managed-properties-metadata.md
     - name: Best practices
       href: ./common-data-service/solution-best-practices.md
+    - name: "Advanced topics"
+      items:
+      - name: Create solution patches
+        href: ./common-data-service/solution-patches.md
   - name: Work with dataflows
     href: ./common-data-service/self-service-data-prep-with-dataflows.md
     items:
