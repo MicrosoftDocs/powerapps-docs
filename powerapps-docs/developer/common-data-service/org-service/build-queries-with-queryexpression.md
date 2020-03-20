@@ -3,7 +3,7 @@ title: "Build queries with QueryExpression (Common Data Service) | Microsoft Doc
 description: "Read how you can use the QueryExpression class to programmatically build a query containing data filters and search conditions that define the scope of a database search" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 06/25/2019
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" 

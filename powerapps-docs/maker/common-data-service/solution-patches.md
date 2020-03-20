@@ -38,9 +38,9 @@ You can create a patch for a parent solution and export it as a minor update to 
   
 -   A patch can have only one parent solution, but a parent solution can have one or more patches.  
   
--   A patch is created for an unmanaged solution. You can’t create a patch for a managed solution.  
+-   A patch is created from an unmanaged solution. You can’t create a patch from a managed solution.  
   
--   When you export a patch to a target system, you should export it as a managed patch. Don’t use unmanaged patches in production environments.  
+-   When you import a patch into a target system, you should export it as a managed patch. Don’t use unmanaged patches in production environments.  
   
 -   The parent solution must be present in the target system to install a patch.  
   
