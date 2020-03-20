@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
-ms.reviewer: "susikka"
+ms.reviewer: "pehecke"
 manager: "kvivek" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
@@ -23,22 +23,22 @@ This sample shows how to access the Discovery Service using the OData V4 RESTful
 
 This sample is available on Github at [https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/webapi/C%23/GlobalDiscovery](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/webapi/C%23/GlobalDiscovery)
 
-## What this sample does
-
+## What this sample does''
+''
 This sample returns the available Common Data Service instances for a given user credential.
 
 ## How this sample works
 
 This sample will use credential information in the App.config file, but will not use the URL configured in the connection string.
 Instead, it will just use the user credentials and the clientid.
-
+''''''''''''
 ### Demonstrates
 
 This sample uses a HttpClient to authenticate using ADAL (v2.29) and call the Discovery Service to return information about available instances the user can connect to.
 
 The sample depends on the `GetInstances` method and the `Instance` class below:
 
-```csharp
+```csharp    
     /// <summary>
     /// Uses the Discovery Service to return organization instances.
     /// </summary>
@@ -54,7 +54,7 @@ The sample depends on the `GetInstances` method and the `Instance` class below:
 
       UserCredential cred = new UserCredential(username, password);
       AuthenticationResult authResult = authContext.AcquireToken(GlobalDiscoUrl, clientId, cred);
-
+'
       HttpClient client = new HttpClient();
       client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", authResult.AccessToken);
       client.Timeout = new TimeSpan(0, 2, 0);
@@ -68,19 +68,19 @@ The sample depends on the `GetInstances` method and the `Instance` class below:
         //Get the response content and parse it.
         string result = response.Content.ReadAsStringAsync().Result;
         JObject body = JObject.Parse(result);
-        JArray values = (JArray)body.GetValue("value");
+        JArray values = (JArray)body.GetValue("value");''
 
         if (!values.HasValues)
         {
           return new List<Instance>();
-        }
+        }'
 
         return JsonConvert.DeserializeObject<List<Instance>>(values.ToString());
-      }
+      }'
       else
       {
         throw new Exception(response.ReasonPhrase);
-      }
+      }'
     }
 ```
 
@@ -103,3 +103,4 @@ The sample depends on the `GetInstances` method and the `Instance` class below:
   }
 ```
 
+                                                                                                                    '''

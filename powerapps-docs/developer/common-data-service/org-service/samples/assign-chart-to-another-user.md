@@ -3,7 +3,7 @@ title: " Assign chart to another user (Common Data Service) | Microsoft Docs" # 
 description: "This sample showcases how to assign a user-owned visualization to another user " # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 12/20/2019
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "samples"
 author: "JimDaly" # GitHub ID

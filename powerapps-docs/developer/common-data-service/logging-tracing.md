@@ -3,7 +3,7 @@ title: "Logging and tracing (Common Data Service) | Microsoft Docs"
 description: "Use the trace log to store plug-in execution information to aid in plug-in debugging."
 ms.custom: ""
 ms.date: 09/19/2019
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: JimDaly

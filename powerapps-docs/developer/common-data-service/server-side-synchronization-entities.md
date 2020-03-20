@@ -3,7 +3,7 @@ title: "Server-side synchronization entities (Common Data Service) | Microsoft D
 description: "Server-side synchronization provides an interface between Common Data Service and one or more Exchange servers or POP3 servers for incoming email, and one or more SMTP or Exchange servers for outgoing email."
 ms.custom: ""
 ms.date: 02/21/2019
-ms.reviewer: "kvivek"
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "mayadumesh"
@@ -33,7 +33,7 @@ In Power Apps, server-side synchronization provides an interface between Common 
   
 - Use information from a related email profile record to process emails for all mailboxes.  
   
-- Prevent email processing for inactive mailboxes or for mailboxes that don’t have an associated email profile.  
+- Prevent email processing for inactive mailboxes or for mailboxes that don't have an associated email profile.  
   
 - Automatically relate an associated mailbox to the default email profile when a user or a queue is created with the email delivery method set as server-side synchronization.  
   
