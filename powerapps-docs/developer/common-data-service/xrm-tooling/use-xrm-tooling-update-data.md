@@ -3,7 +3,7 @@ title: "Use XRM tooling to update data (Common Data Service)| Microsoft Docs"
 description: "Use CrmServiceClient class to update data on Common Data Service"
 ms.custom: ""
 ms.date: 03/27/2019
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""

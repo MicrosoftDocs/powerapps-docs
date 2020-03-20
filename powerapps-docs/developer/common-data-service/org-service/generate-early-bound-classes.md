@@ -3,7 +3,7 @@ title: "Generate early-bound classes for the Organization service (Common Data S
 description: "CrmSvcUtil.exe is a command-line code generation tool for use with Common Data Service. This tool generates early-bound .NET Framework  classes that represent the entity data model used by Common Data Service." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" # GitHub ID

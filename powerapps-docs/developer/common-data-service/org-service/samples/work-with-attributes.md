@@ -3,7 +3,7 @@ title: "Sample: Work with attributes (Common Data Service) | Microsoft Docs" # I
 description: "This sample shows how to work with attributes" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "samples"
 author: "JimDaly" # GitHub ID

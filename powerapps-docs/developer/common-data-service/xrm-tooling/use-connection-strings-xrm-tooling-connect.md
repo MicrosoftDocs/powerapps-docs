@@ -3,7 +3,7 @@ title: "Use connection strings in XRM tooling to connect to Common Data Service 
 description: "XRM tooling enables you to connect to your Common Data Service environment by using connection strings"
 ms.custom: ""
 ms.date: 11/13/2019
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "nkrb"

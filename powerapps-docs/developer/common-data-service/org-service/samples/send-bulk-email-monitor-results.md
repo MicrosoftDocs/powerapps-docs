@@ -3,7 +3,7 @@ title: "Sample: Send bulk email and monitor results(Common Data Service) | Micro
 description: "This samples hows how to send bulk emails and monitor results" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "samples"
 author: "JimDaly" # GitHub ID
