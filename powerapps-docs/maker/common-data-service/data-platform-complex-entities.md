@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: cds
 ms.topic: reference
-ms.date: 09/26/2019
+ms.date: 03/20/2020
 ms.author: lanced
 search.audienceType: 
   - maker
@@ -18,7 +18,8 @@ search.app:
 # Complex entities and licensing
 
 > [!IMPORTANT]
-> This topic is out-of-date and will be updated soon to reflect the latest licensing changes that are applicable starting October 1, 2019. For the latest information on licensing requirements for entities, see the [Power Apps licensing guide](https://go.microsoft.com/fwlink/?linkid=2085130).
+> Complex entities are only applicable for Power Apps Plan 1 and Plan 2 licenses and not for Power Apps per app and Power Apps per user plans.
+> For the latest information on licensing requirements for entities, see the [Power Apps licensing guide](https://go.microsoft.com/fwlink/p/?linkid=2085130).
 
 Entities that include the following complex server-side logic require users of an app or flow that uses these entities to have a Power Apps Plan 2 or Power Automate Plan 2 license:
 
