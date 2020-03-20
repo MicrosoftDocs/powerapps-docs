@@ -3,7 +3,7 @@ title: "Sample: Use optimistic concurrency with update and delete operations (Co
 description: "This sample shows how to use optimistic concurrency for update and delete operations." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "samples"
 author: "JimDaly" # GitHub ID

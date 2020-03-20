@@ -3,7 +3,7 @@ title: "Detect duplicate data using code (Common Data Service) | Microsoft Docs"
 description: "Duplicate detection lets organizations set duplicate detection policies and create duplicate detection rules for business and custom entities" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID

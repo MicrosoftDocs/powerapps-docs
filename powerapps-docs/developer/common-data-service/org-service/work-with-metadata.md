@@ -3,7 +3,7 @@ title: "Work with metadata using the Organization service (Common Data Service) 
 description: "Describes how to programmatically access and modify the metadata model using the Organization service"
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" # GitHub ID

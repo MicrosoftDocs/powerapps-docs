@@ -3,7 +3,7 @@ title: "Use the Common Data Service Organization Service (Common Data Service) |
 description: "Read how you can use Common Data Service Organization Service to work with data and metadata." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" # GitHub ID

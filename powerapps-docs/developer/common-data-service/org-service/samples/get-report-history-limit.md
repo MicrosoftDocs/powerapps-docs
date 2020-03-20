@@ -3,7 +3,7 @@ title: "Sample: Get report history limits (Common Data Service) | Microsoft Docs
 description: "This sample shows how to get report history limits." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "samples"
 author: "JimDaly" # GitHub ID

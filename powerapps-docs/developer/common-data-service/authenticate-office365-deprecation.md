@@ -3,7 +3,7 @@ title: "Use of Office365 authentication with the WS-Trust security protocol (Com
 description: "Describes deprecation of the WS-Trust security protocol and the authentication code changes required in applications."
 ms.custom: ""
 ms.date: 02/05/2020
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "phecke" # GitHub ID

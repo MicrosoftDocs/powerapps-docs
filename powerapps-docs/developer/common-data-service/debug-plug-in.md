@@ -3,7 +3,7 @@ title: "Debug Plug-ins (Common Data Service) | Microsoft Docs" # Intent and prod
 description: "Learn how to debug plug-ins using the Plug-in registration tool." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
