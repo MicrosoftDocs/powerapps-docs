@@ -3,7 +3,7 @@ title: "Create your own actions (Common Data Service) | Microsoft Docs" # Intent
 description: "Actions are custom messages that help in extending functionality of Common Data Service. Learn more about how to create your own actions" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 09/20/2019
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" # GitHub ID

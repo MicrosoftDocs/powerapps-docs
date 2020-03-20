@@ -3,7 +3,7 @@ title: "Community tools for Common Data Service (Common Data Service) | Microsof
 description: "Read about the community built tools that help you perform various tasks with Power Apps Common Data Service." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 02/09/2020
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "KUmarVivek" # GitHub ID

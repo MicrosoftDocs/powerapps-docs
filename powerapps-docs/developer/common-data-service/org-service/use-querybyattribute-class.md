@@ -3,7 +3,7 @@ title: "Use the QueryByAttribute class (Common Data Service) | Microsoft Docs" #
 description: "You can use the QueryByAttribute class to build queries that test a set of attributes against a set of values"
 ms.custom: ""
 ms.date: 05/03/2019
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" # GitHub ID

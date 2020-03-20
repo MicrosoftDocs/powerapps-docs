@@ -3,7 +3,7 @@ title: "Customization solutions file schema (Common Data Service) | Microsoft Do
 description: "The following is the schema definition for an solution customization file from Common Data Service."
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
