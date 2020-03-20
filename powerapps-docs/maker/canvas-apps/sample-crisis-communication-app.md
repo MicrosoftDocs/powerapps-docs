@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: sample
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 03/12/2020
+ms.date: 03/20/2020
 ms.author: mabolan
 search.audienceType: 
   - maker
@@ -668,25 +668,28 @@ The app uses a flow to send notifications to end users whenever there is a new c
 
 
 ### Optional: Sending notifications to more than 999 users
-The current **Get group members** action is limited to pulling 999 users (100 users by default). If you would
-like to distribute to more users than this, you can alter to the flow to simply send an email to a distribution group.
 
-1. Delete the following cards: **Get group members** and **Switch on preferred send notification setting**
+The current **Get group members** action is limited to pulling 999 users (100 users by default). To distribute to more users, you can alter to the flow to  send an email to a distribution group instead.
+
+1. Delete the following cards: **Get group members** and **Switch on preferred send notification setting**:
 
     ![Delete actions](media/sample-crisis-communication-app/36-delete-actions.png)
 
-1. In their place, add a new action
-1. Search for and select **Send an email (V2)**
+1. Add a new action.
+
+1. Search for and select **Send an email (V2)**:
 
     ![Add send an email](media/sample-crisis-communication-app/37-add-send-an-email.png)
 
-1. In the **To** field, type in the name of your distribution group
-1. In the **Subject** field, select the **Add a dynamic value** button and add the **Title** field from the **When a news item is posted** card.
+1. In the **To** field, type in the name of your distribution group.
+
+1. In the **Subject** field, select the **Add a dynamic value** button and add the **Title** field from the **When a news item is posted** card:
 
     ![Add title](media/sample-crisis-communication-app/38-add-title.png)
 
 1. In the **Body** field, select the **Add a dynamic value** button and add the **Details** field from the **When a news item is posted** card.
-1. Select **Save**
+
+1. Select **Save**.
 
 ### Test the news notification flow
 
