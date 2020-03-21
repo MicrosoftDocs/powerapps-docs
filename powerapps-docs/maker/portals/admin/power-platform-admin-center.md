@@ -13,7 +13,9 @@ ms.reviewer: tapanm
 
 # Manage portals from Power Platform admin center
 
-You can now manage portals in the Power Platform admin center.
+You can now manage portals in the Power Platform admin center. The Power Platform admin center helps you manage both capacity-based and add-on portals. You an also see information such as how many days a trial portal has before it expires. For more information about the portal licensing, see [licensing FAQ](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#portals) and [portal differences](https://docs.microsoft.com/powerapps/maker/portals/faq#what-is-the-difference-between-power-apps-portals-dynamics-365-portals-and-add-on-portals).
+
+You can manage the portals in Power Platform admin center in two different ways. You can manage all portals for the current tenant from **Resources** -> **Portals** option. And you can manage portals for a specific environment from **Environments** option. 
 
 ## Manage all portals for a tenant
 
@@ -23,21 +25,37 @@ To see a list of all portals for your tenant:
 
 1. Select **Resources** and then **Portals** from the left-side menu.
 
-    ![Portals option on Power Portals admin center](../media/portals-on-ppac.png)
+    ![Portals option on Power Portals admin center](..\media\portals-on-ppac.png)
 
-## Environment all portals for an environment
+1. Select a portal that you want to manage and then select the 
+
+## Manage all portals for an environment
 
 Follow these steps to see a list of all portals for your environment.
 
 1. Sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/).
 
-1. Select **Environments** and then select an environment.
+1. Select **Environments** from the left navigation:
 
-1. Select **Portals** under **Resources**.
+    ![Environments list](..\media\environments-list.png)
 
-You'll see a list of Portals installed in the selected environment.
+1. Hover over and click on the environment name hyperlink to open environments details:
 
-![Environments on Power Platform admin center](../media/environments-on-ppac.png)
+    ![Select environment](..\media\select-environment.png)
+
+1. Select **Portals** under the **Resources** option from the right-side of the screen:
+
+    ![Environments details](..\media\environment-details.png)
+
+1. You'll see a list of Portals installed in the selected environment.
+
+    ![Portals specific to an environment](..\media\environments-portals.png)
+
+1. To manage a portal, select **More portal actions** (**...**) and then select **Manage**. Alternatively, you can also select the portal and then select **Manage** from the top navigation:
+
+    ![Manage portal specific to an environment](..\media\manage-environments-portal.png)
+
+To continue and configure portal details, refer [portals details](https://docs.microsoft.com/powerapps/maker/portals/admin/portal-details).
 
 ### Portal types
 
