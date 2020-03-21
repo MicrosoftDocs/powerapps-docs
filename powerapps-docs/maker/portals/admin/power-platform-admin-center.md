@@ -25,7 +25,7 @@ To see a list of all portals for your tenant:
 
 1. Select **Resources** and then **Portals** from the left-side menu.
 
-    ![Portals option on Power Portals admin center](..\media\portals-on-ppac.png)
+    ![Portals option on Power Portals admin center](../media/portals-on-ppac.png)
 
 1. Select a portal that you want to manage and then select the 
 
@@ -37,23 +37,23 @@ Follow these steps to see a list of all portals for your environment.
 
 1. Select **Environments** from the left navigation:
 
-    ![Environments list](..\media\environments-list.png)
+    ![Environments list](../media/environments-list.png)
 
 1. Hover over and click on the environment name hyperlink to open environments details:
 
-    ![Select environment](..\media\select-environment.png)
+    ![Select environment](../media/select-environment.png)
 
 1. Select **Portals** under the **Resources** option from the right-side of the screen:
 
-    ![Environments details](..\media\environment-details.png)
+    ![Environments details](../media/environment-details.png)
 
 1. You'll see a list of Portals installed in the selected environment.
 
-    ![Portals specific to an environment](..\media\environments-portals.png)
+    ![Portals specific to an environment](../media/environments-portals.png)
 
 1. To manage a portal, select **More portal actions** (**...**) and then select **Manage**. Alternatively, you can also select the portal and then select **Manage** from the top navigation:
 
-    ![Manage portal specific to an environment](..\media\manage-environments-portal.png)
+    ![Manage portal specific to an environment](../media/manage-environments-portal.png)
 
 To continue and configure portal details, refer [portals details](https://docs.microsoft.com/powerapps/maker/portals/admin/portal-details).
 
