@@ -20,7 +20,7 @@ Exits the currently running app and optionally signs out the current user.
 ## Description
 The **Exit** function exits the currently running app.  The user is returned to the list of apps, where they can select another app to open.  
 
-**Exit** stops any further formula evaluation.  Any function calls chained after the **Exit** are not carried out (using the [**;** operator](operators.md).   
+**Exit** stops any further formula evaluation.  Any function calls chained after the **Exit** are not carried out (using the [**;** operator](operators.md)).   
 
 In addition to exiting, use the *Signout* argument to also sign the current user out of Power Apps.  This is helpful when devices are shared between users and per user security and logging is desired.  
 
