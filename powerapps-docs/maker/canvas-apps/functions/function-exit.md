@@ -34,13 +34,13 @@ While authoring the app, calling **Exit** does not exit or sign out the user.  H
 ## Syntax
 **Exit**( [*Signout*] )
 
-* *Signout* – Optional. A Boolean value that if *true* will sign the current user out of Power Apps.  Default is *false*.
+* *Signout* – Optional. A Boolean value that if *true* will sign the current user out of Power Apps.  THe default is *false* and the user remains signed in.
 
 ## Examples
 
 | Formula | Description | 
 | --- | --- | 
-| **Exit()** | Exits the current app and returns the user to the list of apps.  The user remains signed in. |
-| **Exit(&nbps;true&nbsp;)** | Exits the current app and the user is signed out.  The user will need to sign back in with their credentials before running another app. | 
+| **Exit()** | Exits the current app and leaves the user signed in.  The user is returned tothe list of apps.  |
+| **Exit(&nbsp;true&nbsp;)** | Exits the current app and the user is signed out.  The user will need to sign back in with their credentials before running an app. | 
 
 
