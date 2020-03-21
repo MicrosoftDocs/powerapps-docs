@@ -3,7 +3,7 @@ title: "Step 1: Create a Microsoft Partner Center account (Common Data Service) 
 description: "App builders must be members of Microsoft Partner Network (MPN) to publish apps on AppSource." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 12/20/2019
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "KumarVivek" # GitHub ID

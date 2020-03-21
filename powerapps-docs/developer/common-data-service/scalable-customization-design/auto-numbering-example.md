@@ -3,7 +3,7 @@ title: "Scalable Customization Design: Auto-numbering example (Common Data Servi
 description: "This example illustrates how transactions and concurrency issues need to be accounted for in a code customization." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 1/15/2019
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "rogergilchrist" # GitHub ID
