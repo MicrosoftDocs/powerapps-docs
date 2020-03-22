@@ -86,3 +86,11 @@ A portal can be in *Configured*, *Suspended*, or *Not-configured* status. The fo
 
 > [!NOTE]
 > You can [create a new portal](https://docs.microsoft.com/powerapps/maker/portals/provision-portal-add-on) if the portal add-on status is *Not-configured*. The status will change to *Configured* after the portal is provisioned.
+
+## Next steps
+
+Configure [portals details](https://docs.microsoft.com/powerapps/maker/portals/admin/portal-details).
+
+### See also
+
+Manage apps with [Power Platform admin center](https://docs.microsoft.com/power-platform/admin/manage-apps)
