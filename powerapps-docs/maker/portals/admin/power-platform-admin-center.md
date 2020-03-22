@@ -25,13 +25,13 @@ To see a list of all portals for your tenant:
 
 1. Select **Resources** and then **Portals** from the left-side menu.
 
-    ![Portals option on Power Portals admin center](../media/manage-portals-all-environments.png)
+    ![Portals option on Power Platform admin center](../media/manage-portals-all-environments.png)
 
 1. Select a portal.
 
 1. To manage a portal, select **More portal actions** (**...**) and then select **Manage**. Alternatively, you can also select the portal and then select **Manage** from the top navigation:
 
-    ![Manage portal from Power Portals admin center](../media/portals-manage-ppac.png)
+    ![Manage portal from Power Platform admin center](../media/portals-manage-ppac.png)
 
 To continue and configure portal details, refer [portals details](https://docs.microsoft.com/powerapps/maker/portals/admin/portal-details).
 
