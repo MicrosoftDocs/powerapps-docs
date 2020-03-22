@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 03/17/2020
+ms.date: 03/22/2020
 ms.author: nenandw
 ms.reviewer: tapanm
 ---
@@ -15,7 +15,7 @@ ms.reviewer: tapanm
 
 You can now manage portals in the Power Platform admin center. The Power Platform admin center helps you manage both capacity-based and add-on portals. You an also see information such as how many days a trial portal has before it expires. For more information about the portal licensing, see [licensing FAQ](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#portals) and [portal differences](https://docs.microsoft.com/powerapps/maker/portals/faq#what-is-the-difference-between-power-apps-portals-dynamics-365-portals-and-add-on-portals).
 
-You can manage the portals in Power Platform admin center in two different ways. You can manage all portals for the current tenant from **Resources** -> **Portals** option. And you can manage portals for a specific environment from **Environments** option. 
+You can manage the portals in Power Platform admin center in two different ways. You can manage all portals for the current tenant from **Resources** -> **Portals** option. And you can manage portals for a specific environment from **Environments** option.
 
 ## Manage all portals for a tenant
 
@@ -25,9 +25,15 @@ To see a list of all portals for your tenant:
 
 1. Select **Resources** and then **Portals** from the left-side menu.
 
-    ![Portals option on Power Portals admin center](../media/portals-on-ppac.png)
+    ![Portals option on Power Portals admin center](../media/manage-portals-all-environments.png)
 
-1. Select a portal that you want to manage and then select the 
+1. Select a portal.
+
+1. To manage a portal, select **More portal actions** (**...**) and then select **Manage**. Alternatively, you can also select the portal and then select **Manage** from the top navigation:
+
+    ![Manage portal from Power Portals admin center](../media/portals-manage-ppac.png)
+
+To continue and configure portal details, refer [portals details](https://docs.microsoft.com/powerapps/maker/portals/admin/portal-details).
 
 ## Manage all portals for an environment
 
@@ -78,3 +84,5 @@ A portal can be in *Configured*, *Suspended*, or *Not-configured* status. The fo
 | Suspended      | This portal has been suspended due to trial period over. And this portal will be deleted in 7 days, if not converted to production. |
 | Not-configured | This app is ready to be configured to an environment.                                                                           |
 
+> [!NOTE]
+> You can [create a new portal](https://docs.microsoft.com/powerapps/maker/portals/provision-portal-add-on) if the portal add-on status is *Not-configured*. The status will change to *Configured* after the portal is provisioned.
