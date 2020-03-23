@@ -64,7 +64,7 @@ You must have a device to work through this example as it uses the **LoadData** 
 
 2. Double click the button control to change the button text to **Add Item** (or modify the **Text** property).
 
-3. Set the **OnSeelct** property of the button control to this formula which will add an item to our collection:
+3. Set the **OnSelect** property of the button control to this formula which will add an item to our collection:
     ```powerapps-dot
     Collect( MyItems, { Item: TextInput1.Text, Picture: Camera1.Photo } )
     ```
@@ -75,7 +75,7 @@ You must have a device to work through this example as it uses the **LoadData** 
 
 2. Double click the button control to change the button text to **Save Data** (or modify the **Text** property).
 
-3. Set the **OnSeelct** property of the button control to this formula in order to save our collection to the local device:
+3. Set the **OnSelect** property of the button control to this formula in order to save our collection to the local device:
     ```powerapps-dot
     SaveData( MyItems, "LocalSavedItems" )
     ```
@@ -88,7 +88,7 @@ You must have a device to work through this example as it uses the **LoadData** 
 
 2. Double click the button control to change the button text to **Load Data** (or modify the **Text** property).
 
-3. Set the **OnSeelct** property of the button control to this formula in order to load our collection from the local device:
+3. Set the **OnSelect** property of the button control to this formula in order to load our collection from the local device:
     ```powerapps-dot
     LoadData( MyItems, "LocalSavedItems" )
     ``` 
