@@ -2,7 +2,7 @@
 title: "Create or edit model-driven app quick create forms in Power Apps | MicrosoftDocs"
 description: "Learn how to create or edit a quick create form"
 ms.custom: ""
-ms.date: 05/14/2019
+ms.date: 03/23/2020
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -40,7 +40,7 @@ In this topic, you create and edit a quick create form.
 |Account|Campaign Response|Case|Competitor|  
 |Contact|Lead|Opportunity||  
   
-Although you can create quick create forms for system activity entities, with the exception of the appointment entity, they do not support quick create forms. With the release of Dynamics 365, version 9.0, the appointment entity includes a quick create form for use with the Unified Interface. Currently, the option to disable the quick create form for the appointment entity is not supported. Any of the other [updated entities](create-design-forms.md) and any custom entities can be enabled to support these forms by selecting **Allow Quick Create** in the entity definition and creating a quick create form for the entity. 
+Although you can create quick create forms for system activity entities, with the exception of the appointment entity, they do not support quick create forms. Currently, the option to disable the quick create form for the appointment entity is not supported. Any of the other [updated entities](create-design-forms.md) and any custom entities can be enabled to support these forms by selecting **Enable quick create forms** in the entity definition and creating a quick create form for the entity. 
 
 You can enable custom activity entities to support quick create forms, and you can create quick create forms for those entities. However, the quick create form for custom activity entities will not be used when people select **Create** on the navigation bar. These quick create forms can be used only when people add a new record for a sub-grid that displays that specific custom activity entity.  
   
@@ -49,18 +49,14 @@ You can enable custom activity entities to support quick create forms, and you c
  Although you can define multiple quick create forms, only one quick create form can be used by everyone. The form everyone will use is set using the form order. Quick create forms cannot be assigned to security roles and they do not provide the capability for the user to switch forms.  
   
 > [!NOTE]
->  - The entity must have the **Allow Quick Create** option enabled for the quick create form to be displayed. 
+>  - The entity must have the **Enable quick create forms** option enabled for the quick create form to be displayed. 
 >  - You must also add the entity and the quick create form to your app.
->  - Some fields, such as the CREATEDON field, aren’t available to add to a quick create form.  
+>  - Some fields, such as the CREATEDON field, aren't available to add to a quick create form.  
   
 ### How to create a quick create form  
   
 1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
-
-> [!IMPORTANT]
-> “If the **Model-driven** design mode isn't available, you may need to [Create an environment](https://docs.microsoft.com/powerapps/administrator/create-environment).     
-  
 2.  Expand **Data**, select **Entities**, select the entity that you want, and then select the **Forms** tab.  
 
 3.  On the toolbar select **Add form** > **Quick Create Form**.  
@@ -73,7 +69,7 @@ You can enable custom activity entities to support quick create forms, and you c
   
 <a name="BKMK_EditQuickCreate"></a>   
 ## Edit a quick create form  
- While quick create forms support form scripts and business rules, their purpose is different from main forms and they don’t support all the capabilities of main forms. Quick create forms always have one section with three columns. You can’t add additional sections or columns.  
+ While quick create forms support form scripts and business rules, their purpose is different from main forms and they don't support all the capabilities of main forms. Quick create forms always have one section with three columns. You can't add additional sections or columns.  
   
  The following controls cannot be added to quick create forms:  
   
@@ -95,9 +91,6 @@ If you add a composite field to a quick create form, it will be displayed as sep
   
 1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
-> [!IMPORTANT]
-> If the **Model-driven** design mode isn't available, you may need to [Create an environment](https://docs.microsoft.com/powerapps/administrator/create-environment).    
-  
 2. Expand **Data**, select **Entities**, select the entity that you want, and then select the **Forms** tab.    
 
 3. In the form list, select a form where the form **Type** is **Quick Create**.  
@@ -110,8 +103,8 @@ If you add a composite field to a quick create form, it will be displayed as sep
   
 5.  Select **Publish** to see the modified form in the application.  
 
-## Allow Quick Create property form behavior for activities
-Introduced in the 9.1.0.2007 update, the **Allow Quick Create** property can be enabled or disabled for all standard activities except recurring appointments. This property lets you change the form that is displayed by default for most activities. By default, the **Allow Quick Create** property is enabled and the quick create form is the form displayed in the app areas and activity entities that support it. 
+## Enable Quick Create Form property behavior for activities
+The **Enable quick create forms** property can be enabled or disabled for all standard activities except recurring appointments. This property lets you change the form that is displayed by default for most activities. By default, the **Enable quick create forms** property is enabled and the quick create form is the form displayed in the app areas and activity entities that support it. 
 
 > [!div class="mx-imgBorder"] 
 > ![](media/allow-quick-create.png "Allow Quick Create property on appointment entity")
@@ -136,7 +129,7 @@ The following table indicates what form is displayed by default when the **Allow
 
 ### Classic web client form display behavior
 
-The following table indicates what form is displayed by default when the **Allow Quick Create** property is *enabled* in the classic web client.
+The following table indicates what form is displayed by default when the **Enable quick create forms** property is *enabled* in the classic web client.
 
 |Location where form is accessed  |Form displayed  |
 |---------|---------|
@@ -150,7 +143,7 @@ The following table indicates what form is displayed by default when the **Allow
 
  #### Classic web client social pane behavior
  
-The social pane is a special case because it doesn't use the **Allow Quick Create** property but uses different forms for different activity entities as indicated here.
+The social pane is a special case because it doesn't use the **Enable quick create forms** property but uses different forms for different activity entities as indicated here.
 
 
 |Activity  |Form displayed  |
@@ -163,9 +156,9 @@ The social pane is a special case because it doesn't use the **Allow Quick Creat
 
 ### Solution import Allow Quick Create value behavior
 
-When you import a solution from version 8.2 regardless of the value of the **Allow Quick Create** property in the solution, the following entities will be reset to the default form display value and the main form will display: task, phone call, email, and appointment. In this situation, you'll need to reset the **Allow Quick Create** option back to *enabled* for those activity entities after the import.
+When you import a solution from version 8.2 regardless of the value of the **Enable quick create forms** property in the solution, the following entities will be reset to the default form display value and the main form will display: task, phone call, email, and appointment. In this situation, you'll need to reset the **Enable quick create forms** option back to *enabled* for those activity entities after the import.
  
-If there is a customization made in a version 9.0 solution to entities where **Allow Quick Create** is enabled, the value will not change after import.  However, if you have set the **Allow Quick Create** option to *disabled* for the task, phone call, email, and appointment entities, the value will be overwritten to enabled. In this situation, you'll need to reset the **Allow Quick Create** option back to disabled for those activity entities after the import. 
+If there is a customization made in a version 9.0 solution to entities where **Enable quick create forms** is enabled, the value will not change after import.  However, if you have set the **Enable quick create forms** option to *disabled* for the task, phone call, email, and appointment entities, the value will be overwritten to enabled. In this situation, you'll need to reset the **Enable quick create forms** option back to disabled for those activity entities after the import. 
   
 ### See also  
 [Overview of the form editor user interface](form-editor-user-interface-legacy.md)
