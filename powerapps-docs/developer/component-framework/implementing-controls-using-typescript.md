@@ -30,13 +30,13 @@ The following steps are required to build a linear slider code component:
 To create a new project:
 
 1. Open a **Developer Command Prompt for VS 2017** window.
-1. Create a new folder for the project using the following command: 
-    ```CLI
-    mkdir LinearComponent
-    ```
-
-1. Go into the component folder using the command `cd LinearComponent`. 
-   
+       . Create a new folder for the project using the following command: 
+                ```CLI
+                mkdir LinearComponent
+                      ```
+                     
+               Go into the component folder using the command `cd LinearComponent`. 
+         
 1. Create a new component project by passing basic parameters using the command.
 
    ```CLI
@@ -88,7 +88,7 @@ Make changes to the predefined manifest file, as shown here:
       <resources>
         <code path="index.ts" order="1" />
         <css path="css/TS_LinearInputComponent.css" order="1" />
-        </resources>
+      </resources>
         ```
       The overall manifest file should look something like this: 
 
@@ -232,7 +232,7 @@ Developers and app makers can define their styling to represent their code compo
 
 1. Create a new `css` subfolder under the `TSLinearInputComponent` folder. 
 2. Create a new `TS_LinearInputComponent.css` file inside the `css` subfolder. 
-3. Add the following style content to the `TS_LinearInputComponent.css` file:
+3. Add the following style content to the `TS_LinearInputComponent.css` file:""""""""
 
     ```CSS
     .SampleNamespace\.TSLinearInputComponent input[type=range].linearslider {
@@ -386,7 +386,7 @@ To add the code components to a canvas app, follow the steps in the article [Add
 
 ### See also
 
-[Download sample components](https://go.microsoft.com/fwlink/?linkid=2088525)<br/>
+[Download sample components](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework)<br/>
 [Update existing Power Apps component framework components](updating-existing-controls.md)<br/>
 [Power Apps build tools](https://docs.microsoft.com/powerapps/developer/common-data-service/build-tools-overview)<br/>
 [Power Apps component framework API reference](reference/index.md)<br/>
