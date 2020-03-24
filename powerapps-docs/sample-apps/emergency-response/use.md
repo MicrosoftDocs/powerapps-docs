@@ -234,8 +234,8 @@ Launcher** screen where you can select a different hospital, region, or facility
 
 ## Next steps
 
-[Configure Emergency Response sample solution](config.md)
+[Configure Emergency Response sample solution](configure.md)
 
 ### See also
 
-[Crisis communication sample template](maker/canvas-apps/sample-crisis-communication-app)
+[Crisis communication sample template](../..//maker/canvas-apps/sample-crisis-communication-app)
