@@ -239,7 +239,7 @@ More details around pricing and capabilities of various plans can be found in [M
 Any user that has accessed an canvas app, on their mobile device, that’s published in an Azure AD tenant that isn’t their home tenant must sign-out of Power Apps and sign back in to Power Apps Mobile.  
 
 #### In Power Apps Mobile, how does a guest see apps in the guest tenant?
-As the guest user, open the email sent when an app in the guest tenant was shared, click the 'Open the app' button. This applies to both Azure Active Directory and Microsoft Account users.   
+As the guest user, open the email received when an app in the guest tenant was shared, and select the **Open the app** button. This applies to both Azure Active Directory and Microsoft Account users.   
 
 #### Must a guest accept the Azure AD guest invitation prior to sharing an app with the guest?
 No. If a guest launches an app shared with them prior to accepting a guest invitation the guest will be prompted to accept the invitation as part of the sign-in experience while launching the app.  
