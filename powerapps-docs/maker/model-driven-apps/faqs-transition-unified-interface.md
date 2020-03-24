@@ -63,7 +63,7 @@ The process for language translation is primarily unchanged, with the exception 
 
 ### I don't have budget or resources to do a project. Is the deadline a fixed date?
 
-We're locked to move away from the legacy web client by October 1, 2020. We recommend conducting some testing as soon as possible to understand the complexity of the project for your organization to get compatible. In most cases, extensive redesign should not be required to move forward quickly and start seeing user benefit. Contact Microsoft to provide any feedback that could stop your transition by creating a support case.
+We're locked to move away from the legacy web client by December 1, 2020. We recommend conducting some testing as soon as possible to understand the complexity of the project for your organization to get compatible. In most cases, extensive redesign should not be required to move forward quickly and start seeing user benefit. Contact Microsoft to provide any feedback that could stop your transition by creating a support case.
 
 ### We're working on transitioning to Unified Interface, but have hit some issues; how can we report to Microsoft?
 
@@ -103,7 +103,7 @@ Review our [deprecation notification page](https://docs.microsoft.com/power-plat
 
 ### Where can I find further information on the transition service?
 
-To help accelerate momentum for transition, we are providing a suggested target date for environments to be switched from the legacy web client to Unified Interface via our transition service. Customers will need to approve the date prior to any action and then will receive a series of communication reminder messages as the date draws closer. Dates can also be rescheduled if they are not suitable for the business up until the October 1, 2020 deadline. For more information, see **FAQs: Transitioning to Unified Interface** later in this topic.
+To help accelerate momentum for transition, we are providing a suggested target date for environments to be switched from the legacy web client to Unified Interface via our transition service. Customers will need to approve the date prior to any action and then will receive a series of communication reminder messages as the date draws closer. Dates can also be rescheduled if they are not suitable for the business up until the December 1, 2020 deadline. For more information, see the next section.
 
 
 ## FAQs: Transitioning to Unified Interface
@@ -131,17 +131,17 @@ To reschedule to an earlier date, update the existing date to your preferred opt
  
 To schedule to a later date, select the reschedule transition date button. Suggested dates will be available in the drop-down. Once approved, the date will be updated in the portal accordingly. Accept the updated date if you would like your environment to be transitioned. 
  
-Date changes will be reviewed and granted if the date is before October 1, 2020. The date will be updated within the portal once confirmed. 
+Date changes will be reviewed and granted if the date is before December 1, 2020. The date will be updated within the portal once confirmed. 
 
 > [!NOTE]
-> If you have an approved transition and the scheduled date is within 48 hours, you'll not be able to change the date. Likewise, you can't request a date after October 1, 2020 as the legacy web client will no longer be available then.
+> If you have an approved transition and the scheduled date is within 48 hours, you'll not be able to change the date. Likewise, you can't request a date after December 1, 2020 as the legacy web client will no longer be available then.
 
 ### What will happen if I don't opt in and approve a suggested transition date for my environment?
 
 There won't be any change to your environment if you haven't approved the suggested date within the portal. When the suggested date passes, we'll look to provide another date in the future for you to consider.  
  
 > [!NOTE]
-> After October 1, 2020, all environments will be updated to Unified Interface as per the October 2020 release wave.
+> After December 1, 2020, all environments will be updated to Unified Interface.
 
 ### My transition date is within 48 hours and I can't change the date within the portal. How can I stop the transition from taking place?
 
@@ -165,11 +165,11 @@ Check out the supporting content available on the [community site](https://commu
 Yes, you will still be able to switch back to the legacy web client for up to 10 days post transition. You can make the [switch manually](https://docs.microsoft.com/power-platform/admin/enable-unified-interface-only) for the first 10 days or raise a [standard support request](https://admin.powerplatform.microsoft.com/support?referer=mbssupport) and set the problem type to be "Transition from legacy web client to Unified Interface" as the manual switch will be disabled. 
 
 > [!NOTE]
-> The 10 days need to be prior to October 1, 2020 as the legacy web client will no longer be available after that date.
+> The 10 days need to be prior to December 1, 2020 as the legacy web client will no longer be available after that date.
 
-### I want to transition after October 1, 2020. Is that possible?
+### I want to transition after December 1, 2020. Is that possible?
 
-The legacy web client won't be available post the October 2020 release wave for end users. We don't have the ability to defer the date beyond that period.
+The legacy web client won't be available after December 1, 2020. We don't have the ability to defer the date beyond that period.
 
 If you encounter any blocking items, log them using your standard support process as soon as possible.
 
@@ -210,6 +210,6 @@ We don't anticipate any downtime when making this transition. However, we will o
 
 ### Are environments from all data centers included within this transition service?
 
-At present, environments from specific data centers, such as Government Community Cloud (GCC), have not been included within the portal. We'll provide suggested transition dates for these environments by June 2020. Customers who want to make the move to Unified Interface can always [switch manually](/power-platform/admin/enable-unified-interface-only#how-to-enable-unified-interface-only-mode) at any time before October 1, 2020.
+At present, environments from specific data centers, such as Government Community Cloud (GCC), have not been included within the portal. We'll provide suggested transition dates for these environments by June 2020. Customers who want to make the move to Unified Interface can always [switch manually](/power-platform/admin/enable-unified-interface-only#how-to-enable-unified-interface-only-mode) at any time before December 1, 2020.
 
 
