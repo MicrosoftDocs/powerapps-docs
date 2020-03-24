@@ -1,68 +1,241 @@
 ---
-title: What is Power Apps? | Microsoft Docs
-description: Provides an overview of Power Apps and talks about how end users, app makers, admins, and pro developers can use Power Apps.
-author: KumarVivek
-manager: annbe
+title: Emergency Response sample app template user guide | Microsoft Docs
+description: Walk-through different apps and components for the users of the Emergency Response sample app template 
+author: tapanm-msft
+manager: kumarvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/15/2019
-ms.author: kvivek
+ms.date: 03/24/2020
+ms.author: tapanm
 ms.reviewer: kvivek
 searchScope:
   - GetStarted
   - PowerApps
 ---
-# What is Power Apps?
 
-Power Apps is a suite of apps, services, connectors and data platform that provides a rapid application development environment to build custom apps for your business needs. Using Power Apps, you can quickly build custom business apps that connect to your business data stored *either* in the underlying data platform ([Common Data Service](/powerapps/maker/common-data-service/data-platform-intro)) *or* in various online and on-premises data sources (SharePoint, Excel, Office 365, Dynamics 365, SQL Server, and so on). 
+# Emergency Response sample app user guide
 
-Apps built using Power Apps provide rich business logic and workflow capabilities to transform your manual business processes to digital, automated processes. Further, apps built using Power Apps have a responsive design, and can run seamlessly in browser or on mobile devices (phone or tablet). Power Apps "democratizes" the custom business app building experience by enabling users to build feature-rich, custom business apps without writing code.
+## Overview
 
-Power Apps also provides an extensible platform that lets pro developers programmatically interact with data and metadata, apply business logic, create custom connectors, and integrate with external data.
+Hospital leaders and staff are challenged to meet an increase in number of
+patients while managing supply chain during emergency. With addition of
+emergency patients, patients seeking medical help can become challenging to
+manage. Emergency Response sample solution helps healthcare organization  collect data for situational awareness of available resources. You can use the sample solution to track statistics for COVID-19 related patients, ventilators, staffing and pending discharges.
 
-For more information, see the [Power Apps channel](https://www.youtube.com/channel/UCGfWR2ekfRFckLjev6eQYLg) on YouTube.
+## Prerequisites
 
-## Power Apps for app makers/creators
+To get started with the app, you need to download the Power Apps Mobile on your
+device using the device's app store.
 
-Using Power Apps, you can create three types of apps: **canvas**, **model-driven**, and **portal**. More information: [Overview of creating apps in Power Apps](maker/index.md).
+- **Download** the [**Power Apps Mobile**](https://powerapps.microsoft.com/downloads)
+- For **Apple** devices with iOS such as iPhone and iPad, use [**App store**](https://aka.ms/powerappsios)
+- For **Android** devices, use [**Google Play**](https://aka.ms/powerappsandroid)
 
-To create an app, you start with [make.powerapps.com](https://make.powerapps.com).
+After you install the Power Apps Mobile, open the app from your device and
+sign in with your company's Azure Active Directory account. You can view all
+apps shared to you by your organization once you sign in. For more information, see [Power Apps mobile device sign
+in](https://docs.microsoft.com/powerapps/user/run-app-client#open-power-apps-and-sign-in).
 
-- **Power Apps Studio** is the app designer used for building canvas apps. The app designer makes creating apps feel more like building a slide deck in Microsoft PowerPoint. More information: [Generate an app from data](/powerapps/maker/canvas-apps/data-platform-create-app)  
+## App Launcher
 
-- **App designer** for model-driven apps lets you define the sitemap and add components to build a model-driven app. More information: [Design model-driven apps using app designer](maker/model-driven-apps/design-custom-business-apps-using-app-designer.md)
+![App Launcher](media/use/app-launcher.png)
 
-## Power Apps for app users
+The Emergency Response mobile app has a modular structure with different apps as applicable to your role. Open the Emergency Response mobile app from the Power Apps Mobile, select your **Hospital system**, **Region, Facility**, and select **Next** to get started.
 
-You can run apps that you created, or that someone else created and shared with you, in browser or on mobile devices (phone or tablet). More information: [Find and run apps](user/index.md)
+> [!NOTE]
+> When you launch the Emergency Response mobile app launcher or any of
+its components for the *first time*, you will be asked for your consent to allow the app to read your *Office 365 Users* profile and your *Location*. You must select **Allow** before you can start using the selected app. For more information, see [give consent](https://docs.microsoft.com/powerapps/user/run-app-client#give-consent).
 
-## Power Apps for admins
+## App components
 
-Power Apps admins can use:
+![Emergency Response mobile app components](media/use/app-components.png)
 
-- **Power Apps admin center** ([admin.powerapps.com](https://admin.powerapps.com)) to create and manage environments, users, roles, and data-loss prevention policies. 
+The Emergency Response sample solution app consists of multiple apps for enhanced user experience. Depending on your role, you may see one or more apps in the **App Launcher** for Emergency Response mobile app.
 
-- **Power Platform admin center** ([admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com)) to manage environments, get real-time, self-help recommendations and support for Power Apps and Power Automate, and view Common Data Service analytics. 
+- **Staff + equipment**
+    <br> Collect status of the RNs and critical equipment by location in that
+    facility.
 
-More information: [Administer Power Apps](/power-platform/admin/admin-guide)
+- **Supplies**
+    <br> Track key supplies to track, manage, and forecast inventory more
+    effectively. ​
 
-## Power Apps for developers
+- **Staffing needs**
+    <br> Collect requests for personnel by department, role, and urgency.
 
-Developers are app makers who can write code to extend business app creation and customization. Developers can use code to create data and metadata, apply server-side logic using Azure functions, plug-ins, and workflow extensions, apply client-side logic using JavaScript, integrate with external data using virtual entities and webhooks, build custom connectors, and embed apps into your website experiences to create integrated solutions. More information: [Power Apps for developers](/powerapps/#pivot=home&panel=developer)
+- **COVID-19 stats**
+    <br> Collect status on how many patients are under investigation for COVID-19 and
+    how many tested positive.
 
-## Power Apps and Dynamics 365
+- **Discharge planning**
+    <br> Collect status and projections on ​patient discharges.
 
-Dynamics 365 applications, such as Dynamics 365 Sales, Dynamics 365 Customer Service, Dynamics 365 Marketing also use the underlying data platform (Common Data Service) used by Power Apps to store and secure data. This enables you to build apps using Power Apps and Common Data Service directly against your core business data already used within Dynamics 365 without the need for integration. More information: [Dynamics 365 and Common Data Service](maker/common-data-service/data-platform-intro.md#dynamics-365-and-common-data-service)
+## Staff + equipment
 
-## Try Power Apps for free
+![Staff + equipment](media/use/staff-equipment.png)
 
-You can try Power Apps for free by signing up either for a [30 day trial](maker/signup-for-powerapps.md) or [community plan](maker/dev-community-plan.md).
+Submit location-specific inventory for Registered nurses, patients, and
+equipment. The area list consists of all locations specific to the facility
+chosen on the **App Launcher**. Select location from the available options to
+update other fields.
 
-## Purchase Power Apps
+After you select an area, enter the required values for the fields to
+save the records in the solution database. You don't have to enter values for
+each field on the screen. Enter a number for the field that you need to save in the solution database.
 
-If you have decided to purchase Power Apps, see here for detailed information: [Purchase Power Apps](/power-platform/admin/signup-for-powerapps-admin).
+For example, if you need to add number of registered nurses requested as 3,
+enter 3 in the **Registered nurses on duty - Requested** field and select
+**Send**. If you also need to update ventilators in use as 6, enter 3 in **Registered nurses on duty - Requested** field, then enter 6 in **Vents** under **Equipment in use**, and select **Send**.
 
-## Power Apps US Government plans
+Select **Back** from top-left if you want to go back to the **App Launcher**
+without submitting any change. **Send** button submits values you entered.
 
-Power Apps US Government consists of several plans for US government organizations to address the unique and evolving requirements of the United States public sector. The Power Apps GCC environment provides compliance with federal requirements for cloud services, including FedRAMP High, DoD DISA IL2, and requirements for criminal justice systems (CJI data types). More information: [Power Apps US Government](/power-platform/admin/powerapps-us-government)
+### Fields and description
+
+| **Option name**               | **Description**                                                                                   |
+|-------------------------------|---------------------------------------------------------------------------------------------------|
+| Location                      | The name and type of the room, ward, or any other specialty location within the selected facility. |
+| Number of patients            | Current total number of patients at the selected location.                                        |
+| **Registered nurses on duty** |                                                                                                   |
+| *Partners*                    | Number of Registered Nurse partners present at the selected location.                             |
+| *Requested*                   | Number of Registered Nurses requested for the selected location.                                  |
+| *Assigned*                    | Number of Registered Nurses assigned to the selected location.                                    |
+| *Unassigned*                  | Number of Registered Nurses not assigned to any task at the selected location.                    |
+| **Equipment in use**          |                                                                                                   |
+| *Vents*                       | Number of Ventilators in use at the selected location.                                            |
+| *PAPR hoods*                  | Number of Powered Air-Purifying Respirator hoods in use at the selected location.                 |
+| *PAPR belts*                  | Number of Powered Air-Purifying Respirator belts in use at the selected location.                 |
+| *PAPR chargers*               | Number of Powered Air-Purifying Respirator chargers in use at the selected location.              |
+
+## Supplies
+
+![Supplies](media/use/supplies.png)
+
+View the supplies inventory with the **Supplies** app. You can update the supply
+component quantities in the entire facility inventory and the daily burn rate
+from this app.
+
+> [!NOTE]
+> Enter values in both fields - **In stock** and **Used past 4 hr** before you select send.
+
+Select **Back** in the top-left if you want to go back to the **App Launcher**
+without submitting any change. **Send** button submits values you entered.
+
+### Fields and description
+
+The supplies app items list may be different depending on your organization
+requirements. Refer to your organization resources for descriptions of supply
+names.
+
+IT Administrators can add or update the supplies app items list using the
+model-driven app for Power Apps. For more information, see [configuration guide](configure.md).
+
+**Note:** The supply inventory item values must be in number format.
+
+## Staffing needs
+
+![Staffing needs](media/use/staffing-needs.png)
+
+Collects labor pool requests the selected facility. Before you can submit the
+labor pool request for a facility, ensure fields marked as *required* are
+filled.
+
+Select **Back** from top-left if you want to go back to the **App Launcher**
+without submitting any change. **Send** button submits values you entered.
+
+### Fields and description
+
+| **Field name**           | **Description**                                                                            |
+|--------------------------|--------------------------------------------------------------------------------------------|
+| Department               | Name of the department requesting the labor request. This field is *required*.             |
+| Location                 | Location of the department.                                                                |
+| Request type             | Type of the request for labor such as Clinical and Non-clinical. This field is *required.* |
+| Role needed              | Role of the requested labor such as sitter or a registered nurse.                          |
+| Needed now or next shift | Select a shift for the requested labor, current shift, or an upcoming shift.                |
+| Details                  | Describe additional details or comments for the labor pool request.                        |
+
+## COVID-19 stats
+
+![COVID-19 Stats](media/use/covid19-stats.png)
+
+Submit COVID-19 specific details using the **COVID-19 stats** app. You can
+update the location-specific number of patients under investigation and patients found positive.
+
+You can also add another location using the **+ Add another location** button to
+send stats for more than one location.
+
+Select **Back** from top-left if you want to go back to the **App Launcher**
+without submitting any change. **Send** button submits values you entered.
+
+### Fields and description
+
+| **Field name**  | **Description**                                                                                    |
+|-----------------|----------------------------------------------------------------------------------------------------|
+| Location        | The name and type of the room, ward, or any other specialty location within the selected facility.  |
+| PUIs            | Number of patients under investigation.                                                            |
+| Positive        | Number of patients positive with COVID-19.                                                         |
+
+## Discharge planning
+
+![Discharge](media/use/discharge.png)
+
+Submit discharge information and patient status with total number using
+the **Discharge planning** app. You can update the discharge details for last 24 hours, current discharge barriers, and the break-up for the barriers.
+
+Select **Back** from top-left if you want to go back to the **App Launcher**
+without submitting any change. **Send** button submits values you entered.
+
+### Fields and description
+
+| **Field name**            | **Description**                                                    |
+|---------------------------|--------------------------------------------------------------------|
+| Authorization             | Number of patients in the authorization process.                   |
+| Durable medical equipment | Number of patients using the Durable Medical Equipment.            |
+| Guardianship              | Number of patients under guardianship.                             |
+| Home + Community Services | Number of patients using Home or Community services.               |
+| Placement                 | Number of placements needed.                                       |
+| Skilled Nursing Facility  | Number of skilled nursing facilities.                              |
+| **Discharges**            |                                                                    |
+| Past 24 h                 | Number of patients expected to be discharged in last 24 hours.  |
+| Likely next 24 h          | Number of patients discharged in last 24 hours.                    |
+## Other options
+
+This section explains other actions you can do with the Emergency Response
+mobile app components.
+
+### End shift - sign out
+
+You can sign out from the app using the profile icon on the upper-left side of
+the screen.  
+
+![Sign-out](media/use/sign-out.png)
+
+> [!NOTE]
+> *Sign-out* may not be available if your IT administrator has disabled
+device sharing.
+
+### Give feedback
+
+![Give feedback](media/use/give-feedback.png)
+
+You can send feedback with the **App feedback** option from any Emergency
+Response mobile app component. When you select **App feedback**, you have
+options to share a praise, an idea or report an issue with the app.
+
+### Switch facility
+
+![Switch facility](media/use/switch-facility.png)
+
+Switch facility anytime by selecting the facility name on the top-right side of the screen. After you select the location name, you're taken to the **App
+Launcher** screen where you can select a different hospital, region, or facility.
+
+*Disclaimer: This app is a sample and may be used with Microsoft Power Apps for dissemination of reference information only. This app is not intended or made available for use as a medical device, clinical support, diagnostic tool, or other technology intended to be used in the diagnosis, cure, mitigation, treatment, or prevention of disease or other conditions, and no license or right is granted by Microsoft to use this app for such purposes. This app is not designed or intended to be a substitute for professional medical advice, diagnosis, treatment, or judgment and should not be used as such. Customer bears the sole risk and responsibility for any use of this app. Microsoft does not warrant that the app or any materials provided in connection therewith will be sufficient for any medical purposes or meet the health or medical requirements of any person.*
+
+## Next steps
+
+[Configure Emergency Response sample solution](config.md)
+
+### See also
+
+[Crisis communication sample template](maker/canvas-apps/sample-crisis-communication-app)
