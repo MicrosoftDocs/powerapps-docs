@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 01/02/2020
+ms.date: 03/24/2020
 ms.author: tapanm
 search.audienceType: 
   - maker
@@ -154,7 +154,8 @@ When you share an app that's based on an older version of Common Data Service, y
 Power Apps canvas apps can be shared with guest users of an Azure Active Directory tenant. This enables inviting external business partners, contractors, and third parties to run your company’s canvas apps. 
 
 > [!NOTE]
-> Guests may only be assigned the **User** role, and not the **Co-owner** role, for apps shared with them.
+> - Guests may only be assigned the **User** role, and not the **Co-owner** role, for apps shared with them.
+> - Power Apps canvas app guest access leverages Azure B2B. Power Apps recognizes guests outlined by states 1 – 4 in the [Azure B2B documentation](https://docs.microsoft.com/azure/active-directory/b2b/user-properties). Power Apps can't recognize guests that authenticate using [Azure AD direct federation](https://docs.microsoft.com/azure/active-directory/b2b/direct-federation). 
 
 ### Prerequisites
 - In Azure Active Directory (Azure AD), enable B2B external collaboration for the tenant. More information: [Enable B2B external collaboration and manage who can invite guests](/azure/active-directory/b2b/delegate-invitations)
