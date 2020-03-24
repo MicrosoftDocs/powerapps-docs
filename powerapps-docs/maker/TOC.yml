@@ -1555,36 +1555,41 @@
       href: ./common-data-service/use-solutions-for-your-customizations.md
     - name: Solution publisher overview
       href: ./common-data-service/change-solution-publisher-prefix.md
-    - name: Create a solution
-      href: ./common-data-service/create-solution.md
-    - name: Import solutions
-      href: ./common-data-service/import-update-export-solutions.md
-    - name: Update or upgrade solutions
-      href: ./common-data-service/update-solutions.md
-    - name: Export solutions
-      href: ./common-data-service/export-solutions.md               
+    - name: Use segmented solutions
+      href: ./common-data-service/use-segmented-solutions-patches-simplify-updates.md      
     - name: How managed solutions are merged
       href: ./common-data-service/how-managed-solutions-merged.md
-    - name: Use environment variables
-      href: ./common-data-service/EnvironmentVariables.md
-    - name: View solution layers
-      href: ./common-data-service/solution-layers.md
-    - name: View solution history
-      href: ./common-data-service/solution-history.md      
     - name: Use solution checker
       href: ./common-data-service/use-powerapps-checker.md
-    - name: "Common issues and resolutions: solution checker"
-      href: ./common-data-service/common-issues-resolutions-solution-checker.md
-    - name: Use segmented solutions
-      href: ./common-data-service/use-segmented-solutions-patches-simplify-updates.md
-    - name: Set managed properties in metadata
-      href: ./common-data-service/set-managed-properties-metadata.md
+      items: 
+      - name: "Common issues and resolutions: solution checker"
+        href: ./common-data-service/common-issues-resolutions-solution-checker.md
     - name: Best practices
-      href: ./common-data-service/solution-best-practices.md
-    - name: "Advanced topics"
+      href: ./common-data-service/solution-best-practices.md        
+    - name: "How to"
       items:
       - name: Create solution patches
-        href: ./common-data-service/solution-patches.md
+        href: ./common-data-service/solution-patches.md      
+      - name: Create a solution
+        href: ./common-data-service/create-solution.md
+      - name: Update or upgrade solutions
+        href: ./common-data-service/update-solutions.md
+      - name: Import solutions
+        href: ./common-data-service/import-update-export-solutions.md
+      - name: Export solutions
+        href: ./common-data-service/export-solutions.md               
+      - name: Use environment variables
+        href: ./common-data-service/EnvironmentVariables.md
+      - name: View solution layers
+        href: ./common-data-service/solution-layers.md
+      - name: View solution history
+        href: ./common-data-service/solution-history.md      
+      - name: Set managed properties in metadata
+        href: ./common-data-service/set-managed-properties-metadata.md
+      - name: "Advanced topics"
+        items:
+        - name: Create solution patches
+          href: ./common-data-service/solution-patches.md
   - name: Work with dataflows
     href: ./common-data-service/self-service-data-prep-with-dataflows.md
     items:
