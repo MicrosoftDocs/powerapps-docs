@@ -248,12 +248,12 @@ This tells the form how to interpret the data it receives from the Common Data S
 
 ### I picked Date Only in my entity field, but my form is showing a time picker along with the date
 
-This would happen if you chose a behavior of time zone independent or user local for your date only field. In the Common Data Service it will store a time of 00:00:00 by default, but if you add the field to a form it will assume you need to set the time as well. If you leave the time pickers in the form, users can enter a time and it will be saved as something other than 00:00:00. How can you fix this
+This would happen if you chose a behavior of time zone independent or user local for your date only field. The Common Data Service will store a time of 00:00:00 by default, but if you add the field to a form it will assume you need to set the time as well. If you leave the time pickers in the form, users can enter a time and it will be saved as something other than 00:00:00. Here is how can you fix this.
 * Edit the form and remove the time picker and associated formulas. This will save the time as 00:00:00 and will still allow for time zone based date calculations.
 * If your field is currently set to user local, and you don’t need the date to be time zone calculated, you can change it to date only. This is a permanent change and cannot be undone. This change cannot be made to time zone independent behavior fields. Always be careful changing behaviors as other apps, plugins, or workflows may be relying on the data.
 
 ### I have a date only field, but it is showing the wrong date for some users
-If this happens, check the behavior that is set up for the date only field. If the field is set to time zone independent or user local, the included timestamp will cause the date to appear differently for different users. The form display settings of UTC or Local will determine if the date displayed is calculated using the user’s time zone settings or if it displays it as the UTC value. Changing the form values to UTC instead of user local will prevent time zone offset calculations and will display the UTC date for the saved record. Alternately, if you need this to be a static date that does not change and the field is currently user local, you can change the field behavior to Date Only. Be cautious though, this is cannot be undone.
+If this happens, check the behavior that is set up for the date only field. If the field is set to time zone independent or user local, the included timestamp will cause the date to appear differently for different users. The form display settings of UTC or Local will determine if the date displayed is calculated using the user’s time zone settings or if it displays as the UTC value. Changing the form values to UTC instead of user local will prevent time zone offset calculations and will display the UTC date for the saved record. Alternately, if you need this to be a static date that does not change and the field is currently user local, you can change the field behavior to Date Only. Be cautious though as this is cannot be undone.
 
 ### My (script/plug-in) is supposed to intercept the date submitted using the Universal Client before the user local conversion occurs, but instead it is being treated as User Local data 
 
@@ -263,7 +263,7 @@ In the universal client, the translation of a date into user local values happen
 To resolve this, a user can either:
 
 * Change the form to time zone independent which will retain the UTC value. This only works if the user does not need the form to display in user local time.
-* Modify their script to detect the time zone offset used, recalculate back to UTC within the script, then take action.
+* Modify their script to detect the time zone offset used, recalculate back to UTC within the script, and then take action.
   
 ### See also  
  [Sample: Convert date and time values](/dynamics365/customer-engagement/developer/org-service/sample-convert-date-time-behavior.md)   
@@ -271,4 +271,4 @@ To resolve this, a user can either:
  [Customize Entity Attribute Metadata](/dynamics365/customer-engagement/developer/customize-entity-attribute-metadata)          
  <xref:Microsoft.Xrm.Sdk.Messages.ConvertDateAndTimeBehaviorRequest>      
  <xref:Microsoft.Xrm.Sdk.Metadata.DateTimeAttributeMetadata> 
-[Blog: Working with time zones in the Common Data Service](https://powerapps.microsoft.com/en-us/blog/working-with-time-zones-in-the-common-data-service/)<br/>
+ [Blog: Working with time zones in the Common Data Service](https://powerapps.microsoft.com/en-us/blog/working-with-time-zones-in-the-common-data-service/)
