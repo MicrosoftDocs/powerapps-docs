@@ -165,10 +165,6 @@ When you register a step, there are many options available to you which depend o
 |**Execution Order**|Multiple steps can be registered for the same stage of the same message. The number in this field determines the order in which they will be applied from lowest to highest. <br/> **Note**: You should set this to control the order in which plug-ins are applied in the stage. It not recommended to simply accept the default value. If all plug-ins for the same stage, entity, and message have the same value, the [SdkMessageProcessingStep.SdkMessageFilterId](/dynamics365/customer-engagement/developer/entities/sdkmessageprocessingstep#BKMK_SdkMessageFilterId) value will determine the order in which they are executed.|
 |**Description**|A description for step. This value is pre-populated but can be overwritten.|
 
-> [!NOTE]
-> There are certain cases where plug-ins registered for the `Update` event can be called twice. More information: [Behavior of specialized update operations](special-update-operation-behavior.md)
-
-
 ### Event Pipeline Stage of execution
 
 Choose the stage in the event pipeline that best suites the purpose for your plug-in.
