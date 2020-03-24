@@ -26,7 +26,7 @@ To start, you must add master data in the following entities for your medical or
 
 - Regions for each hospital system
 
-- Facilities withing each region of a hospital system
+- Facilities within each region of a hospital system
 
 - Locations within each facility
 
@@ -35,7 +35,7 @@ To start, you must add master data in the following entities for your medical or
 The master data is managed from the **Locations** area in the left navigation in the admin app:
 
 > [!div class="mx-imgBorder"]
-> ![locations-area](media/locations-area.png)
+> ![Locations area](media/locations-area.png)
 
 The entities under the **Hierarchy** area are listed in the order you should populate data.
 
@@ -62,7 +62,7 @@ To create a record:
 
 3. Select **Save & Close.** The newly created record will be available in the **Systems** list.
 
-To edit the record, select the record, update the values as required, and select **Save & Close.**
+To edit the record, select the record, update the values as required, and select **Save & Close**.
 
 ## Regions data
 
@@ -70,7 +70,7 @@ The **Regions** entity lets you manage the geographical regions for your hospita
 
 To create a record:
 
-1. Select **Regions** in the left pane, and select **New**:
+1. Select **Regions** in the left pane, and select **New**.
 
 2. In the **New Region** page, specify appropriate values:  
 
@@ -87,7 +87,7 @@ To create a record:
 
 3. Select **Save & Close.** The newly created record will be available in the **Regions** list.
 
-To edit the record, select the record, update the values as required, and select **Save & Close.**
+To edit the record, select the record, update the values as required, and select **Save & Close**.
 
 ## Facilities data
 
@@ -96,7 +96,7 @@ The **Facilities** entity lets you manage the hospital locations within each reg
 
 To create a record:
 
-1. Select **Facilities** in the left pane, and select **New**:
+1. Select **Facilities** in the left pane, and select **New**.
 
 2. In the **New Facility** page, specify appropriate values: 
 
@@ -114,7 +114,7 @@ To create a record:
 
 3. Select **Save & Close.** The newly created record will be available in the **Facilities** list.
 
-To edit the record, select the record, update the values as required, and select **Save & Close.**
+To edit the record, select the record, update the values as required, and select **Save & Close**.
 
 ## Locations data
 
@@ -122,7 +122,7 @@ The **Locations** entity lets you manage specific locations within each hospital
 
 To create a record:
 
-1. Select **Locations** in the left pane, and select **New**:
+1. Select **Locations** in the left pane, and select **New**.
 
 2. In the **New Location** page, specify appropriate values:  
  
@@ -147,7 +147,7 @@ To create a record:
 
 3. Select **Save & Close.** The newly created record will be available in the **Locations** list.
 
-To edit the record, select the record, update the values as required, and select **Save & Close.**
+To edit the record, select the record, update the values as required, and select **Save & Close**.
 
 ## Departments data
 
@@ -155,7 +155,7 @@ The **Departments** entity lets you manage departments information for a hospita
 
 To create a record:
 
-1. Select **Departments** in the left pane, and select **New**:
+1. Select **Departments** in the left pane, and select **New**.
 
 2. In the **New Department** page, specify appropriate values:    
 
@@ -171,8 +171,7 @@ To create a record:
 
 3. Select **Save & Close.** The newly created record will be available in the **Departments** list.
 
-To edit the record, select the record, update the values as required, and select
-**Save & Close.**
+To edit the record, select the record, update the values as required, and select **Save & Close**.
 
 # Get insights using Common Data Service dashboards
 
@@ -188,7 +187,7 @@ Following dashboards are available by default in the Emergency Response Solution
 
 - **Staff Management**
 
-  Shows number of requested, assigned and available staff members across different facilities.
+  Shows number of requested, assigned, and available staff members across different facilities.
 
 - **COVID Patients**
 
@@ -307,8 +306,7 @@ Before you can view the Power BI dashboard, you must publish it within your orga
     > [!div class="mx-imgBorder"]
     > ![select-refresh-publish](media/select-refresh-publish.png)
 
-11. In the **Publish to Power BI** page, select the workspace where you want to
-    publish.
+11. In the **Publish to Power BI** page, select the workspace where you want to publish.
 
 12. The report becomes available in your workspace. Now, we will configure the data refresh for the dataset. Select the dataset in your workspace and select the **Schedule refresh** icon.  
     
@@ -323,12 +321,12 @@ Before you can view the Power BI dashboard, you must publish it within your orga
 14. Expand **Scheduled refresh** and specify the required details for refreshing data based on a schedule.
 
     > [!NOTE] 
-    > There are limits to how many times data can refresh. Power BI limits datasets on shared capacity to eight daily refreshes. If the dataset resides on a Premium capacity, you can schedule up to 48 refreshes per day in the dataset settings. More information: <https://docs.microsoft.com/power-bi/refresh-data#data-refresh>
+    > There are limits to how many times data can refresh. Power BI limits datasets on shared capacity to eight daily refreshes. If the dataset resides on a Premium capacity, you can schedule up to 48 refreshes per day in the dataset settings. More information: [Refresh data](https://docs.microsoft.com/power-bi/refresh-data#data-refresh)
 
 15. Select your workspace name in the left pane, and then select **Create app** in the top-right corner.  
 
     > [!div class="mx-imgBorder"]
-    > ![select-create-app](media/select-create-app.png)
+    > ![select create app](media/select-create-app.png)
 
 16. On the app publishing page:
 
