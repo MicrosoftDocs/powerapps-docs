@@ -1331,6 +1331,8 @@
           href: ./portals/configure/gather-feedback-poll.md
         - name: Create and manage publishing states
           href: ./portals/configure/publishing-states.md
+        - name: Create custom Portal Management app
+          href: ./portals/configure/create-custom-portal-management-app.md
     - name:  Advanced portal customization
       items:
         - name: Work with Liquid templates
