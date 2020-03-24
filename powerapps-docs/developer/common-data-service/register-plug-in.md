@@ -190,14 +190,13 @@ There are two modes of execution asynchronous, and synchronous.
 |**Asynchronous**|The execution context and the definition of the business logic to apply is moved to system job which will execute after the operation completes.|
 |**Synchronous**|Plug-ins execute immediately according to the stage of execution and execution order. The entire operation will wait until they complete.|
 
-Asynchronous plug-ins can only be registered for the **PostOperation** stage. For more information about how system jobs work, see [Asynchronous service](asynchronous-service.md)
+Asynchronous plug-ins can only be registered for the **PostOperation** stage. For more information about how system jobs work, see [Asynchronous service](asynchronous-service.md)       
 
-To execute a plug-in when a target entity instance changes, register the plugin as indicated in the table below.
+### Special step registration scenarios
+There are certain scenarios where step registration for a message and entity combination is not obvious. This is the result of how the system is designed internally where there is a special relationship between entities or operations. The information below identifies these cases and provides step registration guidance.
 
-|Target entity| Register on this entity|
-|--|--|
-| customeraddress, leadaddress, publisheraddress, competitoraddress| account, contact |        
-
+- There are certain cases where plug-ins registered for the _Update_ event can be called twice. More information: [Behavior of specialized update operations](https://github.com/MicrosoftDocs/powerapps-docs-pr/blob/8c969ed391d6fc8e423bde15c65db1f60f5fab2f/powerapps-docs/developer/common-data-service/special-update-operation-behavior.md)
+- Register a plug-in step on **account** or **contact** when you want to handle data changes to **customeraddress**, **leadaddress**, **publisheraddress**, or **competitoraddress** entity instances.
 
 ### Deployment
 
