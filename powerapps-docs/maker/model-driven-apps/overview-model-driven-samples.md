@@ -8,7 +8,7 @@ ms.service: powerapps
 ms.devlang: na
 ms.topic: conceptual
 ms.component: model
-ms.date: 03/08/2018
+ms.date: 03/09/2020
 ms.author: brdang
 search.audienceType: 
   - maker
@@ -23,15 +23,16 @@ In [powerapps.com](https://powerapps.com), use a sample app to explore design po
 
 Be sure to check out documentation specific to each sample app for more details. 
 
-![Fundraiser Sample App](media/overview-model-driven-samples/fundraiser-app1.png)
+> [!div class="mx-imgBorder"] 
+> ![Fundraiser Sample App](media/overview-model-driven-samples/fundraiser-app1.png "Fundraiser sample app")
 
 
 ## Get sample apps
 
-In order to play or edit model-driven sample apps, the apps must first be provisioned in a Common Data Service database. First create a trial environment and database and be sure to check **Include sample apps and data**.
+In order to play or edit model-driven sample apps, the apps must first be provisioned in a Common Data Service database. First create a trial environment and database and be sure to select **Depoly sample apps and data**.
 
-![Create database](media/overview-model-driven-samples/create-database1.png)
-
+> [!div class="mx-imgBorder"] 
+> ![Create database](media/overview-model-driven-samples/create-database1.png "Create a database")
 
 > [!IMPORTANT]
 > This option installs all available sample apps in your database. Sample apps are for educational and demonstration purposes and we do not recommend installing them in production databases. 
@@ -40,13 +41,13 @@ In order to play or edit model-driven sample apps, the apps must first be provis
 
 1. Sign in to [powerapps.com](https://powerapps.com)  
 
-    
+2. From the **Create** page, select the sample app and click **Create**.
 
-2. From the **Create** page, hover over the sample app and click **Make this app**.
+> [!div class="mx-imgBorder"]
+> <img src="media/overview-model-driven-samples/model-driven-create-page-sample.png" alt="Create a model-driven sample app" height="427" width="674">
 
-![Model Sample App](media/overview-model-driven-samples/model-driven-create-page-sample.png)
+3. The App designer will open providing multiple options for customizing the app.
 
-3. The App designer will open providing multiple options for customizing the app. 
 4. For additional customization options, click **Advanced** from the left navigation in the portal.
 
 ## Remove sample apps and data 
@@ -59,19 +60,22 @@ In order to play or edit model-driven sample apps, the apps must first be provis
 
 2. Select an environment.
 
-3. Click **Dynamics 365 Administration Center** 
+    > [!div class="mx-imgBorder"] 
+    > ![Dynamics 365 Administration Center](media/overview-model-driven-samples/admin-center.png "Select an environment")
 
-    ![Dynamics 365 Administration Center](media/overview-model-driven-samples/admin-center.png)
+3. Click **Dynamics 365 Administration Center**.
 
 4. Select your Database from the list and click **OPEN**.
 
-    ![Select database](media/overview-model-driven-samples/select-database.png)
+    > [!div class="mx-imgBorder"] 
+    > ![Select database](media/overview-model-driven-samples/select-database.png "Select a database")
 
 5. Navigate to **Settings/Solutions**.
 
 6. Select the solution for the app that is to be deleted and click **delete**.
 
-    ![Delete solution](media/overview-model-driven-samples/delete-solution.png)
+    > [!div class="mx-imgBorder"] 
+    > ![Delete solution](media/overview-model-driven-samples/delete-solution.png "Delete the solution")
 
 *Alternatively navigate to the list of solutions by clicking **Advanced** in the maker portal and delete everything in the URL after .dynamics.com/*
 
@@ -83,7 +87,8 @@ In order to play or edit model-driven sample apps, the apps must first be provis
 2. Navigate to **Settings/Data Management/Sample Data**.
 3. If sample data is installed, the option to remove is available. Otherwise the option to install is available. 
 
-    ![remove sample data](media/overview-model-driven-samples/remove-sample-data.png)
+    > [!div class="mx-imgBorder"] 
+    > ![remove sample data](media/overview-model-driven-samples/remove-sample-data.png "Remove sample data")
 
 
 

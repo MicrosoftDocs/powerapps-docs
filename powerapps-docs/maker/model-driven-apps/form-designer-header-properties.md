@@ -27,9 +27,6 @@ search.app:
 
 Makers can control the density of model-driven app form headers to match the needs of anyone using the form.
 
-> [!NOTE]
-> This feature is only available with environments that opt in to the early preview of 2019 release wave 2 features. More information: [Early opt-in to 2019 release wave 2](https://docs.microsoft.com/power-platform/admin/preview-october-2019-updates) 
-
 ## High-density header
 
 High-density form header ensures that key information is always visible to users. Using high-density header, the record title never truncates. Even long record titles are displayed using multiple lines. Similarly, high-density header also ensures that up to four field values are directly visible in the header and never truncated or hidden.  
@@ -142,6 +139,10 @@ High-density header displays read-only values of fields in the header. Because t
 The message informs the maker that they are trying to move a field from the form body to the form header. Doing so will make it read-only. It gives the maker the choice of moving the field to the header or adding a copy of the field to the header. Moving the field to the header will make the field unavailable in the original location on the form body for users to edit. Adding a copy of the field to the header will leave the field in the original location as-is, ensuring that users can continue to edit it within the form body.
 
 ### Form headers now default to high density to display more data. Use the new form designer to edit header density.  
+This message is displayed in the classic form designer when a maker opens a main form for editing and it is configured to use low density header.  
+  
+This message helps increase awareness about the high density header and its benefits and that makers should use the new form designer to configure header density.  
+
 This message is displayed in the classic form designer when a maker opens a main form for editing and it is configured to use low density header. 
 
 The message helps increase awareness about the high-density header and its benefits and that makers should use the new form designer to configure header density.  

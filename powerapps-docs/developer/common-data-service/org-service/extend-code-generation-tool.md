@@ -3,7 +3,7 @@ title: "Create extensions for the code generation tool (Common Data Service) | M
 description: "The SDK download package includes an extension to the CrmSvcUtil code generation tool that you can use to generate enumerations for all option set values including global option sets, picklist, state, and status values." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
@@ -127,5 +127,4 @@ Guid accountId = service.Create(account);
 
  [Create Early-Bound Entity Classes with the Code Generation Tool (CrmSvcUtil.exe)](/dynamics365/customer-engagement/developer/create-early-bound-entity-classes-code-generation-tool)<br />
  [Use the Early Bound Entity Classes for Create, Update and Delete](/dynamics365/customer-engagement/developer/use-entity-class-create-update-delete)<br />
- [Troubleshooting Tips](/dynamics365/customer-engagement/developer/troubleshooting-tips)<br />
  [Run a simple program using Web services](/dynamics365/customer-engagement/developer/simple-program-web-services)

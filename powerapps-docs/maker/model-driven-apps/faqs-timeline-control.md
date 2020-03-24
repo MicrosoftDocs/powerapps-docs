@@ -1,7 +1,7 @@
 ---
 title: "FAQs for timeline control (section) in Power Apps | MicrosoftDocs"
 description: "FAQs for timeline control (section) in Power Apps"
-ms.date: 02/03/2020
+ms.date: 03/10/2020
 ms.service: powerapps
 author: "kabala123"
 ms.assetid: 7F495EE1-1208-49DA-9B02-17855CEB2FDF
@@ -93,6 +93,11 @@ To mitigate the issue, unhide the buttons in the command bar definitions.
 ## Why my users see different activities and records in their My activities stream in the dashboard?
 
 **My activities** stream in the dashboard shows the records and activities that are owned by a particular user. For example, user **A** see records and activities that are owned by **A**, and user **B** see records and activities that are owned by **B**.
+
+
+## Why my agents see the filter pane even when the Expand filter pane by default check box is cleared?
+
+When the timeline is displayed on more than one column, the filter pane is displayed as a column alongside the timeline records. Even though you've cleared **Expand filter pane by default** check box in the Timeline configurations, the filter pane will always be displayed to your agents.
 
 ## See also
 

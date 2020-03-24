@@ -3,7 +3,7 @@ title: "Sample: Send an email using a template(Common Data Service) | Microsoft 
 description: "This sample shows how to send an email message by using a template." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "samples"
 author: "JimDaly" # GitHub ID

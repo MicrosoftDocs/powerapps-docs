@@ -3,7 +3,7 @@ title: "Impersonate another user (Common Data Service) | Microsoft Docs" # Inten
 description: "Use impersonation to execute business logic on behalf of another Common Data Service user to provide a desired feature or service using the appropriate role and object-based security of that impersonated user." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" # GitHub ID

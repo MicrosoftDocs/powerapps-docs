@@ -34,7 +34,7 @@ The following table contains information about the date and time field behavior 
   
 |Behavior|Format|Description|  
 |--------------|------------|-------------------------------|  
-|**User Local** |**Date Only**<br />- or -<br />**Date and Time**|This is the default behavior of custom date and time fields.<br /><br />The field values are displayed in the current user’s local time.<br />In Web services, these values are returned using a common UTC time zone format.<br /><br />You can change this one time if you select the default behavior. More information [Change User Local Behavior](#change-user-local-behavior)|  
+|**User Local** |**Date Only**<br />- or -<br />**Date and Time**|This is the default behavior of custom date and time fields.<br /><br />The field values are displayed in the current user's local time.<br />In Web services, these values are returned using a common UTC time zone format.<br /><br />You can change this one time if you select the default behavior. More information [Change User Local Behavior](#change-user-local-behavior)|  
 |**Date Only**|**Date Only**|No Time zone conversion.<br /><br />The time portion of the value is always 12:00AM.<br />The date portion of the value is stored and retrieved as specified in the UI and Web services.|  
 |**Time-Zone Independent**|**Date Only**<br />- or -<br />**Date and Time**|No Time zone conversion.<br /><br />The date and time values are stored and retrieved as specified in the UI and Web services.|  
 
@@ -45,7 +45,7 @@ Unless the publisher of a managed solution prevents this, you can change the beh
 Changing the field behavior affects the field values that are added or modified after the field behavior was changed. The existing field values remain in the database in the UTC time zone format. To change the behavior of the existing field values from UTC to Date Only, you may need a help of a developer to do it programmatically. More Information:  [Convert behavior of existing date and time values in the database](/dynamics365/customer-engagement/developer/behavior-format-date-time-attribute#convert-behavior-of-existing-date-and-time-values-in-the-database). 
 
 > [!WARNING]
-> Before changing the behavior of an existing date and time field, you should review all the dependencies of the field, such as business rules, workflows, calculated fields, or rollup fields, to ensure that there are no issues as a result of changing the behavior. After changing the behavior of a date and time field, you should open each business rule, workflow, calculated field, and rollup field dependent on the field that you changed, review the information, and save it, to ensure that the latest date and time field’s behavior and value are used. 
+> Before changing the behavior of an existing date and time field, you should review all the dependencies of the field, such as business rules, workflows, calculated fields, or rollup fields, to ensure that there are no issues as a result of changing the behavior. After changing the behavior of a date and time field, you should open each business rule, workflow, calculated field, and rollup field dependent on the field that you changed, review the information, and save it, to ensure that the latest date and time field's behavior and value are used. 
 
 ### Change behavior during a solution import
 
@@ -53,19 +53,19 @@ When you import a solution that contains a Date field using the **User Local** b
 
 ### Prevent changing behavior
 
-If you are distributing a custom date field in a managed solution, you can prevent people using your solution from changing the behavior by setting the **CanChangeDateTimeBehavior** managed property to **False**. More information: [Field managed properties](set-managed-properties-metadata.md#field-managed-properties)
+If you are distributing a custom date field in a managed solution, you can prevent people using your solution from changing the behavior by setting the **CanChangeDateTimeBehavior** managed property to **False**. More information: [Set  managed properties for fields](set-managed-properties-for-field.md)
   
-## Use cases
+## Use cases 
 
 Consider the following use cases for **Date Only** and **Time-Zone Independent** behaviors.
 
 ### Date Only scenario: birthdays and anniversaries
 
-The Date Only behavior is good for cases when information about the time of the day and the time zone isn’t required, such as birthdays or anniversaries. With this selection, all app users around the world see the exact same date value.  
+The Date Only behavior is good for cases when information about the time of the day and the time zone isn't required, such as birthdays or anniversaries. With this selection, all app users around the world see the exact same date value.  
   
 ### Time-Zone Independent scenario: hotel check-in
 
-You can use this behavior when time zone information isn’t required, such as the hotel check-in time. With this selection, all app users around the world see the same date and time value.  
+You can use this behavior when time zone information isn't required, such as the hotel check-in time. With this selection, all app users around the world see the same date and time value.  
 
 
 ## Best practices for using time zone
@@ -112,3 +112,4 @@ The following date and time related query operators are invalid for the **Date O
 [Field managed properties](set-managed-properties-metadata.md#field-managed-properties)<br />
 [Managed properties](solutions-overview.md#managed-properties)  
 [Blog: Working with time zones in the Common Data Service](https://powerapps.microsoft.com/en-us/blog/working-with-time-zones-in-the-common-data-service/)
+

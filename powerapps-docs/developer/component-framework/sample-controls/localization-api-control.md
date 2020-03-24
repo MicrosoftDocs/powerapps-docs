@@ -21,7 +21,7 @@ Power Apps component framework uses the concept of implementing String(resx) web
 
 ## Available for 
 
-Model-driven apps and canvas apps (experimental preview) 
+Model-driven apps and canvas apps (public preview) 
 
 ## Manifest 
 
@@ -450,7 +450,7 @@ When this line of code is executed, the Power Apps component framework automatic
 
 ### Related topics
 
-[Download sample components](https://go.microsoft.com/fwlink/?linkid=2088525)<br/>
+[Download sample components](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework)<br/>
 [How to use the sample components](../use-sample-components.md)<br/>
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework manifest schema reference](../manifest-schema-reference/index.md)

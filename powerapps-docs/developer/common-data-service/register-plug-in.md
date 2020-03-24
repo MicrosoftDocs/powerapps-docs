@@ -3,7 +3,7 @@ title: "Register a plug-in (Common Data Service) | Microsoft Docs" # Intent and 
 description: "Learn how to register a plug-in to apply custom business logic to Common Data Service." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 02/19/2019
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" # GitHub ID

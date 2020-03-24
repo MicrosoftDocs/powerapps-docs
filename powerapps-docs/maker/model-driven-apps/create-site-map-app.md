@@ -1,5 +1,5 @@
 ---
-title: "Create a model-driven app site map for an app in Power Apps | MicrosoftDocs"
+title: "Create a model-driven app site map in Power Apps | MicrosoftDocs"
 description: "Learn how to create a site map for you app"
 keywords: ""
 ms.date: 05/29/2018
@@ -26,7 +26,7 @@ search.app:
   - D365CE
 ---
 
-# Tutorial: Create a model-driven app site map for an app using the site map designer
+# Create a model-driven app site map using the site map designer
 
 In this tutorial you perform several site map tasks such as creating a new site map, and adding an area, group, and subarea.
 
