@@ -117,7 +117,7 @@ component quantities in the entire facility inventory and the daily burn rate
 from this app.
 
 > [!NOTE]
-> Enter values in both fields - **In stock** and **Used past 4 hr** before you select send.
+> Enter values in both fields - **In stock** and **Used past 24 hr** before you select send.
 
 Select **Back** in the top-left if you want to go back to the **App Launcher**
 without submitting any change. **Send** button submits values you entered.
@@ -149,10 +149,11 @@ without submitting any change. **Send** button submits values you entered.
 | **Field name**           | **Description**                                                                            |
 |--------------------------|--------------------------------------------------------------------------------------------|
 | Department               | Name of the department requesting the labor request. This field is *required*.             |
-| Location                 | Location of the department.                                                                |
+| Department location                 | Location of the department.                                                                |
 | Request type             | Type of the request for labor such as Clinical and Non-clinical. This field is *required.* |
 | Role needed              | Role of the requested labor such as sitter or a registered nurse.                          |
 | Needed now or next shift | Select a shift for the requested labor, current shift, or an upcoming shift.                |
+| Quantity | Quantity required in number format.                |
 | Details                  | Describe additional details or comments for the labor pool request.                        |
 
 ## COVID-19 stats
