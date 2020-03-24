@@ -109,7 +109,7 @@ The following date and time related query operators are invalid for the **Date O
 
 [Create and edit fields](create-edit-fields.md)<br />
 [Define calculated fields to automate manual calculations](define-calculated-fields.md)<br />
-[Field managed properties](set-managed-properties-metadata.md#field-managed-properties)<br />
+[Field managed properties](set-managed-properties-metadata.md#view-and-edit-field-managed-properties)<br />
 [Managed properties](solutions-overview.md#managed-properties)  
 [Blog: Working with time zones in the Common Data Service](https://powerapps.microsoft.com/en-us/blog/working-with-time-zones-in-the-common-data-service/)
 
