@@ -2,11 +2,10 @@
 title: Use the Emergency Response app | Microsoft Docs
 description: Walk-through different apps and components for the users of the Emergency Response sample app template 
 author: tapanm-msft
-manager: kumarvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 03/24/2020
+ms.date: 03/25/2020
 ms.author: tapanm
 ms.reviewer: kvivek
 searchScope:
