@@ -1,6 +1,6 @@
 ---
-title: Deploy and configure Emergency Response app | Microsoft Docs
-description: Provides an overview of Power Apps and talks about how end users, app makers, admins, and pro developers can use Power Apps.
+title: Deploy and configure the Emergency Response app | Microsoft Docs
+description: Provides provides detailed instructions for hospital IT admins to deploy and configure the application for their organization.
 author: KumarVivek
 manager: annbe
 ms.service: powerapps
@@ -13,7 +13,7 @@ searchScope:
   - GetStarted
   - PowerApps
 ---
-# Deploy and configure Emergency Response app
+# Deploy and configure the Emergency Response app
 
 The Emergency Response app requires a small amount of setup to adapt to your needs. This article provides step-by-step instructions for hospital IT admins to deploy and configure the application for their organization.
 
