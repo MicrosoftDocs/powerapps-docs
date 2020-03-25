@@ -40,7 +40,7 @@ To follow this procedure, if you're not signed up for Power Apps, [sign up for f
 ## Open Power Apps and sign in
 Open Power Apps on your mobile device and sign in using your Azure Active Directory credentials.
 
-![Login user]media/powerapps_mobile_app_signin_screen.jpg)
+![Login user]media/powerapps_mobile_app_signin_screen.png)
 
 If you have the Microsoft Authenticator app installed on your mobile device, simply enter your username when prompted, and then approve the notification sent to your device.
 
