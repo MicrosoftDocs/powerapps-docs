@@ -56,7 +56,7 @@ Find the right online training, in-person workshops, and events for your role as
 
     [Extend](learning-catalog-developer.md#extend)
 
-    [Exam](learning-catalog-administrator.md#exam)
+    [Exam](learning-catalog-developer.md#exam)
 
         :::column-end:::
     :::column:::
