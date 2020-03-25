@@ -35,7 +35,7 @@ You need the following:
 
 ## Next step
 
-[Deploy and configure the Emergency Response Solution](deply-configure.md)
+[Deploy and configure the Emergency Response app](deply-configure.md)
 
 ### Disclaimer
 
