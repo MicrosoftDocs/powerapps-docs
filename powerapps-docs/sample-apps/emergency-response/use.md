@@ -1,5 +1,5 @@
 ---
-title: Use the Emergency Response solution | Microsoft Docs
+title: Use the Emergency Response app | Microsoft Docs
 description: Walk-through different apps and components for the users of the Emergency Response sample app template 
 author: tapanm-msft
 manager: kumarvivek
@@ -13,7 +13,7 @@ searchScope:
   - PowerApps
 ---
 
-# Use the Emergency Response solution
+# Use the Emergency Response app
 
 Hospital leaders and staff are challenged to meet an increase in number of
 patients while managing supply chain during emergency. With addition of
