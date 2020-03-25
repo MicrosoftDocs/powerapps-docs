@@ -1627,6 +1627,16 @@
   items:
   - name: Use AI Builder in Power Apps
     href: ../use-ai-builder.md
+- name: Sample apps and solutions
+  items:
+  - name: Emergency Response app
+    items:
+    - name: Overview
+      href: ../sample-apps/emergency-response/overview.md
+    - name: Deploy and configure
+      href: ../sample-apps/emergency-response/deploy-configure.md
+    - name: Use the app
+      href: ../sample-apps/emergency-response/use.md
 - name: Learn from others
   items:
   - name: Webinars
