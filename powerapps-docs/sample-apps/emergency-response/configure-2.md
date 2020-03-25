@@ -60,7 +60,7 @@ To create a record:
    | Effective Start Data | Type start date and time for this hospital system. |
    | Effective End Date   | Type end date and time for this hospital system.   |
 
-3. Select **Save & Close.** The newly created record will be available in the **Systems** list.
+3. Select **Save & Close**. The newly created record will be available in the **Systems** list.
 
 To edit the record, select the record, update the values as required, and select **Save & Close**.
 
@@ -85,7 +85,7 @@ To create a record:
     | Effective Start Data | Type start date and time for this hospital system.                                                       |
     | Effective End Date   | Type end date and time for this hospital system.                                                         |
 
-3. Select **Save & Close.** The newly created record will be available in the **Regions** list.
+3. Select **Save & Close**. The newly created record will be available in the **Regions** list.
 
 To edit the record, select the record, update the values as required, and select **Save & Close**.
 
@@ -112,7 +112,7 @@ To create a record:
     | Effective Start Data | Type start date and time for this facility.                                                     |
     | Effective End Date   | Type end date and time for this facility.                                                       |
 
-3. Select **Save & Close.** The newly created record will be available in the **Facilities** list.
+3. Select **Save & Close**. The newly created record will be available in the **Facilities** list.
 
 To edit the record, select the record, update the values as required, and select **Save & Close**.
 
@@ -145,7 +145,7 @@ To create a record:
     | Location Order       | Type a number that sorts the location in the location drop-down lists.                               |
     | Alternate Site Flag  | For internal use                                                                                     |
 
-3. Select **Save & Close.** The newly created record will be available in the **Locations** list.
+3. Select **Save & Close**. The newly created record will be available in the **Locations** list.
 
 To edit the record, select the record, update the values as required, and select **Save & Close**.
 
@@ -169,7 +169,7 @@ To create a record:
     | Effective Start Data | Type start date and time for this hospital system. |
     | Effective End Date   | Type end date and time for this hospital system.   |
 
-3. Select **Save & Close.** The newly created record will be available in the **Departments** list.
+3. Select **Save & Close**. The newly created record will be available in the **Departments** list.
 
 To edit the record, select the record, update the values as required, and select **Save & Close**.
 
