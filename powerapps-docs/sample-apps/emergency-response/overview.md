@@ -1,5 +1,5 @@
 ---
-title: Overview of Emergency Response app | Microsoft Docs
+title: Overview of Emergency Response sample template | Microsoft Docs
 description: Provides an overview of Emergency Response Solution.
 author: KumarVivek
 manager: annbe
@@ -12,7 +12,7 @@ ms.reviewer: kvivek
 searchScope:
   - PowerApps
 ---
-# Emergency Response sample template in Power Apps
+# Emergency Response sample template
 
 The Emergency Response app provides a set of capabilities for healthcare organizations to collect data for situational awareness of available beds and supplies, COVID-19 related patients, staffing, and pending discharges. The solution also provides dashboards that provide insights to medical
 organizations and hospitals to make informed decisions quickly resulting in efficient deployment and usage of resources.
