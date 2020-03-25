@@ -1,5 +1,5 @@
 ---
-title: Emergency Response sample app template user guide | Microsoft Docs
+title: Use the Emergency Response solution | Microsoft Docs
 description: Walk-through different apps and components for the users of the Emergency Response sample app template 
 author: tapanm-msft
 manager: kumarvivek
@@ -10,13 +10,10 @@ ms.date: 03/24/2020
 ms.author: tapanm
 ms.reviewer: kvivek
 searchScope:
-  - GetStarted
   - PowerApps
 ---
 
-# Emergency Response sample app user guide
-
-## Overview
+# Use the Emergency Response solution
 
 Hospital leaders and staff are challenged to meet an increase in number of
 patients while managing supply chain during emergency. With addition of
@@ -230,12 +227,6 @@ options to share a praise, an idea or report an issue with the app.
 
 Switch facility anytime by selecting the facility name on the top-right side of the screen. After you select the location name, you're taken to the **App
 Launcher** screen where you can select a different hospital, region, or facility.
-
-*Disclaimer: This app is a sample and may be used with Microsoft Power Apps for dissemination of reference information only. This app is not intended or made available for use as a medical device, clinical support, diagnostic tool, or other technology intended to be used in the diagnosis, cure, mitigation, treatment, or prevention of disease or other conditions, and no license or right is granted by Microsoft to use this app for such purposes. This app is not designed or intended to be a substitute for professional medical advice, diagnosis, treatment, or judgment and should not be used as such. Customer bears the sole risk and responsibility for any use of this app. Microsoft does not warrant that the app or any materials provided in connection therewith will be sufficient for any medical purposes or meet the health or medical requirements of any person.*
-
-## Next steps
-
-[Configure Emergency Response sample solution](configure.md)
 
 ### See also
 
