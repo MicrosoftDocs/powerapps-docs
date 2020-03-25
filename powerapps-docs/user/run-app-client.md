@@ -78,11 +78,11 @@ To run an app on a mobile device, select the app tile. If someone else created a
 
 If this is the first time you're using the Power Apps mobile app, a screen shows the swipe gestures.
 
-Gesture to close the app:
+### Gesture to close the app:
 
 ![Launch app](media/swipe.gif)
 
-gestures to pinch and zoom:
+### Gestures to pinch and zoom:
 
 ![Pinch to zoom](media/pinchtozoom.jpg)
 
