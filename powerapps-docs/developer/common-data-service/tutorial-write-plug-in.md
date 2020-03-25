@@ -3,7 +3,7 @@ title: "Tutorial: Write and register a plug-in (Common Data Service) | Microsoft
 description: "This tutorial is the first in a series that will show you how to work with plug-ins." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 02/23/2019
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" # GitHub ID

@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 10/30/2019
+ms.date: 03/19/2020
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -86,6 +86,7 @@ This list identifies all services to which Power Apps Studio talks and their usa
 
 | Domain(s) | Protocols | Uses |
 | --- | --- | --- |
+| api.bap.microsoft.com<br/>api.businessappdiscovery.microsoft.com | https | Environment permissions management|
 | management.azure.com |https |RP |
 | msmanaged-na.azure-apim.net |https |Runtime of Connectors/Apis |
 | login.microsoft.com<br>login.windows.net<br>login.microsoftonline.com<br>secure.aadcdn.microsoftonline-p.com |https |ADAL |
@@ -96,9 +97,10 @@ This list identifies all services to which Power Apps Studio talks and their usa
 | \*.azureedge.net |https | create.powerapps.com, make.powerapps.com, content.powerapps.com, and make.powerapps.com |
 | \*.blob.core.windows.net |https | Blob storage |
 | \*.flow.microsoft.com | https | create.powerapps.com, make.powerapps.com, content.powerapps.com, and make.powerapps.com |
-| *.dynamics.com | https | Common Data Service |
+| \*.dynamics.com | https | Common Data Service |
 | vortex.data.microsoft.com |https |Telemetry |
-| localhost | https | Power Apps Mobile
+| localhost | https | Power Apps Mobile|
+
 
 > [!NOTE]
 > If you're using a VPN, it must be configured to exclude localhost from tunneling for Power Apps Mobile.

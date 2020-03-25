@@ -3,7 +3,7 @@ title: "Offline use of services (Common Data Service) | Microsoft Docs" # Intent
 description: "Learn about how various services can be used offline. There are several messages that are supported offline. You can also determine whether a IOrganizationService message works offline by checking the SdkMessage.Availability attribute for the desired message" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "sriharibs" # GitHub ID

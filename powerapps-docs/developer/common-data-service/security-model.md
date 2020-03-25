@@ -3,7 +3,7 @@ title: "Security Model (Common Data Service) | Microsoft Docs" # Intent and prod
 description: "Common Data service provides a security model that protects data integrity and privacy, and supports efficient data access and collaboration" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/19/2019
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "paulliew" # GitHub ID
