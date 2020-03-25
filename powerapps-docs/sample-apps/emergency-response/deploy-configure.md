@@ -176,7 +176,7 @@ Alternatively, if you want to enter the master data manually, see [Manually conf
 
 Importing the following files is mandatory before you move to the next step:
 
-| Area name | Entity name| File name
+| Area name | Entity name| File name 
 |-|-|-
 | Administration | Apps | 00 - App Import.xlsx
 | Administration | Apps Config | 00 - App Config Import.xlsx
