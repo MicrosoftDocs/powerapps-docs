@@ -7,7 +7,7 @@ ms.date: 01/27/2020
 ms.author: v-lshann
 ---
 
-# Application Maker Learning Catalog
+# App Maker Learning Catalog
 
 Are you interested in quickly creating custom business apps without writing code? 
 
