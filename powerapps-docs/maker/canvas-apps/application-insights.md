@@ -17,7 +17,7 @@ search.app:
 
 # Analyze app telemetry using Application Insights
 
-You can connect your app with [Application Insights](https://docs.microsoft.com/azure/azure-monitor/app/app-insights-overview), a feature of [Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/overview). Application Insights is an extensible Application Performance Management (APM) service for developers and DevOps professionals.
+You can connect your app with [Application Insights](https://docs.microsoft.com/azure/azure-monitor/app/app-insights-overview), a feature of [Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/overview). Application Insights includes powerful analytics tools to help you diagnose issues and to understand what users actually do with your app. 
 
 With your app connected to Applications Insights, you can collect
 information to help you drive better business decisions and improve the quality of your apps.
@@ -322,24 +322,13 @@ You can export your Application Insights data and query results to Power BI for 
 
     ![Charts and visualizations](./media/application-insights/powerbi-feedback.png)
 
-## Default event context and dimensions
+## Default Trace event context and dimensions
 
-To track what a user does over time, Application Insights needs an ID
-for each user or session. The following IDs are included in every trace or
-screen view event sent.
-
-| Event property | Represents                                                 |
-|-|--|
-| User_Id | The AAD user object ID of the end user of the application. |
-| Session_Id | The Power Apps player session ID. |
-
-A set of default dimensions is also added to the *customDimensions* property on each event. These dimensions can be used to identify the application and application sessions the events occurred in. If you log addition custom data using the trace function, they'll also appear in the custom dimensions.
+A set of default dimensions is also added to the *customDimensions* property on each Trace event. These dimensions can be used to identify the application and application sessions the events occurred in. If you log additional custom data using the trace function, they'll also appear in the custom dimensions.
 
 | Dimension Name  | Represents                                            |
 |-----------------|-------------------------------------------------------|
 | ms-appId        | The Application ID of the app that sent the event     |
 | ms-appName      | The Application name of the app that sent the event   |
-| ms-tenantId     | The Tenant ID related to the app that sent the event. |
-| ms-isTest       | If the event was sent during the execution of a test. |
 | ms-appSessionId | The application session ID.                           |
 
