@@ -229,4 +229,4 @@ Launcher** screen where you can select a different hospital, region, or facility
 
 ### See also
 
-[Crisis communication sample template](../..//maker/canvas-apps/sample-crisis-communication-app)
+[Crisis communication sample template](../..//maker/canvas-apps/sample-crisis-communication-app.md)
