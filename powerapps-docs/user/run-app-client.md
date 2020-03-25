@@ -44,22 +44,26 @@ Open Power Apps on your mobile device and sign in using your Azure Active Direct
 
 If you have the Microsoft Authenticator app installed on your mobile device, simply enter your username when prompted, and then approve the notification sent to your device.
 
+
+
 ## Find the app
-To make it easier to find the app, open the **PowerApps** menu, and then select a filter.
+To make it easier to find the app, open the **PowerApps** menu, and then select a filter. 
+
+Only the **My apps** and **All apps** filters apply to model-driven apps. For preview, **My apps** filters shows **All apps** for model-driven apps.
 
 ![App filters](media/filter-menu.png)
 
 The following filters are available:
 
-* **All apps**: Displays all apps to which you have access, including apps you created and apps that others shared with you.
+* **All apps** : Displays all canvas and model-driven apps to which you have access, including apps you created and apps that others shared with you.
 
-* **My Apps**: Displays apps that you've run at least once.
+* **My apps**: Displays both canvas and model-driven apps that you've run at least once.
 
-* **Sample apps**: Displays sample apps from Microsoft that showcase real application scenarios with fictitious data to help you explore design possibilities.
+* **Sample apps** (canvas apps): Displays sample canvas apps from Microsoft that showcase real application scenarios with fictitious data to help you explore design possibilities.
 
-* **Favorites**: Displays apps that you've marked by tapping the ellipsis (...) on the app tile, and then tapping **Favorite**. To remove an app from this list, tap the ellipsis (...) on the app tile, and then tap **Unfavorite**.
+* **Favorites** (canvas apps): Displays canvas apps that you've marked by selecting the ellipsis (...) on the app tile, and then select **Favorite**. To remove an app from this list, select the ellipsis (...) on the app tile, and then tap **Unfavorite**.
 
-* **Featured apps**: Displays apps that your admin as marked as Featured apps.
+* **Featured apps** (canvas apps): Displays canvas apps that your admin as marked as Featured apps.
 
     ![Mark as Favorite](./media/run-app-client/favorite.png)
 
