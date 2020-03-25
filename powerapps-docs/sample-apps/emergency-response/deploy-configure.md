@@ -43,6 +43,14 @@ After you have purchased Power Apps, create an environment with a Common Data Se
 
 ### Step 2: Install the deployment files in your environment
 
+> [What's in the deployment package?](#whats-in-the-deployment-package)
+
+> [Step 2.1: Import the solution file into your environment](#step-21-import-the-solution-file-into-your-environment)
+
+> [Step 2.2: Load configuration and master data for your organization](#step-22-load-configuration-and-master-data-for-your-organization)
+
+> [Step 2.3: Update the mobile app branding](#step-23-update-the-mobile-app-branding)
+
 #### What's in the deployment package?
 
 Get the latest deployment file (.zip) from <https://aka.ms/emergency-response-solution> that contains the solution files, images, and data files to set up the apps and business logic for the Emergency Response solution.
@@ -289,7 +297,7 @@ This step lets you set your mobile app as the hero and featured app within the *
 
 Before you perform this step, you will need app ID of each mobile app (canvas app) that you want to set as hero and featured app. For info about getting app ID for a canvas app, see [Step 2.4: Bypass consent for mobile apps](#step-24-bypass-consent-for-mobile-apps)
 
-Next. do the following:
+Next, do the following:
 
 1.  Open Notepad, and copy this PowerShell script:
 
@@ -317,32 +325,43 @@ Next. do the following:
     Set-AdminPowerAppAsHero -AppName APPGUIDHERE
     ```
 
-2.  Replace the APPGUIDHERE value in each line with the actual app ID for the
-    app you want to set as featured and hero.
+2.  Replace the `APPGUIDHERE` value in each line with the actual app ID for the app you want to set as featured and hero respectively.
 
 3.  Save the file as .ps file.
 
-4.  Run PowerShell as an administrator and execute the .ps file you just
-    created.
+4.  Run PowerShell as an administrator and execute the .ps file you just created.
+
+#### Step 2.8: Share model-driven app with admins in your organization
+
+For your admin users to use the admin app (model-driven app), it must be shared with them. It's easier to use Azure AD groups to easily share apps with a group of admin users.
+
+1. Sign in to [Power Apps](https://make.powerapps.com).
+
+2. In the left navigation pane, select Apps to view a list of all your apps.
+
+3. Select the model-driven app (**Admin App – Emergency Response App**) and select **Share** in the banner.
+
+4. Specify the Azure AD group or admin users that you want to share this app with, assign the **Emergency Response Admin** security role, and select **Share**.
+
 
 ## Manually configure and manage master data for your organization
 
-Admins can use the model-driven app in [Power Apps](https://make.powerapps.com) to create and manage master data for their organization. This data is required for the Emergency Response Solution to work.
+Admins can use the model-driven app in [Power Apps](https://make.powerapps.com) to create and manage master data for their organization. This data is required for the Emergency Response solution to work.
 
 > [!NOTE]
 > You can also import your organization data into data files available in the deployment package and then import it to these entities. More information: [Step 2.2: Load configuration and master data for your organization](#step-2.2-load-configuration-and-master-data-for-your-organization)
 
-To start, you must add master data in the following entities for your medical organization:
+You must add master data in these entities and in the following sequence:
 
-- Hospital systems
+1. [Systems](#systems-data)
 
-- Regions for each hospital system
+1. [Regions](#regions-data)
 
-- Facilities within each region of a hospital system
+1. [Facilities](#facilities-data)
 
-- Locations within each facility
+1. [Locations](#locations-data)
 
-- Departments in your hospital system
+1. [Departments](#departments-data)
 
 The master data is managed from the **Locations** area in the left navigation in the admin app:
 
@@ -569,20 +588,20 @@ For more information about creating a new dashboard, read [create new dashboard]
 
 ## Get insights using Power BI dashboards
 
-Before you can view the Power BI dashboard, you must publish it within your organization.
+Publish the Power BI dashboard and share it with users in your organization so that they can use the dashboard for insights and decision making.
 
 ### Prerequisites
 
-1. Power BI Premium Capacity or Power BI Pro licenses assigned to users accessing the report. 
+- Power BI Premium Capacity or Power BI Pro licenses assigned to users accessing the report. 
 
-2. Create a workspace in Power BI where you publish the report. Sign into Power BI and create a workspace. More information: [Create the new workspaces in Power BI](https://docs.microsoft.com/power-bi/service-create-the-new-workspaces)
+- Create a workspace in Power BI where you publish the report. Sign into Power BI and create a workspace. More information: [Create the new workspaces in Power BI](https://docs.microsoft.com/power-bi/service-create-the-new-workspaces)
 
-3. Install Power BI Desktop from the Windows app store: <https://aka.ms/pbidesktop>
+- Install Power BI Desktop from the Windows app store: <https://aka.ms/pbidesktop>
 
    > [!NOTE] 
-   > If you have installed Power BI by downloading directly from the Power BI site as an executable in the past, remove it use the one from the app store. The app store version will be updated automatically as new releases are available.
+   > If you have installed Power BI by downloading directly from the Power BI site as an executable in the past, remove it and use the one from the app store. The app store version will be updated automatically as new releases are available.
 
-4. After installing Power BI Desktop from app store, run it, sign in using an account that has permission to publish Power BI apps in your organization.
+- After installing Power BI Desktop from app store, run it, sign in using an account that has permission to publish Power BI apps in your organization.
 
 ### Publish the Power BI dashboard
 
@@ -675,3 +694,6 @@ To view and manage app feedback:
     > [!div class="mx-imgBorder"]
     > ![select-app-feedback](media/select-app-feedback.png)
 
+## Next step
+
+[Use Emergency Response app](use.md)
