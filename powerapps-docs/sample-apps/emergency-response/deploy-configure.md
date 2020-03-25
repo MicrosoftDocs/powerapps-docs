@@ -15,9 +15,7 @@ searchScope:
 ---
 # Deploy and configure Emergency Response solution
 
-The Emergency Response solution can be easily deployed and requires a small amount of setup to adapt to your needs.
-
-This article provides step-by-step instructions for IT admins to deploy and configure the application for their organization.
+The Emergency Response solution requires a small amount of setup to adapt to your needs. This article provides step-by-step instructions for hospital IT admins to deploy and configure the application for their organization.
 
 Estimated time to complete these steps: **35–40 minutes**.
 
@@ -25,7 +23,7 @@ Estimated time to complete these steps: **35–40 minutes**.
 
 This section provides you information on how to deploy the Emergency Response Solution for your organization.
 
-## Step 1: Sign up for Power Apps and create an environment
+### Step 1: Sign up for Power Apps and create an environment
 
 If you don't have already have Power Apps, sign up for Power Apps and purchase an appropriate license.
 
@@ -43,9 +41,9 @@ After you have purchased Power Apps, create an environment with a Common Data Se
 
 3.  Create appropriate users in your environment. More information: [Create users and assign security roles](https://docs.microsoft.com/en-us/power-platform/admin/create-users-assign-online-security-roles)
 
-## Step 2: Install the deployment files in your environment
+### Step 2: Install the deployment files in your environment
 
-### What's in the deployment package?
+#### What's in the deployment package?
 
 Get the latest deployment file (.zip) from <https://aka.ms/emergency-response-solution> that contains the solution files, images, and data files to set up the apps and business logic for the Emergency Response solution.
 
@@ -59,7 +57,7 @@ To begin the deployment process, extract the deployment file (.zip) to a locatio
 | **PowerShell**        | Contains scripts that you will use to configure your mobile apps (canvas apps)|
 | **Solution File**     | Contains the Common Data Service solution file that creates the apps and metadata required for the Emergency Response solution. |
 
-### Step 2.1: Import the solution file into your environment
+#### Step 2.1: Import the solution file into your environment
 
 1.  Navigate to the location where you extracted the deployment file (.zip); you will find a **Solution File** folder. We will import the managed solution
     (.zip) file under the **Solution File** folder to our environment.
@@ -87,7 +85,7 @@ Select the **Admin App** to open the model-driven app that lets you configure th
 
 The admin app has a bunch of entities where you can add and manage data for your hospital system. You can use the area picker in the lower part of the left navigation pane to view and manage entities in various areas.
 
-### Step 2.2: Load configuration and master data for your organization
+#### Step 2.2: Load configuration and master data for your organization
 
 All the data required for the Emergency Response solution is available under the **Data Files** folder under your extracted deployment folder.
 
@@ -132,132 +130,83 @@ The **Data Files** folder has the following files and folders:
 <li>Departments</li>
 </ul>
 <p>If you want to import your organization data instead of the sample data, you can replace the sample data in these Excel files with your organization data, and then import the data in the app.</p>
-<p>You can also manually enter data for these entities. For information about each of these entities and fields in these entities, see </p></td>
+<p>You can also manually enter data for these entities. For information about each of these entities and fields in these entities, see <a href="#manually-configure-and-manage-master-data-for-your-organization">Manually configure and manage master data for your organization</a></p></td>
 </tr>
 <tr>
-<td>successCallback</td>
-<td><p>A function to call when a record is created. An object with the following properties will be passed to identify the new record:</p>
-<ul>
-<li><b>entityType</b>: String. The entity logical name of the new record.</li>
-<li><b>id</b>: String. GUID of the new record.</li>
-</ul></td>
-</tr>
-<tr>
-<td>errorCallback</td>
-<td>A function to call when the operation fails. An object with the following properties will be passed:
-<ul>
-<li><b>errorCode</b>: Number. The error code.</li>
-<li><b>message</b>: String. An error message describing the issue.</li>
-</ul></td>
+<td><strong>Data Template File for Master Data</strong> folder</td>
+<td><p>The folder contains "empty" data files (.xlsx) for master entities that you can use to populate your organization data, and then import it to the app.</p>
+<p>The files are named to denote the sequence in which the data should be imported into your app. It's the same list of entities that is mentioned earlier for the <strong>Sample Data</strong> folder.</p>
+<p>You can also manually enter data for these entities. For information about each of these entities and fields in these entities, see <a href="#manually-configure-and-manage-master-data-for-your-organization">Manually configure and manage master data for your organization</a></p>
+</td>
 </tr>
 </table>
 
-| **Files/Folder**      | **Description**  |
-|-----------------------|------------------|
-| At the root; following files are available:   | These are the configuration data files that must be imported, and must be imported to the following entities:|
-| **Sample Data** folder | The folder contains the sample data files (.xlsx) that you can import to populate the sample data in your application. The files are named to denote the sequence in which the data should be imported into your app. You must import data for the following entities that contain the master sample data for the Emergency Response Solution: |
-| **Data Template File for Master Data** folder | The folder contains "empty" data files for master entities that you can use to populate your organization data, and then import it to the app. The files are named to denote the sequence in which the data should be imported into your app. It's the same list of entities that is mentioned earlier for the **Sample Data** folder. |
+#### How to load data from data files?
 
-*   00 - Acuities Import.xlsx
+To load sample data from one of the data files to an entity:
 
-*   00 - App Config Import.xlsx
+1.  In the left navigation pane of the admin app, select an entity for which you want to load the data. For example, select **Location** from the area picker and then select **Systems**.
 
-*   00 - App Import.xlsx
+2.  Select **Import from Excel** and select the **01 - Load Systems.xlsx** file from the **Sample Data** folder.
 
-*   00 - Request Roles Import.xlsx
+    > [!div class="mx-imgBorder"] 
+    > ![Import from Excel](media/conf-import-from-excel.png "Import from Excel")
 
-*   00 - Supplies Import.xlsx
+3.  Proceed with the import wizard steps to import the data.
 
-*   **Acuities**
-
-*   **App Config**
-
-*   **Apps**
-
-*   **Request Roles**
-
-*   **Supplies**
-
-**Caution:** Make sure you don't update the configuration values in these entities, except for the **App** and **App Config** entities as explained later.
-
-1. Systems <!-- should this list be ordered? -->
-
-2. Regions
-
-3. Facilities
-
-4. Locations
-
-5. Departments
-
-If you have your organizational data that you want to populate instead of the sample data, you can replace the sample data in these Excel files with your data, and then import the data in the app.
-
-For information about each of these entities and fields in these entities, see [Configure and manage master data for your organization](#manually-configure-and-manage-master-data-for-your-organization)
-
-### How to load data from data files?
-
-To load sample data from the Excel file to an entity:
-
-1.  In the left navigation pane of the admin app, select **Location** from the area picker**,** and then select an entity. Let's start with **Systems**.
-
-2.  Select **Import from Excel** to create an empty Excel file with all the entity attributes as columns.
-
-  > [!div class="mx-imgBorder"] 
-  > ![Import from Excel](media/conf-import-from-excel.png "Import from Excel")
-
-3.  Proceed with the wizard steps to import the data.
-
-4.  After the sample data is imported, you will see record in the entity:
+4.  After the sample data is imported, you will see the imported record in the entity:
 
   > [!div class="mx-imgBorder"] 
   > ![Entity record](media/conf-entity-record.png "Record in the entity after import")
 
-Alternatively, if you want to enter the master data manually, see [Configure and manage master data for your organization](#manually-configure-and-manage-master-data-for-your-organization).
+Repeat the above steps with other entities as well.
 
-### Step 2.3: Update the mobile app branding
+Alternatively, if you want to enter the master data manually, see [Manually configure and manage master data for your organization](#manually-configure-and-manage-master-data-for-your-organization).
+
+#### Step 2.3: Update the mobile app branding
 
 You can change the icon or color scheme of the mobile apps to match the branding of your organization.
 
-You do this using the **App** and **App Config** entities in the **Administration** area by importing app and app config data from the Excel file available in the **Data Files** folder under the deployment package as explained in [Step 2.2: Load configuration and master data for your organization](#step-2.2-load-configuration-and-master-data-for-your-organization).
+You do this using the **App** and **App Config** entities in the **Administration** area by importing app and app config data from the Excel file available in the **Data Files** folder under the deployment package as explained in the previous step.
 
 > [!div class="mx-imgBorder"] 
-> ![App and App Config entities](media/conf-app-app-config-entities.png "App and App Config entities")
+> ![Apps and App Config entities](media/conf-app-app-config-entities.png "Apps and App Config entities")
 
-1.  Make sure you have imported the configuration data for **Apps** and **App Config** entities from the **App Import.xlsx** and **App Config Import.xlsx** files respectively.
+1.  Make sure you have imported the configuration data for **Apps** and **App Config** entities from the **App Import.xlsx** and **App Config Import.xlsx** files respectively in the extracted deployment package.
 
-2.  Now, we will copy the app IDs four your canvas apps so that we can populate it in the App records we imported. Sign in to [Power Apps](https://make.powerapps.com).
+1.  Now, we will copy the app IDs four your canvas apps so that we can populate it in the App records we imported. Sign in to [Power Apps](https://make.powerapps.com).
 
-3.  Select your environment from the top-right corner.
+1.  Select your environment from the top-right corner.
 
-4.  In the left pane, select **Apps**, and then select the ellipsis (…) for a canvas app followed by **Details**.
+1.  In the left pane, select **Apps**, and then select the ellipsis (…) for a canvas app followed by **Details**.
 
-> [!div class="mx-imgBorder"] 
-> ![Apps details](media/conf-environments-apps-details.png "App details")
+    > [!div class="mx-imgBorder"] 
+    > ![Apps details](media/conf-environments-apps-details.png "App details")
 
 1.  The app ID appears at the bottom of the **Details** pane for the app. Copy the App ID along with its name in the notepad file.
 
- > [!div class="mx-imgBorder"] 
- > ![Details App ID](media/conf-details-app-id.png "Details App ID")
+    > [!div class="mx-imgBorder"] 
+    > ![Details App ID](media/conf-details-app-id.png "Details App ID")
 
-2.  Repeat steps 3 and 4 for each canvas app.
+1.  Repeat steps 3 and 4 for each canvas app.
 
-3.  Open the Admin App, and in the left navigation pane of the admin app, select **Administration** from the area picker, and then select **Apps**. This will show all the canvas app records you imported from the **App Import.xlsx** file.
+1.  Open the Admin App, and in the left navigation pane of the admin app, select **Administration** from the area picker, and then select **Apps**. This will show all the canvas app records you imported from the **App Import.xlsx** file.
 
-> [!div class="mx-imgBorder"] 
-> ![Admin apps](media/conf-admin-app-records.png "Admin apps")
+    > [!div class="mx-imgBorder"] 
+    > ![Admin apps](media/conf-admin-app-records.png "Admin apps")
 
-4.  Open one of the app records by selecting it. Note that the Power App ID field is blank.
+1.  Open one of the app records by selecting it. Note that the Power App ID field is blank.
 
-> [!div class="mx-imgBorder"] 
-> ![Power App ID field ](media/conf-powerapp-id-field.png "Power App ID field")
+    > [!div class="mx-imgBorder"] 
+    > ![Power App ID field ](media/conf-powerapp-id-field.png "Power App ID field")
 
-5.  Copy the app ID from the notepad, where you copied earlier in steps 2-6, to the **Power App ID** field. You can also update the app icon by    double-clicking the app icon and specifying another image. Save the record.
+1.  Copy the app ID from the notepad, where you copied earlier in steps 2-6, to the **Power App ID** field. You can also update the app icon by    double-clicking the app icon and specifying another image. Save the record.
 
-6.  Repeat step 9 for each canvas app record under **Apps** to add the **Power App ID** value.
+1.  Repeat step 9 for each canvas app record under **Apps** to add the **Power App ID** value.
 
-7.  In the left pane, select **App Config.**
+1.  In the left pane, select **App Config.**
 
-8.  Select the **Emergency Response App** record to open it for editing.
+1.  Select the **Emergency Response App** record to open it for editing.
 
     1.  Double click the icon to specify a new image as the app icon.
 
@@ -265,10 +214,10 @@ You do this using the **App** and **App Config** entities in the **Administratio
 
     3.  Select **Yes** or **No** in the **Device Sharing Enabled** field to specify whether a **Sign Out** option will be available in the mobile apps or not. Selecting **Yes** will make the **Sign Out** option available.
 
-  > [!div class="mx-imgBorder"] 
-  > ![Device Sharing Enabled field](media/conf-device-sharing-enabled-field.png "Device Sharing Enabled field")
+    > [!div class="mx-imgBorder"] 
+    > ![Device Sharing Enabled field](media/conf-device-sharing-enabled-field.png "Device Sharing Enabled field")
 
-9.  Select **Save** in the lower-right corner to save your changes.
+1.  Select **Save** in the lower-right corner to save your changes.
 
 ### Step 2.4: Bypass consent for mobile apps
 
@@ -283,27 +232,27 @@ Next do the following:
 
 1.  Open Notepad, and copy this PowerShell script:
 
-```powershell
-\#MUST BE A TENANT ADMIN TO RUN THIS
-Install-Module -Name Microsoft.PowerApps.Administration.PowerShell
-Install-Module -Name Microsoft.PowerApps.PowerShell -AllowClobber
-Import-Module -Name Microsoft.PowerApps.Administration.PowerShell
-Import-Module -Name Microsoft.PowerApps.PowerShell
-\# This call opens prompt to collect credentials (Azure Active Directory
-account and password) used by the commands
-Add-PowerAppsAccount
-\#Change the App ID for each new app (APPGUIDHERE)
-Set-AdminPowerAppApisToBypassConsent -AppName APPGUIDHERE
-```
+    ```powershell
+    # MUST BE A TENANT ADMIN TO RUN THIS
+    Install-Module -Name Microsoft.PowerApps.Administration.PowerShell
+    Install-Module -Name Microsoft.PowerApps.PowerShell -AllowClobber
+    Import-Module -Name Microsoft.PowerApps.Administration.PowerShell
+    Import-Module -Name Microsoft.PowerApps.PowerShell
+    
+    # This call opens prompt to collect credentials 
+    # (Azure Active Directory account and password) 
+    # used by the commands
+    Add-PowerAppsAccount
+    
+    # Change the App ID for each new app (APPGUIDHERE)
+    Set-AdminPowerAppApisToBypassConsent -AppName APPGUIDHERE
+    ```
 
-2.  Add as many lines under the \#Change the App ID for each new app section as
-    the count of your mobile apps, and replace the APPGUIDHERE value in each
-    line with the actual app ID for each app.
+2.  Add as many lines under the `# Change the App ID for each new app` section as the count of your mobile apps, and replace the `APPGUIDHERE` value in each line with the actual app ID for each app.
 
 3.  Save the file as .ps file.
 
-4.  Run PowerShell as an administrator and execute the .ps file you just
-    created.
+4.  Run PowerShell as an administrator and execute the .ps file you just created.
 
 ### Step 2.5: Add Azure Application Insights key to mobile apps for telemetry
 
@@ -322,47 +271,51 @@ groups to easily share apps with groups of users.
 
 3.  Select a mobile app (canvas app) and select **Share** in the banner.
 
-  > [!div class="mx-imgBorder"] 
-  > ![Share canvas apps](media/conf-share-canvas-apps.png "Share canvas apps")
+    > [!div class="mx-imgBorder"] 
+    > ![Share canvas apps](media/conf-share-canvas-apps.png "Share canvas apps")
 
 4.  Specify the Azure AD group or users that you want to share this app with. As the app connects to Common Data Service data, you will also need to provide permissions to the entities. The sharing panel prompts you to manage security for the entities. Assign the **COVID 19 End User** and **Common Data Service User** security roles to the entities used by this app and select **Share**.
 
-  > [!div class="mx-imgBorder"] 
-  > ![Share app with Azure AD group or users](media/conf-share-app-groups-users.png "Share app with Azure AD group or users")
+    > [!div class="mx-imgBorder"] 
+    > ![Share app with Azure AD group or users](media/conf-share-app-groups-users.png "Share app with Azure AD group or users")
 
 5.  Repeat steps 3 and 4 for each mobile app.
 
-Detailed information about sharing your apps: [Share a canvas app](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/share-app)
+Detailed information about sharing your apps: [Share a canvas app](https://docs.microsoft.com/powerapps/maker/canvas-apps/share-app)
+
+#### Step 2.7: Set your mobile app as hero and featured app
 
 This step lets you set your mobile app as the hero and featured app within the **Power Apps** mobile app.
 
-Before you perform this step, you will need app ID of each mobile app (canvas app) that you want to set as hero and featured app. To get the app ID for your app, in the left navigation pane of the admin app, select **Administration** from the area picker and then select **Apps**. This displays all the mobile apps (canvas apps). Select a mobile app to view its app ID. Copy the app Id for each app to a notepad file.
+Before you perform this step, you will need app ID of each mobile app (canvas app) that you want to set as hero and featured app. For info about getting app ID for a canvas app, see [Step 2.4: Bypass consent for mobile apps](#step-24-bypass-consent-for-mobile-apps)
 
-> [!div class="mx-imgBorder"] 
-> ![App ID of mobile apps](media/conf-app-id-mobile-apps.png "App ID of mobile apps")
-
-Next do the following:
+Next. do the following:
 
 1.  Open Notepad, and copy this PowerShell script:
 
 
-```powershell
-\#MUST BE A TENANT ADMIN TO RUN THIS
-Install-Module -Name Microsoft.PowerApps.Administration.PowerShell
-Install-Module -Name Microsoft.PowerApps.PowerShell -AllowClobber
-Import-Module -Name Microsoft.PowerApps.Administration.PowerShell
-Import-Module -Name Microsoft.PowerApps.PowerShell
-\# This call opens prompt to collect credentials (Azure Active Directory
-account and password) used by the commands
-Add-PowerAppsAccount
-\#Use the "COVID Response App" App ID
-\#To clear a featured app use Clear-AdminPowerAppAsFeatured
-\#Change the App ID for each new app (APPGUIDHERE)
-Set-AdminPowerAppAsFeatured -AppName APPGUIDHERE
-\#To clear a hero app use Clear-AdminPowerAppAsHero
-\#Change the App ID for each new app (APPGUIDHERE)
-Set-AdminPowerAppAsHero -AppName APPGUIDHERE
-```
+    ```powershell
+    # MUST BE A TENANT ADMIN TO RUN THIS
+    Install-Module -Name Microsoft.PowerApps.Administration.PowerShell
+    Install-Module -Name Microsoft.PowerApps.PowerShell -AllowClobber
+    Import-Module -Name Microsoft.PowerApps.Administration.PowerShell
+    Import-Module -Name Microsoft.PowerApps.PowerShell
+
+    # This call opens prompt to collect credentials 
+    # (Azure Active Directory account and password) 
+    # used by the commands
+    Add-PowerAppsAccount
+
+    # Use the "Emergency Response App" App ID
+    # To clear a featured app use Clear-AdminPowerAppAsFeatured
+
+    #Change the App ID for each new app (APPGUIDHERE)
+    Set-AdminPowerAppAsFeatured -AppName APPGUIDHERE
+
+    # To clear a hero app use Clear-AdminPowerAppAsHero
+    # Change the App ID for each new app (APPGUIDHERE)
+    Set-AdminPowerAppAsHero -AppName APPGUIDHERE
+    ```
 
 2.  Replace the APPGUIDHERE value in each line with the actual app ID for the
     app you want to set as featured and hero.
