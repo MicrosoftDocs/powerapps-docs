@@ -169,18 +169,18 @@ A Power Apps portal consists of the following components:
 
 - **Portal solutions**: Solutions that are installed in the Common Data Service environment and contain the metadata entities for any portal.
 
-To delete a portal, you must delete the **portal website host** and the  **portal configuration**.
+**To delete a portal**, you must delete the **portal website host** and the  **portal configuration**.
 
 - To delete **portal web site host**, read [Reset a portal](admin/reset-portal.md).
 
 - To delete **portal configuration**, delete the *Websites* record for the portal you want to delete using the **Portal Management** app.
 
 > [!NOTE]
-> If you reset the portal but do not delete the *Websites* record associated with the portal using the Portal Management app, new portal that you create will re-use the existing **portal configuration**. Resetting a portal is not the same as deleting a portal.
+> *Resetting a portal* is different from *deleting a portal*. If you reset the portal but do not delete the *Websites* record associated with the portal using the [Portal Management](configure/configure-portal.md) app, new portal that you create will re-use the existing **portal configuration**.
 
 If you want, you can also delete **portal solutions**. Deleting **portal solutions** is not required to create a new portal with clean configuration. However, you may need to delete the **portal solutions** for other reasons such as a business requirement to not have any more portals in a specific environment. If you have such requirement, you can delete **portal solutions** by following the steps outlined at [steps to uninstall portal solutions](https://community.dynamics.com/365/b/dynamics365portalssupport/archive/2017/02/27/portal-troubleshooting-part-three-uninstalling-portal-solutions).
 
-If you deleted **Portal Management** app by mistake while trying to delete a portal, refer [how to create custom Portal Management app](https://review.docs.microsoft.com/powerapps/maker/portals/configure/create-custom-portal-management-app).
+If you deleted **Portal Management** app by mistake while trying to delete a portal, refer [how to create custom Portal Management app](configure/create-custom-portal-management-app.md).
 
 ## Common Data Service environment lifecycle
 

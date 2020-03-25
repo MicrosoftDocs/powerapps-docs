@@ -13,7 +13,7 @@ ms.reviewer: sandhan
 
 # Create custom Portal Management app
 
-The [overview](configure-portal.md) introduces **Portal Management** app to help you get started with the advanced portal configuration. In this walk-through, you'll learn how to create a custom **Portal Management** app for additional customization, or if you accidentally deleted the default **Portal Management** app.
+The [overview](configure-portal.md) introduces **Portal Management** app to help you get started with the advanced portal configuration. In this walk-through, you'll learn how to create a custom **Portal Management** app for additional customization, or if you accidentally deleted it.
 
 ## How to create a custom Portal Management app
 
