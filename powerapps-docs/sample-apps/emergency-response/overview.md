@@ -39,7 +39,7 @@ See also: [Licensing overview for Power Platform](https://docs.microsoft.com/pow
 
 ## Next step
 
-[Deploy and configure the Emergency Response app](deply-configure.md)
+[Deploy and configure the Emergency Response app](deploy-configure.md)
 
 ### Disclaimer
 
