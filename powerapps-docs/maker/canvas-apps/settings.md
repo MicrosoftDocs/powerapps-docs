@@ -29,14 +29,17 @@ reclassification have been granted an extended timeframe which allows users
 without a premium license to access these apps. The following table outlines the
 designations and which license an end user must have to access an app.
 
-| **Designation​** | **Definition​**                                                                                                                                                                                                                                                                                                                                            |
+| **Designation​** | **Definition**                                                                                                                                                                                                                                                                                                                                            |
 |-----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Standard​        | An app that only uses standard connectors. An end user must have a Power Apps for Office 365 plan, per app plan, or a per user plan to access this app.​                                                                                                                                                                                                   |
 | Extended​        | An app allowed to use connectors promoted to premium on Oct. 1st, 2019.​ An end user must have a Power Apps for Office 365 plan, per app plan or per user plan. [This documentation](https://docs.microsoft.com/en-us/power-platform/admin/powerapps-flow-licensing-faq#office-365) outlines which connectors were promoted to premium on Oct. 1st 2019.  ​ |
 | Premium​         | An app that uses at least one premium connector. An end user must have a per app plan or per user plan to access.​                                                                                                                                                                                                                                         |
-![](media/settings_license_designation.png)
 
-![](media/details_license_designation.png)
+![](media/settings/settings_license_designation.png)
+The license designation appears in app settings.
+
+![](media/settings/details_license_designation.png)
+The license designation also appears in the app details view.
 
 ## Pass assignment
 
