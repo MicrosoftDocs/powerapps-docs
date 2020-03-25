@@ -711,27 +711,22 @@ The app uses a flow to send notifications to end users whenever there is a new c
   If this occurs, please open the card with the unauthorized connection and reauthorize.
 
 
-### Optional: Sending notifications to more than 999 users
+### Optional: Sending notifications to more than 5000 users
 
-The current **Get group members** action is limited to pulling 999 users (100 users by default). To distribute to more users, you can alter to the flow to  send an email to a distribution group instead.
+The current **Get group members** action is limited to pulling 5,000 users if you are
+using the Office license of Power Automate. If you have a premium license and would like to distribute to up to 100,000 users, you can follow these steps to send to more users.
 
-1. Delete the following cards: **Get group members** and **Switch on preferred send notification setting**:
+1. Select the **...** menu for the **Get group members** card.
 
-    ![Delete actions](media/sample-crisis-communication-app/36-delete-actions.png)
+    ![Select ... menu](media/sample-crisis-communication-app/40-Settings.png)
 
-1. Add a new action.
+1. Select **Settings**.
 
-1. Search for and select **Send an email (V2)**:
+1. Change the **Threshold** field to 100,000
 
-    ![Add send an email](media/sample-crisis-communication-app/37-add-send-an-email.png)
+    ![Setting the Threshold field](media/sample-crisis-communication-app/41-Threshold.png)
 
-1. In the **To** field, type in the name of your distribution group.
-
-1. In the **Subject** field, select the **Add a dynamic value** button and add the **Title** field from the **When a news item is posted** card:
-
-    ![Add title](media/sample-crisis-communication-app/38-add-title.png)
-
-1. In the **Body** field, select the **Add a dynamic value** button and add the **Details** field from the **When a news item is posted** card.
+1. Select **Done**
 
 1. Select **Save**.
 
