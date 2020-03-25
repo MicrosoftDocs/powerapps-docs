@@ -125,7 +125,7 @@ requirements. Refer to your organization resources for descriptions of supply
 names.
 
 IT Administrators can add or update the supplies app items list using the
-model-driven app for Power Apps. For more information, see [configuration guide](configure.md).
+model-driven app for Power Apps. For more information, see [configuration guide](deploy-configure.md).
 
 **Note:** The supply inventory item values must be in number format.
 
