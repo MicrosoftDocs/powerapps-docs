@@ -20,7 +20,7 @@ search.app:
 
 # Run Dynamics 365 model-driven apps on a mobile device
 
-Dynamics 365 model-driven apps don't run in the Power Apps mobile app. Instead, you run a model-driven app on a mobile device using the Dynamics 365 mobile app. If you don't have the Dynamics 365 for phones and tablets app installed, you can still use the web browser on your tablet, as long as your device has sufficiently high screen resolution. However, for full functionality and optimized experience, we strongly recommend that you use the Dynamics 365 for phones and tablets mobile app. 
+Use the Dynamics 365 for phones and Dynamics 365 for tablets app for your sales, customer service, field service, and other tasks. If you don't have the Dynamics 365 for phones and tablets app installed, you can still use the web browser on your tablet, as long as your device has sufficiently high screen resolution. However, for full functionality and optimized experience, we strongly recommend that you use the Dynamics 365 for phones and tablets mobile app. 
 
 > [!NOTE]
 > Using the web browser on your phone to run your model-driven apps isn't supported; you must use the Dynamics 365 for phones app. 
