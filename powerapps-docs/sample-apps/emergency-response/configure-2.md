@@ -35,7 +35,7 @@ To start, you must add master data in the following entities for your medical or
 The master data is managed from the **Locations** area in the left navigation in the admin app:
 
 > [!div class="mx-imgBorder"]
-> ![Locations area](media/locations-area.png)
+> ![locations-area](media/locations-area.png)
 
 The entities under the **Hierarchy** area are listed in the order you should populate data.
 
@@ -326,7 +326,7 @@ Before you can view the Power BI dashboard, you must publish it within your orga
 15. Select your workspace name in the left pane, and then select **Create app** in the top-right corner.  
 
     > [!div class="mx-imgBorder"]
-    > ![select create app](media/select-create-app.png)
+    > ![select-create-app](media/select-create-app.png)
 
 16. On the app publishing page:
 
