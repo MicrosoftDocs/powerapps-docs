@@ -6,12 +6,12 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/11/2020
+ms.date: 03/24/2020
 ms.author: tapanm
 ms.reviewer: sandhan
 ---
 
-# Custom Portal Management app
+# Create custom Portal Management app
 
 The [overview](configure-portal.md) introduces **Portal Management** app to help you get started with the advanced portal configuration. In this walk-through, you'll learn how to create a custom **Portal Management** app for additional customization, or if you accidentally deleted the default **Portal Management** app.
 

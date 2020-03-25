@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 03/04/2020
+ms.date: 03/24/2020
 ms.author: tapanm
 ms.reviewer: 
 ---
@@ -97,7 +97,7 @@ If you don't have sufficient privileges to create a portal in an environment, yo
 
 For information on creating a portal and the required privileges, see [Create a portal](create-portal.md).
 
-### I'm getting the message: “Your data isn’t quite ready”.
+### I'm getting the message: "Your data isn't quite ready".
 
 Sometimes the database creation can take time and the correct status might not reflect on the home page. In this case you'll see the following message:
 
@@ -161,17 +161,26 @@ You can change the base URL of a portal after it is provisioned by following the
 
 ### How do I delete a portal completely after it is provisioned?
 
-Portals consists of the following components:
+A Power Apps portal consists of the following components:
 
 - **Portal website host**: Portal website host is the Portal code that forms the actual website.
 
+- **Portal configuration**: The portal configuration in the Common Data Service environment that defines portal components such as *Websites*, *Pages*, *Content Snippets* and *Web Roles* records.
+
 - **Portal solutions**: Solutions that are installed in the Common Data Service environment and contain the metadata entities for any portal.
 
-To delete a portal completely requires deleting the Portal website host as well as uninstalling Portal solutions from your Common Data Service environment.
+To delete a portal, you must delete the **portal website host** and the  **portal configuration**.
 
-To reset the portal host, follow the steps in [Reset a portal](admin/reset-portal.md). It is important to note that resetting a portal host doesn't affect the configuration done in your Common Data Service environment.
+- To delete **portal web site host**, read [Reset a portal](admin/reset-portal.md).
 
-To delete portal solutions, you will have to delete solutions from the Dynamics 365 solution explorer UI. The order in which Portal solutions should be uninstalled is provided in [Uninstalling Portal Solutions](https://community.dynamics.com/365/b/dynamics365portalssupport/archive/2017/02/27/portal-troubleshooting-part-three-uninstalling-portal-solutions).
+- To delete **portal configuration**, delete the *Websites* record for the portal you want to delete using the **Portal Management** app.
+
+> [!NOTE]
+> If you reset the portal but do not delete the *Websites* record associated with the portal using the Portal Management app, new portal that you create will re-use the existing **portal configuration**. Resetting a portal is not the same as deleting a portal.
+
+If you want, you can also delete **portal solutions**. Deleting **portal solutions** is not required to create a new portal with clean configuration. However, you may need to delete the **portal solutions** for other reasons such as a business requirement to not have any more portals in a specific environment. If you have such requirement, you can delete **portal solutions** by following the steps outlined at [steps to uninstall portal solutions](https://community.dynamics.com/365/b/dynamics365portalssupport/archive/2017/02/27/portal-troubleshooting-part-three-uninstalling-portal-solutions).
+
+If you deleted **Portal Management** app by mistake while trying to delete a portal, refer [how to create custom Portal Management app](https://review.docs.microsoft.com/powerapps/maker/portals/configure/create-custom-portal-management-app).
 
 ## Common Data Service environment lifecycle
 
@@ -385,11 +394,11 @@ Enabling a portal login tracking can lead to performance issues in your portal. 
 
 The portal checker tool will check if login tracking is enabled for your portal and will show a failed check if it is enabled. Login tracking should be disabled by following these steps:
 
-1.	Open the [Portal Management app](configure/configure-portal.md).
-2.	Go to **Portals** > **Site Settings**.
-3.	Search for site setting named `Authentication/LoginTrackingEnabled`.
-4.	Change the value of this site setting to **False** or delete the site setting.
-5.	Restart the portal. 
+1.    Open the [Portal Management app](configure/configure-portal.md).
+2.    Go to **Portals** > **Site Settings**.
+3.    Search for site setting named `Authentication/LoginTrackingEnabled`.
+4.    Change the value of this site setting to **False** or delete the site setting.
+5.    Restart the portal. 
 
 #### Header output cache is disabled
 
@@ -397,11 +406,11 @@ Disabling header output cache on your portal can lead to performance issues in y
 
 The portal checker tool will check if header output cache is disabled on your portal and will show a failed check if it is disabled. To enable it:
 
-1.	Open the [Portal Management app](configure/configure-portal.md).
-2.	Go to **Portals** > **Site Settings**.
-3.	Search for site setting named `Header/OutputCache/Enabled`.
-4.	If the site setting is available, change the value of Site setting to **True**. If the site setting is not available, create a new site setting with this name and set its value to **True**.
-5.	Restart the portal. 
+1.    Open the [Portal Management app](configure/configure-portal.md).
+2.    Go to **Portals** > **Site Settings**.
+3.    Search for site setting named `Header/OutputCache/Enabled`.
+4.    If the site setting is available, change the value of Site setting to **True**. If the site setting is not available, create a new site setting with this name and set its value to **True**.
+5.    Restart the portal. 
 
 #### Footer output cache is disabled
 
@@ -409,11 +418,11 @@ Disabling footer output cache on your portal can lead to performance issues in y
 
 The portal checker tool will check if footer output cache is disabled on your portal and will show a failed check if it is disabled. To enable it:
 
-1.	Open the [Portal Management app](configure/configure-portal.md).
-2.	Go to **Portals** > **Site Settings**.
-3.	Search for site setting named `Footer/OutputCache/Enabled`.
-4.	If the site setting is available, change the value of Site setting to **True**. If the site setting is not available, create a new site setting with this name and set its value to **True**.
-5.	Restart the portal. 
+1.    Open the [Portal Management app](configure/configure-portal.md).
+2.    Go to **Portals** > **Site Settings**.
+3.    Search for site setting named `Footer/OutputCache/Enabled`.
+4.    If the site setting is available, change the value of Site setting to **True**. If the site setting is not available, create a new site setting with this name and set its value to **True**.
+5.    Restart the portal. 
 
 #### Large number of web file records
 
@@ -457,9 +466,9 @@ Web roles are used in portals to enable role-based access control. Typically, th
 
 This issue occurs when the **Home** site marker is not available in your portal configuration. To fix this issue:
 
-1.	Open the [Portal Management app](configure/configure-portal.md).
-2.	In the left pane, select **Site Markers**.
-3.	Create a new site marker with following values: 
+1.    Open the [Portal Management app](configure/configure-portal.md).
+2.    In the left pane, select **Site Markers**.
+3.    Create a new site marker with following values: 
   - **Name**: Home
   - **Website**: Select the website of your portal host.
   - **Page**: Select the webpage record that is set as the home page of your portal.
@@ -468,36 +477,36 @@ This issue occurs when the **Home** site marker is not available in your portal 
 
 This issue occurs when the **Home** site marker is available but is not pointing to any webpage. To fix this issue:
 
-1.	Open the [Portal Management app](configure/configure-portal.md).
-2.	In the left pane, select **Site Markers**.
-3.	Find the **Home** site marker record.
-4.	Update the **Page** field to point to an active home page of your portal.
+1.    Open the [Portal Management app](configure/configure-portal.md).
+2.    In the left pane, select **Site Markers**.
+3.    Find the **Home** site marker record.
+4.    Update the **Page** field to point to an active home page of your portal.
 
 ### The Home site marker is pointing to a deactivated web page
 
 This issue occurs when the **Home** site marker is available, but is pointing to a deactivated webpage. To fix this issue:
 
-1.	Open the [Portal Management app](configure/configure-portal.md).
-2.	In the left pane, select **Site Markers**.
-3.	Find the **Home** site marker record.
-4.	Update the **Page** field to point to an active home page of your portal.
+1.    Open the [Portal Management app](configure/configure-portal.md).
+2.    In the left pane, select **Site Markers**.
+3.    Find the **Home** site marker record.
+4.    Update the **Page** field to point to an active home page of your portal.
 
 ### The Home site marker is not pointing to home page of the portal
 
 This issue occurs when the **Home** site marker is available, but is pointing to a webpage that is not a home page of your portal. To fix this issue:
 
-1.	Open the [Portal Management app](configure/configure-portal.md).
-2.	In the left pane, select **Site Markers**.
-3.	Find the **Home** site marker record.
-4.	Update the **Page** field to point to an active home page of your portal.
+1.    Open the [Portal Management app](configure/configure-portal.md).
+2.    In the left pane, select **Site Markers**.
+3.    Find the **Home** site marker record.
+4.    Update the **Page** field to point to an active home page of your portal.
 
 ### An active Profile site marker is not available for this portal
 
 This issue occurs when the **Profile** site marker is not available in your portal configuration. To fix this issue:
 
-1.	Open the [Portal Management app](configure/configure-portal.md).
-2.	In the left pane, select **Site Markers**.
-3.	Create a new site marker with following values: 
+1.    Open the [Portal Management app](configure/configure-portal.md).
+2.    In the left pane, select **Site Markers**.
+3.    Create a new site marker with following values: 
   - **Name**: Profile
   - **Website**: Select the website of your portal host.
   - **Page**: Select the webpage record that is set as the profile page of your portal.
@@ -506,27 +515,27 @@ This issue occurs when the **Profile** site marker is not available in your port
 
 This issue occurs when the **Profile** site marker is available but is not pointing to any webpage. To fix this issue:
 
-1.	Open the [Portal Management app](configure/configure-portal.md).
-2.	In the left pane, select **Site Markers**.
-3.	Find the **Profile** site marker record.
-4.	Update the **Page** field to point to an active profile page of your portal.
+1.    Open the [Portal Management app](configure/configure-portal.md).
+2.    In the left pane, select **Site Markers**.
+3.    Find the **Profile** site marker record.
+4.    Update the **Page** field to point to an active profile page of your portal.
 
 ### The Profile site marker is pointing to a deactivated web page
 
 This issue occurs when the **Profile** site marker is available, but is pointing to a deactivated webpage. To fix this issue:
 
-1.	Open the [Portal Management app](configure/configure-portal.md).
-2.	In the left pane, select **Site Markers**.
-3.	Find the **Profile** site marker record.
-4.	Update the **Page** field to point to an active profile page of your portal.
+1.    Open the [Portal Management app](configure/configure-portal.md).
+2.    In the left pane, select **Site Markers**.
+3.    Find the **Profile** site marker record.
+4.    Update the **Page** field to point to an active profile page of your portal.
 
 ### An active Page Not Found site marker is not available for this portal
 
 This issue occurs when the **Page Not Found** site marker is not available in your portal configuration. To fix this issue:
 
-1.	Open the [Portal Management app](configure/configure-portal.md).
-2.	In the left pane, select **Site Markers**.
-3.	Create a new site marker with following values: 
+1.    Open the [Portal Management app](configure/configure-portal.md).
+2.    In the left pane, select **Site Markers**.
+3.    Create a new site marker with following values: 
   - **Name**: Page Not Found
   - **Website**: Select the website of your portal host.
   - **Page**: Select the webpage record that is set as the Page Not Found page of your portal.
@@ -535,27 +544,27 @@ This issue occurs when the **Page Not Found** site marker is not available in yo
 
 This issue occurs when the **Page Not Found** site marker is available but is not pointing to any webpage. To fix this issue:
 
-1.	Open the [Portal Management app](configure/configure-portal.md).
-2.	In the left pane, select **Site Markers**.
-3.	Find the **Page Not Found** site marker record.
-4.	Update the **Page** field to point to an active Page Not Found page of your portal.
+1.    Open the [Portal Management app](configure/configure-portal.md).
+2.    In the left pane, select **Site Markers**.
+3.    Find the **Page Not Found** site marker record.
+4.    Update the **Page** field to point to an active Page Not Found page of your portal.
 
 ### The Page Not Found site marker is pointing to a deactivated web page
 
 This issue occurs when the **Page Not Found** site marker is available, but is pointing to a deactivated webpage. To fix this issue:
 
-1.	Open the [Portal Management app](configure/configure-portal.md).
-2.	In the left pane, select **Site Markers**.
-3.	Find the **Page Not Found** site marker record.
-4.	Update the **Page** field to point to an active Page Not Found page of your portal.
+1.    Open the [Portal Management app](configure/configure-portal.md).
+2.    In the left pane, select **Site Markers**.
+3.    Find the **Page Not Found** site marker record.
+4.    Update the **Page** field to point to an active Page Not Found page of your portal.
 
 ### An active Access Denied site marker is not available for this portal
 
 This issue occurs when the **Access Denied** site marker is not available in your portal configuration. To fix this issue:
 
-1.	Open the [Portal Management app](configure/configure-portal.md).
-2.	In the left pane, select **Site Markers**.
-3.	Create a new site marker with following values: 
+1.    Open the [Portal Management app](configure/configure-portal.md).
+2.    In the left pane, select **Site Markers**.
+3.    Create a new site marker with following values: 
   - **Name**: Access Denied
   - **Website**: Select the website of your portal host.
   - **Page**: Select the webpage record that is set as the Access Denied page of your portal.
@@ -564,19 +573,19 @@ This issue occurs when the **Access Denied** site marker is not available in you
 
 This issue occurs when the **Access Denied** site marker is available but is not pointing to any webpage. To fix this issue:
 
-1.	Open the [Portal Management app](configure/configure-portal.md).
-2.	In the left pane, select **Site Markers**.
-3.	Find the **Access Denied** site marker record.
-4.	Update the **Page** field to point to an active Access Denied page of your portal.
+1.    Open the [Portal Management app](configure/configure-portal.md).
+2.    In the left pane, select **Site Markers**.
+3.    Find the **Access Denied** site marker record.
+4.    Update the **Page** field to point to an active Access Denied page of your portal.
 
 ### The Access Denied site marker is pointing to a deactivated web page
 
 This issue occurs when the **Access Denied** site marker is available, but is pointing to a deactivated webpage (root or content page can be deactivated). To fix this issue:
 
-1.	Open the [Portal Management app](configure/configure-portal.md).
-2.	In the left pane, select **Site Markers**.
-3.	Find the **Access Denied** site marker record.
-4.	Update the **Page** field to point to an active Access Denied page of your portal.
+1.    Open the [Portal Management app](configure/configure-portal.md).
+2.    In the left pane, select **Site Markers**.
+3.    Find the **Access Denied** site marker record.
+4.    Update the **Page** field to point to an active Access Denied page of your portal.
 
 ### Profile web form is not available for contact entity
 
