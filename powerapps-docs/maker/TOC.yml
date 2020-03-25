@@ -1625,7 +1625,7 @@
   items:
   - name: Use AI Builder in Power Apps
     href: ../use-ai-builder.md
-- name: Sample apps and solutions
+- name: Sample apps and templates
   items:
   - name: Crisis communication app
     href: ./canvas-apps/sample-crisis-communication-app.md
