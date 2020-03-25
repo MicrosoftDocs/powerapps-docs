@@ -15,36 +15,17 @@ searchScope:
 ---
 # Deploy and configure Emergency Response solution
 
-## Overview
+The Emergency Response solution can be easily deployed and requires a small amount of setup to adapt to your needs.
 
-The Emergency Response solution provides set of capabilities for healthcare organizations to collect data for situational awareness of available beds and supplies, COVID-19 related patients, staffing, and pending discharges. The solution also provides dashboards that provides insights to medical
-organizations and hospitals to make informed decisions resulting in efficient deployment and usage of resources.
+This article provides step-by-step instructions for IT admins to deploy and configure the application for their organization.
 
-> [!div class="mx-imgBorder"] 
-> ![Emergency Response solution](media/conf-ermerg-response-solution-overview.png)
+Estimated time to complete these steps: **35–40 minutes**.
 
-These are the main components of the Emergency Response solution:
-
-* Web app for admins: Hospital admins can use this app to add and manage system data required for the solution to work.
-* Mobile app for field staff: Field staff, such as nurses and medical practitioners, can use the mobile app to quickly view and enter information as required.
-* Dashboard for decision makers: Use dashboards to quickly view important data and metrics that will help you in efficient decision making.
-
-### Target audience
-
-This guide is meant for system admins to set up the infrastructure and backend system for the Emergency Response solution.
-
-### Licensing requirements
-
-You need the following:
-
-* Power Apps license
-* Power BI License
-
-## Deploy the Emergency Response Solution
+## Deploy Emergency Response solution
 
 This section provides you information on how to deploy the Emergency Response Solution for your organization.
 
-### Step 1: Sign up for Power Apps and create an environment
+## Step 1: Sign up for Power Apps and create an environment
 
 If you don't have already have Power Apps, sign up for Power Apps and purchase an appropriate license.
 
@@ -66,19 +47,19 @@ After you have purchased Power Apps, create an environment with a Common Data Se
 
 ### What's in the deployment package?
 
-Get the latest deployment file (.zip) from Microsoft that contains the solution files, images, and data files that will set up the apps, base entities, and business logic for the Emergency Response Solution in your environment.
+Get the latest deployment file (.zip) from <https://aka.ms/emergency-response-solution> that contains the solution files, images, and data files to set up the apps and business logic for the Emergency Response solution.
 
 To begin the deployment process, extract the deployment file (.zip) to a location on your computer. The extracted folder will contain the following folders:
 
 | **Folder/File**       | **Description**  |
 |-----------------------|------------------|
 | **App Icons**         | Contains the default app icons for the mobile apps (canvas apps)|
-| **Data Files**        | Contains the master and sample data files (.xlsx) for the solution/app to work. You can import data from these files to start working on the app. For details, see [Step 2.2: Load configuration and master data for your organization](#step-2.2-load-configuration-and-master-data-for-your-organization) |
+| **Data Files**        | Contains the master and sample data files (.xlsx) for the solution/app to work. You can import data from these files to start working on the app. For details, see [Step 2.2: Load configuration and master data for your organization](#step-22-load-configuration-and-master-data-for-your-organization) |
 | **Power BI Template** | Contains the Power BI Report template file (.pbit) that you will use to configure reporting for your organization.|
 | **PowerShell**        | Contains scripts that you will use to configure your mobile apps (canvas apps)|
-| **Solution File**     | Contains the Common Data Service solution file that creates the apps, entities and other metadata required for the Emergency Response Solution. |
+| **Solution File**     | Contains the Common Data Service solution file that creates the apps and metadata required for the Emergency Response solution. |
 
-### Step 2.1: Import solution file into your environment
+### Step 2.1: Import the solution file into your environment
 
 1.  Navigate to the location where you extracted the deployment file (.zip); you will find a **Solution File** folder. We will import the managed solution
     (.zip) file under the **Solution File** folder to our environment.
@@ -89,28 +70,87 @@ To begin the deployment process, extract the deployment file (.zip) to a locatio
 
 4.  In the left pane, select **Solutions** and then select **Import.**
 
-  > [!div class="mx-imgBorder"] 
-  > ![Import Solution](media/conf-import-solution.png "Import Solution")
+    > [!div class="mx-imgBorder"] 
+    > ![Import Solution](media/conf-import-solution.png "Import Solution")
 
 5.  In the **Import Solution** dialog box, select the solution file mentioned in step 1, and then follow the steps in the wizard to import the solution.
 
 After the solution is imported successfully, you will see new apps under **Apps**:
 
-  > [!div class="mx-imgBorder"] 
-  > ![New apps](media/conf-apps-new-apps.png "New apps")
+> [!div class="mx-imgBorder"] 
+> ![New apps](media/conf-apps-new-apps.png "New apps")
 
 Select the **Admin App** to open the model-driven app that lets you configure the rest of the deployment settings. More information: [What are model-driven apps?](https://docs.microsoft.com/powerapps/maker/model-driven-apps/model-driven-app-overview)
 
-  > [!div class="mx-imgBorder"] 
-  > ![Open Admin app](media/conf-admin-app-open.png "Open the Admin app")
+> [!div class="mx-imgBorder"] 
+> ![Open Admin app](media/conf-admin-app-open.png "Open the Admin app")
 
 The admin app has a bunch of entities where you can add and manage data for your hospital system. You can use the area picker in the lower part of the left navigation pane to view and manage entities in various areas.
 
 ### Step 2.2: Load configuration and master data for your organization
 
-All the data required for the Emergency Response Solution is available under the **Data Files** folder.
+All the data required for the Emergency Response solution is available under the **Data Files** folder under your extracted deployment folder.
 
-The **Data Files** folder has the following files and folder:
+The **Data Files** folder has the following files and folders:
+
+<table style="width:100%">
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>At the root; following files are available:
+<ul>
+<li>00 - Acuities Import.xlsx</li>
+<li>00 - App Config Import.xlsx</li>
+<li>00 - App Import.xlsx</li>
+<li>00 - Request Roles Import.xlsx</li>
+<li>00 - Supplies Import.xlsx</li>
+</ul>
+</td>
+<td>These are the configuration data files that must be imported to the following entities using the admin app:
+<ul>
+<li>Acuities</li>
+<li>App Config</li>
+<li>Apps</li>
+<li>Request Roles</li>
+<li>Supplies Import</li>
+</ul>
+<br/>Importing data to these entities will create records for these entities that are required for the Emergency Response solution to work.
+<br/>
+<strong>Caution</strong>: Ensure that you don't update the configuration values in these entities, except for the App and App Config entities as explained later.</td>
+</tr>
+<tr>
+<td><strong>Sample Data</strong> folder</td>
+<td><p>The folder contains the sample data files (.xlsx) that you can import to populate the sample data in your application. The files are named to denote the sequence in which the data should be imported into your app. </p>
+<p>You must import data for the following entities that contain the master sample data for the Emergency Response solution:
+<ul>
+<li>Systems</li>
+<li>Regions</li>
+<li>Facilities</li>
+<li>Locations</li>
+<li>Departments</li>
+</ul>
+<p>If you want to import your organization data instead of the sample data, you can replace the sample data in these Excel files with your organization data, and then import the data in the app.</p>
+<p>You can also manually enter data for these entities. For information about each of these entities and fields in these entities, see </p></td>
+</tr>
+<tr>
+<td>successCallback</td>
+<td><p>A function to call when a record is created. An object with the following properties will be passed to identify the new record:</p>
+<ul>
+<li><b>entityType</b>: String. The entity logical name of the new record.</li>
+<li><b>id</b>: String. GUID of the new record.</li>
+</ul></td>
+</tr>
+<tr>
+<td>errorCallback</td>
+<td>A function to call when the operation fails. An object with the following properties will be passed:
+<ul>
+<li><b>errorCode</b>: Number. The error code.</li>
+<li><b>message</b>: String. An error message describing the issue.</li>
+</ul></td>
+</tr>
+</table>
 
 | **Files/Folder**      | **Description**  |
 |-----------------------|------------------|
@@ -332,7 +372,7 @@ Set-AdminPowerAppAsHero -AppName APPGUIDHERE
 4.  Run PowerShell as an administrator and execute the .ps file you just
     created.
 
-# Manually configure and manage master data for your organization
+## Manually configure and manage master data for your organization
 
 Admins can use the model-driven app in [Power Apps](https://make.powerapps.com) to create and manage master data for their organization. This data is required for the Emergency Response Solution to work.
 
@@ -358,7 +398,7 @@ The master data is managed from the **Locations** area in the left navigation in
 
 The entities under the **Hierarchy** area are listed in the order you should populate data.
 
-## Systems data
+### Systems data
 
 The **Systems** entity lets you create and manage entries for Hospital Systems. This allows you to manage multiple hospital systems within the same organization.
 
@@ -383,7 +423,7 @@ To create a record:
 
 To edit the record, select the record, update the values as required, and select **Save & Close**.
 
-## Regions data
+### Regions data
 
 The **Regions** entity lets you manage the geographical regions for your hospital systems.
 
@@ -408,7 +448,7 @@ To create a record:
 
 To edit the record, select the record, update the values as required, and select **Save & Close**.
 
-## Facilities data
+### Facilities data
 
 The **Facilities** entity lets you manage the hospital locations within each region. For example, **Redmond** and **Bellevue** facilities within the
 **Seattle** region.
@@ -435,7 +475,7 @@ To create a record:
 
 To edit the record, select the record, update the values as required, and select **Save & Close**.
 
-## Locations data
+### Locations data
 
 The **Locations** entity lets you manage specific locations within each hospital facility.
 
@@ -468,7 +508,7 @@ To create a record:
 
 To edit the record, select the record, update the values as required, and select **Save & Close**.
 
-## Departments data
+### Departments data
 
 The **Departments** entity lets you manage departments information for a hospital.
 
@@ -492,7 +532,7 @@ To create a record:
 
 To edit the record, select the record, update the values as required, and select **Save & Close**.
 
-# Get insights using Common Data Service dashboards
+## Get insights using Common Data Service dashboards
 
 Following dashboards are available by default in the Emergency Response Solution model-driven app:
 
@@ -518,7 +558,7 @@ Following dashboards are available by default in the Emergency Response Solution
 
 You can also create your own dashboards in addition to the dashboards available by default.
 
-## Manage dashboards
+### Manage dashboards
 
 To manage dashboards:
 
@@ -542,7 +582,7 @@ To manage dashboards:
     > [!div class="mx-imgBorder"]
     > ![select-expand](media/select-expand.png)
 
-## Additional analysis
+### Additional analysis
 
 - **Drill down**: You can select chart area to drill down further with additional attributes (fields) for an entity:
 
@@ -565,7 +605,7 @@ To manage dashboards:
 For more information about editing an existing dashboard and updating properties
 of charts, read [edit an existing dashboard](https://docs.microsoft.com/powerapps/maker/model-driven-apps/create-edit-dashboards#edit-an-existing-dashboard).
 
-## Create new dashboards
+### Create new dashboards
 
 You can also create your own dashboards and customize to suite your needs. To create a new dashboard, select **New** and then select **Dynamics 365 Dashboard**:
 
@@ -574,11 +614,11 @@ You can also create your own dashboards and customize to suite your needs. To cr
 
 For more information about creating a new dashboard, read [create new dashboard](https://docs.microsoft.com/powerapps/maker/model-driven-apps/create-edit-dashboards#create-a-new-dashboard).
 
-# Get insights using Power BI dashboards
+## Get insights using Power BI dashboards
 
 Before you can view the Power BI dashboard, you must publish it within your organization.
 
-## Prerequisites
+### Prerequisites
 
 1. Power BI Premium Capacity or Power BI Pro licenses assigned to users accessing the report. 
 
@@ -591,7 +631,7 @@ Before you can view the Power BI dashboard, you must publish it within your orga
 
 4. After installing Power BI Desktop from app store, run it, sign in using an account that has permission to publish Power BI apps in your organization.
 
-## Publish the Power BI dashboard
+### Publish the Power BI dashboard
 
 1. Navigate to the location where you extracted the deployment package. You will find the **Emergency Response App.pbit** file under the **Power BI Template** folder.
 
@@ -660,7 +700,7 @@ Before you can view the Power BI dashboard, you must publish it within your orga
 
 17. Select **Publish app.** For detailed information on publishing apps in Power BI, see [Publish your app](https://docs.microsoft.com/power-bi/service-create-distribute-apps#publish-your-app).
 
-## View the Power BI dashboard
+### View the Power BI dashboard
 
 Sign in to [Power BI](https://apps.powerbi.com) to access and view the Power BI dashboard.
 

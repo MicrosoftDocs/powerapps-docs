@@ -14,7 +14,7 @@ searchScope:
 ---
 # Overview: Emergency Response solution
 
-The Emergency Response solution built using Power Apps and Power BI provides a set of capabilities for healthcare organizations to collect data for situational awareness of available beds and supplies, COVID-19 related patients, staffing, and pending discharges. The solution also provides dashboards that provide insights to medical
+The Emergency Response solution provides a set of capabilities for healthcare organizations to collect data for situational awareness of available beds and supplies, COVID-19 related patients, staffing, and pending discharges. The solution also provides dashboards that provide insights to medical
 organizations and hospitals to make informed decisions quickly resulting in efficient deployment and usage of resources.
 
 > [!div class="mx-imgBorder"] 
@@ -22,9 +22,9 @@ organizations and hospitals to make informed decisions quickly resulting in effi
 
 These are the main components of the Emergency Response solution:
 
-- **Web app for admins**: Hospital admins can use this app to add and manage system data required for the solution to work.
-- **Mobile app for field staff**: Field staff, such as nurses and medical practitioners, can use the mobile app to quickly view and enter information as required.
-* **Dashboards for decision makers**: Use dashboards to quickly view important data and metrics that will help you in efficient decision making.
+- **Mobile app for frontline staff**: Frontline staff, such as nurses and medical practitioners, can use the mobile app to quickly view and enter information as required.
+- **Web app for Hospital IT admins**: Hospital admins can use this app to add and manage system data required for the solution to work.
+- **Dashboards for healthcare decision makers**: Use dashboards to quickly view important data and metrics that will help you in efficient decision making.
 
 ## Licensing requirements
 
