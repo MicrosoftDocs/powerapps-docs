@@ -43,13 +43,15 @@ After you have purchased Power Apps, create an environment with a Common Data Se
 
 ### Step 2: Install the deployment files in your environment
 
-> [What's in the deployment package?](#whats-in-the-deployment-package)
-
-> [Step 2.1: Import the solution file into your environment](#step-21-import-the-solution-file-into-your-environment)
-
-> [Step 2.2: Load configuration and master data for your organization](#step-22-load-configuration-and-master-data-for-your-organization)
-
-> [Step 2.3: Update the mobile app branding](#step-23-update-the-mobile-app-branding)
+> - [What's in the deployment package?](#whats-in-the-deployment-package)
+> - [Step 2.1: Import the solution file into your environment](#step-21-import-the-solution-file-into-your-environment)
+> - [Step 2.2: Load configuration and master data for your organization](#step-22-load-configuration-and-master-data-for-your-organization)
+> - [Step 2.3: Update the mobile app branding](#step-23-update-the-mobile-app-branding)
+> - [Step 2.4: Bypass consent for mobile apps](#step-24-bypass-consent-for-mobile-apps)
+> - [Step 2.5: Add Azure Application Insights key to mobile apps for telemetry](#step-25-add-azure-application-insights-key-to-mobile-apps-for-telemetry)
+> - [Step 2.6 Share canvas apps with users in your organization](#step-26-share-canvas-apps-with-users-in-your-organization)
+> - [Step 2.7: Set your mobile app as hero and featured app](#step-27-set-your-mobile-app-as-hero-and-featured-app)
+> - [Step 2.8: Share model-driven app with admins in your organization](#step-28-share-model-driven-app-with-admins-in-your-organization)
 
 #### What's in the deployment package?
 
