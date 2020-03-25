@@ -21,7 +21,7 @@ search.app:
 
 This is an early-access feature. You can opt in early to enable these features in your environment. This will allow you to test these features and then adopt them across your environments. For information on how to enable these features, see [Opt in to 2020 release wave 1 updates](https://docs.microsoft.com/power-platform/admin/opt-in-early-access-updates).
 
-When you create an app, or someone shares an app with you, you can run that app on iOS and Android using the Power Apps mobile app. In this topic, you'll learn how to run a canvas app or a model-driven app using the Power Apps mobile app. Apps running on a mobile device can take advantage of the device's capabilities, such as location services and camera.
+When you create an app, or someone shares an app with you, you can run that app on iOS and Android device using the Power Apps mobile app. In this topic, you'll learn how to run a canvas app or a model-driven app on your mobile device. Apps running on a mobile device can take advantage of the device's capabilities, such as location services and camera.
 
 > [!IMPORTANT]
 > Model-driven apps for sales, customer service, and field service don't run in the Power Apps mobile app. Instead, you use the Dynamics 365 for phones and tablets app. For more information, see [User Guide for Dynamics 365 for phones and tablets](https://docs.microsoft.com/dynamics365/mobile-app/dynamics-365-phones-tablets-users-guide).
@@ -33,7 +33,7 @@ Legend:
 1. **Model-driven apps**
 2. **Canvas apps**
 
-To follow this procedure, if you're not signed up for Power Apps, [sign up for free](https://make.powerapps.com/signup?redirect=marketing&email=) before you begin, and then download Power Apps from the [App Store](https://itunes.apple.com/app/powerapps/id1047318566?mt=8) or [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.msapps) onto an iPhone, iPad, or Android device running a [supported operating system](../maker/canvas-apps/limits-and-config.md). Also, make sure you have access to a canvas app that you created or that someone else created and shared with you.
+To follow this procedure, if you're not signed up for Power Apps, [sign up for free](https://make.powerapps.com/signup?redirect=marketing&email=) before you begin, and then download Power Apps from the [App Store](https://itunes.apple.com/app/powerapps/id1047318566?mt=8) or [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.msapps) onto an iPhone, iPad, or Android device running a [supported operating system](../maker/canvas-apps/limits-and-config.md). Also, make sure you have access to an app that you created or that someone else created and shared with you.
 
 
 
@@ -47,7 +47,7 @@ If you have the Microsoft Authenticator app installed on your mobile device, sim
 ## Find the app
 To make it easier to find the app, open the **PowerApps** menu, and then select a filter.
 
-![App filters](media/run-app-client/filter-menu.png)
+![App filters](media/filter-menu.png)
 
 The following filters are available:
 
