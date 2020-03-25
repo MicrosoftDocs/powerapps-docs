@@ -21,9 +21,9 @@ search.app:
 
 This is an early-access feature. You can opt in early to enable these features in your environment. This will allow you to test these features and then adopt them across your environments. For information on how to enable these features, see [Opt in to 2020 release wave 1 updates](https://docs.microsoft.com/power-platform/admin/opt-in-early-access-updates).
 
-When you create an app, or someone shares an app with you, you can run that app on iOS and Android, or in a web browser. In this topic, you'll learn how to run a canvas app and a model-driven on a mobile device. Apps running on a mobile device can take advantage of the device's capabilities, such as location services and camera.
+When you create an app, or someone shares an app with you, you can run that app on iOS and Android using the Power Apps mobile app. In this topic, you'll learn how to run a canvas app and a model-driven app on a mobile device. Apps running on a mobile device can take advantage of the device's capabilities, such as location services and camera.
 
-> [!NOTE]
+> [!IMPORTANT]
 > Model-driven apps for sales, customer service, and field service don't run in the Power Apps mobile app. Instead, you use the Dynamics 365 for phones and tablets app. For more information, see [User Guide for Dynamics 365 for phones and tablets](https://docs.microsoft.com/dynamics365/mobile-app/dynamics-365-phones-tablets-users-guide).
 
 ![Power Apps mobile](media/powerappsmobile.png)
