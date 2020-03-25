@@ -1,5 +1,5 @@
 ---
-title: Deploy and configure Emergency Response solution | Microsoft Docs
+title: Deploy and configure Emergency Response app | Microsoft Docs
 description: Provides an overview of Power Apps and talks about how end users, app makers, admins, and pro developers can use Power Apps.
 author: KumarVivek
 manager: annbe
@@ -13,15 +13,15 @@ searchScope:
   - GetStarted
   - PowerApps
 ---
-# Deploy and configure Emergency Response solution
+# Deploy and configure Emergency Response app
 
-The Emergency Response solution requires a small amount of setup to adapt to your needs. This article provides step-by-step instructions for hospital IT admins to deploy and configure the application for their organization.
+The Emergency Response app requires a small amount of setup to adapt to your needs. This article provides step-by-step instructions for hospital IT admins to deploy and configure the application for their organization.
 
 Estimated time to complete these steps: **35–40 minutes**.
 
-## Deploy Emergency Response solution
+## Deploy Emergency Response app
 
-This section provides you information on how to deploy the Emergency Response Solution for your organization.
+This section provides you information on how to deploy the Emergency Response app for your organization.
 
 ### Step 1: Sign up for Power Apps and create an environment
 
@@ -53,7 +53,7 @@ After you have purchased Power Apps, create an environment with a Common Data Se
 
 #### What's in the deployment package?
 
-Get the latest deployment file (.zip) from <https://aka.ms/emergency-response-solution> that contains the solution files, images, and data files to set up the apps and business logic for the Emergency Response solution.
+Get the latest deployment file (.zip) from <https://aka.ms/emergency-response-solution> that contains the solution files, images, and data files to set up the apps and business logic for the Emergency Response app.
 
 To begin the deployment process, extract the deployment file (.zip) to a location on your computer. The extracted folder will contain the following folders:
 
@@ -63,7 +63,7 @@ To begin the deployment process, extract the deployment file (.zip) to a locatio
 | **Data Files**        | Contains the master and sample data files (.xlsx) for the solution/app to work. You can import data from these files to start working on the app. For details, see [Step 2.2: Load configuration and master data for your organization](#step-22-load-configuration-and-master-data-for-your-organization) |
 | **Power BI Template** | Contains the Power BI Report template file (.pbit) that you will use to configure reporting for your organization.|
 | **PowerShell**        | Contains scripts that you will use to configure your mobile apps (canvas apps)|
-| **Solution File**     | Contains the Common Data Service solution file that creates the apps and metadata required for the Emergency Response solution. |
+| **Solution File**     | Contains the Common Data Service solution file that creates the apps and metadata required for the Emergency Response app. |
 
 #### Step 2.1: Import the solution file into your environment
 
@@ -95,7 +95,7 @@ The admin app has a bunch of entities where you can add and manage data for your
 
 #### Step 2.2: Load configuration and master data for your organization
 
-All the data required for the Emergency Response solution is available under the **Data Files** folder under your extracted deployment folder.
+All the data required for the Emergency Response app is available under the **Data Files** folder under your extracted deployment folder.
 
 The **Data Files** folder has the following files and folders:
 
@@ -122,14 +122,14 @@ The **Data Files** folder has the following files and folders:
 <li>Request Roles</li>
 <li>Supplies Import</li>
 </ul>
-<br/>Importing data to these entities will create records for these entities that are required for the Emergency Response solution to work.
+<br/>Importing data to these entities will create records for these entities that are required for the Emergency Response app to work.
 <br/>
 <strong>Caution</strong>: Ensure that you don't update the configuration values in these entities, except for the App and App Config entities as explained later.</td>
 </tr>
 <tr>
 <td><strong>Sample Data</strong> folder</td>
 <td><p>The folder contains the sample data files (.xlsx) that you can import to populate the sample data in your application. The files are named to denote the sequence in which the data should be imported into your app. </p>
-<p>You must import data for the following entities that contain the master sample data for the Emergency Response solution:
+<p>You must import data for the following entities that contain the master sample data for the Emergency Response app:
 <ul>
 <li>Systems</li>
 <li>Regions</li>
@@ -346,7 +346,7 @@ For your admin users to use the admin app (model-driven app), it must be shared 
 
 ## Manually configure and manage master data for your organization
 
-Admins can use the model-driven app in [Power Apps](https://make.powerapps.com) to create and manage master data for their organization. This data is required for the Emergency Response solution to work.
+Admins can use the model-driven app in [Power Apps](https://make.powerapps.com) to create and manage master data for their organization. This data is required for the Emergency Response app to work.
 
 > [!NOTE]
 > You can also import your organization data into data files available in the deployment package and then import it to these entities. More information: [Step 2.2: Load configuration and master data for your organization](#step-2.2-load-configuration-and-master-data-for-your-organization)
@@ -506,7 +506,7 @@ To edit the record, select the record, update the values as required, and select
 
 ## Get insights using Common Data Service dashboards
 
-Following dashboards are available by default in the Emergency Response Solution model-driven app:
+Following dashboards are available by default in the Emergency Response model-driven app:
 
 - **Bed Management**
 

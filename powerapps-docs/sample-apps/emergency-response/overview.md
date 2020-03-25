@@ -1,5 +1,5 @@
 ---
-title: Overview of Emergency Response solution | Microsoft Docs
+title: Overview of Emergency Response app | Microsoft Docs
 description: Provides an overview of Emergency Response Solution.
 author: KumarVivek
 manager: annbe
@@ -12,15 +12,15 @@ ms.reviewer: kvivek
 searchScope:
   - PowerApps
 ---
-# Overview: Emergency Response solution
+# Emergency Response sample template in Power Apps
 
-The Emergency Response solution provides a set of capabilities for healthcare organizations to collect data for situational awareness of available beds and supplies, COVID-19 related patients, staffing, and pending discharges. The solution also provides dashboards that provide insights to medical
+The Emergency Response app provides a set of capabilities for healthcare organizations to collect data for situational awareness of available beds and supplies, COVID-19 related patients, staffing, and pending discharges. The solution also provides dashboards that provide insights to medical
 organizations and hospitals to make informed decisions quickly resulting in efficient deployment and usage of resources.
 
 > [!div class="mx-imgBorder"] 
-> ![Emergency Response solution](media/conf-ermerg-response-solution-overview.png)
+> ![Emergency Response app](media/conf-ermerg-response-solution-overview.png)
 
-These are the main components of the Emergency Response solution:
+These are the main components of the Emergency Response app:
 
 - **Mobile app for frontline staff**: Frontline staff, such as nurses and medical practitioners, can use the mobile app to quickly view and enter information as required.
 - **Web app for Hospital IT admins**: Hospital admins can use this app to add and manage system data required for the solution to work.
