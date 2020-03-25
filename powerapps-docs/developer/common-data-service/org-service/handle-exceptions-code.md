@@ -3,7 +3,7 @@ title: "Handle exceptions in your code (Common Data Service) | Microsoft Docs"
 description: "This article discusses the exceptions that are returned from a Common Data Service web service method call. The sample in this article highlights the common faults and exceptions that your application design should handle."
 ms.custom: ""
 ms.date: 06/17/2019
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" # GitHub ID

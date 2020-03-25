@@ -3,7 +3,7 @@ title: " Retrieve roles for an organization (Common Data Service) | Microsoft Do
 description: "This sample showcases how to retrieve roles for an organization " # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 12/20/2019
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "samples"
 author: "JimDaly" # GitHub ID

@@ -3,7 +3,7 @@ title: "Use webhooks to create external handlers for server events (Common Data 
 description: "You can send data about events that occur on the server to a web application using webhooks. Webhooks is a lightweight HTTP pattern for connecting Web APIs and services with a publish/subscribe model. webhook senders notify receivers about events by making requests to receiver endpoints with some information about the events." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 09/04/2019
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" # GitHub ID

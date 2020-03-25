@@ -3,7 +3,7 @@ title: "ActivityParty entity (Common Data Service) | Microsoft Docs" # Intent an
 description: "An activity party represents a person or group associated with an activity. An activity can have multiple activity parties"
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID

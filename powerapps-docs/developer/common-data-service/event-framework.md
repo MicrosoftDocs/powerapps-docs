@@ -3,7 +3,7 @@ title: " Event Framework (Common Data Service) | Microsoft Docs" # Intent and pr
 description: "Describes the event framework and information developers should know when working with it." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 06/18/2019
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" # GitHub ID

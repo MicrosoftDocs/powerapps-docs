@@ -3,7 +3,7 @@ title: "Retrieve and delete the history of audited data changes (Common Data Ser
 description: "Programmatically retrieve the audit change history or delete audit records." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "paulliew" # GitHub ID

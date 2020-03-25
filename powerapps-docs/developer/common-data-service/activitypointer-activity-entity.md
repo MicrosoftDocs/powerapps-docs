@@ -3,7 +3,7 @@ title: "ActivityPointer (activity) entity (Common Data Service) | Microsoft Docs
 description: "The activity pointer (activity) entity represents any activity or task that is performed, or to be performed by a user. An activity is any action for which an entry can be made on a calendar" 
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "mayadumesh" 

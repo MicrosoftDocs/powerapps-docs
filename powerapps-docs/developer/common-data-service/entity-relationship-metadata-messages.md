@@ -3,7 +3,7 @@ title: "Entity relationship metadata messages (Common Data Service) | Microsoft 
 description: "The article describes the messages that you can use to create, retrieve, update, and delete entity relationships using Web API and Organization service." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID

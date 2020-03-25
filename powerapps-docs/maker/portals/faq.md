@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 01/17/2020
+ms.date: 03/04/2020
 ms.author: tapanm
 ms.reviewer: 
 ---
@@ -16,6 +16,10 @@ ms.reviewer:
 We have compiled a list of frequently asked questions and provided brief answers to help you get to your information quickly.
 
 ## General
+
+### Does Power Apps portals support TLS 1.2?
+
+Power Apps portals version 8.3 and later supports [TLS 1.2](https://support.microsoft.com/help/4041984/portal-capabilities-for-microsoft-dynamics-365-version-8-3-2-85-releas).
 
 ### What is the difference between Power Apps portals, Dynamics 365 portals and add-on portals?
 
@@ -27,9 +31,11 @@ You can check the type of a portal from the [Power Apps Portals admin center](./
 
 ![Power Apps portals type](./media/power-apps-portals-type.png)
 
-For add-on portals, the portal type has 'add-on' suffix added. For example, a production add-on portal type lists as 'Production (add-on)'.
+Additional differences between Power Apps portals with capacity-based licenses and add-on based licenses:
 
-There is no difference in functionality between Power Apps portals with capacity-based licenses and add-on based licenses. However, provisioning method for portals with capacity-based licenses and add-on based licenses is different.
+- For add-on portals, the portal type has 'add-on' suffix added. For example, a production add-on portal type lists as 'Production (add-on)'.
+- Power Apps portals have a [different caching mechanism](https://powerapps.microsoft.com/en-us/blog/publishing-changes-to-powerapps-portals/) in comparison with add-on based licenses portals.
+- Provisioning method is different for portals with capacity-based licenses from add-on based licenses.
 
 You can create Power Apps portal with capacity-based license using steps described in following articles:
 
@@ -208,6 +214,10 @@ When you change the URL of your Common Data Service environment, your portal wil
 Your portal will be restarted and start working again.
 
 ## Debugging and fixing problems
+
+### Performance of entity forms: Actions such as create/update/delete on entity forms take a lot of time to complete or timeout.
+
+This can happen due to multiple reason depending on your data and customizations done on that entity within Common Data Service. When troubleshooting such performance related issue on record actions from portals, ensure that there are no synchronous plugins registered on those events that may possibly cause these delays. Wherever possible, try to implement them asynchronously so that they do not hold or delay the transaction.
 
 ### When accessing my portal, I see a generic error page. How can I see the actual error?
 

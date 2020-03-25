@@ -3,7 +3,7 @@ title: "Use late-bound entity class with a LINQ query (Common Data Service) | Mi
 description: "Read how you can use late binding with .NET Language-Integrated Query (LINQ) queries" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" # GitHub ID

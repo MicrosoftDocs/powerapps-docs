@@ -3,7 +3,7 @@ title: "Sample: Retrieve email attachements for an email template(Common Data Se
 description: "This sample shows how to retrieve email attachements associated with an email template" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "samples"
 author: "JimDaly" # GitHub ID

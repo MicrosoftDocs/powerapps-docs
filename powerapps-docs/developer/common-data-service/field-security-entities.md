@@ -3,7 +3,7 @@ title: "Field security entities (Common Data Service) | Microsoft Docs" # Intent
 description: "Learn about using field security entities to apply field-level security, which restricts field access to specified users and teams." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "paulliew" # GitHub ID

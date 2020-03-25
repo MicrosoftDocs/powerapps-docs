@@ -1,5 +1,5 @@
 ---
-title: Power Apps custom visual for Power BI | Microsoft Docs
+title: Power Apps visual for Power BI | Microsoft Docs
 description: Procedure and limitations for embedding a canvas app that uses the same data source and can be filtered like other report items in Power BI 
 author: chmoncay
 manager: kvivek
@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 12/02/2019
+ms.date: 03/11/2020
 ms.author: chmoncay
 search.audienceType: 
   - maker
@@ -15,15 +15,15 @@ search.app:
   - PowerApps
 ---
 
-# Power Apps custom visual for Power BI
+# Power Apps visual for Power BI
 
-Power BI enables data insights and better decision-making, while Power Apps enables everyone to build and use apps that connect to business data. Using the Power Apps custom visual, you can pass context-aware data to a canvas app, which updates in real time as you make changes to your report. Now, your app users can derive business insights and take actions from right within their Power BI reports and dashboards.
+Power BI enables data insights and better decision-making, while Power Apps enables everyone to build and use apps that connect to business data. Using the Power Apps visual, you can pass context-aware data to a canvas app, which updates in real time as you make changes to your report. Now, your app users can derive business insights and take actions from right within their Power BI reports and dashboards.
 
-## Using the Power Apps custom visual
+## Using the Power Apps visual
 
-Let's look at the steps required to use the Power Apps custom visual in your Power BI report.
+Let's look at the steps required to use the Power Apps visual in your Power BI report.
 
-1. Power Apps custom visual is available by default in the Power BI service. If you are using Power BI Desktop and don’t see it, you must upgrade to the latest version of Power BI Desktop.
+1. Power Apps visual is available by default in the Power BI service. If you are using Power BI Desktop and don't see it, you must upgrade to the latest version of Power BI Desktop.
 
 2. Add the Power Apps visual to your report, and set the data fields associated with it.
 
@@ -40,7 +40,7 @@ Let's look at the steps required to use the Power Apps custom visual in your Pow
     If you create a new app, Power Apps creates a simple app with the required components already set up.
 
     > [!NOTE]
-    > You must create a new app from Power Apps custom visual in Power BI report for the `PowerBIIntegration.Refresh()` function to be available in the app.
+    > You must create a new app from Power Apps visual in Power BI report for the `PowerBIIntegration.Refresh()` function to be available in the app.
 
     ![New app](./media/powerapps-custom-visual/new-app.png)
 
@@ -64,26 +64,27 @@ Let's look at the steps required to use the Power Apps custom visual in your Pow
 
     ![Edit app](./media/powerapps-custom-visual/edit-app.png)
 
-## Limitations of the Power Apps custom visual
+## Limitations of the Power Apps visual
 
-The following limitations apply to the Power Apps custom visual:
+The following limitations apply to the Power Apps visual:
 
 - If you change the data fields associated with the visual, you must edit the app from within the Power BI service by selecting the ellipsis (...) and then selecting **Edit**. Otherwise, the changes won't be propagated to Power Apps, and the app will behave in unexpected ways.
-- The Power Apps custom visual can't trigger a refresh of Power BI reports and Power BI data sources from within Power BI Desktop. If you write back data from the app to the same data source as the report, your changes won't be reflected immediately in Power BI Desktop. Changes are reflected on the next scheduled refresh.
-- The Power Apps custom visual can't filter the data or send any data back to the report.
+- The Power Apps visual can't trigger a refresh of Power BI reports and Power BI data sources from within Power BI Desktop. If you write back data from the app to the same data source as the report, your changes won't be reflected immediately in Power BI Desktop. Changes are reflected on the next scheduled refresh.
+- The Power Apps visual can't filter the data or send any data back to the report.
 - You'll need to share the Power Apps app separately from your report. Learn about [sharing apps in Power Apps](share-app.md).
-- Power BI Report Server does not support the Power Apps custom visual.
+- Power BI Report Server does not support the Power Apps visual.
 - Following limitations apply when using the `PowerBIIntegration.Refresh()` function:
-    - You must create a new app from Power Apps custom visual in Power BI report for this function to be available in the app.
+    - You must create a new app from Power Apps visual in Power BI report for this function to be available in the app.
     - You must use a source that supports [DirectQuery](https://docs.microsoft.com/power-bi/desktop-directquery-data-sources) and the data connection must be created using DirectQuery method.
 - Power Apps in Power BI Desktop provides data to Power Apps Studio when creating apps but not while editing. Use Power BI Web to preview the data while editing apps.
+- The Power BI mobile app does not support microphone control in Power Apps visuals.
 
 > [!NOTE]
 > We recommend that you first publish your report to the Power BI service and then create or modify apps.
 
 ## Browser support
 
-The following table lists the browser supportability for view, create and modify actions of the Power Apps custom visual. Supported browsers and actions are identified by a check mark ( &check; ).
+The following table lists the browser supportability for view, create and modify actions of the Power Apps visual. Supported browsers and actions are identified by a check mark ( &check; ).
 
 |Browser|View|Create|Modify
 |-|-|-|-
@@ -94,7 +95,7 @@ The following table lists the browser supportability for view, create and modify
 |Mozilla Firefox
 |All other browsers
 
-\* In Safari, you must enable cross site tracking (**Preferences** > **Privacy**, and clear **Prevent cross site tracking**) to view Power Apps custom visual.
+\* In Safari, you must enable cross site tracking (**Preferences** > **Privacy**, and clear **Prevent cross site tracking**) to view Power Apps visual.
 
 ## Accessibility support
 
@@ -110,5 +111,5 @@ For more information see: [Power BI Accessibility Documentation]( https://docs.m
 
 ## Next steps
 
-* Go through a simple [step-by-step tutorial](embed-powerapps-powerbi.md).
+* Go through a simple [step-by-step tutorial](https://docs.microsoft.com/power-bi/visuals/power-bi-visualization-powerapp).
 * Check out our [video](https://aka.ms/powerappscustomvisualvideo).

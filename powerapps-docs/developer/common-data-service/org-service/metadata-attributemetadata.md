@@ -3,7 +3,7 @@ title: "Work with attribute metadata (Common Data Service) | Microsoft Docs" # I
 description: "Describes common operations on attribute metadata." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 04/05/2019
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" # GitHub ID

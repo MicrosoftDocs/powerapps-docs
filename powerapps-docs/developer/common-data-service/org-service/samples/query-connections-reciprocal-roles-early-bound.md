@@ -3,7 +3,7 @@ title: "Sample: Query connections by reciprocal roles (Common Data Service) | Mi
 description: "This sample shows how to query connections bt reciprocal roles" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "samples"
 author: "JimDaly" # GitHub ID

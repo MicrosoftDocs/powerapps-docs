@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/07/2019
+ms.date: 03/24/2020
 ms.author: tapanm
 ms.reviewer:
 ---
@@ -153,3 +153,6 @@ If you created a custom form and added the notes section to it, be sure to selec
 ## Notes configuration for web forms
 
 Web form notes are configured in the same way as [entity form notes](#notes-configuration-for-entity-forms). You must first create a metadata record for the Web Form Step that has notes, and then add the notes configuration metadata.
+
+> [!NOTE]
+> Notes description must be prefixed with **\*WEB\*** (*'WEB' keyword with an asterisk sign (\*) before and after*) in order to display on the portal.

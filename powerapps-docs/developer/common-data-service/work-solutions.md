@@ -9,7 +9,7 @@ ms.assetid: 33c9da5b-27dd-d82d-1eb1-7b3b69b6032b
 author: shmcarth # GitHub ID
 ms.author: jdaly # MSFT alias of Microsoft employees only
 manager: ryjones # MSFT alias of manager or PM counterpart
-ms.reviewer: 
+ms.reviewer: "pehecke"
 search.audienceType: 
   - developer
 search.app: 
@@ -157,9 +157,9 @@ if (SampleSolutionResults == null)
   
 ## Retrieve a solution  
 
-To retrieve a specific solution you can use the solution’s `UniqueName`. Each organization will have a default solution with a constant GUID value: `FD140AAF-4DF4-11DD-BD17-0019B9312238`.  
+To retrieve a specific solution you can use the solution's `UniqueName`. Each organization will have a default solution with a constant GUID value: `FD140AAF-4DF4-11DD-BD17-0019B9312238`.  
   
-This sample shows how to retrieve data for a solution with the unique name ”samplesolution”. A solution with this name is created in [Create a Solution](work-solutions.md#BKMK_CreateASolution).  
+This sample shows how to retrieve data for a solution with the unique name "samplesolution". A solution with this name is created in [Create a Solution](work-solutions.md#BKMK_CreateASolution).  
   
  ```csharp
  // Retrieve a solution
@@ -179,7 +179,7 @@ Solution SampleSolution = (Solution)_serviceProxy.RetrieveMultiple(querySampleSo
   
 ## Add a new solution component 
  
-This sample shows how to create a solution component that is associated with a specific solution. If you don’t associate the solution component to a specific solution when it is created it will only be added to the default solution and you will need to add it to a solution manually or by using the code included in the [Add an Existing Solution Component](work-solutions.md#BKMK_AddExistingSolutionComponent).  
+This sample shows how to create a solution component that is associated with a specific solution. If you don't associate the solution component to a specific solution when it is created it will only be added to the default solution and you will need to add it to a solution manually or by using the code included in the [Add an Existing Solution Component](work-solutions.md#BKMK_AddExistingSolutionComponent).  
   
  This code creates a new global option set and adds it to the solution with a unique name equal to `_primarySolutionName`.  
   
@@ -715,3 +715,4 @@ if (_globalOptionSetId != null)
  [Solution Entities](/dynamics365/customer-engagement/developer/solution-entities)   
  [Sample: Work With Solutions](org-service/samples/work-solutions.md)
  [Sample: Detect Solution Dependencies](/dynamics365/customer-engagement/developer/sample-detect-solution-dependencies)
+ 

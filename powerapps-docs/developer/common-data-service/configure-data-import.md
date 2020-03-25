@@ -3,7 +3,7 @@ title: "Configure data import (Common Data Service) | Microsoft Docs" # Intent a
 description: "Configuration information that is required for importing data is contained in the data import entity and the import source file entity." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID

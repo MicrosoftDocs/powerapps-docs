@@ -19,6 +19,8 @@ By opening entity data in Microsoft Excel, you can quickly and easily view and e
 
 ![Excel Add-in](./media/data-platform-cds-excel-addin/ExcelAddin.png "Power Apps Excel Add-in")
 
+To install the Power Apps Excel Add-in, see [Microsoft PowerApps Office Add-in](https://appsource.microsoft.com/en-us/product/office/WA104380330?tab=Overview). For more information about how to add or remove an Office Excel Add-in, see [Add or remove add-ins in Excel](https://support.office.com/en-us/article/add-or-remove-add-ins-in-excel-0af570c4-5cf3-4fa9-9b88-403625a0b460).
+
 ## Open entity data in Excel
 1. On [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand the **Data** section and click or tap **Entities** in the left navigation pane. All the entities are shown.
 2. Click the ellipsis (...) to the right of the entity that you're interested in.

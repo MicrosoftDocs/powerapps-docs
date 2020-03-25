@@ -9,7 +9,7 @@ ms.assetid: b5ef50fa-8085-f425-3968-804d012fc840
 author: JimDaly # GitHub ID - Brandon Simmons
 ms.author: jdaly # MSFT alias of Microsoft employees only
 manager: ryjones # MSFT alias of manager or PM counterpart
-ms.reviewer: 
+ms.reviewer: "pehecke"
 search.audienceType: 
   - developer
 search.app: 
@@ -83,9 +83,10 @@ After you register the endpoint you can test it. A listener must be running or a
 1. In the **Dynamics 365 - Custom** model-driven app, select  **Settings > System > System Jobs**.  
 1. Open the system job that has the same name that you specified for your service endpoint. Check the status to see if the post was successful, is waiting, or failed.  
   
-You can now unregister the endpoint, if so desired, by selecting it in the tool’s tree view and click **Unregister**.  
+You can now unregister the endpoint, if so desired, by selecting it in the tool's tree view and click **Unregister**.  
   
 ### See also
 
 [Azure integration for CDS](azure-integration.md)<br />
 [Introduction to Microsoft Azure Integration with CDS](azure-integration.md)
+ 

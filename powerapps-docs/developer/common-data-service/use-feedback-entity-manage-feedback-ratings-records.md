@@ -3,7 +3,7 @@ title: "Use the Feedback entity to manage feedback and ratings for records (Comm
 description: "Learn about the feedback eneity to obtain feedback and ratings for the records." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" #TODO: NoOwner

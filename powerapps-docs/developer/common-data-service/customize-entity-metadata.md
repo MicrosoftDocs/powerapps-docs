@@ -3,7 +3,7 @@ title: "Customize entity metadata (Common Data Service) | Microsoft Docs" # Inte
 description: "Entities are defined by metadata. By defining or changing the entity metadata, you can control the capabilities of an entity." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID

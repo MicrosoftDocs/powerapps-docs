@@ -3,7 +3,7 @@ title: "Auditing Overview (Common Data Service) | Microsoft Docs" # Intent and p
 description: "Read how the auditing capability of Common Data Service can be used to record attribute and entity data changes over time for use in analysis and reporting purposes." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "paulliew" # GitHub ID
