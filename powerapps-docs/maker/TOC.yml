@@ -168,9 +168,7 @@
     - name: Help Desk app
       href: ./canvas-apps/help-desk-install.md
     - name: Meeting Capture app
-      href: ./canvas-apps/sample-meeting-capture.md
-    - name: Crisis communication app
-      href: ./canvas-apps/sample-crisis-communication-app.md
+      href: ./canvas-apps/sample-meeting-capture.md    
   - name: Create your first app
     items:
     - name: 1 - Create an app from a template
@@ -1629,6 +1627,8 @@
     href: ../use-ai-builder.md
 - name: Sample apps and solutions
   items:
+  - name: Crisis communication app
+    href: ./canvas-apps/sample-crisis-communication-app.md
   - name: Emergency Response app
     items:
     - name: Overview
