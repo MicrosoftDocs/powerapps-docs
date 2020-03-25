@@ -111,7 +111,7 @@ The **Enable quick create forms** property can be enabled or disabled for all st
 
 
 ### Unified interface client form display behavior
-The following table indicates what form is displayed by default when the **Allow Quick Create** property is *enabled* in the unified interface client.
+The following table indicates what form is displayed by default when the **Enable quick create forms** property is *enabled* in the unified interface client.
  
 |Location where form is accessed  |Form displayed  |
 |---------|---------|
@@ -125,7 +125,7 @@ The following table indicates what form is displayed by default when the **Allow
 |Activities (activitypointer) grid   | Main   |
 |Specific activity grid    | Main   |
 
-<sup>1</sup>Activities appear in the global **Create** or **+ New** buttons when the **Allow Quick Create** property is enabled. In this case, the quick create form is used if it exists or the main form if it does not. If **Allow Quick Create** is disabled, the entry for the entity will not appear.
+<sup>1</sup>Activities appear in the global **Create** or **+ New** buttons when the **Enable quick create forms** property is enabled. In this case, the quick create form is used if it exists or the main form if it does not. If **Enable quick create forms** is disabled, the entry for the entity will not appear.
 
 ### Classic web client form display behavior
 
