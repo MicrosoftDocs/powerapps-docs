@@ -1,5 +1,5 @@
 ---
-title: How to use a custom model-driven app on a mobile device | Microsoft Docs
+title: How to use a model-driven app on a mobile device | Microsoft Docs
 description: Learn how to use a custome model-driven app on a mobile device.
 author: mduelae
 manager: kvivek
@@ -17,11 +17,11 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Use custom model-driven apps on the Power Apps mobile app
+# User Guide (Power Apps mobile app)
 
-Use the Power Apps mobile app to run your custom model-driven apps on your mobile device. 
+Use the Power Apps mobile app to run model-driven apps on your mobile device. 
 
-For more information on how to install the app, see [Run a canvas app or a custom model-driven app on a mobile device](run-app-client.md).
+For more information on how to install the app, see [Run a canvas app and a model-driven app on a mobile device](run-app-client.md).
 
 ## Home screen 
 
