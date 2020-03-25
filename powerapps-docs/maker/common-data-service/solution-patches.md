@@ -104,7 +104,7 @@ For more information about version numbers, see [Clone solution and clone patch 
 ![Clone a solution](media/cloned-solution.png)
 
 > [!IMPORTANT]
-> Cloning a solution removes the original solution and associated patches. 
+> Cloning a solution merges the original solution and associated patches into a new base solution and removes the original solution and patches. 
   
 1. Go to the Power Apps portal, and then select **Solutions**.   
   
