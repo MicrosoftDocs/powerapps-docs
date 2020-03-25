@@ -1,5 +1,5 @@
 ---
-title: Solution architect learning catalog
+title: Solution Architects learning catalog
 description: Find all the training options for Power Apps
 author: loreleishannonmsft
 ms.topic: article
@@ -7,7 +7,7 @@ ms.date: 02/19/2020
 ms.author: v-lshann
 ---
 
-# Solution architect learning catalog
+# Solution Architects Learning Catalog
 
 Do you design solutions that meet your customers' needs and budgets?
 
