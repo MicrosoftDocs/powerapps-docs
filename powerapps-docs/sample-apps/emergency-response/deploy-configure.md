@@ -168,9 +168,20 @@ To load sample data from one of the data files to an entity:
   > [!div class="mx-imgBorder"] 
   > ![Entity record](media/conf-entity-record.png "Record in the entity after import")
 
-Repeat the above steps with other entities as well.
+Repeat the above steps with other entities.
 
 Alternatively, if you want to enter the master data manually, see [Manually configure and manage master data for your organization](#manually-configure-and-manage-master-data-for-your-organization).
+
+#### Import mandatory data
+
+Importing the following files is mandatory before you move to the next step:
+
+| Area name | Entity name| File name
+|-|-|-
+| Administration | Apps | 00 - App Import.xlsx
+| Administration | Apps Config | 00 - App Config Import.xlsx
+
+Data for other entities can be added later [manually](#manually-configure-and-manage-master-data-for-your-organization) or using sample data files explained above. 
 
 #### Step 2.3: Update the mobile app branding
 
