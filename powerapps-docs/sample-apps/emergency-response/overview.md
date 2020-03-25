@@ -30,8 +30,12 @@ These are the main components of the Emergency Response app:
 
 You need the following:
 
-- Power Apps license
-- Power BI License
+- Power Apps license.
+- Power BI License if you will be using the Power BI dasboard available as part of this solution.
+
+Contact your local Microsoft account representative for questions related to licensing.
+
+See also: [Licensing overview for Power Platform](https://docs.microsoft.com/power-platform/admin/pricing-billing-skus)
 
 ## Next step
 
