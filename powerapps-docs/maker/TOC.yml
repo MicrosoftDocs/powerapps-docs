@@ -31,8 +31,8 @@
     href: ../user/run-app-browser.md
   - name: On a phone (canvas & model-driven apps)
     href: ../user/run-app-client.md
-    - name: User Guide
-      href: ../user/use-custom-model-driven-app-on-mobile.md
+  - name: User Guide
+    href: ../user/use-custom-model-driven-app-on-mobile.md
   - name: On a SharePoint Online page (canvas apps)
     href: ../user/powerapps-web-part.md
   - name: In Microsoft Teams (canvas apps)
