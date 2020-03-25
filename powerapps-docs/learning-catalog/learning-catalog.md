@@ -8,7 +8,7 @@ ms.author: v-lshann
 ---
 # Learning catalog for Power Apps
 
-Find the right online training, in person workshops, and events for your role as a user of Power Apps.
+Find the right online training, in-person workshops, and events for your role as a user of Power Apps.
 
 <!-- ![Universal Windows Platform (UWP)](images/platform-uwp.png)  -->  
 
