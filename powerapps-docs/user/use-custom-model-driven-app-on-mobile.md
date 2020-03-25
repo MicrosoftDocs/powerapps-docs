@@ -19,6 +19,8 @@ search.app:
 ---
 # User Guide (Power Apps mobile app)
 
+This is an early-access feature. You can opt in early to enable these features in your environment. This will allow you to test these features and then adopt them across your environments. For information on how to enable these features, see [Opt in to 2020 release wave 1 updates](https://docs.microsoft.com/power-platform/admin/opt-in-early-access-updates).
+
 Use the Power Apps mobile app to run model-driven apps on your mobile device. 
 
 For more information on how to install the app, see [Run a canvas app and a model-driven app on a mobile device](run-app-client.md).
