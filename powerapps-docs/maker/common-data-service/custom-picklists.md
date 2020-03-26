@@ -19,9 +19,9 @@ search.app:
 
 Option sets allow you to include drop down lists of fixed values to a user within your app to ensure data consistency, sometimes referred to as picklists or choice fields in other applications. Similar to entities, there are both standard Option sets, and the ability to create custom Option sets to use within your app.
 
-Option sets can be created in two ways, either from the Option set list within the portal or directly within an entity while creating a field. For more information on how to create an entity, see [Create an entity](data-platform-create-entity.md).
+Option sets can be created in two ways, either from the **Option Sets** list within the portal or directly within an entity while creating a field. For more information on how to create an entity, see [Create an entity](data-platform-create-entity.md).
 
-## Creating an Option set while adding a field.
+## Creating an Option set while adding a field
 
 1. On [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand the **Data** section and click or tap **Entities** in the left navigation pane.
 
@@ -36,7 +36,7 @@ Option sets can be created in two ways, either from the Option set list within t
     > [!div class="mx-imgBorder"] 
     > ![New Field](./media/data-platform-cds-create-entity/newfieldpanel.png "New Field Panel")
 
-5. Click the **Data type** drop down and select **Option set**, or **Multi select Option set**.
+5. Click the **Data type** drop down and select **Option Set** or **Multi Select Option set**.
 
 6. Click the **Option set** drop down and select **New Option set**
 
@@ -65,7 +65,7 @@ Option sets can be created in two ways, either from the Option set list within t
 
 ## Creating an Option set from the Option set list
 
-1. On [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand the **Data** section and click or tap **Option sets** in the left navigation pane.
+1. On [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand the **Data** section and click or tap **Option Sets** in the left navigation pane.
 
     > [!div class="mx-imgBorder"] 
     > ![Option sets](./media/data-platform-cds-newoptionset/optionsetlist.png "Option set List")
@@ -86,7 +86,7 @@ Option sets can be created in two ways, either from the Option set list within t
 
 ## Global and Local Option sets
 
-By default, Option sets are created as Global Option sets which allows them to be reused across multiple entities. Under the **View more** option when creating a new Option set you can chose to make an Option set **Local**. This option is only available when Creating an Option set while adding a field, and not through the Option set list. Local option sets can only be used by the entity and field they are created against, and cannot be reused on other entities. This approach is only recommended for advanced users that a specific need for a local option set.
+By default, Option sets are created as Global Option sets which allows them to be reused across multiple entities. Under the **View more** option when creating a new Option set you can chose to make an Option set **Local**. This option is only available when creating an Option set while adding a field, and not through the **Option Sets** list. Local option sets can only be used by the entity and field they are created against, and cannot be reused on other entities. This approach is only recommended for advanced users that a specific need for a local option set.
 
 > [!IMPORTANT]
 > Once an option set is created as local or global, this cannot be changed.
