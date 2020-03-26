@@ -33,10 +33,10 @@ Option sets can be created in two ways, either from the **Option Sets** list wit
 
 4. In the new field panel, enter the **Display name** for your field, **Name** will be automatically populated and is used as the unique name for your field. The **Display name** is used when presenting this field to your users, the **Name** is used when building your app, in expressions and formulas.
 
+5. Click the **Data type** drop down and select **Option Set** or **Multi Select Option set**.
+
     > [!div class="mx-imgBorder"] 
     > ![New Field](./media/data-platform-cds-create-entity/newfieldpanel.png "New Field Panel")
-
-5. Click the **Data type** drop down and select **Option Set** or **Multi Select Option set**.
 
 6. Click the **Option set** drop down and select **New Option set**
 
