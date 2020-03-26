@@ -21,7 +21,7 @@ search.app:
 
 This is an early-access feature. You can opt in early to enable these features in your environment. This will allow you to test these features and then adopt them across your environments. For information on how to enable these features, see [Opt in to 2020 release wave 1 updates](https://docs.microsoft.com/power-platform/admin/opt-in-early-access-updates).
 
-When you create an app, or someone shares an app with you, you can run that app on iOS and Android device using the Power Apps mobile app. In this topic, you'll learn how to run a canvas app or a model-driven app on your mobile device. Apps running on a mobile device can take advantage of the device's capabilities, such as location services and camera.
+When you create an app, or someone shares an app with you, you can run that app on iOS and Android device using the Power Apps mobile app. The mobile app is not supported on Windows devices. In this topic, you'll learn how to get started and run a canvas app or a model-driven app on your mobile device. 
 
 > [!IMPORTANT]
 > Model-driven apps for sales, customer service, and field service don't run in the Power Apps mobile app. Instead, you use the Dynamics 365 for phones and tablets app. For more information, see [User Guide for Dynamics 365 for phones and tablets](https://docs.microsoft.com/dynamics365/mobile-app/dynamics-365-phones-tablets-users-guide).
@@ -47,7 +47,7 @@ If you have the Microsoft Authenticator app installed on your mobile device, sim
 
 
 ## Find the app
-To make it easier to find the app, open the **PowerApps** menu, and then select a filter. 
+To make it easier to find the app, open the **Power Apps** menu, and then select a filter. 
 
 Only the **My apps** and **All apps** filters apply to model-driven apps. For preview, **My apps** filters shows **All apps** for model-driven apps.
 
@@ -65,7 +65,7 @@ The following filters are available:
 
     ![Mark as Favorite](media/add_favorite_app.png)
 
-* **Featured apps** (only for canvas apps): Displays canvas apps that your admin as marked as Featured apps.
+* **Featured apps** (only for canvas apps): Displays canvas apps that your admin as marked as featured apps.
 
 ### Sort apps
 
@@ -107,9 +107,9 @@ You can pin both canvas and model-driven apps to the home screen of your device 
 
 ## See non production apps
 
-By default, only the production model-driven apps shown in the list of apps. 
+By default, only production model-driven apps are shown in the list of apps. 
 
-To see model-driven apps from non production environments, select ![Setting icon](media/settings_icon.png) and then set the **Show non production apps** toggle to on, and then follow the instructions that appear.
+To see model-driven apps from non production environments, select the setting menu ![Setting icon](media/settings_icon.png) and then set the **Show non production apps** toggle to on, and then follow the instructions that appear.
 
 ![Non production apps toggle](media/non_prod_toggle.png)
 
@@ -118,6 +118,6 @@ To see model-driven apps from non production environments, select ![Setting icon
 To close an app, use your finger to swipe from the left edge of the app to the right. On Android devices, you can also press the Back button and then confirm that you intended to close the app.
 
 ## Next steps
-In this topic, you learned how to run a canvas app and custom model-driven app on a mobile device. Next, learn how to use a custom model-driven app on a mobile device. 
+In this topic, you learned how to run a canvas app and custom model-driven app on a mobile device. Next, learn how to use a model-driven app on a mobile device. 
 > [!div class="nextstepaction"]
-> [Use custom model-driven apps on the Power Apps mobile app](use-custom-model-driven-app-on-mobile.md)
+> [Use model-driven apps on the Power Apps mobile](use-custom-model-driven-app-on-mobile.md)
