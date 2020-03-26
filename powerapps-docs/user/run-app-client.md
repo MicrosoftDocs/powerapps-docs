@@ -67,10 +67,11 @@ The following filters are available:
 
 * **Featured apps** (canvas apps): Displays canvas apps that your admin as marked as Featured apps.
 
+### Sort
 
-After you filter your apps, you can sort the filtered list by the date the apps were most recently opened or modified, or alphabetically by name. These preferences are retained when you close and reopen Power Apps.
+After you filter your apps, you can sort the filtered list by the date the apps were most recently opened or modified, or alphabetically by name. These preferences are retained when you close and reopen apps.
 
-![Sort menu](./media/run-app-client/sort-menu.png)
+![Sort menu](media/sort_appspng)
 
 If you know the name of the app you want to run, you can tap the search icon at the top of Powerapps, and then type part of its name in the search box.
 
