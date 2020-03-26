@@ -21,7 +21,18 @@ Estimated time to complete these steps: **35–40 minutes**.
 
 ## Deploy Emergency Response app
 
-This section provides you information on how to deploy the Emergency Response app for your organization.
+Perform the following steps to deploy the Emergency Response sample app for your organization.
+
+- [Step 1: Sign up for Power Apps and create an environment](#step-1-sign-up-for-power-apps-and-create-an-environment)
+- [Step 2: Download the deployment package](#step-2-download-the-deployment-package)
+- [Step 3: Import the solution file into your environment](#step-3-import-the-solution-file-into-your-environment)
+- [Step 4: Load configuration and master data for your organization](#step-4-load-configuration-and-master-data-for-your-organization)
+- [Step 5: Update the mobile app branding](#step-5-update-the-mobile-app-branding)
+- [Step 6: Bypass consent for mobile apps](#step-6-bypass-consent-for-mobile-apps)
+- [Step 7: Add Azure Application Insights key to mobile apps for telemetry](#step-7-add-azure-application-insights-key-to-mobile-apps-for-telemetry)
+- [Step 8: Share canvas apps with users in your organization](#step-8-share-canvas-apps-with-users-in-your-organization)
+- [Step 9: Set your mobile app as hero and featured app](#step-9-set-your-mobile-app-as-hero-and-featured-app)
+- [Step 10: Share model-driven app with admins in your organization](#step-10-share-model-driven-app-with-admins-in-your-organization)
 
 ### Step 1: Sign up for Power Apps and create an environment
 
@@ -40,33 +51,21 @@ After you have purchased Power Apps, create an environment with a Common Data Se
 
 3.  Create appropriate users in your environment. More information: [Create users and assign security roles](https://docs.microsoft.com/power-platform/admin/create-users-assign-online-security-roles)
 
-### Step 2: Install the deployment files in your environment
+### Step 2: Download the deployment package
 
-- [What's in the deployment package?](#whats-in-the-deployment-package)
-- [Step 2.1: Import the solution file into your environment](#step-21-import-the-solution-file-into-your-environment)
-- [Step 2.2: Load configuration and master data for your organization](#step-22-load-configuration-and-master-data-for-your-organization)
-- [Step 2.3: Update the mobile app branding](#step-23-update-the-mobile-app-branding)
-- [Step 2.4: Bypass consent for mobile apps](#step-24-bypass-consent-for-mobile-apps)
-- [Step 2.5: Add Azure Application Insights key to mobile apps for telemetry](#step-25-add-azure-application-insights-key-to-mobile-apps-for-telemetry)
-- [Step 2.6 Share canvas apps with users in your organization](#step-26-share-canvas-apps-with-users-in-your-organization)
-- [Step 2.7: Set your mobile app as hero and featured app](#step-27-set-your-mobile-app-as-hero-and-featured-app)
-- [Step 2.8: Share model-driven app with admins in your organization](#step-28-share-model-driven-app-with-admins-in-your-organization)
-
-#### What's in the deployment package?
-
-Get the latest deployment file (.zip) from <https://aka.ms/emergency-response-solution> that contains the solution file, images, and data files to set up the apps and business logic for the Emergency Response app.
+Get the latest deployment package (.zip) from <https://aka.ms/emergency-response-solution> that contains the solution file, images, and data files to set up the apps and business logic for the Emergency Response app.
 
 To begin the deployment process, extract the deployment file (.zip) to a location on your computer. The extracted folder will contain the following folders:
 
 | **Folder/File**       | **Description**  |
 |-----------------------|------------------|
 | **App Icons**         | Contains the default app icons for the mobile apps (canvas apps)|
-| **Data Files**        | Contains the master and sample data files (.xlsx) for the solution/app to work. You can import data from these files to start working on the app. For details, see [Step 2.2: Load configuration and master data for your organization](#step-22-load-configuration-and-master-data-for-your-organization) |
-| **Power BI Template** | Contains the Power BI Report template file (.pbit) that you will use to configure reporting for your organization.|
-| **PowerShell**        | Contains scripts that you will use to configure your mobile apps (canvas apps)|
-| **Solution File**     | Contains the Common Data Service solution file that creates the apps and metadata required for the Emergency Response app. |
+| **Data Files**        | Contains the master and sample data files (.xlsx) for the solution/app to work. You can import data from these files to start working on the app. More information: see [Step 4: Load configuration and master data for your organization](#step-4-load-configuration-and-master-data-for-your-organization) |
+| **Power BI Template** | Contains the Power BI Report template file (.pbit) that you will use to configure reporting for your organization. More Information: [Get insights using Power BI dashboards](#get-insights-using-power-bi-dashboards)|
+| **PowerShell**        | Contains scripts that you will use to configure your mobile apps (canvas apps). |
+| **Solution File**     | Contains the Common Data Service solution file that creates the apps and metadata required for the Emergency Response app.  |
 
-#### Step 2.1: Import the solution file into your environment
+### Step 3: Import the solution file into your environment
 
 1.  Navigate to the location where you extracted the deployment file (.zip); you will find a **Solution File** folder. We will import the managed solution
     (.zip) file under the **Solution File** folder to our environment.
@@ -94,7 +93,7 @@ Select the **Admin App** to open the model-driven app that lets you configure th
 
 The admin app has a number of entities where you can add and manage data for your hospital system. You can use the area picker in the lower part of the left navigation pane to select a different area.
 
-#### Step 2.2: Load configuration and master data for your organization
+### Step 4: Load configuration and master data for your organization
 
 All the data required for the Emergency Response app is available under the **Data Files** folder under your extracted deployment folder.
 
@@ -150,7 +149,7 @@ The **Data Files** folder has the following files and folders:
 </tr>
 </table>
 
-#### How to load data from data files?
+#### Step 4.1: How to load data from data files?
 
 To load sample data from one of the data files to an entity:
 
@@ -172,7 +171,7 @@ Repeat the above steps with other entities.
 
 Alternatively, if you want to enter the master data manually, see [Manually configure and manage master data for your organization](#manually-configure-and-manage-master-data-for-your-organization).
 
-#### Import mandatory configuration data
+#### Step 4.2: Import mandatory configuration data
 
 Importing the configuration data under the following entities in the admin app is **mandatory** before you move to the next step:
 
@@ -186,7 +185,7 @@ Importing the configuration data under the following entities in the admin app i
 
 Data for other entities can be [manually](#manually-configure-and-manage-master-data-for-your-organization) added later or by using the sample data files explained earlier.
 
-#### Step 2.3: Update the mobile app branding
+### Step 5: Update the mobile app branding
 
 You can change the icon or color scheme of the mobile apps to match the branding of your organization.
 
@@ -242,7 +241,7 @@ You do this using the **App** and **App Config** entities in the **Administratio
 
 1.  Select **Save** in the lower-right corner to save your changes.
 
-### Step 2.4: Bypass consent for mobile apps
+### Step 6: Bypass consent for mobile apps
 
 Before you perform this step, you will need app ID of each mobile app (canvas app).
 
@@ -277,11 +276,11 @@ Next do the following:
 
 4.  Run PowerShell as an administrator and execute the .ps file you just created.
 
-### Step 2.5: Add Azure Application Insights key to mobile apps for telemetry
+### Step 7: Add Azure Application Insights key to mobile apps for telemetry
 
 You can use Azure Application Insights to collect detailed telemetry for your mobile apps (canvas apps) to get insights on the app usage. For detailed information about this, see [Log telemetry for your Apps using Azure Application Insights](https://powerapps.microsoft.com/blog/log-telemetry-for-your-apps-using-azure-application-insights/)
 
-### Step 2.6 Share canvas apps with users in your organization
+### Step 8: Share canvas apps with users in your organization
 
 For your frontline users to use and consume data using the canvas apps in their
 mobile devices, the apps must be shared with them. It's easier to use Azure AD
@@ -306,7 +305,7 @@ groups to easily share apps with groups of users.
 
 Detailed information about sharing your apps: [Share a canvas app](https://docs.microsoft.com/powerapps/maker/canvas-apps/share-app)
 
-#### Step 2.7: Set your mobile app as hero and featured app
+### Step 9: Set your mobile app as hero and featured app
 
 This step lets you set your mobile app as the hero and featured app within the **Power Apps** mobile app.
 
@@ -346,7 +345,7 @@ Next, do the following:
 
 4.  Run PowerShell as an administrator and execute the .ps file you just created.
 
-#### Step 2.8: Share model-driven app with admins in your organization
+### Step 10: Share model-driven app with admins in your organization
 
 For your admin users to use the admin app (model-driven app), it must be shared with them. It's easier to use Azure AD groups to easily share apps with a group of admin users.
 
