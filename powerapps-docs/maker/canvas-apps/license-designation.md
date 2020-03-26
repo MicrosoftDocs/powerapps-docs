@@ -15,12 +15,12 @@ search.app:
   - PowerApps
 ---
 
-# How to check License designation for an app
+# How to check license designation for an app
 
-Starting October 2019, several connectors were reclassified from Standard to Premium.
+Starting October 2019, several connectors are reclassified from Standard to Premium.
 
 [Power Apps licensing FAQ](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#office-365) outlines
-which connectors were reclassified. Apps using these connectors before the
+reclassified connectors. Apps using these connectors before the
 reclassification have been granted an extended timeframe allowing users
 without a premium license to access these apps.
 
