@@ -19,7 +19,16 @@ The Emergency Response app requires a small amount of setup to adapt to your nee
 
 Estimated time to complete these steps: **35–40 minutes**.
 
-## Deploy Emergency Response app
+## Demo: Deploy and configure the Emergency Response app
+
+Watch how you can deploy and configure the Emergency Response app.
+
+<br/>
+
+> [!VIDEO https://www.youtube.com/embed/-1g44wNiuWI]
+
+
+## Deploy the Emergency Response app
 
 Perform the following steps to deploy the Emergency Response sample app for your organization.
 

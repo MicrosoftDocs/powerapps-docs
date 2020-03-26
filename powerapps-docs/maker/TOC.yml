@@ -827,6 +827,8 @@
       href: ./canvas-apps/edit-app.md
     - name: Delete an app
       href: ./canvas-apps/delete-app.md
+    - name: License designation for an app
+      href: ./canvas-apps/license-designation.md
     - name: Restore a previous version
       href: ./canvas-apps/restore-an-app.md
     - name: Change app name and tile
@@ -877,6 +879,8 @@
       href: ./canvas-apps/cognitive-services-api.md
     - name: Transform your InfoPath forms to Power Apps
       href: ./canvas-apps/transform-infopath.md
+    - name: Analyze app telemetry using Application Insights
+      href: ./canvas-apps/application-insights.md
   - name: For developers
     items:
     - name: Canvas apps for enterprise developers, partners, and ISVs
