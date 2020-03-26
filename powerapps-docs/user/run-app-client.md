@@ -105,7 +105,7 @@ You can pin both canvas and model-driven apps to the home screen of your device 
 
 ![Pin app](media/pin_to_home.png)
 
-## Settings
+## See non production apps
 
 By default, only the production model-driven apps shown in the list of apps. 
 
