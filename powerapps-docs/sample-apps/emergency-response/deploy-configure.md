@@ -714,6 +714,12 @@ To view and manage app feedback:
     > [!div class="mx-imgBorder"]
     > ![select-app-feedback](media/select-app-feedback.png)
 
+## Issues and feedback
+
+- To report an issue with the Emergency Response sample solution, visit <https://aka.ms/emergency-response-issues>.
+
+- For feedback about the Emergency Response sample solution, visit <https://aka.ms/emergency-response-feedback>.
+
 ## Next step
 
 [Use Emergency Response app](use.md)

@@ -47,9 +47,9 @@ See also: [Licensing overview for Power Platform](https://docs.microsoft.com/pow
 
 ## Issues and feedback
 
-- For feedback about the Emergency Response sample solution, visit <https://aka.ms/emergency-response-feedback>.
-
 - To report an issue with the Emergency Response sample solution, visit <https://aka.ms/emergency-response-issues>.
+
+- For feedback about the Emergency Response sample solution, visit <https://aka.ms/emergency-response-feedback>.
 
 ## Next step
 

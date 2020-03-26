@@ -33,6 +33,14 @@ sign in with your company's Azure Active Directory account. You can view all
 apps shared to you by your organization once you sign in. For more information, see [Power Apps mobile device sign
 in](https://docs.microsoft.com/powerapps/user/run-app-client#open-power-apps-and-sign-in).
 
+## Demo: Use the Emergency Response app
+
+Watch how to use the Emergency Response app.
+
+<br/>
+
+> [!VIDEO https://www.youtube.com/embed/H1u6SYt3UsQ]
+
 ## App Launcher
 
 ![App Launcher](media/use/app-launcher.png)
@@ -226,6 +234,12 @@ options to share a praise, an idea or report an issue with the app.
 
 Switch facility anytime by selecting the facility name on the top-right side of the screen. After you select the location name, you're taken to the **App
 Launcher** screen where you can select a different hospital, region, or facility.
+
+## Issues and feedback
+
+- To report an issue with the Emergency Response sample solution, visit <https://aka.ms/emergency-response-issues>.
+
+- For feedback about the Emergency Response sample solution, visit <https://aka.ms/emergency-response-feedback>.
 
 ### See also
 
