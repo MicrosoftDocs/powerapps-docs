@@ -235,8 +235,8 @@ Launcher** screen where you can select a different hospital, region, or facility
 
 ## Issues and feedback
 
-- To report an issue with the Emergency Response sample solution, visit <https://aka.ms/emergency-response-issues>.
+- To report an issue with the Emergency Response sample app, visit <https://aka.ms/emergency-response-issues>.
 
-- For feedback about the Emergency Response sample solution, visit <https://aka.ms/emergency-response-feedback>.
+- For feedback about the Emergency Response sample app, visit <https://aka.ms/emergency-response-feedback>.
 
 

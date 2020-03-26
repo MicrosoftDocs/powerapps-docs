@@ -25,7 +25,7 @@ The main components of the Emergency Response solution are:
 - **Web app for Hospital IT admins**: Hospital admins can use this app to add and manage system data required for the solution to work.
 - **Dashboards for healthcare decision makers**: Use dashboards to quickly view important data and metrics that will help you in efficient decision making.
 
-## Video: Quick overview
+## Demo: Quick overview
 
 Watch a quick overview of the Emergency Response solution.
 
@@ -44,9 +44,9 @@ See also: [Licensing overview for Power Platform](https://docs.microsoft.com/pow
 
 ## Issues and feedback
 
-- To report an issue with the Emergency Response sample solution, visit <https://aka.ms/emergency-response-issues>.
+- To report an issue with the Emergency Response sample app, visit <https://aka.ms/emergency-response-issues>.
 
-- For feedback about the Emergency Response sample solution, visit <https://aka.ms/emergency-response-feedback>.
+- For feedback about the Emergency Response sample app, visit <https://aka.ms/emergency-response-feedback>.
 
 ## Next step
 

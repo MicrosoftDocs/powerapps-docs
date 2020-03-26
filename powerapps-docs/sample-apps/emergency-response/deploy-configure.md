@@ -27,6 +27,8 @@ Perform the following steps to deploy the Emergency Response sample app for your
 - [Step 2: Download the deployment package](#step-2-download-the-deployment-package)
 - [Step 3: Import the solution file into your environment](#step-3-import-the-solution-file-into-your-environment)
 - [Step 4: Load configuration and master data for your organization](#step-4-load-configuration-and-master-data-for-your-organization)
+    - [Step 4.1: How to load data from data files?](#step-41-how-to-load-data-from-data-files)
+    - [Step 4.2: Import mandatory configuration data](#step-42-import-mandatory-configuration-data)
 - [Step 5: Update the mobile app branding](#step-5-update-the-mobile-app-branding)
 - [Step 6: Bypass consent for mobile apps](#step-6-bypass-consent-for-mobile-apps)
 - [Step 7: Add Azure Application Insights key to mobile apps for telemetry](#step-7-add-azure-application-insights-key-to-mobile-apps-for-telemetry)
@@ -124,6 +126,7 @@ The **Data Files** folder has the following files and folders:
 </ul>
 <br/>Importing data to these entities will create records for these entities that are required for the Emergency Response app to work.
 <br/>
+<br/>
 <strong>Caution</strong>: Ensure that you don't update the configuration values in these entities, except for the <strong>Apps</strong> and <strong>App Config</strong> entities as explained later.</td>
 </tr>
 <tr>
@@ -196,7 +199,7 @@ You do this using the **App** and **App Config** entities in the **Administratio
 
 1.  Make sure you have imported the configuration data for **Apps** and **App Config** entities from the **App Import.xlsx** and **App Config Import.xlsx** files respectively in the extracted deployment package.
 
-1.  Now, we will copy the app IDs of your canvas apps so that we can populate it in the App records we imported. Sign in to [Power Apps](https://make.powerapps.com).
+1.  Now, we will copy the app IDs of canvas apps so that we can populate it in the **Apps** records we imported. Sign in to [Power Apps](https://make.powerapps.com).
 
 1.  Select your environment from the top-right corner.
 
@@ -226,7 +229,7 @@ You do this using the **App** and **App Config** entities in the **Administratio
 
 1.  Repeat step 9 for each canvas app record under **Apps** to add the **Power App ID** value.
 
-1.  In the left pane, select **App Config.**
+1.  In the left pane, select **App Config**.
 
 1.  Select the **Emergency Response App** record to open it for editing.
 
@@ -363,9 +366,9 @@ For your admin users to use the admin app (model-driven app), it must be shared 
 Admins can use the model-driven app in [Power Apps](https://make.powerapps.com) to create and manage master data for their organization. This data is required for the Emergency Response app to work.
 
 > [!NOTE]
-> You can also import your organization data into data files available in the deployment package and then import it to these entities. More information: [Step 2.2: Load configuration and master data for your organization](#step-22-load-configuration-and-master-data-for-your-organization)
+> You can also import your organization data into data files available in the deployment package and then import it to these entities. More information: [Step 4: Load configuration and master data for your organization](#step-4-load-configuration-and-master-data-for-your-organization)
 
-You must add master data in these entities and in the following sequence:
+You must add master data in these entities in the following sequence:
 
 1. [Systems](#systems-data)
 
@@ -468,7 +471,7 @@ To edit the record, select the record, update the values as required, and select
 The **Locations** entity lets you manage specific locations within each hospital facility.
 
 > [!NOTE]
-> Make sure you have imported the acuity data using the **00 - Acuities Import.xlsx** file as explained in [Step 2.2: Load configuration and master data for your organization](#step-22-load-configuration-and-master-data-for-your-organization).
+> Before creating a **Locations** record, ensure that you have imported the acuity data using the **00 - Acuities Import.xlsx** file as explained earlier in [Step 4: Load configuration and master data for your organization](#step-4-load-configuration-and-master-data-for-your-organization). This is because acuity information is required to create a **Location** record.
 
 To create a record:
 
@@ -525,7 +528,7 @@ To edit the record, select the record, update the values as required, and select
 
 ## Get insights using Common Data Service dashboards
 
-Following dashboards are available by default in the Emergency Response model-driven app:
+Following dashboards are available by default in the Emergency Response admin (model-driven) app:
 
 - **Bed Management**
 
@@ -700,7 +703,7 @@ Sign in to [Power BI](https://apps.powerbi.com) to access and view the Power BI 
 
 ## View and manage app feedback
 
-All the feedback provided by frontline staff using canvas apps on their mobile devices is stored in the **App Feedback** entity, and admins can view and manage this using the **Administration** area on the left navigation pane in Power Apps.
+All the feedback provided by frontline staff using canvas apps on their mobile devices is stored in the **App Feedback** entity, and admins can view and manage this using the **Administration** area on the left navigation pane in the admin app.
 
 To view and manage app feedback:
 
@@ -715,9 +718,9 @@ To view and manage app feedback:
 
 ## Issues and feedback
 
-- To report an issue with the Emergency Response sample solution, visit <https://aka.ms/emergency-response-issues>.
+- To report an issue with the Emergency Response sample app, visit <https://aka.ms/emergency-response-issues>.
 
-- For feedback about the Emergency Response sample solution, visit <https://aka.ms/emergency-response-feedback>.
+- For feedback about the Emergency Response sample app, visit <https://aka.ms/emergency-response-feedback>.
 
 ## Next step
 
