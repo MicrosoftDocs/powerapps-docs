@@ -1,12 +1,12 @@
 ---
 title: Deploy and configure the Emergency Response app | Microsoft Docs
-description: Provides provides detailed instructions for hospital IT admins to deploy and configure the application for their organization.
+description: Provides provides detailed instructions for hospital IT admins to deploy and configure the sample app for their organization.
 author: KumarVivek
 manager: annbe
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 03/25/2020
+ms.date: 03/26/2020
 ms.author: kvivek
 ms.reviewer: kvivek
 searchScope:
