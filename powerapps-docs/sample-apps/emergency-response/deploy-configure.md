@@ -361,7 +361,7 @@ For your admin users to use the admin app (model-driven app), it must be shared 
 Admins can use the model-driven app in [Power Apps](https://make.powerapps.com) to create and manage master data for their organization. This data is required for the Emergency Response app to work.
 
 > [!NOTE]
-> You can also import your organization data into data files available in the deployment package and then import it to these entities. More information: [Step 2.2: Load configuration and master data for your organization](#step-2.2-load-configuration-and-master-data-for-your-organization)
+> You can also import your organization data into data files available in the deployment package and then import it to these entities. More information: [Step 2.2: Load configuration and master data for your organization](#step-22-load-configuration-and-master-data-for-your-organization)
 
 You must add master data in these entities and in the following sequence:
 
@@ -370,6 +370,8 @@ You must add master data in these entities and in the following sequence:
 1. [Regions](#regions-data)
 
 1. [Facilities](#facilities-data)
+
+1. [Acuities](#acuities-data)
 
 1. [Locations](#locations-data)
 
@@ -455,7 +457,31 @@ To create a record:
     | Effective Start Data | Type start date and time for this facility.                                                     |
     | Effective End Date   | Type end date and time for this facility.                                                       |
 
+    If required, enter facility address.
+
 3. Select **Save & Close**. The newly created record will be available in the **Facilities** list.
+
+To edit the record, select the record, update the values as required, and select **Save & Close**.
+
+### Acuities data
+
+The **Acuity** entity lets you manage the hospital acuities with type of intensity such as *acute care* or *non-acute care*.
+
+To create a record:
+
+1. Select **Acuities** in the left pane, and select **New**.
+
+2. In the **New Acuity** page, specify appropriate values: 
+
+    > [!div class="mx-imgBorder"] 
+    > ![enter-details-new-facility](media/enter-details-new-acuity.png)
+
+    | **Field**            | **Description**                                                                                 |
+    |----------------------|-------------------------------------------------------------------------------------------------|
+    | Acuity Name          | Name of acuity. |
+    | Type        | Select a type as *Acute cae* or *Non-acute care*.                                                  |
+
+3. Select **Save & Close**. The newly created record will be available in the **Acuities** list.
 
 To edit the record, select the record, update the values as required, and select **Save & Close**.
 
@@ -478,7 +504,7 @@ To create a record:
     | Facility             | Select a facility. This list is populated based on the **Facilities** data you have created earlier. |
     | Floor                | Type the floor information for the facility.                                                         |
     | Unit                 | Type the unit information for the facility                                                           |
-    | Location Acuity      |                                                                                                      |
+    | Location Acuity      | Select acuity record associated with this location.                                                                                                     |
     | Total Beds           | Type the total number of beds in the facility.                                                       |
     | Blocked beds         | Type the number of beds blocked in the facility.                                                     |
     | Last Census          | Populates based on the last census record being created.                                             |
