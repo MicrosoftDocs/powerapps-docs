@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: sample
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 03/18/2020
+ms.date: 03/25/2020
 ms.author: mabolan
 search.audienceType: 
   - maker
@@ -16,7 +16,7 @@ search.app:
 ---
 
 # Set up and learn about the Crisis Communication sample template in Power Apps
-<!--note from editor: Suggest moving the overview into the usual overview position (i.e. after the H1). Other notes: According to the Docs Contributor Guide, graphic file names should be all lowercase, including the extension. I didn't change this, but something to note for next time. -->
+
 The Crisis Communication app provides a user-friendly experience to connect
 users with information about a crisis. Quickly get updates on
 internal company news, get answers to frequently asked questions, and get access
@@ -713,8 +713,7 @@ The app uses a flow to send notifications to end users whenever there is a new c
 
 ### Optional: Sending notifications to more than 5000 users
 
-The current **Get group members** action is limited to pulling 5,000 users if you are
-using the Office license of Power Automate. If you have a premium license and would like to distribute to up to 100,000 users, you can follow these steps to send to more users.
+The current **Get group members** action is limited to pulling 5000 users if you are using the Office license of Power Automate. If you have a premium license and would like to distribute to up to 100000 users, you can follow these steps to send to more users.
 
 1. Select the **...** menu for the **Get group members** card.
 
