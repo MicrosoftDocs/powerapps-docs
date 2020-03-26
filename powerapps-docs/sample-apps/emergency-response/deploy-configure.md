@@ -176,10 +176,13 @@ Alternatively, if you want to enter the master data manually, see [Manually conf
 
 Importing the following files is mandatory before you move to the next step:
 
-| Area name | Entity name| File name 
+| Area name | Entity name| File name
 |-|-|-
-| Administration | Apps | 00 - App Import.xlsx
+| Locations | Acuities | 00 - Acuities Import.xlsx
 | Administration | Apps Config | 00 - App Config Import.xlsx
+| Administration | Apps | 00 - App Import.xlsx
+| Staffing | Request Roles | 00 - Request Roles Import.xlsx
+| Locations | Supplies | 00 - Supplies Import.xlsx
 
 Data for other entities can be added later [manually](#manually-configure-and-manage-master-data-for-your-organization) or using sample data files explained above. 
 
@@ -371,8 +374,6 @@ You must add master data in these entities and in the following sequence:
 
 1. [Facilities](#facilities-data)
 
-1. [Acuities](#acuities-data)
-
 1. [Locations](#locations-data)
 
 1. [Departments](#departments-data)
@@ -463,31 +464,12 @@ To create a record:
 
 To edit the record, select the record, update the values as required, and select **Save & Close**.
 
-### Acuities data
-
-The **Acuity** entity lets you manage the hospital acuities with type of intensity such as *acute care* or *non-acute care*.
-
-To create a record:
-
-1. Select **Acuities** in the left pane, and select **New**.
-
-2. In the **New Acuity** page, specify appropriate values: 
-
-    > [!div class="mx-imgBorder"] 
-    > ![enter-details-new-facility](media/enter-details-new-acuity.png)
-
-    | **Field**            | **Description**                                                                                 |
-    |----------------------|-------------------------------------------------------------------------------------------------|
-    | Acuity Name          | Name of acuity. |
-    | Type        | Select a type as *Acute cae* or *Non-acute care*.                                                  |
-
-3. Select **Save & Close**. The newly created record will be available in the **Acuities** list.
-
-To edit the record, select the record, update the values as required, and select **Save & Close**.
-
 ### Locations data
 
 The **Locations** entity lets you manage specific locations within each hospital facility.
+
+> [!NOTE]
+> Make sure you have imported the acuity data using the **00 - Acuities Import.xlsx** file as explained in [Step 2.2: Load configuration and master data for your organization](#step-22-load-configuration-and-master-data-for-your-organization).
 
 To create a record:
 
