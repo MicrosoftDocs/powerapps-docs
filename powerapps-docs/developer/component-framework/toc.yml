@@ -348,6 +348,8 @@
         href: manifest-schema-reference/feature-usage.md
       - name: uses-feature
         href: manifest-schema-reference/uses-feature.md
+  - name: Learn Power apps component framework
+    href: https://docs.microsoft.com/learn/paths/use-power-apps-component-framework
   - name: Resources
     items:
     - name: Community resources
