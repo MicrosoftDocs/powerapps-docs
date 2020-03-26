@@ -850,7 +850,7 @@ If you're a Teams admin, you can push the app to all your users in the Teams app
 ### Create a central crisis management team in Teams<a name="create-a-central-crisis-management-teams-team"></a>
 
 To coordinate your crisis response, you'll want to create a central crisis management team in Teams
-and populate it with all relevant information.
+and populate it with all relevant information. This team only needs to be shared with the central response team.
 
 1. Go to Teams.
 1. Select **Teams** from the left app bar.
@@ -898,6 +898,10 @@ you might want to pin the crisis management admin app or the Power BI report to 
 * **What features aren't currently supported in GCC?**
 
     The Power Automate bot connector for Teams and the Push Notification connector are currently not available for GCC. Use the email option to alert users about internal news updates instead.
+
+* **How can I update the application?**
+
+    If you would like to update the application, please follow the steps outlined on [aka.ms/CrisisCommunicationSolution](aka.ms/CrisisCommunicationSolution).
 
 ## Issues and feedback
 
