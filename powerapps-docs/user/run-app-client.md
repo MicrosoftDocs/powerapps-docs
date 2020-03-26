@@ -65,7 +65,7 @@ The following filters are available:
 
 * **Featured apps** (canvas apps): Displays canvas apps that your admin as marked as Featured apps.
 
-    ![Mark as Favorite](./media/run-app-client/favorite.png)
+    ![Mark as Favorite](media/add_favorite_app.png)
 
 After you filter your apps, you can sort the filtered list by the date the apps were most recently opened or modified, or alphabetically by name. These preferences are retained when you close and reopen Power Apps.
 
