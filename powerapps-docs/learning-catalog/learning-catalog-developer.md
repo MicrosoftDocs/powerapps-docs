@@ -7,7 +7,7 @@ ms.date: 02/19/2020
 ms.author: v-lshann
 ---
 
-# Developer learning catalog
+# Developer Learning Catalog
 
 Do you need to write code to integrate with other data sources, extend core system functionality, or build a complex application?
 
