@@ -67,7 +67,7 @@ To begin the deployment process, extract the deployment file (.zip) to a locatio
 
 ### Step 3: Import the solution file into your environment
 
-1.  Navigate to the location where you extracted the deployment file (.zip); you will find a **Solution File** folder. We will import the managed solution
+1.  Navigate to the location where you extracted the deployment file (.zip); you'll find a **Solution File** folder. We will import the managed solution
     (.zip) file under the **Solution File** folder to our environment.
 
 2.  Sign in to [Power Apps](https://make.powerapps.com).
