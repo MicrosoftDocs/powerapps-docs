@@ -168,9 +168,7 @@
     - name: Help Desk app
       href: ./canvas-apps/help-desk-install.md
     - name: Meeting Capture app
-      href: ./canvas-apps/sample-meeting-capture.md
-    - name: Crisis communication app
-      href: ./canvas-apps/sample-crisis-communication-app.md
+      href: ./canvas-apps/sample-meeting-capture.md    
   - name: Create your first app
     items:
     - name: 1 - Create an app from a template
@@ -1627,6 +1625,18 @@
   items:
   - name: Use AI Builder in Power Apps
     href: ../use-ai-builder.md
+- name: Sample apps and solutions
+  items:
+  - name: Crisis communication app
+    href: ./canvas-apps/sample-crisis-communication-app.md
+  - name: Emergency Response solution
+    items:
+    - name: Overview
+      href: ../sample-apps/emergency-response/overview.md
+    - name: Deploy and configure the app
+      href: ../sample-apps/emergency-response/deploy-configure.md
+    - name: Use the app
+      href: ../sample-apps/emergency-response/use.md
 - name: Learn from others
   items:
   - name: Webinars
