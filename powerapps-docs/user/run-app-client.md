@@ -122,6 +122,6 @@ To see model-driven apps from non production environments, select the setting me
 To close an app, use your finger to swipe from the left edge of the app to the right. On Android devices, you can also press the Back button and then confirm that you intended to close the app.
 
 ## Next steps
-In this topic, you learned how to run a canvas app and custom model-driven app on a mobile device. Next, learn how to use a model-driven app on a mobile device. 
+In this topic, you learned how to run a canvas app and model-driven app on your mobile device. Next, learn how to use a model-driven app on a mobile device. 
 > [!div class="nextstepaction"]
-> [Use model-driven apps on the Power Apps mobile](use-custom-model-driven-app-on-mobile.md)
+> [User guide for model-driven apps ](use-custom-model-driven-app-on-mobile.md)
