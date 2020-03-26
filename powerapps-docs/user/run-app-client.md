@@ -97,7 +97,7 @@ If this is the first time you're using the Power Apps mobile app, a screen shows
 ## Give consent
 If an app requires a connection to a data source or permission to use the device's capabilities (such as the camera or location services), you must give consent before you can use the app. Typically, you're prompted only the first time.
 
-![Connection](./media/run-app-client/app-connection.png)
+![Connection](media/give_consent.png)
 
 ## Pin an app to the home screen
 You can pin an app to the home screen of your device for quick access. Tap the ellipsis (...) on the app tile, tap **Pin to Home**, and then follow the instructions that appear.
