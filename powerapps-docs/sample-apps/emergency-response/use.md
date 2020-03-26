@@ -14,10 +14,8 @@ searchScope:
 
 # Use the Emergency Response app
 
-Hospital leaders and staff are challenged to meet an increase in number of
-patients while managing supply chain during emergency. With addition of
-emergency patients, patients seeking medical help can become challenging to
-manage. Emergency Response sample solution helps healthcare organization  collect data for situational awareness of available resources. You can use the sample solution to track statistics for COVID-19 related patients, ventilators, staffing and pending discharges.
+Hospital staff are challenged to meet an increase in number of
+patients while managing supply chain during emergency. By using the Emergency Response mobile app, frontline workers can quickly view and add data for ventilators, staffing, pending discharges,and COVID-19 related patients.
 
 ## Prerequisites
 
