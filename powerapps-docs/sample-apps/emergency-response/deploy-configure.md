@@ -25,7 +25,8 @@ Watch how you can deploy the Emergency Response app.
 
 <br/>
 
-> [!VIDEO: https://www.youtube.com/embed/-1g44wNiuWI]
+> [!VIDEO https://www.youtube.com/embed/-1g44wNiuWI]
+
 
 ## Deploy the Emergency Response app
 
