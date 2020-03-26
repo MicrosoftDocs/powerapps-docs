@@ -59,23 +59,24 @@ The following filters are available:
 
 * **My apps**: Displays both canvas and model-driven apps that you've run at least once.
 
-* **Sample apps** (canvas apps): Displays sample canvas apps from Microsoft that showcase real application scenarios with fictitious data to help you explore design possibilities.
+* **Sample apps** (only for canvas apps): Displays sample canvas apps from Microsoft that showcase real application scenarios with fictitious data to help you explore design possibilities.
 
-* **Favorites** (canvas apps): Displays canvas apps that you've marked by selecting the ellipsis (...) on the app tile, and then select **Favorite**. To remove an app from this list, select the ellipsis (...) on the app tile, and then tap **Unfavorite**.
+* **Favorites** (only for canvas apps): Displays canvas apps that you've marked by selecting the ellipsis (...) on the app tile, and then select **Favorite**. To remove an app from this list, select the ellipsis (...) on the app tile, and then tap **Unfavorite**.
 
     ![Mark as Favorite](media/add_favorite_app.png)
 
-* **Featured apps** (canvas apps): Displays canvas apps that your admin as marked as Featured apps.
+* **Featured apps** (only for canvas apps): Displays canvas apps that your admin as marked as Featured apps.
 
 ### Sort apps
 
-After you filter your apps, you can sort the filtered list by the date the apps were most recently opened or modified, or alphabetically by name. These preferences are retained when you close and reopen apps.
+After you filter your apps, you can sort the filtered list by the date the apps were most recently opened or modified, or alphabetically by name. These preferences are retained when you close and reopen apps. You can sort both canvas and model-driven apps.
 
 ![Sort menu](media/sort_apps.png)
 
 ### Search apps
 
-If you know the name of the app you want to run, you can select the search icon at the top, and then type part of its name in the search box.
+If you know the name of the app you want to run, you can select the search icon at the top, and then type part of its name in the search box. You can search for both canvas and model-driven apps.
+
 
 ![Search](media/search_apps.png)
 
@@ -100,9 +101,11 @@ If an app requires a connection to a data source or permission to use the device
 ![Connection](media/give_consent.png)
 
 ## Pin an app to the home screen
-You can pin an app to the home screen of your device for quick access. Select the ellipsis (...) on the app tile, select **Pin to Home**, and then follow the instructions that appear.
+You can pin an app both canvas and model-driven apps to the home screen of your device for quick access. Select the ellipsis (...) on the app tile, select **Pin to Home**, and then follow the instructions that appear.
 
 ![Pin app](media/pin_to_home.png)
+
+## Settings
 
 ## Close an app
 To close an app, use your finger to swipe from the left edge of the app to the right. On Android devices, you can also press the Back button and then confirm that you intended to close the app.
