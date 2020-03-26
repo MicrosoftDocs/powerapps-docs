@@ -30,7 +30,7 @@
   - name: In a browser
     href: ../user/run-app-browser.md
   - name: On a phone
-    item:
+    items:
     - name: For canvas and model-driven apps
       href: ../user/run-app-client.md
     - name: User Guide for model-driven apps
