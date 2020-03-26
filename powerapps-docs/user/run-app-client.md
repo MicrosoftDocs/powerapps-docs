@@ -84,7 +84,7 @@ If you filtered your apps, it will search the filtered list.
 
 ### Refresh the list of apps
 
-Select the refresh icon ![Refresh icon](media/refresh_icon.png) to refresh the list of app. This will refresh both canvas and model-driven apps list. 
+Select the refresh icon ![Refresh icon](media/refresh_icon.png) to refresh the list of apps. This will refresh both canvas and model-driven app list. 
 
 ## Run an app
 To run an app on a mobile device, select the app tile. If someone else created an app and shared it with you in an email, you can run the app by selecting the link in the email.
