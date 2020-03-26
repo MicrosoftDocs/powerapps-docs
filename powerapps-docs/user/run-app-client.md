@@ -17,11 +17,13 @@ search.app:
   - D365CE
 ---
 
-# Run canvas apps and model-driven apps on a mobile device
+# Run canvas and model-driven apps on a mobile device
 
 This is an early-access feature. You can opt in early to enable these features in your environment. This will allow you to test these features and then adopt them across your environments. For information on how to enable these features, see [Opt in to 2020 release wave 1 updates](https://docs.microsoft.com/power-platform/admin/opt-in-early-access-updates).
 
-When you create an app, or someone shares an app with you, you can run that app on iOS and Android device using the Power Apps mobile app. The mobile app is not supported on Windows devices. In this topic, you'll learn how to get started and run a canvas app or a model-driven app on your mobile device. 
+When you create an app, or someone shares an app with you, you can run that app on iOS and Android device using the Power Apps mobile app. The mobile app is not supported on Windows devices. In this topic, you'll learn how to get started and run a canvas app and a model-driven app on your mobile device. 
+
+For detailed instructions on how to use model-driven app running on the Power Apps mobile app, see [User Guide for model-driven apps running on the Power Apps mobile app](use-custom-model-driven-app-on-mobile.md).
 
 > [!IMPORTANT]
 > Model-driven apps for sales, customer service, and field service don't run in the Power Apps mobile app. Instead, you use the Dynamics 365 for phones and tablets app. For more information, see [User Guide for Dynamics 365 for phones and tablets](https://docs.microsoft.com/dynamics365/mobile-app/dynamics-365-phones-tablets-users-guide).
@@ -122,6 +124,6 @@ To see model-driven apps from non production environments, select the setting me
 To close an app, use your finger to swipe from the left edge of the app to the right. On Android devices, you can also press the Back button and then confirm that you intended to close the app.
 
 ## Next steps
-In this topic, you learned how to run a canvas app and model-driven app on your mobile device. Next, learn how to use a model-driven app on a mobile device. 
+In this topic, you learned how to install and run a canvas and model-driven apps on your mobile device. Next, see the user guide for detailed instructions on how to use model-driven app running on the Power Apps mobile app. 
 > [!div class="nextstepaction"]
-> [User guide for model-driven apps ](use-custom-model-driven-app-on-mobile.md)
+> [User Guide for model-driven apps running on the Power Apps mobile app](use-custom-model-driven-app-on-mobile.md)
