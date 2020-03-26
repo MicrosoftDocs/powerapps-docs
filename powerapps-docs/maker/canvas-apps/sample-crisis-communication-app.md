@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: sample
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 03/18/2020
+ms.date: 03/25/2020
 ms.author: mabolan
 search.audienceType: 
   - maker
@@ -16,7 +16,7 @@ search.app:
 ---
 
 # Set up and learn about the Crisis Communication sample template in Power Apps
-<!--note from editor: Suggest moving the overview into the usual overview position (i.e. after the H1). Other notes: According to the Docs Contributor Guide, graphic file names should be all lowercase, including the extension. I didn't change this, but something to note for next time. -->
+
 The Crisis Communication app provides a user-friendly experience to connect
 users with information about a crisis. Quickly get updates on
 internal company news, get answers to frequently asked questions, and get access
@@ -711,27 +711,21 @@ The app uses a flow to send notifications to end users whenever there is a new c
   If this occurs, please open the card with the unauthorized connection and reauthorize.
 
 
-### Optional: Sending notifications to more than 999 users
+### Optional: Sending notifications to more than 5000 users
 
-The current **Get group members** action is limited to pulling 999 users (100 users by default). To distribute to more users, you can alter to the flow to  send an email to a distribution group instead.
+The current **Get group members** action is limited to pulling 5000 users if you are using the Office license of Power Automate. If you have a premium license and would like to distribute to up to 100000 users, you can follow these steps to send to more users.
 
-1. Delete the following cards: **Get group members** and **Switch on preferred send notification setting**:
+1. Select the **...** menu for the **Get group members** card.
 
-    ![Delete actions](media/sample-crisis-communication-app/36-delete-actions.png)
+    ![Select ... menu](media/sample-crisis-communication-app/40-Settings.png)
 
-1. Add a new action.
+1. Select **Settings**.
 
-1. Search for and select **Send an email (V2)**:
+1. Change the **Threshold** field to 100,000
 
-    ![Add send an email](media/sample-crisis-communication-app/37-add-send-an-email.png)
+    ![Setting the Threshold field](media/sample-crisis-communication-app/41-Threshold.png)
 
-1. In the **To** field, type in the name of your distribution group.
-
-1. In the **Subject** field, select the **Add a dynamic value** button and add the **Title** field from the **When a news item is posted** card:
-
-    ![Add title](media/sample-crisis-communication-app/38-add-title.png)
-
-1. In the **Body** field, select the **Add a dynamic value** button and add the **Details** field from the **When a news item is posted** card.
+1. Select **Done**
 
 1. Select **Save**.
 
@@ -856,7 +850,7 @@ If you're a Teams admin, you can push the app to all your users in the Teams app
 ### Create a central crisis management team in Teams<a name="create-a-central-crisis-management-teams-team"></a>
 
 To coordinate your crisis response, you'll want to create a central crisis management team in Teams
-and populate it with all relevant information.
+and populate it with all relevant information. This team only needs to be shared with the central response team.
 
 1. Go to Teams.
 1. Select **Teams** from the left app bar.
@@ -904,6 +898,10 @@ you might want to pin the crisis management admin app or the Power BI report to 
 * **What features aren't currently supported in GCC?**
 
     The Power Automate bot connector for Teams and the Push Notification connector are currently not available for GCC. Use the email option to alert users about internal news updates instead.
+
+* **How can I update the application?**
+
+    If you would like to update the application, please follow the steps outlined on [aka.ms/CrisisCommunicationSolution](aka.ms/CrisisCommunicationSolution).
 
 ## Issues and feedback
 
