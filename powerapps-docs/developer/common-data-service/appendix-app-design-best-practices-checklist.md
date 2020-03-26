@@ -3,7 +3,7 @@ title: "Appendix: App design best practices checklist (PowerApps) | Microsoft Do
 description: "Use the app design checklist to evaluate your app design in Power Apps." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 03/20/2019
-ms.reviewer: "kvivek"
+ms.reviewer: "pehecke"
 ms.service: "powerapps"
 ms.topic: "article"
 author: "omarcdoc" 
@@ -99,7 +99,7 @@ the solution</td>
 all the intended devices.<br/>Example: Do not have videos that could not render in
 certain browsers.<li>
 <li>Does not have unnecessary redirects</li>
-<li>Does not have interstitials that interrupts the user’s
+<li>Does not have interstitials that interrupts the user's
 flow</li>
 <li>Design is suitable for touch screen. If your intended
 device is mobile or tablet, then your solution should be

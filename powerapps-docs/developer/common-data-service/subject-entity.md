@@ -3,7 +3,7 @@ title: "Subject entity (Common Data Service) | Microsoft Docs" # Intent and prod
 description: "Learn about subject categorizing entity records in Power Apps, such as articles and sales literature. Using subjects you can create a hierarchy of topics to organize and maintain information."
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" #TODO: NoOwner

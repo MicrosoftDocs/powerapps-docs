@@ -3,7 +3,7 @@ title: "Use Multi-Tenant Server-to-server authentication (Common Data Service) |
 description: "Describes how to configure an application user for server-to-server authentication with Common Data Service." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 2/28/2019
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "paulliew" # GitHub ID

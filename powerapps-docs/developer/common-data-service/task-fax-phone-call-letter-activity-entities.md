@@ -3,7 +3,7 @@ title: "Task, fax, phone call, and letter activity entities (Common Data Service
 description: "Learn about entities that enable you to manage core activities that are performed in a relationship management solution" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID

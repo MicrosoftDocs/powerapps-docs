@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.date: 04/23/2018
+ms.date: 03/09/2020
 ms.author: chmoncay
 ms.reviewer: tapanm
 search.audienceType: 
@@ -76,13 +76,15 @@ An **Attachments** control lets you open, add, and delete files from a SharePoin
 
 
 ## Example
-1. Create an app from data using a SharePoint list as a data source. As an alternative, add a form to your app, and set a SharePoint list as its data source.
+1. Add a form to your app, and set a SharePoint list as its data source.
 
-2. Select the **Form** control in the tree view on the left-hand side.
+2. Select the **Display Form** control in the tree view on the left-hand side. You can also use **Edit Form** instead.
 
-3. Click **Data** in the Properties tab in the options panel on the right.
+3. Select **Data Source** in the Properties tab in the options panel on the right and then select the SharePoint list you connected to.
 
-4. Under **Fields**, enable the **Attachments** field.
+4. Select **Edit fields** in *Fields* section and select **Add field**. 
+
+5. Select the **Attachments** field and select **Add**.
 
     The Attachments field associated with the SharePoint list will appear in the form.
 

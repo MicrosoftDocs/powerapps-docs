@@ -3,7 +3,7 @@ title: "Entity relationship eligibility (Common Data Service) | Microsoft Docs" 
 description: "The article lists the messages that you can use to determine whether entities can participate in entity relationships" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID

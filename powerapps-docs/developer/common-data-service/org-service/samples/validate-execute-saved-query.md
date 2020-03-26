@@ -3,7 +3,7 @@ title: "Sample: Validate and execute saved query(Common Data Service) | Microsof
 description: "This sample shows how to validate and execute a saved query." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "samples"
 author: "JimDaly" # GitHub ID

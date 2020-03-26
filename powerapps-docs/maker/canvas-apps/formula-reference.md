@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 12/19/2019
+ms.date: 03/21/2020
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -143,7 +143,7 @@ Other elements include:
 
 **[EncodeUrl](functions/function-encode-decode.md)** – Encodes special characters using URL encoding.
 
-**[Exit](functions/function-exit.md)** – Exits the currently running app.
+**[Exit](functions/function-exit.md)** – Exits the currently running app and optionally signs out the current user.
 
 **[Exp](functions/function-numericals.md)** - Returns *e* raised to a power.
 

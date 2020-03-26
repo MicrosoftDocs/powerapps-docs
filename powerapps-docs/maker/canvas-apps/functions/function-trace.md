@@ -22,10 +22,10 @@ Trace messages can also be defined in your app. These can be viewed in the Power
 
 ## Syntax
 
-*Trace(message, severity, custom_record )*
+*Trace(message, trace_severity, custom_record )*
 
 - *Message* – Required. The information to be traced. In tests, this creates a record in the Traces table in the TestCaseResult record. 
-- *Severity* - Optional. The severity level of the Trace recorded in Application Insights. Options are Information, Warning or Error. 
+- *Trace_severity* - Optional. The severity level of the Trace recorded in Application Insights. Options are TraceSeverity.Information, TraceSeverity.Warning or TraceSeverity.Error. 
 - *custom_record* - Optional. A record containing custom data that will be recorded in Application Insights. 
   
 

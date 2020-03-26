@@ -6,7 +6,7 @@ suite: powerapps
 author: KumarVivek
 ms.service: powerapps
 ms.topic: article
-ms.date: 06/27/2019
+ms.date: 03/18/2020
 ms.author: kvivek
 search.audienceType: 
   - developer
@@ -20,9 +20,9 @@ search.app:
 Client-side scripting using JavaScript is one of the ways to apply custom business process logic for displaying data on a form in a model-driven app.
 
 > [!IMPORTANT]
-> All the client scripting concepts and APIs explained in this documentation also apply to Dynamics 365 Customer Engagement (on-premises) users.
+> All the client scripting concepts and APIs explained in this documentation also apply to [Dynamics 365 Customer Engagement (on-premises)](https://docs.microsoft.com/dynamics365/customerengagement/on-premises/overview) users.
 
-Client scripting shouldn't be your first choice though for applying custom business process logic in model-driven app forms. *Business rules* provide a way for someone, who does not know JavaScript and is not a developer, to apply business process logic in a form. More information: [Create business rules to apply logic](/powerapps/maker/model-driven-apps/create-business-rules-recommendations-apply-logic-form). You will find the business rule designer within the **Common Data Service** area on [powerapps.com](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). When you view an entity, look for the **Business rules** tab.
+Client scripting shouldn't be your first choice though for applying custom business process logic in model-driven app forms. *Business rules* provide a way for someone, who does not know JavaScript and is not a developer, to apply business process logic in a form. More information: [Create business rules to apply logic](/powerapps/maker/model-driven-apps/create-business-rules-recommendations-apply-logic-form). You will find the business rule designer within the **Data** > **Entities** > [entity_name] area on [make.powerapps.com](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). When you view an entity, look for the **Business rules** tab.
 
 However, if your business requirement can't be achieved using a business rule, you will find that client-scripting using the client API object model provides a powerful way to extend the behavior of the application and enable automation in the client.
 

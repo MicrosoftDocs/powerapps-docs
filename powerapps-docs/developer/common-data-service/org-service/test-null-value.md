@@ -3,12 +3,12 @@ title: "Test for a null value (Common Data Service) | Microsoft Docs" # Intent a
 description: "This sample shows how to test for a null value by using the FilterExpression and QueryByAttribute classes"
 ms.custom: ""
 ms.date: 05/03/2019
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "KumarVivek" # GitHub ID
 ms.author: "kvivek" # MSFT alias of Microsoft employees only
-manager: "amyla" # MSFT alias of manager or PM counterpart
+manager: "annbe" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 

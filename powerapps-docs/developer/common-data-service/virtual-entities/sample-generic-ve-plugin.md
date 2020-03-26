@@ -3,7 +3,7 @@ title: "Sample: Generic virtual entity data provider plug-in (Common Data Servic
 description: "Sample demonstrates how to implement a generic custom Dynamics 365 virtual entity plug-in."
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -13,7 +13,7 @@ applies_to:
 ms.assetid: d329dade-16c5-46e9-8dec-4b8efb996d24
 author: "mayadumesh" # GitHub ID
 ms.author: "jdaly"
-manager: "amyla"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 

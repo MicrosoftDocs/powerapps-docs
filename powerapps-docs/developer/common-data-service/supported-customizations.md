@@ -3,7 +3,7 @@ title: "Supported Customizations for Common Data Service (Common Data Service) |
 description: "Read how you can customize Common Data Service by using tools that are available in the Power Apps portal or the ones described in docs." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 01/25/2019
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "shmcarth" # GitHub ID
