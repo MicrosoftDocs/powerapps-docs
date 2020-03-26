@@ -100,9 +100,9 @@ If an app requires a connection to a data source or permission to use the device
 ![Connection](media/give_consent.png)
 
 ## Pin an app to the home screen
-You can pin an app to the home screen of your device for quick access. Tap the ellipsis (...) on the app tile, tap **Pin to Home**, and then follow the instructions that appear.
+You can pin an app to the home screen of your device for quick access. Select the ellipsis (...) on the app tile, select **Pin to Home**, and then follow the instructions that appear.
 
-![Pin app](./media/run-app-client/run-client-pin.png)
+![Pin app](media/pin_to_homepng)
 
 ## Close an app
 To close an app, use your finger to swipe from the left edge of the app to the right. On Android devices, you can also press the Back button and then confirm that you intended to close the app.
