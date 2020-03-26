@@ -901,7 +901,7 @@ you might want to pin the crisis management admin app or the Power BI report to 
 
 * **How can I update the application?**
 
-    If you would like to update the application, please follow the steps outlined on [aka.ms/CrisisCommunicationSolution](aka.ms/CrisisCommunicationSolution).
+    If you would like to update the application, please follow the steps outlined on [aka.ms/CrisisCommunicationSolution](https://aka.ms/CrisisCommunicationSolution).
 
 ## Issues and feedback
 
