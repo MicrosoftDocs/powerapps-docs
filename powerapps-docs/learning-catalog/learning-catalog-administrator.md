@@ -1,5 +1,5 @@
 ---
-title: Administrator learning catalog
+title: Administrators learning catalog
 description: Find all the training options for Power Apps
 author: loreleishannonmsft
 ms.topic: article
@@ -7,7 +7,7 @@ ms.date: 02/19/2020
 ms.author: v-lshann
 ---
 
-# Administrators learning catalog
+# Administrators Learning Catalog
 
 Do you need to keep systems and data flowing, provisioned, and secure round-the-clock?
 
