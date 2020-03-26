@@ -14,13 +14,12 @@ searchScope:
 ---
 # Emergency Response sample solution for Power Platform
 
-The Emergency Response solution provides a set of capabilities for healthcare organizations to collect data for situational awareness of available beds and supplies, COVID-19 related patients, staffing, and pending discharges. The solution also provides dashboards that provide insights to medical
-organizations and hospitals to make informed decisions quickly resulting in efficient deployment and usage of resources.
+The Emergency Response sample solution provides a set of capabilities for healthcare organizations to collect data for situational awareness of available beds and supplies, COVID-19 related patients, staffing, and pending discharges. The solution also provides dashboards that summarize key data and insights for you to make informed decisions resulting in efficient deployment and usage of resources.
 
 > [!div class="mx-imgBorder"] 
 > ![Emergency Response app](media/conf-ermerg-response-solution-overview.png)
 
-These are the main components of the Emergency Response solution:
+The main components of the Emergency Response solution are:
 
 - **Mobile app for frontline staff**: Frontline staff, such as nurses and medical practitioners, can use the mobile app to quickly view and enter information as required.
 - **Web app for Hospital IT admins**: Hospital admins can use this app to add and manage system data required for the solution to work.
@@ -36,10 +35,8 @@ Watch a quick overview of the Emergency Response solution.
 
 ## Licensing requirements
 
-You need the following:
-
 - Power Apps license.
-- Power BI License if you will be using the Power BI dasboard available as part of this solution.
+- Power BI License if you'll be using the Power BI dashboard available as part of this solution.
 
 Contact your local Microsoft account representative for questions related to licensing.
 
