@@ -17,11 +17,14 @@ search.app:
 
 # How to check License designation for an app
 
-In October 2019, a collection of connectors were reclassified from Standard to
-Premium. [Power Apps licensing FAQ](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#office-365) outlines
-which connectors were reclassified. Apps using these connectors prior to the
+Starting October 2019, several connectors were reclassified from Standard to Premium.
+
+[Power Apps licensing FAQ](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#office-365) outlines
+which connectors were reclassified. Apps using these connectors before the
 reclassification have been granted an extended timeframe allowing users
-without a premium license to access these apps. The following table outlines the designations and which license an end user must have to access an app.
+without a premium license to access these apps.
+
+The following table outlines the designations and which license an end user must have to access an app.
 
 | **Designation​** | **Definition**
 |-|-|
@@ -31,11 +34,11 @@ without a premium license to access these apps. The following table outlines the
 
 ## Check app **license designation** from **app settings**
 
-1. Sign-in to [Power Apps](https://make.powerapps.com).
+1. Sign in to [Power Apps](https://make.powerapps.com).
 
 1. Select **Apps** from left side.
 
-1. Select an app from the list of app. You can use the **Settings** option from top or, use the **More Commands** (**...**) and then **Settings** from the drop down menu:
+1. Select an app from the list of app. You can use the **Settings** option from top or, use the **More Commands** (**...**) and then **Settings** from the drop-down menu:
 
     ![Settings option](media/license-designation/app-settings.png)
 
@@ -45,11 +48,11 @@ without a premium license to access these apps. The following table outlines the
 
 ## Check app **license designation** from **app details**
 
-1. Sign-in to [Power Apps](https://make.powerapps.com).
+1. Sign in to [Power Apps](https://make.powerapps.com).
 
 1. Select **Apps** from left side.
 
-1. Select an app from the list of app. You can use the **Details** option from top or, use the **More Commands** (**...**) and then **Details** from the drop down menu:
+1. Select an app from the list of app. You can use the **Details** option from top or, use the **More Commands** (**...**) and then **Details** from the drop-down menu:
 
     ![App details](media/license-designation/app-details.png)
 
