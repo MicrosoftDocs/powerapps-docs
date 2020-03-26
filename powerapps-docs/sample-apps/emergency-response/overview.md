@@ -20,11 +20,19 @@ organizations and hospitals to make informed decisions quickly resulting in effi
 > [!div class="mx-imgBorder"] 
 > ![Emergency Response app](media/conf-ermerg-response-solution-overview.png)
 
-These are the main components of the Emergency Response app:
+These are the main components of the Emergency Response solution:
 
 - **Mobile app for frontline staff**: Frontline staff, such as nurses and medical practitioners, can use the mobile app to quickly view and enter information as required.
 - **Web app for Hospital IT admins**: Hospital admins can use this app to add and manage system data required for the solution to work.
 - **Dashboards for healthcare decision makers**: Use dashboards to quickly view important data and metrics that will help you in efficient decision making.
+
+## Video: Quick overview
+
+Watch a quick overview of the Emergency Response solution.
+
+<br/>
+
+> [!VIDEO https://www.youtube.com/embed/Dg-i3F9G01I]
 
 ## Licensing requirements
 
@@ -36,6 +44,12 @@ You need the following:
 Contact your local Microsoft account representative for questions related to licensing.
 
 See also: [Licensing overview for Power Platform](https://docs.microsoft.com/power-platform/admin/pricing-billing-skus)
+
+## Issues and feedback
+
+- For feedback about the Emergency Response sample solution, visit <https://aka.ms/emergency-response-feedback>.
+
+- To report an issue with the Emergency Response sample solution, visit <https://aka.ms/emergency-response-issues>.
 
 ## Next step
 
