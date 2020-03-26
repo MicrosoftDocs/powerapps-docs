@@ -829,6 +829,8 @@
       href: ./canvas-apps/edit-app.md
     - name: Delete an app
       href: ./canvas-apps/delete-app.md
+    - name: License designation for an app
+      href: ./canvas-apps/settings.md
     - name: Restore a previous version
       href: ./canvas-apps/restore-an-app.md
     - name: Change app name and tile
