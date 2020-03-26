@@ -63,9 +63,10 @@ The following filters are available:
 
 * **Favorites** (canvas apps): Displays canvas apps that you've marked by selecting the ellipsis (...) on the app tile, and then select **Favorite**. To remove an app from this list, select the ellipsis (...) on the app tile, and then tap **Unfavorite**.
 
+    ![Mark as Favorite](media/add_favorite_app.png)
+
 * **Featured apps** (canvas apps): Displays canvas apps that your admin as marked as Featured apps.
 
-    ![Mark as Favorite](media/add_favorite_app.png)
 
 After you filter your apps, you can sort the filtered list by the date the apps were most recently opened or modified, or alphabetically by name. These preferences are retained when you close and reopen Power Apps.
 
